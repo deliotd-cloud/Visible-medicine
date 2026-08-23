@@ -1,0 +1,94 @@
+{
+  "version": "6",
+  "dialect": "sqlite",
+  "id": "9414c403-ccda-4672-a706-7990e8560ea2",
+  "prevId": "d145e19c-96f9-4f59-9320-c9c8f4be590c",
+  "tables": {
+    "learning_progress": {
+      "name": "learning_progress",
+      "columns": {
+        "user_id": {
+          "name": "user_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "resource_type": {
+          "name": "resource_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "resource_slug": {
+          "name": "resource_slug",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "progress": {
+          "name": "progress",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        },
+        "last_position": {
+          "name": "last_position",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 1
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "learning_progress_user_id_resource_type_resource_slug_pk": {
+          "columns": [
+            "user_id",
+            "resource_type",
+            "resource_slug"
+          ],
+          "name": "learning_progress_user_id_resource_type_resource_slug_pk"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "learning_progress_resource_type_check": {
+          "name": "learning_progress_resource_type_check",
+          "value": "\"learning_progress\".\"resource_type\" IN ('atlas', 'course')"
+        },
+        "learning_progress_progress_check": {
+          "name": "learning_progress_progress_check",
+          "value": "\"learning_progress\".\"progress\" >= 0 AND \"learning_progress\".\"progress\" <= 100"
+        },
+        "learning_progress_last_position_check": {
+          "name": "learning_progress_last_position_check",
+          "value": "\"learning_progress\".\"last_position\" >= 0"
+        }
+      }
+    }
+  },
+  "views": {},
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}
