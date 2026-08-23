@@ -7,7 +7,7 @@ type PageProps = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const course = findCourse((await params).slug);
   if (!course) return {};
-  return { title: course.title, description: course.summary, openGraph: { title: course.title, description: course.summary, images: [] }, twitter: { title: course.title, description: course.summary, images: [] } };
+  return { title: course.title, description: course.summary, openGraph: { title: `${course.title} | Didanix Atlas by Elivion`, description: course.summary, images: [] }, twitter: { title: `${course.title} | Didanix Atlas by Elivion`, description: course.summary, images: [] } };
 }
 
 export default async function CourseDetail({ params }: PageProps) {

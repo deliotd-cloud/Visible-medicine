@@ -1,5 +1,6 @@
 import { atlasModules, courses } from "../lib/catalog";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -97,8 +98,12 @@ export default function Home() {
       </section>
 
       <section className="family-section" id="institutions">
-        <p className="section-index">The product family</p>
+        <p className="section-index">The Elivion product family</p>
         <h2>One imaging foundation.<br />Distinct, deliberate products.</h2>
+        <div className="elivion-parent">
+          <Image src="/elivion-logo.png" alt="" width={264} height={208} />
+          <div><span>Parent family</span><b>Elivion</b><p>One quality language for trusted healthcare and learning software, expressed differently for each intended use.</p></div>
+        </div>
         <div className="family-map">
           <div><span>Clinical future</span><h3>Didanix PACS</h3><p>Separately governed clinical viewer and workflow product.</p></div>
           <div className="family-active"><span>Learning destination</span><h3>Didanix Atlas</h3><p>Reviewed radiological anatomy, practice and first-party courses.</p></div>

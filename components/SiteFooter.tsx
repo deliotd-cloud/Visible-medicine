@@ -1,12 +1,12 @@
 import Link from "next/link";
+import { BrandLockup } from "./BrandLockup";
 
 export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div>
         <Link className="brand footer-brand" href="/">
-          <span className="brand-mark" aria-hidden="true"><i /><i /><i /></span>
-          <span>Didanix <b>Atlas</b></span>
+          <BrandLockup />
         </Link>
         <p>Radiological anatomy for education and non-clinical research.</p>
       </div>
@@ -17,7 +17,7 @@ export function SiteFooter() {
       <div className="footer-boundary">
         <span>Education &amp; research only</span>
         <p>Not intended for diagnosis, patient care, clinical reporting or clinical decision-making.</p>
-        <small>Part of the Didanix family · An Elivion family product</small>
+        <small>Elivion family · Didanix imaging products</small>
       </div>
     </footer>
   );

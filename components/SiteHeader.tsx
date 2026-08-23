@@ -1,11 +1,11 @@
 import Link from "next/link";
+import { BrandLockup } from "./BrandLockup";
 
 export function SiteHeader() {
   return (
     <header className="topbar">
       <Link className="brand" href="/" aria-label="Didanix Atlas home">
-        <span className="brand-mark" aria-hidden="true"><i /><i /><i /></span>
-        <span>Didanix <b>Atlas</b></span>
+        <BrandLockup priority />
       </Link>
       <nav className="nav-links" aria-label="Primary navigation">
         <Link href="/atlas">Atlas</Link>

@@ -4,6 +4,10 @@ Didanix Atlas is a standalone radiological anatomy destination in the Didanix fa
 
 The product is for education and non-clinical research only. It is not intended for diagnosis, patient care, clinical reporting, treatment planning, or clinical decision-making.
 
+## Family brand system
+
+Didanix Atlas uses the approved Elivion symbol, Segoe family typography, canonical deep-teal and accessible-teal palette, shared focus treatment, compact product badge, and Elivion → Didanix → Atlas lockup. Atlas retains a warmer editorial surface and restrained yellow-green highlight so it feels like a learning destination rather than the clinical PACS. These tokens are local to Atlas and do not create a runtime dependency on any clinical product.
+
 ## Product boundaries
 
 - **Didanix Atlas** owns public discovery, reviewed anatomy records, official courses, learner progress, and the first-party website experience.
