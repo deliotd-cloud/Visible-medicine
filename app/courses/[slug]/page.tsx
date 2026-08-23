@@ -17,7 +17,7 @@ export default async function CourseDetail({ params }: PageProps) {
     <main className="inner-page course-detail">
       <section className="course-detail-hero">
         <div><p className="eyebrow"><span /> {course.type === "official" ? "Elivion official course" : "Institution demonstration"}</p><h1>{course.title}</h1><p>{course.summary}</p><div className="module-facts"><span>{course.level}</span><span>{course.lessons} lessons</span><span>{course.duration}</span><span>{course.publisher}</span></div></div>
-        <div className="course-launch-card"><span>Course preview</span><b>Begin with normal anatomy</b><p>Launches the linked atlas module at the first guided scene.</p><a className="primary-button" href={`/atlas/${course.moduleSlug}`}>Start course <span>→</span></a></div>
+        <div className="course-launch-card"><span>Course workspace</span><b>Begin with guided imaging</b><p>Launch the full teaching viewer with its workbook rail, cases, notes and progress.</p><a className="primary-button" href="/learn?workbook=workbook-teaching-demo">Start course <span>→</span></a></div>
       </section>
       <section className="course-detail-grid">
         <div><p className="section-index">Learning outcomes</p><h2>What you will be able to do</h2><ol>{course.outcomes.map((outcome, index) => <li key={outcome}><span>0{index + 1}</span>{outcome}</li>)}</ol></div>

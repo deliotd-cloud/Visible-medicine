@@ -92,7 +92,10 @@ Required production controls include organisation-level authorisation tests, sig
 - Elivion Education umbrella brand and clear Didanix PACS separation.
 - Home, Atlas, Courses, Studio, Research, Institutions, Plans and learner routes.
 - Interactive generated Atlas demonstration.
-- Authenticated progress API and D1 schema.
+- Integrated authenticated learning runtime with teaching, examination, review, authoring, live delivery, marking, reporting, integrations and audit workspaces.
+- Authenticated progress APIs and a consolidated D1 schema.
+- Organisation membership, role, entitlement, publication and embed-origin foundations.
+- First-party hosted course delivery, institution workspace and trust centre.
 - Responsive system, metadata, social image and owner-private hosting.
 
 ### Phase B — real Atlas pilot
@@ -104,13 +107,13 @@ Required production controls include organisation-level authorisation tests, sig
 - Complete dual specialist review and editorial QA.
 - Replace the demonstration scan with the reviewed module.
 
-### Phase C — Studio and tenancy
+### Phase C — Studio and tenancy hardening
 
-- Import the existing educational viewer/course capability as versioned non-clinical packages.
-- Implement organisation workspaces and education-only identity claims.
-- Implement Course → Module → Workbook → Case authoring.
-- Add quarantine, roles, immutable releases, assessments, submissions and audit events.
-- Provide hosted delivery first, then signed origin-restricted embeds.
+- Extract the integrated runtime into versioned non-clinical packages without changing its behaviour.
+- Replace the owner-private evaluation identity with approved institution OIDC and organisation claims.
+- Enforce organisation scope on every course-runtime query and mutation, including authoring, media, enrolment and reporting.
+- Replace request-time schema assurance and synthetic seed data with deployment-time migrations and controlled fixtures.
+- Add production signed launch-token issuance after key-management, expiry, replay and origin-policy review.
 
 ### Phase D — controlled institutional beta
 

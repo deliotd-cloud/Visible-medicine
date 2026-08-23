@@ -13,7 +13,7 @@ export function SiteHeader() {
         <Link href="/studio">Studio</Link>
         <Link href="/institutions">Institutions</Link>
       </nav>
-      <Link className="account-link" href="/my-learning">My learning <span aria-hidden="true">↗</span></Link>
+      <Link className="account-link" href="/workspace">Workspace <span aria-hidden="true">↗</span></Link>
     </header>
   );
 }

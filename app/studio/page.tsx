@@ -44,7 +44,7 @@ export default function StudioPage() {
 
       <section className="studio-boundary" id="studio-access">
         <div><p className="section-index">Controlled institutional release</p><h2>Start with verified educators and bounded cohorts.</h2><p>Open public publishing remains disabled. Institutions receive a private workspace, explicit roles, controlled media ingestion and accountable content review.</p></div>
-        <div className="studio-cta-stack"><Link className="primary-button" href="/institutions#pilot-path">Plan an institutional pilot <span>→</span></Link><Link className="outline-button" href="/pricing">View plans <span>→</span></Link></div>
+        <div className="studio-cta-stack"><Link className="primary-button" href="/studio/workspace">Open Studio workspace <span>→</span></Link><Link className="outline-button" href="/institutions#pilot-path">Plan a pilot <span>→</span></Link><Link className="outline-button" href="/pricing">View plans <span>→</span></Link></div>
       </section>
     </main>
   );

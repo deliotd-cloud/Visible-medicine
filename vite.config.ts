@@ -13,7 +13,7 @@ const { d1, r2 } = hostingConfig;
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === 'seatbelt';
 
 const localBindingConfig = {
-  main: 'vinext/server/app-router-entry',
+  main: './worker/index.ts',
   compatibility_flags: ['nodejs_compat'],
   d1_databases: d1
     ? [
@@ -32,6 +32,12 @@ const localBindingConfig = {
         },
       ]
     : [],
+  durable_objects: {
+    bindings: [{ name: 'TEACHING_LIVE', class_name: 'TeachingLiveRoom' }],
+  },
+  migrations: [
+    { tag: 'teaching-live-v1', new_sqlite_classes: ['TeachingLiveRoom'] },
+  ],
 };
 
 export default defineConfig(async () => {

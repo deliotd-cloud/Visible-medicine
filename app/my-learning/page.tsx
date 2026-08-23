@@ -15,6 +15,7 @@ export default async function MyLearningPage() {
       <section className="learning-heading"><div><p className="eyebrow"><span /> Personal learning space</p><h1>Welcome back.</h1><p>{user.displayName}</p></div><a href={chatGPTSignOutPath("/")}>Sign out</a></section>
       <section className="learning-grid">
         <div className="learning-main"><div className="section-heading compact"><div><p className="section-index">Continue</p><h2>Your saved learning</h2></div></div>
+          <div className="runtime-resume-card"><div><span>Course runtime</span><h3>Your allocated teaching and assessments</h3><p>Open the full imaging workspace with its workbook rail, notes, answers and review history.</p></div><Link className="primary-button" href="/learn">Resume learning <span>→</span></Link></div>
           {progress.length ? progress.map((item) => {
             const resource = item.resourceType === "atlas" ? findAtlasModule(item.resourceSlug) : findCourse(item.resourceSlug);
             return <Link className="progress-card" href={`/${item.resourceType === "atlas" ? "atlas" : "courses"}/${item.resourceSlug}`} key={`${item.resourceType}-${item.resourceSlug}`}><div><span>{item.resourceType}</span><h3>{resource?.title ?? item.resourceSlug}</h3><p>Last position {item.lastPosition}</p></div><div className="progress-ring" style={{ "--progress": `${item.progress * 3.6}deg` } as React.CSSProperties}><b>{item.progress}%</b></div></Link>;
