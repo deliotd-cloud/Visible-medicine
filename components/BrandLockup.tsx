@@ -4,7 +4,7 @@ type BrandLockupProps = { priority?: boolean };
 
 export function BrandLockup({ priority = false }: BrandLockupProps) {
   return (
-    <span className="brand-lockup" aria-label="Elivion Didanix Atlas">
+    <span className="brand-lockup" aria-label="Elivion Education">
       <Image
         className="brand-logo"
         src="/elivion-logo.png"
@@ -15,8 +15,7 @@ export function BrandLockup({ priority = false }: BrandLockupProps) {
       />
       <span className="brand-word">
         <b>Elivion</b>
-        <em>Didanix</em>
-        <i>Atlas</i>
+        <i>Education</i>
       </span>
     </span>
   );

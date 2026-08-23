@@ -1,21 +1,20 @@
 import { atlasModules, courses } from "../lib/catalog";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <main className="site-shell">
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow"><span /> Education &amp; research only</p>
-          <h1>See anatomy the way radiologists do.</h1>
-          <p className="hero-intro">Explore expertly reviewed anatomy directly on CT and MRI, then turn what you see into lasting knowledge through guided courses and practice.</p>
+          <p className="eyebrow"><span /> Elivion imaging education</p>
+          <h1>Learn imaging.<br />Teach with cases.</h1>
+          <p className="hero-intro">Explore radiological anatomy, follow guided courses or build secure institutional teaching with a purpose-built educational viewer.</p>
           <div className="hero-actions">
             <Link className="primary-button" href="/atlas">Explore the atlas <span>→</span></Link>
-            <Link className="text-button" href="/courses">Browse courses</Link>
+            <Link className="text-button" href="/studio">Open Studio</Link>
           </div>
           <div className="trust-row" aria-label="Product principles">
-            <span>Clinician reviewed</span><span>Imaging-first learning</span><span>Not for diagnosis</span>
+            <span>Education &amp; research only</span><span>Institution ready</span><span>Separate from clinical Didanix</span>
           </div>
         </div>
 
@@ -37,8 +36,14 @@ export default function Home() {
         </Link>
       </section>
 
+      <section className="platform-strip" aria-label="Elivion Education platform">
+        <Link href="/atlas"><span>01</span><div><b>Atlas</b><small>Explore reviewed anatomy on imaging</small></div><i>→</i></Link>
+        <Link href="/courses"><span>02</span><div><b>Courses</b><small>Learn through guided cases and practice</small></div><i>→</i></Link>
+        <Link href="/studio"><span>03</span><div><b>Studio</b><small>Create and deliver institutional teaching</small></div><i>→</i></Link>
+      </section>
+
       <section className="system-strip" aria-label="Atlas collections">
-        <p>Explore by region</p>
+        <p>Inside the Atlas</p>
         {atlasModules.map((module, index) => <Link href={`/atlas/${module.slug}`} key={module.slug}><span>0{index + 1}</span>{module.region}<b>→</b></Link>)}
       </section>
 
@@ -66,20 +71,20 @@ export default function Home() {
         <div className="dark-section-heading">
           <p className="section-index">02 / Courses</p>
           <h2>From recognition to understanding.</h2>
-          <p>Atlas scenes become lessons, questions, saved views and live teaching sessions through Didanix Education.</p>
+          <p>Atlas scenes become lessons, questions, saved views and live teaching sessions across Elivion Education.</p>
           <Link href="/courses">Explore all courses <span>→</span></Link>
         </div>
         <div className="course-stack">
           {courses.map((course, index) => (
             <Link className="course-row" href={`/courses/${course.slug}`} key={course.slug}>
               <span className="course-number">0{index + 1}</span>
-              <div><small>{course.type === "official" ? "Didanix official" : "Institution demonstration"}</small><h3>{course.title}</h3></div>
+              <div><small>{course.type === "official" ? "Elivion official" : "Institution demonstration"}</small><h3>{course.title}</h3></div>
               <p>{course.level} · {course.lessons} lessons · {course.duration}</p>
               <b>↗</b>
             </Link>
           ))}
-          <Link className="course-row studio-row" href="/teach">
-            <span className="course-number">+</span><div><small>For educators</small><h3>Host your own imaging course</h3></div><p>Powered by Didanix Education</p><b>↗</b>
+          <Link className="course-row studio-row" href="/studio">
+            <span className="course-number">+</span><div><small>For educators</small><h3>Host your own imaging course</h3></div><p>Created in Elivion Studio</p><b>↗</b>
           </Link>
         </div>
       </section>
@@ -97,19 +102,16 @@ export default function Home() {
         <Link className="outline-button" href="/research">Read the research framework <span>→</span></Link>
       </section>
 
-      <section className="family-section" id="institutions">
-        <p className="section-index">The Elivion product family</p>
-        <h2>One imaging foundation.<br />Distinct, deliberate products.</h2>
-        <div className="elivion-parent">
-          <Image src="/elivion-logo.png" alt="" width={264} height={208} />
-          <div><span>Parent family</span><b>Elivion</b><p>One quality language for trusted healthcare and learning software, expressed differently for each intended use.</p></div>
-        </div>
+      <section className="family-section" id="platform">
+        <p className="section-index">04 / The platform</p>
+        <h2>One education platform.<br />Three connected experiences.</h2>
         <div className="family-map">
-          <div><span>Clinical future</span><h3>Didanix PACS</h3><p>Separately governed clinical viewer and workflow product.</p></div>
-          <div className="family-active"><span>Learning destination</span><h3>Didanix Atlas</h3><p>Reviewed radiological anatomy, practice and first-party courses.</p></div>
-          <div><span>Teaching engine</span><h3>Didanix Education</h3><p>Course authoring, assessment, live teaching and secure embedding.</p></div>
+          <div><span>Explore</span><h3>Atlas</h3><p>Reviewed radiological anatomy, labels, practice and linked explanations.</p></div>
+          <div className="family-active"><span>Learn</span><h3>Courses</h3><p>Official learning paths and private institutional teaching.</p></div>
+          <div><span>Create</span><h3>Studio</h3><p>Course authoring, assessment, live teaching and secure delivery.</p></div>
         </div>
-        <Link className="primary-button" href="/institutions">For institutions <span>→</span></Link>
+        <div className="clinical-boundary"><div><span>Separate clinical product</span><b>Didanix PACS</b></div><p>The future clinically licensed PACS has separate identity, data, release and quality systems. Elivion Education does not provide diagnosis, reporting or patient-care workflows.</p></div>
+        <div className="family-actions"><Link className="primary-button" href="/institutions">For institutions <span>→</span></Link><Link className="text-button" href="/pricing">View the commercial model</Link></div>
       </section>
     </main>
   );

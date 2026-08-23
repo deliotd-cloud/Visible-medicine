@@ -8,16 +8,16 @@ export function SiteFooter() {
         <Link className="brand footer-brand" href="/">
           <BrandLockup />
         </Link>
-        <p>Radiological anatomy for education and non-clinical research.</p>
+        <p>Imaging education for learners, educators and institutions.</p>
       </div>
       <div className="footer-links">
         <Link href="/atlas">Atlas</Link><Link href="/courses">Courses</Link><Link href="/research">Research</Link>
-        <Link href="/teach">Teach with Didanix</Link><Link href="/institutions">Institutions</Link>
+        <Link href="/studio">Studio</Link><Link href="/institutions">Institutions</Link><Link href="/pricing">Plans</Link>
       </div>
       <div className="footer-boundary">
         <span>Education &amp; research only</span>
         <p>Not intended for diagnosis, patient care, clinical reporting or clinical decision-making.</p>
-        <small>Elivion family · Didanix imaging products</small>
+        <small>An Elivion family platform · Separate from the clinical Didanix PACS</small>
       </div>
     </footer>
   );

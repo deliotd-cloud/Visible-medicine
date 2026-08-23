@@ -8,22 +8,22 @@ const geistMono = Geist_Mono({ variable: "--font-atlas-mono", subsets: ["latin"]
 const siteOrigin = process.env.SITE_ORIGIN ?? "http://localhost:3000";
 
 export const metadata: Metadata = {
-  applicationName: "Elivion Didanix Atlas",
+  applicationName: "Elivion Education",
   metadataBase: new URL(siteOrigin),
-  title: { default: "Didanix Atlas by Elivion | Radiological anatomy, understood", template: "%s | Didanix Atlas by Elivion" },
-  description: "Explore clinician-reviewed radiological anatomy and learn through interactive courses. For education and research only.",
+  title: { default: "Elivion Education | Learn imaging. Teach with cases.", template: "%s | Elivion Education" },
+  description: "Explore radiological anatomy, take guided courses and create secure institutional imaging education. For education and research only.",
   icons: { icon: "/elivion-logo.png", shortcut: "/elivion-logo.png" },
   openGraph: {
-    siteName: "Elivion Didanix Atlas",
-    title: "Elivion · Didanix Atlas",
-    description: "Radiological anatomy, understood.",
+    siteName: "Elivion Education",
+    title: "Elivion Education",
+    description: "Learn imaging. Teach with cases.",
     type: "website",
-    images: [{ url: "/og.png", width: 1730, height: 909, alt: "Elivion Didanix Atlas — Radiological anatomy, understood." }],
+    images: [{ url: "/og.png", width: 1727, height: 911, alt: "Elivion Education — Atlas, Courses and Studio" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Elivion · Didanix Atlas",
-    description: "Radiological anatomy, understood.",
+    title: "Elivion Education",
+    description: "Learn imaging. Teach with cases.",
     images: ["/og.png"],
   },
 };

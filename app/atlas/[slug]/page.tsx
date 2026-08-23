@@ -12,8 +12,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: atlasModule.title,
     description: atlasModule.description,
-    openGraph: { title: `${atlasModule.title} | Didanix Atlas by Elivion`, description: atlasModule.description, images: [] },
-    twitter: { title: `${atlasModule.title} | Didanix Atlas by Elivion`, description: atlasModule.description, images: [] },
+    openGraph: { title: `${atlasModule.title} | Elivion Education Atlas`, description: atlasModule.description, images: [] },
+    twitter: { title: `${atlasModule.title} | Elivion Education Atlas`, description: atlasModule.description, images: [] },
   };
 }
 

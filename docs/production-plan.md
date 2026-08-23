@@ -1,124 +1,145 @@
-# Didanix Atlas production plan
+# Elivion Education production plan
 
 ## 1. Product model
 
-Didanix Atlas should be a distinct first-party website rather than another screen inside the future PACS. This gives it a clear public identity, search and discovery surface, learner account, content catalogue, and educational risk profile. Didanix Education remains the engine behind institutional and educator-created courses; the Atlas consumes only published, versioned course releases.
+Elivion Education should be a standalone Elivion platform, not a branch or screen inside the future clinical PACS. It combines a public learning destination with a paid institutional teaching product while maintaining an unmistakable education and research intended use.
 
-The recommended experience has four connected zones:
+The recommended experience has five connected zones:
 
-1. **Atlas** — reviewed, searchable radiological anatomy organised by region, modality, plane, and structure.
-2. **Courses** — official Didanix learning paths plus private institutional courses powered by Didanix Education.
-3. **Studio** — a gated entry into Didanix Education for verified educators and organisations.
-4. **Research** — transparent provenance, versioning, citation, dataset, and collaboration information.
+1. **Atlas** — reviewed, searchable radiological anatomy organised by region, modality, plane and structure.
+2. **Courses** — Elivion learning paths plus private institutional courses.
+3. **Studio** — a gated authoring and delivery workspace for verified educators and organisations.
+4. **Institutions** — organisation workspaces, roles, enrolment, reporting and support.
+5. **Research** — provenance, versioning, citation, dataset and collaboration information.
+
+“Elivion Education” is the working umbrella name. Atlas, Courses and Studio are product capabilities beneath it. Didanix is reserved for the future clinical PACS.
 
 ## 2. Architecture and ownership
 
-| Capability | Owning product | Integration rule |
+| Capability | Owning domain | Integration rule |
 | --- | --- | --- |
-| Anatomy catalogue and public routes | Didanix Atlas | First-party, versioned publication records |
-| Image viewing primitives | Shared non-clinical viewer package | Forked/released independently from clinical viewer code |
-| Course authoring and assessment | Didanix Education | Atlas receives immutable published course versions |
-| Institutional enrolment and roles | Didanix Education / identity service | Organisation-scoped claims; no clinical tenant reuse |
-| Learner bookmarks and progress | Didanix Atlas | Separate D1 database and retention policy |
-| Medical media | Atlas media pipeline | Publication-cleared derivatives in a separate R2 bucket |
-| Future clinical workflow | Didanix PACS | No runtime, identity, database, or release coupling |
+| Anatomy catalogue and public routes | Elivion Education Atlas | First-party, versioned publication records |
+| Image-viewing primitives | Shared non-clinical viewer package | Released independently from clinical viewer code |
+| Course authoring and assessment | Elivion Education Studio | Courses consume immutable published releases |
+| Institutional enrolment and roles | Education identity and entitlement service | Organisation-scoped claims; no clinical tenant reuse |
+| Learner bookmarks and progress | Elivion Education | Separate database and retention policy |
+| Medical media | Education media pipeline | Publication-cleared derivatives in separate storage |
+| Clinical workflow | Didanix PACS | No runtime, identity, database, entitlement or release coupling |
 
-The shared viewer should be distributed as a versioned package with a narrow educational API. Clinical-only tools must not be imported into the Atlas bundle. Security fixes may flow between products, but features and releases remain independently controlled.
+Share only deliberately versioned, non-clinical viewer primitives. Clinical tools must not enter the education bundle. Security fixes may flow between packages, but product features, validation and releases remain independently controlled.
 
-## 3. Medical-content production
+## 3. Institutional commercial model
 
-Every atlas module should move through these states:
+Use a staged model rather than inventing permanent pricing before pilot evidence exists:
+
+- **Explorer:** limited public Atlas and course discovery.
+- **Individual:** annual learner subscription for the full published Atlas, official courses and progress tools.
+- **Institution:** annual platform licence with a private workspace, Studio, learner/educator roles and reporting.
+- **Enterprise:** contracted multi-organisation, identity, LMS, storage, support and governance requirements.
+
+An institutional quote should use transparent inputs: active learner band, educator/admin band, publication-cleared storage, SSO/LMS integration and support tier. Billing must not launch until entitlements, tax, invoicing, refunds, contract terms and support ownership are implemented. Payment never grants clinical Didanix access.
+
+## 4. Medical-content production
+
+Every Atlas module or institution-published resource should move through:
 
 `draft → media quarantine → de-identification verification → rights verification → annotation → specialist review → editorial QA → accessibility QA → published → superseded/withdrawn`
 
-Required evidence for each published module:
+Required evidence for every published medical resource:
 
 - source and licence or contributor agreement;
-- confirmation that no direct or indirect patient identifiers remain;
-- modality, body region, plane, acquisition context, and normal-variant notes;
-- structure label hierarchy, synonyms, and terminology identifiers where licensed;
-- named clinical reviewer and review date;
+- confirmation that direct and indirect identifiers are absent;
+- modality, body region, plane, acquisition context and normal-variant notes;
+- structure hierarchy, synonyms and terminology identifiers where licensed;
+- named specialist reviewer and review date;
 - references and last substantive revision;
-- immutable published version and a withdrawal mechanism.
+- immutable published version plus correction and withdrawal paths.
 
-Do not accept arbitrary learner uploads into the public atlas. Educator media enters a quarantined Didanix Education workflow and can only appear in Atlas after a separate publication decision.
+Do not accept arbitrary learner uploads into public Atlas or Course catalogues. Educator media enters a quarantined Studio workflow and becomes public only after a separate publication decision.
 
-## 4. Identity and access
+## 5. Identity, tenancy and embeds
 
-- Public atlas browsing may remain anonymous.
-- Saving progress, bookmarking, enrolment, and assessment require an authenticated learner identity.
-- Educator, reviewer, publisher, and organisation-admin permissions are separate roles.
-- Published Atlas identity must be separate from future clinical identities even if a shared upstream identity provider is eventually used.
-- Embed tokens must be short-lived, origin-restricted, audience-restricted, and scoped to one published course or workbook.
-- Open self-service publishing stays disabled until moderation, takedown, rights, and abuse processes exist.
+- Public Atlas browsing can remain anonymous.
+- Bookmarks, progress, enrolment and assessment require learner authentication.
+- Learner, educator, reviewer, publisher and organisation-admin roles are distinct.
+- Every private object carries an organisation identifier and is denied across tenant boundaries.
+- Education identities and entitlements remain separate from future clinical identities.
+- Embed tokens are short-lived, origin-restricted, audience-restricted and scoped to one published course or workbook.
+- Self-service public publishing remains disabled until moderation, takedown, rights and abuse procedures exist.
+- Add SAML/OIDC and later LTI 1.3 only through institution-specific, audited configuration.
 
-## 5. Data and privacy
+## 6. Data, privacy and security
 
-Store only data needed for learning. Initial Atlas progress records contain a user identifier, resource type, resource slug, percentage, last position, and update time. Add analytics only after the controller, lawful basis, retention period, consent/cookie position, subject-access process, and deletion workflow are agreed for the intended jurisdictions.
+Store only data required for learning. The initial progress model contains a user identifier, resource type, resource slug, percentage, last position and update time. Add analytics only after controller, lawful basis, retention, consent/cookie position, subject-access and deletion workflows are agreed for launch jurisdictions.
 
-Before public registration, publish jurisdiction-specific privacy and terms documents using the real Elivion/Didanix legal entity and contact details. Do not invent those details in the application.
+Before public registration, publish jurisdiction-specific privacy, terms, acceptable-use, content, cookie and contact information using the real Elivion legal entity and approved details. Do not invent those details in the application.
 
-## 6. Safety and intended-use controls
+Required production controls include organisation-level authorisation tests, signed upload URLs, malware screening, quarantine, encryption, audit events, secrets management, dependency review, rate limiting, backups, restore exercises, monitoring, incident response and a documented content-withdrawal procedure.
 
-- Repeat “education and research only” at the site, viewer, upload, export, and embed boundaries.
-- Avoid diagnostic claims, reporting templates, patient worklists, clinical priors, clinical messaging, or treatment recommendations.
+## 7. Intended-use controls
+
+- Repeat “education and research only” at site, viewer, upload, export, embed and commercial boundaries.
+- Avoid diagnostic claims, reporting templates, patient worklists, clinical priors, patient messaging and treatment recommendations.
 - Use synthetic or publication-cleared media only.
-- Keep annotations descriptive and educational, with citations and reviewer provenance.
-- Maintain a clear correction, withdrawal, and incident-reporting process.
-- Conduct specialist review, accessibility testing, threat modelling, dependency review, and privacy review before public launch.
+- Keep annotations educational, cited and reviewer-attributed.
+- Separate clinical and educational naming, identity, infrastructure and release processes.
+- Complete specialist, accessibility, security and privacy review before public launch.
 
-## 7. Delivery phases
+## 8. Delivery phases
 
-### Phase A — implemented foundation
+### Phase A — implemented private foundation
 
-- Product architecture and brand hierarchy.
-- Public landing, atlas catalogue, module detail, courses, research, institutions, Studio, and learner routes.
-- Interactive generated atlas demonstration.
+- Elivion Education umbrella brand and clear Didanix PACS separation.
+- Home, Atlas, Courses, Studio, Research, Institutions, Plans and learner routes.
+- Interactive generated Atlas demonstration.
 - Authenticated progress API and D1 schema.
-- Responsive visual system, metadata, social image, and owner-private hosting.
+- Responsive system, metadata, social image and owner-private hosting.
 
-### Phase B — real atlas pilot
+### Phase B — real Atlas pilot
 
 - Select one bounded module, recommended: normal CT head.
 - Secure publication rights and de-identification evidence.
-- Build the DICOM-derived media pipeline, pyramids/thumbnails, and manifest format.
-- Create the structure ontology and annotation authoring tool.
+- Build DICOM-derived media processing, thumbnails and manifest format.
+- Create the structure ontology and annotation workflow.
 - Complete dual specialist review and editorial QA.
 - Replace the demonstration scan with the reviewed module.
 
-### Phase C — Didanix Education connection
+### Phase C — Studio and tenancy
 
-- Define a signed, versioned published-course contract.
-- Add Didanix identity and organisation claims.
-- Render hosted course releases on Atlas.
-- Add gated Studio deep links and approved embed tokens.
-- Implement enrolment, submissions, marking, and audit events without exposing clinical services.
+- Import the existing educational viewer/course capability as versioned non-clinical packages.
+- Implement organisation workspaces and education-only identity claims.
+- Implement Course → Module → Workbook → Case authoring.
+- Add quarantine, roles, immutable releases, assessments, submissions and audit events.
+- Provide hosted delivery first, then signed origin-restricted embeds.
 
 ### Phase D — controlled institutional beta
 
-- Pilot with one institution, a small educator cohort, and a bounded learner cohort.
-- Verify accessibility, performance, security, privacy, support, moderation, backups, and recovery.
-- Measure completion, label accuracy, educator authoring time, and learner feedback.
-- Resolve pilot findings before adding further institutions.
+- Pilot with a small number of institutions and bounded cohorts.
+- Test accessibility, performance, security, privacy, support, moderation, backups and recovery.
+- Measure learner engagement, educator authoring time, storage, support load and willingness to pay.
+- Use the evidence to set licence bands, service levels and onboarding requirements.
 
-### Phase E — public scale
+### Phase E — commercial and public scale
 
-- Expand reviewed modules by body region and modality.
-- Add search, bookmarks, spaced practice, revision history, citations, and controlled research exports.
-- Introduce subscriptions or institutional licensing only after entitlements, billing support, tax, refunds, and service terms are ready.
-- Consider LTI 1.3 after the hosted and embedded models are stable.
+- Add subscription billing and institution invoicing only after entitlement and legal workflows are complete.
+- Expand reviewed Atlas modules by body region and modality.
+- Add search, bookmarks, spaced practice, revision history and citations.
+- Add SSO and then LTI 1.3 after hosted and embedded delivery are stable.
+- Introduce controlled research exports only with an approved governance model.
 
-## 8. Release gates
+## 9. Release gates
 
-The website software can be privately deployed now. Public medical-content launch requires all of the following:
+The private software preview can be deployed now. Public content or paid access requires:
 
-- a real production domain and `SITE_ORIGIN`;
-- approved Didanix identity integration;
+- permanent name, domain and trademark clearance;
+- real production domain and canonical `SITE_ORIGIN`;
+- education identity, organisation tenancy and entitlement integration;
 - publication-cleared, de-identified imaging;
 - specialist-reviewed annotations and citations;
-- legal entity, privacy, terms, cookie, and contact details;
-- accessibility and security review;
-- backup, restore, monitoring, incident, correction, and withdrawal procedures;
-- named owners for clinical review, editorial review, data protection, and platform operations.
+- approved legal entity, privacy, terms, cookie and contact details;
+- accessibility, penetration, privacy and dependency review;
+- billing, tax, refund, invoicing and support processes for paid access;
+- backup, restore, monitoring, incident, correction and withdrawal procedures;
+- named owners for specialist review, editorial review, data protection and platform operations.
 
-These gates are deliberate product controls, not website placeholders. They prevent the educational Atlas from quietly inheriting the risk profile or data boundary of the future clinical Didanix PACS.
+These gates prevent the education platform from quietly inheriting the risk profile, data boundary or market identity of the future clinical Didanix PACS.
