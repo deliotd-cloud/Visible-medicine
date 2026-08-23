@@ -13,7 +13,10 @@ export default function StudioPage() {
         <p className="eyebrow"><span /> Elivion Education Studio</p>
         <h1>Your cases.<br />Your course.<br />A purpose-built viewer.</h1>
         <p>Create private radiology or pathology workbooks, teach them live, assess learners and deliver the experience through Elivion Education.</p>
-        <a className="primary-button" href="#studio-access">Plan Studio access <span>→</span></a>
+        <div className="hero-actions studio-hero-actions">
+          <Link className="primary-button" href="/studio/workspace">Open Studio workspace <span>→</span></Link>
+          <a className="text-button" href="#studio-access">Plan an institutional pilot</a>
+        </div>
       </section>
 
       <section className="studio-flow">

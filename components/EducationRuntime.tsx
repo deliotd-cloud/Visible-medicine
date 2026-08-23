@@ -625,8 +625,6 @@ export function EducationRuntime() {
       );
       setActiveCaseId((current) => current || body.cases[0]?.id || "");
       setExamPreflightPassed(Boolean(body.attempt.preflightPassedAt));
-      if (!companionMode)
-        setView("home");
     } catch (loadError) {
       setError(
         loadError instanceof Error
@@ -2423,8 +2421,8 @@ export function EducationRuntime() {
     return (
       <main className={`loading-screen ${accessibilityClasses}`}>
         <BrandLockup />
-        <p>{error || "Preparing your secure education workspace…"}</p>
-        {error && <button onClick={() => void refresh()}>Try again</button>}
+        <p role={error ? "alert" : "status"}>{error || "Preparing your secure education workspace…"}</p>
+        {error && <div className="loading-actions"><button onClick={() => void refresh()}>Try again</button><Link href="/courses">Browse courses</Link><Link href="/workspace">Return to workspace</Link></div>}
       </main>
     );
 

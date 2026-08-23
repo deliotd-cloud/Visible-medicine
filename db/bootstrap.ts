@@ -305,7 +305,7 @@ export async function ensureEducationUser(auth: AuthContext) {
     auth,
     process.env.NODE_ENV,
   );
-  await env.DB.prepare(`INSERT INTO users (id, external_subject, email, display_name, roles, created_at, last_seen_at) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET email = excluded.email, display_name = excluded.display_name, last_seen_at = excluded.last_seen_at`).bind(auth.userId, auth.externalSubject, auth.email, auth.displayName, decision.roles, now, now).run();
+  await env.DB.prepare(`INSERT INTO users (id, external_subject, email, display_name, roles, created_at, last_seen_at) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET email = excluded.email, display_name = excluded.display_name, roles = excluded.roles, last_seen_at = excluded.last_seen_at`).bind(auth.userId, auth.externalSubject, auth.email, auth.displayName, decision.roles, now, now).run();
   return { roles: decision.roles.split(",").filter(Boolean) };
 }
 

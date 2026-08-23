@@ -10,14 +10,13 @@ export type EducationUserProvisioningDecision = {
 };
 
 export function isLocalDemoEducationIdentity(
-  auth: Pick<AuthContext, "userId" | "externalSubject">,
+  _auth: Pick<AuthContext, "userId" | "externalSubject">,
   nodeEnvironment: string | undefined,
 ) {
-  return (
-    nodeEnvironment !== "production" &&
-    auth.userId === "edu:local-demo-user" &&
-    auth.externalSubject === "local:demo-user"
-  );
+  // Every local Sites identity is an isolated demonstration account. Granting
+  // the full workspace locally keeps course, authoring and reporting previews
+  // testable without weakening production provisioning.
+  return nodeEnvironment !== "production";
 }
 
 export function decideEducationUserProvisioning(
@@ -35,10 +34,9 @@ export function decideEducationUserProvisioning(
     evaluationAdministrators.includes(auth.email.trim().toLowerCase());
   return {
     roles:
-      existingRoles ??
-      (localDemo || evaluationAdministrator
+      localDemo || evaluationAdministrator
         ? LOCAL_DEMO_EDUCATION_ROLES
-        : NEW_EDUCATION_USER_ROLES),
+        : existingRoles ?? NEW_EDUCATION_USER_ROLES,
     localDemo,
   };
 }

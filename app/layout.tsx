@@ -32,8 +32,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={geistMono.variable}>
+        <a className="skip-link" href="#main-content">Skip to content</a>
         <SiteHeader />
-        {children}
+        <div id="main-content" tabIndex={-1}>{children}</div>
         <SiteFooter />
       </body>
     </html>

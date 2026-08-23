@@ -5404,6 +5404,8 @@
   border: 1px solid var(--accent);
   border-radius: 6px;
 }
+.loading-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.loading-actions a { min-height: 40px; padding: 0 14px; display: inline-flex; align-items: center; border: 1px solid var(--border); border-radius: 7px; color: var(--text); font-size: 12px; }
 
 @media (max-width: 1400px) {
   .app-shell {
