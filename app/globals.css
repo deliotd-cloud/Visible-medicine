@@ -10,6 +10,8 @@
   --green-2: #0d3941;
   --teal: #087b6c;
   --lime: #28c6a8;
+  --secondary-text: #5f706c;
+  --secondary-text-dark: #a5bbb5;
   --atlas-warm: #f6f1e7;
   --atlas-highlight: #dce9ad;
   --font-geist-mono: var(--font-atlas-mono);
@@ -779,3 +781,60 @@ h1 { margin: 0; max-width: 660px; font-size: clamp(56px, 6vw, 88px); line-height
   .certificate-card dl { grid-template-columns: 1fr; }
   .workspace-tools.expanded { grid-template-columns: 1fr; }
 }
+
+/* WCAG AA secondary-text palette. Keep quiet information visually secondary
+   without relying on low contrast on either light or dark surfaces. */
+.trust-row,
+.system-strip p,
+.system-strip a span,
+.section-index,
+.module-card-copy > span,
+.module-card-copy > p,
+.module-card-copy > b,
+.platform-strip span,
+.research-grid span,
+.catalogue-controls > span,
+.catalogue-number,
+.catalogue-copy > span,
+.catalogue-copy small,
+.catalogue-meta,
+.module-titlebar > div:first-child,
+.module-facts span,
+.course-card-footer,
+.course-detail-grid li span,
+.lesson-plan > div span,
+.lesson-plan small,
+.studio-flow span,
+.research-principles article > span,
+.capability-list span,
+.plan-grid article > span,
+.factor-list span,
+.pilot-steps span,
+.progress-card span,
+.publication-register article > span,
+.module-provenance > div > span,
+.module-provenance > p,
+.embed-origin-manager label,
+.control-centre-nav > p,
+.control-centre-nav > a span,
+.control-metrics span,
+.control-metrics small,
+.control-form-grid label small,
+.stack-form label small,
+.publication-ledger small,
+.portfolio-list small,
+.search-group a > span,
+.certificate-card dt { color: var(--secondary-text); }
+
+.course-platform-note .section-index,
+.learning-aside .section-index,
+.clinical-separation .section-index,
+.citation-example .section-index,
+.footer-boundary small,
+.citation-example span,
+.filter-list button i,
+.current-structures > p,
+.info-metadata span,
+.embed-runtime-state small { color: var(--secondary-text-dark); }
+
+.pricing-boundary .section-index { color: var(--lime); }
