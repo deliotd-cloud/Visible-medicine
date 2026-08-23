@@ -3,13 +3,18 @@ import Link from "next/link";
 import { chatGPTSignOutPath, requireChatGPTUser } from "../chatgpt-auth";
 import { listProgress } from "../../db/progress";
 import { findAtlasModule, findCourse } from "../../lib/catalog";
+import { getLearnerPortfolio } from "../../lib/platform-governance";
+import { LearnerPortfolio } from "../../components/LearnerPortfolio";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = { title: "My learning", description: "Your saved Elivion Atlas modules and course progress." };
 
 export default async function MyLearningPage() {
   const user = await requireChatGPTUser("/my-learning");
-  const progress = await listProgress(user.userId);
+  const [progress, portfolio] = await Promise.all([
+    listProgress(user.userId),
+    getLearnerPortfolio({ userId: `edu:${user.userId}`, externalSubject: `sites:${user.userId}`, email: user.email, displayName: user.displayName }),
+  ]);
   return (
     <main className="inner-page learning-page">
       <section className="learning-heading"><div><p className="eyebrow"><span /> Personal learning space</p><h1>Welcome back.</h1><p>{user.displayName}</p></div><a href={chatGPTSignOutPath("/")}>Sign out</a></section>
@@ -23,6 +28,7 @@ export default async function MyLearningPage() {
         </div>
         <aside className="learning-aside"><p className="section-index">Account boundary</p><h2>Your learner identity is not a clinical identity.</h2><p>This private preview uses the hosting platform’s sign-in. A production Elivion Education identity provider will replace this adapter before external launch.</p><div><span>Saved state</span><b>Atlas and course progress only</b><span>Clinical access</span><b>None</b><span>Patient data</span><b>Not accepted</b></div></aside>
       </section>
+      <LearnerPortfolio initialPortfolio={portfolio} />
     </main>
   );
 }

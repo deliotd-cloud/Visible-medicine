@@ -8,7 +8,7 @@ const controls = [
   ["Content provenance", "Every publishable resource retains source, rights, de-identification, version and review evidence."],
   ["Identity and tenancy", "Education identities, organisation roles and entitlements are separate from all clinical Didanix identities."],
   ["Assessment integrity", "Published assessments use immutable manifests, server-authoritative timing, auditable submissions and controlled result release."],
-  ["Accessibility", "The learning runtime includes text sizing, contrast, target-size, reduced-motion and keyboard support; formal WCAG 2.2 AA assurance remains a release gate."],
+  ["Accessibility", "The learning runtime includes text sizing, contrast, target-size, reduced-motion and keyboard support; formal independent WCAG 2.2 AA assurance and quantified Core Web Vitals remain release gates."],
   ["Corrections and withdrawal", "Published education content requires accountable correction, supersession and urgent-withdrawal procedures before public release."],
 ];
 

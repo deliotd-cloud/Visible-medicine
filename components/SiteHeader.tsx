@@ -12,6 +12,7 @@ const primaryLinks = [
 ] as const;
 
 const secondaryLinks = [
+  ["Search", "/search"],
   ["Research", "/research"],
   ["Plans", "/pricing"],
   ["Embeds", "/embed"],
@@ -35,6 +36,7 @@ export function SiteHeader() {
           </Link>
         ))}
       </nav>
+      <Link className="search-link" href="/search" aria-label="Search Elivion Education" aria-current={pathname === "/search" ? "page" : undefined}>⌕ <span>Search</span></Link>
       <Link className="account-link" href="/workspace" aria-current={pathname === "/workspace" ? "page" : undefined}>Workspace <span aria-hidden="true">→</span></Link>
       <details className="mobile-nav">
         <summary aria-label="Open site navigation">Menu</summary>

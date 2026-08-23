@@ -34,6 +34,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className={geistMono.variable}>
         <a className="skip-link" href="#main-content">Skip to content</a>
         <SiteHeader />
+        <div className="intended-use-strip"><span>Education &amp; research only</span><p>No diagnosis, reporting, patient care or clinical decision-making.</p><a href="/intended-use">Read intended use →</a></div>
         <div id="main-content" tabIndex={-1}>{children}</div>
         <SiteFooter />
       </body>

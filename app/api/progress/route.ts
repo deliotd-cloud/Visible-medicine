@@ -1,5 +1,6 @@
 import { getChatGPTUser } from "../../chatgpt-auth";
 import { listProgress, saveProgress } from "../../../db/progress";
+import { syncCourseCompletion } from "../../../lib/platform-governance";
 
 export async function GET() {
   const user = await getChatGPTUser();
@@ -25,5 +26,8 @@ export async function POST(request: Request) {
   }
 
   const saved = await saveProgress(user.userId, { resourceType, resourceSlug, progress: Number(progress), lastPosition: Number(lastPosition) });
-  return Response.json({ progress: saved });
+  const completionId = resourceType === "course" && Number(progress) === 100
+    ? await syncCourseCompletion({ userId: `edu:${user.userId}`, externalSubject: `sites:${user.userId}`, email: user.email, displayName: user.displayName }, resourceSlug, progress)
+    : null;
+  return Response.json({ progress: saved, completionId });
 }

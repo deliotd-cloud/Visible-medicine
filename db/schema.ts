@@ -283,3 +283,51 @@ export const educationPublications = sqliteTable("education_publications", {
   uniqueIndex("idx_education_publications_type_slug_version").on(table.resourceType, table.slug, table.version),
   index("idx_education_publications_status_type").on(table.status, table.resourceType),
 ]);
+
+export const atlasPublicationVersions = sqliteTable("atlas_publication_versions", {
+  id: text("id").primaryKey(), organizationId: text("organization_id").references(() => organizations.id), ingestionJobId: text("ingestion_job_id").references(() => ingestionJobs.id), slug: text("slug").notNull(), title: text("title").notNull(), region: text("region").notNull(), modality: text("modality").notNull(), orientation: text("orientation").notNull(), sourceStatement: text("source_statement").notNull(), status: text("status").notNull(), rightsStatus: text("rights_status").notNull(), deidentificationStatus: text("deidentification_status").notNull(), specialistReviewStatus: text("specialist_review_status").notNull(), version: integer("version").notNull(), contentHash: text("content_hash").notNull(), supersedesId: text("supersedes_id"), createdBy: text("created_by").notNull().references(() => users.id), reviewerId: text("reviewer_id").references(() => users.id), reviewNotes: text("review_notes").notNull().default(""), createdAt: text("created_at").notNull(), updatedAt: text("updated_at").notNull(), publishedAt: text("published_at"),
+}, (table) => [uniqueIndex("idx_atlas_publication_slug_version").on(table.slug, table.version), index("idx_atlas_publication_org_status").on(table.organizationId, table.status), index("idx_atlas_publication_ingestion").on(table.ingestionJobId)]);
+
+export const atlasAnnotations = sqliteTable("atlas_annotations", {
+  id: text("id").primaryKey(), publicationVersionId: text("publication_version_id").notNull().references(() => atlasPublicationVersions.id), structureName: text("structure_name").notNull(), synonymsJson: text("synonyms_json").notNull(), description: text("description").notNull(), relationshipsJson: text("relationships_json").notNull(), citationsJson: text("citations_json").notNull(), sliceStart: integer("slice_start").notNull(), sliceEnd: integer("slice_end").notNull(), status: text("status").notNull(), version: integer("version").notNull(), createdBy: text("created_by").notNull().references(() => users.id), updatedAt: text("updated_at").notNull(),
+}, (table) => [index("idx_atlas_annotations_publication_status").on(table.publicationVersionId, table.status), index("idx_atlas_annotations_structure").on(table.structureName)]);
+
+export const atlasPublicationReviews = sqliteTable("atlas_publication_reviews", {
+  id: text("id").primaryKey(), publicationVersionId: text("publication_version_id").notNull().references(() => atlasPublicationVersions.id), reviewerId: text("reviewer_id").notNull().references(() => users.id), decision: text("decision").notNull(), notes: text("notes").notNull(), createdAt: text("created_at").notNull(),
+}, (table) => [index("idx_atlas_reviews_publication_created").on(table.publicationVersionId, table.createdAt)]);
+
+export const organizationProfiles = sqliteTable("organization_profiles", {
+  organizationId: text("organization_id").primaryKey().references(() => organizations.id), displayName: text("display_name").notNull(), primaryColor: text("primary_color").notNull(), accentColor: text("accent_color").notNull(), logoUrl: text("logo_url").notNull(), customDomain: text("custom_domain").notNull(), supportContact: text("support_contact").notNull(), onboardingStage: text("onboarding_stage").notNull(), updatedAt: text("updated_at").notNull(),
+});
+
+export const organizationIdentityConnections = sqliteTable("organization_identity_connections", {
+  id: text("id").primaryKey(), organizationId: text("organization_id").notNull().references(() => organizations.id), protocol: text("protocol").notNull(), issuer: text("issuer").notNull(), clientId: text("client_id").notNull(), metadataUrl: text("metadata_url").notNull(), status: text("status").notNull(), version: integer("version").notNull(), createdBy: text("created_by").notNull().references(() => users.id), createdAt: text("created_at").notNull(), updatedAt: text("updated_at").notNull(),
+}, (table) => [uniqueIndex("idx_identity_connection_org_protocol").on(table.organizationId, table.protocol)]);
+
+export const learnerNotes = sqliteTable("learner_notes", {
+  id: text("id").primaryKey(), learnerId: text("learner_id").notNull().references(() => users.id), resourceType: text("resource_type").notNull(), resourceId: text("resource_id").notNull(), title: text("title").notNull(), body: text("body").notNull(), visibility: text("visibility").notNull(), createdAt: text("created_at").notNull(), updatedAt: text("updated_at").notNull(),
+}, (table) => [index("idx_learner_notes_owner_updated").on(table.learnerId, table.updatedAt), index("idx_learner_notes_resource").on(table.resourceType, table.resourceId)]);
+
+export const learnerReviewQueue = sqliteTable("learner_review_queue", {
+  id: text("id").primaryKey(), learnerId: text("learner_id").notNull().references(() => users.id), resourceType: text("resource_type").notNull(), resourceId: text("resource_id").notNull(), title: text("title").notNull(), prompt: text("prompt").notNull(), dueAt: text("due_at").notNull(), intervalDays: integer("interval_days").notNull(), status: text("status").notNull(), createdAt: text("created_at").notNull(), updatedAt: text("updated_at").notNull(),
+}, (table) => [index("idx_learner_review_owner_status_due").on(table.learnerId, table.status, table.dueAt)]);
+
+export const courseCompletions = sqliteTable("course_completions", {
+  id: text("id").primaryKey(), learnerId: text("learner_id").notNull().references(() => users.id), courseSlug: text("course_slug").notNull(), courseTitle: text("course_title").notNull(), percentComplete: integer("percent_complete").notNull(), evidenceHash: text("evidence_hash").notNull(), status: text("status").notNull(), completedAt: text("completed_at").notNull(),
+}, (table) => [uniqueIndex("idx_course_completion_learner_course").on(table.learnerId, table.courseSlug)]);
+
+export const educationCertificates = sqliteTable("education_certificates", {
+  id: text("id").primaryKey(), completionId: text("completion_id").notNull().references(() => courseCompletions.id), publicCode: text("public_code").notNull(), title: text("title").notNull(), issuedAt: text("issued_at").notNull(), revokedAt: text("revoked_at"),
+}, (table) => [uniqueIndex("idx_education_certificate_completion").on(table.completionId), uniqueIndex("idx_education_certificate_code").on(table.publicCode)]);
+
+export const billingAccounts = sqliteTable("billing_accounts", {
+  organizationId: text("organization_id").primaryKey().references(() => organizations.id), provider: text("provider").notNull(), providerCustomerRef: text("provider_customer_ref").notNull(), billingContact: text("billing_contact").notNull(), currency: text("currency").notNull(), taxCountry: text("tax_country").notNull(), status: text("status").notNull(), version: integer("version").notNull(), updatedAt: text("updated_at").notNull(),
+});
+
+export const subscriptionRecords = sqliteTable("subscription_records", {
+  id: text("id").primaryKey(), organizationId: text("organization_id").notNull().references(() => organizations.id), planCode: text("plan_code").notNull(), status: text("status").notNull(), providerSubscriptionRef: text("provider_subscription_ref").notNull(), learnerSeats: integer("learner_seats").notNull(), educatorSeats: integer("educator_seats").notNull(), storageBytes: integer("storage_bytes").notNull(), currentPeriodEnd: text("current_period_end"), cancelAtPeriodEnd: integer("cancel_at_period_end", { mode: "boolean" }).notNull().default(false), createdAt: text("created_at").notNull(), updatedAt: text("updated_at").notNull(),
+}, (table) => [index("idx_subscription_org_status").on(table.organizationId, table.status)]);
+
+export const embedLaunches = sqliteTable("embed_launches", {
+  id: text("id").primaryKey(), organizationId: text("organization_id").notNull().references(() => organizations.id), origin: text("origin").notNull(), resourceType: text("resource_type").notNull(), resourceId: text("resource_id").notNull(), audience: text("audience").notNull(), tokenHash: text("token_hash").notNull(), status: text("status").notNull(), expiresAt: text("expires_at").notNull(), createdBy: text("created_by").notNull().references(() => users.id), createdAt: text("created_at").notNull(), usedAt: text("used_at"),
+}, (table) => [uniqueIndex("idx_embed_launch_token_hash").on(table.tokenHash), index("idx_embed_launch_org_status_expiry").on(table.organizationId, table.status, table.expiresAt)]);
