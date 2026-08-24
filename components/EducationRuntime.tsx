@@ -2800,6 +2800,7 @@ export function EducationRuntime() {
               </span>
               <select
                 aria-label="Select an allocated workbook"
+                name="allocated-workbook"
                 value={data.course.workbookId}
                 disabled={busy || dualDisplay}
                 onChange={(event) => void chooseWorkbook(event.target.value)}
@@ -3425,6 +3426,7 @@ export function EducationRuntime() {
                           max="4"
                           step=".25"
                           value={lineThickness}
+                          name="measurement-line-thickness"
                           onInput={(event) => {
                             setLineThickness(Number(event.currentTarget.value));
                             setNotice(`Annotation line thickness ${event.currentTarget.value}`);
@@ -3436,6 +3438,7 @@ export function EducationRuntime() {
                     <div className="tool-row">
                       <select
                         aria-label="Window preset"
+                        name="window-preset"
                         value={windowPreset}
                         onChange={(event) =>
                           applyWindowPreset(event.target.value as Exclude<WindowPreset, "custom">)
@@ -3502,6 +3505,7 @@ export function EducationRuntime() {
                         type="range"
                         min="0"
                         max="95"
+                        name="image-number"
                         value={frameIndex}
                         onInput={(event) =>
                           setFrameIndex(Number(event.currentTarget.value))
