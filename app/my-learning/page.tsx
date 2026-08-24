@@ -5,28 +5,32 @@ import { listProgress } from "../../db/progress";
 import { findAtlasModule, findCourse } from "../../lib/catalog";
 import { getLearnerPortfolio } from "../../lib/platform-governance";
 import { LearnerPortfolio } from "../../components/LearnerPortfolio";
+import { getLearnerEnrolments, getLearnerProfile } from "../../lib/education-platform";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = { title: "My learning", description: "Your saved Elivion Atlas modules and course progress." };
 
 export default async function MyLearningPage() {
   const user = await requireChatGPTUser("/my-learning");
-  const [progress, portfolio] = await Promise.all([
+  const auth = { userId: `edu:${user.userId}`, externalSubject: `sites:${user.userId}`, email: user.email, displayName: user.displayName };
+  const [progress, portfolio, profile, enrolments] = await Promise.all([
     listProgress(user.userId),
-    getLearnerPortfolio({ userId: `edu:${user.userId}`, externalSubject: `sites:${user.userId}`, email: user.email, displayName: user.displayName }),
+    getLearnerPortfolio(auth),
+    getLearnerProfile(auth),
+    getLearnerEnrolments(auth),
   ]);
   return (
     <main className="inner-page learning-page">
-      <section className="learning-heading"><div><p className="eyebrow"><span /> Personal learning space</p><h1>Welcome back.</h1><p>{user.displayName}</p></div><a href={chatGPTSignOutPath("/")}>Sign out</a></section>
+      <section className="learning-heading"><div><p className="eyebrow"><span /> Personal learning space</p><h1>Welcome back.</h1><p>{user.displayName}</p></div><div className="learning-account-actions"><Link href={profile.onboardingStatus === "complete" ? "/onboarding" : "/join"}>{profile.onboardingStatus === "complete" ? "Edit learner profile" : "Complete learner profile"}</Link><a href={chatGPTSignOutPath("/")}>Sign out</a></div></section>
       <section className="learning-grid">
         <div className="learning-main"><div className="section-heading compact"><div><p className="section-index">Continue</p><h2>Your saved learning</h2></div></div>
-          <div className="runtime-resume-card"><div><span>Course runtime</span><h3>Your allocated teaching and assessments</h3><p>Open the full imaging workspace with its workbook rail, notes, answers and review history.</p></div><Link className="primary-button" href="/learn">Resume learning <span>→</span></Link></div>
+          {enrolments.length ? <div className="enrolled-course-grid">{enrolments.map((course) => <article className="enrolled-course-card" key={course.id}><div><span>{course.level} · {course.workbookCount} {course.workbookCount === 1 ? "workbook" : "workbooks"}</span><h3>{course.title}</h3><p>{course.summary}</p></div><div className="enrolled-progress"><span><b>{course.progress}%</b> complete</span><i><b style={{ width: `${course.progress}%` }} /></i></div><div>{course.firstWorkbookId ? <Link className="primary-button" href={`/learn/${course.slug}/${encodeURIComponent(course.firstWorkbookId)}`}>{course.progress ? "Continue" : "Start course"} <span>→</span></Link> : <small>Workbook allocation pending</small>}<Link href={`/courses/${course.slug}`}>Course details</Link></div></article>)}</div> : <div className="runtime-resume-card"><div><span>Course catalogue</span><h3>No course enrolments yet</h3><p>Browse published Elivion and institutional releases, then enrol through the access route chosen by the educator.</p></div><Link className="primary-button" href="/courses">Browse courses <span>→</span></Link></div>}
           {progress.length ? progress.map((item) => {
             const resource = item.resourceType === "atlas" ? findAtlasModule(item.resourceSlug) : findCourse(item.resourceSlug);
-            return <Link className="progress-card" href={`/${item.resourceType === "atlas" ? "atlas" : "courses"}/${item.resourceSlug}`} key={`${item.resourceType}-${item.resourceSlug}`}><div><span>{item.resourceType}</span><h3>{resource?.title ?? item.resourceSlug}</h3><p>Last position {item.lastPosition}</p></div><div className="progress-ring" style={{ "--progress": `${item.progress * 3.6}deg` } as React.CSSProperties}><b>{item.progress}%</b></div></Link>;
+            return <Link className="progress-card" href={item.resourceType === "atlas" ? `/atlas/${item.resourceSlug}` : "/courses"} key={`${item.resourceType}-${item.resourceSlug}`}><div><span>{item.resourceType}</span><h3>{resource?.title ?? item.resourceSlug}</h3><p>Last position {item.lastPosition}</p></div><div className="progress-ring" style={{ "--progress": `${item.progress * 3.6}deg` } as React.CSSProperties}><b>{item.progress}%</b></div></Link>;
           }) : <div className="empty-learning"><span>◎</span><h3>No saved modules yet</h3><p>Open the CT head demonstration and choose “Save position” to begin your learning history.</p><Link className="primary-button" href="/atlas/ct-head">Explore CT head <span>→</span></Link></div>}
         </div>
-        <aside className="learning-aside"><p className="section-index">Account boundary</p><h2>Your learner identity is not a clinical identity.</h2><p>This private preview uses the hosting platform’s sign-in. A production Elivion Education identity provider will replace this adapter before external launch.</p><div><span>Saved state</span><b>Atlas and course progress only</b><span>Clinical access</span><b>None</b><span>Patient data</span><b>Not accepted</b></div></aside>
+        <aside className="learning-aside"><p className="section-index">Account boundary</p><h2>Your learner identity is not a clinical identity.</h2><p>This private preview uses the hosting platform’s sign-in. A production Elivion Education identity provider will replace this adapter before external launch.</p><div><span>Profile</span><b>{profile.onboardingStatus === "complete" ? `${profile.trainingStage} · ${profile.discipline}` : "Setup required"}</b><span>Saved state</span><b>Education progress only</b><span>Clinical access</span><b>None</b><span>Patient data</span><b>Not accepted</b></div></aside>
       </section>
       <LearnerPortfolio initialPortfolio={portfolio} />
     </main>

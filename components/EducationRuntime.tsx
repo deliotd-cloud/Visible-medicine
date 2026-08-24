@@ -268,7 +268,9 @@ function initialAccessibility(): AccessibilityProfile {
   if (typeof window === "undefined") return DEFAULT_ACCESSIBILITY;
   try {
     const saved = JSON.parse(
-      window.localStorage.getItem("didanix-education-accessibility-v1") ?? "{}",
+      window.localStorage.getItem("elivion-education-accessibility-v2") ??
+        window.localStorage.getItem("didanix-education-accessibility-v1") ??
+        "{}",
     ) as Partial<AccessibilityProfile>;
     return {
       textSize: ["standard", "large", "extra-large"].includes(
@@ -428,10 +430,10 @@ function seriesFor(
   ];
 }
 
-export function EducationRuntime() {
+export function EducationRuntime({ workbookId: requestedWorkbookId = "", initialView }: { workbookId?: string; initialView?: WorkspaceView } = {}) {
   const [data, setData] = useState<AppSnapshot | null>(null);
   const [view, setView] = useState<WorkspaceView>(
-    initialWorkspaceView,
+    () => initialView ?? initialWorkspaceView(),
   );
   const [previewRole, setPreviewRole] = useState<"full" | "learner" | "instructor" | "examiner" | "administrator">("full");
   const staffMenuRef = useRef<HTMLDetailsElement>(null);
@@ -604,7 +606,7 @@ export function EducationRuntime() {
 
   async function refresh() {
     try {
-      const workbookId = initialWorkbookId();
+      const workbookId = requestedWorkbookId || initialWorkbookId();
       const response = await fetch(
         `/api/app${workbookId ? `?workbookId=${encodeURIComponent(workbookId)}` : ""}`,
         { cache: "no-store" },
@@ -774,7 +776,7 @@ export function EducationRuntime() {
     if (!accessibilityLoaded) return;
     try {
       window.localStorage.setItem(
-        "didanix-education-accessibility-v1",
+        "elivion-education-accessibility-v2",
         JSON.stringify(accessibility),
       );
     } catch {
@@ -784,7 +786,7 @@ export function EducationRuntime() {
 
   useEffect(() => {
     function syncAccessibility(event: StorageEvent) {
-      if (event.key === "didanix-education-accessibility-v1" && event.newValue)
+      if (event.key === "elivion-education-accessibility-v2" && event.newValue)
         setAccessibility(initialAccessibility());
     }
     window.addEventListener("storage", syncAccessibility);
@@ -2603,7 +2605,7 @@ export function EducationRuntime() {
         </div>
       )}
       <header className="app-header">
-        <Link className="runtime-platform-return" href="/workspace" aria-label="Return to the Elivion Education platform workspace">
+        <Link className="runtime-platform-return" href={view === "authoring" ? "/studio/workspace" : "/my-learning"} aria-label={view === "authoring" ? "Return to Elivion Studio" : "Return to My Learning"}>
           <BrandLockup />
         </Link>
         <div className="mode-switch" aria-label="Education workspace mode">

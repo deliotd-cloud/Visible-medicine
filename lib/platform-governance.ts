@@ -2,7 +2,7 @@ import { env } from "cloudflare:workers";
 import { appendAudit, ensureEducationUser } from "@/db/bootstrap";
 import { ensurePlatformSchema, getPlatformSnapshot } from "@/db/platform";
 import type { AuthContext } from "@/lib/auth";
-import { atlasModules, courses, findCourse } from "@/lib/catalog";
+import { atlasModules, findCourse } from "@/lib/catalog";
 import { sha256 } from "@/lib/domain";
 
 type Row = Record<string, string | number | null>;
@@ -358,16 +358,17 @@ export async function searchEducation(queryValue: unknown) {
   const normalizedQuery = query.replace(/[%_]/g, "").toLowerCase().trim();
   if (normalizedQuery.length < 2) return [];
   const term = `%${normalizedQuery}%`;
-  const [caseRows, workbookRows, annotationRows] = await Promise.all([
+  const [caseRows, workbookRows, annotationRows, courseReleaseRows] = await Promise.all([
     env.DB.prepare(`SELECT id, title, description, classification FROM cases WHERE status='published' AND (LOWER(title) LIKE ? OR LOWER(description) LIKE ? OR LOWER(classification) LIKE ?) LIMIT 12`).bind(term, term, term).all<Row>(),
     env.DB.prepare(`SELECT w.id, w.title, w.mode, c.title AS course_title FROM workbooks w JOIN modules m ON m.id=w.module_id JOIN courses c ON c.id=m.course_id WHERE w.status='published' AND (LOWER(w.title) LIKE ? OR LOWER(c.title) LIKE ?) LIMIT 12`).bind(term, term).all<Row>(),
     env.DB.prepare(`SELECT a.structure_name, a.description, a.publication_version_id, p.slug, p.title, p.modality FROM atlas_annotations a JOIN atlas_publication_versions p ON p.id=a.publication_version_id WHERE p.status='published' AND a.status='published' AND (LOWER(a.structure_name) LIKE ? OR LOWER(a.synonyms_json) LIKE ? OR LOWER(a.description) LIKE ?) LIMIT 16`).bind(term, term, term).all<Row>(),
+    env.DB.prepare(`SELECT slug, title, summary, level, duration_label, publisher_name FROM course_releases WHERE status='published' AND visibility='public' AND (LOWER(title) LIKE ? OR LOWER(summary) LIKE ? OR LOWER(level) LIKE ? OR LOWER(publisher_name) LIKE ?) LIMIT 12`).bind(term, term, term, term).all<Row>(),
   ]);
   const staticResults = [
     ...atlasModules.filter((item) => [item.title, item.region, item.modality, item.description, ...item.systems].join(" ").toLowerCase().includes(query.toLowerCase())).map((item) => ({ kind: "Atlas", title: item.title, summary: item.description, href: `/atlas/${item.slug}`, meta: `${item.modality} · ${item.region}` })),
-    ...courses.filter((item) => [item.title, item.summary, item.level, ...item.outcomes].join(" ").toLowerCase().includes(query.toLowerCase())).map((item) => ({ kind: "Course", title: item.title, summary: item.summary, href: `/courses/${item.slug}`, meta: `${item.level} · ${item.duration}` })),
   ];
   return [...staticResults,
+    ...courseReleaseRows.results.map((row) => ({ kind: "Course", title: String(row.title), summary: String(row.summary), href: `/courses/${row.slug}`, meta: `${row.level} · ${row.duration_label}` })),
     ...annotationRows.results.map((row) => ({ kind: "Structure", title: String(row.structure_name), summary: String(row.description), href: `/atlas/${row.slug}`, meta: `${row.modality} · ${row.title}` })),
     ...caseRows.results.map((row) => ({ kind: "Case", title: String(row.title), summary: String(row.description), href: `/learn?case=${encodeURIComponent(String(row.id))}`, meta: String(row.classification) })),
     ...workbookRows.results.map((row) => ({ kind: "Workbook", title: String(row.title), summary: `${row.course_title} teaching workbook`, href: `/learn?workbook=${encodeURIComponent(String(row.id))}`, meta: String(row.mode) })),
@@ -432,7 +433,8 @@ export async function syncCourseCompletion(auth: AuthContext, courseSlugValue: u
   await ensureEducationUser(auth); await ensurePlatformSchema();
   const courseSlug = slug(courseSlugValue); const percent = Number(percentValue);
   if (percent !== 100) return null;
-  const course = findCourse(courseSlug);
+  const release = await env.DB.prepare(`SELECT title FROM course_releases WHERE slug=? AND status='published'`).bind(courseSlug).first<{ title: string }>();
+  const course = release ? { title: release.title } : findCourse(courseSlug);
   if (!course) throw new PlatformGovernanceError("Course not found.", 404);
   const now = new Date().toISOString();
   const completionId = crypto.randomUUID();

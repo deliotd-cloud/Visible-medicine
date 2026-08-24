@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
+import Link from "next/link";
 
 type Snapshot = {
   platform: {
@@ -108,7 +109,7 @@ function IdentitySection({ snapshot, busy, post }: { snapshot: Snapshot; busy: b
       <button className="primary-button" disabled={busy}>Save identity draft <span>→</span></button>
     </form><div className="readiness-checklist">
       {[ ["Tenant and role mapping", Boolean(snapshot.profile)], ["Non-secret identity metadata", Boolean(connection)], ["LTI 1.3 registration", false], ["Institution security approval", false], ["Production activation", false] ].map(([label, ready]) => <div className={ready ? "complete" : "pending"} key={String(label)}><span>{ready ? "✓" : "○"}</span><b>{label}</b></div>)}
-      <a className="inline-control-link" href="/learn?view=integrations">Open LTI 1.3 configuration <span>→</span></a>
+      <Link className="inline-control-link" href="/learn?view=integrations">Open LTI 1.3 configuration <span>→</span></Link>
       <p>Client secrets, signing keys and clinical credentials are never accepted through this configuration surface.</p>
     </div></div>
   </section>;

@@ -125,7 +125,7 @@ export function AtlasExplorer({ moduleSlug, totalImages }: AtlasExplorerProps) {
           <span>Level</span><b>Image {slice}</b>
           <span>Review</span><b>Demonstration</b>
         </div>
-        <Link href="/courses/foundations-ct-head">Open linked lesson <span>↗</span></Link>
+        <Link href="/courses">Browse related courses <span>↗</span></Link>
       </aside>
     </section>
   );

@@ -26,7 +26,7 @@ export function SiteHeader() {
 
   return (
     <header className="topbar">
-      <Link className="brand" href="/" aria-label="Elivion Education home">
+      <Link className="brand" href="/">
         <BrandLockup priority />
       </Link>
       <nav className="nav-links" aria-label="Primary navigation">
@@ -37,9 +37,9 @@ export function SiteHeader() {
         ))}
       </nav>
       <Link className="search-link" href="/search" aria-label="Search Elivion Education" aria-current={pathname === "/search" ? "page" : undefined}>⌕ <span>Search</span></Link>
-      <Link className="account-link" href="/workspace" aria-current={pathname === "/workspace" ? "page" : undefined}>Workspace <span aria-hidden="true">→</span></Link>
+      <Link className="account-link" href="/my-learning" aria-current={pathname === "/my-learning" ? "page" : undefined}>My learning <span aria-hidden="true">→</span></Link>
       <details className="mobile-nav">
-        <summary aria-label="Open site navigation">Menu</summary>
+        <summary>Menu</summary>
         <nav aria-label="Mobile navigation">
           {[...primaryLinks, ...secondaryLinks].map(([label, href]) => (
             <Link

@@ -13,7 +13,7 @@ export default async function WorkspacePage() {
   const storageGb = Math.round(snapshot.entitlement.storageBytes / 1073741824);
   return (
     <main className="inner-page workspace-page">
-      <section className="workspace-hero"><div><p className="eyebrow"><span /> Institution workspace</p><h1>{snapshot.organization.name}</h1><p>{user.displayName} · {snapshot.organization.role} · {snapshot.entitlement.status}</p></div><Link className="primary-button" href="/learn">Open learning workspace <span>→</span></Link></section>
+      <section className="workspace-hero"><div><p className="eyebrow"><span /> Institution workspace</p><h1>{snapshot.organization.name}</h1><p>{user.displayName} · {snapshot.organization.role} · {snapshot.entitlement.status}</p></div><Link className="primary-button" href="/studio/workspace">Open Studio <span>→</span></Link></section>
       <section className="workspace-metrics" aria-label="Workspace usage">
         <div><span>Learners</span><b>{snapshot.usage.learners} / {snapshot.entitlement.learnerLimit}</b></div>
         <div><span>Courses</span><b>{snapshot.usage.courses}</b></div>
@@ -21,9 +21,9 @@ export default async function WorkspacePage() {
         <div><span>Governed media</span><b>{snapshot.usage.governedMedia}</b></div>
       </section>
       <section className="workspace-tools expanded">
-        <div><p className="section-index">Create and deliver</p><h2>Studio</h2><p>Build workbooks, manage questions, run live teaching and review controlled content.</p><Link href="/learn?view=authoring">Open workbook builder →</Link></div>
-        <div><p className="section-index">Measure</p><h2>Reporting</h2><p>Review completion, assessment performance, live participation and cohort trends.</p><Link href="/learn?view=insights">Open progress and insights →</Link></div>
-        <div><p className="section-index">Configure</p><h2>Integrations</h2><p>Prepare education-only identity, LTI and approved embedded delivery.</p><Link href="/learn?view=integrations">Open integrations →</Link></div>
+        <div><p className="section-index">Create and deliver</p><h2>Studio</h2><p>Build courses and workbooks, manage cohorts and prepare governed releases.</p><Link href="/studio/workspace">Open Studio workspace →</Link></div>
+        <div><p className="section-index">Measure</p><h2>Reporting</h2><p>Review completion, course reach, publication state and cohort trends.</p><Link href="/studio/analytics">Open Studio analytics →</Link></div>
+        <div><p className="section-index">Configure</p><h2>Integrations</h2><p>Prepare education-only identity, LTI and approved embedded delivery.</p><Link href="/workspace/control#identity">Open integration controls →</Link></div>
         <div><p className="section-index">Govern</p><h2>Atlas publishing</h2><p>Version teaching media, build cited structure annotations and manage independent publication review.</p><Link href="/workspace/control#publishing">Open publishing controls →</Link></div>
         <div><p className="section-index">Administer</p><h2>Institution setup</h2><p>Configure tenant branding, identity metadata, commercial intent and signed external delivery.</p><Link href="/workspace/control">Open control centre →</Link></div>
         <div><p className="section-index">Discover</p><h2>Unified search</h2><p>Find anatomy structures, teaching cases, courses and published workbooks from one place.</p><Link href="/search">Search education content →</Link></div>

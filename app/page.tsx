@@ -1,7 +1,11 @@
-import { atlasModules, courses } from "../lib/catalog";
+import { atlasModules } from "../lib/catalog";
 import Link from "next/link";
+import { listCatalogueCourses } from "../lib/education-platform";
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  const courses = await listCatalogueCourses();
   return (
     <main className="site-shell">
       <section className="hero" id="top">
@@ -18,7 +22,7 @@ export default function Home() {
           </div>
         </div>
 
-        <Link className="atlas-preview" href="/atlas/ct-head" aria-label="Open the interactive CT head atlas preview">
+        <Link className="atlas-preview" href="/atlas/ct-head">
           <div className="viewer-bar">
             <div><span className="live-dot" /> CT head · axial</div>
             <div className="viewer-tools" aria-hidden="true"><span>W/L</span><span>⌕</span><span>⤢</span></div>
@@ -78,8 +82,8 @@ export default function Home() {
           {courses.map((course, index) => (
             <Link className="course-row" href={`/courses/${course.slug}`} key={course.slug}>
               <span className="course-number">0{index + 1}</span>
-              <div><small>{course.type === "official" ? "Elivion official" : "Institution demonstration"}</small><h3>{course.title}</h3></div>
-              <p>{course.level} · {course.lessons} lessons · {course.duration}</p>
+              <div><small>{course.publisherKind === "official" ? "Elivion official" : "Institution-published"}</small><h3>{course.title}</h3></div>
+              <p>{course.level} · {course.workbookCount} workbooks · {course.duration}</p>
               <b>↗</b>
             </Link>
           ))}

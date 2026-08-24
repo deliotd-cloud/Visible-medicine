@@ -81,6 +81,96 @@ export const enrolments = sqliteTable("enrolments", {
   id: text("id").primaryKey(), userId: text("user_id").notNull().references(() => users.id), courseId: text("course_id").notNull().references(() => courses.id), status: text("status").notNull(), enrolledAt: text("enrolled_at").notNull(),
 }, (table) => [uniqueIndex("idx_enrolments_user_course").on(table.userId, table.courseId)]);
 
+export const learnerProfiles = sqliteTable("learner_profiles", {
+  userId: text("user_id").primaryKey().references(() => users.id),
+  trainingStage: text("training_stage").notNull(),
+  discipline: text("discipline").notNull(),
+  interestsJson: text("interests_json").notNull(),
+  institutionName: text("institution_name").notNull(),
+  countryCode: text("country_code").notNull(),
+  timezone: text("timezone").notNull(),
+  onboardingStatus: text("onboarding_status").notNull(),
+  termsAcceptedAt: text("terms_accepted_at"),
+  marketingOptIn: integer("marketing_opt_in", { mode: "boolean" }).notNull().default(false),
+  updatedAt: text("updated_at").notNull(),
+});
+
+export const courseOwnership = sqliteTable("course_ownership", {
+  courseId: text("course_id").primaryKey().references(() => courses.id),
+  organizationId: text("organization_id").notNull(),
+  ownerId: text("owner_id").notNull().references(() => users.id),
+  createdAt: text("created_at").notNull(),
+}, (table) => [index("idx_course_ownership_org").on(table.organizationId)]);
+
+export const courseReleases = sqliteTable("course_releases", {
+  id: text("id").primaryKey(),
+  courseId: text("course_id").notNull().references(() => courses.id),
+  organizationId: text("organization_id").notNull(),
+  slug: text("slug").notNull(),
+  title: text("title").notNull(),
+  summary: text("summary").notNull(),
+  level: text("level").notNull(),
+  durationLabel: text("duration_label").notNull(),
+  outcomesJson: text("outcomes_json").notNull(),
+  publisherName: text("publisher_name").notNull(),
+  publisherKind: text("publisher_kind").notNull(),
+  visibility: text("visibility").notNull(),
+  accessModel: text("access_model").notNull(),
+  priceMinor: integer("price_minor").notNull().default(0),
+  currency: text("currency").notNull().default("GBP"),
+  status: text("status").notNull(),
+  enrolmentOpen: integer("enrolment_open", { mode: "boolean" }).notNull().default(false),
+  version: integer("version").notNull(),
+  createdBy: text("created_by").notNull().references(() => users.id),
+  reviewedBy: text("reviewed_by").references(() => users.id),
+  reviewNotes: text("review_notes").notNull().default(""),
+  createdAt: text("created_at").notNull(),
+  updatedAt: text("updated_at").notNull(),
+  publishedAt: text("published_at"),
+}, (table) => [
+  uniqueIndex("idx_course_releases_slug").on(table.slug),
+  index("idx_course_releases_catalogue").on(table.visibility, table.status, table.publishedAt),
+  index("idx_course_releases_course").on(table.courseId, table.status),
+  index("idx_course_releases_org_status").on(table.organizationId, table.status),
+]);
+
+export const courseReleaseWorkbooks = sqliteTable("course_release_workbooks", {
+  releaseId: text("release_id").notNull().references(() => courseReleases.id),
+  workbookId: text("workbook_id").notNull().references(() => workbooks.id),
+  position: integer("position").notNull(),
+  required: integer("required", { mode: "boolean" }).notNull().default(true),
+}, (table) => [
+  primaryKey({ columns: [table.releaseId, table.workbookId] }),
+  index("idx_course_release_workbooks_order").on(table.releaseId, table.position),
+]);
+
+export const courseReleaseReviews = sqliteTable("course_release_reviews", {
+  id: text("id").primaryKey(),
+  releaseId: text("release_id").notNull().references(() => courseReleases.id),
+  reviewerId: text("reviewer_id").notNull().references(() => users.id),
+  decision: text("decision").notNull(),
+  notes: text("notes").notNull(),
+  createdAt: text("created_at").notNull(),
+}, (table) => [index("idx_course_release_reviews_release").on(table.releaseId, table.createdAt)]);
+
+export const courseInvitations = sqliteTable("course_invitations", {
+  id: text("id").primaryKey(),
+  courseId: text("course_id").notNull().references(() => courses.id),
+  releaseId: text("release_id").notNull().references(() => courseReleases.id),
+  organizationId: text("organization_id").notNull(),
+  codeHash: text("code_hash").notNull(),
+  label: text("label").notNull(),
+  maxUses: integer("max_uses").notNull(),
+  uses: integer("uses").notNull().default(0),
+  expiresAt: text("expires_at").notNull(),
+  status: text("status").notNull(),
+  createdBy: text("created_by").notNull().references(() => users.id),
+  createdAt: text("created_at").notNull(),
+}, (table) => [
+  uniqueIndex("idx_course_invitations_code_hash").on(table.codeHash),
+  index("idx_course_invitations_release_status").on(table.releaseId, table.status, table.expiresAt),
+]);
+
 export const workbookAssignments = sqliteTable("workbook_assignments", {
   id: text("id").primaryKey(), workbookId: text("workbook_id").notNull().references(() => workbooks.id), learnerId: text("learner_id").notNull().references(() => users.id), status: text("status").notNull(), assignedBy: text("assigned_by").notNull().references(() => users.id), assignedAt: text("assigned_at").notNull(), dueAt: text("due_at"), revokedAt: text("revoked_at"), version: integer("version").notNull(),
 }, (table) => [uniqueIndex("idx_workbook_assignments_workbook_learner").on(table.workbookId, table.learnerId), index("idx_workbook_assignments_learner_status").on(table.learnerId, table.status), index("idx_workbook_assignments_workbook_status").on(table.workbookId, table.status)]);
