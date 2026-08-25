@@ -4,7 +4,10 @@ import {
   assignStudioCohortWorkbook,
   createStudioCohort,
   createStudioCourse,
+  createStudioCourseFromTemplate,
   createStudioWorkbook,
+  duplicateStudioCourse,
+  duplicateStudioWorkbook,
   EducationPlatformError,
   getStudioSnapshot,
   publishCourseRelease,
@@ -12,6 +15,7 @@ import {
   saveCourseReleaseDraft,
   submitCourseRelease,
 } from "@/lib/education-platform";
+import { enforceRateLimit } from "@/lib/institution-operations";
 
 export const dynamic = "force-dynamic";
 
@@ -38,9 +42,13 @@ export async function POST(request: Request) {
     const input = await request.json() as Record<string, unknown>;
     const action = typeof input.action === "string" ? input.action : "";
     const auth = await authenticate();
+    await enforceRateLimit(auth.userId, "studio-write", 45, 60);
     let result: Record<string, unknown> = {};
     if (action === "create-course") result = { courseId: await createStudioCourse(auth, input) };
+    else if (action === "create-course-from-template") result = { courseId: await createStudioCourseFromTemplate(auth, input) };
+    else if (action === "duplicate-course") result = { courseId: await duplicateStudioCourse(auth, input) };
     else if (action === "create-workbook") result = { workbookId: await createStudioWorkbook(auth, input) };
+    else if (action === "duplicate-workbook") result = { workbookId: await duplicateStudioWorkbook(auth, input) };
     else if (action === "create-cohort") result = { cohortId: await createStudioCohort(auth, input) };
     else if (action === "assign-cohort-workbook") await assignStudioCohortWorkbook(auth, input);
     else if (action === "save-release") result = { releaseId: await saveCourseReleaseDraft(auth, input) };

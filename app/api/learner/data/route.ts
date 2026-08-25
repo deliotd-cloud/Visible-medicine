@@ -1,0 +1,8 @@
+import { getAuthContext } from "@/lib/auth";
+import { createAccountRequest, enforceRateLimit, exportLearnerData, InstitutionOperationsError } from "@/lib/institution-operations";
+
+export const dynamic = "force-dynamic";
+async function auth() { const value = await getAuthContext(); if (!value) throw new InstitutionOperationsError("Education sign-in is required.", 401); return value; }
+function failure(error: unknown) { if (error instanceof InstitutionOperationsError) return Response.json({ error: error.message }, { status: error.status }); console.error("Learner data API error", error); return Response.json({ error: "The learner-data request could not be completed." }, { status: 500 }); }
+export async function GET() { try { const actor = await auth(); const data = await exportLearnerData(actor); return new Response(JSON.stringify(data, null, 2), { headers: { "Content-Type": "application/json; charset=utf-8", "Content-Disposition": `attachment; filename="elivion-education-data-${new Date().toISOString().slice(0, 10)}.json"`, "Cache-Control": "private, no-store", "X-Content-Type-Options": "nosniff" } }); } catch (error) { return failure(error); } }
+export async function POST(request: Request) { try { const actor = await auth(); await enforceRateLimit(actor.userId, "account-request", 6, 3600); const requestResult = await createAccountRequest(actor, await request.json() as Record<string, unknown>); const data = await exportLearnerData(actor); return Response.json({ request: requestResult, requests: data.requests }, { headers: { "Cache-Control": "private, no-store" } }); } catch (error) { return failure(error); } }

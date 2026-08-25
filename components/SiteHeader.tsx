@@ -17,6 +17,7 @@ const secondaryLinks = [
   ["Plans", "/pricing"],
   ["Embeds", "/embed"],
   ["Trust centre", "/trust"],
+  ["Account & data", "/account"],
 ] as const;
 
 export function SiteHeader() {
@@ -37,11 +38,40 @@ export function SiteHeader() {
         ))}
       </nav>
       <Link className="search-link" href="/search" aria-label="Search Elivion Education" aria-current={pathname === "/search" ? "page" : undefined}>⌕ <span>Search</span></Link>
-      <Link className="account-link" href="/my-learning" aria-current={pathname === "/my-learning" ? "page" : undefined}>My learning <span aria-hidden="true">→</span></Link>
+      <details className="workspace-switcher"><summary>Workspace <span aria-hidden="true">⌄</span></summary><nav aria-label="Choose workspace"><Link aria-current={isActive("/my-learning") ? "page" : undefined} href="/my-learning"><b>Learn</b><span>Progress, revision and certificates</span></Link><Link aria-current={isActive("/studio") ? "page" : undefined} href="/studio/workspace"><b>Studio</b><span>Courses, workbooks and publishing</span></Link><Link aria-current={isActive("/workspace") ? "page" : undefined} href="/workspace"><b>Institution</b><span>People, controls and readiness</span></Link><Link aria-current={isActive("/account") ? "page" : undefined} href="/account"><b>Account</b><span>Profile, export and learner rights</span></Link></nav></details>
       <details className="mobile-nav">
         <summary>Menu</summary>
         <nav aria-label="Mobile navigation">
-          {[...primaryLinks, ...secondaryLinks].map(([label, href]) => (
+          <span className="mobile-nav-section">Explore and learn</span>
+          {primaryLinks.map(([label, href]) => (
+            <Link
+              aria-current={isActive(href) ? "page" : undefined}
+              href={href}
+              key={href}
+              onClick={(event) => event.currentTarget.closest("details")?.removeAttribute("open")}
+            >
+              {label}<span aria-hidden="true">→</span>
+            </Link>
+          ))}
+          <span className="mobile-nav-section">Your work</span>
+          {([[
+            "My learning", "/my-learning",
+          ], [
+            "Institution workspace", "/workspace",
+          ], [
+            "Account & data", "/account",
+          ]] as const).map(([label, href]) => (
+            <Link
+              aria-current={isActive(href) ? "page" : undefined}
+              href={href}
+              key={href}
+              onClick={(event) => event.currentTarget.closest("details")?.removeAttribute("open")}
+            >
+              {label}<span aria-hidden="true">→</span>
+            </Link>
+          ))}
+          <span className="mobile-nav-section">More</span>
+          {secondaryLinks.filter(([, href]) => href !== "/account").map(([label, href]) => (
             <Link
               aria-current={isActive(href) ? "page" : undefined}
               href={href}

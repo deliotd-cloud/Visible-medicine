@@ -1,0 +1,4 @@
+import { getAuthContext } from "@/lib/auth";
+import { enforceRateLimit, InstitutionOperationsError, saveNotificationPreferences } from "@/lib/institution-operations";
+export const dynamic = "force-dynamic";
+export async function POST(request: Request) { try { const auth = await getAuthContext(); if (!auth) throw new InstitutionOperationsError("Education sign-in is required.", 401); await enforceRateLimit(auth.userId, "notification-preferences", 12, 60); return Response.json(await saveNotificationPreferences(auth, await request.json() as Record<string, unknown>), { headers: { "Cache-Control": "private, no-store" } }); } catch (error) { if (error instanceof InstitutionOperationsError) return Response.json({ error: error.message }, { status: error.status }); console.error("Notification preferences error", error); return Response.json({ error: "Preferences could not be saved." }, { status: 500 }); } }

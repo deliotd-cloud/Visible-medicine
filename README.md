@@ -25,6 +25,10 @@ The site uses the approved Elivion symbol, Segoe typography and the Elivion deep
 - D1-backed organisation membership, education roles, plan entitlements, publication register and approved embed-origin registry.
 - R2 binding reserved for publication-cleared DICOM-derived media and large teaching assets.
 - Institution workspace with usage, entitlements, Studio, reporting, integration and publication-governance views.
+- Searchable, filterable course discovery with learner-profile recommendations, full workbook syllabuses and latest-workbook resume links.
+- Studio course templates, safe empty-shell duplication, device-local draft recovery, publication readiness checks, immutable release history and learner previews.
+- Institution pilot briefs, held-delivery people invitations, bounded roster import, role-aware access, readiness evidence and organisation-scoped CSV reporting.
+- Account data export, queued learner-rights requests, in-app notification preferences and clearly marked draft policy frameworks.
 - Trust centre plus hosted and controlled embedded-delivery product boundaries.
 - Explicit education/research-only statements at global, content, institution and commercial boundaries.
 - Owner-private managed hosting and an Elivion Education social-sharing card.
@@ -45,6 +49,7 @@ Quality checks:
 
 ```bash
 npm run lint
+npm test
 npx tsc --noEmit
 npm run build
 ```
@@ -65,4 +70,4 @@ The hosted application requires:
 - A production education identity and entitlement adapter before external launch. The Sites sign-in adapter is suitable for the private hosted preview, not the final cross-product identity model.
 - `ELIVION_EVALUATION_ADMIN_EMAILS`: a comma-separated owner-private evaluation allowlist. It grants the complete demonstration role set only when the application is deployed in production mode; ordinary new accounts remain learner-only.
 
-See [docs/platform-architecture.md](docs/platform-architecture.md) for the integrated product model, [docs/production-plan.md](docs/production-plan.md) for governance and release gates, and [docs/naming-options.md](docs/naming-options.md) for the working-name shortlist.
+See [docs/platform-architecture.md](docs/platform-architecture.md) for the integrated product model, [docs/production-plan.md](docs/production-plan.md) for governance and release gates, [docs/pilot-readiness.md](docs/pilot-readiness.md) for the current non-live controls, and [docs/naming-options.md](docs/naming-options.md) for the working-name shortlist.

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { getChatGPTUser } from "../../chatgpt-auth";
 import { CourseEnrolmentControl } from "@/components/CourseEnrolmentControl";
 import { CourseProgressControl } from "@/components/CourseProgressControl";
-import { getCatalogueCourse } from "@/lib/education-platform";
+import { getCatalogueCourse, getCatalogueCourseWorkbooks } from "@/lib/education-platform";
 
 export const dynamic = "force-dynamic";
 type PageProps = { params: Promise<{ slug: string }> };
@@ -28,6 +28,7 @@ export default async function CourseDetail({ params }: PageProps) {
   const auth = user ? { userId: `edu:${user.userId}`, externalSubject: `sites:${user.userId}`, email: user.email, displayName: user.displayName } : null;
   const course = await getCatalogueCourse(slug, auth);
   if (!course) notFound();
+  const workbooks = await getCatalogueCourseWorkbooks(course.id);
   return (
     <main className="inner-page course-detail">
       <section className="course-detail-hero">
@@ -38,6 +39,7 @@ export default async function CourseDetail({ params }: PageProps) {
         <div><p className="section-index">Learning outcomes</p><h2>What you will be able to do</h2><ol>{course.outcomes.map((outcome, index) => <li key={outcome}><span>{String(index + 1).padStart(2, "0")}</span>{outcome}</li>)}</ol></div>
         <div className="release-facts"><p className="section-index">Governed release</p><h2>Know who published what.</h2><dl><div><dt>Publisher</dt><dd>{course.publisher}</dd></div><div><dt>Release</dt><dd>Version {course.version}</dd></div><div><dt>Visibility</dt><dd>{course.visibility}</dd></div><div><dt>Access</dt><dd>{course.accessModel}</dd></div></dl><Link href="/trust">Read the education trust model →</Link></div>
       </section>
+      <section className="course-syllabus"><div><p className="section-index">Course structure</p><h2>Your learning sequence</h2><p>Required workbooks are completed in order. The runtime resumes your most recently active workbook and preserves its learning state.</p></div><ol>{workbooks.map((workbook, index) => <li key={workbook.id}><span>{String(index + 1).padStart(2, "0")}</span><div><b>{workbook.title}</b><small>{workbook.mode} · {workbook.durationMinutes ? `${workbook.durationMinutes} minutes` : "self-paced"} · {workbook.required ? "required" : "optional"}</small></div></li>)}</ol><aside><b>Prerequisites</b><p>No external clinical credential is implied. Publishers must state any educational prerequisites in the course release before launch.</p></aside></section>
       <section className="course-platform-note"><p className="section-index">Elivion Education</p><h2>Courses remain a separate learning domain.</h2><p>Course enrolments, attempts, answers and educator workflows remain separate from the Atlas editorial database and every clinical Didanix environment.</p><Link href="/studio">How course hosting works →</Link></section>
     </main>
   );

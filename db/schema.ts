@@ -421,3 +421,35 @@ export const subscriptionRecords = sqliteTable("subscription_records", {
 export const embedLaunches = sqliteTable("embed_launches", {
   id: text("id").primaryKey(), organizationId: text("organization_id").notNull().references(() => organizations.id), origin: text("origin").notNull(), resourceType: text("resource_type").notNull(), resourceId: text("resource_id").notNull(), audience: text("audience").notNull(), tokenHash: text("token_hash").notNull(), status: text("status").notNull(), expiresAt: text("expires_at").notNull(), createdBy: text("created_by").notNull().references(() => users.id), createdAt: text("created_at").notNull(), usedAt: text("used_at"),
 }, (table) => [uniqueIndex("idx_embed_launch_token_hash").on(table.tokenHash), index("idx_embed_launch_org_status_expiry").on(table.organizationId, table.status, table.expiresAt)]);
+
+export const pilotApplications = sqliteTable("pilot_applications", {
+  id: text("id").primaryKey(), organizationName: text("organization_name").notNull(), contactName: text("contact_name").notNull(), contactEmail: text("contact_email").notNull(), jurisdiction: text("jurisdiction").notNull(), learnerBand: text("learner_band").notNull(), educatorBand: text("educator_band").notNull(), contentScope: text("content_scope").notNull(), goals: text("goals").notNull(), supportNeeds: text("support_needs").notNull(), status: text("status").notNull(), submittedBy: text("submitted_by"), createdAt: text("created_at").notNull(), updatedAt: text("updated_at").notNull(),
+}, (table) => [index("idx_pilot_applications_status_created").on(table.status, table.createdAt), index("idx_pilot_applications_email").on(table.contactEmail)]);
+
+export const organizationInvitations = sqliteTable("organization_invitations", {
+  id: text("id").primaryKey(), organizationId: text("organization_id").notNull().references(() => organizations.id), email: text("email").notNull(), role: text("role").notNull(), tokenHash: text("token_hash").notNull(), status: text("status").notNull(), createdBy: text("created_by").notNull().references(() => users.id), createdAt: text("created_at").notNull(), expiresAt: text("expires_at").notNull(), acceptedBy: text("accepted_by").references(() => users.id), acceptedAt: text("accepted_at"),
+}, (table) => [uniqueIndex("idx_org_invitation_token").on(table.tokenHash), index("idx_org_invitation_org_status").on(table.organizationId, table.status, table.expiresAt), index("idx_org_invitation_email_status").on(table.email, table.status)]);
+
+export const notificationOutbox = sqliteTable("notification_outbox", {
+  id: text("id").primaryKey(), organizationId: text("organization_id").references(() => organizations.id), recipient: text("recipient").notNull(), template: text("template").notNull(), payloadJson: text("payload_json").notNull(), status: text("status").notNull(), reason: text("reason").notNull(), createdAt: text("created_at").notNull(), sentAt: text("sent_at"),
+}, (table) => [index("idx_notification_outbox_status_created").on(table.status, table.createdAt), index("idx_notification_outbox_org").on(table.organizationId)]);
+
+export const operationalReadinessChecks = sqliteTable("operational_readiness_checks", {
+  organizationId: text("organization_id").notNull().references(() => organizations.id), gateKey: text("gate_key").notNull(), status: text("status").notNull(), evidence: text("evidence").notNull(), owner: text("owner").notNull(), reviewedBy: text("reviewed_by").references(() => users.id), reviewedAt: text("reviewed_at"), updatedAt: text("updated_at").notNull(),
+}, (table) => [primaryKey({ columns: [table.organizationId, table.gateKey] }), index("idx_readiness_org_status").on(table.organizationId, table.status)]);
+
+export const accountRequests = sqliteTable("account_requests", {
+  id: text("id").primaryKey(), userId: text("user_id").notNull().references(() => users.id), requestType: text("request_type").notNull(), status: text("status").notNull(), detail: text("detail").notNull(), createdAt: text("created_at").notNull(), resolvedAt: text("resolved_at"), resolvedBy: text("resolved_by").references(() => users.id),
+}, (table) => [index("idx_account_requests_user_status").on(table.userId, table.status), index("idx_account_requests_status_created").on(table.status, table.createdAt)]);
+
+export const courseReleaseSnapshots = sqliteTable("course_release_snapshots", {
+  id: text("id").primaryKey(), releaseId: text("release_id").notNull().references(() => courseReleases.id), version: integer("version").notNull(), status: text("status").notNull(), snapshotJson: text("snapshot_json").notNull(), reason: text("reason").notNull(), capturedBy: text("captured_by").notNull().references(() => users.id), capturedAt: text("captured_at").notNull(),
+}, (table) => [uniqueIndex("idx_release_snapshot_version_reason").on(table.releaseId, table.version, table.reason), index("idx_release_snapshot_release_created").on(table.releaseId, table.capturedAt)]);
+
+export const apiRateLimits = sqliteTable("api_rate_limits", {
+  bucketKey: text("bucket_key").primaryKey(), windowStart: text("window_start").notNull(), count: integer("count").notNull(), updatedAt: text("updated_at").notNull(),
+}, (table) => [index("idx_api_rate_limits_updated").on(table.updatedAt)]);
+
+export const learnerNotificationPreferences = sqliteTable("learner_notification_preferences", {
+  userId: text("user_id").primaryKey().references(() => users.id), courseUpdates: integer("course_updates", { mode: "boolean" }).notNull().default(true), assignmentReminders: integer("assignment_reminders", { mode: "boolean" }).notNull().default(true), reviewReminders: integer("review_reminders", { mode: "boolean" }).notNull().default(true), productUpdates: integer("product_updates", { mode: "boolean" }).notNull().default(false), deliveryMode: text("delivery_mode").notNull(), updatedAt: text("updated_at").notNull(),
+});

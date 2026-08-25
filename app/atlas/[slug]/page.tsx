@@ -2,9 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AtlasExplorer } from "../../../components/AtlasExplorer";
-import { findAtlasModule } from "../../../lib/catalog";
+import { atlasModules, findAtlasModule } from "../../../lib/catalog";
 
 type PageProps = { params: Promise<{ slug: string }> };
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return atlasModules.map((atlasModule) => ({ slug: atlasModule.slug }));
+}
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const atlasModule = findAtlasModule((await params).slug);

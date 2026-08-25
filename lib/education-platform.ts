@@ -3,6 +3,7 @@ import { appendAudit, ensureDatabase, ensureEducationUser } from "@/db/bootstrap
 import { ensurePlatformSchema, getPlatformSnapshot } from "@/db/platform";
 import type { AuthContext } from "@/lib/auth";
 import { sha256 } from "@/lib/domain";
+import { studioTemplate } from "@/lib/studio-templates";
 
 type Row = Record<string, unknown>;
 
@@ -34,6 +35,7 @@ export type CatalogueCourse = {
   publishedAt: string | null;
   workbookCount: number;
   firstWorkbookId: string | null;
+  resumeWorkbookId: string | null;
   enrolled: boolean;
 };
 
@@ -91,6 +93,7 @@ export type StudioSnapshot = {
   courses: StudioCourse[];
   workbooks: StudioWorkbook[];
   releases: StudioRelease[];
+  releaseHistory: Array<{ id: string; releaseId: string; version: number; status: string; reason: string; capturedBy: string; capturedAt: string }>;
   cohorts: Array<{ id: string; courseId: string; courseTitle: string; title: string; code: string; status: string; memberCount: number; workbookCount: number }>;
   metrics: { learners: number; activeCourses: number; publishedReleases: number; completionPercent: number };
 };
@@ -145,6 +148,7 @@ function mapCatalogueRow(row: Row, workbookIds: string[] = []): StudioRelease {
     publishedAt: row.published_at ? String(row.published_at) : null,
     workbookCount: Number(row.workbook_count ?? workbookIds.length),
     firstWorkbookId: row.first_workbook_id ? String(row.first_workbook_id) : workbookIds[0] ?? null,
+    resumeWorkbookId: row.resume_workbook_id ? String(row.resume_workbook_id) : null,
     enrolled: Boolean(row.enrolled),
     createdBy: String(row.created_by),
     reviewedBy: row.reviewed_by ? String(row.reviewed_by) : null,
@@ -177,6 +181,12 @@ async function ownedCourse(courseId: string, organizationId: string) {
   ).bind(courseId, organizationId).first<Row>();
   if (!row) throw new EducationPlatformError("This course is not available in your Studio workspace.", 404);
   return row;
+}
+
+async function captureCourseRelease(releaseId: string, actorId: string, reason: string) {
+  const release = await env.DB.prepare(`SELECT * FROM course_releases WHERE id=?`).bind(releaseId).first<Row>();
+  if (!release) return;
+  await env.DB.prepare(`INSERT OR IGNORE INTO course_release_snapshots (id, release_id, version, status, snapshot_json, reason, captured_by, captured_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`).bind(crypto.randomUUID(), releaseId, Number(release.version), String(release.status), JSON.stringify(release), reason, actorId, new Date().toISOString()).run();
 }
 
 export async function listCatalogueCourses(auth?: AuthContext | null): Promise<CatalogueCourse[]> {
@@ -216,6 +226,13 @@ export async function getCatalogueCourse(slugValue: unknown, auth?: AuthContext 
       GROUP BY cr.id`,
   ).bind(auth?.userId ?? "", slug).first<Row>();
   return row ? mapCatalogueRow(row) : null;
+}
+
+export async function getCatalogueCourseWorkbooks(releaseIdValue: unknown) {
+  await ready();
+  const releaseId = boundedText(releaseIdValue, 120);
+  const rows = await env.DB.prepare(`SELECT w.id, w.title, w.mode, w.duration_minutes, w.status, crw.position, crw.required FROM course_release_workbooks crw JOIN workbooks w ON w.id=crw.workbook_id JOIN course_releases cr ON cr.id=crw.release_id WHERE crw.release_id=? AND cr.status='published' ORDER BY crw.position`).bind(releaseId).all<Row>();
+  return rows.results.map((row) => ({ id: String(row.id), title: String(row.title), mode: String(row.mode), durationMinutes: Number(row.duration_minutes), required: Boolean(row.required), position: Number(row.position) }));
 }
 
 export async function getInvitationCourse(codeValue: unknown, auth?: AuthContext | null) {
@@ -335,6 +352,7 @@ export async function getLearnerEnrolments(auth: AuthContext) {
   const rows = await env.DB.prepare(
     `SELECT cr.id, cr.slug, cr.title, cr.summary, cr.level, cr.duration_label, cr.publisher_name,
             (SELECT crw2.workbook_id FROM course_release_workbooks crw2 JOIN workbook_assignments wa2 ON wa2.workbook_id=crw2.workbook_id AND wa2.learner_id=e.user_id AND wa2.status='active' WHERE crw2.release_id=cr.id ORDER BY crw2.position LIMIT 1) AS first_workbook_id,
+            (SELECT wp2.workbook_id FROM course_release_workbooks crw3 JOIN workbook_progress wp2 ON wp2.workbook_id=crw3.workbook_id AND wp2.learner_id=e.user_id WHERE crw3.release_id=cr.id ORDER BY wp2.last_activity_at DESC LIMIT 1) AS resume_workbook_id,
             COUNT(DISTINCT CASE WHEN wa.status='active' THEN crw.workbook_id END) AS workbook_count,
             COALESCE(ROUND(AVG(CASE WHEN wa.status='active' THEN COALESCE(wp.percent_complete,0) END)),0) AS progress
        FROM enrolments e
@@ -349,6 +367,7 @@ export async function getLearnerEnrolments(auth: AuthContext) {
     id: String(row.id), slug: String(row.slug), title: String(row.title), summary: String(row.summary),
     level: String(row.level), duration: String(row.duration_label), publisher: String(row.publisher_name),
     firstWorkbookId: row.first_workbook_id ? String(row.first_workbook_id) : null,
+    resumeWorkbookId: row.resume_workbook_id ? String(row.resume_workbook_id) : null,
     workbookCount: Number(row.workbook_count), progress: Number(row.progress),
   }));
 }
@@ -357,7 +376,7 @@ export async function getStudioSnapshot(auth: AuthContext): Promise<StudioSnapsh
   await ready();
   const { roles, platform } = await requireStaff(auth);
   const organizationId = platform.organization.id;
-  const [courseRows, workbookRows, releaseRows, releaseWorkbookRows, cohortRows, analytics] = await Promise.all([
+  const [courseRows, workbookRows, releaseRows, releaseWorkbookRows, releaseHistoryRows, cohortRows, analytics] = await Promise.all([
     env.DB.prepare(
       `SELECT c.*, MIN(m.id) AS module_id, COUNT(DISTINCT w.id) AS workbook_count,
               COUNT(DISTINCT cr.id) AS release_count, COUNT(DISTINCT CASE WHEN e.status='active' THEN e.user_id END) AS enrolled_learners
@@ -381,6 +400,7 @@ export async function getStudioSnapshot(auth: AuthContext): Promise<StudioSnapsh
         WHERE cr.organization_id=? GROUP BY cr.id ORDER BY cr.updated_at DESC`,
     ).bind(organizationId).all<Row>(),
     env.DB.prepare(`SELECT release_id, workbook_id FROM course_release_workbooks WHERE release_id IN (SELECT id FROM course_releases WHERE organization_id=?) ORDER BY release_id, position`).bind(organizationId).all<{ release_id: string; workbook_id: string }>(),
+    env.DB.prepare(`SELECT id, release_id, version, status, reason, captured_by, captured_at FROM course_release_snapshots WHERE release_id IN (SELECT id FROM course_releases WHERE organization_id=?) ORDER BY captured_at DESC LIMIT 250`).bind(organizationId).all<Row>(),
     env.DB.prepare(
       `SELECT ch.id, ch.course_id, ch.title, ch.code, ch.status, c.title AS course_title,
               COUNT(DISTINCT CASE WHEN cm.status='active' THEN cm.learner_id END) AS member_count,
@@ -409,6 +429,7 @@ export async function getStudioSnapshot(auth: AuthContext): Promise<StudioSnapsh
     courses: courseRows.results.map((row) => ({ id: String(row.id), code: String(row.code), title: String(row.title), description: String(row.description), status: String(row.status), moduleId: String(row.module_id ?? ""), workbookCount: Number(row.workbook_count), releaseCount: Number(row.release_count), enrolledLearners: Number(row.enrolled_learners) })),
     workbooks: workbookRows.results.map((row) => ({ id: String(row.id), courseId: String(row.course_id), moduleId: String(row.module_id), courseTitle: String(row.course_title), moduleTitle: String(row.module_title), title: String(row.title), mode: String(row.mode), status: String(row.status), version: Number(row.version), durationMinutes: Number(row.duration_minutes), caseCount: Number(row.case_count) })),
     releases: releaseRows.results.map((row) => mapCatalogueRow(row, workbookIds.get(String(row.id)) ?? [])),
+    releaseHistory: releaseHistoryRows.results.map((row) => ({ id: String(row.id), releaseId: String(row.release_id), version: Number(row.version), status: String(row.status), reason: String(row.reason), capturedBy: String(row.captured_by), capturedAt: String(row.captured_at) })),
     cohorts: cohortRows.results.map((row) => ({ id: String(row.id), courseId: String(row.course_id), courseTitle: String(row.course_title), title: String(row.title), code: String(row.code), status: String(row.status), memberCount: Number(row.member_count), workbookCount: Number(row.workbook_count) })),
     metrics: { learners: Number(analytics?.learners ?? 0), activeCourses: Number(analytics?.active_courses ?? 0), publishedReleases: Number(analytics?.published_releases ?? 0), completionPercent: Number(analytics?.completion_percent ?? 0) },
   };
@@ -432,6 +453,36 @@ export async function createStudioCourse(auth: AuthContext, input: Record<string
     env.DB.prepare(`INSERT INTO course_ownership (course_id, organization_id, owner_id, created_at) VALUES (?, ?, ?, ?)`).bind(id, platform.organization.id, auth.userId, now),
   ]);
   await appendAudit(auth.userId, "studio.course-created", "course", id, "success", `organization=${platform.organization.id}`);
+  return id;
+}
+
+export async function createStudioCourseFromTemplate(auth: AuthContext, input: Record<string, unknown>) {
+  const template = studioTemplate(input.templateId);
+  if (!template) throw new EducationPlatformError("Choose an approved Studio template.", 422);
+  const courseId = await createStudioCourse(auth, input);
+  for (const workbook of template.workbooks) await createStudioWorkbook(auth, { courseId, ...workbook });
+  await appendAudit(auth.userId, "studio.course-template-applied", "course", courseId, "success", `template=${template.id}`);
+  return courseId;
+}
+
+export async function duplicateStudioCourse(auth: AuthContext, input: Record<string, unknown>) {
+  const { platform } = await requireStaff(auth);
+  const sourceCourseId = boundedText(input.courseId, 120);
+  const source = await ownedCourse(sourceCourseId, platform.organization.id);
+  const sourceWorkbooks = await env.DB.prepare(`SELECT w.title, w.mode, w.duration_minutes FROM workbooks w JOIN modules m ON m.id=w.module_id WHERE m.course_id=? ORDER BY w.title`).bind(sourceCourseId).all<Row>();
+  const courseId = await createStudioCourse(auth, { title: `${String(source.title)} copy`, description: String(source.description), code: boundedText(input.code, 30) });
+  for (const workbook of sourceWorkbooks.results) await createStudioWorkbook(auth, { courseId, title: `${String(workbook.title)} copy`, mode: String(workbook.mode), durationMinutes: Number(workbook.duration_minutes) });
+  await appendAudit(auth.userId, "studio.course-duplicated", "course", courseId, "success", `source=${sourceCourseId};medical-content-copied=false`);
+  return courseId;
+}
+
+export async function duplicateStudioWorkbook(auth: AuthContext, input: Record<string, unknown>) {
+  const { platform } = await requireStaff(auth);
+  const workbookId = boundedText(input.workbookId, 140);
+  const source = await env.DB.prepare(`SELECT w.title, w.mode, w.duration_minutes, m.course_id FROM workbooks w JOIN modules m ON m.id=w.module_id JOIN course_ownership o ON o.course_id=m.course_id WHERE w.id=? AND o.organization_id=?`).bind(workbookId, platform.organization.id).first<Row>();
+  if (!source) throw new EducationPlatformError("This workbook is not available in your Studio workspace.", 404);
+  const id = await createStudioWorkbook(auth, { courseId: String(source.course_id), title: `${String(source.title)} copy`, mode: String(source.mode), durationMinutes: Number(source.duration_minutes) });
+  await appendAudit(auth.userId, "studio.workbook-duplicated", "workbook", id, "success", `source=${workbookId};cases-and-media-copied=false`);
   return id;
 }
 
@@ -501,11 +552,12 @@ export async function saveCourseReleaseDraft(auth: AuthContext, input: Record<st
   const workbookIds = stringList(input.workbookIds, 40, 140);
   const priceMinor = Math.max(0, Math.min(10_000_000, Math.round(Number(input.priceMinor ?? 0))));
   const currency = boundedText(input.currency, 3).toUpperCase() || "GBP";
-  if (!releaseSlug || summary.length < 30 || outcomes.length === 0) throw new EducationPlatformError("Add a unique slug, course summary and at least one learning outcome.", 422);
+  if (!releaseSlug || summary.length < 30 || outcomes.length < 2) throw new EducationPlatformError("Add a unique slug, course summary and at least two learning outcomes.", 422);
   if (!new Set(["private", "unlisted", "public"]).has(visibility)) throw new EducationPlatformError("Choose a valid release visibility.", 422);
   if (!new Set(["free", "invitation", "institution", "paid"]).has(accessModel)) throw new EducationPlatformError("Choose a valid access model.", 422);
   if (visibility === "private" && !new Set(["invitation", "institution"]).has(accessModel)) throw new EducationPlatformError("Private releases must use invitation or institution access.", 422);
   if (!new Set(["official", "institution"]).has(publisherKind)) throw new EducationPlatformError("Choose an official or institution publisher label.", 422);
+  if (publisherKind === "official" && platform.organization.kind !== "platform") throw new EducationPlatformError("Only the Elivion platform organisation can create an official release.", 403);
   if (accessModel === "paid" && priceMinor < 100) throw new EducationPlatformError("Add a valid course price for paid access.", 422);
   if (!/^[A-Z]{3}$/.test(currency)) throw new EducationPlatformError("Use a three-letter currency code.", 422);
   if (workbookIds.length) {
@@ -522,6 +574,7 @@ export async function saveCourseReleaseDraft(auth: AuthContext, input: Record<st
     if (!new Set(["draft", "changes-requested"]).has(String(existing.status))) throw new EducationPlatformError("Only a draft or changes-requested release can be edited.", 409);
     const expectedVersion = Number(input.expectedVersion);
     if (expectedVersion !== Number(existing.version)) throw new EducationPlatformError("A newer release draft exists. Refresh before saving.", 409);
+    await captureCourseRelease(existingId, auth.userId, "before-draft-save");
     await env.DB.prepare(`UPDATE course_releases SET slug=?, title=?, summary=?, level=?, duration_label=?, outcomes_json=?, publisher_name=?, publisher_kind=?, visibility=?, access_model=?, price_minor=?, currency=?, enrolment_open=?, version=version+1, updated_at=? WHERE id=? AND version=?`).bind(releaseSlug, title, summary, level, duration, JSON.stringify(outcomes), boundedText(input.publisherName, 160) || platform.organization.name, publisherKind, visibility, accessModel, priceMinor, currency, input.enrolmentOpen === true ? 1 : 0, now, existingId, expectedVersion).run();
   } else {
     releaseId = `release:${crypto.randomUUID()}`;
@@ -534,26 +587,28 @@ export async function saveCourseReleaseDraft(auth: AuthContext, input: Record<st
 }
 
 export async function submitCourseRelease(auth: AuthContext, releaseIdValue: unknown) {
-  await requireStaff(auth);
+  const { platform } = await requireStaff(auth);
   const releaseId = boundedText(releaseIdValue, 120);
-  const release = await env.DB.prepare(`SELECT status FROM course_releases WHERE id=?`).bind(releaseId).first<{ status: string }>();
+  const release = await env.DB.prepare(`SELECT status FROM course_releases WHERE id=? AND organization_id=?`).bind(releaseId, platform.organization.id).first<{ status: string }>();
   if (!release || !new Set(["draft", "changes-requested"]).has(release.status)) throw new EducationPlatformError("This release cannot be submitted for review.", 409);
   const workbooks = await env.DB.prepare(`SELECT w.status FROM course_release_workbooks crw JOIN workbooks w ON w.id=crw.workbook_id WHERE crw.release_id=?`).bind(releaseId).all<{ status: string }>();
   if (!workbooks.results.length || workbooks.results.some((row) => row.status !== "published")) throw new EducationPlatformError("Every release needs at least one published workbook before course review.", 409);
+  await captureCourseRelease(releaseId, auth.userId, "before-review-submission");
   await env.DB.prepare(`UPDATE course_releases SET status='in-review', updated_at=? WHERE id=?`).bind(new Date().toISOString(), releaseId).run();
   await appendAudit(auth.userId, "course-release.review-requested", "course-release", releaseId, "success", `workbooks=${workbooks.results.length}`);
 }
 
 export async function reviewCourseRelease(auth: AuthContext, input: Record<string, unknown>) {
-  await requireStaff(auth);
+  const { platform } = await requireStaff(auth);
   const releaseId = boundedText(input.releaseId, 120);
   const decision = boundedText(input.decision, 30);
   const notes = boundedText(input.notes, 2000);
   if (!new Set(["approved", "changes-requested"]).has(decision) || notes.length < 10) throw new EducationPlatformError("Choose a review decision and provide review notes.", 422);
-  const release = await env.DB.prepare(`SELECT status, created_by FROM course_releases WHERE id=?`).bind(releaseId).first<Row>();
+  const release = await env.DB.prepare(`SELECT status, created_by FROM course_releases WHERE id=? AND organization_id=?`).bind(releaseId, platform.organization.id).first<Row>();
   if (!release || release.status !== "in-review") throw new EducationPlatformError("This release is not awaiting review.", 409);
   if (release.created_by === auth.userId) throw new EducationPlatformError("Course release review must be completed by a different education user.", 403);
   const now = new Date().toISOString();
+  await captureCourseRelease(releaseId, auth.userId, "before-review-decision");
   await env.DB.batch([
     env.DB.prepare(`INSERT INTO course_release_reviews (id, release_id, reviewer_id, decision, notes, created_at) VALUES (?, ?, ?, ?, ?, ?)`).bind(crypto.randomUUID(), releaseId, auth.userId, decision, notes, now),
     env.DB.prepare(`UPDATE course_releases SET status=?, reviewed_by=?, review_notes=?, updated_at=? WHERE id=? AND status='in-review'`).bind(decision, auth.userId, notes, now, releaseId),
@@ -562,14 +617,15 @@ export async function reviewCourseRelease(auth: AuthContext, input: Record<strin
 }
 
 export async function publishCourseRelease(auth: AuthContext, releaseIdValue: unknown) {
-  const { roles } = await requireStaff(auth);
+  const { roles, platform } = await requireStaff(auth);
   if (!roles.includes("administrator")) throw new EducationPlatformError("An education administrator must publish the approved release.", 403);
   const releaseId = boundedText(releaseIdValue, 120);
-  const release = await env.DB.prepare(`SELECT * FROM course_releases WHERE id=? AND status='approved'`).bind(releaseId).first<Row>();
+  const release = await env.DB.prepare(`SELECT * FROM course_releases WHERE id=? AND organization_id=? AND status='approved'`).bind(releaseId, platform.organization.id).first<Row>();
   if (!release) throw new EducationPlatformError("An approved course release is required.", 409);
   const workbooks = await env.DB.prepare(`SELECT w.status FROM course_release_workbooks crw JOIN workbooks w ON w.id=crw.workbook_id WHERE crw.release_id=?`).bind(releaseId).all<{ status: string }>();
   if (!workbooks.results.length || workbooks.results.some((row) => row.status !== "published")) throw new EducationPlatformError("All release workbooks must remain published.", 409);
   const now = new Date().toISOString();
+  await captureCourseRelease(releaseId, auth.userId, "before-publication");
   await env.DB.batch([
     env.DB.prepare(`UPDATE course_releases SET status='published', published_at=?, updated_at=? WHERE id=? AND status='approved'`).bind(now, now, releaseId),
     env.DB.prepare(`INSERT INTO education_publications (id, organization_id, resource_type, slug, title, status, rights_status, deidentification_status, specialist_review_status, reviewer, reviewed_at, version, updated_at) VALUES (?, ?, 'course', ?, ?, 'published', 'cleared-at-workbook-level', 'verified-at-workbook-level', 'approved', ?, ?, ?, ?) ON CONFLICT(resource_type, slug, version) DO UPDATE SET status='published', reviewer=excluded.reviewer, reviewed_at=excluded.reviewed_at, updated_at=excluded.updated_at`).bind(`course:${release.slug}:v${release.version}`, String(release.organization_id), String(release.slug), String(release.title), auth.email, now, Number(release.version), now),

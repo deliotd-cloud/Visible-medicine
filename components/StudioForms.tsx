@@ -1,8 +1,9 @@
 "use client";
 
-import { FormEvent, ReactNode, useState } from "react";
+import { FormEvent, ReactNode, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { StudioCourse, StudioRelease, StudioWorkbook } from "@/lib/education-platform";
+import { STUDIO_COURSE_TEMPLATES } from "@/lib/studio-templates";
 
 async function postStudio(payload: Record<string, unknown>) {
   const response = await fetch("/api/studio", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
@@ -11,15 +12,67 @@ async function postStudio(payload: Record<string, unknown>) {
   return result;
 }
 
-function ActionForm({ children, onSubmit, submitLabel }: { children: ReactNode; onSubmit: (form: FormData) => Promise<void>; submitLabel: string }) {
-  const [busy, setBusy] = useState(false); const [message, setMessage] = useState(""); const [error, setError] = useState("");
-  async function submit(event: FormEvent<HTMLFormElement>) { event.preventDefault(); setBusy(true); setMessage(""); setError(""); try { await onSubmit(new FormData(event.currentTarget)); setMessage("Saved successfully."); } catch (caught) { setError(caught instanceof Error ? caught.message : "Studio could not complete this action."); } finally { setBusy(false); } }
-  return <form className="studio-form" onSubmit={submit}>{children}{(message || error) && <p className={`studio-form-message ${error ? "error" : ""}`} role={error ? "alert" : "status"}>{error || message}</p>}<button disabled={busy}>{busy ? "Working…" : submitLabel}</button></form>;
+function ActionForm({ children, onSubmit, submitLabel, draftKey }: { children: ReactNode; onSubmit: (form: FormData) => Promise<void>; submitLabel: string; draftKey?: string }) {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [busy, setBusy] = useState(false); const [dirty, setDirty] = useState(false); const [message, setMessage] = useState(""); const [error, setError] = useState("");
+  useEffect(() => {
+    if (!draftKey || !formRef.current) return;
+    try {
+      const saved = JSON.parse(localStorage.getItem(`elivion-studio-draft:${draftKey}`) ?? "null") as Record<string, string | string[]> | null;
+      if (!saved) return;
+      for (const element of Array.from(formRef.current.elements)) {
+        if (!(element instanceof HTMLInputElement || element instanceof HTMLTextAreaElement || element instanceof HTMLSelectElement) || !element.name || !(element.name in saved)) continue;
+        const value = saved[element.name];
+        if (element instanceof HTMLInputElement && element.type === "checkbox") element.checked = Array.isArray(value) ? value.includes(element.value) : value === "true";
+        else if (!Array.isArray(value)) element.value = value;
+      }
+      const recoveredNotice = window.setTimeout(() => setMessage("Recovered an unsent device-local draft."), 0);
+      return () => window.clearTimeout(recoveredNotice);
+    } catch { localStorage.removeItem(`elivion-studio-draft:${draftKey}`); }
+  }, [draftKey]);
+  useEffect(() => {
+    if (!dirty) return;
+    const warn = (event: BeforeUnloadEvent) => { event.preventDefault(); };
+    window.addEventListener("beforeunload", warn); return () => window.removeEventListener("beforeunload", warn);
+  }, [dirty]);
+  function preserveDraft() {
+    setDirty(true);
+    if (!draftKey || !formRef.current) return;
+    const values: Record<string, string | string[]> = {};
+    const form = new FormData(formRef.current);
+    for (const key of new Set([...form.keys()])) { const entries = form.getAll(key).map(String); values[key] = entries.length > 1 ? entries : entries[0] ?? ""; }
+    for (const checkbox of Array.from(formRef.current.querySelectorAll<HTMLInputElement>('input[type="checkbox"]'))) if (!checkbox.checked && !(checkbox.name in values)) values[checkbox.name] = "false";
+    localStorage.setItem(`elivion-studio-draft:${draftKey}`, JSON.stringify(values));
+  }
+  async function submit(event: FormEvent<HTMLFormElement>) { event.preventDefault(); setBusy(true); setMessage(""); setError(""); try { await onSubmit(new FormData(event.currentTarget)); if (draftKey) localStorage.removeItem(`elivion-studio-draft:${draftKey}`); setDirty(false); setMessage("Saved successfully."); } catch (caught) { setError(caught instanceof Error ? caught.message : "Studio could not complete this action."); } finally { setBusy(false); } }
+  return <form className="studio-form" ref={formRef} onChange={preserveDraft} onSubmit={submit}>{children}{draftKey && <small className="draft-safety">{dirty ? "Unsubmitted changes are protected on this device." : "No unsaved changes."}</small>}{(message || error) && <p className={`studio-form-message ${error ? "error" : ""}`} role={error ? "alert" : "status"}>{error || message}</p>}<button disabled={busy}>{busy ? "Working…" : submitLabel}</button></form>;
 }
 
 export function CreateCourseForm() {
   const router = useRouter();
   return <ActionForm submitLabel="Create course" onSubmit={async (form) => { const result = await postStudio({ action: "create-course", title: form.get("title"), code: form.get("code"), description: form.get("description") }); router.push(`/studio/courses/${encodeURIComponent(result.courseId!)}`); router.refresh(); }}><div className="two-fields"><label><span>Course title</span><input name="title" required /></label><label><span>Course code</span><input name="code" placeholder="RAD-101" /></label></div><label><span>Educational description</span><textarea name="description" required minLength={20} /></label></ActionForm>;
+}
+
+export function CreateCourseFromTemplateForm() {
+  const router = useRouter();
+  return <ActionForm submitLabel="Create templated course" draftKey="new-course-template" onSubmit={async (form) => { const result = await postStudio({ action: "create-course-from-template", templateId: form.get("templateId"), title: form.get("title"), code: form.get("code"), description: form.get("description") }); router.push(`/studio/courses/${encodeURIComponent(result.courseId!)}`); router.refresh(); }}>
+    <label><span>Teaching pattern</span><select name="templateId">{STUDIO_COURSE_TEMPLATES.map((template) => <option value={template.id} key={template.id}>{template.name}</option>)}</select></label>
+    <div className="two-fields"><label><span>Course title</span><input name="title" required /></label><label><span>Course code</span><input name="code" placeholder="RAD-101" /></label></div>
+    <label><span>Educational description</span><textarea name="description" required minLength={20} /></label>
+    <p className="form-help">Templates create empty workbook shells only. Cases, media and learner records are never copied automatically.</p>
+  </ActionForm>;
+}
+
+export function DuplicateCourseButton({ courseId }: { courseId: string }) {
+  const router = useRouter(); const [busy, setBusy] = useState(false); const [error, setError] = useState("");
+  async function duplicate() { setBusy(true); setError(""); try { const result = await postStudio({ action: "duplicate-course", courseId }); router.push(`/studio/courses/${encodeURIComponent(result.courseId!)}`); router.refresh(); } catch (caught) { setError(caught instanceof Error ? caught.message : "The course could not be duplicated."); } finally { setBusy(false); } }
+  return <div className="inline-action"><button disabled={busy} onClick={() => void duplicate()}>{busy ? "Duplicating…" : "Duplicate course structure"}</button>{error && <p role="alert">{error}</p>}</div>;
+}
+
+export function DuplicateWorkbookButton({ workbookId }: { workbookId: string }) {
+  const router = useRouter(); const [busy, setBusy] = useState(false); const [error, setError] = useState("");
+  async function duplicate() { setBusy(true); setError(""); try { const result = await postStudio({ action: "duplicate-workbook", workbookId }); router.push(`/studio/workbooks/${encodeURIComponent(result.workbookId!)}`); router.refresh(); } catch (caught) { setError(caught instanceof Error ? caught.message : "The workbook could not be duplicated."); } finally { setBusy(false); } }
+  return <div className="inline-action"><button disabled={busy} onClick={() => void duplicate()}>{busy ? "Duplicating…" : "Duplicate empty workbook shell"}</button>{error && <p role="alert">{error}</p>}</div>;
 }
 
 export function CreateWorkbookForm({ course }: { course: StudioCourse }) {
@@ -29,7 +82,7 @@ export function CreateWorkbookForm({ course }: { course: StudioCourse }) {
 
 export function ReleaseDraftForm({ course, workbooks, release }: { course: StudioCourse; workbooks: StudioWorkbook[]; release?: StudioRelease }) {
   const router = useRouter();
-  return <ActionForm submitLabel={release ? "Save release draft" : "Create release draft"} onSubmit={async (form) => { await postStudio({ action: "save-release", releaseId: release?.id, expectedVersion: release?.version, courseId: course.id, title: form.get("title"), slug: form.get("slug"), summary: form.get("summary"), level: form.get("level"), duration: form.get("duration"), outcomes: String(form.get("outcomes") ?? "").split(/\r?\n/).filter(Boolean), publisherName: form.get("publisherName"), publisherKind: form.get("publisherKind"), visibility: form.get("visibility"), accessModel: form.get("accessModel"), priceMinor: Math.round(Number(form.get("price")) * 100), currency: form.get("currency"), enrolmentOpen: form.get("enrolmentOpen") === "on", workbookIds: form.getAll("workbookIds") }); router.refresh(); }}>
+  return <ActionForm draftKey={`release:${release?.id ?? course.id}`} submitLabel={release ? "Save release draft" : "Create release draft"} onSubmit={async (form) => { await postStudio({ action: "save-release", releaseId: release?.id, expectedVersion: release?.version, courseId: course.id, title: form.get("title"), slug: form.get("slug"), summary: form.get("summary"), level: form.get("level"), duration: form.get("duration"), outcomes: String(form.get("outcomes") ?? "").split(/\r?\n/).filter(Boolean), publisherName: form.get("publisherName"), publisherKind: form.get("publisherKind"), visibility: form.get("visibility"), accessModel: form.get("accessModel"), priceMinor: Math.round(Number(form.get("price")) * 100), currency: form.get("currency"), enrolmentOpen: form.get("enrolmentOpen") === "on", workbookIds: form.getAll("workbookIds") }); router.refresh(); }}>
     <div className="two-fields"><label><span>Catalogue title</span><input name="title" defaultValue={release?.title ?? course.title} required /></label><label><span>URL slug</span><input name="slug" defaultValue={release?.slug ?? ""} placeholder="cross-sectional-neuro" required /></label></div>
     <label><span>Course summary</span><textarea name="summary" defaultValue={release?.summary ?? course.description} minLength={30} required /></label>
     <div className="two-fields"><label><span>Level</span><input name="level" defaultValue={release?.level ?? "Intermediate"} /></label><label><span>Duration</span><input name="duration" defaultValue={release?.duration ?? "Self-paced"} /></label></div>

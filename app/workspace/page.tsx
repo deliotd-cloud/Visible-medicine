@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { requireChatGPTUser } from "../chatgpt-auth";
 import { getPlatformSnapshot } from "../../db/platform";
 import { EmbedOriginManager } from "../../components/EmbedOriginManager";
@@ -10,6 +11,7 @@ export const metadata: Metadata = { title: "Workspace", description: "Your Elivi
 export default async function WorkspacePage() {
   const user = await requireChatGPTUser("/workspace");
   const snapshot = await getPlatformSnapshot({ userId: `edu:${user.userId}`, externalSubject: `sites:${user.userId}`, email: user.email, displayName: user.displayName });
+  if (!snapshot.educationRoles.some((role) => ["instructor", "examiner", "administrator"].includes(role))) redirect("/my-learning");
   const storageGb = Math.round(snapshot.entitlement.storageBytes / 1073741824);
   return (
     <main className="inner-page workspace-page">
@@ -21,8 +23,10 @@ export default async function WorkspacePage() {
         <div><span>Governed media</span><b>{snapshot.usage.governedMedia}</b></div>
       </section>
       <section className="workspace-tools expanded">
+        <div><p className="section-index">Invite and organise</p><h2>People &amp; roles</h2><p>Create held-delivery invitation links, import bounded rosters and review organisation membership.</p><Link href="/workspace/people">Manage people →</Link></div>
+        <div><p className="section-index">Prepare safely</p><h2>Pilot readiness</h2><p>Record identity, tenancy, content, privacy, accessibility, security and operational evidence.</p><Link href="/workspace/readiness">Open readiness centre →</Link></div>
         <div><p className="section-index">Create and deliver</p><h2>Studio</h2><p>Build courses and workbooks, manage cohorts and prepare governed releases.</p><Link href="/studio/workspace">Open Studio workspace →</Link></div>
-        <div><p className="section-index">Measure</p><h2>Reporting</h2><p>Review completion, course reach, publication state and cohort trends.</p><Link href="/studio/analytics">Open Studio analytics →</Link></div>
+        <div><p className="section-index">Measure</p><h2>Reporting</h2><p>Review completion, course reach, publication state and cohort trends.</p><Link href="/studio/analytics">Open Studio analytics →</Link><a href="/api/platform/report">Export progress CSV →</a></div>
         <div><p className="section-index">Configure</p><h2>Integrations</h2><p>Prepare education-only identity, LTI and approved embedded delivery.</p><Link href="/workspace/control#identity">Open integration controls →</Link></div>
         <div><p className="section-index">Govern</p><h2>Atlas publishing</h2><p>Version teaching media, build cited structure annotations and manage independent publication review.</p><Link href="/workspace/control#publishing">Open publishing controls →</Link></div>
         <div><p className="section-index">Administer</p><h2>Institution setup</h2><p>Configure tenant branding, identity metadata, commercial intent and signed external delivery.</p><Link href="/workspace/control">Open control centre →</Link></div>

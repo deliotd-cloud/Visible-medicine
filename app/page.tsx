@@ -46,18 +46,13 @@ export default async function Home() {
         <Link href="/studio"><span>03</span><div><b>Studio</b><small>Create and deliver institutional teaching</small></div><i>→</i></Link>
       </section>
 
-      <section className="system-strip" aria-label="Atlas collections">
-        <p>Inside the Atlas</p>
-        {atlasModules.map((module, index) => <Link href={`/atlas/${module.slug}`} key={module.slug}><span>0{index + 1}</span>{module.region}<b>→</b></Link>)}
-      </section>
-
       <section className="content-section module-showcase">
         <div className="section-heading">
-          <div><p className="section-index">01 / Atlas</p><h2>Built around real imaging.</h2></div>
-          <p>Move through anatomy as a continuous study, reveal only the structures you need and open the explanation without losing your place.</p>
+          <div><p className="section-index">01 / Atlas</p><h2>One normal study, explored properly.</h2></div>
+          <p>Search structures and synonyms, move through the series, reveal only the anatomy you need and turn any position into retrieval practice.</p>
         </div>
-        <div className="module-grid">
-          {atlasModules.map((module, index) => (
+        <div className="module-grid module-grid-compact">
+          {atlasModules.slice(0, 3).map((module, index) => (
             <Link className={`module-card module-card-${index + 1}`} href={`/atlas/${module.slug}`} key={module.slug}>
               <div className="module-visual" aria-hidden="true"><i /><i /><i /></div>
               <div className="module-card-copy">
@@ -69,6 +64,10 @@ export default async function Home() {
             </Link>
           ))}
         </div>
+        <div className="section-action-row">
+          <p>The CT head interface is prepared for publication-cleared imaging, reviewed labels and terminology mapping.</p>
+          <Link className="outline-button" href="/atlas">View the complete Atlas roadmap <span>→</span></Link>
+        </div>
       </section>
 
       <section className="dark-section" id="courses">
@@ -79,7 +78,7 @@ export default async function Home() {
           <Link href="/courses">Explore all courses <span>→</span></Link>
         </div>
         <div className="course-stack">
-          {courses.map((course, index) => (
+          {courses.slice(0, 3).map((course, index) => (
             <Link className="course-row" href={`/courses/${course.slug}`} key={course.slug}>
               <span className="course-number">0{index + 1}</span>
               <div><small>{course.publisherKind === "official" ? "Elivion official" : "Institution-published"}</small><h3>{course.title}</h3></div>
