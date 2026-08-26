@@ -36,6 +36,8 @@ export type CatalogueCourse = {
   workbookCount: number;
   firstWorkbookId: string | null;
   resumeWorkbookId: string | null;
+  liveWorkbookId: string | null;
+  liveStartedAt: string | null;
   enrolled: boolean;
 };
 
@@ -149,6 +151,8 @@ function mapCatalogueRow(row: Row, workbookIds: string[] = []): StudioRelease {
     workbookCount: Number(row.workbook_count ?? workbookIds.length),
     firstWorkbookId: row.first_workbook_id ? String(row.first_workbook_id) : workbookIds[0] ?? null,
     resumeWorkbookId: row.resume_workbook_id ? String(row.resume_workbook_id) : null,
+    liveWorkbookId: Boolean(row.enrolled) && row.live_workbook_id ? String(row.live_workbook_id) : null,
+    liveStartedAt: Boolean(row.enrolled) && row.live_started_at ? String(row.live_started_at) : null,
     enrolled: Boolean(row.enrolled),
     createdBy: String(row.created_by),
     reviewedBy: row.reviewed_by ? String(row.reviewed_by) : null,
@@ -196,6 +200,8 @@ export async function listCatalogueCourses(auth?: AuthContext | null): Promise<C
     `SELECT cr.*, c.code,
             COUNT(crw.workbook_id) AS workbook_count,
             (SELECT crw2.workbook_id FROM course_release_workbooks crw2 JOIN workbooks w2 ON w2.id=crw2.workbook_id WHERE crw2.release_id=cr.id AND w2.status='published' ORDER BY crw2.position LIMIT 1) AS first_workbook_id,
+            (SELECT ts.workbook_id FROM course_release_workbooks live_crw JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_workbook_id,
+            (SELECT ts.started_at FROM course_release_workbooks live_crw JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_started_at,
             MAX(CASE WHEN e.status='active' THEN 1 ELSE 0 END) AS enrolled
        FROM course_releases cr
        JOIN courses c ON c.id=cr.course_id
@@ -216,6 +222,8 @@ export async function getCatalogueCourse(slugValue: unknown, auth?: AuthContext 
     `SELECT cr.*, c.code,
             COUNT(crw.workbook_id) AS workbook_count,
             (SELECT crw2.workbook_id FROM course_release_workbooks crw2 JOIN workbooks w2 ON w2.id=crw2.workbook_id WHERE crw2.release_id=cr.id AND w2.status='published' ORDER BY crw2.position LIMIT 1) AS first_workbook_id,
+            (SELECT ts.workbook_id FROM course_release_workbooks live_crw JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_workbook_id,
+            (SELECT ts.started_at FROM course_release_workbooks live_crw JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_started_at,
             MAX(CASE WHEN e.status='active' THEN 1 ELSE 0 END) AS enrolled
        FROM course_releases cr
        JOIN courses c ON c.id=cr.course_id
@@ -243,6 +251,8 @@ export async function getInvitationCourse(codeValue: unknown, auth?: AuthContext
     `SELECT cr.*, c.code,
             COUNT(crw.workbook_id) AS workbook_count,
             (SELECT crw2.workbook_id FROM course_release_workbooks crw2 JOIN workbooks w2 ON w2.id=crw2.workbook_id WHERE crw2.release_id=cr.id AND w2.status='published' ORDER BY crw2.position LIMIT 1) AS first_workbook_id,
+            (SELECT ts.workbook_id FROM course_release_workbooks live_crw JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_workbook_id,
+            (SELECT ts.started_at FROM course_release_workbooks live_crw JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_started_at,
             MAX(CASE WHEN e.status='active' THEN 1 ELSE 0 END) AS enrolled
        FROM course_invitations ci JOIN course_releases cr ON cr.id=ci.release_id JOIN courses c ON c.id=cr.course_id
        LEFT JOIN course_release_workbooks crw ON crw.release_id=cr.id
@@ -353,6 +363,8 @@ export async function getLearnerEnrolments(auth: AuthContext) {
     `SELECT cr.id, cr.slug, cr.title, cr.summary, cr.level, cr.duration_label, cr.publisher_name,
             (SELECT crw2.workbook_id FROM course_release_workbooks crw2 JOIN workbook_assignments wa2 ON wa2.workbook_id=crw2.workbook_id AND wa2.learner_id=e.user_id AND wa2.status='active' WHERE crw2.release_id=cr.id ORDER BY crw2.position LIMIT 1) AS first_workbook_id,
             (SELECT wp2.workbook_id FROM course_release_workbooks crw3 JOIN workbook_progress wp2 ON wp2.workbook_id=crw3.workbook_id AND wp2.learner_id=e.user_id WHERE crw3.release_id=cr.id ORDER BY wp2.last_activity_at DESC LIMIT 1) AS resume_workbook_id,
+            (SELECT ts.workbook_id FROM course_release_workbooks live_crw JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_workbook_id,
+            (SELECT ts.started_at FROM course_release_workbooks live_crw JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_started_at,
             COUNT(DISTINCT CASE WHEN wa.status='active' THEN crw.workbook_id END) AS workbook_count,
             COALESCE(ROUND(AVG(CASE WHEN wa.status='active' THEN COALESCE(wp.percent_complete,0) END)),0) AS progress
        FROM enrolments e
@@ -368,6 +380,8 @@ export async function getLearnerEnrolments(auth: AuthContext) {
     level: String(row.level), duration: String(row.duration_label), publisher: String(row.publisher_name),
     firstWorkbookId: row.first_workbook_id ? String(row.first_workbook_id) : null,
     resumeWorkbookId: row.resume_workbook_id ? String(row.resume_workbook_id) : null,
+    liveWorkbookId: row.live_workbook_id ? String(row.live_workbook_id) : null,
+    liveStartedAt: row.live_started_at ? String(row.live_started_at) : null,
     workbookCount: Number(row.workbook_count), progress: Number(row.progress),
   }));
 }

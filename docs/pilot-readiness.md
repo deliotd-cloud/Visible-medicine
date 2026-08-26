@@ -1,6 +1,6 @@
 # Controlled pilot readiness
 
-This implementation is deliberately **non-live**. It provides a testable product surface for learner, educator and institution workflows while external identity, email, billing, malware screening and observability services remain disabled by default.
+This implementation is deliberately **not activated for a real pilot**. It provides a testable product surface for learner, educator and institution workflows while external identity, email, billing, malware screening, observability and LiveKit Cloud credentials remain disabled by default.
 
 ## What can be evaluated locally
 
@@ -11,12 +11,14 @@ This implementation is deliberately **non-live**. It provides a testable product
 - Account data export, notification preferences and queued correction, restriction or deletion requests.
 - Draft privacy, terms, acceptable-use and accessibility pages awaiting approved legal and contact details.
 - Operational readiness evidence covering identity, tenancy, medical content, privacy, accessibility, security, operations and commercial controls.
+- End-to-end live-teaching discovery, Follow Me synchronisation, polls and the recording-free video-classroom interface in a credential-disabled state.
 
 ## Controls that remain locked
 
 - `activationAllowed` is hard-coded to `false` in the readiness snapshot.
 - Invitation email is held in the notification outbox; the one-time invitation path is displayed only to an authorised organisation administrator.
 - Production identity, email, billing, media screening and observability adapters are configuration indicators only. Adding an environment value does not activate them.
+- The video classroom cannot connect until an approved LiveKit Cloud project is configured. Recording and LiveKit Egress are not implemented.
 - Clinical connectivity is prohibited, and no workflow accepts patient records or clinical worklists.
 - Draft policy pages are not represented as approved legal documents.
 

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
-import "@livekit/components-styles";
 import "./globals.css";
 
 const geistMono = Geist_Mono({ variable: "--font-atlas-mono", subsets: ["latin"] });

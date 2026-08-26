@@ -172,6 +172,7 @@ export async function getReadinessSnapshot(auth: AuthContext) {
       embeds: process.env.EMBED_SIGNING_SECRET ? "evaluation-signing-configured" : "disabled",
       mediaScreening: process.env.MALWARE_SCANNER && process.env.MALWARE_SCANNER !== "disabled" ? "configured-not-active" : "disabled",
       observability: process.env.OBSERVABILITY_ENDPOINT ? "configured-not-active" : "disabled",
+      liveVideo: process.env.LIVEKIT_URL && process.env.LIVEKIT_API_KEY && process.env.LIVEKIT_API_SECRET ? "configured-private-evaluation" : "disabled",
       clinicalConnectivity: "prohibited",
     },
     applications: applications.results.map((row) => ({ id: String(row.id), organizationName: String(row.organization_name), contactName: String(row.contact_name), contactEmail: String(row.contact_email), jurisdiction: String(row.jurisdiction), learnerBand: String(row.learner_band), educatorBand: String(row.educator_band), contentScope: String(row.content_scope), goals: String(row.goals), supportNeeds: String(row.support_needs), status: String(row.status), createdAt: String(row.created_at) })),
