@@ -200,7 +200,7 @@ const worker = {
     headers.set("Content-Security-Policy", "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' ws: wss:; worker-src 'self' blob:");
     headers.set("Cross-Origin-Opener-Policy", "same-origin-allow-popups");
     headers.set("Cross-Origin-Resource-Policy", "same-origin");
-    headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=(), display-capture=(), window-management=(self), fullscreen=(self)");
+    headers.set("Permissions-Policy", "camera=(self), microphone=(self), geolocation=(), display-capture=(self), window-management=(self), fullscreen=(self)");
     headers.set("Referrer-Policy", "no-referrer");
     headers.set("X-Content-Type-Options", "nosniff");
     headers.set("X-Frame-Options", "SAMEORIGIN");

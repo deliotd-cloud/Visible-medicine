@@ -20,6 +20,7 @@ The site uses the approved Elivion symbol, Segoe typography and the Elivion deep
 - Multi-route Next.js/Vinext site covering the home page, Atlas, Courses, Studio, Research, Institutions, Plans and My Learning.
 - Authenticated `/learn` runtime preserving the established education viewer layout: learner Home, Teaching, Exam, My Review, Course → Module → Workbook → Case rail, series thumbnails, viewer tools, notes/answers and dual-display support.
 - Functional staff workspaces for workbook authoring, question banks, live teaching, content safety, marking, insights, integrations and audit.
+- Enrolment-gated LiveKit Cloud video classrooms inside active teaching sessions, with role-bounded publishing, camera and microphone off on entry, and recording disabled.
 - Interactive Atlas demonstration with slice navigation, system filters, labels, practice mode, window presets and saved position.
 - D1-backed per-user learning progress behind authenticated API boundaries.
 - D1-backed organisation membership, education roles, plan entitlements, publication register and approved embed-origin registry.
@@ -69,5 +70,14 @@ The hosted application requires:
 - `SITE_ORIGIN`: canonical production origin used by metadata and social cards.
 - A production education identity and entitlement adapter before external launch. The Sites sign-in adapter is suitable for the private hosted preview, not the final cross-product identity model.
 - `ELIVION_EVALUATION_ADMIN_EMAILS`: a comma-separated owner-private evaluation allowlist. It grants the complete demonstration role set only when the application is deployed in production mode; ordinary new accounts remain learner-only.
+- `LIVEKIT_URL`: the secure WebSocket URL from a LiveKit Cloud project, for example `wss://your-project.livekit.cloud`.
+- `LIVEKIT_API_KEY`: the server-side API key for issuing short-lived classroom tokens.
+- `LIVEKIT_API_SECRET`: the corresponding server-side secret. Never expose this value to client code or commit it to the repository.
+
+### Live video classrooms
+
+Video is attached to Elivion's existing live teaching-session model rather than operating as a separate meeting product. An instructor starts **Follow Me** from the Teaching workspace; the instructor and enrolled learners can then join the room from the same viewer. Tokens are scoped to that teaching session, expire after two hours, and are never persisted in the browser.
+
+Learners can publish camera and microphone tracks. Instructors can also share their screen. Elivion's existing viewer synchronisation, polls and attendance remain the teaching control layer. Recording is deliberately disabled: the token contains no recording grant and this integration does not call LiveKit Egress. If recording is introduced later, it should be treated as a separate consent, retention, access-control and governance project.
 
 See [docs/platform-architecture.md](docs/platform-architecture.md) for the integrated product model, [docs/production-plan.md](docs/production-plan.md) for governance and release gates, [docs/pilot-readiness.md](docs/pilot-readiness.md) for the current non-live controls, and [docs/naming-options.md](docs/naming-options.md) for the working-name shortlist.

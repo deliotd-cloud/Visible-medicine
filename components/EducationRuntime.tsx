@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type {
   PointerEvent as ReactPointerEvent,
@@ -39,6 +40,14 @@ import type { LearnerReviewBundle } from "@/lib/learner-review-repository";
 import type { LtiIntegrationView } from "@/lib/education-integrations";
 import { remainingAttemptSeconds } from "@/lib/attempt-policy";
 import { liveRefreshDelay } from "@/lib/live-refresh-policy";
+
+const LiveTeachingRoom = dynamic(
+  () =>
+    import("@/components/LiveTeachingRoom").then(
+      (module) => module.LiveTeachingRoom,
+    ),
+  { ssr: false },
+);
 
 type WorkspaceView =
   | "home"
@@ -2928,6 +2937,7 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
               <TeachingSessionBar
                 bundle={teachingSession}
                 busy={teachingSessionBusy}
+                currentCaseId={activeCase.id}
                 onStart={() =>
                   void mutateTeachingSession(
                     {
@@ -4619,12 +4629,14 @@ function ExamRecoveryStatus({
 function TeachingSessionBar({
   bundle,
   busy,
+  currentCaseId,
   onStart,
   onEnd,
   onFollowState,
 }: {
   bundle: TeachingSessionBundle;
   busy: boolean;
+  currentCaseId: string;
   onStart: () => void;
   onEnd: () => void;
   onFollowState: (state: "following" | "exploring") => void;
@@ -4658,6 +4670,16 @@ function TeachingSessionBar({
         </span>
       )}
       <span className="live-session-actions">
+        {session && (
+          <LiveTeachingRoom
+            sessionId={session.id}
+            workbookId={session.workbookId}
+            currentCaseId={currentCaseId}
+            canManage={bundle.permissions.manage}
+            trackAttendance={!bundle.permissions.manage && bundle.permissions.follow}
+            followState={followState}
+          />
+        )}
         {bundle.permissions.manage &&
           (session ? (
             <button type="button" disabled={busy} onClick={onEnd}>
