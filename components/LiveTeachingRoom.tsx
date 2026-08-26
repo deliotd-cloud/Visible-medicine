@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import {
   ControlBar,
   GridLayout,
@@ -23,10 +23,7 @@ type Credentials = {
 type LiveTeachingRoomProps = {
   sessionId: string;
   workbookId: string;
-  currentCaseId: string;
   canManage: boolean;
-  trackAttendance: boolean;
-  followState: "following" | "exploring";
 };
 
 async function responseError(response: Response) {
@@ -151,12 +148,7 @@ export function LiveTeachingRoom(props: LiveTeachingRoomProps) {
 }
 
 function VideoClassroomStage({
-  sessionId,
-  workbookId,
-  currentCaseId,
   canManage,
-  trackAttendance,
-  followState,
   onError,
 }: LiveTeachingRoomProps & { onError: (message: string) => void }) {
   const tracks = useTracks(
@@ -164,36 +156,6 @@ function VideoClassroomStage({
     { onlySubscribed: false },
   );
   const participants = useParticipants();
-
-  useEffect(() => {
-    if (!trackAttendance) return;
-    let active = true;
-    const heartbeat = async () => {
-      try {
-        const response = await fetch("/api/education/teaching-sessions", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            action: "heartbeat",
-            workbookId,
-            sessionId,
-            followState,
-            currentCaseId,
-          }),
-          keepalive: true,
-        });
-        if (!response.ok && active) onError(await responseError(response));
-      } catch {
-        if (active) onError("Attendance could not be refreshed. The call remains connected.");
-      }
-    };
-    void heartbeat();
-    const timer = window.setInterval(() => void heartbeat(), 15_000);
-    return () => {
-      active = false;
-      window.clearInterval(timer);
-    };
-  }, [currentCaseId, followState, onError, sessionId, trackAttendance, workbookId]);
 
   return (
     <div className="live-video-stage">

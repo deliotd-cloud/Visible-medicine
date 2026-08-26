@@ -2937,7 +2937,6 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
               <TeachingSessionBar
                 bundle={teachingSession}
                 busy={teachingSessionBusy}
-                currentCaseId={activeCase.id}
                 onStart={() =>
                   void mutateTeachingSession(
                     {
@@ -4629,14 +4628,12 @@ function ExamRecoveryStatus({
 function TeachingSessionBar({
   bundle,
   busy,
-  currentCaseId,
   onStart,
   onEnd,
   onFollowState,
 }: {
   bundle: TeachingSessionBundle;
   busy: boolean;
-  currentCaseId: string;
   onStart: () => void;
   onEnd: () => void;
   onFollowState: (state: "following" | "exploring") => void;
@@ -4674,10 +4671,7 @@ function TeachingSessionBar({
           <LiveTeachingRoom
             sessionId={session.id}
             workbookId={session.workbookId}
-            currentCaseId={currentCaseId}
             canManage={bundle.permissions.manage}
-            trackAttendance={!bundle.permissions.manage && bundle.permissions.follow}
-            followState={followState}
           />
         )}
         {bundle.permissions.manage &&
