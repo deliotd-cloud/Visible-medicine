@@ -5,7 +5,7 @@ export const dynamic = "force-dynamic";
 
 function errorResponse(error: unknown) {
   if (error instanceof DomainError) return Response.json({ error: error.message }, { status: error.status });
-  console.error("Elivion Education API error", error);
+  console.error("Visible Medicine API error", error);
   return Response.json({ error: "The education service could not complete this request." }, { status: 500 });
 }
 

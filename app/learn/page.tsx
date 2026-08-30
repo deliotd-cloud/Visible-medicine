@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Learning workspace",
-  description: "Authenticated Elivion Education teaching, examination and review workspace.",
+  description: "Authenticated Visible Medicine teaching, examination and review workspace.",
   robots: { index: false, follow: false },
   openGraph: { images: [] },
   twitter: { images: [] },

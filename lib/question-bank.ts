@@ -153,7 +153,7 @@ export function exportQuestionBankQti(items: QuestionBankItem[]) {
         : `<qti-choice-interaction response-identifier="RESPONSE" max-choices="${item.responseType === "single-choice" ? 1 : item.options.length}">${item.options.map((option, index) => `<qti-simple-choice identifier="CHOICE_${index + 1}">${xmlEscape(option)}</qti-simple-choice>`).join("")}</qti-choice-interaction>`;
     return `<qti-assessment-item identifier="${xmlEscape(item.id)}" title="${xmlEscape(item.title)}" adaptive="false" time-dependent="false" data-modality="${item.modality}" data-difficulty="${item.difficulty}" data-max-marks="${item.maxMarks}" data-tags="${xmlEscape(item.tags.join(","))}" data-response-type="${item.responseType}">${declaration}<qti-item-body><qti-p>${xmlEscape(item.prompt)}</qti-p>${interaction}</qti-item-body><qti-modal-feedback outcome-identifier="FEEDBACK" identifier="RATIONALE" show-hide="show">${xmlEscape(item.rationale)}</qti-modal-feedback></qti-assessment-item>`;
   });
-  return `<?xml version="1.0" encoding="UTF-8"?><qti-assessment-test xmlns="http://www.imsglobal.org/xsd/imsqtiasi_v3p0" identifier="elivion-education-question-bank" title="Elivion Education question bank">${assessmentItems.join("")}</qti-assessment-test>`;
+  return `<?xml version="1.0" encoding="UTF-8"?><qti-assessment-test xmlns="http://www.imsglobal.org/xsd/imsqtiasi_v3p0" identifier="visible-medicine-question-bank" title="Visible Medicine question bank">${assessmentItems.join("")}</qti-assessment-test>`;
 }
 
 function attribute(source: string, name: string) {

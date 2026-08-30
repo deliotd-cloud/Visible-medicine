@@ -232,8 +232,8 @@ type AccessibilityProfile = {
   reducedMotion: boolean;
 };
 
-const ELIVION_PALETTES = [
-  ["teal", "Elivion Teal"],
+const VISIBLE_MEDICINE_PALETTES = [
+  ["teal", "Visible Medicine Teal"],
   ["blue", "Clinical Blue"],
   ["indigo", "Indigo"],
   ["violet", "Violet"],
@@ -256,18 +256,19 @@ const DEFAULT_ACCESSIBILITY: AccessibilityProfile = {
 
 function BrandLockup() {
   return (
-    <span className="brand-lockup" aria-label="Elivion Education">
+    <span className="brand-lockup" aria-label="Visible Medicine, by Elivion">
       <Image
         className="brand-logo"
-        src="/elivion-logo.png"
+        src="/favicon.svg"
         alt=""
-        width="264"
-        height="208"
+        width="24"
+        height="24"
         priority
       />
       <span className="brand-word">
-        <b>Elivion</b>
-        <i>Education</i>
+        <b>Visible</b>
+        <em>Medicine</em>
+        <i>by Elivion</i>
       </span>
     </span>
   );
@@ -277,7 +278,8 @@ function initialAccessibility(): AccessibilityProfile {
   if (typeof window === "undefined") return DEFAULT_ACCESSIBILITY;
   try {
     const saved = JSON.parse(
-      window.localStorage.getItem("elivion-education-accessibility-v2") ??
+      window.localStorage.getItem("visible-medicine-accessibility-v1") ??
+        window.localStorage.getItem("elivion-education-accessibility-v2") ??
         window.localStorage.getItem("didanix-education-accessibility-v1") ??
         "{}",
     ) as Partial<AccessibilityProfile>;
@@ -290,7 +292,7 @@ function initialAccessibility(): AccessibilityProfile {
       colourMode: ["dark", "light"].includes(saved.colourMode ?? "")
         ? (saved.colourMode as AccessibilityProfile["colourMode"])
         : "dark",
-      palette: ELIVION_PALETTES.some(([value]) => value === saved.palette)
+      palette: VISIBLE_MEDICINE_PALETTES.some(([value]) => value === saved.palette)
         ? (saved.palette as AccessibilityProfile["palette"])
         : "teal",
       highContrast: saved.highContrast === true,
@@ -652,7 +654,7 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (companionMode)
-      document.title = `${companionMode === "exam" ? "Answer workspace" : "Teaching notes"} · Elivion Education`;
+      document.title = `${companionMode === "exam" ? "Answer workspace" : "Teaching notes"} · Visible Medicine`;
     if (!("BroadcastChannel" in window)) return;
     const requestedSession = validDisplaySessionId(
       new URLSearchParams(window.location.search).get("displaySession"),
@@ -785,7 +787,7 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
     if (!accessibilityLoaded) return;
     try {
       window.localStorage.setItem(
-        "elivion-education-accessibility-v2",
+        "visible-medicine-accessibility-v1",
         JSON.stringify(accessibility),
       );
     } catch {
@@ -795,7 +797,7 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
 
   useEffect(() => {
     function syncAccessibility(event: StorageEvent) {
-      if (event.key === "elivion-education-accessibility-v2" && event.newValue)
+      if (event.key === "visible-medicine-accessibility-v1" && event.newValue)
         setAccessibility(initialAccessibility());
     }
     window.addEventListener("storage", syncAccessibility);
@@ -2505,7 +2507,7 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
     return (
       <main className={`companion-shell ${accessibilityClasses}`}>
         <div className="purpose-banner">
-          <strong>Elivion Education</strong>
+          <strong>Visible Medicine</strong>
           <span>
             Educational use only · Not for diagnosis, patient care or clinical
             reporting
@@ -2599,7 +2601,7 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
         Skip to education workspace
       </a>
       <div className="purpose-banner">
-        <strong>Elivion Education</strong>
+        <strong>Visible Medicine</strong>
         <span>
           Educational use only · Not for diagnosis, patient care or clinical
           reporting
@@ -2614,7 +2616,7 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
         </div>
       )}
       <header className="app-header">
-        <Link className="runtime-platform-return" href={view === "authoring" ? "/studio/workspace" : "/my-learning"} aria-label={view === "authoring" ? "Return to Elivion Studio" : "Return to My Learning"}>
+        <Link className="runtime-platform-return" href={view === "authoring" ? "/studio/workspace" : "/my-learning"} aria-label={view === "authoring" ? "Return to Visible Medicine Studio" : "Return to My Learning"}>
           <BrandLockup />
         </Link>
         <div className="mode-switch" aria-label="Education workspace mode">
@@ -3081,7 +3083,7 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
                     ? "SCALE 0.25 μm/px"
                     : "AXIAL · 3.0 mm"}
                 </div>
-                <div className="corner br">Elivion · Education workspace</div>
+                <div className="corner br didanix-credit"><small>Powered by</small> <b>Didanix</b></div>
                 {fourUp ? (
                   <div className="quad-grid" aria-label="Two by two comparison layout">
                     {Array.from({ length: 4 }, (_, index) => availableSeries[index % Math.max(1, availableSeries.length)])
@@ -4310,9 +4312,9 @@ function AccessibilityPanel({
         </div>
       </fieldset>
       <fieldset className="education-palette-picker">
-        <legend>Elivion colour palette</legend>
+        <legend>Visible Medicine colour palette</legend>
         <div role="radiogroup" aria-label="Education colour palette">
-          {ELIVION_PALETTES.map(([value, label]) => (
+          {VISIBLE_MEDICINE_PALETTES.map(([value, label]) => (
             <label key={value} data-palette-choice={value} title={label}>
               <input
                 type="radio"
@@ -4326,7 +4328,7 @@ function AccessibilityPanel({
             </label>
           ))}
         </div>
-        <small>Applies to Elivion Education on this device only.</small>
+        <small>Applies to Visible Medicine on this device only.</small>
       </fieldset>
       {[
         ["highContrast", "High contrast", "Increase panel and focus contrast"],
@@ -4404,7 +4406,7 @@ function KeyboardHelp({ onClose }: { onClose: () => void }) {
       <header>
         <span>
           <small>Keyboard operation</small>
-          <strong>Elivion Education shortcuts</strong>
+          <strong>Visible Medicine shortcuts</strong>
         </span>
         <button type="button" onClick={onClose} aria-label="Close keyboard shortcuts">×</button>
       </header>
@@ -7309,7 +7311,7 @@ function IntegrationWorkspace() {
           <h1>Authentication &amp; integrations</h1>
           <p>
             Keep course-site identity and future LMS launch configuration
-            inside the separate Elivion Education trust boundary.
+            inside the separate Visible Medicine trust boundary.
           </p>
         </span>
         <div className="boundary-badge">
@@ -7336,7 +7338,7 @@ function IntegrationWorkspace() {
             <i>→</i>
             <span><b>2</b><strong>Education identity</strong><small>Issuer and subject validated</small></span>
             <i>→</i>
-            <span><b>3</b><strong>Elivion Education</strong><small>Role and enrolment applied</small></span>
+            <span><b>3</b><strong>Visible Medicine</strong><small>Role and enrolment applied</small></span>
           </div>
           <div className="integration-warning">
             <strong>Production registration still required</strong>

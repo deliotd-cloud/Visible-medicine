@@ -571,7 +571,7 @@ export async function saveCourseReleaseDraft(auth: AuthContext, input: Record<st
   if (!new Set(["free", "invitation", "institution", "paid"]).has(accessModel)) throw new EducationPlatformError("Choose a valid access model.", 422);
   if (visibility === "private" && !new Set(["invitation", "institution"]).has(accessModel)) throw new EducationPlatformError("Private releases must use invitation or institution access.", 422);
   if (!new Set(["official", "institution"]).has(publisherKind)) throw new EducationPlatformError("Choose an official or institution publisher label.", 422);
-  if (publisherKind === "official" && platform.organization.kind !== "platform") throw new EducationPlatformError("Only the Elivion platform organisation can create an official release.", 403);
+  if (publisherKind === "official" && platform.organization.kind !== "platform") throw new EducationPlatformError("Only the Visible Medicine platform organisation can create an official release.", 403);
   if (accessModel === "paid" && priceMinor < 100) throw new EducationPlatformError("Add a valid course price for paid access.", 422);
   if (!/^[A-Z]{3}$/.test(currency)) throw new EducationPlatformError("Use a three-letter currency code.", 422);
   if (workbookIds.length) {

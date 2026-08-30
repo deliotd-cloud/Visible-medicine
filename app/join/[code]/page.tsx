@@ -7,7 +7,7 @@ import { LearnerOnboardingForm } from "@/components/LearnerOnboardingForm";
 import { getInvitationCourse, getLearnerProfile } from "@/lib/education-platform";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: "Course invitation", description: "Accept a controlled Elivion Education course invitation.", robots: { index: false, follow: false } };
+export const metadata: Metadata = { title: "Course invitation", description: "Accept a controlled Visible Medicine course invitation.", robots: { index: false, follow: false } };
 
 export default async function CourseInvitationPage({ params }: { params: Promise<{ code: string }> }) {
   const code = (await params).code.toUpperCase().replace(/[^A-Z0-9-]/g, "");

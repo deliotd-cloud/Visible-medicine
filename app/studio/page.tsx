@@ -3,16 +3,16 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Studio",
-  description: "Create, publish and deliver secure radiology or pathology teaching through Elivion Education Studio.",
+  description: "Create, publish and deliver secure radiology or pathology teaching through Visible Medicine Studio.",
 };
 
 export default function StudioPage() {
   return (
     <main className="inner-page studio-page">
       <section className="page-hero studio-page-hero">
-        <p className="eyebrow"><span /> Elivion Education Studio</p>
+        <p className="eyebrow"><span /> Visible Medicine Studio</p>
         <h1>Your cases.<br />Your course.<br />A purpose-built viewer.</h1>
-        <p>Create private radiology or pathology workbooks, teach them live, assess learners and deliver the experience through Elivion Education.</p>
+        <p>Create private radiology or pathology workbooks, teach them live, assess learners and deliver the experience through Visible Medicine.</p>
         <div className="hero-actions studio-hero-actions">
           <Link className="primary-button" href="/studio/workspace">Open Studio workspace <span>→</span></Link>
           <a className="text-button" href="#studio-access">Plan an institutional pilot</a>
@@ -22,7 +22,7 @@ export default function StudioPage() {
       <section className="studio-flow">
         <div><span>01</span><h2>Prepare</h2><p>Authorised staff place teaching media into quarantine. Content stays private until de-identification, rights and publication review pass.</p></div>
         <div><span>02</span><h2>Compose</h2><p>Organise Course → Module → Workbook → Case, then add questions, saved scenes, polls, presentations and marking rubrics.</p></div>
-        <div><span>03</span><h2>Deliver</h2><p>Host a private institutional course, publish an approved Elivion course or embed a signed learner experience in an authorised website.</p></div>
+        <div><span>03</span><h2>Deliver</h2><p>Host a private institutional course, publish an approved Visible Medicine course or embed a signed learner experience in an authorised website.</p></div>
         <div><span>04</span><h2>Review</h2><p>Track participation, mark submitted work and preserve the exact content and viewer state used by each attempt.</p></div>
       </section>
 
@@ -40,7 +40,7 @@ export default function StudioPage() {
 
       <section className="delivery-modes">
         <p className="section-index">Three delivery modes</p>
-        <article><b>Hosted</b><p>A first-party course within Elivion Education.</p></article>
+        <article><b>Hosted</b><p>A first-party course within Visible Medicine.</p></article>
         <article><b>Embedded</b><p>A signed, origin-restricted learner experience inside an approved external site.</p></article>
         <article><b>LMS</b><p>A later LTI 1.3 pathway for compatible institutional learning platforms.</p></article>
       </section>

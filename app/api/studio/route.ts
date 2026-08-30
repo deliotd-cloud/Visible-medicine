@@ -21,7 +21,7 @@ export const dynamic = "force-dynamic";
 
 function failure(error: unknown) {
   if (error instanceof EducationPlatformError) return Response.json({ error: error.message }, { status: error.status });
-  console.error("Elivion Studio API error", error);
+  console.error("Visible Medicine Studio API error", error);
   return Response.json({ error: "Studio could not complete this request." }, { status: 500 });
 }
 

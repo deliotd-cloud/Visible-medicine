@@ -5,25 +5,25 @@ import { SiteHeader } from "../components/SiteHeader";
 import "./globals.css";
 
 const geistMono = Geist_Mono({ variable: "--font-atlas-mono", subsets: ["latin"] });
-const siteOrigin = process.env.SITE_ORIGIN ?? "http://localhost:3000";
+const siteOrigin = process.env.SITE_ORIGIN ?? "https://visiblemedicine.com";
 
 export const metadata: Metadata = {
-  applicationName: "Elivion Education",
+  applicationName: "Visible Medicine",
   metadataBase: new URL(siteOrigin),
-  title: { default: "Elivion Education | Learn imaging. Teach with cases.", template: "%s | Elivion Education" },
+  title: { default: "Visible Medicine | Learn imaging. Teach with cases.", template: "%s | Visible Medicine" },
   description: "Explore radiological anatomy, take guided courses and create secure institutional imaging education. For education and research only.",
-  icons: { icon: "/elivion-logo.png", shortcut: "/elivion-logo.png" },
+  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg", apple: "/favicon.svg" },
   openGraph: {
-    siteName: "Elivion Education",
-    title: "Elivion Education",
-    description: "Learn imaging. Teach with cases.",
+    siteName: "Visible Medicine",
+    title: "Visible Medicine",
+    description: "Interactive medical imaging education, by Elivion.",
     type: "website",
-    images: [{ url: "/og.png", width: 1727, height: 911, alt: "Elivion Education — Atlas, Courses and Studio" }],
+    images: [{ url: "/og.png", width: 1727, height: 911, alt: "Visible Medicine — Atlas, Courses and Studio" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Elivion Education",
-    description: "Learn imaging. Teach with cases.",
+    title: "Visible Medicine",
+    description: "Interactive medical imaging education, by Elivion.",
     images: ["/og.png"],
   },
 };

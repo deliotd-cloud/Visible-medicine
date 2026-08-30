@@ -4,7 +4,7 @@ import { requireChatGPTUser } from "../../../chatgpt-auth";
 import "../../runtime.css";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: "Course workspace", description: "Elivion Education course-specific imaging workspace.", robots: { index: false, follow: false } };
+export const metadata: Metadata = { title: "Course workspace", description: "Visible Medicine course-specific imaging workspace.", robots: { index: false, follow: false } };
 
 export default async function CourseLearningPage({ params }: { params: Promise<{ courseSlug: string; workbookId: string }> }) {
   const { courseSlug, workbookId } = await params;

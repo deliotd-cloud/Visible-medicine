@@ -25,7 +25,7 @@ export function decideEducationUserProvisioning(
   nodeEnvironment: string | undefined,
 ): EducationUserProvisioningDecision {
   const localDemo = isLocalDemoEducationIdentity(auth, nodeEnvironment);
-  const evaluationAdministrators = (process.env.ELIVION_EVALUATION_ADMIN_EMAILS ?? "")
+  const evaluationAdministrators = (process.env.VISIBLE_MEDICINE_EVALUATION_ADMIN_EMAILS ?? process.env.ELIVION_EVALUATION_ADMIN_EMAILS ?? "")
     .split(",")
     .map((email) => email.trim().toLowerCase())
     .filter(Boolean);

@@ -6,7 +6,7 @@ import { getPlatformSnapshot } from "../../db/platform";
 import { EmbedOriginManager } from "../../components/EmbedOriginManager";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: "Workspace", description: "Your Elivion Education institution, learning and publishing workspace.", robots: { index: false, follow: false } };
+export const metadata: Metadata = { title: "Workspace", description: "Your Visible Medicine institution, learning and publishing workspace.", robots: { index: false, follow: false } };
 
 export default async function WorkspacePage() {
   const user = await requireChatGPTUser("/workspace");

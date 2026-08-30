@@ -88,7 +88,7 @@ export const courses: Course[] = [
     level: "Foundation",
     duration: "75 min",
     lessons: 6,
-    publisher: "Elivion Editorial",
+    publisher: "Visible Medicine Editorial",
     type: "official",
     moduleSlug: "ct-head",
     outcomes: [
@@ -105,7 +105,7 @@ export const courses: Course[] = [
     level: "Intermediate",
     duration: "2 hours",
     lessons: 8,
-    publisher: "Elivion Studio demonstration",
+    publisher: "Visible Medicine Studio demonstration",
     type: "institution",
     moduleSlug: "ct-head",
     outcomes: [

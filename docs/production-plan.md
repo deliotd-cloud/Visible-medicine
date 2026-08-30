@@ -1,28 +1,28 @@
-# Elivion Education production plan
+# Visible Medicine production plan
 
 ## 1. Product model
 
-Elivion Education should be a standalone Elivion platform, not a branch or screen inside the future clinical PACS. It combines a public learning destination with a paid institutional teaching product while maintaining an unmistakable education and research intended use.
+Visible Medicine should be a standalone Elivion platform, not a branch or screen inside the future clinical PACS. It combines a public learning destination with a paid institutional teaching product while maintaining an unmistakable education and research intended use.
 
 The recommended experience has five connected zones:
 
 1. **Atlas** — reviewed, searchable radiological anatomy organised by region, modality, plane and structure.
-2. **Courses** — Elivion learning paths plus private institutional courses.
+2. **Courses** — Visible Medicine learning paths plus private institutional courses.
 3. **Studio** — a gated authoring and delivery workspace for verified educators and organisations.
 4. **Institutions** — organisation workspaces, roles, enrolment, reporting and support.
 5. **Research** — provenance, versioning, citation, dataset and collaboration information.
 
-“Elivion Education” is the working umbrella name. Atlas, Courses and Studio are product capabilities beneath it. Didanix is reserved for the future clinical PACS.
+“Visible Medicine” is the working umbrella name. Atlas, Courses and Studio are product capabilities beneath it. Didanix is reserved for the future clinical PACS.
 
 ## 2. Architecture and ownership
 
 | Capability | Owning domain | Integration rule |
 | --- | --- | --- |
-| Anatomy catalogue and public routes | Elivion Education Atlas | First-party, versioned publication records |
+| Anatomy catalogue and public routes | Visible Medicine Atlas | First-party, versioned publication records |
 | Image-viewing primitives | Shared non-clinical viewer package | Released independently from clinical viewer code |
-| Course authoring and assessment | Elivion Education Studio | Courses consume immutable published releases |
+| Course authoring and assessment | Visible Medicine Studio | Courses consume immutable published releases |
 | Institutional enrolment and roles | Education identity and entitlement service | Organisation-scoped claims; no clinical tenant reuse |
-| Learner bookmarks and progress | Elivion Education | Separate database and retention policy |
+| Learner bookmarks and progress | Visible Medicine | Separate database and retention policy |
 | Medical media | Education media pipeline | Publication-cleared derivatives in separate storage |
 | Clinical workflow | Didanix PACS | No runtime, identity, database, entitlement or release coupling |
 
@@ -89,7 +89,7 @@ Required production controls include organisation-level authorisation tests, sig
 
 ### Phase A — implemented private foundation
 
-- Elivion Education umbrella brand and clear Didanix PACS separation.
+- Visible Medicine umbrella brand and clear Didanix PACS separation.
 - Home, Atlas, Courses, Studio, Research, Institutions, Plans and learner routes.
 - Interactive generated Atlas demonstration.
 - Integrated authenticated learning runtime with teaching, examination, review, authoring, live delivery, marking, reporting, integrations and audit workspaces.

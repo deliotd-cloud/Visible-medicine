@@ -83,7 +83,7 @@ export function PlatformControlCentre({ initialSnapshot }: { initialSnapshot: Sn
 function ProfileSection({ snapshot, busy, post }: { snapshot: Snapshot; busy: boolean; post: (payload: Record<string, unknown>, success: string) => Promise<void> }) {
   const profile = snapshot.profile;
   function submit(event: FormEvent<HTMLFormElement>) { event.preventDefault(); const values = Object.fromEntries(new FormData(event.currentTarget)); void post({ action: "save-organization-profile", ...values }, "Organisation profile and brand settings saved."); }
-  return <section className="control-section" id="organisation"><header><div><span>Tenant administration</span><h2>Organisation & brand</h2><p>Keep the Elivion product frame while giving each institution a clearly bounded identity.</p></div><b className="status-badge">{profile?.onboardingStage ?? "evaluation"}</b></header>
+  return <section className="control-section" id="organisation"><header><div><span>Tenant administration</span><h2>Organisation & brand</h2><p>Keep the Visible Medicine product frame while giving each institution a clearly bounded identity.</p></div><b className="status-badge">{profile?.onboardingStage ?? "evaluation"}</b></header>
     <form className="control-form-grid" onSubmit={submit}>
       <label><span>Display name</span><input name="displayName" defaultValue={profile?.displayName ?? snapshot.platform.organization.name} maxLength={120} required /></label>
       <label><span>Support contact</span><input name="supportContact" type="email" defaultValue={profile?.supportContact ?? ""} required /></label>
@@ -91,7 +91,7 @@ function ProfileSection({ snapshot, busy, post }: { snapshot: Snapshot; busy: bo
       <label><span>Accent colour</span><input name="accentColor" type="color" defaultValue={profile?.accentColor ?? "#28c6a8"} /></label>
       <label><span>Logo URL <small>Optional HTTPS</small></span><input name="logoUrl" type="url" defaultValue={profile?.logoUrl ?? ""} placeholder="https://assets.example.edu/logo.png" /></label>
       <label><span>Custom domain <small>DNS activation is separate</small></span><input name="customDomain" defaultValue={profile?.customDomain ?? ""} placeholder="education.example.edu" /></label>
-      <div className="form-boundary"><b>White-label boundary</b><p>The institution identity appears within Elivion Education. It must not obscure the education-only intended use or imply a Didanix clinical connection.</p></div>
+      <div className="form-boundary"><b>White-label boundary</b><p>The institution identity appears within Visible Medicine. It must not obscure the education-only intended use or imply a Didanix clinical connection.</p></div>
       <button className="primary-button" disabled={busy}>Save organisation profile <span>→</span></button>
     </form>
   </section>;

@@ -40,7 +40,7 @@ function liveKitConfiguration() {
   const apiSecret = process.env.LIVEKIT_API_SECRET?.trim() ?? "";
   if (!serverUrl || !apiKey || !apiSecret)
     throw new EducationApiError(
-      "Live video is prepared but not yet connected to the Elivion LiveKit Cloud project.",
+      "Live video is prepared but not yet connected to the Visible Medicine LiveKit Cloud project.",
       503,
     );
   try {

@@ -37,7 +37,7 @@ export function SiteHeader() {
           </Link>
         ))}
       </nav>
-      <Link className="search-link" href="/search" aria-label="Search Elivion Education" aria-current={pathname === "/search" ? "page" : undefined}>⌕ <span>Search</span></Link>
+      <Link className="search-link" href="/search" aria-label="Search Visible Medicine" aria-current={pathname === "/search" ? "page" : undefined}>⌕ <span>Search</span></Link>
       <details className="workspace-switcher"><summary>Workspace <span aria-hidden="true">⌄</span></summary><nav aria-label="Choose workspace"><Link aria-current={isActive("/my-learning") ? "page" : undefined} href="/my-learning"><b>Learn</b><span>Progress, revision and certificates</span></Link><Link aria-current={isActive("/studio") ? "page" : undefined} href="/studio/workspace"><b>Studio</b><span>Courses, workbooks and publishing</span></Link><Link aria-current={isActive("/workspace") ? "page" : undefined} href="/workspace"><b>Institution</b><span>People, controls and readiness</span></Link><Link aria-current={isActive("/account") ? "page" : undefined} href="/account"><b>Account</b><span>Profile, export and learner rights</span></Link></nav></details>
       <details className="mobile-nav">
         <summary>Menu</summary>

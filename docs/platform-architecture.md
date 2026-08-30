@@ -1,4 +1,4 @@
-# Elivion Education integrated platform architecture
+# Visible Medicine integrated platform architecture
 
 ## Product surfaces
 
@@ -13,13 +13,13 @@
 | Embedded delivery | `/embed` | Origin-restricted delivery contract and activation boundary |
 | Trust centre | `/trust` | Intended use, content governance, accessibility and clinical separation |
 
-The learning runtime retains the proven lightweight education-viewer interaction model while presenting Elivion Education as the user-facing product. Didanix remains the separate clinical PACS name.
+The learning runtime retains the proven lightweight education-viewer interaction model while presenting Visible Medicine as the user-facing product. Didanix remains the separate clinical PACS name.
 
 ## Runtime hierarchy
 
 `Organisation → Course → Module → Workbook → Case → Series/slide → Scene/question`
 
-- Courses organise institution or Elivion-owned learning.
+- Courses organise institution or Visible Medicine-owned learning.
 - Modules group a pedagogic sequence.
 - Workbooks are versioned teaching or assessment experiences.
 - Cases group all linked questions and publication-cleared media.

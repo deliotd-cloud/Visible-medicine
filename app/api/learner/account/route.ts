@@ -11,7 +11,7 @@ export const dynamic = "force-dynamic";
 
 function failure(error: unknown) {
   if (error instanceof EducationPlatformError) return Response.json({ error: error.message }, { status: error.status });
-  console.error("Elivion learner account error", error);
+  console.error("Visible Medicine learner account error", error);
   return Response.json({ error: "The learner account service could not complete this request." }, { status: 500 });
 }
 

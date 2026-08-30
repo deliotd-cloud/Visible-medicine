@@ -149,7 +149,7 @@
   .submission-review-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-/* Elivion Education consumes the canonical Elivion palette values through its
+/* Visible Medicine consumes the canonical Elivion palette values through its
    own device-local preference. It never reads or writes the clinical suite key. */
 .app-shell,
 .companion-shell,
@@ -344,13 +344,13 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  min-width: 172px;
+  min-width: 220px;
   white-space: nowrap;
 }
 .runtime-platform-return { display: inline-flex; color: inherit; text-decoration: none; border-radius: 7px; }
 .runtime-platform-return:hover .brand-word b { color: var(--accent); }
 .brand-logo {
-  width: 34px;
+  width: 28px;
   height: 28px;
   object-fit: contain;
   filter: drop-shadow(0 5px 10px color-mix(in srgb, var(--accent) 25%, transparent));
@@ -382,8 +382,7 @@
   font:
     800 8px/1.4 "Segoe UI",
     sans-serif;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: .055em;
 }
 .mode-switch {
   min-width: 0;
@@ -2426,6 +2425,9 @@
   bottom: 8px;
   color: #5a7d99;
 }
+.corner.br.didanix-credit { display: inline-flex; align-items: baseline; gap: 4px; }
+.corner.br.didanix-credit small { font-size: 7px; letter-spacing: .06em; text-transform: uppercase; }
+.corner.br.didanix-credit b { color: #86a7bd; font-family: "Segoe UI", sans-serif; font-size: 10px; font-weight: 650; letter-spacing: .06em; }
 .orientation {
   position: absolute;
   color: #7c9ba6;

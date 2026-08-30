@@ -52,7 +52,7 @@ export function educationApiErrorResponse(error: unknown) {
     error instanceof IntegrationValidationError
   )
     return Response.json({ error: error.message }, { status: 422 });
-  console.error("Elivion Education scoped API error", error);
+  console.error("Visible Medicine scoped API error", error);
   return Response.json(
     { error: "The education service could not complete this request." },
     { status: 500 },

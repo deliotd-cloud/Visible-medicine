@@ -29,7 +29,7 @@ test("learners cannot publish screen-share tracks", () => {
 test("room identifiers are bounded to the random teaching session", () => {
   assert.equal(
     liveKitRoomName("87BB403E-91DD-4A14-A86A-4871778BA7A7"),
-    "elivion-education-87bb403e-91dd-4a14-a86a-4871778ba7a7",
+    "visible-medicine-87bb403e-91dd-4a14-a86a-4871778ba7a7",
   );
   assert.throws(() => liveKitRoomName("%%%"));
 });

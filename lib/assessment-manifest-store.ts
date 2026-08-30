@@ -13,7 +13,7 @@ import {
 } from "@/lib/education-viewer-adapter";
 
 export const EDUCATION_VIEWER_CORE_VERSION =
-  "elivion-education-viewer@1.0.0";
+  "visible-medicine-viewer@1.0.0";
 
 type DatabaseRow = Record<string, string | number | null>;
 
@@ -237,7 +237,7 @@ export async function buildAssessmentManifestFromDatabase(
 
   return createAssessmentManifestRecord({
     schema: "didanix-education-assessment-manifest-v2",
-    product: "Elivion Education",
+    product: "Visible Medicine",
     intendedPurpose: "education-only",
     workbook: {
       id: String(workbook.id),
@@ -389,7 +389,7 @@ async function knownSeedManifest(
 ) {
   return createAssessmentManifestRecord({
     schema: "didanix-education-assessment-manifest-v2",
-    product: "Elivion Education",
+    product: "Visible Medicine",
     intendedPurpose: "education-only",
     workbook: { id: workbook.id, title: workbook.title, mode: workbook.mode, version: 1 },
     assessment: {

@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { verifyCertificate } from "@/lib/platform-governance";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: "Completion record", description: "Verify an Elivion Education course completion record.", robots: { index: false, follow: false } };
+export const metadata: Metadata = { title: "Completion record", description: "Verify an Visible Medicine course completion record.", robots: { index: false, follow: false } };
 
 export default async function CertificatePage({ params }: { params: Promise<{ code: string }> }) {
   const certificate = await verifyCertificate((await params).code);

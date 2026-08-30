@@ -4,7 +4,7 @@ import { PlatformControlCentre } from "@/components/PlatformControlCentre";
 import { getControlCentreSnapshot } from "@/lib/platform-governance";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: "Institution control centre", description: "Configure an Elivion Education institution, publishing workflow, entitlements and secure embeds.", robots: { index: false, follow: false } };
+export const metadata: Metadata = { title: "Institution control centre", description: "Configure an Visible Medicine institution, publishing workflow, entitlements and secure embeds.", robots: { index: false, follow: false } };
 
 export default async function InstitutionControlPage() {
   const user = await requireChatGPTUser("/workspace/control");

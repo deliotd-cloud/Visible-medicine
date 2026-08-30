@@ -10,7 +10,7 @@ export default async function Home() {
     <main className="site-shell">
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow"><span /> Elivion imaging education</p>
+          <p className="eyebrow"><span /> Visible Medicine · by Elivion</p>
           <h1>Learn imaging.<br />Teach with cases.</h1>
           <p className="hero-intro">Explore radiological anatomy, follow guided courses or build secure institutional teaching with a purpose-built educational viewer.</p>
           <div className="hero-actions">
@@ -18,7 +18,7 @@ export default async function Home() {
             <Link className="text-button" href="/studio">Open Studio</Link>
           </div>
           <div className="trust-row" aria-label="Product principles">
-            <span>Education &amp; research only</span><span>Institution ready</span><span>Separate from clinical Didanix</span>
+            <span>Education &amp; research only</span><span>Institution ready</span><span>Viewer powered by Didanix</span>
           </div>
         </div>
 
@@ -36,11 +36,11 @@ export default async function Home() {
             <div className="label label-three"><span /> Sylvian fissure</div>
             <span className="viewer-cta">Open interactive module <b>↗</b></span>
           </div>
-          <div className="viewer-footer"><span>Brain</span><div className="slice-track"><i /></div><span>Bone · Vessels · Brain</span></div>
+          <div className="viewer-footer"><span>Brain</span><div className="slice-track"><i /></div><span className="didanix-credit"><small>Powered by</small> <b>Didanix</b></span></div>
         </Link>
       </section>
 
-      <section className="platform-strip" aria-label="Elivion Education platform">
+      <section className="platform-strip" aria-label="Visible Medicine platform">
         <Link href="/atlas"><span>01</span><div><b>Atlas</b><small>Explore reviewed anatomy on imaging</small></div><i>→</i></Link>
         <Link href="/courses"><span>02</span><div><b>Courses</b><small>Learn through guided cases and practice</small></div><i>→</i></Link>
         <Link href="/studio"><span>03</span><div><b>Studio</b><small>Create and deliver institutional teaching</small></div><i>→</i></Link>
@@ -74,20 +74,20 @@ export default async function Home() {
         <div className="dark-section-heading">
           <p className="section-index">02 / Courses</p>
           <h2>From recognition to understanding.</h2>
-          <p>Atlas scenes become lessons, questions, saved views and live teaching sessions across Elivion Education.</p>
+          <p>Atlas scenes become lessons, questions, saved views and live teaching sessions across Visible Medicine.</p>
           <Link href="/courses">Explore all courses <span>→</span></Link>
         </div>
         <div className="course-stack">
           {courses.slice(0, 3).map((course, index) => (
             <Link className="course-row" href={`/courses/${course.slug}`} key={course.slug}>
               <span className="course-number">0{index + 1}</span>
-              <div><small>{course.publisherKind === "official" ? "Elivion official" : "Institution-published"}</small><h3>{course.title}</h3></div>
+              <div><small>{course.publisherKind === "official" ? "Visible Medicine official" : "Institution-published"}</small><h3>{course.title}</h3></div>
               <p>{course.level} · {course.workbookCount} workbooks · {course.duration}</p>
               <b>↗</b>
             </Link>
           ))}
           <Link className="course-row studio-row" href="/studio">
-            <span className="course-number">+</span><div><small>For educators</small><h3>Host your own imaging course</h3></div><p>Created in Elivion Studio</p><b>↗</b>
+            <span className="course-number">+</span><div><small>For educators</small><h3>Host your own imaging course</h3></div><p>Created in Visible Medicine Studio</p><b>↗</b>
           </Link>
         </div>
       </section>
@@ -113,7 +113,7 @@ export default async function Home() {
           <div className="family-active"><span>Learn</span><h3>Courses</h3><p>Official learning paths and private institutional teaching.</p></div>
           <div><span>Create</span><h3>Studio</h3><p>Course authoring, assessment, live teaching and secure delivery.</p></div>
         </div>
-        <div className="clinical-boundary"><div><span>Separate clinical product</span><b>Didanix PACS</b></div><p>The future clinically licensed PACS has separate identity, data, release and quality systems. Elivion Education does not provide diagnosis, reporting or patient-care workflows.</p></div>
+        <div className="clinical-boundary"><div><span>Separate clinical product</span><b>Didanix PACS</b></div><p>Visible Medicine uses Didanix viewer technology for education only. The future clinically licensed PACS retains separate identity, patient data, licensing, release and quality systems; this platform provides no PACS access, diagnosis, reporting or patient-care workflow.</p></div>
         <div className="family-actions"><Link className="primary-button" href="/institutions">For institutions <span>→</span></Link><Link className="text-button" href="/pricing">View the commercial model</Link></div>
       </section>
     </main>

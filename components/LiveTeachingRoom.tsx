@@ -123,7 +123,7 @@ export function LiveTeachingRoom(props: LiveTeachingRoomProps) {
           className={`live-video-drawer${minimized ? " minimized" : ""}`}
           role="dialog"
           aria-modal="false"
-          aria-label="Elivion live video classroom"
+          aria-label="Visible Medicine live video classroom"
         >
           <header>
             <span>
@@ -165,7 +165,7 @@ export function LiveTeachingRoom(props: LiveTeachingRoomProps) {
               <p>
                 Continue viewing the case while speaking with the educator and
                 other enrolled learners. Polls and viewer control remain in
-                Elivion Education.
+                Visible Medicine.
               </p>
               <fieldset className="live-video-preferences" disabled={!mediaSupported}>
                 <legend>Join preferences</legend>

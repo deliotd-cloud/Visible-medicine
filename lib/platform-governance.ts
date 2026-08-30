@@ -313,8 +313,8 @@ export async function issueEmbedLaunch(auth: AuthContext, input: Record<string, 
   const id = crypto.randomUUID();
   const issuedAt = Math.floor(Date.now() / 1000);
   const expiresAtSeconds = issuedAt + 300;
-  const header = jsonToBase64Url({ alg: "HS256", typ: "JWT", kid: "elivion-education-embed-v1" });
-  const payload = jsonToBase64Url({ jti: id, iss: "elivion-education", aud: "embedded-learning", org: platform.organization.id, origin, resourceType, resourceId, audience, intendedUse: "education-research-only", evaluation: approved.status !== "active", iat: issuedAt, exp: expiresAtSeconds });
+  const header = jsonToBase64Url({ alg: "HS256", typ: "JWT", kid: "visible-medicine-embed-v1" });
+  const payload = jsonToBase64Url({ jti: id, iss: "visible-medicine", aud: "embedded-learning", org: platform.organization.id, origin, resourceType, resourceId, audience, intendedUse: "education-research-only", evaluation: approved.status !== "active", iat: issuedAt, exp: expiresAtSeconds });
   const unsigned = `${header}.${payload}`;
   const token = `${unsigned}.${await hmac(unsigned, secret)}`;
   const tokenHash = await sha256(token);
@@ -342,8 +342,8 @@ export async function validateEmbedLaunch(tokenValue: unknown, parentOriginValue
   let payload: Record<string, unknown>;
   try { header = base64UrlToJson(segments[0]); payload = base64UrlToJson(segments[1]); }
   catch { throw new PlatformGovernanceError("Invalid launch token.", 401); }
-  if (header.alg !== "HS256" || header.typ !== "JWT" || header.kid !== "elivion-education-embed-v1") throw new PlatformGovernanceError("Invalid launch token.", 401);
-  if (payload.iss !== "elivion-education" || payload.aud !== "embedded-learning" || payload.intendedUse !== "education-research-only" || typeof payload.exp !== "number" || payload.exp <= Math.floor(Date.now() / 1000) || payload.origin !== parentOrigin) throw new PlatformGovernanceError("The launch has expired or does not match this host origin.", 401);
+  if (header.alg !== "HS256" || header.typ !== "JWT" || header.kid !== "visible-medicine-embed-v1") throw new PlatformGovernanceError("Invalid launch token.", 401);
+  if (payload.iss !== "visible-medicine" || payload.aud !== "embedded-learning" || payload.intendedUse !== "education-research-only" || typeof payload.exp !== "number" || payload.exp <= Math.floor(Date.now() / 1000) || payload.origin !== parentOrigin) throw new PlatformGovernanceError("The launch has expired or does not match this host origin.", 401);
   const tokenHash = await sha256(token);
   const launch = await env.DB.prepare(`SELECT e.*, oe.embeds_access, oe.status AS entitlement_status FROM embed_launches e JOIN organization_entitlements oe ON oe.organization_id=e.organization_id WHERE e.id=? AND e.token_hash=?`).bind(String(payload.jti), tokenHash).first<Row>();
   if (!launch || launch.status !== "active" || Number(launch.embeds_access) !== 1 || !["active", "evaluation"].includes(String(launch.entitlement_status)) || new Date(String(launch.expires_at)).getTime() <= Date.now()) throw new PlatformGovernanceError("This embedded launch is no longer active.", 401);

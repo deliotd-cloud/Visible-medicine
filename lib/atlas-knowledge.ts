@@ -14,7 +14,7 @@ export type AtlasStructure = {
   parent: string;
   description: string;
   relationships: string[];
-  terminologyStatus: "Elivion coded" | "External mapping pending";
+  terminologyStatus: "Visible Medicine coded" | "External mapping pending";
 };
 
 export const ctHeadStructures: AtlasStructure[] = [

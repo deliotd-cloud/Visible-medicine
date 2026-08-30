@@ -22,7 +22,7 @@ export function liveKitPublishSources(
 export function liveKitRoomName(sessionId: string) {
   const safeId = sessionId.toLowerCase().replace(/[^a-z0-9-]/g, "");
   if (!safeId) throw new Error("A valid teaching session identifier is required.");
-  return `elivion-education-${safeId}`;
+  return `visible-medicine-${safeId}`;
 }
 
 export function normalizeLiveKitServerUrl(value: string, production: boolean) {

@@ -17,7 +17,7 @@ export const dynamic = "force-dynamic";
 
 function failure(error: unknown) {
   if (error instanceof PlatformGovernanceError) return Response.json({ error: error.message }, { status: error.status });
-  console.error("Elivion platform control error", error);
+  console.error("Visible Medicine platform control error", error);
   return Response.json({ error: "The institution control could not complete this request." }, { status: 500 });
 }
 

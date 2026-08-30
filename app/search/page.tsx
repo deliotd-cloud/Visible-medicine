@@ -3,7 +3,7 @@ import Link from "next/link";
 import { searchEducation } from "@/lib/platform-governance";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: "Search", description: "Search Elivion Education anatomy, cases, courses and workbooks." };
+export const metadata: Metadata = { title: "Search", description: "Search Visible Medicine anatomy, cases, courses and workbooks." };
 
 export default async function SearchPage({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
   const query = (await searchParams).q?.trim() ?? "";

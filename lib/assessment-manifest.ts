@@ -69,7 +69,7 @@ export type AssessmentManifest = {
   schema:
     | typeof ASSESSMENT_MANIFEST_SCHEMA_V1
     | typeof ASSESSMENT_MANIFEST_SCHEMA;
-  product: "Elivion Education";
+  product: "Visible Medicine";
   intendedPurpose: "education-only";
   workbook: {
     id: string;
@@ -481,7 +481,7 @@ export function validateAssessmentManifest(value: unknown): AssessmentManifest {
   );
   if (manifest.schema !== ASSESSMENT_MANIFEST_SCHEMA)
     throw new AssessmentManifestError("Assessment manifest schema is unsupported.");
-  if (manifest.product !== "Elivion Education")
+  if (manifest.product !== "Visible Medicine")
     throw new AssessmentManifestError("Assessment manifest product boundary is invalid.");
   if (manifest.intendedPurpose !== "education-only")
     throw new AssessmentManifestError("Assessment manifest purpose is invalid.");
@@ -539,7 +539,7 @@ export function validateAssessmentManifest(value: unknown): AssessmentManifest {
 
   return {
     schema: ASSESSMENT_MANIFEST_SCHEMA,
-    product: "Elivion Education",
+    product: "Visible Medicine",
     intendedPurpose: "education-only",
     workbook: normalizedWorkbook,
     assessment: {

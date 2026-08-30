@@ -4,18 +4,19 @@ type BrandLockupProps = { priority?: boolean };
 
 export function BrandLockup({ priority = false }: BrandLockupProps) {
   return (
-    <span className="brand-lockup" aria-label="Elivion Education">
+    <span className="brand-lockup" aria-label="Visible Medicine, by Elivion">
       <Image
         className="brand-logo"
-        src="/elivion-logo.png"
+        src="/favicon.svg"
         alt=""
-        width={264}
-        height={208}
+        width={24}
+        height={24}
         priority={priority}
       />
       <span className="brand-word">
-        <b>Elivion</b>
-        <i>Education</i>
+        <b>Visible</b>
+        <em>Medicine</em>
+        <i>by Elivion</i>
       </span>
     </span>
   );

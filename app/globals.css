@@ -27,13 +27,13 @@ button { font: inherit; }
 .skip-link:focus { transform: translateY(0); }
 
 .topbar { width: min(1440px, 100%); height: 78px; margin: 0 auto; padding: 0 42px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; border-bottom: 1px solid var(--line); }
-.brand { display: inline-flex; align-items: center; min-width: 210px; white-space: nowrap; }
+.brand { display: inline-flex; align-items: center; min-width: 250px; white-space: nowrap; }
 .brand-lockup { display: inline-flex; align-items: center; gap: 9px; }
-.brand-logo { width: 38px; height: 31px; object-fit: contain; filter: drop-shadow(0 5px 12px rgba(15,159,136,.2)); }
+.brand-logo { width: 31px; height: 31px; object-fit: contain; filter: drop-shadow(0 5px 12px rgba(15,159,136,.2)); }
 .brand-word { display: inline-flex; align-items: baseline; gap: 2px; font-size: 16px; letter-spacing: -.02em; }
 .brand-word b { color: var(--ink); font-weight: 760; }
 .brand-word em { color: var(--teal); font-style: normal; font-weight: 820; }
-.brand-word i { margin-left: 6px; padding: 2px 6px; border: 1px solid var(--line); border-radius: 4px; background: var(--panel); color: var(--ink); font: 800 8px/1.4 "Segoe UI", sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+.brand-word i { margin-left: 7px; padding: 2px 6px; border: 1px solid var(--line); border-radius: 4px; background: var(--panel); color: var(--ink); font: 700 8px/1.4 "Segoe UI", sans-serif; letter-spacing: .06em; }
 .nav-links { display: flex; gap: 34px; font-size: 13px; color: #354541; }
 .nav-links a { transition: color .2s ease; }
 .nav-links a:hover { color: #000; }
@@ -199,7 +199,13 @@ h1 { margin: 0; max-width: 660px; font-size: clamp(56px, 6vw, 88px); line-height
 .site-footer > div > p { max-width: 320px; color: #8fa09b; font-size: 12px; line-height: 1.6; }
 .footer-links { display: grid; grid-template-columns: 1fr 1fr; gap: 15px 24px; align-content: start; font-size: 12px; }
 .footer-boundary span { color: var(--lime); font: 600 9px/1 var(--font-geist-mono), monospace; text-transform: uppercase; }
-.footer-boundary small { color: #61706c; font-size: 9px; }
+.footer-boundary small { display: block; margin-top: 7px; color: #73847f; font-size: 9px; }
+.footer-boundary .viewer-credit { color: #8fa09b; }
+.didanix-credit { display: inline-flex; align-items: baseline; gap: 4px; white-space: nowrap; }
+.didanix-credit small { color: inherit; font: 500 8px/1 var(--font-atlas-mono), monospace; letter-spacing: .04em; text-transform: uppercase; }
+.didanix-credit b { font-family: "Segoe UI", sans-serif; font-weight: 650; letter-spacing: .055em; }
+.viewer-footer .didanix-credit { color: #a9b7b3; }
+.atlas-viewer-credit { margin-left: auto; padding: 7px 9px; color: #96aaa5; font-size: 10px; }
 
 .inner-page { min-height: 70vh; }
 .page-hero { min-height: 550px; padding: 105px 42px 70px; display: flex; flex-direction: column; justify-content: flex-end; }
@@ -381,6 +387,7 @@ h1 { margin: 0; max-width: 660px; font-size: clamp(56px, 6vw, 88px); line-height
 .site-footer { background: #061b20; color: #e4f0ee; }
 .footer-brand .brand-word b { color: #e4f0ee; }
 .footer-brand .brand-word i { color: #e4f0ee; background: #102b31; border-color: #28454a; }
+.footer-brand .brand-word em { color: var(--teal); }
 .footer-brand .brand-logo { filter: drop-shadow(0 5px 12px rgba(40,198,168,.25)); }
 .elivion-parent { margin-top: 58px; padding: 24px 28px; display: grid; grid-template-columns: 86px 1fr; gap: 28px; align-items: center; border: 1px solid color-mix(in srgb, var(--teal) 25%, var(--line)); background: rgba(255,255,255,.58); }
 .elivion-parent > img { width: 80px; height: 63px; object-fit: contain; }
@@ -397,7 +404,7 @@ h1 { margin: 0; max-width: 660px; font-size: clamp(56px, 6vw, 88px); line-height
 .research-grid > div:hover,
 .institution-offer > div:hover { position: relative; z-index: 2; transform: translateY(-3px); box-shadow: 0 18px 40px rgba(8,42,49,.09); }
 
-/* Elivion Education platform layer. */
+/* Visible Medicine platform layer. */
 .platform-strip { width: min(1440px,100%); margin: 0 auto; padding: 0 42px 48px; display: grid; grid-template-columns: repeat(3,1fr); }
 .platform-strip > a { min-height: 122px; padding: 24px; display: grid; grid-template-columns: 34px 1fr auto; gap: 16px; align-items: center; border: 1px solid var(--line); border-right: 0; background: rgba(255,255,255,.42); transition: background .2s ease, transform .2s ease; }
 .platform-strip > a:last-child { border-right: 1px solid var(--line); }
@@ -1031,7 +1038,8 @@ h1 { margin: 0; max-width: 660px; font-size: clamp(56px, 6vw, 88px); line-height
 @media (max-width: 760px) {
   .brand { min-width: 0; }
   .brand-word { font-size: 14px; }
-  .brand-logo { width: 32px; height: 26px; }
+  .brand-logo { width: 27px; height: 27px; }
+  .brand-word i { display: none; }
   .host-card { grid-column: auto; }
   .elivion-parent { grid-template-columns: 56px 1fr; padding: 20px; }
   .elivion-parent > img { width: 52px; height: 42px; }

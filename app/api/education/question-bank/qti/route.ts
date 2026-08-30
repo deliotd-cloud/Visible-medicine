@@ -13,7 +13,7 @@ export async function GET() {
     return new Response(exportQuestionBankQti(bundle.items), {
       headers: {
         "Content-Type": "application/xml; charset=utf-8",
-        "Content-Disposition": 'attachment; filename="elivion-education-question-bank.xml"',
+        "Content-Disposition": 'attachment; filename="visible-medicine-question-bank.xml"',
         "Cache-Control": "private, no-store",
       },
     });

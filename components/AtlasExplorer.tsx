@@ -106,7 +106,7 @@ export function AtlasExplorer({ moduleSlug, totalImages }: AtlasExplorerProps) {
   const [favourites, setFavourites] = useState<string[]>(() => {
     if (typeof window === "undefined") return [];
     try {
-      const saved = window.localStorage.getItem("elivion-atlas-favourites");
+      const saved = window.localStorage.getItem("visible-medicine-atlas-favourites") ?? window.localStorage.getItem("elivion-atlas-favourites");
       return saved ? JSON.parse(saved) as string[] : [];
     } catch {
       return [];
@@ -154,7 +154,7 @@ export function AtlasExplorer({ moduleSlug, totalImages }: AtlasExplorerProps) {
       : [...favourites, selected.id];
     setFavourites(next);
     try {
-      window.localStorage.setItem("elivion-atlas-favourites", JSON.stringify(next));
+      window.localStorage.setItem("visible-medicine-atlas-favourites", JSON.stringify(next));
       setMessage(
         next.includes(selected.id)
           ? `${selected.name} saved to this device.`
@@ -236,6 +236,7 @@ export function AtlasExplorer({ moduleSlug, totalImages }: AtlasExplorerProps) {
             >Practice</button>
             <button type="button" onClick={saveProgress}>Save position</button>
           </div>
+          <span className="atlas-viewer-credit didanix-credit"><small>Powered by</small> <b>Didanix</b></span>
         </div>
 
         {quizMode && (

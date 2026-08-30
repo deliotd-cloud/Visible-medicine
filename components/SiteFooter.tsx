@@ -18,7 +18,8 @@ export function SiteFooter() {
       <div className="footer-boundary">
         <span>Education &amp; research only</span>
         <p>Not intended for diagnosis, patient care, clinical reporting or clinical decision-making.</p>
-        <small>An Elivion family platform · Separate from the clinical Didanix PACS</small>
+        <small>Visible Medicine · by Elivion</small>
+        <small className="viewer-credit">Imaging viewer <b>Powered by Didanix</b> · No PACS or diagnostic access</small>
       </div>
     </footer>
   );

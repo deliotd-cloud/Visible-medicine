@@ -18,7 +18,7 @@ function ActionForm({ children, onSubmit, submitLabel, draftKey }: { children: R
   useEffect(() => {
     if (!draftKey || !formRef.current) return;
     try {
-      const saved = JSON.parse(localStorage.getItem(`elivion-studio-draft:${draftKey}`) ?? "null") as Record<string, string | string[]> | null;
+      const saved = JSON.parse(localStorage.getItem(`visible-medicine-studio-draft:${draftKey}`) ?? localStorage.getItem(`elivion-studio-draft:${draftKey}`) ?? "null") as Record<string, string | string[]> | null;
       if (!saved) return;
       for (const element of Array.from(formRef.current.elements)) {
         if (!(element instanceof HTMLInputElement || element instanceof HTMLTextAreaElement || element instanceof HTMLSelectElement) || !element.name || !(element.name in saved)) continue;
@@ -28,7 +28,7 @@ function ActionForm({ children, onSubmit, submitLabel, draftKey }: { children: R
       }
       const recoveredNotice = window.setTimeout(() => setMessage("Recovered an unsent device-local draft."), 0);
       return () => window.clearTimeout(recoveredNotice);
-    } catch { localStorage.removeItem(`elivion-studio-draft:${draftKey}`); }
+    } catch { localStorage.removeItem(`visible-medicine-studio-draft:${draftKey}`); }
   }, [draftKey]);
   useEffect(() => {
     if (!dirty) return;
@@ -42,9 +42,9 @@ function ActionForm({ children, onSubmit, submitLabel, draftKey }: { children: R
     const form = new FormData(formRef.current);
     for (const key of new Set([...form.keys()])) { const entries = form.getAll(key).map(String); values[key] = entries.length > 1 ? entries : entries[0] ?? ""; }
     for (const checkbox of Array.from(formRef.current.querySelectorAll<HTMLInputElement>('input[type="checkbox"]'))) if (!checkbox.checked && !(checkbox.name in values)) values[checkbox.name] = "false";
-    localStorage.setItem(`elivion-studio-draft:${draftKey}`, JSON.stringify(values));
+    localStorage.setItem(`visible-medicine-studio-draft:${draftKey}`, JSON.stringify(values));
   }
-  async function submit(event: FormEvent<HTMLFormElement>) { event.preventDefault(); setBusy(true); setMessage(""); setError(""); try { await onSubmit(new FormData(event.currentTarget)); if (draftKey) localStorage.removeItem(`elivion-studio-draft:${draftKey}`); setDirty(false); setMessage("Saved successfully."); } catch (caught) { setError(caught instanceof Error ? caught.message : "Studio could not complete this action."); } finally { setBusy(false); } }
+  async function submit(event: FormEvent<HTMLFormElement>) { event.preventDefault(); setBusy(true); setMessage(""); setError(""); try { await onSubmit(new FormData(event.currentTarget)); if (draftKey) { localStorage.removeItem(`visible-medicine-studio-draft:${draftKey}`); localStorage.removeItem(`elivion-studio-draft:${draftKey}`); } setDirty(false); setMessage("Saved successfully."); } catch (caught) { setError(caught instanceof Error ? caught.message : "Studio could not complete this action."); } finally { setBusy(false); } }
   return <form className="studio-form" ref={formRef} onChange={preserveDraft} onSubmit={submit}>{children}{draftKey && <small className="draft-safety">{dirty ? "Unsubmitted changes are protected on this device." : "No unsaved changes."}</small>}{(message || error) && <p className={`studio-form-message ${error ? "error" : ""}`} role={error ? "alert" : "status"}>{error || message}</p>}<button disabled={busy}>{busy ? "Working…" : submitLabel}</button></form>;
 }
 
@@ -88,7 +88,7 @@ export function ReleaseDraftForm({ course, workbooks, release }: { course: Studi
     <div className="two-fields"><label><span>Level</span><input name="level" defaultValue={release?.level ?? "Intermediate"} /></label><label><span>Duration</span><input name="duration" defaultValue={release?.duration ?? "Self-paced"} /></label></div>
     <label><span>Learning outcomes · one per line</span><textarea name="outcomes" defaultValue={release?.outcomes.join("\n") ?? ""} required /></label>
     <fieldset><legend>Release workbooks</legend>{workbooks.map((workbook) => <label className="studio-check" key={workbook.id}><input type="checkbox" name="workbookIds" value={workbook.id} defaultChecked={release?.workbookIds.includes(workbook.id)} /><span><b>{workbook.title}</b>{workbook.mode} · {workbook.status} · {workbook.caseCount} cases</span></label>)}</fieldset>
-    <div className="three-fields"><label><span>Publisher</span><input name="publisherName" defaultValue={release?.publisher ?? ""} placeholder="Institution name" /></label><label><span>Publisher label</span><select name="publisherKind" defaultValue={release?.publisherKind ?? "institution"}><option value="institution">Institution</option><option value="official">Elivion official</option></select></label><label><span>Visibility</span><select name="visibility" defaultValue={release?.visibility ?? "private"}><option value="private">Private</option><option value="unlisted">Unlisted</option><option value="public">Public catalogue</option></select></label></div>
+    <div className="three-fields"><label><span>Publisher</span><input name="publisherName" defaultValue={release?.publisher ?? ""} placeholder="Institution name" /></label><label><span>Publisher label</span><select name="publisherKind" defaultValue={release?.publisherKind ?? "institution"}><option value="institution">Institution</option><option value="official">Visible Medicine official</option></select></label><label><span>Visibility</span><select name="visibility" defaultValue={release?.visibility ?? "private"}><option value="private">Private</option><option value="unlisted">Unlisted</option><option value="public">Public catalogue</option></select></label></div>
     <div className="three-fields"><label><span>Access</span><select name="accessModel" defaultValue={release?.accessModel ?? "invitation"}><option value="free">Free self-enrolment</option><option value="invitation">Invitation</option><option value="institution">Institution membership</option><option value="paid">Paid</option></select></label><label><span>Price</span><input name="price" type="number" min="0" step="0.01" defaultValue={(release?.priceMinor ?? 0) / 100} /></label><label><span>Currency</span><input name="currency" maxLength={3} defaultValue={release?.currency ?? "GBP"} /></label></div>
     <label className="studio-check"><input name="enrolmentOpen" type="checkbox" defaultChecked={release?.enrolmentOpen ?? true} /><span><b>Open enrolment</b>Allow the configured access route once this release is published.</span></label>
   </ActionForm>;
