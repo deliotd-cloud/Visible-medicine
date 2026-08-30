@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
+import { SplashScreen } from "../components/SplashScreen";
 import "./globals.css";
 
 const geistMono = Geist_Mono({ variable: "--font-atlas-mono", subsets: ["latin"] });
@@ -30,13 +31,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var key="visible-medicine-splash-v1";document.documentElement.dataset.visibleMedicineSplash=sessionStorage.getItem(key)?"hidden":"show";}catch(error){document.documentElement.dataset.visibleMedicineSplash="show";}})();` }} />
+      </head>
       <body className={geistMono.variable}>
-        <a className="skip-link" href="#main-content">Skip to content</a>
-        <SiteHeader />
-        <div className="intended-use-strip"><span>Education &amp; research only</span><p>No diagnosis, reporting, patient care or clinical decision-making.</p><a href="/intended-use">Read intended use →</a></div>
-        <div id="main-content" tabIndex={-1}>{children}</div>
-        <SiteFooter />
+        <SplashScreen />
+        <div id="visible-medicine-site-content">
+          <a className="skip-link" href="#main-content">Skip to content</a>
+          <SiteHeader />
+          <div className="intended-use-strip"><span>Education &amp; research only</span><p>No diagnosis, reporting, patient care or clinical decision-making.</p><a href="/intended-use">Read intended use →</a></div>
+          <div id="main-content" tabIndex={-1}>{children}</div>
+          <SiteFooter />
+        </div>
       </body>
     </html>
   );
