@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -40,6 +39,7 @@ import type { LearnerReviewBundle } from "@/lib/learner-review-repository";
 import type { LtiIntegrationView } from "@/lib/education-integrations";
 import { remainingAttemptSeconds } from "@/lib/attempt-policy";
 import { liveRefreshDelay } from "@/lib/live-refresh-policy";
+import { BrandLockup as VisibleMedicineBrandLockup } from "@/components/BrandLockup";
 
 const LiveTeachingRoom = dynamic(
   () =>
@@ -253,26 +253,6 @@ const DEFAULT_ACCESSIBILITY: AccessibilityProfile = {
   largeTargets: false,
   reducedMotion: false,
 };
-
-function BrandLockup() {
-  return (
-    <span className="brand-lockup" aria-label="Visible Medicine, by Elivion">
-      <Image
-        className="brand-logo"
-        src="/favicon.svg"
-        alt=""
-        width="24"
-        height="24"
-        priority
-      />
-      <span className="brand-word">
-        <b>Visible</b>
-        <em>Medicine</em>
-        <i>by Elivion</i>
-      </span>
-    </span>
-  );
-}
 
 function initialAccessibility(): AccessibilityProfile {
   if (typeof window === "undefined") return DEFAULT_ACCESSIBILITY;
@@ -2433,7 +2413,7 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
   if (!data)
     return (
       <main className={`loading-screen ${accessibilityClasses}`}>
-        <BrandLockup />
+        <VisibleMedicineBrandLockup tone={accessibility.colourMode} />
         <p role={error ? "alert" : "status"}>{error || "Preparing your secure education workspace…"}</p>
         {error && <div className="loading-actions"><button onClick={() => void refresh()}>Try again</button><Link href="/courses">Browse courses</Link><Link href="/workspace">Return to workspace</Link></div>}
       </main>
@@ -2482,7 +2462,7 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
   if (companionMode === "exam" && !data.course.dualDisplayAllowed)
     return (
       <main className={`loading-screen ${accessibilityClasses}`}>
-        <BrandLockup />
+        <VisibleMedicineBrandLockup tone={accessibility.colourMode} />
         <h1>Companion display unavailable</h1>
         <p>
           This immutable assessment version permits one display only. Return to
@@ -2494,7 +2474,7 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
   if (companionMode === "exam" && !data.attempt.preflightPassedAt)
     return (
       <main className={`loading-screen ${accessibilityClasses}`}>
-        <BrandLockup />
+        <VisibleMedicineBrandLockup tone={accessibility.colourMode} />
         <h1>Complete preflight in the main window</h1>
         <p>
           Assessment questions and media remain locked until the server records
@@ -2515,7 +2495,7 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
           <small>Companion panel</small>
         </div>
         <header className="companion-header">
-          <BrandLockup />
+          <VisibleMedicineBrandLockup tone={accessibility.colourMode} />
           <span>
             <small>{data.course.code}</small>
             <strong>
@@ -2617,7 +2597,7 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
       )}
       <header className="app-header">
         <Link className="runtime-platform-return" href={view === "authoring" ? "/studio/workspace" : "/my-learning"} aria-label={view === "authoring" ? "Return to Visible Medicine Studio" : "Return to My Learning"}>
-          <BrandLockup />
+          <VisibleMedicineBrandLockup tone={accessibility.colourMode} />
         </Link>
         <div className="mode-switch" aria-label="Education workspace mode">
           {primaryViews.map((item) => (

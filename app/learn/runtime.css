@@ -343,46 +343,16 @@
 .brand-lockup {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
   min-width: 220px;
   white-space: nowrap;
 }
 .runtime-platform-return { display: inline-flex; color: inherit; text-decoration: none; border-radius: 7px; }
-.runtime-platform-return:hover .brand-word b { color: var(--accent); }
-.brand-logo {
-  width: 28px;
-  height: 28px;
+.runtime-platform-return:hover .brand-lockup-image { filter: drop-shadow(0 6px 15px color-mix(in srgb, var(--accent) 34%, transparent)); }
+.brand-lockup-image {
+  width: 205px;
+  height: auto;
   object-fit: contain;
   filter: drop-shadow(0 5px 10px color-mix(in srgb, var(--accent) 25%, transparent));
-}
-.brand-word {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 1px;
-  font-size: 17px;
-  letter-spacing: -0.2px;
-}
-.brand-word b {
-  color: var(--text);
-  font-weight: 760;
-}
-.brand-word em {
-  color: var(--accent);
-  font-style: normal;
-  font-weight: 820;
-  text-shadow: 0 0 14px color-mix(in srgb, var(--accent) 28%, transparent);
-}
-.brand-word i {
-  margin-left: 7px;
-  padding: 2px 6px;
-  color: var(--text);
-  background: var(--active);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  font:
-    800 8px/1.4 "Segoe UI",
-    sans-serif;
-  letter-spacing: .055em;
 }
 .mode-switch {
   min-width: 0;

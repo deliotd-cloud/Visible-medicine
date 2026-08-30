@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
-const SPLASH_STORAGE_KEY = "visible-medicine-splash-v1";
+const SPLASH_STORAGE_KEY = "visible-medicine-splash-v2";
 
 export function SplashScreen() {
   const dismissRef = useRef<() => void>(() => undefined);
@@ -46,11 +46,11 @@ export function SplashScreen() {
       dismissed = true;
       root.dataset.visibleMedicineSplash = reduceMotion ? "hidden" : "leaving";
       if (reduceMotion) finish();
-      else finishTimer = window.setTimeout(() => finish(), 320);
+      else finishTimer = window.setTimeout(() => finish(), 440);
     };
 
     dismissRef.current = dismiss;
-    const autoDismissTimer = window.setTimeout(dismiss, reduceMotion ? 700 : 1550);
+    const autoDismissTimer = window.setTimeout(dismiss, reduceMotion ? 850 : 2850);
     const focusTimer = window.setTimeout(() => skipButtonRef.current?.focus({ preventScroll: true }), 40);
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") dismiss();
@@ -74,20 +74,31 @@ export function SplashScreen() {
       aria-labelledby="splash-title"
       aria-describedby="splash-description"
     >
-      <div className="splash-orbit splash-orbit-one" aria-hidden="true" />
-      <div className="splash-orbit splash-orbit-two" aria-hidden="true" />
-      <div className="splash-grid" aria-hidden="true" />
       <div className="splash-content">
-        <Image className="splash-mark" src="/favicon.svg" alt="" width={72} height={72} priority />
-        <div className="splash-brand" id="splash-title">
-          <span><b>Visible</b><em>Medicine</em></span>
-          <small>by Elivion</small>
+        <h1 className="sr-only" id="splash-title">Visible Medicine, by Elivion</h1>
+        <div className="splash-scan-stage" aria-hidden="true">
+          <i className="splash-corner splash-corner-tl" />
+          <i className="splash-corner splash-corner-tr" />
+          <i className="splash-corner splash-corner-bl" />
+          <i className="splash-corner splash-corner-br" />
+          <div className="splash-logo-reveal">
+            <Image
+              className="splash-lockup"
+              src="/brand/approved/visible-medicine-lockup-dark.png"
+              alt=""
+              width={1024}
+              height={205}
+              priority
+              sizes="(max-width: 620px) 88vw, 860px"
+            />
+          </div>
+          <span className="splash-scan-line" />
         </div>
-        <p id="splash-description">Where medicine becomes visible.</p>
+        <p className="splash-tagline" id="splash-description">Where medicine becomes visible.</p>
         <div className="splash-boundary">
           <span>Education &amp; research only</span>
           <i aria-hidden="true" />
-          <span>Viewer powered by <b>Didanix</b></span>
+          <span>Imaging viewer <b>Powered by Didanix</b></span>
         </div>
       </div>
       <button ref={skipButtonRef} className="splash-skip" type="button" onClick={() => dismissRef.current()}>

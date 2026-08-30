@@ -13,7 +13,15 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteOrigin),
   title: { default: "Visible Medicine | Where medicine becomes visible.", template: "%s | Visible Medicine" },
   description: "Explore radiological anatomy, take guided courses and create secure institutional imaging education. For education and research only.",
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg", apple: "/favicon.svg" },
+  icons: {
+    icon: [
+      { url: "/brand/icons/favicon.ico" },
+      { url: "/brand/icons/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/brand/icons/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+    ],
+    shortcut: "/brand/icons/favicon.ico",
+    apple: [{ url: "/brand/icons/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     siteName: "Visible Medicine",
     title: "Visible Medicine — Where medicine becomes visible.",
@@ -33,7 +41,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var key="visible-medicine-splash-v1";document.documentElement.dataset.visibleMedicineSplash=sessionStorage.getItem(key)?"hidden":"show";}catch(error){document.documentElement.dataset.visibleMedicineSplash="show";}})();` }} />
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var key="visible-medicine-splash-v2";document.documentElement.dataset.visibleMedicineSplash=sessionStorage.getItem(key)?"hidden":"show";}catch(error){document.documentElement.dataset.visibleMedicineSplash="show";}})();` }} />
       </head>
       <body className={geistMono.variable}>
         <SplashScreen />
