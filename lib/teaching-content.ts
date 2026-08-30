@@ -1,4 +1,4 @@
-import { safeText } from "@/lib/domain";
+import { safeText } from "./domain.ts";
 
 export type TeachingContentBlockType =
   | "text"
@@ -6,7 +6,8 @@ export type TeachingContentBlockType =
   | "explanation"
   | "reading-link"
   | "case-image"
-  | "scene";
+  | "scene"
+  | "presentation-slide";
 
 export type TeachingContentBlockDraft = {
   caseId: string;
@@ -48,6 +49,7 @@ export function validateTeachingContentBlock(
     "reading-link",
     "case-image",
     "scene",
+    "presentation-slide",
   ]);
   const type = safeText(input.type, 30) as TeachingContentBlockType;
   if (!types.has(type))
@@ -79,6 +81,14 @@ export function validateTeachingContentBlock(
     );
   }
   return { caseId, type, title, body, url };
+}
+
+export function introductoryTeachingSlides(
+  blocks: TeachingContentBlockView[],
+) {
+  return blocks
+    .filter((block) => block.type === "presentation-slide")
+    .sort((left, right) => left.position - right.position || left.id.localeCompare(right.id));
 }
 
 export function keyPointsFromBody(body: string) {

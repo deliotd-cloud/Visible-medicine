@@ -24,6 +24,7 @@ import type {
   TeachingViewerState,
 } from "@/lib/teaching-sessions";
 import {
+  introductoryTeachingSlides,
   keyPointsFromBody,
   type TeachingContentBlockType,
   type TeachingContentBlockView,
@@ -483,6 +484,8 @@ export function EducationRuntime({
   const [notice, setNotice] = useState("");
   const [error, setError] = useState("");
   const [revealNote, setRevealNote] = useState(false);
+  const [completedIntroductions, setCompletedIntroductions] = useState<string[]>([]);
+  const [introductionSlideIndex, setIntroductionSlideIndex] = useState(0);
   const [sidebarPinnedOpen, setSidebarPinnedOpen] = useState(false);
   const [sidebarHoverOpen, setSidebarHoverOpen] = useState(false);
   const [dualDisplay, setDualDisplay] = useState(false);
@@ -899,9 +902,20 @@ export function EducationRuntime({
     : [];
   const teachingContentBlocks = activeCase
     ? (data?.teachingContentBlocks.filter(
-        (block) => block.caseId === activeCase.id,
+        (block) =>
+          block.caseId === activeCase.id && block.type !== "presentation-slide",
       ) ?? [])
     : [];
+  const introductionSlides = data
+    ? introductoryTeachingSlides(data.teachingContentBlocks)
+    : [];
+  const introductionKey = data
+    ? `${data.course.workbookId}:v${data.course.workbookVersion}`
+    : "";
+  const introductionOpen =
+    view === "teaching" &&
+    introductionSlides.length > 0 &&
+    !completedIntroductions.includes(introductionKey);
   const availableSeries = activeCase ? seriesFor(activeCase, mixedAsset) : [];
   const effectiveKind =
     activeCase?.classification === "mixed"
@@ -1853,6 +1867,7 @@ export function EducationRuntime({
           : (body.cases[0]?.id ?? ""),
       );
       setExamPreflightPassed(Boolean(body.attempt.preflightPassedAt));
+      setIntroductionSlideIndex(0);
       setView(
         nextView ??
           (body.course.workbookMode === "assessment" ? "exam" : "teaching"),
@@ -2784,7 +2799,26 @@ export function EducationRuntime({
         </section>
       )}
 
-      {(view === "exam" || view === "teaching") && activeCase && (
+      {introductionOpen && (
+        <WorkbookIntroduction
+          slides={introductionSlides}
+          courseTitle={data.course.title}
+          workbookTitle={data.course.workbookTitle}
+          activeIndex={introductionSlideIndex}
+          onIndex={setIntroductionSlideIndex}
+          onComplete={() => {
+            setCompletedIntroductions((current) =>
+              current.includes(introductionKey)
+                ? current
+                : [...current, introductionKey],
+            );
+            setIntroductionSlideIndex(0);
+            setNotice("Introduction complete · imaging workspace ready");
+          }}
+        />
+      )}
+
+      {(view === "exam" || view === "teaching") && activeCase && !introductionOpen && (
         <section
           className={`viewer-workspace${sidebarCollapsed ? " sidebar-collapsed" : ""}${dualDisplay ? " dual-display-main" : ""}`}
         >
@@ -3835,6 +3869,19 @@ export function EducationRuntime({
                 <span>Teaching notes</span>
                 <span className="panel-head-actions">
                   <small>Linked to case {activeCase.position}</small>
+                  {introductionSlides.length > 0 && (
+                    <button
+                      className="display-button"
+                      onClick={() => {
+                        setIntroductionSlideIndex(0);
+                        setCompletedIntroductions((current) =>
+                          current.filter((key) => key !== introductionKey),
+                        );
+                      }}
+                    >
+                      Replay introduction
+                    </button>
+                  )}
                   <button
                     className="display-button"
                     onClick={() => void launchCompanion()}
@@ -5316,7 +5363,8 @@ function CompanionCasePanel({
 }) {
   const note = data.teachingNotes.find((item) => item.caseId === activeCase.id);
   const teachingContentBlocks = data.teachingContentBlocks.filter(
-    (block) => block.caseId === activeCase.id,
+    (block) =>
+      block.caseId === activeCase.id && block.type !== "presentation-slide",
   );
   return (
     <section
@@ -5509,19 +5557,155 @@ function CompanionCasePanel({
   );
 }
 
+type WorkbookIntroductionSlide = Pick<
+  TeachingContentBlockView,
+  "id" | "title" | "body"
+>;
+
+function WorkbookIntroduction({
+  slides,
+  courseTitle,
+  workbookTitle,
+  activeIndex,
+  onIndex,
+  onComplete,
+  preview = false,
+  onClose,
+}: {
+  slides: WorkbookIntroductionSlide[];
+  courseTitle: string;
+  workbookTitle: string;
+  activeIndex: number;
+  onIndex: (index: number) => void;
+  onComplete: () => void;
+  preview?: boolean;
+  onClose?: () => void;
+}) {
+  const deckRef = useRef<HTMLElement>(null);
+  const currentIndex = Math.min(Math.max(activeIndex, 0), slides.length - 1);
+  const slide = slides[currentIndex];
+  useEffect(() => {
+    deckRef.current?.focus();
+  }, []);
+  if (!slide) return null;
+  return (
+    <section
+      className={`workbook-introduction${preview ? " preview" : ""}`}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="workbook-introduction-title"
+    >
+      <article
+        className="introduction-deck"
+        ref={deckRef}
+        tabIndex={-1}
+        onKeyDown={(event) => {
+          if (event.key === "ArrowLeft" && currentIndex > 0) {
+            event.preventDefault();
+            onIndex(currentIndex - 1);
+          }
+          if (event.key === "ArrowRight" && currentIndex < slides.length - 1) {
+            event.preventDefault();
+            onIndex(currentIndex + 1);
+          }
+          if (event.key === "Home") {
+            event.preventDefault();
+            onIndex(0);
+          }
+          if (event.key === "End") {
+            event.preventDefault();
+            onIndex(slides.length - 1);
+          }
+          if (preview && event.key === "Escape") onClose?.();
+        }}
+      >
+        <header className="introduction-deck-header">
+          <VisibleMedicineBrandLockup tone="dark" />
+          <span>
+            <small>{preview ? "Learner preview" : courseTitle}</small>
+            <strong>{workbookTitle}</strong>
+          </span>
+          <span className="introduction-counter" aria-live="polite">
+            {currentIndex + 1} / {slides.length}
+          </span>
+          {preview && onClose && (
+            <button type="button" className="introduction-close" onClick={onClose}>
+              Close preview
+            </button>
+          )}
+        </header>
+        <div className="introduction-slide">
+          <div className="introduction-copy">
+            <span className="eyebrow">Before you begin imaging</span>
+            <h1 id="workbook-introduction-title">{slide.title}</h1>
+            <div className="introduction-body">
+              {slide.body.split(/\n\s*\n/).map((paragraph, index) => (
+                <p key={`${slide.id}-paragraph-${index}`}>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+        </div>
+        <footer className="introduction-controls">
+          <button
+            type="button"
+            className="secondary-button"
+            disabled={currentIndex === 0}
+            onClick={() => onIndex(currentIndex - 1)}
+          >
+            Previous
+          </button>
+          <div className="introduction-dots" aria-label="Presentation slides">
+            {slides.map((item, index) => (
+              <button
+                type="button"
+                key={item.id}
+                className={index === currentIndex ? "active" : ""}
+                aria-label={`Open slide ${index + 1}: ${item.title}`}
+                aria-current={index === currentIndex ? "step" : undefined}
+                onClick={() => onIndex(index)}
+              >
+                <span>{index + 1}</span>
+              </button>
+            ))}
+          </div>
+          {currentIndex === slides.length - 1 ? (
+            <button type="button" className="primary-button" onClick={onComplete}>
+              {preview ? "Finish preview" : "Start imaging"}
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="primary-button"
+              onClick={() => onIndex(currentIndex + 1)}
+            >
+              Next slide
+            </button>
+          )}
+        </footer>
+        <small className="introduction-keyboard-hint">
+          Use the buttons, slide numbers, or left and right arrow keys.
+        </small>
+      </article>
+    </section>
+  );
+}
+
 function TeachingContentBlocks({
   blocks,
 }: {
   blocks: TeachingContentBlockView[];
 }) {
-  if (!blocks.length) return null;
+  const caseBlocks = blocks.filter(
+    (block) => block.type !== "presentation-slide",
+  );
+  if (!caseBlocks.length) return null;
   return (
     <section className="structured-teaching-content" aria-label="Case teaching content">
       <header>
         <small>Instructor sequence</small>
         <strong>Teaching content</strong>
       </header>
-      {blocks.map((block) => (
+      {caseBlocks.map((block) => (
         <article className={"teaching-content-block " + block.type} key={block.id}>
           {block.type === "case-image" && (
             <span className="content-image-preview" aria-hidden="true"><i /></span>
@@ -5912,21 +6096,41 @@ function TeachingContentComposer({
       </div>
       <div className="content-composer-intro">
         <p>
-          Build the notes panel from ordered text, key-point, explanation,
-          reading, image and saved-scene blocks. The preview shows the learner view.
+          Build an optional clickable introduction followed by case-linked text,
+          key-point, explanation, reading, image and saved-scene blocks. The
+          previews show the learner view.
         </p>
-        <button
-          type="button"
-          disabled={!availableCases.length || drafts.length >= 60}
-          onClick={() =>
-            setDrafts((current) => [
-              ...current,
-              newTeachingBlock(availableCases[0]?.id ?? ""),
-            ])
-          }
-        >
-          ＋ Add content block
-        </button>
+        <span className="content-composer-actions">
+          <button
+            type="button"
+            disabled={!availableCases.length || drafts.length >= 60}
+            onClick={() =>
+              setDrafts((current) => [
+                ...current,
+                {
+                  ...newTeachingBlock(availableCases[0]?.id ?? ""),
+                  type: "presentation-slide",
+                  title: "Learning objectives",
+                  body: "Introduce the aims of this workbook before the learner opens the imaging viewer.",
+                },
+              ])
+            }
+          >
+            ＋ Add introduction slide
+          </button>
+          <button
+            type="button"
+            disabled={!availableCases.length || drafts.length >= 60}
+            onClick={() =>
+              setDrafts((current) => [
+                ...current,
+                newTeachingBlock(availableCases[0]?.id ?? ""),
+              ])
+            }
+          >
+            ＋ Add content block
+          </button>
+        </span>
       </div>
       {!drafts.length && (
         <p className="content-composer-empty">
@@ -5939,7 +6143,9 @@ function TeachingContentComposer({
           return (
             <article className="content-composer-item" key={draft.id}>
               <header>
-                <strong>Block {index + 1}</strong>
+                <strong>
+                  {draft.type === "presentation-slide" ? "Introduction slide" : "Block"} {index + 1}
+                </strong>
                 <span>
                   <button
                     type="button"
@@ -5977,7 +6183,7 @@ function TeachingContentComposer({
               </header>
               <div className="content-composer-fields">
                 <label>
-                  Linked case
+                  {draft.type === "presentation-slide" ? "Workbook case anchor" : "Linked case"}
                   <select
                     value={draft.caseId}
                     onChange={(event) =>
@@ -6012,6 +6218,7 @@ function TeachingContentComposer({
                     <option value="reading-link">Approved reading link</option>
                     <option value="case-image">Case image callout</option>
                     <option value="scene">Saved viewer scene cue</option>
+                    <option value="presentation-slide">Introduction slide</option>
                   </select>
                 </label>
               </div>
@@ -6021,7 +6228,11 @@ function TeachingContentComposer({
                   maxLength={160}
                   value={draft.title}
                   onChange={(event) => update(draft.id, { title: event.target.value })}
-                  placeholder="What the learner should notice"
+                  placeholder={
+                    draft.type === "presentation-slide"
+                      ? "Slide title"
+                      : "What the learner should notice"
+                  }
                 />
               </label>
               <label>
@@ -6054,8 +6265,12 @@ function TeachingContentComposer({
                   Re-select the linked case or remove this block.
                 </p>
               )}
-              <div className="content-block-preview">
-                <small>Learner preview</small>
+              <div className={`content-block-preview ${draft.type}`}>
+                <small>
+                  {draft.type === "presentation-slide"
+                    ? "Pre-imaging slide preview"
+                    : "Learner preview"}
+                </small>
                 <strong>{draft.title || "Block heading"}</strong>
                 {draft.type === "key-points" ? (
                   <ul>
@@ -6215,6 +6430,10 @@ function WorkbookBuilder({
   const [teachingDesignOpen, setTeachingDesignOpen] = useState(
     focusedWorkbook?.mode === "teaching",
   );
+  const [caseQuery, setCaseQuery] = useState("");
+  const [caseFilter, setCaseFilter] = useState<"all" | "radiology" | "pathology" | "mixed">("all");
+  const [introductionPreviewOpen, setIntroductionPreviewOpen] = useState(false);
+  const [introductionPreviewIndex, setIntroductionPreviewIndex] = useState(0);
   const [editingWorkbookId, setEditingWorkbookId] = useState(
     focusedEditable ? focusWorkbookId : "",
   );
@@ -6274,12 +6493,30 @@ function WorkbookBuilder({
         ? [
             {
               ...newTeachingBlock(firstCaseId),
+              type: "presentation-slide",
+              title: "Case conference briefing",
+              body: "Review the learning aims and discussion format before opening the cases.\n\nYou will first inspect each case independently, then compare observations with the group.",
+            },
+            {
+              ...newTeachingBlock(firstCaseId),
               type: "text",
               title: "Discussion prompt",
               body: "Review the case independently, then record the key observation for group discussion.",
             },
           ]
         : [
+            {
+              ...newTeachingBlock(firstCaseId),
+              type: "presentation-slide",
+              title: "Welcome to this workbook",
+              body: "This short introduction explains the learning aims and how to approach the imaging cases.",
+            },
+            {
+              ...newTeachingBlock(firstCaseId),
+              type: "presentation-slide",
+              title: "Learning objectives",
+              body: "Use a systematic review sequence.\n\nDescribe the key educational finding.\n\nRelate the finding to the teaching explanation.",
+            },
             {
               ...newTeachingBlock(firstCaseId),
               type: "key-points",
@@ -6425,6 +6662,33 @@ function WorkbookBuilder({
     }
     return !block.url;
   });
+  const introductionDrafts = teachingBlocks.filter(
+    (block) => block.type === "presentation-slide",
+  );
+  const normalizedCaseQuery = caseQuery.trim().toLocaleLowerCase();
+  const filteredCases = data.cases.filter((item) => {
+    if (caseFilter !== "all" && item.classification !== caseFilter) return false;
+    if (!normalizedCaseQuery) return true;
+    return [item.title, item.description, item.classification]
+      .some((value) => value.toLocaleLowerCase().includes(normalizedCaseQuery));
+  });
+  const assessmentQuestionsValid = !editingWorkbookId || !questionDrafts
+    .filter((question) => selectedCases.includes(question.caseId))
+    .some((question) => !question.prompt.trim());
+  const reviewReadinessChecks = [
+    { label: "Workbook title added", ready: Boolean(title.trim()) },
+    { label: "At least one published case selected", ready: selected.length > 0 },
+    ...(mode === "teaching"
+      ? [
+          { label: "Teaching blocks and slides are complete", ready: teachingBlocksValid },
+          { label: "Poll choices and answers are complete", ready: pollsValid },
+        ]
+      : [
+          { label: "Assessment question prompts are complete", ready: assessmentQuestionsValid },
+          { label: "Time limit is within 10–480 minutes", ready: duration >= 10 && duration <= 480 },
+        ]),
+  ];
+  const reviewReady = reviewReadinessChecks.every((check) => check.ready);
   if (focusWorkbookId && focusedWorkbook && !focusedEditable) {
     const awaitingIndependentReviewer =
       focusedWorkbook.status === "in-review" &&
@@ -6504,6 +6768,18 @@ function WorkbookBuilder({
   }
   return (
     <section className="management-page builder-page">
+      {introductionPreviewOpen && introductionDrafts.length > 0 && (
+        <WorkbookIntroduction
+          slides={introductionDrafts}
+          courseTitle="Studio learner preview"
+          workbookTitle={title || "Untitled teaching workbook"}
+          activeIndex={introductionPreviewIndex}
+          onIndex={setIntroductionPreviewIndex}
+          onComplete={() => setIntroductionPreviewOpen(false)}
+          preview
+          onClose={() => setIntroductionPreviewOpen(false)}
+        />
+      )}
       <div className="page-heading">
         <span>
           <small>Education authoring</small>
@@ -6569,6 +6845,16 @@ function WorkbookBuilder({
             : <button type="button" onClick={resetEditor}>Cancel editing</button>}
         </div>
       )}
+      {editingWorkbook?.status === "changes-requested" && editingWorkbook.latestReviewComment && (
+        <div className="changes-requested-banner" role="alert">
+          <span>
+            <small>Peer review action required</small>
+            <strong>Changes requested by {editingWorkbook.latestReviewerName || "the reviewer"}</strong>
+            <p>{editingWorkbook.latestReviewComment}</p>
+          </span>
+          <span className="status-pill amber">Address before resubmission</span>
+        </div>
+      )}
       <section className="management-card workbook-template-bar">
         <span>
           <small>Fast start</small>
@@ -6596,13 +6882,25 @@ function WorkbookBuilder({
               <strong>Case-linked notes, explanations & live polls</strong>
             </span>
             <span className="status-pill">
-              {teachingBlocks.length} blocks · {pollDrafts.length} polls
+              {introductionDrafts.length} slides · {teachingBlocks.length - introductionDrafts.length} blocks · {pollDrafts.length} polls
             </span>
           </summary>
-          <p className="teaching-design-guidance">
-            Select the workbook cases below, then add only the learning content
-            needed beside the viewer.
-          </p>
+          <div className="teaching-design-guidance">
+            <p>
+              Add an optional pre-imaging slide deck, then only the case-linked
+              learning content needed beside the viewer.
+            </p>
+            <button
+              type="button"
+              disabled={!introductionDrafts.length}
+              onClick={() => {
+                setIntroductionPreviewIndex(0);
+                setIntroductionPreviewOpen(true);
+              }}
+            >
+              Preview learner introduction
+            </button>
+          </div>
           <TeachingContentComposer
             cases={data.cases}
             selectedCaseIds={selectedCases}
@@ -6708,10 +7006,10 @@ function WorkbookBuilder({
               <strong>{mode === "assessment" ? totalMarks : noteCount}</strong>
             </span>
             <span>
-              <small>{mode === "teaching" ? "Blocks / polls" : "Displays"}</small>
+              <small>{mode === "teaching" ? "Slides / blocks / polls" : "Displays"}</small>
               <strong>
                 {mode === "teaching"
-                  ? <>{teachingBlocks.length} / {pollDrafts.length}</>
+                  ? <>{introductionDrafts.length} / {teachingBlocks.length - introductionDrafts.length} / {pollDrafts.length}</>
                   : dualDisplayAllowed
                     ? "1 / 2"
                     : "1"}
@@ -6727,8 +7025,34 @@ function WorkbookBuilder({
             </span>
             <span className="status-pill">Published library</span>
           </div>
+          <div className="case-picker-tools">
+            <label>
+              <span className="sr-only">Search published cases</span>
+              <input
+                type="search"
+                value={caseQuery}
+                onChange={(event) => setCaseQuery(event.target.value)}
+                placeholder="Search cases"
+              />
+            </label>
+            <label>
+              <span className="sr-only">Filter cases by content type</span>
+              <select
+                value={caseFilter}
+                onChange={(event) =>
+                  setCaseFilter(event.target.value as typeof caseFilter)
+                }
+              >
+                <option value="all">All content</option>
+                <option value="radiology">Radiology</option>
+                <option value="pathology">Pathology</option>
+                <option value="mixed">Mixed</option>
+              </select>
+            </label>
+            <small>{filteredCases.length} of {data.cases.length} shown</small>
+          </div>
           <div className="picker-list">
-            {data.cases.map((item, index) => (
+            {filteredCases.map((item) => (
               <div
                 key={item.id}
                 className={`case-picker-row${selectedCases.includes(item.id) ? " selected" : ""}`}
@@ -6748,7 +7072,7 @@ function WorkbookBuilder({
                   </span>
                   <span className="case-picker-details">
                     <strong>
-                      {index + 1}. {item.title}
+                      {item.position}. {item.title}
                     </strong>
                     <small>
                       {mode === "assessment"
@@ -6774,6 +7098,11 @@ function WorkbookBuilder({
                 </span>
               </div>
             ))}
+            {!filteredCases.length && (
+              <p className="case-picker-empty">
+                No published cases match this search. Clear the search or choose a different content type.
+              </p>
+            )}
           </div>
           {mode === "assessment" && editingWorkbookId && (
             <details className="draft-question-editor" open>
@@ -6824,7 +7153,7 @@ function WorkbookBuilder({
               {selected.length} cases ·{" "}
               {mode === "assessment"
                 ? `${duration} minutes · ${totalMarks} marks`
-                : <>{noteCount} linked notes · {teachingBlocks.length} content blocks · {pollDrafts.length} live polls</>}{" "}
+                : <>{noteCount} linked notes · {introductionDrafts.length} introduction slides · {teachingBlocks.length - introductionDrafts.length} case blocks · {pollDrafts.length} live polls</>}{" "}
               · {dualDisplayAllowed ? "one/two displays" : "one display"}
             </p>
             <ol>
@@ -6836,6 +7165,23 @@ function WorkbookBuilder({
               ))}
             </ol>
           </div>
+          <section className={`review-readiness ${reviewReady ? "ready" : "attention"}`} aria-label="Authoring readiness">
+            <header>
+              <strong>{reviewReady ? "Ready to save" : "Authoring checks"}</strong>
+              <span>{reviewReadinessChecks.filter((check) => check.ready).length} / {reviewReadinessChecks.length}</span>
+            </header>
+            <ul>
+              {reviewReadinessChecks.map((check) => (
+                <li className={check.ready ? "complete" : "incomplete"} key={check.label}>
+                  <span aria-hidden="true">{check.ready ? "✓" : "○"}</span>
+                  {check.label}
+                </li>
+              ))}
+            </ul>
+            <small>
+              Peer review remains a separate step after this draft is saved.
+            </small>
+          </section>
           <div className="version-note">
             <strong>Versioning rule</strong>
             <p>
@@ -6848,12 +7194,7 @@ function WorkbookBuilder({
             className="primary-button"
             disabled={
               busy ||
-              !title.trim() ||
-              selected.length === 0 ||
-              (mode === "teaching" && (!pollsValid || !teachingBlocksValid)) ||
-              (mode === "assessment" && Boolean(editingWorkbookId) && questionDrafts
-                .filter((question) => selectedCases.includes(question.caseId))
-                .some((question) => !question.prompt.trim()))
+              !reviewReady
             }
             onClick={() =>
               void postAction(
