@@ -62,6 +62,12 @@ type WorkspaceView =
   | "marking"
   | "insights"
   | "audit";
+type EducationRuntimeProps = {
+  workbookId?: string;
+  initialView?: WorkspaceView;
+  accessMode?: "delivery" | "authoring";
+  returnTo?: string;
+};
 type ActionPayload = Record<string, string | number | boolean | object | null>;
 type PendingAnswerDraft = {
   workbookId: string;
@@ -421,10 +427,19 @@ function seriesFor(
   ];
 }
 
-export function EducationRuntime({ workbookId: requestedWorkbookId = "", initialView }: { workbookId?: string; initialView?: WorkspaceView } = {}) {
+export function EducationRuntime({
+  workbookId: requestedWorkbookId = "",
+  initialView,
+  accessMode = "delivery",
+  returnTo = "",
+}: EducationRuntimeProps = {}) {
   const [data, setData] = useState<AppSnapshot | null>(null);
   const [view, setView] = useState<WorkspaceView>(
-    () => initialView ?? initialWorkspaceView(),
+    () => {
+      if (accessMode === "authoring") return "authoring";
+      const requested = initialView ?? initialWorkspaceView();
+      return requested === "authoring" ? "home" : requested;
+    },
   );
   const [previewRole, setPreviewRole] = useState<"full" | "learner" | "instructor" | "examiner" | "administrator">("full");
   const staffMenuRef = useRef<HTMLDetailsElement>(null);
@@ -598,8 +613,11 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
   async function refresh() {
     try {
       const workbookId = requestedWorkbookId || initialWorkbookId();
+      const endpoint = accessMode === "authoring"
+        ? `/api/studio/workbooks/${encodeURIComponent(workbookId)}/builder`
+        : `/api/app${workbookId ? `?workbookId=${encodeURIComponent(workbookId)}` : ""}`;
       const response = await fetch(
-        `/api/app${workbookId ? `?workbookId=${encodeURIComponent(workbookId)}` : ""}`,
+        endpoint,
         { cache: "no-store" },
       );
       const body = (await response.json()) as AppSnapshot & { error?: string };
@@ -1352,7 +1370,10 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
     setBusy(true);
     setError("");
     try {
-      const response = await fetch("/api/app", {
+      const endpoint = accessMode === "authoring"
+        ? `/api/studio/workbooks/${encodeURIComponent(requestedWorkbookId)}/builder`
+        : "/api/app";
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -2415,7 +2436,8 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
       <main className={`loading-screen ${accessibilityClasses}`}>
         <VisibleMedicineBrandLockup tone={accessibility.colourMode} />
         <p role={error ? "alert" : "status"}>{error || "Preparing your secure education workspace…"}</p>
-        {error && <div className="loading-actions"><button onClick={() => void refresh()}>Try again</button><Link href="/courses">Browse courses</Link><Link href="/workspace">Return to workspace</Link></div>}
+        {error && accessMode === "authoring" && <div className="loading-actions"><button onClick={() => void refresh()}>Try again</button><Link href={returnTo || "/studio/workbooks"}>Return to workbook</Link><Link href="/studio/workspace">Return to Studio</Link></div>}
+        {error && accessMode !== "authoring" && <div className="loading-actions"><button onClick={() => void refresh()}>Try again</button><Link href="/courses">Browse courses</Link><Link href="/workspace">Return to workspace</Link></div>}
       </main>
     );
 
@@ -2436,6 +2458,8 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
     ? data
     : { ...data, currentUser: { ...data.currentUser, roles: uiRoles } };
   const availableViews = VIEW_LABELS.filter((item) => {
+    if (accessMode === "authoring") return item.id === "authoring";
+    if (item.id === "authoring") return false;
     if (
       item.role &&
       !item.role.some((role) => uiRoles.includes(role))
@@ -2447,10 +2471,10 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
     return true;
   });
   const primaryViews = availableViews.filter((item) =>
-    ["home", "teaching", "exam", "review"].includes(item.id),
+    accessMode === "authoring" || ["home", "teaching", "exam", "review"].includes(item.id),
   );
   const staffViews = availableViews.filter(
-    (item) => !["home", "teaching", "exam", "review"].includes(item.id),
+    (item) => accessMode !== "authoring" && !["home", "teaching", "exam", "review"].includes(item.id),
   );
   const staffGroups = (["Authoring", "Live teaching", "Assessment", "Governance"] as const)
     .map((group) => ({ group, items: staffViews.filter((item) => item.group === group) }))
@@ -2596,7 +2620,7 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
         </div>
       )}
       <header className="app-header">
-        <Link className="runtime-platform-return" href={view === "authoring" ? "/studio/workspace" : "/my-learning"} aria-label={view === "authoring" ? "Return to Visible Medicine Studio" : "Return to My Learning"}>
+        <Link className="runtime-platform-return" href={accessMode === "authoring" ? returnTo || "/studio/workspace" : view === "authoring" ? "/studio/workspace" : "/my-learning"} aria-label={accessMode === "authoring" || view === "authoring" ? "Return to Visible Medicine Studio" : "Return to My Learning"}>
           <VisibleMedicineBrandLockup tone={accessibility.colourMode} />
         </Link>
         <div className="mode-switch" aria-label="Education workspace mode">
@@ -2658,7 +2682,7 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
         </div>
         <div className="header-actions">
           <Link className="runtime-atlas-link" href="/atlas/ct-head">Atlas reference</Link>
-          {data.currentUser.previewAvailable && (
+          {data.currentUser.previewAvailable && accessMode !== "authoring" && (
             <label className="role-preview-control">
               <span>Local preview</span>
               <select
@@ -2685,7 +2709,7 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
             Accessibility
           </button>
           <span className="version-chip">
-            {data.course.workbookMode === "assessment" ? "Assessment" : "Teaching"} v
+            {accessMode === "authoring" ? "Studio" : data.course.workbookMode === "assessment" ? "Assessment" : "Teaching"} v
             {data.course.workbookVersion}
           </span>
           <span className="identity-chip">
@@ -3960,7 +3984,14 @@ export function EducationRuntime({ workbookId: requestedWorkbookId = "", initial
       )}
       {view === "integrations" && <IntegrationWorkspace />}
       {view === "authoring" && (
-        <WorkbookBuilder data={presentedData} busy={busy} postAction={postAction} />
+        <WorkbookBuilder
+          key={`${requestedWorkbookId}:${data.course.workbookVersion}:${data.workbooks.find((workbook) => workbook.id === requestedWorkbookId)?.status ?? ""}`}
+          data={presentedData}
+          busy={busy}
+          postAction={postAction}
+          focusWorkbookId={accessMode === "authoring" ? requestedWorkbookId : ""}
+          returnTo={returnTo}
+        />
       )}
       {view === "question-bank" && <QuestionBankWorkspace />}
       {view === "session-dashboard" && (
@@ -6121,6 +6152,8 @@ function WorkbookBuilder({
   data,
   busy,
   postAction,
+  focusWorkbookId = "",
+  returnTo = "",
 }: {
   data: AppSnapshot;
   busy: boolean;
@@ -6128,22 +6161,74 @@ function WorkbookBuilder({
     payload: ActionPayload,
     message: string,
   ) => Promise<AppSnapshot | null>;
+  focusWorkbookId?: string;
+  returnTo?: string;
 }) {
-  const [mode, setMode] = useState<"teaching" | "assessment">("teaching");
-  const [templateId, setTemplateId] = useState("guided-teaching");
-  const [title, setTitle] = useState("");
-  const [duration, setDuration] = useState(60);
-  const [dualDisplayAllowed, setDualDisplayAllowed] = useState(true);
-  const [selectedCases, setSelectedCases] = useState<string[]>(
-    data.cases.map((item) => item.id),
+  const focusedWorkbook = focusWorkbookId
+    ? data.workbooks.find((workbook) => workbook.id === focusWorkbookId)
+    : undefined;
+  const focusedEditable = Boolean(
+    focusedWorkbook && ["draft", "changes-requested"].includes(focusedWorkbook.status),
   );
-  const [pollDrafts, setPollDrafts] = useState<PollAuthoringDraft[]>([]);
+  const focusedDetail = focusedWorkbook
+    ? data.draftWorkbookDetails.find((item) => item.workbookId === focusedWorkbook.id)
+    : undefined;
+  const focusedQuestionOverrides = new Map(
+    (focusedDetail?.questionEdits ?? []).map((item) => [item.questionId, item.prompt]),
+  );
+  const [mode, setMode] = useState<"teaching" | "assessment">(
+    focusedWorkbook?.mode === "assessment" ? "assessment" : "teaching",
+  );
+  const [templateId, setTemplateId] = useState("guided-teaching");
+  const [title, setTitle] = useState(focusedWorkbook?.title ?? "");
+  const [duration, setDuration] = useState(focusedWorkbook?.durationMinutes || 60);
+  const [dualDisplayAllowed, setDualDisplayAllowed] = useState(
+    focusedWorkbook?.dualDisplayAllowed ?? true,
+  );
+  const [selectedCases, setSelectedCases] = useState<string[]>(
+    focusedWorkbook ? focusedWorkbook.caseIds : data.cases.map((item) => item.id),
+  );
+  const [pollDrafts, setPollDrafts] = useState<PollAuthoringDraft[]>(
+    () => (focusedDetail?.polls ?? []).map((poll) => ({
+      id: poll.id,
+      caseId: poll.caseId,
+      prompt: poll.prompt,
+      selectionMode: poll.selectionMode,
+      options: poll.options.map((option) => ({
+        id: option.id,
+        label: option.label,
+        correct: poll.correctOptionIds.includes(option.id),
+      })),
+      explanation: poll.explanation,
+    })),
+  );
   const [teachingBlocks, setTeachingBlocks] = useState<
     TeachingBlockAuthoringDraft[]
-  >([]);
-  const [teachingDesignOpen, setTeachingDesignOpen] = useState(false);
-  const [editingWorkbookId, setEditingWorkbookId] = useState("");
-  const [questionDrafts, setQuestionDrafts] = useState<QuestionAuthoringDraft[]>([]);
+  >(() => (focusedDetail?.teachingBlocks ?? []).map((block) => ({
+    id: block.id,
+    caseId: block.caseId,
+    type: block.type,
+    title: block.title,
+    body: block.body,
+    url: block.url,
+  })));
+  const [teachingDesignOpen, setTeachingDesignOpen] = useState(
+    focusedWorkbook?.mode === "teaching",
+  );
+  const [editingWorkbookId, setEditingWorkbookId] = useState(
+    focusedEditable ? focusWorkbookId : "",
+  );
+  const [questionDrafts, setQuestionDrafts] = useState<QuestionAuthoringDraft[]>(
+    () => focusedWorkbook
+      ? data.cases
+          .filter((educationCase) => focusedWorkbook.caseIds.includes(educationCase.id))
+          .flatMap((educationCase) => educationCase.questions.map((question) => ({
+            questionId: question.id,
+            caseId: educationCase.id,
+            prompt: focusedQuestionOverrides.get(question.id) ?? question.prompt,
+          })))
+      : [],
+  );
   const publishedWorkbooks = data.workbooks.filter(
     (workbook) => workbook.status === "published",
   );
@@ -6340,6 +6425,83 @@ function WorkbookBuilder({
     }
     return !block.url;
   });
+  if (focusWorkbookId && focusedWorkbook && !focusedEditable) {
+    const awaitingIndependentReviewer =
+      focusedWorkbook.status === "in-review" &&
+      focusedWorkbook.authorId !== data.currentUser.id;
+    return (
+      <section className="management-page builder-page">
+        <div className="page-heading">
+          <span>
+            <small>Focused Studio authoring</small>
+            <h1>{focusedWorkbook.title}</h1>
+            <p>
+              This governed workbook state is read-only. Draft content remains
+              protected while review and publication decisions are recorded.
+            </p>
+          </span>
+          <div className="boundary-badge">
+            <strong>{statusLabel(focusedWorkbook.status)}</strong>
+            <small>Version {focusedWorkbook.version} · {focusedWorkbook.caseIds.length} cases</small>
+          </div>
+        </div>
+        <section className="management-card existing-workbooks">
+          <div className="card-heading">
+            <span>
+              <small>Governed workflow</small>
+              <h2>Current workbook state</h2>
+            </span>
+            <span className={`status-pill ${focusedWorkbook.status === "published" || focusedWorkbook.status === "approved" ? "green" : "amber"}`}>
+              {statusLabel(focusedWorkbook.status)}
+            </span>
+          </div>
+          <WorkbookStatusTimeline workbook={focusedWorkbook} />
+          {focusedWorkbook.latestReviewComment && (
+            <div className="version-note">
+              <strong>Latest peer review · {focusedWorkbook.latestReviewerName}</strong>
+              <p>{focusedWorkbook.latestReviewComment}</p>
+            </div>
+          )}
+          <div className="workbook-row-actions">
+            {focusedWorkbook.status === "in-review" && (
+              <>
+                <button
+                  disabled={busy || !awaitingIndependentReviewer}
+                  title={awaitingIndependentReviewer ? "Approve after independent review" : "A different education user must complete peer review"}
+                  onClick={() => {
+                    const comment = window.prompt("Record the approval rationale:");
+                    if (comment?.trim())
+                      void postAction({ action: "review-workbook", id: focusedWorkbook.id, decision: "approved", comment }, "Peer review approved and preserved");
+                  }}
+                >Approve</button>
+                <button
+                  disabled={busy || !awaitingIndependentReviewer}
+                  onClick={() => {
+                    const comment = window.prompt("Describe the changes required:");
+                    if (comment?.trim())
+                      void postAction({ action: "review-workbook", id: focusedWorkbook.id, decision: "changes-requested", comment }, "Peer review requested changes");
+                  }}
+                >Request changes</button>
+              </>
+            )}
+            {focusedWorkbook.status === "approved" && (
+              <button
+                className="primary-button"
+                disabled={busy}
+                onClick={() => {
+                  if (window.confirm("Publish this peer-approved immutable workbook version?"))
+                    void postAction({ action: "publish-workbook", id: focusedWorkbook.id }, "Workbook version published with integrity receipt");
+                }}
+              >Publish v{focusedWorkbook.version}</button>
+            )}
+            <Link className="outline-button" href={returnTo || `/studio/workbooks/${encodeURIComponent(focusedWorkbook.id)}`}>
+              Return to workbook
+            </Link>
+          </div>
+        </section>
+      </section>
+    );
+  }
   return (
     <section className="management-page builder-page">
       <div className="page-heading">
@@ -6402,7 +6564,9 @@ function WorkbookBuilder({
               Saving creates the next governed draft revision. Published versions remain unchanged.
             </small>
           </span>
-          <button type="button" onClick={resetEditor}>Cancel editing</button>
+          {focusWorkbookId
+            ? <Link href={returnTo || `/studio/workbooks/${encodeURIComponent(editingWorkbookId)}`}>Return to workbook</Link>
+            : <button type="button" onClick={resetEditor}>Cancel editing</button>}
         </div>
       )}
       <section className="management-card workbook-template-bar">
@@ -6744,7 +6908,7 @@ function WorkbookBuilder({
                   ? "Workbook draft revision saved"
                   : `${mode === "assessment" ? "Exam" : "Teaching"} workbook draft created`,
               ).then((updated) => {
-                if (updated) {
+                if (updated && !focusWorkbookId) {
                   resetEditor();
                 }
               })
@@ -6773,7 +6937,7 @@ function WorkbookBuilder({
             <span>Status</span>
             <span>Action</span>
           </div>
-          {data.workbooks.map((workbook) => (
+          {data.workbooks.filter((workbook) => !focusWorkbookId || workbook.id === focusWorkbookId).map((workbook) => (
             <div className="table-row" key={workbook.id}>
               <span>
                 <strong>{workbook.title}</strong>
@@ -6816,7 +6980,7 @@ function WorkbookBuilder({
                             void postAction({ action: "request-workbook-review", id: workbook.id }, "Workbook sent for independent peer review");
                         }}
                       >Request review</button>
-                      {workbook.status === "draft" && (
+                      {workbook.status === "draft" && !focusWorkbookId && (
                         <button
                           className="danger-button"
                           disabled={busy}
@@ -6856,7 +7020,7 @@ function WorkbookBuilder({
                   ) : (
                     <code>{shortHash(workbook.integrityHash)}</code>
                   )}
-                  {workbook.status === "published" && (
+                  {workbook.status === "published" && !focusWorkbookId && (
                     <>
                       {workbook.mode === "assessment" &&
                         data.currentUser.roles.includes("administrator") &&
@@ -6904,7 +7068,7 @@ function WorkbookBuilder({
                     </>
                   )}
                   {workbook.latestReviewDecision && <small title={workbook.latestReviewComment ?? ""}>Review: {statusLabel(workbook.latestReviewDecision)} · {workbook.latestReviewerName}</small>}
-                  <button
+                  {!focusWorkbookId && <button
                     disabled={busy}
                     onClick={() =>
                       void postAction(
@@ -6914,8 +7078,8 @@ function WorkbookBuilder({
                     }
                   >
                     Clone
-                  </button>
-                  {workbook.mode === "teaching" && (
+                  </button>}
+                  {workbook.mode === "teaching" && !focusWorkbookId && (
                     <button
                       disabled={busy}
                       title="Copies cases only; teaching notes, poll answers and model material are excluded"
@@ -6944,7 +7108,7 @@ function WorkbookBuilder({
           ))}
         </div>
       </section>
-      {canManageAssignments && (
+      {canManageAssignments && !focusWorkbookId && (
         <details className="access-governance-disclosure">
         <summary>
           <span>

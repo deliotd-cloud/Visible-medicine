@@ -1,5 +1,5 @@
 import { getAuthContext } from "@/lib/auth";
-import { addAnnotation, addCohortMember, addKeyImage, approveAccommodation, assignCohortWorkbook, assignWorkbook, cloneWorkbook, convertTeachingWorkbookToExam, createAssessmentRecoveryDraft, createCohort, createIngestion, createWorkbook, deleteWorkbookDraft, DomainError, finalizeTimedAttempt, getAppSnapshot, moderateMark, publishWorkbook, recordDisplayLaunch, recordExamPreflight, recordWorkbookProgress, releaseResult, removeCohortMember, requestAccommodation, requestWorkbookReview, retirePublishedWorkbook, revokeAccommodation, revokeCohortWorkbookAssignment, revokeWorkbookAssignment, reviewIngestion, reviewWorkbook, saveAnswer, saveMark, setCaseFlag, submitAttempt, updateWorkbookDraft } from "@/lib/repository";
+import { addAnnotation, addCohortMember, addKeyImage, approveAccommodation, assignCohortWorkbook, assignWorkbook, createCohort, createIngestion, DomainError, finalizeTimedAttempt, getAppSnapshot, moderateMark, recordDisplayLaunch, recordExamPreflight, recordWorkbookProgress, releaseResult, removeCohortMember, requestAccommodation, revokeAccommodation, revokeCohortWorkbookAssignment, revokeWorkbookAssignment, reviewIngestion, saveAnswer, saveMark, setCaseFlag, submitAttempt } from "@/lib/repository";
 
 export const dynamic = "force-dynamic";
 
@@ -38,16 +38,8 @@ export async function POST(request: Request) {
     else if (action === "finalize-timed-attempt") await finalizeTimedAttempt(auth, body);
     else if (action === "create-ingestion") await createIngestion(auth, body as Record<string, string | number | null>);
     else if (action === "review-ingestion") await reviewIngestion(auth, body as Record<string, string | number | null>);
-    else if (action === "create-workbook") await createWorkbook(auth, body);
-    else if (action === "update-workbook-draft") await updateWorkbookDraft(auth, body);
-    else if (action === "clone-workbook") await cloneWorkbook(auth, body);
-    else if (action === "create-assessment-recovery-draft") await createAssessmentRecoveryDraft(auth, body);
-    else if (action === "convert-teaching-to-exam") await convertTeachingWorkbookToExam(auth, body);
-    else if (action === "publish-workbook") await publishWorkbook(auth, body);
-    else if (action === "request-workbook-review") await requestWorkbookReview(auth, body);
-    else if (action === "review-workbook") await reviewWorkbook(auth, body);
-    else if (action === "delete-workbook-draft") await deleteWorkbookDraft(auth, body);
-    else if (action === "retire-published-workbook") await retirePublishedWorkbook(auth, body);
+    else if (["create-workbook", "update-workbook-draft", "clone-workbook", "create-assessment-recovery-draft", "convert-teaching-to-exam", "publish-workbook", "request-workbook-review", "review-workbook", "delete-workbook-draft", "retire-published-workbook"].includes(action))
+      throw new DomainError("Workbook authoring actions must be completed inside the institution-scoped Studio builder.", 409);
     else if (action === "assign-workbook") await assignWorkbook(auth, body);
     else if (action === "revoke-workbook-assignment") await revokeWorkbookAssignment(auth, body);
     else if (action === "create-cohort") await createCohort(auth, body);
@@ -65,9 +57,7 @@ export async function POST(request: Request) {
     else if (action === "moderate-mark") await moderateMark(auth, body as Record<string, string | number | null>);
     else if (action === "release-result") await releaseResult(auth, body as Record<string, string | number | null>);
     else throw new DomainError("Unknown education action.", 404);
-    const selectedWorkbookId = action === "retire-published-workbook" && body.id === body.selectedWorkbookId
-      ? undefined
-      : typeof body.selectedWorkbookId === "string" ? body.selectedWorkbookId : undefined;
+    const selectedWorkbookId = typeof body.selectedWorkbookId === "string" ? body.selectedWorkbookId : undefined;
     return Response.json(await getAppSnapshot(auth, selectedWorkbookId), { headers: { "Cache-Control": "no-store" } });
   } catch (error) { return errorResponse(error); }
 }

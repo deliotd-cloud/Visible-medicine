@@ -2,6 +2,7 @@ import { env } from "cloudflare:workers";
 import type { AuthContext } from "@/lib/auth";
 import { hasRole } from "@/lib/auth";
 import { appendAudit, ensureEducationUser } from "@/db/bootstrap";
+import { ensurePlatformSchema, getPlatformSnapshot } from "@/db/platform";
 import { canTransitionAttempt, classifyTeachingContent, outcomeFor, safeText, sha256, type ContentSignal } from "@/lib/domain";
 import { educationGeometryForCase, educationWsiIdentifiersForCase, type ImagePlane } from "@/lib/education-viewer-adapter";
 import { validatePollDraft } from "@/lib/teaching-polls";
@@ -10,6 +11,7 @@ import { canAccessPublishedWorkbook } from "@/lib/workbook-access";
 import { validateAssignmentWindow } from "@/lib/assignment-policy";
 import { decideAttemptWrite } from "@/lib/attempt-policy";
 import { educationSnapshotPermissions } from "@/lib/education-role-projections";
+import { decideWorkbookAuthoringAccess } from "@/lib/workbook-authoring-policy";
 import { groupEducationCaseQuestions } from "@/lib/education-case-grouping";
 import {
   AssessmentVersionIntegrityError,
@@ -325,7 +327,7 @@ export async function getAppSnapshot(auth: AuthContext, requestedWorkbookId?: st
 
   const empty = Promise.resolve({ results: [] } as unknown as D1Result<Row>);
   const workbookPromise = staff
-    ? env.DB.prepare(`SELECT w.id, w.title, w.mode, w.version, w.status, w.duration_minutes, w.dual_display_allowed, GROUP_CONCAT(wc.case_id) AS case_ids, av.integrity_hash, av.published_at, wa.author_id, (SELECT wr.decision FROM workbook_reviews wr WHERE wr.workbook_id = w.id ORDER BY wr.revision DESC LIMIT 1) AS latest_review_decision, (SELECT wr.comment FROM workbook_reviews wr WHERE wr.workbook_id = w.id ORDER BY wr.revision DESC LIMIT 1) AS latest_review_comment, (SELECT u.display_name FROM workbook_reviews wr JOIN users u ON u.id = wr.reviewer_id WHERE wr.workbook_id = w.id ORDER BY wr.revision DESC LIMIT 1) AS latest_reviewer_name FROM workbooks w LEFT JOIN workbook_cases wc ON wc.workbook_id = w.id LEFT JOIN assessment_versions av ON av.workbook_id = w.id AND av.version = w.version LEFT JOIN workbook_authorship wa ON wa.workbook_id = w.id GROUP BY w.id ORDER BY w.rowid DESC`).all<Row>()
+    ? env.DB.prepare(`SELECT w.id, w.title, w.mode, w.version, w.status, w.duration_minutes, w.dual_display_allowed, GROUP_CONCAT(wc.case_id) AS case_ids, av.integrity_hash, av.published_at, wa.author_id, (SELECT wr.decision FROM workbook_reviews wr WHERE wr.workbook_id = w.id ORDER BY wr.revision DESC LIMIT 1) AS latest_review_decision, (SELECT wr.comment FROM workbook_reviews wr WHERE wr.workbook_id = w.id ORDER BY wr.revision DESC LIMIT 1) AS latest_review_comment, (SELECT u.display_name FROM workbook_reviews wr JOIN users u ON u.id = wr.reviewer_id WHERE wr.workbook_id = w.id ORDER BY wr.revision DESC LIMIT 1) AS latest_reviewer_name FROM workbooks w LEFT JOIN workbook_cases wc ON wc.workbook_id = w.id LEFT JOIN assessment_versions av ON av.workbook_id = w.id AND av.version = w.version LEFT JOIN workbook_authorship wa ON wa.workbook_id = w.id WHERE w.status = 'published' GROUP BY w.id ORDER BY w.rowid DESC`).all<Row>()
     : env.DB.prepare(`SELECT w.id, w.title, w.mode, w.version, w.status, w.duration_minutes, w.dual_display_allowed, GROUP_CONCAT(wc.case_id) AS case_ids, av.integrity_hash, av.published_at, NULL AS author_id, NULL AS latest_review_decision, NULL AS latest_review_comment, NULL AS latest_reviewer_name FROM workbooks w LEFT JOIN workbook_cases wc ON wc.workbook_id = w.id LEFT JOIN assessment_versions av ON av.workbook_id = w.id AND av.version = w.version WHERE w.status = 'published' GROUP BY w.id ORDER BY w.title`).all<Row>();
   const [workbookResult, noteResult, contentResult, answerResult, annotationResult, keyImageResult, flagResult, ingestionResult, auditResult, learnerResult, assignmentResult, cohortResult, cohortMemberResult, cohortAssignmentResult, accommodationResult, reviewResult, progressResult, itemAnalysisResult, rubricPerformanceResult, resultRow] = await Promise.all([
     workbookPromise,
@@ -479,6 +481,266 @@ export async function getAppSnapshot(auth: AuthContext, requestedWorkbookId?: st
     markingQueue,
     auditEvents: rows(auditResult).map((item) => ({ sequence: Number(item.sequence), actorId: String(item.actor_id), action: String(item.action), targetType: String(item.target_type), targetId: String(item.target_id), outcome: String(item.outcome), reason: String(item.reason), occurredAt: String(item.occurred_at), integrityHash: String(item.integrity_hash) })),
     result: resultRow ? { score: Number(resultRow.score), maxScore: Number(resultRow.max_score), outcome: String(resultRow.outcome), releasedAt: String(resultRow.released_at) } : null,
+  };
+}
+
+export async function getAuthoringAppSnapshot(
+  auth: AuthContext,
+  requestedWorkbookId: string,
+): Promise<AppSnapshot> {
+  await ensureEducationUser(auth);
+  await ensurePlatformSchema();
+  const roles = await rolesFor(auth.userId);
+  if (!roles.some((role) => ["instructor", "examiner", "administrator"].includes(role)))
+    throw new DomainError("An educator or administrator role is required to open Studio authoring.", 403);
+
+  const platform = await getPlatformSnapshot(auth);
+  if (!platform.entitlement.studioAccess)
+    throw new DomainError("Studio is not enabled for this organization.", 403);
+
+  const workbookId = safeText(requestedWorkbookId, 100);
+  if (!workbookId)
+    throw new DomainError("Choose a Studio workbook to open in the builder.", 422);
+
+  const target = await env.DB.prepare(
+    `SELECT c.id, c.code, c.title, c.description,
+            m.id AS module_id, m.title AS module_title,
+            w.id AS workbook_id, w.title AS workbook_title,
+            w.mode AS workbook_mode, w.version AS workbook_version,
+            w.status AS workbook_status, w.duration_minutes,
+            w.dual_display_allowed, wa.author_id,
+            ownership.organization_id
+       FROM workbooks w
+       JOIN modules m ON m.id = w.module_id
+       JOIN courses c ON c.id = m.course_id
+       JOIN course_ownership ownership ON ownership.course_id = c.id
+       LEFT JOIN workbook_authorship wa ON wa.workbook_id = w.id
+      WHERE w.id = ? AND ownership.organization_id = ?`,
+  ).bind(workbookId, platform.organization.id).first<Row>();
+
+  if (!target)
+    throw new DomainError("This workbook is not available in your Studio workspace.", 404);
+
+  const access = decideWorkbookAuthoringAccess({
+    roles,
+    studioAccess: platform.entitlement.studioAccess,
+    activeOrganizationId: platform.organization.id,
+    ownerOrganizationId: String(target.organization_id),
+    status: String(target.workbook_status),
+  });
+  if (!access.allowed)
+    throw new DomainError("This workbook is not available in your Studio workspace.", 404);
+
+  const courseId = String(target.id);
+  const empty = Promise.resolve({ results: [] } as unknown as D1Result<Row>);
+  const [
+    workbookResult,
+    workbookCaseResult,
+    caseResult,
+    noteResult,
+    publishedContentResult,
+    draftBlockResult,
+    draftPollResult,
+    draftQuestionEditResult,
+    reviewResult,
+    recoveryResult,
+  ] = await Promise.all([
+    env.DB.prepare(
+      `SELECT w.id, w.title, w.mode, w.version, w.status,
+              w.duration_minutes, w.dual_display_allowed,
+              av.integrity_hash, av.published_at, wa.author_id,
+              (SELECT wr.decision FROM workbook_reviews wr WHERE wr.workbook_id = w.id ORDER BY wr.revision DESC LIMIT 1) AS latest_review_decision,
+              (SELECT wr.comment FROM workbook_reviews wr WHERE wr.workbook_id = w.id ORDER BY wr.revision DESC LIMIT 1) AS latest_review_comment,
+              (SELECT u.display_name FROM workbook_reviews wr JOIN users u ON u.id = wr.reviewer_id WHERE wr.workbook_id = w.id ORDER BY wr.revision DESC LIMIT 1) AS latest_reviewer_name
+         FROM workbooks w
+         JOIN modules m ON m.id = w.module_id
+         JOIN course_ownership ownership ON ownership.course_id = m.course_id
+         LEFT JOIN assessment_versions av ON av.workbook_id = w.id AND av.version = w.version
+         LEFT JOIN workbook_authorship wa ON wa.workbook_id = w.id
+        WHERE m.course_id = ? AND ownership.organization_id = ?
+        ORDER BY w.rowid DESC`,
+    ).bind(courseId, platform.organization.id).all<Row>(),
+    env.DB.prepare(
+      `SELECT wc.workbook_id, wc.case_id, wc.position
+         FROM workbook_cases wc
+         JOIN workbooks w ON w.id = wc.workbook_id
+         JOIN modules m ON m.id = w.module_id
+         JOIN course_ownership ownership ON ownership.course_id = m.course_id
+        WHERE m.course_id = ? AND ownership.organization_id = ?
+        ORDER BY wc.workbook_id, wc.position, wc.case_id`,
+    ).bind(courseId, platform.organization.id).all<Row>(),
+    env.DB.prepare(
+      `SELECT c.id, c.title, c.classification, c.status, c.version,
+              c.description, c.visual_kind, c.tools_json, c.publication_hash,
+              c.rowid AS position, q.id AS question_id, q.prompt, q.max_marks
+         FROM cases c
+         JOIN questions q ON q.case_id = c.id
+        WHERE c.status = 'published'
+          AND c.deidentified = 1
+          AND c.publication_cleared = 1
+        ORDER BY c.rowid, q.position, q.id`,
+    ).all<Row>(),
+    env.DB.prepare(
+      `SELECT n.id, n.case_id, n.title, n.body, n.key_points_json, n.reveal_text, n.position
+         FROM teaching_notes n
+         JOIN cases c ON c.id = n.case_id
+        WHERE c.status = 'published' AND c.deidentified = 1 AND c.publication_cleared = 1
+        ORDER BY n.case_id, n.position`,
+    ).all<Row>(),
+    env.DB.prepare(
+      `SELECT id, workbook_id, case_id, type, title, body, url, position, version
+         FROM teaching_content_blocks
+        WHERE workbook_id = ? AND status = 'published'
+        ORDER BY case_id, position, id`,
+    ).bind(workbookId).all<Row>(),
+    env.DB.prepare(
+      `SELECT b.id, b.workbook_id, b.case_id, b.type, b.title, b.body, b.url, b.position, b.version
+         FROM teaching_content_blocks b
+         JOIN workbooks w ON w.id = b.workbook_id
+         JOIN modules m ON m.id = w.module_id
+         JOIN course_ownership ownership ON ownership.course_id = m.course_id
+        WHERE m.course_id = ? AND ownership.organization_id = ?
+          AND b.status = 'draft' AND w.status IN ('draft','changes-requested')
+        ORDER BY b.workbook_id, b.position, b.id`,
+    ).bind(courseId, platform.organization.id).all<Row>(),
+    env.DB.prepare(
+      `SELECT p.id, p.workbook_id, p.case_id, p.prompt, p.selection_mode,
+              p.options_json, p.correct_option_ids_json, p.explanation, p.position, p.version
+         FROM teaching_polls p
+         JOIN workbooks w ON w.id = p.workbook_id
+         JOIN modules m ON m.id = w.module_id
+         JOIN course_ownership ownership ON ownership.course_id = m.course_id
+        WHERE m.course_id = ? AND ownership.organization_id = ?
+          AND p.status = 'draft' AND w.status IN ('draft','changes-requested')
+        ORDER BY p.workbook_id, p.position, p.id`,
+    ).bind(courseId, platform.organization.id).all<Row>(),
+    env.DB.prepare(
+      `SELECT e.workbook_id, e.question_id, e.prompt, e.revision
+         FROM workbook_draft_question_edits e
+         JOIN workbooks w ON w.id = e.workbook_id
+         JOIN modules m ON m.id = w.module_id
+         JOIN course_ownership ownership ON ownership.course_id = m.course_id
+        WHERE m.course_id = ? AND ownership.organization_id = ?
+          AND w.status IN ('draft','changes-requested')
+        ORDER BY e.workbook_id, e.question_id`,
+    ).bind(courseId, platform.organization.id).all<Row>(),
+    env.DB.prepare(
+      `SELECT wr.id, wr.workbook_id, wr.reviewer_id, u.display_name AS reviewer_name,
+              wr.decision, wr.comment, wr.revision, wr.created_at
+         FROM workbook_reviews wr
+         JOIN users u ON u.id = wr.reviewer_id
+         JOIN workbooks w ON w.id = wr.workbook_id
+         JOIN modules m ON m.id = w.module_id
+         JOIN course_ownership ownership ON ownership.course_id = m.course_id
+        WHERE m.course_id = ? AND ownership.organization_id = ?
+        ORDER BY wr.created_at DESC LIMIT 80`,
+    ).bind(courseId, platform.organization.id).all<Row>(),
+    env.DB.prepare(
+      `SELECT r.draft_workbook_id, r.source_workbook_id, r.source_assessment_version_id,
+              r.source_integrity_hash, r.copied_case_ids_json, r.excluded_evidence_json,
+              r.history_reconstructed, r.created_at
+         FROM workbook_recoveries r
+         JOIN workbooks w ON w.id = r.draft_workbook_id
+         JOIN modules m ON m.id = w.module_id
+         JOIN course_ownership ownership ON ownership.course_id = m.course_id
+        WHERE m.course_id = ? AND ownership.organization_id = ?
+        ORDER BY r.created_at DESC`,
+    ).bind(courseId, platform.organization.id).all<Row>().catch(() => empty),
+  ]);
+
+  const workbookCaseIds = new Map<string, string[]>();
+  for (const item of rows(workbookCaseResult)) {
+    const id = String(item.workbook_id);
+    workbookCaseIds.set(id, [...(workbookCaseIds.get(id) ?? []), String(item.case_id)]);
+  }
+  const workbookRows = rows(workbookResult);
+  const caseRows = rows(caseResult);
+  const fullCases = groupEducationCaseRows(caseRows);
+  const mediaReady = fullCases.length > 0 && fullCases.every(
+    (educationCase) => educationCase.viewerManifest.series.length > 0 &&
+      educationCase.viewerManifest.series.every(
+        (series) => series.frameCount > 0 && series.sopInstanceUids.length > 0,
+      ),
+  );
+  const mappedWorkbooks: AppSnapshot["workbooks"] = workbookRows.map((item) => ({
+    id: String(item.id),
+    title: String(item.title),
+    mode: String(item.mode),
+    version: Number(item.version),
+    status: String(item.status),
+    durationMinutes: Number(item.duration_minutes),
+    dualDisplayAllowed: Boolean(item.dual_display_allowed),
+    caseIds: workbookCaseIds.get(String(item.id)) ?? [],
+    integrityHash: item.integrity_hash === null ? null : String(item.integrity_hash),
+    publishedAt: item.published_at === null ? null : String(item.published_at),
+    authorId: item.author_id === null ? null : String(item.author_id),
+    latestReviewDecision: item.latest_review_decision === null ? null : String(item.latest_review_decision),
+    latestReviewComment: item.latest_review_comment === null ? null : String(item.latest_review_comment),
+    latestReviewerName: item.latest_reviewer_name === null ? null : String(item.latest_reviewer_name),
+  }));
+
+  const draftWorkbookDetails: AppSnapshot["draftWorkbookDetails"] = mappedWorkbooks
+    .filter((workbook) => ["draft", "changes-requested"].includes(workbook.status))
+    .map((workbook) => ({
+      workbookId: workbook.id,
+      teachingBlocks: rows(draftBlockResult)
+        .filter((item) => String(item.workbook_id) === workbook.id)
+        .map((item) => ({ id: String(item.id), workbookId: workbook.id, caseId: String(item.case_id), type: String(item.type) as TeachingContentBlockView["type"], title: String(item.title), body: String(item.body), url: String(item.url), position: Number(item.position), version: Number(item.version) })),
+      polls: rows(draftPollResult)
+        .filter((item) => String(item.workbook_id) === workbook.id)
+        .map((item) => ({ id: String(item.id), caseId: String(item.case_id), prompt: String(item.prompt), selectionMode: String(item.selection_mode) as "single" | "multiple", options: parseJson<Array<{ id: string; label: string }>>(item.options_json, []), correctOptionIds: parseJson<string[]>(item.correct_option_ids_json, []), explanation: String(item.explanation), position: Number(item.position), version: Number(item.version) })),
+      questionEdits: rows(draftQuestionEditResult)
+        .filter((item) => String(item.workbook_id) === workbook.id)
+        .map((item) => ({ questionId: String(item.question_id), prompt: String(item.prompt), revision: Number(item.revision) })),
+    }));
+
+  const now = new Date().toISOString();
+  return {
+    serverTime: now,
+    assessmentPreflight: { required: false, caseCount: fullCases.length, mediaReady },
+    currentUser: { id: auth.userId, email: auth.email, displayName: auth.displayName, roles, previewAvailable: false },
+    course: {
+      id: courseId,
+      code: String(target.code),
+      title: String(target.title),
+      description: String(target.description),
+      moduleTitle: String(target.module_title),
+      workbookId,
+      workbookTitle: String(target.workbook_title),
+      workbookMode: String(target.workbook_mode),
+      workbookVersion: Number(target.workbook_version),
+      durationMinutes: Number(target.duration_minutes),
+      dualDisplayAllowed: Boolean(target.dual_display_allowed),
+      assessmentVersion: "",
+      assessmentHash: "",
+      viewerCoreVersion: EDUCATION_VIEWER_CORE_VERSION,
+    },
+    workbooks: mappedWorkbooks,
+    draftWorkbookDetails,
+    recoveryComparisons: rows(recoveryResult).map((item) => ({ draftWorkbookId: String(item.draft_workbook_id), sourceWorkbookId: String(item.source_workbook_id), sourceAssessmentVersionId: String(item.source_assessment_version_id), sourceIntegrityHash: String(item.source_integrity_hash), copiedCaseIds: parseJson<string[]>(item.copied_case_ids_json, []), excludedEvidence: parseJson<string[]>(item.excluded_evidence_json, []), historyReconstructed: Boolean(item.history_reconstructed), createdAt: String(item.created_at) })),
+    accessibleWorkbooks: mappedWorkbooks.filter((workbook) => workbook.status === "published").map((workbook) => ({ id: workbook.id, title: workbook.title, mode: workbook.mode, version: workbook.version, durationMinutes: workbook.durationMinutes, dualDisplayAllowed: workbook.dualDisplayAllowed, availableFrom: null, dueAt: null, expiresAt: null, accessSource: "staff", available: true, unavailableReason: null })),
+    learners: [],
+    workbookAssignments: [],
+    cohorts: [],
+    cohortMembers: [],
+    cohortAssignments: [],
+    accommodations: [],
+    workbookReviews: rows(reviewResult).map((item) => ({ id: String(item.id), workbookId: String(item.workbook_id), reviewerId: String(item.reviewer_id), reviewerName: String(item.reviewer_name), decision: String(item.decision), comment: String(item.comment), revision: Number(item.revision), createdAt: String(item.created_at) })),
+    progressDashboard: [],
+    itemAnalysis: [],
+    rubricPerformance: [],
+    cases: fullCases,
+    teachingNotes: rows(noteResult).map((item) => ({ id: String(item.id), caseId: String(item.case_id), title: String(item.title), body: String(item.body), keyPoints: parseJson<string[]>(item.key_points_json, []), revealText: String(item.reveal_text), position: Number(item.position) })),
+    teachingContentBlocks: rows(publishedContentResult).map((item) => ({ id: String(item.id), workbookId: String(item.workbook_id), caseId: String(item.case_id), type: String(item.type) as TeachingContentBlockView["type"], title: String(item.title), body: String(item.body), url: String(item.url), position: Number(item.position), version: Number(item.version) })),
+    attempt: { id: `authoring:${workbookId}`, state: "authoring", startedAt: "", deadlineAt: "", preflightPassedAt: null, submittedAt: null, receiptHash: null, accommodationMinutes: 0 },
+    answers: [],
+    annotations: [],
+    keyImages: [],
+    caseFlags: [],
+    ingestionJobs: [],
+    markingQueue: [],
+    auditEvents: [],
+    result: null,
   };
 }
 
