@@ -11,20 +11,20 @@ const siteOrigin = process.env.SITE_ORIGIN ?? "https://visiblemedicine.com";
 export const metadata: Metadata = {
   applicationName: "Visible Medicine",
   metadataBase: new URL(siteOrigin),
-  title: { default: "Visible Medicine | Learn imaging. Teach with cases.", template: "%s | Visible Medicine" },
+  title: { default: "Visible Medicine | Where medicine becomes visible.", template: "%s | Visible Medicine" },
   description: "Explore radiological anatomy, take guided courses and create secure institutional imaging education. For education and research only.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg", apple: "/favicon.svg" },
   openGraph: {
     siteName: "Visible Medicine",
-    title: "Visible Medicine",
-    description: "Interactive medical imaging education, by Elivion.",
+    title: "Visible Medicine — Where medicine becomes visible.",
+    description: "Interactive medical imaging education, by Elivion. Learn imaging and teach with cases.",
     type: "website",
     images: [{ url: "/og.png", width: 1727, height: 911, alt: "Visible Medicine — Atlas, Courses and Studio" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Visible Medicine",
-    description: "Interactive medical imaging education, by Elivion.",
+    title: "Visible Medicine — Where medicine becomes visible.",
+    description: "Interactive medical imaging education, by Elivion. Learn imaging and teach with cases.",
     images: ["/og.png"],
   },
 };

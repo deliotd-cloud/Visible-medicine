@@ -11,8 +11,8 @@ export default async function Home() {
       <section className="hero" id="top">
         <div className="hero-copy">
           <p className="eyebrow"><span /> Visible Medicine · by Elivion</p>
-          <h1>Learn imaging.<br />Teach with cases.</h1>
-          <p className="hero-intro">Explore radiological anatomy, follow guided courses or build secure institutional teaching with a purpose-built educational viewer.</p>
+          <h1>Where medicine<br />becomes visible.</h1>
+          <p className="hero-intro"><strong>Learn imaging. Teach with cases.</strong>Explore radiological anatomy, follow guided courses or build secure institutional teaching with a purpose-built educational viewer.</p>
           <div className="hero-actions">
             <Link className="primary-button" href="/atlas">Explore the atlas <span>→</span></Link>
             <Link className="text-button" href="/studio">Open Studio</Link>

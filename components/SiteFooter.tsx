@@ -8,7 +8,7 @@ export function SiteFooter() {
         <Link className="brand footer-brand" href="/">
           <BrandLockup />
         </Link>
-        <p>Imaging education for learners, educators and institutions.</p>
+        <p><b>Where medicine becomes visible.</b><br />Imaging education for learners, educators and institutions.</p>
       </div>
       <div className="footer-links">
         <Link href="/atlas">Atlas</Link><Link href="/courses">Courses</Link><Link href="/research">Research</Link>

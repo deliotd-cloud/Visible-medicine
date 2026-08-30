@@ -83,7 +83,7 @@ export function SplashScreen() {
           <span><b>Visible</b><em>Medicine</em></span>
           <small>by Elivion</small>
         </div>
-        <p id="splash-description">Learn imaging. Teach with cases.</p>
+        <p id="splash-description">Where medicine becomes visible.</p>
         <div className="splash-boundary">
           <span>Education &amp; research only</span>
           <i aria-hidden="true" />

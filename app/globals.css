@@ -48,6 +48,7 @@ button { font: inherit; }
 .eyebrow span { width: 7px; height: 7px; border-radius: 50%; background: #58a76f; box-shadow: 0 0 0 4px rgba(88,167,111,.12); }
 h1 { margin: 0; max-width: 660px; font-size: clamp(56px, 6vw, 88px); line-height: .96; letter-spacing: -.068em; font-weight: 570; }
 .hero-intro { max-width: 545px; margin: 34px 0 0; color: var(--muted); font-size: 17px; line-height: 1.65; letter-spacing: -.01em; }
+.hero-intro strong { display: block; margin-bottom: 6px; color: var(--ink); font-weight: 650; }
 .hero-actions { margin-top: 34px; display: flex; align-items: center; gap: 24px; }
 .primary-button { min-height: 50px; padding: 0 19px 0 22px; display: inline-flex; align-items: center; gap: 26px; border-radius: 7px; color: white; background: var(--green); font-size: 13px; box-shadow: 0 12px 28px rgba(23,76,64,.17); }
 .primary-button span { color: var(--lime); font-size: 18px; }
