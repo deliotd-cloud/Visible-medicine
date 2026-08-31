@@ -107,7 +107,7 @@
 .case-picker-row { align-items: stretch; display: flex; gap: 5px; }
 .case-picker-row > label { flex: 1; min-width: 0; }
 .case-order-actions { display: grid; gap: 3px; width: 30px; }
-.case-order-actions button { min-height: 26px; padding: 2px; }
+.case-order-actions button { min-height: 36px; padding: 2px; display: inline-flex; align-items: center; justify-content: center; }
 .case-picker-tools {
   align-items: center; border-bottom: 1px solid var(--hairline); display: grid;
   gap: 7px; grid-template-columns: minmax(0, 1fr) 120px auto; padding: 8px 10px;
@@ -4183,6 +4183,7 @@
 .workbook-template-bar button {
   border-color: var(--accent);
 }
+.workbook-template-bar button:disabled { border-color: var(--border); opacity: .48; cursor: not-allowed; }
 .poll-authoring-card {
   margin-bottom: 13px;
 }
@@ -4280,6 +4281,14 @@
 }
 .teaching-design-disclosure > .management-card {
   margin: 10px 12px 12px;
+}
+.builder-teaching-step { grid-column: 1 / -1; margin: 0; }
+.builder-prerequisite { margin: 10px 12px 0; padding: 10px 12px; border: 1px solid color-mix(in srgb, var(--warning) 42%, var(--border)); border-radius: 6px; background: color-mix(in srgb, var(--warning) 7%, transparent); color: var(--warning); }
+.runtime-theme :is(.primary-button, .secondary-button, .release-button, .loading-actions button, .loading-actions a) { display: inline-flex; align-items: center; justify-content: center; text-align: center; }
+
+@media (max-width: 640px) {
+  .case-order-actions { width: 44px; }
+  .case-order-actions button { min-height: 44px; }
 }
 .access-governance-body {
   padding: 0 12px 12px;

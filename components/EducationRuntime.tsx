@@ -2494,9 +2494,9 @@ export function EducationRuntime({
   const staffGroups = (["Authoring", "Live teaching", "Assessment", "Governance"] as const)
     .map((group) => ({ group, items: staffViews.filter((item) => item.group === group) }))
     .filter((entry) => entry.items.length);
-  const identityRoleLabel = uiRoles
-    .map(statusLabel)
-    .join(" · ");
+  const identityRoleLabel = previewRole === "full" && uiRoles.length > 1
+    ? "Multi-role evaluation account"
+    : uiRoles.map(statusLabel).join(" · ");
 
   if (companionMode === "exam" && !data.course.dualDisplayAllowed)
     return (
@@ -6866,55 +6866,8 @@ function WorkbookBuilder({
           <option value="case-conference">Interactive case conference</option>
           <option value="timed-assessment">Timed assessment</option>
         </select>
-        <button type="button" onClick={applyTemplate}>Apply template</button>
+        <button type="button" disabled={!selectedCases.length} title={!selectedCases.length ? "Select at least one case before applying a case-linked template" : undefined} onClick={applyTemplate}>Apply template</button>
       </section>
-      {mode === "teaching" && (
-        <details
-          className="teaching-design-disclosure"
-          open={teachingDesignOpen}
-          onToggle={(event) =>
-            setTeachingDesignOpen(event.currentTarget.open)
-          }
-        >
-          <summary>
-            <span>
-              <small>Optional teaching design</small>
-              <strong>Case-linked notes, explanations & live polls</strong>
-            </span>
-            <span className="status-pill">
-              {introductionDrafts.length} slides · {teachingBlocks.length - introductionDrafts.length} blocks · {pollDrafts.length} polls
-            </span>
-          </summary>
-          <div className="teaching-design-guidance">
-            <p>
-              Add an optional pre-imaging slide deck, then only the case-linked
-              learning content needed beside the viewer.
-            </p>
-            <button
-              type="button"
-              disabled={!introductionDrafts.length}
-              onClick={() => {
-                setIntroductionPreviewIndex(0);
-                setIntroductionPreviewOpen(true);
-              }}
-            >
-              Preview learner introduction
-            </button>
-          </div>
-          <TeachingContentComposer
-            cases={data.cases}
-            selectedCaseIds={selectedCases}
-            drafts={teachingBlocks}
-            setDrafts={setTeachingBlocks}
-          />
-          <PollAuthoringPanel
-            cases={data.cases}
-            selectedCaseIds={selectedCases}
-            drafts={pollDrafts}
-            setDrafts={setPollDrafts}
-          />
-        </details>
-      )}
       <div className="builder-grid">
         <section className="management-card builder-form">
           <div className="card-heading">
@@ -7139,10 +7092,34 @@ function WorkbookBuilder({
             </details>
           )}
         </section>
+        {mode === "teaching" && (
+          <details
+            className="teaching-design-disclosure builder-teaching-step"
+            open={teachingDesignOpen}
+            onToggle={(event) => setTeachingDesignOpen(event.currentTarget.open)}
+          >
+            <summary>
+              <span>
+                <small>Step 3 · Teaching design</small>
+                <strong>Introduction slides, case content & live polls</strong>
+              </span>
+              <span className="status-pill">
+                {introductionDrafts.length} slides · {teachingBlocks.length - introductionDrafts.length} blocks · {pollDrafts.length} polls
+              </span>
+            </summary>
+            {!selectedCases.length && <p className="builder-prerequisite" role="status">Select at least one case in Step 2 to unlock case-linked content and polls.</p>}
+            <div className="teaching-design-guidance">
+              <p>Add an optional pre-imaging slide deck, then the case-linked learning content needed beside the viewer.</p>
+              <button type="button" disabled={!introductionDrafts.length} onClick={() => { setIntroductionPreviewIndex(0); setIntroductionPreviewOpen(true); }}>Preview learner introduction</button>
+            </div>
+            <TeachingContentComposer cases={data.cases} selectedCaseIds={selectedCases} drafts={teachingBlocks} setDrafts={setTeachingBlocks} />
+            <PollAuthoringPanel cases={data.cases} selectedCaseIds={selectedCases} drafts={pollDrafts} setDrafts={setPollDrafts} />
+          </details>
+        )}
         <aside className="management-card publish-preview">
           <div className="card-heading">
             <span>
-              <small>Step 3</small>
+              <small>{mode === "teaching" ? "Step 4" : "Step 3"}</small>
               <h2>Review & create</h2>
             </span>
           </div>

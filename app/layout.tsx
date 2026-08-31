@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
-import { SiteFooter } from "../components/SiteFooter";
-import { SiteHeader } from "../components/SiteHeader";
+import { SiteFrame } from "../components/SiteFrame";
 import { SplashScreen } from "../components/SplashScreen";
 import "./globals.css";
 
@@ -41,17 +40,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var key="visible-medicine-splash-v2";document.documentElement.dataset.visibleMedicineSplash=sessionStorage.getItem(key)?"hidden":"show";}catch(error){document.documentElement.dataset.visibleMedicineSplash="show";}})();` }} />
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var key="visible-medicine-splash-v3";var home=location.pathname==="/";document.documentElement.dataset.visibleMedicineSplash=home&&!localStorage.getItem(key)?"show":"hidden";}catch(error){document.documentElement.dataset.visibleMedicineSplash=location.pathname==="/"?"show":"hidden";}})();` }} />
       </head>
       <body className={geistMono.variable}>
         <SplashScreen />
-        <div id="visible-medicine-site-content">
-          <a className="skip-link" href="#main-content">Skip to content</a>
-          <SiteHeader />
-          <div className="intended-use-strip"><span>Education &amp; research only</span><p>No diagnosis, reporting, patient care or clinical decision-making.</p><a href="/intended-use">Read intended use →</a></div>
-          <div id="main-content" tabIndex={-1}>{children}</div>
-          <SiteFooter />
-        </div>
+        <SiteFrame>{children}</SiteFrame>
       </body>
     </html>
   );

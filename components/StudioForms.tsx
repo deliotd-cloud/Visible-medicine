@@ -72,7 +72,7 @@ export function DuplicateCourseButton({ courseId }: { courseId: string }) {
 export function DuplicateWorkbookButton({ workbookId }: { workbookId: string }) {
   const router = useRouter(); const [busy, setBusy] = useState(false); const [error, setError] = useState("");
   async function duplicate() { setBusy(true); setError(""); try { const result = await postStudio({ action: "duplicate-workbook", workbookId }); router.push(`/studio/workbooks/${encodeURIComponent(result.workbookId!)}`); router.refresh(); } catch (caught) { setError(caught instanceof Error ? caught.message : "The workbook could not be duplicated."); } finally { setBusy(false); } }
-  return <div className="inline-action"><button disabled={busy} onClick={() => void duplicate()}>{busy ? "Duplicating…" : "Duplicate empty workbook shell"}</button>{error && <p role="alert">{error}</p>}</div>;
+  return <div className="inline-action"><button disabled={busy} title="Copies the workbook structure without learner attempts or publication history" onClick={() => void duplicate()}>{busy ? "Duplicating…" : "Duplicate structure only"}</button>{error && <p role="alert">{error}</p>}</div>;
 }
 
 export function CreateWorkbookForm({ course }: { course: StudioCourse }) {

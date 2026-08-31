@@ -1,16 +1,22 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 
-const SPLASH_STORAGE_KEY = "visible-medicine-splash-v2";
+const SPLASH_STORAGE_KEY = "visible-medicine-splash-v3";
 
 export function SplashScreen() {
+  const pathname = usePathname();
   const dismissRef = useRef<() => void>(() => undefined);
   const skipButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const root = document.documentElement;
+    if (pathname !== "/") {
+      root.dataset.visibleMedicineSplash = "hidden";
+      return;
+    }
     if (root.dataset.visibleMedicineSplash !== "show") return;
 
     const siteContent = document.getElementById("visible-medicine-site-content");
@@ -26,7 +32,7 @@ export function SplashScreen() {
     }
 
     try {
-      window.sessionStorage.setItem(SPLASH_STORAGE_KEY, "seen");
+      window.localStorage.setItem(SPLASH_STORAGE_KEY, "seen");
     } catch {
       // The introduction remains safe to dismiss when storage is unavailable.
     }
@@ -64,7 +70,9 @@ export function SplashScreen() {
       window.removeEventListener("keydown", handleKeyDown);
       if (root.dataset.visibleMedicineSplash === "leaving") finish(false);
     };
-  }, []);
+  }, [pathname]);
+
+  if (pathname !== "/") return null;
 
   return (
     <div

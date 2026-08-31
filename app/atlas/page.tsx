@@ -13,18 +13,18 @@ export default function AtlasCatalogue() {
       </section>
       <section className="catalogue-controls" aria-label="Atlas filters">
         <span>{atlasModules.length} modules</span>
-        <div><button type="button" className="active">All regions</button><button type="button">CT</button><button type="button">MRI</button></div>
+        <div role="group" aria-label="Filter by modality"><button type="button" className="active">All modalities</button><button type="button">CT</button><button type="button">MRI</button></div>
       </section>
       <section className="catalogue-list">
         {atlasModules.map((module, index) => (
           <a href={`/atlas/${module.slug}`} className="catalogue-item" key={module.slug}>
-            <div className={`catalogue-scan catalogue-scan-${index + 1}`} aria-hidden="true"><i /><i /></div>
+            <div className={`catalogue-scan catalogue-scan-${index + 1}`} aria-hidden="true"><i /><i /><span>{module.region}</span></div>
             <div className="catalogue-number">0{index + 1}</div>
             <div className="catalogue-copy">
               <span>{module.modality} · {module.orientation}</span><h2>{module.title}</h2><p>{module.description}</p>
               <div>{module.systems.map((system) => <small key={system}>{system}</small>)}</div>
             </div>
-            <div className="catalogue-meta"><span>{module.structures} structures</span><span>{module.images} images</span><b>{module.status === "available" ? "Open module ↗" : "Preview ↗"}</b></div>
+            <div className="catalogue-meta"><span className={`module-status ${module.status}`}>{module.status === "available" ? "Available preview" : "Planned"}</span><span>{module.structures} structures</span><span>{module.images} images</span><b>{module.status === "available" ? "Open module ↗" : "View roadmap ↗"}</b></div>
           </a>
         ))}
       </section>

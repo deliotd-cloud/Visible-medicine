@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AtlasExplorer } from "../../../components/AtlasExplorer";
 import { atlasModules, findAtlasModule } from "../../../lib/catalog";
+import { ctHeadStructures } from "../../../lib/atlas-knowledge";
 
 type PageProps = { params: Promise<{ slug: string }> };
 
@@ -32,7 +33,7 @@ export default async function AtlasModulePage({ params }: PageProps) {
         <div><Link href="/atlas">Atlas</Link><span>/</span><b>{atlasModule.region}</b></div>
         <h1>{atlasModule.title}</h1>
         <p>{atlasModule.description}</p>
-        <div className="module-facts"><span>{atlasModule.modality}</span><span>{atlasModule.orientation}</span><span>{atlasModule.structures} structures</span><span>{atlasModule.images} images</span></div>
+        <div className="module-facts"><span>{atlasModule.modality}</span><span>{atlasModule.orientation}</span><span>{atlasModule.slug === "ct-head" ? `${ctHeadStructures.length} indexed in preview · ${atlasModule.structures} planned` : `${atlasModule.structures} structures`}</span><span>{atlasModule.images} images</span></div>
       </section>
       {atlasModule.status === "available" ? (
         <AtlasExplorer moduleSlug={atlasModule.slug} totalImages={atlasModule.images} />

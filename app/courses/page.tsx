@@ -18,7 +18,7 @@ export default async function CoursesPage() {
         <p className="eyebrow"><span /> Visible Medicine courses</p>
         <h1>Learn by looking,<br />answering and revisiting.</h1>
         <p>Browse governed Visible Medicine and institution-published imaging courses. Enrolments, workbooks and progress now connect directly to your personal learning space.</p>
-        <div className="hero-actions"><Link className="primary-button" href={user ? "/my-learning" : "/join"}>{user ? "Open My Learning" : "Create learner profile"} <span>→</span></Link><Link className="text-button" href="/studio">Teach with Studio</Link></div>
+        <div className="hero-actions"><Link className="primary-button" href="#course-catalogue">Browse courses <span>↓</span></Link><Link className="text-button" href={user ? "/my-learning" : "/join"}>{user ? "Open My Learning" : "Create learner profile"}</Link></div>
       </section>
       <section className="catalogue-status"><div><span>{courses.length}</span><p>Published course {courses.length === 1 ? "release" : "releases"}</p></div><p>Catalogue entries are created from approved Studio releases. A published workbook does not become public until a separate course-release review is complete.</p></section>
       <CourseCatalogue courses={courses} profile={profile} />

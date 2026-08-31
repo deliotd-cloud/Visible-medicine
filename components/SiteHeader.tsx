@@ -7,7 +7,7 @@ import { BrandLockup } from "./BrandLockup";
 const primaryLinks = [
   ["Atlas", "/atlas"],
   ["Courses", "/courses"],
-  ["Studio", "/studio"],
+  ["For educators", "/studio"],
   ["Institutions", "/institutions"],
 ] as const;
 
@@ -38,9 +38,9 @@ export function SiteHeader() {
         ))}
       </nav>
       <Link className="search-link" href="/search" aria-label="Search Visible Medicine" aria-current={pathname === "/search" ? "page" : undefined}>⌕ <span>Search</span></Link>
-      <details className="workspace-switcher"><summary>Workspace <span aria-hidden="true">⌄</span></summary><nav aria-label="Choose workspace"><Link aria-current={isActive("/my-learning") ? "page" : undefined} href="/my-learning"><b>Learn</b><span>Progress, revision and certificates</span></Link><Link aria-current={isActive("/studio") ? "page" : undefined} href="/studio/workspace"><b>Studio</b><span>Courses, workbooks and publishing</span></Link><Link aria-current={isActive("/workspace") ? "page" : undefined} href="/workspace"><b>Institution</b><span>People, controls and readiness</span></Link><Link aria-current={isActive("/account") ? "page" : undefined} href="/account"><b>Account</b><span>Profile, export and learner rights</span></Link></nav></details>
+      <details className="workspace-switcher"><summary>My workspace <span aria-hidden="true">⌄</span></summary><nav aria-label="Choose workspace"><Link aria-current={isActive("/my-learning") ? "page" : undefined} href="/my-learning"><b>Learn</b><span>Progress, revision and certificates</span></Link><Link aria-current={pathname.startsWith("/studio/") ? "page" : undefined} href="/studio/workspace"><b>Studio</b><span>Courses, workbooks and publishing</span></Link><Link aria-current={isActive("/workspace") ? "page" : undefined} href="/workspace"><b>Institution</b><span>People, controls and readiness</span></Link><Link aria-current={isActive("/account") ? "page" : undefined} href="/account"><b>Account</b><span>Profile, export and learner rights</span></Link></nav></details>
       <details className="mobile-nav">
-        <summary>Menu</summary>
+        <summary><span className="menu-label">Menu</span><span className="close-label">Close</span></summary>
         <nav aria-label="Mobile navigation">
           <span className="mobile-nav-section">Explore and learn</span>
           {primaryLinks.map(([label, href]) => (
@@ -57,6 +57,8 @@ export function SiteHeader() {
           {([[
             "My learning", "/my-learning",
           ], [
+            "Studio workspace", "/studio/workspace",
+          ], [
             "Institution workspace", "/workspace",
           ], [
             "Account & data", "/account",
@@ -71,7 +73,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <span className="mobile-nav-section">More</span>
-          {secondaryLinks.filter(([, href]) => href !== "/account").map(([label, href]) => (
+          {secondaryLinks.filter(([, href]) => ["/search", "/pricing", "/trust"].includes(href)).map(([label, href]) => (
             <Link
               aria-current={isActive(href) ? "page" : undefined}
               href={href}

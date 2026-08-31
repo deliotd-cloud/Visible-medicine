@@ -83,7 +83,7 @@ function StructureIndex({
             key={structure.id}
             onClick={() => onSelect(structure)}
           >
-            <i>{String(structure.level + 1).padStart(2, "0")}</i>
+            <i>Slice {String(structure.level + 1).padStart(2, "0")}</i>
             <span>{structure.name}<small>{structure.system}</small></span>
             <b aria-hidden="true">→</b>
           </button>
@@ -220,22 +220,11 @@ export function AtlasExplorer({ moduleSlug, totalImages }: AtlasExplorerProps) {
             <button type="button" className={windowPreset === "brain" ? "active" : ""} onClick={() => setWindowPreset("brain")}>Brain</button>
             <button type="button" className={windowPreset === "bone" ? "active" : ""} onClick={() => setWindowPreset("bone")}>Bone</button>
           </div>
-          <div className="tool-group">
+          <div className="tool-group" aria-label="Label display">
             <button type="button" className={labelsVisible ? "active" : ""} onClick={() => setLabelsVisible((value) => !value)}>{labelsVisible ? "Hide labels" : "Show labels"}</button>
-            <button
-              type="button"
-              className={quizMode ? "active accent" : ""}
-              aria-pressed={quizMode}
-              onClick={() => {
-                setQuizMode((value) => !value);
-                setLabelsVisible(true);
-                setSelectedId(null);
-                setConfidence(null);
-                setMessage(quizMode ? "Practice mode ended." : "Practice mode: choose a numbered marker, then rate your confidence.");
-              }}
-            >Practice</button>
-            <button type="button" onClick={saveProgress}>Save position</button>
           </div>
+          <div className="tool-group learning-mode-group" aria-label="Learning mode"><span>Mode</span><button type="button" className={!quizMode ? "active" : ""} aria-pressed={!quizMode} onClick={() => { setQuizMode(false); setSelectedId(null); setConfidence(null); setMessage("Explore mode."); }}>Explore</button><button type="button" className={quizMode ? "active accent" : ""} aria-pressed={quizMode} onClick={() => { setQuizMode(true); setLabelsVisible(true); setSelectedId(null); setConfidence(null); setMessage("Practice mode: choose a numbered marker, then rate your confidence."); }}>Practice</button></div>
+          <button className="save-position-button" type="button" onClick={saveProgress}>Save position</button>
           <span className="atlas-viewer-credit didanix-credit"><small>Powered by</small> <b>Didanix</b></span>
         </div>
 
