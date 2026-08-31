@@ -278,7 +278,7 @@ body.splash-open { overflow: hidden; }
 .inner-page { min-height: 70vh; }
 .page-hero { min-height: 550px; padding: 105px 42px 70px; display: flex; flex-direction: column; justify-content: flex-end; }
 .page-hero h1 { max-width: 920px; font-size: clamp(58px, 7vw, 98px); }
-.page-hero > p:last-child { max-width: 680px; margin: 32px 0 0; color: var(--muted); font-size: 17px; line-height: 1.65; }
+.page-hero > p:not(.eyebrow) { max-width: 680px; margin: 32px 0 0; color: var(--muted); font-size: 17px; line-height: 1.65; }
 .page-hero > .primary-button { align-self: flex-start; margin-top: 34px; }
 .catalogue-controls { margin: 0 42px; padding: 18px 0; display: flex; justify-content: space-between; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .catalogue-controls > span { color: #71807d; font: 600 10px/2.6 var(--font-geist-mono), monospace; text-transform: uppercase; }
@@ -515,6 +515,12 @@ body.splash-open { overflow: hidden; }
 .pricing-boundary { padding: 86px 42px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; background: var(--green); color: white; }
 .pricing-boundary p { margin: 0; color: #abc0ba; line-height: 1.7; }
 .pricing-boundary .section-index { color: var(--lime); }
+
+/* Display headings always retain a readable hand-off to their supporting copy. */
+:is(.page-hero, .workspace-hero, .control-hero, .studio-app-heading, .learning-heading, .onboarding-hero, .invitation-hero) h1 + p:not(.eyebrow) {
+  margin-top: clamp(24px, 2.4vw, 34px);
+  margin-bottom: 0;
+}
 
 /* One Visible Medicine platform bar across public and signed-in surfaces. */
 .platform-header {
