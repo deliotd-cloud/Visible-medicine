@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { BrandLockup } from "./BrandLockup";
 
 const primaryLinks = [
+  ["Home", "/"],
   ["Atlas", "/atlas"],
   ["Courses", "/courses"],
   ["For educators", "/studio"],
@@ -23,7 +24,7 @@ const secondaryLinks = [
 export function SiteHeader() {
   const pathname = usePathname();
   const isActive = (href: string) =>
-    pathname === href || pathname.startsWith(`${href}/`);
+    pathname === href || (href !== "/" && pathname.startsWith(`${href}/`));
 
   return (
     <header className="topbar platform-header public-platform-header">
