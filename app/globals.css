@@ -1766,3 +1766,22 @@ body.splash-open { overflow: hidden; }
 .embed-runtime-state small { color: var(--secondary-text-dark); }
 
 .pricing-boundary .section-index { color: var(--lime); }
+
+/* Keep the public navigation on one row after the dedicated account action was
+   added. These final overrides intentionally follow the generic topbar media
+   rules so they cannot reduce the public header to three columns. */
+.public-platform-header .workspace-switcher { min-width: max-content; }
+.public-platform-header .workspace-switcher > summary { white-space: nowrap; }
+
+@media (max-width: 1100px) {
+  .public-platform-header { grid-template-columns: minmax(190px,1fr) auto auto auto; gap: 10px; }
+  .public-platform-header .public-primary-nav { gap: 13px !important; }
+}
+
+@media (max-width: 1000px) {
+  .public-platform-header { grid-template-columns: minmax(0,1fr) auto auto auto; }
+}
+
+@media (max-width: 760px) {
+  .public-platform-header { grid-template-columns: minmax(0,1fr) auto; }
+}
