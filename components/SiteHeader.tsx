@@ -2,41 +2,217 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState, type FocusEvent, type MouseEvent, type PointerEvent } from "react";
 import { BrandLockup } from "./BrandLockup";
 
-const primaryLinks = [
-  ["Home", "/"],
-  ["Atlas", "/atlas"],
-  ["Courses", "/courses"],
-  ["For educators", "/studio"],
-  ["Institutions", "/institutions"],
-] as const;
+type NavigationLink = {
+  label: string;
+  href: string;
+  description: string;
+};
+
+type NavigationSection = {
+  id: string;
+  label: string;
+  href: string;
+  description: string;
+  groups: Array<{
+    label: string;
+    links: NavigationLink[];
+  }>;
+};
+
+const navigationSections: NavigationSection[] = [
+  {
+    id: "atlas",
+    label: "Atlas",
+    href: "/atlas",
+    description: "Explore reviewed and in-development imaging anatomy modules.",
+    groups: [
+      {
+        label: "Explore anatomy",
+        links: [
+          { label: "Atlas overview", href: "/atlas", description: "Browse every available and planned anatomy module." },
+          { label: "CT head demonstration", href: "/atlas/ct-head", description: "Explore labelled cross-sectional head anatomy." },
+          { label: "Research use", href: "/research", description: "Review provenance, citations and non-clinical workflows." },
+        ],
+      },
+    ],
+  },
+  {
+    id: "courses",
+    label: "Courses",
+    href: "/courses",
+    description: "Find courses, join teaching and continue your learning.",
+    groups: [
+      {
+        label: "Learn",
+        links: [
+          { label: "Browse courses", href: "/courses", description: "Explore available self-paced and taught courses." },
+          { label: "My Learning", href: "/my-learning", description: "Continue courses, revision and saved atlas work." },
+          { label: "Join a course", href: "/join", description: "Use an invitation or institution access code." },
+        ],
+      },
+    ],
+  },
+  {
+    id: "educators",
+    label: "For educators",
+    href: "/studio",
+    description: "Create, organise, publish and improve imaging education.",
+    groups: [
+      {
+        label: "Start",
+        links: [
+          { label: "Educator overview", href: "/studio", description: "See how Visible Medicine supports educators." },
+          { label: "Studio workspace", href: "/studio/workspace", description: "Open your authoring and delivery dashboard." },
+        ],
+      },
+      {
+        label: "Build and deliver",
+        links: [
+          { label: "Courses", href: "/studio/courses", description: "Create course pathways and releases." },
+          { label: "Workbooks", href: "/studio/workbooks", description: "Build imaging cases, questions and presentations." },
+          { label: "Cohorts", href: "/studio/cohorts", description: "Organise learners and teaching groups." },
+        ],
+      },
+      {
+        label: "Govern and improve",
+        links: [
+          { label: "Publishing", href: "/studio/publishing", description: "Review content and control publication." },
+          { label: "Analytics", href: "/studio/analytics", description: "Understand engagement and completion." },
+        ],
+      },
+    ],
+  },
+  {
+    id: "institutions",
+    label: "Institutions",
+    href: "/institutions",
+    description: "Plan, govern and operate institution-wide imaging education.",
+    groups: [
+      {
+        label: "Plan",
+        links: [
+          { label: "Institution overview", href: "/institutions", description: "Explore delivery, governance and support." },
+          { label: "Plans", href: "/pricing", description: "Review learner, educator and institution options." },
+          { label: "Plan a pilot", href: "/institutions/pilot", description: "Prepare a controlled institutional evaluation." },
+        ],
+      },
+      {
+        label: "Manage",
+        links: [
+          { label: "Institution workspace", href: "/workspace", description: "Open the organisation dashboard." },
+          { label: "People and roles", href: "/workspace/people", description: "Manage membership, roles and invitations." },
+          { label: "Pilot readiness", href: "/workspace/readiness", description: "Record evidence and implementation gates." },
+          { label: "Controls and integrations", href: "/workspace/control", description: "Configure identity, publishing and delivery." },
+        ],
+      },
+    ],
+  },
+];
 
 const secondaryLinks = [
   ["Search", "/search"],
-  ["Research", "/research"],
-  ["Plans", "/pricing"],
-  ["Embeds", "/embed"],
   ["Trust centre", "/trust"],
-  ["Account & data", "/account"],
 ] as const;
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const navigationRef = useRef<HTMLElement>(null);
   const isActive = (href: string) =>
     pathname === href || (href !== "/" && pathname.startsWith(`${href}/`));
+
+  useEffect(() => {
+    const closeOutside = (event: globalThis.PointerEvent) => {
+      if (!navigationRef.current?.contains(event.target as Node)) setOpenMenu(null);
+    };
+    const closeWithEscape = (event: KeyboardEvent) => {
+      if (event.key !== "Escape" || !openMenu) return;
+      setOpenMenu(null);
+      navigationRef.current
+        ?.querySelector<HTMLButtonElement>(`[data-nav-trigger="${openMenu}"]`)
+        ?.focus();
+    };
+
+    document.addEventListener("pointerdown", closeOutside);
+    document.addEventListener("keydown", closeWithEscape);
+    return () => {
+      document.removeEventListener("pointerdown", closeOutside);
+      document.removeEventListener("keydown", closeWithEscape);
+    };
+  }, [openMenu]);
+
+  const closeMobileNavigation = (event: MouseEvent<HTMLAnchorElement>) => {
+    (event.currentTarget.closest(".mobile-nav") as HTMLDetailsElement | null)?.removeAttribute("open");
+  };
+
+  const closeGroupAfterPointerLeave = (sectionId: string, event: PointerEvent<HTMLDivElement>) => {
+    if (!event.currentTarget.contains(document.activeElement)) {
+      setOpenMenu((current) => current === sectionId ? null : current);
+    }
+  };
+
+  const closeGroupAfterBlur = (sectionId: string, event: FocusEvent<HTMLDivElement>) => {
+    if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+      setOpenMenu((current) => current === sectionId ? null : current);
+    }
+  };
 
   return (
     <header className="topbar platform-header public-platform-header">
       <Link className="brand platform-brand" href="/" aria-label="Visible Medicine home">
         <BrandLockup priority />
       </Link>
-      <nav className="nav-links" aria-label="Primary navigation">
-        {primaryLinks.map(([label, href]) => (
-          <Link aria-current={isActive(href) ? "page" : undefined} href={href} key={href}>
-            {label}
-          </Link>
-        ))}
+      <nav className="nav-links public-primary-nav" aria-label="Primary navigation" ref={navigationRef}>
+        <Link className="primary-nav-link" aria-current={pathname === "/" ? "page" : undefined} href="/">Home</Link>
+        {navigationSections.map((section) => {
+          const expanded = openMenu === section.id;
+          return (
+            <div
+              className="primary-nav-group"
+              data-nav-section={section.id}
+              key={section.id}
+              onBlur={(event) => closeGroupAfterBlur(section.id, event)}
+              onFocus={() => setOpenMenu(section.id)}
+              onPointerEnter={() => setOpenMenu(section.id)}
+              onPointerLeave={(event) => closeGroupAfterPointerLeave(section.id, event)}
+            >
+              <Link className="primary-nav-link" aria-current={isActive(section.href) ? "page" : undefined} href={section.href} onClick={() => setOpenMenu(null)}>{section.label}</Link>
+              <button
+                aria-controls={`${section.id}-navigation`}
+                aria-expanded={expanded}
+                aria-label={`${expanded ? "Close" : "Open"} ${section.label} navigation`}
+                className="primary-nav-toggle"
+                data-nav-trigger={section.id}
+                onClick={() => setOpenMenu(expanded ? null : section.id)}
+                type="button"
+              >
+                <span aria-hidden="true">⌄</span>
+              </button>
+              <div className="primary-nav-panel" hidden={!expanded} id={`${section.id}-navigation`}>
+                <div className="primary-nav-introduction">
+                  <b>{section.label}</b>
+                  <p>{section.description}</p>
+                </div>
+                <div className="primary-nav-columns">
+                  {section.groups.map((group) => (
+                    <div className="primary-nav-column" key={group.label}>
+                      <span>{group.label}</span>
+                      {group.links.map((link) => (
+                        <Link href={link.href} key={link.href} onClick={() => setOpenMenu(null)}>
+                          <b>{link.label}</b>
+                          <small>{link.description}</small>
+                        </Link>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </nav>
       <Link className="search-link" href="/search" aria-label="Search Visible Medicine" aria-current={pathname === "/search" ? "page" : undefined}>⌕ <span>Search</span></Link>
       <details className="workspace-switcher"><summary>Open workspace <span aria-hidden="true">⌄</span></summary><nav aria-label="Choose workspace"><Link aria-current={isActive("/my-learning") ? "page" : undefined} href="/my-learning"><b>Learn</b><span>Progress, revision and certificates</span></Link><Link aria-current={pathname.startsWith("/studio/") ? "page" : undefined} href="/studio/workspace"><b>Studio</b><span>Courses, workbooks and publishing</span></Link><Link aria-current={isActive("/workspace") ? "page" : undefined} href="/workspace"><b>Institution</b><span>People, controls and readiness</span></Link><Link aria-current={isActive("/account") ? "page" : undefined} href="/account"><b>Account</b><span>Profile, export and learner rights</span></Link></nav></details>
@@ -44,15 +220,13 @@ export function SiteHeader() {
         <summary><span className="menu-label">Menu</span><span className="close-label">Close</span></summary>
         <nav aria-label="Mobile navigation">
           <span className="mobile-nav-section">Explore and learn</span>
-          {primaryLinks.map(([label, href]) => (
-            <Link
-              aria-current={isActive(href) ? "page" : undefined}
-              href={href}
-              key={href}
-              onClick={(event) => event.currentTarget.closest("details")?.removeAttribute("open")}
-            >
-              {label}<span aria-hidden="true">→</span>
-            </Link>
+          <Link aria-current={pathname === "/" ? "page" : undefined} href="/" onClick={closeMobileNavigation}>Home<span aria-hidden="true">→</span></Link>
+          {navigationSections.slice(0, 2).map((section) => (
+            <MobileNavigationGroup isActive={isActive} key={section.id} section={section} onNavigate={closeMobileNavigation} />
+          ))}
+          <span className="mobile-nav-section">Create and manage</span>
+          {navigationSections.slice(2).map((section) => (
+            <MobileNavigationGroup isActive={isActive} key={section.id} section={section} onNavigate={closeMobileNavigation} />
           ))}
           <span className="mobile-nav-section">Your work</span>
           {([[
@@ -64,28 +238,37 @@ export function SiteHeader() {
           ], [
             "Account & data", "/account",
           ]] as const).map(([label, href]) => (
-            <Link
-              aria-current={isActive(href) ? "page" : undefined}
-              href={href}
-              key={href}
-              onClick={(event) => event.currentTarget.closest("details")?.removeAttribute("open")}
-            >
-              {label}<span aria-hidden="true">→</span>
-            </Link>
+            <Link aria-current={isActive(href) ? "page" : undefined} href={href} key={href} onClick={closeMobileNavigation}>{label}<span aria-hidden="true">→</span></Link>
           ))}
           <span className="mobile-nav-section">More</span>
-          {secondaryLinks.filter(([, href]) => ["/search", "/pricing", "/trust"].includes(href)).map(([label, href]) => (
-            <Link
-              aria-current={isActive(href) ? "page" : undefined}
-              href={href}
-              key={href}
-              onClick={(event) => event.currentTarget.closest("details")?.removeAttribute("open")}
-            >
-              {label}<span aria-hidden="true">→</span>
-            </Link>
+          {secondaryLinks.map(([label, href]) => (
+            <Link aria-current={isActive(href) ? "page" : undefined} href={href} key={href} onClick={closeMobileNavigation}>{label}<span aria-hidden="true">→</span></Link>
           ))}
         </nav>
       </details>
     </header>
+  );
+}
+
+function MobileNavigationGroup({
+  section,
+  isActive,
+  onNavigate,
+}: {
+  section: NavigationSection;
+  isActive: (href: string) => boolean;
+  onNavigate: (event: MouseEvent<HTMLAnchorElement>) => void;
+}) {
+  return (
+    <details className="mobile-nav-group">
+      <summary aria-label={`Show ${section.label} links`}>
+        <span>{section.label}</span><span aria-hidden="true">⌄</span>
+      </summary>
+      <div>
+        {section.groups.flatMap((group) => group.links).map((link) => (
+          <Link aria-current={isActive(link.href) ? "page" : undefined} href={link.href} key={link.href} onClick={onNavigate}>{link.label}<span aria-hidden="true">→</span></Link>
+        ))}
+      </div>
+    </details>
   );
 }

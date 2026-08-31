@@ -516,6 +516,47 @@ body.splash-open { overflow: hidden; }
 .pricing-boundary p { margin: 0; color: #abc0ba; line-height: 1.7; }
 .pricing-boundary .section-index { color: var(--lime); }
 
+/* Public navigation discovery: overview links remain direct while adjacent
+   disclosures expose deeper learning, teaching and institution destinations. */
+.public-primary-nav { height: 72px; align-items: center; gap: 23px !important; }
+.public-primary-nav > .primary-nav-link,
+.primary-nav-group > .primary-nav-link { position: relative; white-space: nowrap; }
+.primary-nav-group { height: 100%; position: relative; display: flex; align-items: center; gap: 1px; }
+.primary-nav-toggle { width: 24px; height: 34px; padding: 0; display: grid; place-items: center; border: 0; border-radius: 6px; background: transparent; color: #607772; cursor: pointer; }
+.primary-nav-toggle span { display: block; font-size: 14px; line-height: 1; transition: transform .18s ease; transform: translateY(-1px); }
+.primary-nav-toggle[aria-expanded="true"] { background: white; color: var(--teal); }
+.primary-nav-toggle[aria-expanded="true"] span { transform: translateY(1px) rotate(180deg); }
+.primary-nav-toggle:hover,
+.primary-nav-toggle:focus-visible { background: white; color: var(--teal); outline: none; box-shadow: 0 0 0 2px color-mix(in srgb, var(--teal) 25%, transparent); }
+.primary-nav-panel { width: max-content; min-width: 360px; max-width: min(720px,calc(100vw - 40px)); padding: 11px; position: absolute; z-index: 100; top: calc(100% - 3px); left: 50%; transform: translateX(-50%); border: 1px solid color-mix(in srgb,var(--teal) 24%,var(--line)); border-radius: 14px; background: rgba(250,252,251,.99); box-shadow: 0 28px 75px rgba(8,42,49,.2); }
+.primary-nav-panel[hidden] { display: none; }
+.primary-nav-introduction { padding: 14px 14px 13px; border-bottom: 1px solid var(--line); }
+.primary-nav-introduction b { color: var(--green); font-size: 14px; }
+.primary-nav-introduction p { max-width: 470px; margin: 5px 0 0; color: var(--secondary-text); font-size: 11px; line-height: 1.5; }
+.primary-nav-columns { padding-top: 7px; display: grid; grid-template-columns: repeat(var(--navigation-columns,1),minmax(180px,1fr)); gap: 4px; }
+.primary-nav-column { min-width: 0; display: grid; align-content: start; }
+.primary-nav-column > span { padding: 9px 11px 5px; color: #70817d; font: 700 8px/1 var(--font-geist-mono),monospace; letter-spacing: .07em; text-transform: uppercase; }
+.primary-nav-column a { min-width: 0; padding: 10px 11px; display: grid; gap: 4px; border-radius: 8px; }
+.primary-nav-column a::after { display: none !important; content: none !important; }
+.primary-nav-column a:hover,
+.primary-nav-column a:focus-visible,
+.primary-nav-column a[aria-current="page"] { background: var(--panel); color: var(--teal); outline: none; }
+.primary-nav-column a b { color: inherit; font-size: 12px; line-height: 1.25; }
+.primary-nav-column a small { max-width: 210px; color: var(--secondary-text); font-size: 9px; line-height: 1.4; }
+.primary-nav-group[data-nav-section="educators"] .primary-nav-columns { --navigation-columns: 3; }
+.primary-nav-group[data-nav-section="institutions"] .primary-nav-columns { --navigation-columns: 2; }
+
+@media (max-width: 1000px) {
+  .mobile-nav > nav { padding-bottom: 12px; }
+  .mobile-nav-group { margin: 0; }
+  .mobile-nav[open] .mobile-nav-group > summary { min-height: 46px; padding: 0 12px; display: flex; align-items: center; justify-content: space-between; border: 0; border-radius: 6px; background: transparent; color: #334f54; font-size: 13px; font-weight: 600; }
+  .mobile-nav-group > summary span:last-child { color: #71827e; transition: transform .18s ease; }
+  .mobile-nav[open] .mobile-nav-group[open] > summary { background: var(--panel); color: var(--teal); }
+  .mobile-nav-group[open] > summary span:last-child { transform: rotate(180deg); }
+  .mobile-nav-group > div { margin: 2px 8px 8px 12px; padding-left: 8px; display: grid; border-left: 1px solid color-mix(in srgb,var(--teal) 28%,var(--line)); }
+  .mobile-nav-group > div a { min-height: 42px; padding-left: 11px; font-size: 12px; }
+}
+
 /* Display headings always retain a readable hand-off to their supporting copy. */
 :is(.page-hero, .workspace-hero, .control-hero, .studio-app-heading, .learning-heading, .onboarding-hero, .invitation-hero) h1 + p:not(.eyebrow) {
   margin-top: clamp(24px, 2.4vw, 34px);
