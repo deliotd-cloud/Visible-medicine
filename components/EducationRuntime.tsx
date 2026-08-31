@@ -2696,6 +2696,9 @@ export function EducationRuntime({
           <strong>{data.course.workbookTitle}</strong>
         </div>
         <div className="header-actions">
+          <Link className="runtime-exit-link" href={accessMode === "authoring" ? returnTo || "/studio/workspace" : view === "authoring" ? "/studio/workspace" : "/my-learning"}>
+            {accessMode === "authoring" || view === "authoring" ? "Exit to Studio" : "Exit to Learn"}
+          </Link>
           <Link className="runtime-atlas-link" href="/atlas/ct-head">Atlas reference</Link>
           {data.currentUser.previewAvailable && accessMode !== "authoring" && (
             <label className="role-preview-control">

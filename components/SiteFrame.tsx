@@ -46,10 +46,13 @@ function workspaceIsActive(pathname: string, href: string) {
 
 function WorkspaceHeader({ pathname }: { pathname: string }) {
   return (
-    <header className="app-frame-header">
-      <Link className="app-frame-brand" href="/" aria-label="Visible Medicine public site">
-        <BrandLockup priority />
-      </Link>
+    <header className="app-frame-header platform-header workspace-platform-header">
+      <div className="app-frame-identity">
+        <Link className="app-frame-brand platform-brand" href="/" aria-label="Visible Medicine public site">
+          <BrandLockup priority />
+        </Link>
+        <span className="workspace-surface-label">Workspace</span>
+      </div>
       <nav className="app-frame-nav" aria-label="Choose workspace">
         {workspaceLinks.map(([label, href]) => (
           <Link aria-current={workspaceIsActive(pathname, href) ? "page" : undefined} href={href} key={href}>
@@ -58,10 +61,20 @@ function WorkspaceHeader({ pathname }: { pathname: string }) {
         ))}
       </nav>
       <div className="app-frame-actions">
-        <Link className="education-boundary-pill" href="/intended-use">Education only</Link>
-        <Link className={pathname.startsWith("/account") ? "active" : ""} href="/account">Account</Link>
-        <Link className="public-site-link" href="/">Public site <span aria-hidden="true">↗</span></Link>
+        <Link className="platform-utility-link" href="/trust">Help &amp; trust</Link>
+        <Link className="platform-utility-link" href="/account#notifications">Notifications</Link>
+        <Link className={`platform-profile-link${pathname.startsWith("/account") ? " active" : ""}`} href="/account">Profile</Link>
+        <Link className="workspace-exit-link" href="/">Back to Visible Medicine <span aria-hidden="true">↗</span></Link>
       </div>
+      <details className="workspace-mobile-menu">
+        <summary><span className="menu-label">Menu</span><span className="close-label">Close</span></summary>
+        <nav aria-label="Workspace utilities">
+          <Link href="/account">Profile and account <span aria-hidden="true">→</span></Link>
+          <Link href="/account#notifications">Notification settings <span aria-hidden="true">→</span></Link>
+          <Link href="/trust">Help and trust centre <span aria-hidden="true">→</span></Link>
+          <Link href="/">Back to Visible Medicine <span aria-hidden="true">↗</span></Link>
+        </nav>
+      </details>
     </header>
   );
 }

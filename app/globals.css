@@ -516,6 +516,94 @@ body.splash-open { overflow: hidden; }
 .pricing-boundary p { margin: 0; color: #abc0ba; line-height: 1.7; }
 .pricing-boundary .section-index { color: var(--lime); }
 
+/* One Visible Medicine platform bar across public and signed-in surfaces. */
+.platform-header {
+  width: 100%;
+  min-height: 72px;
+  height: auto;
+  padding: 0 28px;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  border-bottom: 1px solid color-mix(in srgb, var(--teal) 18%, var(--line));
+  background: color-mix(in srgb, var(--paper) 95%, transparent);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 8px 28px rgba(8,42,49,.045);
+}
+.public-platform-header {
+  max-width: none;
+  margin: 0;
+  grid-template-columns: minmax(220px,1fr) auto auto auto;
+  gap: 22px;
+}
+.workspace-platform-header {
+  grid-template-columns: minmax(245px,1fr) auto minmax(360px,1fr);
+  gap: 24px;
+}
+.platform-brand { min-width: 0; display: inline-flex; align-items: center; }
+.platform-brand .brand-lockup-image { width: 214px; }
+.public-platform-header .nav-links { gap: 30px; }
+.intended-use-strip { width: 100%; max-width: none; }
+
+.app-frame-identity { min-width: 0; display: flex; align-items: center; gap: 15px; justify-self: start; }
+.workspace-surface-label { min-height: 30px; padding-left: 15px; display: inline-flex; align-items: center; border-left: 1px solid #c2d4d0; color: var(--secondary-text); font: 700 9px/1 var(--font-geist-mono),monospace; letter-spacing: .075em; text-transform: uppercase; }
+.app-frame-actions { gap: 8px; }
+.app-frame-actions > a { min-height: 38px; padding: 0 9px; border-radius: 999px; white-space: nowrap; }
+.app-frame-actions > a:hover, .app-frame-actions > a:focus-visible { background: white; color: var(--teal); }
+.platform-utility-link { color: var(--secondary-text); }
+.platform-profile-link { border: 1px solid var(--line); background: rgba(255,255,255,.5); }
+.workspace-exit-link { padding-inline: 13px !important; gap: 7px; border: 1px solid color-mix(in srgb, var(--teal) 35%, var(--line)); background: white; color: var(--teal); }
+.workspace-exit-link:hover { border-color: var(--teal); }
+.workspace-mobile-menu { display: none; position: relative; justify-self: end; }
+.workspace-mobile-menu summary { min-height: 38px; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--ink); font-size: 11px; cursor: pointer; list-style: none; }
+.workspace-mobile-menu summary::-webkit-details-marker { display: none; }
+.workspace-mobile-menu .close-label { display: none; }
+.workspace-mobile-menu[open] .menu-label { display: none; }
+.workspace-mobile-menu[open] .close-label { display: inline; }
+.workspace-mobile-menu nav { width: min(290px,calc(100vw - 36px)); padding: 8px; position: absolute; top: calc(100% + 10px); right: 0; display: grid; border: 1px solid var(--line); border-radius: 10px; background: rgba(247,250,249,.99); box-shadow: 0 22px 60px rgba(8,42,49,.18); }
+.workspace-mobile-menu nav a { min-height: 45px; padding: 0 12px; display: flex; align-items: center; justify-content: space-between; border-radius: 6px; font-size: 12px; }
+.workspace-mobile-menu nav a:hover, .workspace-mobile-menu nav a:focus-visible { background: var(--panel); color: var(--teal); }
+
+.studio-context-bar > div { min-width: 0; flex-wrap: wrap; }
+.studio-context-bar i { color: #8ba09b; font-style: normal; }
+.studio-context-bar small { color: var(--secondary-text); font-size: 10px; }
+.notification-preferences { scroll-margin-top: 96px; }
+
+@media (max-width: 1100px) {
+  .workspace-platform-header { grid-template-columns: minmax(0,1fr) auto; gap: 10px 16px; padding: 10px 18px; }
+  .workspace-platform-header .app-frame-identity { grid-column: 1; grid-row: 1; }
+  .workspace-platform-header .app-frame-actions { grid-column: 2; grid-row: 1; }
+  .workspace-platform-header .app-frame-nav { grid-column: 1 / -1; grid-row: 2; justify-self: center; }
+  .platform-utility-link { display: none !important; }
+}
+
+@media (max-width: 1000px) {
+  .public-platform-header { grid-template-columns: minmax(0,1fr) auto auto; gap: 8px; padding: 0 24px; }
+  .public-platform-header .nav-links { display: none; }
+  .public-platform-header .mobile-nav { display: block; }
+}
+
+@media (max-width: 760px) {
+  .platform-header { position: sticky; min-height: 68px; }
+  .platform-brand .brand-lockup-image { width: 178px; }
+  .public-platform-header { padding: 0 18px; grid-template-columns: minmax(0,1fr) auto; }
+  .public-platform-header .workspace-switcher { display: none; }
+  .workspace-platform-header { min-height: auto; overflow: visible; }
+  .workspace-surface-label, .workspace-platform-header .app-frame-actions { display: none; }
+  .workspace-platform-header .workspace-mobile-menu { display: block; grid-column: 2; grid-row: 1; }
+  .workspace-platform-header .app-frame-nav { width: 100%; padding: 3px; grid-column: 1 / -1; grid-row: 2; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); overflow: hidden; }
+  .workspace-platform-header .app-frame-nav a { min-width: 0; min-height: 38px; padding: 0 7px; }
+  .studio-context-bar { padding: 10px 18px; }
+  .studio-context-bar > div { align-items: center; flex-direction: row; gap: 7px; }
+  .studio-context-bar small { width: 100%; }
+}
+
+@media (max-width: 420px) {
+  .platform-brand .brand-lockup-image { width: 164px; }
+  .public-platform-header .mobile-nav summary,
+  .workspace-mobile-menu summary { min-width: 62px; }
+}
+
 /* Atlas knowledge and retrieval layer. The real CT series can replace the
    demonstration canvas without changing these structure workflows. */
 .mobile-atlas-index { display: none; }
