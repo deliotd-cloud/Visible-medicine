@@ -543,7 +543,13 @@ body.splash-open { overflow: hidden; }
 .primary-nav-column a[aria-current="page"] { background: var(--panel); color: var(--teal); outline: none; }
 .primary-nav-column a b { color: inherit; font-size: 12px; line-height: 1.25; }
 .primary-nav-column a small { max-width: 210px; color: var(--secondary-text); font-size: 9px; line-height: 1.4; }
-.primary-nav-group[data-nav-section="educators"] .primary-nav-columns { --navigation-columns: 3; }
+.primary-nav-workspace { margin-left: 4px; padding-left: 5px; border-left: 1px solid color-mix(in srgb,var(--teal) 30%,var(--line)); }
+.primary-nav-workspace > span { color: var(--teal); }
+.primary-nav-workspace a { background: color-mix(in srgb,var(--panel) 72%,white); }
+.primary-nav-workspace a:hover,
+.primary-nav-workspace a:focus-visible { background: #dfeeea; }
+.primary-nav-group[data-nav-section="courses"] .primary-nav-columns,
+.primary-nav-group[data-nav-section="educators"] .primary-nav-columns,
 .primary-nav-group[data-nav-section="institutions"] .primary-nav-columns { --navigation-columns: 2; }
 
 @media (max-width: 1000px) {
@@ -555,6 +561,11 @@ body.splash-open { overflow: hidden; }
   .mobile-nav-group[open] > summary span:last-child { transform: rotate(180deg); }
   .mobile-nav-group > div { margin: 2px 8px 8px 12px; padding-left: 8px; display: grid; border-left: 1px solid color-mix(in srgb,var(--teal) 28%,var(--line)); }
   .mobile-nav-group > div a { min-height: 42px; padding-left: 11px; font-size: 12px; }
+  .mobile-nav-subgroup { display: grid; }
+  .mobile-nav-subgroup > span { padding: 10px 11px 4px; color: var(--secondary-text); font: 700 8px/1 var(--font-geist-mono),monospace; letter-spacing: .06em; text-transform: uppercase; }
+  .mobile-nav-workspace { margin-top: 5px; padding-top: 5px; border-top: 1px solid var(--line); }
+  .mobile-nav-workspace > span { color: var(--teal); }
+  .mobile-nav-workspace a { background: color-mix(in srgb,var(--panel) 72%,white); }
 }
 
 /* Display headings always retain a readable hand-off to their supporting copy. */

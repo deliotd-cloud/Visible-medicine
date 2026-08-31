@@ -18,6 +18,7 @@ type NavigationSection = {
   description: string;
   groups: Array<{
     label: string;
+    workspace?: boolean;
     links: NavigationLink[];
   }>;
 };
@@ -46,11 +47,17 @@ const navigationSections: NavigationSection[] = [
     description: "Find courses, join teaching and continue your learning.",
     groups: [
       {
-        label: "Learn",
+        label: "Explore courses",
         links: [
           { label: "Browse courses", href: "/courses", description: "Explore available self-paced and taught courses." },
-          { label: "My Learning", href: "/my-learning", description: "Continue courses, revision and saved atlas work." },
           { label: "Join a course", href: "/join", description: "Use an invitation or institution access code." },
+        ],
+      },
+      {
+        label: "Your workspace",
+        workspace: true,
+        links: [
+          { label: "Open My Learning", href: "/my-learning", description: "Sign in to continue courses, revision and saved atlas work." },
         ],
       },
     ],
@@ -62,25 +69,18 @@ const navigationSections: NavigationSection[] = [
     description: "Create, organise, publish and improve imaging education.",
     groups: [
       {
-        label: "Start",
+        label: "Explore teaching",
         links: [
           { label: "Educator overview", href: "/studio", description: "See how Visible Medicine supports educators." },
-          { label: "Studio workspace", href: "/studio/workspace", description: "Open your authoring and delivery dashboard." },
+          { label: "Plans", href: "/pricing", description: "Review educator and institution options." },
+          { label: "Embedded delivery", href: "/embed", description: "Understand controlled delivery within approved learning sites." },
         ],
       },
       {
-        label: "Build and deliver",
+        label: "Your workspace",
+        workspace: true,
         links: [
-          { label: "Courses", href: "/studio/courses", description: "Create course pathways and releases." },
-          { label: "Workbooks", href: "/studio/workbooks", description: "Build imaging cases, questions and presentations." },
-          { label: "Cohorts", href: "/studio/cohorts", description: "Organise learners and teaching groups." },
-        ],
-      },
-      {
-        label: "Govern and improve",
-        links: [
-          { label: "Publishing", href: "/studio/publishing", description: "Review content and control publication." },
-          { label: "Analytics", href: "/studio/analytics", description: "Understand engagement and completion." },
+          { label: "Open Studio workspace", href: "/studio/workspace", description: "Sign in to create courses, workbooks and cohorts, then publish and review performance." },
         ],
       },
     ],
@@ -100,12 +100,10 @@ const navigationSections: NavigationSection[] = [
         ],
       },
       {
-        label: "Manage",
+        label: "Your workspace",
+        workspace: true,
         links: [
-          { label: "Institution workspace", href: "/workspace", description: "Open the organisation dashboard." },
-          { label: "People and roles", href: "/workspace/people", description: "Manage membership, roles and invitations." },
-          { label: "Pilot readiness", href: "/workspace/readiness", description: "Record evidence and implementation gates." },
-          { label: "Controls and integrations", href: "/workspace/control", description: "Configure identity, publishing and delivery." },
+          { label: "Open Institution workspace", href: "/workspace", description: "Sign in to manage people, readiness, controls and integrations." },
         ],
       },
     ],
@@ -198,7 +196,7 @@ export function SiteHeader() {
                 </div>
                 <div className="primary-nav-columns">
                   {section.groups.map((group) => (
-                    <div className="primary-nav-column" key={group.label}>
+                    <div className={`primary-nav-column${group.workspace ? " primary-nav-workspace" : ""}`} key={group.label}>
                       <span>{group.label}</span>
                       {group.links.map((link) => (
                         <Link href={link.href} key={link.href} onClick={() => setOpenMenu(null)}>
@@ -264,9 +262,14 @@ function MobileNavigationGroup({
       <summary aria-label={`Show ${section.label} links`}>
         <span>{section.label}</span><span aria-hidden="true">⌄</span>
       </summary>
-      <div>
-        {section.groups.flatMap((group) => group.links).map((link) => (
-          <Link aria-current={isActive(link.href) ? "page" : undefined} href={link.href} key={link.href} onClick={onNavigate}>{link.label}<span aria-hidden="true">→</span></Link>
+      <div className="mobile-nav-group-content">
+        {section.groups.map((group) => (
+          <div className={`mobile-nav-subgroup${group.workspace ? " mobile-nav-workspace" : ""}`} key={group.label}>
+            <span>{group.label}</span>
+            {group.links.map((link) => (
+              <Link aria-current={isActive(link.href) ? "page" : undefined} href={link.href} key={link.href} onClick={onNavigate}>{link.label}<span aria-hidden="true">→</span></Link>
+            ))}
+          </div>
         ))}
       </div>
     </details>
