@@ -29,13 +29,14 @@ export type ReleaseReadinessInput = {
 };
 
 export const PILOT_READINESS_GATES = [
-  { key: "identity", label: "Education identity", owner: "Platform", evidence: "Approved identity adapter, lifecycle and role mapping" },
+  { key: "identity", label: "Education identity", owner: "Platform", evidence: "Approved identity adapter, account lifecycle, versioned consent and least-privilege role mapping" },
   { key: "tenancy", label: "Institution isolation", owner: "Security", evidence: "Organisation-scoped authorization tests and review" },
   { key: "content", label: "Medical content", owner: "Clinical publishing", evidence: "Rights, de-identification and specialist review evidence" },
   { key: "privacy", label: "Privacy and learner rights", owner: "Governance", evidence: "Approved notices, retention, export and deletion process" },
   { key: "accessibility", label: "Accessibility", owner: "Product", evidence: "Keyboard, contrast, assistive-technology and learner review" },
   { key: "security", label: "Security", owner: "Engineering", evidence: "Threat review, dependency review, rate limits and incident plan" },
   { key: "operations", label: "Operations", owner: "Operations", evidence: "Monitoring, support, backup, restore and withdrawal exercise" },
+  { key: "email", label: "Transactional email", owner: "Platform operations", evidence: "Verified sender domain, provider credentials, invitation delivery and bounce/support procedure" },
   { key: "commercial", label: "Commercial operations", owner: "Commercial", evidence: "Approved contract, tax, invoice, refund and support process" },
 ] as const;
 

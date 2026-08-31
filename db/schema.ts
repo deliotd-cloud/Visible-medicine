@@ -5,6 +5,32 @@ export const users = sqliteTable("users", {
   id: text("id").primaryKey(), externalSubject: text("external_subject").notNull(), email: text("email").notNull(), displayName: text("display_name").notNull(), roles: text("roles").notNull(), createdAt: text("created_at").notNull(), lastSeenAt: text("last_seen_at").notNull(),
 }, (table) => [uniqueIndex("idx_users_external_subject").on(table.externalSubject)]);
 
+export const accountSecurityProfiles = sqliteTable("account_security_profiles", {
+  userId: text("user_id").primaryKey().references(() => users.id),
+  status: text("status").notNull(),
+  identityProvider: text("identity_provider").notNull(),
+  registeredAt: text("registered_at").notNull(),
+  lastAuthenticatedAt: text("last_authenticated_at").notNull(),
+  termsVersion: text("terms_version").notNull(),
+  privacyVersion: text("privacy_version").notNull(),
+  termsAcceptedAt: text("terms_accepted_at"),
+  privacyAcceptedAt: text("privacy_accepted_at"),
+  updatedAt: text("updated_at").notNull(),
+}, (table) => [index("idx_account_security_status").on(table.status)]);
+
+export const accountConsents = sqliteTable("account_consents", {
+  id: text("id").primaryKey(),
+  userId: text("user_id").notNull().references(() => users.id),
+  documentKey: text("document_key").notNull(),
+  documentVersion: text("document_version").notNull(),
+  decision: text("decision").notNull(),
+  source: text("source").notNull(),
+  recordedAt: text("recorded_at").notNull(),
+}, (table) => [
+  uniqueIndex("idx_account_consents_user_document_version").on(table.userId, table.documentKey, table.documentVersion),
+  index("idx_account_consents_user_recorded").on(table.userId, table.recordedAt),
+]);
+
 export const courses = sqliteTable("courses", {
   id: text("id").primaryKey(), code: text("code").notNull(), title: text("title").notNull(), description: text("description").notNull(), status: text("status").notNull(),
 }, (table) => [uniqueIndex("idx_courses_code").on(table.code)]);

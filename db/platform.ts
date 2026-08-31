@@ -126,11 +126,13 @@ export function ensurePlatformSchema() {
 }
 
 export async function getPlatformSnapshot(auth: AuthContext): Promise<PlatformSnapshot> {
-  const { roles } = await ensureEducationUser(auth);
+  const { roles, bootstrapDefaultOrganization } = await ensureEducationUser(auth);
   await ensurePlatformSchema();
   const now = new Date().toISOString();
-  const membershipRole = roles.includes("administrator") ? "owner" : roles.includes("instructor") ? "educator" : "learner";
-  await env.DB.prepare(`INSERT INTO organization_memberships (organization_id, user_id, role, status, joined_at) VALUES (?, ?, ?, ?, ?) ON CONFLICT(organization_id, user_id) DO UPDATE SET role = excluded.role, status = 'active'`).bind("org-elivion-pilot", auth.userId, membershipRole, "active", now).run();
+  if (bootstrapDefaultOrganization) {
+    const membershipRole = roles.includes("administrator") ? "owner" : roles.includes("instructor") ? "educator" : "learner";
+    await env.DB.prepare(`INSERT INTO organization_memberships (organization_id, user_id, role, status, joined_at) VALUES (?, ?, ?, ?, ?) ON CONFLICT(organization_id, user_id) DO UPDATE SET role = excluded.role, status = 'active'`).bind("org-elivion-pilot", auth.userId, membershipRole, "active", now).run();
+  }
 
   const organization = await env.DB.prepare(`SELECT o.id, o.slug, o.name, o.kind, m.role FROM organizations o JOIN organization_memberships m ON m.organization_id = o.id WHERE m.user_id = ? AND m.status = 'active' ORDER BY o.created_at LIMIT 1`).bind(auth.userId).first<Record<string, unknown>>();
   if (!organization) throw new Error("No active Visible Medicine organization is available for this account.");

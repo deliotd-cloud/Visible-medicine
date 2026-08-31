@@ -34,7 +34,8 @@ function isImmersiveRoute(pathname: string) {
 function isWorkspaceRoute(pathname: string) {
   return pathname === "/my-learning" ||
     pathname.startsWith("/workspace") ||
-    pathname.startsWith("/account") ||
+    pathname === "/account" ||
+    pathname.startsWith("/account/") ||
     isStudioRoute(pathname);
 }
 

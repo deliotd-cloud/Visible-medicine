@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { LearnerProfile } from "@/lib/education-platform";
+import { CURRENT_PRIVACY_VERSION, CURRENT_TERMS_VERSION } from "@/lib/account-policy";
 
 const interests = ["CT", "MRI", "Plain radiography", "Ultrasound", "Radiological anatomy", "Neuroimaging", "Chest imaging", "Abdominal imaging", "Musculoskeletal imaging", "Pathology"];
 
@@ -21,7 +22,7 @@ export function LearnerOnboardingForm({ profile, returnTo = "/my-learning" }: { 
           action: "save-profile",
           trainingStage: form.get("trainingStage"), discipline: form.get("discipline"),
           institutionName: form.get("institutionName"), countryCode: form.get("countryCode"), timezone: form.get("timezone"),
-          interests: form.getAll("interests"), acceptTerms: form.get("acceptTerms") === "on", marketingOptIn: form.get("marketingOptIn") === "on",
+          interests: form.getAll("interests"), acceptTerms: form.get("acceptTerms") === "on", acceptPrivacy: form.get("acceptPrivacy") === "on", marketingOptIn: form.get("marketingOptIn") === "on",
         }),
       });
       const result = await response.json() as { error?: string };
@@ -38,7 +39,7 @@ export function LearnerOnboardingForm({ profile, returnTo = "/my-learning" }: { 
       <label><span>Primary discipline</span><select name="discipline" defaultValue={profile.discipline} required><option value="">Choose discipline</option><option>Radiology</option><option>Pathology</option><option>Medicine</option><option>Surgery</option><option>Emergency medicine</option><option>Radiography</option><option>Biomedical science</option><option>Medical education</option><option>Other</option></select></label>
     </div><div className="two-fields"><label><span>Institution (optional)</span><input name="institutionName" defaultValue={profile.institutionName} placeholder="University, hospital or research group" /></label><label><span>Country code</span><input name="countryCode" defaultValue={profile.countryCode || "GB"} maxLength={2} required /></label></div><label><span>Timezone</span><input name="timezone" defaultValue={profile.timezone || "Europe/London"} required /></label></div>
     <fieldset className="interest-picker"><legend>02 · What would you like to learn?</legend><p>Select at least one. These choices personalise course discovery; they do not affect clinical access.</p><div>{interests.map((interest) => <label key={interest}><input type="checkbox" name="interests" value={interest} defaultChecked={profile.interests.includes(interest)} /><span>{interest}</span></label>)}</div></fieldset>
-    <div className="onboarding-consent"><label><input type="checkbox" name="acceptTerms" defaultChecked={Boolean(profile.termsAcceptedAt)} required /><span><b>Education-only account</b>I understand this platform is for education and research only and must not be used for diagnosis, reporting, patient care or clinical decisions.</span></label><label><input type="checkbox" name="marketingOptIn" defaultChecked={profile.marketingOptIn} /><span><b>Product updates (optional)</b>Send me occasional Visible Medicine course and platform updates.</span></label></div>
+    <div className="onboarding-consent"><label><input type="checkbox" name="acceptTerms" defaultChecked={Boolean(profile.termsAcceptedAt) && profile.termsVersion === CURRENT_TERMS_VERSION} required /><span><b>Education-only terms</b>I accept the <a href="/terms" target="_blank" rel="noreferrer">current platform terms</a> and understand this service must not be used for diagnosis, reporting, patient care or clinical decisions.</span></label><label><input type="checkbox" name="acceptPrivacy" defaultChecked={Boolean(profile.privacyAcceptedAt) && profile.privacyVersion === CURRENT_PRIVACY_VERSION} required /><span><b>Privacy notice</b>I have read the <a href="/privacy" target="_blank" rel="noreferrer">current privacy notice</a> describing the education account, progress and learner-rights data held by the platform.</span></label><label><input type="checkbox" name="marketingOptIn" defaultChecked={profile.marketingOptIn} /><span><b>Product updates (optional)</b>Send me occasional Visible Medicine course and platform updates.</span></label></div>
     {error && <p className="form-error" role="alert">{error}</p>}
     <button className="primary-button" disabled={busy}>{busy ? "Saving profile…" : profile.onboardingStatus === "complete" ? "Save learner profile" : "Create learner profile"}<span>→</span></button>
   </form>;

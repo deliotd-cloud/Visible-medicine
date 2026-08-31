@@ -4,7 +4,7 @@ import Link from "next/link";
 import { getChatGPTUser } from "../../chatgpt-auth";
 import { CourseEnrolmentControl } from "@/components/CourseEnrolmentControl";
 import { CourseProgressControl } from "@/components/CourseProgressControl";
-import { getCatalogueCourse, getCatalogueCourseWorkbooks } from "@/lib/education-platform";
+import { getCatalogueCourse, getCatalogueCourseWorkbooks, getLearnerProfile } from "@/lib/education-platform";
 import { liveClassroomHref } from "@/lib/live-classroom-links";
 
 export const dynamic = "force-dynamic";
@@ -29,12 +29,12 @@ export default async function CourseDetail({ params }: PageProps) {
   const auth = user ? { userId: `edu:${user.userId}`, externalSubject: `sites:${user.userId}`, email: user.email, displayName: user.displayName } : null;
   const course = await getCatalogueCourse(slug, auth);
   if (!course) notFound();
-  const workbooks = await getCatalogueCourseWorkbooks(course.id);
+  const [workbooks, profile] = await Promise.all([getCatalogueCourseWorkbooks(course.id), auth ? getLearnerProfile(auth) : Promise.resolve(null)]);
   return (
     <main className="inner-page course-detail">
       <section className="course-detail-hero">
         <div><p className="eyebrow"><span /> {course.publisherKind === "official" ? "Visible Medicine official course" : "Institution-published course"}</p><h1>{course.title}</h1><p>{course.summary}</p><div className="module-facts"><span>{course.level}</span><span>{course.workbookCount} {course.workbookCount === 1 ? "workbook" : "workbooks"}</span><span>{course.duration}</span><span>{course.publisher}</span></div></div>
-        <div className={`course-launch-card${course.enrolled && course.liveWorkbookId ? " live" : ""}`}><span>{course.enrolled && course.liveWorkbookId ? "Live teaching now" : course.enrolled ? "Your course" : "Course enrolment"}</span><b>{course.enrolled && course.liveWorkbookId ? "Your instructor is presenting this course" : accessDescription(course.accessModel, course.priceMinor, course.currency)}</b><p>{course.enrolled && course.liveWorkbookId ? "Join the current Follow Me session and open the video classroom from the same imaging workspace." : course.enrolled ? "Continue in the course-specific teaching workspace. Your allocated workbooks and progress are also available from My Learning." : "Create an education-only learner profile, then enrol through the access route chosen by the publisher."}</p>{course.enrolled && course.liveWorkbookId ? <Link className="primary-button live-course-button" href={liveClassroomHref(course.slug, course.liveWorkbookId)}>Join live classroom <span>→</span></Link> : <CourseEnrolmentControl releaseId={course.id} slug={course.slug} accessModel={course.accessModel} enrolled={course.enrolled} firstWorkbookId={course.firstWorkbookId} signedIn={Boolean(user)} enrolmentOpen={course.enrolmentOpen} />}{course.enrolled && <CourseProgressControl courseSlug={course.slug} />}</div>
+        <div className={`course-launch-card${course.enrolled && course.liveWorkbookId ? " live" : ""}`}><span>{course.enrolled && course.liveWorkbookId ? "Live teaching now" : course.enrolled ? "Your course" : "Course enrolment"}</span><b>{course.enrolled && course.liveWorkbookId ? "Your instructor is presenting this course" : accessDescription(course.accessModel, course.priceMinor, course.currency)}</b><p>{course.enrolled && course.liveWorkbookId ? "Join the current Follow Me session and open the video classroom from the same imaging workspace." : course.enrolled ? "Continue in the course-specific teaching workspace. Your allocated workbooks and progress are also available from My Learning." : "Create an education-only learner profile, then enrol through the access route chosen by the publisher."}</p>{course.enrolled && course.liveWorkbookId ? <Link className="primary-button live-course-button" href={liveClassroomHref(course.slug, course.liveWorkbookId)}>Join live classroom <span>→</span></Link> : <CourseEnrolmentControl releaseId={course.id} slug={course.slug} accessModel={course.accessModel} enrolled={course.enrolled} firstWorkbookId={course.firstWorkbookId} signedIn={Boolean(user)} profileComplete={profile?.onboardingStatus === "complete" && profile.accountStatus === "active"} enrolmentOpen={course.enrolmentOpen} />}{course.enrolled && <CourseProgressControl courseSlug={course.slug} />}</div>
       </section>
       <section className="course-detail-grid">
         <div><p className="section-index">Learning outcomes</p><h2>What you will be able to do</h2><ol>{course.outcomes.map((outcome, index) => <li key={outcome}><span>{String(index + 1).padStart(2, "0")}</span>{outcome}</li>)}</ol></div>

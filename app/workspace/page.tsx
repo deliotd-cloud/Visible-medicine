@@ -4,14 +4,17 @@ import { redirect } from "next/navigation";
 import { requireChatGPTUser } from "../chatgpt-auth";
 import { getPlatformSnapshot } from "../../db/platform";
 import { EmbedOriginManager } from "../../components/EmbedOriginManager";
+import { ensureEducationUser } from "@/db/bootstrap";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = { title: "Workspace", description: "Your Visible Medicine institution, learning and publishing workspace.", robots: { index: false, follow: false } };
 
 export default async function WorkspacePage() {
   const user = await requireChatGPTUser("/workspace");
-  const snapshot = await getPlatformSnapshot({ userId: `edu:${user.userId}`, externalSubject: `sites:${user.userId}`, email: user.email, displayName: user.displayName });
-  if (!snapshot.educationRoles.some((role) => ["instructor", "examiner", "administrator"].includes(role))) redirect("/my-learning");
+  const auth = { userId: `edu:${user.userId}`, externalSubject: `sites:${user.userId}`, email: user.email, displayName: user.displayName };
+  const account = await ensureEducationUser(auth);
+  if (!account.roles.some((role) => ["instructor", "examiner", "administrator"].includes(role))) redirect("/my-learning");
+  const snapshot = await getPlatformSnapshot(auth);
   const storageGb = Math.round(snapshot.entitlement.storageBytes / 1073741824);
   return (
     <main className="inner-page workspace-page">

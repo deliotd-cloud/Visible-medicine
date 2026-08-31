@@ -4,6 +4,14 @@ import { ensurePlatformSchema, getPlatformSnapshot } from "@/db/platform";
 import type { AuthContext } from "@/lib/auth";
 import { sha256 } from "@/lib/domain";
 import { studioTemplate } from "@/lib/studio-templates";
+import {
+  accountMayWrite,
+  accountWriteBlockReason,
+  CURRENT_PRIVACY_VERSION,
+  CURRENT_TERMS_VERSION,
+  learnerOnboardingStatus,
+} from "@/lib/account-policy";
+import { courseEnrolmentEmail, getEmailProviderConfig, sendTransactionalEmail } from "@/lib/transactional-email";
 
 type Row = Record<string, unknown>;
 
@@ -51,6 +59,11 @@ export type LearnerProfile = {
   onboardingStatus: string;
   marketingOptIn: boolean;
   termsAcceptedAt: string | null;
+  privacyAcceptedAt: string | null;
+  termsVersion: string;
+  privacyVersion: string;
+  accountStatus: string;
+  identityProvider: string;
   updatedAt: string | null;
 };
 
@@ -264,9 +277,17 @@ export async function getInvitationCourse(codeValue: unknown, auth?: AuthContext
 }
 
 export async function getLearnerProfile(auth: AuthContext): Promise<LearnerProfile> {
-  await ensureEducationUser(auth);
+  const account = await ensureEducationUser(auth);
   await ensurePlatformSchema();
-  const row = await env.DB.prepare(`SELECT * FROM learner_profiles WHERE user_id=?`).bind(auth.userId).first<Row>();
+  if (!account.bootstrapDefaultOrganization) {
+    await env.DB.prepare(`DELETE FROM organization_memberships WHERE organization_id='org-elivion-pilot' AND user_id=? AND role='learner' AND NOT EXISTS (SELECT 1 FROM organization_invitations oi WHERE oi.organization_id=organization_memberships.organization_id AND oi.accepted_by=organization_memberships.user_id AND oi.status='accepted')`).bind(auth.userId).run();
+  }
+  const row = await env.DB.prepare(`SELECT lp.*, asp.status AS account_status, asp.identity_provider, asp.terms_version, asp.privacy_version, asp.terms_accepted_at AS current_terms_accepted_at, asp.privacy_accepted_at FROM account_security_profiles asp LEFT JOIN learner_profiles lp ON lp.user_id=asp.user_id WHERE asp.user_id=?`).bind(auth.userId).first<Row>();
+  const profileStatus = row?.onboarding_status ? String(row.onboarding_status) : "not-started";
+  const termsAcceptedAt = row?.current_terms_accepted_at ? String(row.current_terms_accepted_at) : row?.terms_accepted_at ? String(row.terms_accepted_at) : null;
+  const privacyAcceptedAt = row?.privacy_accepted_at ? String(row.privacy_accepted_at) : null;
+  const termsVersion = row?.terms_version ? String(row.terms_version) : "";
+  const privacyVersion = row?.privacy_version ? String(row.privacy_version) : "";
   return {
     trainingStage: row ? String(row.training_stage) : "",
     discipline: row ? String(row.discipline) : "",
@@ -274,46 +295,66 @@ export async function getLearnerProfile(auth: AuthContext): Promise<LearnerProfi
     institutionName: row ? String(row.institution_name) : "",
     countryCode: row ? String(row.country_code) : "GB",
     timezone: row ? String(row.timezone) : "Europe/London",
-    onboardingStatus: row ? String(row.onboarding_status) : "not-started",
+    onboardingStatus: learnerOnboardingStatus({ profileStatus, termsVersion, privacyVersion, termsAcceptedAt, privacyAcceptedAt }),
     marketingOptIn: Boolean(row?.marketing_opt_in),
-    termsAcceptedAt: row?.terms_accepted_at ? String(row.terms_accepted_at) : null,
+    termsAcceptedAt,
+    privacyAcceptedAt,
+    termsVersion,
+    privacyVersion,
+    accountStatus: row?.account_status ? String(row.account_status) : "active",
+    identityProvider: row?.identity_provider ? String(row.identity_provider) : "external-identity",
     updatedAt: row?.updated_at ? String(row.updated_at) : null,
   };
 }
 
 export async function saveLearnerProfile(auth: AuthContext, input: Record<string, unknown>) {
-  await ensureEducationUser(auth);
+  const account = await ensureEducationUser(auth);
   await ensurePlatformSchema();
+  if (!accountMayWrite(account.status))
+    throw new EducationPlatformError(accountWriteBlockReason(account.status) ?? "This account cannot be changed.", 403);
   const trainingStage = boundedText(input.trainingStage, 80);
   const discipline = boundedText(input.discipline, 80);
   const interests = stringList(input.interests, 12, 80);
   const institutionName = boundedText(input.institutionName, 140);
   const countryCode = boundedText(input.countryCode, 2).toUpperCase() || "GB";
   const timezone = boundedText(input.timezone, 80) || "Europe/London";
-  const accepted = input.acceptTerms === true;
+  const acceptedTerms = input.acceptTerms === true;
+  const acceptedPrivacy = input.acceptPrivacy === true;
   if (!trainingStage || !discipline || interests.length === 0)
     throw new EducationPlatformError("Choose your learning stage, discipline and at least one learning interest.", 422);
   if (!/^[A-Z]{2}$/.test(countryCode)) throw new EducationPlatformError("Choose a valid country code.", 422);
-  const current = await env.DB.prepare(`SELECT terms_accepted_at FROM learner_profiles WHERE user_id=?`).bind(auth.userId).first<{ terms_accepted_at: string | null }>();
-  if (!current?.terms_accepted_at && !accepted)
-    throw new EducationPlatformError("Accept the education-only terms to finish your learner profile.", 422);
+  const current = await env.DB.prepare(`SELECT terms_version, privacy_version, terms_accepted_at, privacy_accepted_at FROM account_security_profiles WHERE user_id=?`).bind(auth.userId).first<{ terms_version: string; privacy_version: string; terms_accepted_at: string | null; privacy_accepted_at: string | null }>();
+  const termsCurrent = current?.terms_version === CURRENT_TERMS_VERSION && Boolean(current.terms_accepted_at);
+  const privacyCurrent = current?.privacy_version === CURRENT_PRIVACY_VERSION && Boolean(current.privacy_accepted_at);
+  if (!termsCurrent && !acceptedTerms)
+    throw new EducationPlatformError("Accept the current education-only terms to finish your learner profile.", 422);
+  if (!privacyCurrent && !acceptedPrivacy)
+    throw new EducationPlatformError("Acknowledge the current privacy notice to finish your learner profile.", 422);
   const now = new Date().toISOString();
-  const termsAcceptedAt = current?.terms_accepted_at ?? now;
+  const termsAcceptedAt = termsCurrent ? current?.terms_accepted_at ?? now : now;
+  const privacyAcceptedAt = privacyCurrent ? current?.privacy_accepted_at ?? now : now;
   await env.DB.prepare(
     `INSERT INTO learner_profiles (user_id, training_stage, discipline, interests_json, institution_name, country_code, timezone, onboarding_status, terms_accepted_at, marketing_opt_in, updated_at)
      VALUES (?, ?, ?, ?, ?, ?, ?, 'complete', ?, ?, ?)
      ON CONFLICT(user_id) DO UPDATE SET training_stage=excluded.training_stage, discipline=excluded.discipline, interests_json=excluded.interests_json, institution_name=excluded.institution_name, country_code=excluded.country_code, timezone=excluded.timezone, onboarding_status='complete', terms_accepted_at=excluded.terms_accepted_at, marketing_opt_in=excluded.marketing_opt_in, updated_at=excluded.updated_at`,
   ).bind(auth.userId, trainingStage, discipline, JSON.stringify(interests), institutionName, countryCode, timezone, termsAcceptedAt, input.marketingOptIn === true ? 1 : 0, now).run();
-  await appendAudit(auth.userId, "learner.profile-completed", "learner-profile", auth.userId, "success", "education-only=true");
+  await env.DB.batch([
+    env.DB.prepare(`UPDATE account_security_profiles SET terms_version=?, privacy_version=?, terms_accepted_at=?, privacy_accepted_at=?, updated_at=? WHERE user_id=?`).bind(CURRENT_TERMS_VERSION, CURRENT_PRIVACY_VERSION, termsAcceptedAt, privacyAcceptedAt, now, auth.userId),
+    env.DB.prepare(`INSERT OR IGNORE INTO account_consents (id, user_id, document_key, document_version, decision, source, recorded_at) VALUES (?, ?, 'education-terms', ?, 'accepted', 'learner-onboarding', ?)`).bind(crypto.randomUUID(), auth.userId, CURRENT_TERMS_VERSION, termsAcceptedAt),
+    env.DB.prepare(`INSERT OR IGNORE INTO account_consents (id, user_id, document_key, document_version, decision, source, recorded_at) VALUES (?, ?, 'privacy-notice', ?, 'acknowledged', 'learner-onboarding', ?)`).bind(crypto.randomUUID(), auth.userId, CURRENT_PRIVACY_VERSION, privacyAcceptedAt),
+  ]);
+  await appendAudit(auth.userId, "learner.profile-completed", "learner-profile", auth.userId, "success", `education-only=true;terms=${CURRENT_TERMS_VERSION};privacy=${CURRENT_PRIVACY_VERSION}`);
   return getLearnerProfile(auth);
 }
 
 export async function enrolInCourse(auth: AuthContext, releaseIdValue: unknown, invitationCodeValue?: unknown) {
-  await ensureEducationUser(auth);
+  const account = await ensureEducationUser(auth);
   await ensurePlatformSchema();
+  if (!accountMayWrite(account.status))
+    throw new EducationPlatformError(accountWriteBlockReason(account.status) ?? "This account cannot enrol in courses.", 403);
   const profile = await getLearnerProfile(auth);
   if (profile.onboardingStatus !== "complete")
-    throw new EducationPlatformError("Complete your learner profile before enrolling.", 409);
+    throw new EducationPlatformError(profile.onboardingStatus === "consent-required" ? "Review the current education terms and privacy notice before enrolling." : "Complete your learner profile before enrolling.", 409);
   const releaseId = boundedText(releaseIdValue, 120);
   const release = await env.DB.prepare(`SELECT * FROM course_releases WHERE id=? AND status='published'`).bind(releaseId).first<Row>();
   if (!release) throw new EducationPlatformError("This course release is not available.", 404);
@@ -353,6 +394,14 @@ export async function enrolInCourse(auth: AuthContext, releaseIdValue: unknown, 
   }
   if (invitationId) await env.DB.prepare(`UPDATE course_invitations SET uses=uses+1 WHERE id=? AND uses < max_uses`).bind(invitationId).run();
   await appendAudit(auth.userId, "course.self-enrolled", "course-release", releaseId, "success", `access=${accessModel};workbooks=${workbookRows.results.length}`);
+  const outboxId = crypto.randomUUID();
+  const emailConfig = getEmailProviderConfig();
+  const coursePath = `/courses/${String(release.slug)}`;
+  const courseUrl = emailConfig.publicSiteUrl ? `${emailConfig.publicSiteUrl}${coursePath}` : coursePath;
+  const message = courseEnrolmentEmail({ courseTitle: String(release.title), courseUrl });
+  await env.DB.prepare(`INSERT INTO notification_outbox (id, organization_id, recipient, template, payload_json, status, reason, created_at, sent_at) VALUES (?, ?, ?, 'course-enrolment', ?, 'held', 'EMAIL_DELIVERY_PENDING', ?, NULL)`).bind(outboxId, String(release.organization_id), auth.email, JSON.stringify({ releaseId, courseSlug: String(release.slug) }), now).run();
+  const delivery = await sendTransactionalEmail({ to: auth.email, ...message });
+  await env.DB.prepare(`UPDATE notification_outbox SET status=?, reason=?, sent_at=? WHERE id=?`).bind(delivery.status, delivery.reason, delivery.sentAt, outboxId).run();
   return { slug: String(release.slug), workbookId: workbookRows.results[0]?.workbook_id ?? null };
 }
 

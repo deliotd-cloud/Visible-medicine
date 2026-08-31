@@ -6,6 +6,8 @@ import {
   getLearnerProfile,
   saveLearnerProfile,
 } from "@/lib/education-platform";
+import { enforceRateLimit } from "@/lib/institution-operations";
+import { isJsonRequest, isSameOriginMutation } from "@/lib/request-security";
 
 export const dynamic = "force-dynamic";
 
@@ -31,9 +33,12 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
+    if (!isSameOriginMutation(request)) throw new EducationPlatformError("Cross-origin account changes are not allowed.", 403);
+    if (!isJsonRequest(request)) throw new EducationPlatformError("Send account changes as JSON.", 415);
     if (Number(request.headers.get("content-length") ?? 0) > 24_000) throw new EducationPlatformError("The request is too large.", 413);
     const input = await request.json() as Record<string, unknown>;
     const auth = await authenticate();
+    await enforceRateLimit(auth.userId, "learner-account", 20, 60);
     if (input.action === "save-profile") {
       const profile = await saveLearnerProfile(auth, input);
       return Response.json({ profile }, { headers: { "Cache-Control": "private, no-store" } });

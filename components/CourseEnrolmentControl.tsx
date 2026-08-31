@@ -3,15 +3,16 @@
 import Link from "next/link";
 import { useState } from "react";
 
-type Props = { releaseId: string; slug: string; accessModel: string; enrolled: boolean; firstWorkbookId: string | null; signedIn: boolean; enrolmentOpen: boolean; invitationCode?: string };
+type Props = { releaseId: string; slug: string; accessModel: string; enrolled: boolean; firstWorkbookId: string | null; signedIn: boolean; profileComplete?: boolean; enrolmentOpen: boolean; invitationCode?: string };
 
-export function CourseEnrolmentControl({ releaseId, slug, accessModel, enrolled, firstWorkbookId, signedIn, enrolmentOpen, invitationCode: initialInvitationCode = "" }: Props) {
+export function CourseEnrolmentControl({ releaseId, slug, accessModel, enrolled, firstWorkbookId, signedIn, profileComplete = false, enrolmentOpen, invitationCode: initialInvitationCode = "" }: Props) {
   const [invitationCode, setInvitationCode] = useState(initialInvitationCode);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const learningHref = firstWorkbookId ? `/learn/${slug}/${encodeURIComponent(firstWorkbookId)}` : "/my-learning";
   if (enrolled) return <div className="course-enrolment-control"><Link className="primary-button" href={learningHref}>Continue course <span>→</span></Link><small>Available in My Learning</small></div>;
   if (!signedIn) return <div className="course-enrolment-control"><Link className="primary-button" href={`/join?course=${encodeURIComponent(slug)}`}>Create learner profile <span>→</span></Link><small>Sign in, complete your education profile and enrol.</small></div>;
+  if (!profileComplete) return <div className="course-enrolment-control"><Link className="primary-button" href={`/onboarding?returnTo=${encodeURIComponent(`/courses/${slug}`)}`}>Complete learner profile <span>→</span></Link><small>Review your profile, education terms and privacy notice before enrolling.</small></div>;
   if (!enrolmentOpen) return <div className="course-enrolment-control"><button className="primary-button" disabled>Enrolment closed</button></div>;
   if (accessModel === "paid") return <div className="course-enrolment-control"><button className="primary-button" disabled>Checkout coming after private evaluation</button><small>No payment will be taken on this preview.</small></div>;
 

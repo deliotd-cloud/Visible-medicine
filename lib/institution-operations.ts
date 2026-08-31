@@ -10,6 +10,7 @@ import {
   PILOT_READINESS_GATES,
   READINESS_STATUSES,
 } from "@/lib/pilot-readiness";
+import { emailProviderReadiness, getEmailProviderConfig, organizationInvitationEmail, sendTransactionalEmail } from "@/lib/transactional-email";
 
 type Row = Record<string, string | number | null>;
 
@@ -101,21 +102,31 @@ export async function createOrganizationInvitations(auth: AuthContext, input: Re
   const validDays = integer(input.validDays, 1, 90, 14);
   const now = new Date();
   const expiresAt = new Date(now.getTime() + validDays * 86_400_000).toISOString();
-  const created: Array<{ email: string; role: string; invitationPath: string }> = [];
+  const created: Array<{ email: string; role: string; invitationPath: string; emailDelivery: string }> = [];
+  const deliveryCounts: Record<string, number> = { sent: 0, held: 0, failed: 0 };
+  const emailConfig = getEmailProviderConfig();
   for (const item of roster) {
     const token = `ELV-ORG-${crypto.randomUUID().replace(/-/g, "").slice(0, 16).toUpperCase()}`;
     const tokenHash = await sha256(token);
     const id = crypto.randomUUID();
+    const outboxId = crypto.randomUUID();
     const createdAt = now.toISOString();
+    const invitationPath = `/join/institution/${token}`;
     await env.DB.batch([
       env.DB.prepare(`UPDATE organization_invitations SET status='superseded' WHERE organization_id=? AND email=? AND status='pending'`).bind(platform.organization.id, item.email),
       env.DB.prepare(`INSERT INTO organization_invitations (id, organization_id, email, role, token_hash, status, created_by, created_at, expires_at, accepted_by, accepted_at) VALUES (?, ?, ?, ?, ?, 'pending', ?, ?, ?, NULL, NULL)`).bind(id, platform.organization.id, item.email, item.role, tokenHash, auth.userId, createdAt, expiresAt),
-      env.DB.prepare(`INSERT INTO notification_outbox (id, organization_id, recipient, template, payload_json, status, reason, created_at, sent_at) VALUES (?, ?, ?, 'organization-invitation', ?, 'held', 'EMAIL_PROVIDER_DISABLED', ?, NULL)`).bind(crypto.randomUUID(), platform.organization.id, item.email, JSON.stringify({ invitationId: id, role: item.role, expiresAt }), createdAt),
+      env.DB.prepare(`INSERT INTO notification_outbox (id, organization_id, recipient, template, payload_json, status, reason, created_at, sent_at) VALUES (?, ?, ?, 'organization-invitation', ?, 'held', 'EMAIL_DELIVERY_PENDING', ?, NULL)`).bind(outboxId, platform.organization.id, item.email, JSON.stringify({ invitationId: id, role: item.role, expiresAt }), createdAt),
     ]);
-    created.push({ email: item.email, role: item.role, invitationPath: `/join/institution/${token}` });
+    const invitationUrl = emailConfig.publicSiteUrl ? `${emailConfig.publicSiteUrl}${invitationPath}` : invitationPath;
+    const message = organizationInvitationEmail({ organizationName: platform.organization.name, role: item.role, invitationUrl, expiresAt });
+    const delivery = await sendTransactionalEmail({ to: item.email, ...message });
+    deliveryCounts[delivery.status] += 1;
+    await env.DB.prepare(`UPDATE notification_outbox SET status=?, reason=?, sent_at=? WHERE id=?`).bind(delivery.status, delivery.reason, delivery.sentAt, outboxId).run();
+    created.push({ email: item.email, role: item.role, invitationPath, emailDelivery: delivery.status });
   }
-  await appendAudit(auth.userId, "organization.invitations-created", "organization", platform.organization.id, "success", `count=${created.length};email_delivery=held`);
-  return { created, emailDelivery: "held", reason: "EMAIL_PROVIDER_DISABLED", expiresAt };
+  const readiness = emailProviderReadiness(emailConfig);
+  await appendAudit(auth.userId, "organization.invitations-created", "organization", platform.organization.id, "success", `count=${created.length};sent=${deliveryCounts.sent};held=${deliveryCounts.held};failed=${deliveryCounts.failed}`);
+  return { created, emailDelivery: deliveryCounts, reason: readiness.reason, expiresAt };
 }
 
 export async function getOrganizationInvitation(auth: AuthContext, tokenValue: unknown) {
@@ -167,7 +178,7 @@ export async function getReadinessSnapshot(auth: AuthContext) {
     activationReason: "NON_LIVE_PILOT_CONFIGURATION",
     integrations: {
       identity: process.env.PRODUCTION_IDENTITY_PROVIDER && process.env.PRODUCTION_IDENTITY_PROVIDER !== "disabled" ? "configured-not-active" : "disabled",
-      email: process.env.EMAIL_PROVIDER && process.env.EMAIL_PROVIDER !== "disabled" ? "configured-not-active" : "disabled",
+      email: emailProviderReadiness().ready ? "configured-not-active" : emailProviderReadiness().reason.toLowerCase().replaceAll("_", "-"),
       billing: process.env.BILLING_PROVIDER && process.env.BILLING_PROVIDER !== "disabled" ? "configured-not-active" : "disabled",
       embeds: process.env.EMBED_SIGNING_SECRET ? "evaluation-signing-configured" : "disabled",
       mediaScreening: process.env.MALWARE_SCANNER && process.env.MALWARE_SCANNER !== "disabled" ? "configured-not-active" : "disabled",
@@ -196,8 +207,10 @@ export async function saveReadinessCheck(auth: AuthContext, input: Record<string
 
 export async function exportLearnerData(auth: AuthContext) {
   await ensureEducationUser(auth); await ensurePlatformSchema();
-  const [profile, progress, notes, reviews, completions, certificates, enrolments, requests] = await Promise.all([
+  const [profile, security, consents, progress, notes, reviews, completions, certificates, enrolments, requests] = await Promise.all([
     env.DB.prepare(`SELECT training_stage, discipline, interests_json, institution_name, country_code, timezone, onboarding_status, terms_accepted_at, marketing_opt_in, updated_at FROM learner_profiles WHERE user_id=?`).bind(auth.userId).first<Row>(),
+    env.DB.prepare(`SELECT status, identity_provider, registered_at, last_authenticated_at, terms_version, privacy_version, terms_accepted_at, privacy_accepted_at, updated_at FROM account_security_profiles WHERE user_id=?`).bind(auth.userId).first<Row>(),
+    env.DB.prepare(`SELECT document_key, document_version, decision, source, recorded_at FROM account_consents WHERE user_id=? ORDER BY recorded_at DESC`).bind(auth.userId).all<Row>(),
     env.DB.prepare(`SELECT resource_type, resource_slug, progress, last_position, updated_at FROM learning_progress WHERE user_id=? ORDER BY updated_at DESC`).bind(auth.userId).all<Row>(),
     env.DB.prepare(`SELECT resource_type, resource_id, title, body, visibility, created_at, updated_at FROM learner_notes WHERE learner_id=? ORDER BY updated_at DESC`).bind(auth.userId).all<Row>(),
     env.DB.prepare(`SELECT resource_type, resource_id, title, prompt, due_at, interval_days, status, created_at, updated_at FROM learner_review_queue WHERE learner_id=? ORDER BY due_at`).bind(auth.userId).all<Row>(),
@@ -206,7 +219,7 @@ export async function exportLearnerData(auth: AuthContext) {
     env.DB.prepare(`SELECT c.code, c.title, e.status, e.enrolled_at FROM enrolments e JOIN courses c ON c.id=e.course_id WHERE e.user_id=? ORDER BY e.enrolled_at DESC`).bind(auth.userId).all<Row>(),
     env.DB.prepare(`SELECT id, request_type, status, detail, created_at, resolved_at FROM account_requests WHERE user_id=? ORDER BY created_at DESC`).bind(auth.userId).all<Row>(),
   ]);
-  return { exportedAt: new Date().toISOString(), intendedUse: "education-and-research-only", account: { id: auth.userId, email: auth.email, displayName: auth.displayName }, profile: profile ?? null, progress: progress.results, notes: notes.results, reviewQueue: reviews.results, completions: completions.results, certificates: certificates.results, enrolments: enrolments.results, requests: requests.results };
+  return { exportedAt: new Date().toISOString(), intendedUse: "education-and-research-only", account: { id: auth.userId, email: auth.email, displayName: auth.displayName }, security: security ?? null, consents: consents.results, profile: profile ?? null, progress: progress.results, notes: notes.results, reviewQueue: reviews.results, completions: completions.results, certificates: certificates.results, enrolments: enrolments.results, requests: requests.results };
 }
 
 export async function createAccountRequest(auth: AuthContext, input: Record<string, unknown>) {
@@ -218,7 +231,10 @@ export async function createAccountRequest(auth: AuthContext, input: Record<stri
   const existing = await env.DB.prepare(`SELECT id FROM account_requests WHERE user_id=? AND request_type=? AND status IN ('submitted','in-review')`).bind(auth.userId, requestType).first();
   if (existing) throw new InstitutionOperationsError("An open request of this type already exists.", 409);
   const id = crypto.randomUUID(); const now = new Date().toISOString();
-  await env.DB.prepare(`INSERT INTO account_requests (id, user_id, request_type, status, detail, created_at, resolved_at, resolved_by) VALUES (?, ?, ?, 'submitted', ?, ?, NULL, NULL)`).bind(id, auth.userId, requestType, detail, now).run();
+  const nextAccountStatus = requestType === "deletion" ? "deletion-pending" : requestType === "restriction" ? "restricted" : null;
+  const statements = [env.DB.prepare(`INSERT INTO account_requests (id, user_id, request_type, status, detail, created_at, resolved_at, resolved_by) VALUES (?, ?, ?, 'submitted', ?, ?, NULL, NULL)`).bind(id, auth.userId, requestType, detail, now)];
+  if (nextAccountStatus) statements.push(env.DB.prepare(`UPDATE account_security_profiles SET status=?, updated_at=? WHERE user_id=?`).bind(nextAccountStatus, now, auth.userId));
+  await env.DB.batch(statements);
   await appendAudit(auth.userId, "account.request-submitted", "account-request", id, "success", `type=${requestType}`);
   return { id, status: "submitted" };
 }

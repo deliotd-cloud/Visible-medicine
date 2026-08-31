@@ -28,8 +28,8 @@ The site uses a dedicated Visible Medicine monogram, Segoe typography and the El
 - Institution workspace with usage, entitlements, Studio, reporting, integration and publication-governance views.
 - Searchable, filterable course discovery with learner-profile recommendations, full workbook syllabuses and latest-workbook resume links.
 - Studio course templates, safe empty-shell duplication, device-local draft recovery, publication readiness checks, immutable release history and learner previews.
-- Institution pilot briefs, held-delivery people invitations, bounded roster import, role-aware access, readiness evidence and organisation-scoped CSV reporting.
-- Account data export, queued learner-rights requests, in-app notification preferences and clearly marked draft policy frameworks.
+- Institution pilot briefs, email-ready people invitations with manual-link fallback, bounded roster import, role-aware access, readiness evidence and organisation-scoped CSV reporting.
+- Public learner account entry, least-privilege provisioning, versioned terms/privacy consent, account lifecycle status, data export, queued learner-rights requests, in-app notification preferences and clearly marked draft policy frameworks.
 - Trust centre plus hosted and controlled embedded-delivery product boundaries.
 - Explicit education/research-only statements at global, content, institution and commercial boundaries.
 - Owner-private managed hosting and an Visible Medicine social-sharing card.
@@ -70,6 +70,7 @@ The hosted application requires:
 - `SITE_ORIGIN`: canonical production origin used by metadata and social cards.
 - A production education identity and entitlement adapter before external launch. The Sites sign-in adapter is suitable for the private hosted preview, not the final cross-product identity model.
 - `VISIBLE_MEDICINE_EVALUATION_ADMIN_EMAILS`: a comma-separated owner-private evaluation allowlist. It grants the complete demonstration role set only when the application is deployed in production mode; ordinary new accounts remain learner-only. The previous `ELIVION_EVALUATION_ADMIN_EMAILS` name remains accepted during migration.
+- `EMAIL_PROVIDER=cloudflare-email`, `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_EMAIL_API_TOKEN`, `EMAIL_FROM_ADDRESS` and `PUBLIC_SITE_URL`: optional server-side transactional-email settings. All are required before delivery activates; otherwise notifications remain held and invitation links remain available for manual handoff. Never commit the API token.
 - `LIVEKIT_URL`: the secure WebSocket URL from a LiveKit Cloud project, for example `wss://your-project.livekit.cloud`.
 - `LIVEKIT_API_KEY`: the server-side API key for issuing short-lived classroom tokens.
 - `LIVEKIT_API_SECRET`: the corresponding server-side secret. Never expose this value to client code or commit it to the repository.

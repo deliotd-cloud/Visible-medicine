@@ -8,10 +8,15 @@ import {
   decideEducationUserProvisioning,
   LOCAL_DEMO_EDUCATION_ROLES,
 } from "@/lib/education-user-provisioning";
+import { identityProviderForSubject } from "@/lib/account-policy";
 import { backfillKnownAssessmentManifests } from "@/lib/assessment-manifest-store";
 
 const SCHEMA = [
   `CREATE TABLE IF NOT EXISTS users (id TEXT PRIMARY KEY, external_subject TEXT NOT NULL UNIQUE, email TEXT NOT NULL, display_name TEXT NOT NULL, roles TEXT NOT NULL, created_at TEXT NOT NULL, last_seen_at TEXT NOT NULL)`,
+  `CREATE TABLE IF NOT EXISTS account_security_profiles (user_id TEXT PRIMARY KEY, status TEXT NOT NULL, identity_provider TEXT NOT NULL, registered_at TEXT NOT NULL, last_authenticated_at TEXT NOT NULL, terms_version TEXT NOT NULL, privacy_version TEXT NOT NULL, terms_accepted_at TEXT, privacy_accepted_at TEXT, updated_at TEXT NOT NULL, FOREIGN KEY(user_id) REFERENCES users(id))`,
+  `CREATE INDEX IF NOT EXISTS idx_account_security_status ON account_security_profiles(status)`,
+  `CREATE TABLE IF NOT EXISTS account_consents (id TEXT PRIMARY KEY, user_id TEXT NOT NULL, document_key TEXT NOT NULL, document_version TEXT NOT NULL, decision TEXT NOT NULL, source TEXT NOT NULL, recorded_at TEXT NOT NULL, UNIQUE(user_id, document_key, document_version), FOREIGN KEY(user_id) REFERENCES users(id))`,
+  `CREATE INDEX IF NOT EXISTS idx_account_consents_user_recorded ON account_consents(user_id, recorded_at)`,
   `CREATE TABLE IF NOT EXISTS courses (id TEXT PRIMARY KEY, code TEXT NOT NULL UNIQUE, title TEXT NOT NULL, description TEXT NOT NULL, status TEXT NOT NULL)`,
   `CREATE TABLE IF NOT EXISTS modules (id TEXT PRIMARY KEY, course_id TEXT NOT NULL, title TEXT NOT NULL, position INTEGER NOT NULL, FOREIGN KEY(course_id) REFERENCES courses(id))`,
   `CREATE TABLE IF NOT EXISTS workbooks (id TEXT PRIMARY KEY, module_id TEXT NOT NULL, title TEXT NOT NULL, mode TEXT NOT NULL, version INTEGER NOT NULL, status TEXT NOT NULL, duration_minutes INTEGER NOT NULL, dual_display_allowed INTEGER NOT NULL DEFAULT 0, FOREIGN KEY(module_id) REFERENCES modules(id))`,
@@ -306,7 +311,16 @@ export async function ensureEducationUser(auth: AuthContext) {
     process.env.NODE_ENV,
   );
   await env.DB.prepare(`INSERT INTO users (id, external_subject, email, display_name, roles, created_at, last_seen_at) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET email = excluded.email, display_name = excluded.display_name, roles = excluded.roles, last_seen_at = excluded.last_seen_at`).bind(auth.userId, auth.externalSubject, auth.email, auth.displayName, decision.roles, now, now).run();
-  return { roles: decision.roles.split(",").filter(Boolean) };
+  await env.DB.prepare(`INSERT INTO account_security_profiles (user_id, status, identity_provider, registered_at, last_authenticated_at, terms_version, privacy_version, terms_accepted_at, privacy_accepted_at, updated_at) VALUES (?, 'active', ?, ?, ?, '', '', NULL, NULL, ?) ON CONFLICT(user_id) DO UPDATE SET identity_provider=excluded.identity_provider, last_authenticated_at=excluded.last_authenticated_at, updated_at=excluded.updated_at`).bind(auth.userId, identityProviderForSubject(auth.externalSubject), now, now, now).run();
+  const security = await env.DB.prepare(`SELECT status, identity_provider FROM account_security_profiles WHERE user_id=?`).bind(auth.userId).first<{ status: string; identity_provider: string }>();
+  return {
+    roles: decision.roles.split(",").filter(Boolean),
+    status: security?.status ?? "active",
+    identityProvider: security?.identity_provider ?? identityProviderForSubject(auth.externalSubject),
+    localDemo: decision.localDemo,
+    evaluationAdministrator: decision.evaluationAdministrator,
+    bootstrapDefaultOrganization: decision.bootstrapDefaultOrganization,
+  };
 }
 
 export async function appendAudit(actorId: string, action: string, targetType: string, targetId: string, outcome = "success", reason = "") {

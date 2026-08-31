@@ -213,6 +213,7 @@ export function SiteHeader() {
         })}
       </nav>
       <Link className="search-link" href="/search" aria-label="Search Visible Medicine" aria-current={pathname === "/search" ? "page" : undefined}>⌕ <span>Search</span></Link>
+      <Link className="account-entry-link" href="/account-entry" aria-current={pathname === "/account-entry" ? "page" : undefined}>Sign in</Link>
       <details className="workspace-switcher"><summary>Open workspace <span aria-hidden="true">⌄</span></summary><nav aria-label="Choose workspace"><Link aria-current={isActive("/my-learning") ? "page" : undefined} href="/my-learning"><b>Learn</b><span>Progress, revision and certificates</span></Link><Link aria-current={pathname.startsWith("/studio/") ? "page" : undefined} href="/studio/workspace"><b>Studio</b><span>Courses, workbooks and publishing</span></Link><Link aria-current={isActive("/workspace") ? "page" : undefined} href="/workspace"><b>Institution</b><span>People, controls and readiness</span></Link><Link aria-current={isActive("/account") ? "page" : undefined} href="/account"><b>Account</b><span>Profile, export and learner rights</span></Link></nav></details>
       <details className="mobile-nav">
         <summary><span className="menu-label">Menu</span><span className="close-label">Close</span></summary>
@@ -227,6 +228,7 @@ export function SiteHeader() {
             <MobileNavigationGroup isActive={isActive} key={section.id} section={section} onNavigate={closeMobileNavigation} />
           ))}
           <span className="mobile-nav-section">Your work</span>
+          <Link aria-current={pathname === "/account-entry" ? "page" : undefined} href="/account-entry" onClick={closeMobileNavigation}>Sign in or create account<span aria-hidden="true">→</span></Link>
           {([[
             "My learning", "/my-learning",
           ], [

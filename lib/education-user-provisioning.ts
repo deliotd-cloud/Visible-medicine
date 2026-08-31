@@ -7,6 +7,8 @@ export const LOCAL_DEMO_EDUCATION_ROLES =
 export type EducationUserProvisioningDecision = {
   roles: string;
   localDemo: boolean;
+  evaluationAdministrator: boolean;
+  bootstrapDefaultOrganization: boolean;
 };
 
 export function isLocalDemoEducationIdentity(
@@ -38,5 +40,7 @@ export function decideEducationUserProvisioning(
         ? LOCAL_DEMO_EDUCATION_ROLES
         : existingRoles ?? NEW_EDUCATION_USER_ROLES,
     localDemo,
+    evaluationAdministrator,
+    bootstrapDefaultOrganization: localDemo || evaluationAdministrator,
   };
 }
