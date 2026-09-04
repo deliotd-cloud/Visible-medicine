@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import { SiteFrame } from "../components/SiteFrame";
 import { SplashScreen } from "../components/SplashScreen";
+import { SPLASH_BOOTSTRAP_SCRIPT } from "../lib/splash-intro";
 import "./globals.css";
 
 const geistMono = Geist_Mono({ variable: "--font-atlas-mono", subsets: ["latin"] });
@@ -40,7 +41,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: `(function(){var root=document.documentElement;try{var key="visible-medicine-splash-v5";root.dataset.visibleMedicineSplash=location.pathname==="/"&&!localStorage.getItem(key)?"show":"hidden";}catch(error){root.dataset.visibleMedicineSplash=location.pathname==="/"?"show":"hidden";}if(root.dataset.visibleMedicineSplash==="show")setTimeout(function(){root.dataset.visibleMedicineSplash="hidden";document.body.classList.remove("splash-open");var content=document.getElementById("visible-medicine-site-content");if(content){content.inert=false;content.removeAttribute("aria-hidden");}},10000);})();` }} />
+        <script dangerouslySetInnerHTML={{ __html: SPLASH_BOOTSTRAP_SCRIPT }} />
       </head>
       <body className={geistMono.variable}>
         <SplashScreen />

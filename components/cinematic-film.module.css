@@ -1,5 +1,27 @@
 .theater { width: 100%; }
+.player { min-width: 0; }
+.choices { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 12px; }
+.earlier { margin: 0 0 20px; color: #9cb6b8; font-size: 14px; }
+.earlier summary { width: fit-content; min-height: 44px; padding: 12px 0; cursor: pointer; line-height: 20px; }
+.earlier summary:hover { color: #e5f0ed; }
+.earlierChoices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: 8px 0 4px; }
+.choice { min-width: 0; display: flex; align-items: center; gap: 14px; padding: 14px; border: 1px solid #90bdb528; border-radius: 8px; background: #0b171d; color: #d7e7e5; text-align: left; font: inherit; cursor: pointer; }
+.choice:hover { background: #13262b; border-color: #87c3b779; }
+.choice.selected { border-color: #53cdb6; background: #0d2b2c; box-shadow: inset 0 0 0 1px #53cdb645; }
+.choice:focus-visible, .buttons button:focus-visible, .buttons a:focus-visible, .earlier summary:focus-visible { outline: 2px solid #b6fbe7; outline-offset: 4px; }
+.thumbnail { width: 64px; height: 58px; object-fit: cover; border-radius: 4px; flex: 0 0 auto; }
+.choiceText { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.choiceTitle { display: flex; align-items: baseline; gap: 9px; font-size: 19px; font-weight: 550; line-height: 1.3; }
+.number { color: #7eb8ae; font-size: 13px; font-weight: 400; }
+.direction { color: #9cb6b8; font-size: 14px; line-height: 1.4; }
+.choiceDuration { color: #9cb6b8; font-size: 13px; }
+.choicePlay { margin-left: auto; color: #8fdcc8; font-size: 13px; }
+.filmHeading { display: flex; align-items: baseline; gap: 24px; margin: 0 0 14px; }
+.filmHeading h2 { flex: 0 0 auto; margin: 0; font-size: 18px; color: #e5f0ed; font-weight: 500; }
+.filmHeading p { margin: 0; color: #9db2b6; font-size: 14px; line-height: 1.5; }
 .screen { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #02070d; box-shadow: 0 36px 110px #0007; }
+.signatureScreen { border-radius: 8px; }
+.glideScreen { background: #030a10; }
 .video { display: block; width: 100%; height: 100%; object-fit: contain; }
 .controls { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 0; border-bottom: 1px solid #b3e2dd20; }
 .playback { display: flex; align-items: center; gap: 10px; color: #c7d7d8; font-size: 14px; }
@@ -14,7 +36,22 @@
 .buttons .soundButton:hover { background: #f2faf7; }
 .buttons a { border-color: transparent; color: #91aaa9; }
 .error { color: #f3c793; font-size: 14px; }
+.previewNote { margin: 14px 0 0; color: #93abae; font-size: 14px; line-height: 1.6; }
+@media (min-width: 1000px) { .screen { max-height: 60vh; } }
+@media (max-width: 1100px) {
+  .choices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .thumbnail { width: 64px; height: 56px; }
+  .choice { gap: 10px; padding: 12px; }
+  .choicePlay { display: none; }
+}
 @media (max-width: 700px) {
+  .choices, .earlierChoices { grid-template-columns: 1fr; gap: 8px; }
+  .choice { padding: 10px 12px; }
+  .thumbnail { width: 82px; height: 54px; }
+  .choicePlay { display: block; }
+  .choiceText { gap: 2px; }
+  .choiceDuration { display: none; }
+  .filmHeading { flex-direction: column; gap: 6px; }
   .controls { align-items: flex-start; flex-direction: column; gap: 14px; padding: 18px 0; }
   .buttons { width: 100%; gap: 8px; }
   .buttons button, .buttons a { padding: 10px 12px; }

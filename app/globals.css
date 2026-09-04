@@ -145,7 +145,7 @@ h1 { margin: 0; max-width: 660px; font-size: clamp(56px, 6vw, 88px); line-height
 html[data-visible-medicine-splash="show"] .splash-screen,
 html[data-visible-medicine-splash="leaving"] .splash-screen {
   position: fixed; inset: 0; z-index: 2000; display: grid; place-items: center;
-  overflow: hidden; isolation: isolate; background: #02070d; color: #eff5f2;
+  overflow: hidden; isolation: isolate; background: #030a10; color: #eff5f2;
   opacity: 1; transition: opacity .4s ease, visibility .4s ease;
 }
 html[data-visible-medicine-splash="leaving"] .splash-screen { opacity: 0; visibility: hidden; }

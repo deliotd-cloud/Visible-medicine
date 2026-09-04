@@ -38,3 +38,7 @@ next-env.d.ts
 /outputs/
 /work/
 *.tsbuildinfo
+
+# offline media-rendering caches
+__pycache__/
+*.pyc

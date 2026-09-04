@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-
-const SPLASH_STORAGE_KEY = "visible-medicine-splash-v5";
+import { SPLASH_STORAGE_KEY, SPLASH_VIDEO_SRC } from "../lib/splash-intro";
 
 export function SplashScreen() {
   const pathname = usePathname();
@@ -99,7 +98,7 @@ function HomeSplash() {
           <video
             ref={videoRef}
             className="splash-film"
-            src="/media/splash/visible-medicine-splash-v1.mp4"
+            src={SPLASH_VIDEO_SRC}
             autoPlay
             muted
             playsInline
