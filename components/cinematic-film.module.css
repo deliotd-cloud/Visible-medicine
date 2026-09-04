@@ -1,0 +1,21 @@
+.theater { width: 100%; }
+.screen { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #02070d; box-shadow: 0 36px 110px #0007; }
+.video { display: block; width: 100%; height: 100%; object-fit: contain; }
+.controls { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 0; border-bottom: 1px solid #b3e2dd20; }
+.playback { display: flex; align-items: center; gap: 10px; color: #c7d7d8; font-size: 14px; }
+.live, .idle { width: 6px; height: 6px; border-radius: 50%; background: #4ae0bf; }
+.idle { background: #63797d; }
+.divider { color: #4f6269; padding: 0 4px; }
+.duration { font-family: var(--font-atlas-mono), monospace; color: #82989c; font-size: 12px; }
+.buttons { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.buttons button, .buttons a { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 10px 16px; border: 1px solid #c3e6e228; color: #dae7e5; background: #c3e6e205; border-radius: 4px; font: 500 14px/1.3 "Segoe UI", sans-serif; text-decoration: none; cursor: pointer; }
+.buttons button:hover, .buttons a:hover { background: #c3e6e210; border-color: #9acac46b; }
+.buttons .soundButton { background: #dcece7; color: #102324; border-color: #dcece7; }
+.buttons .soundButton:hover { background: #f2faf7; }
+.buttons a { border-color: transparent; color: #91aaa9; }
+.error { color: #f3c793; font-size: 14px; }
+@media (max-width: 700px) {
+  .controls { align-items: flex-start; flex-direction: column; gap: 14px; padding: 18px 0; }
+  .buttons { width: 100%; gap: 8px; }
+  .buttons button, .buttons a { padding: 10px 12px; }
+}

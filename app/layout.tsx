@@ -40,7 +40,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var key="visible-medicine-splash-v4";var home=location.pathname==="/";document.documentElement.dataset.visibleMedicineSplash=home&&!localStorage.getItem(key)?"show":"hidden";}catch(error){document.documentElement.dataset.visibleMedicineSplash=location.pathname==="/"?"show":"hidden";}})();` }} />
+        <script dangerouslySetInnerHTML={{ __html: `(function(){var root=document.documentElement;try{var key="visible-medicine-splash-v5";root.dataset.visibleMedicineSplash=location.pathname==="/"&&!localStorage.getItem(key)?"show":"hidden";}catch(error){root.dataset.visibleMedicineSplash=location.pathname==="/"?"show":"hidden";}if(root.dataset.visibleMedicineSplash==="show")setTimeout(function(){root.dataset.visibleMedicineSplash="hidden";document.body.classList.remove("splash-open");var content=document.getElementById("visible-medicine-site-content");if(content){content.inert=false;content.removeAttribute("aria-hidden");}},10000);})();` }} />
       </head>
       <body className={geistMono.variable}>
         <SplashScreen />
