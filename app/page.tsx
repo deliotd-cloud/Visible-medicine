@@ -40,12 +40,6 @@ export default async function Home() {
         </Link>
       </section>
 
-      <section className="platform-strip" aria-label="Visible Medicine platform">
-        <Link href="/atlas"><span>01</span><div><b>Atlas</b><small>Explore reviewed anatomy on imaging</small></div><i>→</i></Link>
-        <Link href="/courses"><span>02</span><div><b>Courses</b><small>Learn through guided cases and practice</small></div><i>→</i></Link>
-        <Link href="/studio"><span>03</span><div><b>Studio</b><small>Create and deliver institutional teaching</small></div><i>→</i></Link>
-      </section>
-
       <section className="content-section module-showcase">
         <div className="section-heading">
           <div><p className="section-index">01 / Atlas</p><h2>One normal study, explored properly.</h2></div>
