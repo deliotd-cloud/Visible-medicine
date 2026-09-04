@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
+import { SplashConcept } from "./SplashConcept";
 
-const SPLASH_STORAGE_KEY = "visible-medicine-splash-v3";
+const SPLASH_STORAGE_KEY = "visible-medicine-splash-v4";
 
 export function SplashScreen() {
   const pathname = usePathname();
@@ -56,7 +56,7 @@ export function SplashScreen() {
     };
 
     dismissRef.current = dismiss;
-    const autoDismissTimer = window.setTimeout(dismiss, reduceMotion ? 850 : 2850);
+    const autoDismissTimer = window.setTimeout(dismiss, reduceMotion ? 850 : 3900);
     const focusTimer = window.setTimeout(() => skipButtonRef.current?.focus({ preventScroll: true }), 40);
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") dismiss();
@@ -84,25 +84,8 @@ export function SplashScreen() {
     >
       <div className="splash-content">
         <h1 className="sr-only" id="splash-title">Visible Medicine, by Elivion</h1>
-        <div className="splash-scan-stage" aria-hidden="true">
-          <i className="splash-corner splash-corner-tl" />
-          <i className="splash-corner splash-corner-tr" />
-          <i className="splash-corner splash-corner-bl" />
-          <i className="splash-corner splash-corner-br" />
-          <div className="splash-logo-reveal">
-            <Image
-              className="splash-lockup"
-              src="/brand/approved/visible-medicine-lockup-dark.png"
-              alt=""
-              width={1024}
-              height={205}
-              priority
-              sizes="(max-width: 620px) 88vw, 860px"
-            />
-          </div>
-          <span className="splash-scan-line" />
-        </div>
-        <p className="splash-tagline" id="splash-description">Where medicine becomes visible.</p>
+        <SplashConcept variant="relay" />
+        <p className="sr-only" id="splash-description">Where medicine becomes visible.</p>
         <div className="splash-boundary">
           <span>Education &amp; research only</span>
           <i aria-hidden="true" />

@@ -40,7 +40,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var key="visible-medicine-splash-v3";var home=location.pathname==="/";document.documentElement.dataset.visibleMedicineSplash=home&&!localStorage.getItem(key)?"show":"hidden";}catch(error){document.documentElement.dataset.visibleMedicineSplash=location.pathname==="/"?"show":"hidden";}})();` }} />
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var key="visible-medicine-splash-v4";var home=location.pathname==="/";document.documentElement.dataset.visibleMedicineSplash=home&&!localStorage.getItem(key)?"show":"hidden";}catch(error){document.documentElement.dataset.visibleMedicineSplash=location.pathname==="/"?"show":"hidden";}})();` }} />
       </head>
       <body className={geistMono.variable}>
         <SplashScreen />
