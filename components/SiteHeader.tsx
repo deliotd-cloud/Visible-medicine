@@ -128,10 +128,11 @@ export function SiteHeader() {
     };
     const closeWithEscape = (event: KeyboardEvent) => {
       if (event.key !== "Escape" || !openMenu) return;
-      setOpenMenu(null);
       navigationRef.current
         ?.querySelector<HTMLButtonElement>(`[data-nav-trigger="${openMenu}"]`)
         ?.focus();
+      // Restoring focus triggers the group's onFocus; close after that handler.
+      setOpenMenu(null);
     };
 
     document.addEventListener("pointerdown", closeOutside);
