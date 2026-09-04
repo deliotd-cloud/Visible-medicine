@@ -115,7 +115,7 @@ const secondaryLinks = [
   ["Trust centre", "/trust"],
 ] as const;
 
-export function SiteHeader() {
+export function SiteHeader({ workspace = false }: { workspace?: boolean }) {
   const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const navigationRef = useRef<HTMLElement>(null);
@@ -214,7 +214,7 @@ export function SiteHeader() {
         })}
       </nav>
       <Link className="search-link" href="/search" aria-label="Search Visible Medicine" aria-current={pathname === "/search" ? "page" : undefined}>⌕ <span>Search</span></Link>
-      <Link className="account-entry-link" href="/account-entry" aria-current={pathname === "/account-entry" ? "page" : undefined}>Sign in</Link>
+      <Link className="account-entry-link" href={workspace ? "/account" : "/account-entry"} aria-current={workspace ? pathname.startsWith("/account") ? "page" : undefined : pathname === "/account-entry" ? "page" : undefined}>{workspace ? "Profile" : "Sign in"}</Link>
       <details className="workspace-switcher"><summary>Open workspace <span aria-hidden="true">⌄</span></summary><nav aria-label="Choose workspace"><Link aria-current={isActive("/my-learning") ? "page" : undefined} href="/my-learning"><b>Learn</b><span>Progress, revision and certificates</span></Link><Link aria-current={pathname.startsWith("/studio/") ? "page" : undefined} href="/studio/workspace"><b>Studio</b><span>Courses, workbooks and publishing</span></Link><Link aria-current={isActive("/workspace") ? "page" : undefined} href="/workspace"><b>Institution</b><span>People, controls and readiness</span></Link><Link aria-current={isActive("/account") ? "page" : undefined} href="/account"><b>Account</b><span>Profile, export and learner rights</span></Link></nav></details>
       <details className="mobile-nav">
         <summary><span className="menu-label">Menu</span><span className="close-label">Close</span></summary>
@@ -229,7 +229,7 @@ export function SiteHeader() {
             <MobileNavigationGroup isActive={isActive} key={section.id} section={section} onNavigate={closeMobileNavigation} />
           ))}
           <span className="mobile-nav-section">Your work</span>
-          <Link aria-current={pathname === "/account-entry" ? "page" : undefined} href="/account-entry" onClick={closeMobileNavigation}>Sign in or create account<span aria-hidden="true">→</span></Link>
+          <Link aria-current={workspace ? pathname.startsWith("/account") ? "page" : undefined : pathname === "/account-entry" ? "page" : undefined} href={workspace ? "/account" : "/account-entry"} onClick={closeMobileNavigation}>{workspace ? "Profile and account" : "Sign in or create account"}<span aria-hidden="true">→</span></Link>
           {([[
             "My learning", "/my-learning",
           ], [

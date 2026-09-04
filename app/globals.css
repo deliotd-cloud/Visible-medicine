@@ -598,6 +598,9 @@ body.splash-open { overflow: hidden; }
 .workspace-mobile-menu nav { width: min(290px,calc(100vw - 36px)); padding: 8px; position: absolute; top: calc(100% + 10px); right: 0; display: grid; border: 1px solid var(--line); border-radius: 10px; background: rgba(247,250,249,.99); box-shadow: 0 22px 60px rgba(8,42,49,.18); }
 .workspace-mobile-menu nav a { min-height: 45px; padding: 0 12px; display: flex; align-items: center; justify-content: space-between; border-radius: 6px; font-size: 12px; }
 .workspace-mobile-menu nav a:hover, .workspace-mobile-menu nav a:focus-visible { background: var(--panel); color: var(--teal); }
+.workspace-context-header { min-height: 60px; padding: 8px 28px; display: flex; align-items: center; gap: 18px; border-bottom: 1px solid #c8d9d5; background: rgba(247,250,249,.96); }
+.workspace-context-header .workspace-surface-label { min-height: 36px; padding: 0 18px 0 0; border-left: 0; border-right: 1px solid #c2d4d0; }
+.workspace-context-header .app-frame-actions { margin-left: auto; }
 
 .studio-context-bar > div { min-width: 0; flex-wrap: wrap; }
 .studio-context-bar i { color: #8ba09b; font-style: normal; }
@@ -618,6 +621,7 @@ body.splash-open { overflow: hidden; }
   .workspace-platform-header .app-frame-actions { grid-column: 2; grid-row: 1; }
   .workspace-platform-header .app-frame-nav { grid-column: 1 / -1; grid-row: 2; justify-self: center; }
   .platform-utility-link { display: none !important; }
+  .workspace-context-header { padding-inline: 18px; }
 }
 
 @media (max-width: 80rem) {
@@ -640,6 +644,12 @@ body.splash-open { overflow: hidden; }
   .workspace-platform-header .workspace-mobile-menu { display: block; grid-column: 2; grid-row: 1; }
   .workspace-platform-header .app-frame-nav { width: 100%; padding: 3px; grid-column: 1 / -1; grid-row: 2; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); overflow: hidden; }
   .workspace-platform-header .app-frame-nav a { min-width: 0; min-height: 38px; padding: 0 7px; }
+  .workspace-context-header { min-height: auto; padding: 8px 16px; gap: 10px; }
+  .workspace-context-header .workspace-surface-label,
+  .workspace-context-header .app-frame-actions { display: none; }
+  .workspace-context-header .app-frame-nav { min-width: 0; width: 100%; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .workspace-context-header .app-frame-nav a { min-width: 0; padding-inline: 7px; }
+  .workspace-context-header .workspace-mobile-menu { display: block; flex: 0 0 auto; }
   .studio-context-bar { padding: 10px 18px; }
   .studio-context-bar > div { align-items: center; flex-direction: row; gap: 7px; }
   .studio-context-bar small { width: 100%; }
