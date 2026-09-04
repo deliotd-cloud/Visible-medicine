@@ -488,11 +488,11 @@ body.splash-open { overflow: hidden; }
 .primary-nav-toggle[aria-expanded="true"] span { transform: translateY(1px) rotate(180deg); }
 .primary-nav-toggle:hover,
 .primary-nav-toggle:focus-visible { background: white; color: var(--teal); outline: none; box-shadow: 0 0 0 2px color-mix(in srgb, var(--teal) 25%, transparent); }
-.primary-nav-panel { width: max-content; min-width: 360px; max-width: min(720px,calc(100vw - 40px)); padding: 11px; position: absolute; z-index: 100; top: calc(100% - 3px); left: 50%; transform: translateX(-50%); border: 1px solid color-mix(in srgb,var(--teal) 24%,var(--line)); border-radius: 14px; background: rgba(250,252,251,.99); box-shadow: 0 28px 75px rgba(8,42,49,.2); }
+.primary-nav-panel { width: max-content; min-width: 360px; max-width: min(720px,calc(100vw - 40px)); padding: 11px; position: absolute; z-index: 100; top: calc(100% - 3px); left: 50%; transform: translateX(-50%); border: 1px solid color-mix(in srgb,var(--teal) 24%,var(--line)); border-radius: 14px; background: rgba(250,252,251,.99); box-shadow: 0 28px 75px rgba(8,42,49,.2); white-space: normal; }
 .primary-nav-panel[hidden] { display: none; }
 .primary-nav-introduction { padding: 14px 14px 13px; border-bottom: 1px solid var(--line); }
 .primary-nav-introduction b { color: var(--green); font-size: 14px; }
-.primary-nav-introduction p { max-width: 470px; margin: 5px 0 0; color: var(--secondary-text); font-size: 11px; line-height: 1.5; }
+.primary-nav-introduction p { max-width: 470px; margin: 5px 0 0; color: var(--secondary-text); font-size: 11px; line-height: 1.5; overflow-wrap: anywhere; }
 .primary-nav-columns { padding-top: 7px; display: grid; grid-template-columns: repeat(var(--navigation-columns,1),minmax(180px,1fr)); gap: 4px; }
 .primary-nav-column { min-width: 0; display: grid; align-content: start; }
 .primary-nav-column > span { padding: 9px 11px 5px; color: #70817d; font: 700 8px/1 var(--font-geist-mono),monospace; letter-spacing: .07em; text-transform: uppercase; }
@@ -501,8 +501,8 @@ body.splash-open { overflow: hidden; }
 .primary-nav-column a:hover,
 .primary-nav-column a:focus-visible,
 .primary-nav-column a[aria-current="page"] { background: var(--panel); color: var(--teal); outline: none; }
-.primary-nav-column a b { color: inherit; font-size: 12px; line-height: 1.25; }
-.primary-nav-column a small { max-width: 210px; color: var(--secondary-text); font-size: 9px; line-height: 1.4; }
+.primary-nav-column a b { min-width: 0; color: inherit; font-size: 12px; line-height: 1.25; white-space: normal; overflow-wrap: anywhere; }
+.primary-nav-column a small { min-width: 0; max-width: 210px; color: var(--secondary-text); font-size: 9px; line-height: 1.4; white-space: normal; overflow-wrap: anywhere; }
 .primary-nav-workspace { margin-left: 4px; padding-left: 5px; border-left: 1px solid color-mix(in srgb,var(--teal) 30%,var(--line)); }
 .primary-nav-workspace > span { color: var(--teal); }
 .primary-nav-workspace a { background: color-mix(in srgb,var(--panel) 72%,white); }
