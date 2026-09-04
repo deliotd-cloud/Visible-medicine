@@ -96,12 +96,12 @@ h1 { margin: 0; max-width: 660px; font-size: clamp(56px, 6vw, 88px); line-height
 .system-strip a b { margin-left: auto; color: #658179; font-weight: 400; transition: transform .2s ease; }
 .system-strip a:hover b { transform: translateX(4px); }
 
-@media (max-width: 1000px) {
+@media (max-width: 840px) {
   .topbar { grid-template-columns: 1fr auto auto; gap: 8px; padding: 0 24px; }
   .nav-links { display: none; }
 }
 
-@media (max-width: 80rem) {
+@media (max-width: 840px) {
   .mobile-nav { display: block; position: relative; justify-self: end; }
   .mobile-nav summary { min-height: 38px; padding: 0 13px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.65); color: var(--ink); font-size: 12px; cursor: pointer; list-style: none; }
   .mobile-nav summary::-webkit-details-marker { display: none; }
@@ -512,7 +512,7 @@ body.splash-open { overflow: hidden; }
 .primary-nav-group[data-nav-section="educators"] .primary-nav-columns,
 .primary-nav-group[data-nav-section="institutions"] .primary-nav-columns { --navigation-columns: 2; }
 
-@media (max-width: 80rem) {
+@media (max-width: 840px) {
   .mobile-nav > nav { padding-bottom: 12px; }
   .mobile-nav-group { margin: 0; }
   .mobile-nav[open] .mobile-nav-group > summary { min-height: 46px; padding: 0 12px; display: flex; align-items: center; justify-content: space-between; border: 0; border-radius: 6px; background: transparent; color: #334f54; font-size: 13px; font-weight: 600; }
@@ -570,6 +570,24 @@ body.splash-open { overflow: hidden; }
 .public-platform-header .workspace-switcher > summary,
 .public-platform-header .mobile-nav > summary { min-height: 44px; justify-content: center; font-size: .875rem; line-height: 1.25; white-space: nowrap; }
 .public-platform-header .workspace-switcher { min-width: max-content; }
+@media (min-width: 1000.02px) and (max-width: 80rem) {
+  .topbar.public-platform-header { min-height: 82px; padding-inline: 18px; gap: 8px; }
+  .public-platform-header .platform-brand .brand-lockup-image { width: clamp(230px,21vw,270px); }
+  .public-platform-header .public-primary-nav { gap: 8px; font-size: .8125rem; }
+  .public-platform-header .primary-nav-toggle { width: 20px; }
+  .public-platform-header .search-link { display: none; }
+  .public-platform-header .account-entry-link,
+  .public-platform-header .workspace-switcher > summary { padding-inline: 12px; font-size: .8125rem; }
+}
+@media (min-width: 840.02px) and (max-width: 1000px) {
+  .topbar.public-platform-header { min-height: 78px; padding-inline: 12px; gap: 5px; }
+  .public-platform-header .platform-brand .brand-lockup-image { width: clamp(195px,22vw,220px); }
+  .public-platform-header .public-primary-nav { gap: 4px; font-size: .75rem; }
+  .public-platform-header .primary-nav-toggle { width: 18px; }
+  .public-platform-header .search-link { display: none; }
+  .public-platform-header .account-entry-link,
+  .public-platform-header .workspace-switcher > summary { min-height: 40px; padding-inline: 8px; font-size: .75rem; }
+}
 .workspace-platform-header {
   grid-template-columns: minmax(245px,1fr) auto minmax(360px,1fr);
   gap: 24px;
@@ -624,7 +642,7 @@ body.splash-open { overflow: hidden; }
   .workspace-context-header { padding-inline: 18px; }
 }
 
-@media (max-width: 80rem) {
+@media (max-width: 840px) {
   .topbar.public-platform-header { gap: 12px; }
   .public-platform-header .public-primary-nav,
   .public-platform-header .search-link { display: none; }
@@ -738,7 +756,7 @@ body.splash-open { overflow: hidden; }
   .section-action-row .outline-button { width: 100%; justify-content: space-between; }
 }
 
-@media (max-width: 80rem) {
+@media (max-width: 840px) {
   .mobile-nav nav { max-height: calc(100vh - 96px); overflow-y: auto; }
   .mobile-nav nav a { min-height: 46px; }
   .mobile-nav-section { padding: 14px 12px 6px; color: var(--secondary-text); font-size: 10px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
@@ -1692,11 +1710,11 @@ body.splash-open { overflow: hidden; }
   .module-toolbar > .save-position-button { width: 100%; margin-left: 0; }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 840px) {
   .topbar { position: relative; z-index: 90; }
 }
 
-@media (max-width: 80rem) {
+@media (max-width: 1000px) {
   .mobile-nav nav { z-index: 2; width: min(320px, calc(100vw - 36px)); }
   .mobile-nav[open]::before { content: ""; position: fixed; z-index: 1; inset: 88px 0 0; background: rgba(7,27,31,.38); backdrop-filter: blur(2px); }
 }
