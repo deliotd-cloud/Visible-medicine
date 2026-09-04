@@ -3,6 +3,7 @@ import Image from "next/image";
 type BrandLockupProps = {
   priority?: boolean;
   tone?: "light" | "dark";
+  sizes?: string;
 };
 
 const lockups = {
@@ -18,7 +19,7 @@ const lockups = {
   },
 } as const;
 
-export function BrandLockup({ priority = false, tone = "light" }: BrandLockupProps) {
+export function BrandLockup({ priority = false, tone = "light", sizes = "(max-width: 760px) 168px, 214px" }: BrandLockupProps) {
   const lockup = lockups[tone];
 
   return (
@@ -30,7 +31,7 @@ export function BrandLockup({ priority = false, tone = "light" }: BrandLockupPro
         width={lockup.width}
         height={lockup.height}
         priority={priority}
-        sizes="(max-width: 760px) 168px, 214px"
+        sizes={sizes}
       />
     </span>
   );

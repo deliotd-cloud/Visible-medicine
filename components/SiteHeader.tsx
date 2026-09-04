@@ -161,7 +161,7 @@ export function SiteHeader() {
   return (
     <header className="topbar platform-header public-platform-header">
       <Link className="brand platform-brand" href="/" aria-label="Visible Medicine home">
-        <BrandLockup priority />
+        <BrandLockup priority sizes="(max-width: 392px) calc(100vw - 112px), (max-width: 760px) 280px, (max-width: 1428px) 300px, (max-width: 1600px) 21vw, 336px" />
       </Link>
       <nav className="nav-links public-primary-nav" aria-label="Primary navigation" ref={navigationRef}>
         <Link className="primary-nav-link" aria-current={pathname === "/" ? "page" : undefined} href="/">Home</Link>

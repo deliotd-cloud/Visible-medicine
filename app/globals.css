@@ -99,6 +99,9 @@ h1 { margin: 0; max-width: 660px; font-size: clamp(56px, 6vw, 88px); line-height
 @media (max-width: 1000px) {
   .topbar { grid-template-columns: 1fr auto auto; gap: 8px; padding: 0 24px; }
   .nav-links { display: none; }
+}
+
+@media (max-width: 80rem) {
   .mobile-nav { display: block; position: relative; justify-self: end; }
   .mobile-nav summary { min-height: 38px; padding: 0 13px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.65); color: var(--ink); font-size: 12px; cursor: pointer; list-style: none; }
   .mobile-nav summary::-webkit-details-marker { display: none; }
@@ -106,6 +109,9 @@ h1 { margin: 0; max-width: 660px; font-size: clamp(56px, 6vw, 88px); line-height
   .mobile-nav nav { position: absolute; top: calc(100% + 12px); right: 0; width: min(260px, calc(100vw - 36px)); padding: 8px; display: grid; border: 1px solid var(--line); border-radius: 10px; background: rgba(246,250,249,.98); box-shadow: 0 22px 60px rgba(8,42,49,.18); }
   .mobile-nav nav a { min-height: 43px; padding: 0 12px; display: flex; align-items: center; justify-content: space-between; border-radius: 6px; color: #334f54; font-size: 13px; }
   .mobile-nav nav a:hover, .mobile-nav nav a[aria-current="page"] { background: var(--panel); color: var(--teal); }
+}
+
+@media (max-width: 1000px) {
   .hero { grid-template-columns: 1fr; padding: 62px 24px 44px; }
   .hero-copy { max-width: 720px; }
   .atlas-preview { width: 100%; transform: none; }
@@ -481,7 +487,7 @@ body.splash-open { overflow: hidden; }
 
 /* Public navigation discovery: overview links remain direct while adjacent
    disclosures expose deeper learning, teaching and institution destinations. */
-.public-primary-nav { height: 72px; align-items: center; gap: 23px !important; }
+.public-primary-nav { height: 72px; align-items: center; }
 .public-primary-nav > .primary-nav-link,
 .primary-nav-group > .primary-nav-link { position: relative; white-space: nowrap; }
 .primary-nav-group { height: 100%; position: relative; display: flex; align-items: center; gap: 1px; }
@@ -515,7 +521,7 @@ body.splash-open { overflow: hidden; }
 .primary-nav-group[data-nav-section="educators"] .primary-nav-columns,
 .primary-nav-group[data-nav-section="institutions"] .primary-nav-columns { --navigation-columns: 2; }
 
-@media (max-width: 1000px) {
+@media (max-width: 80rem) {
   .mobile-nav > nav { padding-bottom: 12px; }
   .mobile-nav-group { margin: 0; }
   .mobile-nav[open] .mobile-nav-group > summary { min-height: 46px; padding: 0 12px; display: flex; align-items: center; justify-content: space-between; border: 0; border-radius: 6px; background: transparent; color: #334f54; font-size: 13px; font-weight: 600; }
@@ -551,19 +557,34 @@ body.splash-open { overflow: hidden; }
   backdrop-filter: blur(18px);
   box-shadow: 0 8px 28px rgba(8,42,49,.045);
 }
-.public-platform-header {
+.topbar.public-platform-header {
   max-width: none;
   margin: 0;
-  grid-template-columns: minmax(220px,1fr) auto auto auto auto;
-  gap: 18px;
+  min-height: 88px;
+  height: auto;
+  padding: 8px clamp(18px, 2.1vw, 40px);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: clamp(12px, 1.2vw, 20px);
 }
+/* Keep all public-header actions on one row, independent of legacy grid rules.
+   Scope sizing here so workspace and footer branding remain unchanged. */
+.public-platform-header > * { flex: 0 0 auto; }
+.public-platform-header > .platform-brand { margin-right: auto; }
+.public-platform-header .platform-brand .brand-lockup-image { width: clamp(300px, 21vw, 336px); }
+.public-platform-header .public-primary-nav { gap: clamp(12px, 1.1vw, 22px); font-size: .875rem; white-space: nowrap; }
+.public-platform-header .search-link,
+.public-platform-header .account-entry-link,
+.public-platform-header .workspace-switcher > summary,
+.public-platform-header .mobile-nav > summary { min-height: 44px; justify-content: center; font-size: .875rem; line-height: 1.25; white-space: nowrap; }
+.public-platform-header .workspace-switcher { min-width: max-content; }
 .workspace-platform-header {
   grid-template-columns: minmax(245px,1fr) auto minmax(360px,1fr);
   gap: 24px;
 }
 .platform-brand { min-width: 0; display: inline-flex; align-items: center; }
 .platform-brand .brand-lockup-image { width: 214px; }
-.public-platform-header .nav-links { gap: 30px; }
 .account-entry-link { min-height: 38px; padding: 0 15px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--teal); border-radius: 999px; color: var(--teal); font-size: 11px; font-weight: 650; white-space: nowrap; }
 .account-entry-link:hover, .account-entry-link:focus-visible, .account-entry-link[aria-current="page"] { background: var(--teal); color: white; }
 .intended-use-strip { width: 100%; max-width: none; }
@@ -608,16 +629,19 @@ body.splash-open { overflow: hidden; }
   .platform-utility-link { display: none !important; }
 }
 
-@media (max-width: 1000px) {
-  .public-platform-header { grid-template-columns: minmax(0,1fr) auto auto auto; gap: 8px; padding: 0 24px; }
-  .public-platform-header .nav-links { display: none; }
+@media (max-width: 80rem) {
+  .topbar.public-platform-header { gap: 12px; }
+  .public-platform-header .public-primary-nav,
+  .public-platform-header .search-link { display: none; }
   .public-platform-header .mobile-nav { display: block; }
+  .public-platform-header .mobile-nav > summary { min-width: 64px; }
 }
 
 @media (max-width: 760px) {
   .platform-header { position: sticky; min-height: 68px; }
   .platform-brand .brand-lockup-image { width: 178px; }
-  .public-platform-header { padding: 0 18px; grid-template-columns: minmax(0,1fr) auto; }
+  .topbar.public-platform-header { min-height: 80px; padding: 8px 16px; }
+  .public-platform-header .platform-brand .brand-lockup-image { width: min(280px, calc(100vw - 112px)); }
   .public-platform-header .workspace-switcher { display: none; }
   .public-platform-header .account-entry-link { display: none; }
   .workspace-platform-header { min-height: auto; overflow: visible; }
@@ -711,6 +735,9 @@ body.splash-open { overflow: hidden; }
   .module-grid.module-grid-compact { grid-template-columns: 1fr; }
   .section-action-row { align-items: flex-start; flex-direction: column; }
   .section-action-row .outline-button { width: 100%; justify-content: space-between; }
+}
+
+@media (max-width: 80rem) {
   .mobile-nav nav { max-height: calc(100vh - 96px); overflow-y: auto; }
   .mobile-nav nav a { min-height: 46px; }
   .mobile-nav-section { padding: 14px 12px 6px; color: var(--secondary-text); font-size: 10px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
@@ -1669,8 +1696,15 @@ body.splash-open { overflow: hidden; }
 
 @media (max-width: 1000px) {
   .topbar { position: relative; z-index: 90; }
+}
+
+@media (max-width: 80rem) {
   .mobile-nav nav { z-index: 2; width: min(320px, calc(100vw - 36px)); }
-  .mobile-nav[open]::before { content: ""; position: fixed; z-index: 1; inset: 68px 0 0; background: rgba(7,27,31,.38); backdrop-filter: blur(2px); }
+  .mobile-nav[open]::before { content: ""; position: fixed; z-index: 1; inset: 88px 0 0; background: rgba(7,27,31,.38); backdrop-filter: blur(2px); }
+}
+
+@media (max-width: 760px) {
+  .mobile-nav[open]::before { top: 80px; }
 }
 
 /* WCAG AA secondary-text palette. Keep quiet information visually secondary
@@ -1729,22 +1763,3 @@ body.splash-open { overflow: hidden; }
 .embed-runtime-state small { color: var(--secondary-text-dark); }
 
 .pricing-boundary .section-index { color: var(--lime); }
-
-/* Keep the public navigation on one row after the dedicated account action was
-   added. These final overrides intentionally follow the generic topbar media
-   rules so they cannot reduce the public header to three columns. */
-.public-platform-header .workspace-switcher { min-width: max-content; }
-.public-platform-header .workspace-switcher > summary { white-space: nowrap; }
-
-@media (max-width: 1100px) {
-  .public-platform-header { grid-template-columns: minmax(190px,1fr) auto auto auto; gap: 10px; }
-  .public-platform-header .public-primary-nav { gap: 13px !important; }
-}
-
-@media (max-width: 1000px) {
-  .public-platform-header { grid-template-columns: minmax(0,1fr) auto auto auto; }
-}
-
-@media (max-width: 760px) {
-  .public-platform-header { grid-template-columns: minmax(0,1fr) auto; }
-}
