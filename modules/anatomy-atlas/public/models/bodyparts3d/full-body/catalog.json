@@ -525,6 +525,41 @@
       "bytes": 934264,
       "sha256": "aae6dc0589fa3dc9ce5ea51ff28520a077290adb5b92fa4570c3cf20b2090e02",
       "structures": 22
+    },
+    {
+      "id": "thorax-vessels-inventory",
+      "url": "/models/bodyparts3d/full-body/thorax-vessels-inventory.glb",
+      "bytes": 483532,
+      "sha256": "8071f97ac5b843ab55e8bf019918947ab9c363b1e1901faebefa619e5345fe6f",
+      "structures": 9
+    },
+    {
+      "id": "shoulder-arm-vessels-inventory",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb",
+      "bytes": 616356,
+      "sha256": "d12d81529a1408f934b5055462bb39f0f79c84e25c878a25225652b9baac3e84",
+      "structures": 20
+    },
+    {
+      "id": "head-neck-nerves-inventory",
+      "url": "/models/bodyparts3d/full-body/head-neck-nerves-inventory.glb",
+      "bytes": 10012,
+      "sha256": "4e7f008f8f6167e351bc02c6b04f538ba74433f893d77e5a5b0bb8396fa3b1b9",
+      "structures": 2
+    },
+    {
+      "id": "thorax-organs-inventory",
+      "url": "/models/bodyparts3d/full-body/thorax-organs-inventory.glb",
+      "bytes": 157388,
+      "sha256": "b79225df1153cff7b18c0da4db7cd3257db94f16222376c4d6623a5e542bddc3",
+      "structures": 2
+    },
+    {
+      "id": "abdomen-organs-inventory",
+      "url": "/models/bodyparts3d/full-body/abdomen-organs-inventory.glb",
+      "bytes": 40896,
+      "sha256": "beb3ff34d8e0d64041f6639fea2a4aefff6e11f04f5ed0a9f9d62cec85257a42",
+      "structures": 3
     }
   ],
   "structures": [
@@ -48477,6 +48512,2017 @@
         }
       ],
       "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
+      "fmaId": "FMA3969",
+      "name": "Right internal thoracic artery",
+      "sourceName": "right internal thoracic artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-vessels-inventory",
+      "nodeName": "FMA3969",
+      "bounds": {
+        "min": [
+          -0.4057449996471405,
+          3.7180004119873047,
+          0.5051999688148499
+        ],
+        "max": [
+          -0.12222599983215332,
+          5.493599891662598,
+          1.5079400539398193
+        ]
+      },
+      "center": [
+        -0.2639854997396469,
+        4.605800151824951,
+        1.0065700113773346
+      ],
+      "anchor": [
+        -0.17256499826908112,
+        4.709100246429443,
+        1.1441799402236938
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1937",
+          "sha256": "d8d3716593ee2f1e9001ff77b3e4619e2364062371bb1b5c4c928c0dd0fdd17e"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-internal-thoracic-artery",
+      "fmaId": "FMA4068",
+      "name": "Left internal thoracic artery",
+      "sourceName": "left internal thoracic artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-vessels-inventory",
+      "nodeName": "FMA4068",
+      "bounds": {
+        "min": [
+          0.12218199670314789,
+          3.7180004119873047,
+          0.5075500011444092
+        ],
+        "max": [
+          0.4147059917449951,
+          5.522299766540527,
+          1.5078998804092407
+        ]
+      },
+      "center": [
+        0.2684439942240715,
+        4.620150089263916,
+        1.007724940776825
+      ],
+      "anchor": [
+        0.17414499819278717,
+        4.728000640869141,
+        1.1305298805236816
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1972",
+          "sha256": "95cd8361a6efb53ebc3ecb64fcd52f92968f3b915def80142c01fefbaa35bceb"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+      "fmaId": "FMA3988",
+      "name": "Right superior epigastric artery",
+      "sourceName": "right superior epigastric artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "bundle": "thorax-vessels-inventory",
+      "nodeName": "FMA3988",
+      "bounds": {
+        "min": [
+          -0.162758007645607,
+          2.0850000381469727,
+          1.3073500394821167
+        ],
+        "max": [
+          -0.058193400502204895,
+          3.747800350189209,
+          1.532420039176941
+        ]
+      },
+      "center": [
+        -0.11047570407390594,
+        2.916400194168091,
+        1.4198850393295288
+      ],
+      "anchor": [
+        -0.10448800027370453,
+        2.9230005741119385,
+        1.4897301197052002
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1936",
+          "sha256": "50f8f2849e884a93f4b223f88f91b4fff6b3fb738b3b59a0437250d355320393"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+      "fmaId": "FMA4083",
+      "name": "Left superior epigastric artery",
+      "sourceName": "left superior epigastric artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "bundle": "thorax-vessels-inventory",
+      "nodeName": "FMA4083",
+      "bounds": {
+        "min": [
+          0.058121100068092346,
+          2.0850000381469727,
+          1.3073500394821167
+        ],
+        "max": [
+          0.16272801160812378,
+          3.7477002143859863,
+          1.5324499607086182
+        ]
+      },
+      "center": [
+        0.11042455583810806,
+        2.9163501262664795,
+        1.4199000000953674
+      ],
+      "anchor": [
+        0.10056799650192261,
+        2.905799627304077,
+        1.4860299825668335
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1971",
+          "sha256": "90a4c76477ebcf295c5790516ecaedb3c1e1737391ce4b87b11bbe7d5f423b0a"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+      "fmaId": "FMA10692",
+      "name": "Right musculophrenic artery",
+      "sourceName": "right musculophrenic artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "bundle": "thorax-vessels-inventory",
+      "nodeName": "FMA10692",
+      "bounds": {
+        "min": [
+          -1.1400200128555298,
+          1.962499976158142,
+          0.463979035615921
+        ],
+        "max": [
+          -0.12452099472284317,
+          3.7452001571655273,
+          1.5226600170135498
+        ]
+      },
+      "center": [
+        -0.6322705037891865,
+        2.8538500666618347,
+        0.9933195263147354
+      ],
+      "anchor": [
+        -0.7030269503593445,
+        2.7461998462677,
+        1.3616600036621094
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1969",
+          "sha256": "8b4e68c9e0bf6ef0ca948cb6c511bb894b14156f1609d004c6a8c54303ce271c"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+      "fmaId": "FMA4077",
+      "name": "Left musculophrenic artery",
+      "sourceName": "left musculophrenic artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "bundle": "thorax-vessels-inventory",
+      "nodeName": "FMA4077",
+      "bounds": {
+        "min": [
+          0.12459199875593185,
+          1.9625097513198853,
+          0.46400099992752075
+        ],
+        "max": [
+          1.1399199962615967,
+          3.74530029296875,
+          1.5226199626922607
+        ]
+      },
+      "center": [
+        0.6322559975087643,
+        2.8539050221443176,
+        0.9933104813098907
+      ],
+      "anchor": [
+        0.7044619917869568,
+        2.748000383377075,
+        1.3619500398635864
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1979",
+          "sha256": "f2010f732482ad9d6c1291d7c7ab2cdb839c2fc2bae2889fcc9147f0aa9d3ba6"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-vein",
+      "fmaId": "FMA4758",
+      "name": "Right internal thoracic vein",
+      "sourceName": "right internal thoracic vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-vessels-inventory",
+      "nodeName": "FMA4758",
+      "bounds": {
+        "min": [
+          -0.26538199186325073,
+          3.8387999534606934,
+          0.6932700276374817
+        ],
+        "max": [
+          -0.09159509837627411,
+          5.300400257110596,
+          1.4846899509429932
+        ]
+      },
+      "center": [
+        -0.17848854511976242,
+        4.5696001052856445,
+        1.0889799892902374
+      ],
+      "anchor": [
+        -0.1281770020723343,
+        4.6072998046875,
+        1.201200008392334
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1993",
+          "sha256": "e656a00a3ba808072998f0dd4e1b3285f4fd3b853d9a4952e60640c6a03f299b"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+      "fmaId": "FMA4772",
+      "name": "Right musculophrenic vein",
+      "sourceName": "right musculophrenic vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "bundle": "thorax-vessels-inventory",
+      "nodeName": "FMA4772",
+      "bounds": {
+        "min": [
+          -1.0805100202560425,
+          2.200700044631958,
+          0.965910017490387
+        ],
+        "max": [
+          -0.09123200178146362,
+          3.868800163269043,
+          1.5580499172210693
+        ]
+      },
+      "center": [
+        -0.585871011018753,
+        3.0347501039505005,
+        1.2619799673557281
+      ],
+      "anchor": [
+        -0.599373996257782,
+        2.9973998069763184,
+        1.467579960823059
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1996",
+          "sha256": "a869265038e3f4cfeaaa2a4d3c3df7a2351760eae583caa3970bd2febd6c6f93"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+      "fmaId": "FMA4786",
+      "name": "Left musculophrenic vein",
+      "sourceName": "left musculophrenic vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "bundle": "thorax-vessels-inventory",
+      "nodeName": "FMA4786",
+      "bounds": {
+        "min": [
+          0.09116069972515106,
+          2.200700044631958,
+          0.9658399820327759
+        ],
+        "max": [
+          1.080590009689331,
+          3.871500253677368,
+          1.5594298839569092
+        ]
+      },
+      "center": [
+        0.5858753547072411,
+        3.036100149154663,
+        1.2626349329948425
+      ],
+      "anchor": [
+        0.6027230024337769,
+        2.996500253677368,
+        1.4668999910354614
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1988",
+          "sha256": "cce6a4fb93dd3f4cb47112ae09e1045bf9ebf8243557c75f73ec268640c6b105"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+      "fmaId": "FMA3992",
+      "name": "Right thyrocervical trunk",
+      "sourceName": "right thyrocervical trunk",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "head-neck",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA3992",
+      "bounds": {
+        "min": [
+          -0.4277290105819702,
+          5.521999359130859,
+          0.4754229784011841
+        ],
+        "max": [
+          -0.40075698494911194,
+          5.5794997215271,
+          0.49482595920562744
+        ]
+      },
+      "center": [
+        -0.4142429977655411,
+        5.5507495403289795,
+        0.48512446880340576
+      ],
+      "anchor": [
+        -0.41858500242233276,
+        5.532700061798096,
+        0.48956596851348877
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2307",
+          "sha256": "b81b463eeedf5999f8cd9e072d445799e9c3dcd23a618cda3fb867af39cfe123"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+      "fmaId": "FMA4084",
+      "name": "Left thyrocervical trunk",
+      "sourceName": "left thyrocervical trunk",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "head-neck",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA4084",
+      "bounds": {
+        "min": [
+          0.4013550281524658,
+          5.521899223327637,
+          0.4747239649295807
+        ],
+        "max": [
+          0.4276890158653259,
+          5.579100131988525,
+          0.49424201250076294
+        ]
+      },
+      "center": [
+        0.4145220220088959,
+        5.550499677658081,
+        0.4844829887151718
+      ],
+      "anchor": [
+        0.4182009994983673,
+        5.533499717712402,
+        0.4902590215206146
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2255",
+          "sha256": "15a93e07812a3d1aeed4d8be392335496fb024ab0d8bb1d4e30e281c3d93c810"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+      "fmaId": "FMA5039",
+      "name": "Right costocervical trunk",
+      "sourceName": "right costocervical trunk",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "head-neck",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA5039",
+      "bounds": {
+        "min": [
+          -0.5218989849090576,
+          5.472499847412109,
+          0.41986504197120667
+        ],
+        "max": [
+          -0.4543980062007904,
+          5.555600643157959,
+          0.49830496311187744
+        ]
+      },
+      "center": [
+        -0.488148495554924,
+        5.514050245285034,
+        0.45908500254154205
+      ],
+      "anchor": [
+        -0.4895249903202057,
+        5.522500038146973,
+        0.4635910093784332
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2276",
+          "sha256": "607905f3c66e08d10c3362c702d0ca13bebd55a71fd83667a61f6738d1a66210"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+      "fmaId": "FMA4086",
+      "name": "Left costocervical trunk",
+      "sourceName": "left costocervical trunk",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "head-neck",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA4086",
+      "bounds": {
+        "min": [
+          0.4547460079193115,
+          5.472900390625,
+          0.4201899766921997
+        ],
+        "max": [
+          0.5215910077095032,
+          5.5548996925354,
+          0.4979889690876007
+        ]
+      },
+      "center": [
+        0.48816850781440735,
+        5.5139000415802,
+        0.4590894728899002
+      ],
+      "anchor": [
+        0.48764801025390625,
+        5.507900238037109,
+        0.451477974653244
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2224",
+          "sha256": "32df22be6cdf4200ad69dc439e7b6be7cf6e9ebcc44579526819bbcdf75fc106"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+      "fmaId": "FMA4057",
+      "name": "Right dorsal scapular artery",
+      "sourceName": "right dorsal scapular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA4057",
+      "bounds": {
+        "min": [
+          -1.0666000843048096,
+          3.8316004276275635,
+          -0.5321046113967896
+        ],
+        "max": [
+          -0.5545200109481812,
+          5.613199234008789,
+          0.479032963514328
+        ]
+      },
+      "center": [
+        -0.8105600476264954,
+        4.722399830818176,
+        -0.026535823941230774
+      ],
+      "anchor": [
+        -0.5809879899024963,
+        4.696700572967529,
+        -0.4426394999027252
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2284",
+          "sha256": "1790c89e2535c2831726f71c88ab9f918e113cf20fef742b56d928c108b337aa"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+      "fmaId": "FMA10552",
+      "name": "Left dorsal scapular artery",
+      "sourceName": "left dorsal scapular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA10552",
+      "bounds": {
+        "min": [
+          0.5547209978103638,
+          3.831899404525757,
+          -0.5322532057762146
+        ],
+        "max": [
+          1.0665899515151978,
+          5.613199234008789,
+          0.47892096638679504
+        ]
+      },
+      "center": [
+        0.8106554746627808,
+        4.722549319267273,
+        -0.026666119694709778
+      ],
+      "anchor": [
+        0.5759209990501404,
+        4.744699478149414,
+        -0.44102680683135986
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2232",
+          "sha256": "729363384679145bcaf83868d792dd3dff3f42c56a809d3a3d6cc1e09261e5be"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+      "fmaId": "FMA10698",
+      "name": "Right suprascapular artery",
+      "sourceName": "right suprascapular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA10698",
+      "bounds": {
+        "min": [
+          -1.381119966506958,
+          4.914899826049805,
+          -0.13162700831890106
+        ],
+        "max": [
+          -0.4103670120239258,
+          5.548199653625488,
+          0.5230500102043152
+        ]
+      },
+      "center": [
+        -0.8957434892654419,
+        5.2315497398376465,
+        0.19571150094270706
+      ],
+      "anchor": [
+        -1.0132700204849243,
+        5.3201003074646,
+        0.17565597593784332
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2303",
+          "sha256": "7f065a02471a2664b8d258786de9eaa0a5923bdb3c346cc818908ba07faf243d"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+      "fmaId": "FMA10681",
+      "name": "Left suprascapular artery",
+      "sourceName": "left suprascapular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA10681",
+      "bounds": {
+        "min": [
+          0.4103490114212036,
+          4.914899826049805,
+          -0.13112300634384155
+        ],
+        "max": [
+          1.3812099695205688,
+          5.548199653625488,
+          0.5229499936103821
+        ]
+      },
+      "center": [
+        0.8957794904708862,
+        5.2315497398376465,
+        0.19591349363327026
+      ],
+      "anchor": [
+        1.0131900310516357,
+        5.319499492645264,
+        0.17460602521896362
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2251",
+          "sha256": "89f37b85c44d82a11482e56365078b40d8a542c1ad0bcfb4ccd823574645173f"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+      "fmaId": "FMA13330",
+      "name": "Right axillary vein",
+      "sourceName": "right axillary vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA13330",
+      "bounds": {
+        "min": [
+          -1.5716700553894043,
+          4.328499794006348,
+          0.41394203901290894
+        ],
+        "max": [
+          -0.7491909861564636,
+          5.351400375366211,
+          0.6516900062561035
+        ]
+      },
+      "center": [
+        -1.160430520772934,
+        4.839950084686279,
+        0.5328160226345062
+      ],
+      "anchor": [
+        -1.3682899475097656,
+        4.929800033569336,
+        0.5104399919509888
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2269",
+          "sha256": "24438422321aa6665de6394aa39e79fdeabdf2bc56427a3419da4dc630546464"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+      "fmaId": "FMA13331",
+      "name": "Left axillary vein",
+      "sourceName": "left axillary vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA13331",
+      "bounds": {
+        "min": [
+          0.7492620348930359,
+          4.328399658203125,
+          0.4140329658985138
+        ],
+        "max": [
+          1.571410059928894,
+          5.351400375366211,
+          0.6516600251197815
+        ]
+      },
+      "center": [
+        1.160336047410965,
+        4.839900016784668,
+        0.5328464955091476
+      ],
+      "anchor": [
+        1.3708299398422241,
+        4.921700477600098,
+        0.5061599612236023
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2217",
+          "sha256": "7b448d1f2a071e88d1a2ebe54e7e5d417719663a5b01d1226f492b71ebdc19cd"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+      "fmaId": "FMA50859",
+      "name": "Right suprascapular vein",
+      "sourceName": "right suprascapular vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA50859",
+      "bounds": {
+        "min": [
+          -1.3964999914169312,
+          4.831300258636475,
+          0.01680198684334755
+        ],
+        "max": [
+          -0.6351689696311951,
+          5.439599514007568,
+          0.6387699842453003
+        ]
+      },
+      "center": [
+        -1.015834480524063,
+        5.1354498863220215,
+        0.3277859855443239
+      ],
+      "anchor": [
+        -1.0245000123977661,
+        5.289799690246582,
+        0.23821403086185455
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2302",
+          "sha256": "05a1af2bdafa5d179753ce923971e3300a4451ce71788d9fc3bf115897dc92db"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+      "fmaId": "FMA50860",
+      "name": "Left suprascapular vein",
+      "sourceName": "left suprascapular vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA50860",
+      "bounds": {
+        "min": [
+          0.6352019906044006,
+          4.831200122833252,
+          0.016885986551642418
+        ],
+        "max": [
+          1.3961501121520996,
+          5.439599514007568,
+          0.6388300061225891
+        ]
+      },
+      "center": [
+        1.0156760513782501,
+        5.13539981842041,
+        0.32785799633711576
+      ],
+      "anchor": [
+        1.0412299633026123,
+        5.273900032043457,
+        0.21618598699569702
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2250",
+          "sha256": "50bcc347434326f06d5db0054036b90215f78f964c3d00c0c94cd0b981dd558b"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA66563",
+      "name": "Trunk of right thoraco-acromial artery",
+      "sourceName": "trunk of right thoraco-acromial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA66563",
+      "bounds": {
+        "min": [
+          -0.9646859765052795,
+          5.183399677276611,
+          0.4785099923610687
+        ],
+        "max": [
+          -0.9166169762611389,
+          5.309200286865234,
+          0.5283600091934204
+        ]
+      },
+      "center": [
+        -0.9406514763832092,
+        5.246299982070923,
+        0.5034350007772446
+      ],
+      "anchor": [
+        -0.9337560534477234,
+        5.278399467468262,
+        0.4792209565639496
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2304",
+          "sha256": "b82a47ccca2bb3affd63d8d1f86ad7c79a5a725bcbeb60a25711f1cd3275494e"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA66564",
+      "name": "Trunk of left thoraco-acromial artery",
+      "sourceName": "trunk of left thoraco-acromial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA66564",
+      "bounds": {
+        "min": [
+          0.9166539907455444,
+          5.183299541473389,
+          0.4786139726638794
+        ],
+        "max": [
+          0.9652439951896667,
+          5.309000015258789,
+          0.528659999370575
+        ]
+      },
+      "center": [
+        0.9409489929676056,
+        5.246149778366089,
+        0.5036369860172272
+      ],
+      "anchor": [
+        0.9215799570083618,
+        5.276999473571777,
+        0.48698097467422485
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2252",
+          "sha256": "2ff1924941e505e62ac394bc8e8087f6903c7dba58826d87dd21cbc254e511c7"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA23063",
+      "name": "Pectoral branch of right thoraco-acromial artery",
+      "sourceName": "pectoral branch of right thoraco-acromial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA23063",
+      "bounds": {
+        "min": [
+          -1.2689299583435059,
+          4.00629997253418,
+          0.48791801929473877
+        ],
+        "max": [
+          -0.9245250225067139,
+          5.224100112915039,
+          0.9948499798774719
+        ]
+      },
+      "center": [
+        -1.0967274904251099,
+        4.615200042724609,
+        0.7413839995861053
+      ],
+      "anchor": [
+        -1.1094200611114502,
+        4.625999927520752,
+        0.7812199592590332
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2361",
+          "sha256": "341bf21d162b7d1f60261396f397db0d7d4acb5be2295e30dea7f6b9394651e8"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA23064",
+      "name": "Pectoral branch of left thoraco-acromial artery",
+      "sourceName": "pectoral branch of left thoraco-acromial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA23064",
+      "bounds": {
+        "min": [
+          0.9245760440826416,
+          4.00629997253418,
+          0.4878929853439331
+        ],
+        "max": [
+          1.268880009651184,
+          5.224100112915039,
+          0.9948499798774719
+        ]
+      },
+      "center": [
+        1.0967280268669128,
+        4.615200042724609,
+        0.7413714826107025
+      ],
+      "anchor": [
+        1.1071399450302124,
+        4.64069938659668,
+        0.7724999785423279
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2330",
+          "sha256": "3defe0932a0a8948faf7037f0812527864b9ac4e4f8251f45873d7b48ab00977"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA23068",
+      "name": "Acromial branch of right thoraco-acromial artery",
+      "sourceName": "acromial branch of right thoraco-acromial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA23068",
+      "bounds": {
+        "min": [
+          -1.3827999830245972,
+          5.175000190734863,
+          0.46362799406051636
+        ],
+        "max": [
+          -0.9414899945259094,
+          5.349799633026123,
+          0.5357099771499634
+        ]
+      },
+      "center": [
+        -1.1621449887752533,
+        5.262399911880493,
+        0.49966898560523987
+      ],
+      "anchor": [
+        -1.1718900203704834,
+        5.241800308227539,
+        0.4815899729728699
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2263",
+          "sha256": "d794a35d47638639cd793d357a99312850d6f7b27531cdc10b4b00817f35e170"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA23069",
+      "name": "Acromial branch of left thoraco-acromial artery",
+      "sourceName": "acromial branch of left thoraco-acromial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA23069",
+      "bounds": {
+        "min": [
+          0.9414849877357483,
+          5.174900054931641,
+          0.4637850224971771
+        ],
+        "max": [
+          1.3825300931930542,
+          5.349799633026123,
+          0.5355899930000305
+        ]
+      },
+      "center": [
+        1.1620075404644012,
+        5.262349843978882,
+        0.4996875077486038
+      ],
+      "anchor": [
+        1.169390082359314,
+        5.241700649261475,
+        0.47968003153800964
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2211",
+          "sha256": "bd760839d0c3565e6d2bfe9d40e111116f7965e636053f213b0800b1ccb27537"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA23072",
+      "name": "Deltoid branch of right thoraco-acromial artery",
+      "sourceName": "deltoid branch of right thoraco-acromial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA23072",
+      "bounds": {
+        "min": [
+          -1.6184399127960205,
+          5.1080002784729,
+          0.4776820242404938
+        ],
+        "max": [
+          -1.1191400289535522,
+          5.21150016784668,
+          0.5387200117111206
+        ]
+      },
+      "center": [
+        -1.3687899708747864,
+        5.15975022315979,
+        0.5082010179758072
+      ],
+      "anchor": [
+        -1.3607699871063232,
+        5.134900093078613,
+        0.5233399868011475
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2282",
+          "sha256": "c5d3cd8addb5e3355d853cd416a599e3a90e6c450adbe08c6aad1d28136dc761"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA23073",
+      "name": "Deltoid branch of left thoraco-acromial artery",
+      "sourceName": "deltoid branch of left thoraco-acromial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA23073",
+      "bounds": {
+        "min": [
+          1.1192200183868408,
+          5.108100414276123,
+          0.47790297865867615
+        ],
+        "max": [
+          1.6182299852371216,
+          5.211400032043457,
+          0.5388400554656982
+        ]
+      },
+      "center": [
+        1.3687250018119812,
+        5.15975022315979,
+        0.5083715170621872
+      ],
+      "anchor": [
+        1.3586399555206299,
+        5.135500431060791,
+        0.5237900018692017
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2230",
+          "sha256": "cf6ccdb1b2c827dd096a04457aee6f55d2c95a3400f4dc6254c42fbfbd6bfcd1"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+      "fmaId": "FMA53549",
+      "name": "Right ciliary ganglion",
+      "sourceName": "right ciliary ganglion",
+      "system": "nerves",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves-inventory",
+      "nodeName": "FMA53549",
+      "bounds": {
+        "min": [
+          -0.2703910171985626,
+          7.239599704742432,
+          0.8079899549484253
+        ],
+        "max": [
+          -0.23795200884342194,
+          7.265300273895264,
+          0.8405799865722656
+        ]
+      },
+      "center": [
+        -0.2541715130209923,
+        7.252449989318848,
+        0.8242849707603455
+      ],
+      "anchor": [
+        -0.24665099382400513,
+        7.257500171661377,
+        0.8309299945831299
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1339",
+          "sha256": "de1f5bc0af45dc52a70d8e2d647f509b3ff0072ae504ab95483e9c1662195076"
+        }
+      ],
+      "coverageNote": "Small orbital ganglion source; its roots and connecting nerve branches are not reconstructed. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+      "fmaId": "FMA53550",
+      "name": "Left ciliary ganglion",
+      "sourceName": "left ciliary ganglion",
+      "system": "nerves",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves-inventory",
+      "nodeName": "FMA53550",
+      "bounds": {
+        "min": [
+          0.22498100996017456,
+          7.239499568939209,
+          0.8080999851226807
+        ],
+        "max": [
+          0.257192999124527,
+          7.265100002288818,
+          0.8402799963951111
+        ]
+      },
+      "center": [
+        0.24108700454235077,
+        7.252299785614014,
+        0.8241899907588959
+      ],
+      "anchor": [
+        0.23325000703334808,
+        7.251800537109375,
+        0.8322200179100037
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1288",
+          "sha256": "c362a3813e882588d31710138ce6e180c2d0dd32e9755a0f53452a82657371e0"
+        }
+      ],
+      "coverageNote": "Small orbital ganglion source; its roots and connecting nerve branches are not reconstructed. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+      "fmaId": "FMA7395",
+      "name": "Right main bronchus",
+      "sourceName": "right main bronchus",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-organs-inventory",
+      "nodeName": "FMA7395",
+      "bounds": {
+        "min": [
+          -0.5041910409927368,
+          4.040300369262695,
+          0.11328700929880142
+        ],
+        "max": [
+          -0.0037724198773503304,
+          4.980000019073486,
+          0.4849279820919037
+        ]
+      },
+      "center": [
+        -0.2539817304350436,
+        4.510150194168091,
+        0.29910749569535255
+      ],
+      "anchor": [
+        -0.24193701148033142,
+        4.500400543212891,
+        0.30463501811027527
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2539",
+          "sha256": "0e1e4dc8c326263c21819c3c48a3e2e41e72fa92425983876d4902fa5dcc3074"
+        }
+      ],
+      "coverageNote": "Proximal airway source segment only; no complete bronchial-tree or wall-layer segmentation is implied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
+      "fmaId": "FMA7396",
+      "name": "Left main bronchus",
+      "sourceName": "left main bronchus",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-organs-inventory",
+      "nodeName": "FMA7396",
+      "bounds": {
+        "min": [
+          0.004211960360407829,
+          4.208199501037598,
+          0.11001399904489517
+        ],
+        "max": [
+          0.7234739661216736,
+          4.967099666595459,
+          0.4338349997997284
+        ]
+      },
+      "center": [
+        0.3638429632410407,
+        4.587649583816528,
+        0.2719244994223118
+      ],
+      "anchor": [
+        0.375588983297348,
+        4.597700119018555,
+        0.2967270016670227
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2450",
+          "sha256": "7c4ac571448fb3d0c3c1095874bf17a60853bf12457d842a11dd2c62c0994946"
+        }
+      ],
+      "coverageNote": "Proximal airway source segment only; no complete bronchial-tree or wall-layer segmentation is implied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+      "fmaId": "FMA14539",
+      "name": "Cystic duct",
+      "sourceName": "cystic duct",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "unpaired",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-organs-inventory",
+      "nodeName": "FMA14539",
+      "bounds": {
+        "min": [
+          -0.29680201411247253,
+          2.791600227355957,
+          0.7844099402427673
+        ],
+        "max": [
+          -0.2089800089597702,
+          2.9134998321533203,
+          0.8778599500656128
+        ]
+      },
+      "center": [
+        -0.25289101153612137,
+        2.8525500297546387,
+        0.8311349451541901
+      ],
+      "anchor": [
+        -0.257409006357193,
+        2.8639001846313477,
+        0.8359300494194031
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3080",
+          "sha256": "8f7a2604f762392129842c1a7251be006b00bfe9211698d48d0e6dd2bd512d28"
+        }
+      ],
+      "coverageNote": "Selected biliary duct source surface; no complete biliary-tree or luminal validation is supplied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
+      "fmaId": "FMA14668",
+      "name": "Common hepatic duct",
+      "sourceName": "common hepatic duct",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "unpaired",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-organs-inventory",
+      "nodeName": "FMA14668",
+      "bounds": {
+        "min": [
+          -0.43682000041007996,
+          2.1958000659942627,
+          0.5703700184822083
+        ],
+        "max": [
+          -0.1786300092935562,
+          3.0386998653411865,
+          0.9450799822807312
+        ]
+      },
+      "center": [
+        -0.3077250048518181,
+        2.6172499656677246,
+        0.7577250003814697
+      ],
+      "anchor": [
+        -0.27831700444221497,
+        2.666300058364868,
+        0.7028900384902954
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3079",
+          "sha256": "31a8cf303123987ddd1a3092b9a7c5ceb092fc10afce61193f40e1fe43af845f"
+        }
+      ],
+      "coverageNote": "Selected biliary duct source surface; no complete biliary-tree or luminal validation is supplied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+      "fmaId": "FMA14542",
+      "name": "Appendix",
+      "sourceName": "appendix",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "unpaired",
+      "region": "abdomen",
+      "regions": [
+        "abdomen",
+        "pelvis"
+      ],
+      "bundle": "abdomen-organs-inventory",
+      "nodeName": "FMA14542",
+      "bounds": {
+        "min": [
+          -0.8842359781265259,
+          0.655869722366333,
+          0.31784698367118835
+        ],
+        "max": [
+          -0.18863099813461304,
+          0.836560070514679,
+          0.7078999876976013
+        ]
+      },
+      "center": [
+        -0.5364334881305695,
+        0.746214896440506,
+        0.5128734856843948
+      ],
+      "anchor": [
+        -0.517009973526001,
+        0.7499401569366455,
+        0.5480700135231018
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2565",
+          "sha256": "26717e62b43eab2d48c6133aa4f9ea7a6f6a65ade4c5af81741b942a47fc56de"
+        }
+      ],
+      "coverageNote": "Reference appendix surface only; variation, wall layers and mesoappendix are not reconstructed. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
       "provenance": {
         "method": "licensed-source-mesh",
         "license": "CC-BY-4.0",

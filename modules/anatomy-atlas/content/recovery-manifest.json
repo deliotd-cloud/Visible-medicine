@@ -1,7 +1,7 @@
 {
-  "version": 2,
+  "version": 3,
   "date": "2026-09-06",
-  "catalogSha256": "6167b65dafb105d6727605b8ede0f0509e558d348777e228fe86bdca2b7bdeab",
+  "catalogSha256": "32b5a2c48595af0b5941dc00cf418728500198bb9c315b03e43db0167d03e316",
   "status": "unvalidated",
   "method": "licensed-source-recovery",
   "generatedAnatomicalMeshes": 0,
@@ -4465,6 +4465,685 @@
         }
       ],
       "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
+      "fmaId": "FMA3969",
+      "sourceName": "right internal thoracic artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ1937",
+          "sha256": "d8d3716593ee2f1e9001ff77b3e4619e2364062371bb1b5c4c928c0dd0fdd17e"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-internal-thoracic-artery",
+      "fmaId": "FMA4068",
+      "sourceName": "left internal thoracic artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ1972",
+          "sha256": "95cd8361a6efb53ebc3ecb64fcd52f92968f3b915def80142c01fefbaa35bceb"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+      "fmaId": "FMA3988",
+      "sourceName": "right superior epigastric artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ1936",
+          "sha256": "50f8f2849e884a93f4b223f88f91b4fff6b3fb738b3b59a0437250d355320393"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+      "fmaId": "FMA4083",
+      "sourceName": "left superior epigastric artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ1971",
+          "sha256": "90a4c76477ebcf295c5790516ecaedb3c1e1737391ce4b87b11bbe7d5f423b0a"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+      "fmaId": "FMA10692",
+      "sourceName": "right musculophrenic artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ1969",
+          "sha256": "8b4e68c9e0bf6ef0ca948cb6c511bb894b14156f1609d004c6a8c54303ce271c"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+      "fmaId": "FMA4077",
+      "sourceName": "left musculophrenic artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ1979",
+          "sha256": "f2010f732482ad9d6c1291d7c7ab2cdb839c2fc2bae2889fcc9147f0aa9d3ba6"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-vein",
+      "fmaId": "FMA4758",
+      "sourceName": "right internal thoracic vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ1993",
+          "sha256": "e656a00a3ba808072998f0dd4e1b3285f4fd3b853d9a4952e60640c6a03f299b"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+      "fmaId": "FMA4772",
+      "sourceName": "right musculophrenic vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ1996",
+          "sha256": "a869265038e3f4cfeaaa2a4d3c3df7a2351760eae583caa3970bd2febd6c6f93"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+      "fmaId": "FMA4786",
+      "sourceName": "left musculophrenic vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ1988",
+          "sha256": "cce6a4fb93dd3f4cb47112ae09e1045bf9ebf8243557c75f73ec268640c6b105"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+      "fmaId": "FMA3992",
+      "sourceName": "right thyrocervical trunk",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "head-neck",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2307",
+          "sha256": "b81b463eeedf5999f8cd9e072d445799e9c3dcd23a618cda3fb867af39cfe123"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+      "fmaId": "FMA4084",
+      "sourceName": "left thyrocervical trunk",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "head-neck",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2255",
+          "sha256": "15a93e07812a3d1aeed4d8be392335496fb024ab0d8bb1d4e30e281c3d93c810"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+      "fmaId": "FMA5039",
+      "sourceName": "right costocervical trunk",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "head-neck",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2276",
+          "sha256": "607905f3c66e08d10c3362c702d0ca13bebd55a71fd83667a61f6738d1a66210"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+      "fmaId": "FMA4086",
+      "sourceName": "left costocervical trunk",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "head-neck",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2224",
+          "sha256": "32df22be6cdf4200ad69dc439e7b6be7cf6e9ebcc44579526819bbcdf75fc106"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+      "fmaId": "FMA4057",
+      "sourceName": "right dorsal scapular artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2284",
+          "sha256": "1790c89e2535c2831726f71c88ab9f918e113cf20fef742b56d928c108b337aa"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+      "fmaId": "FMA10552",
+      "sourceName": "left dorsal scapular artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2232",
+          "sha256": "729363384679145bcaf83868d792dd3dff3f42c56a809d3a3d6cc1e09261e5be"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+      "fmaId": "FMA10698",
+      "sourceName": "right suprascapular artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2303",
+          "sha256": "7f065a02471a2664b8d258786de9eaa0a5923bdb3c346cc818908ba07faf243d"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+      "fmaId": "FMA10681",
+      "sourceName": "left suprascapular artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2251",
+          "sha256": "89f37b85c44d82a11482e56365078b40d8a542c1ad0bcfb4ccd823574645173f"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+      "fmaId": "FMA13330",
+      "sourceName": "right axillary vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2269",
+          "sha256": "24438422321aa6665de6394aa39e79fdeabdf2bc56427a3419da4dc630546464"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+      "fmaId": "FMA13331",
+      "sourceName": "left axillary vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2217",
+          "sha256": "7b448d1f2a071e88d1a2ebe54e7e5d417719663a5b01d1226f492b71ebdc19cd"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+      "fmaId": "FMA50859",
+      "sourceName": "right suprascapular vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2302",
+          "sha256": "05a1af2bdafa5d179753ce923971e3300a4451ce71788d9fc3bf115897dc92db"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+      "fmaId": "FMA50860",
+      "sourceName": "left suprascapular vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2250",
+          "sha256": "50bcc347434326f06d5db0054036b90215f78f964c3d00c0c94cd0b981dd558b"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA66563",
+      "sourceName": "trunk of right thoraco-acromial artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2304",
+          "sha256": "b82a47ccca2bb3affd63d8d1f86ad7c79a5a725bcbeb60a25711f1cd3275494e"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA66564",
+      "sourceName": "trunk of left thoraco-acromial artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2252",
+          "sha256": "2ff1924941e505e62ac394bc8e8087f6903c7dba58826d87dd21cbc254e511c7"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA23063",
+      "sourceName": "pectoral branch of right thoraco-acromial artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2361",
+          "sha256": "341bf21d162b7d1f60261396f397db0d7d4acb5be2295e30dea7f6b9394651e8"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA23064",
+      "sourceName": "pectoral branch of left thoraco-acromial artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2330",
+          "sha256": "3defe0932a0a8948faf7037f0812527864b9ac4e4f8251f45873d7b48ab00977"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA23068",
+      "sourceName": "acromial branch of right thoraco-acromial artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2263",
+          "sha256": "d794a35d47638639cd793d357a99312850d6f7b27531cdc10b4b00817f35e170"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA23069",
+      "sourceName": "acromial branch of left thoraco-acromial artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2211",
+          "sha256": "bd760839d0c3565e6d2bfe9d40e111116f7965e636053f213b0800b1ccb27537"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA23072",
+      "sourceName": "deltoid branch of right thoraco-acromial artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2282",
+          "sha256": "c5d3cd8addb5e3355d853cd416a599e3a90e6c450adbe08c6aad1d28136dc761"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA23073",
+      "sourceName": "deltoid branch of left thoraco-acromial artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2230",
+          "sha256": "cf6ccdb1b2c827dd096a04457aee6f55d2c95a3400f4dc6254c42fbfbd6bfcd1"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+      "fmaId": "FMA53549",
+      "sourceName": "right ciliary ganglion",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1339",
+          "sha256": "de1f5bc0af45dc52a70d8e2d647f509b3ff0072ae504ab95483e9c1662195076"
+        }
+      ],
+      "coverageNote": "Small orbital ganglion source; its roots and connecting nerve branches are not reconstructed. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+      "fmaId": "FMA53550",
+      "sourceName": "left ciliary ganglion",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1288",
+          "sha256": "c362a3813e882588d31710138ce6e180c2d0dd32e9755a0f53452a82657371e0"
+        }
+      ],
+      "coverageNote": "Small orbital ganglion source; its roots and connecting nerve branches are not reconstructed. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+      "fmaId": "FMA7395",
+      "sourceName": "right main bronchus",
+      "sourceTree": "partof",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2539",
+          "sha256": "0e1e4dc8c326263c21819c3c48a3e2e41e72fa92425983876d4902fa5dcc3074"
+        }
+      ],
+      "coverageNote": "Proximal airway source segment only; no complete bronchial-tree or wall-layer segmentation is implied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
+      "fmaId": "FMA7396",
+      "sourceName": "left main bronchus",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2450",
+          "sha256": "7c4ac571448fb3d0c3c1095874bf17a60853bf12457d842a11dd2c62c0994946"
+        }
+      ],
+      "coverageNote": "Proximal airway source segment only; no complete bronchial-tree or wall-layer segmentation is implied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+      "fmaId": "FMA14539",
+      "sourceName": "cystic duct",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3080",
+          "sha256": "8f7a2604f762392129842c1a7251be006b00bfe9211698d48d0e6dd2bd512d28"
+        }
+      ],
+      "coverageNote": "Selected biliary duct source surface; no complete biliary-tree or luminal validation is supplied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
+      "fmaId": "FMA14668",
+      "sourceName": "common hepatic duct",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3079",
+          "sha256": "31a8cf303123987ddd1a3092b9a7c5ceb092fc10afce61193f40e1fe43af845f"
+        }
+      ],
+      "coverageNote": "Selected biliary duct source surface; no complete biliary-tree or luminal validation is supplied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+      "fmaId": "FMA14542",
+      "sourceName": "appendix",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "abdomen",
+        "pelvis"
+      ],
+      "sources": [
+        {
+          "file": "FJ2565",
+          "sha256": "26717e62b43eab2d48c6133aa4f9ea7a6f6a65ade4c5af81741b942a47fc56de"
+        }
+      ],
+      "coverageNote": "Reference appendix surface only; variation, wall layers and mesoappendix are not reconstructed. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
     }
   ]
 }

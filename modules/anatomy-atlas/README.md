@@ -1,5 +1,9 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Source inventory and added regional detail
+
+The atlas now has **859 selectable source representations**. An exhaustive comparison of both official BodyParts3D v4 indexes supports 36 further additions: 29 vessel segments, two ciliary ganglia and five selected organ/duct/airway representations. Use the new **Shoulder vascular detail**, **Central airway window**, and focused chest-wall, orbital, biliary and appendix views. All prior identities and mesh bundles are unchanged. See [source inventory, admission evidence and holds](docs/SOURCE_INVENTORY.md). These are unvalidated source surfaces, not complete nerve, vascular, airway or biliary trees.
+
 ## Imaging connection framework
 
 **Imaging link** provides opt-in two-way structure selection for a future CT/MRI/ultrasound viewer, explicit grouped-structure choices, region/side checks and practice-mode safeguards. Exact source-space transforms and source hashes travel separately from presentation geometry. It starts **Not connected**; no study or patient registration is included. See [adapter contract and integration gate](docs/IMAGING_LINK.md).
@@ -28,15 +32,15 @@ The earlier numerical explode review is preserved in `docs/EXPLODE_REVIEW.md`, a
 
 The library now opens at `/` with a whole-body model and **11 individual regional explorers**: head/neck, thorax, abdomen, pelvis/hip, shoulder/arm, elbow/forearm, wrist/hand, hip/thigh, knee/leg, ankle/foot and spine/back. Each region has its own `/regions/{region-id}` URL. The approved visual approach of the dedicated shoulder viewer is preserved at `/shoulder`.
 
-The expanded source library contains **823 selectable entries**: 203 skeletal, 363 muscular, 39 organ, 30 nervous-system, 117 vascular and 71 connective-tissue entries. These are source representations, not an assertion of complete anatomical coverage or a count of distinct human bones/muscles. Whole-body and regional views support system switches, left/right filtering, name search, rotation, pan, zoom, selective hide/restore, isolate/frame, separation and identification practice. Anatomy and clinical tabs remain available; unauthored specialist material is clearly marked pending, not manufactured as finished teaching content.
+The expanded source library contains **859 selectable entries**: 203 skeletal, 363 muscular, 44 organ, 32 nervous-system, 146 vascular and 71 connective-tissue entries. These are source representations, not an assertion of complete anatomical coverage or a count of distinct human bones/muscles. Whole-body and regional views support system switches, left/right filtering, name search, rotation, pan, zoom, selective hide/restore, isolate/frame, separation and identification practice. Anatomy and clinical tabs remain available; unauthored specialist material is clearly marked pending, not manufactured as finished teaching content.
 
-**Nervous-system scope:** brain and 28 selected cranial/orbital nerve entries, plus a central-canal representation. No complete spinal cord, limb peripheral nerves, brachial plexus or lumbosacral plexus is included. The source ambiguously maps spinal cord and central canal to the same mesh; the narrower central-canal identity is used. Four candidate muscle entries with source laterality/position discrepancies were quarantined, not automatically relabelled. See `docs/FULL_BODY_COVERAGE.md`.
+**Nervous-system scope:** brain, 28 selected cranial/orbital nerve entries, two ciliary ganglia and a central-canal representation. No complete spinal cord, limb peripheral nerves, brachial plexus or lumbosacral plexus is included. The source ambiguously maps spinal cord and central canal to the same mesh; the narrower central-canal identity is used. Four candidate muscle entries with source laterality/position discrepancies were quarantined, not automatically relabelled. See `docs/FULL_BODY_COVERAGE.md`.
 
-The full-body catalogue is split into 61 lazy-loaded regional/system GLB bundles. Whole-body initially loads bones; regional pages open with their assembled available anatomy. Other bundles load on demand. An organs-only or nerves-only view automatically reframes to the visible anatomy, and a selected structure can be framed individually. The entire expanded asset set is about 88.6 MB uncompressed; network transfer and device memory depend on the chosen regions/systems. These assets introduce no new dependencies or paid services.
+The full-body catalogue is split into 66 lazy-loaded regional/system GLB bundles. Whole-body initially loads bones; regional pages open with their assembled available anatomy. Other bundles load on demand. An organs-only or nerves-only view automatically reframes to the visible anatomy, and a selected structure can be framed individually. The entire expanded body asset set is about 89.94 MB uncompressed; network transfer and device memory depend on the chosen regions/systems. These assets introduce no new dependencies or paid services.
 
 ## Guided regional dissection
 
-Every regional page now has a guided dissection deck, with **86 stages and 60 focused views** across the 11 regions and whole body. Move forward/back, jump to a named stage, switch to a compartment, ghost removed tissues, remove individual structures, restore them from the removed list, undo up to 40 dissection changes, or reassemble. Six directional camera presets include a plantar view for the foot. Stage landmarks and a study guide explain what is visible and which source structures are missing. Selecting a removed structure through search restores it explicitly and marks the view customised.
+Every regional page now has a guided dissection deck, with **88 stages and 66 focused views** across the 11 regions and whole body. Move forward/back, jump to a named stage, switch to a compartment, ghost removed tissues, remove individual structures, restore them from the removed list, undo up to 40 dissection changes, or reassemble. Six directional camera presets include a plantar view for the foot. Stage landmarks and a study guide explain what is visible and which source structures are missing. Selecting a removed structure through search restores it explicitly and marks the view customised.
 
 The rendering adds original contour and tonal-hatching treatment without changing the mesh shape. Hatching describes form, not measured muscle fibres. Whole-body contour rendering is limited to selected structures when the scope is large; regional views use full contours. Ghosts do not intercept structure selection. Practice hides labels, ghosts and study content.
 
@@ -70,6 +74,7 @@ node scripts/validate-explode.mjs
 npm run inspection:test
 npm run study:test
 npm run imaging:test
+npm run inventory:test
 npm run reviews:test
 node scripts/validate-recovery.mjs
 node scripts/validate-gaps.mjs

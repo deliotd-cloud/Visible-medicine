@@ -16,6 +16,7 @@ import {
 } from './bodyparts-archive.mjs';
 import { recoverySelections } from './anatomy-recovery.mjs';
 import { gapSelections } from './gap-recovery.mjs';
+import { inventorySelections } from './inventory-selections.mjs';
 
 const [isa, partof, isaZip, partofZip] = await Promise.all([
   conceptMap('isa'),
@@ -218,7 +219,11 @@ selections.push({
   coverageNote:
     'Central canal representation only; this is not a complete spinal cord or spinal-nerve model.',
 });
-const recovered = [...recoverySelections(isa, partof), ...gapSelections(isa)];
+const recovered = [
+  ...recoverySelections(isa, partof),
+  ...gapSelections(isa),
+  ...inventorySelections(isa, partof),
+];
 // Separate an already included component from an aggregate without duplicating
 // its surface. Preserve the aggregate's public ID and record the adaptation.
 for (const child of recovered) {
@@ -449,7 +454,7 @@ for (const record of selections) {
   mesh.userData = { structureId: id, fmaId: record.fma };
   const bundle =
     prior?.bundle ??
-    `${region}-${record.system}${record.gapRecovery ? '-gaps' : record.recovery ? '-recovery' : record.dissection ? '-dissection' : ''}`;
+    `${region}-${record.system}${record.inventoryRecovery ? '-inventory' : record.gapRecovery ? '-gaps' : record.recovery ? '-recovery' : record.dissection ? '-dissection' : ''}`;
   if (!bundles.has(bundle)) bundles.set(bundle, new THREE.Group());
   bundles.get(bundle).add(mesh);
   const box = geometry.boundingBox,

@@ -2,6 +2,8 @@
 
 This project is designed for commercial use without per-user licence fees. Third-party software remains under its original licence.
 
+The 36-source inventory extension and four exact official v4 index tables remain under the BodyParts3D CC BY 4.0 grant, including its DBCLS attribution and indication-of-change obligations. The derived source inventory does not convert source data to MIT. See `BODYPARTS3D_FULL_BODY.md` and `../docs/SOURCE_INVENTORY.md`. No paid service or new runtime dependency was introduced.
+
 ## Visible Medicine brand assets
 
 The approved Visible Medicine — by Elivion lockups in `public/brand/` are reused with the user's express instruction from their existing Visible Medicine project. They are **excluded from MIT** and are not sublicensed as public-domain or OSS artwork. This repository does not grant anyone else rights to the logo or trademarks. Exact sources/hashes are recorded in `docs/BRAND_ALIGNMENT.md`. No font binary is distributed with them.

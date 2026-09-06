@@ -830,7 +830,11 @@ for (const region of vascularRegions) {
   profile.focuses.push({
     id: 'arteries',
     title: 'Selected arteries',
-    rule: { systems: ['vessels'], pattern: 'artery|aorta|palmar arch' },
+    rule: {
+      systems: ['vessels'],
+      pattern:
+        'artery|aorta|palmar arch|thyrocervical trunk|costocervical trunk',
+    },
     view: region === 'foot' ? 'inferior' : 'anterior',
   });
   if (!['hand'].includes(region))
@@ -863,6 +867,95 @@ for (const region of [
     ),
   );
 }
+dissectionProfiles['shoulder-arm'].stages.push(
+  window(
+    'scapular-vascular-detail',
+    'Shoulder vascular detail',
+    'Compare the available axillary, scapular and thoraco-acromial source segments with the shoulder bones.',
+    [
+      system('skeleton'),
+      {
+        systems: ['vessels'],
+        pattern: 'axillary|scapular|thoraco-acromial|cervical trunk',
+      },
+    ],
+    'posterior',
+    ['suprascapular artery', 'axillary vein'],
+    'Separate the display gently, then return to zero to judge the source relationships. The brachial plexus is absent; branching, attachments and vessel calibre remain unreviewed.',
+  ),
+);
+dissectionProfiles.thorax.stages.push(
+  window(
+    'central-airway-window',
+    'Central airway window',
+    'Remove the lung aggregates and chest muscles to inspect the trachea and source-labelled main bronchial segments.',
+    [
+      system('skeleton'),
+      { systems: ['organs'], pattern: 'trachea|main bronchus' },
+    ],
+    'anterior',
+    ['trachea', 'main bronchus'],
+    'These are source-defined exterior surfaces, not a bronchoscopic lumen or a validated segmental-airway tree. Bronchial boundaries and relative lengths require review.',
+  ),
+);
+for (const [region, id, title, systems, pattern, view] of [
+  [
+    'shoulder-arm',
+    'scapular-vessels',
+    'Scapular & axillary vessels',
+    ['vessels'],
+    'scapular|axillary|thoraco-acromial',
+    'posterior',
+  ],
+  [
+    'thorax',
+    'chest-wall-vessels',
+    'Anterior chest-wall vessels',
+    ['vessels'],
+    'internal thoracic|musculophrenic|superior epigastric',
+    'anterior',
+  ],
+  [
+    'thorax',
+    'central-airways',
+    'Central airway source segments',
+    ['organs'],
+    'trachea|main bronchus',
+    'anterior',
+  ],
+  [
+    'head-neck',
+    'orbital-ganglia',
+    'Ciliary ganglia',
+    ['nerves'],
+    'ciliary ganglion',
+    'anterior',
+  ],
+  [
+    'abdomen',
+    'biliary-surfaces',
+    'Gallbladder & selected ducts',
+    ['organs'],
+    '^gallbladder$|^cystic duct$|^common hepatic duct$',
+    'anterior',
+  ],
+  [
+    'abdomen',
+    'appendiceal-context',
+    'Appendix & large intestine',
+    ['organs'],
+    'appendix|large intestine',
+    'anterior',
+  ],
+] as const) {
+  dissectionProfiles[region].focuses.push({
+    id,
+    title,
+    rule: { systems: [...systems], pattern },
+    view,
+  });
+}
+
 dissectionProfiles.hand.focuses.push(
   focus('lumbricals', 'Lumbrical groups', 'set of lumbricals'),
   focus(

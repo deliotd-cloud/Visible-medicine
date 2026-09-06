@@ -1,5 +1,11 @@
 # Expanded BodyParts3D commercial-use audit
 
+## Inventory extension — 6 September 2026
+
+The official current archive licence was rechecked. The inventory extension adds 36 source representations (29 vessel segments, two ciliary ganglia and five organ/duct/airway representations) from the same official v4 archives, in five new bundles. All previous source entries and bundles are unchanged. The current body library has 859 entries and 66 bundles (89.94 MB). Source bounds, hashes, held candidates and transformations are documented in `docs/SOURCE_INVENTORY.md`.
+
+The four unmodified official v4 source-index tables are retained byte-for-byte in `LICENSES/bodyparts3d-v4-index/`, and the derived reconciliation is in `content/source-inventory.json`. These database-source tables and their adapted inventory retain CC BY 4.0 and DBCLS attribution; the application MIT licence does not relicense them. This is the archive's source-index subset, not a separately acquired full FMA ontology. No textbook table, diagram, new dependency, font, texture, generated anatomical mesh or paid service was added. The few new teaching summaries cite factual references without redistributing their tables or images. All anatomy remains unvalidated.
+
 Verified 2026-09-05. The official LSDB Archive licence statement, updated 2025-02-27, explicitly applies **CC BY 4.0** to this database: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html . The existing `CC-BY-4.0.txt` and evidence snapshots are retained in this directory.
 
 Required credit:

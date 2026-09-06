@@ -14,7 +14,7 @@ const previous = JSON.parse(
 );
 const catalog = JSON.parse(await fs.readFile(root + 'catalog.json', 'utf8'));
 assert.equal(previous.structures.length, 761);
-assert.equal(catalog.structures.length, 823);
+assert.equal(catalog.structures.length, 859);
 assert.deepEqual(catalog.coordinateSystem, previous.coordinateSystem);
 assert.deepEqual(catalog.excluded, previous.excluded);
 for (const old of previous.structures)

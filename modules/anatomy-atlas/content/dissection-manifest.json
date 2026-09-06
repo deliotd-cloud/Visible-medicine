@@ -1,7 +1,7 @@
 {
   "version": 1,
   "reviewStatus": "draft-unvalidated",
-  "catalogSha256": "6167b65dafb105d6727605b8ede0f0509e558d348777e228fe86bdca2b7bdeab",
+  "catalogSha256": "32b5a2c48595af0b5941dc00cf418728500198bb9c315b03e43db0167d03e316",
   "profiles": [
     {
       "region": "whole-body",
@@ -848,7 +848,43 @@
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
-            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra"
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra",
+            "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-internal-thoracic-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-vein",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+            "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+            "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
+            "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+            "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix"
           ]
         },
         {
@@ -1497,7 +1533,12 @@
             "vm:anatomy:body:head-neck:left:organ:left-sublingual-gland",
             "vm:anatomy:body:pelvis:right:organ:right-epididymis",
             "vm:anatomy:body:pelvis:left:organ:left-epididymis",
-            "vm:anatomy:body:pelvis:unpaired:organ:urethra"
+            "vm:anatomy:body:pelvis:unpaired:organ:urethra",
+            "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+            "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
+            "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+            "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix"
           ]
         },
         {
@@ -1548,7 +1589,9 @@
             "vm:anatomy:body:head-neck:midline:organ:brain",
             "vm:anatomy:body:spine:midline:space:central-canal-of-spinal-cord",
             "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
-            "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve"
+            "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve",
+            "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion"
           ]
         },
         {
@@ -2108,7 +2151,36 @@
             "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
             "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
             "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
-            "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery"
+            "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-internal-thoracic-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-vein",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
           ]
         },
         {
@@ -2413,7 +2485,7 @@
             "systems": [
               "vessels"
             ],
-            "pattern": "artery|aorta|palmar arch"
+            "pattern": "artery|aorta|palmar arch|thyrocervical trunk|costocervical trunk"
           },
           "view": "anterior",
           "visibleStructureIds": [
@@ -2699,7 +2771,29 @@
             "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
             "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
             "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
-            "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery"
+            "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-internal-thoracic-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
           ]
         },
         {
@@ -2952,7 +3046,14 @@
             "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
             "vm:anatomy:body:leg:left:vessel:left-popliteal-vein",
             "vm:anatomy:body:leg:right:vessel:right-small-saphenous-vein",
-            "vm:anatomy:body:leg:left:vessel:left-small-saphenous-vein"
+            "vm:anatomy:body:leg:left:vessel:left-small-saphenous-vein",
+            "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-vein",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein"
           ]
         }
       ]
@@ -3049,7 +3150,27 @@
             "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
             "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
             "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
-            "vm:anatomy:body:forearm:left:vessel:left-basilic-vein"
+            "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
           ]
         },
         {
@@ -3137,7 +3258,27 @@
             "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
             "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
             "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
-            "vm:anatomy:body:forearm:left:vessel:left-basilic-vein"
+            "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
           ]
         },
         {
@@ -3217,7 +3358,27 @@
             "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
             "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
             "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
-            "vm:anatomy:body:forearm:left:vessel:left-basilic-vein"
+            "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
           ]
         },
         {
@@ -3334,7 +3495,84 @@
             "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
             "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
             "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
-            "vm:anatomy:body:forearm:left:vessel:left-basilic-vein"
+            "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
+          ]
+        },
+        {
+          "id": "scapular-vascular-detail",
+          "title": "Shoulder vascular detail",
+          "description": "Compare the available axillary, scapular and thoraco-acromial source segments with the shoulder bones.",
+          "only": [
+            {
+              "systems": [
+                "skeleton"
+              ]
+            },
+            {
+              "systems": [
+                "vessels"
+              ],
+              "pattern": "axillary|scapular|thoraco-acromial|cervical trunk"
+            }
+          ],
+          "view": "posterior",
+          "landmarks": [
+            "suprascapular artery",
+            "axillary vein"
+          ],
+          "inspect": "Separate the display gently, then return to zero to judge the source relationships. The brachial plexus is absent; branching, attachments and vessel calibre remain unreviewed.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:shoulder-arm:left:bone:left-clavicle",
+            "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+            "vm:anatomy:body:shoulder-arm:left:bone:left-scapula",
+            "vm:anatomy:upper-limb:shoulder:right:bone:clavicle",
+            "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+            "vm:anatomy:upper-limb:shoulder:right:bone:scapula",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-circumflex-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-circumflex-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
           ]
         }
       ],
@@ -3429,7 +3667,7 @@
             "systems": [
               "vessels"
             ],
-            "pattern": "artery|aorta|palmar arch"
+            "pattern": "artery|aorta|palmar arch|thyrocervical trunk|costocervical trunk"
           },
           "view": "anterior",
           "visibleStructureIds": [
@@ -3455,7 +3693,23 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:right-circumflex-scapular-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:left-circumflex-scapular-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-thoracodorsal-artery",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-thoracodorsal-artery"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thoracodorsal-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
           ]
         },
         {
@@ -3482,7 +3736,50 @@
             "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
             "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
             "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
-            "vm:anatomy:body:forearm:left:vessel:left-basilic-vein"
+            "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein"
+          ]
+        },
+        {
+          "id": "scapular-vessels",
+          "title": "Scapular & axillary vessels",
+          "rule": {
+            "systems": [
+              "vessels"
+            ],
+            "pattern": "scapular|axillary|thoraco-acromial"
+          },
+          "view": "posterior",
+          "visibleStructureIds": [
+            "vm:anatomy:body:shoulder-arm:left:bone:left-clavicle",
+            "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+            "vm:anatomy:body:shoulder-arm:left:bone:left-scapula",
+            "vm:anatomy:upper-limb:shoulder:right:bone:clavicle",
+            "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+            "vm:anatomy:upper-limb:shoulder:right:bone:scapula",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-circumflex-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-circumflex-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
           ]
         }
       ]
@@ -3975,7 +4272,7 @@
             "systems": [
               "vessels"
             ],
-            "pattern": "artery|aorta|palmar arch"
+            "pattern": "artery|aorta|palmar arch|thyrocervical trunk|costocervical trunk"
           },
           "view": "anterior",
           "visibleStructureIds": [
@@ -4716,7 +5013,7 @@
             "systems": [
               "vessels"
             ],
-            "pattern": "artery|aorta|palmar arch"
+            "pattern": "artery|aorta|palmar arch|thyrocervical trunk|costocervical trunk"
           },
           "view": "anterior",
           "visibleStructureIds": [
@@ -5658,7 +5955,7 @@
             "systems": [
               "vessels"
             ],
-            "pattern": "artery|aorta|palmar arch"
+            "pattern": "artery|aorta|palmar arch|thyrocervical trunk|costocervical trunk"
           },
           "view": "anterior",
           "visibleStructureIds": [
@@ -6176,7 +6473,7 @@
             "systems": [
               "vessels"
             ],
-            "pattern": "artery|aorta|palmar arch"
+            "pattern": "artery|aorta|palmar arch|thyrocervical trunk|costocervical trunk"
           },
           "view": "anterior",
           "visibleStructureIds": [
@@ -7233,7 +7530,7 @@
             "systems": [
               "vessels"
             ],
-            "pattern": "artery|aorta|palmar arch"
+            "pattern": "artery|aorta|palmar arch|thyrocervical trunk|costocervical trunk"
           },
           "view": "inferior",
           "visibleStructureIds": [
@@ -7581,7 +7878,38 @@
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eighth-thoracic-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-ninth-thoracic-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-tenth-thoracic-vertebra",
-            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eleventh-thoracic-vertebra"
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eleventh-thoracic-vertebra",
+            "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-internal-thoracic-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-vein",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+            "vm:anatomy:body:thorax:left:organ:left-main-bronchus"
           ]
         },
         {
@@ -7717,7 +8045,38 @@
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eighth-thoracic-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-ninth-thoracic-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-tenth-thoracic-vertebra",
-            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eleventh-thoracic-vertebra"
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eleventh-thoracic-vertebra",
+            "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-internal-thoracic-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-vein",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+            "vm:anatomy:body:thorax:left:organ:left-main-bronchus"
           ]
         },
         {
@@ -7850,7 +8209,38 @@
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eighth-thoracic-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-ninth-thoracic-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-tenth-thoracic-vertebra",
-            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eleventh-thoracic-vertebra"
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eleventh-thoracic-vertebra",
+            "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-internal-thoracic-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-vein",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+            "vm:anatomy:body:thorax:left:organ:left-main-bronchus"
           ]
         },
         {
@@ -7885,7 +8275,9 @@
             "vm:anatomy:body:thorax:left:organ:left-lung",
             "vm:anatomy:body:thorax:unpaired:organ:esophagus",
             "vm:anatomy:body:thorax:unpaired:organ:trachea",
-            "vm:anatomy:body:thorax:unpaired:organ:thymus"
+            "vm:anatomy:body:thorax:unpaired:organ:thymus",
+            "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+            "vm:anatomy:body:thorax:left:organ:left-main-bronchus"
           ]
         },
         {
@@ -8065,7 +8457,36 @@
             "vm:anatomy:body:thorax:right:vessel:right-superior-pulmonary-vein",
             "vm:anatomy:body:thorax:left:vessel:left-superior-pulmonary-vein",
             "vm:anatomy:body:thorax:right:vessel:right-inferior-pulmonary-vein",
-            "vm:anatomy:body:thorax:left:vessel:left-inferior-pulmonary-vein"
+            "vm:anatomy:body:thorax:left:vessel:left-inferior-pulmonary-vein",
+            "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-internal-thoracic-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-vein",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
           ]
         },
         {
@@ -8150,6 +8571,75 @@
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-tenth-thoracic-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eleventh-thoracic-vertebra"
           ]
+        },
+        {
+          "id": "central-airway-window",
+          "title": "Central airway window",
+          "description": "Remove the lung aggregates and chest muscles to inspect the trachea and source-labelled main bronchial segments.",
+          "only": [
+            {
+              "systems": [
+                "skeleton"
+              ]
+            },
+            {
+              "systems": [
+                "organs"
+              ],
+              "pattern": "trachea|main bronchus"
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "trachea",
+            "main bronchus"
+          ],
+          "inspect": "These are source-defined exterior surfaces, not a bronchoscopic lumen or a validated segmental-airway tree. Bronchial boundaries and relative lengths require review.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:tenth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:eleventh-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:twelfth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:second-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:third-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fourth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fifth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:sixth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:seventh-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:eighth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:ninth-thoracic-vertebra",
+            "vm:anatomy:body:thorax:left:bone:left-tenth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-eleventh-rib",
+            "vm:anatomy:body:thorax:left:bone:left-twelfth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-first-rib",
+            "vm:anatomy:body:thorax:left:bone:left-second-rib",
+            "vm:anatomy:body:thorax:left:bone:left-third-rib",
+            "vm:anatomy:body:thorax:left:bone:left-fourth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-fifth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-sixth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-seventh-rib",
+            "vm:anatomy:body:thorax:left:bone:left-eighth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-ninth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-tenth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-eleventh-rib",
+            "vm:anatomy:body:thorax:right:bone:right-twelfth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-first-rib",
+            "vm:anatomy:body:thorax:right:bone:right-second-rib",
+            "vm:anatomy:body:thorax:right:bone:right-third-rib",
+            "vm:anatomy:body:thorax:right:bone:right-fourth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-fifth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-sixth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-seventh-rib",
+            "vm:anatomy:body:thorax:right:bone:right-eighth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-ninth-rib",
+            "vm:anatomy:body:thorax:unpaired:organ:trachea",
+            "vm:anatomy:body:thorax:midline:bone:manubrium",
+            "vm:anatomy:body:thorax:midline:bone:body-of-sternum",
+            "vm:anatomy:body:thorax:midline:bone:xiphoid-process",
+            "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+            "vm:anatomy:body:thorax:left:organ:left-main-bronchus"
+          ]
         }
       ],
       "focuses": [
@@ -8207,7 +8697,9 @@
             "vm:anatomy:body:thorax:midline:bone:manubrium",
             "vm:anatomy:body:thorax:midline:bone:body-of-sternum",
             "vm:anatomy:body:thorax:midline:bone:xiphoid-process",
-            "vm:anatomy:body:thorax:unpaired:organ:thymus"
+            "vm:anatomy:body:thorax:unpaired:organ:thymus",
+            "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+            "vm:anatomy:body:thorax:left:organ:left-main-bronchus"
           ]
         },
         {
@@ -8279,7 +8771,7 @@
             "systems": [
               "vessels"
             ],
-            "pattern": "artery|aorta|palmar arch"
+            "pattern": "artery|aorta|palmar arch|thyrocervical trunk|costocervical trunk"
           },
           "view": "anterior",
           "visibleStructureIds": [
@@ -8340,7 +8832,29 @@
             "vm:anatomy:body:thorax:left:vessel:anterior-interventricular-branch-of-left-coronary-artery",
             "vm:anatomy:body:thorax:left:vessel:circumflex-branch-of-left-coronary-artery",
             "vm:anatomy:body:thorax:right:vessel:right-pulmonary-artery",
-            "vm:anatomy:body:thorax:left:vessel:left-pulmonary-artery"
+            "vm:anatomy:body:thorax:left:vessel:left-pulmonary-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-internal-thoracic-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
           ]
         },
         {
@@ -8408,7 +8922,130 @@
             "vm:anatomy:body:thorax:right:vessel:right-superior-pulmonary-vein",
             "vm:anatomy:body:thorax:left:vessel:left-superior-pulmonary-vein",
             "vm:anatomy:body:thorax:right:vessel:right-inferior-pulmonary-vein",
-            "vm:anatomy:body:thorax:left:vessel:left-inferior-pulmonary-vein"
+            "vm:anatomy:body:thorax:left:vessel:left-inferior-pulmonary-vein",
+            "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-vein",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein"
+          ]
+        },
+        {
+          "id": "chest-wall-vessels",
+          "title": "Anterior chest-wall vessels",
+          "rule": {
+            "systems": [
+              "vessels"
+            ],
+            "pattern": "internal thoracic|musculophrenic|superior epigastric"
+          },
+          "view": "anterior",
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:tenth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:eleventh-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:twelfth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:second-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:third-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fourth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fifth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:sixth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:seventh-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:eighth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:ninth-thoracic-vertebra",
+            "vm:anatomy:body:thorax:left:bone:left-tenth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-eleventh-rib",
+            "vm:anatomy:body:thorax:left:bone:left-twelfth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-first-rib",
+            "vm:anatomy:body:thorax:left:bone:left-second-rib",
+            "vm:anatomy:body:thorax:left:bone:left-third-rib",
+            "vm:anatomy:body:thorax:left:bone:left-fourth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-fifth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-sixth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-seventh-rib",
+            "vm:anatomy:body:thorax:left:bone:left-eighth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-ninth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-tenth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-eleventh-rib",
+            "vm:anatomy:body:thorax:right:bone:right-twelfth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-first-rib",
+            "vm:anatomy:body:thorax:right:bone:right-second-rib",
+            "vm:anatomy:body:thorax:right:bone:right-third-rib",
+            "vm:anatomy:body:thorax:right:bone:right-fourth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-fifth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-sixth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-seventh-rib",
+            "vm:anatomy:body:thorax:right:bone:right-eighth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-ninth-rib",
+            "vm:anatomy:body:thorax:midline:bone:manubrium",
+            "vm:anatomy:body:thorax:midline:bone:body-of-sternum",
+            "vm:anatomy:body:thorax:midline:bone:xiphoid-process",
+            "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-internal-thoracic-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-vein",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein"
+          ]
+        },
+        {
+          "id": "central-airways",
+          "title": "Central airway source segments",
+          "rule": {
+            "systems": [
+              "organs"
+            ],
+            "pattern": "trachea|main bronchus"
+          },
+          "view": "anterior",
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:tenth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:eleventh-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:twelfth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:second-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:third-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fourth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fifth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:sixth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:seventh-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:eighth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:ninth-thoracic-vertebra",
+            "vm:anatomy:body:thorax:left:bone:left-tenth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-eleventh-rib",
+            "vm:anatomy:body:thorax:left:bone:left-twelfth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-first-rib",
+            "vm:anatomy:body:thorax:left:bone:left-second-rib",
+            "vm:anatomy:body:thorax:left:bone:left-third-rib",
+            "vm:anatomy:body:thorax:left:bone:left-fourth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-fifth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-sixth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-seventh-rib",
+            "vm:anatomy:body:thorax:left:bone:left-eighth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-ninth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-tenth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-eleventh-rib",
+            "vm:anatomy:body:thorax:right:bone:right-twelfth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-first-rib",
+            "vm:anatomy:body:thorax:right:bone:right-second-rib",
+            "vm:anatomy:body:thorax:right:bone:right-third-rib",
+            "vm:anatomy:body:thorax:right:bone:right-fourth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-fifth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-sixth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-seventh-rib",
+            "vm:anatomy:body:thorax:right:bone:right-eighth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-ninth-rib",
+            "vm:anatomy:body:thorax:unpaired:organ:trachea",
+            "vm:anatomy:body:thorax:midline:bone:manubrium",
+            "vm:anatomy:body:thorax:midline:bone:body-of-sternum",
+            "vm:anatomy:body:thorax:midline:bone:xiphoid-process",
+            "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+            "vm:anatomy:body:thorax:left:organ:left-main-bronchus"
           ]
         }
       ]
@@ -8489,7 +9126,16 @@
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
-            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra"
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra",
+            "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+            "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+            "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix"
           ]
         },
         {
@@ -8565,7 +9211,16 @@
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
-            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra"
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra",
+            "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+            "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+            "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix"
           ]
         },
         {
@@ -8601,7 +9256,10 @@
             "vm:anatomy:body:abdomen:right:organ:right-adrenal-gland",
             "vm:anatomy:body:abdomen:left:organ:left-adrenal-gland",
             "vm:anatomy:body:abdomen:right:organ:right-ureter",
-            "vm:anatomy:body:abdomen:left:organ:left-ureter"
+            "vm:anatomy:body:abdomen:left:organ:left-ureter",
+            "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+            "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix"
           ]
         },
         {
@@ -8709,7 +9367,13 @@
             "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-vein",
             "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-vein",
             "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-vein",
-            "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-vein"
+            "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-vein",
+            "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein"
           ]
         },
         {
@@ -8790,7 +9454,7 @@
             "systems": [
               "vessels"
             ],
-            "pattern": "artery|aorta|palmar arch"
+            "pattern": "artery|aorta|palmar arch|thyrocervical trunk|costocervical trunk"
           },
           "view": "anterior",
           "visibleStructureIds": [
@@ -8814,7 +9478,11 @@
             "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-artery",
             "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-artery",
             "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-artery",
-            "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-artery"
+            "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery"
           ]
         },
         {
@@ -8842,7 +9510,50 @@
             "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-vein",
             "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-vein",
             "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-vein",
-            "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-vein"
+            "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-vein",
+            "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein"
+          ]
+        },
+        {
+          "id": "biliary-surfaces",
+          "title": "Gallbladder & selected ducts",
+          "rule": {
+            "systems": [
+              "organs"
+            ],
+            "pattern": "^gallbladder$|^cystic duct$|^common hepatic duct$"
+          },
+          "view": "anterior",
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:first-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:second-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:third-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fourth-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fifth-lumbar-vertebra",
+            "vm:anatomy:body:pelvis:unpaired:organ:gallbladder",
+            "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+            "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct"
+          ]
+        },
+        {
+          "id": "appendiceal-context",
+          "title": "Appendix & large intestine",
+          "rule": {
+            "systems": [
+              "organs"
+            ],
+            "pattern": "appendix|large intestine"
+          },
+          "view": "anterior",
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:first-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:second-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:third-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fourth-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fifth-lumbar-vertebra",
+            "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix"
           ]
         }
       ]
@@ -8929,7 +9640,8 @@
             "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
             "vm:anatomy:body:pelvis:right:organ:right-epididymis",
             "vm:anatomy:body:pelvis:left:organ:left-epididymis",
-            "vm:anatomy:body:pelvis:unpaired:organ:urethra"
+            "vm:anatomy:body:pelvis:unpaired:organ:urethra",
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix"
           ]
         },
         {
@@ -9011,7 +9723,8 @@
             "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
             "vm:anatomy:body:pelvis:right:organ:right-epididymis",
             "vm:anatomy:body:pelvis:left:organ:left-epididymis",
-            "vm:anatomy:body:pelvis:unpaired:organ:urethra"
+            "vm:anatomy:body:pelvis:unpaired:organ:urethra",
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix"
           ]
         },
         {
@@ -9092,7 +9805,8 @@
             "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
             "vm:anatomy:body:pelvis:right:organ:right-epididymis",
             "vm:anatomy:body:pelvis:left:organ:left-epididymis",
-            "vm:anatomy:body:pelvis:unpaired:organ:urethra"
+            "vm:anatomy:body:pelvis:unpaired:organ:urethra",
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix"
           ]
         },
         {
@@ -9223,7 +9937,8 @@
             "vm:anatomy:body:pelvis:unpaired:organ:rectum",
             "vm:anatomy:body:pelvis:right:organ:right-epididymis",
             "vm:anatomy:body:pelvis:left:organ:left-epididymis",
-            "vm:anatomy:body:pelvis:unpaired:organ:urethra"
+            "vm:anatomy:body:pelvis:unpaired:organ:urethra",
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix"
           ]
         }
       ],
@@ -9281,7 +9996,7 @@
             "systems": [
               "vessels"
             ],
-            "pattern": "artery|aorta|palmar arch"
+            "pattern": "artery|aorta|palmar arch|thyrocervical trunk|costocervical trunk"
           },
           "view": "anterior",
           "visibleStructureIds": [
@@ -9554,7 +10269,13 @@
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-cervical-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-cervical-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-cervical-vertebra",
-            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-cervical-vertebra"
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-cervical-vertebra",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+            "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion"
           ]
         },
         {
@@ -9773,7 +10494,13 @@
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-cervical-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-cervical-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-cervical-vertebra",
-            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-cervical-vertebra"
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-cervical-vertebra",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+            "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion"
           ]
         },
         {
@@ -9991,7 +10718,13 @@
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-cervical-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-cervical-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-cervical-vertebra",
-            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-cervical-vertebra"
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-cervical-vertebra",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+            "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion"
           ]
         },
         {
@@ -10041,7 +10774,9 @@
             "vm:anatomy:body:head-neck:right:nerve:right-supratrochlear-nerve",
             "vm:anatomy:body:head-neck:midline:organ:brain",
             "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
-            "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve"
+            "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve",
+            "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion"
           ]
         },
         {
@@ -10230,7 +10965,11 @@
             "vm:anatomy:body:head-neck:right:vessel:right-posterior-cerebral-artery",
             "vm:anatomy:body:head-neck:left:vessel:left-posterior-cerebral-artery",
             "vm:anatomy:body:head-neck:right:vessel:right-posterior-communicating-artery",
-            "vm:anatomy:body:head-neck:left:vessel:left-posterior-communicating-artery"
+            "vm:anatomy:body:head-neck:left:vessel:left-posterior-communicating-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk"
           ]
         },
         {
@@ -10552,7 +11291,7 @@
             "systems": [
               "vessels"
             ],
-            "pattern": "artery|aorta|palmar arch"
+            "pattern": "artery|aorta|palmar arch|thyrocervical trunk|costocervical trunk"
           },
           "view": "anterior",
           "visibleStructureIds": [
@@ -10602,7 +11341,11 @@
             "vm:anatomy:body:head-neck:right:vessel:right-posterior-cerebral-artery",
             "vm:anatomy:body:head-neck:left:vessel:left-posterior-cerebral-artery",
             "vm:anatomy:body:head-neck:right:vessel:right-posterior-communicating-artery",
-            "vm:anatomy:body:head-neck:left:vessel:left-posterior-communicating-artery"
+            "vm:anatomy:body:head-neck:left:vessel:left-posterior-communicating-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk"
           ]
         },
         {
@@ -10652,6 +11395,53 @@
             "vm:anatomy:body:thorax:left:vessel:left-subclavian-vein",
             "vm:anatomy:body:head-neck:right:vessel:right-internal-jugular-vein",
             "vm:anatomy:body:head-neck:left:vessel:left-internal-jugular-vein"
+          ]
+        },
+        {
+          "id": "orbital-ganglia",
+          "title": "Ciliary ganglia",
+          "rule": {
+            "systems": [
+              "nerves"
+            ],
+            "pattern": "ciliary ganglion"
+          },
+          "view": "anterior",
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:midline:bone:hyoid-bone",
+            "vm:anatomy:body:spine:midline:bone:third-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fourth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fifth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:seventh-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:atlas",
+            "vm:anatomy:body:spine:midline:bone:axis",
+            "vm:anatomy:body:head-neck:midline:bone:ethmoid",
+            "vm:anatomy:body:head-neck:midline:bone:frontal-bone",
+            "vm:anatomy:body:head-neck:left:bone:left-inferior-nasal-concha",
+            "vm:anatomy:body:head-neck:left:bone:left-lacrimal-bone",
+            "vm:anatomy:body:head-neck:left:bone:left-maxilla",
+            "vm:anatomy:body:head-neck:left:bone:left-nasal-bone",
+            "vm:anatomy:body:head-neck:left:bone:left-palatine-bone",
+            "vm:anatomy:body:head-neck:left:bone:left-parietal-bone",
+            "vm:anatomy:body:head-neck:left:bone:left-temporal-bone",
+            "vm:anatomy:body:head-neck:left:bone:left-zygomatic-bone",
+            "vm:anatomy:body:head-neck:midline:bone:mandible",
+            "vm:anatomy:body:head-neck:midline:bone:occipital-bone",
+            "vm:anatomy:body:head-neck:right:bone:right-inferior-nasal-concha",
+            "vm:anatomy:body:head-neck:right:bone:right-lacrimal-bone",
+            "vm:anatomy:body:head-neck:right:bone:right-maxilla",
+            "vm:anatomy:body:head-neck:right:bone:right-nasal-bone",
+            "vm:anatomy:body:head-neck:right:bone:right-palatine-bone",
+            "vm:anatomy:body:head-neck:right:bone:right-parietal-bone",
+            "vm:anatomy:body:head-neck:right:bone:right-temporal-bone",
+            "vm:anatomy:body:head-neck:right:bone:right-zygomatic-bone",
+            "vm:anatomy:body:head-neck:midline:bone:sphenoid-bone",
+            "vm:anatomy:body:head-neck:midline:bone:vomer",
+            "vm:anatomy:body:head-neck:left:nerve:communicating-branch-of-left-nasociliary-nerve-with-left-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:right:nerve:communicating-branch-of-right-nasociliary-nerve-with-right-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion"
           ]
         },
         {

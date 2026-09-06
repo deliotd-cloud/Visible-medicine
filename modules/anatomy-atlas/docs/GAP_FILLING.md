@@ -1,5 +1,7 @@
 # Gap recovery and source adjudication — 6 September 2026
 
+This records the second recovery milestone (823-entry snapshot). For the later 859-entry atlas, exhaustive source inventory and 36 further additions, see [SOURCE_INVENTORY.md](SOURCE_INVENTORY.md). All holds below remain in force.
+
 ## Shipped in this pass
 
 62 additional source representations, taking the library from 761 to 823. All are BodyParts3D **4.0 / CC BY 4.0** in the existing shared frame. There are no new dependencies, external fonts, textures, paid APIs or generated anatomical surfaces. The original 53 GLB bundles and all 761 existing identities are unchanged; eight separate `*-gaps.glb` bundles add approximately 2.40 MB. These are draft educational assets, not clinically validated anatomy.

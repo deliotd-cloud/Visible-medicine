@@ -1,11 +1,19 @@
 # Clinical validation checklist
 
+## Current inventory/admission gates
+
+- Review all 36 inventory additions, particularly bronchial extent/relative length, named biliary-duct boundaries, ciliary ganglion position and vessel endpoints/branches/calibre. See `SOURCE_INVENTORY.md`.
+- Adjudicate the newly held source-labelled superior epigastric veins; do not relabel or reposition them automatically.
+- Review all 88 current stages and 66 focused views, including the new airway and shoulder vascular windows. Validate touch/keyboard access, framing, occlusion and tiny-structure selection on actual devices.
+- The exhaustive source inventory proves record reconciliation, not complete anatomy. Identical source geometry under multiple labels does not validate those labels.
+- The future imaging selection contract is tested software, not patient registration. No scans or imaging approvals are present.
+
 ## Latest gap-pass gates
 
 - Independently review all 62 new entries and the 22 whole-disc identities and levels. Do not mark the unresolved source disc as a specific radiological level.
 - Review interosseous groups, Achilles attachments, interosseous membranes, trochlear trajectories, glands and small head/neck connective structures at the intended teaching scale.
 - Resolve the overlapping pelvic-floor and optic-nerve alternatives documented in `GAP_FILLING.md` before admission. V3 meshes need registration to the altered v4 skeleton; matching names are not spatial validation.
-- Review all 86 stages and 60 focused views. The current explode review is numerical only; browser testing and the proposed separation/framing corrections remain outstanding.
+- The prior gap milestone contained 86 stages and 60 focused views. Separation/framing corrections have since been implemented and numerically tested; hands-on browser and clinical acceptance remain outstanding.
 
 ## Earlier source-recovery release gates
 

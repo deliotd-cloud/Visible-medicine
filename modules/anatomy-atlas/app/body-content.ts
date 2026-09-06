@@ -134,6 +134,34 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
       body: 'This entry makes a source-labelled vessel segment independently selectable. Its complete branches, tributaries, supplied territory and normal variants have not been authored as a reviewed lesson.',
       note: 'Gaps between displayed surfaces must not be interpreted as occlusion or as validated vessel endpoints. Red/blue identifies artery/vein, not oxygenation.',
     };
+  if (tab === 'function' && /ciliary ganglion/.test(s.sourceName))
+    return {
+      title: 'Ciliary ganglion · draft',
+      body: 'This orbital ganglion relays parasympathetic signals to the sphincter pupillae and ciliary muscle through short ciliary nerves.',
+      note: 'The small ganglion surface is selectable, but connecting roots and short ciliary nerve routes have not been reconstructed. Source identity and position require specialist review.',
+      citations: [
+        'https://anatomy.ttuhscep.edu/anatomytables/nerves_head_neck.html',
+      ],
+    };
+  if (tab === 'function' && /main bronchus/.test(s.sourceName))
+    return {
+      title: 'Central airway · draft',
+      body: 'The main bronchi conduct air from the trachea towards the lungs and their branching airways.',
+      note: 'These source-labelled surfaces have not been boundary-validated. Do not infer clinical bronchial length, lumen or segment numbering from this representation.',
+      citations: [
+        'https://anatomy.ttuhscep.edu/anatomytables/viscera_thorax.html',
+      ],
+    };
+  if (tab === 'function' && ['FMA14539', 'FMA14668'].includes(s.fmaId))
+    return {
+      title: 'Biliary drainage · draft',
+      body:
+        s.fmaId === 'FMA14539'
+          ? 'The cystic duct provides the route into and out of the gallbladder. It joins the common hepatic duct to form the common bile duct.'
+          : 'The common hepatic duct carries bile from the right and left hepatic ducts towards its junction with the cystic duct.',
+      note: 'Only selected source-labelled duct surfaces are shown. The complete tree, junction boundaries and luminal continuity have not been validated.',
+      citations: ['https://anatomy.ttuhscep.edu/schemes/liver_tables.html'],
+    };
   if (tab === 'function')
     return functions[s.fmaId]
       ? {
