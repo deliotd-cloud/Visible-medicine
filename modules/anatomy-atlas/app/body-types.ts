@@ -33,6 +33,7 @@ export type BodyStructure = {
   validation?: { status: 'unvalidated'; anatomicalReview: false };
 };
 export type BodyCatalog = {
+  coordinateSystem: import('../lib/anatomy-coordinates').SourceCoordinates;
   version: number;
   sourceVersion: string;
   license: string;

@@ -30,13 +30,13 @@ Official BodyParts3D ZIP → selected verified OBJ entries → one common coordi
 
 `app/anatomy-scene.tsx` loads the GLB, styles surfaces, controls layer visibility, selection and labelled leader lines. The three deltoid component nodes share a parent product identity but retain source identifiers. The long-head biceps mesh is not mislabelled as a tendon-only segmentation. The viewer clips the lower arm at scene Y=-3.15. Explosion is a display transformation, never saved as source anatomy. Illustrative hatching is a shading effect, not fibre tractography.
 
-`app/page.tsx` owns shared interaction state. Anatomy/Function/CT/MRI/Ultrasound/Pathology/Clinical/Quiz tabs stay synchronised with structure selection. Exam mode removes labels and selection highlighting, records one answer per question and resets score on restart. Keyboard-operable structure lists provide an alternative to canvas hit testing. Mobile includes zoom buttons and the same layer/structure controls.
+`app/shoulder-explorer.tsx` and `app/body-explorer.tsx` own their respective interaction state. Anatomy/Function/CT/MRI/Ultrasound/Pathology/Clinical/Quiz tabs stay synchronised with structure selection. Exam mode removes labels and selection highlighting, records one answer per question and resets score on restart. Keyboard-operable structure lists provide an alternative to canvas hit testing. Mobile includes zoom buttons and the same layer/structure controls.
 
 ## Coordinate and radiology contract
 
 Source: millimetres, positive X left, Y posterior, Z superior. Scene: X left, Y superior, Z anterior. Common source centre and scale (0.026 scene units/mm) are stored with a column-major matrix. The matrix has positive determinant; no laterality reflection occurs. The inverse recovers reference-model millimetres.
 
-The `visible-medicine:imaging-sync` event carries product ID, plane, normalised slice and origin; optional reference coordinates and a patient frame-of-reference UID prepare a future adapter. Neither is a claim of existing patient registration. A production adapter needs image orientation/position, voxel spacing, FrameOfReferenceUID, registration transform, validation bounds and explicit loop prevention. Never align DICOM by a display centre or guessed laterality.
+The former `visible-medicine:imaging-sync` demonstrator has been replaced by an opt-in, runtime-validated same-document adapter in `lib/imaging-sync.ts`, shared by both viewers through `app/imaging-link.tsx`. It supports two-way ID selection, explicit compound/component choices, region/side boundaries, practice gating and loop/disposal safeguards. `lib/anatomy-link-registry.ts` attaches hash-backed source identities and assembled surface-bounds centres; `lib/anatomy-coordinates.ts` converts the distinct shoulder/body scene frames through reference millimetres. It never sends a guessed slice or assigns a patient frame to source anatomy. The full API, exact supported mappings and external spatial-registration gate are in [IMAGING_LINK.md](IMAGING_LINK.md). No acquired study or patient registration is included.
 
 ## Scaling to full body
 

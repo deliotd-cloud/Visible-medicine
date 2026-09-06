@@ -1,5 +1,9 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Imaging connection framework
+
+**Imaging link** provides opt-in two-way structure selection for a future CT/MRI/ultrasound viewer, explicit grouped-structure choices, region/side checks and practice-mode safeguards. Exact source-space transforms and source hashes travel separately from presentation geometry. It starts **Not connected**; no study or patient registration is included. See [adapter contract and integration gate](docs/IMAGING_LINK.md).
+
 ## Saved study views and recovery
 
 **Saved study views** stores up to 20 named, device-local dissection/cutaway configurations with actual camera orbit, pan and framing. Restore them in the matching region; changed source anatomy disables stale views. Failed body bundles and the shoulder can be retried without refreshing or losing the current dissection. See [saved views and recovery](docs/STUDY_VIEWS.md) for privacy, limitations and tests, and the [ongoing improvement programme](docs/CONTINUOUS_IMPROVEMENT.md) for the ordered anatomy, functionality and future imaging backlog.
@@ -65,6 +69,7 @@ node scripts/validate-dissection.mjs
 node scripts/validate-explode.mjs
 npm run inspection:test
 npm run study:test
+npm run imaging:test
 npm run reviews:test
 node scripts/validate-recovery.mjs
 node scripts/validate-gaps.mjs
@@ -102,7 +107,7 @@ The expanded importer uses both official IS-A (skeletal, muscular and nerve defi
 
 ## Imaging and clinical limits
 
-CT, MRI and ultrasound tabs currently contain draft teaching text, not scan data. The reference-plane button demonstrates a typed event bridge in `lib/imaging-sync.ts`; there is no patient registration or working DICOM synchronisation. Source coordinates must never be assumed to match a patient's frame of reference.
+CT, MRI and ultrasound tabs currently contain draft teaching text, not scan data. `lib/imaging-sync.ts` now provides a runtime-validated selection adapter contract; no imaging viewer is connected by default. The reference-plane illustration is independent of that connection. There is no patient registration or working DICOM spatial synchronisation. Source coordinates must never be assumed to match a patient's frame of reference. See [Imaging link](docs/IMAGING_LINK.md).
 
 Independent clinical review remains required for source anatomy, reduced-mesh fidelity, attachments, normals, label anchors, laterality, teaching copy and quiz validity. The dedicated shoulder subset has no independently segmented labrum, capsule, bursa, nerve or vessel; the expanded library's limited neural coverage is described above. Source identity and licensing are not clinical validation. See `docs/CLINICAL_VALIDATION.md` and `docs/FULL_BODY_COVERAGE.md` before educational or medical release. No diagnostic or patient-specific use is supported.
 

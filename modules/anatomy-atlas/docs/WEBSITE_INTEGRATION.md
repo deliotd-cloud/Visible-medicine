@@ -20,5 +20,5 @@ The new review workspace requires trusted authenticated-user headers and D1 stor
 - No runtime API key, paid AI service or anatomy subscription is required. Hosting, domain, professional review or future scans may incur costs; no perpetual-free guarantee is made.
 - Re-run desktop/tablet/mobile checks inside the real website, including keyboard navigation, 200% text enlargement, touch gestures, WebGL support and reduced motion. Current testing is a development-browser sample, not a device-lab certification.
 - Keep educational/non-patient-specific scope and incomplete nerve/organ coverage prominent. Obtain revision-bound specialist sign-off for any claimed reviewed scope.
-- Wire `lib/imaging-sync.ts` only to a licensed, registered imaging implementation; do not treat the demonstration plane as CT/MRI synchronisation.
+- Wire the opt-in selection contract in `lib/imaging-sync.ts` to the future imaging implementation using [IMAGING_LINK.md](IMAGING_LINK.md). Identity selection needs reviewed segmentation mappings; spatial synchronisation additionally requires validated patient registration. The reference-plane illustration is independent, and no imaging viewer is connected by default.
 - Obtain owner approval for the final public audience and destination. Keep this atlas and the main website separately recoverable until integration is accepted.

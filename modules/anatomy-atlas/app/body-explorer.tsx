@@ -58,7 +58,8 @@ import {
 } from './body-types';
 import { bodyContent } from './body-content';
 import type { ContentTab } from './anatomy-data';
-import { emitImagingSync } from '@/lib/imaging-sync';
+import { bodyLinkEntries } from '@/lib/anatomy-link-registry';
+import { ImagingLink, useImagingLink } from './imaging-link';
 import {
   dissectionProfiles,
   dissectionReducer,
@@ -181,6 +182,7 @@ export default function BodyExplorer({
           !Array.isArray(value.regions)
         )
           throw new Error('Invalid anatomy catalog');
+        bodyLinkEntries(value); // Validate reference transforms before committing loaded data.
         if (active) setCatalog(value);
       })
       .catch((e) => {
@@ -283,7 +285,7 @@ export default function BodyExplorer({
       setRetrying(false);
     }
   }
-  const select = useCallback(
+  const applySelection = useCallback(
     (id: string) => {
       const s = regionStructures.find((item) => item.id === id);
       if (!s) return;
@@ -292,14 +294,29 @@ export default function BodyExplorer({
         prev[s.system] ? prev : { ...prev, [s.system]: true },
       );
       if (hiddenIds.includes(id)) dispatch({ type: 'restore', id });
-      emitImagingSync({
-        structureId: id,
-        plane: 'axial',
-        normalizedSlice: 0.5,
-        source: '3d',
-      });
     },
     [regionStructures, hiddenIds],
+  );
+  const linkEntries = useMemo(
+    () => (catalog ? bodyLinkEntries(catalog) : []),
+    [catalog],
+  );
+  const imagingLink = useImagingLink({
+    entries: linkEntries,
+    allowedIds: regionStructures.map((s) => s.id),
+    disabled: exam,
+    onSelect: (id) => {
+      applySelection(id);
+      setInspection(initialInspection);
+    },
+  });
+  const publishSelection = imagingLink.publish;
+  const select = useCallback(
+    (id: string) => {
+      applySelection(id);
+      publishSelection(id);
+    },
+    [applySelection, publishSelection],
   );
   function changeStage(id: string) {
     setInspection(initialInspection);
@@ -740,6 +757,7 @@ export default function BodyExplorer({
             restore={restoreView}
             disabled={exam || pending.length > 0}
           />
+          <ImagingLink link={imagingLink} />
           <div className="body-canvas illustration-mode">
             <div className="body-view-row">
               <fieldset className="body-view-buttons">

@@ -30,7 +30,8 @@ import {
   type SystemKey,
 } from './anatomy-data';
 import type { CameraView, AnatomyLayer } from './anatomy-scene';
-import { emitImagingSync } from '@/lib/imaging-sync';
+import { shoulderLinkEntries } from '@/lib/anatomy-link-registry';
+import { ImagingLink, useImagingLink } from './imaging-link';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
@@ -185,7 +186,7 @@ export default function ShoulderExplorer({
   const selectedSearchOption =
     searchOptions.find((option) => option.value === selectedId) ?? null;
 
-  const selectStructure = useCallback((id: string) => {
+  const applySelection = useCallback((id: string) => {
     const structure = structureById.get(id);
     if (!structure) return false;
     setSelectedId(id);
@@ -201,6 +202,29 @@ export default function ShoulderExplorer({
     setVisibleSystems((current) => ({ ...current, [structure.system]: true }));
     return true;
   }, []);
+
+  const linkEntries = useMemo(
+    () => shoulderLinkEntries(manifest, structures),
+    [],
+  );
+  const imagingLink = useImagingLink({
+    entries: linkEntries,
+    allowedIds: structures.map((s) => s.id),
+    disabled: mode === 'exam',
+    onSelect: (id) => {
+      applySelection(id);
+      setInspection(initialInspection);
+    },
+  });
+  const publishSelection = imagingLink.publish;
+  const selectStructure = useCallback(
+    (id: string) => {
+      if (!applySelection(id)) return false;
+      publishSelection(id);
+      return true;
+    },
+    [applySelection, publishSelection],
+  );
 
   const handleSceneSelect = (id: string) => {
     selectStructure(id);
@@ -231,26 +255,8 @@ export default function ShoulderExplorer({
   };
 
   const toggleSync = () => {
-    const next = !syncPlane;
-    setSyncPlane(next);
-    if (next)
-      emitImagingSync({
-        structureId: selectedId,
-        plane: 'axial',
-        normalizedSlice: 0.5,
-        source: '3d',
-      });
+    setSyncPlane((current) => !current);
   };
-
-  useEffect(() => {
-    if (syncPlane)
-      emitImagingSync({
-        structureId: selectedId,
-        plane: 'axial',
-        normalizedSlice: 0.5,
-        source: '3d',
-      });
-  }, [selectedId, syncPlane]);
 
   useEffect(() => {
     const context = (document as Document & { modelContext?: ModelContextLike })
@@ -520,6 +526,7 @@ export default function ShoulderExplorer({
                   capture={captureView}
                   restore={restoreView}
                 />
+                <ImagingLink link={imagingLink} />
                 <div className="vm-plates">
                   <h2>Shoulder illustration plates</h2>
                   <p>
@@ -785,14 +792,17 @@ export default function ShoulderExplorer({
                     <Button
                       size="icon"
                       variant={syncPlane ? 'default' : 'ghost'}
-                      aria-label="Toggle imaging sync plane"
+                      aria-label="Toggle reference plane illustration"
+                      disabled={mode === 'exam'}
                       onClick={toggleSync}
                     />
                   }
                 >
                   <Crosshair />
                 </TooltipTrigger>
-                <TooltipContent>Preview 3D ↔ imaging plane hook</TooltipContent>
+                <TooltipContent>
+                  Reference plane illustration — not a scan
+                </TooltipContent>
               </Tooltip>
               <span className="toolbar-divider" />
               <div className="explode-control">

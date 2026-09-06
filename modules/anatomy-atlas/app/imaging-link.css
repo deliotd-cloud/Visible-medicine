@@ -1,0 +1,74 @@
+.vm-imaging-link {
+  margin: 12px 0;
+  border: 1px solid #c8d9d7;
+  border-radius: 10px;
+  background: #f8f7f2;
+  color: #002631;
+  font-size: 0.875rem;
+}
+.body-workspace > .vm-imaging-link {
+  margin: 0 14px 12px;
+  flex-shrink: 0;
+}
+.vm-imaging-link > summary {
+  padding: 13px 16px;
+  cursor: pointer;
+  font-weight: 650;
+}
+.vm-imaging-link > summary span {
+  display: inline-block;
+  margin-left: 8px;
+  color: #5d7477;
+  font-weight: 400;
+}
+.vm-imaging-content {
+  padding: 0 16px 12px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.vm-imaging-content p {
+  margin: 0 0 12px;
+}
+.vm-imaging-content output {
+  display: block;
+  margin: 0 0 12px;
+}
+.vm-imaging-content label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 600;
+}
+.vm-imaging-content input {
+  accent-color: #13665d;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.vm-imaging-boundary {
+  padding: 10px;
+  border-left: 3px solid #16c6b2;
+  background: #eff7f5;
+}
+.vm-imaging-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.vm-imaging-choices button {
+  min-height: 44px;
+  border: 1px solid #779893;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background: #fff;
+  text-align: left;
+  white-space: normal;
+}
+.vm-imaging-choices button:hover {
+  background: #e2f5ef;
+}
+.vm-imaging-link :focus-visible {
+  outline: 2px solid #13665d;
+  outline-offset: 3px;
+}

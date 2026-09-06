@@ -32,6 +32,11 @@ const displayPaths = [
   'lib/study-views.ts',
   'app/study-views.tsx',
   'app/study-views.css',
+  'lib/anatomy-coordinates.ts',
+  'lib/anatomy-link-registry.ts',
+  'lib/imaging-sync.ts',
+  'app/imaging-link.tsx',
+  'app/imaging-link.css',
 ];
 const display = await Promise.all(
   displayPaths.map(async (path) => [
