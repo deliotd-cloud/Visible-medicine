@@ -1,5 +1,11 @@
 # Clinical validation checklist
 
+## Hand arterial gates
+
+- Adjudicate all 26 source identities, including first-through-fourth common-branch numbering versus standard teaching conventions and the greater distal extent of the fourth source entries. Grouped surfaces are not independently validated branch names.
+- Review the six-right/four-left proper-branch subset, missing counterparts, arch continuity, calibre/lumen, origin/endpoints and tissue relationships. Sampled geometry checks are not proof of clinical accuracy or surgical safety.
+- Accept all four hand study windows and tiny-vessel controls on real devices. Existing muscle/nerve/source holds remain; no digital nerves, scan studies or patient registration are added. See `HAND_VASCULAR_DETAIL.md`.
+
 ## Thoracic vessel gates
 
 - Review the four exact source identities, grouped oesophageal branches and bronchial variant/arch-branch aliases; a variant-labelled source must not become a normal-pattern template.

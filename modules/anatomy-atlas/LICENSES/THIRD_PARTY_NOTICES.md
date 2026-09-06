@@ -26,6 +26,8 @@ The application embeds a CC BY 4.0 BodyParts3D shoulder mesh subset. It does not
 
 ## Anatomical meshes
 
+The latest hand-arterial extension reaches 984 entries / 80 body bundles. Twenty-six v4 ISA definitions / thirty components and the derived regional candidate inventory retain CC BY 4.0, DBCLS attribution and adaptation notices. Unequal supplied sides and source numbering are disclosed, not normalised with generated tissue. No new package, paid service, font, texture or third-party diagram is added. See `../docs/HAND_VASCULAR_DETAIL.md`; earlier totals are historical.
+
 The latest thoracic extension reaches 958 entries / 79 body bundles. Four v4 IS-A components retain the same CC BY 4.0 DBCLS attribution and adaptation obligations. Bronchial-variant aliases are rendered once, with the variant label retained. No new package, licence class, paid service, font, texture or copied diagram is added. See `../docs/THORACIC_DETAIL.md`. Counts in earlier milestone paragraphs are historical.
 
 The current pancreatic/epiglottic extension reaches 954 entries / 78 body bundles. Twelve definitions and fourteen components from the same official v4 IS-A archive remain CC BY 4.0 derivatives with DBCLS attribution and indication-of-change obligations. No new licence class, package, font, texture, copied diagram or paid service is added. The raphe is held, not rendered. See `../docs/PANCREATIC_DETAIL.md`; the totals in earlier milestone paragraphs are historical.

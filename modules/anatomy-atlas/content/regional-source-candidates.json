@@ -1,0 +1,4904 @@
+{
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "inventorySha256": "55190bfb6a1f247726bdf377d6c5998e46063091b5af5d8e4bae5b15647e32e8",
+  "catalogSha256": "6402d7b654eaddb137fea383d796e64cd7674117d525492d89aa8daa31fe6593",
+  "query": "Unused-available ISA definitions with one to four components and explicit lexical regional-domain matches. Exact component sets are grouped without choosing a preferred anatomical identity. Domains overlap and are not inferred ontology classes.",
+  "unusedIsaDefinitions": 674,
+  "boundedIsaDefinitions": 624,
+  "matchedDefinitions": 257,
+  "sourceSetGroups": 239,
+  "domainCounts": [
+    {
+      "id": "hand-foot-vessels",
+      "sourceSetGroups": 56
+    },
+    {
+      "id": "ocular-lacrimal",
+      "sourceSetGroups": 26
+    },
+    {
+      "id": "laryngeal-pharyngeal",
+      "sourceSetGroups": 13
+    },
+    {
+      "id": "pelvic-genitourinary",
+      "sourceSetGroups": 13
+    },
+    {
+      "id": "cranial-neural",
+      "sourceSetGroups": 53
+    },
+    {
+      "id": "regional-supporting-tissue",
+      "sourceSetGroups": 12
+    },
+    {
+      "id": "visceral-vessels-ducts",
+      "sourceSetGroups": 58
+    },
+    {
+      "id": "surface-features",
+      "sourceSetGroups": 10
+    }
+  ],
+  "groups": [
+    {
+      "files": [
+        "FJ1252"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59763",
+          "name": "gingiva of upper jaw"
+        }
+      ],
+      "domains": [
+        "surface-features"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1253"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59764",
+          "name": "gingiva of lower jaw"
+        }
+      ],
+      "domains": [
+        "surface-features"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1287"
+      ],
+      "definitions": [
+        {
+          "id": "FMA58484",
+          "name": "left corona ciliaris"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1298"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59583",
+          "name": "left lacrimal canaliculus"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1301"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59542",
+          "name": "left lacrimal lake"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1302"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59556",
+          "name": "left nasolacrimal duct"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1309"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59546",
+          "name": "left lacrimal sac"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1324"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59092",
+          "name": "tarsal plate of left upper eyelid"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1328"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59090",
+          "name": "tarsal plate of left lower eyelid"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1332"
+      ],
+      "definitions": [
+        {
+          "id": "FMA58081",
+          "name": "anterior chamber of right eyeball"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1338"
+      ],
+      "definitions": [
+        {
+          "id": "FMA58483",
+          "name": "right corona ciliaris"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1343"
+      ],
+      "definitions": [
+        {
+          "id": "FMA54158",
+          "name": "tendon of levator palpebrae superioris"
+        },
+        {
+          "id": "FMA54159",
+          "name": "tendon of right levator palpebrae superioris"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal",
+        "regional-supporting-tissue"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1349"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59582",
+          "name": "right lacrimal canaliculus"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1352"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59541",
+          "name": "right lacrimal lake"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1353"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59555",
+          "name": "right nasolacrimal duct"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1360"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59545",
+          "name": "right lacrimal sac"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1375"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59091",
+          "name": "tarsal plate of right upper eyelid"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1379"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59089",
+          "name": "tarsal plate of right lower eyelid"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1514"
+      ],
+      "definitions": [
+        {
+          "id": "FMA65198",
+          "name": "superficial head of right flexor pollicis brevis"
+        }
+      ],
+      "domains": [
+        "regional-supporting-tissue"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1514M"
+      ],
+      "definitions": [
+        {
+          "id": "FMA65199",
+          "name": "superficial head of left flexor pollicis brevis"
+        }
+      ],
+      "domains": [
+        "regional-supporting-tissue"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1581"
+      ],
+      "definitions": [
+        {
+          "id": "FMA258850",
+          "name": "right intermediate tendon"
+        },
+        {
+          "id": "FMA65410",
+          "name": "intermediate tendon"
+        }
+      ],
+      "domains": [
+        "regional-supporting-tissue"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1666"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50483",
+          "name": "artery of right postcentral sulcus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1666M"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50484",
+          "name": "artery of left postcentral sulcus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1673"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50476",
+          "name": "branch of right middle cerebral artery to right angular gyrus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1673M"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50477",
+          "name": "branch of left middle cerebral artery to left angular gyrus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1683"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50578",
+          "name": "lateral branch of right superior cerebellar artery"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1683M"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50579",
+          "name": "lateral branch of left superior cerebellar artery"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1688"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50581",
+          "name": "medial branch of right superior cerebellar artery"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1688M"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50582",
+          "name": "medial branch of left superior cerebellar artery"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1726"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50574",
+          "name": "right superior cerebellar artery"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1726M"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50575",
+          "name": "left superior cerebellar artery"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1728"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50696",
+          "name": "superior vermian branch of medial branch of right superior cerebellar artery"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1728M"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50697",
+          "name": "superior vermian branch of medial branch of left superior cerebellar artery"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1735"
+      ],
+      "definitions": [
+        {
+          "id": "FMA73462",
+          "name": "brachium of left superior colliculus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1736"
+      ],
+      "definitions": [
+        {
+          "id": "FMA73461",
+          "name": "brachium of right superior colliculus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1761"
+      ],
+      "definitions": [
+        {
+          "id": "FMA73464",
+          "name": "brachium of left inferior colliculus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1773"
+      ],
+      "definitions": [
+        {
+          "id": "FMA67936",
+          "name": "left optic tract"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1777"
+      ],
+      "definitions": [
+        {
+          "id": "FMA73414",
+          "name": "left stria medullaris of thalamus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1778"
+      ],
+      "definitions": [
+        {
+          "id": "FMA72940",
+          "name": "left stria terminalis"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1809"
+      ],
+      "definitions": [
+        {
+          "id": "FMA73463",
+          "name": "brachium of right inferior colliculus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1820"
+      ],
+      "definitions": [
+        {
+          "id": "FMA62382",
+          "name": "right optic tract"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1824"
+      ],
+      "definitions": [
+        {
+          "id": "FMA73413",
+          "name": "right stria medullaris of thalamus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1832"
+      ],
+      "definitions": [
+        {
+          "id": "FMA61842",
+          "name": "septum of telencephalon"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1837"
+      ],
+      "definitions": [
+        {
+          "id": "FMA72801",
+          "name": "anterior part of left superior temporal gyrus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1838"
+      ],
+      "definitions": [
+        {
+          "id": "FMA72800",
+          "name": "anterior part of right superior temporal gyrus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1839"
+      ],
+      "definitions": [
+        {
+          "id": "FMA72805",
+          "name": "posterior part of left superior temporal gyrus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1840"
+      ],
+      "definitions": [
+        {
+          "id": "FMA72804",
+          "name": "posterior part of right superior temporal gyrus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1843"
+      ],
+      "definitions": [
+        {
+          "id": "FMA266054",
+          "name": "subdivision of cranial dura mater"
+        },
+        {
+          "id": "FMA71235",
+          "name": "region of dura mater"
+        },
+        {
+          "id": "FMA83966",
+          "name": "tentorium cerebelli"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1874"
+      ],
+      "definitions": [
+        {
+          "id": "FMA71710",
+          "name": "left lobe branch of left hepatic artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2042"
+      ],
+      "definitions": [
+        {
+          "id": "FMA86340",
+          "name": "superior segmental branch of right renal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2043"
+      ],
+      "definitions": [
+        {
+          "id": "FMA86346",
+          "name": "inferior segmental branch of right renal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2045"
+      ],
+      "definitions": [
+        {
+          "id": "FMA86348",
+          "name": "posterior segmental branch of right renal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2049"
+      ],
+      "definitions": [
+        {
+          "id": "FMA86347",
+          "name": "inferior segmental branch of left renal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2052"
+      ],
+      "definitions": [
+        {
+          "id": "FMA86341",
+          "name": "superior segmental branch of left renal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2056"
+      ],
+      "definitions": [
+        {
+          "id": "FMA21354",
+          "name": "deep dorsal vein of penis"
+        }
+      ],
+      "domains": [
+        "pelvic-genitourinary"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2068"
+      ],
+      "definitions": [
+        {
+          "id": "FMA69515",
+          "name": "left deep plantar artery"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2085"
+      ],
+      "definitions": [
+        {
+          "id": "FMA43944",
+          "name": "left plantar arch"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2089"
+      ],
+      "definitions": [
+        {
+          "id": "FMA43938",
+          "name": "left superficial medial plantar artery"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2122"
+      ],
+      "definitions": [
+        {
+          "id": "FMA44341",
+          "name": "left superficial epigastric vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2128"
+      ],
+      "definitions": [
+        {
+          "id": "FMA44884",
+          "name": "plantar venous arch of left foot"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2129"
+      ],
+      "definitions": [
+        {
+          "id": "FMA44883",
+          "name": "plantar venous arch of right foot"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2136"
+      ],
+      "definitions": [
+        {
+          "id": "FMA69514",
+          "name": "right deep plantar artery"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2169"
+      ],
+      "definitions": [
+        {
+          "id": "FMA43943",
+          "name": "right plantar arch"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2178"
+      ],
+      "definitions": [
+        {
+          "id": "FMA44340",
+          "name": "right superficial epigastric vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2179"
+      ],
+      "definitions": [
+        {
+          "id": "FMA43937",
+          "name": "right superficial medial plantar artery"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2223"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22808",
+          "name": "left common interosseous artery"
+        }
+      ],
+      "domains": [
+        "regional-supporting-tissue"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2228"
+      ],
+      "definitions": [
+        {
+          "id": "FMA62507",
+          "name": "dorsal venous network of left hand"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2229"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22913",
+          "name": "left deep palmar venous arch"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2231"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22773",
+          "name": "dorsal carpal branch of left radial artery"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2236"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22822",
+          "name": "left dorsal carpal branch of ulnar artery"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2245"
+      ],
+      "definitions": [
+        {
+          "id": "FMA268669",
+          "name": "left recurrent interosseous artery"
+        }
+      ],
+      "domains": [
+        "regional-supporting-tissue"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2249"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22916",
+          "name": "left superficial palmar venous arch"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2275"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22807",
+          "name": "right common interosseous artery"
+        }
+      ],
+      "domains": [
+        "regional-supporting-tissue"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2280"
+      ],
+      "definitions": [
+        {
+          "id": "FMA62506",
+          "name": "dorsal venous network of right hand"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2281"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22912",
+          "name": "right deep palmar venous arch"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2283"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22772",
+          "name": "dorsal carpal branch of right radial artery"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2288"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22821",
+          "name": "right dorsal carpal branch of ulnar artery"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2297"
+      ],
+      "definitions": [
+        {
+          "id": "FMA268667",
+          "name": "right recurrent interosseous artery"
+        }
+      ],
+      "domains": [
+        "regional-supporting-tissue"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2301"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22915",
+          "name": "right superficial palmar venous arch"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2414"
+      ],
+      "definitions": [
+        {
+          "id": "FMA14340",
+          "name": "middle hepatic vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2428"
+      ],
+      "definitions": [
+        {
+          "id": "FMA13884",
+          "name": "wall of ventricle"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2744"
+      ],
+      "definitions": [
+        {
+          "id": "FMA55620",
+          "name": "left pterygomandibular raphe"
+        }
+      ],
+      "domains": [
+        "laryngeal-pharyngeal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2756"
+      ],
+      "definitions": [
+        {
+          "id": "FMA55619",
+          "name": "right pterygomandibular raphe"
+        }
+      ],
+      "domains": [
+        "laryngeal-pharyngeal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2774"
+      ],
+      "definitions": [
+        {
+          "id": "FMA46605",
+          "name": "left aryepiglotticus"
+        }
+      ],
+      "domains": [
+        "laryngeal-pharyngeal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2777"
+      ],
+      "definitions": [
+        {
+          "id": "FMA55252",
+          "name": "left conus elasticus"
+        }
+      ],
+      "domains": [
+        "laryngeal-pharyngeal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2786"
+      ],
+      "definitions": [
+        {
+          "id": "FMA55134",
+          "name": "left thyrohyoid membrane"
+        }
+      ],
+      "domains": [
+        "laryngeal-pharyngeal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2791"
+      ],
+      "definitions": [
+        {
+          "id": "FMA46604",
+          "name": "right aryepiglotticus"
+        }
+      ],
+      "domains": [
+        "laryngeal-pharyngeal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2794"
+      ],
+      "definitions": [
+        {
+          "id": "FMA55251",
+          "name": "right conus elasticus"
+        }
+      ],
+      "domains": [
+        "laryngeal-pharyngeal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2804"
+      ],
+      "definitions": [
+        {
+          "id": "FMA55133",
+          "name": "right thyrohyoid membrane"
+        }
+      ],
+      "domains": [
+        "laryngeal-pharyngeal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2810"
+      ],
+      "definitions": [
+        {
+          "id": "FMA7163",
+          "name": "skin"
+        }
+      ],
+      "domains": [
+        "surface-features"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2811"
+      ],
+      "definitions": [
+        {
+          "id": "FMA52781",
+          "name": "external ear"
+        }
+      ],
+      "domains": [
+        "surface-features"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2812"
+      ],
+      "definitions": [
+        {
+          "id": "FMA70741",
+          "name": "set of facial hairs"
+        },
+        {
+          "id": "FMA70752",
+          "name": "set of hairs"
+        }
+      ],
+      "domains": [
+        "surface-features"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2813"
+      ],
+      "definitions": [
+        {
+          "id": "FMA54241",
+          "name": "hair of head"
+        }
+      ],
+      "domains": [
+        "surface-features"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2814"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59816",
+          "name": "lip"
+        }
+      ],
+      "domains": [
+        "surface-features"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2815"
+      ],
+      "definitions": [
+        {
+          "id": "FMA54250",
+          "name": "hair of trunk"
+        },
+        {
+          "id": "FMA54319",
+          "name": "pubic hair"
+        }
+      ],
+      "domains": [
+        "surface-features"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3082"
+      ],
+      "definitions": [
+        {
+          "id": "FMA71904",
+          "name": "pre-hepatic portal vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3098"
+      ],
+      "definitions": [
+        {
+          "id": "FMA15803",
+          "name": "lateral superior segmental tributary of left hepatic vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3101"
+      ],
+      "definitions": [
+        {
+          "id": "FMA15802",
+          "name": "medial superior segmental tributary of left hepatic vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3119"
+      ],
+      "definitions": [
+        {
+          "id": "FMA15796",
+          "name": "posterior superior segmental tributary of right hepatic vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3121"
+      ],
+      "definitions": [
+        {
+          "id": "FMA15798",
+          "name": "anterior superior segmental tributary of right hepatic vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3132"
+      ],
+      "definitions": [
+        {
+          "id": "FMA19618",
+          "name": "corpus cavernosum of penis"
+        }
+      ],
+      "domains": [
+        "pelvic-genitourinary"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3133"
+      ],
+      "definitions": [
+        {
+          "id": "FMA19617",
+          "name": "corpus spongiosum of penis"
+        }
+      ],
+      "domains": [
+        "pelvic-genitourinary"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3134"
+      ],
+      "definitions": [
+        {
+          "id": "FMA18247",
+          "name": "glans penis"
+        },
+        {
+          "id": "FMA20247",
+          "name": "zone of corpus spongiosum of penis"
+        }
+      ],
+      "domains": [
+        "pelvic-genitourinary"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3135"
+      ],
+      "definitions": [
+        {
+          "id": "FMA19236",
+          "name": "left deferent duct"
+        }
+      ],
+      "domains": [
+        "pelvic-genitourinary"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3140"
+      ],
+      "definitions": [
+        {
+          "id": "FMA19235",
+          "name": "right deferent duct"
+        }
+      ],
+      "domains": [
+        "pelvic-genitourinary"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3426"
+      ],
+      "definitions": [
+        {
+          "id": "FMA21386",
+          "name": "left superficial dorsal vein of penis"
+        }
+      ],
+      "domains": [
+        "pelvic-genitourinary"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3467"
+      ],
+      "definitions": [
+        {
+          "id": "FMA69266",
+          "name": "left inferior suprarenal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3472"
+      ],
+      "definitions": [
+        {
+          "id": "FMA14756",
+          "name": "left middle suprarenal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3476"
+      ],
+      "definitions": [
+        {
+          "id": "FMA66364",
+          "name": "trunk of left renal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3480"
+      ],
+      "definitions": [
+        {
+          "id": "FMA14349",
+          "name": "left suprarenal vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3481"
+      ],
+      "definitions": [
+        {
+          "id": "FMA70493",
+          "name": "ureteric segment of left renal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3500"
+      ],
+      "definitions": [
+        {
+          "id": "FMA15399",
+          "name": "left gastric vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3511"
+      ],
+      "definitions": [
+        {
+          "id": "FMA20689",
+          "name": "left inferior epigastric artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3512"
+      ],
+      "definitions": [
+        {
+          "id": "FMA21164",
+          "name": "left inferior epigastric vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3529"
+      ],
+      "definitions": [
+        {
+          "id": "FMA20736",
+          "name": "left superficial epigastric artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3576"
+      ],
+      "definitions": [
+        {
+          "id": "FMA66363",
+          "name": "trunk of right renal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3580"
+      ],
+      "definitions": [
+        {
+          "id": "FMA14343",
+          "name": "right suprarenal vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3584"
+      ],
+      "definitions": [
+        {
+          "id": "FMA69265",
+          "name": "right inferior suprarenal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3586"
+      ],
+      "definitions": [
+        {
+          "id": "FMA14755",
+          "name": "right middle suprarenal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3594"
+      ],
+      "definitions": [
+        {
+          "id": "FMA14776",
+          "name": "right gastric artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3595"
+      ],
+      "definitions": [
+        {
+          "id": "FMA15400",
+          "name": "right gastric vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3604"
+      ],
+      "definitions": [
+        {
+          "id": "FMA20688",
+          "name": "right inferior epigastric artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3605"
+      ],
+      "definitions": [
+        {
+          "id": "FMA21163",
+          "name": "right inferior epigastric vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3614"
+      ],
+      "definitions": [
+        {
+          "id": "FMA20735",
+          "name": "right superficial epigastric artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3637"
+      ],
+      "definitions": [
+        {
+          "id": "FMA21385",
+          "name": "right superficial dorsal vein of penis"
+        }
+      ],
+      "domains": [
+        "pelvic-genitourinary"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3641"
+      ],
+      "definitions": [
+        {
+          "id": "FMA14331",
+          "name": "splenic vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1252",
+        "FJ1253"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59762",
+          "name": "gingiva"
+        }
+      ],
+      "domains": [
+        "surface-features"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1287",
+        "FJ1338"
+      ],
+      "definitions": [
+        {
+          "id": "FMA58431",
+          "name": "corona ciliaris"
+        },
+        {
+          "id": "FMA58479",
+          "name": "region of ciliary body"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1298",
+        "FJ1349"
+      ],
+      "definitions": [
+        {
+          "id": "FMA58245",
+          "name": "lacrimal canaliculus"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1301",
+        "FJ1352"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59402",
+          "name": "lacrimal lake"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1302",
+        "FJ1353"
+      ],
+      "definitions": [
+        {
+          "id": "FMA9703",
+          "name": "nasolacrimal duct"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1309",
+        "FJ1360"
+      ],
+      "definitions": [
+        {
+          "id": "FMA20289",
+          "name": "lacrimal sac"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1319",
+        "FJ1370"
+      ],
+      "definitions": [
+        {
+          "id": "FMA7037",
+          "name": "branch of ciliary ganglion"
+        },
+        {
+          "id": "FMA7041",
+          "name": "short ciliary nerve"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal",
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1324",
+        "FJ1375"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59087",
+          "name": "tarsal plate of upper eyelid"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1328",
+        "FJ1379"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59088",
+          "name": "tarsal plate of lower eyelid"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1469",
+        "FJ1469M"
+      ],
+      "definitions": [
+        {
+          "id": "FMA37378",
+          "name": "flexor pollicis brevis"
+        }
+      ],
+      "domains": [
+        "regional-supporting-tissue"
+      ],
+      "heldComponents": [
+        {
+          "tree": "isa",
+          "id": "FMA37388",
+          "name": "right flexor pollicis brevis",
+          "files": [
+            "FJ1469M"
+          ],
+          "reason": "Previously quarantined laterality/position discrepancy."
+        },
+        {
+          "tree": "isa",
+          "id": "FMA37389",
+          "name": "left flexor pollicis brevis",
+          "files": [
+            "FJ1469"
+          ],
+          "reason": "Previously quarantined laterality/position discrepancy."
+        }
+      ],
+      "decision": "existing-component-hold-applies",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1514",
+        "FJ1514M"
+      ],
+      "definitions": [
+        {
+          "id": "FMA46104",
+          "name": "superficial head of flexor pollicis brevis"
+        }
+      ],
+      "domains": [
+        "regional-supporting-tissue"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1656",
+        "FJ1656M"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50544",
+          "name": "anterior inferior cerebellar artery"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1666",
+        "FJ1666M"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50482",
+          "name": "artery of postcentral sulcus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1673",
+        "FJ1673M"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50475",
+          "name": "branch of middle cerebral artery to angular gyrus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1683",
+        "FJ1683M"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50577",
+          "name": "lateral superior cerebellar artery"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1688",
+        "FJ1688M"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50580",
+          "name": "medial branch of superior cerebellar artery"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1726",
+        "FJ1726M"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50573",
+          "name": "superior cerebellar artery"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1728",
+        "FJ1728M"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50694",
+          "name": "branch of medial branch of superior cerebellar artery"
+        },
+        {
+          "id": "FMA50695",
+          "name": "superior vermian branch of medial branch of superior cerebellar artery"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1735",
+        "FJ1736"
+      ],
+      "definitions": [
+        {
+          "id": "FMA72417",
+          "name": "brachium of superior colliculus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1761",
+        "FJ1809"
+      ],
+      "definitions": [
+        {
+          "id": "FMA71114",
+          "name": "brachium of inferior colliculus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1764",
+        "FJ1812"
+      ],
+      "definitions": [
+        {
+          "id": "FMA61975",
+          "name": "lamina terminalis"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1771",
+        "FJ1818"
+      ],
+      "definitions": [
+        {
+          "id": "FMA62045",
+          "name": "optic chiasm"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1773",
+        "FJ1820"
+      ],
+      "definitions": [
+        {
+          "id": "FMA62046",
+          "name": "optic tract"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1774",
+        "FJ1821"
+      ],
+      "definitions": [
+        {
+          "id": "FMA62394",
+          "name": "peduncle of midbrain"
+        },
+        {
+          "id": "FMA83860",
+          "name": "peduncle of neuraxis"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1777",
+        "FJ1824"
+      ],
+      "definitions": [
+        {
+          "id": "FMA62080",
+          "name": "stria medullaris of thalamus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1778",
+        "FJ1825"
+      ],
+      "definitions": [
+        {
+          "id": "FMA61974",
+          "name": "stria terminalis"
+        },
+        {
+          "id": "FMA67950",
+          "name": "stria of telencephalon"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1793",
+        "FJ1794"
+      ],
+      "definitions": [
+        {
+          "id": "FMA256194",
+          "name": "orbital gyrus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1837",
+        "FJ1838"
+      ],
+      "definitions": [
+        {
+          "id": "FMA70701",
+          "name": "anterior part of superior temporal gyrus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1839",
+        "FJ1840"
+      ],
+      "definitions": [
+        {
+          "id": "FMA70703",
+          "name": "posterior part of superior temporal gyrus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1924",
+        "FJ2394"
+      ],
+      "definitions": [
+        {
+          "id": "FMA71708",
+          "name": "right lobe branch of right hepatic artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2042",
+        "FJ2052"
+      ],
+      "definitions": [
+        {
+          "id": "FMA70499",
+          "name": "superior segmental renal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2043",
+        "FJ2049"
+      ],
+      "definitions": [
+        {
+          "id": "FMA70502",
+          "name": "inferior segmental renal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2053",
+        "FJ2054"
+      ],
+      "definitions": [
+        {
+          "id": "FMA86349",
+          "name": "posterior segmental branch of left renal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2058",
+        "FJ2064"
+      ],
+      "definitions": [
+        {
+          "id": "FMA43940",
+          "name": "branch of lateral plantar artery"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2059",
+        "FJ2060"
+      ],
+      "definitions": [
+        {
+          "id": "FMA44882",
+          "name": "dorsal venous arch of left foot"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2061",
+        "FJ2062"
+      ],
+      "definitions": [
+        {
+          "id": "FMA44881",
+          "name": "dorsal venous arch of right foot"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2068",
+        "FJ2136"
+      ],
+      "definitions": [
+        {
+          "id": "FMA69513",
+          "name": "deep plantar artery"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2072",
+        "FJ2141"
+      ],
+      "definitions": [
+        {
+          "id": "FMA44660",
+          "name": "dorsal digital artery of foot"
+        },
+        {
+          "id": "FMA69713",
+          "name": "digital artery of foot"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2089",
+        "FJ2179"
+      ],
+      "definitions": [
+        {
+          "id": "FMA43933",
+          "name": "superficial medial plantar artery"
+        },
+        {
+          "id": "FMA43941",
+          "name": "branch of medial plantar artery"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2091",
+        "FJ2195"
+      ],
+      "definitions": [
+        {
+          "id": "FMA71562",
+          "name": "set of calcaneal branches of posterior tibial artery"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2092",
+        "FJ2196"
+      ],
+      "definitions": [
+        {
+          "id": "FMA70821",
+          "name": "set of common plantar digital arteries"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2096",
+        "FJ2206"
+      ],
+      "definitions": [
+        {
+          "id": "FMA43956",
+          "name": "plantar metatarsal artery"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2120",
+        "FJ2175"
+      ],
+      "definitions": [
+        {
+          "id": "FMA70919",
+          "name": "set of plantar digital veins"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2122",
+        "FJ2178"
+      ],
+      "definitions": [
+        {
+          "id": "FMA44318",
+          "name": "superficial epigastric vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2128",
+        "FJ2129"
+      ],
+      "definitions": [
+        {
+          "id": "FMA44489",
+          "name": "plantar venous arch of foot"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2185",
+        "FJ2198"
+      ],
+      "definitions": [
+        {
+          "id": "FMA70917",
+          "name": "set of dorsal digital veins"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2186",
+        "FJ2199"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22954",
+          "name": "dorsal metacarpal vein"
+        },
+        {
+          "id": "FMA62504",
+          "name": "tributary of deep palmar venous arch"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2191",
+        "FJ2207"
+      ],
+      "definitions": [
+        {
+          "id": "FMA44504",
+          "name": "plantar metatarsal vein"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2223",
+        "FJ2275"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22806",
+          "name": "common interosseous artery"
+        }
+      ],
+      "domains": [
+        "regional-supporting-tissue"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2228",
+        "FJ2280"
+      ],
+      "definitions": [
+        {
+          "id": "FMA67977",
+          "name": "dorsal venous network of hand"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2229",
+        "FJ2281"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22911",
+          "name": "deep palmar venous arch"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2231",
+        "FJ2283"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22755",
+          "name": "dorsal carpal branch of radial artery"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2236",
+        "FJ2288"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22820",
+          "name": "dorsal carpal branch of ulnar artery"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2245",
+        "FJ2297"
+      ],
+      "definitions": [
+        {
+          "id": "FMA77144",
+          "name": "recurrent interosseous artery"
+        }
+      ],
+      "domains": [
+        "regional-supporting-tissue"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2249",
+        "FJ2301"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22914",
+          "name": "superficial palmar venous arch"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2322",
+        "FJ2352"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22923",
+          "name": "common palmar digital vein"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2324",
+        "FJ2325"
+      ],
+      "definitions": [
+        {
+          "id": "FMA85097",
+          "name": "proper palmar digital vein of left index finger"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2326",
+        "FJ2340"
+      ],
+      "definitions": [
+        {
+          "id": "FMA85099",
+          "name": "proper palmar digital vein of left middle finger"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2327",
+        "FJ2328"
+      ],
+      "definitions": [
+        {
+          "id": "FMA85101",
+          "name": "proper palmar digital vein of left ring finger"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2347",
+        "FJ2348"
+      ],
+      "definitions": [
+        {
+          "id": "FMA70800",
+          "name": "set of dorsal metacarpal arteries"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2354",
+        "FJ2355"
+      ],
+      "definitions": [
+        {
+          "id": "FMA85096",
+          "name": "proper palmar digital vein of right index finger"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2356",
+        "FJ2357"
+      ],
+      "definitions": [
+        {
+          "id": "FMA85098",
+          "name": "proper palmar digital vein of right middle finger"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2358",
+        "FJ2359"
+      ],
+      "definitions": [
+        {
+          "id": "FMA85100",
+          "name": "proper palmar digital vein of right ring finger"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2742",
+        "FJ2754"
+      ],
+      "definitions": [
+        {
+          "id": "FMA46622",
+          "name": "middle pharyngeal constrictor"
+        }
+      ],
+      "domains": [
+        "laryngeal-pharyngeal"
+      ],
+      "heldComponents": [
+        {
+          "tree": "isa",
+          "id": "FMA46633",
+          "name": "right middle pharyngeal constrictor",
+          "files": [
+            "FJ2742"
+          ],
+          "reason": "Previously quarantined laterality/position discrepancy."
+        },
+        {
+          "tree": "isa",
+          "id": "FMA46634",
+          "name": "left middle pharyngeal constrictor",
+          "files": [
+            "FJ2754"
+          ],
+          "reason": "Previously quarantined laterality/position discrepancy."
+        }
+      ],
+      "decision": "existing-component-hold-applies",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2744",
+        "FJ2756"
+      ],
+      "definitions": [
+        {
+          "id": "FMA55618",
+          "name": "pterygomandibular raphe"
+        }
+      ],
+      "domains": [
+        "laryngeal-pharyngeal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2774",
+        "FJ2791"
+      ],
+      "definitions": [
+        {
+          "id": "FMA46602",
+          "name": "aryepiglotticus"
+        }
+      ],
+      "domains": [
+        "laryngeal-pharyngeal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2777",
+        "FJ2794"
+      ],
+      "definitions": [
+        {
+          "id": "FMA55250",
+          "name": "conus elasticus"
+        }
+      ],
+      "domains": [
+        "laryngeal-pharyngeal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2786",
+        "FJ2804"
+      ],
+      "definitions": [
+        {
+          "id": "FMA55132",
+          "name": "thyrohyoid membrane"
+        }
+      ],
+      "domains": [
+        "laryngeal-pharyngeal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2813",
+        "FJ2815"
+      ],
+      "definitions": [
+        {
+          "id": "FMA53667",
+          "name": "hair"
+        },
+        {
+          "id": "FMA71012",
+          "name": "skin appendage"
+        }
+      ],
+      "domains": [
+        "surface-features"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3084",
+        "FJ3085"
+      ],
+      "definitions": [
+        {
+          "id": "FMA15801",
+          "name": "medial inferior segmental tributary of middle hepatic vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3118",
+        "FJ3120"
+      ],
+      "definitions": [
+        {
+          "id": "FMA15797",
+          "name": "posterior inferior segmental tributary of right hepatic vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3135",
+        "FJ3140"
+      ],
+      "definitions": [
+        {
+          "id": "FMA19234",
+          "name": "deferent duct"
+        }
+      ],
+      "domains": [
+        "pelvic-genitourinary"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3467",
+        "FJ3584"
+      ],
+      "definitions": [
+        {
+          "id": "FMA69264",
+          "name": "inferior suprarenal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3472",
+        "FJ3586"
+      ],
+      "definitions": [
+        {
+          "id": "FMA14754",
+          "name": "middle suprarenal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3476",
+        "FJ3576"
+      ],
+      "definitions": [
+        {
+          "id": "FMA66362",
+          "name": "trunk of renal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3477",
+        "FJ3478"
+      ],
+      "definitions": [
+        {
+          "id": "FMA14336",
+          "name": "left renal vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3480",
+        "FJ3580"
+      ],
+      "definitions": [
+        {
+          "id": "FMA14348",
+          "name": "suprarenal vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3496",
+        "FJ3497"
+      ],
+      "definitions": [
+        {
+          "id": "FMA20819",
+          "name": "left dorsal artery of penis"
+        }
+      ],
+      "domains": [
+        "pelvic-genitourinary"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3511",
+        "FJ3604"
+      ],
+      "definitions": [
+        {
+          "id": "FMA20686",
+          "name": "inferior epigastric artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3512",
+        "FJ3605"
+      ],
+      "definitions": [
+        {
+          "id": "FMA21162",
+          "name": "inferior epigastric vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3529",
+        "FJ3614"
+      ],
+      "definitions": [
+        {
+          "id": "FMA20734",
+          "name": "superficial epigastric artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3530",
+        "FJ3615"
+      ],
+      "definitions": [
+        {
+          "id": "FMA4731",
+          "name": "superior epigastric vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [
+        {
+          "tree": "isa",
+          "id": "FMA4771",
+          "name": "right superior epigastric vein",
+          "files": [
+            "FJ3615"
+          ],
+          "reason": "Source-labelled superior epigastric vein lies inferior to the expected upper-abdominal arterial context; extent/identity review required."
+        },
+        {
+          "tree": "isa",
+          "id": "FMA4785",
+          "name": "left superior epigastric vein",
+          "files": [
+            "FJ3530"
+          ],
+          "reason": "Source-labelled superior epigastric vein lies inferior to the expected upper-abdominal arterial context; extent/identity review required."
+        }
+      ],
+      "decision": "existing-component-hold-applies",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3577",
+        "FJ3578"
+      ],
+      "definitions": [
+        {
+          "id": "FMA14335",
+          "name": "right renal vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3581",
+        "FJ3582"
+      ],
+      "definitions": [
+        {
+          "id": "FMA70492",
+          "name": "ureteric segment of right renal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3592",
+        "FJ3593"
+      ],
+      "definitions": [
+        {
+          "id": "FMA20818",
+          "name": "right dorsal artery of penis"
+        }
+      ],
+      "domains": [
+        "pelvic-genitourinary"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1668",
+        "FJ1669",
+        "FJ1670"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50480",
+          "name": "artery of right precentral sulcus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1668M",
+        "FJ1669M",
+        "FJ1670M"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50481",
+          "name": "artery of left precentral sulcus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2045",
+        "FJ2053",
+        "FJ2054"
+      ],
+      "definitions": [
+        {
+          "id": "FMA70503",
+          "name": "posterior segmental renal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2095",
+        "FJ2204",
+        "FJ2205"
+      ],
+      "definitions": [
+        {
+          "id": "FMA71564",
+          "name": "set of plantar digital arteries proper"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2208",
+        "FJ3426",
+        "FJ3637"
+      ],
+      "definitions": [
+        {
+          "id": "FMA21384",
+          "name": "superficial dorsal vein of penis"
+        }
+      ],
+      "domains": [
+        "pelvic-genitourinary"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2238",
+        "FJ2320",
+        "FJ2323"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22921",
+          "name": "left palmar metacarpal vein"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2290",
+        "FJ2350",
+        "FJ2353"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22920",
+          "name": "right palmar metacarpal vein"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2319",
+        "FJ2321",
+        "FJ2329"
+      ],
+      "definitions": [
+        {
+          "id": "FMA85103",
+          "name": "proper palmar digital vein of left little finger"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2349",
+        "FJ2351",
+        "FJ2360"
+      ],
+      "definitions": [
+        {
+          "id": "FMA85102",
+          "name": "proper palmar digital vein of right little finger"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3097",
+        "FJ3099",
+        "FJ3100"
+      ],
+      "definitions": [
+        {
+          "id": "FMA15804",
+          "name": "lateral inferior segmental tributary of left hepatic vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3473",
+        "FJ3474",
+        "FJ3475"
+      ],
+      "definitions": [
+        {
+          "id": "FMA70490",
+          "name": "posterior division of left renal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3481",
+        "FJ3581",
+        "FJ3582"
+      ],
+      "definitions": [
+        {
+          "id": "FMA70491",
+          "name": "ureteric segment of renal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3573",
+        "FJ3574",
+        "FJ3575"
+      ],
+      "definitions": [
+        {
+          "id": "FMA70489",
+          "name": "posterior division of right renal artery"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1287",
+        "FJ1316",
+        "FJ1338",
+        "FJ1367"
+      ],
+      "definitions": [
+        {
+          "id": "FMA225818",
+          "name": "region of layer of wall of eyeball"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1313",
+        "FJ1364",
+        "FJ1772",
+        "FJ1819"
+      ],
+      "definitions": [
+        {
+          "id": "FMA50863",
+          "name": "optic nerve"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [
+        {
+          "tree": "isa",
+          "id": "FMA50875",
+          "name": "right optic nerve",
+          "files": [
+            "FJ1364",
+            "FJ1819"
+          ],
+          "reason": "Optic-nerve overlapping alternatives require adjudication."
+        },
+        {
+          "tree": "isa",
+          "id": "FMA50878",
+          "name": "left optic nerve",
+          "files": [
+            "FJ1313",
+            "FJ1772"
+          ],
+          "reason": "Optic-nerve overlapping alternatives require adjudication."
+        }
+      ],
+      "decision": "existing-component-hold-applies",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1324",
+        "FJ1328",
+        "FJ1375",
+        "FJ1379"
+      ],
+      "definitions": [
+        {
+          "id": "FMA59086",
+          "name": "tarsal plate of eyelid"
+        }
+      ],
+      "domains": [
+        "ocular-lacrimal"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1664",
+        "FJ1664M",
+        "FJ1665",
+        "FJ1665M"
+      ],
+      "definitions": [
+        {
+          "id": "FMA77439",
+          "name": "artery of central sulcus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1777",
+        "FJ1778",
+        "FJ1824",
+        "FJ1825"
+      ],
+      "definitions": [
+        {
+          "id": "FMA83854",
+          "name": "stria of neuraxis"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ1837",
+        "FJ1838",
+        "FJ1839",
+        "FJ1840"
+      ],
+      "definitions": [
+        {
+          "id": "FMA67957",
+          "name": "segment of gyrus of cerebral hemisphere"
+        },
+        {
+          "id": "FMA70676",
+          "name": "subdivision of superior temporal gyrus"
+        }
+      ],
+      "domains": [
+        "cranial-neural"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2059",
+        "FJ2060",
+        "FJ2061",
+        "FJ2062"
+      ],
+      "definitions": [
+        {
+          "id": "FMA44356",
+          "name": "dorsal venous arch of foot"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2068",
+        "FJ2085",
+        "FJ2136",
+        "FJ2169"
+      ],
+      "definitions": [
+        {
+          "id": "FMA43942",
+          "name": "plantar arch"
+        },
+        {
+          "id": "FMA69559",
+          "name": "zone of trunk of lateral plantar artery"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2093",
+        "FJ2197",
+        "FJ2318",
+        "FJ2346"
+      ],
+      "definitions": [
+        {
+          "id": "FMA70801",
+          "name": "set of dorsal digital arteries"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2324",
+        "FJ2325",
+        "FJ2354",
+        "FJ2355"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22927",
+          "name": "proper palmar digital vein of index finger"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2326",
+        "FJ2340",
+        "FJ2356",
+        "FJ2357"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22928",
+          "name": "proper palmar digital vein of middle finger"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ2327",
+        "FJ2328",
+        "FJ2358",
+        "FJ2359"
+      ],
+      "definitions": [
+        {
+          "id": "FMA22929",
+          "name": "proper palmar digital vein of ring finger"
+        }
+      ],
+      "domains": [
+        "hand-foot-vessels"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3118",
+        "FJ3119",
+        "FJ3120",
+        "FJ3121"
+      ],
+      "definitions": [
+        {
+          "id": "FMA15791",
+          "name": "tributary of right hepatic vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3477",
+        "FJ3478",
+        "FJ3577",
+        "FJ3578"
+      ],
+      "definitions": [
+        {
+          "id": "FMA14334",
+          "name": "renal vein"
+        }
+      ],
+      "domains": [
+        "visceral-vessels-ducts"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "files": [
+        "FJ3496",
+        "FJ3497",
+        "FJ3592",
+        "FJ3593"
+      ],
+      "definitions": [
+        {
+          "id": "FMA19795",
+          "name": "dorsal artery of penis"
+        }
+      ],
+      "domains": [
+        "pelvic-genitourinary"
+      ],
+      "heldComponents": [],
+      "decision": "identity-and-geometry-review-required",
+      "renderedOwners": [],
+      "admitted": false,
+      "meshGeometryAudited": false
+    }
+  ],
+  "limits": [
+    "Names and source-set equivalence are retrieval triage, not anatomy or clinical validation. No candidate is admitted by this report.",
+    "Unmatched, large, partially represented and PART-OF definitions are outside this bounded query, not proved absent anatomy.",
+    "Held components remain held under aggregate or alternative names. Unverified geometry can still duplicate an existing surface despite a different filename.",
+    "Before admission verify exact identity, asset rights/version, raw hashes, common coordinates, laterality and geometry overlap; do not infer missing counterparts, tissue connections or clinically normal variants."
+  ],
+  "clinicalValidation": false
+}

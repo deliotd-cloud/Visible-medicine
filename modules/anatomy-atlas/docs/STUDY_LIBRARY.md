@@ -1,5 +1,7 @@
 # Regional study library
 
+The latest [hand arterial extension](HAND_VASCULAR_DETAIL.md) brings this library to 73 independent windows, 102 focuses and 144 cards (175 recipes, 31 equivalent pairs). The 47 layer steps remain separate. Current evidence is in `study-library-validation.json`; milestone counts below are historical.
+
 The counts and hashes below describe the original library milestone. The [thoracic extension](THORACIC_DETAIL.md) now brings the same library to 69 independent windows, 98 focuses and 140 cards (167 recipes, 27 equivalent pairs), with 47 layer steps still separate. Current hashes and 34,836 passing assertions are in `study-library-validation.json`.
 
 ## Find a dissection view before changing the model

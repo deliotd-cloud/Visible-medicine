@@ -5,6 +5,7 @@ import { headDetailStudySets } from '../lib/head-detail.ts';
 import { mesentericStudySets } from '../lib/mesenteric-anatomy.ts';
 import { pancreaticStudySets } from '../lib/pancreatic-anatomy.ts';
 import { thoracicStudySets } from '../lib/thoracic-anatomy.ts';
+import { handVascularStudySets } from '../lib/hand-vascular-anatomy.ts';
 
 export type DissectionView =
   | 'anterior'
@@ -303,7 +304,7 @@ export const dissectionProfiles: Record<string, DissectionProfile> = {
     limitations: [
       'Lumbricals, palmar interossei and dorsal interossei are available as source groups per hand, not individually numbered muscles.',
       'Both flexor-pollicis-brevis entries are quarantined for a source laterality discrepancy.',
-      'Palmar aponeurosis, retinacula, tendon sheaths and digital nerves are absent.',
+      'Wrist flexor retinacula are available. Palmar aponeurosis, extensor retinacula, tendon sheaths and digital nerves remain absent. Arterial source numbers are retained, not validated textbook branch counts.',
     ],
     references: [ref('hand')],
     stages: [
@@ -1133,6 +1134,7 @@ for (const study of [
   ...mesentericStudySets,
   ...pancreaticStudySets,
   ...thoracicStudySets,
+  ...handVascularStudySets,
 ]) {
   for (const [index, region] of study.regions.entries()) {
     const rule = { fmaIds: study.targetFmaIds };

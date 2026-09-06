@@ -3,7 +3,7 @@
   "sourceVersion": "4.0",
   "license": "CC-BY-4.0",
   "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
-  "catalogSha256": "d740da1d11bdf93d26ebe60ccdc82b7fc16909713779d7d2933d3d9dc10988cb",
+  "catalogSha256": "6402d7b654eaddb137fea383d796e64cd7674117d525492d89aa8daa31fe6593",
   "tables": [
     {
       "name": "isa_parts_list_e.txt",
@@ -60,12 +60,12 @@
     "uniqueConceptIds": 3432,
     "archiveEntries": 3492,
     "archiveEntriesWithoutConcept": 0,
-    "admittedStructures": 958,
+    "admittedStructures": 984,
     "statuses": {
-      "represented-not-selectable": 1792,
+      "represented-not-selectable": 1813,
       "partly-represented": 198,
-      "unused-available": 844,
-      "admitted": 1358,
+      "unused-available": 797,
+      "admitted": 1384,
       "held-source-review": 28,
       "admitted-other-definition": 53
     }
@@ -171,7 +171,9 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
-        "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch"
+        "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+        "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+        "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch"
       ],
       "unavailable": [],
       "sharedDefinitionWith": [
@@ -198,7 +200,9 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
-        "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch"
+        "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+        "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+        "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch"
       ],
       "unavailable": [],
       "sharedDefinitionWith": [
@@ -216,12 +220,14 @@
         "FJ2279",
         "FJ2300"
       ],
-      "status": "partly-represented",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
-        "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch"
+        "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+        "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+        "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -3152,7 +3158,9 @@
         "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
         "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
         "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
-        "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch"
+        "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+        "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+        "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -9269,7 +9277,9 @@
       "representedBy": [
         "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
         "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
-        "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch"
+        "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+        "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+        "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -20181,10 +20191,15 @@
         "FJ2371",
         "FJ2372"
       ],
-      "status": "unused-available",
+      "status": "partly-represented",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -20435,10 +20450,13 @@
         "FJ2371",
         "FJ2372"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -20453,10 +20471,13 @@
         "FJ2342",
         "FJ2363"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -20547,10 +20568,12 @@
         "FJ2342",
         "FJ2363"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -20563,10 +20586,12 @@
         "FJ2314",
         "FJ2332"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -21039,10 +21064,13 @@
         "FJ2248",
         "FJ2300"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+        "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -21054,10 +21082,12 @@
       "files": [
         "FJ2300"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -21069,10 +21099,12 @@
       "files": [
         "FJ2248"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -21177,10 +21209,31 @@
         "FJ2369",
         "FJ2370"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+        "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -21193,10 +21246,13 @@
         "FJ2237",
         "FJ2289"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA22863"
@@ -21227,10 +21283,29 @@
         "FJ2369",
         "FJ2370"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+        "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -21346,10 +21421,13 @@
         "FJ2315",
         "FJ2343"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -21362,10 +21440,13 @@
         "FJ2316",
         "FJ2344"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -21377,10 +21458,12 @@
       "files": [
         "FJ2343"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -21393,10 +21476,13 @@
         "FJ2334",
         "FJ2365"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -21408,10 +21494,12 @@
       "files": [
         "FJ2365"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -21423,10 +21511,12 @@
       "files": [
         "FJ2334"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -21439,10 +21529,13 @@
         "FJ2237",
         "FJ2289"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA22843"
@@ -21456,10 +21549,12 @@
       "files": [
         "FJ2289"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -21471,10 +21566,12 @@
       "files": [
         "FJ2237"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -21623,10 +21720,12 @@
         "FJ2371",
         "FJ2372"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -21639,10 +21738,12 @@
         "FJ2338",
         "FJ2339"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -22376,10 +22477,12 @@
       "files": [
         "FJ2369"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA23052"
@@ -22394,10 +22497,13 @@
         "FJ2333",
         "FJ2364"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -22410,10 +22516,13 @@
         "FJ2336",
         "FJ2368"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -22425,10 +22534,12 @@
       "files": [
         "FJ2364"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -22440,10 +22551,12 @@
       "files": [
         "FJ2333"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -22455,10 +22568,12 @@
       "files": [
         "FJ2369"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA23046"
@@ -22472,10 +22587,12 @@
       "files": [
         "FJ2368"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -22487,10 +22604,12 @@
       "files": [
         "FJ2336"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -37504,7 +37623,9 @@
         "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
         "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
         "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
+        "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
         "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+        "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch",
         "vm:anatomy:body:head-neck:left:organ:left-amygdala",
         "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
         "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
@@ -41305,6 +41426,30 @@
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
+        "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
+        "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
@@ -42418,6 +42563,30 @@
         "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
+        "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
+        "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
@@ -53964,7 +54133,19 @@
         "vm:anatomy:body:hand:left:muscle:set-of-lumbricals-of-left-hand",
         "vm:anatomy:body:hand:left:muscle:set-of-palmar-interossei-of-left-hand",
         "vm:anatomy:body:hand:left:muscle:transverse-head-of-left-adductor-pollicis",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
         "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
+        "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+        "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
         "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-index-finger",
         "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-little-finger",
         "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-middle-finger",
@@ -54003,7 +54184,21 @@
         "vm:anatomy:body:hand:right:muscle:set-of-lumbricals-of-right-hand",
         "vm:anatomy:body:hand:right:muscle:set-of-palmar-interossei-of-right-hand",
         "vm:anatomy:body:hand:right:muscle:transverse-head-of-right-adductor-pollicis",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
         "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+        "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch",
+        "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery",
         "vm:anatomy:body:head-neck:left:bone:left-inferior-nasal-concha",
         "vm:anatomy:body:head-neck:left:bone:left-lacrimal-bone",
         "vm:anatomy:body:head-neck:left:bone:left-maxilla",
@@ -58364,7 +58559,19 @@
         "vm:anatomy:body:hand:left:muscle:set-of-lumbricals-of-left-hand",
         "vm:anatomy:body:hand:left:muscle:set-of-palmar-interossei-of-left-hand",
         "vm:anatomy:body:hand:left:muscle:transverse-head-of-left-adductor-pollicis",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
         "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
+        "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+        "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
         "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-index-finger",
         "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-little-finger",
         "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-middle-finger",
@@ -58403,7 +58610,21 @@
         "vm:anatomy:body:hand:right:muscle:set-of-lumbricals-of-right-hand",
         "vm:anatomy:body:hand:right:muscle:set-of-palmar-interossei-of-right-hand",
         "vm:anatomy:body:hand:right:muscle:transverse-head-of-right-adductor-pollicis",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
         "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+        "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch",
+        "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery",
         "vm:anatomy:body:head-neck:left:bone:left-inferior-nasal-concha",
         "vm:anatomy:body:head-neck:left:bone:left-lacrimal-bone",
         "vm:anatomy:body:head-neck:left:bone:left-maxilla",
@@ -60875,6 +61096,30 @@
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
+        "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
+        "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
@@ -63906,7 +64151,19 @@
         "vm:anatomy:body:hand:left:muscle:oblique-head-of-left-adductor-pollicis",
         "vm:anatomy:body:hand:left:muscle:opponens-digiti-minimi-of-left-hand",
         "vm:anatomy:body:hand:left:muscle:transverse-head-of-left-adductor-pollicis",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
         "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
+        "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+        "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
         "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-index-finger",
         "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-little-finger",
         "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-middle-finger",
@@ -63942,7 +64199,21 @@
         "vm:anatomy:body:hand:right:muscle:right-abductor-pollicis-brevis",
         "vm:anatomy:body:hand:right:muscle:right-opponens-pollicis",
         "vm:anatomy:body:hand:right:muscle:transverse-head-of-right-adductor-pollicis",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
         "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+        "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch",
+        "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery",
         "vm:anatomy:body:head-neck:left:bone:left-inferior-nasal-concha",
         "vm:anatomy:body:head-neck:left:bone:left-lacrimal-bone",
         "vm:anatomy:body:head-neck:left:bone:left-maxilla",
@@ -67091,7 +67362,19 @@
         "vm:anatomy:body:hand:left:muscle:set-of-lumbricals-of-left-hand",
         "vm:anatomy:body:hand:left:muscle:set-of-palmar-interossei-of-left-hand",
         "vm:anatomy:body:hand:left:muscle:transverse-head-of-left-adductor-pollicis",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
         "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
+        "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+        "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
         "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-index-finger",
         "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-little-finger",
         "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-middle-finger",
@@ -67130,7 +67413,21 @@
         "vm:anatomy:body:hand:right:muscle:set-of-lumbricals-of-right-hand",
         "vm:anatomy:body:hand:right:muscle:set-of-palmar-interossei-of-right-hand",
         "vm:anatomy:body:hand:right:muscle:transverse-head-of-right-adductor-pollicis",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
         "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+        "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch",
+        "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery",
         "vm:anatomy:body:head-neck:left:bone:left-inferior-nasal-concha",
         "vm:anatomy:body:head-neck:left:bone:left-lacrimal-bone",
         "vm:anatomy:body:head-neck:left:bone:left-maxilla",
@@ -70777,8 +71074,32 @@
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:hand:left:muscle:oblique-head-of-left-adductor-pollicis",
         "vm:anatomy:body:hand:left:muscle:transverse-head-of-left-adductor-pollicis",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
+        "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
         "vm:anatomy:body:hand:right:muscle:oblique-head-of-right-adductor-pollicis",
         "vm:anatomy:body:hand:right:muscle:transverse-head-of-right-adductor-pollicis",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
+        "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery",
         "vm:anatomy:body:head-neck:left:nerve:communicating-branch-of-left-nasociliary-nerve-with-left-ciliary-ganglion",
         "vm:anatomy:body:head-neck:left:nerve:inferior-branch-of-left-oculomotor-nerve",
         "vm:anatomy:body:head-neck:left:nerve:left-anterior-ethmoidal-nerve",
@@ -73832,6 +74153,10 @@
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
         "vm:anatomy:body:head-neck:left:vessel:left-posterior-cerebral-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-vertebral-artery",
         "vm:anatomy:body:head-neck:midline:vessel:basilar-artery",
@@ -80818,9 +81143,33 @@
         "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
         "vm:anatomy:body:hand:left:muscle:oblique-head-of-left-adductor-pollicis",
         "vm:anatomy:body:hand:left:muscle:transverse-head-of-left-adductor-pollicis",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
+        "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
         "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
         "vm:anatomy:body:hand:right:muscle:oblique-head-of-right-adductor-pollicis",
         "vm:anatomy:body:hand:right:muscle:transverse-head-of-right-adductor-pollicis",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
+        "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery",
         "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-lateral-rectus",
         "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-medial-rectus",
         "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament",
@@ -82290,10 +82639,13 @@
         "FJ2317",
         "FJ2345"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -82306,10 +82658,13 @@
         "FJ2337",
         "FJ2370"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -82324,10 +82679,15 @@
         "FJ2364",
         "FJ2365"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+        "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -82341,10 +82701,14 @@
         "FJ2366",
         "FJ2367"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -82356,10 +82720,12 @@
       "files": [
         "FJ2367"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA85112"
@@ -82373,10 +82739,12 @@
       "files": [
         "FJ2367"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA85111"
@@ -82391,10 +82759,13 @@
         "FJ2335",
         "FJ2366"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -82406,10 +82777,12 @@
       "files": [
         "FJ2366"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -82421,10 +82794,12 @@
       "files": [
         "FJ2335"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -82438,10 +82813,14 @@
         "FJ2368",
         "FJ2369"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -82453,10 +82832,12 @@
       "files": [
         "FJ2315"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -82468,10 +82849,12 @@
       "files": [
         "FJ2344"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -82483,10 +82866,12 @@
       "files": [
         "FJ2316"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -82498,10 +82883,12 @@
       "files": [
         "FJ2345"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -82513,10 +82900,12 @@
       "files": [
         "FJ2317"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -82528,10 +82917,12 @@
       "files": [
         "FJ2370"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -82543,10 +82934,12 @@
       "files": [
         "FJ2337"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -84071,6 +84464,30 @@
         "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
+        "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
+        "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery",
         "vm:anatomy:body:head-neck:left:nerve:communicating-branch-of-left-nasociliary-nerve-with-left-ciliary-ganglion",
         "vm:anatomy:body:head-neck:left:nerve:inferior-branch-of-left-oculomotor-nerve",
         "vm:anatomy:body:head-neck:left:nerve:left-anterior-ethmoidal-nerve",
@@ -84883,6 +85300,30 @@
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
+        "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+        "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
+        "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+        "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+        "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
@@ -142301,9 +142742,11 @@
       "available": true,
       "bytes": 111320,
       "crc32": 3968074472,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "003e898bce96e168bc39b856dea13e6b85089f04ca50bc1b812cbbfa21776bf2",
+      "geometrySha256": "1972c31e3217c5c146e3cfb4be65a426321beba45c32e9aa920038498fd0c6b3",
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -142417,9 +142860,11 @@
       "available": true,
       "bytes": 180121,
       "crc32": 2806456938,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "2675c02ed6954ee29e47ded172dc055efe7ae3c8be6e0e58dd679bebf9b277a9",
+      "geometrySha256": "f13008d059a48aad55a70c62ffcb6289eaddd93aae8b0c88595e841c6c6731a5",
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch"
+      ]
     },
     {
       "tree": "isa",
@@ -142867,9 +143312,11 @@
       "available": true,
       "bytes": 111866,
       "crc32": 2640918179,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "a14542bb1aaa1caaa3e0c37bd66fdeb33f88d89f4760c0cb0c591cce8c76ed92",
+      "geometrySha256": "8aa3ca35eea5d5cf31f2cd055dfd25069d6a09857c2ee21e6b6de6b6e784e321",
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -142983,9 +143430,11 @@
       "available": true,
       "bytes": 185008,
       "crc32": 4261273182,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "396907b82c2f9b422643e3a72c941dcb10e3676ac26a4d1aae0a6ed28add7304",
+      "geometrySha256": "61e8fead65a52118dff145e80308a38a457f4580db09d321ad6f790b1ad0fb59",
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch"
+      ]
     },
     {
       "tree": "isa",
@@ -143135,9 +143584,11 @@
       "available": true,
       "bytes": 43835,
       "crc32": 3112750851,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "20f4253cb295a3fbaf9951dff5a092690950a78565142b4e7b6e629e10fcd68d",
+      "geometrySha256": "62025a6f4af74085553f598ee4a87f63b981250e7eb991276396fbb80bbbe6bd",
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis"
+      ]
     },
     {
       "tree": "isa",
@@ -143145,9 +143596,11 @@
       "available": true,
       "bytes": 26313,
       "crc32": 1537645807,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "82db17b85e2548c8d5fa6cb1d8846307f23cbaf8299fe361d19caf8bc8c8ea94",
+      "geometrySha256": "41848453df6d89153d153fcf71362eb18b65e7bb25a3a057f682408f07997365",
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -143155,9 +143608,11 @@
       "available": true,
       "bytes": 24025,
       "crc32": 707384985,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "4b64fd5086b7b38a5df68951f293841b18b218b16fc707aaa97ed3bdbe5e865a",
+      "geometrySha256": "87b0ab366fe1da2de29c03c474f4db2528d346074cf9700883fc4a09eb4adb80",
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -143165,9 +143620,11 @@
       "available": true,
       "bytes": 23676,
       "crc32": 2996670343,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "49bcf65b3db93a1cc8528c4f41b6580cef7b0e6a29dc66307b5536b2eb44f79c",
+      "geometrySha256": "cc520f12716f72a1bd2ab9441ee6f972dccf0ddb07f8e7bfce182c078ff0a430",
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -143317,9 +143774,11 @@
       "available": true,
       "bytes": 45008,
       "crc32": 1999751983,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "a6ebd74f68d24d6eab266b275dc17e5c93c727114f06a9d3385b124d90e61a3e",
+      "geometrySha256": "58173c50def84169935e10da5c58fc86fb9d75ccd9cadbd8e05e012dce308abb",
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis"
+      ]
     },
     {
       "tree": "isa",
@@ -143327,9 +143786,11 @@
       "available": true,
       "bytes": 49540,
       "crc32": 216184303,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "c2466e29e2cdaa7e0fa35c6daff5faf53e8160455bdf64718ca1bebd1f926449",
+      "geometrySha256": "f27f7bf96a885777b70fa2a2647577ed26db1f51816e126616782f51af512e53",
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger"
+      ]
     },
     {
       "tree": "isa",
@@ -143337,9 +143798,11 @@
       "available": true,
       "bytes": 49205,
       "crc32": 2334912739,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "71c5f734e80b8abb196f16533a851caa043a11981f6d1f65b738bb6e2d337a7f",
+      "geometrySha256": "c7115732e238ba5653564fea5b84411a39e375df748d78174b6959fc5ad4b130",
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger"
+      ]
     },
     {
       "tree": "isa",
@@ -143347,9 +143810,11 @@
       "available": true,
       "bytes": 44476,
       "crc32": 2702314325,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "bba9cde99bda6f51dd49338bc8a53a155969096519d271938797076d665ebb50",
+      "geometrySha256": "89a8c8ed07807fcfadc43a17a38ab863104b14bbb93b9910d3a36e49ace75be3",
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger"
+      ]
     },
     {
       "tree": "isa",
@@ -143357,9 +143822,11 @@
       "available": true,
       "bytes": 36713,
       "crc32": 529837691,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "7823fa45ffc3aaa59381d011f51e951a5288f316af664a4dc156eae26021cf87",
+      "geometrySha256": "011cd0b1f05464cb94166b29b694c833bf6aebf414fda6c45aad984d61adab31",
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger"
+      ]
     },
     {
       "tree": "isa",
@@ -143367,9 +143834,11 @@
       "available": true,
       "bytes": 55755,
       "crc32": 1342056878,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "4725447a2b4fc05bc3042da07eb1358ff8006edd9bf2daea97e2c69576e3d33b",
+      "geometrySha256": "c4aca73dca83dbc4f4efce9116ff79b8cdc2f7e40e3cc24b9b049364ea857aca",
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -143377,9 +143846,11 @@
       "available": true,
       "bytes": 65114,
       "crc32": 4047560073,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "c4c706654f976142c288374563c3256bd22e748c9b06b4ba7faae6b4617cc051",
+      "geometrySha256": "971347f14d11ba6b10c90e6becb0eefdd34e9cc95909c33feb57b235ead9ce78",
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis"
+      ]
     },
     {
       "tree": "isa",
@@ -143387,9 +143858,11 @@
       "available": true,
       "bytes": 46063,
       "crc32": 2774225779,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "c147fd6d4ade806956392706119eff828487da87d4a9dcaaa8c4f4ee2e696c9d",
+      "geometrySha256": "62851b982ce40302ae041f3d1fce10b4f8cd0f0fafa614a14b27fc1827fef6bf",
+      "representedBy": [
+        "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis"
+      ]
     },
     {
       "tree": "isa",
@@ -143417,9 +143890,11 @@
       "available": true,
       "bytes": 43911,
       "crc32": 1395380693,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "044c4a4cfe047ce12134d1184f1a683291b09dff453db794d80d86a6bff3b034",
+      "geometrySha256": "db62ca559d4735d77c0b7d7b2d64bccf48fa78e1e742d4c708ef3b3addffbfae",
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis"
+      ]
     },
     {
       "tree": "isa",
@@ -143427,9 +143902,11 @@
       "available": true,
       "bytes": 25539,
       "crc32": 1044307951,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "778c6979a6fbb214fd6ce8b4e215b3483e8af29b582fcc7c846f117ee07cbe74",
+      "geometrySha256": "19164166ead0de694f14fd9af0bfe7b8a3ee532d7e44719c005ecd2eb70f5a41",
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -143437,9 +143914,11 @@
       "available": true,
       "bytes": 24085,
       "crc32": 4212818760,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "c1ff410203d31be3eceb012408fb58fce7421410338c9d4ed6a10709bd50f39d",
+      "geometrySha256": "24a13bd1e95a99a8999c9341ea26723deb314336dc9b8638ec85304fd3a3dd84",
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -143447,9 +143926,11 @@
       "available": true,
       "bytes": 24183,
       "crc32": 1995740747,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "1053eeabdf55b020d401a436ed534849bdfabca4e3a59b6406178f6bab571ae1",
+      "geometrySha256": "28ce06b6170de84bc5bf52c574ee94388d0524f1efb694e4cbe49820351b2076",
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -143629,9 +144110,11 @@
       "available": true,
       "bytes": 44459,
       "crc32": 1264318680,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "fa61f393b2aa0934a6c0fbdaa883bc17754a837bdb96d88aa3bb3f1bc06ac56d",
+      "geometrySha256": "31fb032a0c30b342bcc3c97edc6d3cfc388f0e74853b9132725793232ef3837f",
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis"
+      ]
     },
     {
       "tree": "isa",
@@ -143639,9 +144122,11 @@
       "available": true,
       "bytes": 49668,
       "crc32": 1940467958,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "14031e155e3e5eba135551165f830141a66510b79d6834ea37e4715356e50f3e",
+      "geometrySha256": "86ae128e09a371fa51d0193ccd49b0e7590b2b5c0dbe2b70c65e2b42b11dac94",
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger"
+      ]
     },
     {
       "tree": "isa",
@@ -143649,9 +144134,11 @@
       "available": true,
       "bytes": 49829,
       "crc32": 2656240003,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "6e9286403da0fc1082440c54318f0b87189fac08fdba5c6d27ae0e68738864cb",
+      "geometrySha256": "a9a0ded0b042b95baaeb8c004d83fb3fcff78d5866ada177901bad622b5f9d84",
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger"
+      ]
     },
     {
       "tree": "isa",
@@ -143659,9 +144146,11 @@
       "available": true,
       "bytes": 44126,
       "crc32": 1472956303,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "08748e77df60eee2f5219230e2944a1e96ffd3ea4f506cf6a9c20dec6c6ca488",
+      "geometrySha256": "2eb281b34aa47bdea9c8bbd5b61128fedb3674ccf22b4ec3b2fb4822406cdc0c",
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger"
+      ]
     },
     {
       "tree": "isa",
@@ -143669,9 +144158,11 @@
       "available": true,
       "bytes": 51049,
       "crc32": 3458157264,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "6539d2130fed7f64fcea3c85a75bfc8ee195b6bc45d8fa06633fa5f66a17efa3",
+      "geometrySha256": "828f158c9b3e673ad3307d10bb64d5a81f581dccc0565e2023b19f4ae9f0bb48",
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger"
+      ]
     },
     {
       "tree": "isa",
@@ -143679,9 +144170,11 @@
       "available": true,
       "bytes": 37662,
       "crc32": 1148889570,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "13679f85cb1d46e03c053ca94c1d6bfc519b107bb88bf4fb5b7972dff5767168",
+      "geometrySha256": "97f8d2cb405283c05ed0cac56117543579979f2077a77e6d4dc169e83d62a3b8",
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger"
+      ]
     },
     {
       "tree": "isa",
@@ -143689,9 +144182,11 @@
       "available": true,
       "bytes": 44749,
       "crc32": 3680282806,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "ba390a7db51b3e7f842bd5c07be10c61ee7c81693cd145aac59b7256adc8b765",
+      "geometrySha256": "d90b2c08e84d657e52d436335be0c4690da53a9643941e80bdb3dd9847c316c5",
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger"
+      ]
     },
     {
       "tree": "isa",
@@ -143699,9 +144194,11 @@
       "available": true,
       "bytes": 57714,
       "crc32": 1975367988,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "828d425e8b0b6ad0381af5f0c576dbb7883bc20590f9e9d7e3d7db8162255daa",
+      "geometrySha256": "08191345c730de822ec0942a246d5b9f12061233aeee00e56efb58355b45ac44",
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -143709,9 +144206,11 @@
       "available": true,
       "bytes": 65969,
       "crc32": 652934879,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "aa6b302f739011b74473ee503692661ef5f068396c3e45c76f83888f90d9ac62",
+      "geometrySha256": "63f008b097a053aef462fb57b04ceeb8fd76e970c529309e5e2534c828d851c3",
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis"
+      ]
     },
     {
       "tree": "isa",
@@ -143719,9 +144218,11 @@
       "available": true,
       "bytes": 46568,
       "crc32": 267732929,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "410486a2460ca05fb882503a5fe0c8ecd087d11282a7eca064a3b9da203b4aeb",
+      "geometrySha256": "faa32cf28adbb07606596aeab09fe99a497f9ce29270cb60b8e4ebe1185296e4",
+      "representedBy": [
+        "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis"
+      ]
     },
     {
       "tree": "isa",

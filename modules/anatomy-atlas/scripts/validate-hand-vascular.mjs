@@ -5,11 +5,11 @@ import { build } from 'esbuild';
 import { fileURLToPath } from 'node:url';
 import { Box3, Vector3, Matrix4 } from 'three';
 import {
-  pancreaticDefinitions,
-  pancreaticAdmissions,
-  pancreaticHeldIds,
-  pancreaticSelections,
-} from './pancreatic-selections.mjs';
+  handVascularDefinitions,
+  handVascularAdmissions,
+  handVascularHeldIds,
+  handVascularSelections,
+} from './hand-vascular-selections.mjs';
 import { inventoryHolds, geometryFingerprint } from './anatomy-inventory.mjs';
 import { cache } from './bodyparts-archive.mjs';
 const rawSourceCheck = process.argv.includes('--raw-source');
@@ -27,17 +27,17 @@ const compare = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 const read = async (p) => JSON.parse(await fs.readFile(p, 'utf8'));
 const root = 'public/models/bodyparts3d/full-body/';
 const catalog = await read(root + 'catalog.json'),
-  baseline = await read('content/pancreatic-baseline.json'),
-  audit = await read('content/pancreatic-source-audit.json'),
+  baseline = await read('content/hand-vascular-baseline.json'),
+  audit = await read('content/hand-vascular-source-audit.json'),
   inventory = await read('content/source-inventory.json');
-same(baseline.sourceCommit, 'aa0e55b79d707f518ebb6faa77b96278f1aae5ab');
+same(baseline.sourceCommit, '2418244c0dcdb01807c6398d94623651fca6f7fa');
 same(
   baseline.catalogSha256,
-  '8834615444c57b428fdf79689370c7894ba7aa400149f0b800014d9fdc158836',
+  'd740da1d11bdf93d26ebe60ccdc82b7fc16909713779d7d2933d3d9dc10988cb',
 );
 same(audit.sourceCommit, baseline.sourceCommit);
-same(baseline.structures.length, 942);
-same(baseline.bundles.length, 76);
+same(baseline.structures.length, 958);
+same(baseline.bundles.length, 79);
 same(catalog.structures.length, 984);
 same(catalog.bundles.length, 80);
 same(catalog.coordinateSystem, baseline.coordinateSystem);
@@ -56,31 +56,31 @@ for (const old of baseline.bundles) {
   same(hash(await fs.readFile(root + old.id + '.glb')), old.sha256);
 }
 const additions = catalog.structures.filter((s) =>
-  s.bundle.endsWith('-visceral-detail'),
+  s.bundle.endsWith('-hand-vascular'),
 );
 same(
   additions.map((s) => s.fmaId).sort(compare),
-  [...pancreaticAdmissions].sort(compare),
+  [...handVascularAdmissions].sort(compare),
 );
 same(
-  pancreaticSelections(
+  handVascularSelections(
     new Map(
       inventory.records.filter((r) => r.tree === 'isa').map((r) => [r.id, r]),
     ),
   )
     .map((s) => s.fma)
     .sort(compare),
-  [...pancreaticAdmissions].sort(compare),
+  [...handVascularAdmissions].sort(compare),
 );
-same(additions.length, 12);
-same(additions.filter((s) => s.system === 'vessels').length, 11);
-same(additions.filter((s) => s.system === 'organs').length, 1);
+same(additions.length, 26);
+same(additions.filter((s) => s.system === 'vessels').length, 26);
+same(additions.filter((s) => s.system === 'organs').length, 0);
 same(
   additions.reduce((n, s) => n + s.sources.length, 0),
-  14,
+  30,
 );
-same(audit.results.length, 13);
-same(audit.comparisons.length, 180);
+same(audit.results.length, 26);
+same(audit.comparisons.length, 578);
 same(audit.license, 'CC-BY-4.0');
 check(audit.distanceMethod.includes('segment/point fallback'));
 for (const row of audit.comparisons) {
@@ -97,28 +97,20 @@ for (const row of audit.comparisons) {
   }
 }
 same(
-  audit.comparisons.filter((r) => r.flagged).map((r) => [r.a, r.b]),
-  [
-    ['FMA46636', 'FMA55077'],
-    ['FMA46635', 'FMA55077'],
-    ['FMA55227', 'FMA55130'],
-    ['FMA14792', 'FMA14793'],
-  ],
+  audit.comparisons.filter((r) => r.flagged),
+  [],
 );
-const vascularContact = audit.comparisons.find(
-  (r) => r.a === 'FMA14792' && r.b === 'FMA14793',
-);
-for (const d of [vascularContact.aToB, vascularContact.bToA]) {
-  check(d.medianMm > 6);
-  for (let k = 0; k < 3; k++)
-    check(d.closePointBounds.max[k] - d.closePointBounds.min[k] < 1);
-}
-const epiContact = audit.comparisons.find(
-  (r) => r.a === 'FMA55227' && r.b === 'FMA55130',
-);
-same(epiContact.bToA.withinQuarterMm, 1);
-check(epiContact.bToA.medianMm > 3);
-for (const id of pancreaticHeldIds) {
+same(additions.filter((s) => s.laterality === 'right').length, 14);
+same(additions.filter((s) => s.laterality === 'left').length, 12);
+for (const alias of [
+  'FMA23046',
+  'FMA85111',
+  'FMA37378',
+  'FMA37388',
+  'FMA37389',
+])
+  check(!catalog.structures.some((s) => s.fmaId === alias));
+for (const id of handVascularHeldIds) {
   check(inventoryHolds[id]);
   check(!catalog.structures.some((s) => s.fmaId === id));
   for (const row of inventory.records.filter((r) => r.id === id))
@@ -133,10 +125,10 @@ for (const [
   id,
   name,
   files,
-  region = 'abdomen',
+  region = 'hand',
   system = 'vessels',
   category = 'vessel',
-] of pancreaticDefinitions) {
+] of handVascularDefinitions) {
   const a = audit.results.find((r) => r.fmaId === id);
   same(a.name, name);
   same(a.region, region);
@@ -146,16 +138,20 @@ for (const [
     files,
   );
   check(a.grossPositionPass);
+  check(a.lateralityPass);
+  const side = name.includes('right') ? 'right' : 'left';
+  check(side === 'right' ? a.bounds.max[0] < 0 : a.bounds.min[0] > 0);
   same(a.clinicalValidation, false);
   same(a.admitted, false, 'Audit alone never admits');
   for (const f of a.files) same(f.canonicalDuplicateOwners, []);
   const s = additions.find((s) => s.fmaId === id);
   if (!s) {
-    check(pancreaticHeldIds.includes(id));
+    check(handVascularHeldIds.includes(id));
     continue;
   }
   same(a.degenerateTriangles, 0);
   same(s.sourceName, name);
+  same(s.laterality, side);
   same(s.region, region);
   same(s.regions, [region]);
   same(s.system, system);
@@ -225,7 +221,7 @@ for (const [
 const compiled = await build({
   stdin: {
     contents:
-      "export * from './lib/pancreatic-anatomy'; export * from './app/dissection-data'; export * from './app/body-content'; export * from './lib/anatomy-practice'; export * from './lib/anatomy-link-registry'; export * from './lib/study-links';",
+      "export * from './lib/hand-vascular-anatomy'; export * from './app/dissection-data'; export * from './app/body-content'; export * from './lib/anatomy-practice'; export * from './lib/anatomy-link-registry'; export * from './lib/study-links';",
     resolveDir: fileURLToPath(new URL('../', import.meta.url)),
     loader: 'ts',
   },
@@ -239,11 +235,11 @@ const api = await import(
     Buffer.from(compiled.outputFiles[0].text).toString('base64')
 );
 same(
-  api.pancreaticGroups.flatMap((g) => g.fmaIds).sort(compare),
-  [...pancreaticAdmissions].sort(compare),
+  api.handVascularGroups.flatMap((g) => g.fmaIds).sort(compare),
+  [...handVascularAdmissions].sort(compare),
 );
 for (const s of additions) {
-  const group = api.pancreaticGroupFor(s.fmaId);
+  const group = api.handVascularGroupFor(s.fmaId);
   check(group);
   for (const tab of ['anatomy', 'function']) {
     const c = api.bodyContent(s, tab);
@@ -259,17 +255,16 @@ for (const s of additions) {
   same(e.sources, s.sources);
   same(e.reference.kind, 'surface-bounds-centre');
 }
-same(api.pancreaticStudySets.length, 5);
+same(api.handVascularStudySets.length, 4);
 const counts = {
-  'pancreatic-source-window': 12,
-  'pancreaticoduodenal-arteries': 8,
-  'pancreatic-body-tail-arteries': 6,
-  'pancreatic-venous-window': 4,
-  'epiglottis-laryngeal-window': 6,
+  'palmar-arch-window': { both: 18, left: 9, right: 9 },
+  'palmar-digital-arteries-window': { both: 22, left: 10, right: 12 },
+  'thumb-index-arteries-window': { both: 12, left: 6, right: 6 },
+  'hand-arterial-detail-exposed': { both: 28, left: 13, right: 15 },
 };
 const loaded = catalog.bundles.map((b) => b.id);
 let serial = 0;
-for (const study of api.pancreaticStudySets)
+for (const study of api.handVascularStudySets)
   for (const region of study.regions) {
     const profile = api.dissectionProfiles[region],
       focus = profile.focuses.find((f) => f.id === study.id),
@@ -288,7 +283,7 @@ for (const study of api.pancreaticStudySets)
         visible = api.stageStructures(scope, profile, study.id);
       same(visible, expected);
       same(api.stageStructures(scope, profile, 'free', study.id), expected);
-      same(visible.length, counts[study.id]);
+      same(visible.length, counts[study.id][side]);
       for (const landmark of study.landmarks)
         check(
           visible.some((s) => new RegExp(landmark, 'i').test(s.sourceName)),
@@ -354,7 +349,7 @@ for (const study of api.pancreaticStudySets)
           continue;
         }
         check(session);
-        same(session.questions.length, targets.length);
+        same(session.questions.length, Math.min(20, targets.length));
         for (const q of session.questions)
           check(targets.some((s) => s.id === q.target));
       }
@@ -387,23 +382,24 @@ const result = {
   passed: true,
   checks,
   rawSourceCheck,
-  newEntries: 12,
-  vesselEntries: 11,
-  epiglottisEntries: 1,
-  sourceComponents: 14,
-  newBundles: 2,
+  newEntries: 26,
+  vesselEntries: 26,
+  rightEntries: 14,
+  leftEntries: 12,
+  sourceComponents: 30,
+  newBundles: 1,
   newAssetBytes: catalog.bundles
-    .filter((b) => b.id.endsWith('-visceral-detail'))
+    .filter((b) => b.id.endsWith('-hand-vascular'))
     .reduce((n, b) => n + b.bytes, 0),
-  preservedRecords: 942,
-  preservedBundles: 76,
-  sourceHolds: pancreaticHeldIds,
-  studyWindows: 5,
+  preservedRecords: 958,
+  preservedBundles: 79,
+  sourceHolds: handVascularHeldIds,
+  studyWindows: 4,
   clinicalValidation: false,
   browserInteractionTesting: false,
 };
 await fs.writeFile(
-  'docs/pancreatic-validation.json',
+  'docs/hand-vascular-validation.json',
   JSON.stringify(result, null, 2) + '\n',
 );
 console.log(result);

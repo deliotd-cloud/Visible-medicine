@@ -1,5 +1,11 @@
 # Expanded BodyParts3D commercial-use audit
 
+## Hand arterial extension — 6 September 2026
+
+The current atlas has **984 source representations / 80 body bundles / 95,477,852 bytes**. Twenty-six exact v4 ISA definitions add thirty source components in one 534,016-byte GLB, preserving every previous record and bundle. The same official CC BY 4.0 licence was rechecked; existing DBCLS credit, licence and derivative-change notices remain required for mesh/index derivatives. See `docs/HAND_VASCULAR_DETAIL.md` for exact-source, coordinate, overlap, numbering and clinical gates. The new regional triage report is source-index-derived evidence under the same terms, not MIT-licensed anatomy or automatic admission.
+
+No new package, font, texture, paid API, copied illustration or invented tissue is added. All anatomy and brief original draft notes remain unvalidated; no private review, patient data, source hold or hosting audience is changed. Earlier milestone counts below are historical.
+
 ## Thoracic small-vessel extension — 6 September 2026
 
 The current total is **958 source representations / 79 body bundles / 94,943,836 bytes**. Four original v4 IS-A components add one 91,700-byte GLB, preserving all prior records/bundle hashes. Exact source/alias, CRC/size, hash, transform and sampled-overlap evidence is in `content/thoracic-source-audit.json`; the allowlist and clinical gates are documented in `docs/THORACIC_DETAIL.md`. The variant identity is retained and shared aliases do not create duplicate geometry.

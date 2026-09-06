@@ -2,11 +2,11 @@
   "passed": true,
   "regions": 11,
   "wholeBody": true,
-  "stages": 116,
-  "focusedViews": 98,
-  "checks": 3426,
-  "cameraChecks": 8352,
-  "structures": 958,
+  "stages": 120,
+  "focusedViews": 102,
+  "checks": 3546,
+  "cameraChecks": 8640,
+  "structures": 984,
   "clinicalValidation": false,
   "browserInteractionTesting": false,
   "rows": [
@@ -14,7 +14,7 @@
       "region": "whole-body",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 958,
+      "visible": 984,
       "removed": 0
     },
     {
@@ -22,34 +22,34 @@
       "stage": "musculoskeletal",
       "kind": "window",
       "visible": 572,
-      "removed": 386
+      "removed": 412
     },
     {
       "region": "whole-body",
       "stage": "viscera",
       "kind": "window",
       "visible": 74,
-      "removed": 884
+      "removed": 910
     },
     {
       "region": "whole-body",
       "stage": "neural",
       "kind": "window",
       "visible": 54,
-      "removed": 904
+      "removed": 930
     },
     {
       "region": "whole-body",
       "stage": "bones",
       "kind": "skeleton",
       "visible": 203,
-      "removed": 755
+      "removed": 781
     },
     {
       "region": "whole-body",
       "stage": "vascular",
       "kind": "window",
-      "visible": 378,
+      "visible": 404,
       "removed": 580
     },
     {
@@ -57,7 +57,7 @@
       "stage": "connective",
       "kind": "window",
       "visible": 286,
-      "removed": 672
+      "removed": 698
     },
     {
       "region": "shoulder-arm",
@@ -161,14 +161,14 @@
       "region": "hand",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 84,
+      "visible": 110,
       "removed": 0
     },
     {
       "region": "hand",
       "stage": "outer-intrinsics",
       "kind": "peel",
-      "visible": 78,
+      "visible": 104,
       "removed": 6
     },
     {
@@ -176,20 +176,20 @@
       "stage": "adductor",
       "kind": "window",
       "visible": 58,
-      "removed": 26
+      "removed": 52
     },
     {
       "region": "hand",
       "stage": "bones",
       "kind": "skeleton",
       "visible": 54,
-      "removed": 30
+      "removed": 56
     },
     {
       "region": "hand",
       "stage": "vascular",
       "kind": "window",
-      "visible": 62,
+      "visible": 88,
       "removed": 22
     },
     {
@@ -197,14 +197,42 @@
       "stage": "interosseous-groups",
       "kind": "window",
       "visible": 58,
-      "removed": 26
+      "removed": 52
     },
     {
       "region": "hand",
       "stage": "wrist-retinaculum",
       "kind": "window",
       "visible": 18,
-      "removed": 66
+      "removed": 92
+    },
+    {
+      "region": "hand",
+      "stage": "palmar-arch-window",
+      "kind": "window",
+      "visible": 18,
+      "removed": 92
+    },
+    {
+      "region": "hand",
+      "stage": "palmar-digital-arteries-window",
+      "kind": "window",
+      "visible": 22,
+      "removed": 88
+    },
+    {
+      "region": "hand",
+      "stage": "thumb-index-arteries-window",
+      "kind": "window",
+      "visible": 12,
+      "removed": 98
+    },
+    {
+      "region": "hand",
+      "stage": "hand-arterial-detail-exposed",
+      "kind": "window",
+      "visible": 28,
+      "removed": 82
     },
     {
       "region": "thigh",

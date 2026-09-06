@@ -1,28 +1,28 @@
 {
   "passed": true,
-  "assertions": 93335,
-  "catalogSha256": "d740da1d11bdf93d26ebe60ccdc82b7fc16909713779d7d2933d3d9dc10988cb",
+  "assertions": 97399,
+  "catalogSha256": "6402d7b654eaddb137fea383d796e64cd7674117d525492d89aa8daa31fe6593",
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
-      "structures": 958,
-      "selectionsWithGroups": 175,
-      "memberships": 175
+      "structures": 984,
+      "selectionsWithGroups": 195,
+      "memberships": 195
     },
     {
       "region": "whole-body",
       "side": "right",
-      "structures": 556,
-      "selectionsWithGroups": 108,
-      "memberships": 108
+      "structures": 570,
+      "selectionsWithGroups": 119,
+      "memberships": 119
     },
     {
       "region": "whole-body",
       "side": "left",
-      "structures": 559,
-      "selectionsWithGroups": 111,
-      "memberships": 111
+      "structures": 571,
+      "selectionsWithGroups": 120,
+      "memberships": 120
     },
     {
       "region": "shoulder-arm",
@@ -69,23 +69,23 @@
     {
       "region": "hand",
       "side": "both",
-      "structures": 84,
-      "selectionsWithGroups": 46,
-      "memberships": 46
+      "structures": 110,
+      "selectionsWithGroups": 86,
+      "memberships": 146
     },
     {
       "region": "hand",
       "side": "right",
-      "structures": 42,
-      "selectionsWithGroups": 23,
-      "memberships": 23
+      "structures": 56,
+      "selectionsWithGroups": 44,
+      "memberships": 76
     },
     {
       "region": "hand",
       "side": "left",
-      "structures": 42,
-      "selectionsWithGroups": 23,
-      "memberships": 23
+      "structures": 54,
+      "selectionsWithGroups": 42,
+      "memberships": 70
     },
     {
       "region": "thigh",

@@ -1,7 +1,7 @@
 {
   "version": 4,
   "date": "2026-09-06",
-  "catalogSha256": "d740da1d11bdf93d26ebe60ccdc82b7fc16909713779d7d2933d3d9dc10988cb",
+  "catalogSha256": "6402d7b654eaddb137fea383d796e64cd7674117d525492d89aa8daa31fe6593",
   "status": "unvalidated",
   "method": "licensed-source-recovery",
   "generatedAnatomicalMeshes": 0,
@@ -6969,6 +6969,490 @@
         }
       ],
       "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source vessel names do not establish normal branching, a complete vascular tree, continuity, lumen or perfusion. Grouped branches retain one source identity; the variant-labelled source is not a normal-anatomy template."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch",
+      "fmaId": "FMA22835",
+      "sourceName": "right superficial palmar arterial arch",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2300",
+          "sha256": "396907b82c2f9b422643e3a72c941dcb10e3676ac26a4d1aae0a6ed28add7304"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+      "fmaId": "FMA22837",
+      "sourceName": "left superficial palmar arterial arch",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2248",
+          "sha256": "2675c02ed6954ee29e47ded172dc055efe7ae3c8be6e0e58dd679bebf9b277a9"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+      "fmaId": "FMA22864",
+      "sourceName": "right palmar metacarpal artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2289",
+          "sha256": "a14542bb1aaa1caaa3e0c37bd66fdeb33f88d89f4760c0cb0c591cce8c76ed92"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+      "fmaId": "FMA22865",
+      "sourceName": "left palmar metacarpal artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2237",
+          "sha256": "003e898bce96e168bc39b856dea13e6b85089f04ca50bc1b812cbbfa21776bf2"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+      "fmaId": "FMA22905",
+      "sourceName": "right arteria princeps pollicis",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2371",
+          "sha256": "aa6b302f739011b74473ee503692661ef5f068396c3e45c76f83888f90d9ac62"
+        },
+        {
+          "file": "FJ2372",
+          "sha256": "410486a2460ca05fb882503a5fe0c8ecd087d11282a7eca064a3b9da203b4aeb"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+      "fmaId": "FMA22907",
+      "sourceName": "left arteria princeps pollicis",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2338",
+          "sha256": "c4c706654f976142c288374563c3256bd22e748c9b06b4ba7faae6b4617cc051"
+        },
+        {
+          "file": "FJ2339",
+          "sha256": "c147fd6d4ade806956392706119eff828487da87d4a9dcaaa8c4f4ee2e696c9d"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
+      "fmaId": "FMA22777",
+      "sourceName": "right arteria radialis indicis",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2342",
+          "sha256": "044c4a4cfe047ce12134d1184f1a683291b09dff453db794d80d86a6bff3b034"
+        },
+        {
+          "file": "FJ2363",
+          "sha256": "fa61f393b2aa0934a6c0fbdaa883bc17754a837bdb96d88aa3bb3f1bc06ac56d"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
+      "fmaId": "FMA22778",
+      "sourceName": "left arteria radialis indicis",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2314",
+          "sha256": "20f4253cb295a3fbaf9951dff5a092690950a78565142b4e7b6e629e10fcd68d"
+        },
+        {
+          "file": "FJ2332",
+          "sha256": "a6ebd74f68d24d6eab266b275dc17e5c93c727114f06a9d3385b124d90e61a3e"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+      "fmaId": "FMA22856",
+      "sourceName": "right first common palmar digital artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2343",
+          "sha256": "778c6979a6fbb214fd6ce8b4e215b3483e8af29b582fcc7c846f117ee07cbe74"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+      "fmaId": "FMA85118",
+      "sourceName": "left first common palmar digital artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2315",
+          "sha256": "82db17b85e2548c8d5fa6cb1d8846307f23cbaf8299fe361d19caf8bc8c8ea94"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+      "fmaId": "FMA85119",
+      "sourceName": "right second common palmar digital artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2344",
+          "sha256": "c1ff410203d31be3eceb012408fb58fce7421410338c9d4ed6a10709bd50f39d"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+      "fmaId": "FMA85120",
+      "sourceName": "left second common palmar digital artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2316",
+          "sha256": "4b64fd5086b7b38a5df68951f293841b18b218b16fc707aaa97ed3bdbe5e865a"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery",
+      "fmaId": "FMA85121",
+      "sourceName": "right third common palmar digital artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2345",
+          "sha256": "1053eeabdf55b020d401a436ed534849bdfabca4e3a59b6406178f6bab571ae1"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+      "fmaId": "FMA85122",
+      "sourceName": "left third common palmar digital artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2317",
+          "sha256": "49bcf65b3db93a1cc8528c4f41b6580cef7b0e6a29dc66307b5536b2eb44f79c"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+      "fmaId": "FMA85123",
+      "sourceName": "right fourth common palmar digital artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2370",
+          "sha256": "828d425e8b0b6ad0381af5f0c576dbb7883bc20590f9e9d7e3d7db8162255daa"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+      "fmaId": "FMA85124",
+      "sourceName": "left fourth common palmar digital artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2337",
+          "sha256": "4725447a2b4fc05bc3042da07eb1358ff8006edd9bf2daea97e2c69576e3d33b"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+      "fmaId": "FMA22858",
+      "sourceName": "lateral proper palmar digital artery of right middle finger",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2365",
+          "sha256": "6e9286403da0fc1082440c54318f0b87189fac08fdba5c6d27ae0e68738864cb"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+      "fmaId": "FMA22860",
+      "sourceName": "lateral proper palmar digital artery of left middle finger",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2334",
+          "sha256": "71c5f734e80b8abb196f16533a851caa043a11981f6d1f65b738bb6e2d337a7f"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+      "fmaId": "FMA23050",
+      "sourceName": "medial proper palmar digital artery of right index finger",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2364",
+          "sha256": "14031e155e3e5eba135551165f830141a66510b79d6834ea37e4715356e50f3e"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
+      "fmaId": "FMA23051",
+      "sourceName": "medial proper palmar digital artery of left index finger",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2333",
+          "sha256": "c2466e29e2cdaa7e0fa35c6daff5faf53e8160455bdf64718ca1bebd1f926449"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+      "fmaId": "FMA23052",
+      "sourceName": "medial proper palmar digital artery of right ring finger",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2369",
+          "sha256": "ba390a7db51b3e7f842bd5c07be10c61ee7c81693cd145aac59b7256adc8b765"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+      "fmaId": "FMA23054",
+      "sourceName": "lateral proper palmar digital artery of right little finger",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2368",
+          "sha256": "13679f85cb1d46e03c053ca94c1d6bfc519b107bb88bf4fb5b7972dff5767168"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+      "fmaId": "FMA23055",
+      "sourceName": "lateral proper palmar digital artery of left little finger",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2336",
+          "sha256": "7823fa45ffc3aaa59381d011f51e951a5288f316af664a4dc156eae26021cf87"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+      "fmaId": "FMA85112",
+      "sourceName": "medial proper palmar digital artery of right middle finger",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2367",
+          "sha256": "6539d2130fed7f64fcea3c85a75bfc8ee195b6bc45d8fa06633fa5f66a17efa3"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+      "fmaId": "FMA85115",
+      "sourceName": "lateral proper palmar digital artery of right ring finger",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2366",
+          "sha256": "08748e77df60eee2f5219230e2944a1e96ffd3ea4f506cf6a9c20dec6c6ca488"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+      "fmaId": "FMA85116",
+      "sourceName": "lateral proper palmar digital artery of left ring finger",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2335",
+          "sha256": "bba9cde99bda6f51dd49338bc8a53a155969096519d271938797076d665ebb50"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
     }
   ]
 }
