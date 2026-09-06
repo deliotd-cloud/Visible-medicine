@@ -37,6 +37,8 @@
     "ocular-candidates:test": "node scripts/validate-ocular-candidates.mjs",
     "ocular:audit": "node scripts/audit-ocular-geometry.mjs",
     "ocular:test": "node scripts/validate-ocular.mjs",
+    "laryngeal:audit": "node scripts/audit-laryngeal-anatomy.mjs",
+    "laryngeal:test": "node scripts/validate-laryngeal.mjs",
     "study-navigation:test": "node scripts/validate-study-navigation.mjs",
     "study-links:test": "node scripts/validate-study-links.mjs",
     "study-library:test": "node scripts/validate-study-library.mjs",

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "reviewStatus": "draft-unvalidated",
-  "catalogSha256": "01a253d3d67a933d41bb3b08693ab13279b4e12c0767f2e4b8d68fa9f6078d86",
+  "catalogSha256": "8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7",
   "profiles": [
     {
       "region": "whole-body",
@@ -1041,7 +1041,9 @@
             "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
             "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
             "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
-            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid"
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
+            "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
+            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane"
           ]
         },
         {
@@ -2787,7 +2789,9 @@
             "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
             "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
             "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
-            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid"
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
+            "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
+            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane"
           ]
         }
       ],
@@ -13921,7 +13925,9 @@
             "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
             "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
             "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
-            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid"
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
+            "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
+            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane"
           ]
         },
         {
@@ -14214,7 +14220,9 @@
             "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
             "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
             "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
-            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid"
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
+            "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
+            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane"
           ]
         },
         {
@@ -14506,7 +14514,9 @@
             "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
             "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
             "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
-            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid"
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
+            "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
+            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane"
           ]
         },
         {
@@ -14863,7 +14873,9 @@
             "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
             "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
             "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
-            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid"
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
+            "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
+            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane"
           ]
         },
         {
@@ -15508,6 +15520,180 @@
             "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
             "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
             "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac"
+          ]
+        },
+        {
+          "id": "thyrohyoid-membrane-window",
+          "title": "Thyrohyoid membranes & suspension",
+          "description": "Inspect the paired membrane sources between the hyoid and thyroid cartilage, with the three thyrohyoid ligaments as context.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA55133",
+                "FMA55134"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA52749",
+                "FMA55099",
+                "FMA55138",
+                "FMA55140",
+                "FMA55141"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "thyrohyoid membrane",
+            "hyoid bone",
+            "thyroid cartilage"
+          ],
+          "inspect": "Choose a side, frame a membrane, and set a ligament or cartilage aside. Undo restores the original relationship. This is a static study window, not a complete membrane attachment or surgical-plane model.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:midline:bone:hyoid-bone",
+            "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+            "vm:anatomy:body:head-neck:midline:ligament:median-thyrohyoid-ligament",
+            "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
+            "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
+            "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
+            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane"
+          ]
+        },
+        {
+          "id": "vocal-ligament-muscle-window",
+          "title": "Vocal ligaments & vocalis",
+          "description": "Compare the fine vocal-ligament and vocalis sources with the arytenoid, cricoid and thyroid framework.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA55245",
+                "FMA55246",
+                "FMA46592",
+                "FMA46593"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA55113",
+                "FMA55114",
+                "FMA9615",
+                "FMA55099"
+              ]
+            }
+          ],
+          "view": "superior",
+          "landmarks": [
+            "vocal ligament",
+            "vocalis",
+            "arytenoid cartilage"
+          ],
+          "inspect": "Set the thyroid cartilage aside and look from above, then restore it. Frame or isolate a fine structure for source-name practice. Conus elasticus and complete mucosal folds are not included; the apparent opening is not a validated airway lumen.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:muscle:left-vocalis",
+            "vm:anatomy:body:head-neck:right:muscle:right-vocalis",
+            "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+            "vm:anatomy:body:head-neck:midline:cartilage:cricoid-cartilage",
+            "vm:anatomy:body:head-neck:right:cartilage:right-arytenoid-cartilage",
+            "vm:anatomy:body:head-neck:left:cartilage:left-arytenoid-cartilage",
+            "vm:anatomy:body:head-neck:right:ligament:right-vocal-ligament",
+            "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament"
+          ]
+        },
+        {
+          "id": "posterior-laryngeal-muscle-window",
+          "title": "Posterior laryngeal muscle subset",
+          "description": "Expose selected intrinsic laryngeal muscles with a small cricoid and arytenoid framework.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA46577",
+                "FMA46578",
+                "FMA46580",
+                "FMA46581",
+                "FMA46584",
+                "FMA46585",
+                "FMA46582"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA9615",
+                "FMA55113",
+                "FMA55114"
+              ]
+            }
+          ],
+          "view": "posterior",
+          "landmarks": [
+            "posterior crico-arytenoid",
+            "lateral crico-arytenoid",
+            "transverse arytenoid"
+          ],
+          "inspect": "Select the posterior cricoarytenoid, compare it with the lateral muscle and arytenoid sources, and use reversible separation if needed. Paired source names and crossing fibres do not establish verified attachments or movements.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:muscle:left-lateral-crico-arytenoid",
+            "vm:anatomy:body:head-neck:left:muscle:left-oblique-arytenoid",
+            "vm:anatomy:body:head-neck:left:muscle:left-posterior-crico-arytenoid",
+            "vm:anatomy:body:head-neck:right:muscle:right-lateral-crico-arytenoid",
+            "vm:anatomy:body:head-neck:right:muscle:right-oblique-arytenoid",
+            "vm:anatomy:body:head-neck:right:muscle:right-posterior-crico-arytenoid",
+            "vm:anatomy:body:head-neck:midline:muscle:transverse-arytenoid",
+            "vm:anatomy:body:head-neck:midline:cartilage:cricoid-cartilage",
+            "vm:anatomy:body:head-neck:right:cartilage:right-arytenoid-cartilage",
+            "vm:anatomy:body:head-neck:left:cartilage:left-arytenoid-cartilage"
+          ]
+        },
+        {
+          "id": "pharyngeal-muscle-window",
+          "title": "Pharyngeal muscles exposed",
+          "description": "Study the superior/inferior constrictors and longitudinal muscle sources with hyoid and thyroid-cartilage context.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA46631",
+                "FMA46632",
+                "FMA46635",
+                "FMA46636",
+                "FMA46667",
+                "FMA46668",
+                "FMA46669",
+                "FMA46670",
+                "FMA46671",
+                "FMA46672"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA52749",
+                "FMA55099"
+              ]
+            }
+          ],
+          "view": "posterior",
+          "landmarks": [
+            "superior pharyngeal constrictor",
+            "inferior pharyngeal constrictor",
+            "stylopharyngeus"
+          ],
+          "inspect": "Remove one supplied muscle, compare the retained sources, then Undo. This sparse subset omits the middle constrictors, raphes and mucosal wall; it must not be interpreted as a complete pharyngeal dissection or swallowing model.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:midline:bone:hyoid-bone",
+            "vm:anatomy:body:head-neck:left:muscle:left-inferior-pharyngeal-constrictor",
+            "vm:anatomy:body:head-neck:left:muscle:left-palatopharyngeus",
+            "vm:anatomy:body:head-neck:left:muscle:left-salpingopharyngeus",
+            "vm:anatomy:body:head-neck:left:muscle:left-stylopharyngeus",
+            "vm:anatomy:body:head-neck:left:muscle:left-superior-pharyngeal-constrictor",
+            "vm:anatomy:body:head-neck:right:muscle:right-inferior-pharyngeal-constrictor",
+            "vm:anatomy:body:head-neck:right:muscle:right-palatopharyngeus",
+            "vm:anatomy:body:head-neck:right:muscle:right-salpingopharyngeus",
+            "vm:anatomy:body:head-neck:right:muscle:right-stylopharyngeus",
+            "vm:anatomy:body:head-neck:right:muscle:right-superior-pharyngeal-constrictor",
+            "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage"
           ]
         }
       ],
@@ -16583,6 +16769,180 @@
             "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
             "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
             "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac"
+          ]
+        },
+        {
+          "id": "thyrohyoid-membrane-window",
+          "title": "Thyrohyoid membranes & suspension",
+          "rule": {
+            "fmaIds": [
+              "FMA55133",
+              "FMA55134"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA52749",
+                "FMA55099",
+                "FMA55138",
+                "FMA55140",
+                "FMA55141"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Inspect the paired membrane sources between the hyoid and thyroid cartilage, with the three thyrohyoid ligaments as context.",
+          "inspect": "Choose a side, frame a membrane, and set a ligament or cartilage aside. Undo restores the original relationship. This is a static study window, not a complete membrane attachment or surgical-plane model.",
+          "landmarks": [
+            "thyrohyoid membrane",
+            "hyoid bone",
+            "thyroid cartilage"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:midline:bone:hyoid-bone",
+            "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+            "vm:anatomy:body:head-neck:midline:ligament:median-thyrohyoid-ligament",
+            "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
+            "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
+            "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
+            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane"
+          ]
+        },
+        {
+          "id": "vocal-ligament-muscle-window",
+          "title": "Vocal ligaments & vocalis",
+          "rule": {
+            "fmaIds": [
+              "FMA55245",
+              "FMA55246",
+              "FMA46592",
+              "FMA46593"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA55113",
+                "FMA55114",
+                "FMA9615",
+                "FMA55099"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "superior",
+          "description": "Compare the fine vocal-ligament and vocalis sources with the arytenoid, cricoid and thyroid framework.",
+          "inspect": "Set the thyroid cartilage aside and look from above, then restore it. Frame or isolate a fine structure for source-name practice. Conus elasticus and complete mucosal folds are not included; the apparent opening is not a validated airway lumen.",
+          "landmarks": [
+            "vocal ligament",
+            "vocalis",
+            "arytenoid cartilage"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:muscle:left-vocalis",
+            "vm:anatomy:body:head-neck:right:muscle:right-vocalis",
+            "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+            "vm:anatomy:body:head-neck:midline:cartilage:cricoid-cartilage",
+            "vm:anatomy:body:head-neck:right:cartilage:right-arytenoid-cartilage",
+            "vm:anatomy:body:head-neck:left:cartilage:left-arytenoid-cartilage",
+            "vm:anatomy:body:head-neck:right:ligament:right-vocal-ligament",
+            "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament"
+          ]
+        },
+        {
+          "id": "posterior-laryngeal-muscle-window",
+          "title": "Posterior laryngeal muscle subset",
+          "rule": {
+            "fmaIds": [
+              "FMA46577",
+              "FMA46578",
+              "FMA46580",
+              "FMA46581",
+              "FMA46584",
+              "FMA46585",
+              "FMA46582"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA9615",
+                "FMA55113",
+                "FMA55114"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Expose selected intrinsic laryngeal muscles with a small cricoid and arytenoid framework.",
+          "inspect": "Select the posterior cricoarytenoid, compare it with the lateral muscle and arytenoid sources, and use reversible separation if needed. Paired source names and crossing fibres do not establish verified attachments or movements.",
+          "landmarks": [
+            "posterior crico-arytenoid",
+            "lateral crico-arytenoid",
+            "transverse arytenoid"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:muscle:left-lateral-crico-arytenoid",
+            "vm:anatomy:body:head-neck:left:muscle:left-oblique-arytenoid",
+            "vm:anatomy:body:head-neck:left:muscle:left-posterior-crico-arytenoid",
+            "vm:anatomy:body:head-neck:right:muscle:right-lateral-crico-arytenoid",
+            "vm:anatomy:body:head-neck:right:muscle:right-oblique-arytenoid",
+            "vm:anatomy:body:head-neck:right:muscle:right-posterior-crico-arytenoid",
+            "vm:anatomy:body:head-neck:midline:muscle:transverse-arytenoid",
+            "vm:anatomy:body:head-neck:midline:cartilage:cricoid-cartilage",
+            "vm:anatomy:body:head-neck:right:cartilage:right-arytenoid-cartilage",
+            "vm:anatomy:body:head-neck:left:cartilage:left-arytenoid-cartilage"
+          ]
+        },
+        {
+          "id": "pharyngeal-muscle-window",
+          "title": "Pharyngeal muscles exposed",
+          "rule": {
+            "fmaIds": [
+              "FMA46631",
+              "FMA46632",
+              "FMA46635",
+              "FMA46636",
+              "FMA46667",
+              "FMA46668",
+              "FMA46669",
+              "FMA46670",
+              "FMA46671",
+              "FMA46672"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA52749",
+                "FMA55099"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Study the superior/inferior constrictors and longitudinal muscle sources with hyoid and thyroid-cartilage context.",
+          "inspect": "Remove one supplied muscle, compare the retained sources, then Undo. This sparse subset omits the middle constrictors, raphes and mucosal wall; it must not be interpreted as a complete pharyngeal dissection or swallowing model.",
+          "landmarks": [
+            "superior pharyngeal constrictor",
+            "inferior pharyngeal constrictor",
+            "stylopharyngeus"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:midline:bone:hyoid-bone",
+            "vm:anatomy:body:head-neck:left:muscle:left-inferior-pharyngeal-constrictor",
+            "vm:anatomy:body:head-neck:left:muscle:left-palatopharyngeus",
+            "vm:anatomy:body:head-neck:left:muscle:left-salpingopharyngeus",
+            "vm:anatomy:body:head-neck:left:muscle:left-stylopharyngeus",
+            "vm:anatomy:body:head-neck:left:muscle:left-superior-pharyngeal-constrictor",
+            "vm:anatomy:body:head-neck:right:muscle:right-inferior-pharyngeal-constrictor",
+            "vm:anatomy:body:head-neck:right:muscle:right-palatopharyngeus",
+            "vm:anatomy:body:head-neck:right:muscle:right-salpingopharyngeus",
+            "vm:anatomy:body:head-neck:right:muscle:right-stylopharyngeus",
+            "vm:anatomy:body:head-neck:right:muscle:right-superior-pharyngeal-constrictor",
+            "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage"
           ]
         }
       ]

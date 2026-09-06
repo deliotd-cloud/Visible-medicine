@@ -15,7 +15,7 @@ const previous = JSON.parse(
 );
 const catalog = JSON.parse(await fs.readFile(root + 'catalog.json', 'utf8'));
 assert.equal(previous.structures.length, 761);
-assert.equal(catalog.structures.length, 1016);
+assert.equal(catalog.structures.length, 1018);
 assert.deepEqual(catalog.coordinateSystem, previous.coordinateSystem);
 assert.deepEqual(catalog.excluded, previous.excluded);
 await applyJunctionTransition(previous, catalog);

@@ -3,7 +3,7 @@
   "sourceVersion": "4.0",
   "license": "CC-BY-4.0",
   "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
-  "catalogSha256": "01a253d3d67a933d41bb3b08693ab13279b4e12c0767f2e4b8d68fa9f6078d86",
+  "catalogSha256": "8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7",
   "tables": [
     {
       "name": "isa_parts_list_e.txt",
@@ -60,13 +60,13 @@
     "uniqueConceptIds": 3432,
     "archiveEntries": 3492,
     "archiveEntriesWithoutConcept": 0,
-    "admittedStructures": 1016,
+    "admittedStructures": 1018,
     "statuses": {
-      "represented-not-selectable": 1845,
-      "admitted": 1430,
-      "unused-available": 710,
-      "held-source-review": 32,
-      "partly-represented": 203,
+      "represented-not-selectable": 1847,
+      "admitted": 1432,
+      "unused-available": 701,
+      "held-source-review": 38,
+      "partly-represented": 202,
       "admitted-other-definition": 53
     }
   },
@@ -3306,7 +3306,7 @@
         "FJ2786",
         "FJ2804"
       ],
-      "status": "partly-represented",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
@@ -3314,8 +3314,10 @@
         "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
         "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
         "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
+        "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
         "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
         "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
+        "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
         "vm:anatomy:body:leg:left:ligament:interosseous-membrane-of-left-leg",
         "vm:anatomy:body:leg:right:ligament:interosseous-membrane-of-right-leg"
       ],
@@ -36195,9 +36197,9 @@
       "files": [
         "FJ2791"
       ],
-      "status": "unused-available",
+      "status": "held-source-review",
       "displayedId": null,
-      "heldReason": null,
+      "heldReason": "Right aryepiglotticus contains 108 positive-X vertices in 36 tiny opposite-side triangles (about 0.003457 mm2 face area), plus three degenerate faces. Source cleanup, paired extent and tissue identity require adjudication. No automatic trimming or mirroring.",
       "representedBy": [],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -36210,9 +36212,9 @@
       "files": [
         "FJ2774"
       ],
-      "status": "unused-available",
+      "status": "held-source-review",
       "displayedId": null,
-      "heldReason": null,
+      "heldReason": "Aryepiglotticus pair retained for source review: right source has opposite-side fragments; the left source has local sampled near-contact with the cuneiform cartilage. Expected fold relationships alone do not validate muscle-versus-fold extent, attachments or a separable tissue boundary. Do not relabel or invent layers.",
       "representedBy": [],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -45816,10 +45818,13 @@
         "FJ2786",
         "FJ2804"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
+        "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -45831,10 +45836,12 @@
       "files": [
         "FJ2804"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -45846,10 +45853,12 @@
       "files": [
         "FJ2786"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -46140,9 +46149,9 @@
       "files": [
         "FJ2794"
       ],
-      "status": "unused-available",
+      "status": "held-source-review",
       "displayedId": null,
-      "heldReason": null,
+      "heldReason": "Conus elasticus pair needs source-topology, extent and boundary review. The right source has two degenerate faces; the left source contains 18 tiny opposite-side triangles. Broad near-contact with vocalis/vocal ligaments can be anatomically expected but does not validate separate dissection boundaries. Preserve original files; no automatic repair or admission.",
       "representedBy": [],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -46155,9 +46164,9 @@
       "files": [
         "FJ2777"
       ],
-      "status": "unused-available",
+      "status": "held-source-review",
       "displayedId": null,
-      "heldReason": null,
+      "heldReason": "Left conus elasticus contains 52 negative-X vertices in 18 tiny opposite-side triangles (about 0.007293 mm2 face area). Pair-specific extent/topology and vocal-layer boundary treatment require source review. Do not trim fragments, mirror the counterpart or infer verified attachments.",
       "representedBy": [],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -46422,9 +46431,9 @@
       "files": [
         "FJ2756"
       ],
-      "status": "unused-available",
+      "status": "held-source-review",
       "displayedId": null,
-      "heldReason": null,
+      "heldReason": "Pterygomandibular raphe is also indexed as an anatomical line/boundary and immaterial entity. About 35% of sampled right-raphe vertices lie within 0.25 mm of the superior constrictor. Tissue extent versus boundary-marker representation requires adjudication before dissectible connective-tissue admission.",
       "representedBy": [],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -46437,9 +46446,9 @@
       "files": [
         "FJ2744"
       ],
-      "status": "unused-available",
+      "status": "held-source-review",
       "displayedId": null,
-      "heldReason": null,
+      "heldReason": "Pterygomandibular raphe is also indexed as an anatomical line/boundary and immaterial entity. About 31% of sampled left-raphe vertices lie within 0.25 mm of the superior constrictor. Tissue extent versus boundary-marker representation requires adjudication before dissectible connective-tissue admission.",
       "representedBy": [],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -47213,6 +47222,7 @@
         "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
         "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
+        "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
         "vm:anatomy:body:head-neck:left:muscle:left-digastric",
         "vm:anatomy:body:head-neck:left:muscle:left-genioglossus",
         "vm:anatomy:body:head-neck:left:muscle:left-geniohyoid",
@@ -47266,6 +47276,7 @@
         "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
         "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
+        "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
         "vm:anatomy:body:head-neck:right:muscle:right-digastric",
         "vm:anatomy:body:head-neck:right:muscle:right-genioglossus",
         "vm:anatomy:body:head-neck:right:muscle:right-geniohyoid",
@@ -47991,6 +48002,7 @@
         "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
         "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
+        "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
         "vm:anatomy:body:head-neck:left:muscle:left-digastric",
         "vm:anatomy:body:head-neck:left:muscle:left-genioglossus",
         "vm:anatomy:body:head-neck:left:muscle:left-geniohyoid",
@@ -48047,6 +48059,7 @@
         "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
         "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
+        "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
         "vm:anatomy:body:head-neck:right:muscle:right-digastric",
         "vm:anatomy:body:head-neck:right:muscle:right-genioglossus",
         "vm:anatomy:body:head-neck:right:muscle:right-geniohyoid",
@@ -54439,6 +54452,7 @@
         "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
         "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament",
+        "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
         "vm:anatomy:body:head-neck:left:muscle:left-digastric",
         "vm:anatomy:body:head-neck:left:muscle:left-genioglossus",
         "vm:anatomy:body:head-neck:left:muscle:left-geniohyoid",
@@ -54571,6 +54585,7 @@
         "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
         "vm:anatomy:body:head-neck:right:ligament:right-vocal-ligament",
+        "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
         "vm:anatomy:body:head-neck:right:muscle:right-digastric",
         "vm:anatomy:body:head-neck:right:muscle:right-genioglossus",
         "vm:anatomy:body:head-neck:right:muscle:right-geniohyoid",
@@ -58901,6 +58916,7 @@
         "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
         "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament",
+        "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
         "vm:anatomy:body:head-neck:left:muscle:left-digastric",
         "vm:anatomy:body:head-neck:left:muscle:left-genioglossus",
         "vm:anatomy:body:head-neck:left:muscle:left-geniohyoid",
@@ -59033,6 +59049,7 @@
         "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
         "vm:anatomy:body:head-neck:right:ligament:right-vocal-ligament",
+        "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
         "vm:anatomy:body:head-neck:right:muscle:right-digastric",
         "vm:anatomy:body:head-neck:right:muscle:right-genioglossus",
         "vm:anatomy:body:head-neck:right:muscle:right-geniohyoid",
@@ -64527,6 +64544,7 @@
         "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
         "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament",
+        "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
         "vm:anatomy:body:head-neck:left:muscle:left-digastric",
         "vm:anatomy:body:head-neck:left:muscle:left-genioglossus",
         "vm:anatomy:body:head-neck:left:muscle:left-geniohyoid",
@@ -64659,6 +64677,7 @@
         "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
         "vm:anatomy:body:head-neck:right:ligament:right-vocal-ligament",
+        "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
         "vm:anatomy:body:head-neck:right:muscle:right-digastric",
         "vm:anatomy:body:head-neck:right:muscle:right-genioglossus",
         "vm:anatomy:body:head-neck:right:muscle:right-geniohyoid",
@@ -67773,6 +67792,7 @@
         "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
         "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament",
+        "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
         "vm:anatomy:body:head-neck:left:muscle:left-digastric",
         "vm:anatomy:body:head-neck:left:muscle:left-genioglossus",
         "vm:anatomy:body:head-neck:left:muscle:left-geniohyoid",
@@ -67905,6 +67925,7 @@
         "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
         "vm:anatomy:body:head-neck:right:ligament:right-vocal-ligament",
+        "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
         "vm:anatomy:body:head-neck:right:muscle:right-digastric",
         "vm:anatomy:body:head-neck:right:muscle:right-genioglossus",
         "vm:anatomy:body:head-neck:right:muscle:right-geniohyoid",
@@ -69447,6 +69468,7 @@
         "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
         "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
+        "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
         "vm:anatomy:body:head-neck:left:muscle:left-digastric",
         "vm:anatomy:body:head-neck:left:muscle:left-genioglossus",
         "vm:anatomy:body:head-neck:left:muscle:left-geniohyoid",
@@ -69532,6 +69554,7 @@
         "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
         "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
+        "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
         "vm:anatomy:body:head-neck:right:muscle:right-digastric",
         "vm:anatomy:body:head-neck:right:muscle:right-genioglossus",
         "vm:anatomy:body:head-neck:right:muscle:right-geniohyoid",
@@ -149313,9 +149336,11 @@
       "available": true,
       "bytes": 330865,
       "crc32": 2869304695,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "76aca51bbecd3a2804fb4c65f37638d82ee71413f636972db0b224cb2091d15e",
+      "geometrySha256": "f702ef118fb487d15a7b0a6df350fab472e2394d8e2fa5d2b4709d43ae5e86b5",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane"
+      ]
     },
     {
       "tree": "isa",
@@ -149519,9 +149544,11 @@
       "available": true,
       "bytes": 332143,
       "crc32": 188087462,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "4250925cb74084de7f699859f52773f2942689943e89613b5a52768cef42af4e",
+      "geometrySha256": "a47dfe6f8de9d24f9a29466d84790951e2bb8762864aa525c07188b6829f9edd",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane"
+      ]
     },
     {
       "tree": "isa",

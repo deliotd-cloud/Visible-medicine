@@ -1,8 +1,14 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Throat dissection and regional coverage
+
+The atlas now has **1,018 source entries, 135 dissection stages and 117 focuses** across all eleven regions and the whole body. Open **Head & neck → Study windows & focuses** for **Thyrohyoid membranes & suspension**, **Vocal ligaments & vocalis**, **Posterior laryngeal muscle subset** or **Pharyngeal muscles exposed**. Two original membrane sources add detail; all previous anatomy remains unchanged. Use the shared remove/restore/Undo, isolate/fade, framing, separation and practice controls. Six uncertain candidates remain withheld. See [source evidence, use and release gates](docs/LARYNGEAL_DETAIL.md).
+
+All eleven regions have shoulder-style layer tracks and independent study windows. These are reversible visibility controls on available source surfaces, not a complete surgical dissection simulator. Earlier milestone counts below are historical.
+
 ## Eye-region dissection
 
-The atlas now has **1,016 source entries, 131 dissection stages and 113 focuses** across all eleven regions and the whole body. Open **Head & neck → Study windows & focuses** for **Eyelid tarsal plates**, **Tear-drainage source structures** or **Nasolacrimal duct & nasal context**. Ten original source-labelled structures use the existing select/frame, isolate/fade, remove/restore/Undo, separation, side filtering and focused practice controls. All earlier anatomy remains unchanged. See [source evidence, controls and clinical limits](docs/OCULAR_DETAIL.md). These are unvalidated teaching surfaces, not a complete eyelid, tear-flow model or surgical dissection simulator.
+The ocular milestone reached **1,016 source entries, 131 dissection stages and 113 focuses** across all eleven regions and the whole body. Open **Head & neck → Study windows & focuses** for **Eyelid tarsal plates**, **Tear-drainage source structures** or **Nasolacrimal duct & nasal context**. Ten original source-labelled structures use the existing select/frame, isolate/fade, remove/restore/Undo, separation, side filtering and focused practice controls. All earlier anatomy remains unchanged. See [source evidence, controls and clinical limits](docs/OCULAR_DETAIL.md). These are unvalidated teaching surfaces, not a complete eyelid, tear-flow model or surgical dissection simulator.
 
 ## Clearer regional study guidance
 
@@ -56,7 +62,7 @@ Use the new **quick anatomy views** for all anatomy, bones with muscles, individ
 
 ## Regional dissection workspaces
 
-Every individual regional explorer separates **Layer by layer** from independent **Study windows**. Follow named removal steps, preview the exact structures a step will hide or restore, then use the searchable, system-filtered removed-tissue tray to restore one structure or a group with one-step undo. The current 128 recipes comprise 47 regional layer steps and 81 independent views (including whole-body comparisons), with 110 focused views. These are visibility recipes, not a claim of missing-tissue completion. See [dissection workbench](docs/DISSECTION_WORKBENCH.md) and the [latest source addition](docs/FOOT_VASCULAR_DETAIL.md).
+Every individual regional explorer separates **Layer by layer** from independent **Study windows**. Follow named removal steps, preview the exact structures a step will hide or restore, then use the searchable, system-filtered removed-tissue tray to restore one structure or a group with one-step undo. The current 135 stages comprise 47 regional layer steps and 88 independent windows (including whole-body comparisons), with 117 focused views. These are visibility recipes, not a claim of missing-tissue completion. See [dissection workbench](docs/DISSECTION_WORKBENCH.md) and the [latest source addition](docs/FOOT_VASCULAR_DETAIL.md).
 
 ## Dental and orbital close-ups
 

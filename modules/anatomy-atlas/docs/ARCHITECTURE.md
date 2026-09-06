@@ -1,5 +1,11 @@
 # Spatial anatomy architecture
 
+## Laryngeal source and historical-policy extension
+
+`scripts/laryngeal-selections.mjs` explicitly admits two of eight audited candidates into one additive bundle; six remain in the source hold policy. `lib/laryngeal-anatomy.ts` feeds four draft content groups and typed target/context windows into the existing dissection, practice, navigation and imaging registry. No new control architecture or coordinate convention is introduced. See [evidence and limits](LARYNGEAL_DETAIL.md).
+
+`reconcileInventory` accepts an explicit historical hold policy while defaulting to current policy for current inventories. Both ocular and laryngeal baselines retain pinned ID-wide holds. Conditional single-file disc rules stay conditional: a PARTOF boundary must not impose a hold on a differently grouped ISA definition. `ocularHistory` removes post-baseline assets' cached hashes, reconstructs prior records and requires the complete historical catalogue and inventory hashes. Negative fixtures reject altered policy or evidence. Default checks remain portable to the GitHub module without Site Git history; raw audit regeneration still requires the pinned source history.
+
 ## Eye-region source extension
 
 `scripts/ocular-selections.mjs` binds ten exact current-version ISA definitions to two additive bundles. `lib/ocular-anatomy.ts` supplies short draft notes and three typed target/context windows/focuses using the common dissection controls. A generic `connective-tissue` category correctly accommodates fibrous eyelid tarsal plates without calling them cartilage. Stable IDs, unchanged source coordinates and imaging-reference hooks are inherited. `source-surface-audit.mjs` supplies offline sampled source-coordinate diagnostics; `ocular-history.mjs` reconstructs and hash-checks complete pre-admission catalogue/inventory evidence without Git history. Raw audit regeneration still requires pinned Site history. See [source geometry, tests and limits](OCULAR_DETAIL.md).

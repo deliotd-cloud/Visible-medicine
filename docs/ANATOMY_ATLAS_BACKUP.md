@@ -4,12 +4,12 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 
 ## Snapshot
 
-- Source application commit: `67d08d64cc681552d284512745a158aa458a50da`.
-- Exact application source tree: `c49aebb05966c4e57d154af8bcddfc4aa57b60b4`.
+- Source application commit: `7e8718882ffc4eb98753bb965c785faa81de6de7`.
+- Exact application source tree: `67433fa145b1bf7218013f3444b61abee657e782`.
 - Main website base commit: `c4ff08f8afc90bd94d04162625f97af9d94401cf`.
 - GitHub backup branch: `backup/anatomy-atlas-2026-09-06`.
-- All 445 tracked application files (115,734,208 bytes) are preserved byte-for-byte from that source commit, including 85 GLB bundles, the official brand lockups, content, scripts, configuration, dependency lockfile, licences, review database schema/migration and documentation.
-- The atlas covers 1,016 selectable source representations, 11 regional explorers, 131 dissection stages, 113 focused views and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation.
+- All 455 tracked application files (116,398,623 bytes) are preserved byte-for-byte from that source commit, including 86 GLB bundles, official brand lockups, content, scripts, configuration, dependency lockfile, licences, review schema/migration and documentation.
+- The atlas covers 1,018 selectable source representations, 11 regional explorers, 135 dissection stages, 117 focuses and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation. Previous milestone receipts below are historical.
 - The shoulder review workspace has independent geometry, teaching and imaging review tracks, evidence/issues, versioned records and revision-bound approval safeguards. Acquired scans and specialist approvals remain absent.
 - The deep-inspection update adds three-plane surface cutaways, tissue opacity, clipped-surface picking, regional/whole-body orthographic illustration and varied 5/10/20-question practice with results. No source geometry, anatomical coverage, licences or dependencies were changed.
 - The study-context update adds 20 device-local named views with dissection/camera restoration, source-change safeguards and targeted recovery from failed anatomy loads. Its current 17,081 helper assertions pass; actual saved browser preferences are not part of this source backup. The ordered continuing work queue is in the atlas's `docs/CONTINUOUS_IMPROVEMENT.md`.
@@ -20,7 +20,17 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 
 The currently published atlas remains at [Visible Medicine anatomy](https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site). Saving this branch does not redeploy that site or the main website.
 
-## Current ocular dissection milestone
+## Current laryngeal dissection milestone
+
+Two exact BodyParts3D v4 thyrohyoid membrane sources add one 178,112-byte bundle; all preceding 1,016 records and 84 body-bundle hashes remain exact. Four paired window/focus recipes expose membrane suspension, vocal ligaments/vocalis, selected posterior laryngeal muscles and pharyngeal muscles using the same removal/restoration/Undo, isolation/fading, framing, separation, side and target-only practice controls. Six conus-elasticus, aryepiglotticus and pterygomandibular-raphe sources remain held for source-topology/fragment/extent/boundary adjudication. Expected anatomical proximity is not labelled an error. See `docs/LARYNGEAL_DETAIL.md` inside the snapshot.
+
+The 199 near-surface comparisons record seven diagnostic flags. The feature suite passes 10,673 default checks and 40,067 raw-source checks, verifying all 9,768 added triangles. Historical reconstruction retains explicit original hold policy and conditional per-definition disc rules; complete old catalogue/inventory hashes remain mandatory. Default reconstruction works without Site Git history. Original raw caches, private reviews, patient data and personal saved views are excluded.
+
+All current source, geometry, dissection/workbench, loading/guidance, practice/study/library, imaging/navigation/link, arrangement/explode and review regressions pass, alongside type/lint checks, production build and the unchanged 808-package licence classification. Current study, imaging and practice suites pass 17,651, 47,898 and 54,816 checks. The library exposes 205 choices as 159 cards. No dependency, font, texture, paid API, protected diagram or clinical approval is added; BodyParts3D CC BY 4.0 attribution and change notices remain.
+
+Next: bounded regional supporting-tissue source checks and useful shared loading/selection improvements. Clinical/device acceptance and the user's actual US/CT/MRI adapter/data/registration remain external gates. The goal stays active. This branch does not modify or deploy the main website.
+
+## Previous ocular dissection milestone
 
 Ten exact BodyParts3D v4 ISA identities add six tear-drainage sources and four eyelid tarsal plates in two model bundles. Three close-up window/focus pairs provide eyelid, tear-drainage and nasolacrimal/nasal context with shared select/frame, remove/restore/Undo, isolate/fade, separation, side filtering and target-only practice. All previous 1,006 records and 82 body-bundle hashes remain exact. The new models total 152,188 bytes; no missing eyelid layer, gland, lumen, flow or connection is invented. See `docs/OCULAR_DETAIL.md` inside the atlas snapshot.
 

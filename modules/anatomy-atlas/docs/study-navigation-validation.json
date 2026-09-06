@@ -1,26 +1,26 @@
 {
   "passed": true,
-  "assertions": 102887,
-  "catalogSha256": "01a253d3d67a933d41bb3b08693ab13279b4e12c0767f2e4b8d68fa9f6078d86",
+  "assertions": 103845,
+  "catalogSha256": "8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7",
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
-      "structures": 1016,
+      "structures": 1018,
       "selectionsWithGroups": 207,
       "memberships": 207
     },
     {
       "region": "whole-body",
       "side": "right",
-      "structures": 586,
+      "structures": 587,
       "selectionsWithGroups": 125,
       "memberships": 125
     },
     {
       "region": "whole-body",
       "side": "left",
-      "structures": 587,
+      "structures": 588,
       "selectionsWithGroups": 126,
       "memberships": 126
     },
@@ -216,23 +216,23 @@
     {
       "region": "head-neck",
       "side": "both",
-      "structures": 273,
-      "selectionsWithGroups": 179,
-      "memberships": 262
+      "structures": 275,
+      "selectionsWithGroups": 197,
+      "memberships": 299
     },
     {
       "region": "head-neck",
       "side": "right",
-      "structures": 159,
-      "selectionsWithGroups": 103,
-      "memberships": 148
+      "structures": 160,
+      "selectionsWithGroups": 113,
+      "memberships": 171
     },
     {
       "region": "head-neck",
       "side": "left",
-      "structures": 159,
-      "selectionsWithGroups": 103,
-      "memberships": 148
+      "structures": 160,
+      "selectionsWithGroups": 113,
+      "memberships": 171
     },
     {
       "region": "spine",

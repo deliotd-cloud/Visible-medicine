@@ -1,6 +1,7 @@
 {
-  "sourceCommit": "7a517628613ce287d156646bf3fc6ef1cdc714d8",
-  "catalogSha256": "b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5",
+  "sourceCommit": "67d08d64cc681552d284512745a158aa458a50da",
+  "catalogSha256": "01a253d3d67a933d41bb3b08693ab13279b4e12c0767f2e4b8d68fa9f6078d86",
+  "inventorySha256": "2d86813da40c4b48b641b995fc494ac2c05b4b2bc9320ccaa4791d7e1aa01ba7",
   "coordinateSystem": {
     "source": "mm, X left / Y posterior / Z superior",
     "scene": "X left / Y superior / Z anterior",
@@ -4103,6 +4104,46 @@
     {
       "id": "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
       "sha256": "6ca7116af7e30ab312ca6e280b176cbc38f07f182a7f2bead704d15031fc346f"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-canaliculus",
+      "sha256": "6361c7ce6562597d9bd6d8b7e2efeb782acb5905387afee277da0a3eaaab4a9b"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-canaliculus",
+      "sha256": "7b5cc1646463f209098f75042d8408cf1631e3c733bda7900c6064c19db64ec1"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-nasolacrimal-duct",
+      "sha256": "a256b338754bdb122cbdd1a1d10166e863b10fb09f56a424c464cdd09ae9d385"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
+      "sha256": "6699106583bf89e5664a80831cf3267e4a28190769e190f7d859ded646581d68"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
+      "sha256": "e130a2a9d9011dff4ab7c01a372c29273aa9cb2c8711e788822bffaf4243dbe0"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac",
+      "sha256": "2470243bde8036e92ed67597ace014b4758e6c122d43e7e167c9b70645c9eea3"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
+      "sha256": "b9b81f3c0ce09b834b8f8e93c1ff7f1e5210da8650b02b0c53eeb4720ffcdae6"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
+      "sha256": "8adde5b4172a612f5a5c69d8be4914ca9a864fd164f9574c502860216f4f9b95"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
+      "sha256": "a2251b6be5c02f24dc84e09aaf40d67ebe23fec3eb6e13e2b20b95301c126b91"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
+      "sha256": "66111855257b599f2c9654fdcff4f2d9c035b0a06d8f4f250e0c989efe56d308"
     }
   ],
   "bundles": [
@@ -4679,6 +4720,20 @@
       "bytes": 192916,
       "sha256": "9e6d01cc92726aa2db728febcf52e0adfa0e6b9db9f58705f49b0653c8311881",
       "structures": 8
+    },
+    {
+      "id": "head-neck-organs-ocular-detail",
+      "url": "/models/bodyparts3d/full-body/head-neck-organs-ocular-detail.glb",
+      "bytes": 57312,
+      "sha256": "2f0b7535025dfd415ef448ae4fef66e351303e1fad2e7da128fa7122bac9929b",
+      "structures": 6
+    },
+    {
+      "id": "head-neck-connective-ocular-detail",
+      "url": "/models/bodyparts3d/full-body/head-neck-connective-ocular-detail.glb",
+      "bytes": 94876,
+      "sha256": "08b23d00975e6cd10eeca344d556fe75ec8cd6f45fc7087ac7da28754754108b",
+      "structures": 4
     }
   ],
   "inventoryHolds": {

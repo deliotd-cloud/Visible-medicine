@@ -1,5 +1,12 @@
 # Clinical validation checklist
 
+## Laryngeal and pharyngeal gates
+
+- Review both admitted thyrohyoid membrane sources for shape, side, scale, attachment footprints and relationships. Engineering admission is not anatomical approval.
+- Adjudicate the six held conus-elasticus, aryepiglotticus and pterygomandibular-raphe sources, including tiny opposite-side fragments, degenerate faces and boundary-marker identities. Expected vocal/fold proximity is not automatically an error or proof of correct tissue boundaries.
+- Accept all four new views on real devices: fine-structure picking, labels, opacity, side scope, framing, removal/restoration/Undo, separation and target-only practice.
+- Missing mucosal layers, airway lumen, complete pharyngeal wall, laryngeal nerves, swallowing/phonation and operative planes remain explicit. No scans, patient registration or clinical sign-offs are supplied. See [source decisions and tests](LARYNGEAL_DETAIL.md).
+
 ## Regional guidance acceptance
 
 - Verify reorientation, selected-only framing reset, saved-view/tray interaction, clean-recipe warnings, restored landmarks, membership search, keyboard focus, screen-reader announcements and 200%/mobile layout on actual devices. Automated handler/helper and server-markup tests are not this acceptance.

@@ -124,8 +124,8 @@ const maps = Object.fromEntries(
 );
 const additions = inventorySelections(maps.isa, maps.partof);
 same(additions.length, 36);
-same(catalog.structures.length, 1016);
-same(catalog.bundles.length, 84);
+same(catalog.structures.length, 1018);
+same(catalog.bundles.length, 85);
 const baselineIds = new Set(baseline.structures.map((s) => s.id));
 const newRecords = catalog.structures.filter(
   (s) => !baselineIds.has(s.id) && s.bundle.endsWith('-inventory'),

@@ -115,12 +115,30 @@ const baseline = {
     sha256: hash(JSON.stringify(s)),
   })),
   bundles: catalog.bundles,
+  inventoryHolds: Object.fromEntries(
+    JSON.parse(previous('content/source-inventory.json'))
+      // Conditional single-file disc holds are reconstructed by the rule, not
+      // promoted to ID-wide policy across different source-tree definitions.
+      .records.filter(
+        (r) =>
+          r.heldReason &&
+          r.heldReason !==
+            'Generic disc surface does not establish the unresolved named level.',
+      )
+      .map((r) => [r.id, r.heldReason]),
+  ),
 };
 const baselineText = JSON.stringify(baseline, null, 2) + '\n',
   baselinePath = 'content/ocular-baseline.json';
 const existing = await fs.readFile(baselinePath, 'utf8').catch(() => null);
-if (existing) assert.equal(existing.replace(/\r\n/g, '\n'), baselineText);
-else await fs.writeFile(baselinePath, baselineText);
+if (existing) {
+  const prior = JSON.parse(existing);
+  // Add pinned historical hold policy to the earlier baseline, preserving every
+  // existing field. This makes later inventory-policy changes reproducible.
+  if (!prior.inventoryHolds) prior.inventoryHolds = baseline.inventoryHolds;
+  assert.deepEqual(prior, baseline);
+}
+await fs.writeFile(baselinePath, baselineText);
 const report = {
   sourceCommit,
   catalogSha256: hash(raw),

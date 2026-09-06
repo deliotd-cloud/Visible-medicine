@@ -1,5 +1,7 @@
 # Third-party notices
 
+The latest laryngeal milestone reaches 1,018 source entries / 85 body bundles. Two exact BodyParts3D v4 ISA membrane sources add one 178,112-byte GLB. Meshes, indexes and derived audit/baseline evidence retain CC BY 4.0, DBCLS attribution, licence links and change notices; the code licence does not relicense anatomy. Six candidates remain withheld. No new dependency, font, texture, copied diagram, paid API or private data is added. See `../docs/LARYNGEAL_DETAIL.md`. Previous milestone totals below are historical.
+
 This project is designed for commercial use without per-user licence fees. Third-party software remains under its original licence.
 
 The regional-guidance milestone uses existing application controls and source identities, with no new font, texture, model or runtime dependency. Preparatory ocular-source evidence in `content/ocular-candidate-audit.json` remains derived BodyParts3D CC BY 4.0 material with the existing DBCLS attribution/change obligations; the ten raw source meshes are not distributed or rendered by this milestone. See `../docs/OCULAR_CANDIDATES.md`.

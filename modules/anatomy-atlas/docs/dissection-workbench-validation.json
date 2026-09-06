@@ -1,8 +1,8 @@
 {
   "passed": true,
-  "checks": 104236,
-  "catalogueStructures": 1016,
-  "catalogSha256": "01a253d3d67a933d41bb3b08693ab13279b4e12c0767f2e4b8d68fa9f6078d86",
+  "checks": 111790,
+  "catalogueStructures": 1018,
+  "catalogSha256": "8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7",
   "regions": [
     {
       "region": "whole-body",
@@ -67,8 +67,8 @@
     {
       "region": "head-neck",
       "layerSteps": 4,
-      "studyWindows": 17,
-      "focusedViews": 22
+      "studyWindows": 21,
+      "focusedViews": 26
     },
     {
       "region": "spine",

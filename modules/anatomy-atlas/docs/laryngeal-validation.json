@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "checks": 40067,
+  "rawSourceCheck": true,
+  "sourceTrianglesChecked": 9768,
+  "candidates": 8,
+  "newEntries": 2,
+  "newBundles": 1,
+  "newAssetBytes": 178112,
+  "preservedRecords": 1016,
+  "preservedBundles": 84,
+  "heldIds": [
+    "FMA55251",
+    "FMA55252",
+    "FMA46604",
+    "FMA46605",
+    "FMA55619",
+    "FMA55620"
+  ],
+  "sourcePairComparisons": 199,
+  "flaggedPairs": 7,
+  "studyWindows": 4,
+  "focusViews": 4,
+  "clinicalValidation": false,
+  "browserInteractionTesting": false,
+  "catalogSha256": "8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7",
+  "sourceAuditSha256": "6595ce03a7392c482e5f965f2693ab84dc14221fd4a5fa2176d588f00ca7cae8"
+}

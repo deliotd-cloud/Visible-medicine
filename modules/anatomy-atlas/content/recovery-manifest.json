@@ -1,7 +1,7 @@
 {
   "version": 4,
   "date": "2026-09-06",
-  "catalogSha256": "01a253d3d67a933d41bb3b08693ab13279b4e12c0767f2e4b8d68fa9f6078d86",
+  "catalogSha256": "8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7",
   "status": "unvalidated",
   "method": "licensed-source-recovery",
   "generatedAnatomicalMeshes": 0,
@@ -8077,6 +8077,42 @@
         }
       ],
       "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
+      "fmaId": "FMA55133",
+      "sourceName": "right thyrohyoid membrane",
+      "sourceTree": "isa",
+      "category": "membrane",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2804",
+          "sha256": "4250925cb74084de7f699859f52773f2942689943e89613b5a52768cef42af4e"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled thyrohyoid membrane in unchanged common coordinates. Full attachments, thickness, perforating vessels/nerves, swallowing and operative planes are not established. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates remain withheld for source review; no missing tissue or patient registration is invented."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
+      "fmaId": "FMA55134",
+      "sourceName": "left thyrohyoid membrane",
+      "sourceTree": "isa",
+      "category": "membrane",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2786",
+          "sha256": "76aca51bbecd3a2804fb4c65f37638d82ee71413f636972db0b224cb2091d15e"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled thyrohyoid membrane in unchanged common coordinates. Full attachments, thickness, perforating vessels/nerves, swallowing and operative planes are not established. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates remain withheld for source review; no missing tissue or patient registration is invented."
     }
   ]
 }

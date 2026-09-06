@@ -33,8 +33,8 @@ same(
 same(audit.sourceCommit, baseline.sourceCommit);
 same(baseline.structures.length, 925);
 same(baseline.bundles.length, 74);
-same(catalog.structures.length, 1016);
-same(catalog.bundles.length, 84);
+same(catalog.structures.length, 1018);
+same(catalog.bundles.length, 85);
 same(catalog.coordinateSystem, baseline.coordinateSystem);
 same(catalog.excluded, baseline.excluded);
 for (const old of baseline.structures)

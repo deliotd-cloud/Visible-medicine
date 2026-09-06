@@ -2,13 +2,13 @@
   "sourceVersion": "4.0",
   "license": "CC-BY-4.0",
   "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
-  "inventorySha256": "2d86813da40c4b48b641b995fc494ac2c05b4b2bc9320ccaa4791d7e1aa01ba7",
-  "catalogSha256": "01a253d3d67a933d41bb3b08693ab13279b4e12c0767f2e4b8d68fa9f6078d86",
+  "inventorySha256": "339eb68f016a33545aac745d921e1a678927a6b3d813afb5f5a0eda75ce12fac",
+  "catalogSha256": "8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7",
   "query": "Unused-available ISA definitions with one to four components and explicit lexical regional-domain matches. Exact component sets are grouped without choosing a preferred anatomical identity. Domains overlap and are not inferred ontology classes.",
-  "unusedIsaDefinitions": 607,
-  "boundedIsaDefinitions": 565,
-  "matchedDefinitions": 203,
-  "sourceSetGroups": 187,
+  "unusedIsaDefinitions": 598,
+  "boundedIsaDefinitions": 556,
+  "matchedDefinitions": 194,
+  "sourceSetGroups": 178,
   "domainCounts": [
     {
       "id": "hand-foot-vessels",
@@ -20,7 +20,7 @@
     },
     {
       "id": "laryngeal-pharyngeal",
-      "sourceSetGroups": 13
+      "sourceSetGroups": 4
     },
     {
       "id": "pelvic-genitourinary",
@@ -1137,158 +1137,6 @@
       ],
       "domains": [
         "cranial-neural"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2744"
-      ],
-      "definitions": [
-        {
-          "id": "FMA55620",
-          "name": "left pterygomandibular raphe"
-        }
-      ],
-      "domains": [
-        "laryngeal-pharyngeal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2756"
-      ],
-      "definitions": [
-        {
-          "id": "FMA55619",
-          "name": "right pterygomandibular raphe"
-        }
-      ],
-      "domains": [
-        "laryngeal-pharyngeal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2774"
-      ],
-      "definitions": [
-        {
-          "id": "FMA46605",
-          "name": "left aryepiglotticus"
-        }
-      ],
-      "domains": [
-        "laryngeal-pharyngeal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2777"
-      ],
-      "definitions": [
-        {
-          "id": "FMA55252",
-          "name": "left conus elasticus"
-        }
-      ],
-      "domains": [
-        "laryngeal-pharyngeal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2786"
-      ],
-      "definitions": [
-        {
-          "id": "FMA55134",
-          "name": "left thyrohyoid membrane"
-        }
-      ],
-      "domains": [
-        "laryngeal-pharyngeal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2791"
-      ],
-      "definitions": [
-        {
-          "id": "FMA46604",
-          "name": "right aryepiglotticus"
-        }
-      ],
-      "domains": [
-        "laryngeal-pharyngeal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2794"
-      ],
-      "definitions": [
-        {
-          "id": "FMA55251",
-          "name": "right conus elasticus"
-        }
-      ],
-      "domains": [
-        "laryngeal-pharyngeal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2804"
-      ],
-      "definitions": [
-        {
-          "id": "FMA55133",
-          "name": "right thyrohyoid membrane"
-        }
-      ],
-      "domains": [
-        "laryngeal-pharyngeal"
       ],
       "heldComponents": [],
       "decision": "identity-and-geometry-review-required",
@@ -3031,8 +2879,27 @@
       "domains": [
         "laryngeal-pharyngeal"
       ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
+      "heldComponents": [
+        {
+          "tree": "isa",
+          "id": "FMA55619",
+          "name": "right pterygomandibular raphe",
+          "files": [
+            "FJ2756"
+          ],
+          "reason": "Pterygomandibular raphe is also indexed as an anatomical line/boundary and immaterial entity. About 35% of sampled right-raphe vertices lie within 0.25 mm of the superior constrictor. Tissue extent versus boundary-marker representation requires adjudication before dissectible connective-tissue admission."
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55620",
+          "name": "left pterygomandibular raphe",
+          "files": [
+            "FJ2744"
+          ],
+          "reason": "Pterygomandibular raphe is also indexed as an anatomical line/boundary and immaterial entity. About 31% of sampled left-raphe vertices lie within 0.25 mm of the superior constrictor. Tissue extent versus boundary-marker representation requires adjudication before dissectible connective-tissue admission."
+        }
+      ],
+      "decision": "existing-component-hold-applies",
       "renderedOwners": [],
       "admitted": false,
       "meshGeometryAudited": false
@@ -3051,8 +2918,27 @@
       "domains": [
         "laryngeal-pharyngeal"
       ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
+      "heldComponents": [
+        {
+          "tree": "isa",
+          "id": "FMA46604",
+          "name": "right aryepiglotticus",
+          "files": [
+            "FJ2791"
+          ],
+          "reason": "Right aryepiglotticus contains 108 positive-X vertices in 36 tiny opposite-side triangles (about 0.003457 mm2 face area), plus three degenerate faces. Source cleanup, paired extent and tissue identity require adjudication. No automatic trimming or mirroring."
+        },
+        {
+          "tree": "isa",
+          "id": "FMA46605",
+          "name": "left aryepiglotticus",
+          "files": [
+            "FJ2774"
+          ],
+          "reason": "Aryepiglotticus pair retained for source review: right source has opposite-side fragments; the left source has local sampled near-contact with the cuneiform cartilage. Expected fold relationships alone do not validate muscle-versus-fold extent, attachments or a separable tissue boundary. Do not relabel or invent layers."
+        }
+      ],
+      "decision": "existing-component-hold-applies",
       "renderedOwners": [],
       "admitted": false,
       "meshGeometryAudited": false
@@ -3071,28 +2957,27 @@
       "domains": [
         "laryngeal-pharyngeal"
       ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2786",
-        "FJ2804"
-      ],
-      "definitions": [
+      "heldComponents": [
         {
-          "id": "FMA55132",
-          "name": "thyrohyoid membrane"
+          "tree": "isa",
+          "id": "FMA55251",
+          "name": "right conus elasticus",
+          "files": [
+            "FJ2794"
+          ],
+          "reason": "Conus elasticus pair needs source-topology, extent and boundary review. The right source has two degenerate faces; the left source contains 18 tiny opposite-side triangles. Broad near-contact with vocalis/vocal ligaments can be anatomically expected but does not validate separate dissection boundaries. Preserve original files; no automatic repair or admission."
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55252",
+          "name": "left conus elasticus",
+          "files": [
+            "FJ2777"
+          ],
+          "reason": "Left conus elasticus contains 52 negative-X vertices in 18 tiny opposite-side triangles (about 0.007293 mm2 face area). Pair-specific extent/topology and vocal-layer boundary treatment require source review. Do not trim fragments, mirror the counterpart or infer verified attachments."
         }
       ],
-      "domains": [
-        "laryngeal-pharyngeal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
+      "decision": "existing-component-hold-applies",
       "renderedOwners": [],
       "admitted": false,
       "meshGeometryAudited": false

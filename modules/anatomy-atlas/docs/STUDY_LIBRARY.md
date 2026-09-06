@@ -1,5 +1,7 @@
 # Regional study library
 
+The current catalogue has 1,018 entries and 85 body bundles. Across eleven regions and whole body, 88 independent windows and 117 focuses form 205 choices / 159 cards / 46 equivalent pairs; 47 numbered layer steps remain separate. Current evidence is in `study-library-validation.json` (41,782 checks). The earlier milestones and hashes below are historical. See [latest additions](LARYNGEAL_DETAIL.md).
+
 The latest [foot vascular extension](FOOT_VASCULAR_DETAIL.md) brings this library to 81 independent windows, 110 focuses and 152 cards (191 recipes, 39 equivalent pairs). The 47 layer steps remain separate. Current evidence is in `study-library-validation.json`; milestone counts below are historical.
 
 The counts and hashes below describe the original library milestone. The [thoracic extension](THORACIC_DETAIL.md) now brings the same library to 69 independent windows, 98 focuses and 140 cards (167 recipes, 27 equivalent pairs), with 47 layer steps still separate. Current hashes and 34,836 passing assertions are in `study-library-validation.json`.

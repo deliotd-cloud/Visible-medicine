@@ -2,6 +2,18 @@ import { createHash } from 'node:crypto';
 const compareText = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 // Source coverage is not anatomical completeness. No name heuristic admits a mesh.
 export const inventoryHolds = {
+  FMA55251:
+    'Conus elasticus pair needs source-topology, extent and boundary review. The right source has two degenerate faces; the left source contains 18 tiny opposite-side triangles. Broad near-contact with vocalis/vocal ligaments can be anatomically expected but does not validate separate dissection boundaries. Preserve original files; no automatic repair or admission.',
+  FMA55252:
+    'Left conus elasticus contains 52 negative-X vertices in 18 tiny opposite-side triangles (about 0.007293 mm2 face area). Pair-specific extent/topology and vocal-layer boundary treatment require source review. Do not trim fragments, mirror the counterpart or infer verified attachments.',
+  FMA46604:
+    'Right aryepiglotticus contains 108 positive-X vertices in 36 tiny opposite-side triangles (about 0.003457 mm2 face area), plus three degenerate faces. Source cleanup, paired extent and tissue identity require adjudication. No automatic trimming or mirroring.',
+  FMA46605:
+    'Aryepiglotticus pair retained for source review: right source has opposite-side fragments; the left source has local sampled near-contact with the cuneiform cartilage. Expected fold relationships alone do not validate muscle-versus-fold extent, attachments or a separable tissue boundary. Do not relabel or invent layers.',
+  FMA55619:
+    'Pterygomandibular raphe is also indexed as an anatomical line/boundary and immaterial entity. About 35% of sampled right-raphe vertices lie within 0.25 mm of the superior constrictor. Tissue extent versus boundary-marker representation requires adjudication before dissectible connective-tissue admission.',
+  FMA55620:
+    'Pterygomandibular raphe is also indexed as an anatomical line/boundary and immaterial entity. About 31% of sampled left-raphe vertices lie within 0.25 mm of the superior constrictor. Tissue extent versus boundary-marker representation requires adjudication before dissectible connective-tissue admission.',
   FMA44883:
     'Source-labelled plantar venous arch closely matches the right plantar arterial arch after an approximately 4.216 mm source-Z translation: all sampled aligned distances are below 0.06 mm. Original surfaces are separate, not overlapping duplicates, but independent venous shape/depth provenance needs adjudication. Do not import or infer arterial-venous correspondence from the matched shape.',
   FMA44884:
@@ -119,7 +131,12 @@ export function parseSourceTables(partsText, elementsText) {
   }
   return [...records.values()];
 }
-export function reconcileInventory({ trees, catalog, assets }) {
+export function reconcileInventory({
+  trees,
+  catalog,
+  assets,
+  holds = inventoryHolds,
+}) {
   const byKey = new Map(
     assets.map((asset) => [asset.tree + '/' + asset.file, asset]),
   );
@@ -168,7 +185,7 @@ export function reconcileInventory({ trees, catalog, assets }) {
           .sort(compareText)
           .join(',') === displayedFiles;
       const heldReason =
-        inventoryHolds[concept.id] ??
+        holds[concept.id] ??
         (concept.files.length === 1 && concept.files[0] === 'FJ3211'
           ? 'Generic disc surface does not establish the unresolved named level.'
           : null);

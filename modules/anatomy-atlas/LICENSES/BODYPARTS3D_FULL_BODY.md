@@ -1,5 +1,9 @@
 # Expanded BodyParts3D commercial-use audit
 
+## Laryngeal extension — 6 September 2026
+
+The current atlas has **1,018 source representations / 85 body bundles / 96,578,816 bytes**. FMA55133/FJ2804 and FMA55134/FJ2786 add the exact paired thyrohyoid membrane sources in one 178,112-byte GLB. All 1,016 previous records and 84 bundle hashes are preserved. Six audited candidates remain held. The official CC BY 4.0 grant was rechecked; DBCLS attribution, licence links and change notices apply to meshes, indexes and derived evidence. No font, texture, dependency, paid service, copied diagram, private data or clinical approval is added. See `../docs/LARYNGEAL_DETAIL.md`; all earlier totals below are historical.
+
 ## Ocular extension — 6 September 2026
 
 The current atlas has **1,016 source representations / 84 body bundles / 96,400,704 bytes**. Ten exact v4 ISA identities/components add six tear-drainage surfaces and four eyelid tarsal plates in two 152,188-byte-total GLBs. All prior records, geometry and transforms remain exact. The official CC BY 4.0 grant applies with the existing DBCLS credit, licence links and adaptation notices. The original short draft notes reference university factual teaching material without redistributing its diagrams, prose or table datasets. No dependency, font, texture, paid service, clinical approval or private data is added. See `../docs/OCULAR_DETAIL.md`; all older milestone totals below are historical.

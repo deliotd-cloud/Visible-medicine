@@ -18,7 +18,11 @@ export function ocularHistory(catalog, inventory, baseline, preparation) {
   };
   const catalogRaw = Buffer.from(JSON.stringify(historicalCatalog, null, 2));
   assert.equal(hash(catalogRaw), baseline.catalogSha256);
-  const newFiles = new Set(preparation.results.map((r) => r.file));
+  // Inventory hashing follows the admitted filenames, not the raw cache. This
+  // reconstructs earlier evidence after any later additive anatomy milestone.
+  const historicalFiles = new Set(
+    structures.flatMap((s) => s.sources.map((f) => f.file)),
+  );
   const trees = Object.fromEntries(
     ['isa', 'partof'].map((tree) => [
       tree,
@@ -33,14 +37,19 @@ export function ocularHistory(catalog, inventory, baseline, preparation) {
     ]),
   );
   const assets = inventory.assets.map(({ representedBy: _owners, ...asset }) =>
-    newFiles.has(asset.file)
+    !historicalFiles.has(asset.file)
       ? { ...asset, sha256: null, geometrySha256: null }
       : asset,
   );
   const historicalInventory = {
     ...inventory,
     catalogSha256: baseline.catalogSha256,
-    ...reconcileInventory({ trees, catalog: historicalCatalog, assets }),
+    ...reconcileInventory({
+      trees,
+      catalog: historicalCatalog,
+      assets,
+      holds: baseline.inventoryHolds,
+    }),
   };
   const inventoryRaw = Buffer.from(
     JSON.stringify(historicalInventory, null, 2) + '\n',

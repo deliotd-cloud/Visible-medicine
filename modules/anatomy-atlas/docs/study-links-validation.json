@@ -1,27 +1,27 @@
 {
   "passed": true,
-  "assertions": 226010,
-  "links": 12194,
-  "focusedLinks": 7321,
-  "destinationsTested": 5537,
+  "assertions": 229952,
+  "links": 12285,
+  "focusedLinks": 7404,
+  "destinationsTested": 5624,
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
-      "structures": 1016,
-      "testedLinks": 1629
+      "structures": 1018,
+      "testedLinks": 1631
     },
     {
       "region": "whole-body",
       "side": "left",
-      "structures": 587,
-      "testedLinks": 951
+      "structures": 588,
+      "testedLinks": 952
     },
     {
       "region": "whole-body",
       "side": "right",
-      "structures": 586,
-      "testedLinks": 949
+      "structures": 587,
+      "testedLinks": 950
     },
     {
       "region": "shoulder-arm",
@@ -188,20 +188,20 @@
     {
       "region": "head-neck",
       "side": "both",
-      "structures": 273,
-      "testedLinks": 745
+      "structures": 275,
+      "testedLinks": 784
     },
     {
       "region": "head-neck",
       "side": "left",
-      "structures": 159,
-      "testedLinks": 461
+      "structures": 160,
+      "testedLinks": 485
     },
     {
       "region": "head-neck",
       "side": "right",
-      "structures": 159,
-      "testedLinks": 461
+      "structures": 160,
+      "testedLinks": 485
     },
     {
       "region": "spine",
@@ -223,7 +223,7 @@
     }
   ],
   "sourceGeometryChanged": false,
-  "catalogueSha256": "01a253d3d67a933d41bb3b08693ab13279b4e12c0767f2e4b8d68fa9f6078d86",
+  "catalogueSha256": "8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7",
   "actualInstalledRuntimeDuplicateParsingTested": true,
   "browserInteractionTesting": false,
   "clinicalValidation": false,

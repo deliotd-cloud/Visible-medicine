@@ -686,6 +686,13 @@
       "bytes": 94876,
       "sha256": "08b23d00975e6cd10eeca344d556fe75ec8cd6f45fc7087ac7da28754754108b",
       "structures": 4
+    },
+    {
+      "id": "head-neck-connective-laryngeal-detail",
+      "url": "/models/bodyparts3d/full-body/head-neck-connective-laryngeal-detail.glb",
+      "bytes": 178112,
+      "sha256": "a4788313cc86677900a528208e8ac7045f07bee300ea17073386bf0c12c83de4",
+      "structures": 2
     }
   ],
   "structures": [
@@ -59383,6 +59390,116 @@
         }
       ],
       "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
+      "fmaId": "FMA55133",
+      "name": "Right thyrohyoid membrane",
+      "sourceName": "right thyrohyoid membrane",
+      "system": "connective",
+      "category": "membrane",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-connective-laryngeal-detail",
+      "nodeName": "FMA55133",
+      "bounds": {
+        "min": [
+          -0.1955460011959076,
+          6.159200668334961,
+          0.4351480007171631
+        ],
+        "max": [
+          -0.052922703325748444,
+          6.381400108337402,
+          0.7197499871253967
+        ]
+      },
+      "center": [
+        -0.12423435226082802,
+        6.270300388336182,
+        0.5774489939212799
+      ],
+      "anchor": [
+        -0.1584700047969818,
+        6.275400161743164,
+        0.5806099772453308
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2804",
+          "sha256": "4250925cb74084de7f699859f52773f2942689943e89613b5a52768cef42af4e"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled thyrohyoid membrane in unchanged common coordinates. Full attachments, thickness, perforating vessels/nerves, swallowing and operative planes are not established. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates remain withheld for source review; no missing tissue or patient registration is invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
+      "fmaId": "FMA55134",
+      "name": "Left thyrohyoid membrane",
+      "sourceName": "left thyrohyoid membrane",
+      "system": "connective",
+      "category": "membrane",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-connective-laryngeal-detail",
+      "nodeName": "FMA55134",
+      "bounds": {
+        "min": [
+          0.03982729837298393,
+          6.159599781036377,
+          0.4351930320262909
+        ],
+        "max": [
+          0.1826009899377823,
+          6.38129997253418,
+          0.7199400067329407
+        ]
+      },
+      "center": [
+        0.11121414415538311,
+        6.270449876785278,
+        0.5775665193796158
+      ],
+      "anchor": [
+        0.145906001329422,
+        6.270100116729736,
+        0.5791000127792358
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2786",
+          "sha256": "76aca51bbecd3a2804fb4c65f37638d82ee71413f636972db0b224cb2091d15e"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled thyrohyoid membrane in unchanged common coordinates. Full attachments, thickness, perforating vessels/nerves, swallowing and operative planes are not established. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates remain withheld for source review; no missing tissue or patient registration is invented.",
       "provenance": {
         "method": "licensed-source-mesh",
         "license": "CC-BY-4.0",
