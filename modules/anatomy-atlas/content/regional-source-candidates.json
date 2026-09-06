@@ -2,17 +2,17 @@
   "sourceVersion": "4.0",
   "license": "CC-BY-4.0",
   "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
-  "inventorySha256": "9a3ccd47a8155a85fc1803724b8a35a4b22355c3b992aedccda10da091eca22c",
-  "catalogSha256": "5d7a82b00671a07b993122317e3f22eb64bc5eed4f1df064b81c78b35b46e590",
+  "inventorySha256": "0101f247ea3019f589dd03eff98b3641c898b3c36dfe24324ea8b060ee45c26d",
+  "catalogSha256": "b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5",
   "query": "Unused-available ISA definitions with one to four components and explicit lexical regional-domain matches. Exact component sets are grouped without choosing a preferred anatomical identity. Domains overlap and are not inferred ontology classes.",
-  "unusedIsaDefinitions": 644,
-  "boundedIsaDefinitions": 601,
-  "matchedDefinitions": 235,
-  "sourceSetGroups": 217,
+  "unusedIsaDefinitions": 624,
+  "boundedIsaDefinitions": 581,
+  "matchedDefinitions": 219,
+  "sourceSetGroups": 203,
   "domainCounts": [
     {
       "id": "hand-foot-vessels",
-      "sourceSetGroups": 34
+      "sourceSetGroups": 20
     },
     {
       "id": "ocular-lacrimal",
@@ -1108,63 +1108,6 @@
     },
     {
       "files": [
-        "FJ2068"
-      ],
-      "definitions": [
-        {
-          "id": "FMA69515",
-          "name": "left deep plantar artery"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2085"
-      ],
-      "definitions": [
-        {
-          "id": "FMA43944",
-          "name": "left plantar arch"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2089"
-      ],
-      "definitions": [
-        {
-          "id": "FMA43938",
-          "name": "left superficial medial plantar artery"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
         "FJ2122"
       ],
       "definitions": [
@@ -1184,82 +1127,6 @@
     },
     {
       "files": [
-        "FJ2128"
-      ],
-      "definitions": [
-        {
-          "id": "FMA44884",
-          "name": "plantar venous arch of left foot"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2129"
-      ],
-      "definitions": [
-        {
-          "id": "FMA44883",
-          "name": "plantar venous arch of right foot"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2136"
-      ],
-      "definitions": [
-        {
-          "id": "FMA69514",
-          "name": "right deep plantar artery"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2169"
-      ],
-      "definitions": [
-        {
-          "id": "FMA43943",
-          "name": "right plantar arch"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
         "FJ2178"
       ],
       "definitions": [
@@ -1270,25 +1137,6 @@
       ],
       "domains": [
         "visceral-vessels-ducts"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2179"
-      ],
-      "definitions": [
-        {
-          "id": "FMA43937",
-          "name": "right superficial medial plantar artery"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
       ],
       "heldComponents": [],
       "decision": "identity-and-geometry-review-required",
@@ -3075,66 +2923,6 @@
     },
     {
       "files": [
-        "FJ2059",
-        "FJ2060"
-      ],
-      "definitions": [
-        {
-          "id": "FMA44882",
-          "name": "dorsal venous arch of left foot"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2061",
-        "FJ2062"
-      ],
-      "definitions": [
-        {
-          "id": "FMA44881",
-          "name": "dorsal venous arch of right foot"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2068",
-        "FJ2136"
-      ],
-      "definitions": [
-        {
-          "id": "FMA69513",
-          "name": "deep plantar artery"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
         "FJ2072",
         "FJ2141"
       ],
@@ -3146,30 +2934,6 @@
         {
           "id": "FMA69713",
           "name": "digital artery of foot"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2089",
-        "FJ2179"
-      ],
-      "definitions": [
-        {
-          "id": "FMA43933",
-          "name": "superficial medial plantar artery"
-        },
-        {
-          "id": "FMA43941",
-          "name": "branch of medial plantar artery"
         }
       ],
       "domains": [
@@ -3295,8 +3059,27 @@
       "domains": [
         "hand-foot-vessels"
       ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
+      "heldComponents": [
+        {
+          "tree": "isa",
+          "id": "FMA44883",
+          "name": "plantar venous arch of right foot",
+          "files": [
+            "FJ2129"
+          ],
+          "reason": "Source-labelled plantar venous arch closely matches the right plantar arterial arch after an approximately 4.216 mm source-Z translation: all sampled aligned distances are below 0.06 mm. Original surfaces are separate, not overlapping duplicates, but independent venous shape/depth provenance needs adjudication. Do not import or infer arterial-venous correspondence from the matched shape."
+        },
+        {
+          "tree": "isa",
+          "id": "FMA44884",
+          "name": "plantar venous arch of left foot",
+          "files": [
+            "FJ2128"
+          ],
+          "reason": "Source-labelled plantar venous arch closely matches the left plantar arterial arch after an approximately 4.216 mm source-Z translation: all sampled aligned distances are below 0.06 mm. Original surfaces are separate, not overlapping duplicates, but independent venous shape/depth provenance needs adjudication. Do not import or infer arterial-venous correspondence from the matched shape."
+        }
+      ],
+      "decision": "existing-component-hold-applies",
       "renderedOwners": [],
       "admitted": false,
       "meshGeometryAudited": false
@@ -4306,54 +4089,6 @@
       ],
       "domains": [
         "cranial-neural"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2059",
-        "FJ2060",
-        "FJ2061",
-        "FJ2062"
-      ],
-      "definitions": [
-        {
-          "id": "FMA44356",
-          "name": "dorsal venous arch of foot"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2068",
-        "FJ2085",
-        "FJ2136",
-        "FJ2169"
-      ],
-      "definitions": [
-        {
-          "id": "FMA43942",
-          "name": "plantar arch"
-        },
-        {
-          "id": "FMA69559",
-          "name": "zone of trunk of lateral plantar artery"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
       ],
       "heldComponents": [],
       "decision": "identity-and-geometry-review-required",

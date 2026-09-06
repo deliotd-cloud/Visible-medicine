@@ -36,6 +36,20 @@ for (const s of catalog.structures) {
       api.vesselColor(s),
       /vein|vena cava/.test(s.sourceName) ? '#577fba' : '#bf4847',
     );
+  } else if (s.bundle.endsWith('-foot-vascular')) {
+    const expected = {
+      FMA43943: 'artery',
+      FMA43944: 'artery',
+      FMA69514: 'artery',
+      FMA69515: 'artery',
+      FMA43937: 'artery',
+      FMA43938: 'artery',
+      FMA44881: 'vein',
+      FMA44882: 'vein',
+    }[s.fmaId];
+    same(typeof expected, 'string');
+    same(api.vesselKind(s), expected);
+    same(api.vesselColor(s), expected === 'artery' ? '#bf4847' : '#577fba');
   } else {
     same(s.bundle.endsWith('-hand-venous'), true);
     same(api.vesselKind(s), 'vein');
@@ -43,6 +57,14 @@ for (const s of catalog.structures) {
   }
 }
 same(oldVessels, 201);
+same(
+  catalog.structures.filter((s) => s.bundle.endsWith('-hand-venous')).length,
+  14,
+);
+same(
+  catalog.structures.filter((s) => s.bundle.endsWith('-foot-vascular')).length,
+  8,
+);
 const identity = (sourceName, fmaId = 'FMA999999', system = 'vessels') => ({
   sourceName,
   fmaId,
@@ -78,6 +100,10 @@ for (const name of [
 ])
   same(api.vesselKind(identity(name)), 'unclassified');
 same(api.vesselKind(identity('right deep palmar arch', 'FMA22839')), 'artery');
+same(api.vesselKind(identity('right plantar arch', 'FMA43943')), 'artery');
+same(api.vesselKind(identity('left plantar arch', 'FMA43944')), 'artery');
+same(api.vesselKind(identity('right plantar arch')), 'unclassified');
+same(api.vesselKind(identity('unknown vessel', 'FMA43943')), 'unclassified');
 same(api.vesselKind(identity('wrong label', 'FMA22839')), 'unclassified');
 same(api.vesselKind(identity('artery', 'FMA999999', 'nerves')), 'unclassified');
 same(api.vesselColor(identity('unknown trunk')), '#8b94a1');
@@ -95,6 +121,7 @@ const evidence = {
   checks,
   unchangedVessels: oldVessels,
   venousAdditions: 14,
+  footVesselAdditions: 8,
   geometryChanged: false,
   browserInteractionTesting: false,
 };

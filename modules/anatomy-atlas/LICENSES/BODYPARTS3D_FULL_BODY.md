@@ -1,5 +1,9 @@
 # Expanded BodyParts3D commercial-use audit
 
+## Foot vascular extension — 6 September 2026
+
+The current atlas has **1,006 source representations / 82 body bundles / 96,248,516 bytes**. Eight exact v4 ISA identities add ten source components in one 192,916-byte GLB. Previous records and bundles remain exact. Two plantar venous sources are held for shape/provenance adjudication. The official CC BY 4.0 grant was rechecked; DBCLS credit, licence links and adaptation notices remain required for meshes, indexes and derived evidence. No new package, font, texture, paid API or copied diagram is added. See `../docs/FOOT_VASCULAR_DETAIL.md`. Older totals below are historical.
+
 ## Hand venous extension — 6 September 2026
 
 The current atlas has **998 source representations / 81 body bundles / 96,055,600 bytes**. Fourteen exact v4 ISA identities add twenty-four source components in one 577,748-byte GLB. All prior records and bundles remain exact. Two little-finger groups are held for source-extent adjudication, not imported. The official CC BY 4.0 licence was rechecked; DBCLS attribution, licence links and adaptation notices remain required. Original short draft notes reference primary source descriptions and upper-limb venous facts; no protected diagram/table is copied. No new dependency, font, texture, paid API, invented tissue or clinical approval is added. See `../docs/HAND_VENOUS_DETAIL.md`. Earlier totals below are historical.

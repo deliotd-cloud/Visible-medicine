@@ -5,6 +5,8 @@ export type VesselKind = 'artery' | 'vein' | 'unclassified';
 // Exact source identities whose names omit an arterial noun. Unknown identities
 // remain neutral; colours never imply oxygenation, flow or verified continuity.
 const arterialNames: Readonly<Record<string, string>> = {
+  FMA43943: 'right plantar arch',
+  FMA43944: 'left plantar arch',
   FMA22839: 'right deep palmar arch',
   FMA22840: 'left deep palmar arch',
   FMA3992: 'right thyrocervical trunk',

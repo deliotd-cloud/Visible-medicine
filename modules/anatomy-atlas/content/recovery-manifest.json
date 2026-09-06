@@ -1,7 +1,7 @@
 {
   "version": 4,
   "date": "2026-09-06",
-  "catalogSha256": "5d7a82b00671a07b993122317e3f22eb64bc5eed4f1df064b81c78b35b46e590",
+  "catalogSha256": "b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5",
   "status": "unvalidated",
   "method": "licensed-source-recovery",
   "generatedAnatomicalMeshes": 0,
@@ -7745,6 +7745,158 @@
         }
       ],
       "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+      "fmaId": "FMA43943",
+      "sourceName": "right plantar arch",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2169",
+          "sha256": "9e02a211ef6b9c06c911892145c75ace55ed48bf8d4ed19eab11f19c3d1301a8"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+      "fmaId": "FMA43944",
+      "sourceName": "left plantar arch",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2085",
+          "sha256": "0c21b7855d4e5fad25948af62db6c701e0d9552dedf2a8b6a1952b527aa82ea2"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+      "fmaId": "FMA69514",
+      "sourceName": "right deep plantar artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2136",
+          "sha256": "fe4fc6b629bff4228554964bbca5b8aacc81c721e8a5177a010f8365b9d2b3da"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+      "fmaId": "FMA69515",
+      "sourceName": "left deep plantar artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2068",
+          "sha256": "d4c5c4fda6fed56de66b8991b23aa7f08f39924bb2970ebb6129abfac191d945"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+      "fmaId": "FMA43937",
+      "sourceName": "right superficial medial plantar artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2179",
+          "sha256": "77f3a27fd0d079e8334f4145d031b308b00e8660b8ad3a2a562fd0f0f632a5c7"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+      "fmaId": "FMA43938",
+      "sourceName": "left superficial medial plantar artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2089",
+          "sha256": "e744f8331409c56adeace058fa04fec14f7ec22dc0053c85845383cc0f6dc455"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+      "fmaId": "FMA44881",
+      "sourceName": "dorsal venous arch of right foot",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2061",
+          "sha256": "2b349be398677b9dab660a07b4e038b35cb458883e350340ff53a2754aebcc41"
+        },
+        {
+          "file": "FJ2062",
+          "sha256": "4c16febe531c5d2afacf9bb47a899602239f2424ebd6e6d97860691bc9a2669b"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+      "fmaId": "FMA44882",
+      "sourceName": "dorsal venous arch of left foot",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2059",
+          "sha256": "9421947a4511ed928078ee25870fefc51632c373fd3c8918bd9d53c3fc8dd5fb"
+        },
+        {
+          "file": "FJ2060",
+          "sha256": "f882652c192b3c2e05405273755193989d5b1866dcba53b9c0653e7a1ee2b2f9"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented."
     }
   ]
 }

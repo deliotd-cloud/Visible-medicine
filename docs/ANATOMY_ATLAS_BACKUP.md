@@ -4,12 +4,12 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 
 ## Snapshot
 
-- Source application commit: `574d408e1d46176e15d1fc0d2cb80a708149c090`.
-- Exact application source tree: `ca8b9d837c49a835ab603e8b4c480bd5c8254349`.
+- Source application commit: `d2dacd10edeac3ead12fd26376aa3377b223ffc7`.
+- Exact application source tree: `b14bf11d31fab09d6905ca423ebdd7950eba3ce5`.
 - Main website base commit: `c4ff08f8afc90bd94d04162625f97af9d94401cf`.
 - GitHub backup branch: `backup/anatomy-atlas-2026-09-06`.
-- All 404 tracked application files (114,216,882 bytes) are preserved byte-for-byte from that source commit, including 82 GLB bundles, the official brand lockups, content, scripts, configuration, dependency lockfile, licences, review database schema/migration and documentation.
-- The atlas covers 998 selectable source representations, 11 regional explorers, 124 dissection stages, 106 focused views and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation.
+- All 413 tracked application files (114,919,391 bytes) are preserved byte-for-byte from that source commit, including 83 GLB bundles, the official brand lockups, content, scripts, configuration, dependency lockfile, licences, review database schema/migration and documentation.
+- The atlas covers 1,006 selectable source representations, 11 regional explorers, 128 dissection stages, 110 focused views and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation.
 - The shoulder review workspace has independent geometry, teaching and imaging review tracks, evidence/issues, versioned records and revision-bound approval safeguards. Acquired scans and specialist approvals remain absent.
 - The deep-inspection update adds three-plane surface cutaways, tissue opacity, clipped-surface picking, regional/whole-body orthographic illustration and varied 5/10/20-question practice with results. No source geometry, anatomical coverage, licences or dependencies were changed.
 - The study-context update adds 20 device-local named views with dissection/camera restoration, source-change safeguards and targeted recovery from failed anatomy loads. Its current 17,081 helper assertions pass; actual saved browser preferences are not part of this source backup. The ordered continuing work queue is in the atlas's `docs/CONTINUOUS_IMPROVEMENT.md`.
@@ -19,6 +19,10 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 - The deep-brain milestone adds 22 source concepts / 24 components in a separate model bundle, three study windows, five source-ID-based focused views, draft notes and distinct study colours. Every previous 859 structure record and 66 model bundle hashes is preserved. Regional labels now follow the visible bounds in all six presets, avoid duplicate selected labels and correct exploded local coordinates. Its 193,082 source, study and label helper assertions pass; they do not validate source anatomy or on-screen text collision. Grouped bilateral mammillary and choroid-plexus sources are explicitly disclosed. See `docs/DEEP_BRAIN.md` for evidence, clinical limits and remaining work.
 
 The currently published atlas remains at [Visible Medicine anatomy](https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site). Saving this branch does not redeploy that site or the main website.
+
+The latest foot vascular milestone adds eight exact source identities / ten components in one 192,916-byte GLB and four sole/dorsum-oriented windows/focuses. All previous 998 records and 81 body bundles remain exact. Two plantar venous arches are withheld after centre-aligned diagnostics showed near-matching arterial forms; diagnostic translations never affect source files or product meshes. Dorsal venous arches remain grouped two-component sources. Exact source arterial-name exceptions preserve the previous 215 vessel colours. See `docs/FOOT_VASCULAR_DETAIL.md` for source evidence, controls, holds and clinical gates.
+
+The 12,539 foot feature assertions (12,607 with raw source), 1,085 colour checks, historical source and expanded dissection/workbench/practice/navigation/library/imaging/arrangement/explode/review suites pass, alongside type checks, focused lint, the 808-package licence audit and production build. The library has 152 cards for 191 window/focus recipes; 47 layer steps remain separate. No paid service, new dependency/font/texture, protected diagram, patient data or clinical approval is added. Next broaden translated-shape/identity diagnostics, then strengthen regional guidance and loading/selection resilience. Specialist/device acceptance and the actual US/CT/MRI adapter remain external gates. Older milestone summaries below are historical.
 
 The latest hand-venous milestone adds fourteen exact source identities / twenty-four components in one 577,748-byte bundle and four hand windows/focuses. All previous 984 records and 80 body bundles remain exact. Two little-finger groups are withheld for broad grouped extent rather than split or relabelled. The new vessel classifier recognises venous arch/network names, preserves all 201 previous vessel colours and leaves unknown/conflicting types neutral. Red/blue are artery/vein labels, not oxygenation. See `docs/HAND_VENOUS_DETAIL.md` and the raw/canonical source evidence. No paid API, new dependency/font/texture, copied diagram, patient data or clinical approval is added.
 

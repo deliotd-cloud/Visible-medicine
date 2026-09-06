@@ -1,5 +1,11 @@
 # Clinical validation checklist
 
+## Foot vascular gates
+
+- Review eight admitted source vessel identities, plantar arch/trunk aliases, deep/superficial branch course, depth, endpoints, lumen/calibre, variants and grouped dorsal arch components.
+- Withhold FMA44883/FMA44884 and aggregate reimports until the near-translation shape similarity to the arterial arches is adjudicated. This diagnostic neither changes source coordinates nor proves venous anatomy.
+- Accept four new plantar/dorsal views, small-vessel controls, labels, side scopes, focus-only practice and colour discrimination on real devices. No plantar nerves, complete digital branches, scans or patient registration are supplied. See `FOOT_VASCULAR_DETAIL.md`.
+
 ## Hand venous and colour gates
 
 - Review fourteen admitted venous source identities, grouped metacarpal/digital extent, palmar arch depth, dorsal drainage relationships, tributaries, lumen/valves, endpoints and continuity. Adjudicate held FMA85102/FMA85103 before importing any component or aggregate alias.

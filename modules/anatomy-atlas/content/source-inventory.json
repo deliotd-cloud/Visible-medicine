@@ -3,7 +3,7 @@
   "sourceVersion": "4.0",
   "license": "CC-BY-4.0",
   "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
-  "catalogSha256": "5d7a82b00671a07b993122317e3f22eb64bc5eed4f1df064b81c78b35b46e590",
+  "catalogSha256": "b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5",
   "tables": [
     {
       "name": "isa_parts_list_e.txt",
@@ -60,13 +60,13 @@
     "uniqueConceptIds": 3432,
     "archiveEntries": 3492,
     "archiveEntriesWithoutConcept": 0,
-    "admittedStructures": 998,
+    "admittedStructures": 1006,
     "statuses": {
-      "represented-not-selectable": 1826,
-      "admitted": 1398,
-      "unused-available": 767,
-      "held-source-review": 30,
-      "partly-represented": 199,
+      "represented-not-selectable": 1834,
+      "admitted": 1410,
+      "unused-available": 741,
+      "held-source-review": 32,
+      "partly-represented": 203,
       "admitted-other-definition": 53
     }
   },
@@ -16527,10 +16527,13 @@
         "FJ2089",
         "FJ2179"
       ],
-      "status": "unused-available",
+      "status": "partly-represented",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA69418",
@@ -25996,6 +25999,8 @@
         "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
         "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
         "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
         "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
@@ -33133,10 +33138,13 @@
         "FJ2089",
         "FJ2179"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA43941"
@@ -33150,10 +33158,12 @@
       "files": [
         "FJ2179"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -33165,10 +33175,12 @@
       "files": [
         "FJ2089"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -33199,10 +33211,13 @@
         "FJ2089",
         "FJ2179"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA43933"
@@ -33219,10 +33234,15 @@
         "FJ2136",
         "FJ2169"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA69559"
@@ -33236,10 +33256,12 @@
       "files": [
         "FJ2169"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -33251,10 +33273,12 @@
       "files": [
         "FJ2085"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -33808,10 +33832,13 @@
         "FJ2061",
         "FJ2062"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+        "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -33967,10 +33994,12 @@
         "FJ2061",
         "FJ2062"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -33983,10 +34012,12 @@
         "FJ2059",
         "FJ2060"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -33998,9 +34029,9 @@
       "files": [
         "FJ2129"
       ],
-      "status": "unused-available",
+      "status": "held-source-review",
       "displayedId": null,
-      "heldReason": null,
+      "heldReason": "Source-labelled plantar venous arch closely matches the right plantar arterial arch after an approximately 4.216 mm source-Z translation: all sampled aligned distances are below 0.06 mm. Original surfaces are separate, not overlapping duplicates, but independent venous shape/depth provenance needs adjudication. Do not import or infer arterial-venous correspondence from the matched shape.",
       "representedBy": [],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -34013,9 +34044,9 @@
       "files": [
         "FJ2128"
       ],
-      "status": "unused-available",
+      "status": "held-source-review",
       "displayedId": null,
-      "heldReason": null,
+      "heldReason": "Source-labelled plantar venous arch closely matches the left plantar arterial arch after an approximately 4.216 mm source-Z translation: all sampled aligned distances are below 0.06 mm. Original surfaces are separate, not overlapping duplicates, but independent venous shape/depth provenance needs adjudication. Do not import or infer arterial-venous correspondence from the matched shape.",
       "representedBy": [],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -38045,6 +38076,8 @@
         "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
         "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
         "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
         "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
@@ -42637,12 +42670,20 @@
         "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
         "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+        "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+        "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+        "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
         "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
@@ -43168,6 +43209,8 @@
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
         "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
         "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+        "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+        "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
         "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
         "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
         "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
@@ -54087,9 +54130,13 @@
         "vm:anatomy:body:foot:left:muscle:third-lumbrical-of-left-foot",
         "vm:anatomy:body:foot:left:muscle:third-plantar-interosseous-of-left-foot",
         "vm:anatomy:body:foot:left:muscle:transverse-head-of-left-adductor-hallucis",
+        "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+        "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
         "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-big-toe",
         "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-fourth-toe",
         "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-little-toe",
@@ -54136,9 +54183,13 @@
         "vm:anatomy:body:foot:right:muscle:third-lumbrical-of-right-foot",
         "vm:anatomy:body:foot:right:muscle:third-plantar-interosseous-of-right-foot",
         "vm:anatomy:body:foot:right:muscle:transverse-head-of-right-adductor-hallucis",
+        "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+        "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:bone:left-radius",
         "vm:anatomy:body:forearm:left:bone:left-ulna",
         "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
@@ -58531,9 +58582,13 @@
         "vm:anatomy:body:foot:left:muscle:third-lumbrical-of-left-foot",
         "vm:anatomy:body:foot:left:muscle:third-plantar-interosseous-of-left-foot",
         "vm:anatomy:body:foot:left:muscle:transverse-head-of-left-adductor-hallucis",
+        "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+        "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
         "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-big-toe",
         "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-fourth-toe",
         "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-little-toe",
@@ -58580,9 +58635,13 @@
         "vm:anatomy:body:foot:right:muscle:third-lumbrical-of-right-foot",
         "vm:anatomy:body:foot:right:muscle:third-plantar-interosseous-of-right-foot",
         "vm:anatomy:body:foot:right:muscle:transverse-head-of-right-adductor-hallucis",
+        "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+        "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:bone:left-radius",
         "vm:anatomy:body:forearm:left:bone:left-ulna",
         "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
@@ -61714,6 +61773,8 @@
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
+        "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+        "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
         "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
         "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
         "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
@@ -64145,9 +64206,13 @@
         "vm:anatomy:body:foot:left:muscle:third-lumbrical-of-left-foot",
         "vm:anatomy:body:foot:left:muscle:third-plantar-interosseous-of-left-foot",
         "vm:anatomy:body:foot:left:muscle:transverse-head-of-left-adductor-hallucis",
+        "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+        "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
         "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-big-toe",
         "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-fourth-toe",
         "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-little-toe",
@@ -64194,9 +64259,13 @@
         "vm:anatomy:body:foot:right:muscle:third-lumbrical-of-right-foot",
         "vm:anatomy:body:foot:right:muscle:third-plantar-interosseous-of-right-foot",
         "vm:anatomy:body:foot:right:muscle:transverse-head-of-right-adductor-hallucis",
+        "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+        "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:bone:left-radius",
         "vm:anatomy:body:forearm:left:bone:left-ulna",
         "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
@@ -67365,9 +67434,13 @@
         "vm:anatomy:body:foot:left:muscle:third-lumbrical-of-left-foot",
         "vm:anatomy:body:foot:left:muscle:third-plantar-interosseous-of-left-foot",
         "vm:anatomy:body:foot:left:muscle:transverse-head-of-left-adductor-hallucis",
+        "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+        "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
         "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-big-toe",
         "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-fourth-toe",
         "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-little-toe",
@@ -67414,9 +67487,13 @@
         "vm:anatomy:body:foot:right:muscle:third-lumbrical-of-right-foot",
         "vm:anatomy:body:foot:right:muscle:third-plantar-interosseous-of-right-foot",
         "vm:anatomy:body:foot:right:muscle:transverse-head-of-right-adductor-hallucis",
+        "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+        "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:bone:left-radius",
         "vm:anatomy:body:forearm:left:bone:left-ulna",
         "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
@@ -71209,16 +71286,24 @@
         "vm:anatomy:body:foot:left:muscle:medial-head-of-left-flexor-hallucis-brevis",
         "vm:anatomy:body:foot:left:muscle:oblique-head-of-left-adductor-hallucis",
         "vm:anatomy:body:foot:left:muscle:transverse-head-of-left-adductor-hallucis",
+        "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+        "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
         "vm:anatomy:body:foot:right:muscle:lateral-head-of-right-flexor-hallucis-brevis",
         "vm:anatomy:body:foot:right:muscle:medial-head-of-right-flexor-hallucis-brevis",
         "vm:anatomy:body:foot:right:muscle:oblique-head-of-right-adductor-hallucis",
         "vm:anatomy:body:foot:right:muscle:transverse-head-of-right-adductor-hallucis",
+        "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+        "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-flexor-carpi-ulnaris",
         "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-pronator-teres",
         "vm:anatomy:body:forearm:left:muscle:ulnar-head-of-left-flexor-carpi-ulnaris",
@@ -73707,10 +73792,13 @@
         "FJ2089",
         "FJ2179"
       ],
-      "status": "unused-available",
+      "status": "partly-represented",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA20684",
@@ -73893,10 +73981,13 @@
         "FJ2068",
         "FJ2136"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -73908,10 +73999,12 @@
       "files": [
         "FJ2136"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -73923,10 +74016,12 @@
       "files": [
         "FJ2068"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -73959,10 +74054,15 @@
         "FJ2136",
         "FJ2169"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA43942"
@@ -73997,10 +74097,13 @@
         "FJ2089",
         "FJ2179"
       ],
-      "status": "unused-available",
+      "status": "partly-represented",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA20684",
@@ -77824,10 +77927,13 @@
         "FJ2089",
         "FJ2179"
       ],
-      "status": "unused-available",
+      "status": "partly-represented",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA20684",
@@ -79280,6 +79386,8 @@
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
+        "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+        "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
         "vm:anatomy:body:leg:left:vessel:left-popliteal-vein",
         "vm:anatomy:body:leg:left:vessel:left-small-saphenous-vein",
         "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
@@ -81298,16 +81406,24 @@
         "vm:anatomy:body:foot:left:muscle:medial-head-of-left-flexor-hallucis-brevis",
         "vm:anatomy:body:foot:left:muscle:oblique-head-of-left-adductor-hallucis",
         "vm:anatomy:body:foot:left:muscle:transverse-head-of-left-adductor-hallucis",
+        "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+        "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
         "vm:anatomy:body:foot:right:muscle:lateral-head-of-right-flexor-hallucis-brevis",
         "vm:anatomy:body:foot:right:muscle:medial-head-of-right-flexor-hallucis-brevis",
         "vm:anatomy:body:foot:right:muscle:oblique-head-of-right-adductor-hallucis",
         "vm:anatomy:body:foot:right:muscle:transverse-head-of-right-adductor-hallucis",
+        "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+        "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-flexor-carpi-ulnaris",
         "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-pronator-teres",
         "vm:anatomy:body:forearm:left:muscle:ulnar-head-of-left-flexor-carpi-ulnaris",
@@ -84654,12 +84770,20 @@
         "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
         "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+        "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+        "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+        "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
         "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
@@ -85502,12 +85626,18 @@
         "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+        "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
@@ -86019,6 +86149,8 @@
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
         "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
         "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+        "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+        "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
         "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
         "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
         "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
@@ -86161,6 +86293,10 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+        "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
         "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
         "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
         "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta"
@@ -90430,9 +90566,13 @@
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
@@ -102363,6 +102503,8 @@
         "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-artery",
         "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
         "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-artery",
@@ -102407,6 +102549,8 @@
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
         "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-artery",
         "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
         "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-artery",
@@ -104112,6 +104256,8 @@
         "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-artery",
         "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
         "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-artery",
@@ -104152,6 +104298,8 @@
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
         "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-artery",
         "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
         "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-artery",
@@ -105820,6 +105968,8 @@
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
         "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-big-toe",
         "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-fourth-toe",
         "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-little-toe",
@@ -105849,6 +105999,8 @@
         "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:bone:left-radius",
         "vm:anatomy:body:forearm:left:bone:left-ulna",
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
@@ -112395,6 +112547,8 @@
       "representedBy": [
         "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-artery"
       ],
       "unavailable": [],
@@ -112418,6 +112572,8 @@
       "representedBy": [
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
         "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-artery"
       ],
       "unavailable": [],
@@ -112474,7 +112630,8 @@
       "displayedId": "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery"
+        "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -112492,7 +112649,8 @@
       "displayedId": "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery"
+        "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -112510,7 +112668,8 @@
       "displayedId": "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery"
+        "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -112528,7 +112687,8 @@
       "displayedId": "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery"
+        "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -112541,10 +112701,12 @@
       "files": [
         "FJ2179"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -112556,10 +112718,12 @@
       "files": [
         "FJ2089"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -112571,10 +112735,12 @@
       "files": [
         "FJ2169"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA69566"
@@ -112588,10 +112754,12 @@
       "files": [
         "FJ2085"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA69567"
@@ -113197,9 +113365,13 @@
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
@@ -115064,9 +115236,13 @@
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
@@ -122838,10 +123014,12 @@
       "files": [
         "FJ2169"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA43943"
@@ -122855,10 +123033,12 @@
       "files": [
         "FJ2085"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA43944"
@@ -129074,9 +129254,13 @@
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
@@ -141438,9 +141622,11 @@
       "available": true,
       "bytes": 112131,
       "crc32": 3606872263,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "9421947a4511ed928078ee25870fefc51632c373fd3c8918bd9d53c3fc8dd5fb",
+      "geometrySha256": "b2c2cb6f5bf17d82ec7f42abff666fac68a28cfd71c7e2257b5634ecde2cb28d",
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
+      ]
     },
     {
       "tree": "isa",
@@ -141448,9 +141634,11 @@
       "available": true,
       "bytes": 37296,
       "crc32": 3275781653,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "f882652c192b3c2e05405273755193989d5b1866dcba53b9c0653e7a1ee2b2f9",
+      "geometrySha256": "81866b8aa863024de21a25b06af634e5bb1ae474f916bb3175265c600339723c",
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
+      ]
     },
     {
       "tree": "isa",
@@ -141458,9 +141646,11 @@
       "available": true,
       "bytes": 113142,
       "crc32": 1440191919,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "2b349be398677b9dab660a07b4e038b35cb458883e350340ff53a2754aebcc41",
+      "geometrySha256": "d50dd4628a3114557451460a4d0630da8d74b3b6033911b9b047b50ea8f5630f",
+      "representedBy": [
+        "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot"
+      ]
     },
     {
       "tree": "isa",
@@ -141468,9 +141658,11 @@
       "available": true,
       "bytes": 38184,
       "crc32": 1700422002,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "4c16febe531c5d2afacf9bb47a899602239f2424ebd6e6d97860691bc9a2669b",
+      "geometrySha256": "3566bf20254bcce88b888290831a7a93c47ab342fbc151b08b2496735f2ffdfb",
+      "representedBy": [
+        "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot"
+      ]
     },
     {
       "tree": "isa",
@@ -141530,9 +141722,11 @@
       "available": true,
       "bytes": 28103,
       "crc32": 3861848380,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "d4c5c4fda6fed56de66b8991b23aa7f08f39924bb2970ebb6129abfac191d945",
+      "geometrySha256": "178a04b45f60709aa6efddd0d4225563ceb8135d91e493f54926a2322f31b6f7",
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -141682,9 +141876,11 @@
       "available": true,
       "bytes": 71345,
       "crc32": 2074560515,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "0c21b7855d4e5fad25948af62db6c701e0d9552dedf2a8b6a1952b527aa82ea2",
+      "geometrySha256": "0e9d8e14bb14923283f0408139e97b4572d7a49712ab6878fe48a9d7d9bc4193",
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch"
+      ]
     },
     {
       "tree": "isa",
@@ -141716,9 +141912,11 @@
       "available": true,
       "bytes": 56024,
       "crc32": 1574051529,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "e744f8331409c56adeace058fa04fec14f7ec22dc0053c85845383cc0f6dc455",
+      "geometrySha256": "6b504126a210df7d26ce17750ea1e9df008a7f1929a21698ff84a7181dbfd7a1",
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -142056,9 +142254,11 @@
       "available": true,
       "bytes": 28633,
       "crc32": 409749110,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "fe4fc6b629bff4228554964bbca5b8aacc81c721e8a5177a010f8365b9d2b3da",
+      "geometrySha256": "de07e665e6ff1d6c8527dea52f9f38c9cff75104938fca142a678d45bcaadd31",
+      "representedBy": [
+        "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -142270,9 +142470,11 @@
       "available": true,
       "bytes": 73729,
       "crc32": 2982635528,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "9e02a211ef6b9c06c911892145c75ace55ed48bf8d4ed19eab11f19c3d1301a8",
+      "geometrySha256": "467ef8ac4ce0a14c2d92a95bce0af81bdbb1562fa73865c5d66c80cbbacb1d75",
+      "representedBy": [
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch"
+      ]
     },
     {
       "tree": "isa",
@@ -142368,9 +142570,11 @@
       "available": true,
       "bytes": 53486,
       "crc32": 405377697,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "77f3a27fd0d079e8334f4145d031b308b00e8660b8ad3a2a562fd0f0f632a5c7",
+      "geometrySha256": "0a0a4e10bc24eebe5dab1ad4b5e7e55834af272359ff0bcb2de9d1dd55276cfb",
+      "representedBy": [
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -160606,9 +160810,11 @@
       "available": true,
       "bytes": 71348,
       "crc32": 2503017021,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "1337ec4ebf411c9be442c05a63efdf46f5c0d7d6f434f7c14faa80c1c6ad108d",
+      "geometrySha256": "0e9d8e14bb14923283f0408139e97b4572d7a49712ab6878fe48a9d7d9bc4193",
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-plantar-arch"
+      ]
     },
     {
       "tree": "partof",
@@ -160640,9 +160846,11 @@
       "available": true,
       "bytes": 56027,
       "crc32": 338883279,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "1c50b0727d565ac4bab042d6fdc80f705f74d85e9d41279f06be9cb2c6d602b0",
+      "geometrySha256": "6b504126a210df7d26ce17750ea1e9df008a7f1929a21698ff84a7181dbfd7a1",
+      "representedBy": [
+        "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery"
+      ]
     },
     {
       "tree": "partof",
@@ -160752,9 +160960,11 @@
       "available": true,
       "bytes": 73732,
       "crc32": 3538591565,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "9a6f51cff5c7d10db06e71dae2b535e433ba0c649aeecb4da601a26a5cc6dcd4",
+      "geometrySha256": "467ef8ac4ce0a14c2d92a95bce0af81bdbb1562fa73865c5d66c80cbbacb1d75",
+      "representedBy": [
+        "vm:anatomy:body:foot:right:vessel:right-plantar-arch"
+      ]
     },
     {
       "tree": "partof",
@@ -160786,9 +160996,11 @@
       "available": true,
       "bytes": 53489,
       "crc32": 664124135,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "753accb578d87cee22d37c28748659b61dcda8a8a527f08c4e6124e1c2f8eada",
+      "geometrySha256": "0a0a4e10bc24eebe5dab1ad4b5e7e55834af272359ff0bcb2de9d1dd55276cfb",
+      "representedBy": [
+        "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery"
+      ]
     },
     {
       "tree": "partof",

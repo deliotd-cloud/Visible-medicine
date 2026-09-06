@@ -5,11 +5,11 @@ import { build } from 'esbuild';
 import { fileURLToPath } from 'node:url';
 import { Box3, Vector3, Matrix4 } from 'three';
 import {
-  handVascularDefinitions,
-  handVascularAdmissions,
-  handVascularHeldIds,
-  handVascularSelections,
-} from './hand-vascular-selections.mjs';
+  footVascularDefinitions,
+  footVascularAdmissions,
+  footVascularHeldIds,
+  footVascularSelections,
+} from './foot-vascular-selections.mjs';
 import { inventoryHolds, geometryFingerprint } from './anatomy-inventory.mjs';
 import { cache } from './bodyparts-archive.mjs';
 const rawSourceCheck = process.argv.includes('--raw-source');
@@ -27,17 +27,17 @@ const compare = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 const read = async (p) => JSON.parse(await fs.readFile(p, 'utf8'));
 const root = 'public/models/bodyparts3d/full-body/';
 const catalog = await read(root + 'catalog.json'),
-  baseline = await read('content/hand-vascular-baseline.json'),
-  audit = await read('content/hand-vascular-source-audit.json'),
+  baseline = await read('content/foot-vascular-baseline.json'),
+  audit = await read('content/foot-vascular-source-audit.json'),
   inventory = await read('content/source-inventory.json');
-same(baseline.sourceCommit, '2418244c0dcdb01807c6398d94623651fca6f7fa');
+same(baseline.sourceCommit, '574d408e1d46176e15d1fc0d2cb80a708149c090');
 same(
   baseline.catalogSha256,
-  'd740da1d11bdf93d26ebe60ccdc82b7fc16909713779d7d2933d3d9dc10988cb',
+  '5d7a82b00671a07b993122317e3f22eb64bc5eed4f1df064b81c78b35b46e590',
 );
 same(audit.sourceCommit, baseline.sourceCommit);
-same(baseline.structures.length, 958);
-same(baseline.bundles.length, 79);
+same(baseline.structures.length, 998);
+same(baseline.bundles.length, 81);
 same(catalog.structures.length, 1006);
 same(catalog.bundles.length, 82);
 same(catalog.coordinateSystem, baseline.coordinateSystem);
@@ -56,31 +56,31 @@ for (const old of baseline.bundles) {
   same(hash(await fs.readFile(root + old.id + '.glb')), old.sha256);
 }
 const additions = catalog.structures.filter((s) =>
-  s.bundle.endsWith('-hand-vascular'),
+  s.bundle.endsWith('-foot-vascular'),
 );
 same(
   additions.map((s) => s.fmaId).sort(compare),
-  [...handVascularAdmissions].sort(compare),
+  [...footVascularAdmissions].sort(compare),
 );
 same(
-  handVascularSelections(
+  footVascularSelections(
     new Map(
       inventory.records.filter((r) => r.tree === 'isa').map((r) => [r.id, r]),
     ),
   )
     .map((s) => s.fma)
     .sort(compare),
-  [...handVascularAdmissions].sort(compare),
+  [...footVascularAdmissions].sort(compare),
 );
-same(additions.length, 26);
-same(additions.filter((s) => s.system === 'vessels').length, 26);
+same(additions.length, 8);
+same(additions.filter((s) => s.system === 'vessels').length, 8);
 same(additions.filter((s) => s.system === 'organs').length, 0);
 same(
   additions.reduce((n, s) => n + s.sources.length, 0),
-  30,
+  10,
 );
-same(audit.results.length, 26);
-same(audit.comparisons.length, 578);
+same(audit.results.length, 10);
+same(audit.comparisons.length, 284);
 same(audit.license, 'CC-BY-4.0');
 check(audit.distanceMethod.includes('segment/point fallback'));
 for (const row of audit.comparisons) {
@@ -100,8 +100,8 @@ same(
   audit.comparisons.filter((r) => r.flagged),
   [],
 );
-same(additions.filter((s) => s.laterality === 'right').length, 14);
-same(additions.filter((s) => s.laterality === 'left').length, 12);
+same(additions.filter((s) => s.laterality === 'right').length, 4);
+same(additions.filter((s) => s.laterality === 'left').length, 4);
 for (const alias of [
   'FMA23046',
   'FMA85111',
@@ -110,7 +110,7 @@ for (const alias of [
   'FMA37389',
 ])
   check(!catalog.structures.some((s) => s.fmaId === alias));
-for (const id of handVascularHeldIds) {
+for (const id of footVascularHeldIds) {
   check(inventoryHolds[id]);
   check(!catalog.structures.some((s) => s.fmaId === id));
   for (const row of inventory.records.filter((r) => r.id === id))
@@ -118,6 +118,35 @@ for (const id of handVascularHeldIds) {
 }
 for (const id of ['FMA46622', 'FMA46633', 'FMA46634'])
   check(!catalog.structures.some((s) => s.fmaId === id));
+same(audit.shapeComparisons.length, 2);
+for (const pair of audit.shapeComparisons) {
+  check(footVascularAdmissions.includes(pair.a));
+  check(footVascularHeldIds.includes(pair.b));
+  same(pair.rawCoordinatesChanged, false);
+  check(pair.diagnosticTranslationMm.every(Number.isFinite));
+  check(Math.abs(pair.diagnosticTranslationMm[2] + 4.216) < 0.001);
+  for (const d of [pair.aToAlignedB, pair.alignedBToA]) {
+    check(d.samples > 0 && d.samples <= 128);
+    same(d.withinQuarterMm, d.samples);
+    check(d.medianMm > 0 && d.medianMm < 0.02);
+    check(d.maxMm > d.medianMm && d.maxMm < 0.06);
+  }
+}
+for (const id of [
+  'FMA43942',
+  'FMA69559',
+  'FMA69566',
+  'FMA69567',
+  'FMA69513',
+  'FMA44356',
+  'FMA44489',
+  'FMA85102',
+  'FMA85103',
+])
+  check(
+    !catalog.structures.some((s) => s.fmaId === id),
+    'No alias or previous held identity admitted',
+  );
 const matrix = new Matrix4().fromArray(
   catalog.coordinateSystem.sourceToSceneColumnMajor,
 );
@@ -125,10 +154,10 @@ for (const [
   id,
   name,
   files,
-  region = 'hand',
+  region = 'foot',
   system = 'vessels',
   category = 'vessel',
-] of handVascularDefinitions) {
+] of footVascularDefinitions) {
   const a = audit.results.find((r) => r.fmaId === id);
   same(a.name, name);
   same(a.region, region);
@@ -146,7 +175,7 @@ for (const [
   for (const f of a.files) same(f.canonicalDuplicateOwners, []);
   const s = additions.find((s) => s.fmaId === id);
   if (!s) {
-    check(handVascularHeldIds.includes(id));
+    check(footVascularHeldIds.includes(id));
     continue;
   }
   same(a.degenerateTriangles, 0);
@@ -221,7 +250,7 @@ for (const [
 const compiled = await build({
   stdin: {
     contents:
-      "export * from './lib/hand-vascular-anatomy'; export * from './app/dissection-data'; export * from './app/body-content'; export * from './lib/anatomy-practice'; export * from './lib/anatomy-link-registry'; export * from './lib/study-links';",
+      "export * from './lib/foot-vascular-anatomy'; export * from './app/dissection-data'; export * from './app/body-content'; export * from './lib/anatomy-practice'; export * from './lib/anatomy-link-registry'; export * from './lib/study-links';",
     resolveDir: fileURLToPath(new URL('../', import.meta.url)),
     loader: 'ts',
   },
@@ -235,11 +264,11 @@ const api = await import(
     Buffer.from(compiled.outputFiles[0].text).toString('base64')
 );
 same(
-  api.handVascularGroups.flatMap((g) => g.fmaIds).sort(compare),
-  [...handVascularAdmissions].sort(compare),
+  api.footVascularGroups.flatMap((g) => g.fmaIds).sort(compare),
+  [...footVascularAdmissions].sort(compare),
 );
 for (const s of additions) {
-  const group = api.handVascularGroupFor(s.fmaId);
+  const group = api.footVascularGroupFor(s.fmaId);
   check(group);
   for (const tab of ['anatomy', 'function']) {
     const c = api.bodyContent(s, tab);
@@ -255,16 +284,16 @@ for (const s of additions) {
   same(e.sources, s.sources);
   same(e.reference.kind, 'surface-bounds-centre');
 }
-same(api.handVascularStudySets.length, 4);
+same(api.footVascularStudySets.length, 4);
 const counts = {
-  'palmar-arch-window': { both: 18, left: 9, right: 9 },
-  'palmar-digital-arteries-window': { both: 22, left: 10, right: 12 },
-  'thumb-index-arteries-window': { both: 12, left: 6, right: 6 },
-  'hand-arterial-detail-exposed': { both: 28, left: 13, right: 15 },
+  'plantar-arterial-arch-window': { both: 18, left: 9, right: 9 },
+  'medial-plantar-branch-window': { both: 8, left: 4, right: 4 },
+  'dorsal-foot-veins-window': { both: 14, left: 7, right: 7 },
+  'foot-vessels-exposed': { both: 14, left: 7, right: 7 },
 };
 const loaded = catalog.bundles.map((b) => b.id);
 let serial = 0;
-for (const study of api.handVascularStudySets)
+for (const study of api.footVascularStudySets)
   for (const region of study.regions) {
     const profile = api.dissectionProfiles[region],
       focus = profile.focuses.find((f) => f.id === study.id),
@@ -382,24 +411,24 @@ const result = {
   passed: true,
   checks,
   rawSourceCheck,
-  newEntries: 26,
-  vesselEntries: 26,
-  rightEntries: 14,
-  leftEntries: 12,
-  sourceComponents: 30,
+  newEntries: 8,
+  vesselEntries: 8,
+  rightEntries: 4,
+  leftEntries: 4,
+  sourceComponents: 10,
   newBundles: 1,
   newAssetBytes: catalog.bundles
-    .filter((b) => b.id.endsWith('-hand-vascular'))
+    .filter((b) => b.id.endsWith('-foot-vascular'))
     .reduce((n, b) => n + b.bytes, 0),
-  preservedRecords: 958,
-  preservedBundles: 79,
-  sourceHolds: handVascularHeldIds,
+  preservedRecords: 998,
+  preservedBundles: 81,
+  sourceHolds: footVascularHeldIds,
   studyWindows: 4,
   clinicalValidation: false,
   browserInteractionTesting: false,
 };
 await fs.writeFile(
-  'docs/hand-vascular-validation.json',
+  'docs/foot-vascular-validation.json',
   JSON.stringify(result, null, 2) + '\n',
 );
 console.log(result);

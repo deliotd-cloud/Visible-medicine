@@ -2,11 +2,11 @@
   "passed": true,
   "regions": 11,
   "wholeBody": true,
-  "stages": 124,
-  "focusedViews": 106,
-  "checks": 3666,
-  "cameraChecks": 8928,
-  "structures": 998,
+  "stages": 128,
+  "focusedViews": 110,
+  "checks": 3786,
+  "cameraChecks": 9216,
+  "structures": 1006,
   "clinicalValidation": false,
   "browserInteractionTesting": false,
   "rows": [
@@ -14,7 +14,7 @@
       "region": "whole-body",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 998,
+      "visible": 1006,
       "removed": 0
     },
     {
@@ -22,34 +22,34 @@
       "stage": "musculoskeletal",
       "kind": "window",
       "visible": 572,
-      "removed": 426
+      "removed": 434
     },
     {
       "region": "whole-body",
       "stage": "viscera",
       "kind": "window",
       "visible": 74,
-      "removed": 924
+      "removed": 932
     },
     {
       "region": "whole-body",
       "stage": "neural",
       "kind": "window",
       "visible": 54,
-      "removed": 944
+      "removed": 952
     },
     {
       "region": "whole-body",
       "stage": "bones",
       "kind": "skeleton",
       "visible": 203,
-      "removed": 795
+      "removed": 803
     },
     {
       "region": "whole-body",
       "stage": "vascular",
       "kind": "window",
-      "visible": 418,
+      "visible": 426,
       "removed": 580
     },
     {
@@ -57,7 +57,7 @@
       "stage": "connective",
       "kind": "window",
       "visible": 286,
-      "removed": 712
+      "removed": 720
     },
     {
       "region": "shoulder-arm",
@@ -371,28 +371,28 @@
       "region": "foot",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 110,
+      "visible": 118,
       "removed": 0
     },
     {
       "region": "foot",
       "stage": "layer-one",
       "kind": "peel",
-      "visible": 104,
+      "visible": 112,
       "removed": 6
     },
     {
       "region": "foot",
       "stage": "layer-two",
       "kind": "peel",
-      "visible": 94,
+      "visible": 102,
       "removed": 16
     },
     {
       "region": "foot",
       "stage": "layer-three",
       "kind": "peel",
-      "visible": 84,
+      "visible": 92,
       "removed": 26
     },
     {
@@ -400,13 +400,13 @@
       "stage": "bones",
       "kind": "skeleton",
       "visible": 54,
-      "removed": 56
+      "removed": 64
     },
     {
       "region": "foot",
       "stage": "vascular",
       "kind": "window",
-      "visible": 70,
+      "visible": 78,
       "removed": 40
     },
     {
@@ -414,7 +414,35 @@
       "stage": "connective",
       "kind": "window",
       "visible": 58,
-      "removed": 52
+      "removed": 60
+    },
+    {
+      "region": "foot",
+      "stage": "plantar-arterial-arch-window",
+      "kind": "window",
+      "visible": 18,
+      "removed": 100
+    },
+    {
+      "region": "foot",
+      "stage": "medial-plantar-branch-window",
+      "kind": "window",
+      "visible": 8,
+      "removed": 110
+    },
+    {
+      "region": "foot",
+      "stage": "dorsal-foot-veins-window",
+      "kind": "window",
+      "visible": 14,
+      "removed": 104
+    },
+    {
+      "region": "foot",
+      "stage": "foot-vessels-exposed",
+      "kind": "window",
+      "visible": 14,
+      "removed": 104
     },
     {
       "region": "thorax",

@@ -1,6 +1,6 @@
 # Regional study library
 
-The latest [hand venous extension](HAND_VENOUS_DETAIL.md) brings this library to 77 independent windows, 106 focuses and 148 cards (183 recipes, 35 equivalent pairs). The 47 layer steps remain separate. Current evidence is in `study-library-validation.json`; milestone counts below are historical.
+The latest [foot vascular extension](FOOT_VASCULAR_DETAIL.md) brings this library to 81 independent windows, 110 focuses and 152 cards (191 recipes, 39 equivalent pairs). The 47 layer steps remain separate. Current evidence is in `study-library-validation.json`; milestone counts below are historical.
 
 The counts and hashes below describe the original library milestone. The [thoracic extension](THORACIC_DETAIL.md) now brings the same library to 69 independent windows, 98 focuses and 140 cards (167 recipes, 27 equivalent pairs), with 47 layer steps still separate. Current hashes and 34,836 passing assertions are in `study-library-validation.json`.
 

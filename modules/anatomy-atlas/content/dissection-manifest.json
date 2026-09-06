@@ -1,7 +1,7 @@
 {
   "version": 1,
   "reviewStatus": "draft-unvalidated",
-  "catalogSha256": "5d7a82b00671a07b993122317e3f22eb64bc5eed4f1df064b81c78b35b46e590",
+  "catalogSha256": "b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5",
   "profiles": [
     {
       "region": "whole-body",
@@ -1023,7 +1023,15 @@
             "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-middle-finger",
             "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-middle-finger",
             "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
-            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger"
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger",
+            "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+            "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+            "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
           ]
         },
         {
@@ -2446,7 +2454,15 @@
             "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-middle-finger",
             "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-middle-finger",
             "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
-            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger"
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger",
+            "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+            "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+            "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
           ]
         },
         {
@@ -3114,7 +3130,11 @@
             "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
             "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
             "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
-            "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger"
+            "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+            "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery"
           ]
         },
         {
@@ -8419,7 +8439,15 @@
             "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
             "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
             "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
-            "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon"
+            "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
+            "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+            "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+            "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
           ]
         },
         {
@@ -8545,7 +8573,15 @@
             "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
             "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
             "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
-            "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon"
+            "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
+            "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+            "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+            "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
           ]
         },
         {
@@ -8661,7 +8697,15 @@
             "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
             "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
             "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
-            "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon"
+            "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
+            "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+            "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+            "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
           ]
         },
         {
@@ -8766,7 +8810,15 @@
             "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
             "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
             "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
-            "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon"
+            "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
+            "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+            "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+            "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
           ]
         },
         {
@@ -8927,7 +8979,15 @@
             "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
             "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
             "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
-            "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery"
+            "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+            "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+            "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
           ]
         },
         {
@@ -9005,6 +9065,214 @@
             "vm:anatomy:body:foot:left:ligament:left-long-plantar-ligament",
             "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
             "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon"
+          ]
+        },
+        {
+          "id": "plantar-arterial-arch-window",
+          "title": "Plantar arch & deep plantar artery",
+          "description": "Inspect the supplied plantar arch and deep plantar artery from the sole, with lateral plantar, dorsalis pedis and metatarsal context.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA43943",
+                "FMA43944",
+                "FMA69514",
+                "FMA69515"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA43931",
+                "FMA43932",
+                "FMA43916",
+                "FMA43917",
+                "FMA24507",
+                "FMA24508",
+                "FMA24509",
+                "FMA24510",
+                "FMA24511",
+                "FMA24512",
+                "FMA24513",
+                "FMA24514",
+                "FMA24515",
+                "FMA24516"
+              ]
+            }
+          ],
+          "view": "inferior",
+          "landmarks": [
+            "plantar arch",
+            "deep plantar artery",
+            "metatarsal bone"
+          ],
+          "inspect": "Choose one side, set a metatarsal aside and Undo to restore it. Follow source surfaces without assuming a complete arch, patent endpoint connection or safe surgical plane.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:foot:left:bone:left-first-metatarsal-bone",
+            "vm:anatomy:body:foot:left:bone:left-second-metatarsal-bone",
+            "vm:anatomy:body:foot:left:bone:left-third-metatarsal-bone",
+            "vm:anatomy:body:foot:left:bone:left-fourth-metatarsal-bone",
+            "vm:anatomy:body:foot:left:bone:left-fifth-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-first-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-second-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-third-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-fourth-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-fifth-metatarsal-bone",
+            "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
+            "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
+            "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+            "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+            "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery"
+          ]
+        },
+        {
+          "id": "medial-plantar-branch-window",
+          "title": "Medial plantar arterial branch",
+          "description": "Compare the superficial medial plantar arterial sources with the medial plantar arteries, abductor hallucis and first metatarsals.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA43937",
+                "FMA43938"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA43929",
+                "FMA43930",
+                "FMA37459",
+                "FMA37460",
+                "FMA24507",
+                "FMA24508"
+              ]
+            }
+          ],
+          "view": "inferior",
+          "landmarks": [
+            "superficial medial plantar artery",
+            "abductor hallucis",
+            "first metatarsal bone"
+          ],
+          "inspect": "Remove or fade the muscle to inspect the fine branch, then restore it. Its source name does not establish a validated depth or dissection plane. Plantar nerves are not present.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:foot:left:bone:left-first-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-first-metatarsal-bone",
+            "vm:anatomy:body:foot:right:muscle:right-abductor-hallucis",
+            "vm:anatomy:body:foot:left:muscle:left-abductor-hallucis",
+            "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery"
+          ]
+        },
+        {
+          "id": "dorsal-foot-veins-window",
+          "title": "Dorsal foot venous arches",
+          "description": "Look down onto the dorsal venous arch sources with metatarsals and dorsalis pedis as context.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA44881",
+                "FMA44882"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA24507",
+                "FMA24508",
+                "FMA24509",
+                "FMA24510",
+                "FMA24511",
+                "FMA24512",
+                "FMA24513",
+                "FMA24514",
+                "FMA24515",
+                "FMA24516",
+                "FMA43916",
+                "FMA43917"
+              ]
+            }
+          ],
+          "view": "superior",
+          "landmarks": [
+            "dorsal venous arch",
+            "dorsalis pedis artery",
+            "metatarsal bone"
+          ],
+          "inspect": "Select and frame an arch or set a bone aside. The two components of each source remain grouped; absent tributaries and saphenous connections are not bridged. Focus-only practice excludes the context.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:foot:left:bone:left-first-metatarsal-bone",
+            "vm:anatomy:body:foot:left:bone:left-second-metatarsal-bone",
+            "vm:anatomy:body:foot:left:bone:left-third-metatarsal-bone",
+            "vm:anatomy:body:foot:left:bone:left-fourth-metatarsal-bone",
+            "vm:anatomy:body:foot:left:bone:left-fifth-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-first-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-second-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-third-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-fourth-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-fifth-metatarsal-bone",
+            "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
+            "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
+            "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
+          ]
+        },
+        {
+          "id": "foot-vessels-exposed",
+          "title": "Foot arteries & dorsal veins exposed",
+          "description": "Compare eight new vessel identities with the six existing local foot arterial entries, without bones or muscles.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA43943",
+                "FMA43944",
+                "FMA69514",
+                "FMA69515",
+                "FMA43937",
+                "FMA43938",
+                "FMA44881",
+                "FMA44882"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA43929",
+                "FMA43930",
+                "FMA43931",
+                "FMA43932",
+                "FMA43916",
+                "FMA43917"
+              ]
+            }
+          ],
+          "view": "inferior",
+          "landmarks": [
+            "plantar arch",
+            "dorsal venous arch",
+            "medial plantar artery"
+          ],
+          "inspect": "Rotate between the sole and dorsum, isolate an entry, or use reversible separation for source-name practice. Red and blue identify arteries and veins, not oxygenation. The uncertain plantar venous arch sources remain withheld.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
+            "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
+            "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+            "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+            "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
           ]
         }
       ],
@@ -9312,7 +9580,11 @@
             "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
             "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
             "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
-            "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery"
+            "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery"
           ]
         },
         {
@@ -9450,6 +9722,214 @@
             "vm:anatomy:body:foot:right:bone:right-talus",
             "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
             "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon"
+          ]
+        },
+        {
+          "id": "plantar-arterial-arch-window",
+          "title": "Plantar arch & deep plantar artery",
+          "rule": {
+            "fmaIds": [
+              "FMA43943",
+              "FMA43944",
+              "FMA69514",
+              "FMA69515"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA43931",
+                "FMA43932",
+                "FMA43916",
+                "FMA43917",
+                "FMA24507",
+                "FMA24508",
+                "FMA24509",
+                "FMA24510",
+                "FMA24511",
+                "FMA24512",
+                "FMA24513",
+                "FMA24514",
+                "FMA24515",
+                "FMA24516"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "inferior",
+          "description": "Inspect the supplied plantar arch and deep plantar artery from the sole, with lateral plantar, dorsalis pedis and metatarsal context.",
+          "inspect": "Choose one side, set a metatarsal aside and Undo to restore it. Follow source surfaces without assuming a complete arch, patent endpoint connection or safe surgical plane.",
+          "landmarks": [
+            "plantar arch",
+            "deep plantar artery",
+            "metatarsal bone"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:foot:left:bone:left-first-metatarsal-bone",
+            "vm:anatomy:body:foot:left:bone:left-second-metatarsal-bone",
+            "vm:anatomy:body:foot:left:bone:left-third-metatarsal-bone",
+            "vm:anatomy:body:foot:left:bone:left-fourth-metatarsal-bone",
+            "vm:anatomy:body:foot:left:bone:left-fifth-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-first-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-second-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-third-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-fourth-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-fifth-metatarsal-bone",
+            "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
+            "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
+            "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+            "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+            "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery"
+          ]
+        },
+        {
+          "id": "medial-plantar-branch-window",
+          "title": "Medial plantar arterial branch",
+          "rule": {
+            "fmaIds": [
+              "FMA43937",
+              "FMA43938"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA43929",
+                "FMA43930",
+                "FMA37459",
+                "FMA37460",
+                "FMA24507",
+                "FMA24508"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "inferior",
+          "description": "Compare the superficial medial plantar arterial sources with the medial plantar arteries, abductor hallucis and first metatarsals.",
+          "inspect": "Remove or fade the muscle to inspect the fine branch, then restore it. Its source name does not establish a validated depth or dissection plane. Plantar nerves are not present.",
+          "landmarks": [
+            "superficial medial plantar artery",
+            "abductor hallucis",
+            "first metatarsal bone"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:foot:left:bone:left-first-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-first-metatarsal-bone",
+            "vm:anatomy:body:foot:right:muscle:right-abductor-hallucis",
+            "vm:anatomy:body:foot:left:muscle:left-abductor-hallucis",
+            "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery"
+          ]
+        },
+        {
+          "id": "dorsal-foot-veins-window",
+          "title": "Dorsal foot venous arches",
+          "rule": {
+            "fmaIds": [
+              "FMA44881",
+              "FMA44882"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA24507",
+                "FMA24508",
+                "FMA24509",
+                "FMA24510",
+                "FMA24511",
+                "FMA24512",
+                "FMA24513",
+                "FMA24514",
+                "FMA24515",
+                "FMA24516",
+                "FMA43916",
+                "FMA43917"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "superior",
+          "description": "Look down onto the dorsal venous arch sources with metatarsals and dorsalis pedis as context.",
+          "inspect": "Select and frame an arch or set a bone aside. The two components of each source remain grouped; absent tributaries and saphenous connections are not bridged. Focus-only practice excludes the context.",
+          "landmarks": [
+            "dorsal venous arch",
+            "dorsalis pedis artery",
+            "metatarsal bone"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:foot:left:bone:left-first-metatarsal-bone",
+            "vm:anatomy:body:foot:left:bone:left-second-metatarsal-bone",
+            "vm:anatomy:body:foot:left:bone:left-third-metatarsal-bone",
+            "vm:anatomy:body:foot:left:bone:left-fourth-metatarsal-bone",
+            "vm:anatomy:body:foot:left:bone:left-fifth-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-first-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-second-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-third-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-fourth-metatarsal-bone",
+            "vm:anatomy:body:foot:right:bone:right-fifth-metatarsal-bone",
+            "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
+            "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
+            "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
+          ]
+        },
+        {
+          "id": "foot-vessels-exposed",
+          "title": "Foot arteries & dorsal veins exposed",
+          "rule": {
+            "fmaIds": [
+              "FMA43943",
+              "FMA43944",
+              "FMA69514",
+              "FMA69515",
+              "FMA43937",
+              "FMA43938",
+              "FMA44881",
+              "FMA44882"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA43929",
+                "FMA43930",
+                "FMA43931",
+                "FMA43932",
+                "FMA43916",
+                "FMA43917"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "inferior",
+          "description": "Compare eight new vessel identities with the six existing local foot arterial entries, without bones or muscles.",
+          "inspect": "Rotate between the sole and dorsum, isolate an entry, or use reversible separation for source-name practice. Red and blue identify arteries and veins, not oxygenation. The uncertain plantar venous arch sources remain withheld.",
+          "landmarks": [
+            "plantar arch",
+            "dorsal venous arch",
+            "medial plantar artery"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
+            "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
+            "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+            "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+            "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+            "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
           ]
         }
       ]

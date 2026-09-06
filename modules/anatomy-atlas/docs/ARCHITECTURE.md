@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Foot vascular extension
+
+`scripts/foot-vascular-selections.mjs` separates ten audited candidates from eight explicit admissions and two shape/provenance holds. The isolated `-foot-vascular` bundle preserves old source records, hashes and transforms. `lib/foot-vascular-anatomy.ts` supplies four typed target/context windows and matching focuses, opening from the sole or dorsum. Exact arterial ID/name exceptions extend the conservative vessel classifier. The audit's centre-alignment comparison operates only on temporary diagnostic geometry, never product meshes. Source evidence and external gates are in `FOOT_VASCULAR_DETAIL.md`.
+
 ## Hand venous source extension
 
 `scripts/hand-venous-selections.mjs` separates sixteen audited candidates from fourteen explicit admissions and two source-extent holds. The new isolated `-hand-venous` bundle preserves every prior record, bundle hash and common transform. `lib/hand-venous-anatomy.ts` supplies four typed target/context study sets to the shared regional workbench, content, practice, navigation and imaging-ID registry. `lib/anatomy-vessels.ts` classifies source-labelled vessels conservatively for display; unknown/conflicting names are neutral and no oxygenation is encoded. Evidence and remaining gates are in `HAND_VENOUS_DETAIL.md`.

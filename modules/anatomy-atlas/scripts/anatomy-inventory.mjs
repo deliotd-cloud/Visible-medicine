@@ -2,6 +2,10 @@ import { createHash } from 'node:crypto';
 const compareText = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 // Source coverage is not anatomical completeness. No name heuristic admits a mesh.
 export const inventoryHolds = {
+  FMA44883:
+    'Source-labelled plantar venous arch closely matches the right plantar arterial arch after an approximately 4.216 mm source-Z translation: all sampled aligned distances are below 0.06 mm. Original surfaces are separate, not overlapping duplicates, but independent venous shape/depth provenance needs adjudication. Do not import or infer arterial-venous correspondence from the matched shape.',
+  FMA44884:
+    'Source-labelled plantar venous arch closely matches the left plantar arterial arch after an approximately 4.216 mm source-Z translation: all sampled aligned distances are below 0.06 mm. Original surfaces are separate, not overlapping duplicates, but independent venous shape/depth provenance needs adjudication. Do not import or infer arterial-venous correspondence from the matched shape.',
   FMA85102:
     'Source-labelled little-finger proper palmar digital vein groups FJ2349/FJ2351/FJ2360. FJ2349 spans broadly across the palm (about 58 mm in X), beyond the other supplied finger components. Grouped identity/extent needs specialist adjudication; do not split, relabel or truncate it to fit a finger.',
   FMA85103:
