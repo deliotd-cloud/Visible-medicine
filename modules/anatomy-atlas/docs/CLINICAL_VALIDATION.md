@@ -1,5 +1,11 @@
 # Clinical validation checklist
 
+## Hand venous and colour gates
+
+- Review fourteen admitted venous source identities, grouped metacarpal/digital extent, palmar arch depth, dorsal drainage relationships, tributaries, lumen/valves, endpoints and continuity. Adjudicate held FMA85102/FMA85103 before importing any component or aggregate alias.
+- Accept the four new windows on real devices, including small-vein picking, source labels, side scopes, focus-only practice and red/blue/neutral colour discrimination. Colours identify source type, not oxygenation or verified anatomy.
+- Keep generic/dorsal-metacarpal aliases, missing thumb/common-digital detail, nerve gaps and all earlier holds explicit. No scans, patient registration or clinical approvals are supplied. See `HAND_VENOUS_DETAIL.md`.
+
 ## Hand arterial gates
 
 - Adjudicate all 26 source identities, including first-through-fourth common-branch numbering versus standard teaching conventions and the greater distal extent of the fourth source entries. Grouped surfaces are not independently validated branch names.

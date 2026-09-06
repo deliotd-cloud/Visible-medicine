@@ -13,6 +13,7 @@ import { mesentericSelections } from './mesenteric-selections.mjs';
 import { pancreaticSelections } from './pancreatic-selections.mjs';
 import { thoracicSelections } from './thoracic-selections.mjs';
 import { handVascularSelections } from './hand-vascular-selections.mjs';
+import { handVenousSelections } from './hand-venous-selections.mjs';
 const data = await fs.readFile(
   'public/models/bodyparts3d/full-body/catalog.json',
 );
@@ -29,11 +30,12 @@ const selected = [
   ...pancreaticSelections(await conceptMap('isa')),
   ...thoracicSelections(await conceptMap('isa')),
   ...handVascularSelections(await conceptMap('isa')),
+  ...handVenousSelections(await conceptMap('isa')),
 ];
 const recovered = catalog.structures.filter((s) => s.provenance?.recovered);
-assert.equal(recovered.length, 382);
+assert.equal(recovered.length, 396);
 assert.equal(recovered.length, selected.length);
-assert.equal(catalog.structures.length, 984);
+assert.equal(catalog.structures.length, 998);
 let checks = 0;
 for (const r of selected) {
   const s = recovered.find((s) => s.fmaId === r.fma);

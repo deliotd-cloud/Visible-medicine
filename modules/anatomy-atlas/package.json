@@ -26,6 +26,8 @@
     "pancreatic:test": "node scripts/validate-pancreatic.mjs",
     "thoracic:test": "node scripts/validate-thoracic.mjs",
     "hand-vascular:test": "node scripts/validate-hand-vascular.mjs",
+    "hand-venous:test": "node scripts/validate-hand-venous.mjs",
+    "vessels:test": "node scripts/validate-vessel-colours.mjs",
     "study-navigation:test": "node scripts/validate-study-navigation.mjs",
     "study-links:test": "node scripts/validate-study-links.mjs",
     "study-library:test": "node scripts/validate-study-library.mjs",

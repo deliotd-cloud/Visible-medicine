@@ -2,6 +2,10 @@ import { createHash } from 'node:crypto';
 const compareText = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 // Source coverage is not anatomical completeness. No name heuristic admits a mesh.
 export const inventoryHolds = {
+  FMA85102:
+    'Source-labelled little-finger proper palmar digital vein groups FJ2349/FJ2351/FJ2360. FJ2349 spans broadly across the palm (about 58 mm in X), beyond the other supplied finger components. Grouped identity/extent needs specialist adjudication; do not split, relabel or truncate it to fit a finger.',
+  FMA85103:
+    'Source-labelled little-finger proper palmar digital vein groups FJ2319/FJ2321/FJ2329. FJ2319 spans broadly across the palm (about 58 mm in X), beyond the other supplied finger components. Grouped identity/extent needs specialist adjudication; do not split, relabel or truncate it to fit a finger.',
   FMA55077:
     'Pharyngeal raphe FJ2749 also occurs in anatomical-line/boundary parent definitions. Its narrow, long source surface has broad sampled contact with both inferior constrictors. Tissue extent versus a boundary representation needs adjudication before displaying it as dissectible connective tissue; no relabelling or thickening.',
   FMA66358:

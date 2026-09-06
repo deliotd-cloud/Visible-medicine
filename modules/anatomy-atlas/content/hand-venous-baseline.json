@@ -1,0 +1,4582 @@
+{
+  "sourceCommit": "6f7fe0df4124d13b029404ab3502c026b2d39230",
+  "catalogSha256": "6402d7b654eaddb137fea383d796e64cd7674117d525492d89aa8daa31fe6593",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "excluded": [
+    {
+      "fmaId": "FMA37389",
+      "name": "left flexor pollicis brevis",
+      "sources": [
+        {
+          "file": "FJ1469",
+          "sha256": "090600879d9395564824bedc16918c66b8fac325cf7fb2bac6c062bdb62560aa"
+        }
+      ],
+      "sourceTree": "isa",
+      "reason": "Source laterality/position discrepancy flagged by spatial checks; withheld pending expert review. No automatic reflection or relabelling."
+    },
+    {
+      "fmaId": "FMA37388",
+      "name": "right flexor pollicis brevis",
+      "sources": [
+        {
+          "file": "FJ1469M",
+          "sha256": "dbab9fdb424e8370bed0229f47af76209ab5f61613fc1c910d427a73e6ee8bd7"
+        }
+      ],
+      "sourceTree": "isa",
+      "reason": "Source laterality/position discrepancy flagged by spatial checks; withheld pending expert review. No automatic reflection or relabelling."
+    },
+    {
+      "fmaId": "FMA46633",
+      "name": "right middle pharyngeal constrictor",
+      "sources": [
+        {
+          "file": "FJ2742",
+          "sha256": "b242673d67bc4abc71432268d4fb03df4bb6e707ccdf890829b7544d14d87d26"
+        }
+      ],
+      "sourceTree": "isa",
+      "reason": "Source laterality/position discrepancy flagged by spatial checks; withheld pending expert review. No automatic reflection or relabelling."
+    },
+    {
+      "fmaId": "FMA46634",
+      "name": "left middle pharyngeal constrictor",
+      "sources": [
+        {
+          "file": "FJ2754",
+          "sha256": "9583ea54a06a4d8d52aa9f3578a0f97931634c86db01aa2f37059f9974fdab39"
+        }
+      ],
+      "sourceTree": "isa",
+      "reason": "Source laterality/position discrepancy flagged by spatial checks; withheld pending expert review. No automatic reflection or relabelling."
+    }
+  ],
+  "structures": [
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:hyoid-bone",
+      "sha256": "4e35d19ca60e9678670ef01a6ac5509d46a834cc874ee6430058b34bce8fe908"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
+      "sha256": "b659995f0d7cff46893364fbedb5392dc62f9aad741b7c02220fb648dbaaf308"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:tenth-thoracic-vertebra",
+      "sha256": "120956a0fc85de92d98aba59bec70396080a8746a15fd5bf66aa31f36613b4f8"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:eleventh-thoracic-vertebra",
+      "sha256": "c283708db6b424fa9734536b1a23adb4e8bd1fb2ca8e95fae093f36807a8d4bf"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:twelfth-thoracic-vertebra",
+      "sha256": "263900c6ff6b169149695eec8a840fef212a52eda6c5f7e73ae70a773d3dd4bd"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:first-lumbar-vertebra",
+      "sha256": "66bb94036a59ed19e492898c6582af3aa9d9b3ccccc6b48eea0d8a3c2bbce3f8"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra",
+      "sha256": "6391130ec32cacc0fa43ba886adfeaf2b56194fe12936b0a02add0b92830b7e2"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:second-lumbar-vertebra",
+      "sha256": "d5a2d938a030d1743ce27a95af993ddea7036304ebcfeccad2aaa34309df0b41"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:second-thoracic-vertebra",
+      "sha256": "bc2067f6947a18fbbc565578946592e80e082646b65f334078b04f85c8cb5b53"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:third-cervical-vertebra",
+      "sha256": "237136b5563a0a683acf71ec74dd0d64df4ef76727f72cc27f852b229487c141"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:third-lumbar-vertebra",
+      "sha256": "d4dc1a13284210e344ba9696ea3a2ba2c552282a2c6b5c861d20e675b97821b5"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:third-thoracic-vertebra",
+      "sha256": "52d3d6d32be70a5b3da6fbac4da5950dc8ff0fa9c121b6b6ea10bcebe6689251"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:fourth-cervical-vertebra",
+      "sha256": "5971eaff0325b0f89570c8faad808a8a592bfde058b5e8b1a1d684d3bc0c9fb1"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:fourth-lumbar-vertebra",
+      "sha256": "e1d041b6249c9645747f5f4cf200bfd587be72c406e681c7ea4be58701f8de92"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:fourth-thoracic-vertebra",
+      "sha256": "1f6e4ba00dfc7049cb1093aa5f0a14fa619877089776f4f9cb60cf2b391724dc"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:fifth-cervical-vertebra",
+      "sha256": "5ffee303723b7e91b2f9a8e06e28accc995a63c0b7b81511fd3a7e947b62407d"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:fifth-lumbar-vertebra",
+      "sha256": "050a96dd7ed62c1f83979f789afd51a3c7b63b18f8dd5a68a033402668491ec8"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:fifth-thoracic-vertebra",
+      "sha256": "60773090a80033e19b6a12f7f5118eb222d72405b3d8e795238351ae494e5270"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra",
+      "sha256": "bae60c727bc409a0a8f388558935b533b9e243a28b874e00bb018e2e2c24902b"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:sixth-thoracic-vertebra",
+      "sha256": "3ed7f87e7d7575d80a3594179b8a97a9869e41ec49261e01ea76ead2dad4646e"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:seventh-cervical-vertebra",
+      "sha256": "ffab5fba329709628b92befeafc7e5425590bc01d4a889bf1101d83391be4e37"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:seventh-thoracic-vertebra",
+      "sha256": "ea40ea16f62db24214b26abbd2b9fc7332864fbc13a66b2591b8289c6a9eb8f8"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:eighth-thoracic-vertebra",
+      "sha256": "f1dd21b1aa7700d3cfdc2fa6cb0d9381ac83a398455396c19c3ce42ad977e84f"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:ninth-thoracic-vertebra",
+      "sha256": "a004c5329806984c4147f39d216b00c5c04828bcb89f0e86104b57ed9a378adf"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:atlas",
+      "sha256": "1ed19714bbe171ddf8543d9ea0d55eee60a3b3aeb685b91a9721259a8e865d26"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:axis",
+      "sha256": "38bf4454dd501706c6f002322ec9e4cba93f6e6beb8bee54734459b9ce7bf85e"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-second-toe",
+      "sha256": "9abc7809350c52c2abf5d4c78f0f60c85342010d5c18cb5a2a1ea8bb17414bd5"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-third-toe",
+      "sha256": "9136f31e4cd568f17e15cd749b394e97189a00bff6cde25a95dea22db0a6af29"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-fourth-toe",
+      "sha256": "f9c562ea5fa118206f11ba0c4627c9af4f40be36692875a050ab4e1f6b5d1bac"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-big-toe",
+      "sha256": "9da67ccf4f7d420e3211113693186f330b7deb6d396764bcadcd29c38be13a6b"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-index-finger",
+      "sha256": "2fb7fad62fb3584dbb91a29ec29015d06c9ed70933db4747805a457db2dc283e"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-little-finger",
+      "sha256": "5d4129ad1295a92a5245b165c17b0135d354626d81950343a856154797457636"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-little-toe",
+      "sha256": "179f963d13dc48af1a81916fdd0b020f272bd75be6f3faea6dd9ed8536e48be5"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-middle-finger",
+      "sha256": "91b9fb70ebbce7c950362ab1441fca0d2c47a5dc5ab8363e0733fe4981a56eae"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-ring-finger",
+      "sha256": "6fcc33aa63758d4905d6330496f7cc51b2fc6d6171663c3f8b293c3c6961d2a1"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-thumb",
+      "sha256": "45694deb9d1fe9665c8f0385a331cb6aa4531fae120629c56ecc450c022ab78c"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-second-toe",
+      "sha256": "bcb54ad0870a01b4373785f02f72b03ae116a48a6172bfb3fef75f5b5b7f7aa0"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-third-toe",
+      "sha256": "d80707d4f26d453fe3b72c8e2be83218493302617d5b3e6d3b0a1f33612a3f55"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-fourth-toe",
+      "sha256": "58e92f1069db3dca1739841d0ec916d1709f0b3e9f5ea694da63d2e7280a20c6"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-big-toe",
+      "sha256": "28a325bf5d629446a99c02c2626788e2568adb6213d0b43dff083893b357f39f"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-index-finger",
+      "sha256": "60ac788ddf53711fa00374d6913f75511480626e1edc0bd484c1b8987fdb8bfb"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-little-finger",
+      "sha256": "d4fe248c838cb1b7d71eefecfdcc3dd1e46ee384fe6c15201e14a039a79573d8"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-little-toe",
+      "sha256": "8d0086a9807c7a9782dcde560170f5af33aeea74a0ded7fb854e8198c04c1268"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-middle-finger",
+      "sha256": "501d455ad2aa0edebaf97e5f9a0bb74b7ba267a4ebc0d9ea821912638f9bef53"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-ring-finger",
+      "sha256": "87144d8adaf2045be3538bbd82c085dab5a9b214c46edd8100868d650bd945fe"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-thumb",
+      "sha256": "5f23dbe9feebdf88978884c7d767d220ace83163643f740b27ab140600fc0ac9"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:ethmoid",
+      "sha256": "b7f8ed9fce53e95bbb65323717f5751a8e14ff28eec70f2a0a0a8e24d5fd6fab"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:frontal-bone",
+      "sha256": "7b954908de5458a2103cbde5fda3a289b5159eaa86291ce5425c23a88b1d5b53"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-tenth-rib",
+      "sha256": "e30fa4acbaab6b4525f342370623c53581d4e4d44de9ced647b604fc46462ae9"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-eleventh-rib",
+      "sha256": "bc9b9960df8d5eedeb096542280be1437cff4108ad31bec96332f3c781ce0766"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-twelfth-rib",
+      "sha256": "0450e0dbc4593fef0507ed1682b6295b63f602ef06014b990d8555c1b7a00a4d"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-first-rib",
+      "sha256": "f8a71979505b81ee019ecf8f2380c9993d7fa487b9d216fe7a360cd05cc3f213"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-second-rib",
+      "sha256": "61f111d5fbb60fe8dd7289b208345780ccbd83220740030e584f52dfc9cd8928"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-third-rib",
+      "sha256": "59da30a9aa8cb800e944f2a1a51f5a2a8cc9cb720d3a7ebad090e4b869c403d5"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-fourth-rib",
+      "sha256": "a715cbbf7c994f979d762fca3a9f8414230f4fb457f80fcc71c0a692b79af034"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-fifth-rib",
+      "sha256": "70beb76184577bb4b52a30eb35190100a2d145baf1c8121ce027a1dd585c106a"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-sixth-rib",
+      "sha256": "f165eb823bdeb603468b5dd2b636d33e53812fce0ea1dab448120999780c9b0c"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-seventh-rib",
+      "sha256": "b5b937ce08a65e42e37bbd5365e7c9f5acee87407a980163e559eeca5d2907af"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-eighth-rib",
+      "sha256": "a4700cae892445ceef1d9839c4cb16ecd75aa7904a0fdb48cd56429336540bfb"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-ninth-rib",
+      "sha256": "1d95a2ce059d1d79a446571b6fcf96e69d8e9a8df3b9b426037167d24af1fbf1"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:bone:left-clavicle",
+      "sha256": "3e0c42dcb0f03ccc519e536deb65c58e31cdb247da698a1fd4ec484ef2e9b852"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-first-metacarpal-bone",
+      "sha256": "439f62e9e583cf515f41fbb6c562411f2cd68ee13f5499013f4c7deb78e83177"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-first-metatarsal-bone",
+      "sha256": "f231f0d605d17def977a6e71616cf9a0e37881eace37b0c51f09af7096b08299"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-second-metacarpal-bone",
+      "sha256": "1e9214666fb55652e63aa7a37b6144d9b4dcc0801d92eb0ee7a76ba6d82597e5"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-second-metatarsal-bone",
+      "sha256": "3ab14003e91834f0e2e552f9b88099ace3e423e0999f7765928e07802037654e"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-third-metacarpal-bone",
+      "sha256": "fdbf7c107c8f0b6bbc20508b3282f6cd0fc258b735bfa2fa59831114bd1e016a"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-third-metatarsal-bone",
+      "sha256": "47265f8bfec054031fff355e4b70b9a41bd0e8811b86ed10e344bd72e7b09ec2"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-fourth-metacarpal-bone",
+      "sha256": "ae143fafd7fad6e0faf32f998a1ee2968c580c34e6f40237cfa1541ba0a2245d"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-fourth-metatarsal-bone",
+      "sha256": "6321d4b8514e5ea88a4d236d6292e99eb758b1070129257e83fd0a17e77ebf44"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-fifth-metacarpal-bone",
+      "sha256": "77c87dcaba182b830271339201ecbffce467d5bd4d9761f58b7111d746bc28ef"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-fifth-metatarsal-bone",
+      "sha256": "792058122d10c3522943b3dd933d3b458faba839f779e7ac6d75105f5c0b8d87"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-calcaneus",
+      "sha256": "6d5f440632abc809b452954973f7ffba6f3a315b503b11af55803a2992ddbd3b"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-capitate",
+      "sha256": "eef9ead5f7d5a6d76cde14e574bcb37989f929d816893476dc642a384b588568"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-cuboid-bone",
+      "sha256": "584520cd80f3cf6a52ac817391ff54d43af79ae17b3a599d75a29684aa08aed0"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:bone:left-femur",
+      "sha256": "eba69a6f91ed8e81b731f21d6754e704d06f322821f166522954d4cade8b83c0"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:bone:left-fibula",
+      "sha256": "2422ceaff5c05f5fa931b784b807d6f9b5f48996a05ff43a48c97792c56dd954"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-hamate",
+      "sha256": "dd55d7ca5e0ad5d290b007d68391323b4d0ae5b226c0e0a6dd7f55eacf89d626"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+      "sha256": "ccb845e6f13d681aa554c10ad21834432c2a488e60cd9b920d1ec5d3bb05b943"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-inferior-nasal-concha",
+      "sha256": "2a2dba43ac3bb5ffbe7d6885b0dbc475e65fe3d0e24fc9a2cf80f458dba7b98b"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-intermediate-cuneiform-bone",
+      "sha256": "76ebaff9cc86ef059278aaf67966c1405ad3f0346bb85c2e92c04474e7cddf21"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-lacrimal-bone",
+      "sha256": "821033fd5659f43128d23b98559fc03645aef0fc2c5d645a4a800dd2d67d6e24"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:sesamoid-bone-of-left-foot",
+      "sha256": "d7df946d5239caa08737b35671abbd51d04a70d6d6bb751e56bda8e31e346049"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-lateral-cuneiform-bone",
+      "sha256": "de120051e00191a60a6339953a00831cf7921e50ceaa93ffa981d2f79d3dfcf4"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-lunate",
+      "sha256": "d01ef5dae3e325924a12b51d57374d49b8e62a9178bd9bd23dd5ddfc2d2c9b52"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-maxilla",
+      "sha256": "e4cb3a5b585743c061e7501bdb2626a872b0aafdfd571c284aa8d882f21d71e9"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-medial-cuneiform-bone",
+      "sha256": "ee3c2252e7e434462ea1983fe73af1bb62da7c4376b8539cc7b0c20e32231fbc"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-nasal-bone",
+      "sha256": "11163b78f5e4881a2a8444b136e931b705c82fc99d03d5d8a965fcc1273967cc"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-palatine-bone",
+      "sha256": "914984a2f8eebcaacfb28c2fe9f28702fc4342d970e40b71b716ebc7bc3dd7f4"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-parietal-bone",
+      "sha256": "db1267a2aa5a4da5112e625b0f84d2160e67cf7d88e7be928a77ba6085ec0965"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:bone:left-patella",
+      "sha256": "93a73ecb3bc3f11fd0c781174ca3c67ab7171272126625f0c10e41992f3aeef9"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-pisiform",
+      "sha256": "51a5ecf5a8f5e1009139feec475aa67c993cdde18196f36ddc84a2a435200b05"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:bone:left-radius",
+      "sha256": "a155f63c8d3f36bd873310f9a41d98da26cfd25039728af3ab9ae881a0f93d97"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-scaphoid",
+      "sha256": "2a504d42ff8b8396c729804d8154754ad3d67349901a3115a7395adf3f8ab78e"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:bone:left-scapula",
+      "sha256": "90894edec806a29fcb4074f17dc6975d80bbc6f80c35edfd06571e63f367c404"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-talus",
+      "sha256": "c8e3c359fb5f7dd175b89514e6b2331e3bd422392cee394a62e77e9c5a94f3b6"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-temporal-bone",
+      "sha256": "9d2fe013829364e4578cbffb058fdc587905ea8d527193665538045156316cca"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:bone:left-tibia",
+      "sha256": "74fce96b5b7d5f11f3493ef3e9f5b91eafe4f6a228c4910c19657801c58a3ca9"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-trapezium",
+      "sha256": "f4b67b7a858bed447f629be158ce76cf2045e463992764482ca42e5198a0aa2a"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-trapezoid",
+      "sha256": "06380c27280ce8b65da09ccf2950a70c72a81409f402d4fea904762d5f136d84"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-triquetral",
+      "sha256": "34c0ac6ca9b7dfdb0319765816b3121ad584f0bf02a2b5916da0d14dcf1c69ba"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:bone:left-ulna",
+      "sha256": "aa71752ec27f12fb42bedd6393a535e3d0d44b9efd6f20cb50d9e2b0740374e0"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-zygomatic-bone",
+      "sha256": "5c84af74193ce344b61cfcf646aa20efb287b7651ea566d0437e813217697cf6"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:bone:left-hip-bone",
+      "sha256": "adbfe2feb42ae47126230aa61df292beca23a390f83b8408008469435b30ebc4"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:mandible",
+      "sha256": "56a6cc61ab91737046d1ef71d98aada7d7075f2e61062d3eda1ae08865adf614"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-ring-finger",
+      "sha256": "f77f258578200940b7f5eae35508b3f81a302800164afeca08a2b019fb5cc820"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-ring-finger",
+      "sha256": "7f143d0ece486cd6e324e6b314fccf0eea80c51d2a113c74484cef83c18f1adc"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-second-toe",
+      "sha256": "0565d345607f3c11f34b83c275ee7350867e39837e3ebf8359d0ea1f1d31aa89"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-third-toe",
+      "sha256": "41698999cfc7fa5587dc6f00f939f839fe9b7eb01befbb03b0b391cf563bb69b"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-fourth-toe",
+      "sha256": "226075d544a01891f55171c77045aaa5f0e6ba47990ced02576bb77b93fcb2a6"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-index-finger",
+      "sha256": "fe9583d479ccdb5c788b621c44607fc0afcf4ba26a7af769ed60fdfa82e722fa"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-little-finger",
+      "sha256": "8b0aa5f0c338e2d7821b2447e6c242e6125bbc036cf6cd40140de7c76004a94f"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-little-toe",
+      "sha256": "9368276d3364741f8805906f83a2de9bfb5f88cc1b4b3f361e0e3c5dc97db8fd"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-middle-finger",
+      "sha256": "34b05f77b897baa0e29c8f35a75f67799baa6133809d931d1585825f58b4ae44"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-second-toe",
+      "sha256": "29ff0a770c403493f5eca0101ef4ace45bc1c3d24854566affb37cecce3888d1"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-third-toe",
+      "sha256": "b96bc0832b4d7a8a391b7007be3f84a3fe57a7c532ec90f3842e9a2354181ad1"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-fourth-toe",
+      "sha256": "f7ddb85be97ee5924b56348685c41c365045945a578430e895f7943b8d222ffa"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-index-finger",
+      "sha256": "d1638633f6df08dd44771a887cfc62203d1342615fbd761a0124d9993ca16d10"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-little-finger",
+      "sha256": "63a00ade63b3abe911f284358c706431ec6590a4d100f0c67016b59af1160dd5"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-little-toe",
+      "sha256": "e22d27359c2400e0f42fd90c233d91d1c6d24c6ff7c8bce418ccefeb4b64f62b"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-middle-finger",
+      "sha256": "fb7db3fef910c2859d6f385207f25e47050cfb4d77052c5fbc327c3dff8d2bb0"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:navicular-bone-of-left-foot",
+      "sha256": "9b4f54bb4b93ce46ca63747d2a2fb798dec02dd9714443b34c2fd73b3694fd94"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:navicular-bone-of-right-foot",
+      "sha256": "fbe24cb2fe6dcd8796c3a52ce355d4df8cd0d4e3da8f14428a04e248ecaa2022"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:occipital-bone",
+      "sha256": "89bbd246c8c64265a73b3c295b8da1eeb0d55ddc911a625f23d84a8ec02e32dd"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-big-toe",
+      "sha256": "34c390e8de9f51b745a9430213955e32b6e2ad770a7dc3bcaa554df1336ab610"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-third-toe",
+      "sha256": "20737d32c30a947bc059fc251039cd04bf3ee9fbb688f4e2047476e27137816a"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-fourth-toe",
+      "sha256": "0eda11abf490c74101ffd310055b83737e08d36e5974d5b0511f3ed732db01e9"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-index-finger",
+      "sha256": "c4f3fb8ca7584e8a2341a788bfd35d4c08d8d6134f3fc189f7955dd101b1ea43"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-little-finger",
+      "sha256": "5ff4ed7f966d15c159029fc8615c3ee92213aad1a3392aef11f51e41d03ac23f"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-little-toe",
+      "sha256": "34c8771c321450ebf7f7de09bde3e5ed600fdf2d26f6740e7475874edb137a06"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-middle-finger",
+      "sha256": "3ec28d8455fc6b34241b0f922c37fdad19853ef060effc6084dbf45fc4c83cf6"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-ring-finger",
+      "sha256": "092e1fa3b3b87cc0c99810000e9482ee3a439a6a2c7498f3585744d7abaa359e"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-thumb",
+      "sha256": "e9aafa9c988f790579b2e777666c6257cef4fee4f042b82c94bb7774f0e869b8"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-second-toe",
+      "sha256": "01636d91adcaf26dbd7fc4f2fcb0de30b34e37fb13c470e9d3565a48cd8e9538"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-third-toe",
+      "sha256": "53827b74b564e5bb79ca8f21c2c1543adb7b9ced604175f42d451f3f00625bee"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-fourth-toe",
+      "sha256": "d5fbc6313e6692c3dd0606c4abc085be0ef70358f7e6061e3bd0a861bededd19"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-index-finger",
+      "sha256": "138192a4925078c00425a0cd6f494f320346cec59901385caf66000a10c39425"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-little-finger",
+      "sha256": "6998b58738e9b8b9a0cc1821d37fed05f6f23c16139b71f925fa1344a2c01e61"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-little-toe",
+      "sha256": "d53f3c1809b25e27191c1c77483f9d9d5589667e50f8ef27121b68b7850060ee"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-middle-finger",
+      "sha256": "96248fd9426448a0baa47944bf74488b06aa2a77492559e722325bcbbfebcf7a"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-ring-finger",
+      "sha256": "0d0bf6dd826c5f951804cbaab7848f649c7afe79a72cd0e6d4386b74bc0dc495"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-thumb",
+      "sha256": "1c5ebc253f975951232a1cbbb83de773b8b2f19ce606365693b3fae0bf7c0993"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-second-toe",
+      "sha256": "6414bafdc308029577e9ad9bf59c8e144c5e6f5c95418cd102947fa9fe7f0676"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-big-toe",
+      "sha256": "273be0a434df75bb1ef8cbbaf970e4e4e962cc8ee06b05339b14d0b05e9e275e"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-tenth-rib",
+      "sha256": "1bdd7e9ac927d1abcde1665a7fd3f2bdf66149a9f18a084011b05e79c0982c9c"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-eleventh-rib",
+      "sha256": "ba4547a775a8c1c084414d5a45342ffc5c6003ee45b3ed6a35300f006e02c655"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-twelfth-rib",
+      "sha256": "19fd436c40dc8308f228d7c951e5086f4d837abb98fe25792738baa3769ac8ea"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-first-rib",
+      "sha256": "2d583b50b7251d6ebb4d71cc30d158537898b97cf8c744b7acdf875090ed52d6"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-second-rib",
+      "sha256": "36dc5381a0df4be9866e3d391019fa851f3e544eac73fc5c0d03c3dc8a6f2a81"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-third-rib",
+      "sha256": "ec861dd32d74876946cd79a371600aa458c384a0624b1e339ee5d0daff6f94e2"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-fourth-rib",
+      "sha256": "537a581d53d62a595c0c457062a68a56bc3652a35f37ad01c0b11bce81dfc4d3"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-fifth-rib",
+      "sha256": "6dfe9582957638e12193021fe2539accaf19bae79140020142d92ced2511d483"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-sixth-rib",
+      "sha256": "7b3eb8ebe3f22a420bd27f9ce047fde4c956962d2d0d9ba60d32c43960e041ed"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-seventh-rib",
+      "sha256": "9f1a7fa6be57e1f58a0ccfd22dcaf414c85a1779b243edc05b0092b3e2cf9a31"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-eighth-rib",
+      "sha256": "db59745ba020062c6660423fd5a28461e36f0ec465dd0d19870a9bd441d28c64"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-ninth-rib",
+      "sha256": "ffc1222a94dbd81b37d5826f3fc0b72f3c0dd3bdaafa05bd40c0864f5bfa4614"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:bone:right-radius",
+      "sha256": "23a5db0d13bf6476832c51a68cf3f56c26283c0e1da10e91567966b255b64276"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-first-metacarpal-bone",
+      "sha256": "33d78149aae930f9ae1c5be9cd6e831907f9ea33c52d90e8d3fcf1fabeb62852"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-first-metatarsal-bone",
+      "sha256": "2e32b58890299556d950e89a512192909bb89eff3b034582104d4a50c0ec91c8"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-second-metacarpal-bone",
+      "sha256": "ffcae120745fc1f5546e9e0d3293afa8683002195356f857419c953704d34061"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-second-metatarsal-bone",
+      "sha256": "7fca4a2b40a6f59304a3a26a02258a938b4f98e912457ff54476481f583db352"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-third-metacarpal-bone",
+      "sha256": "8b494906db3ff35888cb3ceac927bfbdf5607136af3e01ccb143843e20a7609e"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-third-metatarsal-bone",
+      "sha256": "d8deb6a2357e54db76615dc8fbaca1271d2d1d3c8fdfe90967957f99f62648d6"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-fourth-metacarpal-bone",
+      "sha256": "8b0759265182d5d2e64d72572bb39d4e9ce2dc91f27e1d4eba789bcd4cc976cf"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-fourth-metatarsal-bone",
+      "sha256": "1d01fa21e29da217764acf93d91168c0d66901ed44dc1f62bbed81130c506a03"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-fifth-metacarpal-bone",
+      "sha256": "29417a69abf88d9f2957a3573c28471f80d5273e22a8f0589086e832a52b4076"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-fifth-metatarsal-bone",
+      "sha256": "dcf21dd23aa20c2e11ec22ad180251331cb471d06637feaf447171ff0e6aaf5a"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-calcaneus",
+      "sha256": "eaee654a4e3c6fd8f38d1d84646c72a68de587d9d22d13038bd11ed9ad1dd73e"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-capitate",
+      "sha256": "3b01169e68a7aa34d6eb34e0ebf6a41344a811c1d0cb3204b19600f5fac81d0f"
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:clavicle",
+      "sha256": "7cacc423472a328ea7afecdb97904172b3f87e09784185fb100dc45627f45e17"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-cuboid-bone",
+      "sha256": "06e890e82302d5a5299af482eeaee51a08d08fa94b6f1281d1767923fe82a280"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:bone:right-femur",
+      "sha256": "1a1894b4c89a406955f0000b46629d7ead7e3f1f1e7139712d2651f6b73140e6"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-fibula",
+      "sha256": "20a3e130692c233632257a34b6f44639cd4ed81f6028a2dafcf5f7af934debb9"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-hamate",
+      "sha256": "002c2e39ddc0be28a5bf23d7c91d35c6f2127d4adf705269a2c09c34624691d8"
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+      "sha256": "127cda99e812c5b60b79693da1d835857677f98ab6341e75af190f142cdf31b3"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-inferior-nasal-concha",
+      "sha256": "efb5e50546684889dad3187a835e1381ef96fa3756f92ead76682a2bafa878eb"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-intermediate-cuneiform-bone",
+      "sha256": "b1f25c76da809d8a156e579d07758788311cf6f6cee3443d6b8351b6007c2403"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-lacrimal-bone",
+      "sha256": "c22d2a974e8e61927caecf1c0c9ecc9362975a97c336053b529284432fcad73f"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:sesamoid-bone-of-right-foot",
+      "sha256": "18e76dd2c56ad1287649b090ff916294f94e00ec0443b77a4f6b994d814288da"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-lateral-cuneiform-bone",
+      "sha256": "8020bea48cd181160082e395b2271aa6eeb70f1bc38e2c6f5b0090a20ea6edc9"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-lunate",
+      "sha256": "491c8b899132301ccf96244ec1e756e3b09d9f4fbf6a2dd79257037d13fa3945"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-maxilla",
+      "sha256": "291433a3bf8727cdaa3a78c01205a5809658646aad500da71ffe61afccf9d8c8"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-medial-cuneiform-bone",
+      "sha256": "2a5622b546688ca310a04a78fff20cafb67ecd3342238ad79fcfc969ac9b4469"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-nasal-bone",
+      "sha256": "b70765f05906939509544061e08276dd2f0f20150ebbddc65cfadee405a8ef02"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-palatine-bone",
+      "sha256": "e9abe3f66336da6e9702bff7a604225abd64acd84e0555a5faac8dd5a24b9229"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-parietal-bone",
+      "sha256": "4d03ed54fcbb517e5c45359e646c67dc0e7681d7acc25c44c17746bd511b4c82"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-patella",
+      "sha256": "5ab0f0e541b6fa34401be2329aba2e31269d18c321434a5c9c3beb13bcbfd4e6"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-pisiform",
+      "sha256": "bffcd90c3c08345b6a5c8fcc0f100492911d265f450c5b6d175d14fc647ef273"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-scaphoid",
+      "sha256": "2718c978570238904e3806b2aa9c8375bc384b4ac107e9c4db7d913f24bf4927"
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:scapula",
+      "sha256": "1284b991d9353909d9c3f91ad8976a107c8d648f1135df2d612a4fabf5628f59"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-talus",
+      "sha256": "37643dfe0697adf342b7c6c8a018d491fc0e31e7b7a9066931cdec8ced58ba51"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-temporal-bone",
+      "sha256": "e7b51357e8a98c6aa463095e06e2533d7f92b55ec1af431b97c923596acb8580"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+      "sha256": "7179c84da5b367c1612ac269fc56b3d53be4c54ebec89e4b64362b0da38240eb"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-trapezium",
+      "sha256": "42f4e2e41a18acda24f59e5187e9362c4069e9f0ee0e829a16e5b40d69a9708c"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-trapezoid",
+      "sha256": "5e864f07354dd3130a01b7a566fc724df66bc293976ed864f4172d903a46dfae"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-triquetral",
+      "sha256": "208f7a4b43e4fc8c2b7b78d43af5cbf4e517243dabf2518de6bb7d1574d70a85"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:bone:right-ulna",
+      "sha256": "d345fa809b4206ebd422dd5a508355eabb183381942da342d1a2ffe554645999"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-zygomatic-bone",
+      "sha256": "5d25a34ddf12b2225d550c5ba4e498aa16a69d206ae567b2da28f2165d86c9ad"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:sacrum",
+      "sha256": "da4b863bf6a33df0e7a7c7dc6888a3bd0ce1579cbf913d7f9d7826a27c52b99e"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:sphenoid-bone",
+      "sha256": "b214efa3abe8e9ce96d79ad30ef520e0582573e82e08b20b353e9aab0a3b413c"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:vomer",
+      "sha256": "30011a2aacffafdd2c678e755f0cf45d0b112c34ea25de9d951b1a8e385f32b7"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-inferior-oblique",
+      "sha256": "42d7359b48b66364824407dbac6ec99c2f7a2d41fe765eab36f0e872ce6554be"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-inferior-rectus",
+      "sha256": "088dcedbabad3fb229f71e5c43b93bd7505b5dec949156b4c327ba540a55c0cc"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-lateral-rectus",
+      "sha256": "8ca0264ae1c28df831a4eac0e32792d46280b4d130fe27782892b87435aa98d9"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-levator-palpebrae-superioris",
+      "sha256": "4d5c183f1d417693bee15476598a9b2ece4139328fca817b705c607f01bdd45e"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-medial-rectus",
+      "sha256": "6ffaaa17a4ec5d5df2a62f4549688c778084f44a8df9039eedb03429a3de448e"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-superior-oblique",
+      "sha256": "776f9ec3789b4a478b6e9bed8a3bc1afa910229a2c58dc216d7a118ff273a672"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-superior-rectus",
+      "sha256": "dd2c62d5a6c5953bb07fb930ea13f948772b1ba09cf26d21305641d9cbf0390c"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-inferior-oblique",
+      "sha256": "69cf254cd25a3b53c1ed8e819ed0d3775ad842ebb1272fd25e8b8a719855a5a1"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-inferior-rectus",
+      "sha256": "dfe3c8d66fbc3acac44e51949c418564f83922d25baf63f1b599b2dd809c3238"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-lateral-rectus",
+      "sha256": "f2623c749cf9ccf419f59e2691dd65360ceae962ddfe874b6f35c4cfa8ace829"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-levator-palpebrae-superioris",
+      "sha256": "79badca93ab233fb13af2f8b3e2536ffe0066e2740432bb111f2f3548e990826"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-medial-rectus",
+      "sha256": "05f8fd8de3e208b2900b22642831bb2b847c5afe81c53beb0931fb293637e95d"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-superior-oblique",
+      "sha256": "f524e55cecdb02006d7cc60911c1c6862f7b22297d1064a883eac84cd7ba97d0"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-superior-rectus",
+      "sha256": "4ed8a6c75ba6fc57bb51fa1bccc718e2a7a49e7e899a9b45e4229d4bc7fb86a6"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:first-lumbrical-of-right-foot",
+      "sha256": "a50c413dd529732d0a67a0d5cd7dd477fc5771098bb27d5e0e7020e3f8eb2022"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:first-lumbrical-of-left-foot",
+      "sha256": "7c3ef0393517363a623ae91592b4366204a77a5cd0c4d3c48dcec9c4431abcb2"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:first-plantar-interosseous-of-right-foot",
+      "sha256": "04ae1117a823dd14542007ce1a7b20fef133249337b75b6db4f21693a0f162ee"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:first-plantar-interosseous-of-left-foot",
+      "sha256": "595478417ef4b8bb9f9abc9f90c98345d2deff406bb7ce737b5f6a1c641e77bb"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:second-lumbrical-of-right-foot",
+      "sha256": "2d42fc9809fffe0842770224eccb96df47e96b097fe7fd38318fba9f16c766f5"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:second-lumbrical-of-left-foot",
+      "sha256": "e6af686599c8f6e28667500365168ab33763380ab5d2b46b477e2609e349a792"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:second-plantar-interosseous-of-right-foot",
+      "sha256": "947303437fc7a20dd6dfd390c5e8ce9ee705c11393326bbd3700f1296d3b4751"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:second-plantar-interosseous-of-left-foot",
+      "sha256": "b276a18ee13bb5a2a9d6281971ca5331490d619928654ed528066e3cf08dbb1b"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:third-lumbrical-of-right-foot",
+      "sha256": "4073304ac06656df0b5bcd1453a3a77ed3f20dc8e1c5e2ccb4cf7972625c04a2"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:third-lumbrical-of-left-foot",
+      "sha256": "9cc971e6a6503964565546d18d49bde5a5988bdac4c223476d1d1af4c2953682"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:third-plantar-interosseous-of-right-foot",
+      "sha256": "d45e83e384f2393d3cb60c76e7672a6076385504f91a57114403ad3dcc08785e"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:third-plantar-interosseous-of-left-foot",
+      "sha256": "305d6ab22a0a7dd8ea33888d2874936117e77a7805e4ef8b64bc32345d3942b0"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:fourth-lumbrical-of-right-foot",
+      "sha256": "60bc2460a9ba808ec29b242ea440cadaa9c057952a4811655b8f4973c004bd3a"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:fourth-lumbrical-of-left-foot",
+      "sha256": "412770c46574d5140fd643c00ba3248d790f7b994513d8d4de421347fb22e2eb"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:abductor-digiti-minimi-of-right-foot",
+      "sha256": "20e76d92b18651fac644b3a0088b81ef41d458d254e91f4840d3cbce4a49cef5"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:abductor-digiti-minimi-of-left-foot",
+      "sha256": "f1a7d2e6976c4e5d92c368eca14c22edca9238f0c3a02d75b9b973b4c37e33f5"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:flexor-digiti-minimi-brevis-of-right-foot",
+      "sha256": "cf0c5eac7044f631578d65204f31b80de3fb4412d83674e0c1b49c731bb56dbe"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:flexor-digiti-minimi-brevis-of-left-foot",
+      "sha256": "c4de5f43c1a72ee5939e9bbfb77a61eb4ca6bf1432b71f2fa3cb7b4c648a117b"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:opponens-digiti-minimi-of-right-foot",
+      "sha256": "3a9d25c5b18d13216343ddb4d6d102438c68d534a3ed9444a548e8c1ea501de5"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:opponens-digiti-minimi-of-left-foot",
+      "sha256": "51e603a85ee14a70f4d2f722d03d9b34cae3e33bd12a0a5fcd9dac8ed560a365"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:right-abductor-hallucis",
+      "sha256": "7113dc3dd7679c949113917e63266a4cff8b942186f5aaf0902c09c0ee048859"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:left-abductor-hallucis",
+      "sha256": "919a41ae8d884db549731661a403e9fdf4f295dedaf7b50ac5ebd6ca04d889b7"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-adductor-brevis",
+      "sha256": "4e9db37f38883d8699a02b4ab5e3cc3c702843a8624831f672a2baa8739878ba"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-adductor-brevis",
+      "sha256": "c06e6f9696167e899f8e6960176f213002fb6edf5fb602b834d91edc20ace132"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-adductor-longus",
+      "sha256": "50d230b3fe3372ba3435582b8a6ec37295c19245c207c3bc78dfe04e926c8eb8"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-adductor-longus",
+      "sha256": "aaf76b8cc8db2874618597c66fb10357befc74b9bc54b1443a5a0d8f838f71a3"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-adductor-magnus",
+      "sha256": "7b5c58abd79290ccc859f7316988c74b5cf88eb472a26c6ca5e17a87023292cb"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-adductor-magnus",
+      "sha256": "6284839879138977f92de41e8e46ae25de0f484b8a999b45cb338e9e938e2347"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-adductor-minimus",
+      "sha256": "ee3ebfae7a657439762f30d00df61826c62c10151f2f6d1ee2661d9336fe241b"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-adductor-minimus",
+      "sha256": "e0e4f403aa49b52b6d345fc5b85ac0db489eaa769b8eca2f9cc68c7fa44eafb5"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-extensor-digitorum-longus",
+      "sha256": "7fc931fb3e63e9d8dfa2268800da636ac9fa2505aca1c2865322e78ee5aa7be3"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-extensor-digitorum-longus",
+      "sha256": "7925bad7af190c8b937113c71cec09b3082ec0c92d50f2bc2e8d88124e4690fd"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:right-extensor-hallucis-brevis",
+      "sha256": "f4b125d43db439d51afc2903fa2b08e79268d5249383604c3f833abdfa43f0e9"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:left-extensor-hallucis-brevis",
+      "sha256": "2e4e7bf629cd0b0459f02c3b68b6e74a84822695001794e4fa1deee592516ae6"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-extensor-hallucis-longus",
+      "sha256": "61ff254171cbf4634692eb7a808316e5f17efdddff112e1ded7b62e2ab14f604"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-extensor-hallucis-longus",
+      "sha256": "b7c37fc4b59af4fb983f26dd9a8ef94200a3cbeef94787aa2800d142e4da29e7"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-fibularis-brevis",
+      "sha256": "feea0cc43a7d32f24e767d0f4075fc3921d540159ea1b02a73ed7ba39c4a5e70"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-fibularis-brevis",
+      "sha256": "c7740d034b616c62c6823b98ca24375b9b96f2b5c1b2fac60de8a6a03f51284c"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-fibularis-longus",
+      "sha256": "e9b196cdc88f33624f4aa3ac3b357992da2d4fb70b638b5e4288d9db17153d3f"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-fibularis-longus",
+      "sha256": "04ade72d40ac20e1c3a1961f248dc95fb47c6d91666fec22e151f5c80ec8b69d"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-fibularis-tertius",
+      "sha256": "6f288bea0c4d24303d3c378e9f645e8002375c25f26480a7897004beba482fcc"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-fibularis-tertius",
+      "sha256": "f659533d4be835fca9a69ed9b1873667768ced1f18ea2af719e68fb83fc154b5"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:right-flexor-accessorius",
+      "sha256": "922a1bd1203bd69bbc20baaf011240e0b59d7eff094361db607ae3dd4cd0dc07"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:left-flexor-accessorius",
+      "sha256": "1a8542e18d8fbcc833bd19f24ad452b1c2bc23dfa5dce77c8a359e2df09b776b"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:right-flexor-digitorum-brevis",
+      "sha256": "667d76bbbaf12bcc96cc8c64162d0d1690df3842a973751ad2ba6a40ddd25b31"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:left-flexor-digitorum-brevis",
+      "sha256": "b5688fa87c8e1cd07bbcd3a68aea63158fa469e1bb9eebca415329f06ea577d2"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-flexor-digitorum-longus",
+      "sha256": "a4258d99c06d600840122600ce7694fe14d8649841a1a576b3f233106b805137"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-flexor-digitorum-longus",
+      "sha256": "80b41015d15b06886c19af11c36877ea12324048cf6842219c7df7b97679531c"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-flexor-hallucis-longus",
+      "sha256": "6e277147ff87f5a48cf1f1dd102bbaa0e7dda8e96c13ba8973971ebdaed6701f"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-flexor-hallucis-longus",
+      "sha256": "fc88d327b36800ed512caacb7ebb733b5ba67c66ab4d897ac99c98f7e5709190"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-gemellus-inferior",
+      "sha256": "107e8fd297680f974ced98b870f6657d84e101f7833ea43f4ce3eb51c182d288"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-gemellus-inferior",
+      "sha256": "d93602cdc31e2555ef6a1f1eacdad8782624e98c0d5845fc580f17a229ffe6ad"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-gemellus-superior",
+      "sha256": "778ec0f7b7c4e59cafc1e1664902bbc821be34755dea0bd85aeffd7220ab991d"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-gemellus-superior",
+      "sha256": "2b7e578370f67ed76ea65f2a90e11bfbc53afdcaa571248b197ce3ae78b4275e"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-gluteus-maximus",
+      "sha256": "fc6a3da4a277bb19aa0b568c47eb6c2a14e2338c06607214d88105b0cf6b3497"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-gluteus-maximus",
+      "sha256": "3152de539aa6c07c2e4feb7ccfe54db925f483fe60bf52a9a36d71933640cf81"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-gluteus-medius",
+      "sha256": "adbcbc7303716f299e8796bc532226b79f9fbb9cf8da6c5156d9af19c971fbe5"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-gluteus-medius",
+      "sha256": "f321b39a731779fe6bd837c418b8a2318cf861c499d3c4fb9460daef2c85e377"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-gluteus-minimus",
+      "sha256": "7a082c9ea6b6fb4c2090e56f34f627e26f8611c6a097672b1c025fc8f6c01977"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-gluteus-minimus",
+      "sha256": "ac34f4184f082102916e4a5be08bc81ba07c320ce6886c6fa830189e29a719f6"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-gracilis",
+      "sha256": "361b815a3fe85ef4127f8edc1c350f235b29eb542e7b5196c11df36005cdb981"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-gracilis",
+      "sha256": "e8fca0c75d18a0838125b1a72b5e9d5a8c930f2786fc7376e75865700a8158f2"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-iliacus",
+      "sha256": "a0e79c9de8898615d31a68b9e14bf66cac3a5f61976a700566d7b3cccafc0795"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-iliacus",
+      "sha256": "0745f19c03cccf5130fabade0f6095255bcbd409682ebc37da5fa02085ff79ff"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-obturator-externus",
+      "sha256": "7b0b49a3777b1a96b3ba0d9e7058cb44beb4c9635870049296186bf4a12c8114"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-obturator-externus",
+      "sha256": "4029faca7f2c4ad0a069eda8cb5047d2c8fad74025ac47a57db27b70c6b12d59"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-obturator-internus",
+      "sha256": "25b778d94afcffb13244a648cb669512e3f62435fdc34890bd726864ec75bdb5"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-obturator-internus",
+      "sha256": "555fe4a866d633b97fd698e0ec0ff7d6dbadd9314b8ad30d9b43dbb78f524428"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-pectineus",
+      "sha256": "e296265d036416e4bce5e6b727ef2778c0ab7d00b01884dde51e78d2070ecc8e"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-pectineus",
+      "sha256": "7c88991d336985827cf9d8eb7e2481dc0baeebc492618d7c695b6fe9f335a4be"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-piriformis",
+      "sha256": "138cdc1ab77ed92d0ca83e4daa7d15cf224ee3c781a3070b4336917aca636122"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-piriformis",
+      "sha256": "e8f6bc5d965a65880b9ced651ae1ed3decc231486a7497f3b4b592ee8778e226"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-plantaris",
+      "sha256": "62819e68e44303532f1a8d001dca0a9f9a66dd27837ac5dfbfaef0db6b1b4c46"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-plantaris",
+      "sha256": "161efd00eb31e3047642574ed862e3ec0fb63451de1a847380a9df1fbaf8ad98"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-popliteus",
+      "sha256": "90baa047f9c1871f2b0811e275bcc1284f5d4d1356da87aead5f7455a20614a1"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-popliteus",
+      "sha256": "1b037fbc604f8131fbcc36a9836c9150e79c5ba4eb7537fed37de201016b0956"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-psoas-major",
+      "sha256": "f90fbbdbbf0aba8e5a051ed6d312f3293404bbc91624a9b5b3bdb047ed8b451d"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-psoas-major",
+      "sha256": "deb377458cf7116dfda324064e8c1bfe6063b2f715a73c17e2b6b216b652e33a"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-quadratus-femoris",
+      "sha256": "a68ce9e991a78bfdd1768337e33110b2dea8a761cc414aeb998c1b7dd0e7400f"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-quadratus-femoris",
+      "sha256": "1bc6d4d49e6cc874c3cf637a36a13cab345cb5201f7532e69249cd8553963516"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-sartorius",
+      "sha256": "2623060f7ac3b76dcd7e123400724c0ff83ee2876307d186b2adf07f976c24b5"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-sartorius",
+      "sha256": "9b66d5de9c12d65d7763e1d1234e53978504552ba64927772a7c842d36b90251"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-semimembranosus",
+      "sha256": "27b602798adbac99ab7597d460528d782a94647e8174f987a9f06a596a167e09"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-semimembranosus",
+      "sha256": "ec4ee226374653f6db809712639ac0d477e9ed7fe07857f63d3cac58ed183273"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-semitendinosus",
+      "sha256": "86317bb69f05fc0d2281584371f7ce59a44fc19474665453fff9d88c96c755a9"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-semitendinosus",
+      "sha256": "d260c2eb3aaa33a26ac8c21969b0cd0918db742ba0fb61c7b016b4ac5fb95adf"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-soleus",
+      "sha256": "38bcc783ad1f47bea91804acd90c686acf7fcdf8df708a5ed7abfeef4ede241f"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-soleus",
+      "sha256": "b857ca1d356092d205b5a4b69328d3a6d6f332d7fdeb86ce9fa1449b27a42c73"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-tensor-fasciae-latae",
+      "sha256": "67a4ca856270354ebc6d0a93dc1aeb4c490e749b0a0772eea407881e80a6e223"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-tensor-fasciae-latae",
+      "sha256": "f97f724a3b7cbbd3f223d2c27e948f03c4fd9079d4dfbb6bb9d658af67e0dea3"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-tibialis-anterior",
+      "sha256": "0ec58cf8603b10874b23a5f228b2b458935136247ebf8d5f19f29e715ba632ba"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-tibialis-anterior",
+      "sha256": "ae762e52a8c0e4bc8d4f41ecf7888c9f697dadfc40dd7bd8a8b5a116f901b44d"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-tibialis-posterior",
+      "sha256": "cb1817872f788a3f6247a2bb2a9aae1b665be8b1ae281dfefc218ef249a7030a"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-tibialis-posterior",
+      "sha256": "dc5b51d31598463160660316d2b5cd7834d71248f0c7dcfa7fa393716f1a35a5"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:muscle:left-coccygeus",
+      "sha256": "7208f78c84a69528a5576071db5376cc0291be36fab3091100d6d8e6c63af221"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:midline:muscle:superficial-perineal-muscle",
+      "sha256": "0751b2804bcbee252a6961657754b9bc758e7d3e70d1d19d858cd6898addc232"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:muscle:external-intercostal-muscle",
+      "sha256": "e4439ba48438130fdc75e4673551141ba6d4c1e8c135333a47f56e60b0e84c83"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:muscle:right-external-oblique",
+      "sha256": "579fec558e18ab056e2cf666c2129e02d690c458d45c8520e6c9dd38213343e2"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:muscle:left-external-oblique",
+      "sha256": "8fbd8741e37a4ca1797cd440ee49b0791db3ef0e901309e6de82eb8a5eb91990"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:muscle:innermost-intercostal-muscle",
+      "sha256": "a9a3b06a6143f89270f9836de4921f418143e8a2f7afda0d716088deb60389d4"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:muscle:internal-intercostal-muscle",
+      "sha256": "ebd4a25a749d33c73d18eb3b7e28d350303093c0c4fc748ba89b49e297e971f7"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:muscle:right-pectoralis-minor",
+      "sha256": "886971bc1bf81adcc86bcb13a73caeac6e766774aab02d65a8d1cec611b0122c"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:muscle:left-pectoralis-minor",
+      "sha256": "394d9ade5a124d57b325b1967f52edb51817741e4f4e4f22aef490fefba79a9b"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-serratus-anterior",
+      "sha256": "11e2d872310053dd780d7849438a2b2a98ccbedfbe3ce091022d1491d47fb66d"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-serratus-anterior",
+      "sha256": "ef059bc530fc97e541a9772dc30fed09199256f79583086b9d5caa066bf21dd8"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-subclavius",
+      "sha256": "d5ba0f96b1f2636bea122e13acc5c0e1b60e98be39e643ce9bf90d140b49f1bf"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-subclavius",
+      "sha256": "476f46e513c0411eea0051f1d5eccabbfd6dca1574d2633b37675ebd5fe553f8"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:muscle:right-transversus-thoracis",
+      "sha256": "8fc3c252e2b1178b9303b8b67b8d008cf78607f6032f300ad3c4918016ad94e2"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:muscle:left-transversus-thoracis",
+      "sha256": "13dd3e738885a263f366e58f4fad4f3662f406373cc5ede4b442fe05c1832960"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:abductor-digiti-minimi-of-right-hand",
+      "sha256": "dbcafcd691f23c9b75da7ecf75ebd30ba3509e71eccc01a93ffa271cd03f96fd"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:abductor-digiti-minimi-of-left-hand",
+      "sha256": "9ce20466f5769959ef52cbcac652b5048277aad2c1d6bdabefee444b5094449d"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:flexor-digiti-minimi-brevis-of-right-hand",
+      "sha256": "ffe672a69c015569f685eb150e119aeb4f72b8c7e25abe2830e28321dcd45ef8"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:flexor-digiti-minimi-brevis-of-left-hand",
+      "sha256": "0d08104d6775fdb8e7b5097e78aab4aa988dfc5a89096a0277fda916fd6453d4"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-carpi-ulnaris",
+      "sha256": "269824d851c36eedca650d81072fca9ad14803d7c584e65d6754f983d8b0b124"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-carpi-ulnaris",
+      "sha256": "17c0a1e9835fb2e0f5dfd46054c0bea32dcbb4db0ee96e5d16fd3033efc4eaf7"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-digitorum-superficialis",
+      "sha256": "1907f26626712d21d2a0216943a9fe5afef525d6c251ea18071b351040cc9691"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-digitorum-superficialis",
+      "sha256": "bccd1a3ec6f1b69e1cf2d86dcd38ef3e706f2a00ddb6a0f3d93a8fa81b7107f1"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:opponens-digiti-minimi-of-right-hand",
+      "sha256": "50d0478fa541b2237fb642ca58b2033f5190102a830e4f9b95145b26d6db663e"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:opponens-digiti-minimi-of-left-hand",
+      "sha256": "732cd1c9e45d27bd191c696085509becd3292fc48a0b23d768621343744b5da1"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:right-abductor-pollicis-brevis",
+      "sha256": "738c448dffef87196838e7c401cbbf95116eb02de505abf2a79167ef8b2ccf1b"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:left-abductor-pollicis-brevis",
+      "sha256": "7040805144214868ab44506ed11af597805e0d3a934673a0796583a93da02869"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-abductor-pollicis-longus",
+      "sha256": "dd1c858dc7ef81a51c8bf64c0aae0c4a604dc554c9f670f426d4138fa052a6e7"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-abductor-pollicis-longus",
+      "sha256": "5a11e68f2ad8612d30042dbc37be6b55965aaaba01910e50f1acba573530b642"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-anconeus",
+      "sha256": "f635cfa817d00b8a8d1b9c6c0e5b7e712d42433a95ca86456c1c0c0bb4abb156"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-anconeus",
+      "sha256": "ee903af587a0aa99a75b51e467f31945dce98c31b86957da25e7e920c731e88e"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-brachialis",
+      "sha256": "6971b0dd786fe2b3d5a4dea3850c25f98d245a977e30c0f3c01d83d5810ee36c"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-brachialis",
+      "sha256": "3795c29410e9dd2b5b61474e951b4bd02ae1665313874a8e21c158019dde0fc9"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-brachioradialis",
+      "sha256": "c1ec8b9ba7dffa04c5d32a3c9878762e13515d0521eae9f08b205c84e68b74e0"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-brachioradialis",
+      "sha256": "f66c4225fbd5d59c7e460aff9c03f9b5ec2ac15431b1fac6dd394e85efc9569f"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-coracobrachialis",
+      "sha256": "7b28e70125aeef0c2fb4804b8df614f01c135b15cb97c269dcf51f0ea12a061a"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-coracobrachialis",
+      "sha256": "e757cd8929f169cea2e2f15daacfc7c0b7fda36a15e70cf3eb391dc56e1def41"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-carpi-radialis-brevis",
+      "sha256": "60885d72f439b121c5db7e0a584c367179a481a3f71e438db821f628f4ff3b2e"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-carpi-radialis-brevis",
+      "sha256": "92e375d2ef2146646cea319e3afa943077fe26ef6c4b65619c0f2ff6c2a6e727"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-carpi-radialis-longus",
+      "sha256": "dbeff3ea9c4036e11802e54a23ea11f34e993170ad10b16f0170709bafc3d101"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-carpi-radialis-longus",
+      "sha256": "cc00ffccaad96119ff24340d155959fcb650747344e0b617557a12f82eda4e01"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-digiti-minimi",
+      "sha256": "aa381c63942a01e0247f213fb9d425523fef036698f6e1786fc3630c1f807908"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-digiti-minimi",
+      "sha256": "9829d9076c59897ff619717049e66deb50a4d2ec2a46fbf874ee3521ed5365dd"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-digitorum",
+      "sha256": "30a02653cd19dbe117dff57cc7f857b63b5c63b766169ea2406c3da1f5fcc8f7"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-digitorum",
+      "sha256": "d37065f17d77216d68a605f5d53cad2c10adf0f853c9757da01583074b0a25e5"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-indicis",
+      "sha256": "b4894dacf6099267a6b4ab9c8a202b3dfacf99c851144d84427682d7caf0b599"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-indicis",
+      "sha256": "5d6706334e5122ec1fe4465c5e1902032569b461c520efdd68b8be984c19525c"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-pollicis-brevis",
+      "sha256": "ed8453a875cc6156ffe9162fe165a113ac713fd64394993e9196ad70837bce24"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-pollicis-brevis",
+      "sha256": "d0d1f8fef60d1855fe1e33cb2172ff49d808332f02b913b881f8df4c262411b7"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-pollicis-longus",
+      "sha256": "ef06819ab086402a0ae88d619a387567edaf69efbacca3ff6c65e6a7f9f032f7"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-pollicis-longus",
+      "sha256": "cd429513b82bedba8f609d674a995c7db6bfe92a920a0850fc9c59b84df5618f"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-carpi-radialis",
+      "sha256": "9308688ccfa7b3ecf933d3ed376e96aa02316491567dbea56423bc5f5d725c16"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-carpi-radialis",
+      "sha256": "ae8e1f5ce8607c62791bd7e90b9ba5e2d87f751722ac02970f28ef1d6dab8efa"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-digitorum-profundus",
+      "sha256": "98edb77ce41d5a78b5f1dd2ac70f5d669b4afe93ee13182b0f9cb91cf8f2c47d"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-digitorum-profundus",
+      "sha256": "7d6f99831022154c2a1717dc3fd40b826d38a2127acbea4ad175bbccf479de3d"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-pollicis-longus",
+      "sha256": "3d5fcef561b3721dac6671d3c636214aed962a0a5e544b88c86665b0df096ea3"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-pollicis-longus",
+      "sha256": "8edc54ad4c15974a6870bb2fca9bc7a2a612701589f2609553c9c5027519d305"
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:muscle:infraspinatus",
+      "sha256": "a92a11e7dbdb885f0b26316a2f19f3f3b5ecfc7a9bab3ae8dc94ed311b9f5d94"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-infraspinatus-muscle",
+      "sha256": "aa2f49995606355a4a68bdd1c886e31461b6ce33aef7e749e20464f6daea9620"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:right-opponens-pollicis",
+      "sha256": "9d2df6646ae5e6b3d49e6f9eb1e531b69867410a0c6e2d313095adb3b1edcdd1"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:left-opponens-pollicis",
+      "sha256": "608590ffc2b3afecbf492de43dd027a0a2c9bfe7d76bc88f361a221d82a3114e"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-palmaris-longus",
+      "sha256": "09ffd8c1c224d9865eabc73f9c22bb1796802c0d50eaa9c25c407565b6355574"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-palmaris-longus",
+      "sha256": "af0650679f36fb4ed821f748679fdad50131ee2f891e18a830ee3e1ddfb845d8"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-pronator-quadratus",
+      "sha256": "aab864190810da7f1df0133962c113a9827161b298b99e994a92b5f642cadb5a"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-pronator-quadratus",
+      "sha256": "d1ae3876caf101bbe1a208c5dd0f91fd47ff87a94495a3eedeb26a74eef99472"
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:muscle:subscapularis",
+      "sha256": "e9aaad4cfc6de18c120b6881c47c809b6bce81d52ebaccc0ceae5418af360339"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-subscapularis",
+      "sha256": "e1221b8355d8a634caf21683f5f25b3ee710619e42d99f5a53cf51b8aa25101a"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-supinator",
+      "sha256": "2743652d15040d29f99fb01b6004060ed48d639bd50cd409c6054aee6894fdd2"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-supinator",
+      "sha256": "ea7a347e68c3a1ffd468127f035c9a0985f0f529890b2cb7657c1e98049c8969"
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:muscle:supraspinatus",
+      "sha256": "fac6e71d60a6c8386ec6f8c071e1ab6e33ba61597ac85be8a226a00829288914"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-supraspinatus",
+      "sha256": "a1c64bc4582c4363ac3aa8df7d50d2b0ccc0ee932f42c09f789d9cf75297b52e"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-teres-major",
+      "sha256": "0d07d528b29e979ae5fb46a0962b1535d37ec1cbd5f97083102afff4a72c5a18"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-teres-major",
+      "sha256": "8ab2a9d0947192af56eef9c6c93877d2a7337d2af930a6143f91d3dee5c2ece4"
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:muscle:teres-minor",
+      "sha256": "c037328ac87bf91f006b10bc46f54a1a1d6abc130fd0712522ce3eca614c40aa"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-teres-minor",
+      "sha256": "4619941aa16dba0f18b33716e9760c42bf53b4eb6f722b0094228698daca26da"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-lumbar-rotator",
+      "sha256": "8ce8c5391932e1db5124d3d403e641df5032fa8e549a694d32942c29fe49935d"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-lumbar-rotator",
+      "sha256": "b5aec63228d9312a4007b9500c8fa7f40bcef860414b2bb92fdce2bd6f1e1d94"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-cervical-rotator",
+      "sha256": "183abdb23b97ecd3328a3a2df75da85efc2e1e9f71bf0c085269906c7cb838ca"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-cervical-rotator",
+      "sha256": "adeae8985f35b26bcf00705948da2935aac195628d73cd8c92b85aaba07483ea"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:thoracic-rotator",
+      "sha256": "89b8c396f933636d34e334b8c238b424a36d476c6a08e60c4ebd97b1afe5e1e4"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-iliocostalis-cervicis",
+      "sha256": "ac16f9b6235d606df5667c2d3221744f80a7219536a764553e81dd3b521dd439"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-iliocostalis-cervicis",
+      "sha256": "fa62e12bf50f8a88c723defed04604072b3b6af6c1555bad58dc1152084718fd"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-iliocostalis-lumborum",
+      "sha256": "3d2fc05a4d3865a0da49a51be92b1b2b90ac7b8a15da6328d2bb30b32e3cf7ef"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-iliocostalis-lumborum",
+      "sha256": "1e36bee0b53c54b8b1b41432d9f4bef00455add70c2b6ba8e1a01f6e8a7a49a8"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-iliocostalis-thoracis",
+      "sha256": "13a4f53e2955d80fab59184c768d1d68df5a4a1c4924dfecb85cc6f5c320b7d8"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-iliocostalis-thoracis",
+      "sha256": "d713afc744b61cce82a41ccce6071d9fff9de49a523a0dc94db3fc2e5e78a91a"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-levator-scapulae",
+      "sha256": "3a0e6da5e7c19f552783a3c092890bf19767a7963c17546bdf5ae176c0bcb9fa"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-levator-scapulae",
+      "sha256": "73904c535889948c0ca190d83ea1839080d31ba77c7ffcdb5c8dcc3ecee3c28a"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-longissimus-capitis",
+      "sha256": "b57b774ac703c921ec9ab7778502e5c5aba58da3fae6235b47c18911024930ec"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-longissimus-capitis",
+      "sha256": "d508583ed9277a4026cb0ea7068e0081d570fdd9818941082af137f34732e45b"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-longissimus-cervicis",
+      "sha256": "0b2aaf1ae3b4251e45cde4d702edcaa0bc1a078f617ad526761ee519ed89ce01"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-longissimus-cervicis",
+      "sha256": "0ace85898b0e68d7d86274e80158edd9fdc58653faf6ea2771e6cbea3b50efd6"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-longissimus-thoracis",
+      "sha256": "0705afff5b29f779329d55b489c0ba2fc28c2e1e6e2b709d811664b2c5beec36"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-longissimus-thoracis",
+      "sha256": "dd2993eb5fea6841dba3e7448feab7cb1a78f3916ff6f43011ca3c376e9c8228"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-rhomboid-major",
+      "sha256": "eea1563c70ad0e568fb986658bb658f734acf54b83900faf8d8972b842123c0e"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-rhomboid-major",
+      "sha256": "20bd60f700c72b86c1a5ee2e07100dd40f3aa807668f5e8aed84a8d75f4f492f"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-rhomboid-minor",
+      "sha256": "b857525196e49fd0f6480046a4638f65f3a870faa1b4c48bf144d4907e690832"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-rhomboid-minor",
+      "sha256": "514c7d587288814714e68f9a17e067a295d3c906d96467ed871f8a9961cf2bec"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-semispinalis-capitis",
+      "sha256": "a9dd3e1a42a66ec34055e035873f558a720022219cca5fb59e5a228748cc5cb3"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-semispinalis-capitis",
+      "sha256": "f010695f138d31dd4bf02041394e5af1bba4be70c6dd950f8b81ece993da1fcc"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-semispinalis-cervicis",
+      "sha256": "8d800e00030fc23b915fd93efbacaab1b7664764d44a3bb49cf3c9bef8bccc76"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-semispinalis-cervicis",
+      "sha256": "8ba784c15f1aa9ed4988f363c410177ee94d00942c25b3bbbfcf1c013afc715a"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-semispinalis-thoracis",
+      "sha256": "726c3488c2649cc0001e35a0eb20b425fd38880402cda2979ac22ccb4560c17b"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-semispinalis-thoracis",
+      "sha256": "dfc0b7eacb17364b5a6f076f643a1313851f6b7db77d57b2771935550998c37c"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-serratus-posterior-inferior",
+      "sha256": "82dd1c92d69913cad54a1abc80d70ffbe12ca19645c8b6caef20e40d087e5618"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-serratus-posterior-inferior",
+      "sha256": "749897221a3f774c6cbb072f568c826bd69bacd072f09b87edec09f77fda2eeb"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-serratus-posterior-superior",
+      "sha256": "054035fd0802558429d0b906978e2cad32a0caa5468559feaba8d55c3fc2c475"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-serratus-posterior-superior",
+      "sha256": "f1bc6668a7ba6aa21cfd18aa3da43cd2760cdb142a5ba9cbbc2d4c7cf0950c81"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:spinalis",
+      "sha256": "34312444b6b0819a0033b588bf4ad98e54bfd7f33aa87505596afd8f6887d7e9"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-splenius-capitis",
+      "sha256": "0be84621715155c238285c144296bf31fc8112cc0124855a75ac94c5a490e317"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-splenius-capitis",
+      "sha256": "b7ae4b59f342244323a31119880f9ce7cf442c29b88eeaad1efa192bc9e26063"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-splenius-cervicis",
+      "sha256": "465bb3e9d48f88840a4204fc0070b3251b8bc1cdf6bf94f0344f1fb41cecaeb3"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-splenius-cervicis",
+      "sha256": "3dfbbac6eaff4c9934a5c73393a879bf6c035493b8b0a3222232464363fa7237"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:lateral-lumbar-intertransversarius",
+      "sha256": "537bca9ff4d5bf7f4632386f7cfd2d19bd22f5973e1c02b532b62981b7b304cc"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:medial-lumbar-intertransversarius",
+      "sha256": "361502316c57886ea9f8560c71bbf3da904df454726019899be84a0e67fba42c"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-interspinalis-thoracis",
+      "sha256": "e0d7e409845952ae26071f7bcd69f2ca3c8654dc56fd06c8dd13a8a72b060560"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-interspinalis-thoracis",
+      "sha256": "82dac247bee2ae581350c313dd567c0c27ba33c65f3f99a26c52c74baf4a37dd"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-digastric",
+      "sha256": "48b6224449aa04f7a842a10944d10f2b0163c10237b7abf192a9b8dc98181d5b"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-digastric",
+      "sha256": "85b19e76138f550acfcb594412804cbf7c586ef332961b99c464e5d5b89f875a"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-platysma",
+      "sha256": "089707d67d700495df175d740eb5cba3d168ad3a4712b36ab1f07871c133cec8"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-geniohyoid",
+      "sha256": "008600c9e3be250e339d769376ea20ffc6a13ac40431c13a142efeb427c27678"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-longus-capitis",
+      "sha256": "27a57d740b6c52dd02d3d695e18cc9af9e3f9dc0806b380274431ba47344c625"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-mylohyoid",
+      "sha256": "2e99f18329254d391b9901a982840ccd70eb8dc27cfbbc36c8b75151fb822519"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-obliquus-capitis-inferior",
+      "sha256": "8a1799b2dc0d85b400dd46dc18af470def2ffd6313ebda1a092b3d34dff0f095"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-obliquus-capitis-superior",
+      "sha256": "1447018f93cea98757f89a2b528458b7b8ad7b1ad86c11dac00fee1f8a370881"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-omohyoid",
+      "sha256": "04494c8595bca8134cd214636f9c72028c29243431754a111dc49d63ca4be3b0"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-anterior",
+      "sha256": "a895a25f4d9b2b24e8394f3ffc8212261ae7133931aa0f4b94a7dfe9e063a1e7"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-posterior-major",
+      "sha256": "ec8b40ddd748d18ae03c8518549b33ed4f1150a0019f882aeab89d0400c2aab9"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-posterior-minor",
+      "sha256": "aa1082aea6a8ab55115109fc2dda29212411d04ae9fbf9f1ef82afd08e5c02e3"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-lateralis",
+      "sha256": "1f28827e085530ad3ccc3f2e137fbde55d1e008a10f6f0555a9dada20a8f3544"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-scalenus-anterior",
+      "sha256": "976cbb9b03a2442e90658d8640fdd96eca5f1feb7ca7e3b582bea4bc30702e0e"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-scalenus-medius",
+      "sha256": "f88d6ceaf163e8b04411aed25c570fd19eda7f7d1886f14bc92dc3735999d766"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-scalenus-posterior",
+      "sha256": "51ac886292593b9ea5b9bf73878f84030ffb357f736574375bc0783b4855350b"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-sternocleidomastoid",
+      "sha256": "ea9b07bf2ff78e308a29c7e5ace1b88b29fed8c4a84036c6c511759b7ef62943"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-sternohyoid",
+      "sha256": "fa02b76973d3bcb9ab302885fb53d4e483f9ea25af5f6ec8fed5291448dd33a1"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-sternothyroid",
+      "sha256": "4a2d358f3cdfdfce2aae2de73546ba75dbc2538e4fc203a72ea204628c7e3bdb"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-stylohyoid",
+      "sha256": "9ab5ffe7279fd4b150593ef45ef06ea9bcd3ea997efeb155a1e07aa2430869b0"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-thyrohyoid",
+      "sha256": "fb854c3fb3905ff5478a16fd18a80f5c8e46272f954cfe350d5869cb1a07879f"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-geniohyoid",
+      "sha256": "ff57334b0e9a29d6373d7dd55741a2f2d0a5392a0639818a802f5bd392e6535a"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-longus-capitis",
+      "sha256": "1f205e68950e3ce44d462c41d31b8f495a6532af2b1fc7fa47db83529ab3dad9"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-mylohyoid",
+      "sha256": "f8fda4a2c1f5ea8178bc428b686b34dcdb3fae4ab244610f0f0bca5e99d3b98e"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-obliquus-capitis-inferior",
+      "sha256": "31f3d05e60a0c72952611e82b2d35f3cb1a6bb96b807c82aa67fe6e58a2df035"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-obliquus-capitis-superior",
+      "sha256": "a2155dae20eb5fc2678536554faecc23d674dfbaa13ba17a4def631f6918932a"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-omohyoid",
+      "sha256": "fb94d644419ece1716507370cd0b472be64c0a088753804e006b26649ae3aada"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-platysma",
+      "sha256": "68e27b2267fc85c37534b27ea96fb114cc15cc7b85496eaadb07f8d5c604a296"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-anterior",
+      "sha256": "0295531b3243aa5dd07638634a931c142afad91244a3d08962f81dd5ef079ee5"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-posterior-major",
+      "sha256": "f4e84468ef35ffe898ba9e72d8b717826818763b847e1b989329043250446c32"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-posterior-minor",
+      "sha256": "ccb10f9f3e21012a4daffa1d118cc7eca2f38de14256c1a2b38859eded7e9cab"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-lateralis",
+      "sha256": "5668e34ec1612686f0be93f2f79f9a36ac41109ded7db2c35a8953519f1e016c"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-scalenus-anterior",
+      "sha256": "4df71c17e28a419c5b7dbf2583f319c98402e4370d43218df7d0381aa71dfe77"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-scalenus-medius",
+      "sha256": "cc0d2b0c798e0a148ee3cf419fd5f68c044a179af808a5fc12ca937df8fe88a5"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-scalenus-posterior",
+      "sha256": "bbb4c9c420ae26268ea5e4502449b5d261b58908a48274344d9c2a1edb55fe15"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-sternocleidomastoid",
+      "sha256": "3abeb78152e1bba1cb96a46607843cb0a78d25a90fb9bb4daeb22f346dda690a"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-sternohyoid",
+      "sha256": "a69a145baa90f0191a7566fd9c878045b2fda7dda52140c8eae12fc03d5c95ac"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-sternothyroid",
+      "sha256": "5cdd7d23f7597b5fbea5028a3314c65cb64b592f98cdca57e916154b7a9b08c9"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-stylohyoid",
+      "sha256": "e5906cca73342adfcd68448f1e9c95529f924a30ca29e07402ffb68a919aa36b"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-thyrohyoid",
+      "sha256": "d61adcade9f0103599965477d551612e47d11213462e54efa4aecaafb370bbff"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:muscle:right-coccygeus",
+      "sha256": "fa413b9eda21e7112bbe58964ebfb0d083d2ae4d80d5f07e4c658983c380175b"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-genioglossus",
+      "sha256": "225c79102db380f51d04af9f8a1f0fef383b3e81b3ea6c6bc7a7636702297537"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-hyoglossus",
+      "sha256": "0929152e85ddfbd0e36bcc0c51228ff8f6165c0f725da5424e7a4f88161138d9"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-inferior-pharyngeal-constrictor",
+      "sha256": "438237ecf1b2e8179260366888c638b5b845f9490f6c5f3de8e5464b55541b86"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-levator-veli-palatini",
+      "sha256": "f6c0ebfeae9ea343637927f97c0eae4a430d53c2969d04d1065b2dbf0d358e22"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-palatopharyngeus",
+      "sha256": "0a57e0e106c334998609157021e8729ece7c1964b10f022f9ca2c3944f372370"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-salpingopharyngeus",
+      "sha256": "fdc7acf90a161d27d4d5d304dd842923c2d3212e0ec7d77f050d67a2ca83ecda"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-stylopharyngeus",
+      "sha256": "7b983735fa64927f2a6e2a32765bc3705df82b37c441ae7c62bb5b3301f52f3e"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-superior-pharyngeal-constrictor",
+      "sha256": "aef02fcceed43b437d0df222493c5d10b3f0763a0523fd4d7850325108eac5e2"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-tensor-veli-palatini",
+      "sha256": "5ae5b40331560424797ffae710bff1973326e39dd240b93064673ebde1f7d8dd"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-genioglossus",
+      "sha256": "2f740f1f876160db8d511bdcfa93175c4738d1530fe025e4a0523cbc129f0f5d"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-hyoglossus",
+      "sha256": "5d7a8fe9976eebeb460c38f516112850e5247ac20de13ee9e17c9312da278e24"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-inferior-pharyngeal-constrictor",
+      "sha256": "1216f4c94ab19de6d6dc8ceb23d6bfcb3cbadc8f82629bf04e806b3fe2dc0d52"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-levator-veli-palatini",
+      "sha256": "a0a182701c269a09c2d094af98c37d5955acd22b8451470afe3b484d270a46de"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-palatopharyngeus",
+      "sha256": "9a87f172762d708d41c76456214084598c58815b33d1f741ca2e13e754142427"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-salpingopharyngeus",
+      "sha256": "8f5a47c29a94d13f2b926228b817f1ad1db10d89fac939854c9fe65210fbdfff"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-stylopharyngeus",
+      "sha256": "04e263503093cebca549445d6debe52ac4ceb727370004af2211ecb071b94cde"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-superior-pharyngeal-constrictor",
+      "sha256": "ebbc483d3b0034c951df8219d675b496792d3c05e8f3486e9a1cbb7f007c59dc"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-tensor-veli-palatini",
+      "sha256": "a9bd8232f847e40bb53fe949460d8200c3e33023eaf7f376b251848487acc72b"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:muscle:uvular-muscle",
+      "sha256": "b6afa1e3dcdcebf474af5fda84572ce3eb5e88719dcb69d637deb8b24a49e132"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-lateral-crico-arytenoid",
+      "sha256": "1281bfdc66d036a527ca6f5c7fd12256cf179c5a13212c1dcac3b94797411554"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-oblique-arytenoid",
+      "sha256": "e16eb9fa765ae68f0656015b2cc09bb6a2ac6bbea42236dacce40c82f1ef83e6"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-posterior-crico-arytenoid",
+      "sha256": "488378791bc9a72820302041d95992d6bb6604177e6b02bf30963ea78fa780e9"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-thyro-arytenoid",
+      "sha256": "7cffaddc06f6d1799533664ca322b8a4715a4b5a99706043d12fd72c4a77cf9a"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-vocalis",
+      "sha256": "b8e9a01da3bb1957902073f60e10591916c07cf523cc9582398271a46f0c8ece"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-lateral-crico-arytenoid",
+      "sha256": "42d057e3f8914d125f08d3f79ccf546c016ed2e4705477dd06b4e96130e448fe"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-oblique-arytenoid",
+      "sha256": "e6b06e3002c75f7bb74b23dfabab211941ff94640d3ac2a6b5c1327cfddaf8c9"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-posterior-crico-arytenoid",
+      "sha256": "d3455b1214c03e870379a771cccac1620033761206844cecd4546064d4d5d86f"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-thyro-arytenoid",
+      "sha256": "e5e312ce1038fe58d98b900cf172ea6126056c46694c0a7df7df71b6dddaaaf7"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-vocalis",
+      "sha256": "3ea1c8b5bf11fab62e6851441178acbe6626ce5c18d104fe21966b81f227bca9"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:muscle:transverse-arytenoid",
+      "sha256": "4cdcb1c0972a0d3aac96540aafab951642ff5faaa3fcd0d7033dde7f2b95a08c"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:muscle:diaphragm",
+      "sha256": "1c384ce0e130e28a5c6fd6974dff34fabc037110b8f040442704b1d134b5baa3"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-anterior-ethmoidal-nerve",
+      "sha256": "34f3b8e7960af8337fd57f250a896b6895cf45e61beda490b03d414ffe9f161b"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-frontal-nerve",
+      "sha256": "6c8c4006b351d2311a7db5bee69b683d3f894b103eca7a2fd9af90f8a9f800b1"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:inferior-branch-of-left-oculomotor-nerve",
+      "sha256": "55ce94870915236e109172f5eff72f3fb848089fa516cbebdae9a091f252277c"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-infratrochlear-nerve",
+      "sha256": "b611ab2ce13853741ec61a8653295e06bafa5bc5e76827267fa3853a62bca7ee"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-lacrimal-nerve",
+      "sha256": "d41a1671ff6ffa33e7991a06120e1fcf57c6bbde238d2bb33fdb646950a5b19d"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-nasociliary-nerve",
+      "sha256": "96dcf62ca21673029470faff7fd0b4d1294e2c9c5ef684747cc7f3798e632af4"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:communicating-branch-of-left-nasociliary-nerve-with-left-ciliary-ganglion",
+      "sha256": "081dc4daf310bf4b2177d55f761e471724d15430f4a9bfe639dd2e8486a7a5a4"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-ophthalmic-nerve",
+      "sha256": "bb3ee51095503bba2b296421fe54a134f55e9933b87c2407a28f8b2b182244c3"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-posterior-ethmoidal-nerve",
+      "sha256": "1c957959416dd3deaf55a84d2856b77a1ea60f143f5c200436f8fc6fc07f747e"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-long-ciliary-nerve",
+      "sha256": "cea405f8634790f412cf0dd10e6b7dd79a8bc81c2ce2a693e7f49316f133aa6a"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:superior-branch-of-left-oculomotor-nerve",
+      "sha256": "f8600054bd039de32e55bc3f997f6f289a62dea7e73e9c6aa83f616cc8268622"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-supra-orbital-nerve",
+      "sha256": "347e54a42188f66bb0a042ba276c5bd9e2a9c7a1a122b242fc2a9eb93ea96bd3"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-supratrochlear-nerve",
+      "sha256": "54f7b64d31bd9ca91d59bd1a46906f723fa93313bf86fe1846a845f50be99310"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-anterior-ethmoidal-nerve",
+      "sha256": "9f0ad66833a7a95ae304c17a93c0764dac6415d2a4120bc7ddc92891582b3de5"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-frontal-nerve",
+      "sha256": "7366db9a6d63830a3a0df9ecf80ddd4e04c61d45cb93e45f7970fc81a940992f"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:inferior-branch-of-right-oculomotor-nerve",
+      "sha256": "ed9c9bdc5e39d92d47d944f3796281674502dfeef5d5ca673351b8f0b8cc0475"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-infratrochlear-nerve",
+      "sha256": "022e809d39335638462f5c7eeb94bbbb90bf79752ff1f4f39101207010a1debb"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-lacrimal-nerve",
+      "sha256": "7e88707941f42e5b446805ae668a6175f6f8553be7d96db63ea83d54e803a003"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-nasociliary-nerve",
+      "sha256": "596fe4229a21601d124eb061f7ee3d4f570433f934bd9a4badc5540561fe25f3"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:communicating-branch-of-right-nasociliary-nerve-with-right-ciliary-ganglion",
+      "sha256": "8e0fb6c24d0e8174822a50b8a1ff18bc81560b5dd5615fcd54b0a01191de011b"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-ophthalmic-nerve",
+      "sha256": "2cb3692fd013e9eedc247deb90b9ec6847762d355ce610b2e7aaca98fe99cd90"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-posterior-ethmoidal-nerve",
+      "sha256": "85abe0487dc7f3543bac7fec06f59dd9f4e1186d6c3394c36e2bbcabea9af6f5"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-long-ciliary-nerve",
+      "sha256": "acb0eab1d70b09cf061a245cfb94fac97968222f295d6e723357454c93c378e3"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:superior-branch-of-right-oculomotor-nerve",
+      "sha256": "db8a25dc6ce64eac2c94fdc333284b00499b3c9a881b9f0f90755a6f1f522fdd"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-supra-orbital-nerve",
+      "sha256": "c94d1a713b40506a2f07874d491dfe3cbdd4c585ca296efaa50c58fe6b785466"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-supratrochlear-nerve",
+      "sha256": "aea18a354ffdbe10c5f91e8a4cd91c1651178c43e715dab328f84c65171ba5aa"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:clavicular-part-of-right-deltoid",
+      "sha256": "0d7bde6591fabaacb7aee6e8fd9b7209b701f229d736e05c0e6f5c6d68c49850"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:clavicular-part-of-left-deltoid",
+      "sha256": "421f4a7bf3e302ab6730cf08359e4edc7199b03a6de1520d00f8093ccbccdb1d"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:acromial-part-of-right-deltoid",
+      "sha256": "1ef91ec2ecb2696ac3f2248d01b73f0efc07d8ae31007499bc113a1e343f8c8f"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:acromial-part-of-left-deltoid",
+      "sha256": "a73641511213accdd043f439f666a1f60200d20ff487fa48f08976d7a16845c2"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:spinal-part-of-right-deltoid",
+      "sha256": "e6cc8bc5d749503c03ac50d3ab77db3dff440ad53caad9d13d5d7faa02bd4126"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:spinal-part-of-left-deltoid",
+      "sha256": "58ede9aa91c2edebf851c31b4d0d04cb83e893221ea611f14a4517ef274eb30b"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:short-head-of-right-biceps-brachii",
+      "sha256": "825625d99a971fe5935897a87824ffdb0f323a494c75a6fbd598833cc812616b"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:short-head-of-left-biceps-brachii",
+      "sha256": "4b0a67871dd0c51f98bc985cd2cd0ff501fb69f53d424dddfc4208ec2ad7f0e6"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:long-head-of-right-biceps-brachii",
+      "sha256": "2df57b07d3ebacfe4e1fbfca4810fd90c672a470f4353c787d9c09057da98d89"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:long-head-of-left-biceps-brachii",
+      "sha256": "6f28047ecc7c005e0f2930a63d728b80e5f1521550bfbb50972e36ca5aa111c0"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:medial-head-of-right-triceps-brachii",
+      "sha256": "0f89f8a9cd6a7026c62c6068ead5115c630a050d38e7220b372f0e300a5b3e18"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:medial-head-of-left-triceps-brachii",
+      "sha256": "53939b1490872e25d12141ef9d8eee9a73ca076cbfd58cfa4ceefcdacf01d14a"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:lateral-head-of-right-triceps-brachii",
+      "sha256": "5159b1dea8b923e7b6a337dda45c966368da88815994fe4bbf393cd23d3c1aaa"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:lateral-head-of-left-triceps-brachii",
+      "sha256": "83e3fa44a6e56b33142a3806234b2843947536de83a7ec9d4a89c24eb180f97c"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:long-head-of-right-triceps-brachii",
+      "sha256": "e6084cadf884511ba9b290903642b3d7fa50aa54c0a1169d5c6e25d7db807215"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:long-head-of-left-triceps-brachii",
+      "sha256": "a3fff54574f1883c6acc9d81cc6765e758398ea5fd2340b12f068ff18cbc12e7"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:ascending-part-of-right-trapezius",
+      "sha256": "2acc09bfd7b7be9c7c55727157edb6e1496b501761b99ebece82efd0d6a21fa9"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:ascending-part-of-left-trapezius",
+      "sha256": "653ff67b6cd185f4adefc9526b95048c7f4e23d81bd8ad5e8a848e57584954ac"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:transverse-part-of-right-trapezius",
+      "sha256": "a20b53777b5b59a83489472008525a5429fec4830890f4787cbfb25f30da8357"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:transverse-part-of-left-trapezius",
+      "sha256": "15ddbf7429997bbcc6b3a6e2d90a439352d2b7bd8b480f27058082a4249b0093"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:descending-part-of-right-trapezius",
+      "sha256": "2679dc430641fb1cdcc78a59c7e147f6af42459a44ed98cc2ca228a325cf5fdb"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:descending-part-of-left-trapezius",
+      "sha256": "61c12b7c87878ca0577770575bdd895924ef679ca6e5e4c01b9c21b0740844ee"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-pronator-teres",
+      "sha256": "2ea3a035d941afac5f7a3dcfca37a4fa351de420e9a6d17d51cc2a5351ff8d81"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-pronator-teres",
+      "sha256": "0dcf5dcc92dec025de1362f6f2a5fe4214fe3038755fc6c42c0bbcafd6b9f3ec"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:ulnar-head-of-right-pronator-teres",
+      "sha256": "03542a9b120ae58972f63d1af478b4f17c8a6691cdba97e41532d4fe515a4cc7"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:ulnar-head-of-left-pronator-teres",
+      "sha256": "239ab74a60511148e882050503ff1ef8bc95eb3625f28a6b0eec27ee213c57fb"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-flexor-carpi-ulnaris",
+      "sha256": "a017f203c966efb6eb3364c53a5bd630b4a24d219cc222832d6c3e7000c6e785"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-flexor-carpi-ulnaris",
+      "sha256": "30c1517a1187e5cbe7413f0c10dd4fce1f1e0d5b783f82caa7ad8a5cc9ccc4f7"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:ulnar-head-of-right-flexor-carpi-ulnaris",
+      "sha256": "039496417fb2b474b29a0bb01506ac2b67b869154f3efd631e8dab9770a1e3e2"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:ulnar-head-of-left-flexor-carpi-ulnaris",
+      "sha256": "e3f43ea6f329183117790288a71da54bc678f44d17056e9e1201871664276fe7"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-rectus-femoris",
+      "sha256": "4e12c1a292b9497239b019d007f7c2bdb621159d8124b7f69e89f153aa237b2b"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-rectus-femoris",
+      "sha256": "da7d2ff906d788c3754536809440240c6c414b708f91315b5b73c112069fe211"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-vastus-lateralis",
+      "sha256": "58ddecf7741050cdb44ee8fe0862abb951f10c1ccf396956fc7b3234ed04d615"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-vastus-lateralis",
+      "sha256": "5293e8d949af10311a3b306ac34684ba8e2ad1c134b7aa7a78f1fa49c2815540"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-vastus-medialis",
+      "sha256": "a4e93eca7c6e109c051860cd18daac92859f0fcf6a347076be63a63092744aa1"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-vastus-medialis",
+      "sha256": "1f33664f0af3d1a9685ccc3c80c4efe7df9a33107b6c8a9127d7ab159c067ecb"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-vastus-intermedius",
+      "sha256": "db88e54c091b3115465c36fdbbf295f49bdf884956f4e41ea2d3f338ea157b5e"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-vastus-intermedius",
+      "sha256": "b054bc078e1c7b43b637acaef576826c86333a03e1dd34368a049bcbc1a47bc2"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:long-head-of-right-biceps-femoris",
+      "sha256": "6afd3654341f42a2e02180147b2acaf2390de3b9a96b33dda1072f167e840b6c"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:long-head-of-left-biceps-femoris",
+      "sha256": "9961730a5aa174f4bd5f78e6c4d6e98dc69e4179b821e7865201725a33f57b8e"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:short-head-of-right-biceps-femoris",
+      "sha256": "f2a37e1a529f5b206c49c5fd71c0c2b204d857aa7f413ac3d2824b7ee1287909"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:short-head-of-left-biceps-femoris",
+      "sha256": "e5bafb59b9f798e42ff34a019955dab3f55737f23144dbd30d84925bc5e42aa8"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:medial-head-of-right-gastrocnemius",
+      "sha256": "aac169d3fbc61bc99252ca614619163bf23304be3b74872336c0603482235d0d"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:medial-head-of-left-gastrocnemius",
+      "sha256": "c09b9d50c890b9c9d091899f3b0dd50548a74f94c6dc7f54f76d2ee2cde13833"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:lateral-head-of-right-gastrocnemius",
+      "sha256": "c57c10f0663ceea43f32f16c0aeb67300999ec746a7ca0bd11a365419c07d00f"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:lateral-head-of-left-gastrocnemius",
+      "sha256": "4dfd9f65dbec37145d7d7f2834b2d806b90a0edb4895ca255dcb7ba1504319cf"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:oblique-head-of-right-adductor-pollicis",
+      "sha256": "533f1827221a0e98d936a434b0ffa933d3e990011cc4ab50f1242bc04186f6d2"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:oblique-head-of-left-adductor-pollicis",
+      "sha256": "7e1a049da7d39eb2118546540b6db4e93d2deea34f6f6784978c343aecb5f863"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:transverse-head-of-right-adductor-pollicis",
+      "sha256": "9a7d364f4f85e631e4d5f7c4fe277407e0646951f39b14c1bc566609db931362"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:transverse-head-of-left-adductor-pollicis",
+      "sha256": "279895bf7c70c001090bf70ba55d932f4268cef76d9cdcf337600c9910edc58f"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:medial-head-of-right-flexor-hallucis-brevis",
+      "sha256": "65878c19581bf5aced23e4262cfd328fbf53c8e2c30a878fadff25435aedd349"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:medial-head-of-left-flexor-hallucis-brevis",
+      "sha256": "ef78f4d3015f2f381f35c662fe89ce4de242885864331452423c27e402578602"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:lateral-head-of-right-flexor-hallucis-brevis",
+      "sha256": "236565fb0de25a9594af60c92778abe24e3fda637afff471868c39a11a21b2fc"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:lateral-head-of-left-flexor-hallucis-brevis",
+      "sha256": "9d12bc4b9e9794a64a293cffecc5b9c932609bd4fe04b56f45d0c1397d7344f7"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:oblique-head-of-right-adductor-hallucis",
+      "sha256": "29147d6dcc79f5dd0d6f9e502ca79f747657a2e47e9a89616d202e370dc9782e"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:oblique-head-of-left-adductor-hallucis",
+      "sha256": "113ffb4fff87f6246d032b9daabd59334b924567b06ef7efeafd216bf095ebb4"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:transverse-head-of-right-adductor-hallucis",
+      "sha256": "b95c8980d5acc1a8b6bf6de938dedfc96670848aaad3d6c3585da6b43a11f6c9"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:transverse-head-of-left-adductor-hallucis",
+      "sha256": "361b1697d669d648cd8b0233e7d5a76ded3fa83e7df9dc6541a071e541797787"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:muscle:right-pectoralis-major",
+      "sha256": "2e275995a3d904d715e10ef171cb2a33186e3ea345cb01f1c4e9acdba1b3b195"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:muscle:left-pectoralis-major",
+      "sha256": "9a6eb808426efddfb6dc252627c577ab04e5c18fc9c966c9b270e1f2cd4efcc5"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unpaired:organ:heart",
+      "sha256": "ebb8f6c440ace44184ceb8cd01f5808fc5144c69e14720efd1d3337894b6c35c"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:organ:right-lung",
+      "sha256": "e7d3ed48a0722f2512610d05b26c7647bead607b84dc9330807f0cc73ba74085"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:organ:left-lung",
+      "sha256": "94929531b65afbc65fddfefadeaa7aa3e1e9da6f283dc8bc829c03dd9a9709cd"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+      "sha256": "eea762f1185699077b76eee2cdef59b17482fe5d821bf65a8972491cf0d55b57"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
+      "sha256": "9725252cd9af5e8be6131723ca6dfd7da7806195ea5a919ed817200b491849e1"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:stomach",
+      "sha256": "4f7cc310a9376869c66be3bcafac695624a43bec72a6e0f1d6c209b597f9f706"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
+      "sha256": "d16895295c1757c56221e0ec2fa3c0d2a26d99faffbb13bf3d8d54e534d55481"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
+      "sha256": "4bcf08f7aeaf163d7095c31b242fffb36c63ed935623cb1c4dd95ca2f283885e"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:gallbladder",
+      "sha256": "b1344a7ce336d9abf8740b8838f105e40335aa2226e6ee14ffcebaa046a47a4c"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:organ:right-kidney",
+      "sha256": "2aa01413cbada93844172a1d1dd707f5efd91115c6321f969ed983e0c9f685b9"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:organ:left-kidney",
+      "sha256": "8fa4047807632e14aedc38eabf1495d3a800172d4addb0c6489b9e0380b3f66e"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:urinary-bladder",
+      "sha256": "377ccbbf922198f6d155427f3cd442df88879f9d27febc6138b207af39bc4e40"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unpaired:organ:esophagus",
+      "sha256": "58ac81ee913f86634afc6ca2082cc6785a255d2e300f525ac57698007735eb65"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unpaired:organ:trachea",
+      "sha256": "010c1596a3def31e56fa399194da4bf470d3a9b3ff5a7d59073e34221005ceef"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:spleen",
+      "sha256": "eb4b6954017ac8a15adfe1e5473f63b5e5511b7d5d2bcaf465fbdb6fd2cab9bc"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:organ:right-adrenal-gland",
+      "sha256": "332e609226397b76504db83a5332e1ec924c5a6bc3f6c0330023907eebddfdf8"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:organ:left-adrenal-gland",
+      "sha256": "fac73673b9d18c918825461b37d2375b3c6d62fa93a66c37bcd2ab7809170aa3"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "sha256": "d9408696dd9879c48f2ab3071903592c11d27c1fb40bc543fada27ff1522fdea"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:space:central-canal-of-spinal-cord",
+      "sha256": "427738ad6449980eb3f8cd5ea96582542fc8d0ac8fddad5d0a30cc94bf46743a"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:bone:manubrium",
+      "sha256": "ee5f81596e014a70f6b147fb32863842383622aa65d4005f06164697411c1e53"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:bone:body-of-sternum",
+      "sha256": "a5ea035071419934b0f84e88fe92683f0c6782142ae5ef852dadae46fe499746"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:bone:xiphoid-process",
+      "sha256": "3260d6fbebf9e51a51acec52eba77cd0a5634edb455a7d99f66d5b6fd5bdc376"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-first-costal-cartilage",
+      "sha256": "e160ff5cb1ce1fe8fbc97d569a923e5a27e3c91516098e3014242081f105e456"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-first-costal-cartilage",
+      "sha256": "ae8c7b07e35a8a88ec7cfc7ecc9bf8776366c7fb03ab41e6a439ed7445d62736"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-second-costal-cartilage",
+      "sha256": "91d211ae28e159971a6a67b08eeb0ea0ce7dc93c6cafa9e50e9c541022d7bd42"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-second-costal-cartilage",
+      "sha256": "1515f8662a0f0f0881256abe5b8a53d53e2416a22cd06b7de8adcb96af9994ca"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-third-costal-cartilage",
+      "sha256": "7ed139e12afd03bc7c9b1f0e083f83351dfe8e96be32fcdac4aa03a542b8881b"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-third-costal-cartilage",
+      "sha256": "59e865fad399e375ce328a28ee132e7b56b133f1e6d3a9d59043aa018d471fec"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-fourth-costal-cartilage",
+      "sha256": "f9caa271df6ed2cec72fbe975253d5dcd0770b36f0190521e6b934028383dd85"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-fourth-costal-cartilage",
+      "sha256": "cf5451b29f2df68c2691135a712a03f0690542b3219fa9a943d483373cea3e7a"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-fifth-costal-cartilage",
+      "sha256": "e9c902cac4a381450944d4908de8c0fc9524f3d536a65e7fe4746537825b7fb7"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-fifth-costal-cartilage",
+      "sha256": "dc7396db7060d7a125ae72d3d2a28044d64dc984ccbb765eb071bec9e54a02b2"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-sixth-costal-cartilage",
+      "sha256": "fade02900b4128e8425f35a0afd0fb35271b6a9f62a138b5298444ceed70ff16"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-sixth-costal-cartilage",
+      "sha256": "34e07b296b7c458d2c36b2c3a771079c5a8854f278151267e5e39b8a80c03d70"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-seventh-costal-cartilage",
+      "sha256": "69f0cc0e10b07ef3dbc737a15d6acd72e9a52e1dfa68fc3d81c6f70853dfbf47"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-seventh-costal-cartilage",
+      "sha256": "222d5206bfa43e9b2b295eead8fe961cf320e2a46dcb66d484d50e249e24f916"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:cartilage:septal-nasal-cartilage",
+      "sha256": "845e0cb74a9e1414831d788d07fe29cee6ed9a3583ea475a0785de07239dc4af"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-major-alar-cartilage",
+      "sha256": "445ae703d8c9d41bb501467479ccd1ef118b8e75506e7666d395bd0fbf646194"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-major-alar-cartilage",
+      "sha256": "875349aeca5d9d2fbb4bd6e42541fc9e9a90fe2ef4a97ec6aa372e81d5bfc4fe"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-lateral-nasal-cartilage",
+      "sha256": "91a71b1d1b390398e7eacea03ae7495197c608441137a76181e57a012715726e"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-lateral-nasal-cartilage",
+      "sha256": "5322584cc0cbc3a2efea5599f7426fb896f2e2fe2287afb46a26cc9e03c0f0a0"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+      "sha256": "fa7abd55661f9b69f35688bfbc5ee743c4be654b91d4924df99d78fdada05ab8"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:cartilage:cricoid-cartilage",
+      "sha256": "c05c805095138976c84eba4d94b8d6ad3300f212efbc6ab0248d2a21a4fa8537"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-arytenoid-cartilage",
+      "sha256": "e7013a47ba074865d51e82e0cc8a7b2f77a76f38ecd2c907befaee009a74884e"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-arytenoid-cartilage",
+      "sha256": "8dae5c48169ed66cd55e41e74b502a1c3487c9c4f8e2a96eadc140c920ca7219"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:ligament:right-long-plantar-ligament",
+      "sha256": "b4a69786a1a99ccae7bd9b416b7acf414f57a40104acdb20809c0bd9e9a72422"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:ligament:left-long-plantar-ligament",
+      "sha256": "277fbfb356b2f75b5339a10d1171f6f29ad24027c7c8d4080788eb69eb0e7dbf"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:set-of-lumbricals-of-right-hand",
+      "sha256": "49c914c51032aef5cb15968c76518fb6475e60c16e9cec3057aa33048456de61"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:set-of-lumbricals-of-left-hand",
+      "sha256": "3d5cb002953bc5617b5393d7b4a087fed147c3276009714736f50d8960988e6a"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:prostate",
+      "sha256": "3837a37561e7d62204dc5139c14379df2c5aed118f9d046950b6ee696817ae63"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:organ:right-testis",
+      "sha256": "dbd22ec459dfb6c76014da19c8c15dc2f34713a5a9dd14dad1780a5abdc9740e"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:organ:left-testis",
+      "sha256": "0a642cd82dcfe5c2ed904e45173b9a32759e05eb0b0bebb7c6236875ba9f965d"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:organ:right-seminal-vesicle",
+      "sha256": "66649d3eca3e0f22e81b426cf66e187a673f6b6609abae8c27ac90d772674047"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:organ:left-seminal-vesicle",
+      "sha256": "717bc7a4ff1d81c5fc1c0e8b35bccd9bcdc156f4b05be43d1d9d706bc03a1831"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:organ:right-ureter",
+      "sha256": "c79823c6d49161432da0bea539f6a9b28de4b1025e54836d85bf6e64d345ab31"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:organ:left-ureter",
+      "sha256": "619290d8b325041aed8312187905aca9d960db2e1a3765ab24204a221a7ac1c1"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unpaired:organ:thymus",
+      "sha256": "a1a6cf059ba84df96ae3f7196a076517318cc47a84db4a0a1fcdadefd11d7e2d"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:pituitary-gland",
+      "sha256": "1f304d768ed0b1f9bb49eba277c30d368c1d322ad3f58dab9b0dbe798b71afca"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "sha256": "e9d4dbcd8cc27bc9bf7c5a5f911383f8a99605e7fa71290a179aec048dd27c21"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+      "sha256": "da22cee7315c37c766d2514f518661513112a4a59f882d10fddcbfde0c5516ae"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:rectum",
+      "sha256": "c4dda0869aecfe1df005250a3ec922d0446d2f2ac45b78fdc158d1a7b92640bf"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
+      "sha256": "c30801288fd51226ae06d94c66c777508e5e9467f81a1d9cec76f722a9ac68d0"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
+      "sha256": "f61de3eeeb0381746cc98572274772302b6ee6faf5a3a3baff2ce69758f1b1ec"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta",
+      "sha256": "022abef30ef2b30b62367c7fd1347c50a3ee90c87cb98647e4d35e4713cf478f"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:superior-vena-cava",
+      "sha256": "ff0129b6a2325cb96f97b3bb43d4a098cc283452d7b6901902b4e4f2d946fa88"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:azygos-vein",
+      "sha256": "c38085303a1fe60ec2f228ddc33c86e709d1c4084e36d514be9f6685571e5a97"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+      "sha256": "afc281422a90b18a332b2e062c029354939c33c15be8f960d1f2a221935a1910"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+      "sha256": "ae396781e65af43ced8d48917b5d4dc6f2b0e8a358268fbf9281dae66a8dbc33"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+      "sha256": "3a655fec08f783f94b992755d736b8db61987e0c1bdeb439a5245dcabc407355"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+      "sha256": "0b77966ccfaf1a6b0d897da40af174c07b19785b2d387a1d085d3e69dd7a5f4d"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-subclavian-artery",
+      "sha256": "1676b53aa6e95d16b21a166a053a744c6bb62ad074dc96788834fab3da6610db"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-subclavian-artery",
+      "sha256": "696b347e28fe49e2e61915cc36fe91a74e095aff9d1c96a640654c4d40efe964"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-brachiocephalic-vein",
+      "sha256": "73ef64258f193d6907a1c77a0a8b291ba241ebc06a6cc79090d4c494d4790b19"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-brachiocephalic-vein",
+      "sha256": "4bfb7b4f5911150c03507e1465fa3cf2ad1d71220755f06008af2b8b8963f6ae"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-subclavian-vein",
+      "sha256": "9e801ed80351a6af944ab7ff8ef3b3ed8e4e455a67c496947f13c926a05923a7"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-subclavian-vein",
+      "sha256": "0886bcd13bb26ea539a1cb23e2b11d13dd76f5500f44d76a83ccf86e5dcb9f84"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
+      "sha256": "49bc26cfc0d90e923cbe29ce9df528431ef8ff31ca411e23186cd4de5d6cf604"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
+      "sha256": "dcf1f0b2c543864d9bd6ed382a0123f06150c8e4f5dece21131fa89ce1ae3209"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-internal-carotid-artery",
+      "sha256": "ff27c724314668b6e022c4077eff56c74ac9b9371007117b6c4778335a8cfac5"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
+      "sha256": "499daeb33a5bb6ecec8661f3880420123947e7f74c8f0b1cf9c1f1f48a2c48e1"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-vertebral-artery",
+      "sha256": "2a8abe473350bc98c63b8628d8b2bc2dbae7d7e7b5a39429d296d7bb50cc359d"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-vertebral-artery",
+      "sha256": "df7048f5007004b8526038d26dae8bd9d84933bdb1977f7872eed928b367c912"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-internal-jugular-vein",
+      "sha256": "eb1df581966fddf7d54ca634da18c894fccc13c10d51243cc3e65155ddaa5686"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-internal-jugular-vein",
+      "sha256": "24bffb938b69fe40f3f37704f5b0510c684631a44c8fbcdb491d6b092aecbbd1"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:vessel:basilar-artery",
+      "sha256": "1b3a1f0a2481163d056bed7016a9cd83e3e30d77976c22293c87cf6c761d65ce"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:vessel:anterior-communicating-artery",
+      "sha256": "f027de09167df4135fd529fee63392c7a98cefbaecc20d10b3ecd64059f93092"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-anterior-cerebral-artery",
+      "sha256": "2e3da364f1af3765481c4bedf51bcb0895c7cfa8e3978c07381c6e984dc94202"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
+      "sha256": "9a31da5732f664e4e04ceb401864f26f5fda14035c3216a26df36c56d51fb1a1"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-cerebral-artery",
+      "sha256": "b50d3682d7ba2c24885cf5e0e2a1168dcc67d8e3ce234b1c4beb4dc7cc22261a"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-cerebral-artery",
+      "sha256": "cbecad99f4acfe218c8b2b1e7fcd111c9f172f5a46aa028d490e2af088d83a1b"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-communicating-artery",
+      "sha256": "52d28702b764731a3c35221e1d7fd7df902a4425a31e10fb696f83391f70231a"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-communicating-artery",
+      "sha256": "c681a9a626c27fd66f27b60f4a9177d2e33cee0948a809856b1209704fdaf2d4"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:trunk-of-right-coronary-artery",
+      "sha256": "fbfe6f2eb9bdc714ab0da234ae355c7b02ca40b05d54b79bbb4dbcfbcea32fc4"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:trunk-of-left-coronary-artery",
+      "sha256": "b3a8c76371b7cf3cc9995d79cfd0a80f3c0cdc0216453cd5227fab856fd1b1b3"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:anterior-interventricular-branch-of-left-coronary-artery",
+      "sha256": "5d81a62ce438df25837ac0f5100e878ffbf16c1c1887753e70ad899a5aaa1827"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:circumflex-branch-of-left-coronary-artery",
+      "sha256": "b48a70363b6194ccccfdd232333d2e3bea28fb0daad2788986e27a8ad2080728"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:great-cardiac-vein",
+      "sha256": "b4b7f03458231851012d7c97e86bb45d87f5a934807c8d28f3dc2dc1a81bf75d"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:middle-cardiac-vein",
+      "sha256": "79d61cd3beb0ab44a0cfb8ecd3a867b6d2d87e38eb0d5408e147676a9b6071b4"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-pulmonary-artery",
+      "sha256": "53ef444627b2fa7991af8c7de4864e2f24dfbec428d4901b08c5170d9b68d76f"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-pulmonary-artery",
+      "sha256": "85d8aa771f0880fcf1626a86ea7368d419de85dbf4857833a4af8ddd88761046"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-superior-pulmonary-vein",
+      "sha256": "0d8e65c93711f6b10143df31a6a9aea89cd7e62404b07603d73c517c85687656"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-superior-pulmonary-vein",
+      "sha256": "7533a7bc42cd7b63fa2cab2496eebdb06540a3899621237d753033f093a00181"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-inferior-pulmonary-vein",
+      "sha256": "b969cef82dabe0a17e6eee9e7579a67718ab7a4c4121a6b0af0308e29e37b555"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-inferior-pulmonary-vein",
+      "sha256": "e2a6c36641a9c427039a701ce7059c20d3af0ff1dd50b45fc89ebf69c11b2d27"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+      "sha256": "b20f57a0f1f4dd51b3c70e5a01a02e154bd48fbeafbe85b24ab52b175666a544"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+      "sha256": "dff68e0a112c8ec47bf9d5680f9926de5c2435e90cb8e7c3bab7c3926484bb70"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+      "sha256": "20dbf024483b797ab96e55390c826855165082d18ed8bb96ce6b49b150d0f155"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+      "sha256": "47527b49471e444973532fd52969745874dc458788a4b99e7885453574e327ae"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
+      "sha256": "370c95f563b996c41078707c5489799c1f5420d49d942566cac40c6f3fea9ee7"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+      "sha256": "78919d40d14973acf0787f647e35e53cb8b909eed1c47dea725d63ae055c518c"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
+      "sha256": "6a2d3b3af7398f0887f25ffde0544eff74a872c129155577b5d8cf4b6b86884f"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+      "sha256": "0a7874a436940590e61fa764a04d450bd71d68348968ba9fcbea97c73d644230"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
+      "sha256": "5531351be2ddc8778bb88177742f9885be18cd51d4443f724051a6caf98b1c39"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
+      "sha256": "37720f6b423f28e8beac9a5a449ef4fadcfc23818baf033db0e5fc6d13385c38"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
+      "sha256": "03220036bf3aa81cca834642d7537bd9a3dbe1e563aad5030b7d6d74a984856b"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
+      "sha256": "d933d2bbc3be4a0bdf9cf9fde3b44597affdf314ad94008ce07133b0b51e8da8"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-artery",
+      "sha256": "73f2432e828ff7589ca51d4c7d2e04ca9f00811d97517f26fe8f22b9bfaaab33"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-artery",
+      "sha256": "524acd20c7aba986da35f50e8b3a2f9b069a83de2d525c6bab1dac31d4f020ba"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-artery",
+      "sha256": "d86ddb22675b893735979adfcdf93cd4ac38e36f5230ca4b2c64a28ee2dfa12b"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-artery",
+      "sha256": "8fc17be919eece69d544afa99ea545284eb7a5000c03311f8d8e7628c4e67c3c"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-artery",
+      "sha256": "3fc5513339b554b9dfe45bbba27d4d4beb6fa4b9b27fe99bc92339b01e36defe"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-artery",
+      "sha256": "9a27391366d6d482d4b9545c98652b12ff56ec25ed05ce4f249822779d40a54e"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-vein",
+      "sha256": "fcc34110f4239497cc9c9112f94cf46cc2bab411db5ef1bd0b6ca7958b1e1b2b"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-vein",
+      "sha256": "e22673604bafb4e65169d1dc3a45c6020990a365ba6ae8aacd6cfa47022ed86c"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-vein",
+      "sha256": "c111cab80c0c732d3b2e92c16a1ba0121af66062f1dc4f31376a9f87a7cd6591"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-vein",
+      "sha256": "156f137d45c92081890687261cb010462b425bf6f71faceeb895d8a7b2bcb248"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-vein",
+      "sha256": "393342e5a6a00a42bd56577275c5d16619101cc0f3cae400d026b32ab20f1910"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-vein",
+      "sha256": "5634921dae3ceb042d930a1fbecf396329f10faa3b97422d8d16c96a40ff9bfc"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-artery",
+      "sha256": "eb10be2fa2f3156ab072268f6095374e76565cc9ced14a94fdf669a728682df4"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-artery",
+      "sha256": "6b7ba3e838baf2ef11dd368cfc05453bb8e008322f668d2704b5230b1bbebb37"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-brachial-artery",
+      "sha256": "f9bd278b36909655d81f517e2e16dc975108082109a5bf6976cba04050defda4"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-brachial-artery",
+      "sha256": "1b7a47b7bdaaceb5777635567c88439c55a05803a6b3cf7cb85a5a75adb3e081"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-deep-brachial-artery",
+      "sha256": "4815d000fca406cd4a28416b8e6c3e9e3c5bf2944d460dea05e3f4fbaf498cb9"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-deep-brachial-artery",
+      "sha256": "e493751b026c02795c0c9667961854f7e69e67a3c934a382d68d8665427e2f46"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-anterior-circumflex-humeral-artery",
+      "sha256": "16aba3dd0dc12af3d9cc90c1df67442cc36e9a6f2d59fbe76e43b83ac51922bb"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-anterior-circumflex-humeral-artery",
+      "sha256": "0eb69559478d070a5b630d7db5c874441d4338f307ad87696db44448cf738b6d"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-posterior-circumflex-humeral-artery",
+      "sha256": "a695918418e8517b556bf6881796f2a7cd286b3fbfb685b5edab69660a25cf6a"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-posterior-circumflex-humeral-artery",
+      "sha256": "2959aedee54273f646d45e44305d9e7dd4f44bf522c673a215ccf8471287acad"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-circumflex-scapular-artery",
+      "sha256": "4b36b33f52c11506913c4ff787f0f92c8697ce9e5ab9b46056f88638bdfc2449"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-circumflex-scapular-artery",
+      "sha256": "571e6b7e91731b3af5616b0b6ab60605e4a341678e3fc1fa2fd4f242ee602285"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thoracodorsal-artery",
+      "sha256": "3860b010e02f82884136339eb5562bddeb831cd9c92180c397792f1823063f76"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thoracodorsal-artery",
+      "sha256": "38220ca9394c1396cd766310d31e21ccea87ff352be2cc361e27dbfd4e1a51f9"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+      "sha256": "fe1ac71ee1cdc7692141a69ec26a610e9a72dbf5e0ee1e18d53d39707a0a97ff"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+      "sha256": "441f29913fd52819cc0e7e31f4b19f64db9ec8e57bf1b7402ae981b11c015f85"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+      "sha256": "796ce39ac2e70536e732dfba1b3b0a0b8394468f084b0988d9e33efc8da61531"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
+      "sha256": "c755f773447a1ce1125b0771536bebe72c7549418f5395ef3e2b2a45793fa4bc"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+      "sha256": "6603188b758e5038e8c9d0b36b4028de8ee08485c5192689058f25dc0609b3ca"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+      "sha256": "81743efeeec5ec9cfa4b73426c82f240961346a5bbdb86797eedf78f1b1bfb1f"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+      "sha256": "34029a3610286f3ec3832b2d2ca35fd6126b9328c281592055feca4389e1231d"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
+      "sha256": "2214d5afbcd08590b1fa78d650e6e6a8d583dfa910b43c68d1273c5aaadf246e"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
+      "sha256": "dacafe8d78e28fe84edb16f7318a2a1914d86bcca01b07eec52f7f3a72ce944d"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
+      "sha256": "efbad2d5bc98c1596a5a998981fe8209280173e6c15f57575db7151159c75ee0"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+      "sha256": "0e7ff7cd52c52d16f7b6cc7c5971b93472b35f000e19a8738b25306435beb160"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
+      "sha256": "8af8157c2a923945a3b6c13a9cb711254579ceabd0d4906866a01b0ce4e9f6b6"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-femoral-artery",
+      "sha256": "22eff14729364e6b784e9c2e0171550ce4eb7103e4ac3827f93090e4b51c702c"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-femoral-artery",
+      "sha256": "6096a3efe58bdaa907c117337531eec3b517d62b4808417cd1120fde873d2486"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
+      "sha256": "668dfb6cb271f22c092b472144bdd50303d9def3f742f7200751e8b9f24499f9"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery",
+      "sha256": "5243432545a2bc6ff550d1a657edb65581c15c35fdb78769de955b1a0db0554f"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
+      "sha256": "2a521b91882d41577aeff610e7c55bda37df5f3a35e8c8550e10c3c79c9d3325"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
+      "sha256": "be4e08e97882f56062d016ff7ce2634173f029a2770547901d6d2b62abbd08c3"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
+      "sha256": "e4a2d1f3b063ff8216be2b20710202dadb2aab0445487cf8e3635b38081d765c"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+      "sha256": "e7b69c59f969181dcdd4ed6331a1894919a94a2a4fec0d0edf17cd0af730e058"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+      "sha256": "b347dbf569f33804880271f4779658cac15157213c62e2dd1655f2cfd4892114"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+      "sha256": "e10038a24d1c046e673aaafecdc621025fd32d28cc5f9ce34ecfa635d70487c9"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-artery",
+      "sha256": "b53b31b3a8a12a5b9f8ccc50753683aa826acb06963fe3cb63f9541ab508babd"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-artery",
+      "sha256": "6c7f8cfc15036f27022786bd1372bd57807721671ee80e85b2fcc974db39d21d"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-artery",
+      "sha256": "ef743dd7e5f56ccd8967946e7bd3163bba4b51411c089750b69c7e3957e361d1"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-artery",
+      "sha256": "90728a9f76158591596e571dd5b777f0e0a05e1a639b0d2bf676439fb1d77cad"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
+      "sha256": "ed29ce22064f1f4a8dcd39d32558db563f0cb6c84792bc4802c0fcb69b4e3766"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-vein",
+      "sha256": "994af08bc5720c3b36301936aed857d1140ef0f19edb68aa6634c982cdfdfff9"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-small-saphenous-vein",
+      "sha256": "9ed11bb660a4c93310735b9d041512a71e089bbf7ba4cc60055f6daf498e5b98"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-small-saphenous-vein",
+      "sha256": "8f64651b102066ca3a27600a4b39b170ed6ceed18eddfdb897609a0dc9313227"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
+      "sha256": "5345a851764fb6b140ae4564e6ec445f45d64e735dd713134860f883d5860827"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
+      "sha256": "59a59b3c08f63c739cb99c73487d07f99b3c9f2ece57b91ccae19a778d133477"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+      "sha256": "bed7d0d5ab0cd3d3eeb68ce2ab6c14d382430901db2916d325c9d31b9fe4a83c"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+      "sha256": "7aa1c95f4a3ac14f84e86bc77672fbdb1b0b448b3511dcaa1e873379315368c1"
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
+      "sha256": "d6fc5d298c03b693492da31ada2989edd0aaf86a6118483202c85c5ba2dce530"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
+      "sha256": "41133ca4611144844417b63569246ab2472b1c11c19b9d0ddd06b5aaa63ebb12"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:set-of-palmar-interossei-of-right-hand",
+      "sha256": "15e07b4fd6734e788db940ff14114644eb15a9fbbdb1e554afcdd1bf301fb56b"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:set-of-palmar-interossei-of-left-hand",
+      "sha256": "e87a1a51c2efd8d14d1ef25f81e9b78f4c5587c873a857af59de66309f668795"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:set-of-dorsal-interossei-of-right-hand",
+      "sha256": "da114eb0eb2ced96c364dfbb93fe5c01ee720eb3c1376a8c6eb57d5458cc6254"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:set-of-dorsal-interossei-of-left-hand",
+      "sha256": "12e89b54fb5cd0980768b91a671b022411ffbfee1b5f8a3352ba0459ad94e697"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
+      "sha256": "157897f86875a6cc350c3e39fe3326c6c53af9cade44ce32366465afba734c56"
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
+      "sha256": "3bce40783addfd35c0a46e01526cce91e4b8df8f6fed4b183e85942d03d82056"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:ligament:interosseous-membrane-of-right-leg",
+      "sha256": "075d1f25a4f92114a518d060f93f1fd810097f80a31a7b831b4f3851a3f90e42"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:ligament:interosseous-membrane-of-left-leg",
+      "sha256": "b6285ee6baa8dd93940c2087e81c772ef02952acf1d9dcd78748400af2080531"
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
+      "sha256": "41e27b529110f117296adafaea989a1b7dda0206d1a227fee4499b5d8794f323"
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
+      "sha256": "8978754a6698483f67a3a99d2a289d16b57edc8aa11614ddf448ddf958fa06b1"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
+      "sha256": "a542d068c59b0e27166aedd3f873fc07e196709b05c710ff610fba5de2485a16"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve",
+      "sha256": "97002613b26fc5c592345c90c073915921907465bc2c48d516f095eae5715de4"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:tongue",
+      "sha256": "67d06bc6a2648ba952e58b3286ff044d61dc3a4f687b86fca761c1baa5ec6a0b"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
+      "sha256": "1af2277c230c1923ea942ded72b0ff23949bcab5125bf502010055b58c423817"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
+      "sha256": "814a9e83185d510de3f27b1010955d8ccd720ca4d28713b8801abbd5fc1395dc"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-submandibular-gland",
+      "sha256": "f26adc24689b53fac064876876f82b81fef8b693f0a81b5f307c1b2e0295a194"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-submandibular-gland",
+      "sha256": "6927ff6f92e9d402fa0a86e2094dd65fafce6800e27978418ff46dd7e7d82a0e"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-sublingual-gland",
+      "sha256": "0b415f178cd31e704fd57989d3048873b4737a034535e8c9633e74c2caf8c452"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-sublingual-gland",
+      "sha256": "0929569d5e32ef8c59495716ecc146ba3d433cb4034a37be896a2974ccc8b899"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:organ:right-epididymis",
+      "sha256": "a8a3dab9dc4fe2c43241218c0b599fb1a9c68424b8d9622326bea013bc61408f"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:organ:left-epididymis",
+      "sha256": "99301ef73868f1d87f96ca22d9c83eb308f367166ccec1085fedcd55e1afcf40"
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:urethra",
+      "sha256": "0cee8a1819cbe1ba8657b915b7c87a8b0ee8227dded918918bd60e815976778b"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-corniculate-cartilage",
+      "sha256": "20f717174f622f05dce0ba6e4fcc9ab2cdd5a28353a8763baa769703fac3afbc"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-corniculate-cartilage",
+      "sha256": "d5e9b1bf66eb9d2c94f1180705409861c4bcf71138f7ed9e5fc1525e4f9f4785"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-cuneiform-cartilage",
+      "sha256": "12e19f9ab3ec82e4c782e7ba08a68d5f54980b678bae4d5e9e9dcdd0d3d75bd0"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-cuneiform-cartilage",
+      "sha256": "ee5d86575791d5edfe8437b1c78223038fe2f133f3f8061d8eb77f9db8d1b074"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-lateral-rectus",
+      "sha256": "66988df20f75c2261fd45a0f0309c5e2a7d95559e8e4ac13ec356211df26e3d4"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-lateral-rectus",
+      "sha256": "b76fb2ab08a801b3f49ce5fbee96681ae3ce046b753a847ad51bc2ed3d8cd58e"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-medial-rectus",
+      "sha256": "f7c4da6c0f5113b9c6434033e4efa3865c65fba81b8c21f7a1bcb4e9b110935e"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-medial-rectus",
+      "sha256": "c30beffad3f02b826ad2027a0c1fa3c2ae51508727895c14a70704e7d98dce7e"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:ligament:median-thyrohyoid-ligament",
+      "sha256": "ae8deec834c15517c15aa857dd309bbdd28b0b26e64218643f545f4d076356f3"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
+      "sha256": "87b0e5a4b0ae8dc165a37d237e010d820b12e4a1527d5941c58ca8c33f7cedc0"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
+      "sha256": "f27c8268d67afbf9ef232c8d49c4beb432332485dd15374e9fd72caf986dd444"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unspecified:ligament:hyo-epiglottic-ligament",
+      "sha256": "2101aa56828bb207ad7f55e8a2e16151fc5d94e8900454691e90d9decd2a47e6"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:ligament:thyro-epiglottic-ligament",
+      "sha256": "9c6b71d8e6ede4047fd19d7fa596ef486f421547f28d4e914e3ac19721748d03"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:ligament:median-cricothyroid-ligament",
+      "sha256": "a80189947567116764ddd600dc0058a777b8242925274b69b7dca3f545c6ad17"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:right-vocal-ligament",
+      "sha256": "a92fb28dadec4f8fa35a0d006e29b2843c33f767ed2503b4902daa187647ce3f"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament",
+      "sha256": "72f898b3ef5c9b863a2b80bf2ab995a4915b31a73d63a6b300892d373856393d"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
+      "sha256": "f47aa099be4f3517a1a9b80a71f49dd71a89ca12668b60cf341b1d80150d312e"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
+      "sha256": "9fa542d3e1a4879e82ac6aa63b8eb60cd2f963e82d8531e69cac1ac8dbfc1caa"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-axis",
+      "sha256": "6ac8115e5fa17df0b8d03a2df0b70372d15dc03bb12cd9f4d42c0b32201b22be"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-cervical-vertebra",
+      "sha256": "0274ed5c55face2941b10df70bbfdb29ae1caa09d10cc75c36ab76fdf151a257"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-cervical-vertebra",
+      "sha256": "b087f08ad9d8dd0d4ab19244738934d90a073d201055b23fad2b959da9d0fa0f"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-cervical-vertebra",
+      "sha256": "47c29c97398f26dde716374401e9f603cffccadf85a01f87ef5fe2f5f0c40f98"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-cervical-vertebra",
+      "sha256": "5963a7f524c4faa1fa3092f84bb54dc0c6829e2dd382e9e44ecf5590a3d21817"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-cervical-vertebra",
+      "sha256": "4744710f70dad8b525efdd475a465455208d938a0087eaaa05e61b66e36e59c6"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-first-thoracic-vertebra",
+      "sha256": "d5a7f8ac003c14f79c06e34e757d85074ea30b22c052ac31c4742e5927aec2a8"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-thoracic-vertebra",
+      "sha256": "1e6d1b0a9c53c70d4622b644c7f75b5525202b6f294a7ef329da8fb2fe2736e4"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-thoracic-vertebra",
+      "sha256": "ae564d01ab78e7d63c97bd956020ae81451bb0f11293d78e1a9f0b5028cdf50b"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-thoracic-vertebra",
+      "sha256": "fe03639c919b0a9cd0b0a08a395958fbac89f009df14de810cbf68e92a7670f5"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-thoracic-vertebra",
+      "sha256": "46df621c31f31889e447d7fedf17d27ad88f6cb84293657511dee7dcae507c5f"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-thoracic-vertebra",
+      "sha256": "11a39728b1c5e8fba4a91d51aee93fbe118195bce5a35ac76af164addf274797"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-thoracic-vertebra",
+      "sha256": "b9fd6baf878520aa4868f1e06371f856c702a5bc4284444c902026121cdba54f"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eighth-thoracic-vertebra",
+      "sha256": "3d5b8617b5ec8fd052cdb8bba1d6ca676d4dc8729eea893e90049c69dc7a2ebd"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-ninth-thoracic-vertebra",
+      "sha256": "5f90290e9b79dd5a03336e16e171d4758562f6ff922959b29c61fdcaa608faf9"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-tenth-thoracic-vertebra",
+      "sha256": "8cae9eff04874f668d7385431d8c54dab2c960f956fe8ba828161ee1c6b9ae1a"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eleventh-thoracic-vertebra",
+      "sha256": "727a23c1ee27851efbf7954a9e97f0a7b021f2238e1f9beae501d1f7a513c1d9"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-first-lumbar-vertebra",
+      "sha256": "3f35c7704d29d15f6e18cdfacde719041a50759f2fecbc4e86d11577bb982eda"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-lumbar-vertebra",
+      "sha256": "b9e4ca297269f8a4ebe958382a04260a7de44361b8710bbeed6f2b6ed937ff5e"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-lumbar-vertebra",
+      "sha256": "0b61a710220bc85d1fd1c45588366ec331bb166685371859af72d2810da1bed4"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
+      "sha256": "fd7005c4b7dffdcb4c507c25e751a13e94dc4e8032229436a4ef43314ae8246e"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra",
+      "sha256": "26e1dd00b473ab9567e0708c1f87a53fca960756bfa5c9901041e6e6ca41e179"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
+      "sha256": "166e5d36b2751953c18d1213aaf088aef747166e529b72e01c87bce53aa81c0f"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-internal-thoracic-artery",
+      "sha256": "0680321480ae5d5557b28860f0fd9c7870a85ed474939e3489a5f84e62e40db9"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+      "sha256": "6a2e260df09acc3aebdf6983940bf882061374a898be47a6ac4cb48bc50a06b9"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+      "sha256": "8d60e26ffbeec70edb2f58ffcf56a3f8aa041f1c9e265ec622516938d803d86c"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+      "sha256": "a099887c186b98d2b0831c8da4d4ef87280e16d457942d66d131ee3e4006e026"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+      "sha256": "398c9c53fcd0072b26ada940957028e1dad2bae6ff5c6a7b14f8b299bf5e18da"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-vein",
+      "sha256": "3ab6094a3783b72c525ad6c7e86d3c6b41ba0e293a16a84a6942804a9657e10e"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+      "sha256": "9a9d5998f336e9dd4982a8d11c1d4f762683b94e633a5f1f24b57ba56b0c6a69"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+      "sha256": "4fc69a3a91a4090e24ee3eb2d5800a7496937e287860b4b247e0da31b810be66"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+      "sha256": "c4c9ebe9ee30a018bb32cac50f490744350af5c3164701c4bca0d583ca4d010c"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+      "sha256": "d36547654ade3b6ea123e02d1caa432ee58c9de3f280d706f30758042c82eceb"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+      "sha256": "c63f7a197e13306bd3154e40f17a58c2c5ce8a94fe90da461d4f5d0f0928a3f3"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+      "sha256": "241920117a0d55ad13a9d0dbe743544d3b6116152146184d29df62cb5e29bc9e"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+      "sha256": "d9f22da09ee0d2662042b6292096b66586fb7b4f27d765aa6047611c27477560"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+      "sha256": "8574ec8aa777ff3789ee386bdec745adfeead05e87ac462a9039d8947136ad41"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+      "sha256": "5394cbae827b6562fdf3b254a6e10e71675da04f46cdf793e6ba080a72fe76d4"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+      "sha256": "88fcb537084273332a367ed926a224f4f504f598512831b595309849403ff2d9"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+      "sha256": "9b423e3b4c934df160f361a4f20b8afcd77821504ba423b7deb3731625812e69"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+      "sha256": "48305d6108d45aca1dd3023f1dcc84a89c6818e8252d43d927a78e6b5aee84c6"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+      "sha256": "db782cccaa125ed10874ec7434aafef42b89a6a6daae9f1414308c0807824e42"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+      "sha256": "985d330c04068dc99bfef4abbb5bf24665d800cf85b069b41c00803e4e6d2dae"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+      "sha256": "3daed32a69a32c701d5797a4e1351075d234cd2db0b1368bea8aeaa9353028f5"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+      "sha256": "6fba17e8ff133a2de6bc945ec9398a69ac53f6169c28ef76f6a55c9f3c95c06a"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+      "sha256": "18f7bf9fbb20d2aa1e699e4d483d6004fc1a6e72023d8c8286fc4c03774c5b7f"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+      "sha256": "7eb22c4e434bf81c24ccab0edb264569bc67753f42ce874312709ffa19847385"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+      "sha256": "631519bc03b6162a8101cece2ce46fc5d6480fe390c149cc7adbdf1502e7e1b9"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+      "sha256": "13adfb74f23fe8cdb06d59515c6d9f1019ff0e38c40cff3145795113ff7f0f6b"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+      "sha256": "821db3ecb44b44fd29a4ee790e02828fbc7f6de7ed4712cd7b1baf0d09dd8d17"
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+      "sha256": "340f02017c387a07a796be54eb4b3046427ce9708e58adf53a36ed4bb4181eab"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+      "sha256": "e10436a1c04d87ea6738a7494baa34cc63c406ad8e9b7be0dae0f62303281808"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+      "sha256": "89fb388622b6c4483fbc35e38adfe80855234f1f785a5170734177ef41338367"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+      "sha256": "ce807570cdfeb4a4222bf0b88d24455dd4829aa20798fe08ccfe787f1a277bbc"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
+      "sha256": "68dde395043775e4512c45b6adaece7937d98fa2080575cfc7bc5ee76d3af573"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+      "sha256": "997f1134e99d457c8be19790b13944ba785b93176ec0df239df758fe85dfd25a"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
+      "sha256": "59a768c75ccc69e8873c072aa43b9552cde1208afd5fa178e4eae7bbf459920f"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+      "sha256": "321011d2a91d609a36445d97c6bebf25c36fd20cad3b37efb0887e394e2ffa6a"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+      "sha256": "7c1c97e2fc341b2409946f12e1af999e1945265fd6901510082b991f6689e6ea"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+      "sha256": "98570b71bc7cfb582e22e74ccfb5cb49c6c03c15bcd4a16742dfa8cc60a3525e"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-putamen",
+      "sha256": "b78dcb068e45bce9dad638da902663f79bb161a1352e5bd7ee07dcba6ca42415"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-putamen",
+      "sha256": "24f7fd53d4758190ddcd1f48244b945e62d4f152d5e604da39a2f36f20e958b0"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+      "sha256": "1a0a1d962868ee1b4713f003a6551e473ce888ae795aae67013e441825c32270"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+      "sha256": "cb7263e98b60e16e9919c80a811301a80a754e2e11146fbe210e9596787feef4"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+      "sha256": "b37dcf6b4973922dde03b57344c8ada7bad2b47ea291613c0a4ff02deb705644"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+      "sha256": "d4c9778d95e2ff9c7b5cdd1a41bdb5811331285db5295a350e31444f605d196d"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+      "sha256": "49c0a379ca1c65d03c7da458b88ecf5ac241deafd06aa7ca5d6af13dd860bfc7"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+      "sha256": "1a3dca36fc86205db01855cb4df16841f2711f91b8e2f45e88bb8e40b4cf4803"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+      "sha256": "6fcbe15aaae805c79d1c175e53a15770c253dc75de6f6a73ad996cecd1aa9533"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+      "sha256": "727b9042bf75a7a3a738c20813490b137b81a70146e5b9bd7475efe15e0ba525"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+      "sha256": "d6e844331c98c669ac4e9a4fe592e4ccbd752184d79d0719b10a3c1048e79204"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+      "sha256": "c32305557bb31d49038b5a21862816ee55f5e67f3d8befd961366ab045871b38"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+      "sha256": "c72f5d226bccaaa65fc08729a98ce486086775b0bfc6e31495188c22f60882e9"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+      "sha256": "60ecc7bb41bc9b73263314fbbac30ab4049e71f074a8b8e92363f3edb9616897"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+      "sha256": "12fedc991faed638defbbda8443f22ffc1135da4cd8c717e89ba32a2688102ff"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+      "sha256": "67acfe13916afbcc7b660abbeaa4273147e3f0debd3e5ac1da755e24c0ddb1ed"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+      "sha256": "6cab1c4ffaa9582c0819b3cc5983f0dc6be5bf280524b4f9646b0b40edf17c9c"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+      "sha256": "14a57d94bdc10a7cf1b0eb73db11ac484167b81b653ff1a62dd03b61b35321c8"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+      "sha256": "a0ed0b0fcef295e8437010b497931efbc251b4419fb60c5ad9622f2010754202"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+      "sha256": "1d636288be1de51498e340d4f3b4e7becf88f6fbcd71aae47a0a0d3c3aeadca3"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+      "sha256": "784ee4d5a2bfe013a9e64e00af1d03aa4ea65f6cc0af61911cd6898d3a07283f"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+      "sha256": "98f872d6ec591c5c46c0ee79347962a18feb16a373711c3c795f8c49680bb44c"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+      "sha256": "b79cecb15cb3c45766423ac90d5b672484c0fffcfe2b5f33d47424a7d0dee9b2"
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+      "sha256": "c4b1337d81fcd0471c0c066533cbb2ac2a17e91b4a538af094b6fae96b6b4888"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
+      "sha256": "fe0dcdadc1d45399504f8bc82bcbf706f0ded4067d9b315340b25dea393008ec"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
+      "sha256": "05d05a77a0f5519cee2736d16bf704ff3127a5a2539966f0efa21efd42f8899f"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+      "sha256": "e6ae97af2847fd09a3e02b2909c5604886e334a659b29d65025dd38108a61be4"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+      "sha256": "1faabe2c2d6e5425d7c013b83beaf146d3740e5ab22dfee898738624a8779d7c"
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
+      "sha256": "d604aca920b3ff9686a71cee4e1f62082541b40723a9b5373ca1ff717c0411be"
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
+      "sha256": "37f2dd17991f2c59b2726ae5c3bef6da44c50df6bda38dd7cd096fb62d62eb99"
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+      "sha256": "3c2071d47c28c115ce7ce4896639bf7127698348e6d6d6535cc3ea8584046871"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
+      "sha256": "295cb0ce42fd5b3764da7fd33f9d83ac22d29a00072ce6d8a8c8eb0849d4fcfe"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
+      "sha256": "27448fc2ffd4ea72f835d43e6a0fd4f6bdcf5f75fc0186e9199ccbb266a3f4ce"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring",
+      "sha256": "56e626f5954a54a8466f653e5fa0f9c3ad0d385c9025db2cb70560fc82bcdd25"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
+      "sha256": "407ffad10e88e56d69ac8ae261e24124d5c25e43dc2659c734b397bc38ebd250"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth",
+      "sha256": "4e6c8308f2701ada4f632039ed46786e5d0075a26a78a0e67747d77b565907f9"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
+      "sha256": "0d703b8602618ff3f251d2800407dbd6a5c6f88633f00f2838fc1d279d4d0a70"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+      "sha256": "a3db5984c91890700231255d1fc22de5e945ac681fca0bf487d4769c9b5ff573"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+      "sha256": "201839207aaa9275e951570d72204ef9cf9b59e741cc9b726f4fb80e60eef01d"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth",
+      "sha256": "d9a4de9bcbd74ed87b592748a26367cc6db57c18d8778ab9fea5811b01c23978"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
+      "sha256": "a2cbe09198eccd76156b883bdd971c70aad60456590e21287bce77069109d92f"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth",
+      "sha256": "da1378a80f453667824be5a82bb86d4c45b0b0027cf22ebe6e884b3caaaeb875"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth",
+      "sha256": "80aea99ab31ed2f7ef23f8754569cb7dec2e9221d007ab4747e304cf94c0a5b9"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
+      "sha256": "47ba9c3f2897a1b34634fb5b941a50305e870fff4120e7e69270a73afa5df711"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
+      "sha256": "f5d5a30d8b66ef31e21bac5ab4d20f4355c702e148f4d1d5e286a9b9a1d7e5cc"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
+      "sha256": "fb0600a6643e97e06348503dee452f014d35479bea98278d4e4f1d8757ea7f8d"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
+      "sha256": "b0bcff5316b8d2aecada59ed83cf41356a1e25db4a33324e4adc68de1c96b53d"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth",
+      "sha256": "dfd5ba70b30ddfa7ae4ffb6839645f0a44110fd643aa2d9618c4909a9496c30c"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth",
+      "sha256": "1a0863e894722ae523c79279da9d786303e4236adaa42a5c7e221aae527f5bba"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth",
+      "sha256": "0a4c2b3333ee7259c62da110fa65eaac744286955d327a20e8f23b882aec55b4"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
+      "sha256": "82cabe6504e00be0d5a9602f99f1ad5eb9b4b9f34971c56915a8e51dff9f0e50"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+      "sha256": "659216cfd7e77870fb01c747a3fd54fa93263f0887d302773c0b0f2a7ce8046b"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+      "sha256": "aa436ef23ab96ce78f82c26d9088f606ede2c79438c23093d3aa14a903b9e2b9"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+      "sha256": "bde5bda89d312d88f376b59d95e9851f96f135db687e4755450e8df7680efad6"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+      "sha256": "ca6f5e86abd316262a02c4a7b9038cf7f5bd55c6912f41cf920880cd3d71b0d7"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
+      "sha256": "a5a49954d8a4a27fd734788a6e5d752596b622da84db03f2e2a6e389aea233e4"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth",
+      "sha256": "d9948098fc817a19aaa4f46b1a27cfbd499277f63d65b94ed68e3dc03916567c"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth",
+      "sha256": "a29b24be1c415c80e4ce1746f55ce2dddf1051f004b51b3795fc00ffe502f61d"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
+      "sha256": "396fd00eef405f8295a2cfc110cdfa907cb69b3ea1825ac83c801938819b9f8a"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
+      "sha256": "846223d01bf0fd0cf9ecb9f99c1e121e4d8cb8595673f4cfe49463056cf6a650"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+      "sha256": "64c2d0280bb37ca294268fb969972abf27f6929b237aefe8efc2a63c662e20e0"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
+      "sha256": "4c3b1c1e7af55ac96f02ea5795f175d5d05a9c372c251d5efa6665c974d3876a"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+      "sha256": "ff55c0aa116ff50d62f095b744fe7d2a34cb44f9a756456fcbd235a5b992c5d8"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
+      "sha256": "76c61f900c6b61b1be8e20486d1e6fa0bb0eaabbacbf20e0d1f7b956e0534887"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+      "sha256": "bd8a24439827c3aa1b3cd425b73309b54f3ab20b22bf837aa206c00451c34700"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+      "sha256": "a3f49a5e3fdbd98badaa5146b8bb709668569e25b79124c3d46ca2e536783a4c"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
+      "sha256": "87171851269e74a2e52541a232a4335818e25a145862efd76fb5f5cc91c9b867"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+      "sha256": "962b84b117ac2fe05ee7c1cd2aaae797754f99062bcfd4c461e851e009b936b6"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+      "sha256": "8ae044c09e3cb5b4762f20cb7c944c3fa0425a3cc0d0bbacfb41a4f199f8eb90"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+      "sha256": "61a1ab2c9784dd3a4e837f1bad8e8021db8cb18d6dd926fe9ce259a5442ea0c4"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+      "sha256": "31242cbed670810d4f3372a1250c34dc623267e7a084992087eec1f21af3f37a"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+      "sha256": "f69536c3791df1b6b020af2f55bafc6374632b4b90ff85fbfd1ef262119b2f69"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+      "sha256": "d23d28a42709eba67ac799d78e80cbd6f9858cf861cf6c8585221c027988e3a0"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+      "sha256": "9678a6dd1afa0a6511fad688fe6c80b7697a97fe96e085009782eab2d9a62e57"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+      "sha256": "186d4121a67ff8286f0f1903c9b0e542fc5e34a3d0e41af5ba98437026ec9a33"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+      "sha256": "636e180240414b2703f4b4b9494749b191138903c59fa10d1caa817a3a19810c"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+      "sha256": "582f137a1ec32ca7fc43c3ef0d73a582671751a035a8115f68d9fb8ac5365b2b"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+      "sha256": "129188eea295c251f2c18d39acd8e51f4db24b387ead92c26603bb0efab05d6d"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+      "sha256": "bc149901276ccdc4f9996100ca059492d893c502ef1c8ff76254567bb172b5a2"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+      "sha256": "459abf3474e445b041e6b720f79fca6ba4da9afe0f9c7cb2fdd0c1cb49175d58"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+      "sha256": "3555b341973a6efaefa5c85fec64975f0ad176c733d4983bce2b4410f86f0fd5"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:epiglottis",
+      "sha256": "d74c3923f675259a6c2cac84017df13ef80e1a47469232fae859536fa02156fe"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+      "sha256": "29d42585ba276cd0d92864915812bd95226b226c8f0fa2b5b5d3711e42f3908d"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+      "sha256": "cf456ab0cbc533b6a39d2c24cf3791a6138049ac2e47fa3eda7d98fcf9573c8c"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+      "sha256": "273e895e743c15ab6eb18f45be6e6c563dd79746ce2fb4eccef858a3c7c7fffd"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+      "sha256": "60000cd6a5ae24a2c39927f1380241a8ba6d3d12c8a6a20872da90dcb5f6d1ba"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+      "sha256": "79091772f680c0cb41af9ccd3b5eb7776899e504d4321dbbc3db973967cca1eb"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+      "sha256": "1b1a8bd643a3a98b85fa5053e90b0035ac83ee9370bced66fb2e05547d330405"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+      "sha256": "fd3a32de2e443996a3930e257e9105d529f512159a489987d0be4362b5f20abe"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+      "sha256": "06909f1050fd56b2766d39d1d5f3192dc3d4f065d57879930ba8d58e16a6dd2c"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+      "sha256": "4127ebde4aade681fbb683554d097a5043a63687c055c5c258258aae84b4838c"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+      "sha256": "7f2edc607e4c45af6dd1e4cc4990fb8dbf02e3f12deaa8db42638532ccdedd58"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+      "sha256": "61ba4c1b3f2f61cbd6c292c37607ea0f8172403da804475637c9a1e312baf0ba"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+      "sha256": "7db7c869c1bf7cb38a180578476e3f9102473fbdd71c0adab653534cbd2f232d"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+      "sha256": "36d0ecb91e288e0e530ebf1986f8912b5002b3c8576e2432d11807b44ea872bc"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+      "sha256": "f751847bca28b466abc7d72b368df002b6dd361db10e014f760ea15827776189"
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
+      "sha256": "f970abb37a33f832759e2a9fd5ddfabc9d21ce097bae8f47d1bffe1a217904ee"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch",
+      "sha256": "d5a7498fefbcbde8208032bf6493fb94b4fa69616c71bb8afd435a981de810b8"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+      "sha256": "70003b13ae4484e785429a05d9a1c3c61dc70dc56bf49e97760734728dc9ebf4"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+      "sha256": "5d8f56de509b1efc272cb53973c72f56ec19faf5c15dd83eeae563e4897fc742"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+      "sha256": "7e26bccdfbb8f0aa2b3302bda31cc9ad90da9965e4f3619ad6e8d18f2972ace6"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+      "sha256": "ce5d800962fbe996593e3b229732af6093d0fc807b0f59c52d46da6022c1eba7"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+      "sha256": "bae02a155966316529bcbfd4393ea0b7d42518f58db64379f6e3465b401b9acb"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
+      "sha256": "dc6cd612fb95400b8e5d0d5ab433623858108e20386de0e0051d27dd13027202"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
+      "sha256": "6abfb911dad7b8b836dba22afada4e9fa6361512c0a9ef4d5a1d51cc325bae06"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+      "sha256": "23e12f6c8d20ec158323b1979e37ec20bdb09dc3fa6566fc04e797b1cf268474"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+      "sha256": "413ee12a1b182ea74e1c87d67cb3543484123bcb79c68ebc0194e543c8b99dab"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+      "sha256": "2bb96982edc430f5fb2644d5f31c712a01232e395cee571bb16ee01480d0eb29"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+      "sha256": "3d7af6e84370a0f7ac00dda641cb644715c0692348448c4eb6feb1b46c5d5e22"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery",
+      "sha256": "89a86ef6bfdf1c15b3e0ad726aa67fadabb4b713e34f76e2206a583b40e560be"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+      "sha256": "afaa7efbee20fb21a473faf0ac2aea92f065265e470099c228e3b3e04f8fb8d7"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+      "sha256": "efb1c530ef0bb434d0e15de980998b4e02a017b8aa0734b08412cba3ef6528ef"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+      "sha256": "0d1f677f228378cae4b3ee580287179e3ec3735e962273813cc2fff7f96f8828"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+      "sha256": "b48bed7b1370f2fcd9435dc11c9d1ef1863a035ae07bd817c81539423ff250ed"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+      "sha256": "de7a577aca01c8a15258549dd6653b003557f8dce8d1d5120ec7451a7774dc42"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+      "sha256": "f5a1e219e93df60d98146f57fc6739e8fa66ca38c1baa0b2e99bfbd26e6cd838"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
+      "sha256": "ba79954d9de8322b2dc187800feb10580af3a30025b3a7f067f34e815bad69ab"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+      "sha256": "08da11ebba28a11e89e171e3355e9069420bdf8399d5df02f7f55d34be6dbbb7"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+      "sha256": "c83222682b83fbf0a9f0a85dfe7a58c7ebf2801f3f621b7d84ac17cabc3147bb"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+      "sha256": "0acadf6e660021af5f325fcfb137e0bbfa40d661204e66f1c9a85fd21eaf16ce"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+      "sha256": "573fd3924a82886002db8eb7866457c8219800564d363c2cea61de55274921bb"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+      "sha256": "68c58a957fb629b9ba3ed0af2d56bac781874c1753a32f8675decb7a402ef1a7"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+      "sha256": "50812a53e8c6faf3f2cdb400a51477a34dacd68d95fefc2cae204ffa5f59a00b"
+    }
+  ],
+  "bundles": [
+    {
+      "id": "head-neck-skeleton",
+      "url": "/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+      "bytes": 2355384,
+      "sha256": "c1b950c82fd76e69cf153757ca275a6bd27fd25d74d3fd24259b15f9172a39d4",
+      "structures": 23
+    },
+    {
+      "id": "pelvis-skeleton",
+      "url": "/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+      "bytes": 86960,
+      "sha256": "58e1008b8064e8a61ce659e0246615960826772abe7070f66496eadcd86f4746",
+      "structures": 2
+    },
+    {
+      "id": "spine-skeleton",
+      "url": "/models/bodyparts3d/full-body/spine-skeleton.glb",
+      "bytes": 1286192,
+      "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+      "structures": 25
+    },
+    {
+      "id": "foot-skeleton",
+      "url": "/models/bodyparts3d/full-body/foot-skeleton.glb",
+      "bytes": 612448,
+      "sha256": "1b363def6136145a2a0faa31ca5edb46db8345631a4343c25919a3abf73d2d40",
+      "structures": 54
+    },
+    {
+      "id": "hand-skeleton",
+      "url": "/models/bodyparts3d/full-body/hand-skeleton.glb",
+      "bytes": 416816,
+      "sha256": "5f61ad363b757aa0cfcf0d7be4bcedcf63cbfec9ff5728cace9d62aa0447eac1",
+      "structures": 54
+    },
+    {
+      "id": "thorax-skeleton",
+      "url": "/models/bodyparts3d/full-body/thorax-skeleton.glb",
+      "bytes": 3099336,
+      "sha256": "9c45f3aef04a0507414a6280b4866d31eda2a9df50ef61acc3071d5d909d12cd",
+      "structures": 24
+    },
+    {
+      "id": "shoulder-arm-skeleton",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+      "bytes": 1162668,
+      "sha256": "f75517af8f2d72d1fd890c20fea3375948addab8eaee42f9217dcfd5754d3649",
+      "structures": 6
+    },
+    {
+      "id": "thigh-skeleton",
+      "url": "/models/bodyparts3d/full-body/thigh-skeleton.glb",
+      "bytes": 115852,
+      "sha256": "27bd799bd85387beea9fab40cbe2f83a5e780983170db4dfd1d2e0eda8fd2b59",
+      "structures": 2
+    },
+    {
+      "id": "leg-skeleton",
+      "url": "/models/bodyparts3d/full-body/leg-skeleton.glb",
+      "bytes": 118776,
+      "sha256": "8885078bc114d8cf5c2ebd12f393761965b2016bf6f5fc196c83549527e2c0af",
+      "structures": 6
+    },
+    {
+      "id": "forearm-skeleton",
+      "url": "/models/bodyparts3d/full-body/forearm-skeleton.glb",
+      "bytes": 57728,
+      "sha256": "7af54bdb11a8ae93d9236c6ed35b9a471543bc2a8a32867992a8917d22b1e0d5",
+      "structures": 4
+    },
+    {
+      "id": "head-neck-muscles",
+      "url": "/models/bodyparts3d/full-body/head-neck-muscles.glb",
+      "bytes": 8566352,
+      "sha256": "ad355b54f865461f5433bd1062bb206bde1967f6d4dc003840e7788800a69adb",
+      "structures": 72
+    },
+    {
+      "id": "foot-muscles",
+      "url": "/models/bodyparts3d/full-body/foot-muscles.glb",
+      "bytes": 444740,
+      "sha256": "44557187f3ffba580548a455d95340b66b57bebbaad286e8a1484dcceffbd42e",
+      "structures": 28
+    },
+    {
+      "id": "thigh-muscles",
+      "url": "/models/bodyparts3d/full-body/thigh-muscles.glb",
+      "bytes": 1802128,
+      "sha256": "b67c1e601bb0926ab1a488873ea35b213b4757894ed86918f1eb1b12dc69fbd1",
+      "structures": 41
+    },
+    {
+      "id": "leg-muscles",
+      "url": "/models/bodyparts3d/full-body/leg-muscles.glb",
+      "bytes": 1304804,
+      "sha256": "c535a021142b325daebfd0a8bca2b0406f05fae820870d524dc0a6993d3eb72d",
+      "structures": 24
+    },
+    {
+      "id": "spine-muscles",
+      "url": "/models/bodyparts3d/full-body/spine-muscles.glb",
+      "bytes": 5127960,
+      "sha256": "6cc6a2b15cda5a0defc35fdc2bebda607eac042571fec74bb1d2caba51748404",
+      "structures": 52
+    },
+    {
+      "id": "pelvis-muscles",
+      "url": "/models/bodyparts3d/full-body/pelvis-muscles.glb",
+      "bytes": 115108,
+      "sha256": "ffaed94ac4c0f18df42d7cc21903e8e2b32d4c163929713913935a3eecf95ba2",
+      "structures": 2
+    },
+    {
+      "id": "thorax-muscles",
+      "url": "/models/bodyparts3d/full-body/thorax-muscles.glb",
+      "bytes": 14990372,
+      "sha256": "3bbf7759e54e34272175de042ef4e26c24412b9f073a2f8eea3ce4fe79ebb682",
+      "structures": 8
+    },
+    {
+      "id": "abdomen-muscles",
+      "url": "/models/bodyparts3d/full-body/abdomen-muscles.glb",
+      "bytes": 4031580,
+      "sha256": "0317376bdb64b43c8eba26598419cb980f3a7090b68656375136df617d817b8c",
+      "structures": 2
+    },
+    {
+      "id": "shoulder-arm-muscles",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-muscles.glb",
+      "bytes": 2623088,
+      "sha256": "01c2e96da438f1761a3e6d6121f54e04c866073d396111ec6e018b0cc689a3e8",
+      "structures": 24
+    },
+    {
+      "id": "hand-muscles",
+      "url": "/models/bodyparts3d/full-body/hand-muscles.glb",
+      "bytes": 120784,
+      "sha256": "d0fad445fa6a804c237706038b126e6cb9e3829ec171c9929ab435d4ee74870e",
+      "structures": 10
+    },
+    {
+      "id": "forearm-muscles",
+      "url": "/models/bodyparts3d/full-body/forearm-muscles.glb",
+      "bytes": 1854940,
+      "sha256": "a99abc2a2bfe0845e80b90d18f6473e2614695c8f7acb7a26a9febb4d46a509b",
+      "structures": 34
+    },
+    {
+      "id": "head-neck-nerves",
+      "url": "/models/bodyparts3d/full-body/head-neck-nerves.glb",
+      "bytes": 8286776,
+      "sha256": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structures": 27
+    },
+    {
+      "id": "shoulder-arm-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-muscles-dissection.glb",
+      "bytes": 510384,
+      "sha256": "fa709d07df413d2228065f153b6f8f7d951ffa03365052c56e920914d0376b4d",
+      "structures": 16
+    },
+    {
+      "id": "spine-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/spine-muscles-dissection.glb",
+      "bytes": 804760,
+      "sha256": "05090ad649d93cea83e30d8156afdd18c0e21dd29c1dca7f96749d6ace611841",
+      "structures": 6
+    },
+    {
+      "id": "forearm-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/forearm-muscles-dissection.glb",
+      "bytes": 261864,
+      "sha256": "650758b91e7a4dd4b0a743d067fe79cbf527a51e95669e9e61aa2bc3c45c57b4",
+      "structures": 8
+    },
+    {
+      "id": "thigh-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/thigh-muscles-dissection.glb",
+      "bytes": 1022092,
+      "sha256": "f39c954742853c7e583570779b70a9f3ef844d9061055b083adb9912732c235c",
+      "structures": 12
+    },
+    {
+      "id": "leg-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/leg-muscles-dissection.glb",
+      "bytes": 252980,
+      "sha256": "3f6f533850ecd3017a742f140e7779a901dda238eaaac42b6bf6eb9b3d2347b1",
+      "structures": 4
+    },
+    {
+      "id": "hand-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/hand-muscles-dissection.glb",
+      "bytes": 56028,
+      "sha256": "3f7cae06bed1f4b93bb1ec2715ac4d739e5e38c7f0c495ea22447d57065f29ff",
+      "structures": 4
+    },
+    {
+      "id": "foot-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/foot-muscles-dissection.glb",
+      "bytes": 178072,
+      "sha256": "3a85853e4f552b5d2f4a9a63bc5efec306d13205a08633125cc0ff78939c2a63",
+      "structures": 8
+    },
+    {
+      "id": "thorax-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/thorax-muscles-dissection.glb",
+      "bytes": 314224,
+      "sha256": "12ff12c3ea0e745193b90842a3c62fd980dabd24e737ece8dee399925ab2e9a0",
+      "structures": 2
+    },
+    {
+      "id": "thorax-organs",
+      "url": "/models/bodyparts3d/full-body/thorax-organs.glb",
+      "bytes": 3711452,
+      "sha256": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+      "structures": 5
+    },
+    {
+      "id": "abdomen-organs",
+      "url": "/models/bodyparts3d/full-body/abdomen-organs.glb",
+      "bytes": 6383736,
+      "sha256": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+      "structures": 10
+    },
+    {
+      "id": "pelvis-organs",
+      "url": "/models/bodyparts3d/full-body/pelvis-organs.glb",
+      "bytes": 49544,
+      "sha256": "90baaeb1c521a6b2546e99576bce4b231c6e068b4fa3d48dbd4cb7eb355f93c3",
+      "structures": 2
+    },
+    {
+      "id": "spine-nerves",
+      "url": "/models/bodyparts3d/full-body/spine-nerves.glb",
+      "bytes": 14420,
+      "sha256": "e88d03a126729c550c2aa9524eb3c466dc222cf874a327ec2d97432e97c8814d",
+      "structures": 1
+    },
+    {
+      "id": "thorax-skeleton-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+      "bytes": 149456,
+      "sha256": "0ff2ab3d8b16b2c3af0b3320bc85b72512c54af5bfedc3f2159dd2316fa5de60",
+      "structures": 3
+    },
+    {
+      "id": "thorax-connective-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-connective-recovery.glb",
+      "bytes": 289716,
+      "sha256": "2874e8680da861973d2eac549f62cf4d0b5f4c26472a532b7661c74b2ce96900",
+      "structures": 14
+    },
+    {
+      "id": "head-neck-connective-recovery",
+      "url": "/models/bodyparts3d/full-body/head-neck-connective-recovery.glb",
+      "bytes": 175092,
+      "sha256": "2243b05c7b505ee666ac4a36becfe5298735558b0e86b4d8e4476115f372ce05",
+      "structures": 9
+    },
+    {
+      "id": "foot-connective-recovery",
+      "url": "/models/bodyparts3d/full-body/foot-connective-recovery.glb",
+      "bytes": 102396,
+      "sha256": "d4797b74c353d5364113703c07422d57e032325846975f7c752fe4a3ae36a424",
+      "structures": 2
+    },
+    {
+      "id": "hand-muscles-recovery",
+      "url": "/models/bodyparts3d/full-body/hand-muscles-recovery.glb",
+      "bytes": 100344,
+      "sha256": "754fba175b857079656672c0ab11dd37ad0235cd87c3ccfffa08a2df1c54e129",
+      "structures": 2
+    },
+    {
+      "id": "pelvis-organs-recovery",
+      "url": "/models/bodyparts3d/full-body/pelvis-organs-recovery.glb",
+      "bytes": 73348,
+      "sha256": "d2876cb12fa3f6c71170d18bd6813f96783c47fe12ddf68263bf12e0cae98629",
+      "structures": 6
+    },
+    {
+      "id": "abdomen-organs-recovery",
+      "url": "/models/bodyparts3d/full-body/abdomen-organs-recovery.glb",
+      "bytes": 74092,
+      "sha256": "9ed6f0864a2b37edc4c36ffbb84fdab9cacf34c6069d93455f1ffcb6eee711ab",
+      "structures": 2
+    },
+    {
+      "id": "thorax-organs-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-organs-recovery.glb",
+      "bytes": 38832,
+      "sha256": "d62d13a0a9a999495f771ecaee2e9cafe27c8d4fbdac4019fa699a711d6dc355",
+      "structures": 1
+    },
+    {
+      "id": "head-neck-organs-recovery",
+      "url": "/models/bodyparts3d/full-body/head-neck-organs-recovery.glb",
+      "bytes": 3587376,
+      "sha256": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+      "structures": 3
+    },
+    {
+      "id": "thorax-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-vessels-recovery.glb",
+      "bytes": 1131748,
+      "sha256": "0c82e1cb2960c6f2474f2b4759974adab5871d8074a2f4e3712e1c3a37a48ca7",
+      "structures": 25
+    },
+    {
+      "id": "abdomen-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-recovery.glb",
+      "bytes": 477592,
+      "sha256": "e41d66684de08fd9bd7dfca340acb63cbf7714eb09a3ea9594184f497c509abe",
+      "structures": 14
+    },
+    {
+      "id": "head-neck-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/head-neck-vessels-recovery.glb",
+      "bytes": 608992,
+      "sha256": "800d583a96a6df8fdd2b5fff86c6e719a90e897d6c3c89bbb1a3bd71b0e89cbb",
+      "structures": 16
+    },
+    {
+      "id": "pelvis-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/pelvis-vessels-recovery.glb",
+      "bytes": 122592,
+      "sha256": "e089b9e9d3eac8ec6c1731ddc2ab0972ae0be041d5175cdedc5cc0bfb8eb09ad",
+      "structures": 12
+    },
+    {
+      "id": "shoulder-arm-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-recovery.glb",
+      "bytes": 575076,
+      "sha256": "2630e1f06ada20094814ee1a5245e9d420627a15869c3b6a3c51763be21da84c",
+      "structures": 14
+    },
+    {
+      "id": "forearm-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/forearm-vessels-recovery.glb",
+      "bytes": 2083932,
+      "sha256": "8a9c9b62561c8b952147b91fcf0a9c2a01d6f7fe38737259e4eb8d76ece0904f",
+      "structures": 10
+    },
+    {
+      "id": "hand-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/hand-vessels-recovery.glb",
+      "bytes": 65364,
+      "sha256": "81851762c0aca58931fa8b0cd1c31853558b70578a518896cb97fb8eeae357a0",
+      "structures": 2
+    },
+    {
+      "id": "thigh-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/thigh-vessels-recovery.glb",
+      "bytes": 1415760,
+      "sha256": "5037db3cd7d8d0bf2ac6ae2c4656b50e73c71f5f530595b80cd68153afb6c9f7",
+      "structures": 8
+    },
+    {
+      "id": "leg-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/leg-vessels-recovery.glb",
+      "bytes": 2900368,
+      "sha256": "e2751d62cf20f86ec14865a79bad26e70245443965702d98512541378851e466",
+      "structures": 10
+    },
+    {
+      "id": "foot-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/foot-vessels-recovery.glb",
+      "bytes": 107772,
+      "sha256": "648366ffe116673e7428067e8d7f14739161a220fb94e24d832ba9b9312a94b9",
+      "structures": 6
+    },
+    {
+      "id": "hand-muscles-gaps",
+      "url": "/models/bodyparts3d/full-body/hand-muscles-gaps.glb",
+      "bytes": 146948,
+      "sha256": "68885665a6924684c3c7b1f078eecb702efd444d78eea1a5941bed6ad0a089dc",
+      "structures": 4
+    },
+    {
+      "id": "forearm-connective-gaps",
+      "url": "/models/bodyparts3d/full-body/forearm-connective-gaps.glb",
+      "bytes": 60244,
+      "sha256": "3edf719c336df784236543a43f75d98442f8b680d32f9ed00365822c7d783564",
+      "structures": 2
+    },
+    {
+      "id": "leg-connective-gaps",
+      "url": "/models/bodyparts3d/full-body/leg-connective-gaps.glb",
+      "bytes": 346900,
+      "sha256": "5b28b2d13a891e88c177fb2db80c81a2dcf1c0201644ee68c8ce69870b98d70a",
+      "structures": 4
+    },
+    {
+      "id": "head-neck-nerves-gaps",
+      "url": "/models/bodyparts3d/full-body/head-neck-nerves-gaps.glb",
+      "bytes": 100964,
+      "sha256": "4aba05d53fa7bf578be5ef6f945c4a498a007e62529dd0e7c5db32f57d0c1461",
+      "structures": 2
+    },
+    {
+      "id": "head-neck-organs-gaps",
+      "url": "/models/bodyparts3d/full-body/head-neck-organs-gaps.glb",
+      "bytes": 98216,
+      "sha256": "4d05d792dd062b49d22f8740e4f0a0c4785249cbcac61a47ac7a48d06b5a6ab1",
+      "structures": 7
+    },
+    {
+      "id": "pelvis-organs-gaps",
+      "url": "/models/bodyparts3d/full-body/pelvis-organs-gaps.glb",
+      "bytes": 16892,
+      "sha256": "28a4c4665dacfa483546cc8166dd31698c7a0fdb1e678cf9f22e5a2c63f88abc",
+      "structures": 3
+    },
+    {
+      "id": "head-neck-connective-gaps",
+      "url": "/models/bodyparts3d/full-body/head-neck-connective-gaps.glb",
+      "bytes": 692376,
+      "sha256": "c2073b8bfca9d8aa41c5c4810738138ba54fe6db1f5bfd935a3231414a38c3f8",
+      "structures": 18
+    },
+    {
+      "id": "spine-connective-gaps",
+      "url": "/models/bodyparts3d/full-body/spine-connective-gaps.glb",
+      "bytes": 934264,
+      "sha256": "aae6dc0589fa3dc9ce5ea51ff28520a077290adb5b92fa4570c3cf20b2090e02",
+      "structures": 22
+    },
+    {
+      "id": "thorax-vessels-inventory",
+      "url": "/models/bodyparts3d/full-body/thorax-vessels-inventory.glb",
+      "bytes": 483532,
+      "sha256": "8071f97ac5b843ab55e8bf019918947ab9c363b1e1901faebefa619e5345fe6f",
+      "structures": 9
+    },
+    {
+      "id": "shoulder-arm-vessels-inventory",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb",
+      "bytes": 616356,
+      "sha256": "d12d81529a1408f934b5055462bb39f0f79c84e25c878a25225652b9baac3e84",
+      "structures": 20
+    },
+    {
+      "id": "head-neck-nerves-inventory",
+      "url": "/models/bodyparts3d/full-body/head-neck-nerves-inventory.glb",
+      "bytes": 10012,
+      "sha256": "4e7f008f8f6167e351bc02c6b04f538ba74433f893d77e5a5b0bb8396fa3b1b9",
+      "structures": 2
+    },
+    {
+      "id": "thorax-organs-inventory",
+      "url": "/models/bodyparts3d/full-body/thorax-organs-inventory.glb",
+      "bytes": 157388,
+      "sha256": "b79225df1153cff7b18c0da4db7cd3257db94f16222376c4d6623a5e542bddc3",
+      "structures": 2
+    },
+    {
+      "id": "abdomen-organs-inventory",
+      "url": "/models/bodyparts3d/full-body/abdomen-organs-inventory.glb",
+      "bytes": 40896,
+      "sha256": "beb3ff34d8e0d64041f6639fea2a4aefff6e11f04f5ed0a9f9d62cec85257a42",
+      "structures": 3
+    },
+    {
+      "id": "head-neck-nerves-deep-brain",
+      "url": "/models/bodyparts3d/full-body/head-neck-nerves-deep-brain.glb",
+      "bytes": 1866940,
+      "sha256": "6046dacb923f5103acb3b86dadf2817b5f0c133af88e0d225170cf331fbd0e3c",
+      "structures": 22
+    },
+    {
+      "id": "hand-connective-axial-detail",
+      "url": "/models/bodyparts3d/full-body/hand-connective-axial-detail.glb",
+      "bytes": 71364,
+      "sha256": "80a96ba7c54a11468857a98acda39b39aab8620d4baebe4184a698ecf4c28f1d",
+      "structures": 2
+    },
+    {
+      "id": "thigh-connective-axial-detail",
+      "url": "/models/bodyparts3d/full-body/thigh-connective-axial-detail.glb",
+      "bytes": 620568,
+      "sha256": "a4df87c97da679dd55fa2640f502c6d9a75ad83afc6c8beb9de334f0aa0b0b17",
+      "structures": 2
+    },
+    {
+      "id": "abdomen-connective-axial-detail",
+      "url": "/models/bodyparts3d/full-body/abdomen-connective-axial-detail.glb",
+      "bytes": 37124,
+      "sha256": "896e726212e5823542796bf7b12e3b6588a30ff519de4425959d8991c890228d",
+      "structures": 1
+    },
+    {
+      "id": "spine-muscles-axial-detail",
+      "url": "/models/bodyparts3d/full-body/spine-muscles-axial-detail.glb",
+      "bytes": 381316,
+      "sha256": "d7e3b995e0c18e3ebe7e7b97a11fbcd1e228218e0010462614e4938acf7f87ee",
+      "structures": 6
+    },
+    {
+      "id": "head-neck-connective-head-detail",
+      "url": "/models/bodyparts3d/full-body/head-neck-connective-head-detail.glb",
+      "bytes": 45764,
+      "sha256": "7f6c0355e8db6b561ea3b8d7bf10584422dccf873c842cb010f0987056f1a2f5",
+      "structures": 4
+    },
+    {
+      "id": "head-neck-organs-head-detail",
+      "url": "/models/bodyparts3d/full-body/head-neck-organs-head-detail.glb",
+      "bytes": 745932,
+      "sha256": "3375bde94900a77d8ab7c6c37ec934b30e2a745495006630b1645053522c040a",
+      "structures": 28
+    },
+    {
+      "id": "abdomen-organs-junction",
+      "url": "/models/bodyparts3d/full-body/abdomen-organs-junction.glb",
+      "bytes": 6484,
+      "sha256": "233de27cdb6d272b62e99917813aba52abfbab4978374b6fb2b322573abbd672",
+      "structures": 1
+    },
+    {
+      "id": "abdomen-connective-mesenteric",
+      "url": "/models/bodyparts3d/full-body/abdomen-connective-mesenteric.glb",
+      "bytes": 727116,
+      "sha256": "45d592f6eaef66743c7fe88ec944d68a6e6ddf2496d59331e353b15f99b91845",
+      "structures": 3
+    },
+    {
+      "id": "abdomen-vessels-mesenteric",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-mesenteric.glb",
+      "bytes": 226020,
+      "sha256": "d26bb01909128f5cd8a56fb410967a688801a22652305bb2656e04d3e7df2680",
+      "structures": 14
+    },
+    {
+      "id": "head-neck-organs-visceral-detail",
+      "url": "/models/bodyparts3d/full-body/head-neck-organs-visceral-detail.glb",
+      "bytes": 65180,
+      "sha256": "87b0684fd3a8d120d622f2f96edb49059cd530ba927423d5ac5f28d1069c2f84",
+      "structures": 1
+    },
+    {
+      "id": "abdomen-vessels-visceral-detail",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-visceral-detail.glb",
+      "bytes": 133144,
+      "sha256": "be90ec41dc6046b820b337d986b6a67792a33ba33216db8aecb068fed4b85173",
+      "structures": 11
+    },
+    {
+      "id": "thorax-vessels-thoracic-detail",
+      "url": "/models/bodyparts3d/full-body/thorax-vessels-thoracic-detail.glb",
+      "bytes": 91700,
+      "sha256": "bd86da53fb00401a01db7e321ca14b0bfec784b53a496a22dc5e6338db3d0044",
+      "structures": 4
+    },
+    {
+      "id": "hand-vessels-hand-vascular",
+      "url": "/models/bodyparts3d/full-body/hand-vessels-hand-vascular.glb",
+      "bytes": 534016,
+      "sha256": "3b2f158e1c345f4abc5c66cfcf7fb916bd4117de80b767919a1c594baf028391",
+      "structures": 26
+    }
+  ]
+}

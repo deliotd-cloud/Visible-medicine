@@ -1,7 +1,7 @@
 {
   "version": 4,
   "date": "2026-09-06",
-  "catalogSha256": "6402d7b654eaddb137fea383d796e64cd7674117d525492d89aa8daa31fe6593",
+  "catalogSha256": "5d7a82b00671a07b993122317e3f22eb64bc5eed4f1df064b81c78b35b46e590",
   "status": "unvalidated",
   "method": "licensed-source-recovery",
   "generatedAnatomicalMeshes": 0,
@@ -7453,6 +7453,298 @@
         }
       ],
       "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-deep-palmar-venous-arch",
+      "fmaId": "FMA22912",
+      "sourceName": "right deep palmar venous arch",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2281",
+          "sha256": "095afd7aefd27582b3d2c7607517ad34aee651a6106c324e619c1837d7a758a2"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-deep-palmar-venous-arch",
+      "fmaId": "FMA22913",
+      "sourceName": "left deep palmar venous arch",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2229",
+          "sha256": "0ae442d1910c307e8920b7575389171f1d711fc6c003ac82569f3ad684bde2bf"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-venous-arch",
+      "fmaId": "FMA22915",
+      "sourceName": "right superficial palmar venous arch",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2301",
+          "sha256": "716edc2ea5cb5afd7fce5cb66753b8f235e50e5f4667aefe64e06b04953b997d"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-venous-arch",
+      "fmaId": "FMA22916",
+      "sourceName": "left superficial palmar venous arch",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2249",
+          "sha256": "7ffbee0f5681da09c4ca670aadcb33110b0d06a5bd2baa5c7a357438b92381f8"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:dorsal-venous-network-of-right-hand",
+      "fmaId": "FMA62506",
+      "sourceName": "dorsal venous network of right hand",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2280",
+          "sha256": "58c25d369779e6a50757cd89d1deefb7da82d5790e1242cea4b9b7e3d5e77759"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:dorsal-venous-network-of-left-hand",
+      "fmaId": "FMA62507",
+      "sourceName": "dorsal venous network of left hand",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2228",
+          "sha256": "f7ae1f851f00eb4378438f6de6a4bb9e109a9e2086a4475b9779cbe808e71d3e"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-vein",
+      "fmaId": "FMA22920",
+      "sourceName": "right palmar metacarpal vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2290",
+          "sha256": "fb4202503861d0fa42010ef239882ae6f4b39766bc1e638f73c43222c168335d"
+        },
+        {
+          "file": "FJ2350",
+          "sha256": "dc00c90a13ef5e2efbc3163f9ba540bd85a877fff33f0ae168979711a7cde95c"
+        },
+        {
+          "file": "FJ2353",
+          "sha256": "0aa3af52d7539644efc4c51dea47a94e35ad45ba681760e474e1507b0d1cf813"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-vein",
+      "fmaId": "FMA22921",
+      "sourceName": "left palmar metacarpal vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2238",
+          "sha256": "bdd11265f9ac62fa8076e921d2bf4bb4f9c034c4ce3326fe061b5315f4e2c39d"
+        },
+        {
+          "file": "FJ2320",
+          "sha256": "6fe8ff895fb5163b390317fbaf198085f8cc370629cef19f317d71da50c2a8e5"
+        },
+        {
+          "file": "FJ2323",
+          "sha256": "cb480f81ed560804e2bd082c93fc26c15853611965e0cbaf8064dd773b20b41b"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-index-finger",
+      "fmaId": "FMA85096",
+      "sourceName": "proper palmar digital vein of right index finger",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2354",
+          "sha256": "2af746f5f7344e98abdc726776960ea2c2d8fa5feebc87493274e8e113cd222f"
+        },
+        {
+          "file": "FJ2355",
+          "sha256": "6d41a6ede55df6a1592c48529b47a7a920d00da9006384513a7e6dc4f32fc913"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-index-finger",
+      "fmaId": "FMA85097",
+      "sourceName": "proper palmar digital vein of left index finger",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2324",
+          "sha256": "41342ffcdbca59a47bfa320156f2565ddea623286e4fdf0cf3f60bb3184a9ef9"
+        },
+        {
+          "file": "FJ2325",
+          "sha256": "b60816a4454c6ab99dd7a2dba84347c6c5d8345c55ee37df9c34a43aae11f508"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-middle-finger",
+      "fmaId": "FMA85098",
+      "sourceName": "proper palmar digital vein of right middle finger",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2356",
+          "sha256": "f4058820587777355451073cd426639aab72622d4d5d3e288d625274d1c1e851"
+        },
+        {
+          "file": "FJ2357",
+          "sha256": "5fa58ff7b4f361d5a8b73267a51e47bc134be147303c5947c53f331361c86455"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-middle-finger",
+      "fmaId": "FMA85099",
+      "sourceName": "proper palmar digital vein of left middle finger",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2326",
+          "sha256": "6e39c6224a448138e565984a85da39cb4a4ed99229e5c50dad86764d5fa6b05f"
+        },
+        {
+          "file": "FJ2340",
+          "sha256": "e5750ba976e298e85152c0819366e2f56c3b9117f1c8fab7bad641048ec9d9b8"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
+      "fmaId": "FMA85100",
+      "sourceName": "proper palmar digital vein of right ring finger",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2358",
+          "sha256": "1e531628f417d3ee7c30403a581b98afaa530e0c7cd2f86402079e02869aa674"
+        },
+        {
+          "file": "FJ2359",
+          "sha256": "b78fd325bc001dcb35c039c966c23a00630266eee7bfc7cdb981add13a7b7c50"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger",
+      "fmaId": "FMA85101",
+      "sourceName": "proper palmar digital vein of left ring finger",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2327",
+          "sha256": "fa915287ef71a84cfdad961bdac45e047e35dd2820cdb4d353883a074c45b0f0"
+        },
+        {
+          "file": "FJ2328",
+          "sha256": "38ff5672c808b27e2e5882d2d22d30d17fe7fadf9faa2590e05e20219b5a5808"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented."
     }
   ]
 }

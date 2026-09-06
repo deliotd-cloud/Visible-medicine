@@ -30,6 +30,7 @@ import { systemOpacity, type InspectionState } from '@/lib/inspection-state';
 import type { StudyCamera } from '@/lib/study-views';
 import { neuroGroupFor } from '@/lib/neuroanatomy';
 import { sceneLabelEndpoint, sceneLabelIds } from '@/lib/scene-labels';
+import { vesselColor } from '@/lib/anatomy-vessels';
 
 type Props = {
   catalog: BodyCatalog;
@@ -72,8 +73,7 @@ function colorFor(s: BodyStructure) {
   const neuro = neuroGroupFor(s.fmaId);
   if (neuro) return neuro.color;
   if (s.fmaId === 'FMA50801') return '#c3aaa1';
-  if (s.system === 'vessels')
-    return /vein|vena cava/.test(s.sourceName) ? '#577fba' : '#bf4847';
+  if (s.system === 'vessels') return vesselColor(s);
   if (s.category === 'ligament' || s.category === 'tendon') return '#d6cfa6';
   if (s.system !== 'organs') return bodySystems[s.system].color;
   if (s.sourceName.endsWith('tooth')) return '#e9e0c9';

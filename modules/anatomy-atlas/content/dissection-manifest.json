@@ -1,7 +1,7 @@
 {
   "version": 1,
   "reviewStatus": "draft-unvalidated",
-  "catalogSha256": "6402d7b654eaddb137fea383d796e64cd7674117d525492d89aa8daa31fe6593",
+  "catalogSha256": "5d7a82b00671a07b993122317e3f22eb64bc5eed4f1df064b81c78b35b46e590",
   "profiles": [
     {
       "region": "whole-body",
@@ -1009,7 +1009,21 @@
             "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
             "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
             "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
-            "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger"
+            "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+            "vm:anatomy:body:hand:right:vessel:right-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:dorsal-venous-network-of-right-hand",
+            "vm:anatomy:body:hand:left:vessel:dorsal-venous-network-of-left-hand",
+            "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-index-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-index-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-middle-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-middle-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger"
           ]
         },
         {
@@ -2418,7 +2432,21 @@
             "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
             "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
             "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
-            "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger"
+            "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+            "vm:anatomy:body:hand:right:vessel:right-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:dorsal-venous-network-of-right-hand",
+            "vm:anatomy:body:hand:left:vessel:dorsal-venous-network-of-left-hand",
+            "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-index-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-index-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-middle-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-middle-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger"
           ]
         },
         {
@@ -3352,7 +3380,15 @@
             "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
             "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
             "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
-            "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein"
+            "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+            "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-index-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-index-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-middle-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-middle-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger"
           ]
         }
       ]
@@ -4773,7 +4809,21 @@
             "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
             "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
             "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
-            "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger"
+            "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+            "vm:anatomy:body:hand:right:vessel:right-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:dorsal-venous-network-of-right-hand",
+            "vm:anatomy:body:hand:left:vessel:dorsal-venous-network-of-left-hand",
+            "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-index-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-index-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-middle-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-middle-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger"
           ]
         },
         {
@@ -4899,7 +4949,21 @@
             "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
             "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
             "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
-            "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger"
+            "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+            "vm:anatomy:body:hand:right:vessel:right-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:dorsal-venous-network-of-right-hand",
+            "vm:anatomy:body:hand:left:vessel:dorsal-venous-network-of-left-hand",
+            "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-index-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-index-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-middle-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-middle-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger"
           ]
         },
         {
@@ -5162,7 +5226,21 @@
             "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
             "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
             "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
-            "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger"
+            "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+            "vm:anatomy:body:hand:right:vessel:right-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:dorsal-venous-network-of-right-hand",
+            "vm:anatomy:body:hand:left:vessel:dorsal-venous-network-of-left-hand",
+            "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-index-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-index-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-middle-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-middle-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger"
           ]
         },
         {
@@ -5552,6 +5630,257 @@
             "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
             "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
             "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger"
+          ]
+        },
+        {
+          "id": "palmar-venous-arches-window",
+          "title": "Palmar venous & arterial arches",
+          "description": "Compare the four supplied palmar venous arch sources with arterial arches and wrist flexor retinacula.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA22912",
+                "FMA22913",
+                "FMA22915",
+                "FMA22916"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA22839",
+                "FMA22840",
+                "FMA22835",
+                "FMA22837",
+                "FMA40120",
+                "FMA40121"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "palmar venous arch",
+            "palmar arterial arch",
+            "deep palmar arch"
+          ],
+          "inspect": "Switch to one hand, remove a retinaculum and Undo to restore it. Blue and red identify veins and arteries, not depth, oxygenation or proven continuity. Source depth relationships require review.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+            "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
+            "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+            "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch",
+            "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+            "vm:anatomy:body:hand:right:vessel:right-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-venous-arch"
+          ]
+        },
+        {
+          "id": "dorsal-hand-veins-window",
+          "title": "Dorsal hand venous networks",
+          "description": "View the source-labelled dorsal venous networks against the metacarpal bones, without overlying muscle surfaces.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA62506",
+                "FMA62507"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA24464",
+                "FMA24465",
+                "FMA24466",
+                "FMA24467",
+                "FMA24468",
+                "FMA24469",
+                "FMA24470",
+                "FMA24471",
+                "FMA24472",
+                "FMA24473"
+              ]
+            }
+          ],
+          "view": "posterior",
+          "landmarks": [
+            "dorsal venous network",
+            "metacarpal bone"
+          ],
+          "inspect": "Select and frame one network; set a bone aside or fade context. Each network remains one source identity, not a complete map of independently dissectible veins. Focus-only practice excludes the bones.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:hand:left:bone:left-first-metacarpal-bone",
+            "vm:anatomy:body:hand:left:bone:left-second-metacarpal-bone",
+            "vm:anatomy:body:hand:left:bone:left-third-metacarpal-bone",
+            "vm:anatomy:body:hand:left:bone:left-fourth-metacarpal-bone",
+            "vm:anatomy:body:hand:left:bone:left-fifth-metacarpal-bone",
+            "vm:anatomy:body:hand:right:bone:right-first-metacarpal-bone",
+            "vm:anatomy:body:hand:right:bone:right-second-metacarpal-bone",
+            "vm:anatomy:body:hand:right:bone:right-third-metacarpal-bone",
+            "vm:anatomy:body:hand:right:bone:right-fourth-metacarpal-bone",
+            "vm:anatomy:body:hand:right:bone:right-fifth-metacarpal-bone",
+            "vm:anatomy:body:hand:right:vessel:dorsal-venous-network-of-right-hand",
+            "vm:anatomy:body:hand:left:vessel:dorsal-venous-network-of-left-hand"
+          ]
+        },
+        {
+          "id": "palmar-digital-veins-window",
+          "title": "Palmar & finger vein segments",
+          "description": "Expose the supplied metacarpal and index, middle and ring digital vein groups with venous arch context.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA22920",
+                "FMA22921",
+                "FMA85096",
+                "FMA85097",
+                "FMA85098",
+                "FMA85099",
+                "FMA85100",
+                "FMA85101"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA22912",
+                "FMA22913",
+                "FMA22915",
+                "FMA22916"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "palmar metacarpal vein",
+            "proper palmar digital vein",
+            "palmar venous arch"
+          ],
+          "inspect": "Use a single-side view to select small segments, or separate them for source-name practice. Little-finger groups are withheld for extent review; no missing thumb, common digital vein or nerve surface is fabricated.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:hand:right:vessel:right-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-index-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-index-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-middle-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-middle-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger"
+          ]
+        },
+        {
+          "id": "hand-arteries-veins-exposed",
+          "title": "Hand arteries & veins exposed",
+          "description": "Compare fourteen venous source identities with the twenty-eight supplied hand arterial entries, without bones or muscles.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA22912",
+                "FMA22913",
+                "FMA22915",
+                "FMA22916",
+                "FMA62506",
+                "FMA62507",
+                "FMA22920",
+                "FMA22921",
+                "FMA85096",
+                "FMA85097",
+                "FMA85098",
+                "FMA85099",
+                "FMA85100",
+                "FMA85101"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA22835",
+                "FMA22837",
+                "FMA22864",
+                "FMA22865",
+                "FMA22905",
+                "FMA22907",
+                "FMA22777",
+                "FMA22778",
+                "FMA22856",
+                "FMA85118",
+                "FMA85119",
+                "FMA85120",
+                "FMA85121",
+                "FMA85122",
+                "FMA85123",
+                "FMA85124",
+                "FMA22858",
+                "FMA22860",
+                "FMA23050",
+                "FMA23051",
+                "FMA23052",
+                "FMA23054",
+                "FMA23055",
+                "FMA85112",
+                "FMA85115",
+                "FMA85116",
+                "FMA22839",
+                "FMA22840"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "palmar venous arch",
+            "dorsal venous network",
+            "proper palmar digital artery"
+          ],
+          "inspect": "Select an artery or vein, isolate it, fade the others or use reversible separation. Red means artery and blue means vein, not oxygenation. Focus-only practice asks about the venous targets; absent connections are not bridged.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+            "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
+            "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch",
+            "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+            "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+            "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+            "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+            "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+            "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
+            "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
+            "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+            "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+            "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+            "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+            "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery",
+            "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+            "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+            "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+            "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+            "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+            "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+            "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
+            "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+            "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+            "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+            "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+            "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+            "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+            "vm:anatomy:body:hand:right:vessel:right-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:dorsal-venous-network-of-right-hand",
+            "vm:anatomy:body:hand:left:vessel:dorsal-venous-network-of-left-hand",
+            "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-index-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-index-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-middle-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-middle-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger"
           ]
         }
       ],
@@ -6311,6 +6640,257 @@
             "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
             "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
             "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger"
+          ]
+        },
+        {
+          "id": "palmar-venous-arches-window",
+          "title": "Palmar venous & arterial arches",
+          "rule": {
+            "fmaIds": [
+              "FMA22912",
+              "FMA22913",
+              "FMA22915",
+              "FMA22916"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA22839",
+                "FMA22840",
+                "FMA22835",
+                "FMA22837",
+                "FMA40120",
+                "FMA40121"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the four supplied palmar venous arch sources with arterial arches and wrist flexor retinacula.",
+          "inspect": "Switch to one hand, remove a retinaculum and Undo to restore it. Blue and red identify veins and arteries, not depth, oxygenation or proven continuity. Source depth relationships require review.",
+          "landmarks": [
+            "palmar venous arch",
+            "palmar arterial arch",
+            "deep palmar arch"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+            "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
+            "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+            "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch",
+            "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+            "vm:anatomy:body:hand:right:vessel:right-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-venous-arch"
+          ]
+        },
+        {
+          "id": "dorsal-hand-veins-window",
+          "title": "Dorsal hand venous networks",
+          "rule": {
+            "fmaIds": [
+              "FMA62506",
+              "FMA62507"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA24464",
+                "FMA24465",
+                "FMA24466",
+                "FMA24467",
+                "FMA24468",
+                "FMA24469",
+                "FMA24470",
+                "FMA24471",
+                "FMA24472",
+                "FMA24473"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "View the source-labelled dorsal venous networks against the metacarpal bones, without overlying muscle surfaces.",
+          "inspect": "Select and frame one network; set a bone aside or fade context. Each network remains one source identity, not a complete map of independently dissectible veins. Focus-only practice excludes the bones.",
+          "landmarks": [
+            "dorsal venous network",
+            "metacarpal bone"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:hand:left:bone:left-first-metacarpal-bone",
+            "vm:anatomy:body:hand:left:bone:left-second-metacarpal-bone",
+            "vm:anatomy:body:hand:left:bone:left-third-metacarpal-bone",
+            "vm:anatomy:body:hand:left:bone:left-fourth-metacarpal-bone",
+            "vm:anatomy:body:hand:left:bone:left-fifth-metacarpal-bone",
+            "vm:anatomy:body:hand:right:bone:right-first-metacarpal-bone",
+            "vm:anatomy:body:hand:right:bone:right-second-metacarpal-bone",
+            "vm:anatomy:body:hand:right:bone:right-third-metacarpal-bone",
+            "vm:anatomy:body:hand:right:bone:right-fourth-metacarpal-bone",
+            "vm:anatomy:body:hand:right:bone:right-fifth-metacarpal-bone",
+            "vm:anatomy:body:hand:right:vessel:dorsal-venous-network-of-right-hand",
+            "vm:anatomy:body:hand:left:vessel:dorsal-venous-network-of-left-hand"
+          ]
+        },
+        {
+          "id": "palmar-digital-veins-window",
+          "title": "Palmar & finger vein segments",
+          "rule": {
+            "fmaIds": [
+              "FMA22920",
+              "FMA22921",
+              "FMA85096",
+              "FMA85097",
+              "FMA85098",
+              "FMA85099",
+              "FMA85100",
+              "FMA85101"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA22912",
+                "FMA22913",
+                "FMA22915",
+                "FMA22916"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Expose the supplied metacarpal and index, middle and ring digital vein groups with venous arch context.",
+          "inspect": "Use a single-side view to select small segments, or separate them for source-name practice. Little-finger groups are withheld for extent review; no missing thumb, common digital vein or nerve surface is fabricated.",
+          "landmarks": [
+            "palmar metacarpal vein",
+            "proper palmar digital vein",
+            "palmar venous arch"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:hand:right:vessel:right-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-index-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-index-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-middle-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-middle-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger"
+          ]
+        },
+        {
+          "id": "hand-arteries-veins-exposed",
+          "title": "Hand arteries & veins exposed",
+          "rule": {
+            "fmaIds": [
+              "FMA22912",
+              "FMA22913",
+              "FMA22915",
+              "FMA22916",
+              "FMA62506",
+              "FMA62507",
+              "FMA22920",
+              "FMA22921",
+              "FMA85096",
+              "FMA85097",
+              "FMA85098",
+              "FMA85099",
+              "FMA85100",
+              "FMA85101"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA22835",
+                "FMA22837",
+                "FMA22864",
+                "FMA22865",
+                "FMA22905",
+                "FMA22907",
+                "FMA22777",
+                "FMA22778",
+                "FMA22856",
+                "FMA85118",
+                "FMA85119",
+                "FMA85120",
+                "FMA85121",
+                "FMA85122",
+                "FMA85123",
+                "FMA85124",
+                "FMA22858",
+                "FMA22860",
+                "FMA23050",
+                "FMA23051",
+                "FMA23052",
+                "FMA23054",
+                "FMA23055",
+                "FMA85112",
+                "FMA85115",
+                "FMA85116",
+                "FMA22839",
+                "FMA22840"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare fourteen venous source identities with the twenty-eight supplied hand arterial entries, without bones or muscles.",
+          "inspect": "Select an artery or vein, isolate it, fade the others or use reversible separation. Red means artery and blue means vein, not oxygenation. Focus-only practice asks about the venous targets; absent connections are not bridged.",
+          "landmarks": [
+            "palmar venous arch",
+            "dorsal venous network",
+            "proper palmar digital artery"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+            "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
+            "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch",
+            "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+            "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+            "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+            "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+            "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+            "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
+            "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
+            "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+            "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+            "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+            "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+            "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery",
+            "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+            "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+            "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+            "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+            "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+            "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+            "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
+            "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+            "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+            "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+            "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+            "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+            "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+            "vm:anatomy:body:hand:right:vessel:right-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-deep-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-venous-arch",
+            "vm:anatomy:body:hand:right:vessel:dorsal-venous-network-of-right-hand",
+            "vm:anatomy:body:hand:left:vessel:dorsal-venous-network-of-left-hand",
+            "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-vein",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-index-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-index-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-middle-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-middle-finger",
+            "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger"
           ]
         }
       ]

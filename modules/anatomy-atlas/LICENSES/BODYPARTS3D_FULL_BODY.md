@@ -1,5 +1,9 @@
 # Expanded BodyParts3D commercial-use audit
 
+## Hand venous extension — 6 September 2026
+
+The current atlas has **998 source representations / 81 body bundles / 96,055,600 bytes**. Fourteen exact v4 ISA identities add twenty-four source components in one 577,748-byte GLB. All prior records and bundles remain exact. Two little-finger groups are held for source-extent adjudication, not imported. The official CC BY 4.0 licence was rechecked; DBCLS attribution, licence links and adaptation notices remain required. Original short draft notes reference primary source descriptions and upper-limb venous facts; no protected diagram/table is copied. No new dependency, font, texture, paid API, invented tissue or clinical approval is added. See `../docs/HAND_VENOUS_DETAIL.md`. Earlier totals below are historical.
+
 ## Hand arterial extension — 6 September 2026
 
 The current atlas has **984 source representations / 80 body bundles / 95,477,852 bytes**. Twenty-six exact v4 ISA definitions add thirty source components in one 534,016-byte GLB, preserving every previous record and bundle. The same official CC BY 4.0 licence was rechecked; existing DBCLS credit, licence and derivative-change notices remain required for mesh/index derivatives. See `docs/HAND_VASCULAR_DETAIL.md` for exact-source, coordinate, overlap, numbering and clinical gates. The new regional triage report is source-index-derived evidence under the same terms, not MIT-licensed anatomy or automatic admission.

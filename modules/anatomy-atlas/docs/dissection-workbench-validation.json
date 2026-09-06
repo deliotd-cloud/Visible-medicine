@@ -1,8 +1,8 @@
 {
   "passed": true,
-  "checks": 90655,
-  "catalogueStructures": 984,
-  "catalogSha256": "6402d7b654eaddb137fea383d796e64cd7674117d525492d89aa8daa31fe6593",
+  "checks": 94862,
+  "catalogueStructures": 998,
+  "catalogSha256": "5d7a82b00671a07b993122317e3f22eb64bc5eed4f1df064b81c78b35b46e590",
   "regions": [
     {
       "region": "whole-body",
@@ -25,8 +25,8 @@
     {
       "region": "hand",
       "layerSteps": 3,
-      "studyWindows": 8,
-      "focusedViews": 11
+      "studyWindows": 12,
+      "focusedViews": 15
     },
     {
       "region": "thigh",

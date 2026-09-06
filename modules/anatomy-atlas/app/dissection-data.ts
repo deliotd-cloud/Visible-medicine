@@ -6,6 +6,7 @@ import { mesentericStudySets } from '../lib/mesenteric-anatomy.ts';
 import { pancreaticStudySets } from '../lib/pancreatic-anatomy.ts';
 import { thoracicStudySets } from '../lib/thoracic-anatomy.ts';
 import { handVascularStudySets } from '../lib/hand-vascular-anatomy.ts';
+import { handVenousStudySets } from '../lib/hand-venous-anatomy.ts';
 
 export type DissectionView =
   | 'anterior'
@@ -1135,6 +1136,7 @@ for (const study of [
   ...pancreaticStudySets,
   ...thoracicStudySets,
   ...handVascularStudySets,
+  ...handVenousStudySets,
 ]) {
   for (const [index, region] of study.regions.entries()) {
     const rule = { fmaIds: study.targetFmaIds };

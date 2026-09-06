@@ -1226,10 +1226,10 @@ export default function BodyExplorer({
               <Network />
               <span>
                 Selected source anatomy · review pending. Vessels are incomplete
-                segments; red = artery and blue = vein, not oxygenation.
-                Connective coverage includes selected discs, cartilage,
-                ligaments, interosseous membranes and Achilles tendons; it is
-                incomplete.
+                segments; red = artery, blue = vein, grey = unclassified vessel,
+                not oxygenation. Connective coverage includes selected discs,
+                cartilage, ligaments, interosseous membranes and Achilles
+                tendons; it is incomplete.
               </span>
             </div>
           )}

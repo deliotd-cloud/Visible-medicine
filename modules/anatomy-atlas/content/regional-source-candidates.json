@@ -2,17 +2,17 @@
   "sourceVersion": "4.0",
   "license": "CC-BY-4.0",
   "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
-  "inventorySha256": "55190bfb6a1f247726bdf377d6c5998e46063091b5af5d8e4bae5b15647e32e8",
-  "catalogSha256": "6402d7b654eaddb137fea383d796e64cd7674117d525492d89aa8daa31fe6593",
+  "inventorySha256": "9a3ccd47a8155a85fc1803724b8a35a4b22355c3b992aedccda10da091eca22c",
+  "catalogSha256": "5d7a82b00671a07b993122317e3f22eb64bc5eed4f1df064b81c78b35b46e590",
   "query": "Unused-available ISA definitions with one to four components and explicit lexical regional-domain matches. Exact component sets are grouped without choosing a preferred anatomical identity. Domains overlap and are not inferred ontology classes.",
-  "unusedIsaDefinitions": 674,
-  "boundedIsaDefinitions": 624,
-  "matchedDefinitions": 257,
-  "sourceSetGroups": 239,
+  "unusedIsaDefinitions": 644,
+  "boundedIsaDefinitions": 601,
+  "matchedDefinitions": 235,
+  "sourceSetGroups": 217,
   "domainCounts": [
     {
       "id": "hand-foot-vessels",
-      "sourceSetGroups": 56
+      "sourceSetGroups": 34
     },
     {
       "id": "ocular-lacrimal",
@@ -1317,44 +1317,6 @@
     },
     {
       "files": [
-        "FJ2228"
-      ],
-      "definitions": [
-        {
-          "id": "FMA62507",
-          "name": "dorsal venous network of left hand"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2229"
-      ],
-      "definitions": [
-        {
-          "id": "FMA22913",
-          "name": "left deep palmar venous arch"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
         "FJ2231"
       ],
       "definitions": [
@@ -1412,25 +1374,6 @@
     },
     {
       "files": [
-        "FJ2249"
-      ],
-      "definitions": [
-        {
-          "id": "FMA22916",
-          "name": "left superficial palmar venous arch"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
         "FJ2275"
       ],
       "definitions": [
@@ -1441,44 +1384,6 @@
       ],
       "domains": [
         "regional-supporting-tissue"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2280"
-      ],
-      "definitions": [
-        {
-          "id": "FMA62506",
-          "name": "dorsal venous network of right hand"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2281"
-      ],
-      "definitions": [
-        {
-          "id": "FMA22912",
-          "name": "right deep palmar venous arch"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
       ],
       "heldComponents": [],
       "decision": "identity-and-geometry-review-required",
@@ -1536,25 +1441,6 @@
       ],
       "domains": [
         "regional-supporting-tissue"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2301"
-      ],
-      "definitions": [
-        {
-          "id": "FMA22915",
-          "name": "right superficial palmar venous arch"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
       ],
       "heldComponents": [],
       "decision": "identity-and-geometry-review-required",
@@ -3501,46 +3387,6 @@
     },
     {
       "files": [
-        "FJ2228",
-        "FJ2280"
-      ],
-      "definitions": [
-        {
-          "id": "FMA67977",
-          "name": "dorsal venous network of hand"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2229",
-        "FJ2281"
-      ],
-      "definitions": [
-        {
-          "id": "FMA22911",
-          "name": "deep palmar venous arch"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
         "FJ2231",
         "FJ2283"
       ],
@@ -3601,26 +3447,6 @@
     },
     {
       "files": [
-        "FJ2249",
-        "FJ2301"
-      ],
-      "definitions": [
-        {
-          "id": "FMA22914",
-          "name": "superficial palmar venous arch"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
         "FJ2322",
         "FJ2352"
       ],
@@ -3641,66 +3467,6 @@
     },
     {
       "files": [
-        "FJ2324",
-        "FJ2325"
-      ],
-      "definitions": [
-        {
-          "id": "FMA85097",
-          "name": "proper palmar digital vein of left index finger"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2326",
-        "FJ2340"
-      ],
-      "definitions": [
-        {
-          "id": "FMA85099",
-          "name": "proper palmar digital vein of left middle finger"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2327",
-        "FJ2328"
-      ],
-      "definitions": [
-        {
-          "id": "FMA85101",
-          "name": "proper palmar digital vein of left ring finger"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
         "FJ2347",
         "FJ2348"
       ],
@@ -3708,66 +3474,6 @@
         {
           "id": "FMA70800",
           "name": "set of dorsal metacarpal arteries"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2354",
-        "FJ2355"
-      ],
-      "definitions": [
-        {
-          "id": "FMA85096",
-          "name": "proper palmar digital vein of right index finger"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2356",
-        "FJ2357"
-      ],
-      "definitions": [
-        {
-          "id": "FMA85098",
-          "name": "proper palmar digital vein of right middle finger"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2358",
-        "FJ2359"
-      ],
-      "definitions": [
-        {
-          "id": "FMA85100",
-          "name": "proper palmar digital vein of right ring finger"
         }
       ],
       "domains": [
@@ -4368,90 +4074,6 @@
     },
     {
       "files": [
-        "FJ2238",
-        "FJ2320",
-        "FJ2323"
-      ],
-      "definitions": [
-        {
-          "id": "FMA22921",
-          "name": "left palmar metacarpal vein"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2290",
-        "FJ2350",
-        "FJ2353"
-      ],
-      "definitions": [
-        {
-          "id": "FMA22920",
-          "name": "right palmar metacarpal vein"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2319",
-        "FJ2321",
-        "FJ2329"
-      ],
-      "definitions": [
-        {
-          "id": "FMA85103",
-          "name": "proper palmar digital vein of left little finger"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2349",
-        "FJ2351",
-        "FJ2360"
-      ],
-      "definitions": [
-        {
-          "id": "FMA85102",
-          "name": "proper palmar digital vein of right little finger"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
         "FJ3097",
         "FJ3099",
         "FJ3100"
@@ -4750,72 +4372,6 @@
         {
           "id": "FMA70801",
           "name": "set of dorsal digital arteries"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2324",
-        "FJ2325",
-        "FJ2354",
-        "FJ2355"
-      ],
-      "definitions": [
-        {
-          "id": "FMA22927",
-          "name": "proper palmar digital vein of index finger"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2326",
-        "FJ2340",
-        "FJ2356",
-        "FJ2357"
-      ],
-      "definitions": [
-        {
-          "id": "FMA22928",
-          "name": "proper palmar digital vein of middle finger"
-        }
-      ],
-      "domains": [
-        "hand-foot-vessels"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ2327",
-        "FJ2328",
-        "FJ2358",
-        "FJ2359"
-      ],
-      "definitions": [
-        {
-          "id": "FMA22929",
-          "name": "proper palmar digital vein of ring finger"
         }
       ],
       "domains": [

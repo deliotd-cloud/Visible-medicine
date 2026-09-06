@@ -12,6 +12,7 @@ import { mesentericGroupFor } from '../lib/mesenteric-anatomy';
 import { pancreaticGroupFor } from '../lib/pancreatic-anatomy';
 import { thoracicGroupFor } from '../lib/thoracic-anatomy';
 import { handVascularGroupFor } from '../lib/hand-vascular-anatomy';
+import { handVenousGroupFor } from '../lib/hand-venous-anatomy';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -60,6 +61,7 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
     pancreaticGroupFor(s.fmaId) ??
     thoracicGroupFor(s.fmaId) ??
     handVascularGroupFor(s.fmaId) ??
+    handVenousGroupFor(s.fmaId) ??
     (intestinalJunction.fmaIds.includes(s.fmaId)
       ? intestinalJunction
       : undefined);

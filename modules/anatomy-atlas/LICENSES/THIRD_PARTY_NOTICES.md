@@ -26,6 +26,8 @@ The application embeds a CC BY 4.0 BodyParts3D shoulder mesh subset. It does not
 
 ## Anatomical meshes
 
+The hand-venous milestone reaches 998 entries / 81 body bundles. Fourteen exact v4 ISA identities / twenty-four components retain CC BY 4.0, DBCLS attribution and adaptation notices. Two little-finger source groups are withheld for extent review. Meshes, official indexes and derived audit data retain their source rights; original code does not relicense them. No new package, paid service, font, texture or protected diagram is added. See `../docs/HAND_VENOUS_DETAIL.md`; earlier milestone totals are historical.
+
 The latest hand-arterial extension reaches 984 entries / 80 body bundles. Twenty-six v4 ISA definitions / thirty components and the derived regional candidate inventory retain CC BY 4.0, DBCLS attribution and adaptation notices. Unequal supplied sides and source numbering are disclosed, not normalised with generated tissue. No new package, paid service, font, texture or third-party diagram is added. See `../docs/HAND_VASCULAR_DETAIL.md`; earlier totals are historical.
 
 The latest thoracic extension reaches 958 entries / 79 body bundles. Four v4 IS-A components retain the same CC BY 4.0 DBCLS attribution and adaptation obligations. Bronchial-variant aliases are rendered once, with the variant label retained. No new package, licence class, paid service, font, texture or copied diagram is added. See `../docs/THORACIC_DETAIL.md`. Counts in earlier milestone paragraphs are historical.

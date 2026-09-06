@@ -5,11 +5,11 @@ import { build } from 'esbuild';
 import { fileURLToPath } from 'node:url';
 import { Box3, Vector3, Matrix4 } from 'three';
 import {
-  thoracicDefinitions,
-  thoracicAdmissions,
-  thoracicHeldIds,
-  thoracicSelections,
-} from './thoracic-selections.mjs';
+  handVenousDefinitions,
+  handVenousAdmissions,
+  handVenousHeldIds,
+  handVenousSelections,
+} from './hand-venous-selections.mjs';
 import { inventoryHolds, geometryFingerprint } from './anatomy-inventory.mjs';
 import { cache } from './bodyparts-archive.mjs';
 const rawSourceCheck = process.argv.includes('--raw-source');
@@ -27,17 +27,17 @@ const compare = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 const read = async (p) => JSON.parse(await fs.readFile(p, 'utf8'));
 const root = 'public/models/bodyparts3d/full-body/';
 const catalog = await read(root + 'catalog.json'),
-  baseline = await read('content/thoracic-baseline.json'),
-  audit = await read('content/thoracic-source-audit.json'),
+  baseline = await read('content/hand-venous-baseline.json'),
+  audit = await read('content/hand-venous-source-audit.json'),
   inventory = await read('content/source-inventory.json');
-same(baseline.sourceCommit, '84a6adbf3814b2d28bd4a3a053622a0da0ad3a9a');
+same(baseline.sourceCommit, '6f7fe0df4124d13b029404ab3502c026b2d39230');
 same(
   baseline.catalogSha256,
-  'e253e9ec0c1a1567b3ac614501c6511338d44234a28696501733679f377821c9',
+  '6402d7b654eaddb137fea383d796e64cd7674117d525492d89aa8daa31fe6593',
 );
 same(audit.sourceCommit, baseline.sourceCommit);
-same(baseline.structures.length, 954);
-same(baseline.bundles.length, 78);
+same(baseline.structures.length, 984);
+same(baseline.bundles.length, 80);
 same(catalog.structures.length, 998);
 same(catalog.bundles.length, 81);
 same(catalog.coordinateSystem, baseline.coordinateSystem);
@@ -56,31 +56,31 @@ for (const old of baseline.bundles) {
   same(hash(await fs.readFile(root + old.id + '.glb')), old.sha256);
 }
 const additions = catalog.structures.filter((s) =>
-  s.bundle.endsWith('-thoracic-detail'),
+  s.bundle.endsWith('-hand-venous'),
 );
 same(
   additions.map((s) => s.fmaId).sort(compare),
-  [...thoracicAdmissions].sort(compare),
+  [...handVenousAdmissions].sort(compare),
 );
 same(
-  thoracicSelections(
+  handVenousSelections(
     new Map(
       inventory.records.filter((r) => r.tree === 'isa').map((r) => [r.id, r]),
     ),
   )
     .map((s) => s.fma)
     .sort(compare),
-  [...thoracicAdmissions].sort(compare),
+  [...handVenousAdmissions].sort(compare),
 );
-same(additions.length, 4);
-same(additions.filter((s) => s.system === 'vessels').length, 4);
+same(additions.length, 14);
+same(additions.filter((s) => s.system === 'vessels').length, 14);
 same(additions.filter((s) => s.system === 'organs').length, 0);
 same(
   additions.reduce((n, s) => n + s.sources.length, 0),
-  4,
+  24,
 );
-same(audit.results.length, 4);
-same(audit.comparisons.length, 123);
+same(audit.results.length, 16);
+same(audit.comparisons.length, 597);
 same(audit.license, 'CC-BY-4.0');
 check(audit.distanceMethod.includes('segment/point fallback'));
 for (const row of audit.comparisons) {
@@ -100,14 +100,17 @@ same(
   audit.comparisons.filter((r) => r.flagged),
   [],
 );
-const variant = audit.results.find((r) => r.fmaId === 'FMA10704');
-same(
-  variant.exactDefinitions.map((r) => r.id).sort(compare),
-  ['FMA10704', 'FMA14177', 'FMA3714', 'FMA66267'].sort(compare),
-);
-for (const alias of ['FMA14177', 'FMA3714', 'FMA66267'])
+same(additions.filter((s) => s.laterality === 'right').length, 7);
+same(additions.filter((s) => s.laterality === 'left').length, 7);
+for (const alias of [
+  'FMA23046',
+  'FMA85111',
+  'FMA37378',
+  'FMA37388',
+  'FMA37389',
+])
   check(!catalog.structures.some((s) => s.fmaId === alias));
-for (const id of thoracicHeldIds) {
+for (const id of handVenousHeldIds) {
   check(inventoryHolds[id]);
   check(!catalog.structures.some((s) => s.fmaId === id));
   for (const row of inventory.records.filter((r) => r.id === id))
@@ -122,10 +125,10 @@ for (const [
   id,
   name,
   files,
-  region = 'thorax',
+  region = 'hand',
   system = 'vessels',
   category = 'vessel',
-] of thoracicDefinitions) {
+] of handVenousDefinitions) {
   const a = audit.results.find((r) => r.fmaId === id);
   same(a.name, name);
   same(a.region, region);
@@ -135,16 +138,20 @@ for (const [
     files,
   );
   check(a.grossPositionPass);
+  check(a.lateralityPass);
+  const side = name.includes('right') ? 'right' : 'left';
+  check(side === 'right' ? a.bounds.max[0] < 0 : a.bounds.min[0] > 0);
   same(a.clinicalValidation, false);
   same(a.admitted, false, 'Audit alone never admits');
   for (const f of a.files) same(f.canonicalDuplicateOwners, []);
   const s = additions.find((s) => s.fmaId === id);
   if (!s) {
-    check(thoracicHeldIds.includes(id));
+    check(handVenousHeldIds.includes(id));
     continue;
   }
   same(a.degenerateTriangles, 0);
   same(s.sourceName, name);
+  same(s.laterality, side);
   same(s.region, region);
   same(s.regions, [region]);
   same(s.system, system);
@@ -214,7 +221,7 @@ for (const [
 const compiled = await build({
   stdin: {
     contents:
-      "export * from './lib/thoracic-anatomy'; export * from './app/dissection-data'; export * from './app/body-content'; export * from './lib/anatomy-practice'; export * from './lib/anatomy-link-registry'; export * from './lib/study-links';",
+      "export * from './lib/hand-venous-anatomy'; export * from './app/dissection-data'; export * from './app/body-content'; export * from './lib/anatomy-practice'; export * from './lib/anatomy-link-registry'; export * from './lib/study-links';",
     resolveDir: fileURLToPath(new URL('../', import.meta.url)),
     loader: 'ts',
   },
@@ -228,11 +235,11 @@ const api = await import(
     Buffer.from(compiled.outputFiles[0].text).toString('base64')
 );
 same(
-  api.thoracicGroups.flatMap((g) => g.fmaIds).sort(compare),
-  [...thoracicAdmissions].sort(compare),
+  api.handVenousGroups.flatMap((g) => g.fmaIds).sort(compare),
+  [...handVenousAdmissions].sort(compare),
 );
 for (const s of additions) {
-  const group = api.thoracicGroupFor(s.fmaId);
+  const group = api.handVenousGroupFor(s.fmaId);
   check(group);
   for (const tab of ['anatomy', 'function']) {
     const c = api.bodyContent(s, tab);
@@ -248,15 +255,16 @@ for (const s of additions) {
   same(e.sources, s.sources);
   same(e.reference.kind, 'surface-bounds-centre');
 }
-same(api.thoracicStudySets.length, 3);
+same(api.handVenousStudySets.length, 4);
 const counts = {
-  'bronchial-arterial-window': 7,
-  'oesophageal-arterial-window': 4,
-  'thoracic-small-arteries-exposed': 6,
+  'palmar-venous-arches-window': { both: 10, left: 5, right: 5 },
+  'dorsal-hand-veins-window': { both: 12, left: 6, right: 6 },
+  'palmar-digital-veins-window': { both: 12, left: 6, right: 6 },
+  'hand-arteries-veins-exposed': { both: 42, left: 20, right: 22 },
 };
 const loaded = catalog.bundles.map((b) => b.id);
 let serial = 0;
-for (const study of api.thoracicStudySets)
+for (const study of api.handVenousStudySets)
   for (const region of study.regions) {
     const profile = api.dissectionProfiles[region],
       focus = profile.focuses.find((f) => f.id === study.id),
@@ -275,11 +283,7 @@ for (const study of api.thoracicStudySets)
         visible = api.stageStructures(scope, profile, study.id);
       same(visible, expected);
       same(api.stageStructures(scope, profile, 'free', study.id), expected);
-      same(
-        visible.length,
-        counts[study.id] -
-          (study.id === 'bronchial-arterial-window' && side !== 'both' ? 1 : 0),
-      );
+      same(visible.length, counts[study.id][side]);
       for (const landmark of study.landmarks)
         check(
           visible.some((s) => new RegExp(landmark, 'i').test(s.sourceName)),
@@ -345,7 +349,7 @@ for (const study of api.thoracicStudySets)
           continue;
         }
         check(session);
-        same(session.questions.length, targets.length);
+        same(session.questions.length, Math.min(20, targets.length));
         for (const q of session.questions)
           check(targets.some((s) => s.id === q.target));
       }
@@ -378,23 +382,24 @@ const result = {
   passed: true,
   checks,
   rawSourceCheck,
-  newEntries: 4,
-  vesselEntries: 4,
-  variantEntries: 1,
-  sourceComponents: 4,
+  newEntries: 14,
+  vesselEntries: 14,
+  rightEntries: 7,
+  leftEntries: 7,
+  sourceComponents: 24,
   newBundles: 1,
   newAssetBytes: catalog.bundles
-    .filter((b) => b.id.endsWith('-thoracic-detail'))
+    .filter((b) => b.id.endsWith('-hand-venous'))
     .reduce((n, b) => n + b.bytes, 0),
-  preservedRecords: 954,
-  preservedBundles: 78,
-  sourceHolds: thoracicHeldIds,
-  studyWindows: 3,
+  preservedRecords: 984,
+  preservedBundles: 80,
+  sourceHolds: handVenousHeldIds,
+  studyWindows: 4,
   clinicalValidation: false,
   browserInteractionTesting: false,
 };
 await fs.writeFile(
-  'docs/thoracic-validation.json',
+  'docs/hand-venous-validation.json',
   JSON.stringify(result, null, 2) + '\n',
 );
 console.log(result);
