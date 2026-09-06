@@ -40,6 +40,8 @@ The former `visible-medicine:imaging-sync` demonstrator has been replaced by an 
 
 ## Scaling to full body
 
+The regional/whole-body explorer uses `lib/study-navigation.ts` to derive related study membership from existing focused target/context rules, never from geometric proximity. `StructureNavigator` provides shared ID/name/system filtering and native-button keyboard focus; `RelatedStudy` opens an existing recipe while retaining the selection. Scope, laterality, restoration and exam gates stay in the explorer. No imaging, bookmark, geometry or database schema changes are required. See [study-navigation details](STUDY_NAVIGATION.md).
+
 - Split delivery by region and level of detail while retaining one source coordinate frame.
 - Keep ID, laterality, meshes, terminology, content and review provenance separate.
 - Allow one-to-many node bindings (deltoid is already an example); do not depend on mesh colour for identity.

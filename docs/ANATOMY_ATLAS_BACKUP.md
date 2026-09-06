@@ -4,11 +4,11 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 
 ## Snapshot
 
-- Source application commit: `05ffadfba7e9b63bfdb24c7dbea714a6340b6bf6`.
-- Exact application source tree: `176cccadf7c1371763dad40f6ece5b805018e6a6`.
+- Source application commit: `86de0cce3db88e89b5d30bdf35c511256adbaa7a`.
+- Exact application source tree: `d1bcaba361aba34cf240b9b61dea1a2661ca5687`.
 - Main website base commit: `c4ff08f8afc90bd94d04162625f97af9d94401cf`.
 - GitHub backup branch: `backup/anatomy-atlas-2026-09-06`.
-- All 344 tracked application files are preserved byte-for-byte from that source commit, including 77 GLB bundles, the official brand lockups, content, scripts, configuration, dependency lockfile, licences, review database schema/migration and documentation.
+- All 350 tracked application files (110,234,023 bytes) are preserved byte-for-byte from that source commit, including 77 GLB bundles, the official brand lockups, content, scripts, configuration, dependency lockfile, licences, review database schema/migration and documentation.
 - The atlas covers 942 selectable source representations, 11 regional explorers, 108 dissection stages, 90 focused views and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation.
 - The shoulder review workspace has independent geometry, teaching and imaging review tracks, evidence/issues, versioned records and revision-bound approval safeguards. Acquired scans and specialist approvals remain absent.
 - The deep-inspection update adds three-plane surface cutaways, tissue opacity, clipped-surface picking, regional/whole-body orthographic illustration and varied 5/10/20-question practice with results. No source geometry, anatomical coverage, licences or dependencies were changed.
@@ -19,6 +19,8 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 - The deep-brain milestone adds 22 source concepts / 24 components in a separate model bundle, three study windows, five source-ID-based focused views, draft notes and distinct study colours. Every previous 859 structure record and 66 model bundle hashes is preserved. Regional labels now follow the visible bounds in all six presets, avoid duplicate selected labels and correct exploded local coordinates. Its 193,082 source, study and label helper assertions pass; they do not validate source anatomy or on-screen text collision. Grouped bilateral mammillary and choroid-plexus sources are explicitly disclosed. See `docs/DEEP_BRAIN.md` for evidence, clinical limits and remaining work.
 
 The currently published atlas remains at [Visible Medicine anatomy](https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site). Saving this branch does not redeploy that site or the main website.
+
+The study-navigation milestone adds **Study together** groups derived from existing authored target/context rules, selection-preserving focused-view opening, filtered source-ID/system/dissection browsing and native-button arrow/Home/End navigation. Study membership is not a verified anatomical connection; automatic skeletal background does not create relationship edges. Exam/scope guards, restoration/loading announcements and all existing source identities are preserved. Its 89,681-assertion suite and existing geometry/dissection/study/practice/imaging/inspection/arrangement/explode/review regressions pass, as do type checks, focused lint, build and the unchanged 808-package licence audit. No new model, dependency, personal data, clinical approval or source admission is included. See `docs/STUDY_NAVIGATION.md`; browser/device and specialist acceptance remain outstanding.
 
 The connective/deep-spinal milestone adds eleven source entries / fifteen components in four separate GLBs, six new study windows and eight focuses. Carpal/cervical/lumbar views use selected context rather than automatically restoring all regional bones. Prior 881 records / 67 bundles remain exact. Two longi candidates and their grouped alias are held for level/course/overlap adjudication. The new 2,725-assertion admission/context suite passes alongside the existing regressions; no clinical or device approval is implied. Source evidence, licences and next work are in `docs/AXIAL_DETAIL.md`.
 

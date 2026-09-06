@@ -1,5 +1,9 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Study navigation
+
+**Browse structures** now filters by name, stable source ID, system and current dissection state, with arrow-key browsing and explicit selection/restoration. Expand **Study together** on a selected structure to inspect its authored target/context groups and open a focused view while keeping it selected. Grouping is not a claim of verified attachments or innervation; unavailable groups and loading states remain explicit. See [controls, scope and acceptance requirements](docs/STUDY_NAVIGATION.md).
+
 ## Mesenteric and bowel-vessel dissection
 
 The atlas now contains **942 source representations**. Abdomen has five new study windows: **Mesenteric surfaces & bowel**, **Mesenteric vessels exposed**, separate arterial/venous views, and **Appendix, mesoappendix & artery**. Three membranes and fourteen vessel segments are independently selectable. All previous anatomy remains exact; three near-overlapping arterial candidates are withheld. See [source evidence, controls and clinical limits](docs/MESENTERIC_DETAIL.md). These are draft reference surfaces, not a complete peritoneum, vascular tree or clinical dissection guide.

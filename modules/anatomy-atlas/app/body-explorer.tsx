@@ -86,6 +86,9 @@ import {
   type PracticeSampling,
 } from '@/lib/anatomy-practice';
 import { StudyViews } from './study-views';
+import { StructureNavigator } from './structure-navigator';
+import { RelatedStudy } from './related-study';
+import { relatedStudyViews } from '@/lib/study-navigation';
 import type { StudyCamera, StudyView } from '@/lib/study-views';
 import { anatomyRetryPlan } from '@/lib/anatomy-load-retry';
 import type { BodyLayout } from '@/lib/body-arrangement';
@@ -142,6 +145,10 @@ export default function BodyExplorer({
   const [catalog, setCatalog] = useState<BodyCatalog | null>(null),
     [error, setError] = useState(false);
   const [catalogAttempt, setCatalogAttempt] = useState(0);
+  const [selectionNotice, setSelectionNotice] = useState<{
+    id: string;
+    message: string;
+  } | null>(null);
   const [retries, setRetries] = useState<Record<string, number>>({});
   const [retrying, setRetrying] = useState(false),
     [retryError, setRetryError] = useState('');
@@ -262,9 +269,23 @@ export default function BodyExplorer({
     [stage, focusedStudy, resolved, systems],
   );
   const selected = catalog?.structures.find((s) => s.id === selectedId) ?? null;
+  const relatedViews = useMemo(
+    () =>
+      exam ? [] : relatedStudyViews(regionStructures, profile, selectedId),
+    [exam, regionStructures, profile, selectedId],
+  );
   const available = regionStructures.filter(
     (s) => systems[s.system] && !hiddenIds.includes(s.id),
   );
+  const enabledIds = new Set(available.map((item) => item.id));
+  function structureDetail(item: BodyStructure) {
+    if (hiddenIds.includes(item.id)) return 'Removed · select to restore';
+    if (!systems[item.system]) return 'System off · select to enable';
+    if (failed.includes(item.bundle))
+      return 'Model unavailable · retry required';
+    if (!loaded.includes(item.bundle)) return 'Model loading';
+    return 'Enabled in dissection';
+  }
   const focusTargetIds = focusedStudy
     ? available
         .filter((s) => matchesRule(s, focusedStudy.rule))
@@ -329,14 +350,18 @@ export default function BodyExplorer({
   const applySelection = useCallback(
     (id: string) => {
       const s = regionStructures.find((item) => item.id === id);
-      if (!s) return;
+      if (exam || !s) return;
       setSelectedId(id);
+      setSelectionNotice({
+        id,
+        message: `${s.name} selected.${hiddenIds.includes(id) ? ' Restored to the dissection.' : ''}${!systems[s.system] ? ` ${bodySystems[s.system].name} enabled.` : ''}`,
+      });
       setSystems((prev) =>
         prev[s.system] ? prev : { ...prev, [s.system]: true },
       );
       if (hiddenIds.includes(id)) dispatch({ type: 'restore', id });
     },
-    [regionStructures, hiddenIds],
+    [regionStructures, hiddenIds, systems, exam],
   );
   const linkEntries = useMemo(
     () => (catalog ? bodyLinkEntries(catalog) : []),
@@ -354,10 +379,11 @@ export default function BodyExplorer({
   const publishSelection = imagingLink.publish;
   const select = useCallback(
     (id: string) => {
+      if (exam || !regionStructures.some((item) => item.id === id)) return;
       applySelection(id);
       publishSelection(id);
     },
-    [applySelection, publishSelection],
+    [applySelection, publishSelection, exam, regionStructures],
   );
   function changeStage(id: string) {
     if (
@@ -394,6 +420,17 @@ export default function BodyExplorer({
     setZoom(1);
     setView(profile.focuses.find((s) => s.id === id)?.view ?? 'anterior');
     setReset((n) => n + 1);
+  }
+  function openRelatedStudy(id: string) {
+    const next = relatedViews.find((item) => item.focusId === id);
+    if (exam || !selectedId || !next?.visibleIds.includes(selectedId)) return;
+    changeFocus(id);
+    setSelectedId(selectedId);
+    setSelectionNotice({
+      id: selectedId,
+      message: `${next.title} opened. ${selected?.name} remains selected.`,
+    });
+    publishSelection(selectedId);
   }
   function undoDissection() {
     dispatch({ type: 'undo' });
@@ -1179,9 +1216,18 @@ export default function BodyExplorer({
             </div>
           )}
         </section>
-        <aside className="body-info" aria-live="polite">
+        <aside className="body-info" aria-label="Anatomy study panel">
           {exam ? (
             <>
+              <output className="sr-only" aria-live="polite" aria-atomic="true">
+                {`Question ${question + 1} of ${examTargets.length}. ${
+                  answered
+                    ? `${answer === target?.id ? 'Correct.' : answer === null ? 'Skipped.' : 'Not quite.'} ${target?.name ?? ''}.`
+                    : practice.mode === 'name'
+                      ? 'Name the isolated structure.'
+                      : `Find ${target?.name ?? 'the requested structure'}.`
+                }`}
+              </output>
               <div className="eyebrow">IDENTIFICATION PRACTICE</div>
               <h2>
                 {question + 1} / {examTargets.length}
@@ -1436,6 +1482,15 @@ export default function BodyExplorer({
                   </ComboboxList>
                 </ComboboxContent>
               </Combobox>
+              <output
+                className="body-selection-notice"
+                aria-live="polite"
+                aria-atomic="true"
+              >
+                {selected
+                  ? `${selectionNotice?.id === selected.id ? selectionNotice.message : `${selected.name} selected.`} ${structureDetail(selected)}. Cutaway and opacity can affect visibility; use Reveal uncut if needed.`
+                  : 'No structure selected.'}
+              </output>
               {selected ? (
                 <>
                   <div className="body-selection-heading">
@@ -1503,6 +1558,14 @@ export default function BodyExplorer({
                       <ArrowLeft />
                     </Button>
                   </div>
+                  <RelatedStudy
+                    views={relatedViews}
+                    selectedId={selected.id}
+                    currentFocusId={dissection.focusId}
+                    onOpen={openRelatedStudy}
+                    onSelect={select}
+                    detail={structureDetail}
+                  />
                   <Tabs defaultValue="anatomy" className="body-content-tabs">
                     <TabsList variant="line">
                       {tabs.map(([value, label]) => (
@@ -1621,20 +1684,15 @@ export default function BodyExplorer({
               )}
               <details className="body-structure-browser" open={!whole}>
                 <summary>Browse structures ({regionStructures.length})</summary>
-                <div>
-                  {regionStructures.map((s) => (
-                    <button
-                      type="button"
-                      key={s.id}
-                      className={s.id === selectedId ? 'active' : ''}
-                      onClick={() => select(s.id)}
-                    >
-                      <i style={{ background: bodySystems[s.system].color }} />
-                      <span>{s.name}</span>
-                      <ChevronRight />
-                    </button>
-                  ))}
-                </div>
+                <StructureNavigator
+                  key={`${initialRegion}-${side}`}
+                  items={regionStructures}
+                  selectedId={selectedId}
+                  onSelect={select}
+                  label="Regional structures"
+                  detail={structureDetail}
+                  enabledIds={enabledIds}
+                />
               </details>
               <div className="body-validation">
                 Educational reference model · Independent clinical validation

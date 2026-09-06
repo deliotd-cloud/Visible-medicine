@@ -87,7 +87,7 @@ export const bodySystems: Record<
   connective: {
     name: 'Connective',
     color: '#77a8b6',
-    description: 'Selected discs, cartilage, ligaments & tendons',
+    description: 'Selected discs, cartilage, ligaments, membranes & tendons',
   },
 };
 export const allBodySystems: Record<BodySystem, boolean> = {

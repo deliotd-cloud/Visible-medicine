@@ -69,6 +69,14 @@ Five new abdominal windows/focuses cover mesentery/bowel context, exposed vessel
 
 Next executable work: inspect remaining unused same-version regional connective/organ/vascular definitions without reopening existing holds absent new evidence; implement source-linked related-structure navigation and keyboard selection feedback where these improve dense-region study. Clinical adjudication, actual-device acceptance and the user-supplied imaging adapter remain external gates. Keep the full improvement goal active.
 
+### Source-linked study navigation milestone
+
+Added a compact **Study together** panel derived solely from existing focus targets and explicit context, with an ID-bound group browser and explicit recipe opening that retains the selection. Automatic skeletal background is not misrepresented as a relationship. All regional/whole-body structure browsers now support multi-term name/source-ID search, system/enabled filters, native-button arrow/Home/End focus, explicit Enter/Space selection, local scrolling and selected/restored/loading feedback. No global keyboard shortcuts or anatomical camera changes occur on arrow focus. Study controls are absent in exams; shared selection handlers enforce the exam/scope gates and practice announcements reveal no premature answer.
+
+The 89,681-assertion navigation suite passes across 36 scope/side combinations alongside the existing source, dissection, workbench, practice, bookmarks, imaging, inspection, arrangement, explode, inventory and review tests. All 942 entries, 76 body GLBs, 108 recipes, 90 focuses and source coordinates are unchanged. No dependency, font, texture, anatomy asset, paid API, saved personal data or clinical approval is added. A bounded read-only source check found only three arterial names—not new connective surfaces—among the small unused connective-name candidates; existing source holds remain unchanged. See [study-navigation evidence and acceptance](STUDY_NAVIGATION.md). Browser/device and clinical acceptance remain pending.
+
+Next executable work: add explicit, validated regional-study deep links so a whole-body selection can continue into the relevant regional dissection without losing identity; examine the unused same-version organ/muscle source queue beyond the exhausted small connective-name filter, with source/alias/overlap checks before any admission. Do not lift existing holds absent new evidence. Preserve the broader anatomy, presentation, resilience and actual imaging-integration goal.
+
 ## Per-milestone completion checklist
 
 1. Inspect the current worktree and relevant source/licence evidence; preserve unrelated edits.

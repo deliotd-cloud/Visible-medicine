@@ -1,0 +1,293 @@
+{
+  "passed": true,
+  "assertions": 89681,
+  "catalogSha256": "8834615444c57b428fdf79689370c7894ba7aa400149f0b800014d9fdc158836",
+  "rows": [
+    {
+      "region": "whole-body",
+      "side": "both",
+      "structures": 942,
+      "selectionsWithGroups": 160,
+      "memberships": 160
+    },
+    {
+      "region": "whole-body",
+      "side": "right",
+      "structures": 540,
+      "selectionsWithGroups": 93,
+      "memberships": 93
+    },
+    {
+      "region": "whole-body",
+      "side": "left",
+      "structures": 543,
+      "selectionsWithGroups": 96,
+      "memberships": 96
+    },
+    {
+      "region": "shoulder-arm",
+      "side": "both",
+      "structures": 91,
+      "selectionsWithGroups": 71,
+      "memberships": 91
+    },
+    {
+      "region": "shoulder-arm",
+      "side": "right",
+      "structures": 46,
+      "selectionsWithGroups": 36,
+      "memberships": 46
+    },
+    {
+      "region": "shoulder-arm",
+      "side": "left",
+      "structures": 46,
+      "selectionsWithGroups": 36,
+      "memberships": 46
+    },
+    {
+      "region": "forearm",
+      "side": "both",
+      "structures": 62,
+      "selectionsWithGroups": 54,
+      "memberships": 70
+    },
+    {
+      "region": "forearm",
+      "side": "right",
+      "structures": 31,
+      "selectionsWithGroups": 27,
+      "memberships": 35
+    },
+    {
+      "region": "forearm",
+      "side": "left",
+      "structures": 31,
+      "selectionsWithGroups": 27,
+      "memberships": 35
+    },
+    {
+      "region": "hand",
+      "side": "both",
+      "structures": 84,
+      "selectionsWithGroups": 46,
+      "memberships": 46
+    },
+    {
+      "region": "hand",
+      "side": "right",
+      "structures": 42,
+      "selectionsWithGroups": 23,
+      "memberships": 23
+    },
+    {
+      "region": "hand",
+      "side": "left",
+      "structures": 42,
+      "selectionsWithGroups": 23,
+      "memberships": 23
+    },
+    {
+      "region": "thigh",
+      "side": "both",
+      "structures": 81,
+      "selectionsWithGroups": 78,
+      "memberships": 82
+    },
+    {
+      "region": "thigh",
+      "side": "right",
+      "structures": 41,
+      "selectionsWithGroups": 39,
+      "memberships": 41
+    },
+    {
+      "region": "thigh",
+      "side": "left",
+      "structures": 41,
+      "selectionsWithGroups": 39,
+      "memberships": 41
+    },
+    {
+      "region": "leg",
+      "side": "both",
+      "structures": 60,
+      "selectionsWithGroups": 48,
+      "memberships": 48
+    },
+    {
+      "region": "leg",
+      "side": "right",
+      "structures": 30,
+      "selectionsWithGroups": 24,
+      "memberships": 24
+    },
+    {
+      "region": "leg",
+      "side": "left",
+      "structures": 30,
+      "selectionsWithGroups": 24,
+      "memberships": 24
+    },
+    {
+      "region": "foot",
+      "side": "both",
+      "structures": 110,
+      "selectionsWithGroups": 44,
+      "memberships": 44
+    },
+    {
+      "region": "foot",
+      "side": "right",
+      "structures": 55,
+      "selectionsWithGroups": 22,
+      "memberships": 22
+    },
+    {
+      "region": "foot",
+      "side": "left",
+      "structures": 55,
+      "selectionsWithGroups": 22,
+      "memberships": 22
+    },
+    {
+      "region": "thorax",
+      "side": "both",
+      "structures": 149,
+      "selectionsWithGroups": 120,
+      "memberships": 132
+    },
+    {
+      "region": "thorax",
+      "side": "right",
+      "structures": 97,
+      "selectionsWithGroups": 75,
+      "memberships": 82
+    },
+    {
+      "region": "thorax",
+      "side": "left",
+      "structures": 98,
+      "selectionsWithGroups": 76,
+      "memberships": 82
+    },
+    {
+      "region": "abdomen",
+      "side": "both",
+      "structures": 83,
+      "selectionsWithGroups": 66,
+      "memberships": 115
+    },
+    {
+      "region": "abdomen",
+      "side": "right",
+      "structures": 63,
+      "selectionsWithGroups": 48,
+      "memberships": 91
+    },
+    {
+      "region": "abdomen",
+      "side": "left",
+      "structures": 65,
+      "selectionsWithGroups": 50,
+      "memberships": 95
+    },
+    {
+      "region": "pelvis",
+      "side": "both",
+      "structures": 65,
+      "selectionsWithGroups": 35,
+      "memberships": 35
+    },
+    {
+      "region": "pelvis",
+      "side": "right",
+      "structures": 37,
+      "selectionsWithGroups": 19,
+      "memberships": 19
+    },
+    {
+      "region": "pelvis",
+      "side": "left",
+      "structures": 37,
+      "selectionsWithGroups": 19,
+      "memberships": 19
+    },
+    {
+      "region": "head-neck",
+      "side": "both",
+      "structures": 262,
+      "selectionsWithGroups": 157,
+      "memberships": 230
+    },
+    {
+      "region": "head-neck",
+      "side": "right",
+      "structures": 153,
+      "selectionsWithGroups": 89,
+      "memberships": 129
+    },
+    {
+      "region": "head-neck",
+      "side": "left",
+      "structures": 153,
+      "selectionsWithGroups": 89,
+      "memberships": 129
+    },
+    {
+      "region": "spine",
+      "side": "both",
+      "structures": 112,
+      "selectionsWithGroups": 77,
+      "memberships": 78
+    },
+    {
+      "region": "spine",
+      "side": "right",
+      "structures": 84,
+      "selectionsWithGroups": 65,
+      "memberships": 66
+    },
+    {
+      "region": "spine",
+      "side": "left",
+      "structures": 84,
+      "selectionsWithGroups": 65,
+      "memberships": 66
+    }
+  ],
+  "sourceIndexCheck": {
+    "query": "Unused available ISA definitions with at most two components and connective-tissue name terms",
+    "matches": [
+      {
+        "id": "FMA50119",
+        "name": "branch of anterior choroidal artery to posterior limb of internal capsule",
+        "files": [
+          "FJ1674",
+          "FJ1674M"
+        ]
+      },
+      {
+        "id": "FMA50146",
+        "name": "branch of right anterior choroidal artery to posterior limb of right internal capsule",
+        "files": [
+          "FJ1674"
+        ]
+      },
+      {
+        "id": "FMA50147",
+        "name": "branch of left anterior choroidal artery to posterior limb of left internal capsule",
+        "files": [
+          "FJ1674M"
+        ]
+      }
+    ],
+    "conclusion": "All three are arterial branches named for the internal capsule, not missing connective surfaces. No admission or existing hold changed.",
+    "exhaustiveAnatomicalAdjudication": false
+  },
+  "sourceGeometryChanged": false,
+  "newDependencies": false,
+  "browserInteractionTesting": false,
+  "assistiveTechnologyTesting": false,
+  "clinicalValidation": false
+}

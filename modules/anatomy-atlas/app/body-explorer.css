@@ -2094,3 +2094,195 @@
   opacity: 0.45;
   cursor: not-allowed;
 }
+
+/* Source-linked study navigation: the same controls in all regional scopes. */
+.body-info .body-selection-notice,
+.body-info .related-study-empty {
+  display: block;
+  margin: 12px 0;
+  padding: 10px 12px;
+  border-left: 3px solid var(--vm-teal, #16c6b2);
+  background: #eef8f5;
+  color: var(--vm-ink, #002631);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.related-study {
+  margin: 16px 0 20px;
+  padding: 14px;
+  border: 1px solid #bddad6;
+  border-radius: 8px;
+  background: #f4faf8;
+  color: #002631;
+  min-width: 0;
+}
+.related-study h3 {
+  font-size: 16px;
+  font-weight: 650;
+  margin: 0 0 8px;
+}
+.body-info .related-study p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 8px 0;
+  color: #5d7477;
+}
+.related-study label,
+.structure-navigator label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #002631;
+}
+.related-study select,
+.structure-navigator input[type='search'],
+.structure-navigator select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 8px;
+  border: 1px solid #bddad6;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #002631;
+  background: #fff;
+  margin: 5px 0 10px;
+}
+.related-study > button {
+  min-height: 44px;
+  padding: 9px 12px;
+  width: 100%;
+  border-radius: 6px;
+  background: #002631;
+  color: #fff;
+  font-size: 14px;
+}
+.related-study-reset {
+  display: block;
+  margin: 8px 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #5d7477;
+}
+.related-study summary {
+  padding: 12px 0;
+  min-height: 44px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+.body-structure-browser > .structure-navigator {
+  max-height: none;
+  overflow: visible;
+}
+.structure-navigator {
+  min-width: 0;
+}
+.structure-navigator .structure-navigator-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.structure-navigator-check input {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  accent-color: #007e73;
+}
+.body-info .structure-navigator-help,
+.body-info .structure-navigator-count {
+  display: block;
+  margin: 8px 0;
+  color: #5d7477;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.structure-navigator-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  border: 1px solid #bddad6;
+  border-radius: 6px;
+  background: #fff;
+  min-height: 44px;
+}
+.structure-navigator-option {
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 52px;
+  padding: 9px 10px;
+  border-bottom: 1px solid #e6efec;
+  cursor: pointer;
+  color: #002631;
+}
+.structure-navigator-option i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex: none;
+}
+.structure-navigator-option > span:first-of-type {
+  flex: 1;
+  min-width: 0;
+}
+.structure-navigator-option strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.structure-navigator-option small {
+  display: block;
+  font-size: 11px;
+  color: #5d7477;
+  margin-top: 3px;
+}
+.structure-navigator-option:hover,
+.structure-navigator-option[aria-current='true'],
+.body-structure-browser .structure-navigator-option[aria-current='true'],
+.body-structure-browser .structure-navigator-option:hover {
+  background: #eaf8f4;
+  color: #002631;
+}
+.structure-navigator-option:focus-visible {
+  outline: 2px solid #007e73;
+  outline-offset: -3px;
+}
+.structure-navigator-selected,
+.body-structure-browser .structure-navigator-selected {
+  flex: none;
+  font-size: 10px;
+  font-weight: 700;
+  color: #006e64;
+}
+.structure-navigator :is(input, select):focus-visible,
+.related-study :is(select, summary, button):focus-visible {
+  outline: 3px solid #007e73;
+  outline-offset: 2px;
+}
+@media (max-width: 700px) {
+  .structure-navigator-option strong {
+    font-size: 14px;
+  }
+  .structure-navigator-option small {
+    font-size: 12px;
+  }
+  .structure-navigator input[type='search'],
+  .structure-navigator select,
+  .related-study select {
+    font-size: 16px;
+  }
+}
