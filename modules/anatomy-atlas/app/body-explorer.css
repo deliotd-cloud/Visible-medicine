@@ -1721,6 +1721,118 @@
   line-height: 1.55;
   color: #5d7477;
 }
+
+.dissection-orientation {
+  margin: 1rem 0;
+  border-top: 2px solid var(--vm-teal);
+  padding-top: 1rem;
+}
+.dissection-orientation-heading {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--vm-ink);
+}
+.dissection-orientation-heading svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+}
+.dissection-orientation dl {
+  margin: 0.75rem 0;
+  font-size: 0.875rem;
+}
+.dissection-orientation dl > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+  gap: 0.75rem;
+  padding: 0.35rem 0;
+}
+.dissection-orientation dt {
+  color: var(--vm-muted);
+}
+.dissection-orientation dd {
+  margin: 0;
+  color: var(--vm-ink);
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+.dissection-orientation .dissection-guidance-note {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.dissection-orientation button {
+  min-height: 44px;
+  white-space: normal;
+  height: auto;
+}
+.dissection-view-inventory summary > span {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 0.25rem;
+}
+.dissection-member-search {
+  display: grid;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+.dissection-member-search input {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 0.6rem;
+  border: 1px solid #b4c9c8;
+  border-radius: 0.4rem;
+  background: #fff;
+  color: var(--vm-ink);
+  font: inherit;
+}
+.dissection-view-inventory output {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 0.875rem;
+}
+.dissection-member-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0;
+  max-height: 22rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.dissection-member-list button {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-bottom: 1px solid #d5dfdc;
+  background: #fff;
+  color: var(--vm-ink);
+  padding: 0.6rem;
+  font: inherit;
+  overflow-wrap: anywhere;
+}
+.dissection-member-list small,
+.dissection-orientation .dissection-landmarks small {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--vm-muted);
+  margin-top: 0.2rem;
+}
+.dissection-member-list button:hover {
+  background: #eaf6f2;
+}
+.dissection-next-guidance {
+  margin-top: 1rem;
+  border-left: 3px solid var(--vm-teal);
+  padding-left: 0.75rem;
+}
+.dissection-orientation :is(button, input, summary):focus-visible {
+  outline: 3px solid var(--vm-teal);
+  outline-offset: 3px;
+}
 .vm-practice-choices {
   border: 0;
   margin: 1rem 0;

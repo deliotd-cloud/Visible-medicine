@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "assertions": 213,
+  "rawSourceCheck": false,
+  "candidates": 10,
+  "sourceBytes": 469532,
+  "admitted": 0,
+  "sourceGeometryChanged": false,
+  "clinicalValidation": false,
+  "catalogSha256": "b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5",
+  "auditSha256": "e09479a5aefaa62d71a9c7e261131423952b8a9203dc41a37e86247b71bb5d6e",
+  "limitations": "Identity, alias, component-owner and exact fingerprint checks only. Raw hashes/bounds/face counts are recomputed with --raw; no near-surface or anatomical relationship/continuity validation is asserted."
+}

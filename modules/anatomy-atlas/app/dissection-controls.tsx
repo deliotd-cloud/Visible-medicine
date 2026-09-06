@@ -24,6 +24,9 @@ import {
 } from '@/lib/dissection-workbench';
 import { stageStructures } from './dissection-data';
 import { StudyLibrary } from './study-library';
+import { DissectionOrientation } from './dissection-orientation';
+import type { DissectionGuidance } from '@/lib/dissection-guidance';
+import type { DissectionView } from './dissection-data';
 
 export function DissectionControls({
   profile,
@@ -327,21 +330,29 @@ export function DissectionControls({
 }
 
 export function DissectionGuide({
+  guidance,
+  side,
+  view,
+  onOrient,
+  onRecipe,
   profile,
   stage,
   focus,
   removed,
-  visible,
   onRestore,
   onRestoreMany,
   onSelect,
   customized,
 }: {
+  guidance: DissectionGuidance;
+  side: string;
+  view: DissectionView;
+  onOrient: () => void;
+  onRecipe: (kind: 'recipe' | 'next') => void;
   profile: DissectionProfile;
   stage: DissectionStage | undefined;
   focus?: DissectionFocus;
   removed: BodyStructure[];
-  visible: BodyStructure[];
   onRestore: (id: string) => void;
   onRestoreMany: (ids: string[]) => void;
   onSelect: (id: string) => void;
@@ -352,16 +363,6 @@ export function DissectionGuide({
   const matches = useMemo(
     () => filterRemovedStructures(removed, removedSearch, removedSystem),
     [removed, removedSearch, removedSystem],
-  );
-  const landmarks = (focus?.landmarks ?? stage?.landmarks ?? []).flatMap(
-    (pattern) =>
-      visible
-        .filter((s) => new RegExp(pattern, 'i').test(s.sourceName))
-        .slice(0, 2),
-  );
-  const unique = [...new Map(landmarks.map((s) => [s.id, s])).values()].slice(
-    0,
-    8,
   );
   return (
     <section className="dissection-guide" aria-label="Dissection study guide">
@@ -388,15 +389,14 @@ export function DissectionGuide({
             'Rotate, select a structure and use Remove to create your own view. Undo and Reassemble restore your changes.'}
         </p>
       </div>
-      {unique.length > 0 && (
-        <div className="dissection-landmarks" aria-label="Stage landmarks">
-          {unique.map((s) => (
-            <button type="button" key={s.id} onClick={() => onSelect(s.id)}>
-              {s.name}
-            </button>
-          ))}
-        </div>
-      )}
+      <DissectionOrientation
+        guide={guidance}
+        side={side}
+        view={view}
+        onOrient={onOrient}
+        onSelect={onSelect}
+        onRecipe={onRecipe}
+      />
       <details className="dissection-removed">
         <summary>Removed from this view ({removed.length})</summary>
         {removed.length ? (

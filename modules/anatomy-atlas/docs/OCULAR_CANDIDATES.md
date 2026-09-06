@@ -1,0 +1,21 @@
+# Ocular source preparation — not an admission
+
+Retrieved ten exact BodyParts3D v4 ISA source components (469,532 raw bytes) from the [official archive](https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html):
+
+| Source-labelled group | Right FMA / component | Left FMA / component |
+| --- | --- | --- |
+| Lacrimal canaliculus | FMA59582 / FJ1349 | FMA59583 / FJ1298 |
+| Nasolacrimal duct | FMA59555 / FJ1353 | FMA59556 / FJ1302 |
+| Lacrimal sac | FMA59545 / FJ1360 | FMA59546 / FJ1309 |
+| Upper eyelid tarsal plate | FMA59091 / FJ1375 | FMA59092 / FJ1324 |
+| Lower eyelid tarsal plate | FMA59089 / FJ1379 | FMA59090 / FJ1328 |
+
+The preparatory audit verifies the hash-pinned ISA index, official v4 ZIP member CRC/size, exact identities and both-index aliases, finite triangular geometry, raw/canonical hashes, bounds and the established source side-centre convention. None has an existing component owner, exact rendered canonical-fingerprint match, cross-candidate exact match or inherited component hold. These are bounded source-integrity findings, not proof of distinct anatomical tissue or correct anatomy.
+
+**None is admitted or rendered.** Next compare original surfaces against one another and the existing globe, eyelid, extraocular, lacrimal and nearby facial source geometry. Record near-coincidence, partial overlap, extent, boundaries, side and grouping evidence before making an admission decision. Preserve tiny source shapes instead of thickening or inventing connections. Source names alone do not establish a complete tear-drainage pathway or eyelid anatomy. No lumen, flow or internal tissue is manufactured.
+
+Evidence is `content/ocular-candidate-audit.json`. Alias entries retain matching candidate components, complete source-record hashes and total component counts; the pinned inventory holds the full records, avoiding repeated whole-body component arrays. `npm run ocular-candidates:audit` regenerates the evidence using the existing archive reader and raw cache. `npm run ocular-candidates:test` passes 213 committed-evidence assertions without raw downloads. Adding `-- --raw` passes 283 assertions and recomputes raw hashes, canonical fingerprints, bounds and face/vertex counts from the verified cache. The default report is `docs/ocular-candidate-validation.json`; raw files remain outside the Site and GitHub snapshot.
+
+The [official licence](https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html), rechecked 6 September 2026, remains CC BY 4.0. Retain **BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International**, licence links and change notices. Derived source evidence is not converted to MIT/CC0. No fee-bearing service or additional dependency is introduced.
+
+Existing catalogue/profile/model hashes, prior source holds and clinical-review status are unchanged. Clinical identity, extent, continuity and spatial accuracy still require independent review, and actual device acceptance and acquired US/CT/MRI integration remain external gates.

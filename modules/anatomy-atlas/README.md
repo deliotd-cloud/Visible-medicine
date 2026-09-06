@@ -1,5 +1,9 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Clearer regional study guidance
+
+Open the **Study guide → Orient this dissection** to return to the recipe's viewing direction without changing tissue visibility. **What is in this view?** shows availability, omitted/extra recipe entries and searchable source members with target/context roles. Open the next authored layer or reopen a clean recipe with explicit reset warnings. See [controls and acceptance limits](docs/DISSECTION_GUIDANCE.md). Ten [eye-region source candidates](docs/OCULAR_CANDIDATES.md) have been prepared for further geometry review but are not included in the model.
+
 ## Regional dissection reliability
 
 Every regional explorer and whole-body practice now distinguishes ready, waiting and failed anatomy groups. A failed required group pauses answers and progression without losing existing answers; retry or exit stays available. Ready counts exclude failures, and naming practice requires distinct choices. See [controls, tests and remaining device acceptance](docs/ANATOMY_LOADING.md).
@@ -145,6 +149,8 @@ npm run neuro:test
 npm run axial:test
 npm run practice:test
 npm run loads:test
+npm run guidance:test
+npm run ocular-candidates:test
 npm run vessel-shapes:test
 npm run reviews:test
 node scripts/validate-recovery.mjs

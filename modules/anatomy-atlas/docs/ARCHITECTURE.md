@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Current-view dissection guidance
+
+`lib/dissection-guidance.ts` derives exact region/side recipe membership, omitted/added entries, source-backed landmark identities, target/context roles, availability and valid next-layer actions. `app/dissection-orientation.tsx` presents these inside the existing study guide. Guarded explorer handlers reuse clean-stage/focus transitions; reorientation changes camera state only. Scene labels retain their existing visible-only selection policy. See [controls and testing boundaries](DISSECTION_GUIDANCE.md). The offline [ocular source preparation](OCULAR_CANDIDATES.md) admits no geometry.
+
 ## Loading state and bounded source diagnostics
 
 `lib/anatomy-load-state.ts` supplies atomic mutually exclusive loaded/failed states, a defensive required-group partition and the rendered-scope predicate shared by the body explorer and scene. Practice eligibility uses ready groups only and the session factory's distinct-name predicate; actual question render scope controls pause/retry/exit behaviour. See [state semantics, evidence and limitations](ANATOMY_LOADING.md).

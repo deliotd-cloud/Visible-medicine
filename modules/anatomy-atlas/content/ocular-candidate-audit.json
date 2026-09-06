@@ -1,0 +1,2149 @@
+{
+  "sourceCommit": "12bf83e1a520be2565109f87c8d406be6ea5c3e0",
+  "sourceVersion": "4.0",
+  "checked": "2026-09-06",
+  "catalogSha256": "b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5",
+  "inventorySha256": "0101f247ea3019f589dd03eff98b3641c898b3c36dfe24324ea8b060ee45c26d",
+  "sourceTableSha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "licenseUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+  "downloadPage": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+  "sourceUrl": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+  "results": [
+    {
+      "fmaId": "FMA59582",
+      "name": "right lacrimal canaliculus",
+      "file": "FJ1349",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "bytes": 35187,
+      "sha256": "ff8401d7470c86141e144f82eea17a1081f076dbf3d068d48f26832c742ebbf3",
+      "geometrySha256": "d5767cc43f32d2f206fad8dc2baa21fa28bdf19a172c940ea80827b738f968ba",
+      "vertices": 336,
+      "triangles": 526,
+      "degenerateTriangles": 0,
+      "sourceBounds": {
+        "min": [
+          -20.4,
+          -164.351,
+          1513.23
+        ],
+        "max": [
+          -14.581,
+          -163.386,
+          1517.36
+        ]
+      },
+      "sourceCentre": [
+        -17.490499999999997,
+        -163.86849999999998,
+        1515.295
+      ],
+      "sourceExtent": [
+        5.818999999999999,
+        0.9650000000000034,
+        4.129999999999882
+      ],
+      "expectedSide": "right",
+      "lateralityMatchesSourceConvention": true,
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA58245",
+          "name": "lacrimal canaliculus",
+          "componentCount": 2,
+          "candidateFiles": [
+            "FJ1349"
+          ],
+          "recordSha256": "10da8e74aa0bba98b7c10f0a5db12b233bc946bc048f85c059d7d3d6fd4de755"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA59582",
+          "name": "right lacrimal canaliculus",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1349"
+          ],
+          "recordSha256": "465872b215a847db72cc0fb7c3930e693208d9f4f6491b27eb643170becd9e49"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1349"
+          ],
+          "recordSha256": "47be0c79d4f781f33a12e1c05faf0bfd052ffd56a4955ef71dbdfc9974ba1be0"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1349"
+          ],
+          "recordSha256": "16065c153ee9045727ba06bee2719e3e8119afb98fd19a7394972644171f4c73"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "candidateFiles": [
+            "FJ1349"
+          ],
+          "recordSha256": "20ad7a098822db873ee5109657e28e0da279504c68f2ab1795e9b45198c6109b"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "candidateFiles": [
+            "FJ1349"
+          ],
+          "recordSha256": "16093b4ed4bd0dc5e65a3576edcddced95621aab67b2a89fe4e2bab849f942eb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356,
+          "candidateFiles": [
+            "FJ1349"
+          ],
+          "recordSha256": "d4f3982a489e3c22e7eeebca15b083dd62c313afd9a6f8c18a8abb2c221c1bb3"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455,
+          "candidateFiles": [
+            "FJ1349"
+          ],
+          "recordSha256": "bfc350cb1da2419cd224d8bd61ea168970986d866f221fb2849054ffaf2665b7"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200,
+          "candidateFiles": [
+            "FJ1349"
+          ],
+          "recordSha256": "88bdc75eeeadc9fe20897feb6ed2cf30c1515d3459e866d13645ba4768d6e36e"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86195",
+          "name": "segment of lacrimal duct",
+          "componentCount": 6,
+          "candidateFiles": [
+            "FJ1349"
+          ],
+          "recordSha256": "6e16a6a4bf2243e62c6cd6579e61628736ea7279ea457abc44e96ca1cc0fdf5e"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA7154",
+          "name": "head",
+          "componentCount": 143,
+          "candidateFiles": [
+            "FJ1349"
+          ],
+          "recordSha256": "fd29f0d82a6c6f74fec81ed5e0b6ca29a47a425964d4ee66852493736165445d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA20394",
+          "name": "human body",
+          "componentCount": 1258,
+          "candidateFiles": [
+            "FJ1349"
+          ],
+          "recordSha256": "a802ac739ee19831b96d4b7906d78b94bda5fd941dd5c349d528e9569fdd36e5"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA24728",
+          "name": "face",
+          "componentCount": 80,
+          "candidateFiles": [
+            "FJ1349"
+          ],
+          "recordSha256": "fcadee3f1f077b5d44453ae4194f5b4e6b320625c471c597ed878a181a351876"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA54449",
+          "name": "right eye",
+          "componentCount": 22,
+          "candidateFiles": [
+            "FJ1349"
+          ],
+          "recordSha256": "3a0528ddd9adcd2b14f2d6a4d6aea20f18f197a357b7b90e334d2e1c232dc4c6"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA59368",
+          "name": "right lacrimal apparatus",
+          "componentCount": 5,
+          "candidateFiles": [
+            "FJ1349"
+          ],
+          "recordSha256": "e8870c2b54f02e083f3be91186a60804958baeff2b7d920bf64906eb74220823"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA59582",
+          "name": "right lacrimal canaliculus",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1349"
+          ],
+          "recordSha256": "85d977134c1970c28b122125f36c51fbc9b9a273fc09eaae4e0673fdb78fc746"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA61064",
+          "name": "right lacrimal duct",
+          "componentCount": 4,
+          "candidateFiles": [
+            "FJ1349"
+          ],
+          "recordSha256": "0307162c2583b773523250350397ce8dc28845e6f3b0fbdfac6c40722df9a7c9"
+        }
+      ],
+      "holds": [],
+      "renderedOwners": [],
+      "exactRenderedMatches": [],
+      "admitted": false,
+      "decision": "adjacency-and-extent-audit-required"
+    },
+    {
+      "fmaId": "FMA59583",
+      "name": "left lacrimal canaliculus",
+      "file": "FJ1298",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "bytes": 40224,
+      "sha256": "98ec4fcd5a6c260a179480702c2d4690624207aeeb76160c6be4667bd66e11a5",
+      "geometrySha256": "14320255c2e5920132b6a2db552732128fcf2252c4b36504dc5ddf2db6d08c95",
+      "vertices": 371,
+      "triangles": 634,
+      "degenerateTriangles": 0,
+      "sourceBounds": {
+        "min": [
+          13.2772,
+          -164.357,
+          1513.21
+        ],
+        "max": [
+          19.0893,
+          -163.385,
+          1517.34
+        ]
+      },
+      "sourceCentre": [
+        16.18325,
+        -163.87099999999998,
+        1515.275
+      ],
+      "sourceExtent": [
+        5.812100000000001,
+        0.9720000000000084,
+        4.129999999999882
+      ],
+      "expectedSide": "left",
+      "lateralityMatchesSourceConvention": true,
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA58245",
+          "name": "lacrimal canaliculus",
+          "componentCount": 2,
+          "candidateFiles": [
+            "FJ1298"
+          ],
+          "recordSha256": "10da8e74aa0bba98b7c10f0a5db12b233bc946bc048f85c059d7d3d6fd4de755"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA59583",
+          "name": "left lacrimal canaliculus",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1298"
+          ],
+          "recordSha256": "8dab0499e3e207db974ab6b5efed2a261aee4e397a5ed20e4b183976df69d6af"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1298"
+          ],
+          "recordSha256": "47be0c79d4f781f33a12e1c05faf0bfd052ffd56a4955ef71dbdfc9974ba1be0"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1298"
+          ],
+          "recordSha256": "16065c153ee9045727ba06bee2719e3e8119afb98fd19a7394972644171f4c73"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "candidateFiles": [
+            "FJ1298"
+          ],
+          "recordSha256": "20ad7a098822db873ee5109657e28e0da279504c68f2ab1795e9b45198c6109b"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "candidateFiles": [
+            "FJ1298"
+          ],
+          "recordSha256": "16093b4ed4bd0dc5e65a3576edcddced95621aab67b2a89fe4e2bab849f942eb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356,
+          "candidateFiles": [
+            "FJ1298"
+          ],
+          "recordSha256": "d4f3982a489e3c22e7eeebca15b083dd62c313afd9a6f8c18a8abb2c221c1bb3"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455,
+          "candidateFiles": [
+            "FJ1298"
+          ],
+          "recordSha256": "bfc350cb1da2419cd224d8bd61ea168970986d866f221fb2849054ffaf2665b7"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200,
+          "candidateFiles": [
+            "FJ1298"
+          ],
+          "recordSha256": "88bdc75eeeadc9fe20897feb6ed2cf30c1515d3459e866d13645ba4768d6e36e"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86195",
+          "name": "segment of lacrimal duct",
+          "componentCount": 6,
+          "candidateFiles": [
+            "FJ1298"
+          ],
+          "recordSha256": "6e16a6a4bf2243e62c6cd6579e61628736ea7279ea457abc44e96ca1cc0fdf5e"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA7154",
+          "name": "head",
+          "componentCount": 143,
+          "candidateFiles": [
+            "FJ1298"
+          ],
+          "recordSha256": "fd29f0d82a6c6f74fec81ed5e0b6ca29a47a425964d4ee66852493736165445d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA20394",
+          "name": "human body",
+          "componentCount": 1258,
+          "candidateFiles": [
+            "FJ1298"
+          ],
+          "recordSha256": "a802ac739ee19831b96d4b7906d78b94bda5fd941dd5c349d528e9569fdd36e5"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA24728",
+          "name": "face",
+          "componentCount": 80,
+          "candidateFiles": [
+            "FJ1298"
+          ],
+          "recordSha256": "fcadee3f1f077b5d44453ae4194f5b4e6b320625c471c597ed878a181a351876"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA54450",
+          "name": "left eye",
+          "componentCount": 23,
+          "candidateFiles": [
+            "FJ1298"
+          ],
+          "recordSha256": "2c4530c5d24d03aa485af7ef2fca2c5eac0124c8ed4309b2a49f9d6042ebcd6d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA59369",
+          "name": "left lacrimal apparatus",
+          "componentCount": 5,
+          "candidateFiles": [
+            "FJ1298"
+          ],
+          "recordSha256": "7b4282e5def15ec3d4905468aeb7bfd906d67f170c05be6d244ef6d84313952d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA59583",
+          "name": "left lacrimal canaliculus",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1298"
+          ],
+          "recordSha256": "ed12778c2596b566e7c551395735da5d84418766f30e33fb4958730e673edc17"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA61065",
+          "name": "left lacrimal duct",
+          "componentCount": 4,
+          "candidateFiles": [
+            "FJ1298"
+          ],
+          "recordSha256": "51f1d3065033121c8b7b35d339e96dc073ca4f92b8d76518c197fc9758710afb"
+        }
+      ],
+      "holds": [],
+      "renderedOwners": [],
+      "exactRenderedMatches": [],
+      "admitted": false,
+      "decision": "adjacency-and-extent-audit-required"
+    },
+    {
+      "fmaId": "FMA59555",
+      "name": "right nasolacrimal duct",
+      "file": "FJ1353",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "bytes": 26124,
+      "sha256": "c54be1e1906335236559e5ca8bf69e95cbbdac0fef62d90efa9e36aa2ac164e8",
+      "geometrySha256": "20154d08eba62a0097db7056749d8a5223b37e14c25d03e93531c3e6a2376ef8",
+      "vertices": 227,
+      "triangles": 444,
+      "degenerateTriangles": 0,
+      "sourceBounds": {
+        "min": [
+          -17.0417,
+          -161.5,
+          1487.72
+        ],
+        "max": [
+          -12.1136,
+          -151.944,
+          1504.68
+        ]
+      },
+      "sourceCentre": [
+        -14.577649999999998,
+        -156.72199999999998,
+        1496.2
+      ],
+      "sourceExtent": [
+        4.928099999999999,
+        9.556000000000012,
+        16.960000000000036
+      ],
+      "expectedSide": "right",
+      "lateralityMatchesSourceConvention": true,
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA9703",
+          "name": "nasolacrimal duct",
+          "componentCount": 2,
+          "candidateFiles": [
+            "FJ1353"
+          ],
+          "recordSha256": "4362246a5feba7685c2eda129ee5488ae0ba8122d71987a6a05417bb388fee78"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA59555",
+          "name": "right nasolacrimal duct",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1353"
+          ],
+          "recordSha256": "f972b9ca153a081619b750bbb169672679746cbe3128cb589fbf7289fc95b87e"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1353"
+          ],
+          "recordSha256": "47be0c79d4f781f33a12e1c05faf0bfd052ffd56a4955ef71dbdfc9974ba1be0"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1353"
+          ],
+          "recordSha256": "16065c153ee9045727ba06bee2719e3e8119afb98fd19a7394972644171f4c73"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "candidateFiles": [
+            "FJ1353"
+          ],
+          "recordSha256": "20ad7a098822db873ee5109657e28e0da279504c68f2ab1795e9b45198c6109b"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "candidateFiles": [
+            "FJ1353"
+          ],
+          "recordSha256": "16093b4ed4bd0dc5e65a3576edcddced95621aab67b2a89fe4e2bab849f942eb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356,
+          "candidateFiles": [
+            "FJ1353"
+          ],
+          "recordSha256": "d4f3982a489e3c22e7eeebca15b083dd62c313afd9a6f8c18a8abb2c221c1bb3"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455,
+          "candidateFiles": [
+            "FJ1353"
+          ],
+          "recordSha256": "bfc350cb1da2419cd224d8bd61ea168970986d866f221fb2849054ffaf2665b7"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200,
+          "candidateFiles": [
+            "FJ1353"
+          ],
+          "recordSha256": "88bdc75eeeadc9fe20897feb6ed2cf30c1515d3459e866d13645ba4768d6e36e"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86195",
+          "name": "segment of lacrimal duct",
+          "componentCount": 6,
+          "candidateFiles": [
+            "FJ1353"
+          ],
+          "recordSha256": "6e16a6a4bf2243e62c6cd6579e61628736ea7279ea457abc44e96ca1cc0fdf5e"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA7154",
+          "name": "head",
+          "componentCount": 143,
+          "candidateFiles": [
+            "FJ1353"
+          ],
+          "recordSha256": "fd29f0d82a6c6f74fec81ed5e0b6ca29a47a425964d4ee66852493736165445d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA20394",
+          "name": "human body",
+          "componentCount": 1258,
+          "candidateFiles": [
+            "FJ1353"
+          ],
+          "recordSha256": "a802ac739ee19831b96d4b7906d78b94bda5fd941dd5c349d528e9569fdd36e5"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA24728",
+          "name": "face",
+          "componentCount": 80,
+          "candidateFiles": [
+            "FJ1353"
+          ],
+          "recordSha256": "fcadee3f1f077b5d44453ae4194f5b4e6b320625c471c597ed878a181a351876"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA54449",
+          "name": "right eye",
+          "componentCount": 22,
+          "candidateFiles": [
+            "FJ1353"
+          ],
+          "recordSha256": "3a0528ddd9adcd2b14f2d6a4d6aea20f18f197a357b7b90e334d2e1c232dc4c6"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA59368",
+          "name": "right lacrimal apparatus",
+          "componentCount": 5,
+          "candidateFiles": [
+            "FJ1353"
+          ],
+          "recordSha256": "e8870c2b54f02e083f3be91186a60804958baeff2b7d920bf64906eb74220823"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA59555",
+          "name": "right nasolacrimal duct",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1353"
+          ],
+          "recordSha256": "3728675f12f2a72a1b932b3711e6f9ced3e934455ee3076e263f9d7b07a4a2d5"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA61064",
+          "name": "right lacrimal duct",
+          "componentCount": 4,
+          "candidateFiles": [
+            "FJ1353"
+          ],
+          "recordSha256": "0307162c2583b773523250350397ce8dc28845e6f3b0fbdfac6c40722df9a7c9"
+        }
+      ],
+      "holds": [],
+      "renderedOwners": [],
+      "exactRenderedMatches": [],
+      "admitted": false,
+      "decision": "adjacency-and-extent-audit-required"
+    },
+    {
+      "fmaId": "FMA59556",
+      "name": "left nasolacrimal duct",
+      "file": "FJ1302",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "bytes": 25913,
+      "sha256": "a8a4bcc60e752d4f4b79a60ec6e9539809aa4293be59d6623bb0ac008ad6606f",
+      "geometrySha256": "335647798ca9de2c34779c78826ccad9c1796d58011f7402aee98634269201ac",
+      "vertices": 227,
+      "triangles": 444,
+      "degenerateTriangles": 0,
+      "sourceBounds": {
+        "min": [
+          10.7706,
+          -161.483,
+          1487.75
+        ],
+        "max": [
+          15.7531,
+          -151.95,
+          1504.68
+        ]
+      },
+      "sourceCentre": [
+        13.261849999999999,
+        -156.7165,
+        1496.2150000000001
+      ],
+      "sourceExtent": [
+        4.9825,
+        9.533000000000015,
+        16.930000000000064
+      ],
+      "expectedSide": "left",
+      "lateralityMatchesSourceConvention": true,
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA9703",
+          "name": "nasolacrimal duct",
+          "componentCount": 2,
+          "candidateFiles": [
+            "FJ1302"
+          ],
+          "recordSha256": "4362246a5feba7685c2eda129ee5488ae0ba8122d71987a6a05417bb388fee78"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA59556",
+          "name": "left nasolacrimal duct",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1302"
+          ],
+          "recordSha256": "4cc381cf0317ef16999d1322d0fc8dd7a757712f3fb878b8eb3ff924bd42c306"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1302"
+          ],
+          "recordSha256": "47be0c79d4f781f33a12e1c05faf0bfd052ffd56a4955ef71dbdfc9974ba1be0"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1302"
+          ],
+          "recordSha256": "16065c153ee9045727ba06bee2719e3e8119afb98fd19a7394972644171f4c73"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "candidateFiles": [
+            "FJ1302"
+          ],
+          "recordSha256": "20ad7a098822db873ee5109657e28e0da279504c68f2ab1795e9b45198c6109b"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "candidateFiles": [
+            "FJ1302"
+          ],
+          "recordSha256": "16093b4ed4bd0dc5e65a3576edcddced95621aab67b2a89fe4e2bab849f942eb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356,
+          "candidateFiles": [
+            "FJ1302"
+          ],
+          "recordSha256": "d4f3982a489e3c22e7eeebca15b083dd62c313afd9a6f8c18a8abb2c221c1bb3"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455,
+          "candidateFiles": [
+            "FJ1302"
+          ],
+          "recordSha256": "bfc350cb1da2419cd224d8bd61ea168970986d866f221fb2849054ffaf2665b7"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200,
+          "candidateFiles": [
+            "FJ1302"
+          ],
+          "recordSha256": "88bdc75eeeadc9fe20897feb6ed2cf30c1515d3459e866d13645ba4768d6e36e"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86195",
+          "name": "segment of lacrimal duct",
+          "componentCount": 6,
+          "candidateFiles": [
+            "FJ1302"
+          ],
+          "recordSha256": "6e16a6a4bf2243e62c6cd6579e61628736ea7279ea457abc44e96ca1cc0fdf5e"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA7154",
+          "name": "head",
+          "componentCount": 143,
+          "candidateFiles": [
+            "FJ1302"
+          ],
+          "recordSha256": "fd29f0d82a6c6f74fec81ed5e0b6ca29a47a425964d4ee66852493736165445d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA20394",
+          "name": "human body",
+          "componentCount": 1258,
+          "candidateFiles": [
+            "FJ1302"
+          ],
+          "recordSha256": "a802ac739ee19831b96d4b7906d78b94bda5fd941dd5c349d528e9569fdd36e5"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA24728",
+          "name": "face",
+          "componentCount": 80,
+          "candidateFiles": [
+            "FJ1302"
+          ],
+          "recordSha256": "fcadee3f1f077b5d44453ae4194f5b4e6b320625c471c597ed878a181a351876"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA54450",
+          "name": "left eye",
+          "componentCount": 23,
+          "candidateFiles": [
+            "FJ1302"
+          ],
+          "recordSha256": "2c4530c5d24d03aa485af7ef2fca2c5eac0124c8ed4309b2a49f9d6042ebcd6d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA59369",
+          "name": "left lacrimal apparatus",
+          "componentCount": 5,
+          "candidateFiles": [
+            "FJ1302"
+          ],
+          "recordSha256": "7b4282e5def15ec3d4905468aeb7bfd906d67f170c05be6d244ef6d84313952d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA59556",
+          "name": "left nasolacrimal duct",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1302"
+          ],
+          "recordSha256": "8fdb0fdc5af18b143409b791ebeb24952a1f43d33213375e330b33fcfa6da5c5"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA61065",
+          "name": "left lacrimal duct",
+          "componentCount": 4,
+          "candidateFiles": [
+            "FJ1302"
+          ],
+          "recordSha256": "51f1d3065033121c8b7b35d339e96dc073ca4f92b8d76518c197fc9758710afb"
+        }
+      ],
+      "holds": [],
+      "renderedOwners": [],
+      "exactRenderedMatches": [],
+      "admitted": false,
+      "decision": "adjacency-and-extent-audit-required"
+    },
+    {
+      "fmaId": "FMA59545",
+      "name": "right lacrimal sac",
+      "file": "FJ1360",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "bytes": 22430,
+      "sha256": "192020e5353d1f78e5867a7a2f09e4f114ab31a7cdc2865056c734a5f1bbc02e",
+      "geometrySha256": "0302692fb57dc3acd29d8777c635e0858a28f50c422017103562ad187ed9bd71",
+      "vertices": 194,
+      "triangles": 384,
+      "degenerateTriangles": 0,
+      "sourceBounds": {
+        "min": [
+          -17.0385,
+          -164.382,
+          1503.49
+        ],
+        "max": [
+          -13.7396,
+          -159.352,
+          1518.65
+        ]
+      },
+      "sourceCentre": [
+        -15.38905,
+        -161.86700000000002,
+        1511.0700000000002
+      ],
+      "sourceExtent": [
+        3.2988999999999997,
+        5.030000000000001,
+        15.160000000000082
+      ],
+      "expectedSide": "right",
+      "lateralityMatchesSourceConvention": true,
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA20289",
+          "name": "lacrimal sac",
+          "componentCount": 2,
+          "candidateFiles": [
+            "FJ1360"
+          ],
+          "recordSha256": "06bb5eeb526c9333a4a92c4662b12452510b0171f0cac86d3fd59bfb606c9026"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA59545",
+          "name": "right lacrimal sac",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1360"
+          ],
+          "recordSha256": "208a6ec84a90eea42cc6b7827198f9e4189d7740e44905a262e771449b4abf89"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1360"
+          ],
+          "recordSha256": "47be0c79d4f781f33a12e1c05faf0bfd052ffd56a4955ef71dbdfc9974ba1be0"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1360"
+          ],
+          "recordSha256": "16065c153ee9045727ba06bee2719e3e8119afb98fd19a7394972644171f4c73"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "candidateFiles": [
+            "FJ1360"
+          ],
+          "recordSha256": "20ad7a098822db873ee5109657e28e0da279504c68f2ab1795e9b45198c6109b"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "candidateFiles": [
+            "FJ1360"
+          ],
+          "recordSha256": "16093b4ed4bd0dc5e65a3576edcddced95621aab67b2a89fe4e2bab849f942eb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356,
+          "candidateFiles": [
+            "FJ1360"
+          ],
+          "recordSha256": "d4f3982a489e3c22e7eeebca15b083dd62c313afd9a6f8c18a8abb2c221c1bb3"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455,
+          "candidateFiles": [
+            "FJ1360"
+          ],
+          "recordSha256": "bfc350cb1da2419cd224d8bd61ea168970986d866f221fb2849054ffaf2665b7"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200,
+          "candidateFiles": [
+            "FJ1360"
+          ],
+          "recordSha256": "88bdc75eeeadc9fe20897feb6ed2cf30c1515d3459e866d13645ba4768d6e36e"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86195",
+          "name": "segment of lacrimal duct",
+          "componentCount": 6,
+          "candidateFiles": [
+            "FJ1360"
+          ],
+          "recordSha256": "6e16a6a4bf2243e62c6cd6579e61628736ea7279ea457abc44e96ca1cc0fdf5e"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA7154",
+          "name": "head",
+          "componentCount": 143,
+          "candidateFiles": [
+            "FJ1360"
+          ],
+          "recordSha256": "fd29f0d82a6c6f74fec81ed5e0b6ca29a47a425964d4ee66852493736165445d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA20394",
+          "name": "human body",
+          "componentCount": 1258,
+          "candidateFiles": [
+            "FJ1360"
+          ],
+          "recordSha256": "a802ac739ee19831b96d4b7906d78b94bda5fd941dd5c349d528e9569fdd36e5"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA24728",
+          "name": "face",
+          "componentCount": 80,
+          "candidateFiles": [
+            "FJ1360"
+          ],
+          "recordSha256": "fcadee3f1f077b5d44453ae4194f5b4e6b320625c471c597ed878a181a351876"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA54449",
+          "name": "right eye",
+          "componentCount": 22,
+          "candidateFiles": [
+            "FJ1360"
+          ],
+          "recordSha256": "3a0528ddd9adcd2b14f2d6a4d6aea20f18f197a357b7b90e334d2e1c232dc4c6"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA59368",
+          "name": "right lacrimal apparatus",
+          "componentCount": 5,
+          "candidateFiles": [
+            "FJ1360"
+          ],
+          "recordSha256": "e8870c2b54f02e083f3be91186a60804958baeff2b7d920bf64906eb74220823"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA59545",
+          "name": "right lacrimal sac",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1360"
+          ],
+          "recordSha256": "7d8e6ee655a5e6f21279d2d1ba10a9d793e1cb8641a52e5ffabd3e160d4af895"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA61064",
+          "name": "right lacrimal duct",
+          "componentCount": 4,
+          "candidateFiles": [
+            "FJ1360"
+          ],
+          "recordSha256": "0307162c2583b773523250350397ce8dc28845e6f3b0fbdfac6c40722df9a7c9"
+        }
+      ],
+      "holds": [],
+      "renderedOwners": [],
+      "exactRenderedMatches": [],
+      "admitted": false,
+      "decision": "adjacency-and-extent-audit-required"
+    },
+    {
+      "fmaId": "FMA59546",
+      "name": "left lacrimal sac",
+      "file": "FJ1309",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "bytes": 22064,
+      "sha256": "d62bdc3bfc8e3b2d5c0fea85973e68e4f066c253f6a18be5fe2c72e791a4ff21",
+      "geometrySha256": "69e8a671b152bbe6f08247bb9551fc04117530736490800ce668f7e92b6a2464",
+      "vertices": 193,
+      "triangles": 382,
+      "degenerateTriangles": 0,
+      "sourceBounds": {
+        "min": [
+          12.4325,
+          -164.333,
+          1503.51
+        ],
+        "max": [
+          15.7643,
+          -159.377,
+          1518.65
+        ]
+      },
+      "sourceCentre": [
+        14.0984,
+        -161.85500000000002,
+        1511.08
+      ],
+      "sourceExtent": [
+        3.331800000000001,
+        4.955999999999989,
+        15.1400000000001
+      ],
+      "expectedSide": "left",
+      "lateralityMatchesSourceConvention": true,
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA20289",
+          "name": "lacrimal sac",
+          "componentCount": 2,
+          "candidateFiles": [
+            "FJ1309"
+          ],
+          "recordSha256": "06bb5eeb526c9333a4a92c4662b12452510b0171f0cac86d3fd59bfb606c9026"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA59546",
+          "name": "left lacrimal sac",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1309"
+          ],
+          "recordSha256": "690471eb0b61a438f9b85e37595d1d778e4874ea7741bcdeaa1f161c5c9d4ac7"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1309"
+          ],
+          "recordSha256": "47be0c79d4f781f33a12e1c05faf0bfd052ffd56a4955ef71dbdfc9974ba1be0"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1309"
+          ],
+          "recordSha256": "16065c153ee9045727ba06bee2719e3e8119afb98fd19a7394972644171f4c73"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "candidateFiles": [
+            "FJ1309"
+          ],
+          "recordSha256": "20ad7a098822db873ee5109657e28e0da279504c68f2ab1795e9b45198c6109b"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "candidateFiles": [
+            "FJ1309"
+          ],
+          "recordSha256": "16093b4ed4bd0dc5e65a3576edcddced95621aab67b2a89fe4e2bab849f942eb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356,
+          "candidateFiles": [
+            "FJ1309"
+          ],
+          "recordSha256": "d4f3982a489e3c22e7eeebca15b083dd62c313afd9a6f8c18a8abb2c221c1bb3"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455,
+          "candidateFiles": [
+            "FJ1309"
+          ],
+          "recordSha256": "bfc350cb1da2419cd224d8bd61ea168970986d866f221fb2849054ffaf2665b7"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200,
+          "candidateFiles": [
+            "FJ1309"
+          ],
+          "recordSha256": "88bdc75eeeadc9fe20897feb6ed2cf30c1515d3459e866d13645ba4768d6e36e"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86195",
+          "name": "segment of lacrimal duct",
+          "componentCount": 6,
+          "candidateFiles": [
+            "FJ1309"
+          ],
+          "recordSha256": "6e16a6a4bf2243e62c6cd6579e61628736ea7279ea457abc44e96ca1cc0fdf5e"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA7154",
+          "name": "head",
+          "componentCount": 143,
+          "candidateFiles": [
+            "FJ1309"
+          ],
+          "recordSha256": "fd29f0d82a6c6f74fec81ed5e0b6ca29a47a425964d4ee66852493736165445d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA20394",
+          "name": "human body",
+          "componentCount": 1258,
+          "candidateFiles": [
+            "FJ1309"
+          ],
+          "recordSha256": "a802ac739ee19831b96d4b7906d78b94bda5fd941dd5c349d528e9569fdd36e5"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA24728",
+          "name": "face",
+          "componentCount": 80,
+          "candidateFiles": [
+            "FJ1309"
+          ],
+          "recordSha256": "fcadee3f1f077b5d44453ae4194f5b4e6b320625c471c597ed878a181a351876"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA54450",
+          "name": "left eye",
+          "componentCount": 23,
+          "candidateFiles": [
+            "FJ1309"
+          ],
+          "recordSha256": "2c4530c5d24d03aa485af7ef2fca2c5eac0124c8ed4309b2a49f9d6042ebcd6d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA59369",
+          "name": "left lacrimal apparatus",
+          "componentCount": 5,
+          "candidateFiles": [
+            "FJ1309"
+          ],
+          "recordSha256": "7b4282e5def15ec3d4905468aeb7bfd906d67f170c05be6d244ef6d84313952d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA59546",
+          "name": "left lacrimal sac",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1309"
+          ],
+          "recordSha256": "a7ccfd8574c7d688b62100b6a0911ce703a4b90250d696d90273949db35834d9"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA61065",
+          "name": "left lacrimal duct",
+          "componentCount": 4,
+          "candidateFiles": [
+            "FJ1309"
+          ],
+          "recordSha256": "51f1d3065033121c8b7b35d339e96dc073ca4f92b8d76518c197fc9758710afb"
+        }
+      ],
+      "holds": [],
+      "renderedOwners": [],
+      "exactRenderedMatches": [],
+      "admitted": false,
+      "decision": "adjacency-and-extent-audit-required"
+    },
+    {
+      "fmaId": "FMA59091",
+      "name": "tarsal plate of right upper eyelid",
+      "file": "FJ1375",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "bytes": 87787,
+      "sha256": "752358970eb428283dadd2db88fbb3de3d08b7b876a9e346a84c21cb90a5e70a",
+      "geometrySha256": "bad83ae833b1fe4e9aa232e229373c543b98ddf9b80baffd0f152b064a71796c",
+      "vertices": 745,
+      "triangles": 1474,
+      "degenerateTriangles": 0,
+      "sourceBounds": {
+        "min": [
+          -44.2496,
+          -166.23,
+          1516.66
+        ],
+        "max": [
+          -18.6608,
+          -156.64,
+          1529.21
+        ]
+      },
+      "sourceCentre": [
+        -31.455199999999998,
+        -161.435,
+        1522.935
+      ],
+      "sourceExtent": [
+        25.588800000000003,
+        9.590000000000003,
+        12.549999999999955
+      ],
+      "expectedSide": "right",
+      "lateralityMatchesSourceConvention": true,
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA7145",
+          "name": "membrane organ",
+          "componentCount": 10,
+          "candidateFiles": [
+            "FJ1375"
+          ],
+          "recordSha256": "d5e3373d2b87cf130b74ed351c0d8b8b42915a159aee9969e35309896fa3072d"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55665",
+          "name": "nonparenchymatous organ",
+          "componentCount": 386,
+          "candidateFiles": [
+            "FJ1375"
+          ],
+          "recordSha256": "0fc9613a51711e13723b132d372f024602d5c21e90f7dcf3db6c44590532bbfa"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55670",
+          "name": "solid organ",
+          "componentCount": 402,
+          "candidateFiles": [
+            "FJ1375"
+          ],
+          "recordSha256": "2d29fbe68bbbf02c2e25d0112b7253b058af432b3c442ccda6bb64278bf3efde"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA59086",
+          "name": "tarsal plate of eyelid",
+          "componentCount": 4,
+          "candidateFiles": [
+            "FJ1375"
+          ],
+          "recordSha256": "78dab2c40255cedf659bd08446e8e83411af1dee2cf5fa7fdd527514e0ffc98c"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA59087",
+          "name": "tarsal plate of upper eyelid",
+          "componentCount": 2,
+          "candidateFiles": [
+            "FJ1375"
+          ],
+          "recordSha256": "8a2b1645bb6c9849bab39da85931fbe6857962f9ec8120e42261296d903c4e0d"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA59091",
+          "name": "tarsal plate of right upper eyelid",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1375"
+          ],
+          "recordSha256": "45caad6c9ecd0a948cdaca59256b39a07f8dba164dc57eeec45bd604a4707759"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1375"
+          ],
+          "recordSha256": "47be0c79d4f781f33a12e1c05faf0bfd052ffd56a4955ef71dbdfc9974ba1be0"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1375"
+          ],
+          "recordSha256": "16065c153ee9045727ba06bee2719e3e8119afb98fd19a7394972644171f4c73"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "candidateFiles": [
+            "FJ1375"
+          ],
+          "recordSha256": "20ad7a098822db873ee5109657e28e0da279504c68f2ab1795e9b45198c6109b"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "candidateFiles": [
+            "FJ1375"
+          ],
+          "recordSha256": "16093b4ed4bd0dc5e65a3576edcddced95621aab67b2a89fe4e2bab849f942eb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67498",
+          "name": "organ",
+          "componentCount": 649,
+          "candidateFiles": [
+            "FJ1375"
+          ],
+          "recordSha256": "b1684d650516cebe2c927b87e9b0d42d035a969db59831f37293d2c0c1edf6cd"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA7154",
+          "name": "head",
+          "componentCount": 143,
+          "candidateFiles": [
+            "FJ1375"
+          ],
+          "recordSha256": "fd29f0d82a6c6f74fec81ed5e0b6ca29a47a425964d4ee66852493736165445d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA20394",
+          "name": "human body",
+          "componentCount": 1258,
+          "candidateFiles": [
+            "FJ1375"
+          ],
+          "recordSha256": "a802ac739ee19831b96d4b7906d78b94bda5fd941dd5c349d528e9569fdd36e5"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA24728",
+          "name": "face",
+          "componentCount": 80,
+          "candidateFiles": [
+            "FJ1375"
+          ],
+          "recordSha256": "fcadee3f1f077b5d44453ae4194f5b4e6b320625c471c597ed878a181a351876"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA54440",
+          "name": "right upper eyelid",
+          "componentCount": 2,
+          "candidateFiles": [
+            "FJ1375"
+          ],
+          "recordSha256": "4bd7463825dcc1bafacb0f6e1b15c78d37e3229c2207ce1b5f862cf996499df1"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA54449",
+          "name": "right eye",
+          "componentCount": 22,
+          "candidateFiles": [
+            "FJ1375"
+          ],
+          "recordSha256": "3a0528ddd9adcd2b14f2d6a4d6aea20f18f197a357b7b90e334d2e1c232dc4c6"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA59091",
+          "name": "tarsal plate of right upper eyelid",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1375"
+          ],
+          "recordSha256": "7c5e736bd91589eee20be5a5d6618caadbd7196106d5068c5034b12e78229608"
+        }
+      ],
+      "holds": [],
+      "renderedOwners": [],
+      "exactRenderedMatches": [],
+      "admitted": false,
+      "decision": "adjacency-and-extent-audit-required"
+    },
+    {
+      "fmaId": "FMA59092",
+      "name": "tarsal plate of left upper eyelid",
+      "file": "FJ1324",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "bytes": 87602,
+      "sha256": "eeb0db9872f49810b69d7865328602d6419327b2f46fda388cd76f8960f5f188",
+      "geometrySha256": "8fdc6fecfec574ea2dc1433b5982f5df2a6450a116112a253641e4a549b77eee",
+      "vertices": 748,
+      "triangles": 1484,
+      "degenerateTriangles": 0,
+      "sourceBounds": {
+        "min": [
+          17.3533,
+          -166.234,
+          1516.68
+        ],
+        "max": [
+          42.9379,
+          -156.65,
+          1529.21
+        ]
+      },
+      "sourceCentre": [
+        30.1456,
+        -161.442,
+        1522.9450000000002
+      ],
+      "sourceExtent": [
+        25.5846,
+        9.584000000000003,
+        12.529999999999973
+      ],
+      "expectedSide": "left",
+      "lateralityMatchesSourceConvention": true,
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA7145",
+          "name": "membrane organ",
+          "componentCount": 10,
+          "candidateFiles": [
+            "FJ1324"
+          ],
+          "recordSha256": "d5e3373d2b87cf130b74ed351c0d8b8b42915a159aee9969e35309896fa3072d"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55665",
+          "name": "nonparenchymatous organ",
+          "componentCount": 386,
+          "candidateFiles": [
+            "FJ1324"
+          ],
+          "recordSha256": "0fc9613a51711e13723b132d372f024602d5c21e90f7dcf3db6c44590532bbfa"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55670",
+          "name": "solid organ",
+          "componentCount": 402,
+          "candidateFiles": [
+            "FJ1324"
+          ],
+          "recordSha256": "2d29fbe68bbbf02c2e25d0112b7253b058af432b3c442ccda6bb64278bf3efde"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA59086",
+          "name": "tarsal plate of eyelid",
+          "componentCount": 4,
+          "candidateFiles": [
+            "FJ1324"
+          ],
+          "recordSha256": "78dab2c40255cedf659bd08446e8e83411af1dee2cf5fa7fdd527514e0ffc98c"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA59087",
+          "name": "tarsal plate of upper eyelid",
+          "componentCount": 2,
+          "candidateFiles": [
+            "FJ1324"
+          ],
+          "recordSha256": "8a2b1645bb6c9849bab39da85931fbe6857962f9ec8120e42261296d903c4e0d"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA59092",
+          "name": "tarsal plate of left upper eyelid",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1324"
+          ],
+          "recordSha256": "4de6dcb0d06e9d889563d148685aefd0a2453f8dc15fd96be496ddecdb7be726"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1324"
+          ],
+          "recordSha256": "47be0c79d4f781f33a12e1c05faf0bfd052ffd56a4955ef71dbdfc9974ba1be0"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1324"
+          ],
+          "recordSha256": "16065c153ee9045727ba06bee2719e3e8119afb98fd19a7394972644171f4c73"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "candidateFiles": [
+            "FJ1324"
+          ],
+          "recordSha256": "20ad7a098822db873ee5109657e28e0da279504c68f2ab1795e9b45198c6109b"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "candidateFiles": [
+            "FJ1324"
+          ],
+          "recordSha256": "16093b4ed4bd0dc5e65a3576edcddced95621aab67b2a89fe4e2bab849f942eb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67498",
+          "name": "organ",
+          "componentCount": 649,
+          "candidateFiles": [
+            "FJ1324"
+          ],
+          "recordSha256": "b1684d650516cebe2c927b87e9b0d42d035a969db59831f37293d2c0c1edf6cd"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA7154",
+          "name": "head",
+          "componentCount": 143,
+          "candidateFiles": [
+            "FJ1324"
+          ],
+          "recordSha256": "fd29f0d82a6c6f74fec81ed5e0b6ca29a47a425964d4ee66852493736165445d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA20394",
+          "name": "human body",
+          "componentCount": 1258,
+          "candidateFiles": [
+            "FJ1324"
+          ],
+          "recordSha256": "a802ac739ee19831b96d4b7906d78b94bda5fd941dd5c349d528e9569fdd36e5"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA24728",
+          "name": "face",
+          "componentCount": 80,
+          "candidateFiles": [
+            "FJ1324"
+          ],
+          "recordSha256": "fcadee3f1f077b5d44453ae4194f5b4e6b320625c471c597ed878a181a351876"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA54441",
+          "name": "left upper eyelid",
+          "componentCount": 2,
+          "candidateFiles": [
+            "FJ1324"
+          ],
+          "recordSha256": "a529a15420284cfb667ab4ca163e3a90b8058363d4478dc2e6e40abe304e5a09"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA54450",
+          "name": "left eye",
+          "componentCount": 23,
+          "candidateFiles": [
+            "FJ1324"
+          ],
+          "recordSha256": "2c4530c5d24d03aa485af7ef2fca2c5eac0124c8ed4309b2a49f9d6042ebcd6d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA59092",
+          "name": "tarsal plate of left upper eyelid",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1324"
+          ],
+          "recordSha256": "5f120c65265ead948b6ddcbbcea40ba56c915d139f4132da3851935ff971729c"
+        }
+      ],
+      "holds": [],
+      "renderedOwners": [],
+      "exactRenderedMatches": [],
+      "admitted": false,
+      "decision": "adjacency-and-extent-audit-required"
+    },
+    {
+      "fmaId": "FMA59089",
+      "name": "tarsal plate of right lower eyelid",
+      "file": "FJ1379",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "bytes": 61165,
+      "sha256": "fd33c2b682d289f26dc00f99cab43a8a835e15b5722d75850739a540517e4ff2",
+      "geometrySha256": "227d8c73f1aee236cf9a9ba7762c365bd1547ed5d0c51089d7947edc1de27d2f",
+      "vertices": 523,
+      "triangles": 1026,
+      "degenerateTriangles": 0,
+      "sourceBounds": {
+        "min": [
+          -43.3265,
+          -165.113,
+          1507
+        ],
+        "max": [
+          -19.4243,
+          -156.1,
+          1515.38
+        ]
+      },
+      "sourceCentre": [
+        -31.3754,
+        -160.60649999999998,
+        1511.19
+      ],
+      "sourceExtent": [
+        23.902200000000004,
+        9.013000000000005,
+        8.38000000000011
+      ],
+      "expectedSide": "right",
+      "lateralityMatchesSourceConvention": true,
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA7145",
+          "name": "membrane organ",
+          "componentCount": 10,
+          "candidateFiles": [
+            "FJ1379"
+          ],
+          "recordSha256": "d5e3373d2b87cf130b74ed351c0d8b8b42915a159aee9969e35309896fa3072d"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55665",
+          "name": "nonparenchymatous organ",
+          "componentCount": 386,
+          "candidateFiles": [
+            "FJ1379"
+          ],
+          "recordSha256": "0fc9613a51711e13723b132d372f024602d5c21e90f7dcf3db6c44590532bbfa"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55670",
+          "name": "solid organ",
+          "componentCount": 402,
+          "candidateFiles": [
+            "FJ1379"
+          ],
+          "recordSha256": "2d29fbe68bbbf02c2e25d0112b7253b058af432b3c442ccda6bb64278bf3efde"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA59086",
+          "name": "tarsal plate of eyelid",
+          "componentCount": 4,
+          "candidateFiles": [
+            "FJ1379"
+          ],
+          "recordSha256": "78dab2c40255cedf659bd08446e8e83411af1dee2cf5fa7fdd527514e0ffc98c"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA59088",
+          "name": "tarsal plate of lower eyelid",
+          "componentCount": 2,
+          "candidateFiles": [
+            "FJ1379"
+          ],
+          "recordSha256": "2cd88c1dbf5de85df0ffe06185cd61086a434aa1d8d0e6011d0ba9db4dda6921"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA59089",
+          "name": "tarsal plate of right lower eyelid",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1379"
+          ],
+          "recordSha256": "038337f434c62eea21a52d8c8d23d751546d25eeaa8bb24dd59c640e73f3eeb5"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1379"
+          ],
+          "recordSha256": "47be0c79d4f781f33a12e1c05faf0bfd052ffd56a4955ef71dbdfc9974ba1be0"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1379"
+          ],
+          "recordSha256": "16065c153ee9045727ba06bee2719e3e8119afb98fd19a7394972644171f4c73"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "candidateFiles": [
+            "FJ1379"
+          ],
+          "recordSha256": "20ad7a098822db873ee5109657e28e0da279504c68f2ab1795e9b45198c6109b"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "candidateFiles": [
+            "FJ1379"
+          ],
+          "recordSha256": "16093b4ed4bd0dc5e65a3576edcddced95621aab67b2a89fe4e2bab849f942eb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67498",
+          "name": "organ",
+          "componentCount": 649,
+          "candidateFiles": [
+            "FJ1379"
+          ],
+          "recordSha256": "b1684d650516cebe2c927b87e9b0d42d035a969db59831f37293d2c0c1edf6cd"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA7154",
+          "name": "head",
+          "componentCount": 143,
+          "candidateFiles": [
+            "FJ1379"
+          ],
+          "recordSha256": "fd29f0d82a6c6f74fec81ed5e0b6ca29a47a425964d4ee66852493736165445d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA20394",
+          "name": "human body",
+          "componentCount": 1258,
+          "candidateFiles": [
+            "FJ1379"
+          ],
+          "recordSha256": "a802ac739ee19831b96d4b7906d78b94bda5fd941dd5c349d528e9569fdd36e5"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA24728",
+          "name": "face",
+          "componentCount": 80,
+          "candidateFiles": [
+            "FJ1379"
+          ],
+          "recordSha256": "fcadee3f1f077b5d44453ae4194f5b4e6b320625c471c597ed878a181a351876"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA54443",
+          "name": "right lower eyelid",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1379"
+          ],
+          "recordSha256": "432a262b043f23b3c0a71a116a7b12b844acf63222317a7716a7dce3a60a5d0d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA54449",
+          "name": "right eye",
+          "componentCount": 22,
+          "candidateFiles": [
+            "FJ1379"
+          ],
+          "recordSha256": "3a0528ddd9adcd2b14f2d6a4d6aea20f18f197a357b7b90e334d2e1c232dc4c6"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA59089",
+          "name": "tarsal plate of right lower eyelid",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1379"
+          ],
+          "recordSha256": "f183c99497f38ebf42d1ac33687dd9e11b7bfe158048ef0c5864a62dab70987e"
+        }
+      ],
+      "holds": [],
+      "renderedOwners": [],
+      "exactRenderedMatches": [],
+      "admitted": false,
+      "decision": "adjacency-and-extent-audit-required"
+    },
+    {
+      "fmaId": "FMA59090",
+      "name": "tarsal plate of left lower eyelid",
+      "file": "FJ1328",
+      "sourceUrl": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "bytes": 61036,
+      "sha256": "c3ba07f82baf4e55563d9736653ef768cb047bbf277a079aacbcfa780096d322",
+      "geometrySha256": "3a657b1b19946b87a8667924146b106b9e6c4e615ca2990a0bc72cf0335b29dc",
+      "vertices": 525,
+      "triangles": 1034,
+      "degenerateTriangles": 0,
+      "sourceBounds": {
+        "min": [
+          18.1183,
+          -165.108,
+          1507.01
+        ],
+        "max": [
+          42.0141,
+          -156.101,
+          1515.38
+        ]
+      },
+      "sourceCentre": [
+        30.066200000000002,
+        -160.6045,
+        1511.1950000000002
+      ],
+      "sourceExtent": [
+        23.895799999999998,
+        9.007000000000005,
+        8.370000000000118
+      ],
+      "expectedSide": "left",
+      "lateralityMatchesSourceConvention": true,
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA7145",
+          "name": "membrane organ",
+          "componentCount": 10,
+          "candidateFiles": [
+            "FJ1328"
+          ],
+          "recordSha256": "d5e3373d2b87cf130b74ed351c0d8b8b42915a159aee9969e35309896fa3072d"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55665",
+          "name": "nonparenchymatous organ",
+          "componentCount": 386,
+          "candidateFiles": [
+            "FJ1328"
+          ],
+          "recordSha256": "0fc9613a51711e13723b132d372f024602d5c21e90f7dcf3db6c44590532bbfa"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55670",
+          "name": "solid organ",
+          "componentCount": 402,
+          "candidateFiles": [
+            "FJ1328"
+          ],
+          "recordSha256": "2d29fbe68bbbf02c2e25d0112b7253b058af432b3c442ccda6bb64278bf3efde"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA59086",
+          "name": "tarsal plate of eyelid",
+          "componentCount": 4,
+          "candidateFiles": [
+            "FJ1328"
+          ],
+          "recordSha256": "78dab2c40255cedf659bd08446e8e83411af1dee2cf5fa7fdd527514e0ffc98c"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA59088",
+          "name": "tarsal plate of lower eyelid",
+          "componentCount": 2,
+          "candidateFiles": [
+            "FJ1328"
+          ],
+          "recordSha256": "2cd88c1dbf5de85df0ffe06185cd61086a434aa1d8d0e6011d0ba9db4dda6921"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA59090",
+          "name": "tarsal plate of left lower eyelid",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1328"
+          ],
+          "recordSha256": "77873680415f1f2ccdc2107601ded60c834b417456f91e91a2170bb9bb43ee97"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1328"
+          ],
+          "recordSha256": "47be0c79d4f781f33a12e1c05faf0bfd052ffd56a4955ef71dbdfc9974ba1be0"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "candidateFiles": [
+            "FJ1328"
+          ],
+          "recordSha256": "16065c153ee9045727ba06bee2719e3e8119afb98fd19a7394972644171f4c73"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "candidateFiles": [
+            "FJ1328"
+          ],
+          "recordSha256": "20ad7a098822db873ee5109657e28e0da279504c68f2ab1795e9b45198c6109b"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "candidateFiles": [
+            "FJ1328"
+          ],
+          "recordSha256": "16093b4ed4bd0dc5e65a3576edcddced95621aab67b2a89fe4e2bab849f942eb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67498",
+          "name": "organ",
+          "componentCount": 649,
+          "candidateFiles": [
+            "FJ1328"
+          ],
+          "recordSha256": "b1684d650516cebe2c927b87e9b0d42d035a969db59831f37293d2c0c1edf6cd"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA7154",
+          "name": "head",
+          "componentCount": 143,
+          "candidateFiles": [
+            "FJ1328"
+          ],
+          "recordSha256": "fd29f0d82a6c6f74fec81ed5e0b6ca29a47a425964d4ee66852493736165445d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA20394",
+          "name": "human body",
+          "componentCount": 1258,
+          "candidateFiles": [
+            "FJ1328"
+          ],
+          "recordSha256": "a802ac739ee19831b96d4b7906d78b94bda5fd941dd5c349d528e9569fdd36e5"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA24728",
+          "name": "face",
+          "componentCount": 80,
+          "candidateFiles": [
+            "FJ1328"
+          ],
+          "recordSha256": "fcadee3f1f077b5d44453ae4194f5b4e6b320625c471c597ed878a181a351876"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA54444",
+          "name": "left lower eyelid",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1328"
+          ],
+          "recordSha256": "37f957b5f62db4a9a7e3fc51329eeff90994c715e3b88d7ebad321b8d4b9a14d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA54450",
+          "name": "left eye",
+          "componentCount": 23,
+          "candidateFiles": [
+            "FJ1328"
+          ],
+          "recordSha256": "2c4530c5d24d03aa485af7ef2fca2c5eac0124c8ed4309b2a49f9d6042ebcd6d"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA59090",
+          "name": "tarsal plate of left lower eyelid",
+          "componentCount": 1,
+          "candidateFiles": [
+            "FJ1328"
+          ],
+          "recordSha256": "21fb1bbbe00b3b635656651410c8bc236b281887f407b2513b1cc61f241cc800"
+        }
+      ],
+      "holds": [],
+      "renderedOwners": [],
+      "exactRenderedMatches": [],
+      "admitted": false,
+      "decision": "adjacency-and-extent-audit-required"
+    }
+  ],
+  "crossCandidateMatches": [],
+  "admissionsChanged": false,
+  "clinicalValidation": false,
+  "limitations": "Ten explicit same-version ocular candidates only. ZIP member CRC/size, exact source definitions/aliases, finite triangular geometry, raw/canonical hashes, source bounds, side-centre convention and exact rendered fingerprint matches are checked. No near-surface, interior, adjacency, attachment, tear-drainage continuity or clinical extent validation; none is admitted by this preparatory audit. Original source meshes are not reshaped or inferred from diagrams."
+}

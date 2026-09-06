@@ -69,6 +69,11 @@ import {
   type DissectionView,
 } from './dissection-data';
 import { DissectionControls, DissectionGuide } from './dissection-controls';
+import {
+  dissectionGuidance,
+  dissectionLandmarks,
+  guidanceRecipeAction,
+} from '@/lib/dissection-guidance';
 import './body-explorer.css';
 import { Brand } from './brand';
 import { ReviewStatus } from './review-status';
@@ -305,21 +310,10 @@ export default function BodyExplorer({
   const focusedStudy = profile.focuses.find((s) => s.id === dissection.focusId);
   const stageLandmarks = useMemo(
     () =>
-      [
-        ...new Set(
-          (focusedStudy?.landmarks ?? stage?.landmarks ?? []).flatMap(
-            (pattern) =>
-              resolved.visible
-                .filter(
-                  (s) =>
-                    systems[s.system] &&
-                    new RegExp(pattern, 'i').test(s.sourceName),
-                )
-                .slice(0, 2)
-                .map((s) => s.id),
-          ),
-        ),
-      ].slice(0, 8),
+      dissectionLandmarks(
+        resolved.visible.filter((s) => systems[s.system]),
+        focusedStudy?.landmarks ?? stage?.landmarks ?? [],
+      ).map((s) => s.id),
     [stage, focusedStudy, resolved, systems],
   );
   const selected = catalog?.structures.find((s) => s.id === selectedId) ?? null;
@@ -332,6 +326,15 @@ export default function BodyExplorer({
     (s) => systems[s.system] && !hiddenIds.includes(s.id),
   );
   const enabledIds = new Set(available.map((item) => item.id));
+  const guidance = dissectionGuidance(
+    regionStructures,
+    profile,
+    dissection,
+    available.map((s) => s.id),
+    hiddenIds,
+    loaded,
+    failed,
+  );
   function structureDetail(item: BodyStructure) {
     if (hiddenIds.includes(item.id)) return 'Removed · select to restore';
     if (!systems[item.system]) return 'System off · select to enable';
@@ -490,6 +493,20 @@ export default function BodyExplorer({
       message: `${next.title} opened. ${selected?.name} remains selected.`,
     });
     publishSelection(selectedId);
+  }
+  function openGuidanceRecipe(kind: 'recipe' | 'next') {
+    const action = guidanceRecipeAction(guidance, kind, exam);
+    if (!action) return;
+    if (action.kind === 'focus') changeFocus(action.id);
+    else changeStage(action.id);
+  }
+  function reorientDissection() {
+    if (exam) return;
+    cameraRestore.current = null;
+    setFocus(false);
+    setZoom(1);
+    setView(guidance.recipe?.view ?? view);
+    setReset((n) => n + 1);
   }
   function undoDissection() {
     dispatch({ type: 'undo' });
@@ -750,11 +767,15 @@ export default function BodyExplorer({
   const target = catalog.structures.find((s) => s.id === examTargets[question]);
   const studyGuide = (
     <DissectionGuide
+      guidance={guidance}
+      side={side}
+      view={view}
+      onOrient={reorientDissection}
+      onRecipe={openGuidanceRecipe}
       profile={profile}
       stage={stage}
       focus={focusedStudy}
       removed={resolved.removed}
-      visible={available}
       onRestore={restoreStructure}
       onRestoreMany={restoreStructures}
       onSelect={select}

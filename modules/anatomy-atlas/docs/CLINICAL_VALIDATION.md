@@ -1,5 +1,11 @@
 # Clinical validation checklist
 
+## Regional guidance acceptance
+
+- Verify reorientation, selected-only framing reset, saved-view/tray interaction, clean-recipe warnings, restored landmarks, membership search, keyboard focus, screen-reader announcements and 200%/mobile layout on actual devices. Automated handler/helper and server-markup tests are not this acceptance.
+- Review authored landmarks and layer/window scope. Target/context roles are recipe membership, not validated clinical relationships; enabled counts are not visible pixels. Existing clinical gates remain. See `DISSECTION_GUIDANCE.md`.
+- Keep ten prepared ocular candidates unrendered until near-surface/extent/adjacency auditing supports an admission decision. Source labels, CRC/hash checks, finite geometry and side-centre signs alone do not validate a tear-drainage pathway, eyelid anatomy or internal lumen. See `OCULAR_CANDIDATES.md`.
+
 ## Loading and source-screen acceptance
 
 - Exercise actual download/render failures, throttling, selective retries, naming-question transitions, ghost/hidden context and return navigation. Confirm paused questions retain answers and cannot accept skip/answer/next while required anatomy is unavailable; exit must remain available. Test keyboard, touch and assistive-technology announcements. Helper and static wiring tests are not browser acceptance; Canvas/context-loss handling remains outside this milestone. See `ANATOMY_LOADING.md`.
