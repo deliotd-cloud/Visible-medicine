@@ -1,7 +1,8 @@
 {
   "passed": true,
-  "checks": 626,
+  "checks": 703,
   "eventSequences": 12,
+  "rendererFaultCases": 5,
   "handlerCases": 24,
   "markupCases": 10,
   "bodyStructures": 1022,
@@ -13,5 +14,5 @@
   "sourceGeometryChanged": false,
   "clinicalValidation": false,
   "browserInteractionTesting": false,
-  "limitations": "Real observer events and recovery methods, injected monitor hooks, extracted application handlers and server-rendered notices. No GPU reset, pixels, browser/WebGL initialization failure, touch or assistive-technology acceptance is claimed."
+  "limitations": "Real observer events, per-renderer guard and recovery methods, injected monitor hooks, extracted application handlers and server-rendered notices. Synchronous render exceptions and shader-error callbacks use test doubles, not a GPU. No hardware reset, pixels, async browser/WebGL initialization failure, unrelated frame-callback failure, touch or assistive-technology acceptance is claimed."
 }

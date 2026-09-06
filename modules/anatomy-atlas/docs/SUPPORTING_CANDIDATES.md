@@ -15,6 +15,6 @@ This is the historical pre-admission classification. The subsequent [forearm aud
 
 This is **index classification only**. No new raw geometry, tissue relationships, source registration, source-side correctness or clinical accuracy has been established for these candidates. No missing anatomy is AI-invented.
 
-Next: establish the two tendon sources' parent/extent evidence and compare thumb-head alternatives with the held pair. The separate forearm source audit is complete as a bounded engineering screen, not clinical validation. Do not lift any hold without new evidence.
+The subsequent [raw geometry audit](SUPPORTING_GEOMETRY.md) now checks the two tendon candidates, two heads and two held controls against all preceding catalogue bounds and 109 nearby existing raw sources. It records 167 detailed comparisons and six diagnostic flags, without admitting a candidate or lifting a hold. Parent/component and thumb-contact adjudication remain open. The separate forearm source audit is complete as a bounded engineering screen, not clinical validation.
 
 The official BodyParts3D indexes and derived evidence retain [CC BY 4.0](https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html), DBCLS attribution, licence links and change notices. No dependency, model, paid API, copied diagram, private review or patient data is added.

@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 /* oxlint-disable react-hooks/rules-of-hooks, react-hooks/exhaustive-deps -- Deliberately injected hooks exercise the monitor outside React; actual components retain normal hook rules. */
+/* oxlint-disable typescript/unbound-method -- Tests retain original method identities and invoke retired methods with an explicit receiver. */
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
@@ -10,6 +11,7 @@ import {
   observeRenderer,
   rendererReady,
   copyRecoveryCamera,
+  guardRenderer,
 } from '../lib/renderer-health.ts';
 import { dissectionProfiles } from '../app/dissection-data.ts';
 let checks = 0;
@@ -133,7 +135,122 @@ for (const initiallyLost of [false, true])
   same(seen, ['starting', 'failed']);
   observer.frame();
   same(seen.length, 2);
+  canvas.dispatchEvent(new Event('webglcontextlost', { cancelable: true }));
+  canvas.dispatchEvent(new Event('webglcontextrestored'));
+  observer.frame();
+  same(
+    seen,
+    ['starting', 'failed'],
+    'Failure is terminal until a new observer',
+  );
   observer.dispose();
+}
+
+let rendererFaultCases = 0;
+for (const mode of [
+  'healthy',
+  'render-throw',
+  'shader',
+  'shader-handler-throw',
+]) {
+  const messages = [],
+    canvas = new Target(),
+    scene = {},
+    camera = {};
+  let calls = 0,
+    chained = 0;
+  const observer = observeRenderer(
+    canvas,
+    () => false,
+    (s) => messages.push(s),
+    () => {},
+  );
+  const renderer = {
+    debug: {
+      checkShaderErrors: true,
+      onShaderError: function (...args) {
+        same(this, renderer.debug);
+        same(args, ['context', 'program', 'vertex', 'fragment']);
+        chained++;
+        if (mode === 'shader-handler-throw') throw Error('handler failed');
+      },
+    },
+    render: function (s, c) {
+      same(this, renderer, 'Preserve render receiver');
+      same([s, c], [scene, camera]);
+      calls++;
+      if (mode === 'render-throw') throw Error('draw failed');
+      if (mode.startsWith('shader'))
+        this.debug.onShaderError('context', 'program', 'vertex', 'fragment');
+    },
+  };
+  const originalRender = renderer.render,
+    originalShader = renderer.debug.onShaderError;
+  const guard = guardRenderer(renderer, observer.fail, observer.frame);
+  const retiredRender = renderer.render,
+    retiredShader = renderer.debug.onShaderError;
+  renderer.render(scene, camera);
+  same(messages, ['starting', mode === 'healthy' ? 'ready' : 'failed']);
+  same(calls, 1);
+  same(chained, mode.startsWith('shader') ? 1 : 0);
+  renderer.render(scene, camera);
+  same(calls, mode === 'healthy' ? 2 : 1, 'Failed render cannot keep drawing');
+  if (mode !== 'healthy') {
+    canvas.dispatchEvent(new Event('webglcontextlost', { cancelable: true }));
+    canvas.dispatchEvent(new Event('webglcontextrestored'));
+    observer.frame();
+    same(messages, ['starting', 'failed']);
+  }
+  guard.dispose();
+  observer.dispose();
+  same(renderer.render, originalRender);
+  same(renderer.debug.onShaderError, originalShader);
+  same(renderer.debug.checkShaderErrors, true);
+  const before = [...messages];
+  try {
+    retiredRender.call(renderer, scene, camera);
+  } catch {
+    /* Original behaviour restored. */
+  }
+  try {
+    retiredShader.call(
+      renderer.debug,
+      'context',
+      'program',
+      'vertex',
+      'fragment',
+    );
+  } catch {
+    /* Original handler. */
+  }
+  same(messages, before, 'Retired instrumentation cannot send health events');
+  guard.dispose();
+  rendererFaultCases++;
+}
+{
+  let faults = 0,
+    frames = 0;
+  const renderer = {
+    render: () => {},
+    debug: { checkShaderErrors: true, onShaderError: null },
+  };
+  const guard = guardRenderer(
+    renderer,
+    () => faults++,
+    () => frames++,
+  );
+  renderer.debug.onShaderError(null, null, null, null);
+  renderer.debug.onShaderError(null, null, null, null);
+  renderer.render({}, {});
+  same([faults, frames], [1, 0]);
+  const laterRender = () => {},
+    laterShader = () => {};
+  renderer.render = laterRender;
+  renderer.debug.onShaderError = laterShader;
+  guard.dispose();
+  same(renderer.render, laterRender);
+  same(renderer.debug.onShaderError, laterShader);
+  rendererFaultCases++;
 }
 
 // Real recovery components; injected hooks exercise the monitor without a browser.
@@ -141,7 +258,6 @@ const require = createRequire(import.meta.url),
   React = require('react'),
   { renderToStaticMarkup } = require('react-dom/server');
 let monitorMode = false,
-  frameCallback,
   cleanup,
   invalidations = 0;
 const monitorCanvas = new Target(),
@@ -151,14 +267,16 @@ const rootState = {
   gl: {
     domElement: monitorCanvas,
     getContext: () => ({ isContextLost: () => monitorLost }),
+    render: () => {},
+    debug: { checkShaderErrors: true, onShaderError: null },
   },
   invalidate: () => invalidations++,
 };
 const reactShim = {
   ...React,
   useRef: (value) => (monitorMode ? { current: value } : React.useRef(value)),
-  useEffect: (fn, deps) =>
-    monitorMode ? (cleanup = fn()) : React.useEffect(fn, deps),
+  useLayoutEffect: (fn, deps) =>
+    monitorMode ? (cleanup = fn()) : React.useLayoutEffect(fn, deps),
 };
 const output = await build({
   stdin: {
@@ -194,9 +312,6 @@ runInNewContext(output.outputFiles[0].text, {
       : id === '@react-three/fiber'
         ? {
             useThree: () => rootState,
-            useFrame: (fn) => {
-              frameCallback = fn;
-            },
           }
         : require(id),
 });
@@ -205,8 +320,7 @@ monitorMode = true;
 api.RendererMonitor({ onHealth: (s) => monitorMessages.push(s) });
 monitorMode = false;
 same(monitorMessages, ['starting']);
-check(frameCallback);
-frameCallback();
+rootState.gl.render({}, {});
 same(monitorMessages.at(-1), 'ready');
 monitorLost = true;
 monitorCanvas.dispatchEvent(
@@ -216,13 +330,25 @@ same(monitorMessages.at(-1), 'lost');
 monitorLost = false;
 monitorCanvas.dispatchEvent(new Event('webglcontextrestored'));
 same(monitorMessages.at(-1), 'restoring');
-frameCallback();
+rootState.gl.render({}, {});
 same(monitorMessages.at(-1), 'ready');
 cleanup();
 same(monitorCanvas.listeners, 0);
 const monitorCount = monitorMessages.length;
-frameCallback();
+rootState.gl.render({}, {});
 same(monitorMessages.length, monitorCount);
+// Reinstall the actual monitor with the same renderer (Strict Mode-style cleanup).
+monitorMode = true;
+api.RendererMonitor({ onHealth: (s) => monitorMessages.push(s) });
+monitorMode = false;
+same(monitorMessages.at(-1), 'starting');
+rootState.gl.debug.onShaderError(null, null, null, null);
+same(monitorMessages.at(-1), 'failed');
+rootState.gl.render({}, {});
+same(monitorMessages.at(-1), 'failed');
+cleanup();
+same(monitorCanvas.listeners, 0);
+same(rootState.gl.debug.onShaderError, null);
 let markupCases = 0;
 for (const health of states) {
   const html = renderToStaticMarkup(
@@ -512,6 +638,7 @@ const result = {
   passed: true,
   checks,
   eventSequences,
+  rendererFaultCases,
   handlerCases,
   markupCases,
   bodyStructures: 1022,
@@ -524,7 +651,7 @@ const result = {
   clinicalValidation: false,
   browserInteractionTesting: false,
   limitations:
-    'Real observer events and recovery methods, injected monitor hooks, extracted application handlers and server-rendered notices. No GPU reset, pixels, browser/WebGL initialization failure, touch or assistive-technology acceptance is claimed.',
+    'Real observer events, per-renderer guard and recovery methods, injected monitor hooks, extracted application handlers and server-rendered notices. Synchronous render exceptions and shader-error callbacks use test doubles, not a GPU. No hardware reset, pixels, async browser/WebGL initialization failure, unrelated frame-callback failure, touch or assistive-technology acceptance is claimed.',
 };
 await fs.writeFile(
   'docs/scene-recovery-validation.json',

@@ -1,5 +1,7 @@
 # Third-party notices
 
+The guarded-rendering and supporting-geometry milestone adds original application/recovery code with no new dependency, font, texture or runtime mesh. The six-source tendon/thumb audit and preserved baseline are derived BodyParts3D v4 evidence under CC BY 4.0, retaining DBCLS attribution, licence links and change notices; no candidate is admitted and no hold lifted. See `../docs/SUPPORTING_GEOMETRY.md` and `../docs/SCENE_RECOVERY.md`. The audit data is not relicensed as MIT.
+
 The forearm milestone adds four original BodyParts3D v4 IS-A artery components in one 66,352-byte GLB; all previous anatomy remains unchanged. These meshes and derived source/baseline/screening evidence remain CC BY 4.0 with DBCLS attribution, licence links and change notices. The code licence does not relicense anatomy. Concise original draft teaching cites Texas Tech's anatomy tables without copying their diagrams or dataset. No new dependency, font, texture, paid API, acquired imaging or private data is introduced. See `../docs/FOREARM_VASCULAR_DETAIL.md`. Subsequent milestone receipts are historical.
 
 The graphics-recovery milestone adds original application code using the existing React/Three.js/button dependencies and Visible Medicine tokens; no package, font, texture or model is added. The supporting-candidate index classification is derived BodyParts3D evidence and retains CC BY 4.0, DBCLS credit and change notices. None of its candidates is newly admitted. See `../docs/SCENE_RECOVERY.md` and `../docs/SUPPORTING_CANDIDATES.md`.

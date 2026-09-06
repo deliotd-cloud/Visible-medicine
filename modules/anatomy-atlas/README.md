@@ -8,7 +8,7 @@ The atlas now has **1,022 source entries, 138 dissection stages and 120 focuses*
 
 The shoulder, all regions and whole body offer **Restart 3D view** if graphics are interrupted. Dissection settings, answers and the last captured camera are retained; practice pauses until the viewer is available. Structure information stays outside the graphics surface. See [behaviour, tests and device-acceptance limits](docs/SCENE_RECOVERY.md). The recovery feature itself does not change anatomy.
 
-The [supporting-tissue source audit](docs/SUPPORTING_CANDIDATES.md) separates tendon, muscle and artery candidates before further admissions; existing holds remain.
+The [supporting-tissue source classification](docs/SUPPORTING_CANDIDATES.md) and subsequent [raw tendon/thumb geometry audit](docs/SUPPORTING_GEOMETRY.md) distinguish candidates from admissible anatomy; existing holds remain. The latter audits six sources without importing them. Graphics recovery additionally catches synchronous renderer and shader errors, and practice waits for a successful render call before resuming; actual device acceptance remains pending.
 
 ## Throat dissection and regional coverage
 

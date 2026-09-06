@@ -3,16 +3,16 @@ import {
   Component,
   Fragment,
   createRef,
-  useEffect,
-  useRef,
+  useLayoutEffect,
   type ReactNode,
   type RefObject,
 } from 'react';
-import { useFrame, useThree } from '@react-three/fiber';
+import { useThree } from '@react-three/fiber';
 import { Button } from '@/components/ui/button';
 import {
   copyRecoveryCamera,
   observeRenderer,
+  guardRenderer,
   type RendererHealth,
 } from '@/lib/renderer-health';
 import type { StudyCamera } from '@/lib/study-views';
@@ -24,21 +24,19 @@ export function RendererMonitor({
   onHealth: (health: RendererHealth) => void;
 }) {
   const { gl, invalidate } = useThree();
-  const observer = useRef<ReturnType<typeof observeRenderer> | null>(null);
-  useEffect(() => {
+  useLayoutEffect(() => {
     const current = observeRenderer(
       gl.domElement,
       () => gl.getContext().isContextLost(),
       onHealth,
       invalidate,
     );
-    observer.current = current;
+    const guard = guardRenderer(gl, current.fail, current.frame);
     return () => {
+      guard.dispose();
       current.dispose();
-      if (observer.current === current) observer.current = null;
     };
   }, [gl, invalidate, onHealth]);
-  useFrame(() => observer.current?.frame());
   return null;
 }
 
