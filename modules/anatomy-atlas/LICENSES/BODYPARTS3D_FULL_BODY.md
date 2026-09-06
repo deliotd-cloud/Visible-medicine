@@ -1,8 +1,14 @@
 # Expanded BodyParts3D commercial-use audit
 
+## Mesenteric extension — 6 September 2026
+
+The current total is **942 source representations / 76 body bundles / 94,653,812 bytes**. Seventeen explicit official v4 candidates add three mesenteric membranes, nine arterial segments and five venous segments in two GLBs (953,136 bytes). Every preceding 925 record and 74 body-bundle hash remains unchanged. Three near-coincident arterial alternatives are withheld, not relabelled or imported. Exact SHA-256, source/scene bounds, aliases, sampled overlap evidence and decisions are described in `content/mesenteric-source-audit.json`, `scripts/mesenteric-selections.mjs` and `docs/MESENTERIC_DETAIL.md`.
+
+The official CC BY 4.0 grant was rechecked on 6 September 2026. Preserve DBCLS attribution, the licence and derivative-change notices for the added surfaces and source-index-derived evidence. No new dependency, paid API, font, texture, generated anatomy or third-party diagram is introduced. Brief original teaching text cites factual academic resources without redistributing their protected authored figures/prose/table datasets. Clinical source labels, attachment/branch extent and device acceptance remain unvalidated. The additive membrane category describes selected surfaces, not a complete peritoneum or a new clinical segmentation standard.
+
 ## Intestinal component-ownership correction — 6 September 2026
 
-The current total is **925 selectable source representations / 74 body bundles / 93,700,676 bytes**. `FJ2599` is now separately selectable as the official `FMA11338` ileocecal junction, removed from both inherited bowel display aggregates to prevent duplicate rendering. Exact source geometry is preserved, not remodelled or relabelled as a complete cecum or valve. Two parent records and one prior GLB have an explicitly pinned transition; all other 922 prior records / 72 prior body GLBs remain exact. See `docs/INTESTINAL_JUNCTION.md` and `content/junction-source-audit.json` for source aliases, raw hashes and adaptation evidence.
+That milestone reached **925 selectable source representations / 74 body bundles / 93,700,676 bytes**. `FJ2599` is separately selectable as the official `FMA11338` ileocecal junction, removed from both inherited bowel display aggregates to prevent duplicate rendering. Exact source geometry is preserved, not remodelled or relabelled as a complete cecum or valve. Two parent records and one prior GLB have an explicitly pinned transition; all other 922 prior records / 72 prior body GLBs remained exact. See `docs/INTESTINAL_JUNCTION.md` and `content/junction-source-audit.json` for source aliases, raw hashes and adaptation evidence.
 
 The official CC BY 4.0 grant was rechecked. This change remains subject to existing DBCLS attribution, licence and indication-of-change obligations. No new dataset, font, texture, package, paid API or generated anatomical mesh was introduced. Original brief factual teaching text cites TTUHSC without copying its diagrams or table dataset. Source/clinical and device validation remain pending.
 

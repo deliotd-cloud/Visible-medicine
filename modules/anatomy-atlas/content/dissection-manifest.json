@@ -1,7 +1,7 @@
 {
   "version": 1,
   "reviewStatus": "draft-unvalidated",
-  "catalogSha256": "9512052d74f333f3276aac1926c8537c428badcd237dd724a5822cd7c7a005cd",
+  "catalogSha256": "8834615444c57b428fdf79689370c7894ba7aa400149f0b800014d9fdc158836",
   "profiles": [
     {
       "region": "whole-body",
@@ -950,7 +950,24 @@
             "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
-            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
+            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
+            "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+            "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+            "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
+            "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+            "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
           ]
         },
         {
@@ -2303,7 +2320,21 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
-            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+            "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
           ]
         },
         {
@@ -2605,7 +2636,10 @@
             "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
             "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
             "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring",
-            "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring"
+            "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
+            "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+            "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+            "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix"
           ]
         }
       ],
@@ -2925,7 +2959,16 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
-            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+            "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery"
           ]
         },
         {
@@ -3185,7 +3228,12 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
             "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
           ]
         }
       ]
@@ -9542,7 +9590,7 @@
       "orientation": "The supplied wall is incomplete, so these stages are named exposure windows rather than a complete abdominal-wall dissection.",
       "limitations": [
         "Rectus abdominis, internal oblique and transversus abdominis are not included.",
-        "Peritoneum, mesenteries and organ-internal layers are absent. Selected major vessels and ureters are available.",
+        "Three selected mesenteric surfaces and named vascular segments are available; peritoneal leaves, roots, organ-internal layers and complete vessel/nerve/lymphatic networks are not established.",
         "Organ removal is an educational visibility change, not a surgical sequence."
       ],
       "references": [
@@ -9623,7 +9671,24 @@
             "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
             "vm:anatomy:body:abdomen:unpaired:organ:appendix",
             "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
-            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
+            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
+            "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+            "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+            "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
+            "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+            "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
           ]
         },
         {
@@ -9710,7 +9775,24 @@
             "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
             "vm:anatomy:body:abdomen:unpaired:organ:appendix",
             "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
-            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
+            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
+            "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+            "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+            "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
+            "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+            "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
           ]
         },
         {
@@ -9864,7 +9946,21 @@
             "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
             "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
             "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
-            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein"
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+            "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
           ]
         },
         {
@@ -9894,7 +9990,10 @@
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra",
-            "vm:anatomy:body:abdomen:midline:fascia:linea-alba"
+            "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
+            "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+            "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+            "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix"
           ]
         },
         {
@@ -9953,6 +10052,223 @@
             "vm:anatomy:body:abdomen:left:muscle:left-external-oblique",
             "vm:anatomy:body:abdomen:midline:fascia:linea-alba"
           ]
+        },
+        {
+          "id": "mesenteric-surfaces",
+          "title": "Mesenteric surfaces & bowel",
+          "description": "Keep the three supplied mesenteric surfaces with bowel context; hide a bowel aggregate to inspect the surface behind it.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA14643",
+                "FMA14647",
+                "FMA16549"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA7200",
+                "FMA7201",
+                "FMA14542",
+                "FMA11338"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "mesentery of small intestine",
+            "transverse mesocolon",
+            "mesoappendix"
+          ],
+          "inspect": "Set the bowel aside, then restore it with Undo to compare source relationships. Removing a surface is an educational visibility change, not peritoneal dissection.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
+            "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
+            "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+            "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+            "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix"
+          ]
+        },
+        {
+          "id": "mesenteric-vessel-window",
+          "title": "Mesenteric vessels exposed",
+          "description": "Remove bowel and mesenteric surfaces to compare available arterial and venous segments with existing major-vessel context.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA14810",
+                "FMA14811",
+                "FMA14815",
+                "FMA14818",
+                "FMA14820",
+                "FMA14824",
+                "FMA14826",
+                "FMA14828",
+                "FMA14829",
+                "FMA14332",
+                "FMA15391",
+                "FMA15405",
+                "FMA15406",
+                "FMA15407"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA14749",
+                "FMA14750",
+                "FMA50735"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "superior mesenteric artery",
+            "superior mesenteric vein",
+            "inferior mesenteric vein",
+            "middle colic artery"
+          ],
+          "inspect": "Select and isolate an individual segment, or use the separate arterial and venous windows. Red and blue distinguish source artery/vein labels, not oxygenation. Gaps are not bridged with invented vessels.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+            "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
+          ]
+        },
+        {
+          "id": "mesenteric-arteries",
+          "title": "Colic & appendicular arteries",
+          "description": "Compare the admitted bowel arterial segments without overlying organs or veins.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA14810",
+                "FMA14811",
+                "FMA14815",
+                "FMA14818",
+                "FMA14820",
+                "FMA14824",
+                "FMA14826",
+                "FMA14828",
+                "FMA14829"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA14749",
+                "FMA14750"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "middle colic artery",
+            "(?:right|left) colic artery",
+            "appendicular artery"
+          ],
+          "inspect": "Frame a small branch for closer study. Continuity, territories and variant branching require review; the held ileal alternatives are not displayed.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+            "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery"
+          ]
+        },
+        {
+          "id": "mesenteric-veins",
+          "title": "Mesenteric venous drainage",
+          "description": "Isolate the available mesenteric veins with the existing hepatic portal-vein source context.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA14332",
+                "FMA15391",
+                "FMA15405",
+                "FMA15406",
+                "FMA15407"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA50735"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "superior mesenteric vein",
+            "inferior mesenteric vein",
+            "hepatic portal vein"
+          ],
+          "inspect": "These are reference surfaces, not contrast enhancement, flow or a verified continuous drainage model.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
+          ]
+        },
+        {
+          "id": "appendix-mesentery",
+          "title": "Appendix, mesoappendix & artery",
+          "description": "A close four-structure window without the large bowel aggregates obscuring the supplied appendiceal context.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA16549",
+                "FMA14818"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA14542",
+                "FMA11338"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "mesoappendix",
+            "appendicular artery",
+            "^appendix$",
+            "ileocecal junction"
+          ],
+          "inspect": "Hide or fade the mesoappendix to inspect the available artery and appendix. The junction surface is context, not a complete cecum. Attachments and surgical planes remain unvalidated.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
+            "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
+            "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery"
+          ]
         }
       ],
       "focuses": [
@@ -9975,7 +10291,8 @@
             "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
             "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
             "vm:anatomy:body:pelvis:unpaired:organ:gallbladder",
-            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
+            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
+            "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine"
           ]
         },
         {
@@ -10032,7 +10349,16 @@
             "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
             "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
             "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
-            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery"
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+            "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery"
           ]
         },
         {
@@ -10062,7 +10388,12 @@
             "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-vein",
             "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-vein",
             "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
-            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein"
+            "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
           ]
         },
         {
@@ -10159,6 +10490,223 @@
             "vm:anatomy:body:abdomen:right:muscle:right-external-oblique",
             "vm:anatomy:body:abdomen:left:muscle:left-external-oblique",
             "vm:anatomy:body:abdomen:midline:fascia:linea-alba"
+          ]
+        },
+        {
+          "id": "mesenteric-surfaces",
+          "title": "Mesenteric surfaces & bowel",
+          "rule": {
+            "fmaIds": [
+              "FMA14643",
+              "FMA14647",
+              "FMA16549"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA7200",
+                "FMA7201",
+                "FMA14542",
+                "FMA11338"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Keep the three supplied mesenteric surfaces with bowel context; hide a bowel aggregate to inspect the surface behind it.",
+          "inspect": "Set the bowel aside, then restore it with Undo to compare source relationships. Removing a surface is an educational visibility change, not peritoneal dissection.",
+          "landmarks": [
+            "mesentery of small intestine",
+            "transverse mesocolon",
+            "mesoappendix"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
+            "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
+            "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+            "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+            "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix"
+          ]
+        },
+        {
+          "id": "mesenteric-vessel-window",
+          "title": "Mesenteric vessels exposed",
+          "rule": {
+            "fmaIds": [
+              "FMA14810",
+              "FMA14811",
+              "FMA14815",
+              "FMA14818",
+              "FMA14820",
+              "FMA14824",
+              "FMA14826",
+              "FMA14828",
+              "FMA14829",
+              "FMA14332",
+              "FMA15391",
+              "FMA15405",
+              "FMA15406",
+              "FMA15407"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA14749",
+                "FMA14750",
+                "FMA50735"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Remove bowel and mesenteric surfaces to compare available arterial and venous segments with existing major-vessel context.",
+          "inspect": "Select and isolate an individual segment, or use the separate arterial and venous windows. Red and blue distinguish source artery/vein labels, not oxygenation. Gaps are not bridged with invented vessels.",
+          "landmarks": [
+            "superior mesenteric artery",
+            "superior mesenteric vein",
+            "inferior mesenteric vein",
+            "middle colic artery"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+            "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
+          ]
+        },
+        {
+          "id": "mesenteric-arteries",
+          "title": "Colic & appendicular arteries",
+          "rule": {
+            "fmaIds": [
+              "FMA14810",
+              "FMA14811",
+              "FMA14815",
+              "FMA14818",
+              "FMA14820",
+              "FMA14824",
+              "FMA14826",
+              "FMA14828",
+              "FMA14829"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA14749",
+                "FMA14750"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the admitted bowel arterial segments without overlying organs or veins.",
+          "inspect": "Frame a small branch for closer study. Continuity, territories and variant branching require review; the held ileal alternatives are not displayed.",
+          "landmarks": [
+            "middle colic artery",
+            "(?:right|left) colic artery",
+            "appendicular artery"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+            "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery"
+          ]
+        },
+        {
+          "id": "mesenteric-veins",
+          "title": "Mesenteric venous drainage",
+          "rule": {
+            "fmaIds": [
+              "FMA14332",
+              "FMA15391",
+              "FMA15405",
+              "FMA15406",
+              "FMA15407"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA50735"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Isolate the available mesenteric veins with the existing hepatic portal-vein source context.",
+          "inspect": "These are reference surfaces, not contrast enhancement, flow or a verified continuous drainage model.",
+          "landmarks": [
+            "superior mesenteric vein",
+            "inferior mesenteric vein",
+            "hepatic portal vein"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+            "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
+          ]
+        },
+        {
+          "id": "appendix-mesentery",
+          "title": "Appendix, mesoappendix & artery",
+          "rule": {
+            "fmaIds": [
+              "FMA16549",
+              "FMA14818"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA14542",
+                "FMA11338"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "A close four-structure window without the large bowel aggregates obscuring the supplied appendiceal context.",
+          "inspect": "Hide or fade the mesoappendix to inspect the available artery and appendix. The junction surface is context, not a complete cecum. Attachments and surgical planes remain unvalidated.",
+          "landmarks": [
+            "mesoappendix",
+            "appendicular artery",
+            "^appendix$",
+            "ileocecal junction"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
+            "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
+            "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery"
           ]
         }
       ]

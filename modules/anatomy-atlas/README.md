@@ -1,8 +1,12 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Mesenteric and bowel-vessel dissection
+
+The atlas now contains **942 source representations**. Abdomen has five new study windows: **Mesenteric surfaces & bowel**, **Mesenteric vessels exposed**, separate arterial/venous views, and **Appendix, mesoappendix & artery**. Three membranes and fourteen vessel segments are independently selectable. All previous anatomy remains exact; three near-overlapping arterial candidates are withheld. See [source evidence, controls and clinical limits](docs/MESENTERIC_DETAIL.md). These are draft reference surfaces, not a complete peritoneum, vascular tree or clinical dissection guide.
+
 ## Corrected intestinal dissection
 
-Open **Abdomen → Guided dissection → Bowel junction window** to select, hide or isolate the ileocecal junction separately from both bowel aggregates. One previously duplicated component now has one rendered owner, with its original source shape and position preserved. The catalogue has **925 entries**, not 925 clinically validated structures. See [exact preservation evidence and clinical limits](docs/INTESTINAL_JUNCTION.md).
+Open **Abdomen → Guided dissection → Bowel junction window** to select, hide or isolate the ileocecal junction separately from both bowel aggregates. One previously duplicated component now has one rendered owner, with its original source shape and position preserved. That correction reached 925 source entries; the current mesenteric extension is described above. See [exact preservation evidence and clinical limits](docs/INTESTINAL_JUNCTION.md).
 
 ## Whole-body and regional arranged study
 
@@ -10,7 +14,7 @@ Use the new **quick anatomy views** for all anatomy, bones with muscles, individ
 
 ## Regional dissection workspaces
 
-Every individual regional explorer separates **Layer by layer** from independent **Study windows**. Follow named removal steps, preview the exact structures a step will hide or restore, then use the searchable, system-filtered removed-tissue tray to restore one structure or a group with one-step undo. The current 103 recipes comprise 47 regional layer steps and 56 independent views (including whole-body comparisons), with 85 focused views. These are visibility recipes, not a claim of missing-tissue completion. See [dissection workbench](docs/DISSECTION_WORKBENCH.md) and the [junction addition](docs/INTESTINAL_JUNCTION.md).
+Every individual regional explorer separates **Layer by layer** from independent **Study windows**. Follow named removal steps, preview the exact structures a step will hide or restore, then use the searchable, system-filtered removed-tissue tray to restore one structure or a group with one-step undo. The current 108 recipes comprise 47 regional layer steps and 61 independent views (including whole-body comparisons), with 90 focused views. These are visibility recipes, not a claim of missing-tissue completion. See [dissection workbench](docs/DISSECTION_WORKBENCH.md) and the [mesenteric addition](docs/MESENTERIC_DETAIL.md).
 
 ## Dental and orbital close-ups
 
@@ -60,11 +64,11 @@ The earlier numerical explode review is preserved in `docs/EXPLODE_REVIEW.md`, a
 
 The library now opens at `/` with a whole-body model and **11 individual regional explorers**: head/neck, thorax, abdomen, pelvis/hip, shoulder/arm, elbow/forearm, wrist/hand, hip/thigh, knee/leg, ankle/foot and spine/back. Each region has its own `/regions/{region-id}` URL. The approved visual approach of the dedicated shoulder viewer is preserved at `/shoulder`.
 
-The expanded source library contains **925 selectable entries**: 203 skeletal, 369 muscular, 73 organ (including 28 teeth and a separately selectable intestinal junction), 54 nervous-system, 146 vascular and 80 connective-tissue entries. These are source representations, not an assertion of complete anatomical coverage or a count of distinct human bones/muscles. Whole-body and regional views support system switches, left/right filtering, name search, rotation, pan, zoom, selective hide/restore, isolate/frame, separation and identification practice. Anatomy and clinical tabs remain available; unauthored specialist material is clearly marked pending, not manufactured as finished teaching content.
+The expanded source library contains **942 selectable entries**: 203 skeletal, 369 muscular, 73 organ (including 28 teeth and a separately selectable intestinal junction), 54 nervous-system, 160 vascular and 83 connective-tissue entries (including three mesenteric membranes). These are source representations, not an assertion of complete anatomical coverage or a count of distinct human bones/muscles. Whole-body and regional views support system switches, left/right filtering, name search, rotation, pan, zoom, selective hide/restore, isolate/frame, separation and identification practice. Anatomy and clinical tabs remain available; unauthored specialist material is clearly marked pending, not manufactured as finished teaching content.
 
 **Nervous-system scope:** brain aggregate, 22 selected deep-brain entries, 28 selected cranial/orbital nerve entries, two ciliary ganglia and a central-canal representation. No complete spinal cord, limb peripheral nerves, brachial plexus or lumbosacral plexus is included. The source ambiguously maps spinal cord and central canal to the same mesh; the narrower central-canal identity is used. Four candidate muscle entries with source laterality/position discrepancies were quarantined, not automatically relabelled. See `docs/FULL_BODY_COVERAGE.md`.
 
-The full-body catalogue is split into 74 lazy-loaded regional/system GLB bundles. Whole-body initially loads bones; regional pages open with their assembled available anatomy. Other bundles load on demand. An organs-only or nerves-only view automatically reframes to the visible anatomy, and a selected structure can be framed individually. The entire expanded body asset set is about 93.70 MB uncompressed; network transfer and device memory depend on the chosen regions/systems. These assets introduce no new dependencies or paid services.
+The full-body catalogue is split into 76 lazy-loaded regional/system GLB bundles. Whole-body initially loads bones; regional pages open with their assembled available anatomy. Other bundles load on demand. An organs-only or nerves-only view automatically reframes to the visible anatomy, and a selected structure can be framed individually. The entire expanded body asset set is about 94.65 MB uncompressed; network transfer and device memory depend on the chosen regions/systems. These assets introduce no new dependencies or paid services.
 
 ## Guided regional dissection
 

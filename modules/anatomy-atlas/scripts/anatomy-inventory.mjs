@@ -2,6 +2,12 @@ import { createHash } from 'node:crypto';
 const compareText = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 // Source coverage is not anatomical completeness. No name heuristic admits a mesh.
 export const inventoryHolds = {
+  FMA66358:
+    'SMA trunk candidate is a near-coincident alternative to the already displayed superior mesenteric artery: sampled bidirectional surface distances are mostly below 0.25 mm. Keep the existing source unchanged pending extent/overlap adjudication.',
+  FMA14809:
+    'Ileal artery and ileal branch of inferior ileocolic branch (FMA14819) are near-coincident differently labelled source meshes. Both are withheld pending source identity/extent adjudication.',
+  FMA14819:
+    'Near-coincident alternative to FMA14809 with a different ileal/ileocolic identity. Both candidates are withheld rather than duplicated or silently relabelled.',
   FMA74075:
     'Levatores costarum longi source needs fibre-course, level and overlap adjudication against breves; similar full thoracic extent is not proof of source error.',
   FMA74076:

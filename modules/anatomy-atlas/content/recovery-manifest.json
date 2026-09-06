@@ -1,7 +1,7 @@
 {
   "version": 4,
   "date": "2026-09-06",
-  "catalogSha256": "9512052d74f333f3276aac1926c8537c428badcd237dd724a5822cd7c7a005cd",
+  "catalogSha256": "8834615444c57b428fdf79689370c7894ba7aa400149f0b800014d9fdc158836",
   "status": "unvalidated",
   "method": "licensed-source-recovery",
   "generatedAnatomicalMeshes": 0,
@@ -6367,6 +6367,312 @@
         }
       ],
       "coverageNote": "Unvalidated BodyParts3D 4.0 ileocecal-junction source surface, separated from both bowel display aggregates without changing coordinates or shape. The source also aliases this surface to cecal and ileal-wall concepts; it is not a separately validated cecum, valve, bowel wall or surgical plane. This corrects duplicate rendering, not missing tissue. No imaging appearance or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+      "fmaId": "FMA14643",
+      "sourceName": "mesentery of small intestine",
+      "sourceTree": "isa",
+      "category": "membrane",
+      "system": "connective",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3396",
+          "sha256": "6481d1f71c8ae51af02df08bb64a70f9d821e843e64a42d10a3bdb5c13dab7d7"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected mesenteric surface only, not a complete peritoneum, mesenteric root, fascial plane or separately segmented peritoneal leaves. Attachments, folds and embedded structures require specialist review."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+      "fmaId": "FMA14647",
+      "sourceName": "transverse mesocolon",
+      "sourceTree": "isa",
+      "category": "membrane",
+      "system": "connective",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3398",
+          "sha256": "580c65869c905aa33afa3a19e2b3f685e90b24d9dfa3e67bde775304c1c6a810"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected mesenteric surface only, not a complete peritoneum, mesenteric root, fascial plane or separately segmented peritoneal leaves. Attachments, folds and embedded structures require specialist review."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
+      "fmaId": "FMA16549",
+      "sourceName": "mesoappendix",
+      "sourceTree": "isa",
+      "category": "membrane",
+      "system": "connective",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3397",
+          "sha256": "bc5583810528a9ef675c3dddb7fa75911aa20531c7eb548e91e34c7c2cf5dfd7"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected mesenteric surface only, not a complete peritoneum, mesenteric root, fascial plane or separately segmented peritoneal leaves. Attachments, folds and embedded structures require specialist review."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+      "fmaId": "FMA14332",
+      "sourceName": "superior mesenteric vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3647",
+          "sha256": "55ea29d132bf0e79a7af6657a975c9ed5bd64e516f91c4794d96e2db2675e2e8"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+      "fmaId": "FMA14810",
+      "sourceName": "middle colic artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3542",
+          "sha256": "b77b34cda312ffba8034c41a5457a0ad052d28439efd228ef90724ec3c4adce4"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+      "fmaId": "FMA14811",
+      "sourceName": "right colic artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3590",
+          "sha256": "d4099403f391139ea5716f10f441489d1f8abaa7b39a0e21596efe5457bddbd0"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+      "fmaId": "FMA14815",
+      "sourceName": "ileocolic artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3439",
+          "sha256": "a0e7715dace7a22773b5e976f415b6049fe84eeb8e91f01cb6a4582c31ced81a"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+      "fmaId": "FMA14818",
+      "sourceName": "appendicular artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3410",
+          "sha256": "f13009791207502aa815d5c57825048f701f7b82ed563ccd2d0369c7d1c78bdf"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+      "fmaId": "FMA14820",
+      "sourceName": "ascending branch of inferior branch of ileocolic artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3414",
+          "sha256": "af7a27732bb6fc2b63ff7024ce36384f25ffae44952c7899a773aa1f7a2df84f"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+      "fmaId": "FMA14824",
+      "sourceName": "marginal colic artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ2025",
+          "sha256": "963b07fc664a9bfdeaab8c9d813a90b415aa6c97fe89c7db5713b5600a406400"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+      "fmaId": "FMA14826",
+      "sourceName": "left colic artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3494",
+          "sha256": "ee66dc3feb19c5b6c8500420c2e67a04f593045ddcdcfd24ac1faf1412a52bd1"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+      "fmaId": "FMA14828",
+      "sourceName": "ascending branch of left colic artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3399",
+          "sha256": "a0d0d7017082c40cdae252f18e5274abb435b05b64c835eea05bd6c0306e3dd3"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+      "fmaId": "FMA14829",
+      "sourceName": "descending branch of left colic artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3428",
+          "sha256": "1428965636dc55745b205ce70dd0a630eb0b6cc89d753a5bb89d1a0fbd45ac33"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+      "fmaId": "FMA15391",
+      "sourceName": "inferior mesenteric vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3443",
+          "sha256": "59393e5b8a5cd62e7f2be2f8e36a7b0a41b103dd23a5eeae501e61f495c4df95"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+      "fmaId": "FMA15405",
+      "sourceName": "ileal vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3438",
+          "sha256": "39a8939f3720a45116fee6ce0210d1279cae4548532a7f749e2485cbd907772c"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+      "fmaId": "FMA15406",
+      "sourceName": "middle colic vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3543",
+          "sha256": "001af4e63182ebd20eb8ae9b15e51d85302d56f4eb9134a78cd44e2a5047a9bf"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+      "fmaId": "FMA15407",
+      "sourceName": "right colic vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3591",
+          "sha256": "9bae25c069450677e645493c0b2e987c65ccaf984f7a441d126db6335601ec73"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established."
     }
   ]
 }

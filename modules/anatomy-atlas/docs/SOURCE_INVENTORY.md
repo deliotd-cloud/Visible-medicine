@@ -1,6 +1,8 @@
 # Full source inventory and third recovery milestone
 
-This document records the 859-entry inventory milestone. Subsequent evidence is described in [Deep brain](DEEP_BRAIN.md), the 892-entry [connective/deep-spinal milestone](AXIAL_DETAIL.md), the 924-entry [dental/orbital milestone](HEAD_DETAIL.md), and the current **925-entry [intestinal-junction correction](INTESTINAL_JUNCTION.md)**. `content/source-inventory.json` is regenerated against the current catalogue. Historical counts below describe this milestone, not the latest whole-body total. The two bowel-parent adaptations have explicit preservation exceptions; the earlier pinned baseline files are unchanged.
+**Current extension:** the [mesenteric milestone](MESENTERIC_DETAIL.md) reaches **942 entries** with seventeen admissions and three explicit near-overlap holds. The current source inventory includes its original archive/geometry evidence and classifications; previous milestone summaries below remain historical.
+
+This document records the 859-entry inventory milestone. Subsequent evidence is described in [Deep brain](DEEP_BRAIN.md), the 892-entry [connective/deep-spinal milestone](AXIAL_DETAIL.md), the 924-entry [dental/orbital milestone](HEAD_DETAIL.md), and the **925-entry [intestinal-junction correction](INTESTINAL_JUNCTION.md)**. `content/source-inventory.json` is regenerated against the current catalogue. Historical counts below describe this milestone, not the latest whole-body total. The two bowel-parent adaptations have explicit preservation exceptions; the earlier pinned baseline files are unchanged.
 
 ## What changed
 

@@ -20,8 +20,8 @@ assert.equal(
   '9b2cb3eb0b530491c9a4d0f54c4d89058e14f7475f05597f4babf9fb3ea8bdc7',
 );
 assert.equal(baseline.structures.length, 924);
-assert.equal(catalog.structures.length, 925);
-assert.equal(catalog.bundles.length, 74);
+assert.equal(catalog.structures.length, 942);
+assert.equal(catalog.bundles.length, 76);
 assert.deepEqual(catalog.coordinateSystem, baseline.coordinateSystem);
 assert.deepEqual(catalog.excluded, baseline.excluded);
 const junction = catalog.structures.find((s) => s.id === junctionId);
@@ -199,8 +199,8 @@ if (process.argv.includes('--record-transition')) {
   );
 const result = {
   passed: true,
-  catalogueEntries: 925,
-  bodyBundles: 74,
+  catalogueEntries: catalog.structures.length,
+  bodyBundles: catalog.bundles.length,
   unchangedPriorRecords: 922,
   unchangedPriorBundles: 72,
   explicitlyChangedParents: 2,

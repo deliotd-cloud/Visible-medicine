@@ -2,6 +2,7 @@ import type { BodyStructure, BodySystem } from './body-types';
 import { neuroStudySets, neuroStudyIds } from '../lib/neuroanatomy.ts';
 import { axialStudySets } from '../lib/axial-anatomy.ts';
 import { headDetailStudySets } from '../lib/head-detail.ts';
+import { mesentericStudySets } from '../lib/mesenteric-anatomy.ts';
 
 export type DissectionView =
   | 'anterior'
@@ -582,7 +583,7 @@ export const dissectionProfiles: Record<string, DissectionProfile> = {
       'The supplied wall is incomplete, so these stages are named exposure windows rather than a complete abdominal-wall dissection.',
     limitations: [
       'Rectus abdominis, internal oblique and transversus abdominis are not included.',
-      'Peritoneum, mesenteries and organ-internal layers are absent. Selected major vessels and ureters are available.',
+      'Three selected mesenteric surfaces and named vascular segments are available; peritoneal leaves, roots, organ-internal layers and complete vessel/nerve/lymphatic networks are not established.',
       'Organ removal is an educational visibility change, not a surgical sequence.',
     ],
     references: [ref('topoabd')],
@@ -1124,7 +1125,11 @@ dissectionProfiles['head-neck'].references.push(
 
 // Target and context rules are separate: do not reintroduce a whole skeleton
 // when a close window needs only the carpal, cervical or lumbar framework.
-for (const study of [...axialStudySets, ...headDetailStudySets]) {
+for (const study of [
+  ...axialStudySets,
+  ...headDetailStudySets,
+  ...mesentericStudySets,
+]) {
   for (const [index, region] of study.regions.entries()) {
     const rule = { fmaIds: study.targetFmaIds };
     dissectionProfiles[region].focuses.push({

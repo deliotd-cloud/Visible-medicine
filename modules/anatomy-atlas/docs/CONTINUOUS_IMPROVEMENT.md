@@ -8,11 +8,11 @@ Preserve official Visible Medicine branding, stable identities, source registrat
 
 ## Baseline checked on 6 September 2026
 
-The current whole-body catalogue has **925 selectable source representations, 74 bundles, 11 regions plus whole-body scope, 103 dissection stages and 85 focused views**. The dedicated shoulder has nine structures/11 source meshes in its separate bundle. These are source representations, not full coverage or clinical validation. The latest [intestinal-junction correction](INTESTINAL_JUNCTION.md) separates an existing duplicated component, not new tissue. Source reconciliation and admission decisions remain in [source inventory](SOURCE_INVENTORY.md), [deep brain](DEEP_BRAIN.md) and [connective/deep-spinal detail](AXIAL_DETAIL.md), with earlier holds in the [gap register](GAP_FILLING.md); do not re-import held surfaces without new evidence.
+The current whole-body catalogue has **942 selectable source representations, 76 bundles, 11 regions plus whole-body scope, 108 dissection stages and 90 focused views**. The dedicated shoulder has nine structures/11 source meshes in its separate bundle. These are source representations, not full coverage or clinical validation. The latest [mesenteric extension](MESENTERIC_DETAIL.md) adds seventeen entries while preserving every earlier structure and bundle. The [intestinal-junction correction](INTESTINAL_JUNCTION.md) remains intact. Source reconciliation and admission decisions remain in [source inventory](SOURCE_INVENTORY.md), [deep brain](DEEP_BRAIN.md) and [connective/deep-spinal detail](AXIAL_DETAIL.md), with earlier holds in the [gap register](GAP_FILLING.md); do not re-import held surfaces without new evidence.
 
 ## Ordered work queue
 
-**User-directed presentation/dissection priority:** the user supplied Human Atlas as a whole-body benchmark, then explicitly requested shoulder-style dissection for each individual region. The regional workbench and whole-body arrangement milestones implement those workflow improvements. The intestinal component-ownership defect is now corrected with exact preservation evidence. Next inspect unused same-version mesenteric/organ and vascular candidates; do not count cached candidates as admitted anatomy. The reference's public implementation was inspected as workflow evidence, not copied or browser/visually tested.
+**User-directed presentation/dissection priority:** the user supplied Human Atlas as a whole-body benchmark, then explicitly requested shoulder-style dissection for each individual region. Regional workbench, whole-body arrangement, intestinal ownership and mesenteric dissection milestones now advance that request. Next inspect remaining compatible regional connective/organ/vascular candidates, then strengthen source-linked related-structure navigation and keyboard selection feedback in dense regions. Do not count cached or held candidates as admitted anatomy. The reference's public implementation was inspected as workflow evidence, not copied or browser/visually tested.
 
 | Priority | Milestone | Evidence needed to accept it | Current state |
 | --- | --- | --- | --- |
@@ -47,7 +47,7 @@ All eleven regions now have named layer tracks distinct from independent study w
 
 ### Source queue handoff
 
-The unused v4 mesenteric/vascular candidate fetch was stopped deliberately when work moved to the user's reference-driven presentation and regional dissection priorities. Partial verified downloads are cache only; no candidate was admitted. Resume with exact archive/hash/identity/bounds evidence rather than counting cached files as new anatomy.
+The previously paused v4 mesenteric/vascular retrieval has now completed for twenty exact candidates. Seventeen were admitted with original coordinates and three near-overlapping arterial alternatives were withheld. See the mesenteric milestone below for evidence, current counts and next work. Cached raw files alone are never admission evidence.
 
 The inherited bowel duplication was corrected in the intestinal-junction milestone below. `FJ2599` now has one rendered owner, `FMA11338` (ileocecal junction), with exact geometry preservation and explicit parent-record migration. Clinical extent and the PART-OF cecal/ileal-wall aliases remain unresolved; the source has not been renamed as a complete cecum or valve.
 
@@ -55,15 +55,21 @@ The inherited bowel duplication was corrected in the intestinal-junction milesto
 
 Added nine prominent source-system presets and a separate same-scale tray mode in the whole-body and every regional explorer. The original spatial explode is unchanged. The tray uses two-phase reversible translations and provides projected entry clearance at 100%; shapes, IDs, relative scale and source coordinates are preserved. Pan/pinch, selected-structure framing, six projection directions, labels, clipping and local bookmarks are connected. The shared camera now preserves orthographic zoom without moving into surfaces, and focused framing clears old pan. Display review fingerprints were refreshed without approvals. The 1,926-layout/5,778-fit suite passes 12,074,267 numerical/helper assertions, including 9,898,922 clearance cases. See [arrangement details and limits](BODY_ARRANGEMENT.md). No new assets, dependencies or anatomical coverage are claimed. Next: source ownership/mesenteric candidate audit; specialist and device acceptance and the user's real imaging adapter remain open.
 
-## Per-milestone completion checklist
-
 ### Intestinal-junction correction milestone
 
 Separated one source surface from both bowel display aggregates into its original ileocecal-junction identity; added an abdominal study window/focus, original draft teaching and source-alias cautions. All 922 unrelated records and 72 unrelated body bundles remain exact. The old/new oriented-triangle comparison verifies 291,248 triangles and removes 288 duplicate triangles; the complete rendered source inventory now has one owner per source filename and canonical fingerprint. Historical baseline files remain unchanged, with a strictly hash-pinned two-record/one-bundle migration and negative regression tests. No new tissue, package, paid service or clinical approval.
 
 Source, dissection (3,036 + 7,416 camera checks), workbench (71,644), practice (54,507), saved views (17,171), imaging identities (43,620), inspection (1,117,039), arrangement (12,093,029), explode (503,485 pairs) and junction-study (5,370) checks pass. Numerical/software evidence is not hands-on device or clinical acceptance. See [exact evidence and reproduction](INTESTINAL_JUNCTION.md). Next concrete work: retrieve and audit v4 small-intestinal mesentery FMA14643, transverse mesocolon FMA14647, mesoappendix FMA16549 and selected mesenteric vessels, retaining all aliases/holds and checking existing arterial geometry before admission. The ongoing goal remains active.
 
-### Required checks for each subsequent milestone
+### Mesenteric source and dissection milestone
+
+Added three source membranes, nine arterial segments and five venous segments in two bundles (953,136 bytes). Every previous 925 record and 74 body-bundle hash is preserved. Twenty candidates were audited against exact source IDs/hashes, prior geometry and spatial bounds; sampled bidirectional point-to-triangle distances exposed three near-overlapping arterial alternatives despite different exact geometry hashes. FMA66358, FMA14809 and FMA14819 are now explicit holds. No variants were silently selected, sources relabelled, or clinical approvals created. The existing membrane renderer uses double-sided source surfaces; no artificial thickness or missing peritoneal leaves are generated.
+
+Five new abdominal windows/focuses cover mesentery/bowel context, exposed vessels, separate arteries/veins and a close appendiceal group. Existing controls and source-based imaging entries include the new identities; no actual scans or adapter are supplied. The new 2,733-assertion suite passes with current source/historical-preservation tests, 3,186 dissection checks plus 7,776 camera cases, 76,601 workbench checks, 54,574 practice checks, 17,246 saved-view checks, 44,402 imaging checks, 12,463,239 arrangement assertions, 1,135,399 inspection assertions, 520,604 explode pairs and 189 review checks. Type checks, focused lint, production build and the unchanged 808-package licence audit are required before private publication. These are not hands-on browser/device or clinical approval. See [source evidence and limits](MESENTERIC_DETAIL.md).
+
+Next executable work: inspect remaining unused same-version regional connective/organ/vascular definitions without reopening existing holds absent new evidence; implement source-linked related-structure navigation and keyboard selection feedback where these improve dense-region study. Clinical adjudication, actual-device acceptance and the user-supplied imaging adapter remain external gates. Keep the full improvement goal active.
+
+## Per-milestone completion checklist
 
 1. Inspect the current worktree and relevant source/licence evidence; preserve unrelated edits.
 2. Implement a coherent improvement to the actual viewer or ingestion/connection pipeline.

@@ -3,7 +3,7 @@
   "sourceVersion": "4.0",
   "license": "CC-BY-4.0",
   "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
-  "catalogSha256": "9512052d74f333f3276aac1926c8537c428badcd237dd724a5822cd7c7a005cd",
+  "catalogSha256": "8834615444c57b428fdf79689370c7894ba7aa400149f0b800014d9fdc158836",
   "tables": [
     {
       "name": "isa_parts_list_e.txt",
@@ -60,14 +60,14 @@
     "uniqueConceptIds": 3432,
     "archiveEntries": 3492,
     "archiveEntriesWithoutConcept": 0,
-    "admittedStructures": 925,
+    "admittedStructures": 942,
     "statuses": {
-      "represented-not-selectable": 1769,
-      "unused-available": 929,
-      "partly-represented": 189,
-      "admitted": 1313,
-      "held-source-review": 21,
-      "admitted-other-definition": 52
+      "represented-not-selectable": 1780,
+      "unused-available": 878,
+      "partly-represented": 196,
+      "admitted": 1339,
+      "held-source-review": 27,
+      "admitted-other-definition": 53
     }
   },
   "records": [
@@ -12303,10 +12303,12 @@
       "files": [
         "FJ3647"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -12691,10 +12693,12 @@
       "files": [
         "FJ3396"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -12707,10 +12711,13 @@
         "FJ3397",
         "FJ3398"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -12722,10 +12729,12 @@
       "files": [
         "FJ3398"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -13407,9 +13416,9 @@
       "files": [
         "FJ3437"
       ],
-      "status": "unused-available",
+      "status": "held-source-review",
       "displayedId": null,
-      "heldReason": null,
+      "heldReason": "Ileal artery and ileal branch of inferior ileocolic branch (FMA14819) are near-coincident differently labelled source meshes. Both are withheld pending source identity/extent adjudication.",
       "representedBy": [],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -13422,10 +13431,12 @@
       "files": [
         "FJ3542"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -13437,10 +13448,12 @@
       "files": [
         "FJ3590"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -13467,10 +13480,12 @@
       "files": [
         "FJ3439"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -13512,10 +13527,12 @@
       "files": [
         "FJ3410"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -13527,9 +13544,9 @@
       "files": [
         "FJ2034"
       ],
-      "status": "unused-available",
+      "status": "held-source-review",
       "displayedId": null,
-      "heldReason": null,
+      "heldReason": "Near-coincident alternative to FMA14809 with a different ileal/ileocolic identity. Both candidates are withheld rather than duplicated or silently relabelled.",
       "representedBy": [],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -13542,10 +13559,12 @@
       "files": [
         "FJ3414"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -13562,10 +13581,14 @@
         "FJ3414",
         "FJ3553"
       ],
-      "status": "unused-available",
+      "status": "partly-represented",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA21520"
@@ -13579,10 +13602,12 @@
       "files": [
         "FJ2025"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -13595,10 +13620,13 @@
         "FJ3399",
         "FJ3428"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA21521"
@@ -13612,10 +13640,12 @@
       "files": [
         "FJ3494"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -13627,10 +13657,12 @@
       "files": [
         "FJ3399"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -13642,10 +13674,12 @@
       "files": [
         "FJ3428"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -13955,10 +13989,12 @@
         "FJ3639",
         "FJ3657"
       ],
-      "status": "unused-available",
+      "status": "partly-represented",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -13985,10 +14021,12 @@
       "files": [
         "FJ3443"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -14076,10 +14114,14 @@
         "FJ3646",
         "FJ3655"
       ],
-      "status": "unused-available",
+      "status": "partly-represented",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -14153,10 +14195,12 @@
       "files": [
         "FJ3438"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -14168,10 +14212,12 @@
       "files": [
         "FJ3543"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -14183,10 +14229,12 @@
       "files": [
         "FJ3591"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -14991,10 +15039,12 @@
       "files": [
         "FJ3397"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -16159,10 +16209,14 @@
         "FJ3397",
         "FJ3398"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA20570",
@@ -16365,10 +16419,14 @@
         "FJ3397",
         "FJ3398"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA19754",
@@ -16386,10 +16444,14 @@
         "FJ3397",
         "FJ3398"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA19754",
@@ -17025,10 +17087,14 @@
         "FJ3414",
         "FJ3553"
       ],
-      "status": "unused-available",
+      "status": "partly-represented",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA14821"
@@ -17043,10 +17109,13 @@
         "FJ3399",
         "FJ3428"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA14825"
@@ -25698,6 +25767,8 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
         "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
         "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
@@ -37730,6 +37801,8 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
         "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
         "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
@@ -41166,14 +41239,21 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
         "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
@@ -42241,21 +42321,35 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
         "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
@@ -42743,9 +42837,14 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
         "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
         "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
         "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
@@ -42832,10 +42931,16 @@
         "FJ3655",
         "FJ3657"
       ],
-      "status": "unused-available",
+      "status": "partly-represented",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -53544,17 +53649,27 @@
         "vm:anatomy:body:abdomen:left:organ:left-adrenal-gland",
         "vm:anatomy:body:abdomen:left:organ:left-kidney",
         "vm:anatomy:body:abdomen:left:organ:left-ureter",
+        "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
         "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
         "vm:anatomy:body:abdomen:right:muscle:right-external-oblique",
         "vm:anatomy:body:abdomen:right:organ:right-adrenal-gland",
         "vm:anatomy:body:abdomen:right:organ:right-kidney",
         "vm:anatomy:body:abdomen:right:organ:right-ureter",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:appendix",
@@ -53567,12 +53682,19 @@
         "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
         "vm:anatomy:body:abdomen:unpaired:organ:spleen",
         "vm:anatomy:body:abdomen:unpaired:organ:stomach",
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
         "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
         "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-big-toe",
         "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-fourth-toe",
         "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-little-toe",
@@ -57911,17 +58033,27 @@
         "vm:anatomy:body:abdomen:left:organ:left-adrenal-gland",
         "vm:anatomy:body:abdomen:left:organ:left-kidney",
         "vm:anatomy:body:abdomen:left:organ:left-ureter",
+        "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
         "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
         "vm:anatomy:body:abdomen:right:muscle:right-external-oblique",
         "vm:anatomy:body:abdomen:right:organ:right-adrenal-gland",
         "vm:anatomy:body:abdomen:right:organ:right-kidney",
         "vm:anatomy:body:abdomen:right:organ:right-ureter",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:appendix",
@@ -57934,12 +58066,19 @@
         "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
         "vm:anatomy:body:abdomen:unpaired:organ:spleen",
         "vm:anatomy:body:abdomen:unpaired:organ:stomach",
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
         "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
         "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-big-toe",
         "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-fourth-toe",
         "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-little-toe",
@@ -58963,10 +59102,14 @@
         "FJ3397",
         "FJ3398"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA19754",
@@ -60045,9 +60188,9 @@
       "files": [
         "FJ3644"
       ],
-      "status": "unused-available",
+      "status": "held-source-review",
       "displayedId": null,
-      "heldReason": null,
+      "heldReason": "SMA trunk candidate is a near-coincident alternative to the already displayed superior mesenteric artery: sampled bidirectional surface distances are mostly below 0.25 mm. Keep the existing source unchanged pending extent/overlap adjudication.",
       "representedBy": [],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -60595,14 +60738,21 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
         "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
@@ -61158,8 +61308,13 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
-        "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein"
+        "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -63390,17 +63545,27 @@
         "vm:anatomy:body:abdomen:left:organ:left-adrenal-gland",
         "vm:anatomy:body:abdomen:left:organ:left-kidney",
         "vm:anatomy:body:abdomen:left:organ:left-ureter",
+        "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
         "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
         "vm:anatomy:body:abdomen:right:muscle:right-external-oblique",
         "vm:anatomy:body:abdomen:right:organ:right-adrenal-gland",
         "vm:anatomy:body:abdomen:right:organ:right-kidney",
         "vm:anatomy:body:abdomen:right:organ:right-ureter",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:appendix",
@@ -63413,12 +63578,19 @@
         "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
         "vm:anatomy:body:abdomen:unpaired:organ:spleen",
         "vm:anatomy:body:abdomen:unpaired:organ:stomach",
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
         "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
         "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-big-toe",
         "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-fourth-toe",
         "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-little-toe",
@@ -66540,17 +66712,27 @@
         "vm:anatomy:body:abdomen:left:organ:left-adrenal-gland",
         "vm:anatomy:body:abdomen:left:organ:left-kidney",
         "vm:anatomy:body:abdomen:left:organ:left-ureter",
+        "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
         "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
         "vm:anatomy:body:abdomen:right:muscle:right-external-oblique",
         "vm:anatomy:body:abdomen:right:organ:right-adrenal-gland",
         "vm:anatomy:body:abdomen:right:organ:right-kidney",
         "vm:anatomy:body:abdomen:right:organ:right-ureter",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:appendix",
@@ -66563,12 +66745,19 @@
         "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
         "vm:anatomy:body:abdomen:unpaired:organ:spleen",
         "vm:anatomy:body:abdomen:unpaired:organ:stomach",
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
         "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
         "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-big-toe",
         "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-fourth-toe",
         "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-little-toe",
@@ -70365,12 +70554,20 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
@@ -70379,12 +70576,18 @@
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
         "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
         "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
         "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
         "vm:anatomy:body:foot:left:muscle:lateral-head-of-left-flexor-hallucis-brevis",
         "vm:anatomy:body:foot:left:muscle:medial-head-of-left-flexor-hallucis-brevis",
         "vm:anatomy:body:foot:left:muscle:oblique-head-of-left-adductor-hallucis",
@@ -74059,10 +74262,17 @@
         "FJ3553",
         "FJ3590"
       ],
-      "status": "unused-available",
+      "status": "partly-represented",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -74123,10 +74333,12 @@
         "FJ3638",
         "FJ3656"
       ],
-      "status": "unused-available",
+      "status": "partly-represented",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -80322,12 +80534,22 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
@@ -80336,12 +80558,19 @@
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
         "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
         "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
         "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
         "vm:anatomy:body:foot:left:muscle:lateral-head-of-left-flexor-hallucis-brevis",
         "vm:anatomy:body:foot:left:muscle:medial-head-of-left-flexor-hallucis-brevis",
         "vm:anatomy:body:foot:left:muscle:oblique-head-of-left-adductor-hallucis",
@@ -82321,6 +82550,9 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
         "vm:anatomy:body:head-neck:left:organ:left-eyeball",
         "vm:anatomy:body:head-neck:midline:organ:brain",
         "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
@@ -83563,12 +83795,20 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
@@ -83577,12 +83817,18 @@
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
         "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
         "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
         "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
         "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
         "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
@@ -84366,15 +84612,24 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
         "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
@@ -84857,10 +85112,15 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+        "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
         "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
         "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
         "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
@@ -87876,6 +88136,8 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
         "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
         "vm:anatomy:body:abdomen:unpaired:organ:appendix",
         "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
@@ -87886,6 +88148,7 @@
         "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
         "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
         "vm:anatomy:body:abdomen:unpaired:organ:stomach",
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
         "vm:anatomy:body:head-neck:left:muscle:left-levator-veli-palatini",
         "vm:anatomy:body:head-neck:left:muscle:left-tensor-veli-palatini",
@@ -89228,18 +89491,25 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
         "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
         "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
@@ -97361,10 +97631,14 @@
         "FJ3397",
         "FJ3398"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA9908",
@@ -98284,10 +98558,14 @@
         "FJ3397",
         "FJ3398"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA9584",
@@ -100778,10 +101056,12 @@
       "files": [
         "FJ3396"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -100793,10 +101073,12 @@
       "files": [
         "FJ3398"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -100895,10 +101177,14 @@
         "FJ3397",
         "FJ3398"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA9584",
@@ -100973,7 +101259,13 @@
       "displayedId": "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery"
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -100994,6 +101286,7 @@
       "displayedId": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
       "heldReason": null,
       "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery"
       ],
       "unavailable": [],
@@ -101419,9 +101712,9 @@
       "files": [
         "FJ3437"
       ],
-      "status": "unused-available",
+      "status": "held-source-review",
       "displayedId": null,
-      "heldReason": null,
+      "heldReason": "Ileal artery and ileal branch of inferior ileocolic branch (FMA14819) are near-coincident differently labelled source meshes. Both are withheld pending source identity/extent adjudication.",
       "representedBy": [],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -101434,10 +101727,12 @@
       "files": [
         "FJ3542"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -101449,10 +101744,12 @@
       "files": [
         "FJ3590"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -101485,10 +101782,15 @@
         "FJ3439",
         "FJ3553"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted-other-definition",
+      "displayedId": "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -101530,10 +101832,12 @@
       "files": [
         "FJ3410"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -101545,9 +101849,9 @@
       "files": [
         "FJ2034"
       ],
-      "status": "unused-available",
+      "status": "held-source-review",
       "displayedId": null,
-      "heldReason": null,
+      "heldReason": "Near-coincident alternative to FMA14809 with a different ileal/ileocolic identity. Both candidates are withheld rather than duplicated or silently relabelled.",
       "representedBy": [],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -101560,10 +101864,12 @@
       "files": [
         "FJ3414"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -101580,10 +101886,14 @@
         "FJ3414",
         "FJ3553"
       ],
-      "status": "unused-available",
+      "status": "partly-represented",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -101595,10 +101905,12 @@
       "files": [
         "FJ2025"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -101610,10 +101922,12 @@
       "files": [
         "FJ3494"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -102589,10 +102903,12 @@
       "files": [
         "FJ3397"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -104515,16 +104831,22 @@
         "vm:anatomy:body:abdomen:left:organ:left-adrenal-gland",
         "vm:anatomy:body:abdomen:left:organ:left-kidney",
         "vm:anatomy:body:abdomen:left:organ:left-ureter",
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
         "vm:anatomy:body:abdomen:right:muscle:right-external-oblique",
         "vm:anatomy:body:abdomen:right:organ:right-adrenal-gland",
         "vm:anatomy:body:abdomen:right:organ:right-kidney",
         "vm:anatomy:body:abdomen:right:organ:right-ureter",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
         "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
         "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:appendix",
@@ -104536,9 +104858,13 @@
         "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
         "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
         "vm:anatomy:body:abdomen:unpaired:organ:stomach",
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
         "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
@@ -111924,15 +112250,22 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
         "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
@@ -113781,15 +114114,22 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
         "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
         "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
@@ -119546,9 +119886,9 @@
       "files": [
         "FJ3644"
       ],
-      "status": "unused-available",
+      "status": "held-source-review",
       "displayedId": null,
-      "heldReason": null,
+      "heldReason": "SMA trunk candidate is a near-coincident alternative to the already displayed superior mesenteric artery: sampled bidirectional surface distances are mostly below 0.25 mm. Keep the existing source unchanged pending extent/overlap adjudication.",
       "representedBy": [],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -122214,11 +122554,13 @@
         "FJ3397",
         "FJ3398"
       ],
-      "status": "partly-represented",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
         "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
         "vm:anatomy:body:abdomen:unpaired:organ:appendix",
         "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
@@ -122229,6 +122571,7 @@
         "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
         "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
         "vm:anatomy:body:abdomen:unpaired:organ:stomach",
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
         "vm:anatomy:body:pelvis:unpaired:organ:gallbladder",
         "vm:anatomy:body:pelvis:unpaired:organ:rectum",
@@ -127773,16 +128116,23 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
         "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
         "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
         "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
         "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
@@ -139966,9 +140316,11 @@
       "available": true,
       "bytes": 143305,
       "crc32": 2337474483,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "963b07fc664a9bfdeaab8c9d813a90b415aa6c97fe89c7db5713b5600a406400",
+      "geometrySha256": "647bf110f8c5050aa5e2c322222d0a48c2c48222a7db5f227ea0073e827d28be",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -154034,9 +154386,11 @@
       "available": true,
       "bytes": 4629919,
       "crc32": 1268014550,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "6481d1f71c8ae51af02df08bb64a70f9d821e843e64a42d10a3bdb5c13dab7d7",
+      "geometrySha256": "faaef2dd40fc791f02be40ab4bbf098cf02cd6cc85613f488799c97d45f1c14f",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine"
+      ]
     },
     {
       "tree": "isa",
@@ -154044,9 +154398,11 @@
       "available": true,
       "bytes": 89061,
       "crc32": 2243815543,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "bc5583810528a9ef675c3dddb7fa75911aa20531c7eb548e91e34c7c2cf5dfd7",
+      "geometrySha256": "e02c870d475c92cfa73396c12c1e5ec7c89d57488ba8c00998844c1d904fc800",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix"
+      ]
     },
     {
       "tree": "isa",
@@ -154054,9 +154410,11 @@
       "available": true,
       "bytes": 123013,
       "crc32": 3425338896,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "580c65869c905aa33afa3a19e2b3f685e90b24d9dfa3e67bde775304c1c6a810",
+      "geometrySha256": "e50f4f6895e97d781b2b3cd052fce52bd888c59d696986f1993f8770c2f13abc",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon"
+      ]
     },
     {
       "tree": "isa",
@@ -154064,9 +154422,11 @@
       "available": true,
       "bytes": 33658,
       "crc32": 95854469,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "a0d0d7017082c40cdae252f18e5274abb435b05b64c835eea05bd6c0306e3dd3",
+      "geometrySha256": "000a0243674118d2cb7fc3847b6f75888c013682f41ff42ed372f7b4b6e4af8e",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -154114,9 +154474,11 @@
       "available": true,
       "bytes": 69320,
       "crc32": 2511480983,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "f13009791207502aa815d5c57825048f701f7b82ed563ccd2d0369c7d1c78bdf",
+      "geometrySha256": "adc23f3c8123a4c874ff061b17925c4081559a2208e5a36da26927087e180d95",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -154148,9 +154510,11 @@
       "available": true,
       "bytes": 25704,
       "crc32": 2293593523,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "af7a27732bb6fc2b63ff7024ce36384f25ffae44952c7899a773aa1f7a2df84f",
+      "geometrySha256": "8bbc02dd793e9667f2a897663b04cb412aeb1f2c340cf3c1b6bcc7920b93e838",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -154254,9 +154618,11 @@
       "available": true,
       "bytes": 31109,
       "crc32": 1567908350,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "1428965636dc55745b205ce70dd0a630eb0b6cc89d753a5bb89d1a0fbd45ac33",
+      "geometrySha256": "ddc7d94d27bbc6e01e5fe6c5d7be827211583b42b37eadba28858dbc38194c8c",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -154336,9 +154702,11 @@
       "available": true,
       "bytes": 14160,
       "crc32": 3548844626,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "39a8939f3720a45116fee6ce0210d1279cae4548532a7f749e2485cbd907772c",
+      "geometrySha256": "274f1553ccda72e1eb0a381c6b817318a18be89c6c3d985dc9530276626a3ff1",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein"
+      ]
     },
     {
       "tree": "isa",
@@ -154346,9 +154714,11 @@
       "available": true,
       "bytes": 14743,
       "crc32": 11708847,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "a0e7715dace7a22773b5e976f415b6049fe84eeb8e91f01cb6a4582c31ced81a",
+      "geometrySha256": "f3c116a5efe6f13eef9e84cb784aff14a6eac8b12c4ed1c6629dc75298678551",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -154390,9 +154760,11 @@
       "available": true,
       "bytes": 66163,
       "crc32": 2996846224,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "59393e5b8a5cd62e7f2be2f8e36a7b0a41b103dd23a5eeae501e61f495c4df95",
+      "geometrySha256": "fcf4337d135a37f23a8e962ab23b193c790cec82d317679c02cb21b1d8333133",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein"
+      ]
     },
     {
       "tree": "isa",
@@ -154806,9 +155178,11 @@
       "available": true,
       "bytes": 12439,
       "crc32": 2322401899,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "ee66dc3feb19c5b6c8500420c2e67a04f593045ddcdcfd24ac1faf1412a52bd1",
+      "geometrySha256": "e1d459c600d1fb94a1a4771717f8b99d06a12906d4605a08c370f226d4e369b8",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -155134,9 +155508,11 @@
       "available": true,
       "bytes": 97422,
       "crc32": 2515091110,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "b77b34cda312ffba8034c41a5457a0ad052d28439efd228ef90724ec3c4adce4",
+      "geometrySha256": "afa78525e984fca8dd57d9ec8ca1702226ba20781245d28858b84745e7af05c3",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -155144,9 +155520,11 @@
       "available": true,
       "bytes": 91588,
       "crc32": 3216428044,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "001af4e63182ebd20eb8ae9b15e51d85302d56f4eb9134a78cd44e2a5047a9bf",
+      "geometrySha256": "01ee1686944cee198d82ef1d80ffff3c8f817d0c24eb41c7e4e3d9338ed94988",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein"
+      ]
     },
     {
       "tree": "isa",
@@ -155542,9 +155920,11 @@
       "available": true,
       "bytes": 72481,
       "crc32": 3766212417,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "d4099403f391139ea5716f10f441489d1f8abaa7b39a0e21596efe5457bddbd0",
+      "geometrySha256": "f361e3a0e71cc4ef219ee48fe829df16d26c26434c24c2d10583b03dc44a0d6d",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -155552,9 +155932,11 @@
       "available": true,
       "bytes": 81370,
       "crc32": 255510725,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "9bae25c069450677e645493c0b2e987c65ccaf984f7a441d126db6335601ec73",
+      "geometrySha256": "16c8b7e4c50af507f8126a780b49374438217c8256a96dbe97e80685a0617266",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
+      ]
     },
     {
       "tree": "isa",
@@ -155982,9 +156364,11 @@
       "available": true,
       "bytes": 49595,
       "crc32": 3060586182,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "55ea29d132bf0e79a7af6657a975c9ed5bd64e516f91c4794d96e2db2675e2e8",
+      "geometrySha256": "697194bde0d7e9948fa69c9ebadc0dff46007d52ff6914c07dd21eac8e8be1b6",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein"
+      ]
     },
     {
       "tree": "isa",
@@ -158934,9 +159318,11 @@
       "available": true,
       "bytes": 143308,
       "crc32": 999707690,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "0aacd2456f34d662a406fc6f81ddd7ddb040975ebb0a7b4f6b839769ea143965",
+      "geometrySha256": "647bf110f8c5050aa5e2c322222d0a48c2c48222a7db5f227ea0073e827d28be",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery"
+      ]
     },
     {
       "tree": "partof",
@@ -169628,9 +170014,11 @@
       "available": true,
       "bytes": 4629923,
       "crc32": 591410022,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "1422c081de9a42c5770c92dde76484ca04e6241666aa553b9e87698717a01797",
+      "geometrySha256": "faaef2dd40fc791f02be40ab4bbf098cf02cd6cc85613f488799c97d45f1c14f",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine"
+      ]
     },
     {
       "tree": "partof",
@@ -169638,9 +170026,11 @@
       "available": true,
       "bytes": 89065,
       "crc32": 2824764759,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "6d3938a42f01651acfca17d3ce4fb475340679df84544b44ad3a15017e958a00",
+      "geometrySha256": "e02c870d475c92cfa73396c12c1e5ec7c89d57488ba8c00998844c1d904fc800",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix"
+      ]
     },
     {
       "tree": "partof",
@@ -169648,9 +170038,11 @@
       "available": true,
       "bytes": 123017,
       "crc32": 3747803226,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "e6937fc4d0e4447521fc6d292aa88c91962b1e42b1f69c175e01b0ead0e6efc1",
+      "geometrySha256": "e50f4f6895e97d781b2b3cd052fce52bd888c59d696986f1993f8770c2f13abc",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon"
+      ]
     },
     {
       "tree": "partof",
@@ -169668,9 +170060,11 @@
       "available": true,
       "bytes": 69323,
       "crc32": 991832983,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "d762effbe96eb0492fb54fbbc6bd5e1bf7d8a18cde52f5855e7de80a6c6c9cb4",
+      "geometrySha256": "adc23f3c8123a4c874ff061b17925c4081559a2208e5a36da26927087e180d95",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery"
+      ]
     },
     {
       "tree": "partof",
@@ -169702,9 +170096,11 @@
       "available": true,
       "bytes": 25707,
       "crc32": 2736547907,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "3d877b8431617e93325aefc873ce211bf8d83402f306499de478c3be9d40fa8a",
+      "geometrySha256": "8bbc02dd793e9667f2a897663b04cb412aeb1f2c340cf3c1b6bcc7920b93e838",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery"
+      ]
     },
     {
       "tree": "partof",
@@ -169800,9 +170196,11 @@
       "available": true,
       "bytes": 14746,
       "crc32": 510851184,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "527d09b93b720a1afef8d56beb257b1dc817e2eee8496ac16f09ae67f8195730",
+      "geometrySha256": "f3c116a5efe6f13eef9e84cb784aff14a6eac8b12c4ed1c6629dc75298678551",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery"
+      ]
     },
     {
       "tree": "partof",
@@ -170086,9 +170484,11 @@
       "available": true,
       "bytes": 12442,
       "crc32": 377698917,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "522c13042664240fe6e6f6df34aaf76d54eb2968a1661997015d4baf6a3269d0",
+      "geometrySha256": "e1d459c600d1fb94a1a4771717f8b99d06a12906d4605a08c370f226d4e369b8",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:left:vessel:left-colic-artery"
+      ]
     },
     {
       "tree": "partof",
@@ -170264,9 +170664,11 @@
       "available": true,
       "bytes": 97425,
       "crc32": 1423155767,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "3963ff70d46adbda2b225ea476d30df60e5c3573d15a689f4abc37a5397f1cf5",
+      "geometrySha256": "afa78525e984fca8dd57d9ec8ca1702226ba20781245d28858b84745e7af05c3",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery"
+      ]
     },
     {
       "tree": "partof",
@@ -170512,9 +170914,11 @@
       "available": true,
       "bytes": 72484,
       "crc32": 2749527066,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "72d5f1ffabfb94dc4f472063aa8deee3563d3ad5f41aa7fae63ac69dfb436c98",
+      "geometrySha256": "f361e3a0e71cc4ef219ee48fe829df16d26c26434c24c2d10583b03dc44a0d6d",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:right:vessel:right-colic-artery"
+      ]
     },
     {
       "tree": "partof",

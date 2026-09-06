@@ -1,0 +1,1320 @@
+{
+  "sourceCommit": "85401e066e4f5479ca00e7177f2e8aa29676ec94",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "licenseChecked": "2026-09-06",
+  "licenseUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+  "results": [
+    {
+      "fmaId": "FMA14643",
+      "sourceName": "mesentery of small intestine",
+      "sourceTree": "isa",
+      "system": "connective",
+      "category": "membrane",
+      "file": "FJ3396",
+      "sha256": "6481d1f71c8ae51af02df08bb64a70f9d821e843e64a42d10a3bdb5c13dab7d7",
+      "geometrySha256": "faaef2dd40fc791f02be40ab4bbf098cf02cd6cc85613f488799c97d45f1c14f",
+      "bytes": 4629919,
+      "crc32": 1268014550,
+      "bounds": {
+        "min": [
+          -79.9072,
+          -168.9,
+          819.847
+        ],
+        "max": [
+          92.673,
+          -120.226,
+          1030.35
+        ],
+        "vertices": 56947
+      },
+      "sceneBounds": {
+        "min": [
+          -0.799072,
+          0.1984699999999998,
+          0.70226
+        ],
+        "max": [
+          0.92673,
+          2.303499999999999,
+          1.189
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 38156,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA14643",
+          "name": "mesentery of small intestine"
+        },
+        {
+          "tree": "partof",
+          "fmaId": "FMA14643",
+          "name": "mesentery of small intestine"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14647",
+      "sourceName": "transverse mesocolon",
+      "sourceTree": "isa",
+      "system": "connective",
+      "category": "membrane",
+      "file": "FJ3398",
+      "sha256": "580c65869c905aa33afa3a19e2b3f685e90b24d9dfa3e67bde775304c1c6a810",
+      "geometrySha256": "e50f4f6895e97d781b2b3cd052fce52bd888c59d696986f1993f8770c2f13abc",
+      "bytes": 123013,
+      "crc32": 3425338896,
+      "bounds": {
+        "min": [
+          -81.9,
+          -181.821,
+          860.872
+        ],
+        "max": [
+          91.1461,
+          -50.5898,
+          1063.62
+        ],
+        "vertices": 1366
+      },
+      "sceneBounds": {
+        "min": [
+          -0.8190000000000001,
+          0.6087199999999996,
+          0.0058979999999999675
+        ],
+        "max": [
+          0.9114610000000001,
+          2.6361999999999988,
+          1.31821
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 1481,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA14647",
+          "name": "transverse mesocolon"
+        },
+        {
+          "tree": "partof",
+          "fmaId": "FMA14647",
+          "name": "transverse mesocolon"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA16549",
+      "sourceName": "mesoappendix",
+      "sourceTree": "isa",
+      "system": "connective",
+      "category": "membrane",
+      "file": "FJ3397",
+      "sha256": "bc5583810528a9ef675c3dddb7fa75911aa20531c7eb548e91e34c7c2cf5dfd7",
+      "geometrySha256": "e02c870d475c92cfa73396c12c1e5ec7c89d57488ba8c00998844c1d904fc800",
+      "bytes": 89061,
+      "crc32": 2243815543,
+      "bounds": {
+        "min": [
+          -83.1061,
+          -126.007,
+          870.205
+        ],
+        "max": [
+          -19.807,
+          -86.0791,
+          915.591
+        ],
+        "vertices": 812
+      },
+      "sceneBounds": {
+        "min": [
+          -0.831061,
+          0.7020500000000004,
+          0.360791
+        ],
+        "max": [
+          -0.19807,
+          1.1559100000000002,
+          0.76007
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 1388,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA16549",
+          "name": "mesoappendix"
+        },
+        {
+          "tree": "partof",
+          "fmaId": "FMA16549",
+          "name": "mesoappendix"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14332",
+      "sourceName": "superior mesenteric vein",
+      "sourceTree": "isa",
+      "system": "vessels",
+      "category": "vessel",
+      "file": "FJ3647",
+      "sha256": "55ea29d132bf0e79a7af6657a975c9ed5bd64e516f91c4794d96e2db2675e2e8",
+      "geometrySha256": "697194bde0d7e9948fa69c9ebadc0dff46007d52ff6914c07dd21eac8e8be1b6",
+      "bytes": 49595,
+      "crc32": 3060586182,
+      "bounds": {
+        "min": [
+          -62.5509,
+          -149.633,
+          910.141
+        ],
+        "max": [
+          -5.02052,
+          -109.144,
+          1066.98
+        ],
+        "vertices": 489
+      },
+      "sceneBounds": {
+        "min": [
+          -0.625509,
+          1.1014099999999996,
+          0.5914400000000001
+        ],
+        "max": [
+          -0.050205200000000005,
+          2.6698000000000004,
+          0.9963300000000002
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 702,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA14332",
+          "name": "superior mesenteric vein"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14809",
+      "sourceName": "ileal artery",
+      "sourceTree": "isa",
+      "system": "vessels",
+      "category": "vessel",
+      "file": "FJ3437",
+      "sha256": "008f2f9c91d9ae5949c77db35a420e8411d8804e2c30c9270bda8b2afc2d65d6",
+      "geometrySha256": "8a58d87d9c2d38fc51dcf3b915ba75cf7a8f4244a37a115f746cbacbb8f2dabf",
+      "bytes": 13000,
+      "crc32": 3261105556,
+      "bounds": {
+        "min": [
+          -53.3066,
+          -132.3,
+          936.634
+        ],
+        "max": [
+          -29.1445,
+          -121.474,
+          957.031
+        ],
+        "vertices": 134
+      },
+      "sceneBounds": {
+        "min": [
+          -0.533066,
+          1.36634,
+          0.71474
+        ],
+        "max": [
+          -0.291445,
+          1.5703099999999994,
+          0.8230000000000002
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 186,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA14809",
+          "name": "ileal artery"
+        },
+        {
+          "tree": "partof",
+          "fmaId": "FMA14809",
+          "name": "ileal artery"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14810",
+      "sourceName": "middle colic artery",
+      "sourceTree": "isa",
+      "system": "vessels",
+      "category": "vessel",
+      "file": "FJ3542",
+      "sha256": "b77b34cda312ffba8034c41a5457a0ad052d28439efd228ef90724ec3c4adce4",
+      "geometrySha256": "afa78525e984fca8dd57d9ec8ca1702226ba20781245d28858b84745e7af05c3",
+      "bytes": 97422,
+      "crc32": 2515091110,
+      "bounds": {
+        "min": [
+          -68.398,
+          -179.459,
+          1013.38
+        ],
+        "max": [
+          62.5537,
+          -119.444,
+          1065.07
+        ],
+        "vertices": 944
+      },
+      "sceneBounds": {
+        "min": [
+          -0.6839799999999999,
+          2.1338,
+          0.6944400000000001
+        ],
+        "max": [
+          0.625537,
+          2.6506999999999996,
+          1.2945900000000001
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 1430,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA14810",
+          "name": "middle colic artery"
+        },
+        {
+          "tree": "partof",
+          "fmaId": "FMA14810",
+          "name": "middle colic artery"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14811",
+      "sourceName": "right colic artery",
+      "sourceTree": "isa",
+      "system": "vessels",
+      "category": "vessel",
+      "file": "FJ3590",
+      "sha256": "d4099403f391139ea5716f10f441489d1f8abaa7b39a0e21596efe5457bddbd0",
+      "geometrySha256": "f361e3a0e71cc4ef219ee48fe829df16d26c26434c24c2d10583b03dc44a0d6d",
+      "bytes": 72481,
+      "crc32": 3766212417,
+      "bounds": {
+        "min": [
+          -68.946,
+          -149.693,
+          985.677
+        ],
+        "max": [
+          -5.39709,
+          -118.76,
+          1039.13
+        ],
+        "vertices": 744
+      },
+      "sceneBounds": {
+        "min": [
+          -0.68946,
+          1.8567700000000003,
+          0.6876000000000001
+        ],
+        "max": [
+          -0.0539709,
+          2.391300000000001,
+          0.9969300000000001
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 1000,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA14811",
+          "name": "right colic artery"
+        },
+        {
+          "tree": "partof",
+          "fmaId": "FMA14811",
+          "name": "right colic artery"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14815",
+      "sourceName": "ileocolic artery",
+      "sourceTree": "isa",
+      "system": "vessels",
+      "category": "vessel",
+      "file": "FJ3439",
+      "sha256": "a0e7715dace7a22773b5e976f415b6049fe84eeb8e91f01cb6a4582c31ced81a",
+      "geometrySha256": "f3c116a5efe6f13eef9e84cb784aff14a6eac8b12c4ed1c6629dc75298678551",
+      "bytes": 14743,
+      "crc32": 11708847,
+      "bounds": {
+        "min": [
+          -31.3805,
+          -144.37,
+          954.466
+        ],
+        "max": [
+          -5.43982,
+          -129.636,
+          983.391
+        ],
+        "vertices": 136
+      },
+      "sceneBounds": {
+        "min": [
+          -0.313805,
+          1.5446600000000001,
+          0.79636
+        ],
+        "max": [
+          -0.0543982,
+          1.8339099999999997,
+          0.9437000000000001
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 244,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA14815",
+          "name": "ileocolic artery"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14818",
+      "sourceName": "appendicular artery",
+      "sourceTree": "isa",
+      "system": "vessels",
+      "category": "vessel",
+      "file": "FJ3410",
+      "sha256": "f13009791207502aa815d5c57825048f701f7b82ed563ccd2d0369c7d1c78bdf",
+      "geometrySha256": "adc23f3c8123a4c874ff061b17925c4081559a2208e5a36da26927087e180d95",
+      "bytes": 69320,
+      "crc32": 2511480983,
+      "bounds": {
+        "min": [
+          -55.7088,
+          -124.552,
+          872.712
+        ],
+        "max": [
+          -23.4849,
+          -88.3874,
+          939.861
+        ],
+        "vertices": 733
+      },
+      "sceneBounds": {
+        "min": [
+          -0.557088,
+          0.7271199999999999,
+          0.383874
+        ],
+        "max": [
+          -0.234849,
+          1.39861,
+          0.7455200000000001
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 868,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA14818",
+          "name": "appendicular artery"
+        },
+        {
+          "tree": "partof",
+          "fmaId": "FMA14818",
+          "name": "appendicular artery"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14819",
+      "sourceName": "ileal branch of inferior branch of ileocolic artery",
+      "sourceTree": "isa",
+      "system": "vessels",
+      "category": "vessel",
+      "file": "FJ2034",
+      "sha256": "6023328056bfe189051a2fe69a50bb2aed3de187d62aa03868caf9e436d5e53f",
+      "geometrySha256": "9fc24af4a77c5542156d6ccec021b77f59058cd78deac51336e03ffed79b78ca",
+      "bytes": 8726,
+      "crc32": 1863537706,
+      "bounds": {
+        "min": [
+          -53.3772,
+          -132.9,
+          936.6
+        ],
+        "max": [
+          -29.1211,
+          -121.695,
+          956.951
+        ],
+        "vertices": 94
+      },
+      "sceneBounds": {
+        "min": [
+          -0.533772,
+          1.3660000000000003,
+          0.71695
+        ],
+        "max": [
+          -0.291211,
+          1.5695100000000002,
+          0.8290000000000001
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 114,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA14819",
+          "name": "ileal branch of inferior branch of ileocolic artery"
+        },
+        {
+          "tree": "partof",
+          "fmaId": "FMA14819",
+          "name": "ileal branch of inferior branch of ileocolic artery"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14820",
+      "sourceName": "ascending branch of inferior branch of ileocolic artery",
+      "sourceTree": "isa",
+      "system": "vessels",
+      "category": "vessel",
+      "file": "FJ3414",
+      "sha256": "af7a27732bb6fc2b63ff7024ce36384f25ffae44952c7899a773aa1f7a2df84f",
+      "geometrySha256": "8bbc02dd793e9667f2a897663b04cb412aeb1f2c340cf3c1b6bcc7920b93e838",
+      "bytes": 25704,
+      "crc32": 2293593523,
+      "bounds": {
+        "min": [
+          -72.0967,
+          -133.926,
+          956.618
+        ],
+        "max": [
+          -25.8435,
+          -115.259,
+          990.322
+        ],
+        "vertices": 262
+      },
+      "sceneBounds": {
+        "min": [
+          -0.720967,
+          1.5661800000000006,
+          0.65259
+        ],
+        "max": [
+          -0.25843499999999997,
+          1.9032200000000001,
+          0.8392599999999999
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 358,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA14820",
+          "name": "ascending branch of inferior branch of ileocolic artery"
+        },
+        {
+          "tree": "partof",
+          "fmaId": "FMA14820",
+          "name": "ascending branch of inferior branch of ileocolic artery"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14824",
+      "sourceName": "marginal colic artery",
+      "sourceTree": "isa",
+      "system": "vessels",
+      "category": "vessel",
+      "file": "FJ2025",
+      "sha256": "963b07fc664a9bfdeaab8c9d813a90b415aa6c97fe89c7db5713b5600a406400",
+      "geometrySha256": "647bf110f8c5050aa5e2c322222d0a48c2c48222a7db5f227ea0073e827d28be",
+      "bytes": 143305,
+      "crc32": 2337474483,
+      "bounds": {
+        "min": [
+          -70.2111,
+          -169.924,
+          930.857
+        ],
+        "max": [
+          68.6947,
+          -101.5,
+          1065.59
+        ],
+        "vertices": 1360
+      },
+      "sceneBounds": {
+        "min": [
+          -0.702111,
+          1.3085699999999998,
+          0.515
+        ],
+        "max": [
+          0.686947,
+          2.655899999999999,
+          1.19924
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 2106,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA14824",
+          "name": "marginal colic artery"
+        },
+        {
+          "tree": "partof",
+          "fmaId": "FMA14824",
+          "name": "marginal colic artery"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14826",
+      "sourceName": "left colic artery",
+      "sourceTree": "isa",
+      "system": "vessels",
+      "category": "vessel",
+      "file": "FJ3494",
+      "sha256": "ee66dc3feb19c5b6c8500420c2e67a04f593045ddcdcfd24ac1faf1412a52bd1",
+      "geometrySha256": "e1d459c600d1fb94a1a4771717f8b99d06a12906d4605a08c370f226d4e369b8",
+      "bytes": 12439,
+      "crc32": 2322401899,
+      "bounds": {
+        "min": [
+          12.9722,
+          -136.795,
+          971.879
+        ],
+        "max": [
+          31.8,
+          -126.654,
+          979.081
+        ],
+        "vertices": 131
+      },
+      "sceneBounds": {
+        "min": [
+          0.129722,
+          1.7187900000000003,
+          0.76654
+        ],
+        "max": [
+          0.318,
+          1.7908100000000002,
+          0.8679499999999999
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 182,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA14826",
+          "name": "left colic artery"
+        },
+        {
+          "tree": "partof",
+          "fmaId": "FMA14826",
+          "name": "left colic artery"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14828",
+      "sourceName": "ascending branch of left colic artery",
+      "sourceTree": "isa",
+      "system": "vessels",
+      "category": "vessel",
+      "file": "FJ3399",
+      "sha256": "a0d0d7017082c40cdae252f18e5274abb435b05b64c835eea05bd6c0306e3dd3",
+      "geometrySha256": "000a0243674118d2cb7fc3847b6f75888c013682f41ff42ed372f7b4b6e4af8e",
+      "bytes": 33658,
+      "crc32": 95854469,
+      "bounds": {
+        "min": [
+          30.4477,
+          -128.848,
+          977.039
+        ],
+        "max": [
+          62.6142,
+          -104.088,
+          1066.43
+        ],
+        "vertices": 329
+      },
+      "sceneBounds": {
+        "min": [
+          0.304477,
+          1.77039,
+          0.5408799999999999
+        ],
+        "max": [
+          0.626142,
+          2.664300000000001,
+          0.7884800000000002
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 498,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA14828",
+          "name": "ascending branch of left colic artery"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14829",
+      "sourceName": "descending branch of left colic artery",
+      "sourceTree": "isa",
+      "system": "vessels",
+      "category": "vessel",
+      "file": "FJ3428",
+      "sha256": "1428965636dc55745b205ce70dd0a630eb0b6cc89d753a5bb89d1a0fbd45ac33",
+      "geometrySha256": "ddc7d94d27bbc6e01e5fe6c5d7be827211583b42b37eadba28858dbc38194c8c",
+      "bytes": 31109,
+      "crc32": 1567908350,
+      "bounds": {
+        "min": [
+          28.0312,
+          -129.829,
+          942.315
+        ],
+        "max": [
+          65.2196,
+          -110.67,
+          980.764
+        ],
+        "vertices": 297
+      },
+      "sceneBounds": {
+        "min": [
+          0.280312,
+          1.4231500000000006,
+          0.6067
+        ],
+        "max": [
+          0.652196,
+          1.8076400000000001,
+          0.79829
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 482,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA14829",
+          "name": "descending branch of left colic artery"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA15391",
+      "sourceName": "inferior mesenteric vein",
+      "sourceTree": "isa",
+      "system": "vessels",
+      "category": "vessel",
+      "file": "FJ3443",
+      "sha256": "59393e5b8a5cd62e7f2be2f8e36a7b0a41b103dd23a5eeae501e61f495c4df95",
+      "geometrySha256": "fcf4337d135a37f23a8e962ab23b193c790cec82d317679c02cb21b1d8333133",
+      "bytes": 66163,
+      "crc32": 2996846224,
+      "bounds": {
+        "min": [
+          5.39067,
+          -131.082,
+          900.429
+        ],
+        "max": [
+          27.0602,
+          -111.191,
+          1069.55
+        ],
+        "vertices": 574
+      },
+      "sceneBounds": {
+        "min": [
+          0.0539067,
+          1.0042899999999997,
+          0.6119100000000001
+        ],
+        "max": [
+          0.270602,
+          2.6954999999999996,
+          0.81082
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 1108,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA15391",
+          "name": "inferior mesenteric vein"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA15405",
+      "sourceName": "ileal vein",
+      "sourceTree": "isa",
+      "system": "vessels",
+      "category": "vessel",
+      "file": "FJ3438",
+      "sha256": "39a8939f3720a45116fee6ce0210d1279cae4548532a7f749e2485cbd907772c",
+      "geometrySha256": "274f1553ccda72e1eb0a381c6b817318a18be89c6c3d985dc9530276626a3ff1",
+      "bytes": 14160,
+      "crc32": 3548844626,
+      "bounds": {
+        "min": [
+          -55.1082,
+          -129.41,
+          936.93
+        ],
+        "max": [
+          -30.9535,
+          -118.462,
+          957.602
+        ],
+        "vertices": 140
+      },
+      "sceneBounds": {
+        "min": [
+          -0.551082,
+          1.3692999999999995,
+          0.68462
+        ],
+        "max": [
+          -0.309535,
+          1.5760199999999998,
+          0.7941
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 212,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA15405",
+          "name": "ileal vein"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA15406",
+      "sourceName": "middle colic vein",
+      "sourceTree": "isa",
+      "system": "vessels",
+      "category": "vessel",
+      "file": "FJ3543",
+      "sha256": "001af4e63182ebd20eb8ae9b15e51d85302d56f4eb9134a78cd44e2a5047a9bf",
+      "geometrySha256": "01ee1686944cee198d82ef1d80ffff3c8f817d0c24eb41c7e4e3d9338ed94988",
+      "bytes": 91588,
+      "crc32": 3216428044,
+      "bounds": {
+        "min": [
+          -66.3061,
+          -176.947,
+          1012.5
+        ],
+        "max": [
+          60.9423,
+          -116.696,
+          1064.74
+        ],
+        "vertices": 889
+      },
+      "sceneBounds": {
+        "min": [
+          -0.663061,
+          2.125,
+          0.66696
+        ],
+        "max": [
+          0.609423,
+          2.6474,
+          1.26947
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 1324,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA15406",
+          "name": "middle colic vein"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA15407",
+      "sourceName": "right colic vein",
+      "sourceTree": "isa",
+      "system": "vessels",
+      "category": "vessel",
+      "file": "FJ3591",
+      "sha256": "9bae25c069450677e645493c0b2e987c65ccaf984f7a441d126db6335601ec73",
+      "geometrySha256": "16c8b7e4c50af507f8126a780b49374438217c8256a96dbe97e80685a0617266",
+      "bytes": 81370,
+      "crc32": 255510725,
+      "bounds": {
+        "min": [
+          -70.7652,
+          -144.068,
+          985.491
+        ],
+        "max": [
+          -7.1927,
+          -115.051,
+          1039.05
+        ],
+        "vertices": 775
+      },
+      "sceneBounds": {
+        "min": [
+          -0.707652,
+          1.8549099999999998,
+          0.65051
+        ],
+        "max": [
+          -0.071927,
+          2.3904999999999994,
+          0.9406800000000002
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 1204,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA15407",
+          "name": "right colic vein"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA66358",
+      "sourceName": "trunk of superior mesenteric artery",
+      "sourceTree": "isa",
+      "system": "vessels",
+      "category": "vessel",
+      "file": "FJ3644",
+      "sha256": "5efa2442405cfef5576676fe96b3db696a049f298c50186adf3decdf2ad78d0e",
+      "geometrySha256": "153dcdbe2c69e7598efb9de8eab5f4fd6af30ed7af2b276aa27c56c09db89456",
+      "bytes": 90698,
+      "crc32": 780614258,
+      "bounds": {
+        "min": [
+          -60.8868,
+          -151.188,
+          909.407
+        ],
+        "max": [
+          8.58199,
+          -112.053,
+          1054.73
+        ],
+        "vertices": 782
+      },
+      "sceneBounds": {
+        "min": [
+          -0.6088680000000001,
+          1.0940700000000003,
+          0.62053
+        ],
+        "max": [
+          0.08581989999999999,
+          2.5473000000000003,
+          1.01188
+        ]
+      },
+      "grossEnvelope": {
+        "min": [
+          -180,
+          -240,
+          740
+        ],
+        "max": [
+          180,
+          80,
+          1160
+        ]
+      },
+      "grossPositionPass": true,
+      "triangles": 1506,
+      "exactAliases": [
+        {
+          "tree": "isa",
+          "fmaId": "FMA66358",
+          "name": "trunk of superior mesenteric artery"
+        },
+        {
+          "tree": "partof",
+          "fmaId": "FMA66358",
+          "name": "trunk of superior mesenteric artery"
+        }
+      ],
+      "existingTriangleOverlaps": [],
+      "clinicalValidation": false
+    }
+  ],
+  "candidateTriangleOverlaps": [],
+  "nearOverlapDiagnostics": [
+    {
+      "a": "FMA14749",
+      "b": "FMA66358",
+      "aExisting": true,
+      "bExisting": false,
+      "aToB": {
+        "samples": 90,
+        "withinQuarterMm": 67,
+        "withinOneMm": 86,
+        "medianMm": 0.13016896288946106,
+        "maxMm": 1.861398156963415
+      },
+      "bToA": {
+        "samples": 87,
+        "withinQuarterMm": 67,
+        "withinOneMm": 82,
+        "medianMm": 0.11679883767855885,
+        "maxMm": 2.013630647375417
+      }
+    },
+    {
+      "a": "FMA14809",
+      "b": "FMA14819",
+      "aExisting": false,
+      "bExisting": false,
+      "aToB": {
+        "samples": 67,
+        "withinQuarterMm": 34,
+        "withinOneMm": 67,
+        "medianMm": 0.24273469328045982,
+        "maxMm": 0.5808929885338229
+      },
+      "bToA": {
+        "samples": 94,
+        "withinQuarterMm": 40,
+        "withinOneMm": 94,
+        "medianMm": 0.2946542525467716,
+        "maxMm": 0.6000154081354854
+      }
+    }
+  ],
+  "smaTrunkDiagnostic": {
+    "sampledVertices": 261,
+    "minMm": 0.08203103071396643,
+    "medianMm": 0.7856424122970886,
+    "maxMm": 3.5788749922672873,
+    "withinOneMm": 167
+  },
+  "limitation": "Source identity, CRC/SHA, gross envelope and exact triangle checks are engineering evidence, not attachment, topology, near-overlap, clinical or imaging validation. No candidate is admitted by running this audit."
+}

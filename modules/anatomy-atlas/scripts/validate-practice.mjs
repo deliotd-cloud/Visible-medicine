@@ -36,7 +36,7 @@ const catalog = JSON.parse(bytes),
 const digest = createHash('sha256').update(bytes).digest('hex');
 same(
   digest,
-  '9512052d74f333f3276aac1926c8537c428badcd237dd724a5822cd7c7a005cd',
+  '8834615444c57b428fdf79689370c7894ba7aa400149f0b800014d9fdc158836',
   'Current source-audited anatomy and source bindings',
 );
 const hashBefore = JSON.stringify(catalog);

@@ -22,6 +22,7 @@
     "dissection-workbench:test": "node scripts/validate-dissection-workbench.mjs",
     "arrangement:test": "node scripts/validate-body-arrangement.mjs",
     "junction:test": "node scripts/validate-junction.mjs && node scripts/validate-junction-study.mjs",
+    "mesenteric:test": "node scripts/validate-mesenteric.mjs",
     "db:generate": "drizzle-kit generate",
     "db:local": "wrangler d1 migrations apply DB --local --config wrangler.review-local.jsonc",
     "start": "wrangler dev --config dist/server/wrangler.json",

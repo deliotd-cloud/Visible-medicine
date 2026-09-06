@@ -26,7 +26,9 @@ The application embeds a CC BY 4.0 BodyParts3D shoulder mesh subset. It does not
 
 ## Anatomical meshes
 
-The current body catalogue has 925 entries. The intestinal-junction correction separates the already included `FJ2599` source surface from two bowel aggregates under `FMA11338`; it is an indicated CC BY 4.0 adaptation, not new tissue or MIT-licensed anatomy. Preserve the same source attribution and licence. See `../docs/INTESTINAL_JUNCTION.md` for exact before/after evidence and review requirements. No new asset provider, font, texture, dependency or paid service is introduced; counts for earlier milestones below are historical.
+The mesenteric extension brings the current body catalogue to 942 entries. Its seventeen new source definitions (three membrane surfaces and fourteen vessel segments) remain BodyParts3D v4 derivatives under CC BY 4.0, with existing DBCLS attribution and change notices. Three near-overlapping arterial candidates are excluded. No other asset licence, font, texture, package or paid service is added. See `../docs/MESENTERIC_DETAIL.md`; totals and preservation claims for earlier milestones below are historical.
+
+The intestinal-junction correction reached 925 entries by separating the already included `FJ2599` source surface from two bowel aggregates under `FMA11338`; it is an indicated CC BY 4.0 adaptation, not new tissue or MIT-licensed anatomy. Preserve the same source attribution and licence. See `../docs/INTESTINAL_JUNCTION.md` for exact before/after evidence and review requirements. No new asset provider, font, texture, dependency or paid service was introduced by that correction.
 
 BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International
 
