@@ -40,15 +40,20 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+
 import {
-  Combobox,
-  ComboboxContent,
-  ComboboxEmpty,
-  ComboboxInput,
-  ComboboxItem,
-  ComboboxList,
-} from '@/components/ui/combobox';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+  AtlasWorkspace,
+  WorkspaceModes,
+  WorkspaceOnly,
+  WorkspaceModeButton,
+  WorkspaceFocus,
+  CameraViewMenu,
+  GroupedAnatomyNotes,
+  AtlasSearch,
+  StructureDetailsButton,
+  PracticeAttention,
+  QuizNotes,
+} from './atlas-workspace';
 import {
   bodySystems,
   allBodySystems,
@@ -57,7 +62,6 @@ import {
   type BodySystem,
 } from './body-types';
 import { bodyContent } from './body-content';
-import type { ContentTab } from './anatomy-data';
 import { bodyLinkEntries } from '@/lib/anatomy-link-registry';
 import { ImagingLink, useImagingLink } from './imaging-link';
 import {
@@ -75,6 +79,7 @@ import {
   guidanceRecipeAction,
 } from '@/lib/dissection-guidance';
 import './body-explorer.css';
+import './atlas-workspace.css';
 import { AnatomyControlRail, AnatomyInfoPanel } from './anatomy-control-rail';
 import { Brand } from './brand';
 import { ReviewStatus } from './review-status';
@@ -131,16 +136,6 @@ const icons = {
   vessels: Network,
   connective: Link2,
 };
-const tabs: Array<[ContentTab, string]> = [
-  ['anatomy', 'Anatomy'],
-  ['function', 'Function'],
-  ['ct', 'CT'],
-  ['mri', 'MRI'],
-  ['ultrasound', 'Ultrasound'],
-  ['pathology', 'Pathology'],
-  ['clinical', 'Clinical'],
-  ['quiz', 'Quiz'],
-];
 const initialSystems: Record<BodySystem, boolean> = {
   skeleton: true,
   muscles: false,
@@ -856,128 +851,137 @@ export default function BodyExplorer({
         })}
       </div>
 
-      <details className="body-study-tools">
-        <summary>
-          Dissection <small>{stage?.title ?? 'Custom view'}</small>
-        </summary>
-        <DissectionControls
-          profile={profile}
-          state={dissection}
-          onStage={changeStage}
-          onFocus={changeFocus}
-          onUndo={undoDissection}
-          onReset={() => changeStage('assembled')}
-          ghost={ghostRemoved}
-          onGhost={setGhostRemoved}
-          visibleCount={available.length}
-          structures={regionStructures}
-          visibleIds={available.map((item) => item.id)}
-          loaded={loaded}
-          failed={failed}
+      <WorkspaceOnly modes={['explore']} className="atlas-dissection-entry">
+        <WorkspaceModeButton mode="dissect">
+          Dissect this region
+        </WorkspaceModeButton>
+      </WorkspaceOnly>
+      <WorkspaceOnly modes={['dissect']}>
+        <details className="body-study-tools" open>
+          <summary>
+            Dissection <small>{stage?.title ?? 'Custom view'}</small>
+          </summary>
+          <DissectionControls
+            profile={profile}
+            state={dissection}
+            onStage={changeStage}
+            onFocus={changeFocus}
+            onUndo={undoDissection}
+            onReset={() => changeStage('assembled')}
+            ghost={ghostRemoved}
+            onGhost={setGhostRemoved}
+            visibleCount={available.length}
+            structures={regionStructures}
+            visibleIds={available.map((item) => item.id)}
+            loaded={loaded}
+            failed={failed}
+            disabled={exam}
+          />
+        </details>
+      </WorkspaceOnly>
+      <WorkspaceOnly modes={['explore', 'dissect']}>
+        <details className="body-display-tools">
+          <summary>
+            Display options<small>Quick views · arrangement · surfaces</small>
+          </summary>
+          <div className="body-system-presets" aria-label="Quick anatomy views">
+            {bodySystemPresets.map((item) => {
+              const count = regionStructures.filter((structure) =>
+                item.systems.includes(structure.system),
+              ).length;
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  disabled={exam || count === 0}
+                  aria-pressed={
+                    !hiddenIds.length && bodyPresetMatches(item.id, systems)
+                  }
+                  title={`Restore ${count} available source entries in this preset`}
+                  onClick={() => preset(item.id)}
+                >
+                  {item.title}
+                  <small>{count}</small>
+                </button>
+              );
+            })}
+          </div>
+          <div className="body-layout-controls" aria-label="Model arrangement">
+            <div>
+              <button
+                type="button"
+                aria-pressed={layout === 'spatial'}
+                disabled={exam}
+                onClick={() => changeLayout('spatial')}
+              >
+                Spatial anatomy
+              </button>
+              <button
+                type="button"
+                aria-pressed={layout === 'tray'}
+                disabled={exam || !available.length}
+                onClick={() => changeLayout('tray')}
+              >
+                Arrange structures
+              </button>
+            </div>
+            <p>
+              {layout === 'tray' && !exam
+                ? 'Same-scale surfaces, grouped by system. At 100%, each catalogue entry has its own space—not an anatomical position.'
+                : 'Source anatomy at 0% separation. Rotate freely or choose a standard direction.'}
+            </p>
+          </div>
+          {!exam && (
+            <div className="body-preset-row">
+              <button
+                type="button"
+                aria-pressed={illustrated}
+                onClick={() => setIllustrated((v) => !v)}
+              >
+                {illustrated ? 'Illustrated surfaces' : 'Plain surfaces'}
+              </button>
+              <button
+                type="button"
+                aria-pressed={anchorSkeleton}
+                disabled={layout === 'tray'}
+                onClick={() => setAnchorSkeleton((v) => !v)}
+              >
+                Keep bones assembled
+              </button>
+              <button
+                type="button"
+                aria-pressed={showOrigins}
+                disabled={layout === 'tray'}
+                onClick={() => setShowOrigins((v) => !v)}
+              >
+                Original positions
+              </button>
+              {layout === 'tray' && (
+                <span>
+                  All entries move in the tray. Select and frame a structure, or
+                  choose a system/region for fine detail.
+                </span>
+              )}
+            </div>
+          )}
+        </details>
+        <InspectionControls
+          value={inspection}
+          onChange={setInspection}
+          systems={systemKeys.map((id) => ({
+            id,
+            name: bodySystems[id].name,
+            enabled:
+              systems[id] && regionStructures.some((s) => s.system === id),
+          }))}
+          plate={plate}
+          onPlate={(value) => {
+            if (!value && layout === 'tray') changeLayout('spatial');
+            else setPlate(value);
+          }}
           disabled={exam}
         />
-      </details>
-
-      <details className="body-display-tools">
-        <summary>
-          Display options<small>Quick views · arrangement · surfaces</small>
-        </summary>
-        <div className="body-system-presets" aria-label="Quick anatomy views">
-          {bodySystemPresets.map((item) => {
-            const count = regionStructures.filter((structure) =>
-              item.systems.includes(structure.system),
-            ).length;
-            return (
-              <button
-                key={item.id}
-                type="button"
-                disabled={exam || count === 0}
-                aria-pressed={
-                  !hiddenIds.length && bodyPresetMatches(item.id, systems)
-                }
-                title={`Restore ${count} available source entries in this preset`}
-                onClick={() => preset(item.id)}
-              >
-                {item.title}
-                <small>{count}</small>
-              </button>
-            );
-          })}
-        </div>
-        <div className="body-layout-controls" aria-label="Model arrangement">
-          <div>
-            <button
-              type="button"
-              aria-pressed={layout === 'spatial'}
-              disabled={exam}
-              onClick={() => changeLayout('spatial')}
-            >
-              Spatial anatomy
-            </button>
-            <button
-              type="button"
-              aria-pressed={layout === 'tray'}
-              disabled={exam || !available.length}
-              onClick={() => changeLayout('tray')}
-            >
-              Arrange structures
-            </button>
-          </div>
-          <p>
-            {layout === 'tray' && !exam
-              ? 'Same-scale surfaces, grouped by system. At 100%, each catalogue entry has its own space—not an anatomical position.'
-              : 'Source anatomy at 0% separation. Rotate freely or choose a standard direction.'}
-          </p>
-        </div>
-        {!exam && (
-          <div className="body-preset-row">
-            <button
-              type="button"
-              aria-pressed={illustrated}
-              onClick={() => setIllustrated((v) => !v)}
-            >
-              {illustrated ? 'Illustrated surfaces' : 'Plain surfaces'}
-            </button>
-            <button
-              type="button"
-              aria-pressed={anchorSkeleton}
-              disabled={layout === 'tray'}
-              onClick={() => setAnchorSkeleton((v) => !v)}
-            >
-              Keep bones assembled
-            </button>
-            <button
-              type="button"
-              aria-pressed={showOrigins}
-              disabled={layout === 'tray'}
-              onClick={() => setShowOrigins((v) => !v)}
-            >
-              Original positions
-            </button>
-            {layout === 'tray' && (
-              <span>
-                All entries move in the tray. Select and frame a structure, or
-                choose a system/region for fine detail.
-              </span>
-            )}
-          </div>
-        )}
-      </details>
-      <InspectionControls
-        value={inspection}
-        onChange={setInspection}
-        systems={systemKeys.map((id) => ({
-          id,
-          name: bodySystems[id].name,
-          enabled: systems[id] && regionStructures.some((s) => s.system === id),
-        }))}
-        plate={plate}
-        onPlate={(value) => {
-          if (!value && layout === 'tray') changeLayout('spatial');
-          else setPlate(value);
-        }}
-        disabled={exam}
-      />
+      </WorkspaceOnly>
       <StudyViews
         scope={studyScope}
         capture={captureView}
@@ -1028,14 +1032,21 @@ export default function BodyExplorer({
   );
 
   return (
-    <main className="body-app">
+    <AtlasWorkspace exam={exam}>
+      <PracticeAttention answered={answered} exam={exam} />
       <header className="body-topbar">
         <Brand />
-        <div className="body-breadcrumb">
-          Anatomy <ChevronRight />
-          <strong>{title}</strong>
-        </div>
-        <div className="vm-practice-start">
+        <WorkspaceModes />
+        <AtlasSearch
+          catalog={catalog}
+          region={initialRegion}
+          side={side as StudySide}
+          onSelect={select}
+          onWindow={changeStage}
+          onFocus={changeFocus}
+        />
+        <WorkspaceFocus />
+        <WorkspaceOnly modes={['practice']} className="vm-practice-start">
           <Select
             value={String(practiceCount)}
             onValueChange={(value) => value && setPracticeCount(Number(value))}
@@ -1061,7 +1072,7 @@ export default function BodyExplorer({
             <GraduationCap />
             {exam ? 'Exit practice' : 'Start practice'}
           </Button>
-        </div>
+        </WorkspaceOnly>
       </header>
       <div className="body-layout">
         <AnatomyControlRail>{railContent}</AnatomyControlRail>
@@ -1083,34 +1094,15 @@ export default function BodyExplorer({
           </div>
           <div className="body-canvas illustration-mode">
             <div className="body-view-row">
-              <fieldset className="body-view-buttons">
-                <legend className="sr-only">Camera direction</legend>
-                {(
-                  [
-                    'anterior',
-                    'posterior',
-                    'right',
-                    'left',
-                    'inferior',
-                    'superior',
-                  ] as const
-                ).map((v) => (
-                  <button
-                    type="button"
-                    key={v}
-                    className={view === v ? 'active' : ''}
-                    aria-pressed={view === v}
-                    onClick={() => {
-                      setView(v);
-                      setReset((n) => n + 1);
-                    }}
-                  >
-                    {initialRegion === 'foot' && v === 'inferior'
-                      ? 'Plantar'
-                      : v}
-                  </button>
-                ))}
-              </fieldset>
+              <CameraViewMenu
+                value={view}
+                region={initialRegion}
+                onChange={(v) => {
+                  setView(v);
+                  setReset((n) => n + 1);
+                }}
+              />
+              {!exam && selected && <StructureDetailsButton />}
               <Select
                 value={side}
                 onValueChange={(value) => {
@@ -1230,27 +1222,6 @@ export default function BodyExplorer({
               </Button>
             </div>
             <div className="body-toolbar">
-              <Button
-                size="icon"
-                variant={isolated ? 'default' : 'ghost'}
-                aria-label="Fade other structures"
-                disabled={!selected || exam}
-                onClick={() => setIsolated((v) => !v)}
-              >
-                <Eye />
-              </Button>
-              <Button
-                size="icon"
-                variant={focus ? 'default' : 'ghost'}
-                aria-label="Frame selected structure"
-                disabled={!selected || exam}
-                onClick={() => {
-                  setFocus((v) => !v);
-                  setZoom(1);
-                }}
-              >
-                <Focus />
-              </Button>
               <Button
                 size="icon"
                 variant={labels ? 'secondary' : 'ghost'}
@@ -1434,27 +1405,92 @@ export default function BodyExplorer({
             </>
           ) : (
             <>
-              <div className="eyebrow">FIND A STRUCTURE</div>
-              <Combobox<BodyStructure>
-                items={regionStructures}
-                value={selected}
-                onValueChange={(s) => s && select(s.id)}
-                itemToStringLabel={(s) => s.name}
-                itemToStringValue={(s) => s.id}
-                isItemEqualToValue={(a, b) => a.id === b.id}
+              <WorkspaceOnly
+                modes={['practice']}
+                className="atlas-practice-setup"
               >
-                <ComboboxInput placeholder="Search this region…" showClear />
-                <ComboboxContent>
-                  <ComboboxEmpty>No matching structures.</ComboboxEmpty>
-                  <ComboboxList>
-                    {regionStructures.map((s) => (
-                      <ComboboxItem key={s.id} value={s}>
-                        {s.name}
-                      </ComboboxItem>
-                    ))}
-                  </ComboboxList>
-                </ComboboxContent>
-              </Combobox>
+                <h2>Identification practice</h2>
+                <p>
+                  Choose your question style and targets, then start. Use
+                  Dissect to prepare a focused anatomy set.
+                </p>
+                <details className="vm-practice-options" open>
+                  <summary>
+                    Practice options ·{' '}
+                    {practiceMode === 'name'
+                      ? 'Name isolated anatomy'
+                      : 'Find on model'}
+                  </summary>
+                  <label htmlFor="practice-answer-mode">Answer mode</label>
+                  <Select
+                    value={practiceMode}
+                    onValueChange={(value) => {
+                      if (value === 'find' || value === 'name')
+                        setPracticeMode(value);
+                    }}
+                  >
+                    <SelectTrigger
+                      id="practice-answer-mode"
+                      aria-label="Practice answer mode"
+                    >
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="find">Find on model</SelectItem>
+                      <SelectItem value="name">
+                        Name isolated structure
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <label htmlFor="practice-target-selection">
+                    Target selection
+                  </label>
+                  <Select
+                    value={practiceSampling}
+                    onValueChange={(value) => {
+                      if (
+                        value === 'landmarks' ||
+                        value === 'all' ||
+                        value === 'focus'
+                      )
+                        setPracticeSampling(value);
+                    }}
+                  >
+                    <SelectTrigger
+                      id="practice-target-selection"
+                      aria-label="Practice target selection"
+                    >
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="landmarks">Major landmarks</SelectItem>
+                      <SelectItem value="all">All visible anatomy</SelectItem>
+                      <SelectItem value="focus" disabled={!focusedStudy}>
+                        Current focus targets only
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <p className="vm-practice-note">
+                    {practiceEligible.length} loaded candidates.{' '}
+                    {practiceSampling === 'landmarks'
+                      ? 'Emphasises larger surfaces.'
+                      : practiceSampling === 'focus'
+                        ? 'Uses the selected focus targets, excluding its added context. Choose a focus in Guided dissection first.'
+                        : 'Includes small structures without the landmark size cutoff.'}{' '}
+                    {practiceMode === 'name' &&
+                      'Naming needs at least two distinct candidates; there may be fewer than four answer choices.'}
+                  </p>
+                  <Button
+                    variant="outline"
+                    onClick={() => startExam()}
+                    disabled={practiceBlocked}
+                  >
+                    Start {Math.min(practiceCount, practiceEligible.length)}{' '}
+                    questions
+                  </Button>
+                </details>
+                {selected && <QuizNotes structure={selected} />}
+              </WorkspaceOnly>
               <output
                 className="body-selection-notice"
                 aria-live="polite"
@@ -1464,343 +1500,297 @@ export default function BodyExplorer({
                   ? `${selectionNotice?.id === selected.id ? selectionNotice.message : `${selected.name} selected.`} ${structureDetail(selected)}. Cutaway and opacity can affect visibility; use Reveal uncut if needed.`
                   : 'No structure selected.'}
               </output>
-              {practiceResult && (
-                <section
-                  className="vm-practice-result"
-                  aria-label="Completed practice results"
-                >
-                  <h2>
-                    {practiceResult.length === practice.questions.length
-                      ? 'Practice complete'
-                      : 'Practice ended'}
-                  </h2>
-                  <p>
-                    {practiceResult.filter((r) => r.target === r.chosen).length}{' '}
-                    / {practiceResult.length} correct. Select a structure below
-                    to study it.
-                  </p>
-                  <ul>
-                    {practiceResult.map((r) => (
-                      <li key={r.target}>
-                        <button
-                          type="button"
+              <WorkspaceOnly modes={['practice']}>
+                {practiceResult && (
+                  <section
+                    className="vm-practice-result"
+                    aria-label="Completed practice results"
+                  >
+                    <h2>
+                      {practiceResult.length === practice.questions.length
+                        ? 'Practice complete'
+                        : 'Practice ended'}
+                    </h2>
+                    <p>
+                      {
+                        practiceResult.filter((r) => r.target === r.chosen)
+                          .length
+                      }{' '}
+                      / {practiceResult.length} correct. Select a structure
+                      below to study it.
+                    </p>
+                    <ul>
+                      {practiceResult.map((r) => (
+                        <li key={r.target}>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              select(r.target);
+                              setInspection(initialInspection);
+                              setFocus(true);
+                              setZoom(1);
+                            }}
+                          >
+                            {r.target === r.chosen ? '✓' : 'Review'} ·{' '}
+                            {
+                              catalog.structures.find((s) => s.id === r.target)
+                                ?.name
+                            }
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                    {missedPracticeIds(practiceResult).length > 0 && (
+                      <>
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          onClick={() => startExam(true)}
+                          disabled={practiceBlocked || retryIds.length === 0}
+                        >
+                          Retry missed ({retryIds.length} available)
+                        </Button>
+                        <p className="vm-practice-note">
+                          Retries respect the current visible, loaded scope and
+                          practice options. Skipped questions count as missed.
+                        </p>
+                      </>
+                    )}
+                    <Button
+                      size="sm"
+                      variant="ghost"
+                      onClick={() => practiceDispatch({ type: 'dismiss' })}
+                    >
+                      Dismiss results
+                    </Button>
+                  </section>
+                )}
+              </WorkspaceOnly>
+              <WorkspaceOnly modes={['explore', 'dissect']}>
+                {selected ? (
+                  <>
+                    <div className="body-selection-heading">
+                      <span
+                        style={{
+                          background: bodySystems[selected.system].color,
+                        }}
+                      />
+                      {bodySystems[selected.system].name} · {selected.fmaId}
+                    </div>
+                    <h2>{selected.name}</h2>
+                    <ReviewStatus structureId={selected.id} />
+                    <div className="body-selection-actions">
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => {
+                          setIsolated(true);
+                          setFocus(true);
+                          setZoom(1);
+                        }}
+                      >
+                        <Focus />
+                        Isolate & frame
+                      </Button>
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => {
+                          dispatch({ type: 'remove', id: selected.id });
+                          setSelectedId(null);
+                          setFocus(false);
+                          setIsolated(false);
+                        }}
+                      >
+                        <EyeOff />
+                        Remove
+                      </Button>
+                      <details className="atlas-more-actions">
+                        <summary>More</summary>{' '}
+                        <Button
+                          size="sm"
+                          variant="outline"
                           onClick={() => {
-                            select(r.target);
-                            setInspection(initialInspection);
+                            setInspection((current) => ({
+                              ...current,
+                              plane: 'off',
+                              opacity: {
+                                ...current.opacity,
+                                [selected.system]: 100,
+                              },
+                            }));
                             setFocus(true);
                             setZoom(1);
                           }}
                         >
-                          {r.target === r.chosen ? '✓' : 'Review'} ·{' '}
-                          {
-                            catalog.structures.find((s) => s.id === r.target)
-                              ?.name
-                          }
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                  {missedPracticeIds(practiceResult).length > 0 && (
-                    <>
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        onClick={() => startExam(true)}
-                        disabled={practiceBlocked || retryIds.length === 0}
-                      >
-                        Retry missed ({retryIds.length} available)
-                      </Button>
-                      <p className="vm-practice-note">
-                        Retries respect the current visible, loaded scope and
-                        practice options. Skipped questions count as missed.
-                      </p>
-                    </>
-                  )}
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    onClick={() => practiceDispatch({ type: 'dismiss' })}
-                  >
-                    Dismiss results
-                  </Button>
-                </section>
-              )}
-              {selected ? (
-                <>
-                  <div className="body-selection-heading">
-                    <span
-                      style={{ background: bodySystems[selected.system].color }}
+                          Reveal uncut
+                        </Button>{' '}
+                        <Button
+                          size="sm"
+                          variant={isolated ? 'default' : 'ghost'}
+                          aria-label="Fade other structures"
+                          disabled={!selected || exam}
+                          onClick={() => setIsolated((v) => !v)}
+                        >
+                          <Eye /> Fade others
+                        </Button>
+                        <Button
+                          size="sm"
+                          variant={focus ? 'default' : 'ghost'}
+                          aria-label="Frame selected structure"
+                          disabled={!selected || exam}
+                          onClick={() => {
+                            setFocus((v) => !v);
+                            setZoom(1);
+                          }}
+                        >
+                          <Focus /> Frame selection
+                        </Button>
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          onClick={() => {
+                            setSelectedId(null);
+                            setIsolated(false);
+                            setFocus(false);
+                          }}
+                          aria-label="Clear selection"
+                        >
+                          <ArrowLeft /> Clear selection
+                        </Button>
+                      </details>
+                    </div>
+                    <GroupedAnatomyNotes>
+                      {(value) => {
+                        const content = bodyContent(selected, value);
+                        return (
+                          <div className="atlas-note-body">
+                            <div className="eyebrow">{content.title}</div>
+                            <p>{content.body}</p>
+                            {content.bullets && (
+                              <ul>
+                                {content.bullets.map((b) => (
+                                  <li key={b}>{b}</li>
+                                ))}
+                              </ul>
+                            )}
+                            {content.note && (
+                              <div className="body-content-note">
+                                {content.note}
+                              </div>
+                            )}
+                            {content.citations?.length ? (
+                              <div className="body-reference-links">
+                                {content.citations.map((url, i) => (
+                                  <a
+                                    key={url}
+                                    href={url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                  >
+                                    Reference {i + 1} ↗
+                                  </a>
+                                ))}
+                              </div>
+                            ) : null}
+                            <WorkspaceModeButton mode="practice">
+                              Practise this anatomy
+                            </WorkspaceModeButton>
+                            {['ct', 'mri', 'ultrasound'].includes(value) && (
+                              <div className="body-no-imaging">
+                                <ScanLine />
+                                No imaging study loaded
+                              </div>
+                            )}
+                          </div>
+                        );
+                      }}
+                    </GroupedAnatomyNotes>
+                    <RelatedStudy
+                      views={relatedViews}
+                      selectedId={selected.id}
+                      currentFocusId={dissection.focusId}
+                      onOpen={openRelatedStudy}
+                      onSelect={select}
+                      detail={structureDetail}
                     />
-                    {bodySystems[selected.system].name} · {selected.fmaId}
-                  </div>
-                  <h2>{selected.name}</h2>
-                  <ReviewStatus structureId={selected.id} />
-                  <div className="body-selection-actions">
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      onClick={() => {
-                        setInspection((current) => ({
-                          ...current,
-                          plane: 'off',
-                          opacity: {
-                            ...current.opacity,
-                            [selected.system]: 100,
-                          },
-                        }));
-                        setFocus(true);
-                        setZoom(1);
-                      }}
-                    >
-                      Reveal uncut
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      onClick={() => {
-                        setIsolated(true);
-                        setFocus(true);
-                        setZoom(1);
-                      }}
-                    >
-                      <Focus />
-                      Isolate & frame
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      onClick={() => {
-                        dispatch({ type: 'remove', id: selected.id });
-                        setSelectedId(null);
-                        setFocus(false);
-                        setIsolated(false);
-                      }}
-                    >
-                      <EyeOff />
-                      Remove
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="ghost"
-                      onClick={() => {
-                        setSelectedId(null);
-                        setIsolated(false);
-                        setFocus(false);
-                      }}
-                      aria-label="Clear selection"
-                    >
-                      <ArrowLeft />
-                    </Button>
-                  </div>
-                  <Tabs defaultValue="anatomy" className="body-content-tabs">
-                    <TabsList variant="line">
-                      {tabs.map(([value, label]) => (
-                        <TabsTrigger key={value} value={value}>
-                          {label}
-                        </TabsTrigger>
-                      ))}
-                    </TabsList>
-                    {tabs.map(([value]) => {
-                      const content = bodyContent(selected, value);
-                      return (
-                        <TabsContent key={value} value={value}>
-                          <div className="eyebrow">{content.title}</div>
-                          <p>{content.body}</p>
-                          {content.bullets && (
-                            <ul>
-                              {content.bullets.map((b) => (
-                                <li key={b}>{b}</li>
-                              ))}
-                            </ul>
-                          )}
-                          {content.note && (
-                            <div className="body-content-note">
-                              {content.note}
-                            </div>
-                          )}
-                          {content.citations?.length ? (
-                            <div className="body-reference-links">
-                              {content.citations.map((url, i) => (
-                                <a
-                                  key={url}
-                                  href={url}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                >
-                                  Reference {i + 1} ↗
-                                </a>
-                              ))}
-                            </div>
-                          ) : null}
-                          {value === 'quiz' && (
-                            <Button
-                              onClick={() => startExam()}
-                              disabled={practiceBlocked}
-                            >
-                              <GraduationCap />
-                              Start identification practice
-                            </Button>
-                          )}
-                          {['ct', 'mri', 'ultrasound'].includes(value) && (
-                            <div className="body-no-imaging">
-                              <ScanLine />
-                              No imaging study loaded
-                            </div>
-                          )}
-                        </TabsContent>
-                      );
-                    })}
-                  </Tabs>
-                  <RelatedStudy
-                    views={relatedViews}
-                    selectedId={selected.id}
-                    currentFocusId={dissection.focusId}
-                    onOpen={openRelatedStudy}
+                    <StudyLinks
+                      catalog={catalog}
+                      selected={selected}
+                      region={initialRegion}
+                      side={side as StudySide}
+                      focusId={dissection.focusId}
+                    />
+                    <dl className="body-facts">
+                      <div>
+                        <dt>Region</dt>
+                        <dd>
+                          {
+                            catalog.regions.find(
+                              (r) => r.id === selected.region,
+                            )?.name
+                          }
+                        </dd>
+                      </div>
+                      <div>
+                        <dt>Laterality</dt>
+                        <dd>
+                          {selected.laterality === 'unspecified'
+                            ? 'Not lateralised'
+                            : selected.laterality}
+                        </dd>
+                      </div>
+                      <div>
+                        <dt>Source</dt>
+                        <dd>BodyParts3D 4.0</dd>
+                      </div>
+                      <div>
+                        <dt>Review</dt>
+                        <dd>Draft · pending</dd>
+                      </div>
+                    </dl>
+                  </>
+                ) : (
+                  <>
+                    <div className="body-intro-icon">
+                      <Accessibility />
+                    </div>
+                    <h2>Choose a structure</h2>
+                    <p>
+                      Select a structure to inspect its identity, isolate it, or
+                      explore the available teaching notes.
+                    </p>
+                    <div className="body-content-note">
+                      The geometry is source-based. New teaching entries are
+                      clearly marked where specialist content is still pending.
+                    </div>
+                  </>
+                )}
+              </WorkspaceOnly>
+              <WorkspaceOnly modes={['dissect']}>
+                <details className="dissection-guide-fold">
+                  <summary>
+                    Study guide · {stage?.title ?? 'Custom view'}
+                  </summary>
+                  {studyGuide}
+                </details>
+              </WorkspaceOnly>
+              <WorkspaceOnly modes={['explore', 'dissect']}>
+                <details className="body-structure-browser">
+                  <summary>
+                    Browse structures ({regionStructures.length})
+                  </summary>
+                  <StructureNavigator
+                    key={`${initialRegion}-${side}`}
+                    items={regionStructures}
+                    selectedId={selectedId}
                     onSelect={select}
+                    label="Regional structures"
                     detail={structureDetail}
+                    enabledIds={enabledIds}
                   />
-                  <StudyLinks
-                    catalog={catalog}
-                    selected={selected}
-                    region={initialRegion}
-                    side={side as StudySide}
-                    focusId={dissection.focusId}
-                  />
-                  <dl className="body-facts">
-                    <div>
-                      <dt>Region</dt>
-                      <dd>
-                        {
-                          catalog.regions.find((r) => r.id === selected.region)
-                            ?.name
-                        }
-                      </dd>
-                    </div>
-                    <div>
-                      <dt>Laterality</dt>
-                      <dd>
-                        {selected.laterality === 'unspecified'
-                          ? 'Not lateralised'
-                          : selected.laterality}
-                      </dd>
-                    </div>
-                    <div>
-                      <dt>Source</dt>
-                      <dd>BodyParts3D 4.0</dd>
-                    </div>
-                    <div>
-                      <dt>Review</dt>
-                      <dd>Draft · pending</dd>
-                    </div>
-                  </dl>
-                </>
-              ) : (
-                <>
-                  <div className="body-intro-icon">
-                    <Accessibility />
-                  </div>
-                  <h2>Choose a structure</h2>
-                  <p>
-                    Select a structure to inspect its identity, isolate it, or
-                    explore the available teaching notes.
-                  </p>
-                  <div className="body-content-note">
-                    The geometry is source-based. New teaching entries are
-                    clearly marked where specialist content is still pending.
-                  </div>
-                </>
-              )}
-              <details className="vm-practice-options">
-                <summary>
-                  Practice options ·{' '}
-                  {practiceMode === 'name'
-                    ? 'Name isolated anatomy'
-                    : 'Find on model'}
-                </summary>
-                <label htmlFor="practice-answer-mode">Answer mode</label>
-                <Select
-                  value={practiceMode}
-                  onValueChange={(value) => {
-                    if (value === 'find' || value === 'name')
-                      setPracticeMode(value);
-                  }}
-                >
-                  <SelectTrigger
-                    id="practice-answer-mode"
-                    aria-label="Practice answer mode"
-                  >
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="find">Find on model</SelectItem>
-                    <SelectItem value="name">
-                      Name isolated structure
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
-                <label htmlFor="practice-target-selection">
-                  Target selection
-                </label>
-                <Select
-                  value={practiceSampling}
-                  onValueChange={(value) => {
-                    if (
-                      value === 'landmarks' ||
-                      value === 'all' ||
-                      value === 'focus'
-                    )
-                      setPracticeSampling(value);
-                  }}
-                >
-                  <SelectTrigger
-                    id="practice-target-selection"
-                    aria-label="Practice target selection"
-                  >
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="landmarks">Major landmarks</SelectItem>
-                    <SelectItem value="all">All visible anatomy</SelectItem>
-                    <SelectItem value="focus" disabled={!focusedStudy}>
-                      Current focus targets only
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
-                <p className="vm-practice-note">
-                  {practiceEligible.length} loaded candidates.{' '}
-                  {practiceSampling === 'landmarks'
-                    ? 'Emphasises larger surfaces.'
-                    : practiceSampling === 'focus'
-                      ? 'Uses the selected focus targets, excluding its added context. Choose a focus in Guided dissection first.'
-                      : 'Includes small structures without the landmark size cutoff.'}{' '}
-                  {practiceMode === 'name' &&
-                    'Naming needs at least two distinct candidates; there may be fewer than four answer choices.'}
-                </p>
-                <Button
-                  variant="outline"
-                  onClick={() => startExam()}
-                  disabled={practiceBlocked}
-                >
-                  Start {Math.min(practiceCount, practiceEligible.length)}{' '}
-                  questions
-                </Button>
-              </details>
-              <details className="dissection-guide-fold">
-                <summary>Study guide · {stage?.title ?? 'Custom view'}</summary>
-                {studyGuide}
-              </details>
-              <details className="body-structure-browser">
-                <summary>Browse structures ({regionStructures.length})</summary>
-                <StructureNavigator
-                  key={`${initialRegion}-${side}`}
-                  items={regionStructures}
-                  selectedId={selectedId}
-                  onSelect={select}
-                  label="Regional structures"
-                  detail={structureDetail}
-                  enabledIds={enabledIds}
-                />
-              </details>
+                </details>
+              </WorkspaceOnly>
               <div className="body-validation">
                 Educational reference model · Independent clinical validation
                 pending. Not for diagnosis or patient-specific decisions.
@@ -1809,6 +1799,6 @@ export default function BodyExplorer({
           )}
         </AnatomyInfoPanel>
       </div>
-    </main>
+    </AtlasWorkspace>
   );
 }

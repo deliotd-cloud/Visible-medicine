@@ -79,10 +79,29 @@ same(
   baseline.functions,
   'All named domain handlers preserved',
 );
+// Explicit navigation migration: remove the redundant Quiz-start button,
+// region-only combobox and six-direction button callback. Their replacements
+// call the same guarded handlers; verify new menu/search execution separately.
+const migratedCallbacks = [...baseline.callbacks];
+for (const retired of [
+  'onClick/41951ae789d22ac66ecb587d1862a47a4f6cbc138fc21d170434e911b8baa5a9',
+  'onClick/886d6381c6e5f019e540bbc58f69bcc3023d332db763210cdfeb87e66be09348',
+  'onValueChange/de0101b663f86e99c1cf73a10970890179f00ef53ce7f8816a58ce2e358d1f8c',
+]) {
+  const index = migratedCallbacks.indexOf(retired);
+  check(index >= 0);
+  migratedCallbacks.splice(index, 1);
+}
+migratedCallbacks.push(
+  'onChange/ed06a6ba79f65735fa1a9a6b2a0f558961a54a29d0ff9bb06b6277f1817d2f96',
+  'onFocus/60791bef659a508c1030f248019b00646b1ab73d283d43374aa87641fdfce003',
+  'onSelect/610c7aa707c1e7792cda3854a7ec79d0a63ef3319881a1625f5f6eae7a2cf70d',
+  'onWindow/5ebc5e51cd113d7d309d4f55e844e0c769431ad7b05ed51a6496b64fc3e157c6',
+);
 same(
   bindings(source).callbacks,
-  baseline.callbacks,
-  'All retained control callbacks preserved',
+  migratedCallbacks.sort(compare),
+  '52 retained callbacks and four explicit navigation bindings',
 );
 const raw = await fs.readFile(
     'public/models/bodyparts3d/full-body/catalog.json',
@@ -145,6 +164,15 @@ const compiled = await build({
           contents: 'export const BodyScene = () => null;',
           loader: 'tsx',
         }));
+        b.onLoad({ filter: /atlas-workspace\.tsx$/ }, async () => ({
+          contents: (
+            await fs.readFile('app/atlas-workspace.tsx', 'utf8')
+          ).replace(
+            "useState<WorkspaceMode>('explore')",
+            'useState<WorkspaceMode>(globalThis.__atlasMode)',
+          ),
+          loader: 'tsx',
+        }));
       },
     },
   ],
@@ -157,6 +185,7 @@ const context = {
   URLSearchParams,
   __atlasCatalog: catalog,
   __atlasSelected: null,
+  __atlasMode: 'explore',
   process: { env: { NODE_ENV: 'test' } },
   require: (id) =>
     id === 'next/link'
@@ -175,81 +204,88 @@ const context = {
 };
 runInNewContext(compiled.outputFiles[0].text, context);
 let markupCases = 0;
-for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
-  const items = catalog.structures.filter(
-    (s) => region === 'whole-body' || s.regions.includes(region),
-  );
-  for (const selected of [null, items[0].id]) {
-    context.__atlasSelected = selected;
-    const html = renderToStaticMarkup(
-      React.createElement(vmModule.exports.default, { initialRegion: region }),
+for (const mode of ['explore', 'dissect', 'practice'])
+  for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
+    context.__atlasMode = mode;
+    const items = catalog.structures.filter(
+      (s) => region === 'whole-body' || s.regions.includes(region),
     );
-    const railStart = html.indexOf(
-      '<aside class="body-rail anatomy-control-rail"',
-    );
-    const modelStart = html.indexOf('<section class="body-workspace"');
-    const infoStart = html.indexOf('<aside class="body-info"');
-    check(railStart >= 0 && railStart < modelStart && modelStart < infoStart);
-    const rail = html.slice(railStart, modelStart),
-      model = html.slice(modelStart, infoStart),
-      info = html.slice(infoStart);
-    same(
-      (rail.match(/role="switch"/g) ?? []).length,
-      9,
-      'Six system switches, ghost context, plate view and cutaway',
-    );
-    for (const feature of [
-      'Anatomical systems',
-      'Guided dissection controls',
-      'Quick anatomy views',
-      'Model arrangement',
-      'Saved study views',
-      'Imaging link',
-    ])
-      check(rail.includes(feature), feature + ' stays in the control rail');
-    for (const feature of [
-      'body-system-bar',
-      'dissection-deck',
-      'body-layout-controls',
-      'body-preset-row',
-      'vm-inspection',
-      'vm-study-views',
-    ])
-      check(!model.includes(feature), feature + ' no longer pushes model down');
-    check(model.includes('data-scene-double'));
-    check(model.includes('Exploded separation'));
-    check(model.includes('CC BY 4.0'));
-    check(model.includes('REVIEW PENDING'));
-    for (const className of [
-      'body-region-picker',
-      'body-study-tools',
-      'body-display-tools',
-    ])
-      check(
-        rail.includes(`<details class="${className}">`),
-        className + ' starts closed',
+    for (const selected of [null, items[0].id]) {
+      context.__atlasSelected = selected;
+      const html = renderToStaticMarkup(
+        React.createElement(vmModule.exports.default, {
+          initialRegion: region,
+        }),
       );
-    check(
-      info.indexOf('FIND A STRUCTURE') < info.indexOf('vm-practice-options'),
-    );
-    check(info.includes('<details class="dissection-guide-fold">'));
-    check(info.includes('<details class="body-structure-browser">'));
-    check(!info.includes('body-summary-grid'));
-    if (selected) {
-      check(
-        info.includes(renderToStaticMarkup(items[0].name)),
-        region + ' selection rendered',
+      const railStart = html.indexOf(
+        '<aside class="body-rail anatomy-control-rail"',
       );
-      check(
-        info.indexOf('body-content-tabs') >= 0 &&
-          info.indexOf('body-content-tabs') <
-            info.indexOf('class="related-study'),
-        region + ' selected notes before related study',
+      const modelStart = html.indexOf('<section class="body-workspace"');
+      const infoStart = html.indexOf('<aside class="body-info"');
+      check(railStart >= 0 && railStart < modelStart && modelStart < infoStart);
+      check(html.includes(`data-workspace-mode="${mode}"`));
+      check(html.includes('aria-label="Workspace mode"'));
+      const rail = html.slice(railStart, modelStart),
+        model = html.slice(modelStart, infoStart),
+        info = html.slice(infoStart);
+      check(!model.includes('body-view-buttons'));
+      check(model.includes('atlas-camera-view'));
+      same(
+        (rail.match(/role="switch"/g) ?? []).length,
+        9,
+        'Six system switches, ghost context, plate view and cutaway',
       );
+      for (const feature of [
+        'Anatomical systems',
+        'Guided dissection controls',
+        'Quick anatomy views',
+        'Model arrangement',
+        'Saved study views',
+        'Imaging link',
+      ])
+        check(rail.includes(feature), feature + ' stays in the control rail');
+      for (const feature of [
+        'body-system-bar',
+        'dissection-deck',
+        'body-layout-controls',
+        'body-preset-row',
+        'vm-inspection',
+        'vm-study-views',
+      ])
+        check(
+          !model.includes(feature),
+          feature + ' no longer pushes model down',
+        );
+      check(model.includes('data-scene-double'));
+      check(model.includes('Exploded separation'));
+      check(model.includes('CC BY 4.0'));
+      check(model.includes('REVIEW PENDING'));
+      for (const className of ['body-region-picker', 'body-display-tools'])
+        check(
+          rail.includes(`<details class="${className}">`),
+          className + ' starts closed',
+        );
+      check(html.includes('Search atlas'));
+      check(!info.includes('Search this region'));
+      check(rail.includes('<details class="body-study-tools" open="">'));
+      check(info.includes('<details class="dissection-guide-fold">'));
+      check(info.includes('<details class="body-structure-browser">'));
+      check(!info.includes('body-summary-grid'));
+      if (selected) {
+        check(
+          info.includes(renderToStaticMarkup(items[0].name)),
+          region + ' selection rendered',
+        );
+        check(
+          info.indexOf('body-content-tabs') >= 0 &&
+            info.indexOf('body-content-tabs') <
+              info.indexOf('class="related-study'),
+          region + ' selected notes before related study',
+        );
+      }
+      markupCases++;
     }
-    markupCases++;
   }
-}
 
 // Exercise the real responsive component's state and effect callbacks. The Sheet
 // primitive provides focus trapping/Escape; actual browser acceptance is separate.
@@ -260,8 +296,19 @@ let injected = false,
   listener,
   removed = 0,
   media;
+let panelContext = { mode: 'explore', focusView: false };
 const shim = {
   ...React,
+  useContext: (context) =>
+    injected
+      ? {
+          ...panelContext,
+          panels: { tools: values[1], info: values[1] },
+          setPanelOpen: (_info, open) => {
+            values[1] = open;
+          },
+        }
+      : React.useContext(context),
   useState: (initial) => {
     if (!injected) return React.useState(initial);
     const i = stateIndex++;
@@ -272,8 +319,10 @@ const shim = {
       },
     ];
   },
-  useEffect: (fn, deps) =>
-    injected ? (effect = fn) : React.useEffect(fn, deps),
+  useEffect: (fn, deps) => {
+    if (!injected) return React.useEffect(fn, deps);
+    effect = fn;
+  },
 };
 const panelBuild = await build({
   entryPoints: ['app/anatomy-control-rail.tsx'],
@@ -281,7 +330,7 @@ const panelBuild = await build({
   platform: 'node',
   format: 'cjs',
   write: false,
-  external: ['react', 'react/*', 'react-dom', 'react-dom/*'],
+  external: ['react', 'react/*', 'react-dom', 'react-dom/*', 'next/link'],
   loader: { '.css': 'empty' },
 });
 const panelModule = { exports: {} };
@@ -296,7 +345,12 @@ runInNewContext(panelBuild.outputFiles[0].text, {
       return media;
     },
   },
-  require: (id) => (id === 'react' ? shim : require(id)),
+  require: (id) =>
+    id === 'react'
+      ? shim
+      : id === 'next/link'
+        ? context.require(id)
+        : require(id),
 });
 const walk = (node, test, found = []) => {
   if (React.isValidElement(node)) {
@@ -309,6 +363,10 @@ let panelCases = 0;
 for (const info of [false, true])
   for (const practice of [false, true]) {
     values = [false, false];
+    panelContext = {
+      mode: 'explore',
+      focusView: false,
+    };
     stateIndex = 0;
     injected = true;
     media = {
@@ -361,12 +419,27 @@ for (const info of [false, true])
     listener();
     same(values, [false, false]);
     same(render().type, 'aside');
+    panelContext.focusView = true;
+    same(render().props.open, false, 'Focus view starts with closed panels');
+    values[1] = true;
+    same(
+      render().props.open,
+      true,
+      'Explicit request opens matching focus-view panel',
+    );
+    panelContext.focusView = false;
+    values[1] = false; // AtlasWorkspace's actual focus action is tested separately.
+    same(values[1], false, 'Leaving focus view closes a retained sheet');
+    same(render().type, 'aside');
     cleanup();
     injected = false;
     panelCases++;
   }
 same(removed, 4);
-const css = await fs.readFile('app/body-explorer.css', 'utf8');
+const css =
+  (await fs.readFile('app/body-explorer.css', 'utf8')) +
+  '\n' +
+  (await fs.readFile('app/atlas-workspace.css', 'utf8'));
 for (const snippet of [
   "'controls model info'",
   "'controls-launcher info-launcher' 'model model'",
@@ -444,7 +517,8 @@ const result = {
   panelCases,
   stylesheetViewportCases: dimensions.length,
   preservedNamedHandlers: Object.keys(baseline.functions).length,
-  preservedControlCallbacks: baseline.callbacks.length,
+  preservedControlCallbacks: baseline.callbacks.length - 3,
+  explicitNavigationReplacementCallbacks: 4,
   regions: 11,
   wholeBody: true,
   sourceGeometryChanged: false,

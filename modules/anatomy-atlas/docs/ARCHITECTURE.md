@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Task-based atlas navigation
+
+`app/atlas-workspace.tsx` owns presentation-only mode, focus and mutually exclusive sheet state below `BodyExplorer`'s anatomy/practice state. Mode panels stay mounted and are hidden when inactive. A constrained direction selector calls the unchanged view/reset action. The new stylesheet is explicitly imported after `body-explorer.css`; it narrows the system rail and groups related controls without changing scene materials. `lib/atlas-navigation.ts` builds a source-derived search index using the existing side/scope, source-hashed link resolver and study-library recipes. Search applies the same guarded selection/window/focus handlers and requires a clean-view confirmation. Existing acquired-imaging and clinical gates remain. See [behaviour and test limits](ATLAS_NAVIGATION.md).
+
 ## Model-first regional workspace
 
 `AnatomyControlRail` and `AnatomyInfoPanel` in `app/anatomy-control-rail.tsx` present the existing regional/whole-body controls beside the model, with responsive Base UI sheets below 1,100/700 CSS pixels respectively. Viewport flex/grid sizing leaves header wrapping to normal layout; independent panel overflow replaces the old mobile document stack. Dissection/selection/practice state and camera refs remain owned by `BodyExplorer`, above the responsive panels. Closing a sheet retains mounted children; changing between inline and sheet layouts remounts nested local UI drafts, not the domain state. Collapsed native details expose advanced functions without crowding the default workspace. See [implementation, tests and limits](MODEL_FIRST_WORKSPACE.md). No scene, catalogue, review, imaging or licence schema changes are introduced.

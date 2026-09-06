@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": 169702,
+  "searchScopes": 36,
+  "sourceLinks": 31895,
+  "activationCases": 3,
+  "modeAndFocusState": true,
+  "sourceGeometryChanged": false,
+  "browserInteractionTesting": false,
+  "clinicalValidation": false,
+  "limitations": "Source-linked index, exact existing recipe membership and actual component event closures with injected hooks. Browser layout, dialog focus/keyboard, touch, zoom and GPU acceptance remain pending."
+}

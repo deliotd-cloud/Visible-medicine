@@ -30,6 +30,14 @@ Reorder only when evidence exposes a dependency or higher-impact defect. Complet
 
 ## Milestone ledger
 
+### Slimmer controls and task-based navigation
+
+Applied the user's requested navigation recommendations to all eleven regions and whole body: Explore/Dissect/Practice, a compact camera View selector, grouped Anatomy/Clinical/Imaging notes with Quiz under Practice, consolidated contextual actions, desktop/tablet Focus view and a single atlas search entry point. The system rail narrows from 264px to 216px; cards retain readable labels and 44px minimum rows. Search covers source structures/regions and current-region study recipes, with source-hash/laterality-validated cross-scope links and explicit clean-study confirmation. The dedicated shoulder interface is unchanged. See [behaviour, tests and acceptance limits](ATLAS_NAVIGATION.md).
+
+Actual component event closures, all 36 search scopes and current source-link resolution are tested. The model-first suite now covers 72 region/selection/mode markup combinations, four panel cases and seven stylesheet cascade sizes. All 19 named domain handlers and 52 retained callbacks remain exact; three superseded bindings have four explicitly verified replacements. One sheet opens at a time, mode switches preserve the graphics subtree, and practice retains its existing readiness/answer safeguards. No source geometry, teaching data, dependency, licence obligation, private review or main-website change is introduced. Browser/touch/assistive-technology and clinical acceptance remain separate.
+
+Next resume scoped graphics-init/runtime-fault handling and tendon/thumb source adjudication, keeping the task-based/model-first design. Future dedicated-shoulder consistency and cross-region recipe search need their own scoped validation. The wider goal remains active; acquired imaging still requires the user's adapter, rights-cleared studies and validated registration.
+
 ### Model-first controls and reduced scrolling
 
 Moved the six system switches and all advanced regional tools into the left control rail, keeping only the heading and atlas in the centre. Compact layouts use on-demand side panels rather than a long mobile page; selected notes and search come first, with the guide and structure browser folded. The header and workspace use flexible sizing, with independent side-panel scroll and a short-window escape. Closing a sheet retains nested drafts; breakpoint changes can remount transient nested UI, while parent anatomy/study/practice state remains intact. See [design rule, tests and remaining acceptance](MODEL_FIRST_WORKSPACE.md).

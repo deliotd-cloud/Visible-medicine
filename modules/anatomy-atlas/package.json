@@ -41,6 +41,7 @@
     "laryngeal:test": "node scripts/validate-laryngeal.mjs",
     "renderer:test": "node scripts/validate-scene-recovery.mjs",
     "model-first:test": "node scripts/validate-model-first.mjs",
+    "atlas-navigation:test": "node scripts/validate-atlas-navigation.mjs",
     "supporting:audit": "node scripts/audit-supporting-candidates.mjs",
     "supporting:test": "node scripts/validate-supporting-candidates.mjs",
     "supporting-geometry:audit": "node scripts/audit-supporting-geometry.mjs",

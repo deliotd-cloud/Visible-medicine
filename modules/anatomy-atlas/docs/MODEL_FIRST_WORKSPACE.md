@@ -1,5 +1,7 @@
 # Model-first workspace
 
+The subsequent [task-based navigation update](ATLAS_NAVIGATION.md) narrows the rail to 216px, adds Explore/Dissect/Practice, grouped notes and unified search. The dissection deck opens within Dissect rather than being an always-available closed disclosure. The current model-first suite covers 72 region/selection/mode markup states, with 52 retained callbacks and four explicitly checked replacement bindings; the initial layout-only receipt is historical. Focus view also uses the responsive sheets, with the same nested-draft remount limitation documented below.
+
 ## Design rule
 
 Keep the model visible on arrival. Put frequent controls beside it and secondary features behind clearly named, closed disclosures. More functionality must not mean a longer page before the atlas. Apply this rule to future regional dissection and imaging work.
@@ -22,7 +24,7 @@ Desktop uses labelled complementary panels. Compact layouts use labelled trigger
 
 ## Evidence and reproduction
 
-Run `npm run model-first:test`. `scripts/validate-model-first.mjs` checks actual loaded explorer server markup in all eleven regions plus whole body, with and without a selected structure (24 cases). Catalogue/selection initial states, Next navigation/image components and the GPU view are test doubles; the surrounding control components use their real server render. Injected hooks exercise the actual responsive wrapper's open/close, breakpoint and cleanup callbacks (four cases). These are not browser or GPU tests.
+Run `npm run model-first:test`. `scripts/validate-model-first.mjs` checks actual loaded explorer server markup in all eleven regions plus whole body, with and without a selected structure, now across all three workspace modes (72 cases). Catalogue/selection/mode initial states, Next navigation/image components and the GPU view are test doubles; the surrounding control components use their real server render. Injected hooks exercise the actual responsive wrapper's open/close, breakpoint and cleanup callbacks (four cases). These are not browser or GPU tests.
 
 The portable baseline records all 19 named domain handlers and 55 retained control callbacks from source commit `40e47408c40fe140e1a162a7fc011ce346d4be4f`; canonical syntax-tree comparisons verify they are unchanged. The old mobile dropdown navigation handler is deliberately excluded. The complete catalogue, all 86 body bundle hashes and dissection-profile hash are pinned. Stylesheet cascade checks cover sampled desktop, tablet, phone and short-window sizes, without claiming rendered pixel measurements. Results are written to `model-first-validation.json` alongside this file.
 

@@ -1,5 +1,9 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Simpler navigation and slimmer system controls
+
+Use **Explore · Dissect · Practice** to show the relevant tools without resetting the model. The system rail is now 216px wide (previously 264px), with compact labelled switches. **View** replaces six camera-direction buttons. Selected-structure actions live together, with less common actions under **More**. Notes are grouped into **Anatomy · Clinical · Imaging**; quiz notes and setup live in Practice. **Search atlas** finds body regions, source structures and the current region's study views; a view preview requires confirmation before resetting custom dissection settings. **Focus view** collapses both desktop/tablet panels; phones already use this layout. See [controls, evidence and limitations](docs/ATLAS_NAVIGATION.md). The dedicated shoulder interface is unchanged.
+
 ## Model-first, less scrolling
 
 The six **Anatomical systems** switches sit beside the model on desktop, with region selection and advanced tools folded into the same sidebar. The centre contains the heading and atlas, not a stack of settings. The notes panel starts with search and selected-structure information; the study guide and full structure browser open on demand. On narrower screens, **Systems & tools** opens a side panel; phones also offer **Structure info** (or **Practice**) without a long page below the model. Close either panel with **Return to model**. Side panels scroll independently; very short or zoomed windows retain an internal scroll escape for access. See [layout, verification and remaining hands-on checks](docs/MODEL_FIRST_WORKSPACE.md).
