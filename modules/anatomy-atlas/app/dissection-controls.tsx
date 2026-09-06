@@ -1,5 +1,5 @@
 'use client';
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { ArrowLeft, ArrowRight, RotateCcw, Undo2, Layers3 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
@@ -23,6 +23,7 @@ import {
   filterRemovedStructures,
 } from '@/lib/dissection-workbench';
 import { stageStructures } from './dissection-data';
+import { StudyLibrary } from './study-library';
 
 export function DissectionControls({
   profile,
@@ -36,6 +37,8 @@ export function DissectionControls({
   visibleCount,
   structures,
   visibleIds,
+  loaded,
+  failed,
   disabled,
 }: {
   profile: DissectionProfile;
@@ -49,6 +52,8 @@ export function DissectionControls({
   visibleCount: number;
   structures: BodyStructure[];
   visibleIds: string[];
+  loaded: string[];
+  failed: string[];
   disabled: boolean;
 }) {
   const { layers, windows } = useMemo(
@@ -56,9 +61,13 @@ export function DissectionControls({
     [profile],
   );
   const stage = profile.stages.find((s) => s.id === state.stageId);
+  const [libraryOpen, setLibraryOpen] = useState(false);
+  const [libraryOpened, setLibraryOpened] = useState(false);
+  const libraryTrigger = useRef<HTMLButtonElement>(null);
   const layerMode =
     layers.length > 0 && stage?.kind !== 'window' && !state.focusId;
   const choices = layerMode ? layers : windows;
+  const showLayers = layerMode && !libraryOpen;
   const index = choices.findIndex((s) => s.id === state.stageId);
   const next = layerMode ? choices[index + 1] : undefined;
   const transition = useMemo(
@@ -109,81 +118,114 @@ export function DissectionControls({
         {layers.length > 0 && (
           <button
             type="button"
-            aria-pressed={layerMode}
+            aria-pressed={showLayers}
             disabled={disabled}
-            onClick={() => onStage(layers[0].id)}
+            onClick={() => {
+              setLibraryOpen(false);
+              onStage(layers[0].id);
+            }}
           >
             Layer by layer <small>{layers.length} steps</small>
           </button>
         )}
         <button
           type="button"
-          aria-pressed={!layerMode}
-          disabled={disabled || !windows.length}
+          ref={libraryTrigger}
+          aria-pressed={libraryOpen}
+          disabled={disabled || (!windows.length && !profile.focuses.length)}
           onClick={() => {
-            if (windows[0]) onStage(windows[0].id);
+            setLibraryOpened(true);
+            setLibraryOpen((value) => !value);
           }}
         >
-          Study windows <small>{windows.length} views</small>
+          Study windows & focuses <small>Search & preview</small>
         </button>
       </div>
       <p className="dissection-mode-note">
-        {layerMode
+        {showLayers
           ? 'Remove available layers step by step. Missing skin, fascia or other tissues are not simulated.'
           : 'Independent views of selected structures—not successive dissection layers.'}
       </p>
-      <div className="dissection-step-row">
-        {layerMode && (
-          <Button
-            size="icon"
-            variant="outline"
-            disabled={disabled || index <= 0}
-            onClick={() => onStage(choices[index - 1].id)}
-            aria-label="Previous dissection stage"
-          >
-            <ArrowLeft />
-          </Button>
-        )}
-        <Select
-          value={index < 0 ? 'free' : state.stageId}
-          onValueChange={(id) => {
-            if (id) onStage(id);
-          }}
-        >
-          <SelectTrigger
+      <p className="dissection-current-view">
+        Current recipe: <strong>{title}</strong>
+      </p>
+      <div hidden={!libraryOpen}>
+        {libraryOpened && (
+          <StudyLibrary
+            profile={profile}
+            state={state}
+            structures={structures}
+            visibleIds={visibleIds}
+            loaded={loaded}
+            failed={failed}
             disabled={disabled}
-            aria-label="Choose dissection stage"
-          >
-            <SelectValue>
-              {index >= 0 && layerMode
-                ? `${index + 1} / ${choices.length} · `
-                : ''}
-              {title}
-            </SelectValue>
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="free">Free exploration</SelectItem>
-            {choices.map((s, i) => (
-              <SelectItem key={s.id} value={s.id}>
-                {layerMode ? `${i + 1}. ` : ''}
-                {s.title}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-        {layerMode && (
-          <Button
-            size="icon"
-            variant="outline"
-            disabled={disabled || !next}
-            onClick={() => next && onStage(next.id)}
-            aria-label="Next dissection stage"
-          >
-            <ArrowRight />
-          </Button>
+            onStage={(id) => {
+              onStage(id);
+              setLibraryOpen(false);
+              libraryTrigger.current?.focus();
+            }}
+            onFocus={(id) => {
+              onFocus(id);
+              setLibraryOpen(false);
+              libraryTrigger.current?.focus();
+            }}
+          />
         )}
       </div>
-      {layerMode && !disabled && (
+      {showLayers && (
+        <div className="dissection-step-row">
+          {layerMode && (
+            <Button
+              size="icon"
+              variant="outline"
+              disabled={disabled || index <= 0}
+              onClick={() => onStage(choices[index - 1].id)}
+              aria-label="Previous dissection stage"
+            >
+              <ArrowLeft />
+            </Button>
+          )}
+          <Select
+            value={index < 0 ? 'free' : state.stageId}
+            onValueChange={(id) => {
+              if (id) onStage(id);
+            }}
+          >
+            <SelectTrigger
+              disabled={disabled}
+              aria-label="Choose dissection stage"
+            >
+              <SelectValue>
+                {index >= 0 && layerMode
+                  ? `${index + 1} / ${choices.length} · `
+                  : ''}
+                {title}
+              </SelectValue>
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="free">Free exploration</SelectItem>
+              {choices.map((s, i) => (
+                <SelectItem key={s.id} value={s.id}>
+                  {layerMode ? `${i + 1}. ` : ''}
+                  {s.title}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          {layerMode && (
+            <Button
+              size="icon"
+              variant="outline"
+              disabled={disabled || !next}
+              onClick={() => next && onStage(next.id)}
+              aria-label="Next dissection stage"
+            >
+              <ArrowRight />
+            </Button>
+          )}
+        </div>
+      )}
+      {showLayers && !disabled && (
         <ol
           className="dissection-layer-track"
           aria-label="Available layer sequence"
@@ -207,7 +249,7 @@ export function DissectionControls({
           ))}
         </ol>
       )}
-      {transition && !disabled && (
+      {showLayers && transition && !disabled && (
         <details className="dissection-preview" key={next?.id}>
           <summary>
             Next: {transition.stage.title}
@@ -251,7 +293,7 @@ export function DissectionControls({
           </Button>
         </details>
       )}
-      {layerMode && !next && (
+      {showLayers && !next && (
         <output className="dissection-mode-note">
           Layer sequence complete. Step back to restore layers, reassemble, or
           choose a study window.
@@ -268,34 +310,17 @@ export function DissectionControls({
           />
           <span>Ghost removed tissues</span>
         </label>
-        {profile.focuses.length > 0 && (
-          <Select
-            value={state.focusId ?? 'none'}
-            onValueChange={(id) => {
-              if (id && id !== 'none') onFocus(id);
-              else if (id === 'none') onStage('assembled');
-            }}
-          >
-            <SelectTrigger
-              disabled={disabled}
-              aria-label="Focused compartment view"
-            >
-              <SelectValue>
-                {state.focusId
-                  ? profile.focuses.find((f) => f.id === state.focusId)?.title
-                  : 'Compartment views'}
-              </SelectValue>
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="none">Assembled region</SelectItem>
-              {profile.focuses.map((f) => (
-                <SelectItem key={f.id} value={f.id}>
-                  {f.title}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        )}
+        <Button
+          size="sm"
+          variant="outline"
+          disabled={disabled}
+          onClick={() => {
+            onStage('free');
+            setLibraryOpen(false);
+          }}
+        >
+          Free exploration
+        </Button>
       </div>
     </section>
   );

@@ -1,5 +1,9 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Find a regional study view
+
+Open **Study windows & focuses** to search the full regional library by view name, included structure or FMA ID. Filter by system/type and order from broad views to small groups. Expand a card to preview exactly what will hide, restore or stay before choosing **Open study window** or **Open compartment focus**. Browsing leaves the model untouched. Equivalent choices share a card without losing either action; the numbered layer track stays separate. See [controls, safeguards and validation](docs/STUDY_LIBRARY.md).
+
 ## Pancreatic vessels and epiglottic dissection
 
 The current atlas has **954 source representations, 113 dissection recipes and 95 focused views**. Open **Abdomen → Guided dissection** for four new pancreatic-vessel windows, or **Head & neck → Epiglottis & laryngeal framework**. Twelve source-labelled entries add detail without changing any previous mesh or identity. Use remove/restore/Undo, isolate/fade, explode, arrangement and related-study links as in the other regions. The ambiguous pharyngeal raphe remains withheld. See [source evidence, controls and clinical limits](docs/PANCREATIC_DETAIL.md).
@@ -84,7 +88,7 @@ The full-body catalogue is split into 76 lazy-loaded regional/system GLB bundles
 
 ## Guided regional dissection
 
-Every regional page now has a guided dissection deck, with **102 stages and 84 focused views** across the 11 regions and whole body. Move forward/back, jump to a named stage, switch to a compartment, ghost removed tissues, remove individual structures, restore them from the removed list, undo up to 40 dissection changes, or reassemble. Six directional camera presets include a plantar view for the foot. Stage and deep-brain focus landmarks explain what is visible and which structures are missing. Regional label columns now follow the visible bounds and the selected view direction, including lateral views. Selecting a removed structure through search restores it explicitly and marks the view customised.
+Every regional page has a guided dissection deck, with **113 stages and 95 focused views** across the 11 regions and whole body. Follow numbered layer steps or search the study library for an independent window/focus; ghost removed tissues, remove individual structures, restore them from the removed list, undo up to 40 dissection changes, or reassemble. Six directional camera presets include a plantar view for the foot. Stage and deep-brain focus landmarks explain what is visible and which structures are missing. Regional label columns follow the visible bounds and the selected view direction, including lateral views. Selecting a removed structure through search restores it explicitly and marks the view customised.
 
 The rendering adds original contour and tonal-hatching treatment without changing the mesh shape. Hatching describes form, not measured muscle fibres. Whole-body contour rendering is limited to selected structures when the scope is large; regional views use full contours. Ghosts do not intercept structure selection. Practice hides labels, ghosts and study content.
 

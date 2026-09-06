@@ -1,5 +1,10 @@
 # Clinical validation checklist
 
+## Study-library acceptance
+
+- Check the searchable library on real mouse, keyboard, touch and assistive-technology devices: inline expansion/scrolling, announced previews, focus return, mobile and 200% text sizing. Server-rendered markup and helper tests are not this acceptance.
+- Confirm educators understand paired window/focus buttons, retained context, target-only practice and reset behaviour. Sorting by group size is not anatomical depth or an operative order; preview counts are source entries, not visible pixels or complete tissue coverage. See `STUDY_LIBRARY.md`.
+
 ## Pancreatic and epiglottic gates
 
 - Review all twelve new source labels and fourteen components, pancreatic relationships, vessel origins/endpoints/calibre/continuity and variants. Local near-contact does not prove an anastomosis; the grouped vein is not three independently named branches.

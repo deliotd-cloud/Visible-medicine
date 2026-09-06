@@ -926,6 +926,8 @@ export default function BodyExplorer({
               visibleCount={available.length}
               structures={regionStructures}
               visibleIds={available.map((item) => item.id)}
+              loaded={loaded}
+              failed={failed}
               disabled={exam}
             />
             <InspectionControls

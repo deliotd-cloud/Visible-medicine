@@ -68,7 +68,7 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
           ? [
               `Source identity: ${s.fmaId} · ${s.sources.length} source component${s.sources.length === 1 ? '' : 's'}`,
               axial.caution,
-              'Use Guided dissection → Focus to open its local relationship window.',
+              'Use Study windows & focuses to preview and open its local study view.',
             ]
           : [axial.caution],
       note: s.coverageNote ?? 'Anatomical and teaching review pending.',
