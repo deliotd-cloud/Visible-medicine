@@ -1,7 +1,7 @@
 {
   "version": 1,
   "reviewStatus": "draft-unvalidated",
-  "catalogSha256": "8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7",
+  "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
   "profiles": [
     {
       "region": "whole-body",
@@ -1043,7 +1043,11 @@
             "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
             "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
             "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
-            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane"
+            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
+            "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
           ]
         },
         {
@@ -2480,7 +2484,11 @@
             "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
             "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
             "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
-            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
+            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+            "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
           ]
         },
         {
@@ -3158,7 +3166,11 @@
             "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
             "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
             "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
-            "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery"
+            "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
           ]
         },
         {
@@ -4245,7 +4257,11 @@
             "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
             "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
             "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
-            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
+            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+            "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
           ]
         },
         {
@@ -4316,7 +4332,11 @@
             "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
             "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
             "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
-            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
+            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+            "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
           ]
         },
         {
@@ -4387,7 +4407,11 @@
             "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
             "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
             "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
-            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
+            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+            "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
           ]
         },
         {
@@ -4446,7 +4470,11 @@
             "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
             "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
             "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
-            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
+            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+            "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
           ]
         },
         {
@@ -4505,7 +4533,11 @@
             "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
             "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
             "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
-            "vm:anatomy:body:forearm:left:vessel:left-basilic-vein"
+            "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
           ]
         },
         {
@@ -4535,6 +4567,160 @@
             "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
             "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
             "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
+          ]
+        },
+        {
+          "id": "common-interosseous-window",
+          "title": "Common interosseous origins",
+          "description": "Inspect the short common-interosseous source segments with ulnar/anterior-interosseous arteries and a radius–ulna framework.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA22807",
+                "FMA22808"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA22797",
+                "FMA22798",
+                "FMA22812",
+                "FMA22813",
+                "FMA23464",
+                "FMA23465",
+                "FMA23467",
+                "FMA23468",
+                "FMA23707",
+                "FMA23708"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "common interosseous artery",
+            "ulnar artery",
+            "anterior interosseous artery"
+          ],
+          "inspect": "Choose one side, select and frame the common segment, then set the membrane or ulnar artery aside. Restore or Undo to compare the original source positions. Do not infer a continuous vascular lumen or an absent posterior branch.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:forearm:left:bone:left-radius",
+            "vm:anatomy:body:forearm:left:bone:left-ulna",
+            "vm:anatomy:body:forearm:right:bone:right-radius",
+            "vm:anatomy:body:forearm:right:bone:right-ulna",
+            "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+            "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
+            "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
+            "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery"
+          ]
+        },
+        {
+          "id": "recurrent-interosseous-window",
+          "title": "Recurrent arteries & supinator",
+          "description": "Expose the recurrent-interosseous source segments beside the supplied supinator and elbow framework.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA268667",
+                "FMA268669"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA22807",
+                "FMA22808",
+                "FMA23464",
+                "FMA23465",
+                "FMA23467",
+                "FMA23468",
+                "FMA23130",
+                "FMA23131",
+                "FMA38513",
+                "FMA38514"
+              ]
+            }
+          ],
+          "view": "posterior",
+          "landmarks": [
+            "recurrent interosseous artery",
+            "supinator"
+          ],
+          "inspect": "Set the supinator aside, frame a recurrent artery and compare anterior/posterior views. Separation helps inspection but is not a surgical dissection plane. The complete posterior interosseous artery and elbow network are absent.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+            "vm:anatomy:body:forearm:left:bone:left-radius",
+            "vm:anatomy:body:forearm:left:bone:left-ulna",
+            "vm:anatomy:body:forearm:right:bone:right-radius",
+            "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+            "vm:anatomy:body:forearm:right:bone:right-ulna",
+            "vm:anatomy:body:forearm:right:muscle:right-supinator",
+            "vm:anatomy:body:forearm:left:muscle:left-supinator",
+            "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
+          ]
+        },
+        {
+          "id": "forearm-arterial-comparison",
+          "title": "Forearm arterial comparison",
+          "description": "Compare the five supplied paired arterial identities with the interosseous membrane and forearm bones.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA22807",
+                "FMA22808",
+                "FMA268667",
+                "FMA268669",
+                "FMA22812",
+                "FMA22813",
+                "FMA22797",
+                "FMA22798",
+                "FMA22733",
+                "FMA22734"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA23464",
+                "FMA23465",
+                "FMA23467",
+                "FMA23468",
+                "FMA23707",
+                "FMA23708"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "radial artery",
+            "ulnar artery",
+            "interosseous artery"
+          ],
+          "inspect": "Use a single side, isolate or frame a vessel, and practise only the arterial targets. Keep the membrane as a spatial reference or remove it reversibly. This is a selected source comparison, not a complete vascular tree.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:forearm:left:bone:left-radius",
+            "vm:anatomy:body:forearm:left:bone:left-ulna",
+            "vm:anatomy:body:forearm:right:bone:right-radius",
+            "vm:anatomy:body:forearm:right:bone:right-ulna",
+            "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+            "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
+            "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
+            "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
           ]
         }
       ],
@@ -4676,7 +4862,11 @@
             "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
             "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
             "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
-            "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery"
+            "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
           ]
         },
         {
@@ -4718,6 +4908,160 @@
             "vm:anatomy:body:forearm:right:bone:right-ulna",
             "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
             "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm"
+          ]
+        },
+        {
+          "id": "common-interosseous-window",
+          "title": "Common interosseous origins",
+          "rule": {
+            "fmaIds": [
+              "FMA22807",
+              "FMA22808"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA22797",
+                "FMA22798",
+                "FMA22812",
+                "FMA22813",
+                "FMA23464",
+                "FMA23465",
+                "FMA23467",
+                "FMA23468",
+                "FMA23707",
+                "FMA23708"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Inspect the short common-interosseous source segments with ulnar/anterior-interosseous arteries and a radius–ulna framework.",
+          "inspect": "Choose one side, select and frame the common segment, then set the membrane or ulnar artery aside. Restore or Undo to compare the original source positions. Do not infer a continuous vascular lumen or an absent posterior branch.",
+          "landmarks": [
+            "common interosseous artery",
+            "ulnar artery",
+            "anterior interosseous artery"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:forearm:left:bone:left-radius",
+            "vm:anatomy:body:forearm:left:bone:left-ulna",
+            "vm:anatomy:body:forearm:right:bone:right-radius",
+            "vm:anatomy:body:forearm:right:bone:right-ulna",
+            "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+            "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
+            "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
+            "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery"
+          ]
+        },
+        {
+          "id": "recurrent-interosseous-window",
+          "title": "Recurrent arteries & supinator",
+          "rule": {
+            "fmaIds": [
+              "FMA268667",
+              "FMA268669"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA22807",
+                "FMA22808",
+                "FMA23464",
+                "FMA23465",
+                "FMA23467",
+                "FMA23468",
+                "FMA23130",
+                "FMA23131",
+                "FMA38513",
+                "FMA38514"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Expose the recurrent-interosseous source segments beside the supplied supinator and elbow framework.",
+          "inspect": "Set the supinator aside, frame a recurrent artery and compare anterior/posterior views. Separation helps inspection but is not a surgical dissection plane. The complete posterior interosseous artery and elbow network are absent.",
+          "landmarks": [
+            "recurrent interosseous artery",
+            "supinator"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+            "vm:anatomy:body:forearm:left:bone:left-radius",
+            "vm:anatomy:body:forearm:left:bone:left-ulna",
+            "vm:anatomy:body:forearm:right:bone:right-radius",
+            "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+            "vm:anatomy:body:forearm:right:bone:right-ulna",
+            "vm:anatomy:body:forearm:right:muscle:right-supinator",
+            "vm:anatomy:body:forearm:left:muscle:left-supinator",
+            "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
+          ]
+        },
+        {
+          "id": "forearm-arterial-comparison",
+          "title": "Forearm arterial comparison",
+          "rule": {
+            "fmaIds": [
+              "FMA22807",
+              "FMA22808",
+              "FMA268667",
+              "FMA268669",
+              "FMA22812",
+              "FMA22813",
+              "FMA22797",
+              "FMA22798",
+              "FMA22733",
+              "FMA22734"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA23464",
+                "FMA23465",
+                "FMA23467",
+                "FMA23468",
+                "FMA23707",
+                "FMA23708"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the five supplied paired arterial identities with the interosseous membrane and forearm bones.",
+          "inspect": "Use a single side, isolate or frame a vessel, and practise only the arterial targets. Keep the membrane as a spatial reference or remove it reversibly. This is a selected source comparison, not a complete vascular tree.",
+          "landmarks": [
+            "radial artery",
+            "ulnar artery",
+            "interosseous artery"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:forearm:left:bone:left-radius",
+            "vm:anatomy:body:forearm:left:bone:left-ulna",
+            "vm:anatomy:body:forearm:right:bone:right-radius",
+            "vm:anatomy:body:forearm:right:bone:right-ulna",
+            "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+            "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
+            "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
+            "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+            "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
           ]
         }
       ]

@@ -29,8 +29,8 @@ same(
 same(evidence.sourceCommit, baseline.sourceCommit);
 same(baseline.structures.length, 892);
 same(baseline.bundles.length, 71);
-same(catalog.structures.length, 1018);
-same(catalog.bundles.length, 85);
+same(catalog.structures.length, 1022);
+same(catalog.bundles.length, 86);
 same(catalog.coordinateSystem, baseline.coordinateSystem);
 same(catalog.excluded, baseline.excluded);
 await applyJunctionTransition(baseline, catalog);

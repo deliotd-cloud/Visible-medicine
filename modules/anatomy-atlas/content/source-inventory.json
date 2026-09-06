@@ -3,7 +3,7 @@
   "sourceVersion": "4.0",
   "license": "CC-BY-4.0",
   "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
-  "catalogSha256": "8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7",
+  "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
   "tables": [
     {
       "name": "isa_parts_list_e.txt",
@@ -60,14 +60,14 @@
     "uniqueConceptIds": 3432,
     "archiveEntries": 3492,
     "archiveEntriesWithoutConcept": 0,
-    "admittedStructures": 1018,
+    "admittedStructures": 1022,
     "statuses": {
-      "represented-not-selectable": 1847,
-      "admitted": 1432,
-      "unused-available": 701,
+      "represented-not-selectable": 1850,
+      "admitted": 1436,
+      "unused-available": 695,
       "held-source-review": 38,
-      "partly-represented": 202,
-      "admitted-other-definition": 53
+      "partly-represented": 199,
+      "admitted-other-definition": 55
     }
   },
   "records": [
@@ -20742,7 +20742,11 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
-        "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery"
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -20848,10 +20852,13 @@
         "FJ2223",
         "FJ2275"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -20863,10 +20870,12 @@
       "files": [
         "FJ2275"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -20878,10 +20887,12 @@
       "files": [
         "FJ2223"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -20896,12 +20907,14 @@
         "FJ2266",
         "FJ2297"
       ],
-      "status": "partly-represented",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
-        "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery"
+        "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -41556,10 +41569,14 @@
         "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
         "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
@@ -42699,12 +42716,16 @@
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
         "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
         "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
         "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
@@ -54282,7 +54303,9 @@
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
         "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
         "vm:anatomy:body:forearm:right:bone:right-radius",
         "vm:anatomy:body:forearm:right:bone:right-ulna",
@@ -54311,7 +54334,9 @@
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
         "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-index-finger",
         "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-little-finger",
@@ -58746,7 +58771,9 @@
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
         "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
         "vm:anatomy:body:forearm:right:bone:right-radius",
         "vm:anatomy:body:forearm:right:bone:right-ulna",
@@ -58775,7 +58802,9 @@
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
         "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-index-finger",
         "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-little-finger",
@@ -61376,10 +61405,14 @@
         "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
         "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
         "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
@@ -64382,7 +64415,9 @@
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
         "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
         "vm:anatomy:body:forearm:right:bone:right-radius",
         "vm:anatomy:body:forearm:right:bone:right-ulna",
@@ -64411,7 +64446,9 @@
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
         "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-index-finger",
         "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-little-finger",
@@ -67622,7 +67659,9 @@
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
         "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
         "vm:anatomy:body:forearm:right:bone:right-radius",
         "vm:anatomy:body:forearm:right:bone:right-ulna",
@@ -67651,7 +67690,9 @@
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
         "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-index-finger",
         "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-little-finger",
@@ -71430,7 +71471,9 @@
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
         "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
         "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-flexor-carpi-ulnaris",
         "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-pronator-teres",
@@ -71439,7 +71482,9 @@
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
         "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:hand:left:muscle:oblique-head-of-left-adductor-pollicis",
         "vm:anatomy:body:hand:left:muscle:transverse-head-of-left-adductor-pollicis",
@@ -74552,10 +74597,14 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
         "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
@@ -78851,10 +78900,13 @@
         "FJ2245",
         "FJ2297"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -81556,7 +81608,9 @@
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
         "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
         "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-flexor-carpi-ulnaris",
         "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-pronator-teres",
@@ -81565,7 +81619,9 @@
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
         "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
         "vm:anatomy:body:hand:left:muscle:oblique-head-of-left-adductor-pollicis",
@@ -84918,12 +84974,16 @@
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
         "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
         "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
         "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
@@ -85776,10 +85836,14 @@
         "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
         "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
         "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
@@ -87265,10 +87329,12 @@
       "files": [
         "FJ2297"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -87280,10 +87346,12 @@
       "files": [
         "FJ2245"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -87826,6 +87894,7 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-posterior-cerebral-artery",
@@ -88017,6 +88086,7 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-posterior-cerebral-artery",
@@ -88557,6 +88627,7 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-posterior-cerebral-artery",
@@ -90728,9 +90799,11 @@
         "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
         "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
@@ -91562,6 +91635,7 @@
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:right:muscle:right-external-oblique",
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:head-neck:left:muscle:left-subclavius",
@@ -95650,6 +95724,7 @@
       "representedBy": [
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
@@ -98597,6 +98672,7 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:head-neck:left:muscle:left-subclavius",
@@ -99281,6 +99357,7 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
@@ -99444,6 +99521,7 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
@@ -106160,6 +106238,7 @@
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
         "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
         "vm:anatomy:body:forearm:right:bone:right-radius",
@@ -106167,6 +106246,7 @@
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
         "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-index-finger",
@@ -107293,6 +107373,7 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery"
       ],
       "unavailable": [],
@@ -107316,6 +107397,7 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery"
       ],
       "unavailable": [],
@@ -107390,11 +107472,12 @@
         "FJ2266",
         "FJ2275"
       ],
-      "status": "partly-represented",
-      "displayedId": null,
+      "status": "admitted-other-definition",
+      "displayedId": "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery"
+        "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -107408,11 +107491,12 @@
         "FJ2214",
         "FJ2223"
       ],
-      "status": "partly-represented",
-      "displayedId": null,
+      "status": "admitted-other-definition",
+      "displayedId": "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery"
+        "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -113547,9 +113631,11 @@
         "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
         "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
@@ -115418,9 +115504,11 @@
         "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
         "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
@@ -126283,6 +126371,7 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
@@ -126534,6 +126623,7 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
@@ -126697,6 +126787,7 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
@@ -127915,6 +128006,7 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
@@ -129486,9 +129578,11 @@
         "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
         "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
         "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
         "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
         "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
@@ -130231,6 +130325,7 @@
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:right:muscle:right-external-oblique",
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:head-neck:left:muscle:left-subclavius",
@@ -131268,6 +131363,7 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:head-neck:left:muscle:left-subclavius",
@@ -131835,6 +131931,7 @@
       "representedBy": [
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
@@ -143264,9 +143361,11 @@
       "available": true,
       "bytes": 25304,
       "crc32": 2893436924,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "11fccc2e5aec84ef7ed0d0c34ae3e9928c0aac91faaf48ce6801c09942985f28",
+      "geometrySha256": "5fd4fc548d7ebd533f95c6c53cd1d540f71ba687f55e346ad924c8c0ec39855d",
+      "representedBy": [
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -143508,9 +143607,11 @@
       "available": true,
       "bytes": 76258,
       "crc32": 2326104763,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "3dc9427ea23fcea776ebee481af423ea6ac82f4efe22250bb22afcbb0359a0e0",
+      "geometrySha256": "6c6b044968633a2fe210b13fc97961b6cb138b493075d56e50287f5b2412a377",
+      "representedBy": [
+        "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -143842,9 +143943,11 @@
       "available": true,
       "bytes": 25471,
       "crc32": 1058440848,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "96afb03f4aa0d1a62ccb95c8b1a7094da8104f9a9cb193e02ea2706707f473ce",
+      "geometrySha256": "dc2d6d863c2a2d7106e43b1175bba9b370a95d89918670ab4b7c1594926e6f26",
+      "representedBy": [
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -144086,9 +144189,11 @@
       "available": true,
       "bytes": 75202,
       "crc32": 3025248527,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "0b37892b1dfc542627ebd1c0ef4644772f405da643ff51f18cb2eda374c07d9a",
+      "geometrySha256": "7786a5241654195e073a27ed63706934f8e9327a6ced3e67b6956f029f6057e5",
+      "representedBy": [
+        "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -161400,9 +161505,11 @@
       "available": true,
       "bytes": 25307,
       "crc32": 335852201,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "2bf2b940831fe72bac90d91bbcd5c09c0697774be01ac6131f7fe549cf7b83e9",
+      "geometrySha256": "5fd4fc548d7ebd533f95c6c53cd1d540f71ba687f55e346ad924c8c0ec39855d",
+      "representedBy": [
+        "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery"
+      ]
     },
     {
       "tree": "partof",
@@ -161738,9 +161845,11 @@
       "available": true,
       "bytes": 25474,
       "crc32": 2815035195,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "5421c24b575e0003e8c622ccb3ce77544fcd82024e308eb4a44831475e9f9907",
+      "geometrySha256": "dc2d6d863c2a2d7106e43b1175bba9b370a95d89918670ab4b7c1594926e6f26",
+      "representedBy": [
+        "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery"
+      ]
     },
     {
       "tree": "partof",

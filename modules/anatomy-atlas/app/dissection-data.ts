@@ -10,6 +10,7 @@ import { handVenousStudySets } from '../lib/hand-venous-anatomy.ts';
 import { footVascularStudySets } from '../lib/foot-vascular-anatomy.ts';
 import { ocularStudySets } from '../lib/ocular-anatomy.ts';
 import { laryngealStudySets } from '../lib/laryngeal-anatomy.ts';
+import { forearmVascularStudySets } from '../lib/forearm-vascular-anatomy.ts';
 
 export type DissectionView =
   | 'anterior'
@@ -1143,6 +1144,7 @@ for (const study of [
   ...footVascularStudySets,
   ...ocularStudySets,
   ...laryngealStudySets,
+  ...forearmVascularStudySets,
 ]) {
   for (const [index, region] of study.regions.entries()) {
     const rule = { fmaIds: study.targetFmaIds };

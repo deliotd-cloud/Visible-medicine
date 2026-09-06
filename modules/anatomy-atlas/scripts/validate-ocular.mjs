@@ -45,10 +45,10 @@ const baseline = await read('content/ocular-baseline.json'),
   inventory = await read('content/source-inventory.json');
 same(
   hash(catalogRaw),
-  '8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7',
+  '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7',
 );
-same(catalog.structures.length, 1018);
-same(catalog.bundles.length, 85);
+same(catalog.structures.length, 1022);
+same(catalog.bundles.length, 86);
 same(baseline.structures.length, 1006);
 same(baseline.bundles.length, 82);
 same(baseline.sourceCommit, '7a517628613ce287d156646bf3fc6ef1cdc714d8');

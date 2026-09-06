@@ -2,7 +2,6 @@ import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { build } from 'esbuild';
-import { execFileSync } from 'node:child_process';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { cache } from './bodyparts-archive.mjs';
 import {
@@ -14,18 +13,11 @@ import {
 } from './vessel-shape-math.mjs';
 const hash = (b) => createHash('sha256').update(b).digest('hex');
 const root = 'public/models/bodyparts3d/full-body/';
-const bytes = execFileSync(
-    'git',
-    [
-      'show',
-      'd2dacd10edeac3ead12fd26376aa3377b223ffc7:' + root + 'catalog.json',
-    ],
-    { maxBuffer: 16e6 },
-  ),
+const bytes = await fs.readFile(root + 'catalog.json'),
   catalog = JSON.parse(bytes);
 assert.equal(
   hash(bytes),
-  'b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5',
+  '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7',
 );
 const compiled = await build({
   entryPoints: ['lib/anatomy-vessels.ts'],
@@ -39,7 +31,7 @@ const { vesselKind } = await import(
     Buffer.from(compiled.outputFiles[0].text).toString('base64')
 );
 const vessels = catalog.structures.filter((s) => s.system === 'vessels');
-assert.equal(vessels.length, 223);
+assert.equal(vessels.length, 227);
 const shapes = new Map(),
   bundles = catalog.bundles.filter((b) =>
     vessels.some((s) => s.bundle === b.id),
@@ -170,7 +162,8 @@ for (const [arteryId, heldId] of [
   });
 }
 const report = {
-  sourceCommit: 'd2dacd10edeac3ead12fd26376aa3377b223ffc7',
+  sourceCommit: null,
+  sourceBaseCommit: 'baac701cffa779c6a652637a5d39d241bb081f9e',
   catalogSha256: hash(bytes),
   sourceVersion: '4.0',
   license: 'CC-BY-4.0',
@@ -196,7 +189,7 @@ const report = {
   admissionsChanged: false,
   clinicalValidation: false,
   limitations:
-    'Screening of the current 223 rendered vascular identities only. Different artery/vein types, excluding opposite explicit sides; extent-only pruning, with no triangle-count exclusion; translation-only bounding-centre alignment in source mm and at most 128 deterministic samples per direction to every comparison triangle, with degenerate-face fallback. No scale, rotation, reflection or topology equivalence test. Similarity is a source-review signal, not evidence of copying, wrong anatomy, vascular correspondence or patient registration. No sampled match is clinical validation, and no flag automatically removes or admits tissue.',
+    'Screening of the current 227 rendered vascular identities only, pinned by the complete catalogue hash. sourceBaseCommit identifies the preceding committed state, not the uncommitted admission itself. Different artery/vein types, excluding opposite explicit sides; extent-only pruning, with no triangle-count exclusion; translation-only bounding-centre alignment in source mm and at most 128 deterministic samples per direction to every comparison triangle, with degenerate-face fallback. No scale, rotation, reflection or topology equivalence test. Similarity is a source-review signal, not evidence of copying, wrong anatomy, vascular correspondence or patient registration. No sampled match is clinical validation, and no flag automatically removes or admits tissue.',
 };
 await fs.writeFile(
   'content/vessel-shape-audit.json',

@@ -29,11 +29,11 @@ const raw = await fs.readFile(
   catalog = JSON.parse(raw);
 same(
   hash(raw),
-  '8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7',
+  '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7',
 );
 same(
   hash(JSON.stringify(dissectionProfiles)),
-  '8b41daa021ce295d7758e085910e5b8a2e2c2f4955c7106a1c03b82a4f4dbcc7',
+  'd127268c45678a49ff8eeae4c5622172d4549497aca33d5b3b19507557d83e9c',
 );
 for (const b of catalog.bundles)
   same(
@@ -514,8 +514,8 @@ const result = {
   eventSequences,
   handlerCases,
   markupCases,
-  bodyStructures: 1018,
-  bodyBundles: 85,
+  bodyStructures: 1022,
+  bodyBundles: 86,
   regions: 11,
   wholeBody: true,
   shoulder: true,

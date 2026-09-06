@@ -1,13 +1,19 @@
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
+import { ocularHistory } from './ocular-history.mjs';
 const hash = (b) => createHash('sha256').update(b).digest('hex');
-const inventoryRaw = await fs.readFile('content/source-inventory.json'),
-  inventory = JSON.parse(inventoryRaw);
-const catalogRaw = await fs.readFile(
-    'public/models/bodyparts3d/full-body/catalog.json',
+const baseline = JSON.parse(
+  await fs.readFile('content/forearm-vascular-baseline.json'),
+);
+const { inventoryRaw, inventory, catalogRaw, catalog } = ocularHistory(
+  JSON.parse(
+    await fs.readFile('public/models/bodyparts3d/full-body/catalog.json'),
   ),
-  catalog = JSON.parse(catalogRaw);
+  JSON.parse(await fs.readFile('content/source-inventory.json')),
+  baseline,
+  baseline,
+);
 const queryRaw = await fs.readFile('content/regional-source-candidates.json'),
   query = JSON.parse(queryRaw);
 assert.equal(

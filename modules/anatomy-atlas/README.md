@@ -1,14 +1,18 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Forearm arterial dissection
+
+The atlas now has **1,022 source entries, 138 dissection stages and 120 focuses**. In **Elbow & forearm → Study windows & focuses**, open **Common interosseous origins**, **Recurrent arteries & supinator** or **Forearm arterial comparison**. Four exact original source arteries add detail while preserving all previous anatomy. The shared select/frame, remove/restore/Undo, isolate/fade, separation and focused-practice controls apply. These are unvalidated source subsets, not complete vascular trees. See [source evidence, reproduction and clinical gates](docs/FOREARM_VASCULAR_DETAIL.md).
+
 ## Recover an interrupted 3D view
 
-The shoulder, all regions and whole body now offer **Restart 3D view** if graphics are interrupted. Dissection settings, answers and the last captured camera are retained; practice pauses until the viewer is available. Structure information stays outside the graphics surface. See [behaviour, tests and device-acceptance limits](docs/SCENE_RECOVERY.md). No anatomy has changed in this milestone.
+The shoulder, all regions and whole body offer **Restart 3D view** if graphics are interrupted. Dissection settings, answers and the last captured camera are retained; practice pauses until the viewer is available. Structure information stays outside the graphics surface. See [behaviour, tests and device-acceptance limits](docs/SCENE_RECOVERY.md). The recovery feature itself does not change anatomy.
 
 The [supporting-tissue source audit](docs/SUPPORTING_CANDIDATES.md) separates tendon, muscle and artery candidates before further admissions; existing holds remain.
 
 ## Throat dissection and regional coverage
 
-The atlas now has **1,018 source entries, 135 dissection stages and 117 focuses** across all eleven regions and the whole body. Open **Head & neck → Study windows & focuses** for **Thyrohyoid membranes & suspension**, **Vocal ligaments & vocalis**, **Posterior laryngeal muscle subset** or **Pharyngeal muscles exposed**. Two original membrane sources add detail; all previous anatomy remains unchanged. Use the shared remove/restore/Undo, isolate/fade, framing, separation and practice controls. Six uncertain candidates remain withheld. See [source evidence, use and release gates](docs/LARYNGEAL_DETAIL.md).
+The preceding laryngeal milestone reached **1,018 source entries, 135 dissection stages and 117 focuses** across all eleven regions and the whole body. Open **Head & neck → Study windows & focuses** for **Thyrohyoid membranes & suspension**, **Vocal ligaments & vocalis**, **Posterior laryngeal muscle subset** or **Pharyngeal muscles exposed**. Two original membrane sources add detail; all previous anatomy remains unchanged. Use the shared remove/restore/Undo, isolate/fade, framing, separation and practice controls. Six uncertain candidates remain withheld. See [source evidence, use and release gates](docs/LARYNGEAL_DETAIL.md).
 
 All eleven regions have shoulder-style layer tracks and independent study windows. These are reversible visibility controls on available source surfaces, not a complete surgical dissection simulator. Earlier milestone counts below are historical.
 
@@ -68,7 +72,7 @@ Use the new **quick anatomy views** for all anatomy, bones with muscles, individ
 
 ## Regional dissection workspaces
 
-Every individual regional explorer separates **Layer by layer** from independent **Study windows**. Follow named removal steps, preview the exact structures a step will hide or restore, then use the searchable, system-filtered removed-tissue tray to restore one structure or a group with one-step undo. The current 135 stages comprise 47 regional layer steps and 88 independent windows (including whole-body comparisons), with 117 focused views. These are visibility recipes, not a claim of missing-tissue completion. See [dissection workbench](docs/DISSECTION_WORKBENCH.md) and the [latest source addition](docs/FOOT_VASCULAR_DETAIL.md).
+Every individual regional explorer separates **Layer by layer** from independent **Study windows**. Follow named removal steps, preview the exact structures a step will hide or restore, then use the searchable, system-filtered removed-tissue tray to restore one structure or a group with one-step undo. The current 138 stages comprise 47 regional layer steps and 91 independent windows (including whole-body comparisons), with 120 focused views. These are visibility recipes, not a claim of missing-tissue completion. See [dissection workbench](docs/DISSECTION_WORKBENCH.md) and the [latest source addition](docs/FOREARM_VASCULAR_DETAIL.md).
 
 ## Dental and orbital close-ups
 

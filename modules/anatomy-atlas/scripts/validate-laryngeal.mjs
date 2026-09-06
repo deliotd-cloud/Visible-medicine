@@ -42,14 +42,14 @@ const catalogRaw = await fs.readFile(root + 'catalog.json'),
   audit = await read('content/laryngeal-source-audit.json');
 same(
   hash(catalogRaw),
-  '8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7',
+  '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7',
 );
 same(
   hash(await fs.readFile('content/laryngeal-source-audit.json')),
   '6595ce03a7392c482e5f965f2693ab84dc14221fd4a5fa2176d588f00ca7cae8',
 );
-same(catalog.structures.length, 1018);
-same(catalog.bundles.length, 85);
+same(catalog.structures.length, 1022);
+same(catalog.bundles.length, 86);
 same(baseline.structures.length, 1016);
 same(baseline.bundles.length, 84);
 same(baseline.sourceCommit, '67d08d64cc681552d284512745a158aa458a50da');

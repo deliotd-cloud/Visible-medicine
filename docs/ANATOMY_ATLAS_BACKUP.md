@@ -4,12 +4,12 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 
 ## Snapshot
 
-- Source application commit: `baac701cffa779c6a652637a5d39d241bb081f9e`.
-- Exact application source tree: `35715b6c71a82bcaae1f078676f030c2babddd83`.
+- Source application commit: `bc48e1e2d627e4d1d88139b0e3023370720eb747`.
+- Exact application source tree: `e661ee0787d71c452fa6df359b8ad492f619fb7b`.
 - Main website base commit: `c4ff08f8afc90bd94d04162625f97af9d94401cf`.
 - GitHub backup branch: `backup/anatomy-atlas-2026-09-06`.
-- All 466 tracked application files (116,496,904 bytes) are preserved byte-for-byte from that source commit, including 86 GLB bundles, official brand lockups, content, scripts, configuration, dependency lockfile, licences, review schema/migration and documentation.
-- The atlas covers 1,018 selectable source representations, 11 regional explorers, 135 dissection stages, 117 focuses and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation. Previous milestone receipts below are historical.
+- All 476 tracked application files (117,158,928 bytes) are preserved byte-for-byte from that source commit, including 87 GLB bundles, official brand lockups, content, scripts, configuration, dependency lockfile, licences, review schema/migration and documentation.
+- The atlas covers 1,022 selectable source representations, 11 regional explorers, 138 dissection stages, 120 focuses and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation. Previous milestone receipts below are historical.
 - The shoulder review workspace has independent geometry, teaching and imaging review tracks, evidence/issues, versioned records and revision-bound approval safeguards. Acquired scans and specialist approvals remain absent.
 - The deep-inspection update adds three-plane surface cutaways, tissue opacity, clipped-surface picking, regional/whole-body orthographic illustration and varied 5/10/20-question practice with results. No source geometry, anatomical coverage, licences or dependencies were changed.
 - The study-context update adds 20 device-local named views with dissection/camera restoration, source-change safeguards and targeted recovery from failed anatomy loads. Its current 17,081 helper assertions pass; actual saved browser preferences are not part of this source backup. The ordered continuing work queue is in the atlas's `docs/CONTINUOUS_IMPROVEMENT.md`.
@@ -20,7 +20,15 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 
 The currently published atlas remains at [Visible Medicine anatomy](https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site). Saving this branch does not redeploy that site or the main website.
 
-## Current graphics-recovery and supporting-source milestone
+## Current forearm vascular dissection milestone
+
+Four exact BodyParts3D v4 IS-A common/recurrent interosseous artery sources add one 66,352-byte GLB and three paired windows/focuses. All previous 1,018 records and 85 body-bundle hashes remain exact; the dedicated shoulder is unchanged. The views use existing source-name selection, framing, side filtering, remove/restore/Undo, isolation/fading, separation and target-only practice. No larger PART-OF branch aggregate, posterior-interosseous trunk, complete elbow network, lumen or flow is inferred. See `docs/FOREARM_VASCULAR_DETAIL.md` inside the snapshot.
+
+All 1,018 prior bounds were screened; 54 nearby raw-source structures supported 96 surface comparisons with no diagnostic flags. The feature suite passes 13,260 default checks or 23,754 raw-source checks, including every corner of all 3,436 added triangles and recomputation of all 96 pairs. Historical supporting-query evidence remains pinned through complete catalogue/inventory reconstruction. The refreshed artery–vein screen covers 227 identities/19 bundles, retains both held plantar controls and passes 325 checks. These are bounded engineering diagnostics, not clinical approval.
+
+Current source/geometry and interaction suites, type checks, focused lint, production build, 189 review safeguards and the 808-package licence classification pass. The library exposes 211 choices as 162 cards; 47 layer steps remain separate. No new dependency, font, texture, paid service, copied diagram, private review, patient scan or clinical sign-off is included. BodyParts3D CC BY 4.0 attribution and change notices remain. Next audit tendon parent/extent and superficial thumb-head alternatives without lifting existing holds; continue graphics initialization/fault handling. Specialist/device acceptance and the user's US/CT/MRI adapter, data and registration remain external gates. The goal stays active and the main website remains untouched.
+
+## Previous graphics-recovery and supporting-source milestone
 
 The dedicated shoulder and all regional/whole-body viewers share context-loss/restoration monitoring and a DOM recovery notice outside the 3D canvas. Manual restart remounts the viewer while parent dissection, selection, systems, separation, cutaway and practice state remain. Unavailable canvases are hidden and inert; picking and practice are paused. Camera recovery respects pending saved views and camera-intent changes made during an interruption. Old viewer callbacks cannot revive a replacement. No automatic retry loop or new data storage is introduced. See `docs/SCENE_RECOVERY.md` inside the snapshot.
 
@@ -134,4 +142,4 @@ The 4,301 head-detail assertions, 54,502 practice assertions, 189 automated revi
 
 Keep the atlas's [licence](../modules/anatomy-atlas/LICENSE), [third-party notices](../modules/anatomy-atlas/LICENSES/THIRD_PARTY_NOTICES.md), [BodyParts3D licence evidence](../modules/anatomy-atlas/LICENSES/BODYPARTS3D.md) and visible attribution together. MIT application code does not relicense third-party anatomy or the proprietary Visible Medicine brand marks.
 
-Keep the repository private unless public source/brand release is deliberately approved. The source snapshot is 116,496,904 bytes (about 116.50 MB); no Git LFS or new paid service was introduced for this backup. GitHub source storage is distinct from hosting, large future imaging collections and database backups; quotas and service pricing can change. Never add patient imaging or private review exports to this repository as a substitute for appropriate data storage.
+Keep the repository private unless public source/brand release is deliberately approved. The source snapshot is 117,158,928 bytes (about 117.16 MB); no Git LFS or new paid service was introduced for this backup. GitHub source storage is distinct from hosting, large future imaging collections and database backups; quotas and service pricing can change. Never add patient imaging or private review exports to this repository as a substitute for appropriate data storage.

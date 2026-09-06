@@ -42,6 +42,8 @@
     "renderer:test": "node scripts/validate-scene-recovery.mjs",
     "supporting:audit": "node scripts/audit-supporting-candidates.mjs",
     "supporting:test": "node scripts/validate-supporting-candidates.mjs",
+    "forearm-vascular:audit": "node scripts/audit-forearm-vascular.mjs",
+    "forearm-vascular:test": "node scripts/validate-forearm-vascular.mjs",
     "study-navigation:test": "node scripts/validate-study-navigation.mjs",
     "study-links:test": "node scripts/validate-study-links.mjs",
     "study-library:test": "node scripts/validate-study-library.mjs",

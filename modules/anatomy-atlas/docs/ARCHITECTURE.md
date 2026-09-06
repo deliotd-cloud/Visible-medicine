@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Forearm vascular extension
+
+Four exact IS-A source identities enter one additive bundle through `forearm-vascular-selections.mjs`; `lib/forearm-vascular-anatomy.ts` feeds three explicit target/context windows and draft notes into the existing dissection, practice, links and imaging registry. The audit screens every preceding catalogue bound in inverse common coordinates, then checks raw nearby surfaces. It never imports larger PART-OF aggregates as duplicate vessels. Baseline reconstruction keeps both complete prior catalogue/inventory hashes, including the supporting-queue history. The all-vessel diagnostic now covers 227 identities and 19 bundles without changing geometry. See [evidence and integration](FOREARM_VASCULAR_DETAIL.md).
+
 ## Shared graphics recovery
 
 `app/scene-recovery.tsx` wraps both canvases with page-level recovery UI and a generation-bound restart boundary. Its monitor uses `lib/renderer-health.ts` to observe only the live canvas's loss/restoration events. Inert hidden viewports prevent stale picks/labels. Explorer-level renderer state independently gates practice; shoulder model readiness is also explicit. Camera recovery uses the existing capture/restore refs, preserving queued saved-view intent. Anatomy, learner responses and all other view state remain above the remounted graphics subtree. These new display files are included in review fingerprints. See [state semantics and runtime limits](SCENE_RECOVERY.md).
@@ -22,7 +26,7 @@
 
 `lib/anatomy-load-state.ts` supplies atomic mutually exclusive loaded/failed states, a defensive required-group partition and the rendered-scope predicate shared by the body explorer and scene. Practice eligibility uses ready groups only and the session factory's distinct-name predicate; actual question render scope controls pause/retry/exit behaviour. See [state semantics, evidence and limitations](ANATOMY_LOADING.md).
 
-`scripts/vessel-shape-math.mjs` is an offline, translation-only source-mm diagnostic, not part of rendering or registration. The audit records all 223 vascular identities and source hashes, bounded extent-pruned artery/vein comparisons and previously held positive controls. The validator recomputes current product geometry and independent numerical fixtures. It never changes admissions or geometry. See [method, filters and rights](VESSEL_SHAPE_AUDIT.md).
+`scripts/vessel-shape-math.mjs` is an offline, translation-only source-mm diagnostic, not part of rendering or registration. The refreshed audit records all 227 vascular identities and source hashes, bounded extent-pruned artery/vein comparisons and previously held positive controls. The validator recomputes current product geometry and independent numerical fixtures. It never changes admissions or geometry. See [method, filters and rights](VESSEL_SHAPE_AUDIT.md).
 
 ## Foot vascular extension
 

@@ -2,11 +2,11 @@
   "passed": true,
   "regions": 11,
   "wholeBody": true,
-  "stages": 135,
-  "focusedViews": 117,
-  "checks": 3996,
-  "cameraChecks": 9720,
-  "structures": 1018,
+  "stages": 138,
+  "focusedViews": 120,
+  "checks": 4086,
+  "cameraChecks": 9936,
+  "structures": 1022,
   "clinicalValidation": false,
   "browserInteractionTesting": false,
   "rows": [
@@ -14,7 +14,7 @@
       "region": "whole-body",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 1018,
+      "visible": 1022,
       "removed": 0
     },
     {
@@ -22,34 +22,34 @@
       "stage": "musculoskeletal",
       "kind": "window",
       "visible": 572,
-      "removed": 446
+      "removed": 450
     },
     {
       "region": "whole-body",
       "stage": "viscera",
       "kind": "window",
       "visible": 80,
-      "removed": 938
+      "removed": 942
     },
     {
       "region": "whole-body",
       "stage": "neural",
       "kind": "window",
       "visible": 54,
-      "removed": 964
+      "removed": 968
     },
     {
       "region": "whole-body",
       "stage": "bones",
       "kind": "skeleton",
       "visible": 203,
-      "removed": 815
+      "removed": 819
     },
     {
       "region": "whole-body",
       "stage": "vascular",
       "kind": "window",
-      "visible": 426,
+      "visible": 430,
       "removed": 592
     },
     {
@@ -57,7 +57,7 @@
       "stage": "connective",
       "kind": "window",
       "visible": 292,
-      "removed": 726
+      "removed": 730
     },
     {
       "region": "shoulder-arm",
@@ -112,28 +112,28 @@
       "region": "forearm",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 62,
+      "visible": 66,
       "removed": 0
     },
     {
       "region": "forearm",
       "stage": "outer-flexors",
       "kind": "peel",
-      "visible": 50,
+      "visible": 54,
       "removed": 12
     },
     {
       "region": "forearm",
       "stage": "deep-flexors",
       "kind": "peel",
-      "visible": 48,
+      "visible": 52,
       "removed": 14
     },
     {
       "region": "forearm",
       "stage": "deep-extensors",
       "kind": "peel",
-      "visible": 36,
+      "visible": 40,
       "removed": 26
     },
     {
@@ -141,13 +141,13 @@
       "stage": "bones",
       "kind": "skeleton",
       "visible": 6,
-      "removed": 56
+      "removed": 60
     },
     {
       "region": "forearm",
       "stage": "vascular",
       "kind": "window",
-      "visible": 16,
+      "visible": 20,
       "removed": 46
     },
     {
@@ -155,7 +155,28 @@
       "stage": "connective",
       "kind": "window",
       "visible": 10,
-      "removed": 52
+      "removed": 56
+    },
+    {
+      "region": "forearm",
+      "stage": "common-interosseous-window",
+      "kind": "window",
+      "visible": 12,
+      "removed": 54
+    },
+    {
+      "region": "forearm",
+      "stage": "recurrent-interosseous-window",
+      "kind": "window",
+      "visible": 12,
+      "removed": 54
+    },
+    {
+      "region": "forearm",
+      "stage": "forearm-arterial-comparison",
+      "kind": "window",
+      "visible": 16,
+      "removed": 50
     },
     {
       "region": "hand",

@@ -1,7 +1,7 @@
 {
   "version": 4,
   "date": "2026-09-06",
-  "catalogSha256": "8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7",
+  "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
   "status": "unvalidated",
   "method": "licensed-source-recovery",
   "generatedAnatomicalMeshes": 0,
@@ -8113,6 +8113,78 @@
         }
       ],
       "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled thyrohyoid membrane in unchanged common coordinates. Full attachments, thickness, perforating vessels/nerves, swallowing and operative planes are not established. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates remain withheld for source review; no missing tissue or patient registration is invented."
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+      "fmaId": "FMA22808",
+      "sourceName": "left common interosseous artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "forearm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2223",
+          "sha256": "11fccc2e5aec84ef7ed0d0c34ae3e9928c0aac91faaf48ce6801c09942985f28"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled interosseous artery in unchanged common coordinates. The exact IS-A component is used, not the larger PART-OF branch aggregate. Branch continuity, posterior interosseous trunk, complete elbow anastomoses, vascular lumen and blood flow are not established. No missing vessel or patient registration is inferred."
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+      "fmaId": "FMA22807",
+      "sourceName": "right common interosseous artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "forearm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2275",
+          "sha256": "96afb03f4aa0d1a62ccb95c8b1a7094da8104f9a9cb193e02ea2706707f473ce"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled interosseous artery in unchanged common coordinates. The exact IS-A component is used, not the larger PART-OF branch aggregate. Branch continuity, posterior interosseous trunk, complete elbow anastomoses, vascular lumen and blood flow are not established. No missing vessel or patient registration is inferred."
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+      "fmaId": "FMA268669",
+      "sourceName": "left recurrent interosseous artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "forearm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2245",
+          "sha256": "3dc9427ea23fcea776ebee481af423ea6ac82f4efe22250bb22afcbb0359a0e0"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled interosseous artery in unchanged common coordinates. The exact IS-A component is used, not the larger PART-OF branch aggregate. Branch continuity, posterior interosseous trunk, complete elbow anastomoses, vascular lumen and blood flow are not established. No missing vessel or patient registration is inferred."
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
+      "fmaId": "FMA268667",
+      "sourceName": "right recurrent interosseous artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "forearm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2297",
+          "sha256": "0b37892b1dfc542627ebd1c0ef4644772f405da643ff51f18cb2eda374c07d9a"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled interosseous artery in unchanged common coordinates. The exact IS-A component is used, not the larger PART-OF branch aggregate. Branch continuity, posterior interosseous trunk, complete elbow anastomoses, vascular lumen and blood flow are not established. No missing vessel or patient registration is inferred."
     }
   ]
 }

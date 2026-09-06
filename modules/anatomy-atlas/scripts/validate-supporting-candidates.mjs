@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
+import { ocularHistory } from './ocular-history.mjs';
 const hash = (b) => createHash('sha256').update(b).digest('hex');
 let checks = 0;
 const same = (a, b) => {
@@ -9,12 +10,14 @@ const same = (a, b) => {
 };
 const read = async (p) => JSON.parse(await fs.readFile(p));
 const report = await read('content/supporting-candidate-audit.json');
-const inventoryRaw = await fs.readFile('content/source-inventory.json'),
-  inventory = JSON.parse(inventoryRaw);
-const catalogRaw = await fs.readFile(
-    'public/models/bodyparts3d/full-body/catalog.json',
-  ),
-  catalog = JSON.parse(catalogRaw);
+// Keep this pre-admission classification pinned. Later admissions are verified
+// separately; reconstruct both complete historical hashes, never a loose subset.
+const { inventoryRaw, inventory, catalogRaw, catalog } = ocularHistory(
+  await read('public/models/bodyparts3d/full-body/catalog.json'),
+  await read('content/source-inventory.json'),
+  await read('content/forearm-vascular-baseline.json'),
+  report,
+);
 const queryRaw = await fs.readFile('content/regional-source-candidates.json'),
   query = JSON.parse(queryRaw);
 same(report.catalogSha256, hash(catalogRaw));

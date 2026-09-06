@@ -34,7 +34,7 @@ const raw = await fs.readFile(
   catalog = JSON.parse(raw);
 same(
   hash(raw),
-  '8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7',
+  '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7',
 );
 const initialSnapshot = JSON.stringify({
   catalog,

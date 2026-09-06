@@ -693,6 +693,13 @@
       "bytes": 178112,
       "sha256": "a4788313cc86677900a528208e8ac7045f07bee300ea17073386bf0c12c83de4",
       "structures": 2
+    },
+    {
+      "id": "forearm-vessels-forearm-vascular",
+      "url": "/models/bodyparts3d/full-body/forearm-vessels-forearm-vascular.glb",
+      "bytes": 66352,
+      "sha256": "afe5f1b4dc3d79fa05550ef1fc5cc28bc8502a2e2fbe7947ffdf3e61afff9782",
+      "structures": 4
     }
   ],
   "structures": [
@@ -59500,6 +59507,226 @@
         }
       ],
       "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled thyrohyoid membrane in unchanged common coordinates. Full attachments, thickness, perforating vessels/nerves, swallowing and operative planes are not established. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates remain withheld for source review; no missing tissue or patient registration is invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+      "fmaId": "FMA22808",
+      "name": "Left common interosseous artery",
+      "sourceName": "left common interosseous artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-vessels-forearm-vascular",
+      "nodeName": "FMA22808",
+      "bounds": {
+        "min": [
+          2.117069959640503,
+          1.9161297082901,
+          0.21119102835655212
+        ],
+        "max": [
+          2.2274298667907715,
+          1.9969298839569092,
+          0.30138298869132996
+        ]
+      },
+      "center": [
+        2.172249913215637,
+        1.9565297961235046,
+        0.25628700852394104
+      ],
+      "anchor": [
+        2.164489984512329,
+        1.96711003780365,
+        0.24159401655197144
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2223",
+          "sha256": "11fccc2e5aec84ef7ed0d0c34ae3e9928c0aac91faaf48ce6801c09942985f28"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled interosseous artery in unchanged common coordinates. The exact IS-A component is used, not the larger PART-OF branch aggregate. Branch continuity, posterior interosseous trunk, complete elbow anastomoses, vascular lumen and blood flow are not established. No missing vessel or patient registration is inferred.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+      "fmaId": "FMA22807",
+      "name": "Right common interosseous artery",
+      "sourceName": "right common interosseous artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-vessels-forearm-vascular",
+      "nodeName": "FMA22807",
+      "bounds": {
+        "min": [
+          -2.227400064468384,
+          1.9160699844360352,
+          0.2111620306968689
+        ],
+        "max": [
+          -2.117069959640503,
+          1.9968903064727783,
+          0.3013259768486023
+        ]
+      },
+      "center": [
+        -2.1722350120544434,
+        1.9564801454544067,
+        0.2562440037727356
+      ],
+      "anchor": [
+        -2.1642398834228516,
+        1.971350073814392,
+        0.2469400018453598
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2275",
+          "sha256": "96afb03f4aa0d1a62ccb95c8b1a7094da8104f9a9cb193e02ea2706707f473ce"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled interosseous artery in unchanged common coordinates. The exact IS-A component is used, not the larger PART-OF branch aggregate. Branch continuity, posterior interosseous trunk, complete elbow anastomoses, vascular lumen and blood flow are not established. No missing vessel or patient registration is inferred.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+      "fmaId": "FMA268669",
+      "name": "Left recurrent interosseous artery",
+      "sourceName": "left recurrent interosseous artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-vessels-forearm-vascular",
+      "nodeName": "FMA268669",
+      "bounds": {
+        "min": [
+          2.20317006111145,
+          1.9198297262191772,
+          0.028247985988855362
+        ],
+        "max": [
+          2.279670000076294,
+          2.485400438308716,
+          0.26178398728370667
+        ]
+      },
+      "center": [
+        2.241420030593872,
+        2.2026150822639465,
+        0.145015986636281
+      ],
+      "anchor": [
+        2.259459972381592,
+        2.2033002376556396,
+        0.11255798488855362
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2245",
+          "sha256": "3dc9427ea23fcea776ebee481af423ea6ac82f4efe22250bb22afcbb0359a0e0"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled interosseous artery in unchanged common coordinates. The exact IS-A component is used, not the larger PART-OF branch aggregate. Branch continuity, posterior interosseous trunk, complete elbow anastomoses, vascular lumen and blood flow are not established. No missing vessel or patient registration is inferred.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
+      "fmaId": "FMA268667",
+      "name": "Right recurrent interosseous artery",
+      "sourceName": "right recurrent interosseous artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-vessels-forearm-vascular",
+      "nodeName": "FMA268667",
+      "bounds": {
+        "min": [
+          -2.2795701026916504,
+          1.919810175895691,
+          0.028291014954447746
+        ],
+        "max": [
+          -2.2031099796295166,
+          2.485400438308716,
+          0.26178300380706787
+        ]
+      },
+      "center": [
+        -2.2413400411605835,
+        2.2026053071022034,
+        0.1450370093807578
+      ],
+      "anchor": [
+        -2.261690139770508,
+        2.1937999725341797,
+        0.11706298589706421
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2297",
+          "sha256": "0b37892b1dfc542627ebd1c0ef4644772f405da643ff51f18cb2eda374c07d9a"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled interosseous artery in unchanged common coordinates. The exact IS-A component is used, not the larger PART-OF branch aggregate. Branch continuity, posterior interosseous trunk, complete elbow anastomoses, vascular lumen and blood flow are not established. No missing vessel or patient registration is inferred.",
       "provenance": {
         "method": "licensed-source-mesh",
         "license": "CC-BY-4.0",

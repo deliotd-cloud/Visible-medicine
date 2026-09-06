@@ -1,27 +1,27 @@
 {
   "passed": true,
-  "assertions": 229952,
-  "links": 12285,
-  "focusedLinks": 7404,
-  "destinationsTested": 5624,
+  "assertions": 232200,
+  "links": 12397,
+  "focusedLinks": 7500,
+  "destinationsTested": 5720,
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
-      "structures": 1018,
-      "testedLinks": 1631
+      "structures": 1022,
+      "testedLinks": 1639
     },
     {
       "region": "whole-body",
       "side": "left",
-      "structures": 588,
-      "testedLinks": 952
+      "structures": 590,
+      "testedLinks": 956
     },
     {
       "region": "whole-body",
       "side": "right",
-      "structures": 587,
-      "testedLinks": 950
+      "structures": 589,
+      "testedLinks": 954
     },
     {
       "region": "shoulder-arm",
@@ -44,20 +44,20 @@
     {
       "region": "forearm",
       "side": "both",
-      "structures": 62,
-      "testedLinks": 168
+      "structures": 66,
+      "testedLinks": 216
     },
     {
       "region": "forearm",
       "side": "left",
-      "structures": 31,
-      "testedLinks": 84
+      "structures": 33,
+      "testedLinks": 108
     },
     {
       "region": "forearm",
       "side": "right",
-      "structures": 31,
-      "testedLinks": 84
+      "structures": 33,
+      "testedLinks": 108
     },
     {
       "region": "hand",
@@ -223,7 +223,7 @@
     }
   ],
   "sourceGeometryChanged": false,
-  "catalogueSha256": "8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7",
+  "catalogueSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
   "actualInstalledRuntimeDuplicateParsingTested": true,
   "browserInteractionTesting": false,
   "clinicalValidation": false,

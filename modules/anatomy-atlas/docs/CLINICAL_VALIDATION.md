@@ -1,5 +1,11 @@
 # Clinical validation checklist
 
+## Forearm vascular extension gates
+
+- Review the four common/recurrent interosseous source identities, calibre, laterality, branch origin/endpoints and local relationships. Single IS-A components and larger PART-OF definitions are not interchangeable. No posterior-interosseous trunk or complete elbow arterial network is inferred.
+- Accept all three windows on actual devices: fine-vessel picking, labels, framing, side changes, opacity, separation, removal/restoration/Undo and target-only practice. Numerical source and control tests do not provide this acceptance.
+- Establish missing lumen, flow, variants and patient/scanner registration independently before making corresponding claims. No scan or clinical sign-off is included. See [forearm evidence and limits](FOREARM_VASCULAR_DETAIL.md).
+
 ## Graphics-recovery and candidate-classification acceptance
 
 - Test real context loss/restoration and creation failure, manual restart, camera/side/scope transitions, mid-exam interruptions and actual graphics-resource reconstruction. Confirm answers cannot progress while unavailable and exit remains usable.

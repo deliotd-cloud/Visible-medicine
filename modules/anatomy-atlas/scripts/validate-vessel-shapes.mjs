@@ -29,15 +29,15 @@ const reportRaw = await fs.readFile('content/vessel-shape-audit.json');
 const report = JSON.parse(reportRaw);
 same(
   hash(raw),
-  '8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7',
+  '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7',
 );
-// This screen predates the ocular admission. Full vessel records and all their
-// bundles are recomputed below and must still match the historical report.
+// Refreshed for the four forearm sources; recompute every current vessel.
 same(
   report.catalogSha256,
-  'b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5',
+  '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7',
 );
-same(report.sourceCommit, 'd2dacd10edeac3ead12fd26376aa3377b223ffc7');
+same(report.sourceCommit, null);
+same(report.sourceBaseCommit, 'baac701cffa779c6a652637a5d39d241bb081f9e');
 same(report.criteria, shapeCriteria);
 same(shapeCriteria, {
   samples: 128,
@@ -169,7 +169,7 @@ mesh.material.dispose();
 
 // Recompute actual rendered surfaces from immutable GLBs, not report extents.
 const vessels = catalog.structures.filter((s) => s.system === 'vessels');
-same(vessels.length, 223);
+same(vessels.length, 227);
 const bundles = catalog.bundles.filter((b) =>
   vessels.some((s) => s.bundle === b.id),
 );

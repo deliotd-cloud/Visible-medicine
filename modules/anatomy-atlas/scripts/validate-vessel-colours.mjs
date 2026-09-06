@@ -50,6 +50,13 @@ for (const s of catalog.structures) {
     same(typeof expected, 'string');
     same(api.vesselKind(s), expected);
     same(api.vesselColor(s), expected === 'artery' ? '#bf4847' : '#577fba');
+  } else if (s.bundle.endsWith('-forearm-vascular')) {
+    same(
+      ['FMA22807', 'FMA22808', 'FMA268667', 'FMA268669'].includes(s.fmaId),
+      true,
+    );
+    same(api.vesselKind(s), 'artery');
+    same(api.vesselColor(s), '#bf4847');
   } else {
     same(s.bundle.endsWith('-hand-venous'), true);
     same(api.vesselKind(s), 'vein');
@@ -57,6 +64,11 @@ for (const s of catalog.structures) {
   }
 }
 same(oldVessels, 201);
+same(
+  catalog.structures.filter((s) => s.bundle.endsWith('-forearm-vascular'))
+    .length,
+  4,
+);
 same(
   catalog.structures.filter((s) => s.bundle.endsWith('-hand-venous')).length,
   14,

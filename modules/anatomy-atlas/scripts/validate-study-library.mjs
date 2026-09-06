@@ -41,11 +41,11 @@ const keys = (cards) =>
   cards.flatMap((card) => card.recipes.map((recipe) => recipe.key));
 same(
   hash(raw),
-  '8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7',
+  '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7',
 );
 same(
   hash(originalProfiles),
-  '8b41daa021ce295d7758e085910e5b8a2e2c2f4955c7106a1c03b82a4f4dbcc7',
+  'd127268c45678a49ff8eeae4c5622172d4549497aca33d5b3b19507557d83e9c',
 );
 const systems = [
   'skeleton',
