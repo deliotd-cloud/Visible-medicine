@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Visible Medicine structure review",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["structureId", "geometry", "teaching", "imaging"],
+  "properties": {
+    "structureId": {"type": "string", "pattern": "^vm:anatomy:"},
+    "geometry": {"$ref": "#/$defs/evidence"},
+    "teaching": {"$ref": "#/$defs/evidence"},
+    "imaging": {"$ref": "#/$defs/evidence"}
+  },
+  "$defs": {
+    "evidence": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "reviewer", "reviewedAt", "evidenceUrls", "revisionHash", "scope"],
+      "properties": {
+        "status": {"enum": ["unreviewed", "draft", "not-loaded", "changes-required", "approved"]},
+        "reviewer": {"type": ["string", "null"]},
+        "reviewedAt": {"type": ["string", "null"], "format": "date-time"},
+        "evidenceUrls": {"type": "array", "items": {"type": "string", "format": "uri"}},
+        "revisionHash": {"type": ["string", "null"]},
+        "scope": {"type": "string", "minLength": 1}
+      },
+      "allOf": [{
+        "if": {"properties": {"status": {"const": "approved"}}},
+        "then": {"properties": {
+          "reviewer": {"type": "string", "minLength": 1},
+          "reviewedAt": {"type": "string", "format": "date-time"},
+          "revisionHash": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"},
+          "evidenceUrls": {"minItems": 1}
+        }}
+      }]
+    }
+  }
+}

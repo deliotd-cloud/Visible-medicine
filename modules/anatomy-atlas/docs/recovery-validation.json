@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "recovered": 221,
+  "bySystem": {
+    "skeleton": 3,
+    "muscles": 6,
+    "nerves": 2,
+    "organs": 22,
+    "vessels": 117,
+    "connective": 71
+  },
+  "checks": 1995,
+  "neuralEntries": 30,
+  "newTrochlearNerves": 2,
+  "quarantined": 4,
+  "clinicalValidation": false,
+  "browserInteractionTesting": false,
+  "checksPerformed": [
+    "explicit source identities",
+    "unchanged source component lists",
+    "no duplicate recovered source-file bindings",
+    "aggregate separation notices",
+    "licence and draft status",
+    "no guessed nerves or cord"
+  ]
+}

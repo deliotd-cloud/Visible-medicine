@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://visiblemedicine.example/schemas/anatomy-structure.schema.json",
+  "title": "Visible Medicine anatomy structure",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "category", "system", "region", "laterality", "content", "provenance", "validation"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^vm:anatomy:[a-z0-9-]+:[a-z0-9-]+:(right|left|midline|bilateral|unpaired|unspecified):[a-z0-9-]+:[a-z0-9-]+$"
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "latinName": { "type": ["string", "null"] },
+    "category": { "enum": ["bone", "muscle", "tendon", "ligament", "cartilage", "joint", "nerve", "vessel", "organ", "fascia", "space", "landmark"] },
+    "system": { "type": "string", "minLength": 1 },
+    "region": { "type": "string", "minLength": 1 },
+    "laterality": { "enum": ["right", "left", "midline", "bilateral", "unpaired", "unspecified"] },
+    "synonyms": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "externalTerminology": {
+      "type": "object",
+      "additionalProperties": { "type": ["string", "null"] },
+      "properties": {
+        "fma": { "type": ["string", "null"] },
+        "snomedCt": { "type": ["string", "null"] },
+        "radlex": { "type": ["string", "null"] }
+      }
+    },
+    "meshBinding": {
+      "type": ["object", "null"],
+      "required": ["assetId", "nodeName"],
+      "additionalProperties": false,
+      "properties": {
+        "assetId": { "type": "string" },
+        "nodeName": { "type": "string" },
+        "lod": { "type": "integer", "minimum": 0 },
+        "segmentValue": { "type": ["integer", "null"], "minimum": 0 }
+      }
+    },
+    "content": {
+      "type": "object",
+      "required": ["anatomy", "function", "ct", "mri", "ultrasound", "pathology", "clinical", "quiz"],
+      "additionalProperties": false,
+      "properties": {
+        "anatomy": { "$ref": "#/$defs/section" },
+        "function": { "$ref": "#/$defs/section" },
+        "ct": { "$ref": "#/$defs/section" },
+        "mri": { "$ref": "#/$defs/section" },
+        "ultrasound": { "$ref": "#/$defs/section" },
+        "pathology": { "$ref": "#/$defs/section" },
+        "clinical": { "$ref": "#/$defs/section" },
+        "quiz": { "$ref": "#/$defs/section" }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["sourceType", "licence"],
+      "properties": {
+        "sourceType": { "enum": ["authored", "licensed-dataset", "imported-standard"] },
+        "sourceReference": { "type": ["string", "null"] },
+        "licence": { "type": "string" },
+        "citation": { "type": ["string", "null"] }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": { "enum": ["draft", "in-review", "validated", "retired"] },
+        "reviewers": { "type": "array", "items": { "type": "string" } },
+        "reviewedAt": { "type": ["string", "null"], "format": "date-time" },
+        "expiresAt": { "type": ["string", "null"], "format": "date-time" },
+        "contentVersion": { "type": "string" }
+      }
+    }
+  },
+  "$defs": {
+    "section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "body"],
+      "properties": {
+        "title": { "type": "string" },
+        "body": { "type": "string" },
+        "bullets": { "type": "array", "items": { "type": "string" } },
+        "note": { "type": "string" },
+        "citations": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

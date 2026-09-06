@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Visible Medicine dissection review manifest",
+  "type": "object",
+  "required": ["version", "reviewStatus", "catalogSha256", "profiles"],
+  "properties": {
+    "version": { "type": "integer", "minimum": 1 },
+    "reviewStatus": { "enum": ["draft-unvalidated", "anatomically-reviewed"] },
+    "catalogSha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "profiles": { "type": "array", "items": { "$ref": "#/$defs/profile" } }
+  },
+  "$defs": {
+    "ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": { "type": "string", "pattern": "^vm:anatomy:" }
+    },
+    "view": {
+      "enum": ["anterior", "posterior", "right", "left", "inferior", "superior"]
+    },
+    "rule": {
+      "type": "object",
+      "properties": {
+        "systems": {
+          "type": "array",
+          "items": { "enum": ["skeleton", "muscles", "organs", "nerves"] }
+        },
+        "pattern": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "stage": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "description",
+        "kind",
+        "view",
+        "inspect",
+        "landmarks",
+        "visibleStructureIds"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "inspect": { "type": "string" },
+        "kind": { "enum": ["assembled", "peel", "window", "skeleton"] },
+        "view": { "$ref": "#/$defs/view" },
+        "landmarks": { "type": "array", "items": { "type": "string" } },
+        "visibleStructureIds": { "$ref": "#/$defs/ids" },
+        "hide": { "type": "array", "items": { "$ref": "#/$defs/rule" } },
+        "only": { "type": "array", "items": { "$ref": "#/$defs/rule" } }
+      }
+    },
+    "profile": {
+      "type": "object",
+      "required": [
+        "region",
+        "title",
+        "orientation",
+        "limitations",
+        "references",
+        "stages",
+        "focuses"
+      ],
+      "properties": {
+        "region": { "type": "string" },
+        "title": { "type": "string" },
+        "orientation": { "type": "string" },
+        "limitations": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "references": {
+          "type": "array",
+          "items": { "type": "string", "format": "uri" }
+        },
+        "stages": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/stage" }
+        },
+        "focuses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "title", "rule", "view", "visibleStructureIds"],
+            "properties": {
+              "id": { "type": "string" },
+              "title": { "type": "string" },
+              "rule": { "$ref": "#/$defs/rule" },
+              "view": { "$ref": "#/$defs/view" },
+              "visibleStructureIds": { "$ref": "#/$defs/ids" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

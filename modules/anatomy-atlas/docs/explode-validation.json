@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "pairChecks": 391870,
+  "framingChecks": 7280,
+  "cropChecks": 88,
+  "centroidDistanceMultiplierAt100": 2.6,
+  "sourceGeometryModified": false,
+  "clinicalValidation": false,
+  "limits": "Centroid spacing is not a collision solver. Anchored bones deliberately do not separate; labels need visual QA. Clinical attachments must be judged assembled at zero."
+}

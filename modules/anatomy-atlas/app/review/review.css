@@ -1,0 +1,68 @@
+.review-app { min-height:100dvh; background:var(--vm-ivory); color:var(--vm-ink); font-size:1rem; line-height:1.55; }
+.review-header { display:flex; align-items:center; flex-wrap:wrap; gap:1rem 2rem; padding:1rem 2rem; background:var(--vm-midnight); color:var(--vm-ivory); border-bottom:3px solid var(--vm-teal); }
+.review-header a:last-child { margin-left:auto; text-decoration:underline; }
+.review-shell { max-width:1440px; padding:2rem; margin:auto; }
+.review-shell h1 { font-size:2rem; font-weight:650; letter-spacing:-.035em; }
+.review-shell h2 { font-size:1.4rem; font-weight:650; }
+.review-shell h3 { font-size:1.05rem; font-weight:650; margin:1.25rem 0 .5rem; }
+.review-grid { display:grid; grid-template-columns:260px minmax(0,1fr); gap:1.5rem; margin-top:1.5rem; }
+.review-queue-item { display:flex; flex-direction:column; padding:.8rem 1rem; border-bottom:1px solid var(--border); background:white; }
+.review-queue-item small { font-size:.75rem; color:var(--vm-muted); }
+.review-queue-item span { font-size:.875rem; }
+.review-paper { background:white; padding:1.5rem; border:1px solid var(--border); border-radius:.5rem; min-width:0; }
+@media(max-width:800px) { .review-shell {padding:1rem;} .review-grid {grid-template-columns:1fr;} .review-header {padding:1rem;} }
+.review-title { display:flex; flex-wrap:wrap; align-items:flex-start; justify-content:space-between; gap:1rem; }
+.review-title p { margin:.3rem 0; }
+.review-eyebrow { color:var(--vm-muted); font-size:.75rem; letter-spacing:.09em; font-weight:700; }
+.review-actions,.review-savebar {display:flex;flex-wrap:wrap;gap:.5rem;}
+.review-app button[data-slot=button] {height:auto;min-height:2.65rem;padding:.5rem .8rem;font-size:.875rem;white-space:normal;}
+.review-app input,.review-app textarea {font-size:1rem;min-height:2.65rem;}
+.review-app [data-slot=select-trigger] {width:100%;height:auto;min-height:2.65rem;font-size:.875rem;}
+.review-app [data-slot=tabs-list] {width:100%;height:auto;min-height:2.75rem; margin-top:1.5rem; background:#ddebe8;}
+.review-app [data-slot=tabs-trigger] {padding:.6rem;font-size:1rem;}
+.review-metrics {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin:1.5rem 0 1rem;border-radius:.5rem;overflow:hidden;}
+.review-metrics div {display:flex;flex-direction:column;background:white;padding:1rem 1.25rem;}
+.review-metrics strong {font-size:1.8rem;font-weight:650;}
+.review-metrics span {font-size:.875rem;color:var(--vm-muted);}
+.review-boundary {padding:.85rem 1rem;background:#e9f3f0;border-left:3px solid var(--vm-teal);font-size:.875rem;}
+.review-error,.review-message {padding:1rem;border-radius:.4rem;margin:1rem 0;}
+.review-error {background:#fff3eb;color:#803811;border:1px solid #dec4af;}
+.review-message {background:#e4f4ef;border:1px solid #95bdb3;}
+.review-error a,.review-error button {text-decoration:underline;}
+.review-queue {margin-top:1rem;}
+.review-queue-item {width:100%;text-align:left;cursor:pointer;}
+.review-queue-item.active {background:#ddebe8;border-left:4px solid var(--vm-teal);padding-left:calc(1rem - 4px);}
+.review-queue-item:hover {background:#edf6f3;}
+.review-gap {margin-top:1.5rem;font-size:.875rem;}
+.review-gap summary {font-weight:650;cursor:pointer;}
+.review-gap ol {padding-left:1.2rem;list-style:decimal;}
+.review-model-link {display:flex;align-items:center;gap:.4rem;text-decoration:underline;font-size:.875rem;}
+.review-track-meta {display:flex;gap:1rem;flex-wrap:wrap;align-items:center;font-size:.875rem;color:var(--vm-muted);margin:1rem 0;}
+.review-state {padding:.2rem .55rem;border-radius:.3rem;background:#edf1ef;color:var(--vm-ink);font-weight:650;}
+.review-state.signed {background:var(--vm-lime);}
+.review-editor {border:0;margin:0;padding:0;min-width:0;}
+.review-editor:disabled {opacity:.65;}
+.review-check-title {display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin:1.2rem 0 .5rem;}
+.review-check-title h3 {margin:0;}
+.review-check-title>span {font-size:.875rem;color:var(--vm-muted);}
+.review-checklist {border:1px solid var(--border);border-radius:.4rem;margin-bottom:1.5rem;}
+.review-checklist label,.review-check {display:flex;align-items:flex-start;gap:.85rem;padding:.9rem 1rem;}
+.review-checklist label+label {border-top:1px solid var(--border);}
+.review-app [data-slot=checkbox] {margin-top:.25rem;width:1.1rem;height:1.1rem;}
+.review-field {display:flex;flex-direction:column;gap:.35rem;margin-bottom:1rem;font-size:.875rem;font-weight:600;}
+.review-field input,.review-field textarea {font-weight:400;}
+.review-form-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;}
+.review-evidence,.review-issue {padding:1rem;border:1px solid var(--border);border-left:3px solid var(--vm-teal);border-radius:.4rem;margin:.75rem 0 1rem;}
+.review-issue {border-left-color:#b87737;background:#fffdfa;}
+.review-muted {color:var(--vm-muted);font-size:.875rem;}
+.review-attestation {background:var(--vm-ivory);border:1px solid var(--border);font-size:.875rem;}
+.review-approval-help {margin:1rem 0;font-size:.875rem;}
+.review-app ul {padding-left:1.4rem;list-style:disc;}
+.review-savebar {padding:1rem 0;border-bottom:1px solid var(--border);}
+.review-material,.review-history {margin-top:1.5rem;}
+.review-material summary,.review-history summary {cursor:pointer;font-weight:650;}
+.review-history details {border-top:1px solid var(--border);padding:.8rem 0;font-size:.875rem;}
+.review-app code {display:block;overflow-wrap:anywhere;font-size:.75rem;}
+.review-app :is(a,button):focus-visible {outline:3px solid var(--vm-teal);outline-offset:3px;}
+@media(max-width:800px){.review-metrics{grid-template-columns:repeat(2,minmax(0,1fr));}.review-queue{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));}.review-paper{padding:1rem;}.review-form-grid{grid-template-columns:1fr;}}
+@media(max-width:440px){.review-header .vm-brand{width:240px;max-width:100%;}.review-queue{grid-template-columns:1fr;}.review-savebar>*{width:100%;}.review-header a:last-child{margin-left:0;}}

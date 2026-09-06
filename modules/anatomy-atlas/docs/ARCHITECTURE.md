@@ -1,0 +1,48 @@
+# Spatial anatomy architecture
+
+## Branded dissection update
+
+`app/brand.tsx` renders the exact approved lockup; brand tokens live in `app/globals.css`, with regional control overrides in `app/body-explorer.css`. No external fonts or brand-service request is used.
+
+`lib/explode-layout.mjs` is the pure shared displacement/bounds/fit implementation imported by runtime and tests. `app/fitted-camera.tsx` operates the external Three.js camera imperatively and preserves an existing orbit during bounding-volume changes. The source GLBs, anatomical IDs and ingestion transforms are unchanged. Body expansion origins derive from the complete current region/side, independent of selected/hidden systems; changing region or side deliberately establishes a new frame.
+
+`app/anatomy-scene.tsx` uses the same loaded GLB for orthographic shoulder plates and rotatable perspective; no separate raster anatomical truth or duplicated segmentation is maintained. Crop planes translate with structures. The shoulder's `/review` dashboard now persists independent review tracks in D1 through authenticated `/api/reviews`. `lib/review-workspace.ts` validates the expanded records; `lib/review-store.ts` supplies prepared, user-scoped append-only SQL with optimistic concurrency. Default full-body status remains conservative. See `REVIEW_WORKSPACE.md` for revision hashes, privacy and limits.
+
+## Whole-body and regional extension
+
+The root route now renders `body-explorer.tsx`; `/regions/[region]` instantiates the same explorer for a bounded region. The existing shoulder interface lives at `/shoulder`, in `shoulder-explorer.tsx`, preserving its mesh and study/exam behaviour.
+
+`scripts/bodyparts-archive.mjs` provides concurrency-limited, CRC-verified HTTP-range retrieval. `scripts/ingest-full-body.mjs` composes 823 selected source identities into 61 independently loaded region/system bundles. The public catalogue stores data binding, source/provenance, laterality, region membership, bounds, surface anchor, source hashes and exclusions. All expanded meshes share the same transform; it differs from the dedicated shoulder frame, so interoperability requires converting through source coordinates.
+
+`body-scene.tsx` keeps source geometry immutable and applies display separation only. Camera framing is computed from visible-scope metadata plus exploded bounds rather than hard-coded to shoulder size. Six directions include superior/inferior and the foot's plantar view. Selected labels and up to eight stage landmarks are shown, not hundreds of labels. Source bundles are cached by the GLB loader. The standard content tabs use existing shoulder notes where source identifiers match; otherwise `body-content.ts` explicitly distinguishes short authored notes from pending specialist content.
+
+`dissection-data.ts` defines 86 guided visibility stages and 60 focused views with a pure resolver and undo reducer. `dissection-controls.tsx` renders the stage deck and original study guide. `anatomy-tissue.tsx` supplies shared-program illustrated materials; ghosts do not raycast. `scripts/validate-dissection.mjs` checks every stage, side and landmark, undo/restore transitions and six-direction camera framing at assembled/exploded endpoints, then exports an explicit-ID review manifest. See `docs/DISSECTION.md` and `content/schema/dissection-manifest.schema.json`.
+
+The anatomy expansion itself added no dependencies or database. The subsequent review workspace adds D1 persistence and development-only Drizzle migration tooling; it requires no paid AI API or anatomy subscription. `docs/FULL_BODY_COVERAGE.md` documents missing nerves, organ scope, quarantined entries and non-clinical status. These data checks do not substitute for clinical validation or target-device/browser testing.
+
+## Current pipeline
+
+Official BodyParts3D ZIP → selected verified OBJ entries → one common coordinate transform → eleven named GLB meshes → nine stable product IDs → content panel / quiz / imaging event bridge.
+
+`scripts/ingest-bodyparts3d.mjs` owns source selection, integrity checks, normals and export. `public/models/bodyparts3d/manifest.json` records the source file, FMA reference, canonical structure ID, GLB node name, bounds, hashes and full matrix. No per-mesh reassembly is performed: at zero explosion, source registration is retained.
+
+`app/anatomy-scene.tsx` loads the GLB, styles surfaces, controls layer visibility, selection and labelled leader lines. The three deltoid component nodes share a parent product identity but retain source identifiers. The long-head biceps mesh is not mislabelled as a tendon-only segmentation. The viewer clips the lower arm at scene Y=-3.15. Explosion is a display transformation, never saved as source anatomy. Illustrative hatching is a shading effect, not fibre tractography.
+
+`app/page.tsx` owns shared interaction state. Anatomy/Function/CT/MRI/Ultrasound/Pathology/Clinical/Quiz tabs stay synchronised with structure selection. Exam mode removes labels and selection highlighting, records one answer per question and resets score on restart. Keyboard-operable structure lists provide an alternative to canvas hit testing. Mobile includes zoom buttons and the same layer/structure controls.
+
+## Coordinate and radiology contract
+
+Source: millimetres, positive X left, Y posterior, Z superior. Scene: X left, Y superior, Z anterior. Common source centre and scale (0.026 scene units/mm) are stored with a column-major matrix. The matrix has positive determinant; no laterality reflection occurs. The inverse recovers reference-model millimetres.
+
+The `visible-medicine:imaging-sync` event carries product ID, plane, normalised slice and origin; optional reference coordinates and a patient frame-of-reference UID prepare a future adapter. Neither is a claim of existing patient registration. A production adapter needs image orientation/position, voxel spacing, FrameOfReferenceUID, registration transform, validation bounds and explicit loop prevention. Never align DICOM by a display centre or guessed laterality.
+
+## Scaling to full body
+
+- Split delivery by region and level of detail while retaining one source coordinate frame.
+- Keep ID, laterality, meshes, terminology, content and review provenance separate.
+- Allow one-to-many node bindings (deltoid is already an example); do not depend on mesh colour for identity.
+- Serve validated content from a database using `content/schema/anatomy-structure.schema.json`; the present UI records are a smaller authoring format, not falsely claimed to be schema-complete database records.
+- Keep licence evidence and derivative notices with every regional bundle.
+- Require anatomical and educational sign-off before changing draft status. Licensor provenance does not confer clinical approval.
+
+Legacy 2D components and their public-domain assets are retained but not imported by the primary route. They are not substitutes for the spatial model.

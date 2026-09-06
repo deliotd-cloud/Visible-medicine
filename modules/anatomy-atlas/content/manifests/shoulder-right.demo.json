@@ -1,0 +1,17 @@
+{
+  "assetId": "vm:asset:shoulder:right:procedural-demo:v1",
+  "geometryStatus": "procedural-demonstration-only",
+  "units": "scene-units",
+  "coordinateSystem": "display-space",
+  "licence": "MIT",
+  "nodes": [
+    { "nodeName": "scapula", "structureId": "vm:anatomy:upper-limb:shoulder:right:bone:scapula" },
+    { "nodeName": "humerus", "structureId": "vm:anatomy:upper-limb:shoulder:right:bone:humerus" },
+    { "nodeName": "clavicle", "structureId": "vm:anatomy:upper-limb:shoulder:right:bone:clavicle" },
+    { "nodeName": "deltoid", "structureId": "vm:anatomy:upper-limb:shoulder:right:muscle:deltoid" },
+    { "nodeName": "supraspinatus", "structureId": "vm:anatomy:upper-limb:shoulder:right:muscle:supraspinatus" },
+    { "nodeName": "infraspinatus", "structureId": "vm:anatomy:upper-limb:shoulder:right:muscle:infraspinatus" },
+    { "nodeName": "subscapularis", "structureId": "vm:anatomy:upper-limb:shoulder:right:muscle:subscapularis" },
+    { "nodeName": "biceps-long-head", "structureId": "vm:anatomy:upper-limb:shoulder:right:tendon:biceps-long-head" }
+  ]
+}

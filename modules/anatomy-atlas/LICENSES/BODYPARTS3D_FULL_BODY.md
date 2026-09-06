@@ -1,0 +1,31 @@
+# Expanded BodyParts3D commercial-use audit
+
+Verified 2026-09-05. The official LSDB Archive licence statement, updated 2025-02-27, explicitly applies **CC BY 4.0** to this database: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html . The existing `CC-BY-4.0.txt` and evidence snapshots are retained in this directory.
+
+Required credit:
+
+BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International
+
+Sources are the official version 4.0 `isa_BP3D_4.0_obj_99.zip` and `partof_BP3D_4.0_obj_99.zip`, with their respective `*_element_parts.txt` source-definition tables, all from https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/ . No third-party mirror, non-commercial anatomical atlas or mixed-licence collection was substituted. Source tables provide the names and FMA cross-references; this is not a full FMA ontology redistribution under an assumed licence.
+
+`public/models/bodyparts3d/full-body/catalog.json` records every included source component and SHA-256, its source archive, product identity, source concept, derived node, bundle hash, common transformation and exclusions. The reusable downloader verifies every extracted file against the archive's CRC32 and uncompressed size before use. Previously downloaded source bytes remain outside the public site. The included source-definition table is under the same database attribution grant.
+
+Adaptations: source subset selection, safe grouping of source components into whole-organ identities, vertex welding and smooth normals, a shared rigid coordinate transform with uniform scale, GLB conversion, regional/system delivery partitions, authored display colours, and display-only separation/isolation. Region groupings are authored navigation aids awaiting clinical review. Four flagged laterality entries are excluded. No new commercial datasets, model services, fonts, textures, patient studies or paid dependencies are introduced.
+
+Commercial use, adaptation and redistribution are allowed with attribution and indication of changes. There is no mandatory fee, non-commercial limitation or share-alike requirement under this grant. Keep the visible source link and full credits page, and preserve attribution with exported screenshots or model derivatives. Do not impose technological or contractual restrictions that prevent recipients exercising CC BY rights to the covered assets. No endorsement or clinical warranty is implied.
+
+The code's MIT licence does not replace the model/data licence. Continue to retain software notices under the existing dependency audit. Hosting/provider prices and traffic limits are separate from these no-fee asset licences.
+
+No textbook prose or figures were imported. Original short function notes describe general anatomical facts; external educational pages consulted for fact checking were not treated as commercially licensed content datasets.
+
+## Dissection extension — 2026-09-06
+
+The official grant was rechecked. Sixty additional named muscle heads/parts were retrieved from the same two official version 4.0 archives and processed with the same CRC32/SHA-256 verification and shared transform. That stage produced 602 source entries in 34 bundles. Existing four quarantined candidates remain excluded. All source hashes and identities are recorded in the catalogue.
+
+Authored visibility recipes, display-only ghosting, original contour/hatching shaders and instructional UI were added. These do not reproduce commercial atlas illustrations or textbook prose. Clinical source links provide fact-check references only; their separately copyrighted content is not licensed for redistribution by this project. No dependency, font, texture, licence subscription or paid API was added. Preserve this notice and the visible attribution in all distributions and derived media.
+
+## Recovery extension — 2026-09-06
+
+The paragraph below records the first recovery pass. The following gap pass added **62 further v4 entries**, bringing the current total to **823 in 61 bundles (88.63 MB)**. All additional meshes remain under the same explicit **CC BY 4.0** grant, with source hashes in the catalogue. The v3 CC BY-SA 2.1 Japan archive was researched but **not distributed or mixed into the model**. No new share-alike obligation, dependency, font, texture or paid service was introduced. See `docs/GAP_FILLING.md` for the source/adaptation ledger and held alternatives.
+
+159 further concepts from the same official archives bring the library to 761 entries in 53 GLB bundles (86.2 MB). Exact additions, hashes and regions are in `content/recovery-manifest.json` and the public catalogue. In addition to existing adaptations, recovered vascular/rectal components are separated from heart, liver and large-intestine display aggregates to avoid duplicate rendering; their source coordinates and aggregate public IDs are preserved. All entries are explicitly unvalidated. No generated anatomy, new textures, fonts, third-party model collection or paid service was added. The official CC BY 4.0 grant was rechecked during this extension. Z-Anatomy was not imported because its upstream attribution list includes non-commercial components requiring asset-level clearance; see `docs/ANATOMY_RECOVERY.md`.

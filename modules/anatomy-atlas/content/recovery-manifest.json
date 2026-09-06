@@ -1,0 +1,4470 @@
+{
+  "version": 2,
+  "date": "2026-09-06",
+  "catalogSha256": "6167b65dafb105d6727605b8ede0f0509e558d348777e228fe86bdca2b7bdeab",
+  "status": "unvalidated",
+  "method": "licensed-source-recovery",
+  "generatedAnatomicalMeshes": 0,
+  "license": "CC-BY-4.0",
+  "source": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+  "recovered": [
+    {
+      "id": "vm:anatomy:body:thorax:midline:bone:manubrium",
+      "fmaId": "FMA7486",
+      "sourceName": "manubrium",
+      "sourceTree": "isa",
+      "category": "bone",
+      "system": "skeleton",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3290",
+          "sha256": "e94f731d044131260947146ab79fa7c4712865e1aac36a1410003358b96e0692"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:bone:body-of-sternum",
+      "fmaId": "FMA7487",
+      "sourceName": "body of sternum",
+      "sourceTree": "isa",
+      "category": "bone",
+      "system": "skeleton",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3178",
+          "sha256": "ec90f03f2ce1edebc8793a9e9973229b198d6367eb5eab1dff6e238110e94d9d"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:bone:xiphoid-process",
+      "fmaId": "FMA7488",
+      "sourceName": "xiphoid process",
+      "sourceTree": "isa",
+      "category": "bone",
+      "system": "skeleton",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3153",
+          "sha256": "371573a43e28506d674bf4999ee4c50c0497014aa8d69865f450a078d493a495"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-first-costal-cartilage",
+      "fmaId": "FMA7875",
+      "sourceName": "right first costal cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3333",
+          "sha256": "3d5d3e082d8125f35f1d13ee18db57260d81b692e7a4ab22c076b17421f6d1ac"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-first-costal-cartilage",
+      "fmaId": "FMA8005",
+      "sourceName": "left first costal cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3239",
+          "sha256": "dd8bec4169a10d30c45bfb2dc1136bfa67bc4d359457d6b815fdfbe433f5dfb6"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-second-costal-cartilage",
+      "fmaId": "FMA7886",
+      "sourceName": "right second costal cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3335",
+          "sha256": "75c0c3b0164c789a27f2a72872e5ce5f958b82b732606be820b68f5f8330964d"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-second-costal-cartilage",
+      "fmaId": "FMA8031",
+      "sourceName": "left second costal cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3242",
+          "sha256": "edb9924bb7c01d1b0bfbbb05333f631e30db787e24951aeb86e19ded5678ed8a"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-third-costal-cartilage",
+      "fmaId": "FMA7913",
+      "sourceName": "right third costal cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3337",
+          "sha256": "0dc64f1b1e8abd86ce8c345dae47ae9f14c9e3d3addee7a9e4fb07755033fff7"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-third-costal-cartilage",
+      "fmaId": "FMA8058",
+      "sourceName": "left third costal cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3245",
+          "sha256": "50a443a62da274da125475e6fa9b0653eec26880dd0cc22344f2c6ceb2ca0f4e"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-fourth-costal-cartilage",
+      "fmaId": "FMA7976",
+      "sourceName": "right fourth costal cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3339",
+          "sha256": "8b023d2e8ff32ef995b6f4e3db2423787a8255fc994c5260b663b2145290d4c2"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-fourth-costal-cartilage",
+      "fmaId": "FMA8167",
+      "sourceName": "left fourth costal cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3248",
+          "sha256": "bb9f9646cabaa97db7beb20f90c02065ece1ea935f4b86e57b5fb2666e33f7fe"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-fifth-costal-cartilage",
+      "fmaId": "FMA8070",
+      "sourceName": "right fifth costal cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3341",
+          "sha256": "78e34af57195fbade25925e556c858629c67e31213b75778252a4b000cc620d7"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-fifth-costal-cartilage",
+      "fmaId": "FMA8112",
+      "sourceName": "left fifth costal cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3251",
+          "sha256": "153994f11ea01b550386323452501ef37f698d768c5e7189e224ec429e87fd24"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-sixth-costal-cartilage",
+      "fmaId": "FMA8194",
+      "sourceName": "right sixth costal cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3343",
+          "sha256": "22079c9ebfef0aafd27a366416e3e4a1a4c190a25ea5c6beac844eda78cbb42d"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-sixth-costal-cartilage",
+      "fmaId": "FMA8221",
+      "sourceName": "left sixth costal cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3254",
+          "sha256": "117248128a238182e9a2585db775ba336eb8e5172523eff26882d094400d1183"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-seventh-costal-cartilage",
+      "fmaId": "FMA8248",
+      "sourceName": "right seventh costal cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3345",
+          "sha256": "0bce64747fc720452920d6aa9061cba35430e31074ca35c655a310466a3c30a7"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-seventh-costal-cartilage",
+      "fmaId": "FMA8275",
+      "sourceName": "left seventh costal cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3255",
+          "sha256": "bdf5071c36fa01955489b83366100e0d44cf7594a65319506fd44a8e01e08b9c"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:cartilage:septal-nasal-cartilage",
+      "fmaId": "FMA59503",
+      "sourceName": "septal nasal cartilage",
+      "sourceTree": "partof",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2557",
+          "sha256": "bfc5f7835227408656650af0e7d15f3dfa6bc7151da0485ae76527b03c6ba5c9"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-major-alar-cartilage",
+      "fmaId": "FMA59505",
+      "sourceName": "right major alar cartilage",
+      "sourceTree": "partof",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2554",
+          "sha256": "bcd0bac9cd74145362c18a6ed39215a320aa51c0041738aa81110b1c4d4d83d5"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-major-alar-cartilage",
+      "fmaId": "FMA59506",
+      "sourceName": "left major alar cartilage",
+      "sourceTree": "partof",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2555",
+          "sha256": "f4f2b9ab31791787b92193c4fb212bb9390e7421ff04178da5f1c14b0e8273a2"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-lateral-nasal-cartilage",
+      "fmaId": "FMA59512",
+      "sourceName": "right lateral nasal cartilage",
+      "sourceTree": "partof",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2558",
+          "sha256": "c36179ffa308590bee79554e1fda6c3922b8d86f785781bedfe98368ed6c7dab"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-lateral-nasal-cartilage",
+      "fmaId": "FMA59513",
+      "sourceName": "left lateral nasal cartilage",
+      "sourceTree": "partof",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2556",
+          "sha256": "ed9397b65596b2d831d0bf796ead025086f0d5fc471421d5fd35f698b3e58e8d"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+      "fmaId": "FMA55099",
+      "sourceName": "thyroid cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2808",
+          "sha256": "48cd41bcd4044c7013ba10c971e212766afc970408f51875f9ef8e8c407c0687"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:cartilage:cricoid-cartilage",
+      "fmaId": "FMA9615",
+      "sourceName": "cricoid cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2440",
+          "sha256": "ae1e2bab875a75035aaebdc79212fd859c2c193881462245de3252853721361d"
+        },
+        {
+          "file": "FJ2769",
+          "sha256": "5f75fb4d2969fd1de51898787bb8810c441d5d2bd6eb0c5482b7cacd3c9bc3be"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-arytenoid-cartilage",
+      "fmaId": "FMA55113",
+      "sourceName": "right arytenoid cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2792",
+          "sha256": "6766f404ea88ffb33f5430ee4704a416aab95813da19a84998f67fbdcc556eaa"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-arytenoid-cartilage",
+      "fmaId": "FMA55114",
+      "sourceName": "left arytenoid cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2775",
+          "sha256": "1e2c0bf8eab8a3a1814b5d56ba721031f3bd87473ea739e540781117bbfb32c9"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:ligament:right-long-plantar-ligament",
+      "fmaId": "FMA44249",
+      "sourceName": "right long plantar ligament",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ1424",
+          "sha256": "661b56c07f5a39362806f1c62d10497f42dbe1da37a680da0d4359c0c5079c9c"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:ligament:left-long-plantar-ligament",
+      "fmaId": "FMA44250",
+      "sourceName": "left long plantar ligament",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ1424M",
+          "sha256": "85a4d2965253a1638342e3295fb342ff0d8e8931c9d9b6373de6e6af7de3e79e"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:set-of-lumbricals-of-right-hand",
+      "fmaId": "FMA42398",
+      "sourceName": "set of lumbricals of right hand",
+      "sourceTree": "isa",
+      "category": "muscle",
+      "system": "muscles",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ1510",
+          "sha256": "d3ce59c7785168a78c152a202480c2ed05b2c0b2798d70d89e3b9bd42fc2f9de"
+        }
+      ],
+      "coverageNote": "One source mesh represents the lumbrical group on this side. Individual first–fourth lumbricals are not separately segmented; attachments and numbering require review."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:set-of-lumbricals-of-left-hand",
+      "fmaId": "FMA42399",
+      "sourceName": "set of lumbricals of left hand",
+      "sourceTree": "isa",
+      "category": "muscle",
+      "system": "muscles",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ1510M",
+          "sha256": "00bab05fd9225e6c06a1dc7f572a01ec1771b23f5cde34bd6378960457c9c8e0"
+        }
+      ],
+      "coverageNote": "One source mesh represents the lumbrical group on this side. Individual first–fourth lumbricals are not separately segmented; attachments and numbering require review."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:prostate",
+      "fmaId": "FMA9600",
+      "sourceName": "prostate",
+      "sourceTree": "partof",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "pelvis"
+      ],
+      "sources": [
+        {
+          "file": "FJ3139",
+          "sha256": "f20448e74cf6b6096248361bc4f618c1d7f4c1acac77f785abc43e40835b13cb"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:organ:right-testis",
+      "fmaId": "FMA7211",
+      "sourceName": "right testis",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "pelvis"
+      ],
+      "sources": [
+        {
+          "file": "FJ3142",
+          "sha256": "1dc84c4d16139902662f08c97bc2581cb698cf8411855bcca5474e154f4ad86e"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:organ:left-testis",
+      "fmaId": "FMA7212",
+      "sourceName": "left testis",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "pelvis"
+      ],
+      "sources": [
+        {
+          "file": "FJ3138",
+          "sha256": "bb9e548f7059fb21370b8c9612ce10fe70aa9b96945c1faea33d7cc9ed113639"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:organ:right-seminal-vesicle",
+      "fmaId": "FMA19387",
+      "sourceName": "right seminal vesicle",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "pelvis"
+      ],
+      "sources": [
+        {
+          "file": "FJ3143",
+          "sha256": "183e4a11e0a75a76dcdaf33f46afb7f5f30430c5e0b1ff19237be1ebef7e72ba"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:organ:left-seminal-vesicle",
+      "fmaId": "FMA19388",
+      "sourceName": "left seminal vesicle",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "pelvis"
+      ],
+      "sources": [
+        {
+          "file": "FJ3137",
+          "sha256": "e14aff1615aec623f98d769cb60894fb0e859ae0a0e0967a7b5757909afc50eb"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:organ:right-ureter",
+      "fmaId": "FMA15571",
+      "sourceName": "right ureter",
+      "sourceTree": "partof",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "abdomen",
+        "pelvis"
+      ],
+      "sources": [
+        {
+          "file": "FJ3146",
+          "sha256": "780889608ce700962d98be95432f94d58ca121b240099adeb83d8278ca8a779d"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:organ:left-ureter",
+      "fmaId": "FMA15572",
+      "sourceName": "left ureter",
+      "sourceTree": "partof",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "abdomen",
+        "pelvis"
+      ],
+      "sources": [
+        {
+          "file": "FJ3144",
+          "sha256": "1235a492a66c738eceafaafa512def0ed82785741367a29835aae2fdb706d59a"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unpaired:organ:thymus",
+      "fmaId": "FMA9607",
+      "sourceName": "thymus",
+      "sourceTree": "partof",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3150",
+          "sha256": "54102c62c92c793d69b6900b7b8b5d5a130ff024767e25a50eaac6105cb0189d"
+        },
+        {
+          "file": "FJ3151",
+          "sha256": "12da29f923a948d45b2eee05bd39805ec84bea612aeaa7056f13813986415d67"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:pituitary-gland",
+      "fmaId": "FMA13889",
+      "sourceName": "pituitary gland",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1796",
+          "sha256": "e79b1a41d81d066e798dcda7f73f7ffd58741adfbd709d47baacccb2fabfcce0"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "fmaId": "FMA12514",
+      "sourceName": "right eyeball",
+      "sourceTree": "partof",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1336",
+          "sha256": "518f78b01de0273ea1cdd6152f2215f9432f2ce00ac2164cea8aa3a420cd897c"
+        },
+        {
+          "file": "FJ1337",
+          "sha256": "db3077437828f311b6afa07dc9dc7a27ab0e005ddce62570420c61af31643f22"
+        },
+        {
+          "file": "FJ1340",
+          "sha256": "20cc1b1156cd9fdebd96d8a7710ff3d6d6fc9fef79b7173ef41491e2b6e650a3"
+        },
+        {
+          "file": "FJ1348",
+          "sha256": "1120c896903582ef7349b5be68a03bfb215def235851a82b1f1f44cfe212ad9e"
+        },
+        {
+          "file": "FJ1356",
+          "sha256": "767e9107cf299b87729c9eb921a2ede22d3bfd03ae7027b6fb88631c1a0ec150"
+        },
+        {
+          "file": "FJ1368",
+          "sha256": "6fce2e1842730573a8d1360a88a9512b2ee5fe0ebe55e669cd265601da663b49"
+        },
+        {
+          "file": "FJ1371",
+          "sha256": "8dc5ab248fc952170f9057aaf4bbd2339d9ee4c30b40b32ce793e54b22706738"
+        },
+        {
+          "file": "FJ1382",
+          "sha256": "de22335a9c3ad8036e0651eb09aa975e15151bb5ac6e3d142cf8260204fa633f"
+        }
+      ],
+      "coverageNote": "Compound eyeball surface. Internal components are grouped, not an independently reviewed ocular-layer dissection."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+      "fmaId": "FMA12515",
+      "sourceName": "left eyeball",
+      "sourceTree": "partof",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1282",
+          "sha256": "c66ed172ed90448e3e9508f21b116f319cfd1036cb7281e2f3541ede5f2adb1f"
+        },
+        {
+          "file": "FJ1285",
+          "sha256": "dd7677f804c1c370a2c6d11966877934efa9ca09c6b100e18f06fd4508ccbbb6"
+        },
+        {
+          "file": "FJ1286",
+          "sha256": "ba4e6f7156124700b63d526a882933b35b89fa0e9fd53495964d57aa5de1c989"
+        },
+        {
+          "file": "FJ1289",
+          "sha256": "6edadfa812d834f5b90d17d427baa0c6688a4cc32856c2b8c6320907bbc05150"
+        },
+        {
+          "file": "FJ1297",
+          "sha256": "e9359237794eef61117f1c12a6822dafdd0cfc70ada8d2447e3d26d4fcda9bd7"
+        },
+        {
+          "file": "FJ1305",
+          "sha256": "a2b7f9b53dd2d14a352dfa0d3e01452031a2957aae62aa7c904d7c1d1922954c"
+        },
+        {
+          "file": "FJ1317",
+          "sha256": "81a184bd0d3d8602af3c2186405a16565bcabd0d305fcbad7e02b979335d9582"
+        },
+        {
+          "file": "FJ1320",
+          "sha256": "a73a8e48e83cd65e15eda97533b59cac7f3f687a7b117e587bc561bf4f7b50a1"
+        },
+        {
+          "file": "FJ1331",
+          "sha256": "417bc91c6719b2982cb60640058ddcce9f50ecfb5a20db02393f2cf7bad82a0b"
+        }
+      ],
+      "coverageNote": "Compound eyeball surface. Internal components are grouped, not an independently reviewed ocular-layer dissection."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:rectum",
+      "fmaId": "FMA14544",
+      "sourceName": "rectum",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "pelvis"
+      ],
+      "sources": [
+        {
+          "file": "FJ2571",
+          "sha256": "aaedd56539179e2091b3217d11fd42c298ed01a971463725f6c32372289c6819"
+        }
+      ],
+      "coverageNote": "Source rectum surface separated from the large-intestine aggregate for selection. No wall-layer, sphincter or mesorectal dissection is supplied."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
+      "fmaId": "FMA3736",
+      "sourceName": "ascending aorta",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3413",
+          "sha256": "764f23e432a9308e0780c586f9d1638db1fbcc52a5019ae61817b4b1de323870"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
+      "fmaId": "FMA3768",
+      "sourceName": "arch of aorta",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3411",
+          "sha256": "9eeb5e5a627e8145f03961c661c9c66d8fdc55ed1234d04b84212b87a21d902c"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta",
+      "fmaId": "FMA87217",
+      "sourceName": "descending thoracic aorta",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ1931",
+          "sha256": "b213c8178b48f9afae695254f7bcfb3e08d5781878a76724c353e7e6ea6269be"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:superior-vena-cava",
+      "fmaId": "FMA4720",
+      "sourceName": "superior vena cava",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3645",
+          "sha256": "5cc007c2ea51255df641225630e83ddbf3e5c4545dffe4814b098c9199ceb26c"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:azygos-vein",
+      "fmaId": "FMA4838",
+      "sourceName": "azygos vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3416",
+          "sha256": "88b374af13155c62ea5bcaad554a699d1d95e23948eeb810b62edb7467789dde"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+      "fmaId": "FMA4944",
+      "sourceName": "hemiazygos vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3434",
+          "sha256": "dcc2d6adb32cb84ffd91fd9104a3ba13986d6e9801231733086cbd8ab5ca2b26"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+      "fmaId": "FMA3789",
+      "sourceName": "abdominal aorta",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen",
+        "pelvis",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ1932",
+          "sha256": "c74d3742308c1f05ce9e85c4508d348e3debf57d4aab5bfbc42041d682d39e02"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+      "fmaId": "FMA10951",
+      "sourceName": "inferior vena cava",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen",
+        "pelvis",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3441",
+          "sha256": "7b03ef0464b622d0a839c3c55aedcec2a713b4399112e7ce6efa1ac51861b606"
+        },
+        {
+          "file": "FJ3659",
+          "sha256": "2241af6de027922eb74cb58d882433a5d0ffb7ecce41a1925f05e13dd78d666c"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+      "fmaId": "FMA3932",
+      "sourceName": "brachiocephalic artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ3417",
+          "sha256": "285df2b5ecb7881756e36645ca21e2cd825863f420c813a673eb6514c93f9156"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-subclavian-artery",
+      "fmaId": "FMA3953",
+      "sourceName": "right subclavian artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ3579",
+          "sha256": "1fb9231343dce90a8d62061c63e0102eb72d117f131eda7876abfeb0060b6ad3"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-subclavian-artery",
+      "fmaId": "FMA4694",
+      "sourceName": "left subclavian artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ3479",
+          "sha256": "f6af4efb94e1ce94519c94684b1d0a0736272e5a0ed2677a63627e0ebfc228b1"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-brachiocephalic-vein",
+      "fmaId": "FMA4751",
+      "sourceName": "right brachiocephalic vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ3583",
+          "sha256": "53cca77d47a5c4bb02e2c86cd38180752d37bf257a6e7ec48bc2335c6e95211a"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-brachiocephalic-vein",
+      "fmaId": "FMA4761",
+      "sourceName": "left brachiocephalic vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ3482",
+          "sha256": "435c32387de475a28722653dfa7a830c136dd7921dac768c4b6858877fafb176"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-subclavian-vein",
+      "fmaId": "FMA4755",
+      "sourceName": "right subclavian vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ3587",
+          "sha256": "3ed476e466dbc681e284005f910b546a97ac24999236cae1ec7487149da7bb53"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-subclavian-vein",
+      "fmaId": "FMA4763",
+      "sourceName": "left subclavian vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ3486",
+          "sha256": "22b351bd5e1e76488e150f433bfc59a44c3a27a567f5eb5c9a6be5b2b21be5c6"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
+      "fmaId": "FMA3941",
+      "sourceName": "right common carotid artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3564",
+          "sha256": "423585ec439b07b0f64878f904afca52d4866e1e0dc54c2ace31953d9b6156cf"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
+      "fmaId": "FMA4058",
+      "sourceName": "left common carotid artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3483",
+          "sha256": "19f38e57365867279705090994fff228177163c1920ad0f8f9b15f830a42bc1d"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-internal-carotid-artery",
+      "fmaId": "FMA3949",
+      "sourceName": "right internal carotid artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ1682",
+          "sha256": "7bb929f419a3b37c8cffe1a1bf59c0374b26e2c1027d061956e5d73b31eb295b"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
+      "fmaId": "FMA4062",
+      "sourceName": "left internal carotid artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ1682M",
+          "sha256": "117074e676e00306d95277cf2c4155a73c3684674bab401be4aec3acdfa11cce"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-vertebral-artery",
+      "fmaId": "FMA3958",
+      "sourceName": "right vertebral artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ1725",
+          "sha256": "c7ba10decd013234fafefc0ae366d13c0b5707fff437ce169966cfabc7cc3ca2"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-vertebral-artery",
+      "fmaId": "FMA4066",
+      "sourceName": "left vertebral artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ1725M",
+          "sha256": "10d2734ce5ee1a9eadde241f542a87573682f3a4617f3df896bcd9513a1bb2f0"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-internal-jugular-vein",
+      "fmaId": "FMA4754",
+      "sourceName": "right internal jugular vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3585",
+          "sha256": "528ab41e57d31335c0deb9bb804c4e83b9bc22cf912d8de247a88ad9893325f1"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-internal-jugular-vein",
+      "fmaId": "FMA4762",
+      "sourceName": "left internal jugular vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3485",
+          "sha256": "ec17bca2370898fd34c6e518d9ad62998819544058d41a34838580f7e554f0bd"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:vessel:basilar-artery",
+      "fmaId": "FMA50542",
+      "sourceName": "basilar artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1672",
+          "sha256": "f8240a3e61334d6843f3b5c1e28de93be83693d2dd41ba34ec7ebbbec446e7d6"
+        },
+        {
+          "file": "FJ1844",
+          "sha256": "bf688ac836107ec24fbdc49024b7be69300cbe827abfd955b414c0a811ff178f"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:vessel:anterior-communicating-artery",
+      "fmaId": "FMA50169",
+      "sourceName": "anterior communicating artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1655",
+          "sha256": "9e93878f7df5385e705674367796c02b86082fb2df1d3e35c9c801658e3f4914"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-anterior-cerebral-artery",
+      "fmaId": "FMA50029",
+      "sourceName": "right anterior cerebral artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1654",
+          "sha256": "7f146e7551bb53d1ad7f5d98a77a16d8c7ea4e8ab86012bfd3c92b782df2a5dd"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
+      "fmaId": "FMA50030",
+      "sourceName": "left anterior cerebral artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1654M",
+          "sha256": "b5bbd053a3b23de2490f00262adc37044f2a1f09f6548468b9595add93806dcc"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-cerebral-artery",
+      "fmaId": "FMA50584",
+      "sourceName": "right posterior cerebral artery",
+      "sourceTree": "partof",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1661",
+          "sha256": "bb8a7e5734619033a9e29b8a53126a2126d53b210804393e3b32341e1bf1711e"
+        },
+        {
+          "file": "FJ1675",
+          "sha256": "f144e623f16f0667cbf7b04657b0fb8a78cfb1b9ac8ab87af69c8a81ed9d0bd1"
+        },
+        {
+          "file": "FJ1677",
+          "sha256": "4e5046740b2c7e3d60099e80dc759f2d23dd717d2a6a50c167917a971079e8d6"
+        },
+        {
+          "file": "FJ1678",
+          "sha256": "00480c89871f6bf5e72deb5e6133fd964c29233c98c6bd712921dd8e52fc1966"
+        },
+        {
+          "file": "FJ1680",
+          "sha256": "d954435f8d7673bfb605c26ed731d14c6e82484bd01274bd80183d55604659f5"
+        },
+        {
+          "file": "FJ1687",
+          "sha256": "360ed58797181a5b44e15f3539b629738f1474669428511be77a5a8d48d71b95"
+        },
+        {
+          "file": "FJ1691",
+          "sha256": "a59f2dad8a1a62d9b997a97c6b432b2b6b8d36c620c776cbed2852581145deec"
+        },
+        {
+          "file": "FJ1720",
+          "sha256": "bab795f2dc6349c549f3c0399bc492cb8ed80ac67dd9703f82767df32a4e613e"
+        },
+        {
+          "file": "FJ1727",
+          "sha256": "0b604eb708668ee4186665cc1edb1829864acebd1ad8c9f2811b9357b13ef16e"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-cerebral-artery",
+      "fmaId": "FMA50585",
+      "sourceName": "left posterior cerebral artery",
+      "sourceTree": "partof",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1661M",
+          "sha256": "415780e7385454bd8a00b0658939e12709094fcfa57486322fe8f646516a9cb4"
+        },
+        {
+          "file": "FJ1675M",
+          "sha256": "c051aaa79e3f76ff4fee6dd63675e527b2c9bedfa0c1851f72eba85eba3fe048"
+        },
+        {
+          "file": "FJ1677M",
+          "sha256": "d08c3f2b23448f5bc9a4c681a6b816a20d65055de8586d8f728ffe18ddd9223e"
+        },
+        {
+          "file": "FJ1678M",
+          "sha256": "74ef83ec6b3b43515c3ca0b7d2c3e9066ad7c40aa3301cbc2d64978d579fdddf"
+        },
+        {
+          "file": "FJ1680M",
+          "sha256": "418f9530d42659ec4f93c6fa55d4a4ce86bcab3dd2458c1697b3239585b563dd"
+        },
+        {
+          "file": "FJ1687M",
+          "sha256": "a0a649f781806ed0430535487162ca777b2c08bedb8394bfb01ec2934273f459"
+        },
+        {
+          "file": "FJ1691M",
+          "sha256": "2d3b4beb7558c00997887f923c407b6955ff1086170f8b8d2f45983d787433e0"
+        },
+        {
+          "file": "FJ1720M",
+          "sha256": "72b3c8dac6711edf586e4703d1be81fff6a3be4ce8cde9befe2ed130ca2a2041"
+        },
+        {
+          "file": "FJ1727M",
+          "sha256": "76f789b1deae4ca1707a12a6322c29d3de52a5cb8619c12ac5553c4b920d1bf4"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-communicating-artery",
+      "fmaId": "FMA50085",
+      "sourceName": "right posterior communicating artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1713",
+          "sha256": "a568f857676b6795c9b58c83c011d4d0f0e12cd746dcda95bd9ab65631cb0d86"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-communicating-artery",
+      "fmaId": "FMA50086",
+      "sourceName": "left posterior communicating artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1713M",
+          "sha256": "5f3bda878361debaa1e0e2e13c31093259a43ab42b9ac8254c876cfd934a42bc"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:trunk-of-right-coronary-artery",
+      "fmaId": "FMA3802",
+      "sourceName": "trunk of right coronary artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2723",
+          "sha256": "cd008769cb9d565a75bf6b91b5ad3bd482932e37c4747837f6c9446cd23b73a2"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:trunk-of-left-coronary-artery",
+      "fmaId": "FMA3855",
+      "sourceName": "trunk of left coronary artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2737",
+          "sha256": "22aa075132e33f9a3d3be135515362b03ab84f12a0d641edde35e260fb2cd65b"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:anterior-interventricular-branch-of-left-coronary-artery",
+      "fmaId": "FMA3862",
+      "sourceName": "anterior interventricular branch of left coronary artery",
+      "sourceTree": "partof",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2631",
+          "sha256": "06c78376e08c2eed7416d0e2a841e47952b5d95cafa89fbcb7612c072cd65573"
+        },
+        {
+          "file": "FJ2632",
+          "sha256": "71c8621f9ed5a9dd7814c054f9e6f2ec9a480b39141110615bc7090795040272"
+        },
+        {
+          "file": "FJ2633",
+          "sha256": "3a38d05c39634da75a226de3a4665b02614bf38ab4ea3a39fe8ef1096c0d0296"
+        },
+        {
+          "file": "FJ2634",
+          "sha256": "21dff12c8f9beef5d6022dda5c9d25419a72509e5a9fc2e4a33cafe771237442"
+        },
+        {
+          "file": "FJ2635",
+          "sha256": "51114a0f6f2d95fbc18ddbce0cc19431a0b2cb55db18208029fce64f9128ec2c"
+        },
+        {
+          "file": "FJ2636",
+          "sha256": "aa2166cc5bf12de992dd33eaee5953bc23bb739f62610bbbec345d6aea2c1ecc"
+        },
+        {
+          "file": "FJ2637",
+          "sha256": "6c59d4cf0dbdb902fc83e5596f7a181bb66bcbeda24e10c8ce48d4661dfbe34d"
+        },
+        {
+          "file": "FJ2638",
+          "sha256": "aa3ccf75d2a5a5fefe9665b5acafed8f1797f001a01da365bfdc709a8c84aa4b"
+        },
+        {
+          "file": "FJ2639",
+          "sha256": "dc8bcfe30ddcaff7e1e9022bb1013bb884cd03a0fc9d9fae00a924c8d4eef955"
+        },
+        {
+          "file": "FJ2640",
+          "sha256": "38bc0b0b2c9f8a7424098f9dbaa36ed57b07cb9a1211a86a823c779c419035b1"
+        },
+        {
+          "file": "FJ2641",
+          "sha256": "27e5fff1fdeeff77e3c911ffe2a753279cb391b977f2de3f6ea17e21876b0dac"
+        },
+        {
+          "file": "FJ2642",
+          "sha256": "e906224a535dbf5bfb2201cd6fc81880521aa02f5148ae1bbe67404ace96b3a6"
+        },
+        {
+          "file": "FJ2643",
+          "sha256": "303086bfdcb88e2e9bb4cddcfaff2e9be2bf3f1db2c7943d8ccd4a7a38239fac"
+        },
+        {
+          "file": "FJ2644",
+          "sha256": "203a8bc0e029a76f3b291729ebb4cbfd1155bb84ff5724d2eb51d5fa02d36aa9"
+        },
+        {
+          "file": "FJ2645",
+          "sha256": "760b5d48099edb74a6b14fafe02b56ad076c4e4c27c8edb905f21929d192f8b5"
+        },
+        {
+          "file": "FJ2646",
+          "sha256": "1e2f885bc9aafd4270895deb0000a970ca4e494e909e06a5f13b94858d0b8cc9"
+        },
+        {
+          "file": "FJ2647",
+          "sha256": "cd55e20146fe1f08872c6733a2ed3ef5f2397235e2f7f8c77b883f64b5b67d57"
+        },
+        {
+          "file": "FJ2648",
+          "sha256": "14c937696c6e76239474f760324389f5cc955cfe06570ec7c4f61eb4216e8894"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:circumflex-branch-of-left-coronary-artery",
+      "fmaId": "FMA3895",
+      "sourceName": "circumflex branch of left coronary artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2649",
+          "sha256": "d4833bb0b60ee79f526150ad7ba9124e326aba8cd48000711bf3a6b0997b0ce0"
+        },
+        {
+          "file": "FJ2650",
+          "sha256": "dd2c38fdc784311c955fb8b0420d70dfbdf16f0ce6e236a086dc5f350faae04c"
+        },
+        {
+          "file": "FJ2651",
+          "sha256": "864567c4b15c3add5a8184edb142766538936e2ef17af4efa25acca67f4344d8"
+        },
+        {
+          "file": "FJ2652",
+          "sha256": "fd5ee304558da1d1ffebb01ca7f59b374087667e71d473fe5401f355a2ff161f"
+        },
+        {
+          "file": "FJ2653",
+          "sha256": "74fc42fbc783857619dccb5a753b06cbfce9abc6403f14e38f55bbb9fafdad80"
+        },
+        {
+          "file": "FJ2654",
+          "sha256": "4e8467b12ca3374d25807d5de058cfb8d147ad2decd99f6debe57847a83099a1"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:great-cardiac-vein",
+      "fmaId": "FMA4707",
+      "sourceName": "great cardiac vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2656",
+          "sha256": "cb9c6b4e10e43c92c8ea4e2e1a66215d98cf58d72fcc60aeadc8a0f87f6724fc"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:middle-cardiac-vein",
+      "fmaId": "FMA4713",
+      "sourceName": "middle cardiac vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2678",
+          "sha256": "20a71237bc8a3b211c244e0695c1a6242abb3f684275c0b01061439c92b72ef7"
+        },
+        {
+          "file": "FJ2679",
+          "sha256": "754d84b147f9a8ba3eb7aa0cb434a74a7c047354bb689e8e89de6e4f0160f737"
+        },
+        {
+          "file": "FJ2680",
+          "sha256": "29c830d98097500bb09a506b05275942574a5ea9b18ad58e51bc5b7313f0ed8b"
+        },
+        {
+          "file": "FJ2681",
+          "sha256": "cfb2b3134737d33591f2518ce6338498d8c3a32cb0dbc93cfcd9c88b8c4996d5"
+        },
+        {
+          "file": "FJ2682",
+          "sha256": "1122684d5da8ea6953d03836244552fd33287185304d74e2a0e395f691e323e6"
+        },
+        {
+          "file": "FJ2683",
+          "sha256": "02757805e2e956e4a4425b2c54db8b54ee69f5f97da5aa63ca0cd12c4b159b1e"
+        },
+        {
+          "file": "FJ2684",
+          "sha256": "25a39f3d42a46af2008f426def111b4af3add424dc327543e51b2c7fa67f3d95"
+        },
+        {
+          "file": "FJ2685",
+          "sha256": "578c2f788d36149f535210004762558a7e533cc42c121d26a8f418cb04142263"
+        },
+        {
+          "file": "FJ2686",
+          "sha256": "172e06e35489ae2657678c6d340eace2daed2fb2329324aa40c48824b0e99666"
+        },
+        {
+          "file": "FJ2687",
+          "sha256": "56fa04e9a81334e4492f94eb51ff810f47c786581f098d69083013f4c9ae2a62"
+        },
+        {
+          "file": "FJ2688",
+          "sha256": "79e05aae03bab74714440fd5d4941f67b969293d57be99c6758c61fa15452e7b"
+        },
+        {
+          "file": "FJ2689",
+          "sha256": "2a5596c4d908ff4c6bbe50d36c18759753e9dc5fa9b10029ec7f91ca8a2b5f04"
+        },
+        {
+          "file": "FJ2690",
+          "sha256": "0914e4188f4952d2325f962dd97336d1b55ed40dd8532db46c9309975157f57f"
+        },
+        {
+          "file": "FJ2691",
+          "sha256": "e50b042a1f7e034839c5180a9fdfbf0165a57ce19d02dc0092166d7e6772cb63"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-pulmonary-artery",
+      "fmaId": "FMA50872",
+      "sourceName": "right pulmonary artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3019",
+          "sha256": "c773fc2d3d3f79544699c16f38f56619730a6d5a1a2c8bb4d8f0dc2ab6889d97"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-pulmonary-artery",
+      "fmaId": "FMA50873",
+      "sourceName": "left pulmonary artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2924",
+          "sha256": "0cb5312cf816387fdad0d3809a5b5cae1445806ce85546adea39240bc72d2580"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-superior-pulmonary-vein",
+      "fmaId": "FMA49914",
+      "sourceName": "right superior pulmonary vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3020",
+          "sha256": "074ba67bb3db8f93d6ac7d4e9d2bd1ddcca6e54a2bcb765ec146a9fd30bb3aa8"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-superior-pulmonary-vein",
+      "fmaId": "FMA49916",
+      "sourceName": "left superior pulmonary vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2925",
+          "sha256": "e87124704e4ca94bfe3206a571e464fe8ccc41afe0f36ee5ccf46cf00aaf4918"
+        },
+        {
+          "file": "FJ2933",
+          "sha256": "64e0d2deec1d847be95f41a25c616935c9b400f233a2c07a8c453a3441f80a35"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-inferior-pulmonary-vein",
+      "fmaId": "FMA49911",
+      "sourceName": "right inferior pulmonary vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3040",
+          "sha256": "2e15b98f227f16c3dcacab1a93a26d42e07cd2c2d72ba34b1ef438396f598a12"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-inferior-pulmonary-vein",
+      "fmaId": "FMA49913",
+      "sourceName": "left inferior pulmonary vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ2944",
+          "sha256": "a531b898f54ae008b1ad0c0f0993158e1a15cfbebee79098033ea8c2d2f84372"
+        },
+        {
+          "file": "FJ2950",
+          "sha256": "f32bbffccdb0528ed085041ad4243b5b4817a26aa82a73669f9132d6c54f17de"
+        },
+        {
+          "file": "FJ2955",
+          "sha256": "bfbb5067eb2da9857069139f12d019bb0f599babc89730aeb4accb1a77916991"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+      "fmaId": "FMA50737",
+      "sourceName": "celiac artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ1846",
+          "sha256": "7aae236dac488ac875ae9f62b59d84ce6f0d85cb80098ef12346cac59f5a609f"
+        },
+        {
+          "file": "FJ2013",
+          "sha256": "5ab733ce7f017e7d9c033936f2008b682eb73dacd742e8ea53cb77a8a28d4492"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+      "fmaId": "FMA14749",
+      "sourceName": "superior mesenteric artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ1928",
+          "sha256": "14ce4846d476c185a279247162ee118ac9c056593023f66d24f4a4d470e56a7c"
+        },
+        {
+          "file": "FJ2011",
+          "sha256": "db6caec612b1564155c869d452904b1e9e834f2f556a9a0b3e2564ce9757e65a"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+      "fmaId": "FMA14750",
+      "sourceName": "inferior mesenteric artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3442",
+          "sha256": "865cc814e7412113703bfe503424a92e745e6cbf6e788465f06c6be8f1079c6c"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+      "fmaId": "FMA14771",
+      "sourceName": "common hepatic artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3078",
+          "sha256": "f8285f60775b0feb990af2f35591196b2a43253c87df2c8b02b7ec7f492d1409"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
+      "fmaId": "FMA14772",
+      "sourceName": "hepatic artery proper",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3081",
+          "sha256": "bd4cff9e5fc6feb0d0f742a91d8a67e1fa4cda96e455e5a21a638b064d195da6"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+      "fmaId": "FMA14773",
+      "sourceName": "splenic artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ2562",
+          "sha256": "f0ea297213c33d68e9da6158016cf963dfa3922520f7b533aabda2254e8a64fd"
+        },
+        {
+          "file": "FJ3420",
+          "sha256": "3d20dc80614ce5394ee45caf1d2fcec225912f06eac4ff01734f987513172ad5"
+        },
+        {
+          "file": "FJ3544",
+          "sha256": "d22809e5be114a70c1e380d370c42c91439ed849f1f6fe03f595955cdd6898b3"
+        },
+        {
+          "file": "FJ3640",
+          "sha256": "27b149be4ab4edd36c86799827a10ea40e5b29b596eacc2b830da44f143ed063"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
+      "fmaId": "FMA14768",
+      "sourceName": "left gastric artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3499",
+          "sha256": "983a0580d4324a210eeb5671c4caf115c29ce13c0761e718102db8092a849ccf"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+      "fmaId": "FMA50735",
+      "sourceName": "hepatic portal vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ1853",
+          "sha256": "a9e359ffc1ab1d6f3134e72ca2a8ebaf1dc91df94827f4226a453fb3608e2d9b"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
+      "fmaId": "FMA14752",
+      "sourceName": "right renal artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ2038",
+          "sha256": "2bf3da140369524e15335694773718b4e83b254234bc3e8376a4708565276045"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
+      "fmaId": "FMA14753",
+      "sourceName": "left renal artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ2046",
+          "sha256": "b1a9ce8a37cd9c89fbf4c90a68a554184bf2919dbad391c552c0f4c8dd788845"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
+      "fmaId": "FMA14338",
+      "sourceName": "right hepatic vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ2416",
+          "sha256": "2d3c37d1811a909e5cfd016f9d5c700b433d5f55e4bcb5fb64494dbfcb839181"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
+      "fmaId": "FMA14339",
+      "sourceName": "left hepatic vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ2415",
+          "sha256": "dced2210d0b4b725e40c2e63791023fdcf7ee8aadd2f6718fd442c0e7654107f"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-artery",
+      "fmaId": "FMA14765",
+      "sourceName": "right common iliac artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "sources": [
+        {
+          "file": "FJ3565",
+          "sha256": "11eb1378295c92af09a47d9e25e2c4ee9e1430a6689ddfc7deebf2e44d145cc7"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-artery",
+      "fmaId": "FMA14766",
+      "sourceName": "left common iliac artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "sources": [
+        {
+          "file": "FJ3464",
+          "sha256": "5472501bf8876913b860739b298afa69f5f63e74a6f4dc05540b50dde54b323e"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-artery",
+      "fmaId": "FMA18806",
+      "sourceName": "right external iliac artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "sources": [
+        {
+          "file": "FJ3567",
+          "sha256": "6be9a8fa7f67d5ce6638daf7deacd7d4953c258e920b2ba21575be47edde8fe6"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-artery",
+      "fmaId": "FMA18807",
+      "sourceName": "left external iliac artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "sources": [
+        {
+          "file": "FJ3466",
+          "sha256": "bba53b19cab2fb7e5c8f9461a21a2250d59e152585e58a9275207d5f51dc491b"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-artery",
+      "fmaId": "FMA18809",
+      "sourceName": "right internal iliac artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "sources": [
+        {
+          "file": "FJ3569",
+          "sha256": "bc5922d28b6f5d9f67722396283ea7ef10cd3baa8ed0a8271faa8c11ca96d52a"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-artery",
+      "fmaId": "FMA18810",
+      "sourceName": "left internal iliac artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "sources": [
+        {
+          "file": "FJ3468",
+          "sha256": "2effa517c9d8b549b5a6b9e0ffe0326a99b03cb3d7ca58f4b1d338ce80f1d5e0"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-vein",
+      "fmaId": "FMA21387",
+      "sourceName": "right common iliac vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "sources": [
+        {
+          "file": "FJ3566",
+          "sha256": "b34098865ad19c8fe0bc28e46ac76e2af6d52f0065d684637fd1886813c62a76"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-vein",
+      "fmaId": "FMA21388",
+      "sourceName": "left common iliac vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "sources": [
+        {
+          "file": "FJ3465",
+          "sha256": "4c2e57a9170cfa997bbe48f3b2a5a49e334e03a1067b4e8decc152fb1bb8d913"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-vein",
+      "fmaId": "FMA18885",
+      "sourceName": "right external iliac vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "sources": [
+        {
+          "file": "FJ3568",
+          "sha256": "503cc199a945ab1c061deacdc32165ac413f7c2d362375f17d576a3b2f235023"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-vein",
+      "fmaId": "FMA18886",
+      "sourceName": "left external iliac vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "sources": [
+        {
+          "file": "FJ3484",
+          "sha256": "bf0ca81768bb8f1d42837f43ccd41bc0f006da1a9703517b298edeb9af525c00"
+        },
+        {
+          "file": "FJ3522",
+          "sha256": "2d1d33f168089521c707408b80f229d6b8f8302fde1f31ddad22e63238c4da7a"
+        },
+        {
+          "file": "FJ3523",
+          "sha256": "a26bb4b9261de25955ac8a6669391cb588a1546267db5c8c9865d10c426bc402"
+        },
+        {
+          "file": "FJ3524",
+          "sha256": "006c8cb0cc53fb2b5f388979adccff45430ba16dfd9d06ffa67a36f5bd946f27"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-vein",
+      "fmaId": "FMA18887",
+      "sourceName": "right internal iliac vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "sources": [
+        {
+          "file": "FJ3570",
+          "sha256": "83a53beb46b092f78bf80cf73cdfc10b91e0b32f7183fc79fde7ab0716069d73"
+        },
+        {
+          "file": "FJ3571",
+          "sha256": "9fed45819fc91bdda871afc018a0e8924fa9a7bee6cb131626509f75344aa018"
+        },
+        {
+          "file": "FJ3572",
+          "sha256": "8a9105869190200b0798c89805b8565ab079a40ac859c1996a4bf3a752d75e6f"
+        },
+        {
+          "file": "FJ3607",
+          "sha256": "cd1c2558c44fff12efdad2da945fb314469f48c4e252aa10b79b94f7ec02f3ce"
+        },
+        {
+          "file": "FJ3608",
+          "sha256": "9166b488722a107f0ea509bc5c9f94ff26b4cab54d6a5dcc9141dc1bd29efe79"
+        },
+        {
+          "file": "FJ3609",
+          "sha256": "5cb3da4efafb5e511f9d0e658e095f9198545d325c7cc7d0960669b5124a2295"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-vein",
+      "fmaId": "FMA18888",
+      "sourceName": "left internal iliac vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "sources": [
+        {
+          "file": "FJ3469",
+          "sha256": "6a853f1cc673163d4e339f608f405c8c7ad74a3a6c8364fa71421976cb42b681"
+        },
+        {
+          "file": "FJ3470",
+          "sha256": "84de7eea903bfea9b940078ecb921fafdcd8db65dd52f8e954d2973a8a7e59e1"
+        },
+        {
+          "file": "FJ3471",
+          "sha256": "90354aa14b7a84cd015bd32a9cfba5bd0ab9800bdf220fffcfb2960d752f2bcf"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-artery",
+      "fmaId": "FMA22655",
+      "sourceName": "right axillary artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2268",
+          "sha256": "192c0b2607e669dc89a6eadd2c11f2fff904f010e4dca81822209865df7e5752"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-artery",
+      "fmaId": "FMA22656",
+      "sourceName": "left axillary artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2216",
+          "sha256": "fe9295ce260df56c46f29e56e410937c9fa2f3e104411fb7e91b5f9681509ccb"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-brachial-artery",
+      "fmaId": "FMA22691",
+      "sourceName": "right brachial artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2271",
+          "sha256": "ce5b122fcc19c637684c1de1661697b03d487f3b013e8b4313fb095f81118813"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-brachial-artery",
+      "fmaId": "FMA22692",
+      "sourceName": "left brachial artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2219",
+          "sha256": "e3c8e2be45d0f25f4e2efa9a046bc13b66c4e43e724a2c2b0424d230719cc6db"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-deep-brachial-artery",
+      "fmaId": "FMA22696",
+      "sourceName": "right deep brachial artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2277",
+          "sha256": "dd048b36f91cc5b0f16bc5a7bae5bca66aaaf0e3a95c1e2b5e55c397062c1647"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-deep-brachial-artery",
+      "fmaId": "FMA22697",
+      "sourceName": "left deep brachial artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2225",
+          "sha256": "c24f0def19fb45bf84251678b8d63c09fa7d5f51fa71fdd5515adddb8ff7db6c"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-anterior-circumflex-humeral-artery",
+      "fmaId": "FMA22682",
+      "sourceName": "right anterior circumflex humeral artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2264",
+          "sha256": "a7aaef0dc149e6b481057266ee1b9a41720e0400a70697fbb5c15e7f8dd06187"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-anterior-circumflex-humeral-artery",
+      "fmaId": "FMA22683",
+      "sourceName": "left anterior circumflex humeral artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2212",
+          "sha256": "87ac4531b5551470294420965e60888cae7a4943f767386ab3f40713144850f2"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-posterior-circumflex-humeral-artery",
+      "fmaId": "FMA22685",
+      "sourceName": "right posterior circumflex humeral artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2291",
+          "sha256": "72f4c8d4e8465447611464bfa74df78924ffeaa9fc9829af32a4082518b6c02b"
+        },
+        {
+          "file": "FJ2292",
+          "sha256": "19ad27ed37b4fdc61653588976e81e138f28b063c52b270e5cdfb93364eac58b"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-posterior-circumflex-humeral-artery",
+      "fmaId": "FMA22687",
+      "sourceName": "left posterior circumflex humeral artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2239",
+          "sha256": "1e88872df7cffa6ccc3c325b2fbd0543279dc9ffc0a75b7e1e1ae14a0dc30d6f"
+        },
+        {
+          "file": "FJ2240",
+          "sha256": "8d07c946f22777f447e46597283d37a9ad993f8f1f8d194af6ed58dd2475d62c"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-circumflex-scapular-artery",
+      "fmaId": "FMA23180",
+      "sourceName": "right circumflex scapular artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2273",
+          "sha256": "37154eff6530ba3cb17412723850f45c3ee5be9d0d9b78e737c7a1f356c87b3c"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-circumflex-scapular-artery",
+      "fmaId": "FMA23181",
+      "sourceName": "left circumflex scapular artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2221",
+          "sha256": "3387830f0c01f2f98710951a900442fdf6ad7b123ad1202aad4e0390cb0551f4"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thoracodorsal-artery",
+      "fmaId": "FMA66321",
+      "sourceName": "right thoracodorsal artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2305",
+          "sha256": "b7d085f37da4801db31307961a176357a1d3a11e226c290e9883455376e9e254"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thoracodorsal-artery",
+      "fmaId": "FMA66322",
+      "sourceName": "left thoracodorsal artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2253",
+          "sha256": "b6f9ae7678bb79b0245d03ea27ceee0a9e3f0cf6b6b0c7613c0830ac40e8989f"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+      "fmaId": "FMA22733",
+      "sourceName": "right radial artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "forearm",
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2294",
+          "sha256": "cca326b54b9f4e6ed4c4a8ccf258959a3a3c54aff996b894eacca20af05217d2"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+      "fmaId": "FMA22734",
+      "sourceName": "left radial artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "forearm",
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2242",
+          "sha256": "d97e01814668d5a32f18a5cc07a3e6e77bf1a734008f21d8f7dc62fedd0175a6"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+      "fmaId": "FMA22797",
+      "sourceName": "right ulnar artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "forearm",
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2310",
+          "sha256": "6bef22a74e2e6ae2d3033c4982fdb75abbadc9b255e76770211d61b3dd4796c1"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
+      "fmaId": "FMA22798",
+      "sourceName": "left ulnar artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "forearm",
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2258",
+          "sha256": "4ddf684432c015ef59cd0bc8cb72b8890632ebde5f2d92e3c1002209ac482b8a"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+      "fmaId": "FMA22812",
+      "sourceName": "right anterior interosseous artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "forearm",
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2266",
+          "sha256": "a8b244ec1ae503c6cd71562a8b80427a49459c111dfbd5e4837d1279c7fe07bd"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+      "fmaId": "FMA22813",
+      "sourceName": "left anterior interosseous artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "forearm",
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2214",
+          "sha256": "231a0b9834bdf814dca37d8fd9bfa3511de943915caece50f93538426bf4922d"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+      "fmaId": "FMA13325",
+      "sourceName": "right cephalic vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "forearm",
+        "shoulder-arm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2272",
+          "sha256": "b57bd07b9e940b76500243e88b2d0f32fac59fff6ddea84419b254c82a6256f8"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
+      "fmaId": "FMA13326",
+      "sourceName": "left cephalic vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "forearm",
+        "shoulder-arm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2220",
+          "sha256": "1a3062828e09478913a2d9df9ef4e092c7b7bf8a5f4bd68b1603eb79e79273e2"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
+      "fmaId": "FMA22909",
+      "sourceName": "right basilic vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "forearm",
+        "shoulder-arm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2270",
+          "sha256": "9340492869064c52e522a426c4c2bdb73f0ccfc8392dee56f01a8186f6187ba5"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
+      "fmaId": "FMA22910",
+      "sourceName": "left basilic vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "forearm",
+        "shoulder-arm"
+      ],
+      "sources": [
+        {
+          "file": "FJ2218",
+          "sha256": "09bb227be0f517e81168edb3fa4eb7cdcdf2157355ca86be7366277b3859f9ca"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+      "fmaId": "FMA22839",
+      "sourceName": "right deep palmar arch",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2279",
+          "sha256": "1e60556bd0efd0e863d04cfdda4ec66383f011bdf0cc9c78681cedd3770f0d71"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
+      "fmaId": "FMA22840",
+      "sourceName": "left deep palmar arch",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ2227",
+          "sha256": "54a1df2e831cd1716af1fce40767ae33b03f6e0d047f61a6c1597e19670bec4f"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-femoral-artery",
+      "fmaId": "FMA70249",
+      "sourceName": "right femoral artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "sources": [
+        {
+          "file": "FJ2143",
+          "sha256": "d9decbcc37ddafa41a0c01e316cff52a9259ed5292ddf2e199cf09414e872bae"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-femoral-artery",
+      "fmaId": "FMA70250",
+      "sourceName": "left femoral artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "sources": [
+        {
+          "file": "FJ2074",
+          "sha256": "df045596a410cfcc3c15f9aff1d02c5c7bcba234c9ebe6346ec1053d605de4d0"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
+      "fmaId": "FMA20796",
+      "sourceName": "right deep femoral artery",
+      "sourceTree": "partof",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "sources": [
+        {
+          "file": "FJ2137",
+          "sha256": "46872b103c95147c1d9d33cb2b2ad6bd1be001e32e9f646c0dd61cabea8b4a96"
+        },
+        {
+          "file": "FJ2158",
+          "sha256": "604beb2d77d9c6ec24e0f8c82e806f57a7cbb6fe9a4553d7f5fc999a9aae33f6"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery",
+      "fmaId": "FMA20797",
+      "sourceName": "left deep femoral artery",
+      "sourceTree": "partof",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "sources": [
+        {
+          "file": "FJ2069",
+          "sha256": "055eaa7fd2a8683f4d81d824437925f2c1019c2081558fe4ee2d4ab161085b76"
+        },
+        {
+          "file": "FJ2078",
+          "sha256": "fc1867693af0aa210a96a79c3f53c80fedacd4f136b21c6d4f839ce06575b8ac"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
+      "fmaId": "FMA21188",
+      "sourceName": "right femoral vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "sources": [
+        {
+          "file": "FJ2144",
+          "sha256": "16f9661f23ad65a5856cf50be867e5ef282ea73fae50b853d44d9ab22676b1ab"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
+      "fmaId": "FMA21189",
+      "sourceName": "left femoral vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "sources": [
+        {
+          "file": "FJ2102",
+          "sha256": "07776c248a8f8ddd3007f652c7bcafc60af3ab23edd678cc2da37615359c4abc"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
+      "fmaId": "FMA21379",
+      "sourceName": "right great saphenous vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "sources": [
+        {
+          "file": "FJ2145",
+          "sha256": "dee8dea4b9f286f40abec150d46f04bc1a1bb2f1a78c91c2431c4d225c33f925"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+      "fmaId": "FMA21380",
+      "sourceName": "left great saphenous vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "sources": [
+        {
+          "file": "FJ2103",
+          "sha256": "5aef9c656f07538f2a7c9dee150b00d93e98e567f083dec2c5e924b0ad9c377b"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+      "fmaId": "FMA77380",
+      "sourceName": "right popliteal artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2170",
+          "sha256": "4bc14302e06ca2162a6df730a7d9f8549b5e6e9b919ce34e35bbdbeec1b088b0"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+      "fmaId": "FMA77381",
+      "sourceName": "left popliteal artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2086",
+          "sha256": "20dac622c09e02e45fa95b6f3c2eba7e932fdc3eef507ac19d0d78ed71ef241c"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-artery",
+      "fmaId": "FMA43896",
+      "sourceName": "right anterior tibial artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2130",
+          "sha256": "56de59319a67eb9a3fbc9815d9dc66f371b3f116b211c2b03abfbb84ae21568c"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-artery",
+      "fmaId": "FMA43897",
+      "sourceName": "left anterior tibial artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2065",
+          "sha256": "c6388ae15cdf1b00cbbbb6007784022a7c03d1e349b780193488f1f804150c1e"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-artery",
+      "fmaId": "FMA43898",
+      "sourceName": "right posterior tibial artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2172",
+          "sha256": "4e82371d5860733555c3b4c096134586128646ad31fb58cdcb6ee97df0849f08"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-artery",
+      "fmaId": "FMA43899",
+      "sourceName": "left posterior tibial artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2087",
+          "sha256": "88e45ecb2bbe5b278d052c240649bf1f576ea3808272e60a4990fc5d8066bbb5"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
+      "fmaId": "FMA44328",
+      "sourceName": "right popliteal vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2171",
+          "sha256": "b54fb1bed98c0159e1c8501d3211d43080a085fb498d5c992015afc49e1e3dbc"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-vein",
+      "fmaId": "FMA44329",
+      "sourceName": "left popliteal vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2117",
+          "sha256": "92082063ece4916d1b8c3a17b6d135c36edf3ab75dd5b7e9604e71a6d58fa2ee"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-small-saphenous-vein",
+      "fmaId": "FMA44334",
+      "sourceName": "right small saphenous vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2176",
+          "sha256": "400f2fe7647680e4e4e5ae842686644d9d84e71af30c2bb2e59bc0d81b5f6bb8"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-small-saphenous-vein",
+      "fmaId": "FMA44335",
+      "sourceName": "left small saphenous vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2121",
+          "sha256": "e95be7db2162c51e3024e4fb8549221f29f1e24ad86aca9f3b6999bfd4cae9ec"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
+      "fmaId": "FMA43916",
+      "sourceName": "right dorsalis pedis artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2055",
+          "sha256": "7b48b7cc6862bea77bd497e456b837e6d99dfc39db267281b3b117924093b618"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
+      "fmaId": "FMA43917",
+      "sourceName": "left dorsalis pedis artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2073",
+          "sha256": "65766eac33e2ae09ba433d078c35aa9f271143405ab06c27fe16066957e19362"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+      "fmaId": "FMA43929",
+      "sourceName": "right medial plantar artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2164",
+          "sha256": "85916deabe0b545bfccc268b5455dccb89c5d243e769cd91d55a2cd912d0bedc"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+      "fmaId": "FMA43930",
+      "sourceName": "left medial plantar artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2082",
+          "sha256": "80addbc38b030d34a4002270067ff6488c956ebb5929c355c029bfec4de9ef55"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
+      "fmaId": "FMA43931",
+      "sourceName": "right lateral plantar artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2159",
+          "sha256": "e9df02eb728daba8672b6974272c3a070b1d148e330b6be22985494465f387e7"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
+      "fmaId": "FMA43932",
+      "sourceName": "left lateral plantar artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ2079",
+          "sha256": "716cee68fa9d17389915512e20d44592d49d77502959e2b1ee58a19f307e6795"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:set-of-palmar-interossei-of-right-hand",
+      "fmaId": "FMA42402",
+      "sourceName": "set of palmar interossei of right hand",
+      "sourceTree": "isa",
+      "category": "muscle",
+      "system": "muscles",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ1511",
+          "sha256": "85929597b60bd904b7dcc17c56f72dc3d607534bbf11149589f88b9158060bc8"
+        }
+      ],
+      "coverageNote": "One source surface represents a set of interossei on this side, not individually segmented or numbered muscles. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:set-of-palmar-interossei-of-left-hand",
+      "fmaId": "FMA42403",
+      "sourceName": "set of palmar interossei of left hand",
+      "sourceTree": "isa",
+      "category": "muscle",
+      "system": "muscles",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ1511M",
+          "sha256": "1bcfb4935ff3bfe248e8ed537346ca4172ecb3a9ba1fff4e0865d1770a1792e7"
+        }
+      ],
+      "coverageNote": "One source surface represents a set of interossei on this side, not individually segmented or numbered muscles. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:set-of-dorsal-interossei-of-right-hand",
+      "fmaId": "FMA42404",
+      "sourceName": "set of dorsal interossei of right hand",
+      "sourceTree": "isa",
+      "category": "muscle",
+      "system": "muscles",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ1509",
+          "sha256": "9317e87149b2346714b59513c07d9d7bf36585f9866d3facc16f958e5411fcbd"
+        }
+      ],
+      "coverageNote": "One source surface represents a set of interossei on this side, not individually segmented or numbered muscles. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:set-of-dorsal-interossei-of-left-hand",
+      "fmaId": "FMA42405",
+      "sourceName": "set of dorsal interossei of left hand",
+      "sourceTree": "isa",
+      "category": "muscle",
+      "system": "muscles",
+      "regions": [
+        "hand"
+      ],
+      "sources": [
+        {
+          "file": "FJ1509M",
+          "sha256": "c9aead8e2cc5fd957fcc11fafc42a0d235bffd00bbea09eaf50c473a41a9a3bd"
+        }
+      ],
+      "coverageNote": "One source surface represents a set of interossei on this side, not individually segmented or numbered muscles. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
+      "fmaId": "FMA23707",
+      "sourceName": "interosseous membrane of right forearm",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "forearm"
+      ],
+      "sources": [
+        {
+          "file": "FJ1476",
+          "sha256": "e70c96c4534da21f082cc494a7804f42db96195bed75641334348845cb1ddb97"
+        }
+      ],
+      "coverageNote": "Interosseous membrane surface; individual bundles and insertions are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
+      "fmaId": "FMA23708",
+      "sourceName": "interosseous membrane of left forearm",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "forearm"
+      ],
+      "sources": [
+        {
+          "file": "FJ1476M",
+          "sha256": "2855876f02fbf5186e8cb19d640828808063a859d297042494477cc40c212d22"
+        }
+      ],
+      "coverageNote": "Interosseous membrane surface; individual bundles and insertions are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:ligament:interosseous-membrane-of-right-leg",
+      "fmaId": "FMA35192",
+      "sourceName": "interosseous membrane of right leg",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "leg"
+      ],
+      "sources": [
+        {
+          "file": "FJ1392",
+          "sha256": "5e096412b0b74f19d32080170b9cd6598d62bf9ba5add6bd2adf41b487f17d8f"
+        }
+      ],
+      "coverageNote": "Interosseous membrane surface; individual bundles and insertions are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:ligament:interosseous-membrane-of-left-leg",
+      "fmaId": "FMA35193",
+      "sourceName": "interosseous membrane of left leg",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "leg"
+      ],
+      "sources": [
+        {
+          "file": "FJ1392M",
+          "sha256": "60f79a84a6c31041436e09928e1d07070d4b2350ec44ac5badec46bd0e61b786"
+        }
+      ],
+      "coverageNote": "Interosseous membrane surface; individual bundles and insertions are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
+      "fmaId": "FMA258847",
+      "sourceName": "right calcaneal tendon",
+      "sourceTree": "isa",
+      "category": "tendon",
+      "system": "connective",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ1405",
+          "sha256": "64696f68cd961e4dfb7809ab9899a6777e994ea3bf696213da7a0ac1a507bed9"
+        }
+      ],
+      "coverageNote": "Calcaneal (Achilles) tendon surface. Subtendons, paratenon and enthesis are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
+      "fmaId": "FMA264844",
+      "sourceName": "left calcaneal tendon",
+      "sourceTree": "isa",
+      "category": "tendon",
+      "system": "connective",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "sources": [
+        {
+          "file": "FJ1405M",
+          "sha256": "192692c7351198ed60745072f921cf10b0a3a73fa25bc2fe2df4fb1c45a449f0"
+        }
+      ],
+      "coverageNote": "Calcaneal (Achilles) tendon surface. Subtendons, paratenon and enthesis are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
+      "fmaId": "FMA50881",
+      "sourceName": "right trochlear nerve",
+      "sourceTree": "isa",
+      "category": "nerve",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1381",
+          "sha256": "6c1ec7f14af8bc9883e9f37363e299cbab82f4ecdeb68b1898670004ddf36632"
+        }
+      ],
+      "coverageNote": "Selected source cranial-nerve representation only; this does not add limb nerves or a complete cranial-nerve tree. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve",
+      "fmaId": "FMA50882",
+      "sourceName": "left trochlear nerve",
+      "sourceTree": "isa",
+      "category": "nerve",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1330",
+          "sha256": "0a849c085582d60aa2baf8a980498617ceb1c8f3c2ae9c8913cc1ee36b8a1d2c"
+        }
+      ],
+      "coverageNote": "Selected source cranial-nerve representation only; this does not add limb nerves or a complete cranial-nerve tree. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:tongue",
+      "fmaId": "FMA54640",
+      "sourceName": "tongue",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2761",
+          "sha256": "fec6c080dca3bcb0fe51af2f7897cab95f17ffe05ad5f8ff12e48c81bca86d5f"
+        }
+      ],
+      "coverageNote": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
+      "fmaId": "FMA59102",
+      "sourceName": "right lacrimal gland",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1350",
+          "sha256": "ff108bfd00a1a4dc0eebfa62c8553b1ca94d7003d18437e7d637566db433f604"
+        }
+      ],
+      "coverageNote": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
+      "fmaId": "FMA59103",
+      "sourceName": "left lacrimal gland",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1299",
+          "sha256": "4249d4bed4b176bb504a756ebffca8ea5b96268e6f57b000206c81ead66674d8"
+        }
+      ],
+      "coverageNote": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-submandibular-gland",
+      "fmaId": "FMA59802",
+      "sourceName": "right submandibular gland",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2768",
+          "sha256": "763960d4774199706b8ca344aab369a33a969a105f2c3063b8784c77e3a12d50"
+        }
+      ],
+      "coverageNote": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-submandibular-gland",
+      "fmaId": "FMA59803",
+      "sourceName": "left submandibular gland",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2766",
+          "sha256": "dfb4a6b9789fa55feb8e18cea09a638ec09041cc6b9e9df1e8f5a40ad1ab61be"
+        }
+      ],
+      "coverageNote": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-sublingual-gland",
+      "fmaId": "FMA59804",
+      "sourceName": "right sublingual gland",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2767",
+          "sha256": "b9165fee0bcb7f88aee932317cbbed3486d4e2c7a3850c1cd109e54c142295b3"
+        }
+      ],
+      "coverageNote": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-sublingual-gland",
+      "fmaId": "FMA59805",
+      "sourceName": "left sublingual gland",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2765",
+          "sha256": "371b46154a6ff5e08d1cda980778ea434b394620830579088af6456f7fdf9884"
+        }
+      ],
+      "coverageNote": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:organ:right-epididymis",
+      "fmaId": "FMA18256",
+      "sourceName": "right epididymis",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "pelvis"
+      ],
+      "sources": [
+        {
+          "file": "FJ3141",
+          "sha256": "23469ccd7ac340ef3f4184fb850c7658420e9f7f294d91331f10cb3187824bf5"
+        }
+      ],
+      "coverageNote": "Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:organ:left-epididymis",
+      "fmaId": "FMA18257",
+      "sourceName": "left epididymis",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "pelvis"
+      ],
+      "sources": [
+        {
+          "file": "FJ3136",
+          "sha256": "b593e1536bdf93f9c9115207e979d94df238d088e08509b2e2751d8d4ebcd52a"
+        }
+      ],
+      "coverageNote": "Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:urethra",
+      "fmaId": "FMA19667",
+      "sourceName": "urethra",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "pelvis"
+      ],
+      "sources": [
+        {
+          "file": "FJ3148",
+          "sha256": "987ce1b01511f6ea323ba5a7a7438ba3df72d0cdc853985e08ca2965feb63c93"
+        }
+      ],
+      "coverageNote": "Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-corniculate-cartilage",
+      "fmaId": "FMA55115",
+      "sourceName": "right corniculate cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2793",
+          "sha256": "055590405743b1adb114f2b9480122827e7dac69d964fa43409bd57bfb6ada4d"
+        }
+      ],
+      "coverageNote": "Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-corniculate-cartilage",
+      "fmaId": "FMA55116",
+      "sourceName": "left corniculate cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2776",
+          "sha256": "282ec50dc80214ead94da19cab975e6be2a6cba093c9765b3260c98af2300ca3"
+        }
+      ],
+      "coverageNote": "Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-cuneiform-cartilage",
+      "fmaId": "FMA55117",
+      "sourceName": "right cuneiform cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2795",
+          "sha256": "9745a416c9f85f106aabdedb8645811c8cfbf85025364310e06a04072d766f0b"
+        }
+      ],
+      "coverageNote": "Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-cuneiform-cartilage",
+      "fmaId": "FMA55118",
+      "sourceName": "left cuneiform cartilage",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2773",
+          "sha256": "33f5b140ab7a37e450e130ed8f9bf579ef9f11856dcd3587b5f634bd6a83d0e0"
+        }
+      ],
+      "coverageNote": "Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-lateral-rectus",
+      "fmaId": "FMA49144",
+      "sourceName": "check ligament of right lateral rectus",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1334",
+          "sha256": "d9ca3ac16a64fce45856a1bc9efcc1b69e64bd1d13476c8d7a3a761922610f00"
+        }
+      ],
+      "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-lateral-rectus",
+      "fmaId": "FMA49145",
+      "sourceName": "check ligament of left lateral rectus",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1284",
+          "sha256": "2bf9ca79c9454eb0b81d30f20d6b889343a6c3e974e19719233932052cf98708"
+        }
+      ],
+      "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-medial-rectus",
+      "fmaId": "FMA49147",
+      "sourceName": "check ligament of right medial rectus",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1335",
+          "sha256": "d9e9be9082e35951f08cc43a0300f94145b8f99c7aaf049a8b773e2d9ad9a73e"
+        }
+      ],
+      "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-medial-rectus",
+      "fmaId": "FMA49148",
+      "sourceName": "check ligament of left medial rectus",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1292",
+          "sha256": "1f1eae3eee17d09c5ae914f223b842bdd1a8bcf0c051953404ce09dff1693ed9"
+        }
+      ],
+      "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:ligament:median-thyrohyoid-ligament",
+      "fmaId": "FMA55138",
+      "sourceName": "median thyrohyoid ligament",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2790",
+          "sha256": "b731abaf6b663050b09d3fd2fc98d2260a114fdb2268519c7df5aa85732bdaf6"
+        }
+      ],
+      "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
+      "fmaId": "FMA55140",
+      "sourceName": "right lateral thyrohyoid ligament",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2797",
+          "sha256": "f17658211f590bfff00d5e79a37230526e294847f06bc91ac3267a7abe8888d3"
+        }
+      ],
+      "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
+      "fmaId": "FMA55141",
+      "sourceName": "left lateral thyrohyoid ligament",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2779",
+          "sha256": "b48baf72d1ab117ad320dbe2432e82979ae56e2bdf83632d4f72d03435e8ad2e"
+        }
+      ],
+      "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unspecified:ligament:hyo-epiglottic-ligament",
+      "fmaId": "FMA55227",
+      "sourceName": "hyo-epiglottic ligament",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2771",
+          "sha256": "f744a2873d81471ee14cf63ebf4380c350e21e7e49872bf11ff3ddd668f7bb34"
+        }
+      ],
+      "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:ligament:thyro-epiglottic-ligament",
+      "fmaId": "FMA55230",
+      "sourceName": "thyro-epiglottic ligament",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2807",
+          "sha256": "eb7a5318fd5cd6d9a26605d00bd06f6c18004f7c7c7483c09394d5766f443925"
+        }
+      ],
+      "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:ligament:median-cricothyroid-ligament",
+      "fmaId": "FMA55237",
+      "sourceName": "median cricothyroid ligament",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2789",
+          "sha256": "6b51f7e389da70fe5a128165073932cb98f1bf628a2ff46115c3a9f73e7a91d1"
+        }
+      ],
+      "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:right-vocal-ligament",
+      "fmaId": "FMA55245",
+      "sourceName": "right vocal ligament",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2805",
+          "sha256": "f8d93ea86284dbe0877b6080c642991a6542cf78bb6ad884a78b4d55a7b8e3e8"
+        }
+      ],
+      "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament",
+      "fmaId": "FMA55246",
+      "sourceName": "left vocal ligament",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2787",
+          "sha256": "fd2030747641aae5864bb28f2c18a03d8ccfc34702f9a9012af1957ac1bef23b"
+        }
+      ],
+      "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
+      "fmaId": "FMA72309",
+      "sourceName": "right stylohyoid ligament",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2764",
+          "sha256": "1747f307890df8c872f69b9467e54301cf1d0646b18c74ebe8a5723fd071e8f9"
+        }
+      ],
+      "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
+      "fmaId": "FMA72311",
+      "sourceName": "left stylohyoid ligament",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2763",
+          "sha256": "4fead7cee38782fc067d18397b0891b6afbf7bb99d331b43264c678ddccb3e6a"
+        }
+      ],
+      "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-axis",
+      "fmaId": "FMA25058",
+      "sourceName": "intervertebral disk of axis",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ3202",
+          "sha256": "10b24dc45678b68734e84e2d10c749c5b53b4ed3c39c04d2052bdebc02301840"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-cervical-vertebra",
+      "fmaId": "FMA13896",
+      "sourceName": "intervertebral disk of third cervical vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ3213",
+          "sha256": "1792fb233867a50a88c0b087391886dfb63f62eede857920736367c0d0c9e91d"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-cervical-vertebra",
+      "fmaId": "FMA13897",
+      "sourceName": "intervertebral disk of fourth cervical vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ3218",
+          "sha256": "a1820438c3e0dd6361807a4a7380861df4134f48df2d869630e678ff71ec226d"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-cervical-vertebra",
+      "fmaId": "FMA13898",
+      "sourceName": "intervertebral disk of fifth cervical vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ3219",
+          "sha256": "9614a560acb98669f69bf67a15321e73495e7decf71fa4e4e3941fc494b443d4"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-cervical-vertebra",
+      "fmaId": "FMA13899",
+      "sourceName": "intervertebral disk of sixth cervical vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ3220",
+          "sha256": "6aa2490d85cc76e1f9c29a4d187e36c54d3faa1091b42d1ebc54d45ae1d96194"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-cervical-vertebra",
+      "fmaId": "FMA13900",
+      "sourceName": "intervertebral disk of seventh cervical vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ3221",
+          "sha256": "d76e5f07cea767b03ee7138fde4781a546f5bbb490de023b1992a5fa206d1322"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-first-thoracic-vertebra",
+      "fmaId": "FMA10458",
+      "sourceName": "intervertebral disk of first thoracic vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3222",
+          "sha256": "b7387340fcd82362f86af387a7fe21a9a2e9ab9f4549ec539fc519112b4296d5"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-thoracic-vertebra",
+      "fmaId": "FMA13495",
+      "sourceName": "intervertebral disk of second thoracic vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3223",
+          "sha256": "108dd5e9e772425ec890afc92d633de4c345c6ff3ad7cb4e31c744b407742777"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-thoracic-vertebra",
+      "fmaId": "FMA13500",
+      "sourceName": "intervertebral disk of third thoracic vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3224",
+          "sha256": "99e4ff2970050012f88b9a70e5bb9f3cd647bd3091a53238aa1619a65d591ed5"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-thoracic-vertebra",
+      "fmaId": "FMA13501",
+      "sourceName": "intervertebral disk of fourth thoracic vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3203",
+          "sha256": "3c1e8acf2db66d447c91e29e1df800cc9eed605fc7adcc7b70d2aeb585f24287"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-thoracic-vertebra",
+      "fmaId": "FMA13502",
+      "sourceName": "intervertebral disk of fifth thoracic vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3204",
+          "sha256": "70238a6e88e8bf340459cc030536bd591ea8eb55b60694e526b39b0a5ff141d0"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-thoracic-vertebra",
+      "fmaId": "FMA13503",
+      "sourceName": "intervertebral disk of sixth thoracic vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3205",
+          "sha256": "678096eb026ccb41a9d9c9feb36336859543aba2e2b4130d2852d69da5a56bb0"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-thoracic-vertebra",
+      "fmaId": "FMA13504",
+      "sourceName": "intervertebral disk of seventh thoracic vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3206",
+          "sha256": "ea58f9563a87ea209a665232bef9924be84b89c5614ddcc0bc2bb51dfaea6068"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eighth-thoracic-vertebra",
+      "fmaId": "FMA13505",
+      "sourceName": "intervertebral disk of eighth thoracic vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3207",
+          "sha256": "7df1bee7ad9edd0e0405b052c62a16472f9f954c45203eb5a5f75fd311841a1b"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-ninth-thoracic-vertebra",
+      "fmaId": "FMA13506",
+      "sourceName": "intervertebral disk of ninth thoracic vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3208",
+          "sha256": "0e56e370d55f029013aab8d837822c21c5ab1bdbbb98109a740d669eb15ee075"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-tenth-thoracic-vertebra",
+      "fmaId": "FMA13507",
+      "sourceName": "intervertebral disk of tenth thoracic vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3209",
+          "sha256": "84ebc4e0ab44c57246f189d0ccf5fe212d1f4ec9f64eb8f8c5a7143adba4b5b8"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eleventh-thoracic-vertebra",
+      "fmaId": "FMA13508",
+      "sourceName": "intervertebral disk of eleventh thoracic vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ3210",
+          "sha256": "8f2a670e4c8271c8ac6c1195cd324e1d5e69255b937e759c99c6ee90279bc21f"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-first-lumbar-vertebra",
+      "fmaId": "FMA16033",
+      "sourceName": "intervertebral disk of first lumbar vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3212",
+          "sha256": "5bcf1493e5210294ed340c9d3146cf28f8961a255cc9bbcbe38526342baefcc1"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-lumbar-vertebra",
+      "fmaId": "FMA16034",
+      "sourceName": "intervertebral disk of second lumbar vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3214",
+          "sha256": "804fa1c4aaa0812343a5f1235efc5c0920e034296286071849c93b761084cbd6"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-lumbar-vertebra",
+      "fmaId": "FMA16035",
+      "sourceName": "intervertebral disk of third lumbar vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3215",
+          "sha256": "22ae331178c3562580008f500eecbb045a8c88a800e7452914c461ae2ea3e23c"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
+      "fmaId": "FMA16036",
+      "sourceName": "intervertebral disk of fourth lumbar vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3216",
+          "sha256": "2aee68b19ac9da829a6d2571ea4673b9a23b2e33e99b86edd41317464e6a7582"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra",
+      "fmaId": "FMA16037",
+      "sourceName": "intervertebral disk of fifth lumbar vertebra",
+      "sourceTree": "isa",
+      "category": "cartilage",
+      "system": "connective",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3217",
+          "sha256": "a70ad77646a204454af2c355efca1375c59e392981679ffc85913b8d18979214"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending."
+    }
+  ]
+}

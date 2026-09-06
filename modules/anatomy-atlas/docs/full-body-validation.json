@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "sourceVersion": "4.0",
+  "structures": 823,
+  "bundles": 61,
+  "triangles": 4515836,
+  "vertices": 2263566,
+  "framingChecks": 432,
+  "systems": {
+    "skeleton": 203,
+    "muscles": 363,
+    "nerves": 30,
+    "organs": 39,
+    "vessels": 117,
+    "connective": 71
+  },
+  "checks": [
+    "all GLB hashes/bytes",
+    "unique identities and schema values",
+    "all node bindings",
+    "finite geometry",
+    "stored bounds",
+    "left/right convention",
+    "invertible shared transform",
+    "all regions and laterality framing",
+    "explicit neural coverage boundary"
+  ],
+  "clinicalValidation": false,
+  "browserInteractionTesting": false
+}

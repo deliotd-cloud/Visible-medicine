@@ -1,0 +1,378 @@
+{
+  "date": "2026-09-06",
+  "mechanismChanged": false,
+  "method": "source-code and numerical bounds review",
+  "browserTesting": false,
+  "limitations": [
+    "Centroid gaps are not surface clearance.",
+    "AABB projection is conservative; out-of-frame bounds do not prove visible pixel clipping."
+  ],
+  "findings": [
+    "Equal-distance radial motion does not reliably separate same-ray neighbours.",
+    "Visible-subset/focus bounds change the regional explode origin.",
+    "Regional camera resets to a preset and zooms out as separation changes.",
+    "Dedicated shoulder camera does not fit exploded geometry.",
+    "Shoulder clipping plane is fixed in world space during displacement."
+  ],
+  "regional": [
+    {
+      "region": "head-neck",
+      "nearbyPairs": 1155,
+      "pairsGainingUnder10Percent": 8,
+      "examples": [
+        {
+          "a": "Intervertebral disk of fifth cervical vertebra",
+          "b": "Intervertebral disk of seventh cervical vertebra",
+          "beforeMm": 32.51060896957831,
+          "afterMm": 32.53662619881686,
+          "ratio": 1.0008002688987738
+        },
+        {
+          "a": "Intervertebral disk of sixth cervical vertebra",
+          "b": "Intervertebral disk of seventh cervical vertebra",
+          "beforeMm": 16.44796107624626,
+          "afterMm": 16.63522606056297,
+          "ratio": 1.0113853007949511
+        }
+      ]
+    },
+    {
+      "region": "thorax",
+      "nearbyPairs": 187,
+      "pairsGainingUnder10Percent": 0,
+      "examples": [
+        {
+          "a": "Internal intercostal muscle",
+          "b": "Diaphragm",
+          "beforeMm": 77.50025042521152,
+          "afterMm": 87.19728529981163,
+          "ratio": 1.1251226263321281
+        },
+        {
+          "a": "Right brachiocephalic vein",
+          "b": "Right internal jugular vein",
+          "beforeMm": 37.65275984072417,
+          "afterMm": 53.61441297949877,
+          "ratio": 1.4239172163287463
+        }
+      ]
+    },
+    {
+      "region": "abdomen",
+      "nearbyPairs": 59,
+      "pairsGainingUnder10Percent": 5,
+      "examples": [
+        {
+          "a": "Intervertebral disk of fourth lumbar vertebra",
+          "b": "Intervertebral disk of fifth lumbar vertebra",
+          "beforeMm": 34.60636301876556,
+          "afterMm": 34.77729725703285,
+          "ratio": 1.0049393875390662
+        },
+        {
+          "a": "Intervertebral disk of third lumbar vertebra",
+          "b": "Intervertebral disk of fifth lumbar vertebra",
+          "beforeMm": 66.19008358659268,
+          "afterMm": 67.07800397588338,
+          "ratio": 1.0134147041547257
+        }
+      ]
+    },
+    {
+      "region": "pelvis",
+      "nearbyPairs": 124,
+      "pairsGainingUnder10Percent": 8,
+      "examples": [
+        {
+          "a": "Left iliacus",
+          "b": "Left obturator externus",
+          "beforeMm": 68.33990170117025,
+          "afterMm": 69.56703780466849,
+          "ratio": 1.0179563633097415
+        },
+        {
+          "a": "Right iliacus",
+          "b": "Right obturator externus",
+          "beforeMm": 68.33990170117025,
+          "afterMm": 69.56883850626794,
+          "ratio": 1.0179827125077157
+        }
+      ]
+    },
+    {
+      "region": "shoulder-arm",
+      "nearbyPairs": 149,
+      "pairsGainingUnder10Percent": 0,
+      "examples": [
+        {
+          "a": "Left serratus anterior",
+          "b": "Left coracobrachialis",
+          "beforeMm": 69.51808119500873,
+          "afterMm": 86.03084708532941,
+          "ratio": 1.237531957247207
+        },
+        {
+          "a": "Right serratus anterior",
+          "b": "Right coracobrachialis",
+          "beforeMm": 69.51812399498465,
+          "afterMm": 86.03430649074176,
+          "ratio": 1.2375809579808088
+        }
+      ]
+    },
+    {
+      "region": "forearm",
+      "nearbyPairs": 248,
+      "pairsGainingUnder10Percent": 2,
+      "examples": [
+        {
+          "a": "Right extensor pollicis brevis",
+          "b": "Right pronator quadratus",
+          "beforeMm": 31.362844714046012,
+          "afterMm": 34.26185014774958,
+          "ratio": 1.092434390443072
+        },
+        {
+          "a": "Left extensor pollicis brevis",
+          "b": "Left pronator quadratus",
+          "beforeMm": 31.36292313909458,
+          "afterMm": 34.26233075445403,
+          "ratio": 1.0924469827796526
+        }
+      ]
+    },
+    {
+      "region": "hand",
+      "nearbyPairs": 464,
+      "pairsGainingUnder10Percent": 28,
+      "examples": [
+        {
+          "a": "Right trapezoid",
+          "b": "Right triquetral",
+          "beforeMm": 30.973347013999014,
+          "afterMm": 31.100563963340772,
+          "ratio": 1.004107303911465
+        },
+        {
+          "a": "Left trapezoid",
+          "b": "Left triquetral",
+          "beforeMm": 31.248916368979785,
+          "afterMm": 31.413058773219717,
+          "ratio": 1.00525273908067
+        }
+      ]
+    },
+    {
+      "region": "thigh",
+      "nearbyPairs": 229,
+      "pairsGainingUnder10Percent": 8,
+      "examples": [
+        {
+          "a": "Right iliacus",
+          "b": "Right obturator externus",
+          "beforeMm": 68.33990170117025,
+          "afterMm": 68.85629896798426,
+          "ratio": 1.007556306842115
+        },
+        {
+          "a": "Left iliacus",
+          "b": "Left obturator externus",
+          "beforeMm": 68.33990170117025,
+          "afterMm": 68.85629896798426,
+          "ratio": 1.007556306842115
+        }
+      ]
+    },
+    {
+      "region": "leg",
+      "nearbyPairs": 82,
+      "pairsGainingUnder10Percent": 0,
+      "examples": [
+        {
+          "a": "Right fibularis brevis",
+          "b": "Right fibularis tertius",
+          "beforeMm": 56.00251844975508,
+          "afterMm": 73.53073870890965,
+          "ratio": 1.3129898573200904
+        },
+        {
+          "a": "Left fibularis brevis",
+          "b": "Left fibularis tertius",
+          "beforeMm": 56.002535142331354,
+          "afterMm": 73.53077487550699,
+          "ratio": 1.3129901117623932
+        }
+      ]
+    },
+    {
+      "region": "foot",
+      "nearbyPairs": 760,
+      "pairsGainingUnder10Percent": 2,
+      "examples": [
+        {
+          "a": "Left extensor hallucis brevis",
+          "b": "Oblique head of left adductor hallucis",
+          "beforeMm": 22.048399327190147,
+          "afterMm": 22.4087782449169,
+          "ratio": 1.0163449016129862
+        },
+        {
+          "a": "Right extensor hallucis brevis",
+          "b": "Oblique head of right adductor hallucis",
+          "beforeMm": 22.048399327190147,
+          "afterMm": 22.409520678497536,
+          "ratio": 1.0163785745145704
+        }
+      ]
+    },
+    {
+      "region": "spine",
+      "nearbyPairs": 328,
+      "pairsGainingUnder10Percent": 49,
+      "examples": [
+        {
+          "a": "Sixth cervical vertebra",
+          "b": "Atlas",
+          "beforeMm": 78.74179144689069,
+          "afterMm": 78.74398903433213,
+          "ratio": 1.0000279087813608
+        },
+        {
+          "a": "Third cervical vertebra",
+          "b": "Sixth cervical vertebra",
+          "beforeMm": 38.289873494905265,
+          "afterMm": 38.327865364842104,
+          "ratio": 1.0009922171704717
+        }
+      ]
+    }
+  ],
+  "shoulderFraming": [
+    {
+      "aspect": 0.65,
+      "view": "posterior",
+      "explode": 0,
+      "outsideConservativeBounds": 0,
+      "totalBounds": 88
+    },
+    {
+      "aspect": 0.65,
+      "view": "posterior",
+      "explode": 100,
+      "outsideConservativeBounds": 22,
+      "totalBounds": 88
+    },
+    {
+      "aspect": 0.65,
+      "view": "anterior",
+      "explode": 0,
+      "outsideConservativeBounds": 0,
+      "totalBounds": 88
+    },
+    {
+      "aspect": 0.65,
+      "view": "anterior",
+      "explode": 100,
+      "outsideConservativeBounds": 24,
+      "totalBounds": 88
+    },
+    {
+      "aspect": 0.65,
+      "view": "lateral",
+      "explode": 0,
+      "outsideConservativeBounds": 0,
+      "totalBounds": 88
+    },
+    {
+      "aspect": 0.65,
+      "view": "lateral",
+      "explode": 100,
+      "outsideConservativeBounds": 8,
+      "totalBounds": 88
+    },
+    {
+      "aspect": 1,
+      "view": "posterior",
+      "explode": 0,
+      "outsideConservativeBounds": 0,
+      "totalBounds": 88
+    },
+    {
+      "aspect": 1,
+      "view": "posterior",
+      "explode": 100,
+      "outsideConservativeBounds": 29,
+      "totalBounds": 88
+    },
+    {
+      "aspect": 1,
+      "view": "anterior",
+      "explode": 0,
+      "outsideConservativeBounds": 0,
+      "totalBounds": 88
+    },
+    {
+      "aspect": 1,
+      "view": "anterior",
+      "explode": 100,
+      "outsideConservativeBounds": 32,
+      "totalBounds": 88
+    },
+    {
+      "aspect": 1,
+      "view": "lateral",
+      "explode": 0,
+      "outsideConservativeBounds": 0,
+      "totalBounds": 88
+    },
+    {
+      "aspect": 1,
+      "view": "lateral",
+      "explode": 100,
+      "outsideConservativeBounds": 10,
+      "totalBounds": 88
+    },
+    {
+      "aspect": 1.4,
+      "view": "posterior",
+      "explode": 0,
+      "outsideConservativeBounds": 0,
+      "totalBounds": 88
+    },
+    {
+      "aspect": 1.4,
+      "view": "posterior",
+      "explode": 100,
+      "outsideConservativeBounds": 12,
+      "totalBounds": 88
+    },
+    {
+      "aspect": 1.4,
+      "view": "anterior",
+      "explode": 0,
+      "outsideConservativeBounds": 0,
+      "totalBounds": 88
+    },
+    {
+      "aspect": 1.4,
+      "view": "anterior",
+      "explode": 100,
+      "outsideConservativeBounds": 25,
+      "totalBounds": 88
+    },
+    {
+      "aspect": 1.4,
+      "view": "lateral",
+      "explode": 0,
+      "outsideConservativeBounds": 0,
+      "totalBounds": 88
+    },
+    {
+      "aspect": 1.4,
+      "view": "lateral",
+      "explode": 100,
+      "outsideConservativeBounds": 4,
+      "totalBounds": 88
+    }
+  ]
+}

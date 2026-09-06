@@ -1,0 +1,44 @@
+# Expanded anatomy coverage and open review items
+
+## Included
+
+823 selectable source representations: 203 skeletal, 363 muscular, 39 organ, 30 nervous-system, 117 vascular and 71 connective-tissue entries. 61 GLB bundles support 11 independent region routes plus the whole-body route. Regional membership uses source muscle hierarchy where available, explicit named-bone rules and a documented position-based fallback. Adjacent long bones are retained to provide joint context; this is not a clipped surgical field.
+
+Organs: the original 17 entries (heart, paired lungs, liver, pancreas, stomach, small/large intestine, gallbladder, paired kidneys, bladder, esophagus, trachea, spleen and paired adrenals), plus prostate, paired testes, paired seminal vesicles, paired ureters, thymus, pituitary, paired compound eyeballs and rectum. Heart/liver vascular components and the rectum have been separated from their display aggregates without moving geometry; aggregate IDs remain stable and notes disclose their exclusions. This remains an adult-male reference, not comprehensive male/female, developmental or variant anatomy.
+
+Vascular coverage comprises 117 selected source artery/vein concepts. It is not a complete circulation, branching graph, lumen or validated connection model. Connective coverage comprises 14 costal cartilages (1–7 per side), 5 nasal cartilages, 4 laryngeal-cartilage entries and paired long plantar ligaments. Three sternal bone parts and two hand lumbrical groups are also recovered. No complete joint, fascial, lymphatic, ocular-layer or organ-interior anatomy is supplied. See `ANATOMY_RECOVERY.md` for source decisions and remaining gaps.
+
+Nervous entries: 28 selected cranial/orbital nerve representations, the compound brain and the central canal of the spinal cord. **This is not a full nervous system.** No limb peripheral nerves or brachial/lumbosacral plexuses are present. Source FMA7647 (spinal cord) and FMA78497 (central canal) both use FJ1737. We conservatively expose only FMA78497 as a space and state its limitations; it is not a cord segmentation.
+
+## Latest additions
+
+The latest pass adds 62 entries detailed in `GAP_FILLING.md`: 22 discs, four hand interosseous sets, four interosseous membranes, two Achilles tendons, two trochlear nerves, ten organs and eighteen additional head/neck connective structures. The organ list above also now includes tongue, paired lacrimal/submandibular/sublingual glands, paired epididymides and urethra. Pelvic-floor and optic-nerve alternatives are held separately pending source adjudication. The catalogue does not imply all source candidates were admitted.
+
+## Quarantined source entries
+
+The full-body importer withholds four candidates whose labelled laterality conflicts with their registered X position in the source data:
+
+- FMA37388 / FJ1469M — source-labelled right flexor pollicis brevis
+- FMA37389 / FJ1469 — source-labelled left flexor pollicis brevis
+- FMA46633 / FJ2742 — source-labelled right middle pharyngeal constrictor
+- FMA46634 / FJ2754 — source-labelled left middle pharyngeal constrictor
+
+These discrepancies are flags for expert review, not proof of a source error: midline-crossing anatomy can complicate centroid tests. We did not flip, reshape or relabel them. They remain documented with source hashes in `catalog.json` under `excluded`, outside rendered assets.
+
+## Teaching content
+
+The shoulder's existing teaching records are reused when the source identity matches. New entries provide source identity and geometry provenance; 17 organ entries and brain have short original function notes. Detailed new origin/insertion, innervation, imaging, pathology and procedural descriptions are marked pending where they are not authored. Nothing is marked clinically validated.
+
+Identification practice selects up to five large, loaded structures from the current scope. Other anatomy is removed for the exercise to expose the candidate surfaces. Labels and selection highlighting are disabled. The named prompt is intentionally visible; this is formative anatomical identification, not a high-stakes examination or validated assessment.
+
+## Required before clinical/educational release
+
+1. Review each identity, segmentation, laterality, regional assignment and shared registration, including all bone/muscle components.
+2. Resolve the four quarantined entries and spinal-cord/central-canal ambiguity with source-author or qualified anatomical review.
+3. Source, licence and validate missing peripheral nerves rather than generate guessed routes.
+4. Review merged organ surfaces and reduced-polygon anatomy at the intended learning scale.
+5. Author and independently review specialist educational content and citations for every advertised topic; remove or complete pending tabs for a finished curriculum.
+6. Validate interaction, accessibility and memory/frame-rate behaviour on target browsers and low-powered mobile devices. Automated bounds/hash checks are not browser or clinical testing.
+7. Independently validate any future DICOM registration, image orientation and patient privacy pipeline before patient-specific use.
+
+The machine-readable check report is `docs/full-body-validation.json`. No diagnosis, operative planning or patient-specific claim is supported.
