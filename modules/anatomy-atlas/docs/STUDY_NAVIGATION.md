@@ -14,7 +14,7 @@ Select a structure and expand **Study together**. Available groups come exclusiv
 
 Groups where the selection is a target are ordered before groups where it is context; smaller groups are presented first. **Open study view · keep selection** applies the existing focused recipe, retains the selected ID, restores recipe membership and resets cutaway, separation, isolation and framing using the established focus handler. The action explains those changes in advance. Dissection Undo restores the previous removal recipe, not the old camera; save a study view first to preserve full camera/display context.
 
-The current catalogue still has 90 authored focuses across 12 scopes. Whole-body currently has two broad arterial/venous focuses; it does not silently borrow a regional recipe. If no group is authored for the current selection/scope, the interface says so. This feature does not introduce new clinical relationships, attachments, innervation, source geometry, anatomical segmentation or additional focus recipes. Regional-to-whole-body study deep-links are follow-on work.
+The current catalogue still has 90 authored focuses across 12 scopes. Whole-body currently has two broad arterial/venous focuses; it does not silently borrow a regional recipe. If no group is authored for the current selection/scope, the interface says so. This feature does not introduce new clinical relationships, attachments, innervation, source geometry, anatomical segmentation or additional focus recipes. The subsequent [Continue this dissection](STUDY_LINKS.md) panel now provides explicit, validated links between regional and whole-body study without losing the selected identity.
 
 ## Architecture and safety
 

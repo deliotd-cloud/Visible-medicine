@@ -1,0 +1,451 @@
+{
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "inventorySha256": "a4c42895904dde4f20fff4b96e37577c197d016ff4ebd60696c5d3a0b8d454e4",
+  "catalogSha256": "8834615444c57b428fdf79689370c7894ba7aa400149f0b800014d9fdc158836",
+  "query": "Unused available ISA definitions, at most four source components, matching selected muscle/pharyngeal/visceral/vascular name terms.",
+  "resultCount": 24,
+  "results": [
+    {
+      "id": "FMA4149",
+      "name": "esophageal artery",
+      "files": [
+        "FJ1934"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [
+        {
+          "tree": "partof",
+          "id": "FMA4149",
+          "name": "esophageal artery"
+        }
+      ],
+      "renderedOwners": [],
+      "decision": "resolve-aliases-before-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA10704",
+      "name": "variant bronchial artery",
+      "files": [
+        "FJ3418"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA3714",
+          "name": "variant artery"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA14177",
+          "name": "bronchial branch of arch of aorta"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA66267",
+          "name": "variant systemic artery"
+        }
+      ],
+      "renderedOwners": [],
+      "decision": "resolve-aliases-before-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA14177",
+      "name": "bronchial branch of arch of aorta",
+      "files": [
+        "FJ3418"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA3714",
+          "name": "variant artery"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA10704",
+          "name": "variant bronchial artery"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA66267",
+          "name": "variant systemic artery"
+        }
+      ],
+      "renderedOwners": [],
+      "decision": "resolve-aliases-before-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA14782",
+      "name": "anterior superior pancreaticoduodenal artery",
+      "files": [
+        "FJ3409"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [],
+      "renderedOwners": [],
+      "decision": "candidate-for-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA14784",
+      "name": "posterior superior pancreaticoduodenal artery",
+      "files": [
+        "FJ3557"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [],
+      "renderedOwners": [],
+      "decision": "candidate-for-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA14787",
+      "name": "dorsal pancreatic artery",
+      "files": [
+        "FJ3430"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [],
+      "renderedOwners": [],
+      "decision": "candidate-for-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA14790",
+      "name": "inferior pancreatic artery",
+      "files": [
+        "FJ3444"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [],
+      "renderedOwners": [],
+      "decision": "candidate-for-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA14792",
+      "name": "great pancreatic artery",
+      "files": [
+        "FJ3433"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [],
+      "renderedOwners": [],
+      "decision": "candidate-for-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA14793",
+      "name": "caudal pancreatic artery",
+      "files": [
+        "FJ3419"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [],
+      "renderedOwners": [],
+      "decision": "candidate-for-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA14805",
+      "name": "inferior pancreaticoduodenal artery",
+      "files": [
+        "FJ3446"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [
+        {
+          "tree": "partof",
+          "id": "FMA14805",
+          "name": "inferior pancreaticoduodenal artery"
+        }
+      ],
+      "renderedOwners": [],
+      "decision": "resolve-aliases-before-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA15398",
+      "name": "pancreaticoduodenal vein",
+      "files": [
+        "FJ3545",
+        "FJ3646",
+        "FJ3655"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [],
+      "renderedOwners": [],
+      "decision": "candidate-for-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA46622",
+      "name": "middle pharyngeal constrictor",
+      "files": [
+        "FJ2742",
+        "FJ2754"
+      ],
+      "heldAliases": [
+        {
+          "tree": "isa",
+          "id": "FMA46633",
+          "name": "right middle pharyngeal constrictor",
+          "overlap": [
+            "FJ2742"
+          ],
+          "reason": "Previously quarantined laterality/position discrepancy."
+        },
+        {
+          "tree": "isa",
+          "id": "FMA46634",
+          "name": "left middle pharyngeal constrictor",
+          "overlap": [
+            "FJ2754"
+          ],
+          "reason": "Previously quarantined laterality/position discrepancy."
+        }
+      ],
+      "identicalDefinitions": [],
+      "renderedOwners": [],
+      "decision": "existing-hold-applies",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA54877",
+      "name": "subdivision of pharynx",
+      "files": [
+        "FJ2770"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA55053",
+          "name": "subdivision of laryngopharynx"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55130",
+          "name": "epiglottis"
+        }
+      ],
+      "renderedOwners": [],
+      "decision": "resolve-aliases-before-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA55053",
+      "name": "subdivision of laryngopharynx",
+      "files": [
+        "FJ2770"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA54877",
+          "name": "subdivision of pharynx"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55130",
+          "name": "epiglottis"
+        }
+      ],
+      "renderedOwners": [],
+      "decision": "resolve-aliases-before-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA55077",
+      "name": "pharyngeal raphe",
+      "files": [
+        "FJ2749"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [],
+      "renderedOwners": [],
+      "decision": "candidate-for-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA68109",
+      "name": "bronchial artery",
+      "files": [
+        "FJ1933"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [],
+      "renderedOwners": [],
+      "decision": "candidate-for-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA70436",
+      "name": "subdivision of gastroduodenal artery",
+      "files": [
+        "FJ3409",
+        "FJ3557",
+        "FJ3596"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [],
+      "renderedOwners": [],
+      "decision": "candidate-for-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA70437",
+      "name": "superior pancreaticoduodenal artery",
+      "files": [
+        "FJ3409",
+        "FJ3557"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [],
+      "renderedOwners": [],
+      "decision": "candidate-for-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA70471",
+      "name": "pancreatic artery",
+      "files": [
+        "FJ3419",
+        "FJ3430",
+        "FJ3433",
+        "FJ3444"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [],
+      "renderedOwners": [],
+      "decision": "candidate-for-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA70479",
+      "name": "anterior inferior pancreaticoduodenal artery",
+      "files": [
+        "FJ3401"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [],
+      "renderedOwners": [],
+      "decision": "candidate-for-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA70480",
+      "name": "posterior inferior pancreaticoduodenal artery",
+      "files": [
+        "FJ3546"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [],
+      "renderedOwners": [],
+      "decision": "candidate-for-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA70481",
+      "name": "subdivision of inferior pancreaticoduodenal artery",
+      "files": [
+        "FJ3401",
+        "FJ3546"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [],
+      "renderedOwners": [],
+      "decision": "candidate-for-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA71537",
+      "name": "set of oesophageal branches of thoracic aorta",
+      "files": [
+        "FJ3431"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [],
+      "renderedOwners": [],
+      "decision": "candidate-for-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    },
+    {
+      "id": "FMA76574",
+      "name": "trunk of gastroduodenal artery",
+      "files": [
+        "FJ3432"
+      ],
+      "heldAliases": [],
+      "identicalDefinitions": [
+        {
+          "tree": "partof",
+          "id": "FMA14775",
+          "name": "gastroduodenal artery"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA76574",
+          "name": "trunk of gastroduodenal artery"
+        }
+      ],
+      "renderedOwners": [],
+      "decision": "resolve-aliases-before-mesh-audit",
+      "admitted": false,
+      "meshGeometryAudited": false
+    }
+  ],
+  "nextAudit": [
+    "FMA55077",
+    "FMA55130",
+    "FMA14782",
+    "FMA14784",
+    "FMA14787",
+    "FMA14790",
+    "FMA14792",
+    "FMA14793",
+    "FMA14805",
+    "FMA15398",
+    "FMA70479",
+    "FMA70480"
+  ],
+  "limits": [
+    "Lexical inventory triage only; not an exhaustive anatomical review or a source admission.",
+    "The middle-constrictor aggregate reuses both existing held laterality candidates; grouping cannot bypass that hold.",
+    "FMA55130 epiglottis shares FJ2770 with pharyngeal subdivision aliases. FMA55077 raphe shares an anatomical-line definition. Resolve source semantics before rendering either.",
+    "Pancreatic vessel subdivisions need exact and sampled overlap checks against existing gastroduodenal/mesenteric sources; do not infer continuous perfusion territories.",
+    "No source geometry, source hold, review record, dependency or licence obligation changed."
+  ],
+  "clinicalValidation": false
+}

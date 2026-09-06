@@ -88,6 +88,13 @@ import {
 import { StudyViews } from './study-views';
 import { StructureNavigator } from './structure-navigator';
 import { RelatedStudy } from './related-study';
+import { StudyLinks } from './study-links';
+import {
+  noStudyLink,
+  resolveStudyLink,
+  type ParsedStudyLink,
+  type StudySide,
+} from '@/lib/study-links';
 import { relatedStudyViews } from '@/lib/study-navigation';
 import type { StudyCamera, StudyView } from '@/lib/study-views';
 import { anatomyRetryPlan } from '@/lib/anatomy-load-retry';
@@ -131,11 +138,19 @@ const initialSystems: Record<BodySystem, boolean> = {
 
 export default function BodyExplorer({
   initialRegion,
+  studyLink = noStudyLink,
 }: {
   initialRegion: string;
+  studyLink?: ParsedStudyLink;
 }) {
-  const profile =
-    dissectionProfiles[initialRegion] ?? dissectionProfiles['whole-body'];
+  const profile = Object.hasOwn(dissectionProfiles, initialRegion)
+    ? dissectionProfiles[initialRegion]
+    : dissectionProfiles['whole-body'];
+  const appliedStudyLink = useRef(studyLink.status === 'none');
+  const [linkedStudyReady, setLinkedStudyReady] = useState(
+    studyLink.status === 'none',
+  );
+  const [linkIssue, setLinkIssue] = useState<string | null>(null);
   const [dissection, dispatch] = useReducer(dissectionReducer, {
     ...initialDissection,
     stageId: initialRegion === 'whole-body' ? 'free' : 'assembled',
@@ -214,7 +229,37 @@ export default function BodyExplorer({
         )
           throw new Error('Invalid anatomy catalog');
         bodyLinkEntries(value); // Validate reference transforms before committing loaded data.
-        if (active) setCatalog(value);
+        if (active) {
+          if (!appliedStudyLink.current) {
+            const result = resolveStudyLink(value, initialRegion, studyLink);
+            // Commit the linked selection with the loaded catalogue, before
+            // mounting the scene. Never emit an imaging event from URL input.
+            if (result.status === 'ready') {
+              setSide(result.side);
+              setSelectedId(result.selected.id);
+              setSystems(allBodySystems);
+              dispatch(
+                result.focusId
+                  ? { type: 'focus', id: result.focusId }
+                  : { type: 'stage', id: 'assembled' },
+              );
+              setView(result.view);
+              setSelectionNotice({
+                id: result.selected.id,
+                message: `Linked ${result.focusTitle ?? 'assembled anatomy'} view opened. ${result.selected.name} selected.`,
+              });
+            } else if (result.status === 'rejected') {
+              setLinkIssue(
+                result.reason === 'source-changed'
+                  ? 'This study link refers to a different source model. No structure was selected. Choose a structure from the current atlas to create a new link.'
+                  : 'This study link is incomplete or does not match the available region, side or focused view. No structure was substituted; the standard regional view is open.',
+              );
+            }
+            appliedStudyLink.current = true;
+            setLinkedStudyReady(true);
+          }
+          setCatalog(value);
+        }
       })
       .catch((e) => {
         if (active && e.name !== 'AbortError') setError(true);
@@ -225,7 +270,7 @@ export default function BodyExplorer({
       clearTimeout(timeout);
       controller.abort();
     };
-  }, [catalogAttempt]);
+  }, [catalogAttempt, initialRegion, studyLink]);
   const region = catalog?.regions.find((r) => r.id === initialRegion),
     whole = initialRegion === 'whole-body';
   const regionStructures = useMemo(
@@ -601,11 +646,15 @@ export default function BodyExplorer({
         <Link href="/shoulder">Open the shoulder explorer</Link>
       </main>
     );
-  if (!catalog)
+  if (!catalog || !linkedStudyReady)
     return (
       <main className="body-status">
         <Brand surface="light" />
-        <p>Loading the body-region library…</p>
+        <p>
+          {catalog
+            ? 'Preparing the linked dissection…'
+            : 'Loading the body-region library…'}
+        </p>
       </main>
     );
   if (!whole && !region)
@@ -1217,6 +1266,18 @@ export default function BodyExplorer({
           )}
         </section>
         <aside className="body-info" aria-label="Anatomy study panel">
+          {!exam && linkIssue && (
+            <div className="body-study-link-issue">
+              <output aria-live="polite">{linkIssue}</output>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setLinkIssue(null)}
+              >
+                Dismiss link notice
+              </Button>
+            </div>
+          )}
           {exam ? (
             <>
               <output className="sr-only" aria-live="polite" aria-atomic="true">
@@ -1565,6 +1626,13 @@ export default function BodyExplorer({
                     onOpen={openRelatedStudy}
                     onSelect={select}
                     detail={structureDetail}
+                  />
+                  <StudyLinks
+                    catalog={catalog}
+                    selected={selected}
+                    region={initialRegion}
+                    side={side as StudySide}
+                    focusId={dissection.focusId}
                   />
                   <Tabs defaultValue="anatomy" className="body-content-tabs">
                     <TabsList variant="line">

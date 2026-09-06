@@ -4,11 +4,11 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 
 ## Snapshot
 
-- Source application commit: `86de0cce3db88e89b5d30bdf35c511256adbaa7a`.
-- Exact application source tree: `d1bcaba361aba34cf240b9b61dea1a2661ca5687`.
+- Source application commit: `aa0e55b79d707f518ebb6faa77b96278f1aae5ab`.
+- Exact application source tree: `ed61c8aaa215e88760968b8db177ec4edc3d86a5`.
 - Main website base commit: `c4ff08f8afc90bd94d04162625f97af9d94401cf`.
 - GitHub backup branch: `backup/anatomy-atlas-2026-09-06`.
-- All 350 tracked application files (110,234,023 bytes) are preserved byte-for-byte from that source commit, including 77 GLB bundles, the official brand lockups, content, scripts, configuration, dependency lockfile, licences, review database schema/migration and documentation.
+- All 357 tracked application files (110,288,308 bytes) are preserved byte-for-byte from that source commit, including 77 GLB bundles, the official brand lockups, content, scripts, configuration, dependency lockfile, licences, review database schema/migration and documentation.
 - The atlas covers 942 selectable source representations, 11 regional explorers, 108 dissection stages, 90 focused views and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation.
 - The shoulder review workspace has independent geometry, teaching and imaging review tracks, evidence/issues, versioned records and revision-bound approval safeguards. Acquired scans and specialist approvals remain absent.
 - The deep-inspection update adds three-plane surface cutaways, tissue opacity, clipped-surface picking, regional/whole-body orthographic illustration and varied 5/10/20-question practice with results. No source geometry, anatomical coverage, licences or dependencies were changed.
@@ -19,6 +19,8 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 - The deep-brain milestone adds 22 source concepts / 24 components in a separate model bundle, three study windows, five source-ID-based focused views, draft notes and distinct study colours. Every previous 859 structure record and 66 model bundle hashes is preserved. Regional labels now follow the visible bounds in all six presets, avoid duplicate selected labels and correct exploded local coordinates. Its 193,082 source, study and label helper assertions pass; they do not validate source anatomy or on-screen text collision. Grouped bilateral mammillary and choroid-plexus sources are explicitly disclosed. See `docs/DEEP_BRAIN.md` for evidence, clinical limits and remaining work.
 
 The currently published atlas remains at [Visible Medicine anatomy](https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site). Saving this branch does not redeploy that site or the main website.
+
+The whole-body/regional study-link milestone adds **Continue this dissection**, exact-identity/side-preserving regional and whole-body destinations, existing focused-study links and copyable private URLs. Selected-bundle hashes bind source provenance; malformed, stale, duplicate, out-of-scope and incompatible-focus links are rejected without substitution. The 198,160-assertion suite checks 11,035 assembled/focused links and 4,651 cross-scope destinations, including duplicate-query handling in the installed routing runtime. Existing geometry, dissection, study/practice, imaging, inspection/arrangement/explode, inventory and review checks, type checks, focused lint, build and licence audit pass. A 24-definition source triage preserves all holds and explicitly identifies the held components inside FMA46622. No anatomy, dependency, clinical approval, personal review or patient data is added. See `docs/STUDY_LINKS.md` for the contract and remaining hands-on acceptance.
 
 The study-navigation milestone adds **Study together** groups derived from existing authored target/context rules, selection-preserving focused-view opening, filtered source-ID/system/dissection browsing and native-button arrow/Home/End navigation. Study membership is not a verified anatomical connection; automatic skeletal background does not create relationship edges. Exam/scope guards, restoration/loading announcements and all existing source identities are preserved. Its 89,681-assertion suite and existing geometry/dissection/study/practice/imaging/inspection/arrangement/explode/review regressions pass, as do type checks, focused lint, build and the unchanged 808-package licence audit. No new model, dependency, personal data, clinical approval or source admission is included. See `docs/STUDY_NAVIGATION.md`; browser/device and specialist acceptance remain outstanding.
 

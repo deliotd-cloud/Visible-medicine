@@ -2116,6 +2116,111 @@
   color: #002631;
   min-width: 0;
 }
+
+.anatomy-study-links {
+  margin: 14px 0 20px;
+  padding: 4px 14px 12px;
+  border: 1px solid #bddad6;
+  border-radius: 8px;
+  background: #fff;
+  color: #002631;
+}
+.anatomy-study-links summary {
+  min-height: 44px;
+  padding: 12px 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+.body-info .anatomy-study-links p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 6px 0 12px;
+  color: #5d7477;
+}
+.anatomy-study-destinations,
+.anatomy-study-destinations ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.anatomy-study-destinations > li {
+  padding: 8px 0;
+  border-bottom: 1px solid #dceae7;
+}
+.anatomy-study-destinations a {
+  display: block;
+  min-height: 44px;
+  padding: 10px;
+  color: #005f58;
+  background: #eef8f5;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+.anatomy-study-destinations ul a {
+  margin-top: 5px;
+  background: #f7faf9;
+}
+.anatomy-study-destinations small {
+  display: block;
+  font-size: 12px;
+  color: #5d7477;
+  margin-top: 4px;
+}
+.anatomy-study-destinations details {
+  margin: 4px 0 0 8px;
+}
+.anatomy-study-links .anatomy-study-link-note {
+  font-size: 12px;
+  margin-top: 12px;
+}
+.anatomy-study-link-copy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+}
+.anatomy-study-link-copy :is(button, a) {
+  min-height: 44px;
+  font-size: 14px;
+}
+.anatomy-study-link-copy > a {
+  display: inline-flex;
+  align-items: center;
+  color: #005f58;
+  text-decoration: underline;
+}
+.anatomy-study-link-copy output {
+  flex-basis: 100%;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #5d7477;
+}
+.body-study-link-issue {
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #dec48b;
+  background: #fff7df;
+  border-radius: 6px;
+  color: #59481d;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.body-study-link-issue output {
+  display: block;
+}
+.body-study-link-issue button {
+  min-height: 44px;
+  margin-top: 8px;
+}
+.anatomy-study-links :is(summary, a, button):focus-visible {
+  outline: 3px solid #007e73;
+  outline-offset: 2px;
+}
 .related-study h3 {
   font-size: 16px;
   font-weight: 650;

@@ -1,5 +1,9 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Continue a regional dissection
+
+Select a whole-body structure and open **Continue this dissection** to carry the same identity and side into its available regions or focused study views. Regional views offer a whole-body return link. **Copy this study link** retains the selection and supported focus without changing private access; outdated model references are rejected rather than substituted. Custom camera/cutaway/removal settings still belong in Saved study views. See [link controls, safety and validation](docs/STUDY_LINKS.md).
+
 ## Study navigation
 
 **Browse structures** now filters by name, stable source ID, system and current dissection state, with arrow-key browsing and explicit selection/restoration. Expand **Study together** on a selected structure to inspect its authored target/context groups and open a focused view while keeping it selected. Grouping is not a claim of verified attachments or innervation; unavailable groups and loading states remain explicit. See [controls, scope and acceptance requirements](docs/STUDY_NAVIGATION.md).

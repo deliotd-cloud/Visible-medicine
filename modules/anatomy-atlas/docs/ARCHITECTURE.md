@@ -40,6 +40,8 @@ The former `visible-medicine:imaging-sync` demonstrator has been replaced by an 
 
 ## Scaling to full body
 
+`lib/study-links.ts` defines versioned, source-bundle-bound links between whole-body and regional dissection. Server route parameters are parsed into a bounded request; catalogue loading resolves exact region/side/focus membership before committing initial viewer state. Generated links contain no custom display state or personal data, and URL initialization emits no imaging event. Route keys distinguish explicit study requests without continuously overriding manual work. See [contract and validation](STUDY_LINKS.md).
+
 The regional/whole-body explorer uses `lib/study-navigation.ts` to derive related study membership from existing focused target/context rules, never from geometric proximity. `StructureNavigator` provides shared ID/name/system filtering and native-button keyboard focus; `RelatedStudy` opens an existing recipe while retaining the selection. Scope, laterality, restoration and exam gates stay in the explorer. No imaging, bookmark, geometry or database schema changes are required. See [study-navigation details](STUDY_NAVIGATION.md).
 
 - Split delivery by region and level of detail while retaining one source coordinate frame.

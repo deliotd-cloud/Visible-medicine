@@ -77,6 +77,14 @@ The 89,681-assertion navigation suite passes across 36 scope/side combinations a
 
 Next executable work: add explicit, validated regional-study deep links so a whole-body selection can continue into the relevant regional dissection without losing identity; examine the unused same-version organ/muscle source queue beyond the exhausted small connective-name filter, with source/alias/overlap checks before any admission. Do not lift existing holds absent new evidence. Preserve the broader anatomy, presentation, resilience and actual imaging-integration goal.
 
+### Whole-body/regional study-link milestone
+
+Added **Continue this dissection** with catalogue-declared region destinations, existing focused recipes, a whole-body return path and copyable private study links. Exact selected IDs and sides are retained. Links are versioned and bind the selected bundle hash; malformed, duplicate, stale, invalid-region/side and incompatible-focus requests are rejected without substitution. Initialization commits the requested state with catalogue loading before mounting the scene, does not reapply after manual changes and emits no imaging event. Practice controls remain gated and no personal review, quiz, camera or patient data enters the URL.
+
+The 198,160-assertion suite validates 11,035 assembled/focused links and 4,651 cross-scope destinations across 36 scope/side combinations, including the installed routing runtime's duplicate-parameter handling. All 942 entries, 76 body bundles, 108 recipes, 90 focuses, source coordinates and commercial obligations remain unchanged. The 24-definition source triage discovered that the apparently unused FMA46622 aggregate contains both previously held middle-constrictor components; grouping cannot bypass those holds. Source-labelled pharyngeal/epiglottic and pancreatic-vessel candidates remain pending alias/geometry review, not admitted. See [study-link evidence and limits](STUDY_LINKS.md).
+
+Next executable work: audit exact v4 FMA55077/FMA55130 source aliases and geometry, then selected pancreatic/pancreaticoduodenal vessel candidates against existing abdominal surfaces; admit only when source identity, coordinates, licensing and overlap evidence support it. Keep the FMA46633/FMA46634 component hold in force for FMA46622 too. Continue presentation/resilience improvements and retain specialist, actual-device and user-supplied imaging integration gates; the full goal remains active.
+
 ## Per-milestone completion checklist
 
 1. Inspect the current worktree and relevant source/licence evidence; preserve unrelated edits.

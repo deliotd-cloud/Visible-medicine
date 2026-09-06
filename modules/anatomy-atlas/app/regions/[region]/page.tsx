@@ -1,5 +1,23 @@
 import BodyExplorer from '../../body-explorer';
-export default async function RegionPage({ params }: { params: Promise<{ region: string }> }) {
+import {
+  parseStudyLink,
+  studyLinkKey,
+  type StudySearchParams,
+} from '../../../lib/study-links';
+export default async function RegionPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ region: string }>;
+  searchParams?: Promise<StudySearchParams>;
+}) {
   const { region } = await params;
-  return <BodyExplorer key={region} initialRegion={region} />;
+  const link = parseStudyLink((await searchParams) ?? {});
+  return (
+    <BodyExplorer
+      key={`${region}:${studyLinkKey(link)}`}
+      initialRegion={region}
+      studyLink={link}
+    />
+  );
 }

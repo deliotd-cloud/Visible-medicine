@@ -1,2 +1,20 @@
 import BodyExplorer from './body-explorer';
-export default function Home() { return <BodyExplorer initialRegion="whole-body" />; }
+import {
+  parseStudyLink,
+  studyLinkKey,
+  type StudySearchParams,
+} from '../lib/study-links';
+export default async function Home({
+  searchParams,
+}: {
+  searchParams?: Promise<StudySearchParams>;
+}) {
+  const link = parseStudyLink((await searchParams) ?? {});
+  return (
+    <BodyExplorer
+      key={studyLinkKey(link)}
+      initialRegion="whole-body"
+      studyLink={link}
+    />
+  );
+}
