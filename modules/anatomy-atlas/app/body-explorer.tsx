@@ -88,6 +88,12 @@ import {
 import { StudyViews } from './study-views';
 import type { StudyCamera, StudyView } from '@/lib/study-views';
 import { anatomyRetryPlan } from '@/lib/anatomy-load-retry';
+import type { BodyLayout } from '@/lib/body-arrangement';
+import {
+  bodySystemPresets,
+  bodyPresetSystems,
+  bodyPresetMatches,
+} from '@/lib/body-system-presets';
 
 const Scene = dynamic(() => import('./body-scene').then((m) => m.BodyScene), {
   ssr: false,
@@ -148,6 +154,7 @@ export default function BodyExplorer({
     [focus, setFocus] = useState(false);
   const [explode, setExplode] = useState(0),
     [labels, setLabels] = useState(true);
+  const [layout, setLayout] = useState<BodyLayout>('spatial');
   const [anchorSkeleton, setAnchorSkeleton] = useState(false);
   const [showOrigins, setShowOrigins] = useState(false);
   const [inspection, setInspection] = useState(initialInspection);
@@ -359,6 +366,8 @@ export default function BodyExplorer({
     )
       return;
     setInspection(initialInspection);
+    if (layout === 'tray') setPlate(false);
+    setLayout('spatial');
     dispatch(id === 'free' ? { type: 'free' } : { type: 'stage', id });
     setSystems(allBodySystems);
     setSelectedId(null);
@@ -374,6 +383,8 @@ export default function BodyExplorer({
   function changeFocus(id: string) {
     if (exam || !profile.focuses.some((item) => item.id === id)) return;
     setInspection(initialInspection);
+    if (layout === 'tray') setPlate(false);
+    setLayout('spatial');
     dispatch({ type: 'focus', id });
     setSystems(allBodySystems);
     setSelectedId(null);
@@ -422,20 +433,27 @@ export default function BodyExplorer({
       chosen,
     });
   }
-  function preset(system: BodySystem) {
+  function preset(id: string) {
+    const next = bodyPresetSystems(id);
+    if (exam || !next) return;
     setInspection(initialInspection);
     dispatch({ type: 'free' });
-    setSystems({
-      skeleton: system === 'skeleton',
-      muscles: system === 'muscles',
-      organs: system === 'organs',
-      nerves: system === 'nerves',
-      vessels: system === 'vessels',
-      connective: system === 'connective',
-    });
+    setSystems(next);
     setSelectedId(null);
     setIsolated(false);
     setFocus(false);
+    setZoom(1);
+    setReset((n) => n + 1);
+  }
+  function changeLayout(next: BodyLayout) {
+    if (exam) return;
+    setLayout(next);
+    setPlate(next === 'tray');
+    setExplode(next === 'tray' ? 100 : 0);
+    setFocus(false);
+    setIsolated(false);
+    setZoom(1);
+    setReset((n) => n + 1);
   }
   function startExam(retry = false) {
     const session = createPracticeSession(available, loaded, {
@@ -447,6 +465,8 @@ export default function BodyExplorer({
       retryIds: retry ? retryIds : undefined,
     });
     if (!session) return;
+    if (layout === 'tray') setPlate(false);
+    setLayout('spatial');
     practiceDispatch({ type: 'start', session });
     setSelectedId(null);
     setIsolated(false);
@@ -463,6 +483,7 @@ export default function BodyExplorer({
     }
   }
   function resetView() {
+    setLayout('spatial');
     setInspection(initialInspection);
     setPlate(false);
     setZoom(1);
@@ -583,6 +604,7 @@ export default function BodyExplorer({
       systems,
       hiddenIds,
       explode,
+      layout,
       zoom,
       isolated,
       focus,
@@ -604,6 +626,7 @@ export default function BodyExplorer({
     setSystems(state.systems as Record<BodySystem, boolean>);
     dispatch({ type: 'load-view', hiddenIds: state.hiddenIds });
     setExplode(state.explode);
+    setLayout(state.layout ?? 'spatial');
     setZoom(state.zoom);
     setIsolated(state.isolated);
     setFocus(state.focus);
@@ -753,6 +776,28 @@ export default function BodyExplorer({
               </SelectContent>
             </Select>
           </div>
+          <div className="body-system-presets" aria-label="Quick anatomy views">
+            {bodySystemPresets.map((item) => {
+              const count = regionStructures.filter((structure) =>
+                item.systems.includes(structure.system),
+              ).length;
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  disabled={exam || count === 0}
+                  aria-pressed={
+                    !hiddenIds.length && bodyPresetMatches(item.id, systems)
+                  }
+                  title={`Restore ${count} available source entries in this preset`}
+                  onClick={() => preset(item.id)}
+                >
+                  {item.title}
+                  <small>{count}</small>
+                </button>
+              );
+            })}
+          </div>
           <div className="body-system-bar" aria-label="Anatomical systems">
             {systemKeys.map((system) => {
               const Icon = icons[system],
@@ -781,40 +826,71 @@ export default function BodyExplorer({
               );
             })}
           </div>
-          <DissectionControls
-            profile={profile}
-            state={dissection}
-            onStage={changeStage}
-            onFocus={changeFocus}
-            onUndo={undoDissection}
-            onReset={() => changeStage('assembled')}
-            ghost={ghostRemoved}
-            onGhost={setGhostRemoved}
-            visibleCount={available.length}
-            structures={regionStructures}
-            visibleIds={available.map((item) => item.id)}
-            disabled={exam}
-          />
-          <InspectionControls
-            value={inspection}
-            onChange={setInspection}
-            systems={systemKeys.map((id) => ({
-              id,
-              name: bodySystems[id].name,
-              enabled:
-                systems[id] && regionStructures.some((s) => s.system === id),
-            }))}
-            plate={plate}
-            onPlate={setPlate}
-            disabled={exam}
-          />
-          <StudyViews
-            scope={studyScope}
-            capture={captureView}
-            restore={restoreView}
-            disabled={exam || pending.length > 0}
-          />
-          <ImagingLink link={imagingLink} />
+          <details className="body-study-tools" open={!whole}>
+            <summary>Dissection, inspection & study tools</summary>
+            <DissectionControls
+              profile={profile}
+              state={dissection}
+              onStage={changeStage}
+              onFocus={changeFocus}
+              onUndo={undoDissection}
+              onReset={() => changeStage('assembled')}
+              ghost={ghostRemoved}
+              onGhost={setGhostRemoved}
+              visibleCount={available.length}
+              structures={regionStructures}
+              visibleIds={available.map((item) => item.id)}
+              disabled={exam}
+            />
+            <InspectionControls
+              value={inspection}
+              onChange={setInspection}
+              systems={systemKeys.map((id) => ({
+                id,
+                name: bodySystems[id].name,
+                enabled:
+                  systems[id] && regionStructures.some((s) => s.system === id),
+              }))}
+              plate={plate}
+              onPlate={(value) => {
+                if (!value && layout === 'tray') changeLayout('spatial');
+                else setPlate(value);
+              }}
+              disabled={exam}
+            />
+            <StudyViews
+              scope={studyScope}
+              capture={captureView}
+              restore={restoreView}
+              disabled={exam || pending.length > 0}
+            />
+            <ImagingLink link={imagingLink} />
+          </details>
+          <div className="body-layout-controls" aria-label="Model arrangement">
+            <div>
+              <button
+                type="button"
+                aria-pressed={layout === 'spatial'}
+                disabled={exam}
+                onClick={() => changeLayout('spatial')}
+              >
+                Spatial anatomy
+              </button>
+              <button
+                type="button"
+                aria-pressed={layout === 'tray'}
+                disabled={exam || !available.length}
+                onClick={() => changeLayout('tray')}
+              >
+                Arrange structures
+              </button>
+            </div>
+            <p>
+              {layout === 'tray' && !exam
+                ? 'Same-scale surfaces, grouped by system. At 100%, each catalogue entry has its own space—not an anatomical position.'
+                : 'Source anatomy at 0% separation. Rotate freely or choose a standard direction.'}
+            </p>
+          </div>
           <div className="body-canvas illustration-mode">
             <div className="body-view-row">
               <fieldset className="body-view-buttons">
@@ -888,6 +964,7 @@ export default function BodyExplorer({
               illustrated={illustrated}
               landmarks={exam ? [] : stageLandmarks}
               explode={explode}
+              layout={exam ? 'spatial' : layout}
               anchorSkeleton={anchorSkeleton}
               showOrigins={showOrigins && !exam}
               labels={labels && !exam}
@@ -997,7 +1074,9 @@ export default function BodyExplorer({
               </Button>
               <div className="body-explode">
                 <Layers3 />
-                <span>Explode</span>
+                <span>
+                  {layout === 'tray' && !exam ? 'Arrange' : 'Explode'}
+                </span>
                 <Slider
                   value={[explode]}
                   min={0}
@@ -1005,7 +1084,11 @@ export default function BodyExplorer({
                   step={1}
                   disabled={exam}
                   onValueChange={(v) => setExplode(Array.isArray(v) ? v[0] : v)}
-                  aria-label="Exploded separation"
+                  aria-label={
+                    layout === 'tray'
+                      ? 'Arranged separation'
+                      : 'Exploded separation'
+                  }
                 />
                 <output>{explode}%</output>
               </div>
@@ -1019,13 +1102,17 @@ export default function BodyExplorer({
               </Button>
             </div>
             <div className="body-canvas-caption">
-              {explode > 0
-                ? 'Exploded teaching view · Positions are not anatomical'
-                : !exam && inspection.plane !== 'off'
-                  ? `${inspection.plane} surface cutaway · ${inspection.position}% · Not CT/MRI`
-                  : plate && !exam
-                    ? 'Orthographic illustration · Choose a direction · Use + / − to zoom'
-                    : 'Drag to rotate · Pinch to zoom · Select any visible structure'}
+              {layout === 'tray' && !exam
+                ? explode === 100
+                  ? 'Arranged view · Pan / pinch to zoom · Choose a direction · Not anatomical positions'
+                  : `Arrangement in progress · ${explode}% · Overlap is possible before 100%`
+                : explode > 0
+                  ? 'Exploded teaching view · Positions are not anatomical'
+                  : !exam && inspection.plane !== 'off'
+                    ? `${inspection.plane} surface cutaway · ${inspection.position}% · Not CT/MRI`
+                    : plate && !exam
+                      ? 'Orthographic illustration · Choose a direction · Use + / − to zoom'
+                      : 'Drag to rotate · Pinch to zoom · Select any visible structure'}
             </div>
             <a
               className="model-credit"
@@ -1060,17 +1147,6 @@ export default function BodyExplorer({
           )}
           {!exam && (
             <div className="body-preset-row">
-              <span>Quick system views</span>
-              {systemKeys.map((system) => (
-                <button
-                  key={system}
-                  type="button"
-                  disabled={!regionStructures.some((s) => s.system === system)}
-                  onClick={() => preset(system)}
-                >
-                  {bodySystems[system].name} only
-                </button>
-              ))}
               <button
                 type="button"
                 aria-pressed={illustrated}
@@ -1081,6 +1157,7 @@ export default function BodyExplorer({
               <button
                 type="button"
                 aria-pressed={anchorSkeleton}
+                disabled={layout === 'tray'}
                 onClick={() => setAnchorSkeleton((v) => !v)}
               >
                 Keep bones assembled
@@ -1088,10 +1165,17 @@ export default function BodyExplorer({
               <button
                 type="button"
                 aria-pressed={showOrigins}
+                disabled={layout === 'tray'}
                 onClick={() => setShowOrigins((v) => !v)}
               >
                 Original positions
               </button>
+              {layout === 'tray' && (
+                <span>
+                  All entries move in the tray. Select and frame a structure, or
+                  choose a system/region for fine detail.
+                </span>
+              )}
             </div>
           )}
         </section>

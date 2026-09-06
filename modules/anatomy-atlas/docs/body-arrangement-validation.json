@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checks": 12074267,
+  "pairClearanceChecks": 9898922,
+  "layouts": 1926,
+  "cameraFits": 5778,
+  "structures": 924,
+  "catalogSha256": "9b2cb3eb0b530491c9a4d0f54c4d89058e14f7475f05597f4babf9fb3ea8bdc7",
+  "sourceGeometryChanged": false,
+  "clinicalValidation": false,
+  "browserInteractionTesting": false,
+  "limitations": "Clearance is guaranteed for catalogue-entry bounding rectangles only at 100% in the aligned orthographic tray, not at intermediate amounts or within compound source groups."
+}

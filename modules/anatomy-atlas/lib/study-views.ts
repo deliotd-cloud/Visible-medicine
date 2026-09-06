@@ -17,6 +17,8 @@ export type StudyView = {
   systems: Record<string, boolean>;
   hiddenIds: string[];
   explode: number;
+  // Optional for v1 device-local bookmarks saved before tray presentation existed.
+  layout?: 'spatial' | 'tray';
   zoom: number;
   isolated: boolean;
   focus: boolean;
@@ -137,6 +139,13 @@ export function parseStudyView(value: unknown): StudyView | null {
     return null;
   if (!finite(value.explode, 0, 100) || !finite(value.zoom, 0.1, 10))
     return null;
+  if (value.layout !== undefined && !choice(value.layout, ['spatial', 'tray']))
+    return null;
+  if (
+    value.layout === 'tray' &&
+    (value.kind !== 'body' || value.plate !== true)
+  )
+    return null;
   const flags = [
     'isolated',
     'focus',
@@ -177,6 +186,9 @@ export function parseStudyView(value: unknown): StudyView | null {
     systems: Object.fromEntries(keys.map((k) => [k, systems[k] as boolean])),
     hiddenIds: [...value.hiddenIds] as string[],
     explode: value.explode,
+    ...(value.layout === undefined
+      ? {}
+      : { layout: value.layout as StudyView['layout'] }),
     zoom: value.zoom,
     ...(Object.fromEntries(flags.map((k) => [k, value[k]])) as Pick<
       StudyView,

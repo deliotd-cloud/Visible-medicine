@@ -1,5 +1,9 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Whole-body and regional arranged study
+
+Use the new **quick anatomy views** for all anatomy, bones with muscles, individual systems or available nerves with vessels. **Arrange structures** opens a same-scale, system-grouped tray with separated catalogue entries at 100%; pan/zoom, select/frame, change direction and return to **Spatial anatomy** for free rotation. The two-phase slider shows spatial separation followed by tray arrangement. Shapes, source positions and imaging IDs are never rewritten. Old saved views remain compatible; new views can remember the tray. See [controls, numerical validation and limits](docs/BODY_ARRANGEMENT.md). This is a non-anatomical display arrangement, not additional segmentation or physical dissection.
+
 ## Regional dissection workspaces
 
 Every individual regional explorer now separates **Layer by layer** from independent **Study windows**. Follow named removal steps, preview the exact structures a step will hide or restore, then use the searchable, system-filtered removed-tissue tray to restore one structure or a group with one-step undo. The existing 102 recipes are organised as 47 regional layer steps and 55 independent views (including whole-body comparisons); no new or missing tissue is implied. Existing 84 focused views, ghosts, selection, saved views and imaging IDs are retained. See [dissection workbench](docs/DISSECTION_WORKBENCH.md).

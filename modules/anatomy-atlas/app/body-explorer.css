@@ -1874,13 +1874,13 @@
   font-size: 12px;
 }
 .dissection-layer-track strong {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.45;
 }
 .dissection-layer-track small {
   grid-column: 2;
   color: #5d7477;
-  font-size: 11px;
+  font-size: 12px;
 }
 .dissection-layer-track .current {
   border-color: #098578;
@@ -1990,4 +1990,107 @@
   .dissection-layer-track li {
     flex-basis: 145px;
   }
+}
+
+.body-system-presets {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  margin: 0 14px 12px;
+  padding: 3px 2px 8px;
+  scrollbar-width: thin;
+  flex: none;
+}
+.body-study-tools {
+  margin: 0 14px 10px;
+  flex: none;
+  min-width: 0;
+}
+.body-study-tools > summary {
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #bddad6;
+  border-radius: 6px;
+  color: #002631;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.body-study-tools[open] > summary {
+  margin-bottom: 10px;
+}
+.body-study-tools > summary:focus-visible {
+  outline: 3px solid #098578;
+  outline-offset: 2px;
+}
+.body-system-presets button {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 11px;
+  border-radius: 6px;
+  border: 1px solid #bddad6;
+  font-size: 14px;
+  background: #fff;
+  color: #002631;
+}
+.body-system-presets small {
+  color: #5d7477;
+  font-size: 12px;
+}
+.body-system-presets [aria-pressed='true'] {
+  background: #002631;
+  border-color: #002631;
+  color: #fff;
+}
+.body-system-presets [aria-pressed='true'] small {
+  color: #81e4d8;
+}
+.body-layout-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  margin: 0 14px 10px;
+  flex: none;
+}
+.body-layout-controls > div {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.body-layout-controls button {
+  min-height: 44px;
+  border: 1px solid #bddad6;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #002631;
+  background: #fff;
+}
+.body-layout-controls [aria-pressed='true'] {
+  border-color: #098578;
+  background: #eaf8f4;
+  box-shadow: inset 0 -3px #16c6b2;
+}
+.body-layout-controls p {
+  flex: 1 1 230px;
+  margin: 0;
+  font-size: 13px;
+  color: #5d7477;
+  line-height: 1.5;
+}
+.body-system-presets button:focus-visible,
+.body-layout-controls button:focus-visible {
+  outline: 3px solid #098578;
+  outline-offset: 2px;
+}
+.body-system-presets button:disabled,
+.body-layout-controls button:disabled,
+.body-preset-row button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }

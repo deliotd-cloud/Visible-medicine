@@ -2,6 +2,29 @@ import { Box3, Vector3, PerspectiveCamera, OrthographicCamera } from 'three';
 import { fitBounds } from './explode-layout.mjs';
 import { validStudyCamera, type StudyCamera } from './study-views';
 
+export function relativeStudyScale(
+  camera: PerspectiveCamera | OrthographicCamera,
+  target: Vector3,
+  fitDistance: number,
+  fitHalfHeight: number,
+) {
+  return camera instanceof OrthographicCamera
+    ? (camera.top - camera.bottom) / (2 * camera.zoom * fitHalfHeight)
+    : camera.position.distanceTo(target) / fitDistance;
+}
+
+export function planarStudyCamera(
+  pose: StudyCamera,
+  direction: number[],
+  up: number[],
+): StudyCamera {
+  return {
+    ...pose,
+    direction: new Vector3(...direction).normalize().toArray(),
+    up: new Vector3(...up).normalize().toArray(),
+  };
+}
+
 export function captureStudyCamera(
   camera: PerspectiveCamera | OrthographicCamera,
   target: Vector3,
@@ -21,10 +44,7 @@ export function captureStudyCamera(
     direction: direction.toArray(),
     up: up.toArray(),
     pan: target.clone().sub(fit.center).toArray(),
-    scale:
-      camera instanceof OrthographicCamera
-        ? (camera.top - camera.bottom) / 2 / camera.zoom / fit.halfHeight
-        : camera.position.distanceTo(target) / fit.distance,
+    scale: relativeStudyScale(camera, target, fit.distance, fit.halfHeight),
   };
   return validStudyCamera(pose) ? pose : null;
 }
@@ -47,7 +67,10 @@ export function restoreStudyCamera(
     camera instanceof PerspectiveCamera ? camera.fov : 39,
   );
   const target = fit.center.clone().add(new Vector3(...pose.pan));
-  const distance = fit.distance * pose.scale;
+  const distance =
+    camera instanceof OrthographicCamera
+      ? fit.distance
+      : fit.distance * pose.scale;
   camera.position.copy(target).addScaledVector(direction, distance);
   camera.lookAt(target);
   if (camera instanceof OrthographicCamera) {
@@ -64,5 +87,5 @@ export function restoreStudyCamera(
     distance + bounds.getSize(new Vector3()).length() * 4,
   );
   camera.updateProjectionMatrix();
-  return { target, fitDistance: fit.distance };
+  return { target, fitDistance: fit.distance, fitHalfHeight: fit.halfHeight };
 }

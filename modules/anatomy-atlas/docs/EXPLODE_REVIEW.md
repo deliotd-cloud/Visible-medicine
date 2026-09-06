@@ -1,5 +1,9 @@
 # Explode mechanism review
 
+## Separate arranged study mode
+
+The newer [whole-body/regional tray](BODY_ARRANGEMENT.md) complements, rather than replaces, the spatial mechanism below. At 100%, its aligned orthographic layout gives each catalogue entry a separate projected bounding rectangle without rescaling or editing source geometry. Intermediate arrangements and compound source interiors can still overlap. The original spatial mode retains the 2.6× centroid separation and anchored-skeleton options described below.
+
 ## Implemented correction — 6 September 2026
 
 The approved changes are now implemented. The review below is retained as the historical pre-change baseline; `scripts/review-explode.mjs` deliberately reproduces that old formula, not current runtime behaviour.

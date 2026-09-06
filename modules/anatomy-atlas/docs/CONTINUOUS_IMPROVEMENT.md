@@ -12,7 +12,7 @@ The current whole-body catalogue has 924 selectable source representations, 73 b
 
 ## Ordered work queue
 
-**User-directed presentation/dissection priority:** the user supplied Human Atlas as a whole-body benchmark, then explicitly requested shoulder-style dissection for each individual region. The regional workbench milestone below is complete in source. Next implement clearer whole-body system presets and a source-preserving arranged exploded layout, then resume the anatomy/source queue. The reference's public implementation was inspected as workflow evidence, not copied or browser/visually tested.
+**User-directed presentation/dissection priority:** the user supplied Human Atlas as a whole-body benchmark, then explicitly requested shoulder-style dissection for each individual region. The regional workbench and whole-body arrangement milestones below implement those workflow improvements. Resume the anatomy/source queue next, beginning with the documented intestinal component-ownership issue and unused same-version mesenteric/organ candidates. The reference's public implementation was inspected as workflow evidence, not copied or browser/visually tested.
 
 | Priority | Milestone | Evidence needed to accept it | Current state |
 | --- | --- | --- | --- |
@@ -41,8 +41,6 @@ Reorder only when evidence exposes a dependency or higher-impact defect. Complet
 
 - **Dental/orbital source detail:** 28 source-labelled teeth and four orbital connective surfaces in two new bundles; five close-up windows/focuses and original draft content. All 892 previous records and 71 body bundles remain exact. The 4,301 head-detail assertions, 54,502 practice assertions and expanded source/interaction regressions pass. No clinical numbering, synthetic tissue interiors or new source holds were introduced. See [head-detail evidence and limits](HEAD_DETAIL.md). Next: same-version mesenteric/organ and regional muscle candidates, then source-linked relationships and keyboard/view controls. Specialist/device review and the actual imaging adapter remain externally gated.
 
-## Per-milestone completion checklist
-
 ### Regional dissection workbench milestone
 
 All eleven regions now have named layer tracks distinct from independent study windows, exact next-step visibility previews, and a searchable/system-filtered removed-tissue tray with atomic group restoration and Undo. All 924 entries, 73 body GLBs, 102 existing recipes, 84 focuses, source coordinates and study-view format are preserved. The new 70,927-assertion workbench suite passes alongside the existing stage/practice/bookmark/imaging tests. See [workbench details and remaining acceptance](DISSECTION_WORKBENCH.md). The dedicated shoulder remains unchanged. Continue to the whole-body reference-driven presentation milestone; actual device/clinical acceptance and imaging integration remain open.
@@ -52,6 +50,12 @@ All eleven regions now have named layer tracks distinct from independent study w
 The unused v4 mesenteric/vascular candidate fetch was stopped deliberately when work moved to the user's reference-driven presentation and regional dissection priorities. Partial verified downloads are cache only; no candidate was admitted. Resume with exact archive/hash/identity/bounds evidence rather than counting cached files as new anatomy.
 
 The inherited small-intestine and large-intestine aggregates both include source component `FJ2599` (canonical geometry SHA-256 `9c74414ea9fc7e30ac5ceaf0c8850f96dc1d49be05298df51046f5c0eb24eb4e`). Both official trees map it to `FMA11338` (ileocecal junction); PART-OF additionally aliases cecum and distal small-intestinal wall concepts. This is an unresolved duplicate component-ownership/overlap issue, not evidence for silently renaming it as cecum. A future ingestion change must adjudicate the narrow identity, remove the component from both aggregates only with explicit preservation exceptions, and verify one rendered source owner. The present UI-only milestone does not fix or alter that geometry.
+
+### Whole-body arrangement milestone
+
+Added nine prominent source-system presets and a separate same-scale tray mode in the whole-body and every regional explorer. The original spatial explode is unchanged. The tray uses two-phase reversible translations and provides projected entry clearance at 100%; shapes, IDs, relative scale and source coordinates are preserved. Pan/pinch, selected-structure framing, six projection directions, labels, clipping and local bookmarks are connected. The shared camera now preserves orthographic zoom without moving into surfaces, and focused framing clears old pan. Display review fingerprints were refreshed without approvals. The 1,926-layout/5,778-fit suite passes 12,074,267 numerical/helper assertions, including 9,898,922 clearance cases. See [arrangement details and limits](BODY_ARRANGEMENT.md). No new assets, dependencies or anatomical coverage are claimed. Next: source ownership/mesenteric candidate audit; specialist and device acceptance and the user's real imaging adapter remain open.
+
+## Per-milestone completion checklist
 
 1. Inspect the current worktree and relevant source/licence evidence; preserve unrelated edits.
 2. Implement a coherent improvement to the actual viewer or ingestion/connection pipeline.

@@ -6,7 +6,12 @@ import { OrbitControls } from '@react-three/drei';
 import type { OrbitControls as Controls } from 'three-stdlib';
 import { Box3, Vector3, PerspectiveCamera, OrthographicCamera } from 'three';
 import { fitBounds } from '@/lib/explode-layout.mjs';
-import { captureStudyCamera, restoreStudyCamera } from '@/lib/study-camera';
+import {
+  captureStudyCamera,
+  restoreStudyCamera,
+  planarStudyCamera,
+  relativeStudyScale,
+} from '@/lib/study-camera';
 import type { StudyCamera } from '@/lib/study-views';
 
 export function FittedCamera({
@@ -17,6 +22,8 @@ export function FittedCamera({
   zoom,
   reset,
   locked = false,
+  planar = false,
+  recenterKey = '',
   cameraCapture,
   cameraRestore,
 }: {
@@ -27,6 +34,8 @@ export function FittedCamera({
   zoom: number;
   reset: number;
   locked?: boolean;
+  planar?: boolean;
+  recenterKey?: string;
   cameraCapture?: RefObject<StudyCamera | null>;
   cameraRestore?: RefObject<StudyCamera | null>;
 }) {
@@ -35,10 +44,12 @@ export function FittedCamera({
   const previous = useRef<{
     key: string;
     distance: number;
+    halfHeight: number;
+    recenterKey: string;
     zoom: number;
     center: Vector3;
   } | null>(null);
-  const key = `${viewKey}/${reset}/${locked}`;
+  const key = `${viewKey}/${reset}/${locked}/${planar}`;
   const dx = direction[0],
     dy = direction[1],
     dz = direction[2];
@@ -69,7 +80,9 @@ export function FittedCamera({
         camera,
         bounds,
         size.width / Math.max(1, size.height),
-        cameraRestore.current,
+        planar
+          ? planarStudyCamera(cameraRestore.current, [dx, dy, dz], [ux, uy, uz])
+          : cameraRestore.current,
       );
       cameraRestore.current = null;
       controls.current?.target.copy(restored.target);
@@ -77,6 +90,8 @@ export function FittedCamera({
       previous.current = {
         key,
         distance: restored.fitDistance,
+        halfHeight: restored.fitHalfHeight,
+        recenterKey,
         zoom,
         center: bounds.getCenter(new Vector3()),
       };
@@ -85,6 +100,7 @@ export function FittedCamera({
       return;
     }
     const isPreset = previous.current?.key !== key;
+    const isRecenter = previous.current?.recenterKey !== recenterKey;
     const orbit =
       !isPreset && controls.current
         ? camera.position.clone().sub(controls.current.target).normalize()
@@ -97,23 +113,36 @@ export function FittedCamera({
       size.width / Math.max(1, size.height),
       camera instanceof PerspectiveCamera ? camera.fov : 39,
     );
-    const userZoom =
+    const retainZoom =
       !isPreset &&
+      !isRecenter &&
       previous.current &&
       controls.current &&
       zoom === previous.current.zoom
-        ? camera.position.distanceTo(controls.current.target) /
-          previous.current.distance
+        ? previous.current
+        : null;
+    const userZoom =
+      retainZoom && controls.current
+        ? relativeStudyScale(
+            camera as PerspectiveCamera | OrthographicCamera,
+            controls.current.target,
+            retainZoom.distance,
+            retainZoom.halfHeight,
+          )
         : zoom;
-    const distance = fit.distance * userZoom;
+    const distance =
+      camera instanceof OrthographicCamera
+        ? fit.distance
+        : fit.distance * userZoom;
     const target = fit.center.clone();
-    if (!isPreset && previous.current && controls.current)
+    if (!isPreset && !isRecenter && previous.current && controls.current)
       target.add(controls.current.target.clone().sub(previous.current.center));
     camera.position.copy(target).addScaledVector(orbit, distance);
     camera.lookAt(target);
     if (camera instanceof OrthographicCamera) {
       const aspect = size.width / Math.max(1, size.height),
-        height = fit.halfHeight * zoom;
+        height = fit.halfHeight * userZoom;
+      camera.zoom = 1;
       camera.left = -height * aspect;
       camera.right = height * aspect;
       camera.top = height;
@@ -135,6 +164,8 @@ export function FittedCamera({
     previous.current = {
       key,
       distance: fit.distance,
+      halfHeight: fit.halfHeight,
+      recenterKey,
       zoom,
       center: fit.center,
     };
@@ -156,16 +187,18 @@ export function FittedCamera({
     invalidate,
     cameraRestore,
     capture,
+    planar,
+    recenterKey,
   ]);
   return (
     <OrbitControls
       ref={controls}
       makeDefault
-      enableRotate={!locked}
+      enableRotate={!locked && !planar}
       enablePan={!locked}
       enableZoom={!locked}
       minDistance={0.1}
-      maxDistance={500}
+      maxDistance={Math.max(500, bounds.getSize(new Vector3()).length() * 20)}
       onChange={capture}
     />
   );

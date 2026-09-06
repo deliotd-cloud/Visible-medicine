@@ -11,7 +11,12 @@ import { Canvas, type ThreeEvent } from '@react-three/fiber';
 import { Html, Line, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 import { FittedCamera } from './fitted-camera';
-import { bodyOffset, translatedBox } from '@/lib/explode-layout.mjs';
+import { translatedBox } from '@/lib/explode-layout.mjs';
+import {
+  arrangeBodyStructures,
+  bodyPresentationOffset,
+  type BodyLayout,
+} from '@/lib/body-arrangement';
 import {
   bodySystems,
   type BodyCatalog,
@@ -37,6 +42,7 @@ type Props = {
   illustrated: boolean;
   landmarks: string[];
   explode: number;
+  layout: BodyLayout;
   anchorSkeleton: boolean;
   showOrigins: boolean;
   labels: boolean;
@@ -85,7 +91,7 @@ function Bundle({
   bundle,
   items,
   props,
-  center,
+  offsets,
   frame,
   labelBounds,
   labelIds,
@@ -94,7 +100,7 @@ function Bundle({
   bundle: BodyCatalog['bundles'][number];
   items: BodyStructure[];
   props: Props;
-  center: THREE.Vector3;
+  offsets: Map<string, THREE.Vector3>;
   frame: THREE.Box3;
   labelBounds: { min: number[]; max: number[] };
   labelIds: string[];
@@ -116,12 +122,7 @@ function Bundle({
         const selected = !props.exam && structure.id === props.selectedId;
         const geometry = geometries.get(structure.nodeName);
         if (!geometry) return null;
-        const position = bodyOffset(
-          structure.center,
-          center,
-          props.explode,
-          props.anchorSkeleton && structure.system === 'skeleton',
-        );
+        const position = offsets.get(structure.id) ?? new THREE.Vector3();
         const removed = props.hiddenIds.includes(structure.id),
           faded = removed || (props.isolated && !selected);
         const clippingPlanes = sectionPlanes(frame, props.inspection, position);
@@ -149,6 +150,7 @@ function Bundle({
         return (
           <group key={structure.id}>
             {props.showOrigins &&
+              props.layout === 'spatial' &&
               props.explode > 0 &&
               !removed &&
               (selected || props.structures.length < 150) && (
@@ -262,6 +264,39 @@ export function BodyScene(props: Props) {
     return box;
   }, [props.structures]);
   const center = useMemo(() => frame.getCenter(new THREE.Vector3()), [frame]);
+  const layout = props.exam ? 'spatial' : props.layout;
+  const tray = useMemo(
+    () =>
+      layout === 'tray'
+        ? arrangeBodyStructures(rendered, center, props.view).offsets
+        : undefined,
+    [layout, rendered, center, props.view],
+  );
+  const offsets = useMemo(
+    () =>
+      new Map(
+        rendered.map((item) => [
+          item.id,
+          bodyPresentationOffset(
+            item,
+            center,
+            props.exam ? 0 : props.explode,
+            layout,
+            props.anchorSkeleton,
+            tray,
+          ),
+        ]),
+      ),
+    [
+      rendered,
+      center,
+      props.exam,
+      props.explode,
+      layout,
+      props.anchorSkeleton,
+      tray,
+    ],
+  );
   const bounds = useMemo(() => {
     let list = rendered.length ? rendered : props.structures;
     if (focusId) {
@@ -270,28 +305,18 @@ export function BodyScene(props: Props) {
     }
     const result = new THREE.Box3();
     for (const s of list)
-      result.union(
-        translatedBox(
-          s.bounds,
-          bodyOffset(
-            s.center,
-            center,
-            props.explode,
-            props.anchorSkeleton && s.system === 'skeleton',
-          ),
-        ),
-      );
+      result.union(translatedBox(s.bounds, offsets.get(s.id)));
     if (result.isEmpty())
       result.set(new THREE.Vector3(-2, -8, -1), new THREE.Vector3(2, 8, 1));
-    if (props.showOrigins && !focusId) result.union(frame);
+    if (props.showOrigins && layout === 'spatial' && !focusId)
+      result.union(frame);
     return result;
   }, [
     props.structures,
     rendered,
     focusId,
-    center,
-    props.explode,
-    props.anchorSkeleton,
+    offsets,
+    layout,
     props.showOrigins,
     frame,
   ]);
@@ -305,11 +330,12 @@ export function BodyScene(props: Props) {
     props.focus,
   );
   const labelBounds = { min: bounds.min.toArray(), max: bounds.max.toArray() };
+  const orthographic = props.plate || layout === 'tray';
   return (
     <Canvas
       className="body-scene"
-      key={props.plate ? 'plate' : 'perspective'}
-      orthographic={props.plate}
+      key={orthographic ? 'plate' : 'perspective'}
+      orthographic={orthographic}
       camera={{ position: [0, 0, 28], fov: 38, near: 0.01, far: 150 }}
       dpr={[1, 1.6]}
       frameloop="demand"
@@ -330,7 +356,7 @@ export function BodyScene(props: Props) {
               bundle={bundle}
               items={rendered.filter((s) => s.bundle === bundle.id)}
               props={props}
-              center={center}
+              offsets={offsets}
               frame={frame}
               labelBounds={labelBounds}
               labelIds={labelIds}
@@ -342,7 +368,7 @@ export function BodyScene(props: Props) {
       <FittedCamera
         bounds={bounds}
         direction={
-          props.plate && !['inferior', 'superior'].includes(props.view)
+          orthographic && !['inferior', 'superior'].includes(props.view)
             ? [vectors[props.view][0], 0, vectors[props.view][2]]
             : vectors[props.view]
         }
@@ -356,7 +382,9 @@ export function BodyScene(props: Props) {
         viewKey={props.view}
         zoom={props.zoom}
         reset={props.reset}
-        locked={props.plate}
+        locked={props.plate && layout !== 'tray'}
+        planar={layout === 'tray'}
+        recenterKey={focusId ?? ''}
         cameraCapture={props.cameraCapture}
         cameraRestore={props.cameraRestore}
       />
