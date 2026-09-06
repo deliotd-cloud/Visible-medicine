@@ -19,6 +19,7 @@ import { gapSelections } from './gap-recovery.mjs';
 import { inventorySelections } from './inventory-selections.mjs';
 import { neuroSelections } from './neuro-selections.mjs';
 import { axialSelections } from './axial-selections.mjs';
+import { headDetailSelections } from './head-detail-selections.mjs';
 
 const [isa, partof, isaZip, partofZip] = await Promise.all([
   conceptMap('isa'),
@@ -227,6 +228,7 @@ const recovered = [
   ...inventorySelections(isa, partof),
   ...neuroSelections(isa),
   ...axialSelections(isa),
+  ...headDetailSelections(isa),
 ];
 // Separate an already included component from an aggregate without duplicating
 // its surface. Preserve the aggregate's public ID and record the adaptation.
@@ -458,7 +460,7 @@ for (const record of selections) {
   mesh.userData = { structureId: id, fmaId: record.fma };
   const bundle =
     prior?.bundle ??
-    `${region}-${record.system}${record.axialRecovery ? '-axial-detail' : record.neuroRecovery ? '-deep-brain' : record.inventoryRecovery ? '-inventory' : record.gapRecovery ? '-gaps' : record.recovery ? '-recovery' : record.dissection ? '-dissection' : ''}`;
+    `${region}-${record.system}${record.headDetailRecovery ? '-head-detail' : record.axialRecovery ? '-axial-detail' : record.neuroRecovery ? '-deep-brain' : record.inventoryRecovery ? '-inventory' : record.gapRecovery ? '-gaps' : record.recovery ? '-recovery' : record.dissection ? '-dissection' : ''}`;
   if (!bundles.has(bundle)) bundles.set(bundle, new THREE.Group());
   bundles.get(bundle).add(mesh);
   const box = geometry.boundingBox,
@@ -578,11 +580,11 @@ await fs.writeFile(
         nerves:
           'Brain aggregate, selected deep-brain surfaces and cranial/orbital nerves. Internal nuclei and connections are incomplete. Central canal only, not a complete cord; no brachial/lumbosacral plexus or limb peripheral nerves.',
         organs:
-          'Selected adult-male organs, including a limited male reproductive and ocular subset. No complete internal-layer, female or variant anatomy.',
+          'Selected adult-male organs, including a limited male reproductive and ocular subset, plus 28 source-labelled secondary teeth (no third molars or internal tooth layers). No complete internal-layer, female or variant anatomy.',
         vessels:
           'Selected major artery and vein segments, not a complete vascular tree. No lymphatic anatomy or independently reviewed branching/continuity.',
         connective:
-          'Selected cartilages, 22 source-labelled intervertebral discs, membranes, tendons and ligaments; wrist flexor retinacula, iliotibial tracts and linea alba. One disc level is unresolved; most joint capsules, fascia and ligament systems remain absent.',
+          'Selected cartilages, 22 source-labelled intervertebral discs, membranes, tendons and ligaments; wrist flexor retinacula, iliotibial tracts, linea alba, orbital tendinous rings and trochleae. One disc level is unresolved; most joint capsules, fascia and ligament systems remain absent.',
       },
       regions,
       bundles: bundleManifest,

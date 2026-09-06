@@ -36,8 +36,8 @@ const catalog = JSON.parse(bytes),
 const digest = createHash('sha256').update(bytes).digest('hex');
 same(
   digest,
-  'a1c6e33bea4c228558d7fc79b8537c9a83fe03fcb296a3f22ee8b2ab688af1f7',
-  'All anatomy and source bindings unchanged',
+  '9b2cb3eb0b530491c9a4d0f54c4d89058e14f7475f05597f4babf9fb3ea8bdc7',
+  'Current source-audited anatomy and source bindings',
 );
 const hashBefore = JSON.stringify(catalog);
 let serial = 0;
@@ -380,7 +380,11 @@ same(
 const evidence = JSON.parse(
   await fs.readFile('content/abdominal-wall-audit.json', 'utf8'),
 );
-same(evidence.catalogSha256, digest);
+// This diagnostic audit is historical evidence for the pre-dental catalogue.
+same(
+  evidence.catalogSha256,
+  'a1c6e33bea4c228558d7fc79b8537c9a83fe03fcb296a3f22ee8b2ab688af1f7',
+);
 same(evidence.results.length, 6);
 for (const r of evidence.results) {
   same(r.admitted, false);
@@ -398,7 +402,7 @@ console.log({
   modes: 2,
   samplingPolicies: 3,
   shoulderPrompts: 3,
-  anatomyUnchanged: true,
+  practiceDoesNotMutateAnatomy: true,
   browserInteractionTesting: false,
   clinicalValidation: false,
 });

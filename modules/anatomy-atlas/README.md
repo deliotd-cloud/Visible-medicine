@@ -1,12 +1,16 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Dental and orbital close-ups
+
+The atlas now contains **924 body entries**. Open **Head & neck → Guided dissection** for **Teeth & jaws**, separate upper/lower tooth surfaces, **Orbital rings & rectus muscles**, or **Superior oblique & trochlea**. These five windows add 28 individually selectable source teeth and four orbital connective structures, with ivory tooth materials, draft notes and existing study/practice controls. All previous anatomy is preserved. No clinical tooth numbering, internal tooth layers, third molars or validated orbital attachments are supplied. See [source evidence and validation gates](docs/HEAD_DETAIL.md).
+
 ## Targeted practice
 
 Open **Practice options** in a regional or whole-body explorer to choose **Find on model** or keyboard-friendly **Name isolated structure**. Sample major landmarks, all visible anatomy (including fine structures), or the current focus targets without added context. Skip/reveal, results and retry-missed actions support deliberate study. Both viewers now reject duplicate/stale answers; the dedicated shoulder retains its three authored prompts. See [practice controls and limits](docs/PRACTICE.md).
 
 ## Connective tissue & deep-spinal study
 
-The current atlas has **892 selectable body entries**. Eleven new entries add wrist flexor retinacula, iliotibial tracts, linea alba and deep cervical/lumbar and rib-elevator muscle sets. Six new windows and eight focused views use chosen neighbouring structures instead of automatically restoring every bone. All previous anatomy is unchanged. See [source evidence, study views and review gates](docs/AXIAL_DETAIL.md).
+The preceding connective/deep-spinal milestone reached **892 selectable body entries**. Eleven new entries add wrist flexor retinacula, iliotibial tracts, linea alba and deep cervical/lumbar and rib-elevator muscle sets. Six new windows and eight focused views use chosen neighbouring structures instead of automatically restoring every bone. All previous anatomy is unchanged. See [source evidence, study views and review gates](docs/AXIAL_DETAIL.md).
 
 ## Deep-brain study milestone
 
@@ -44,7 +48,7 @@ The earlier numerical explode review is preserved in `docs/EXPLODE_REVIEW.md`, a
 
 The library now opens at `/` with a whole-body model and **11 individual regional explorers**: head/neck, thorax, abdomen, pelvis/hip, shoulder/arm, elbow/forearm, wrist/hand, hip/thigh, knee/leg, ankle/foot and spine/back. Each region has its own `/regions/{region-id}` URL. The approved visual approach of the dedicated shoulder viewer is preserved at `/shoulder`.
 
-The expanded source library contains **892 selectable entries**: 203 skeletal, 369 muscular, 44 organ, 54 nervous-system, 146 vascular and 76 connective-tissue entries. These are source representations, not an assertion of complete anatomical coverage or a count of distinct human bones/muscles. Whole-body and regional views support system switches, left/right filtering, name search, rotation, pan, zoom, selective hide/restore, isolate/frame, separation and identification practice. Anatomy and clinical tabs remain available; unauthored specialist material is clearly marked pending, not manufactured as finished teaching content.
+The expanded source library contains **924 selectable entries**: 203 skeletal, 369 muscular, 72 organ (including 28 teeth), 54 nervous-system, 146 vascular and 80 connective-tissue entries. These are source representations, not an assertion of complete anatomical coverage or a count of distinct human bones/muscles. Whole-body and regional views support system switches, left/right filtering, name search, rotation, pan, zoom, selective hide/restore, isolate/frame, separation and identification practice. Anatomy and clinical tabs remain available; unauthored specialist material is clearly marked pending, not manufactured as finished teaching content.
 
 **Nervous-system scope:** brain aggregate, 22 selected deep-brain entries, 28 selected cranial/orbital nerve entries, two ciliary ganglia and a central-canal representation. No complete spinal cord, limb peripheral nerves, brachial plexus or lumbosacral plexus is included. The source ambiguously maps spinal cord and central canal to the same mesh; the narrower central-canal identity is used. Four candidate muscle entries with source laterality/position discrepancies were quarantined, not automatically relabelled. See `docs/FULL_BODY_COVERAGE.md`.
 
@@ -52,7 +56,7 @@ The full-body catalogue is split into 71 lazy-loaded regional/system GLB bundles
 
 ## Guided regional dissection
 
-Every regional page now has a guided dissection deck, with **97 stages and 79 focused views** across the 11 regions and whole body. Move forward/back, jump to a named stage, switch to a compartment, ghost removed tissues, remove individual structures, restore them from the removed list, undo up to 40 dissection changes, or reassemble. Six directional camera presets include a plantar view for the foot. Stage and deep-brain focus landmarks explain what is visible and which structures are missing. Regional label columns now follow the visible bounds and the selected view direction, including lateral views. Selecting a removed structure through search restores it explicitly and marks the view customised.
+Every regional page now has a guided dissection deck, with **102 stages and 84 focused views** across the 11 regions and whole body. Move forward/back, jump to a named stage, switch to a compartment, ghost removed tissues, remove individual structures, restore them from the removed list, undo up to 40 dissection changes, or reassemble. Six directional camera presets include a plantar view for the foot. Stage and deep-brain focus landmarks explain what is visible and which structures are missing. Regional label columns now follow the visible bounds and the selected view direction, including lateral views. Selecting a removed structure through search restores it explicitly and marks the view customised.
 
 The rendering adds original contour and tonal-hatching treatment without changing the mesh shape. Hatching describes form, not measured muscle fibres. Whole-body contour rendering is limited to selected structures when the scope is large; regional views use full contours. Ghosts do not intercept structure selection. Practice hides labels, ghosts and study content.
 

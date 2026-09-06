@@ -2,7 +2,7 @@
 
 ## Delivered milestone — 6 September 2026
 
-The atlas contains **892 selectable body entries in 71 bundles**, plus the unchanged nine-structure shoulder pilot. There are **97 dissection stages and 79 focused views** across eleven regions and the whole-body explorer. This milestone adds eleven entries / fifteen source components, six windows and eight focuses. All 881 prior catalogue records retain every field and all 67 previous model bundles retain their hashes.
+This historical milestone reached **892 selectable body entries in 71 bundles** (see [dental/orbital detail](HEAD_DETAIL.md) for the current total), plus the unchanged nine-structure shoulder pilot. There are **97 dissection stages and 79 focused views** across eleven regions and the whole-body explorer. This milestone adds eleven entries / fifteen source components, six windows and eight focuses. All 881 prior catalogue records retain every field and all 67 previous model bundles retain their hashes.
 
 | New source representations | Source concepts | Components | Main study window |
 | --- | --- | --- | --- |

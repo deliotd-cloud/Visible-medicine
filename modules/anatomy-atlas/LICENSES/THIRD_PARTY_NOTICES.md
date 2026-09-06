@@ -30,7 +30,7 @@ BodyParts3D, © The Database Center for Life Science licensed under CC Attributi
 
 Official licence: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html (updated 2025-02-27). See `BODYPARTS3D.md`, `CC-BY-4.0.txt` and the mesh manifest for the audited grant, adaptations and source hashes. Preserve the viewer's attribution and linked full credits with commercial distribution. The licence requires attribution but has no non-commercial restriction, share-alike requirement or mandatory licence fee.
 
-The expanded whole-body/regional library is covered by the same grant. See `BODYPARTS3D_FULL_BODY.md` for its two official source archives, 892 selectable entries, modifications and quarantined source discrepancies. The 22 deep-brain entries and 24 source components retain the same CC BY 4.0 attribution; display colours and short original teaching notes do not relicense anatomy or imply clinical approval. The latest eleven connective/deep-spinal entries / fifteen components use the same grant; see `docs/AXIAL_DETAIL.md`. No new runtime packages or bundled fonts/textures were added for the expansion. The targeted-practice update adds no assets or dependencies. The six legacy abdominal-wall candidates are diagnostic evidence only, not redistributed anatomy meshes or approved additions; exact-version rights and registration must be confirmed before admission.
+The expanded whole-body/regional library is covered by the same grant. See `BODYPARTS3D_FULL_BODY.md` for its two official source archives, 924 selectable entries, modifications and quarantined source discrepancies. The 22 deep-brain entries and 24 source components retain the same CC BY 4.0 attribution; display colours and short original teaching notes do not relicense anatomy or imply clinical approval. The eleven connective/deep-spinal entries / fifteen components use the same grant; see `docs/AXIAL_DETAIL.md`. No new runtime packages or bundled fonts/textures were added for the expansion. The targeted-practice update adds no assets or dependencies. The six legacy abdominal-wall candidates are diagnostic evidence only, not redistributed anatomy meshes or approved additions; exact-version rights and registration must be confirmed before admission.
 
 ## Anatomical illustrations
 
@@ -57,6 +57,8 @@ The installed dependency graph also contains commercially compatible licences th
 These licences permit commercial use; they are not non-commercial licences and do not impose a mandatory fee. This file is not legal advice. A release owner should review the generated graph and preserve licence texts/notices when distributing build tooling or binaries rather than only deploying the compiled web application.
 
 ## Reproducible full audit
+
+The dental/orbital extension adds 32 official BodyParts3D v4 source definitions/components under the same CC BY 4.0 grant, with exact evidence in `content/head-detail-source-audit.json`. It includes no other diagram, font, texture, numbering-system dataset or dependency. Preserve attribution for the new derivatives; see `BODYPARTS3D_FULL_BODY.md` and `docs/HEAD_DETAIL.md`. Brief original teaching summaries cite factual resources only, without redistributing their images or authored table datasets.
 
 Run:
 

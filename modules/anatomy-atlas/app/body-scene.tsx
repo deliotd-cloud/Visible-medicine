@@ -70,6 +70,7 @@ function colorFor(s: BodyStructure) {
     return /vein|vena cava/.test(s.sourceName) ? '#577fba' : '#bf4847';
   if (s.category === 'ligament' || s.category === 'tendon') return '#d6cfa6';
   if (s.system !== 'organs') return bodySystems[s.system].color;
+  if (s.sourceName.endsWith('tooth')) return '#e9e0c9';
   if (/lung/.test(s.sourceName)) return '#c59499';
   if (/heart/.test(s.sourceName)) return '#a84243';
   if (/liver/.test(s.sourceName)) return '#986159';

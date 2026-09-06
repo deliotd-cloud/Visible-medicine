@@ -2,11 +2,11 @@
   "passed": true,
   "regions": 11,
   "wholeBody": true,
-  "stages": 97,
-  "focusedViews": 79,
-  "checks": 2856,
-  "cameraChecks": 6984,
-  "structures": 892,
+  "stages": 102,
+  "focusedViews": 84,
+  "checks": 3006,
+  "cameraChecks": 7344,
+  "structures": 924,
   "clinicalValidation": false,
   "browserInteractionTesting": false,
   "rows": [
@@ -14,7 +14,7 @@
       "region": "whole-body",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 892,
+      "visible": 924,
       "removed": 0
     },
     {
@@ -22,42 +22,42 @@
       "stage": "musculoskeletal",
       "kind": "window",
       "visible": 572,
-      "removed": 320
+      "removed": 352
     },
     {
       "region": "whole-body",
       "stage": "viscera",
       "kind": "window",
-      "visible": 44,
-      "removed": 848
+      "visible": 72,
+      "removed": 852
     },
     {
       "region": "whole-body",
       "stage": "neural",
       "kind": "window",
       "visible": 54,
-      "removed": 838
+      "removed": 870
     },
     {
       "region": "whole-body",
       "stage": "bones",
       "kind": "skeleton",
       "visible": 203,
-      "removed": 689
+      "removed": 721
     },
     {
       "region": "whole-body",
       "stage": "vascular",
       "kind": "window",
       "visible": 349,
-      "removed": 543
+      "removed": 575
     },
     {
       "region": "whole-body",
       "stage": "connective",
       "kind": "window",
-      "visible": 279,
-      "removed": 613
+      "visible": 283,
+      "removed": 641
     },
     {
       "region": "shoulder-arm",
@@ -539,21 +539,21 @@
       "region": "head-neck",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 230,
+      "visible": 262,
       "removed": 0
     },
     {
       "region": "head-neck",
       "stage": "platysma",
       "kind": "peel",
-      "visible": 228,
+      "visible": 260,
       "removed": 2
     },
     {
       "region": "head-neck",
       "stage": "neck-deep",
       "kind": "peel",
-      "visible": 226,
+      "visible": 258,
       "removed": 4
     },
     {
@@ -561,63 +561,98 @@
       "stage": "cranial",
       "kind": "window",
       "visible": 53,
-      "removed": 177
+      "removed": 209
     },
     {
       "region": "head-neck",
       "stage": "orbital",
       "kind": "window",
       "visible": 44,
-      "removed": 186
+      "removed": 218
     },
     {
       "region": "head-neck",
       "stage": "bones",
       "kind": "skeleton",
       "visible": 30,
-      "removed": 200
+      "removed": 232
     },
     {
       "region": "head-neck",
       "stage": "vascular",
       "kind": "window",
       "visible": 57,
-      "removed": 173
+      "removed": 205
     },
     {
       "region": "head-neck",
       "stage": "connective",
       "kind": "window",
-      "visible": 63,
-      "removed": 167
+      "visible": 67,
+      "removed": 195
     },
     {
       "region": "head-neck",
       "stage": "gland-window",
       "kind": "window",
       "visible": 36,
-      "removed": 194
+      "removed": 226
     },
     {
       "region": "head-neck",
       "stage": "deep-brain",
       "kind": "window",
       "visible": 22,
-      "removed": 208
+      "removed": 240
     },
     {
       "region": "head-neck",
       "stage": "basal-nuclei",
       "kind": "window",
       "visible": 8,
-      "removed": 222
+      "removed": 254
     },
     {
       "region": "head-neck",
       "stage": "limbic-detail",
       "kind": "window",
       "visible": 9,
-      "removed": 221
+      "removed": 253
+    },
+    {
+      "region": "head-neck",
+      "stage": "dental-arches",
+      "kind": "window",
+      "visible": 31,
+      "removed": 231
+    },
+    {
+      "region": "head-neck",
+      "stage": "upper-dental-arch",
+      "kind": "window",
+      "visible": 14,
+      "removed": 248
+    },
+    {
+      "region": "head-neck",
+      "stage": "lower-dental-arch",
+      "kind": "window",
+      "visible": 14,
+      "removed": 248
+    },
+    {
+      "region": "head-neck",
+      "stage": "orbital-tendinous-rings",
+      "kind": "window",
+      "visible": 12,
+      "removed": 250
+    },
+    {
+      "region": "head-neck",
+      "stage": "superior-oblique-pulleys",
+      "kind": "window",
+      "visible": 6,
+      "removed": 256
     },
     {
       "region": "spine",

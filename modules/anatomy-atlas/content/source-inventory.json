@@ -3,7 +3,7 @@
   "sourceVersion": "4.0",
   "license": "CC-BY-4.0",
   "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
-  "catalogSha256": "a1c6e33bea4c228558d7fc79b8537c9a83fe03fcb296a3f22ee8b2ab688af1f7",
+  "catalogSha256": "9b2cb3eb0b530491c9a4d0f54c4d89058e14f7475f05597f4babf9fb3ea8bdc7",
   "tables": [
     {
       "name": "isa_parts_list_e.txt",
@@ -60,12 +60,12 @@
     "uniqueConceptIds": 3432,
     "archiveEntries": 3492,
     "archiveEntriesWithoutConcept": 0,
-    "admittedStructures": 892,
+    "admittedStructures": 924,
     "statuses": {
-      "represented-not-selectable": 1736,
-      "unused-available": 993,
-      "partly-represented": 192,
-      "admitted": 1280,
+      "represented-not-selectable": 1771,
+      "unused-available": 929,
+      "partly-represented": 189,
+      "admitted": 1312,
       "held-source-review": 21,
       "admitted-other-definition": 51
     }
@@ -9481,10 +9481,39 @@
         "FJ1280",
         "FJ1281"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -9622,10 +9651,19 @@
         "FJ1279",
         "FJ1280"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA84201"
@@ -16956,16 +16994,18 @@
         "FJ2797",
         "FJ2807"
       ],
-      "status": "partly-represented",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:foot:left:ligament:left-long-plantar-ligament",
         "vm:anatomy:body:foot:right:ligament:right-long-plantar-ligament",
+        "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
         "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
         "vm:anatomy:body:head-neck:midline:ligament:median-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:midline:ligament:thyro-epiglottic-ligament",
+        "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
         "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
         "vm:anatomy:body:head-neck:unspecified:ligament:hyo-epiglottic-ligament",
@@ -25583,13 +25623,15 @@
         "FJ2763",
         "FJ2764"
       ],
-      "status": "partly-represented",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:foot:left:ligament:left-long-plantar-ligament",
         "vm:anatomy:body:foot:right:ligament:right-long-plantar-ligament",
+        "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
         "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
+        "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
         "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
         "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
         "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon"
@@ -32179,10 +32221,13 @@
         "FJ1291",
         "FJ1342"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
+        "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA49071",
@@ -37087,10 +37132,13 @@
         "FJ1329",
         "FJ1380"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
+        "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -37102,10 +37150,12 @@
       "files": [
         "FJ1380"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -37117,10 +37167,12 @@
       "files": [
         "FJ1329"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -37133,10 +37185,13 @@
         "FJ1291",
         "FJ1342"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
+        "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA42603",
@@ -37151,10 +37206,12 @@
       "files": [
         "FJ1342"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -37166,10 +37223,12 @@
       "files": [
         "FJ1291"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -37358,6 +37417,7 @@
         "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
         "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
         "vm:anatomy:body:head-neck:left:organ:left-putamen",
+        "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
         "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
         "vm:anatomy:body:head-neck:midline:organ:brain",
         "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
@@ -37371,6 +37431,7 @@
         "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
         "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
         "vm:anatomy:body:head-neck:right:organ:right-putamen",
+        "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring",
         "vm:anatomy:body:head-neck:unpaired:organ:tongue"
       ],
       "unavailable": [],
@@ -45908,10 +45969,15 @@
         "FJ1274",
         "FJ1281"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA84203"
@@ -45932,10 +45998,19 @@
         "FJ1277",
         "FJ1278"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -45954,10 +46029,19 @@
         "FJ1275",
         "FJ1276"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA84207"
@@ -46635,6 +46719,7 @@
         "vm:anatomy:body:head-neck:left:cartilage:left-cuneiform-cartilage",
         "vm:anatomy:body:head-neck:left:cartilage:left-lateral-nasal-cartilage",
         "vm:anatomy:body:head-neck:left:cartilage:left-major-alar-cartilage",
+        "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
         "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
         "vm:anatomy:body:head-neck:left:muscle:left-digastric",
@@ -46685,6 +46770,7 @@
         "vm:anatomy:body:head-neck:right:cartilage:right-cuneiform-cartilage",
         "vm:anatomy:body:head-neck:right:cartilage:right-lateral-nasal-cartilage",
         "vm:anatomy:body:head-neck:right:cartilage:right-major-alar-cartilage",
+        "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
         "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
         "vm:anatomy:body:head-neck:right:muscle:right-digastric",
@@ -47407,6 +47493,7 @@
         "vm:anatomy:body:head-neck:left:cartilage:left-cuneiform-cartilage",
         "vm:anatomy:body:head-neck:left:cartilage:left-lateral-nasal-cartilage",
         "vm:anatomy:body:head-neck:left:cartilage:left-major-alar-cartilage",
+        "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
         "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
         "vm:anatomy:body:head-neck:left:muscle:left-digastric",
@@ -47460,6 +47547,7 @@
         "vm:anatomy:body:head-neck:right:cartilage:right-cuneiform-cartilage",
         "vm:anatomy:body:head-neck:right:cartilage:right-lateral-nasal-cartilage",
         "vm:anatomy:body:head-neck:right:cartilage:right-major-alar-cartilage",
+        "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
         "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
         "vm:anatomy:body:head-neck:right:muscle:right-digastric",
@@ -48069,6 +48157,20 @@
         "vm:anatomy:body:head-neck:left:bone:left-parietal-bone",
         "vm:anatomy:body:head-neck:left:bone:left-temporal-bone",
         "vm:anatomy:body:head-neck:left:bone:left-zygomatic-bone",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
         "vm:anatomy:body:head-neck:midline:bone:ethmoid",
         "vm:anatomy:body:head-neck:midline:bone:frontal-bone",
         "vm:anatomy:body:head-neck:midline:bone:hyoid-bone",
@@ -48084,6 +48186,20 @@
         "vm:anatomy:body:head-neck:right:bone:right-parietal-bone",
         "vm:anatomy:body:head-neck:right:bone:right-temporal-bone",
         "vm:anatomy:body:head-neck:right:bone:right-zygomatic-bone",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth",
         "vm:anatomy:body:leg:left:bone:left-fibula",
         "vm:anatomy:body:leg:left:bone:left-patella",
         "vm:anatomy:body:leg:left:bone:left-tibia",
@@ -48211,7 +48327,7 @@
         "FJ3148",
         "FJ3149"
       ],
-      "status": "partly-represented",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
@@ -48219,6 +48335,34 @@
         "vm:anatomy:body:abdomen:right:organ:right-ureter",
         "vm:anatomy:body:abdomen:unpaired:organ:appendix",
         "vm:anatomy:body:abdomen:unpaired:organ:stomach",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth",
         "vm:anatomy:body:pelvis:unpaired:organ:gallbladder",
         "vm:anatomy:body:pelvis:unpaired:organ:urethra",
         "vm:anatomy:body:pelvis:unpaired:organ:urinary-bladder",
@@ -48748,10 +48892,12 @@
       "files": [
         "FJ1280"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -48763,10 +48909,12 @@
       "files": [
         "FJ1279"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -48778,10 +48926,12 @@
       "files": [
         "FJ1265"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -48793,10 +48943,12 @@
       "files": [
         "FJ1266"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -48808,10 +48960,12 @@
       "files": [
         "FJ1274"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -48823,10 +48977,12 @@
       "files": [
         "FJ1260"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -48838,10 +48994,12 @@
       "files": [
         "FJ1278"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -48853,10 +49011,12 @@
       "files": [
         "FJ1277"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -48868,10 +49028,12 @@
       "files": [
         "FJ1262"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -48883,10 +49045,12 @@
       "files": [
         "FJ1264"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -48898,10 +49062,12 @@
       "files": [
         "FJ1257"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -48913,10 +49079,12 @@
       "files": [
         "FJ1255"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -48928,10 +49096,12 @@
       "files": [
         "FJ1269"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -48943,10 +49113,12 @@
       "files": [
         "FJ1271"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -48958,10 +49130,12 @@
       "files": [
         "FJ1275"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -48973,10 +49147,12 @@
       "files": [
         "FJ1276"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -48988,10 +49164,12 @@
       "files": [
         "FJ1261"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49003,10 +49181,12 @@
       "files": [
         "FJ1263"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49018,10 +49198,12 @@
       "files": [
         "FJ1256"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49033,10 +49215,12 @@
       "files": [
         "FJ1254"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49048,10 +49232,12 @@
       "files": [
         "FJ1268"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49063,10 +49249,12 @@
       "files": [
         "FJ1270"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49081,10 +49269,15 @@
         "FJ1279",
         "FJ1280"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49099,10 +49292,15 @@
         "FJ1272",
         "FJ1273"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49115,10 +49313,13 @@
         "FJ1267",
         "FJ1281"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49131,10 +49332,13 @@
         "FJ1260",
         "FJ1274"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49149,10 +49353,15 @@
         "FJ1277",
         "FJ1278"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49167,10 +49376,15 @@
         "FJ1269",
         "FJ1271"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49185,10 +49399,15 @@
         "FJ1275",
         "FJ1276"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49203,10 +49422,15 @@
         "FJ1268",
         "FJ1270"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49219,10 +49443,13 @@
         "FJ1265",
         "FJ1279"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49235,10 +49462,13 @@
         "FJ1258",
         "FJ1272"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49251,10 +49481,13 @@
         "FJ1266",
         "FJ1280"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49267,10 +49500,13 @@
         "FJ1259",
         "FJ1273"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49282,10 +49518,12 @@
       "files": [
         "FJ1281"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49297,10 +49535,12 @@
       "files": [
         "FJ1267"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49313,10 +49553,13 @@
         "FJ1262",
         "FJ1277"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49329,10 +49572,13 @@
         "FJ1264",
         "FJ1278"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49345,10 +49591,13 @@
         "FJ1255",
         "FJ1269"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49361,10 +49610,13 @@
         "FJ1257",
         "FJ1271"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49377,10 +49629,13 @@
         "FJ1261",
         "FJ1276"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49393,10 +49648,13 @@
         "FJ1263",
         "FJ1275"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49409,10 +49667,13 @@
         "FJ1254",
         "FJ1268"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49425,10 +49686,13 @@
         "FJ1256",
         "FJ1270"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49440,10 +49704,12 @@
       "files": [
         "FJ1273"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49455,10 +49721,12 @@
       "files": [
         "FJ1259"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49470,10 +49738,12 @@
       "files": [
         "FJ1272"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -49485,10 +49755,12 @@
       "files": [
         "FJ1258"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -53551,6 +53823,7 @@
         "vm:anatomy:body:head-neck:left:cartilage:left-cuneiform-cartilage",
         "vm:anatomy:body:head-neck:left:cartilage:left-lateral-nasal-cartilage",
         "vm:anatomy:body:head-neck:left:cartilage:left-major-alar-cartilage",
+        "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
         "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-lateral-rectus",
         "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-medial-rectus",
         "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
@@ -53613,11 +53886,26 @@
         "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
         "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
         "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
         "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
         "vm:anatomy:body:head-neck:left:organ:left-putamen",
         "vm:anatomy:body:head-neck:left:organ:left-sublingual-gland",
         "vm:anatomy:body:head-neck:left:organ:left-submandibular-gland",
         "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
@@ -53662,6 +53950,7 @@
         "vm:anatomy:body:head-neck:right:cartilage:right-cuneiform-cartilage",
         "vm:anatomy:body:head-neck:right:cartilage:right-lateral-nasal-cartilage",
         "vm:anatomy:body:head-neck:right:cartilage:right-major-alar-cartilage",
+        "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
         "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-lateral-rectus",
         "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-medial-rectus",
         "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
@@ -53724,11 +54013,26 @@
         "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
         "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
         "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth",
         "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
         "vm:anatomy:body:head-neck:right:organ:right-putamen",
         "vm:anatomy:body:head-neck:right:organ:right-sublingual-gland",
         "vm:anatomy:body:head-neck:right:organ:right-submandibular-gland",
         "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring",
         "vm:anatomy:body:head-neck:right:vessel:right-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
         "vm:anatomy:body:head-neck:right:vessel:right-internal-carotid-artery",
@@ -57885,6 +58189,7 @@
         "vm:anatomy:body:head-neck:left:cartilage:left-cuneiform-cartilage",
         "vm:anatomy:body:head-neck:left:cartilage:left-lateral-nasal-cartilage",
         "vm:anatomy:body:head-neck:left:cartilage:left-major-alar-cartilage",
+        "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
         "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-lateral-rectus",
         "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-medial-rectus",
         "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
@@ -57947,11 +58252,26 @@
         "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
         "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
         "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
         "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
         "vm:anatomy:body:head-neck:left:organ:left-putamen",
         "vm:anatomy:body:head-neck:left:organ:left-sublingual-gland",
         "vm:anatomy:body:head-neck:left:organ:left-submandibular-gland",
         "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
@@ -57996,6 +58316,7 @@
         "vm:anatomy:body:head-neck:right:cartilage:right-cuneiform-cartilage",
         "vm:anatomy:body:head-neck:right:cartilage:right-lateral-nasal-cartilage",
         "vm:anatomy:body:head-neck:right:cartilage:right-major-alar-cartilage",
+        "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
         "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-lateral-rectus",
         "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-medial-rectus",
         "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
@@ -58058,11 +58379,26 @@
         "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
         "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
         "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth",
         "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
         "vm:anatomy:body:head-neck:right:organ:right-putamen",
         "vm:anatomy:body:head-neck:right:organ:right-sublingual-gland",
         "vm:anatomy:body:head-neck:right:organ:right-submandibular-gland",
         "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring",
         "vm:anatomy:body:head-neck:right:vessel:right-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
         "vm:anatomy:body:head-neck:right:vessel:right-internal-carotid-artery",
@@ -58847,10 +59183,13 @@
         "FJ1291",
         "FJ1342"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
+        "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA42603",
@@ -63322,6 +63661,7 @@
         "vm:anatomy:body:head-neck:left:cartilage:left-cuneiform-cartilage",
         "vm:anatomy:body:head-neck:left:cartilage:left-lateral-nasal-cartilage",
         "vm:anatomy:body:head-neck:left:cartilage:left-major-alar-cartilage",
+        "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
         "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-lateral-rectus",
         "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-medial-rectus",
         "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
@@ -63384,11 +63724,26 @@
         "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
         "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
         "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
         "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
         "vm:anatomy:body:head-neck:left:organ:left-putamen",
         "vm:anatomy:body:head-neck:left:organ:left-sublingual-gland",
         "vm:anatomy:body:head-neck:left:organ:left-submandibular-gland",
         "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
@@ -63433,6 +63788,7 @@
         "vm:anatomy:body:head-neck:right:cartilage:right-cuneiform-cartilage",
         "vm:anatomy:body:head-neck:right:cartilage:right-lateral-nasal-cartilage",
         "vm:anatomy:body:head-neck:right:cartilage:right-major-alar-cartilage",
+        "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
         "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-lateral-rectus",
         "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-medial-rectus",
         "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
@@ -63495,11 +63851,26 @@
         "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
         "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
         "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth",
         "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
         "vm:anatomy:body:head-neck:right:organ:right-putamen",
         "vm:anatomy:body:head-neck:right:organ:right-sublingual-gland",
         "vm:anatomy:body:head-neck:right:organ:right-submandibular-gland",
         "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring",
         "vm:anatomy:body:head-neck:right:vessel:right-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
         "vm:anatomy:body:head-neck:right:vessel:right-internal-carotid-artery",
@@ -66445,6 +66816,7 @@
         "vm:anatomy:body:head-neck:left:cartilage:left-cuneiform-cartilage",
         "vm:anatomy:body:head-neck:left:cartilage:left-lateral-nasal-cartilage",
         "vm:anatomy:body:head-neck:left:cartilage:left-major-alar-cartilage",
+        "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
         "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-lateral-rectus",
         "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-medial-rectus",
         "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
@@ -66507,11 +66879,26 @@
         "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
         "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
         "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
         "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
         "vm:anatomy:body:head-neck:left:organ:left-putamen",
         "vm:anatomy:body:head-neck:left:organ:left-sublingual-gland",
         "vm:anatomy:body:head-neck:left:organ:left-submandibular-gland",
         "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
@@ -66556,6 +66943,7 @@
         "vm:anatomy:body:head-neck:right:cartilage:right-cuneiform-cartilage",
         "vm:anatomy:body:head-neck:right:cartilage:right-lateral-nasal-cartilage",
         "vm:anatomy:body:head-neck:right:cartilage:right-major-alar-cartilage",
+        "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
         "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-lateral-rectus",
         "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-medial-rectus",
         "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
@@ -66618,11 +67006,26 @@
         "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
         "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
         "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth",
         "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
         "vm:anatomy:body:head-neck:right:organ:right-putamen",
         "vm:anatomy:body:head-neck:right:organ:right-sublingual-gland",
         "vm:anatomy:body:head-neck:right:organ:right-submandibular-gland",
         "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring",
         "vm:anatomy:body:head-neck:right:vessel:right-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
         "vm:anatomy:body:head-neck:right:vessel:right-internal-carotid-artery",
@@ -68075,6 +68478,7 @@
         "vm:anatomy:body:head-neck:left:cartilage:left-cuneiform-cartilage",
         "vm:anatomy:body:head-neck:left:cartilage:left-lateral-nasal-cartilage",
         "vm:anatomy:body:head-neck:left:cartilage:left-major-alar-cartilage",
+        "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
         "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
         "vm:anatomy:body:head-neck:left:muscle:left-digastric",
@@ -68114,8 +68518,22 @@
         "vm:anatomy:body:head-neck:left:muscle:left-vocalis",
         "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve",
         "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
         "vm:anatomy:body:head-neck:left:organ:left-sublingual-gland",
         "vm:anatomy:body:head-neck:left:organ:left-submandibular-gland",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
         "vm:anatomy:body:head-neck:midline:bone:ethmoid",
         "vm:anatomy:body:head-neck:midline:bone:frontal-bone",
         "vm:anatomy:body:head-neck:midline:bone:hyoid-bone",
@@ -68143,6 +68561,7 @@
         "vm:anatomy:body:head-neck:right:cartilage:right-cuneiform-cartilage",
         "vm:anatomy:body:head-neck:right:cartilage:right-lateral-nasal-cartilage",
         "vm:anatomy:body:head-neck:right:cartilage:right-major-alar-cartilage",
+        "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
         "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
         "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
         "vm:anatomy:body:head-neck:right:muscle:right-digastric",
@@ -68182,8 +68601,22 @@
         "vm:anatomy:body:head-neck:right:muscle:right-vocalis",
         "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
         "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth",
         "vm:anatomy:body:head-neck:right:organ:right-sublingual-gland",
         "vm:anatomy:body:head-neck:right:organ:right-submandibular-gland",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth",
         "vm:anatomy:body:head-neck:unpaired:organ:pituitary-gland",
         "vm:anatomy:body:head-neck:unspecified:ligament:hyo-epiglottic-ligament",
         "vm:anatomy:body:leg:left:bone:left-fibula",
@@ -81115,10 +81548,19 @@
         "FJ1279",
         "FJ1280"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA12823"
@@ -81135,10 +81577,15 @@
         "FJ1274",
         "FJ1281"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA55636"
@@ -81159,10 +81606,19 @@
         "FJ1275",
         "FJ1276"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA55638"
@@ -130221,9 +130677,11 @@
       "available": true,
       "bytes": 103775,
       "crc32": 3041378299,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "7ac5ee013326492b1d51795eb292a7e5bba0647b74c30b09dc715f9a1dc28754",
+      "geometrySha256": "d7cad56f786972f63e6daa3585fb7f493a7ccd45fda3087d3ab7e84e64f28c75",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130231,9 +130689,11 @@
       "available": true,
       "bytes": 69150,
       "crc32": 27355767,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "6cbac9debf9b9cd9825f096c5ac84911f91020a36ec6f95fdfc49f10a679822b",
+      "geometrySha256": "7da56d89c0422800ae40ca98021191101d6e2d0a573e37f3cb818cb705b4f8ed",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130241,9 +130701,11 @@
       "available": true,
       "bytes": 95723,
       "crc32": 479391246,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "a5dfb507dc76447d6ca09e4a5e11b8750571227d13b582cfffac1d2f35cd1bec",
+      "geometrySha256": "38d8998d225be060a6b48e8c69392f0065087ca7fd61c923eb0023febfea59d2",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130251,9 +130713,11 @@
       "available": true,
       "bytes": 65949,
       "crc32": 747442654,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "b4e2d2cb7d5e7d41d82bc6e48b3de5cb628a0786ae0d82abadd39250f6dff3a7",
+      "geometrySha256": "334035a3912480dd03cac73dfadb510a36ce86ea8f07b08a9b2ebe8a1f6659bc",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130261,9 +130725,11 @@
       "available": true,
       "bytes": 53967,
       "crc32": 1217217672,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "56fe0ccb8277f4ae0c945d3f2b3cf0a3a816ec2edf31eae4ab46a91954bde7aa",
+      "geometrySha256": "85f115e7e1f4240f59353f7125bedecd96eef78702cbafc4d0dc5ae230ca6645",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130271,9 +130737,11 @@
       "available": true,
       "bytes": 56256,
       "crc32": 1624544816,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "f2a5c7fb06457bf61d55f8cab4048983651418f01b3bad013e9a2dea7a383b62",
+      "geometrySha256": "b3c72a98947ab8f2bb18a34c9ad3c2a90eb1bd0d142c30bb7a394b7164781ae1",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130281,9 +130749,11 @@
       "available": true,
       "bytes": 69212,
       "crc32": 1853292295,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "4dd682c058f3949b30077712296603c1c508423a58998ad909baeec5bfa56b72",
+      "geometrySha256": "aa3b8e731b56983fb96d4d1f138976b5ea4c9fbb9c25cb3abb25df7188d704c3",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130291,9 +130761,11 @@
       "available": true,
       "bytes": 128003,
       "crc32": 1363036261,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "529061a7fdb28af07855e7350f788f93ef6c97e3bfead2e28bb9efe0256b0728",
+      "geometrySha256": "317eef9e2716c58aa8424cd2d05ffea76996d08f503209f888ab1ddd4cc507f8",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130301,9 +130773,11 @@
       "available": true,
       "bytes": 95273,
       "crc32": 2440869384,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "5f45ec1015edb7c7539a3ef7a7577d4a0a723beb4dbfb18e36eca77663431c18",
+      "geometrySha256": "549f3466a9fa2ac14f00a6d61c6fda6dd2dcdc2472c6ca38deedc573e957b95e",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130311,9 +130785,11 @@
       "available": true,
       "bytes": 110058,
       "crc32": 2586304566,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "5811bdc8cfed255f8aa9e10fa8dd4815b5d0924c2a23f1d7e373c8521be6c65a",
+      "geometrySha256": "aba5d36f79c7aa7d46865e8fd9ac3ca32ddb8170df78c664ccdba0efa9d9bc82",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130321,9 +130797,11 @@
       "available": true,
       "bytes": 86905,
       "crc32": 1363186216,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "e882218931e8f197490f16ba8058a87502edccc5e8e1f2d50fbd715a0386d33b",
+      "geometrySha256": "c6af63d121af80c9a9f2036f3dd7c942a549a4d70ea542d3cb4fd061a25e5465",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130331,9 +130809,11 @@
       "available": true,
       "bytes": 75752,
       "crc32": 1212567688,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "bd094c59fb378809a534467b70b5b24ae0b147bc31f42c004e7ddadf8f0b7328",
+      "geometrySha256": "5bfcb8abcca15e3c7a3b7e7747cfd4369b59fafa7959ed4871c49cc0498cfc94",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130341,9 +130821,11 @@
       "available": true,
       "bytes": 80970,
       "crc32": 3302206407,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "4df1ab640352a074623d02e755e7632de180da9dc957503f887c791a533d5ea5",
+      "geometrySha256": "5fbc8405de65cdaac0c041c0c9887cc719cf9a214d8bf5df64587a075d142c38",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130351,9 +130833,11 @@
       "available": true,
       "bytes": 81747,
       "crc32": 2209167125,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "44f5accf76e8b0a1ac2aefb55d031508fedad0bacda03b598aef71f88ca2462d",
+      "geometrySha256": "d308d44717a5f8f87056caa4ad0c8cd291100886e06f5acf76ddc63b537a2cd3",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130361,9 +130845,11 @@
       "available": true,
       "bytes": 104807,
       "crc32": 2564525064,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "692c5313517c8b049fac739a068710f8bdbd1f3e201a1b88819aff6f8f1a6eda",
+      "geometrySha256": "f52abf84b788a41007ee6d1a280b9594f1ab87419d79ed47f81a6bac707027f9",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130371,9 +130857,11 @@
       "available": true,
       "bytes": 69791,
       "crc32": 45779006,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "7b3067782910e38d45b03901ba998fcf35088b9f85c523b3cc890cf11adbf17f",
+      "geometrySha256": "c3c3b2a5536d4467d334e75609f1000bcc3a416296a8ef97d8c80e8f33ded9a9",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130381,9 +130869,11 @@
       "available": true,
       "bytes": 96262,
       "crc32": 3570424007,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "722d80bd11c7e814c3c1c2b20fe2621ed8327319028ad67c6e4dce24d7ee4458",
+      "geometrySha256": "803245b0ab93ece070a1e2b7c3df6d99887f2073886da3adf014a42c119b176b",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130391,9 +130881,11 @@
       "available": true,
       "bytes": 66636,
       "crc32": 2686905129,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "220723db70ad6e5edd497977f656be1df7d407804d5ca31302bca598a3d81c41",
+      "geometrySha256": "bc6600b958218d61a01f508d67eeebd87bf186d91ccbab06e783d61bb0fdb2f6",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130401,9 +130893,11 @@
       "available": true,
       "bytes": 54356,
       "crc32": 3471681247,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "17927707d17fa7a78f9743f90b4150d6e7b4eaa4fe5c8ad29a961b4ea795272b",
+      "geometrySha256": "b3ebac812536628aa70572eb701270f754c518552c4a3131eebbd9615c3c6e31",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130411,9 +130905,11 @@
       "available": true,
       "bytes": 56841,
       "crc32": 3934426498,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "43ca036b3bf66dad24be63b0f95a2a8ecf839b61d2d83981659e03b4a357f869",
+      "geometrySha256": "4193d88daee545a5936125a6122e58a5bf8e4aac14c87d3d42af31cbba68c4da",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130421,9 +130917,11 @@
       "available": true,
       "bytes": 69629,
       "crc32": 2888173401,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "a7ded2520e6c1e41154d89a389b4ded0daf733f23d47e4a02fb97230c07b4907",
+      "geometrySha256": "decabea5e7e97a62633ba5149795459a801cc3200d3022fbe0ed14058ef1b4ec",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130431,9 +130929,11 @@
       "available": true,
       "bytes": 111671,
       "crc32": 1706483614,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "457c1d089e24d7e120abf97c2af844ff609a58c3292446e4b1814137d3691416",
+      "geometrySha256": "482b3deb44c803c26653713458d56e5b17e3c915ca26904f832c0a8eae1a7289",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130441,9 +130941,11 @@
       "available": true,
       "bytes": 130145,
       "crc32": 3267674907,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "95ba31eb43e4975d8f36be7595e383baf31b21b68c829a5e6c419a0125682ef6",
+      "geometrySha256": "a5a2df6bc7bd293f3ee34384a441d69adaf43b29b74d8705402ed7ca5a1ce5eb",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130451,9 +130953,11 @@
       "available": true,
       "bytes": 95890,
       "crc32": 786198245,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "46d0a4b9528553387811d65040836ccfe7dc971fec56254e01c9eabdc16156a0",
+      "geometrySha256": "fd446a8bc767f500f8a81fb281519b54f3a1ee036c22c5198619a43b76887407",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130461,9 +130965,11 @@
       "available": true,
       "bytes": 87622,
       "crc32": 3426749849,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "32f4db913923278b7cbfcaf8e64d1073604951dd58493e3310da30bec1ff3829",
+      "geometrySha256": "ca151dd2d5f3a3d77bdbd22c5796e6474b37735fea531b1bb16286ffecc88ade",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130471,9 +130977,11 @@
       "available": true,
       "bytes": 76355,
       "crc32": 877801183,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "e8b9c01f57a8a723f9ea0497dfbe2df5f95e23786d0663f196a3608f995d6b22",
+      "geometrySha256": "4bfbcbbc332fc4d9764f01a7d7106c121f6c7571ffb479b5a184aaff55fd6287",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130481,9 +130989,11 @@
       "available": true,
       "bytes": 81012,
       "crc32": 2621060245,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "5c06c01ee01c337523fc9cf641c31c65856a52c74237d9d86989d93dd6847c0e",
+      "geometrySha256": "7a085e5bcd6554e35f18c3d5b2a6a6f01ae32dce0726b0a6baa1355934591e2a",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130491,9 +131001,11 @@
       "available": true,
       "bytes": 82485,
       "crc32": 3527098819,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "2d8f105ee772e727e3b4ccbb6370a893a213174c0f90155054dac20bc053512c",
+      "geometrySha256": "9f98a423afb20ca8d627a059e0575c6631fe5eaf7e6d966dc40412ab1acf5cca",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth"
+      ]
     },
     {
       "tree": "isa",
@@ -130607,9 +131119,11 @@
       "available": true,
       "bytes": 45393,
       "crc32": 3740251176,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "5c0611ee2d47bb1b50e6832ffb50e82703d188e6b00d1d1d154c25458c178346",
+      "geometrySha256": "73202616f28092626426aa9c319a8f8cf36fd9030995e092ad7242a086c976bd",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring"
+      ]
     },
     {
       "tree": "isa",
@@ -130995,9 +131509,11 @@
       "available": true,
       "bytes": 25544,
       "crc32": 1312863507,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "bd3bb98b659cc91865a50457124aac9353d98d21a5963404cad21cfb010dce2d",
+      "geometrySha256": "af3cd5c335a38334ba93ddb80ca9ef17abdc3aedb2e29141a5e6c3b95d6a1c8f",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique"
+      ]
     },
     {
       "tree": "isa",
@@ -131145,9 +131661,11 @@
       "available": true,
       "bytes": 46592,
       "crc32": 146370038,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "0e8384372e031d2720cbd2c1f776af44cf4003ccd6ff4cc68025d45c7ad44c59",
+      "geometrySha256": "5b1eaeaa9907bb7bd88290f182031cd48b0594b81553f2fb60c920ee4cc6386e",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring"
+      ]
     },
     {
       "tree": "isa",
@@ -131531,9 +132049,11 @@
       "available": true,
       "bytes": 24797,
       "crc32": 1052867056,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "eb522d2de22050bba2a6359cee767cd34d96e8a0bc135db043f9cf86f70d6d6e",
+      "geometrySha256": "f43120fee8cdd8218ad04eb8728b4e0f8dc88850d26b1b4a110f5a4851cc8ed4",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique"
+      ]
     },
     {
       "tree": "isa",

@@ -23,8 +23,8 @@ same(baseline.sourceCommit, 'b49c9172fbc443bcd2ee1faf58c171aa76424e20');
 same(evidence.sourceCommit, baseline.sourceCommit);
 same(baseline.structures.length, 859);
 same(baseline.bundles.length, 66);
-same(catalog.structures.length, 892);
-same(catalog.bundles.length, 71);
+same(catalog.structures.length, 924);
+same(catalog.bundles.length, 73);
 same(catalog.coordinateSystem, baseline.coordinateSystem);
 same(catalog.excluded, baseline.excluded);
 for (const old of baseline.structures) {

@@ -1,6 +1,6 @@
 # Full source inventory and third recovery milestone
 
-This document records the 859-entry inventory milestone. Subsequent admission evidence is described in [Deep brain](DEEP_BRAIN.md) and the current 892-entry [connective/deep-spinal milestone](AXIAL_DETAIL.md); `content/source-inventory.json` is regenerated against the current catalogue. Historical counts below describe this milestone, not the latest whole-body total.
+This document records the 859-entry inventory milestone. Subsequent admission evidence is described in [Deep brain](DEEP_BRAIN.md) the 892-entry [connective/deep-spinal milestone](AXIAL_DETAIL.md) and the current 924-entry [dental/orbital milestone](HEAD_DETAIL.md); `content/source-inventory.json` is regenerated against the current catalogue. Historical counts below describe this milestone, not the latest whole-body total.
 
 ## What changed
 

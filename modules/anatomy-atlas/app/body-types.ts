@@ -72,7 +72,7 @@ export const bodySystems: Record<
   organs: {
     name: 'Organs',
     color: '#a27693',
-    description: 'Selected internal organs',
+    description: 'Selected organs & teeth',
   },
   nerves: {
     name: 'Nervous',

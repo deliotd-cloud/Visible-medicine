@@ -26,7 +26,7 @@
 
 - Review all 36 inventory additions, particularly bronchial extent/relative length, named biliary-duct boundaries, ciliary ganglion position and vessel endpoints/branches/calibre. See `SOURCE_INVENTORY.md`.
 - Adjudicate the newly held source-labelled superior epigastric veins; do not relabel or reposition them automatically.
-- Review all 97 current stages and 79 focused views, including airway, shoulder vascular and deep-brain windows. Validate touch/keyboard access, framing, occlusion and tiny-structure selection on actual devices.
+- Review all 102 current stages and 84 focused views, including airway, shoulder vascular and deep-brain windows. Validate touch/keyboard access, framing, occlusion and tiny-structure selection on actual devices.
 - The exhaustive source inventory proves record reconciliation, not complete anatomy. Identical source geometry under multiple labels does not validate those labels.
 - The future imaging selection contract is tested software, not patient registration. No scans or imaging approvals are present.
 
@@ -76,6 +76,8 @@
 - Clear separation of illustrative teaching images from diagnostic image interpretation
 
 ## Educational quality
+
+Dental/orbital additions require independent verification of all 28 tooth identities, crown/root forms, arch positions, occlusion, contacts and bone interfaces, plus ring/trochlea boundaries, thickness, tendon continuity and nerve relationships. No clinical tooth numbering is assigned; no periodontal tissues, internal tooth layers or third molars are supplied. Validate the five close study recipes and tiny-structure readability on actual devices. Source hashing and gross bounds/centres are not clinical evidence; see [head-detail gates](HEAD_DETAIL.md).
 
 - Defined audience, prerequisites and learning objectives
 - Peer-reviewed questions, distractors, feedback and pass criteria

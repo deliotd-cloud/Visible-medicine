@@ -7,6 +7,7 @@ import { gapSelections } from './gap-recovery.mjs';
 import { inventorySelections } from './inventory-selections.mjs';
 import { neuroSelections } from './neuro-selections.mjs';
 import { axialSelections } from './axial-selections.mjs';
+import { headDetailSelections } from './head-detail-selections.mjs';
 const data = await fs.readFile(
   'public/models/bodyparts3d/full-body/catalog.json',
 );
@@ -17,11 +18,12 @@ const selected = [
   ...inventorySelections(await conceptMap('isa'), await conceptMap('partof')),
   ...neuroSelections(await conceptMap('isa')),
   ...axialSelections(await conceptMap('isa')),
+  ...headDetailSelections(await conceptMap('isa')),
 ];
 const recovered = catalog.structures.filter((s) => s.provenance?.recovered);
-assert.equal(recovered.length, 290);
+assert.equal(recovered.length, 322);
 assert.equal(recovered.length, selected.length);
-assert.equal(catalog.structures.length, 892);
+assert.equal(catalog.structures.length, 924);
 let checks = 0;
 for (const r of selected) {
   const s = recovered.find((s) => s.fmaId === r.fma);

@@ -6,6 +6,7 @@ import {
 import type { BodyStructure } from './body-types';
 import { neuroGroupFor } from '../lib/neuroanatomy';
 import { axialGroupFor } from '../lib/axial-anatomy';
+import { headDetailGroupFor } from '../lib/head-detail';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -47,7 +48,7 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
     item.sourceFmaIds?.includes(s.fmaId),
   );
   if (existing) return existing.sections[tab];
-  const axial = axialGroupFor(s.fmaId);
+  const axial = axialGroupFor(s.fmaId) ?? headDetailGroupFor(s.fmaId);
   if (axial && (tab === 'anatomy' || tab === 'function'))
     return {
       title: `${axial.name} · draft`,

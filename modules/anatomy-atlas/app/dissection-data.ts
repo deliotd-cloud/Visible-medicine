@@ -1,6 +1,7 @@
 import type { BodyStructure, BodySystem } from './body-types';
 import { neuroStudySets, neuroStudyIds } from '../lib/neuroanatomy.ts';
 import { axialStudySets } from '../lib/axial-anatomy.ts';
+import { headDetailStudySets } from '../lib/head-detail.ts';
 
 export type DissectionView =
   | 'anterior'
@@ -1101,7 +1102,7 @@ dissectionProfiles['head-neck'].references.push(
 
 // Target and context rules are separate: do not reintroduce a whole skeleton
 // when a close window needs only the carpal, cervical or lumbar framework.
-for (const study of axialStudySets) {
+for (const study of [...axialStudySets, ...headDetailStudySets]) {
   for (const [index, region] of study.regions.entries()) {
     const rule = { fmaIds: study.targetFmaIds };
     dissectionProfiles[region].focuses.push({

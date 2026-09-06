@@ -2,7 +2,7 @@
 
 ## Included
 
-892 selectable source representations: 203 skeletal, 369 muscular, 44 organ, 54 nervous-system, 146 vascular and 76 connective-tissue entries. 71 GLB bundles support 11 independent region routes plus the whole-body route. Regional membership uses source muscle hierarchy where available, explicit named-bone rules and a documented position-based fallback. Adjacent long bones are retained to provide joint context; this is not a clipped surgical field.
+924 selectable source representations: 203 skeletal, 369 muscular, 72 organ (including 28 teeth), 54 nervous-system, 146 vascular and 80 connective-tissue entries. 73 GLB bundles support 11 independent region routes plus the whole-body route. Regional membership uses source muscle hierarchy where available, explicit named-bone rules and a documented position-based fallback. Adjacent long bones are retained to provide joint context; this is not a clipped surgical field.
 
 Organs: the original 17 entries (heart, paired lungs, liver, pancreas, stomach, small/large intestine, gallbladder, paired kidneys, bladder, esophagus, trachea, spleen and paired adrenals), plus prostate, paired testes, paired seminal vesicles, paired ureters, thymus, pituitary, paired compound eyeballs and rectum. Heart/liver vascular components and the rectum have been separated from their display aggregates without moving geometry; aggregate IDs remain stable and notes disclose their exclusions. This remains an adult-male reference, not comprehensive male/female, developmental or variant anatomy.
 
@@ -21,6 +21,8 @@ The deep-brain pass adds 22 entries / 24 source components in one additional bun
 The inventory pass adds 36 entries detailed in `SOURCE_INVENTORY.md`: 29 shoulder/chest-wall vessel segments, two ciliary ganglia, source-labelled right/left main bronchial segments, cystic/common-hepatic duct surfaces and appendix. The source index is fully reconciled, but its unused records are not automatically admitted. Superior-epigastric vein candidates were held after source-position checks.
 
 The preceding pass added 62 entries detailed in `GAP_FILLING.md`: 22 discs, four hand interosseous sets, four interosseous membranes, two Achilles tendons, two trochlear nerves, ten organs and eighteen additional head/neck connective structures. The organ list also includes tongue, paired lacrimal/submandibular/sublingual glands, paired epididymides and urethra. Pelvic-floor and optic-nerve alternatives remain held pending source adjudication.
+
+The dental/orbital pass adds 28 individually identified secondary teeth and four orbital connective surfaces in two new bundles, preserving all previous anatomy. Five close-up windows expose upper/lower arches and orbital pulley/ring relationships with selected context. Teeth belong to the Organs system, not Bones. No third molars, internal dental tissues, clinical tooth numbering or validated attachments are supplied. See [head detail](HEAD_DETAIL.md).
 
 ## Quarantined source entries
 

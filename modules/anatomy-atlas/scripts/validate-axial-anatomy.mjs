@@ -24,8 +24,8 @@ same(baseline.sourceCommit, 'e007550faec7c75947569c2a30fa1a032c7bf5f0');
 same(evidence.sourceCommit, baseline.sourceCommit);
 same(baseline.structures.length, 881);
 same(baseline.bundles.length, 67);
-same(catalog.structures.length, 892);
-same(catalog.bundles.length, 71);
+same(catalog.structures.length, 924);
+same(catalog.bundles.length, 73);
 same(catalog.coordinateSystem, baseline.coordinateSystem);
 same(catalog.excluded, baseline.excluded);
 for (const old of baseline.structures) {
@@ -53,7 +53,7 @@ for (const old of baseline.bundles) {
   );
 }
 const additions = catalog.structures.filter(
-  (s) => !baseline.structures.some((b) => b.id === s.id),
+  (s) => s.bundle.endsWith('-axial-detail'),
 );
 same(additions.length, 11);
 same(evidence.results.length, 11);

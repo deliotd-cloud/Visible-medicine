@@ -26,7 +26,7 @@ Controls stack at narrow widths and are keyboard-operable through the existing U
 
 ## Practice sessions
 
-The following describes the initial practice milestone. Current naming/sampling, focus-target selection, skip/reveal, retry-missed and shared answer-once behaviour are documented in [targeted practice](PRACTICE.md). The shoulder retains its existing three prompts with the shared answer reducer. Anatomical coverage is now 892 body entries; the 823-entry count above is historical.
+The following describes the initial practice milestone. Current naming/sampling, focus-target selection, skip/reveal, retry-missed and shared answer-once behaviour are documented in [targeted practice](PRACTICE.md). The shoulder retains its existing three prompts with the shared answer reducer. Anatomical coverage is now 924 body entries; the 823-entry count above is historical.
 
 Whole-body and regional **Identify** sessions offer 5, 10 or 20 questions, limited by the loaded structures in the current visible scope. The candidate pool uses up to three times the requested number of largest bounding-volume landmarks and shuffles it before selection. This varies sessions without deliberately preferring tiny, inaccessible surfaces; it is not exhaustive or weighted curriculum coverage.
 

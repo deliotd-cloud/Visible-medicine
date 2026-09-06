@@ -1,8 +1,14 @@
 # Expanded BodyParts3D commercial-use audit
 
+## Dental/orbital extension — 6 September 2026
+
+Thirty-two single-component definitions from the official IS-A v4 archive add 28 secondary teeth, two common tendinous rings and two superior-oblique trochleae in two new GLBs (791,696 bytes). The current total is 924 entries / 73 body bundles, 93,704,656 bytes. Every previous 892 record and 71 bundle hash is preserved. Exact names, component SHA-256, canonical geometry hashes, aliases and source/scene bounds are in `content/head-detail-source-audit.json`; review limits and reproduction are in `docs/HEAD_DETAIL.md`.
+
+The official CC BY 4.0 grant was rechecked on 6 September 2026. Retain the existing DBCLS attribution, licence and adaptation notices. Ivory display colour is an authored material, not an enamel segmentation or a new texture. Brief original draft factual notes cite the Dentalcare dental-anatomy course and TTUHSC eye tables without bundling their illustrations, protected prose or table datasets. No new dependency, font, texture, paid API or generated anatomical mesh is added; no clinical numbering-system database is imported. The earlier abdominal-wall diagnostic evidence does not authorise admission of legacy v3 meshes.
+
 ## Connective/deep-spinal extension — 6 September 2026
 
-Eleven further concepts / fifteen source components from the same official IS-A v4 archive add four GLBs. The current body catalogue contains 892 entries / 71 bundles, about 92.91 MB. The previous 881 records / 67 bundle hashes are preserved. Exact source hashes, alias evidence, unchanged transforms and two withheld longi candidates are recorded in `content/axial-source-audit.json` and `docs/AXIAL_DETAIL.md`. CC BY 4.0 was rechecked at the official licence page; existing visible attribution, licence link and change notices remain required. No new dependencies, fonts, textures, copied diagrams, paid APIs or generated anatomy were added. Teaching references support brief original factual summaries, not redistribution of their textbooks or illustrations.
+Eleven further concepts / fifteen source components from the same official IS-A v4 archive add four GLBs. That milestone's body catalogue contained 892 entries / 71 bundles, about 92.91 MB. The previous 881 records / 67 bundle hashes are preserved. Exact source hashes, alias evidence, unchanged transforms and two withheld longi candidates are recorded in `content/axial-source-audit.json` and `docs/AXIAL_DETAIL.md`. CC BY 4.0 was rechecked at the official licence page; existing visible attribution, licence link and change notices remain required. No new dependencies, fonts, textures, copied diagrams, paid APIs or generated anatomy were added. Teaching references support brief original factual summaries, not redistribution of their textbooks or illustrations.
 
 ## Deep-brain extension — 6 September 2026
 

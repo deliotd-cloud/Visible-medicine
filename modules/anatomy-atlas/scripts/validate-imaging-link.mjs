@@ -49,7 +49,7 @@ const near = (left, right, message, tolerance = 1e-5) =>
   );
 same(
   body.length,
-  892,
+  924,
   'Every admitted body representation has a reference entry',
 );
 same(shoulder.length, 9, 'Every shoulder representation has a reference entry');
