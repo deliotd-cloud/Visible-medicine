@@ -1,4 +1,5 @@
 'use client';
+import { useMemo, useState } from 'react';
 import { ArrowLeft, ArrowRight, RotateCcw, Undo2, Layers3 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
@@ -15,7 +16,13 @@ import type {
   DissectionStage,
   DissectionFocus,
 } from './dissection-data';
-import type { BodyStructure } from './body-types';
+import { bodySystems, type BodyStructure, type BodySystem } from './body-types';
+import {
+  dissectionSections,
+  dissectionTransition,
+  filterRemovedStructures,
+} from '@/lib/dissection-workbench';
+import { stageStructures } from './dissection-data';
 
 export function DissectionControls({
   profile,
@@ -27,6 +34,8 @@ export function DissectionControls({
   ghost,
   onGhost,
   visibleCount,
+  structures,
+  visibleIds,
   disabled,
 }: {
   profile: DissectionProfile;
@@ -38,10 +47,37 @@ export function DissectionControls({
   ghost: boolean;
   onGhost: (value: boolean) => void;
   visibleCount: number;
+  structures: BodyStructure[];
+  visibleIds: string[];
   disabled: boolean;
 }) {
-  const index = profile.stages.findIndex((s) => s.id === state.stageId),
-    stage = profile.stages[index];
+  const { layers, windows } = useMemo(
+    () => dissectionSections(profile),
+    [profile],
+  );
+  const stage = profile.stages.find((s) => s.id === state.stageId);
+  const layerMode =
+    layers.length > 0 && stage?.kind !== 'window' && !state.focusId;
+  const choices = layerMode ? layers : windows;
+  const index = choices.findIndex((s) => s.id === state.stageId);
+  const next = layerMode ? choices[index + 1] : undefined;
+  const transition = useMemo(
+    () =>
+      next
+        ? dissectionTransition(structures, profile, visibleIds, next.id)
+        : null,
+    [structures, profile, visibleIds, next],
+  );
+  const counts = useMemo(
+    () =>
+      new Map(
+        layers.map((item) => [
+          item.id,
+          stageStructures(structures, profile, item.id).length,
+        ]),
+      ),
+    [structures, profile, layers],
+  );
   const title = state.focusId
     ? profile.focuses.find((f) => f.id === state.focusId)?.title
     : (stage?.title ?? 'Free exploration');
@@ -52,7 +88,7 @@ export function DissectionControls({
     >
       <div className="dissection-deck-heading">
         <Layers3 />
-        <strong>Guided dissection</strong>
+        <strong>Dissection workspace</strong>
         <span>{visibleCount} visible</span>
         <Button
           size="sm"
@@ -69,16 +105,45 @@ export function DissectionControls({
           Reassemble
         </Button>
       </div>
-      <div className="dissection-step-row">
-        <Button
-          size="icon"
-          variant="outline"
-          disabled={disabled || index <= 0}
-          onClick={() => onStage(profile.stages[index - 1].id)}
-          aria-label="Previous dissection stage"
+      <div className="dissection-modes" aria-label="Dissection mode">
+        {layers.length > 0 && (
+          <button
+            type="button"
+            aria-pressed={layerMode}
+            disabled={disabled}
+            onClick={() => onStage(layers[0].id)}
+          >
+            Layer by layer <small>{layers.length} steps</small>
+          </button>
+        )}
+        <button
+          type="button"
+          aria-pressed={!layerMode}
+          disabled={disabled || !windows.length}
+          onClick={() => {
+            if (windows[0]) onStage(windows[0].id);
+          }}
         >
-          <ArrowLeft />
-        </Button>
+          Study windows <small>{windows.length} views</small>
+        </button>
+      </div>
+      <p className="dissection-mode-note">
+        {layerMode
+          ? 'Remove available layers step by step. Missing skin, fascia or other tissues are not simulated.'
+          : 'Independent views of selected structures—not successive dissection layers.'}
+      </p>
+      <div className="dissection-step-row">
+        {layerMode && (
+          <Button
+            size="icon"
+            variant="outline"
+            disabled={disabled || index <= 0}
+            onClick={() => onStage(choices[index - 1].id)}
+            aria-label="Previous dissection stage"
+          >
+            <ArrowLeft />
+          </Button>
+        )}
         <Select
           value={index < 0 ? 'free' : state.stageId}
           onValueChange={(id) => {
@@ -90,47 +155,108 @@ export function DissectionControls({
             aria-label="Choose dissection stage"
           >
             <SelectValue>
-              {index >= 0 ? `${index + 1} / ${profile.stages.length} · ` : ''}
+              {index >= 0 && layerMode
+                ? `${index + 1} / ${choices.length} · `
+                : ''}
               {title}
             </SelectValue>
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="free">Free exploration</SelectItem>
-            {profile.stages.map((s, i) => (
+            {choices.map((s, i) => (
               <SelectItem key={s.id} value={s.id}>
-                {i + 1}. {s.title}
+                {layerMode ? `${i + 1}. ` : ''}
+                {s.title}
               </SelectItem>
             ))}
           </SelectContent>
         </Select>
-        <Button
-          size="icon"
-          variant="outline"
-          disabled={disabled || index === profile.stages.length - 1}
-          onClick={() =>
-            onStage(profile.stages[index + 1]?.id ?? profile.stages[0].id)
-          }
-          aria-label="Next dissection stage"
-        >
-          <ArrowRight />
-        </Button>
-      </div>
-      <div className="dissection-track" aria-label="Dissection sequence">
-        {profile.stages.map((s, i) => (
-          <button
-            key={s.id}
-            type="button"
-            title={s.title}
-            aria-label={`Stage ${i + 1}: ${s.title}`}
-            aria-current={s.id === state.stageId ? 'step' : undefined}
-            disabled={disabled}
-            onClick={() => onStage(s.id)}
-            className={`${i <= index ? 'reached' : ''} ${i === index ? 'current' : ''}`}
+        {layerMode && (
+          <Button
+            size="icon"
+            variant="outline"
+            disabled={disabled || !next}
+            onClick={() => next && onStage(next.id)}
+            aria-label="Next dissection stage"
           >
-            <span>{i + 1}</span>
-          </button>
-        ))}
+            <ArrowRight />
+          </Button>
+        )}
       </div>
+      {layerMode && !disabled && (
+        <ol
+          className="dissection-layer-track"
+          aria-label="Available layer sequence"
+        >
+          {layers.map((s, i) => (
+            <li key={s.id}>
+              <button
+                type="button"
+                title={s.title}
+                aria-label={`Stage ${i + 1}: ${s.title}`}
+                aria-current={s.id === state.stageId ? 'step' : undefined}
+                disabled={disabled}
+                onClick={() => onStage(s.id)}
+                className={i === index ? 'current' : ''}
+              >
+                <span>{i + 1}</span>
+                <strong>{s.title}</strong>
+                <small>{counts.get(s.id)} retained</small>
+              </button>
+            </li>
+          ))}
+        </ol>
+      )}
+      {transition && !disabled && (
+        <details className="dissection-preview" key={next?.id}>
+          <summary>
+            Next: {transition.stage.title}
+            <span>
+              {transition.removed.length} to hide · {transition.restored.length}{' '}
+              to restore
+            </span>
+          </summary>
+          <p>{transition.stage.description}</p>
+          <p>
+            Starts a clean stage: manual changes, system filters and separation
+            reset. Counts refer to catalogue visibility, including anatomy still
+            loading.
+          </p>
+          {(
+            [
+              ['To hide', transition.removed],
+              ['To restore', transition.restored],
+            ] as const
+          ).map(
+            ([heading, items]) =>
+              items.length > 0 && (
+                <div key={heading}>
+                  <strong>
+                    {heading} ({items.length})
+                  </strong>
+                  <ul>
+                    {items.map((item) => (
+                      <li key={item.id}>{item.name}</li>
+                    ))}
+                  </ul>
+                </div>
+              ),
+          )}
+          <Button
+            size="sm"
+            disabled={disabled}
+            onClick={() => onStage(transition.stage.id)}
+          >
+            Apply next step <ArrowRight />
+          </Button>
+        </details>
+      )}
+      {layerMode && !next && (
+        <output className="dissection-mode-note">
+          Layer sequence complete. Step back to restore layers, reassemble, or
+          choose a study window.
+        </output>
+      )}
       <div className="dissection-options">
         <label htmlFor="ghost-tissues">
           <Switch
@@ -182,6 +308,7 @@ export function DissectionGuide({
   removed,
   visible,
   onRestore,
+  onRestoreMany,
   onSelect,
   customized,
 }: {
@@ -191,9 +318,16 @@ export function DissectionGuide({
   removed: BodyStructure[];
   visible: BodyStructure[];
   onRestore: (id: string) => void;
+  onRestoreMany: (ids: string[]) => void;
   onSelect: (id: string) => void;
   customized: boolean;
 }) {
+  const [removedSearch, setRemovedSearch] = useState('');
+  const [removedSystem, setRemovedSystem] = useState<BodySystem | 'all'>('all');
+  const matches = useMemo(
+    () => filterRemovedStructures(removed, removedSearch, removedSystem),
+    [removed, removedSearch, removedSystem],
+  );
   const landmarks = (focus?.landmarks ?? stage?.landmarks ?? []).flatMap(
     (pattern) =>
       visible
@@ -241,14 +375,61 @@ export function DissectionGuide({
       <details className="dissection-removed">
         <summary>Removed from this view ({removed.length})</summary>
         {removed.length ? (
-          <div>
-            {removed.map((s) => (
-              <button type="button" key={s.id} onClick={() => onRestore(s.id)}>
-                <span>{s.name}</span>
-                <small>Restore</small>
+          <>
+            <div className="dissection-tray-filters">
+              <input
+                type="search"
+                value={removedSearch}
+                onChange={(e) => setRemovedSearch(e.target.value)}
+                aria-label="Search removed structures"
+                placeholder="Find a removed structure…"
+              />
+              <select
+                value={removedSystem}
+                onChange={(e) =>
+                  setRemovedSystem(e.target.value as BodySystem | 'all')
+                }
+                aria-label="Filter removed structures by system"
+              >
+                <option value="all">All systems</option>
+                {(Object.keys(bodySystems) as BodySystem[]).map((system) => (
+                  <option key={system} value={system}>
+                    {bodySystems[system].name} (
+                    {removed.filter((item) => item.system === system).length})
+                  </option>
+                ))}
+              </select>
+              <button
+                type="button"
+                disabled={!matches.length}
+                onClick={() => onRestoreMany(matches.map((item) => item.id))}
+              >
+                Restore these {matches.length} structures
               </button>
-            ))}
-          </div>
+              <output>
+                {matches.length} of {removed.length} removed structures match.
+                Group restoration can be undone in one step.
+              </output>
+            </div>
+            <div className="dissection-tray-list">
+              {matches.map((s) => (
+                <button
+                  type="button"
+                  key={s.id}
+                  onClick={() => onRestore(s.id)}
+                >
+                  <span>{s.name}</span>
+                  <small>Restore</small>
+                </button>
+              ))}
+              {!matches.length && (
+                <p>
+                  No removed structures match. Clear the search or choose
+                  another system.
+                </p>
+              )}
+            </div>
+          </>
         ) : (
           <p>
             No structures removed. System switches are separate from dissection

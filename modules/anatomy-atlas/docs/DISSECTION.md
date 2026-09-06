@@ -1,6 +1,6 @@
 # Guided dissection architecture and review
 
-For the current 97-stage / 79-focus catalogue see [connective/deep-spinal detail](AXIAL_DETAIL.md). Earlier counts below are historical milestones. Focus rules now separate exact target IDs from optional `context` rules; with `includeSkeleton: false`, only named context is restored. Focus and its corresponding window use the same rule union and still intersect regional/side scope. No clinical connectivity or physical attachment is encoded by this visibility relationship.
+For the current 102-stage / 84-focus catalogue and its newly separated regional layer sequences, independent windows, transition previews and searchable/batch-restorable tray, see [regional dissection workbench](DISSECTION_WORKBENCH.md). Earlier counts below are historical milestones. Focus rules now separate exact target IDs from optional `context` rules; with `includeSkeleton: false`, only named context is restored. Focus and its corresponding window use the same rule union and still intersect regional/side scope. No clinical connectivity or physical attachment is encoded by this visibility relationship.
 
 ## Product structure
 

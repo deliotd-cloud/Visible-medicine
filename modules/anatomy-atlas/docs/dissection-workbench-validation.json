@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "checks": 70927,
+  "catalogueStructures": 924,
+  "catalogSha256": "9b2cb3eb0b530491c9a4d0f54c4d89058e14f7475f05597f4babf9fb3ea8bdc7",
+  "regions": [
+    {
+      "region": "whole-body",
+      "layerSteps": 0,
+      "studyWindows": 7,
+      "focusedViews": 2
+    },
+    {
+      "region": "shoulder-arm",
+      "layerSteps": 4,
+      "studyWindows": 3,
+      "focusedViews": 6
+    },
+    {
+      "region": "forearm",
+      "layerSteps": 5,
+      "studyWindows": 2,
+      "focusedViews": 6
+    },
+    {
+      "region": "hand",
+      "layerSteps": 3,
+      "studyWindows": 4,
+      "focusedViews": 7
+    },
+    {
+      "region": "thigh",
+      "layerSteps": 6,
+      "studyWindows": 2,
+      "focusedViews": 7
+    },
+    {
+      "region": "leg",
+      "layerSteps": 4,
+      "studyWindows": 3,
+      "focusedViews": 7
+    },
+    {
+      "region": "foot",
+      "layerSteps": 5,
+      "studyWindows": 2,
+      "focusedViews": 6
+    },
+    {
+      "region": "thorax",
+      "layerSteps": 4,
+      "studyWindows": 6,
+      "focusedViews": 7
+    },
+    {
+      "region": "abdomen",
+      "layerSteps": 3,
+      "studyWindows": 5,
+      "focusedViews": 7
+    },
+    {
+      "region": "pelvis",
+      "layerSteps": 4,
+      "studyWindows": 3,
+      "focusedViews": 4
+    },
+    {
+      "region": "head-neck",
+      "layerSteps": 4,
+      "studyWindows": 13,
+      "focusedViews": 18
+    },
+    {
+      "region": "spine",
+      "layerSteps": 5,
+      "studyWindows": 5,
+      "focusedViews": 7
+    }
+  ],
+  "sourceGeometryChanged": false,
+  "clinicalValidation": false,
+  "browserInteractionTesting": false
+}

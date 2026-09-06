@@ -353,6 +353,11 @@ export default function BodyExplorer({
     [applySelection, publishSelection],
   );
   function changeStage(id: string) {
+    if (
+      exam ||
+      (id !== 'free' && !profile.stages.some((item) => item.id === id))
+    )
+      return;
     setInspection(initialInspection);
     dispatch(id === 'free' ? { type: 'free' } : { type: 'stage', id });
     setSystems(allBodySystems);
@@ -367,6 +372,7 @@ export default function BodyExplorer({
     setReset((n) => n + 1);
   }
   function changeFocus(id: string) {
+    if (exam || !profile.focuses.some((item) => item.id === id)) return;
     setInspection(initialInspection);
     dispatch({ type: 'focus', id });
     setSystems(allBodySystems);
@@ -386,9 +392,22 @@ export default function BodyExplorer({
     setZoom(1);
   }
   function restoreStructure(id: string) {
+    if (exam) return;
     dispatch({ type: 'restore', id });
     const s = catalog?.structures.find((s) => s.id === id);
     if (s) setSystems((prev) => ({ ...prev, [s.system]: true }));
+  }
+  function restoreStructures(ids: string[]) {
+    if (exam) return;
+    const requested = new Set(ids);
+    const allowed = resolved.removed.filter((item) => requested.has(item.id));
+    if (!allowed.length) return;
+    dispatch({ type: 'restore-many', ids: allowed.map((item) => item.id) });
+    setSystems((prev) => {
+      const next = { ...prev };
+      for (const item of allowed) next[item.system] = true;
+      return next;
+    });
   }
   function onSceneSelect(id: string) {
     if (exam) {
@@ -607,6 +626,7 @@ export default function BodyExplorer({
       removed={resolved.removed}
       visible={available}
       onRestore={restoreStructure}
+      onRestoreMany={restoreStructures}
       onSelect={select}
       customized={
         dissection.removed.length > 0 ||
@@ -771,6 +791,8 @@ export default function BodyExplorer({
             ghost={ghostRemoved}
             onGhost={setGhostRemoved}
             visibleCount={available.length}
+            structures={regionStructures}
+            visibleIds={available.map((item) => item.id)}
             disabled={exam}
           />
           <InspectionControls

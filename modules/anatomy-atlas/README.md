@@ -1,5 +1,9 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Regional dissection workspaces
+
+Every individual regional explorer now separates **Layer by layer** from independent **Study windows**. Follow named removal steps, preview the exact structures a step will hide or restore, then use the searchable, system-filtered removed-tissue tray to restore one structure or a group with one-step undo. The existing 102 recipes are organised as 47 regional layer steps and 55 independent views (including whole-body comparisons); no new or missing tissue is implied. Existing 84 focused views, ghosts, selection, saved views and imaging IDs are retained. See [dissection workbench](docs/DISSECTION_WORKBENCH.md).
+
 ## Dental and orbital close-ups
 
 The atlas now contains **924 body entries**. Open **Head & neck → Guided dissection** for **Teeth & jaws**, separate upper/lower tooth surfaces, **Orbital rings & rectus muscles**, or **Superior oblique & trochlea**. These five windows add 28 individually selectable source teeth and four orbital connective structures, with ivory tooth materials, draft notes and existing study/practice controls. All previous anatomy is preserved. No clinical tooth numbering, internal tooth layers, third molars or validated orbital attachments are supplied. See [source evidence and validation gates](docs/HEAD_DETAIL.md).
@@ -52,7 +56,7 @@ The expanded source library contains **924 selectable entries**: 203 skeletal, 3
 
 **Nervous-system scope:** brain aggregate, 22 selected deep-brain entries, 28 selected cranial/orbital nerve entries, two ciliary ganglia and a central-canal representation. No complete spinal cord, limb peripheral nerves, brachial plexus or lumbosacral plexus is included. The source ambiguously maps spinal cord and central canal to the same mesh; the narrower central-canal identity is used. Four candidate muscle entries with source laterality/position discrepancies were quarantined, not automatically relabelled. See `docs/FULL_BODY_COVERAGE.md`.
 
-The full-body catalogue is split into 71 lazy-loaded regional/system GLB bundles. Whole-body initially loads bones; regional pages open with their assembled available anatomy. Other bundles load on demand. An organs-only or nerves-only view automatically reframes to the visible anatomy, and a selected structure can be framed individually. The entire expanded body asset set is about 92.91 MB uncompressed; network transfer and device memory depend on the chosen regions/systems. These assets introduce no new dependencies or paid services.
+The full-body catalogue is split into 73 lazy-loaded regional/system GLB bundles. Whole-body initially loads bones; regional pages open with their assembled available anatomy. Other bundles load on demand. An organs-only or nerves-only view automatically reframes to the visible anatomy, and a selected structure can be framed individually. The entire expanded body asset set is about 93.70 MB uncompressed; network transfer and device memory depend on the chosen regions/systems. These assets introduce no new dependencies or paid services.
 
 ## Guided regional dissection
 

@@ -1190,6 +1190,7 @@ export type DissectionAction =
   | { type: 'stage'; id: string }
   | { type: 'focus'; id: string }
   | { type: 'remove' | 'restore'; id: string }
+  | { type: 'restore-many'; ids: string[] }
   | { type: 'undo' | 'reset' | 'free' };
 export function dissectionReducer(
   state: DissectionState,
@@ -1227,6 +1228,15 @@ export function dissectionReducer(
       removed: state.removed.filter((id) => id !== action.id),
       restored: [...new Set([...state.restored, action.id])],
     };
+  if (action.type === 'restore-many') {
+    const ids = new Set(action.ids);
+    if (!ids.size) return state;
+    next = {
+      ...snapshot,
+      removed: state.removed.filter((id) => !ids.has(id)),
+      restored: [...new Set([...state.restored, ...ids])],
+    };
+  }
   return { ...next, history: [...history, snapshot].slice(-40) };
 }
 export function resolveDissection(

@@ -19,6 +19,7 @@
     "axial:test": "node scripts/validate-axial-anatomy.mjs",
     "head-detail:test": "node scripts/validate-head-detail.mjs",
     "practice:test": "node scripts/validate-practice.mjs",
+    "dissection-workbench:test": "node scripts/validate-dissection-workbench.mjs",
     "db:generate": "drizzle-kit generate",
     "db:local": "wrangler d1 migrations apply DB --local --config wrangler.review-local.jsonc",
     "start": "wrangler dev --config dist/server/wrangler.json",

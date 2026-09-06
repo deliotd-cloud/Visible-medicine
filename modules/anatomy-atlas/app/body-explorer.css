@@ -1797,3 +1797,197 @@
     animation-duration: 0s !important;
   }
 }
+
+/* Regional dissection: original VM controls, not an operative-depth claim. */
+.dissection-deck {
+  border-color: #bddad6;
+  background: linear-gradient(115deg, #fff, #f2f9f7);
+  color: var(--vm-ink, #002631);
+}
+.dissection-modes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.dissection-modes button {
+  border: 1px solid #bddad6;
+  border-radius: 6px;
+  padding: 8px 12px;
+  min-height: 44px;
+  font-size: 14px;
+  color: var(--vm-ink, #002631);
+  background: #fff;
+}
+.dissection-modes small {
+  margin-left: 8px;
+  color: #5d7477;
+}
+.dissection-modes [aria-pressed='true'] {
+  background: var(--vm-ink, #002631);
+  color: #fff;
+  border-color: var(--vm-ink, #002631);
+}
+.dissection-modes [aria-pressed='true'] small {
+  color: #81e4d8;
+}
+.dissection-mode-note {
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #5d7477;
+  margin: 8px 0;
+}
+.dissection-layer-track {
+  display: flex;
+  overflow-x: auto;
+  gap: 6px;
+  list-style: none;
+  margin: 10px 0;
+  padding: 2px 2px 8px;
+  scrollbar-width: thin;
+}
+.dissection-layer-track li {
+  flex: 1 0 132px;
+}
+.dissection-layer-track button {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  align-content: start;
+  gap: 4px 6px;
+  width: 100%;
+  height: 100%;
+  min-height: 76px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #bddad6;
+  background: #fff;
+  color: #002631;
+  text-align: left;
+}
+.dissection-layer-track button > span {
+  border-radius: 50%;
+  background: #e4f3ef;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+}
+.dissection-layer-track strong {
+  font-size: 12px;
+  line-height: 1.45;
+}
+.dissection-layer-track small {
+  grid-column: 2;
+  color: #5d7477;
+  font-size: 11px;
+}
+.dissection-layer-track .current {
+  border-color: #098578;
+  box-shadow: inset 0 -3px #16c6b2;
+  background: #eaf8f4;
+}
+.dissection-layer-track .current > span {
+  background: #002631;
+  color: #fff;
+}
+.dissection-preview {
+  margin: 6px 0 12px;
+  border-block: 1px solid #bddad6;
+  font-size: 13px;
+  color: #002631;
+}
+.dissection-preview summary {
+  cursor: pointer;
+  padding: 10px 2px;
+  min-height: 44px;
+}
+.dissection-preview summary > span {
+  display: block;
+  color: #5d7477;
+  margin-top: 3px;
+}
+.dissection-preview p {
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 8px 0;
+}
+.dissection-preview ul {
+  max-height: 150px;
+  overflow: auto;
+  padding: 6px 22px;
+  list-style: disc;
+  line-height: 1.6;
+}
+.dissection-preview > button {
+  margin: 10px 0;
+  min-height: 44px;
+}
+.dissection-removed > .dissection-tray-filters {
+  max-height: none;
+  overflow: visible;
+}
+.dissection-tray-filters input,
+.dissection-tray-filters select {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  border: 1px solid #bddad6;
+  border-radius: 6px;
+  padding: 8px;
+  margin: 6px 0;
+  background: #fff;
+  color: #002631;
+  font-size: 14px;
+}
+.dissection-tray-filters button {
+  min-height: 44px;
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: #eaf8f4;
+  color: #002631;
+}
+.dissection-tray-filters output {
+  display: block;
+  margin: 8px 0;
+  line-height: 1.5;
+  font-size: 12px;
+  color: #5d7477;
+}
+.dissection-tray-list button {
+  min-height: 44px;
+}
+.dissection-deck button:disabled,
+.dissection-tray-filters button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.dissection-deck button:focus-visible,
+.dissection-preview summary:focus-visible,
+.dissection-removed :is(input, select, button):focus-visible {
+  outline: 3px solid #098578;
+  outline-offset: 2px;
+}
+.dissection-step-row > [data-slot='select-trigger'] {
+  width: auto;
+  flex: 1 1 0;
+  min-height: 44px;
+}
+.dissection-step-row > button[aria-label='Previous dissection stage'],
+.dissection-step-row > button[aria-label='Next dissection stage'] {
+  width: 44px;
+  height: 44px;
+}
+@media (max-width: 700px) {
+  .dissection-modes button {
+    flex: 1;
+    padding-inline: 7px;
+  }
+  .dissection-modes small {
+    display: block;
+    margin: 3px 0 0;
+  }
+  .dissection-layer-track li {
+    flex-basis: 145px;
+  }
+}
