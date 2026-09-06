@@ -23,6 +23,8 @@ import type { DissectionView } from './dissection-data';
 import { sectionPlanes, pointRetained } from '@/lib/inspection-geometry';
 import { systemOpacity, type InspectionState } from '@/lib/inspection-state';
 import type { StudyCamera } from '@/lib/study-views';
+import { neuroGroupFor } from '@/lib/neuroanatomy';
+import { sceneLabelEndpoint, sceneLabelIds } from '@/lib/scene-labels';
 
 type Props = {
   catalog: BodyCatalog;
@@ -61,6 +63,8 @@ const vectors = {
   superior: [0, 1, 0],
 };
 function colorFor(s: BodyStructure) {
+  const neuro = neuroGroupFor(s.fmaId);
+  if (neuro) return neuro.color;
   if (s.fmaId === 'FMA50801') return '#c3aaa1';
   if (s.system === 'vessels')
     return /vein|vena cava/.test(s.sourceName) ? '#577fba' : '#bf4847';
@@ -81,15 +85,19 @@ function Bundle({
   items,
   props,
   center,
-  radius,
   frame,
+  labelBounds,
+  labelIds,
+  renderedCount,
 }: {
   bundle: BodyCatalog['bundles'][number];
   items: BodyStructure[];
   props: Props;
   center: THREE.Vector3;
-  radius: number;
   frame: THREE.Box3;
+  labelBounds: { min: number[]; max: number[] };
+  labelIds: string[];
+  renderedCount: number;
 }) {
   const { scene } = useGLTF(bundle.url);
   const onLoaded = props.onLoaded;
@@ -126,16 +134,17 @@ function Bundle({
           e.stopPropagation();
           props.onSelect(structure.id);
         };
-        const labelIndex = props.landmarks.indexOf(structure.id);
-        const vertical = props.view === 'inferior' || props.view === 'superior';
-        const labelHeight =
-          radius * 0.5 - Math.floor(Math.max(0, labelIndex) / 2) * radius * 0.3;
-        const end: [number, number, number] = [
-          center.x +
-            (labelIndex % 2 === 0 ? 1 : -1) * Math.min(radius * 0.8, 5),
-          vertical ? structure.anchor[1] : center.y + labelHeight,
-          vertical ? center.z + labelHeight : structure.anchor[2],
-        ];
+        const labelIndex = labelIds.indexOf(structure.id);
+        const end =
+          labelIndex >= 0
+            ? sceneLabelEndpoint(
+                labelBounds,
+                props.view,
+                labelIndex,
+                labelIds.length,
+                position.toArray(),
+              )
+            : structure.anchor;
         return (
           <group key={structure.id}>
             {props.showOrigins &&
@@ -172,7 +181,7 @@ function Bundle({
                   ghost={faded}
                   muscle={structure.system === 'muscles'}
                   illustrated={props.illustrated}
-                  outline={props.structures.length < 150 || selected}
+                  outline={renderedCount < 150 || selected}
                   opacity={opacity}
                   clippingPlanes={clippingPlanes}
                 />
@@ -185,7 +194,7 @@ function Bundle({
                   new THREE.Vector3(...structure.anchor).add(position),
                   clippingPlanes,
                 ) &&
-                (selected || labelIndex >= 0) && (
+                labelIndex >= 0 && (
                   <group>
                     <Line
                       points={[structure.anchor, end]}
@@ -252,7 +261,6 @@ export function BodyScene(props: Props) {
     return box;
   }, [props.structures]);
   const center = useMemo(() => frame.getCenter(new THREE.Vector3()), [frame]);
-  const radius = frame.getSize(new THREE.Vector3()).length() / 2;
   const bounds = useMemo(() => {
     let list = rendered.length ? rendered : props.structures;
     if (focusId) {
@@ -289,6 +297,13 @@ export function BodyScene(props: Props) {
   const bundles = props.catalog.bundles.filter((b) =>
     rendered.some((s) => s.bundle === b.id),
   );
+  const labelIds = sceneLabelIds(
+    props.selectedId,
+    props.landmarks,
+    rendered.filter((s) => !props.hiddenIds.includes(s.id)).map((s) => s.id),
+    props.focus,
+  );
+  const labelBounds = { min: bounds.min.toArray(), max: bounds.max.toArray() };
   return (
     <Canvas
       className="body-scene"
@@ -315,8 +330,10 @@ export function BodyScene(props: Props) {
               items={rendered.filter((s) => s.bundle === bundle.id)}
               props={props}
               center={center}
-              radius={radius}
               frame={frame}
+              labelBounds={labelBounds}
+              labelIds={labelIds}
+              renderedCount={rendered.length}
             />
           </Suspense>
         </AssetBoundary>

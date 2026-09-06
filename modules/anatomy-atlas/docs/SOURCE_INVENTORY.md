@@ -1,5 +1,7 @@
 # Full source inventory and third recovery milestone
 
+This document records the 859-entry inventory milestone. The current 881-entry catalogue and its additional deep-brain admission evidence are described in [Deep brain](DEEP_BRAIN.md); `content/source-inventory.json` is regenerated against the current catalogue. Historical counts below describe this milestone, not the latest whole-body total.
+
 ## What changed
 
 The atlas now contains **859 selectable source representations** in 66 body bundles, plus the separate unchanged nine-structure shoulder pilot. This milestone adds **36 entries in five new bundles (1,308,184 bytes)**. All 823 previously included entries retain every recorded field and all 61 prior body bundles retain their exact hashes. No source registration, shape, laterality or earlier public identity was changed. The additions use the same official BodyParts3D 4.0 archives and common coordinate transform.

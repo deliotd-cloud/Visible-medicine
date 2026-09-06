@@ -1,8 +1,14 @@
 # Expanded BodyParts3D commercial-use audit
 
+## Deep-brain extension — 6 September 2026
+
+Twenty-two additional concepts / 24 source components were retrieved from the same official IS-A v4 archive, producing one additional 1,866,940-byte GLB. The current body catalogue has 881 entries in 67 bundles (91.80 MB). All previous 859 records and 66 bundle hashes are preserved. CRC/size, SHA-256, exact-geometry fingerprints, laterality and common-frame bounding checks are recorded in `content/neuro-source-audit.json`; `docs/DEEP_BRAIN.md` explains adaptations and limitations. The official CC BY 4.0 grant was rechecked for this milestone. Attribution and indication-of-change obligations remain intact.
+
+Distinct display colours, authored short teaching summaries, visibility recipes and view-aligned label placement are application adaptations, not additional anatomical datasets. No textbook illustrations, prose passages, new fonts, textures, libraries, paid APIs or generated anatomical surfaces were imported. Teaching references are factual citations, not a claim to redistribute their protected material. Source correctness and clinical validation remain unproven.
+
 ## Inventory extension — 6 September 2026
 
-The official current archive licence was rechecked. The inventory extension adds 36 source representations (29 vessel segments, two ciliary ganglia and five organ/duct/airway representations) from the same official v4 archives, in five new bundles. All previous source entries and bundles are unchanged. The current body library has 859 entries and 66 bundles (89.94 MB). Source bounds, hashes, held candidates and transformations are documented in `docs/SOURCE_INVENTORY.md`.
+The official current archive licence was rechecked. The inventory extension added 36 source representations (29 vessel segments, two ciliary ganglia and five organ/duct/airway representations) from the same official v4 archives, in five new bundles. All previous source entries and bundles were unchanged. That milestone reached 859 entries and 66 bundles (89.94 MB). Source bounds, hashes, held candidates and transformations are documented in `docs/SOURCE_INVENTORY.md`.
 
 The four unmodified official v4 source-index tables are retained byte-for-byte in `LICENSES/bodyparts3d-v4-index/`, and the derived reconciliation is in `content/source-inventory.json`. These database-source tables and their adapted inventory retain CC BY 4.0 and DBCLS attribution; the application MIT licence does not relicense them. This is the archive's source-index subset, not a separately acquired full FMA ontology. No textbook table, diagram, new dependency, font, texture, generated anatomical mesh or paid service was added. The few new teaching summaries cite factual references without redistributing their tables or images. All anatomy remains unvalidated.
 

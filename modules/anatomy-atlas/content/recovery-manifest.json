@@ -1,7 +1,7 @@
 {
-  "version": 3,
+  "version": 4,
   "date": "2026-09-06",
-  "catalogSha256": "32b5a2c48595af0b5941dc00cf418728500198bb9c315b03e43db0167d03e316",
+  "catalogSha256": "ea8568e4f589879d181375d03ace013c6b119b957d2fa66fda81114628e0fd0b",
   "status": "unvalidated",
   "method": "licensed-source-recovery",
   "generatedAnatomicalMeshes": 0,
@@ -5144,6 +5144,410 @@
         }
       ],
       "coverageNote": "Reference appendix surface only; variation, wall layers and mesoappendix are not reconstructed. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+      "fmaId": "FMA72826",
+      "sourceName": "right caudate nucleus",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1802",
+          "sha256": "1139f3e7002704a0efcc1c9161ef2b84e60f28c18728e24664454451ae30bb17"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+      "fmaId": "FMA72827",
+      "sourceName": "left caudate nucleus",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1754",
+          "sha256": "c94a8fe0da8cd1ddb916a4f871b017a82bf1dbe5a60307cbc36baa9bf23324ec"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-putamen",
+      "fmaId": "FMA72828",
+      "sourceName": "right putamen",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1823",
+          "sha256": "6461f70dee31e6f17d87e1f9d79bc92b1cdccd41b7d90bb89b6f25589d27cfc8"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-putamen",
+      "fmaId": "FMA72829",
+      "sourceName": "left putamen",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1776",
+          "sha256": "20838a2fc79afe34dfd532151c174b9bb6afec6e5eda961e6dff6cd505b36a51"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+      "fmaId": "FMA72830",
+      "sourceName": "right globus pallidus",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1805",
+          "sha256": "c89453826d4617211ca58a6ce11bc63904a571d594d3d073cfb3a53c7672a9be"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+      "fmaId": "FMA72831",
+      "sourceName": "left globus pallidus",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1757",
+          "sha256": "f1519d79c632403ab669d8ffa8f6c72ce50dc57bc58b3fa54b155f292db20488"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+      "fmaId": "FMA72832",
+      "sourceName": "right amygdala",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1829",
+          "sha256": "f53fab3de8ac6b90a2c956e8ccac9b949d9adc32b843070712f12c9ad1b18e92"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+      "fmaId": "FMA72833",
+      "sourceName": "left amygdala",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1753",
+          "sha256": "1a557cc879fa71c1e5a5681caf4e7506418c479c29171b48a959a1d5a69e1425"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+      "fmaId": "FMA258714",
+      "sourceName": "right thalamus",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1827",
+          "sha256": "a4b5be59d7cf6dc3ca1b2ae97a83ffd947e39493cc663c2cb7d65a064af91b1d"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+      "fmaId": "FMA258716",
+      "sourceName": "left thalamus",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1782",
+          "sha256": "6e6e87e4feda05756e8748a61febdb2fe61d4ba834fd5a57d805512d9fcd82cc"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+      "fmaId": "FMA73303",
+      "sourceName": "right lateral geniculate body",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1813",
+          "sha256": "6e8ba825eda0abc96cc435380772b3734b9b0432124d78f3c41f01185f3a7614"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+      "fmaId": "FMA73304",
+      "sourceName": "left lateral geniculate body",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1766",
+          "sha256": "06bfe642952f6fbc090e4dfd7de69090ad443e0f38bfc1a5f87d5accb6e1ccfc"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+      "fmaId": "FMA73309",
+      "sourceName": "right medial geniculate body",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1816",
+          "sha256": "d851d4d2363d6469fbff4c1f7009e743425bce74ec6e8ff599ee3aef4289bf42"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+      "fmaId": "FMA73310",
+      "sourceName": "left medial geniculate body",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1816M",
+          "sha256": "4db95663f23f9196403d7227d8844b82a8faaaf4ff5146f8c27ec2120d97f117"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+      "fmaId": "FMA72924",
+      "sourceName": "right fornix of forebrain",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1804",
+          "sha256": "d18c04db4ad5e495310fc7f0fde79c9e2bfbcccb78e4169f7bdbe74b193b77a6"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+      "fmaId": "FMA72925",
+      "sourceName": "left fornix of forebrain",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1756",
+          "sha256": "ecfe3a87d95ee1a7ad39bd742935dd3eeb4ab94ecdc7895d55e8b308b37e6fa4"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+      "fmaId": "FMA61961",
+      "sourceName": "anterior commissure",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1734",
+          "sha256": "a0fc9182e8598fe9640223af8f323aa95c607bedc4f5d085f03df821d8792832"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+      "fmaId": "FMA61970",
+      "sourceName": "commissure of fornix of forebrain",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1741",
+          "sha256": "ad64cdc4effe097467b438b820a50ce2eb76440ac89112705e326d45386625bc"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+      "fmaId": "FMA62072",
+      "sourceName": "posterior commissure",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1799",
+          "sha256": "1b8e46294f95f1b68d03a2ca1ce73447b210a7c2b0c3cbb8bde1e836268bfddc"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+      "fmaId": "FMA86464",
+      "sourceName": "corpus callosum",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1742",
+          "sha256": "3f46359c2a23499ac130bd27646309f7974d216f9d55320b503e3b0844da9a70"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+      "fmaId": "FMA61934",
+      "sourceName": "choroid plexus of cerebral hemisphere",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1755",
+          "sha256": "221d1889dbb2d850c6da56c0cdd1b1d4581ac845dd55c96e68a594c33a1742dc"
+        },
+        {
+          "file": "FJ1803",
+          "sha256": "a950a761098cf6d80c09c7133ce0c0044598c64682c0a0825f6bbd4b23892dc3"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. The source definition groups left and right components; they are not separately labelled here. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+      "fmaId": "FMA74877",
+      "sourceName": "mammillary body",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "nerves",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1768",
+          "sha256": "21310504243fa2108ba658a96a1a60bac752ee6308c591a86831565c40f7a331"
+        },
+        {
+          "file": "FJ1815",
+          "sha256": "661457abdb95fab49bfddaddefae5f05f5c77d501d9c370a03d29c9181094379"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. The source definition groups left and right components; they are not separately labelled here. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
     }
   ]
 }

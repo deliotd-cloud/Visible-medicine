@@ -1,7 +1,7 @@
 {
   "version": 1,
   "reviewStatus": "draft-unvalidated",
-  "catalogSha256": "32b5a2c48595af0b5941dc00cf418728500198bb9c315b03e43db0167d03e316",
+  "catalogSha256": "ea8568e4f589879d181375d03ace013c6b119b957d2fa66fda81114628e0fd0b",
   "profiles": [
     {
       "region": "whole-body",
@@ -884,7 +884,29 @@
             "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
             "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
             "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
-            "vm:anatomy:body:abdomen:unpaired:organ:appendix"
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+            "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+            "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+            "vm:anatomy:body:head-neck:right:organ:right-putamen",
+            "vm:anatomy:body:head-neck:left:organ:left-putamen",
+            "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+            "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+            "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+            "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+            "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+            "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+            "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+            "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+            "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+            "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+            "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+            "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
           ]
         },
         {
@@ -1591,7 +1613,29 @@
             "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
             "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve",
             "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
-            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion"
+            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+            "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+            "vm:anatomy:body:head-neck:right:organ:right-putamen",
+            "vm:anatomy:body:head-neck:left:organ:left-putamen",
+            "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+            "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+            "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+            "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+            "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+            "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+            "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+            "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+            "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+            "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+            "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+            "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
           ]
         },
         {
@@ -10056,10 +10100,12 @@
       "limitations": [
         "Facial coverage is incomplete; meninges and most cranial nerves are absent. Selected neck and intracranial vessel segments are available.",
         "Compound eyeballs are included, but no full orbital-layer, cranial-base or neck-fascia dissection is supplied.",
-        "Cranial windows hide bone; they do not cut a skull flap."
+        "Cranial windows hide bone; they do not cut a skull flap.",
+        "Deep-brain entries are unvalidated source surfaces. Colours identify study groups, not histology or MRI signal. The two-component choroid-plexus and mammillary records remain grouped across sides."
       ],
       "references": [
-        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html"
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://nba.uth.tmc.edu/neuroanatomy/L10/Lab10p18_index.html"
       ],
       "stages": [
         {
@@ -10275,7 +10321,29 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
             "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
             "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
-            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion"
+            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+            "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+            "vm:anatomy:body:head-neck:right:organ:right-putamen",
+            "vm:anatomy:body:head-neck:left:organ:left-putamen",
+            "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+            "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+            "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+            "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+            "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+            "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+            "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+            "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+            "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+            "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+            "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+            "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
           ]
         },
         {
@@ -10500,7 +10568,29 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
             "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
             "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
-            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion"
+            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+            "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+            "vm:anatomy:body:head-neck:right:organ:right-putamen",
+            "vm:anatomy:body:head-neck:left:organ:left-putamen",
+            "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+            "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+            "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+            "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+            "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+            "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+            "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+            "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+            "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+            "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+            "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+            "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
           ]
         },
         {
@@ -10724,7 +10814,29 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
             "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
             "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
-            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion"
+            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+            "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+            "vm:anatomy:body:head-neck:right:organ:right-putamen",
+            "vm:anatomy:body:head-neck:left:organ:left-putamen",
+            "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+            "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+            "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+            "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+            "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+            "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+            "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+            "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+            "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+            "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+            "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+            "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
           ]
         },
         {
@@ -10776,7 +10888,29 @@
             "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
             "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve",
             "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
-            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion"
+            "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+            "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+            "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+            "vm:anatomy:body:head-neck:right:organ:right-putamen",
+            "vm:anatomy:body:head-neck:left:organ:left-putamen",
+            "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+            "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+            "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+            "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+            "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+            "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+            "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+            "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+            "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+            "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+            "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+            "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
           ]
         },
         {
@@ -11112,6 +11246,156 @@
             "vm:anatomy:body:head-neck:left:organ:left-submandibular-gland",
             "vm:anatomy:body:head-neck:right:organ:right-sublingual-gland",
             "vm:anatomy:body:head-neck:left:organ:left-sublingual-gland"
+          ]
+        },
+        {
+          "id": "deep-brain",
+          "title": "Deep-brain overview",
+          "description": "Hide the skull and the existing brain aggregate to expose the supplied deep-brain structures. Colours distinguish study groups, not MRI signal or actual tissue colour.",
+          "only": [
+            {
+              "systems": [
+                "nerves"
+              ],
+              "fmaIds": [
+                "FMA72826",
+                "FMA72827",
+                "FMA72828",
+                "FMA72829",
+                "FMA72830",
+                "FMA72831",
+                "FMA258714",
+                "FMA258716",
+                "FMA72832",
+                "FMA72833",
+                "FMA73303",
+                "FMA73304",
+                "FMA73309",
+                "FMA73310",
+                "FMA72924",
+                "FMA72925",
+                "FMA61961",
+                "FMA61970",
+                "FMA62072",
+                "FMA86464",
+                "FMA61934",
+                "FMA74877"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "caudate nucleus",
+            "thalamus",
+            "putamen"
+          ],
+          "inspect": "Compare the paired source surfaces and midline structures. Ghost removed tissues can restore the outer reference context; it may obscure small structures.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+            "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+            "vm:anatomy:body:head-neck:right:organ:right-putamen",
+            "vm:anatomy:body:head-neck:left:organ:left-putamen",
+            "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+            "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+            "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+            "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+            "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+            "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+            "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+            "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+            "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+            "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+            "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+            "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
+          ]
+        },
+        {
+          "id": "basal-nuclei",
+          "title": "Basal nuclei & thalami",
+          "description": "Study the supplied caudate, putamen, pallidal and thalamic surfaces without overlying cortex or skull.",
+          "only": [
+            {
+              "systems": [
+                "nerves"
+              ],
+              "fmaIds": [
+                "FMA72826",
+                "FMA72827",
+                "FMA72828",
+                "FMA72829",
+                "FMA72830",
+                "FMA72831",
+                "FMA258714",
+                "FMA258716"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "caudate nucleus",
+            "putamen",
+            "globus pallidus"
+          ],
+          "inspect": "Compare putamen and pallidum, then rotate towards the thalami. Internal capsule, individual thalamic nuclei and the complete basal-ganglia circuit are not separately shown.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+            "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+            "vm:anatomy:body:head-neck:right:organ:right-putamen",
+            "vm:anatomy:body:head-neck:left:organ:left-putamen",
+            "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+            "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+            "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+            "vm:anatomy:body:head-neck:left:organ:left-thalamus"
+          ]
+        },
+        {
+          "id": "limbic-detail",
+          "title": "Limbic & commissural detail",
+          "description": "Inspect selected limbic and commissural source surfaces with the outer brain hidden.",
+          "only": [
+            {
+              "systems": [
+                "nerves"
+              ],
+              "fmaIds": [
+                "FMA72832",
+                "FMA72833",
+                "FMA72924",
+                "FMA72925",
+                "FMA61961",
+                "FMA61970",
+                "FMA62072",
+                "FMA86464",
+                "FMA74877"
+              ]
+            }
+          ],
+          "view": "left",
+          "landmarks": [
+            "corpus callosum",
+            "^(right|left) fornix",
+            "mammillary body"
+          ],
+          "inspect": "Compare the callosal arch, fornix and mammillary surfaces. This is a spatial selection, not a complete limbic circuit or a tractography reconstruction.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+            "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+            "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+            "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
           ]
         }
       ],
@@ -11502,6 +11786,217 @@
             "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-lateral-rectus",
             "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-medial-rectus",
             "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-medial-rectus"
+          ]
+        },
+        {
+          "id": "deep-brain",
+          "title": "Deep-brain overview",
+          "rule": {
+            "systems": [
+              "nerves"
+            ],
+            "fmaIds": [
+              "FMA72826",
+              "FMA72827",
+              "FMA72828",
+              "FMA72829",
+              "FMA72830",
+              "FMA72831",
+              "FMA258714",
+              "FMA258716",
+              "FMA72832",
+              "FMA72833",
+              "FMA73303",
+              "FMA73304",
+              "FMA73309",
+              "FMA73310",
+              "FMA72924",
+              "FMA72925",
+              "FMA61961",
+              "FMA61970",
+              "FMA62072",
+              "FMA86464",
+              "FMA61934",
+              "FMA74877"
+            ]
+          },
+          "view": "anterior",
+          "includeSkeleton": false,
+          "description": "Hide the skull and the existing brain aggregate to expose the supplied deep-brain structures. Colours distinguish study groups, not MRI signal or actual tissue colour.",
+          "inspect": "Compare the paired source surfaces and midline structures. Ghost removed tissues can restore the outer reference context; it may obscure small structures.",
+          "landmarks": [
+            "caudate nucleus",
+            "thalamus",
+            "putamen"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+            "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+            "vm:anatomy:body:head-neck:right:organ:right-putamen",
+            "vm:anatomy:body:head-neck:left:organ:left-putamen",
+            "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+            "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+            "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+            "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+            "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+            "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+            "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+            "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+            "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+            "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+            "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+            "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
+          ]
+        },
+        {
+          "id": "basal-nuclei",
+          "title": "Basal nuclei & thalami",
+          "rule": {
+            "systems": [
+              "nerves"
+            ],
+            "fmaIds": [
+              "FMA72826",
+              "FMA72827",
+              "FMA72828",
+              "FMA72829",
+              "FMA72830",
+              "FMA72831",
+              "FMA258714",
+              "FMA258716"
+            ]
+          },
+          "view": "anterior",
+          "includeSkeleton": false,
+          "description": "Study the supplied caudate, putamen, pallidal and thalamic surfaces without overlying cortex or skull.",
+          "inspect": "Compare putamen and pallidum, then rotate towards the thalami. Internal capsule, individual thalamic nuclei and the complete basal-ganglia circuit are not separately shown.",
+          "landmarks": [
+            "caudate nucleus",
+            "putamen",
+            "globus pallidus"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+            "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+            "vm:anatomy:body:head-neck:right:organ:right-putamen",
+            "vm:anatomy:body:head-neck:left:organ:left-putamen",
+            "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+            "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+            "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+            "vm:anatomy:body:head-neck:left:organ:left-thalamus"
+          ]
+        },
+        {
+          "id": "limbic-detail",
+          "title": "Limbic & commissural detail",
+          "rule": {
+            "systems": [
+              "nerves"
+            ],
+            "fmaIds": [
+              "FMA72832",
+              "FMA72833",
+              "FMA72924",
+              "FMA72925",
+              "FMA61961",
+              "FMA61970",
+              "FMA62072",
+              "FMA86464",
+              "FMA74877"
+            ]
+          },
+          "view": "left",
+          "includeSkeleton": false,
+          "description": "Inspect selected limbic and commissural source surfaces with the outer brain hidden.",
+          "inspect": "Compare the callosal arch, fornix and mammillary surfaces. This is a spatial selection, not a complete limbic circuit or a tractography reconstruction.",
+          "landmarks": [
+            "corpus callosum",
+            "^(right|left) fornix",
+            "mammillary body"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+            "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+            "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+            "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+            "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
+          ]
+        },
+        {
+          "id": "geniculate-detail",
+          "title": "Geniculate bodies & thalami",
+          "rule": {
+            "systems": [
+              "nerves"
+            ],
+            "fmaIds": [
+              "FMA258714",
+              "FMA258716",
+              "FMA73303",
+              "FMA73304",
+              "FMA73309",
+              "FMA73310"
+            ]
+          },
+          "view": "posterior",
+          "includeSkeleton": false,
+          "description": "Compare the paired source-labelled visual and auditory relay bodies with the thalamic surfaces.",
+          "inspect": "Select each body to compare its identity and position. Optic and auditory radiations are not supplied by this view.",
+          "landmarks": [
+            "lateral geniculate",
+            "medial geniculate"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+            "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+            "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+            "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+            "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body"
+          ]
+        },
+        {
+          "id": "choroid-context",
+          "title": "Choroid plexus & fornix",
+          "rule": {
+            "systems": [
+              "nerves"
+            ],
+            "fmaIds": [
+              "FMA258714",
+              "FMA258716",
+              "FMA72924",
+              "FMA72925",
+              "FMA86464",
+              "FMA61934"
+            ]
+          },
+          "view": "superior",
+          "includeSkeleton": false,
+          "description": "Show the paired cerebral choroid-plexus source group with selected nearby reference structures.",
+          "inspect": "The empty spaces are not a validated ventricular lumen. This view does not show cerebrospinal-fluid flow or establish clinical ventricular dimensions.",
+          "landmarks": [
+            "choroid plexus",
+            "^(right|left) fornix",
+            "corpus callosum"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+            "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+            "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+            "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+            "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere"
           ]
         }
       ]

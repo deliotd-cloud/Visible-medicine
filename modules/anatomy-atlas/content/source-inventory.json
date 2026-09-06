@@ -3,7 +3,7 @@
   "sourceVersion": "4.0",
   "license": "CC-BY-4.0",
   "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
-  "catalogSha256": "32b5a2c48595af0b5941dc00cf418728500198bb9c315b03e43db0167d03e316",
+  "catalogSha256": "ea8568e4f589879d181375d03ace013c6b119b957d2fa66fda81114628e0fd0b",
   "tables": [
     {
       "name": "isa_parts_list_e.txt",
@@ -60,12 +60,12 @@
     "uniqueConceptIds": 3432,
     "archiveEntries": 3492,
     "archiveEntriesWithoutConcept": 0,
-    "admittedStructures": 859,
+    "admittedStructures": 881,
     "statuses": {
-      "represented-not-selectable": 1677,
-      "unused-available": 1084,
-      "partly-represented": 200,
-      "admitted": 1243,
+      "represented-not-selectable": 1700,
+      "unused-available": 1040,
+      "partly-represented": 199,
+      "admitted": 1265,
       "held-source-review": 18,
       "admitted-other-definition": 51
     }
@@ -11942,12 +11942,14 @@
         "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-medial-rectus",
         "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament",
         "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+        "vm:anatomy:body:head-neck:left:organ:left-thalamus",
         "vm:anatomy:body:head-neck:midline:ligament:median-cricothyroid-ligament",
         "vm:anatomy:body:head-neck:midline:organ:brain",
         "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-lateral-rectus",
         "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-medial-rectus",
         "vm:anatomy:body:head-neck:right:ligament:right-vocal-ligament",
         "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+        "vm:anatomy:body:head-neck:right:organ:right-thalamus",
         "vm:anatomy:body:pelvis:left:organ:left-seminal-vesicle",
         "vm:anatomy:body:pelvis:right:organ:right-seminal-vesicle",
         "vm:anatomy:body:thorax:left:cartilage:left-fifth-costal-cartilage",
@@ -37325,7 +37327,26 @@
         "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
         "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
         "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+        "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+        "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+        "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+        "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-putamen",
+        "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
         "vm:anatomy:body:head-neck:midline:organ:brain",
+        "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+        "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+        "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+        "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+        "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+        "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+        "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-putamen",
         "vm:anatomy:body:head-neck:unpaired:organ:tongue"
       ],
       "unavailable": [],
@@ -53522,11 +53543,19 @@
         "vm:anatomy:body:head-neck:left:nerve:left-supratrochlear-nerve",
         "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve",
         "vm:anatomy:body:head-neck:left:nerve:superior-branch-of-left-oculomotor-nerve",
+        "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+        "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
         "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
         "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+        "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
         "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
+        "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-putamen",
         "vm:anatomy:body:head-neck:left:organ:left-sublingual-gland",
         "vm:anatomy:body:head-neck:left:organ:left-submandibular-gland",
+        "vm:anatomy:body:head-neck:left:organ:left-thalamus",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
@@ -53549,7 +53578,13 @@
         "vm:anatomy:body:head-neck:midline:ligament:thyro-epiglottic-ligament",
         "vm:anatomy:body:head-neck:midline:muscle:transverse-arytenoid",
         "vm:anatomy:body:head-neck:midline:muscle:uvular-muscle",
+        "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
         "vm:anatomy:body:head-neck:midline:organ:brain",
+        "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+        "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+        "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+        "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
         "vm:anatomy:body:head-neck:midline:vessel:anterior-communicating-artery",
         "vm:anatomy:body:head-neck:midline:vessel:basilar-artery",
         "vm:anatomy:body:head-neck:right:bone:right-inferior-nasal-concha",
@@ -53619,11 +53654,19 @@
         "vm:anatomy:body:head-neck:right:nerve:right-supratrochlear-nerve",
         "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
         "vm:anatomy:body:head-neck:right:nerve:superior-branch-of-right-oculomotor-nerve",
+        "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+        "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
         "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
         "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+        "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
         "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
+        "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-putamen",
         "vm:anatomy:body:head-neck:right:organ:right-sublingual-gland",
         "vm:anatomy:body:head-neck:right:organ:right-submandibular-gland",
+        "vm:anatomy:body:head-neck:right:organ:right-thalamus",
         "vm:anatomy:body:head-neck:right:vessel:right-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
         "vm:anatomy:body:head-neck:right:vessel:right-internal-carotid-artery",
@@ -54161,10 +54204,13 @@
         "FJ1754",
         "FJ1802"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+        "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -54177,10 +54223,13 @@
         "FJ1776",
         "FJ1823"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-putamen",
+        "vm:anatomy:body:head-neck:right:organ:right-putamen"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -54193,10 +54242,13 @@
         "FJ1757",
         "FJ1805"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+        "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -54209,10 +54261,13 @@
         "FJ1753",
         "FJ1829"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+        "vm:anatomy:body:head-neck:right:organ:right-amygdala"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA62514",
@@ -54463,10 +54518,12 @@
         "FJ1755",
         "FJ1803"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA242770"
@@ -54501,10 +54558,12 @@
       "files": [
         "FJ1734"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:midline:organ:anterior-commissure"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -54517,10 +54576,13 @@
         "FJ1756",
         "FJ1804"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA83865"
@@ -54534,10 +54596,12 @@
       "files": [
         "FJ1741"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -54724,10 +54788,13 @@
         "FJ1782",
         "FJ1827"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+        "vm:anatomy:body:head-neck:right:organ:right-thalamus"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -54825,10 +54892,12 @@
       "files": [
         "FJ1799"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:midline:organ:posterior-commissure"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA62445"
@@ -54859,10 +54928,13 @@
         "FJ1766",
         "FJ1813"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -54875,10 +54947,13 @@
         "FJ1816",
         "FJ1816M"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -55072,10 +55147,12 @@
       "files": [
         "FJ1799"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:midline:organ:posterior-commissure"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA62072"
@@ -55201,10 +55278,13 @@
         "FJ1753",
         "FJ1829"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+        "vm:anatomy:body:head-neck:right:organ:right-amygdala"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA61841",
@@ -57786,11 +57866,19 @@
         "vm:anatomy:body:head-neck:left:nerve:left-supratrochlear-nerve",
         "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve",
         "vm:anatomy:body:head-neck:left:nerve:superior-branch-of-left-oculomotor-nerve",
+        "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+        "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
         "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
         "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+        "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
         "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
+        "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-putamen",
         "vm:anatomy:body:head-neck:left:organ:left-sublingual-gland",
         "vm:anatomy:body:head-neck:left:organ:left-submandibular-gland",
+        "vm:anatomy:body:head-neck:left:organ:left-thalamus",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
@@ -57813,7 +57901,13 @@
         "vm:anatomy:body:head-neck:midline:ligament:thyro-epiglottic-ligament",
         "vm:anatomy:body:head-neck:midline:muscle:transverse-arytenoid",
         "vm:anatomy:body:head-neck:midline:muscle:uvular-muscle",
+        "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
         "vm:anatomy:body:head-neck:midline:organ:brain",
+        "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+        "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+        "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+        "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
         "vm:anatomy:body:head-neck:midline:vessel:anterior-communicating-artery",
         "vm:anatomy:body:head-neck:midline:vessel:basilar-artery",
         "vm:anatomy:body:head-neck:right:bone:right-inferior-nasal-concha",
@@ -57883,11 +57977,19 @@
         "vm:anatomy:body:head-neck:right:nerve:right-supratrochlear-nerve",
         "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
         "vm:anatomy:body:head-neck:right:nerve:superior-branch-of-right-oculomotor-nerve",
+        "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+        "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
         "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
         "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+        "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
         "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
+        "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-putamen",
         "vm:anatomy:body:head-neck:right:organ:right-sublingual-gland",
         "vm:anatomy:body:head-neck:right:organ:right-submandibular-gland",
+        "vm:anatomy:body:head-neck:right:organ:right-thalamus",
         "vm:anatomy:body:head-neck:right:vessel:right-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
         "vm:anatomy:body:head-neck:right:vessel:right-internal-carotid-artery",
@@ -63190,11 +63292,19 @@
         "vm:anatomy:body:head-neck:left:nerve:left-supratrochlear-nerve",
         "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve",
         "vm:anatomy:body:head-neck:left:nerve:superior-branch-of-left-oculomotor-nerve",
+        "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+        "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
         "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
         "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+        "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
         "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
+        "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-putamen",
         "vm:anatomy:body:head-neck:left:organ:left-sublingual-gland",
         "vm:anatomy:body:head-neck:left:organ:left-submandibular-gland",
+        "vm:anatomy:body:head-neck:left:organ:left-thalamus",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
@@ -63217,7 +63327,13 @@
         "vm:anatomy:body:head-neck:midline:ligament:thyro-epiglottic-ligament",
         "vm:anatomy:body:head-neck:midline:muscle:transverse-arytenoid",
         "vm:anatomy:body:head-neck:midline:muscle:uvular-muscle",
+        "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
         "vm:anatomy:body:head-neck:midline:organ:brain",
+        "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+        "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+        "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+        "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
         "vm:anatomy:body:head-neck:midline:vessel:anterior-communicating-artery",
         "vm:anatomy:body:head-neck:midline:vessel:basilar-artery",
         "vm:anatomy:body:head-neck:right:bone:right-inferior-nasal-concha",
@@ -63287,11 +63403,19 @@
         "vm:anatomy:body:head-neck:right:nerve:right-supratrochlear-nerve",
         "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
         "vm:anatomy:body:head-neck:right:nerve:superior-branch-of-right-oculomotor-nerve",
+        "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+        "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
         "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
         "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+        "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
         "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
+        "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-putamen",
         "vm:anatomy:body:head-neck:right:organ:right-sublingual-gland",
         "vm:anatomy:body:head-neck:right:organ:right-submandibular-gland",
+        "vm:anatomy:body:head-neck:right:organ:right-thalamus",
         "vm:anatomy:body:head-neck:right:vessel:right-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
         "vm:anatomy:body:head-neck:right:vessel:right-internal-carotid-artery",
@@ -66286,11 +66410,19 @@
         "vm:anatomy:body:head-neck:left:nerve:left-supratrochlear-nerve",
         "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve",
         "vm:anatomy:body:head-neck:left:nerve:superior-branch-of-left-oculomotor-nerve",
+        "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+        "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
         "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
         "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+        "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
         "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
+        "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-putamen",
         "vm:anatomy:body:head-neck:left:organ:left-sublingual-gland",
         "vm:anatomy:body:head-neck:left:organ:left-submandibular-gland",
+        "vm:anatomy:body:head-neck:left:organ:left-thalamus",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
@@ -66313,7 +66445,13 @@
         "vm:anatomy:body:head-neck:midline:ligament:thyro-epiglottic-ligament",
         "vm:anatomy:body:head-neck:midline:muscle:transverse-arytenoid",
         "vm:anatomy:body:head-neck:midline:muscle:uvular-muscle",
+        "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
         "vm:anatomy:body:head-neck:midline:organ:brain",
+        "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+        "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+        "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+        "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
         "vm:anatomy:body:head-neck:midline:vessel:anterior-communicating-artery",
         "vm:anatomy:body:head-neck:midline:vessel:basilar-artery",
         "vm:anatomy:body:head-neck:right:bone:right-inferior-nasal-concha",
@@ -66383,11 +66521,19 @@
         "vm:anatomy:body:head-neck:right:nerve:right-supratrochlear-nerve",
         "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
         "vm:anatomy:body:head-neck:right:nerve:superior-branch-of-right-oculomotor-nerve",
+        "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+        "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
         "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
         "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+        "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
         "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
+        "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-putamen",
         "vm:anatomy:body:head-neck:right:organ:right-sublingual-gland",
         "vm:anatomy:body:head-neck:right:organ:right-submandibular-gland",
+        "vm:anatomy:body:head-neck:right:organ:right-thalamus",
         "vm:anatomy:body:head-neck:right:vessel:right-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
         "vm:anatomy:body:head-neck:right:vessel:right-internal-carotid-artery",
@@ -66840,10 +66986,24 @@
         "FJ1823",
         "FJ1829"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+        "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+        "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+        "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-putamen",
+        "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+        "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+        "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+        "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+        "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-putamen"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -75893,10 +76053,12 @@
       "files": [
         "FJ1802"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -75908,10 +76070,12 @@
       "files": [
         "FJ1754"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -75923,10 +76087,12 @@
       "files": [
         "FJ1823"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-putamen",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-putamen"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -75938,10 +76104,12 @@
       "files": [
         "FJ1776"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-putamen",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-putamen"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -75953,10 +76121,12 @@
       "files": [
         "FJ1805"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -75968,10 +76138,12 @@
       "files": [
         "FJ1757"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -75983,10 +76155,12 @@
       "files": [
         "FJ1829"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-amygdala",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-amygdala"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -75998,10 +76172,12 @@
       "files": [
         "FJ1753"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-amygdala",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-amygdala"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -76047,10 +76223,12 @@
       "files": [
         "FJ1804"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -76062,10 +76240,12 @@
       "files": [
         "FJ1756"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -76203,10 +76383,12 @@
       "files": [
         "FJ1813"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -76218,10 +76400,12 @@
       "files": [
         "FJ1766"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -76233,10 +76417,12 @@
       "files": [
         "FJ1816"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -76248,10 +76434,12 @@
       "files": [
         "FJ1816M"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -76521,10 +76709,12 @@
         "FJ1768",
         "FJ1815"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA83912",
@@ -79650,6 +79840,7 @@
         "vm:anatomy:body:head-neck:left:nerve:superior-branch-of-left-oculomotor-nerve",
         "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
         "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+        "vm:anatomy:body:head-neck:left:organ:left-thalamus",
         "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
         "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
@@ -79659,6 +79850,7 @@
         "vm:anatomy:body:head-neck:left:vessel:left-vertebral-artery",
         "vm:anatomy:body:head-neck:midline:ligament:median-cricothyroid-ligament",
         "vm:anatomy:body:head-neck:midline:organ:brain",
+        "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
         "vm:anatomy:body:head-neck:midline:vessel:anterior-communicating-artery",
         "vm:anatomy:body:head-neck:midline:vessel:basilar-artery",
         "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-lateral-rectus",
@@ -79679,6 +79871,7 @@
         "vm:anatomy:body:head-neck:right:nerve:superior-branch-of-right-oculomotor-nerve",
         "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
         "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+        "vm:anatomy:body:head-neck:right:organ:right-thalamus",
         "vm:anatomy:body:head-neck:right:vessel:right-anterior-cerebral-artery",
         "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
         "vm:anatomy:body:head-neck:right:vessel:right-internal-carotid-artery",
@@ -80122,7 +80315,26 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:head-neck:midline:organ:brain"
+        "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+        "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+        "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+        "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-putamen",
+        "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+        "vm:anatomy:body:head-neck:midline:organ:brain",
+        "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+        "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+        "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+        "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+        "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+        "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+        "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-putamen"
       ],
       "unavailable": [],
       "sharedDefinitionWith": [
@@ -80182,7 +80394,26 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:head-neck:midline:organ:brain"
+        "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+        "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+        "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+        "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-putamen",
+        "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+        "vm:anatomy:body:head-neck:midline:organ:brain",
+        "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+        "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+        "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+        "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+        "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+        "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+        "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-putamen"
       ],
       "unavailable": [],
       "sharedDefinitionWith": [
@@ -80200,11 +80431,13 @@
         "FJ1808",
         "FJ1827"
       ],
-      "status": "partly-represented",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:head-neck:midline:organ:brain"
+        "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+        "vm:anatomy:body:head-neck:midline:organ:brain",
+        "vm:anatomy:body:head-neck:right:organ:right-thalamus"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -80230,10 +80463,13 @@
         "FJ1824",
         "FJ1825"
       ],
-      "status": "unused-available",
+      "status": "partly-represented",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -80275,10 +80511,21 @@
         "FJ1816M",
         "FJ1823"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+        "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+        "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-putamen",
+        "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+        "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+        "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-putamen"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA83840"
@@ -80343,10 +80590,21 @@
         "FJ1816M",
         "FJ1823"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+        "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+        "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-putamen",
+        "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+        "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+        "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-putamen"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA83686"
@@ -80434,10 +80692,13 @@
         "FJ1756",
         "FJ1804"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA61965"
@@ -80511,10 +80772,13 @@
         "FJ1741",
         "FJ1799"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:midline:organ:posterior-commissure"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -80527,10 +80791,12 @@
         "FJ1768",
         "FJ1815"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA74877",
@@ -80546,10 +80812,12 @@
         "FJ1768",
         "FJ1815"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA74877",
@@ -80587,7 +80855,11 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:head-neck:midline:organ:brain"
+        "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+        "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+        "vm:anatomy:body:head-neck:midline:organ:brain",
+        "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+        "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -80605,11 +80877,13 @@
         "FJ1758",
         "FJ1806"
       ],
-      "status": "partly-represented",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:head-neck:midline:organ:brain"
+        "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+        "vm:anatomy:body:head-neck:midline:organ:brain",
+        "vm:anatomy:body:head-neck:midline:organ:corpus-callosum"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -80662,10 +80936,13 @@
         "FJ1753",
         "FJ1829"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+        "vm:anatomy:body:head-neck:right:organ:right-amygdala"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA61841",
@@ -81458,6 +81735,7 @@
       "representedBy": [
         "vm:anatomy:body:head-neck:left:organ:left-eyeball",
         "vm:anatomy:body:head-neck:midline:organ:brain",
+        "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
         "vm:anatomy:body:head-neck:right:organ:right-eyeball",
         "vm:anatomy:body:spine:midline:space:central-canal-of-spinal-cord",
         "vm:anatomy:body:thorax:unpaired:organ:heart"
@@ -84264,10 +84542,12 @@
       "files": [
         "FJ1742"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:midline:organ:corpus-callosum"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -84385,10 +84665,23 @@
         "FJ1823",
         "FJ1829"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+        "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+        "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+        "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-putamen",
+        "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+        "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+        "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+        "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-putamen"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -84562,10 +84855,12 @@
         "FJ1755",
         "FJ1803"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA61934"
@@ -84704,10 +84999,15 @@
         "FJ1816",
         "FJ1816M"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+        "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -84719,10 +85019,12 @@
       "files": [
         "FJ1827"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:right:organ:right-thalamus",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-thalamus"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -84734,10 +85036,12 @@
       "files": [
         "FJ1782"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:head-neck:left:organ:left-thalamus",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-thalamus"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -137125,9 +137429,11 @@
       "available": true,
       "bytes": 48927,
       "crc32": 3399064721,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "a0fc9182e8598fe9640223af8f323aa95c607bedc4f5d085f03df821d8792832",
+      "geometrySha256": "805210b8f6c3019d1f8ae61cc2d1b222c348eb9fa3530bc085daf6acbab1fb5c",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:midline:organ:anterior-commissure"
+      ]
     },
     {
       "tree": "isa",
@@ -137203,9 +137509,11 @@
       "available": true,
       "bytes": 690704,
       "crc32": 3539719032,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "ad64cdc4effe097467b438b820a50ce2eb76440ac89112705e326d45386625bc",
+      "geometrySha256": "3a3df24e294264c99e70fc39f6491f4bb0557d785d71f89b9dee31a9cf0037db",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain"
+      ]
     },
     {
       "tree": "isa",
@@ -137213,9 +137521,11 @@
       "available": true,
       "bytes": 2128770,
       "crc32": 909159946,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "3f46359c2a23499ac130bd27646309f7974d216f9d55320b503e3b0844da9a70",
+      "geometrySha256": "77977208b9056b018f341cc03927aa47626bc01193fbba01009c428fee43d8b5",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:midline:organ:corpus-callosum"
+      ]
     },
     {
       "tree": "isa",
@@ -137341,9 +137651,11 @@
       "available": true,
       "bytes": 22629,
       "crc32": 4262683589,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "1a557cc879fa71c1e5a5681caf4e7506418c479c29171b48a959a1d5a69e1425",
+      "geometrySha256": "254cd5594fb75aca1585c50a2d5bab88d4201d30f2e854a494d8e98f1e7c8928",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-amygdala"
+      ]
     },
     {
       "tree": "isa",
@@ -137351,9 +137663,11 @@
       "available": true,
       "bytes": 156733,
       "crc32": 1720042835,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "c94a8fe0da8cd1ddb916a4f871b017a82bf1dbe5a60307cbc36baa9bf23324ec",
+      "geometrySha256": "f91cc7d83da41e424c1a297abd42e150ac6ec901143701aa89bbe7ea03a367f8",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus"
+      ]
     },
     {
       "tree": "isa",
@@ -137361,9 +137675,11 @@
       "available": true,
       "bytes": 337260,
       "crc32": 1235915700,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "221d1889dbb2d850c6da56c0cdd1b1d4581ac845dd55c96e68a594c33a1742dc",
+      "geometrySha256": "98cfe007856051fbd7964e3267c837833961bf2de3f71c4c48724eb098aefe80",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere"
+      ]
     },
     {
       "tree": "isa",
@@ -137371,9 +137687,11 @@
       "available": true,
       "bytes": 428396,
       "crc32": 1494067377,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "ecfe3a87d95ee1a7ad39bd742935dd3eeb4ab94ecdc7895d55e8b308b37e6fa4",
+      "geometrySha256": "033f34e45925d1c733ae2c11f36df93220ad804f6db7bd4d922697e7c7a131a1",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain"
+      ]
     },
     {
       "tree": "isa",
@@ -137381,9 +137699,11 @@
       "available": true,
       "bytes": 448013,
       "crc32": 1391768685,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "f1519d79c632403ab669d8ffa8f6c72ce50dc57bc58b3fa54b155f292db20488",
+      "geometrySha256": "e00a1e3d0dc4f871a13b27cf2aa701c1b69135b5f1966f9427a14c2cdb7a3ac5",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus"
+      ]
     },
     {
       "tree": "isa",
@@ -137469,9 +137789,11 @@
       "available": true,
       "bytes": 11864,
       "crc32": 1262755888,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "06bfe642952f6fbc090e4dfd7de69090ad443e0f38bfc1a5f87d5accb6e1ccfc",
+      "geometrySha256": "578d90a13787fbd92905030c627088c2d83177e37ca9b9f7b4432489fe143e94",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body"
+      ]
     },
     {
       "tree": "isa",
@@ -137491,9 +137813,11 @@
       "available": true,
       "bytes": 11629,
       "crc32": 2111231144,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "21310504243fa2108ba658a96a1a60bac752ee6308c591a86831565c40f7a331",
+      "geometrySha256": "23dbeac09922af741ecb4136e0ca31ad02f40dd1c0016b3954b144c13d6ea631",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
+      ]
     },
     {
       "tree": "isa",
@@ -137577,9 +137901,11 @@
       "available": true,
       "bytes": 454024,
       "crc32": 2437507640,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "20838a2fc79afe34dfd532151c174b9bb6afec6e5eda961e6dff6cd505b36a51",
+      "geometrySha256": "3554e955c475b8b70de49338326331df47adf5fcc366a5c99b33ae6a29f84ded",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-putamen"
+      ]
     },
     {
       "tree": "isa",
@@ -137643,9 +137969,11 @@
       "available": true,
       "bytes": 100051,
       "crc32": 2782342742,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "6e6e87e4feda05756e8748a61febdb2fe61d4ba834fd5a57d805512d9fcd82cc",
+      "geometrySha256": "945728661da9b87da02decfca5c76f8f98fa1e5bc9e948ab104760eca768ca0a",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-thalamus"
+      ]
     },
     {
       "tree": "isa",
@@ -137841,9 +138169,11 @@
       "available": true,
       "bytes": 49185,
       "crc32": 974155646,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "1b8e46294f95f1b68d03a2ca1ce73447b210a7c2b0c3cbb8bde1e836268bfddc",
+      "geometrySha256": "7122a072d6b92ae62545c2fed129c601e7f297005d2b78ffeaa4e4659a5d025b",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:midline:organ:posterior-commissure"
+      ]
     },
     {
       "tree": "isa",
@@ -137875,9 +138205,11 @@
       "available": true,
       "bytes": 159115,
       "crc32": 815946498,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "1139f3e7002704a0efcc1c9161ef2b84e60f28c18728e24664454451ae30bb17",
+      "geometrySha256": "694484a1555a46aee9d7c6510cf355c15df6f2dde86e65c93bfd5953a87f4c3b",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus"
+      ]
     },
     {
       "tree": "isa",
@@ -137885,9 +138217,11 @@
       "available": true,
       "bytes": 344942,
       "crc32": 2753313013,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "a950a761098cf6d80c09c7133ce0c0044598c64682c0a0825f6bbd4b23892dc3",
+      "geometrySha256": "6543c5f2d4d77935d43b9a8af64b2e9df9ff08074c3fe2ff08a26f05df0ecae5",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere"
+      ]
     },
     {
       "tree": "isa",
@@ -137895,9 +138229,11 @@
       "available": true,
       "bytes": 430203,
       "crc32": 2434891144,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "d18c04db4ad5e495310fc7f0fde79c9e2bfbcccb78e4169f7bdbe74b193b77a6",
+      "geometrySha256": "5db5bad205e293e7afc32d84e14374e0ef30eafab65d5b6b2f121545fd329b5f",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain"
+      ]
     },
     {
       "tree": "isa",
@@ -137905,9 +138241,11 @@
       "available": true,
       "bytes": 338283,
       "crc32": 1880542751,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "c89453826d4617211ca58a6ce11bc63904a571d594d3d073cfb3a53c7672a9be",
+      "geometrySha256": "87d423444de7f77764d133bb6ed02549cc64273c0599d4b47f3a115dab4b7475",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus"
+      ]
     },
     {
       "tree": "isa",
@@ -137993,9 +138331,11 @@
       "available": true,
       "bytes": 35514,
       "crc32": 1612118435,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "6e8ba825eda0abc96cc435380772b3734b9b0432124d78f3c41f01185f3a7614",
+      "geometrySha256": "25a3961001d1d5d6fc94701fe3d2fe97a406cca8abaeee8761513a6fc78ae595",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body"
+      ]
     },
     {
       "tree": "isa",
@@ -138015,9 +138355,11 @@
       "available": true,
       "bytes": 12646,
       "crc32": 4142962394,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "661457abdb95fab49bfddaddefae5f05f5c77d501d9c370a03d29c9181094379",
+      "geometrySha256": "d66158bbc7778f2234538910d9999452932d7df2734a92d12a3431bc351fce00",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
+      ]
     },
     {
       "tree": "isa",
@@ -138025,9 +138367,11 @@
       "available": true,
       "bytes": 11319,
       "crc32": 2319721629,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "d851d4d2363d6469fbff4c1f7009e743425bce74ec6e8ff599ee3aef4289bf42",
+      "geometrySha256": "478a746e6f6ccad7880288972d60ba2eae885c5397a3bdc56853b26ae8dab33e",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body"
+      ]
     },
     {
       "tree": "isa",
@@ -138035,9 +138379,11 @@
       "available": true,
       "bytes": 11191,
       "crc32": 1568000614,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "4db95663f23f9196403d7227d8844b82a8faaaf4ff5146f8c27ec2120d97f117",
+      "geometrySha256": "e814ac0ef1f5ecff9fd622b972097560a2e81644472d69edd340aaeb16661cdb",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body"
+      ]
     },
     {
       "tree": "isa",
@@ -138109,9 +138455,11 @@
       "available": true,
       "bytes": 460356,
       "crc32": 336184860,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "6461f70dee31e6f17d87e1f9d79bc92b1cdccd41b7d90bb89b6f25589d27cfc8",
+      "geometrySha256": "980a812b8724827896c3dd4df8913add37a1572de1b84d51b1bdf8a20c4dee2e",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-putamen"
+      ]
     },
     {
       "tree": "isa",
@@ -138151,9 +138499,11 @@
       "available": true,
       "bytes": 44651,
       "crc32": 4051803071,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "a4b5be59d7cf6dc3ca1b2ae97a83ffd947e39493cc663c2cb7d65a064af91b1d",
+      "geometrySha256": "0f800321fe86bfbe3254849fa4ccb0f33b9684407e9cbd3b4ab4c00ee624f267",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-thalamus"
+      ]
     },
     {
       "tree": "isa",
@@ -138173,9 +138523,11 @@
       "available": true,
       "bytes": 22898,
       "crc32": 1567470610,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "f53fab3de8ac6b90a2c956e8ccac9b949d9adc32b843070712f12c9ad1b18e92",
+      "geometrySha256": "0be0e1d3d44a89ea87f2296f9261ec091982caaaa0bdba25f8ae7445330e092a",
+      "representedBy": [
+        "vm:anatomy:body:head-neck:right:organ:right-amygdala"
+      ]
     },
     {
       "tree": "isa",

@@ -217,23 +217,25 @@ export default function BodyExplorer({
     [resolved],
   );
   const stage = profile.stages.find((s) => s.id === dissection.stageId);
+  const focusedStudy = profile.focuses.find((s) => s.id === dissection.focusId);
   const stageLandmarks = useMemo(
     () =>
       [
         ...new Set(
-          (stage?.landmarks ?? []).flatMap((pattern) =>
-            resolved.visible
-              .filter(
-                (s) =>
-                  systems[s.system] &&
-                  new RegExp(pattern, 'i').test(s.sourceName),
-              )
-              .slice(0, 2)
-              .map((s) => s.id),
+          (focusedStudy?.landmarks ?? stage?.landmarks ?? []).flatMap(
+            (pattern) =>
+              resolved.visible
+                .filter(
+                  (s) =>
+                    systems[s.system] &&
+                    new RegExp(pattern, 'i').test(s.sourceName),
+                )
+                .slice(0, 2)
+                .map((s) => s.id),
           ),
         ),
       ].slice(0, 8),
-    [stage, resolved, systems],
+    [stage, focusedStudy, resolved, systems],
   );
   const selected = catalog?.structures.find((s) => s.id === selectedId) ?? null;
   const available = regionStructures.filter(
@@ -568,9 +570,7 @@ export default function BodyExplorer({
     <DissectionGuide
       profile={profile}
       stage={stage}
-      focusTitle={
-        profile.focuses.find((f) => f.id === dissection.focusId)?.title
-      }
+      focus={focusedStudy}
       removed={resolved.removed}
       visible={available}
       onRestore={restoreStructure}

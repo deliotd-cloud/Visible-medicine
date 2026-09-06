@@ -4,6 +4,7 @@ import {
   type ContentSection,
 } from './anatomy-data';
 import type { BodyStructure } from './body-types';
+import { neuroGroupFor } from '../lib/neuroanatomy';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -45,6 +46,32 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
     item.sourceFmaIds?.includes(s.fmaId),
   );
   if (existing) return existing.sections[tab];
+  const neuro = neuroGroupFor(s.fmaId);
+  if (neuro && (tab === 'anatomy' || tab === 'function'))
+    return {
+      title: `${neuro.name} · draft`,
+      body:
+        tab === 'anatomy'
+          ? neuro.anatomy
+          : (neuro.function ??
+            'A structure-specific function lesson is awaiting specialist authorship and review.'),
+      bullets:
+        tab === 'anatomy'
+          ? [
+              `Source identity: ${s.fmaId} · ${s.sources.length} source component${s.sources.length === 1 ? '' : 's'}`,
+              'Open Head & neck → Deep-brain overview or a focused compartment view to remove the overlying brain and skull.',
+              'Study colours distinguish structures. They do not encode MRI signal, histological staining or tissue activation.',
+            ]
+          : undefined,
+      note: s.coverageNote ?? 'Anatomical and teaching review pending.',
+      citations:
+        tab === 'anatomy'
+          ? [
+              ...neuro.references,
+              'https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html',
+            ]
+          : neuro.references,
+    };
   if (tab === 'anatomy')
     return {
       title: s.provenance?.recovered

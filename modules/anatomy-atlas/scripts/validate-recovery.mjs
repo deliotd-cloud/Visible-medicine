@@ -5,6 +5,7 @@ import { conceptMap } from './bodyparts-archive.mjs';
 import { recoverySelections } from './anatomy-recovery.mjs';
 import { gapSelections } from './gap-recovery.mjs';
 import { inventorySelections } from './inventory-selections.mjs';
+import { neuroSelections } from './neuro-selections.mjs';
 const data = await fs.readFile(
   'public/models/bodyparts3d/full-body/catalog.json',
 );
@@ -13,11 +14,12 @@ const selected = [
   ...recoverySelections(await conceptMap('isa'), await conceptMap('partof')),
   ...gapSelections(await conceptMap('isa')),
   ...inventorySelections(await conceptMap('isa'), await conceptMap('partof')),
+  ...neuroSelections(await conceptMap('isa')),
 ];
 const recovered = catalog.structures.filter((s) => s.provenance?.recovered);
-assert.equal(recovered.length, 257);
+assert.equal(recovered.length, 279);
 assert.equal(recovered.length, selected.length);
-assert.equal(catalog.structures.length, 859);
+assert.equal(catalog.structures.length, 881);
 let checks = 0;
 for (const r of selected) {
   const s = recovered.find((s) => s.fmaId === r.fma);
@@ -48,7 +50,7 @@ for (const r of selected) {
 }
 assert.equal(catalog.excluded.length, 4);
 assert(!catalog.structures.some((s) => s.fmaId === 'FMA7647'));
-assert(catalog.structures.filter((s) => s.system === 'nerves').length === 32);
+assert(catalog.structures.filter((s) => s.system === 'nerves').length === 54);
 for (const name of ['heart', 'liver', 'large intestine']) {
   const s = catalog.structures.find((s) => s.sourceName === name);
   assert(s && /aggregate excludes/.test(s.coverageNote));
@@ -62,7 +64,7 @@ await fs.writeFile(
   'content/recovery-manifest.json',
   JSON.stringify(
     {
-      version: 3,
+      version: 4,
       date: '2026-09-06',
       catalogSha256: createHash('sha256').update(data).digest('hex'),
       status: 'unvalidated',
@@ -103,7 +105,7 @@ const result = {
   recovered: recovered.length,
   bySystem,
   checks: checks + 6,
-  neuralEntries: 32,
+  neuralEntries: 54,
   newTrochlearNerves: 2,
   quarantined: 4,
   clinicalValidation: false,

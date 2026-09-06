@@ -15,6 +15,7 @@
     "imaging:test": "node scripts/validate-imaging-link.mjs",
     "inventory:audit": "node scripts/audit-anatomy-inventory.mjs",
     "inventory:test": "node scripts/validate-inventory.mjs",
+    "neuro:test": "node scripts/validate-neuroanatomy.mjs",
     "db:generate": "drizzle-kit generate",
     "db:local": "wrangler d1 migrations apply DB --local --config wrangler.review-local.jsonc",
     "start": "wrangler dev --config dist/server/wrangler.json",

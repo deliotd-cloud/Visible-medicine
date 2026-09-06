@@ -2,11 +2,11 @@
   "passed": true,
   "regions": 11,
   "wholeBody": true,
-  "stages": 88,
-  "focusedViews": 66,
-  "checks": 2574,
-  "cameraChecks": 6336,
-  "structures": 859,
+  "stages": 91,
+  "focusedViews": 71,
+  "checks": 2670,
+  "cameraChecks": 6552,
+  "structures": 881,
   "clinicalValidation": false,
   "browserInteractionTesting": false,
   "rows": [
@@ -14,7 +14,7 @@
       "region": "whole-body",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 859,
+      "visible": 881,
       "removed": 0
     },
     {
@@ -22,20 +22,20 @@
       "stage": "musculoskeletal",
       "kind": "window",
       "visible": 566,
-      "removed": 293
+      "removed": 315
     },
     {
       "region": "whole-body",
       "stage": "viscera",
       "kind": "window",
       "visible": 44,
-      "removed": 815
+      "removed": 837
     },
     {
       "region": "whole-body",
       "stage": "neural",
       "kind": "window",
-      "visible": 32,
+      "visible": 54,
       "removed": 827
     },
     {
@@ -43,21 +43,21 @@
       "stage": "bones",
       "kind": "skeleton",
       "visible": 203,
-      "removed": 656
+      "removed": 678
     },
     {
       "region": "whole-body",
       "stage": "vascular",
       "kind": "window",
       "visible": 349,
-      "removed": 510
+      "removed": 532
     },
     {
       "region": "whole-body",
       "stage": "connective",
       "kind": "window",
       "visible": 274,
-      "removed": 585
+      "removed": 607
     },
     {
       "region": "shoulder-arm",
@@ -511,28 +511,28 @@
       "region": "head-neck",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 205,
+      "visible": 227,
       "removed": 0
     },
     {
       "region": "head-neck",
       "stage": "platysma",
       "kind": "peel",
-      "visible": 203,
+      "visible": 225,
       "removed": 2
     },
     {
       "region": "head-neck",
       "stage": "neck-deep",
       "kind": "peel",
-      "visible": 201,
+      "visible": 223,
       "removed": 4
     },
     {
       "region": "head-neck",
       "stage": "cranial",
       "kind": "window",
-      "visible": 31,
+      "visible": 53,
       "removed": 174
     },
     {
@@ -540,35 +540,56 @@
       "stage": "orbital",
       "kind": "window",
       "visible": 44,
-      "removed": 161
+      "removed": 183
     },
     {
       "region": "head-neck",
       "stage": "bones",
       "kind": "skeleton",
       "visible": 30,
-      "removed": 175
+      "removed": 197
     },
     {
       "region": "head-neck",
       "stage": "vascular",
       "kind": "window",
       "visible": 57,
-      "removed": 148
+      "removed": 170
     },
     {
       "region": "head-neck",
       "stage": "connective",
       "kind": "window",
       "visible": 63,
-      "removed": 142
+      "removed": 164
     },
     {
       "region": "head-neck",
       "stage": "gland-window",
       "kind": "window",
       "visible": 36,
-      "removed": 169
+      "removed": 191
+    },
+    {
+      "region": "head-neck",
+      "stage": "deep-brain",
+      "kind": "window",
+      "visible": 22,
+      "removed": 205
+    },
+    {
+      "region": "head-neck",
+      "stage": "basal-nuclei",
+      "kind": "window",
+      "visible": 8,
+      "removed": 219
+    },
+    {
+      "region": "head-neck",
+      "stage": "limbic-detail",
+      "kind": "window",
+      "visible": 9,
+      "removed": 218
     },
     {
       "region": "spine",

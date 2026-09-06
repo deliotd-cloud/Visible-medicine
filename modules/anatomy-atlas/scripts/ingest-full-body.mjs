@@ -17,6 +17,7 @@ import {
 import { recoverySelections } from './anatomy-recovery.mjs';
 import { gapSelections } from './gap-recovery.mjs';
 import { inventorySelections } from './inventory-selections.mjs';
+import { neuroSelections } from './neuro-selections.mjs';
 
 const [isa, partof, isaZip, partofZip] = await Promise.all([
   conceptMap('isa'),
@@ -223,6 +224,7 @@ const recovered = [
   ...recoverySelections(isa, partof),
   ...gapSelections(isa),
   ...inventorySelections(isa, partof),
+  ...neuroSelections(isa),
 ];
 // Separate an already included component from an aggregate without duplicating
 // its surface. Preserve the aggregate's public ID and record the adaptation.
@@ -454,7 +456,7 @@ for (const record of selections) {
   mesh.userData = { structureId: id, fmaId: record.fma };
   const bundle =
     prior?.bundle ??
-    `${region}-${record.system}${record.inventoryRecovery ? '-inventory' : record.gapRecovery ? '-gaps' : record.recovery ? '-recovery' : record.dissection ? '-dissection' : ''}`;
+    `${region}-${record.system}${record.neuroRecovery ? '-deep-brain' : record.inventoryRecovery ? '-inventory' : record.gapRecovery ? '-gaps' : record.recovery ? '-recovery' : record.dissection ? '-dissection' : ''}`;
   if (!bundles.has(bundle)) bundles.set(bundle, new THREE.Group());
   bundles.get(bundle).add(mesh);
   const box = geometry.boundingBox,
@@ -572,7 +574,7 @@ await fs.writeFile(
       },
       coverage: {
         nerves:
-          'Selected cranial/orbital nerves and brain. Central canal only, not a complete cord; no brachial/lumbosacral plexus or limb peripheral nerves.',
+          'Brain aggregate, selected deep-brain surfaces and cranial/orbital nerves. Internal nuclei and connections are incomplete. Central canal only, not a complete cord; no brachial/lumbosacral plexus or limb peripheral nerves.',
         organs:
           'Selected adult-male organs, including a limited male reproductive and ocular subset. No complete internal-layer, female or variant anatomy.',
         vessels:

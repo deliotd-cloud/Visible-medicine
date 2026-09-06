@@ -13,6 +13,7 @@ import type {
   DissectionProfile,
   DissectionState,
   DissectionStage,
+  DissectionFocus,
 } from './dissection-data';
 import type { BodyStructure } from './body-types';
 
@@ -177,7 +178,7 @@ export function DissectionControls({
 export function DissectionGuide({
   profile,
   stage,
-  focusTitle,
+  focus,
   removed,
   visible,
   onRestore,
@@ -186,17 +187,18 @@ export function DissectionGuide({
 }: {
   profile: DissectionProfile;
   stage: DissectionStage | undefined;
-  focusTitle?: string;
+  focus?: DissectionFocus;
   removed: BodyStructure[];
   visible: BodyStructure[];
   onRestore: (id: string) => void;
   onSelect: (id: string) => void;
   customized: boolean;
 }) {
-  const landmarks = (stage?.landmarks ?? []).flatMap((pattern) =>
-    visible
-      .filter((s) => new RegExp(pattern, 'i').test(s.sourceName))
-      .slice(0, 2),
+  const landmarks = (focus?.landmarks ?? stage?.landmarks ?? []).flatMap(
+    (pattern) =>
+      visible
+        .filter((s) => new RegExp(pattern, 'i').test(s.sourceName))
+        .slice(0, 2),
   );
   const unique = [...new Map(landmarks.map((s) => [s.id, s])).values()].slice(
     0,
@@ -205,23 +207,25 @@ export function DissectionGuide({
   return (
     <section className="dissection-guide" aria-label="Dissection study guide">
       <div className="eyebrow">
-        {focusTitle
+        {focus
           ? 'FOCUSED STUDY'
           : stage?.kind === 'window'
             ? 'EXPOSURE WINDOW'
             : 'REGIONAL DISSECTION'}
         {customized ? ' · CUSTOMISED' : ''}
       </div>
-      <h2>{focusTitle ?? stage?.title ?? profile.title}</h2>
+      <h2>{focus?.title ?? stage?.title ?? profile.title}</h2>
       <p>
-        {focusTitle
-          ? 'This focused view retains the selected muscle or organ group with available skeletal context.'
+        {focus
+          ? (focus.description ??
+            'This focused view retains the selected muscle or organ group with available skeletal context.')
           : (stage?.description ?? profile.orientation)}
       </p>
       <div className="dissection-inspect">
         <strong>Look for</strong>
         <p>
-          {stage?.inspect ??
+          {focus?.inspect ??
+            stage?.inspect ??
             'Rotate, select a structure and use Remove to create your own view. Undo and Reassemble restore your changes.'}
         </p>
       </div>

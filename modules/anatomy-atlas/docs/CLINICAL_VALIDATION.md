@@ -1,10 +1,18 @@
 # Clinical validation checklist
 
+## Deep-brain and presentation gates
+
+- Adjudicate all 22 deep-brain entries against a qualified neuroanatomical reference: identity, laterality, extents, contours, registration and relationships to the existing brain. Numerical bounding-box containment is not tissue-containment or clinical proof.
+- Review the grouped bilateral mammillary and cerebral choroid-plexus surfaces; do not treat a side-filtered view as a separately segmented unilateral component.
+- Review original draft notes and study-group colours. No MRI signal, tractography, network connectivity, individual thalamic nuclei or patient registration is established.
+- Validate all six directional label layouts, tiny-surface picking, ghosting, orthographic framing, text overlap, touch and keyboard access on real devices. Automated numerical layout tests cannot certify readable screen typography or occlusion handling.
+- Review gates, evidence and reproducible checks are in `DEEP_BRAIN.md`; no clinician approval has been created.
+
 ## Current inventory/admission gates
 
 - Review all 36 inventory additions, particularly bronchial extent/relative length, named biliary-duct boundaries, ciliary ganglion position and vessel endpoints/branches/calibre. See `SOURCE_INVENTORY.md`.
 - Adjudicate the newly held source-labelled superior epigastric veins; do not relabel or reposition them automatically.
-- Review all 88 current stages and 66 focused views, including the new airway and shoulder vascular windows. Validate touch/keyboard access, framing, occlusion and tiny-structure selection on actual devices.
+- Review all 91 current stages and 71 focused views, including airway, shoulder vascular and deep-brain windows. Validate touch/keyboard access, framing, occlusion and tiny-structure selection on actual devices.
 - The exhaustive source inventory proves record reconciliation, not complete anatomy. Identical source geometry under multiple labels does not validate those labels.
 - The future imaging selection contract is tested software, not patient registration. No scans or imaging approvals are present.
 

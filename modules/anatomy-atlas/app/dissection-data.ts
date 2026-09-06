@@ -1,4 +1,5 @@
 import type { BodyStructure, BodySystem } from './body-types';
+import { neuroStudySets, neuroStudyIds } from '../lib/neuroanatomy.ts';
 
 export type DissectionView =
   | 'anterior'
@@ -7,7 +8,11 @@ export type DissectionView =
   | 'left'
   | 'inferior'
   | 'superior';
-export type TissueRule = { systems?: BodySystem[]; pattern?: string };
+export type TissueRule = {
+  systems?: BodySystem[];
+  pattern?: string;
+  fmaIds?: string[];
+};
 export type DissectionStage = {
   id: string;
   title: string;
@@ -24,6 +29,10 @@ export type DissectionFocus = {
   title: string;
   rule: TissueRule;
   view: DissectionView;
+  includeSkeleton?: boolean;
+  description?: string;
+  inspect?: string;
+  landmarks?: string[];
 };
 export type DissectionProfile = {
   title: string;
@@ -1049,9 +1058,49 @@ dissectionProfiles['head-neck'].focuses.push({
   view: 'anterior',
 });
 
+// Explicit source IDs avoid accidentally selecting similarly named vessels or aliases.
+for (const study of neuroStudySets) {
+  const rule: TissueRule = {
+    systems: ['nerves'],
+    fmaIds: neuroStudyIds(study.groups),
+  };
+  dissectionProfiles['head-neck'].focuses.push({
+    id: study.id,
+    title: study.title,
+    rule,
+    view: study.view,
+    includeSkeleton: false,
+    description: study.description,
+    inspect: study.inspect,
+    landmarks: study.landmarks,
+  });
+}
+dissectionProfiles['head-neck'].stages.push(
+  ...neuroStudySets
+    .slice(0, 3)
+    .map((study) =>
+      window(
+        study.id,
+        study.title,
+        study.description,
+        [{ systems: ['nerves'], fmaIds: neuroStudyIds(study.groups) }],
+        study.view,
+        study.landmarks,
+        study.inspect,
+      ),
+    ),
+);
+dissectionProfiles['head-neck'].limitations.push(
+  'Deep-brain entries are unvalidated source surfaces. Colours identify study groups, not histology or MRI signal. The two-component choroid-plexus and mammillary records remain grouped across sides.',
+);
+dissectionProfiles['head-neck'].references.push(
+  'https://nba.uth.tmc.edu/neuroanatomy/L10/Lab10p18_index.html',
+);
+
 export function matchesRule(s: BodyStructure, rule: TissueRule): boolean {
   return (
     (!rule.systems || rule.systems.includes(s.system)) &&
+    (!rule.fmaIds || rule.fmaIds.includes(s.fmaId)) &&
     (!rule.pattern || new RegExp(rule.pattern, 'i').test(s.sourceName))
   );
 }
@@ -1065,7 +1114,9 @@ export function stageStructures(
     const choice = profile.focuses.find((f) => f.id === focusId);
     return choice
       ? structures.filter(
-          (s) => s.system === 'skeleton' || matchesRule(s, choice.rule),
+          (s) =>
+            (choice.includeSkeleton !== false && s.system === 'skeleton') ||
+            matchesRule(s, choice.rule),
         )
       : structures;
   }

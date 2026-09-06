@@ -122,10 +122,12 @@ const maps = Object.fromEntries(
 );
 const additions = inventorySelections(maps.isa, maps.partof);
 same(additions.length, 36);
-same(catalog.structures.length, 823 + additions.length);
-same(catalog.bundles.length, 66);
+same(catalog.structures.length, 881);
+same(catalog.bundles.length, 67);
 const baselineIds = new Set(baseline.structures.map((s) => s.id));
-const newRecords = catalog.structures.filter((s) => !baselineIds.has(s.id));
+const newRecords = catalog.structures.filter(
+  (s) => !baselineIds.has(s.id) && s.bundle.endsWith('-inventory'),
+);
 same(newRecords.length, 36);
 for (const addition of additions) {
   const current = newRecords.find((s) => s.fmaId === addition.fma);
@@ -168,7 +170,10 @@ same(
   { vessels: 29, organs: 5, nerves: 2 },
 );
 for (const id of Object.keys(inventoryHolds))
-  check(!newRecords.some((s) => s.fmaId === id), 'Held identity not admitted');
+  check(
+    !catalog.structures.some((s) => s.fmaId === id),
+    'Held identity not admitted',
+  );
 // Parser and geometry identity contracts: headers/comments may differ, shape/winding may not.
 const parts = 'concept id\trepresentation id\ten\nFMA1\tBP1\tExample\n';
 const elements = 'concept id\tname\telement file id\nFMA1\tExample\tFJ1\n';
