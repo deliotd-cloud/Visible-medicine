@@ -2,6 +2,12 @@ import { createHash } from 'node:crypto';
 const compareText = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 // Source coverage is not anatomical completeness. No name heuristic admits a mesh.
 export const inventoryHolds = {
+  FMA74075:
+    'Levatores costarum longi source needs fibre-course, level and overlap adjudication against breves; similar full thoracic extent is not proof of source error.',
+  FMA74076:
+    'Levatores costarum longi source needs fibre-course, level and overlap adjudication against breves; similar full thoracic extent is not proof of source error.',
+  FMA71313:
+    'Grouped levatores costarum longi alias of the two held source surfaces; no independent admission.',
   FMA4771:
     'Source-labelled superior epigastric vein lies inferior to the expected upper-abdominal arterial context; extent/identity review required.',
   FMA4785:

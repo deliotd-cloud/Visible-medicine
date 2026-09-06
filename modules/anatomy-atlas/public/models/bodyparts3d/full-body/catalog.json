@@ -39,7 +39,7 @@
     "nerves": "Brain aggregate, selected deep-brain surfaces and cranial/orbital nerves. Internal nuclei and connections are incomplete. Central canal only, not a complete cord; no brachial/lumbosacral plexus or limb peripheral nerves.",
     "organs": "Selected adult-male organs, including a limited male reproductive and ocular subset. No complete internal-layer, female or variant anatomy.",
     "vessels": "Selected major artery and vein segments, not a complete vascular tree. No lymphatic anatomy or independently reviewed branching/continuity.",
-    "connective": "Selected cartilages, 22 source-labelled intervertebral discs, interosseous membranes, Achilles tendons, orbital/laryngeal ligaments and long plantar ligaments. One disc level is unresolved; most joint capsules, fascia and ligament systems remain absent."
+    "connective": "Selected cartilages, 22 source-labelled intervertebral discs, membranes, tendons and ligaments; wrist flexor retinacula, iliotibial tracts and linea alba. One disc level is unresolved; most joint capsules, fascia and ligament systems remain absent."
   },
   "regions": [
     {
@@ -567,6 +567,34 @@
       "bytes": 1866940,
       "sha256": "6046dacb923f5103acb3b86dadf2817b5f0c133af88e0d225170cf331fbd0e3c",
       "structures": 22
+    },
+    {
+      "id": "hand-connective-axial-detail",
+      "url": "/models/bodyparts3d/full-body/hand-connective-axial-detail.glb",
+      "bytes": 71364,
+      "sha256": "80a96ba7c54a11468857a98acda39b39aab8620d4baebe4184a698ecf4c28f1d",
+      "structures": 2
+    },
+    {
+      "id": "thigh-connective-axial-detail",
+      "url": "/models/bodyparts3d/full-body/thigh-connective-axial-detail.glb",
+      "bytes": 620568,
+      "sha256": "a4df87c97da679dd55fa2640f502c6d9a75ad83afc6c8beb9de334f0aa0b0b17",
+      "structures": 2
+    },
+    {
+      "id": "abdomen-connective-axial-detail",
+      "url": "/models/bodyparts3d/full-body/abdomen-connective-axial-detail.glb",
+      "bytes": 37124,
+      "sha256": "896e726212e5823542796bf7b12e3b6588a30ff519de4425959d8991c890228d",
+      "structures": 1
+    },
+    {
+      "id": "spine-muscles-axial-detail",
+      "url": "/models/bodyparts3d/full-body/spine-muscles-axial-detail.glb",
+      "bytes": 381316,
+      "sha256": "d7e3b995e0c18e3ebe7e7b97a11fbcd1e228218e0010462614e4938acf7f87ee",
+      "structures": 6
     }
   ],
   "structures": [
@@ -51748,6 +51776,638 @@
         }
       ],
       "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. The source definition groups left and right components; they are not separately labelled here. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+      "fmaId": "FMA40120",
+      "name": "Flexor retinaculum of right wrist",
+      "sourceName": "flexor retinaculum of right wrist",
+      "system": "connective",
+      "category": "ligament",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand",
+        "forearm"
+      ],
+      "bundle": "hand-connective-axial-detail",
+      "nodeName": "FMA40120",
+      "bounds": {
+        "min": [
+          -2.7091901302337646,
+          -0.20520995557308197,
+          0.7686499953269958
+        ],
+        "max": [
+          -2.3403100967407227,
+          0.06431030482053757,
+          0.9080600142478943
+        ]
+      },
+      "center": [
+        -2.5247501134872437,
+        -0.0704498253762722,
+        0.8383550047874451
+      ],
+      "anchor": [
+        -2.522700071334839,
+        -0.07679992914199829,
+        0.8895500302314758
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1471",
+          "sha256": "71b49d4cdeb7da162dc51ac6afd5fcf713daa321c45de0b3f37d2825b4e4ffd0"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+      "fmaId": "FMA40121",
+      "name": "Flexor retinaculum of left wrist",
+      "sourceName": "flexor retinaculum of left wrist",
+      "system": "connective",
+      "category": "ligament",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand",
+        "forearm"
+      ],
+      "bundle": "hand-connective-axial-detail",
+      "nodeName": "FMA40121",
+      "bounds": {
+        "min": [
+          2.3403100967407227,
+          -0.20520995557308197,
+          0.7686499953269958
+        ],
+        "max": [
+          2.7091901302337646,
+          0.06431030482053757,
+          0.9080600142478943
+        ]
+      },
+      "center": [
+        2.5247501134872437,
+        -0.0704498253762722,
+        0.8383550047874451
+      ],
+      "anchor": [
+        2.522700071334839,
+        -0.07679992914199829,
+        0.8895500302314758
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1471M",
+          "sha256": "dfe8a84cb170a4f9450d345fb6182a98707d663be9c9d67723f75c4897581023"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+      "fmaId": "FMA58776",
+      "name": "Right iliotibial tract",
+      "sourceName": "right iliotibial tract",
+      "system": "connective",
+      "category": "fascia",
+      "laterality": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "thigh-connective-axial-detail",
+      "nodeName": "FMA58776",
+      "bounds": {
+        "min": [
+          -1.625190019607544,
+          -4.85713005065918,
+          -0.1736309826374054
+        ],
+        "max": [
+          -0.9180240035057068,
+          1.4515197277069092,
+          0.6337000131607056
+        ]
+      },
+      "center": [
+        -1.2716070115566254,
+        -1.7028051614761353,
+        0.23003451526165009
+      ],
+      "anchor": [
+        -1.3336999416351318,
+        -1.7277002334594727,
+        0.05577201768755913
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1423",
+          "sha256": "5be6b36001c18933694ec0871ed262da14c5b6c5f4d1f51b4cf5cd9b074bd76f"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+      "fmaId": "FMA58777",
+      "name": "Left iliotibial tract",
+      "sourceName": "left iliotibial tract",
+      "system": "connective",
+      "category": "fascia",
+      "laterality": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "thigh-connective-axial-detail",
+      "nodeName": "FMA58777",
+      "bounds": {
+        "min": [
+          0.9180229902267456,
+          -4.85713005065918,
+          -0.17363201081752777
+        ],
+        "max": [
+          1.625190019607544,
+          1.4515197277069092,
+          0.6337000131607056
+        ]
+      },
+      "center": [
+        1.2716065049171448,
+        -1.7028051614761353,
+        0.2300340011715889
+      ],
+      "anchor": [
+        1.3336999416351318,
+        -1.7277002334594727,
+        0.05577201768755913
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1423M",
+          "sha256": "bfd57c0dcc185bf4fd7396064bc1c27c7e438427605f7826b4cfdbeb5e40f589"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
+      "fmaId": "FMA11336",
+      "name": "Linea alba",
+      "sourceName": "linea alba",
+      "system": "connective",
+      "category": "fascia",
+      "laterality": "midline",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-connective-axial-detail",
+      "nodeName": "FMA11336",
+      "bounds": {
+        "min": [
+          -0.09308779984712601,
+          -0.11929992586374283,
+          0.622409999370575
+        ],
+        "max": [
+          0.08187010139226913,
+          3.778299570083618,
+          1.6214699745178223
+        ]
+      },
+      "center": [
+        -0.005608849227428436,
+        1.8294998221099377,
+        1.1219399869441986
+      ],
+      "anchor": [
+        -0.02190920151770115,
+        1.7455902099609375,
+        1.3322199583053589
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1448",
+          "sha256": "0d96d74c45a498cc1bf1a5d6ea9b6028d050b234537455b42e6cfd407a669201"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
+      "fmaId": "FMA71307",
+      "name": "Set of interspinales lumborum",
+      "sourceName": "set of interspinales lumborum",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles-axial-detail",
+      "nodeName": "FMA71307",
+      "bounds": {
+        "min": [
+          -0.04581649601459503,
+          1.3494397401809692,
+          -0.17190799117088318
+        ],
+        "max": [
+          0.04581649601459503,
+          2.263399600982666,
+          -0.07414501160383224
+        ]
+      },
+      "center": [
+        0,
+        1.8064196705818176,
+        -0.12302650138735771
+      ],
+      "anchor": [
+        -0.0022651799954473972,
+        1.8080499172210693,
+        -0.11272399872541428
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1550",
+          "sha256": "6955915224413b301f77fe4d2e606d67f07b882b93933a3273c60328e8fcf3c4"
+        },
+        {
+          "file": "FJ1550M",
+          "sha256": "256cf6ddc747bac8dd2754df1261288c24a1e576e248e87391fd08d435238e95"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. A source muscle set, not individually segmented fascicles or verified vertebral-level attachments. The source groups both sides under one identity; its components are not separately side-labelled. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+      "fmaId": "FMA71309",
+      "name": "Set of interspinales cervicis",
+      "sourceName": "set of interspinales cervicis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-muscles-axial-detail",
+      "nodeName": "FMA71309",
+      "bounds": {
+        "min": [
+          -0.0711681991815567,
+          5.72939920425415,
+          -0.21712900698184967
+        ],
+        "max": [
+          0.0711681991815567,
+          6.668900012969971,
+          -0.022149009630084038
+        ]
+      },
+      "center": [
+        0,
+        6.1991496086120605,
+        -0.11963900830596685
+      ],
+      "anchor": [
+        0.00340624013915658,
+        6.188899993896484,
+        -0.09396099299192429
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1552",
+          "sha256": "1ccc7f131cb8a64c3fc7bee1e7e1c39319f0b2a8259d75cfc52b92a8a7409f3f"
+        },
+        {
+          "file": "FJ1552M",
+          "sha256": "7f0857e4efe8deda951b1cc4dad48d685fff98c543e81e33c7451995c5edaa2e"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. A source muscle set, not individually segmented fascicles or verified vertebral-level attachments. The source groups both sides under one identity; its components are not separately side-labelled. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+      "fmaId": "FMA71442",
+      "name": "Set of anterior cervical intertransversarii",
+      "sourceName": "set of anterior cervical intertransversarii",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-muscles-axial-detail",
+      "nodeName": "FMA71442",
+      "bounds": {
+        "min": [
+          -0.3760189712047577,
+          5.752299785614014,
+          0.22986198961734772
+        ],
+        "max": [
+          0.3760189712047577,
+          6.712099552154541,
+          0.36062103509902954
+        ]
+      },
+      "center": [
+        0,
+        6.232199668884277,
+        0.29524151235818863
+      ],
+      "anchor": [
+        -0.15500999987125397,
+        6.250600814819336,
+        0.3036839962005615
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1549",
+          "sha256": "832b6ecf551d766a55d036151dce271e558baccf35fd1861a572c2bf68a1a9c6"
+        },
+        {
+          "file": "FJ1549M",
+          "sha256": "a6dcda6f5153705f07e90539023d374ea82830b14db5055093ce9c7fe7c26fae"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. A source muscle set, not individually segmented fascicles or verified vertebral-level attachments. The source groups both sides under one identity; its components are not separately side-labelled. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
+      "fmaId": "FMA71443",
+      "name": "Set of posterior cervical intertransversarii",
+      "sourceName": "set of posterior cervical intertransversarii",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-muscles-axial-detail",
+      "nodeName": "FMA71443",
+      "bounds": {
+        "min": [
+          -0.397286981344223,
+          5.816600322723389,
+          0.18265198171138763
+        ],
+        "max": [
+          0.397286981344223,
+          6.683100700378418,
+          0.29658499360084534
+        ]
+      },
+      "center": [
+        0,
+        6.249850511550903,
+        0.23961848765611649
+      ],
+      "anchor": [
+        -0.2260110080242157,
+        6.245100021362305,
+        0.2636820077896118
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1553",
+          "sha256": "38b50c8a3543e209812ef6d18612bed918108f73bb74bb147504d85ee5d86b96"
+        },
+        {
+          "file": "FJ1553M",
+          "sha256": "57bc7086c77781ea63ce07da20cdd613431d18cf0ccffa30df0942463166e6ef"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. A source muscle set, not individually segmented fascicles or verified vertebral-level attachments. The source groups both sides under one identity; its components are not separately side-labelled. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
+      "fmaId": "FMA74077",
+      "name": "Set of right levatores costarum breves",
+      "sourceName": "set of right levatores costarum breves",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-muscles-axial-detail",
+      "nodeName": "FMA74077",
+      "bounds": {
+        "min": [
+          -0.7087339758872986,
+          2.631899356842041,
+          -0.4327796995639801
+        ],
+        "max": [
+          -0.20816700160503387,
+          5.797900199890137,
+          0.22624900937080383
+        ]
+      },
+      "center": [
+        -0.45845048874616623,
+        4.214899778366089,
+        -0.10326534509658813
+      ],
+      "anchor": [
+        -0.5286319851875305,
+        4.213799953460693,
+        -0.36243999004364014
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1462",
+          "sha256": "8b20ba474baae8ac19ef2a43364279f12286c24dbd54c6ffcea4984ba36a40e0"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. A source muscle set, not individually segmented fascicles or verified vertebral-level attachments. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+      "fmaId": "FMA74078",
+      "name": "Set of left levatores costarum breves",
+      "sourceName": "set of left levatores costarum breves",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-muscles-axial-detail",
+      "nodeName": "FMA74078",
+      "bounds": {
+        "min": [
+          0.20816700160503387,
+          2.631899356842041,
+          -0.43277978897094727
+        ],
+        "max": [
+          0.7087339758872986,
+          5.797900199890137,
+          0.22624900937080383
+        ]
+      },
+      "center": [
+        0.45845048874616623,
+        4.214899778366089,
+        -0.10326538980007172
+      ],
+      "anchor": [
+        0.528590977191925,
+        4.213900089263916,
+        -0.36243700981140137
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1462M",
+          "sha256": "ba1f178791d97838164dde76d1e3ec244c8e6289f26cac09ccc006db5b6525a1"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. A source muscle set, not individually segmented fascicles or verified vertebral-level attachments. No patient registration or imaging appearance is established.",
       "provenance": {
         "method": "licensed-source-mesh",
         "license": "CC-BY-4.0",

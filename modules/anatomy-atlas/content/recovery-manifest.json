@@ -1,7 +1,7 @@
 {
   "version": 4,
   "date": "2026-09-06",
-  "catalogSha256": "ea8568e4f589879d181375d03ace013c6b119b957d2fa66fda81114628e0fd0b",
+  "catalogSha256": "a1c6e33bea4c228558d7fc79b8537c9a83fe03fcb296a3f22ee8b2ab688af1f7",
   "status": "unvalidated",
   "method": "licensed-source-recovery",
   "generatedAnatomicalMeshes": 0,
@@ -5548,6 +5548,231 @@
         }
       ],
       "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. The source definition groups left and right components; they are not separately labelled here. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established."
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+      "fmaId": "FMA40120",
+      "sourceName": "flexor retinaculum of right wrist",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "hand",
+        "forearm"
+      ],
+      "sources": [
+        {
+          "file": "FJ1471",
+          "sha256": "71b49d4cdeb7da162dc51ac6afd5fcf713daa321c45de0b3f37d2825b4e4ffd0"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established."
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+      "fmaId": "FMA40121",
+      "sourceName": "flexor retinaculum of left wrist",
+      "sourceTree": "isa",
+      "category": "ligament",
+      "system": "connective",
+      "regions": [
+        "hand",
+        "forearm"
+      ],
+      "sources": [
+        {
+          "file": "FJ1471M",
+          "sha256": "dfe8a84cb170a4f9450d345fb6182a98707d663be9c9d67723f75c4897581023"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established."
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+      "fmaId": "FMA58776",
+      "sourceName": "right iliotibial tract",
+      "sourceTree": "isa",
+      "category": "fascia",
+      "system": "connective",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "sources": [
+        {
+          "file": "FJ1423",
+          "sha256": "5be6b36001c18933694ec0871ed262da14c5b6c5f4d1f51b4cf5cd9b074bd76f"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established."
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+      "fmaId": "FMA58777",
+      "sourceName": "left iliotibial tract",
+      "sourceTree": "isa",
+      "category": "fascia",
+      "system": "connective",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "sources": [
+        {
+          "file": "FJ1423M",
+          "sha256": "bfd57c0dcc185bf4fd7396064bc1c27c7e438427605f7826b4cfdbeb5e40f589"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
+      "fmaId": "FMA11336",
+      "sourceName": "linea alba",
+      "sourceTree": "isa",
+      "category": "fascia",
+      "system": "connective",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ1448",
+          "sha256": "0d96d74c45a498cc1bf1a5d6ea9b6028d050b234537455b42e6cfd407a669201"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
+      "fmaId": "FMA71307",
+      "sourceName": "set of interspinales lumborum",
+      "sourceTree": "isa",
+      "category": "muscle",
+      "system": "muscles",
+      "regions": [
+        "spine"
+      ],
+      "sources": [
+        {
+          "file": "FJ1550",
+          "sha256": "6955915224413b301f77fe4d2e606d67f07b882b93933a3273c60328e8fcf3c4"
+        },
+        {
+          "file": "FJ1550M",
+          "sha256": "256cf6ddc747bac8dd2754df1261288c24a1e576e248e87391fd08d435238e95"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. A source muscle set, not individually segmented fascicles or verified vertebral-level attachments. The source groups both sides under one identity; its components are not separately side-labelled. No patient registration or imaging appearance is established."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+      "fmaId": "FMA71309",
+      "sourceName": "set of interspinales cervicis",
+      "sourceTree": "isa",
+      "category": "muscle",
+      "system": "muscles",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1552",
+          "sha256": "1ccc7f131cb8a64c3fc7bee1e7e1c39319f0b2a8259d75cfc52b92a8a7409f3f"
+        },
+        {
+          "file": "FJ1552M",
+          "sha256": "7f0857e4efe8deda951b1cc4dad48d685fff98c543e81e33c7451995c5edaa2e"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. A source muscle set, not individually segmented fascicles or verified vertebral-level attachments. The source groups both sides under one identity; its components are not separately side-labelled. No patient registration or imaging appearance is established."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+      "fmaId": "FMA71442",
+      "sourceName": "set of anterior cervical intertransversarii",
+      "sourceTree": "isa",
+      "category": "muscle",
+      "system": "muscles",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1549",
+          "sha256": "832b6ecf551d766a55d036151dce271e558baccf35fd1861a572c2bf68a1a9c6"
+        },
+        {
+          "file": "FJ1549M",
+          "sha256": "a6dcda6f5153705f07e90539023d374ea82830b14db5055093ce9c7fe7c26fae"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. A source muscle set, not individually segmented fascicles or verified vertebral-level attachments. The source groups both sides under one identity; its components are not separately side-labelled. No patient registration or imaging appearance is established."
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
+      "fmaId": "FMA71443",
+      "sourceName": "set of posterior cervical intertransversarii",
+      "sourceTree": "isa",
+      "category": "muscle",
+      "system": "muscles",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ1553",
+          "sha256": "38b50c8a3543e209812ef6d18612bed918108f73bb74bb147504d85ee5d86b96"
+        },
+        {
+          "file": "FJ1553M",
+          "sha256": "57bc7086c77781ea63ce07da20cdd613431d18cf0ccffa30df0942463166e6ef"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. A source muscle set, not individually segmented fascicles or verified vertebral-level attachments. The source groups both sides under one identity; its components are not separately side-labelled. No patient registration or imaging appearance is established."
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
+      "fmaId": "FMA74077",
+      "sourceName": "set of right levatores costarum breves",
+      "sourceTree": "isa",
+      "category": "muscle",
+      "system": "muscles",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ1462",
+          "sha256": "8b20ba474baae8ac19ef2a43364279f12286c24dbd54c6ffcea4984ba36a40e0"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. A source muscle set, not individually segmented fascicles or verified vertebral-level attachments. No patient registration or imaging appearance is established."
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+      "fmaId": "FMA74078",
+      "sourceName": "set of left levatores costarum breves",
+      "sourceTree": "isa",
+      "category": "muscle",
+      "system": "muscles",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "sources": [
+        {
+          "file": "FJ1462M",
+          "sha256": "ba1f178791d97838164dde76d1e3ec244c8e6289f26cac09ccc006db5b6525a1"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. A source muscle set, not individually segmented fascicles or verified vertebral-level attachments. No patient registration or imaging appearance is established."
     }
   ]
 }

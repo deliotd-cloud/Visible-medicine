@@ -18,6 +18,7 @@ import { recoverySelections } from './anatomy-recovery.mjs';
 import { gapSelections } from './gap-recovery.mjs';
 import { inventorySelections } from './inventory-selections.mjs';
 import { neuroSelections } from './neuro-selections.mjs';
+import { axialSelections } from './axial-selections.mjs';
 
 const [isa, partof, isaZip, partofZip] = await Promise.all([
   conceptMap('isa'),
@@ -225,6 +226,7 @@ const recovered = [
   ...gapSelections(isa),
   ...inventorySelections(isa, partof),
   ...neuroSelections(isa),
+  ...axialSelections(isa),
 ];
 // Separate an already included component from an aggregate without duplicating
 // its surface. Preserve the aggregate's public ID and record the adaptation.
@@ -456,7 +458,7 @@ for (const record of selections) {
   mesh.userData = { structureId: id, fmaId: record.fma };
   const bundle =
     prior?.bundle ??
-    `${region}-${record.system}${record.neuroRecovery ? '-deep-brain' : record.inventoryRecovery ? '-inventory' : record.gapRecovery ? '-gaps' : record.recovery ? '-recovery' : record.dissection ? '-dissection' : ''}`;
+    `${region}-${record.system}${record.axialRecovery ? '-axial-detail' : record.neuroRecovery ? '-deep-brain' : record.inventoryRecovery ? '-inventory' : record.gapRecovery ? '-gaps' : record.recovery ? '-recovery' : record.dissection ? '-dissection' : ''}`;
   if (!bundles.has(bundle)) bundles.set(bundle, new THREE.Group());
   bundles.get(bundle).add(mesh);
   const box = geometry.boundingBox,
@@ -580,7 +582,7 @@ await fs.writeFile(
         vessels:
           'Selected major artery and vein segments, not a complete vascular tree. No lymphatic anatomy or independently reviewed branching/continuity.',
         connective:
-          'Selected cartilages, 22 source-labelled intervertebral discs, interosseous membranes, Achilles tendons, orbital/laryngeal ligaments and long plantar ligaments. One disc level is unresolved; most joint capsules, fascia and ligament systems remain absent.',
+          'Selected cartilages, 22 source-labelled intervertebral discs, membranes, tendons and ligaments; wrist flexor retinacula, iliotibial tracts and linea alba. One disc level is unresolved; most joint capsules, fascia and ligament systems remain absent.',
       },
       regions,
       bundles: bundleManifest,

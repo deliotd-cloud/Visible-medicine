@@ -2,15 +2,17 @@
 
 ## Included
 
-881 selectable source representations: 203 skeletal, 363 muscular, 44 organ, 54 nervous-system, 146 vascular and 71 connective-tissue entries. 67 GLB bundles support 11 independent region routes plus the whole-body route. Regional membership uses source muscle hierarchy where available, explicit named-bone rules and a documented position-based fallback. Adjacent long bones are retained to provide joint context; this is not a clipped surgical field.
+892 selectable source representations: 203 skeletal, 369 muscular, 44 organ, 54 nervous-system, 146 vascular and 76 connective-tissue entries. 71 GLB bundles support 11 independent region routes plus the whole-body route. Regional membership uses source muscle hierarchy where available, explicit named-bone rules and a documented position-based fallback. Adjacent long bones are retained to provide joint context; this is not a clipped surgical field.
 
 Organs: the original 17 entries (heart, paired lungs, liver, pancreas, stomach, small/large intestine, gallbladder, paired kidneys, bladder, esophagus, trachea, spleen and paired adrenals), plus prostate, paired testes, paired seminal vesicles, paired ureters, thymus, pituitary, paired compound eyeballs and rectum. Heart/liver vascular components and the rectum have been separated from their display aggregates without moving geometry; aggregate IDs remain stable and notes disclose their exclusions. This remains an adult-male reference, not comprehensive male/female, developmental or variant anatomy.
 
-Vascular coverage comprises 146 selected source artery/vein concepts. It is not a complete circulation, branching graph, lumen or validated connection model. Connective coverage includes costal/nasal/laryngeal cartilages, 22 whole-disc surfaces, interosseous membranes, Achilles tendons, orbital/laryngeal ligaments and paired long plantar ligaments. No complete joint, fascial, lymphatic, ocular-layer or organ-interior anatomy is supplied. See `ANATOMY_RECOVERY.md` and `SOURCE_INVENTORY.md` for source decisions and remaining gaps.
+Vascular coverage comprises 146 selected source artery/vein concepts. It is not a complete circulation, branching graph, lumen or validated connection model. Connective coverage includes costal/nasal/laryngeal cartilages, 22 whole-disc surfaces, interosseous membranes, Achilles tendons, orbital/laryngeal ligaments and paired long plantar ligaments, plus wrist flexor retinacula, iliotibial tracts and linea alba. No complete joint, fascial, lymphatic, ocular-layer or organ-interior anatomy is supplied. See `ANATOMY_RECOVERY.md` and `SOURCE_INVENTORY.md` for source decisions and remaining gaps.
 
 Nervous entries: 28 selected cranial/orbital nerve representations, two ciliary ganglia, the compound brain, 22 selected deep-brain entries and the central canal of the spinal cord. **This is not a full nervous system.** No limb peripheral nerves or brachial/lumbosacral plexuses are present. Source FMA7647 (spinal cord) and FMA78497 (central canal) both use FJ1737. We conservatively expose only FMA78497 as a space and state its limitations; it is not a cord segmentation.
 
 ## Latest additions
+
+The connective/deep-spinal pass adds eleven entries / fifteen components in four new bundles: paired wrist flexor retinacula and iliotibial tracts, linea alba, four bilateral deep-spinal muscle sets and paired levatores costarum breves sets. Six new windows and eight focuses use targeted anatomical context. Every prior 881 record and 67 bundle hash is preserved. Longi alternatives are held for further review. See `AXIAL_DETAIL.md`.
 
 The deep-brain pass adds 22 entries / 24 source components in one additional bundle, without modifying any of the previous 859 records or 66 bundles. See `DEEP_BRAIN.md` for source identities, anatomical limitations, three windows, five focused views and the label-layout update. No complete internal brain atlas or neural connection model is asserted.
 

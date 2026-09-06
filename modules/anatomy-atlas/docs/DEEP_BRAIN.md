@@ -1,5 +1,7 @@
 # Deep-brain anatomy and view-aligned labels
 
+This is the historical 881-entry milestone. The current catalogue and subsequent source-admission evidence are in [connective/deep-spinal detail](AXIAL_DETAIL.md).
+
 ## What is available
 
 The atlas now has **881 selectable body entries in 67 bundles**, with **91 dissection stages and 71 focused views** across 11 regions and whole-body scope. The separate nine-structure shoulder pilot is unchanged. This milestone adds **22 deep-brain source concepts / 24 components**, in `head-neck-nerves-deep-brain.glb` (1,866,940 bytes; 102,398 triangles). Every field of all earlier 859 catalogue records and all 66 earlier model bundle hashes is preserved. The common source-to-scene transform and original brain aggregate are unchanged.

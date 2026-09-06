@@ -1,5 +1,7 @@
 # Guided dissection architecture and review
 
+For the current 97-stage / 79-focus catalogue see [connective/deep-spinal detail](AXIAL_DETAIL.md). Earlier counts below are historical milestones. Focus rules now separate exact target IDs from optional `context` rules; with `includeSkeleton: false`, only named context is restored. Focus and its corresponding window use the same rule union and still intersect regional/side scope. No clinical connectivity or physical attachment is encoded by this visibility relationship.
+
 ## Product structure
 
 The existing shoulder viewer is preserved. The shared regional explorer adds 86 authored visibility stages and 60 focused group views. These are educational source-mesh visibility recipes: no physical tissue cutting, surgical corridor, biomechanical deformation or measured fascicle simulation is implemented. The subsequent [deep-inspection controls](DEEP_INSPECTION.md) add non-destructive surface clipping and system opacity, not reconstructed tissue interiors.

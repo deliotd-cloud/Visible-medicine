@@ -1,8 +1,12 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Connective tissue & deep-spinal study
+
+The current atlas has **892 selectable body entries**. Eleven new entries add wrist flexor retinacula, iliotibial tracts, linea alba and deep cervical/lumbar and rib-elevator muscle sets. Six new windows and eight focused views use chosen neighbouring structures instead of automatically restoring every bone. All previous anatomy is unchanged. See [source evidence, study views and review gates](docs/AXIAL_DETAIL.md).
+
 ## Deep-brain study milestone
 
-**881 selectable source representations** now include 22 additional deep-brain entries: paired caudate, putamen, pallidal, thalamic, amygdala, geniculate and fornix surfaces; selected commissures; corpus callosum; and grouped cerebral choroid plexus and mammillary bodies. Open **Head & neck → Deep-brain overview**, **Basal nuclei & thalami** or **Limbic & commissural detail**. Five focused views remove obscuring skull/brain context, expose labelled landmarks and use distinct study colours. These are licensed source surfaces, not AI-invented tissue, MRI signal or tractography. All earlier geometry is unchanged. See [deep-brain evidence, controls and limitations](docs/DEEP_BRAIN.md).
+The preceding **881-entry milestone** added 22 additional deep-brain entries: paired caudate, putamen, pallidal, thalamic, amygdala, geniculate and fornix surfaces; selected commissures; corpus callosum; and grouped cerebral choroid plexus and mammillary bodies. Open **Head & neck → Deep-brain overview**, **Basal nuclei & thalami** or **Limbic & commissural detail**. Five focused views remove obscuring skull/brain context, expose labelled landmarks and use distinct study colours. These are licensed source surfaces, not AI-invented tissue, MRI signal or tractography. All earlier geometry is unchanged. See [deep-brain evidence, controls and limitations](docs/DEEP_BRAIN.md).
 
 ## Source inventory and added regional detail
 
@@ -36,15 +40,15 @@ The earlier numerical explode review is preserved in `docs/EXPLODE_REVIEW.md`, a
 
 The library now opens at `/` with a whole-body model and **11 individual regional explorers**: head/neck, thorax, abdomen, pelvis/hip, shoulder/arm, elbow/forearm, wrist/hand, hip/thigh, knee/leg, ankle/foot and spine/back. Each region has its own `/regions/{region-id}` URL. The approved visual approach of the dedicated shoulder viewer is preserved at `/shoulder`.
 
-The expanded source library contains **881 selectable entries**: 203 skeletal, 363 muscular, 44 organ, 54 nervous-system, 146 vascular and 71 connective-tissue entries. These are source representations, not an assertion of complete anatomical coverage or a count of distinct human bones/muscles. Whole-body and regional views support system switches, left/right filtering, name search, rotation, pan, zoom, selective hide/restore, isolate/frame, separation and identification practice. Anatomy and clinical tabs remain available; unauthored specialist material is clearly marked pending, not manufactured as finished teaching content.
+The expanded source library contains **892 selectable entries**: 203 skeletal, 369 muscular, 44 organ, 54 nervous-system, 146 vascular and 76 connective-tissue entries. These are source representations, not an assertion of complete anatomical coverage or a count of distinct human bones/muscles. Whole-body and regional views support system switches, left/right filtering, name search, rotation, pan, zoom, selective hide/restore, isolate/frame, separation and identification practice. Anatomy and clinical tabs remain available; unauthored specialist material is clearly marked pending, not manufactured as finished teaching content.
 
 **Nervous-system scope:** brain aggregate, 22 selected deep-brain entries, 28 selected cranial/orbital nerve entries, two ciliary ganglia and a central-canal representation. No complete spinal cord, limb peripheral nerves, brachial plexus or lumbosacral plexus is included. The source ambiguously maps spinal cord and central canal to the same mesh; the narrower central-canal identity is used. Four candidate muscle entries with source laterality/position discrepancies were quarantined, not automatically relabelled. See `docs/FULL_BODY_COVERAGE.md`.
 
-The full-body catalogue is split into 67 lazy-loaded regional/system GLB bundles. Whole-body initially loads bones; regional pages open with their assembled available anatomy. Other bundles load on demand. An organs-only or nerves-only view automatically reframes to the visible anatomy, and a selected structure can be framed individually. The entire expanded body asset set is about 91.80 MB uncompressed; network transfer and device memory depend on the chosen regions/systems. These assets introduce no new dependencies or paid services.
+The full-body catalogue is split into 71 lazy-loaded regional/system GLB bundles. Whole-body initially loads bones; regional pages open with their assembled available anatomy. Other bundles load on demand. An organs-only or nerves-only view automatically reframes to the visible anatomy, and a selected structure can be framed individually. The entire expanded body asset set is about 92.91 MB uncompressed; network transfer and device memory depend on the chosen regions/systems. These assets introduce no new dependencies or paid services.
 
 ## Guided regional dissection
 
-Every regional page now has a guided dissection deck, with **91 stages and 71 focused views** across the 11 regions and whole body. Move forward/back, jump to a named stage, switch to a compartment, ghost removed tissues, remove individual structures, restore them from the removed list, undo up to 40 dissection changes, or reassemble. Six directional camera presets include a plantar view for the foot. Stage and deep-brain focus landmarks explain what is visible and which structures are missing. Regional label columns now follow the visible bounds and the selected view direction, including lateral views. Selecting a removed structure through search restores it explicitly and marks the view customised.
+Every regional page now has a guided dissection deck, with **97 stages and 79 focused views** across the 11 regions and whole body. Move forward/back, jump to a named stage, switch to a compartment, ghost removed tissues, remove individual structures, restore them from the removed list, undo up to 40 dissection changes, or reassemble. Six directional camera presets include a plantar view for the foot. Stage and deep-brain focus landmarks explain what is visible and which structures are missing. Regional label columns now follow the visible bounds and the selected view direction, including lateral views. Selecting a removed structure through search restores it explicitly and marks the view customised.
 
 The rendering adds original contour and tonal-hatching treatment without changing the mesh shape. Hatching describes form, not measured muscle fibres. Whole-body contour rendering is limited to selected structures when the scope is large; regional views use full contours. Ghosts do not intercept structure selection. Practice hides labels, ghosts and study content.
 
@@ -80,6 +84,7 @@ npm run study:test
 npm run imaging:test
 npm run inventory:test
 npm run neuro:test
+npm run axial:test
 npm run reviews:test
 node scripts/validate-recovery.mjs
 node scripts/validate-gaps.mjs

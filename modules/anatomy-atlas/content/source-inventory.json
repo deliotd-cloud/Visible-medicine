@@ -3,7 +3,7 @@
   "sourceVersion": "4.0",
   "license": "CC-BY-4.0",
   "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
-  "catalogSha256": "ea8568e4f589879d181375d03ace013c6b119b957d2fa66fda81114628e0fd0b",
+  "catalogSha256": "a1c6e33bea4c228558d7fc79b8537c9a83fe03fcb296a3f22ee8b2ab688af1f7",
   "tables": [
     {
       "name": "isa_parts_list_e.txt",
@@ -60,13 +60,13 @@
     "uniqueConceptIds": 3432,
     "archiveEntries": 3492,
     "archiveEntriesWithoutConcept": 0,
-    "admittedStructures": 881,
+    "admittedStructures": 892,
     "statuses": {
-      "represented-not-selectable": 1700,
-      "unused-available": 1040,
-      "partly-represented": 199,
-      "admitted": 1265,
-      "held-source-review": 18,
+      "represented-not-selectable": 1736,
+      "unused-available": 993,
+      "partly-represented": 192,
+      "admitted": 1280,
+      "held-source-review": 21,
       "admitted-other-definition": 51
     }
   },
@@ -3145,6 +3145,7 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
+        "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
         "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
         "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
         "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
@@ -4907,10 +4908,13 @@
         "FJ1471",
         "FJ1471M"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA39988",
@@ -8042,10 +8046,12 @@
       "files": [
         "FJ1448"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:fascia:linea-alba"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA11336"
@@ -9225,10 +9231,12 @@
       "files": [
         "FJ1448"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:fascia:linea-alba"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA9649"
@@ -11938,6 +11946,8 @@
         "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
         "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
         "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-lateral-rectus",
         "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-medial-rectus",
         "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament",
@@ -26664,7 +26674,13 @@
         "vm:anatomy:body:hand:left:muscle:set-of-palmar-interossei-of-left-hand",
         "vm:anatomy:body:hand:right:muscle:set-of-dorsal-interossei-of-right-hand",
         "vm:anatomy:body:hand:right:muscle:set-of-lumbricals-of-right-hand",
-        "vm:anatomy:body:hand:right:muscle:set-of-palmar-interossei-of-right-hand"
+        "vm:anatomy:body:hand:right:muscle:set-of-palmar-interossei-of-right-hand",
+        "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+        "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
+        "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
+        "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves"
       ],
       "unavailable": [],
       "sharedDefinitionWith": [
@@ -31966,10 +31982,13 @@
         "FJ1471",
         "FJ1471M"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA7646",
@@ -31984,10 +32003,12 @@
       "files": [
         "FJ1471"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -31999,10 +32020,12 @@
       "files": [
         "FJ1471M"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -37323,6 +37346,7 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
+        "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
         "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
         "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
         "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
@@ -38038,10 +38062,15 @@
         "FJ1552",
         "FJ1552M"
       ],
-      "status": "unused-available",
+      "status": "partly-represented",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
+        "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -43000,10 +43029,13 @@
         "FJ1423",
         "FJ1423M"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA57965",
@@ -45797,12 +45829,14 @@
         "vm:anatomy:body:spine:right:muscle:ascending-part-of-right-trapezius",
         "vm:anatomy:body:spine:right:muscle:descending-part-of-right-trapezius",
         "vm:anatomy:body:spine:right:muscle:transverse-part-of-right-trapezius",
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
         "vm:anatomy:body:thigh:left:muscle:left-rectus-femoris",
         "vm:anatomy:body:thigh:left:muscle:left-vastus-intermedius",
         "vm:anatomy:body:thigh:left:muscle:left-vastus-lateralis",
         "vm:anatomy:body:thigh:left:muscle:left-vastus-medialis",
         "vm:anatomy:body:thigh:left:muscle:long-head-of-left-biceps-femoris",
         "vm:anatomy:body:thigh:left:muscle:short-head-of-left-biceps-femoris",
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
         "vm:anatomy:body:thigh:right:muscle:long-head-of-right-biceps-femoris",
         "vm:anatomy:body:thigh:right:muscle:right-rectus-femoris",
         "vm:anatomy:body:thigh:right:muscle:right-vastus-intermedius",
@@ -46001,7 +46035,13 @@
         "vm:anatomy:body:hand:left:muscle:set-of-palmar-interossei-of-left-hand",
         "vm:anatomy:body:hand:right:muscle:set-of-dorsal-interossei-of-right-hand",
         "vm:anatomy:body:hand:right:muscle:set-of-lumbricals-of-right-hand",
-        "vm:anatomy:body:hand:right:muscle:set-of-palmar-interossei-of-right-hand"
+        "vm:anatomy:body:hand:right:muscle:set-of-palmar-interossei-of-right-hand",
+        "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+        "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
+        "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
+        "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -49461,10 +49501,13 @@
         "FJ1423",
         "FJ1423M"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA51048",
@@ -49932,10 +49975,13 @@
         "FJ1423",
         "FJ1423M"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA51048",
@@ -49954,10 +50000,13 @@
         "FJ1423",
         "FJ1423M"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA51048",
@@ -50108,10 +50157,13 @@
         "FJ1423",
         "FJ1423M"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA51048",
@@ -50130,10 +50182,13 @@
         "FJ1423",
         "FJ1423M"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA51048",
@@ -50151,10 +50206,12 @@
       "files": [
         "FJ1423"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -50166,10 +50223,12 @@
       "files": [
         "FJ1423M"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -53220,6 +53279,7 @@
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
+        "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
@@ -53427,6 +53487,7 @@
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-middle-finger",
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-ring-finger",
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-thumb",
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
         "vm:anatomy:body:hand:left:muscle:abductor-digiti-minimi-of-left-hand",
         "vm:anatomy:body:hand:left:muscle:flexor-digiti-minimi-brevis-of-left-hand",
         "vm:anatomy:body:hand:left:muscle:left-abductor-pollicis-brevis",
@@ -53465,6 +53526,7 @@
         "vm:anatomy:body:hand:right:bone:right-trapezium",
         "vm:anatomy:body:hand:right:bone:right-trapezoid",
         "vm:anatomy:body:hand:right:bone:right-triquetral",
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
         "vm:anatomy:body:hand:right:muscle:abductor-digiti-minimi-of-right-hand",
         "vm:anatomy:body:hand:right:muscle:flexor-digiti-minimi-brevis-of-right-hand",
         "vm:anatomy:body:hand:right:muscle:oblique-head-of-right-adductor-pollicis",
@@ -53851,6 +53913,7 @@
         "vm:anatomy:body:spine:left:muscle:left-serratus-posterior-superior",
         "vm:anatomy:body:spine:left:muscle:left-splenius-capitis",
         "vm:anatomy:body:spine:left:muscle:left-splenius-cervicis",
+        "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
         "vm:anatomy:body:spine:left:muscle:transverse-part-of-left-trapezius",
         "vm:anatomy:body:spine:midline:bone:atlas",
         "vm:anatomy:body:spine:midline:bone:axis",
@@ -53901,6 +53964,10 @@
         "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-thoracic-vertebra",
         "vm:anatomy:body:spine:midline:muscle:lateral-lumbar-intertransversarius",
         "vm:anatomy:body:spine:midline:muscle:medial-lumbar-intertransversarius",
+        "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
+        "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
         "vm:anatomy:body:spine:midline:muscle:spinalis",
         "vm:anatomy:body:spine:midline:muscle:thoracic-rotator",
         "vm:anatomy:body:spine:midline:space:central-canal-of-spinal-cord",
@@ -53930,8 +53997,10 @@
         "vm:anatomy:body:spine:right:muscle:right-serratus-posterior-superior",
         "vm:anatomy:body:spine:right:muscle:right-splenius-capitis",
         "vm:anatomy:body:spine:right:muscle:right-splenius-cervicis",
+        "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
         "vm:anatomy:body:spine:right:muscle:transverse-part-of-right-trapezius",
         "vm:anatomy:body:thigh:left:bone:left-femur",
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
         "vm:anatomy:body:thigh:left:muscle:left-adductor-brevis",
         "vm:anatomy:body:thigh:left:muscle:left-adductor-longus",
         "vm:anatomy:body:thigh:left:muscle:left-adductor-magnus",
@@ -53964,6 +54033,7 @@
         "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
         "vm:anatomy:body:thigh:midline:muscle:superficial-perineal-muscle",
         "vm:anatomy:body:thigh:right:bone:right-femur",
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
         "vm:anatomy:body:thigh:right:muscle:long-head-of-right-biceps-femoris",
         "vm:anatomy:body:thigh:right:muscle:right-adductor-brevis",
         "vm:anatomy:body:thigh:right:muscle:right-adductor-longus",
@@ -57543,6 +57613,7 @@
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
+        "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
@@ -57750,6 +57821,7 @@
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-middle-finger",
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-ring-finger",
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-thumb",
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
         "vm:anatomy:body:hand:left:muscle:abductor-digiti-minimi-of-left-hand",
         "vm:anatomy:body:hand:left:muscle:flexor-digiti-minimi-brevis-of-left-hand",
         "vm:anatomy:body:hand:left:muscle:left-abductor-pollicis-brevis",
@@ -57788,6 +57860,7 @@
         "vm:anatomy:body:hand:right:bone:right-trapezium",
         "vm:anatomy:body:hand:right:bone:right-trapezoid",
         "vm:anatomy:body:hand:right:bone:right-triquetral",
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
         "vm:anatomy:body:hand:right:muscle:abductor-digiti-minimi-of-right-hand",
         "vm:anatomy:body:hand:right:muscle:flexor-digiti-minimi-brevis-of-right-hand",
         "vm:anatomy:body:hand:right:muscle:oblique-head-of-right-adductor-pollicis",
@@ -58174,6 +58247,7 @@
         "vm:anatomy:body:spine:left:muscle:left-serratus-posterior-superior",
         "vm:anatomy:body:spine:left:muscle:left-splenius-capitis",
         "vm:anatomy:body:spine:left:muscle:left-splenius-cervicis",
+        "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
         "vm:anatomy:body:spine:left:muscle:transverse-part-of-left-trapezius",
         "vm:anatomy:body:spine:midline:bone:atlas",
         "vm:anatomy:body:spine:midline:bone:axis",
@@ -58224,6 +58298,10 @@
         "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-thoracic-vertebra",
         "vm:anatomy:body:spine:midline:muscle:lateral-lumbar-intertransversarius",
         "vm:anatomy:body:spine:midline:muscle:medial-lumbar-intertransversarius",
+        "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
+        "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
         "vm:anatomy:body:spine:midline:muscle:spinalis",
         "vm:anatomy:body:spine:midline:muscle:thoracic-rotator",
         "vm:anatomy:body:spine:midline:space:central-canal-of-spinal-cord",
@@ -58253,8 +58331,10 @@
         "vm:anatomy:body:spine:right:muscle:right-serratus-posterior-superior",
         "vm:anatomy:body:spine:right:muscle:right-splenius-capitis",
         "vm:anatomy:body:spine:right:muscle:right-splenius-cervicis",
+        "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
         "vm:anatomy:body:spine:right:muscle:transverse-part-of-right-trapezius",
         "vm:anatomy:body:thigh:left:bone:left-femur",
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
         "vm:anatomy:body:thigh:left:muscle:left-adductor-brevis",
         "vm:anatomy:body:thigh:left:muscle:left-adductor-longus",
         "vm:anatomy:body:thigh:left:muscle:left-adductor-magnus",
@@ -58287,6 +58367,7 @@
         "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
         "vm:anatomy:body:thigh:midline:muscle:superficial-perineal-muscle",
         "vm:anatomy:body:thigh:right:bone:right-femur",
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
         "vm:anatomy:body:thigh:right:muscle:long-head-of-right-biceps-femoris",
         "vm:anatomy:body:thigh:right:muscle:right-adductor-brevis",
         "vm:anatomy:body:thigh:right:muscle:right-adductor-longus",
@@ -62975,6 +63056,7 @@
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
+        "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
@@ -63182,6 +63264,7 @@
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-middle-finger",
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-ring-finger",
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-thumb",
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
         "vm:anatomy:body:hand:left:muscle:abductor-digiti-minimi-of-left-hand",
         "vm:anatomy:body:hand:left:muscle:flexor-digiti-minimi-brevis-of-left-hand",
         "vm:anatomy:body:hand:left:muscle:left-abductor-pollicis-brevis",
@@ -63217,6 +63300,7 @@
         "vm:anatomy:body:hand:right:bone:right-trapezium",
         "vm:anatomy:body:hand:right:bone:right-trapezoid",
         "vm:anatomy:body:hand:right:bone:right-triquetral",
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
         "vm:anatomy:body:hand:right:muscle:abductor-digiti-minimi-of-right-hand",
         "vm:anatomy:body:hand:right:muscle:flexor-digiti-minimi-brevis-of-right-hand",
         "vm:anatomy:body:hand:right:muscle:oblique-head-of-right-adductor-pollicis",
@@ -63681,6 +63765,7 @@
         "vm:anatomy:body:spine:right:muscle:right-splenius-cervicis",
         "vm:anatomy:body:spine:right:muscle:transverse-part-of-right-trapezius",
         "vm:anatomy:body:thigh:left:bone:left-femur",
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
         "vm:anatomy:body:thigh:left:muscle:left-adductor-brevis",
         "vm:anatomy:body:thigh:left:muscle:left-adductor-longus",
         "vm:anatomy:body:thigh:left:muscle:left-adductor-magnus",
@@ -63713,6 +63798,7 @@
         "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
         "vm:anatomy:body:thigh:midline:muscle:superficial-perineal-muscle",
         "vm:anatomy:body:thigh:right:bone:right-femur",
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
         "vm:anatomy:body:thigh:right:muscle:long-head-of-right-biceps-femoris",
         "vm:anatomy:body:thigh:right:muscle:right-adductor-brevis",
         "vm:anatomy:body:thigh:right:muscle:right-adductor-longus",
@@ -66087,6 +66173,7 @@
         "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
         "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
         "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
+        "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
         "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
         "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
         "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
@@ -66294,6 +66381,7 @@
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-middle-finger",
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-ring-finger",
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-thumb",
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
         "vm:anatomy:body:hand:left:muscle:abductor-digiti-minimi-of-left-hand",
         "vm:anatomy:body:hand:left:muscle:flexor-digiti-minimi-brevis-of-left-hand",
         "vm:anatomy:body:hand:left:muscle:left-abductor-pollicis-brevis",
@@ -66332,6 +66420,7 @@
         "vm:anatomy:body:hand:right:bone:right-trapezium",
         "vm:anatomy:body:hand:right:bone:right-trapezoid",
         "vm:anatomy:body:hand:right:bone:right-triquetral",
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
         "vm:anatomy:body:hand:right:muscle:abductor-digiti-minimi-of-right-hand",
         "vm:anatomy:body:hand:right:muscle:flexor-digiti-minimi-brevis-of-right-hand",
         "vm:anatomy:body:hand:right:muscle:oblique-head-of-right-adductor-pollicis",
@@ -66718,6 +66807,7 @@
         "vm:anatomy:body:spine:left:muscle:left-serratus-posterior-superior",
         "vm:anatomy:body:spine:left:muscle:left-splenius-capitis",
         "vm:anatomy:body:spine:left:muscle:left-splenius-cervicis",
+        "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
         "vm:anatomy:body:spine:left:muscle:transverse-part-of-left-trapezius",
         "vm:anatomy:body:spine:midline:bone:atlas",
         "vm:anatomy:body:spine:midline:bone:axis",
@@ -66768,6 +66858,10 @@
         "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-thoracic-vertebra",
         "vm:anatomy:body:spine:midline:muscle:lateral-lumbar-intertransversarius",
         "vm:anatomy:body:spine:midline:muscle:medial-lumbar-intertransversarius",
+        "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
+        "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
         "vm:anatomy:body:spine:midline:muscle:spinalis",
         "vm:anatomy:body:spine:midline:muscle:thoracic-rotator",
         "vm:anatomy:body:spine:midline:space:central-canal-of-spinal-cord",
@@ -66797,8 +66891,10 @@
         "vm:anatomy:body:spine:right:muscle:right-serratus-posterior-superior",
         "vm:anatomy:body:spine:right:muscle:right-splenius-capitis",
         "vm:anatomy:body:spine:right:muscle:right-splenius-cervicis",
+        "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
         "vm:anatomy:body:spine:right:muscle:transverse-part-of-right-trapezius",
         "vm:anatomy:body:thigh:left:bone:left-femur",
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
         "vm:anatomy:body:thigh:left:muscle:left-adductor-brevis",
         "vm:anatomy:body:thigh:left:muscle:left-adductor-longus",
         "vm:anatomy:body:thigh:left:muscle:left-adductor-magnus",
@@ -66831,6 +66927,7 @@
         "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
         "vm:anatomy:body:thigh:midline:muscle:superficial-perineal-muscle",
         "vm:anatomy:body:thigh:right:bone:right-femur",
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
         "vm:anatomy:body:thigh:right:muscle:long-head-of-right-biceps-femoris",
         "vm:anatomy:body:thigh:right:muscle:right-adductor-brevis",
         "vm:anatomy:body:thigh:right:muscle:right-adductor-longus",
@@ -70021,6 +70118,7 @@
         "vm:anatomy:body:spine:right:muscle:ascending-part-of-right-trapezius",
         "vm:anatomy:body:spine:right:muscle:descending-part-of-right-trapezius",
         "vm:anatomy:body:spine:right:muscle:transverse-part-of-right-trapezius",
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
         "vm:anatomy:body:thigh:left:muscle:left-rectus-femoris",
         "vm:anatomy:body:thigh:left:muscle:left-vastus-intermedius",
         "vm:anatomy:body:thigh:left:muscle:left-vastus-lateralis",
@@ -70031,6 +70129,7 @@
         "vm:anatomy:body:thigh:left:vessel:left-femoral-artery",
         "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
         "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
         "vm:anatomy:body:thigh:right:muscle:long-head-of-right-biceps-femoris",
         "vm:anatomy:body:thigh:right:muscle:right-rectus-femoris",
         "vm:anatomy:body:thigh:right:muscle:right-vastus-intermedius",
@@ -74298,7 +74397,13 @@
         "vm:anatomy:body:hand:left:muscle:set-of-palmar-interossei-of-left-hand",
         "vm:anatomy:body:hand:right:muscle:set-of-dorsal-interossei-of-right-hand",
         "vm:anatomy:body:hand:right:muscle:set-of-lumbricals-of-right-hand",
-        "vm:anatomy:body:hand:right:muscle:set-of-palmar-interossei-of-right-hand"
+        "vm:anatomy:body:hand:right:muscle:set-of-palmar-interossei-of-right-hand",
+        "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+        "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
+        "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
+        "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves"
       ],
       "unavailable": [],
       "sharedDefinitionWith": [
@@ -74699,10 +74804,12 @@
         "FJ1550",
         "FJ1550M"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -74715,10 +74822,12 @@
         "FJ1552",
         "FJ1552M"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -74731,9 +74840,9 @@
         "FJ1463",
         "FJ1463M"
       ],
-      "status": "unused-available",
+      "status": "held-source-review",
       "displayedId": null,
-      "heldReason": null,
+      "heldReason": "Grouped levatores costarum longi alias of the two held source surfaces; no independent admission.",
       "representedBy": [],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -74747,10 +74856,13 @@
         "FJ1462",
         "FJ1462M"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+        "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -74820,10 +74932,12 @@
         "FJ1549",
         "FJ1549M"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -74836,10 +74950,12 @@
         "FJ1553",
         "FJ1553M"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -76609,9 +76725,9 @@
       "files": [
         "FJ1463"
       ],
-      "status": "unused-available",
+      "status": "held-source-review",
       "displayedId": null,
-      "heldReason": null,
+      "heldReason": "Levatores costarum longi source needs fibre-course, level and overlap adjudication against breves; similar full thoracic extent is not proof of source error.",
       "representedBy": [],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -76624,9 +76740,9 @@
       "files": [
         "FJ1463M"
       ],
-      "status": "unused-available",
+      "status": "held-source-review",
       "displayedId": null,
-      "heldReason": null,
+      "heldReason": "Levatores costarum longi source needs fibre-course, level and overlap adjudication against breves; similar full thoracic extent is not proof of source error.",
       "representedBy": [],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -76639,10 +76755,12 @@
       "files": [
         "FJ1462"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -76654,10 +76772,12 @@
       "files": [
         "FJ1462M"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -76672,10 +76792,13 @@
         "FJ1463",
         "FJ1463M"
       ],
-      "status": "unused-available",
+      "status": "partly-represented",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+        "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -79818,8 +79941,10 @@
         "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
         "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
         "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
         "vm:anatomy:body:hand:left:muscle:oblique-head-of-left-adductor-pollicis",
         "vm:anatomy:body:hand:left:muscle:transverse-head-of-left-adductor-pollicis",
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
         "vm:anatomy:body:hand:right:muscle:oblique-head-of-right-adductor-pollicis",
         "vm:anatomy:body:hand:right:muscle:transverse-head-of-right-adductor-pollicis",
         "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-lateral-rectus",
@@ -79967,6 +80092,7 @@
         "vm:anatomy:body:spine:right:muscle:ascending-part-of-right-trapezius",
         "vm:anatomy:body:spine:right:muscle:descending-part-of-right-trapezius",
         "vm:anatomy:body:spine:right:muscle:transverse-part-of-right-trapezius",
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
         "vm:anatomy:body:thigh:left:muscle:left-rectus-femoris",
         "vm:anatomy:body:thigh:left:muscle:left-vastus-intermedius",
         "vm:anatomy:body:thigh:left:muscle:left-vastus-lateralis",
@@ -79977,6 +80103,7 @@
         "vm:anatomy:body:thigh:left:vessel:left-femoral-artery",
         "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
         "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
         "vm:anatomy:body:thigh:right:muscle:long-head-of-right-biceps-femoris",
         "vm:anatomy:body:thigh:right:muscle:right-rectus-femoris",
         "vm:anatomy:body:thigh:right:muscle:right-vastus-intermedius",
@@ -80104,11 +80231,13 @@
         "FJ2569",
         "FJ2570"
       ],
-      "status": "partly-represented",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
         "vm:anatomy:body:head-neck:left:organ:left-eyeball",
         "vm:anatomy:body:head-neck:right:organ:right-eyeball"
       ],
@@ -80144,10 +80273,13 @@
         "FJ1471",
         "FJ1471M"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA7646",
@@ -89759,6 +89891,7 @@
         "vm:anatomy:body:hand:right:bone:right-trapezium",
         "vm:anatomy:body:hand:right:bone:right-trapezoid",
         "vm:anatomy:body:hand:right:bone:right-triquetral",
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
         "vm:anatomy:body:head-neck:right:muscle:right-subclavius",
         "vm:anatomy:body:shoulder-arm:right:muscle:right-anconeus",
         "vm:anatomy:body:shoulder-arm:right:muscle:right-levator-scapulae",
@@ -89831,7 +89964,7 @@
         "FJ3317",
         "FJ3318"
       ],
-      "status": "partly-represented",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
@@ -89866,6 +89999,7 @@
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-middle-finger",
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-ring-finger",
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-thumb",
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
         "vm:anatomy:body:head-neck:left:muscle:left-subclavius",
         "vm:anatomy:body:shoulder-arm:left:bone:left-clavicle",
         "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
@@ -89924,7 +90058,7 @@
         "FJ3385",
         "FJ3387"
       ],
-      "status": "partly-represented",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
@@ -89958,7 +90092,8 @@
         "vm:anatomy:body:leg:right:bone:right-patella",
         "vm:anatomy:body:leg:right:bone:right-tibia",
         "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
-        "vm:anatomy:body:thigh:right:bone:right-femur"
+        "vm:anatomy:body:thigh:right:bone:right-femur",
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -90002,7 +90137,7 @@
         "FJ3328",
         "FJ3329"
       ],
-      "status": "partly-represented",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
@@ -90036,7 +90171,8 @@
         "vm:anatomy:body:leg:left:bone:left-patella",
         "vm:anatomy:body:leg:left:bone:left-tibia",
         "vm:anatomy:body:pelvis:left:bone:left-hip-bone",
-        "vm:anatomy:body:thigh:left:bone:left-femur"
+        "vm:anatomy:body:thigh:left:bone:left-femur",
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -98636,12 +98772,13 @@
         "FJ3349",
         "FJ3391"
       ],
-      "status": "partly-represented",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:forearm:right:bone:right-radius",
-        "vm:anatomy:body:forearm:right:bone:right-ulna"
+        "vm:anatomy:body:forearm:right:bone:right-ulna",
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -98656,12 +98793,13 @@
         "FJ3277",
         "FJ3286"
       ],
-      "status": "partly-represented",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:forearm:left:bone:left-radius",
-        "vm:anatomy:body:forearm:left:bone:left-ulna"
+        "vm:anatomy:body:forearm:left:bone:left-ulna",
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -104050,6 +104188,7 @@
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-middle-finger",
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-ring-finger",
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-thumb",
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
         "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-index-finger",
         "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-little-finger",
         "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-middle-finger",
@@ -104077,6 +104216,7 @@
         "vm:anatomy:body:hand:right:bone:right-trapezium",
         "vm:anatomy:body:hand:right:bone:right-trapezoid",
         "vm:anatomy:body:hand:right:bone:right-triquetral",
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
         "vm:anatomy:body:head-neck:left:bone:left-inferior-nasal-concha",
         "vm:anatomy:body:head-neck:left:bone:left-lacrimal-bone",
         "vm:anatomy:body:head-neck:left:bone:left-maxilla",
@@ -104275,12 +104415,14 @@
         "vm:anatomy:body:spine:midline:space:central-canal-of-spinal-cord",
         "vm:anatomy:body:spine:right:muscle:right-psoas-major",
         "vm:anatomy:body:thigh:left:bone:left-femur",
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
         "vm:anatomy:body:thigh:left:muscle:left-obturator-internus",
         "vm:anatomy:body:thigh:left:muscle:left-piriformis",
         "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery",
         "vm:anatomy:body:thigh:left:vessel:left-femoral-artery",
         "vm:anatomy:body:thigh:midline:muscle:superficial-perineal-muscle",
         "vm:anatomy:body:thigh:right:bone:right-femur",
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
         "vm:anatomy:body:thigh:right:muscle:right-obturator-internus",
         "vm:anatomy:body:thigh:right:muscle:right-piriformis",
         "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
@@ -108270,6 +108412,7 @@
         "vm:anatomy:body:hand:right:bone:right-trapezium",
         "vm:anatomy:body:hand:right:bone:right-trapezoid",
         "vm:anatomy:body:hand:right:bone:right-triquetral",
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
         "vm:anatomy:body:shoulder-arm:right:muscle:right-anconeus",
         "vm:anatomy:body:shoulder-arm:right:vessel:right-brachial-artery",
         "vm:anatomy:body:shoulder-arm:right:vessel:right-deep-brachial-artery",
@@ -108323,7 +108466,7 @@
         "FJ3317",
         "FJ3318"
       ],
-      "status": "partly-represented",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
@@ -108358,6 +108501,7 @@
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-middle-finger",
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-ring-finger",
         "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-thumb",
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
         "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
         "vm:anatomy:body:shoulder-arm:left:muscle:left-anconeus",
         "vm:anatomy:body:shoulder-arm:left:muscle:left-brachialis",
@@ -108595,7 +108739,7 @@
         "FJ3389",
         "FJ3390"
       ],
-      "status": "partly-represented",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
@@ -108606,7 +108750,8 @@
         "vm:anatomy:body:hand:right:bone:right-scaphoid",
         "vm:anatomy:body:hand:right:bone:right-trapezium",
         "vm:anatomy:body:hand:right:bone:right-trapezoid",
-        "vm:anatomy:body:hand:right:bone:right-triquetral"
+        "vm:anatomy:body:hand:right:bone:right-triquetral",
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -108627,7 +108772,7 @@
         "FJ3284",
         "FJ3285"
       ],
-      "status": "partly-represented",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
@@ -108638,7 +108783,8 @@
         "vm:anatomy:body:hand:left:bone:left-scaphoid",
         "vm:anatomy:body:hand:left:bone:left-trapezium",
         "vm:anatomy:body:hand:left:bone:left-trapezoid",
-        "vm:anatomy:body:hand:left:bone:left-triquetral"
+        "vm:anatomy:body:hand:left:bone:left-triquetral",
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -110395,10 +110541,12 @@
       "files": [
         "FJ1471"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA58401",
@@ -110415,10 +110563,12 @@
       "files": [
         "FJ1471M"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA58406",
@@ -114962,10 +115112,12 @@
       "files": [
         "FJ1423"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA58418",
@@ -114982,10 +115134,12 @@
       "files": [
         "FJ1423M"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA58419",
@@ -116446,10 +116600,12 @@
       "files": [
         "FJ1471"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA40120",
@@ -116466,10 +116622,12 @@
       "files": [
         "FJ1471"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA40120",
@@ -116486,10 +116644,12 @@
       "files": [
         "FJ1471M"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA40121",
@@ -116505,10 +116665,12 @@
       "files": [
         "FJ1423"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA51044",
@@ -116525,10 +116687,12 @@
       "files": [
         "FJ1423M"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA51045",
@@ -116545,10 +116709,12 @@
       "files": [
         "FJ1423"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA51044",
@@ -116565,10 +116731,12 @@
       "files": [
         "FJ1423M"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA51045",
@@ -116585,10 +116753,12 @@
       "files": [
         "FJ1471"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA40120",
@@ -116605,10 +116775,12 @@
       "files": [
         "FJ1471M"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA40121",
@@ -116624,10 +116796,12 @@
       "files": [
         "FJ1471"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA40120",
@@ -116644,10 +116818,12 @@
       "files": [
         "FJ1471M"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA40121",
@@ -116663,10 +116839,12 @@
       "files": [
         "FJ1423"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA51044",
@@ -116683,10 +116861,12 @@
       "files": [
         "FJ1423M"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA51045",
@@ -116703,10 +116883,12 @@
       "files": [
         "FJ1423"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA51044",
@@ -116723,10 +116905,12 @@
       "files": [
         "FJ1423M"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA51045",
@@ -123564,10 +123748,14 @@
         "FJ1423M",
         "FJ1471"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -132337,9 +132525,11 @@
       "available": true,
       "bytes": 1165444,
       "crc32": 2451760033,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "5be6b36001c18933694ec0871ed262da14c5b6c5f4d1f51b4cf5cd9b074bd76f",
+      "geometrySha256": "0bd6ed80e85ebb7a62e653c7a459cd6f8d3f29ee47b66103f83c95509adfdc1d",
+      "representedBy": [
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract"
+      ]
     },
     {
       "tree": "isa",
@@ -132347,9 +132537,11 @@
       "available": true,
       "bytes": 1157824,
       "crc32": 4066623543,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "bfd57c0dcc185bf4fd7396064bc1c27c7e438427605f7826b4cfdbeb5e40f589",
+      "geometrySha256": "88ed6fba5226f3e3d816a73d2e58eacaa5e3cd20c0c61d2bb0ca092fd8d8c561",
+      "representedBy": [
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+      ]
     },
     {
       "tree": "isa",
@@ -132929,9 +133121,11 @@
       "available": true,
       "bytes": 124794,
       "crc32": 1393178084,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "0d96d74c45a498cc1bf1a5d6ea9b6028d050b234537455b42e6cfd407a669201",
+      "geometrySha256": "9e3e7e25b1fce887190c9f51a27d7c13866b6b8087117ad26fb6da59e2a2e796",
+      "representedBy": [
+        "vm:anatomy:body:abdomen:midline:fascia:linea-alba"
+      ]
     },
     {
       "tree": "isa",
@@ -133197,9 +133391,11 @@
       "available": true,
       "bytes": 554594,
       "crc32": 3422669673,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "8b20ba474baae8ac19ef2a43364279f12286c24dbd54c6ffcea4984ba36a40e0",
+      "geometrySha256": "69c9a18acd1658b7111a2ca2215f092731005c17f7e130e41afa149e53fced51",
+      "representedBy": [
+        "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves"
+      ]
     },
     {
       "tree": "isa",
@@ -133207,9 +133403,11 @@
       "available": true,
       "bytes": 546844,
       "crc32": 912431831,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "ba1f178791d97838164dde76d1e3ec244c8e6289f26cac09ccc006db5b6525a1",
+      "geometrySha256": "28e7bdd68c112ecde04ef71478de7a875d9237ed1f8a335febed46c8d7e463b6",
+      "representedBy": [
+        "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
+      ]
     },
     {
       "tree": "isa",
@@ -133397,9 +133595,11 @@
       "available": true,
       "bytes": 153803,
       "crc32": 1805346971,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "71b49d4cdeb7da162dc51ac6afd5fcf713daa321c45de0b3f37d2825b4e4ffd0",
+      "geometrySha256": "626eb22f85b0df9286986475611d9db0a57e765706311b705015bfb6e99763b1",
+      "representedBy": [
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist"
+      ]
     },
     {
       "tree": "isa",
@@ -133407,9 +133607,11 @@
       "available": true,
       "bytes": 151793,
       "crc32": 3224536624,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "dfe8a84cb170a4f9450d345fb6182a98707d663be9c9d67723f75c4897581023",
+      "geometrySha256": "86148ebcd549e10bf0d1af9e16d9fc150532b4a1385bec4938ea91e36f2e47b8",
+      "representedBy": [
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
+      ]
     },
     {
       "tree": "isa",
@@ -135141,9 +135343,11 @@
       "available": true,
       "bytes": 97662,
       "crc32": 313361420,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "832b6ecf551d766a55d036151dce271e558baccf35fd1861a572c2bf68a1a9c6",
+      "geometrySha256": "9d03deb64ba71b19b5693f706f401517f4bf5965c2b9361f06257e41963570aa",
+      "representedBy": [
+        "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii"
+      ]
     },
     {
       "tree": "isa",
@@ -135151,9 +135355,11 @@
       "available": true,
       "bytes": 96761,
       "crc32": 2836295139,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "a6dcda6f5153705f07e90539023d374ea82830b14db5055093ce9c7fe7c26fae",
+      "geometrySha256": "f00422315735bc922d70029d76d5e1370de9425d23b33c793b543d1a045ff3dc",
+      "representedBy": [
+        "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii"
+      ]
     },
     {
       "tree": "isa",
@@ -135161,9 +135367,11 @@
       "available": true,
       "bytes": 71723,
       "crc32": 3490277323,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "6955915224413b301f77fe4d2e606d67f07b882b93933a3273c60328e8fcf3c4",
+      "geometrySha256": "aaa31eab4dd6540ba26dd5618ca7fe648e245db71badfb4faa532e821e4317ab",
+      "representedBy": [
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum"
+      ]
     },
     {
       "tree": "isa",
@@ -135171,9 +135379,11 @@
       "available": true,
       "bytes": 71035,
       "crc32": 2206593699,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "256cf6ddc747bac8dd2754df1261288c24a1e576e248e87391fd08d435238e95",
+      "geometrySha256": "493c03c88691132c8cbcb1cd8051352fbe86c5dc8a35fd5dd8fafe001520d5de",
+      "representedBy": [
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum"
+      ]
     },
     {
       "tree": "isa",
@@ -135205,9 +135415,11 @@
       "available": true,
       "bytes": 104471,
       "crc32": 480153325,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "1ccc7f131cb8a64c3fc7bee1e7e1c39319f0b2a8259d75cfc52b92a8a7409f3f",
+      "geometrySha256": "e6c9117985f49dfdffe9b81b0fff44ec56e5590beca890c9d2c9f92ea3c87ad2",
+      "representedBy": [
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis"
+      ]
     },
     {
       "tree": "isa",
@@ -135215,9 +135427,11 @@
       "available": true,
       "bytes": 104331,
       "crc32": 893547103,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "7f0857e4efe8deda951b1cc4dad48d685fff98c543e81e33c7451995c5edaa2e",
+      "geometrySha256": "df9bfbb3c198d1a6fc8deab79f507803c403e559eedd6fe4bfcb23a9e66341e3",
+      "representedBy": [
+        "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis"
+      ]
     },
     {
       "tree": "isa",
@@ -135225,9 +135439,11 @@
       "available": true,
       "bytes": 96067,
       "crc32": 1350881139,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "38b50c8a3543e209812ef6d18612bed918108f73bb74bb147504d85ee5d86b96",
+      "geometrySha256": "f0d227971cf2cab62e68cf0c9ad15c55b789c569eeb95f17ccd72e15966ad394",
+      "representedBy": [
+        "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii"
+      ]
     },
     {
       "tree": "isa",
@@ -135235,9 +135451,11 @@
       "available": true,
       "bytes": 95027,
       "crc32": 457199793,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "57bc7086c77781ea63ce07da20cdd613431d18cf0ccffa30df0942463166e6ef",
+      "geometrySha256": "b4e8222c547e933faec4c4a74865938fd4142913756fe6a2bd766e4fcb26a9a4",
+      "representedBy": [
+        "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii"
+      ]
     },
     {
       "tree": "isa",
@@ -155914,9 +156132,11 @@
       "available": true,
       "bytes": 1165447,
       "crc32": 2560965212,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "ed2a55ff1d6af6aeebcfa35b5553918a4a38b239c45287f9d222a2e453ac5268",
+      "geometrySha256": "0bd6ed80e85ebb7a62e653c7a459cd6f8d3f29ee47b66103f83c95509adfdc1d",
+      "representedBy": [
+        "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract"
+      ]
     },
     {
       "tree": "partof",
@@ -155924,9 +156144,11 @@
       "available": true,
       "bytes": 1157828,
       "crc32": 1291798270,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "67789d93e43c6508a33818978152832208e6cd24e8a38ddd52e036405d1680af",
+      "geometrySha256": "88ed6fba5226f3e3d816a73d2e58eacaa5e3cd20c0c61d2bb0ca092fd8d8c561",
+      "representedBy": [
+        "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+      ]
     },
     {
       "tree": "partof",
@@ -156198,9 +156420,11 @@
       "available": true,
       "bytes": 153806,
       "crc32": 2245100517,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "a9dc680c509e9eeffa420c2f2f9a47b1b04789b86ce5e8a1555256976d43d601",
+      "geometrySha256": "626eb22f85b0df9286986475611d9db0a57e765706311b705015bfb6e99763b1",
+      "representedBy": [
+        "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist"
+      ]
     },
     {
       "tree": "partof",
@@ -156208,9 +156432,11 @@
       "available": true,
       "bytes": 151796,
       "crc32": 1566748903,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "fc4a1ecdf8949a273e33ddc07afa21743ffb9ba2142721360d5fd92045ba1d13",
+      "geometrySha256": "86148ebcd549e10bf0d1af9e16d9fc150532b4a1385bec4938ea91e36f2e47b8",
+      "representedBy": [
+        "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
+      ]
     },
     {
       "tree": "partof",

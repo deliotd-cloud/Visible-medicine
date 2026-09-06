@@ -1,7 +1,7 @@
 {
   "version": 1,
   "reviewStatus": "draft-unvalidated",
-  "catalogSha256": "ea8568e4f589879d181375d03ace013c6b119b957d2fa66fda81114628e0fd0b",
+  "catalogSha256": "a1c6e33bea4c228558d7fc79b8537c9a83fe03fcb296a3f22ee8b2ab688af1f7",
   "profiles": [
     {
       "region": "whole-body",
@@ -906,7 +906,18 @@
             "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
             "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
             "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
-            "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
+            "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+            "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+            "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+            "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+            "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+            "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
+            "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
           ]
         },
         {
@@ -1494,7 +1505,13 @@
             "vm:anatomy:body:hand:right:muscle:set-of-palmar-interossei-of-right-hand",
             "vm:anatomy:body:hand:left:muscle:set-of-palmar-interossei-of-left-hand",
             "vm:anatomy:body:hand:right:muscle:set-of-dorsal-interossei-of-right-hand",
-            "vm:anatomy:body:hand:left:muscle:set-of-dorsal-interossei-of-left-hand"
+            "vm:anatomy:body:hand:left:muscle:set-of-dorsal-interossei-of-left-hand",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+            "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+            "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
+            "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
           ]
         },
         {
@@ -2517,7 +2534,12 @@
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
-            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra"
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra",
+            "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+            "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+            "vm:anatomy:body:abdomen:midline:fascia:linea-alba"
           ]
         }
       ],
@@ -3908,7 +3930,9 @@
             "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
             "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
             "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
-            "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm"
+            "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
+            "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
           ]
         },
         {
@@ -3977,7 +4001,9 @@
             "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
             "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
             "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
-            "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm"
+            "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
+            "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
           ]
         },
         {
@@ -4046,7 +4072,9 @@
             "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
             "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
             "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
-            "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm"
+            "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
+            "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
           ]
         },
         {
@@ -4103,7 +4131,9 @@
             "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
             "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
             "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
-            "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm"
+            "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
+            "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
           ]
         },
         {
@@ -4189,7 +4219,9 @@
             "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
             "vm:anatomy:body:forearm:right:bone:right-ulna",
             "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
-            "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm"
+            "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
+            "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
           ]
         }
       ],
@@ -4480,7 +4512,9 @@
             "vm:anatomy:body:hand:right:muscle:set-of-palmar-interossei-of-right-hand",
             "vm:anatomy:body:hand:left:muscle:set-of-palmar-interossei-of-left-hand",
             "vm:anatomy:body:hand:right:muscle:set-of-dorsal-interossei-of-right-hand",
-            "vm:anatomy:body:hand:left:muscle:set-of-dorsal-interossei-of-left-hand"
+            "vm:anatomy:body:hand:left:muscle:set-of-dorsal-interossei-of-left-hand",
+            "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
           ]
         },
         {
@@ -4578,7 +4612,9 @@
             "vm:anatomy:body:hand:right:muscle:set-of-palmar-interossei-of-right-hand",
             "vm:anatomy:body:hand:left:muscle:set-of-palmar-interossei-of-left-hand",
             "vm:anatomy:body:hand:right:muscle:set-of-dorsal-interossei-of-right-hand",
-            "vm:anatomy:body:hand:left:muscle:set-of-dorsal-interossei-of-left-hand"
+            "vm:anatomy:body:hand:left:muscle:set-of-dorsal-interossei-of-left-hand",
+            "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
           ]
         },
         {
@@ -4898,6 +4934,54 @@
             "vm:anatomy:body:hand:left:muscle:set-of-palmar-interossei-of-left-hand",
             "vm:anatomy:body:hand:right:muscle:set-of-dorsal-interossei-of-right-hand",
             "vm:anatomy:body:hand:left:muscle:set-of-dorsal-interossei-of-left-hand"
+          ]
+        },
+        {
+          "id": "wrist-retinaculum",
+          "title": "Retinaculum & carpal arch",
+          "description": "Keep only the carpal bones and supplied flexor retinacula. Finger bones and overlying muscles are set aside.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA40120",
+                "FMA40121"
+              ]
+            },
+            {
+              "systems": [
+                "skeleton"
+              ],
+              "pattern": "(?:scaphoid|lunate|triquetral|pisiform|trapezium|trapezoid|capitate|hamate)$"
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "flexor retinaculum",
+            "scaphoid$",
+            "hamate$",
+            "pisiform$"
+          ],
+          "inspect": "Choose a side, then rotate around the arch or hide the retinaculum. This is a roof-and-bone study, not a complete carpal tunnel: the median nerve is absent.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:hand:left:bone:left-capitate",
+            "vm:anatomy:body:hand:left:bone:left-hamate",
+            "vm:anatomy:body:hand:left:bone:left-lunate",
+            "vm:anatomy:body:hand:left:bone:left-pisiform",
+            "vm:anatomy:body:hand:left:bone:left-scaphoid",
+            "vm:anatomy:body:hand:left:bone:left-trapezium",
+            "vm:anatomy:body:hand:left:bone:left-trapezoid",
+            "vm:anatomy:body:hand:left:bone:left-triquetral",
+            "vm:anatomy:body:hand:right:bone:right-capitate",
+            "vm:anatomy:body:hand:right:bone:right-hamate",
+            "vm:anatomy:body:hand:right:bone:right-lunate",
+            "vm:anatomy:body:hand:right:bone:right-pisiform",
+            "vm:anatomy:body:hand:right:bone:right-scaphoid",
+            "vm:anatomy:body:hand:right:bone:right-trapezium",
+            "vm:anatomy:body:hand:right:bone:right-trapezoid",
+            "vm:anatomy:body:hand:right:bone:right-triquetral",
+            "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
           ]
         }
       ],
@@ -5331,6 +5415,54 @@
             "vm:anatomy:body:hand:right:muscle:set-of-dorsal-interossei-of-right-hand",
             "vm:anatomy:body:hand:left:muscle:set-of-dorsal-interossei-of-left-hand"
           ]
+        },
+        {
+          "id": "wrist-retinaculum",
+          "title": "Retinaculum & carpal arch",
+          "rule": {
+            "fmaIds": [
+              "FMA40120",
+              "FMA40121"
+            ]
+          },
+          "context": [
+            {
+              "systems": [
+                "skeleton"
+              ],
+              "pattern": "(?:scaphoid|lunate|triquetral|pisiform|trapezium|trapezoid|capitate|hamate)$"
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Keep only the carpal bones and supplied flexor retinacula. Finger bones and overlying muscles are set aside.",
+          "inspect": "Choose a side, then rotate around the arch or hide the retinaculum. This is a roof-and-bone study, not a complete carpal tunnel: the median nerve is absent.",
+          "landmarks": [
+            "flexor retinaculum",
+            "scaphoid$",
+            "hamate$",
+            "pisiform$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:hand:left:bone:left-capitate",
+            "vm:anatomy:body:hand:left:bone:left-hamate",
+            "vm:anatomy:body:hand:left:bone:left-lunate",
+            "vm:anatomy:body:hand:left:bone:left-pisiform",
+            "vm:anatomy:body:hand:left:bone:left-scaphoid",
+            "vm:anatomy:body:hand:left:bone:left-trapezium",
+            "vm:anatomy:body:hand:left:bone:left-trapezoid",
+            "vm:anatomy:body:hand:left:bone:left-triquetral",
+            "vm:anatomy:body:hand:right:bone:right-capitate",
+            "vm:anatomy:body:hand:right:bone:right-hamate",
+            "vm:anatomy:body:hand:right:bone:right-lunate",
+            "vm:anatomy:body:hand:right:bone:right-pisiform",
+            "vm:anatomy:body:hand:right:bone:right-scaphoid",
+            "vm:anatomy:body:hand:right:bone:right-trapezium",
+            "vm:anatomy:body:hand:right:bone:right-trapezoid",
+            "vm:anatomy:body:hand:right:bone:right-triquetral",
+            "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+            "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist"
+          ]
         }
       ]
     },
@@ -5434,7 +5566,9 @@
             "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
             "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
             "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
-            "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein"
+            "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+            "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
           ]
         },
         {
@@ -5529,7 +5663,9 @@
             "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
             "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
             "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
-            "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein"
+            "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+            "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
           ]
         },
         {
@@ -5623,7 +5759,9 @@
             "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
             "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
             "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
-            "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein"
+            "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+            "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
           ]
         },
         {
@@ -5710,7 +5848,9 @@
             "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
             "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
             "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
-            "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein"
+            "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+            "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
           ]
         },
         {
@@ -5796,7 +5936,9 @@
             "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
             "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
             "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
-            "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein"
+            "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+            "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
           ]
         },
         {
@@ -5864,6 +6006,51 @@
             "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
             "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
             "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein"
+          ]
+        },
+        {
+          "id": "iliotibial-context",
+          "title": "Lateral thigh & iliotibial tract",
+          "description": "Compare the source tracts with the available tensor fasciae latae, gluteus maximus, hip bones and femora.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA58776",
+                "FMA58777"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA22328",
+                "FMA22329",
+                "FMA22425",
+                "FMA22426",
+                "FMA24474",
+                "FMA24475",
+                "FMA16586",
+                "FMA16587"
+              ]
+            }
+          ],
+          "view": "right",
+          "landmarks": [
+            "iliotibial tract",
+            "tensor fasciae latae",
+            "gluteus maximus"
+          ],
+          "inspect": "Use the matching left/right view after choosing a side. Hide a muscle to expose the tract; use Knee & leg for the tibial context. Exploded positions are illustrative, not attachment measurements.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
+            "vm:anatomy:body:thigh:left:bone:left-femur",
+            "vm:anatomy:body:pelvis:left:bone:left-hip-bone",
+            "vm:anatomy:body:thigh:right:bone:right-femur",
+            "vm:anatomy:body:thigh:right:muscle:right-gluteus-maximus",
+            "vm:anatomy:body:thigh:left:muscle:left-gluteus-maximus",
+            "vm:anatomy:body:thigh:right:muscle:right-tensor-fasciae-latae",
+            "vm:anatomy:body:thigh:left:muscle:left-tensor-fasciae-latae",
+            "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
           ]
         }
       ],
@@ -6047,6 +6234,51 @@
             "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
             "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein"
           ]
+        },
+        {
+          "id": "iliotibial-context",
+          "title": "Lateral thigh & iliotibial tract",
+          "rule": {
+            "fmaIds": [
+              "FMA58776",
+              "FMA58777"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA22328",
+                "FMA22329",
+                "FMA22425",
+                "FMA22426",
+                "FMA24474",
+                "FMA24475",
+                "FMA16586",
+                "FMA16587"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "right",
+          "description": "Compare the source tracts with the available tensor fasciae latae, gluteus maximus, hip bones and femora.",
+          "inspect": "Use the matching left/right view after choosing a side. Hide a muscle to expose the tract; use Knee & leg for the tibial context. Exploded positions are illustrative, not attachment measurements.",
+          "landmarks": [
+            "iliotibial tract",
+            "tensor fasciae latae",
+            "gluteus maximus"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
+            "vm:anatomy:body:thigh:left:bone:left-femur",
+            "vm:anatomy:body:pelvis:left:bone:left-hip-bone",
+            "vm:anatomy:body:thigh:right:bone:right-femur",
+            "vm:anatomy:body:thigh:right:muscle:right-gluteus-maximus",
+            "vm:anatomy:body:thigh:left:muscle:left-gluteus-maximus",
+            "vm:anatomy:body:thigh:right:muscle:right-tensor-fasciae-latae",
+            "vm:anatomy:body:thigh:left:muscle:left-tensor-fasciae-latae",
+            "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+          ]
         }
       ]
     },
@@ -6128,7 +6360,9 @@
             "vm:anatomy:body:leg:right:ligament:interosseous-membrane-of-right-leg",
             "vm:anatomy:body:leg:left:ligament:interosseous-membrane-of-left-leg",
             "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
-            "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon"
+            "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
+            "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
           ]
         },
         {
@@ -6204,7 +6438,9 @@
             "vm:anatomy:body:leg:right:ligament:interosseous-membrane-of-right-leg",
             "vm:anatomy:body:leg:left:ligament:interosseous-membrane-of-left-leg",
             "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
-            "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon"
+            "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
+            "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
           ]
         },
         {
@@ -6277,7 +6513,9 @@
             "vm:anatomy:body:leg:right:ligament:interosseous-membrane-of-right-leg",
             "vm:anatomy:body:leg:left:ligament:interosseous-membrane-of-left-leg",
             "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
-            "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon"
+            "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
+            "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
           ]
         },
         {
@@ -6422,7 +6660,9 @@
             "vm:anatomy:body:leg:right:ligament:interosseous-membrane-of-right-leg",
             "vm:anatomy:body:leg:left:ligament:interosseous-membrane-of-left-leg",
             "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
-            "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon"
+            "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
+            "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
           ]
         }
       ],
@@ -7953,7 +8193,9 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
-            "vm:anatomy:body:thorax:left:organ:left-main-bronchus"
+            "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
+            "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
           ]
         },
         {
@@ -8120,7 +8362,9 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
-            "vm:anatomy:body:thorax:left:organ:left-main-bronchus"
+            "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
+            "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
           ]
         },
         {
@@ -8284,7 +8528,9 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
-            "vm:anatomy:body:thorax:left:organ:left-main-bronchus"
+            "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
+            "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
           ]
         },
         {
@@ -8683,6 +8929,71 @@
             "vm:anatomy:body:thorax:midline:bone:xiphoid-process",
             "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
             "vm:anatomy:body:thorax:left:organ:left-main-bronchus"
+          ]
+        },
+        {
+          "id": "rib-elevator-sets",
+          "title": "Short rib-elevator sets",
+          "description": "Inspect the source-labelled breves with the thoracic bones available in this region; lungs and superficial muscles are set aside.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA74077",
+                "FMA74078"
+              ]
+            },
+            {
+              "systems": [
+                "skeleton"
+              ],
+              "pattern": "(?:thoracic vertebra|rib|seventh cervical vertebra)$"
+            }
+          ],
+          "view": "posterior",
+          "landmarks": [
+            "levatores costarum breves"
+          ],
+          "inspect": "Use Thorax for the ribs and Spine & back for vertebral context. Individual rib attachments remain unvalidated. Longi alternatives are withheld rather than overlaid.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:tenth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:eleventh-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:twelfth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:second-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:third-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fourth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fifth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:sixth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:seventh-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:eighth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:ninth-thoracic-vertebra",
+            "vm:anatomy:body:thorax:left:bone:left-tenth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-eleventh-rib",
+            "vm:anatomy:body:thorax:left:bone:left-twelfth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-first-rib",
+            "vm:anatomy:body:thorax:left:bone:left-second-rib",
+            "vm:anatomy:body:thorax:left:bone:left-third-rib",
+            "vm:anatomy:body:thorax:left:bone:left-fourth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-fifth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-sixth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-seventh-rib",
+            "vm:anatomy:body:thorax:left:bone:left-eighth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-ninth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-tenth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-eleventh-rib",
+            "vm:anatomy:body:thorax:right:bone:right-twelfth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-first-rib",
+            "vm:anatomy:body:thorax:right:bone:right-second-rib",
+            "vm:anatomy:body:thorax:right:bone:right-third-rib",
+            "vm:anatomy:body:thorax:right:bone:right-fourth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-fifth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-sixth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-seventh-rib",
+            "vm:anatomy:body:thorax:right:bone:right-eighth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-ninth-rib",
+            "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
           ]
         }
       ],
@@ -9091,6 +9402,71 @@
             "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
             "vm:anatomy:body:thorax:left:organ:left-main-bronchus"
           ]
+        },
+        {
+          "id": "rib-elevator-sets",
+          "title": "Short rib-elevator sets",
+          "rule": {
+            "fmaIds": [
+              "FMA74077",
+              "FMA74078"
+            ]
+          },
+          "context": [
+            {
+              "systems": [
+                "skeleton"
+              ],
+              "pattern": "(?:thoracic vertebra|rib|seventh cervical vertebra)$"
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Inspect the source-labelled breves with the thoracic bones available in this region; lungs and superficial muscles are set aside.",
+          "inspect": "Use Thorax for the ribs and Spine & back for vertebral context. Individual rib attachments remain unvalidated. Longi alternatives are withheld rather than overlaid.",
+          "landmarks": [
+            "levatores costarum breves"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:tenth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:eleventh-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:twelfth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:second-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:third-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fourth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fifth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:sixth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:seventh-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:eighth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:ninth-thoracic-vertebra",
+            "vm:anatomy:body:thorax:left:bone:left-tenth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-eleventh-rib",
+            "vm:anatomy:body:thorax:left:bone:left-twelfth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-first-rib",
+            "vm:anatomy:body:thorax:left:bone:left-second-rib",
+            "vm:anatomy:body:thorax:left:bone:left-third-rib",
+            "vm:anatomy:body:thorax:left:bone:left-fourth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-fifth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-sixth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-seventh-rib",
+            "vm:anatomy:body:thorax:left:bone:left-eighth-rib",
+            "vm:anatomy:body:thorax:left:bone:left-ninth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-tenth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-eleventh-rib",
+            "vm:anatomy:body:thorax:right:bone:right-twelfth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-first-rib",
+            "vm:anatomy:body:thorax:right:bone:right-second-rib",
+            "vm:anatomy:body:thorax:right:bone:right-third-rib",
+            "vm:anatomy:body:thorax:right:bone:right-fourth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-fifth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-sixth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-seventh-rib",
+            "vm:anatomy:body:thorax:right:bone:right-eighth-rib",
+            "vm:anatomy:body:thorax:right:bone:right-ninth-rib",
+            "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
+          ]
         }
       ]
     },
@@ -9179,7 +9555,8 @@
             "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
             "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
             "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
-            "vm:anatomy:body:abdomen:unpaired:organ:appendix"
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+            "vm:anatomy:body:abdomen:midline:fascia:linea-alba"
           ]
         },
         {
@@ -9264,7 +9641,8 @@
             "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
             "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
             "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
-            "vm:anatomy:body:abdomen:unpaired:organ:appendix"
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+            "vm:anatomy:body:abdomen:midline:fascia:linea-alba"
           ]
         },
         {
@@ -9446,7 +9824,38 @@
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
-            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra"
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra",
+            "vm:anatomy:body:abdomen:midline:fascia:linea-alba"
+          ]
+        },
+        {
+          "id": "linea-alba-context",
+          "title": "Anterior midline junction",
+          "description": "Remove the viscera to examine the linea alba and the available external-oblique surfaces.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA11336"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA13336",
+                "FMA13337"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "linea alba",
+            "external oblique"
+          ],
+          "inspect": "Inspect the narrow midline surface, then fade or hide the external oblique. This is not a complete abdominal-wall dissection; rectus muscles, sheath layers and internal aponeuroses are not shown here.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:right:muscle:right-external-oblique",
+            "vm:anatomy:body:abdomen:left:muscle:left-external-oblique",
+            "vm:anatomy:body:abdomen:midline:fascia:linea-alba"
           ]
         }
       ],
@@ -9599,6 +10008,36 @@
             "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
             "vm:anatomy:body:abdomen:unpaired:organ:appendix"
           ]
+        },
+        {
+          "id": "linea-alba-context",
+          "title": "Anterior midline junction",
+          "rule": {
+            "fmaIds": [
+              "FMA11336"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA13336",
+                "FMA13337"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Remove the viscera to examine the linea alba and the available external-oblique surfaces.",
+          "inspect": "Inspect the narrow midline surface, then fade or hide the external oblique. This is not a complete abdominal-wall dissection; rectus muscles, sheath layers and internal aponeuroses are not shown here.",
+          "landmarks": [
+            "linea alba",
+            "external oblique"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:right:muscle:right-external-oblique",
+            "vm:anatomy:body:abdomen:left:muscle:left-external-oblique",
+            "vm:anatomy:body:abdomen:midline:fascia:linea-alba"
+          ]
         }
       ]
     },
@@ -9685,7 +10124,9 @@
             "vm:anatomy:body:pelvis:right:organ:right-epididymis",
             "vm:anatomy:body:pelvis:left:organ:left-epididymis",
             "vm:anatomy:body:pelvis:unpaired:organ:urethra",
-            "vm:anatomy:body:abdomen:unpaired:organ:appendix"
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+            "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
           ]
         },
         {
@@ -9768,7 +10209,9 @@
             "vm:anatomy:body:pelvis:right:organ:right-epididymis",
             "vm:anatomy:body:pelvis:left:organ:left-epididymis",
             "vm:anatomy:body:pelvis:unpaired:organ:urethra",
-            "vm:anatomy:body:abdomen:unpaired:organ:appendix"
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+            "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
           ]
         },
         {
@@ -9850,7 +10293,9 @@
             "vm:anatomy:body:pelvis:right:organ:right-epididymis",
             "vm:anatomy:body:pelvis:left:organ:left-epididymis",
             "vm:anatomy:body:pelvis:unpaired:organ:urethra",
-            "vm:anatomy:body:abdomen:unpaired:organ:appendix"
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+            "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
           ]
         },
         {
@@ -10343,7 +10788,10 @@
             "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
             "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
             "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
-            "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
+            "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+            "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+            "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii"
           ]
         },
         {
@@ -10590,7 +11038,10 @@
             "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
             "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
             "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
-            "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
+            "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+            "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+            "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii"
           ]
         },
         {
@@ -10836,7 +11287,10 @@
             "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
             "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
             "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
-            "vm:anatomy:body:head-neck:midline:organ:mammillary-body"
+            "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+            "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+            "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii"
           ]
         },
         {
@@ -11998,6 +12452,46 @@
             "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
             "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere"
           ]
+        },
+        {
+          "id": "deep-cervical-sets",
+          "title": "Deep cervical muscle sets",
+          "rule": {
+            "fmaIds": [
+              "FMA71309",
+              "FMA71442",
+              "FMA71443"
+            ]
+          },
+          "context": [
+            {
+              "systems": [
+                "skeleton"
+              ],
+              "pattern": "^(atlas|axis|(?:third|fourth|fifth|sixth|seventh) cervical vertebra)$"
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "A close cervical window with interspinal and anterior/posterior intertransverse sets. The remaining column and skull are excluded.",
+          "inspect": "Rotate to compare spinous and transverse-process relationships. Each muscle set stays bilateral under the side filter; individual levels are not segmented or attachment-validated.",
+          "landmarks": [
+            "interspinales cervicis",
+            "anterior cervical intertransversarii",
+            "posterior cervical intertransversarii"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:third-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fourth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fifth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:seventh-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:atlas",
+            "vm:anatomy:body:spine:midline:bone:axis",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+            "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+            "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii"
+          ]
         }
       ]
     },
@@ -12128,7 +12622,13 @@
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
-            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra"
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+            "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+            "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
+            "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
           ]
         },
         {
@@ -12250,7 +12750,13 @@
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
-            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra"
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+            "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+            "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
+            "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
           ]
         },
         {
@@ -12365,7 +12871,13 @@
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
-            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra"
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+            "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+            "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
+            "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
           ]
         },
         {
@@ -12461,7 +12973,13 @@
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
-            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra"
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+            "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+            "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
+            "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
           ]
         },
         {
@@ -12661,6 +13179,87 @@
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra"
           ]
+        },
+        {
+          "id": "deep-cervical-sets",
+          "title": "Deep cervical muscle sets",
+          "description": "A close cervical window with interspinal and anterior/posterior intertransverse sets. The remaining column and skull are excluded.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA71309",
+                "FMA71442",
+                "FMA71443"
+              ]
+            },
+            {
+              "systems": [
+                "skeleton"
+              ],
+              "pattern": "^(atlas|axis|(?:third|fourth|fifth|sixth|seventh) cervical vertebra)$"
+            }
+          ],
+          "view": "posterior",
+          "landmarks": [
+            "interspinales cervicis",
+            "anterior cervical intertransversarii",
+            "posterior cervical intertransversarii"
+          ],
+          "inspect": "Rotate to compare spinous and transverse-process relationships. Each muscle set stays bilateral under the side filter; individual levels are not segmented or attachment-validated.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:third-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fourth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fifth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:seventh-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:atlas",
+            "vm:anatomy:body:spine:midline:bone:axis",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+            "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+            "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii"
+          ]
+        },
+        {
+          "id": "deep-lumbar-sets",
+          "title": "Deep lumbar muscle sets",
+          "description": "Compare lumbar interspinal and existing intertransverse groups within a lumbar-only skeletal frame.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA71307"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA22850",
+                "FMA22851"
+              ]
+            },
+            {
+              "systems": [
+                "skeleton"
+              ],
+              "pattern": "lumbar vertebra$"
+            }
+          ],
+          "view": "posterior",
+          "landmarks": [
+            "interspinales lumborum",
+            "lumbar intertransversarius"
+          ],
+          "inspect": "Hide a vertebra to inspect the small muscles. Source groups are not individual level assignments; the central canal is not included and no complete spinal cord is implied.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:first-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:second-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:third-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fourth-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fifth-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:muscle:lateral-lumbar-intertransversarius",
+            "vm:anatomy:body:spine:midline:muscle:medial-lumbar-intertransversarius",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum"
+          ]
         }
       ],
       "focuses": [
@@ -12856,6 +13455,129 @@
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra"
+          ]
+        },
+        {
+          "id": "deep-cervical-sets",
+          "title": "Deep cervical muscle sets",
+          "rule": {
+            "fmaIds": [
+              "FMA71309",
+              "FMA71442",
+              "FMA71443"
+            ]
+          },
+          "context": [
+            {
+              "systems": [
+                "skeleton"
+              ],
+              "pattern": "^(atlas|axis|(?:third|fourth|fifth|sixth|seventh) cervical vertebra)$"
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "A close cervical window with interspinal and anterior/posterior intertransverse sets. The remaining column and skull are excluded.",
+          "inspect": "Rotate to compare spinous and transverse-process relationships. Each muscle set stays bilateral under the side filter; individual levels are not segmented or attachment-validated.",
+          "landmarks": [
+            "interspinales cervicis",
+            "anterior cervical intertransversarii",
+            "posterior cervical intertransversarii"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:third-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fourth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fifth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:seventh-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:atlas",
+            "vm:anatomy:body:spine:midline:bone:axis",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+            "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+            "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii"
+          ]
+        },
+        {
+          "id": "deep-lumbar-sets",
+          "title": "Deep lumbar muscle sets",
+          "rule": {
+            "fmaIds": [
+              "FMA71307"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA22850",
+                "FMA22851"
+              ]
+            },
+            {
+              "systems": [
+                "skeleton"
+              ],
+              "pattern": "lumbar vertebra$"
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Compare lumbar interspinal and existing intertransverse groups within a lumbar-only skeletal frame.",
+          "inspect": "Hide a vertebra to inspect the small muscles. Source groups are not individual level assignments; the central canal is not included and no complete spinal cord is implied.",
+          "landmarks": [
+            "interspinales lumborum",
+            "lumbar intertransversarius"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:first-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:second-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:third-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fourth-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fifth-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:muscle:lateral-lumbar-intertransversarius",
+            "vm:anatomy:body:spine:midline:muscle:medial-lumbar-intertransversarius",
+            "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum"
+          ]
+        },
+        {
+          "id": "rib-elevator-sets",
+          "title": "Short rib-elevator sets",
+          "rule": {
+            "fmaIds": [
+              "FMA74077",
+              "FMA74078"
+            ]
+          },
+          "context": [
+            {
+              "systems": [
+                "skeleton"
+              ],
+              "pattern": "(?:thoracic vertebra|rib|seventh cervical vertebra)$"
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Inspect the source-labelled breves with the thoracic bones available in this region; lungs and superficial muscles are set aside.",
+          "inspect": "Use Thorax for the ribs and Spine & back for vertebral context. Individual rib attachments remain unvalidated. Longi alternatives are withheld rather than overlaid.",
+          "landmarks": [
+            "levatores costarum breves"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:tenth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:eleventh-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:twelfth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:second-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:third-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fourth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fifth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:sixth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:seventh-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:seventh-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:eighth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:ninth-thoracic-vertebra",
+            "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
           ]
         }
       ]

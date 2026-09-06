@@ -5,6 +5,7 @@ import {
 } from './anatomy-data';
 import type { BodyStructure } from './body-types';
 import { neuroGroupFor } from '../lib/neuroanatomy';
+import { axialGroupFor } from '../lib/axial-anatomy';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -46,6 +47,22 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
     item.sourceFmaIds?.includes(s.fmaId),
   );
   if (existing) return existing.sections[tab];
+  const axial = axialGroupFor(s.fmaId);
+  if (axial && (tab === 'anatomy' || tab === 'function'))
+    return {
+      title: `${axial.name} · draft`,
+      body: tab === 'anatomy' ? axial.anatomy : axial.function,
+      bullets:
+        tab === 'anatomy'
+          ? [
+              `Source identity: ${s.fmaId} · ${s.sources.length} source component${s.sources.length === 1 ? '' : 's'}`,
+              axial.caution,
+              'Use Guided dissection → Focus to open its local relationship window.',
+            ]
+          : [axial.caution],
+      note: s.coverageNote ?? 'Anatomical and teaching review pending.',
+      citations: axial.references,
+    };
   const neuro = neuroGroupFor(s.fmaId);
   if (neuro && (tab === 'anatomy' || tab === 'function'))
     return {

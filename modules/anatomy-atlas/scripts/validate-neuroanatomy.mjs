@@ -23,8 +23,8 @@ same(baseline.sourceCommit, 'b49c9172fbc443bcd2ee1faf58c171aa76424e20');
 same(evidence.sourceCommit, baseline.sourceCommit);
 same(baseline.structures.length, 859);
 same(baseline.bundles.length, 66);
-same(catalog.structures.length, 881);
-same(catalog.bundles.length, 67);
+same(catalog.structures.length, 892);
+same(catalog.bundles.length, 71);
 same(catalog.coordinateSystem, baseline.coordinateSystem);
 same(catalog.excluded, baseline.excluded);
 for (const old of baseline.structures) {
@@ -55,7 +55,9 @@ for (const old of baseline.bundles) {
 same(evidence.results.length, 22);
 same(evidence.results.flatMap((r) => r.sources).length, 24);
 const oldIds = new Set(baseline.structures.map((s) => s.id));
-const additions = catalog.structures.filter((s) => !oldIds.has(s.id));
+const additions = catalog.structures.filter(
+  (s) => !oldIds.has(s.id) && s.bundle.endsWith('-deep-brain'),
+);
 same(additions.length, 22);
 const sourceKeys = new Set();
 for (const [fma, name, files] of neuroDefinitions) {

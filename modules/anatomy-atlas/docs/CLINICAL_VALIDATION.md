@@ -1,5 +1,12 @@
 # Clinical validation checklist
 
+## Connective and deep-spinal gates
+
+- Review retinacular thickness, carpal attachment footprints and tunnel boundaries; there is no median nerve or validated lumen.
+- Review iliotibial boundaries, fascia-lata aliases, distal connections and linea-alba/aponeurotic continuity. No complete abdominal wall or fascia layer is implied.
+- Adjudicate bilateral muscle-set grouping, cervical/lumbar level assignments and anterior/posterior relationships. Review the held longi candidates against breves; extent similarity alone does not establish duplication or source error.
+- Validate all new close-context windows, captions and side-filter behaviour. See `AXIAL_DETAIL.md` for source records and automated evidence.
+
 ## Deep-brain and presentation gates
 
 - Adjudicate all 22 deep-brain entries against a qualified neuroanatomical reference: identity, laterality, extents, contours, registration and relationships to the existing brain. Numerical bounding-box containment is not tissue-containment or clinical proof.
@@ -12,7 +19,7 @@
 
 - Review all 36 inventory additions, particularly bronchial extent/relative length, named biliary-duct boundaries, ciliary ganglion position and vessel endpoints/branches/calibre. See `SOURCE_INVENTORY.md`.
 - Adjudicate the newly held source-labelled superior epigastric veins; do not relabel or reposition them automatically.
-- Review all 91 current stages and 71 focused views, including airway, shoulder vascular and deep-brain windows. Validate touch/keyboard access, framing, occlusion and tiny-structure selection on actual devices.
+- Review all 97 current stages and 79 focused views, including airway, shoulder vascular and deep-brain windows. Validate touch/keyboard access, framing, occlusion and tiny-structure selection on actual devices.
 - The exhaustive source inventory proves record reconciliation, not complete anatomy. Identical source geometry under multiple labels does not validate those labels.
 - The future imaging selection contract is tested software, not patient registration. No scans or imaging approvals are present.
 

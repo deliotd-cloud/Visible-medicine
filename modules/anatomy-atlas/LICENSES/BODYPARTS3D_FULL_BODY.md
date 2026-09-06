@@ -1,8 +1,12 @@
 # Expanded BodyParts3D commercial-use audit
 
+## Connective/deep-spinal extension — 6 September 2026
+
+Eleven further concepts / fifteen source components from the same official IS-A v4 archive add four GLBs. The current body catalogue contains 892 entries / 71 bundles, about 92.91 MB. The previous 881 records / 67 bundle hashes are preserved. Exact source hashes, alias evidence, unchanged transforms and two withheld longi candidates are recorded in `content/axial-source-audit.json` and `docs/AXIAL_DETAIL.md`. CC BY 4.0 was rechecked at the official licence page; existing visible attribution, licence link and change notices remain required. No new dependencies, fonts, textures, copied diagrams, paid APIs or generated anatomy were added. Teaching references support brief original factual summaries, not redistribution of their textbooks or illustrations.
+
 ## Deep-brain extension — 6 September 2026
 
-Twenty-two additional concepts / 24 source components were retrieved from the same official IS-A v4 archive, producing one additional 1,866,940-byte GLB. The current body catalogue has 881 entries in 67 bundles (91.80 MB). All previous 859 records and 66 bundle hashes are preserved. CRC/size, SHA-256, exact-geometry fingerprints, laterality and common-frame bounding checks are recorded in `content/neuro-source-audit.json`; `docs/DEEP_BRAIN.md` explains adaptations and limitations. The official CC BY 4.0 grant was rechecked for this milestone. Attribution and indication-of-change obligations remain intact.
+Twenty-two additional concepts / 24 source components were retrieved from the same official IS-A v4 archive, producing one additional 1,866,940-byte GLB. That milestone's body catalogue had 881 entries in 67 bundles (91.80 MB). All previous 859 records and 66 bundle hashes are preserved. CRC/size, SHA-256, exact-geometry fingerprints, laterality and common-frame bounding checks are recorded in `content/neuro-source-audit.json`; `docs/DEEP_BRAIN.md` explains adaptations and limitations. The official CC BY 4.0 grant was rechecked for this milestone. Attribution and indication-of-change obligations remain intact.
 
 Distinct display colours, authored short teaching summaries, visibility recipes and view-aligned label placement are application adaptations, not additional anatomical datasets. No textbook illustrations, prose passages, new fonts, textures, libraries, paid APIs or generated anatomical surfaces were imported. Teaching references are factual citations, not a claim to redistribute their protected material. Source correctness and clinical validation remain unproven.
 

@@ -1,5 +1,6 @@
 import type { BodyStructure, BodySystem } from './body-types';
 import { neuroStudySets, neuroStudyIds } from '../lib/neuroanatomy.ts';
+import { axialStudySets } from '../lib/axial-anatomy.ts';
 
 export type DissectionView =
   | 'anterior'
@@ -30,6 +31,7 @@ export type DissectionFocus = {
   rule: TissueRule;
   view: DissectionView;
   includeSkeleton?: boolean;
+  context?: TissueRule[];
   description?: string;
   inspect?: string;
   landmarks?: string[];
@@ -1097,6 +1099,37 @@ dissectionProfiles['head-neck'].references.push(
   'https://nba.uth.tmc.edu/neuroanatomy/L10/Lab10p18_index.html',
 );
 
+// Target and context rules are separate: do not reintroduce a whole skeleton
+// when a close window needs only the carpal, cervical or lumbar framework.
+for (const study of axialStudySets) {
+  for (const [index, region] of study.regions.entries()) {
+    const rule = { fmaIds: study.targetFmaIds };
+    dissectionProfiles[region].focuses.push({
+      id: study.id,
+      title: study.title,
+      rule,
+      context: study.context,
+      includeSkeleton: false,
+      view: study.view,
+      description: study.description,
+      inspect: study.inspect,
+      landmarks: study.landmarks,
+    });
+    if (index === 0)
+      dissectionProfiles[region].stages.push(
+        window(
+          study.id,
+          study.title,
+          study.description,
+          [rule, ...study.context],
+          study.view,
+          study.landmarks,
+          study.inspect,
+        ),
+      );
+  }
+}
+
 export function matchesRule(s: BodyStructure, rule: TissueRule): boolean {
   return (
     (!rule.systems || rule.systems.includes(s.system)) &&
@@ -1116,6 +1149,7 @@ export function stageStructures(
       ? structures.filter(
           (s) =>
             (choice.includeSkeleton !== false && s.system === 'skeleton') ||
+            choice.context?.some((rule) => matchesRule(s, rule)) ||
             matchesRule(s, choice.rule),
         )
       : structures;

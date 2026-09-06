@@ -1,0 +1,831 @@
+{
+  "sourceCommit": "e007550faec7c75947569c2a30fa1a032c7bf5f0",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "results": [
+    {
+      "fmaId": "FMA40120",
+      "sourceName": "flexor retinaculum of right wrist",
+      "tree": "isa",
+      "sources": [
+        {
+          "file": "FJ1471",
+          "sha256": "71b49d4cdeb7da162dc51ac6afd5fcf713daa321c45de0b3f37d2825b4e4ffd0",
+          "geometrySha256": "626eb22f85b0df9286986475611d9db0a57e765706311b705015bfb6e99763b1",
+          "bounds": {
+            "min": [
+              -270.919,
+              -140.806,
+              779.479
+            ],
+            "max": [
+              -234.031,
+              -126.865,
+              806.431
+            ],
+            "vertices": 1594
+          },
+          "sceneBounds": {
+            "min": [
+              -2.70919,
+              -0.2052099999999996,
+              0.7686499999999999
+            ],
+            "max": [
+              -2.34031,
+              0.0643100000000004,
+              0.9080600000000001
+            ]
+          },
+          "exactAliases": [
+            {
+              "tree": "isa",
+              "fmaId": "FMA40120",
+              "name": "flexor retinaculum of right wrist"
+            },
+            {
+              "tree": "partof",
+              "fmaId": "FMA40120",
+              "name": "flexor retinaculum of right wrist"
+            },
+            {
+              "tree": "partof",
+              "fmaId": "FMA58401",
+              "name": "investing fascia of right upper limb"
+            },
+            {
+              "tree": "partof",
+              "fmaId": "FMA58405",
+              "name": "investing fascia of right free upper limb"
+            },
+            {
+              "tree": "partof",
+              "fmaId": "FMA58448",
+              "name": "investing fascia of right wrist"
+            },
+            {
+              "tree": "partof",
+              "fmaId": "FMA58575",
+              "name": "investing fascia of right forearm"
+            }
+          ]
+        }
+      ],
+      "grossEnvelope": {
+        "x": 300,
+        "z": [
+          740,
+          850
+        ]
+      },
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA40121",
+      "sourceName": "flexor retinaculum of left wrist",
+      "tree": "isa",
+      "sources": [
+        {
+          "file": "FJ1471M",
+          "sha256": "dfe8a84cb170a4f9450d345fb6182a98707d663be9c9d67723f75c4897581023",
+          "geometrySha256": "86148ebcd549e10bf0d1af9e16d9fc150532b4a1385bec4938ea91e36f2e47b8",
+          "bounds": {
+            "min": [
+              234.031,
+              -140.806,
+              779.479
+            ],
+            "max": [
+              270.919,
+              -126.865,
+              806.431
+            ],
+            "vertices": 1591
+          },
+          "sceneBounds": {
+            "min": [
+              2.34031,
+              -0.2052099999999996,
+              0.7686499999999999
+            ],
+            "max": [
+              2.70919,
+              0.0643100000000004,
+              0.9080600000000001
+            ]
+          },
+          "exactAliases": [
+            {
+              "tree": "isa",
+              "fmaId": "FMA40121",
+              "name": "flexor retinaculum of left wrist"
+            },
+            {
+              "tree": "partof",
+              "fmaId": "FMA40121",
+              "name": "flexor retinaculum of left wrist"
+            },
+            {
+              "tree": "partof",
+              "fmaId": "FMA58406",
+              "name": "investing fascia of left free upper limb"
+            },
+            {
+              "tree": "partof",
+              "fmaId": "FMA58449",
+              "name": "investing fascia of left wrist"
+            },
+            {
+              "tree": "partof",
+              "fmaId": "FMA58576",
+              "name": "investing fascia of left forearm"
+            }
+          ]
+        }
+      ],
+      "grossEnvelope": {
+        "x": 300,
+        "z": [
+          740,
+          850
+        ]
+      },
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA58776",
+      "sourceName": "right iliotibial tract",
+      "tree": "isa",
+      "sources": [
+        {
+          "file": "FJ1423",
+          "sha256": "5be6b36001c18933694ec0871ed262da14c5b6c5f4d1f51b4cf5cd9b074bd76f",
+          "geometrySha256": "0bd6ed80e85ebb7a62e653c7a459cd6f8d3f29ee47b66103f83c95509adfdc1d",
+          "bounds": {
+            "min": [
+              -162.519,
+              -113.37,
+              314.287
+            ],
+            "max": [
+              -91.8024,
+              -32.6369,
+              945.152
+            ],
+            "vertices": 9425
+          },
+          "sceneBounds": {
+            "min": [
+              -1.6251900000000001,
+              -4.857130000000001,
+              -0.17363100000000004
+            ],
+            "max": [
+              -0.9180240000000001,
+              1.4515200000000004,
+              0.6337
+            ]
+          },
+          "exactAliases": [
+            {
+              "tree": "isa",
+              "fmaId": "FMA58776",
+              "name": "right iliotibial tract"
+            },
+            {
+              "tree": "partof",
+              "fmaId": "FMA51044",
+              "name": "fascia lata of right thigh"
+            },
+            {
+              "tree": "partof",
+              "fmaId": "FMA58418",
+              "name": "investing fascia of right lower limb"
+            },
+            {
+              "tree": "partof",
+              "fmaId": "FMA58429",
+              "name": "investing fascia of right free lower limb"
+            },
+            {
+              "tree": "partof",
+              "fmaId": "FMA58742",
+              "name": "investing fascia of right thigh"
+            },
+            {
+              "tree": "partof",
+              "fmaId": "FMA58776",
+              "name": "right iliotibial tract"
+            }
+          ]
+        }
+      ],
+      "grossEnvelope": {
+        "x": 200,
+        "z": [
+          250,
+          1000
+        ]
+      },
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA58777",
+      "sourceName": "left iliotibial tract",
+      "tree": "isa",
+      "sources": [
+        {
+          "file": "FJ1423M",
+          "sha256": "bfd57c0dcc185bf4fd7396064bc1c27c7e438427605f7826b4cfdbeb5e40f589",
+          "geometrySha256": "88ed6fba5226f3e3d816a73d2e58eacaa5e3cd20c0c61d2bb0ca092fd8d8c561",
+          "bounds": {
+            "min": [
+              91.8023,
+              -113.37,
+              314.287
+            ],
+            "max": [
+              162.519,
+              -32.6368,
+              945.152
+            ],
+            "vertices": 9425
+          },
+          "sceneBounds": {
+            "min": [
+              0.918023,
+              -4.857130000000001,
+              -0.17363199999999998
+            ],
+            "max": [
+              1.6251900000000001,
+              1.4515200000000004,
+              0.6337
+            ]
+          },
+          "exactAliases": [
+            {
+              "tree": "isa",
+              "fmaId": "FMA58777",
+              "name": "left iliotibial tract"
+            },
+            {
+              "tree": "partof",
+              "fmaId": "FMA51045",
+              "name": "fascia lata of left thigh"
+            },
+            {
+              "tree": "partof",
+              "fmaId": "FMA58419",
+              "name": "investing fascia of left lower limb"
+            },
+            {
+              "tree": "partof",
+              "fmaId": "FMA58430",
+              "name": "investing fascia of left free lower limb"
+            },
+            {
+              "tree": "partof",
+              "fmaId": "FMA58743",
+              "name": "investing fascia of left thigh"
+            },
+            {
+              "tree": "partof",
+              "fmaId": "FMA58777",
+              "name": "left iliotibial tract"
+            }
+          ]
+        }
+      ],
+      "grossEnvelope": {
+        "x": 200,
+        "z": [
+          250,
+          1000
+        ]
+      },
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA11336",
+      "sourceName": "linea alba",
+      "tree": "isa",
+      "sources": [
+        {
+          "file": "FJ1448",
+          "sha256": "0d96d74c45a498cc1bf1a5d6ea9b6028d050b234537455b42e6cfd407a669201",
+          "geometrySha256": "9e3e7e25b1fce887190c9f51a27d7c13866b6b8087117ad26fb6da59e2a2e796",
+          "bounds": {
+            "min": [
+              -9.30878,
+              -212.147,
+              788.07
+            ],
+            "max": [
+              8.18701,
+              -112.241,
+              1177.83
+            ],
+            "vertices": 1114
+          },
+          "sceneBounds": {
+            "min": [
+              -0.09308780000000001,
+              -0.1192999999999995,
+              0.62241
+            ],
+            "max": [
+              0.08187010000000002,
+              3.7782999999999993,
+              1.62147
+            ]
+          },
+          "exactAliases": [
+            {
+              "tree": "isa",
+              "fmaId": "FMA9649",
+              "name": "decussation"
+            },
+            {
+              "tree": "isa",
+              "fmaId": "FMA11336",
+              "name": "linea alba"
+            }
+          ]
+        }
+      ],
+      "grossEnvelope": {
+        "x": 20,
+        "z": [
+          750,
+          1200
+        ]
+      },
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA71307",
+      "sourceName": "set of interspinales lumborum",
+      "tree": "isa",
+      "sources": [
+        {
+          "file": "FJ1550",
+          "sha256": "6955915224413b301f77fe4d2e606d67f07b882b93933a3273c60328e8fcf3c4",
+          "geometrySha256": "aaa31eab4dd6540ba26dd5618ca7fe648e245db71badfb4faa532e821e4317ab",
+          "bounds": {
+            "min": [
+              -4.58165,
+              -42.5855,
+              934.944
+            ],
+            "max": [
+              1.13927,
+              -32.8092,
+              1026.34
+            ],
+            "vertices": 819
+          },
+          "sceneBounds": {
+            "min": [
+              -0.045816499999999996,
+              1.3494399999999995,
+              -0.17190800000000003
+            ],
+            "max": [
+              0.0113927,
+              2.2633999999999994,
+              -0.07414499999999997
+            ]
+          },
+          "exactAliases": []
+        },
+        {
+          "file": "FJ1550M",
+          "sha256": "256cf6ddc747bac8dd2754df1261288c24a1e576e248e87391fd08d435238e95",
+          "geometrySha256": "493c03c88691132c8cbcb1cd8051352fbe86c5dc8a35fd5dd8fafe001520d5de",
+          "bounds": {
+            "min": [
+              -1.13927,
+              -42.5855,
+              934.944
+            ],
+            "max": [
+              4.58165,
+              -32.8092,
+              1026.34
+            ],
+            "vertices": 817
+          },
+          "sceneBounds": {
+            "min": [
+              -0.0113927,
+              1.3494399999999995,
+              -0.17190800000000003
+            ],
+            "max": [
+              0.045816499999999996,
+              2.2633999999999994,
+              -0.07414499999999997
+            ]
+          },
+          "exactAliases": []
+        }
+      ],
+      "grossEnvelope": {
+        "x": 20,
+        "z": [
+          900,
+          1080
+        ]
+      },
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA71309",
+      "sourceName": "set of interspinales cervicis",
+      "tree": "isa",
+      "sources": [
+        {
+          "file": "FJ1552",
+          "sha256": "1ccc7f131cb8a64c3fc7bee1e7e1c39319f0b2a8259d75cfc52b92a8a7409f3f",
+          "geometrySha256": "e6c9117985f49dfdffe9b81b0fff44ec56e5590beca890c9d2c9f92ea3c87ad2",
+          "bounds": {
+            "min": [
+              -7.11682,
+              -47.7851,
+              1372.94
+            ],
+            "max": [
+              0.686548,
+              -28.2871,
+              1466.89
+            ],
+            "vertices": 1148
+          },
+          "sceneBounds": {
+            "min": [
+              -0.0711682,
+              5.729400000000001,
+              -0.21712900000000002
+            ],
+            "max": [
+              0.00686548,
+              6.668900000000001,
+              -0.022149000000000002
+            ]
+          },
+          "exactAliases": []
+        },
+        {
+          "file": "FJ1552M",
+          "sha256": "7f0857e4efe8deda951b1cc4dad48d685fff98c543e81e33c7451995c5edaa2e",
+          "geometrySha256": "df9bfbb3c198d1a6fc8deab79f507803c403e559eedd6fe4bfcb23a9e66341e3",
+          "bounds": {
+            "min": [
+              -0.686548,
+              -47.7851,
+              1372.94
+            ],
+            "max": [
+              7.11682,
+              -28.2871,
+              1466.89
+            ],
+            "vertices": 1160
+          },
+          "sceneBounds": {
+            "min": [
+              -0.00686548,
+              5.729400000000001,
+              -0.21712900000000002
+            ],
+            "max": [
+              0.0711682,
+              6.668900000000001,
+              -0.022149000000000002
+            ]
+          },
+          "exactAliases": []
+        }
+      ],
+      "grossEnvelope": {
+        "x": 60,
+        "z": [
+          1340,
+          1500
+        ]
+      },
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA71442",
+      "sourceName": "set of anterior cervical intertransversarii",
+      "tree": "isa",
+      "sources": [
+        {
+          "file": "FJ1549",
+          "sha256": "832b6ecf551d766a55d036151dce271e558baccf35fd1861a572c2bf68a1a9c6",
+          "geometrySha256": "9d03deb64ba71b19b5693f706f401517f4bf5965c2b9361f06257e41963570aa",
+          "bounds": {
+            "min": [
+              -37.6019,
+              -86.062,
+              1375.23
+            ],
+            "max": [
+              -15.501,
+              -72.9862,
+              1471.21
+            ],
+            "vertices": 1068
+          },
+          "sceneBounds": {
+            "min": [
+              -0.376019,
+              5.7523,
+              0.22986199999999998
+            ],
+            "max": [
+              -0.15501,
+              6.7121,
+              0.36062
+            ]
+          },
+          "exactAliases": []
+        },
+        {
+          "file": "FJ1549M",
+          "sha256": "a6dcda6f5153705f07e90539023d374ea82830b14db5055093ce9c7fe7c26fae",
+          "geometrySha256": "f00422315735bc922d70029d76d5e1370de9425d23b33c793b543d1a045ff3dc",
+          "bounds": {
+            "min": [
+              15.501,
+              -86.0621,
+              1375.23
+            ],
+            "max": [
+              37.6019,
+              -72.9862,
+              1471.21
+            ],
+            "vertices": 1070
+          },
+          "sceneBounds": {
+            "min": [
+              0.15501,
+              5.7523,
+              0.22986199999999998
+            ],
+            "max": [
+              0.376019,
+              6.7121,
+              0.360621
+            ]
+          },
+          "exactAliases": []
+        }
+      ],
+      "grossEnvelope": {
+        "x": 60,
+        "z": [
+          1340,
+          1500
+        ]
+      },
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA71443",
+      "sourceName": "set of posterior cervical intertransversarii",
+      "tree": "isa",
+      "sources": [
+        {
+          "file": "FJ1553",
+          "sha256": "38b50c8a3543e209812ef6d18612bed918108f73bb74bb147504d85ee5d86b96",
+          "geometrySha256": "f0d227971cf2cab62e68cf0c9ad15c55b789c569eeb95f17ccd72e15966ad394",
+          "bounds": {
+            "min": [
+              -39.7287,
+              -79.6585,
+              1381.66
+            ],
+            "max": [
+              -21.4056,
+              -68.2652,
+              1468.31
+            ],
+            "vertices": 1074
+          },
+          "sceneBounds": {
+            "min": [
+              -0.39728700000000006,
+              5.816600000000001,
+              0.18265199999999993
+            ],
+            "max": [
+              -0.214056,
+              6.6831,
+              0.29658500000000004
+            ]
+          },
+          "exactAliases": []
+        },
+        {
+          "file": "FJ1553M",
+          "sha256": "57bc7086c77781ea63ce07da20cdd613431d18cf0ccffa30df0942463166e6ef",
+          "geometrySha256": "b4e8222c547e933faec4c4a74865938fd4142913756fe6a2bd766e4fcb26a9a4",
+          "bounds": {
+            "min": [
+              21.4056,
+              -79.6585,
+              1381.66
+            ],
+            "max": [
+              39.7287,
+              -68.2652,
+              1468.31
+            ],
+            "vertices": 1071
+          },
+          "sceneBounds": {
+            "min": [
+              0.214056,
+              5.816600000000001,
+              0.18265199999999993
+            ],
+            "max": [
+              0.39728700000000006,
+              6.6831,
+              0.29658500000000004
+            ]
+          },
+          "exactAliases": []
+        }
+      ],
+      "grossEnvelope": {
+        "x": 60,
+        "z": [
+          1340,
+          1500
+        ]
+      },
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA74077",
+      "sourceName": "set of right levatores costarum breves",
+      "tree": "isa",
+      "sources": [
+        {
+          "file": "FJ1462",
+          "sha256": "8b20ba474baae8ac19ef2a43364279f12286c24dbd54c6ffcea4984ba36a40e0",
+          "geometrySha256": "69c9a18acd1658b7111a2ca2215f092731005c17f7e130e41afa149e53fced51",
+          "bounds": {
+            "min": [
+              -70.8734,
+              -72.6249,
+              1063.19
+            ],
+            "max": [
+              -20.8167,
+              -6.72203,
+              1379.79
+            ],
+            "vertices": 5835
+          },
+          "sceneBounds": {
+            "min": [
+              -0.7087340000000001,
+              2.631900000000001,
+              -0.4327797
+            ],
+            "max": [
+              -0.20816700000000002,
+              5.797899999999999,
+              0.22624899999999998
+            ]
+          },
+          "exactAliases": [
+            {
+              "tree": "isa",
+              "fmaId": "FMA74077",
+              "name": "set of right levatores costarum breves"
+            }
+          ]
+        }
+      ],
+      "grossEnvelope": {
+        "x": 100,
+        "z": [
+          1020,
+          1410
+        ]
+      },
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA74078",
+      "sourceName": "set of left levatores costarum breves",
+      "tree": "isa",
+      "sources": [
+        {
+          "file": "FJ1462M",
+          "sha256": "ba1f178791d97838164dde76d1e3ec244c8e6289f26cac09ccc006db5b6525a1",
+          "geometrySha256": "28e7bdd68c112ecde04ef71478de7a875d9237ed1f8a335febed46c8d7e463b6",
+          "bounds": {
+            "min": [
+              20.8167,
+              -72.6249,
+              1063.19
+            ],
+            "max": [
+              70.8734,
+              -6.72202,
+              1379.79
+            ],
+            "vertices": 5815
+          },
+          "sceneBounds": {
+            "min": [
+              0.20816700000000002,
+              2.631900000000001,
+              -0.4327798
+            ],
+            "max": [
+              0.7087340000000001,
+              5.797899999999999,
+              0.22624899999999998
+            ]
+          },
+          "exactAliases": [
+            {
+              "tree": "isa",
+              "fmaId": "FMA74078",
+              "name": "set of left levatores costarum breves"
+            }
+          ]
+        }
+      ],
+      "grossEnvelope": {
+        "x": 100,
+        "z": [
+          1020,
+          1410
+        ]
+      },
+      "clinicalValidation": false
+    }
+  ],
+  "held": [
+    {
+      "fmaId": "FMA74075",
+      "sourceName": "set of right levatores costarum longi",
+      "sources": [
+        {
+          "file": "FJ1463",
+          "sha256": "cd5be879267b0cc9d9eb648a684a97931b4b4b0b44a16c30ca628cd1db357114",
+          "geometrySha256": "4eadb171e51c73bb6ac0f6901c83f8383749a44194dfa1d224a9aed079bcb94e",
+          "bounds": {
+            "min": [
+              -74.5211,
+              -72.497,
+              1061.21
+            ],
+            "max": [
+              -28.6357,
+              -4.29501,
+              1380.3
+            ],
+            "vertices": 8260
+          }
+        }
+      ],
+      "reason": "Named longi/breves distinction needs fibre-course, vertebral-level and overlap review. Full thoracic source extents are near-identical; not proof of source error."
+    },
+    {
+      "fmaId": "FMA74076",
+      "sourceName": "set of left levatores costarum longi",
+      "sources": [
+        {
+          "file": "FJ1463M",
+          "sha256": "23a79d5aa4231c94f27c4ead30389a621989fab6d78e80ae39052181d12e6de6",
+          "geometrySha256": "19540db7eb95fec3a3b76b2f4786ce04a4c93862895a7dbb7d7bd40331a94041",
+          "bounds": {
+            "min": [
+              28.6357,
+              -72.497,
+              1061.21
+            ],
+            "max": [
+              74.5211,
+              -4.29501,
+              1380.3
+            ],
+            "vertices": 8256
+          }
+        }
+      ],
+      "reason": "Named longi/breves distinction needs fibre-course, vertebral-level and overlap review. Full thoracic source extents are near-identical; not proof of source error."
+    }
+  ]
+}
