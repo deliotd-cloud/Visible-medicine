@@ -1,6 +1,13 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useReducer,
+  useRef,
+  useState,
+} from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import {
@@ -55,6 +62,12 @@ import { Brand } from './brand';
 import { ReviewStatus } from './review-status';
 import { InspectionControls } from './inspection-controls';
 import { initialInspection } from '@/lib/inspection-state';
+import {
+  practiceReducer,
+  initialPractice,
+  practiceScore,
+  type PracticeSession,
+} from '@/lib/anatomy-practice';
 import { StudyViews } from './study-views';
 import type { StudyCamera, StudyView } from '@/lib/study-views';
 import manifest from '@/public/models/bodyparts3d/manifest.json';
@@ -120,9 +133,26 @@ export default function ShoulderExplorer({
   const [syncPlane, setSyncPlane] = useState(false);
   const [resetNonce, setResetNonce] = useState(0);
   const [mode, setMode] = useState<Mode>('study');
-  const [questionIndex, setQuestionIndex] = useState(0);
-  const [answerId, setAnswerId] = useState<string | null>(null);
-  const [score, setScore] = useState(0);
+  const [shoulderPractice, practiceDispatch] = useReducer(
+    practiceReducer,
+    initialPractice,
+  );
+  const practiceSerial = useRef(0);
+  const questionIndex = shoulderPractice.index;
+  const answerId = shoulderPractice.responses[questionIndex]?.chosen ?? null;
+  const score = practiceScore(shoulderPractice);
+  function beginShoulderPractice() {
+    const session: PracticeSession = {
+      id: ++practiceSerial.current,
+      mode: 'find',
+      status: 'active',
+      index: 0,
+      questions: quizQuestions.map((q) => ({ target: q.answer, choices: [] })),
+      renderedIds: structures.map((s) => s.id),
+      responses: [],
+    };
+    practiceDispatch({ type: 'start', session });
+  }
   const selected = structureById.get(selectedId) ?? structures[0];
   const currentQuestion = quizQuestions[questionIndex];
   const studyScope = {
@@ -158,6 +188,7 @@ export default function ShoulderExplorer({
   }
   function restoreView(state: StudyView) {
     setMode('study');
+    practiceDispatch({ type: 'dismiss' });
     setSyncPlane(false);
     setSelectedId(state.selectedId ?? structures[0].id);
     setView(state.view as CameraView);
@@ -228,16 +259,22 @@ export default function ShoulderExplorer({
 
   const handleSceneSelect = (id: string) => {
     selectStructure(id);
-    if (mode === 'exam' && !answerId) {
-      setAnswerId(id);
-      if (id === currentQuestion.answer) setScore((value) => value + 1);
-    }
+    if (mode === 'exam')
+      practiceDispatch({
+        type: 'answer',
+        sessionId: shoulderPractice.id,
+        index: questionIndex,
+        chosen: id,
+      });
   };
 
   const nextQuestion = () => {
-    if (questionIndex === quizQuestions.length - 1) setScore(0);
-    setAnswerId(null);
-    setQuestionIndex((value) => (value + 1) % quizQuestions.length);
+    practiceDispatch({
+      type: 'next',
+      sessionId: shoulderPractice.id,
+      index: questionIndex,
+    });
+    if (questionIndex === quizQuestions.length - 1) beginShoulderPractice();
     setIsolated(false);
   };
 
@@ -245,9 +282,8 @@ export default function ShoulderExplorer({
     setPlate(false);
     setSyncPlane(false);
     setMode((current) => (current === 'study' ? 'exam' : 'study'));
-    setAnswerId(null);
-    setQuestionIndex(0);
-    setScore(0);
+    practiceDispatch({ type: 'dismiss' });
+    if (mode === 'study') beginShoulderPractice();
     setIsolated(false);
     setLayer('cuff');
     setVisibleSystems({ skeleton: true, muscles: true, 'soft-tissue': true });

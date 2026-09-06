@@ -1,5 +1,9 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Targeted practice
+
+Open **Practice options** in a regional or whole-body explorer to choose **Find on model** or keyboard-friendly **Name isolated structure**. Sample major landmarks, all visible anatomy (including fine structures), or the current focus targets without added context. Skip/reveal, results and retry-missed actions support deliberate study. Both viewers now reject duplicate/stale answers; the dedicated shoulder retains its three authored prompts. See [practice controls and limits](docs/PRACTICE.md).
+
 ## Connective tissue & deep-spinal study
 
 The current atlas has **892 selectable body entries**. Eleven new entries add wrist flexor retinacula, iliotibial tracts, linea alba and deep cervical/lumbar and rib-elevator muscle sets. Six new windows and eight focused views use chosen neighbouring structures instead of automatically restoring every bone. All previous anatomy is unchanged. See [source evidence, study views and review gates](docs/AXIAL_DETAIL.md).
@@ -85,6 +89,7 @@ npm run imaging:test
 npm run inventory:test
 npm run neuro:test
 npm run axial:test
+npm run practice:test
 npm run reviews:test
 node scripts/validate-recovery.mjs
 node scripts/validate-gaps.mjs

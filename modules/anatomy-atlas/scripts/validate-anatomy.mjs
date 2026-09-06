@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { structures, quizQuestions } from '../app/anatomy-data.ts';
+import { initialPractice, practiceReducer, practiceScore } from '../lib/anatomy-practice.ts';
 
 const bytes = await fs.readFile('public/models/bodyparts3d/shoulder-right.glb');
 const manifest = JSON.parse(await fs.readFile('public/models/bodyparts3d/manifest.json', 'utf8'));
@@ -64,7 +65,17 @@ for (const aspect of [.65,.78,1,1.3]) {
 const page = await fs.readFile('app/shoulder-explorer.tsx','utf8');
 assert(!page.includes('<AnatomyAtlas'), 'Flat plates remain primary');
 assert(page.includes('showLabels && mode === \'study\''));
-assert(page.includes('setScore(0)'), 'No score reset');
+assert(page.includes('practiceScore(shoulderPractice)') && page.includes('beginShoulderPractice'), 'Shoulder does not use tested practice state');
+const fixedSession = id => ({ id, mode: 'find', status: 'active', index: 0, questions: quizQuestions.map(q => ({ target: q.answer, choices: [] })), renderedIds: structures.map(s => s.id), responses: [] });
+let practice = practiceReducer(initialPractice, { type: 'start', session: fixedSession(1) });
+const pick = { type: 'answer', sessionId: 1, index: 0, chosen: quizQuestions[0].answer };
+practice = practiceReducer(practice, pick);
+assert.equal(practiceScore(practice), 1);
+assert.equal(practiceReducer(practice, pick), practice, 'Duplicate score');
+practice = practiceReducer(practice, { type: 'dismiss' });
+practice = practiceReducer(practice, { type: 'start', session: fixedSession(2) });
+assert.equal(practiceScore(practice), 0, 'No score reset');
+assert.equal(practiceReducer(practice, pick), practice, 'Stale answer from earlier session');
 const credits = await fs.readFile('public/models/bodyparts3d/credits.html','utf8');
 assert(credits.includes(manifest.credit));
 assert(credits.includes('https://creativecommons.org/licenses/by/4.0/'));

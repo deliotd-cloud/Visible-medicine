@@ -65,6 +65,7 @@ import {
   dissectionReducer,
   initialDissection,
   resolveDissection,
+  matchesRule,
   type DissectionView,
 } from './dissection-data';
 import { DissectionControls, DissectionGuide } from './dissection-controls';
@@ -73,12 +74,20 @@ import { Brand } from './brand';
 import { ReviewStatus } from './review-status';
 import { InspectionControls } from './inspection-controls';
 import { initialInspection } from '@/lib/inspection-state';
-import { practiceTargets } from '@/lib/anatomy-practice';
+import {
+  createPracticeSession,
+  practiceReducer,
+  initialPractice,
+  practiceScore,
+  practicePool,
+  practiceRenderIds,
+  missedPracticeIds,
+  type PracticeMode,
+  type PracticeSampling,
+} from '@/lib/anatomy-practice';
 import { StudyViews } from './study-views';
 import type { StudyCamera, StudyView } from '@/lib/study-views';
 import { anatomyRetryPlan } from '@/lib/anatomy-load-retry';
-
-type PracticeResponse = { target: string; chosen: string };
 
 const Scene = dynamic(() => import('./body-scene').then((m) => m.BodyScene), {
   ssr: false,
@@ -150,16 +159,24 @@ export default function BodyExplorer({
     [reset, setReset] = useState(0);
   const [loaded, setLoaded] = useState<string[]>([]),
     [failed, setFailed] = useState<string[]>([]);
-  const [exam, setExam] = useState(false),
-    [examTargets, setExamTargets] = useState<string[]>([]),
-    [question, setQuestion] = useState(0),
-    [answer, setAnswer] = useState<string | null>(null),
-    [score, setScore] = useState(0);
+  const [practice, practiceDispatch] = useReducer(
+    practiceReducer,
+    initialPractice,
+  );
+  const practiceSerial = useRef(0);
+  const [practiceMode, setPracticeMode] = useState<PracticeMode>('find');
+  const [practiceSampling, setPracticeSampling] =
+    useState<PracticeSampling>('landmarks');
+  const exam = practice.status === 'active';
+  const examTargets = practice.questions.map((q) => q.target);
+  const question = practice.index;
+  const response = practice.responses[question];
+  const answered = !!response;
+  const answer = response?.chosen;
+  const score = practiceScore(practice);
+  const practiceResult =
+    practice.status === 'complete' ? practice.responses : null;
   const [practiceCount, setPracticeCount] = useState(5);
-  const [responses, setResponses] = useState<PracticeResponse[]>([]);
-  const [practiceResult, setPracticeResult] = useState<
-    PracticeResponse[] | null
-  >(null);
   useEffect(() => {
     const controller = new AbortController();
     let active = true;
@@ -240,6 +257,21 @@ export default function BodyExplorer({
   const selected = catalog?.structures.find((s) => s.id === selectedId) ?? null;
   const available = regionStructures.filter(
     (s) => systems[s.system] && !hiddenIds.includes(s.id),
+  );
+  const focusTargetIds = focusedStudy
+    ? available
+        .filter((s) => matchesRule(s, focusedStudy.rule))
+        .map((s) => s.id)
+    : [];
+  const practiceEligible = practicePool(
+    available,
+    loaded,
+    practiceSampling === 'focus' ? focusTargetIds : undefined,
+  );
+  const practiceReady =
+    practiceEligible.length >= (practiceMode === 'name' ? 2 : 1);
+  const retryIds = missedPracticeIds(practiceResult ?? []).filter((id) =>
+    practiceEligible.some((s) => s.id === id),
   );
   const required = [
       ...new Set(
@@ -360,15 +392,16 @@ export default function BodyExplorer({
   }
   function onSceneSelect(id: string) {
     if (exam) {
-      if (!answer) {
-        setAnswer(id);
-        setResponses((previous) => [
-          ...previous,
-          { target: examTargets[question], chosen: id },
-        ]);
-        if (id === examTargets[question]) setScore((v) => v + 1);
-      }
+      if (practice.mode === 'find') submitPractice(id);
     } else select(id);
+  }
+  function submitPractice(chosen: string | null) {
+    practiceDispatch({
+      type: 'answer',
+      sessionId: practice.id,
+      index: question,
+      chosen,
+    });
   }
   function preset(system: BodySystem) {
     setInspection(initialInspection);
@@ -385,29 +418,30 @@ export default function BodyExplorer({
     setIsolated(false);
     setFocus(false);
   }
-  function startExam() {
-    const candidates = practiceTargets(available, loaded, practiceCount);
-    if (!candidates.length) return;
-    setExamTargets(candidates.map((s) => s.id));
-    setQuestion(0);
-    setAnswer(null);
-    setScore(0);
-    setResponses([]);
-    setPracticeResult(null);
-    setExam(true);
+  function startExam(retry = false) {
+    const session = createPracticeSession(available, loaded, {
+      id: ++practiceSerial.current,
+      mode: practiceMode,
+      count: retry ? retryIds.length : practiceCount,
+      sampling: practiceSampling,
+      focusIds: focusTargetIds,
+      retryIds: retry ? retryIds : undefined,
+    });
+    if (!session) return;
+    practiceDispatch({ type: 'start', session });
     setSelectedId(null);
     setIsolated(false);
     setFocus(false);
     setExplode(0);
+    setZoom(1);
+    setReset((n) => n + 1);
   }
   function nextQuestion() {
-    if (question + 1 === examTargets.length) {
-      setExam(false);
-      setPracticeResult(responses);
-      return;
+    practiceDispatch({ type: 'next', sessionId: practice.id, index: question });
+    if (practice.mode === 'name') {
+      setZoom(1);
+      setReset((n) => n + 1);
     }
-    setQuestion((n) => n + 1);
-    setAnswer(null);
   }
   function resetView() {
     setInspection(initialInspection);
@@ -544,8 +578,7 @@ export default function BodyExplorer({
     };
   }
   function restoreView(state: StudyView) {
-    setExam(false);
-    setPracticeResult(null);
+    practiceDispatch({ type: 'dismiss' });
     setSide(state.side);
     setSelectedId(state.selectedId);
     setView(state.view as DissectionView);
@@ -608,11 +641,13 @@ export default function BodyExplorer({
           </Select>
           <Button
             variant="outline"
-            onClick={() => (exam ? setExam(false) : startExam())}
-            disabled={!exam && (pending.length > 0 || available.length === 0)}
+            onClick={() =>
+              exam ? practiceDispatch({ type: 'exit' }) : startExam()
+            }
+            disabled={!exam && (pending.length > 0 || !practiceReady)}
           >
             <GraduationCap />
-            {exam ? 'Exit practice' : 'Identify structures'}
+            {exam ? 'Exit practice' : 'Start practice'}
           </Button>
         </div>
       </header>
@@ -794,7 +829,7 @@ export default function BodyExplorer({
                   if (value) {
                     setSide(value);
                     setInspection(initialInspection);
-                    setPracticeResult(null);
+                    practiceDispatch({ type: 'dismiss' });
                     setSelectedId(null);
                     setFocus(false);
                   }
@@ -818,7 +853,9 @@ export default function BodyExplorer({
               catalog={catalog}
               structures={
                 exam
-                  ? regionStructures.filter((s) => examTargets.includes(s.id))
+                  ? regionStructures.filter((s) =>
+                      practiceRenderIds(practice).includes(s.id),
+                    )
                   : regionStructures
               }
               selectedId={selectedId}
@@ -880,7 +917,11 @@ export default function BodyExplorer({
                 <span>
                   IDENTIFY {question + 1} OF {examTargets.length}
                 </span>
-                <strong>Find {target?.name.toLowerCase()}</strong>
+                <strong>
+                  {practice.mode === 'name'
+                    ? 'Name the isolated structure'
+                    : `Find ${target?.name.toLowerCase()}`}
+                </strong>
               </div>
             )}
             <div className="body-zoom">
@@ -1040,20 +1081,26 @@ export default function BodyExplorer({
                 {question + 1} / {examTargets.length}
               </h2>
               <p>
-                Find the named structure on the model. Labels and selection
-                hints are hidden.
+                {practice.mode === 'name'
+                  ? 'Rotate the isolated structure and choose its name. You can use the keyboard to move between answer buttons.'
+                  : 'Find the named structure on the model. Labels and selection hints are hidden.'}
               </p>
-              {answer ? (
+              {answered ? (
                 <div
                   className={`body-answer ${answer === target?.id ? 'correct' : ''}`}
                 >
                   <Check />
                   <strong>
-                    {answer === target?.id ? 'Correct' : 'Not quite'}
+                    {answer === target?.id
+                      ? 'Correct'
+                      : answer === null
+                        ? 'Skipped'
+                        : 'Not quite'}
                   </strong>
                   <p>
-                    You selected{' '}
-                    {catalog.structures.find((s) => s.id === answer)?.name}.
+                    {answer === null
+                      ? 'No answer recorded.'
+                      : `You selected ${catalog.structures.find((s) => s.id === answer)?.name}.`}
                   </p>
                   {answer !== target?.id && (
                     <p>
@@ -1068,17 +1115,41 @@ export default function BodyExplorer({
                   </Button>
                 </div>
               ) : (
-                <div className="body-practice-wait">
-                  <Focus />
-                  <span>
-                    Rotate and inspect the model, then select your answer.
-                  </span>
-                </div>
+                <>
+                  {practice.mode === 'name' ? (
+                    <fieldset className="vm-practice-choices">
+                      <legend>Choose the anatomical name</legend>
+                      {practice.questions[question].choices.map((id) => (
+                        <Button
+                          key={`${practice.id}-${question}-${id}`}
+                          variant="outline"
+                          onClick={() => submitPractice(id)}
+                        >
+                          {catalog.structures.find((s) => s.id === id)?.name}
+                        </Button>
+                      ))}
+                    </fieldset>
+                  ) : (
+                    <div className="body-practice-wait">
+                      <Focus />
+                      <span>
+                        Rotate and inspect the model, then select your answer.
+                      </span>
+                    </div>
+                  )}
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    onClick={() => submitPractice(null)}
+                  >
+                    Skip & reveal
+                  </Button>
+                </>
               )}
               <div className="body-practice-score">
                 Score{' '}
                 <strong>
-                  {score} / {question + (answer ? 1 : 0)}
+                  {score} / {practice.responses.length}
                 </strong>
               </div>
               <small>
@@ -1093,7 +1164,11 @@ export default function BodyExplorer({
                   className="vm-practice-result"
                   aria-label="Completed practice results"
                 >
-                  <h2>Practice complete</h2>
+                  <h2>
+                    {practiceResult.length === practice.questions.length
+                      ? 'Practice complete'
+                      : 'Practice ended'}
+                  </h2>
                   <p>
                     {practiceResult.filter((r) => r.target === r.chosen).length}{' '}
                     / {practiceResult.length} correct. Select a structure below
@@ -1120,15 +1195,110 @@ export default function BodyExplorer({
                       </li>
                     ))}
                   </ul>
+                  {missedPracticeIds(practiceResult).length > 0 && (
+                    <>
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => startExam(true)}
+                        disabled={
+                          !practiceReady ||
+                          retryIds.length === 0 ||
+                          pending.length > 0
+                        }
+                      >
+                        Retry missed ({retryIds.length} available)
+                      </Button>
+                      <p className="vm-practice-note">
+                        Retries respect the current visible, loaded scope and
+                        practice options. Skipped questions count as missed.
+                      </p>
+                    </>
+                  )}
                   <Button
                     size="sm"
                     variant="ghost"
-                    onClick={() => setPracticeResult(null)}
+                    onClick={() => practiceDispatch({ type: 'dismiss' })}
                   >
                     Dismiss results
                   </Button>
                 </section>
               )}
+              <details className="vm-practice-options">
+                <summary>
+                  Practice options ·{' '}
+                  {practiceMode === 'name'
+                    ? 'Name isolated anatomy'
+                    : 'Find on model'}
+                </summary>
+                <label htmlFor="practice-answer-mode">Answer mode</label>
+                <Select
+                  value={practiceMode}
+                  onValueChange={(value) => {
+                    if (value === 'find' || value === 'name')
+                      setPracticeMode(value);
+                  }}
+                >
+                  <SelectTrigger
+                    id="practice-answer-mode"
+                    aria-label="Practice answer mode"
+                  >
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="find">Find on model</SelectItem>
+                    <SelectItem value="name">
+                      Name isolated structure
+                    </SelectItem>
+                  </SelectContent>
+                </Select>
+                <label htmlFor="practice-target-selection">
+                  Target selection
+                </label>
+                <Select
+                  value={practiceSampling}
+                  onValueChange={(value) => {
+                    if (
+                      value === 'landmarks' ||
+                      value === 'all' ||
+                      value === 'focus'
+                    )
+                      setPracticeSampling(value);
+                  }}
+                >
+                  <SelectTrigger
+                    id="practice-target-selection"
+                    aria-label="Practice target selection"
+                  >
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="landmarks">Major landmarks</SelectItem>
+                    <SelectItem value="all">All visible anatomy</SelectItem>
+                    <SelectItem value="focus" disabled={!focusedStudy}>
+                      Current focus targets only
+                    </SelectItem>
+                  </SelectContent>
+                </Select>
+                <p className="vm-practice-note">
+                  {practiceEligible.length} loaded candidates.{' '}
+                  {practiceSampling === 'landmarks'
+                    ? 'Emphasises larger surfaces.'
+                    : practiceSampling === 'focus'
+                      ? 'Uses the selected focus targets, excluding its added context. Choose a focus in Guided dissection first.'
+                      : 'Includes small structures without the landmark size cutoff.'}{' '}
+                  {practiceMode === 'name' &&
+                    'Naming needs at least two distinct candidates; there may be fewer than four answer choices.'}
+                </p>
+                <Button
+                  variant="outline"
+                  onClick={() => startExam()}
+                  disabled={!practiceReady || pending.length > 0}
+                >
+                  Start {Math.min(practiceCount, practiceEligible.length)}{' '}
+                  questions
+                </Button>
+              </details>
               {selected ? (
                 <details className="dissection-guide-fold">
                   <summary>
@@ -1269,8 +1439,8 @@ export default function BodyExplorer({
                           ) : null}
                           {value === 'quiz' && (
                             <Button
-                              onClick={startExam}
-                              disabled={!available.length || pending.length > 0}
+                              onClick={() => startExam()}
+                              disabled={!practiceReady || pending.length > 0}
                             >
                               <GraduationCap />
                               Start identification practice

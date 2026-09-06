@@ -1,5 +1,12 @@
 # Clinical validation checklist
 
+## Targeted practice gates
+
+- Review both regional response modes, target policies, grouped-source names and distractor ambiguity. A score is not demonstrated clinical competence.
+- Test keyboard focus/activation, screen-reader announcements, touch selection, very small structures and feedback on real devices. The naming mode provides keyboard responses to a visual task, not a nonvisual anatomical description.
+- Review skip/retry/partial-exit behaviour and the dedicated shoulder's answer-once/reset change. Display fingerprints were refreshed; no clinical approvals were created. See `PRACTICE.md`.
+- Six legacy abdominal-wall candidates require asset-specific rights confirmation, homologous landmarks and validated registration before admission. See `ABDOMINAL_WALL_AUDIT.md`.
+
 ## Connective and deep-spinal gates
 
 - Review retinacular thickness, carpal attachment footprints and tunnel boundaries; there is no median nerve or validated lumen.

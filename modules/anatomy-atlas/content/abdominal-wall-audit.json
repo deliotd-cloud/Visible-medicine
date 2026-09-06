@@ -1,0 +1,396 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-06",
+  "catalogSha256": "a1c6e33bea4c228558d7fc79b8537c9a83fe03fcb296a3f22ee8b2ab688af1f7",
+  "currentVersion": "4.0",
+  "legacyVersion": "3.0",
+  "legacySource": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/",
+  "currentSourceTables": [
+    {
+      "name": "isa_parts_list_e.txt",
+      "path": "LICENSES/bodyparts3d-v4-index/isa_parts_list_e.txt",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_parts_list_e.txt",
+      "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513",
+      "bytes": 128086
+    },
+    {
+      "name": "isa_element_parts.txt",
+      "path": "LICENSES/bodyparts3d-v4-index/isa_element_parts.txt",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_element_parts.txt",
+      "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf",
+      "bytes": 1142159
+    },
+    {
+      "name": "partof_parts_list_e.txt",
+      "path": "LICENSES/bodyparts3d-v4-index/partof_parts_list_e.txt",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/partof_parts_list_e.txt",
+      "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd",
+      "bytes": 59351
+    },
+    {
+      "name": "partof_element_parts.txt",
+      "path": "LICENSES/bodyparts3d-v4-index/partof_element_parts.txt",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/partof_element_parts.txt",
+      "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea",
+      "bytes": 651179
+    }
+  ],
+  "results": [
+    {
+      "fmaId": "FMA13377",
+      "name": "right rectus abdominis",
+      "currentV4Definitions": [],
+      "legacyV3Components": [
+        {
+          "file": "FMA13377",
+          "sha256": "b00b3d214f6ee3b4fc16ca9dd4e64b4ac3047862a2bfcb6c06b50e371d621772",
+          "bounds": {
+            "min": [
+              -79.7234,
+              -213.736,
+              809.4
+            ],
+            "max": [
+              -3.53594,
+              -141.495,
+              1205.15
+            ],
+            "vertices": 25972
+          }
+        }
+      ],
+      "admitted": false,
+      "reason": "Version-3-only candidate; correspondence, attachment landmarks and a validated local registration to the current version-4 model are absent."
+    },
+    {
+      "fmaId": "FMA13378",
+      "name": "left rectus abdominis",
+      "currentV4Definitions": [],
+      "legacyV3Components": [
+        {
+          "file": "FMA13378",
+          "sha256": "b8029d562de3ef08af46414a004bd4d4bd569da72849bcb00c4f4e5b610c8b4f",
+          "bounds": {
+            "min": [
+              -6.64754,
+              -213.752,
+              809.8
+            ],
+            "max": [
+              78.4172,
+              -141.489,
+              1205.14
+            ],
+            "vertices": 23639
+          }
+        }
+      ],
+      "admitted": false,
+      "reason": "Version-3-only candidate; correspondence, attachment landmarks and a validated local registration to the current version-4 model are absent."
+    },
+    {
+      "fmaId": "FMA13892",
+      "name": "right internal oblique",
+      "currentV4Definitions": [],
+      "legacyV3Components": [
+        {
+          "file": "FMA13892",
+          "sha256": "b5e1938292a9537226e6daf4bf3c787fe95437cd0be65bed89ac36be919a8213",
+          "bounds": {
+            "min": [
+              -123.936,
+              -216.115,
+              809.799
+            ],
+            "max": [
+              -3.39258,
+              -46.1426,
+              1189.02
+            ],
+            "vertices": 40543
+          }
+        }
+      ],
+      "admitted": false,
+      "reason": "Version-3-only candidate; correspondence, attachment landmarks and a validated local registration to the current version-4 model are absent."
+    },
+    {
+      "fmaId": "FMA13893",
+      "name": "left internal oblique",
+      "currentV4Definitions": [],
+      "legacyV3Components": [
+        {
+          "file": "FMA13893",
+          "sha256": "c768ff8691c181b9826a8f5f83869ec8e6f29d36f7d7ff780d52b8a3b9f8fc40",
+          "bounds": {
+            "min": [
+              2.08398,
+              -216.111,
+              809.803
+            ],
+            "max": [
+              122.572,
+              -46.1699,
+              1189.03
+            ],
+            "vertices": 37744
+          }
+        }
+      ],
+      "admitted": false,
+      "reason": "Version-3-only candidate; correspondence, attachment landmarks and a validated local registration to the current version-4 model are absent."
+    },
+    {
+      "fmaId": "FMA22344",
+      "name": "right transversus abdominis",
+      "currentV4Definitions": [],
+      "legacyV3Components": [
+        {
+          "file": "FMA22344",
+          "sha256": "b6241b71a6ac13e6ab190eb8a119bf2084482b4a54836a19a6fefb5e89ea8129",
+          "bounds": {
+            "min": [
+              -129.4,
+              -198.631,
+              801.381
+            ],
+            "max": [
+              -4.02539,
+              -36.6074,
+              1209.02
+            ],
+            "vertices": 39204
+          }
+        }
+      ],
+      "admitted": false,
+      "reason": "Version-3-only candidate; correspondence, attachment landmarks and a validated local registration to the current version-4 model are absent."
+    },
+    {
+      "fmaId": "FMA22345",
+      "name": "left transversus abdominis",
+      "currentV4Definitions": [],
+      "legacyV3Components": [
+        {
+          "file": "FMA22345",
+          "sha256": "7ef955fe297a89331924c8835b31dbed8896202af6c414f41b05df7dd33cc6f2",
+          "bounds": {
+            "min": [
+              2.72852,
+              -198.6,
+              801.365
+            ],
+            "max": [
+              128.076,
+              -36.5879,
+              1209.02
+            ],
+            "vertices": 38634
+          }
+        }
+      ],
+      "admitted": false,
+      "reason": "Version-3-only candidate; correspondence, attachment landmarks and a validated local registration to the current version-4 model are absent."
+    }
+  ],
+  "wallAliases": [
+    {
+      "tree": "isa",
+      "id": "FMA20278",
+      "name": "muscle of anterior abdominal wall",
+      "files": [
+        "FJ1452",
+        "FJ1452M"
+      ],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:left:muscle:left-external-oblique",
+        "vm:anatomy:body:abdomen:right:muscle:right-external-oblique"
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA14627",
+      "name": "anterior abdominal wall",
+      "files": [
+        "FJ1452",
+        "FJ1452M"
+      ],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:left:muscle:left-external-oblique",
+        "vm:anatomy:body:abdomen:right:muscle:right-external-oblique"
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA78435",
+      "name": "musculature of anterior abdominal wall",
+      "files": [
+        "FJ1452",
+        "FJ1452M"
+      ],
+      "representedBy": [
+        "vm:anatomy:body:abdomen:left:muscle:left-external-oblique",
+        "vm:anatomy:body:abdomen:right:muscle:right-external-oblique"
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "fmaId": "FMA16586",
+      "name": "right hip bone",
+      "legacyParts": [
+        {
+          "file": "FMA16586",
+          "sha256": "2fc0f001ad13acfb2e77979a3e7d02f2476fe54b64a4ea1c4caafd2632969a14",
+          "bounds": {
+            "min": [
+              -131.217,
+              -152.14,
+              758.917
+            ],
+            "max": [
+              -3.47522,
+              -13.8512,
+              966.662
+            ],
+            "vertices": 1076
+          }
+        }
+      ],
+      "legacyBounds": {
+        "min": [
+          -131.217,
+          -152.14,
+          758.917
+        ],
+        "max": [
+          -3.47522,
+          -13.8512,
+          966.662
+        ]
+      },
+      "currentSourceBounds": {
+        "min": [
+          -144.87199783325195,
+          -139.01899456977844,
+          752.1530151367188
+        ],
+        "max": [
+          -2.79029980301857,
+          -1.118779182434082,
+          957.869017124176
+        ]
+      },
+      "boundingCenterDeltaMm": [
+        -6.485038818135255,
+        12.92671312389373,
+        -7.778483869552645
+      ]
+    },
+    {
+      "fmaId": "FMA13074",
+      "name": "third lumbar vertebra",
+      "legacyParts": [
+        {
+          "file": "FMA13074",
+          "sha256": "cf879fd25baf516f621ae1da1413fa73dd682d26e6f7fd106a806307fdcac2b1",
+          "bounds": {
+            "min": [
+              -41.0023,
+              -116.543,
+              975.348
+            ],
+            "max": [
+              38.7308,
+              -33.9406,
+              1020.8
+            ],
+            "vertices": 1947
+          }
+        }
+      ],
+      "legacyBounds": {
+        "min": [
+          -41.0023,
+          -116.543,
+          975.348
+        ],
+        "max": [
+          38.7308,
+          -33.9406,
+          1020.8
+        ]
+      },
+      "currentSourceBounds": {
+        "min": [
+          -40.202900767326355,
+          -115.3529942035675,
+          967.6929950714111
+        ],
+        "max": [
+          38.84100019931793,
+          -29.513999819755554,
+          1009.7299814224243
+        ]
+      },
+      "boundingCenterDeltaMm": [
+        0.4547997159957866,
+        2.8083029883384754,
+        -9.36251175308223
+      ]
+    },
+    {
+      "fmaId": "FMA24474",
+      "name": "right femur",
+      "legacyParts": [
+        {
+          "file": "FMA24474",
+          "sha256": "6aff68a9ecc438717545db8b0b542f18b33276005201c41fedc28735779f3162",
+          "bounds": {
+            "min": [
+              -144.554,
+              -116.023,
+              403.003
+            ],
+            "max": [
+              -33.3975,
+              -40.4074,
+              843.071
+            ],
+            "vertices": 1345
+          }
+        }
+      ],
+      "legacyBounds": {
+        "min": [
+          -144.554,
+          -116.023,
+          403.003
+        ],
+        "max": [
+          -33.3975,
+          -40.4074,
+          843.071
+        ]
+      },
+      "currentSourceBounds": {
+        "min": [
+          -150.13400316238403,
+          -112.19199895858765,
+          368.149995803833
+        ],
+        "max": [
+          -31.894299387931824,
+          -49.5302009396255,
+          834.2520147562027
+        ]
+      },
+      "boundingCenterDeltaMm": [
+        -2.038401275157927,
+        -2.6458999491065747,
+        -21.835994719982125
+      ]
+    }
+  ],
+  "limitation": "Bounding-box centres are diagnostic comparisons, not homologous landmarks. These checks neither fit nor validate a registration. General anterior-wall aliases do not establish missing individual muscles. No legacy mesh is bundled, no model is deformed and no clinical approval is implied."
+}

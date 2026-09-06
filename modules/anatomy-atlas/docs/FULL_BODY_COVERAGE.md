@@ -10,6 +10,8 @@ Vascular coverage comprises 146 selected source artery/vein concepts. It is not 
 
 Nervous entries: 28 selected cranial/orbital nerve representations, two ciliary ganglia, the compound brain, 22 selected deep-brain entries and the central canal of the spinal cord. **This is not a full nervous system.** No limb peripheral nerves or brachial/lumbosacral plexuses are present. Source FMA7647 (spinal cord) and FMA78497 (central canal) both use FJ1737. We conservatively expose only FMA78497 as a space and state its limitations; it is not a cord segmentation.
 
+The six legacy abdominal-wall candidates remain unregistered and unimported; the v4 broad-wall aliases do not supply them. See [abdominal-wall evidence](ABDOMINAL_WALL_AUDIT.md).
+
 ## Latest additions
 
 The connective/deep-spinal pass adds eleven entries / fifteen components in four new bundles: paired wrist flexor retinacula and iliotibial tracts, linea alba, four bilateral deep-spinal muscle sets and paired levatores costarum breves sets. Six new windows and eight focuses use targeted anatomical context. Every prior 881 record and 67 bundle hash is preserved. Longi alternatives are held for further review. See `AXIAL_DETAIL.md`.
@@ -35,7 +37,7 @@ These discrepancies are flags for expert review, not proof of a source error: mi
 
 The shoulder's existing teaching records are reused when the source identity matches. New entries provide source identity and geometry provenance; 17 organ entries and brain have short original function notes. Detailed new origin/insertion, innervation, imaging, pathology and procedural descriptions are marked pending where they are not authored. Nothing is marked clinically validated.
 
-Identification practice offers 5, 10 or 20 questions (limited by loaded structures), shuffled from up to three times that number of the largest landmarks in the current visible scope. Other anatomy is removed for the exercise to expose candidate surfaces. Labels, selection highlighting, cutaways and transparency overrides are disabled. Completed sessions show results and re-study links. The named prompt is intentionally visible; this is formative anatomical identification, not a high-stakes examination or validated assessment. See [deep inspection](DEEP_INSPECTION.md) for the shared cutaway, opacity and orthographic controls and their limits.
+Identification practice offers 5, 10 or 20 questions (limited by loaded structures), with major-landmark, all-visible or focus-target-only sampling. Find-on-model and keyboard-friendly isolated-name modes, skip/reveal and retry-missed controls are documented in [practice](PRACTICE.md). Other anatomy is removed for the exercise to expose candidate surfaces. Labels, selection highlighting, cutaways and transparency overrides are disabled. Completed sessions show results and re-study links. The find-on-model prompt is intentionally named; naming mode instead offers anatomical-name buttons for one isolated surface. This is formative anatomical identification, not a high-stakes examination or validated assessment. See [deep inspection](DEEP_INSPECTION.md) for the shared cutaway, opacity and orthographic controls and their limits.
 
 ## Required before clinical/educational release
 

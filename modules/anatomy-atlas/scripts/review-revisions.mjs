@@ -25,6 +25,7 @@ const displayPaths = [
   'app/globals.css',
   'lib/explode-layout.mjs',
   'lib/inspection-state.ts',
+  'lib/anatomy-practice.ts',
   'lib/inspection-geometry.ts',
   'app/inspection-controls.tsx',
   'app/inspection.css',
