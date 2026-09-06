@@ -1,5 +1,11 @@
 # Clinical validation checklist
 
+## Graphics-recovery and candidate-classification acceptance
+
+- Test real context loss/restoration and creation failure, manual restart, camera/side/scope transitions, mid-exam interruptions and actual graphics-resource reconstruction. Confirm answers cannot progress while unavailable and exit remains usable.
+- Verify retained dissection/camera settings, keyboard focus without stealing, screen-reader announcements and 200%/mobile recovery layouts. Injected hooks and server markup do not provide this acceptance. See `SCENE_RECOVERY.md`.
+- The supporting queue's 12 groups reduce to ten components, including arteries, muscle heads and two held whole-muscle alternatives. Index classification is not geometry or clinical admission. Adjudicate exact sources before claiming tendon, fascia or vascular completion; see `SUPPORTING_CANDIDATES.md`.
+
 ## Laryngeal and pharyngeal gates
 
 - Review both admitted thyrohyoid membrane sources for shape, side, scale, attachment footprints and relationships. Engineering admission is not anatomical approval.

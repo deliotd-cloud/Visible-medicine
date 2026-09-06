@@ -104,6 +104,7 @@ import {
 import { relatedStudyViews } from '@/lib/study-navigation';
 import type { StudyCamera, StudyView } from '@/lib/study-views';
 import { anatomyRetryPlan } from '@/lib/anatomy-load-retry';
+import { rendererReady, type RendererHealth } from '@/lib/renderer-health';
 import {
   anatomyLoadReducer,
   initialAnatomyLoads,
@@ -172,6 +173,9 @@ export default function BodyExplorer({
   const [catalog, setCatalog] = useState<BodyCatalog | null>(null),
     [error, setError] = useState(false);
   const [catalogAttempt, setCatalogAttempt] = useState(0);
+  const [rendererHealth, setRendererHealth] =
+    useState<RendererHealth>('starting');
+  const displayReady = rendererReady(rendererHealth);
   const [selectionNotice, setSelectionNotice] = useState<{
     id: string;
     message: string;
@@ -360,7 +364,7 @@ export default function BodyExplorer({
     failed,
   );
   const practiceBlocked =
-    practiceLoadStatus.pending.length > 0 || !practiceReady;
+    practiceLoadStatus.pending.length > 0 || !practiceReady || !displayReady;
   const retryIds = missedPracticeIds(practiceResult ?? []).filter((id) =>
     practiceEligible.some((s) => s.id === id),
   );
@@ -376,7 +380,8 @@ export default function BodyExplorer({
   const loadStatus = anatomyLoadSummary(required, loaded, failed);
   const pending = loadStatus.pending;
   const practicePaused =
-    exam && (pending.length > 0 || loadStatus.failed.length > 0);
+    exam &&
+    (pending.length > 0 || loadStatus.failed.length > 0 || !displayReady);
   const onLoaded = useCallback(
     (id: string) => loadDispatch({ type: 'loaded', id }),
     [],
@@ -534,6 +539,7 @@ export default function BodyExplorer({
     });
   }
   function onSceneSelect(id: string) {
+    if (!displayReady) return;
     if (exam) {
       if (practice.mode === 'find') submitPractice(id);
     } else select(id);
@@ -1105,6 +1111,7 @@ export default function BodyExplorer({
               onSelect={onSceneSelect}
               onLoaded={onLoaded}
               onFailure={onFailure}
+              onRendererHealth={setRendererHealth}
             />
             {pending.length > 0 && (
               <output className="body-loading">
@@ -1341,9 +1348,11 @@ export default function BodyExplorer({
               </p>
               {practicePaused && (
                 <output aria-live="polite" className="vm-practice-note">
-                  {loadStatus.failed.length
-                    ? 'Practice paused: required anatomy is unavailable. Use Retry missing anatomy or exit practice.'
-                    : 'Practice paused while the required anatomy loads.'}{' '}
+                  {!displayReady
+                    ? 'Practice paused while the 3D view recovers. Use Restart 3D view or exit practice.'
+                    : loadStatus.failed.length
+                      ? 'Practice paused: required anatomy is unavailable. Use Retry missing anatomy or exit practice.'
+                      : 'Practice paused while the required anatomy loads.'}{' '}
                   Your answers are retained.
                 </output>
               )}

@@ -1,5 +1,11 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Recover an interrupted 3D view
+
+The shoulder, all regions and whole body now offer **Restart 3D view** if graphics are interrupted. Dissection settings, answers and the last captured camera are retained; practice pauses until the viewer is available. Structure information stays outside the graphics surface. See [behaviour, tests and device-acceptance limits](docs/SCENE_RECOVERY.md). No anatomy has changed in this milestone.
+
+The [supporting-tissue source audit](docs/SUPPORTING_CANDIDATES.md) separates tendon, muscle and artery candidates before further admissions; existing holds remain.
+
 ## Throat dissection and regional coverage
 
 The atlas now has **1,018 source entries, 135 dissection stages and 117 focuses** across all eleven regions and the whole body. Open **Head & neck → Study windows & focuses** for **Thyrohyoid membranes & suspension**, **Vocal ligaments & vocalis**, **Posterior laryngeal muscle subset** or **Pharyngeal muscles exposed**. Two original membrane sources add detail; all previous anatomy remains unchanged. Use the shared remove/restore/Undo, isolate/fade, framing, separation and practice controls. Six uncertain candidates remain withheld. See [source evidence, use and release gates](docs/LARYNGEAL_DETAIL.md).

@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": 625,
+  "eventSequences": 12,
+  "handlerCases": 24,
+  "markupCases": 10,
+  "bodyStructures": 1018,
+  "bodyBundles": 85,
+  "regions": 11,
+  "wholeBody": true,
+  "shoulder": true,
+  "catalogSha256": "8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7",
+  "sourceGeometryChanged": false,
+  "clinicalValidation": false,
+  "browserInteractionTesting": false,
+  "limitations": "Real observer events and recovery methods, injected monitor hooks, extracted application handlers and server-rendered notices. No GPU reset, pixels, browser/WebGL initialization failure, touch or assistive-technology acceptance is claimed."
+}

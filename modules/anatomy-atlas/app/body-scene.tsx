@@ -32,6 +32,8 @@ import { neuroGroupFor } from '@/lib/neuroanatomy';
 import { sceneLabelEndpoint, sceneLabelIds } from '@/lib/scene-labels';
 import { vesselColor } from '@/lib/anatomy-vessels';
 import { renderedAnatomyStructures } from '@/lib/anatomy-load-state';
+import { SceneRecovery, RendererMonitor } from './scene-recovery';
+import type { RendererHealth } from '@/lib/renderer-health';
 
 type Props = {
   catalog: BodyCatalog;
@@ -61,6 +63,7 @@ type Props = {
   onSelect: (id: string) => void;
   onLoaded: (id: string) => void;
   onFailure: (id: string) => void;
+  onRendererHealth: (health: RendererHealth) => void;
 };
 const vectors = {
   anterior: [0, 0.04, 1],
@@ -333,63 +336,80 @@ export function BodyScene(props: Props) {
   const labelBounds = { min: bounds.min.toArray(), max: bounds.max.toArray() };
   const orthographic = props.plate || layout === 'tray';
   return (
-    <Canvas
+    <SceneRecovery
       className="body-scene"
+      cameraKey={[
+        props.view,
+        props.zoom,
+        props.reset,
+        focusId,
+        orthographic,
+        layout,
+      ].join('/')}
       key={orthographic ? 'plate' : 'perspective'}
-      orthographic={orthographic}
-      camera={{ position: [0, 0, 28], fov: 38, near: 0.01, far: 150 }}
-      dpr={[1, 1.6]}
-      frameloop="demand"
-      gl={{ antialias: true, alpha: true, localClippingEnabled: true }}
+      onHealth={props.onRendererHealth}
+      cameraCapture={props.cameraCapture}
+      cameraRestore={props.cameraRestore}
     >
-      <ambientLight intensity={1.4} />
-      <hemisphereLight args={['#fffef8', '#a38b70', 1.1]} />
-      <directionalLight position={[8, 15, 10]} intensity={2.3} />
-      <directionalLight position={[-8, 6, -8]} intensity={1.8} />
-      {bundles.map((bundle) => (
-        <AssetBoundary
-          key={`${bundle.id}:${props.retries?.[bundle.id] ?? 0}`}
-          id={bundle.id}
-          onFailure={props.onFailure}
+      {(onHealth) => (
+        <Canvas
+          orthographic={orthographic}
+          camera={{ position: [0, 0, 28], fov: 38, near: 0.01, far: 150 }}
+          dpr={[1, 1.6]}
+          frameloop="demand"
+          gl={{ antialias: true, alpha: true, localClippingEnabled: true }}
         >
-          <Suspense fallback={null}>
-            <Bundle
-              bundle={bundle}
-              items={rendered.filter((s) => s.bundle === bundle.id)}
-              props={props}
-              offsets={offsets}
-              frame={frame}
-              labelBounds={labelBounds}
-              labelIds={labelIds}
-              renderedCount={rendered.length}
-            />
-          </Suspense>
-        </AssetBoundary>
-      ))}
-      <FittedCamera
-        bounds={bounds}
-        direction={
-          orthographic && !['inferior', 'superior'].includes(props.view)
-            ? [vectors[props.view][0], 0, vectors[props.view][2]]
-            : vectors[props.view]
-        }
-        up={
-          props.view === 'superior'
-            ? [0, 0, -1]
-            : props.view === 'inferior'
-              ? [0, 0, 1]
-              : [0, 1, 0]
-        }
-        viewKey={props.view}
-        zoom={props.zoom}
-        reset={props.reset}
-        locked={props.plate && layout !== 'tray'}
-        planar={layout === 'tray'}
-        recenterKey={focusId ?? ''}
-        cameraCapture={props.cameraCapture}
-        cameraRestore={props.cameraRestore}
-      />
-    </Canvas>
+          <RendererMonitor onHealth={onHealth} />
+          <ambientLight intensity={1.4} />
+          <hemisphereLight args={['#fffef8', '#a38b70', 1.1]} />
+          <directionalLight position={[8, 15, 10]} intensity={2.3} />
+          <directionalLight position={[-8, 6, -8]} intensity={1.8} />
+          {bundles.map((bundle) => (
+            <AssetBoundary
+              key={`${bundle.id}:${props.retries?.[bundle.id] ?? 0}`}
+              id={bundle.id}
+              onFailure={props.onFailure}
+            >
+              <Suspense fallback={null}>
+                <Bundle
+                  bundle={bundle}
+                  items={rendered.filter((s) => s.bundle === bundle.id)}
+                  props={props}
+                  offsets={offsets}
+                  frame={frame}
+                  labelBounds={labelBounds}
+                  labelIds={labelIds}
+                  renderedCount={rendered.length}
+                />
+              </Suspense>
+            </AssetBoundary>
+          ))}
+          <FittedCamera
+            bounds={bounds}
+            direction={
+              orthographic && !['inferior', 'superior'].includes(props.view)
+                ? [vectors[props.view][0], 0, vectors[props.view][2]]
+                : vectors[props.view]
+            }
+            up={
+              props.view === 'superior'
+                ? [0, 0, -1]
+                : props.view === 'inferior'
+                  ? [0, 0, 1]
+                  : [0, 1, 0]
+            }
+            viewKey={props.view}
+            zoom={props.zoom}
+            reset={props.reset}
+            locked={props.plate && layout !== 'tray'}
+            planar={layout === 'tray'}
+            recenterKey={focusId ?? ''}
+            cameraCapture={props.cameraCapture}
+            cameraRestore={props.cameraRestore}
+          />
+        </Canvas>
+      )}
+    </SceneRecovery>
   );
 }
 

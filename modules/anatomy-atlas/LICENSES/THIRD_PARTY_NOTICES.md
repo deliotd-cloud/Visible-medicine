@@ -1,5 +1,7 @@
 # Third-party notices
 
+The graphics-recovery milestone adds original application code using the existing React/Three.js/button dependencies and Visible Medicine tokens; no package, font, texture or model is added. The supporting-candidate index classification is derived BodyParts3D evidence and retains CC BY 4.0, DBCLS credit and change notices. None of its candidates is newly admitted. See `../docs/SCENE_RECOVERY.md` and `../docs/SUPPORTING_CANDIDATES.md`.
+
 The latest laryngeal milestone reaches 1,018 source entries / 85 body bundles. Two exact BodyParts3D v4 ISA membrane sources add one 178,112-byte GLB. Meshes, indexes and derived audit/baseline evidence retain CC BY 4.0, DBCLS attribution, licence links and change notices; the code licence does not relicense anatomy. Six candidates remain withheld. No new dependency, font, texture, copied diagram, paid API or private data is added. See `../docs/LARYNGEAL_DETAIL.md`. Previous milestone totals below are historical.
 
 This project is designed for commercial use without per-user licence fees. Third-party software remains under its original licence.

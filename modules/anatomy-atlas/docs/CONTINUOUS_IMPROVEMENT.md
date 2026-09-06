@@ -28,6 +28,16 @@ Reorder only when evidence exposes a dependency or higher-impact defect. Complet
 
 ## Milestone ledger
 
+### Shared graphics recovery and supporting-source classification
+
+Added page-level graphics recovery to the dedicated shoulder, all eleven regions and whole body. Context loss hides/inerts the stopped viewer and pauses practice. Restoration requires the event and a healthy renderer callback; manual restart retains study state and camera intent, rejects retired-viewer events and preserves an available exam exit. Shoulder practice now additionally requires loaded model data. New display dependencies participate in review-expiry fingerprints; no approvals are created. The 625 recovery checks cover real observer events, injected monitor hooks, class methods, 24 extracted handler cases and ten server-markup states. Device/GPU acceptance remains open. See [behaviour and limits](SCENE_RECOVERY.md).
+
+The index audit classifies twelve lexical supporting-tissue groups as ten unique components: two tendon candidates, two superficial thumb-muscle heads, four forearm arteries and two previously held whole-muscle alternatives. No source is admitted and no hold lifted. The 119 source checks validate exact aliases, ownership absence, classifications and pinned evidence. See [source queue and rights](SUPPORTING_CANDIDATES.md).
+
+All 1,018 catalogue entries, 85 body bundles, 135 stages, 117 focuses and common coordinates remain exact, as does dedicated-shoulder geometry. Existing source/dissection/loading/practice/study/imaging/arrangement/review suites pass. No dependency, font, texture, copied diagram, paid API, private review or patient data is added.
+
+Next executable work: audit the four exact common/recurrent interosseous artery sources for forearm dissection, including raw geometry, side, extent, alias/owner and nearby-surface evidence. Separately investigate tendon parent/extent and thumb-head alternatives without lifting holds. Continue shared-runtime robustness with explicit async initialization/shader fault testing. Real-device/specialist acceptance and acquired US/CT/MRI adapter/data/registration remain external gates; the improvement goal stays active.
+
 ### Laryngeal membranes and four dissection windows
 
 Added two exact thyrohyoid membrane sources in one 178,112-byte bundle. All preceding 1,016 records and 84 body-bundle hashes remain exact. The eight-candidate audit checks 273 existing head/neck entries, with 199 near-surface comparisons and seven flags. Six conus-elasticus, aryepiglotticus and pterygomandibular-raphe sources remain held for topology, fragment, extent or boundary-marker review; expected anatomical contact is not declared an error. No repaired/mirrored anatomy or clinical approval is invented. See [evidence and gates](LARYNGEAL_DETAIL.md).

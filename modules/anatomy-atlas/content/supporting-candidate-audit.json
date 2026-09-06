@@ -1,0 +1,1388 @@
+{
+  "sourceCommit": "7e8718882ffc4eb98753bb965c785faa81de6de7",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "catalogSha256": "8868c391ee285c13cfe54ffd3a5e4051d4a2e41d956a22acbaeb94bc8e4920a7",
+  "inventorySha256": "339eb68f016a33545aac745d921e1a678927a6b3d813afb5f5a0eda75ce12fac",
+  "querySha256": "b2f730d70cb583f95f214daabf44227c4c173a5cbaff1d15f66cd3d690c1c349",
+  "scope": "Index-only adjudication of the lexical supporting-tissue queue; not a geometry or clinical audit.",
+  "sourceSetGroups": 12,
+  "uniqueComponents": 10,
+  "unheldTendonComponents": 2,
+  "unheldMuscleComponents": 2,
+  "unheldArteryComponents": 4,
+  "heldMuscleComponents": 2,
+  "components": [
+    {
+      "file": "FJ1343",
+      "classification": "tendon-candidate",
+      "rationale": "One source shared by generic and right levator-palpebrae tendon definitions. Do not infer a left counterpart or merge with the existing muscle.",
+      "renderedOwners": [],
+      "holds": [],
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA54158",
+          "name": "tendon of levator palpebrae superioris",
+          "files": [
+            "FJ1343"
+          ]
+        },
+        {
+          "tree": "isa",
+          "id": "FMA54159",
+          "name": "tendon of right levator palpebrae superioris",
+          "files": [
+            "FJ1343"
+          ]
+        }
+      ],
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA9721",
+          "name": "tendon",
+          "componentCount": 6,
+          "recordSha256": "fad531ed6265862fa8eb9a4b1e443f1b91f36d32b164987a8ec5d7a9bad3307a"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA14065",
+          "name": "organ component",
+          "componentCount": 66,
+          "recordSha256": "6e0a7c860b32043364b389bd9b6abfc87bc083e5493b4f7be38a88d346b961c0"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA54158",
+          "name": "tendon of levator palpebrae superioris",
+          "componentCount": 1,
+          "recordSha256": "a1f44686d0e649aaac34a9e1cd150b4b8313dc780fbc40d8fe0eb63ba0860751"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA54159",
+          "name": "tendon of right levator palpebrae superioris",
+          "componentCount": 1,
+          "recordSha256": "ce84461534f15dd1028e2ebc3d840d5616ae41e4a1b4e93ac2ff67dd3a6fe7c3"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "8f89b31fdf093cbed7f3aaeff476e63428f7dc77c8ad6c9b6e84636693617ae9"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "e3e7ce848fe8b43df434bd443e8e47926365d3d9b80a3e8dcdc3da5c523fa2bb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "recordSha256": "40dab7227bf76309fe0e6a2e56add0296082b84498e504589250f7c974878602"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "recordSha256": "16e6e9236bf91c279ce4bd2e5384925e9e80703396793a87219d0895856de49c"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455,
+          "recordSha256": "dc5d1e17f5058ff78e25b54bc721339a03178e25bb7667e5df2016bd028c2419"
+        }
+      ],
+      "admitted": false,
+      "geometryAudited": false
+    },
+    {
+      "file": "FJ1469",
+      "classification": "held-muscle",
+      "rationale": "Existing whole-muscle laterality/position hold applies. No aggregate bypass or automatic relabelling.",
+      "renderedOwners": [],
+      "holds": [
+        {
+          "tree": "isa",
+          "id": "FMA37389",
+          "name": "left flexor pollicis brevis",
+          "reason": "Previously quarantined laterality/position discrepancy."
+        }
+      ],
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA37389",
+          "name": "left flexor pollicis brevis",
+          "files": [
+            "FJ1469"
+          ]
+        }
+      ],
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA5022",
+          "name": "muscle organ",
+          "componentCount": 323,
+          "recordSha256": "f1fc87c27f4e9a5460111cf93b090d72e471bd3f146b25921876b8886db0376f"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA9621",
+          "name": "muscle of upper limb",
+          "componentCount": 78,
+          "recordSha256": "f6a2fdd071c768b274fa4dc9cec31723713b2c366eba8aba82ee6c79816e25d6"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA37348",
+          "name": "muscle of free upper limb",
+          "componentCount": 56,
+          "recordSha256": "0a1de98ffe44087e09f3b251372cbfa2dae7d7d3eaf5a6603c62ff1b8fadfef0"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA37372",
+          "name": "muscle of hand",
+          "componentCount": 12,
+          "recordSha256": "46be0835202ab5f52e4ee73206f9175025f2a542f7c078aea4d89e0c73ac3451"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA37378",
+          "name": "flexor pollicis brevis",
+          "componentCount": 2,
+          "recordSha256": "f61f2598b3de692629e0751462c08ece84d312a52fa03af9c3032bd3d9c304a8"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA37389",
+          "name": "left flexor pollicis brevis",
+          "componentCount": 1,
+          "recordSha256": "2b0ff80d356b26d6761dbaa0af1b2af246c359d6519f1036a233e862cf00a945"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA42380",
+          "name": "intrinsic muscle of hand",
+          "componentCount": 12,
+          "recordSha256": "f9e11079787277554aa0e3851e2b5418a9dddb92fc0557b998b6659a08043d48"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55665",
+          "name": "nonparenchymatous organ",
+          "componentCount": 386,
+          "recordSha256": "3cfd78e6f4dd7c103b26a2461db08549e29524f0d294052cf6f520496aac4432"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55670",
+          "name": "solid organ",
+          "componentCount": 402,
+          "recordSha256": "11f379cd7a252288723255e1b0f6477c9dddb8b66affc1b67a87bf1c7f7c9ef1"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "8f89b31fdf093cbed7f3aaeff476e63428f7dc77c8ad6c9b6e84636693617ae9"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "e3e7ce848fe8b43df434bd443e8e47926365d3d9b80a3e8dcdc3da5c523fa2bb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA64916",
+          "name": "thenar muscle",
+          "componentCount": 6,
+          "recordSha256": "26d20fad23e385f3dad3516480662112cc782f99522531bdb278a286939f16a7"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "recordSha256": "40dab7227bf76309fe0e6a2e56add0296082b84498e504589250f7c974878602"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "recordSha256": "16e6e9236bf91c279ce4bd2e5384925e9e80703396793a87219d0895856de49c"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67498",
+          "name": "organ",
+          "componentCount": 649,
+          "recordSha256": "51871f1844b699eb3a6b28594b848ebc6adaee32e14c3a87e059567bca217a70"
+        }
+      ],
+      "admitted": false,
+      "geometryAudited": false
+    },
+    {
+      "file": "FJ1469M",
+      "classification": "held-muscle",
+      "rationale": "Existing whole-muscle laterality/position hold applies. No aggregate bypass or automatic relabelling.",
+      "renderedOwners": [],
+      "holds": [
+        {
+          "tree": "isa",
+          "id": "FMA37388",
+          "name": "right flexor pollicis brevis",
+          "reason": "Previously quarantined laterality/position discrepancy."
+        }
+      ],
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA37388",
+          "name": "right flexor pollicis brevis",
+          "files": [
+            "FJ1469M"
+          ]
+        }
+      ],
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA5022",
+          "name": "muscle organ",
+          "componentCount": 323,
+          "recordSha256": "f1fc87c27f4e9a5460111cf93b090d72e471bd3f146b25921876b8886db0376f"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA9621",
+          "name": "muscle of upper limb",
+          "componentCount": 78,
+          "recordSha256": "f6a2fdd071c768b274fa4dc9cec31723713b2c366eba8aba82ee6c79816e25d6"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA37348",
+          "name": "muscle of free upper limb",
+          "componentCount": 56,
+          "recordSha256": "0a1de98ffe44087e09f3b251372cbfa2dae7d7d3eaf5a6603c62ff1b8fadfef0"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA37372",
+          "name": "muscle of hand",
+          "componentCount": 12,
+          "recordSha256": "46be0835202ab5f52e4ee73206f9175025f2a542f7c078aea4d89e0c73ac3451"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA37378",
+          "name": "flexor pollicis brevis",
+          "componentCount": 2,
+          "recordSha256": "f61f2598b3de692629e0751462c08ece84d312a52fa03af9c3032bd3d9c304a8"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA37388",
+          "name": "right flexor pollicis brevis",
+          "componentCount": 1,
+          "recordSha256": "d53596bedbd7338295ab1b7f87e771876d4dd664d8f593a079ece220a954a2a0"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA42380",
+          "name": "intrinsic muscle of hand",
+          "componentCount": 12,
+          "recordSha256": "f9e11079787277554aa0e3851e2b5418a9dddb92fc0557b998b6659a08043d48"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55665",
+          "name": "nonparenchymatous organ",
+          "componentCount": 386,
+          "recordSha256": "3cfd78e6f4dd7c103b26a2461db08549e29524f0d294052cf6f520496aac4432"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55670",
+          "name": "solid organ",
+          "componentCount": 402,
+          "recordSha256": "11f379cd7a252288723255e1b0f6477c9dddb8b66affc1b67a87bf1c7f7c9ef1"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "8f89b31fdf093cbed7f3aaeff476e63428f7dc77c8ad6c9b6e84636693617ae9"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "e3e7ce848fe8b43df434bd443e8e47926365d3d9b80a3e8dcdc3da5c523fa2bb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA64916",
+          "name": "thenar muscle",
+          "componentCount": 6,
+          "recordSha256": "26d20fad23e385f3dad3516480662112cc782f99522531bdb278a286939f16a7"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "recordSha256": "40dab7227bf76309fe0e6a2e56add0296082b84498e504589250f7c974878602"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "recordSha256": "16e6e9236bf91c279ce4bd2e5384925e9e80703396793a87219d0895856de49c"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67498",
+          "name": "organ",
+          "componentCount": 649,
+          "recordSha256": "51871f1844b699eb3a6b28594b848ebc6adaee32e14c3a87e059567bca217a70"
+        }
+      ],
+      "admitted": false,
+      "geometryAudited": false
+    },
+    {
+      "file": "FJ1514",
+      "classification": "muscle-candidate",
+      "rationale": "A superficial flexor-pollicis-brevis head, not fascia or tendon. Compare exact shape and laterality with previously held whole-muscle alternatives before admission.",
+      "renderedOwners": [],
+      "holds": [],
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA65198",
+          "name": "superficial head of right flexor pollicis brevis",
+          "files": [
+            "FJ1514"
+          ]
+        }
+      ],
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA45729",
+          "name": "head of organ",
+          "componentCount": 42,
+          "recordSha256": "cf181b5c93b7361315e9ba1fed1c45421dfff7cca881bdd07d730a555c2c0c35"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA46104",
+          "name": "superficial head of flexor pollicis brevis",
+          "componentCount": 2,
+          "recordSha256": "500c973c0cf49f1dcced9f1c60f39b4aa9d3ade225cd49c8f6fc4781a1f80f00"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55268",
+          "name": "organ zone",
+          "componentCount": 156,
+          "recordSha256": "ad4591b738601df5800612e50e902fb2726c315bb7c9809bd84277f5e932e700"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "8f89b31fdf093cbed7f3aaeff476e63428f7dc77c8ad6c9b6e84636693617ae9"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "e3e7ce848fe8b43df434bd443e8e47926365d3d9b80a3e8dcdc3da5c523fa2bb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA65198",
+          "name": "superficial head of right flexor pollicis brevis",
+          "componentCount": 1,
+          "recordSha256": "d69237ef872a5efdf69a523fcb85f9f19611dd2ccf7f56b1247d1e7503ea2db6"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "recordSha256": "40dab7227bf76309fe0e6a2e56add0296082b84498e504589250f7c974878602"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "recordSha256": "16e6e9236bf91c279ce4bd2e5384925e9e80703396793a87219d0895856de49c"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356,
+          "recordSha256": "6c396c746355346f535cb6678c3b0515d0a71a5aa98e686cd05e9a1ac32927a9"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455,
+          "recordSha256": "dc5d1e17f5058ff78e25b54bc721339a03178e25bb7667e5df2016bd028c2419"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA85453",
+          "name": "head of muscle organ",
+          "componentCount": 42,
+          "recordSha256": "151dc001503eb07572961dde21c66c689e13706198eec3cd411e24b76fcdfbea"
+        }
+      ],
+      "admitted": false,
+      "geometryAudited": false
+    },
+    {
+      "file": "FJ1514M",
+      "classification": "muscle-candidate",
+      "rationale": "The source-named left superficial flexor-pollicis-brevis head remains separate from held whole-muscle alternatives. A filename suffix is not anatomical validation.",
+      "renderedOwners": [],
+      "holds": [],
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA65199",
+          "name": "superficial head of left flexor pollicis brevis",
+          "files": [
+            "FJ1514M"
+          ]
+        }
+      ],
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA45729",
+          "name": "head of organ",
+          "componentCount": 42,
+          "recordSha256": "cf181b5c93b7361315e9ba1fed1c45421dfff7cca881bdd07d730a555c2c0c35"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA46104",
+          "name": "superficial head of flexor pollicis brevis",
+          "componentCount": 2,
+          "recordSha256": "500c973c0cf49f1dcced9f1c60f39b4aa9d3ade225cd49c8f6fc4781a1f80f00"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55268",
+          "name": "organ zone",
+          "componentCount": 156,
+          "recordSha256": "ad4591b738601df5800612e50e902fb2726c315bb7c9809bd84277f5e932e700"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "8f89b31fdf093cbed7f3aaeff476e63428f7dc77c8ad6c9b6e84636693617ae9"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "e3e7ce848fe8b43df434bd443e8e47926365d3d9b80a3e8dcdc3da5c523fa2bb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA65199",
+          "name": "superficial head of left flexor pollicis brevis",
+          "componentCount": 1,
+          "recordSha256": "6a373f249856139a48ae964485c50badbed5ff960b71384c2a949ae775cc8e6a"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "recordSha256": "40dab7227bf76309fe0e6a2e56add0296082b84498e504589250f7c974878602"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "recordSha256": "16e6e9236bf91c279ce4bd2e5384925e9e80703396793a87219d0895856de49c"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356,
+          "recordSha256": "6c396c746355346f535cb6678c3b0515d0a71a5aa98e686cd05e9a1ac32927a9"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455,
+          "recordSha256": "dc5d1e17f5058ff78e25b54bc721339a03178e25bb7667e5df2016bd028c2419"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA85453",
+          "name": "head of muscle organ",
+          "componentCount": 42,
+          "recordSha256": "151dc001503eb07572961dde21c66c689e13706198eec3cd411e24b76fcdfbea"
+        }
+      ],
+      "admitted": false,
+      "geometryAudited": false
+    },
+    {
+      "file": "FJ1581",
+      "classification": "tendon-candidate",
+      "rationale": "Generic/right intermediate-tendon aliases do not establish a named parent muscle or attachment. Further source/geometry evidence is required.",
+      "renderedOwners": [],
+      "holds": [],
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA65410",
+          "name": "intermediate tendon",
+          "files": [
+            "FJ1581"
+          ]
+        },
+        {
+          "tree": "isa",
+          "id": "FMA258850",
+          "name": "right intermediate tendon",
+          "files": [
+            "FJ1581"
+          ]
+        }
+      ],
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA9721",
+          "name": "tendon",
+          "componentCount": 6,
+          "recordSha256": "fad531ed6265862fa8eb9a4b1e443f1b91f36d32b164987a8ec5d7a9bad3307a"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA14065",
+          "name": "organ component",
+          "componentCount": 66,
+          "recordSha256": "6e0a7c860b32043364b389bd9b6abfc87bc083e5493b4f7be38a88d346b961c0"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "8f89b31fdf093cbed7f3aaeff476e63428f7dc77c8ad6c9b6e84636693617ae9"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "e3e7ce848fe8b43df434bd443e8e47926365d3d9b80a3e8dcdc3da5c523fa2bb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA65410",
+          "name": "intermediate tendon",
+          "componentCount": 1,
+          "recordSha256": "1edf94feac2ad218eb05a1097265c6fb72241edf04689aca2aa06ce29f086444"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "recordSha256": "40dab7227bf76309fe0e6a2e56add0296082b84498e504589250f7c974878602"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "recordSha256": "16e6e9236bf91c279ce4bd2e5384925e9e80703396793a87219d0895856de49c"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455,
+          "recordSha256": "dc5d1e17f5058ff78e25b54bc721339a03178e25bb7667e5df2016bd028c2419"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA258850",
+          "name": "right intermediate tendon",
+          "componentCount": 1,
+          "recordSha256": "1ca89d289662100895ccb4963ddae13ecb7b7419b88a53ff847f252d4adea4d8"
+        }
+      ],
+      "admitted": false,
+      "geometryAudited": false
+    },
+    {
+      "file": "FJ2223",
+      "classification": "artery-candidate",
+      "rationale": "Left common interosseous artery. Route to the forearm vascular queue, not connective-tissue completion.",
+      "renderedOwners": [],
+      "holds": [],
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA22808",
+          "name": "left common interosseous artery",
+          "files": [
+            "FJ2223"
+          ]
+        }
+      ],
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA22799",
+          "name": "branch of ulnar artery",
+          "componentCount": 12,
+          "recordSha256": "542b1898f9ed987fb1d34cc50cc1d263c26d0695aaf061800db1c464a5145839"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA22806",
+          "name": "common interosseous artery",
+          "componentCount": 2,
+          "recordSha256": "398a5ad877ce80211a9b28e94a825b4a664b8c3a7b190dc5c8d5ee5449920cea"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA22808",
+          "name": "left common interosseous artery",
+          "componentCount": 1,
+          "recordSha256": "a9a916e640bde6aada1d4b2e99db0b485593734eed8120a51d46c32d90f93053"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA50720",
+          "name": "artery",
+          "componentCount": 562,
+          "recordSha256": "fa824a0c0b425c05722273b5d6b5a70d53c78e82a011ded7a93de8c1786cdabd"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA50722",
+          "name": "region of vascular tree organ",
+          "componentCount": 974,
+          "recordSha256": "65207121ea2790b14c9aa750866faefdbfbd48d60f3512c6ce1e1bd89b33366a"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "8f89b31fdf093cbed7f3aaeff476e63428f7dc77c8ad6c9b6e84636693617ae9"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "e3e7ce848fe8b43df434bd443e8e47926365d3d9b80a3e8dcdc3da5c523fa2bb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA66464",
+          "name": "systemic artery",
+          "componentCount": 463,
+          "recordSha256": "81b59f7adf7d2cc9e5e64f6a23fb730abfe6c5da1d9c7cbd7833e1bacd770ac7"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "recordSha256": "40dab7227bf76309fe0e6a2e56add0296082b84498e504589250f7c974878602"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "recordSha256": "16e6e9236bf91c279ce4bd2e5384925e9e80703396793a87219d0895856de49c"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356,
+          "recordSha256": "6c396c746355346f535cb6678c3b0515d0a71a5aa98e686cd05e9a1ac32927a9"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA70345",
+          "name": "subdivision of subclavian artery",
+          "componentCount": 142,
+          "recordSha256": "9285284ee56569037ee9f265f7ea803a3f30a146786044058be576248d530bd5"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455,
+          "recordSha256": "dc5d1e17f5058ff78e25b54bc721339a03178e25bb7667e5df2016bd028c2419"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200,
+          "recordSha256": "b8bbf773a70203413b769951a42dafc12e273223c21be66995e3a34000afd94f"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86187",
+          "name": "segment of arterial tree organ",
+          "componentCount": 603,
+          "recordSha256": "81b437c4b3c2c787abf8820cbce159d1df1e014a8907089f2c90d699e97cd451"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA4694",
+          "name": "left subclavian artery",
+          "componentCount": 79,
+          "recordSha256": "a790e5ca72f9e7a47f36755542e6d85619597fd4b6ed47bcb3785673022307da"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA7161",
+          "name": "cardiovascular system",
+          "componentCount": 627,
+          "recordSha256": "25651b0c2fe1d811bee7dc6e499da9221394c36e90693c980f7418303edb7561"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA20394",
+          "name": "human body",
+          "componentCount": 1258,
+          "recordSha256": "480e172ef5f7f59c2e46d1d9ce0bed6a1493aade7814155bb71603a992ed812a"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA22798",
+          "name": "left ulnar artery",
+          "componentCount": 6,
+          "recordSha256": "ea008b358d31b98542f6c33cba15448dc4d8f1a19ac9692002ca664576042d78"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA22808",
+          "name": "left common interosseous artery",
+          "componentCount": 2,
+          "recordSha256": "6c5b3b3601fc9f58b9e50c78a619bc3a7b5f307cd3cc19141b8ee206659567eb"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA45623",
+          "name": "systemic arterial system",
+          "componentCount": 335,
+          "recordSha256": "42ad553c8764d634b03dda1a7512f75e4b372d4b89e9e21c4c2be9a0a45cf990"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA49894",
+          "name": "systemic arterial tree",
+          "componentCount": 324,
+          "recordSha256": "49d0cb135d4571292a39868db5d167fd35b825adebd2138fb0f5af80b31feea8"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA228642",
+          "name": "vasculature of body",
+          "componentCount": 605,
+          "recordSha256": "32e029394ac59cca205d1e0cfbd5bbc2bdb19810381ea35b99601c1b6f6d7b06"
+        }
+      ],
+      "admitted": false,
+      "geometryAudited": false
+    },
+    {
+      "file": "FJ2245",
+      "classification": "artery-candidate",
+      "rationale": "Left recurrent interosseous artery. Route to the forearm vascular queue, not connective-tissue completion.",
+      "renderedOwners": [],
+      "holds": [],
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA268669",
+          "name": "left recurrent interosseous artery",
+          "files": [
+            "FJ2245"
+          ]
+        }
+      ],
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA22799",
+          "name": "branch of ulnar artery",
+          "componentCount": 12,
+          "recordSha256": "542b1898f9ed987fb1d34cc50cc1d263c26d0695aaf061800db1c464a5145839"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA22809",
+          "name": "branch of common interosseous artery",
+          "componentCount": 4,
+          "recordSha256": "1b32441d8327022400f0c3e26c8ccab6b16a595caa744c599d1510e98abca472"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA50720",
+          "name": "artery",
+          "componentCount": 562,
+          "recordSha256": "fa824a0c0b425c05722273b5d6b5a70d53c78e82a011ded7a93de8c1786cdabd"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA50722",
+          "name": "region of vascular tree organ",
+          "componentCount": 974,
+          "recordSha256": "65207121ea2790b14c9aa750866faefdbfbd48d60f3512c6ce1e1bd89b33366a"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "8f89b31fdf093cbed7f3aaeff476e63428f7dc77c8ad6c9b6e84636693617ae9"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "e3e7ce848fe8b43df434bd443e8e47926365d3d9b80a3e8dcdc3da5c523fa2bb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA66464",
+          "name": "systemic artery",
+          "componentCount": 463,
+          "recordSha256": "81b59f7adf7d2cc9e5e64f6a23fb730abfe6c5da1d9c7cbd7833e1bacd770ac7"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "recordSha256": "40dab7227bf76309fe0e6a2e56add0296082b84498e504589250f7c974878602"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "recordSha256": "16e6e9236bf91c279ce4bd2e5384925e9e80703396793a87219d0895856de49c"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356,
+          "recordSha256": "6c396c746355346f535cb6678c3b0515d0a71a5aa98e686cd05e9a1ac32927a9"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA70345",
+          "name": "subdivision of subclavian artery",
+          "componentCount": 142,
+          "recordSha256": "9285284ee56569037ee9f265f7ea803a3f30a146786044058be576248d530bd5"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA77144",
+          "name": "recurrent interosseous artery",
+          "componentCount": 2,
+          "recordSha256": "1ca12ee349a1d6adecccfcb790ee38f4787d0a566cee4b7875732131f811bc10"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455,
+          "recordSha256": "dc5d1e17f5058ff78e25b54bc721339a03178e25bb7667e5df2016bd028c2419"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200,
+          "recordSha256": "b8bbf773a70203413b769951a42dafc12e273223c21be66995e3a34000afd94f"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86187",
+          "name": "segment of arterial tree organ",
+          "componentCount": 603,
+          "recordSha256": "81b437c4b3c2c787abf8820cbce159d1df1e014a8907089f2c90d699e97cd451"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA268669",
+          "name": "left recurrent interosseous artery",
+          "componentCount": 1,
+          "recordSha256": "46e46fe4daab44c30fe67f542f77f93b064f87d7da775ee306dc11001969ffa6"
+        }
+      ],
+      "admitted": false,
+      "geometryAudited": false
+    },
+    {
+      "file": "FJ2275",
+      "classification": "artery-candidate",
+      "rationale": "Right common interosseous artery. Route to the forearm vascular queue, not connective-tissue completion.",
+      "renderedOwners": [],
+      "holds": [],
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA22807",
+          "name": "right common interosseous artery",
+          "files": [
+            "FJ2275"
+          ]
+        }
+      ],
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA22799",
+          "name": "branch of ulnar artery",
+          "componentCount": 12,
+          "recordSha256": "542b1898f9ed987fb1d34cc50cc1d263c26d0695aaf061800db1c464a5145839"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA22806",
+          "name": "common interosseous artery",
+          "componentCount": 2,
+          "recordSha256": "398a5ad877ce80211a9b28e94a825b4a664b8c3a7b190dc5c8d5ee5449920cea"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA22807",
+          "name": "right common interosseous artery",
+          "componentCount": 1,
+          "recordSha256": "a6fe70da7393e78716439c28ce744e55e1691e585ed64f8fc38c8f030dc59dab"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA50720",
+          "name": "artery",
+          "componentCount": 562,
+          "recordSha256": "fa824a0c0b425c05722273b5d6b5a70d53c78e82a011ded7a93de8c1786cdabd"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA50722",
+          "name": "region of vascular tree organ",
+          "componentCount": 974,
+          "recordSha256": "65207121ea2790b14c9aa750866faefdbfbd48d60f3512c6ce1e1bd89b33366a"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "8f89b31fdf093cbed7f3aaeff476e63428f7dc77c8ad6c9b6e84636693617ae9"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "e3e7ce848fe8b43df434bd443e8e47926365d3d9b80a3e8dcdc3da5c523fa2bb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA66464",
+          "name": "systemic artery",
+          "componentCount": 463,
+          "recordSha256": "81b59f7adf7d2cc9e5e64f6a23fb730abfe6c5da1d9c7cbd7833e1bacd770ac7"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "recordSha256": "40dab7227bf76309fe0e6a2e56add0296082b84498e504589250f7c974878602"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "recordSha256": "16e6e9236bf91c279ce4bd2e5384925e9e80703396793a87219d0895856de49c"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356,
+          "recordSha256": "6c396c746355346f535cb6678c3b0515d0a71a5aa98e686cd05e9a1ac32927a9"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA70345",
+          "name": "subdivision of subclavian artery",
+          "componentCount": 142,
+          "recordSha256": "9285284ee56569037ee9f265f7ea803a3f30a146786044058be576248d530bd5"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455,
+          "recordSha256": "dc5d1e17f5058ff78e25b54bc721339a03178e25bb7667e5df2016bd028c2419"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200,
+          "recordSha256": "b8bbf773a70203413b769951a42dafc12e273223c21be66995e3a34000afd94f"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86187",
+          "name": "segment of arterial tree organ",
+          "componentCount": 603,
+          "recordSha256": "81b437c4b3c2c787abf8820cbce159d1df1e014a8907089f2c90d699e97cd451"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA3932",
+          "name": "brachiocephalic artery",
+          "componentCount": 93,
+          "recordSha256": "c83ed517db1e6596c3bf561b77961bb5bbd3cbaff4f43398f903f39d2558baf9"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA3953",
+          "name": "right subclavian artery",
+          "componentCount": 79,
+          "recordSha256": "1d70e2bdaddc20f4bd3c1e7be7fb2366ffd85174f13e6d5112c281249b2f5142"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA7161",
+          "name": "cardiovascular system",
+          "componentCount": 627,
+          "recordSha256": "25651b0c2fe1d811bee7dc6e499da9221394c36e90693c980f7418303edb7561"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA7181",
+          "name": "trunk",
+          "componentCount": 577,
+          "recordSha256": "3c93bdcb96b26994f453ebd1590c25a682e9aa4c5796f8e09a411a8a000da5fa"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA7563",
+          "name": "body compartment",
+          "componentCount": 470,
+          "recordSha256": "2a8b4e264678b733c8061de33d6f309a2a8d58347b7d0c4a10cb188b01bd5718"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA9576",
+          "name": "thorax",
+          "componentCount": 537,
+          "recordSha256": "7223fd88ae8f89f38e095295829305d402984e627a910244242989a2ef7cf9a9"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA9826",
+          "name": "mediastinum",
+          "componentCount": 189,
+          "recordSha256": "44e745287ed619ce5b3f212b519c5779c1cfcb324cab42dc0f1500bfdd59d0a4"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA9827",
+          "name": "superior mediastinum",
+          "componentCount": 101,
+          "recordSha256": "253a6aeaf8b789b6e97d8a3998aeda2657e9e9187756347051dd5ae3244e802a"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA20394",
+          "name": "human body",
+          "componentCount": 1258,
+          "recordSha256": "480e172ef5f7f59c2e46d1d9ce0bed6a1493aade7814155bb71603a992ed812a"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA22797",
+          "name": "right ulnar artery",
+          "componentCount": 6,
+          "recordSha256": "1a9d153b0e755721c75c024dc787792137d68c480a4e5e4af6f56115fbb232ef"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA22807",
+          "name": "right common interosseous artery",
+          "componentCount": 2,
+          "recordSha256": "8b7978533637ecad66c79516116ff55b649b3a88524f0bc4931f7628485142c3"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA45623",
+          "name": "systemic arterial system",
+          "componentCount": 335,
+          "recordSha256": "42ad553c8764d634b03dda1a7512f75e4b372d4b89e9e21c4c2be9a0a45cf990"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA49894",
+          "name": "systemic arterial tree",
+          "componentCount": 324,
+          "recordSha256": "49d0cb135d4571292a39868db5d167fd35b825adebd2138fb0f5af80b31feea8"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA79269",
+          "name": "content of thorax",
+          "componentCount": 281,
+          "recordSha256": "65305b6c6f5674f51fa64c605cb2364e8192a0d12456e03812cc79aaf58a414a"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA79273",
+          "name": "content of mediastinum",
+          "componentCount": 189,
+          "recordSha256": "9b926a903e53eb77b127e831e4502a09521bbc0e7509d91a9436f2dadddea0a1"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA79274",
+          "name": "content of superior mediastinum",
+          "componentCount": 101,
+          "recordSha256": "383de532571f1a8064580332ce35ad445eefc93ce04d90de9ad1ddd5e73c05b6"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA85008",
+          "name": "compartment of thorax",
+          "componentCount": 469,
+          "recordSha256": "30332cbfb65793dd7d2b411258061a074537411e0128f1f7cb2e2511c7727bc5"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA228642",
+          "name": "vasculature of body",
+          "componentCount": 605,
+          "recordSha256": "32e029394ac59cca205d1e0cfbd5bbc2bdb19810381ea35b99601c1b6f6d7b06"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA231424",
+          "name": "body proper",
+          "componentCount": 590,
+          "recordSha256": "b5f96ebfdcadc1f669ae2b1f1418bb847d249cb6b27184686b7a55a8d5a8e3c5"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA259209",
+          "name": "thoracic segment of trunk",
+          "componentCount": 548,
+          "recordSha256": "4a7b4997ef7bba777c7a05d4deb65021a6ebba5e4437b8f4f94d61f54eb57db2"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA260456",
+          "name": "body cavity content",
+          "componentCount": 282,
+          "recordSha256": "116bc2fffdad93290417c9e26050ab0bdbddc2e79b4bc78bc7d28e3c50c17247"
+        }
+      ],
+      "admitted": false,
+      "geometryAudited": false
+    },
+    {
+      "file": "FJ2297",
+      "classification": "artery-candidate",
+      "rationale": "Right recurrent interosseous artery. Route to the forearm vascular queue, not connective-tissue completion.",
+      "renderedOwners": [],
+      "holds": [],
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA268667",
+          "name": "right recurrent interosseous artery",
+          "files": [
+            "FJ2297"
+          ]
+        }
+      ],
+      "aliases": [
+        {
+          "tree": "isa",
+          "id": "FMA22799",
+          "name": "branch of ulnar artery",
+          "componentCount": 12,
+          "recordSha256": "542b1898f9ed987fb1d34cc50cc1d263c26d0695aaf061800db1c464a5145839"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA22809",
+          "name": "branch of common interosseous artery",
+          "componentCount": 4,
+          "recordSha256": "1b32441d8327022400f0c3e26c8ccab6b16a595caa744c599d1510e98abca472"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA50720",
+          "name": "artery",
+          "componentCount": 562,
+          "recordSha256": "fa824a0c0b425c05722273b5d6b5a70d53c78e82a011ded7a93de8c1786cdabd"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA50722",
+          "name": "region of vascular tree organ",
+          "componentCount": 974,
+          "recordSha256": "65207121ea2790b14c9aa750866faefdbfbd48d60f3512c6ce1e1bd89b33366a"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "8f89b31fdf093cbed7f3aaeff476e63428f7dc77c8ad6c9b6e84636693617ae9"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234,
+          "recordSha256": "e3e7ce848fe8b43df434bd443e8e47926365d3d9b80a3e8dcdc3da5c523fa2bb"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA66464",
+          "name": "systemic artery",
+          "componentCount": 463,
+          "recordSha256": "81b59f7adf7d2cc9e5e64f6a23fb730abfe6c5da1d9c7cbd7833e1bacd770ac7"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166,
+          "recordSha256": "40dab7227bf76309fe0e6a2e56add0296082b84498e504589250f7c974878602"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222,
+          "recordSha256": "16e6e9236bf91c279ce4bd2e5384925e9e80703396793a87219d0895856de49c"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356,
+          "recordSha256": "6c396c746355346f535cb6678c3b0515d0a71a5aa98e686cd05e9a1ac32927a9"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA70345",
+          "name": "subdivision of subclavian artery",
+          "componentCount": 142,
+          "recordSha256": "9285284ee56569037ee9f265f7ea803a3f30a146786044058be576248d530bd5"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA77144",
+          "name": "recurrent interosseous artery",
+          "componentCount": 2,
+          "recordSha256": "1ca12ee349a1d6adecccfcb790ee38f4787d0a566cee4b7875732131f811bc10"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455,
+          "recordSha256": "dc5d1e17f5058ff78e25b54bc721339a03178e25bb7667e5df2016bd028c2419"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200,
+          "recordSha256": "b8bbf773a70203413b769951a42dafc12e273223c21be66995e3a34000afd94f"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA86187",
+          "name": "segment of arterial tree organ",
+          "componentCount": 603,
+          "recordSha256": "81b437c4b3c2c787abf8820cbce159d1df1e014a8907089f2c90d699e97cd451"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA268667",
+          "name": "right recurrent interosseous artery",
+          "componentCount": 1,
+          "recordSha256": "b81beeedd1f8c654df1636f5466abce58adb9d3f4302eb64747817251b858dd7"
+        }
+      ],
+      "admitted": false,
+      "geometryAudited": false
+    }
+  ],
+  "admitted": 0,
+  "clinicalValidation": false,
+  "next": "Audit four exact forearm artery sources and nearby rendered vessels; separately establish tendon parent/extent and thumb-head laterality against held alternatives. Do not count this query as missing fascia or duplicate group aliases as additional anatomy."
+}

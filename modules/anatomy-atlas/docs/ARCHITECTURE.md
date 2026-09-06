@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Shared graphics recovery
+
+`app/scene-recovery.tsx` wraps both canvases with page-level recovery UI and a generation-bound restart boundary. Its monitor uses `lib/renderer-health.ts` to observe only the live canvas's loss/restoration events. Inert hidden viewports prevent stale picks/labels. Explorer-level renderer state independently gates practice; shoulder model readiness is also explicit. Camera recovery uses the existing capture/restore refs, preserving queued saved-view intent. Anatomy, learner responses and all other view state remain above the remounted graphics subtree. These new display files are included in review fingerprints. See [state semantics and runtime limits](SCENE_RECOVERY.md).
+
 ## Laryngeal source and historical-policy extension
 
 `scripts/laryngeal-selections.mjs` explicitly admits two of eight audited candidates into one additive bundle; six remain in the source hold policy. `lib/laryngeal-anatomy.ts` feeds four draft content groups and typed target/context windows into the existing dissection, practice, navigation and imaging registry. No new control architecture or coordinate convention is introduced. See [evidence and limits](LARYNGEAL_DETAIL.md).

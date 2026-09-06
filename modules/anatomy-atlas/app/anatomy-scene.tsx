@@ -25,6 +25,8 @@ import {
 import { type InspectionState, systemOpacity } from '@/lib/inspection-state';
 import type { StudyCamera } from '@/lib/study-views';
 import { Button } from '@/components/ui/button';
+import { SceneRecovery, RendererMonitor } from './scene-recovery';
+import type { RendererHealth } from '@/lib/renderer-health';
 
 const noPlanes: THREE.Plane[] = [];
 const sectionFrame = new THREE.Box3();
@@ -59,6 +61,8 @@ type SceneProps = {
   cameraCapture?: RefObject<StudyCamera | null>;
   cameraRestore?: RefObject<StudyCamera | null>;
   onSelect: (id: string) => void;
+  onRendererHealth: (health: RendererHealth) => void;
+  onModelReady: (ready: boolean) => void;
 };
 const views: Record<CameraView, [number, number, number]> = {
   posterior: [2.5, 1.2, -12],
@@ -240,6 +244,10 @@ function Tissue({
 
 function Model(props: SceneProps) {
   const { scene } = useGLTF('/models/bodyparts3d/shoulder-right.glb');
+  const onModelReady = props.onModelReady;
+  useEffect(() => {
+    onModelReady(true);
+  }, [onModelReady]);
   const meshes = useMemo(() => {
     const result: Record<string, THREE.Mesh[]> = {};
     scene.traverse((object) => {
@@ -383,12 +391,15 @@ function Model(props: SceneProps) {
 }
 
 class ModelBoundary extends Component<
-  { children: ReactNode },
+  { children: ReactNode; onModelReady: (ready: boolean) => void },
   { failed: boolean }
 > {
   state = { failed: false };
   static getDerivedStateFromError() {
     return { failed: true };
+  }
+  componentDidCatch() {
+    this.props.onModelReady(false);
   }
   render() {
     return this.state.failed ? (
@@ -444,88 +455,111 @@ export function AnatomyScene(props: SceneProps) {
     return box;
   }, [props]);
   return (
-    <Canvas
+    <SceneRecovery
       className="shoulder-scene"
-      key={props.plate ? 'plate' : 'perspective'}
-      orthographic={props.plate}
-      shadows
-      camera={{ position: [1.85, 0.88, -12], fov: 39, near: 0.01, far: 150 }}
-      dpr={[1, 1.8]}
-      frameloop="demand"
-      gl={{ antialias: true, alpha: true, localClippingEnabled: true }}
-    >
-      <ambientLight intensity={1.25} />
-      <hemisphereLight args={['#ffffff', '#aa8d70', 1.3]} />
-      <directionalLight
-        position={[-4, 8, -6]}
-        intensity={2.4}
-        color="#fffaf1"
-        castShadow
-        shadow-mapSize={[1024, 1024]}
-        shadow-bias={-0.0005}
-        shadow-normalBias={0.025}
-        shadow-camera-left={-6}
-        shadow-camera-right={6}
-        shadow-camera-top={5}
-        shadow-camera-bottom={-5}
-      />
-      <directionalLight position={[3, 4, 6]} intensity={1.7} color="#fffef9" />
-      <directionalLight
-        position={[5, -1, -3]}
-        intensity={0.5}
-        color="#eef5ff"
-      />
-      <ModelBoundary>
-        <Suspense
-          fallback={
-            <Html center>
-              <div className="model-loading">Loading anatomical surfaces…</div>
-            </Html>
-          }
-        >
-          <Model {...props} />
-        </Suspense>
-      </ModelBoundary>
-      {props.syncPlane && (
-        <group position={[-0.6, 0.2, 0]}>
-          <mesh rotation={[-Math.PI / 2, 0, 0]}>
-            <planeGeometry args={[7, 5]} />
-            <meshBasicMaterial
-              color="#298879"
-              transparent
-              opacity={0.1}
-              side={THREE.DoubleSide}
-              depthWrite={false}
-            />
-          </mesh>
-          <Line
-            points={[
-              [-3.5, 0, 0],
-              [3.5, 0, 0],
-            ]}
-            color="#298879"
-            lineWidth={1}
-          />
-        </group>
+      cameraKey={[props.view, props.zoom, props.resetNonce, props.plate].join(
+        '/',
       )}
-      <FittedCamera
-        bounds={bounds}
-        direction={
-          props.plate
-            ? props.view === 'posterior'
-              ? [0, 0, -1]
-              : props.view === 'anterior'
-                ? [0, 0, 1]
-                : [-1, 0, 0]
-            : views[props.view]
-        }
-        viewKey={props.view}
-        zoom={props.zoom}
-        reset={props.resetNonce}
-        locked={props.plate}
-        cameraCapture={props.cameraCapture}
-        cameraRestore={props.cameraRestore}
-      />
-    </Canvas>
+      key={props.plate ? 'plate' : 'perspective'}
+      onHealth={props.onRendererHealth}
+      cameraCapture={props.cameraCapture}
+      cameraRestore={props.cameraRestore}
+    >
+      {(onHealth) => (
+        <Canvas
+          orthographic={props.plate}
+          shadows
+          camera={{
+            position: [1.85, 0.88, -12],
+            fov: 39,
+            near: 0.01,
+            far: 150,
+          }}
+          dpr={[1, 1.8]}
+          frameloop="demand"
+          gl={{ antialias: true, alpha: true, localClippingEnabled: true }}
+        >
+          <RendererMonitor onHealth={onHealth} />
+          <ambientLight intensity={1.25} />
+          <hemisphereLight args={['#ffffff', '#aa8d70', 1.3]} />
+          <directionalLight
+            position={[-4, 8, -6]}
+            intensity={2.4}
+            color="#fffaf1"
+            castShadow
+            shadow-mapSize={[1024, 1024]}
+            shadow-bias={-0.0005}
+            shadow-normalBias={0.025}
+            shadow-camera-left={-6}
+            shadow-camera-right={6}
+            shadow-camera-top={5}
+            shadow-camera-bottom={-5}
+          />
+          <directionalLight
+            position={[3, 4, 6]}
+            intensity={1.7}
+            color="#fffef9"
+          />
+          <directionalLight
+            position={[5, -1, -3]}
+            intensity={0.5}
+            color="#eef5ff"
+          />
+          <ModelBoundary onModelReady={props.onModelReady}>
+            <Suspense
+              fallback={
+                <Html center>
+                  <div className="model-loading">
+                    Loading anatomical surfaces…
+                  </div>
+                </Html>
+              }
+            >
+              <Model {...props} />
+            </Suspense>
+          </ModelBoundary>
+          {props.syncPlane && (
+            <group position={[-0.6, 0.2, 0]}>
+              <mesh rotation={[-Math.PI / 2, 0, 0]}>
+                <planeGeometry args={[7, 5]} />
+                <meshBasicMaterial
+                  color="#298879"
+                  transparent
+                  opacity={0.1}
+                  side={THREE.DoubleSide}
+                  depthWrite={false}
+                />
+              </mesh>
+              <Line
+                points={[
+                  [-3.5, 0, 0],
+                  [3.5, 0, 0],
+                ]}
+                color="#298879"
+                lineWidth={1}
+              />
+            </group>
+          )}
+          <FittedCamera
+            bounds={bounds}
+            direction={
+              props.plate
+                ? props.view === 'posterior'
+                  ? [0, 0, -1]
+                  : props.view === 'anterior'
+                    ? [0, 0, 1]
+                    : [-1, 0, 0]
+                : views[props.view]
+            }
+            viewKey={props.view}
+            zoom={props.zoom}
+            reset={props.resetNonce}
+            locked={props.plate}
+            cameraCapture={props.cameraCapture}
+            cameraRestore={props.cameraRestore}
+          />
+        </Canvas>
+      )}
+    </SceneRecovery>
   );
 }

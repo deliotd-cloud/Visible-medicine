@@ -73,6 +73,7 @@ import type { StudyCamera, StudyView } from '@/lib/study-views';
 import manifest from '@/public/models/bodyparts3d/manifest.json';
 
 type Mode = 'study' | 'exam';
+import { rendererReady, type RendererHealth } from '@/lib/renderer-health';
 type SearchOption = { value: string; label: string };
 type ModelContextLike = {
   registerTool: (
@@ -115,6 +116,10 @@ export default function ShoulderExplorer({
   initialSelectedId?: string;
 }) {
   const [selectedId, setSelectedId] = useState(initialSelectedId);
+  const [rendererHealth, setRendererHealth] =
+    useState<RendererHealth>('starting');
+  const [modelReady, setModelReady] = useState(false);
+  const displayReady = rendererReady(rendererHealth) && modelReady;
   const [view, setView] = useState<CameraView>('posterior');
   const [layer, setLayer] = useState<AnatomyLayer>('cuff');
   const [zoom, setZoom] = useState(1);
@@ -142,6 +147,7 @@ export default function ShoulderExplorer({
   const answerId = shoulderPractice.responses[questionIndex]?.chosen ?? null;
   const score = practiceScore(shoulderPractice);
   function beginShoulderPractice() {
+    if (!displayReady) return;
     const session: PracticeSession = {
       id: ++practiceSerial.current,
       mode: 'find',
@@ -258,6 +264,7 @@ export default function ShoulderExplorer({
   );
 
   const handleSceneSelect = (id: string) => {
+    if (!displayReady) return;
     selectStructure(id);
     if (mode === 'exam')
       practiceDispatch({
@@ -269,6 +276,7 @@ export default function ShoulderExplorer({
   };
 
   const nextQuestion = () => {
+    if (!displayReady) return;
     practiceDispatch({
       type: 'next',
       sessionId: shoulderPractice.id,
@@ -279,6 +287,7 @@ export default function ShoulderExplorer({
   };
 
   const toggleMode = () => {
+    if (mode === 'study' && !displayReady) return;
     setPlate(false);
     setSyncPlane(false);
     setMode((current) => (current === 'study' ? 'exam' : 'study'));
@@ -442,6 +451,7 @@ export default function ShoulderExplorer({
             </Badge>
             <Button
               className="mode-button"
+              disabled={mode === 'study' && !displayReady}
               variant={mode === 'exam' ? 'default' : 'outline'}
               onClick={toggleMode}
             >
@@ -741,6 +751,8 @@ export default function ShoulderExplorer({
               inspection={mode === 'exam' ? initialInspection : inspection}
               cameraCapture={cameraCapture}
               cameraRestore={cameraRestore}
+              onRendererHealth={setRendererHealth}
+              onModelReady={setModelReady}
             />
             {mode === 'study' && (
               <div className="vm-scene-options">
@@ -904,6 +916,13 @@ export default function ShoulderExplorer({
                 <div className="info-kicker">STRUCTURE IDENTIFICATION</div>
                 <h1>Question {questionIndex + 1}</h1>
                 <p className="exam-question">{currentQuestion.prompt}</p>
+                {!displayReady && (
+                  <output className="vm-practice-note" aria-live="polite">
+                    Practice paused until the 3D view and shoulder anatomy are
+                    available. Your answers are retained; recovery controls and
+                    Exit exam remain available.
+                  </output>
+                )}
                 {!answerId ? (
                   <div className="waiting-card">
                     <ScanLine />
@@ -928,7 +947,7 @@ export default function ShoulderExplorer({
                         .
                       </p>
                     )}
-                    <Button onClick={nextQuestion}>
+                    <Button onClick={nextQuestion} disabled={!displayReady}>
                       {questionIndex === quizQuestions.length - 1
                         ? 'Restart exam'
                         : 'Next question'}
@@ -1009,7 +1028,10 @@ export default function ShoulderExplorer({
                                 <span>{choice}</span>
                               </div>
                             ))}
-                            <Button onClick={toggleMode}>
+                            <Button
+                              onClick={toggleMode}
+                              disabled={!displayReady}
+                            >
                               <GraduationCap />
                               Start identification exam
                             </Button>
