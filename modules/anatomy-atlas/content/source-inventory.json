@@ -3,7 +3,7 @@
   "sourceVersion": "4.0",
   "license": "CC-BY-4.0",
   "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
-  "catalogSha256": "e253e9ec0c1a1567b3ac614501c6511338d44234a28696501733679f377821c9",
+  "catalogSha256": "d740da1d11bdf93d26ebe60ccdc82b7fc16909713779d7d2933d3d9dc10988cb",
   "tables": [
     {
       "name": "isa_parts_list_e.txt",
@@ -60,12 +60,12 @@
     "uniqueConceptIds": 3432,
     "archiveEntries": 3492,
     "archiveEntriesWithoutConcept": 0,
-    "admittedStructures": 954,
+    "admittedStructures": 958,
     "statuses": {
-      "represented-not-selectable": 1789,
-      "unused-available": 855,
-      "partly-represented": 195,
-      "admitted": 1353,
+      "represented-not-selectable": 1792,
+      "partly-represented": 198,
+      "unused-available": 844,
+      "admitted": 1358,
       "held-source-review": 28,
       "admitted-other-definition": 53
     }
@@ -138,10 +138,12 @@
       "files": [
         "FJ3418"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA10704",
@@ -1180,10 +1182,12 @@
       "files": [
         "FJ1934"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -9114,10 +9118,12 @@
       "files": [
         "FJ3418"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA3714",
@@ -12095,10 +12101,12 @@
       "files": [
         "FJ3418"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA3714",
@@ -25797,6 +25805,7 @@
         "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
         "vm:anatomy:body:thorax:left:vessel:anterior-interventricular-branch-of-left-coronary-artery",
         "vm:anatomy:body:thorax:left:vessel:trunk-of-left-coronary-artery",
+        "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
         "vm:anatomy:body:thorax:right:vessel:trunk-of-right-coronary-artery"
       ],
       "unavailable": [],
@@ -41355,6 +41364,8 @@
         "vm:anatomy:body:thorax:left:vessel:left-subclavian-artery",
         "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
         "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
         "vm:anatomy:body:thorax:right:organ:right-lung",
         "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
         "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
@@ -42502,7 +42513,10 @@
         "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
         "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
         "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
         "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+        "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
         "vm:anatomy:body:thorax:right:organ:right-lung",
         "vm:anatomy:body:thorax:right:vessel:right-brachiocephalic-vein",
         "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
@@ -46275,7 +46289,8 @@
         "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
         "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
         "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
-        "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves"
+        "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
+        "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -54595,7 +54610,11 @@
         "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
         "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
         "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
         "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+        "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
+        "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
         "vm:anatomy:body:thorax:right:bone:right-eighth-rib",
         "vm:anatomy:body:thorax:right:bone:right-eleventh-rib",
         "vm:anatomy:body:thorax:right:bone:right-fifth-rib",
@@ -58991,7 +59010,11 @@
         "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
         "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
         "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
         "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+        "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
+        "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
         "vm:anatomy:body:thorax:right:bone:right-eighth-rib",
         "vm:anatomy:body:thorax:right:bone:right-eleventh-rib",
         "vm:anatomy:body:thorax:right:bone:right-fifth-rib",
@@ -59115,10 +59138,12 @@
         "FJ2348",
         "FJ3431"
       ],
-      "status": "unused-available",
+      "status": "partly-represented",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -59959,10 +59984,12 @@
       "files": [
         "FJ3418"
       ],
-      "status": "unused-available",
+      "status": "represented-not-selectable",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA3714",
@@ -60905,6 +60932,8 @@
         "vm:anatomy:body:thorax:left:vessel:left-subclavian-artery",
         "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
         "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
         "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
         "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
         "vm:anatomy:body:thorax:right:vessel:right-subclavian-artery",
@@ -64514,7 +64543,10 @@
         "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
         "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
         "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
         "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+        "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
         "vm:anatomy:body:thorax:right:bone:right-eighth-rib",
         "vm:anatomy:body:thorax:right:bone:right-eleventh-rib",
         "vm:anatomy:body:thorax:right:bone:right-fifth-rib",
@@ -67705,7 +67737,11 @@
         "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
         "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
         "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
         "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+        "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
+        "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
         "vm:anatomy:body:thorax:right:bone:right-eighth-rib",
         "vm:anatomy:body:thorax:right:bone:right-eleventh-rib",
         "vm:anatomy:body:thorax:right:bone:right-fifth-rib",
@@ -70915,7 +70951,10 @@
         "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
         "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
         "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
         "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+        "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
         "vm:anatomy:body:thorax:right:muscle:right-pectoralis-major",
         "vm:anatomy:body:thorax:right:organ:right-lung",
         "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
@@ -71135,10 +71174,12 @@
       "files": [
         "FJ1933"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thorax:midline:vessel:bronchial-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -75781,10 +75822,12 @@
       "files": [
         "FJ3431"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -79032,10 +79075,12 @@
         "FJ2812",
         "FJ3431"
       ],
-      "status": "unused-available",
+      "status": "partly-represented",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA228667"
@@ -80970,7 +81015,10 @@
         "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
         "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
         "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
         "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+        "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
         "vm:anatomy:body:thorax:right:cartilage:right-fifth-costal-cartilage",
         "vm:anatomy:body:thorax:right:cartilage:right-first-costal-cartilage",
         "vm:anatomy:body:thorax:right:cartilage:right-fourth-costal-cartilage",
@@ -84152,7 +84200,10 @@
         "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
         "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
         "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
         "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+        "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
         "vm:anatomy:body:thorax:right:organ:right-lung",
         "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
         "vm:anatomy:body:thorax:right:vessel:right-brachiocephalic-vein",
@@ -84904,6 +84955,9 @@
         "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
         "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
         "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+        "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
         "vm:anatomy:body:thorax:right:organ:right-lung",
         "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
         "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
@@ -85783,10 +85837,12 @@
         "FJ2812",
         "FJ3431"
       ],
-      "status": "unused-available",
+      "status": "partly-represented",
       "displayedId": null,
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": [
         "FMA78562"
@@ -87426,10 +87482,12 @@
       "files": [
         "FJ1934"
       ],
-      "status": "unused-available",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
       "heldReason": null,
-      "representedBy": [],
+      "representedBy": [
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery"
+      ],
       "unavailable": [],
       "sharedDefinitionWith": []
     },
@@ -89794,6 +89852,7 @@
         "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
         "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
         "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
         "vm:anatomy:body:thorax:right:organ:right-lung",
         "vm:anatomy:body:thorax:right:vessel:right-brachiocephalic-vein",
         "vm:anatomy:body:thorax:right:vessel:right-inferior-pulmonary-vein",
@@ -105447,6 +105506,7 @@
         "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
         "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
         "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
         "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
         "vm:anatomy:body:thorax:right:bone:right-eighth-rib",
         "vm:anatomy:body:thorax:right:bone:right-eleventh-rib",
@@ -112547,6 +112607,7 @@
         "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
         "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
         "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
         "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
         "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
         "vm:anatomy:body:thorax:right:vessel:right-subclavian-artery",
@@ -114413,6 +114474,7 @@
         "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
         "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
         "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
         "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
         "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
         "vm:anatomy:body:thorax:right:vessel:right-subclavian-artery",
@@ -128434,6 +128496,7 @@
         "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
         "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
         "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
         "vm:anatomy:body:thorax:right:organ:right-lung",
         "vm:anatomy:body:thorax:right:vessel:right-brachiocephalic-vein",
         "vm:anatomy:body:thorax:right:vessel:right-inferior-pulmonary-vein",
@@ -140182,9 +140245,11 @@
       "available": true,
       "bytes": 94061,
       "crc32": 3975674254,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "9dbcdaeb0c6a61fe68c26bb3fb48e40efecf5ada9e396cf11e4c5780c1a92224",
+      "geometrySha256": "7eee356570573af73e71ffa09f007f72da118bb39d0518f7662932b0cef5a1b2",
+      "representedBy": [
+        "vm:anatomy:body:thorax:midline:vessel:bronchial-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -140192,9 +140257,11 @@
       "available": true,
       "bytes": 72916,
       "crc32": 2637424599,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "c65d1ea50ca8980e2f1dc8aaac2e5260edcb841b7ebc5b7fad9d220088071ae9",
+      "geometrySha256": "55089c1d6ef60a145cd5d3c9355bd8d61123b63e9bd855a4c3ef69a8ddb9394d",
+      "representedBy": [
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -154770,9 +154837,11 @@
       "available": true,
       "bytes": 80728,
       "crc32": 3389358549,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "36f80be07440fd4834878bddc8e73d75f0cba0ed15505fc16e03eb474a563943",
+      "geometrySha256": "1a4107d7474da4dc3c6e5d0c9f17baab8ae6339223b79b032b03fd70cfd5c88e",
+      "representedBy": [
+        "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery"
+      ]
     },
     {
       "tree": "isa",
@@ -154868,9 +154937,11 @@
       "available": true,
       "bytes": 94101,
       "crc32": 2642710697,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "e2addc11f8e81daf7349975b5871ecf9ea97ace47b00610fb3aca54eea793cfc",
+      "geometrySha256": "82fc1a28541e2ffa91d311338f469e0950de8c115aefc8c60dc78e479f152989",
+      "representedBy": [
+        "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
+      ]
     },
     {
       "tree": "isa",
@@ -159366,9 +159437,11 @@
       "available": true,
       "bytes": 72919,
       "crc32": 1638271938,
-      "sha256": null,
-      "geometrySha256": null,
-      "representedBy": []
+      "sha256": "296accefbfdfa2e78873731b41007e95a3a97ca993185eab2bb878bc9c62f0a9",
+      "geometrySha256": "55089c1d6ef60a145cd5d3c9355bd8d61123b63e9bd855a4c3ef69a8ddb9394d",
+      "representedBy": [
+        "vm:anatomy:body:thorax:midline:vessel:esophageal-artery"
+      ]
     },
     {
       "tree": "partof",

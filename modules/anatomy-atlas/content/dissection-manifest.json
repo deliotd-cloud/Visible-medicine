@@ -1,7 +1,7 @@
 {
   "version": 1,
   "reviewStatus": "draft-unvalidated",
-  "catalogSha256": "e253e9ec0c1a1567b3ac614501c6511338d44234a28696501733679f377821c9",
+  "catalogSha256": "d740da1d11bdf93d26ebe60ccdc82b7fc16909713779d7d2933d3d9dc10988cb",
   "profiles": [
     {
       "region": "whole-body",
@@ -979,7 +979,11 @@
             "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
             "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
-            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery"
+            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+            "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+            "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
           ]
         },
         {
@@ -2358,7 +2362,11 @@
             "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
             "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
-            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery"
+            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+            "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+            "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
           ]
         },
         {
@@ -3002,7 +3010,11 @@
             "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
             "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
             "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
-            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery"
+            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+            "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+            "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
           ]
         },
         {
@@ -8344,7 +8356,11 @@
             "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
             "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
             "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
-            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+            "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+            "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
           ]
         },
         {
@@ -8513,7 +8529,11 @@
             "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
             "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
             "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
-            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+            "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+            "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
           ]
         },
         {
@@ -8679,7 +8699,11 @@
             "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
             "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
             "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
-            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+            "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+            "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
           ]
         },
         {
@@ -8925,7 +8949,11 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
-            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+            "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
           ]
         },
         {
@@ -9144,6 +9172,115 @@
             "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
             "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
           ]
+        },
+        {
+          "id": "bronchial-arterial-window",
+          "title": "Bronchial arteries & airway",
+          "description": "Expose two bronchial arterial source identities beside the trachea, main bronchi and aortic context, with lungs and heart removed.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA68109",
+                "FMA10704"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA7394",
+                "FMA7395",
+                "FMA7396",
+                "FMA3768",
+                "FMA87217"
+              ]
+            }
+          ],
+          "view": "posterior",
+          "landmarks": [
+            "^bronchial artery$",
+            "^variant bronchial artery$",
+            "^trachea$"
+          ],
+          "inspect": "Set the airway aside or fade other structures to inspect a small vessel, then Undo. The variant-labelled artery remains a variant, not a normal-anatomy template. Surface proximity does not prove an attachment or patent connection.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:thorax:unpaired:organ:trachea",
+            "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
+            "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta",
+            "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+            "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
+            "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:bronchial-artery"
+          ]
+        },
+        {
+          "id": "oesophageal-arterial-window",
+          "title": "Oesophagus & arterial branches",
+          "description": "A four-entry window for the oesophagus, descending thoracic aorta and two oesophageal arterial source identities.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA4149",
+                "FMA71537"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA7131",
+                "FMA87217"
+              ]
+            }
+          ],
+          "view": "posterior",
+          "landmarks": [
+            "^esophagus$",
+            "^esophageal artery$",
+            "oesophageal branches"
+          ],
+          "inspect": "Remove the oesophagus for an exposed arterial comparison and Undo to restore its source position. The grouped branch surface remains one selectable entry; the model does not establish branch continuity or complete supply.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:thorax:unpaired:organ:esophagus",
+            "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta",
+            "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
+          ]
+        },
+        {
+          "id": "thoracic-small-arteries-exposed",
+          "title": "Thoracic small arteries exposed",
+          "description": "Compare four supplied bronchial and oesophageal arterial identities with only aortic context; airway and organ surfaces are hidden.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA4149",
+                "FMA10704",
+                "FMA68109",
+                "FMA71537"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA3768",
+                "FMA87217"
+              ]
+            }
+          ],
+          "view": "posterior",
+          "landmarks": [
+            "^variant bronchial artery$",
+            "^esophageal artery$",
+            "^descending thoracic aorta$"
+          ],
+          "inspect": "Frame a single target, separate the group or use focus-only identification practice. Explode and arrangement are educational translations, not surgical dissection or physiological motion. Missing vessels are not reconstructed.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
+            "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta",
+            "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+            "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
+          ]
         }
       ],
       "focuses": [
@@ -9358,7 +9495,11 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
-            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+            "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
           ]
         },
         {
@@ -9615,6 +9756,115 @@
             "vm:anatomy:body:thorax:right:bone:right-ninth-rib",
             "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
             "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
+          ]
+        },
+        {
+          "id": "bronchial-arterial-window",
+          "title": "Bronchial arteries & airway",
+          "rule": {
+            "fmaIds": [
+              "FMA68109",
+              "FMA10704"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA7394",
+                "FMA7395",
+                "FMA7396",
+                "FMA3768",
+                "FMA87217"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Expose two bronchial arterial source identities beside the trachea, main bronchi and aortic context, with lungs and heart removed.",
+          "inspect": "Set the airway aside or fade other structures to inspect a small vessel, then Undo. The variant-labelled artery remains a variant, not a normal-anatomy template. Surface proximity does not prove an attachment or patent connection.",
+          "landmarks": [
+            "^bronchial artery$",
+            "^variant bronchial artery$",
+            "^trachea$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:thorax:unpaired:organ:trachea",
+            "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
+            "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta",
+            "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+            "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
+            "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:bronchial-artery"
+          ]
+        },
+        {
+          "id": "oesophageal-arterial-window",
+          "title": "Oesophagus & arterial branches",
+          "rule": {
+            "fmaIds": [
+              "FMA4149",
+              "FMA71537"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA7131",
+                "FMA87217"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "A four-entry window for the oesophagus, descending thoracic aorta and two oesophageal arterial source identities.",
+          "inspect": "Remove the oesophagus for an exposed arterial comparison and Undo to restore its source position. The grouped branch surface remains one selectable entry; the model does not establish branch continuity or complete supply.",
+          "landmarks": [
+            "^esophagus$",
+            "^esophageal artery$",
+            "oesophageal branches"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:thorax:unpaired:organ:esophagus",
+            "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta",
+            "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
+          ]
+        },
+        {
+          "id": "thoracic-small-arteries-exposed",
+          "title": "Thoracic small arteries exposed",
+          "rule": {
+            "fmaIds": [
+              "FMA4149",
+              "FMA10704",
+              "FMA68109",
+              "FMA71537"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA3768",
+                "FMA87217"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Compare four supplied bronchial and oesophageal arterial identities with only aortic context; airway and organ surfaces are hidden.",
+          "inspect": "Frame a single target, separate the group or use focus-only identification practice. Explode and arrangement are educational translations, not surgical dissection or physiological motion. Missing vessels are not reconstructed.",
+          "landmarks": [
+            "^variant bronchial artery$",
+            "^esophageal artery$",
+            "^descending thoracic aorta$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
+            "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta",
+            "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+            "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
           ]
         }
       ]

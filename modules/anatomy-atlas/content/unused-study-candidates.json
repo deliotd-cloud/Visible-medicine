@@ -2,88 +2,11 @@
   "sourceVersion": "4.0",
   "license": "CC-BY-4.0",
   "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
-  "inventorySha256": "a5e8fd2b6c3ecb7b5a2a21201e9830ab47ebe873f2c04503aafc667c4c664fcd",
-  "catalogSha256": "e253e9ec0c1a1567b3ac614501c6511338d44234a28696501733679f377821c9",
+  "inventorySha256": "46375e096b09c058678519aa063531aef75035c54a37c72376d9dc26ef5f502d",
+  "catalogSha256": "d740da1d11bdf93d26ebe60ccdc82b7fc16909713779d7d2933d3d9dc10988cb",
   "query": "Unused available ISA definitions, at most four source components, matching selected muscle/pharyngeal/visceral/vascular name terms.",
-  "resultCount": 6,
+  "resultCount": 1,
   "results": [
-    {
-      "id": "FMA4149",
-      "name": "esophageal artery",
-      "files": [
-        "FJ1934"
-      ],
-      "heldAliases": [],
-      "identicalDefinitions": [
-        {
-          "tree": "partof",
-          "id": "FMA4149",
-          "name": "esophageal artery"
-        }
-      ],
-      "renderedOwners": [],
-      "decision": "resolve-aliases-before-mesh-audit",
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "id": "FMA10704",
-      "name": "variant bronchial artery",
-      "files": [
-        "FJ3418"
-      ],
-      "heldAliases": [],
-      "identicalDefinitions": [
-        {
-          "tree": "isa",
-          "id": "FMA3714",
-          "name": "variant artery"
-        },
-        {
-          "tree": "isa",
-          "id": "FMA14177",
-          "name": "bronchial branch of arch of aorta"
-        },
-        {
-          "tree": "isa",
-          "id": "FMA66267",
-          "name": "variant systemic artery"
-        }
-      ],
-      "renderedOwners": [],
-      "decision": "resolve-aliases-before-mesh-audit",
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "id": "FMA14177",
-      "name": "bronchial branch of arch of aorta",
-      "files": [
-        "FJ3418"
-      ],
-      "heldAliases": [],
-      "identicalDefinitions": [
-        {
-          "tree": "isa",
-          "id": "FMA3714",
-          "name": "variant artery"
-        },
-        {
-          "tree": "isa",
-          "id": "FMA10704",
-          "name": "variant bronchial artery"
-        },
-        {
-          "tree": "isa",
-          "id": "FMA66267",
-          "name": "variant systemic artery"
-        }
-      ],
-      "renderedOwners": [],
-      "decision": "resolve-aliases-before-mesh-audit",
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
     {
       "id": "FMA46622",
       "name": "middle pharyngeal constrictor",
@@ -116,45 +39,13 @@
       "decision": "existing-hold-applies",
       "admitted": false,
       "meshGeometryAudited": false
-    },
-    {
-      "id": "FMA68109",
-      "name": "bronchial artery",
-      "files": [
-        "FJ1933"
-      ],
-      "heldAliases": [],
-      "identicalDefinitions": [],
-      "renderedOwners": [],
-      "decision": "candidate-for-mesh-audit",
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "id": "FMA71537",
-      "name": "set of oesophageal branches of thoracic aorta",
-      "files": [
-        "FJ3431"
-      ],
-      "heldAliases": [],
-      "identicalDefinitions": [],
-      "renderedOwners": [],
-      "decision": "candidate-for-mesh-audit",
-      "admitted": false,
-      "meshGeometryAudited": false
     }
   ],
-  "nextAudit": [
-    "FMA4149",
-    "FMA10704",
-    "FMA14177",
-    "FMA68109",
-    "FMA71537"
-  ],
+  "nextAudit": [],
   "limits": [
     "Lexical inventory triage only; not an exhaustive anatomical review or a source admission.",
     "The middle-constrictor aggregate reuses both existing held laterality candidates; grouping cannot bypass that hold.",
-    "The preceding visceral-detail milestone admitted twelve exact definitions and held the pharyngeal raphe; those decisions are separate from this refreshed unused-only triage. See PANCREATIC_DETAIL.md.",
+    "The visceral-detail milestone admitted twelve definitions and held the pharyngeal raphe. The thoracic milestone admits four further definitions with one bronchial-variant geometry owner. See PANCREATIC_DETAIL.md and THORACIC_DETAIL.md; existing holds remain.",
     "Remaining small organ/muscle/vascular definitions need exact identity, parent-alias, common-coordinate and sampled surface-overlap checks before admission. No continuous organ or vessel network is inferred.",
     "Running this lexical triage changes no source geometry, source hold, review record, dependency or licence obligation."
   ],

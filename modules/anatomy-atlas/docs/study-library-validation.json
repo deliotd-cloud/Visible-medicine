@@ -1,10 +1,10 @@
 {
   "passed": true,
-  "assertions": 33762,
+  "assertions": 34836,
   "scopes": 36,
-  "groups": 137,
-  "sourceRecipes": 161,
-  "combinedGroups": 24,
+  "groups": 140,
+  "sourceRecipes": 167,
+  "combinedGroups": 27,
   "markupCases": 24,
   "rows": [
     {
@@ -157,23 +157,23 @@
     {
       "region": "thorax",
       "side": "both",
-      "groups": 12,
-      "recipes": 13,
-      "combinedGroups": 1
+      "groups": 15,
+      "recipes": 19,
+      "combinedGroups": 4
     },
     {
       "region": "thorax",
       "side": "left",
-      "groups": 12,
-      "recipes": 13,
-      "combinedGroups": 1
+      "groups": 15,
+      "recipes": 19,
+      "combinedGroups": 4
     },
     {
       "region": "thorax",
       "side": "right",
-      "groups": 12,
-      "recipes": 13,
-      "combinedGroups": 1
+      "groups": 15,
+      "recipes": 19,
+      "combinedGroups": 4
     },
     {
       "region": "abdomen",
@@ -263,6 +263,6 @@
   "sourceGeometryChanged": false,
   "clinicalValidation": false,
   "browserInteractionTesting": false,
-  "sourceCatalogSha256": "e253e9ec0c1a1567b3ac614501c6511338d44234a28696501733679f377821c9",
-  "dissectionProfilesSha256": "95aa36b8b050e38be80bbe867a659cd8acd6d18af3cb9deab48521d0ab56b433"
+  "sourceCatalogSha256": "d740da1d11bdf93d26ebe60ccdc82b7fc16909713779d7d2933d3d9dc10988cb",
+  "dissectionProfilesSha256": "b56f3c08ae4182734569af855c874b79f2fe434afaa24b9daa5c27f5eb08e08f"
 }

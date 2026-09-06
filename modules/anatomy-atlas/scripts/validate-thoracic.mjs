@@ -5,11 +5,11 @@ import { build } from 'esbuild';
 import { fileURLToPath } from 'node:url';
 import { Box3, Vector3, Matrix4 } from 'three';
 import {
-  pancreaticDefinitions,
-  pancreaticAdmissions,
-  pancreaticHeldIds,
-  pancreaticSelections,
-} from './pancreatic-selections.mjs';
+  thoracicDefinitions,
+  thoracicAdmissions,
+  thoracicHeldIds,
+  thoracicSelections,
+} from './thoracic-selections.mjs';
 import { inventoryHolds, geometryFingerprint } from './anatomy-inventory.mjs';
 import { cache } from './bodyparts-archive.mjs';
 const rawSourceCheck = process.argv.includes('--raw-source');
@@ -27,17 +27,17 @@ const compare = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 const read = async (p) => JSON.parse(await fs.readFile(p, 'utf8'));
 const root = 'public/models/bodyparts3d/full-body/';
 const catalog = await read(root + 'catalog.json'),
-  baseline = await read('content/pancreatic-baseline.json'),
-  audit = await read('content/pancreatic-source-audit.json'),
+  baseline = await read('content/thoracic-baseline.json'),
+  audit = await read('content/thoracic-source-audit.json'),
   inventory = await read('content/source-inventory.json');
-same(baseline.sourceCommit, 'aa0e55b79d707f518ebb6faa77b96278f1aae5ab');
+same(baseline.sourceCommit, '84a6adbf3814b2d28bd4a3a053622a0da0ad3a9a');
 same(
   baseline.catalogSha256,
-  '8834615444c57b428fdf79689370c7894ba7aa400149f0b800014d9fdc158836',
+  'e253e9ec0c1a1567b3ac614501c6511338d44234a28696501733679f377821c9',
 );
 same(audit.sourceCommit, baseline.sourceCommit);
-same(baseline.structures.length, 942);
-same(baseline.bundles.length, 76);
+same(baseline.structures.length, 954);
+same(baseline.bundles.length, 78);
 same(catalog.structures.length, 958);
 same(catalog.bundles.length, 79);
 same(catalog.coordinateSystem, baseline.coordinateSystem);
@@ -56,31 +56,31 @@ for (const old of baseline.bundles) {
   same(hash(await fs.readFile(root + old.id + '.glb')), old.sha256);
 }
 const additions = catalog.structures.filter((s) =>
-  s.bundle.endsWith('-visceral-detail'),
+  s.bundle.endsWith('-thoracic-detail'),
 );
 same(
   additions.map((s) => s.fmaId).sort(compare),
-  [...pancreaticAdmissions].sort(compare),
+  [...thoracicAdmissions].sort(compare),
 );
 same(
-  pancreaticSelections(
+  thoracicSelections(
     new Map(
       inventory.records.filter((r) => r.tree === 'isa').map((r) => [r.id, r]),
     ),
   )
     .map((s) => s.fma)
     .sort(compare),
-  [...pancreaticAdmissions].sort(compare),
+  [...thoracicAdmissions].sort(compare),
 );
-same(additions.length, 12);
-same(additions.filter((s) => s.system === 'vessels').length, 11);
-same(additions.filter((s) => s.system === 'organs').length, 1);
+same(additions.length, 4);
+same(additions.filter((s) => s.system === 'vessels').length, 4);
+same(additions.filter((s) => s.system === 'organs').length, 0);
 same(
   additions.reduce((n, s) => n + s.sources.length, 0),
-  14,
+  4,
 );
-same(audit.results.length, 13);
-same(audit.comparisons.length, 180);
+same(audit.results.length, 4);
+same(audit.comparisons.length, 123);
 same(audit.license, 'CC-BY-4.0');
 check(audit.distanceMethod.includes('segment/point fallback'));
 for (const row of audit.comparisons) {
@@ -97,28 +97,17 @@ for (const row of audit.comparisons) {
   }
 }
 same(
-  audit.comparisons.filter((r) => r.flagged).map((r) => [r.a, r.b]),
-  [
-    ['FMA46636', 'FMA55077'],
-    ['FMA46635', 'FMA55077'],
-    ['FMA55227', 'FMA55130'],
-    ['FMA14792', 'FMA14793'],
-  ],
+  audit.comparisons.filter((r) => r.flagged),
+  [],
 );
-const vascularContact = audit.comparisons.find(
-  (r) => r.a === 'FMA14792' && r.b === 'FMA14793',
+const variant = audit.results.find((r) => r.fmaId === 'FMA10704');
+same(
+  variant.exactDefinitions.map((r) => r.id).sort(compare),
+  ['FMA10704', 'FMA14177', 'FMA3714', 'FMA66267'].sort(compare),
 );
-for (const d of [vascularContact.aToB, vascularContact.bToA]) {
-  check(d.medianMm > 6);
-  for (let k = 0; k < 3; k++)
-    check(d.closePointBounds.max[k] - d.closePointBounds.min[k] < 1);
-}
-const epiContact = audit.comparisons.find(
-  (r) => r.a === 'FMA55227' && r.b === 'FMA55130',
-);
-same(epiContact.bToA.withinQuarterMm, 1);
-check(epiContact.bToA.medianMm > 3);
-for (const id of pancreaticHeldIds) {
+for (const alias of ['FMA14177', 'FMA3714', 'FMA66267'])
+  check(!catalog.structures.some((s) => s.fmaId === alias));
+for (const id of thoracicHeldIds) {
   check(inventoryHolds[id]);
   check(!catalog.structures.some((s) => s.fmaId === id));
   for (const row of inventory.records.filter((r) => r.id === id))
@@ -133,10 +122,10 @@ for (const [
   id,
   name,
   files,
-  region = 'abdomen',
+  region = 'thorax',
   system = 'vessels',
   category = 'vessel',
-] of pancreaticDefinitions) {
+] of thoracicDefinitions) {
   const a = audit.results.find((r) => r.fmaId === id);
   same(a.name, name);
   same(a.region, region);
@@ -151,7 +140,7 @@ for (const [
   for (const f of a.files) same(f.canonicalDuplicateOwners, []);
   const s = additions.find((s) => s.fmaId === id);
   if (!s) {
-    check(pancreaticHeldIds.includes(id));
+    check(thoracicHeldIds.includes(id));
     continue;
   }
   same(a.degenerateTriangles, 0);
@@ -225,7 +214,7 @@ for (const [
 const compiled = await build({
   stdin: {
     contents:
-      "export * from './lib/pancreatic-anatomy'; export * from './app/dissection-data'; export * from './app/body-content'; export * from './lib/anatomy-practice'; export * from './lib/anatomy-link-registry'; export * from './lib/study-links';",
+      "export * from './lib/thoracic-anatomy'; export * from './app/dissection-data'; export * from './app/body-content'; export * from './lib/anatomy-practice'; export * from './lib/anatomy-link-registry'; export * from './lib/study-links';",
     resolveDir: fileURLToPath(new URL('../', import.meta.url)),
     loader: 'ts',
   },
@@ -239,11 +228,11 @@ const api = await import(
     Buffer.from(compiled.outputFiles[0].text).toString('base64')
 );
 same(
-  api.pancreaticGroups.flatMap((g) => g.fmaIds).sort(compare),
-  [...pancreaticAdmissions].sort(compare),
+  api.thoracicGroups.flatMap((g) => g.fmaIds).sort(compare),
+  [...thoracicAdmissions].sort(compare),
 );
 for (const s of additions) {
-  const group = api.pancreaticGroupFor(s.fmaId);
+  const group = api.thoracicGroupFor(s.fmaId);
   check(group);
   for (const tab of ['anatomy', 'function']) {
     const c = api.bodyContent(s, tab);
@@ -259,17 +248,15 @@ for (const s of additions) {
   same(e.sources, s.sources);
   same(e.reference.kind, 'surface-bounds-centre');
 }
-same(api.pancreaticStudySets.length, 5);
+same(api.thoracicStudySets.length, 3);
 const counts = {
-  'pancreatic-source-window': 12,
-  'pancreaticoduodenal-arteries': 8,
-  'pancreatic-body-tail-arteries': 6,
-  'pancreatic-venous-window': 4,
-  'epiglottis-laryngeal-window': 6,
+  'bronchial-arterial-window': 7,
+  'oesophageal-arterial-window': 4,
+  'thoracic-small-arteries-exposed': 6,
 };
 const loaded = catalog.bundles.map((b) => b.id);
 let serial = 0;
-for (const study of api.pancreaticStudySets)
+for (const study of api.thoracicStudySets)
   for (const region of study.regions) {
     const profile = api.dissectionProfiles[region],
       focus = profile.focuses.find((f) => f.id === study.id),
@@ -288,7 +275,11 @@ for (const study of api.pancreaticStudySets)
         visible = api.stageStructures(scope, profile, study.id);
       same(visible, expected);
       same(api.stageStructures(scope, profile, 'free', study.id), expected);
-      same(visible.length, counts[study.id]);
+      same(
+        visible.length,
+        counts[study.id] -
+          (study.id === 'bronchial-arterial-window' && side !== 'both' ? 1 : 0),
+      );
       for (const landmark of study.landmarks)
         check(
           visible.some((s) => new RegExp(landmark, 'i').test(s.sourceName)),
@@ -387,23 +378,23 @@ const result = {
   passed: true,
   checks,
   rawSourceCheck,
-  newEntries: 12,
-  vesselEntries: 11,
-  epiglottisEntries: 1,
-  sourceComponents: 14,
-  newBundles: 2,
+  newEntries: 4,
+  vesselEntries: 4,
+  variantEntries: 1,
+  sourceComponents: 4,
+  newBundles: 1,
   newAssetBytes: catalog.bundles
-    .filter((b) => b.id.endsWith('-visceral-detail'))
+    .filter((b) => b.id.endsWith('-thoracic-detail'))
     .reduce((n, b) => n + b.bytes, 0),
-  preservedRecords: 942,
-  preservedBundles: 76,
-  sourceHolds: pancreaticHeldIds,
-  studyWindows: 5,
+  preservedRecords: 954,
+  preservedBundles: 78,
+  sourceHolds: thoracicHeldIds,
+  studyWindows: 3,
   clinicalValidation: false,
   browserInteractionTesting: false,
 };
 await fs.writeFile(
-  'docs/pancreatic-validation.json',
+  'docs/thoracic-validation.json',
   JSON.stringify(result, null, 2) + '\n',
 );
 console.log(result);

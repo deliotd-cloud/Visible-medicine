@@ -644,6 +644,13 @@
       "bytes": 133144,
       "sha256": "be90ec41dc6046b820b337d986b6a67792a33ba33216db8aecb068fed4b85173",
       "structures": 11
+    },
+    {
+      "id": "thorax-vessels-thoracic-detail",
+      "url": "/models/bodyparts3d/full-body/thorax-vessels-thoracic-detail.glb",
+      "bytes": 91700,
+      "sha256": "bd86da53fb00401a01db7e321ca14b0bfec784b53a496a22dc5e6338db3d0044",
+      "structures": 4
     }
   ],
   "structures": [
@@ -55867,6 +55874,226 @@
         }
       ],
       "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+      "fmaId": "FMA4149",
+      "name": "Esophageal artery",
+      "sourceName": "esophageal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-vessels-thoracic-detail",
+      "nodeName": "FMA4149",
+      "bounds": {
+        "min": [
+          -0.2986220121383667,
+          3.956500291824341,
+          0.15571998059749603
+        ],
+        "max": [
+          0.1234080046415329,
+          4.492900371551514,
+          0.3243640065193176
+        ]
+      },
+      "center": [
+        -0.0876070037484169,
+        4.224700331687927,
+        0.24004199355840683
+      ],
+      "anchor": [
+        -0.07550640404224396,
+        4.223900318145752,
+        0.2694360315799713
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1934",
+          "sha256": "c65d1ea50ca8980e2f1dc8aaac2e5260edcb841b7ebc5b7fad9d220088071ae9"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source vessel names do not establish normal branching, a complete vascular tree, continuity, lumen or perfusion. Grouped branches retain one source identity; the variant-labelled source is not a normal-anatomy template.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+      "fmaId": "FMA10704",
+      "name": "Variant bronchial artery",
+      "sourceName": "variant bronchial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-vessels-thoracic-detail",
+      "nodeName": "FMA10704",
+      "bounds": {
+        "min": [
+          -0.29621800780296326,
+          4.6173996925354,
+          0.2007090002298355
+        ],
+        "max": [
+          0.17332398891448975,
+          5.030899524688721,
+          0.2909580171108246
+        ]
+      },
+      "center": [
+        -0.061447009444236755,
+        4.8241496086120605,
+        0.24583350867033005
+      ],
+      "anchor": [
+        -0.0718580037355423,
+        4.811700344085693,
+        0.25371697545051575
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3418",
+          "sha256": "36f80be07440fd4834878bddc8e73d75f0cba0ed15505fc16e03eb474a563943"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source vessel names do not establish normal branching, a complete vascular tree, continuity, lumen or perfusion. Grouped branches retain one source identity; the variant-labelled source is not a normal-anatomy template.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+      "fmaId": "FMA68109",
+      "name": "Bronchial artery",
+      "sourceName": "bronchial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-vessels-thoracic-detail",
+      "nodeName": "FMA68109",
+      "bounds": {
+        "min": [
+          -0.493863970041275,
+          4.814200401306152,
+          0.23621803522109985
+        ],
+        "max": [
+          0.12741200625896454,
+          5.19420051574707,
+          0.45102599263191223
+        ]
+      },
+      "center": [
+        -0.18322598189115524,
+        5.004200458526611,
+        0.34362201392650604
+      ],
+      "anchor": [
+        -0.19295400381088257,
+        5.035899639129639,
+        0.4431140124797821
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1933",
+          "sha256": "9dbcdaeb0c6a61fe68c26bb3fb48e40efecf5ada9e396cf11e4c5780c1a92224"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source vessel names do not establish normal branching, a complete vascular tree, continuity, lumen or perfusion. Grouped branches retain one source identity; the variant-labelled source is not a normal-anatomy template.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
+      "fmaId": "FMA71537",
+      "name": "Set of oesophageal branches of thoracic aorta",
+      "sourceName": "set of oesophageal branches of thoracic aorta",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-vessels-thoracic-detail",
+      "nodeName": "FMA71537",
+      "bounds": {
+        "min": [
+          -0.14099200069904327,
+          4.000699520111084,
+          0.044264983385801315
+        ],
+        "max": [
+          0.21891000866889954,
+          4.567600250244141,
+          0.3588919937610626
+        ]
+      },
+      "center": [
+        0.03895900398492813,
+        4.284149885177612,
+        0.20157848857343197
+      ],
+      "anchor": [
+        0.0635548010468483,
+        4.292199611663818,
+        0.23305602371692657
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3431",
+          "sha256": "e2addc11f8e81daf7349975b5871ecf9ea97ace47b00610fb3aca54eea793cfc"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source vessel names do not establish normal branching, a complete vascular tree, continuity, lumen or perfusion. Grouped branches retain one source identity; the variant-labelled source is not a normal-anatomy template.",
       "provenance": {
         "method": "licensed-source-mesh",
         "license": "CC-BY-4.0",

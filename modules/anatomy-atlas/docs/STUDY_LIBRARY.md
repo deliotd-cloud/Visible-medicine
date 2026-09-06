@@ -1,5 +1,7 @@
 # Regional study library
 
+The counts and hashes below describe the original library milestone. The [thoracic extension](THORACIC_DETAIL.md) now brings the same library to 69 independent windows, 98 focuses and 140 cards (167 recipes, 27 equivalent pairs), with 47 layer steps still separate. Current hashes and 34,836 passing assertions are in `study-library-validation.json`.
+
 ## Find a dissection view before changing the model
 
 Open **Dissection, inspection & study tools → Study windows & focuses** in any regional or whole-body explorer. The library replaces the long window and compartment dropdowns; the numbered **Layer by layer** track remains separate.

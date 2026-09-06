@@ -31,7 +31,7 @@ const check = (value, message) => {
 const ids = (items) => items.map((item) => item.id);
 same(
   hash(raw),
-  'e253e9ec0c1a1567b3ac614501c6511338d44234a28696501733679f377821c9',
+  'd740da1d11bdf93d26ebe60ccdc82b7fc16909713779d7d2933d3d9dc10988cb',
 );
 const rows = [];
 for (const [region, profile] of Object.entries(dissectionProfiles)) {

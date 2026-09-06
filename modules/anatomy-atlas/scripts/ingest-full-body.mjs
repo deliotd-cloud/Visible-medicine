@@ -23,6 +23,7 @@ import { headDetailSelections } from './head-detail-selections.mjs';
 import { junctionSelections } from './junction-selection.mjs';
 import { mesentericSelections } from './mesenteric-selections.mjs';
 import { pancreaticSelections } from './pancreatic-selections.mjs';
+import { thoracicSelections } from './thoracic-selections.mjs';
 
 const [isa, partof, isaZip, partofZip] = await Promise.all([
   conceptMap('isa'),
@@ -235,6 +236,7 @@ const recovered = [
   ...junctionSelections(isa),
   ...mesentericSelections(isa),
   ...pancreaticSelections(isa),
+  ...thoracicSelections(isa),
 ];
 // Separate an already included component from an aggregate without duplicating
 // its surface. Preserve the aggregate's public ID and record the adaptation.
@@ -466,7 +468,7 @@ for (const record of selections) {
   mesh.userData = { structureId: id, fmaId: record.fma };
   const bundle =
     prior?.bundle ??
-    `${region}-${record.system}${record.pancreaticRecovery ? '-visceral-detail' : record.mesentericRecovery ? '-mesenteric' : record.junctionRecovery ? '-junction' : record.headDetailRecovery ? '-head-detail' : record.axialRecovery ? '-axial-detail' : record.neuroRecovery ? '-deep-brain' : record.inventoryRecovery ? '-inventory' : record.gapRecovery ? '-gaps' : record.recovery ? '-recovery' : record.dissection ? '-dissection' : ''}`;
+    `${region}-${record.system}${record.thoracicRecovery ? '-thoracic-detail' : record.pancreaticRecovery ? '-visceral-detail' : record.mesentericRecovery ? '-mesenteric' : record.junctionRecovery ? '-junction' : record.headDetailRecovery ? '-head-detail' : record.axialRecovery ? '-axial-detail' : record.neuroRecovery ? '-deep-brain' : record.inventoryRecovery ? '-inventory' : record.gapRecovery ? '-gaps' : record.recovery ? '-recovery' : record.dissection ? '-dissection' : ''}`;
   if (!bundles.has(bundle)) bundles.set(bundle, new THREE.Group());
   bundles.get(bundle).add(mesh);
   const box = geometry.boundingBox,

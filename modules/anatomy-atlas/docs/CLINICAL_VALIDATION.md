@@ -1,5 +1,11 @@
 # Clinical validation checklist
 
+## Thoracic vessel gates
+
+- Review the four exact source identities, grouped oesophageal branches and bronchial variant/arch-branch aliases; a variant-labelled source must not become a normal-pattern template.
+- Assess organ/airway relationships, source extent, origins/endpoints, lumen, calibre, continuity and missing branches. Finite sampled-overlap checks are not clinical non-intersection or anastomosis validation.
+- Accept the three new study views and fine-vessel controls on real devices. Existing holds remain; no actual imaging or patient registration is added. See `THORACIC_DETAIL.md`.
+
 ## Study-library acceptance
 
 - Check the searchable library on real mouse, keyboard, touch and assistive-technology devices: inline expansion/scrolling, announced previews, focus return, mobile and 200% text sizing. Server-rendered markup and helper tests are not this acceptance.

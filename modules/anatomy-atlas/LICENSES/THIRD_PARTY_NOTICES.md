@@ -26,6 +26,8 @@ The application embeds a CC BY 4.0 BodyParts3D shoulder mesh subset. It does not
 
 ## Anatomical meshes
 
+The latest thoracic extension reaches 958 entries / 79 body bundles. Four v4 IS-A components retain the same CC BY 4.0 DBCLS attribution and adaptation obligations. Bronchial-variant aliases are rendered once, with the variant label retained. No new package, licence class, paid service, font, texture or copied diagram is added. See `../docs/THORACIC_DETAIL.md`. Counts in earlier milestone paragraphs are historical.
+
 The current pancreatic/epiglottic extension reaches 954 entries / 78 body bundles. Twelve definitions and fourteen components from the same official v4 IS-A archive remain CC BY 4.0 derivatives with DBCLS attribution and indication-of-change obligations. No new licence class, package, font, texture, copied diagram or paid service is added. The raphe is held, not rendered. See `../docs/PANCREATIC_DETAIL.md`; the totals in earlier milestone paragraphs are historical.
 
 The mesenteric extension brought the body catalogue to 942 entries. Its seventeen new source definitions (three membrane surfaces and fourteen vessel segments) remain BodyParts3D v4 derivatives under CC BY 4.0, with existing DBCLS attribution and change notices. Three near-overlapping arterial candidates are excluded. No other asset licence, font, texture, package or paid service was added. See `../docs/MESENTERIC_DETAIL.md`.

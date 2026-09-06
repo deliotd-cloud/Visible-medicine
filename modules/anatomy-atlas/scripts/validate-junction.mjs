@@ -20,8 +20,8 @@ assert.equal(
   '9b2cb3eb0b530491c9a4d0f54c4d89058e14f7475f05597f4babf9fb3ea8bdc7',
 );
 assert.equal(baseline.structures.length, 924);
-assert.equal(catalog.structures.length, 954);
-assert.equal(catalog.bundles.length, 78);
+assert.equal(catalog.structures.length, 958);
+assert.equal(catalog.bundles.length, 79);
 assert.deepEqual(catalog.coordinateSystem, baseline.coordinateSystem);
 assert.deepEqual(catalog.excluded, baseline.excluded);
 const junction = catalog.structures.find((s) => s.id === junctionId);

@@ -4,12 +4,12 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 
 ## Snapshot
 
-- Source application commit: `84a6adbf3814b2d28bd4a3a053622a0da0ad3a9a`.
-- Exact application source tree: `b0372738224879d72294db945a2f7dd7744f36ae`.
+- Source application commit: `2418244c0dcdb01807c6398d94623651fca6f7fa`.
+- Exact application source tree: `47996254c1b2e68f8b9489f6516726e70c26d79f`.
 - Main website base commit: `c4ff08f8afc90bd94d04162625f97af9d94401cf`.
 - GitHub backup branch: `backup/anatomy-atlas-2026-09-06`.
-- All 372 tracked application files (110,984,048 bytes) are preserved byte-for-byte from that source commit, including 79 GLB bundles, the official brand lockups, content, scripts, configuration, dependency lockfile, licences, review database schema/migration and documentation.
-- The atlas covers 954 selectable source representations, 11 regional explorers, 113 dissection stages, 95 focused views and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation.
+- All 381 tracked application files (111,414,519 bytes) are preserved byte-for-byte from that source commit, including 80 GLB bundles, the official brand lockups, content, scripts, configuration, dependency lockfile, licences, review database schema/migration and documentation.
+- The atlas covers 958 selectable source representations, 11 regional explorers, 116 dissection stages, 98 focused views and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation.
 - The shoulder review workspace has independent geometry, teaching and imaging review tracks, evidence/issues, versioned records and revision-bound approval safeguards. Acquired scans and specialist approvals remain absent.
 - The deep-inspection update adds three-plane surface cutaways, tissue opacity, clipped-surface picking, regional/whole-body orthographic illustration and varied 5/10/20-question practice with results. No source geometry, anatomical coverage, licences or dependencies were changed.
 - The study-context update adds 20 device-local named views with dissection/camera restoration, source-change safeguards and targeted recovery from failed anatomy loads. Its current 17,081 helper assertions pass; actual saved browser preferences are not part of this source backup. The ordered continuing work queue is in the atlas's `docs/CONTINUOUS_IMPROVEMENT.md`.
@@ -37,6 +37,8 @@ The connective/deep-spinal milestone adds eleven source entries / fifteen compon
 The targeted-practice milestone adds regional/whole-body find/name response modes, major/all-visible/focus-only target policies, skip/reveal and all-eligible-missed retries. The dedicated shoulder retains its three prompts but shares the tested answer-once/reset engine. All existing anatomy files are unchanged. The new 54,457-assertion practice suite passes; shared display fingerprints were refreshed without creating approvals. Six v3-only abdominal-wall candidates were audited but not imported because registration and exact-version asset rights remain to be established. See `docs/PRACTICE.md` and `docs/ABDOMINAL_WALL_AUDIT.md`. Sessions are in memory; no learner responses or clinical database records are included in this backup.
 
 ## Working with this copy
+
+The latest thoracic milestone adds four original source vessels in one 91,700-byte GLB and three focused dissection windows. All preceding 954 records and 78 body bundles remain exact. The variant bronchial source retains its explicit variant identity; shared aliases never create duplicate geometry. The 9,574 new-feature assertions (9,606 with cached raw source) and all expanded source, dissection, practice, imaging-contract, navigation/library, arrangement/explode and review suites pass. Type checks, focused lint, production build and the 808-package licence audit pass. See `docs/THORACIC_DETAIL.md`; `npm run thoracic:test` uses committed evidence without the Site Git history. No clinical/device approval, actual scan, paid service or new package is included. Earlier milestone paragraphs below are historical.
 
 The current mesenteric milestone adds three membrane surfaces, nine arterial segments and five venous segments in two new bundles. Twenty source candidates were audited; three near-coincident arterial alternatives are explicitly held despite different exact geometry hashes. Every previous 925 catalogue record and 74 body-bundle hash remains exact. Five abdominal study windows/focuses expose bowel/mesenteric context, vessels, arteries, veins and the close appendiceal group. New stable IDs and an additive membrane category feed existing study and imaging-selection contracts; no scans, clinical registrations or approvals are introduced. See `docs/MESENTERIC_DETAIL.md` for exact source hashes, overlap diagnostics, commercial notices and remaining clinical/device gates.
 
@@ -80,4 +82,4 @@ The 4,301 head-detail assertions, 54,502 practice assertions, 189 automated revi
 
 Keep the atlas's [licence](../modules/anatomy-atlas/LICENSE), [third-party notices](../modules/anatomy-atlas/LICENSES/THIRD_PARTY_NOTICES.md), [BodyParts3D licence evidence](../modules/anatomy-atlas/LICENSES/BODYPARTS3D.md) and visible attribution together. MIT application code does not relicense third-party anatomy or the proprietary Visible Medicine brand marks.
 
-Keep the repository private unless public source/brand release is deliberately approved. The source snapshot is 110,190,135 bytes (about 110.19 MB); no Git LFS or new paid service was introduced for this backup. GitHub source storage is distinct from hosting, large future imaging collections and database backups; quotas and service pricing can change. Never add patient imaging or private review exports to this repository as a substitute for appropriate data storage.
+Keep the repository private unless public source/brand release is deliberately approved. The source snapshot is 111,414,519 bytes (about 111.41 MB); no Git LFS or new paid service was introduced for this backup. GitHub source storage is distinct from hosting, large future imaging collections and database backups; quotas and service pricing can change. Never add patient imaging or private review exports to this repository as a substitute for appropriate data storage.

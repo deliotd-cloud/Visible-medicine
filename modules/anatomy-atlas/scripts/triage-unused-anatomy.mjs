@@ -92,7 +92,7 @@ const report = {
   limits: [
     'Lexical inventory triage only; not an exhaustive anatomical review or a source admission.',
     'The middle-constrictor aggregate reuses both existing held laterality candidates; grouping cannot bypass that hold.',
-    'The preceding visceral-detail milestone admitted twelve exact definitions and held the pharyngeal raphe; those decisions are separate from this refreshed unused-only triage. See PANCREATIC_DETAIL.md.',
+    'The visceral-detail milestone admitted twelve definitions and held the pharyngeal raphe. The thoracic milestone admits four further definitions with one bronchial-variant geometry owner. See PANCREATIC_DETAIL.md and THORACIC_DETAIL.md; existing holds remain.',
     'Remaining small organ/muscle/vascular definitions need exact identity, parent-alias, common-coordinate and sampled surface-overlap checks before admission. No continuous organ or vessel network is inferred.',
     'Running this lexical triage changes no source geometry, source hold, review record, dependency or licence obligation.',
   ],

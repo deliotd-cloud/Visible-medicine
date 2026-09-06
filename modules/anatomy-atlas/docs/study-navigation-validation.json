@@ -1,28 +1,28 @@
 {
   "passed": true,
-  "assertions": 92309,
-  "catalogSha256": "e253e9ec0c1a1567b3ac614501c6511338d44234a28696501733679f377821c9",
+  "assertions": 93335,
+  "catalogSha256": "d740da1d11bdf93d26ebe60ccdc82b7fc16909713779d7d2933d3d9dc10988cb",
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
-      "structures": 954,
-      "selectionsWithGroups": 171,
-      "memberships": 171
+      "structures": 958,
+      "selectionsWithGroups": 175,
+      "memberships": 175
     },
     {
       "region": "whole-body",
       "side": "right",
-      "structures": 552,
-      "selectionsWithGroups": 104,
-      "memberships": 104
+      "structures": 556,
+      "selectionsWithGroups": 108,
+      "memberships": 108
     },
     {
       "region": "whole-body",
       "side": "left",
-      "structures": 555,
-      "selectionsWithGroups": 107,
-      "memberships": 107
+      "structures": 559,
+      "selectionsWithGroups": 111,
+      "memberships": 111
     },
     {
       "region": "shoulder-arm",
@@ -153,23 +153,23 @@
     {
       "region": "thorax",
       "side": "both",
-      "structures": 149,
-      "selectionsWithGroups": 120,
-      "memberships": 132
+      "structures": 153,
+      "selectionsWithGroups": 124,
+      "memberships": 153
     },
     {
       "region": "thorax",
       "side": "right",
-      "structures": 97,
-      "selectionsWithGroups": 75,
-      "memberships": 82
+      "structures": 101,
+      "selectionsWithGroups": 79,
+      "memberships": 102
     },
     {
       "region": "thorax",
       "side": "left",
-      "structures": 98,
-      "selectionsWithGroups": 76,
-      "memberships": 82
+      "structures": 102,
+      "selectionsWithGroups": 80,
+      "memberships": 102
     },
     {
       "region": "abdomen",

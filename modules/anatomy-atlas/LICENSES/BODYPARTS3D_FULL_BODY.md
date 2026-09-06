@@ -1,5 +1,11 @@
 # Expanded BodyParts3D commercial-use audit
 
+## Thoracic small-vessel extension — 6 September 2026
+
+The current total is **958 source representations / 79 body bundles / 94,943,836 bytes**. Four original v4 IS-A components add one 91,700-byte GLB, preserving all prior records/bundle hashes. Exact source/alias, CRC/size, hash, transform and sampled-overlap evidence is in `content/thoracic-source-audit.json`; the allowlist and clinical gates are documented in `docs/THORACIC_DETAIL.md`. The variant identity is retained and shared aliases do not create duplicate geometry.
+
+The official CC BY 4.0 grant was rechecked today; existing DBCLS credit, licence and adaptation notices apply. No new provider, library, font, texture, diagram, paid API or invented anatomy was included. Brief original factual notes cite TTUHSC without copying its figures/tables. All surfaces remain unvalidated; existing source holds and hosting terms remain. Earlier totals below are historical.
+
 ## Pancreatic and epiglottic extension — 6 September 2026
 
 The current total is **954 source representations / 78 body bundles / 94,852,136 bytes**. Twelve official v4 IS-A definitions add fourteen source components in two GLBs (198,324 bytes), preserving all previous 942 records and 76 bundle hashes. Exact names, hashes, archive CRC/size, unchanged transforms, contact diagnostics and explicit admission/raphe-hold decisions are recorded in `content/pancreatic-source-audit.json`, `scripts/pancreatic-selections.mjs` and `docs/PANCREATIC_DETAIL.md`. The audit does not itself admit anatomy. All previously held components remain absent.
