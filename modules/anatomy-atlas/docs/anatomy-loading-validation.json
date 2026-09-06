@@ -1,0 +1,231 @@
+{
+  "passed": true,
+  "assertions": 84966,
+  "scopes": 36,
+  "recipeScopes": 714,
+  "renderScopes": 11424,
+  "sessions": 1425,
+  "rows": [
+    {
+      "region": "whole-body",
+      "side": "both",
+      "structures": 1006,
+      "recipes": 9
+    },
+    {
+      "region": "whole-body",
+      "side": "left",
+      "structures": 582,
+      "recipes": 9
+    },
+    {
+      "region": "whole-body",
+      "side": "right",
+      "structures": 581,
+      "recipes": 9
+    },
+    {
+      "region": "shoulder-arm",
+      "side": "both",
+      "structures": 91,
+      "recipes": 13
+    },
+    {
+      "region": "shoulder-arm",
+      "side": "left",
+      "structures": 46,
+      "recipes": 13
+    },
+    {
+      "region": "shoulder-arm",
+      "side": "right",
+      "structures": 46,
+      "recipes": 13
+    },
+    {
+      "region": "forearm",
+      "side": "both",
+      "structures": 62,
+      "recipes": 13
+    },
+    {
+      "region": "forearm",
+      "side": "left",
+      "structures": 31,
+      "recipes": 13
+    },
+    {
+      "region": "forearm",
+      "side": "right",
+      "structures": 31,
+      "recipes": 13
+    },
+    {
+      "region": "hand",
+      "side": "both",
+      "structures": 124,
+      "recipes": 30
+    },
+    {
+      "region": "hand",
+      "side": "left",
+      "structures": 61,
+      "recipes": 30
+    },
+    {
+      "region": "hand",
+      "side": "right",
+      "structures": 63,
+      "recipes": 30
+    },
+    {
+      "region": "thigh",
+      "side": "both",
+      "structures": 81,
+      "recipes": 15
+    },
+    {
+      "region": "thigh",
+      "side": "left",
+      "structures": 41,
+      "recipes": 15
+    },
+    {
+      "region": "thigh",
+      "side": "right",
+      "structures": 41,
+      "recipes": 15
+    },
+    {
+      "region": "leg",
+      "side": "both",
+      "structures": 60,
+      "recipes": 14
+    },
+    {
+      "region": "leg",
+      "side": "left",
+      "structures": 30,
+      "recipes": 14
+    },
+    {
+      "region": "leg",
+      "side": "right",
+      "structures": 30,
+      "recipes": 14
+    },
+    {
+      "region": "foot",
+      "side": "both",
+      "structures": 118,
+      "recipes": 21
+    },
+    {
+      "region": "foot",
+      "side": "left",
+      "structures": 59,
+      "recipes": 21
+    },
+    {
+      "region": "foot",
+      "side": "right",
+      "structures": 59,
+      "recipes": 21
+    },
+    {
+      "region": "thorax",
+      "side": "both",
+      "structures": 153,
+      "recipes": 23
+    },
+    {
+      "region": "thorax",
+      "side": "left",
+      "structures": 102,
+      "recipes": 23
+    },
+    {
+      "region": "thorax",
+      "side": "right",
+      "structures": 101,
+      "recipes": 23
+    },
+    {
+      "region": "abdomen",
+      "side": "both",
+      "structures": 94,
+      "recipes": 35
+    },
+    {
+      "region": "abdomen",
+      "side": "left",
+      "structures": 76,
+      "recipes": 35
+    },
+    {
+      "region": "abdomen",
+      "side": "right",
+      "structures": 74,
+      "recipes": 35
+    },
+    {
+      "region": "pelvis",
+      "side": "both",
+      "structures": 65,
+      "recipes": 11
+    },
+    {
+      "region": "pelvis",
+      "side": "left",
+      "structures": 37,
+      "recipes": 11
+    },
+    {
+      "region": "pelvis",
+      "side": "right",
+      "structures": 37,
+      "recipes": 11
+    },
+    {
+      "region": "head-neck",
+      "side": "both",
+      "structures": 263,
+      "recipes": 37
+    },
+    {
+      "region": "head-neck",
+      "side": "left",
+      "structures": 154,
+      "recipes": 37
+    },
+    {
+      "region": "head-neck",
+      "side": "right",
+      "structures": 154,
+      "recipes": 37
+    },
+    {
+      "region": "spine",
+      "side": "both",
+      "structures": 112,
+      "recipes": 17
+    },
+    {
+      "region": "spine",
+      "side": "left",
+      "structures": 84,
+      "recipes": 17
+    },
+    {
+      "region": "spine",
+      "side": "right",
+      "structures": 84,
+      "recipes": 17
+    }
+  ],
+  "catalogSha256": "b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5",
+  "sourceGeometryChanged": false,
+  "clinicalValidation": false,
+  "browserInteractionTesting": false,
+  "limitations": "Pure runtime-helper tests plus static handler/markup wiring checks. No browser fetch failure injection, WebGL/context-loss, touch or assistive-technology acceptance is claimed."
+}

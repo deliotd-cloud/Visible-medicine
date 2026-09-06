@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "assertions": 319,
+  "vessels": 223,
+  "bundles": 18,
+  "crossTypePairs": 10362,
+  "oppositeSidePairs": 3378,
+  "boundsPruned": 6983,
+  "compared": 1,
+  "flagged": 0,
+  "heldControls": 2,
+  "catalogSha256": "b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5",
+  "auditSha256": "d3edd63e80dda07f5d74911aaa252c8859ff1e8448758efae84b1d62e609236a",
+  "geometryChanged": false,
+  "clinicalValidation": false,
+  "limitations": "Recomputed all current rendered vascular shapes and the extent-filtered comparison from committed GLBs. Held-control raw OBJ distances are recorded evidence, not recomputed by this default test; regenerate the audit with the original hash-verified raw cache. Numerical screening is not a complete topology, surface-equivalence or clinical audit."
+}

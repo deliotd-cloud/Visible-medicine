@@ -1,5 +1,10 @@
 # Clinical validation checklist
 
+## Loading and source-screen acceptance
+
+- Exercise actual download/render failures, throttling, selective retries, naming-question transitions, ghost/hidden context and return navigation. Confirm paused questions retain answers and cannot accept skip/answer/next while required anatomy is unavailable; exit must remain available. Test keyboard, touch and assistive-technology announcements. Helper and static wiring tests are not browser acceptance; Canvas/context-loss handling remains outside this milestone. See `ANATOMY_LOADING.md`.
+- Do not interpret zero flags in the extent-pruned artery–vein screen as proof of correct anatomy. Only one rendered pair reached the surface comparison; opposite explicit sides, same-type pairs and extent-dissimilar surfaces are outside it. Existing plantar venous holds and all earlier review requirements remain. See `VESSEL_SHAPE_AUDIT.md`.
+
 ## Foot vascular gates
 
 - Review eight admitted source vessel identities, plantar arch/trunk aliases, deep/superficial branch course, depth, endpoints, lumen/calibre, variants and grouped dorsal arch components.

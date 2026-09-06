@@ -2,6 +2,12 @@ import type { BodyStructure } from '../app/body-types';
 
 export type PracticeSampling = 'landmarks' | 'all' | 'focus';
 export type PracticeMode = 'find' | 'name';
+export function practiceCanStart(pool: BodyStructure[], mode: PracticeMode) {
+  return mode === 'find'
+    ? pool.length > 0
+    : mode === 'name' &&
+        new Set(pool.map((s) => s.name.toLowerCase())).size >= 2;
+}
 export function practicePool(
   items: BodyStructure[],
   loaded: string[],
@@ -105,12 +111,7 @@ export function createPracticeSession(
     loaded,
     options.sampling === 'focus' ? (options.focusIds ?? []) : undefined,
   );
-  if (
-    !pool.length ||
-    (options.mode === 'name' &&
-      new Set(pool.map((s) => s.name.toLowerCase())).size < 2)
-  )
-    return null;
+  if (!practiceCanStart(pool, options.mode)) return null;
   const candidates = options.retryIds
     ? pool.filter((s) => options.retryIds!.includes(s.id))
     : pool;

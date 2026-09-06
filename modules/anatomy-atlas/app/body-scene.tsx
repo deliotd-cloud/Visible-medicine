@@ -31,6 +31,7 @@ import type { StudyCamera } from '@/lib/study-views';
 import { neuroGroupFor } from '@/lib/neuroanatomy';
 import { sceneLabelEndpoint, sceneLabelIds } from '@/lib/scene-labels';
 import { vesselColor } from '@/lib/anatomy-vessels';
+import { renderedAnatomyStructures } from '@/lib/anatomy-load-state';
 
 type Props = {
   catalog: BodyCatalog;
@@ -240,11 +241,11 @@ class AssetBoundary extends Component<
 export function BodyScene(props: Props) {
   const rendered = useMemo(
     () =>
-      props.structures.filter(
-        (s) =>
-          props.systems[s.system] &&
-          (!props.hiddenIds.includes(s.id) ||
-            (props.ghostRemoved && !props.exam)),
+      renderedAnatomyStructures(
+        props.structures,
+        props.systems,
+        props.hiddenIds,
+        props.ghostRemoved && !props.exam,
       ),
     [
       props.structures,

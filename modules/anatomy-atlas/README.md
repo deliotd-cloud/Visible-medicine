@@ -1,6 +1,12 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
-## Hand arterial dissection
+## Regional dissection reliability
+
+Every regional explorer and whole-body practice now distinguishes ready, waiting and failed anatomy groups. A failed required group pauses answers and progression without losing existing answers; retry or exit stays available. Ready counts exclude failures, and naming practice requires distinct choices. See [controls, tests and remaining device acceptance](docs/ANATOMY_LOADING.md).
+
+A [bounded source-shape screen](docs/VESSEL_SHAPE_AUDIT.md) checked all 223 rendered vascular identities and found no additional flagged artery–vein pair under its stated filters. Existing foot holds remain; this does not confer clinical validation or add anatomical coverage.
+
+## Foot and hand vascular dissection
 
 The latest atlas has **1,006 source entries, 128 dissection stages and 110 focuses**. Open **Ankle & foot → Study windows & focuses** for the plantar arterial arch, medial plantar branch, dorsal venous arches and exposed local vessels. Eight source-labelled entries add detail without changing previous anatomy. Two uncertain plantar venous arches remain withheld for shape/provenance review. See [source evidence, controls and clinical gates](docs/FOOT_VASCULAR_DETAIL.md).
 
@@ -138,6 +144,8 @@ npm run inventory:test
 npm run neuro:test
 npm run axial:test
 npm run practice:test
+npm run loads:test
+npm run vessel-shapes:test
 npm run reviews:test
 node scripts/validate-recovery.mjs
 node scripts/validate-gaps.mjs

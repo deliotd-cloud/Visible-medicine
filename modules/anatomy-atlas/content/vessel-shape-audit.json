@@ -1,0 +1,2064 @@
+{
+  "sourceCommit": "d2dacd10edeac3ead12fd26376aa3377b223ffc7",
+  "catalogSha256": "b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+  "checked": "2026-09-06",
+  "criteria": {
+    "samples": 128,
+    "nearMm": 0.1,
+    "fraction": 0.95,
+    "maxMm": 0.3,
+    "extentAbsoluteFloorMm": 0.5,
+    "extentRelativeTolerance": 0.08,
+    "extentAbsoluteCapMm": 3
+  },
+  "vessels": [
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
+      "fmaId": "FMA3736",
+      "kind": "artery",
+      "recordSha256": "c30801288fd51226ae06d94c66c777508e5e9467f81a1d9cec76f722a9ac68d0",
+      "vertices": 200,
+      "triangles": 396
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
+      "fmaId": "FMA3768",
+      "kind": "artery",
+      "recordSha256": "f61de3eeeb0381746cc98572274772302b6ee6faf5a3a3baff2ce69758f1b1ec",
+      "vertices": 337,
+      "triangles": 670
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta",
+      "fmaId": "FMA87217",
+      "kind": "artery",
+      "recordSha256": "022abef30ef2b30b62367c7fd1347c50a3ee90c87cb98647e4d35e4713cf478f",
+      "vertices": 1147,
+      "triangles": 2290
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:superior-vena-cava",
+      "fmaId": "FMA4720",
+      "kind": "vein",
+      "recordSha256": "ff0129b6a2325cb96f97b3bb43d4a098cc283452d7b6901902b4e4f2d946fa88",
+      "vertices": 301,
+      "triangles": 598
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:azygos-vein",
+      "fmaId": "FMA4838",
+      "kind": "vein",
+      "recordSha256": "c38085303a1fe60ec2f228ddc33c86e709d1c4084e36d514be9f6685571e5a97",
+      "vertices": 9132,
+      "triangles": 18260
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+      "fmaId": "FMA4944",
+      "kind": "vein",
+      "recordSha256": "afc281422a90b18a332b2e062c029354939c33c15be8f960d1f2a221935a1910",
+      "vertices": 2135,
+      "triangles": 4266
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+      "fmaId": "FMA3789",
+      "kind": "artery",
+      "recordSha256": "ae396781e65af43ced8d48917b5d4dc6f2b0e8a358268fbf9281dae66a8dbc33",
+      "vertices": 1137,
+      "triangles": 2270
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+      "fmaId": "FMA10951",
+      "kind": "vein",
+      "recordSha256": "3a655fec08f783f94b992755d736b8db61987e0c1bdeb439a5245dcabc407355",
+      "vertices": 1544,
+      "triangles": 3080
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+      "fmaId": "FMA3932",
+      "kind": "artery",
+      "recordSha256": "0b77966ccfaf1a6b0d897da40af174c07b19785b2d387a1d085d3e69dd7a5f4d",
+      "vertices": 133,
+      "triangles": 262
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-subclavian-artery",
+      "fmaId": "FMA3953",
+      "kind": "artery",
+      "recordSha256": "1676b53aa6e95d16b21a166a053a744c6bb62ad074dc96788834fab3da6610db",
+      "vertices": 228,
+      "triangles": 452
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-subclavian-artery",
+      "fmaId": "FMA4694",
+      "kind": "artery",
+      "recordSha256": "696b347e28fe49e2e61915cc36fe91a74e095aff9d1c96a640654c4d40efe964",
+      "vertices": 325,
+      "triangles": 646
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-brachiocephalic-vein",
+      "fmaId": "FMA4751",
+      "kind": "vein",
+      "recordSha256": "73ef64258f193d6907a1c77a0a8b291ba241ebc06a6cc79090d4c494d4790b19",
+      "vertices": 275,
+      "triangles": 546
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-brachiocephalic-vein",
+      "fmaId": "FMA4761",
+      "kind": "vein",
+      "recordSha256": "4bfb7b4f5911150c03507e1465fa3cf2ad1d71220755f06008af2b8b8963f6ae",
+      "vertices": 376,
+      "triangles": 748
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-subclavian-vein",
+      "fmaId": "FMA4755",
+      "kind": "vein",
+      "recordSha256": "9e801ed80351a6af944ab7ff8ef3b3ed8e4e455a67c496947f13c926a05923a7",
+      "vertices": 186,
+      "triangles": 368
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-subclavian-vein",
+      "fmaId": "FMA4763",
+      "kind": "vein",
+      "recordSha256": "0886bcd13bb26ea539a1cb23e2b11d13dd76f5500f44d76a83ccf86e5dcb9f84",
+      "vertices": 219,
+      "triangles": 434
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
+      "fmaId": "FMA3941",
+      "kind": "artery",
+      "recordSha256": "49bc26cfc0d90e923cbe29ce9df528431ef8ff31ca411e23186cd4de5d6cf604",
+      "vertices": 444,
+      "triangles": 884
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
+      "fmaId": "FMA4058",
+      "kind": "artery",
+      "recordSha256": "dcf1f0b2c543864d9bd6ed382a0123f06150c8e4f5dece21131fa89ce1ae3209",
+      "vertices": 87,
+      "triangles": 170
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-internal-carotid-artery",
+      "fmaId": "FMA3949",
+      "kind": "artery",
+      "recordSha256": "ff27c724314668b6e022c4077eff56c74ac9b9371007117b6c4778335a8cfac5",
+      "vertices": 638,
+      "triangles": 1272
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
+      "fmaId": "FMA4062",
+      "kind": "artery",
+      "recordSha256": "499daeb33a5bb6ecec8661f3880420123947e7f74c8f0b1cf9c1f1f48a2c48e1",
+      "vertices": 638,
+      "triangles": 1272
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-vertebral-artery",
+      "fmaId": "FMA3958",
+      "kind": "artery",
+      "recordSha256": "2a8abe473350bc98c63b8628d8b2bc2dbae7d7e7b5a39429d296d7bb50cc359d",
+      "vertices": 402,
+      "triangles": 800
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-vertebral-artery",
+      "fmaId": "FMA4066",
+      "kind": "artery",
+      "recordSha256": "df7048f5007004b8526038d26dae8bd9d84933bdb1977f7872eed928b367c912",
+      "vertices": 402,
+      "triangles": 800
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-internal-jugular-vein",
+      "fmaId": "FMA4754",
+      "kind": "vein",
+      "recordSha256": "eb1df581966fddf7d54ca634da18c894fccc13c10d51243cc3e65155ddaa5686",
+      "vertices": 115,
+      "triangles": 226
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-internal-jugular-vein",
+      "fmaId": "FMA4762",
+      "kind": "vein",
+      "recordSha256": "24bffb938b69fe40f3f37704f5b0510c684631a44c8fbcdb491d6b092aecbbd1",
+      "vertices": 142,
+      "triangles": 280
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:vessel:basilar-artery",
+      "fmaId": "FMA50542",
+      "kind": "artery",
+      "recordSha256": "1b3a1f0a2481163d056bed7016a9cd83e3e30d77976c22293c87cf6c761d65ce",
+      "vertices": 257,
+      "triangles": 506
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:vessel:anterior-communicating-artery",
+      "fmaId": "FMA50169",
+      "kind": "artery",
+      "recordSha256": "f027de09167df4135fd529fee63392c7a98cefbaecc20d10b3ecd64059f93092",
+      "vertices": 42,
+      "triangles": 80
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-anterior-cerebral-artery",
+      "fmaId": "FMA50029",
+      "kind": "artery",
+      "recordSha256": "2e3da364f1af3765481c4bedf51bcb0895c7cfa8e3978c07381c6e984dc94202",
+      "vertices": 202,
+      "triangles": 400
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
+      "fmaId": "FMA50030",
+      "kind": "artery",
+      "recordSha256": "9a31da5732f664e4e04ceb401864f26f5fda14035c3216a26df36c56d51fb1a1",
+      "vertices": 202,
+      "triangles": 400
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-cerebral-artery",
+      "fmaId": "FMA50584",
+      "kind": "artery",
+      "recordSha256": "b50d3682d7ba2c24885cf5e0e2a1168dcc67d8e3ce234b1c4beb4dc7cc22261a",
+      "vertices": 6350,
+      "triangles": 12668
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-cerebral-artery",
+      "fmaId": "FMA50585",
+      "kind": "artery",
+      "recordSha256": "cbecad99f4acfe218c8b2b1e7fcd111c9f172f5a46aa028d490e2af088d83a1b",
+      "vertices": 6350,
+      "triangles": 12668
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-communicating-artery",
+      "fmaId": "FMA50085",
+      "kind": "artery",
+      "recordSha256": "52d28702b764731a3c35221e1d7fd7df902a4425a31e10fb696f83391f70231a",
+      "vertices": 104,
+      "triangles": 204
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-communicating-artery",
+      "fmaId": "FMA50086",
+      "kind": "artery",
+      "recordSha256": "c681a9a626c27fd66f27b60f4a9177d2e33cee0948a809856b1209704fdaf2d4",
+      "vertices": 104,
+      "triangles": 204
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:trunk-of-right-coronary-artery",
+      "fmaId": "FMA3802",
+      "kind": "artery",
+      "recordSha256": "fbfe6f2eb9bdc714ab0da234ae355c7b02ca40b05d54b79bbb4dbcfbcea32fc4",
+      "vertices": 2253,
+      "triangles": 4502
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:trunk-of-left-coronary-artery",
+      "fmaId": "FMA3855",
+      "kind": "artery",
+      "recordSha256": "b3a8c76371b7cf3cc9995d79cfd0a80f3c0cdc0216453cd5227fab856fd1b1b3",
+      "vertices": 104,
+      "triangles": 204
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:anterior-interventricular-branch-of-left-coronary-artery",
+      "fmaId": "FMA3862",
+      "kind": "artery",
+      "recordSha256": "5d81a62ce438df25837ac0f5100e878ffbf16c1c1887753e70ad899a5aaa1827",
+      "vertices": 4758,
+      "triangles": 9444
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:circumflex-branch-of-left-coronary-artery",
+      "fmaId": "FMA3895",
+      "kind": "artery",
+      "recordSha256": "b48a70363b6194ccccfdd232333d2e3bea28fb0daad2788986e27a8ad2080728",
+      "vertices": 1521,
+      "triangles": 3018
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:great-cardiac-vein",
+      "fmaId": "FMA4707",
+      "kind": "vein",
+      "recordSha256": "b4b7f03458231851012d7c97e86bb45d87f5a934807c8d28f3dc2dc1a81bf75d",
+      "vertices": 415,
+      "triangles": 826
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:middle-cardiac-vein",
+      "fmaId": "FMA4713",
+      "kind": "vein",
+      "recordSha256": "79d61cd3beb0ab44a0cfb8ecd3a867b6d2d87e38eb0d5408e147676a9b6071b4",
+      "vertices": 2342,
+      "triangles": 4628
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-pulmonary-artery",
+      "fmaId": "FMA50872",
+      "kind": "artery",
+      "recordSha256": "53ef444627b2fa7991af8c7de4864e2f24dfbec428d4901b08c5170d9b68d76f",
+      "vertices": 341,
+      "triangles": 678
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-pulmonary-artery",
+      "fmaId": "FMA50873",
+      "kind": "artery",
+      "recordSha256": "85d8aa771f0880fcf1626a86ea7368d419de85dbf4857833a4af8ddd88761046",
+      "vertices": 2727,
+      "triangles": 5450
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-superior-pulmonary-vein",
+      "fmaId": "FMA49914",
+      "kind": "vein",
+      "recordSha256": "0d8e65c93711f6b10143df31a6a9aea89cd7e62404b07603d73c517c85687656",
+      "vertices": 164,
+      "triangles": 324
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-superior-pulmonary-vein",
+      "fmaId": "FMA49916",
+      "kind": "vein",
+      "recordSha256": "7533a7bc42cd7b63fa2cab2496eebdb06540a3899621237d753033f093a00181",
+      "vertices": 447,
+      "triangles": 886
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-inferior-pulmonary-vein",
+      "fmaId": "FMA49911",
+      "kind": "vein",
+      "recordSha256": "b969cef82dabe0a17e6eee9e7579a67718ab7a4c4121a6b0af0308e29e37b555",
+      "vertices": 100,
+      "triangles": 196
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-inferior-pulmonary-vein",
+      "fmaId": "FMA49913",
+      "kind": "vein",
+      "recordSha256": "e2a6c36641a9c427039a701ce7059c20d3af0ff1dd50b45fc89ebf69c11b2d27",
+      "vertices": 602,
+      "triangles": 1192
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+      "fmaId": "FMA50737",
+      "kind": "artery",
+      "recordSha256": "b20f57a0f1f4dd51b3c70e5a01a02e154bd48fbeafbe85b24ab52b175666a544",
+      "vertices": 242,
+      "triangles": 476
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+      "fmaId": "FMA14749",
+      "kind": "artery",
+      "recordSha256": "dff68e0a112c8ec47bf9d5680f9926de5c2435e90cb8e7c3bab7c3926484bb70",
+      "vertices": 1027,
+      "triangles": 2046
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+      "fmaId": "FMA14750",
+      "kind": "artery",
+      "recordSha256": "20dbf024483b797ab96e55390c826855165082d18ed8bb96ce6b49b150d0f155",
+      "vertices": 275,
+      "triangles": 546
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+      "fmaId": "FMA14771",
+      "kind": "artery",
+      "recordSha256": "47527b49471e444973532fd52969745874dc458788a4b99e7885453574e327ae",
+      "vertices": 176,
+      "triangles": 348
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
+      "fmaId": "FMA14772",
+      "kind": "artery",
+      "recordSha256": "370c95f563b996c41078707c5489799c1f5420d49d942566cac40c6f3fea9ee7",
+      "vertices": 181,
+      "triangles": 358
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+      "fmaId": "FMA14773",
+      "kind": "artery",
+      "recordSha256": "78919d40d14973acf0787f647e35e53cb8b909eed1c47dea725d63ae055c518c",
+      "vertices": 3236,
+      "triangles": 6444
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
+      "fmaId": "FMA14768",
+      "kind": "artery",
+      "recordSha256": "6a2d3b3af7398f0887f25ffde0544eff74a872c129155577b5d8cf4b6b86884f",
+      "vertices": 552,
+      "triangles": 1100
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+      "fmaId": "FMA50735",
+      "kind": "vein",
+      "recordSha256": "0a7874a436940590e61fa764a04d450bd71d68348968ba9fcbea97c73d644230",
+      "vertices": 1793,
+      "triangles": 3582
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
+      "fmaId": "FMA14752",
+      "kind": "artery",
+      "recordSha256": "5531351be2ddc8778bb88177742f9885be18cd51d4443f724051a6caf98b1c39",
+      "vertices": 105,
+      "triangles": 206
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
+      "fmaId": "FMA14753",
+      "kind": "artery",
+      "recordSha256": "37720f6b423f28e8beac9a5a449ef4fadcfc23818baf033db0e5fc6d13385c38",
+      "vertices": 146,
+      "triangles": 288
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
+      "fmaId": "FMA14338",
+      "kind": "vein",
+      "recordSha256": "03220036bf3aa81cca834642d7537bd9a3dbe1e563aad5030b7d6d74a984856b",
+      "vertices": 1773,
+      "triangles": 3538
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
+      "fmaId": "FMA14339",
+      "kind": "vein",
+      "recordSha256": "d933d2bbc3be4a0bdf9cf9fde3b44597affdf314ad94008ce07133b0b51e8da8",
+      "vertices": 695,
+      "triangles": 1386
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-artery",
+      "fmaId": "FMA14765",
+      "kind": "artery",
+      "recordSha256": "73f2432e828ff7589ca51d4c7d2e04ca9f00811d97517f26fe8f22b9bfaaab33",
+      "vertices": 112,
+      "triangles": 220
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-artery",
+      "fmaId": "FMA14766",
+      "kind": "artery",
+      "recordSha256": "524acd20c7aba986da35f50e8b3a2f9b069a83de2d525c6bab1dac31d4f020ba",
+      "vertices": 126,
+      "triangles": 248
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-artery",
+      "fmaId": "FMA18806",
+      "kind": "artery",
+      "recordSha256": "d86ddb22675b893735979adfcdf93cd4ac38e36f5230ca4b2c64a28ee2dfa12b",
+      "vertices": 200,
+      "triangles": 396
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-artery",
+      "fmaId": "FMA18807",
+      "kind": "artery",
+      "recordSha256": "8fc17be919eece69d544afa99ea545284eb7a5000c03311f8d8e7628c4e67c3c",
+      "vertices": 233,
+      "triangles": 462
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-artery",
+      "fmaId": "FMA18809",
+      "kind": "artery",
+      "recordSha256": "3fc5513339b554b9dfe45bbba27d4d4beb6fa4b9b27fe99bc92339b01e36defe",
+      "vertices": 140,
+      "triangles": 276
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-artery",
+      "fmaId": "FMA18810",
+      "kind": "artery",
+      "recordSha256": "9a27391366d6d482d4b9545c98652b12ff56ec25ed05ce4f249822779d40a54e",
+      "vertices": 137,
+      "triangles": 270
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-vein",
+      "fmaId": "FMA21387",
+      "kind": "vein",
+      "recordSha256": "fcc34110f4239497cc9c9112f94cf46cc2bab411db5ef1bd0b6ca7958b1e1b2b",
+      "vertices": 181,
+      "triangles": 358
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-vein",
+      "fmaId": "FMA21388",
+      "kind": "vein",
+      "recordSha256": "e22673604bafb4e65169d1dc3a45c6020990a365ba6ae8aacd6cfa47022ed86c",
+      "vertices": 217,
+      "triangles": 430
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-vein",
+      "fmaId": "FMA18885",
+      "kind": "vein",
+      "recordSha256": "c111cab80c0c732d3b2e92c16a1ba0121af66062f1dc4f31376a9f87a7cd6591",
+      "vertices": 364,
+      "triangles": 724
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-vein",
+      "fmaId": "FMA18886",
+      "kind": "vein",
+      "recordSha256": "156f137d45c92081890687261cb010462b425bf6f71faceeb895d8a7b2bcb248",
+      "vertices": 576,
+      "triangles": 1136
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-vein",
+      "fmaId": "FMA18887",
+      "kind": "vein",
+      "recordSha256": "393342e5a6a00a42bd56577275c5d16619101cc0f3cae400d026b32ab20f1910",
+      "vertices": 502,
+      "triangles": 980
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-vein",
+      "fmaId": "FMA18888",
+      "kind": "vein",
+      "recordSha256": "5634921dae3ceb042d930a1fbecf396329f10faa3b97422d8d16c96a40ff9bfc",
+      "vertices": 288,
+      "triangles": 564
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-artery",
+      "fmaId": "FMA22655",
+      "kind": "artery",
+      "recordSha256": "eb10be2fa2f3156ab072268f6095374e76565cc9ced14a94fdf669a728682df4",
+      "vertices": 915,
+      "triangles": 1826
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-artery",
+      "fmaId": "FMA22656",
+      "kind": "artery",
+      "recordSha256": "6b7ba3e838baf2ef11dd368cfc05453bb8e008322f668d2704b5230b1bbebb37",
+      "vertices": 902,
+      "triangles": 1800
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-brachial-artery",
+      "fmaId": "FMA22691",
+      "kind": "artery",
+      "recordSha256": "f9bd278b36909655d81f517e2e16dc975108082109a5bf6976cba04050defda4",
+      "vertices": 1558,
+      "triangles": 3112
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-brachial-artery",
+      "fmaId": "FMA22692",
+      "kind": "artery",
+      "recordSha256": "1b7a47b7bdaaceb5777635567c88439c55a05803a6b3cf7cb85a5a75adb3e081",
+      "vertices": 1737,
+      "triangles": 3470
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-deep-brachial-artery",
+      "fmaId": "FMA22696",
+      "kind": "artery",
+      "recordSha256": "4815d000fca406cd4a28416b8e6c3e9e3c5bf2944d460dea05e3f4fbaf498cb9",
+      "vertices": 1175,
+      "triangles": 2346
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-deep-brachial-artery",
+      "fmaId": "FMA22697",
+      "kind": "artery",
+      "recordSha256": "e493751b026c02795c0c9667961854f7e69e67a3c934a382d68d8665427e2f46",
+      "vertices": 1255,
+      "triangles": 2506
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-anterior-circumflex-humeral-artery",
+      "fmaId": "FMA22682",
+      "kind": "artery",
+      "recordSha256": "16aba3dd0dc12af3d9cc90c1df67442cc36e9a6f2d59fbe76e43b83ac51922bb",
+      "vertices": 1621,
+      "triangles": 3238
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-anterior-circumflex-humeral-artery",
+      "fmaId": "FMA22683",
+      "kind": "artery",
+      "recordSha256": "0eb69559478d070a5b630d7db5c874441d4338f307ad87696db44448cf738b6d",
+      "vertices": 1638,
+      "triangles": 3272
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-posterior-circumflex-humeral-artery",
+      "fmaId": "FMA22685",
+      "kind": "artery",
+      "recordSha256": "a695918418e8517b556bf6881796f2a7cd286b3fbfb685b5edab69660a25cf6a",
+      "vertices": 1059,
+      "triangles": 2110
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-posterior-circumflex-humeral-artery",
+      "fmaId": "FMA22687",
+      "kind": "artery",
+      "recordSha256": "2959aedee54273f646d45e44305d9e7dd4f44bf522c673a215ccf8471287acad",
+      "vertices": 835,
+      "triangles": 1662
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-circumflex-scapular-artery",
+      "fmaId": "FMA23180",
+      "kind": "artery",
+      "recordSha256": "4b36b33f52c11506913c4ff787f0f92c8697ce9e5ab9b46056f88638bdfc2449",
+      "vertices": 391,
+      "triangles": 778
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-circumflex-scapular-artery",
+      "fmaId": "FMA23181",
+      "kind": "artery",
+      "recordSha256": "571e6b7e91731b3af5616b0b6ab60605e4a341678e3fc1fa2fd4f242ee602285",
+      "vertices": 383,
+      "triangles": 762
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thoracodorsal-artery",
+      "fmaId": "FMA66321",
+      "kind": "artery",
+      "recordSha256": "3860b010e02f82884136339eb5562bddeb831cd9c92180c397792f1823063f76",
+      "vertices": 1056,
+      "triangles": 2108
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thoracodorsal-artery",
+      "fmaId": "FMA66322",
+      "kind": "artery",
+      "recordSha256": "38220ca9394c1396cd766310d31e21ccea87ff352be2cc361e27dbfd4e1a51f9",
+      "vertices": 1054,
+      "triangles": 2104
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+      "fmaId": "FMA22733",
+      "kind": "artery",
+      "recordSha256": "fe1ac71ee1cdc7692141a69ec26a610e9a72dbf5e0ee1e18d53d39707a0a97ff",
+      "vertices": 3738,
+      "triangles": 7472
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+      "fmaId": "FMA22734",
+      "kind": "artery",
+      "recordSha256": "441f29913fd52819cc0e7e31f4b19f64db9ec8e57bf1b7402ae981b11c015f85",
+      "vertices": 3884,
+      "triangles": 7764
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+      "fmaId": "FMA22797",
+      "kind": "artery",
+      "recordSha256": "796ce39ac2e70536e732dfba1b3b0a0b8394468f084b0988d9e33efc8da61531",
+      "vertices": 3440,
+      "triangles": 6876
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
+      "fmaId": "FMA22798",
+      "kind": "artery",
+      "recordSha256": "c755f773447a1ce1125b0771536bebe72c7549418f5395ef3e2b2a45793fa4bc",
+      "vertices": 3559,
+      "triangles": 7114
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+      "fmaId": "FMA22812",
+      "kind": "artery",
+      "recordSha256": "6603188b758e5038e8c9d0b36b4028de8ee08485c5192689058f25dc0609b3ca",
+      "vertices": 998,
+      "triangles": 1992
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+      "fmaId": "FMA22813",
+      "kind": "artery",
+      "recordSha256": "81743efeeec5ec9cfa4b73426c82f240961346a5bbdb86797eedf78f1b1bfb1f",
+      "vertices": 985,
+      "triangles": 1966
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+      "fmaId": "FMA13325",
+      "kind": "vein",
+      "recordSha256": "34029a3610286f3ec3832b2d2ca35fd6126b9328c281592055feca4389e1231d",
+      "vertices": 11313,
+      "triangles": 22622
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
+      "fmaId": "FMA13326",
+      "kind": "vein",
+      "recordSha256": "2214d5afbcd08590b1fa78d650e6e6a8d583dfa910b43c68d1273c5aaadf246e",
+      "vertices": 11439,
+      "triangles": 22874
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
+      "fmaId": "FMA22909",
+      "kind": "vein",
+      "recordSha256": "dacafe8d78e28fe84edb16f7318a2a1914d86bcca01b07eec52f7f3a72ce944d",
+      "vertices": 9077,
+      "triangles": 18150
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
+      "fmaId": "FMA22910",
+      "kind": "vein",
+      "recordSha256": "efbad2d5bc98c1596a5a998981fe8209280173e6c15f57575db7151159c75ee0",
+      "vertices": 9171,
+      "triangles": 18338
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+      "fmaId": "FMA22839",
+      "kind": "artery",
+      "recordSha256": "0e7ff7cd52c52d16f7b6cc7c5971b93472b35f000e19a8738b25306435beb160",
+      "vertices": 870,
+      "triangles": 1736
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
+      "fmaId": "FMA22840",
+      "kind": "artery",
+      "recordSha256": "8af8157c2a923945a3b6c13a9cb711254579ceabd0d4906866a01b0ce4e9f6b6",
+      "vertices": 884,
+      "triangles": 1764
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-femoral-artery",
+      "fmaId": "FMA70249",
+      "kind": "artery",
+      "recordSha256": "22eff14729364e6b784e9c2e0171550ce4eb7103e4ac3827f93090e4b51c702c",
+      "vertices": 378,
+      "triangles": 752
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-femoral-artery",
+      "fmaId": "FMA70250",
+      "kind": "artery",
+      "recordSha256": "6096a3efe58bdaa907c117337531eec3b517d62b4808417cd1120fde873d2486",
+      "vertices": 372,
+      "triangles": 740
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
+      "fmaId": "FMA20796",
+      "kind": "artery",
+      "recordSha256": "668dfb6cb271f22c092b472144bdd50303d9def3f742f7200751e8b9f24499f9",
+      "vertices": 3827,
+      "triangles": 7646
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery",
+      "fmaId": "FMA20797",
+      "kind": "artery",
+      "recordSha256": "5243432545a2bc6ff550d1a657edb65581c15c35fdb78769de955b1a0db0554f",
+      "vertices": 3820,
+      "triangles": 7632
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
+      "fmaId": "FMA21188",
+      "kind": "vein",
+      "recordSha256": "2a521b91882d41577aeff610e7c55bda37df5f3a35e8c8550e10c3c79c9d3325",
+      "vertices": 331,
+      "triangles": 658
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
+      "fmaId": "FMA21189",
+      "kind": "vein",
+      "recordSha256": "be4e08e97882f56062d016ff7ce2634173f029a2770547901d6d2b62abbd08c3",
+      "vertices": 331,
+      "triangles": 658
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
+      "fmaId": "FMA21379",
+      "kind": "vein",
+      "recordSha256": "e4a2d1f3b063ff8216be2b20710202dadb2aab0445487cf8e3635b38081d765c",
+      "vertices": 15020,
+      "triangles": 30036
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+      "fmaId": "FMA21380",
+      "kind": "vein",
+      "recordSha256": "e7b69c59f969181dcdd4ed6331a1894919a94a2a4fec0d0edf17cd0af730e058",
+      "vertices": 15022,
+      "triangles": 30040
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+      "fmaId": "FMA77380",
+      "kind": "artery",
+      "recordSha256": "b347dbf569f33804880271f4779658cac15157213c62e2dd1655f2cfd4892114",
+      "vertices": 8391,
+      "triangles": 16778
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+      "fmaId": "FMA77381",
+      "kind": "artery",
+      "recordSha256": "e10038a24d1c046e673aaafecdc621025fd32d28cc5f9ce34ecfa635d70487c9",
+      "vertices": 8368,
+      "triangles": 16732
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-artery",
+      "fmaId": "FMA43896",
+      "kind": "artery",
+      "recordSha256": "b53b31b3a8a12a5b9f8ccc50753683aa826acb06963fe3cb63f9541ab508babd",
+      "vertices": 8669,
+      "triangles": 17334
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-artery",
+      "fmaId": "FMA43897",
+      "kind": "artery",
+      "recordSha256": "6c7f8cfc15036f27022786bd1372bd57807721671ee80e85b2fcc974db39d21d",
+      "vertices": 8708,
+      "triangles": 17412
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-artery",
+      "fmaId": "FMA43898",
+      "kind": "artery",
+      "recordSha256": "ef743dd7e5f56ccd8967946e7bd3163bba4b51411c089750b69c7e3957e361d1",
+      "vertices": 6567,
+      "triangles": 13130
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-artery",
+      "fmaId": "FMA43899",
+      "kind": "artery",
+      "recordSha256": "90728a9f76158591596e571dd5b777f0e0a05e1a639b0d2bf676439fb1d77cad",
+      "vertices": 6611,
+      "triangles": 13218
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
+      "fmaId": "FMA44328",
+      "kind": "vein",
+      "recordSha256": "ed29ce22064f1f4a8dcd39d32558db563f0cb6c84792bc4802c0fcb69b4e3766",
+      "vertices": 8332,
+      "triangles": 16660
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-vein",
+      "fmaId": "FMA44329",
+      "kind": "vein",
+      "recordSha256": "994af08bc5720c3b36301936aed857d1140ef0f19edb68aa6634c982cdfdfff9",
+      "vertices": 8298,
+      "triangles": 16592
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-small-saphenous-vein",
+      "fmaId": "FMA44334",
+      "kind": "vein",
+      "recordSha256": "9ed11bb660a4c93310735b9d041512a71e089bbf7ba4cc60055f6daf498e5b98",
+      "vertices": 8168,
+      "triangles": 16332
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-small-saphenous-vein",
+      "fmaId": "FMA44335",
+      "kind": "vein",
+      "recordSha256": "8f64651b102066ca3a27600a4b39b170ed6ceed18eddfdb897609a0dc9313227",
+      "vertices": 8170,
+      "triangles": 16336
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
+      "fmaId": "FMA43916",
+      "kind": "artery",
+      "recordSha256": "5345a851764fb6b140ae4564e6ec445f45d64e735dd713134860f883d5860827",
+      "vertices": 553,
+      "triangles": 1102
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
+      "fmaId": "FMA43917",
+      "kind": "artery",
+      "recordSha256": "59a59b3c08f63c739cb99c73487d07f99b3c9f2ece57b91ccae19a778d133477",
+      "vertices": 576,
+      "triangles": 1148
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+      "fmaId": "FMA43929",
+      "kind": "artery",
+      "recordSha256": "bed7d0d5ab0cd3d3eeb68ce2ab6c14d382430901db2916d325c9d31b9fe4a83c",
+      "vertices": 388,
+      "triangles": 772
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+      "fmaId": "FMA43930",
+      "kind": "artery",
+      "recordSha256": "7aa1c95f4a3ac14f84e86bc77672fbdb1b0b448b3511dcaa1e873379315368c1",
+      "vertices": 384,
+      "triangles": 764
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
+      "fmaId": "FMA43931",
+      "kind": "artery",
+      "recordSha256": "d6fc5d298c03b693492da31ada2989edd0aaf86a6118483202c85c5ba2dce530",
+      "vertices": 470,
+      "triangles": 936
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
+      "fmaId": "FMA43932",
+      "kind": "artery",
+      "recordSha256": "41133ca4611144844417b63569246ab2472b1c11c19b9d0ddd06b5aaa63ebb12",
+      "vertices": 452,
+      "triangles": 900
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
+      "fmaId": "FMA3969",
+      "kind": "artery",
+      "recordSha256": "166e5d36b2751953c18d1213aaf088aef747166e529b72e01c87bce53aa81c0f",
+      "vertices": 1775,
+      "triangles": 3546
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-internal-thoracic-artery",
+      "fmaId": "FMA4068",
+      "kind": "artery",
+      "recordSha256": "0680321480ae5d5557b28860f0fd9c7870a85ed474939e3489a5f84e62e40db9",
+      "vertices": 1823,
+      "triangles": 3642
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+      "fmaId": "FMA3988",
+      "kind": "artery",
+      "recordSha256": "6a2e260df09acc3aebdf6983940bf882061374a898be47a6ac4cb48bc50a06b9",
+      "vertices": 1128,
+      "triangles": 2252
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+      "fmaId": "FMA4083",
+      "kind": "artery",
+      "recordSha256": "8d60e26ffbeec70edb2f58ffcf56a3f8aa041f1c9e265ec622516938d803d86c",
+      "vertices": 1137,
+      "triangles": 2270
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+      "fmaId": "FMA10692",
+      "kind": "artery",
+      "recordSha256": "a099887c186b98d2b0831c8da4d4ef87280e16d457942d66d131ee3e4006e026",
+      "vertices": 1266,
+      "triangles": 2528
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+      "fmaId": "FMA4077",
+      "kind": "artery",
+      "recordSha256": "398c9c53fcd0072b26ada940957028e1dad2bae6ff5c6a7b14f8b299bf5e18da",
+      "vertices": 1284,
+      "triangles": 2564
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-vein",
+      "fmaId": "FMA4758",
+      "kind": "vein",
+      "recordSha256": "3ab6094a3783b72c525ad6c7e86d3c6b41ba0e293a16a84a6942804a9657e10e",
+      "vertices": 1521,
+      "triangles": 3038
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+      "fmaId": "FMA4772",
+      "kind": "vein",
+      "recordSha256": "9a9d5998f336e9dd4982a8d11c1d4f762683b94e633a5f1f24b57ba56b0c6a69",
+      "vertices": 1622,
+      "triangles": 3240
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+      "fmaId": "FMA4786",
+      "kind": "vein",
+      "recordSha256": "4fc69a3a91a4090e24ee3eb2d5800a7496937e287860b4b247e0da31b810be66",
+      "vertices": 1620,
+      "triangles": 3236
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+      "fmaId": "FMA3992",
+      "kind": "artery",
+      "recordSha256": "c4c9ebe9ee30a018bb32cac50f490744350af5c3164701c4bca0d583ca4d010c",
+      "vertices": 56,
+      "triangles": 108
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+      "fmaId": "FMA4084",
+      "kind": "artery",
+      "recordSha256": "d36547654ade3b6ea123e02d1caa432ee58c9de3f280d706f30758042c82eceb",
+      "vertices": 63,
+      "triangles": 122
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+      "fmaId": "FMA5039",
+      "kind": "artery",
+      "recordSha256": "c63f7a197e13306bd3154e40f17a58c2c5ce8a94fe90da461d4f5d0f0928a3f3",
+      "vertices": 124,
+      "triangles": 244
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+      "fmaId": "FMA4086",
+      "kind": "artery",
+      "recordSha256": "241920117a0d55ad13a9d0dbe743544d3b6116152146184d29df62cb5e29bc9e",
+      "vertices": 123,
+      "triangles": 242
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+      "fmaId": "FMA4057",
+      "kind": "artery",
+      "recordSha256": "d9f22da09ee0d2662042b6292096b66586fb7b4f27d765aa6047611c27477560",
+      "vertices": 2225,
+      "triangles": 4446
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+      "fmaId": "FMA10552",
+      "kind": "artery",
+      "recordSha256": "8574ec8aa777ff3789ee386bdec745adfeead05e87ac462a9039d8947136ad41",
+      "vertices": 2268,
+      "triangles": 4532
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+      "fmaId": "FMA10698",
+      "kind": "artery",
+      "recordSha256": "5394cbae827b6562fdf3b254a6e10e71675da04f46cdf793e6ba080a72fe76d4",
+      "vertices": 958,
+      "triangles": 1912
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+      "fmaId": "FMA10681",
+      "kind": "artery",
+      "recordSha256": "88fcb537084273332a367ed926a224f4f504f598512831b595309849403ff2d9",
+      "vertices": 966,
+      "triangles": 1928
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+      "fmaId": "FMA13330",
+      "kind": "vein",
+      "recordSha256": "9b423e3b4c934df160f361a4f20b8afcd77821504ba423b7deb3731625812e69",
+      "vertices": 1075,
+      "triangles": 2146
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+      "fmaId": "FMA13331",
+      "kind": "vein",
+      "recordSha256": "48305d6108d45aca1dd3023f1dcc84a89c6818e8252d43d927a78e6b5aee84c6",
+      "vertices": 1057,
+      "triangles": 2110
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+      "fmaId": "FMA50859",
+      "kind": "vein",
+      "recordSha256": "db782cccaa125ed10874ec7434aafef42b89a6a6daae9f1414308c0807824e42",
+      "vertices": 995,
+      "triangles": 1986
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+      "fmaId": "FMA50860",
+      "kind": "vein",
+      "recordSha256": "985d330c04068dc99bfef4abbb5bf24665d800cf85b069b41c00803e4e6d2dae",
+      "vertices": 989,
+      "triangles": 1974
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA66563",
+      "kind": "artery",
+      "recordSha256": "3daed32a69a32c701d5797a4e1351075d234cd2db0b1368bea8aeaa9353028f5",
+      "vertices": 238,
+      "triangles": 472
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA66564",
+      "kind": "artery",
+      "recordSha256": "6fba17e8ff133a2de6bc945ec9398a69ac53f6169c28ef76f6a55c9f3c95c06a",
+      "vertices": 236,
+      "triangles": 468
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA23063",
+      "kind": "artery",
+      "recordSha256": "18f7bf9fbb20d2aa1e699e4d483d6004fc1a6e72023d8c8286fc4c03774c5b7f",
+      "vertices": 1702,
+      "triangles": 3400
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA23064",
+      "kind": "artery",
+      "recordSha256": "7eb22c4e434bf81c24ccab0edb264569bc67753f42ce874312709ffa19847385",
+      "vertices": 1690,
+      "triangles": 3376
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA23068",
+      "kind": "artery",
+      "recordSha256": "631519bc03b6162a8101cece2ce46fc5d6480fe390c149cc7adbdf1502e7e1b9",
+      "vertices": 500,
+      "triangles": 996
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA23069",
+      "kind": "artery",
+      "recordSha256": "13adfb74f23fe8cdb06d59515c6d9f1019ff0e38c40cff3145795113ff7f0f6b",
+      "vertices": 489,
+      "triangles": 974
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA23072",
+      "kind": "artery",
+      "recordSha256": "821db3ecb44b44fd29a4ee790e02828fbc7f6de7ed4712cd7b1baf0d09dd8d17",
+      "vertices": 408,
+      "triangles": 812
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA23073",
+      "kind": "artery",
+      "recordSha256": "340f02017c387a07a796be54eb4b3046427ce9708e58adf53a36ed4bb4181eab",
+      "vertices": 396,
+      "triangles": 788
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+      "fmaId": "FMA14332",
+      "kind": "vein",
+      "recordSha256": "962b84b117ac2fe05ee7c1cd2aaae797754f99062bcfd4c461e851e009b936b6",
+      "vertices": 353,
+      "triangles": 702
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+      "fmaId": "FMA14810",
+      "kind": "artery",
+      "recordSha256": "8ae044c09e3cb5b4762f20cb7c944c3fa0425a3cc0d0bbacfb41a4f199f8eb90",
+      "vertices": 717,
+      "triangles": 1430
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+      "fmaId": "FMA14811",
+      "kind": "artery",
+      "recordSha256": "61a1ab2c9784dd3a4e837f1bad8e8021db8cb18d6dd926fe9ce259a5442ea0c4",
+      "vertices": 498,
+      "triangles": 1000
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+      "fmaId": "FMA14815",
+      "kind": "artery",
+      "recordSha256": "31242cbed670810d4f3372a1250c34dc623267e7a084992087eec1f21af3f37a",
+      "vertices": 124,
+      "triangles": 244
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+      "fmaId": "FMA14818",
+      "kind": "artery",
+      "recordSha256": "f69536c3791df1b6b020af2f55bafc6374632b4b90ff85fbfd1ef262119b2f69",
+      "vertices": 436,
+      "triangles": 868
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+      "fmaId": "FMA14820",
+      "kind": "artery",
+      "recordSha256": "d23d28a42709eba67ac799d78e80cbd6f9858cf861cf6c8585221c027988e3a0",
+      "vertices": 181,
+      "triangles": 358
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+      "fmaId": "FMA14824",
+      "kind": "artery",
+      "recordSha256": "9678a6dd1afa0a6511fad688fe6c80b7697a97fe96e085009782eab2d9a62e57",
+      "vertices": 1063,
+      "triangles": 2106
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+      "fmaId": "FMA14826",
+      "kind": "artery",
+      "recordSha256": "186d4121a67ff8286f0f1903c9b0e542fc5e34a3d0e41af5ba98437026ec9a33",
+      "vertices": 93,
+      "triangles": 182
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+      "fmaId": "FMA14828",
+      "kind": "artery",
+      "recordSha256": "636e180240414b2703f4b4b9494749b191138903c59fa10d1caa817a3a19810c",
+      "vertices": 251,
+      "triangles": 498
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+      "fmaId": "FMA14829",
+      "kind": "artery",
+      "recordSha256": "582f137a1ec32ca7fc43c3ef0d73a582671751a035a8115f68d9fb8ac5365b2b",
+      "vertices": 243,
+      "triangles": 482
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+      "fmaId": "FMA15391",
+      "kind": "vein",
+      "recordSha256": "129188eea295c251f2c18d39acd8e51f4db24b387ead92c26603bb0efab05d6d",
+      "vertices": 556,
+      "triangles": 1108
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+      "fmaId": "FMA15405",
+      "kind": "vein",
+      "recordSha256": "bc149901276ccdc4f9996100ca059492d893c502ef1c8ff76254567bb172b5a2",
+      "vertices": 108,
+      "triangles": 212
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+      "fmaId": "FMA15406",
+      "kind": "vein",
+      "recordSha256": "459abf3474e445b041e6b720f79fca6ba4da9afe0f9c7cb2fdd0c1cb49175d58",
+      "vertices": 664,
+      "triangles": 1324
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+      "fmaId": "FMA15407",
+      "kind": "vein",
+      "recordSha256": "3555b341973a6efaefa5c85fec64975f0ad176c733d4983bce2b4410f86f0fd5",
+      "vertices": 600,
+      "triangles": 1204
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+      "fmaId": "FMA14782",
+      "kind": "artery",
+      "recordSha256": "29d42585ba276cd0d92864915812bd95226b226c8f0fa2b5b5d3711e42f3908d",
+      "vertices": 229,
+      "triangles": 454
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+      "fmaId": "FMA14784",
+      "kind": "artery",
+      "recordSha256": "cf456ab0cbc533b6a39d2c24cf3791a6138049ac2e47fa3eda7d98fcf9573c8c",
+      "vertices": 199,
+      "triangles": 394
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+      "fmaId": "FMA14787",
+      "kind": "artery",
+      "recordSha256": "273e895e743c15ab6eb18f45be6e6c563dd79746ce2fb4eccef858a3c7c7fffd",
+      "vertices": 667,
+      "triangles": 1330
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+      "fmaId": "FMA14790",
+      "kind": "artery",
+      "recordSha256": "60000cd6a5ae24a2c39927f1380241a8ba6d3d12c8a6a20872da90dcb5f6d1ba",
+      "vertices": 466,
+      "triangles": 928
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+      "fmaId": "FMA14792",
+      "kind": "artery",
+      "recordSha256": "79091772f680c0cb41af9ccd3b5eb7776899e504d4321dbbc3db973967cca1eb",
+      "vertices": 137,
+      "triangles": 270
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+      "fmaId": "FMA14793",
+      "kind": "artery",
+      "recordSha256": "1b1a8bd643a3a98b85fa5053e90b0035ac83ee9370bced66fb2e05547d330405",
+      "vertices": 330,
+      "triangles": 656
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+      "fmaId": "FMA14805",
+      "kind": "artery",
+      "recordSha256": "fd3a32de2e443996a3930e257e9105d529f512159a489987d0be4362b5f20abe",
+      "vertices": 132,
+      "triangles": 260
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+      "fmaId": "FMA15398",
+      "kind": "vein",
+      "recordSha256": "06909f1050fd56b2766d39d1d5f3192dc3d4f065d57879930ba8d58e16a6dd2c",
+      "vertices": 749,
+      "triangles": 1486
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+      "fmaId": "FMA70479",
+      "kind": "artery",
+      "recordSha256": "4127ebde4aade681fbb683554d097a5043a63687c055c5c258258aae84b4838c",
+      "vertices": 180,
+      "triangles": 356
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+      "fmaId": "FMA70480",
+      "kind": "artery",
+      "recordSha256": "7f2edc607e4c45af6dd1e4cc4990fb8dbf02e3f12deaa8db42638532ccdedd58",
+      "vertices": 194,
+      "triangles": 384
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+      "fmaId": "FMA76574",
+      "kind": "artery",
+      "recordSha256": "61ba4c1b3f2f61cbd6c292c37607ea0f8172403da804475637c9a1e312baf0ba",
+      "vertices": 104,
+      "triangles": 204
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+      "fmaId": "FMA4149",
+      "kind": "artery",
+      "recordSha256": "7db7c869c1bf7cb38a180578476e3f9102473fbdd71c0adab653534cbd2f232d",
+      "vertices": 511,
+      "triangles": 1010
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+      "fmaId": "FMA10704",
+      "kind": "artery",
+      "recordSha256": "36d0ecb91e288e0e530ebf1986f8912b5002b3c8576e2432d11807b44ea872bc",
+      "vertices": 575,
+      "triangles": 1142
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+      "fmaId": "FMA68109",
+      "kind": "artery",
+      "recordSha256": "f751847bca28b466abc7d72b368df002b6dd361db10e014f760ea15827776189",
+      "vertices": 674,
+      "triangles": 1340
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
+      "fmaId": "FMA71537",
+      "kind": "artery",
+      "recordSha256": "f970abb37a33f832759e2a9fd5ddfabc9d21ce097bae8f47d1bffe1a217904ee",
+      "vertices": 675,
+      "triangles": 1338
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch",
+      "fmaId": "FMA22835",
+      "kind": "artery",
+      "recordSha256": "d5a7498fefbcbde8208032bf6493fb94b4fa69616c71bb8afd435a981de810b8",
+      "vertices": 1506,
+      "triangles": 3008
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+      "fmaId": "FMA22837",
+      "kind": "artery",
+      "recordSha256": "70003b13ae4484e785429a05d9a1c3c61dc70dc56bf49e97760734728dc9ebf4",
+      "vertices": 1480,
+      "triangles": 2956
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+      "fmaId": "FMA22864",
+      "kind": "artery",
+      "recordSha256": "5d8f56de509b1efc272cb53973c72f56ec19faf5c15dd83eeae563e4897fc742",
+      "vertices": 916,
+      "triangles": 1816
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+      "fmaId": "FMA22865",
+      "kind": "artery",
+      "recordSha256": "7e26bccdfbb8f0aa2b3302bda31cc9ad90da9965e4f3619ad6e8d18f2972ace6",
+      "vertices": 921,
+      "triangles": 1826
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+      "fmaId": "FMA22905",
+      "kind": "artery",
+      "recordSha256": "ce5d800962fbe996593e3b229732af6093d0fc807b0f59c52d46da6022c1eba7",
+      "vertices": 929,
+      "triangles": 1850
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+      "fmaId": "FMA22907",
+      "kind": "artery",
+      "recordSha256": "bae02a155966316529bcbfd4393ea0b7d42518f58db64379f6e3465b401b9acb",
+      "vertices": 933,
+      "triangles": 1858
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
+      "fmaId": "FMA22777",
+      "kind": "artery",
+      "recordSha256": "dc6cd612fb95400b8e5d0d5ab433623858108e20386de0e0051d27dd13027202",
+      "vertices": 738,
+      "triangles": 1468
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
+      "fmaId": "FMA22778",
+      "kind": "artery",
+      "recordSha256": "6abfb911dad7b8b836dba22afada4e9fa6361512c0a9ef4d5a1d51cc325bae06",
+      "vertices": 745,
+      "triangles": 1482
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+      "fmaId": "FMA22856",
+      "kind": "artery",
+      "recordSha256": "23e12f6c8d20ec158323b1979e37ec20bdb09dc3fa6566fc04e797b1cf268474",
+      "vertices": 219,
+      "triangles": 434
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+      "fmaId": "FMA85118",
+      "kind": "artery",
+      "recordSha256": "413ee12a1b182ea74e1c87d67cb3543484123bcb79c68ebc0194e543c8b99dab",
+      "vertices": 224,
+      "triangles": 444
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+      "fmaId": "FMA85119",
+      "kind": "artery",
+      "recordSha256": "2bb96982edc430f5fb2644d5f31c712a01232e395cee571bb16ee01480d0eb29",
+      "vertices": 207,
+      "triangles": 410
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+      "fmaId": "FMA85120",
+      "kind": "artery",
+      "recordSha256": "3d7af6e84370a0f7ac00dda641cb644715c0692348448c4eb6feb1b46c5d5e22",
+      "vertices": 209,
+      "triangles": 414
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery",
+      "fmaId": "FMA85121",
+      "kind": "artery",
+      "recordSha256": "89a86ef6bfdf1c15b3e0ad726aa67fadabb4b713e34f76e2206a583b40e560be",
+      "vertices": 208,
+      "triangles": 412
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+      "fmaId": "FMA85122",
+      "kind": "artery",
+      "recordSha256": "afaa7efbee20fb21a473faf0ac2aea92f065265e470099c228e3b3e04f8fb8d7",
+      "vertices": 205,
+      "triangles": 406
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+      "fmaId": "FMA85123",
+      "kind": "artery",
+      "recordSha256": "efb1c530ef0bb434d0e15de980998b4e02a017b8aa0734b08412cba3ef6528ef",
+      "vertices": 470,
+      "triangles": 936
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+      "fmaId": "FMA85124",
+      "kind": "artery",
+      "recordSha256": "0d1f677f228378cae4b3ee580287179e3ec3735e962273813cc2fff7f96f8828",
+      "vertices": 462,
+      "triangles": 920
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+      "fmaId": "FMA22858",
+      "kind": "artery",
+      "recordSha256": "b48bed7b1370f2fcd9435dc11c9d1ef1863a035ae07bd817c81539423ff250ed",
+      "vertices": 405,
+      "triangles": 806
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+      "fmaId": "FMA22860",
+      "kind": "artery",
+      "recordSha256": "de7a577aca01c8a15258549dd6653b003557f8dce8d1d5120ec7451a7774dc42",
+      "vertices": 406,
+      "triangles": 808
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+      "fmaId": "FMA23050",
+      "kind": "artery",
+      "recordSha256": "f5a1e219e93df60d98146f57fc6739e8fa66ca38c1baa0b2e99bfbd26e6cd838",
+      "vertices": 402,
+      "triangles": 800
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
+      "fmaId": "FMA23051",
+      "kind": "artery",
+      "recordSha256": "ba79954d9de8322b2dc187800feb10580af3a30025b3a7f067f34e815bad69ab",
+      "vertices": 405,
+      "triangles": 806
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+      "fmaId": "FMA23052",
+      "kind": "artery",
+      "recordSha256": "08da11ebba28a11e89e171e3355e9069420bdf8399d5df02f7f55d34be6dbbb7",
+      "vertices": 365,
+      "triangles": 726
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+      "fmaId": "FMA23054",
+      "kind": "artery",
+      "recordSha256": "c83222682b83fbf0a9f0a85dfe7a58c7ebf2801f3f621b7d84ac17cabc3147bb",
+      "vertices": 309,
+      "triangles": 614
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+      "fmaId": "FMA23055",
+      "kind": "artery",
+      "recordSha256": "0acadf6e660021af5f325fcfb137e0bbfa40d661204e66f1c9a85fd21eaf16ce",
+      "vertices": 304,
+      "triangles": 604
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+      "fmaId": "FMA85112",
+      "kind": "artery",
+      "recordSha256": "573fd3924a82886002db8eb7866457c8219800564d363c2cea61de55274921bb",
+      "vertices": 415,
+      "triangles": 826
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+      "fmaId": "FMA85115",
+      "kind": "artery",
+      "recordSha256": "68c58a957fb629b9ba3ed0af2d56bac781874c1753a32f8675decb7a402ef1a7",
+      "vertices": 362,
+      "triangles": 720
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+      "fmaId": "FMA85116",
+      "kind": "artery",
+      "recordSha256": "50812a53e8c6faf3f2cdb400a51477a34dacd68d95fefc2cae204ffa5f59a00b",
+      "vertices": 360,
+      "triangles": 716
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-deep-palmar-venous-arch",
+      "fmaId": "FMA22912",
+      "kind": "vein",
+      "recordSha256": "f2cfe18742f72c946909271fc4f68997094ad4be33ba7e2b4607076d1024554d",
+      "vertices": 973,
+      "triangles": 1942
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-deep-palmar-venous-arch",
+      "fmaId": "FMA22913",
+      "kind": "vein",
+      "recordSha256": "7cdd9f52efbd468c2183dad5acb768ae78b819d7d548fb60ea64975d974e433c",
+      "vertices": 972,
+      "triangles": 1940
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-venous-arch",
+      "fmaId": "FMA22915",
+      "kind": "vein",
+      "recordSha256": "136bc61fec5950aa9c3cef30e54eb56cb0fad1cc7a4fc3003a84c4a85b19f8b5",
+      "vertices": 1219,
+      "triangles": 2434
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-venous-arch",
+      "fmaId": "FMA22916",
+      "kind": "vein",
+      "recordSha256": "aa0f1b671bccba1ccad50cf76f496870f0bfd251f17aafa613f7db85a757f164",
+      "vertices": 1214,
+      "triangles": 2424
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:dorsal-venous-network-of-right-hand",
+      "fmaId": "FMA62506",
+      "kind": "vein",
+      "recordSha256": "91209b909662f804ae6e7c311aa01f5eadd0fadf9fcfa57d46823583b4ef18ba",
+      "vertices": 2167,
+      "triangles": 4330
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:dorsal-venous-network-of-left-hand",
+      "fmaId": "FMA62507",
+      "kind": "vein",
+      "recordSha256": "29f2701e42a35371622f5bb81a0c3138e864f73619f899c1f8761264f96a1c4f",
+      "vertices": 2154,
+      "triangles": 4304
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-vein",
+      "fmaId": "FMA22920",
+      "kind": "vein",
+      "recordSha256": "020b8dceba9b6f6bb2925f65ee78ca5c25d743f768e2dcd4bf753ab9e8489c34",
+      "vertices": 1271,
+      "triangles": 2530
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-vein",
+      "fmaId": "FMA22921",
+      "kind": "vein",
+      "recordSha256": "55fdde1a861c975fd6c8e75275b2b7efcef7aaec1f59a3a4db47dcba877f0f27",
+      "vertices": 1271,
+      "triangles": 2530
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-index-finger",
+      "fmaId": "FMA85096",
+      "kind": "vein",
+      "recordSha256": "b1aac267971a3d1704415c4753be3d2ead29aa7cdce78cd7446381a7213eebc3",
+      "vertices": 701,
+      "triangles": 1394
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-index-finger",
+      "fmaId": "FMA85097",
+      "kind": "vein",
+      "recordSha256": "fdd733526a1cf75415c6564340171cc2f61de8cf024e0b789eb80c7ab7bbdbfa",
+      "vertices": 693,
+      "triangles": 1378
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-middle-finger",
+      "fmaId": "FMA85098",
+      "kind": "vein",
+      "recordSha256": "c4c97eae6af877725a625ed8358e703838dfe8a908312ddce4121abf78f7a956",
+      "vertices": 797,
+      "triangles": 1586
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-middle-finger",
+      "fmaId": "FMA85099",
+      "kind": "vein",
+      "recordSha256": "e9edcaf4ec1e3cc0dd89e6f3830470f4660956d860aaeeb7e779118db40a346b",
+      "vertices": 792,
+      "triangles": 1576
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
+      "fmaId": "FMA85100",
+      "kind": "vein",
+      "recordSha256": "4df6f4ff2532913477d29b5f03d82fa62f2a80f7693eff3add2aefc6b805b056",
+      "vertices": 716,
+      "triangles": 1424
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger",
+      "fmaId": "FMA85101",
+      "kind": "vein",
+      "recordSha256": "a47c6c04ad3790848b2a09bd56e8bc5be5767c03e03a61b75fba530b8559d53e",
+      "vertices": 718,
+      "triangles": 1428
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+      "fmaId": "FMA43943",
+      "kind": "artery",
+      "recordSha256": "7aad1bb5baef030250491a74929b3dc886326c8067f20810d35fb9f9b521a6e3",
+      "vertices": 617,
+      "triangles": 1230
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+      "fmaId": "FMA43944",
+      "kind": "artery",
+      "recordSha256": "cb17bb4837aee285107fce6c7d03470e987199102af57f5693d56b9df52f591b",
+      "vertices": 602,
+      "triangles": 1200
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+      "fmaId": "FMA69514",
+      "kind": "artery",
+      "recordSha256": "e144cb082db34bbc3076bfa0ab6076016844bae75b0e00fb36343b93d09e172d",
+      "vertices": 244,
+      "triangles": 484
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+      "fmaId": "FMA69515",
+      "kind": "artery",
+      "recordSha256": "049f1b1353cf1ca7a9f966bbe28901a808e5b75a6cab783cd5cdfef5a3163302",
+      "vertices": 242,
+      "triangles": 480
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+      "fmaId": "FMA43937",
+      "kind": "artery",
+      "recordSha256": "84f6229d74015d66dafedc0b2c2b9dc1bb543080e3f0e4adff682c63b5fc0fae",
+      "vertices": 451,
+      "triangles": 898
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+      "fmaId": "FMA43938",
+      "kind": "artery",
+      "recordSha256": "e6affff58a74ec7f02c3ec40575d8acc6a0122f86469aa21bd8a8a306e586fec",
+      "vertices": 476,
+      "triangles": 948
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+      "fmaId": "FMA44881",
+      "kind": "vein",
+      "recordSha256": "4a5364c37c37059db17ee9cbe9815f8b91b24f32f0447daa46cddeadcc63c66d",
+      "vertices": 1253,
+      "triangles": 2498
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+      "fmaId": "FMA44882",
+      "kind": "vein",
+      "recordSha256": "6ca7116af7e30ab312ca6e280b176cbc38f07f182a7f2bead704d15031fc346f",
+      "vertices": 1249,
+      "triangles": 2490
+    }
+  ],
+  "bundles": [
+    {
+      "id": "thorax-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-vessels-recovery.glb",
+      "bytes": 1131748,
+      "sha256": "0c82e1cb2960c6f2474f2b4759974adab5871d8074a2f4e3712e1c3a37a48ca7",
+      "structures": 25
+    },
+    {
+      "id": "abdomen-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-recovery.glb",
+      "bytes": 477592,
+      "sha256": "e41d66684de08fd9bd7dfca340acb63cbf7714eb09a3ea9594184f497c509abe",
+      "structures": 14
+    },
+    {
+      "id": "head-neck-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/head-neck-vessels-recovery.glb",
+      "bytes": 608992,
+      "sha256": "800d583a96a6df8fdd2b5fff86c6e719a90e897d6c3c89bbb1a3bd71b0e89cbb",
+      "structures": 16
+    },
+    {
+      "id": "pelvis-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/pelvis-vessels-recovery.glb",
+      "bytes": 122592,
+      "sha256": "e089b9e9d3eac8ec6c1731ddc2ab0972ae0be041d5175cdedc5cc0bfb8eb09ad",
+      "structures": 12
+    },
+    {
+      "id": "shoulder-arm-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-recovery.glb",
+      "bytes": 575076,
+      "sha256": "2630e1f06ada20094814ee1a5245e9d420627a15869c3b6a3c51763be21da84c",
+      "structures": 14
+    },
+    {
+      "id": "forearm-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/forearm-vessels-recovery.glb",
+      "bytes": 2083932,
+      "sha256": "8a9c9b62561c8b952147b91fcf0a9c2a01d6f7fe38737259e4eb8d76ece0904f",
+      "structures": 10
+    },
+    {
+      "id": "hand-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/hand-vessels-recovery.glb",
+      "bytes": 65364,
+      "sha256": "81851762c0aca58931fa8b0cd1c31853558b70578a518896cb97fb8eeae357a0",
+      "structures": 2
+    },
+    {
+      "id": "thigh-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/thigh-vessels-recovery.glb",
+      "bytes": 1415760,
+      "sha256": "5037db3cd7d8d0bf2ac6ae2c4656b50e73c71f5f530595b80cd68153afb6c9f7",
+      "structures": 8
+    },
+    {
+      "id": "leg-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/leg-vessels-recovery.glb",
+      "bytes": 2900368,
+      "sha256": "e2751d62cf20f86ec14865a79bad26e70245443965702d98512541378851e466",
+      "structures": 10
+    },
+    {
+      "id": "foot-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/foot-vessels-recovery.glb",
+      "bytes": 107772,
+      "sha256": "648366ffe116673e7428067e8d7f14739161a220fb94e24d832ba9b9312a94b9",
+      "structures": 6
+    },
+    {
+      "id": "thorax-vessels-inventory",
+      "url": "/models/bodyparts3d/full-body/thorax-vessels-inventory.glb",
+      "bytes": 483532,
+      "sha256": "8071f97ac5b843ab55e8bf019918947ab9c363b1e1901faebefa619e5345fe6f",
+      "structures": 9
+    },
+    {
+      "id": "shoulder-arm-vessels-inventory",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb",
+      "bytes": 616356,
+      "sha256": "d12d81529a1408f934b5055462bb39f0f79c84e25c878a25225652b9baac3e84",
+      "structures": 20
+    },
+    {
+      "id": "abdomen-vessels-mesenteric",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-mesenteric.glb",
+      "bytes": 226020,
+      "sha256": "d26bb01909128f5cd8a56fb410967a688801a22652305bb2656e04d3e7df2680",
+      "structures": 14
+    },
+    {
+      "id": "abdomen-vessels-visceral-detail",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-visceral-detail.glb",
+      "bytes": 133144,
+      "sha256": "be90ec41dc6046b820b337d986b6a67792a33ba33216db8aecb068fed4b85173",
+      "structures": 11
+    },
+    {
+      "id": "thorax-vessels-thoracic-detail",
+      "url": "/models/bodyparts3d/full-body/thorax-vessels-thoracic-detail.glb",
+      "bytes": 91700,
+      "sha256": "bd86da53fb00401a01db7e321ca14b0bfec784b53a496a22dc5e6338db3d0044",
+      "structures": 4
+    },
+    {
+      "id": "hand-vessels-hand-vascular",
+      "url": "/models/bodyparts3d/full-body/hand-vessels-hand-vascular.glb",
+      "bytes": 534016,
+      "sha256": "3b2f158e1c345f4abc5c66cfcf7fb916bd4117de80b767919a1c594baf028391",
+      "structures": 26
+    },
+    {
+      "id": "hand-vessels-hand-venous",
+      "url": "/models/bodyparts3d/full-body/hand-vessels-hand-venous.glb",
+      "bytes": 577748,
+      "sha256": "3fd81ec284853b9e7eae84b3a4282ba0e5713160f07b1b5d6d8a70f8bb7d502e",
+      "structures": 14
+    },
+    {
+      "id": "foot-vessels-foot-vascular",
+      "url": "/models/bodyparts3d/full-body/foot-vessels-foot-vascular.glb",
+      "bytes": 192916,
+      "sha256": "9e6d01cc92726aa2db728febcf52e0adfa0e6b9db9f58705f49b0653c8311881",
+      "structures": 8
+    }
+  ],
+  "crossTypePairs": 10362,
+  "oppositeSidePairs": 3378,
+  "boundsPruned": 6983,
+  "comparisons": [
+    {
+      "a": "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+      "b": "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+      "fmaA": "FMA14811",
+      "fmaB": "FMA15407",
+      "nameA": "right colic artery",
+      "nameB": "right colic vein",
+      "diagnosticTranslationMm": [
+        -1.8074044957756996,
+        4.667001962661743,
+        -0.13296008110046387
+      ],
+      "aToAlignedB": {
+        "samples": 125,
+        "withinTenthMm": 13,
+        "medianMm": 0.5593123479820578,
+        "maxMm": 1.148696526723218
+      },
+      "alignedBToA": {
+        "samples": 120,
+        "withinTenthMm": 18,
+        "medianMm": 0.5203686781638015,
+        "maxMm": 1.058845231474246
+      },
+      "similar": false
+    }
+  ],
+  "controls": {
+    "translated": {
+      "diagnosticTranslationMm": [
+        12,
+        -5,
+        8
+      ],
+      "aToAlignedB": {
+        "samples": 100,
+        "withinTenthMm": 100,
+        "medianMm": 0,
+        "maxMm": 0
+      },
+      "alignedBToA": {
+        "samples": 100,
+        "withinTenthMm": 100,
+        "medianMm": 0,
+        "maxMm": 0
+      },
+      "similar": true
+    },
+    "scaled": {
+      "diagnosticTranslationMm": [
+        2.7651027776300907,
+        -30.512624979019165,
+        314.49500918388367
+      ],
+      "aToAlignedB": {
+        "samples": 100,
+        "withinTenthMm": 0,
+        "medianMm": 3.274022071685955,
+        "maxMm": 6.225415520663359
+      },
+      "alignedBToA": {
+        "samples": 100,
+        "withinTenthMm": 0,
+        "medianMm": 4.911030855648277,
+        "maxMm": 7.472829662254085
+      },
+      "similar": false
+    }
+  },
+  "heldControls": [
+    {
+      "arteryId": "FMA43943",
+      "heldId": "FMA44883",
+      "source": {
+        "file": "FJ2129",
+        "sha256": "92481625802756875b17b8323c78f3c058a58b9f02832de79afe13fe3f439a04"
+      },
+      "diagnosticTranslationMm": [
+        0.009197725296019144,
+        0.014498462677067891,
+        -4.216130853271487
+      ],
+      "aToAlignedB": {
+        "samples": 124,
+        "withinTenthMm": 124,
+        "medianMm": 0.013907095461781406,
+        "maxMm": 0.06354251441005786
+      },
+      "alignedBToA": {
+        "samples": 125,
+        "withinTenthMm": 125,
+        "medianMm": 0.014399288214341902,
+        "maxMm": 0.05253589123679469
+      },
+      "similar": true,
+      "admitted": false
+    },
+    {
+      "arteryId": "FMA43944",
+      "heldId": "FMA44884",
+      "source": {
+        "file": "FJ2128",
+        "sha256": "1dceba6badac3114601ce3d453b86b8e7810aea85f146feb8675741bce930fc2"
+      },
+      "diagnosticTranslationMm": [
+        0.007347498512274342,
+        -0.0040029325484738365,
+        -4.216473745727541
+      ],
+      "aToAlignedB": {
+        "samples": 121,
+        "withinTenthMm": 121,
+        "medianMm": 0.012759757256901993,
+        "maxMm": 0.07652190123209039
+      },
+      "alignedBToA": {
+        "samples": 121,
+        "withinTenthMm": 121,
+        "medianMm": 0.014082743118841288,
+        "maxMm": 0.05011202490317258
+      },
+      "similar": true,
+      "admitted": false
+    }
+  ],
+  "sourceGeometryChanged": false,
+  "admissionsChanged": false,
+  "clinicalValidation": false,
+  "limitations": "Screening of the current 223 rendered vascular identities only. Different artery/vein types, excluding opposite explicit sides; extent-only pruning, with no triangle-count exclusion; translation-only bounding-centre alignment in source mm and at most 128 deterministic samples per direction to every comparison triangle, with degenerate-face fallback. No scale, rotation, reflection or topology equivalence test. Similarity is a source-review signal, not evidence of copying, wrong anatomy, vascular correspondence or patient registration. No sampled match is clinical validation, and no flag automatically removes or admits tissue."
+}

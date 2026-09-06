@@ -2,6 +2,8 @@
 
 This project is designed for commercial use without per-user licence fees. Third-party software remains under its original licence.
 
+The loading-resilience and bounded vessel-shape-screen milestone adds no third-party runtime package, font, texture or model. Derived diagnostic evidence in `content/vessel-shape-audit.json` retains BodyParts3D CC BY 4.0 obligations, including DBCLS attribution; it is not relicensed as MIT/CC0. All model geometry and existing source holds are unchanged. See `../docs/VESSEL_SHAPE_AUDIT.md`.
+
 The 36-source inventory extension and four exact official v4 index tables remain under the BodyParts3D CC BY 4.0 grant, including its DBCLS attribution and indication-of-change obligations. The derived source inventory does not convert source data to MIT. See `BODYPARTS3D_FULL_BODY.md` and `../docs/SOURCE_INVENTORY.md`. No paid service or new runtime dependency was introduced.
 
 ## Visible Medicine brand assets

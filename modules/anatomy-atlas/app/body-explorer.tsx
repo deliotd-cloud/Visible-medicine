@@ -80,6 +80,7 @@ import {
   initialPractice,
   practiceScore,
   practicePool,
+  practiceCanStart,
   practiceRenderIds,
   missedPracticeIds,
   type PracticeMode,
@@ -98,6 +99,12 @@ import {
 import { relatedStudyViews } from '@/lib/study-navigation';
 import type { StudyCamera, StudyView } from '@/lib/study-views';
 import { anatomyRetryPlan } from '@/lib/anatomy-load-retry';
+import {
+  anatomyLoadReducer,
+  initialAnatomyLoads,
+  anatomyLoadSummary,
+  requestedAnatomyBundles,
+} from '@/lib/anatomy-load-state';
 import type { BodyLayout } from '@/lib/body-arrangement';
 import {
   bodySystemPresets,
@@ -186,8 +193,10 @@ export default function BodyExplorer({
   const [view, setView] = useState<DissectionView>(profile.stages[0].view),
     [zoom, setZoom] = useState(1),
     [reset, setReset] = useState(0);
-  const [loaded, setLoaded] = useState<string[]>([]),
-    [failed, setFailed] = useState<string[]>([]);
+  const [{ loaded, failed }, loadDispatch] = useReducer(
+    anatomyLoadReducer,
+    initialAnatomyLoads,
+  );
   const [practice, practiceDispatch] = useReducer(
     practiceReducer,
     initialPractice,
@@ -338,33 +347,39 @@ export default function BodyExplorer({
     : [];
   const practiceEligible = practicePool(
     available,
-    loaded,
+    anatomyLoadSummary(loaded, loaded, failed).loaded,
     practiceSampling === 'focus' ? focusTargetIds : undefined,
   );
-  const practiceReady =
-    practiceEligible.length >= (practiceMode === 'name' ? 2 : 1);
+  const practiceReady = practiceCanStart(practiceEligible, practiceMode);
+  const practiceLoadStatus = anatomyLoadSummary(
+    available.map((s) => s.bundle),
+    loaded,
+    failed,
+  );
+  const practiceBlocked =
+    practiceLoadStatus.pending.length > 0 || !practiceReady;
   const retryIds = missedPracticeIds(practiceResult ?? []).filter((id) =>
     practiceEligible.some((s) => s.id === id),
   );
-  const required = [
-      ...new Set(
-        (ghostRemoved && !exam
-          ? regionStructures.filter((s) => systems[s.system])
-          : available
-        ).map((s) => s.bundle),
-      ),
-    ],
-    pending = required.filter(
-      (id) => !loaded.includes(id) && !failed.includes(id),
-    );
+  const sceneStructures = exam
+    ? regionStructures.filter((s) => practiceRenderIds(practice).includes(s.id))
+    : regionStructures;
+  const required = requestedAnatomyBundles(
+    sceneStructures,
+    systems,
+    hiddenIds,
+    ghostRemoved && !exam,
+  );
+  const loadStatus = anatomyLoadSummary(required, loaded, failed);
+  const pending = loadStatus.pending;
+  const practicePaused =
+    exam && (pending.length > 0 || loadStatus.failed.length > 0);
   const onLoaded = useCallback(
-    (id: string) =>
-      setLoaded((prev) => (prev.includes(id) ? prev : [...prev, id])),
+    (id: string) => loadDispatch({ type: 'loaded', id }),
     [],
   );
   const onFailure = useCallback(
-    (id: string) =>
-      setFailed((prev) => (prev.includes(id) ? prev : [...prev, id])),
+    (id: string) => loadDispatch({ type: 'failed', id }),
     [],
   );
   async function retryAnatomy() {
@@ -377,8 +392,7 @@ export default function BodyExplorer({
       const { retryBodyAssets } = await import('./body-scene');
       retryBodyAssets(plan.map((b) => b.url));
       const ids = new Set(plan.map((b) => b.id));
-      setFailed((old) => old.filter((id) => !ids.has(id)));
-      setLoaded((old) => old.filter((id) => !ids.has(id)));
+      loadDispatch({ type: 'retry', ids: [...ids] });
       setRetries((old) => {
         const next = { ...old };
         for (const id of ids) next[id] = (next[id] ?? 0) + 1;
@@ -508,6 +522,7 @@ export default function BodyExplorer({
     } else select(id);
   }
   function submitPractice(chosen: string | null) {
+    if (practicePaused) return;
     practiceDispatch({
       type: 'answer',
       sessionId: practice.id,
@@ -538,14 +553,19 @@ export default function BodyExplorer({
     setReset((n) => n + 1);
   }
   function startExam(retry = false) {
-    const session = createPracticeSession(available, loaded, {
-      id: ++practiceSerial.current,
-      mode: practiceMode,
-      count: retry ? retryIds.length : practiceCount,
-      sampling: practiceSampling,
-      focusIds: focusTargetIds,
-      retryIds: retry ? retryIds : undefined,
-    });
+    if (exam || practiceBlocked || (retry && !retryIds.length)) return;
+    const session = createPracticeSession(
+      available,
+      practiceLoadStatus.loaded,
+      {
+        id: ++practiceSerial.current,
+        mode: practiceMode,
+        count: retry ? retryIds.length : practiceCount,
+        sampling: practiceSampling,
+        focusIds: focusTargetIds,
+        retryIds: retry ? retryIds : undefined,
+      },
+    );
     if (!session) return;
     if (layout === 'tray') setPlate(false);
     setLayout('spatial');
@@ -558,6 +578,7 @@ export default function BodyExplorer({
     setReset((n) => n + 1);
   }
   function nextQuestion() {
+    if (practicePaused) return;
     practiceDispatch({ type: 'next', sessionId: practice.id, index: question });
     if (practice.mode === 'name') {
       setZoom(1);
@@ -773,7 +794,7 @@ export default function BodyExplorer({
             onClick={() =>
               exam ? practiceDispatch({ type: 'exit' }) : startExam()
             }
-            disabled={!exam && (pending.length > 0 || !practiceReady)}
+            disabled={!exam && practiceBlocked}
           >
             <GraduationCap />
             {exam ? 'Exit practice' : 'Start practice'}
@@ -1037,13 +1058,7 @@ export default function BodyExplorer({
             </div>
             <Scene
               catalog={catalog}
-              structures={
-                exam
-                  ? regionStructures.filter((s) =>
-                      practiceRenderIds(practice).includes(s.id),
-                    )
-                  : regionStructures
-              }
+              structures={sceneStructures}
               selectedId={selectedId}
               systems={systems}
               isolated={isolated && !exam}
@@ -1072,11 +1087,14 @@ export default function BodyExplorer({
             />
             {pending.length > 0 && (
               <output className="body-loading">
-                Loading anatomy · {required.length - pending.length}/
-                {required.length} groups
+                Loading anatomy · {loadStatus.loaded.length}/{required.length}{' '}
+                groups ready
+                {loadStatus.failed.length > 0
+                  ? ` · ${loadStatus.failed.length} unavailable`
+                  : ''}
               </output>
             )}
-            {required.some((id) => failed.includes(id)) && (
+            {loadStatus.failed.length > 0 && (
               <div className="body-loading error" role="alert">
                 <p>
                   Some anatomy could not load. Your dissection settings are
@@ -1300,6 +1318,14 @@ export default function BodyExplorer({
                   ? 'Rotate the isolated structure and choose its name. You can use the keyboard to move between answer buttons.'
                   : 'Find the named structure on the model. Labels and selection hints are hidden.'}
               </p>
+              {practicePaused && (
+                <output aria-live="polite" className="vm-practice-note">
+                  {loadStatus.failed.length
+                    ? 'Practice paused: required anatomy is unavailable. Use Retry missing anatomy or exit practice.'
+                    : 'Practice paused while the required anatomy loads.'}{' '}
+                  Your answers are retained.
+                </output>
+              )}
               {answered ? (
                 <div
                   className={`body-answer ${answer === target?.id ? 'correct' : ''}`}
@@ -1322,7 +1348,7 @@ export default function BodyExplorer({
                       Correct answer: <strong>{target?.name}</strong>.
                     </p>
                   )}
-                  <Button onClick={nextQuestion}>
+                  <Button onClick={nextQuestion} disabled={practicePaused}>
                     {question + 1 === examTargets.length
                       ? 'Finish practice'
                       : 'Next structure'}
@@ -1332,12 +1358,16 @@ export default function BodyExplorer({
               ) : (
                 <>
                   {practice.mode === 'name' ? (
-                    <fieldset className="vm-practice-choices">
+                    <fieldset
+                      className="vm-practice-choices"
+                      disabled={practicePaused}
+                    >
                       <legend>Choose the anatomical name</legend>
                       {practice.questions[question].choices.map((id) => (
                         <Button
                           key={`${practice.id}-${question}-${id}`}
                           variant="outline"
+                          disabled={practicePaused}
                           onClick={() => submitPractice(id)}
                         >
                           {catalog.structures.find((s) => s.id === id)?.name}
@@ -1355,6 +1385,7 @@ export default function BodyExplorer({
                   <Button
                     size="sm"
                     variant="ghost"
+                    disabled={practicePaused}
                     onClick={() => submitPractice(null)}
                   >
                     Skip & reveal
@@ -1416,11 +1447,7 @@ export default function BodyExplorer({
                         size="sm"
                         variant="outline"
                         onClick={() => startExam(true)}
-                        disabled={
-                          !practiceReady ||
-                          retryIds.length === 0 ||
-                          pending.length > 0
-                        }
+                        disabled={practiceBlocked || retryIds.length === 0}
                       >
                         Retry missed ({retryIds.length} available)
                       </Button>
@@ -1508,7 +1535,7 @@ export default function BodyExplorer({
                 <Button
                   variant="outline"
                   onClick={() => startExam()}
-                  disabled={!practiceReady || pending.length > 0}
+                  disabled={practiceBlocked}
                 >
                   Start {Math.min(practiceCount, practiceEligible.length)}{' '}
                   questions
@@ -1679,7 +1706,7 @@ export default function BodyExplorer({
                           {value === 'quiz' && (
                             <Button
                               onClick={() => startExam()}
-                              disabled={!practiceReady || pending.length > 0}
+                              disabled={practiceBlocked}
                             >
                               <GraduationCap />
                               Start identification practice
