@@ -63,6 +63,11 @@ import { DissectionControls, DissectionGuide } from './dissection-controls';
 import './body-explorer.css';
 import { Brand } from './brand';
 import { ReviewStatus } from './review-status';
+import { InspectionControls } from './inspection-controls';
+import { initialInspection } from '@/lib/inspection-state';
+import { practiceTargets } from '@/lib/anatomy-practice';
+
+type PracticeResponse = { target: string; chosen: string };
 
 const Scene = dynamic(() => import('./body-scene').then((m) => m.BodyScene), {
   ssr: false,
@@ -121,6 +126,8 @@ export default function BodyExplorer({
     [labels, setLabels] = useState(true);
   const [anchorSkeleton, setAnchorSkeleton] = useState(false);
   const [showOrigins, setShowOrigins] = useState(false);
+  const [inspection, setInspection] = useState(initialInspection);
+  const [plate, setPlate] = useState(false);
   const [view, setView] = useState<DissectionView>(profile.stages[0].view),
     [zoom, setZoom] = useState(1),
     [reset, setReset] = useState(0);
@@ -131,6 +138,11 @@ export default function BodyExplorer({
     [question, setQuestion] = useState(0),
     [answer, setAnswer] = useState<string | null>(null),
     [score, setScore] = useState(0);
+  const [practiceCount, setPracticeCount] = useState(5);
+  const [responses, setResponses] = useState<PracticeResponse[]>([]);
+  const [practiceResult, setPracticeResult] = useState<
+    PracticeResponse[] | null
+  >(null);
   useEffect(() => {
     const controller = new AbortController();
     fetch('/models/bodyparts3d/full-body/catalog.json', {
@@ -239,6 +251,7 @@ export default function BodyExplorer({
     [regionStructures, hiddenIds],
   );
   function changeStage(id: string) {
+    setInspection(initialInspection);
     dispatch(id === 'free' ? { type: 'free' } : { type: 'stage', id });
     setSystems(allBodySystems);
     setSelectedId(null);
@@ -252,6 +265,7 @@ export default function BodyExplorer({
     setReset((n) => n + 1);
   }
   function changeFocus(id: string) {
+    setInspection(initialInspection);
     dispatch({ type: 'focus', id });
     setSystems(allBodySystems);
     setSelectedId(null);
@@ -278,11 +292,16 @@ export default function BodyExplorer({
     if (exam) {
       if (!answer) {
         setAnswer(id);
+        setResponses((previous) => [
+          ...previous,
+          { target: examTargets[question], chosen: id },
+        ]);
         if (id === examTargets[question]) setScore((v) => v + 1);
       }
     } else select(id);
   }
   function preset(system: BodySystem) {
+    setInspection(initialInspection);
     dispatch({ type: 'free' });
     setSystems({
       skeleton: system === 'skeleton',
@@ -297,23 +316,14 @@ export default function BodyExplorer({
     setFocus(false);
   }
   function startExam() {
-    // Largest currently visible objects are practical canvas targets; do not ask for hidden nerves.
-    const candidates = available
-      .filter((s) => loaded.includes(s.bundle))
-      .sort((a, b) => {
-        const volume = (s: BodyStructure) =>
-          s.bounds.max.reduce(
-            (v, n, i) => v * Math.max(0.01, n - s.bounds.min[i]),
-            1,
-          );
-        return volume(b) - volume(a);
-      })
-      .slice(0, 5);
+    const candidates = practiceTargets(available, loaded, practiceCount);
     if (!candidates.length) return;
     setExamTargets(candidates.map((s) => s.id));
     setQuestion(0);
     setAnswer(null);
     setScore(0);
+    setResponses([]);
+    setPracticeResult(null);
     setExam(true);
     setSelectedId(null);
     setIsolated(false);
@@ -323,12 +333,15 @@ export default function BodyExplorer({
   function nextQuestion() {
     if (question + 1 === examTargets.length) {
       setExam(false);
+      setPracticeResult(responses);
       return;
     }
     setQuestion((n) => n + 1);
     setAnswer(null);
   }
   function resetView() {
+    setInspection(initialInspection);
+    setPlate(false);
     setZoom(1);
     setFocus(false);
     setIsolated(false);
@@ -441,14 +454,31 @@ export default function BodyExplorer({
           Anatomy <ChevronRight />
           <strong>{title}</strong>
         </div>
-        <Button
-          variant="outline"
-          onClick={() => (exam ? setExam(false) : startExam())}
-          disabled={!exam && (pending.length > 0 || available.length === 0)}
-        >
-          <GraduationCap />
-          {exam ? 'Exit practice' : 'Identify structures'}
-        </Button>
+        <div className="vm-practice-start">
+          <Select
+            value={String(practiceCount)}
+            onValueChange={(value) => value && setPracticeCount(Number(value))}
+          >
+            <SelectTrigger disabled={exam} aria-label="Practice session length">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              {[5, 10, 20].map((n) => (
+                <SelectItem key={n} value={String(n)}>
+                  {n} questions
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <Button
+            variant="outline"
+            onClick={() => (exam ? setExam(false) : startExam())}
+            disabled={!exam && (pending.length > 0 || available.length === 0)}
+          >
+            <GraduationCap />
+            {exam ? 'Exit practice' : 'Identify structures'}
+          </Button>
+        </div>
       </header>
       <div className="body-layout">
         <aside className="body-rail">
@@ -572,6 +602,19 @@ export default function BodyExplorer({
             visibleCount={available.length}
             disabled={exam}
           />
+          <InspectionControls
+            value={inspection}
+            onChange={setInspection}
+            systems={systemKeys.map((id) => ({
+              id,
+              name: bodySystems[id].name,
+              enabled:
+                systems[id] && regionStructures.some((s) => s.system === id),
+            }))}
+            plate={plate}
+            onPlate={setPlate}
+            disabled={exam}
+          />
           <div className="body-canvas illustration-mode">
             <div className="body-view-row">
               <fieldset className="body-view-buttons">
@@ -607,6 +650,8 @@ export default function BodyExplorer({
                 onValueChange={(value) => {
                   if (value) {
                     setSide(value);
+                    setInspection(initialInspection);
+                    setPracticeResult(null);
                     setSelectedId(null);
                     setFocus(false);
                   }
@@ -649,6 +694,8 @@ export default function BodyExplorer({
               reset={reset}
               focus={focus}
               exam={exam}
+              inspection={exam ? initialInspection : inspection}
+              plate={plate && !exam}
               onSelect={onSceneSelect}
               onLoaded={onLoaded}
               onFailure={onFailure}
@@ -753,7 +800,11 @@ export default function BodyExplorer({
             <div className="body-canvas-caption">
               {explode > 0
                 ? 'Exploded teaching view · Positions are not anatomical'
-                : 'Drag to rotate · Pinch to zoom · Select any visible structure'}
+                : !exam && inspection.plane !== 'off'
+                  ? `${inspection.plane} surface cutaway · ${inspection.position}% · Not CT/MRI`
+                  : plate && !exam
+                    ? 'Orthographic illustration · Choose a direction · Use + / − to zoom'
+                    : 'Drag to rotate · Pinch to zoom · Select any visible structure'}
             </div>
             <a
               className="model-credit"
@@ -846,6 +897,11 @@ export default function BodyExplorer({
                     You selected{' '}
                     {catalog.structures.find((s) => s.id === answer)?.name}.
                   </p>
+                  {answer !== target?.id && (
+                    <p>
+                      Correct answer: <strong>{target?.name}</strong>.
+                    </p>
+                  )}
                   <Button onClick={nextQuestion}>
                     {question + 1 === examTargets.length
                       ? 'Finish practice'
@@ -874,6 +930,47 @@ export default function BodyExplorer({
             </>
           ) : (
             <>
+              {practiceResult && (
+                <section
+                  className="vm-practice-result"
+                  aria-label="Completed practice results"
+                >
+                  <h2>Practice complete</h2>
+                  <p>
+                    {practiceResult.filter((r) => r.target === r.chosen).length}{' '}
+                    / {practiceResult.length} correct. Select a structure below
+                    to study it.
+                  </p>
+                  <ul>
+                    {practiceResult.map((r) => (
+                      <li key={r.target}>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            select(r.target);
+                            setInspection(initialInspection);
+                            setFocus(true);
+                            setZoom(1);
+                          }}
+                        >
+                          {r.target === r.chosen ? '✓' : 'Review'} ·{' '}
+                          {
+                            catalog.structures.find((s) => s.id === r.target)
+                              ?.name
+                          }
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    onClick={() => setPracticeResult(null)}
+                  >
+                    Dismiss results
+                  </Button>
+                </section>
+              )}
               {selected ? (
                 <details className="dissection-guide-fold">
                   <summary>
@@ -916,6 +1013,24 @@ export default function BodyExplorer({
                   <h2>{selected.name}</h2>
                   <ReviewStatus structureId={selected.id} />
                   <div className="body-selection-actions">
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={() => {
+                        setInspection((current) => ({
+                          ...current,
+                          plane: 'off',
+                          opacity: {
+                            ...current.opacity,
+                            [selected.system]: 100,
+                          },
+                        }));
+                        setFocus(true);
+                        setZoom(1);
+                      }}
+                    >
+                      Reveal uncut
+                    </Button>
                     <Button
                       size="sm"
                       variant="outline"

@@ -13,6 +13,8 @@ import {
 } from './body-types';
 import { AnatomyTissue } from './anatomy-tissue';
 import type { DissectionView } from './dissection-data';
+import { sectionPlanes, pointRetained } from '@/lib/inspection-geometry';
+import { systemOpacity, type InspectionState } from '@/lib/inspection-state';
 
 type Props = {
   catalog: BodyCatalog;
@@ -33,6 +35,8 @@ type Props = {
   reset: number;
   focus: boolean;
   exam: boolean;
+  inspection: InspectionState;
+  plate: boolean;
   onSelect: (id: string) => void;
   onLoaded: (id: string) => void;
   onFailure: (id: string) => void;
@@ -67,12 +71,14 @@ function Bundle({
   props,
   center,
   radius,
+  frame,
 }: {
   bundle: BodyCatalog['bundles'][number];
   items: BodyStructure[];
   props: Props;
   center: THREE.Vector3;
   radius: number;
+  frame: THREE.Box3;
 }) {
   const { scene } = useGLTF(bundle.url);
   const onLoaded = props.onLoaded;
@@ -98,6 +104,12 @@ function Bundle({
         );
         const removed = props.hiddenIds.includes(structure.id),
           faded = removed || (props.isolated && !selected);
+        const clippingPlanes = sectionPlanes(frame, props.inspection, position);
+        const opacity = systemOpacity(
+          props.inspection,
+          structure.system,
+          selected,
+        );
         const select = (e: ThreeEvent<MouseEvent>) => {
           if (removed) return;
           e.stopPropagation();
@@ -126,6 +138,7 @@ function Bundle({
                     transparent
                     opacity={0.025}
                     depthWrite={false}
+                    clippingPlanes={sectionPlanes(frame, props.inspection)}
                   />
                 </mesh>
               )}
@@ -149,11 +162,18 @@ function Bundle({
                   muscle={structure.system === 'muscles'}
                   illustrated={props.illustrated}
                   outline={props.structures.length < 150 || selected}
+                  opacity={opacity}
+                  clippingPlanes={clippingPlanes}
                 />
               </group>
               {props.labels &&
                 !props.exam &&
                 !faded &&
+                opacity >= 0.2 &&
+                pointRetained(
+                  new THREE.Vector3(...structure.anchor).add(position),
+                  clippingPlanes,
+                ) &&
                 (selected || labelIndex >= 0) && (
                   <group>
                     <Line
@@ -261,10 +281,12 @@ export function BodyScene(props: Props) {
   return (
     <Canvas
       className="body-scene"
+      key={props.plate ? 'plate' : 'perspective'}
+      orthographic={props.plate}
       camera={{ position: [0, 0, 28], fov: 38, near: 0.01, far: 150 }}
       dpr={[1, 1.6]}
       frameloop="demand"
-      gl={{ antialias: true, alpha: true }}
+      gl={{ antialias: true, alpha: true, localClippingEnabled: true }}
     >
       <ambientLight intensity={1.4} />
       <hemisphereLight args={['#fffef8', '#a38b70', 1.1]} />
@@ -283,13 +305,18 @@ export function BodyScene(props: Props) {
               props={props}
               center={center}
               radius={radius}
+              frame={frame}
             />
           </Suspense>
         </AssetBoundary>
       ))}
       <FittedCamera
         bounds={bounds}
-        direction={vectors[props.view]}
+        direction={
+          props.plate && !['inferior', 'superior'].includes(props.view)
+            ? [vectors[props.view][0], 0, vectors[props.view][2]]
+            : vectors[props.view]
+        }
         up={
           props.view === 'superior'
             ? [0, 0, -1]
@@ -300,6 +327,7 @@ export function BodyScene(props: Props) {
         viewKey={props.view}
         zoom={props.zoom}
         reset={props.reset}
+        locked={props.plate}
       />
     </Canvas>
   );

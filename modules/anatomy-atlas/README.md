@@ -1,5 +1,9 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Deep inspection milestone
+
+**Inspect deeper** now provides axial/coronal/sagittal surface cutaways, adjustable tissue opacity, click-through faint tissues and a selected-structure visibility override in the shoulder, whole body and every region. Cuts stay attached to structures during explode. Orthographic illustration mode extends to the regional/whole-body viewers, and identification practice offers varied 5/10/20-question sessions with results and re-study links. See [deep inspection](docs/DEEP_INSPECTION.md) for controls, implementation, test evidence and remaining QA. These are exterior-surface cutaways, **not CT/MRI or reconstructed tissue interiors**. This milestone preserves all source geometry and does not increase anatomical coverage or confer clinical approval.
+
 ## Branded dissection milestone
 
 The approved Visible Medicine palette and exact **by Elivion** lockups are applied across the shoulder, regional and whole-body explorer. See `docs/BRAND_ALIGNMENT.md` for sources and brand-asset rights. The step-by-step programme, acceptance gates and external review requirements are in `docs/DELIVERY_PLAN.md`.
@@ -55,6 +59,8 @@ node scripts/validate-anatomy.mjs
 node scripts/validate-full-body.mjs
 node scripts/validate-dissection.mjs
 node scripts/validate-explode.mjs
+npm run inspection:test
+npm run reviews:test
 node scripts/validate-recovery.mjs
 node scripts/validate-gaps.mjs
 node scripts/review-explode.mjs

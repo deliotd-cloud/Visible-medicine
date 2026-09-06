@@ -26,6 +26,12 @@ The subsequent review-workspace milestone replaces the status-only foundation fo
 
 ## How to carry out the clinical/source-dependent work
 
+### Additional completed software milestone — deep inspection
+
+The shoulder, all regional viewers and whole body now share three-plane surface cutaways, tissue transparency, clipped-surface picking and selection recovery. Regional orthographic illustration and 5/10/20-question identification sessions extend the existing interaction model. [Deep inspection](DEEP_INSPECTION.md) records 984,199 automated assertions and the remaining new-control visual/device checks. Source geometry and coverage are unchanged. This advances the software under steps 2–4; it does **not** complete clinical/source-dependent steps 6–8 or main-website integration.
+
+### Clinical/source sequence
+
 1. For each missing structure, record its stable ID, side, parent region, relationships and required level of detail. Distinguish a whole structure from its component surfaces.
 2. Accept only evidence-backed commercial reuse rights and archive the exact licence, creator, source URL, file hash and adaptation notes. Being viewable online does not grant permission to copy, trace or train on a diagram.
 3. Preserve source coordinates. Evaluate new meshes against registered bones and attachment landmarks; reject visually plausible geometry that fails correspondence. Do not mix source body versions using a guessed translation.

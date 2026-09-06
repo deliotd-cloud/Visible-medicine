@@ -1,6 +1,13 @@
 'use client';
-import { useEffect, useMemo } from 'react';
+import { useEffect, useLayoutEffect, useMemo } from 'react';
+import { useThree } from '@react-three/fiber';
 import * as THREE from 'three';
+import {
+  applyMaterialInspection,
+  clippedMeshRaycast,
+} from '@/lib/inspection-geometry';
+
+const noPlanes: THREE.Plane[] = [];
 
 /** Authored diagrammatic surface treatment. Hatching is NOT muscle-fibre data. */
 export function AnatomyTissue({
@@ -11,6 +18,8 @@ export function AnatomyTissue({
   muscle,
   illustrated,
   outline,
+  opacity = 1,
+  clippingPlanes = noPlanes,
 }: {
   geometry: THREE.BufferGeometry;
   color: string;
@@ -19,7 +28,10 @@ export function AnatomyTissue({
   muscle: boolean;
   illustrated: boolean;
   outline: boolean;
+  opacity?: number;
+  clippingPlanes?: THREE.Plane[];
 }) {
+  const invalidate = useThree((s) => s.invalidate);
   const { material, contour } = useMemo(() => {
     geometry.computeBoundingBox();
     const size = geometry.boundingBox!.getSize(new THREE.Vector3()),
@@ -97,14 +109,19 @@ export function AnatomyTissue({
     },
     [material, contour],
   );
+  useLayoutEffect(() => {
+    applyMaterialInspection(material, clippingPlanes, ghost ? 0.055 : opacity);
+    applyMaterialInspection(contour, clippingPlanes, 1);
+    invalidate();
+  }, [material, contour, clippingPlanes, opacity, ghost, invalidate]);
   return (
     <>
       <mesh
         geometry={geometry}
         material={material}
-        raycast={ghost ? () => null : undefined}
+        raycast={ghost ? () => null : clippedMeshRaycast}
       />
-      {illustrated && outline && !ghost && (
+      {illustrated && outline && !ghost && opacity >= 0.95 && (
         <mesh geometry={geometry} material={contour} raycast={() => null} />
       )}
     </>

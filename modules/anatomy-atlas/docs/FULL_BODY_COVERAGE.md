@@ -29,7 +29,7 @@ These discrepancies are flags for expert review, not proof of a source error: mi
 
 The shoulder's existing teaching records are reused when the source identity matches. New entries provide source identity and geometry provenance; 17 organ entries and brain have short original function notes. Detailed new origin/insertion, innervation, imaging, pathology and procedural descriptions are marked pending where they are not authored. Nothing is marked clinically validated.
 
-Identification practice selects up to five large, loaded structures from the current scope. Other anatomy is removed for the exercise to expose the candidate surfaces. Labels and selection highlighting are disabled. The named prompt is intentionally visible; this is formative anatomical identification, not a high-stakes examination or validated assessment.
+Identification practice offers 5, 10 or 20 questions (limited by loaded structures), shuffled from up to three times that number of the largest landmarks in the current visible scope. Other anatomy is removed for the exercise to expose candidate surfaces. Labels, selection highlighting, cutaways and transparency overrides are disabled. Completed sessions show results and re-study links. The named prompt is intentionally visible; this is formative anatomical identification, not a high-stakes examination or validated assessment. See [deep inspection](DEEP_INSPECTION.md) for the shared cutaway, opacity and orthographic controls and their limits.
 
 ## Required before clinical/educational release
 

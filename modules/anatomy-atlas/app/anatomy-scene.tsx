@@ -1,13 +1,38 @@
 'use client';
 
-import { Component, Suspense, useEffect, useMemo, type ReactNode } from 'react';
-import { Canvas, type ThreeEvent } from '@react-three/fiber';
+import {
+  Component,
+  Suspense,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  type ReactNode,
+} from 'react';
+import { Canvas, useThree, type ThreeEvent } from '@react-three/fiber';
 import { Html, Line, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 import type { AnatomyStructure, SystemKey } from './anatomy-data';
 import { FittedCamera } from './fitted-camera';
 import { shoulderOffset, translatedBox } from '@/lib/explode-layout.mjs';
 import manifest from '@/public/models/bodyparts3d/manifest.json';
+import {
+  applyMaterialInspection,
+  clippedMeshRaycast,
+  sectionPlanes,
+  pointRetained,
+} from '@/lib/inspection-geometry';
+import { type InspectionState, systemOpacity } from '@/lib/inspection-state';
+
+const noPlanes: THREE.Plane[] = [];
+const sectionFrame = new THREE.Box3();
+for (const part of manifest.parts) {
+  const box = new THREE.Box3(
+    new THREE.Vector3().fromArray(part.bounds.min),
+    new THREE.Vector3().fromArray(part.bounds.max),
+  );
+  box.min.y = Math.max(box.min.y, -3.15);
+  if (!box.isEmpty()) sectionFrame.union(box);
+}
 
 export type CameraView = 'posterior' | 'anterior' | 'lateral';
 export type AnatomyLayer = 'cuff' | 'surface' | 'bones';
@@ -27,6 +52,7 @@ type SceneProps = {
   anchorSkeleton: boolean;
   showOrigins: boolean;
   plate: boolean;
+  inspection: InspectionState;
   onSelect: (id: string) => void;
 };
 const views: Record<CameraView, [number, number, number]> = {
@@ -99,6 +125,8 @@ function Tissue({
   faded,
   slug,
   shiftY = 0,
+  cuts = noPlanes,
+  opacity = 1,
 }: {
   geometry: THREE.BufferGeometry;
   bone: boolean;
@@ -106,7 +134,10 @@ function Tissue({
   faded: boolean;
   slug: string;
   shiftY?: number;
+  cuts?: THREE.Plane[];
+  opacity?: number;
 }) {
+  const invalidate = useThree((s) => s.invalidate);
   // Crop in original anatomical coordinates even when the entire structure moves.
   const clippingPlane = useMemo(
     () => new THREE.Plane(new THREE.Vector3(0, 1, 0), 3.15 - shiftY),
@@ -130,6 +161,7 @@ function Tissue({
       depthWrite: !faded,
       side: THREE.DoubleSide,
       clippingPlanes: [clippingPlane],
+      clipShadows: true,
       emissive: selected ? '#513016' : '#000000',
       emissiveIntensity: selected ? 0.1 : 0,
     });
@@ -178,15 +210,23 @@ function Tissue({
     return result;
   }, [bone, selected, clippingPlane]);
   useEffect(() => () => outline.dispose(), [outline]);
+  useLayoutEffect(() => {
+    const planes = [clippingPlane, ...cuts],
+      alpha = faded ? 0.085 : opacity;
+    applyMaterialInspection(material, planes, alpha);
+    applyMaterialInspection(outline, planes, 1);
+    invalidate();
+  }, [material, outline, clippingPlane, cuts, faded, opacity, invalidate]);
   return (
     <>
       <mesh
         geometry={geometry}
         material={material}
-        castShadow={!faded}
+        castShadow={!faded && opacity >= 0.95}
         receiveShadow
+        raycast={faded ? () => null : clippedMeshRaycast}
       />
-      {!faded && (
+      {!faded && opacity >= 0.95 && (
         <mesh geometry={geometry} material={outline} raycast={() => null} />
       )}
     </>
@@ -239,6 +279,16 @@ function Model(props: SceneProps) {
           props.anchorSkeleton && structure.category === 'bone',
         );
         const faded = props.isolated && !selected;
+        const cuts = sectionPlanes(
+          sectionFrame,
+          props.inspection,
+          displacement,
+        );
+        const opacity = systemOpacity(
+          props.inspection,
+          structure.system,
+          selected,
+        );
         const anchor = surfaceAnchors[slug],
           end = labelEnds[props.view][slug];
         const select = (event: ThreeEvent<MouseEvent>) => {
@@ -257,6 +307,7 @@ function Model(props: SceneProps) {
                     selected={false}
                     faded
                     slug={slug}
+                    cuts={sectionPlanes(sectionFrame, props.inspection)}
                   />
                 ))}
               </group>
@@ -281,33 +332,43 @@ function Model(props: SceneProps) {
                     faded={faded}
                     slug={slug}
                     shiftY={displacement.y}
+                    cuts={cuts}
+                    opacity={opacity}
                   />
                 ))}
               </group>
-              {props.showLabels && !faded && anchor && end && (
-                <group>
-                  <Line
-                    points={[anchor, end]}
-                    color={selected ? '#84643b' : '#7d8077'}
-                    lineWidth={0.8}
-                    transparent
-                    opacity={0.72}
-                  />
-                  <mesh position={anchor} raycast={() => null}>
-                    <sphereGeometry args={[0.028, 8, 8]} />
-                    <meshBasicMaterial color="#6d7168" />
-                  </mesh>
-                  <Html center position={end} zIndexRange={[3, 1]}>
-                    <button
-                      type="button"
-                      className={`scene-label${selected ? ' selected' : ''}`}
-                      onClick={() => props.onSelect(structure.id)}
-                    >
-                      {structure.name}
-                    </button>
-                  </Html>
-                </group>
-              )}
+              {props.showLabels &&
+                !faded &&
+                opacity >= 0.2 &&
+                anchor &&
+                end &&
+                pointRetained(
+                  new THREE.Vector3(...anchor).add(displacement),
+                  cuts,
+                ) && (
+                  <group>
+                    <Line
+                      points={[anchor, end]}
+                      color={selected ? '#84643b' : '#7d8077'}
+                      lineWidth={0.8}
+                      transparent
+                      opacity={0.72}
+                    />
+                    <mesh position={anchor} raycast={() => null}>
+                      <sphereGeometry args={[0.028, 8, 8]} />
+                      <meshBasicMaterial color="#6d7168" />
+                    </mesh>
+                    <Html center position={end} zIndexRange={[3, 1]}>
+                      <button
+                        type="button"
+                        className={`scene-label${selected ? ' selected' : ''}`}
+                        onClick={() => props.onSelect(structure.id)}
+                      >
+                        {structure.name}
+                      </button>
+                    </Html>
+                  </group>
+                )}
             </group>
           </group>
         );

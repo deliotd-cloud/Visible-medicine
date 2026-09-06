@@ -52,6 +52,8 @@ import {
 } from '@/components/ui/tooltip';
 import { Brand } from './brand';
 import { ReviewStatus } from './review-status';
+import { InspectionControls } from './inspection-controls';
+import { initialInspection } from '@/lib/inspection-state';
 
 type Mode = 'study' | 'exam';
 type SearchOption = { value: string; label: string };
@@ -107,6 +109,7 @@ export default function ShoulderExplorer({
   const [anchorSkeleton, setAnchorSkeleton] = useState(false);
   const [showOrigins, setShowOrigins] = useState(false);
   const [plate, setPlate] = useState(false);
+  const [inspection, setInspection] = useState(initialInspection);
   const [showLabels, setShowLabels] = useState(true);
   const [syncPlane, setSyncPlane] = useState(false);
   const [resetNonce, setResetNonce] = useState(0);
@@ -443,6 +446,21 @@ export default function ShoulderExplorer({
                     </button>
                   ))}
                 </div>
+                <InspectionControls
+                  value={inspection}
+                  onChange={setInspection}
+                  systems={(Object.keys(systemMeta) as SystemKey[]).map(
+                    (id) => ({
+                      id,
+                      name: systemMeta[id].name,
+                      enabled:
+                        visibleSystems[id] &&
+                        structures.some((s) => s.system === id),
+                    }),
+                  )}
+                  plate={plate}
+                  onPlate={setPlate}
+                />
                 <div className="vm-plates">
                   <h2>Shoulder illustration plates</h2>
                   <p>
@@ -462,6 +480,7 @@ export default function ShoulderExplorer({
                       key={name}
                       onClick={() => {
                         setPlate(true);
+                        setInspection(initialInspection);
                         setView(camera);
                         setLayer(dissection);
                         setExplode(0);
@@ -617,6 +636,7 @@ export default function ShoulderExplorer({
               anchorSkeleton={anchorSkeleton}
               showOrigins={showOrigins && mode === 'study'}
               plate={plate}
+              inspection={mode === 'exam' ? initialInspection : inspection}
             />
             {mode === 'study' && (
               <div className="vm-scene-options">
@@ -739,6 +759,7 @@ export default function ShoulderExplorer({
                       aria-label="Reset 3D view"
                       onClick={() => {
                         setResetNonce((value) => value + 1);
+                        setInspection(initialInspection);
                         setExplode(0);
                         setIsolated(false);
                         setZoom(1);
@@ -752,11 +773,13 @@ export default function ShoulderExplorer({
               </Tooltip>
             </div>
             <div className="viewer-hint">
-              {explode > 0
-                ? 'Exploded teaching view · Positions are not anatomical'
-                : plate
-                  ? 'Parallel projection · Click a structure · Use + / − to zoom'
-                  : 'Drag to rotate · Pinch to zoom · Click to explore'}
+              {mode === 'study' && inspection.plane !== 'off'
+                ? `${inspection.plane} surface cutaway · ${inspection.position}% · Not CT/MRI`
+                : explode > 0
+                  ? 'Exploded teaching view · Positions are not anatomical'
+                  : plate
+                    ? 'Parallel projection · Click a structure · Use + / − to zoom'
+                    : 'Drag to rotate · Pinch to zoom · Click to explore'}
             </div>
             <a
               className="model-credit"
@@ -837,6 +860,19 @@ export default function ShoulderExplorer({
                   </button>
                 </div>
                 <ReviewStatus structureId={selected.id} teachingDraft />
+                <Button
+                  size="sm"
+                  variant="outline"
+                  onClick={() =>
+                    setInspection((current) => ({
+                      ...current,
+                      plane: 'off',
+                      opacity: { ...current.opacity, [selected.system]: 100 },
+                    }))
+                  }
+                >
+                  Reveal uncut structure
+                </Button>
                 <Tabs defaultValue="anatomy" className="content-tabs">
                   <TabsList variant="line" className="content-tabs-list">
                     {tabs.map((tab) => (

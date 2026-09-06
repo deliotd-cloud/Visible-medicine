@@ -2,7 +2,7 @@
 
 ## Product structure
 
-The existing shoulder viewer is preserved. The shared regional explorer adds 86 authored visibility stages and 60 focused group views. These are educational source-mesh visibility recipes: no tissue cutting, surgical corridor, biomechanical deformation or measured fascicle simulation is implemented.
+The existing shoulder viewer is preserved. The shared regional explorer adds 86 authored visibility stages and 60 focused group views. These are educational source-mesh visibility recipes: no physical tissue cutting, surgical corridor, biomechanical deformation or measured fascicle simulation is implemented. The subsequent [deep-inspection controls](DEEP_INSPECTION.md) add non-destructive surface clipping and system opacity, not reconstructed tissue interiors.
 
 | Region | Guided progression | Focused study |
 | --- | --- | --- |

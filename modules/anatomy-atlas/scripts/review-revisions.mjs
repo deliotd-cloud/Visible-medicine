@@ -4,6 +4,8 @@ import { structures, quizQuestions } from '../app/anatomy-data.ts';
 
 const root = new URL('../', import.meta.url);
 const hash = (value) => createHash('sha256').update(value).digest('hex');
+// Git may check out text as CRLF on Windows. Line endings are not a display revision.
+const canonicalText = (value) => value.replace(/\r\n/g, '\n');
 const model = await readFile(
   new URL('public/models/bodyparts3d/shoulder-right.glb', root),
 );
@@ -22,11 +24,15 @@ const displayPaths = [
   'app/shoulder-explorer.tsx',
   'app/globals.css',
   'lib/explode-layout.mjs',
+  'lib/inspection-state.ts',
+  'lib/inspection-geometry.ts',
+  'app/inspection-controls.tsx',
+  'app/inspection.css',
 ];
 const display = await Promise.all(
   displayPaths.map(async (path) => [
     path,
-    hash(await readFile(new URL(path, root))),
+    hash(canonicalText(await readFile(new URL(path, root), 'utf8'))),
   ]),
 );
 const revisions = Object.fromEntries(
@@ -54,7 +60,7 @@ const output =
   ) + '\n';
 const target = new URL('content/review-revisions.json', root);
 if (process.argv.includes('--check')) {
-  if ((await readFile(target, 'utf8')) !== output)
+  if (canonicalText(await readFile(target, 'utf8')) !== output)
     throw new Error(
       'Review fingerprints are stale. Run npm run reviews:revisions.',
     );

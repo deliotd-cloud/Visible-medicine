@@ -10,6 +10,8 @@
 
 ## Whole-body and regional extension
 
+Shared deep-inspection state, material clipping and hit testing live in `lib/inspection-state.ts` and `lib/inspection-geometry.ts`; `app/inspection-controls.tsx` drives both viewer families. Plane positions stay in the assembled source frame and translate with exploded structures. `lib/anatomy-practice.ts` samples loaded, distinct landmarks for 5/10/20-question regional/whole-body sessions. See [deep inspection](DEEP_INSPECTION.md) for reset semantics, orthographic controls, review fingerprinting, verification and non-radiological limits.
+
 The root route now renders `body-explorer.tsx`; `/regions/[region]` instantiates the same explorer for a bounded region. The existing shoulder interface lives at `/shoulder`, in `shoulder-explorer.tsx`, preserving its mesh and study/exam behaviour.
 
 `scripts/bodyparts-archive.mjs` provides concurrency-limited, CRC-verified HTTP-range retrieval. `scripts/ingest-full-body.mjs` composes 823 selected source identities into 61 independently loaded region/system bundles. The public catalogue stores data binding, source/provenance, laterality, region membership, bounds, surface anchor, source hashes and exclusions. All expanded meshes share the same transform; it differs from the dedicated shoulder frame, so interoperability requires converting through source coordinates.
