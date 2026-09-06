@@ -2,7 +2,7 @@
 
 ## Included
 
-1,006 selectable source representations: 203 skeletal, 369 muscular, 74 organ (including 28 teeth, intestinal junction and epiglottis), 54 nervous-system, 223 vascular and 83 connective-tissue entries. 82 GLB bundles support 11 independent region routes plus the whole-body route. Regional membership uses source muscle hierarchy where available, explicit named-bone rules and a documented position-based fallback. Adjacent long bones are retained to provide joint context; this is not a clipped surgical field. See [latest source and dissection evidence](FOOT_VASCULAR_DETAIL.md), [mesenteric detail](MESENTERIC_DETAIL.md) and the [intestinal ownership correction](INTESTINAL_JUNCTION.md). Counts below that describe earlier milestones remain historical.
+1,016 selectable source representations: 203 skeletal, 369 muscular, 80 organ (including 28 teeth, intestinal junction, epiglottis and six tear-drainage entries), 54 nervous-system, 223 vascular and 87 connective-tissue entries (including four eyelid tarsal plates). 84 GLB bundles support 11 independent region routes plus the whole-body route. Regional membership uses source muscle hierarchy where available, explicit named-bone rules and a documented position-based fallback. Adjacent long bones are retained to provide joint context; this is not a clipped surgical field. See [latest ocular source/dissection evidence](OCULAR_DETAIL.md), [foot vessels](FOOT_VASCULAR_DETAIL.md) and the [intestinal ownership correction](INTESTINAL_JUNCTION.md). Counts below that describe earlier milestones remain historical.
 
 Organs: the original 17 entries (heart, paired lungs, liver, pancreas, stomach, small/large intestine, gallbladder, paired kidneys, bladder, esophagus, trachea, spleen and paired adrenals), plus prostate, paired testes, paired seminal vesicles, paired ureters, thymus, pituitary, paired compound eyeballs and rectum. Heart/liver vascular components and the rectum have been separated from their display aggregates without moving geometry; aggregate IDs remain stable and notes disclose their exclusions. This remains an adult-male reference, not comprehensive male/female, developmental or variant anatomy.
 
@@ -13,6 +13,8 @@ Nervous entries: 28 selected cranial/orbital nerve representations, two ciliary 
 The six legacy abdominal-wall candidates remain unregistered and unimported; the v4 broad-wall aliases do not supply them. See [abdominal-wall evidence](ABDOMINAL_WALL_AUDIT.md).
 
 ## Latest additions
+
+Ten eye-region entries add three close-up windows/focuses for tarsal plates, tear-drainage sources and nasolacrimal/nasal context. Head & neck now has 273 source entries. All 1,006 previous full records and 82 body-bundle hashes are exact. Missing eyelid layers, puncta, valves, lumen and tear flow are not invented. See [ocular detail](OCULAR_DETAIL.md).
 
 The hand arterial pass adds 26 source identities / 30 components and four close windows/focuses, preserving all preceding records and body bundles. Supplied source numbering and unequal right/left proper-branch subsets remain explicit, not standardised by invented geometry. See [hand arterial evidence and gates](HAND_VASCULAR_DETAIL.md).
 

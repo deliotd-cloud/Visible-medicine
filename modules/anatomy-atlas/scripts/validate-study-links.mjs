@@ -46,7 +46,7 @@ const parseHref = (href) => {
 };
 same(
   hash(bytes),
-  'b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5',
+  '01a253d3d67a933d41bb3b08693ab13279b4e12c0767f2e4b8d68fa9f6078d86',
 );
 const rows = [];
 for (const [region, profile] of Object.entries(dissectionProfiles)) {

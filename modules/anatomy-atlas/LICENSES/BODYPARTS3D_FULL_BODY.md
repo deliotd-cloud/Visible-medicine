@@ -1,5 +1,9 @@
 # Expanded BodyParts3D commercial-use audit
 
+## Ocular extension — 6 September 2026
+
+The current atlas has **1,016 source representations / 84 body bundles / 96,400,704 bytes**. Ten exact v4 ISA identities/components add six tear-drainage surfaces and four eyelid tarsal plates in two 152,188-byte-total GLBs. All prior records, geometry and transforms remain exact. The official CC BY 4.0 grant applies with the existing DBCLS credit, licence links and adaptation notices. The original short draft notes reference university factual teaching material without redistributing its diagrams, prose or table datasets. No dependency, font, texture, paid service, clinical approval or private data is added. See `../docs/OCULAR_DETAIL.md`; all older milestone totals below are historical.
+
 ## Foot vascular extension — 6 September 2026
 
 The current atlas has **1,006 source representations / 82 body bundles / 96,248,516 bytes**. Eight exact v4 ISA identities add ten source components in one 192,916-byte GLB. Previous records and bundles remain exact. Two plantar venous sources are held for shape/provenance adjudication. The official CC BY 4.0 grant was rechecked; DBCLS credit, licence links and adaptation notices remain required for meshes, indexes and derived evidence. No new package, font, texture, paid API or copied diagram is added. See `../docs/FOOT_VASCULAR_DETAIL.md`. Older totals below are historical.

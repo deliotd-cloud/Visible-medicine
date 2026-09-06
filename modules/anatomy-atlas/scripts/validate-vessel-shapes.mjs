@@ -29,9 +29,14 @@ const reportRaw = await fs.readFile('content/vessel-shape-audit.json');
 const report = JSON.parse(reportRaw);
 same(
   hash(raw),
+  '01a253d3d67a933d41bb3b08693ab13279b4e12c0767f2e4b8d68fa9f6078d86',
+);
+// This screen predates the ocular admission. Full vessel records and all their
+// bundles are recomputed below and must still match the historical report.
+same(
+  report.catalogSha256,
   'b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5',
 );
-same(report.catalogSha256, hash(raw));
 same(report.sourceCommit, 'd2dacd10edeac3ead12fd26376aa3377b223ffc7');
 same(report.criteria, shapeCriteria);
 same(shapeCriteria, {

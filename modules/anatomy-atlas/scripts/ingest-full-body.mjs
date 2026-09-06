@@ -27,6 +27,7 @@ import { thoracicSelections } from './thoracic-selections.mjs';
 import { handVascularSelections } from './hand-vascular-selections.mjs';
 import { handVenousSelections } from './hand-venous-selections.mjs';
 import { footVascularSelections } from './foot-vascular-selections.mjs';
+import { ocularSelections } from './ocular-selections.mjs';
 
 const [isa, partof, isaZip, partofZip] = await Promise.all([
   conceptMap('isa'),
@@ -243,6 +244,7 @@ const recovered = [
   ...handVascularSelections(isa),
   ...handVenousSelections(isa),
   ...footVascularSelections(isa),
+  ...ocularSelections(isa),
 ];
 // Separate an already included component from an aggregate without duplicating
 // its surface. Preserve the aggregate's public ID and record the adaptation.
@@ -474,7 +476,7 @@ for (const record of selections) {
   mesh.userData = { structureId: id, fmaId: record.fma };
   const bundle =
     prior?.bundle ??
-    `${region}-${record.system}${record.footVascularRecovery ? '-foot-vascular' : record.handVenousRecovery ? '-hand-venous' : record.handVascularRecovery ? '-hand-vascular' : record.thoracicRecovery ? '-thoracic-detail' : record.pancreaticRecovery ? '-visceral-detail' : record.mesentericRecovery ? '-mesenteric' : record.junctionRecovery ? '-junction' : record.headDetailRecovery ? '-head-detail' : record.axialRecovery ? '-axial-detail' : record.neuroRecovery ? '-deep-brain' : record.inventoryRecovery ? '-inventory' : record.gapRecovery ? '-gaps' : record.recovery ? '-recovery' : record.dissection ? '-dissection' : ''}`;
+    `${region}-${record.system}${record.ocularRecovery ? '-ocular-detail' : record.footVascularRecovery ? '-foot-vascular' : record.handVenousRecovery ? '-hand-venous' : record.handVascularRecovery ? '-hand-vascular' : record.thoracicRecovery ? '-thoracic-detail' : record.pancreaticRecovery ? '-visceral-detail' : record.mesentericRecovery ? '-mesenteric' : record.junctionRecovery ? '-junction' : record.headDetailRecovery ? '-head-detail' : record.axialRecovery ? '-axial-detail' : record.neuroRecovery ? '-deep-brain' : record.inventoryRecovery ? '-inventory' : record.gapRecovery ? '-gaps' : record.recovery ? '-recovery' : record.dissection ? '-dissection' : ''}`;
   if (!bundles.has(bundle)) bundles.set(bundle, new THREE.Group());
   bundles.get(bundle).add(mesh);
   const box = geometry.boundingBox,

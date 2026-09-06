@@ -1,8 +1,12 @@
 # Spatial anatomy architecture
 
+## Eye-region source extension
+
+`scripts/ocular-selections.mjs` binds ten exact current-version ISA definitions to two additive bundles. `lib/ocular-anatomy.ts` supplies short draft notes and three typed target/context windows/focuses using the common dissection controls. A generic `connective-tissue` category correctly accommodates fibrous eyelid tarsal plates without calling them cartilage. Stable IDs, unchanged source coordinates and imaging-reference hooks are inherited. `source-surface-audit.mjs` supplies offline sampled source-coordinate diagnostics; `ocular-history.mjs` reconstructs and hash-checks complete pre-admission catalogue/inventory evidence without Git history. Raw audit regeneration still requires pinned Site history. See [source geometry, tests and limits](OCULAR_DETAIL.md).
+
 ## Current-view dissection guidance
 
-`lib/dissection-guidance.ts` derives exact region/side recipe membership, omitted/added entries, source-backed landmark identities, target/context roles, availability and valid next-layer actions. `app/dissection-orientation.tsx` presents these inside the existing study guide. Guarded explorer handlers reuse clean-stage/focus transitions; reorientation changes camera state only. Scene labels retain their existing visible-only selection policy. See [controls and testing boundaries](DISSECTION_GUIDANCE.md). The offline [ocular source preparation](OCULAR_CANDIDATES.md) admits no geometry.
+`lib/dissection-guidance.ts` derives exact region/side recipe membership, omitted/added entries, source-backed landmark identities, target/context roles, availability and valid next-layer actions. `app/dissection-orientation.tsx` presents these inside the existing study guide. Guarded explorer handlers reuse clean-stage/focus transitions; reorientation changes camera state only. Scene labels retain their existing visible-only selection policy. See [controls and testing boundaries](DISSECTION_GUIDANCE.md). The historical [ocular source preparation](OCULAR_CANDIDATES.md) is separate from the subsequent explicit admission.
 
 ## Loading state and bounded source diagnostics
 

@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { inventoryHolds, geometryFingerprint } from './anatomy-inventory.mjs';
 import { cache } from './bodyparts-archive.mjs';
 import { objBounds } from './audit-legacy-anatomy.mjs';
+import { ocularHistory } from './ocular-history.mjs';
 const hash = (b) => createHash('sha256').update(b).digest('hex');
 let assertions = 0;
 const same = (a, b, m) => {
@@ -16,12 +17,21 @@ const check = (v, m) => {
 };
 const raw = await fs.readFile('content/ocular-candidate-audit.json'),
   audit = JSON.parse(raw);
-const catalogRaw = await fs.readFile(
-    'public/models/bodyparts3d/full-body/catalog.json',
-  ),
-  catalog = JSON.parse(catalogRaw);
-const inventoryRaw = await fs.readFile('content/source-inventory.json'),
-  inventory = JSON.parse(inventoryRaw);
+const currentCatalogRaw = await fs.readFile(
+  'public/models/bodyparts3d/full-body/catalog.json',
+);
+const currentInventoryRaw = await fs.readFile('content/source-inventory.json');
+const baseline = JSON.parse(await fs.readFile('content/ocular-baseline.json'));
+same(
+  hash(raw),
+  'e09479a5aefaa62d71a9c7e261131423952b8a9203dc41a37e86247b71bb5d6e',
+);
+const { catalog, inventory, catalogRaw, inventoryRaw } = ocularHistory(
+  JSON.parse(currentCatalogRaw),
+  JSON.parse(currentInventoryRaw),
+  baseline,
+  audit,
+);
 same(
   hash(catalogRaw),
   'b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5',
@@ -149,6 +159,8 @@ for (const r of audit.results) {
 }
 const result = {
   passed: true,
+  scope:
+    'Pinned pre-ocular-admission preparation; current admissions are tested separately',
   assertions,
   rawSourceCheck: rawCheck,
   candidates: audit.results.length,

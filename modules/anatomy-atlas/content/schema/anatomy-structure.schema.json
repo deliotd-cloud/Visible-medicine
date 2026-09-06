@@ -12,7 +12,7 @@
     },
     "name": { "type": "string", "minLength": 1 },
     "latinName": { "type": ["string", "null"] },
-    "category": { "enum": ["bone", "muscle", "tendon", "ligament", "cartilage", "joint", "nerve", "vessel", "organ", "fascia", "membrane", "space", "landmark"] },
+    "category": { "enum": ["bone", "muscle", "tendon", "ligament", "cartilage", "joint", "nerve", "vessel", "organ", "fascia", "membrane", "connective-tissue", "space", "landmark"] },
     "system": { "type": "string", "minLength": 1 },
     "region": { "type": "string", "minLength": 1 },
     "laterality": { "enum": ["right", "left", "midline", "bilateral", "unpaired", "unspecified"] },

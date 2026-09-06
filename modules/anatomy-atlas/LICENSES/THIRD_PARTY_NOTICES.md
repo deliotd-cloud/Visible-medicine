@@ -76,6 +76,8 @@ These licences permit commercial use; they are not non-commercial licences and d
 
 ## Reproducible full audit
 
+The ocular extension adds ten original BodyParts3D v4 ISA components under the same CC BY 4.0 grant, with preparatory and near-surface evidence in `content/ocular-candidate-audit.json` and `content/ocular-geometry-audit.json`. Existing DBCLS attribution and derivative notices cover the two additional model bundles. Original brief notes cite Texas Tech's eye anatomy teaching resource for facts only; no illustrations or authored table dataset is copied. See `docs/OCULAR_DETAIL.md`. All prior notice obligations remain.
+
 The dental/orbital extension adds 32 official BodyParts3D v4 source definitions/components under the same CC BY 4.0 grant, with exact evidence in `content/head-detail-source-audit.json`. It includes no other diagram, font, texture, numbering-system dataset or dependency. Preserve attribution for the new derivatives; see `BODYPARTS3D_FULL_BODY.md` and `docs/HEAD_DETAIL.md`. Brief original teaching summaries cite factual resources only, without redistributing their images or authored table datasets.
 
 Run:

@@ -38,11 +38,11 @@ const raw = await readFile('public/models/bodyparts3d/full-body/catalog.json'),
 const original = JSON.stringify({ catalog, profiles: dissectionProfiles });
 same(
   hash(raw),
-  'b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5',
+  '01a253d3d67a933d41bb3b08693ab13279b4e12c0767f2e4b8d68fa9f6078d86',
 );
 same(
   hash(JSON.stringify(dissectionProfiles)),
-  'fed262be061870dbe0dca8e50e462acda32dfb149bd166cc078c4e16a53d8a2f',
+  '0a7b25f60f277ff85b5cd824fb5004d513b0a348b7758ec3a27a12f56cd46265',
 );
 same(Object.keys(dissectionOrientation), [
   'anterior',

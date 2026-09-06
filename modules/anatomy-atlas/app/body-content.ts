@@ -14,6 +14,7 @@ import { thoracicGroupFor } from '../lib/thoracic-anatomy';
 import { handVascularGroupFor } from '../lib/hand-vascular-anatomy';
 import { handVenousGroupFor } from '../lib/hand-venous-anatomy';
 import { footVascularGroupFor } from '../lib/foot-vascular-anatomy';
+import { ocularGroupFor } from '../lib/ocular-anatomy';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -64,6 +65,7 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
     handVascularGroupFor(s.fmaId) ??
     handVenousGroupFor(s.fmaId) ??
     footVascularGroupFor(s.fmaId) ??
+    ocularGroupFor(s.fmaId) ??
     (intestinalJunction.fmaIds.includes(s.fmaId)
       ? intestinalJunction
       : undefined);

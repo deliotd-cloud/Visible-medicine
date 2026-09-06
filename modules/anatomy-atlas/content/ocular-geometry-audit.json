@@ -1,0 +1,4361 @@
+{
+  "sourceCommit": "7a517628613ce287d156646bf3fc6ef1cdc714d8",
+  "catalogSha256": "b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5",
+  "preparationSha256": "e09479a5aefaa62d71a9c7e261131423952b8a9203dc41a37e86247b71bb5d6e",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+  "checked": "2026-09-06",
+  "existingStructures": 263,
+  "considered": 2675,
+  "pruned": 2538,
+  "marginMm": 1,
+  "results": [
+    {
+      "fmaId": "FMA59582",
+      "name": "right lacrimal canaliculus",
+      "system": "organs",
+      "vertices": 336,
+      "triangles": 526,
+      "bounds": {
+        "min": [
+          -20.4,
+          -164.351,
+          1513.23
+        ],
+        "max": [
+          -14.581,
+          -163.386,
+          1517.36
+        ]
+      },
+      "lateralityPass": true,
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA59583",
+      "name": "left lacrimal canaliculus",
+      "system": "organs",
+      "vertices": 371,
+      "triangles": 634,
+      "bounds": {
+        "min": [
+          13.2772,
+          -164.357,
+          1513.21
+        ],
+        "max": [
+          19.0893,
+          -163.385,
+          1517.34
+        ]
+      },
+      "lateralityPass": true,
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA59555",
+      "name": "right nasolacrimal duct",
+      "system": "organs",
+      "vertices": 227,
+      "triangles": 444,
+      "bounds": {
+        "min": [
+          -17.0417,
+          -161.5,
+          1487.72
+        ],
+        "max": [
+          -12.1136,
+          -151.944,
+          1504.68
+        ]
+      },
+      "lateralityPass": true,
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA59556",
+      "name": "left nasolacrimal duct",
+      "system": "organs",
+      "vertices": 227,
+      "triangles": 444,
+      "bounds": {
+        "min": [
+          10.7706,
+          -161.483,
+          1487.75
+        ],
+        "max": [
+          15.7531,
+          -151.95,
+          1504.68
+        ]
+      },
+      "lateralityPass": true,
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA59545",
+      "name": "right lacrimal sac",
+      "system": "organs",
+      "vertices": 194,
+      "triangles": 384,
+      "bounds": {
+        "min": [
+          -17.0385,
+          -164.382,
+          1503.49
+        ],
+        "max": [
+          -13.7396,
+          -159.352,
+          1518.65
+        ]
+      },
+      "lateralityPass": true,
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA59546",
+      "name": "left lacrimal sac",
+      "system": "organs",
+      "vertices": 193,
+      "triangles": 382,
+      "bounds": {
+        "min": [
+          12.4325,
+          -164.333,
+          1503.51
+        ],
+        "max": [
+          15.7643,
+          -159.377,
+          1518.65
+        ]
+      },
+      "lateralityPass": true,
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA59091",
+      "name": "tarsal plate of right upper eyelid",
+      "system": "connective",
+      "vertices": 745,
+      "triangles": 1474,
+      "bounds": {
+        "min": [
+          -44.2496,
+          -166.23,
+          1516.66
+        ],
+        "max": [
+          -18.6608,
+          -156.64,
+          1529.21
+        ]
+      },
+      "lateralityPass": true,
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA59092",
+      "name": "tarsal plate of left upper eyelid",
+      "system": "connective",
+      "vertices": 748,
+      "triangles": 1484,
+      "bounds": {
+        "min": [
+          17.3533,
+          -166.234,
+          1516.68
+        ],
+        "max": [
+          42.9379,
+          -156.65,
+          1529.21
+        ]
+      },
+      "lateralityPass": true,
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA59089",
+      "name": "tarsal plate of right lower eyelid",
+      "system": "connective",
+      "vertices": 523,
+      "triangles": 1026,
+      "bounds": {
+        "min": [
+          -43.3265,
+          -165.113,
+          1507
+        ],
+        "max": [
+          -19.4243,
+          -156.1,
+          1515.38
+        ]
+      },
+      "lateralityPass": true,
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA59090",
+      "name": "tarsal plate of left lower eyelid",
+      "system": "connective",
+      "vertices": 525,
+      "triangles": 1034,
+      "bounds": {
+        "min": [
+          18.1183,
+          -165.108,
+          1507.01
+        ],
+        "max": [
+          42.0141,
+          -156.101,
+          1515.38
+        ]
+      },
+      "lateralityPass": true,
+      "admitted": false,
+      "clinicalValidation": false
+    }
+  ],
+  "comparisons": [
+    {
+      "a": "FMA52740",
+      "b": "FMA59582",
+      "nameA": "ethmoid",
+      "nameB": "right lacrimal canaliculus",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 27.419608153028108,
+        "maxMm": 50.882715188951934,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 112,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 10.726819399039023,
+        "maxMm": 12.523369971062099,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52740",
+      "b": "FMA59583",
+      "nameA": "ethmoid",
+      "nameB": "left lacrimal canaliculus",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 28.139698449699132,
+        "maxMm": 53.56148840734358,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 10.821027210616373,
+        "maxMm": 12.497582536234741,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52740",
+      "b": "FMA59555",
+      "nameA": "ethmoid",
+      "nameB": "right nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 26.571853857222663,
+        "maxMm": 47.362346302099596,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 11.47187014222183,
+        "maxMm": 15.450566507494132,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52740",
+      "b": "FMA59556",
+      "nameA": "ethmoid",
+      "nameB": "left nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 26.6719396634366,
+        "maxMm": 48.86804252975556,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 11.325358681842722,
+        "maxMm": 15.388104549943774,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52740",
+      "b": "FMA59545",
+      "nameA": "ethmoid",
+      "nameB": "right lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 24.502226443007217,
+        "maxMm": 48.139541515889,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 7.10152572861057,
+        "maxMm": 8.949064235438255,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52740",
+      "b": "FMA59546",
+      "nameA": "ethmoid",
+      "nameB": "left lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 24.55801246845721,
+        "maxMm": 50.81694509887467,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 7.032179423877038,
+        "maxMm": 8.799198620834737,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52740",
+      "b": "FMA59091",
+      "nameA": "ethmoid",
+      "nameB": "tarsal plate of right upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 30.873260741445094,
+        "maxMm": 54.16384718619976,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 23.078616648506866,
+        "maxMm": 30.420547867541273,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52740",
+      "b": "FMA59092",
+      "nameA": "ethmoid",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 31.040062463854692,
+        "maxMm": 56.94719481458238,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 23.422831695944247,
+        "maxMm": 30.494116321372196,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52740",
+      "b": "FMA59089",
+      "nameA": "ethmoid",
+      "nameB": "tarsal plate of right lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 30.147336407059267,
+        "maxMm": 53.2707047499843,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 19.92062723309686,
+        "maxMm": 28.033826809486055,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52740",
+      "b": "FMA59090",
+      "nameA": "ethmoid",
+      "nameB": "tarsal plate of left lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 30.109898789742367,
+        "maxMm": 55.821090395029,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 20.249626396800497,
+        "maxMm": 28.046813408819318,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52734",
+      "b": "FMA59091",
+      "nameA": "frontal bone",
+      "nameB": "tarsal plate of right upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 64.40182387549282,
+        "maxMm": 121.81269794648253,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 13.84629267467984,
+        "maxMm": 19.21169264302344,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52734",
+      "b": "FMA59092",
+      "nameA": "frontal bone",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 60.90041987539988,
+        "maxMm": 122.53923208850313,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 13.990692784037943,
+        "maxMm": 19.30194367649615,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA54738",
+      "b": "FMA59556",
+      "nameA": "left inferior nasal concha",
+      "nameB": "left nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 121,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 6.25290057595993,
+        "maxMm": 19.941705455090826,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 1,
+        "withinQuarterMm": 2,
+        "withinOneMm": 8,
+        "medianMm": 4.425045180362983,
+        "maxMm": 8.739787560359874,
+        "closePointBounds": {
+          "min": [
+            11.8302,
+            -152.489,
+            1490.94
+          ],
+          "max": [
+            12.8998,
+            -152.286,
+            1491.99
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA53646",
+      "b": "FMA59583",
+      "nameA": "left lacrimal bone",
+      "nameB": "left lacrimal canaliculus",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 122,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 11.88440220423756,
+        "maxMm": 17.715697107513066,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 4.949674427976337,
+        "maxMm": 6.630022453873151,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA53646",
+      "b": "FMA59556",
+      "nameA": "left lacrimal bone",
+      "nameB": "left nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 122,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 2,
+        "withinOneMm": 8,
+        "medianMm": 8.809169402168411,
+        "maxMm": 22.613904505856418,
+        "closePointBounds": {
+          "min": [
+            14.0059,
+            -160.347,
+            1502.1
+          ],
+          "max": [
+            14.54,
+            -159.678,
+            1502.59
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 8,
+        "withinQuarterMm": 14,
+        "withinOneMm": 24,
+        "medianMm": 4.9859021689648095,
+        "maxMm": 10.492446731339776,
+        "closePointBounds": {
+          "min": [
+            13.7576,
+            -160.363,
+            1501.01
+          ],
+          "max": [
+            15.0957,
+            -159.433,
+            1504.38
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA53646",
+      "b": "FMA59546",
+      "nameA": "left lacrimal bone",
+      "nameB": "left lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 122,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 4,
+        "medianMm": 6.245146939023834,
+        "maxMm": 11.026008791870307,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 9,
+        "withinQuarterMm": 16,
+        "withinOneMm": 36,
+        "medianMm": 1.2921363138448885,
+        "maxMm": 3.0535759653736516,
+        "closePointBounds": {
+          "min": [
+            12.5059,
+            -162.607,
+            1503.63
+          ],
+          "max": [
+            14.9735,
+            -159.458,
+            1517.24
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA53646",
+      "b": "FMA59092",
+      "nameA": "left lacrimal bone",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 122,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 15.128565168848695,
+        "maxMm": 22.61163286540796,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 20.530348597921865,
+        "maxMm": 29.59706447195456,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA53646",
+      "b": "FMA59090",
+      "nameA": "left lacrimal bone",
+      "nameB": "tarsal plate of left lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 122,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.70116102409552,
+        "maxMm": 17.936926436931497,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 17.09299246859466,
+        "maxMm": 27.208197262434126,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA53650",
+      "b": "FMA59583",
+      "nameA": "left maxilla",
+      "nameB": "left lacrimal canaliculus",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 40.8461075677965,
+        "maxMm": 51.90375313221566,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 5.33666831417779,
+        "maxMm": 7.27100974516371,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA53650",
+      "b": "FMA59556",
+      "nameA": "left maxilla",
+      "nameB": "left nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 20.217613434824553,
+        "maxMm": 33.87101509113918,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 2,
+        "medianMm": 2.6757896383682787,
+        "maxMm": 5.4617247861556555,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA53650",
+      "b": "FMA59546",
+      "nameA": "left maxilla",
+      "nameB": "left lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 32.15965994596335,
+        "maxMm": 43.40824855884418,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 2.8567183741064173,
+        "maxMm": 5.312145435434253,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA53650",
+      "b": "FMA59092",
+      "nameA": "left maxilla",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 44.36797903770231,
+        "maxMm": 56.52983674564088,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.533325436066264,
+        "maxMm": 26.85215985693907,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA53650",
+      "b": "FMA59090",
+      "nameA": "left maxilla",
+      "nameB": "tarsal plate of left lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 36.16346798026979,
+        "maxMm": 50.30123133938265,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 11.97373034333761,
+        "maxMm": 16.705472049567575,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52893",
+      "b": "FMA59092",
+      "nameA": "left zygomatic bone",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 117,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 20.770909234792814,
+        "maxMm": 44.32294659981446,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 19.91654142628336,
+        "maxMm": 29.252820886882052,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52893",
+      "b": "FMA59090",
+      "nameA": "left zygomatic bone",
+      "nameB": "tarsal plate of left lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 117,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 19.571423055312053,
+        "maxMm": 42.500866193643674,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 11.336399305409541,
+        "maxMm": 21.345316928075803,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52748",
+      "b": "FMA59555",
+      "nameA": "mandible",
+      "nameB": "right nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 57.94908172697824,
+        "maxMm": 87.40509209451128,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 34.292995249904884,
+        "maxMm": 38.550275382155235,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52748",
+      "b": "FMA59556",
+      "nameA": "mandible",
+      "nameB": "left nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 58.471309728874715,
+        "maxMm": 86.75745200557701,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 34.430280594412814,
+        "maxMm": 38.56458265721567,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52748",
+      "b": "FMA59545",
+      "nameA": "mandible",
+      "nameB": "right lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 68.53325798938788,
+        "maxMm": 94.89712779115075,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 43.00139607454619,
+        "maxMm": 47.01000865177542,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52748",
+      "b": "FMA59546",
+      "nameA": "mandible",
+      "nameB": "left lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 69.84433668959859,
+        "maxMm": 95.41938158969597,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 43.13851787266231,
+        "maxMm": 46.89784138998299,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52748",
+      "b": "FMA59089",
+      "nameA": "mandible",
+      "nameB": "tarsal plate of right lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 74.60979550560263,
+        "maxMm": 103.59947711397972,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 32.75607348263834,
+        "maxMm": 41.794448973517994,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52748",
+      "b": "FMA59090",
+      "nameA": "mandible",
+      "nameB": "tarsal plate of left lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 75.07600162528635,
+        "maxMm": 103.9029365561917,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 32.60248217988922,
+        "maxMm": 41.73437191105193,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA54737",
+      "b": "FMA59555",
+      "nameA": "right inferior nasal concha",
+      "nameB": "right nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 115,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 5.4416206046512,
+        "maxMm": 24.0594140471043,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 3.5712989260464187,
+        "maxMm": 7.3485578149730335,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA53645",
+      "b": "FMA59582",
+      "nameA": "right lacrimal bone",
+      "nameB": "right lacrimal canaliculus",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 101,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 11.637768249969426,
+        "maxMm": 15.072419037169237,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 112,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 5.714146946345524,
+        "maxMm": 7.620353500537277,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA53645",
+      "b": "FMA59555",
+      "nameA": "right lacrimal bone",
+      "nameB": "right nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 101,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 13.492093139687382,
+        "maxMm": 23.158273813045888,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 9.956422638678927,
+        "maxMm": 14.636590818492868,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA53645",
+      "b": "FMA59545",
+      "nameA": "right lacrimal bone",
+      "nameB": "right lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 101,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 6.484703257235416,
+        "maxMm": 10.94582164298332,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 4,
+        "medianMm": 2.455847358856006,
+        "maxMm": 3.9043676483919603,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA53645",
+      "b": "FMA59091",
+      "nameA": "right lacrimal bone",
+      "nameB": "tarsal plate of right upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 101,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 13.828709773511065,
+        "maxMm": 19.621008131337106,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 20.50209355773211,
+        "maxMm": 29.499748370905532,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA53649",
+      "b": "FMA59582",
+      "nameA": "right maxilla",
+      "nameB": "right lacrimal canaliculus",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 39.870195651012175,
+        "maxMm": 52.450025535574554,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 112,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 5.32152302665635,
+        "maxMm": 7.3182538044775045,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA53649",
+      "b": "FMA59555",
+      "nameA": "right maxilla",
+      "nameB": "right nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 21.885948341833224,
+        "maxMm": 33.654100814610935,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 2,
+        "medianMm": 2.655019590457316,
+        "maxMm": 5.264345324367343,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA53649",
+      "b": "FMA59545",
+      "nameA": "right maxilla",
+      "nameB": "right lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 31.052991836697423,
+        "maxMm": 44.408658016589676,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 2.729780548995774,
+        "maxMm": 5.317482108283253,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA53649",
+      "b": "FMA59091",
+      "nameA": "right maxilla",
+      "nameB": "tarsal plate of right upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 43.64465141343207,
+        "maxMm": 57.78106033423772,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.52737382137226,
+        "maxMm": 26.781267330169445,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA53649",
+      "b": "FMA59089",
+      "nameA": "right maxilla",
+      "nameB": "tarsal plate of right lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 34.256119163734716,
+        "maxMm": 51.45235311816958,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 11.997745970685061,
+        "maxMm": 16.981095063386796,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52892",
+      "b": "FMA59091",
+      "nameA": "right zygomatic bone",
+      "nameB": "tarsal plate of right upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 117,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 22.675754241921027,
+        "maxMm": 44.27576986524344,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 20.591079336450512,
+        "maxMm": 29.538562612498122,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52892",
+      "b": "FMA59089",
+      "nameA": "right zygomatic bone",
+      "nameB": "tarsal plate of right lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 117,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 20.84086221560902,
+        "maxMm": 42.38160411558291,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.668091499511677,
+        "maxMm": 21.40905008378465,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49051",
+      "b": "FMA59583",
+      "nameA": "left inferior oblique",
+      "nameB": "left lacrimal canaliculus",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 122,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 23.30989459435623,
+        "maxMm": 28.484960488124237,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 7.699303260035828,
+        "maxMm": 9.928820856979995,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49051",
+      "b": "FMA59556",
+      "nameA": "left inferior oblique",
+      "nameB": "left nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 122,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 24.187179994575636,
+        "maxMm": 32.28578963336666,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 10.747319722855378,
+        "maxMm": 18.076490872124474,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49051",
+      "b": "FMA59546",
+      "nameA": "left inferior oblique",
+      "nameB": "left lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 122,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 23.893786456943165,
+        "maxMm": 29.17801469000246,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 6.996293782425073,
+        "maxMm": 10.835254957775755,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49051",
+      "b": "FMA59092",
+      "nameA": "left inferior oblique",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 122,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 13.807919647796352,
+        "maxMm": 19.62637269110099,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 16.00631234107344,
+        "maxMm": 23.615925370181795,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49051",
+      "b": "FMA59090",
+      "nameA": "left inferior oblique",
+      "nameB": "tarsal plate of left lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 122,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 8.958273625982054,
+        "maxMm": 17.241920455970067,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 7.564975821217529,
+        "maxMm": 10.650977237709208,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49047",
+      "b": "FMA59556",
+      "nameA": "left inferior rectus",
+      "nameB": "left nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.857487463604457,
+        "maxMm": 46.229227762206826,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 15.893784538617613,
+        "maxMm": 21.10924315649428,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49047",
+      "b": "FMA59546",
+      "nameA": "left inferior rectus",
+      "nameB": "left lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.39872086220395,
+        "maxMm": 41.94968770515457,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 11.535934604581266,
+        "maxMm": 14.734327687750136,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49047",
+      "b": "FMA59092",
+      "nameA": "left inferior rectus",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 22.07278966533236,
+        "maxMm": 45.532934259075546,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 15.091586818157827,
+        "maxMm": 21.166293993280725,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49047",
+      "b": "FMA59090",
+      "nameA": "left inferior rectus",
+      "nameB": "tarsal plate of left lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 16.570849125767737,
+        "maxMm": 45.91884079721524,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 5.687234961430892,
+        "maxMm": 10.30232131560661,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49055",
+      "b": "FMA59546",
+      "nameA": "left lateral rectus",
+      "nameB": "left lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 28.658358358601106,
+        "maxMm": 42.29127545298202,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 25.56023646702043,
+        "maxMm": 27.2827051974323,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49055",
+      "b": "FMA59092",
+      "nameA": "left lateral rectus",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 4,
+        "medianMm": 7.775693775195757,
+        "maxMm": 45.51797629836134,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 12,
+        "medianMm": 9.602757452419596,
+        "maxMm": 22.168496625818246,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49055",
+      "b": "FMA59090",
+      "nameA": "left lateral rectus",
+      "nameB": "tarsal plate of left lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 7,
+        "medianMm": 9.240604372009548,
+        "maxMm": 46.276724397908716,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 1,
+        "withinOneMm": 13,
+        "medianMm": 9.91713822077716,
+        "maxMm": 21.633115086829257,
+        "closePointBounds": {
+          "min": [
+            40.799,
+            -157.307,
+            1514.5
+          ],
+          "max": [
+            40.799,
+            -157.307,
+            1514.5
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49049",
+      "b": "FMA59092",
+      "nameA": "left levator palpebrae superioris",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 13,
+        "withinQuarterMm": 25,
+        "withinOneMm": 36,
+        "medianMm": 5.534772791405803,
+        "maxMm": 45.45533595530894,
+        "closePointBounds": {
+          "min": [
+            18.8616,
+            -165.354,
+            1521.14
+          ],
+          "max": [
+            41.8408,
+            -158.475,
+            1528.95
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 15,
+        "withinQuarterMm": 27,
+        "withinOneMm": 43,
+        "medianMm": 2.991715621731847,
+        "maxMm": 6.2682168987680384,
+        "closePointBounds": {
+          "min": [
+            19.4776,
+            -165.343,
+            1522.08
+          ],
+          "max": [
+            41.1327,
+            -159.511,
+            1529.17
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49057",
+      "b": "FMA59546",
+      "nameA": "left medial rectus",
+      "nameB": "left lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 123,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 10.150322978112545,
+        "maxMm": 40.10578665180374,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 6.197946977070649,
+        "maxMm": 10.752034952045094,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49057",
+      "b": "FMA59092",
+      "nameA": "left medial rectus",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 123,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 14.499240825015278,
+        "maxMm": 44.16821445689013,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.322236282834378,
+        "maxMm": 22.122807761448367,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49057",
+      "b": "FMA59090",
+      "nameA": "left medial rectus",
+      "nameB": "tarsal plate of left lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 123,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 14.86525628302445,
+        "maxMm": 44.42572641137723,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.529040675167426,
+        "maxMm": 21.372926548556705,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49053",
+      "b": "FMA59092",
+      "nameA": "left superior oblique",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 15.900360344658885,
+        "maxMm": 43.32172071646366,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 11.96738126116154,
+        "maxMm": 15.733266953255779,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49045",
+      "b": "FMA59092",
+      "nameA": "left superior rectus",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 13.1297103170402,
+        "maxMm": 44.00675683169017,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 5.915594702986287,
+        "maxMm": 11.466813685152575,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49050",
+      "b": "FMA59582",
+      "nameA": "right inferior oblique",
+      "nameB": "right lacrimal canaliculus",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 24.35272027289765,
+        "maxMm": 28.55767472344343,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 112,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 7.647729274809559,
+        "maxMm": 9.908425923929544,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49050",
+      "b": "FMA59555",
+      "nameA": "right inferior oblique",
+      "nameB": "right nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 25.643971016400698,
+        "maxMm": 32.295218098659824,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.287928498301792,
+        "maxMm": 17.91271283946118,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49050",
+      "b": "FMA59545",
+      "nameA": "right inferior oblique",
+      "nameB": "right lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 25.271963002505373,
+        "maxMm": 29.26619990694259,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 6.411883770780585,
+        "maxMm": 10.857938203784471,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49050",
+      "b": "FMA59091",
+      "nameA": "right inferior oblique",
+      "nameB": "tarsal plate of right upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 13.731753539495484,
+        "maxMm": 19.811686622042032,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 15.620853682177472,
+        "maxMm": 23.59372560660987,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49050",
+      "b": "FMA59089",
+      "nameA": "right inferior oblique",
+      "nameB": "tarsal plate of right lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 8.544406514790799,
+        "maxMm": 17.229621332170936,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 7.459904744859927,
+        "maxMm": 10.631381051961698,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49046",
+      "b": "FMA59555",
+      "nameA": "right inferior rectus",
+      "nameB": "right nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.610720163658364,
+        "maxMm": 46.26738212012862,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 16.47763605496854,
+        "maxMm": 21.154152639712528,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49046",
+      "b": "FMA59545",
+      "nameA": "right inferior rectus",
+      "nameB": "right lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.417139889435244,
+        "maxMm": 42.045340188420376,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 11.495209391742295,
+        "maxMm": 14.727209680044593,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49046",
+      "b": "FMA59091",
+      "nameA": "right inferior rectus",
+      "nameB": "tarsal plate of right upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 23.417718165739412,
+        "maxMm": 45.67809850464624,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 14.942411955236686,
+        "maxMm": 21.320867741487415,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49046",
+      "b": "FMA59089",
+      "nameA": "right inferior rectus",
+      "nameB": "tarsal plate of right lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.378619391416134,
+        "maxMm": 45.99585921188991,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 5.966206189028333,
+        "maxMm": 10.325543135351289,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49054",
+      "b": "FMA59545",
+      "nameA": "right lateral rectus",
+      "nameB": "right lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 122,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 29.02822732600115,
+        "maxMm": 42.3172064485594,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 25.747552914597527,
+        "maxMm": 27.303459872331132,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49054",
+      "b": "FMA59091",
+      "nameA": "right lateral rectus",
+      "nameB": "tarsal plate of right upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 122,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 5,
+        "medianMm": 11.07969828154179,
+        "maxMm": 45.565680606036274,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 9,
+        "medianMm": 10.245553873158222,
+        "maxMm": 22.16573287396561,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49054",
+      "b": "FMA59089",
+      "nameA": "right lateral rectus",
+      "nameB": "tarsal plate of right lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 122,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 1,
+        "withinOneMm": 7,
+        "medianMm": 12.169767163343856,
+        "maxMm": 46.2791235899082,
+        "closePointBounds": {
+          "min": [
+            -42.1161,
+            -157.283,
+            1514.98
+          ],
+          "max": [
+            -42.1161,
+            -157.283,
+            1514.98
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 14,
+        "medianMm": 10.228389959324018,
+        "maxMm": 21.60847258114279,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49048",
+      "b": "FMA59091",
+      "nameA": "right levator palpebrae superioris",
+      "nameB": "tarsal plate of right upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 123,
+        "withinTenthMm": 10,
+        "withinQuarterMm": 18,
+        "withinOneMm": 32,
+        "medianMm": 4.838440436078691,
+        "maxMm": 45.74999601978123,
+        "closePointBounds": {
+          "min": [
+            -43.1451,
+            -165.157,
+            1521.18
+          ],
+          "max": [
+            -20.4303,
+            -158.5,
+            1528.76
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 13,
+        "withinQuarterMm": 28,
+        "withinOneMm": 42,
+        "medianMm": 3.212929350296895,
+        "maxMm": 6.228836379292782,
+        "closePointBounds": {
+          "min": [
+            -41.0705,
+            -165.336,
+            1522.69
+          ],
+          "max": [
+            -20.7494,
+            -161.283,
+            1529.19
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49056",
+      "b": "FMA59545",
+      "nameA": "right medial rectus",
+      "nameB": "right lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 8.341201123238505,
+        "maxMm": 40.185551977794184,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 6.4942305258586455,
+        "maxMm": 10.752793804867627,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49056",
+      "b": "FMA59091",
+      "nameA": "right medial rectus",
+      "nameB": "tarsal plate of right upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.28959428237398,
+        "maxMm": 44.21921975012537,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.19499356293393,
+        "maxMm": 22.13455526998455,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49056",
+      "b": "FMA59089",
+      "nameA": "right medial rectus",
+      "nameB": "tarsal plate of right lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.989942205029255,
+        "maxMm": 44.46229709810323,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.786826573079033,
+        "maxMm": 21.376951439342328,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49052",
+      "b": "FMA59091",
+      "nameA": "right superior oblique",
+      "nameB": "tarsal plate of right upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 15.97058548194358,
+        "maxMm": 43.117446270506335,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 11.818319442289653,
+        "maxMm": 15.611311250529358,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49044",
+      "b": "FMA59091",
+      "nameA": "right superior rectus",
+      "nameB": "tarsal plate of right upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 13.437636697499347,
+        "maxMm": 44.118463252475124,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 5.711488794526319,
+        "maxMm": 11.505483746892207,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46293",
+      "b": "FMA59556",
+      "nameA": "left digastric",
+      "nameB": "left nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 65.96989997703592,
+        "maxMm": 95.91773304418903,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 61.292495014694694,
+        "maxMm": 72.07571610032323,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46292",
+      "b": "FMA59555",
+      "nameA": "right digastric",
+      "nameB": "right nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 69.7011406897333,
+        "maxMm": 95.87321419478955,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 59.9287219730764,
+        "maxMm": 71.72538245530654,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA13409",
+      "b": "FMA59556",
+      "nameA": "left sternocleidomastoid",
+      "nameB": "left nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 120.31520855984915,
+        "maxMm": 185.57423617164636,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 79.350068112006,
+        "maxMm": 86.74248500708178,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA13408",
+      "b": "FMA59555",
+      "nameA": "right sternocleidomastoid",
+      "nameB": "right nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 119.64590283432203,
+        "maxMm": 185.13619465747382,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 78.7734105832851,
+        "maxMm": 86.84720854860558,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA13408",
+      "b": "FMA59556",
+      "nameA": "right sternocleidomastoid",
+      "nameB": "left nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 130.6599560825351,
+        "maxMm": 187.13364211974294,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 93.2061197440017,
+        "maxMm": 100.07255243597024,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52630",
+      "b": "FMA59092",
+      "nameA": "left lacrimal nerve",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 13.496208661694537,
+        "maxMm": 43.960063467197116,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.189947497836078,
+        "maxMm": 25.29825752122076,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52670",
+      "b": "FMA59583",
+      "nameA": "left nasociliary nerve",
+      "nameB": "left lacrimal canaliculus",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 23.655733162599308,
+        "maxMm": 54.049979555592785,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 14.695504562108676,
+        "maxMm": 17.39290824824076,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52670",
+      "b": "FMA59546",
+      "nameA": "left nasociliary nerve",
+      "nameB": "left lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 22.049690727082726,
+        "maxMm": 50.53724231899766,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 14.168731737738318,
+        "maxMm": 26.08064519945376,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52670",
+      "b": "FMA59092",
+      "nameA": "left nasociliary nerve",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 24.673709031294067,
+        "maxMm": 52.251223827676974,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 19.741476732931396,
+        "maxMm": 30.392349680948875,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52670",
+      "b": "FMA59090",
+      "nameA": "left nasociliary nerve",
+      "nameB": "tarsal plate of left lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 26.59155670051865,
+        "maxMm": 52.25869865543917,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 28.376108810563416,
+        "maxMm": 31.356223665170113,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52629",
+      "b": "FMA59091",
+      "nameA": "right lacrimal nerve",
+      "nameB": "tarsal plate of right upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 116,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 13.959757151591296,
+        "maxMm": 43.9577393613457,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.754014182209511,
+        "maxMm": 25.335802789925577,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52669",
+      "b": "FMA59582",
+      "nameA": "right nasociliary nerve",
+      "nameB": "right lacrimal canaliculus",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 23.747116770170233,
+        "maxMm": 54.06665888475077,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 112,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 14.615257108560668,
+        "maxMm": 17.373206818940304,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52669",
+      "b": "FMA59545",
+      "nameA": "right nasociliary nerve",
+      "nameB": "right lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 23.23666322140293,
+        "maxMm": 50.523465437754744,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 16.871743692158294,
+        "maxMm": 26.091761665320735,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52669",
+      "b": "FMA59091",
+      "nameA": "right nasociliary nerve",
+      "nameB": "tarsal plate of right upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 25.46716976893976,
+        "maxMm": 52.31490560337463,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 19.478938380567723,
+        "maxMm": 30.44028506246547,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52669",
+      "b": "FMA59089",
+      "nameA": "right nasociliary nerve",
+      "nameB": "tarsal plate of right lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 26.850640118702934,
+        "maxMm": 52.293504615774225,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 28.54434708280455,
+        "maxMm": 31.417492627118698,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA50801",
+      "b": "FMA59582",
+      "nameA": "brain",
+      "nameB": "right lacrimal canaliculus",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 103.71021109000839,
+        "maxMm": 172.7474091959486,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 112,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 39.48935389681124,
+        "maxMm": 42.09289489730555,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA50801",
+      "b": "FMA59583",
+      "nameA": "brain",
+      "nameB": "left lacrimal canaliculus",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 103.24496309132763,
+        "maxMm": 171.12258995894055,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 39.5569675612274,
+        "maxMm": 42.139736899510986,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA50801",
+      "b": "FMA59555",
+      "nameA": "brain",
+      "nameB": "right nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 96.75157674685455,
+        "maxMm": 173.39434561110605,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 46.30200490000403,
+        "maxMm": 50.275794669900456,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA50801",
+      "b": "FMA59556",
+      "nameA": "brain",
+      "nameB": "left nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 97.95093852818827,
+        "maxMm": 172.66624054392253,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 46.16421780296945,
+        "maxMm": 50.32050138899653,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA50801",
+      "b": "FMA59545",
+      "nameA": "brain",
+      "nameB": "right lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 99.60350071644068,
+        "maxMm": 168.60458385664515,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 40.772133664550864,
+        "maxMm": 44.79915583654043,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA50801",
+      "b": "FMA59546",
+      "nameA": "brain",
+      "nameB": "left lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 98.63670923476822,
+        "maxMm": 167.31563912738014,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 39.18767491189047,
+        "maxMm": 45.22076449220103,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA50801",
+      "b": "FMA59091",
+      "nameA": "brain",
+      "nameB": "tarsal plate of right upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 103.66766540657699,
+        "maxMm": 171.9647369945725,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 34.156464421437406,
+        "maxMm": 37.218506560391816,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA50801",
+      "b": "FMA59092",
+      "nameA": "brain",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 102.41602441673861,
+        "maxMm": 167.79772586918958,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 33.88083284921522,
+        "maxMm": 37.34025732758148,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA50801",
+      "b": "FMA59089",
+      "nameA": "brain",
+      "nameB": "tarsal plate of right lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 103.33658714166101,
+        "maxMm": 173.7558564737675,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 41.903761883630565,
+        "maxMm": 43.99441945849498,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA50801",
+      "b": "FMA59090",
+      "nameA": "brain",
+      "nameB": "tarsal plate of left lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 101.42134002278954,
+        "maxMm": 168.77878939752972,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 42.00089984083677,
+        "maxMm": 44.408904853531396,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12514",
+      "b": "FMA59582",
+      "nameA": "right eyeball",
+      "nameB": "right lacrimal canaliculus",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 17.426500257079738,
+        "maxMm": 28.89205620045068,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 112,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 4.353403361414916,
+        "maxMm": 7.063621454093031,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12514",
+      "b": "FMA59583",
+      "nameA": "right eyeball",
+      "nameB": "left lacrimal canaliculus",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 47.38504114686406,
+        "maxMm": 58.07888366910989,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 6.449495822155378,
+        "maxMm": 9.89966979247286,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12514",
+      "b": "FMA59555",
+      "nameA": "right eyeball",
+      "nameB": "right nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 24.108656191501087,
+        "maxMm": 33.599800778576196,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 16.975588079345187,
+        "maxMm": 21.829152835584164,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12514",
+      "b": "FMA59556",
+      "nameA": "right eyeball",
+      "nameB": "left nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 49.1262456896515,
+        "maxMm": 59.850662016472334,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 22.577957081188675,
+        "maxMm": 29.016170922607877,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12514",
+      "b": "FMA59545",
+      "nameA": "right eyeball",
+      "nameB": "right lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.21781553013425,
+        "maxMm": 28.50747927356606,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 6.75651294922331,
+        "maxMm": 9.466537496175173,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12514",
+      "b": "FMA59546",
+      "nameA": "right eyeball",
+      "nameB": "left lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 46.17650817850999,
+        "maxMm": 56.85354723541882,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 10.27342460720864,
+        "maxMm": 16.098365041208336,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12514",
+      "b": "FMA59091",
+      "nameA": "right eyeball",
+      "nameB": "tarsal plate of right upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 9.136446502333378,
+        "maxMm": 23.733518612794764,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 3,
+        "withinOneMm": 24,
+        "medianMm": 2.170680394146824,
+        "maxMm": 4.619044277493903,
+        "closePointBounds": {
+          "min": [
+            -33.5766,
+            -165.113,
+            1522.25
+          ],
+          "max": [
+            -31.8091,
+            -164.681,
+            1522.35
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12514",
+      "b": "FMA59092",
+      "nameA": "right eyeball",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 51.16866098150313,
+        "maxMm": 62.09557392673007,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 4.87339081133441,
+        "maxMm": 8.113580282464707,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12514",
+      "b": "FMA59089",
+      "nameA": "right eyeball",
+      "nameB": "tarsal plate of right lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 3,
+        "medianMm": 9.968710172793868,
+        "maxMm": 22.849628580132286,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 2,
+        "withinOneMm": 28,
+        "medianMm": 1.6029293781651717,
+        "maxMm": 3.584611391912574,
+        "closePointBounds": {
+          "min": [
+            -38.5565,
+            -162.143,
+            1512.48
+          ],
+          "max": [
+            -36.8859,
+            -161.149,
+            1513.01
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12514",
+      "b": "FMA59090",
+      "nameA": "right eyeball",
+      "nameB": "tarsal plate of left lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 52.054356500104745,
+        "maxMm": 62.88210336462991,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 5.730273798868637,
+        "maxMm": 8.099516998562333,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12515",
+      "b": "FMA59583",
+      "nameA": "left eyeball",
+      "nameB": "left lacrimal canaliculus",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 17.915907568415204,
+        "maxMm": 28.60928881062935,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 4.139205499193037,
+        "maxMm": 7.053477653611741,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12515",
+      "b": "FMA59556",
+      "nameA": "left eyeball",
+      "nameB": "left nasolacrimal duct",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 23.720075531920244,
+        "maxMm": 33.68276046303222,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 16.05319568061149,
+        "maxMm": 21.803380417942133,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12515",
+      "b": "FMA59546",
+      "nameA": "left eyeball",
+      "nameB": "left lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.727306359169983,
+        "maxMm": 29.367334834891786,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 6.399840971312409,
+        "maxMm": 9.534484379488523,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12515",
+      "b": "FMA59092",
+      "nameA": "left eyeball",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 2,
+        "medianMm": 9.165221942211732,
+        "maxMm": 24.700918234753946,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 23,
+        "medianMm": 2.313859652433807,
+        "maxMm": 4.602329821481761,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12515",
+      "b": "FMA59090",
+      "nameA": "left eyeball",
+      "nameB": "tarsal plate of left lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 1,
+        "withinOneMm": 2,
+        "medianMm": 10.753196451580108,
+        "maxMm": 24.14549678079367,
+        "closePointBounds": {
+          "min": [
+            34.3228,
+            -162.424,
+            1512.17
+          ],
+          "max": [
+            34.3228,
+            -162.424,
+            1512.17
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 3,
+        "withinOneMm": 24,
+        "medianMm": 1.9271962755947547,
+        "maxMm": 3.548221018713367,
+        "closePointBounds": {
+          "min": [
+            31.7737,
+            -163.032,
+            1511.1
+          ],
+          "max": [
+            40.799,
+            -157.307,
+            1514.5
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA59102",
+      "b": "FMA59091",
+      "nameA": "right lacrimal gland",
+      "nameB": "tarsal plate of right upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 115,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 7.611047589524056,
+        "maxMm": 13.47107901354318,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 8.449633473707522,
+        "maxMm": 20.329586149255398,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA59103",
+      "b": "FMA59092",
+      "nameA": "left lacrimal gland",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 113,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 8.789318801818498,
+        "maxMm": 13.503745493098819,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 7.795682930688948,
+        "maxMm": 20.371592083094633,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49144",
+      "b": "FMA59089",
+      "nameA": "check ligament of right lateral rectus",
+      "nameB": "tarsal plate of right lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 121,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 10.397620337846654,
+        "maxMm": 15.023835882024198,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 15.84661725069428,
+        "maxMm": 25.246233182199674,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49145",
+      "b": "FMA59090",
+      "nameA": "check ligament of left lateral rectus",
+      "nameB": "tarsal plate of left lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 10.53785011280757,
+        "maxMm": 15.203693229278208,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 15.540170341038609,
+        "maxMm": 25.266060729959438,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49147",
+      "b": "FMA59545",
+      "nameA": "check ligament of right medial rectus",
+      "nameB": "right lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 6.148951344317872,
+        "maxMm": 11.600628991567643,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 5.763218119245511,
+        "maxMm": 11.814597007092434,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49147",
+      "b": "FMA59091",
+      "nameA": "check ligament of right medial rectus",
+      "nameB": "tarsal plate of right upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 11.22371346747592,
+        "maxMm": 16.19922025901247,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 15.349303691373034,
+        "maxMm": 23.769498237026376,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49147",
+      "b": "FMA59089",
+      "nameA": "check ligament of right medial rectus",
+      "nameB": "tarsal plate of right lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 11.055815671401199,
+        "maxMm": 16.368784175339282,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 15.866082880156641,
+        "maxMm": 23.065367645238187,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49148",
+      "b": "FMA59546",
+      "nameA": "check ligament of left medial rectus",
+      "nameB": "left lacrimal sac",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 122,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 6.485163536103073,
+        "maxMm": 11.593748757412307,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 5.567742066438469,
+        "maxMm": 11.78947399165885,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49148",
+      "b": "FMA59092",
+      "nameA": "check ligament of left medial rectus",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 122,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 11.400170351358742,
+        "maxMm": 16.208116190353532,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 15.631345843848498,
+        "maxMm": 23.752074819897306,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA49148",
+      "b": "FMA59090",
+      "nameA": "check ligament of left medial rectus",
+      "nameB": "tarsal plate of left lower eyelid",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 122,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 11.644483174877294,
+        "maxMm": 16.298622701273118,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 15.561589842943503,
+        "maxMm": 23.05454426463469,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA59582",
+      "b": "FMA59545",
+      "nameA": "right lacrimal canaliculus",
+      "nameB": "right lacrimal sac",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 112,
+        "withinTenthMm": 5,
+        "withinQuarterMm": 22,
+        "withinOneMm": 47,
+        "medianMm": 1.9989953176867228,
+        "maxMm": 3.782503688509386,
+        "closePointBounds": {
+          "min": [
+            -16.2863,
+            -164.232,
+            1513.88
+          ],
+          "max": [
+            -14.581,
+            -163.848,
+            1516.15
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 1,
+        "withinQuarterMm": 2,
+        "withinOneMm": 8,
+        "medianMm": 3.935935754779908,
+        "maxMm": 10.750704652487807,
+        "closePointBounds": {
+          "min": [
+            -15.7604,
+            -164.304,
+            1515.49
+          ],
+          "max": [
+            -14.8115,
+            -164.142,
+            1515.63
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA59582",
+      "b": "FMA59091",
+      "nameA": "right lacrimal canaliculus",
+      "nameB": "tarsal plate of right upper eyelid",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 112,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 4.8774967230191875,
+        "maxMm": 6.392319845721075,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 16.379949665368308,
+        "maxMm": 25.187575763459275,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA59582",
+      "b": "FMA59089",
+      "nameA": "right lacrimal canaliculus",
+      "nameB": "tarsal plate of right lower eyelid",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 112,
+        "withinTenthMm": 7,
+        "withinQuarterMm": 16,
+        "withinOneMm": 28,
+        "medianMm": 3.29581247024619,
+        "maxMm": 5.296931924236853,
+        "closePointBounds": {
+          "min": [
+            -20.3497,
+            -163.867,
+            1513.29
+          ],
+          "max": [
+            -19.6895,
+            -163.386,
+            1514.1
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 2,
+        "withinQuarterMm": 6,
+        "withinOneMm": 8,
+        "medianMm": 14.481697055594019,
+        "maxMm": 24.032154980359127,
+        "closePointBounds": {
+          "min": [
+            -20.6126,
+            -163.797,
+            1513.47
+          ],
+          "max": [
+            -19.4623,
+            -163.37,
+            1513.81
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA59583",
+      "b": "FMA59546",
+      "nameA": "left lacrimal canaliculus",
+      "nameB": "left lacrimal sac",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 10,
+        "withinQuarterMm": 26,
+        "withinOneMm": 49,
+        "medianMm": 2.1350087150854473,
+        "maxMm": 3.799495539026429,
+        "closePointBounds": {
+          "min": [
+            13.2772,
+            -164.291,
+            1514.04
+          ],
+          "max": [
+            15.0625,
+            -163.633,
+            1516.29
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 1,
+        "withinQuarterMm": 2,
+        "withinOneMm": 6,
+        "medianMm": 3.961300113849396,
+        "maxMm": 10.738808114790729,
+        "closePointBounds": {
+          "min": [
+            13.9197,
+            -164.305,
+            1515.53
+          ],
+          "max": [
+            14.5519,
+            -164.066,
+            1515.57
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA59583",
+      "b": "FMA59092",
+      "nameA": "left lacrimal canaliculus",
+      "nameB": "tarsal plate of left upper eyelid",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 4.817432947357902,
+        "maxMm": 6.392513014456724,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 16.636290074412617,
+        "maxMm": 25.179319019468075,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA59583",
+      "b": "FMA59090",
+      "nameA": "left lacrimal canaliculus",
+      "nameB": "tarsal plate of left lower eyelid",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinTenthMm": 10,
+        "withinQuarterMm": 22,
+        "withinOneMm": 37,
+        "medianMm": 3.2436838563583326,
+        "maxMm": 5.318347190622302,
+        "closePointBounds": {
+          "min": [
+            18.0156,
+            -163.88,
+            1513.25
+          ],
+          "max": [
+            19.0687,
+            -163.393,
+            1514.09
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 105,
+        "withinTenthMm": 4,
+        "withinQuarterMm": 8,
+        "withinOneMm": 10,
+        "medianMm": 14.268791781783603,
+        "maxMm": 24.00317856555669,
+        "closePointBounds": {
+          "min": [
+            18.1183,
+            -163.736,
+            1513.39
+          ],
+          "max": [
+            18.6241,
+            -163.433,
+            1513.9
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA59555",
+      "b": "FMA59545",
+      "nameA": "right nasolacrimal duct",
+      "nameB": "right lacrimal sac",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 114,
+        "withinTenthMm": 5,
+        "withinQuarterMm": 15,
+        "withinOneMm": 26,
+        "medianMm": 10.765951263590217,
+        "maxMm": 16.481969664151123,
+        "closePointBounds": {
+          "min": [
+            -17.0121,
+            -161.455,
+            1503.73
+          ],
+          "max": [
+            -15.0907,
+            -159.43,
+            1504.45
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 7,
+        "withinQuarterMm": 16,
+        "withinOneMm": 31,
+        "medianMm": 8.364680436813035,
+        "maxMm": 14.054390240775193,
+        "closePointBounds": {
+          "min": [
+            -16.928,
+            -161.395,
+            1503.63
+          ],
+          "max": [
+            -15.0737,
+            -159.58,
+            1504.38
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA59556",
+      "b": "FMA59546",
+      "nameA": "left nasolacrimal duct",
+      "nameB": "left lacrimal sac",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 114,
+        "withinTenthMm": 8,
+        "withinQuarterMm": 19,
+        "withinOneMm": 30,
+        "medianMm": 9.66756121889868,
+        "maxMm": 16.612302480089742,
+        "closePointBounds": {
+          "min": [
+            13.7576,
+            -161.441,
+            1503.66
+          ],
+          "max": [
+            15.6759,
+            -159.433,
+            1504.4
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 97,
+        "withinTenthMm": 8,
+        "withinQuarterMm": 15,
+        "withinOneMm": 27,
+        "medianMm": 11.099801573001132,
+        "maxMm": 14.077857837398442,
+        "closePointBounds": {
+          "min": [
+            13.8066,
+            -161.493,
+            1503.7
+          ],
+          "max": [
+            15.6557,
+            -159.469,
+            1504.41
+          ]
+        }
+      },
+      "flagged": false
+    }
+  ],
+  "translatedShapeComparisons": [],
+  "limits": "All existing head/neck source structures plus ten exact candidates; source hashes checked before reading geometry. Raw-coordinate comparisons use at most 128 deterministic vertex samples per direction to all comparison triangles, with degenerate-face segment fallback. Pairs over 1 mm apart in bounds are pruned. Exact shared triangles or at least 25% of samples within 0.25 mm in either direction trigger review. Separate extent-filtered, same/unspecified-side centre-translation diagnostics search for near-translated alternatives. Sampling, finite geometry and source names do not establish tissue boundaries, absence of overlap, flow, attachments, lumen, clinical identity or safety. No admission is made by running this audit."
+}

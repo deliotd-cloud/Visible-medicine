@@ -1,27 +1,27 @@
 {
   "passed": true,
-  "assertions": 84966,
+  "assertions": 87108,
   "scopes": 36,
-  "recipeScopes": 714,
-  "renderScopes": 11424,
-  "sessions": 1425,
+  "recipeScopes": 732,
+  "renderScopes": 11712,
+  "sessions": 1461,
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
-      "structures": 1006,
+      "structures": 1016,
       "recipes": 9
     },
     {
       "region": "whole-body",
       "side": "left",
-      "structures": 582,
+      "structures": 587,
       "recipes": 9
     },
     {
       "region": "whole-body",
       "side": "right",
-      "structures": 581,
+      "structures": 586,
       "recipes": 9
     },
     {
@@ -189,20 +189,20 @@
     {
       "region": "head-neck",
       "side": "both",
-      "structures": 263,
-      "recipes": 37
+      "structures": 273,
+      "recipes": 43
     },
     {
       "region": "head-neck",
       "side": "left",
-      "structures": 154,
-      "recipes": 37
+      "structures": 159,
+      "recipes": 43
     },
     {
       "region": "head-neck",
       "side": "right",
-      "structures": 154,
-      "recipes": 37
+      "structures": 159,
+      "recipes": 43
     },
     {
       "region": "spine",
@@ -223,7 +223,7 @@
       "recipes": 17
     }
   ],
-  "catalogSha256": "b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5",
+  "catalogSha256": "01a253d3d67a933d41bb3b08693ab13279b4e12c0767f2e4b8d68fa9f6078d86",
   "sourceGeometryChanged": false,
   "clinicalValidation": false,
   "browserInteractionTesting": false,

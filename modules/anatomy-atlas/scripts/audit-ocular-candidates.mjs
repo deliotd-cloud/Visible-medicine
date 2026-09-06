@@ -8,12 +8,18 @@ import {
 } from './bodyparts-archive.mjs';
 import { geometryFingerprint, inventoryHolds } from './anatomy-inventory.mjs';
 import { prepareShape } from './vessel-shape-math.mjs';
+import { execFileSync } from 'node:child_process';
 const hash = (b) => createHash('sha256').update(b).digest('hex');
-const catalogRaw = await fs.readFile(
-    'public/models/bodyparts3d/full-body/catalog.json',
-  ),
+// Historical preparation is reproducible from its original Site source revision.
+const previous = (path) =>
+  execFileSync(
+    'git',
+    ['show', '7a517628613ce287d156646bf3fc6ef1cdc714d8:' + path],
+    { maxBuffer: 16e6 },
+  );
+const catalogRaw = previous('public/models/bodyparts3d/full-body/catalog.json'),
   catalog = JSON.parse(catalogRaw);
-const inventoryRaw = await fs.readFile('content/source-inventory.json'),
+const inventoryRaw = previous('content/source-inventory.json'),
   inventory = JSON.parse(inventoryRaw);
 assert.equal(
   hash(catalogRaw),

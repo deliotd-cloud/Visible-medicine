@@ -1,8 +1,12 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Eye-region dissection
+
+The atlas now has **1,016 source entries, 131 dissection stages and 113 focuses** across all eleven regions and the whole body. Open **Head & neck → Study windows & focuses** for **Eyelid tarsal plates**, **Tear-drainage source structures** or **Nasolacrimal duct & nasal context**. Ten original source-labelled structures use the existing select/frame, isolate/fade, remove/restore/Undo, separation, side filtering and focused practice controls. All earlier anatomy remains unchanged. See [source evidence, controls and clinical limits](docs/OCULAR_DETAIL.md). These are unvalidated teaching surfaces, not a complete eyelid, tear-flow model or surgical dissection simulator.
+
 ## Clearer regional study guidance
 
-Open the **Study guide → Orient this dissection** to return to the recipe's viewing direction without changing tissue visibility. **What is in this view?** shows availability, omitted/extra recipe entries and searchable source members with target/context roles. Open the next authored layer or reopen a clean recipe with explicit reset warnings. See [controls and acceptance limits](docs/DISSECTION_GUIDANCE.md). Ten [eye-region source candidates](docs/OCULAR_CANDIDATES.md) have been prepared for further geometry review but are not included in the model.
+Open the **Study guide → Orient this dissection** to return to the recipe's viewing direction without changing tissue visibility. **What is in this view?** shows availability, omitted/extra recipe entries and searchable source members with target/context roles. Open the next authored layer or reopen a clean recipe with explicit reset warnings. See [controls and acceptance limits](docs/DISSECTION_GUIDANCE.md). The [ocular preparation report](docs/OCULAR_CANDIDATES.md) is preserved as historical evidence preceding the current admission.
 
 ## Regional dissection reliability
 
@@ -12,7 +16,7 @@ A [bounded source-shape screen](docs/VESSEL_SHAPE_AUDIT.md) checked all 223 rend
 
 ## Foot and hand vascular dissection
 
-The latest atlas has **1,006 source entries, 128 dissection stages and 110 focuses**. Open **Ankle & foot → Study windows & focuses** for the plantar arterial arch, medial plantar branch, dorsal venous arches and exposed local vessels. Eight source-labelled entries add detail without changing previous anatomy. Two uncertain plantar venous arches remain withheld for shape/provenance review. See [source evidence, controls and clinical gates](docs/FOOT_VASCULAR_DETAIL.md).
+The foot milestone reached **1,006 source entries, 128 dissection stages and 110 focuses**. Open **Ankle & foot → Study windows & focuses** for the plantar arterial arch, medial plantar branch, dorsal venous arches and exposed local vessels. Eight source-labelled entries added detail without changing previous anatomy. Two uncertain plantar venous arches remain withheld for shape/provenance review. See [source evidence, controls and clinical gates](docs/FOOT_VASCULAR_DETAIL.md).
 
 The hand arterial milestone is summarised below. The hand venous milestone reached **998 source entries, 124 dissection stages and 106 focuses**. Open **Wrist & hand → Study windows & focuses** for palmar venous/arterial arches, dorsal venous networks, palmar/finger veins or the exposed artery–vein comparison. Fourteen venous source entries add detail while all earlier anatomy remains exact. Red/blue identify arteries/veins, not oxygenation; uncertain vessel types are neutral grey. Two little-finger groups remain withheld for source-extent review. See [source evidence, controls and clinical gates](docs/HAND_VENOUS_DETAIL.md).
 

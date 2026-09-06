@@ -672,6 +672,20 @@
       "bytes": 192916,
       "sha256": "9e6d01cc92726aa2db728febcf52e0adfa0e6b9db9f58705f49b0653c8311881",
       "structures": 8
+    },
+    {
+      "id": "head-neck-organs-ocular-detail",
+      "url": "/models/bodyparts3d/full-body/head-neck-organs-ocular-detail.glb",
+      "bytes": 57312,
+      "sha256": "2f0b7535025dfd415ef448ae4fef66e351303e1fad2e7da128fa7122bac9929b",
+      "structures": 6
+    },
+    {
+      "id": "head-neck-connective-ocular-detail",
+      "url": "/models/bodyparts3d/full-body/head-neck-connective-ocular-detail.glb",
+      "bytes": 94876,
+      "sha256": "08b23d00975e6cd10eeca344d556fe75ec8cd6f45fc7087ac7da28754754108b",
+      "structures": 4
     }
   ],
   "structures": [
@@ -58819,6 +58833,556 @@
         }
       ],
       "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-canaliculus",
+      "fmaId": "FMA59582",
+      "name": "Right lacrimal canaliculus",
+      "sourceName": "right lacrimal canaliculus",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-ocular-detail",
+      "nodeName": "FMA59582",
+      "bounds": {
+        "min": [
+          -0.20399999618530273,
+          7.132299900054932,
+          1.1338599920272827
+        ],
+        "max": [
+          -0.14581000804901123,
+          7.173599720001221,
+          1.1435099840164185
+        ]
+      },
+      "center": [
+        -0.17490500211715698,
+        7.152949810028076,
+        1.1386849880218506
+      ],
+      "anchor": [
+        -0.17007499933242798,
+        7.160400390625,
+        1.1397000551223755
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1349",
+          "sha256": "ff8401d7470c86141e144f82eea17a1081f076dbf3d068d48f26832c742ebbf3"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-canaliculus",
+      "fmaId": "FMA59583",
+      "name": "Left lacrimal canaliculus",
+      "sourceName": "left lacrimal canaliculus",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-ocular-detail",
+      "nodeName": "FMA59583",
+      "bounds": {
+        "min": [
+          0.13277199864387512,
+          7.132099628448486,
+          1.1338499784469604
+        ],
+        "max": [
+          0.1908929944038391,
+          7.173399448394775,
+          1.1435699462890625
+        ]
+      },
+      "center": [
+        0.16183249652385712,
+        7.152749538421631,
+        1.1387099623680115
+      ],
+      "anchor": [
+        0.15296699106693268,
+        7.157199859619141,
+        1.1404401063919067
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1298",
+          "sha256": "98ec4fcd5a6c260a179480702c2d4690624207aeeb76160c6be4667bd66e11a5"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-nasolacrimal-duct",
+      "fmaId": "FMA59555",
+      "name": "Right nasolacrimal duct",
+      "sourceName": "right nasolacrimal duct",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-ocular-detail",
+      "nodeName": "FMA59555",
+      "bounds": {
+        "min": [
+          -0.17041701078414917,
+          6.877199649810791,
+          1.0194400548934937
+        ],
+        "max": [
+          -0.12113599479198456,
+          7.04680061340332,
+          1.1150000095367432
+        ]
+      },
+      "center": [
+        -0.14577650278806686,
+        6.962000131607056,
+        1.0672200322151184
+      ],
+      "anchor": [
+        -0.15660300850868225,
+        6.948100566864014,
+        1.085939884185791
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1353",
+          "sha256": "c54be1e1906335236559e5ca8bf69e95cbbdac0fef62d90efa9e36aa2ac164e8"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
+      "fmaId": "FMA59556",
+      "name": "Left nasolacrimal duct",
+      "sourceName": "left nasolacrimal duct",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-ocular-detail",
+      "nodeName": "FMA59556",
+      "bounds": {
+        "min": [
+          0.10770600289106369,
+          6.877500057220459,
+          1.0195000171661377
+        ],
+        "max": [
+          0.1575310081243515,
+          7.04680061340332,
+          1.1148300170898438
+        ]
+      },
+      "center": [
+        0.1326185055077076,
+        6.96215033531189,
+        1.0671650171279907
+      ],
+      "anchor": [
+        0.14243200421333313,
+        6.95319938659668,
+        1.0891900062561035
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1302",
+          "sha256": "a8a4bcc60e752d4f4b79a60ec6e9539809aa4293be59d6623bb0ac008ad6606f"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
+      "fmaId": "FMA59545",
+      "name": "Right lacrimal sac",
+      "sourceName": "right lacrimal sac",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-ocular-detail",
+      "nodeName": "FMA59545",
+      "bounds": {
+        "min": [
+          -0.17038500308990479,
+          7.034899711608887,
+          1.0935200452804565
+        ],
+        "max": [
+          -0.13739600777626038,
+          7.186500072479248,
+          1.14382004737854
+        ]
+      },
+      "center": [
+        -0.15389050543308258,
+        7.110699892044067,
+        1.1186700463294983
+      ],
+      "anchor": [
+        -0.14081799983978271,
+        7.105100154876709,
+        1.1188600063323975
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1360",
+          "sha256": "192020e5353d1f78e5867a7a2f09e4f114ab31a7cdc2865056c734a5f1bbc02e"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac",
+      "fmaId": "FMA59546",
+      "name": "Left lacrimal sac",
+      "sourceName": "left lacrimal sac",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-ocular-detail",
+      "nodeName": "FMA59546",
+      "bounds": {
+        "min": [
+          0.12432499974966049,
+          7.035099983215332,
+          1.0937700271606445
+        ],
+        "max": [
+          0.15764300525188446,
+          7.186500072479248,
+          1.1433299779891968
+        ]
+      },
+      "center": [
+        0.14098400250077248,
+        7.11080002784729,
+        1.1185500025749207
+      ],
+      "anchor": [
+        0.1274610012769699,
+        7.108100414276123,
+        1.1183700561523438
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1309",
+          "sha256": "d62bdc3bfc8e3b2d5c0fea85973e68e4f066c253f6a18be5fe2c72e791a4ff21"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
+      "fmaId": "FMA59091",
+      "name": "Tarsal plate of right upper eyelid",
+      "sourceName": "tarsal plate of right upper eyelid",
+      "system": "connective",
+      "category": "connective-tissue",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-connective-ocular-detail",
+      "nodeName": "FMA59091",
+      "bounds": {
+        "min": [
+          -0.44249600172042847,
+          7.166600227355957,
+          1.0664000511169434
+        ],
+        "max": [
+          -0.18660801649093628,
+          7.292099475860596,
+          1.1622999906539917
+        ]
+      },
+      "center": [
+        -0.3145520091056824,
+        7.229349851608276,
+        1.1143500208854675
+      ],
+      "anchor": [
+        -0.31737300753593445,
+        7.228799819946289,
+        1.1493099927902222
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1375",
+          "sha256": "752358970eb428283dadd2db88fbb3de3d08b7b876a9e346a84c21cb90a5e70a"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
+      "fmaId": "FMA59092",
+      "name": "Tarsal plate of left upper eyelid",
+      "sourceName": "tarsal plate of left upper eyelid",
+      "system": "connective",
+      "category": "connective-tissue",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-connective-ocular-detail",
+      "nodeName": "FMA59092",
+      "bounds": {
+        "min": [
+          0.17353300750255585,
+          7.166800498962402,
+          1.066499948501587
+        ],
+        "max": [
+          0.42937901616096497,
+          7.292099475860596,
+          1.1623399257659912
+        ]
+      },
+      "center": [
+        0.3014560118317604,
+        7.229449987411499,
+        1.114419937133789
+      ],
+      "anchor": [
+        0.3106110095977783,
+        7.227800369262695,
+        1.1483700275421143
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1324",
+          "sha256": "eeb0db9872f49810b69d7865328602d6419327b2f46fda388cd76f8960f5f188"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
+      "fmaId": "FMA59089",
+      "name": "Tarsal plate of right lower eyelid",
+      "sourceName": "tarsal plate of right lower eyelid",
+      "system": "connective",
+      "category": "connective-tissue",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-connective-ocular-detail",
+      "nodeName": "FMA59089",
+      "bounds": {
+        "min": [
+          -0.43326500058174133,
+          7.070000171661377,
+          1.061000108718872
+        ],
+        "max": [
+          -0.19424299895763397,
+          7.153800010681152,
+          1.1511300802230835
+        ]
+      },
+      "center": [
+        -0.31375399976968765,
+        7.111900091171265,
+        1.1060650944709778
+      ],
+      "anchor": [
+        -0.31440800428390503,
+        7.112900257110596,
+        1.1345300674438477
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1379",
+          "sha256": "fd33c2b682d289f26dc00f99cab43a8a835e15b5722d75850739a540517e4ff2"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
+      "fmaId": "FMA59090",
+      "name": "Tarsal plate of left lower eyelid",
+      "sourceName": "tarsal plate of left lower eyelid",
+      "system": "connective",
+      "category": "connective-tissue",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-connective-ocular-detail",
+      "nodeName": "FMA59090",
+      "bounds": {
+        "min": [
+          0.18118299543857574,
+          7.0701003074646,
+          1.0610100030899048
+        ],
+        "max": [
+          0.42014098167419434,
+          7.153800010681152,
+          1.1510800123214722
+        ]
+      },
+      "center": [
+        0.30066198855638504,
+        7.111950159072876,
+        1.1060450077056885
+      ],
+      "anchor": [
+        0.30309900641441345,
+        7.104000091552734,
+        1.1308900117874146
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1328",
+          "sha256": "c3ba07f82baf4e55563d9736653ef768cb047bbf277a079aacbcfa780096d322"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
       "provenance": {
         "method": "licensed-source-mesh",
         "license": "CC-BY-4.0",

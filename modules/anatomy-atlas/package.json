@@ -35,6 +35,8 @@
     "guidance:test": "node scripts/validate-dissection-guidance.mjs",
     "ocular-candidates:audit": "node scripts/audit-ocular-candidates.mjs",
     "ocular-candidates:test": "node scripts/validate-ocular-candidates.mjs",
+    "ocular:audit": "node scripts/audit-ocular-geometry.mjs",
+    "ocular:test": "node scripts/validate-ocular.mjs",
     "study-navigation:test": "node scripts/validate-study-navigation.mjs",
     "study-links:test": "node scripts/validate-study-links.mjs",
     "study-library:test": "node scripts/validate-study-library.mjs",

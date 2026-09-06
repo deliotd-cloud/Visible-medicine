@@ -2,13 +2,13 @@
   "sourceVersion": "4.0",
   "license": "CC-BY-4.0",
   "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
-  "inventorySha256": "0101f247ea3019f589dd03eff98b3641c898b3c36dfe24324ea8b060ee45c26d",
-  "catalogSha256": "b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5",
+  "inventorySha256": "2d86813da40c4b48b641b995fc494ac2c05b4b2bc9320ccaa4791d7e1aa01ba7",
+  "catalogSha256": "01a253d3d67a933d41bb3b08693ab13279b4e12c0767f2e4b8d68fa9f6078d86",
   "query": "Unused-available ISA definitions with one to four components and explicit lexical regional-domain matches. Exact component sets are grouped without choosing a preferred anatomical identity. Domains overlap and are not inferred ontology classes.",
-  "unusedIsaDefinitions": 624,
-  "boundedIsaDefinitions": 581,
-  "matchedDefinitions": 219,
-  "sourceSetGroups": 203,
+  "unusedIsaDefinitions": 607,
+  "boundedIsaDefinitions": 565,
+  "matchedDefinitions": 203,
+  "sourceSetGroups": 187,
   "domainCounts": [
     {
       "id": "hand-foot-vessels",
@@ -16,7 +16,7 @@
     },
     {
       "id": "ocular-lacrimal",
-      "sourceSetGroups": 26
+      "sourceSetGroups": 10
     },
     {
       "id": "laryngeal-pharyngeal",
@@ -103,107 +103,12 @@
     },
     {
       "files": [
-        "FJ1298"
-      ],
-      "definitions": [
-        {
-          "id": "FMA59583",
-          "name": "left lacrimal canaliculus"
-        }
-      ],
-      "domains": [
-        "ocular-lacrimal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
         "FJ1301"
       ],
       "definitions": [
         {
           "id": "FMA59542",
           "name": "left lacrimal lake"
-        }
-      ],
-      "domains": [
-        "ocular-lacrimal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ1302"
-      ],
-      "definitions": [
-        {
-          "id": "FMA59556",
-          "name": "left nasolacrimal duct"
-        }
-      ],
-      "domains": [
-        "ocular-lacrimal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ1309"
-      ],
-      "definitions": [
-        {
-          "id": "FMA59546",
-          "name": "left lacrimal sac"
-        }
-      ],
-      "domains": [
-        "ocular-lacrimal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ1324"
-      ],
-      "definitions": [
-        {
-          "id": "FMA59092",
-          "name": "tarsal plate of left upper eyelid"
-        }
-      ],
-      "domains": [
-        "ocular-lacrimal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ1328"
-      ],
-      "definitions": [
-        {
-          "id": "FMA59090",
-          "name": "tarsal plate of left lower eyelid"
         }
       ],
       "domains": [
@@ -279,107 +184,12 @@
     },
     {
       "files": [
-        "FJ1349"
-      ],
-      "definitions": [
-        {
-          "id": "FMA59582",
-          "name": "right lacrimal canaliculus"
-        }
-      ],
-      "domains": [
-        "ocular-lacrimal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
         "FJ1352"
       ],
       "definitions": [
         {
           "id": "FMA59541",
           "name": "right lacrimal lake"
-        }
-      ],
-      "domains": [
-        "ocular-lacrimal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ1353"
-      ],
-      "definitions": [
-        {
-          "id": "FMA59555",
-          "name": "right nasolacrimal duct"
-        }
-      ],
-      "domains": [
-        "ocular-lacrimal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ1360"
-      ],
-      "definitions": [
-        {
-          "id": "FMA59545",
-          "name": "right lacrimal sac"
-        }
-      ],
-      "domains": [
-        "ocular-lacrimal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ1375"
-      ],
-      "definitions": [
-        {
-          "id": "FMA59091",
-          "name": "tarsal plate of right upper eyelid"
-        }
-      ],
-      "domains": [
-        "ocular-lacrimal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ1379"
-      ],
-      "definitions": [
-        {
-          "id": "FMA59089",
-          "name": "tarsal plate of right lower eyelid"
         }
       ],
       "domains": [
@@ -2247,26 +2057,6 @@
     },
     {
       "files": [
-        "FJ1298",
-        "FJ1349"
-      ],
-      "definitions": [
-        {
-          "id": "FMA58245",
-          "name": "lacrimal canaliculus"
-        }
-      ],
-      "domains": [
-        "ocular-lacrimal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
         "FJ1301",
         "FJ1352"
       ],
@@ -2274,46 +2064,6 @@
         {
           "id": "FMA59402",
           "name": "lacrimal lake"
-        }
-      ],
-      "domains": [
-        "ocular-lacrimal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ1302",
-        "FJ1353"
-      ],
-      "definitions": [
-        {
-          "id": "FMA9703",
-          "name": "nasolacrimal duct"
-        }
-      ],
-      "domains": [
-        "ocular-lacrimal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ1309",
-        "FJ1360"
-      ],
-      "definitions": [
-        {
-          "id": "FMA20289",
-          "name": "lacrimal sac"
         }
       ],
       "domains": [
@@ -2343,46 +2093,6 @@
       "domains": [
         "ocular-lacrimal",
         "cranial-neural"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ1324",
-        "FJ1375"
-      ],
-      "definitions": [
-        {
-          "id": "FMA59087",
-          "name": "tarsal plate of upper eyelid"
-        }
-      ],
-      "domains": [
-        "ocular-lacrimal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ1328",
-        "FJ1379"
-      ],
-      "definitions": [
-        {
-          "id": "FMA59088",
-          "name": "tarsal plate of lower eyelid"
-        }
-      ],
-      "domains": [
-        "ocular-lacrimal"
       ],
       "heldComponents": [],
       "decision": "identity-and-geometry-review-required",
@@ -4000,28 +3710,6 @@
         }
       ],
       "decision": "existing-component-hold-applies",
-      "renderedOwners": [],
-      "admitted": false,
-      "meshGeometryAudited": false
-    },
-    {
-      "files": [
-        "FJ1324",
-        "FJ1328",
-        "FJ1375",
-        "FJ1379"
-      ],
-      "definitions": [
-        {
-          "id": "FMA59086",
-          "name": "tarsal plate of eyelid"
-        }
-      ],
-      "domains": [
-        "ocular-lacrimal"
-      ],
-      "heldComponents": [],
-      "decision": "identity-and-geometry-review-required",
       "renderedOwners": [],
       "admitted": false,
       "meshGeometryAudited": false

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "reviewStatus": "draft-unvalidated",
-  "catalogSha256": "b9888bf57e7eee61638c2c6920677fe3e6b6bd55ad97df3d19f45829865c13d5",
+  "catalogSha256": "01a253d3d67a933d41bb3b08693ab13279b4e12c0767f2e4b8d68fa9f6078d86",
   "profiles": [
     {
       "region": "whole-body",
@@ -1031,7 +1031,17 @@
             "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
             "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
             "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
-            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
+            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-canaliculus",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-canaliculus",
+            "vm:anatomy:body:head-neck:right:organ:right-nasolacrimal-duct",
+            "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac",
+            "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
+            "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid"
           ]
         },
         {
@@ -1721,7 +1731,13 @@
             "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
             "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
-            "vm:anatomy:body:head-neck:unpaired:organ:epiglottis"
+            "vm:anatomy:body:head-neck:unpaired:organ:epiglottis",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-canaliculus",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-canaliculus",
+            "vm:anatomy:body:head-neck:right:organ:right-nasolacrimal-duct",
+            "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac"
           ]
         },
         {
@@ -2767,7 +2783,11 @@
             "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
             "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
             "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
-            "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix"
+            "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
+            "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
+            "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid"
           ]
         }
       ],
@@ -13891,7 +13911,17 @@
             "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
-            "vm:anatomy:body:head-neck:unpaired:organ:epiglottis"
+            "vm:anatomy:body:head-neck:unpaired:organ:epiglottis",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-canaliculus",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-canaliculus",
+            "vm:anatomy:body:head-neck:right:organ:right-nasolacrimal-duct",
+            "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac",
+            "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
+            "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid"
           ]
         },
         {
@@ -14174,7 +14204,17 @@
             "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
-            "vm:anatomy:body:head-neck:unpaired:organ:epiglottis"
+            "vm:anatomy:body:head-neck:unpaired:organ:epiglottis",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-canaliculus",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-canaliculus",
+            "vm:anatomy:body:head-neck:right:organ:right-nasolacrimal-duct",
+            "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac",
+            "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
+            "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid"
           ]
         },
         {
@@ -14456,7 +14496,17 @@
             "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
-            "vm:anatomy:body:head-neck:unpaired:organ:epiglottis"
+            "vm:anatomy:body:head-neck:unpaired:organ:epiglottis",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-canaliculus",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-canaliculus",
+            "vm:anatomy:body:head-neck:right:organ:right-nasolacrimal-duct",
+            "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac",
+            "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
+            "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid"
           ]
         },
         {
@@ -14809,7 +14859,11 @@
             "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
             "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
             "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring",
-            "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring"
+            "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
+            "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
+            "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid"
           ]
         },
         {
@@ -15327,6 +15381,133 @@
             "vm:anatomy:body:head-neck:unspecified:ligament:hyo-epiglottic-ligament",
             "vm:anatomy:body:head-neck:midline:ligament:thyro-epiglottic-ligament",
             "vm:anatomy:body:head-neck:unpaired:organ:epiglottis"
+          ]
+        },
+        {
+          "id": "eyelid-tarsal-window",
+          "title": "Eyelid tarsal plates",
+          "description": "Explore the upper and lower tarsal plates with the eyes and levator palpebrae superioris as context.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA59091",
+                "FMA59092",
+                "FMA59089",
+                "FMA59090"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA12514",
+                "FMA12515",
+                "FMA49048",
+                "FMA49049"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "tarsal plate.*upper",
+            "tarsal plate.*lower",
+            "levator palpebrae"
+          ],
+          "inspect": "Choose a side, select a plate and frame it. Set the eye aside and Undo to restore the relationship. The source eye remains grouped; absent eyelid layers and attachment footprints are not fabricated.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:muscle:left-levator-palpebrae-superioris",
+            "vm:anatomy:body:head-neck:right:muscle:right-levator-palpebrae-superioris",
+            "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+            "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+            "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
+            "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid"
+          ]
+        },
+        {
+          "id": "lacrimal-drainage-window",
+          "title": "Tear-drainage source structures",
+          "description": "Compare the canaliculus, lacrimal sac and nasolacrimal duct sources with eye and lacrimal-gland context.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA59582",
+                "FMA59583",
+                "FMA59545",
+                "FMA59546",
+                "FMA59555",
+                "FMA59556"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA12514",
+                "FMA12515",
+                "FMA59102",
+                "FMA59103"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "lacrimal canaliculus",
+            "lacrimal sac",
+            "nasolacrimal duct"
+          ],
+          "inspect": "Select each fine structure, isolate or frame it, then restore the context. Adjacent source surfaces do not prove connected channels. Focus-only practice excludes the contextual eyes and glands.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+            "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-canaliculus",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-canaliculus",
+            "vm:anatomy:body:head-neck:right:organ:right-nasolacrimal-duct",
+            "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac"
+          ]
+        },
+        {
+          "id": "nasolacrimal-bone-window",
+          "title": "Nasolacrimal duct & nasal context",
+          "description": "Inspect each nasolacrimal duct with its sac, lacrimal bone and inferior nasal concha.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA59555",
+                "FMA59556"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA59545",
+                "FMA59546",
+                "FMA53645",
+                "FMA53646",
+                "FMA54737",
+                "FMA54738"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "nasolacrimal duct",
+            "lacrimal bone",
+            "inferior nasal concha"
+          ],
+          "inspect": "Set a bone aside to inspect the supplied duct and Undo to recover its original position. This bounded context does not represent the entire bony canal, nasal wall or a verified distal opening.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:bone:left-inferior-nasal-concha",
+            "vm:anatomy:body:head-neck:left:bone:left-lacrimal-bone",
+            "vm:anatomy:body:head-neck:right:bone:right-inferior-nasal-concha",
+            "vm:anatomy:body:head-neck:right:bone:right-lacrimal-bone",
+            "vm:anatomy:body:head-neck:right:organ:right-nasolacrimal-duct",
+            "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac"
           ]
         }
       ],
@@ -16275,6 +16456,133 @@
             "vm:anatomy:body:head-neck:unspecified:ligament:hyo-epiglottic-ligament",
             "vm:anatomy:body:head-neck:midline:ligament:thyro-epiglottic-ligament",
             "vm:anatomy:body:head-neck:unpaired:organ:epiglottis"
+          ]
+        },
+        {
+          "id": "eyelid-tarsal-window",
+          "title": "Eyelid tarsal plates",
+          "rule": {
+            "fmaIds": [
+              "FMA59091",
+              "FMA59092",
+              "FMA59089",
+              "FMA59090"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA12514",
+                "FMA12515",
+                "FMA49048",
+                "FMA49049"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Explore the upper and lower tarsal plates with the eyes and levator palpebrae superioris as context.",
+          "inspect": "Choose a side, select a plate and frame it. Set the eye aside and Undo to restore the relationship. The source eye remains grouped; absent eyelid layers and attachment footprints are not fabricated.",
+          "landmarks": [
+            "tarsal plate.*upper",
+            "tarsal plate.*lower",
+            "levator palpebrae"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:muscle:left-levator-palpebrae-superioris",
+            "vm:anatomy:body:head-neck:right:muscle:right-levator-palpebrae-superioris",
+            "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+            "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+            "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
+            "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
+            "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid"
+          ]
+        },
+        {
+          "id": "lacrimal-drainage-window",
+          "title": "Tear-drainage source structures",
+          "rule": {
+            "fmaIds": [
+              "FMA59582",
+              "FMA59583",
+              "FMA59545",
+              "FMA59546",
+              "FMA59555",
+              "FMA59556"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA12514",
+                "FMA12515",
+                "FMA59102",
+                "FMA59103"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the canaliculus, lacrimal sac and nasolacrimal duct sources with eye and lacrimal-gland context.",
+          "inspect": "Select each fine structure, isolate or frame it, then restore the context. Adjacent source surfaces do not prove connected channels. Focus-only practice excludes the contextual eyes and glands.",
+          "landmarks": [
+            "lacrimal canaliculus",
+            "lacrimal sac",
+            "nasolacrimal duct"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+            "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-canaliculus",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-canaliculus",
+            "vm:anatomy:body:head-neck:right:organ:right-nasolacrimal-duct",
+            "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac"
+          ]
+        },
+        {
+          "id": "nasolacrimal-bone-window",
+          "title": "Nasolacrimal duct & nasal context",
+          "rule": {
+            "fmaIds": [
+              "FMA59555",
+              "FMA59556"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA59545",
+                "FMA59546",
+                "FMA53645",
+                "FMA53646",
+                "FMA54737",
+                "FMA54738"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Inspect each nasolacrimal duct with its sac, lacrimal bone and inferior nasal concha.",
+          "inspect": "Set a bone aside to inspect the supplied duct and Undo to recover its original position. This bounded context does not represent the entire bony canal, nasal wall or a verified distal opening.",
+          "landmarks": [
+            "nasolacrimal duct",
+            "lacrimal bone",
+            "inferior nasal concha"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:bone:left-inferior-nasal-concha",
+            "vm:anatomy:body:head-neck:left:bone:left-lacrimal-bone",
+            "vm:anatomy:body:head-neck:right:bone:right-inferior-nasal-concha",
+            "vm:anatomy:body:head-neck:right:bone:right-lacrimal-bone",
+            "vm:anatomy:body:head-neck:right:organ:right-nasolacrimal-duct",
+            "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
+            "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac"
           ]
         }
       ]

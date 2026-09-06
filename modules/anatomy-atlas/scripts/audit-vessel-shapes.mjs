@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { build } from 'esbuild';
+import { execFileSync } from 'node:child_process';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { cache } from './bodyparts-archive.mjs';
 import {
@@ -13,7 +14,14 @@ import {
 } from './vessel-shape-math.mjs';
 const hash = (b) => createHash('sha256').update(b).digest('hex');
 const root = 'public/models/bodyparts3d/full-body/';
-const bytes = await fs.readFile(root + 'catalog.json'),
+const bytes = execFileSync(
+    'git',
+    [
+      'show',
+      'd2dacd10edeac3ead12fd26376aa3377b223ffc7:' + root + 'catalog.json',
+    ],
+    { maxBuffer: 16e6 },
+  ),
   catalog = JSON.parse(bytes);
 assert.equal(
   hash(bytes),

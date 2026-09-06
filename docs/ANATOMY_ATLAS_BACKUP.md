@@ -4,12 +4,12 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 
 ## Snapshot
 
-- Source application commit: `7a517628613ce287d156646bf3fc6ef1cdc714d8`.
-- Exact application source tree: `e6d91d8ed770aad8776974412e51ac9b77a566aa`.
+- Source application commit: `67d08d64cc681552d284512745a158aa458a50da`.
+- Exact application source tree: `c49aebb05966c4e57d154af8bcddfc4aa57b60b4`.
 - Main website base commit: `c4ff08f8afc90bd94d04162625f97af9d94401cf`.
 - GitHub backup branch: `backup/anatomy-atlas-2026-09-06`.
-- All 433 tracked application files (115,170,803 bytes) are preserved byte-for-byte from that source commit, including 83 GLB bundles, the official brand lockups, content, scripts, configuration, dependency lockfile, licences, review database schema/migration and documentation.
-- The atlas covers 1,006 selectable source representations, 11 regional explorers, 128 dissection stages, 110 focused views and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation.
+- All 445 tracked application files (115,734,208 bytes) are preserved byte-for-byte from that source commit, including 85 GLB bundles, the official brand lockups, content, scripts, configuration, dependency lockfile, licences, review database schema/migration and documentation.
+- The atlas covers 1,016 selectable source representations, 11 regional explorers, 131 dissection stages, 113 focused views and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation.
 - The shoulder review workspace has independent geometry, teaching and imaging review tracks, evidence/issues, versioned records and revision-bound approval safeguards. Acquired scans and specialist approvals remain absent.
 - The deep-inspection update adds three-plane surface cutaways, tissue opacity, clipped-surface picking, regional/whole-body orthographic illustration and varied 5/10/20-question practice with results. No source geometry, anatomical coverage, licences or dependencies were changed.
 - The study-context update adds 20 device-local named views with dissection/camera restoration, source-change safeguards and targeted recovery from failed anatomy loads. Its current 17,081 helper assertions pass; actual saved browser preferences are not part of this source backup. The ordered continuing work queue is in the atlas's `docs/CONTINUOUS_IMPROVEMENT.md`.
@@ -19,6 +19,18 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 - The deep-brain milestone adds 22 source concepts / 24 components in a separate model bundle, three study windows, five source-ID-based focused views, draft notes and distinct study colours. Every previous 859 structure record and 66 model bundle hashes is preserved. Regional labels now follow the visible bounds in all six presets, avoid duplicate selected labels and correct exploded local coordinates. Its 193,082 source, study and label helper assertions pass; they do not validate source anatomy or on-screen text collision. Grouped bilateral mammillary and choroid-plexus sources are explicitly disclosed. See `docs/DEEP_BRAIN.md` for evidence, clinical limits and remaining work.
 
 The currently published atlas remains at [Visible Medicine anatomy](https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site). Saving this branch does not redeploy that site or the main website.
+
+## Current ocular dissection milestone
+
+Ten exact BodyParts3D v4 ISA identities add six tear-drainage sources and four eyelid tarsal plates in two model bundles. Three close-up window/focus pairs provide eyelid, tear-drainage and nasolacrimal/nasal context with shared select/frame, remove/restore/Undo, isolate/fade, separation, side filtering and target-only practice. All previous 1,006 records and 82 body-bundle hashes remain exact. The new models total 152,188 bytes; no missing eyelid layer, gland, lumen, flow or connection is invented. See `docs/OCULAR_DETAIL.md` inside the atlas snapshot.
+
+The bounded audit records 137 near-surface comparisons against the prior 263-entry head/neck scope, without threshold flags. The feature suite passes 9,879 checks; the raw-source extension passes 33,425 and verifies every corner of all 7,832 added triangles against the original source faces. Raw files are not included. The historical ocular preparation is reconstructed and fully hash-checked from preserved records and the current inventory without Site history; audit regeneration still requires that history and verified cache. The unchanged 223 vascular entries and 18 vessel bundles continue to match their earlier audit.
+
+The full source/geometry, dissection/guidance/loading, practice/study/library, navigation/link/imaging, arrangement/explode and review suites pass, as do type checks, focused lint, the production build and the 808-package licence audit. No new dependency, fee-bearing service, private record, acquired imaging or clinical approval is included. The library exposes 197 recipes as 155 cards; the 47 layer steps remain separate. Next audit the laryngeal/pharyngeal and supporting-tissue source queue, while continuing the common regional dissection goal. Clinical, actual-device and patient/scanner-registration acceptance remain open.
+
+## Historical preceding milestones
+
+The following summaries retain the counts and status at each earlier checkpoint; the current source and ocular admission are described above.
 
 The latest milestone adds source-bound regional guidance: explicit recipe/camera orientation, camera-only reorientation, exact omitted/extra recipe counts, searchable members with availability and target/context roles, and next-step actions from the existing layer track. It preserves all geometry, source identities, profile hashes, clinical status and prior scene-label selection. Its 1,363,108 assertions cover 36 scope/side combinations, 714 recipe scopes, 14,280 state variations, 16,440 transitions and 72 real-component server-markup cases, including execution of the actual camera/action handlers with spies. Actual-browser, device, pixel/occlusion and educator acceptance remain pending. See `docs/DISSECTION_GUIDANCE.md`.
 
@@ -102,4 +114,4 @@ The 4,301 head-detail assertions, 54,502 practice assertions, 189 automated revi
 
 Keep the atlas's [licence](../modules/anatomy-atlas/LICENSE), [third-party notices](../modules/anatomy-atlas/LICENSES/THIRD_PARTY_NOTICES.md), [BodyParts3D licence evidence](../modules/anatomy-atlas/LICENSES/BODYPARTS3D.md) and visible attribution together. MIT application code does not relicense third-party anatomy or the proprietary Visible Medicine brand marks.
 
-Keep the repository private unless public source/brand release is deliberately approved. The source snapshot is 115,170,803 bytes (about 115.17 MB); no Git LFS or new paid service was introduced for this backup. GitHub source storage is distinct from hosting, large future imaging collections and database backups; quotas and service pricing can change. Never add patient imaging or private review exports to this repository as a substitute for appropriate data storage.
+Keep the repository private unless public source/brand release is deliberately approved. The source snapshot is 115,734,208 bytes (about 115.73 MB); no Git LFS or new paid service was introduced for this backup. GitHub source storage is distinct from hosting, large future imaging collections and database backups; quotas and service pricing can change. Never add patient imaging or private review exports to this repository as a substitute for appropriate data storage.

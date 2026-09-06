@@ -4,7 +4,7 @@
 
 - Verify reorientation, selected-only framing reset, saved-view/tray interaction, clean-recipe warnings, restored landmarks, membership search, keyboard focus, screen-reader announcements and 200%/mobile layout on actual devices. Automated handler/helper and server-markup tests are not this acceptance.
 - Review authored landmarks and layer/window scope. Target/context roles are recipe membership, not validated clinical relationships; enabled counts are not visible pixels. Existing clinical gates remain. See `DISSECTION_GUIDANCE.md`.
-- Keep ten prepared ocular candidates unrendered until near-surface/extent/adjacency auditing supports an admission decision. Source labels, CRC/hash checks, finite geometry and side-centre signs alone do not validate a tear-drainage pathway, eyelid anatomy or internal lumen. See `OCULAR_CANDIDATES.md`.
+- The ten ocular entries now have bounded engineering admission, not clinical acceptance. Review identity, canalicular extent/subdivisions, sac/duct course, plate shape/attachments, scale and local relationships. No complete eyelid layers, puncta, valves, tarsal glands, lumen, flow or operative planes are established. Accept tiny-structure selection, labels, opacity and separation on actual devices before release. See `OCULAR_DETAIL.md`; `OCULAR_CANDIDATES.md` retains the pre-admission history.
 
 ## Loading and source-screen acceptance
 

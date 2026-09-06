@@ -1,18 +1,18 @@
 {
   "passed": true,
   "sourceVersion": "4.0",
-  "structures": 1006,
-  "bundles": 82,
-  "triangles": 4928720,
-  "vertices": 2469898,
+  "structures": 1016,
+  "bundles": 84,
+  "triangles": 4936552,
+  "vertices": 2473838,
   "framingChecks": 432,
   "systems": {
     "skeleton": 203,
     "muscles": 369,
     "nerves": 54,
-    "organs": 74,
+    "organs": 80,
     "vessels": 223,
-    "connective": 83
+    "connective": 87
   },
   "checks": [
     "all GLB hashes/bytes",
