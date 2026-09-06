@@ -1,11 +1,13 @@
 'use client';
 /* oxlint-disable react/react-compiler -- Three.js camera is an imperative external renderer, not React state. */
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef, type RefObject } from 'react';
 import { useThree } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import type { OrbitControls as Controls } from 'three-stdlib';
 import { Box3, Vector3, PerspectiveCamera, OrthographicCamera } from 'three';
 import { fitBounds } from '@/lib/explode-layout.mjs';
+import { captureStudyCamera, restoreStudyCamera } from '@/lib/study-camera';
+import type { StudyCamera } from '@/lib/study-views';
 
 export function FittedCamera({
   bounds,
@@ -15,6 +17,8 @@ export function FittedCamera({
   zoom,
   reset,
   locked = false,
+  cameraCapture,
+  cameraRestore,
 }: {
   bounds: Box3;
   direction: number[];
@@ -23,6 +27,8 @@ export function FittedCamera({
   zoom: number;
   reset: number;
   locked?: boolean;
+  cameraCapture?: RefObject<StudyCamera | null>;
+  cameraRestore?: RefObject<StudyCamera | null>;
 }) {
   const { camera, size, invalidate } = useThree();
   const controls = useRef<Controls>(null);
@@ -30,6 +36,7 @@ export function FittedCamera({
     key: string;
     distance: number;
     zoom: number;
+    center: Vector3;
   } | null>(null);
   const key = `${viewKey}/${reset}/${locked}`;
   const dx = direction[0],
@@ -38,7 +45,45 @@ export function FittedCamera({
   const ux = up[0],
     uy = up[1],
     uz = up[2];
+  const capture = useCallback(() => {
+    if (
+      cameraCapture &&
+      controls.current &&
+      (camera instanceof PerspectiveCamera ||
+        camera instanceof OrthographicCamera)
+    )
+      cameraCapture.current = captureStudyCamera(
+        camera,
+        controls.current.target,
+        bounds,
+        size.width / Math.max(1, size.height),
+      );
+  }, [cameraCapture, camera, bounds, size.width, size.height]);
   useEffect(() => {
+    if (
+      cameraRestore?.current &&
+      (camera instanceof PerspectiveCamera ||
+        camera instanceof OrthographicCamera)
+    ) {
+      const restored = restoreStudyCamera(
+        camera,
+        bounds,
+        size.width / Math.max(1, size.height),
+        cameraRestore.current,
+      );
+      cameraRestore.current = null;
+      controls.current?.target.copy(restored.target);
+      controls.current?.update();
+      previous.current = {
+        key,
+        distance: restored.fitDistance,
+        zoom,
+        center: bounds.getCenter(new Vector3()),
+      };
+      capture();
+      invalidate();
+      return;
+    }
     const isPreset = previous.current?.key !== key;
     const orbit =
       !isPreset && controls.current
@@ -61,8 +106,11 @@ export function FittedCamera({
           previous.current.distance
         : zoom;
     const distance = fit.distance * userZoom;
-    camera.position.copy(fit.center).addScaledVector(orbit, distance);
-    camera.lookAt(fit.center);
+    const target = fit.center.clone();
+    if (!isPreset && previous.current && controls.current)
+      target.add(controls.current.target.clone().sub(previous.current.center));
+    camera.position.copy(target).addScaledVector(orbit, distance);
+    camera.lookAt(target);
     if (camera instanceof OrthographicCamera) {
       const aspect = size.width / Math.max(1, size.height),
         height = fit.halfHeight * zoom;
@@ -82,9 +130,15 @@ export function FittedCamera({
       );
       camera.updateProjectionMatrix();
     }
-    controls.current?.target.copy(fit.center);
+    controls.current?.target.copy(target);
     controls.current?.update();
-    previous.current = { key, distance: fit.distance, zoom };
+    previous.current = {
+      key,
+      distance: fit.distance,
+      zoom,
+      center: fit.center,
+    };
+    capture();
     invalidate();
   }, [
     bounds,
@@ -100,6 +154,8 @@ export function FittedCamera({
     uy,
     uz,
     invalidate,
+    cameraRestore,
+    capture,
   ]);
   return (
     <OrbitControls
@@ -110,6 +166,7 @@ export function FittedCamera({
       enableZoom={!locked}
       minDistance={0.1}
       maxDistance={500}
+      onChange={capture}
     />
   );
 }

@@ -2,6 +2,8 @@
 
 ## Goal and release boundary
 
+The active continuing improvement programme and next executable milestones are maintained in [CONTINUOUS_IMPROVEMENT.md](CONTINUOUS_IMPROVEMENT.md). Its software progress does not supersede the clinical/source-dependent release gates below.
+
 Deliver a branded, well-tested anatomy module for the Visible Medicine website, beginning with a coherent shoulder teaching pilot and reusing the same architecture across the body. Software delivery is separate from clinical approval. Keep the current source meshes, anatomical IDs and licensing trail intact. No paid APIs, commissioned assets or additional subscriptions are authorised.
 
 ## Ordered milestones

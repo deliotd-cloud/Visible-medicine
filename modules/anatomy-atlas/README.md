@@ -1,5 +1,9 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Saved study views and recovery
+
+**Saved study views** stores up to 20 named, device-local dissection/cutaway configurations with actual camera orbit, pan and framing. Restore them in the matching region; changed source anatomy disables stale views. Failed body bundles and the shoulder can be retried without refreshing or losing the current dissection. See [saved views and recovery](docs/STUDY_VIEWS.md) for privacy, limitations and tests, and the [ongoing improvement programme](docs/CONTINUOUS_IMPROVEMENT.md) for the ordered anatomy, functionality and future imaging backlog.
+
 ## Deep inspection milestone
 
 **Inspect deeper** now provides axial/coronal/sagittal surface cutaways, adjustable tissue opacity, click-through faint tissues and a selected-structure visibility override in the shoulder, whole body and every region. Cuts stay attached to structures during explode. Orthographic illustration mode extends to the regional/whole-body viewers, and identification practice offers varied 5/10/20-question sessions with results and re-study links. See [deep inspection](docs/DEEP_INSPECTION.md) for controls, implementation, test evidence and remaining QA. These are exterior-surface cutaways, **not CT/MRI or reconstructed tissue interiors**. This milestone preserves all source geometry and does not increase anatomical coverage or confer clinical approval.
@@ -60,6 +64,7 @@ node scripts/validate-full-body.mjs
 node scripts/validate-dissection.mjs
 node scripts/validate-explode.mjs
 npm run inspection:test
+npm run study:test
 npm run reviews:test
 node scripts/validate-recovery.mjs
 node scripts/validate-gaps.mjs

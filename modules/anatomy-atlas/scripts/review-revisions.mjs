@@ -28,6 +28,10 @@ const displayPaths = [
   'lib/inspection-geometry.ts',
   'app/inspection-controls.tsx',
   'app/inspection.css',
+  'lib/study-camera.ts',
+  'lib/study-views.ts',
+  'app/study-views.tsx',
+  'app/study-views.css',
 ];
 const display = await Promise.all(
   displayPaths.map(async (path) => [

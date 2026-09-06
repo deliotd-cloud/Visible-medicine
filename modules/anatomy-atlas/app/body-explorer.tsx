@@ -1,5 +1,12 @@
 'use client';
-import { useCallback, useEffect, useMemo, useReducer, useState } from 'react';
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useReducer,
+  useRef,
+  useState,
+} from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import {
@@ -66,6 +73,9 @@ import { ReviewStatus } from './review-status';
 import { InspectionControls } from './inspection-controls';
 import { initialInspection } from '@/lib/inspection-state';
 import { practiceTargets } from '@/lib/anatomy-practice';
+import { StudyViews } from './study-views';
+import type { StudyCamera, StudyView } from '@/lib/study-views';
+import { anatomyRetryPlan } from '@/lib/anatomy-load-retry';
 
 type PracticeResponse = { target: string; chosen: string };
 
@@ -115,6 +125,10 @@ export default function BodyExplorer({
     [illustrated, setIllustrated] = useState(true);
   const [catalog, setCatalog] = useState<BodyCatalog | null>(null),
     [error, setError] = useState(false);
+  const [catalogAttempt, setCatalogAttempt] = useState(0);
+  const [retries, setRetries] = useState<Record<string, number>>({});
+  const [retrying, setRetrying] = useState(false),
+    [retryError, setRetryError] = useState('');
   const [selectedId, setSelectedId] = useState<string | null>(null),
     [systems, setSystems] = useState(
       initialRegion === 'whole-body' ? initialSystems : allBodySystems,
@@ -128,6 +142,8 @@ export default function BodyExplorer({
   const [showOrigins, setShowOrigins] = useState(false);
   const [inspection, setInspection] = useState(initialInspection);
   const [plate, setPlate] = useState(false);
+  const cameraCapture = useRef<StudyCamera | null>(null);
+  const cameraRestore = useRef<StudyCamera | null>(null);
   const [view, setView] = useState<DissectionView>(profile.stages[0].view),
     [zoom, setZoom] = useState(1),
     [reset, setReset] = useState(0);
@@ -145,6 +161,11 @@ export default function BodyExplorer({
   >(null);
   useEffect(() => {
     const controller = new AbortController();
+    let active = true;
+    const timeout = setTimeout(() => {
+      if (active) setError(true);
+      controller.abort();
+    }, 30000);
     fetch('/models/bodyparts3d/full-body/catalog.json', {
       signal: controller.signal,
     })
@@ -160,13 +181,18 @@ export default function BodyExplorer({
           !Array.isArray(value.regions)
         )
           throw new Error('Invalid anatomy catalog');
-        setCatalog(value);
+        if (active) setCatalog(value);
       })
       .catch((e) => {
-        if (e.name !== 'AbortError') setError(true);
-      });
-    return () => controller.abort();
-  }, []);
+        if (active && e.name !== 'AbortError') setError(true);
+      })
+      .finally(() => clearTimeout(timeout));
+    return () => {
+      active = false;
+      clearTimeout(timeout);
+      controller.abort();
+    };
+  }, [catalogAttempt]);
   const region = catalog?.regions.find((r) => r.id === initialRegion),
     whole = initialRegion === 'whole-body';
   const regionStructures = useMemo(
@@ -232,6 +258,31 @@ export default function BodyExplorer({
       setFailed((prev) => (prev.includes(id) ? prev : [...prev, id])),
     [],
   );
+  async function retryAnatomy() {
+    if (!catalog || retrying) return;
+    const plan = anatomyRetryPlan(catalog.bundles, failed, required);
+    if (!plan.length) return;
+    setRetrying(true);
+    setRetryError('');
+    try {
+      const { retryBodyAssets } = await import('./body-scene');
+      retryBodyAssets(plan.map((b) => b.url));
+      const ids = new Set(plan.map((b) => b.id));
+      setFailed((old) => old.filter((id) => !ids.has(id)));
+      setLoaded((old) => old.filter((id) => !ids.has(id)));
+      setRetries((old) => {
+        const next = { ...old };
+        for (const id of ids) next[id] = (next[id] ?? 0) + 1;
+        return next;
+      });
+    } catch {
+      setRetryError(
+        'The retry could not start. Your view is unchanged; try again when the connection returns.',
+      );
+    } finally {
+      setRetrying(false);
+    }
+  }
   const select = useCallback(
     (id: string) => {
       const s = regionStructures.find((item) => item.id === id);
@@ -408,7 +459,15 @@ export default function BodyExplorer({
     return (
       <main className="body-status">
         <h1>The anatomy library could not load.</h1>
-        <p>Please refresh to retry.</p>
+        <p>The anatomy catalogue is unavailable or the connection timed out.</p>
+        <Button
+          onClick={() => {
+            setError(false);
+            setCatalogAttempt((n) => n + 1);
+          }}
+        >
+          Retry anatomy library
+        </Button>
         <Link href="/shoulder">Open the shoulder explorer</Link>
       </main>
     );
@@ -427,6 +486,66 @@ export default function BodyExplorer({
       </main>
     );
   const title = whole ? 'Whole body' : region!.name;
+  // Exact bundle hashes, not a clinical approval. A changed source invalidates display bookmarks.
+  const studyRevision = `${catalog.sourceVersion}/${catalog.bundles
+    .map((b) => `${b.id}:${b.sha256}`)
+    .sort()
+    .join('|')}`;
+  const studyScope = {
+    kind: 'body' as const,
+    region: initialRegion,
+    revision: studyRevision,
+    structureIds: catalog.structures
+      .filter((s) => whole || s.regions.includes(initialRegion))
+      .map((s) => s.id),
+  };
+  function captureView(): StudyView {
+    return {
+      kind: 'body',
+      region: initialRegion,
+      revision: studyRevision,
+      selectedId,
+      view,
+      side: side as StudyView['side'],
+      layer: 'cuff',
+      systems,
+      hiddenIds,
+      explode,
+      zoom,
+      isolated,
+      focus,
+      labels,
+      ghostRemoved,
+      illustrated,
+      anchorSkeleton,
+      showOrigins,
+      plate,
+      inspection,
+      camera: cameraCapture.current,
+    };
+  }
+  function restoreView(state: StudyView) {
+    setExam(false);
+    setPracticeResult(null);
+    setSide(state.side);
+    setSelectedId(state.selectedId);
+    setView(state.view as DissectionView);
+    setSystems(state.systems as Record<BodySystem, boolean>);
+    dispatch({ type: 'load-view', hiddenIds: state.hiddenIds });
+    setExplode(state.explode);
+    setZoom(state.zoom);
+    setIsolated(state.isolated);
+    setFocus(state.focus);
+    setLabels(state.labels);
+    setGhostRemoved(state.ghostRemoved);
+    setIllustrated(state.illustrated);
+    setAnchorSkeleton(state.anchorSkeleton);
+    setShowOrigins(state.showOrigins);
+    setPlate(state.plate);
+    setInspection(state.inspection);
+    cameraRestore.current = state.camera;
+    setReset((n) => n + 1);
+  }
   const target = catalog.structures.find((s) => s.id === examTargets[question]);
   const studyGuide = (
     <DissectionGuide
@@ -615,6 +734,12 @@ export default function BodyExplorer({
             onPlate={setPlate}
             disabled={exam}
           />
+          <StudyViews
+            scope={studyScope}
+            capture={captureView}
+            restore={restoreView}
+            disabled={exam || pending.length > 0}
+          />
           <div className="body-canvas illustration-mode">
             <div className="body-view-row">
               <fieldset className="body-view-buttons">
@@ -696,6 +821,9 @@ export default function BodyExplorer({
               exam={exam}
               inspection={exam ? initialInspection : inspection}
               plate={plate && !exam}
+              cameraCapture={cameraCapture}
+              cameraRestore={cameraRestore}
+              retries={retries}
               onSelect={onSceneSelect}
               onLoaded={onLoaded}
               onFailure={onFailure}
@@ -708,7 +836,19 @@ export default function BodyExplorer({
             )}
             {required.some((id) => failed.includes(id)) && (
               <div className="body-loading error" role="alert">
-                Some anatomy could not load. Refresh to retry.
+                <p>
+                  Some anatomy could not load. Your dissection settings are
+                  retained.
+                </p>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  disabled={retrying}
+                  onClick={() => void retryAnatomy()}
+                >
+                  {retrying ? 'Retrying…' : 'Retry missing anatomy'}
+                </Button>
+                {retryError && <p role="alert">{retryError}</p>}
               </div>
             )}
             {!available.length && (

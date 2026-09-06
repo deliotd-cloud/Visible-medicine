@@ -4,13 +4,14 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 
 ## Snapshot
 
-- Source application commit: `1049560fc63f30c6e3f479f99d4cd5377acfcdeb`.
+- Source application commit: `772e3dade17cd61bd1bad3f1c6e5ff86cbc965cb`.
 - Main website base commit: `c4ff08f8afc90bd94d04162625f97af9d94401cf`.
 - GitHub backup branch: `backup/anatomy-atlas-2026-09-06`.
-- All 243 tracked application files are preserved byte-for-byte from that source commit, including 62 GLB bundles, the official brand lockups, content, scripts, configuration, dependency lockfile, licences, review database schema/migration and documentation.
+- All 251 tracked application files are preserved byte-for-byte from that source commit, including 62 GLB bundles, the official brand lockups, content, scripts, configuration, dependency lockfile, licences, review database schema/migration and documentation.
 - The atlas covers 823 selectable source representations, 11 regional explorers and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation.
 - The shoulder review workspace has independent geometry, teaching and imaging review tracks, evidence/issues, versioned records and revision-bound approval safeguards. Acquired scans and specialist approvals remain absent.
 - The deep-inspection update adds three-plane surface cutaways, tissue opacity, clipped-surface picking, regional/whole-body orthographic illustration and varied 5/10/20-question practice with results. No source geometry, anatomical coverage, licences or dependencies were changed.
+- The study-context update adds 20 device-local named views with dissection/camera restoration, source-change safeguards and targeted recovery from failed anatomy loads. Its 16,916 helper assertions pass; actual saved browser preferences are not part of this source backup. The ordered continuing work queue is in the atlas's `docs/CONTINUOUS_IMPROVEMENT.md`.
 
 The currently published atlas remains at [Visible Medicine anatomy](https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site). Saving this branch does not redeploy that site or the main website.
 
@@ -38,7 +39,7 @@ The copied `.openai/hosting.json` is provenance/configuration for the existing a
 - Installed dependencies, build output, local database/cache files and temporary downloads.
 - The anatomy application's earlier Git history; this is a complete current-file snapshot, with the original source commit recorded above.
 
-The 189 automated review checks, 984,199 inspection assertions and numerical anatomy/dissection/explode checks passed for the source snapshot. The production build and 808-package dependency licence audit also passed with notice obligations retained. Browser interaction testing of the new review forms/inspection controls and specialist clinical validation remain outstanding; no test result should be read as medical approval. Cutaways show clipped exterior surfaces, not CT/MRI or reconstructed tissue interiors.
+The 189 automated review checks, 984,199 inspection assertions, 16,916 study-view assertions and numerical anatomy/dissection/explode checks passed for the source snapshot. The production build and 808-package dependency licence audit also passed with notice obligations retained. Browser interaction testing of the new review forms, inspection/bookmark/retry controls and specialist clinical validation remain outstanding; no test result should be read as medical approval. Cutaways show clipped exterior surfaces, not CT/MRI or reconstructed tissue interiors.
 
 ## Rights and ongoing storage
 

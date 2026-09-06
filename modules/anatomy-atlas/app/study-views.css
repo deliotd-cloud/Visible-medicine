@@ -1,0 +1,135 @@
+.vm-study-views {
+  margin: 12px 0;
+  border: 1px solid #c8d9d7;
+  border-radius: 10px;
+  color: #002631;
+  background: #f8fbfa;
+  font-size: 0.875rem;
+}
+.body-workspace > .vm-study-views {
+  margin: 0 14px 12px;
+  flex-shrink: 0;
+}
+.vm-study-views > summary {
+  padding: 13px 16px;
+  cursor: pointer;
+  font-weight: 650;
+}
+.vm-study-views > summary span {
+  margin-left: 12px;
+  color: #5d7477;
+  font-weight: 400;
+}
+.vm-study-content {
+  padding: 0 16px 12px;
+}
+.vm-study-content p {
+  line-height: 1.55;
+  margin: 0 0 12px;
+}
+.vm-study-content .vm-study-meta {
+  margin: 10px 0;
+  color: #5d7477;
+}
+.vm-study-content ul {
+  padding: 0;
+  list-style: none;
+  margin: 8px 0;
+}
+.vm-study-content li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid #d7e3df;
+  padding: 12px 0;
+}
+.vm-study-content li > div {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.vm-study-content strong,
+.vm-study-content small,
+.vm-study-content a {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+.vm-study-content small {
+  color: #5d7477;
+}
+.vm-study-content a {
+  color: #13665d;
+  text-decoration: underline;
+}
+.vm-study-content .vm-study-warning,
+.vm-study-warning {
+  color: #8b351e;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+.vm-study-other > summary {
+  cursor: pointer;
+  padding: 10px 0;
+  color: #315a60;
+}
+.vm-study-dialog {
+  color: #002631;
+  background: #f8f7f2;
+}
+.vm-study-dialog label {
+  display: block;
+  font-weight: 600;
+  margin: 4px 0 8px;
+  font-size: 1rem;
+}
+.vm-study-dialog [data-slot='dialog-footer'] {
+  margin-top: 18px;
+}
+.vm-study-dialog [data-slot='input'] {
+  font-size: 1rem;
+  height: 42px;
+}
+.vm-study-dialog [data-slot='dialog-description'] {
+  line-height: 1.6;
+}
+.body-loading.error {
+  top: auto;
+  bottom: 70px;
+  width: min(92%, 430px);
+  white-space: normal;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.body-loading.error button {
+  margin-top: 10px;
+}
+.model-loading {
+  width: min(280px, 75vw);
+  line-height: 1.5;
+}
+.model-loading button {
+  margin-top: 10px;
+}
+@media (max-width: 700px) {
+  .vm-study-views > summary span {
+    display: block;
+    margin: 5px 0 0;
+  }
+  .vm-study-content li {
+    flex-wrap: wrap;
+  }
+  .vm-study-content li > div {
+    min-width: 50%;
+  }
+}
+.control-rail .vm-study-views > summary span {
+  display: block;
+  margin: 5px 0 0;
+}
+.control-rail .vm-study-content li {
+  flex-wrap: wrap;
+}
+.control-rail .vm-study-content li > div {
+  flex-basis: 100%;
+}

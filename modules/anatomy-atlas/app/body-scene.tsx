@@ -1,5 +1,12 @@
 'use client';
-import { Component, Suspense, useEffect, useMemo, type ReactNode } from 'react';
+import {
+  Component,
+  Suspense,
+  useEffect,
+  useMemo,
+  type ReactNode,
+  type RefObject,
+} from 'react';
 import { Canvas, type ThreeEvent } from '@react-three/fiber';
 import { Html, Line, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
@@ -15,6 +22,7 @@ import { AnatomyTissue } from './anatomy-tissue';
 import type { DissectionView } from './dissection-data';
 import { sectionPlanes, pointRetained } from '@/lib/inspection-geometry';
 import { systemOpacity, type InspectionState } from '@/lib/inspection-state';
+import type { StudyCamera } from '@/lib/study-views';
 
 type Props = {
   catalog: BodyCatalog;
@@ -37,6 +45,9 @@ type Props = {
   exam: boolean;
   inspection: InspectionState;
   plate: boolean;
+  cameraCapture?: RefObject<StudyCamera | null>;
+  cameraRestore?: RefObject<StudyCamera | null>;
+  retries?: Record<string, number>;
   onSelect: (id: string) => void;
   onLoaded: (id: string) => void;
   onFailure: (id: string) => void;
@@ -91,7 +102,7 @@ function Bundle({
     return map;
   }, [scene]);
   return (
-    <group>
+    <group dispose={null}>
       {items.map((structure) => {
         const selected = !props.exam && structure.id === props.selectedId;
         const geometry = geometries.get(structure.nodeName);
@@ -294,7 +305,7 @@ export function BodyScene(props: Props) {
       <directionalLight position={[-8, 6, -8]} intensity={1.8} />
       {bundles.map((bundle) => (
         <AssetBoundary
-          key={bundle.id}
+          key={`${bundle.id}:${props.retries?.[bundle.id] ?? 0}`}
           id={bundle.id}
           onFailure={props.onFailure}
         >
@@ -328,7 +339,13 @@ export function BodyScene(props: Props) {
         zoom={props.zoom}
         reset={props.reset}
         locked={props.plate}
+        cameraCapture={props.cameraCapture}
+        cameraRestore={props.cameraRestore}
       />
     </Canvas>
   );
+}
+
+export function retryBodyAssets(urls: string[]) {
+  for (const url of urls) useGLTF.clear(url);
 }

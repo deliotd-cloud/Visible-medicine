@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import {
@@ -54,6 +54,9 @@ import { Brand } from './brand';
 import { ReviewStatus } from './review-status';
 import { InspectionControls } from './inspection-controls';
 import { initialInspection } from '@/lib/inspection-state';
+import { StudyViews } from './study-views';
+import type { StudyCamera, StudyView } from '@/lib/study-views';
+import manifest from '@/public/models/bodyparts3d/manifest.json';
 
 type Mode = 'study' | 'exam';
 type SearchOption = { value: string; label: string };
@@ -110,6 +113,8 @@ export default function ShoulderExplorer({
   const [showOrigins, setShowOrigins] = useState(false);
   const [plate, setPlate] = useState(false);
   const [inspection, setInspection] = useState(initialInspection);
+  const cameraCapture = useRef<StudyCamera | null>(null);
+  const cameraRestore = useRef<StudyCamera | null>(null);
   const [showLabels, setShowLabels] = useState(true);
   const [syncPlane, setSyncPlane] = useState(false);
   const [resetNonce, setResetNonce] = useState(0);
@@ -119,6 +124,55 @@ export default function ShoulderExplorer({
   const [score, setScore] = useState(0);
   const selected = structureById.get(selectedId) ?? structures[0];
   const currentQuestion = quizQuestions[questionIndex];
+  const studyScope = {
+    kind: 'shoulder' as const,
+    region: 'shoulder-pilot',
+    revision: manifest.sha256,
+    structureIds: structures.map((s) => s.id),
+  };
+  function captureView(): StudyView {
+    return {
+      kind: 'shoulder',
+      region: 'shoulder-pilot',
+      revision: manifest.sha256,
+      selectedId,
+      view,
+      side: 'right',
+      layer,
+      systems: visibleSystems,
+      hiddenIds: [],
+      explode,
+      zoom,
+      isolated,
+      focus: false,
+      labels: showLabels,
+      ghostRemoved: false,
+      illustrated: true,
+      anchorSkeleton,
+      showOrigins,
+      plate,
+      inspection,
+      camera: cameraCapture.current,
+    };
+  }
+  function restoreView(state: StudyView) {
+    setMode('study');
+    setSyncPlane(false);
+    setSelectedId(state.selectedId ?? structures[0].id);
+    setView(state.view as CameraView);
+    setLayer(state.layer);
+    setVisibleSystems(state.systems as Record<SystemKey, boolean>);
+    setExplode(state.explode);
+    setZoom(state.zoom);
+    setIsolated(state.isolated);
+    setShowLabels(state.labels);
+    setAnchorSkeleton(state.anchorSkeleton);
+    setShowOrigins(state.showOrigins);
+    setPlate(state.plate);
+    setInspection(state.inspection);
+    cameraRestore.current = state.camera;
+    setResetNonce((n) => n + 1);
+  }
 
   const searchOptions = useMemo<SearchOption[]>(
     () =>
@@ -461,6 +515,11 @@ export default function ShoulderExplorer({
                   plate={plate}
                   onPlate={setPlate}
                 />
+                <StudyViews
+                  scope={studyScope}
+                  capture={captureView}
+                  restore={restoreView}
+                />
                 <div className="vm-plates">
                   <h2>Shoulder illustration plates</h2>
                   <p>
@@ -637,6 +696,8 @@ export default function ShoulderExplorer({
               showOrigins={showOrigins && mode === 'study'}
               plate={plate}
               inspection={mode === 'exam' ? initialInspection : inspection}
+              cameraCapture={cameraCapture}
+              cameraRestore={cameraRestore}
             />
             {mode === 'study' && (
               <div className="vm-scene-options">

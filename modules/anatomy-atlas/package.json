@@ -11,6 +11,7 @@
     "reviews:revisions": "node scripts/review-revisions.mjs",
     "reviews:test": "node scripts/validate-review.mjs",
     "inspection:test": "node scripts/validate-inspection.mjs",
+    "study:test": "node scripts/validate-study-views.mjs",
     "db:generate": "drizzle-kit generate",
     "db:local": "wrangler d1 migrations apply DB --local --config wrangler.review-local.jsonc",
     "start": "wrangler dev --config dist/server/wrangler.json",

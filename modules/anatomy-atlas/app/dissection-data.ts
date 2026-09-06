@@ -1007,6 +1007,7 @@ export const initialDissection: DissectionState = {
   history: [],
 };
 export type DissectionAction =
+  | { type: 'load-view'; hiddenIds: string[] }
   | { type: 'stage'; id: string }
   | { type: 'focus'; id: string }
   | { type: 'remove' | 'restore'; id: string }
@@ -1021,6 +1022,13 @@ export function dissectionReducer(
     return prior ? { ...prior, history: history.slice(0, -1) } : state;
   }
   let next: DissectionSnapshot = { ...snapshot };
+  if (action.type === 'load-view')
+    next = {
+      stageId: 'free',
+      focusId: null,
+      removed: [...new Set(action.hiddenIds)],
+      restored: [],
+    };
   if (action.type === 'reset') next = { ...initialDissection };
   if (action.type === 'free')
     next = { stageId: 'free', focusId: null, removed: [], restored: [] };

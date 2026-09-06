@@ -7,6 +7,7 @@ import {
   useLayoutEffect,
   useMemo,
   type ReactNode,
+  type RefObject,
 } from 'react';
 import { Canvas, useThree, type ThreeEvent } from '@react-three/fiber';
 import { Html, Line, useGLTF } from '@react-three/drei';
@@ -22,6 +23,8 @@ import {
   pointRetained,
 } from '@/lib/inspection-geometry';
 import { type InspectionState, systemOpacity } from '@/lib/inspection-state';
+import type { StudyCamera } from '@/lib/study-views';
+import { Button } from '@/components/ui/button';
 
 const noPlanes: THREE.Plane[] = [];
 const sectionFrame = new THREE.Box3();
@@ -53,6 +56,8 @@ type SceneProps = {
   showOrigins: boolean;
   plate: boolean;
   inspection: InspectionState;
+  cameraCapture?: RefObject<StudyCamera | null>;
+  cameraRestore?: RefObject<StudyCamera | null>;
   onSelect: (id: string) => void;
 };
 const views: Record<CameraView, [number, number, number]> = {
@@ -268,7 +273,7 @@ function Model(props: SceneProps) {
     return result;
   }, [meshes]);
   return (
-    <group>
+    <group dispose={null}>
       {props.structures.map((structure) => {
         const slug = structure.id.split(':').at(-1)!;
         const selected = props.selectedId === structure.id && !props.exam;
@@ -389,7 +394,19 @@ class ModelBoundary extends Component<
     return this.state.failed ? (
       <Html center>
         <div className="model-loading">
-          The anatomy model could not load. Refresh to retry.
+          <p>
+            The anatomy model could not load. Your view settings are retained.
+          </p>
+          <Button
+            size="sm"
+            variant="outline"
+            onClick={() => {
+              useGLTF.clear('/models/bodyparts3d/shoulder-right.glb');
+              this.setState({ failed: false });
+            }}
+          >
+            Retry shoulder anatomy
+          </Button>
         </div>
       </Html>
     ) : (
@@ -506,6 +523,8 @@ export function AnatomyScene(props: SceneProps) {
         zoom={props.zoom}
         reset={props.resetNonce}
         locked={props.plate}
+        cameraCapture={props.cameraCapture}
+        cameraRestore={props.cameraRestore}
       />
     </Canvas>
   );
