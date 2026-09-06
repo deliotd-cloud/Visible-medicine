@@ -1,0 +1,5911 @@
+{
+  "sourceCommit": "aa0e55b79d707f518ebb6faa77b96278f1aae5ab",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "licenseChecked": "2026-09-06",
+  "licenseUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+  "distanceMethod": "At most 128 deterministic vertex samples per direction; minimum distance to all triangles in the comparison surface, with segment/point fallback for degenerate faces (area <= 1e-10 mm²) and non-finite triangle-projection results. No source face removed or altered.",
+  "results": [
+    {
+      "fmaId": "FMA55077",
+      "name": "pharyngeal raphe",
+      "region": "head-neck",
+      "system": "connective",
+      "files": [
+        {
+          "file": "FJ2749",
+          "sha256": "62957c500f1d400e6d88ac869b03434e3d6fc1abe2fddb6ed2909f99a2999a9c",
+          "geometrySha256": "68abf5dd4695f819805f874ca897ffedda14b61618a4e82c83f769fcacf7e491",
+          "canonicalDuplicateOwners": [],
+          "bytes": 1210966,
+          "crc32": 1035276125,
+          "bounds": {
+            "min": [
+              -1.6755,
+              -99.3891,
+              1385.56
+            ],
+            "max": [
+              0.574499,
+              -84.8757,
+              1500.41
+            ],
+            "vertices": 12514
+          },
+          "vertices": 12514,
+          "triangles": 12953
+        }
+      ],
+      "bounds": {
+        "min": [
+          -1.6755,
+          -99.3891,
+          1385.56
+        ],
+        "max": [
+          0.574499,
+          -84.8757,
+          1500.41
+        ]
+      },
+      "degenerateTriangles": 3,
+      "grossEnvelope": {
+        "min": [
+          -220,
+          -300,
+          1200
+        ],
+        "max": [
+          220,
+          150,
+          1800
+        ]
+      },
+      "grossPositionPass": true,
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA55077",
+          "name": "pharyngeal raphe"
+        }
+      ],
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA55130",
+      "name": "epiglottis",
+      "region": "head-neck",
+      "system": "organs",
+      "files": [
+        {
+          "file": "FJ2770",
+          "sha256": "05ae56007f7aa017fb458bdef643ea97e51ed3bd275b13da30086fa02b606054",
+          "geometrySha256": "03c5703085cbb16e649e8bb637d2f82303abe2c69d0734bd68fe645bca11ffa0",
+          "canonicalDuplicateOwners": [],
+          "bytes": 294822,
+          "crc32": 1391396500,
+          "bounds": {
+            "min": [
+              -8.59202,
+              -115.9,
+              1408.73
+            ],
+            "max": [
+              7.23443,
+              -108.189,
+              1438.23
+            ],
+            "vertices": 2992
+          },
+          "vertices": 2992,
+          "triangles": 3602
+        }
+      ],
+      "bounds": {
+        "min": [
+          -8.59202,
+          -115.9,
+          1408.73
+        ],
+        "max": [
+          7.23443,
+          -108.189,
+          1438.23
+        ]
+      },
+      "degenerateTriangles": 0,
+      "grossEnvelope": {
+        "min": [
+          -220,
+          -300,
+          1200
+        ],
+        "max": [
+          220,
+          150,
+          1800
+        ]
+      },
+      "grossPositionPass": true,
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA54877",
+          "name": "subdivision of pharynx"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55053",
+          "name": "subdivision of laryngopharynx"
+        },
+        {
+          "tree": "isa",
+          "id": "FMA55130",
+          "name": "epiglottis"
+        }
+      ],
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14782",
+      "name": "anterior superior pancreaticoduodenal artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "files": [
+        {
+          "file": "FJ3409",
+          "sha256": "b249abf0f7ca8682a8f5116021c4a3ba627b43895f6c2aa80f4640e15a04d766",
+          "geometrySha256": "3bbee940b46f99269409a724bb7ecce171f6da1858407010d8a4c122e47f79bc",
+          "canonicalDuplicateOwners": [],
+          "bytes": 30249,
+          "crc32": 2562830879,
+          "bounds": {
+            "min": [
+              -46.6562,
+              -139.981,
+              1023.14
+            ],
+            "max": [
+              -9.12598,
+              -128.666,
+              1065.96
+            ],
+            "vertices": 287
+          },
+          "vertices": 287,
+          "triangles": 454
+        }
+      ],
+      "bounds": {
+        "min": [
+          -46.6562,
+          -139.981,
+          1023.14
+        ],
+        "max": [
+          -9.12598,
+          -128.666,
+          1065.96
+        ]
+      },
+      "degenerateTriangles": 0,
+      "grossEnvelope": {
+        "min": [
+          -200,
+          -260,
+          750
+        ],
+        "max": [
+          200,
+          100,
+          1250
+        ]
+      },
+      "grossPositionPass": true,
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA14782",
+          "name": "anterior superior pancreaticoduodenal artery"
+        }
+      ],
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14784",
+      "name": "posterior superior pancreaticoduodenal artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "files": [
+        {
+          "file": "FJ3557",
+          "sha256": "eadce1bc7a5cccc096b050e2738aac098c8194487bb8b20ab49aaa05cbfd3a0c",
+          "geometrySha256": "12a51d767185292f00e50f2c841e6bbbb3a5ac0194dc7ec5097b5b62731d1215",
+          "canonicalDuplicateOwners": [],
+          "bytes": 27954,
+          "crc32": 1369798377,
+          "bounds": {
+            "min": [
+              -35.4576,
+              -138.884,
+              1031.69
+            ],
+            "max": [
+              -14.2333,
+              -109.188,
+              1065.69
+            ],
+            "vertices": 278
+          },
+          "vertices": 278,
+          "triangles": 394
+        }
+      ],
+      "bounds": {
+        "min": [
+          -35.4576,
+          -138.884,
+          1031.69
+        ],
+        "max": [
+          -14.2333,
+          -109.188,
+          1065.69
+        ]
+      },
+      "degenerateTriangles": 0,
+      "grossEnvelope": {
+        "min": [
+          -200,
+          -260,
+          750
+        ],
+        "max": [
+          200,
+          100,
+          1250
+        ]
+      },
+      "grossPositionPass": true,
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA14784",
+          "name": "posterior superior pancreaticoduodenal artery"
+        }
+      ],
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14787",
+      "name": "dorsal pancreatic artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "files": [
+        {
+          "file": "FJ3430",
+          "sha256": "a9566e012c3698584e51737a0e00c591b1b9ad57aea3f396056d6e4c2ec126e0",
+          "geometrySha256": "e14b1dc9ceb37d9056b358cf839ded851effefe04a3097bf95d68c4a578e8db2",
+          "canonicalDuplicateOwners": [],
+          "bytes": 79274,
+          "crc32": 1219131962,
+          "bounds": {
+            "min": [
+              3.3911,
+              -131.987,
+              1046.81
+            ],
+            "max": [
+              10.0633,
+              -122.622,
+              1077.79
+            ],
+            "vertices": 687
+          },
+          "vertices": 687,
+          "triangles": 1330
+        }
+      ],
+      "bounds": {
+        "min": [
+          3.3911,
+          -131.987,
+          1046.81
+        ],
+        "max": [
+          10.0633,
+          -122.622,
+          1077.79
+        ]
+      },
+      "degenerateTriangles": 0,
+      "grossEnvelope": {
+        "min": [
+          -200,
+          -260,
+          750
+        ],
+        "max": [
+          200,
+          100,
+          1250
+        ]
+      },
+      "grossPositionPass": true,
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA14787",
+          "name": "dorsal pancreatic artery"
+        }
+      ],
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14790",
+      "name": "inferior pancreatic artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "files": [
+        {
+          "file": "FJ3444",
+          "sha256": "21e61cd0e3ccd79434af29edc1ae0bd3dc87f22f12774422d074ff854647197e",
+          "geometrySha256": "7680d03d30e74f3d1519aa44220a6c88611e09a13c495da6eee3fb4431c87f48",
+          "canonicalDuplicateOwners": [],
+          "bytes": 56306,
+          "crc32": 3899286789,
+          "bounds": {
+            "min": [
+              9.29759,
+              -125.527,
+              1046.41
+            ],
+            "max": [
+              30.0594,
+              -104.604,
+              1061.17
+            ],
+            "vertices": 500
+          },
+          "vertices": 500,
+          "triangles": 928
+        }
+      ],
+      "bounds": {
+        "min": [
+          9.29759,
+          -125.527,
+          1046.41
+        ],
+        "max": [
+          30.0594,
+          -104.604,
+          1061.17
+        ]
+      },
+      "degenerateTriangles": 0,
+      "grossEnvelope": {
+        "min": [
+          -200,
+          -260,
+          750
+        ],
+        "max": [
+          200,
+          100,
+          1250
+        ]
+      },
+      "grossPositionPass": true,
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA14790",
+          "name": "inferior pancreatic artery"
+        }
+      ],
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14792",
+      "name": "great pancreatic artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "files": [
+        {
+          "file": "FJ3433",
+          "sha256": "94c1f1acab1e5edfadb46b7d1a02c50248b4bdaea2663acd46a5f08b8b0cc2d5",
+          "geometrySha256": "c8281bd5651050855056545bc9bced21a0446498b987b48457411465b36e9719",
+          "canonicalDuplicateOwners": [],
+          "bytes": 15904,
+          "crc32": 1005724732,
+          "bounds": {
+            "min": [
+              41.1033,
+              -108.596,
+              1065.81
+            ],
+            "max": [
+              44.9602,
+              -100.393,
+              1075.42
+            ],
+            "vertices": 144
+          },
+          "vertices": 144,
+          "triangles": 270
+        }
+      ],
+      "bounds": {
+        "min": [
+          41.1033,
+          -108.596,
+          1065.81
+        ],
+        "max": [
+          44.9602,
+          -100.393,
+          1075.42
+        ]
+      },
+      "degenerateTriangles": 0,
+      "grossEnvelope": {
+        "min": [
+          -200,
+          -260,
+          750
+        ],
+        "max": [
+          200,
+          100,
+          1250
+        ]
+      },
+      "grossPositionPass": true,
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA14792",
+          "name": "great pancreatic artery"
+        }
+      ],
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14793",
+      "name": "caudal pancreatic artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "files": [
+        {
+          "file": "FJ3419",
+          "sha256": "e29640c2424778faa8c7540bcbfe53ffbadf962db67c86ed7255d23eff157820",
+          "geometrySha256": "4f0ae4923cb807ca0d446a51a51042e6b90779930679dd549b278dbd58bd69b8",
+          "canonicalDuplicateOwners": [],
+          "bytes": 56969,
+          "crc32": 991098972,
+          "bounds": {
+            "min": [
+              29.3359,
+              -105.411,
+              1060.33
+            ],
+            "max": [
+              58.271,
+              -95.4801,
+              1072.56
+            ],
+            "vertices": 642
+          },
+          "vertices": 642,
+          "triangles": 656
+        }
+      ],
+      "bounds": {
+        "min": [
+          29.3359,
+          -105.411,
+          1060.33
+        ],
+        "max": [
+          58.271,
+          -95.4801,
+          1072.56
+        ]
+      },
+      "degenerateTriangles": 0,
+      "grossEnvelope": {
+        "min": [
+          -200,
+          -260,
+          750
+        ],
+        "max": [
+          200,
+          100,
+          1250
+        ]
+      },
+      "grossPositionPass": true,
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA14793",
+          "name": "caudal pancreatic artery"
+        }
+      ],
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA14805",
+      "name": "inferior pancreaticoduodenal artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "files": [
+        {
+          "file": "FJ3446",
+          "sha256": "619cb0ffc120396dc6ffee3b97d083e8bbcda9d4ab6dcf1ff9a13b0aaf63ac73",
+          "geometrySha256": "5b5cd8f6c8c7575c5b655df676c70d0982520c999fd016b912c76f0c4bf85f4b",
+          "canonicalDuplicateOwners": [],
+          "bytes": 16403,
+          "crc32": 2893734357,
+          "bounds": {
+            "min": [
+              -16.1324,
+              -144.166,
+              1024.59
+            ],
+            "max": [
+              -0.821965,
+              -134.257,
+              1029.26
+            ],
+            "vertices": 154
+          },
+          "vertices": 154,
+          "triangles": 260
+        }
+      ],
+      "bounds": {
+        "min": [
+          -16.1324,
+          -144.166,
+          1024.59
+        ],
+        "max": [
+          -0.821965,
+          -134.257,
+          1029.26
+        ]
+      },
+      "degenerateTriangles": 0,
+      "grossEnvelope": {
+        "min": [
+          -200,
+          -260,
+          750
+        ],
+        "max": [
+          200,
+          100,
+          1250
+        ]
+      },
+      "grossPositionPass": true,
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA14805",
+          "name": "inferior pancreaticoduodenal artery"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA14805",
+          "name": "inferior pancreaticoduodenal artery"
+        }
+      ],
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA15398",
+      "name": "pancreaticoduodenal vein",
+      "region": "abdomen",
+      "system": "vessels",
+      "files": [
+        {
+          "file": "FJ3545",
+          "sha256": "87919e391f53ec7e464f7379c422bc6e6bdcf022db8ea7007176e38a00cc1a3c",
+          "geometrySha256": "e050a116368f49a8ebc7cf22e7b407c501a3e20987529c908193883de99a0a68",
+          "canonicalDuplicateOwners": [],
+          "bytes": 51394,
+          "crc32": 515287212,
+          "bounds": {
+            "min": [
+              -48.0669,
+              -145.753,
+              1005.05
+            ],
+            "max": [
+              -11.4792,
+              -125.154,
+              1056.57
+            ],
+            "vertices": 540
+          },
+          "vertices": 540,
+          "triangles": 660
+        },
+        {
+          "file": "FJ3646",
+          "sha256": "2c059c7ad26689513bbc41e13b913ed07c5bbd0696e59f85afb2a577b88f240f",
+          "geometrySha256": "90fffc6a44db6e4d725719a3cfd56b19061b01567f020446933ebd5d990f4b9a",
+          "canonicalDuplicateOwners": [],
+          "bytes": 26685,
+          "crc32": 2010229507,
+          "bounds": {
+            "min": [
+              -31.7135,
+              -135.461,
+              1020.61
+            ],
+            "max": [
+              -9.47422,
+              -114.143,
+              1032.7
+            ],
+            "vertices": 262
+          },
+          "vertices": 262,
+          "triangles": 388
+        },
+        {
+          "file": "FJ3655",
+          "sha256": "c1d02f38a45db4b4504fcc453837fab56fb18a81178a62f5b7da9a4f6758c72f",
+          "geometrySha256": "5eba67e49c5f821e27016b069d003fef1c0d19bf30006f2916a5981ac8e74717",
+          "canonicalDuplicateOwners": [],
+          "bytes": 29569,
+          "crc32": 2419280466,
+          "bounds": {
+            "min": [
+              -32.1238,
+              -133.042,
+              1032.25
+            ],
+            "max": [
+              -13.718,
+              -110.422,
+              1088
+            ],
+            "vertices": 285
+          },
+          "vertices": 285,
+          "triangles": 438
+        }
+      ],
+      "bounds": {
+        "min": [
+          -48.0669,
+          -145.753,
+          1005.05
+        ],
+        "max": [
+          -9.47422,
+          -110.422,
+          1088
+        ]
+      },
+      "degenerateTriangles": 0,
+      "grossEnvelope": {
+        "min": [
+          -200,
+          -260,
+          750
+        ],
+        "max": [
+          200,
+          100,
+          1250
+        ]
+      },
+      "grossPositionPass": true,
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA15398",
+          "name": "pancreaticoduodenal vein"
+        }
+      ],
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA70479",
+      "name": "anterior inferior pancreaticoduodenal artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "files": [
+        {
+          "file": "FJ3401",
+          "sha256": "0c63f2577def9596880aa8d7049e074140747cbb31a1d99b02a3a4f4b7ce016e",
+          "geometrySha256": "00df8f02d7746981da481a67b40b13f42c9b29ea56fedd82671b2d5a14d58442",
+          "canonicalDuplicateOwners": [],
+          "bytes": 23071,
+          "crc32": 2149444500,
+          "bounds": {
+            "min": [
+              -46.1771,
+              -145.052,
+              1007.16
+            ],
+            "max": [
+              -14.6782,
+              -131.914,
+              1026.59
+            ],
+            "vertices": 218
+          },
+          "vertices": 218,
+          "triangles": 356
+        }
+      ],
+      "bounds": {
+        "min": [
+          -46.1771,
+          -145.052,
+          1007.16
+        ],
+        "max": [
+          -14.6782,
+          -131.914,
+          1026.59
+        ]
+      },
+      "degenerateTriangles": 0,
+      "grossEnvelope": {
+        "min": [
+          -200,
+          -260,
+          750
+        ],
+        "max": [
+          200,
+          100,
+          1250
+        ]
+      },
+      "grossPositionPass": true,
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA70479",
+          "name": "anterior inferior pancreaticoduodenal artery"
+        }
+      ],
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA70480",
+      "name": "posterior inferior pancreaticoduodenal artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "files": [
+        {
+          "file": "FJ3546",
+          "sha256": "3b460a67a1fce291779308e01a50fed34beb449eefdd279ae3603d7f82986cc9",
+          "geometrySha256": "2d9441b2a995c3c39531a24ef1c7c879c8a7b062d6a6a778ed06b21af2de583b",
+          "canonicalDuplicateOwners": [],
+          "bytes": 25663,
+          "crc32": 1429916937,
+          "bounds": {
+            "min": [
+              -35.1629,
+              -141.405,
+              1017.24
+            ],
+            "max": [
+              -11.8237,
+              -113.327,
+              1032.05
+            ],
+            "vertices": 246
+          },
+          "vertices": 246,
+          "triangles": 384
+        }
+      ],
+      "bounds": {
+        "min": [
+          -35.1629,
+          -141.405,
+          1017.24
+        ],
+        "max": [
+          -11.8237,
+          -113.327,
+          1032.05
+        ]
+      },
+      "degenerateTriangles": 0,
+      "grossEnvelope": {
+        "min": [
+          -200,
+          -260,
+          750
+        ],
+        "max": [
+          200,
+          100,
+          1250
+        ]
+      },
+      "grossPositionPass": true,
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA70480",
+          "name": "posterior inferior pancreaticoduodenal artery"
+        }
+      ],
+      "admitted": false,
+      "clinicalValidation": false
+    },
+    {
+      "fmaId": "FMA76574",
+      "name": "trunk of gastroduodenal artery",
+      "region": "abdomen",
+      "system": "vessels",
+      "files": [
+        {
+          "file": "FJ3432",
+          "sha256": "520c5303adfa900e6eb905722207a127678ce0b60d3f763ed6e8be183519d6fd",
+          "geometrySha256": "e7ba708029295ec77e9956774c65841362b6c8340b9d61d1aa0bee40403e83f4",
+          "canonicalDuplicateOwners": [],
+          "bytes": 12687,
+          "crc32": 856603335,
+          "bounds": {
+            "min": [
+              -11.3579,
+              -141.307,
+              1065.1
+            ],
+            "max": [
+              -5.86036,
+              -135.843,
+              1078.18
+            ],
+            "vertices": 119
+          },
+          "vertices": 119,
+          "triangles": 204
+        }
+      ],
+      "bounds": {
+        "min": [
+          -11.3579,
+          -141.307,
+          1065.1
+        ],
+        "max": [
+          -5.86036,
+          -135.843,
+          1078.18
+        ]
+      },
+      "degenerateTriangles": 0,
+      "grossEnvelope": {
+        "min": [
+          -200,
+          -260,
+          750
+        ],
+        "max": [
+          200,
+          100,
+          1250
+        ]
+      },
+      "grossPositionPass": true,
+      "exactDefinitions": [
+        {
+          "tree": "isa",
+          "id": "FMA76574",
+          "name": "trunk of gastroduodenal artery"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA14775",
+          "name": "gastroduodenal artery"
+        },
+        {
+          "tree": "partof",
+          "id": "FMA76574",
+          "name": "trunk of gastroduodenal artery"
+        }
+      ],
+      "admitted": false,
+      "clinicalValidation": false
+    }
+  ],
+  "comparisons": [
+    {
+      "a": "FMA52749",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 28.565093153347185,
+        "maxMm": 35.32219200262658,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 32.758709543401984,
+        "maxMm": 61.29705484966221,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52749",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 13.906212783950176,
+        "maxMm": 18.902646915175684,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 10.788990872107968,
+        "maxMm": 16.597853618507163,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12521",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 29.126518911809562,
+        "maxMm": 49.3366757162841,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 23.85114986107894,
+        "maxMm": 57.994004101268885,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12522",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 24.84457078693043,
+        "maxMm": 46.132405415371004,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 3,
+        "withinOneMm": 6,
+        "medianMm": 21.14660410008259,
+        "maxMm": 72.79798778480685,
+        "closePointBounds": {
+          "min": [
+            -0.32389,
+            -88.6855,
+            1419.71
+          ],
+          "max": [
+            -0.096984,
+            -88.4215,
+            1421.71
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12523",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 119,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 22.369571393591972,
+        "maxMm": 49.38638366282416,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 1,
+        "withinOneMm": 5,
+        "medianMm": 21.64033484491402,
+        "maxMm": 84.67255673580192,
+        "closePointBounds": {
+          "min": [
+            -0.175499,
+            -86.2514,
+            1398.46
+          ],
+          "max": [
+            -0.175499,
+            -86.2514,
+            1398.46
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12524",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 22.524747740485353,
+        "maxMm": 55.65198476454461,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 2,
+        "withinOneMm": 3,
+        "medianMm": 36.939918809466796,
+        "maxMm": 100.09073422458447,
+        "closePointBounds": {
+          "min": [
+            -0.915083,
+            -88.6919,
+            1393.57
+          ],
+          "max": [
+            -0.80582,
+            -85.8855,
+            1394.61
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12525",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 25.598633411864046,
+        "maxMm": 65.80181827156193,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 51.028307632626756,
+        "maxMm": 113.6390143157379,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12519",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 120,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 35.66257447489349,
+        "maxMm": 52.76268478285473,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 32.1501137061,
+        "maxMm": 80.6663626497617,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA12520",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 119,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 26.908946391956,
+        "maxMm": 52.97982844277933,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 23.47397816942799,
+        "maxMm": 60.232538218442095,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52748",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 53.00754273714097,
+        "maxMm": 77.53376808938152,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 41.548833249397696,
+        "maxMm": 74.34754467132127,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52748",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 52.201091221257066,
+        "maxMm": 81.25256822350968,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 33.852553839085225,
+        "maxMm": 40.179860084720424,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52735",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 98.58550554260906,
+        "maxMm": 135.1831815161964,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 3,
+        "medianMm": 47.61922212792075,
+        "maxMm": 94.80354531064624,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA52736",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 33.72573324054355,
+        "maxMm": 73.88800134667737,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 55.25729856790916,
+        "maxMm": 100.72883242045845,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46293",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 42.62623246560336,
+        "maxMm": 88.37910806917272,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 16.353999353651297,
+        "maxMm": 23.68351938678243,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46292",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 45.790854623213264,
+        "maxMm": 88.37354764063953,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 21.161135917141337,
+        "maxMm": 28.654998822848253,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA45740",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 60.265555801751155,
+        "maxMm": 149.18646558680848,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 38.5194997637858,
+        "maxMm": 60.81820870802176,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA45740",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 57.812778553707425,
+        "maxMm": 160.26589282433147,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 21.63795552765652,
+        "maxMm": 28.58167065555495,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA13409",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 68.71483393149693,
+        "maxMm": 107.75670437046344,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 32.541208603553955,
+        "maxMm": 56.990020304482066,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA13409",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 85.49394956301009,
+        "maxMm": 114.27279604600977,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 27.911515816207455,
+        "maxMm": 36.72584104561389,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA13347",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 60.33765308529192,
+        "maxMm": 97.24354094083327,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.733046734920984,
+        "maxMm": 21.187090053801533,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA13351",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 79.60082161239377,
+        "maxMm": 109.56038054926525,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 24.939519560127895,
+        "maxMm": 34.390053421192945,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA13353",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 116,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 11.930759519024324,
+        "maxMm": 19.115708134631017,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.769884156780755,
+        "maxMm": 21.520580177532374,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA45739",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 55.58550175405446,
+        "maxMm": 150.50616041632452,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 38.77987269309221,
+        "maxMm": 60.902248373284294,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA45739",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 53.926584497444296,
+        "maxMm": 160.64314112891978,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 20.98564170327092,
+        "maxMm": 28.692439122104716,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA13408",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 71.48226777818746,
+        "maxMm": 107.29930415057304,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 32.904977535103946,
+        "maxMm": 57.14191778647022,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA13408",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 88.33419617203741,
+        "maxMm": 113.67575022466715,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 27.807912612256793,
+        "maxMm": 36.41428135176034,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA13346",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 61.60606693279568,
+        "maxMm": 97.61889751681477,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.26782021407639,
+        "maxMm": 21.45586254204233,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA13350",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 122,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 74.96667169656192,
+        "maxMm": 109.6046068345346,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 24.552552381200016,
+        "maxMm": 33.94911167655055,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA13352",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 20.50342773061536,
+        "maxMm": 31.005508477944172,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 26.169274767882733,
+        "maxMm": 74.44355826125333,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA13352",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 14.664902854379841,
+        "maxMm": 19.101009978563354,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.281170360584934,
+        "maxMm": 21.51234627185979,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46636",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 8,
+        "withinOneMm": 36,
+        "medianMm": 6.842583194177822,
+        "maxMm": 18.539512486888352,
+        "closePointBounds": {
+          "min": [
+            -0.809995,
+            -91.5225,
+            1391.96
+          ],
+          "max": [
+            0.199567,
+            -87.2511,
+            1417.86
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 33,
+        "withinOneMm": 80,
+        "medianMm": 0.6577886526061929,
+        "maxMm": 50.03595101854294,
+        "closePointBounds": {
+          "min": [
+            -0.925499,
+            -92.7982,
+            1385.86
+          ],
+          "max": [
+            0.415516,
+            -85.3606,
+            1449.57
+          ]
+        }
+      },
+      "flagged": true
+    },
+    {
+      "a": "FMA46729",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 19.439663720646017,
+        "maxMm": 31.296379088686944,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 31.73019612968746,
+        "maxMm": 79.8950436594793,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46672",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 5,
+        "medianMm": 8.605792605156244,
+        "maxMm": 17.925141078896427,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 1,
+        "withinOneMm": 1,
+        "medianMm": 6.309127245515029,
+        "maxMm": 24.311399298314836,
+        "closePointBounds": {
+          "min": [
+            -1.37277,
+            -98.8355,
+            1473.31
+          ],
+          "max": [
+            -1.37277,
+            -98.8355,
+            1473.31
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46632",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinQuarterMm": 6,
+        "withinOneMm": 22,
+        "medianMm": 11.960332692375008,
+        "maxMm": 42.873987605190166,
+        "closePointBounds": {
+          "min": [
+            -0.640152,
+            -98.991,
+            1472.16
+          ],
+          "max": [
+            0.570572,
+            -95.4908,
+            1494.56
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 8,
+        "withinOneMm": 33,
+        "medianMm": 13.531708155001798,
+        "maxMm": 61.61232622197444,
+        "closePointBounds": {
+          "min": [
+            -0.524487,
+            -97.483,
+            1458.04
+          ],
+          "max": [
+            0.465124,
+            -95.2364,
+            1494.81
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46732",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 13.786942508433333,
+        "maxMm": 25.09023841704666,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 29.130628915872233,
+        "maxMm": 77.21118683197395,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46635",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinQuarterMm": 10,
+        "withinOneMm": 35,
+        "medianMm": 7.47453176617778,
+        "maxMm": 19.774108358316408,
+        "closePointBounds": {
+          "min": [
+            -1.20738,
+            -92.2433,
+            1401.22
+          ],
+          "max": [
+            -0.699923,
+            -87.4402,
+            1449.46
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 32,
+        "withinOneMm": 71,
+        "medianMm": 0.8953077491765024,
+        "maxMm": 49.942345143080864,
+        "closePointBounds": {
+          "min": [
+            -1.51059,
+            -92.8703,
+            1385.71
+          ],
+          "max": [
+            -0.521202,
+            -85.6354,
+            1447.36
+          ]
+        }
+      },
+      "flagged": true
+    },
+    {
+      "a": "FMA46728",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 19.179928133139615,
+        "maxMm": 31.449427458381503,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 32.03789529140293,
+        "maxMm": 79.88453821609858,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46671",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinQuarterMm": 1,
+        "withinOneMm": 4,
+        "medianMm": 8.588336826976446,
+        "maxMm": 18.423693253251567,
+        "closePointBounds": {
+          "min": [
+            -1.25793,
+            -98.3626,
+            1472.7
+          ],
+          "max": [
+            -1.25793,
+            -98.3626,
+            1472.7
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 1,
+        "medianMm": 6.635487294602853,
+        "maxMm": 24.354544986148273,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46631",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinQuarterMm": 2,
+        "withinOneMm": 23,
+        "medianMm": 12.037502385478476,
+        "maxMm": 43.00144212750195,
+        "closePointBounds": {
+          "min": [
+            -0.779923,
+            -95.4527,
+            1485.76
+          ],
+          "max": [
+            -0.679923,
+            -95.1902,
+            1493.06
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 7,
+        "withinOneMm": 26,
+        "medianMm": 13.543779562991194,
+        "maxMm": 61.622030812461986,
+        "closePointBounds": {
+          "min": [
+            -1.3962,
+            -98.6355,
+            1482.11
+          ],
+          "max": [
+            -0.524329,
+            -94.9418,
+            1496.92
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46731",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 13.49174156355759,
+        "maxMm": 25.203404859859713,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 29.39362252445414,
+        "maxMm": 77.1836416553476,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46733",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinQuarterMm": 14,
+        "withinOneMm": 51,
+        "medianMm": 1.5766506919781087,
+        "maxMm": 3.427292730065156,
+        "closePointBounds": {
+          "min": [
+            -1.59708,
+            -98.8331,
+            1469.12
+          ],
+          "max": [
+            0.519333,
+            -97.9823,
+            1477.23
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 1,
+        "medianMm": 35.23346901755158,
+        "maxMm": 84.0744114635473,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46585",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 5.957836123013187,
+        "maxMm": 8.560283676514453,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 25.756942062537256,
+        "maxMm": 90.02336361711272,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46578",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 7.0574716177233245,
+        "maxMm": 12.867566554668501,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 31.088805158096843,
+        "maxMm": 95.42294990632489,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46590",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 13.906002607971143,
+        "maxMm": 26.75172860932026,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 22.734404402125012,
+        "maxMm": 71.15404555820346,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46590",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 7,
+        "medianMm": 6.9590981498265965,
+        "maxMm": 18.95995979892037,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 5,
+        "withinOneMm": 9,
+        "medianMm": 6.332285298733288,
+        "maxMm": 14.27429126592281,
+        "closePointBounds": {
+          "min": [
+            0.0491666,
+            -115.821,
+            1408.98
+          ],
+          "max": [
+            7.15711,
+            -108.441,
+            1426.4
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46584",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 6.2604692289316395,
+        "maxMm": 8.394430528333812,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 26.176837569316916,
+        "maxMm": 90.02548098485939,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46577",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 7.016255844801293,
+        "maxMm": 12.915599082945507,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 31.47800432195328,
+        "maxMm": 95.43324061853093,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46589",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 14.091896975850348,
+        "maxMm": 26.73050068521913,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 22.600272298427786,
+        "maxMm": 71.18934787558317,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46589",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 6,
+        "medianMm": 7.052806759487273,
+        "maxMm": 18.522177744019462,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 4,
+        "withinOneMm": 9,
+        "medianMm": 6.308697568297667,
+        "maxMm": 14.127721589427832,
+        "closePointBounds": {
+          "min": [
+            -8.46976,
+            -115.9,
+            1408.83
+          ],
+          "max": [
+            -1.13728,
+            -108.938,
+            1425.03
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA46582",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 7.277301142866986,
+        "maxMm": 9.235414460650913,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 25.88288373616815,
+        "maxMm": 90.39917716569545,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA50801",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 71.31265484132672,
+        "maxMm": 124.46091290956902,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 40.39782988120644,
+        "maxMm": 82.7684433476455,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA55099",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 17.580657077507087,
+        "maxMm": 30.570413836895547,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 16.756416764299566,
+        "maxMm": 71.27330898093977,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA55099",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 17.257433104690925,
+        "maxMm": 28.366675141439032,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 9.29190656924881,
+        "maxMm": 19.574203215445916,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA9615",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.846671546954664,
+        "maxMm": 22.351381889772725,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 31.396151632177546,
+        "maxMm": 95.41792459160067,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA55113",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 94,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 8.660808303610011,
+        "maxMm": 12.629219350205302,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 24.51865245432759,
+        "maxMm": 88.54073949034681,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA55114",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 95,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 8.756252419048923,
+        "maxMm": 12.539410982293832,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 24.284278861881127,
+        "maxMm": 88.50959518991192,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA3789",
+      "b": "FMA14787",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 68.57207756218342,
+        "maxMm": 98.10216913749105,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 115,
+        "withinQuarterMm": 6,
+        "withinOneMm": 17,
+        "medianMm": 2.4738735280647792,
+        "maxMm": 13.30434503582359,
+        "closePointBounds": {
+          "min": [
+            6.97253,
+            -125.87,
+            1047.2
+          ],
+          "max": [
+            10.0633,
+            -125.201,
+            1049.46
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA3789",
+      "b": "FMA14790",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 75.77803093575338,
+        "maxMm": 97.68227741316501,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 5,
+        "withinOneMm": 27,
+        "medianMm": 2.0108811850526065,
+        "maxMm": 13.909005772364063,
+        "closePointBounds": {
+          "min": [
+            10.1038,
+            -125.514,
+            1047.37
+          ],
+          "max": [
+            17.106,
+            -117.035,
+            1051.84
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA10951",
+      "b": "FMA14782",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 78.12068809154457,
+        "maxMm": 128.32189263835676,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 96,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.33631843489276,
+        "maxMm": 29.378976802119027,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA10951",
+      "b": "FMA14784",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 79.62130634134549,
+        "maxMm": 126.75242776373159,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 93,
+        "withinQuarterMm": 1,
+        "withinOneMm": 12,
+        "medianMm": 11.213985485375886,
+        "maxMm": 15.50674871753774,
+        "closePointBounds": {
+          "min": [
+            -21.1407,
+            -117.312,
+            1060.21
+          ],
+          "max": [
+            -21.1407,
+            -117.312,
+            1060.21
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA10951",
+      "b": "FMA15398",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 57.877297389067856,
+        "maxMm": 105.83246770363058,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 7,
+        "medianMm": 12.03107489047867,
+        "maxMm": 28.933899144786174,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA10951",
+      "b": "FMA70480",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 66.8853521728786,
+        "maxMm": 160.7756281683776,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 123,
+        "withinQuarterMm": 2,
+        "withinOneMm": 18,
+        "medianMm": 8.747915972699019,
+        "maxMm": 15.099672008303903,
+        "closePointBounds": {
+          "min": [
+            -12.3506,
+            -127.055,
+            1023.43
+          ],
+          "max": [
+            -12.2859,
+            -127.03,
+            1024.15
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA3958",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 26.268576007277215,
+        "maxMm": 42.769984900628614,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.41316245900406,
+        "maxMm": 33.28566267569265,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA4066",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 27.058198513805376,
+        "maxMm": 43.41560788281388,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 19.504738478887113,
+        "maxMm": 33.76605551384083,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA50737",
+      "b": "FMA14787",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 89,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 21.057904030270905,
+        "maxMm": 25.193109882513543,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 115,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 16.671834586634304,
+        "maxMm": 31.05877461180125,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14749",
+      "b": "FMA14782",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 117,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 82.94868389100577,
+        "maxMm": 114.83414071607795,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 96,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 34.44669565710125,
+        "maxMm": 40.04020466902631,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14749",
+      "b": "FMA14784",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 117,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 89.10810565464843,
+        "maxMm": 122.69920406119188,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 93,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 24.332524635896032,
+        "maxMm": 37.94976857217691,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14749",
+      "b": "FMA14787",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 117,
+        "withinQuarterMm": 0,
+        "withinOneMm": 2,
+        "medianMm": 102.78142986616984,
+        "maxMm": 149.26384653881354,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 115,
+        "withinQuarterMm": 7,
+        "withinOneMm": 20,
+        "medianMm": 6.926458267046365,
+        "maxMm": 24.959873174637085,
+        "closePointBounds": {
+          "min": [
+            4.1012,
+            -126.61,
+            1049.07
+          ],
+          "max": [
+            7.0673,
+            -124.943,
+            1053.12
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14749",
+      "b": "FMA14790",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 117,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 102.72487091551581,
+        "maxMm": 149.26211598626224,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 7.268128752031018,
+        "maxMm": 28.242954364449858,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14749",
+      "b": "FMA14805",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 117,
+        "withinQuarterMm": 1,
+        "withinOneMm": 1,
+        "medianMm": 78.17749038367751,
+        "maxMm": 121.9604045680811,
+        "closePointBounds": {
+          "min": [
+            -2.66841,
+            -137.477,
+            1028.05
+          ],
+          "max": [
+            -2.66841,
+            -137.477,
+            1028.05
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 77,
+        "withinQuarterMm": 10,
+        "withinOneMm": 23,
+        "medianMm": 3.8830311111610385,
+        "maxMm": 8.79950416851967,
+        "closePointBounds": {
+          "min": [
+            -4.63353,
+            -140.338,
+            1026.03
+          ],
+          "max": [
+            -0.821965,
+            -134.658,
+            1029.26
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14749",
+      "b": "FMA15398",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 117,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 60.733871412283165,
+        "maxMm": 98.87599979691734,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 24.78782653410893,
+        "maxMm": 42.844291346693446,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14749",
+      "b": "FMA70479",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 117,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 63.13594054332289,
+        "maxMm": 101.67900858072917,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 109,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.68299477642359,
+        "maxMm": 38.96340980062429,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14749",
+      "b": "FMA70480",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 117,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 71.59765005389497,
+        "maxMm": 110.40948711338179,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 14.260332327814872,
+        "maxMm": 33.90838162845434,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14771",
+      "b": "FMA14787",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 92,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 15.512377304965236,
+        "maxMm": 26.211071616589766,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 115,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.46943232300603,
+        "maxMm": 32.575910307162225,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14771",
+      "b": "FMA15398",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 92,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 13.689946073470367,
+        "maxMm": 20.670636021187175,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 52.12037237388473,
+        "maxMm": 75.02503561671188,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14771",
+      "b": "FMA76574",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 92,
+        "withinQuarterMm": 0,
+        "withinOneMm": 6,
+        "medianMm": 8.383320538426279,
+        "maxMm": 16.708609262820172,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 119,
+        "withinQuarterMm": 7,
+        "withinOneMm": 33,
+        "medianMm": 1.5889889455865105,
+        "maxMm": 10.95902183084526,
+        "closePointBounds": {
+          "min": [
+            -8.94854,
+            -141.307,
+            1075.85
+          ],
+          "max": [
+            -6.40334,
+            -140.505,
+            1077.25
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14772",
+      "b": "FMA15398",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 91,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 10.303868079997988,
+        "maxMm": 29.9400217935792,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 56.49294915836846,
+        "maxMm": 78.77737413750229,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14773",
+      "b": "FMA14787",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 47.94551460354595,
+        "maxMm": 96.9813559817664,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 115,
+        "withinQuarterMm": 1,
+        "withinOneMm": 4,
+        "medianMm": 13.543904827932721,
+        "maxMm": 21.520799551094736,
+        "closePointBounds": {
+          "min": [
+            8.38743,
+            -131.836,
+            1075.6
+          ],
+          "max": [
+            8.38743,
+            -131.836,
+            1075.6
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14773",
+      "b": "FMA14790",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 25.744662048665496,
+        "maxMm": 71.8360769227413,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.678437688059214,
+        "maxMm": 20.744265577397595,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14773",
+      "b": "FMA14792",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 3,
+        "medianMm": 20.418082959758312,
+        "maxMm": 55.95089172774641,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 72,
+        "withinQuarterMm": 1,
+        "withinOneMm": 22,
+        "medianMm": 2.3177856824009524,
+        "maxMm": 3.8575710796429794,
+        "closePointBounds": {
+          "min": [
+            43.9773,
+            -107.188,
+            1073.83
+          ],
+          "max": [
+            43.9773,
+            -107.188,
+            1073.83
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14773",
+      "b": "FMA14793",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 15.753998670670075,
+        "maxMm": 43.39077067027042,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 107,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 7.986913916271692,
+        "maxMm": 10.773834164771618,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA50735",
+      "b": "FMA14782",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 120,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 17.60076053044298,
+        "maxMm": 45.78459719436217,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 96,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 23.688886961822465,
+        "maxMm": 52.2216540622757,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA50735",
+      "b": "FMA14784",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 120,
+        "withinQuarterMm": 0,
+        "withinOneMm": 1,
+        "medianMm": 18.518012875036085,
+        "maxMm": 46.69209637358342,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 93,
+        "withinQuarterMm": 0,
+        "withinOneMm": 1,
+        "medianMm": 11.880170485308724,
+        "maxMm": 40.024088576571714,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA50735",
+      "b": "FMA15398",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 120,
+        "withinQuarterMm": 0,
+        "withinOneMm": 1,
+        "medianMm": 9.800198077397436,
+        "maxMm": 25.04686486888136,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 1,
+        "medianMm": 37.507750509061445,
+        "maxMm": 61.778262089184686,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA50735",
+      "b": "FMA76574",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 120,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.27126628651638,
+        "maxMm": 34.44936505311085,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 119,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 6.878518772413843,
+        "maxMm": 8.952269464535382,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14752",
+      "b": "FMA14784",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 20.65625468717304,
+        "maxMm": 36.09120003598002,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 93,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 21.740209613226675,
+        "maxMm": 33.25710750725843,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14752",
+      "b": "FMA14790",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 31.413439619756755,
+        "maxMm": 59.95014646947995,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 6.667634461253861,
+        "maxMm": 25.418260956509204,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14752",
+      "b": "FMA15398",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.98684566456469,
+        "maxMm": 34.229913987037726,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 28.6764710014987,
+        "maxMm": 46.04219154900204,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14752",
+      "b": "FMA70480",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 20.002530000227452,
+        "maxMm": 34.788584094821964,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 21.02338732964463,
+        "maxMm": 32.352928725562634,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14753",
+      "b": "FMA14790",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 83,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 13.104119516355583,
+        "maxMm": 23.955953448134885,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 6.314244986743076,
+        "maxMm": 15.770414485617593,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA54640",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 92,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 24.43512703309727,
+        "maxMm": 61.52152142585875,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 3,
+        "withinOneMm": 4,
+        "medianMm": 6.2112273652131815,
+        "maxMm": 22.535801320587446,
+        "closePointBounds": {
+          "min": [
+            -1.36072,
+            -110.81,
+            1434.28
+          ],
+          "max": [
+            2.44053,
+            -110.301,
+            1438.2
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA55227",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 121,
+        "withinQuarterMm": 31,
+        "withinOneMm": 47,
+        "medianMm": 2.1242205147614452,
+        "maxMm": 12.727273037970505,
+        "closePointBounds": {
+          "min": [
+            -1.07182,
+            -114.844,
+            1411.91
+          ],
+          "max": [
+            -0.242344,
+            -110.634,
+            1435.01
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 1,
+        "withinOneMm": 3,
+        "medianMm": 3.2426670963267292,
+        "maxMm": 8.472514775392025,
+        "closePointBounds": {
+          "min": [
+            -0.883637,
+            -113.133,
+            1423.61
+          ],
+          "max": [
+            -0.883637,
+            -113.133,
+            1423.61
+          ]
+        }
+      },
+      "flagged": true
+    },
+    {
+      "a": "FMA55230",
+      "b": "FMA55130",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 121,
+        "withinQuarterMm": 30,
+        "withinOneMm": 40,
+        "medianMm": 2.524953570989194,
+        "maxMm": 4.133525109322549,
+        "closePointBounds": {
+          "min": [
+            -2.23347,
+            -115.608,
+            1409.18
+          ],
+          "max": [
+            0.828684,
+            -114.046,
+            1411.12
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 5,
+        "withinOneMm": 6,
+        "medianMm": 15.988043286206333,
+        "maxMm": 27.506286973079554,
+        "closePointBounds": {
+          "min": [
+            -1.70584,
+            -115.9,
+            1408.83
+          ],
+          "max": [
+            0.507821,
+            -114.143,
+            1410.57
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA25058",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 122,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 17.944383455734133,
+        "maxMm": 23.18823956196888,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 34.0367189178963,
+        "maxMm": 56.850150048352695,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA13896",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 122,
+        "withinQuarterMm": 0,
+        "withinOneMm": 1,
+        "medianMm": 12.877911819257516,
+        "maxMm": 18.21048953790094,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 2,
+        "medianMm": 25.569076667208762,
+        "maxMm": 69.05120559280337,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA13897",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 113,
+        "withinQuarterMm": 1,
+        "withinOneMm": 3,
+        "medianMm": 11.558292340478225,
+        "maxMm": 14.673549003742355,
+        "closePointBounds": {
+          "min": [
+            0.19559,
+            -90.8195,
+            1408.92
+          ],
+          "max": [
+            0.19559,
+            -90.8195,
+            1408.92
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 2,
+        "medianMm": 23.368353929976173,
+        "maxMm": 82.2484657389065,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA13898",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 115,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 10.594014099220795,
+        "maxMm": 13.608289864982114,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 2,
+        "withinOneMm": 6,
+        "medianMm": 34.529888214271196,
+        "maxMm": 98.61856979662862,
+        "closePointBounds": {
+          "min": [
+            -0.915083,
+            -88.6919,
+            1393.57
+          ],
+          "max": [
+            -0.80582,
+            -85.8855,
+            1394.61
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA13899",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 11.729921923508268,
+        "maxMm": 14.54837683957904,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 50.624180796098024,
+        "maxMm": 115.63417227797505,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA10692",
+      "b": "FMA14782",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 74.96143961397752,
+        "maxMm": 125.16746625864893,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 96,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 64.80369230849386,
+        "maxMm": 78.90199917601387,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA10692",
+      "b": "FMA14784",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 83.01720433892004,
+        "maxMm": 128.48099212786303,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 93,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 79.25797448025536,
+        "maxMm": 85.87021300282392,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA10692",
+      "b": "FMA14805",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 101.51572769975105,
+        "maxMm": 156.8979539249636,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 77,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 83.3602253702704,
+        "maxMm": 93.97654242130363,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA10692",
+      "b": "FMA15398",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 74.13788804039406,
+        "maxMm": 109.67118956321221,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 78.20265134541498,
+        "maxMm": 86.72715677121802,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA10692",
+      "b": "FMA70479",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 80.0070901606851,
+        "maxMm": 159.09846105556775,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 109,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 72.94914601431289,
+        "maxMm": 80.37807072726697,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA10692",
+      "b": "FMA70480",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 86.57276340541524,
+        "maxMm": 158.79988469457396,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 81.16339270422729,
+        "maxMm": 88.48704027949314,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA4077",
+      "b": "FMA14790",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 117,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 101.86638115143784,
+        "maxMm": 146.69143041963977,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 87.31145939447028,
+        "maxMm": 88.715349395533,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA4077",
+      "b": "FMA14792",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 117,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 97.02557597298772,
+        "maxMm": 138.34917301527327,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 72,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 82.92294793290418,
+        "maxMm": 85.47197106474297,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA4077",
+      "b": "FMA14793",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 117,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 90.5745775668316,
+        "maxMm": 148.45262306284795,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 107,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 83.31758646720445,
+        "maxMm": 88.21539484791464,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA4772",
+      "b": "FMA15398",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 81.97020090154716,
+        "maxMm": 118.13911559159438,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 81.9868400812551,
+        "maxMm": 90.43368054183439,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA71442",
+      "b": "FMA55077",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 126,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 21.486057487163368,
+        "maxMm": 42.01045386008636,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 128,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 20.036855417403007,
+        "maxMm": 49.355014039548166,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14332",
+      "b": "FMA14782",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 83.50678733426405,
+        "maxMm": 114.15589816233759,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 96,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 24.2754945281608,
+        "maxMm": 34.73414776986479,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14332",
+      "b": "FMA14784",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 89.51638478200506,
+        "maxMm": 121.5221580700409,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 93,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 14.894168929430778,
+        "maxMm": 28.512565302104242,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14332",
+      "b": "FMA14805",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 80.91421926682604,
+        "maxMm": 121.6318408723637,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 77,
+        "withinQuarterMm": 4,
+        "withinOneMm": 12,
+        "medianMm": 2.7637905642930196,
+        "maxMm": 5.435718373499537,
+        "closePointBounds": {
+          "min": [
+            -10.5523,
+            -142.039,
+            1026.07
+          ],
+          "max": [
+            -8.84145,
+            -140.938,
+            1027.22
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14332",
+      "b": "FMA15398",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 62.29354027505573,
+        "maxMm": 98.62247066916336,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 121,
+        "withinQuarterMm": 3,
+        "withinOneMm": 8,
+        "medianMm": 17.544633902379555,
+        "maxMm": 37.72947784973955,
+        "closePointBounds": {
+          "min": [
+            -12.3659,
+            -142.089,
+            1024.18
+          ],
+          "max": [
+            -11.2164,
+            -134.507,
+            1029
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14332",
+      "b": "FMA70479",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 64.90826286544724,
+        "maxMm": 101.53655285290114,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 109,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 14.13079856512705,
+        "maxMm": 34.10514976556584,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14332",
+      "b": "FMA70480",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 72.79462657806548,
+        "maxMm": 109.59997161951642,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.871856691924737,
+        "maxMm": 28.572284250579184,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14332",
+      "b": "FMA76574",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 121.17938534853555,
+        "maxMm": 161.1588015810768,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 119,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 15.001813196170685,
+        "maxMm": 18.42292446654705,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14810",
+      "b": "FMA14782",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 118,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 27.873442310019772,
+        "maxMm": 73.40889290328795,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 96,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 13.67623487989294,
+        "maxMm": 21.710780944268215,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14810",
+      "b": "FMA14784",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 118,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 37.83458893710885,
+        "maxMm": 77.08055159143582,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 93,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 21.08102800529425,
+        "maxMm": 26.138203113450636,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14810",
+      "b": "FMA14787",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 118,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 49.9541855207509,
+        "maxMm": 72.01506639520457,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 115,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 35.428112231884256,
+        "maxMm": 41.97740953489268,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14810",
+      "b": "FMA14790",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 118,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 51.68386260755771,
+        "maxMm": 78.6154275536812,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 38.802687247951134,
+        "maxMm": 45.36060431663555,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14810",
+      "b": "FMA14805",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 118,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 40.53493281803317,
+        "maxMm": 74.0450948666175,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 77,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 7.069822174696409,
+        "maxMm": 17.262662561381006,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14810",
+      "b": "FMA15398",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 118,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 24.712925580756316,
+        "maxMm": 78.51617679968886,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 1,
+        "medianMm": 20.372310783798543,
+        "maxMm": 33.25772341336673,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14810",
+      "b": "FMA70479",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 118,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 38.012001936756775,
+        "maxMm": 88.50715395655878,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 109,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.747235268433545,
+        "maxMm": 24.2246344453328,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14810",
+      "b": "FMA70480",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 118,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 38.97067607830277,
+        "maxMm": 84.11255794713409,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 20.76921060331623,
+        "maxMm": 25.18935552649172,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14810",
+      "b": "FMA76574",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 118,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 46.59039560442574,
+        "maxMm": 72.27584298063636,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 119,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 25.655220219651227,
+        "maxMm": 28.484782691991782,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14811",
+      "b": "FMA14782",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 24.25861721636255,
+        "maxMm": 51.74644922701557,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 96,
+        "withinQuarterMm": 1,
+        "withinOneMm": 3,
+        "medianMm": 19.052413744594826,
+        "maxMm": 39.3882155530229,
+        "closePointBounds": {
+          "min": [
+            -44.2349,
+            -131.193,
+            1037.11
+          ],
+          "max": [
+            -44.2349,
+            -131.193,
+            1037.11
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14811",
+      "b": "FMA14784",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 35.14142025089481,
+        "maxMm": 57.87636210753492,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 93,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 30.531627533529143,
+        "maxMm": 38.78225501685374,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14811",
+      "b": "FMA14805",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 43.436031396646726,
+        "maxMm": 62.52179976168315,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 77,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 9.24709871310997,
+        "maxMm": 20.991767342082014,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14811",
+      "b": "FMA15398",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 17.42200097836071,
+        "maxMm": 31.344760521656532,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.91734215948451,
+        "maxMm": 57.452820717176174,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14811",
+      "b": "FMA70479",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 20.098781501374564,
+        "maxMm": 34.91259488165855,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 109,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.27649225089438,
+        "maxMm": 19.129896653021625,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14811",
+      "b": "FMA70480",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 31.361112900686383,
+        "maxMm": 44.40422419106094,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.322914696084794,
+        "maxMm": 23.185459650640926,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14824",
+      "b": "FMA14782",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 80.27661153138195,
+        "maxMm": 144.81225844385543,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 96,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 32.605642370761544,
+        "maxMm": 40.22534344867168,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14824",
+      "b": "FMA14784",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 83.91347697271712,
+        "maxMm": 139.88361527355514,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 93,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 46.4369655664029,
+        "maxMm": 49.59401133413186,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14824",
+      "b": "FMA14787",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 81.28441691002354,
+        "maxMm": 136.21490105499876,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 115,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 53.9730965409629,
+        "maxMm": 55.40841727903013,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14824",
+      "b": "FMA14790",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 78.58233478695041,
+        "maxMm": 136.30430751610487,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 43.01226442644002,
+        "maxMm": 48.48865723627431,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14824",
+      "b": "FMA14792",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 93.91980076831499,
+        "maxMm": 171.60190002529112,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 72,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 16.9414889549295,
+        "maxMm": 18.206230965249215,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14824",
+      "b": "FMA14793",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 87.21123890124473,
+        "maxMm": 159.69301955314128,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 107,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.235042306783367,
+        "maxMm": 26.253630807185505,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14824",
+      "b": "FMA14805",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 76.41330978418874,
+        "maxMm": 117.34120860939213,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 77,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 38.12088264245722,
+        "maxMm": 47.112306419372985,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14824",
+      "b": "FMA15398",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 77.76540447294026,
+        "maxMm": 119.78988378243798,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 44.402947863852475,
+        "maxMm": 51.96524489512196,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14824",
+      "b": "FMA70479",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 85.5613304711889,
+        "maxMm": 121.94911234199284,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 109,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 37.88709237405262,
+        "maxMm": 46.294080156531244,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14824",
+      "b": "FMA70480",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 83.17898794942147,
+        "maxMm": 119.58752464216326,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 45.34273718072163,
+        "maxMm": 53.89356005025093,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14824",
+      "b": "FMA76574",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 124,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 99.37177813887047,
+        "maxMm": 153.15817685589266,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 119,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 43.63503094028931,
+        "maxMm": 46.42696428084005,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14828",
+      "b": "FMA14790",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 110,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 35.671445909158216,
+        "maxMm": 72.3677484188226,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 40.912257726428216,
+        "maxMm": 47.67731524400622,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14828",
+      "b": "FMA14792",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 110,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 24.1077378034523,
+        "maxMm": 93.30315222118692,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 72,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 16.129743195723872,
+        "maxMm": 16.80895418296448,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14828",
+      "b": "FMA14793",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 110,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 26.203903038478835,
+        "maxMm": 86.37160472956363,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 107,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.297028397137263,
+        "maxMm": 26.086283303651655,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15391",
+      "b": "FMA14787",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 115,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 68.13427700751215,
+        "maxMm": 146.9470552118091,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 115,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 19.161063826332203,
+        "maxMm": 23.48763893287063,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15391",
+      "b": "FMA14790",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 115,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 67.23857112736714,
+        "maxMm": 146.4985227882961,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 10.495660958908216,
+        "maxMm": 13.065193666641525,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15406",
+      "b": "FMA14782",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 26.06122452475156,
+        "maxMm": 72.57901811806495,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 96,
+        "withinQuarterMm": 0,
+        "withinOneMm": 1,
+        "medianMm": 13.250030907181591,
+        "maxMm": 21.84880868199458,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15406",
+      "b": "FMA14784",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 36.98783277308901,
+        "maxMm": 75.60369129321663,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 93,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 19.739998813867825,
+        "maxMm": 23.07572490735666,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15406",
+      "b": "FMA14787",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 48.883831283973635,
+        "maxMm": 69.57888380289238,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 115,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 37.31054054512744,
+        "maxMm": 44.52644190478396,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15406",
+      "b": "FMA14790",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 49.00376466350418,
+        "maxMm": 76.11279109910566,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 38.952227565749965,
+        "maxMm": 44.73361324486857,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15406",
+      "b": "FMA14805",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 38.62443620841087,
+        "maxMm": 73.20274632706335,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 77,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 5.929874785066641,
+        "maxMm": 16.105068389303153,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15406",
+      "b": "FMA15398",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 22.576085025014095,
+        "maxMm": 76.84892135118099,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 17.954230236940248,
+        "maxMm": 34.702313002956416,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15406",
+      "b": "FMA70479",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 36.02266502134451,
+        "maxMm": 87.70068131297496,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 109,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 17.670656020929215,
+        "maxMm": 23.292117138126976,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15406",
+      "b": "FMA70480",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 36.989907843761955,
+        "maxMm": 83.00868083784965,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.24581435230538,
+        "maxMm": 22.341966696753243,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15406",
+      "b": "FMA76574",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 45.87770650991614,
+        "maxMm": 71.5233057757372,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 119,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 28.38920264906235,
+        "maxMm": 31.172475877416804,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15407",
+      "b": "FMA14782",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 111,
+        "withinQuarterMm": 0,
+        "withinOneMm": 1,
+        "medianMm": 25.290491137184347,
+        "maxMm": 49.40781623380653,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 96,
+        "withinQuarterMm": 0,
+        "withinOneMm": 1,
+        "medianMm": 19.354095092765743,
+        "maxMm": 39.68490290803506,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15407",
+      "b": "FMA14784",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 111,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 34.024591365804824,
+        "maxMm": 54.25272476818191,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 93,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 30.826452197024715,
+        "maxMm": 38.80706189649011,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15407",
+      "b": "FMA14805",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 111,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 46.42467477850548,
+        "maxMm": 64.98006003105878,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 77,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 10.462781861914173,
+        "maxMm": 21.045754332819154,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15407",
+      "b": "FMA15398",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 111,
+        "withinQuarterMm": 2,
+        "withinOneMm": 3,
+        "medianMm": 18.568816290760143,
+        "maxMm": 33.96995486105622,
+        "closePointBounds": {
+          "min": [
+            -48.059,
+            -127.635,
+            1035.27
+          ],
+          "max": [
+            -47.4533,
+            -126.942,
+            1036.11
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 1,
+        "medianMm": 16.639848781490155,
+        "maxMm": 58.01178942563294,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15407",
+      "b": "FMA70479",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 111,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 21.449737910753072,
+        "maxMm": 37.620249543182624,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 109,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 12.36531131391372,
+        "maxMm": 19.149733493816928,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15407",
+      "b": "FMA70480",
+      "aExisting": true,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 111,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 32.00991272855958,
+        "maxMm": 46.05367649695259,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 15.978532907936188,
+        "maxMm": 20.556766415553138,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14782",
+      "b": "FMA14784",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 96,
+        "withinQuarterMm": 1,
+        "withinOneMm": 2,
+        "medianMm": 17.452925684824343,
+        "maxMm": 23.220343575408148,
+        "closePointBounds": {
+          "min": [
+            -16.7677,
+            -137.27,
+            1061.01
+          ],
+          "max": [
+            -16.7677,
+            -137.27,
+            1061.01
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 93,
+        "withinQuarterMm": 3,
+        "withinOneMm": 11,
+        "medianMm": 16.82101073619799,
+        "maxMm": 20.549054849943314,
+        "closePointBounds": {
+          "min": [
+            -18.4595,
+            -138.884,
+            1059.23
+          ],
+          "max": [
+            -17.8359,
+            -137.68,
+            1059.87
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14782",
+      "b": "FMA14805",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 96,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 32.56435024010146,
+        "maxMm": 37.622878311012315,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 77,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 30.987343623203774,
+        "maxMm": 34.15757419554421,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14782",
+      "b": "FMA15398",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 96,
+        "withinQuarterMm": 3,
+        "withinOneMm": 5,
+        "medianMm": 5.112700109338419,
+        "maxMm": 14.701975940886307,
+        "closePointBounds": {
+          "min": [
+            -28.7643,
+            -134.847,
+            1054.48
+          ],
+          "max": [
+            -25.756,
+            -131.484,
+            1055.52
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 1,
+        "medianMm": 19.525754327535527,
+        "maxMm": 33.61056015912264,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14782",
+      "b": "FMA70479",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 96,
+        "withinQuarterMm": 4,
+        "withinOneMm": 10,
+        "medianMm": 30.20449274263679,
+        "maxMm": 39.813356932190615,
+        "closePointBounds": {
+          "min": [
+            -46.179,
+            -133.93,
+            1023.14
+          ],
+          "max": [
+            -45.5094,
+            -132.026,
+            1023.39
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 109,
+        "withinQuarterMm": 4,
+        "withinOneMm": 14,
+        "medianMm": 24.4619158998227,
+        "maxMm": 30.115046927408233,
+        "closePointBounds": {
+          "min": [
+            -45.7442,
+            -134.142,
+            1023.27
+          ],
+          "max": [
+            -44.7739,
+            -132.326,
+            1023.94
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14782",
+      "b": "FMA70480",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 96,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 26.386966862638857,
+        "maxMm": 38.05313527424971,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 28.553490278598165,
+        "maxMm": 31.979916770373276,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14782",
+      "b": "FMA76574",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 96,
+        "withinQuarterMm": 5,
+        "withinOneMm": 11,
+        "medianMm": 27.098102600735693,
+        "maxMm": 55.39240669732767,
+        "closePointBounds": {
+          "min": [
+            -11.3984,
+            -138.313,
+            1065.17
+          ],
+          "max": [
+            -9.12598,
+            -136.263,
+            1065.96
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 119,
+        "withinQuarterMm": 15,
+        "withinOneMm": 34,
+        "medianMm": 9.955701695214525,
+        "maxMm": 13.12652434205275,
+        "closePointBounds": {
+          "min": [
+            -11.3579,
+            -138.289,
+            1065.18
+          ],
+          "max": [
+            -9.19377,
+            -135.907,
+            1066.12
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14784",
+      "b": "FMA15398",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 93,
+        "withinQuarterMm": 2,
+        "withinOneMm": 5,
+        "medianMm": 3.384715125481967,
+        "maxMm": 11.254732347112926,
+        "closePointBounds": {
+          "min": [
+            -22.159,
+            -114.984,
+            1058.59
+          ],
+          "max": [
+            -22.159,
+            -114.984,
+            1058.59
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 3,
+        "medianMm": 17.973858173469633,
+        "maxMm": 38.151674857206466,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14784",
+      "b": "FMA70480",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 93,
+        "withinQuarterMm": 3,
+        "withinOneMm": 10,
+        "medianMm": 29.584274830558243,
+        "maxMm": 38.629092743741985,
+        "closePointBounds": {
+          "min": [
+            -34.7833,
+            -115.419,
+            1031.69
+          ],
+          "max": [
+            -33.1209,
+            -114.82,
+            1031.99
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 123,
+        "withinQuarterMm": 5,
+        "withinOneMm": 14,
+        "medianMm": 22.69675007925144,
+        "maxMm": 32.5325582653747,
+        "closePointBounds": {
+          "min": [
+            -35.1629,
+            -115.434,
+            1031.5
+          ],
+          "max": [
+            -33.3332,
+            -114.112,
+            1032.05
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14787",
+      "b": "FMA14790",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 115,
+        "withinQuarterMm": 9,
+        "withinOneMm": 12,
+        "medianMm": 14.398739326236319,
+        "maxMm": 30.22746679091902,
+        "closePointBounds": {
+          "min": [
+            9.33231,
+            -125.577,
+            1046.81
+          ],
+          "max": [
+            10.0633,
+            -124.382,
+            1048.04
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 125,
+        "withinQuarterMm": 20,
+        "withinOneMm": 26,
+        "medianMm": 8.066083346761276,
+        "maxMm": 30.5299012772511,
+        "closePointBounds": {
+          "min": [
+            9.35781,
+            -125.514,
+            1046.76
+          ],
+          "max": [
+            10.1493,
+            -124.317,
+            1048.1
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14790",
+      "b": "FMA14793",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 125,
+        "withinQuarterMm": 14,
+        "withinOneMm": 28,
+        "medianMm": 22.759300331073444,
+        "maxMm": 31.47952629544477,
+        "closePointBounds": {
+          "min": [
+            29.2977,
+            -105.554,
+            1060.24
+          ],
+          "max": [
+            30.0546,
+            -104.646,
+            1061.13
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 107,
+        "withinQuarterMm": 4,
+        "withinOneMm": 5,
+        "medianMm": 28.798512728437906,
+        "maxMm": 31.37538519875095,
+        "closePointBounds": {
+          "min": [
+            29.5462,
+            -105.411,
+            1060.33
+          ],
+          "max": [
+            29.9912,
+            -104.786,
+            1061.01
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14792",
+      "b": "FMA14793",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 72,
+        "withinQuarterMm": 18,
+        "withinOneMm": 19,
+        "medianMm": 6.780760258182814,
+        "maxMm": 11.859051726973256,
+        "closePointBounds": {
+          "min": [
+            41.1033,
+            -101.071,
+            1065.81
+          ],
+          "max": [
+            41.7412,
+            -100.419,
+            1066.4
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 107,
+        "withinQuarterMm": 1,
+        "withinOneMm": 2,
+        "medianMm": 14.772661039394055,
+        "maxMm": 17.159893186258845,
+        "closePointBounds": {
+          "min": [
+            41.5136,
+            -100.389,
+            1066.38
+          ],
+          "max": [
+            41.5136,
+            -100.389,
+            1066.38
+          ]
+        }
+      },
+      "flagged": true
+    },
+    {
+      "a": "FMA14805",
+      "b": "FMA15398",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 77,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 4.262967803068652,
+        "maxMm": 8.673358149242137,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 28.9266674305908,
+        "maxMm": 59.3331277420093,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14805",
+      "b": "FMA70479",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 77,
+        "withinQuarterMm": 5,
+        "withinOneMm": 17,
+        "medianMm": 5.3891756224862375,
+        "maxMm": 15.01622419532371,
+        "closePointBounds": {
+          "min": [
+            -16.0302,
+            -141.43,
+            1024.66
+          ],
+          "max": [
+            -15.3132,
+            -139.562,
+            1026.35
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 109,
+        "withinQuarterMm": 10,
+        "withinOneMm": 17,
+        "medianMm": 20.022200909240745,
+        "maxMm": 31.108886596115916,
+        "closePointBounds": {
+          "min": [
+            -16.0444,
+            -141.885,
+            1024.61
+          ],
+          "max": [
+            -14.7907,
+            -139.521,
+            1026.59
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA14805",
+      "b": "FMA70480",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 77,
+        "withinQuarterMm": 4,
+        "withinOneMm": 20,
+        "medianMm": 4.616264443248464,
+        "maxMm": 11.519404928083,
+        "closePointBounds": {
+          "min": [
+            -16.1016,
+            -141.43,
+            1025.4
+          ],
+          "max": [
+            -15.2321,
+            -140.577,
+            1026.96
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 123,
+        "withinQuarterMm": 9,
+        "withinOneMm": 18,
+        "medianMm": 15.6339254904199,
+        "maxMm": 32.787539675919575,
+        "closePointBounds": {
+          "min": [
+            -15.7913,
+            -141.37,
+            1024.99
+          ],
+          "max": [
+            -14.1909,
+            -139.532,
+            1026.62
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15398",
+      "b": "FMA70479",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.828386309416082,
+        "maxMm": 61.074440443118306,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 109,
+        "withinQuarterMm": 0,
+        "withinOneMm": 1,
+        "medianMm": 3.6852790973993295,
+        "maxMm": 5.959132303281257,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15398",
+      "b": "FMA70480",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 3,
+        "medianMm": 17.299384799466125,
+        "maxMm": 59.1809411027739,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 123,
+        "withinQuarterMm": 0,
+        "withinOneMm": 3,
+        "medianMm": 2.982655067217746,
+        "maxMm": 4.946473833609154,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA15398",
+      "b": "FMA76574",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 121,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 42.083206566906235,
+        "maxMm": 64.62260865208097,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 119,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 14.511303043410372,
+        "maxMm": 17.46563761058341,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "FMA70479",
+      "b": "FMA70480",
+      "aExisting": false,
+      "bExisting": false,
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 109,
+        "withinQuarterMm": 8,
+        "withinOneMm": 17,
+        "medianMm": 17.55909206863235,
+        "maxMm": 21.62455479310501,
+        "closePointBounds": {
+          "min": [
+            -16.0444,
+            -141.302,
+            1025.13
+          ],
+          "max": [
+            -14.8112,
+            -139.29,
+            1026.59
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 123,
+        "withinQuarterMm": 3,
+        "withinOneMm": 17,
+        "medianMm": 15.537081141900538,
+        "maxMm": 22.73595223187278,
+        "closePointBounds": {
+          "min": [
+            -15.6138,
+            -141.288,
+            1024.99
+          ],
+          "max": [
+            -14.9279,
+            -139.532,
+            1026.36
+          ]
+        }
+      },
+      "flagged": false
+    }
+  ],
+  "limits": "CRC/SHA, exact definitions, finite source geometry, gross envelope and sampled bidirectional point-to-triangle distances are engineering checks only. Comparisons use all existing head/neck structures and existing abdominal vessels, pruning pairs with boxes over 1 mm apart; no proof of attachments, biological non-overlap, variants or clinical accuracy. Running this audit admits nothing."
+}

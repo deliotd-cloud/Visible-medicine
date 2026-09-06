@@ -1,5 +1,12 @@
 # Clinical validation checklist
 
+## Pancreatic and epiglottic gates
+
+- Review all twelve new source labels and fourteen components, pancreatic relationships, vessel origins/endpoints/calibre/continuity and variants. Local near-contact does not prove an anastomosis; the grouped vein is not three independently named branches.
+- Review epiglottic tissue extent and ligament attachments; no separate cartilage core/mucosa, swallowing simulation or moving airway is established. Adjudicate the held raphe's boundary-versus-tissue semantics before importing it.
+- Preserve middle-constrictor component holds when reviewing the FMA46622 aggregate. Validate five new focus/window captions, real-device controls and close-view presentation. See `PANCREATIC_DETAIL.md`.
+- Actual imaging remains absent: source-coordinate hooks are not CT/MRI/US findings, patient registration or a functioning modality adapter.
+
 ## Targeted practice gates
 
 - Review both regional response modes, target policies, grouped-source names and distractor ambiguity. A score is not demonstrated clinical competence.

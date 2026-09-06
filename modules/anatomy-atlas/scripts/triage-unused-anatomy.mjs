@@ -86,26 +86,15 @@ const report = {
     'Unused available ISA definitions, at most four source components, matching selected muscle/pharyngeal/visceral/vascular name terms.',
   resultCount: results.length,
   results,
-  nextAudit: [
-    'FMA55077',
-    'FMA55130',
-    'FMA14782',
-    'FMA14784',
-    'FMA14787',
-    'FMA14790',
-    'FMA14792',
-    'FMA14793',
-    'FMA14805',
-    'FMA15398',
-    'FMA70479',
-    'FMA70480',
-  ],
+  nextAudit: results
+    .filter((item) => item.decision !== 'existing-hold-applies')
+    .map((item) => item.id),
   limits: [
     'Lexical inventory triage only; not an exhaustive anatomical review or a source admission.',
     'The middle-constrictor aggregate reuses both existing held laterality candidates; grouping cannot bypass that hold.',
-    'FMA55130 epiglottis shares FJ2770 with pharyngeal subdivision aliases. FMA55077 raphe shares an anatomical-line definition. Resolve source semantics before rendering either.',
-    'Pancreatic vessel subdivisions need exact and sampled overlap checks against existing gastroduodenal/mesenteric sources; do not infer continuous perfusion territories.',
-    'No source geometry, source hold, review record, dependency or licence obligation changed.',
+    'The preceding visceral-detail milestone admitted twelve exact definitions and held the pharyngeal raphe; those decisions are separate from this refreshed unused-only triage. See PANCREATIC_DETAIL.md.',
+    'Remaining small organ/muscle/vascular definitions need exact identity, parent-alias, common-coordinate and sampled surface-overlap checks before admission. No continuous organ or vessel network is inferred.',
+    'Running this lexical triage changes no source geometry, source hold, review record, dependency or licence obligation.',
   ],
   clinicalValidation: false,
 };

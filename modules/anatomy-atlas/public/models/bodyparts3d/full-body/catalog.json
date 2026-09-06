@@ -630,6 +630,20 @@
       "bytes": 226020,
       "sha256": "d26bb01909128f5cd8a56fb410967a688801a22652305bb2656e04d3e7df2680",
       "structures": 14
+    },
+    {
+      "id": "head-neck-organs-visceral-detail",
+      "url": "/models/bodyparts3d/full-body/head-neck-organs-visceral-detail.glb",
+      "bytes": 65180,
+      "sha256": "87b0684fd3a8d120d622f2f96edb49059cd530ba927423d5ac5f28d1069c2f84",
+      "structures": 1
+    },
+    {
+      "id": "abdomen-vessels-visceral-detail",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-visceral-detail.glb",
+      "bytes": 133144,
+      "sha256": "be90ec41dc6046b820b337d986b6a67792a33ba33216db8aecb068fed4b85173",
+      "structures": 11
     }
   ],
   "structures": [
@@ -55185,6 +55199,674 @@
         }
       ],
       "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:epiglottis",
+      "fmaId": "FMA55130",
+      "name": "Epiglottis",
+      "sourceName": "epiglottis",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "unpaired",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-visceral-detail",
+      "nodeName": "FMA55130",
+      "bounds": {
+        "min": [
+          -0.08592019975185394,
+          6.087299823760986,
+          0.5818900465965271
+        ],
+        "max": [
+          0.07234429568052292,
+          6.382299900054932,
+          0.659000039100647
+        ]
+      },
+      "center": [
+        -0.006787952035665512,
+        6.234799861907959,
+        0.620445042848587
+      ],
+      "anchor": [
+        -0.0122231999412179,
+        6.230400562286377,
+        0.6208699941635132
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2770",
+          "sha256": "05ae56007f7aa017fb458bdef643ea97e51ed3bd275b13da30086fa02b606054"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+      "fmaId": "FMA14782",
+      "name": "Anterior superior pancreaticoduodenal artery",
+      "sourceName": "anterior superior pancreaticoduodenal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-visceral-detail",
+      "nodeName": "FMA14782",
+      "bounds": {
+        "min": [
+          -0.4665620028972626,
+          2.23140025138855,
+          0.7866600155830383
+        ],
+        "max": [
+          -0.09125980734825134,
+          2.659599542617798,
+          0.8998100161552429
+        ]
+      },
+      "center": [
+        -0.27891090512275696,
+        2.445499897003174,
+        0.8432350158691406
+      ],
+      "anchor": [
+        -0.28327399492263794,
+        2.533599853515625,
+        0.8285600543022156
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3409",
+          "sha256": "b249abf0f7ca8682a8f5116021c4a3ba627b43895f6c2aa80f4640e15a04d766"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+      "fmaId": "FMA14784",
+      "name": "Posterior superior pancreaticoduodenal artery",
+      "sourceName": "posterior superior pancreaticoduodenal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-visceral-detail",
+      "nodeName": "FMA14784",
+      "bounds": {
+        "min": [
+          -0.3545759916305542,
+          2.316899299621582,
+          0.5918800234794617
+        ],
+        "max": [
+          -0.1423330008983612,
+          2.6568994522094727,
+          0.8888400197029114
+        ]
+      },
+      "center": [
+        -0.2484544962644577,
+        2.4868993759155273,
+        0.7403600215911865
+      ],
+      "anchor": [
+        -0.2362920045852661,
+        2.573000431060791,
+        0.6652500033378601
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3557",
+          "sha256": "eadce1bc7a5cccc096b050e2738aac098c8194487bb8b20ab49aaa05cbfd3a0c"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+      "fmaId": "FMA14787",
+      "name": "Dorsal pancreatic artery",
+      "sourceName": "dorsal pancreatic artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-visceral-detail",
+      "nodeName": "FMA14787",
+      "bounds": {
+        "min": [
+          0.033911000937223434,
+          2.4681005477905273,
+          0.7262200117111206
+        ],
+        "max": [
+          0.10063300281763077,
+          2.777900457382202,
+          0.8198699951171875
+        ]
+      },
+      "center": [
+        0.0672720018774271,
+        2.6230005025863647,
+        0.773045003414154
+      ],
+      "anchor": [
+        0.06056250259280205,
+        2.639699697494507,
+        0.7510299682617188
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3430",
+          "sha256": "a9566e012c3698584e51737a0e00c591b1b9ad57aea3f396056d6e4c2ec126e0"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+      "fmaId": "FMA14790",
+      "name": "Inferior pancreatic artery",
+      "sourceName": "inferior pancreatic artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-visceral-detail",
+      "nodeName": "FMA14790",
+      "bounds": {
+        "min": [
+          0.09297589957714081,
+          2.4641003608703613,
+          0.5460399389266968
+        ],
+        "max": [
+          0.3005940020084381,
+          2.6117005348205566,
+          0.7552700042724609
+        ]
+      },
+      "center": [
+        0.19678495079278946,
+        2.537900447845459,
+        0.6506549715995789
+      ],
+      "anchor": [
+        0.19760200381278992,
+        2.540799617767334,
+        0.6514900326728821
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3444",
+          "sha256": "21e61cd0e3ccd79434af29edc1ae0bd3dc87f22f12774422d074ff854647197e"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+      "fmaId": "FMA14792",
+      "name": "Great pancreatic artery",
+      "sourceName": "great pancreatic artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-visceral-detail",
+      "nodeName": "FMA14792",
+      "bounds": {
+        "min": [
+          0.4110329747200012,
+          2.6581006050109863,
+          0.5039299726486206
+        ],
+        "max": [
+          0.44960200786590576,
+          2.7542004585266113,
+          0.5859600305557251
+        ]
+      },
+      "center": [
+        0.4303174912929535,
+        2.706150531768799,
+        0.5449450016021729
+      ],
+      "anchor": [
+        0.4278229773044586,
+        2.7128002643585205,
+        0.5418099761009216
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3433",
+          "sha256": "94c1f1acab1e5edfadb46b7d1a02c50248b4bdaea2663acd46a5f08b8b0cc2d5"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+      "fmaId": "FMA14793",
+      "name": "Caudal pancreatic artery",
+      "sourceName": "caudal pancreatic artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-visceral-detail",
+      "nodeName": "FMA14793",
+      "bounds": {
+        "min": [
+          0.2933589816093445,
+          2.603299617767334,
+          0.4548010230064392
+        ],
+        "max": [
+          0.5827100276947021,
+          2.725600481033325,
+          0.554110050201416
+        ]
+      },
+      "center": [
+        0.4380345046520233,
+        2.6644500494003296,
+        0.5044555366039276
+      ],
+      "anchor": [
+        0.4358459711074829,
+        2.6643993854522705,
+        0.49968498945236206
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3419",
+          "sha256": "e29640c2424778faa8c7540bcbfe53ffbadf962db67c86ed7255d23eff157820"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+      "fmaId": "FMA14805",
+      "name": "Inferior pancreaticoduodenal artery",
+      "sourceName": "inferior pancreaticoduodenal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-visceral-detail",
+      "nodeName": "FMA14805",
+      "bounds": {
+        "min": [
+          -0.16132400929927826,
+          2.2458996772766113,
+          0.8425700664520264
+        ],
+        "max": [
+          -0.008219650015234947,
+          2.292600154876709,
+          0.9416599869728088
+        ]
+      },
+      "center": [
+        -0.0847718296572566,
+        2.26924991607666,
+        0.8921150267124176
+      ],
+      "anchor": [
+        -0.08655599504709244,
+        2.275099992752075,
+        0.9083000421524048
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3446",
+          "sha256": "619cb0ffc120396dc6ffee3b97d083e8bbcda9d4ab6dcf1ff9a13b0aaf63ac73"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+      "fmaId": "FMA15398",
+      "name": "Pancreaticoduodenal vein",
+      "sourceName": "pancreaticoduodenal vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-visceral-detail",
+      "nodeName": "FMA15398",
+      "bounds": {
+        "min": [
+          -0.4806689918041229,
+          2.05049991607666,
+          0.6042199730873108
+        ],
+        "max": [
+          -0.09474220126867294,
+          2.880000114440918,
+          0.9575300812721252
+        ]
+      },
+      "center": [
+        -0.28770559653639793,
+        2.465250015258789,
+        0.780875027179718
+      ],
+      "anchor": [
+        -0.32889801263809204,
+        2.550300359725952,
+        0.7823800444602966
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3545",
+          "sha256": "87919e391f53ec7e464f7379c422bc6e6bdcf022db8ea7007176e38a00cc1a3c"
+        },
+        {
+          "file": "FJ3646",
+          "sha256": "2c059c7ad26689513bbc41e13b913ed07c5bbd0696e59f85afb2a577b88f240f"
+        },
+        {
+          "file": "FJ3655",
+          "sha256": "c1d02f38a45db4b4504fcc453837fab56fb18a81178a62f5b7da9a4f6758c72f"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+      "fmaId": "FMA70479",
+      "name": "Anterior inferior pancreaticoduodenal artery",
+      "sourceName": "anterior inferior pancreaticoduodenal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-visceral-detail",
+      "nodeName": "FMA70479",
+      "bounds": {
+        "min": [
+          -0.46177101135253906,
+          2.0715997219085693,
+          0.8191400170326233
+        ],
+        "max": [
+          -0.14678199589252472,
+          2.265899658203125,
+          0.9505200386047363
+        ]
+      },
+      "center": [
+        -0.3042765036225319,
+        2.168749690055847,
+        0.8848300278186798
+      ],
+      "anchor": [
+        -0.3165220022201538,
+        2.0961999893188477,
+        0.9012800455093384
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3401",
+          "sha256": "0c63f2577def9596880aa8d7049e074140747cbb31a1d99b02a3a4f4b7ce016e"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+      "fmaId": "FMA70480",
+      "name": "Posterior inferior pancreaticoduodenal artery",
+      "sourceName": "posterior inferior pancreaticoduodenal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-visceral-detail",
+      "nodeName": "FMA70480",
+      "bounds": {
+        "min": [
+          -0.35162898898124695,
+          2.1723999977111816,
+          0.6332700252532959
+        ],
+        "max": [
+          -0.11823699623346329,
+          2.320500373840332,
+          0.9140499830245972
+        ]
+      },
+      "center": [
+        -0.23493299260735512,
+        2.246450185775757,
+        0.7736600041389465
+      ],
+      "anchor": [
+        -0.22695499658584595,
+        2.1965997219085693,
+        0.731660008430481
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3546",
+          "sha256": "3b460a67a1fce291779308e01a50fed34beb449eefdd279ae3603d7f82986cc9"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+      "fmaId": "FMA76574",
+      "name": "Trunk of gastroduodenal artery",
+      "sourceName": "trunk of gastroduodenal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-visceral-detail",
+      "nodeName": "FMA76574",
+      "bounds": {
+        "min": [
+          -0.11357899755239487,
+          2.6509997844696045,
+          0.858430027961731
+        ],
+        "max": [
+          -0.05860359966754913,
+          2.7818005084991455,
+          0.9130700826644897
+        ]
+      },
+      "center": [
+        -0.086091298609972,
+        2.716400146484375,
+        0.8857500553131104
+      ],
+      "anchor": [
+        -0.08795890212059021,
+        2.704200506210327,
+        0.8912100195884705
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3432",
+          "sha256": "520c5303adfa900e6eb905722207a127678ce0b60d3f763ed6e8be183519d6fd"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
       "provenance": {
         "method": "licensed-source-mesh",
         "license": "CC-BY-4.0",

@@ -9,6 +9,7 @@ import { axialGroupFor } from '../lib/axial-anatomy';
 import { headDetailGroupFor } from '../lib/head-detail';
 import { intestinalJunction } from '../lib/intestinal-junction';
 import { mesentericGroupFor } from '../lib/mesenteric-anatomy';
+import { pancreaticGroupFor } from '../lib/pancreatic-anatomy';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -54,6 +55,7 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??
     mesentericGroupFor(s.fmaId) ??
+    pancreaticGroupFor(s.fmaId) ??
     (intestinalJunction.fmaIds.includes(s.fmaId)
       ? intestinalJunction
       : undefined);

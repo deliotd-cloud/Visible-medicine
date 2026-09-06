@@ -2,6 +2,8 @@ import { createHash } from 'node:crypto';
 const compareText = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 // Source coverage is not anatomical completeness. No name heuristic admits a mesh.
 export const inventoryHolds = {
+  FMA55077:
+    'Pharyngeal raphe FJ2749 also occurs in anatomical-line/boundary parent definitions. Its narrow, long source surface has broad sampled contact with both inferior constrictors. Tissue extent versus a boundary representation needs adjudication before displaying it as dissectible connective tissue; no relabelling or thickening.',
   FMA66358:
     'SMA trunk candidate is a near-coincident alternative to the already displayed superior mesenteric artery: sampled bidirectional surface distances are mostly below 0.25 mm. Keep the existing source unchanged pending extent/overlap adjudication.',
   FMA14809:

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "reviewStatus": "draft-unvalidated",
-  "catalogSha256": "8834615444c57b428fdf79689370c7894ba7aa400149f0b800014d9fdc158836",
+  "catalogSha256": "e253e9ec0c1a1567b3ac614501c6511338d44234a28696501733679f377821c9",
   "profiles": [
     {
       "region": "whole-body",
@@ -967,7 +967,19 @@
             "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
             "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
-            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+            "vm:anatomy:body:head-neck:unpaired:organ:epiglottis",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery"
           ]
         },
         {
@@ -1656,7 +1668,8 @@
             "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
-            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
+            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
+            "vm:anatomy:body:head-neck:unpaired:organ:epiglottis"
           ]
         },
         {
@@ -2334,7 +2347,18 @@
             "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
             "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
-            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery"
           ]
         },
         {
@@ -2968,7 +2992,17 @@
             "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
             "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
             "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
-            "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery"
+            "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery"
           ]
         },
         {
@@ -3233,7 +3267,8 @@
             "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
             "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
-            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein"
           ]
         }
       ]
@@ -9688,7 +9723,18 @@
             "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
             "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
-            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery"
           ]
         },
         {
@@ -9792,7 +9838,18 @@
             "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
             "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
-            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery"
           ]
         },
         {
@@ -9960,7 +10017,18 @@
             "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
             "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
-            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery"
           ]
         },
         {
@@ -10269,6 +10337,166 @@
             "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
             "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery"
           ]
+        },
+        {
+          "id": "pancreatic-source-window",
+          "title": "Pancreas & supplied vessel detail",
+          "description": "Keep the pancreas with eleven newly supplied vessel identities in a close study window.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA14782",
+                "FMA14784",
+                "FMA14805",
+                "FMA70479",
+                "FMA70480",
+                "FMA76574",
+                "FMA14787",
+                "FMA14790",
+                "FMA14792",
+                "FMA14793",
+                "FMA15398"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA7198"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "^pancreas$",
+            "pancreaticoduodenal vein",
+            "dorsal pancreatic artery"
+          ],
+          "inspect": "Set the pancreas aside, compare the exposed vessels, then Undo to restore its source position. Explode and tray views are educational translations, not dissection planes or physiological movement.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery"
+          ]
+        },
+        {
+          "id": "pancreaticoduodenal-arteries",
+          "title": "Pancreaticoduodenal arteries exposed",
+          "description": "Remove organ surfaces and veins to inspect the supplied superior/inferior arterial branches and gastroduodenal trunk.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA14782",
+                "FMA14784",
+                "FMA14805",
+                "FMA70479",
+                "FMA70480",
+                "FMA76574"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA14771",
+                "FMA14749"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "anterior superior pancreaticoduodenal artery",
+            "posterior inferior pancreaticoduodenal artery",
+            "trunk of gastroduodenal artery"
+          ],
+          "inspect": "Frame an individual branch or compare the target group with the existing hepatic and mesenteric arterial context. These disconnected surfaces do not prove arcade continuity, normal origins or surgical safety.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+            "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery"
+          ]
+        },
+        {
+          "id": "pancreatic-body-tail-arteries",
+          "title": "Pancreatic body & tail vessels",
+          "description": "Compare four source-labelled arterial segments with the pancreas and splenic-artery context.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA14787",
+                "FMA14790",
+                "FMA14792",
+                "FMA14793"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA7198",
+                "FMA14773"
+              ]
+            }
+          ],
+          "view": "posterior",
+          "landmarks": [
+            "great pancreatic artery",
+            "caudal pancreatic artery",
+            "splenic artery"
+          ],
+          "inspect": "Hide the pancreas or fade other structures to inspect a small artery. Near-touching source surfaces are not proof of an anastomosis; no branch has been extended or welded to a neighbour.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
+            "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery"
+          ]
+        },
+        {
+          "id": "pancreatic-venous-window",
+          "title": "Pancreaticoduodenal venous context",
+          "description": "Inspect the three-component vein group with pancreas, superior mesenteric and hepatic portal-vein context.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA15398"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA7198",
+                "FMA14332",
+                "FMA50735"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "pancreaticoduodenal vein",
+            "superior mesenteric vein",
+            "hepatic portal vein"
+          ],
+          "inspect": "Set aside the pancreas for an exposed venous view. One grouped label covers all three source components; individual drainage connections and missing branches remain unvalidated.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
+            "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein"
+          ]
         }
       ],
       "focuses": [
@@ -10358,7 +10586,17 @@
             "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
             "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
             "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
-            "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery"
+            "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery"
           ]
         },
         {
@@ -10393,7 +10631,8 @@
             "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
             "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
-            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein"
+            "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein"
           ]
         },
         {
@@ -10707,6 +10946,166 @@
             "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
             "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
             "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery"
+          ]
+        },
+        {
+          "id": "pancreatic-source-window",
+          "title": "Pancreas & supplied vessel detail",
+          "rule": {
+            "fmaIds": [
+              "FMA14782",
+              "FMA14784",
+              "FMA14805",
+              "FMA70479",
+              "FMA70480",
+              "FMA76574",
+              "FMA14787",
+              "FMA14790",
+              "FMA14792",
+              "FMA14793",
+              "FMA15398"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA7198"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Keep the pancreas with eleven newly supplied vessel identities in a close study window.",
+          "inspect": "Set the pancreas aside, compare the exposed vessels, then Undo to restore its source position. Explode and tray views are educational translations, not dissection planes or physiological movement.",
+          "landmarks": [
+            "^pancreas$",
+            "pancreaticoduodenal vein",
+            "dorsal pancreatic artery"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery"
+          ]
+        },
+        {
+          "id": "pancreaticoduodenal-arteries",
+          "title": "Pancreaticoduodenal arteries exposed",
+          "rule": {
+            "fmaIds": [
+              "FMA14782",
+              "FMA14784",
+              "FMA14805",
+              "FMA70479",
+              "FMA70480",
+              "FMA76574"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA14771",
+                "FMA14749"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Remove organ surfaces and veins to inspect the supplied superior/inferior arterial branches and gastroduodenal trunk.",
+          "inspect": "Frame an individual branch or compare the target group with the existing hepatic and mesenteric arterial context. These disconnected surfaces do not prove arcade continuity, normal origins or surgical safety.",
+          "landmarks": [
+            "anterior superior pancreaticoduodenal artery",
+            "posterior inferior pancreaticoduodenal artery",
+            "trunk of gastroduodenal artery"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+            "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery"
+          ]
+        },
+        {
+          "id": "pancreatic-body-tail-arteries",
+          "title": "Pancreatic body & tail vessels",
+          "rule": {
+            "fmaIds": [
+              "FMA14787",
+              "FMA14790",
+              "FMA14792",
+              "FMA14793"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA7198",
+                "FMA14773"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Compare four source-labelled arterial segments with the pancreas and splenic-artery context.",
+          "inspect": "Hide the pancreas or fade other structures to inspect a small artery. Near-touching source surfaces are not proof of an anastomosis; no branch has been extended or welded to a neighbour.",
+          "landmarks": [
+            "great pancreatic artery",
+            "caudal pancreatic artery",
+            "splenic artery"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
+            "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery"
+          ]
+        },
+        {
+          "id": "pancreatic-venous-window",
+          "title": "Pancreaticoduodenal venous context",
+          "rule": {
+            "fmaIds": [
+              "FMA15398"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA7198",
+                "FMA14332",
+                "FMA50735"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Inspect the three-component vein group with pancreas, superior mesenteric and hepatic portal-vein context.",
+          "inspect": "Set aside the pancreas for an exposed venous view. One grouped label covers all three source components; individual drainage connections and missing branches remain unvalidated.",
+          "landmarks": [
+            "pancreaticoduodenal vein",
+            "superior mesenteric vein",
+            "hepatic portal vein"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
+            "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein"
           ]
         }
       ]
@@ -11493,7 +11892,8 @@
             "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
-            "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth"
+            "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+            "vm:anatomy:body:head-neck:unpaired:organ:epiglottis"
           ]
         },
         {
@@ -11775,7 +12175,8 @@
             "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
-            "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth"
+            "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+            "vm:anatomy:body:head-neck:unpaired:organ:epiglottis"
           ]
         },
         {
@@ -12056,7 +12457,8 @@
             "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
-            "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth"
+            "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+            "vm:anatomy:body:head-neck:unpaired:organ:epiglottis"
           ]
         },
         {
@@ -12889,6 +13291,44 @@
             "vm:anatomy:body:head-neck:left:organ:left-eyeball",
             "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
             "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique"
+          ]
+        },
+        {
+          "id": "epiglottis-laryngeal-window",
+          "title": "Epiglottis & laryngeal framework",
+          "description": "A close six-structure window for the epiglottis, hyoid, thyroid/cricoid cartilages and two source ligaments.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA55130"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA52749",
+                "FMA55099",
+                "FMA9615",
+                "FMA55227",
+                "FMA55230"
+              ]
+            }
+          ],
+          "view": "left",
+          "landmarks": [
+            "^epiglottis$",
+            "hyoid bone",
+            "thyroid cartilage",
+            "thyro-epiglottic ligament"
+          ],
+          "inspect": "Remove one framework surface at a time and use Undo to compare the epiglottis in place. This is static visibility dissection, not a moving or clinically validated airway model.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:midline:bone:hyoid-bone",
+            "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+            "vm:anatomy:body:head-neck:midline:cartilage:cricoid-cartilage",
+            "vm:anatomy:body:head-neck:unspecified:ligament:hyo-epiglottic-ligament",
+            "vm:anatomy:body:head-neck:midline:ligament:thyro-epiglottic-ligament",
+            "vm:anatomy:body:head-neck:unpaired:organ:epiglottis"
           ]
         }
       ],
@@ -13799,6 +14239,44 @@
             "vm:anatomy:body:head-neck:left:organ:left-eyeball",
             "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
             "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique"
+          ]
+        },
+        {
+          "id": "epiglottis-laryngeal-window",
+          "title": "Epiglottis & laryngeal framework",
+          "rule": {
+            "fmaIds": [
+              "FMA55130"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA52749",
+                "FMA55099",
+                "FMA9615",
+                "FMA55227",
+                "FMA55230"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "left",
+          "description": "A close six-structure window for the epiglottis, hyoid, thyroid/cricoid cartilages and two source ligaments.",
+          "inspect": "Remove one framework surface at a time and use Undo to compare the epiglottis in place. This is static visibility dissection, not a moving or clinically validated airway model.",
+          "landmarks": [
+            "^epiglottis$",
+            "hyoid bone",
+            "thyroid cartilage",
+            "thyro-epiglottic ligament"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:midline:bone:hyoid-bone",
+            "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+            "vm:anatomy:body:head-neck:midline:cartilage:cricoid-cartilage",
+            "vm:anatomy:body:head-neck:unspecified:ligament:hyo-epiglottic-ligament",
+            "vm:anatomy:body:head-neck:midline:ligament:thyro-epiglottic-ligament",
+            "vm:anatomy:body:head-neck:unpaired:organ:epiglottis"
           ]
         }
       ]

@@ -175,7 +175,7 @@ assert(
 assert.equal(catalog.regions.length, 11);
 assert.equal(
   catalog.structures.filter((s) => s.system === 'organs').length,
-  73,
+  74,
 );
 const result = {
   passed: true,

@@ -1,27 +1,27 @@
 {
   "passed": true,
-  "assertions": 198160,
-  "links": 11035,
-  "focusedLinks": 6490,
-  "destinationsTested": 4651,
+  "assertions": 204171,
+  "links": 11281,
+  "focusedLinks": 6664,
+  "destinationsTested": 4828,
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
-      "structures": 942,
-      "testedLinks": 1508
+      "structures": 954,
+      "testedLinks": 1531
     },
     {
       "region": "whole-body",
       "side": "left",
-      "structures": 543,
-      "testedLinks": 877
+      "structures": 555,
+      "testedLinks": 900
     },
     {
       "region": "whole-body",
       "side": "right",
-      "structures": 540,
-      "testedLinks": 871
+      "structures": 552,
+      "testedLinks": 894
     },
     {
       "region": "shoulder-arm",
@@ -152,20 +152,20 @@
     {
       "region": "abdomen",
       "side": "both",
-      "structures": 83,
-      "testedLinks": 228
+      "structures": 94,
+      "testedLinks": 280
     },
     {
       "region": "abdomen",
       "side": "left",
-      "structures": 65,
-      "testedLinks": 190
+      "structures": 76,
+      "testedLinks": 242
     },
     {
       "region": "abdomen",
       "side": "right",
-      "structures": 63,
-      "testedLinks": 184
+      "structures": 74,
+      "testedLinks": 236
     },
     {
       "region": "pelvis",
@@ -188,20 +188,20 @@
     {
       "region": "head-neck",
       "side": "both",
-      "structures": 262,
-      "testedLinks": 702
+      "structures": 263,
+      "testedLinks": 709
     },
     {
       "region": "head-neck",
       "side": "left",
-      "structures": 153,
-      "testedLinks": 436
+      "structures": 154,
+      "testedLinks": 443
     },
     {
       "region": "head-neck",
       "side": "right",
-      "structures": 153,
-      "testedLinks": 436
+      "structures": 154,
+      "testedLinks": 443
     },
     {
       "region": "spine",
@@ -223,7 +223,7 @@
     }
   ],
   "sourceGeometryChanged": false,
-  "catalogueSha256": "8834615444c57b428fdf79689370c7894ba7aa400149f0b800014d9fdc158836",
+  "catalogueSha256": "e253e9ec0c1a1567b3ac614501c6511338d44234a28696501733679f377821c9",
   "actualInstalledRuntimeDuplicateParsingTested": true,
   "browserInteractionTesting": false,
   "clinicalValidation": false,

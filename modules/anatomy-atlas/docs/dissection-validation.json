@@ -2,11 +2,11 @@
   "passed": true,
   "regions": 11,
   "wholeBody": true,
-  "stages": 108,
-  "focusedViews": 90,
-  "checks": 3186,
-  "cameraChecks": 7776,
-  "structures": 942,
+  "stages": 113,
+  "focusedViews": 95,
+  "checks": 3336,
+  "cameraChecks": 8136,
+  "structures": 954,
   "clinicalValidation": false,
   "browserInteractionTesting": false,
   "rows": [
@@ -14,7 +14,7 @@
       "region": "whole-body",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 942,
+      "visible": 954,
       "removed": 0
     },
     {
@@ -22,42 +22,42 @@
       "stage": "musculoskeletal",
       "kind": "window",
       "visible": 572,
-      "removed": 370
+      "removed": 382
     },
     {
       "region": "whole-body",
       "stage": "viscera",
       "kind": "window",
-      "visible": 73,
-      "removed": 869
+      "visible": 74,
+      "removed": 880
     },
     {
       "region": "whole-body",
       "stage": "neural",
       "kind": "window",
       "visible": 54,
-      "removed": 888
+      "removed": 900
     },
     {
       "region": "whole-body",
       "stage": "bones",
       "kind": "skeleton",
       "visible": 203,
-      "removed": 739
+      "removed": 751
     },
     {
       "region": "whole-body",
       "stage": "vascular",
       "kind": "window",
-      "visible": 363,
-      "removed": 579
+      "visible": 374,
+      "removed": 580
     },
     {
       "region": "whole-body",
       "stage": "connective",
       "kind": "window",
       "visible": 286,
-      "removed": 656
+      "removed": 668
     },
     {
       "region": "shoulder-arm",
@@ -434,14 +434,14 @@
       "region": "abdomen",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 83,
+      "visible": 94,
       "removed": 0
     },
     {
       "region": "abdomen",
       "stage": "wall",
       "kind": "peel",
-      "visible": 81,
+      "visible": 92,
       "removed": 2
     },
     {
@@ -449,27 +449,27 @@
       "stage": "viscera",
       "kind": "window",
       "visible": 17,
-      "removed": 66
+      "removed": 77
     },
     {
       "region": "abdomen",
       "stage": "posterior",
       "kind": "window",
       "visible": 10,
-      "removed": 73
+      "removed": 84
     },
     {
       "region": "abdomen",
       "stage": "bones",
       "kind": "skeleton",
       "visible": 5,
-      "removed": 78
+      "removed": 89
     },
     {
       "region": "abdomen",
       "stage": "vascular",
       "kind": "window",
-      "visible": 51,
+      "visible": 62,
       "removed": 32
     },
     {
@@ -477,56 +477,84 @@
       "stage": "connective",
       "kind": "window",
       "visible": 14,
-      "removed": 69
+      "removed": 80
     },
     {
       "region": "abdomen",
       "stage": "ileocecal-junction",
       "kind": "window",
       "visible": 3,
-      "removed": 80
+      "removed": 91
     },
     {
       "region": "abdomen",
       "stage": "linea-alba-context",
       "kind": "window",
       "visible": 3,
-      "removed": 80
+      "removed": 91
     },
     {
       "region": "abdomen",
       "stage": "mesenteric-surfaces",
       "kind": "window",
       "visible": 7,
-      "removed": 76
+      "removed": 87
     },
     {
       "region": "abdomen",
       "stage": "mesenteric-vessel-window",
       "kind": "window",
       "visible": 17,
-      "removed": 66
+      "removed": 77
     },
     {
       "region": "abdomen",
       "stage": "mesenteric-arteries",
       "kind": "window",
       "visible": 11,
-      "removed": 72
+      "removed": 83
     },
     {
       "region": "abdomen",
       "stage": "mesenteric-veins",
       "kind": "window",
       "visible": 6,
-      "removed": 77
+      "removed": 88
     },
     {
       "region": "abdomen",
       "stage": "appendix-mesentery",
       "kind": "window",
       "visible": 4,
-      "removed": 79
+      "removed": 90
+    },
+    {
+      "region": "abdomen",
+      "stage": "pancreatic-source-window",
+      "kind": "window",
+      "visible": 12,
+      "removed": 82
+    },
+    {
+      "region": "abdomen",
+      "stage": "pancreaticoduodenal-arteries",
+      "kind": "window",
+      "visible": 8,
+      "removed": 86
+    },
+    {
+      "region": "abdomen",
+      "stage": "pancreatic-body-tail-arteries",
+      "kind": "window",
+      "visible": 6,
+      "removed": 88
+    },
+    {
+      "region": "abdomen",
+      "stage": "pancreatic-venous-window",
+      "kind": "window",
+      "visible": 4,
+      "removed": 90
     },
     {
       "region": "pelvis",
@@ -581,21 +609,21 @@
       "region": "head-neck",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 262,
+      "visible": 263,
       "removed": 0
     },
     {
       "region": "head-neck",
       "stage": "platysma",
       "kind": "peel",
-      "visible": 260,
+      "visible": 261,
       "removed": 2
     },
     {
       "region": "head-neck",
       "stage": "neck-deep",
       "kind": "peel",
-      "visible": 258,
+      "visible": 259,
       "removed": 4
     },
     {
@@ -603,98 +631,105 @@
       "stage": "cranial",
       "kind": "window",
       "visible": 53,
-      "removed": 209
+      "removed": 210
     },
     {
       "region": "head-neck",
       "stage": "orbital",
       "kind": "window",
       "visible": 44,
-      "removed": 218
+      "removed": 219
     },
     {
       "region": "head-neck",
       "stage": "bones",
       "kind": "skeleton",
       "visible": 30,
-      "removed": 232
+      "removed": 233
     },
     {
       "region": "head-neck",
       "stage": "vascular",
       "kind": "window",
       "visible": 57,
-      "removed": 205
+      "removed": 206
     },
     {
       "region": "head-neck",
       "stage": "connective",
       "kind": "window",
       "visible": 67,
-      "removed": 195
+      "removed": 196
     },
     {
       "region": "head-neck",
       "stage": "gland-window",
       "kind": "window",
       "visible": 36,
-      "removed": 226
+      "removed": 227
     },
     {
       "region": "head-neck",
       "stage": "deep-brain",
       "kind": "window",
       "visible": 22,
-      "removed": 240
+      "removed": 241
     },
     {
       "region": "head-neck",
       "stage": "basal-nuclei",
       "kind": "window",
       "visible": 8,
-      "removed": 254
+      "removed": 255
     },
     {
       "region": "head-neck",
       "stage": "limbic-detail",
       "kind": "window",
       "visible": 9,
-      "removed": 253
+      "removed": 254
     },
     {
       "region": "head-neck",
       "stage": "dental-arches",
       "kind": "window",
       "visible": 31,
-      "removed": 231
+      "removed": 232
     },
     {
       "region": "head-neck",
       "stage": "upper-dental-arch",
       "kind": "window",
       "visible": 14,
-      "removed": 248
+      "removed": 249
     },
     {
       "region": "head-neck",
       "stage": "lower-dental-arch",
       "kind": "window",
       "visible": 14,
-      "removed": 248
+      "removed": 249
     },
     {
       "region": "head-neck",
       "stage": "orbital-tendinous-rings",
       "kind": "window",
       "visible": 12,
-      "removed": 250
+      "removed": 251
     },
     {
       "region": "head-neck",
       "stage": "superior-oblique-pulleys",
       "kind": "window",
       "visible": 6,
-      "removed": 256
+      "removed": 257
+    },
+    {
+      "region": "head-neck",
+      "stage": "epiglottis-laryngeal-window",
+      "kind": "window",
+      "visible": 6,
+      "removed": 257
     },
     {
       "region": "spine",

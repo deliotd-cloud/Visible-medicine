@@ -1,0 +1,409 @@
+import fs from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
+import { build } from 'esbuild';
+import { fileURLToPath } from 'node:url';
+import { Box3, Vector3, Matrix4 } from 'three';
+import {
+  pancreaticDefinitions,
+  pancreaticAdmissions,
+  pancreaticHeldIds,
+  pancreaticSelections,
+} from './pancreatic-selections.mjs';
+import { inventoryHolds, geometryFingerprint } from './anatomy-inventory.mjs';
+import { cache } from './bodyparts-archive.mjs';
+const rawSourceCheck = process.argv.includes('--raw-source');
+let checks = 0;
+const same = (a, b, m) => {
+  checks++;
+  assert.deepEqual(a, b, m);
+};
+const check = (a, m) => {
+  checks++;
+  assert(a, m);
+};
+const hash = (b) => createHash('sha256').update(b).digest('hex');
+const compare = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
+const read = async (p) => JSON.parse(await fs.readFile(p, 'utf8'));
+const root = 'public/models/bodyparts3d/full-body/';
+const catalog = await read(root + 'catalog.json'),
+  baseline = await read('content/pancreatic-baseline.json'),
+  audit = await read('content/pancreatic-source-audit.json'),
+  inventory = await read('content/source-inventory.json');
+same(baseline.sourceCommit, 'aa0e55b79d707f518ebb6faa77b96278f1aae5ab');
+same(
+  baseline.catalogSha256,
+  '8834615444c57b428fdf79689370c7894ba7aa400149f0b800014d9fdc158836',
+);
+same(audit.sourceCommit, baseline.sourceCommit);
+same(baseline.structures.length, 942);
+same(baseline.bundles.length, 76);
+same(catalog.structures.length, 954);
+same(catalog.bundles.length, 78);
+same(catalog.coordinateSystem, baseline.coordinateSystem);
+same(catalog.excluded, baseline.excluded);
+for (const old of baseline.structures)
+  same(
+    hash(JSON.stringify(catalog.structures.find((s) => s.id === old.id))),
+    old.sha256,
+    'Every previous field remains exact',
+  );
+for (const old of baseline.bundles) {
+  same(
+    catalog.bundles.find((b) => b.id === old.id),
+    old,
+  );
+  same(hash(await fs.readFile(root + old.id + '.glb')), old.sha256);
+}
+const additions = catalog.structures.filter((s) =>
+  s.bundle.endsWith('-visceral-detail'),
+);
+same(
+  additions.map((s) => s.fmaId).sort(compare),
+  [...pancreaticAdmissions].sort(compare),
+);
+same(
+  pancreaticSelections(
+    new Map(
+      inventory.records.filter((r) => r.tree === 'isa').map((r) => [r.id, r]),
+    ),
+  )
+    .map((s) => s.fma)
+    .sort(compare),
+  [...pancreaticAdmissions].sort(compare),
+);
+same(additions.length, 12);
+same(additions.filter((s) => s.system === 'vessels').length, 11);
+same(additions.filter((s) => s.system === 'organs').length, 1);
+same(
+  additions.reduce((n, s) => n + s.sources.length, 0),
+  14,
+);
+same(audit.results.length, 13);
+same(audit.comparisons.length, 180);
+same(audit.license, 'CC-BY-4.0');
+check(audit.distanceMethod.includes('segment/point fallback'));
+for (const row of audit.comparisons) {
+  same(row.exactTriangles, 0);
+  for (const d of [row.aToB, row.bToA]) {
+    check(d.samples > 0 && d.samples <= 128);
+    check(Number.isFinite(d.medianMm) && d.medianMm >= 0);
+    check(Number.isFinite(d.maxMm) && d.maxMm >= d.medianMm);
+    check(d.withinQuarterMm <= d.withinOneMm && d.withinOneMm <= d.samples);
+    same(d.closePointBounds !== null, d.withinQuarterMm > 0);
+    if (d.closePointBounds)
+      for (const end of ['min', 'max'])
+        check(d.closePointBounds[end].every(Number.isFinite));
+  }
+}
+same(
+  audit.comparisons.filter((r) => r.flagged).map((r) => [r.a, r.b]),
+  [
+    ['FMA46636', 'FMA55077'],
+    ['FMA46635', 'FMA55077'],
+    ['FMA55227', 'FMA55130'],
+    ['FMA14792', 'FMA14793'],
+  ],
+);
+const vascularContact = audit.comparisons.find(
+  (r) => r.a === 'FMA14792' && r.b === 'FMA14793',
+);
+for (const d of [vascularContact.aToB, vascularContact.bToA]) {
+  check(d.medianMm > 6);
+  for (let k = 0; k < 3; k++)
+    check(d.closePointBounds.max[k] - d.closePointBounds.min[k] < 1);
+}
+const epiContact = audit.comparisons.find(
+  (r) => r.a === 'FMA55227' && r.b === 'FMA55130',
+);
+same(epiContact.bToA.withinQuarterMm, 1);
+check(epiContact.bToA.medianMm > 3);
+for (const id of pancreaticHeldIds) {
+  check(inventoryHolds[id]);
+  check(!catalog.structures.some((s) => s.fmaId === id));
+  for (const row of inventory.records.filter((r) => r.id === id))
+    same(row.status, 'held-source-review');
+}
+for (const id of ['FMA46622', 'FMA46633', 'FMA46634'])
+  check(!catalog.structures.some((s) => s.fmaId === id));
+const matrix = new Matrix4().fromArray(
+  catalog.coordinateSystem.sourceToSceneColumnMajor,
+);
+for (const [
+  id,
+  name,
+  files,
+  region = 'abdomen',
+  system = 'vessels',
+  category = 'vessel',
+] of pancreaticDefinitions) {
+  const a = audit.results.find((r) => r.fmaId === id);
+  same(a.name, name);
+  same(a.region, region);
+  same(a.system, system);
+  same(
+    a.files.map((f) => f.file),
+    files,
+  );
+  check(a.grossPositionPass);
+  same(a.clinicalValidation, false);
+  same(a.admitted, false, 'Audit alone never admits');
+  for (const f of a.files) same(f.canonicalDuplicateOwners, []);
+  const s = additions.find((s) => s.fmaId === id);
+  if (!s) {
+    check(pancreaticHeldIds.includes(id));
+    continue;
+  }
+  same(a.degenerateTriangles, 0);
+  same(s.sourceName, name);
+  same(s.region, region);
+  same(s.regions, [region]);
+  same(s.system, system);
+  same(s.category, category);
+  same(s.sourceTree, 'isa');
+  same(
+    s.sources,
+    a.files.map(({ file, sha256 }) => ({ file, sha256 })),
+  );
+  same(s.validation, { status: 'unvalidated', anatomicalReview: false });
+  same(s.provenance, {
+    method: 'licensed-source-mesh',
+    license: 'CC-BY-4.0',
+    sourceVersion: '4.0',
+    recovered: true,
+  });
+  check(s.coverageNote.includes('Unvalidated'));
+  const bounds = new Box3(
+    new Vector3(...a.bounds.min),
+    new Vector3(...a.bounds.max),
+  ).applyMatrix4(matrix);
+  const rawBounds = new Box3();
+  for (const f of a.files) {
+    if (rawSourceCheck) {
+      const bytes = await fs.readFile(`${cache}/isa/${f.file}.obj`);
+      same(hash(bytes), f.sha256);
+      same(geometryFingerprint(bytes), f.geometrySha256);
+      for (const line of bytes.toString().split(/\r?\n/))
+        if (line.startsWith('v '))
+          rawBounds.expandByPoint(
+            new Vector3(
+              ...line.trim().split(/\s+/).slice(1).map(Number),
+            ).applyMatrix4(matrix),
+          );
+    }
+    const asset = inventory.assets.find(
+      (x) => x.tree === 'isa' && x.file === f.file,
+    );
+    same(asset.sha256, f.sha256);
+    same(asset.geometrySha256, f.geometrySha256);
+    same(asset.crc32, f.crc32);
+    same(asset.representedBy, [s.id]);
+    check(
+      !inventory.assets.some(
+        (x) =>
+          x.geometrySha256 === f.geometrySha256 &&
+          x.representedBy.some((id) => id !== s.id),
+      ),
+    );
+  }
+  if (rawSourceCheck)
+    for (const end of ['min', 'max'])
+      for (let k = 0; k < 3; k++)
+        check(
+          Math.abs(
+            rawBounds[end].getComponent(k) - bounds[end].getComponent(k),
+          ) < 1e-9,
+          'Raw vertices agree with pinned source bounds',
+        );
+  for (const end of ['min', 'max'])
+    for (let k = 0; k < 3; k++)
+      check(
+        Math.abs(bounds[end].getComponent(k) - s.bounds[end][k]) < 0.000002,
+        'Original common transform',
+      );
+}
+const compiled = await build({
+  stdin: {
+    contents:
+      "export * from './lib/pancreatic-anatomy'; export * from './app/dissection-data'; export * from './app/body-content'; export * from './lib/anatomy-practice'; export * from './lib/anatomy-link-registry'; export * from './lib/study-links';",
+    resolveDir: fileURLToPath(new URL('../', import.meta.url)),
+    loader: 'ts',
+  },
+  bundle: true,
+  platform: 'node',
+  format: 'esm',
+  write: false,
+});
+const api = await import(
+  'data:text/javascript;base64,' +
+    Buffer.from(compiled.outputFiles[0].text).toString('base64')
+);
+same(
+  api.pancreaticGroups.flatMap((g) => g.fmaIds).sort(compare),
+  [...pancreaticAdmissions].sort(compare),
+);
+for (const s of additions) {
+  const group = api.pancreaticGroupFor(s.fmaId);
+  check(group);
+  for (const tab of ['anatomy', 'function']) {
+    const c = api.bodyContent(s, tab);
+    check(c.title.includes('draft'));
+    same(c.body, group[tab]);
+    same(c.citations, group.references);
+    check(c.bullets.includes(group.caution));
+  }
+  for (const tab of ['ct', 'mri', 'ultrasound'])
+    check(api.bodyContent(s, tab).body.includes('No imaging study'));
+  const e = api.bodyLinkEntries(catalog).find((e) => e.id === s.id);
+  check(e);
+  same(e.sources, s.sources);
+  same(e.reference.kind, 'surface-bounds-centre');
+}
+same(api.pancreaticStudySets.length, 5);
+const counts = {
+  'pancreatic-source-window': 12,
+  'pancreaticoduodenal-arteries': 8,
+  'pancreatic-body-tail-arteries': 6,
+  'pancreatic-venous-window': 4,
+  'epiglottis-laryngeal-window': 6,
+};
+const loaded = catalog.bundles.map((b) => b.id);
+let serial = 0;
+for (const study of api.pancreaticStudySets)
+  for (const region of study.regions) {
+    const profile = api.dissectionProfiles[region],
+      focus = profile.focuses.find((f) => f.id === study.id),
+      stage = profile.stages.find((s) => s.id === study.id);
+    check(focus && stage);
+    same(focus.includeSkeleton, false);
+    same(focus.rule.fmaIds, study.targetFmaIds);
+    same(focus.context, study.context);
+    for (const side of ['both', 'left', 'right']) {
+      const scope = api.bodyStudyScope(catalog, region, side),
+        expected = scope.filter(
+          (s) =>
+            study.targetFmaIds.includes(s.fmaId) ||
+            study.context.some((r) => api.matchesRule(s, r)),
+        ),
+        visible = api.stageStructures(scope, profile, study.id);
+      same(visible, expected);
+      same(api.stageStructures(scope, profile, 'free', study.id), expected);
+      same(visible.length, counts[study.id]);
+      for (const landmark of study.landmarks)
+        check(
+          visible.some((s) => new RegExp(landmark, 'i').test(s.sourceName)),
+        );
+      const state = api.dissectionReducer(api.initialDissection, {
+        type: 'stage',
+        id: study.id,
+      });
+      for (const s of visible) {
+        const removed = api.dissectionReducer(state, {
+          type: 'remove',
+          id: s.id,
+        });
+        same(
+          api.resolveDissection(scope, profile, removed).visible,
+          visible.filter((v) => v.id !== s.id),
+        );
+        same(api.dissectionReducer(removed, { type: 'undo' }), state);
+        same(
+          api.resolveDissection(
+            scope,
+            profile,
+            api.dissectionReducer(removed, { type: 'restore', id: s.id }),
+          ).visible,
+          visible,
+        );
+        const href = api.makeStudyLink(catalog, region, s.id, side, study.id);
+        check(href);
+        const linked = api.resolveStudyLink(
+          catalog,
+          region,
+          api.parseStudyLink(
+            Object.fromEntries(
+              new URL(href, 'https://atlas.invalid').searchParams,
+            ),
+          ),
+        );
+        same(linked.status, 'ready');
+        same(linked.selected.id, s.id);
+        same(
+          linked.visibleIds,
+          visible.map((v) => v.id),
+        );
+      }
+      const targets = visible.filter((s) =>
+        study.targetFmaIds.includes(s.fmaId),
+      );
+      for (const mode of ['find', 'name']) {
+        const session = api.createPracticeSession(
+          visible,
+          loaded,
+          {
+            id: ++serial,
+            mode,
+            count: 20,
+            sampling: 'focus',
+            focusIds: targets.map((s) => s.id),
+          },
+          () => 0.37,
+        );
+        if (mode === 'name' && targets.length < 2) {
+          same(session, null);
+          continue;
+        }
+        check(session);
+        same(session.questions.length, targets.length);
+        for (const q of session.questions)
+          check(targets.some((s) => s.id === q.target));
+      }
+    }
+  }
+// Reconstruct only from records already checked byte-for-byte against the pinned
+// baseline, so this regression also runs in the GitHub snapshot without Site history.
+const previous = {
+  ...catalog,
+  bundles: baseline.bundles,
+  structures: baseline.structures.map((old) =>
+    catalog.structures.find((s) => s.id === old.id),
+  ),
+};
+for (const s of previous.structures)
+  for (const region of ['whole-body', ...s.regions]) {
+    const href = api.makeStudyLink(previous, region, s.id, 'both');
+    check(href);
+    const result = api.resolveStudyLink(
+      catalog,
+      region,
+      api.parseStudyLink(
+        Object.fromEntries(new URL(href, 'https://atlas.invalid').searchParams),
+      ),
+    );
+    same(result.status, 'ready');
+    same(result.selected.id, s.id);
+  }
+const result = {
+  passed: true,
+  checks,
+  rawSourceCheck,
+  newEntries: 12,
+  vesselEntries: 11,
+  epiglottisEntries: 1,
+  sourceComponents: 14,
+  newBundles: 2,
+  newAssetBytes: catalog.bundles
+    .filter((b) => b.id.endsWith('-visceral-detail'))
+    .reduce((n, b) => n + b.bytes, 0),
+  preservedRecords: 942,
+  preservedBundles: 76,
+  sourceHolds: pancreaticHeldIds,
+  studyWindows: 5,
+  clinicalValidation: false,
+  browserInteractionTesting: false,
+};
+await fs.writeFile(
+  'docs/pancreatic-validation.json',
+  JSON.stringify(result, null, 2) + '\n',
+);
+console.log(result);

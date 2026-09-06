@@ -1,8 +1,14 @@
 # Expanded BodyParts3D commercial-use audit
 
+## Pancreatic and epiglottic extension — 6 September 2026
+
+The current total is **954 source representations / 78 body bundles / 94,852,136 bytes**. Twelve official v4 IS-A definitions add fourteen source components in two GLBs (198,324 bytes), preserving all previous 942 records and 76 bundle hashes. Exact names, hashes, archive CRC/size, unchanged transforms, contact diagnostics and explicit admission/raphe-hold decisions are recorded in `content/pancreatic-source-audit.json`, `scripts/pancreatic-selections.mjs` and `docs/PANCREATIC_DETAIL.md`. The audit does not itself admit anatomy. All previously held components remain absent.
+
+The official CC BY 4.0 licence was rechecked today. Existing DBCLS attribution, licence link and derivative-change notices apply to these source-index and mesh derivatives. No paid API, new dependency, font, texture, third-party illustration or invented anatomical surface is included. Short original draft teaching uses cited factual references only. No table/figure dataset is copied, clinical sign-off created or perpetual free-hosting commitment made. Earlier counts below describe their respective milestones.
+
 ## Mesenteric extension — 6 September 2026
 
-The current total is **942 source representations / 76 body bundles / 94,653,812 bytes**. Seventeen explicit official v4 candidates add three mesenteric membranes, nine arterial segments and five venous segments in two GLBs (953,136 bytes). Every preceding 925 record and 74 body-bundle hash remains unchanged. Three near-coincident arterial alternatives are withheld, not relabelled or imported. Exact SHA-256, source/scene bounds, aliases, sampled overlap evidence and decisions are described in `content/mesenteric-source-audit.json`, `scripts/mesenteric-selections.mjs` and `docs/MESENTERIC_DETAIL.md`.
+That milestone reached **942 source representations / 76 body bundles / 94,653,812 bytes**. Seventeen explicit official v4 candidates add three mesenteric membranes, nine arterial segments and five venous segments in two GLBs (953,136 bytes). Every preceding 925 record and 74 body-bundle hash remains unchanged. Three near-coincident arterial alternatives are withheld, not relabelled or imported. Exact SHA-256, source/scene bounds, aliases, sampled overlap evidence and decisions are described in `content/mesenteric-source-audit.json`, `scripts/mesenteric-selections.mjs` and `docs/MESENTERIC_DETAIL.md`.
 
 The official CC BY 4.0 grant was rechecked on 6 September 2026. Preserve DBCLS attribution, the licence and derivative-change notices for the added surfaces and source-index-derived evidence. No new dependency, paid API, font, texture, generated anatomy or third-party diagram is introduced. Brief original teaching text cites factual academic resources without redistributing their protected authored figures/prose/table datasets. Clinical source labels, attachment/branch extent and device acceptance remain unvalidated. The additive membrane category describes selected surfaces, not a complete peritoneum or a new clinical segmentation standard.
 

@@ -1,7 +1,7 @@
 {
   "version": 4,
   "date": "2026-09-06",
-  "catalogSha256": "8834615444c57b428fdf79689370c7894ba7aa400149f0b800014d9fdc158836",
+  "catalogSha256": "e253e9ec0c1a1567b3ac614501c6511338d44234a28696501733679f377821c9",
   "status": "unvalidated",
   "method": "licensed-source-recovery",
   "generatedAnatomicalMeshes": 0,
@@ -6673,6 +6673,230 @@
         }
       ],
       "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:epiglottis",
+      "fmaId": "FMA55130",
+      "sourceName": "epiglottis",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "head-neck"
+      ],
+      "sources": [
+        {
+          "file": "FJ2770",
+          "sha256": "05ae56007f7aa017fb458bdef643ea97e51ed3bd275b13da30086fa02b606054"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+      "fmaId": "FMA14782",
+      "sourceName": "anterior superior pancreaticoduodenal artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3409",
+          "sha256": "b249abf0f7ca8682a8f5116021c4a3ba627b43895f6c2aa80f4640e15a04d766"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+      "fmaId": "FMA14784",
+      "sourceName": "posterior superior pancreaticoduodenal artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3557",
+          "sha256": "eadce1bc7a5cccc096b050e2738aac098c8194487bb8b20ab49aaa05cbfd3a0c"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+      "fmaId": "FMA14787",
+      "sourceName": "dorsal pancreatic artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3430",
+          "sha256": "a9566e012c3698584e51737a0e00c591b1b9ad57aea3f396056d6e4c2ec126e0"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+      "fmaId": "FMA14790",
+      "sourceName": "inferior pancreatic artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3444",
+          "sha256": "21e61cd0e3ccd79434af29edc1ae0bd3dc87f22f12774422d074ff854647197e"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+      "fmaId": "FMA14792",
+      "sourceName": "great pancreatic artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3433",
+          "sha256": "94c1f1acab1e5edfadb46b7d1a02c50248b4bdaea2663acd46a5f08b8b0cc2d5"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+      "fmaId": "FMA14793",
+      "sourceName": "caudal pancreatic artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3419",
+          "sha256": "e29640c2424778faa8c7540bcbfe53ffbadf962db67c86ed7255d23eff157820"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+      "fmaId": "FMA14805",
+      "sourceName": "inferior pancreaticoduodenal artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3446",
+          "sha256": "619cb0ffc120396dc6ffee3b97d083e8bbcda9d4ab6dcf1ff9a13b0aaf63ac73"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+      "fmaId": "FMA15398",
+      "sourceName": "pancreaticoduodenal vein",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3545",
+          "sha256": "87919e391f53ec7e464f7379c422bc6e6bdcf022db8ea7007176e38a00cc1a3c"
+        },
+        {
+          "file": "FJ3646",
+          "sha256": "2c059c7ad26689513bbc41e13b913ed07c5bbd0696e59f85afb2a577b88f240f"
+        },
+        {
+          "file": "FJ3655",
+          "sha256": "c1d02f38a45db4b4504fcc453837fab56fb18a81178a62f5b7da9a4f6758c72f"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+      "fmaId": "FMA70479",
+      "sourceName": "anterior inferior pancreaticoduodenal artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3401",
+          "sha256": "0c63f2577def9596880aa8d7049e074140747cbb31a1d99b02a3a4f4b7ce016e"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+      "fmaId": "FMA70480",
+      "sourceName": "posterior inferior pancreaticoduodenal artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3546",
+          "sha256": "3b460a67a1fce291779308e01a50fed34beb449eefdd279ae3603d7f82986cc9"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+      "fmaId": "FMA76574",
+      "sourceName": "trunk of gastroduodenal artery",
+      "sourceTree": "isa",
+      "category": "vessel",
+      "system": "vessels",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ3432",
+          "sha256": "520c5303adfa900e6eb905722207a127678ce0b60d3f763ed6e8be183519d6fd"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established."
     }
   ]
 }

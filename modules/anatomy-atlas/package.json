@@ -23,6 +23,7 @@
     "arrangement:test": "node scripts/validate-body-arrangement.mjs",
     "junction:test": "node scripts/validate-junction.mjs && node scripts/validate-junction-study.mjs",
     "mesenteric:test": "node scripts/validate-mesenteric.mjs",
+    "pancreatic:test": "node scripts/validate-pancreatic.mjs",
     "study-navigation:test": "node scripts/validate-study-navigation.mjs",
     "study-links:test": "node scripts/validate-study-links.mjs",
     "inventory:triage": "node scripts/triage-unused-anatomy.mjs",

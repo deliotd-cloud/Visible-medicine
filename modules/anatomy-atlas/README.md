@@ -1,5 +1,9 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Pancreatic vessels and epiglottic dissection
+
+The current atlas has **954 source representations, 113 dissection recipes and 95 focused views**. Open **Abdomen → Guided dissection** for four new pancreatic-vessel windows, or **Head & neck → Epiglottis & laryngeal framework**. Twelve source-labelled entries add detail without changing any previous mesh or identity. Use remove/restore/Undo, isolate/fade, explode, arrangement and related-study links as in the other regions. The ambiguous pharyngeal raphe remains withheld. See [source evidence, controls and clinical limits](docs/PANCREATIC_DETAIL.md).
+
 ## Continue a regional dissection
 
 Select a whole-body structure and open **Continue this dissection** to carry the same identity and side into its available regions or focused study views. Regional views offer a whole-body return link. **Copy this study link** retains the selection and supported focus without changing private access; outdated model references are rejected rather than substituted. Custom camera/cutaway/removal settings still belong in Saved study views. See [link controls, safety and validation](docs/STUDY_LINKS.md).
@@ -10,7 +14,7 @@ Select a whole-body structure and open **Continue this dissection** to carry the
 
 ## Mesenteric and bowel-vessel dissection
 
-The atlas now contains **942 source representations**. Abdomen has five new study windows: **Mesenteric surfaces & bowel**, **Mesenteric vessels exposed**, separate arterial/venous views, and **Appendix, mesoappendix & artery**. Three membranes and fourteen vessel segments are independently selectable. All previous anatomy remains exact; three near-overlapping arterial candidates are withheld. See [source evidence, controls and clinical limits](docs/MESENTERIC_DETAIL.md). These are draft reference surfaces, not a complete peritoneum, vascular tree or clinical dissection guide.
+The mesenteric milestone reached **942 source representations**. Its five abdominal study windows remain available: **Mesenteric surfaces & bowel**, **Mesenteric vessels exposed**, separate arterial/venous views, and **Appendix, mesoappendix & artery**. Three membranes and fourteen vessel segments are independently selectable. All previous anatomy remains exact; three near-overlapping arterial candidates are withheld. See [source evidence, controls and clinical limits](docs/MESENTERIC_DETAIL.md). These are draft reference surfaces, not a complete peritoneum, vascular tree or clinical dissection guide.
 
 ## Corrected intestinal dissection
 
@@ -22,7 +26,7 @@ Use the new **quick anatomy views** for all anatomy, bones with muscles, individ
 
 ## Regional dissection workspaces
 
-Every individual regional explorer separates **Layer by layer** from independent **Study windows**. Follow named removal steps, preview the exact structures a step will hide or restore, then use the searchable, system-filtered removed-tissue tray to restore one structure or a group with one-step undo. The current 108 recipes comprise 47 regional layer steps and 61 independent views (including whole-body comparisons), with 90 focused views. These are visibility recipes, not a claim of missing-tissue completion. See [dissection workbench](docs/DISSECTION_WORKBENCH.md) and the [mesenteric addition](docs/MESENTERIC_DETAIL.md).
+Every individual regional explorer separates **Layer by layer** from independent **Study windows**. Follow named removal steps, preview the exact structures a step will hide or restore, then use the searchable, system-filtered removed-tissue tray to restore one structure or a group with one-step undo. The current 113 recipes comprise 47 regional layer steps and 66 independent views (including whole-body comparisons), with 95 focused views. These are visibility recipes, not a claim of missing-tissue completion. See [dissection workbench](docs/DISSECTION_WORKBENCH.md) and the [latest source addition](docs/PANCREATIC_DETAIL.md).
 
 ## Dental and orbital close-ups
 
@@ -72,7 +76,7 @@ The earlier numerical explode review is preserved in `docs/EXPLODE_REVIEW.md`, a
 
 The library now opens at `/` with a whole-body model and **11 individual regional explorers**: head/neck, thorax, abdomen, pelvis/hip, shoulder/arm, elbow/forearm, wrist/hand, hip/thigh, knee/leg, ankle/foot and spine/back. Each region has its own `/regions/{region-id}` URL. The approved visual approach of the dedicated shoulder viewer is preserved at `/shoulder`.
 
-The expanded source library contains **942 selectable entries**: 203 skeletal, 369 muscular, 73 organ (including 28 teeth and a separately selectable intestinal junction), 54 nervous-system, 160 vascular and 83 connective-tissue entries (including three mesenteric membranes). These are source representations, not an assertion of complete anatomical coverage or a count of distinct human bones/muscles. Whole-body and regional views support system switches, left/right filtering, name search, rotation, pan, zoom, selective hide/restore, isolate/frame, separation and identification practice. Anatomy and clinical tabs remain available; unauthored specialist material is clearly marked pending, not manufactured as finished teaching content.
+The expanded source library contains **954 selectable entries**: 203 skeletal, 369 muscular, 74 organ (including 28 teeth, the intestinal junction and epiglottis), 54 nervous-system, 171 vascular and 83 connective-tissue entries (including three mesenteric membranes). These are source representations, not an assertion of complete anatomical coverage or a count of distinct human bones/muscles. Whole-body and regional views support system switches, left/right filtering, name search, rotation, pan, zoom, selective hide/restore, isolate/frame, separation and identification practice. Anatomy and clinical tabs remain available; unauthored specialist material is clearly marked pending, not manufactured as finished teaching content.
 
 **Nervous-system scope:** brain aggregate, 22 selected deep-brain entries, 28 selected cranial/orbital nerve entries, two ciliary ganglia and a central-canal representation. No complete spinal cord, limb peripheral nerves, brachial plexus or lumbosacral plexus is included. The source ambiguously maps spinal cord and central canal to the same mesh; the narrower central-canal identity is used. Four candidate muscle entries with source laterality/position discrepancies were quarantined, not automatically relabelled. See `docs/FULL_BODY_COVERAGE.md`.
 
