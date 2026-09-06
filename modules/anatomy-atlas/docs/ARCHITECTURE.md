@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Model-first regional workspace
+
+`AnatomyControlRail` and `AnatomyInfoPanel` in `app/anatomy-control-rail.tsx` present the existing regional/whole-body controls beside the model, with responsive Base UI sheets below 1,100/700 CSS pixels respectively. Viewport flex/grid sizing leaves header wrapping to normal layout; independent panel overflow replaces the old mobile document stack. Dissection/selection/practice state and camera refs remain owned by `BodyExplorer`, above the responsive panels. Closing a sheet retains mounted children; changing between inline and sheet layouts remounts nested local UI drafts, not the domain state. Collapsed native details expose advanced functions without crowding the default workspace. See [implementation, tests and limits](MODEL_FIRST_WORKSPACE.md). No scene, catalogue, review, imaging or licence schema changes are introduced.
+
 ## Forearm vascular extension
 
 Four exact IS-A source identities enter one additive bundle through `forearm-vascular-selections.mjs`; `lib/forearm-vascular-anatomy.ts` feeds three explicit target/context windows and draft notes into the existing dissection, practice, links and imaging registry. The audit screens every preceding catalogue bound in inverse common coordinates, then checks raw nearby surfaces. It never imports larger PART-OF aggregates as duplicate vessels. Baseline reconstruction keeps both complete prior catalogue/inventory hashes, including the supporting-queue history. The all-vessel diagnostic now covers 227 identities and 19 bundles without changing geometry. See [evidence and integration](FOREARM_VASCULAR_DETAIL.md).

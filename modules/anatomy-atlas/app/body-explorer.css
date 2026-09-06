@@ -2716,3 +2716,332 @@
     font-size: 16px;
   }
 }
+
+/* Model-first workspace: only the heading and the model occupy the centre.
+   Side panels scroll independently; compact layouts use focus-managed sheets. */
+.body-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+.body-topbar {
+  flex: none;
+}
+.body-layout {
+  display: grid;
+  flex: 1 1 0;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+  grid-template-columns: 264px minmax(0, 1fr) 320px;
+  grid-template-rows: minmax(0, 1fr);
+  grid-template-areas: 'controls model info';
+}
+.body-layout > .body-rail {
+  grid-area: controls;
+}
+.body-layout > .body-info {
+  grid-area: info;
+  min-height: 0;
+}
+.body-workspace {
+  grid-area: model;
+  min-height: 0;
+  overflow: hidden;
+}
+.body-canvas {
+  flex: 1 1 0;
+  height: auto;
+  min-height: 300px;
+  margin: 0 10px 10px;
+}
+.body-heading {
+  padding: 14px 18px;
+}
+.body-heading .eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+.body-heading h1 {
+  font-size: 28px;
+}
+.anatomy-control-rail {
+  min-width: 0;
+  color: var(--vm-ink);
+  background: #fff;
+}
+.body-rail.anatomy-control-rail {
+  padding: 16px 12px;
+}
+.anatomy-control-rail .body-rail-title {
+  margin: 16px 0 10px;
+  font-size: 14px;
+}
+.anatomy-control-rail .body-system-bar {
+  grid-template-columns: minmax(0, 1fr);
+  padding: 0;
+  gap: 6px;
+}
+.anatomy-control-rail .body-system-bar > div {
+  min-height: 48px;
+  padding: 8px 10px;
+  gap: 8px;
+}
+.anatomy-control-rail .body-system-bar > div > svg {
+  display: block;
+}
+.anatomy-control-rail .body-system-bar span {
+  font-size: 14px;
+}
+.anatomy-control-rail > details {
+  margin: 12px 0 0;
+  border: 1px solid #cfddda;
+  border-radius: 6px;
+}
+.anatomy-control-rail > details > summary {
+  padding: 10px;
+  min-height: 44px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--vm-ink);
+  background: #fff;
+  border: 0;
+  line-height: 1.5;
+}
+.anatomy-control-rail > details > summary small {
+  display: block;
+  margin: 2px 0 0 15px;
+  color: var(--vm-muted);
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.anatomy-control-rail .body-region-picker {
+  margin-top: 0;
+}
+.anatomy-control-rail .body-region-picker > summary {
+  font-weight: 650;
+}
+.anatomy-control-rail .body-region-picker nav {
+  max-height: 260px;
+  overflow-y: auto;
+}
+.anatomy-control-rail .shoulder-feature {
+  margin: 10px;
+  font-size: 14px;
+}
+.anatomy-control-rail .dissection-deck {
+  margin: 0;
+  padding: 10px;
+  border: 0;
+  box-shadow: none;
+}
+.anatomy-control-rail .dissection-deck-heading > strong {
+  display: none;
+}
+.anatomy-control-rail .dissection-modes {
+  flex-wrap: wrap;
+}
+.anatomy-control-rail .dissection-layer-track {
+  flex-wrap: wrap;
+  overflow: visible;
+}
+.anatomy-control-rail .dissection-layer-track li {
+  flex: 1 1 100%;
+}
+.anatomy-control-rail .dissection-step-row {
+  flex-wrap: wrap;
+}
+.anatomy-control-rail .dissection-step-row > [data-slot='select-trigger'] {
+  order: -1;
+  flex-basis: 100%;
+}
+.anatomy-control-rail .body-system-presets {
+  margin: 0;
+  padding: 10px;
+  flex-wrap: wrap;
+  overflow: visible;
+}
+.anatomy-control-rail .body-system-presets button {
+  flex: 1 1 100%;
+  justify-content: space-between;
+  white-space: normal;
+}
+.anatomy-control-rail .body-layout-controls {
+  margin: 0;
+  padding: 10px;
+}
+.anatomy-control-rail .body-layout-controls > div {
+  flex-direction: column;
+  width: 100%;
+}
+.anatomy-control-rail .body-preset-row {
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.anatomy-control-rail .body-preset-row button {
+  min-height: 44px;
+  font-size: 14px;
+}
+.anatomy-control-rail .body-coverage {
+  margin: 0;
+  padding: 10px;
+}
+.anatomy-control-rail .body-rail-foot {
+  margin: 0;
+  padding: 10px;
+  font-size: 12px;
+}
+.anatomy-control-rail .study-library {
+  margin: 0;
+  padding: 10px;
+}
+.anatomy-control-rail .study-library-filters {
+  display: flex;
+  flex-direction: column;
+}
+.anatomy-control-rail .study-library-summary {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.anatomy-control-rail .study-library-actions {
+  flex-wrap: wrap;
+}
+.anatomy-control-rail .study-library-actions button {
+  white-space: normal;
+  height: auto;
+}
+.anatomy-control-rail .vm-inspection-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+.anatomy-control-rail :is(button, summary, input, select):focus-visible {
+  outline: 3px solid var(--vm-teal);
+  outline-offset: 2px;
+}
+.anatomy-controls-popup {
+  position: fixed;
+  z-index: 50;
+  inset-block: 0;
+  left: 0;
+  width: min(90vw, 360px);
+  height: 100dvh;
+  padding: 14px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  background: #fff;
+  color: var(--vm-ink);
+  box-shadow: 0 0 32px #00263140;
+}
+.anatomy-controls-popup[data-side='right'] {
+  left: auto;
+  right: 0;
+}
+.anatomy-controls-popup[data-closed],
+.anatomy-controls-overlay[data-closed] {
+  display: none;
+}
+.anatomy-controls-popup > [data-slot='sheet-header'] {
+  padding: 0 40px 14px 0;
+}
+.anatomy-controls-popup [data-slot='sheet-title'] {
+  color: var(--vm-ink);
+  font-size: 18px;
+}
+.anatomy-controls-popup [data-slot='sheet-description'] {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.anatomy-controls-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.anatomy-controls-return {
+  position: sticky;
+  bottom: 0;
+  margin: 14px 0 0;
+  width: 100%;
+  background: #fff;
+  min-height: 44px;
+}
+.anatomy-controls-popup .anatomy-info-content {
+  padding: 0;
+  border: 0;
+  overflow: visible;
+}
+@media (max-width: 1100px) {
+  .body-layout {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    grid-template-rows: auto minmax(0, 1fr);
+    grid-template-areas: 'controls-launcher info' 'model info';
+  }
+  .body-layout > .body-rail {
+    display: none;
+  }
+  .body-controls-launcher {
+    grid-area: controls-launcher;
+    justify-self: start;
+    margin: 10px 14px 0;
+    min-height: 44px;
+  }
+}
+@media (max-width: 700px) {
+  .body-app {
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .body-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    grid-template-areas: 'controls-launcher info-launcher' 'model model';
+  }
+  .body-layout > .body-info {
+    display: none;
+  }
+  .body-info-launcher {
+    grid-area: info-launcher;
+    justify-self: end;
+    margin: 10px 14px 0 0;
+    min-height: 44px;
+  }
+  .body-controls-launcher,
+  .body-info-launcher {
+    font-size: 14px;
+    padding-inline: 10px;
+  }
+  .body-workspace {
+    min-height: 0;
+  }
+  .body-heading {
+    padding: 10px 14px;
+  }
+  .body-heading h1 {
+    font-size: 24px;
+  }
+  .body-heading .eyebrow {
+    font-size: 12px;
+  }
+  .body-canvas {
+    height: auto;
+    min-height: 280px;
+    flex: 1 1 0;
+  }
+}
+@media (max-height: 580px) {
+  /* Very short/zoomed windows may scroll the model pane; never clip essential controls. */
+  .body-workspace {
+    overflow-y: auto;
+  }
+  .body-canvas {
+    flex: 1 0 300px;
+  }
+}
+.anatomy-controls-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: #00263135;
+}

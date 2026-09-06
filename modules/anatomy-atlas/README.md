@@ -1,5 +1,9 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Model-first, less scrolling
+
+The six **Anatomical systems** switches sit beside the model on desktop, with region selection and advanced tools folded into the same sidebar. The centre contains the heading and atlas, not a stack of settings. The notes panel starts with search and selected-structure information; the study guide and full structure browser open on demand. On narrower screens, **Systems & tools** opens a side panel; phones also offer **Structure info** (or **Practice**) without a long page below the model. Close either panel with **Return to model**. Side panels scroll independently; very short or zoomed windows retain an internal scroll escape for access. See [layout, verification and remaining hands-on checks](docs/MODEL_FIRST_WORKSPACE.md).
+
 ## Forearm arterial dissection
 
 The atlas now has **1,022 source entries, 138 dissection stages and 120 focuses**. In **Elbow & forearm → Study windows & focuses**, open **Common interosseous origins**, **Recurrent arteries & supinator** or **Forearm arterial comparison**. Four exact original source arteries add detail while preserving all previous anatomy. The shared select/frame, remove/restore/Undo, isolate/fade, separation and focused-practice controls apply. These are unvalidated source subsets, not complete vascular trees. See [source evidence, reproduction and clinical gates](docs/FOREARM_VASCULAR_DETAIL.md).

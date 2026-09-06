@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "checks": 873,
+  "markupCases": 24,
+  "panelCases": 4,
+  "stylesheetViewportCases": 7,
+  "preservedNamedHandlers": 19,
+  "preservedControlCallbacks": 55,
+  "regions": 11,
+  "wholeBody": true,
+  "sourceGeometryChanged": false,
+  "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+  "clinicalValidation": false,
+  "browserInteractionTesting": false,
+  "limitations": "Actual loaded explorer server markup with catalogue/selection fixtures and a GPU double; injected responsive hooks; source-handler preservation and stylesheet assertions. No pixel layout, browser focus/Escape, touch, zoom or scroll measurements are claimed."
+}

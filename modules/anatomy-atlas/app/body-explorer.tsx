@@ -75,6 +75,7 @@ import {
   guidanceRecipeAction,
 } from '@/lib/dissection-guidance';
 import './body-explorer.css';
+import { AnatomyControlRail, AnatomyInfoPanel } from './anatomy-control-rail';
 import { Brand } from './brand';
 import { ReviewStatus } from './review-status';
 import { InspectionControls } from './inspection-controls';
@@ -792,6 +793,240 @@ export default function BodyExplorer({
       }
     />
   );
+
+  const railContent = (
+    <>
+      <details className="body-region-picker">
+        <summary>
+          {title}
+          <small>Change region</small>
+        </summary>
+
+        <Link className={`body-region-link ${whole ? 'active' : ''}`} href="/">
+          <Accessibility />
+          <span>Whole body</span>
+          <small>{catalog.structures.length}</small>
+        </Link>
+
+        <nav aria-label="Body regions">
+          {catalog.regions.map((r) => (
+            <Link
+              key={r.id}
+              className={`body-region-link ${initialRegion === r.id ? 'active' : ''}`}
+              href={`/regions/${r.id}`}
+            >
+              <span>{r.name}</span>
+              <ChevronRight />
+            </Link>
+          ))}
+        </nav>
+        <Link href="/shoulder" className="shoulder-feature">
+          <Bone />
+          <span>
+            Shoulder dissection<small>Dedicated rotator-cuff explorer</small>
+          </span>
+          <ChevronRight />
+        </Link>
+      </details>
+      <div className="body-rail-title">Anatomical systems</div>
+      <div className="body-system-bar" aria-label="Anatomical systems">
+        {systemKeys.map((system) => {
+          const Icon = icons[system],
+            count = regionStructures.filter((s) => s.system === system).length;
+          return (
+            <div key={system} className={systems[system] ? 'active' : ''}>
+              <Icon style={{ color: bodySystems[system].color }} />
+              <span>
+                {bodySystems[system].name}
+                <small>
+                  {count}
+                  {system === 'nerves' ? ' · partial' : ''}
+                </small>
+              </span>
+              <Switch
+                checked={systems[system]}
+                disabled={exam || count === 0}
+                onCheckedChange={(checked) =>
+                  setSystems((prev) => ({ ...prev, [system]: checked }))
+                }
+                aria-label={`Show ${bodySystems[system].name}`}
+              />
+            </div>
+          );
+        })}
+      </div>
+
+      <details className="body-study-tools">
+        <summary>
+          Dissection <small>{stage?.title ?? 'Custom view'}</small>
+        </summary>
+        <DissectionControls
+          profile={profile}
+          state={dissection}
+          onStage={changeStage}
+          onFocus={changeFocus}
+          onUndo={undoDissection}
+          onReset={() => changeStage('assembled')}
+          ghost={ghostRemoved}
+          onGhost={setGhostRemoved}
+          visibleCount={available.length}
+          structures={regionStructures}
+          visibleIds={available.map((item) => item.id)}
+          loaded={loaded}
+          failed={failed}
+          disabled={exam}
+        />
+      </details>
+
+      <details className="body-display-tools">
+        <summary>
+          Display options<small>Quick views · arrangement · surfaces</small>
+        </summary>
+        <div className="body-system-presets" aria-label="Quick anatomy views">
+          {bodySystemPresets.map((item) => {
+            const count = regionStructures.filter((structure) =>
+              item.systems.includes(structure.system),
+            ).length;
+            return (
+              <button
+                key={item.id}
+                type="button"
+                disabled={exam || count === 0}
+                aria-pressed={
+                  !hiddenIds.length && bodyPresetMatches(item.id, systems)
+                }
+                title={`Restore ${count} available source entries in this preset`}
+                onClick={() => preset(item.id)}
+              >
+                {item.title}
+                <small>{count}</small>
+              </button>
+            );
+          })}
+        </div>
+        <div className="body-layout-controls" aria-label="Model arrangement">
+          <div>
+            <button
+              type="button"
+              aria-pressed={layout === 'spatial'}
+              disabled={exam}
+              onClick={() => changeLayout('spatial')}
+            >
+              Spatial anatomy
+            </button>
+            <button
+              type="button"
+              aria-pressed={layout === 'tray'}
+              disabled={exam || !available.length}
+              onClick={() => changeLayout('tray')}
+            >
+              Arrange structures
+            </button>
+          </div>
+          <p>
+            {layout === 'tray' && !exam
+              ? 'Same-scale surfaces, grouped by system. At 100%, each catalogue entry has its own space—not an anatomical position.'
+              : 'Source anatomy at 0% separation. Rotate freely or choose a standard direction.'}
+          </p>
+        </div>
+        {!exam && (
+          <div className="body-preset-row">
+            <button
+              type="button"
+              aria-pressed={illustrated}
+              onClick={() => setIllustrated((v) => !v)}
+            >
+              {illustrated ? 'Illustrated surfaces' : 'Plain surfaces'}
+            </button>
+            <button
+              type="button"
+              aria-pressed={anchorSkeleton}
+              disabled={layout === 'tray'}
+              onClick={() => setAnchorSkeleton((v) => !v)}
+            >
+              Keep bones assembled
+            </button>
+            <button
+              type="button"
+              aria-pressed={showOrigins}
+              disabled={layout === 'tray'}
+              onClick={() => setShowOrigins((v) => !v)}
+            >
+              Original positions
+            </button>
+            {layout === 'tray' && (
+              <span>
+                All entries move in the tray. Select and frame a structure, or
+                choose a system/region for fine detail.
+              </span>
+            )}
+          </div>
+        )}
+      </details>
+      <InspectionControls
+        value={inspection}
+        onChange={setInspection}
+        systems={systemKeys.map((id) => ({
+          id,
+          name: bodySystems[id].name,
+          enabled: systems[id] && regionStructures.some((s) => s.system === id),
+        }))}
+        plate={plate}
+        onPlate={(value) => {
+          if (!value && layout === 'tray') changeLayout('spatial');
+          else setPlate(value);
+        }}
+        disabled={exam}
+      />
+      <StudyViews
+        scope={studyScope}
+        capture={captureView}
+        restore={restoreView}
+        disabled={exam || pending.length > 0}
+      />
+      <ImagingLink link={imagingLink} />
+
+      <details className="body-coverage-tools">
+        <summary>
+          Coverage & sources<small>Reference anatomy · review pending</small>
+        </summary>
+        {systems.nerves && (
+          <div className="body-coverage">
+            <Brain />
+            <span>
+              Partial nervous anatomy: brain and selected cranial/orbital
+              nerves. The narrow spinal structure is the central canal, not a
+              complete cord. Limb peripheral nerves are not included.
+            </span>
+          </div>
+        )}
+        {(systems.vessels || systems.connective) && (
+          <div className="body-coverage">
+            <Network />
+            <span>
+              Selected source anatomy · review pending. Vessels are incomplete
+              segments; red = artery, blue = vein, grey = unclassified vessel,
+              not oxygenation. Connective coverage includes selected discs,
+              cartilage, ligaments, interosseous membranes and Achilles tendons;
+              it is incomplete.
+            </span>
+          </div>
+        )}
+        <div className="body-rail-foot">
+          <span>Adult reference anatomy</span>
+          <p>One source model, preserved in a common spatial frame.</p>
+          <a
+            href="/models/bodyparts3d/credits.html"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Sources & commercial licence ↗
+          </a>
+        </div>
+      </details>
+    </>
+  );
+
   return (
     <main className="body-app">
       <header className="body-topbar">
@@ -829,52 +1064,11 @@ export default function BodyExplorer({
         </div>
       </header>
       <div className="body-layout">
-        <aside className="body-rail">
-          <div className="body-rail-title">Explore anatomy</div>
-          <Link
-            className={`body-region-link ${whole ? 'active' : ''}`}
-            href="/"
-          >
-            <Accessibility />
-            <span>Whole body</span>
-            <small>{catalog.structures.length}</small>
-          </Link>
-          <div className="body-rail-subtitle">Individual regions</div>
-          <nav aria-label="Body regions">
-            {catalog.regions.map((r) => (
-              <Link
-                key={r.id}
-                className={`body-region-link ${initialRegion === r.id ? 'active' : ''}`}
-                href={`/regions/${r.id}`}
-              >
-                <span>{r.name}</span>
-                <ChevronRight />
-              </Link>
-            ))}
-          </nav>
-          <Link href="/shoulder" className="shoulder-feature">
-            <Bone />
-            <span>
-              Shoulder dissection<small>Dedicated rotator-cuff explorer</small>
-            </span>
-            <ChevronRight />
-          </Link>
-          <div className="body-rail-foot">
-            <span>Adult reference anatomy</span>
-            <p>One source model, preserved in a common spatial frame.</p>
-            <a
-              href="/models/bodyparts3d/credits.html"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Sources & commercial licence ↗
-            </a>
-          </div>
-        </aside>
+        <AnatomyControlRail>{railContent}</AnatomyControlRail>
         <section className="body-workspace" aria-label={`${title} 3D anatomy`}>
           <div className="body-heading">
             <div>
-              <div className="eyebrow">SPATIAL ANATOMY LIBRARY</div>
+              <div className="eyebrow">REFERENCE ANATOMY · REVIEW PENDING</div>
               <h1>{title}</h1>
               <p>
                 {whole
@@ -886,146 +1080,6 @@ export default function BodyExplorer({
               {regionStructures.length}
               <small>structures</small>
             </span>
-          </div>
-          <div className="body-mobile-regions">
-            <Select
-              value={initialRegion}
-              onValueChange={(value) => {
-                if (value)
-                  window.location.assign(
-                    value === 'whole-body' ? '/' : `/regions/${value}`,
-                  );
-              }}
-            >
-              <SelectTrigger aria-label="Choose body region">
-                <SelectValue>{title}</SelectValue>
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="whole-body">Whole body</SelectItem>
-                {catalog.regions.map((r) => (
-                  <SelectItem key={r.id} value={r.id}>
-                    {r.name}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-          <div className="body-system-presets" aria-label="Quick anatomy views">
-            {bodySystemPresets.map((item) => {
-              const count = regionStructures.filter((structure) =>
-                item.systems.includes(structure.system),
-              ).length;
-              return (
-                <button
-                  key={item.id}
-                  type="button"
-                  disabled={exam || count === 0}
-                  aria-pressed={
-                    !hiddenIds.length && bodyPresetMatches(item.id, systems)
-                  }
-                  title={`Restore ${count} available source entries in this preset`}
-                  onClick={() => preset(item.id)}
-                >
-                  {item.title}
-                  <small>{count}</small>
-                </button>
-              );
-            })}
-          </div>
-          <div className="body-system-bar" aria-label="Anatomical systems">
-            {systemKeys.map((system) => {
-              const Icon = icons[system],
-                count = regionStructures.filter(
-                  (s) => s.system === system,
-                ).length;
-              return (
-                <div key={system} className={systems[system] ? 'active' : ''}>
-                  <Icon style={{ color: bodySystems[system].color }} />
-                  <span>
-                    {bodySystems[system].name}
-                    <small>
-                      {count}
-                      {system === 'nerves' ? ' · partial' : ''}
-                    </small>
-                  </span>
-                  <Switch
-                    checked={systems[system]}
-                    disabled={exam || count === 0}
-                    onCheckedChange={(checked) =>
-                      setSystems((prev) => ({ ...prev, [system]: checked }))
-                    }
-                    aria-label={`Show ${bodySystems[system].name}`}
-                  />
-                </div>
-              );
-            })}
-          </div>
-          <details className="body-study-tools" open={!whole}>
-            <summary>Dissection, inspection & study tools</summary>
-            <DissectionControls
-              profile={profile}
-              state={dissection}
-              onStage={changeStage}
-              onFocus={changeFocus}
-              onUndo={undoDissection}
-              onReset={() => changeStage('assembled')}
-              ghost={ghostRemoved}
-              onGhost={setGhostRemoved}
-              visibleCount={available.length}
-              structures={regionStructures}
-              visibleIds={available.map((item) => item.id)}
-              loaded={loaded}
-              failed={failed}
-              disabled={exam}
-            />
-            <InspectionControls
-              value={inspection}
-              onChange={setInspection}
-              systems={systemKeys.map((id) => ({
-                id,
-                name: bodySystems[id].name,
-                enabled:
-                  systems[id] && regionStructures.some((s) => s.system === id),
-              }))}
-              plate={plate}
-              onPlate={(value) => {
-                if (!value && layout === 'tray') changeLayout('spatial');
-                else setPlate(value);
-              }}
-              disabled={exam}
-            />
-            <StudyViews
-              scope={studyScope}
-              capture={captureView}
-              restore={restoreView}
-              disabled={exam || pending.length > 0}
-            />
-            <ImagingLink link={imagingLink} />
-          </details>
-          <div className="body-layout-controls" aria-label="Model arrangement">
-            <div>
-              <button
-                type="button"
-                aria-pressed={layout === 'spatial'}
-                disabled={exam}
-                onClick={() => changeLayout('spatial')}
-              >
-                Spatial anatomy
-              </button>
-              <button
-                type="button"
-                aria-pressed={layout === 'tray'}
-                disabled={exam || !available.length}
-                onClick={() => changeLayout('tray')}
-              >
-                Arrange structures
-              </button>
-            </div>
-            <p>
-              {layout === 'tray' && !exam
-                ? 'Same-scale surfaces, grouped by system. At 100%, each catalogue entry has its own space—not an anatomical position.'
-                : 'Source anatomy at 0% separation. Rotate freely or choose a standard direction.'}
-            </p>
           </div>
           <div className="body-canvas illustration-mode">
             <div className="body-view-row">
@@ -1257,63 +1311,8 @@ export default function BodyExplorer({
               BodyParts3D · CC BY 4.0 · Adapted
             </a>
           </div>
-          {systems.nerves && (
-            <div className="body-coverage">
-              <Brain />
-              <span>
-                Partial nervous anatomy: brain and selected cranial/orbital
-                nerves. The narrow spinal structure is the central canal, not a
-                complete cord. Limb peripheral nerves are not included.
-              </span>
-            </div>
-          )}
-          {(systems.vessels || systems.connective) && (
-            <div className="body-coverage">
-              <Network />
-              <span>
-                Selected source anatomy · review pending. Vessels are incomplete
-                segments; red = artery, blue = vein, grey = unclassified vessel,
-                not oxygenation. Connective coverage includes selected discs,
-                cartilage, ligaments, interosseous membranes and Achilles
-                tendons; it is incomplete.
-              </span>
-            </div>
-          )}
-          {!exam && (
-            <div className="body-preset-row">
-              <button
-                type="button"
-                aria-pressed={illustrated}
-                onClick={() => setIllustrated((v) => !v)}
-              >
-                {illustrated ? 'Illustrated surfaces' : 'Plain surfaces'}
-              </button>
-              <button
-                type="button"
-                aria-pressed={anchorSkeleton}
-                disabled={layout === 'tray'}
-                onClick={() => setAnchorSkeleton((v) => !v)}
-              >
-                Keep bones assembled
-              </button>
-              <button
-                type="button"
-                aria-pressed={showOrigins}
-                disabled={layout === 'tray'}
-                onClick={() => setShowOrigins((v) => !v)}
-              >
-                Original positions
-              </button>
-              {layout === 'tray' && (
-                <span>
-                  All entries move in the tray. Select and frame a structure, or
-                  choose a system/region for fine detail.
-                </span>
-              )}
-            </div>
-          )}
         </section>
-        <aside className="body-info" aria-label="Anatomy study panel">
+        <AnatomyInfoPanel practice={exam}>
           {!exam && linkIssue && (
             <div className="body-study-link-issue">
               <output aria-live="polite">{linkIssue}</output>
@@ -1435,6 +1434,36 @@ export default function BodyExplorer({
             </>
           ) : (
             <>
+              <div className="eyebrow">FIND A STRUCTURE</div>
+              <Combobox<BodyStructure>
+                items={regionStructures}
+                value={selected}
+                onValueChange={(s) => s && select(s.id)}
+                itemToStringLabel={(s) => s.name}
+                itemToStringValue={(s) => s.id}
+                isItemEqualToValue={(a, b) => a.id === b.id}
+              >
+                <ComboboxInput placeholder="Search this region…" showClear />
+                <ComboboxContent>
+                  <ComboboxEmpty>No matching structures.</ComboboxEmpty>
+                  <ComboboxList>
+                    {regionStructures.map((s) => (
+                      <ComboboxItem key={s.id} value={s}>
+                        {s.name}
+                      </ComboboxItem>
+                    ))}
+                  </ComboboxList>
+                </ComboboxContent>
+              </Combobox>
+              <output
+                className="body-selection-notice"
+                aria-live="polite"
+                aria-atomic="true"
+              >
+                {selected
+                  ? `${selectionNotice?.id === selected.id ? selectionNotice.message : `${selected.name} selected.`} ${structureDetail(selected)}. Cutaway and opacity can affect visibility; use Reveal uncut if needed.`
+                  : 'No structure selected.'}
+              </output>
               {practiceResult && (
                 <section
                   className="vm-practice-result"
@@ -1495,6 +1524,191 @@ export default function BodyExplorer({
                     Dismiss results
                   </Button>
                 </section>
+              )}
+              {selected ? (
+                <>
+                  <div className="body-selection-heading">
+                    <span
+                      style={{ background: bodySystems[selected.system].color }}
+                    />
+                    {bodySystems[selected.system].name} · {selected.fmaId}
+                  </div>
+                  <h2>{selected.name}</h2>
+                  <ReviewStatus structureId={selected.id} />
+                  <div className="body-selection-actions">
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={() => {
+                        setInspection((current) => ({
+                          ...current,
+                          plane: 'off',
+                          opacity: {
+                            ...current.opacity,
+                            [selected.system]: 100,
+                          },
+                        }));
+                        setFocus(true);
+                        setZoom(1);
+                      }}
+                    >
+                      Reveal uncut
+                    </Button>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={() => {
+                        setIsolated(true);
+                        setFocus(true);
+                        setZoom(1);
+                      }}
+                    >
+                      <Focus />
+                      Isolate & frame
+                    </Button>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={() => {
+                        dispatch({ type: 'remove', id: selected.id });
+                        setSelectedId(null);
+                        setFocus(false);
+                        setIsolated(false);
+                      }}
+                    >
+                      <EyeOff />
+                      Remove
+                    </Button>
+                    <Button
+                      size="sm"
+                      variant="ghost"
+                      onClick={() => {
+                        setSelectedId(null);
+                        setIsolated(false);
+                        setFocus(false);
+                      }}
+                      aria-label="Clear selection"
+                    >
+                      <ArrowLeft />
+                    </Button>
+                  </div>
+                  <Tabs defaultValue="anatomy" className="body-content-tabs">
+                    <TabsList variant="line">
+                      {tabs.map(([value, label]) => (
+                        <TabsTrigger key={value} value={value}>
+                          {label}
+                        </TabsTrigger>
+                      ))}
+                    </TabsList>
+                    {tabs.map(([value]) => {
+                      const content = bodyContent(selected, value);
+                      return (
+                        <TabsContent key={value} value={value}>
+                          <div className="eyebrow">{content.title}</div>
+                          <p>{content.body}</p>
+                          {content.bullets && (
+                            <ul>
+                              {content.bullets.map((b) => (
+                                <li key={b}>{b}</li>
+                              ))}
+                            </ul>
+                          )}
+                          {content.note && (
+                            <div className="body-content-note">
+                              {content.note}
+                            </div>
+                          )}
+                          {content.citations?.length ? (
+                            <div className="body-reference-links">
+                              {content.citations.map((url, i) => (
+                                <a
+                                  key={url}
+                                  href={url}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  Reference {i + 1} ↗
+                                </a>
+                              ))}
+                            </div>
+                          ) : null}
+                          {value === 'quiz' && (
+                            <Button
+                              onClick={() => startExam()}
+                              disabled={practiceBlocked}
+                            >
+                              <GraduationCap />
+                              Start identification practice
+                            </Button>
+                          )}
+                          {['ct', 'mri', 'ultrasound'].includes(value) && (
+                            <div className="body-no-imaging">
+                              <ScanLine />
+                              No imaging study loaded
+                            </div>
+                          )}
+                        </TabsContent>
+                      );
+                    })}
+                  </Tabs>
+                  <RelatedStudy
+                    views={relatedViews}
+                    selectedId={selected.id}
+                    currentFocusId={dissection.focusId}
+                    onOpen={openRelatedStudy}
+                    onSelect={select}
+                    detail={structureDetail}
+                  />
+                  <StudyLinks
+                    catalog={catalog}
+                    selected={selected}
+                    region={initialRegion}
+                    side={side as StudySide}
+                    focusId={dissection.focusId}
+                  />
+                  <dl className="body-facts">
+                    <div>
+                      <dt>Region</dt>
+                      <dd>
+                        {
+                          catalog.regions.find((r) => r.id === selected.region)
+                            ?.name
+                        }
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Laterality</dt>
+                      <dd>
+                        {selected.laterality === 'unspecified'
+                          ? 'Not lateralised'
+                          : selected.laterality}
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Source</dt>
+                      <dd>BodyParts3D 4.0</dd>
+                    </div>
+                    <div>
+                      <dt>Review</dt>
+                      <dd>Draft · pending</dd>
+                    </div>
+                  </dl>
+                </>
+              ) : (
+                <>
+                  <div className="body-intro-icon">
+                    <Accessibility />
+                  </div>
+                  <h2>Choose a structure</h2>
+                  <p>
+                    Select a structure to inspect its identity, isolate it, or
+                    explore the available teaching notes.
+                  </p>
+                  <div className="body-content-note">
+                    The geometry is source-based. New teaching entries are
+                    clearly marked where specialist content is still pending.
+                  </div>
+                </>
               )}
               <details className="vm-practice-options">
                 <summary>
@@ -1571,245 +1785,11 @@ export default function BodyExplorer({
                   questions
                 </Button>
               </details>
-              {selected ? (
-                <details className="dissection-guide-fold">
-                  <summary>
-                    Study guide · {stage?.title ?? 'Custom view'}
-                  </summary>
-                  {studyGuide}
-                </details>
-              ) : (
-                studyGuide
-              )}
-              <div className="eyebrow">FIND A STRUCTURE</div>
-              <Combobox<BodyStructure>
-                items={regionStructures}
-                value={selected}
-                onValueChange={(s) => s && select(s.id)}
-                itemToStringLabel={(s) => s.name}
-                itemToStringValue={(s) => s.id}
-                isItemEqualToValue={(a, b) => a.id === b.id}
-              >
-                <ComboboxInput placeholder="Search this region…" showClear />
-                <ComboboxContent>
-                  <ComboboxEmpty>No matching structures.</ComboboxEmpty>
-                  <ComboboxList>
-                    {regionStructures.map((s) => (
-                      <ComboboxItem key={s.id} value={s}>
-                        {s.name}
-                      </ComboboxItem>
-                    ))}
-                  </ComboboxList>
-                </ComboboxContent>
-              </Combobox>
-              <output
-                className="body-selection-notice"
-                aria-live="polite"
-                aria-atomic="true"
-              >
-                {selected
-                  ? `${selectionNotice?.id === selected.id ? selectionNotice.message : `${selected.name} selected.`} ${structureDetail(selected)}. Cutaway and opacity can affect visibility; use Reveal uncut if needed.`
-                  : 'No structure selected.'}
-              </output>
-              {selected ? (
-                <>
-                  <div className="body-selection-heading">
-                    <span
-                      style={{ background: bodySystems[selected.system].color }}
-                    />
-                    {bodySystems[selected.system].name} · {selected.fmaId}
-                  </div>
-                  <h2>{selected.name}</h2>
-                  <ReviewStatus structureId={selected.id} />
-                  <div className="body-selection-actions">
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      onClick={() => {
-                        setInspection((current) => ({
-                          ...current,
-                          plane: 'off',
-                          opacity: {
-                            ...current.opacity,
-                            [selected.system]: 100,
-                          },
-                        }));
-                        setFocus(true);
-                        setZoom(1);
-                      }}
-                    >
-                      Reveal uncut
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      onClick={() => {
-                        setIsolated(true);
-                        setFocus(true);
-                        setZoom(1);
-                      }}
-                    >
-                      <Focus />
-                      Isolate & frame
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      onClick={() => {
-                        dispatch({ type: 'remove', id: selected.id });
-                        setSelectedId(null);
-                        setFocus(false);
-                        setIsolated(false);
-                      }}
-                    >
-                      <EyeOff />
-                      Remove
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="ghost"
-                      onClick={() => {
-                        setSelectedId(null);
-                        setIsolated(false);
-                        setFocus(false);
-                      }}
-                      aria-label="Clear selection"
-                    >
-                      <ArrowLeft />
-                    </Button>
-                  </div>
-                  <RelatedStudy
-                    views={relatedViews}
-                    selectedId={selected.id}
-                    currentFocusId={dissection.focusId}
-                    onOpen={openRelatedStudy}
-                    onSelect={select}
-                    detail={structureDetail}
-                  />
-                  <StudyLinks
-                    catalog={catalog}
-                    selected={selected}
-                    region={initialRegion}
-                    side={side as StudySide}
-                    focusId={dissection.focusId}
-                  />
-                  <Tabs defaultValue="anatomy" className="body-content-tabs">
-                    <TabsList variant="line">
-                      {tabs.map(([value, label]) => (
-                        <TabsTrigger key={value} value={value}>
-                          {label}
-                        </TabsTrigger>
-                      ))}
-                    </TabsList>
-                    {tabs.map(([value]) => {
-                      const content = bodyContent(selected, value);
-                      return (
-                        <TabsContent key={value} value={value}>
-                          <div className="eyebrow">{content.title}</div>
-                          <p>{content.body}</p>
-                          {content.bullets && (
-                            <ul>
-                              {content.bullets.map((b) => (
-                                <li key={b}>{b}</li>
-                              ))}
-                            </ul>
-                          )}
-                          {content.note && (
-                            <div className="body-content-note">
-                              {content.note}
-                            </div>
-                          )}
-                          {content.citations?.length ? (
-                            <div className="body-reference-links">
-                              {content.citations.map((url, i) => (
-                                <a
-                                  key={url}
-                                  href={url}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                >
-                                  Reference {i + 1} ↗
-                                </a>
-                              ))}
-                            </div>
-                          ) : null}
-                          {value === 'quiz' && (
-                            <Button
-                              onClick={() => startExam()}
-                              disabled={practiceBlocked}
-                            >
-                              <GraduationCap />
-                              Start identification practice
-                            </Button>
-                          )}
-                          {['ct', 'mri', 'ultrasound'].includes(value) && (
-                            <div className="body-no-imaging">
-                              <ScanLine />
-                              No imaging study loaded
-                            </div>
-                          )}
-                        </TabsContent>
-                      );
-                    })}
-                  </Tabs>
-                  <dl className="body-facts">
-                    <div>
-                      <dt>Region</dt>
-                      <dd>
-                        {
-                          catalog.regions.find((r) => r.id === selected.region)
-                            ?.name
-                        }
-                      </dd>
-                    </div>
-                    <div>
-                      <dt>Laterality</dt>
-                      <dd>
-                        {selected.laterality === 'unspecified'
-                          ? 'Not lateralised'
-                          : selected.laterality}
-                      </dd>
-                    </div>
-                    <div>
-                      <dt>Source</dt>
-                      <dd>BodyParts3D 4.0</dd>
-                    </div>
-                    <div>
-                      <dt>Review</dt>
-                      <dd>Draft · pending</dd>
-                    </div>
-                  </dl>
-                </>
-              ) : (
-                <>
-                  <div className="body-intro-icon">
-                    <Accessibility />
-                  </div>
-                  <h2>Explore in three dimensions</h2>
-                  <p>
-                    Select a structure to inspect its identity, isolate it, or
-                    explore the available teaching notes.
-                  </p>
-                  <div className="body-summary-grid">
-                    {systemKeys.map((system) => (
-                      <div key={system}>
-                        <strong>
-                          {
-                            regionStructures.filter((s) => s.system === system)
-                              .length
-                          }
-                        </strong>
-                        <span>{bodySystems[system].name}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="body-content-note">
-                    The geometry is source-based. New teaching entries are
-                    clearly marked where specialist content is still pending.
-                  </div>
-                </>
-              )}
-              <details className="body-structure-browser" open={!whole}>
+              <details className="dissection-guide-fold">
+                <summary>Study guide · {stage?.title ?? 'Custom view'}</summary>
+                {studyGuide}
+              </details>
+              <details className="body-structure-browser">
                 <summary>Browse structures ({regionStructures.length})</summary>
                 <StructureNavigator
                   key={`${initialRegion}-${side}`}
@@ -1827,7 +1807,7 @@ export default function BodyExplorer({
               </div>
             </>
           )}
-        </aside>
+        </AnatomyInfoPanel>
       </div>
     </main>
   );

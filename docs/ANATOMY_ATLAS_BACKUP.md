@@ -4,11 +4,11 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 
 ## Snapshot
 
-- Source application commit: `40e47408c40fe140e1a162a7fc011ce346d4be4f`.
-- Exact application source tree: `84d200f9e62fec1c1d1d0a7fd7b352576a384676`.
+- Source application commit: `82b10fcf7df198a87b84422887bbc8fbf94834c8`.
+- Exact application source tree: `d14bef0eb1da964ac1d82bf41fb002eaa26cb03f`.
 - Main website base commit: `c4ff08f8afc90bd94d04162625f97af9d94401cf`.
 - GitHub backup branch: `backup/anatomy-atlas-2026-09-06`.
-- All 483 tracked application files (117,768,576 bytes) are preserved byte-for-byte from that source commit, including 87 GLB bundles, official brand lockups, content, scripts, configuration, dependency lockfile, licences, review schema/migration and documentation.
+- All 488 tracked application files (117,807,514 bytes) are preserved byte-for-byte from that source commit, including 87 GLB bundles, official brand lockups, content, scripts, configuration, dependency lockfile, licences, review schema/migration and documentation.
 - The atlas covers 1,022 selectable source representations, 11 regional explorers, 138 dissection stages, 120 focuses and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation. Previous milestone receipts below are historical.
 - The shoulder review workspace has independent geometry, teaching and imaging review tracks, evidence/issues, versioned records and revision-bound approval safeguards. Acquired scans and specialist approvals remain absent.
 - The deep-inspection update adds three-plane surface cutaways, tissue opacity, clipped-surface picking, regional/whole-body orthographic illustration and varied 5/10/20-question practice with results. No source geometry, anatomical coverage, licences or dependencies were changed.
@@ -20,7 +20,13 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 
 The currently published atlas remains at [Visible Medicine anatomy](https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site). Saving this branch does not redeploy that site or the main website.
 
-## Current guarded-rendering and supporting-source milestone
+## Current model-first workspace milestone
+
+The regional and whole-body explorers put the six anatomical system switches beside the model, with advanced tools and region selection folded into the left rail. Smaller layouts open tools and structure information in side panels instead of stacking them above/below the atlas. Search and selected notes come first; the study guide and complete structure browser open on demand. Independent panel scrolling and flexible header sizing keep the model central, with a short-window accessibility escape. Closing a sheet preserves nested drafts; crossing a responsive breakpoint can reset transient nested UI while the parent anatomy/study/practice state remains intact. See `docs/MODEL_FIRST_WORKSPACE.md` in the snapshot.
+
+The focused suite passes 873 assertions across 24 loaded server-rendered explorer states, four injected responsive panel scenarios and seven stylesheet cascade sizes. It preserves 19 named domain handlers and 55 retained control callbacks, plus exact catalogue, profile and 86 body-bundle hashes. Current dissection/workbench, practice/study/library, imaging/navigation/link, loading/guidance, renderer, inspection/arrangement/explode, full-body, review and licence regressions pass, as do type checks, focused lint and the production build. These are not pixel, browser focus/Escape, touch, zoom or clinical acceptance. The dedicated shoulder and all anatomy remain unchanged. No new dependency, fee-bearing service, licence obligation, private review or main-website change is introduced. The standing improvement goal now explicitly requires simple, model-first navigation for future features.
+
+## Previous guarded-rendering and supporting-source milestone
 
 The shoulder, all eleven regions and whole body now route synchronous render exceptions and shader-error callbacks into the existing page-level restart control. Practice readiness follows a successful render and healthy context probe; failed attempts stop drawing and cannot resume from late context events. Original renderer receivers/arguments and prior shader callbacks are preserved; cleanup respects later instrumentation. Selection, removed tissue, answers and camera intent remain above the graphics subtree. The 703 recovery checks include five fault scenarios and injected layout hooks, not real GPU/device acceptance. Asynchronous initialization and unrelated frame-callback failures remain explicit next work. See `docs/SCENE_RECOVERY.md` inside the snapshot.
 
@@ -150,4 +156,4 @@ The 4,301 head-detail assertions, 54,502 practice assertions, 189 automated revi
 
 Keep the atlas's [licence](../modules/anatomy-atlas/LICENSE), [third-party notices](../modules/anatomy-atlas/LICENSES/THIRD_PARTY_NOTICES.md), [BodyParts3D licence evidence](../modules/anatomy-atlas/LICENSES/BODYPARTS3D.md) and visible attribution together. MIT application code does not relicense third-party anatomy or the proprietary Visible Medicine brand marks.
 
-Keep the repository private unless public source/brand release is deliberately approved. The source snapshot is 117,768,576 bytes (about 117.77 MB); no Git LFS or new paid service was introduced for this backup. GitHub source storage is distinct from hosting, large future imaging collections and database backups; quotas and service pricing can change. Never add patient imaging or private review exports to this repository as a substitute for appropriate data storage.
+Keep the repository private unless public source/brand release is deliberately approved. The source snapshot is 117,807,514 bytes (about 117.81 MB); no Git LFS or new paid service was introduced for this backup. GitHub source storage is distinct from hosting, large future imaging collections and database backups; quotas and service pricing can change. Never add patient imaging or private review exports to this repository as a substitute for appropriate data storage.

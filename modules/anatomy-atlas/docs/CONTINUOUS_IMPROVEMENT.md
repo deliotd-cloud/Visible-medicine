@@ -12,6 +12,8 @@ The current whole-body catalogue has **1,022 selectable source representations, 
 
 ## Ordered work queue
 
+**Standing usability constraint:** keep the atlas visible without scrolling past controls. Frequent system switches belong beside the model; advanced functions and long notes open on demand. Preserve this simple navigation when adding features or the future imaging interface. The model-first layout is implemented across all regions and whole body; hands-on responsive/accessibility acceptance remains pending.
+
 **User-directed presentation/dissection priority:** all eleven regions have shoulder-style layer tracks and independent study windows, with reversible removal, source-bound orientation, exact membership, availability, target/context roles and next-layer guidance. Four forearm arterial sources have three close study views. The subsequent six-source tendon/thumb audit now records exact geometry, side and contact evidence without admission. Shared graphics recovery additionally catches synchronous render/shader failures and waits for a completed render before readiness. Next adjudicate the bounded thumb-head/contact and tendon-parent evidence; continue scoped asynchronous initialization and unrelated frame-callback fault handling. Source counts and candidate queries are not anatomical completeness. Human Atlas was workflow evidence, not copied assets or clinical validation.
 
 | Priority | Milestone | Evidence needed to accept it | Current state |
@@ -27,6 +29,12 @@ The current whole-body catalogue has **1,022 selectable source representations, 
 Reorder only when evidence exposes a dependency or higher-impact defect. Complete software that does not require missing external inputs while keeping the anatomy/source queue active. Add special features when they materially improve anatomical study; avoid decorative features or endless scope growth as a substitute for the release gates.
 
 ## Milestone ledger
+
+### Model-first controls and reduced scrolling
+
+Moved the six system switches and all advanced regional tools into the left control rail, keeping only the heading and atlas in the centre. Compact layouts use on-demand side panels rather than a long mobile page; selected notes and search come first, with the guide and structure browser folded. The header and workspace use flexible sizing, with independent side-panel scroll and a short-window escape. Closing a sheet retains nested drafts; breakpoint changes can remount transient nested UI, while parent anatomy/study/practice state remains intact. See [design rule, tests and remaining acceptance](MODEL_FIRST_WORKSPACE.md).
+
+The focused suite renders 24 loaded explorer states, exercises four responsive panel cases and preserves all 19 named domain handlers/55 retained control callbacks. Catalogue, bundle and profile hashes stay exact. No new anatomy, dependency, licence obligation, private review or main-website change is included. This milestone follows the user's explicit lower-clutter/less-scrolling priority; browser/touch/assistive-technology acceptance remains separate. Next resume bounded tendon/thumb source adjudication and shared graphics resilience, applying the model-first rule to every feature. The broader improvement goal remains active.
 
 ### Guarded rendering and tendon/thumb source evidence
 

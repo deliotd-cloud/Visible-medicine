@@ -40,6 +40,7 @@
     "laryngeal:audit": "node scripts/audit-laryngeal-anatomy.mjs",
     "laryngeal:test": "node scripts/validate-laryngeal.mjs",
     "renderer:test": "node scripts/validate-scene-recovery.mjs",
+    "model-first:test": "node scripts/validate-model-first.mjs",
     "supporting:audit": "node scripts/audit-supporting-candidates.mjs",
     "supporting:test": "node scripts/validate-supporting-candidates.mjs",
     "supporting-geometry:audit": "node scripts/audit-supporting-geometry.mjs",
