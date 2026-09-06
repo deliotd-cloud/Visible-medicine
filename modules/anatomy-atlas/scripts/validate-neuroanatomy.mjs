@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { build } from 'esbuild';
 import { fileURLToPath } from 'node:url';
 import { neuroDefinitions } from './neuro-selections.mjs';
+import { applyJunctionTransition } from './junction-transition.mjs';
 let checks = 0;
 const check = (v, message) => {
   checks++;
@@ -23,10 +24,11 @@ same(baseline.sourceCommit, 'b49c9172fbc443bcd2ee1faf58c171aa76424e20');
 same(evidence.sourceCommit, baseline.sourceCommit);
 same(baseline.structures.length, 859);
 same(baseline.bundles.length, 66);
-same(catalog.structures.length, 924);
-same(catalog.bundles.length, 73);
+same(catalog.structures.length, 925);
+same(catalog.bundles.length, 74);
 same(catalog.coordinateSystem, baseline.coordinateSystem);
 same(catalog.excluded, baseline.excluded);
+await applyJunctionTransition(baseline, catalog);
 for (const old of baseline.structures) {
   const current = catalog.structures.find((s) => s.id === old.id);
   check(current, 'Prior identity preserved');
@@ -295,8 +297,9 @@ for (const s of catalog.structures)
 const result = {
   passed: true,
   checks,
-  preservedStructures: 859,
-  preservedBundles: 66,
+  preservedStructures: 857,
+  preservedBundles: 65,
+  documentedJunctionChanges: { records: 2, bundles: 1 },
   addedStructures: 22,
   addedSourceComponents: 24,
   studyWindows: 3,

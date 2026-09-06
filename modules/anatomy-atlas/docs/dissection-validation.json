@@ -2,11 +2,11 @@
   "passed": true,
   "regions": 11,
   "wholeBody": true,
-  "stages": 102,
-  "focusedViews": 84,
-  "checks": 3006,
-  "cameraChecks": 7344,
-  "structures": 924,
+  "stages": 103,
+  "focusedViews": 85,
+  "checks": 3036,
+  "cameraChecks": 7416,
+  "structures": 925,
   "clinicalValidation": false,
   "browserInteractionTesting": false,
   "rows": [
@@ -14,7 +14,7 @@
       "region": "whole-body",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 924,
+      "visible": 925,
       "removed": 0
     },
     {
@@ -22,13 +22,13 @@
       "stage": "musculoskeletal",
       "kind": "window",
       "visible": 572,
-      "removed": 352
+      "removed": 353
     },
     {
       "region": "whole-body",
       "stage": "viscera",
       "kind": "window",
-      "visible": 72,
+      "visible": 73,
       "removed": 852
     },
     {
@@ -36,28 +36,28 @@
       "stage": "neural",
       "kind": "window",
       "visible": 54,
-      "removed": 870
+      "removed": 871
     },
     {
       "region": "whole-body",
       "stage": "bones",
       "kind": "skeleton",
       "visible": 203,
-      "removed": 721
+      "removed": 722
     },
     {
       "region": "whole-body",
       "stage": "vascular",
       "kind": "window",
       "visible": 349,
-      "removed": 575
+      "removed": 576
     },
     {
       "region": "whole-body",
       "stage": "connective",
       "kind": "window",
       "visible": 283,
-      "removed": 641
+      "removed": 642
     },
     {
       "region": "shoulder-arm",
@@ -434,21 +434,21 @@
       "region": "abdomen",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 65,
+      "visible": 66,
       "removed": 0
     },
     {
       "region": "abdomen",
       "stage": "wall",
       "kind": "peel",
-      "visible": 63,
+      "visible": 64,
       "removed": 2
     },
     {
       "region": "abdomen",
       "stage": "viscera",
       "kind": "window",
-      "visible": 16,
+      "visible": 17,
       "removed": 49
     },
     {
@@ -456,35 +456,42 @@
       "stage": "posterior",
       "kind": "window",
       "visible": 10,
-      "removed": 55
+      "removed": 56
     },
     {
       "region": "abdomen",
       "stage": "bones",
       "kind": "skeleton",
       "visible": 5,
-      "removed": 60
+      "removed": 61
     },
     {
       "region": "abdomen",
       "stage": "vascular",
       "kind": "window",
       "visible": 37,
-      "removed": 28
+      "removed": 29
     },
     {
       "region": "abdomen",
       "stage": "connective",
       "kind": "window",
       "visible": 11,
-      "removed": 54
+      "removed": 55
+    },
+    {
+      "region": "abdomen",
+      "stage": "ileocecal-junction",
+      "kind": "window",
+      "visible": 3,
+      "removed": 63
     },
     {
       "region": "abdomen",
       "stage": "linea-alba-context",
       "kind": "window",
       "visible": 3,
-      "removed": 62
+      "removed": 63
     },
     {
       "region": "pelvis",

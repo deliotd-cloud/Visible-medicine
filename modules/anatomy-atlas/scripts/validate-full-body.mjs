@@ -12,11 +12,19 @@ const schema = JSON.parse(
 const idPattern = new RegExp(schema.properties.id.pattern);
 const identities = new Set(),
   bindings = new Set();
+const sourceOwners = new Map();
 let triangles = 0,
   vertices = 0;
 for (const s of catalog.structures) {
   assert(!identities.has(s.id), `Duplicate ID ${s.id}`);
   identities.add(s.id);
+  for (const source of s.sources) {
+    assert(
+      !sourceOwners.has(source.file),
+      `Duplicate source component ${source.file}: ${sourceOwners.get(source.file)} / ${s.id}`,
+    );
+    sourceOwners.set(source.file, s.id);
+  }
   assert(idPattern.test(s.id), `Invalid product ID ${s.id}`);
   assert(
     schema.properties.category.enum.includes(s.category),
@@ -167,7 +175,7 @@ assert(
 assert.equal(catalog.regions.length, 11);
 assert.equal(
   catalog.structures.filter((s) => s.system === 'organs').length,
-  72,
+  73,
 );
 const result = {
   passed: true,
@@ -185,6 +193,7 @@ const result = {
   checks: [
     'all GLB hashes/bytes',
     'unique identities and schema values',
+    'one rendered owner per source component',
     'all node bindings',
     'finite geometry',
     'stored bounds',

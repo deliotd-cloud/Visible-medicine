@@ -319,8 +319,8 @@
     {
       "id": "abdomen-organs",
       "url": "/models/bodyparts3d/full-body/abdomen-organs.glb",
-      "bytes": 6394200,
-      "sha256": "12ea6377788e98b2fe480f6f48ca1800f42dab8893e9cffa26cbf7387bc6514b",
+      "bytes": 6383736,
+      "sha256": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
       "structures": 10
     },
     {
@@ -609,6 +609,13 @@
       "bytes": 745932,
       "sha256": "3375bde94900a77d8ab7c6c37ec934b30e2a745495006630b1645053522c040a",
       "structures": 28
+    },
+    {
+      "id": "abdomen-organs-junction",
+      "url": "/models/bodyparts3d/full-body/abdomen-organs-junction.glb",
+      "bytes": 6484,
+      "sha256": "233de27cdb6d272b62e99917813aba52abfbab4978374b6fb2b322573abbd672",
+      "structures": 1
     }
   ],
   "structures": [
@@ -34889,10 +34896,6 @@
           "sha256": "0efc0e799d28e9df3d0483c828ff9cd4b65db7e0da5fd5d157bf0d10959bd897"
         },
         {
-          "file": "FJ2599",
-          "sha256": "38a95d81d5bf9acc1f22b29c50f5d6ee23352dc013ac245d227b1eaf96c5aa28"
-        },
-        {
           "file": "FJ2600",
           "sha256": "14cbe0e74c698aace6e1ed1d95d9da60a494f215caf948d760a84441cb47ffda"
         },
@@ -35009,7 +35012,7 @@
           "sha256": "be71bf232347b0d1188112f4ded90d1efe15b6672b6d17cdf4728c661da9b732"
         }
       ],
-      "coverageNote": null,
+      "coverageNote": "Display aggregate excludes the separately selectable ileocecal junction surface. Source coordinates are unchanged.",
       "provenance": {
         "method": "licensed-source-mesh",
         "license": "CC-BY-4.0",
@@ -35053,9 +35056,9 @@
         0.7360610247123986
       ],
       "anchor": [
-        -0.5454959869384766,
-        1.0552301406860352,
-        0.7636399865150452
+        -0.06190739944577217,
+        2.001300096511841,
+        1.112089991569519
       ],
       "sourceTree": "partof",
       "sources": [
@@ -35082,13 +35085,9 @@
         {
           "file": "FJ2572",
           "sha256": "66c493a453400d704e39950bbf468e70182c1e68090ac8a85099bfece42c9d35"
-        },
-        {
-          "file": "FJ2599",
-          "sha256": "38a95d81d5bf9acc1f22b29c50f5d6ee23352dc013ac245d227b1eaf96c5aa28"
         }
       ],
-      "coverageNote": "Display aggregate excludes the separately selectable rectum surface. Source coordinates are unchanged.",
+      "coverageNote": "Display aggregate excludes the separately selectable rectum surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable ileocecal junction surface. Source coordinates are unchanged.",
       "provenance": {
         "method": "licensed-source-mesh",
         "license": "CC-BY-4.0",
@@ -54182,6 +54181,61 @@
         }
       ],
       "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
+      "fmaId": "FMA11338",
+      "name": "Ileocecal junction",
+      "sourceName": "ileocecal junction",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "unpaired",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-organs-junction",
+      "nodeName": "FMA11338",
+      "bounds": {
+        "min": [
+          -0.7984409928321838,
+          0.7010302543640137,
+          0.5718200206756592
+        ],
+        "max": [
+          -0.5137779712677002,
+          1.2325701713562012,
+          0.9128300547599792
+        ]
+      },
+      "center": [
+        -0.656109482049942,
+        0.9668002128601074,
+        0.7423250377178192
+      ],
+      "anchor": [
+        -0.6675820350646973,
+        0.964139997959137,
+        0.7129799723625183
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2599",
+          "sha256": "7b759605d311999dcd8c3ff13f224f9a208f4856ddaf21057d8e31952ee8dff1"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 ileocecal-junction source surface, separated from both bowel display aggregates without changing coordinates or shape. The source also aliases this surface to cecal and ileal-wall concepts; it is not a separately validated cecum, valve, bowel wall or surgical plane. This corrects duplicate rendering, not missing tissue. No imaging appearance or patient registration is established.",
       "provenance": {
         "method": "licensed-source-mesh",
         "license": "CC-BY-4.0",

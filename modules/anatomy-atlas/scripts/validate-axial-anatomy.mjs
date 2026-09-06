@@ -5,6 +5,7 @@ import { build } from 'esbuild';
 import { fileURLToPath } from 'node:url';
 import { axialDefinitions, axialHeldDefinitions } from './axial-selections.mjs';
 import { inventoryHolds } from './anatomy-inventory.mjs';
+import { applyJunctionTransition } from './junction-transition.mjs';
 let checks = 0;
 const check = (v, m) => {
   checks++;
@@ -24,10 +25,11 @@ same(baseline.sourceCommit, 'e007550faec7c75947569c2a30fa1a032c7bf5f0');
 same(evidence.sourceCommit, baseline.sourceCommit);
 same(baseline.structures.length, 881);
 same(baseline.bundles.length, 67);
-same(catalog.structures.length, 924);
-same(catalog.bundles.length, 73);
+same(catalog.structures.length, 925);
+same(catalog.bundles.length, 74);
 same(catalog.coordinateSystem, baseline.coordinateSystem);
 same(catalog.excluded, baseline.excluded);
+await applyJunctionTransition(baseline, catalog);
 for (const old of baseline.structures) {
   const current = catalog.structures.find((s) => s.id === old.id);
   check(current);
@@ -52,8 +54,8 @@ for (const old of baseline.bundles) {
     'Prior GLB preserved byte-for-byte',
   );
 }
-const additions = catalog.structures.filter(
-  (s) => s.bundle.endsWith('-axial-detail'),
+const additions = catalog.structures.filter((s) =>
+  s.bundle.endsWith('-axial-detail'),
 );
 same(additions.length, 11);
 same(evidence.results.length, 11);
@@ -258,8 +260,9 @@ console.log({
   checks,
   additions: 11,
   components: 15,
-  preservedStructures: 881,
-  preservedBundles: 67,
+  preservedStructures: 879,
+  preservedBundles: 66,
+  documentedJunctionChanges: { records: 2, bundles: 1 },
   sourceHolds: 2,
   studyWindows: 6,
   focusedViews: 8,

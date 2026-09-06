@@ -621,7 +621,9 @@ export const dissectionProfiles: Record<string, DissectionProfile> = {
       {
         id: 'digestive',
         title: 'Digestive organs',
-        rule: tissue('liver|gallbladder|stomach|intestine|pancreas'),
+        rule: tissue(
+          'liver|gallbladder|stomach|intestine|ileocecal junction|pancreas',
+        ),
         view: 'anterior',
       },
       {
@@ -956,7 +958,7 @@ for (const [region, id, title, systems, pattern, view] of [
     'appendiceal-context',
     'Appendix & large intestine',
     ['organs'],
-    'appendix|large intestine',
+    'appendix|large intestine|ileocecal junction',
     'anterior',
   ],
 ] as const) {
@@ -967,6 +969,26 @@ for (const [region, id, title, systems, pattern, view] of [
     view,
   });
 }
+
+dissectionProfiles.abdomen.stages.push(
+  window(
+    'ileocecal-junction',
+    'Bowel junction window',
+    'Set unrelated organs, bones and muscles aside to compare the two bowel aggregates with their separately selectable junction.',
+    [{ fmaIds: ['FMA7200', 'FMA7201', 'FMA11338'] }],
+    'anterior',
+    ['small intestine', 'large intestine', 'ileocecal junction'],
+    'Select the junction to isolate or frame it. Removing either bowel aggregate does not remove the junction. This is an exposure window, not a surgical dissection sequence.',
+  ),
+);
+dissectionProfiles.abdomen.focuses.push({
+  id: 'ileocecal-junction',
+  title: 'Ileocecal junction & bowel context',
+  rule: { fmaIds: ['FMA11338'] },
+  context: [{ fmaIds: ['FMA7200', 'FMA7201'] }],
+  includeSkeleton: false,
+  view: 'anterior',
+});
 
 dissectionProfiles.hand.focuses.push(
   focus('lumbricals', 'Lumbrical groups', 'set of lumbricals'),

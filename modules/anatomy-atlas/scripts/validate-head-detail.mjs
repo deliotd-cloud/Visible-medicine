@@ -5,6 +5,7 @@ import { build } from 'esbuild';
 import { fileURLToPath } from 'node:url';
 import { headDetailDefinitions } from './head-detail-selections.mjs';
 import { inventoryHolds } from './anatomy-inventory.mjs';
+import { applyJunctionTransition } from './junction-transition.mjs';
 let checks = 0;
 const check = (v, m) => {
   checks++;
@@ -28,10 +29,11 @@ same(
 same(evidence.sourceCommit, baseline.sourceCommit);
 same(baseline.structures.length, 892);
 same(baseline.bundles.length, 71);
-same(catalog.structures.length, 924);
-same(catalog.bundles.length, 73);
+same(catalog.structures.length, 925);
+same(catalog.bundles.length, 74);
 same(catalog.coordinateSystem, baseline.coordinateSystem);
 same(catalog.excluded, baseline.excluded);
+await applyJunctionTransition(baseline, catalog);
 for (const old of baseline.structures) {
   const now = catalog.structures.find((s) => s.id === old.id);
   check(now);
@@ -56,7 +58,9 @@ for (const old of baseline.bundles) {
   );
 }
 const additions = catalog.structures.filter(
-  (s) => !baseline.structures.some((b) => b.id === s.id),
+  (s) =>
+    !baseline.structures.some((b) => b.id === s.id) &&
+    s.bundle.endsWith('-head-detail'),
 );
 same(additions.length, 32);
 same(evidence.results.length, 32);
@@ -286,8 +290,9 @@ console.log({
   teeth: 28,
   orbitalConnective: 4,
   studyWindows: 5,
-  priorRecordsPreserved: 892,
-  priorBundlesPreserved: 71,
+  priorRecordsPreserved: 890,
+  priorBundlesPreserved: 70,
+  documentedJunctionChanges: { records: 2, bundles: 1 },
   clinicalValidation: false,
   browserInteractionTesting: false,
 });

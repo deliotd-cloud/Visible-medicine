@@ -4,6 +4,7 @@ import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { conceptMap } from './bodyparts-archive.mjs';
 import { gapSelections } from './gap-recovery.mjs';
+import { applyJunctionTransition } from './junction-transition.mjs';
 // Baseline is the exact previously published v6 source, not a moving HEAD.
 const baselineCommit = 'c62c149c1e19208460b0ee644667a63796628fd5';
 const root = 'public/models/bodyparts3d/full-body/';
@@ -14,9 +15,10 @@ const previous = JSON.parse(
 );
 const catalog = JSON.parse(await fs.readFile(root + 'catalog.json', 'utf8'));
 assert.equal(previous.structures.length, 761);
-assert.equal(catalog.structures.length, 924);
+assert.equal(catalog.structures.length, 925);
 assert.deepEqual(catalog.coordinateSystem, previous.coordinateSystem);
 assert.deepEqual(catalog.excluded, previous.excluded);
+await applyJunctionTransition(previous, catalog);
 for (const old of previous.structures)
   assert.deepEqual(
     catalog.structures.find((s) => s.id === old.id),
@@ -80,7 +82,9 @@ const result = {
   passed: true,
   baselineCommit,
   preservedIdentities: 761,
-  preservedBundleHashes: 53,
+  unchangedPriorRecords: 759,
+  preservedBundleHashes: 52,
+  documentedJunctionChanges: { records: 2, bundles: 1 },
   newStructures: 62,
   newBundles: 8,
   newAssetBytes: catalog.bundles

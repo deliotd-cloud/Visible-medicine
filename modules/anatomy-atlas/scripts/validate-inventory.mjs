@@ -8,6 +8,7 @@ import {
   inventoryHolds,
 } from './anatomy-inventory.mjs';
 import { inventorySelections } from './inventory-selections.mjs';
+import { applyJunctionTransition } from './junction-transition.mjs';
 const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 let checks = 0;
 const same = (a, b, label) => {
@@ -90,6 +91,7 @@ same(
 same(catalog.excluded, baseline.excluded, 'Existing quarantines preserved');
 same(baseline.structures.length, 823);
 same(baseline.bundles.length, 61);
+await applyJunctionTransition(baseline, catalog);
 for (const previous of baseline.structures) {
   const current = catalog.structures.find((s) => s.id === previous.id);
   check(current, 'Previously included identity retained');
@@ -122,8 +124,8 @@ const maps = Object.fromEntries(
 );
 const additions = inventorySelections(maps.isa, maps.partof);
 same(additions.length, 36);
-same(catalog.structures.length, 924);
-same(catalog.bundles.length, 73);
+same(catalog.structures.length, 925);
+same(catalog.bundles.length, 74);
 const baselineIds = new Set(baseline.structures.map((s) => s.id));
 const newRecords = catalog.structures.filter(
   (s) => !baselineIds.has(s.id) && s.bundle.endsWith('-inventory'),
@@ -215,7 +217,9 @@ const result = {
   conceptDefinitions: 4273,
   archiveEntries: 3492,
   preservedIdentities: 823,
-  preservedBundles: 61,
+  unchangedPriorRecords: 821,
+  preservedBundles: 60,
+  documentedJunctionChanges: { records: 2, bundles: 1 },
   newStructures: 36,
   newBundles: 5,
   newAssetBytes: catalog.bundles

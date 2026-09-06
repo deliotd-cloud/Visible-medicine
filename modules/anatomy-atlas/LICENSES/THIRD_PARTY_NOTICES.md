@@ -26,6 +26,8 @@ The application embeds a CC BY 4.0 BodyParts3D shoulder mesh subset. It does not
 
 ## Anatomical meshes
 
+The current body catalogue has 925 entries. The intestinal-junction correction separates the already included `FJ2599` source surface from two bowel aggregates under `FMA11338`; it is an indicated CC BY 4.0 adaptation, not new tissue or MIT-licensed anatomy. Preserve the same source attribution and licence. See `../docs/INTESTINAL_JUNCTION.md` for exact before/after evidence and review requirements. No new asset provider, font, texture, dependency or paid service is introduced; counts for earlier milestones below are historical.
+
 BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International
 
 Official licence: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html (updated 2025-02-27). See `BODYPARTS3D.md`, `CC-BY-4.0.txt` and the mesh manifest for the audited grant, adaptations and source hashes. Preserve the viewer's attribution and linked full credits with commercial distribution. The licence requires attribution but has no non-commercial restriction, share-alike requirement or mandatory licence fee.

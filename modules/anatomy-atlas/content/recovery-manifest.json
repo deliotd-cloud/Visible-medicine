@@ -1,7 +1,7 @@
 {
   "version": 4,
   "date": "2026-09-06",
-  "catalogSha256": "9b2cb3eb0b530491c9a4d0f54c4d89058e14f7475f05597f4babf9fb3ea8bdc7",
+  "catalogSha256": "9512052d74f333f3276aac1926c8537c428badcd237dd724a5822cd7c7a005cd",
   "status": "unvalidated",
   "method": "licensed-source-recovery",
   "generatedAnatomicalMeshes": 0,
@@ -6349,6 +6349,24 @@
         }
       ],
       "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established."
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
+      "fmaId": "FMA11338",
+      "sourceName": "ileocecal junction",
+      "sourceTree": "isa",
+      "category": "organ",
+      "system": "organs",
+      "regions": [
+        "abdomen"
+      ],
+      "sources": [
+        {
+          "file": "FJ2599",
+          "sha256": "7b759605d311999dcd8c3ff13f224f9a208f4856ddaf21057d8e31952ee8dff1"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 ileocecal-junction source surface, separated from both bowel display aggregates without changing coordinates or shape. The source also aliases this surface to cecal and ileal-wall concepts; it is not a separately validated cecum, valve, bowel wall or surgical plane. This corrects duplicate rendering, not missing tissue. No imaging appearance or patient registration is established."
     }
   ]
 }

@@ -1,22 +1,23 @@
 {
   "passed": true,
   "sourceVersion": "4.0",
-  "structures": 924,
-  "bundles": 73,
-  "triangles": 4791476,
-  "vertices": 2401794,
+  "structures": 925,
+  "bundles": 74,
+  "triangles": 4791188,
+  "vertices": 2401648,
   "framingChecks": 432,
   "systems": {
     "skeleton": 203,
     "muscles": 369,
     "nerves": 54,
-    "organs": 72,
+    "organs": 73,
     "vessels": 146,
     "connective": 80
   },
   "checks": [
     "all GLB hashes/bytes",
     "unique identities and schema values",
+    "one rendered owner per source component",
     "all node bindings",
     "finite geometry",
     "stored bounds",

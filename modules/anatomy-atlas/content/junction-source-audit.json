@@ -1,0 +1,66 @@
+{
+  "sourceCommit": "0b1c27632fb4fc7d7cd21b8c500c6f883bd6c645",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+  "licenseChecked": "2026-09-06",
+  "method": "Cached source bytes matched to previously archived source SHA-256 and canonical geometry evidence; no claim of a new archive download.",
+  "raw": [
+    {
+      "tree": "isa",
+      "file": "FJ2599",
+      "bytes": 17331,
+      "sha256": "7b759605d311999dcd8c3ff13f224f9a208f4856ddaf21057d8e31952ee8dff1",
+      "geometrySha256": "9c74414ea9fc7e30ac5ceaf0c8850f96dc1d49be05298df51046f5c0eb24eb4e",
+      "crc32": 824451664
+    },
+    {
+      "tree": "partof",
+      "file": "FJ2599",
+      "bytes": 17334,
+      "sha256": "38a95d81d5bf9acc1f22b29c50f5d6ee23352dc013ac245d227b1eaf96c5aa28",
+      "geometrySha256": "9c74414ea9fc7e30ac5ceaf0c8850f96dc1d49be05298df51046f5c0eb24eb4e",
+      "crc32": 2122168977
+    }
+  ],
+  "exactAliases": [
+    {
+      "tree": "isa",
+      "fmaId": "FMA11338",
+      "name": "ileocecal junction"
+    },
+    {
+      "tree": "partof",
+      "fmaId": "FMA11338",
+      "name": "ileocecal junction"
+    },
+    {
+      "tree": "partof",
+      "fmaId": "FMA14541",
+      "name": "cecum"
+    },
+    {
+      "tree": "partof",
+      "fmaId": "FMA14615",
+      "name": "wall of small intestine"
+    },
+    {
+      "tree": "partof",
+      "fmaId": "FMA14618",
+      "name": "wall of ileum"
+    },
+    {
+      "tree": "partof",
+      "fmaId": "FMA17181",
+      "name": "wall of distal part of ileum"
+    }
+  ],
+  "previousOwners": [
+    "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
+    "vm:anatomy:body:abdomen:unpaired:organ:large-intestine"
+  ],
+  "intendedSourceIdentity": "FMA11338",
+  "action": "Separate one existing component from both parent display aggregates; keep a single independently selectable source owner.",
+  "clinicalValidation": false,
+  "newAnatomicalTissue": false
+}

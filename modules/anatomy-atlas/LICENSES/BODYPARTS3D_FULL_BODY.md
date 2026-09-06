@@ -1,8 +1,14 @@
 # Expanded BodyParts3D commercial-use audit
 
+## Intestinal component-ownership correction — 6 September 2026
+
+The current total is **925 selectable source representations / 74 body bundles / 93,700,676 bytes**. `FJ2599` is now separately selectable as the official `FMA11338` ileocecal junction, removed from both inherited bowel display aggregates to prevent duplicate rendering. Exact source geometry is preserved, not remodelled or relabelled as a complete cecum or valve. Two parent records and one prior GLB have an explicitly pinned transition; all other 922 prior records / 72 prior body GLBs remain exact. See `docs/INTESTINAL_JUNCTION.md` and `content/junction-source-audit.json` for source aliases, raw hashes and adaptation evidence.
+
+The official CC BY 4.0 grant was rechecked. This change remains subject to existing DBCLS attribution, licence and indication-of-change obligations. No new dataset, font, texture, package, paid API or generated anatomical mesh was introduced. Original brief factual teaching text cites TTUHSC without copying its diagrams or table dataset. Source/clinical and device validation remain pending.
+
 ## Dental/orbital extension — 6 September 2026
 
-Thirty-two single-component definitions from the official IS-A v4 archive add 28 secondary teeth, two common tendinous rings and two superior-oblique trochleae in two new GLBs (791,696 bytes). The current total is 924 entries / 73 body bundles, 93,704,656 bytes. Every previous 892 record and 71 bundle hash is preserved. Exact names, component SHA-256, canonical geometry hashes, aliases and source/scene bounds are in `content/head-detail-source-audit.json`; review limits and reproduction are in `docs/HEAD_DETAIL.md`.
+Thirty-two single-component definitions from the official IS-A v4 archive added 28 secondary teeth, two common tendinous rings and two superior-oblique trochleae in two new GLBs (791,696 bytes). That milestone reached 924 entries / 73 body bundles, 93,704,656 bytes, preserving all previous 892 records and 71 bundle hashes at that point. The later documented junction correction is described above. Exact names, component SHA-256, canonical geometry hashes, aliases and source/scene bounds are in `content/head-detail-source-audit.json`; review limits and reproduction are in `docs/HEAD_DETAIL.md`.
 
 The official CC BY 4.0 grant was rechecked on 6 September 2026. Retain the existing DBCLS attribution, licence and adaptation notices. Ivory display colour is an authored material, not an enamel segmentation or a new texture. Brief original draft factual notes cite the Dentalcare dental-anatomy course and TTUHSC eye tables without bundling their illustrations, protected prose or table datasets. No new dependency, font, texture, paid API or generated anatomical mesh is added; no clinical numbering-system database is imported. The earlier abdominal-wall diagnostic evidence does not authorise admission of legacy v3 meshes.
 

@@ -3,7 +3,7 @@
   "sourceVersion": "4.0",
   "license": "CC-BY-4.0",
   "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
-  "catalogSha256": "9b2cb3eb0b530491c9a4d0f54c4d89058e14f7475f05597f4babf9fb3ea8bdc7",
+  "catalogSha256": "9512052d74f333f3276aac1926c8537c428badcd237dd724a5822cd7c7a005cd",
   "tables": [
     {
       "name": "isa_parts_list_e.txt",
@@ -60,14 +60,14 @@
     "uniqueConceptIds": 3432,
     "archiveEntries": 3492,
     "archiveEntriesWithoutConcept": 0,
-    "admittedStructures": 924,
+    "admittedStructures": 925,
     "statuses": {
-      "represented-not-selectable": 1771,
+      "represented-not-selectable": 1769,
       "unused-available": 929,
       "partly-represented": 189,
-      "admitted": 1312,
+      "admitted": 1313,
       "held-source-review": 21,
-      "admitted-other-definition": 51
+      "admitted-other-definition": 52
     }
   },
   "records": [
@@ -3146,8 +3146,7 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
-        "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
-        "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
         "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
         "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch"
       ],
@@ -9262,8 +9261,7 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
-        "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
         "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
         "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch"
       ],
@@ -9278,12 +9276,11 @@
       "files": [
         "FJ2599"
       ],
-      "status": "represented-not-selectable",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
-        "vm:anatomy:body:abdomen:unpaired:organ:small-intestine"
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
       ],
       "unavailable": [],
       "sharedDefinitionWith": []
@@ -37406,8 +37403,7 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
-        "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
-        "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
         "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
         "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
         "vm:anatomy:body:head-neck:left:organ:left-amygdala",
@@ -53564,6 +53560,7 @@
         "vm:anatomy:body:abdomen:unpaired:organ:appendix",
         "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
         "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
         "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
         "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
@@ -57930,6 +57927,7 @@
         "vm:anatomy:body:abdomen:unpaired:organ:appendix",
         "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
         "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
         "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
         "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
@@ -63408,6 +63406,7 @@
         "vm:anatomy:body:abdomen:unpaired:organ:appendix",
         "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
         "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
         "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
         "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
@@ -66557,6 +66556,7 @@
         "vm:anatomy:body:abdomen:unpaired:organ:appendix",
         "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
         "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
         "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
         "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
@@ -87880,6 +87880,7 @@
         "vm:anatomy:body:abdomen:unpaired:organ:appendix",
         "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
         "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
         "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
         "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
@@ -90795,11 +90796,11 @@
         "FJ2627",
         "FJ2628"
       ],
-      "status": "admitted",
+      "status": "admitted-other-definition",
       "displayedId": "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
         "vm:anatomy:body:abdomen:unpaired:organ:small-intestine"
       ],
       "unavailable": [],
@@ -90824,8 +90825,8 @@
       "displayedId": "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
       "heldReason": null,
       "representedBy": [
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
         "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
-        "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
         "vm:anatomy:body:pelvis:unpaired:organ:rectum"
       ],
       "unavailable": [],
@@ -90981,7 +90982,7 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
         "vm:anatomy:body:abdomen:unpaired:organ:small-intestine"
       ],
       "unavailable": [],
@@ -99069,12 +99070,11 @@
       "files": [
         "FJ2599"
       ],
-      "status": "represented-not-selectable",
-      "displayedId": null,
+      "status": "admitted",
+      "displayedId": "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
-        "vm:anatomy:body:abdomen:unpaired:organ:small-intestine"
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
       ],
       "unavailable": [],
       "sharedDefinitionWith": [
@@ -100549,8 +100549,7 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
-        "vm:anatomy:body:abdomen:unpaired:organ:small-intestine"
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
       ],
       "unavailable": [],
       "sharedDefinitionWith": [
@@ -100657,8 +100656,7 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
-        "vm:anatomy:body:abdomen:unpaired:organ:small-intestine"
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
       ],
       "unavailable": [],
       "sharedDefinitionWith": [
@@ -100680,8 +100678,7 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
-        "vm:anatomy:body:abdomen:unpaired:organ:small-intestine"
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
       ],
       "unavailable": [],
       "sharedDefinitionWith": [
@@ -101740,7 +101737,7 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
         "vm:anatomy:body:abdomen:unpaired:organ:small-intestine"
       ],
       "unavailable": [],
@@ -102816,8 +102813,7 @@
       "displayedId": null,
       "heldReason": null,
       "representedBy": [
-        "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
-        "vm:anatomy:body:abdomen:unpaired:organ:small-intestine"
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
       ],
       "unavailable": [],
       "sharedDefinitionWith": [
@@ -104534,6 +104530,7 @@
         "vm:anatomy:body:abdomen:unpaired:organ:appendix",
         "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
         "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
         "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
         "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
@@ -113304,6 +113301,7 @@
       "heldReason": null,
       "representedBy": [
         "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
         "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
         "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
         "vm:anatomy:body:pelvis:unpaired:organ:rectum"
@@ -122225,6 +122223,7 @@
         "vm:anatomy:body:abdomen:unpaired:organ:appendix",
         "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
         "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
         "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
         "vm:anatomy:body:abdomen:unpaired:organ:liver",
         "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
@@ -145360,8 +145359,7 @@
       "sha256": "7b759605d311999dcd8c3ff13f224f9a208f4856ddaf21057d8e31952ee8dff1",
       "geometrySha256": "9c74414ea9fc7e30ac5ceaf0c8850f96dc1d49be05298df51046f5c0eb24eb4e",
       "representedBy": [
-        "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
-        "vm:anatomy:body:abdomen:unpaired:organ:small-intestine"
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
       ]
     },
     {
@@ -162169,8 +162167,7 @@
       "sha256": "38a95d81d5bf9acc1f22b29c50f5d6ee23352dc013ac245d227b1eaf96c5aa28",
       "geometrySha256": "9c74414ea9fc7e30ac5ceaf0c8850f96dc1d49be05298df51046f5c0eb24eb4e",
       "representedBy": [
-        "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
-        "vm:anatomy:body:abdomen:unpaired:organ:small-intestine"
+        "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
       ]
     },
     {

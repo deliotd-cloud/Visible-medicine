@@ -20,6 +20,7 @@ import { inventorySelections } from './inventory-selections.mjs';
 import { neuroSelections } from './neuro-selections.mjs';
 import { axialSelections } from './axial-selections.mjs';
 import { headDetailSelections } from './head-detail-selections.mjs';
+import { junctionSelections } from './junction-selection.mjs';
 
 const [isa, partof, isaZip, partofZip] = await Promise.all([
   conceptMap('isa'),
@@ -229,6 +230,7 @@ const recovered = [
   ...neuroSelections(isa),
   ...axialSelections(isa),
   ...headDetailSelections(isa),
+  ...junctionSelections(isa),
 ];
 // Separate an already included component from an aggregate without duplicating
 // its surface. Preserve the aggregate's public ID and record the adaptation.
@@ -460,7 +462,7 @@ for (const record of selections) {
   mesh.userData = { structureId: id, fmaId: record.fma };
   const bundle =
     prior?.bundle ??
-    `${region}-${record.system}${record.headDetailRecovery ? '-head-detail' : record.axialRecovery ? '-axial-detail' : record.neuroRecovery ? '-deep-brain' : record.inventoryRecovery ? '-inventory' : record.gapRecovery ? '-gaps' : record.recovery ? '-recovery' : record.dissection ? '-dissection' : ''}`;
+    `${region}-${record.system}${record.junctionRecovery ? '-junction' : record.headDetailRecovery ? '-head-detail' : record.axialRecovery ? '-axial-detail' : record.neuroRecovery ? '-deep-brain' : record.inventoryRecovery ? '-inventory' : record.gapRecovery ? '-gaps' : record.recovery ? '-recovery' : record.dissection ? '-dissection' : ''}`;
   if (!bundles.has(bundle)) bundles.set(bundle, new THREE.Group());
   bundles.get(bundle).add(mesh);
   const box = geometry.boundingBox,

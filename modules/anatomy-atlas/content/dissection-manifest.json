@@ -1,7 +1,7 @@
 {
   "version": 1,
   "reviewStatus": "draft-unvalidated",
-  "catalogSha256": "9b2cb3eb0b530491c9a4d0f54c4d89058e14f7475f05597f4babf9fb3ea8bdc7",
+  "catalogSha256": "9512052d74f333f3276aac1926c8537c428badcd237dd724a5822cd7c7a005cd",
   "profiles": [
     {
       "region": "whole-body",
@@ -949,7 +949,8 @@
             "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
-            "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth"
+            "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
           ]
         },
         {
@@ -1637,7 +1638,8 @@
             "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
             "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
-            "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth"
+            "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
           ]
         },
         {
@@ -9620,7 +9622,8 @@
             "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
             "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
             "vm:anatomy:body:abdomen:unpaired:organ:appendix",
-            "vm:anatomy:body:abdomen:midline:fascia:linea-alba"
+            "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
+            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
           ]
         },
         {
@@ -9706,7 +9709,8 @@
             "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
             "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
             "vm:anatomy:body:abdomen:unpaired:organ:appendix",
-            "vm:anatomy:body:abdomen:midline:fascia:linea-alba"
+            "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
+            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
           ]
         },
         {
@@ -9745,7 +9749,8 @@
             "vm:anatomy:body:abdomen:left:organ:left-ureter",
             "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
             "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
-            "vm:anatomy:body:abdomen:unpaired:organ:appendix"
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
           ]
         },
         {
@@ -9893,6 +9898,33 @@
           ]
         },
         {
+          "id": "ileocecal-junction",
+          "title": "Bowel junction window",
+          "description": "Set unrelated organs, bones and muscles aside to compare the two bowel aggregates with their separately selectable junction.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA7200",
+                "FMA7201",
+                "FMA11338"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "small intestine",
+            "large intestine",
+            "ileocecal junction"
+          ],
+          "inspect": "Select the junction to isolate or frame it. Removing either bowel aggregate does not remove the junction. This is an exposure window, not a surgical dissection sequence.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
+            "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
+            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
+          ]
+        },
+        {
           "id": "linea-alba-context",
           "title": "Anterior midline junction",
           "description": "Remove the viscera to examine the linea alba and the available external-oblique surfaces.",
@@ -9928,7 +9960,7 @@
           "id": "digestive",
           "title": "Digestive organs",
           "rule": {
-            "pattern": "liver|gallbladder|stomach|intestine|pancreas"
+            "pattern": "liver|gallbladder|stomach|intestine|ileocecal junction|pancreas"
           },
           "view": "anterior",
           "visibleStructureIds": [
@@ -9942,7 +9974,8 @@
             "vm:anatomy:body:abdomen:unpaired:organ:stomach",
             "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
             "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
-            "vm:anatomy:body:pelvis:unpaired:organ:gallbladder"
+            "vm:anatomy:body:pelvis:unpaired:organ:gallbladder",
+            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
           ]
         },
         {
@@ -10060,7 +10093,7 @@
             "systems": [
               "organs"
             ],
-            "pattern": "appendix|large intestine"
+            "pattern": "appendix|large intestine|ileocecal junction"
           },
           "view": "anterior",
           "visibleStructureIds": [
@@ -10070,7 +10103,32 @@
             "vm:anatomy:body:spine:midline:bone:fourth-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:bone:fifth-lumbar-vertebra",
             "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
-            "vm:anatomy:body:abdomen:unpaired:organ:appendix"
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
+          ]
+        },
+        {
+          "id": "ileocecal-junction",
+          "title": "Ileocecal junction & bowel context",
+          "rule": {
+            "fmaIds": [
+              "FMA11338"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA7200",
+                "FMA7201"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
+            "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
+            "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction"
           ]
         },
         {

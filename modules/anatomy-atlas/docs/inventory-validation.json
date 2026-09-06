@@ -1,10 +1,15 @@
 {
   "passed": true,
-  "checks": 8900,
+  "checks": 8901,
   "conceptDefinitions": 4273,
   "archiveEntries": 3492,
   "preservedIdentities": 823,
-  "preservedBundles": 61,
+  "unchangedPriorRecords": 821,
+  "preservedBundles": 60,
+  "documentedJunctionChanges": {
+    "records": 2,
+    "bundles": 1
+  },
   "newStructures": 36,
   "newBundles": 5,
   "newAssetBytes": 1308184,
