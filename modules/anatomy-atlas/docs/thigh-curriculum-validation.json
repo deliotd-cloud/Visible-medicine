@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "checks": 9437,
+  "lessonDefinitions": 27,
+  "bodyRepresentations": 54,
+  "authoredSections": 108,
+  "combinedPinnedCurriculumSections": 296,
+  "bodyReadiness": {
+    "anatomy": {
+      "draft": 343,
+      "identity-only": 679,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "function": {
+      "draft": 399,
+      "identity-only": 146,
+      "pending": 477,
+      "generated-identification": 0
+    }
+  },
+  "negativeCases": 7,
+  "unrelatedCopyAndRecipesPreserved": true,
+  "sourceGeometryChanged": false,
+  "clinicalApproval": false,
+  "scanContentAdded": false,
+  "browserTesting": false,
+  "limitations": "Software checks for exact identities, heads/portions, display/export and preservation. Not anatomical accuracy, attachment/nerve territory mapping, medical completeness or clinical/device acceptance."
+}

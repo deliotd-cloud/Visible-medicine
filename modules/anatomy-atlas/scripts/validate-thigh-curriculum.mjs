@@ -1,12 +1,11 @@
 import assert from 'node:assert/strict';
-import { authoringBeforeThigh } from './thigh-curriculum-transition.mjs';
 import { writeFile } from 'node:fs/promises';
 import {
   contentContext,
   contentRoot,
   readContentJson,
 } from './content-contract-tools.mjs';
-import { authoringBeforeHand } from './hand-curriculum-transition.mjs';
+import { authoringBeforeThigh } from './thigh-curriculum-transition.mjs';
 import {
   curriculumHash,
   copyBeforeShoulderArmCurriculum,
@@ -22,16 +21,16 @@ const check = (v, label) => {
 };
 const context = await contentContext();
 const { api, catalog, body } = context;
-const before = await readContentJson('content/hand-curriculum.before.json');
+const before = await readContentJson('content/thigh-curriculum.before.json');
 const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
-const previous = await authoringBeforeHand(context);
-const copy = (authoring) => ({
+const previous = await authoringBeforeThigh(context);
+const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
     sections: Object.fromEntries(
-      api.contentTabs.map((t) => [t, authoring.bodyContent(s, t)]),
+      api.contentTabs.map((t) => [t, a.bodyContent(s, t)]),
     ),
   })),
   shoulder: api.structures,
@@ -45,38 +44,23 @@ same(
 same(
   curriculumHash(await copyBeforeShoulderArmCurriculum(context)),
   baseline.copyAndRecipeHash,
-  'All three transitions preserve original baseline',
+  'Four pinned transitions preserve original baseline',
 );
-same(api.handMuscleLessons.length, 10);
-const ids = api.handMuscleLessons.flatMap((l) => l.fmaIds);
-same(ids.length, 20);
-same(new Set(ids).size, 20);
+same(api.thighMuscleLessons.length, 27);
+const ids = api.thighMuscleLessons.flatMap((l) => l.fmaIds);
+same(ids.length, 54);
+same(new Set(ids).size, 54);
 const compare = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 same([...ids].sort(compare), before.entries.map((s) => s.fmaId).sort(compare));
 same(
-  api.handMuscleLessons.filter((l) => l.representation === 'head').length,
+  api.thighMuscleLessons.filter((l) => l.representation === 'head').length,
   2,
 );
 same(
-  api.handMuscleLessons.filter((l) => l.representation === 'group').length,
-  3,
+  api.thighMuscleLessons.filter((l) => l.representation === 'portion').length,
+  1,
 );
-same(
-  before.entries.filter((e) => e.sections.anatomy.readiness === 'identity-only')
-    .length,
-  20,
-);
-same(
-  before.entries.filter((e) => e.sections.function.readiness === 'draft')
-    .length,
-  6,
-);
-same(
-  before.entries.filter((e) => e.sections.function.readiness === 'pending')
-    .length,
-  14,
-);
-for (const l of api.handMuscleLessons) {
+for (const l of api.thighMuscleLessons) {
   same(l.fmaIds.length, 2);
   for (const field of ['origin', 'insertion', 'action', 'motorSupply'])
     check(l[field].trim().length > 8);
@@ -85,14 +69,10 @@ for (const l of api.handMuscleLessons) {
   for (const fma of l.fmaIds) {
     const s = catalog.structures.find((s) => s.fmaId === fma);
     check(s);
-    same(
-      s.sources.length,
-      1,
-      'Retain source component count; a group is not separate slips',
-    );
+    same(s.sources.length, 1);
     const exported = body.find((r) => r.id === s.id);
     for (const t of api.contentTabs) {
-      const lesson = api.handMuscleLesson(s, t);
+      const lesson = api.thighMuscleLesson(s, t);
       if (!before.tabs.includes(t)) {
         same(lesson, undefined);
         continue;
@@ -111,10 +91,10 @@ for (const l of api.handMuscleLessons) {
       same(lesson.citations, l.references);
       if (t === 'anatomy') {
         check(lesson.bullets.some((b) => b.includes(s.fmaId)));
-        if (l.representation === 'group')
-          check(lesson.body.includes('not individually numbered'));
         if (l.representation === 'head')
           check(lesson.body.includes('not the whole muscle'));
+        if (l.representation === 'portion')
+          check(lesson.body.includes('variably separate'));
       } else check(lesson.bullets[1].includes('not rendered'));
       const unchanged = structuredClone(lesson);
       lesson.citations.push('mutation');
@@ -132,50 +112,64 @@ for (const l of api.handMuscleLessons) {
 for (const s of catalog.structures)
   if (!ids.includes(s.fmaId))
     for (const t of api.contentTabs)
-      same(api.handMuscleLesson(s, t), undefined);
+      same(api.thighMuscleLesson(s, t), undefined);
 const entry = (fma) => catalog.structures.find((s) => s.fmaId === fma);
-const fixture = entry('FMA37396');
+const fixture = entry('FMA22452');
 for (const change of [
   { system: 'nerves' },
-  { regions: ['forearm'] },
+  { regions: ['hand'] },
   { fmaId: 'FMA_UNKNOWN' },
 ])
-  same(api.handMuscleLesson({ ...fixture, ...change }, 'anatomy'), undefined);
-const lesson = (key) => api.handMuscleLessons.find((l) => l.key === key);
-same(lesson('adductor-pollicis-oblique-head').fmaIds, ['FMA46121', 'FMA46122']);
-same(lesson('adductor-pollicis-transverse-head').fmaIds, [
-  'FMA46123',
-  'FMA46124',
-]);
-check(lesson('adductor-pollicis-oblique-head').origin.includes('bases'));
-check(lesson('adductor-pollicis-transverse-head').origin.includes('shaft'));
-check(lesson('opponens-digiti-minimi').insertion.includes('fifth metacarpal'));
-check(lesson('opponens-pollicis').insertion.includes('first metacarpal'));
-check(
-  lesson('lumbrical-group').motorSupply.includes(
-    'median nerve for lumbricals 1–2',
-  ),
-);
-check(
-  lesson('lumbrical-group').motorSupply.includes('deep ulnar branch for 3–4'),
-);
-check(
-  lesson('palmar-interosseous-group').caution.includes(
-    'Neither its presence nor an individual muscle count',
-  ),
-);
-check(lesson('dorsal-interosseous-group').action.includes('fingers 2–4'));
+  same(api.thighMuscleLesson({ ...fixture, ...change }, 'anatomy'), undefined);
+const lesson = (key) => api.thighMuscleLessons.find((l) => l.key === key);
 same(
-  api.handMuscleLesson(
-    { ...fixture, fmaId: 'FMA37388', name: 'Flexor pollicis brevis' },
-    'anatomy',
-  ),
-  undefined,
-  'Missing/held thumb source is not admitted by name',
+  lesson('adductor-brevis').fmaIds,
+  ['FMA22452', 'FMA22454'],
+  'Left identity is not right + 1',
 );
+same(lesson('biceps-femoris-short-head').fmaIds, ['FMA45891', 'FMA45892']);
+check(
+  lesson('biceps-femoris-short-head').action.includes(
+    'does not cross or extend the hip',
+  ),
+);
+check(
+  lesson('biceps-femoris-short-head').motorSupply.includes('Common fibular'),
+);
+check(lesson('biceps-femoris-long-head').motorSupply.startsWith('Tibial'));
+check(lesson('adductor-magnus').motorSupply.includes('overlapping supply'));
+check(lesson('adductor-minimus').caution.includes('variable separation'));
+same(lesson('gemellus-superior').motorSupply, 'Nerve to obturator internus.');
+same(lesson('gemellus-inferior').motorSupply, 'Nerve to quadratus femoris.');
+check(
+  lesson('obturator-internus').motorSupply.includes('not the obturator nerve'),
+);
+check(lesson('iliacus').motorSupply === 'Femoral nerve.');
+check(
+  lesson('psoas-major').motorSupply.includes(
+    'Direct branches of lumbar anterior rami',
+  ),
+);
+check(lesson('pectineus').motorSupply.includes('additional obturator supply'));
+for (const key of [
+  'vastus-medialis',
+  'vastus-lateralis',
+  'vastus-intermedius',
+]) {
+  check(lesson(key).action.includes('does not cross the hip'));
+  check(lesson(key).insertion.includes('patellar ligament'));
+}
+check(lesson('rectus-femoris').action.includes('crosses both joints'));
+check(lesson('tensor-fasciae-latae').caution.includes('fascial continuation'));
+check(lesson('gluteus-minimus').origin.includes('anterior and inferior'));
+check(lesson('gluteus-medius').origin.includes('anterior and posterior'));
+check(lesson('semimembranosus').insertion.includes('medial tibial condyle'));
+for (const key of ['sartorius', 'gracilis', 'semitendinosus'])
+  check(lesson(key).insertion.includes('pes anserinus'));
 const negatives = [
   [fixture, 'function', 'body'],
   [fixture, 'anatomy', 'readiness'],
+  [entry('FMA37396'), 'function', 'body'],
   [entry('FMA38479'), 'function', 'body'],
   [entry('FMA13398'), 'function', 'body'],
   [fixture, 'ct', 'body'],
@@ -203,36 +197,33 @@ for (const [s, t, field] of negatives) {
   );
   checks++;
 }
-// Keep this milestone's historical counts; thigh tests check current totals.
-const handMilestoneApi = await authoringBeforeThigh(context);
 const counts = (t) =>
   Object.fromEntries(
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter(
-          (s) => handMilestoneApi.bodyLesson(s, t).readiness === r,
-        ).length,
+        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
+          .length,
       ],
     ),
   );
 same(counts('anatomy'), {
-  draft: 289,
-  'identity-only': 733,
+  draft: 343,
+  'identity-only': 679,
   pending: 0,
   'generated-identification': 0,
 });
 same(counts('function'), {
-  draft: 345,
+  draft: 399,
   'identity-only': 146,
-  pending: 531,
+  pending: 477,
   'generated-identification': 0,
 });
 same(
   catalog.structures.filter(
     (s) =>
       s.system === 'muscles' &&
-      s.regions.includes('hand') &&
+      s.regions.includes('thigh') &&
       api.bodyLesson(s, 'function').readiness !== 'draft',
   ).length,
   0,
@@ -240,16 +231,11 @@ same(
 const report = {
   passed: true,
   checks,
-  lessonDefinitions: 10,
-  bodyRepresentations: 20,
-  authoredSections: 40,
-  newlyDraftSections: 34,
-  enrichedPriorDrafts: 6,
-  combinedPinnedCurriculumSections: 188,
-  bodyReadinessAtHandMilestone: {
-    anatomy: counts('anatomy'),
-    function: counts('function'),
-  },
+  lessonDefinitions: 27,
+  bodyRepresentations: 54,
+  authoredSections: 108,
+  combinedPinnedCurriculumSections: 296,
+  bodyReadiness: { anatomy: counts('anatomy'), function: counts('function') },
   negativeCases: negatives.length,
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
@@ -257,10 +243,10 @@ const report = {
   scanContentAdded: false,
   browserTesting: false,
   limitations:
-    'Software evidence for exact identities, groups, source-bound display/export, preservation and rejection cases; not anatomical accuracy, tendon-slip segmentation, variant/nerve mapping or clinical/device acceptance.',
+    'Software checks for exact identities, heads/portions, display/export and preservation. Not anatomical accuracy, attachment/nerve territory mapping, medical completeness or clinical/device acceptance.',
 };
 await writeFile(
-  new URL('docs/hand-curriculum-validation.json', contentRoot),
+  new URL('docs/thigh-curriculum-validation.json', contentRoot),
   JSON.stringify(report, null, 2) + '\n',
 );
 console.log(JSON.stringify(report, null, 2));
