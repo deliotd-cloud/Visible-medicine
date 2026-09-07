@@ -25,6 +25,7 @@ import { thighMuscleLesson } from '../lib/thigh-curriculum';
 import { legMuscleLesson } from '../lib/leg-curriculum';
 import { footMuscleLesson } from '../lib/foot-curriculum';
 import { pelvicMuscleLesson } from '../lib/pelvic-curriculum';
+import { orbitalMuscleLesson } from '../lib/orbital-curriculum';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -87,6 +88,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (footMuscle) return footMuscle;
   const pelvicMuscle = pelvicMuscleLesson(s, tab);
   if (pelvicMuscle) return pelvicMuscle;
+  const orbitalMuscle = orbitalMuscleLesson(s, tab);
+  if (orbitalMuscle) return orbitalMuscle;
   const axial =
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??

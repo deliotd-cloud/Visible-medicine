@@ -1,5 +1,7 @@
 # Third-party notices
 
+The orbital curriculum adds brief original teaching with factual references to StatPearls, Purves/Sinauer and Clinical Methods, not redistributed reference prose, tables or illustrations. Their publication rights are not treated as commercial asset licences. No mesh, font, texture, package or paid service is added. Original text/code retain existing MIT terms; DBCLS BodyParts3D v4 source-index evidence retains CC BY 4.0 attribution/change obligations. See `../docs/ORBITAL_CURRICULUM.md`.
+
 The pelvic curriculum adds original brief teaching and source-category explanations; no mesh or dependency changes. Medical pages are consulted for facts, not copied assets; no Kenhub/Texas Tech illustrations/tables or StatPearls NC-ND prose are redistributed. BodyParts3D v4 index-derived evidence retains DBCLS attribution and CC BY 4.0 obligations, separate from MIT application text/code. See `../docs/PELVIC_CURRICULUM.md` for references and limits.
 
 The content-contract milestone adds original code and a draft teaching/source-binding export. Geometry-derived component metadata and baseline evidence retain BodyParts3D CC BY 4.0 attribution/change obligations; the original teaching text retains its existing MIT terms and does not relicense anatomy. The offline validator reuses already locked Ajv 8.20.0 (MIT); no dependency, font, texture, mesh, paid API or patient/private review data is added. See `../docs/CONTENT_CONTRACT.md`.

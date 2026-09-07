@@ -33,8 +33,8 @@ These are counts among the **1,022 body representations**, not unique lessons, a
 
 | Body topic | Specific or source-group draft | Generic identity/disclaimer | Explicitly pending | Generated identification prompt |
 | --- | ---: | ---: | ---: | ---: |
-| Anatomy | 410 | 612 | 0 | 0 |
-| Function | 465 | 146 | 411 | 0 |
+| Anatomy | 424 | 598 | 0 | 0 |
+| Function | 479 | 146 | 397 | 0 |
 | CT | 11 | 0 | 1,011 | 0 |
 | MRI | 11 | 0 | 1,011 | 0 |
 | Ultrasound | 11 | 0 | 1,011 | 0 |
@@ -69,7 +69,7 @@ Retain the source-level decisions and exact held IDs in `GAP_FILLING.md`, `SOURC
 ## Ordered next actions
 
 1. **Completed locally — content ingestion contract.** Multi-part source bindings, representation scopes and explicit topic readiness now have a v2 schema, actual shoulder export and whole-body/source/rejection checks. See `CONTENT_CONTRACT.md`. Clinical reviews, canonical IDs, displayed copy and private data are unchanged. Production curriculum storage and automatic legacy migration are not claimed.
-2. **Continue bounded regional teaching.** Shoulder/arm, forearm, hand, hip/thigh, lower-leg, foot and coccygeus drafts have exact before/after preservation checks. The [pelvic clarification](PELVIC_CURRICULUM.md) leaves ambiguous perineal Function pending. Next continue head/neck and trunk basic teaching, then source-cited clinical/pathology, modality teaching and reviewed questions in existing panels. Keep unresolved identity/function explicit and require specialist acceptance. Do not replace unknown nerve geometry with guessed routes or fill scan tabs with synthetic findings.
+2. **Continue bounded regional teaching.** Shoulder/arm, forearm, hand, hip/thigh, lower-leg, foot, coccygeus and [orbital drafts](ORBITAL_CURRICULUM.md) have exact before/after preservation checks. The pelvic source-category Function remains pending. Next cover the 41 remaining head/neck muscle Function entries and trunk basics, then source-cited clinical/pathology, modality teaching and reviewed questions in existing panels. Keep unresolved identity/function explicit and require specialist acceptance. Do not replace unknown nerve geometry with guessed routes or fill scan tabs with synthetic findings.
 3. **Accept the current UI on actual devices when authorized/available.** Use the matrix below before calling navigation, labels or explosion visually complete. Fix observed defects rather than add speculative controls. A browser-testing request is required for this environment's browser workflow; no browser-only preview is started in background audit work.
 4. **Resolve source, specialist and imaging inputs.** Supply rights-cleared compatible geometry or qualified adjudication for held candidates; obtain revision-bound anatomical/editorial review. Connect the user's real imaging function only after its interface, scope and data/registration evidence exist.
 5. **Deliver the exact accepted revision.** Restore authorized source-service/GitHub access, then publish privately and update only the existing anatomy backup branch. Main-website integration needs a chosen route/embed and access policy; no sharing change is assumed.

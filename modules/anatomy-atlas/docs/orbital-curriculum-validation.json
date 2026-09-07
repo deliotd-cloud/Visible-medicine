@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "checks": 8686,
+  "lessonDefinitions": 7,
+  "bodyRepresentations": 14,
+  "authoredSections": 28,
+  "combinedPinnedCurriculumSections": 458,
+  "bodyReadiness": {
+    "anatomy": {
+      "draft": 424,
+      "identity-only": 598,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "function": {
+      "draft": 479,
+      "identity-only": 146,
+      "pending": 397,
+      "generated-identification": 0
+    }
+  },
+  "negativeCases": 11,
+  "sourceIndexChecks": 14,
+  "pendingHeadNeckMuscleFunctions": 41,
+  "unrelatedCopyAndRecipesPreserved": true,
+  "sourceGeometryChanged": false,
+  "clinicalApproval": false,
+  "scanContentAdded": false,
+  "browserTesting": false,
+  "limitations": "Software and optional source-index checks; not tendon/pulley validation, measured attachments, gaze dynamics, complete orbital anatomy or clinical/device acceptance."
+}

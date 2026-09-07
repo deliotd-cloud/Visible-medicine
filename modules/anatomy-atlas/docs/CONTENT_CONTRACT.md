@@ -2,6 +2,8 @@
 
 ## Delivered scope
 
+**Current orbital extension:** [28 new basic drafts](ORBITAL_CURRICULUM.md) cover 14 existing orbital-muscle entries. Body totals: Anatomy 424 draft / 598 identity-only; Function 479 draft / 146 identity-only / 397 pending. `authoringBeforeOrbital` verifies/restores its exact topics before the seven prior offline projections. All 458 topic edits remain pinned to the original baseline; runtime/export stay current. Older reports/paragraphs retain milestone counts. No source/schema/review migration occurs.
+
 **Current pelvic extension:** [six explicit topic edits](PELVIC_CURRICULUM.md) add five drafts and one still-pending Function clarification. Body totals: Anatomy 410 draft / 612 identity-only; Function 465 draft / 146 identity-only / 411 pending. `authoringBeforePelvic` verifies/restores these sections before the six earlier offline projections. All 430 topic edits remain pinned to the original baseline; runtime/export stay current. Historical paragraphs and reports retain their milestone counts. No source/schema/review migration occurs.
 
 The content-ingestion format now represents every selectable source part and the actual readiness of each teaching topic. The committed `content/exports/shoulder.v2.json` is a real nine-record export of the current pilot, not an invented database example. The same exporter is checked against all 1,022 body records and all 87 existing GLBs. No new anatomy, teaching prose, clinical approval, scan, database table, endpoint or UI control is introduced.

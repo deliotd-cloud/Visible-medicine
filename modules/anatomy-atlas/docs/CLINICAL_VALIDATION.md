@@ -4,6 +4,10 @@
 
 The [requirement audit](REQUIREMENT_AUDIT.md) consolidates current coverage, actual teaching gaps and the next device-acceptance matrix. Current source contains 1,022 body representations, 138 stages and 120 focuses; counts in milestone-specific gates below are historical. Every unresolved gate remains relevant. Current local layout/explosion/recovery changes are not covered by the earlier browser session, and no clinical approval is created by source or software checks.
 
+## Orbital teaching gates
+
+Review [ORBITAL_CURRICULUM.md](ORBITAL_CURRICULUM.md): 14 exact source entries, typical versus actual scleral/lid attachments, superior-oblique reflection/pulley extent, levator versus superior-tarsal identity, CN III divisions/IV/VI, torsion and gaze-dependent action. No measured footprint, motion/diagnostic simulation, held tendon admission or clinical acceptance is supplied.
+
 ## Pelvic teaching gates
 
 Review the [pelvic drafts and category evidence](PELVIC_CURRICULUM.md): coccygeus attachments, segmental innervation differences and multiple-file anatomy; adjudicate FMA19728's shared source mapping to external anal sphincter before specific Function authoring. The category explanation is not validated muscle/layer identification. Existing pelvic-source holds remain.

@@ -6,6 +6,7 @@ import {
   readContentJson,
 } from './content-contract-tools.mjs';
 import { authoringBeforePelvic } from './pelvic-curriculum-transition.mjs';
+import { authoringBeforeOrbital } from './orbital-curriculum-transition.mjs';
 import {
   curriculumHash,
   copyBeforeShoulderArmCurriculum,
@@ -188,13 +189,15 @@ for (const [s, t, field] of negatives) {
   );
   checks++;
 }
+const pelvicMilestoneApi = await authoringBeforeOrbital(context);
 const counts = (t) =>
   Object.fromEntries(
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
-          .length,
+        catalog.structures.filter(
+          (s) => pelvicMilestoneApi.bodyLesson(s, t).readiness === r,
+        ).length,
       ],
     ),
   );
@@ -229,7 +232,10 @@ const report = {
   newDraftSections: 5,
   pendingFunctionClarifications: 1,
   combinedPinnedCurriculumSections: 430,
-  bodyReadiness: { anatomy: counts('anatomy'), function: counts('function') },
+  bodyReadinessAtPelvicMilestone: {
+    anatomy: counts('anatomy'),
+    function: counts('function'),
+  },
   negativeCases: negatives.length,
   sourceIndexChecks,
   unrelatedCopyAndRecipesPreserved: true,

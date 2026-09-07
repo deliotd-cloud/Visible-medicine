@@ -2,7 +2,9 @@
 
 ## Current scope and remaining work
 
-The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: 411 Function sections remain pending and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: 397 Function sections remain pending and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+
+The [orbital muscle update](docs/ORBITAL_CURRICULUM.md) adds 28 source-cited eye/lid Anatomy/Function drafts with gaze-dependent explanations in existing panels. Run `npm run orbital-curriculum:test` for exact identity and preservation checks; this is not a gaze simulation or clinical validation.
 
 The [pelvic teaching update](docs/PELVIC_CURRICULUM.md) adds coccygeus drafts and clarifies an ambiguous perineal source category without claiming its function is known. Existing panels stay unchanged; run `npm run pelvic-curriculum:test` for bounded-edit checks.
 
