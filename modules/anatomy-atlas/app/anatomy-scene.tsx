@@ -28,6 +28,7 @@ import type { StudyCamera } from '@/lib/study-views';
 import { Button } from '@/components/ui/button';
 import { SceneRecovery, RendererMonitor } from './scene-recovery';
 import type { RendererHealth } from '@/lib/renderer-health';
+import { SceneLabel, SceneLabelLayer } from './scene-label-layer';
 
 const noPlanes: THREE.Plane[] = [];
 const sectionFrame = new THREE.Box3();
@@ -82,37 +83,35 @@ const anchors: Record<string, [number, number, number]> = {
   deltoid: [-3.12, 0.22, 0.1],
   'biceps-long-head': [-2.5, -1.5, 0.83],
 };
-const labelEnds: Record<
-  CameraView,
-  Record<string, [number, number, number]>
-> = {
-  posterior: {
-    scapula: [-0.05, -1.9, -2],
-    humerus: [-3.65, -2.6, -0.5],
-    clavicle: [1.1, 2.45, 0.5],
-    supraspinatus: [0.8, 1.75, -2],
-    infraspinatus: [1.05, 0.3, -2],
-    'teres-minor': [-2.85, -0.5, -1.7],
-    deltoid: [-3.6, 0.8, -1.2],
-  },
-  anterior: {
-    scapula: [0.95, -1.8, 0.2],
-    humerus: [-3.6, -2.55, 0.6],
-    clavicle: [0.85, 2.45, 1.5],
-    subscapularis: [1.15, 0.25, 1.6],
-    deltoid: [-3.65, 0.8, 1.2],
-    'biceps-long-head': [-3.65, -0.85, 1.25],
-  },
-  lateral: {
-    humerus: [-3.8, -2.7, -0.2],
-    clavicle: [-2.9, 2.6, 1.5],
-    supraspinatus: [-3, 2.15, -1.2],
-    infraspinatus: [-3.4, 0.5, -2.5],
-    'teres-minor': [-3.4, -1.1, -2.2],
-    subscapularis: [-3, 0.2, 1.8],
-    deltoid: [-4, 0.5, 0.5],
-    'biceps-long-head': [-3.6, -1.8, 1.4],
-  },
+// Preserve the existing landmark choices, but not their old fixed positions.
+const labelPresets: Record<CameraView, string[]> = {
+  posterior: [
+    'scapula',
+    'humerus',
+    'clavicle',
+    'supraspinatus',
+    'infraspinatus',
+    'teres-minor',
+    'deltoid',
+  ],
+  anterior: [
+    'scapula',
+    'humerus',
+    'clavicle',
+    'subscapularis',
+    'deltoid',
+    'biceps-long-head',
+  ],
+  lateral: [
+    'humerus',
+    'clavicle',
+    'supraspinatus',
+    'infraspinatus',
+    'teres-minor',
+    'subscapularis',
+    'deltoid',
+    'biceps-long-head',
+  ],
 };
 
 function isVisible(structure: AnatomyStructure, props: SceneProps) {
@@ -304,7 +303,7 @@ function Model(props: SceneProps) {
           selected,
         );
         const anchor = surfaceAnchors[slug],
-          end = labelEnds[props.view][slug];
+          labelled = labelPresets[props.view].includes(slug) || selected;
         const select = (event: ThreeEvent<MouseEvent>) => {
           event.stopPropagation();
           props.onSelect(structure.id);
@@ -352,36 +351,23 @@ function Model(props: SceneProps) {
                 ))}
               </group>
               {props.showLabels &&
+                !props.exam &&
                 !faded &&
                 opacity >= 0.2 &&
                 anchor &&
-                end &&
+                labelled &&
                 pointRetained(
                   new THREE.Vector3(...anchor).add(displacement),
                   cuts,
                 ) && (
-                  <group>
-                    <Line
-                      points={[anchor, end]}
-                      color={selected ? '#84643b' : '#7d8077'}
-                      lineWidth={0.8}
-                      transparent
-                      opacity={0.72}
-                    />
-                    <mesh position={anchor} raycast={() => null}>
-                      <sphereGeometry args={[0.028, 8, 8]} />
-                      <meshBasicMaterial color="#6d7168" />
-                    </mesh>
-                    <Html center position={end} zIndexRange={[3, 1]}>
-                      <button
-                        type="button"
-                        className={`scene-label${selected ? ' selected' : ''}`}
-                        onClick={() => props.onSelect(structure.id)}
-                      >
-                        {structure.name}
-                      </button>
-                    </Html>
-                  </group>
+                  <SceneLabel
+                    id={structure.id}
+                    name={structure.name}
+                    selected={selected}
+                    position={anchor}
+                    priority={labelPresets[props.view].indexOf(slug)}
+                    onSelect={props.onSelect}
+                  />
                 )}
             </group>
           </group>
@@ -507,19 +493,21 @@ export function AnatomyScene(props: SceneProps) {
             intensity={0.5}
             color="#eef5ff"
           />
-          <ModelBoundary onModelReady={props.onModelReady}>
-            <Suspense
-              fallback={
-                <Html center>
-                  <div className="model-loading">
-                    Loading anatomical surfaces…
-                  </div>
-                </Html>
-              }
-            >
-              <Model {...props} />
-            </Suspense>
-          </ModelBoundary>
+          <SceneLabelLayer>
+            <ModelBoundary onModelReady={props.onModelReady}>
+              <Suspense
+                fallback={
+                  <Html center>
+                    <div className="model-loading">
+                      Loading anatomical surfaces…
+                    </div>
+                  </Html>
+                }
+              >
+                <Model {...props} />
+              </Suspense>
+            </ModelBoundary>
+          </SceneLabelLayer>
           {props.syncPlane && (
             <group position={[-0.6, 0.2, 0]}>
               <mesh rotation={[-Math.PI / 2, 0, 0]}>

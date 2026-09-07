@@ -200,6 +200,8 @@ The model requires no purchase, royalty, per-user fee, subscription or paid API.
 
 ## Architecture and full-body extension
 
+Labels follow their structure's **current screen side**, including after rotation and explosion, with compact independently spaced columns. See [screen-side labels](docs/SCREEN_LABELS.md); run `npm run labels:test` for projection and layout regressions.
+
 See `docs/ARCHITECTURE.md`. Product-owned `vm:anatomy:{body-region}:{subregion}:{laterality}:{category}:{slug}` IDs bind content to named GLB meshes. `app/anatomy-data.ts` is the current typed authoring source; `content/schema/anatomy-structure.schema.json` defines the richer database ingestion contract. The source manifest records FMA cross-references without redistributing the FMA ontology. Future terminology releases need their own licence review.
 
 The small shoulder bundle loads on demand. Further regions should be separately versioned bundles sharing the same source coordinate frame; individual meshes must not be independently centred or scaled. Content review and model review are separate release gates.

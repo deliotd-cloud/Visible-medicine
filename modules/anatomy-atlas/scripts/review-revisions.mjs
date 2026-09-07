@@ -19,6 +19,9 @@ if (hash(model) !== manifest.sha256)
   throw new Error('Shoulder mesh hash differs from its provenance manifest.');
 const displayPaths = [
   'app/anatomy-scene.tsx',
+  'app/scene-label-layer.tsx',
+  'app/scene-label-layer.css',
+  'lib/screen-label-layout.ts',
   'app/anatomy-canvas.tsx',
   'lib/anatomy-root-session.ts',
   'app/scene-recovery.tsx',

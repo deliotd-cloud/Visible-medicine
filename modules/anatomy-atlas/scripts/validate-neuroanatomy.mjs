@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { build } from 'esbuild';
+import { build } from './workspace-test-build.mjs';
 import { fileURLToPath } from 'node:url';
 import { neuroDefinitions } from './neuro-selections.mjs';
 import { applyJunctionTransition } from './junction-transition.mjs';
@@ -230,28 +230,8 @@ for (const side of ['both', 'left', 'right']) {
   );
 }
 const known = additions.map((s) => s.id);
-const labelFixture = { min: [-2, -3, -4], max: [2, 3, 4] };
-for (const [view, horizontalAxis, sign] of [
-  ['anterior', 0, 1],
-  ['posterior', 0, -1],
-  ['right', 2, 1],
-  ['left', 2, -1],
-  ['superior', 0, 1],
-  ['inferior', 0, 1],
-]) {
-  const a = api.sceneLabelEndpoint(labelFixture, view, 0, 2);
-  const b = api.sceneLabelEndpoint(labelFixture, view, 1, 2);
-  check(
-    a[horizontalAxis] * sign < 0 && b[horizontalAxis] * sign > 0,
-    'Label columns follow the preset screen-right direction',
-  );
-}
-for (const count of [0, -1, 1.5, 9, Infinity, NaN]) {
-  checks++;
-  assert.throws(() =>
-    api.sceneLabelEndpoint(additions[0].bounds, 'anterior', 0, count),
-  );
-}
+// Live-camera projection and measured screen-side packing are verified by
+// labels:test. This suite retains the neuro landmark eligibility contract.
 same(
   api.sceneLabelIds(known[0], [known[0], known[1], known[2]], known, false),
   known.slice(0, 3),
@@ -259,41 +239,6 @@ same(
 same(api.sceneLabelIds(known[0], known, known, true), [known[0]]);
 same(api.sceneLabelIds('absent', known, known, false), known.slice(0, 8));
 same(api.sceneLabelIds(known[0], known, [], false), []);
-for (const s of catalog.structures)
-  for (const view of [
-    'anterior',
-    'posterior',
-    'left',
-    'right',
-    'superior',
-    'inferior',
-  ]) {
-    for (const count of [1, 2, 5, 8]) {
-      const endpoints = [];
-      for (let index = 0; index < count; index++) {
-        const point = api.sceneLabelEndpoint(s.bounds, view, index, count);
-        check(point.every(Number.isFinite));
-        const offset = [1.4, -2.7, 3.8];
-        const local = api.sceneLabelEndpoint(
-          s.bounds,
-          view,
-          index,
-          count,
-          offset,
-        );
-        check(
-          local.every((v, k) => Math.abs(v + offset[k] - point[k]) < 1e-12),
-          'Explode translation not applied twice to label columns',
-        );
-        endpoints.push(point);
-      }
-      same(
-        new Set(endpoints.map((p) => p.join(','))).size,
-        count,
-        'Distinct column positions for every preset',
-      );
-    }
-  }
 const result = {
   passed: true,
   checks,

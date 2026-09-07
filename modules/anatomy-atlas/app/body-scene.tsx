@@ -9,7 +9,7 @@ import {
 } from 'react';
 import { type ThreeEvent } from '@react-three/fiber';
 import { AnatomyCanvas as Canvas } from './anatomy-canvas';
-import { Html, Line, useGLTF } from '@react-three/drei';
+import { useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 import { FittedCamera } from './fitted-camera';
 import { translatedBox } from '@/lib/explode-layout.mjs';
@@ -30,7 +30,8 @@ import { sectionPlanes, pointRetained } from '@/lib/inspection-geometry';
 import { systemOpacity, type InspectionState } from '@/lib/inspection-state';
 import type { StudyCamera } from '@/lib/study-views';
 import { neuroGroupFor } from '@/lib/neuroanatomy';
-import { sceneLabelEndpoint, sceneLabelIds } from '@/lib/scene-labels';
+import { sceneLabelIds } from '@/lib/scene-labels';
+import { SceneLabel, SceneLabelLayer } from './scene-label-layer';
 import { vesselColor } from '@/lib/anatomy-vessels';
 import { renderedAnatomyStructures } from '@/lib/anatomy-load-state';
 import { SceneRecovery, RendererMonitor } from './scene-recovery';
@@ -98,7 +99,6 @@ function Bundle({
   props,
   offsets,
   frame,
-  labelBounds,
   labelIds,
   renderedCount,
 }: {
@@ -107,7 +107,6 @@ function Bundle({
   props: Props;
   offsets: Map<string, THREE.Vector3>;
   frame: THREE.Box3;
-  labelBounds: { min: number[]; max: number[] };
   labelIds: string[];
   renderedCount: number;
 }) {
@@ -142,16 +141,6 @@ function Bundle({
           props.onSelect(structure.id);
         };
         const labelIndex = labelIds.indexOf(structure.id);
-        const end =
-          labelIndex >= 0
-            ? sceneLabelEndpoint(
-                labelBounds,
-                props.view,
-                labelIndex,
-                labelIds.length,
-                position.toArray(),
-              )
-            : structure.anchor;
         return (
           <group key={structure.id}>
             {props.showOrigins &&
@@ -203,22 +192,14 @@ function Bundle({
                   clippingPlanes,
                 ) &&
                 labelIndex >= 0 && (
-                  <group>
-                    <Line
-                      points={[structure.anchor, end]}
-                      color="#647668"
-                      lineWidth={1}
-                    />
-                    <Html center position={end} zIndexRange={[3, 1]}>
-                      <button
-                        type="button"
-                        onClick={() => props.onSelect(structure.id)}
-                        className={`scene-label ${selected ? 'selected' : ''}`}
-                      >
-                        {structure.name}
-                      </button>
-                    </Html>
-                  </group>
+                  <SceneLabel
+                    id={structure.id}
+                    name={structure.name}
+                    selected={selected}
+                    position={structure.anchor}
+                    priority={labelIndex}
+                    onSelect={props.onSelect}
+                  />
                 )}
             </group>
           </group>
@@ -334,7 +315,6 @@ export function BodyScene(props: Props) {
     rendered.filter((s) => !props.hiddenIds.includes(s.id)).map((s) => s.id),
     props.focus,
   );
-  const labelBounds = { min: bounds.min.toArray(), max: bounds.max.toArray() };
   const orthographic = props.plate || layout === 'tray';
   return (
     <SceneRecovery
@@ -366,26 +346,27 @@ export function BodyScene(props: Props) {
           <hemisphereLight args={['#fffef8', '#a38b70', 1.1]} />
           <directionalLight position={[8, 15, 10]} intensity={2.3} />
           <directionalLight position={[-8, 6, -8]} intensity={1.8} />
-          {bundles.map((bundle) => (
-            <AssetBoundary
-              key={`${bundle.id}:${props.retries?.[bundle.id] ?? 0}`}
-              id={bundle.id}
-              onFailure={props.onFailure}
-            >
-              <Suspense fallback={null}>
-                <Bundle
-                  bundle={bundle}
-                  items={rendered.filter((s) => s.bundle === bundle.id)}
-                  props={props}
-                  offsets={offsets}
-                  frame={frame}
-                  labelBounds={labelBounds}
-                  labelIds={labelIds}
-                  renderedCount={rendered.length}
-                />
-              </Suspense>
-            </AssetBoundary>
-          ))}
+          <SceneLabelLayer>
+            {bundles.map((bundle) => (
+              <AssetBoundary
+                key={`${bundle.id}:${props.retries?.[bundle.id] ?? 0}`}
+                id={bundle.id}
+                onFailure={props.onFailure}
+              >
+                <Suspense fallback={null}>
+                  <Bundle
+                    bundle={bundle}
+                    items={rendered.filter((s) => s.bundle === bundle.id)}
+                    props={props}
+                    offsets={offsets}
+                    frame={frame}
+                    labelIds={labelIds}
+                    renderedCount={rendered.length}
+                  />
+                </Suspense>
+              </AssetBoundary>
+            ))}
+          </SceneLabelLayer>
           <FittedCamera
             bounds={bounds}
             direction={

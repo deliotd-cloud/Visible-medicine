@@ -56,6 +56,8 @@ Four exact IS-A source identities enter one additive bundle through `forearm-vas
 
 ## Whole-body and regional extension
 
+Screen-space labels are shared across all viewers through `scene-label-layer.tsx`. They follow actual projected anchors, with independently packed left/right columns and no anatomical relabelling. See [screen-side labels](SCREEN_LABELS.md) for transform ownership, eligibility, overflow policy and remaining visual acceptance checks.
+
 Shared deep-inspection state, material clipping and hit testing live in `lib/inspection-state.ts` and `lib/inspection-geometry.ts`; `app/inspection-controls.tsx` drives both viewer families. Plane positions stay in the assembled source frame and translate with exploded structures. `lib/anatomy-practice.ts` samples loaded, distinct landmarks for 5/10/20-question regional/whole-body sessions. See [deep inspection](DEEP_INSPECTION.md) for reset semantics, orthographic controls, review fingerprinting, verification and non-radiological limits.
 
 The root route now renders `body-explorer.tsx`; `/regions/[region]` instantiates the same explorer for a bounded region. The existing shoulder interface lives at `/shoulder`, in `shoulder-explorer.tsx`, preserving its mesh and study/exam behaviour.

@@ -257,25 +257,17 @@ function verifyTray(items, origin, view, frame, exhaustive = false) {
             'Section follows the source-local surface',
           );
         }
-        const labelBounds = {
-          min: bounds.min.toArray(),
-          max: bounds.max.toArray(),
-        };
-        const end = a.sceneLabelEndpoint(
-          labelBounds,
-          view,
-          0,
-          1,
-          offset.toArray(),
+        // Labels now inherit the displaced parent instead of subtracting an
+        // offset from a fixed column. Projection/column tests live in labels:test.
+        const parent = new a.Group(),
+          anchor = new a.Group();
+        parent.position.copy(offset);
+        anchor.position.fromArray(item.anchor);
+        parent.add(anchor);
+        vectorClose(
+          anchor.getWorldPosition(new a.Vector3()).toArray(),
+          new a.Vector3(...item.anchor).add(offset).toArray(),
         );
-        const worldEnd = a.sceneLabelEndpoint(
-          labelBounds,
-          view,
-          0,
-          1,
-          [0, 0, 0],
-        );
-        vectorClose(new a.Vector3(...end).add(offset).toArray(), worldEnd);
       }
     }
   layouts++;

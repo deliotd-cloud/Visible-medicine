@@ -1,16 +1,16 @@
 # Anatomy atlas backup — 7 September 2026
 
-**Local checkpoint only:** the graphics-startup/frame-recovery update below has not yet been pushed to GitHub or published. The current session cannot reach either Git host, and the connected GitHub account cannot access this private repository. The last verified remote backup remains `771f48c17c5f7d7b8d1454fefb1490d9a3c0b3f4`; the last published Site source remains `26827c8961985b72422146c4faf56e98ca34313b` (version 38). Restore access and recheck remote heads/privacy before syncing; do not force-push.
+**Local checkpoint only:** the screen-side label correction and preceding graphics recovery update have not yet been pushed to GitHub or published. The current session still cannot connect to the Site source Git host; GitHub access was unavailable at the preceding checkpoint. The last verified remote backup remains `771f48c17c5f7d7b8d1454fefb1490d9a3c0b3f4`; the last published Site source remains `26827c8961985b72422146c4faf56e98ca34313b` (version 38). Restore access and recheck remote heads/privacy before syncing; do not force-push.
 
 This branch preserves the current standalone Visible Medicine anatomy application in [`modules/anatomy-atlas`](../modules/anatomy-atlas/). The existing main website files are unchanged. This is a source-and-assets checkpoint, **not an integration or website deployment**.
 
 ## Snapshot
 
-- Source application commit: `b7faef85434a8b475936f695283ee5ff294dac0d`.
-- Exact application source tree: `ffdfc83f1cad1f1837045309539ddbb9f95896be`.
+- Source application commit: `b0d71f45a2741d166b3b006bcfcdcb79173d8847`.
+- Exact application source tree: `11388c121ac8654668d4a5c65836c418a3834cf8`.
 - Main website base commit: `c4ff08f8afc90bd94d04162625f97af9d94401cf`.
 - GitHub backup branch: `backup/anatomy-atlas-2026-09-06`.
-- All 499 tracked application files (117,904,133 bytes) are preserved byte-for-byte from that source commit, including 87 GLB bundles, official brand lockups, content, scripts, configuration, dependency lockfile, licences, review schema/migration and documentation.
+- All 505 tracked application files (117,930,704 bytes) are preserved byte-for-byte from that source commit, including 87 GLB bundles, official brand lockups, content, scripts, configuration, dependency lockfile, licences, review schema/migration and documentation.
 - The atlas covers 1,022 selectable source representations, 11 regional explorers, 138 dissection stages, 120 focuses and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation. Previous milestone receipts below are historical.
 - The shoulder review workspace has independent geometry, teaching and imaging review tracks, evidence/issues, versioned records and revision-bound approval safeguards. Acquired scans and specialist approvals remain absent.
 - The deep-inspection update adds three-plane surface cutaways, tissue opacity, clipped-surface picking, regional/whole-body orthographic illustration and varied 5/10/20-question practice with results. No source geometry, anatomical coverage, licences or dependencies were changed.
@@ -23,6 +23,10 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 The currently published atlas remains at [Visible Medicine anatomy](https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site). Saving this branch does not redeploy that site or the main website.
 
 ## Current local graphics recovery milestone
+
+The later screen-side label milestone replaces alternating/fixed endpoints with live-camera projection across regional, whole-body and shoulder viewers. Labels stay in their anchor's screen half, pack independently using measured text boxes, and retain selected/landmark priority without balancing across the model. Anatomical names, IDs, meshes, dissection state and exam guards remain unchanged. New display fingerprints expire all nine shoulder display reviews without changing teaching or acquired-imaging status. See `docs/SCREEN_LABELS.md` in the module.
+
+The final build, type checks, focused lint, 981,170 label projection/packing/wiring assertions and applicable review/loading/inspection/arrangement/neuro/recovery suites pass. The browser inspection tool failed to initialize; no browser/GPU/touch or clinical acceptance is claimed. A separate conversation comparison uses seven existing shoulder source meshes to illustrate five explosion concepts; it is not added to the production atlas or this module snapshot. No new dependency, font, mesh, licence or paid service is included.
 
 Both viewer families now await startup and use a scoped on-demand drawing queue. Startup rejections and errors in frame callbacks reach the existing recovery control; fresh physical canvases, terminal health latching and retired-session cleanup preserve restart isolation. No new permanent UI, anatomy, dependency, licence obligation or main-website change is included. Nine display fingerprints expire; teaching hashes and absent acquired imaging remain unchanged.
 
