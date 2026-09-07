@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "checkedDate": "2026-09-07",
+  "evidenceKind": "bounded-web-extracted-rows",
+  "source": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_inclusion_relation_list.txt",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "rows": [
+    {
+      "parent": "FMA46104",
+      "parentName": "superficial head of flexor pollicis brevis",
+      "child": "FMA65198",
+      "childName": "superficial head of right flexor pollicis brevis"
+    },
+    {
+      "parent": "FMA46104",
+      "parentName": "superficial head of flexor pollicis brevis",
+      "child": "FMA65199",
+      "childName": "superficial head of left flexor pollicis brevis"
+    },
+    {
+      "parent": "FMA54158",
+      "parentName": "tendon of levator palpebrae superioris",
+      "child": "FMA54159",
+      "childName": "tendon of right levator palpebrae superioris"
+    },
+    {
+      "parent": "FMA65410",
+      "parentName": "intermediate tendon",
+      "child": "FMA258850",
+      "childName": "right intermediate tendon"
+    }
+  ],
+  "relation": "is-a",
+  "establishesAttachment": false,
+  "establishesParentMuscleComponent": false,
+  "rawDocumentSha256": null,
+  "limitations": "Observed rows from the official published table, not a complete cached graph or byte-exact source download. IS-A is a subtype relation; it does not establish insertion, attachment, mesh ownership or PART-OF anatomy. No absence or graph-completeness claim is made. Revalidate against a version-pinned full table before any relationship-driven admission."
+}

@@ -1,5 +1,9 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Anatomy source-quality review
+
+The latest [supporting-source quality audit](docs/SUPPORTING_TOPOLOGY.md) records tendon/thumb connectivity and full-point contact findings. Uncertain candidates remain withheld; no anatomy is silently repaired or added.
+
 ## Choose how structures separate
 
 Beside the separation slider, choose **Spread**, **Extract selected**, or **Tray**. This works in each body region, whole body and the dedicated shoulder 3D viewer. Extraction moves only the chosen structure; the tray separates entries at the same scale. Set the slider to **0%** to restore source positions. Saved views remember the choice; exam mode stays assembled. These are teaching arrangements, not surgical paths. See [behaviour, evidence and limits](docs/EXPLODE_STYLES.md).

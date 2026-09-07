@@ -6,11 +6,11 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 
 ## Snapshot
 
-- Source application commit: `f3b561fccd93b9b3c783dc5f399c0fcb8a5d72cf`.
-- Exact application source tree: `e499d883a9cf50742ea2b336780e48471bb24f2f`.
+- Source application commit: `701b19e81a4eb4461f6d60b4f0860a88b68bb6e3`.
+- Exact application source tree: `272165de0d35e3554d6ac628605d1ff7af22e984`.
 - Main website base commit: `c4ff08f8afc90bd94d04162625f97af9d94401cf`.
 - GitHub backup branch: `backup/anatomy-atlas-2026-09-06`.
-- All 511 tracked application files (117,968,152 bytes) are preserved byte-for-byte from that source commit, including 87 GLB bundles, official brand lockups, content, scripts, configuration, dependency lockfile, licences, review schema/migration and documentation.
+- All 518 tracked application files (118,087,292 bytes) are preserved byte-for-byte from that source commit, including 87 GLB bundles, official brand lockups, content, scripts, configuration, dependency lockfile, licences, review schema/migration and documentation.
 - The atlas covers 1,022 selectable source representations, 11 regional explorers, 138 dissection stages, 120 focuses and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation. Previous milestone receipts below are historical.
 - The shoulder review workspace has independent geometry, teaching and imaging review tracks, evidence/issues, versioned records and revision-bound approval safeguards. Acquired scans and specialist approvals remain absent.
 - The deep-inspection update adds three-plane surface cutaways, tissue opacity, clipped-surface picking, regional/whole-body orthographic illustration and varied 5/10/20-question practice with results. No source geometry, anatomical coverage, licences or dependencies were changed.
@@ -22,7 +22,13 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 
 The currently published atlas remains at [Visible Medicine anatomy](https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site). Saving this branch does not redeploy that site or the main website.
 
-## Current local graphics recovery milestone
+## Current local source-connectivity milestone
+
+The latest offline audit adds twelve pinned candidate/context topology records and eight full-point contact comparisons. It finds disconnected and doubled-triangle pieces in both superficial thumb heads and several context/control sources, while confirming close levator-tendon proximity beyond the previous sampling screen. No geometry is repaired, removed, mirrored or admitted; original IDs, registration, all prior holds and all review fingerprints remain unchanged. Four official IS-A rows are preserved as bounded observations, not attachment/PART-OF proof. See `docs/SUPPORTING_TOPOLOGY.md` in the module.
+
+The new portable checks pass (3,466); raw-source reproduction passes (3,467), as does the prior 6,881-check raw geometry suite. Build, type checks, focused lint, review and explosion-style regressions pass. No runtime controls, dependency, fee-bearing asset or private data changed. Source publishing remains connection-blocked; the owner-only live Site remains version 38. The scheduled bounded source screen is complete. These candidates require new evidence/specialist adjudication; next executable product work is dedicated-shoulder navigation consistency.
+
+## Previous explosion-style, label and graphics milestones
 
 The latest user-directed feature adds a compact **Spread / Extract selected / Tray** choice to the existing slider toolbar in all regions, whole body and the shoulder 3D viewer. It replaces the former text label and regional duplicate arrangement buttons. Selected-only extraction preserves all surrounding source positions; the shoulder now shares the source-bounds tray. All three modes return to source positions at zero. Bookmarks, actual screen-side labels, cutaways and camera fitting retain consistent display offsets; exam entry assembles anatomy and disables separation. No anatomical admission, source geometry, licence, dependency or clinical approval changes. See `docs/EXPLODE_STYLES.md` in the module.
 

@@ -1,5 +1,7 @@
 # Tendon and thumb-muscle source geometry
 
+**Follow-up evidence:** the [connectivity and full-point audit](SUPPORTING_TOPOLOGY.md) now examines twelve candidate/context sources and all stored vertices/triangle centres in eight pairs. It identifies disconnected and doubled-triangle components that the original sampled proximity screen did not test. All holds and non-admissions remain; specialist/source adjudication is the next gate for these particular candidates.
+
 This bounded audit adds **no anatomy**. It follows the index-only [supporting-source classification](SUPPORTING_CANDIDATES.md) and the separate four-artery [forearm admission](FOREARM_VASCULAR_DETAIL.md). The live catalogue remains 1,022 source representations, 86 body bundles, 138 stages and 120 focuses. All source coordinates and existing holds remain exact.
 
 ## Disposition

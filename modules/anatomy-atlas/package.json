@@ -49,6 +49,8 @@
     "supporting:test": "node scripts/validate-supporting-candidates.mjs",
     "supporting-geometry:audit": "node scripts/audit-supporting-geometry.mjs",
     "supporting-geometry:test": "node scripts/validate-supporting-geometry.mjs",
+    "supporting-topology:audit": "node scripts/audit-supporting-topology.mjs",
+    "supporting-topology:test": "node scripts/validate-supporting-topology.mjs",
     "forearm-vascular:audit": "node scripts/audit-forearm-vascular.mjs",
     "forearm-vascular:test": "node scripts/validate-forearm-vascular.mjs",
     "study-navigation:test": "node scripts/validate-study-navigation.mjs",

@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Offline source connectivity diagnostics
+
+`scripts/source-topology.mjs` supplies non-mutating exact-coordinate connectivity and all-vertex/triangle-centroid distance analysis. `supporting-topology-report.mjs` binds the selected raw source files to prior/current hashes; no diagnostic is loaded into the runtime viewer or treated as an admission. Portable fixtures and optional raw reproduction have separate commands. Bounded web-observed IS-A rows are explicitly not complete graph, attachment or source-component proof. See [findings and next gates](SUPPORTING_TOPOLOGY.md).
+
 ## Shared explosion-style selection
 
 `app/explode-style-select.tsx` composes the installed Select primitive inside both existing slider toolbars. Explorer-owned `BodyLayout` is `spatial | extract | tray`, retained by validated local study snapshots. `lib/body-arrangement.ts` supplies source-bounds-only tray packing and selected-only extraction; `lib/shoulder-arrangement.ts` adapts the existing cropped shoulder manifest without changing source coordinates or mesh IDs. Both scenes share one offset map between model parents, clipping and fitted camera bounds; live-camera labels inherit those transforms. Exam guards restore source positions. See [behaviour, numerical/component evidence and pending acceptance](EXPLODE_STYLES.md).
