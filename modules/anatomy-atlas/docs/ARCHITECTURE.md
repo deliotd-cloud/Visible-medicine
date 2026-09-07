@@ -2,7 +2,7 @@
 
 ## Current implementation and contract gaps
 
-Use the [requirement audit](REQUIREMENT_AUDIT.md) for current source counts and acceptance. Pipeline examples and earlier milestone counts below retain their historical scope. Runtime supports multi-part selection, but the proposed content ingestion schema still has a singular mesh binding; it is not yet a complete export of the runtime authoring model. Explicit per-topic readiness and a validated multi-binding shoulder export are the next bounded data-contract milestone. Private clinical reviews are not part of that export.
+Use the [requirement audit](REQUIREMENT_AUDIT.md) for current source counts and acceptance. Pipeline examples and earlier milestone counts below retain their historical scope. The [v2 content contract](CONTENT_CONTRACT.md) now supports multi-part mesh bindings, scope-specific representations and explicit topic readiness, with a schema-conforming shoulder export and all-body checks. `bodyLesson` exposes metadata while the existing `bodyContent` API preserves displayed text. Private clinical reviews are not part of this draft export; a production curriculum store/editor remains future work.
 
 ## Offline source connectivity diagnostics
 

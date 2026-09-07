@@ -1,0 +1,1235 @@
+[
+  {
+    "schemaVersion": 2,
+    "representationScope": "shoulder-pilot",
+    "id": "vm:anatomy:upper-limb:shoulder:right:bone:scapula",
+    "name": "Scapula",
+    "latinName": "Scapula dextra",
+    "category": "bone",
+    "system": "skeleton",
+    "region": "Shoulder girdle",
+    "laterality": "right",
+    "synonyms": [
+      "shoulder blade",
+      "glenoid",
+      "acromion"
+    ],
+    "externalTerminology": {
+      "fma": [
+        "FMA13395"
+      ]
+    },
+    "meshBindings": [
+      {
+        "assetId": "vm:asset:bodyparts3d:4.0:shoulder-right",
+        "assetPath": "/models/bodyparts3d/shoulder-right.glb",
+        "assetSha256": "54d54094b4f071a137a7c2279bcfd031474c91cf3e8e2354a9d4bb1f013b6263",
+        "nodeName": "scapula__FJ3384_0",
+        "sourceVersion": "4.0",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3384.obj",
+            "sha256": "1641b04e55f9d75bdd6f1f4f07ea596e5dea0a8cb6b348bff47281b8a0bc6e5d",
+            "fmaId": "FMA13395"
+          }
+        ]
+      }
+    ],
+    "coordinateSystem": {
+      "referenceFrame": "bodyparts3d:4.0:lps-mm",
+      "unitsPerMillimetre": 0.026,
+      "sourceToSceneColumnMajor": [
+        0.026,
+        0,
+        0,
+        0,
+        0,
+        1.5920408388915591e-18,
+        -0.026,
+        0,
+        0,
+        0.026,
+        1.5920408388915591e-18,
+        0,
+        2.289633504867554,
+        -33.01219873046875,
+        -1.8442482266426103,
+        1
+      ]
+    },
+    "content": {
+      "anatomy": {
+        "title": "Overview",
+        "body": "A flat triangular bone linking the upper limb to the axial skeleton through the clavicle. Its lateral angle forms the glenoid fossa.",
+        "bullets": [
+          "Borders: superior, medial and lateral",
+          "Processes: spine, acromion and coracoid",
+          "Articulations: clavicle and humeral head"
+        ],
+        "readiness": "draft"
+      },
+      "function": {
+        "title": "Mechanical role",
+        "body": "Provides a mobile platform for glenohumeral motion and a broad attachment surface for stabilising muscles.",
+        "bullets": [
+          "Upward rotation supports arm elevation",
+          "Retraction and protraction position the glenoid",
+          "Scapulothoracic motion contributes to shoulder rhythm"
+        ],
+        "readiness": "draft"
+      },
+      "ct": {
+        "title": "CT appearance",
+        "body": "Cortical margins are high attenuation with a cancellous medullary centre. Multiplanar review is useful for the glenoid, acromion and fracture planes.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "mri": {
+        "title": "MRI appearance",
+        "body": "Marrow signal varies with sequence and age; the cortical shell remains low signal. Review the glenoid labral interface and muscle attachments.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "ultrasound": {
+        "title": "Ultrasound window",
+        "body": "Only accessible cortical surfaces are seen as a bright line with posterior acoustic shadow. Ultrasound is not the primary modality for the whole scapula.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "pathology": {
+        "title": "Common patterns",
+        "body": "Trauma may involve the body, neck, glenoid or processes. Morphology of the acromion and glenoid can alter shoulder mechanics.",
+        "bullets": [
+          "Scapular fractures",
+          "Glenoid rim injury",
+          "Os acromiale and degenerative change"
+        ],
+        "readiness": "draft"
+      },
+      "clinical": {
+        "title": "Clinical relevance",
+        "body": "Scapular position and control are assessed alongside cuff strength and glenohumeral range.",
+        "bullets": [
+          "Look for winging",
+          "Compare resting position side-to-side",
+          "Correlate focal tenderness with trauma history"
+        ],
+        "readiness": "draft"
+      },
+      "quiz": {
+        "title": "Quick check",
+        "body": "Which part of the scapula articulates with the humeral head?",
+        "bullets": [
+          "Glenoid fossa",
+          "Coracoid process",
+          "Inferior angle"
+        ],
+        "readiness": "draft"
+      }
+    },
+    "provenance": {
+      "sourceType": "licensed-dataset",
+      "sourceReference": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "licence": "CC-BY-4.0",
+      "teachingLicence": "MIT",
+      "citation": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+      "changes": "Subset selection; rigid common coordinate transform; vertex welding and normal recomputation; OBJ to GLB. Appearance modified at runtime. No per-part registration or reshaping."
+    },
+    "validation": {
+      "status": "draft",
+      "clinicalApproval": "not-included",
+      "materialRevisions": {
+        "geometry": "fea384fe1d84b7ed8d9320ebd1af46d862806b9e3a0ed061261ddc46c36871c0",
+        "teaching": "d9e998a179d84b52ad98b6f81be6e142eef74590283fc4f95ff643661155315c",
+        "imaging": null
+      }
+    }
+  },
+  {
+    "schemaVersion": 2,
+    "representationScope": "shoulder-pilot",
+    "id": "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+    "name": "Proximal humerus",
+    "latinName": "Humerus proximalis dexter",
+    "category": "bone",
+    "system": "skeleton",
+    "region": "Glenohumeral joint",
+    "laterality": "right",
+    "synonyms": [
+      "humeral head",
+      "greater tuberosity",
+      "lesser tuberosity"
+    ],
+    "externalTerminology": {
+      "fma": [
+        "FMA23130"
+      ]
+    },
+    "meshBindings": [
+      {
+        "assetId": "vm:asset:bodyparts3d:4.0:shoulder-right",
+        "assetPath": "/models/bodyparts3d/shoulder-right.glb",
+        "assetSha256": "54d54094b4f071a137a7c2279bcfd031474c91cf3e8e2354a9d4bb1f013b6263",
+        "nodeName": "humerus__FJ3368_0",
+        "sourceVersion": "4.0",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3368.obj",
+            "sha256": "85f5445a11ecb029b027db0b9b34933982836d442b19ff531d1ca35a3bc3a237",
+            "fmaId": "FMA23130"
+          }
+        ]
+      }
+    ],
+    "coordinateSystem": {
+      "referenceFrame": "bodyparts3d:4.0:lps-mm",
+      "unitsPerMillimetre": 0.026,
+      "sourceToSceneColumnMajor": [
+        0.026,
+        0,
+        0,
+        0,
+        0,
+        1.5920408388915591e-18,
+        -0.026,
+        0,
+        0,
+        0.026,
+        1.5920408388915591e-18,
+        0,
+        2.289633504867554,
+        -33.01219873046875,
+        -1.8442482266426103,
+        1
+      ]
+    },
+    "content": {
+      "anatomy": {
+        "title": "Overview",
+        "body": "The hemispherical humeral head articulates with the shallow glenoid. The anatomical and surgical necks separate the head, tuberosities and shaft.",
+        "bullets": [
+          "Greater tuberosity: superior and posterior cuff insertions",
+          "Lesser tuberosity: subscapularis insertion",
+          "Intertubercular groove: long-head biceps tendon"
+        ],
+        "readiness": "draft"
+      },
+      "function": {
+        "title": "Mechanical role",
+        "body": "Acts as the mobile lever of the upper limb while the rotator cuff centres the head on the glenoid.",
+        "readiness": "draft"
+      },
+      "ct": {
+        "title": "CT appearance",
+        "body": "CT defines cortical disruption, tuberosity displacement and joint congruity with high spatial resolution.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "mri": {
+        "title": "MRI appearance",
+        "body": "MRI can assess marrow, cartilage, cuff insertions and the biceps anchor around the proximal humerus.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "ultrasound": {
+        "title": "Ultrasound window",
+        "body": "The greater and lesser tuberosities form bright cortical landmarks for assessing cuff insertions and the bicipital groove.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "pathology": {
+        "title": "Common patterns",
+        "body": "Important entities include proximal humeral fracture, impaction defects, degenerative change and avascular necrosis.",
+        "readiness": "draft"
+      },
+      "clinical": {
+        "title": "Clinical relevance",
+        "body": "Examine active and passive range, pain localisation and neurovascular status following trauma.",
+        "readiness": "draft"
+      },
+      "quiz": {
+        "title": "Quick check",
+        "body": "Which groove contains the long-head biceps tendon?",
+        "bullets": [
+          "Intertubercular groove",
+          "Radial groove",
+          "Suprascapular notch"
+        ],
+        "readiness": "draft"
+      }
+    },
+    "provenance": {
+      "sourceType": "licensed-dataset",
+      "sourceReference": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "licence": "CC-BY-4.0",
+      "teachingLicence": "MIT",
+      "citation": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+      "changes": "Subset selection; rigid common coordinate transform; vertex welding and normal recomputation; OBJ to GLB. Appearance modified at runtime. No per-part registration or reshaping."
+    },
+    "validation": {
+      "status": "draft",
+      "clinicalApproval": "not-included",
+      "materialRevisions": {
+        "geometry": "328cc4c67d0b19f9b1763e24eced55287ad97d0ba85c603848d8827674152a57",
+        "teaching": "2897b86bff88e8ccce6ac516b4b097b81bd7a314d7fc09c6ab4a406afc957370",
+        "imaging": null
+      }
+    }
+  },
+  {
+    "schemaVersion": 2,
+    "representationScope": "shoulder-pilot",
+    "id": "vm:anatomy:upper-limb:shoulder:right:bone:clavicle",
+    "name": "Clavicle",
+    "latinName": "Clavicula dextra",
+    "category": "bone",
+    "system": "skeleton",
+    "region": "Shoulder girdle",
+    "laterality": "right",
+    "synonyms": [
+      "collarbone",
+      "acromioclavicular joint",
+      "ac joint"
+    ],
+    "externalTerminology": {
+      "fma": [
+        "FMA13322"
+      ]
+    },
+    "meshBindings": [
+      {
+        "assetId": "vm:asset:bodyparts3d:4.0:shoulder-right",
+        "assetPath": "/models/bodyparts3d/shoulder-right.glb",
+        "assetSha256": "54d54094b4f071a137a7c2279bcfd031474c91cf3e8e2354a9d4bb1f013b6263",
+        "nodeName": "clavicle__FJ3362_0",
+        "sourceVersion": "4.0",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3362.obj",
+            "sha256": "9a111cac8351e79dd1315aea90108fe56f78e4bf0159473e6ad727ba91b60e6d",
+            "fmaId": "FMA13322"
+          }
+        ]
+      }
+    ],
+    "coordinateSystem": {
+      "referenceFrame": "bodyparts3d:4.0:lps-mm",
+      "unitsPerMillimetre": 0.026,
+      "sourceToSceneColumnMajor": [
+        0.026,
+        0,
+        0,
+        0,
+        0,
+        1.5920408388915591e-18,
+        -0.026,
+        0,
+        0,
+        0.026,
+        1.5920408388915591e-18,
+        0,
+        2.289633504867554,
+        -33.01219873046875,
+        -1.8442482266426103,
+        1
+      ]
+    },
+    "content": {
+      "anatomy": {
+        "title": "Overview",
+        "body": "An S-shaped strut joining the sternum to the acromion and maintaining the shoulder away from the thorax.",
+        "bullets": [
+          "Medial sternoclavicular articulation",
+          "Lateral acromioclavicular articulation",
+          "Conoid and trapezoid ligament attachments"
+        ],
+        "readiness": "draft"
+      },
+      "function": {
+        "title": "Mechanical role",
+        "body": "Transmits load from upper limb to axial skeleton and permits coordinated scapular rotation.",
+        "readiness": "draft"
+      },
+      "ct": {
+        "title": "CT appearance",
+        "body": "CT is useful for complex fractures and alignment at the sternoclavicular joint.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "mri": {
+        "title": "MRI appearance",
+        "body": "MRI is reserved for selected marrow, joint and ligament questions.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "ultrasound": {
+        "title": "Ultrasound window",
+        "body": "Superficial cortical contour and the acromioclavicular joint can be assessed dynamically.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "pathology": {
+        "title": "Common patterns",
+        "body": "Midshaft fracture and acromioclavicular joint injury are common traumatic patterns.",
+        "readiness": "draft"
+      },
+      "clinical": {
+        "title": "Clinical relevance",
+        "body": "Inspect for contour change, skin tenting and local tenderness after injury.",
+        "readiness": "draft"
+      },
+      "quiz": {
+        "title": "Quick check",
+        "body": "The lateral clavicle articulates with which process?",
+        "bullets": [
+          "Acromion",
+          "Coracoid",
+          "Spine of scapula"
+        ],
+        "readiness": "draft"
+      }
+    },
+    "provenance": {
+      "sourceType": "licensed-dataset",
+      "sourceReference": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "licence": "CC-BY-4.0",
+      "teachingLicence": "MIT",
+      "citation": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+      "changes": "Subset selection; rigid common coordinate transform; vertex welding and normal recomputation; OBJ to GLB. Appearance modified at runtime. No per-part registration or reshaping."
+    },
+    "validation": {
+      "status": "draft",
+      "clinicalApproval": "not-included",
+      "materialRevisions": {
+        "geometry": "7e0754456bddacf30be07a04dba24acc912b142d45942d39cc138c2eceebeb68",
+        "teaching": "306ea9d66211a0225b139c8f237c330b1d0fdb2f132ec8fedb59e38f4d7b2e5f",
+        "imaging": null
+      }
+    }
+  },
+  {
+    "schemaVersion": 2,
+    "representationScope": "shoulder-pilot",
+    "id": "vm:anatomy:upper-limb:shoulder:right:muscle:deltoid",
+    "name": "Deltoid",
+    "latinName": "Musculus deltoideus dexter",
+    "category": "muscle",
+    "system": "muscles",
+    "region": "Lateral shoulder",
+    "laterality": "right",
+    "synonyms": [
+      "deltoid muscle",
+      "anterior deltoid",
+      "middle deltoid",
+      "posterior deltoid"
+    ],
+    "externalTerminology": {
+      "fma": [
+        "FMA34680",
+        "FMA34682",
+        "FMA34684"
+      ]
+    },
+    "meshBindings": [
+      {
+        "assetId": "vm:asset:bodyparts3d:4.0:shoulder-right",
+        "assetPath": "/models/bodyparts3d/shoulder-right.glb",
+        "assetSha256": "54d54094b4f071a137a7c2279bcfd031474c91cf3e8e2354a9d4bb1f013b6263",
+        "nodeName": "deltoid__FJ1468_0",
+        "sourceVersion": "4.0",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1468.obj",
+            "sha256": "09eebb4a8d72c91936b0bfde7f35829a58f56103ac158f559186698458bcc616",
+            "fmaId": "FMA34680"
+          }
+        ]
+      },
+      {
+        "assetId": "vm:asset:bodyparts3d:4.0:shoulder-right",
+        "assetPath": "/models/bodyparts3d/shoulder-right.glb",
+        "assetSha256": "54d54094b4f071a137a7c2279bcfd031474c91cf3e8e2354a9d4bb1f013b6263",
+        "nodeName": "deltoid__FJ1467_0",
+        "sourceVersion": "4.0",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1467.obj",
+            "sha256": "2f69f1a13c836539abca85d9b77f55f96319ad3fdd75c62f498eabe49b266bfe",
+            "fmaId": "FMA34682"
+          }
+        ]
+      },
+      {
+        "assetId": "vm:asset:bodyparts3d:4.0:shoulder-right",
+        "assetPath": "/models/bodyparts3d/shoulder-right.glb",
+        "assetSha256": "54d54094b4f071a137a7c2279bcfd031474c91cf3e8e2354a9d4bb1f013b6263",
+        "nodeName": "deltoid__FJ1513_0",
+        "sourceVersion": "4.0",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1513.obj",
+            "sha256": "ef8308c92fd0d01d8c0d7ffd9238305eefc2f28710d7bb58f451512abdc08e99",
+            "fmaId": "FMA34684"
+          }
+        ]
+      }
+    ],
+    "coordinateSystem": {
+      "referenceFrame": "bodyparts3d:4.0:lps-mm",
+      "unitsPerMillimetre": 0.026,
+      "sourceToSceneColumnMajor": [
+        0.026,
+        0,
+        0,
+        0,
+        0,
+        1.5920408388915591e-18,
+        -0.026,
+        0,
+        0,
+        0.026,
+        1.5920408388915591e-18,
+        0,
+        2.289633504867554,
+        -33.01219873046875,
+        -1.8442482266426103,
+        1
+      ]
+    },
+    "content": {
+      "anatomy": {
+        "title": "Overview",
+        "body": "A multipennate muscle forming the rounded contour of the shoulder.",
+        "bullets": [
+          "Origin: lateral clavicle, acromion and scapular spine",
+          "Insertion: deltoid tuberosity",
+          "Innervation: axillary nerve (C5–C6)"
+        ],
+        "readiness": "draft"
+      },
+      "function": {
+        "title": "Action",
+        "body": "The middle fibres abduct the arm; anterior and posterior fibres assist flexion/internal rotation and extension/external rotation respectively.",
+        "readiness": "draft"
+      },
+      "ct": {
+        "title": "CT appearance",
+        "body": "Muscle bulk and attenuation are compared with adjacent soft tissues and the contralateral side where available.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "mri": {
+        "title": "MRI appearance",
+        "body": "Normal fibres show intermediate signal with thin internal fat planes. Oedema, tear or denervation changes alter signal and bulk.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "ultrasound": {
+        "title": "Ultrasound appearance",
+        "body": "A fibrillar echotexture overlies the subacromial-subdeltoid bursa and cuff.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "pathology": {
+        "title": "Common patterns",
+        "body": "Deltoid injury is less common than cuff disease; atrophy may follow axillary neuropathy or disuse.",
+        "readiness": "draft"
+      },
+      "clinical": {
+        "title": "Clinical relevance",
+        "body": "Test abduction with attention to pain, strength and axillary nerve sensory change over the lateral shoulder.",
+        "readiness": "draft"
+      },
+      "quiz": {
+        "title": "Quick check",
+        "body": "Which nerve supplies the deltoid?",
+        "bullets": [
+          "Axillary nerve",
+          "Musculocutaneous nerve",
+          "Suprascapular nerve"
+        ],
+        "readiness": "draft"
+      }
+    },
+    "provenance": {
+      "sourceType": "licensed-dataset",
+      "sourceReference": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "licence": "CC-BY-4.0",
+      "teachingLicence": "MIT",
+      "citation": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+      "changes": "Subset selection; rigid common coordinate transform; vertex welding and normal recomputation; OBJ to GLB. Appearance modified at runtime. No per-part registration or reshaping."
+    },
+    "validation": {
+      "status": "draft",
+      "clinicalApproval": "not-included",
+      "materialRevisions": {
+        "geometry": "e03ffa8936e73ffa0e076dc139d09ae9c47e979326e03064fa00a6a8a0c404e8",
+        "teaching": "12163964205a8d047c256bc4076cdbc00450e36895392d1340f757fb64892d67",
+        "imaging": null
+      }
+    }
+  },
+  {
+    "schemaVersion": 2,
+    "representationScope": "shoulder-pilot",
+    "id": "vm:anatomy:upper-limb:shoulder:right:muscle:supraspinatus",
+    "name": "Supraspinatus",
+    "latinName": "Musculus supraspinatus dexter",
+    "category": "muscle",
+    "system": "muscles",
+    "region": "Rotator cuff",
+    "laterality": "right",
+    "synonyms": [
+      "supraspinatus tendon",
+      "superior rotator cuff"
+    ],
+    "externalTerminology": {
+      "fma": [
+        "FMA32544"
+      ]
+    },
+    "meshBindings": [
+      {
+        "assetId": "vm:asset:bodyparts3d:4.0:shoulder-right",
+        "assetPath": "/models/bodyparts3d/shoulder-right.glb",
+        "assetSha256": "54d54094b4f071a137a7c2279bcfd031474c91cf3e8e2354a9d4bb1f013b6263",
+        "nodeName": "supraspinatus__FJ1506_0",
+        "sourceVersion": "4.0",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1506.obj",
+            "sha256": "793771eceb64385269ddeeb09245e8c53b67499194f6fa98049b5e17aafa8e0c",
+            "fmaId": "FMA32544"
+          }
+        ]
+      }
+    ],
+    "coordinateSystem": {
+      "referenceFrame": "bodyparts3d:4.0:lps-mm",
+      "unitsPerMillimetre": 0.026,
+      "sourceToSceneColumnMajor": [
+        0.026,
+        0,
+        0,
+        0,
+        0,
+        1.5920408388915591e-18,
+        -0.026,
+        0,
+        0,
+        0.026,
+        1.5920408388915591e-18,
+        0,
+        2.289633504867554,
+        -33.01219873046875,
+        -1.8442482266426103,
+        1
+      ]
+    },
+    "content": {
+      "anatomy": {
+        "title": "Overview",
+        "body": "Occupies the supraspinous fossa and passes beneath the acromion to the superior facet of the greater tuberosity.",
+        "bullets": [
+          "Origin: supraspinous fossa",
+          "Insertion: greater tuberosity",
+          "Innervation: suprascapular nerve (C5–C6)"
+        ],
+        "readiness": "draft"
+      },
+      "function": {
+        "title": "Action",
+        "body": "Initiates abduction and contributes to compression and centring of the humeral head.",
+        "readiness": "draft"
+      },
+      "ct": {
+        "title": "CT appearance",
+        "body": "CT can show muscle volume, fatty change and mineralisation; tendon detail is limited unless arthrography is used.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "mri": {
+        "title": "MRI appearance",
+        "body": "The tendon should remain low signal and continuous to its footprint. Evaluate tear dimensions, retraction and muscle quality.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "ultrasound": {
+        "title": "Ultrasound appearance",
+        "body": "The tendon is assessed in long and short axes over the superior humeral head with dynamic impingement views.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "pathology": {
+        "title": "Common patterns",
+        "body": "Tendinopathy and partial- or full-thickness tears commonly involve the anterior distal tendon.",
+        "readiness": "draft"
+      },
+      "clinical": {
+        "title": "Clinical relevance",
+        "body": "Painful resisted abduction may support cuff pathology but must be interpreted with the full examination and imaging.",
+        "readiness": "draft"
+      },
+      "quiz": {
+        "title": "Quick check",
+        "body": "Where does supraspinatus insert?",
+        "bullets": [
+          "Greater tuberosity",
+          "Lesser tuberosity",
+          "Deltoid tuberosity"
+        ],
+        "readiness": "draft"
+      }
+    },
+    "provenance": {
+      "sourceType": "licensed-dataset",
+      "sourceReference": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "licence": "CC-BY-4.0",
+      "teachingLicence": "MIT",
+      "citation": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+      "changes": "Subset selection; rigid common coordinate transform; vertex welding and normal recomputation; OBJ to GLB. Appearance modified at runtime. No per-part registration or reshaping."
+    },
+    "validation": {
+      "status": "draft",
+      "clinicalApproval": "not-included",
+      "materialRevisions": {
+        "geometry": "42461d13f5ce4456a5ebc400a99f745278e6a4307d6d77e1bdc49dcfebf11da5",
+        "teaching": "d6291416b5f29b4959a832b95530985873cc88ddf699f9b70a1270e0f50f9393",
+        "imaging": null
+      }
+    }
+  },
+  {
+    "schemaVersion": 2,
+    "representationScope": "shoulder-pilot",
+    "id": "vm:anatomy:upper-limb:shoulder:right:muscle:infraspinatus",
+    "name": "Infraspinatus",
+    "latinName": "Musculus infraspinatus dexter",
+    "category": "muscle",
+    "system": "muscles",
+    "region": "Posterior rotator cuff",
+    "laterality": "right",
+    "synonyms": [
+      "infraspinatus tendon",
+      "posterior cuff"
+    ],
+    "externalTerminology": {
+      "fma": [
+        "FMA32547"
+      ]
+    },
+    "meshBindings": [
+      {
+        "assetId": "vm:asset:bodyparts3d:4.0:shoulder-right",
+        "assetPath": "/models/bodyparts3d/shoulder-right.glb",
+        "assetSha256": "54d54094b4f071a137a7c2279bcfd031474c91cf3e8e2354a9d4bb1f013b6263",
+        "nodeName": "infraspinatus__FJ1500_0",
+        "sourceVersion": "4.0",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1500.obj",
+            "sha256": "28f61376a3a88a28d14c44e1c20e9b7a34129772c130afa003daceac801455b1",
+            "fmaId": "FMA32547"
+          }
+        ]
+      }
+    ],
+    "coordinateSystem": {
+      "referenceFrame": "bodyparts3d:4.0:lps-mm",
+      "unitsPerMillimetre": 0.026,
+      "sourceToSceneColumnMajor": [
+        0.026,
+        0,
+        0,
+        0,
+        0,
+        1.5920408388915591e-18,
+        -0.026,
+        0,
+        0,
+        0.026,
+        1.5920408388915591e-18,
+        0,
+        2.289633504867554,
+        -33.01219873046875,
+        -1.8442482266426103,
+        1
+      ]
+    },
+    "content": {
+      "anatomy": {
+        "title": "Overview",
+        "body": "Arises from the infraspinous fossa and inserts on the middle facet of the greater tuberosity.",
+        "bullets": [
+          "Innervation: suprascapular nerve",
+          "Deep to posterior deltoid",
+          "Blends with the posterior cuff capsule"
+        ],
+        "readiness": "draft"
+      },
+      "function": {
+        "title": "Action",
+        "body": "Externally rotates the humerus and helps stabilise the glenohumeral joint.",
+        "readiness": "draft"
+      },
+      "ct": {
+        "title": "CT appearance",
+        "body": "Assess bulk, fatty replacement and osseous attachment sites.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "mri": {
+        "title": "MRI appearance",
+        "body": "Evaluate tendon continuity, muscle oedema and fatty atrophy.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "ultrasound": {
+        "title": "Ultrasound appearance",
+        "body": "Posterior scanning demonstrates the tendon inserting behind supraspinatus.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "pathology": {
+        "title": "Common patterns",
+        "body": "Tears, tendinopathy and denervation can produce weakness of external rotation.",
+        "readiness": "draft"
+      },
+      "clinical": {
+        "title": "Clinical relevance",
+        "body": "Resisted external rotation and lag tests contribute to assessment.",
+        "readiness": "draft"
+      },
+      "quiz": {
+        "title": "Quick check",
+        "body": "What is the principal action of infraspinatus?",
+        "bullets": [
+          "External rotation",
+          "Internal rotation",
+          "Elbow flexion"
+        ],
+        "readiness": "draft"
+      }
+    },
+    "provenance": {
+      "sourceType": "licensed-dataset",
+      "sourceReference": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "licence": "CC-BY-4.0",
+      "teachingLicence": "MIT",
+      "citation": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+      "changes": "Subset selection; rigid common coordinate transform; vertex welding and normal recomputation; OBJ to GLB. Appearance modified at runtime. No per-part registration or reshaping."
+    },
+    "validation": {
+      "status": "draft",
+      "clinicalApproval": "not-included",
+      "materialRevisions": {
+        "geometry": "021a74175c6711180eb6c9a49aa58996bde589cfec8124701d464e96890fa2ca",
+        "teaching": "2ef3685386726d826ff377e06c9185484ed83020663c4bf273f6e9784de8b90d",
+        "imaging": null
+      }
+    }
+  },
+  {
+    "schemaVersion": 2,
+    "representationScope": "shoulder-pilot",
+    "id": "vm:anatomy:upper-limb:shoulder:right:muscle:subscapularis",
+    "name": "Subscapularis",
+    "latinName": "Musculus subscapularis dexter",
+    "category": "muscle",
+    "system": "muscles",
+    "region": "Anterior rotator cuff",
+    "laterality": "right",
+    "synonyms": [
+      "subscapularis tendon",
+      "anterior cuff"
+    ],
+    "externalTerminology": {
+      "fma": [
+        "FMA13414"
+      ]
+    },
+    "meshBindings": [
+      {
+        "assetId": "vm:asset:bodyparts3d:4.0:shoulder-right",
+        "assetPath": "/models/bodyparts3d/shoulder-right.glb",
+        "assetSha256": "54d54094b4f071a137a7c2279bcfd031474c91cf3e8e2354a9d4bb1f013b6263",
+        "nodeName": "subscapularis__FJ1504_0",
+        "sourceVersion": "4.0",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1504.obj",
+            "sha256": "fdcbfd01f93e2d24bd73f5cb259a311c9f9e90de08c41573439844eef5f605dd",
+            "fmaId": "FMA13414"
+          }
+        ]
+      }
+    ],
+    "coordinateSystem": {
+      "referenceFrame": "bodyparts3d:4.0:lps-mm",
+      "unitsPerMillimetre": 0.026,
+      "sourceToSceneColumnMajor": [
+        0.026,
+        0,
+        0,
+        0,
+        0,
+        1.5920408388915591e-18,
+        -0.026,
+        0,
+        0,
+        0.026,
+        1.5920408388915591e-18,
+        0,
+        2.289633504867554,
+        -33.01219873046875,
+        -1.8442482266426103,
+        1
+      ]
+    },
+    "content": {
+      "anatomy": {
+        "title": "Overview",
+        "body": "Arises from the subscapular fossa and inserts on the lesser tuberosity.",
+        "bullets": [
+          "Largest cuff muscle",
+          "Innervation: upper and lower subscapular nerves",
+          "Closely related to the biceps pulley"
+        ],
+        "readiness": "draft"
+      },
+      "function": {
+        "title": "Action",
+        "body": "Internally rotates and adducts the humerus while contributing to anterior stability.",
+        "readiness": "draft"
+      },
+      "ct": {
+        "title": "CT appearance",
+        "body": "Assess muscle bulk, fat and the lesser-tuberosity insertion.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "mri": {
+        "title": "MRI appearance",
+        "body": "Axial and sagittal-oblique images demonstrate the tendon, biceps pulley and muscle quality.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "ultrasound": {
+        "title": "Ultrasound appearance",
+        "body": "Dynamic external rotation brings the tendon into view at the lesser tuberosity.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "pathology": {
+        "title": "Common patterns",
+        "body": "Upper-border tears may be associated with long-head biceps instability.",
+        "readiness": "draft"
+      },
+      "clinical": {
+        "title": "Clinical relevance",
+        "body": "Lift-off, belly-press and bear-hug tests can assess function in context.",
+        "readiness": "draft"
+      },
+      "quiz": {
+        "title": "Quick check",
+        "body": "Where does subscapularis insert?",
+        "bullets": [
+          "Lesser tuberosity",
+          "Greater tuberosity",
+          "Acromion"
+        ],
+        "readiness": "draft"
+      }
+    },
+    "provenance": {
+      "sourceType": "licensed-dataset",
+      "sourceReference": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "licence": "CC-BY-4.0",
+      "teachingLicence": "MIT",
+      "citation": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+      "changes": "Subset selection; rigid common coordinate transform; vertex welding and normal recomputation; OBJ to GLB. Appearance modified at runtime. No per-part registration or reshaping."
+    },
+    "validation": {
+      "status": "draft",
+      "clinicalApproval": "not-included",
+      "materialRevisions": {
+        "geometry": "039ab2030d140754f0101499ab7fbff1a4e0e5b4f09eb7bd525ed76fefc62718",
+        "teaching": "f0e5e36d656b1d0493d11cef6a73eaa26140f388690e4b0f6c481a24bcc8bc7e",
+        "imaging": null
+      }
+    }
+  },
+  {
+    "schemaVersion": 2,
+    "representationScope": "shoulder-pilot",
+    "id": "vm:anatomy:upper-limb:shoulder:right:muscle:biceps-long-head",
+    "name": "Biceps · long head",
+    "latinName": "Caput longum musculi bicipitis brachii",
+    "category": "muscle",
+    "system": "soft-tissue",
+    "region": "Anterior shoulder and arm",
+    "laterality": "right",
+    "synonyms": [
+      "LHB",
+      "biceps tendon",
+      "bicipital tendon"
+    ],
+    "externalTerminology": {
+      "fma": [
+        "FMA37686"
+      ]
+    },
+    "meshBindings": [
+      {
+        "assetId": "vm:asset:bodyparts3d:4.0:shoulder-right",
+        "assetPath": "/models/bodyparts3d/shoulder-right.glb",
+        "assetSha256": "54d54094b4f071a137a7c2279bcfd031474c91cf3e8e2354a9d4bb1f013b6263",
+        "nodeName": "biceps-long-head-muscle__FJ1478_0",
+        "sourceVersion": "4.0",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1478.obj",
+            "sha256": "2442d2b5ac30c5da42e72eeff83d143df51c7617001cbc6552096a504f29bc07",
+            "fmaId": "FMA37686"
+          }
+        ]
+      }
+    ],
+    "coordinateSystem": {
+      "referenceFrame": "bodyparts3d:4.0:lps-mm",
+      "unitsPerMillimetre": 0.026,
+      "sourceToSceneColumnMajor": [
+        0.026,
+        0,
+        0,
+        0,
+        0,
+        1.5920408388915591e-18,
+        -0.026,
+        0,
+        0,
+        0.026,
+        1.5920408388915591e-18,
+        0,
+        2.289633504867554,
+        -33.01219873046875,
+        -1.8442482266426103,
+        1
+      ]
+    },
+    "content": {
+      "anatomy": {
+        "title": "Long head and proximal tendon",
+        "body": "The long head begins at the superior glenoid region, crosses the joint and descends through the intertubercular groove before joining the muscle belly in the arm.",
+        "bullets": [
+          "Proximal tendon and muscle are one source mesh",
+          "Muscle innervation: musculocutaneous nerve",
+          "Distal biceps insertion: radial tuberosity and bicipital aponeurosis"
+        ],
+        "note": "The mesh is not a separately segmented tendon. The lower arm is cropped from this view.",
+        "readiness": "draft"
+      },
+      "function": {
+        "title": "Mechanical role",
+        "body": "Contributes to elbow flexion and supination through the biceps complex; its shoulder stabilising role is context dependent.",
+        "readiness": "draft"
+      },
+      "ct": {
+        "title": "CT appearance",
+        "body": "The tendon may be visible as a soft-tissue structure in the groove; CT arthrography can improve joint assessment.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "mri": {
+        "title": "MRI appearance",
+        "body": "A low-signal round or ovoid tendon should remain centred in the groove; assess the anchor and pulley.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "ultrasound": {
+        "title": "Ultrasound appearance",
+        "body": "Short-axis imaging shows an echogenic fibrillar tendon within the groove; dynamic assessment can test stability.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "pathology": {
+        "title": "Common patterns",
+        "body": "Tendinopathy, tear and subluxation may accompany cuff or pulley injury.",
+        "readiness": "draft"
+      },
+      "clinical": {
+        "title": "Clinical relevance",
+        "body": "Anterior shoulder pain is nonspecific; correlate examination, imaging and coexisting cuff disease.",
+        "readiness": "draft"
+      },
+      "quiz": {
+        "title": "Quick check",
+        "body": "Where is the long-head biceps tendon normally centred?",
+        "bullets": [
+          "Intertubercular groove",
+          "Spinoglenoid notch",
+          "Subacromial bursa"
+        ],
+        "readiness": "draft"
+      }
+    },
+    "provenance": {
+      "sourceType": "licensed-dataset",
+      "sourceReference": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "licence": "CC-BY-4.0",
+      "teachingLicence": "MIT",
+      "citation": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+      "changes": "Subset selection; rigid common coordinate transform; vertex welding and normal recomputation; OBJ to GLB. Appearance modified at runtime. No per-part registration or reshaping."
+    },
+    "validation": {
+      "status": "draft",
+      "clinicalApproval": "not-included",
+      "materialRevisions": {
+        "geometry": "efb458fd3770cf649558a116761ef0582aa3e5d7be9de6cba1f8d8fb92604603",
+        "teaching": "21912176b33af6219f2c47d389fde89bce2d72ef53935fe26c75a9d8f7a01eeb",
+        "imaging": null
+      }
+    }
+  },
+  {
+    "schemaVersion": 2,
+    "representationScope": "shoulder-pilot",
+    "id": "vm:anatomy:upper-limb:shoulder:right:muscle:teres-minor",
+    "name": "Teres minor",
+    "latinName": "Musculus teres minor dexter",
+    "category": "muscle",
+    "system": "muscles",
+    "region": "Posterior rotator cuff",
+    "laterality": "right",
+    "synonyms": [
+      "small round muscle",
+      "inferior posterior cuff"
+    ],
+    "externalTerminology": {
+      "fma": [
+        "FMA32553"
+      ]
+    },
+    "meshBindings": [
+      {
+        "assetId": "vm:asset:bodyparts3d:4.0:shoulder-right",
+        "assetPath": "/models/bodyparts3d/shoulder-right.glb",
+        "assetSha256": "54d54094b4f071a137a7c2279bcfd031474c91cf3e8e2354a9d4bb1f013b6263",
+        "nodeName": "teres-minor__FJ1508_0",
+        "sourceVersion": "4.0",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1508.obj",
+            "sha256": "f56e595b86cea659891664706cd4443acddd8dc69e4e5bb3855445eef302641a",
+            "fmaId": "FMA32553"
+          }
+        ]
+      }
+    ],
+    "coordinateSystem": {
+      "referenceFrame": "bodyparts3d:4.0:lps-mm",
+      "unitsPerMillimetre": 0.026,
+      "sourceToSceneColumnMajor": [
+        0.026,
+        0,
+        0,
+        0,
+        0,
+        1.5920408388915591e-18,
+        -0.026,
+        0,
+        0,
+        0.026,
+        1.5920408388915591e-18,
+        0,
+        2.289633504867554,
+        -33.01219873046875,
+        -1.8442482266426103,
+        1
+      ]
+    },
+    "content": {
+      "anatomy": {
+        "title": "Posterior cuff",
+        "body": "This narrow cuff muscle lies along the lateral scapula, below infraspinatus and above teres major.",
+        "bullets": [
+          "Scapular origin near the lateral border",
+          "Humeral insertion at the inferior greater-tubercle facet",
+          "Axillary nerve supply (C5–C6)"
+        ],
+        "readiness": "draft"
+      },
+      "function": {
+        "title": "Action",
+        "body": "Assists external rotation of the arm and stabilisation of the humeral head.",
+        "readiness": "draft"
+      },
+      "ct": {
+        "title": "CT assessment",
+        "body": "Review muscle size and fatty replacement on soft-tissue windows.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "mri": {
+        "title": "MRI assessment",
+        "body": "Review the muscle belly and posterior cuff tendon for signal change, loss of bulk and fatty replacement.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "ultrasound": {
+        "title": "Ultrasound assessment",
+        "body": "Posterior views may show the inferior cuff attachment; reliable identification requires local landmarks and trained technique.",
+        "note": "Prototype teaching copy — verify against an approved imaging reference and local protocol before clinical release.",
+        "readiness": "draft"
+      },
+      "pathology": {
+        "title": "Patterns to review",
+        "body": "Teres minor may be affected by cuff injury or denervation. Imaging findings require clinical correlation.",
+        "readiness": "draft"
+      },
+      "clinical": {
+        "title": "Clinical relevance",
+        "body": "Consider its contribution when assessing external-rotation weakness. No isolated examination finding establishes a diagnosis.",
+        "readiness": "draft"
+      },
+      "quiz": {
+        "title": "Quick check",
+        "body": "Which nerve supplies teres minor?",
+        "bullets": [
+          "Axillary nerve",
+          "Suprascapular nerve",
+          "Long thoracic nerve"
+        ],
+        "readiness": "draft"
+      }
+    },
+    "provenance": {
+      "sourceType": "licensed-dataset",
+      "sourceReference": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "licence": "CC-BY-4.0",
+      "teachingLicence": "MIT",
+      "citation": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+      "changes": "Subset selection; rigid common coordinate transform; vertex welding and normal recomputation; OBJ to GLB. Appearance modified at runtime. No per-part registration or reshaping."
+    },
+    "validation": {
+      "status": "draft",
+      "clinicalApproval": "not-included",
+      "materialRevisions": {
+        "geometry": "842908fb737880428aeff6ce8b029cb4c14059bfa05fccf46c21396a248bf5e4",
+        "teaching": "b45041bae3a10da1de07af1af4d2895812cfc5fe05a4bbcacb56525f3b979a94",
+        "imaging": null
+      }
+    }
+  }
+]

@@ -5,11 +5,12 @@
     "public/models/bodyparts3d/full-body/catalog.json": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
     "public/models/bodyparts3d/manifest.json": "619e3ab84712487bd032b84a8f8b52f94d10883d8db7798057049bab287de857",
     "package-lock.json": "a6a8277be904e06c3735ce00f9148372937a94209cb6219cb94487efc1ae74e5",
-    "content/schema/anatomy-structure.schema.json": "f77da399733f1086fec400267e0126ef26b5d5cf28696f4c00a43adf0cecc5d6",
+    "content/schema/anatomy-structure.schema.json": "0a8e76b6a98e23e25f60a2d9269664dc42974b7a349c63b77e4615fa46887826",
     "content/review-revisions.json": "abc8f9410e00b41282e149d2bb6020d96ad6367aed769888519940c4c24118a0",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "0e7c9052aca8cd17b1a1d26bf5bc8e0d2a1bf34b2c3d98b39ee9d13ada3d297c"
+    "resolvedContentAndRecipeData": "0e7c9052aca8cd17b1a1d26bf5bc8e0d2a1bf34b2c3d98b39ee9d13ada3d297c",
+    "explicitTopicReadiness": "01d610a69de341d4500fe6466c1efaafe881fdd843ddb7a0e35b097105efb24b"
   },
   "anatomy": {
     "bodyRepresentations": 1022,
@@ -92,12 +93,12 @@
   },
   "teaching": {
     "classification": {
-      "specificDraft": "Non-fallback authored copy, possibly shared across a source group. Not necessarily complete, cited or clinically reviewed.",
+      "specificDraft": "Explicitly draft authored copy, possibly shared across a source group. Not necessarily complete, cited or clinically reviewed.",
       "identityOnly": "Generic source identity or vascular-segment disclaimer, not a structure-specific anatomy/function lesson.",
       "pending": "Explicit pending-content fallback.",
       "generatedIdentification": "Generated find-this-structure prompt, not an authored clinical question."
     },
-    "classificationLimit": "Exact current display-title rules, not persistent authoring statuses. Reassess when resolver titles or branches change.",
+    "classificationLimit": "Explicit readiness from authoring branches; not inferred from titles and not clinical approval. Existing shoulder authoring is explicitly draft.",
     "body": {
       "anatomy": {
         "specificDraft": 195,
@@ -106,9 +107,9 @@
         "generatedIdentification": 0
       },
       "function": {
-        "specificDraft": 259,
+        "specificDraft": 257,
         "identityOnly": 146,
-        "pending": 617,
+        "pending": 619,
         "generatedIdentification": 0
       },
       "ct": {
@@ -207,9 +208,9 @@
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 108,
+          "specificDraft": 106,
           "identityOnly": 27,
-          "pending": 140,
+          "pending": 142,
           "generatedIdentification": 0
         },
         "ct": {

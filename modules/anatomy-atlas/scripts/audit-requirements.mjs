@@ -12,7 +12,7 @@ const json = async (path) => JSON.parse(await read(path));
 const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const bundled = await build({
   stdin: {
-    contents: `export { bodyContent } from './app/body-content.ts';
+    contents: `export { bodyContent, bodyLesson } from './app/body-content.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';`,
     resolveDir: fileURLToPath(root),
@@ -26,6 +26,7 @@ export { dissectionProfiles } from './app/dissection-data.ts';`,
 });
 const {
   bodyContent,
+  bodyLesson,
   structures: shoulder,
   dissectionProfiles,
 } = await import(
@@ -74,39 +75,36 @@ const statusNames = [
   'pending',
   'generatedIdentification',
 ];
-const identityTitles = new Set([
-  'Anatomical identity',
-  'Recovered anatomy · review pending',
-  'Vascular segment · review pending',
-]);
-const pendingTitles = new Set([
-  'Function content pending',
-  'CT content pending',
-  'MRI content pending',
-  'Ultrasound content pending',
-  'Pathology content pending',
-  'Clinical content pending',
-]);
-function classify(section) {
+const readinessCategories = {
+  draft: 'specificDraft',
+  'identity-only': 'identityOnly',
+  pending: 'pending',
+  'generated-identification': 'generatedIdentification',
+};
+function classify(section, readiness) {
   assert.equal(typeof section.body, 'string');
   assert(section.body.trim(), 'Empty displayed section');
-  if (pendingTitles.has(section.title)) return 'pending';
-  if (identityTitles.has(section.title)) return 'identityOnly';
-  if (section.title === 'Identification practice')
-    return 'generatedIdentification';
-  return 'specificDraft';
+  assert(
+    Object.hasOwn(readinessCategories, readiness),
+    'Missing explicit topic readiness',
+  );
+  return readinessCategories[readiness];
 }
 const contentRows = catalog.structures.map((entry) => ({
   entry,
   sections: Object.fromEntries(
     tabs.map((tab) => [tab, bodyContent(entry, tab)]),
   ),
+  readiness: Object.fromEntries(
+    tabs.map((tab) => [tab, bodyLesson(entry, tab).readiness]),
+  ),
 }));
 function summarize(rows) {
   return Object.fromEntries(
     tabs.map((tab) => {
       const counts = Object.fromEntries(statusNames.map((name) => [name, 0]));
-      for (const row of rows) counts[classify(row.sections[tab])]++;
+      for (const row of rows)
+        counts[classify(row.sections[tab], row.readiness[tab])]++;
       assert.equal(
         Object.values(counts).reduce((a, b) => a + b, 0),
         rows.length,
@@ -146,6 +144,11 @@ sourceHashes.resolvedContentAndRecipeData = hash(
     shoulder,
     dissectionProfiles,
   }),
+);
+sourceHashes.explicitTopicReadiness = hash(
+  JSON.stringify(
+    contentRows.map(({ entry, readiness }) => ({ id: entry.id, readiness })),
+  ),
 );
 const publicFiles = [];
 async function inventory(directory) {
@@ -203,7 +206,7 @@ const report = {
   teaching: {
     classification: {
       specificDraft:
-        'Non-fallback authored copy, possibly shared across a source group. Not necessarily complete, cited or clinically reviewed.',
+        'Explicitly draft authored copy, possibly shared across a source group. Not necessarily complete, cited or clinically reviewed.',
       identityOnly:
         'Generic source identity or vascular-segment disclaimer, not a structure-specific anatomy/function lesson.',
       pending: 'Explicit pending-content fallback.',
@@ -211,10 +214,13 @@ const report = {
         'Generated find-this-structure prompt, not an authored clinical question.',
     },
     classificationLimit:
-      'Exact current display-title rules, not persistent authoring statuses. Reassess when resolver titles or branches change.',
+      'Explicit readiness from authoring branches; not inferred from titles and not clinical approval. Existing shoulder authoring is explicitly draft.',
     body: summarize(contentRows),
     shoulder: summarize(
-      shoulder.map((entry) => ({ sections: entry.sections })),
+      shoulder.map((entry) => ({
+        sections: entry.sections,
+        readiness: Object.fromEntries(tabs.map((tab) => [tab, 'draft'])),
+      })),
     ),
     byRegion: Object.fromEntries(
       catalog.regions.map(({ id }) => [

@@ -1,91 +1,387 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://visiblemedicine.example/schemas/anatomy-structure.schema.json",
-  "title": "Visible Medicine anatomy structure",
+  "$id": "https://visiblemedicine.example/schemas/anatomy-structure.v2.schema.json",
+  "title": "Visible Medicine draft content ingestion record v2",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "name", "category", "system", "region", "laterality", "content", "provenance", "validation"],
+  "required": [
+    "schemaVersion",
+    "id",
+    "name",
+    "category",
+    "system",
+    "region",
+    "laterality",
+    "meshBindings",
+    "coordinateSystem",
+    "content",
+    "provenance",
+    "validation",
+    "representationScope",
+    "externalTerminology"
+  ],
   "properties": {
     "id": {
       "type": "string",
       "pattern": "^vm:anatomy:[a-z0-9-]+:[a-z0-9-]+:(right|left|midline|bilateral|unpaired|unspecified):[a-z0-9-]+:[a-z0-9-]+$"
     },
-    "name": { "type": "string", "minLength": 1 },
-    "latinName": { "type": ["string", "null"] },
-    "category": { "enum": ["bone", "muscle", "tendon", "ligament", "cartilage", "joint", "nerve", "vessel", "organ", "fascia", "membrane", "connective-tissue", "space", "landmark"] },
-    "system": { "type": "string", "minLength": 1 },
-    "region": { "type": "string", "minLength": 1 },
-    "laterality": { "enum": ["right", "left", "midline", "bilateral", "unpaired", "unspecified"] },
-    "synonyms": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "latinName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "category": {
+      "enum": [
+        "bone",
+        "muscle",
+        "tendon",
+        "ligament",
+        "cartilage",
+        "joint",
+        "nerve",
+        "vessel",
+        "organ",
+        "fascia",
+        "membrane",
+        "connective-tissue",
+        "space",
+        "landmark"
+      ]
+    },
+    "system": {
+      "type": "string",
+      "minLength": 1
+    },
+    "region": {
+      "type": "string",
+      "minLength": 1
+    },
+    "laterality": {
+      "enum": [
+        "right",
+        "left",
+        "midline",
+        "bilateral",
+        "unpaired",
+        "unspecified"
+      ]
+    },
+    "synonyms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
     "externalTerminology": {
       "type": "object",
-      "additionalProperties": { "type": ["string", "null"] },
-      "properties": {
-        "fma": { "type": ["string", "null"] },
-        "snomedCt": { "type": ["string", "null"] },
-        "radlex": { "type": ["string", "null"] }
-      }
-    },
-    "meshBinding": {
-      "type": ["object", "null"],
-      "required": ["assetId", "nodeName"],
       "additionalProperties": false,
+      "required": [
+        "fma"
+      ],
       "properties": {
-        "assetId": { "type": "string" },
-        "nodeName": { "type": "string" },
-        "lod": { "type": "integer", "minimum": 0 },
-        "segmentValue": { "type": ["integer", "null"], "minimum": 0 }
+        "fma": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^FMA[0-9]+$"
+          }
+        }
       }
     },
     "content": {
       "type": "object",
-      "required": ["anatomy", "function", "ct", "mri", "ultrasound", "pathology", "clinical", "quiz"],
+      "required": [
+        "anatomy",
+        "function",
+        "ct",
+        "mri",
+        "ultrasound",
+        "pathology",
+        "clinical",
+        "quiz"
+      ],
       "additionalProperties": false,
       "properties": {
-        "anatomy": { "$ref": "#/$defs/section" },
-        "function": { "$ref": "#/$defs/section" },
-        "ct": { "$ref": "#/$defs/section" },
-        "mri": { "$ref": "#/$defs/section" },
-        "ultrasound": { "$ref": "#/$defs/section" },
-        "pathology": { "$ref": "#/$defs/section" },
-        "clinical": { "$ref": "#/$defs/section" },
-        "quiz": { "$ref": "#/$defs/section" }
+        "anatomy": {
+          "$ref": "#/$defs/section"
+        },
+        "function": {
+          "$ref": "#/$defs/section"
+        },
+        "ct": {
+          "$ref": "#/$defs/section"
+        },
+        "mri": {
+          "$ref": "#/$defs/section"
+        },
+        "ultrasound": {
+          "$ref": "#/$defs/section"
+        },
+        "pathology": {
+          "$ref": "#/$defs/section"
+        },
+        "clinical": {
+          "$ref": "#/$defs/section"
+        },
+        "quiz": {
+          "$ref": "#/$defs/section"
+        }
       }
     },
     "provenance": {
       "type": "object",
-      "required": ["sourceType", "licence"],
+      "additionalProperties": false,
+      "required": [
+        "sourceType",
+        "sourceReference",
+        "licence",
+        "teachingLicence",
+        "citation",
+        "changes"
+      ],
       "properties": {
-        "sourceType": { "enum": ["authored", "licensed-dataset", "imported-standard"] },
-        "sourceReference": { "type": ["string", "null"] },
-        "licence": { "type": "string" },
-        "citation": { "type": ["string", "null"] }
+        "sourceType": {
+          "const": "licensed-dataset"
+        },
+        "sourceReference": {
+          "type": "string",
+          "pattern": "^https://"
+        },
+        "licence": {
+          "const": "CC-BY-4.0",
+          "description": "Source geometry and derived source metadata; does not relicense original teaching."
+        },
+        "teachingLicence": {
+          "const": "MIT"
+        },
+        "citation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "changes": {
+          "type": "string",
+          "minLength": 1
+        }
       }
     },
     "validation": {
       "type": "object",
-      "required": ["status"],
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "clinicalApproval",
+        "materialRevisions"
+      ],
       "properties": {
-        "status": { "enum": ["draft", "in-review", "validated", "retired"] },
-        "reviewers": { "type": "array", "items": { "type": "string" } },
-        "reviewedAt": { "type": ["string", "null"], "format": "date-time" },
-        "expiresAt": { "type": ["string", "null"], "format": "date-time" },
-        "contentVersion": { "type": "string" }
+        "status": {
+          "const": "draft"
+        },
+        "clinicalApproval": {
+          "const": "not-included"
+        },
+        "materialRevisions": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "geometry",
+            "teaching",
+            "imaging"
+          ],
+          "properties": {
+            "geometry": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "teaching": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "imaging": {
+              "type": "null"
+            }
+          }
+        }
       }
+    },
+    "schemaVersion": {
+      "const": 2
+    },
+    "meshBindings": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/meshBinding"
+      }
+    },
+    "coordinateSystem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "referenceFrame",
+        "unitsPerMillimetre",
+        "sourceToSceneColumnMajor"
+      ],
+      "properties": {
+        "referenceFrame": {
+          "const": "bodyparts3d:4.0:lps-mm"
+        },
+        "unitsPerMillimetre": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "sourceToSceneColumnMajor": {
+          "type": "array",
+          "minItems": 16,
+          "maxItems": 16,
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "representationScope": {
+      "enum": [
+        "shoulder-pilot",
+        "body"
+      ],
+      "description": "Representation scope plus anatomy ID forms the record key; the same anatomy can have different source bundles/frames."
     }
   },
   "$defs": {
     "section": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["title", "body"],
+      "required": [
+        "title",
+        "body",
+        "readiness"
+      ],
       "properties": {
-        "title": { "type": "string" },
-        "body": { "type": "string" },
-        "bullets": { "type": "array", "items": { "type": "string" } },
-        "note": { "type": "string" },
-        "citations": { "type": "array", "items": { "type": "string" } }
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1
+        },
+        "bullets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "note": {
+          "type": "string"
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "readiness": {
+          "enum": [
+            "draft",
+            "identity-only",
+            "pending",
+            "generated-identification"
+          ],
+          "description": "Editorial coverage only. Draft may be incomplete/shared by a group; no value conveys approval."
+        }
+      }
+    },
+    "meshBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "assetId",
+        "assetPath",
+        "assetSha256",
+        "nodeName",
+        "sourceVersion",
+        "sourceTree",
+        "sources"
+      ],
+      "properties": {
+        "assetId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "assetPath": {
+          "type": "string",
+          "pattern": "^/models/bodyparts3d/(full-body/)?[a-z0-9-]+\\.glb$"
+        },
+        "assetSha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "nodeName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceVersion": {
+          "const": "4.0"
+        },
+        "sourceTree": {
+          "enum": [
+            "isa",
+            "partof"
+          ]
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "file",
+              "sha256",
+              "fmaId"
+            ],
+            "properties": {
+              "file": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]+\\.obj$"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "fmaId": {
+                "type": "string",
+                "pattern": "^FMA[0-9]+$"
+              }
+            }
+          }
+        }
       }
     }
-  }
+  },
+  "description": "Reference-anatomy content seed, not clinical approval or patient data. Validate binding integrity against the trusted current source registry after JSON Schema validation."
 }

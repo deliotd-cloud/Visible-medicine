@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "checks": 31373,
+  "bodyRecords": 1022,
+  "shoulderRecords": 9,
+  "boundNodes": 1033,
+  "glbAssetsVerified": 87,
+  "rejectionCases": 36,
+  "originalDisplayedCopyAndRecipesPreserved": true,
+  "sourceGeometryChanged": false,
+  "clinicalApprovalsImported": false,
+  "patientDataImported": false,
+  "databaseWrites": false,
+  "browserInteractionTesting": false,
+  "limitations": "Actual source/content/schema/export checks, not clinical correctness, editorial completeness, database deployment or imaging registration. Unknown fields are rejected; free text is not a patient-data detector."
+}

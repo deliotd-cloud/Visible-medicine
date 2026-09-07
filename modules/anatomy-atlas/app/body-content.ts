@@ -17,6 +17,7 @@ import { footVascularGroupFor } from '../lib/foot-vascular-anatomy';
 import { ocularGroupFor } from '../lib/ocular-anatomy';
 import { laryngealGroupFor } from '../lib/laryngeal-anatomy';
 import { forearmVascularGroupFor } from '../lib/forearm-vascular-anatomy';
+import { draftLesson, type ContentLesson } from '../lib/content-types';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -53,11 +54,18 @@ const functions: Record<string, string> = {
   FMA50801:
     'The brain integrates sensory information and supports movement, cognition and regulation of bodily functions.',
 };
+/** Legacy display API: keep the exact section shape and copy unchanged. */
 export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
+  const { readiness: _readiness, ...section } = bodyLesson(s, tab);
+  return section;
+}
+
+/** Readiness belongs to the authoring branch, never inferred from its title. */
+export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   const existing = shoulderStructures.find((item) =>
     item.sourceFmaIds?.includes(s.fmaId),
   );
-  if (existing) return existing.sections[tab];
+  if (existing) return draftLesson(existing.sections[tab]);
   const axial =
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??
@@ -75,6 +83,7 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
       : undefined);
   if (axial && (tab === 'anatomy' || tab === 'function'))
     return {
+      readiness: 'draft',
       title: `${axial.name} · draft`,
       body: tab === 'anatomy' ? axial.anatomy : axial.function,
       bullets:
@@ -91,6 +100,7 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
   const neuro = neuroGroupFor(s.fmaId);
   if (neuro && (tab === 'anatomy' || tab === 'function'))
     return {
+      readiness: tab === 'function' && !neuro.function ? 'pending' : 'draft',
       title: `${neuro.name} · draft`,
       body:
         tab === 'anatomy'
@@ -116,6 +126,7 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
     };
   if (tab === 'anatomy')
     return {
+      readiness: 'identity-only',
       title: s.provenance?.recovered
         ? 'Recovered anatomy · review pending'
         : 'Anatomical identity',
@@ -138,6 +149,7 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
     };
   if (tab === 'function' && /set of lumbricals/.test(s.sourceName))
     return {
+      readiness: 'draft',
       title: 'Lumbrical group · draft',
       body: 'The hand lumbricals contribute to flexion at the metacarpophalangeal joints and extension at the interphalangeal joints through the extensor apparatus.',
       note: 'This source represents a group. Do not assign a single nerve supply to all four muscles; individual attachments and innervation need separate reviewed records.',
@@ -148,6 +160,7 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
     /set of (palmar|dorsal) interossei/.test(s.sourceName)
   )
     return {
+      readiness: 'draft',
       title: 'Interosseous group · draft',
       body: /dorsal/.test(s.sourceName)
         ? 'The dorsal hand interossei spread the fingers relative to the middle-finger axis. They also help bend the knuckles and straighten the interphalangeal joints.'
@@ -163,6 +176,7 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
     };
   if (tab === 'function' && /intervertebral disk/.test(s.sourceName))
     return {
+      readiness: 'draft',
       title: 'Whole intervertebral disc · draft',
       body: 'Intervertebral discs cushion and distribute loads between neighbouring vertebral bodies. An outer annulus surrounds the inner nucleus; those internal components are not separated in this mesh.',
       note: '22 source-labelled disc surfaces are available. One source level remains unresolved. No measured disc thickness, disease state or radiological level registration is certified.',
@@ -172,6 +186,7 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
     };
   if (tab === 'function' && /calcaneal tendon/.test(s.sourceName))
     return {
+      readiness: 'draft',
       title: 'Achilles tendon · draft',
       body: 'The calcaneal tendon transmits force from gastrocnemius and soleus to the heel bone, supporting plantar flexion at the ankle.',
       note: 'The source surface does not separately show subtendons, paratenon or a validated insertion footprint.',
@@ -181,6 +196,7 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
     };
   if (tab === 'function' && /trochlear nerve/.test(s.sourceName))
     return {
+      readiness: 'draft',
       title: 'Trochlear nerve (CN IV) · draft',
       body: 'The trochlear nerve supplies the superior oblique muscle of the eye. It emerges from the dorsal brainstem and reaches the orbit through the superior orbital fissure.',
       note: 'The displayed source segment is not a validated reconstruction of the entire nerve course.',
@@ -190,6 +206,7 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
     };
   if (tab === 'function' && /long plantar ligament/.test(s.sourceName))
     return {
+      readiness: 'draft',
       title: 'Long plantar ligament · draft',
       body: 'The long plantar ligament supports the plantar aspect of the lateral foot and contributes to longitudinal-arch stability.',
       note: 'Source surface and draft teaching note require independent anatomical review.',
@@ -199,12 +216,14 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
     };
   if (tab === 'function' && s.system === 'vessels')
     return {
+      readiness: 'identity-only',
       title: 'Vascular segment · review pending',
       body: 'This entry makes a source-labelled vessel segment independently selectable. Its complete branches, tributaries, supplied territory and normal variants have not been authored as a reviewed lesson.',
       note: 'Gaps between displayed surfaces must not be interpreted as occlusion or as validated vessel endpoints. Red/blue identifies artery/vein, not oxygenation.',
     };
   if (tab === 'function' && /ciliary ganglion/.test(s.sourceName))
     return {
+      readiness: 'draft',
       title: 'Ciliary ganglion · draft',
       body: 'This orbital ganglion relays parasympathetic signals to the sphincter pupillae and ciliary muscle through short ciliary nerves.',
       note: 'The small ganglion surface is selectable, but connecting roots and short ciliary nerve routes have not been reconstructed. Source identity and position require specialist review.',
@@ -214,6 +233,7 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
     };
   if (tab === 'function' && /main bronchus/.test(s.sourceName))
     return {
+      readiness: 'draft',
       title: 'Central airway · draft',
       body: 'The main bronchi conduct air from the trachea towards the lungs and their branching airways.',
       note: 'These source-labelled surfaces have not been boundary-validated. Do not infer clinical bronchial length, lumen or segment numbering from this representation.',
@@ -223,6 +243,7 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
     };
   if (tab === 'function' && ['FMA14539', 'FMA14668'].includes(s.fmaId))
     return {
+      readiness: 'draft',
       title: 'Biliary drainage · draft',
       body:
         s.fmaId === 'FMA14539'
@@ -234,31 +255,37 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
   if (tab === 'function')
     return functions[s.fmaId]
       ? {
+          readiness: 'draft',
           title: 'Function',
           body: functions[s.fmaId],
           note: 'Draft teaching note · clinical/editorial review pending.',
         }
       : {
+          readiness: 'pending',
           title: 'Function content pending',
           body: 'A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now.',
         };
   if (['ct', 'mri', 'ultrasound'].includes(tab))
     return {
+      readiness: 'pending',
       title: `${tab === 'ultrasound' ? 'Ultrasound' : tab.toUpperCase()} content pending`,
       body: 'No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.',
       note: 'Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates.',
     };
   if (tab === 'pathology')
     return {
+      readiness: 'pending',
       title: 'Pathology content pending',
       body: 'This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure.',
     };
   if (tab === 'clinical')
     return {
+      readiness: 'pending',
       title: 'Clinical content pending',
       body: 'Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care.',
     };
   return {
+    readiness: 'generated-identification',
     title: 'Identification practice',
     body: `Find ${s.name.toLowerCase()} on the model.`,
   };
