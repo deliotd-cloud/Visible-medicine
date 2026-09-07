@@ -6,6 +6,8 @@ The [requirement audit](REQUIREMENT_AUDIT.md) consolidates current coverage, act
 
 ## Neck teaching gates
 
+The [deep-neck drafts](DEEP_NECK_CURRICULUM.md) add 28 spine-route entries requiring independent attachment/level/variant review, anterior versus posterior ramus distinctions, joint-specific actions and triangle-boundary adjudication. Longissimus capitis keeps explicitly regional origin wording pending exact source-specific attachment review. No segmental nerve course, biomechanical model, myodural segmentation or procedural safety is established.
+
 The [neck drafts](NECK_CURRICULUM.md) require review of exact attachment/variant wording, cervical-rotator family versus slip-specific identity, SCM heads and posture-dependent action, scalene rib and nerve relationships, and facial versus spinal-nerve supply. Zero pending muscle Function branches in the head/neck route is not anatomical completeness: spine-route neck muscles still need authoring and group overviews are partial. No motion, respiratory, procedural or diagnostic acceptance is supplied.
 
 ## Swallowing and voice teaching gates

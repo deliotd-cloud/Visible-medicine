@@ -2,6 +2,8 @@
 
 ## Delivered scope
 
+**Current deep-neck extension:** [56 basic drafts](DEEP_NECK_CURRICULUM.md) cover 28 existing spine-route entries. Body totals: Anatomy 493 draft / 529 identity-only; Function 548 draft / 146 identity-only / 328 pending. `authoringBeforeDeepNeck` verifies/restores only these topics before the ten previous offline projections. All 596 topic edits remain pinned to the original baseline; runtime/export stay current. The neck report now labels its historical totals explicitly. No source/schema/review migration occurs; older counts below are historical.
+
 **Current neck extension:** [28 basic drafts](NECK_CURRICULUM.md) cover 14 existing entries, including two explicitly regional rotator overviews. Body totals: Anatomy 465 draft / 557 identity-only; Function 520 draft / 146 identity-only / 356 pending. `authoringBeforeNeck` verifies/restores only these topics before nine earlier offline projections. All 540 topic edits remain pinned to the original baseline; runtime/export stay current. Prior counts below are historical. No source/schema/review migration occurs.
 
 **Current swallowing extension:** [54 new basic drafts](SWALLOWING_CURRICULUM.md) cover 27 existing hyoid/tongue/palatal/laryngeal entries. Body totals: Anatomy 451 draft / 571 identity-only; Function 506 draft / 146 identity-only / 370 pending. `authoringBeforeSwallowing` verifies/restores only these topics before the eight prior offline projections. All 512 topic edits remain pinned to the original baseline. Runtime/export stay current; old reports/paragraphs retain milestone counts. No source/schema/review migration occurs.

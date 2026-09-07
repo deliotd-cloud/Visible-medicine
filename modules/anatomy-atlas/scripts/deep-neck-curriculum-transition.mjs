@@ -1,32 +1,32 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readContentJson } from './content-contract-tools.mjs';
-import { authoringBeforeDeepNeck } from './deep-neck-curriculum-transition.mjs';
 const hash = (value) =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 /** Offline preservation only; current runtime/exported lessons remain intact. */
-export async function authoringBeforeNeck(context) {
-  const { catalog } = context;
-  const api = await authoringBeforeDeepNeck(context);
-  const before = await readContentJson('content/neck-curriculum.before.json');
+export async function authoringBeforeDeepNeck(context) {
+  const { api, catalog } = context;
+  const before = await readContentJson(
+    'content/deep-neck-curriculum.before.json',
+  );
   const after = await readContentJson(
-    'content/neck-curriculum.transition.json',
+    'content/deep-neck-curriculum.transition.json',
   );
   assert.equal(
     hash(before),
-    'f86787a11fffddec3158df4a7c49e8378de2f727ad929bf0e59e2d1396f7da7c',
+    '5ab5e27a5a516b79ffd6d738870a6729f061b01d6dfe2f7a6230a97978cc3c94',
   );
   assert.equal(
     hash(after),
-    '59ca0a3f6a70b30d26f92dfa67c2bfd7509095d3d575808e40eb382ac22b3b5f',
+    '23dc1db2948f9977681ae30c0fc15af536dd1b25e27b037b91907940a5b5d8e1',
   );
-  assert.equal(before.sourceCommit, '01445ae44c805fb199dc6651d22669e19292622d');
+  assert.equal(before.sourceCommit, '70e8beac0d122405d0e3c8b7a93daaaab50ba06b');
   assert.equal(after.sourceCommit, before.sourceCommit);
   assert.equal(before.scope, 'body');
-  assert.equal(before.region, 'head-neck');
+  assert.equal(before.region, 'spine');
   assert.deepEqual(before.tabs, ['anatomy', 'function']);
-  assert.equal(before.entries.length, 14);
+  assert.equal(before.entries.length, 28);
   assert.deepEqual(
     after.entries.map((e) => [e.id, e.fmaId]),
     before.entries.map((e) => [e.id, e.fmaId]),
@@ -34,7 +34,7 @@ export async function authoringBeforeNeck(context) {
   const originals = new Map();
   for (const [i, entry] of before.entries.entries()) {
     const s = catalog.structures.find((s) => s.id === entry.id);
-    assert(s && s.system === 'muscles' && s.regions.includes('head-neck'));
+    assert(s && s.system === 'muscles' && s.regions.includes('spine'));
     assert.equal(s.fmaId, entry.fmaId);
     assert.equal(s.name, entry.name);
     for (const t of before.tabs) {
@@ -47,14 +47,14 @@ export async function authoringBeforeNeck(context) {
       assert.equal(
         hash(lesson),
         after.entries[i].sections[t],
-        'Unrecorded neck change: ' + s.id + ' ' + t,
+        'Unrecorded deep-neck change: ' + s.id + ' ' + t,
       );
       const { readiness: _readiness, ...displayed } = lesson;
       assert.deepEqual(displayed, api.bodyContent(s, t));
     }
     originals.set(s.id, entry.sections);
   }
-  assert.equal(originals.size, 14);
+  assert.equal(originals.size, 28);
   const bodyLesson = (s, t) =>
     originals.get(s.id)?.[t]
       ? structuredClone(originals.get(s.id)[t])
