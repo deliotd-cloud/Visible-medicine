@@ -82,6 +82,9 @@ same(
     // independently exercised by explode-styles:test, not silently rebaselined.
     changeLayout:
       'af5bb73784d6a9a0eca09aed29c761a01cc419de4c8d2df6d57003525f4a4f85',
+    // Selection recovery is independently executed by selection-visibility:test.
+    revealSelection:
+      '1cea695fbb227711161f4179f516ad6de36aa6c937b5605b96d819dc585e82eb',
   },
   'Named handlers preserved except the explicit explosion-style migration',
 );
@@ -96,12 +99,17 @@ for (const retired of [
   // f3b561f replaces the two arrangement buttons with one selector.
   'onClick/690436385377122ef5a17ee8b50e90b78d333dc8477086964406bedc32878cea',
   'onClick/979eebf6f969f80fa3c18ba941b24c6626b3dcb4ff4efe4ebd3643c9e8e4f750',
+  // The whole-view Reveal uncut reset is replaced by targeted selected-surface recovery.
+  'onClick/152e04a7bcd7e6a5521a9d1296b5caeae71d73e8ec97233701f2801d3647053f',
 ]) {
   const index = migratedCallbacks.indexOf(retired);
   check(index >= 0);
   migratedCallbacks.splice(index, 1);
 }
 migratedCallbacks.push(
+  'onRecover/41f5b811c870740268f0a368584b495627dec0abce7038ad9a74a8857774fa90',
+  'onReapply/8549d8cba04d43b531b1379e407534a86e1eb98200d169963ce48e290bde225d',
+  'onClick/41f5b811c870740268f0a368584b495627dec0abce7038ad9a74a8857774fa90',
   'onChange/fd55e1d20509cbf96ecd7daf538d27f6a539ccc7f4c0596e2ce161fa67a0aa09',
   'onChange/ed06a6ba79f65735fa1a9a6b2a0f558961a54a29d0ff9bb06b6277f1817d2f96',
   'onFocus/60791bef659a508c1030f248019b00646b1ab73d283d43374aa87641fdfce003',
@@ -242,8 +250,8 @@ for (const mode of ['explore', 'dissect', 'practice'])
       check(model.includes('atlas-camera-view'));
       same(
         (rail.match(/role="switch"/g) ?? []).length,
-        9,
-        'Six system switches, ghost context, plate view and cutaway',
+        10,
+        'Six systems, ghost context, plate, selected-solid and selected-uncut',
       );
       for (const feature of [
         'Anatomical systems',
@@ -528,9 +536,11 @@ const result = {
   stylesheetViewportCases: dimensions.length,
   preservedNamedHandlers: Object.keys(baseline.functions).length - 1,
   explicitExplosionHandlerMigration: 1,
-  preservedControlCallbacks: baseline.callbacks.length - 5,
+  preservedControlCallbacks: baseline.callbacks.length - 6,
   explicitNavigationReplacementCallbacks: 4,
   explicitExplosionReplacementCallbacks: 1,
+  explicitSelectionRecoveryHandler: 1,
+  explicitSelectionRecoveryCallbacks: 3,
   regions: 11,
   wholeBody: true,
   sourceGeometryChanged: false,

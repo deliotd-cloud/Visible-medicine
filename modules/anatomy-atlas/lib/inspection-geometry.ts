@@ -7,24 +7,31 @@ import {
   type Intersection,
   type Material,
 } from 'three';
-import { sectionAxes, type InspectionState } from './inspection-state';
+import {
+  sectionAxes,
+  sectionLevel,
+  type InspectionState,
+} from './inspection-state';
 
 /** World-space plane, translated with a structure so explode preserves the assembled cut. */
 export function sectionPlanes(
   bounds: Box3,
   state: InspectionState,
   offset = new Vector3(),
+  selected = false,
 ): Plane[] {
-  if (state.plane === 'off' || bounds.isEmpty()) return [];
+  if (
+    state.plane === 'off' ||
+    bounds.isEmpty() ||
+    (selected && state.keepSelectedUncut)
+  )
+    return [];
   const axis = sectionAxes[state.plane].axis;
-  const percent =
-    Math.max(
-      0,
-      Math.min(100, Number.isFinite(state.position) ? state.position : 50),
-    ) / 100;
-  const level =
-    bounds.min.getComponent(axis) +
-    (bounds.max.getComponent(axis) - bounds.min.getComponent(axis)) * percent;
+  const level = sectionLevel(
+    bounds.min.getComponent(axis),
+    bounds.max.getComponent(axis),
+    state.position,
+  );
   const normal = new Vector3().setComponent(axis, state.flipped ? -1 : 1);
   return [
     new Plane(normal, -normal.getComponent(axis) * level - normal.dot(offset)),

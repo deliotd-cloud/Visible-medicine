@@ -82,6 +82,12 @@ import { ReviewStatus } from './review-status';
 import { InspectionControls } from './inspection-controls';
 import { initialInspection } from '@/lib/inspection-state';
 import {
+  selectionBounds,
+  selectionVisibility,
+  recoverSelectionInspection,
+} from '@/lib/selection-visibility';
+import { SelectionVisibilityNotice } from './selection-visibility-notice';
+import {
   practiceReducer,
   initialPractice,
   practiceScore,
@@ -113,6 +119,16 @@ const systemIcons: Record<SystemKey, typeof Bone> = {
   muscles: Layers3,
   'soft-tissue': CircleDot,
 };
+const shoulderSelectionFrame = selectionBounds(manifest.parts, -3.15);
+const shoulderSelectionBounds = new Map(
+  structures.map((s) => [
+    s.id,
+    selectionBounds(
+      manifest.parts.filter((p) => p.structureId === s.id),
+      -3.15,
+    ),
+  ]),
+);
 const AnatomyScene = dynamic(
   () => import('./anatomy-scene').then((module) => module.AnatomyScene),
   { ssr: false },
@@ -454,6 +470,24 @@ export default function ShoulderExplorer({
 
   const answerCorrect = answerId === currentQuestion.answer;
   const answerName = answerId ? structureById.get(answerId)?.name : '';
+  const selectedVisibility =
+    mode === 'study'
+      ? selectionVisibility({
+          system: selected.system,
+          enabled: visibleSystems[selected.system],
+          bounds: shoulderSelectionBounds.get(selected.id) ?? null,
+          frame: shoulderSelectionFrame,
+          inspection,
+        })
+      : null;
+  function revealSelection() {
+    if (mode !== 'study' || !selectedVisibility) return;
+    if (selectedVisibility.systemOff)
+      setVisibleSystems((current) => ({ ...current, [selected.system]: true }));
+    setInspection((current) =>
+      recoverSelectionInspection(current, selectedVisibility),
+    );
+  }
 
   return (
     <TooltipProvider>
@@ -812,6 +846,20 @@ export default function ShoulderExplorer({
                 </SelectContent>
               </Select>
             </div>
+            {mode === 'study' && (
+              <SelectionVisibilityNotice
+                name={selected.name}
+                report={selectedVisibility}
+                onRecover={revealSelection}
+                onReapply={() => {
+                  if (mode === 'study')
+                    setInspection((current) => ({
+                      ...current,
+                      keepSelectedUncut: false,
+                    }));
+                }}
+              />
+            )}
             {mode === 'exam' && (
               <div className="shoulder-exam-prompt">
                 <span>QUESTION {questionIndex + 1}</span>
@@ -1097,18 +1145,9 @@ export default function ShoulderExplorer({
                     <Button
                       size="sm"
                       variant="outline"
-                      onClick={() =>
-                        setInspection((current) => ({
-                          ...current,
-                          plane: 'off',
-                          opacity: {
-                            ...current.opacity,
-                            [selected.system]: 100,
-                          },
-                        }))
-                      }
+                      onClick={revealSelection}
                     >
-                      Reveal uncut structure
+                      Reveal selection
                     </Button>
                     <GroupedAnatomyNotes>
                       {(tab) => {

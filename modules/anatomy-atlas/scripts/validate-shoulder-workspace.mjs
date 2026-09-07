@@ -50,6 +50,10 @@ const output = await build({
             .replace(
               'const [modelReady, setModelReady] = useState(false)',
               'const [modelReady, setModelReady] = useState(globalThis.__ready)',
+            )
+            .replace(
+              'useState(initialInspection)',
+              'useState(globalThis.__inspection ?? initialInspection)',
             ),
         }));
         api.onLoad({ filter: /atlas-workspace\.tsx$/ }, async () => ({
@@ -198,6 +202,28 @@ for (const selected of structures) {
     }
 }
 context.__exam = true;
+// Actual entry integration: the compact notice is driven by the model's inspection state.
+context.__exam = false;
+context.__mode = 'explore';
+context.__inspection = {
+  plane: 'off',
+  position: 50,
+  flipped: false,
+  opacity: { muscles: 5 },
+  keepSelectedSolid: false,
+};
+const muscle = structures.find((s) => s.system === 'muscles');
+check(render(muscle).includes('Too transparent to select on the model'));
+context.__inspection = {
+  ...context.__inspection,
+  plane: 'axial',
+  keepSelectedSolid: true,
+  keepSelectedUncut: true,
+};
+check(render(muscle).includes('Selected structure kept uncut'));
+context.__exam = true;
+check(!render(muscle).includes('vm-selection-visibility'));
+context.__inspection = undefined;
 for (const ready of [false, true]) {
   context.__ready = ready;
   const html = render();

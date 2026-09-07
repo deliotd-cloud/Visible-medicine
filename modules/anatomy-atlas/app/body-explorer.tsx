@@ -87,6 +87,12 @@ import { ReviewStatus } from './review-status';
 import { InspectionControls } from './inspection-controls';
 import { initialInspection } from '@/lib/inspection-state';
 import {
+  selectionBounds,
+  selectionVisibility,
+  recoverSelectionInspection,
+} from '@/lib/selection-visibility';
+import { SelectionVisibilityNotice } from './selection-visibility-notice';
+import {
   createPracticeSession,
   practiceReducer,
   initialPractice,
@@ -318,6 +324,31 @@ export default function BodyExplorer({
     [stage, focusedStudy, resolved, systems],
   );
   const selected = catalog?.structures.find((s) => s.id === selectedId) ?? null;
+  const selectionFrame = useMemo(
+    () => selectionBounds(regionStructures),
+    [regionStructures],
+  );
+  const selectedVisibility =
+    !exam && selected && regionStructures.some((s) => s.id === selected.id)
+      ? selectionVisibility({
+          system: selected.system,
+          enabled: systems[selected.system],
+          removed: hiddenIds.includes(selected.id),
+          bounds: selected.bounds,
+          frame: selectionFrame,
+          inspection,
+        })
+      : null;
+  function revealSelection() {
+    if (exam || !selected || !selectedVisibility) return;
+    if (selectedVisibility.removed)
+      dispatch({ type: 'restore', id: selected.id });
+    if (selectedVisibility.systemOff)
+      setSystems((current) => ({ ...current, [selected.system]: true }));
+    setInspection((current) =>
+      recoverSelectionInspection(current, selectedVisibility),
+    );
+  }
   const relatedViews = useMemo(
     () =>
       exam ? [] : relatedStudyViews(regionStructures, profile, selectedId),
@@ -1077,6 +1108,20 @@ export default function BodyExplorer({
               <small>structures</small>
             </span>
           </div>
+          {!exam && selected && (
+            <SelectionVisibilityNotice
+              name={selected.name}
+              report={selectedVisibility}
+              onRecover={revealSelection}
+              onReapply={() => {
+                if (!exam)
+                  setInspection((current) => ({
+                    ...current,
+                    keepSelectedUncut: false,
+                  }));
+              }}
+            />
+          )}
           <div className="body-canvas illustration-mode">
             <div className="body-view-row">
               <CameraViewMenu
@@ -1492,7 +1537,7 @@ export default function BodyExplorer({
                 aria-atomic="true"
               >
                 {selected
-                  ? `${selectionNotice?.id === selected.id ? selectionNotice.message : `${selected.name} selected.`} ${structureDetail(selected)}. Cutaway and opacity can affect visibility; use Reveal uncut if needed.`
+                  ? `${selectionNotice?.id === selected.id ? selectionNotice.message : `${selected.name} selected.`} ${structureDetail(selected)}. ${selectedVisibility?.reasons.join('. ') || ''}`
                   : 'No structure selected.'}
               </output>
               <WorkspaceOnly modes={['practice']}>
@@ -1605,20 +1650,9 @@ export default function BodyExplorer({
                         <Button
                           size="sm"
                           variant="outline"
-                          onClick={() => {
-                            setInspection((current) => ({
-                              ...current,
-                              plane: 'off',
-                              opacity: {
-                                ...current.opacity,
-                                [selected.system]: 100,
-                              },
-                            }));
-                            setFocus(true);
-                            setZoom(1);
-                          }}
+                          onClick={revealSelection}
                         >
-                          Reveal uncut
+                          Reveal selection
                         </Button>{' '}
                         <Button
                           size="sm"

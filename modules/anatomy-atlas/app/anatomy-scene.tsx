@@ -298,6 +298,7 @@ function Model(props: SceneProps & { offsets: Map<string, THREE.Vector3> }) {
           sectionFrame,
           props.inspection,
           displacement,
+          selected,
         );
         const opacity = systemOpacity(
           props.inspection,

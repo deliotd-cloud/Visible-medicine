@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "checks": 1485539,
+  "scopeCases": 37,
+  "clippingCases": 147180,
+  "handlerCases": 2064,
+  "sourceGeometryChanged": false,
+  "clinicalValidation": false,
+  "browserInteractionTesting": false,
+  "limitations": "Source-bound status compared with actual Three clipping planes; all regional sides plus cropped shoulder; real presentation offsets, exact recovery closures, model-loop AST wiring and installed notice UI SSR. No screen-occlusion, GPU pixels, browser focus/touch or clinical acceptance."
+}

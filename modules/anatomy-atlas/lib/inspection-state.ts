@@ -5,6 +5,8 @@ export type InspectionState = {
   flipped: boolean;
   opacity: Record<string, number>;
   keepSelectedSolid: boolean;
+  /** Optional for legacy saved views. Does not bypass source crops. */
+  keepSelectedUncut?: boolean;
 };
 export const initialInspection: InspectionState = {
   plane: 'off',
@@ -18,6 +20,11 @@ export const sectionAxes = {
   coronal: { axis: 2, low: 'Posterior', high: 'Anterior' },
   sagittal: { axis: 0, low: 'Right', high: 'Left' },
 } as const;
+export function sectionLevel(low: number, high: number, position: number) {
+  const percent =
+    Math.max(0, Math.min(100, Number.isFinite(position) ? position : 50)) / 100;
+  return low + (high - low) * percent;
+}
 export function systemOpacity(
   state: InspectionState,
   system: string,

@@ -163,6 +163,8 @@ export function parseStudyView(value: unknown): StudyView | null {
     !finite(i.position, 0, 100) ||
     typeof i.flipped !== 'boolean' ||
     typeof i.keepSelectedSolid !== 'boolean' ||
+    (i.keepSelectedUncut !== undefined &&
+      typeof i.keepSelectedUncut !== 'boolean') ||
     !object(i.opacity)
   )
     return null;
@@ -198,6 +200,9 @@ export function parseStudyView(value: unknown): StudyView | null {
       position: i.position,
       flipped: i.flipped,
       keepSelectedSolid: i.keepSelectedSolid,
+      ...(i.keepSelectedUncut !== undefined
+        ? { keepSelectedUncut: i.keepSelectedUncut }
+        : {}),
       opacity,
     },
     camera:

@@ -10,6 +10,8 @@ Beside the separation slider, choose **Spread**, **Extract selected**, or **Tray
 
 ## Simpler navigation and slimmer system controls
 
+If a selected structure becomes hidden or too transparent, the conditional **Reveal selection** notice restores it without resetting the whole study view. It can keep only the selection solid and uncut while surrounding anatomy remains dissected; **Reapply cutaway** reverses the cutaway exception. See [behaviour, saved-state support and limits](docs/SELECTION_VISIBILITY.md).
+
 Use **Explore · Dissect · Practice** to show the relevant tools without resetting the model. The system rail is now 216px wide (previously 264px), with compact labelled switches. **View** replaces six camera-direction buttons. Selected-structure actions live together, with less common actions under **More**. Notes are grouped into **Anatomy · Clinical · Imaging**; quiz notes and setup live in Practice. **Search atlas** finds body regions, source structures and the current region's study views; a view preview requires confirmation before resetting custom dissection settings. **Focus view** collapses both desktop/tablet panels; phones already use this layout. See [controls, evidence and limitations](docs/ATLAS_NAVIGATION.md). The dedicated shoulder now shares these workspace modes, grouped notes and side panels, with its own structure search and compact camera/layer menus. See [shoulder controls and remaining acceptance](docs/SHOULDER_WORKSPACE.md).
 
 ## Model-first, less scrolling

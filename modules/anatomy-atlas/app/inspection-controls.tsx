@@ -159,6 +159,18 @@ export function InspectionControls({
             />
             Keep selection solid
           </label>
+          <label htmlFor={`${id}-uncut`}>
+            <Switch
+              id={`${id}-uncut`}
+              disabled={disabled}
+              checked={value.keepSelectedUncut === true}
+              onCheckedChange={(checked) =>
+                onChange({ ...value, keepSelectedUncut: checked })
+              }
+              aria-label="Keep selected structure uncut"
+            />
+            Keep selection uncut
+          </label>
           <label htmlFor={`${id}-plate`}>
             <Switch
               id={`${id}-plate`}

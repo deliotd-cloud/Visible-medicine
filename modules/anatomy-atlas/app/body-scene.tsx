@@ -130,7 +130,12 @@ function Bundle({
         const position = offsets.get(structure.id) ?? new THREE.Vector3();
         const removed = props.hiddenIds.includes(structure.id),
           faded = removed || (props.isolated && !selected);
-        const clippingPlanes = sectionPlanes(frame, props.inspection, position);
+        const clippingPlanes = sectionPlanes(
+          frame,
+          props.inspection,
+          position,
+          selected,
+        );
         const opacity = systemOpacity(
           props.inspection,
           structure.system,

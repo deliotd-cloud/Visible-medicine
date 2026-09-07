@@ -103,6 +103,23 @@ const bookmark = (id = 'study-1', state = base) => ({
   savedAt: '2026-09-06T12:00:00.000Z',
   state,
 });
+for (const keepSelectedUncut of [true, false]) {
+  const state = { ...base, inspection: { ...inspection, keepSelectedUncut } };
+  same(
+    a.parseStudyView(state),
+    state,
+    'Selected-only cutaway exemption round-trips',
+  );
+}
+for (const keepSelectedUncut of ['yes', 1, null, {}, []])
+  same(
+    a.parseStudyView({
+      ...base,
+      inspection: { ...inspection, keepSelectedUncut },
+    }),
+    null,
+    'Malformed cutaway exemption rejected',
+  );
 same(a.decodeStudyBookmarks(null), [], 'Empty device store');
 same(
   a.decodeStudyBookmarks(a.encodeStudyBookmarks([bookmark()])),
@@ -352,6 +369,17 @@ for (const layer of ['cuff', 'surface', 'bones'])
       systems: { skeleton: true, muscles: true, 'soft-tissue': true },
     };
     check(!!a.parseStudyView(state), 'Shoulder state accepted');
+    for (const keepSelectedUncut of [true, false]) {
+      const next = {
+        ...state,
+        inspection: { ...state.inspection, keepSelectedUncut },
+      };
+      same(
+        a.parseStudyView(next),
+        next,
+        'Shoulder preserves selected-only cutaway exemption',
+      );
+    }
     check(
       a.compatibleStudyView(state, {
         kind: 'shoulder',
