@@ -9,8 +9,8 @@
     "content/review-revisions.json": "abc8f9410e00b41282e149d2bb6020d96ad6367aed769888519940c4c24118a0",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "fe830e2cca70ba808925c53a0f2e14162136f90d938762bd0a93f188807f9d33",
-    "explicitTopicReadiness": "3ae1eb3285e7e5950940575083eb8db26dead22221b41c28367f41b9fa64b0a0"
+    "resolvedContentAndRecipeData": "e5a5c153a9765f43423fb3e77824d38c020e6ec7a72737ea91ee152e9f3c8d97",
+    "explicitTopicReadiness": "11dad6cffe16527967c019de4b80acc6d6c0706e625b827e1081cd101696f9c9"
   },
   "anatomy": {
     "bodyRepresentations": 1022,
@@ -101,15 +101,15 @@
     "classificationLimit": "Explicit readiness from authoring branches; not inferred from titles and not clinical approval. Existing shoulder authoring is explicitly draft.",
     "body": {
       "anatomy": {
-        "specificDraft": 451,
-        "identityOnly": 571,
+        "specificDraft": 465,
+        "identityOnly": 557,
         "pending": 0,
         "generatedIdentification": 0
       },
       "function": {
-        "specificDraft": 506,
+        "specificDraft": 520,
         "identityOnly": 146,
-        "pending": 370,
+        "pending": 356,
         "generatedIdentification": 0
       },
       "ct": {
@@ -202,15 +202,15 @@
     "byRegion": {
       "head-neck": {
         "anatomy": {
-          "specificDraft": 132,
-          "identityOnly": 143,
+          "specificDraft": 146,
+          "identityOnly": 129,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 147,
+          "specificDraft": 161,
           "identityOnly": 27,
-          "pending": 101,
+          "pending": 87,
           "generatedIdentification": 0
         },
         "ct": {
@@ -702,15 +702,15 @@
       },
       "spine": {
         "anatomy": {
-          "specificDraft": 8,
-          "identityOnly": 104,
+          "specificDraft": 10,
+          "identityOnly": 102,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 30,
+          "specificDraft": 32,
           "identityOnly": 0,
-          "pending": 82,
+          "pending": 80,
           "generatedIdentification": 0
         },
         "ct": {

@@ -4,6 +4,10 @@
 
 The [requirement audit](REQUIREMENT_AUDIT.md) consolidates current coverage, actual teaching gaps and the next device-acceptance matrix. Current source contains 1,022 body representations, 138 stages and 120 focuses; counts in milestone-specific gates below are historical. Every unresolved gate remains relevant. Current local layout/explosion/recovery changes are not covered by the earlier browser session, and no clinical approval is created by source or software checks.
 
+## Neck teaching gates
+
+The [neck drafts](NECK_CURRICULUM.md) require review of exact attachment/variant wording, cervical-rotator family versus slip-specific identity, SCM heads and posture-dependent action, scalene rib and nerve relationships, and facial versus spinal-nerve supply. Zero pending muscle Function branches in the head/neck route is not anatomical completeness: spine-route neck muscles still need authoring and group overviews are partial. No motion, respiratory, procedural or diagnostic acceptance is supplied.
+
 ## Swallowing and voice teaching gates
 
 The newer [swallowing/voice drafts](SWALLOWING_CURRICULUM.md) require review of 27 exact entries: grouped digastric/thyro-arytenoid components, fixed-hyoid/jaw wording, C1 versus XII motor origin, V3/VII/X distinctions, palatal attachment/tendon relationships and uvular representation. The model does not validate swallowing safety, closure, vocal-fold vibration or voice pitch. Clinical/modality authoring is separate.

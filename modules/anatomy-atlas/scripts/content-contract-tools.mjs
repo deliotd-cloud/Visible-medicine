@@ -22,6 +22,7 @@ export * from './lib/foot-curriculum.ts';
 export * from './lib/pelvic-curriculum.ts';
 export * from './lib/orbital-curriculum.ts';
 export * from './lib/swallowing-curriculum.ts';
+export * from './lib/neck-curriculum.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';`,
       resolveDir: fileURLToPath(contentRoot),

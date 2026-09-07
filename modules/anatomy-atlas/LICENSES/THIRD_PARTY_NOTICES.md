@@ -1,5 +1,7 @@
 # Third-party notices
 
+The neck curriculum adds original brief factual teaching with StatPearls/Kenhub references, not imported paragraphs, tables or illustrations. Their publication rights are not treated as commercial asset licences. No mesh, dependency, font, texture, paid API or private data is added. Original text/code retain existing MIT terms; DBCLS BodyParts3D v4 index-derived evidence retains CC BY 4.0 notices. See `../docs/NECK_CURRICULUM.md`.
+
 The swallowing curriculum adds original brief factual teaching, citing StatPearls and Kenhub without importing their paragraphs, tables or diagrams or relying on NC-ND terms for a commercial asset. No mesh, dependency, font, texture, paid API or private data is added. Original text/code remain under existing MIT terms; DBCLS BodyParts3D v4 index-derived evidence retains CC BY 4.0 notices. See `../docs/SWALLOWING_CURRICULUM.md`.
 
 The orbital curriculum adds brief original teaching with factual references to StatPearls, Purves/Sinauer and Clinical Methods, not redistributed reference prose, tables or illustrations. Their publication rights are not treated as commercial asset licences. No mesh, font, texture, package or paid service is added. Original text/code retain existing MIT terms; DBCLS BodyParts3D v4 source-index evidence retains CC BY 4.0 attribution/change obligations. See `../docs/ORBITAL_CURRICULUM.md`.

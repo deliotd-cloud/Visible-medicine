@@ -1,0 +1,118 @@
+{
+  "sourceCommit": "01445ae44c805fb199dc6651d22669e19292622d",
+  "reason": "Explicit 28-topic Anatomy/Function authoring for 14 existing neck-muscle representations; unrelated content preserved.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-subclavius",
+      "fmaId": "FMA13412",
+      "sections": {
+        "anatomy": "3b990aba8b51cde8521bf226008bd77710e4d38ae43e37c34f509b908d3cfb53",
+        "function": "cd514822b5ec2494086d53bdaccbbd342b93b8cede27b4e7cd1ef3ce911aed62"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-subclavius",
+      "fmaId": "FMA13411",
+      "sections": {
+        "anatomy": "872912a2ab55bddf1fd235190d7bfceaf2612059e37afc50db52d84ae12c2084",
+        "function": "78d8e34f6e737b466dfde2fcb9622daffd0c4c13c5c4d6c159cb944b830b8865"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-cervical-rotator",
+      "fmaId": "FMA81752",
+      "sections": {
+        "anatomy": "7cad5170958312c4546c23e18d30671aadf6eb49929e32d04817249383d32f4b",
+        "function": "45cfd478d84bac8d5fc2f65af245923f0ebc7a2f2f73bb0d96600e8349239e29"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-cervical-rotator",
+      "fmaId": "FMA81753",
+      "sections": {
+        "anatomy": "dc5f8e1ceb6173f318c51733f119251786cf39f090c6f7340bd90f655294b353",
+        "function": "0594805cfe48d1578889fd9b5fc04afac64fcac7cd170a5d154c6f4d7c6d56c1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-platysma",
+      "fmaId": "FMA45740",
+      "sections": {
+        "anatomy": "76b0a5bba53397fd51e623c8377cbf6544d2338fa97c2aba82f80f0cede333cd",
+        "function": "f9a591493fea1dc5a2bbd01c8f61b2b846e33217b8179864e6ffff790c98f7c1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-scalenus-anterior",
+      "fmaId": "FMA13393",
+      "sections": {
+        "anatomy": "a965bb5f7dc4434152e7f7212f247c7ecbbde893fa1aa05e646772437619c7e9",
+        "function": "6de6cd943ec74513cd76246c2a316c36ecda27292096a611dd25ec1c1fc5244f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-scalenus-medius",
+      "fmaId": "FMA13391",
+      "sections": {
+        "anatomy": "12574275a9496c087756046903ea6a334be120c83d1f18193e119fde4e780191",
+        "function": "368644997d8273682f5163048bdc57004bfe645aadbf352d4bc1e5e58337264c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-scalenus-posterior",
+      "fmaId": "FMA13389",
+      "sections": {
+        "anatomy": "50ca03cf7e806bdaaf99cb9e8a4d02a71fd24523fbd35e7374373c23af38abcd",
+        "function": "da36d075718d30b1d1b3a402160ba0064acfb4b1043f2b2e9f85603448f9512e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-sternocleidomastoid",
+      "fmaId": "FMA13409",
+      "sections": {
+        "anatomy": "c4270a2c51f0b9981e6eba9d407427535f1c371a02b1390c4d2d1e6be439ced1",
+        "function": "5890ddda0efec53096afab8fe143d87f450f1e0162474a8feee5ba5bfe19071f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-platysma",
+      "fmaId": "FMA45739",
+      "sections": {
+        "anatomy": "14550ea5396e14ab965dd636642162be1411acac6dda8ba7963ff05f66267b87",
+        "function": "e533ceffcd5020e52bfddaafb0341944f6dd6407157b4c1de7b6244d786f63f1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-scalenus-anterior",
+      "fmaId": "FMA13392",
+      "sections": {
+        "anatomy": "164ab95a86d72177d62bbad9df545a2bb5d6c9f1236e5ec1be6dc8bd28a2d002",
+        "function": "a3a2866065f0929fc6cbb1d6665e62daa5a32bdf05d39061cbe2b73e0e9595e9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-scalenus-medius",
+      "fmaId": "FMA13390",
+      "sections": {
+        "anatomy": "e1bb0f1674b6bf87b7ca5975325367e47d11b58055b8a2ef534747780916494c",
+        "function": "b64245a271e55c0abe03af7a2e089a21eb1f7116404b3a066322e548119e1639"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-scalenus-posterior",
+      "fmaId": "FMA13388",
+      "sections": {
+        "anatomy": "1aaeec0c66bc92501f9ffddc6ff0f0927fdb64894821630592d7e81496644393",
+        "function": "fd0bb1422502c3562698021ff3cee50f3fa00e5b9dcc0acd1cdb49bfc4a7fb8c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-sternocleidomastoid",
+      "fmaId": "FMA13408",
+      "sections": {
+        "anatomy": "78ca920635fbcbe5149f25ab127bc87ab5eb4bd0f2f70d8aab78c44b317fc06a",
+        "function": "5cf7c701e8e7e3f13dc395e95b576f7a572a800d2a9ab83d6735d7568fc96117"
+      }
+    }
+  ]
+}

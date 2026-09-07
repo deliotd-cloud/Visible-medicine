@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "checks": 8685,
+  "lessonDefinitions": 7,
+  "bodyRepresentations": 14,
+  "authoredSections": 28,
+  "combinedPinnedCurriculumSections": 540,
+  "bodyReadiness": {
+    "anatomy": {
+      "draft": 465,
+      "identity-only": 557,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "function": {
+      "draft": 520,
+      "identity-only": 146,
+      "pending": 356,
+      "generated-identification": 0
+    }
+  },
+  "pendingHeadNeckMuscleFunctions": 0,
+  "negativeCases": 13,
+  "sourceIndexChecks": 14,
+  "unrelatedCopyAndRecipesPreserved": true,
+  "sourceGeometryChanged": false,
+  "clinicalApproval": false,
+  "scanContentAdded": false,
+  "browserTesting": false,
+  "limitations": "Software and optional source-index checks, not cervical-slip/head identity, measured attachments, movement/breathing simulation, complete head/neck curriculum or clinical/device acceptance."
+}

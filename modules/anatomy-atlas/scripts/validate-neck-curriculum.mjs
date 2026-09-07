@@ -5,7 +5,6 @@ import {
   contentRoot,
   readContentJson,
 } from './content-contract-tools.mjs';
-import { authoringBeforeSwallowing } from './swallowing-curriculum-transition.mjs';
 import { authoringBeforeNeck } from './neck-curriculum-transition.mjs';
 import {
   curriculumHash,
@@ -22,13 +21,11 @@ const check = (v, label) => {
 };
 const context = await contentContext();
 const { api, catalog, body } = context;
-const before = await readContentJson(
-  'content/swallowing-curriculum.before.json',
-);
+const before = await readContentJson('content/neck-curriculum.before.json');
 const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
-const previous = await authoringBeforeSwallowing(context);
+const previous = await authoringBeforeNeck(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
@@ -47,67 +44,45 @@ same(
 same(
   curriculumHash(await copyBeforeShoulderArmCurriculum(context)),
   baseline.copyAndRecipeHash,
-  'Nine pinned transitions preserve original baseline',
+  'Ten pinned transitions preserve original baseline',
 );
-const definitions = api.swallowingMuscleLessons;
+const definitions = api.neckMuscleLessons;
 const ids = definitions.flatMap((l) => l.fmaIds);
-same(definitions.length, 14);
-same(ids.length, 27);
-same(new Set(ids).size, 27);
+same(definitions.length, 7);
+same(ids.length, 14);
+same(new Set(ids).size, 14);
 // Independent identity/component/motor expectations, not derived from lessons.
 const expected = {
-  digastric: [
-    'FMA46293',
-    'FMA46292',
-    'FJ1555,FJ1560,FJ1578',
-    'FJ1556,FJ1579',
-    'CN VII',
+  subclavius: ['FMA13411', 'FMA13412', 'FJ1460M', 'FJ1460', 'C5–C6'],
+  'cervical-rotator': [
+    'FMA81753',
+    'FMA81752',
+    'FJ1524M',
+    'FJ1524',
+    'posterior rami',
   ],
-  mylohyoid: ['FMA46322', 'FMA46321', 'FJ1562', 'FJ1583', 'V3'],
-  geniohyoid: ['FMA46327', 'FMA46326', 'FJ1559', 'FJ1580', 'C1'],
-  stylohyoid: ['FMA45827', 'FMA45826', 'FJ1576', 'FJ1598', 'CN VII'],
-  omohyoid: ['FMA13349', 'FMA13348', 'FJ1565', 'FJ1586', 'Ansa cervicalis'],
-  sternohyoid: ['FMA13347', 'FMA13346', 'FJ1574', 'FJ1596', 'Ansa cervicalis'],
-  sternothyroid: [
-    'FMA13351',
-    'FMA13350',
-    'FJ1575',
-    'FJ1597',
-    'Ansa cervicalis',
-  ],
-  thyrohyoid: ['FMA13353', 'FMA13352', 'FJ1577', 'FJ1599', 'C1'],
-  genioglossus: ['FMA46702', 'FMA46698', 'FJ2738', 'FJ2750', 'CN XII'],
-  hyoglossus: ['FMA46704', 'FMA46703', 'FJ2739', 'FJ2751', 'CN XII'],
-  'levator-veli-palatini': ['FMA46729', 'FMA46728', 'FJ2741', 'FJ2753', 'CN X'],
-  'tensor-veli-palatini': ['FMA46732', 'FMA46731', 'FJ2748', 'FJ2760', 'V3'],
-  'uvular-muscle': ['FMA46733', null, 'FJ2762', null, 'CN X'],
-  'thyro-arytenoid': [
-    'FMA46590',
-    'FMA46589',
-    'FJ2784,FJ2785',
-    'FJ2802,FJ2803',
-    'CN X',
-  ],
+  platysma: ['FMA45740', 'FMA45739', 'FJ1558', 'FJ1587', 'CN VII'],
+  'scalenus-anterior': ['FMA13393', 'FMA13392', 'FJ1570', 'FJ1592', 'C4–C6'],
+  'scalenus-medius': ['FMA13391', 'FMA13390', 'FJ1571', 'FJ1593', 'C3–C8'],
+  'scalenus-posterior': ['FMA13389', 'FMA13388', 'FJ1572', 'FJ1594', 'C6–C8'],
+  sternocleidomastoid: ['FMA13409', 'FMA13408', 'FJ1573', 'FJ1595', 'CN XI'],
 };
 const entry = (fma) => catalog.structures.find((s) => s.fmaId === fma);
 for (const l of definitions) {
-  same(l.fmaIds, expected[l.key].slice(0, l.key === 'uvular-muscle' ? 1 : 2));
+  same(l.fmaIds, expected[l.key].slice(0, 2));
   for (const field of ['origin', 'insertion', 'action', 'motorSupply'])
     check(l[field].length > 8);
   check(l.motorSupply.includes(expected[l.key][4]));
   for (const [i, fma] of l.fmaIds.entries()) {
     const s = entry(fma);
-    same(
-      s.laterality,
-      l.key === 'uvular-muscle' ? 'midline' : i === 0 ? 'left' : 'right',
-    );
+    same(s.laterality, i === 0 ? 'left' : 'right');
     same(
       s.sources.map((p) => p.file),
       expected[l.key][i + 2].split(','),
     );
     const exported = body.find((r) => r.id === s.id);
     for (const t of api.contentTabs) {
-      const lesson = api.swallowingMuscleLesson(s, t);
+      const lesson = api.neckMuscleLesson(s, t);
       if (!before.tabs.includes(t)) {
         same(lesson, undefined);
         continue;
@@ -117,19 +92,22 @@ for (const l of definitions) {
       same(lesson.readiness, 'draft');
       check(lesson.title.startsWith(s.name + ' ·'));
       check(lesson.note.includes('clinical review pending'));
-      check(lesson.note.includes('does not simulate swallowing'));
+      check(lesson.note.includes('does not simulate neck movement'));
       if (l.caution) check(lesson.note.includes(l.caution));
       same(lesson.citations, l.references);
       for (const url of lesson.citations) same(new URL(url).protocol, 'https:');
       check(
         api
-          .swallowingMuscleLesson({ ...s, coverageNote: 'Source warning' }, t)
+          .neckMuscleLesson({ ...s, coverageNote: 'Source warning' }, t)
           .note.endsWith('Source warning'),
       );
       if (t === 'anatomy') {
         check(lesson.bullets.some((b) => b.includes(fma)));
-        same(lesson.body.includes('grouped source'), Boolean(l.representation));
-      } else check(lesson.bullets[1].includes('does not map'));
+        same(
+          lesson.body.includes('regional source'),
+          Boolean(l.representation),
+        );
+      } else check(lesson.bullets[1].includes('not validated nerve courses'));
       const original = structuredClone(lesson);
       lesson.bullets.push('mutation');
       lesson.citations.push('mutation');
@@ -146,48 +124,60 @@ for (const l of definitions) {
 for (const s of catalog.structures)
   if (!ids.includes(s.fmaId))
     for (const t of api.contentTabs)
-      same(api.swallowingMuscleLesson(s, t), undefined);
-const fixture = entry('FMA46293');
+      same(api.neckMuscleLesson(s, t), undefined);
+const fixture = entry('FMA13409');
 for (const change of [
   { system: 'nerves' },
   { regions: ['shoulder'] },
   { fmaId: 'FMA_UNKNOWN' },
 ])
-  same(
-    api.swallowingMuscleLesson({ ...fixture, ...change }, 'anatomy'),
-    undefined,
-  );
+  same(api.neckMuscleLesson({ ...fixture, ...change }, 'anatomy'), undefined);
 const lesson = (key) => definitions.find((l) => l.key === key);
-check(lesson('digastric').motorSupply.includes('V3'));
-check(lesson('digastric').caution.includes('File counts are not belly counts'));
-check(lesson('digastric').insertion.includes('fibrous sling'));
-for (const key of ['geniohyoid', 'thyrohyoid']) {
-  check(
-    lesson(key).motorSupply.includes(
-      'not motor fibres originating in the hypoglossal nucleus',
-    ),
-  );
-  check(!lesson(key).motorSupply.includes('Ansa cervicalis'));
-}
-check(lesson('geniohyoid').origin.includes('Inferior mental'));
-check(lesson('genioglossus').origin.includes('Superior mental'));
-check(lesson('omohyoid').origin.includes('scapula'));
-check(lesson('omohyoid').caution.includes('two bellies'));
-check(lesson('sternothyroid').insertion.includes('thyroid cartilage'));
-check(lesson('thyrohyoid').action.includes('when the hyoid is fixed'));
-check(lesson('hyoglossus').caution.includes('extrinsic tongue'));
-check(lesson('tensor-veli-palatini').insertion.includes('hamulus'));
-check(lesson('tensor-veli-palatini').motorSupply.includes('medial pterygoid'));
+check(lesson('subclavius').motorSupply.includes('upper brachial-plexus trunk'));
+check(lesson('subclavius').caution.includes('shoulder-girdle'));
+check(lesson('cervical-rotator').caution.includes('Do not transfer thoracic'));
+same(lesson('cervical-rotator').representation, 'regional-group');
 check(
-  lesson('levator-veli-palatini').caution.includes('source-specific review'),
-);
-check(lesson('thyro-arytenoid').motorSupply.includes('Recurrent laryngeal'));
-check(
-  lesson('thyro-arytenoid').caution.includes(
-    'not independently validated vocalis',
+  lesson('cervical-rotator').insertion.includes(
+    'does not identify short versus long',
   ),
 );
-same(lesson('uvular-muscle').representation, 'midline-group');
+check(lesson('cervical-rotator').action.includes('has not been established'));
+for (const fma of ['FMA81753', 'FMA81752']) {
+  check(entry(fma).id.includes(':spine:'));
+  check(
+    api.bodyLesson(entry(fma), 'function').title.includes('Regional overview'),
+  );
+}
+check(
+  lesson('platysma').motorSupply.includes(
+    'cervical branch of the facial nerve',
+  ),
+);
+check(lesson('platysma').caution.includes('not a primary cervical flexor'));
+check(lesson('scalenus-anterior').insertion.includes('in front of'));
+check(lesson('scalenus-medius').insertion.includes('behind'));
+check(
+  lesson('scalenus-posterior').insertion.includes('rib 2, not the first rib'),
+);
+for (const key of [
+  'scalenus-anterior',
+  'scalenus-medius',
+  'scalenus-posterior',
+])
+  check(lesson(key).motorSupply.includes('anterior rami'));
+check(lesson('sternocleidomastoid').action.includes('turns the face away'));
+check(
+  lesson('sternocleidomastoid').action.includes(
+    'tilting the head towards itself',
+  ),
+);
+check(lesson('sternocleidomastoid').motorSupply.includes('proprioceptive'));
+check(
+  lesson('sternocleidomastoid').caution.includes(
+    'does not separately identify',
+  ),
+);
 let sourceIndexChecks = 0;
 if (process.argv.includes('--source')) {
   const rows = (
@@ -214,6 +204,7 @@ const negatives = [
   [entry('FMA19728'), 'function', 'readiness'],
   [fixture, 'ct', 'body'],
   ...[
+    'FMA46293',
     'FMA49045',
     'FMA37717',
     'FMA22548',
@@ -247,28 +238,26 @@ for (const [s, t, field] of negatives) {
   );
   checks++;
 }
-const swallowingMilestoneApi = await authoringBeforeNeck(context);
 const counts = (t) =>
   Object.fromEntries(
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter(
-          (s) => swallowingMilestoneApi.bodyLesson(s, t).readiness === r,
-        ).length,
+        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
+          .length,
       ],
     ),
   );
 same(counts('anatomy'), {
-  draft: 451,
-  'identity-only': 571,
+  draft: 465,
+  'identity-only': 557,
   pending: 0,
   'generated-identification': 0,
 });
 same(counts('function'), {
-  draft: 506,
+  draft: 520,
   'identity-only': 146,
-  pending: 370,
+  pending: 356,
   'generated-identification': 0,
 });
 same(
@@ -276,22 +265,19 @@ same(
     (s) =>
       s.system === 'muscles' &&
       s.regions.includes('head-neck') &&
-      swallowingMilestoneApi.bodyLesson(s, 'function').readiness === 'pending',
+      api.bodyLesson(s, 'function').readiness === 'pending',
   ).length,
-  14,
+  0,
 );
 const report = {
   passed: true,
   checks,
-  lessonDefinitions: 14,
-  bodyRepresentations: 27,
-  authoredSections: 54,
-  combinedPinnedCurriculumSections: 512,
-  bodyReadinessAtSwallowingMilestone: {
-    anatomy: counts('anatomy'),
-    function: counts('function'),
-  },
-  pendingHeadNeckMuscleFunctionsAtSwallowingMilestone: 14,
+  lessonDefinitions: 7,
+  bodyRepresentations: 14,
+  authoredSections: 28,
+  combinedPinnedCurriculumSections: 540,
+  bodyReadiness: { anatomy: counts('anatomy'), function: counts('function') },
+  pendingHeadNeckMuscleFunctions: 0,
   negativeCases: negatives.length,
   sourceIndexChecks,
   unrelatedCopyAndRecipesPreserved: true,
@@ -300,10 +286,10 @@ const report = {
   scanContentAdded: false,
   browserTesting: false,
   limitations:
-    'Software and optional source-index checks, not individual belly/tendon/vocal-fold adjudication, measured attachments, swallowing/voice simulation or clinical/device acceptance.',
+    'Software and optional source-index checks, not cervical-slip/head identity, measured attachments, movement/breathing simulation, complete head/neck curriculum or clinical/device acceptance.',
 };
 await writeFile(
-  new URL('docs/swallowing-curriculum-validation.json', contentRoot),
+  new URL('docs/neck-curriculum-validation.json', contentRoot),
   JSON.stringify(report, null, 2) + '\n',
 );
 console.log(JSON.stringify(report, null, 2));
