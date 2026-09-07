@@ -19,6 +19,7 @@ import { laryngealGroupFor } from '../lib/laryngeal-anatomy';
 import { forearmVascularGroupFor } from '../lib/forearm-vascular-anatomy';
 import { draftLesson, type ContentLesson } from '../lib/content-types';
 import { shoulderArmLesson } from '../lib/shoulder-arm-curriculum';
+import { forearmMuscleLesson } from '../lib/forearm-curriculum';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -69,6 +70,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (existing) return draftLesson(existing.sections[tab]);
   const shoulderArm = shoulderArmLesson(s, tab);
   if (shoulderArm) return shoulderArm;
+  const forearmMuscle = forearmMuscleLesson(s, tab);
+  if (forearmMuscle) return forearmMuscle;
   const axial =
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??

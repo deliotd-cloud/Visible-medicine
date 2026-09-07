@@ -1,15 +1,17 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readContentJson } from './content-contract-tools.mjs';
+import { authoringBeforeForearm } from './forearm-curriculum-transition.mjs';
 
 export const curriculumHash = (value) =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
-/** Keep the original all-copy baseline intact. Only 64 explicitly pinned
- * sections may change; project them back to the pre-authoring source snapshot
+/** Keep the original all-copy baseline intact. First unwind the later forearm
+ * transition, then these 64 explicitly pinned sections to the original snapshot
  * so callers can still reject any unrelated copy/recipe edit. */
 export async function copyBeforeShoulderArmCurriculum(context) {
-  const { api, catalog } = context;
+  const { catalog } = context;
+  const api = await authoringBeforeForearm(context);
   const before = await readContentJson(
     'content/shoulder-arm-curriculum.before.json',
   );

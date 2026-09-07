@@ -17,6 +17,8 @@ The explicit classification corrected two prior heuristic false positives: Funct
 
 ## Record identity and multi-part geometry
 
+**Current forearm extension:** body totals are now 269 draft Anatomy / 753 identity-only and 331 draft Function / 146 identity-only / 545 pending. The 84 forearm sections and 64 preceding shoulder/arm sections are explicit authoring changes, not a new baseline. `authoringBeforeForearm` first verifies/restores only its 84 pinned sections for offline preservation; `copyBeforeShoulderArmCurriculum` then applies the earlier shoulder/arm transition. Runtime/export APIs always return current drafts. The shoulder/arm test report labels its projected historical counts `bodyReadinessAtShoulderMilestone`; `requirement-audit.json` reports current counts. See [forearm scope and gates](FOREARM_CURRICULUM.md).
+
 The current schema remains at `content/schema/anatomy-structure.schema.json`, with `schemaVersion: 2` and a versioned schema identifier. It describes a **draft content seed**, not a universal source-admission format. Its current source profile is the audited BodyParts3D v4 reference frame; adding another dataset/version requires explicit profile, rights and registration work.
 
 The record key is **`(representationScope, id)`**, not the ID alone. `shoulder-pilot` and `body` may use the same anatomical ID with different asset scopes and scene transforms. Do not overwrite one with the other or infer a new clinical identity. The existing imaging bridge's explicit source-based representation mapping remains unchanged.

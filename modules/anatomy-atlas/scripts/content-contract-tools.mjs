@@ -14,6 +14,7 @@ export async function contentContext() {
 export * from './lib/content-types.ts';
 export * from './app/body-content.ts';
 export * from './lib/shoulder-arm-curriculum.ts';
+export * from './lib/forearm-curriculum.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';`,
       resolveDir: fileURLToPath(contentRoot),

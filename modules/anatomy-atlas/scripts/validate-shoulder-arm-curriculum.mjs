@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { authoringBeforeForearm } from './forearm-curriculum-transition.mjs';
 import { writeFile } from 'node:fs/promises';
 import {
   contentContext,
@@ -187,13 +188,17 @@ for (const target of [
   );
   checks++;
 }
+// Preserve the earlier milestone's exact acceptance counts; the forearm suite
+// separately checks current totals and the intervening 84-section transition.
+const priorAuthoring = await authoringBeforeForearm(context);
 const counts = (tab) =>
   Object.fromEntries(
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter((s) => api.bodyLesson(s, tab).readiness === r)
-          .length,
+        catalog.structures.filter(
+          (s) => priorAuthoring.bodyLesson(s, tab).readiness === r,
+        ).length,
       ],
     ),
   );
@@ -224,7 +229,10 @@ const report = {
   lessonDefinitions: 20,
   bodyRepresentations: 32,
   authoredSections: 64,
-  bodyReadiness: { anatomy: counts('anatomy'), function: counts('function') },
+  bodyReadinessAtShoulderMilestone: {
+    anatomy: counts('anatomy'),
+    function: counts('function'),
+  },
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,

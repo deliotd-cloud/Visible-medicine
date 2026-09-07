@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "checks": 9228,
+  "lessonDefinitions": 21,
+  "bodyRepresentations": 42,
+  "authoredSections": 84,
+  "combinedPinnedCurriculumSections": 148,
+  "bodyReadiness": {
+    "anatomy": {
+      "draft": 269,
+      "identity-only": 753,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "function": {
+      "draft": 331,
+      "identity-only": 146,
+      "pending": 545,
+      "generated-identification": 0
+    }
+  },
+  "negativeCases": 5,
+  "previousShoulderCurriculumPreserved": true,
+  "unrelatedCopyAndRecipesPreserved": true,
+  "sourceGeometryChanged": false,
+  "clinicalApproval": false,
+  "scanContentAdded": false,
+  "browserTesting": false,
+  "limitations": "Tests cover exact identity/part routing, current display/export parity, detached output, pinned before/after changes and regression safeguards. They do not establish clinical accuracy, attachment footprints, tendon-slip completeness, actual nerve courses or device acceptance."
+}

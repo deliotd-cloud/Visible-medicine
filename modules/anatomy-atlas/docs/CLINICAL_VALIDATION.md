@@ -4,6 +4,10 @@
 
 The [requirement audit](REQUIREMENT_AUDIT.md) consolidates current coverage, actual teaching gaps and the next device-acceptance matrix. Current source contains 1,022 body representations, 138 stages and 120 focuses; counts in milestone-specific gates below are historical. Every unresolved gate remains relevant. Current local layout/explosion/recovery changes are not covered by the earlier browser session, and no clinical approval is created by source or software checks.
 
+## Forearm muscle teaching gates
+
+Review all 42 exact source identities and 84 draft sections against the actual mesh and authoritative anatomy. Check head-specific pronator teres/flexor carpi ulnaris attachments, grouped FDS/ECU components, FDP divided motor supply, finger-flexor insertion levels, thumb extensor distinctions and variable tendon patterns. Typical attachments are not measured mesh footprints. Named limb nerves are textual only; no nerve route, tendon-slip segmentation or motion model is validated. Clinical/pathology/modality/quiz topics are unchanged. See [scope, citations and evidence](FOREARM_CURRICULUM.md).
+
 ## Shoulder and arm teaching gates
 
 Before accepting the new shoulder/arm teaching, review all 32 exact identities and 64 draft sections for typical attachments versus actual mesh footprints, head/portion scope, laterality, actions and motor-supply variation. No missing nerve course, independently segmented tendon or review of the opposite side is implied. Modality/pathology/clinical text is unchanged. See [curriculum-specific gates](SHOULDER_ARM_CURRICULUM.md).

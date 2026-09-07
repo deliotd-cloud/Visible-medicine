@@ -33,8 +33,8 @@ These are counts among the **1,022 body representations**, not unique lessons, a
 
 | Body topic | Specific or source-group draft | Generic identity/disclaimer | Explicitly pending | Generated identification prompt |
 | --- | ---: | ---: | ---: | ---: |
-| Anatomy | 227 | 795 | 0 | 0 |
-| Function | 289 | 146 | 587 | 0 |
+| Anatomy | 269 | 753 | 0 | 0 |
+| Function | 331 | 146 | 545 | 0 |
 | CT | 11 | 0 | 1,011 | 0 |
 | MRI | 11 | 0 | 1,011 | 0 |
 | Ultrasound | 11 | 0 | 1,011 | 0 |
@@ -48,6 +48,8 @@ The shoulder/arm curriculum now adds 64 original draft sections for 32 previousl
 
 ## Highest-impact anatomy gaps
 
+The subsequent [forearm curriculum](FOREARM_CURRICULUM.md) adds 84 draft sections for 42 existing muscle representations. Among the region's 66 entries, Anatomy now has 49 drafts / 17 identity-only; Function has 49 drafts / 10 generic disclaimers / 7 pending. All mapped forearm muscles have basic drafts, not a complete clinical curriculum. Specialist topics, geometry and review status are unchanged.
+
 Retain the source-level decisions and exact held IDs in `GAP_FILLING.md`, `SOURCE_INVENTORY.md`, `ABDOMINAL_WALL_AUDIT.md`, `SUPPORTING_TOPOLOGY.md` and subsequent regional source audits. No hold is lifted here.
 
 - Dedicated shoulder capsule, labrum, subacromial/subdeltoid bursa and key ligament detail; no independently segmented shoulder nerve/vessel in the nine-structure pilot.
@@ -59,7 +61,7 @@ Retain the source-level decisions and exact held IDs in `GAP_FILLING.md`, `SOURC
 ## Ordered next actions
 
 1. **Completed locally — content ingestion contract.** Multi-part source bindings, representation scopes and explicit topic readiness now have a v2 schema, actual shoulder export and whole-body/source/rejection checks. See `CONTENT_CONTRACT.md`. Clinical reviews, canonical IDs, displayed copy and private data are unchanged. Production curriculum storage and automatic legacy migration are not claimed.
-2. **Continue bounded regional teaching.** The shoulder/arm muscle milestone is implemented locally with exact before/after preservation checks. Next, extend original draft Anatomy/Function notes to explicitly mapped forearm muscle concepts already in the model, using factual references and group/side caveats. Keep unrelated topics intact. Do not replace unknown nerve geometry with guessed routes or fill scan tabs with synthetic findings.
+2. **Continue bounded regional teaching.** Shoulder/arm and forearm muscle drafts are implemented locally with exact before/after preservation checks. Next inspect admitted hand-muscle identities and parts for original Anatomy/Function drafts. Continue region by region, followed by source-cited clinical/pathology, modality teaching and reviewed questions in the existing panels. Keep pending topics explicit and require specialist acceptance. Do not replace unknown nerve geometry with guessed routes or fill scan tabs with synthetic findings.
 3. **Accept the current UI on actual devices when authorized/available.** Use the matrix below before calling navigation, labels or explosion visually complete. Fix observed defects rather than add speculative controls. A browser-testing request is required for this environment's browser workflow; no browser-only preview is started in background audit work.
 4. **Resolve source, specialist and imaging inputs.** Supply rights-cleared compatible geometry or qualified adjudication for held candidates; obtain revision-bound anatomical/editorial review. Connect the user's real imaging function only after its interface, scope and data/registration evidence exist.
 5. **Deliver the exact accepted revision.** Restore authorized source-service/GitHub access, then publish privately and update only the existing anatomy backup branch. Main-website integration needs a chosen route/embed and access policy; no sharing change is assumed.

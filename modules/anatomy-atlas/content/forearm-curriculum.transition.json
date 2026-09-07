@@ -1,0 +1,342 @@
+{
+  "sourceCommit": "c8cd866894e0254c0a92cd5d0b5f7012ccd25714",
+  "reason": "Explicit Anatomy/Function authoring for 42 previously pending forearm muscle representations. No other topic, asset or clinical approval changes.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-carpi-ulnaris",
+      "fmaId": "FMA38507",
+      "sections": {
+        "anatomy": "aa4b207cdbedd4b931a87f643f2884870e2548cf2fc6c31a17886bb9df3bf6f8",
+        "function": "7b53945f9299efddfa9368d3d4c82b3a2e870c67e47dc8efd740e4f70a5bb4cb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-carpi-ulnaris",
+      "fmaId": "FMA38508",
+      "sections": {
+        "anatomy": "5b5223baa6359d587a9ae9191240bb4a994eff849e313fb457d8795938f39d21",
+        "function": "822c04e0f46033e4bb37cb5d98fae469dd6cd528df0b91193a5ccff7b0add2f0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-digitorum-superficialis",
+      "fmaId": "FMA38470",
+      "sections": {
+        "anatomy": "f6677778cea920780e3d34e38ccca5308294d84f7d21776361ab0e47efa4256a",
+        "function": "93134c643dec37ec5e5dd9a953298e896e9eb74c8589b52a5953ce8563d30b5e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-digitorum-superficialis",
+      "fmaId": "FMA38471",
+      "sections": {
+        "anatomy": "34389bc8d5d351ee1b42338b12d072038b56ca182fbd73aa68cca1ea7e27592d",
+        "function": "4f77c4e05d0aa504ee3601f34086f7c38a75b9c6b727dcfd4192ae001987cfe8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-abductor-pollicis-longus",
+      "fmaId": "FMA38516",
+      "sections": {
+        "anatomy": "a8a4576d21a3a1c27f94ef6e5a1dbd02993ac15e4a0a60592357ab7a5e1a152e",
+        "function": "dfc32e43626ad3233389c9220a2c2a32dfcc606a6c29b1f8010702e840a944f2"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-abductor-pollicis-longus",
+      "fmaId": "FMA38517",
+      "sections": {
+        "anatomy": "1f2df9a3a4250848be038d8955e64b2de8d718e94a0fd33b72ef3b67259dc1dd",
+        "function": "28a704b244a931a6925696acd9848da597e4c50d36d6c9a0fcb88198a20c5cd7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-brachioradialis",
+      "fmaId": "FMA38486",
+      "sections": {
+        "anatomy": "b203f24ff8b2e06c560964b0569d50ab7bd28d80e2eee43e90f17b1237968063",
+        "function": "056884bd5bc0f43f645b4ede2b826e36c132d73f02dc0d9b3ef3370d5d25c6c1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-brachioradialis",
+      "fmaId": "FMA38487",
+      "sections": {
+        "anatomy": "1293a6673acf0658cfccd96e639d1eaee85240443fde6b1b0c9f258e529377a8",
+        "function": "87f863f8ebbc570850ad2192a38a6ae14060268716d41072e3e3075aceda042b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-carpi-radialis-brevis",
+      "fmaId": "FMA38498",
+      "sections": {
+        "anatomy": "709318e71e4f1e369eccc452ef054bc8286ee360250a8fb12d0332329e82659f",
+        "function": "fd622c9d1292a1e97c810cbec190d417820218f67aaab35ebda1b8d9e29179b6"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-carpi-radialis-brevis",
+      "fmaId": "FMA38499",
+      "sections": {
+        "anatomy": "94ca35371aeedae749149f46bd5704e5181b08b483f75b8e2b4770bd6a4de8a1",
+        "function": "cf8282b1ab5e355e4b4f12bad57fd99b66203a783c59c9699c2e63c935b2df20"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-carpi-radialis-longus",
+      "fmaId": "FMA38495",
+      "sections": {
+        "anatomy": "48f24daf9752e2c89f0768e449aea42abb4bdb551087bb643e72b9625d0397e6",
+        "function": "fc5283b0a67ce689cbe5b187d129e4922535793e8c1002266c97c00468ab948b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-carpi-radialis-longus",
+      "fmaId": "FMA38496",
+      "sections": {
+        "anatomy": "e6c937f67e4054abf121c90b205f2880a2662e6a6faa4489045061f4faa0741e",
+        "function": "6470622823c4747c3839960b6c59fe7845b9c603a0ccb296244824e901df6fc9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-digiti-minimi",
+      "fmaId": "FMA38504",
+      "sections": {
+        "anatomy": "55daed77b32e6f449112edf0021fb18eae8365145f9a09febf50ed2f5db9b3a4",
+        "function": "532249017d35c6ce826296b415adb78a9030cfccf4848ca38c20a4ae0e9632cd"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-digiti-minimi",
+      "fmaId": "FMA38505",
+      "sections": {
+        "anatomy": "0547b028bf84f6e016e6511e0c778d92520493152209f81b0c087ee6be13a5df",
+        "function": "a4e3344977fd6d691bf21bf6735261a25faa0216e4648f4ea97eaaaa09d39661"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-digitorum",
+      "fmaId": "FMA38501",
+      "sections": {
+        "anatomy": "33402b6e1fae6b43d141e6aed7e409942a919de4972693267d03b8ed88860bf7",
+        "function": "e6ac992e78c3ced02e547d6dd54f618d24e53a3196e7cb413fbaf4100776ad4c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-digitorum",
+      "fmaId": "FMA38502",
+      "sections": {
+        "anatomy": "54e992b6039a21d9c0815c4ae9918bd53cf07f1d7dc03cdc402ebc495f068726",
+        "function": "07976639d11fad4e87c2a6e828ee0a4c68e57ac7532abe3f70e2646f8daa52bd"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-indicis",
+      "fmaId": "FMA38525",
+      "sections": {
+        "anatomy": "5fefd4d6e4c66dc804ac96643d74fd3181eab61217fc8acfd82bacf9a66c9026",
+        "function": "ebb3af94ad2f39b77336a813b9bece0f73375363e5aa36552e2b933d474706b7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-indicis",
+      "fmaId": "FMA38526",
+      "sections": {
+        "anatomy": "bcc5f13b7a801c38f8aa491f3c7a35b4a53e641ee16fa3586729790ee45d8754",
+        "function": "7233ac270662356719732a51ddfea74c94f57fba82665402727e5da1ae68a239"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-pollicis-brevis",
+      "fmaId": "FMA38519",
+      "sections": {
+        "anatomy": "0484298741eed42597f77b542f5c0363a0be0447ca3f957557477303e0267c85",
+        "function": "2904b5dba5f08a8eb9abacfa3ef90db6e023b136693137d3ac1601745fc798a3"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-pollicis-brevis",
+      "fmaId": "FMA38520",
+      "sections": {
+        "anatomy": "34b5d945de13ea417a6a77f80dc5e8a3760f54b065c39c8657cc204f821c0c9d",
+        "function": "453205248ca6e1458a07608ce09da7551936cb462745227bf6f17382f9d3f23b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-pollicis-longus",
+      "fmaId": "FMA38522",
+      "sections": {
+        "anatomy": "609c6d95288707102cda9d9f762fc3bc2d9aa7e725ec45204bcb69f91df3177a",
+        "function": "e43a3fcd17820b08d811eaa0cdff10a3a126ee94b75676306b0d6bc13c8b60c7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-pollicis-longus",
+      "fmaId": "FMA38523",
+      "sections": {
+        "anatomy": "1c6210d4fdf26f295f29112aca6582beab282ae1b06f999326a1c33ad28ee175",
+        "function": "fcb725ee4d01f30278ee04f2642491e630382ea8bc4f87323926f65b77d9a7f9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-carpi-radialis",
+      "fmaId": "FMA38460",
+      "sections": {
+        "anatomy": "a435968cdf651bca7d6292100c6979ecaebed100987c4ff0f02ba9a494e22a3e",
+        "function": "04800317d0236cc7b003141e07fd211840321abbfc52fa04b10104f15c30a7f7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-carpi-radialis",
+      "fmaId": "FMA38461",
+      "sections": {
+        "anatomy": "07a10b3cdd4997a7bc33e48f9f013c2e83c452767bfbcc201f3bd29125623037",
+        "function": "3283f9c32df9019ed4c2f90f800575211848c9f98de96f6c55ea813c31f480b5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-digitorum-profundus",
+      "fmaId": "FMA38479",
+      "sections": {
+        "anatomy": "95dd69e016f9b961a017bbc834161f35f4d1a1d9ce923054c06884a1bd0d44f9",
+        "function": "1fa3a25e825e892488cfeb515268387233e63959c98c96b18b29bb077b90f1b0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-digitorum-profundus",
+      "fmaId": "FMA38480",
+      "sections": {
+        "anatomy": "ee4d59d59cdb2d610d0af5f6b7cc6ec16cd818404f7ec2b4532a49a473ee8ea0",
+        "function": "d9a78ec00e216ab94f304bfb2fd1708d365ee23854a2a47a750b8cc4af6133f4"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-pollicis-longus",
+      "fmaId": "FMA38482",
+      "sections": {
+        "anatomy": "97880a5b2e48a47ddc0320f29d821bcfc4fdb73964c1190bfb1ba40079c253dc",
+        "function": "aa99e957bc83b34194f6049e5c5c43810f3acf614a2ae03c4791cc2a26bba292"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-pollicis-longus",
+      "fmaId": "FMA38484",
+      "sections": {
+        "anatomy": "fbf6bf1342051838159d5fde87edd3dba19e9f9cedb5fc18743a67d410056102",
+        "function": "5b3dbfc1a2b89067bebfd030bfb741e3342264525b950c67bc762406370c1ed1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-palmaris-longus",
+      "fmaId": "FMA38463",
+      "sections": {
+        "anatomy": "fdb4f7ecb72b6a057b67d8062783e1c364c189812841f73a176612b82a8a08f5",
+        "function": "87a90af3233b0c58b9d5edf8ffde5696290f30122224f0e4586a6372425ff9c8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-palmaris-longus",
+      "fmaId": "FMA38464",
+      "sections": {
+        "anatomy": "29e0e9354ec1b870524d447c05cc0c479cd31deeb5aae572be61091f121fe47c",
+        "function": "86901298b6d8b5295ed932e2adb7b125d11b6d0b9bd23098c897fe602f3f0ede"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-pronator-quadratus",
+      "fmaId": "FMA38454",
+      "sections": {
+        "anatomy": "350082af8634c8d99ca0bc9c45fe6ecfd7498f81b2532175ae90b74fd8744723",
+        "function": "f03ddf8e43d66e1172822b301653e2f871288853f8287016f373eda84fa501b5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-pronator-quadratus",
+      "fmaId": "FMA38455",
+      "sections": {
+        "anatomy": "2131a3a4eb812e70e7fabe2bcdf1ef9eeebfcce114ba9ed42ea47b02d922fe08",
+        "function": "63bed65a9259c3ece697d0795fa8a129268d5c2e8370c19e5edf57400523b29d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-supinator",
+      "fmaId": "FMA38513",
+      "sections": {
+        "anatomy": "d66d2a937710f41d41a10badf2b4f5104131fc0346a8399874b7a6f051c4834f",
+        "function": "ce087d3bf1ed2ce0f3cb1fc4c5c041e8a924896f84fcaeba016b02c81f2de5c5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-supinator",
+      "fmaId": "FMA38514",
+      "sections": {
+        "anatomy": "128dcb90764750dbd85234bea0b95f28f20809cabe47e5042c72e6837e4b7a5c",
+        "function": "bff8c5e4538f0aae5ebac2489a794b2e84d396c5f7cfdb21063cf51b84d12e96"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-pronator-teres",
+      "fmaId": "FMA38560",
+      "sections": {
+        "anatomy": "1bbc6c17e96542660fbd7e2c7730355295cab3872a6c24a140b49a2fc7a6d307",
+        "function": "4edf757a2ccb1d412887753b454ff5d9e8a4da004d1e2f82673b23edc0c8b408"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-pronator-teres",
+      "fmaId": "FMA38561",
+      "sections": {
+        "anatomy": "d9bc2670410888045cf2ab3ef043facb46fe910f999f300e70986c262f220f90",
+        "function": "c27c9516bf9ecb4ef5d5ae289daa3df8316b14fcb2235722b0b0e23e424284a3"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:ulnar-head-of-right-pronator-teres",
+      "fmaId": "FMA38562",
+      "sections": {
+        "anatomy": "89f6974a16702840002df2a1c150a4fe632573c0045c4d97fb42a6c6cc054d33",
+        "function": "211b0ad936d20472095f12fea580fa9e4a61d480b88334d1bcbd256207010eb5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:ulnar-head-of-left-pronator-teres",
+      "fmaId": "FMA38563",
+      "sections": {
+        "anatomy": "dd45191108195f7a6d742d4342b0a34a6e7a47ab228660482ed9ab9fb99e45ce",
+        "function": "dbdac54b164c1c8222a8a871f63c12ec3028b92e8e225120b417bfb0c77a5549"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-flexor-carpi-ulnaris",
+      "fmaId": "FMA38617",
+      "sections": {
+        "anatomy": "8be03dbc1c72bd0b9668b42b9b75ef872bbdd9c790d60b1d3f2392fc20554867",
+        "function": "22ccb6e2bd0e7a373ccedf68ea79b1f469345841fcba3e57ec5f5e0af47cbbbb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-flexor-carpi-ulnaris",
+      "fmaId": "FMA38618",
+      "sections": {
+        "anatomy": "801e52f4d10b9abd51cbd745db5f9b9b08d5c78a7738f27100d526022378848a",
+        "function": "8aa0f51d7ed4c4f0f6b531d3cd004c883fa915b5249472562b1759b305127719"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:ulnar-head-of-right-flexor-carpi-ulnaris",
+      "fmaId": "FMA38619",
+      "sections": {
+        "anatomy": "ebbbff8da601bcc644d97f861477fdfe531cf4627f400a97d55a7437286b9927",
+        "function": "dab20affaecbbeabd878c707c3d9c5f73f7e1a94f9ea9875a23c5150b3c3c3ee"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:ulnar-head-of-left-flexor-carpi-ulnaris",
+      "fmaId": "FMA38620",
+      "sections": {
+        "anatomy": "650a30c360faeaad0e1a31a60fbd1627a67e816567c4ca65bafa53f2615fdaa2",
+        "function": "f45262c26a9446f3bc0d632d0e3384234a8c2fd14da14396fadd01c13375e06a"
+      }
+    }
+  ]
+}

@@ -2,11 +2,13 @@
 
 ## Current scope and remaining work
 
-The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: 619 Function sections remain pending and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: 545 Function sections remain pending and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
 
 The [versioned content contract](docs/CONTENT_CONTRACT.md) now preserves multi-part mesh bindings and explicit topic readiness, with a real shoulder export and whole-body validation. Draft content is kept separate from clinical approval; no database or private review is migrated. `npm run content:export -- --check` verifies the shoulder fixture.
 
 ## Anatomy source-quality review
+
+The [forearm curriculum](docs/FOREARM_CURRICULUM.md) adds 84 original draft Anatomy/Function sections for 42 existing muscle representations. Head-specific attachments, actions and motor supply appear within the existing notes panel; no extra controls or nerve meshes are added. Run `npm run forearm-curriculum:test` for the content/identity checks. Clinical and imaging teaching will be authored separately and remain draft until specialist review.
 
 The latest [supporting-source quality audit](docs/SUPPORTING_TOPOLOGY.md) records tendon/thumb connectivity and full-point contact findings. Uncertain candidates remain withheld; no anatomy is silently repaired or added.
 
