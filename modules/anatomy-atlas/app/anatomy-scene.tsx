@@ -9,7 +9,8 @@ import {
   type ReactNode,
   type RefObject,
 } from 'react';
-import { Canvas, useThree, type ThreeEvent } from '@react-three/fiber';
+import { useThree, type ThreeEvent } from '@react-three/fiber';
+import { AnatomyCanvas as Canvas } from './anatomy-canvas';
 import { Html, Line, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 import type { AnatomyStructure, SystemKey } from './anatomy-data';
@@ -467,6 +468,7 @@ export function AnatomyScene(props: SceneProps) {
     >
       {(onHealth) => (
         <Canvas
+          onFailure={() => onHealth('failed')}
           orthographic={props.plate}
           shadows
           camera={{

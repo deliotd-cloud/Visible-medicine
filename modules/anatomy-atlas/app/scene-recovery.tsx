@@ -92,6 +92,7 @@ export class SceneRecovery extends Component<Props, State> {
   state: State = { health: 'starting', attempt: 0 };
   private alive = true;
   private generation = 0;
+  private terminalFailure = false;
   private lastReadyCameraKey: string | null = null;
   private returnFocus = false;
   private container = createRef<HTMLElement>();
@@ -100,9 +101,10 @@ export class SceneRecovery extends Component<Props, State> {
   }
   componentDidMount() {
     this.alive = true;
-    this.props.onHealth('starting');
+    this.props.onHealth(this.terminalFailure ? 'failed' : 'starting');
   }
   componentDidCatch() {
+    this.terminalFailure = true;
     this.props.onHealth('failed');
   }
   componentWillUnmount() {
@@ -129,10 +131,12 @@ export class SceneRecovery extends Component<Props, State> {
   private updateHealth = (generation: number, health: RendererHealth) => {
     if (
       !this.alive ||
+      this.terminalFailure ||
       generation !== this.generation ||
       this.state.health === 'failed'
     )
       return;
+    if (health === 'failed') this.terminalFailure = true;
     this.props.onHealth(health);
     if (health === 'ready') this.lastReadyCameraKey = this.props.cameraKey;
     this.setState({ health });
@@ -152,6 +156,7 @@ export class SceneRecovery extends Component<Props, State> {
       );
     this.returnFocus = true;
     const generation = ++this.generation;
+    this.terminalFailure = false;
     this.report = (health: RendererHealth) =>
       this.updateHealth(generation, health);
     this.props.onHealth('starting');

@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { build } from 'esbuild';
+import { build } from './workspace-test-build.mjs';
 import { fileURLToPath } from 'node:url';
 let checks = 0;
 const check = (v, m) => {

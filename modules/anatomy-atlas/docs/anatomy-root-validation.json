@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": 521,
+  "schedulerCases": 13,
+  "faultCases": 8,
+  "integrationCases": 12,
+  "lifecycleCases": 1,
+  "sourceGeometryChanged": false,
+  "browserInteractionTesting": false,
+  "clinicalValidation": false,
+  "limitations": "Installed R3F reconciler, mesh/camera/event state and hooks with a fake WebGL renderer, DOM surface and RAF queue. Not browser, GPU, touch, pixel or clinical acceptance."
+}

@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { build } from 'esbuild';
+import { build } from './workspace-test-build.mjs';
 let assertions = 0;
 const same = (a, b, message) => {
   assertions++;

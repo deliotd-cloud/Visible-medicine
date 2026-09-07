@@ -7,7 +7,8 @@ import {
   type ReactNode,
   type RefObject,
 } from 'react';
-import { Canvas, type ThreeEvent } from '@react-three/fiber';
+import { type ThreeEvent } from '@react-three/fiber';
+import { AnatomyCanvas as Canvas } from './anatomy-canvas';
 import { Html, Line, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 import { FittedCamera } from './fitted-camera';
@@ -353,6 +354,7 @@ export function BodyScene(props: Props) {
     >
       {(onHealth) => (
         <Canvas
+          onFailure={() => onHealth('failed')}
           orthographic={orthographic}
           camera={{ position: [0, 0, 28], fov: 38, near: 0.01, far: 150 }}
           dpr={[1, 1.6]}

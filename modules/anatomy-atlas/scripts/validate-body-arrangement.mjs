@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { build } from 'esbuild';
+import { build } from './workspace-test-build.mjs';
 const compiled = await build({
   stdin: {
     contents: `export * from 'three'; export * from './lib/body-arrangement';

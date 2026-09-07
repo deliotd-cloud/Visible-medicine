@@ -1,14 +1,16 @@
-# Anatomy atlas backup — 6 September 2026
+# Anatomy atlas backup — 7 September 2026
+
+**Local checkpoint only:** the graphics-startup/frame-recovery update below has not yet been pushed to GitHub or published. The current session cannot reach either Git host, and the connected GitHub account cannot access this private repository. The last verified remote backup remains `771f48c17c5f7d7b8d1454fefb1490d9a3c0b3f4`; the last published Site source remains `26827c8961985b72422146c4faf56e98ca34313b` (version 38). Restore access and recheck remote heads/privacy before syncing; do not force-push.
 
 This branch preserves the current standalone Visible Medicine anatomy application in [`modules/anatomy-atlas`](../modules/anatomy-atlas/). The existing main website files are unchanged. This is a source-and-assets checkpoint, **not an integration or website deployment**.
 
 ## Snapshot
 
-- Source application commit: `26827c8961985b72422146c4faf56e98ca34313b`.
-- Exact application source tree: `9ea907eb4a56c2ef65e3c6d616bf2e7711a2365c`.
+- Source application commit: `b7faef85434a8b475936f695283ee5ff294dac0d`.
+- Exact application source tree: `ffdfc83f1cad1f1837045309539ddbb9f95896be`.
 - Main website base commit: `c4ff08f8afc90bd94d04162625f97af9d94401cf`.
 - GitHub backup branch: `backup/anatomy-atlas-2026-09-06`.
-- All 494 tracked application files (117,858,890 bytes) are preserved byte-for-byte from that source commit, including 87 GLB bundles, official brand lockups, content, scripts, configuration, dependency lockfile, licences, review schema/migration and documentation.
+- All 499 tracked application files (117,904,133 bytes) are preserved byte-for-byte from that source commit, including 87 GLB bundles, official brand lockups, content, scripts, configuration, dependency lockfile, licences, review schema/migration and documentation.
 - The atlas covers 1,022 selectable source representations, 11 regional explorers, 138 dissection stages, 120 focuses and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation. Previous milestone receipts below are historical.
 - The shoulder review workspace has independent geometry, teaching and imaging review tracks, evidence/issues, versioned records and revision-bound approval safeguards. Acquired scans and specialist approvals remain absent.
 - The deep-inspection update adds three-plane surface cutaways, tissue opacity, clipped-surface picking, regional/whole-body orthographic illustration and varied 5/10/20-question practice with results. No source geometry, anatomical coverage, licences or dependencies were changed.
@@ -20,7 +22,13 @@ This branch preserves the current standalone Visible Medicine anatomy applicatio
 
 The currently published atlas remains at [Visible Medicine anatomy](https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site). Saving this branch does not redeploy that site or the main website.
 
-## Current slimmer-controls and task-based navigation milestone
+## Current local graphics recovery milestone
+
+Both viewer families now await startup and use a scoped on-demand drawing queue. Startup rejections and errors in frame callbacks reach the existing recovery control; fresh physical canvases, terminal health latching and retired-session cleanup preserve restart isolation. No new permanent UI, anatomy, dependency, licence obligation or main-website change is included. Nine display fingerprints expire; teaching hashes and absent acquired imaging remain unchanged.
+
+The 521 new installed-R3F/mock-graphics checks and 703 existing recovery checks pass, alongside current loading, practice, saved-view, dissection/workbench, imaging-contract, inspection, arrangement/explode and 189 isolated review checks. Type checks, focused lint, production build and the 808-package licence audit pass. All catalogue/profile/bundle hashes remain exact. Seven pure helper test suites now resolve only in-workspace source and the installed Three.js; assertions and review database injection are preserved. Real browser/GPU/touch/accessibility and clinical acceptance remain separate. See `docs/SCENE_RECOVERY.md` in the snapshot.
+
+## Previous slimmer-controls and task-based navigation milestone
 
 All eleven regional explorers and whole body now use a narrower 216-pixel system rail, compact six-direction View menu, Explore / Dissect / Practice modes, grouped Anatomy / Clinical / Imaging notes and selected-structure actions with secondary options under More. Focus view collapses both panels on desktop/tablet; opening one sheet closes the other. Search reaches all source structures and regions, plus the current region's study views. Study previews leave the model unchanged until confirmed. Exam guards, selected source identities, camera intent and parent dissection/practice state are retained. The dedicated shoulder is unchanged. See `docs/ATLAS_NAVIGATION.md` inside the snapshot.
 
@@ -162,4 +170,4 @@ The 4,301 head-detail assertions, 54,502 practice assertions, 189 automated revi
 
 Keep the atlas's [licence](../modules/anatomy-atlas/LICENSE), [third-party notices](../modules/anatomy-atlas/LICENSES/THIRD_PARTY_NOTICES.md), [BodyParts3D licence evidence](../modules/anatomy-atlas/LICENSES/BODYPARTS3D.md) and visible attribution together. MIT application code does not relicense third-party anatomy or the proprietary Visible Medicine brand marks.
 
-Keep the repository private unless public source/brand release is deliberately approved. The source snapshot is 117,858,890 bytes (about 117.86 MB); no Git LFS or new paid service was introduced for this backup. GitHub source storage is distinct from hosting, large future imaging collections and database backups; quotas and service pricing can change. Never add patient imaging or private review exports to this repository as a substitute for appropriate data storage.
+Keep the repository private unless public source/brand release is deliberately approved. The source snapshot is 117,904,133 bytes (about 117.90 MB); no Git LFS or new paid service was introduced for this backup. GitHub source storage is distinct from hosting, large future imaging collections and database backups; quotas and service pricing can change. Never add patient imaging or private review exports to this repository as a substitute for appropriate data storage.

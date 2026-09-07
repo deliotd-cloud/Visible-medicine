@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
-import { build, transformSync } from 'esbuild';
+import { transformSync } from 'esbuild';
 import ts from 'typescript';
 import {
   observeRenderer,
@@ -278,29 +278,35 @@ const reactShim = {
   useLayoutEffect: (fn, deps) =>
     monitorMode ? (cleanup = fn()) : React.useLayoutEffect(fn, deps),
 };
-const output = await build({
-  stdin: {
-    contents:
-      "export {SceneRecovery,SceneRecoveryNotice,RendererMonitor} from './app/scene-recovery';",
-    resolveDir: process.cwd(),
-    loader: 'ts',
-  },
-  bundle: true,
-  platform: 'node',
-  format: 'cjs',
-  write: false,
-  loader: { '.css': 'empty' },
-  external: [
-    'react',
-    'react/*',
-    'react-dom',
-    'react-dom/*',
-    '@react-three/fiber',
-  ],
-});
+// Transform an explicit in-workspace module set. Unlike bundler resolution,
+// this does not search restricted ancestor directories for configuration.
+// The actual notice, installed Button primitive and utilities remain exercised.
+const moduleSources = [];
+for (const file of [
+  'lib/utils.ts',
+  'components/ui/button.tsx',
+  'lib/renderer-health.ts',
+  'app/scene-recovery.tsx',
+]) {
+  const code = transformSync(await fs.readFile(file, 'utf8'), {
+    loader: file.endsWith('tsx') ? 'tsx' : 'ts',
+    format: 'cjs',
+    jsx: 'automatic',
+  }).code;
+  moduleSources.push(`modules[${JSON.stringify('@/' + file.replace(/\.tsx?$/, ''))}] = (() => {
+    const module = { exports: {} }; const exports = module.exports;
+    ${code}
+    return module.exports;
+  })();`);
+}
+const output = `const modules = {}; const externalRequire = require;
+  require = (id) => id.endsWith('.css') ? {} :
+    Object.hasOwn(modules, id) ? modules[id] : externalRequire(id);
+  ${moduleSources.join('\n')}
+  module.exports = modules['@/app/scene-recovery'];`;
 const vmModule = { exports: {} },
   document = { body: {}, activeElement: null };
-runInNewContext(output.outputFiles[0].text, {
+runInNewContext(output, {
   module: vmModule,
   exports: vmModule.exports,
   console,

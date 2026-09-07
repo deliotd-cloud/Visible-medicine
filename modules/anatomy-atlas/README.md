@@ -16,6 +16,8 @@ The atlas now has **1,022 source entries, 138 dissection stages and 120 focuses*
 
 The shoulder, all regions and whole body offer **Restart 3D view** if graphics are interrupted. Dissection settings, answers and the last captured camera are retained; practice pauses until the viewer is available. Structure information stays outside the graphics surface. See [behaviour, tests and device-acceptance limits](docs/SCENE_RECOVERY.md). The recovery feature itself does not change anatomy.
 
+Startup rejections and errors in animation callbacks now reach the same restart control. Each viewer has an on-demand drawing queue; a failed or retired viewer cannot keep drawing or revive practice. Restart creates a fresh canvas, and invalid/zero-size layouts wait for a usable size. This adds no permanent controls or new assets. The installed React/Three integration is exercised with simulated graphics; hardware, touch and clinical acceptance remain outstanding.
+
 The [supporting-tissue source classification](docs/SUPPORTING_CANDIDATES.md) and subsequent [raw tendon/thumb geometry audit](docs/SUPPORTING_GEOMETRY.md) distinguish candidates from admissible anatomy; existing holds remain. The latter audits six sources without importing them. Graphics recovery additionally catches synchronous renderer and shader errors, and practice waits for a successful render call before resuming; actual device acceptance remains pending.
 
 ## Throat dissection and regional coverage
