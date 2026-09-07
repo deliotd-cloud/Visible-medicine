@@ -4,6 +4,10 @@
 
 The [requirement audit](REQUIREMENT_AUDIT.md) consolidates current coverage, actual teaching gaps and the next device-acceptance matrix. Current source contains 1,022 body representations, 138 stages and 120 focuses; counts in milestone-specific gates below are historical. Every unresolved gate remains relevant. Current local layout/explosion/recovery changes are not covered by the earlier browser session, and no clinical approval is created by source or software checks.
 
+## Foot muscle teaching gates
+
+Review all 36 entries and 72 drafts in [FOOT_CURRICULUM.md](FOOT_CURRICULUM.md): lumbrical/interosseous digit numbering and medial attachments, first-lumbrical motor supply, short-versus-long digital tendons, sesamoid/head boundaries, adductor origins, flexor-accessorius naming and variable opponens identity/action. Text and source labels do not validate nerve routes, tendon slips or functional independence. No clinical/modality acceptance or transferred shoulder approval is implied.
+
 ## Lower-leg muscle teaching gates
 
 Review the 28 entries and 56 new drafts described in [LEG_CURRICULUM.md](LEG_CURRICULUM.md): gastrocnemius-head identity and joint crossings, soleus/Achilles continuity, popliteus free/fixed-tibia wording, anterior versus lateral fibularis supply, digital slips, tibialis-posterior expansion, plantaris variants and attachment extents. Textual teaching does not validate nerve paths, fascial boundaries, tendon footprints or clinical accuracy. Clinical/modality topics remain separate authoring and acceptance work.

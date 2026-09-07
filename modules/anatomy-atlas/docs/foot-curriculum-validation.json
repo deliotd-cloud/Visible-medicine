@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "checks": 9130,
+  "lessonDefinitions": 18,
+  "bodyRepresentations": 36,
+  "authoredSections": 72,
+  "combinedPinnedCurriculumSections": 424,
+  "bodyReadiness": {
+    "anatomy": {
+      "draft": 407,
+      "identity-only": 615,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "function": {
+      "draft": 463,
+      "identity-only": 146,
+      "pending": 413,
+      "generated-identification": 0
+    }
+  },
+  "footReadiness": {
+    "entries": 118,
+    "anatomy": {
+      "draft": 44,
+      "identity-only": 74,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "function": {
+      "draft": 48,
+      "identity-only": 16,
+      "pending": 54,
+      "generated-identification": 0
+    }
+  },
+  "negativeCases": 9,
+  "unrelatedCopyAndRecipesPreserved": true,
+  "sourceGeometryChanged": false,
+  "clinicalApproval": false,
+  "scanContentAdded": false,
+  "browserTesting": false,
+  "limitations": "Software checks for identities, head/variable-slip limits, display/export and preservation; not anatomical accuracy, complete function, tendon/nerve mapping, clinical or device acceptance."
+}

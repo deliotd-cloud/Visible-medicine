@@ -17,6 +17,8 @@ The explicit classification corrected two prior heuristic false positives: Funct
 
 ## Record identity and multi-part geometry
 
+**Current foot extension:** 72 new drafts give body totals of 407 draft Anatomy / 615 identity-only and 463 draft Function / 146 identity-only / 413 pending. `authoringBeforeFoot` verifies/restores its exact topics before the five earlier offline projections. All 424 changed topics remain pinned to the original copy/recipe baseline. The leg report explicitly labels historical body readiness. Runtime/export stay current, with no source/schema/review migration. See [foot evidence](FOOT_CURRICULUM.md). The extension paragraphs below retain their milestone counts.
+
 **Latest lower-leg extension:** 56 new drafts give body totals of 371 draft Anatomy / 651 identity-only and 427 draft Function / 146 identity-only / 449 pending. `authoringBeforeLeg` verifies/restores its exact topics before four earlier offline transitions. All 352 changed topics are pinned; the original copy/recipe baseline remains intact. Thigh readiness is explicitly historical in its report. Runtime/export stay current; no source/schema/review migration. See [lower-leg evidence](LEG_CURRICULUM.md).
 
 **Prior hip/thigh extension:** 108 drafts gave milestone totals of 343 draft Anatomy / 679 identity-only and 399 draft Function / 146 identity-only / 477 pending. Its 296 changed sections remain pinned in the preceding transitions. See [hip/thigh evidence](THIGH_CURRICULUM.md).

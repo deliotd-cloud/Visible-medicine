@@ -73,7 +73,8 @@
     "forearm-curriculum:test": "node scripts/validate-forearm-curriculum.mjs",
     "hand-curriculum:test": "node scripts/validate-hand-curriculum.mjs",
     "thigh-curriculum:test": "node scripts/validate-thigh-curriculum.mjs",
-    "leg-curriculum:test": "node scripts/validate-leg-curriculum.mjs"
+    "leg-curriculum:test": "node scripts/validate-leg-curriculum.mjs",
+    "foot-curriculum:test": "node scripts/validate-foot-curriculum.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",
