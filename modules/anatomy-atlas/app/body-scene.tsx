@@ -16,6 +16,7 @@ import { translatedBox } from '@/lib/explode-layout.mjs';
 import {
   arrangeBodyStructures,
   bodyPresentationOffset,
+  extractionOffsets,
   type BodyLayout,
 } from '@/lib/body-arrangement';
 import {
@@ -144,8 +145,9 @@ function Bundle({
         return (
           <group key={structure.id}>
             {props.showOrigins &&
-              props.layout === 'spatial' &&
+              props.layout !== 'tray' &&
               props.explode > 0 &&
+              position.lengthSq() > 0 &&
               !removed &&
               (selected || props.structures.length < 150) && (
                 <mesh geometry={geometry} raycast={() => null}>
@@ -255,8 +257,14 @@ export function BodyScene(props: Props) {
     () =>
       layout === 'tray'
         ? arrangeBodyStructures(rendered, center, props.view).offsets
-        : undefined,
-    [layout, rendered, center, props.view],
+        : layout === 'extract'
+          ? extractionOffsets(
+              rendered.filter((item) => !props.hiddenIds.includes(item.id)),
+              props.selectedId,
+              props.view,
+            )
+          : undefined,
+    [layout, rendered, center, props.view, props.hiddenIds, props.selectedId],
   );
   const offsets = useMemo(
     () =>
@@ -294,8 +302,7 @@ export function BodyScene(props: Props) {
       result.union(translatedBox(s.bounds, offsets.get(s.id)));
     if (result.isEmpty())
       result.set(new THREE.Vector3(-2, -8, -1), new THREE.Vector3(2, 8, 1));
-    if (props.showOrigins && layout === 'spatial' && !focusId)
-      result.union(frame);
+    if (props.showOrigins && layout !== 'tray' && !focusId) result.union(frame);
     return result;
   }, [
     props.structures,

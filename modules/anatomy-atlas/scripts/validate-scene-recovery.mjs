@@ -599,6 +599,7 @@ check(body.includes('Practice paused while the 3D view recovers.'));
     displayReady: false,
     mode: 'exam',
     setPlate: spy('plate'),
+    setLayout: spy('layout'),
     setSyncPlane: spy('plane'),
     setMode: spy('mode'),
     practiceDispatch: spy('practice'),
@@ -611,6 +612,7 @@ check(body.includes('Practice paused while the 3D view recovers.'));
     },
   });
   same(calls.find((c) => c[0] === 'mode')?.[1], 'study');
+  same(calls.find((c) => c[0] === 'layout')?.[1], 'spatial');
   same(calls.find((c) => c[0] === 'practice')?.[1].type, 'dismiss');
   handlerCases++;
 }

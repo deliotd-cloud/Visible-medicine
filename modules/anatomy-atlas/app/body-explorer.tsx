@@ -33,6 +33,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
 import { Slider } from '@/components/ui/slider';
+import { ExplodeStyleSelect } from './explode-style-select';
 import {
   Select,
   SelectContent,
@@ -562,10 +563,10 @@ export default function BodyExplorer({
     setReset((n) => n + 1);
   }
   function changeLayout(next: BodyLayout) {
-    if (exam) return;
+    if (exam || next === layout) return;
     setLayout(next);
     setPlate(next === 'tray');
-    setExplode(next === 'tray' ? 100 : 0);
+    setExplode(next === 'spatial' ? 0 : 100);
     setFocus(false);
     setIsolated(false);
     setZoom(1);
@@ -907,28 +908,12 @@ export default function BodyExplorer({
             })}
           </div>
           <div className="body-layout-controls" aria-label="Model arrangement">
-            <div>
-              <button
-                type="button"
-                aria-pressed={layout === 'spatial'}
-                disabled={exam}
-                onClick={() => changeLayout('spatial')}
-              >
-                Spatial anatomy
-              </button>
-              <button
-                type="button"
-                aria-pressed={layout === 'tray'}
-                disabled={exam || !available.length}
-                onClick={() => changeLayout('tray')}
-              >
-                Arrange structures
-              </button>
-            </div>
             <p>
               {layout === 'tray' && !exam
                 ? 'Same-scale surfaces, grouped by system. At 100%, each catalogue entry has its own space—not an anatomical position.'
-                : 'Source anatomy at 0% separation. Rotate freely or choose a standard direction.'}
+                : layout === 'extract' && !exam
+                  ? 'Only the selected structure moves. Others remain assembled. This is a teaching view, not a surgical extraction path.'
+                  : 'Source anatomy at 0% separation. Rotate freely or choose a standard direction.'}
             </p>
           </div>
           {!exam && (
@@ -943,7 +928,7 @@ export default function BodyExplorer({
               <button
                 type="button"
                 aria-pressed={anchorSkeleton}
-                disabled={layout === 'tray'}
+                disabled={layout !== 'spatial'}
                 onClick={() => setAnchorSkeleton((v) => !v)}
               >
                 Keep bones assembled
@@ -1232,10 +1217,11 @@ export default function BodyExplorer({
                 <Tags />
               </Button>
               <div className="body-explode">
-                <Layers3 />
-                <span>
-                  {layout === 'tray' && !exam ? 'Arrange' : 'Explode'}
-                </span>
+                <ExplodeStyleSelect
+                  value={exam ? 'spatial' : layout}
+                  disabled={exam || !available.length}
+                  onChange={changeLayout}
+                />
                 <Slider
                   value={[explode]}
                   min={0}
@@ -1246,7 +1232,9 @@ export default function BodyExplorer({
                   aria-label={
                     layout === 'tray'
                       ? 'Arranged separation'
-                      : 'Exploded separation'
+                      : layout === 'extract'
+                        ? 'Selected structure separation'
+                        : 'Exploded separation'
                   }
                 />
                 <output>{explode}%</output>
@@ -1265,13 +1253,20 @@ export default function BodyExplorer({
                 ? explode === 100
                   ? 'Arranged view · Pan / pinch to zoom · Choose a direction · Not anatomical positions'
                   : `Arrangement in progress · ${explode}% · Overlap is possible before 100%`
-                : explode > 0
-                  ? 'Exploded teaching view · Positions are not anatomical'
-                  : !exam && inspection.plane !== 'off'
-                    ? `${inspection.plane} surface cutaway · ${inspection.position}% · Not CT/MRI`
-                    : plate && !exam
-                      ? 'Orthographic illustration · Choose a direction · Use + / − to zoom'
-                      : 'Drag to rotate · Pinch to zoom · Select any visible structure'}
+                : layout === 'extract' && !exam
+                  ? !selectedId ||
+                    !available.some((item) => item.id === selectedId)
+                    ? 'Select a visible structure to extract · Others stay assembled'
+                    : explode > 0
+                      ? 'Selected structure extracted · 0% restores anatomy · Overlap can recur when rotated'
+                      : 'Assembled anatomy · Increase separation to extract the selected structure'
+                  : explode > 0
+                    ? 'Exploded teaching view · Positions are not anatomical'
+                    : !exam && inspection.plane !== 'off'
+                      ? `${inspection.plane} surface cutaway · ${inspection.position}% · Not CT/MRI`
+                      : plate && !exam
+                        ? 'Orthographic illustration · Choose a direction · Use + / − to zoom'
+                        : 'Drag to rotate · Pinch to zoom · Select any visible structure'}
             </div>
             <a
               className="model-credit"

@@ -15,7 +15,11 @@ import { Html, Line, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 import type { AnatomyStructure, SystemKey } from './anatomy-data';
 import { FittedCamera } from './fitted-camera';
-import { shoulderOffset, translatedBox } from '@/lib/explode-layout.mjs';
+import {
+  shoulderArrangementItems,
+  shoulderPresentationOffsets,
+} from '@/lib/shoulder-arrangement';
+import { arrangementBounds, type BodyLayout } from '@/lib/body-arrangement';
 import manifest from '@/public/models/bodyparts3d/manifest.json';
 import {
   applyMaterialInspection,
@@ -49,6 +53,7 @@ type SceneProps = {
   visibleSystems: Record<SystemKey, boolean>;
   isolated: boolean;
   explode: number;
+  layout: BodyLayout;
   showLabels: boolean;
   syncPlane: boolean;
   resetNonce: number;
@@ -242,7 +247,7 @@ function Tissue({
   );
 }
 
-function Model(props: SceneProps) {
+function Model(props: SceneProps & { offsets: Map<string, THREE.Vector3> }) {
   const { scene } = useGLTF('/models/bodyparts3d/shoulder-right.glb');
   const onModelReady = props.onModelReady;
   useEffect(() => {
@@ -286,11 +291,8 @@ function Model(props: SceneProps) {
         const slug = structure.id.split(':').at(-1)!;
         const selected = props.selectedId === structure.id && !props.exam;
         if (!isVisible(structure, props)) return null;
-        const displacement = shoulderOffset(
-          slug,
-          props.explode,
-          props.anchorSkeleton && structure.category === 'bone',
-        );
+        const displacement =
+          props.offsets.get(structure.id) ?? new THREE.Vector3();
         const faded = props.isolated && !selected;
         const cuts = sectionPlanes(
           sectionFrame,
@@ -310,21 +312,24 @@ function Model(props: SceneProps) {
         };
         return (
           <group key={structure.id}>
-            {props.showOrigins && props.explode > 0 && (
-              <group raycast={() => null}>
-                {meshes[slug]?.map((mesh) => (
-                  <Tissue
-                    key={mesh.name}
-                    geometry={mesh.geometry}
-                    bone={structure.category === 'bone'}
-                    selected={false}
-                    faded
-                    slug={slug}
-                    cuts={sectionPlanes(sectionFrame, props.inspection)}
-                  />
-                ))}
-              </group>
-            )}
+            {props.showOrigins &&
+              !props.exam &&
+              props.layout !== 'tray' &&
+              displacement.lengthSq() > 0 && (
+                <group raycast={() => null}>
+                  {meshes[slug]?.map((mesh) => (
+                    <Tissue
+                      key={mesh.name}
+                      geometry={mesh.geometry}
+                      bone={structure.category === 'bone'}
+                      selected={false}
+                      faded
+                      slug={slug}
+                      cuts={sectionPlanes(sectionFrame, props.inspection)}
+                    />
+                  ))}
+                </group>
+              )}
             <group position={displacement}>
               <group
                 onClick={select}
@@ -414,40 +419,55 @@ class ModelBoundary extends Component<
 }
 
 export function AnatomyScene(props: SceneProps) {
+  const layout = props.exam ? 'spatial' : props.layout;
+  const arrangementView = props.view === 'lateral' ? 'right' : props.view;
+  const items = useMemo(
+    () =>
+      shoulderArrangementItems(
+        props.structures.filter((s) => isVisible(s, props)),
+      ),
+    [props],
+  );
+  const offsets = useMemo(
+    () =>
+      shoulderPresentationOffsets(
+        items,
+        arrangementView,
+        props.exam ? 0 : props.explode,
+        layout,
+        props.selectedId,
+        props.anchorSkeleton,
+      ),
+    [
+      items,
+      arrangementView,
+      props.exam,
+      props.explode,
+      layout,
+      props.selectedId,
+      props.anchorSkeleton,
+    ],
+  );
   const bounds = useMemo(() => {
-    const box = new THREE.Box3();
-    for (const structure of props.structures.filter((s) =>
-      isVisible(s, props),
-    )) {
-      const slug = structure.id.split(':').at(-1)!;
-      const offset = shoulderOffset(
-        slug,
-        props.explode,
-        props.anchorSkeleton && structure.category === 'bone',
-      );
-      for (const part of manifest.parts.filter(
-        (p) => p.structureId === structure.id,
-      )) {
-        const source = {
-          min: [...part.bounds.min] as [number, number, number],
-          max: [...part.bounds.max] as [number, number, number],
-        };
-        source.min[1] = Math.max(-3.15, source.min[1]);
-        box.union(translatedBox(source, offset));
-        if (props.showOrigins) box.union(translatedBox(source));
-      }
-    }
+    const box = arrangementBounds(items, offsets);
+    if (props.showOrigins && !props.exam && layout !== 'tray')
+      box.union(arrangementBounds(items, new Map()));
     if (box.isEmpty())
       box.set(new THREE.Vector3(-4, -3.15, -2), new THREE.Vector3(2, 2.5, 2));
     return box;
-  }, [props]);
+  }, [items, offsets, props.showOrigins, props.exam, layout]);
+  const orthographic = props.plate || layout === 'tray';
   return (
     <SceneRecovery
       className="shoulder-scene"
-      cameraKey={[props.view, props.zoom, props.resetNonce, props.plate].join(
-        '/',
-      )}
-      key={props.plate ? 'plate' : 'perspective'}
+      cameraKey={[
+        props.view,
+        props.zoom,
+        props.resetNonce,
+        orthographic,
+        layout,
+      ].join('/')}
+      key={orthographic ? 'plate' : 'perspective'}
       onHealth={props.onRendererHealth}
       cameraCapture={props.cameraCapture}
       cameraRestore={props.cameraRestore}
@@ -455,7 +475,7 @@ export function AnatomyScene(props: SceneProps) {
       {(onHealth) => (
         <Canvas
           onFailure={() => onHealth('failed')}
-          orthographic={props.plate}
+          orthographic={orthographic}
           shadows
           camera={{
             position: [1.85, 0.88, -12],
@@ -504,7 +524,7 @@ export function AnatomyScene(props: SceneProps) {
                   </Html>
                 }
               >
-                <Model {...props} />
+                <Model {...props} offsets={offsets} />
               </Suspense>
             </ModelBoundary>
           </SceneLabelLayer>
@@ -533,7 +553,7 @@ export function AnatomyScene(props: SceneProps) {
           <FittedCamera
             bounds={bounds}
             direction={
-              props.plate
+              orthographic
                 ? props.view === 'posterior'
                   ? [0, 0, -1]
                   : props.view === 'anterior'
@@ -544,7 +564,8 @@ export function AnatomyScene(props: SceneProps) {
             viewKey={props.view}
             zoom={props.zoom}
             reset={props.resetNonce}
-            locked={props.plate}
+            locked={props.plate && layout !== 'tray'}
+            planar={layout === 'tray'}
             cameraCapture={props.cameraCapture}
             cameraRestore={props.cameraRestore}
           />

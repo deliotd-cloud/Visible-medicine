@@ -1,5 +1,9 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+## Choose how structures separate
+
+Beside the separation slider, choose **Spread**, **Extract selected**, or **Tray**. This works in each body region, whole body and the dedicated shoulder 3D viewer. Extraction moves only the chosen structure; the tray separates entries at the same scale. Set the slider to **0%** to restore source positions. Saved views remember the choice; exam mode stays assembled. These are teaching arrangements, not surgical paths. See [behaviour, evidence and limits](docs/EXPLODE_STYLES.md).
+
 ## Simpler navigation and slimmer system controls
 
 Use **Explore · Dissect · Practice** to show the relevant tools without resetting the model. The system rail is now 216px wide (previously 264px), with compact labelled switches. **View** replaces six camera-direction buttons. Selected-structure actions live together, with less common actions under **More**. Notes are grouped into **Anatomy · Clinical · Imaging**; quiz notes and setup live in Practice. **Search atlas** finds body regions, source structures and the current region's study views; a view preview requires confirmation before resetting custom dissection settings. **Focus view** collapses both desktop/tablet panels; phones already use this layout. See [controls, evidence and limitations](docs/ATLAS_NAVIGATION.md). The dedicated shoulder interface is unchanged.

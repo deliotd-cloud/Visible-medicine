@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Shared explosion-style selection
+
+`app/explode-style-select.tsx` composes the installed Select primitive inside both existing slider toolbars. Explorer-owned `BodyLayout` is `spatial | extract | tray`, retained by validated local study snapshots. `lib/body-arrangement.ts` supplies source-bounds-only tray packing and selected-only extraction; `lib/shoulder-arrangement.ts` adapts the existing cropped shoulder manifest without changing source coordinates or mesh IDs. Both scenes share one offset map between model parents, clipping and fitted camera bounds; live-camera labels inherit those transforms. Exam guards restore source positions. See [behaviour, numerical/component evidence and pending acceptance](EXPLODE_STYLES.md).
+
 ## Task-based atlas navigation
 
 `app/atlas-workspace.tsx` owns presentation-only mode, focus and mutually exclusive sheet state below `BodyExplorer`'s anatomy/practice state. Mode panels stay mounted and are hidden when inactive. A constrained direction selector calls the unchanged view/reset action. The new stylesheet is explicitly imported after `body-explorer.css`; it narrows the system rail and groups related controls without changing scene materials. `lib/atlas-navigation.ts` builds a source-derived search index using the existing side/scope, source-hashed link resolver and study-library recipes. Search applies the same guarded selection/window/focus handlers and requires a clean-view confirmation. Existing acquired-imaging and clinical gates remain. See [behaviour and test limits](ATLAS_NAVIGATION.md).

@@ -50,6 +50,8 @@ import {
   ComboboxList,
 } from '@/components/ui/combobox';
 import { Slider } from '@/components/ui/slider';
+import { ExplodeStyleSelect } from './explode-style-select';
+import type { BodyLayout } from '@/lib/body-arrangement';
 import { Switch } from '@/components/ui/switch';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
@@ -128,6 +130,7 @@ export default function ShoulderExplorer({
   >({ skeleton: true, muscles: true, 'soft-tissue': true });
   const [isolated, setIsolated] = useState(false);
   const [explode, setExplode] = useState(0);
+  const [layout, setLayout] = useState<BodyLayout>('spatial');
   const [anchorSkeleton, setAnchorSkeleton] = useState(false);
   const [showOrigins, setShowOrigins] = useState(false);
   const [plate, setPlate] = useState(false);
@@ -179,6 +182,7 @@ export default function ShoulderExplorer({
       systems: visibleSystems,
       hiddenIds: [],
       explode,
+      layout,
       zoom,
       isolated,
       focus: false,
@@ -201,6 +205,7 @@ export default function ShoulderExplorer({
     setLayer(state.layer);
     setVisibleSystems(state.systems as Record<SystemKey, boolean>);
     setExplode(state.explode);
+    setLayout(state.layout ?? 'spatial');
     setZoom(state.zoom);
     setIsolated(state.isolated);
     setShowLabels(state.labels);
@@ -289,6 +294,7 @@ export default function ShoulderExplorer({
   const toggleMode = () => {
     if (mode === 'study' && !displayReady) return;
     setPlate(false);
+    setLayout('spatial');
     setSyncPlane(false);
     setMode((current) => (current === 'study' ? 'exam' : 'study'));
     practiceDispatch({ type: 'dismiss' });
@@ -302,6 +308,21 @@ export default function ShoulderExplorer({
   const toggleSync = () => {
     setSyncPlane((current) => !current);
   };
+
+  function changeLayout(next: BodyLayout) {
+    if (mode === 'exam' || next === layout) return;
+    setLayout(next);
+    setPlate(next === 'tray');
+    setExplode(next === 'spatial' ? 0 : 100);
+    setIsolated(false);
+    setZoom(1);
+    setResetNonce((n) => n + 1);
+  }
+
+  function changePlate(next: boolean) {
+    if (!next && layout === 'tray') changeLayout('spatial');
+    else setPlate(next);
+  }
 
   useEffect(() => {
     const context = (document as Document & { modelContext?: ModelContextLike })
@@ -565,7 +586,7 @@ export default function ShoulderExplorer({
                     }),
                   )}
                   plate={plate}
-                  onPlate={setPlate}
+                  onPlate={changePlate}
                 />
                 <StudyViews
                   scope={studyScope}
@@ -596,6 +617,7 @@ export default function ShoulderExplorer({
                         setView(camera);
                         setLayer(dissection);
                         setExplode(0);
+                        setLayout('spatial');
                         setZoom(1);
                         setIsolated(false);
                         setSelectedId(structures[0].id);
@@ -737,6 +759,7 @@ export default function ShoulderExplorer({
               visibleSystems={visibleSystems}
               isolated={isolated && mode === 'study'}
               explode={explode}
+              layout={mode === 'exam' ? 'spatial' : layout}
               showLabels={showLabels && mode === 'study'}
               syncPlane={syncPlane}
               resetNonce={resetNonce}
@@ -760,7 +783,7 @@ export default function ShoulderExplorer({
                   type="button"
                   aria-pressed={plate}
                   onClick={() => {
-                    setPlate((v) => !v);
+                    changePlate(!plate);
                     setResetNonce((n) => n + 1);
                   }}
                 >
@@ -769,6 +792,7 @@ export default function ShoulderExplorer({
                 <button
                   type="button"
                   aria-pressed={anchorSkeleton}
+                  disabled={layout !== 'spatial'}
                   onClick={() => setAnchorSkeleton((v) => !v)}
                 >
                   Keep bones assembled
@@ -776,6 +800,7 @@ export default function ShoulderExplorer({
                 <button
                   type="button"
                   aria-pressed={showOrigins}
+                  disabled={layout === 'tray'}
                   onClick={() => setShowOrigins((v) => !v)}
                 >
                   Original positions
@@ -854,17 +879,27 @@ export default function ShoulderExplorer({
               </Tooltip>
               <span className="toolbar-divider" />
               <div className="explode-control">
-                <Layers3 />
-                <span>Explode</span>
+                <ExplodeStyleSelect
+                  value={mode === 'exam' ? 'spatial' : layout}
+                  disabled={mode === 'exam'}
+                  onChange={changeLayout}
+                />
                 <Slider
                   min={0}
                   max={100}
                   step={1}
                   value={[explode]}
+                  disabled={mode === 'exam'}
                   onValueChange={(value) =>
                     setExplode(Array.isArray(value) ? value[0] : value)
                   }
-                  aria-label="Exploded view separation"
+                  aria-label={
+                    layout === 'extract'
+                      ? 'Selected structure separation'
+                      : layout === 'tray'
+                        ? 'Arranged separation'
+                        : 'Exploded view separation'
+                  }
                 />
                 <output>{Math.round(explode)}%</output>
               </div>
@@ -880,6 +915,8 @@ export default function ShoulderExplorer({
                         setResetNonce((value) => value + 1);
                         setInspection(initialInspection);
                         setExplode(0);
+                        setLayout('spatial');
+                        setPlate(false);
                         setIsolated(false);
                         setZoom(1);
                       }}
@@ -892,13 +929,23 @@ export default function ShoulderExplorer({
               </Tooltip>
             </div>
             <div className="viewer-hint">
-              {mode === 'study' && inspection.plane !== 'off'
-                ? `${inspection.plane} surface cutaway · ${inspection.position}% · Not CT/MRI`
-                : explode > 0
-                  ? 'Exploded teaching view · Positions are not anatomical'
-                  : plate
-                    ? 'Parallel projection · Click a structure · Use + / − to zoom'
-                    : 'Drag to rotate · Pinch to zoom · Click to explore'}
+              {mode === 'study' && layout === 'tray'
+                ? explode === 100
+                  ? 'Tray · Pan / pinch to zoom · Not anatomical positions'
+                  : `Arrangement in progress · ${explode}% · Overlap is possible before 100%`
+                : mode === 'study' && layout === 'extract'
+                  ? !visibleSystems[selected.system]
+                    ? 'Select a visible structure to extract · Others stay assembled'
+                    : explode > 0
+                      ? 'Selected structure extracted · 0% restores anatomy · Not a surgical path'
+                      : 'Assembled anatomy · Increase separation to extract the selected structure'
+                  : mode === 'study' && inspection.plane !== 'off'
+                    ? `${inspection.plane} surface cutaway · ${inspection.position}% · Not CT/MRI`
+                    : explode > 0
+                      ? 'Exploded teaching view · Positions are not anatomical'
+                      : plate
+                        ? 'Parallel projection · Click a structure · Use + / − to zoom'
+                        : 'Drag to rotate · Pinch to zoom · Click to explore'}
             </div>
             <a
               className="model-credit"

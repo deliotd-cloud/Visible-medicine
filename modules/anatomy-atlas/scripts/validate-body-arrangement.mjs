@@ -325,16 +325,17 @@ equal(
   null,
   'Tray requires orthographic mode',
 );
+const shoulderTray = {
+  ...base,
+  kind: 'shoulder',
+  region: 'shoulder-pilot',
+  side: 'right',
+  systems: { skeleton: true, muscles: true, 'soft-tissue': true },
+};
 equal(
-  a.parseStudyView({
-    ...base,
-    kind: 'shoulder',
-    region: 'shoulder-pilot',
-    side: 'right',
-    systems: { skeleton: true, muscles: true, 'soft-tissue': true },
-  }),
-  null,
-  'No tray in dedicated shoulder',
+  a.parseStudyView(shoulderTray),
+  shoulderTray,
+  'Dedicated shoulder tray bookmark',
 );
 equal(JSON.stringify(catalog), original, 'Catalogue untouched');
 const result = {

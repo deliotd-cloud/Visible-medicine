@@ -3,7 +3,13 @@ import type { BodyStructure } from '../app/body-types';
 import type { DissectionView } from '../app/dissection-data';
 import { bodyOffset, translatedBox } from './explode-layout.mjs';
 
-export type BodyLayout = 'spatial' | 'tray';
+export type BodyLayout = 'spatial' | 'extract' | 'tray';
+export type ArrangementItem = Pick<
+  BodyStructure,
+  'id' | 'bounds' | 'center'
+> & {
+  system: string;
+};
 const order = [
   'skeleton',
   'muscles',
@@ -36,7 +42,7 @@ export function arrangementAxes(view: DissectionView) {
  * bounds, not measurements, segmentations or reconstructed tissue surfaces.
  */
 export function arrangeBodyStructures(
-  items: BodyStructure[],
+  items: ArrangementItem[],
   origin: Vector3,
   view: DissectionView,
 ) {
@@ -141,6 +147,10 @@ export function bodyPresentationOffset(
   const value = Number.isFinite(amount)
     ? Math.max(0, Math.min(100, amount))
     : 0;
+  if (layout === 'extract')
+    return (tray?.get(item.id)?.clone() ?? new Vector3()).multiplyScalar(
+      value / 100,
+    );
   if (layout === 'spatial')
     return bodyOffset(
       item.center,
@@ -155,11 +165,51 @@ export function bodyPresentationOffset(
 }
 
 export function arrangementBounds(
-  items: BodyStructure[],
+  items: ArrangementItem[],
   offsets: Map<string, Vector3>,
 ) {
   const box = new Box3();
   for (const item of items)
     box.union(translatedBox(item.bounds, offsets.get(item.id)));
   return box;
+}
+
+/** Pull only the selected entry to the nearer side of the current preset.
+ * At 100% its conservative projected bounds clear all other supplied entries.
+ * This is a display translation, not a surgical path or joint movement. Arbitrary
+ * orbit angles and intermediate amounts can overlap. Missing selection is a no-op.
+ */
+export function extractionOffsets(
+  items: ArrangementItem[],
+  selectedId: string | null,
+  view: DissectionView,
+) {
+  const result = new Map<string, Vector3>();
+  const selected = items.find((item) => item.id === selectedId);
+  const others = items.filter((item) => item.id !== selectedId);
+  if (!selected || !others.length) return result;
+  const { right } = arrangementAxes(view);
+  function extent(box: Box3) {
+    const center = box.getCenter(new Vector3()).dot(right);
+    const size = box.getSize(new Vector3());
+    const half =
+      (Math.abs(right.x) * size.x +
+        Math.abs(right.y) * size.y +
+        Math.abs(right.z) * size.z) /
+      2;
+    return { min: center - half, max: center + half, center };
+  }
+  const source = extent(translatedBox(selected.bounds));
+  const context = extent(arrangementBounds(others, new Map()));
+  const gap = Math.max(
+    0.04,
+    (source.max - source.min) * 0.12,
+    (context.max - context.min) * 0.04,
+  );
+  const distance =
+    source.center < context.center
+      ? Math.min(-gap, context.min - gap - source.max)
+      : Math.max(gap, context.max + gap - source.min);
+  result.set(selected.id, right.multiplyScalar(distance));
+  return result;
 }
