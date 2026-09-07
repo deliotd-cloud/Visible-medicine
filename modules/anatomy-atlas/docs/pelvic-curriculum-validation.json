@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "checks": 8283,
+  "bodyRepresentations": 3,
+  "changedSections": 6,
+  "newDraftSections": 5,
+  "pendingFunctionClarifications": 1,
+  "combinedPinnedCurriculumSections": 430,
+  "bodyReadiness": {
+    "anatomy": {
+      "draft": 410,
+      "identity-only": 612,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "function": {
+      "draft": 465,
+      "identity-only": 146,
+      "pending": 411,
+      "generated-identification": 0
+    }
+  },
+  "negativeCases": 11,
+  "sourceIndexChecks": 5,
+  "unrelatedCopyAndRecipesPreserved": true,
+  "sourceGeometryChanged": false,
+  "clinicalApproval": false,
+  "scanContentAdded": false,
+  "browserTesting": false,
+  "limitations": "Software and optional source-index checks, not mesh topology, attachment footprints, specific sphincter identity/layers, complete function or clinical/device acceptance."
+}

@@ -1,0 +1,96 @@
+{
+  "sourceCommit": "f3af0510f21588c54c847f2b28a4fb38086f4a27",
+  "copyAndRecipeHash": "efca821b66e63ba68e8674a56b8b904f406187d6675d681135d69dfdb6d4a71a",
+  "scope": "body",
+  "region": "pelvis",
+  "tabs": [
+    "anatomy",
+    "function"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:pelvis:left:muscle:left-coccygeus",
+      "fmaId": "FMA46444",
+      "name": "Left coccygeus",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Anatomical identity",
+          "body": "Left coccygeus is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA46444",
+            "2 source components grouped as one structure",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Detailed boundaries and regional classification still require independent anatomical review.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:midline:muscle:superficial-perineal-muscle",
+      "fmaId": "FMA19728",
+      "name": "Superficial perineal muscle",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Anatomical identity",
+          "body": "Superficial perineal muscle is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA19728",
+            "4 source components grouped as one structure",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Detailed boundaries and regional classification still require independent anatomical review.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:muscle:right-coccygeus",
+      "fmaId": "FMA46443",
+      "name": "Right coccygeus",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Anatomical identity",
+          "body": "Right coccygeus is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA46443",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Detailed boundaries and regional classification still require independent anatomical review.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    }
+  ]
+}

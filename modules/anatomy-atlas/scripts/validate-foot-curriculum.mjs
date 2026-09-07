@@ -6,6 +6,7 @@ import {
   readContentJson,
 } from './content-contract-tools.mjs';
 import { authoringBeforeFoot } from './foot-curriculum-transition.mjs';
+import { authoringBeforePelvic } from './pelvic-curriculum-transition.mjs';
 import {
   curriculumHash,
   copyBeforeShoulderArmCurriculum,
@@ -44,7 +45,7 @@ same(
 same(
   curriculumHash(await copyBeforeShoulderArmCurriculum(context)),
   baseline.copyAndRecipeHash,
-  'Six pinned transitions preserve original baseline',
+  'Pinned transitions preserve original baseline',
 );
 const definitions = api.footMuscleLessons;
 const ids = definitions.flatMap((l) => l.fmaIds);
@@ -227,12 +228,14 @@ for (const [s, t, field] of negatives) {
   );
   checks++;
 }
+const footMilestoneApi = await authoringBeforePelvic(context);
 const counts = (t, scope = catalog.structures) =>
   Object.fromEntries(
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        scope.filter((s) => api.bodyLesson(s, t).readiness === r).length,
+        scope.filter((s) => footMilestoneApi.bodyLesson(s, t).readiness === r)
+          .length,
       ],
     ),
   );
@@ -265,7 +268,10 @@ const report = {
   bodyRepresentations: 36,
   authoredSections: 72,
   combinedPinnedCurriculumSections: 424,
-  bodyReadiness: { anatomy: counts('anatomy'), function: counts('function') },
+  bodyReadinessAtFootMilestone: {
+    anatomy: counts('anatomy'),
+    function: counts('function'),
+  },
   footReadiness: {
     entries: regional.length,
     anatomy: counts('anatomy', regional),

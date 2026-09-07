@@ -4,6 +4,10 @@
 
 The [requirement audit](REQUIREMENT_AUDIT.md) consolidates current coverage, actual teaching gaps and the next device-acceptance matrix. Current source contains 1,022 body representations, 138 stages and 120 focuses; counts in milestone-specific gates below are historical. Every unresolved gate remains relevant. Current local layout/explosion/recovery changes are not covered by the earlier browser session, and no clinical approval is created by source or software checks.
 
+## Pelvic teaching gates
+
+Review the [pelvic drafts and category evidence](PELVIC_CURRICULUM.md): coccygeus attachments, segmental innervation differences and multiple-file anatomy; adjudicate FMA19728's shared source mapping to external anal sphincter before specific Function authoring. The category explanation is not validated muscle/layer identification. Existing pelvic-source holds remain.
+
 ## Foot muscle teaching gates
 
 Review all 36 entries and 72 drafts in [FOOT_CURRICULUM.md](FOOT_CURRICULUM.md): lumbrical/interosseous digit numbering and medial attachments, first-lumbrical motor supply, short-versus-long digital tendons, sesamoid/head boundaries, adductor origins, flexor-accessorius naming and variable opponens identity/action. Text and source labels do not validate nerve routes, tendon slips or functional independence. No clinical/modality acceptance or transferred shoulder approval is implied.

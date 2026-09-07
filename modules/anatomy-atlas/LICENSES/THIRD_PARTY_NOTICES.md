@@ -1,5 +1,7 @@
 # Third-party notices
 
+The pelvic curriculum adds original brief teaching and source-category explanations; no mesh or dependency changes. Medical pages are consulted for facts, not copied assets; no Kenhub/Texas Tech illustrations/tables or StatPearls NC-ND prose are redistributed. BodyParts3D v4 index-derived evidence retains DBCLS attribution and CC BY 4.0 obligations, separate from MIT application text/code. See `../docs/PELVIC_CURRICULUM.md` for references and limits.
+
 The content-contract milestone adds original code and a draft teaching/source-binding export. Geometry-derived component metadata and baseline evidence retain BodyParts3D CC BY 4.0 attribution/change obligations; the original teaching text retains its existing MIT terms and does not relicense anatomy. The offline validator reuses already locked Ajv 8.20.0 (MIT); no dependency, font, texture, mesh, paid API or patient/private review data is added. See `../docs/CONTENT_CONTRACT.md`.
 
 The guarded-rendering and supporting-geometry milestone adds original application/recovery code with no new dependency, font, texture or runtime mesh. The six-source tendon/thumb audit and preserved baseline are derived BodyParts3D v4 evidence under CC BY 4.0, retaining DBCLS attribution, licence links and change notices; no candidate is admitted and no hold lifted. See `../docs/SUPPORTING_GEOMETRY.md` and `../docs/SCENE_RECOVERY.md`. The audit data is not relicensed as MIT.

@@ -2,6 +2,8 @@
 
 ## Delivered scope
 
+**Current pelvic extension:** [six explicit topic edits](PELVIC_CURRICULUM.md) add five drafts and one still-pending Function clarification. Body totals: Anatomy 410 draft / 612 identity-only; Function 465 draft / 146 identity-only / 411 pending. `authoringBeforePelvic` verifies/restores these sections before the six earlier offline projections. All 430 topic edits remain pinned to the original baseline; runtime/export stay current. Historical paragraphs and reports retain their milestone counts. No source/schema/review migration occurs.
+
 The content-ingestion format now represents every selectable source part and the actual readiness of each teaching topic. The committed `content/exports/shoulder.v2.json` is a real nine-record export of the current pilot, not an invented database example. The same exporter is checked against all 1,022 body records and all 87 existing GLBs. No new anatomy, teaching prose, clinical approval, scan, database table, endpoint or UI control is introduced.
 
 `app/body-content.ts` now exposes `bodyLesson(structure, topic)`, returning the original section plus explicit `readiness`. The existing `bodyContent` display API strips only that new field, preserving every prior displayed section. Readiness is assigned by the relevant authoring branch, not guessed from a title or an imaging-tab label. Shoulder teaching is explicitly draft through `draftLesson`.
