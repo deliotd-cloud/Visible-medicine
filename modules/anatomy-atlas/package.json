@@ -65,7 +65,8 @@
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
     "format": "oxfmt",
-    "licenses:audit": "node scripts/audit-licenses.mjs"
+    "licenses:audit": "node scripts/audit-licenses.mjs",
+    "requirements:audit": "node scripts/audit-requirements.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

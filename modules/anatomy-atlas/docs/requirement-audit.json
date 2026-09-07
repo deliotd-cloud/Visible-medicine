@@ -1,0 +1,783 @@
+{
+  "schemaVersion": 1,
+  "method": "Offline source and displayed-copy inventory; no clinical or browser certification.",
+  "sourceHashes": {
+    "public/models/bodyparts3d/full-body/catalog.json": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "public/models/bodyparts3d/manifest.json": "619e3ab84712487bd032b84a8f8b52f94d10883d8db7798057049bab287de857",
+    "package-lock.json": "a6a8277be904e06c3735ce00f9148372937a94209cb6219cb94487efc1ae74e5",
+    "content/schema/anatomy-structure.schema.json": "f77da399733f1086fec400267e0126ef26b5d5cf28696f4c00a43adf0cecc5d6",
+    "content/review-revisions.json": "abc8f9410e00b41282e149d2bb6020d96ad6367aed769888519940c4c24118a0",
+    "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
+    "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
+    "resolvedContentAndRecipeData": "0e7c9052aca8cd17b1a1d26bf5bc8e0d2a1bf34b2c3d98b39ee9d13ada3d297c"
+  },
+  "anatomy": {
+    "bodyRepresentations": 1022,
+    "bodyBundles": 86,
+    "bodyBundleBytes": 96645168,
+    "systems": {
+      "skeleton": 203,
+      "muscles": 369,
+      "nerves": 54,
+      "organs": 80,
+      "vessels": 227,
+      "connective": 89
+    },
+    "regions": [
+      {
+        "id": "head-neck",
+        "name": "Head & neck",
+        "entries": 275
+      },
+      {
+        "id": "thorax",
+        "name": "Thorax",
+        "entries": 153
+      },
+      {
+        "id": "abdomen",
+        "name": "Abdomen",
+        "entries": 94
+      },
+      {
+        "id": "pelvis",
+        "name": "Pelvis & hip",
+        "entries": 65
+      },
+      {
+        "id": "shoulder-arm",
+        "name": "Shoulder & arm",
+        "entries": 91
+      },
+      {
+        "id": "forearm",
+        "name": "Elbow & forearm",
+        "entries": 66
+      },
+      {
+        "id": "hand",
+        "name": "Wrist & hand",
+        "entries": 124
+      },
+      {
+        "id": "thigh",
+        "name": "Hip & thigh",
+        "entries": 81
+      },
+      {
+        "id": "leg",
+        "name": "Knee & leg",
+        "entries": 60
+      },
+      {
+        "id": "foot",
+        "name": "Ankle & foot",
+        "entries": 118
+      },
+      {
+        "id": "spine",
+        "name": "Spine & back",
+        "entries": 112
+      }
+    ],
+    "shoulderRepresentations": 9,
+    "shoulderSourceParts": 11,
+    "regionalMembershipsOverlap": true,
+    "shoulderAndBodyRepresentationsOverlap": true,
+    "anatomicalCompletenessMeasured": false
+  },
+  "study": {
+    "stages": 138,
+    "focuses": 120
+  },
+  "teaching": {
+    "classification": {
+      "specificDraft": "Non-fallback authored copy, possibly shared across a source group. Not necessarily complete, cited or clinically reviewed.",
+      "identityOnly": "Generic source identity or vascular-segment disclaimer, not a structure-specific anatomy/function lesson.",
+      "pending": "Explicit pending-content fallback.",
+      "generatedIdentification": "Generated find-this-structure prompt, not an authored clinical question."
+    },
+    "classificationLimit": "Exact current display-title rules, not persistent authoring statuses. Reassess when resolver titles or branches change.",
+    "body": {
+      "anatomy": {
+        "specificDraft": 195,
+        "identityOnly": 827,
+        "pending": 0,
+        "generatedIdentification": 0
+      },
+      "function": {
+        "specificDraft": 259,
+        "identityOnly": 146,
+        "pending": 617,
+        "generatedIdentification": 0
+      },
+      "ct": {
+        "specificDraft": 11,
+        "identityOnly": 0,
+        "pending": 1011,
+        "generatedIdentification": 0
+      },
+      "mri": {
+        "specificDraft": 11,
+        "identityOnly": 0,
+        "pending": 1011,
+        "generatedIdentification": 0
+      },
+      "ultrasound": {
+        "specificDraft": 11,
+        "identityOnly": 0,
+        "pending": 1011,
+        "generatedIdentification": 0
+      },
+      "pathology": {
+        "specificDraft": 11,
+        "identityOnly": 0,
+        "pending": 1011,
+        "generatedIdentification": 0
+      },
+      "clinical": {
+        "specificDraft": 11,
+        "identityOnly": 0,
+        "pending": 1011,
+        "generatedIdentification": 0
+      },
+      "quiz": {
+        "specificDraft": 11,
+        "identityOnly": 0,
+        "pending": 0,
+        "generatedIdentification": 1011
+      }
+    },
+    "shoulder": {
+      "anatomy": {
+        "specificDraft": 9,
+        "identityOnly": 0,
+        "pending": 0,
+        "generatedIdentification": 0
+      },
+      "function": {
+        "specificDraft": 9,
+        "identityOnly": 0,
+        "pending": 0,
+        "generatedIdentification": 0
+      },
+      "ct": {
+        "specificDraft": 9,
+        "identityOnly": 0,
+        "pending": 0,
+        "generatedIdentification": 0
+      },
+      "mri": {
+        "specificDraft": 9,
+        "identityOnly": 0,
+        "pending": 0,
+        "generatedIdentification": 0
+      },
+      "ultrasound": {
+        "specificDraft": 9,
+        "identityOnly": 0,
+        "pending": 0,
+        "generatedIdentification": 0
+      },
+      "pathology": {
+        "specificDraft": 9,
+        "identityOnly": 0,
+        "pending": 0,
+        "generatedIdentification": 0
+      },
+      "clinical": {
+        "specificDraft": 9,
+        "identityOnly": 0,
+        "pending": 0,
+        "generatedIdentification": 0
+      },
+      "quiz": {
+        "specificDraft": 9,
+        "identityOnly": 0,
+        "pending": 0,
+        "generatedIdentification": 0
+      }
+    },
+    "byRegion": {
+      "head-neck": {
+        "anatomy": {
+          "specificDraft": 91,
+          "identityOnly": 184,
+          "pending": 0,
+          "generatedIdentification": 0
+        },
+        "function": {
+          "specificDraft": 108,
+          "identityOnly": 27,
+          "pending": 140,
+          "generatedIdentification": 0
+        },
+        "ct": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 275,
+          "generatedIdentification": 0
+        },
+        "mri": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 275,
+          "generatedIdentification": 0
+        },
+        "ultrasound": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 275,
+          "generatedIdentification": 0
+        },
+        "pathology": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 275,
+          "generatedIdentification": 0
+        },
+        "clinical": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 275,
+          "generatedIdentification": 0
+        },
+        "quiz": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 0,
+          "generatedIdentification": 275
+        }
+      },
+      "thorax": {
+        "anatomy": {
+          "specificDraft": 6,
+          "identityOnly": 147,
+          "pending": 0,
+          "generatedIdentification": 0
+        },
+        "function": {
+          "specificDraft": 24,
+          "identityOnly": 64,
+          "pending": 65,
+          "generatedIdentification": 0
+        },
+        "ct": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 153,
+          "generatedIdentification": 0
+        },
+        "mri": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 153,
+          "generatedIdentification": 0
+        },
+        "ultrasound": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 153,
+          "generatedIdentification": 0
+        },
+        "pathology": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 153,
+          "generatedIdentification": 0
+        },
+        "clinical": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 153,
+          "generatedIdentification": 0
+        },
+        "quiz": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 0,
+          "generatedIdentification": 153
+        }
+      },
+      "abdomen": {
+        "anatomy": {
+          "specificDraft": 30,
+          "identityOnly": 64,
+          "pending": 0,
+          "generatedIdentification": 0
+        },
+        "function": {
+          "specificDraft": 48,
+          "identityOnly": 32,
+          "pending": 14,
+          "generatedIdentification": 0
+        },
+        "ct": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 94,
+          "generatedIdentification": 0
+        },
+        "mri": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 94,
+          "generatedIdentification": 0
+        },
+        "ultrasound": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 94,
+          "generatedIdentification": 0
+        },
+        "pathology": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 94,
+          "generatedIdentification": 0
+        },
+        "clinical": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 94,
+          "generatedIdentification": 0
+        },
+        "quiz": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 0,
+          "generatedIdentification": 94
+        }
+      },
+      "pelvis": {
+        "anatomy": {
+          "specificDraft": 2,
+          "identityOnly": 63,
+          "pending": 0,
+          "generatedIdentification": 0
+        },
+        "function": {
+          "specificDraft": 3,
+          "identityOnly": 22,
+          "pending": 40,
+          "generatedIdentification": 0
+        },
+        "ct": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 65,
+          "generatedIdentification": 0
+        },
+        "mri": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 65,
+          "generatedIdentification": 0
+        },
+        "ultrasound": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 65,
+          "generatedIdentification": 0
+        },
+        "pathology": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 65,
+          "generatedIdentification": 0
+        },
+        "clinical": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 65,
+          "generatedIdentification": 0
+        },
+        "quiz": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 0,
+          "generatedIdentification": 65
+        }
+      },
+      "shoulder-arm": {
+        "anatomy": {
+          "specificDraft": 11,
+          "identityOnly": 80,
+          "pending": 0,
+          "generatedIdentification": 0
+        },
+        "function": {
+          "specificDraft": 11,
+          "identityOnly": 45,
+          "pending": 35,
+          "generatedIdentification": 0
+        },
+        "ct": {
+          "specificDraft": 11,
+          "identityOnly": 0,
+          "pending": 80,
+          "generatedIdentification": 0
+        },
+        "mri": {
+          "specificDraft": 11,
+          "identityOnly": 0,
+          "pending": 80,
+          "generatedIdentification": 0
+        },
+        "ultrasound": {
+          "specificDraft": 11,
+          "identityOnly": 0,
+          "pending": 80,
+          "generatedIdentification": 0
+        },
+        "pathology": {
+          "specificDraft": 11,
+          "identityOnly": 0,
+          "pending": 80,
+          "generatedIdentification": 0
+        },
+        "clinical": {
+          "specificDraft": 11,
+          "identityOnly": 0,
+          "pending": 80,
+          "generatedIdentification": 0
+        },
+        "quiz": {
+          "specificDraft": 11,
+          "identityOnly": 0,
+          "pending": 0,
+          "generatedIdentification": 80
+        }
+      },
+      "forearm": {
+        "anatomy": {
+          "specificDraft": 7,
+          "identityOnly": 59,
+          "pending": 0,
+          "generatedIdentification": 0
+        },
+        "function": {
+          "specificDraft": 7,
+          "identityOnly": 10,
+          "pending": 49,
+          "generatedIdentification": 0
+        },
+        "ct": {
+          "specificDraft": 1,
+          "identityOnly": 0,
+          "pending": 65,
+          "generatedIdentification": 0
+        },
+        "mri": {
+          "specificDraft": 1,
+          "identityOnly": 0,
+          "pending": 65,
+          "generatedIdentification": 0
+        },
+        "ultrasound": {
+          "specificDraft": 1,
+          "identityOnly": 0,
+          "pending": 65,
+          "generatedIdentification": 0
+        },
+        "pathology": {
+          "specificDraft": 1,
+          "identityOnly": 0,
+          "pending": 65,
+          "generatedIdentification": 0
+        },
+        "clinical": {
+          "specificDraft": 1,
+          "identityOnly": 0,
+          "pending": 65,
+          "generatedIdentification": 0
+        },
+        "quiz": {
+          "specificDraft": 1,
+          "identityOnly": 0,
+          "pending": 0,
+          "generatedIdentification": 65
+        }
+      },
+      "hand": {
+        "anatomy": {
+          "specificDraft": 42,
+          "identityOnly": 82,
+          "pending": 0,
+          "generatedIdentification": 0
+        },
+        "function": {
+          "specificDraft": 48,
+          "identityOnly": 8,
+          "pending": 68,
+          "generatedIdentification": 0
+        },
+        "ct": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 124,
+          "generatedIdentification": 0
+        },
+        "mri": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 124,
+          "generatedIdentification": 0
+        },
+        "ultrasound": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 124,
+          "generatedIdentification": 0
+        },
+        "pathology": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 124,
+          "generatedIdentification": 0
+        },
+        "clinical": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 124,
+          "generatedIdentification": 0
+        },
+        "quiz": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 0,
+          "generatedIdentification": 124
+        }
+      },
+      "thigh": {
+        "anatomy": {
+          "specificDraft": 2,
+          "identityOnly": 79,
+          "pending": 0,
+          "generatedIdentification": 0
+        },
+        "function": {
+          "specificDraft": 2,
+          "identityOnly": 20,
+          "pending": 59,
+          "generatedIdentification": 0
+        },
+        "ct": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 81,
+          "generatedIdentification": 0
+        },
+        "mri": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 81,
+          "generatedIdentification": 0
+        },
+        "ultrasound": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 81,
+          "generatedIdentification": 0
+        },
+        "pathology": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 81,
+          "generatedIdentification": 0
+        },
+        "clinical": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 81,
+          "generatedIdentification": 0
+        },
+        "quiz": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 0,
+          "generatedIdentification": 81
+        }
+      },
+      "leg": {
+        "anatomy": {
+          "specificDraft": 2,
+          "identityOnly": 58,
+          "pending": 0,
+          "generatedIdentification": 0
+        },
+        "function": {
+          "specificDraft": 4,
+          "identityOnly": 18,
+          "pending": 38,
+          "generatedIdentification": 0
+        },
+        "ct": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 60,
+          "generatedIdentification": 0
+        },
+        "mri": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 60,
+          "generatedIdentification": 0
+        },
+        "ultrasound": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 60,
+          "generatedIdentification": 0
+        },
+        "pathology": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 60,
+          "generatedIdentification": 0
+        },
+        "clinical": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 60,
+          "generatedIdentification": 0
+        },
+        "quiz": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 0,
+          "generatedIdentification": 60
+        }
+      },
+      "foot": {
+        "anatomy": {
+          "specificDraft": 8,
+          "identityOnly": 110,
+          "pending": 0,
+          "generatedIdentification": 0
+        },
+        "function": {
+          "specificDraft": 12,
+          "identityOnly": 16,
+          "pending": 90,
+          "generatedIdentification": 0
+        },
+        "ct": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 118,
+          "generatedIdentification": 0
+        },
+        "mri": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 118,
+          "generatedIdentification": 0
+        },
+        "ultrasound": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 118,
+          "generatedIdentification": 0
+        },
+        "pathology": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 118,
+          "generatedIdentification": 0
+        },
+        "clinical": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 118,
+          "generatedIdentification": 0
+        },
+        "quiz": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 0,
+          "generatedIdentification": 118
+        }
+      },
+      "spine": {
+        "anatomy": {
+          "specificDraft": 6,
+          "identityOnly": 106,
+          "pending": 0,
+          "generatedIdentification": 0
+        },
+        "function": {
+          "specificDraft": 28,
+          "identityOnly": 0,
+          "pending": 84,
+          "generatedIdentification": 0
+        },
+        "ct": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 112,
+          "generatedIdentification": 0
+        },
+        "mri": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 112,
+          "generatedIdentification": 0
+        },
+        "ultrasound": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 112,
+          "generatedIdentification": 0
+        },
+        "pathology": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 112,
+          "generatedIdentification": 0
+        },
+        "clinical": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 112,
+          "generatedIdentification": 0
+        },
+        "quiz": {
+          "specificDraft": 0,
+          "identityOnly": 0,
+          "pending": 0,
+          "generatedIdentification": 112
+        }
+      }
+    },
+    "clinicallyApproved": "Not determined: no private review database is read by this script."
+  },
+  "assetsAndRights": {
+    "publicFileExtensions": {
+      "png": 4,
+      "svg": 2,
+      "md": 1,
+      "html": 1,
+      "glb": 87,
+      "json": 2,
+      "tsv": 1
+    },
+    "publicFontFiles": [],
+    "dependencyEntries": 808,
+    "dependencyClassification": "PASS_WITH_NOTICE_OBLIGATIONS",
+    "unclassifiedDependencies": 0,
+    "limitation": "Lockfile declarations and existing notices, not legal clearance of every distributed binary or a fee guarantee. GLB/source rights remain separate from code; brand rights remain reserved."
+  },
+  "review": {
+    "revisionIdentities": 9,
+    "hasPrivateReviews": false,
+    "status": "Revision fingerprints are not approvals; persisted review UI currently targets the shoulder pilot only."
+  },
+  "boundaries": {
+    "importedNewAnatomy": false,
+    "importedScans": false,
+    "clinicalValidation": false,
+    "browserInteractionTesting": false,
+    "remoteDeliveryVerified": false
+  }
+}

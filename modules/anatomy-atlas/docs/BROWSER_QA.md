@@ -1,5 +1,7 @@
 # Branded anatomy module — verification record
 
+**Historical revision only.** This session predates current model-first side sheets, navigation, live-camera labels, explosion choice and selected-structure recovery. It is not browser acceptance of those changes. Use the current matrix in [REQUIREMENT_AUDIT.md](REQUIREMENT_AUDIT.md) for the next authorized hands-on pass.
+
 Date: 6 September 2026. Tester: coding agent using the in-app browser on Windows. These are observed interaction/visual checks, not clinical approval or a full accessibility certification. Local development app tested at `http://localhost:3000/`; production compilation passed. Browser screenshots were inspected during the task; no screenshot files are claimed as packaged evidence.
 
 ## Observed checks
