@@ -45,6 +45,7 @@
     "labels:test": "node scripts/validate-screen-labels.mjs",
     "model-first:test": "node scripts/validate-model-first.mjs",
     "atlas-navigation:test": "node scripts/validate-atlas-navigation.mjs",
+    "shoulder-workspace:test": "node scripts/validate-shoulder-workspace.mjs",
     "supporting:audit": "node scripts/audit-supporting-candidates.mjs",
     "supporting:test": "node scripts/validate-supporting-candidates.mjs",
     "supporting-geometry:audit": "node scripts/audit-supporting-geometry.mjs",

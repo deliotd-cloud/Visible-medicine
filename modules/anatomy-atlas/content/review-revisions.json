@@ -48,7 +48,31 @@
     ],
     [
       "app/shoulder-explorer.tsx",
-      "0ebdc7e42e0c8a45b71b7b021502989d52ecacf729804a8df2301fd78cdd4af8"
+      "b053890c522e2ed8b2063b265eb0d845e2efab81bac7cb79485ab8eb4dfb4455"
+    ],
+    [
+      "app/shoulder-workspace.css",
+      "f16e2b1022778043fefb54e59f3e808f773e4e291818643913cb5f0568b2a188"
+    ],
+    [
+      "app/atlas-workspace.tsx",
+      "f0f6939077c79c88e5a32e7a92d152c87ae19b712bbdbb43deed7d01b1eea2f3"
+    ],
+    [
+      "app/atlas-workspace.css",
+      "ccd6493b114f93d4fa9c4373765f94858fab0236dcebddae6d26d5d20e283896"
+    ],
+    [
+      "app/anatomy-control-rail.tsx",
+      "2284ccec919a1f65714613dea7230f8fa1c450474dcd142ff1d8237f77978085"
+    ],
+    [
+      "app/body-explorer.css",
+      "b23e018ea4ee31dc7f684c0e34263c63d3c6fa543896f0b11104433293ec7952"
+    ],
+    [
+      "lib/atlas-navigation.ts",
+      "07e841a0a276d349a48ba1f11cec87e39d34bb6cc154d730b9c23003d70df16c"
     ],
     [
       "app/globals.css",
@@ -133,47 +157,47 @@
   ],
   "revisions": {
     "vm:anatomy:upper-limb:shoulder:right:bone:scapula": {
-      "geometry": "632a1a397a4c6d2c8de50f866cbd404102c3c484b596c47d91863dc4e3ee5665",
+      "geometry": "ecfb30f183c998e54fe2221c8571b12234827d9fd99918b4dfaef6206fa6c905",
       "teaching": "d9e998a179d84b52ad98b6f81be6e142eef74590283fc4f95ff643661155315c",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:bone:humerus": {
-      "geometry": "02fea2ac5f2c5291dca45a36afe7736831dea1feb88fd0e273a7da1ac9e6533f",
+      "geometry": "e5a35d7e2afa6007517f4767a1ea797596d9ba90b983f280302b8095cb20b827",
       "teaching": "2897b86bff88e8ccce6ac516b4b097b81bd7a314d7fc09c6ab4a406afc957370",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:bone:clavicle": {
-      "geometry": "b844805f3bfd23525dede4bc95411b7625e884378e0dcd9e6dd6ad300cec017d",
+      "geometry": "a83f3292ddf07e1168a70aa75d74cb8d269405d09cab8efe3f8fb5d570652cc7",
       "teaching": "306ea9d66211a0225b139c8f237c330b1d0fdb2f132ec8fedb59e38f4d7b2e5f",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:deltoid": {
-      "geometry": "dc42489ca96e652cee120f8c05cb34ba7e18a030bdbc45fe7960e9e839ed5d01",
+      "geometry": "5708edc565398bf377bcf1865b67242fa8e5f31fa22697713f586102b46d1155",
       "teaching": "12163964205a8d047c256bc4076cdbc00450e36895392d1340f757fb64892d67",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:supraspinatus": {
-      "geometry": "8b95072f5b7de9b1d771cdf09dfc186ad7e9248c5ce59b5fb82ff3baa30dc1ec",
+      "geometry": "6d29de9801b6c8cbe451054748f0537f04e12719cc0f277d827a4d2b25a1e799",
       "teaching": "d6291416b5f29b4959a832b95530985873cc88ddf699f9b70a1270e0f50f9393",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:infraspinatus": {
-      "geometry": "ccb4ee96cb0c3fa8576c306a79f5ed99c93b57eb2494caf0f0835731a8a57539",
+      "geometry": "3ec33f8431a22b56cdd0df1a4e23bf1b5c50f13975240dee7a82e060290e84be",
       "teaching": "2ef3685386726d826ff377e06c9185484ed83020663c4bf273f6e9784de8b90d",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:subscapularis": {
-      "geometry": "a4444507400c0652a14b65e70f7e6119998141660acd09a9f90954e962fe31f6",
+      "geometry": "a3c13e01ec82027ee7b5385eef2e7d897c2be54aae61e79b6e1fb9e240ac0eda",
       "teaching": "f0e5e36d656b1d0493d11cef6a73eaa26140f388690e4b0f6c481a24bcc8bc7e",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:biceps-long-head": {
-      "geometry": "af87f6fbd5e425ebb0b2402686574e0ba12ae32dc5b40e2ef383bf8c358fee21",
+      "geometry": "00af91f8f02006ee8462a0edd381871e0006c9e6163f373e7b775d30b09e85a2",
       "teaching": "21912176b33af6219f2c47d389fde89bce2d72ef53935fe26c75a9d8f7a01eeb",
       "imaging": null
     },
     "vm:anatomy:upper-limb:shoulder:right:muscle:teres-minor": {
-      "geometry": "8cd290192652c9ddbf032975c4252a0c88c7c2120b656c072bc54b53e6215b62",
+      "geometry": "25c79e03c7548769f22122c1e068a023698815d64b8fd23430d51753890b9c34",
       "teaching": "b45041bae3a10da1de07af1af4d2895812cfc5fe05a4bbcacb56525f3b979a94",
       "imaging": null
     }

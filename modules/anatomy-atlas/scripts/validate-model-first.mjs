@@ -5,7 +5,7 @@ import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
-import { build } from 'esbuild';
+import { build } from './workspace-component-test-build.mjs';
 import ts from 'typescript';
 import { dissectionProfiles } from '../app/dissection-data.ts';
 
@@ -76,8 +76,14 @@ same(
 same(baseline.sourceCommit, baseCommit);
 same(
   bindings(source).functions,
-  baseline.functions,
-  'All named domain handlers preserved',
+  {
+    ...baseline.functions,
+    // f3b561f: same-style no-op plus extract at 100%; actual behavior is
+    // independently exercised by explode-styles:test, not silently rebaselined.
+    changeLayout:
+      'af5bb73784d6a9a0eca09aed29c761a01cc419de4c8d2df6d57003525f4a4f85',
+  },
+  'Named handlers preserved except the explicit explosion-style migration',
 );
 // Explicit navigation migration: remove the redundant Quiz-start button,
 // region-only combobox and six-direction button callback. Their replacements
@@ -87,12 +93,16 @@ for (const retired of [
   'onClick/41951ae789d22ac66ecb587d1862a47a4f6cbc138fc21d170434e911b8baa5a9',
   'onClick/886d6381c6e5f019e540bbc58f69bcc3023d332db763210cdfeb87e66be09348',
   'onValueChange/de0101b663f86e99c1cf73a10970890179f00ef53ce7f8816a58ce2e358d1f8c',
+  // f3b561f replaces the two arrangement buttons with one selector.
+  'onClick/690436385377122ef5a17ee8b50e90b78d333dc8477086964406bedc32878cea',
+  'onClick/979eebf6f969f80fa3c18ba941b24c6626b3dcb4ff4efe4ebd3643c9e8e4f750',
 ]) {
   const index = migratedCallbacks.indexOf(retired);
   check(index >= 0);
   migratedCallbacks.splice(index, 1);
 }
 migratedCallbacks.push(
+  'onChange/fd55e1d20509cbf96ecd7daf538d27f6a539ccc7f4c0596e2ce161fa67a0aa09',
   'onChange/ed06a6ba79f65735fa1a9a6b2a0f558961a54a29d0ff9bb06b6277f1817d2f96',
   'onFocus/60791bef659a508c1030f248019b00646b1ab73d283d43374aa87641fdfce003',
   'onSelect/610c7aa707c1e7792cda3854a7ec79d0a63ef3319881a1625f5f6eae7a2cf70d',
@@ -101,7 +111,7 @@ migratedCallbacks.push(
 same(
   bindings(source).callbacks,
   migratedCallbacks.sort(compare),
-  '52 retained callbacks and four explicit navigation bindings',
+  'Retained callbacks and explicit navigation/explosion bindings',
 );
 const raw = await fs.readFile(
     'public/models/bodyparts3d/full-body/catalog.json',
@@ -516,9 +526,11 @@ const result = {
   markupCases,
   panelCases,
   stylesheetViewportCases: dimensions.length,
-  preservedNamedHandlers: Object.keys(baseline.functions).length,
-  preservedControlCallbacks: baseline.callbacks.length - 3,
+  preservedNamedHandlers: Object.keys(baseline.functions).length - 1,
+  explicitExplosionHandlerMigration: 1,
+  preservedControlCallbacks: baseline.callbacks.length - 5,
   explicitNavigationReplacementCallbacks: 4,
+  explicitExplosionReplacementCallbacks: 1,
   regions: 11,
   wholeBody: true,
   sourceGeometryChanged: false,

@@ -58,9 +58,11 @@ export const useAtlasWorkspace = () => useContext(WorkspaceContext);
 export function AtlasWorkspace({
   children,
   exam,
+  className = '',
 }: {
   children: ReactNode;
   exam: boolean;
+  className?: string;
 }) {
   const [chosen, setChosen] = useState<WorkspaceMode>('explore'),
     [focusView, setFocusView] = useState(false);
@@ -101,7 +103,7 @@ export function AtlasWorkspace({
       }}
     >
       <main
-        className="body-app"
+        className={className ? `body-app ${className}` : 'body-app'}
         data-workspace-mode={mode}
         data-focus-view={focusView}
       >

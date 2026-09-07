@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "checks": 1238,
+  "markupCases": 94,
+  "handlerCases": 288,
+  "shoulderStructures": 9,
+  "sourceGeometryChanged": false,
+  "browserInteractionTesting": false,
+  "clinicalValidation": false,
+  "limitations": "Actual shoulder entry and installed UI server rendering, exact menu closures and stylesheet contracts. Workspace mode/readiness/tab fixtures and a scene double are injected. Browser/GPU, focus/Escape, touch, scrolling and 200% zoom acceptance remain pending."
+}

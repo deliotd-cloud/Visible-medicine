@@ -33,13 +33,11 @@ import {
   structureById,
   structures,
   systemMeta,
-  type ContentTab,
   type SystemKey,
 } from './anatomy-data';
 import type { CameraView, AnatomyLayer } from './anatomy-scene';
 import { shoulderLinkEntries } from '@/lib/anatomy-link-registry';
 import { ImagingLink, useImagingLink } from './imaging-link';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
   Combobox,
@@ -53,7 +51,26 @@ import { Slider } from '@/components/ui/slider';
 import { ExplodeStyleSelect } from './explode-style-select';
 import type { BodyLayout } from '@/lib/body-arrangement';
 import { Switch } from '@/components/ui/switch';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from '@/components/ui/select';
+import { AnatomyControlRail, AnatomyInfoPanel } from './anatomy-control-rail';
+import {
+  AtlasWorkspace,
+  WorkspaceModes,
+  WorkspaceOnly,
+  WorkspaceFocus,
+  GroupedAnatomyNotes,
+  PracticeAttention,
+  StructureDetailsButton,
+} from './atlas-workspace';
+import './body-explorer.css';
+import './atlas-workspace.css';
+import './shoulder-workspace.css';
 import {
   Tooltip,
   TooltipContent,
@@ -90,17 +107,6 @@ type ModelContextLike = {
     options?: { signal?: AbortSignal },
   ) => void | Promise<void>;
 };
-
-const tabs: Array<{ value: ContentTab; label: string }> = [
-  { value: 'anatomy', label: 'Anatomy' },
-  { value: 'function', label: 'Function' },
-  { value: 'ct', label: 'CT' },
-  { value: 'mri', label: 'MRI' },
-  { value: 'ultrasound', label: 'Ultrasound' },
-  { value: 'pathology', label: 'Pathology' },
-  { value: 'clinical', label: 'Clinical' },
-  { value: 'quiz', label: 'Quiz' },
-];
 
 const systemIcons: Record<SystemKey, typeof Bone> = {
   skeleton: Bone,
@@ -451,646 +457,673 @@ export default function ShoulderExplorer({
 
   return (
     <TooltipProvider>
-      <main className="app-shell">
-        <header className="topbar">
+      <AtlasWorkspace exam={mode === 'exam'} className="shoulder-workspace">
+        <PracticeAttention
+          exam={mode === 'exam'}
+          answered={Boolean(answerId)}
+        />
+        <header className="body-topbar">
           <Brand />
-          <div className="workspace-name">
-            <Bone /> Shoulder <span>/ Explorer</span>
-          </div>
+          <WorkspaceModes />
           <div className="top-actions">
-            <Link
-              className="body-return-link"
-              href={`/review?structure=${encodeURIComponent(selectedId)}`}
-            >
-              Review workspace
-            </Link>
             <Link href="/" className="body-return-link">
               Whole body & regions
             </Link>
-            <Badge variant="outline" className="prototype-badge">
-              3D anatomy · Right shoulder
-            </Badge>
-            <Button
-              className="mode-button"
-              disabled={mode === 'study' && !displayReady}
-              variant={mode === 'exam' ? 'default' : 'outline'}
-              onClick={toggleMode}
-            >
-              {mode === 'exam' ? <Brain /> : <GraduationCap />}
-              {mode === 'exam' ? 'Exit exam' : 'Exam mode'}
-            </Button>
+            <WorkspaceFocus />
+            {mode === 'exam' && (
+              <Button
+                className="mode-button"
+                variant="outline"
+                onClick={toggleMode}
+              >
+                <Brain /> Exit exam
+              </Button>
+            )}
           </div>
         </header>
 
-        <div className="workspace-grid">
-          <aside className="control-rail" aria-label="Anatomy controls">
-            {mode === 'study' ? (
-              <>
-                <div className="eyebrow">Find a structure</div>
-                <Combobox<SearchOption>
-                  value={selectedSearchOption}
-                  onValueChange={(option) =>
-                    option && selectStructure(option.value)
-                  }
-                  items={searchOptions}
-                  itemToStringLabel={(option) => option.label}
-                  itemToStringValue={(option) => option.value}
-                  isItemEqualToValue={(item, value) =>
-                    item.value === value.value
-                  }
-                >
-                  <ComboboxInput
-                    className="anatomy-search"
-                    placeholder="Search name or landmark…"
-                    showClear
-                  />
-                  <ComboboxContent className="anatomy-search-menu">
-                    <ComboboxEmpty>No structures found.</ComboboxEmpty>
-                    <ComboboxList>
-                      {searchOptions.map((option) => (
-                        <ComboboxItem key={option.value} value={option}>
-                          {option.label}
-                        </ComboboxItem>
-                      ))}
-                    </ComboboxList>
-                  </ComboboxContent>
-                </Combobox>
-
-                <div className="rail-section-heading">
-                  <span>Systems</span>
-                  <small>
-                    {Object.values(visibleSystems).filter(Boolean).length}/3
-                    visible
-                  </small>
-                </div>
-                {(Object.keys(systemMeta) as SystemKey[]).map((system) => {
-                  const Icon = systemIcons[system];
-                  const meta = systemMeta[system];
-                  return (
-                    <div
-                      key={system}
-                      className={`system-card ${visibleSystems[system] ? 'active' : ''}`}
-                    >
-                      <span className={`system-icon ${system}`}>
-                        <Icon />
-                      </span>
-                      <span>
-                        <strong>{meta.name}</strong>
-                        <small>{meta.description}</small>
-                      </span>
-                      <Switch
-                        checked={visibleSystems[system]}
-                        onCheckedChange={(checked) =>
-                          setVisibleSystems((current) => ({
-                            ...current,
-                            [system]: checked,
-                          }))
-                        }
-                        aria-label={`Show ${meta.name}`}
-                      />
-                    </div>
-                  );
-                })}
-
-                <div className="rail-section-heading structure-heading">
-                  <span>Structures</span>
-                  <small>{structures.length}</small>
-                </div>
-                <div className="structure-list">
-                  {structures.map((structure) => (
-                    <button
-                      key={structure.id}
-                      className={`structure-row ${selectedId === structure.id ? 'selected' : ''}`}
-                      type="button"
-                      onClick={() => selectStructure(structure.id)}
-                    >
-                      <i
-                        className="dot"
-                        style={{ background: structure.color }}
-                      />
-                      <span>{structure.name}</span>
-                      <ChevronRight />
-                    </button>
-                  ))}
-                </div>
-                <InspectionControls
-                  value={inspection}
-                  onChange={setInspection}
-                  systems={(Object.keys(systemMeta) as SystemKey[]).map(
-                    (id) => ({
-                      id,
-                      name: systemMeta[id].name,
-                      enabled:
-                        visibleSystems[id] &&
-                        structures.some((s) => s.system === id),
-                    }),
-                  )}
-                  plate={plate}
-                  onPlate={changePlate}
-                />
-                <StudyViews
-                  scope={studyScope}
-                  capture={captureView}
-                  restore={restoreView}
-                />
-                <ImagingLink link={imagingLink} />
-                <div className="vm-plates">
-                  <h2>Shoulder illustration plates</h2>
-                  <p>
-                    Fixed, parallel projections of these same 3D surfaces.
-                    Select a structure on any plate.
-                  </p>
-                  {(
-                    [
-                      ['Anterior cuff', 'anterior', 'cuff'],
-                      ['Posterior cuff', 'posterior', 'cuff'],
-                      ['Lateral shoulder', 'lateral', 'surface'],
-                      ['Deep skeletal view', 'anterior', 'bones'],
-                    ] as const
-                  ).map(([name, camera, dissection], i) => (
-                    <button
-                      type="button"
-                      key={name}
-                      onClick={() => {
-                        setPlate(true);
-                        setInspection(initialInspection);
-                        setView(camera);
-                        setLayer(dissection);
-                        setExplode(0);
-                        setLayout('spatial');
-                        setZoom(1);
-                        setIsolated(false);
-                        setSelectedId(structures[0].id);
-                        setShowLabels(true);
-                        setVisibleSystems({
-                          skeleton: true,
-                          muscles: true,
-                          'soft-tissue': true,
-                        });
-                        setResetNonce((n) => n + 1);
-                      }}
-                    >
-                      <span>0{i + 1}</span>
-                      {name}
-                      <ChevronRight />
-                    </button>
-                  ))}
-                  <small>
-                    BodyParts3D · CC BY 4.0 · adapted. Hatching is illustrative,
-                    not measured fascicle direction.
-                  </small>
-                </div>
-              </>
-            ) : (
-              <div className="exam-rail">
-                <div className="exam-icon">
-                  <Trophy />
-                </div>
-                <div className="eyebrow">Identification exam</div>
-                <h2>
-                  {questionIndex + 1} <span>/ {quizQuestions.length}</span>
-                </h2>
-                <div className="question-dots">
-                  {quizQuestions.map((_, index) => (
-                    <i
-                      key={index}
-                      className={
-                        index === questionIndex
-                          ? 'current'
-                          : index < questionIndex
-                            ? 'done'
-                            : ''
-                      }
-                    />
-                  ))}
-                </div>
-                <p>
-                  Rotate the model and select the structure that answers the
-                  prompt. Labels are hidden.
-                </p>
-                <div className="score-card">
-                  <span>Score</span>
-                  <strong>{score}</strong>
-                  <small>correct</small>
-                </div>
-                <Button variant="outline" onClick={toggleMode}>
-                  Return to study
-                </Button>
-              </div>
-            )}
-          </aside>
-
-          <section
-            className="viewer-panel illustration-mode"
-            aria-label="Interactive 3D shoulder model"
-          >
-            <div className="viewer-meta">
-              <span>
-                RIGHT SHOULDER · {plate ? 'ORTHOGRAPHIC PLATE' : '3D ANATOMY'}
-              </span>
-              <span className="live-dot">
-                {layer === 'cuff'
-                  ? 'Rotator cuff exposed'
-                  : layer === 'bones'
-                    ? 'Skeletal anatomy'
-                    : 'Superficial muscles'}
-              </span>
-            </div>
-            <div className="dissection-controls">
-              <fieldset className="camera-selector">
-                <legend>View</legend>
-                {(['posterior', 'anterior', 'lateral'] as CameraView[]).map(
-                  (item) => (
-                    <button
-                      type="button"
-                      key={item}
-                      aria-pressed={view === item}
-                      className={view === item ? 'active' : ''}
-                      onClick={() => {
-                        setView(item);
-                        setResetNonce((n) => n + 1);
-                      }}
-                    >
-                      {item}
-                    </button>
-                  ),
-                )}
-              </fieldset>
-              <fieldset className="layer-selector">
-                <legend>Dissection</legend>
-                {(
-                  [
-                    { id: 'cuff', label: 'Rotator cuff' },
-                    { id: 'surface', label: 'Deltoid on' },
-                    { id: 'bones', label: 'Bones' },
-                  ] as const
-                ).map((item) => (
-                  <button
-                    type="button"
-                    key={item.id}
-                    aria-pressed={layer === item.id}
-                    className={layer === item.id ? 'active' : ''}
-                    onClick={() => {
-                      setLayer(item.id);
-                      if (item.id === 'bones') setSelectedId(structures[0].id);
-                      else if (
-                        item.id === 'cuff' &&
-                        ['deltoid', 'biceps-long-head'].includes(
-                          selectedId.split(':').at(-1)!,
-                        )
-                      )
-                        setSelectedId(structures[0].id);
-                    }}
+        <div className="body-layout">
+          <AnatomyControlRail>
+            <div className="shoulder-tools">
+              {mode === 'study' ? (
+                <>
+                  <div className="eyebrow">Find a structure</div>
+                  <Combobox<SearchOption>
+                    value={selectedSearchOption}
+                    onValueChange={(option) =>
+                      option && selectStructure(option.value)
+                    }
+                    items={searchOptions}
+                    itemToStringLabel={(option) => option.label}
+                    itemToStringValue={(option) => option.value}
+                    isItemEqualToValue={(item, value) =>
+                      item.value === value.value
+                    }
                   >
-                    {item.label}
-                  </button>
-                ))}
-              </fieldset>
+                    <ComboboxInput
+                      className="anatomy-search"
+                      placeholder="Search name or landmark…"
+                      showClear
+                    />
+                    <ComboboxContent className="anatomy-search-menu">
+                      <ComboboxEmpty>No structures found.</ComboboxEmpty>
+                      <ComboboxList>
+                        {searchOptions.map((option) => (
+                          <ComboboxItem key={option.value} value={option}>
+                            {option.label}
+                          </ComboboxItem>
+                        ))}
+                      </ComboboxList>
+                    </ComboboxContent>
+                  </Combobox>
+
+                  <div className="rail-section-heading">
+                    <span>Systems</span>
+                    <small>
+                      {
+                        (Object.keys(systemMeta) as SystemKey[]).filter(
+                          (system) =>
+                            visibleSystems[system] &&
+                            structures.some((s) => s.system === system),
+                        ).length
+                      }{' '}
+                      shown
+                    </small>
+                  </div>
+                  {(Object.keys(systemMeta) as SystemKey[]).map((system) => {
+                    const Icon = systemIcons[system];
+                    const meta = systemMeta[system];
+                    const count = structures.filter(
+                      (s) => s.system === system,
+                    ).length;
+                    return (
+                      <div
+                        key={system}
+                        className={`system-card ${count && visibleSystems[system] ? 'active' : ''}`}
+                      >
+                        <span className={`system-icon ${system}`}>
+                          <Icon />
+                        </span>
+                        <span>
+                          <strong>{meta.name}</strong>
+                          <small>
+                            {count
+                              ? `${count} structures`
+                              : 'Not in this model'}
+                          </small>
+                        </span>
+                        <Switch
+                          checked={count > 0 && visibleSystems[system]}
+                          disabled={!count}
+                          onCheckedChange={(checked) =>
+                            setVisibleSystems((current) => ({
+                              ...current,
+                              [system]: checked,
+                            }))
+                          }
+                          aria-label={`Show ${meta.name}`}
+                        />
+                      </div>
+                    );
+                  })}
+
+                  <details className="shoulder-tool-group">
+                    <summary>Structures · {structures.length}</summary>
+                    <div className="structure-list">
+                      {structures.map((structure) => (
+                        <button
+                          key={structure.id}
+                          className={`structure-row ${selectedId === structure.id ? 'selected' : ''}`}
+                          type="button"
+                          onClick={() => selectStructure(structure.id)}
+                        >
+                          <i
+                            className="dot"
+                            style={{ background: structure.color }}
+                          />
+                          <span>{structure.name}</span>
+                          <ChevronRight />
+                        </button>
+                      ))}
+                    </div>
+                  </details>
+                  <WorkspaceOnly modes={['dissect']}>
+                    <div className="shoulder-scene-options">
+                      <button
+                        type="button"
+                        aria-pressed={plate}
+                        onClick={() => {
+                          changePlate(!plate);
+                          setResetNonce((n) => n + 1);
+                        }}
+                      >
+                        Orthographic plate
+                      </button>
+                      <button
+                        type="button"
+                        aria-pressed={anchorSkeleton}
+                        disabled={layout !== 'spatial'}
+                        onClick={() => setAnchorSkeleton((v) => !v)}
+                      >
+                        Keep bones assembled
+                      </button>
+                      <button
+                        type="button"
+                        aria-pressed={showOrigins}
+                        disabled={layout === 'tray'}
+                        onClick={() => setShowOrigins((v) => !v)}
+                      >
+                        Original positions
+                      </button>
+                    </div>
+                    <InspectionControls
+                      value={inspection}
+                      onChange={setInspection}
+                      systems={(Object.keys(systemMeta) as SystemKey[]).map(
+                        (id) => ({
+                          id,
+                          name: systemMeta[id].name,
+                          enabled:
+                            visibleSystems[id] &&
+                            structures.some((s) => s.system === id),
+                        }),
+                      )}
+                      plate={plate}
+                      onPlate={changePlate}
+                    />
+                  </WorkspaceOnly>
+                  <WorkspaceOnly modes={['explore', 'dissect']}>
+                    <details className="shoulder-tool-group">
+                      <summary>Saved views & imaging link</summary>
+                      <StudyViews
+                        scope={studyScope}
+                        capture={captureView}
+                        restore={restoreView}
+                      />
+                      <ImagingLink link={imagingLink} />
+                    </details>
+                  </WorkspaceOnly>
+                  <WorkspaceOnly modes={['dissect']}>
+                    <details className="shoulder-tool-group">
+                      <summary>Illustration plates</summary>
+                      <div className="vm-plates">
+                        <p>
+                          Fixed, parallel projections of these same 3D surfaces.
+                          Select a structure on any plate.
+                        </p>
+                        {(
+                          [
+                            ['Anterior cuff', 'anterior', 'cuff'],
+                            ['Posterior cuff', 'posterior', 'cuff'],
+                            ['Lateral shoulder', 'lateral', 'surface'],
+                            ['Deep skeletal view', 'anterior', 'bones'],
+                          ] as const
+                        ).map(([name, camera, dissection], i) => (
+                          <button
+                            type="button"
+                            key={name}
+                            onClick={() => {
+                              setPlate(true);
+                              setInspection(initialInspection);
+                              setView(camera);
+                              setLayer(dissection);
+                              setExplode(0);
+                              setLayout('spatial');
+                              setZoom(1);
+                              setIsolated(false);
+                              setSelectedId(structures[0].id);
+                              setShowLabels(true);
+                              setVisibleSystems({
+                                skeleton: true,
+                                muscles: true,
+                                'soft-tissue': true,
+                              });
+                              setResetNonce((n) => n + 1);
+                            }}
+                          >
+                            <span>0{i + 1}</span>
+                            {name}
+                            <ChevronRight />
+                          </button>
+                        ))}
+                        <small>
+                          BodyParts3D · CC BY 4.0 · adapted. Hatching is
+                          illustrative, not measured fascicle direction.
+                        </small>
+                      </div>
+                    </details>
+                  </WorkspaceOnly>
+                  <Link
+                    className="shoulder-review-link"
+                    href={`/review?structure=${encodeURIComponent(selectedId)}`}
+                  >
+                    Review workspace
+                  </Link>
+                </>
+              ) : (
+                <div className="exam-rail">
+                  <div className="exam-icon">
+                    <Trophy />
+                  </div>
+                  <div className="eyebrow">Identification exam</div>
+                  <h2>
+                    {questionIndex + 1} <span>/ {quizQuestions.length}</span>
+                  </h2>
+                  <div className="question-dots">
+                    {quizQuestions.map((_, index) => (
+                      <i
+                        key={index}
+                        className={
+                          index === questionIndex
+                            ? 'current'
+                            : index < questionIndex
+                              ? 'done'
+                              : ''
+                        }
+                      />
+                    ))}
+                  </div>
+                  <p>
+                    Rotate the model and select the structure that answers the
+                    prompt. Labels are hidden.
+                  </p>
+                  <div className="score-card">
+                    <span>Score</span>
+                    <strong>{score}</strong>
+                    <small>correct</small>
+                  </div>
+                  <Button variant="outline" onClick={toggleMode}>
+                    Return to study
+                  </Button>
+                </div>
+              )}
+            </div>
+          </AnatomyControlRail>
+
+          <div className="shoulder-model-workspace body-workspace">
+            <div className="shoulder-model-heading">
+              <h1>Right shoulder</h1>
+              {mode === 'study' && <StructureDetailsButton />}
+            </div>
+            <div className="shoulder-view-controls">
+              <Select
+                value={view}
+                items={{
+                  posterior: 'Posterior',
+                  anterior: 'Anterior',
+                  lateral: 'Lateral',
+                }}
+                onValueChange={(item) => {
+                  if (
+                    item !== 'posterior' &&
+                    item !== 'anterior' &&
+                    item !== 'lateral'
+                  )
+                    return;
+                  setView(item);
+                  setResetNonce((n) => n + 1);
+                }}
+              >
+                <SelectTrigger aria-label="Shoulder camera view">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {(['posterior', 'anterior', 'lateral'] as const).map(
+                    (item) => (
+                      <SelectItem key={item} value={item}>
+                        {item[0].toUpperCase() + item.slice(1)}
+                      </SelectItem>
+                    ),
+                  )}
+                </SelectContent>
+              </Select>
+              <Select
+                value={layer}
+                disabled={mode === 'exam'}
+                items={{
+                  cuff: 'Rotator cuff',
+                  surface: 'Deltoid on',
+                  bones: 'Bones',
+                }}
+                onValueChange={(item) => {
+                  if (
+                    mode === 'exam' ||
+                    (item !== 'cuff' && item !== 'surface' && item !== 'bones')
+                  )
+                    return;
+                  setLayer(item);
+                  if (item === 'bones') setSelectedId(structures[0].id);
+                  else if (
+                    item === 'cuff' &&
+                    ['deltoid', 'biceps-long-head'].includes(
+                      selectedId.split(':').at(-1)!,
+                    )
+                  )
+                    setSelectedId(structures[0].id);
+                }}
+              >
+                <SelectTrigger aria-label="Shoulder dissection layer">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="cuff">Rotator cuff</SelectItem>
+                  <SelectItem value="surface">Deltoid on</SelectItem>
+                  <SelectItem value="bones">Bones</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
             {mode === 'exam' && (
-              <div className="exam-prompt">
+              <div className="shoulder-exam-prompt">
                 <span>QUESTION {questionIndex + 1}</span>
                 <strong>{currentQuestion.prompt}</strong>
               </div>
             )}
-            <AnatomyScene
-              structures={structures}
-              selectedId={selectedId}
-              visibleSystems={visibleSystems}
-              isolated={isolated && mode === 'study'}
-              explode={explode}
-              layout={mode === 'exam' ? 'spatial' : layout}
-              showLabels={showLabels && mode === 'study'}
-              syncPlane={syncPlane}
-              resetNonce={resetNonce}
-              onSelect={handleSceneSelect}
-              view={view}
-              layer={layer}
-              zoom={zoom}
-              exam={mode === 'exam'}
-              anchorSkeleton={anchorSkeleton}
-              showOrigins={showOrigins && mode === 'study'}
-              plate={plate}
-              inspection={mode === 'exam' ? initialInspection : inspection}
-              cameraCapture={cameraCapture}
-              cameraRestore={cameraRestore}
-              onRendererHealth={setRendererHealth}
-              onModelReady={setModelReady}
-            />
-            {mode === 'study' && (
-              <div className="vm-scene-options">
-                <button
-                  type="button"
-                  aria-pressed={plate}
-                  onClick={() => {
-                    changePlate(!plate);
-                    setResetNonce((n) => n + 1);
-                  }}
-                >
-                  Orthographic plate
-                </button>
-                <button
-                  type="button"
-                  aria-pressed={anchorSkeleton}
-                  disabled={layout !== 'spatial'}
-                  onClick={() => setAnchorSkeleton((v) => !v)}
-                >
-                  Keep bones assembled
-                </button>
-                <button
-                  type="button"
-                  aria-pressed={showOrigins}
-                  disabled={layout === 'tray'}
-                  onClick={() => setShowOrigins((v) => !v)}
-                >
-                  Original positions
-                </button>
-              </div>
-            )}
-            <div className="zoom-controls">
-              <Button
-                size="icon"
-                variant="outline"
-                aria-label="Zoom in"
-                onClick={() => setZoom((z) => Math.max(0.6, z - 0.12))}
-              >
-                <Plus />
-              </Button>
-              <Button
-                size="icon"
-                variant="outline"
-                aria-label="Zoom out"
-                onClick={() => setZoom((z) => Math.min(1.6, z + 0.12))}
-              >
-                <Minus />
-              </Button>
-            </div>
-            <div className="viewer-toolbar" aria-label="3D view controls">
-              <Tooltip>
-                <TooltipTrigger
-                  render={
-                    <Button
-                      size="icon"
-                      variant={isolated ? 'default' : 'ghost'}
-                      aria-label="Isolate selected structure"
-                      onClick={() => setIsolated(!isolated)}
-                    />
-                  }
-                >
-                  {isolated ? <Eye /> : <EyeOff />}
-                </TooltipTrigger>
-                <TooltipContent>
-                  {isolated ? 'Show all structures' : 'Fade other structures'}
-                </TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger
-                  render={
-                    <Button
-                      size="icon"
-                      variant={showLabels ? 'secondary' : 'ghost'}
-                      aria-label="Toggle labels"
-                      onClick={() => setShowLabels(!showLabels)}
-                      disabled={mode === 'exam'}
-                    />
-                  }
-                >
-                  <Tags />
-                </TooltipTrigger>
-                <TooltipContent>Toggle labels</TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger
-                  render={
-                    <Button
-                      size="icon"
-                      variant={syncPlane ? 'default' : 'ghost'}
-                      aria-label="Toggle reference plane illustration"
-                      disabled={mode === 'exam'}
-                      onClick={toggleSync}
-                    />
-                  }
-                >
-                  <Crosshair />
-                </TooltipTrigger>
-                <TooltipContent>
-                  Reference plane illustration — not a scan
-                </TooltipContent>
-              </Tooltip>
-              <span className="toolbar-divider" />
-              <div className="explode-control">
-                <ExplodeStyleSelect
-                  value={mode === 'exam' ? 'spatial' : layout}
-                  disabled={mode === 'exam'}
-                  onChange={changeLayout}
-                />
-                <Slider
-                  min={0}
-                  max={100}
-                  step={1}
-                  value={[explode]}
-                  disabled={mode === 'exam'}
-                  onValueChange={(value) =>
-                    setExplode(Array.isArray(value) ? value[0] : value)
-                  }
-                  aria-label={
-                    layout === 'extract'
-                      ? 'Selected structure separation'
-                      : layout === 'tray'
-                        ? 'Arranged separation'
-                        : 'Exploded view separation'
-                  }
-                />
-                <output>{Math.round(explode)}%</output>
-              </div>
-              <span className="toolbar-divider" />
-              <Tooltip>
-                <TooltipTrigger
-                  render={
-                    <Button
-                      size="icon"
-                      variant="ghost"
-                      aria-label="Reset 3D view"
-                      onClick={() => {
-                        setResetNonce((value) => value + 1);
-                        setInspection(initialInspection);
-                        setExplode(0);
-                        setLayout('spatial');
-                        setPlate(false);
-                        setIsolated(false);
-                        setZoom(1);
-                      }}
-                    />
-                  }
-                >
-                  <RotateCcw />
-                </TooltipTrigger>
-                <TooltipContent>Reset view</TooltipContent>
-              </Tooltip>
-            </div>
-            <div className="viewer-hint">
-              {mode === 'study' && layout === 'tray'
-                ? explode === 100
-                  ? 'Tray · Pan / pinch to zoom · Not anatomical positions'
-                  : `Arrangement in progress · ${explode}% · Overlap is possible before 100%`
-                : mode === 'study' && layout === 'extract'
-                  ? !visibleSystems[selected.system]
-                    ? 'Select a visible structure to extract · Others stay assembled'
-                    : explode > 0
-                      ? 'Selected structure extracted · 0% restores anatomy · Not a surgical path'
-                      : 'Assembled anatomy · Increase separation to extract the selected structure'
-                  : mode === 'study' && inspection.plane !== 'off'
-                    ? `${inspection.plane} surface cutaway · ${inspection.position}% · Not CT/MRI`
-                    : explode > 0
-                      ? 'Exploded teaching view · Positions are not anatomical'
-                      : plate
-                        ? 'Parallel projection · Click a structure · Use + / − to zoom'
-                        : 'Drag to rotate · Pinch to zoom · Click to explore'}
-            </div>
-            <a
-              className="model-credit"
-              href="/models/bodyparts3d/credits.html"
-              target="_blank"
-              rel="noreferrer"
+            <section
+              className="viewer-panel illustration-mode"
+              aria-label="Interactive 3D shoulder model"
             >
-              BodyParts3D · CC BY 4.0 · Adapted
-            </a>
-          </section>
-
-          <aside className="info-panel" aria-live="polite">
-            {mode === 'exam' ? (
-              <div className="exam-panel">
-                <div className="info-kicker">STRUCTURE IDENTIFICATION</div>
-                <h1>Question {questionIndex + 1}</h1>
-                <p className="exam-question">{currentQuestion.prompt}</p>
-                {!displayReady && (
-                  <output className="vm-practice-note" aria-live="polite">
-                    Practice paused until the 3D view and shoulder anatomy are
-                    available. Your answers are retained; recovery controls and
-                    Exit exam remain available.
-                  </output>
-                )}
-                {!answerId ? (
-                  <div className="waiting-card">
-                    <ScanLine />
-                    <strong>Choose on the model</strong>
-                    <span>Rotate to inspect, then select a structure.</span>
-                  </div>
-                ) : (
-                  <div
-                    className={`answer-card ${answerCorrect ? 'correct' : 'incorrect'}`}
-                  >
-                    <div className="answer-status">
-                      {answerCorrect ? <Check /> : <Crosshair />}
-                      <strong>{answerCorrect ? 'Correct' : 'Not quite'}</strong>
-                    </div>
-                    <p>
-                      You selected <b>{answerName}</b>.
-                    </p>
-                    {!answerCorrect && (
-                      <p>
-                        The correct structure is{' '}
-                        <b>{structureById.get(currentQuestion.answer)?.name}</b>
-                        .
-                      </p>
-                    )}
-                    <Button onClick={nextQuestion} disabled={!displayReady}>
-                      {questionIndex === quizQuestions.length - 1
-                        ? 'Restart exam'
-                        : 'Next question'}
-                      <ChevronRight />
-                    </Button>
-                  </div>
-                )}
-                <div className="exam-standard">
-                  <span>Current result</span>
-                  <strong>
-                    {score} / {questionIndex + (answerId ? 1 : 0)}
-                  </strong>
-                  <p>
-                    Prototype formative assessment; not a credentialed or
-                    summative exam.
-                  </p>
-                </div>
+              <div className="viewer-meta">
+                <span>
+                  RIGHT SHOULDER · {plate ? 'ORTHOGRAPHIC PLATE' : '3D ANATOMY'}
+                </span>
+                <span className="live-dot">
+                  {layer === 'cuff'
+                    ? 'Rotator cuff exposed'
+                    : layer === 'bones'
+                      ? 'Skeletal anatomy'
+                      : 'Superficial muscles'}
+                </span>
               </div>
-            ) : (
-              <>
-                <div className="info-head">
-                  <div>
-                    <div className="info-kicker">
-                      {selected.category} · {selected.shortId}
-                    </div>
-                    <h1>{selected.name}</h1>
-                    <p className="latin-name">{selected.latinName}</p>
-                  </div>
-                  <button
-                    className="isolate-quick"
-                    type="button"
-                    onClick={() => setIsolated(!isolated)}
-                  >
-                    {isolated ? <Eye /> : <EyeOff />}{' '}
-                    {isolated ? 'Isolated' : 'Isolate'}
-                  </button>
-                </div>
-                <ReviewStatus structureId={selected.id} teachingDraft />
+              <AnatomyScene
+                structures={structures}
+                selectedId={selectedId}
+                visibleSystems={visibleSystems}
+                isolated={isolated && mode === 'study'}
+                explode={explode}
+                layout={mode === 'exam' ? 'spatial' : layout}
+                showLabels={showLabels && mode === 'study'}
+                syncPlane={syncPlane}
+                resetNonce={resetNonce}
+                onSelect={handleSceneSelect}
+                view={view}
+                layer={layer}
+                zoom={zoom}
+                exam={mode === 'exam'}
+                anchorSkeleton={anchorSkeleton}
+                showOrigins={showOrigins && mode === 'study'}
+                plate={plate}
+                inspection={mode === 'exam' ? initialInspection : inspection}
+                cameraCapture={cameraCapture}
+                cameraRestore={cameraRestore}
+                onRendererHealth={setRendererHealth}
+                onModelReady={setModelReady}
+              />
+              <div className="zoom-controls">
                 <Button
-                  size="sm"
+                  size="icon"
                   variant="outline"
-                  onClick={() =>
-                    setInspection((current) => ({
-                      ...current,
-                      plane: 'off',
-                      opacity: { ...current.opacity, [selected.system]: 100 },
-                    }))
-                  }
+                  aria-label="Zoom in"
+                  onClick={() => setZoom((z) => Math.max(0.6, z - 0.12))}
                 >
-                  Reveal uncut structure
+                  <Plus />
                 </Button>
-                <Tabs defaultValue="anatomy" className="content-tabs">
-                  <TabsList variant="line" className="content-tabs-list">
-                    {tabs.map((tab) => (
-                      <TabsTrigger key={tab.value} value={tab.value}>
-                        {tab.label}
-                      </TabsTrigger>
-                    ))}
-                  </TabsList>
-                  {tabs.map((tab) => {
-                    const section = selected.sections[tab.value];
-                    return (
-                      <TabsContent
-                        key={`${selected.id}-${tab.value}`}
-                        value={tab.value}
-                        className="content-tab-panel"
+                <Button
+                  size="icon"
+                  variant="outline"
+                  aria-label="Zoom out"
+                  onClick={() => setZoom((z) => Math.min(1.6, z + 0.12))}
+                >
+                  <Minus />
+                </Button>
+              </div>
+            </section>
+            <div className="shoulder-view-footer illustration-mode">
+              <div className="viewer-toolbar" aria-label="3D view controls">
+                <Tooltip>
+                  <TooltipTrigger
+                    render={
+                      <Button
+                        size="icon"
+                        variant={isolated ? 'default' : 'ghost'}
+                        disabled={mode === 'exam'}
+                        aria-label="Isolate selected structure"
+                        onClick={() => setIsolated(!isolated)}
+                      />
+                    }
+                  >
+                    {isolated ? <Eye /> : <EyeOff />}
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    {isolated ? 'Show all structures' : 'Fade other structures'}
+                  </TooltipContent>
+                </Tooltip>
+                <Tooltip>
+                  <TooltipTrigger
+                    render={
+                      <Button
+                        size="icon"
+                        variant={showLabels ? 'secondary' : 'ghost'}
+                        aria-label="Toggle labels"
+                        onClick={() => setShowLabels(!showLabels)}
+                        disabled={mode === 'exam'}
+                      />
+                    }
+                  >
+                    <Tags />
+                  </TooltipTrigger>
+                  <TooltipContent>Toggle labels</TooltipContent>
+                </Tooltip>
+                <Tooltip>
+                  <TooltipTrigger
+                    render={
+                      <Button
+                        size="icon"
+                        variant={syncPlane ? 'default' : 'ghost'}
+                        aria-label="Toggle reference plane illustration"
+                        disabled={mode === 'exam'}
+                        onClick={toggleSync}
+                      />
+                    }
+                  >
+                    <Crosshair />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    Reference plane illustration — not a scan
+                  </TooltipContent>
+                </Tooltip>
+                <span className="toolbar-divider" />
+                <div className="explode-control">
+                  <ExplodeStyleSelect
+                    value={mode === 'exam' ? 'spatial' : layout}
+                    disabled={mode === 'exam'}
+                    onChange={changeLayout}
+                  />
+                  <Slider
+                    min={0}
+                    max={100}
+                    step={1}
+                    value={[explode]}
+                    disabled={mode === 'exam'}
+                    onValueChange={(value) =>
+                      setExplode(Array.isArray(value) ? value[0] : value)
+                    }
+                    aria-label={
+                      layout === 'extract'
+                        ? 'Selected structure separation'
+                        : layout === 'tray'
+                          ? 'Arranged separation'
+                          : 'Exploded view separation'
+                    }
+                  />
+                  <output>{Math.round(explode)}%</output>
+                </div>
+                <span className="toolbar-divider" />
+                <Tooltip>
+                  <TooltipTrigger
+                    render={
+                      <Button
+                        size="icon"
+                        variant="ghost"
+                        aria-label="Reset 3D view"
+                        onClick={() => {
+                          setResetNonce((value) => value + 1);
+                          setInspection(initialInspection);
+                          setExplode(0);
+                          setLayout('spatial');
+                          setPlate(false);
+                          setIsolated(false);
+                          setZoom(1);
+                        }}
+                      />
+                    }
+                  >
+                    <RotateCcw />
+                  </TooltipTrigger>
+                  <TooltipContent>Reset view</TooltipContent>
+                </Tooltip>
+              </div>
+              <div className="viewer-hint">
+                {mode === 'study' && layout === 'tray'
+                  ? explode === 100
+                    ? 'Tray · Pan / pinch to zoom · Not anatomical positions'
+                    : `Arrangement in progress · ${explode}% · Overlap is possible before 100%`
+                  : mode === 'study' && layout === 'extract'
+                    ? !visibleSystems[selected.system]
+                      ? 'Select a visible structure to extract · Others stay assembled'
+                      : explode > 0
+                        ? 'Selected structure extracted · 0% restores anatomy · Not a surgical path'
+                        : 'Assembled anatomy · Increase separation to extract the selected structure'
+                    : mode === 'study' && inspection.plane !== 'off'
+                      ? `${inspection.plane} surface cutaway · ${inspection.position}% · Not CT/MRI`
+                      : explode > 0
+                        ? 'Exploded teaching view · Positions are not anatomical'
+                        : plate
+                          ? 'Parallel projection · Click a structure · Use + / − to zoom'
+                          : 'Drag to rotate · Pinch to zoom · Click to explore'}
+              </div>
+              <a
+                className="model-credit"
+                href="/models/bodyparts3d/credits.html"
+                target="_blank"
+                rel="noreferrer"
+              >
+                BodyParts3D · CC BY 4.0 · Adapted
+              </a>
+            </div>
+          </div>
+
+          <AnatomyInfoPanel practice={mode === 'exam'}>
+            <div className="shoulder-info" aria-live="polite">
+              {mode === 'exam' ? (
+                <div className="exam-panel">
+                  <div className="info-kicker">STRUCTURE IDENTIFICATION</div>
+                  <h1>Question {questionIndex + 1}</h1>
+                  <p className="exam-question">{currentQuestion.prompt}</p>
+                  {!displayReady && (
+                    <output className="vm-practice-note" aria-live="polite">
+                      Practice paused until the 3D view and shoulder anatomy are
+                      available. Your answers are retained; recovery controls
+                      and Exit exam remain available.
+                    </output>
+                  )}
+                  {!answerId ? (
+                    <div className="waiting-card">
+                      <ScanLine />
+                      <strong>Choose on the model</strong>
+                      <span>Rotate to inspect, then select a structure.</span>
+                    </div>
+                  ) : (
+                    <div
+                      className={`answer-card ${answerCorrect ? 'correct' : 'incorrect'}`}
+                    >
+                      <div className="answer-status">
+                        {answerCorrect ? <Check /> : <Crosshair />}
+                        <strong>
+                          {answerCorrect ? 'Correct' : 'Not quite'}
+                        </strong>
+                      </div>
+                      <p>
+                        You selected <b>{answerName}</b>.
+                      </p>
+                      {!answerCorrect && (
+                        <p>
+                          The correct structure is{' '}
+                          <b>
+                            {structureById.get(currentQuestion.answer)?.name}
+                          </b>
+                          .
+                        </p>
+                      )}
+                      <Button onClick={nextQuestion} disabled={!displayReady}>
+                        {questionIndex === quizQuestions.length - 1
+                          ? 'Restart exam'
+                          : 'Next question'}
+                        <ChevronRight />
+                      </Button>
+                    </div>
+                  )}
+                  <div className="exam-standard">
+                    <span>Current result</span>
+                    <strong>
+                      {score} / {questionIndex + (answerId ? 1 : 0)}
+                    </strong>
+                    <p>
+                      Prototype formative assessment; not a credentialed or
+                      summative exam.
+                    </p>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <WorkspaceOnly modes={['explore', 'dissect']}>
+                    <div className="info-head">
+                      <div>
+                        <div className="info-kicker">
+                          {selected.category} · {selected.shortId}
+                        </div>
+                        <h1>{selected.name}</h1>
+                        <p className="latin-name">{selected.latinName}</p>
+                      </div>
+                      <button
+                        className="isolate-quick"
+                        type="button"
+                        onClick={() => setIsolated(!isolated)}
                       >
-                        {tab.value === 'quiz' ? (
-                          <div className="quiz-entry">
-                            <div className="quiz-mark">
-                              <Brain />
-                            </div>
-                            <div className="eyebrow">Structure check</div>
-                            <h2>{section.body}</h2>
-                            {section.bullets?.map((choice, index) => (
-                              <div className="quiz-choice" key={choice}>
-                                <b>{String.fromCharCode(65 + index)}</b>
-                                <span>{choice}</span>
-                              </div>
-                            ))}
-                            <Button
-                              onClick={toggleMode}
-                              disabled={!displayReady}
-                            >
-                              <GraduationCap />
-                              Start identification exam
-                            </Button>
-                          </div>
-                        ) : (
-                          <>
-                            {(tab.value === 'ct' ||
-                              tab.value === 'mri' ||
-                              tab.value === 'ultrasound') && (
+                        {isolated ? <Eye /> : <EyeOff />}{' '}
+                        {isolated ? 'Isolated' : 'Isolate'}
+                      </button>
+                    </div>
+                    <ReviewStatus structureId={selected.id} teachingDraft />
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={() =>
+                        setInspection((current) => ({
+                          ...current,
+                          plane: 'off',
+                          opacity: {
+                            ...current.opacity,
+                            [selected.system]: 100,
+                          },
+                        }))
+                      }
+                    >
+                      Reveal uncut structure
+                    </Button>
+                    <GroupedAnatomyNotes>
+                      {(tab) => {
+                        const section = selected.sections[tab];
+                        const modality = {
+                          ct: 'CT',
+                          mri: 'MRI',
+                          ultrasound: 'Ultrasound',
+                        }[tab as 'ct' | 'mri' | 'ultrasound'];
+                        return (
+                          <div className="shoulder-note">
+                            {modality && (
                               <div className="imaging-empty">
                                 <ScanLine />
-                                <span>No {tab.label} study loaded</span>
+                                <span>No {modality} study loaded</span>
                                 <button type="button" onClick={toggleSync}>
                                   {syncPlane
                                     ? 'Hide reference plane'
@@ -1110,43 +1143,69 @@ export default function ShoulderExplorer({
                             {section.note && (
                               <div className="content-note">{section.note}</div>
                             )}
-                          </>
-                        )}
-                      </TabsContent>
-                    );
-                  })}
-                </Tabs>
-                <dl className="fact-grid">
-                  <div>
-                    <dt>Region</dt>
-                    <dd>{selected.region}</dd>
-                  </div>
-                  <div>
-                    <dt>System</dt>
-                    <dd>{systemMeta[selected.system].name}</dd>
-                  </div>
-                  <div>
-                    <dt>Side</dt>
-                    <dd>Right</dd>
-                  </div>
-                  <div>
-                    <dt>Status</dt>
-                    <dd>Draft · Unvalidated</dd>
-                  </div>
-                </dl>
-                <div className="validation-note">
-                  <strong>Educational model · Review pending</strong>
-                  <span>
-                    Source-aligned BodyParts3D surfaces, with illustrative
-                    shading. Upper arm cropped for this shoulder view. Not
-                    patient-specific or validated for diagnosis.
-                  </span>
-                </div>
-              </>
-            )}
-          </aside>
+                          </div>
+                        );
+                      }}
+                    </GroupedAnatomyNotes>
+                    <dl className="fact-grid">
+                      <div>
+                        <dt>Region</dt>
+                        <dd>{selected.region}</dd>
+                      </div>
+                      <div>
+                        <dt>System</dt>
+                        <dd>{systemMeta[selected.system].name}</dd>
+                      </div>
+                      <div>
+                        <dt>Side</dt>
+                        <dd>Right</dd>
+                      </div>
+                      <div>
+                        <dt>Status</dt>
+                        <dd>Draft · Unvalidated</dd>
+                      </div>
+                    </dl>
+                    <div className="validation-note">
+                      <strong>Educational model · Review pending</strong>
+                      <span>
+                        Source-aligned BodyParts3D surfaces, with illustrative
+                        shading. Upper arm cropped for this shoulder view. Not
+                        patient-specific or validated for diagnosis.
+                      </span>
+                    </div>
+                  </WorkspaceOnly>
+                  <WorkspaceOnly modes={['practice']}>
+                    <div className="quiz-entry">
+                      <div className="quiz-mark">
+                        <Brain />
+                      </div>
+                      <div className="eyebrow">
+                        Structure check · {selected.name}
+                      </div>
+                      <h2>{selected.sections.quiz.body}</h2>
+                      {selected.sections.quiz.bullets?.map((choice, index) => (
+                        <div className="quiz-choice" key={choice}>
+                          <b>{String.fromCharCode(65 + index)}</b>
+                          <span>{choice}</span>
+                        </div>
+                      ))}
+                      <Button onClick={toggleMode} disabled={!displayReady}>
+                        <GraduationCap /> Start identification exam
+                      </Button>
+                      {!displayReady && (
+                        <p>Practice is available once the 3D model is ready.</p>
+                      )}
+                      <p>
+                        Formative practice only; not a credentialed examination.
+                      </p>
+                    </div>
+                  </WorkspaceOnly>
+                </>
+              )}
+            </div>
+          </AnatomyInfoPanel>
         </div>
-      </main>
+      </AtlasWorkspace>
     </TooltipProvider>
   );
 }

@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
-import { build } from 'esbuild';
+import { build } from './workspace-component-test-build.mjs';
 import {
   atlasSearchIndex,
   filterAtlasSearch,
