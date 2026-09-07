@@ -33,8 +33,8 @@ These are counts among the **1,022 body representations**, not unique lessons, a
 
 | Body topic | Specific or source-group draft | Generic identity/disclaimer | Explicitly pending | Generated identification prompt |
 | --- | ---: | ---: | ---: | ---: |
-| Anatomy | 343 | 679 | 0 | 0 |
-| Function | 399 | 146 | 477 | 0 |
+| Anatomy | 371 | 651 | 0 | 0 |
+| Function | 427 | 146 | 449 | 0 |
 | CT | 11 | 0 | 1,011 | 0 |
 | MRI | 11 | 0 | 1,011 | 0 |
 | Ultrasound | 11 | 0 | 1,011 | 0 |
@@ -47,6 +47,8 @@ These are counts among the **1,022 body representations**, not unique lessons, a
 The shoulder/arm curriculum now adds 64 original draft sections for 32 previously pending muscle representations. Among the region's 91 entries, Anatomy has 43 drafts and 48 identity-only entries; Function has 43 drafts, 45 generic vascular disclaimers and three pending left-bone records. No missing nerve geometry is invented. See [curriculum scope, citations and review gates](SHOULDER_ARM_CURRICULUM.md).
 
 ## Highest-impact anatomy gaps
+
+The [lower-leg curriculum](LEG_CURRICULUM.md) adds 56 basic drafts for 28 muscle/head entries. The leg's 60 representations have 30 draft Anatomy / 30 identity-only and 32 draft Function / 18 generic / 10 pending. Every represented leg muscle now has basic Anatomy/Function teaching, without claiming independently mapped tendon slips, nerve courses, compartments or accepted clinical/modality content.
 
 The [hip/thigh curriculum](THIGH_CURRICULUM.md) adds 108 basic drafts for 54 muscle/head/portion entries. Among the thigh's 81 representations, Anatomy now has 56 drafts / 25 identity-only; Function has 56 drafts / 20 generic disclaimers / 5 pending. Overlapping pelvic entries reuse the same exact identities; do not count these again. No specialist topic, nerve mesh, individual attachment map or clinical approval is added.
 
@@ -65,7 +67,7 @@ Retain the source-level decisions and exact held IDs in `GAP_FILLING.md`, `SOURC
 ## Ordered next actions
 
 1. **Completed locally — content ingestion contract.** Multi-part source bindings, representation scopes and explicit topic readiness now have a v2 schema, actual shoulder export and whole-body/source/rejection checks. See `CONTENT_CONTRACT.md`. Clinical reviews, canonical IDs, displayed copy and private data are unchanged. Production curriculum storage and automatic legacy migration are not claimed.
-2. **Continue bounded regional teaching.** Shoulder/arm, forearm, hand and hip/thigh muscle drafts are implemented locally with exact before/after preservation checks. Next inspect 28 pending lower-leg muscle representations, followed by foot and remaining pelvic groups. Continue region by region, then source-cited clinical/pathology, modality teaching and reviewed questions in the existing panels. Keep pending topics explicit and require specialist acceptance. Do not replace unknown nerve geometry with guessed routes or fill scan tabs with synthetic findings.
+2. **Continue bounded regional teaching.** Shoulder/arm, forearm, hand, hip/thigh and lower-leg muscle drafts are implemented locally with exact before/after preservation checks. Next inspect 36 pending foot-muscle representations, followed by remaining pelvic groups. Continue region by region, then source-cited clinical/pathology, modality teaching and reviewed questions in the existing panels. Keep pending topics explicit and require specialist acceptance. Do not replace unknown nerve geometry with guessed routes or fill scan tabs with synthetic findings.
 3. **Accept the current UI on actual devices when authorized/available.** Use the matrix below before calling navigation, labels or explosion visually complete. Fix observed defects rather than add speculative controls. A browser-testing request is required for this environment's browser workflow; no browser-only preview is started in background audit work.
 4. **Resolve source, specialist and imaging inputs.** Supply rights-cleared compatible geometry or qualified adjudication for held candidates; obtain revision-bound anatomical/editorial review. Connect the user's real imaging function only after its interface, scope and data/registration evidence exist.
 5. **Deliver the exact accepted revision.** Restore authorized source-service/GitHub access, then publish privately and update only the existing anatomy backup branch. Main-website integration needs a chosen route/embed and access policy; no sharing change is assumed.

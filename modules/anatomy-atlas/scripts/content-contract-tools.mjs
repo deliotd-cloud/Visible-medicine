@@ -17,6 +17,7 @@ export * from './lib/shoulder-arm-curriculum.ts';
 export * from './lib/forearm-curriculum.ts';
 export * from './lib/hand-curriculum.ts';
 export * from './lib/thigh-curriculum.ts';
+export * from './lib/leg-curriculum.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';`,
       resolveDir: fileURLToPath(contentRoot),

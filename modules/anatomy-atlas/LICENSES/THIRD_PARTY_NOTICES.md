@@ -86,7 +86,7 @@ These licences permit commercial use; they are not non-commercial licences and d
 
 ## Reproducible full audit
 
-Hip/thigh teaching adds original short factual drafts and source links only. No third-party chapters, table datasets, illustrations, scans or question banks are imported; cited NC-ND StatPearls material is not admitted for commercial redistribution. Texas Tech and research publications retain their rights. See `docs/THIGH_CURRICULUM.md`. No package, model, font, texture, paid API or runtime reference-fetching service is added; existing MIT and DBCLS/CC BY 4.0 obligations remain.
+Hip/thigh and lower-leg teaching add original short factual drafts and source links only. No third-party chapters, table datasets, illustrations, scans or question banks are imported; cited NC-ND StatPearls material is not admitted for commercial redistribution. Texas Tech and research publications retain their rights. See `docs/THIGH_CURRICULUM.md` and `docs/LEG_CURRICULUM.md`. No package, model, font, texture, paid API or runtime reference-fetching service is added; existing MIT and DBCLS/CC BY 4.0 obligations remain.
 
 The hand curriculum adds original brief factual notes and citations only, not licensed chapters, table datasets, illustrations or scans. StatPearls' NC-ND material is not admitted for commercial redistribution; Texas Tech references retain their own rights. See `docs/HAND_CURRICULUM.md`. No new asset, package, paid service or runtime dependency on reference websites is added. Existing MIT and DBCLS/CC BY 4.0 obligations are unchanged.
 

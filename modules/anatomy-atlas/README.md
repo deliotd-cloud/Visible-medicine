@@ -2,11 +2,13 @@
 
 ## Current scope and remaining work
 
-The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: 477 Function sections remain pending and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: 449 Function sections remain pending and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
 
 The [versioned content contract](docs/CONTENT_CONTRACT.md) now preserves multi-part mesh bindings and explicit topic readiness, with a real shoulder export and whole-body validation. Draft content is kept separate from clinical approval; no database or private review is migrated. `npm run content:export -- --check` verifies the shoulder fixture.
 
 ## Anatomy source-quality review
+
+The [lower-leg curriculum](docs/LEG_CURRICULUM.md) adds 56 draft Anatomy/Function sections for 28 existing muscle/head entries in the current notes panel. It distinguishes compartment/nerve supply, joint crossings and variable tendon attachments. Run `npm run leg-curriculum:test`. No geometry, controls or clinical approval are added; clinical/modality teaching remains separate work.
 
 The [hip/thigh curriculum](docs/THIGH_CURRICULUM.md) adds 108 draft Anatomy/Function sections for 54 existing muscle/head/portion entries, including differing biceps motor supplies and adductor-magnus portions. It preserves all source geometry and uses the existing notes panel. Run `npm run thigh-curriculum:test`; clinical/modality teaching and independent acceptance remain separate work.
 

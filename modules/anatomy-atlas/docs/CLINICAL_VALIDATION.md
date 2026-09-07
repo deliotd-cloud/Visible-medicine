@@ -4,6 +4,10 @@
 
 The [requirement audit](REQUIREMENT_AUDIT.md) consolidates current coverage, actual teaching gaps and the next device-acceptance matrix. Current source contains 1,022 body representations, 138 stages and 120 focuses; counts in milestone-specific gates below are historical. Every unresolved gate remains relevant. Current local layout/explosion/recovery changes are not covered by the earlier browser session, and no clinical approval is created by source or software checks.
 
+## Lower-leg muscle teaching gates
+
+Review the 28 entries and 56 new drafts described in [LEG_CURRICULUM.md](LEG_CURRICULUM.md): gastrocnemius-head identity and joint crossings, soleus/Achilles continuity, popliteus free/fixed-tibia wording, anterior versus lateral fibularis supply, digital slips, tibialis-posterior expansion, plantaris variants and attachment extents. Textual teaching does not validate nerve paths, fascial boundaries, tendon footprints or clinical accuracy. Clinical/modality topics remain separate authoring and acceptance work.
+
 ## Hip/thigh muscle teaching gates
 
 Review all 54 exact entries and 108 Anatomy/Function drafts for attachments, source head/portion extent, laterality and motor-supply variants. Priorities include adductor minimus versus magnus, magnus's overlapping innervation, biceps-head joint crossings, iliacus versus psoas motor supply, gemelli/obturator distinctions, quadriceps tendon/ligament continuity, gluteal facets and pes-anserine versus semimembranosus attachments. No fibre-level function, nerve route, individual tendon footprint or new clinical approval is supplied. See [scope and references](THIGH_CURRICULUM.md).

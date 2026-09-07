@@ -22,6 +22,7 @@ import { shoulderArmLesson } from '../lib/shoulder-arm-curriculum';
 import { forearmMuscleLesson } from '../lib/forearm-curriculum';
 import { handMuscleLesson } from '../lib/hand-curriculum';
 import { thighMuscleLesson } from '../lib/thigh-curriculum';
+import { legMuscleLesson } from '../lib/leg-curriculum';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -78,6 +79,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (handMuscle) return handMuscle;
   const thighMuscle = thighMuscleLesson(s, tab);
   if (thighMuscle) return thighMuscle;
+  const legMuscle = legMuscleLesson(s, tab);
+  if (legMuscle) return legMuscle;
   const axial =
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??

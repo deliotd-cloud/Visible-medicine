@@ -1,0 +1,230 @@
+{
+  "sourceCommit": "bf358f6e3db309367fe0e2c0c8630351255d0456",
+  "reason": "Explicit 56-topic lower-leg Anatomy/Function authoring for 28 existing representations; unrelated content preserved.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-extensor-digitorum-longus",
+      "fmaId": "FMA22548",
+      "sections": {
+        "anatomy": "1d3907bcd97299c8cde439490cfc3b6ba38f86bb7996191200b871648b29181c",
+        "function": "006d30c081ac12d791d7461de763e10d1257c3a0b4b407b1b49682bb72f76f90"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-extensor-digitorum-longus",
+      "fmaId": "FMA22549",
+      "sections": {
+        "anatomy": "ddd6f7b43c428327c16fbd8d80f0848f6d6253703d3efed5bee8753c0a103d66",
+        "function": "7ac12c6a0e1bf338c46ec63823a0bd7efcf0f2f460cd928c56a646f80e4821e2"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-extensor-hallucis-longus",
+      "fmaId": "FMA22546",
+      "sections": {
+        "anatomy": "0e4e6602551108a8aafc1b93ef2d19f085f9da835216d619ad5b5a9eaa6637c7",
+        "function": "3e8ba32d16b06adb81e5b14a2b4ad34da9867366ee862c9b116228c70ef15fe7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-extensor-hallucis-longus",
+      "fmaId": "FMA22547",
+      "sections": {
+        "anatomy": "03b0a90914031f0db4774c3158d22e6c993c5e5e85fba9eaa2fc1f862766969e",
+        "function": "55259c1ea60b4defad7f751b83053b7f43f213f2cb97ac0ceece22bf59d29609"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-fibularis-brevis",
+      "fmaId": "FMA22554",
+      "sections": {
+        "anatomy": "18604eaf7cff697dcd75d5e107eaf7252af9f7377b0037f52c4615f7d235c10c",
+        "function": "2d1bbeab44afed0b78ac78e6ab6f2b5b61aee33086e2eb756be34d95332dd77f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-fibularis-brevis",
+      "fmaId": "FMA22555",
+      "sections": {
+        "anatomy": "ce6ad0023920cf999a7ae8a3473ba7a3983dfce850d6db6dfb1bbd450d45940b",
+        "function": "9cfe44735c2afd89051f95d38592d9ea5257ea4a4198ab061f733c2718e05e23"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-fibularis-longus",
+      "fmaId": "FMA22552",
+      "sections": {
+        "anatomy": "5606bfcd105f8ceed6198f90515ce2e6d46487b1db543b6fdc314e2bed1ac77b",
+        "function": "aa10514022ac040c8f1b74f54d6c5b7b0c4b7ea314969d3f42a0086ee2b0bea3"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-fibularis-longus",
+      "fmaId": "FMA22553",
+      "sections": {
+        "anatomy": "11a5e6c74efcae5eef195059218684ac697476a0c7006f1fb59b54bdccc4876a",
+        "function": "3951f581d1abd58da10adbe46549aad2dcba0bd39b2ffda57377fc3aed248cab"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-fibularis-tertius",
+      "fmaId": "FMA22550",
+      "sections": {
+        "anatomy": "f27f3ad92df616d90e18e10358276b5d08b5d7dbbef20bc9bff1d7110ab02d5c",
+        "function": "c150d2e8b40c0f41e91c3147ff9c4b75c21b67147146203b7ace62e3f8f3b743"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-fibularis-tertius",
+      "fmaId": "FMA22551",
+      "sections": {
+        "anatomy": "e50f87c1947498362519858db3cbe265bf2c9a3409c81fe487f73133805b7868",
+        "function": "d743a2e322a16f31a745b2e341997c63e0cbf136656c6d430ea384986d4a955c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-flexor-digitorum-longus",
+      "fmaId": "FMA65016",
+      "sections": {
+        "anatomy": "049cc9cb382d238640f32d70c9ed62a2f9914ae3a98c910dd45bfb3d2b316b0c",
+        "function": "2930aabea4ba0903ebe54bf7f1959473663f814c7407a82f5deb5fadac423aba"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-flexor-digitorum-longus",
+      "fmaId": "FMA65017",
+      "sections": {
+        "anatomy": "874d18ee323850e5d6ef239c098e6970b253121d7e6b73c53ab6c0cdd2e1451d",
+        "function": "3e16529eb8bbab8ffbdf9410f4e434f7cbbbe42fc34bb6d15ad604717bffdb8e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-flexor-hallucis-longus",
+      "fmaId": "FMA65014",
+      "sections": {
+        "anatomy": "c4fd0f133c0f23738c04610ece63cb80cc462a245a89816224bff70d65b98d64",
+        "function": "d46f0700b7fd002fd7737ba08a0d860d6a117df50fb946a8249950d7b397f641"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-flexor-hallucis-longus",
+      "fmaId": "FMA65015",
+      "sections": {
+        "anatomy": "e0b1430a18504fe3d4a0cc3ce0c8d657ceffad36fcdeb9af1ecf5292e13835da",
+        "function": "04ab3140c6b50645088558e552f728ed9d6956c22771802e8868a9a41d4f173d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-plantaris",
+      "fmaId": "FMA22560",
+      "sections": {
+        "anatomy": "732595c8883e3320bcf67776b0e1db7df55d833fd9aa9689e1b9854b2ca43baa",
+        "function": "f1603ce575065d09b05e296d1342c5a031bffaf5b941731bf4416e054085bf1c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-plantaris",
+      "fmaId": "FMA22561",
+      "sections": {
+        "anatomy": "f8c8300ffeaf743b18783a6ea547ac95a7f91ca0a9522b7aefbcf3b6fb52c243",
+        "function": "e7fe6165843d4400da0e3c5ccc3603aae813d985823db87eb3c5c73a7eceee33"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-popliteus",
+      "fmaId": "FMA22591",
+      "sections": {
+        "anatomy": "3b3499af17179578e09b2efc36fec1e432d05e5f2b44e3e028a21189c6056dd1",
+        "function": "463ce71a7b8e2207bd3b518c9579e07e20beb4dad2208b9e5eae2d864b30d013"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-popliteus",
+      "fmaId": "FMA22592",
+      "sections": {
+        "anatomy": "a08587e857d2ff844f6485975b53adf1c8907aacb699f15da22faf9705d5e5d7",
+        "function": "8223768b9ebc48e7c581842d150acd8dd908f2df3d2e8b5a8aa6d6d04c076f22"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-soleus",
+      "fmaId": "FMA22558",
+      "sections": {
+        "anatomy": "ccda2cb33b52c6eb28769f82a17bbc0abeecb3798cb42d7aeb50b6f65de5ceec",
+        "function": "5c3beb660cf59e9f04ba43fe0de889efaf126200a5bd4b3340de4bee3237f8b1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-soleus",
+      "fmaId": "FMA22559",
+      "sections": {
+        "anatomy": "82909be27366c795c474a90f2d0c1533d0b308fbb147f3514ae501c4f15b6826",
+        "function": "de2fbf0062b1e50b5766780af6ad2dc4092c18920bc3735dcee5239ffe53f001"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-tibialis-anterior",
+      "fmaId": "FMA22544",
+      "sections": {
+        "anatomy": "7d9f08e34a5edca69ed30ab632f5f909944c64bbbca74b603ac250bcc6fda54a",
+        "function": "624f9a5324d4fa9201b26d63191ad869bf51c9b01c8a8e29a3411b8af0186831"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-tibialis-anterior",
+      "fmaId": "FMA22545",
+      "sections": {
+        "anatomy": "c6e346bcd059b6cee8f1fc7be0cb3cfce6cf9ba7d36b5632910f286e2020fb24",
+        "function": "cc2e9c0899e5eef0b24d688a7c5e5a38a36d646f6fb219f7ce8dc8e5d6f42757"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-tibialis-posterior",
+      "fmaId": "FMA65018",
+      "sections": {
+        "anatomy": "f1147ebf8986e36539a825bac78c4ea972b6a36fb98d72fbe568fbd7ab9e7e89",
+        "function": "b5f29267130290ae9839de571ff64c4f95d1ab3ed5b35f08d74a0f76b413c1c6"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-tibialis-posterior",
+      "fmaId": "FMA65019",
+      "sections": {
+        "anatomy": "1b532beb6db2c547d37c34a27fa18eae4f07d0f416d24f1fbf4ce2aba9e180c6",
+        "function": "b2209c9258ee5cfcfe8bd577a99ced7930b72822039107db865090bebd8fa751"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:medial-head-of-right-gastrocnemius",
+      "fmaId": "FMA45957",
+      "sections": {
+        "anatomy": "b9718cc06cbbf2655dcbfba65a45d84d5510d0b8d52ac2eca1dd46a1aa5847c7",
+        "function": "c7c1ac972b97b5d6b7345d56389231a1d7ea1573280609372e22876085436f66"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:medial-head-of-left-gastrocnemius",
+      "fmaId": "FMA45958",
+      "sections": {
+        "anatomy": "21c0450f685d199317c0c61b6a6192c856edda241988d6b43d9ae58326118d34",
+        "function": "fcf3ce68147993795e33b5ac0775373d8bf3e85b25ec87c1efdffd8093baa3fe"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:lateral-head-of-right-gastrocnemius",
+      "fmaId": "FMA45960",
+      "sections": {
+        "anatomy": "e0439d40adcbf2250c0a5e82c1b9ccd6c98511ec79e11c21f7e1cfa2e1134d76",
+        "function": "53d8c72ccdcfa8cc8aa1593d1adfc20bd563e9eb038cb809748f550fecb026d8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:lateral-head-of-left-gastrocnemius",
+      "fmaId": "FMA45961",
+      "sections": {
+        "anatomy": "b1859784171a671656450529315359a8a3238b76f25906e495f92eec4cad5c0f",
+        "function": "fa40ee46ed58e692e8abd99e8c6a38d3423f4de6fcf3ffb8f15d1a76dfc5c77c"
+      }
+    }
+  ]
+}

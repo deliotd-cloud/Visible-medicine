@@ -9,8 +9,8 @@
     "content/review-revisions.json": "abc8f9410e00b41282e149d2bb6020d96ad6367aed769888519940c4c24118a0",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "8b42ee478186d1a3ba58b4a96acedda1062c6ffcdc26a25fc68ebda152a54ade",
-    "explicitTopicReadiness": "c398d28d4f61b9bb81cea59a176d3b44ef29dceeded3030d1e7dccb2d5e611cc"
+    "resolvedContentAndRecipeData": "b071925e4cf81d92a316a7cd6f3f467ba5fda4aacb7d8202eef75811e5ba0a27",
+    "explicitTopicReadiness": "2d803863ed457a8c648c301dca3b4f1cc0d6b09a081305da99489d310faf1eac"
   },
   "anatomy": {
     "bodyRepresentations": 1022,
@@ -101,15 +101,15 @@
     "classificationLimit": "Explicit readiness from authoring branches; not inferred from titles and not clinical approval. Existing shoulder authoring is explicitly draft.",
     "body": {
       "anatomy": {
-        "specificDraft": 343,
-        "identityOnly": 679,
+        "specificDraft": 371,
+        "identityOnly": 651,
         "pending": 0,
         "generatedIdentification": 0
       },
       "function": {
-        "specificDraft": 399,
+        "specificDraft": 427,
         "identityOnly": 146,
-        "pending": 477,
+        "pending": 449,
         "generatedIdentification": 0
       },
       "ct": {
@@ -602,15 +602,15 @@
       },
       "leg": {
         "anatomy": {
-          "specificDraft": 2,
-          "identityOnly": 58,
+          "specificDraft": 30,
+          "identityOnly": 30,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 4,
+          "specificDraft": 32,
           "identityOnly": 18,
-          "pending": 38,
+          "pending": 10,
           "generatedIdentification": 0
         },
         "ct": {
