@@ -4,6 +4,10 @@
 
 The [requirement audit](REQUIREMENT_AUDIT.md) consolidates current coverage, actual teaching gaps and the next device-acceptance matrix. Current source contains 1,022 body representations, 138 stages and 120 focuses; counts in milestone-specific gates below are historical. Every unresolved gate remains relevant. Current local layout/explosion/recovery changes are not covered by the earlier browser session, and no clinical approval is created by source or software checks.
 
+## Shoulder and arm teaching gates
+
+Before accepting the new shoulder/arm teaching, review all 32 exact identities and 64 draft sections for typical attachments versus actual mesh footprints, head/portion scope, laterality, actions and motor-supply variation. No missing nerve course, independently segmented tendon or review of the opposite side is implied. Modality/pathology/clinical text is unchanged. See [curriculum-specific gates](SHOULDER_ARM_CURRICULUM.md).
+
 ## Forearm vascular extension gates
 
 - Review the four common/recurrent interosseous source identities, calibre, laterality, branch origin/endpoints and local relationships. Single IS-A components and larger PART-OF definitions are not interchangeable. No posterior-interosseous trunk or complete elbow arterial network is inferred.

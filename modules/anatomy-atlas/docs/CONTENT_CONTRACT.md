@@ -13,7 +13,7 @@ The content-ingestion format now represents every selectable source part and the
 | `pending` | Specialist content has not been authored in that branch. |
 | `generated-identification` | A generated find-this-structure prompt, not an authored clinical question or the whole practice session. |
 
-The explicit classification corrects two prior heuristic false positives: Function for FMA61970 and FMA62072 already contained pending text under draft headings. No lesson was removed. Current Function coverage is 257 draft, 146 identity-only and 619 pending body records. All other topic totals are unchanged; see [current audit](REQUIREMENT_AUDIT.md).
+The explicit classification corrected two prior heuristic false positives: Function for FMA61970 and FMA62072 already contained pending text under draft headings. No lesson was removed. At the contract milestone Function coverage was 257 draft, 146 identity-only and 619 pending body records. The later shoulder/arm curriculum now gives 289 draft, 146 identity-only and 587 pending records; see [current audit](REQUIREMENT_AUDIT.md).
 
 ## Record identity and multi-part geometry
 
@@ -66,4 +66,4 @@ The original source GLBs, catalogue, shoulder manifest, displayed copy, dissecti
 
 Source geometry and derived source metadata retain BodyParts3D CC BY 4.0 with DBCLS credit, change notices and licence links. Original teaching/code retain their existing MIT terms; those terms do not relicense the anatomical source. Brand artwork is not part of the export. See `LICENSES/THIRD_PARTY_NOTICES.md` and source-specific notices.
 
-**Next work:** author a bounded, primary-source-cited draft shoulder/arm muscle curriculum against the exact already rendered identities, preserve clear source-group boundaries and pending modality material, then rerun content/readiness/review checks. Missing nerve geometry, qualified clinical review, real-device acceptance, actual imaging inputs and private remote delivery remain separate gates.
+**Subsequent curriculum milestone:** [SHOULDER_ARM_CURRICULUM.md](SHOULDER_ARM_CURRICULUM.md) now adds 64 draft sections for 32 body representations. The original full-copy baseline above is retained: `curriculum-transition.mjs` checks pinned before/after snapshots and restores only those exact sections for the unrelated-copy comparison. The earlier statement of unchanged displayed copy describes the contract milestone, not this explicit later authoring. Schema, all geometry/bindings, shoulder export, reviews and unrelated topics remain unchanged. Next: a bounded forearm muscle curriculum. Missing nerve geometry, qualified clinical review, real-device acceptance, actual imaging inputs and private remote delivery remain separate gates.

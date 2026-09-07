@@ -1,0 +1,262 @@
+{
+  "sourceCommit": "4a180683536f6c67035d0cfca54aac9f91cb0fc1",
+  "reason": "Explicit authoring of 32 existing shoulder/arm muscle representations; Anatomy and Function only. No approval or geometry change.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-serratus-anterior",
+      "fmaId": "FMA13398",
+      "sections": {
+        "anatomy": "4497ed47f2565b4a9c75d1915b2425ecd50ccfc47516f467dfaf05fb5b3b4efa",
+        "function": "a34c13d6a98d5fd284f9d40f91ee9acfcd7136b9c455a1dfa538135a4c680a47"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-serratus-anterior",
+      "fmaId": "FMA13399",
+      "sections": {
+        "anatomy": "0df0d73d6ff7bfac08b97dbc266cc6c8dd938c9428c2365c5ee63a5b64845919",
+        "function": "4d24e2367a8a78a623f054c67e1889e76ffbd3ac8a03e981cf137c6b72c06f63"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-anconeus",
+      "fmaId": "FMA37705",
+      "sections": {
+        "anatomy": "73b77523e777f214c181ead1463681904f9d8f3f2ffec09fb6a4bd8fbb428723",
+        "function": "1b145c4076b3c208f04224639e82c18e45cbf6662fe826001064be397852b772"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-anconeus",
+      "fmaId": "FMA37706",
+      "sections": {
+        "anatomy": "136848d4a7bfa6b2e22ad2b4ae26e94848789f26e2dabdd039df0683ca33c8fe",
+        "function": "020f84bd427a301cacd13d41f459d29e0efd6cea4132ce7c6a068e03924e9200"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-brachialis",
+      "fmaId": "FMA37668",
+      "sections": {
+        "anatomy": "449d43977998582cf90e81de9b40c7a4c8cea67cca7cdf36d2929d75f61ae2c2",
+        "function": "28ee7479e642c3d11a25aa4a189fa7ec6ece0362659716a00a15f8f7cc019b22"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-brachialis",
+      "fmaId": "FMA37669",
+      "sections": {
+        "anatomy": "98e550ad28fcb92086036bd562236b109b81a5e0d5e8a90450b3e8bb3a470b89",
+        "function": "460e8041ebd41aa0ad9626da61cd5a7dd7874cfeb2e28d995c0670cc544eb15d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-coracobrachialis",
+      "fmaId": "FMA37665",
+      "sections": {
+        "anatomy": "ee638d79fa1775ad4dafa20ff17fc29424cf7c14d3f3d1d2ce047730154f5f2a",
+        "function": "b0e90c4a0094be69e092e238bb4f0f222068fa571df3c52f688ec04bab90c324"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-coracobrachialis",
+      "fmaId": "FMA37666",
+      "sections": {
+        "anatomy": "335b4fc6ec5450ff545f99a6a382d5e19d4887abe4c05b24fb4c036109d74bb7",
+        "function": "8f086d69d3f3a6f643cdf08a74f89662592b715476d170aed0c36173ea34376c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-infraspinatus-muscle",
+      "fmaId": "FMA32548",
+      "sections": {
+        "anatomy": "6f72bc93f0ad417ea0fd1ddca9b0ecf8894bed9a0de3a0e9e7a0916481556463",
+        "function": "4222160406375a8c627f72cde156d33ad4aa09958487ca698f925f5050f2fb76"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-subscapularis",
+      "fmaId": "FMA13415",
+      "sections": {
+        "anatomy": "18e5014b06cbe906958745eb51507e9f3cf6ccd0f61cbba26779425f1e0f7441",
+        "function": "e30595748951bd8a34cdf522622050c72201072d16c9ee47ad48f13535528e45"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-supraspinatus",
+      "fmaId": "FMA32545",
+      "sections": {
+        "anatomy": "bcb36da2c0d762e62b4d7184e953d8b4396fa8d7f8ad124131129df5e70e7a95",
+        "function": "ccf4ee6ff4c7f52d2f73662a8338e589e8f71617b180427a8826a3308acde27e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-teres-major",
+      "fmaId": "FMA32551",
+      "sections": {
+        "anatomy": "87309f477fe10084f0a07f9d9d14a9cf1d407d49a2ba828a8d23707354c3ea7e",
+        "function": "6fc6906ab2ccb0d4f55abf189ad24c53d26c574b959fed1056f1721a43a6a209"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-teres-major",
+      "fmaId": "FMA32552",
+      "sections": {
+        "anatomy": "3dcc4687e1da841575218ab9de144cb7ca04788e6173aa04b8cdc720f5c010b2",
+        "function": "2e83a65508eea054acfbf9842d68baf16431258339726e0d1c48583699979cfb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-teres-minor",
+      "fmaId": "FMA32554",
+      "sections": {
+        "anatomy": "34a3ff9e47448becb7e50da091839ecf18a7f10855ee49b31e4dcf9e674d324e",
+        "function": "2e9d3b8e867284d8b10e846747125b861a7e03fb8fb2e128063e06ad1364b473"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-levator-scapulae",
+      "fmaId": "FMA32540",
+      "sections": {
+        "anatomy": "87815d32405993c97e133f5a84483c3dc3f30709dc174abc61410f4bb44447df",
+        "function": "189107a9d3c78e21e960b4d4fa1c5ccc40a4cbc94fd024ce8a1c55f206e35526"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-levator-scapulae",
+      "fmaId": "FMA32541",
+      "sections": {
+        "anatomy": "c052aa29d5ce7a6ed8436efd6dccdd9f95dad70b0561ea695f9f2c11b8526f1c",
+        "function": "b38569731670d739bb54aee0ad6dbeddfd11cc7055521ed30cb50f346830209b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-rhomboid-major",
+      "fmaId": "FMA13381",
+      "sections": {
+        "anatomy": "9b74b1d2c225542b68252d7b4516634995a5f99586ad14e69a7de9ffadd4064e",
+        "function": "93329b9daf31b547f6c5b3f50faf25e5b0fcc761be32296c902e53022cb7a0ad"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-rhomboid-major",
+      "fmaId": "FMA13382",
+      "sections": {
+        "anatomy": "7c0e7f81bb7e5cdf0bd83c2f2d04e14a9bf8b789cc71649832173c853398fb85",
+        "function": "20c079209a62ef9ba8a6b3cfabea5baf08555e3ff305319be8064806358a06a4"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-rhomboid-minor",
+      "fmaId": "FMA13383",
+      "sections": {
+        "anatomy": "6eae38f62b209b3145376b0ff6cf18162add01f546e707f85590896a87c2c43b",
+        "function": "f49be782a57ca2ea10011a6e7ad4eeccaad9603081d4140bffd601e943a99e77"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-rhomboid-minor",
+      "fmaId": "FMA13384",
+      "sections": {
+        "anatomy": "0446d57055b8d1b567cec7d174ccde8863462ff9e986775d2dafebeb6475c6db",
+        "function": "8141b61cf7bd4343b2a665aad2b80474090bc589aecb7ba19edb3a75b2aad0a0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:clavicular-part-of-left-deltoid",
+      "fmaId": "FMA34681",
+      "sections": {
+        "anatomy": "13faef2d438e187ae751b8cb19fcfb2eab0a54520ab768a25a5ef3e2ebef2d2b",
+        "function": "295db2bca906e8f670c9541095f61ddd78d9d23201b8b02edeea08ccf4d51106"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:acromial-part-of-left-deltoid",
+      "fmaId": "FMA34683",
+      "sections": {
+        "anatomy": "45400c9bc6044ac2c539c4c64dfd1817132c2324b7b6208dd5e2395072073196",
+        "function": "4c1d4258ac990838a46ee38ccb7bd05082e29d0af3108eee8b23a041d7d4cd8e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:spinal-part-of-left-deltoid",
+      "fmaId": "FMA34685",
+      "sections": {
+        "anatomy": "36cf3849d93488bff0346da8665c16f2d488aeab0f16fb27e765ad9250a5dc06",
+        "function": "0850067181a60fd6f5bc5da32d70570ea201325d3fc73d883e17fd4d64100525"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:short-head-of-right-biceps-brachii",
+      "fmaId": "FMA37684",
+      "sections": {
+        "anatomy": "56ec614741c71ea024217db1c76af8e33c70958c583c31410f1d06d64e06dd45",
+        "function": "0146f3869939cba736cd341b3da80ab2d0dd81ad08afef31db7ced63ddf87ca1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:short-head-of-left-biceps-brachii",
+      "fmaId": "FMA37685",
+      "sections": {
+        "anatomy": "7442b13f87816108034f36bb4abc7e70afb8426a67dd81b68cdf17003d2ccf5c",
+        "function": "f0a17b3de45ab383e7c0c064d9e65618e385dca754b37a849af0aa3439368096"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:long-head-of-left-biceps-brachii",
+      "fmaId": "FMA37687",
+      "sections": {
+        "anatomy": "fb9ca6bf32d68a233ad14e607f355162fcb991fa026844e3a493a9a1a992af67",
+        "function": "537320b383bbd3f665089a556e87996f8df346de025437c1587e165121b4cf05"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:medial-head-of-right-triceps-brachii",
+      "fmaId": "FMA37695",
+      "sections": {
+        "anatomy": "cf2375777b3c02d2af4682c1dfa910daa6c629b1d766ac62212a0706d71bd12f",
+        "function": "f0e1e4260a65cbc81097f5abf9d8731d60cbcbd5216adfee2c6d09de165e6b6a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:medial-head-of-left-triceps-brachii",
+      "fmaId": "FMA37696",
+      "sections": {
+        "anatomy": "351f22758be918f4a6416b659f1f7ae4fa0d0ca3db77d30a9946d36ebad6b933",
+        "function": "a3ac971b5e0c70f98fa1a9af88a0cc9ae18667b21980fc2305040f5fc2e5b650"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:lateral-head-of-right-triceps-brachii",
+      "fmaId": "FMA37697",
+      "sections": {
+        "anatomy": "132164ce037a0bd25537cf128f9a9fb89c6e242c39c22f493b6e9bb89c25b748",
+        "function": "74fa18ba201e7fbfa93be122f19e957aaa78d1bf88dbb6e5b049dac89b37ae90"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:lateral-head-of-left-triceps-brachii",
+      "fmaId": "FMA37698",
+      "sections": {
+        "anatomy": "6ad6a0521aa8dd4c2c388cd69605aa09f0ab36a643762593f431ca2e81ed8779",
+        "function": "f46beac0edc836b9908032de7d80ae256300423137084b74c35ca94c97f8c730"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:long-head-of-right-triceps-brachii",
+      "fmaId": "FMA37699",
+      "sections": {
+        "anatomy": "abcc1fd957a2c442a5ea0c5af8959c1c455b5f5d537e811b89c2e85d16ea0470",
+        "function": "4cf320c39cd53a79e4ef5e59d364e13b8835a93ef2e22b19463e114ac104bf50"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:long-head-of-left-triceps-brachii",
+      "fmaId": "FMA37700",
+      "sections": {
+        "anatomy": "38844b343b130bf96ef6185f5504cca99e8b411e706c342e68ba62cacdb722e5",
+        "function": "1016402e57113d29f3d65c7f265c44517c4cda507fb56d4fdb2543ac28da3a72"
+      }
+    }
+  ]
+}

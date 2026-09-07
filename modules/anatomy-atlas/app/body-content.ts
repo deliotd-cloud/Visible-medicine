@@ -18,6 +18,7 @@ import { ocularGroupFor } from '../lib/ocular-anatomy';
 import { laryngealGroupFor } from '../lib/laryngeal-anatomy';
 import { forearmVascularGroupFor } from '../lib/forearm-vascular-anatomy';
 import { draftLesson, type ContentLesson } from '../lib/content-types';
+import { shoulderArmLesson } from '../lib/shoulder-arm-curriculum';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -54,7 +55,7 @@ const functions: Record<string, string> = {
   FMA50801:
     'The brain integrates sensory information and supports movement, cognition and regulation of bodily functions.',
 };
-/** Legacy display API: keep the exact section shape and copy unchanged. */
+/** Display API: omit editorial metadata, retaining the ContentSection shape. */
 export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
   const { readiness: _readiness, ...section } = bodyLesson(s, tab);
   return section;
@@ -66,6 +67,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
     item.sourceFmaIds?.includes(s.fmaId),
   );
   if (existing) return draftLesson(existing.sections[tab]);
+  const shoulderArm = shoulderArmLesson(s, tab);
+  if (shoulderArm) return shoulderArm;
   const axial =
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??

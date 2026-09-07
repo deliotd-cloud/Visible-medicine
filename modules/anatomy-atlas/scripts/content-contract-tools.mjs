@@ -13,6 +13,7 @@ export async function contentContext() {
       contents: `export * from './lib/content-export.ts';
 export * from './lib/content-types.ts';
 export * from './app/body-content.ts';
+export * from './lib/shoulder-arm-curriculum.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';`,
       resolveDir: fileURLToPath(contentRoot),

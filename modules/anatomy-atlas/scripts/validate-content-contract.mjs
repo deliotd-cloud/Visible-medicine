@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFile, writeFile } from 'node:fs/promises';
+import { copyBeforeShoulderArmCurriculum } from './curriculum-transition.mjs';
 import {
   contentContext,
   contentRoot,
@@ -44,20 +45,11 @@ for (const [path, expected] of [
     expected,
     'Original source/legacy/review bytes: ' + path,
   );
-const oldCopy = {
-  body: catalog.structures.map((entry) => ({
-    id: entry.id,
-    sections: Object.fromEntries(
-      api.contentTabs.map((tab) => [tab, api.bodyContent(entry, tab)]),
-    ),
-  })),
-  shoulder: api.structures,
-  dissectionProfiles: api.dissectionProfiles,
-};
+const oldCopy = await copyBeforeShoulderArmCurriculum(context);
 same(
   sha(JSON.stringify(oldCopy)),
   baseline.copyAndRecipeHash,
-  'Every original displayed section/recipe is preserved',
+  'Only the 64 pinned shoulder/arm curriculum sections change; unrelated copy/recipes are preserved',
 );
 same(shoulder.length, 9);
 same(body.length, 1022);
@@ -369,7 +361,8 @@ const report = {
   boundNodes: nodes.size,
   glbAssetsVerified: assets.size,
   rejectionCases: negative.length + 3,
-  originalDisplayedCopyAndRecipesPreserved: true,
+  unrelatedDisplayedCopyAndRecipesPreserved: true,
+  explicitlyUpdatedBodySections: 64,
   sourceGeometryChanged: false,
   clinicalApprovalsImported: false,
   patientDataImported: false,

@@ -33,8 +33,8 @@ These are counts among the **1,022 body representations**, not unique lessons, a
 
 | Body topic | Specific or source-group draft | Generic identity/disclaimer | Explicitly pending | Generated identification prompt |
 | --- | ---: | ---: | ---: | ---: |
-| Anatomy | 195 | 827 | 0 | 0 |
-| Function | 257 | 146 | 619 | 0 |
+| Anatomy | 227 | 795 | 0 | 0 |
+| Function | 289 | 146 | 587 | 0 |
 | CT | 11 | 0 | 1,011 | 0 |
 | MRI | 11 | 0 | 1,011 | 0 |
 | Ultrasound | 11 | 0 | 1,011 | 0 |
@@ -44,7 +44,7 @@ These are counts among the **1,022 body representations**, not unique lessons, a
 
 “Specific draft” now means the authoring branch explicitly marks its lesson draft. It does **not** promise complete attachments, innervation, detailed citations, correct facts or independent review. The generated Quiz note is separate from the working multi-question identification session. The report contains the same breakdown for each region; do not sum overlapping regional rows. The original audit had 259/617 Function draft/pending counts; explicit metadata corrects pending FMA61970/FMA62072, whose headings previously fooled the title heuristic.
 
-The shoulder/arm region illustrates the next content opportunity: 91 entries, of which 80 have identity-only Anatomy text; Function has 11 specific drafts, 45 generic vascular disclaimers and 35 pending records. Filling known, already represented muscle lessons is useful work without inventing missing nerve geometry.
+The shoulder/arm curriculum now adds 64 original draft sections for 32 previously pending muscle representations. Among the region's 91 entries, Anatomy has 43 drafts and 48 identity-only entries; Function has 43 drafts, 45 generic vascular disclaimers and three pending left-bone records. No missing nerve geometry is invented. See [curriculum scope, citations and review gates](SHOULDER_ARM_CURRICULUM.md).
 
 ## Highest-impact anatomy gaps
 
@@ -59,7 +59,7 @@ Retain the source-level decisions and exact held IDs in `GAP_FILLING.md`, `SOURC
 ## Ordered next actions
 
 1. **Completed locally — content ingestion contract.** Multi-part source bindings, representation scopes and explicit topic readiness now have a v2 schema, actual shoulder export and whole-body/source/rejection checks. See `CONTENT_CONTRACT.md`. Clinical reviews, canonical IDs, displayed copy and private data are unchanged. Production curriculum storage and automatic legacy migration are not claimed.
-2. **Deepen one bounded regional curriculum.** Start with already represented shoulder/arm muscles whose Function content is pending. Confirm the exact source concepts; author concise original Anatomy/Function notes against current primary anatomical resources with per-section citations and source-group caveats. Keep every new lesson draft. Do not replace unknown nerve geometry with guessed routes, automatically duplicate all content onto all sides/parts or fill scan tabs with synthetic findings.
+2. **Continue bounded regional teaching.** The shoulder/arm muscle milestone is implemented locally with exact before/after preservation checks. Next, extend original draft Anatomy/Function notes to explicitly mapped forearm muscle concepts already in the model, using factual references and group/side caveats. Keep unrelated topics intact. Do not replace unknown nerve geometry with guessed routes or fill scan tabs with synthetic findings.
 3. **Accept the current UI on actual devices when authorized/available.** Use the matrix below before calling navigation, labels or explosion visually complete. Fix observed defects rather than add speculative controls. A browser-testing request is required for this environment's browser workflow; no browser-only preview is started in background audit work.
 4. **Resolve source, specialist and imaging inputs.** Supply rights-cleared compatible geometry or qualified adjudication for held candidates; obtain revision-bound anatomical/editorial review. Connect the user's real imaging function only after its interface, scope and data/registration evidence exist.
 5. **Deliver the exact accepted revision.** Restore authorized source-service/GitHub access, then publish privately and update only the existing anatomy backup branch. Main-website integration needs a chosen route/embed and access policy; no sharing change is assumed.
@@ -79,6 +79,6 @@ Test the dedicated shoulder, head/neck, a small distal region, spine and whole b
 
 ## Evidence boundaries
 
-This audit reruns actual full-body GLB validation and the dependency classifier, verifies current displayed content and brand hashes, and uses existing focused software reports for feature evidence. It does not claim all historical suites were rerun together, that every dependency's source licence text was individually re-audited, that all anatomy is manifold, or that any private clinician review was inspected. Current schema/data/programme changes do not alter runtime geometry, rendering, teaching copy, review fingerprints or licence obligations.
+This audit verifies current displayed content and brand hashes and uses focused software reports for feature evidence. It does not claim all historical suites were rerun together, that every dependency's source licence text was individually re-audited, that all anatomy is manifold, or that any private clinician review was inspected. The current curriculum changes 64 explicitly pinned teaching sections, not runtime geometry, rendering, review fingerprints or licence obligations.
 
 External delivery facts are dated in the accompanying local checkpoint; this document deliberately contains no source credential, private review or patient data.

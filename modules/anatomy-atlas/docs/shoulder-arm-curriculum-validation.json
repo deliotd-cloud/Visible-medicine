@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "checks": 8947,
+  "lessonDefinitions": 20,
+  "bodyRepresentations": 32,
+  "authoredSections": 64,
+  "bodyReadiness": {
+    "anatomy": {
+      "draft": 227,
+      "identity-only": 795,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "function": {
+      "draft": 289,
+      "identity-only": 146,
+      "pending": 587,
+      "generated-identification": 0
+    }
+  },
+  "unrelatedCopyAndRecipesPreserved": true,
+  "sourceGeometryChanged": false,
+  "clinicalApproval": false,
+  "scanContentAdded": false,
+  "browserTesting": false,
+  "limitations": "Checks identity/part routing, display/export parity, pinned copy transition and safeguards. They do not establish medical correctness, precise attachment footprints, clinical approval or rendered nerve courses."
+}
