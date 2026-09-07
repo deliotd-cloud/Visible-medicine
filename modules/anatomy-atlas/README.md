@@ -2,7 +2,9 @@
 
 ## Current scope and remaining work
 
-The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: 397 Function sections remain pending and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: 370 Function sections remain pending and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+
+The [swallowing/voice basics](docs/SWALLOWING_CURRICULUM.md) add 54 source-cited drafts for 27 existing muscle entries, with grouped-part and nerve-supply limits in current panels. Run `npm run swallowing-curriculum:test`; the notes are not a swallowing or voice simulation.
 
 The [orbital muscle update](docs/ORBITAL_CURRICULUM.md) adds 28 source-cited eye/lid Anatomy/Function drafts with gaze-dependent explanations in existing panels. Run `npm run orbital-curriculum:test` for exact identity and preservation checks; this is not a gaze simulation or clinical validation.
 

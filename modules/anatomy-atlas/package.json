@@ -76,7 +76,8 @@
     "leg-curriculum:test": "node scripts/validate-leg-curriculum.mjs",
     "foot-curriculum:test": "node scripts/validate-foot-curriculum.mjs",
     "pelvic-curriculum:test": "node scripts/validate-pelvic-curriculum.mjs",
-    "orbital-curriculum:test": "node scripts/validate-orbital-curriculum.mjs"
+    "orbital-curriculum:test": "node scripts/validate-orbital-curriculum.mjs",
+    "swallowing-curriculum:test": "node scripts/validate-swallowing-curriculum.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "checks": 9111,
+  "lessonDefinitions": 14,
+  "bodyRepresentations": 27,
+  "authoredSections": 54,
+  "combinedPinnedCurriculumSections": 512,
+  "bodyReadiness": {
+    "anatomy": {
+      "draft": 451,
+      "identity-only": 571,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "function": {
+      "draft": 506,
+      "identity-only": 146,
+      "pending": 370,
+      "generated-identification": 0
+    }
+  },
+  "pendingHeadNeckMuscleFunctions": 14,
+  "negativeCases": 12,
+  "sourceIndexChecks": 27,
+  "unrelatedCopyAndRecipesPreserved": true,
+  "sourceGeometryChanged": false,
+  "clinicalApproval": false,
+  "scanContentAdded": false,
+  "browserTesting": false,
+  "limitations": "Software and optional source-index checks, not individual belly/tendon/vocal-fold adjudication, measured attachments, swallowing/voice simulation or clinical/device acceptance."
+}

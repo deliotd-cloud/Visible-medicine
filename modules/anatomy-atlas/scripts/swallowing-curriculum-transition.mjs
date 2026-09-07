@@ -1,34 +1,32 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readContentJson } from './content-contract-tools.mjs';
-import { authoringBeforeSwallowing } from './swallowing-curriculum-transition.mjs';
 const hash = (value) =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 /** Offline preservation only; current runtime/exported lessons remain intact. */
-export async function authoringBeforeOrbital(context) {
-  const { catalog } = context;
-  const api = await authoringBeforeSwallowing(context);
+export async function authoringBeforeSwallowing(context) {
+  const { api, catalog } = context;
   const before = await readContentJson(
-    'content/orbital-curriculum.before.json',
+    'content/swallowing-curriculum.before.json',
   );
   const after = await readContentJson(
-    'content/orbital-curriculum.transition.json',
+    'content/swallowing-curriculum.transition.json',
   );
   assert.equal(
     hash(before),
-    '75e00e2db5b51890dd66cd5cd6a644bdf062cbbe1ebb73dcced904984143b9df',
+    'ed349775ace918e3911086354e91d29df9d5be223c13bf2bf07e1fa111709011',
   );
   assert.equal(
     hash(after),
-    'e2ecc91bdd02fcdca73af52585b424aa06e91d2f58ecac6bce1231252a64338f',
+    '0387b09636ea2851562597bf63afa75d46a774dabdde5025727cc8d911a14298',
   );
-  assert.equal(before.sourceCommit, '4b11005158a0d9ff1f79b68b1fc4f5ffb5ca0699');
+  assert.equal(before.sourceCommit, 'e75a633f3361d3e50fdcf19df44108d46a3c21c4');
   assert.equal(after.sourceCommit, before.sourceCommit);
   assert.equal(before.scope, 'body');
   assert.equal(before.region, 'head-neck');
   assert.deepEqual(before.tabs, ['anatomy', 'function']);
-  assert.equal(before.entries.length, 14);
+  assert.equal(before.entries.length, 27);
   assert.deepEqual(
     after.entries.map((e) => [e.id, e.fmaId]),
     before.entries.map((e) => [e.id, e.fmaId]),
@@ -49,14 +47,14 @@ export async function authoringBeforeOrbital(context) {
       assert.equal(
         hash(lesson),
         after.entries[i].sections[t],
-        'Unrecorded orbital change: ' + s.id + ' ' + t,
+        'Unrecorded swallowing change: ' + s.id + ' ' + t,
       );
       const { readiness: _readiness, ...displayed } = lesson;
       assert.deepEqual(displayed, api.bodyContent(s, t));
     }
     originals.set(s.id, entry.sections);
   }
-  assert.equal(originals.size, 14);
+  assert.equal(originals.size, 27);
   const bodyLesson = (s, t) =>
     originals.get(s.id)?.[t]
       ? structuredClone(originals.get(s.id)[t])

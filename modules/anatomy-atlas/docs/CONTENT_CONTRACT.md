@@ -2,6 +2,8 @@
 
 ## Delivered scope
 
+**Current swallowing extension:** [54 new basic drafts](SWALLOWING_CURRICULUM.md) cover 27 existing hyoid/tongue/palatal/laryngeal entries. Body totals: Anatomy 451 draft / 571 identity-only; Function 506 draft / 146 identity-only / 370 pending. `authoringBeforeSwallowing` verifies/restores only these topics before the eight prior offline projections. All 512 topic edits remain pinned to the original baseline. Runtime/export stay current; old reports/paragraphs retain milestone counts. No source/schema/review migration occurs.
+
 **Current orbital extension:** [28 new basic drafts](ORBITAL_CURRICULUM.md) cover 14 existing orbital-muscle entries. Body totals: Anatomy 424 draft / 598 identity-only; Function 479 draft / 146 identity-only / 397 pending. `authoringBeforeOrbital` verifies/restores its exact topics before the seven prior offline projections. All 458 topic edits remain pinned to the original baseline; runtime/export stay current. Older reports/paragraphs retain milestone counts. No source/schema/review migration occurs.
 
 **Current pelvic extension:** [six explicit topic edits](PELVIC_CURRICULUM.md) add five drafts and one still-pending Function clarification. Body totals: Anatomy 410 draft / 612 identity-only; Function 465 draft / 146 identity-only / 411 pending. `authoringBeforePelvic` verifies/restores these sections before the six earlier offline projections. All 430 topic edits remain pinned to the original baseline; runtime/export stay current. Historical paragraphs and reports retain their milestone counts. No source/schema/review migration occurs.
