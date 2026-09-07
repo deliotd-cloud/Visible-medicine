@@ -70,7 +70,8 @@
     "content:export": "node scripts/export-content.mjs",
     "content:test": "node scripts/validate-content-contract.mjs",
     "shoulder-arm-curriculum:test": "node scripts/validate-shoulder-arm-curriculum.mjs",
-    "forearm-curriculum:test": "node scripts/validate-forearm-curriculum.mjs"
+    "forearm-curriculum:test": "node scripts/validate-forearm-curriculum.mjs",
+    "hand-curriculum:test": "node scripts/validate-hand-curriculum.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

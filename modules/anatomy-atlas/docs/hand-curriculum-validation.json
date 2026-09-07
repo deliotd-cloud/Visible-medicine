@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "checks": 8677,
+  "lessonDefinitions": 10,
+  "bodyRepresentations": 20,
+  "authoredSections": 40,
+  "newlyDraftSections": 34,
+  "enrichedPriorDrafts": 6,
+  "combinedPinnedCurriculumSections": 188,
+  "bodyReadiness": {
+    "anatomy": {
+      "draft": 289,
+      "identity-only": 733,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "function": {
+      "draft": 345,
+      "identity-only": 146,
+      "pending": 531,
+      "generated-identification": 0
+    }
+  },
+  "negativeCases": 6,
+  "unrelatedCopyAndRecipesPreserved": true,
+  "sourceGeometryChanged": false,
+  "clinicalApproval": false,
+  "scanContentAdded": false,
+  "browserTesting": false,
+  "limitations": "Software evidence for exact identities, groups, source-bound display/export, preservation and rejection cases; not anatomical accuracy, tendon-slip segmentation, variant/nerve mapping or clinical/device acceptance."
+}

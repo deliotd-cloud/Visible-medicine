@@ -1,10 +1,14 @@
 # Anatomy atlas backup — 7 September 2026
 
+**Latest local-only hand checkpoint:** at 21:47:36 UTC the exact Site source host again failed to connect on port 443 before authentication (223 ms). No push, saved version, deployment or credential renewal occurred. Site privacy/version and GitHub facts below are their explicitly dated prior checks, not refreshed evidence. No sharing or main-website change.
+
 **Local checkpoint only:** the forearm/shoulder curricula and preceding local updates have not been pushed to GitHub or published. On 7 September the exact Site source host again failed to connect on port 443 before authentication (487 ms); the native Site read at 21:35:15 UTC still showed owner-only version 38. The last GitHub check at 21:13:22 UTC returned 404 for the exact repository; it was not repeated for this content-only batch. The last verified remote backup remains `771f48c17c5f7d7b8d1454fefb1490d9a3c0b3f4`; the last published Site source remains `26827c8961985b72422146c4faf56e98ca34313b`. Restore access and recheck heads/privacy before non-forced syncing.
 
 This branch preserves the current standalone Visible Medicine anatomy application in [`modules/anatomy-atlas`](../modules/anatomy-atlas/). The existing main website files are unchanged. This is a source-and-assets checkpoint, **not an integration or website deployment**.
 
 ## Snapshot
+
+**Current hand milestone:** 40 Anatomy/Function drafts cover 20 existing muscle/head/group entries: 34 new drafts and six enriched group notes. Body totals are now 289 draft Anatomy / 733 identity-only and 345 draft Function / 146 identity-only / 531 pending. Hand (8,677), forearm (9,228), shoulder/arm (8,947) and content (31,373) checks pass, with current export/inventory, type/focused-lint, diff and production-build checks. Three explicit transitions preserve unrelated copy and all geometry/reviews. No source, package, UI or clinical approval is added. See `docs/HAND_CURRICULUM.md`. Next inspect the 54 pending thigh muscle representations. This paragraph supersedes historical counts/next actions below; unchanged broad tests were not rerun as fresh evidence.
 
 **Current forearm milestone:** 84 original draft Anatomy/Function sections now cover 42 exact muscle/head representations. Current body totals: 269 draft Anatomy / 753 identity-only; 331 draft Function / 146 identity-only / 545 pending. Forearm9,228, shoulder/arm8,947 and content31,373 checks pass, with current export/inventory checks, type/focused-lint checks and production build. The two pinned transitions preserve all unrelated copy, geometry, recipes and reviews. No assets, dependencies, UI controls, clinical approval or private data are added. See `docs/FOREARM_CURRICULUM.md`. A token-efficient staged plan continues admitted hand-muscle teaching, then regional and clinical/modality topics with explicit specialist gates. Earlier milestone paragraphs below retain their historical counts and evidence; this paragraph takes precedence. Unchanged broad geometry/licence/device suites were not rerun as new evidence for this batch.
 
@@ -16,11 +20,11 @@ The newest selection-recovery milestone explains hidden systems, removed selecti
 
 The latest shoulder workspace shares compact Explore / Dissect / Practice navigation, responsive side panels and grouped notes with the regional atlas. Camera/layer menus replace six buttons; the separation toolbar is outside the scene; orthographic presets, source meshes, saved views, review guards and imaging IDs are preserved. The 1,238-check shoulder suite (94 markup cases, 288 menu cases), existing navigation/model-first/recovery/explosion/bookmark/imaging/review checks, type checks, focused lint, build and licence audit pass. Nine display-review hashes expire; teaching hashes stay exact and imaging remains absent. No browser, touch, GPU or clinical acceptance is claimed. See the module's `docs/SHOULDER_WORKSPACE.md`; next work is hidden-selection feedback and targeted recovery.
 
-- Source application commit: `bb8504c368a09d3455f0fde460106dccfa91bd31`.
-- Exact application source tree: `7c18fae129d989da0c8c4202dedc01338655dd3f`.
+- Source application commit: `eca4badd926922fa76cbc358f3db8a393021668a`.
+- Exact application source tree: `5e7e747b7026118cb84d1020ff8e7dabfa63ea68`.
 - Main website base commit: `c4ff08f8afc90bd94d04162625f97af9d94401cf`.
 - GitHub backup branch: `backup/anatomy-atlas-2026-09-06`.
-- All 556 tracked application files (118,489,004 bytes) are preserved byte-for-byte from that source commit, including 87 GLB bundles, official brand lockups, content, scripts, configuration, dependency lockfile, licences, review schema/migration and documentation.
+- All 563 tracked application files (118,555,582 bytes) are preserved byte-for-byte from that source commit, including 87 GLB bundles, official brand lockups, content, scripts, configuration, dependency lockfile, licences, review schema/migration and documentation.
 - The atlas covers 1,022 selectable source representations, 11 regional explorers, 138 dissection stages, 120 focuses and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation. Previous milestone receipts below are historical.
 - The shoulder review workspace has independent geometry, teaching and imaging review tracks, evidence/issues, versioned records and revision-bound approval safeguards. Acquired scans and specialist approvals remain absent.
 - The deep-inspection update adds three-plane surface cutaways, tissue opacity, clipped-surface picking, regional/whole-body orthographic illustration and varied 5/10/20-question practice with results. No source geometry, anatomical coverage, licences or dependencies were changed.
@@ -194,4 +198,4 @@ The 4,301 head-detail assertions, 54,502 practice assertions, 189 automated revi
 
 Keep the atlas's [licence](../modules/anatomy-atlas/LICENSE), [third-party notices](../modules/anatomy-atlas/LICENSES/THIRD_PARTY_NOTICES.md), [BodyParts3D licence evidence](../modules/anatomy-atlas/LICENSES/BODYPARTS3D.md) and visible attribution together. MIT application code does not relicense third-party anatomy or the proprietary Visible Medicine brand marks.
 
-Keep the repository private unless public source/brand release is deliberately approved. The source snapshot is 118,489,004 bytes (about 118.49 MB); no Git LFS or new paid service was introduced for this backup. GitHub source storage is distinct from hosting, large future imaging collections and database backups; quotas and service pricing can change. Never add patient imaging or private review exports to this repository as a substitute for appropriate data storage.
+Keep the repository private unless public source/brand release is deliberately approved. The source snapshot is 118,555,582 bytes (about 118.56 MB); no Git LFS or new paid service was introduced for this backup. GitHub source storage is distinct from hosting, large future imaging collections and database backups; quotas and service pricing can change. Never add patient imaging or private review exports to this repository as a substitute for appropriate data storage.

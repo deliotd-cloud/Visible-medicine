@@ -4,6 +4,10 @@
 
 The [requirement audit](REQUIREMENT_AUDIT.md) consolidates current coverage, actual teaching gaps and the next device-acceptance matrix. Current source contains 1,022 body representations, 138 stages and 120 focuses; counts in milestone-specific gates below are historical. Every unresolved gate remains relevant. Current local layout/explosion/recovery changes are not covered by the earlier browser session, and no clinical approval is created by source or software checks.
 
+## Hand muscle teaching gates
+
+Review all 20 source entries and 40 draft Anatomy/Function sections for exact side, adductor-head boundaries, attachments and motor-supply variation. Check the distinction between thumb abduction/opposition and fifth-metacarpal opposition; verify lumbrical split innervation and interosseous axis/attachment conventions against actual source groups. No individual slips, thumb palmar-interosseous count, held flexor-pollicis-brevis anatomy, nerve route or clinical approval is inferred. Modality and clinical topics remain pending. See [hand evidence and limitations](HAND_CURRICULUM.md).
+
 ## Forearm muscle teaching gates
 
 Review all 42 exact source identities and 84 draft sections against the actual mesh and authoritative anatomy. Check head-specific pronator teres/flexor carpi ulnaris attachments, grouped FDS/ECU components, FDP divided motor supply, finger-flexor insertion levels, thumb extensor distinctions and variable tendon patterns. Typical attachments are not measured mesh footprints. Named limb nerves are textual only; no nerve route, tendon-slip segmentation or motion model is validated. Clinical/pathology/modality/quiz topics are unchanged. See [scope, citations and evidence](FOREARM_CURRICULUM.md).

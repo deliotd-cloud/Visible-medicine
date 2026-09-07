@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { authoringBeforeHand } from './hand-curriculum-transition.mjs';
 import { writeFile } from 'node:fs/promises';
 import {
   contentContext,
@@ -223,13 +224,16 @@ for (const [s, t, field] of negatives) {
   );
   checks++;
 }
+// Historical milestone counts; the hand suite validates current totals.
+const forearmMilestoneApi = await authoringBeforeHand(context);
 const counts = (t) =>
   Object.fromEntries(
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
-          .length,
+        catalog.structures.filter(
+          (s) => forearmMilestoneApi.bodyLesson(s, t).readiness === r,
+        ).length,
       ],
     ),
   );
@@ -261,7 +265,10 @@ const report = {
   bodyRepresentations: 42,
   authoredSections: 84,
   combinedPinnedCurriculumSections: 148,
-  bodyReadiness: { anatomy: counts('anatomy'), function: counts('function') },
+  bodyReadinessAtForearmMilestone: {
+    anatomy: counts('anatomy'),
+    function: counts('function'),
+  },
   negativeCases: negatives.length,
   previousShoulderCurriculumPreserved: true,
   unrelatedCopyAndRecipesPreserved: true,

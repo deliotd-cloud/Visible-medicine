@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readContentJson } from './content-contract-tools.mjs';
+import { authoringBeforeHand } from './hand-curriculum-transition.mjs';
 
 const hash = (value) =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -8,7 +9,8 @@ const hash = (value) =>
 /** Offline preservation only. Validate all 84 current sections before projecting
  * their exact previous authoring API; never affect runtime content or exports. */
 export async function authoringBeforeForearm(context) {
-  const { api, catalog } = context;
+  const { catalog } = context;
+  const api = await authoringBeforeHand(context);
   const before = await readContentJson(
     'content/forearm-curriculum.before.json',
   );
