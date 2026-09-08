@@ -1,5 +1,7 @@
 # Third-party notices
 
+The central-neuro update adds brief original evidence-aware notes with linked research/medical references, not imported prose, figures, scans, tables or datasets. Their publisher and NC-ND terms are not treated as commercial asset grants. No new asset, dependency, font, texture, paid API or private data. Original text/code retain MIT terms; source-index evidence retains separate BodyParts3D CC BY 4.0 credit/change obligations. See `../docs/CENTRAL_NEURO_CURRICULUM.md`.
+
 The orbital nerve curriculum adds brief original factual writing with linked medical references, not imported prose, tables, diagrams or assets. Kenhub rights and StatPearls NC-ND terms are not commercial asset grants. No new dependency, font, texture, mesh, paid API or private data is added. Original application text/code retain existing MIT terms; source-index evidence separately retains DBCLS BodyParts3D CC BY 4.0 attribution/change obligations. See `../docs/ORBITAL_NERVE_CURRICULUM.md`.
 
 The trunk/back curriculum adds brief original factual notes, citing medical references without importing their prose, tables or illustrations. StatPearls NC-ND terms and Kenhub publication rights are not commercial asset grants. No new dependency, font, texture, mesh, paid API or private data is added. Original application text/code retain MIT terms; source-derived ISA/PART-OF evidence retains separate DBCLS BodyParts3D CC BY 4.0 attribution/change obligations. See `../docs/TRUNK_CURRICULUM.md`.

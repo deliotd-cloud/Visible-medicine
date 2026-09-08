@@ -81,7 +81,8 @@
     "neck-curriculum:test": "node scripts/validate-neck-curriculum.mjs",
     "deep-neck-curriculum:test": "node scripts/validate-deep-neck-curriculum.mjs",
     "trunk-curriculum:test": "node scripts/validate-trunk-curriculum.mjs",
-    "orbital-nerve-curriculum:test": "node scripts/validate-orbital-nerve-curriculum.mjs"
+    "orbital-nerve-curriculum:test": "node scripts/validate-orbital-nerve-curriculum.mjs",
+    "central-neuro-curriculum:test": "node scripts/validate-central-neuro-curriculum.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

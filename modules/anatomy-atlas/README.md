@@ -2,7 +2,9 @@
 
 ## Current scope and remaining work
 
-The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: 270 Function sections remain pending and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: 268 Function sections remain pending and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+
+The [central nervous system update](docs/CENTRAL_NEURO_CURRICULUM.md) adds evidence-aware teaching for the posterior commissure and central canal, and clarifies the unresolved fornical-commissure Function section without marking it complete. Run `npm run central-neuro-curriculum:test`. No new anatomy or controls are added.
 
 The [orbital nerve basics](docs/ORBITAL_NERVE_CURRICULUM.md) add 40 source-cited Anatomy/Function drafts for 20 existing entries, distinguishing sensory, motor and autonomic roles without new controls or inferred nerve geometry. Run `npm run orbital-nerve-curriculum:test`. Teaching remains draft and requires independent review.
 

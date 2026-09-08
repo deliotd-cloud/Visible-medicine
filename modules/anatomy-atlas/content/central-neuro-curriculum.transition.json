@@ -1,0 +1,30 @@
+{
+  "sourceCommit": "840d611a6aa548db3a5c1a93ca8ba46a983ba40d",
+  "reason": "Explicit six-topic Anatomy/Function update for three existing CNS representations, retaining the unresolved fornical function; unrelated content preserved.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:spine:midline:space:central-canal-of-spinal-cord",
+      "fmaId": "FMA78497",
+      "sections": {
+        "anatomy": "666238a094fcfdcb1c208a3fedfe7a8d056b62d09c3ad38bd9d934d3d9cc2c6b",
+        "function": "6f435d156fa6e3336139c3f4585a628ebadcdee64224861c85e1f8fbfac01927"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+      "fmaId": "FMA61970",
+      "sections": {
+        "anatomy": "cf76d7585ff56d36d0dca854cb04781706bfb6a17287b5dd2df1e562ad7531ab",
+        "function": "d1d11f4edd5e5ddf86ab36d6ec58d3f021fb5c0867b7b02a85f6c02c92c1e2a9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+      "fmaId": "FMA62072",
+      "sections": {
+        "anatomy": "d8ca50a9c1b70a2a9aa1743b02362970ed27ab95364f1da3a47ac42fb7c1d4d3",
+        "function": "9749ea6c08f034cdaf1c5bd5e640ad29d978696c93d64f3d2708e53cef091003"
+      }
+    }
+  ]
+}

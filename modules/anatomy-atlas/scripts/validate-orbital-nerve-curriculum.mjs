@@ -6,6 +6,7 @@ import {
   readContentJson,
 } from './content-contract-tools.mjs';
 import { authoringBeforeOrbitalNerve } from './orbital-nerve-curriculum-transition.mjs';
+import { authoringBeforeCentralNeuro } from './central-neuro-curriculum-transition.mjs';
 import {
   curriculumHash,
   copyBeforeShoulderArmCurriculum,
@@ -264,13 +265,15 @@ for (const [s, t, field] of negatives) {
   );
   checks++;
 }
+const orbitalNerveMilestone = await authoringBeforeCentralNeuro(context);
 const counts = (t) =>
   Object.fromEntries(
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
-          .length,
+        catalog.structures.filter(
+          (s) => orbitalNerveMilestone.bodyLesson(s, t).readiness === r,
+        ).length,
       ],
     ),
   );
@@ -290,7 +293,7 @@ const pendingNervous = catalog.structures
   .filter(
     (s) =>
       s.system === 'nerves' &&
-      api.bodyLesson(s, 'function').readiness === 'pending',
+      orbitalNerveMilestone.bodyLesson(s, 'function').readiness === 'pending',
   )
   .map((s) => s.fmaId)
   .sort();
@@ -302,8 +305,11 @@ const report = {
   bodyRepresentations: 20,
   authoredSections: 40,
   combinedPinnedCurriculumSections: 712,
-  bodyReadiness: { anatomy: counts('anatomy'), function: counts('function') },
-  pendingNervousSystemFunctions: pendingNervous,
+  bodyReadinessAtOrbitalNerveMilestone: {
+    anatomy: counts('anatomy'),
+    function: counts('function'),
+  },
+  pendingNervousSystemFunctionsAtOrbitalNerveMilestone: pendingNervous,
   sourceIndexChecks,
   negativeCases: negatives.length,
   unrelatedCopyAndRecipesPreserved: true,

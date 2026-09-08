@@ -33,8 +33,8 @@ These are counts among the **1,022 body representations**, not unique lessons, a
 
 | Body topic | Specific or source-group draft | Generic identity/disclaimer | Explicitly pending | Generated identification prompt |
 | --- | ---: | ---: | ---: | ---: |
-| Anatomy | 551 | 471 | 0 | 0 |
-| Function | 606 | 146 | 270 | 0 |
+| Anatomy | 552 | 470 | 0 | 0 |
+| Function | 608 | 146 | 268 | 0 |
 | CT | 11 | 0 | 1,011 | 0 |
 | MRI | 11 | 0 | 1,011 | 0 |
 | Ultrasound | 11 | 0 | 1,011 | 0 |
@@ -69,7 +69,7 @@ Retain the source-level decisions and exact held IDs in `GAP_FILLING.md`, `SOURC
 ## Ordered next actions
 
 1. **Completed locally — content ingestion contract.** Multi-part source bindings, representation scopes and explicit topic readiness now have a v2 schema, actual shoulder export and whole-body/source/rejection checks. See `CONTENT_CONTRACT.md`. Clinical reviews, canonical IDs, displayed copy and private data are unchanged. Production curriculum storage and automatic legacy migration are not claimed.
-2. **Continue bounded regional teaching.** [Orbital nerve drafts](ORBITAL_NERVE_CURRICULUM.md) now cover 20 existing entries with exact before/after preservation and pathway limits. Remaining pending Function entries are 200 skeletal, 43 connective, 23 organ, one unresolved pelvic muscle category, plus two brain commissures and the spinal cord central canal within the nervous-system toggle. Cover those existing structures next, followed by blood supply, clinical/pathology, modality teaching and reviewed questions in existing panels. Draft overviews do not establish full source anatomy or validated pathways. Require specialist acceptance; do not replace unknown nerve geometry with guessed routes or fill scan tabs with synthetic findings.
+2. **Continue bounded regional teaching.** [Central-neuro evidence](CENTRAL_NEURO_CURRICULUM.md) qualifies posterior-commissure and canal teaching while retaining unresolved fornical Function. Remaining pending Function entries are 200 skeletal, 43 connective, 23 organ, unresolved pelvic muscle FMA19728 and fornical commissure FMA61970. Cover the evidence-supported existing basics next, followed by blood supply, clinical/pathology, modality teaching and reviewed questions in existing panels. The two unresolved identities/functions need specialist adjudication or new source evidence, not readiness promotion. Draft overviews do not establish full anatomy or validated pathways; do not replace unknown nerve geometry with guessed routes or fill scan tabs with synthetic findings.
 3. **Accept the current UI on actual devices when authorized/available.** Use the matrix below before calling navigation, labels or explosion visually complete. Fix observed defects rather than add speculative controls. A browser-testing request is required for this environment's browser workflow; no browser-only preview is started in background audit work.
 4. **Resolve source, specialist and imaging inputs.** Supply rights-cleared compatible geometry or qualified adjudication for held candidates; obtain revision-bound anatomical/editorial review. Connect the user's real imaging function only after its interface, scope and data/registration evidence exist.
 5. **Deliver the exact accepted revision.** Restore authorized source-service/GitHub access, then publish privately and update only the existing anatomy backup branch. Main-website integration needs a chosen route/embed and access policy; no sharing change is assumed.

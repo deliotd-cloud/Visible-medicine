@@ -1,0 +1,102 @@
+{
+  "sourceCommit": "840d611a6aa548db3a5c1a93ca8ba46a983ba40d",
+  "copyAndRecipeHash": "d6c265aca1fd2f9c91510646420d785897f0227ca3c88fe8ff5d29654d4913d9",
+  "scope": "body",
+  "regions": [
+    "head-neck",
+    "spine"
+  ],
+  "tabs": [
+    "anatomy",
+    "function"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:spine:midline:space:central-canal-of-spinal-cord",
+      "fmaId": "FMA78497",
+      "name": "Central canal of spinal cord",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Anatomical identity",
+          "body": "Central canal of spinal cord is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA78497",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Central canal representation only; this is not a complete spinal cord or spinal-nerve model.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+      "fmaId": "FMA61970",
+      "name": "Commissure of fornix of forebrain",
+      "sections": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Fornical commissure · draft",
+          "body": "The source-labelled commissure of the fornix is represented separately from the two fornix surfaces.",
+          "bullets": [
+            "Source identity: FMA61970 · 1 source component",
+            "Open Head & neck → Deep-brain overview or a focused compartment view to remove the overlying brain and skull.",
+            "Study colours distinguish structures. They do not encode MRI signal, histological staining or tissue activation."
+          ],
+          "note": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+          "citations": [
+            "https://nba.uth.tmc.edu/neuroanatomy/L10/Lab10p18_index.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Fornical commissure · draft",
+          "body": "A structure-specific function lesson is awaiting specialist authorship and review.",
+          "note": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+          "citations": [
+            "https://nba.uth.tmc.edu/neuroanatomy/L10/Lab10p18_index.html"
+          ]
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+      "fmaId": "FMA62072",
+      "name": "Posterior commissure",
+      "sections": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Posterior commissure · draft",
+          "body": "A separately selectable source-labelled commissural surface; its constituent pathways have not been segmented.",
+          "bullets": [
+            "Source identity: FMA62072 · 1 source component",
+            "Open Head & neck → Deep-brain overview or a focused compartment view to remove the overlying brain and skull.",
+            "Study colours distinguish structures. They do not encode MRI signal, histological staining or tissue activation."
+          ],
+          "note": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Posterior commissure · draft",
+          "body": "A structure-specific function lesson is awaiting specialist authorship and review.",
+          "note": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+          "citations": []
+        }
+      }
+    }
+  ]
+}
