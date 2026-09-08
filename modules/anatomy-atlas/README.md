@@ -2,6 +2,8 @@
 
 ## Current scope and remaining work
 
+The [forearm clinical extension](docs/FOREARM_CLINICAL_CURRICULUM.md) adds 84 cited drafts across 42 muscle/head entries in the existing tabs. Tendon injury, nerve patterns and normal variants are distinguished without adding controls or claiming clinical approval. Run `npm run forearm-clinical-curriculum:test -- --source`. Earlier extensions below describe their delivery milestones.
+
 The [scapular/arm clinical extension](docs/SCAPULAR_ARM_CLINICAL_CURRICULUM.md) adds 28 cited drafts across fourteen remaining muscle entries, retaining the same tabs and simple layout. It distinguishes uncommon reported injuries, accessory anatomy and nerve-related weakness without claiming diagnoses or clinical approval. Run `npm run scapular-arm-clinical-curriculum:test -- --source`.
 
 The [shoulder clinical extension](docs/SHOULDER_CLINICAL_CURRICULUM.md) adds 36 cited Pathology/Clinical drafts to 18 existing muscle/head/portion entries. They distinguish tendon injuries from nerve-related weakness without adding controls or claiming clinical approval. Other topics and geometry are unchanged. Run `npm run shoulder-clinical-curriculum:test -- --source`.

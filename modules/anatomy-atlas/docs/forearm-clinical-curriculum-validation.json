@@ -1,14 +1,14 @@
 {
   "passed": true,
-  "checks": 17182,
-  "bodyRepresentations": 14,
-  "sourceComponents": 14,
-  "lessonGroups": 6,
-  "explicitTopicEdits": 28,
-  "combinedPinnedCurriculumSections": 1666,
-  "sourceIndexChecks": 14,
+  "checks": 18815,
+  "bodyRepresentations": 42,
+  "sourceComponents": 46,
+  "lessonGroups": 16,
+  "explicitTopicEdits": 84,
+  "combinedPinnedCurriculumSections": 1750,
+  "sourceIndexChecks": 42,
   "negativeCases": 12,
-  "bodyReadinessAtScapularArmClinicalMilestone": {
+  "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
       "identity-only": 2,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 43,
+      "draft": 85,
       "identity-only": 0,
-      "pending": 979,
+      "pending": 937,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 43,
+      "draft": 85,
       "identity-only": 0,
-      "pending": 979,
+      "pending": 937,
       "generated-identification": 0
     },
     "quiz": {
@@ -63,6 +63,6 @@
   "clinicalApproval": false,
   "scanContentAdded": false,
   "browserTesting": false,
-  "copyAndRecipeHashAtScapularArmClinicalMilestone": "fc22a9fbfe86ebf18395e110d6c8aeb8d507f050e2d073747b17e0252e8a6cb9",
-  "limitations": "Original short clinical overviews, including rare case-report evidence and shared rhomboid context; not prevalence, diagnosis, treatment rules, scan findings or clinical approval."
+  "copyAndRecipeHash": "be97d802fe9cbfcff9329615705880eed11752287d75b8a95c5d18a362b7268b",
+  "limitations": "Original short clinical overviews with shared tendon/compartment/head context; not a complete disease catalogue, individual tendon reconstruction, diagnosis, treatment rules, scan findings or clinical approval."
 }

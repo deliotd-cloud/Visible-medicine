@@ -44,6 +44,7 @@ export * from './lib/organ-anatomy-curriculum.ts';
 export * from './lib/connective-anatomy-curriculum.ts';
 export * from './lib/shoulder-clinical-curriculum.ts';
 export * from './lib/scapular-arm-clinical-curriculum.ts';
+export * from './lib/forearm-clinical-curriculum.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';`,
       resolveDir: fileURLToPath(contentRoot),

@@ -49,6 +49,7 @@ import { organAnatomyLesson } from '../lib/organ-anatomy-curriculum';
 import { connectiveAnatomyLesson } from '../lib/connective-anatomy-curriculum';
 import { shoulderClinicalLesson } from '../lib/shoulder-clinical-curriculum';
 import { scapularArmClinicalLesson } from '../lib/scapular-arm-clinical-curriculum';
+import { forearmClinicalLesson } from '../lib/forearm-clinical-curriculum';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -159,6 +160,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (shoulderClinical) return shoulderClinical;
   const scapularArmClinical = scapularArmClinicalLesson(s, tab);
   if (scapularArmClinical) return scapularArmClinical;
+  const forearmClinical = forearmClinicalLesson(s, tab);
+  if (forearmClinical) return forearmClinical;
   const axial =
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??

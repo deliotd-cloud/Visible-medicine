@@ -1,5 +1,7 @@
 # Third-party notices
 
+The forearm clinical extension adds brief original factual notes with medical/society reference links. No publisher prose, figures, scans, tables, PDFs or questions are shipped. Citations, public access and NCBI hosting do not provide commercial asset rights or override NC-ND restrictions. Original code/text retain MIT terms; BodyParts3D source evidence retains CC BY 4.0 duties. No new asset, dependency, font, paid API or patient data. See `../docs/FOREARM_CLINICAL_CURRICULUM.md`.
+
 The scapular/arm clinical extension adds brief original factual descriptions linked to case-report abstracts, medical references and AAOS. No publisher text, images, scans, tables or questions are imported. Reference accessibility, PubMed/NCBI hosting and NC-ND terms are not commercial asset grants. Original code/text remain MIT; BodyParts3D-derived evidence retains CC BY 4.0 duties. No added asset, dependency, font, paid API or private data. See `../docs/SCAPULAR_ARM_CLINICAL_CURRICULUM.md`.
 
 The shoulder clinical extension adds brief original factual notes linked to AAOS/OrthoInfo and NCBI-hosted references. No third-party prose, figures, scans, tables or question banks are imported. StatPearls NC-ND terms are not a commercial content licence; citations and public availability are not asset-reuse grants. Original code/text remain MIT and BodyParts3D-derived evidence retains CC BY 4.0 duties. No added dependency, font, paid service or patient data. See `../docs/SHOULDER_CLINICAL_CURRICULUM.md`.

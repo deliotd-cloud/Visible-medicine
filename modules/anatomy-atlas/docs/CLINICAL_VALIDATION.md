@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Forearm Clinical / Pathology review
+
+Review the [84 new drafts](FOREARM_CLINICAL_CURRICULUM.md) for tendon-versus-nerve distinctions, AIN/PIN/proximal median/ulnar patterns, grouped components, normal variants, evidence strength and referral wording. No individual digital slips, nerve territories, disease geometry, patient imaging or treatment rules are validated. Independent MSK/neurological sign-off and full-body editorial persistence remain outstanding.
+
 ## Scapular and arm clinical review
 
 Review the [28 new drafts](SCAPULAR_ARM_CLINICAL_CURRICULUM.md) for rare-case evidence limits, normal anconeus versus accessory epitrochlearis, coracobrachialis nerve relationships, teres-major/cuff distinction, levator pain and shared rhomboid context. These are possible mechanisms and clinical associations, not prevalence claims, patient findings, treatment rules or independent approvals. Exact source identity tests do not validate symptoms or nerve pathways.

@@ -1,0 +1,1320 @@
+{
+  "sourceCommit": "5497b73f4224511da0f0b2af750c54933c11f00a",
+  "copyAndRecipeHash": "fc22a9fbfe86ebf18395e110d6c8aeb8d507f050e2d073747b17e0252e8a6cb9",
+  "scope": "body",
+  "regions": [
+    "forearm"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-carpi-ulnaris",
+      "fmaId": "FMA38507",
+      "name": "Right extensor carpi ulnaris",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1472",
+        "FJ1517"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1472",
+        "FJ1517"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-carpi-ulnaris",
+      "fmaId": "FMA38508",
+      "name": "Left extensor carpi ulnaris",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1472M",
+        "FJ1517M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1472M",
+        "FJ1517M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-digitorum-superficialis",
+      "fmaId": "FMA38470",
+      "name": "Right flexor digitorum superficialis",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1475",
+        "FJ1499"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1475",
+        "FJ1499"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-digitorum-superficialis",
+      "fmaId": "FMA38471",
+      "name": "Left flexor digitorum superficialis",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1475M",
+        "FJ1499M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1475M",
+        "FJ1499M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-abductor-pollicis-longus",
+      "fmaId": "FMA38516",
+      "name": "Right abductor pollicis longus",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1484"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1484"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-abductor-pollicis-longus",
+      "fmaId": "FMA38517",
+      "name": "Left abductor pollicis longus",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1484M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1484M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-brachioradialis",
+      "fmaId": "FMA38486",
+      "name": "Right brachioradialis",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1487"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1487"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-brachioradialis",
+      "fmaId": "FMA38487",
+      "name": "Left brachioradialis",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1487M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1487M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-carpi-radialis-brevis",
+      "fmaId": "FMA38498",
+      "name": "Right extensor carpi radialis brevis",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1489"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1489"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-carpi-radialis-brevis",
+      "fmaId": "FMA38499",
+      "name": "Left extensor carpi radialis brevis",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1489M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1489M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-carpi-radialis-longus",
+      "fmaId": "FMA38495",
+      "name": "Right extensor carpi radialis longus",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1490"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1490"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-carpi-radialis-longus",
+      "fmaId": "FMA38496",
+      "name": "Left extensor carpi radialis longus",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1490M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1490M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-digiti-minimi",
+      "fmaId": "FMA38504",
+      "name": "Right extensor digiti minimi",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1491"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1491"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-digiti-minimi",
+      "fmaId": "FMA38505",
+      "name": "Left extensor digiti minimi",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1491M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1491M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-digitorum",
+      "fmaId": "FMA38501",
+      "name": "Right extensor digitorum",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1492"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1492"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-digitorum",
+      "fmaId": "FMA38502",
+      "name": "Left extensor digitorum",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1492M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1492M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-indicis",
+      "fmaId": "FMA38525",
+      "name": "Right extensor indicis",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1493"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1493"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-indicis",
+      "fmaId": "FMA38526",
+      "name": "Left extensor indicis",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1493M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1493M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-pollicis-brevis",
+      "fmaId": "FMA38519",
+      "name": "Right extensor pollicis brevis",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1494"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1494"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-pollicis-brevis",
+      "fmaId": "FMA38520",
+      "name": "Left extensor pollicis brevis",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1494M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1494M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-pollicis-longus",
+      "fmaId": "FMA38522",
+      "name": "Right extensor pollicis longus",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1495"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1495"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-pollicis-longus",
+      "fmaId": "FMA38523",
+      "name": "Left extensor pollicis longus",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1495M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1495M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-carpi-radialis",
+      "fmaId": "FMA38460",
+      "name": "Right flexor carpi radialis",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1496"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1496"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-carpi-radialis",
+      "fmaId": "FMA38461",
+      "name": "Left flexor carpi radialis",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1496M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1496M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-digitorum-profundus",
+      "fmaId": "FMA38479",
+      "name": "Right flexor digitorum profundus",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1497"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1497"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-digitorum-profundus",
+      "fmaId": "FMA38480",
+      "name": "Left flexor digitorum profundus",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1497M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1497M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-pollicis-longus",
+      "fmaId": "FMA38482",
+      "name": "Right flexor pollicis longus",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1498"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1498"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-pollicis-longus",
+      "fmaId": "FMA38484",
+      "name": "Left flexor pollicis longus",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1498M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1498M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-palmaris-longus",
+      "fmaId": "FMA38463",
+      "name": "Right palmaris longus",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1502"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1502"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-palmaris-longus",
+      "fmaId": "FMA38464",
+      "name": "Left palmaris longus",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1502M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1502M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-pronator-quadratus",
+      "fmaId": "FMA38454",
+      "name": "Right pronator quadratus",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1503"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1503"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-pronator-quadratus",
+      "fmaId": "FMA38455",
+      "name": "Left pronator quadratus",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1503M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1503M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-supinator",
+      "fmaId": "FMA38513",
+      "name": "Right supinator",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1505"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1505"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-supinator",
+      "fmaId": "FMA38514",
+      "name": "Left supinator",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1505M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1505M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-pronator-teres",
+      "fmaId": "FMA38560",
+      "name": "Humeral head of right pronator teres",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1474"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1474"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-pronator-teres",
+      "fmaId": "FMA38561",
+      "name": "Humeral head of left pronator teres",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1474M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1474M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:ulnar-head-of-right-pronator-teres",
+      "fmaId": "FMA38562",
+      "name": "Ulnar head of right pronator teres",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1516"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1516"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:ulnar-head-of-left-pronator-teres",
+      "fmaId": "FMA38563",
+      "name": "Ulnar head of left pronator teres",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1516M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1516M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-flexor-carpi-ulnaris",
+      "fmaId": "FMA38617",
+      "name": "Humeral head of right flexor carpi ulnaris",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1473"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1473"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-flexor-carpi-ulnaris",
+      "fmaId": "FMA38618",
+      "name": "Humeral head of left flexor carpi ulnaris",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1473M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1473M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:ulnar-head-of-right-flexor-carpi-ulnaris",
+      "fmaId": "FMA38619",
+      "name": "Ulnar head of right flexor carpi ulnaris",
+      "category": "muscle",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1518"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1518"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:ulnar-head-of-left-flexor-carpi-ulnaris",
+      "fmaId": "FMA38620",
+      "name": "Ulnar head of left flexor carpi ulnaris",
+      "category": "muscle",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1518M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1518M"
+      ],
+      "omittedSourceFiles": []
+    }
+  ]
+}
