@@ -2,7 +2,9 @@
 
 ## Current scope and remaining work
 
-The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: 328 Function sections remain pending and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: 290 Function sections remain pending and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+
+The [trunk/back basics](docs/TRUNK_CURRICULUM.md) add 76 source-cited Anatomy/Function drafts for 38 existing entries, retaining partial/group anatomy and debated-function limits without more controls. Run `npm run trunk-curriculum:test`. One unresolved muscle Function branch remains pending; other basics and specialist teaching still need authoring and review. Earlier receipts below are historical.
 
 The [deep-neck basics](docs/DEEP_NECK_CURRICULUM.md) add 56 source-cited Anatomy/Function drafts for 28 existing spine-route entries, without adding controls. Run `npm run deep-neck-curriculum:test`. Typical attachments and nerve-supply notes are not measured surface footprints or clinical acceptance. Thirty-nine muscle Function entries still need authoring or identity adjudication.
 

@@ -29,6 +29,7 @@ import { orbitalMuscleLesson } from '../lib/orbital-curriculum';
 import { swallowingMuscleLesson } from '../lib/swallowing-curriculum';
 import { neckMuscleLesson } from '../lib/neck-curriculum';
 import { deepNeckMuscleLesson } from '../lib/deep-neck-curriculum';
+import { trunkMuscleLesson } from '../lib/trunk-curriculum';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -99,6 +100,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (neckMuscle) return neckMuscle;
   const deepNeckMuscle = deepNeckMuscleLesson(s, tab);
   if (deepNeckMuscle) return deepNeckMuscle;
+  const trunkMuscle = trunkMuscleLesson(s, tab);
+  if (trunkMuscle) return trunkMuscle;
   const axial =
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??

@@ -1,5 +1,7 @@
 # Third-party notices
 
+The trunk/back curriculum adds brief original factual notes, citing medical references without importing their prose, tables or illustrations. StatPearls NC-ND terms and Kenhub publication rights are not commercial asset grants. No new dependency, font, texture, mesh, paid API or private data is added. Original application text/code retain MIT terms; source-derived ISA/PART-OF evidence retains separate DBCLS BodyParts3D CC BY 4.0 attribution/change obligations. See `../docs/TRUNK_CURRICULUM.md`.
+
 The deep-neck curriculum adds brief original factual notes with linked StatPearls/Kenhub references, not imported prose, tables, illustrations or assets. Their publication rights are not treated as commercial redistribution licences. No new dependency, font, texture, mesh, paid API or private data is added. Original text/code retain existing MIT terms; DBCLS BodyParts3D v4 index-derived evidence separately retains CC BY 4.0 credit/change obligations. See `../docs/DEEP_NECK_CURRICULUM.md`.
 
 The neck curriculum adds original brief factual teaching with StatPearls/Kenhub references, not imported paragraphs, tables or illustrations. Their publication rights are not treated as commercial asset licences. No mesh, dependency, font, texture, paid API or private data is added. Original text/code retain existing MIT terms; DBCLS BodyParts3D v4 index-derived evidence retains CC BY 4.0 notices. See `../docs/NECK_CURRICULUM.md`.

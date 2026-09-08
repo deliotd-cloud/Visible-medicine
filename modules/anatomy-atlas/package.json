@@ -79,7 +79,8 @@
     "orbital-curriculum:test": "node scripts/validate-orbital-curriculum.mjs",
     "swallowing-curriculum:test": "node scripts/validate-swallowing-curriculum.mjs",
     "neck-curriculum:test": "node scripts/validate-neck-curriculum.mjs",
-    "deep-neck-curriculum:test": "node scripts/validate-deep-neck-curriculum.mjs"
+    "deep-neck-curriculum:test": "node scripts/validate-deep-neck-curriculum.mjs",
+    "trunk-curriculum:test": "node scripts/validate-trunk-curriculum.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

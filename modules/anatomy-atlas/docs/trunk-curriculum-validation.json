@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "checks": 9586,
+  "lessonDefinitions": 23,
+  "bodyRepresentations": 38,
+  "authoredSections": 76,
+  "combinedPinnedCurriculumSections": 672,
+  "bodyReadiness": {
+    "anatomy": {
+      "draft": 531,
+      "identity-only": 491,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "function": {
+      "draft": 586,
+      "identity-only": 146,
+      "pending": 290,
+      "generated-identification": 0
+    }
+  },
+  "pendingMuscleFunctions": 1,
+  "unresolvedMuscleIdentity": "FMA19728",
+  "negativeCases": 15,
+  "sourceIndexChecks": 38,
+  "sourceComponentChecks": 7,
+  "unrelatedCopyAndRecipesPreserved": true,
+  "sourceGeometryChanged": false,
+  "clinicalApproval": false,
+  "scanContentAdded": false,
+  "browserTesting": false,
+  "limitations": "Software and optional source-index checks, not complete muscle parts, segmental slips, measured attachments, respiratory biomechanics or clinical/device acceptance."
+}

@@ -4,6 +4,10 @@
 
 The [requirement audit](REQUIREMENT_AUDIT.md) consolidates current coverage, actual teaching gaps and the next device-acceptance matrix. Current source contains 1,022 body representations, 138 stages and 120 focuses; counts in milestone-specific gates below are historical. Every unresolved gate remains relevant. Current local layout/explosion/recovery changes are not covered by the earlier browser session, and no clinical approval is created by source or software checks.
 
+## Trunk and back teaching gates
+
+The [trunk/back drafts](TRUNK_CURRICULUM.md) require review of partial pectoralis-major membership, grouped spinalis identities, variable rotator/interspinal slips, intercostal portion-specific action, posterior-serratus uncertainty, lumbar intertransversarii nerve differences, trapezius-part actions and diaphragm boundaries. Typical attachments are not measured footprints. One pending muscle Function branch does not mean complete muscle anatomy or clinical/modality teaching. No respiratory, pressure, biomechanical, procedural or diagnostic acceptance is supplied.
+
 ## Neck teaching gates
 
 The [deep-neck drafts](DEEP_NECK_CURRICULUM.md) add 28 spine-route entries requiring independent attachment/level/variant review, anterior versus posterior ramus distinctions, joint-specific actions and triangle-boundary adjudication. Longissimus capitis keeps explicitly regional origin wording pending exact source-specific attachment review. No segmental nerve course, biomechanical model, myodural segmentation or procedural safety is established.

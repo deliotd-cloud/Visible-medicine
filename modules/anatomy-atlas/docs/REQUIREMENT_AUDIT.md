@@ -33,8 +33,8 @@ These are counts among the **1,022 body representations**, not unique lessons, a
 
 | Body topic | Specific or source-group draft | Generic identity/disclaimer | Explicitly pending | Generated identification prompt |
 | --- | ---: | ---: | ---: | ---: |
-| Anatomy | 493 | 529 | 0 | 0 |
-| Function | 548 | 146 | 328 | 0 |
+| Anatomy | 531 | 491 | 0 | 0 |
+| Function | 586 | 146 | 290 | 0 |
 | CT | 11 | 0 | 1,011 | 0 |
 | MRI | 11 | 0 | 1,011 | 0 |
 | Ultrasound | 11 | 0 | 1,011 | 0 |
@@ -69,7 +69,7 @@ Retain the source-level decisions and exact held IDs in `GAP_FILLING.md`, `SOURC
 ## Ordered next actions
 
 1. **Completed locally — content ingestion contract.** Multi-part source bindings, representation scopes and explicit topic readiness now have a v2 schema, actual shoulder export and whole-body/source/rejection checks. See `CONTENT_CONTRACT.md`. Clinical reviews, canonical IDs, displayed copy and private data are unchanged. Production curriculum storage and automatic legacy migration are not claimed.
-2. **Continue bounded regional teaching.** Limb, coccygeus, orbital, swallowing, neck and [deep-neck drafts](DEEP_NECK_CURRICULUM.md) have exact before/after preservation checks. Thirty-nine muscle Function entries remain pending, including the pelvic source-category clarification. Next cover remaining trunk/back groups, then source-cited blood supply, clinical/pathology, modality teaching and reviewed questions in existing panels. Group overviews and typical attachments are not independently validated slips or measured footprints. Keep unresolved identity/function explicit and require specialist acceptance. Do not replace unknown nerve geometry with guessed routes or fill scan tabs with synthetic findings.
+2. **Continue bounded regional teaching.** Regional muscle basics now include [trunk/back drafts](TRUNK_CURRICULUM.md) with exact before/after preservation and partial-source limits. Only the unresolved pelvic source-category muscle Function remains pending; the other pending Function entries are 200 skeletal, 23 nervous, 43 connective and 23 organ representations. Cover those existing structures next, followed by blood supply, clinical/pathology, modality teaching and reviewed questions in existing panels. Group overviews are not independently validated slips, complete parts or measured attachments. Require specialist acceptance; do not replace unknown nerve geometry with guessed routes or fill scan tabs with synthetic findings.
 3. **Accept the current UI on actual devices when authorized/available.** Use the matrix below before calling navigation, labels or explosion visually complete. Fix observed defects rather than add speculative controls. A browser-testing request is required for this environment's browser workflow; no browser-only preview is started in background audit work.
 4. **Resolve source, specialist and imaging inputs.** Supply rights-cleared compatible geometry or qualified adjudication for held candidates; obtain revision-bound anatomical/editorial review. Connect the user's real imaging function only after its interface, scope and data/registration evidence exist.
 5. **Deliver the exact accepted revision.** Restore authorized source-service/GitHub access, then publish privately and update only the existing anatomy backup branch. Main-website integration needs a chosen route/embed and access policy; no sharing change is assumed.
