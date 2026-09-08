@@ -2,6 +2,8 @@
 
 ## Connective teaching dispatch
 
+`lib/limb-bone-curriculum.ts` supplies 10 definitions for 17 existing girdle/major limb-bone entries. Explicit ID/side bindings preserve the right-shoulder pilot; dispatch also guards primary and every required secondary region. An offline projection precedes cranial and older milestones without changing runtime/export semantics. See [scope and limits](LIMB_BONE_CURRICULUM.md).
+
 `lib/cranial-bone-curriculum.ts` supplies 15 exact-FMA definitions for 23 existing skull/hyoid entries, with system/category/primary and secondary region/laterality/tab guards. It retains the hyoid's two-source compound without inventing subparts. A pinned offline projection precedes thoracic and older milestones; display/export stay current. See [scope and limits](CRANIAL_BONE_CURRICULUM.md).
 
 `lib/thoracic-bone-curriculum.ts` supplies 15 exact-FMA definitions for 27 existing ribs/sternal components. Right/left pairs and midline entries have explicit side guards alongside system/category/region/tab checks. A parameterised helper retains rib-level articulations. The newest pinned offline transition precedes spinal and earlier projections; runtime/export stay current. See [scope and variant limits](THORACIC_BONE_CURRICULUM.md).

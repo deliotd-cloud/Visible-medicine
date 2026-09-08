@@ -87,7 +87,8 @@
     "connective-curriculum:test": "node scripts/validate-connective-curriculum.mjs",
     "spinal-bone-curriculum:test": "node scripts/validate-spinal-bone-curriculum.mjs",
     "thoracic-bone-curriculum:test": "node scripts/validate-thoracic-bone-curriculum.mjs",
-    "cranial-bone-curriculum:test": "node scripts/validate-cranial-bone-curriculum.mjs"
+    "cranial-bone-curriculum:test": "node scripts/validate-cranial-bone-curriculum.mjs",
+    "limb-bone-curriculum:test": "node scripts/validate-limb-bone-curriculum.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

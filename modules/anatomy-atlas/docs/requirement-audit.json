@@ -9,8 +9,8 @@
     "content/review-revisions.json": "abc8f9410e00b41282e149d2bb6020d96ad6367aed769888519940c4c24118a0",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "0801ff3d66b00840e04cf1016efa7f193645ed9e721ac531742e29bf5e5a7508",
-    "explicitTopicReadiness": "e8b78288a8bae468e8d6e5b0adcda1f86b1d63b33878a2a3c9a4ba50f93db4a5"
+    "resolvedContentAndRecipeData": "d720ae35a0d7721b9306966b4f15e93d5e38d87daca6c741995f9ff00aede20c",
+    "explicitTopicReadiness": "71d45b0f583c02606436505714a27a631b0244d2e6660d70456a774009ae072b"
   },
   "anatomy": {
     "bodyRepresentations": 1022,
@@ -101,15 +101,15 @@
     "classificationLimit": "Explicit readiness from authoring branches; not inferred from titles and not clinical approval. Existing shoulder authoring is explicitly draft.",
     "body": {
       "anatomy": {
-        "specificDraft": 693,
-        "identityOnly": 329,
+        "specificDraft": 710,
+        "identityOnly": 312,
         "pending": 0,
         "generatedIdentification": 0
       },
       "function": {
-        "specificDraft": 749,
+        "specificDraft": 766,
         "identityOnly": 146,
-        "pending": 127,
+        "pending": 110,
         "generatedIdentification": 0
       },
       "ct": {
@@ -352,15 +352,15 @@
       },
       "pelvis": {
         "anatomy": {
-          "specificDraft": 38,
-          "identityOnly": 27,
+          "specificDraft": 42,
+          "identityOnly": 23,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 38,
+          "specificDraft": 42,
           "identityOnly": 22,
-          "pending": 5,
+          "pending": 1,
           "generatedIdentification": 0
         },
         "ct": {
@@ -402,15 +402,15 @@
       },
       "shoulder-arm": {
         "anatomy": {
-          "specificDraft": 43,
-          "identityOnly": 48,
+          "specificDraft": 46,
+          "identityOnly": 45,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 43,
+          "specificDraft": 46,
           "identityOnly": 45,
-          "pending": 3,
+          "pending": 0,
           "generatedIdentification": 0
         },
         "ct": {
@@ -452,15 +452,15 @@
       },
       "forearm": {
         "anatomy": {
-          "specificDraft": 51,
-          "identityOnly": 15,
+          "specificDraft": 56,
+          "identityOnly": 10,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 51,
+          "specificDraft": 56,
           "identityOnly": 10,
-          "pending": 5,
+          "pending": 0,
           "generatedIdentification": 0
         },
         "ct": {
@@ -552,15 +552,15 @@
       },
       "thigh": {
         "anatomy": {
-          "specificDraft": 57,
-          "identityOnly": 24,
+          "specificDraft": 61,
+          "identityOnly": 20,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 57,
+          "specificDraft": 61,
           "identityOnly": 20,
-          "pending": 4,
+          "pending": 0,
           "generatedIdentification": 0
         },
         "ct": {
@@ -602,15 +602,15 @@
       },
       "leg": {
         "anatomy": {
-          "specificDraft": 32,
-          "identityOnly": 28,
+          "specificDraft": 40,
+          "identityOnly": 20,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 34,
+          "specificDraft": 42,
           "identityOnly": 18,
-          "pending": 8,
+          "pending": 0,
           "generatedIdentification": 0
         },
         "ct": {

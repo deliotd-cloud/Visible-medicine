@@ -37,6 +37,7 @@ import { connectiveLesson } from '../lib/connective-curriculum';
 import { spinalBoneLesson } from '../lib/spinal-bone-curriculum';
 import { thoracicBoneLesson } from '../lib/thoracic-bone-curriculum';
 import { cranialBoneLesson } from '../lib/cranial-bone-curriculum';
+import { limbBoneLesson } from '../lib/limb-bone-curriculum';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -123,6 +124,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (thoracicBone) return thoracicBone;
   const cranialBone = cranialBoneLesson(s, tab);
   if (cranialBone) return cranialBone;
+  const limbBone = limbBoneLesson(s, tab);
+  if (limbBone) return limbBone;
   const axial =
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??

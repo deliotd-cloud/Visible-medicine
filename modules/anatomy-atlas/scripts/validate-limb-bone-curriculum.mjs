@@ -5,7 +5,6 @@ import {
   contentRoot,
   readContentJson,
 } from './content-contract-tools.mjs';
-import { authoringBeforeCranialBones } from './cranial-bone-curriculum-transition.mjs';
 import { authoringBeforeLimbBones } from './limb-bone-curriculum-transition.mjs';
 import {
   curriculumHash,
@@ -23,12 +22,12 @@ const check = (a, label) => {
 const context = await contentContext();
 const { api, catalog, body } = context;
 const before = await readContentJson(
-  'content/cranial-bone-curriculum.before.json',
+  'content/limb-bone-curriculum.before.json',
 );
 const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
-const previous = await authoringBeforeCranialBones(context);
+const previous = await authoringBeforeLimbBones(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
@@ -47,33 +46,46 @@ same(
 // Independent observations from exact ISA/PART-OF rows, not derived from lessons.
 // Laterality, region and membership are source facts, not clinical validation.
 const expected = {
-  FMA52749: ['midline', 'head-neck', 'bone', 'isa', ['FJ2772', 'FJ3201']],
-  FMA52740: ['midline', 'head-neck', 'bone', 'isa', ['FJ3199']],
-  FMA52734: ['midline', 'head-neck', 'bone', 'isa', ['FJ3200']],
-  FMA54737: ['right', 'head-neck', 'bone', 'isa', ['FJ3369']],
-  FMA54738: ['left', 'head-neck', 'bone', 'isa', ['FJ3263']],
-  FMA53645: ['right', 'head-neck', 'bone', 'isa', ['FJ3371']],
-  FMA53646: ['left', 'head-neck', 'bone', 'isa', ['FJ3265']],
-  FMA53649: ['right', 'head-neck', 'bone', 'isa', ['FJ3375']],
-  FMA53650: ['left', 'head-neck', 'bone', 'isa', ['FJ3269']],
-  FMA53647: ['right', 'head-neck', 'bone', 'isa', ['FJ3378']],
-  FMA53648: ['left', 'head-neck', 'bone', 'isa', ['FJ3272']],
-  FMA53655: ['right', 'head-neck', 'bone', 'isa', ['FJ3379']],
-  FMA53656: ['left', 'head-neck', 'bone', 'isa', ['FJ3273']],
-  FMA52788: ['right', 'head-neck', 'bone', 'isa', ['FJ3380']],
-  FMA52789: ['left', 'head-neck', 'bone', 'isa', ['FJ3274']],
-  FMA52738: ['right', 'head-neck', 'bone', 'isa', ['FJ3386']],
-  FMA52739: ['left', 'head-neck', 'bone', 'isa', ['FJ3281']],
-  FMA52892: ['right', 'head-neck', 'bone', 'isa', ['FJ3392']],
-  FMA52893: ['left', 'head-neck', 'bone', 'isa', ['FJ3287']],
-  FMA52748: ['midline', 'head-neck', 'bone', 'isa', ['FJ3289']],
-  FMA52735: ['midline', 'head-neck', 'bone', 'isa', ['FJ3309']],
-  FMA52736: ['midline', 'head-neck', 'bone', 'isa', ['FJ3394']],
-  FMA9710: ['midline', 'head-neck', 'bone', 'isa', ['FJ3395']],
+  FMA16586: ['right', 'pelvis', 'bone', 'isa', ['FJ3152']],
+  FMA13323: ['left', 'shoulder-arm', 'bone', 'isa', ['FJ3237']],
+  FMA24475: ['left', 'thigh', 'bone', 'isa', ['FJ3259']],
+  FMA24481: ['left', 'leg', 'bone', 'isa', ['FJ3260']],
+  FMA23131: ['left', 'shoulder-arm', 'bone', 'isa', ['FJ3262']],
+  FMA24487: ['left', 'leg', 'bone', 'isa', ['FJ3275']],
+  FMA23465: ['left', 'forearm', 'bone', 'isa', ['FJ3277']],
+  FMA13396: ['left', 'shoulder-arm', 'bone', 'isa', ['FJ3279']],
+  FMA24478: ['left', 'leg', 'bone', 'isa', ['FJ3282']],
+  FMA23468: ['left', 'forearm', 'bone', 'isa', ['FJ3286']],
+  FMA16587: ['left', 'pelvis', 'bone', 'isa', ['FJ3288']],
+  FMA23464: ['right', 'forearm', 'bone', 'isa', ['FJ3349']],
+  FMA24474: ['right', 'thigh', 'bone', 'isa', ['FJ3365']],
+  FMA24480: ['right', 'leg', 'bone', 'isa', ['FJ3366']],
+  FMA24486: ['right', 'leg', 'bone', 'isa', ['FJ3381']],
+  FMA24477: ['right', 'leg', 'bone', 'isa', ['FJ3387']],
+  FMA23467: ['right', 'forearm', 'bone', 'isa', ['FJ3391']],
 };
-same(api.cranialBoneLessons.length, 15);
+const expectedRegions = {
+  FMA16586: ['pelvis', 'thigh'],
+  FMA13323: ['shoulder-arm'],
+  FMA24475: ['thigh', 'pelvis', 'leg'],
+  FMA24481: ['leg'],
+  FMA23131: ['shoulder-arm', 'forearm'],
+  FMA24487: ['leg'],
+  FMA23465: ['forearm'],
+  FMA13396: ['shoulder-arm'],
+  FMA24478: ['leg'],
+  FMA23468: ['forearm'],
+  FMA16587: ['pelvis', 'thigh'],
+  FMA23464: ['forearm'],
+  FMA24474: ['thigh', 'pelvis', 'leg'],
+  FMA24480: ['leg'],
+  FMA24486: ['leg'],
+  FMA24477: ['leg'],
+  FMA23467: ['forearm'],
+};
+same(api.limbBoneLessons.length, 10);
 same(
-  api.cranialBoneLessons.flatMap((l) => l.fmaIds).sort(),
+  api.limbBoneLessons.flatMap((l) => l.bindings.map(([fma]) => fma)).sort(),
   Object.keys(expected).sort(),
 );
 const entry = (fma) => catalog.structures.find((s) => s.fmaId === fma);
@@ -81,11 +93,13 @@ for (const [fma, [side, region, category, tree, files]] of Object.entries(
   expected,
 )) {
   const s = entry(fma);
-  const l = api.cranialBoneLessons.find((l) => l.fmaIds.includes(fma));
+  const l = api.limbBoneLessons.find((l) =>
+    l.bindings.some(([id]) => id === fma),
+  );
   check(s && l);
   same(s.system, 'skeleton');
   same(s.category, category);
-  same(s.region, 'head-neck');
+  same(s.region, region);
   same(s.laterality, side);
 
   same(s.sourceTree, tree);
@@ -93,9 +107,9 @@ for (const [fma, [side, region, category, tree, files]] of Object.entries(
     s.sources.map((p) => p.file),
     files,
   );
-  same(s.regions, [region]);
+  same(s.regions, expectedRegions[fma]);
   for (const t of api.contentTabs) {
-    const result = api.cranialBoneLesson(s, t);
+    const result = api.limbBoneLesson(s, t);
     if (!before.tabs.includes(t)) {
       same(result, undefined);
       continue;
@@ -112,7 +126,7 @@ for (const [fma, [side, region, category, tree, files]] of Object.entries(
     if (s.coverageNote) check(result.note.includes(s.coverageNote));
     check(
       api
-        .cranialBoneLesson({ ...s, coverageNote: 'Coverage hold retained.' }, t)
+        .limbBoneLesson({ ...s, coverageNote: 'Coverage hold retained.' }, t)
         .note.includes('Coverage hold retained.'),
     );
     check(result.note.includes('not tissue interiors'));
@@ -139,51 +153,69 @@ for (const [fma, [side, region, category, tree, files]] of Object.entries(
     { regions: ['hand'] },
     { fmaId: 'FMA_UNKNOWN' },
   ])
-    same(api.cranialBoneLesson({ ...s, ...mutation }, 'function'), undefined);
+    same(api.limbBoneLesson({ ...s, ...mutation }, 'function'), undefined);
 }
 for (const s of catalog.structures)
   if (!expected[s.fmaId])
-    for (const t of api.contentTabs)
-      same(api.cranialBoneLesson(s, t), undefined);
+    for (const t of api.contentTabs) same(api.limbBoneLesson(s, t), undefined);
 const lesson = (fma, t) => api.bodyLesson(entry(fma), t);
-check(lesson('FMA52734', 'anatomy').body.includes('orbital roofs'));
-check(lesson('FMA52788', 'anatomy').body.includes('sagittal suture'));
+check(lesson('FMA13323', 'anatomy').body.includes('sternoclavicular'));
 check(
-  lesson('FMA52735', 'anatomy').body.includes('condyles articulate with C1'),
+  lesson('FMA13396', 'function').body.includes('not a true synovial joint'),
 );
-check(lesson('FMA52738', 'anatomy').bullets[0].includes('ossicular chain'));
-check(lesson('FMA52736', 'anatomy').body.includes('sella turcica'));
+check(lesson('FMA23131', 'anatomy').body.includes('trochlea meets the ulnar'));
 check(
-  lesson('FMA52740', 'anatomy').bullets[0].includes(
-    'inferior nasal concha is a separate bone',
+  lesson('FMA23464', 'function').body.includes(
+    'radius crosses relative to the ulna',
   ),
 );
 check(
-  lesson('FMA54737', 'function').body.includes(
-    'Bone itself does not secrete mucus',
+  lesson('FMA23468', 'anatomy').bullets[0].includes(
+    'no direct carpal articulation',
   ),
 );
 check(
-  lesson('FMA53645', 'anatomy').bullets[0].includes(
-    'bone, sac and tear-producing gland',
+  lesson('FMA16586', 'anatomy').bullets[0].includes(
+    'not three independently dissectible',
   ),
 );
-check(lesson('FMA53655', 'anatomy').bullets[0].includes('not the soft palate'));
 check(
-  lesson('FMA52748', 'function').bullets[0].includes(
-    'not independently moving left/right halves',
-  ),
+  lesson('FMA24475', 'anatomy').bullets[0].includes('pelvis, thigh and leg'),
 );
-check(lesson('FMA52749', 'anatomy').bullets[0].includes('FJ2772 and FJ3201'));
-check(lesson('FMA52749', 'anatomy').bullets[2].includes('2 source components'));
+check(lesson('FMA24477', 'anatomy').body.includes('medial malleolus'));
+check(lesson('FMA24480', 'anatomy').body.includes('lateral malleolus'));
+check(lesson('FMA24481', 'function').body.includes('smaller contribution'));
 check(
-  lesson('FMA52749', 'anatomy').bullets[0].includes(
-    'not part of the skull proper',
+  lesson('FMA24480', 'anatomy').bullets[0].includes(
+    'does not articulate with the femur',
   ),
 );
+check(lesson('FMA24486', 'function').body.includes('mechanical advantage'));
+check(
+  lesson('FMA24487', 'anatomy').bullets[0].includes(
+    'does not directly articulate with the tibia',
+  ),
+);
+for (const [fma, regions] of Object.entries(expectedRegions))
+  if (regions.length > 1)
+    for (const missing of regions)
+      same(
+        api.limbBoneLesson(
+          { ...entry(fma), regions: regions.filter((r) => r !== missing) },
+          'anatomy',
+        ),
+        undefined,
+        'Every required region guarded',
+      );
+// Right shoulder pilot content remains authoritative, not overwritten by a mirrored draft.
+for (const fma of ['FMA13322', 'FMA13395', 'FMA23130']) {
+  same(api.limbBoneLesson(entry(fma), 'anatomy'), undefined);
+  same(lesson(fma, 'anatomy'), previous.bodyLesson(entry(fma), 'anatomy'));
+  same(lesson(fma, 'function'), previous.bodyLesson(entry(fma), 'function'));
+}
 same(
   Object.values(expected).reduce((n, e) => n + e[4].length, 0),
-  24,
+  17,
 );
 same(lesson('FMA61970', 'function').readiness, 'pending');
 same(lesson('FMA19728', 'function').readiness, 'pending');
@@ -212,13 +244,14 @@ if (process.argv.includes('--source')) {
   }
 }
 const negatives = [
-  ['FMA52749', 'anatomy', 'body'],
-  ['FMA52740', 'function', 'readiness'],
-  ['FMA53645', 'anatomy', 'body'],
-  ['FMA52736', 'function', 'body'],
-  ['FMA52748', 'ct', 'body'],
-  ['FMA54737', 'function', 'body'],
-  ['FMA7857', 'anatomy', 'body'],
+  ['FMA13323', 'anatomy', 'body'],
+  ['FMA23464', 'function', 'readiness'],
+  ['FMA23468', 'anatomy', 'body'],
+  ['FMA16586', 'function', 'body'],
+  ['FMA24474', 'ct', 'body'],
+  ['FMA24480', 'function', 'body'],
+  ['FMA24486', 'anatomy', 'body'],
+  ['FMA13322', 'anatomy', 'body'],
   ['FMA61970', 'function', 'readiness'],
   ['FMA19728', 'function', 'readiness'],
 ];
@@ -252,35 +285,33 @@ for (const [fma, t, field] of negatives) {
   );
   checks++;
 }
-const cranialMilestone = await authoringBeforeLimbBones(context);
 const counts = (t) =>
   Object.fromEntries(
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter(
-          (s) => cranialMilestone.bodyLesson(s, t).readiness === r,
-        ).length,
+        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
+          .length,
       ],
     ),
   );
 same(counts('anatomy'), {
-  draft: 693,
-  'identity-only': 329,
+  draft: 710,
+  'identity-only': 312,
   pending: 0,
   'generated-identification': 0,
 });
 same(counts('function'), {
-  draft: 749,
+  draft: 766,
   'identity-only': 146,
-  pending: 127,
+  pending: 110,
   'generated-identification': 0,
 });
 same(
   catalog.structures.filter(
     (s) =>
       s.system === 'skeleton' &&
-      s.region === 'head-neck' &&
+      !['hand', 'foot'].includes(s.region) &&
       api.bodyLesson(s, 'function').readiness === 'pending',
   ).length,
   0,
@@ -288,27 +319,24 @@ same(
 const report = {
   passed: true,
   checks,
-  bodyRepresentations: 23,
-  sourceComponents: 24,
-  lessonGroups: 15,
-  explicitTopicEdits: 46,
-  combinedPinnedCurriculumSections: 1000,
+  bodyRepresentations: 17,
+  sourceComponents: 17,
+  lessonGroups: 10,
+  explicitTopicEdits: 34,
+  combinedPinnedCurriculumSections: 1034,
   sourceIndexChecks,
   negativeCases: negatives.length,
-  bodyReadinessAtCranialMilestone: {
-    anatomy: counts('anatomy'),
-    function: counts('function'),
-  },
+  bodyReadiness: { anatomy: counts('anatomy'), function: counts('function') },
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,
   scanContentAdded: false,
   browserTesting: false,
   limitations:
-    'Original draft teaching only; skull landmarks, hyoid component union, cranial canals, sinuses, ear/TMJ and neurovascular relationships remain unvalidated. No bone interiors, physiological jaw/swallowing motion, clinical approval or acquired imaging.',
+    'Original draft teaching only; limb landmarks, joint surfaces, attachment footprints and neurovascular relationships remain unvalidated. No bone interiors, physiological motion, clinical approval or acquired imaging.',
 };
 await writeFile(
-  new URL('docs/cranial-bone-curriculum-validation.json', contentRoot),
+  new URL('docs/limb-bone-curriculum-validation.json', contentRoot),
   JSON.stringify(report, null, 2) + '\n',
 );
 console.log(JSON.stringify(report, null, 2));
