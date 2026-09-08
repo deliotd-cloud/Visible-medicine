@@ -49,7 +49,7 @@ const oldCopy = await copyBeforeShoulderArmCurriculum(context);
 same(
   sha(JSON.stringify(oldCopy)),
   baseline.copyAndRecipeHash,
-  'Only the 2026 pinned curriculum sections change; unrelated copy/recipes are preserved through the foot-clinical extension',
+  'Only the 2106 pinned curriculum sections change; unrelated copy/recipes are preserved through the trunk-clinical extension',
 );
 same(shoulder.length, 9);
 same(body.length, 1022);
@@ -362,7 +362,7 @@ const report = {
   glbAssetsVerified: assets.size,
   rejectionCases: negative.length + 3,
   unrelatedDisplayedCopyAndRecipesPreserved: true,
-  explicitlyUpdatedBodySections: 2026,
+  explicitlyUpdatedBodySections: 2106,
   sourceGeometryChanged: false,
   clinicalApprovalsImported: false,
   patientDataImported: false,

@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Trunk and coccygeus Clinical / Pathology review
+
+Review the [80 new drafts](TRUNK_CLINICAL_CURRICULUM.md) for chest-pain and spinal red flags, intercostal-layer distinctions, pectoral source omissions versus injuries, diaphragm movement versus position, accessory-neuropathy context, deep-back localisation, disputed posterior-serratus function and pelvic-floor relaxation versus weakness. Independent specialist sign-off remains required. FMA19728 is still unresolved; no patient scans, procedural corridors, disease simulation or treatment protocol is supplied.
+
 ## Foot Clinical / Pathology review
 
 Review the [72 new drafts](FOOT_CLINICAL_CURRICULUM.md) for plantar versus fibular motor patterns, toe-joint terminology, intrinsic imbalance, the uncertain diagnostic value of ADM fatty infiltration, variable opponens identity, plantar-complex injury and normal sesamoid variants. The unresolved sesamoid groups remain on hold. No disease simulation, patient scan, treatment protocol or approval added; independent foot/ankle, MSK and neurological sign-off is required.

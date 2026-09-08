@@ -1,32 +1,30 @@
 import assert from 'node:assert/strict';
 import { readContentJson } from './content-contract-tools.mjs';
 import { createHash } from 'node:crypto';
-import { authoringBeforeTrunkClinical } from './trunk-clinical-curriculum-transition.mjs';
 const hash = (v) =>
   createHash('sha256').update(JSON.stringify(v)).digest('hex');
 /** Offline historical comparison only. Runtime/export always use current teaching. */
-export async function authoringBeforeFootClinical(context) {
-  const { catalog } = context;
-  const api = await authoringBeforeTrunkClinical(context);
+export async function authoringBeforeTrunkClinical(context) {
+  const { api, catalog } = context;
   const before = await readContentJson(
-    'content/foot-clinical-curriculum.before.json',
+    'content/trunk-clinical-curriculum.before.json',
   );
   const after = await readContentJson(
-    'content/foot-clinical-curriculum.transition.json',
+    'content/trunk-clinical-curriculum.transition.json',
   );
   assert.equal(
     hash(before),
-    '5d3b1924683f775a9da4ed07b6436ccd05024ffbda96db56ca57eae5cebbb100',
+    '051a6597a128261a50d591ea442ebd145979d76020e44f1770e9c420f859511f',
   );
   assert.equal(
     hash(after),
-    'bc478745c4d9baac4db9c602d9a1ecfb08ebbda41d106f7c69e9fed7c1d80dfb',
+    '29e2c73a7fdf67f4426e8c58f74b965024ae0f06dd2b2d316cb5a86acee0ab26',
   );
-  assert.equal(before.sourceCommit, '0b229896d60202873c30e34abc96a959e5044b05');
+  assert.equal(before.sourceCommit, '59d174b9f5163366806047df9a1c36970a6e7221');
   assert.equal(after.sourceCommit, before.sourceCommit);
   assert.equal(before.scope, 'body');
-  assert.deepEqual(before.regions, ['foot']);
-  assert.equal(before.entries.length, 36);
+  assert.deepEqual(before.regions, ['thorax', 'abdomen', 'spine', 'pelvis']);
+  assert.equal(before.entries.length, 40);
   assert.deepEqual(
     after.entries.map((e) => [e.id, e.fmaId]),
     before.entries.map((e) => [e.id, e.fmaId]),
@@ -58,14 +56,14 @@ export async function authoringBeforeFootClinical(context) {
       assert.equal(
         hash(lesson),
         after.entries[i].sections[t],
-        'Unrecorded foot clinical edit: ' + s.id + ' / ' + t,
+        'Unrecorded trunk clinical edit: ' + s.id + ' / ' + t,
       );
       const { readiness: _r, ...shown } = lesson;
       assert.deepEqual(shown, api.bodyContent(s, t));
       originals.set(s.id + '|' + t, e.sections[t]);
     }
   }
-  assert.equal(originals.size, 72);
+  assert.equal(originals.size, 80);
   const bodyLesson = (s, t) =>
     originals.has(s.id + '|' + t)
       ? structuredClone(originals.get(s.id + '|' + t))

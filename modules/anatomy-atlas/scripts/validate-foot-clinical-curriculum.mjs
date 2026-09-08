@@ -6,6 +6,7 @@ import {
   readContentJson,
 } from './content-contract-tools.mjs';
 import { authoringBeforeFootClinical } from './foot-clinical-curriculum-transition.mjs';
+import { authoringBeforeTrunkClinical } from './trunk-clinical-curriculum-transition.mjs';
 import {
   curriculumHash,
   copyBeforeShoulderArmCurriculum,
@@ -28,6 +29,7 @@ const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
 const previous = await authoringBeforeFootClinical(context);
+const milestone = await authoringBeforeTrunkClinical(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
@@ -162,7 +164,7 @@ for (const s of catalog.structures)
     if (!ids.includes(s.fmaId) || !tabs.includes(t)) {
       same(api.footClinicalLesson(s, t), undefined);
       same(
-        api.bodyLesson(s, t),
+        milestone.bodyLesson(s, t),
         previous.bodyLesson(s, t),
         'Every unrelated section preserved',
       );
@@ -306,8 +308,9 @@ const counts = (t) =>
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
-          .length,
+        catalog.structures.filter(
+          (s) => milestone.bodyLesson(s, t).readiness === r,
+        ).length,
       ],
     ),
   );
@@ -355,13 +358,16 @@ const report = {
   combinedPinnedCurriculumSections: 2026,
   sourceIndexChecks,
   negativeCases: negatives.length,
-  bodyReadiness: Object.fromEntries(api.contentTabs.map((t) => [t, counts(t)])),
+  historicalProjectionOnly: true,
+  historicalMilestoneBodyReadiness: Object.fromEntries(
+    api.contentTabs.map((t) => [t, counts(t)]),
+  ),
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,
   scanContentAdded: false,
   browserTesting: false,
-  copyAndRecipeHash: curriculumHash(copy(api)),
+  copyAndRecipeHash: curriculumHash(copy(milestone)),
   limitations:
     'Original short intrinsic-foot clinical drafts; not validated deformities, tendon lesions, nerve territories, sesamoid identities, diagnosis, treatment rules or clinical approval.',
 };

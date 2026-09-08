@@ -77,6 +77,7 @@
     "thigh-clinical-curriculum:test": "node scripts/validate-thigh-clinical-curriculum.mjs",
     "leg-clinical-curriculum:test": "node scripts/validate-leg-clinical-curriculum.mjs",
     "foot-clinical-curriculum:test": "node scripts/validate-foot-clinical-curriculum.mjs",
+    "trunk-clinical-curriculum:test": "node scripts/validate-trunk-clinical-curriculum.mjs",
     "forearm-curriculum:test": "node scripts/validate-forearm-curriculum.mjs",
     "hand-curriculum:test": "node scripts/validate-hand-curriculum.mjs",
     "thigh-curriculum:test": "node scripts/validate-thigh-curriculum.mjs",

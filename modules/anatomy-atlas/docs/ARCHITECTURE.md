@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Trunk and coccygeus clinical teaching
+
+The [trunk extension](TRUNK_CLINICAL_CURRICULUM.md) uses seventeen definitions across forty exact identities and 52 ordered source components. Runtime guards tree, side, category/system and primary/ordered regions; PART-OF pectoralis and bilateral groups are preserved. The offline projection precedes foot history (37 projections / 2,106 pinned edits); runtime/export remain current. No UI, geometry, schema, review or dependency change.
+
 ## Foot clinical teaching
 
 The [foot extension](FOOT_CLINICAL_CURRICULUM.md) uses twelve shared definitions with 36 exact single-file ISA identities, side/category/system and sole-foot guards. Source-labelled heads and uncertain slips retain individual identities without invented lesions. The new offline projection precedes lower-leg history, protecting 2,026 edits across 36 projections; runtime/export stay current. No UI, geometry, schema, review or dependency changes.

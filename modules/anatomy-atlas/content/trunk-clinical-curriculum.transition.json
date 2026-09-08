@@ -1,0 +1,326 @@
+{
+  "sourceCommit": "59d174b9f5163366806047df9a1c36970a6e7221",
+  "reason": "Eighty Pathology/Clinical drafts for forty trunk and coccygeus muscle/part/group representations; all other topics preserved.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:pelvis:left:muscle:left-coccygeus",
+      "fmaId": "FMA46444",
+      "sections": {
+        "pathology": "a3402d3aabfb057cbfaa25596d12759d9e65552e912b306f2789a614a29ef977",
+        "clinical": "ca2cd2ba77897fa8552af9211e6f94cb384b1803bc7e14cf0c0096efaf21bd5e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:muscle:external-intercostal-muscle",
+      "fmaId": "FMA9756",
+      "sections": {
+        "pathology": "ec0fb5e8f8cbf5f011c620c899110aecd08555aa849f6b02d955deeaa3276ecd",
+        "clinical": "19a5b4082e76032bb7f9a6e43c8cee18d6b7753bb1574c11abc275e24d3e7cb7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:muscle:right-external-oblique",
+      "fmaId": "FMA13336",
+      "sections": {
+        "pathology": "bbc09c4c9f9a14016b68e41c051e5b3a0196c97199ca0bd5c299529c22f8b58a",
+        "clinical": "8b4ab79a30646a8d1a95fcab704df3abaa02e1ab0b8b44dca2ed685e02b40c21"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:muscle:left-external-oblique",
+      "fmaId": "FMA13337",
+      "sections": {
+        "pathology": "8d91de4b69d1b0cf5f4d803dd22be77abcf91bd6e5abb8675ffb61cfc30f5e06",
+        "clinical": "69b33dd7f24d9fef00eacacb957b4939555c2a964b6c46656a879b43ac403480"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:muscle:innermost-intercostal-muscle",
+      "fmaId": "FMA9758",
+      "sections": {
+        "pathology": "936a0b90baca1cb7548504b7d4c3321da1e1fb319ea7fe39679cfa93d314e014",
+        "clinical": "1cafc6bff03cceb2c25ef042034f5239c1b44024be15a077392296896272eaa7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:muscle:internal-intercostal-muscle",
+      "fmaId": "FMA9757",
+      "sections": {
+        "pathology": "9b1d33c8681e637393e4378593f1e05402379dd7c73850b941a0b0e93cbb2163",
+        "clinical": "a9407989ae9a4d08f12745b8e1737756025cd0c0335b352bbfea4dbf8f70a04c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:muscle:right-pectoralis-minor",
+      "fmaId": "FMA13375",
+      "sections": {
+        "pathology": "f2cceada79c64c68c515d868d1297dc3ff71c8f0a664a0a341b3ca975729780b",
+        "clinical": "37a262fef68d649c96a250a9b9a6f2374a2c02c4cc0ac5539ff8cba9f9067fd5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:muscle:left-pectoralis-minor",
+      "fmaId": "FMA13376",
+      "sections": {
+        "pathology": "2a7cc5bf80f3c861bf7cc8b1f7933338a1f4c3989a421ea208e31bcae248bb18",
+        "clinical": "1e8cd355a0f9f7f11b0461c0bd92286a0d5b779ed88198a238a72f1497afa6be"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:muscle:right-transversus-thoracis",
+      "fmaId": "FMA9761",
+      "sections": {
+        "pathology": "997303980ab35f4a0767fcf46e7e995452261a8743d8a3565546a8e776d09e8c",
+        "clinical": "680dcc70b0367c94741d9eae43aeeca5c75e58a67fea9297b2782090093b6b27"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:muscle:left-transversus-thoracis",
+      "fmaId": "FMA9762",
+      "sections": {
+        "pathology": "732b27b4a8bacb92083ab75db5ca089d46849b16f815d424314a13ddce8d131c",
+        "clinical": "41ef5537a6b237fbb09a08bbd1ba63516814a9313b9c0fb825aee23947db50a2"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-lumbar-rotator",
+      "fmaId": "FMA23089",
+      "sections": {
+        "pathology": "b6b5a892159b51a2f3b342dfb649dbe559d788877d7ca8d1d6e1e4167d7c0a77",
+        "clinical": "4eba81b401371968b648b97359b14206dd9ac458f0e126a4f3e57a117a2a2e01"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-lumbar-rotator",
+      "fmaId": "FMA23090",
+      "sections": {
+        "pathology": "ae908c6f7e659f337f873986ce43266fbcdbddc754cebd74434d4c9aa82a615e",
+        "clinical": "feb6131131071db4bcec988c8bbd517442704d1c38f969502da9bc4d66863577"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:thoracic-rotator",
+      "fmaId": "FMA23083",
+      "sections": {
+        "pathology": "00d791fbc2938dd99dab619a3aef9b258435b67ce3111a1d5f3382043a3c0477",
+        "clinical": "a1bbd1f88976702555a7565466cec0c24d33f8ec9e530c69a966483036b8b25e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-iliocostalis-lumborum",
+      "fmaId": "FMA22740",
+      "sections": {
+        "pathology": "065f3143bc5e2a6cc3447bf8730a22cc9cefff01af5f79d3b0bf040c1e90c282",
+        "clinical": "fe8c89330135e537994b32a8f4b3c9ef812cf7bf8ae2729b1dff9e0a33958d8f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-iliocostalis-lumborum",
+      "fmaId": "FMA22741",
+      "sections": {
+        "pathology": "51df36e4fd2b081b9798d99fad0844c08000f331b5e3d45b894234c8785f22d7",
+        "clinical": "7b5193d0beacd702bab516fa3b7847201a0f7d1f7bcdabb9538b40486a932733"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-iliocostalis-thoracis",
+      "fmaId": "FMA22742",
+      "sections": {
+        "pathology": "7d7fa8fc32f34e86606dce136e106a4c7f24f028945207babd3043fbacaa0816",
+        "clinical": "a9ab4f78f942e8119ac55a7b104cae7ec34198752dd3d7d4f0820e7eade5346f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-iliocostalis-thoracis",
+      "fmaId": "FMA22743",
+      "sections": {
+        "pathology": "87a217d3c7fe40609027cb11b5367d79c306b9934d15995fcff65fc692a71766",
+        "clinical": "ff4ecda497d8fae96caafdaa9989499d56afe5309d9511b5a4f7198042f8d839"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-longissimus-thoracis",
+      "fmaId": "FMA22751",
+      "sections": {
+        "pathology": "a09a5a27e88c98c9be27f2727d0914656db2ca2684d9af512ce10ee16dff5874",
+        "clinical": "eeca80275565418e354b0d162db87b8a4cbd639da91c8ea6d07889ac67e779dd"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-longissimus-thoracis",
+      "fmaId": "FMA22753",
+      "sections": {
+        "pathology": "b73033e8bcbbfe062daca8947d6460477cef73822172527a499183ca892f8319",
+        "clinical": "37ab8aa393c47df6fa217c426e4a87605abe63085d86a94f13a52dbca28b7777"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-semispinalis-thoracis",
+      "fmaId": "FMA22872",
+      "sections": {
+        "pathology": "c99d37afbda8d616655eb80024698a3181c2fcba1fef8a925eed7bafa76e0c5e",
+        "clinical": "203514f13830dc268ac044996b73f5cd2238c639cfae3ac8fa10407c9cbe31e3"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-semispinalis-thoracis",
+      "fmaId": "FMA22873",
+      "sections": {
+        "pathology": "7ce29c2d970d1c43f26a7165e5557a8824496d68741824183dd4515d0c404567",
+        "clinical": "d8261f0bd19aec0323d6d32f38a6d11c4208777cfa4bcb7f81701495491d9738"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-serratus-posterior-inferior",
+      "fmaId": "FMA13405",
+      "sections": {
+        "pathology": "56fe881d61991b5296384d61e04df07964c6141576fc3051c2e3773b3032f4f6",
+        "clinical": "a83ce99606fa970d542575f406c3b53166519a1ad204e0408d3c6621d595faa3"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-serratus-posterior-inferior",
+      "fmaId": "FMA13406",
+      "sections": {
+        "pathology": "c8ffef8cd2998d9a0c77fb89512db29074567792638e7a1c9928188c3c366b4d",
+        "clinical": "7aa92f255cc5daf6220d874d8d1825ef0e9a689449422d6244ab2d3dba709d54"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-serratus-posterior-superior",
+      "fmaId": "FMA13403",
+      "sections": {
+        "pathology": "8b5988640e340cd1bb9c106768584f952b69426cf844ba9af2e1466bf4654c60",
+        "clinical": "63c78fa0d661435fac5cd1b1c09d95682967685230df642189df064a2251e746"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-serratus-posterior-superior",
+      "fmaId": "FMA13404",
+      "sections": {
+        "pathology": "552003bbedf4eb361aecd87579a11f724fe7350e52e7763911acd927817a46cc",
+        "clinical": "7df37e0f345dbedc4aaf76e34f702b222d7eb28e087f25acaeb002b761cc76a3"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:spinalis",
+      "fmaId": "FMA77179",
+      "sections": {
+        "pathology": "e1413a8e49b9765aa8e197d3f0850af0a7546d4f390b7cbacff4f30236f8765b",
+        "clinical": "51320e246fa2af0c1d66af30b51f1b2733bb2f8507d44ea2f29a9588a93edd5c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:lateral-lumbar-intertransversarius",
+      "fmaId": "FMA22850",
+      "sections": {
+        "pathology": "649ae2169db1a9d35199bc235f6ab0b189a83acff70620edb4370ab967707f9c",
+        "clinical": "a5edf6b1e241aeb8c320994f77ca51793b8d29c3f0c7e49c49809333287a9e5a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:medial-lumbar-intertransversarius",
+      "fmaId": "FMA22851",
+      "sections": {
+        "pathology": "aa47f40eb908bd98db249ff889d979cb0d773ede9380c9a697ee47a71447a5fe",
+        "clinical": "034dfd643eadf20262857dee75b686de92cd9c637fe0a28fb749cf8ed2248d2c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-interspinalis-thoracis",
+      "fmaId": "FMA22890",
+      "sections": {
+        "pathology": "0e6b595b6e553b530d29e5a991390b610a42df3e846dc3aa7a95b0cfd6996e49",
+        "clinical": "062788b7f987cda1bbf39c2bddab92e388eddee6abe4adf519b6d635d0fbde41"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-interspinalis-thoracis",
+      "fmaId": "FMA22891",
+      "sections": {
+        "pathology": "d41a46cedb1c49bc028913f6caa96655e996de7f9e29ad2e9a4b44c2a97273af",
+        "clinical": "abf8066cdfb13c6fdcbb732f6a0629f171bd3f82477fca448991edd3219ec2a5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:muscle:right-coccygeus",
+      "fmaId": "FMA46443",
+      "sections": {
+        "pathology": "bef654b68375152d7433dce0b543f567a64ee16a3c444a5657f5bb45402894ea",
+        "clinical": "09ab706f2a211782dc1097841b6a2e0f3e8f4f38a958dc1873253d538df45ea0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:muscle:diaphragm",
+      "fmaId": "FMA13295",
+      "sections": {
+        "pathology": "913823ab410b493edc99236727b29de19329059e5a0c77dd97fa4f7cc5e90365",
+        "clinical": "d4230939031f51f312bb7b82672536bc46c673fd58a2f021ecaeca5f75ea9de8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:ascending-part-of-right-trapezius",
+      "fmaId": "FMA33581",
+      "sections": {
+        "pathology": "509888b34ca9ff4cc2a63ae70b6929fee0a61ae679755945fabad4fa92af40b6",
+        "clinical": "94421206e300001e79651ef14513d71cc4c828141ab0176382fe396597281d78"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:ascending-part-of-left-trapezius",
+      "fmaId": "FMA33583",
+      "sections": {
+        "pathology": "0089eec963d8c3d0c71b6d7b681ab2e892f762cfb9389c4e3d9b4df0704e2d6d",
+        "clinical": "cfead42e1abc5b2348f8f6cb358786bc2db2ab18f61a93cf94a059e08d1d60f0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:transverse-part-of-right-trapezius",
+      "fmaId": "FMA33584",
+      "sections": {
+        "pathology": "126b18bb95a0318c82ff346a6c68eee9566feb1149df4fc402115a5ae818a372",
+        "clinical": "32a58a26fdaecc7923062bc68a364d206d86822da946ddaeae601722fb0addac"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:transverse-part-of-left-trapezius",
+      "fmaId": "FMA33585",
+      "sections": {
+        "pathology": "9fe2e0346ee2e75d6d2747d6032e9c5862df56da297b322202e1d8813576a4c0",
+        "clinical": "d493288a799a48d0528514fbb0838da34273bf38818f0771f444e883e6fa8e0d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:descending-part-of-right-trapezius",
+      "fmaId": "FMA33586",
+      "sections": {
+        "pathology": "bcbadc38e6a4808c3279971f090309e8568b580d811318d9ff34aad2cccd5269",
+        "clinical": "9f60f15d881ec46a5aca03b79d01202e0b79c355a4b9babe867891b0faf94024"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:descending-part-of-left-trapezius",
+      "fmaId": "FMA33587",
+      "sections": {
+        "pathology": "e03b67d048bb23461438d2402302a45a1aa2bb0c28d164f7f04e4b2375c81665",
+        "clinical": "a1d720658cd293ee4b4db1472a5083c517396071c8a80571cf930b68ae863aed"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:muscle:right-pectoralis-major",
+      "fmaId": "FMA13373",
+      "sections": {
+        "pathology": "cdd4b28763351dfc58ad913f1bcf4c466866bbb3b474f81753eb4f1ab24fbc3c",
+        "clinical": "094e42b07eba3aee37b78a6f831fe9f1ab3412d35a57a9553a673968cbf26188"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:muscle:left-pectoralis-major",
+      "fmaId": "FMA13374",
+      "sections": {
+        "pathology": "9ab1f18bf32657644820d75078794e44e4af3a701083080532b922bbdc97305e",
+        "clinical": "ee6ee92ed777b79889b5fa4c303deeedf6097cd86869aa8c83a6b25a86378e12"
+      }
+    }
+  ]
+}

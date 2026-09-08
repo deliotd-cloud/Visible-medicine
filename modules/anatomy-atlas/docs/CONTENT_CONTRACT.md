@@ -1,6 +1,8 @@
 # Versioned anatomy content export
 
-**Current foot clinical extension:** [72 drafts](FOOT_CLINICAL_CURRICULUM.md) cover 36 exact source entries. Clinical and Pathology each now have 223 draft/799 pending. Thirty-six offline projections protect 2,026 edits without changing earlier captures or the original baseline. Runtime/export stay current; prior milestone totals below are historical. Geometry, other topics and approval state are preserved.
+**Current trunk/coccygeus extension:** [80 drafts](TRUNK_CLINICAL_CURRICULUM.md) cover 40 exact selections and 52 source components. Clinical and Pathology each have 263 draft/759 pending entries. Thirty-seven offline projections protect 2,106 edits; earlier captures/pins and the original baseline stay unchanged. Runtime/export remain current. All milestone totals below are historical; geometry, other topics and approval state are preserved.
+
+**Foot clinical milestone:** [72 drafts](FOOT_CLINICAL_CURRICULUM.md) covered 36 exact source entries. Clinical and Pathology each reached 223 draft/799 pending. Thirty-six offline projections protected 2,026 edits without changing earlier captures or the original baseline. Runtime/export stay current; these totals are historical. Geometry, other topics and approval state are preserved.
 
 **Current lower-leg clinical extension:** [56 drafts](LEG_CLINICAL_CURRICULUM.md) cover 28 entries. Clinical and Pathology each now have 187 draft/835 pending. Thirty-five offline projections protect 1,954 edits; old captures and original baseline are unchanged. Other topics, geometry and approval state are preserved. Earlier totals below are historical.
 

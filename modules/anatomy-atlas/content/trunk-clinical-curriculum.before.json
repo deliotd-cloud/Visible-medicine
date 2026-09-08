@@ -1,0 +1,1282 @@
+{
+  "sourceCommit": "59d174b9f5163366806047df9a1c36970a6e7221",
+  "copyAndRecipeHash": "e18ceaa46b1d19ce3a0c40a0183566d3c6702a1fcdfe4e977926d405513e309b",
+  "scope": "body",
+  "regions": [
+    "thorax",
+    "abdomen",
+    "spine",
+    "pelvis"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:pelvis:left:muscle:left-coccygeus",
+      "fmaId": "FMA46444",
+      "name": "Left coccygeus",
+      "category": "muscle",
+      "side": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1449M",
+        "FJ2542"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1449M",
+        "FJ2542"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:muscle:external-intercostal-muscle",
+      "fmaId": "FMA9756",
+      "name": "External intercostal muscle",
+      "category": "muscle",
+      "side": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1451",
+        "FJ1451M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1451",
+        "FJ1451M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:muscle:right-external-oblique",
+      "fmaId": "FMA13336",
+      "name": "Right external oblique",
+      "category": "muscle",
+      "side": "right",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1452"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1452"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:muscle:left-external-oblique",
+      "fmaId": "FMA13337",
+      "name": "Left external oblique",
+      "category": "muscle",
+      "side": "left",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1452M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1452M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:muscle:innermost-intercostal-muscle",
+      "fmaId": "FMA9758",
+      "name": "Innermost intercostal muscle",
+      "category": "muscle",
+      "side": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1454",
+        "FJ1454M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1454",
+        "FJ1454M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:muscle:internal-intercostal-muscle",
+      "fmaId": "FMA9757",
+      "name": "Internal intercostal muscle",
+      "category": "muscle",
+      "side": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1455",
+        "FJ1455M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1455",
+        "FJ1455M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:muscle:right-pectoralis-minor",
+      "fmaId": "FMA13375",
+      "name": "Right pectoralis minor",
+      "category": "muscle",
+      "side": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1456"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1456"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:muscle:left-pectoralis-minor",
+      "fmaId": "FMA13376",
+      "name": "Left pectoralis minor",
+      "category": "muscle",
+      "side": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1456M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1456M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:muscle:right-transversus-thoracis",
+      "fmaId": "FMA9761",
+      "name": "Right transversus thoracis",
+      "category": "muscle",
+      "side": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1461"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1461"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:muscle:left-transversus-thoracis",
+      "fmaId": "FMA9762",
+      "name": "Left transversus thoracis",
+      "category": "muscle",
+      "side": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1461M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1461M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-lumbar-rotator",
+      "fmaId": "FMA23089",
+      "name": "Right lumbar rotator",
+      "category": "muscle",
+      "side": "right",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1522"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1522"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-lumbar-rotator",
+      "fmaId": "FMA23090",
+      "name": "Left lumbar rotator",
+      "category": "muscle",
+      "side": "left",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1522M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1522M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:thoracic-rotator",
+      "fmaId": "FMA23083",
+      "name": "Thoracic rotator",
+      "category": "muscle",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1525",
+        "FJ1525M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1525",
+        "FJ1525M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-iliocostalis-lumborum",
+      "fmaId": "FMA22740",
+      "name": "Right iliocostalis lumborum",
+      "category": "muscle",
+      "side": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1527"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1527"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-iliocostalis-lumborum",
+      "fmaId": "FMA22741",
+      "name": "Left iliocostalis lumborum",
+      "category": "muscle",
+      "side": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1527M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1527M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-iliocostalis-thoracis",
+      "fmaId": "FMA22742",
+      "name": "Right iliocostalis thoracis",
+      "category": "muscle",
+      "side": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1528"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1528"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-iliocostalis-thoracis",
+      "fmaId": "FMA22743",
+      "name": "Left iliocostalis thoracis",
+      "category": "muscle",
+      "side": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1528M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1528M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-longissimus-thoracis",
+      "fmaId": "FMA22751",
+      "name": "Right longissimus thoracis",
+      "category": "muscle",
+      "side": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1535"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1535"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-longissimus-thoracis",
+      "fmaId": "FMA22753",
+      "name": "Left longissimus thoracis",
+      "category": "muscle",
+      "side": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1535M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1535M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-semispinalis-thoracis",
+      "fmaId": "FMA22872",
+      "name": "Right semispinalis thoracis",
+      "category": "muscle",
+      "side": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1540"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1540"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-semispinalis-thoracis",
+      "fmaId": "FMA22873",
+      "name": "Left semispinalis thoracis",
+      "category": "muscle",
+      "side": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1540M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1540M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-serratus-posterior-inferior",
+      "fmaId": "FMA13405",
+      "name": "Right serratus posterior inferior",
+      "category": "muscle",
+      "side": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1541"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1541"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-serratus-posterior-inferior",
+      "fmaId": "FMA13406",
+      "name": "Left serratus posterior inferior",
+      "category": "muscle",
+      "side": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1541M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1541M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-serratus-posterior-superior",
+      "fmaId": "FMA13403",
+      "name": "Right serratus posterior superior",
+      "category": "muscle",
+      "side": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1542"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1542"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-serratus-posterior-superior",
+      "fmaId": "FMA13404",
+      "name": "Left serratus posterior superior",
+      "category": "muscle",
+      "side": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1542M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1542M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:spinalis",
+      "fmaId": "FMA77179",
+      "name": "Spinalis",
+      "category": "muscle",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1543",
+        "FJ1543M",
+        "FJ1544",
+        "FJ1544M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1543",
+        "FJ1543M",
+        "FJ1544",
+        "FJ1544M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:lateral-lumbar-intertransversarius",
+      "fmaId": "FMA22850",
+      "name": "Lateral lumbar intertransversarius",
+      "category": "muscle",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1547",
+        "FJ1547M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1547",
+        "FJ1547M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:medial-lumbar-intertransversarius",
+      "fmaId": "FMA22851",
+      "name": "Medial lumbar intertransversarius",
+      "category": "muscle",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1548",
+        "FJ1548M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1548",
+        "FJ1548M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-interspinalis-thoracis",
+      "fmaId": "FMA22890",
+      "name": "Right interspinalis thoracis",
+      "category": "muscle",
+      "side": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1551"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1551"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-interspinalis-thoracis",
+      "fmaId": "FMA22891",
+      "name": "Left interspinalis thoracis",
+      "category": "muscle",
+      "side": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1551M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1551M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:muscle:right-coccygeus",
+      "fmaId": "FMA46443",
+      "name": "Right coccygeus",
+      "category": "muscle",
+      "side": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2547"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2547"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:muscle:diaphragm",
+      "fmaId": "FMA13295",
+      "name": "Diaphragm",
+      "category": "muscle",
+      "side": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3131"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3131"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:ascending-part-of-right-trapezius",
+      "fmaId": "FMA33581",
+      "name": "Ascending part of right trapezius",
+      "category": "muscle",
+      "side": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1520"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1520"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:ascending-part-of-left-trapezius",
+      "fmaId": "FMA33583",
+      "name": "Ascending part of left trapezius",
+      "category": "muscle",
+      "side": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1520M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1520M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:transverse-part-of-right-trapezius",
+      "fmaId": "FMA33584",
+      "name": "Transverse part of right trapezius",
+      "category": "muscle",
+      "side": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1554"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1554"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:transverse-part-of-left-trapezius",
+      "fmaId": "FMA33585",
+      "name": "Transverse part of left trapezius",
+      "category": "muscle",
+      "side": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1554M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1554M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:descending-part-of-right-trapezius",
+      "fmaId": "FMA33586",
+      "name": "Descending part of right trapezius",
+      "category": "muscle",
+      "side": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1521"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1521"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:descending-part-of-left-trapezius",
+      "fmaId": "FMA33587",
+      "name": "Descending part of left trapezius",
+      "category": "muscle",
+      "side": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1521M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1521M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:muscle:right-pectoralis-major",
+      "fmaId": "FMA13373",
+      "name": "Right pectoralis major",
+      "category": "muscle",
+      "side": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "partof",
+      "files": [
+        "FJ1446",
+        "FJ1464"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1446",
+        "FJ1464"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:muscle:left-pectoralis-major",
+      "fmaId": "FMA13374",
+      "name": "Left pectoralis major",
+      "category": "muscle",
+      "side": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "partof",
+      "files": [
+        "FJ1446M",
+        "FJ1464M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1446M",
+        "FJ1464M"
+      ],
+      "omittedSourceFiles": []
+    }
+  ]
+}

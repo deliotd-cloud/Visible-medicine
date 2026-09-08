@@ -1,5 +1,7 @@
 # Atlas requirement and acceptance audit
 
+**Current trunk/coccygeus extension — 9 September 2026:** [80 new drafts](TRUNK_CLINICAL_CURRICULUM.md) bring Clinical and Pathology to 263 draft/759 pending each. Forty exact selections retain 52 source components, stable identity and the existing uncluttered interface. Draft counts are not reviewed disease coverage. Earlier milestone counts below are historical; medical, geometry, device and imaging acceptance remain outstanding.
+
 **Current foot extension — 9 September 2026:** [72 cited drafts](FOOT_CLINICAL_CURRICULUM.md) bring Clinical and Pathology to 223 draft/799 pending each. The 36 existing source entries retain their geometry, exact identities and current controls. Uncertain anatomy and clinical-review requirements remain explicit. Earlier totals below describe historical milestones, not current coverage or acceptance.
 
 **Current lower-leg extension:** [56 cited drafts](LEG_CLINICAL_CURRICULUM.md) bring Clinical and Pathology to 187 draft/835 pending each. Existing identities, surfaces and controls are unchanged. Draft counts are not complete disease coverage, diagnostic accuracy or specialist sign-off. Earlier milestone totals below are historical.
