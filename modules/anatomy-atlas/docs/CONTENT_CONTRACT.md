@@ -2,7 +2,7 @@
 
 ## Delivered scope
 
-**Current spinal-bone extension:** [50 original drafts](SPINAL_BONE_CURRICULUM.md) cover 25 existing entries. Body totals: Anatomy643draft/379identity-only; Function699draft/146identity-only/177pending. `authoringBeforeSpinalBones` verifies/restores only these topics before sixteen prior projections; 900 edits remain pinned against the original baseline. Connective and earlier report totals are explicitly historical. Current runtime/export stay current; no schema/source/geometry/review migration.
+**Current thoracic-bone extension:** [54 original drafts](THORACIC_BONE_CURRICULUM.md) cover 27 existing entries. Body totals: Anatomy670draft/352identity-only; Function726draft/146identity-only/150pending. `authoringBeforeThoracicBones` verifies/restores only these topics before seventeen prior projections; 954 edits remain pinned against the original baseline. Spinal and earlier report totals are explicitly historical. Current runtime/export stay current; no schema/source/geometry/review migration.
 
 **Current organ extension:** [46 original drafts](ORGAN_CURRICULUM.md) cover 23 existing organ-system entries. Body totals: Anatomy 575 draft / 447 identity-only; Function 631 draft / 146 identity-only / 245 pending. `authoringBeforeOrgans` verifies/restores only these topics before fourteen prior offline projections, preserving 764 pinned topic edits against the original baseline. Current runtime/export remain current; the CNS report labels historical counts. No schema, source, geometry or review migration. Earlier extension totals below are historical.
 

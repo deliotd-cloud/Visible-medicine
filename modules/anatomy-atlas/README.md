@@ -2,7 +2,9 @@
 
 ## Current scope and remaining work
 
-The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: 177 Function sections remain pending and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: 150 Function sections remain pending and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+
+The [ribs/sternum update](docs/THORACIC_BONE_CURRICULUM.md) adds 54 cited Anatomy/Function drafts for 27 existing entries, including level-specific rib articulations and lower costal-margin variation. No extra controls or geometry. Run `npm run thoracic-bone-curriculum:test`; relationships and clinical acceptance remain unvalidated.
 
 The [spinal-bone update](docs/SPINAL_BONE_CURRICULUM.md) adds 50 cited Anatomy/Function drafts for 25 existing vertebral/sacral entries, without extra controls. Regional transitions, facet variation and fused-bone limits are explicit. Run `npm run spinal-bone-curriculum:test`; landmarks, joint mechanics and clinical acceptance remain unvalidated.
 

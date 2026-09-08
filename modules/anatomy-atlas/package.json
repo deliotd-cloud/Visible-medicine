@@ -85,7 +85,8 @@
     "central-neuro-curriculum:test": "node scripts/validate-central-neuro-curriculum.mjs",
     "organ-curriculum:test": "node scripts/validate-organ-curriculum.mjs",
     "connective-curriculum:test": "node scripts/validate-connective-curriculum.mjs",
-    "spinal-bone-curriculum:test": "node scripts/validate-spinal-bone-curriculum.mjs"
+    "spinal-bone-curriculum:test": "node scripts/validate-spinal-bone-curriculum.mjs",
+    "thoracic-bone-curriculum:test": "node scripts/validate-thoracic-bone-curriculum.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

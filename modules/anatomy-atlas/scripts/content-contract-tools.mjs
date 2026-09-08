@@ -30,6 +30,7 @@ export * from './lib/central-neuro-curriculum.ts';
 export * from './lib/organ-curriculum.ts';
 export * from './lib/connective-curriculum.ts';
 export * from './lib/spinal-bone-curriculum.ts';
+export * from './lib/thoracic-bone-curriculum.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';`,
       resolveDir: fileURLToPath(contentRoot),

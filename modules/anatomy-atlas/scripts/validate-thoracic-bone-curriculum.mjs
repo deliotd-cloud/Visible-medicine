@@ -5,7 +5,6 @@ import {
   contentRoot,
   readContentJson,
 } from './content-contract-tools.mjs';
-import { authoringBeforeSpinalBones } from './spinal-bone-curriculum-transition.mjs';
 import { authoringBeforeThoracicBones } from './thoracic-bone-curriculum-transition.mjs';
 import {
   curriculumHash,
@@ -23,12 +22,12 @@ const check = (a, label) => {
 const context = await contentContext();
 const { api, catalog, body } = context;
 const before = await readContentJson(
-  'content/spinal-bone-curriculum.before.json',
+  'content/thoracic-bone-curriculum.before.json',
 );
 const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
-const previous = await authoringBeforeSpinalBones(context);
+const previous = await authoringBeforeThoracicBones(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
@@ -47,35 +46,37 @@ same(
 // Independent observations from exact ISA/PART-OF rows, not derived from lessons.
 // Laterality, region and membership are source facts, not clinical validation.
 const expected = {
-  FMA12519: ['midline', 'head-neck', 'bone', 'isa', ['FJ3176']],
-  FMA12520: ['midline', 'head-neck', 'bone', 'isa', ['FJ3177']],
-  FMA12521: ['midline', 'head-neck', 'bone', 'isa', ['FJ3161']],
-  FMA12522: ['midline', 'head-neck', 'bone', 'isa', ['FJ3164']],
-  FMA12523: ['midline', 'head-neck', 'bone', 'isa', ['FJ3167']],
-  FMA12524: ['midline', 'head-neck', 'bone', 'isa', ['FJ3170']],
-  FMA12525: ['midline', 'head-neck', 'bone', 'isa', ['FJ3172']],
-  FMA9165: ['midline', 'thorax', 'bone', 'isa', ['FJ3158']],
-  FMA9187: ['midline', 'thorax', 'bone', 'isa', ['FJ3160']],
-  FMA9209: ['midline', 'thorax', 'bone', 'isa', ['FJ3163']],
-  FMA9248: ['midline', 'thorax', 'bone', 'isa', ['FJ3166']],
-  FMA9922: ['midline', 'thorax', 'bone', 'isa', ['FJ3169']],
-  FMA9945: ['midline', 'thorax', 'bone', 'isa', ['FJ3171']],
-  FMA9968: ['midline', 'thorax', 'bone', 'isa', ['FJ3173']],
-  FMA9991: ['midline', 'thorax', 'bone', 'isa', ['FJ3174']],
-  FMA10014: ['midline', 'thorax', 'bone', 'isa', ['FJ3175']],
-  FMA10037: ['midline', 'thorax', 'bone', 'isa', ['FJ3154']],
-  FMA10059: ['midline', 'thorax', 'bone', 'isa', ['FJ3155']],
-  FMA10081: ['midline', 'thorax', 'bone', 'isa', ['FJ3156']],
-  FMA13072: ['midline', 'abdomen', 'bone', 'isa', ['FJ3157']],
-  FMA13073: ['midline', 'abdomen', 'bone', 'isa', ['FJ3159']],
-  FMA13074: ['midline', 'abdomen', 'bone', 'isa', ['FJ3162']],
-  FMA13075: ['midline', 'abdomen', 'bone', 'isa', ['FJ3165']],
-  FMA13076: ['midline', 'abdomen', 'bone', 'isa', ['FJ3168']],
-  FMA16202: ['midline', 'pelvis', 'bone', 'isa', ['FJ3393']],
+  FMA7857: ['right', 'thorax', 'bone', 'isa', ['FJ3334']],
+  FMA7987: ['left', 'thorax', 'bone', 'isa', ['FJ3228']],
+  FMA7882: ['right', 'thorax', 'bone', 'isa', ['FJ3336']],
+  FMA8012: ['left', 'thorax', 'bone', 'isa', ['FJ3229']],
+  FMA7909: ['right', 'thorax', 'bone', 'isa', ['FJ3338']],
+  FMA8039: ['left', 'thorax', 'bone', 'isa', ['FJ3230']],
+  FMA7957: ['right', 'thorax', 'bone', 'isa', ['FJ3340']],
+  FMA8148: ['left', 'thorax', 'bone', 'isa', ['FJ3231']],
+  FMA8066: ['right', 'thorax', 'bone', 'isa', ['FJ3342']],
+  FMA8093: ['left', 'thorax', 'bone', 'isa', ['FJ3232']],
+  FMA8175: ['right', 'thorax', 'bone', 'isa', ['FJ3344']],
+  FMA8202: ['left', 'thorax', 'bone', 'isa', ['FJ3233']],
+  FMA8229: ['right', 'thorax', 'bone', 'isa', ['FJ3346']],
+  FMA8256: ['left', 'thorax', 'bone', 'isa', ['FJ3234']],
+  FMA8283: ['right', 'thorax', 'bone', 'isa', ['FJ3347']],
+  FMA8310: ['left', 'thorax', 'bone', 'isa', ['FJ3235']],
+  FMA8364: ['right', 'thorax', 'bone', 'isa', ['FJ3348']],
+  FMA8391: ['left', 'thorax', 'bone', 'isa', ['FJ3236']],
+  FMA8445: ['right', 'thorax', 'bone', 'isa', ['FJ3330']],
+  FMA8472: ['left', 'thorax', 'bone', 'isa', ['FJ3225']],
+  FMA8531: ['right', 'thorax', 'bone', 'isa', ['FJ3331']],
+  FMA8532: ['left', 'thorax', 'bone', 'isa', ['FJ3226']],
+  FMA8533: ['right', 'thorax', 'bone', 'isa', ['FJ3332']],
+  FMA8534: ['left', 'thorax', 'bone', 'isa', ['FJ3227']],
+  FMA7486: ['midline', 'thorax', 'bone', 'isa', ['FJ3290']],
+  FMA7487: ['midline', 'thorax', 'bone', 'isa', ['FJ3178']],
+  FMA7488: ['midline', 'thorax', 'bone', 'isa', ['FJ3153']],
 };
-same(api.spinalBoneLessons.length, 13);
+same(api.thoracicBoneLessons.length, 15);
 same(
-  api.spinalBoneLessons.flatMap((l) => l.fmaIds).sort(),
+  api.thoracicBoneLessons.flatMap((l) => l.fmaIds).sort(),
   Object.keys(expected).sort(),
 );
 const entry = (fma) => catalog.structures.find((s) => s.fmaId === fma);
@@ -83,11 +84,11 @@ for (const [fma, [side, region, category, tree, files]] of Object.entries(
   expected,
 )) {
   const s = entry(fma);
-  const l = api.spinalBoneLessons.find((l) => l.fmaIds.includes(fma));
+  const l = api.thoracicBoneLessons.find((l) => l.fmaIds.includes(fma));
   check(s && l);
   same(s.system, 'skeleton');
   same(s.category, category);
-  same(s.region, 'spine');
+  same(s.region, 'thorax');
   same(s.laterality, side);
 
   same(s.sourceTree, tree);
@@ -95,9 +96,9 @@ for (const [fma, [side, region, category, tree, files]] of Object.entries(
     s.sources.map((p) => p.file),
     files,
   );
-  same(s.regions, ['spine', region, ...(fma === 'FMA16202' ? ['thigh'] : [])]);
+  same(s.regions, [region]);
   for (const t of api.contentTabs) {
-    const result = api.spinalBoneLesson(s, t);
+    const result = api.thoracicBoneLesson(s, t);
     if (!before.tabs.includes(t)) {
       same(result, undefined);
       continue;
@@ -114,7 +115,10 @@ for (const [fma, [side, region, category, tree, files]] of Object.entries(
     if (s.coverageNote) check(result.note.includes(s.coverageNote));
     check(
       api
-        .spinalBoneLesson({ ...s, coverageNote: 'Coverage hold retained.' }, t)
+        .thoracicBoneLesson(
+          { ...s, coverageNote: 'Coverage hold retained.' },
+          t,
+        )
         .note.includes('Coverage hold retained.'),
     );
     check(result.note.includes('not tissue interiors'));
@@ -135,45 +139,46 @@ for (const [fma, [side, region, category, tree, files]] of Object.entries(
   });
   for (const mutation of [
     { system: 'nerves' },
-    { laterality: 'left' },
-    { region: 'thorax' },
+    { laterality: side === 'left' ? 'right' : 'left' },
+    { region: 'hand' },
     { category: category === 'ligament' ? 'cartilage' : 'ligament' },
     { regions: ['hand'] },
     { fmaId: 'FMA_UNKNOWN' },
   ])
-    same(api.spinalBoneLesson({ ...s, ...mutation }, 'function'), undefined);
+    same(api.thoracicBoneLesson({ ...s, ...mutation }, 'function'), undefined);
 }
 for (const s of catalog.structures)
   if (!expected[s.fmaId])
     for (const t of api.contentTabs)
-      same(api.spinalBoneLesson(s, t), undefined);
+      same(api.thoracicBoneLesson(s, t), undefined);
 const lesson = (fma, t) => api.bodyLesson(entry(fma), t);
+check(lesson('FMA7857', 'anatomy').body.includes('T1'));
+check(lesson('FMA7882', 'anatomy').body.includes('sternal angle'));
+for (const [fma, n] of [
+  ['FMA7909', 3],
+  ['FMA7957', 4],
+  ['FMA8066', 5],
+  ['FMA8175', 6],
+  ['FMA8229', 7],
+  ['FMA8283', 8],
+  ['FMA8364', 9],
+]) {
+  check(lesson(fma, 'anatomy').body.includes('T' + (n - 1) + ' and T' + n));
+  check(lesson(fma, 'anatomy').body.includes('T' + n + ' transverse process'));
+}
+check(lesson('FMA8310', 'anatomy').bullets[0].includes('vary'));
+check(lesson('FMA8472', 'anatomy').body.includes('unattached tip'));
 check(
-  lesson('FMA12519', 'anatomy').bullets[0].includes(
-    'no C1–C2 intervertebral disc',
-  ),
-);
-check(lesson('FMA12520', 'anatomy').bullets[0].includes('dens remains part'));
-check(lesson('FMA12525', 'anatomy').bullets[0].includes('variants occur'));
-check(lesson('FMA10014', 'anatomy').body.includes('may be absent'));
-check(lesson('FMA10037', 'anatomy').bullets[0].includes('does not certify'));
-check(
-  lesson('FMA10059', 'anatomy').body.includes(
-    'without a transverse costal facet',
-  ),
-);
-check(lesson('FMA10081', 'anatomy').body.includes('lumbar-like'));
-check(lesson('FMA13076', 'function').bullets[0].includes('not establish'));
-check(
-  lesson('FMA16202', 'anatomy').bullets[0].includes(
-    'not five independently dissectible',
-  ),
+  lesson('FMA8531', 'anatomy').body.includes('lacks a costotransverse joint'),
 );
 check(
-  lesson('FMA13072', 'anatomy').bullets[0].includes(
-    'not a solid spinal-cord mesh',
-  ),
+  lesson('FMA8533', 'anatomy').body.includes('no anterior sternal attachment'),
 );
+check(
+  lesson('FMA7486', 'anatomy').bullets[0].includes('not the whole breastbone'),
+);
+check(lesson('FMA7487', 'anatomy').bullets[0].includes('universal fusion age'));
+check(lesson('FMA7488', 'anatomy').bullets[0].includes('not an age-resolved'));
 same(lesson('FMA61970', 'function').readiness, 'pending');
 same(lesson('FMA19728', 'function').readiness, 'pending');
 let sourceIndexChecks = 0;
@@ -201,13 +206,13 @@ if (process.argv.includes('--source')) {
   }
 }
 const negatives = [
+  ['FMA7857', 'anatomy', 'body'],
+  ['FMA7882', 'function', 'readiness'],
+  ['FMA8283', 'anatomy', 'body'],
+  ['FMA8445', 'function', 'body'],
+  ['FMA7486', 'ct', 'body'],
+  ['FMA7488', 'function', 'body'],
   ['FMA12519', 'anatomy', 'body'],
-  ['FMA12520', 'function', 'readiness'],
-  ['FMA12525', 'anatomy', 'body'],
-  ['FMA10037', 'function', 'body'],
-  ['FMA13076', 'ct', 'body'],
-  ['FMA16202', 'function', 'body'],
-  ['FMA7875', 'anatomy', 'body'],
   ['FMA61970', 'function', 'readiness'],
   ['FMA19728', 'function', 'readiness'],
 ];
@@ -241,35 +246,33 @@ for (const [fma, t, field] of negatives) {
   );
   checks++;
 }
-const spinalMilestone = await authoringBeforeThoracicBones(context);
 const counts = (t) =>
   Object.fromEntries(
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter(
-          (s) => spinalMilestone.bodyLesson(s, t).readiness === r,
-        ).length,
+        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
+          .length,
       ],
     ),
   );
 same(counts('anatomy'), {
-  draft: 643,
-  'identity-only': 379,
+  draft: 670,
+  'identity-only': 352,
   pending: 0,
   'generated-identification': 0,
 });
 same(counts('function'), {
-  draft: 699,
+  draft: 726,
   'identity-only': 146,
-  pending: 177,
+  pending: 150,
   'generated-identification': 0,
 });
 same(
   catalog.structures.filter(
     (s) =>
       s.system === 'skeleton' &&
-      s.region === 'spine' &&
+      s.region === 'thorax' &&
       api.bodyLesson(s, 'function').readiness === 'pending',
   ).length,
   0,
@@ -277,26 +280,23 @@ same(
 const report = {
   passed: true,
   checks,
-  bodyRepresentations: 25,
-  lessonGroups: 13,
-  explicitTopicEdits: 50,
-  combinedPinnedCurriculumSections: 900,
+  bodyRepresentations: 27,
+  lessonGroups: 15,
+  explicitTopicEdits: 54,
+  combinedPinnedCurriculumSections: 954,
   sourceIndexChecks,
   negativeCases: negatives.length,
-  bodyReadinessAtSpinalMilestone: {
-    anatomy: counts('anatomy'),
-    function: counts('function'),
-  },
+  bodyReadiness: { anatomy: counts('anatomy'), function: counts('function') },
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,
   scanContentAdded: false,
   browserTesting: false,
   limitations:
-    'Original draft teaching only; landmarks, facet variants, numbering, fused sacral representation and neural/ligament relationships remain unvalidated. No bone interiors, physiological motion, clinical approval or acquired imaging.',
+    'Original draft teaching only; rib/sternal landmarks, facet and costal-margin variants, maturity, joint and neurovascular relationships remain unvalidated. No bone interiors, physiological breathing, clinical approval or acquired imaging.',
 };
 await writeFile(
-  new URL('docs/spinal-bone-curriculum-validation.json', contentRoot),
+  new URL('docs/thoracic-bone-curriculum-validation.json', contentRoot),
   JSON.stringify(report, null, 2) + '\n',
 );
 console.log(JSON.stringify(report, null, 2));
