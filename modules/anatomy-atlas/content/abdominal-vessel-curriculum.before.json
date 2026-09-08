@@ -1,0 +1,420 @@
+{
+  "sourceCommit": "9cd9e2f29be0536c23e812c5f8ade06f011c9935",
+  "copyAndRecipeHash": "07bf61289dd4c72e91f3a73e80c6a4792766ecc9080133b4f95e6decb5e43f23",
+  "scope": "body",
+  "regions": [
+    "abdomen"
+  ],
+  "tabs": [
+    "anatomy",
+    "function"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+      "fmaId": "FMA3789",
+      "name": "Abdominal aorta",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Abdominal aorta is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA3789",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "identity-only",
+          "title": "Vascular segment · review pending",
+          "body": "This entry makes a source-labelled vessel segment independently selectable. Its complete branches, tributaries, supplied territory and normal variants have not been authored as a reviewed lesson.",
+          "note": "Gaps between displayed surfaces must not be interpreted as occlusion or as validated vessel endpoints. Red/blue identifies artery/vein, not oxygenation."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+      "fmaId": "FMA10951",
+      "name": "Inferior vena cava",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Inferior vena cava is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA10951",
+            "2 source components grouped as one structure",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "identity-only",
+          "title": "Vascular segment · review pending",
+          "body": "This entry makes a source-labelled vessel segment independently selectable. Its complete branches, tributaries, supplied territory and normal variants have not been authored as a reviewed lesson.",
+          "note": "Gaps between displayed surfaces must not be interpreted as occlusion or as validated vessel endpoints. Red/blue identifies artery/vein, not oxygenation."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+      "fmaId": "FMA50737",
+      "name": "Celiac artery",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Celiac artery is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA50737",
+            "2 source components grouped as one structure",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "identity-only",
+          "title": "Vascular segment · review pending",
+          "body": "This entry makes a source-labelled vessel segment independently selectable. Its complete branches, tributaries, supplied territory and normal variants have not been authored as a reviewed lesson.",
+          "note": "Gaps between displayed surfaces must not be interpreted as occlusion or as validated vessel endpoints. Red/blue identifies artery/vein, not oxygenation."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+      "fmaId": "FMA14749",
+      "name": "Superior mesenteric artery",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Superior mesenteric artery is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA14749",
+            "2 source components grouped as one structure",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "identity-only",
+          "title": "Vascular segment · review pending",
+          "body": "This entry makes a source-labelled vessel segment independently selectable. Its complete branches, tributaries, supplied territory and normal variants have not been authored as a reviewed lesson.",
+          "note": "Gaps between displayed surfaces must not be interpreted as occlusion or as validated vessel endpoints. Red/blue identifies artery/vein, not oxygenation."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+      "fmaId": "FMA14750",
+      "name": "Inferior mesenteric artery",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Inferior mesenteric artery is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA14750",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "identity-only",
+          "title": "Vascular segment · review pending",
+          "body": "This entry makes a source-labelled vessel segment independently selectable. Its complete branches, tributaries, supplied territory and normal variants have not been authored as a reviewed lesson.",
+          "note": "Gaps between displayed surfaces must not be interpreted as occlusion or as validated vessel endpoints. Red/blue identifies artery/vein, not oxygenation."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+      "fmaId": "FMA14771",
+      "name": "Common hepatic artery",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Common hepatic artery is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA14771",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "identity-only",
+          "title": "Vascular segment · review pending",
+          "body": "This entry makes a source-labelled vessel segment independently selectable. Its complete branches, tributaries, supplied territory and normal variants have not been authored as a reviewed lesson.",
+          "note": "Gaps between displayed surfaces must not be interpreted as occlusion or as validated vessel endpoints. Red/blue identifies artery/vein, not oxygenation."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
+      "fmaId": "FMA14772",
+      "name": "Hepatic artery proper",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Hepatic artery proper is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA14772",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "identity-only",
+          "title": "Vascular segment · review pending",
+          "body": "This entry makes a source-labelled vessel segment independently selectable. Its complete branches, tributaries, supplied territory and normal variants have not been authored as a reviewed lesson.",
+          "note": "Gaps between displayed surfaces must not be interpreted as occlusion or as validated vessel endpoints. Red/blue identifies artery/vein, not oxygenation."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+      "fmaId": "FMA14773",
+      "name": "Splenic artery",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Splenic artery is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA14773",
+            "4 source components grouped as one structure",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "identity-only",
+          "title": "Vascular segment · review pending",
+          "body": "This entry makes a source-labelled vessel segment independently selectable. Its complete branches, tributaries, supplied territory and normal variants have not been authored as a reviewed lesson.",
+          "note": "Gaps between displayed surfaces must not be interpreted as occlusion or as validated vessel endpoints. Red/blue identifies artery/vein, not oxygenation."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
+      "fmaId": "FMA14768",
+      "name": "Left gastric artery",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Left gastric artery is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA14768",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "identity-only",
+          "title": "Vascular segment · review pending",
+          "body": "This entry makes a source-labelled vessel segment independently selectable. Its complete branches, tributaries, supplied territory and normal variants have not been authored as a reviewed lesson.",
+          "note": "Gaps between displayed surfaces must not be interpreted as occlusion or as validated vessel endpoints. Red/blue identifies artery/vein, not oxygenation."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+      "fmaId": "FMA50735",
+      "name": "Hepatic portal vein",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Hepatic portal vein is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA50735",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "identity-only",
+          "title": "Vascular segment · review pending",
+          "body": "This entry makes a source-labelled vessel segment independently selectable. Its complete branches, tributaries, supplied territory and normal variants have not been authored as a reviewed lesson.",
+          "note": "Gaps between displayed surfaces must not be interpreted as occlusion or as validated vessel endpoints. Red/blue identifies artery/vein, not oxygenation."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
+      "fmaId": "FMA14752",
+      "name": "Right renal artery",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Right renal artery is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA14752",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "identity-only",
+          "title": "Vascular segment · review pending",
+          "body": "This entry makes a source-labelled vessel segment independently selectable. Its complete branches, tributaries, supplied territory and normal variants have not been authored as a reviewed lesson.",
+          "note": "Gaps between displayed surfaces must not be interpreted as occlusion or as validated vessel endpoints. Red/blue identifies artery/vein, not oxygenation."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
+      "fmaId": "FMA14753",
+      "name": "Left renal artery",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Left renal artery is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA14753",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "identity-only",
+          "title": "Vascular segment · review pending",
+          "body": "This entry makes a source-labelled vessel segment independently selectable. Its complete branches, tributaries, supplied territory and normal variants have not been authored as a reviewed lesson.",
+          "note": "Gaps between displayed surfaces must not be interpreted as occlusion or as validated vessel endpoints. Red/blue identifies artery/vein, not oxygenation."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
+      "fmaId": "FMA14338",
+      "name": "Right hepatic vein",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Right hepatic vein is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA14338",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "identity-only",
+          "title": "Vascular segment · review pending",
+          "body": "This entry makes a source-labelled vessel segment independently selectable. Its complete branches, tributaries, supplied territory and normal variants have not been authored as a reviewed lesson.",
+          "note": "Gaps between displayed surfaces must not be interpreted as occlusion or as validated vessel endpoints. Red/blue identifies artery/vein, not oxygenation."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
+      "fmaId": "FMA14339",
+      "name": "Left hepatic vein",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Left hepatic vein is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA14339",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "identity-only",
+          "title": "Vascular segment · review pending",
+          "body": "This entry makes a source-labelled vessel segment independently selectable. Its complete branches, tributaries, supplied territory and normal variants have not been authored as a reviewed lesson.",
+          "note": "Gaps between displayed surfaces must not be interpreted as occlusion or as validated vessel endpoints. Red/blue identifies artery/vein, not oxygenation."
+        }
+      }
+    }
+  ]
+}

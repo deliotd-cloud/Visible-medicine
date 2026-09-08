@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Abdominal vessel teaching dispatch
+
+`lib/abdominal-vessel-curriculum.ts` supplies fourteen exact definitions, guarded by FMA, side, system/category and required regions. Compound sources are not inferred branch maps. Its pinned offline transition precedes the thoracic and earlier milestones, while display/export use current lessons. See [scope and evidence](ABDOMINAL_VESSEL_CURRICULUM.md).
+
 ## Thoracic vessel teaching dispatch
 
 `lib/thoracic-vessel-curriculum.ts` provides 29 exact definitions for 34 existing vessels. FMA, laterality, system/category and all required regions gate dispatch; textbook position never overwrites source laterality. Multi-file aggregates are not assigned inferred branch identities. Its pinned offline transition precedes acral and earlier milestones; runtime and exports use current content. See [scope and limits](THORACIC_VESSEL_CURRICULUM.md).

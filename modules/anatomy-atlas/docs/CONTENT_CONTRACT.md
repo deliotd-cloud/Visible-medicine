@@ -2,7 +2,9 @@
 
 ## Delivered scope
 
-**Current thoracic-vessel extension:** [68 original drafts](THORACIC_VESSEL_CURRICULUM.md) cover 34 existing vessels. Body totals: Anatomy 850 draft/172 identity-only; Function 906 draft/112 identity-only/four pending. `authoringBeforeThoracicVessels` verifies/restores these topics before twenty-one prior projections; 1,314 edits remain pinned against the original baseline. Acral and earlier report totals are historical. Four unresolved readiness holds remain protected. Runtime/export stay current; no schema/source/geometry/review migration.
+**Current abdominal-vessel extension:** [28 original drafts](ABDOMINAL_VESSEL_CURRICULUM.md) cover fourteen existing vessels. Body totals: Anatomy 864 draft/158 identity-only; Function 920 draft/98 identity-only/four pending. `authoringBeforeAbdominalVessels` verifies/restores these topics before twenty-two prior projections; 1,342 edits remain pinned against the original baseline. Earlier report totals are historical. Four unresolved readiness holds remain protected. Runtime/export stay current; no schema/source/geometry/review migration.
+
+**Historical thoracic-vessel extension:** [68 original drafts](THORACIC_VESSEL_CURRICULUM.md) cover 34 existing vessels. At that milestone: Anatomy 850 draft/172 identity-only; Function 906 draft/112 identity-only/four pending. `authoringBeforeThoracicVessels` restores those topics before twenty-one prior projections.
 
 **Historical hand/foot bone extension:** [212 original drafts](ACRAL_BONE_CURRICULUM.md) cover 106 individual bone entries. At that milestone: Anatomy 816 draft/206 identity-only; Function 872 draft/146 identity-only/four pending. `authoringBeforeAcralBones` restores those topics before twenty prior projections and separately preserves the two unresolved foot-sesamoid groups' readiness.
 

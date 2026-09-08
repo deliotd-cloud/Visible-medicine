@@ -1,23 +1,23 @@
 {
   "passed": true,
-  "checks": 9774,
-  "bodyRepresentations": 34,
-  "sourceComponents": 72,
-  "lessonGroups": 29,
-  "explicitTopicEdits": 68,
-  "combinedPinnedCurriculumSections": 1314,
-  "sourceIndexChecks": 34,
+  "checks": 8865,
+  "bodyRepresentations": 14,
+  "sourceComponents": 20,
+  "lessonGroups": 14,
+  "explicitTopicEdits": 28,
+  "combinedPinnedCurriculumSections": 1342,
+  "sourceIndexChecks": 14,
   "negativeCases": 12,
-  "bodyReadinessAtThoracicMilestone": {
+  "bodyReadiness": {
     "anatomy": {
-      "draft": 850,
-      "identity-only": 172,
+      "draft": 864,
+      "identity-only": 158,
       "pending": 0,
       "generated-identification": 0
     },
     "function": {
-      "draft": 906,
-      "identity-only": 112,
+      "draft": 920,
+      "identity-only": 98,
       "pending": 4,
       "generated-identification": 0
     }

@@ -1,5 +1,7 @@
 # Third-party notices
 
+The abdominal-vessel update adds brief original factual teaching with medical reference links, not publisher prose, illustrations, tables, scans or datasets. Copyright/NC-ND reference terms are not commercial asset grants. Original code/text retain MIT terms; exact BodyParts3D source evidence retains separate DBCLS CC BY 4.0 obligations. No new assets, dependencies, paid APIs or private data. See `../docs/ABDOMINAL_VESSEL_CURRICULUM.md`.
+
 The thoracic-vessel update adds brief original factual teaching with medical/university reference links, not publisher prose, tables, figures, scans or datasets. Copyright/NC-ND and university publication rights are not commercial asset grants. Original code/text retain MIT terms; source-derived DBCLS BodyParts3D evidence retains separate CC BY 4.0 obligations. No new assets, dependencies, paid APIs or private data. See `../docs/THORACIC_VESSEL_CURRICULUM.md`.
 
 The hand/foot bone update adds short original factual teaching with reference links, not publisher prose, illustrations, scans, tables or datasets. Reference copyright/NC-ND terms are not commercial asset grants. Original code/text remain MIT; separate DBCLS BodyParts3D CC BY 4.0 obligations remain. No new assets, dependencies, paid APIs or private data. The two grouped foot-sesamoid selections are not relabelled as individual components. See `../docs/ACRAL_BONE_CURRICULUM.md`.

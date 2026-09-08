@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Abdominal vessel teaching gates
+
+The [abdominal drafts](ABDOMINAL_VESSEL_CURRICULUM.md) require independent review of portal versus hepatic outflow, hepatic/renal variants, bowel supply territories, source compounds, vessel–organ clearance, branch/ostial continuity and wording. No fixed flow fractions, perfusion maps, patency, renal function, Doppler findings, wall pathology, procedural safety or patient registration are inferred. Four unresolved Function holds and existing specialist/device gates remain.
+
 ## Thoracic vessel teaching gates
 
 The [thoracic-vessel drafts](THORACIC_VESSEL_CURRICULUM.md) require independent review of branch/ostial continuity, compound membership, side-specific relationships, coronary territories, pulmonary drainage variants, venous termination and functional wording. Resolve differing right internal thoracic termination descriptions against source evidence. Display colours do not indicate oxygenation; meshes do not establish wall layers, lumen patency, haemodynamics, procedural safety, CTA/MRI registration or Doppler findings. Existing four unresolved Function holds and specialist-review gates remain.

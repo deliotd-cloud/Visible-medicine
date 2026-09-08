@@ -90,7 +90,8 @@
     "cranial-bone-curriculum:test": "node scripts/validate-cranial-bone-curriculum.mjs",
     "limb-bone-curriculum:test": "node scripts/validate-limb-bone-curriculum.mjs",
     "acral-bone-curriculum:test": "node scripts/validate-acral-bone-curriculum.mjs",
-    "thoracic-vessel-curriculum:test": "node scripts/validate-thoracic-vessel-curriculum.mjs"
+    "thoracic-vessel-curriculum:test": "node scripts/validate-thoracic-vessel-curriculum.mjs",
+    "abdominal-vessel-curriculum:test": "node scripts/validate-abdominal-vessel-curriculum.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

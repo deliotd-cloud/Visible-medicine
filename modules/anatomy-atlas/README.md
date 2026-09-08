@@ -2,7 +2,9 @@
 
 ## Current scope and remaining work
 
-The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: four Function sections remain pending, 112 remain identity-only, and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: four Function sections remain pending, 98 remain identity-only, and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+
+The [abdominal-vessel update](docs/ABDOMINAL_VESSEL_CURRICULUM.md) adds 28 cited Anatomy/Function drafts for 14 existing vessels, distinguishing liver inflow/outflow, gut arterial territories and renal relationships. No extra controls or geometry. Run `npm run abdominal-vessel-curriculum:test`; clinical review remains pending.
 
 The [thoracic-vessel update](docs/THORACIC_VESSEL_CURRICULUM.md) adds 68 cited Anatomy/Function drafts for 34 existing vessels. It distinguishes arterial/venous routes and side-specific relationships while retaining uncertain termination and compound-source warnings. No new controls or geometry. Run `npm run thoracic-vessel-curriculum:test`; clinical review remains pending.
 

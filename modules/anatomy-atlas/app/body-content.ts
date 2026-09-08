@@ -40,6 +40,7 @@ import { cranialBoneLesson } from '../lib/cranial-bone-curriculum';
 import { limbBoneLesson } from '../lib/limb-bone-curriculum';
 import { acralBoneLesson } from '../lib/acral-bone-curriculum';
 import { thoracicVesselLesson } from '../lib/thoracic-vessel-curriculum';
+import { abdominalVesselLesson } from '../lib/abdominal-vessel-curriculum';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -132,6 +133,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (acralBone) return acralBone;
   const thoracicVessel = thoracicVesselLesson(s, tab);
   if (thoracicVessel) return thoracicVessel;
+  const abdominalVessel = abdominalVesselLesson(s, tab);
+  if (abdominalVessel) return abdominalVessel;
   const axial =
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??

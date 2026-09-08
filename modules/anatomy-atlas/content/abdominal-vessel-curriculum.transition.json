@@ -1,0 +1,118 @@
+{
+  "sourceCommit": "9cd9e2f29be0536c23e812c5f8ade06f011c9935",
+  "reason": "28 original Anatomy/Function drafts for 14 existing abdominal-vessel representations; preserve source limitations and unrelated teaching.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+      "fmaId": "FMA3789",
+      "sections": {
+        "anatomy": "c549d7843eb043c79f6c56712fb9b77d084c38f7088eb59e5c504112a933d8f4",
+        "function": "a6c75b4e011701d3dee6a2461d2a57f6b6714aa4299b330c45879872739a742b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+      "fmaId": "FMA10951",
+      "sections": {
+        "anatomy": "3f62591e7c052af9cee277eb0631c5824f998ddeb0c9c30e95bf5dffafdfc71c",
+        "function": "79fe057d564d959d39745a9ebfff03d7b96a8cae8bc0981ecc56fa3febadbde7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+      "fmaId": "FMA50737",
+      "sections": {
+        "anatomy": "41a72b2b5d78d5da4aab88e7b9b08dcf2f9bf40b96dd02cc84cc268570620665",
+        "function": "4c4f26da245f146c2f51fb605e72e301e9919bad8ea1e73d766fb9a1964a7cce"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+      "fmaId": "FMA14749",
+      "sections": {
+        "anatomy": "2e2b9aad2e069758c3305fa31d41d276ff81772efc37c591fc29fb4a40a3db1c",
+        "function": "4fc35f692ec843686c2c05ccd1c1880263b4d7e6856aef665339b4882b37aea0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+      "fmaId": "FMA14750",
+      "sections": {
+        "anatomy": "57919df3e84130b80b411674d0d5f33e1bf0f1f841d23ce4ce1f814aa119c4a3",
+        "function": "2b285894a7b3b1b3ddfcd1ff37e570539e76c9ed61faac7df139bc120c37b792"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+      "fmaId": "FMA14771",
+      "sections": {
+        "anatomy": "be7e644a6624c46458986ae11f59b8e689f85b3e670d6f4448f4adea76295323",
+        "function": "49cb1612b7fb6a215079bfedb8387aede9769d69ace18ce121cb79ad5537f252"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
+      "fmaId": "FMA14772",
+      "sections": {
+        "anatomy": "4b5a2ada3de1a2ac8bcbd5bd7f4ef306594e2ef363af137b1992f5a22368d9c8",
+        "function": "9b166e6b04b394306c6028e6966f2f4ca55229c7a85dd8ec8aa12e69bed45422"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+      "fmaId": "FMA14773",
+      "sections": {
+        "anatomy": "a11bc7b3fd11e392b9e74acba38a76850a2debac4ab6e81dac831bf52c0df355",
+        "function": "d07d2ff2dc06937869ffcad20ac7ddc09bd9924110ce8bfb1bee586445e33169"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
+      "fmaId": "FMA14768",
+      "sections": {
+        "anatomy": "806880e336398393402f9dfbedd6cf43c3d342f1847ec33019f49d3e153e336f",
+        "function": "999f3a96a90cd90f07466bed36d32a0da93b57c3675f654d49581f8c28c9f99b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+      "fmaId": "FMA50735",
+      "sections": {
+        "anatomy": "d26048cf9ed29fe2224e3ec56c7760001b8a343a1b58807a566bd215f6c1889b",
+        "function": "1d49e0ae8542ad2e956235b4b3ffc8454c324303b20c921e881c9d0811130a25"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
+      "fmaId": "FMA14752",
+      "sections": {
+        "anatomy": "232d7f9fed0b2a25545a80042c5250a5d70b5863141c41bd0e5ca098cd95d3f0",
+        "function": "965836000fafb091a7d0e3a0dd6873f5f90b282b074c37ed5ee00c5d006fbeef"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
+      "fmaId": "FMA14753",
+      "sections": {
+        "anatomy": "2a9ac4507e9764a1af4528f08f96b2a664caeae8f3e0943fb63b268eaa7a8940",
+        "function": "363686454c6214246f95464c25c0a2e2d09b769c3cd0f97429f22b82359d1df6"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
+      "fmaId": "FMA14338",
+      "sections": {
+        "anatomy": "189323c8e5d3a458c7d5fe2216cf86ca64f7c2ee9bf86a66222f78af75880e92",
+        "function": "09c44b976057c7686708e9a655abf4e257cc9eb744c6f4a059206acde791759a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
+      "fmaId": "FMA14339",
+      "sections": {
+        "anatomy": "5ea0b587b5b9a65e141ed120dd19292f18b745854c3d63e71f250bffc28a3e4d",
+        "function": "12a8041bbc3655f7c6a35608e66671cf6a378c544350a5c9a0075b742b10c69c"
+      }
+    }
+  ]
+}
