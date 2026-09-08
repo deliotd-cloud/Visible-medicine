@@ -2,9 +2,9 @@
 
 ## Current scope and remaining work
 
-The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: four Function sections remain pending, 86 remain identity-only, and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: four Function sections remain pending, 40 remain identity-only, and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
 
-The [pelvic-vessel update](docs/PELVIC_VESSEL_CURRICULUM.md) adds 24 cited Anatomy/Function drafts for 12 existing iliac vessels, distinguishing pelvic and lower-limb pathways, asymmetric venous courses and compound-source limits. No extra controls or geometry. Run `npm run pelvic-vessel-curriculum:test`; clinical review remains pending.
+The [upper-limb vessel update](docs/UPPER_LIMB_VESSEL_CURRICULUM.md) adds 92 cited Anatomy/Function drafts for 46 existing vessels in 23 paired teaching groups. It distinguishes superficial/deep routes, parent/branch identities and incomplete vascular connections. No extra controls or geometry. Run `npm run upper-limb-vessel-curriculum:test`; clinical review remains pending.
 
 The [thoracic-vessel update](docs/THORACIC_VESSEL_CURRICULUM.md) adds 68 cited Anatomy/Function drafts for 34 existing vessels. It distinguishes arterial/venous routes and side-specific relationships while retaining uncertain termination and compound-source warnings. No new controls or geometry. Run `npm run thoracic-vessel-curriculum:test`; clinical review remains pending.
 

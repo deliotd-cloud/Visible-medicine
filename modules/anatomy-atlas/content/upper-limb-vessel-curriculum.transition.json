@@ -1,0 +1,374 @@
+{
+  "sourceCommit": "35820915bdbfedccbff364cdcbd9ffa9156fdc4f",
+  "reason": "92 original Anatomy/Function drafts for 46 existing upper-limb-vessel representations; preserve source limitations and unrelated teaching.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-artery",
+      "fmaId": "FMA22655",
+      "sections": {
+        "anatomy": "6605cd8c909f125310c84e836ea966fef3914e1db57f858ee0dff29bf568f7a2",
+        "function": "8928eaaa0d7b5206703cffe6ec27269c892518f635d06de4f26d85f837ed7c9e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-artery",
+      "fmaId": "FMA22656",
+      "sections": {
+        "anatomy": "51d3991fb430565d2573808392df73eae21f4cbfff64a9f62a0e7cdd96ac726e",
+        "function": "467c7f118b1476347386b39f3fc1437aa71fda158be84a2acc528dba6f094cf9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-brachial-artery",
+      "fmaId": "FMA22691",
+      "sections": {
+        "anatomy": "47cb266dd2330964ab09c95505c63c7133af55bc2ba278316b38428125a9b906",
+        "function": "9d43166bf9a87a0153a884b9ef328b36effaef6926115edd5518f4ac7d07cae1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-brachial-artery",
+      "fmaId": "FMA22692",
+      "sections": {
+        "anatomy": "5d9617276f4866d9ea32c18ef303f5b177d017fcbe74e25b4d34a1709d0dc1a1",
+        "function": "bc7a6eb0c152796a05f5ebc0dd917e97a35c8e63198691fdfaf93326295c4312"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-deep-brachial-artery",
+      "fmaId": "FMA22696",
+      "sections": {
+        "anatomy": "44fb8c4c608f25055c59a87fffd063e5ebb4b93cda5a756d64dc63e24e781958",
+        "function": "0f67ad6be2268b2bffd3b52d315c748482855ee7ec7fdd6e2691109d2c827cf5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-deep-brachial-artery",
+      "fmaId": "FMA22697",
+      "sections": {
+        "anatomy": "21c25f41d519cb21b3eb8592760e50b44e3763dd92773ccf7f33de3838a1aa43",
+        "function": "1702b23c356d6e2d412aa8d41f6f9f5db8e085c01560ea07cd6054919645e044"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-anterior-circumflex-humeral-artery",
+      "fmaId": "FMA22682",
+      "sections": {
+        "anatomy": "b054a53a21e7937c5659f4bd2ecb17d8b1731b7ac781935860ca0900df2dcebe",
+        "function": "2ee35c69aa8100c828b51746cd5a388c69bc643d6ae7756725ffecfbfc414e39"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-anterior-circumflex-humeral-artery",
+      "fmaId": "FMA22683",
+      "sections": {
+        "anatomy": "3b294ec361a6f4ef6157a348a12d44b3f8dcbba01b17f2ac04e54671541c9e16",
+        "function": "14f66907dbff9a7fef97194e37ac4327bde45cfd9d6febd5587649cf6bd52a07"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-posterior-circumflex-humeral-artery",
+      "fmaId": "FMA22685",
+      "sections": {
+        "anatomy": "73030c2c3dff5a2265eaffde12e7fa4a69f1b0fc3cd13ad2fb02502d6c9fd4e1",
+        "function": "d2e37e0231ad47632add72e3b75c6b77464c5b7d17729281f5a178b6c4c65157"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-posterior-circumflex-humeral-artery",
+      "fmaId": "FMA22687",
+      "sections": {
+        "anatomy": "c60e8fd3fbcb6a21b0b06f0846ad8d952c7d4db7a5648546bfa41f4a9118c6e8",
+        "function": "e0bc958f1073db0a7b45b5a64b50e4c0ce8105309e0c048e38ad39cb605e6304"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-circumflex-scapular-artery",
+      "fmaId": "FMA23180",
+      "sections": {
+        "anatomy": "826c18b6291d0e2fe8fbb33800189b62c548950c9a93dcb37872a33ceadc5dc5",
+        "function": "e3abeb0753b6e3c5833a0698700be0ec529e9894684f8c83f5a4195086df3dff"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-circumflex-scapular-artery",
+      "fmaId": "FMA23181",
+      "sections": {
+        "anatomy": "46931447381b1093f308ef441d3d7072b46fe295e6a5a6dc69bf0dca95b3ea99",
+        "function": "f8f69bd6acb65c656aa3ea389a9eb3fb1edc9fe803bc88571823ba49af0b0492"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thoracodorsal-artery",
+      "fmaId": "FMA66321",
+      "sections": {
+        "anatomy": "0107c6bf4b0879f9215a68dd6ef8cf346bf50b3715154ed0fddce8ecee7f83d2",
+        "function": "c599051844f66d72ee37921d2017f0dcbddbf7b792c4a42d0ce969a423ac3097"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thoracodorsal-artery",
+      "fmaId": "FMA66322",
+      "sections": {
+        "anatomy": "0a8640e1ca886d281023139ecc0aef7f80d9dbe29f7628e0e94c1fe236dde7f4",
+        "function": "c8972e7899cfb814cc77ce7fcee75b5197fe93767227c9eb06004756e31f3f83"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+      "fmaId": "FMA22733",
+      "sections": {
+        "anatomy": "080188b23e69f478bc5c9107c02f1caed43bac618f2a2827355ccc3bdc350410",
+        "function": "a382f2a711e465f3042df85ddd3320cf79dd7d4be75e51410797b0fe2191e798"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+      "fmaId": "FMA22734",
+      "sections": {
+        "anatomy": "89b2812f41672e92a01d7fc4b3951dd56b8592fbab922c37dcd063616fb07126",
+        "function": "118e684f5687ca3257f92f7f285ade82be91d047106e7ba28ae18b3b995dee1c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+      "fmaId": "FMA22797",
+      "sections": {
+        "anatomy": "ee4da2acc489fc99b0dc0c4d6e1a4f407ddcc4339973eecf871bdf4a7b474b3a",
+        "function": "14d3d9ce5574ad8e998541bf0a8aa0a42ee86c129dad936356b2a3ac267f3781"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
+      "fmaId": "FMA22798",
+      "sections": {
+        "anatomy": "618a7dac71b300e82d5fd81528852b4de7de950785dd9bee23bdb679b22cd67e",
+        "function": "c208988ef7e64d9b100967ea6f721b24cc5d96a8ac802753c9a42bc06a2ba271"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+      "fmaId": "FMA22812",
+      "sections": {
+        "anatomy": "bacd9c81849ba63e4a14477c7f031621bc0509f4c6165d0d7909be90f3a8884d",
+        "function": "760c3afa352ae138f4d51999382aaf77e73f84c5046b9d2bf2119d3451da0a53"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+      "fmaId": "FMA22813",
+      "sections": {
+        "anatomy": "ae603760d2d548552e4a7656e83e583e89706e68a437e543796fa60579a44073",
+        "function": "bb7b1a0b616825603f18b8139dd7bb98230ba209b8201913657fa4a0c654465b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+      "fmaId": "FMA13325",
+      "sections": {
+        "anatomy": "22bd7597e1ad58ec61a75f93d26e7015af1e8665acc6689cf635d38352330932",
+        "function": "84a9d65d64e213a49acf8b7c2d2105cb4f2ff30bd24a22d4198246602a0d690b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
+      "fmaId": "FMA13326",
+      "sections": {
+        "anatomy": "c515719763b3106707a66e4ef8101c50ed14f81257c49a0f7be310bfbf10340a",
+        "function": "32392d14f60312311891fb1cff90d3c482e4307e125bb48c7cc91f5ef5425df2"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
+      "fmaId": "FMA22909",
+      "sections": {
+        "anatomy": "fcfd306d4198b5e26eaf38f27ffa1e95aa951a530345120cf293835e15459cae",
+        "function": "187b09650b9e19ea1e8ecda6d819db3261b276977db5b41770e91e2043a1cec5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
+      "fmaId": "FMA22910",
+      "sections": {
+        "anatomy": "61456445ef50227b1a6c46838e438b07c767865881cc0fa76dc6fa7a8b76d18f",
+        "function": "01f3cc32c3dbecfcf0c900d596f33b85e5ce19902aee3ac08147c07ca17cf3d0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+      "fmaId": "FMA22839",
+      "sections": {
+        "anatomy": "5f09244a083aa0cc2ac44203a49341bdd265ed5c347fc93aefc6aee7ec47ba1b",
+        "function": "c8064eb616d5c581921bde76e2292eec27c591cf5ecc8fd56fc9e8682a5567ba"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
+      "fmaId": "FMA22840",
+      "sections": {
+        "anatomy": "0ab1b3198dbffbfba15693fe32586b7a2e30af9226989634b8ca34b5287b63d5",
+        "function": "e94be367557a5d4e7e45b0250b5ac369c06f0ac26b6c526b5ca7584b20ddb6c5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+      "fmaId": "FMA3992",
+      "sections": {
+        "anatomy": "6b0da51928cee07bf5e8631e606906e9e7a885933b92aff7c8ebfc3186b6a489",
+        "function": "4bef529b8ec828a6a7f9033f5efee80a708e4b96ba2c2da255dc3b965bde65b4"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+      "fmaId": "FMA4084",
+      "sections": {
+        "anatomy": "f23a06aeac7a1b25871f9ab84794cd6251b65a52685b2312bf8abeb59a59323e",
+        "function": "1da0abad495fbe0b8ada4c49b2eaa07f0498fade09bce29121f1d9040e724153"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+      "fmaId": "FMA5039",
+      "sections": {
+        "anatomy": "20f0a7be513365cfe20929927cb295a0e122ee4194653a99e9fd8a4ed27bd71d",
+        "function": "00c993476b2a95c4d2e56f9d460accc35d25c7d250f44c6ffdf98d896e5d8bc1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+      "fmaId": "FMA4086",
+      "sections": {
+        "anatomy": "59fd30481ae18c219299bf458a4629774d9f0b7b1dd360a91101f85ab7445bbe",
+        "function": "b36d0ab6e0a64acf12a4d86c1222f8b7f3ac154d8d51cd1f374695837495a461"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+      "fmaId": "FMA4057",
+      "sections": {
+        "anatomy": "3a252a3df618842a331b5bee4d26457d91a05bf58c27df48eb9829e7198adbcb",
+        "function": "dfee263bceaddccb97eb60d097c66b64a5bc9d980f5d2bb17c14369be80fddf5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+      "fmaId": "FMA10552",
+      "sections": {
+        "anatomy": "e111f3c559fa83602db91a887fde8b9276f8e73b0fc588a78a366eaf84c4fc03",
+        "function": "8894ee2fd9f0d272369e0ecc8bbe620eb29a4cc6133a1fcbca15a94302f4679e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+      "fmaId": "FMA10698",
+      "sections": {
+        "anatomy": "1061875e567470509cc83fc64f55e9ede57379e6fc51c87d6064a05226025d56",
+        "function": "69a331e64239815a3b1cd47d2200e425e710a24d584521cc8d8ffe99cc7d9832"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+      "fmaId": "FMA10681",
+      "sections": {
+        "anatomy": "f75aabeece8f0d1f958649f4fcdbf815358a35c1efca9cfc8a41e8ffe391300b",
+        "function": "90ea05768f9f2bac07bc817e3ad02da3a4c51ac05157dfad42ac07214d067e50"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+      "fmaId": "FMA13330",
+      "sections": {
+        "anatomy": "53914693b7c042d896263bd2aab6fb9c2ba010d11fe3c9916ca4d41c54c3d985",
+        "function": "54e21437593c71f9024049906490a989d22242b3306c20a66f097cb6f671a241"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+      "fmaId": "FMA13331",
+      "sections": {
+        "anatomy": "766fafc26c0a1392d92b699e3ad0d7126a841b0eaae603cb26331cbd1d60338b",
+        "function": "f5e8fd04945b696a459a45947868c9b28e2a349dced13340d621815330106642"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+      "fmaId": "FMA50859",
+      "sections": {
+        "anatomy": "3bed96662fac5119656ff8478fdd489f1561b6b5e5bb137eba9b3a43fefa45aa",
+        "function": "4e820e42eb6f61d9794dfdaa69d4c7846cc7a06ce96a90e5b95ff2e67a69b0ed"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+      "fmaId": "FMA50860",
+      "sections": {
+        "anatomy": "165e1f1fd7741ac41bc2cfb1ce617a640a721cf0caf6632abbdffe5b9a2fef92",
+        "function": "075ba643c9a2fb5c3acb6829b7e4f59074c5bef8a026a1660ebb9f8af0c3b7d1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA66563",
+      "sections": {
+        "anatomy": "ae4a2fd2faf0e8114e5c994bb7926042d04ae298000613d1cc423eb80ab1eb7d",
+        "function": "7da58c3a10deec3c6f35eacff61676a2a970b470576a45b3502cd5e54c903ec5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA66564",
+      "sections": {
+        "anatomy": "23c8996987b39c11f6c59400f4a62f2f7e60b2e96fa980df2a9abcfb8737676f",
+        "function": "5ed1f3446909de557ebad3b3808ea0e804fb3ef8e323acb5409353c6d2a9f8eb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA23063",
+      "sections": {
+        "anatomy": "1f6094e9c73a668697affaf2e6cf5a90b6a8420c687f8a315cd1c8b05dbc16b0",
+        "function": "0165cd852ffbb31b76f5f22f560428655ca0675fc22b52f790f739c94b342f39"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA23064",
+      "sections": {
+        "anatomy": "a2a45582203e295b99981753f533c946e18142a43c6a1cb7f284f34f0506bdf7",
+        "function": "52f9ab66f2980c9b18e783d0dc2962ae8471a63da415b432681ebfc35d9e2261"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA23068",
+      "sections": {
+        "anatomy": "e1b9d0357a0b47d48d72159fae512d9c31d2f805564198181d958ebfa3d19c40",
+        "function": "98cc337ada4ea736a60ceaeabb68e171f2085f7790686a2461ab9568e4134991"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA23069",
+      "sections": {
+        "anatomy": "2d152613f22af689ac4cc39c0a886ded201558d357d4a35ea4040292f56d7e3e",
+        "function": "c0eb46371e221677e9994e647bad4d308805cb2126f8fb84dccf1b7906681308"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA23072",
+      "sections": {
+        "anatomy": "3012d6826797279dbb78a26a278b06212df237b3d71eeceab8d28ff0a8f8c89a",
+        "function": "769a90f769ce252522d61080dab2896b091d7741fe1d4d6176c35f8ca0b17902"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA23073",
+      "sections": {
+        "anatomy": "440c6f0caf412a9e17d16e097d161def85a1737cc907df6d4cf7b2d1322f23ad",
+        "function": "99b783d4c4efb5c8edb3d15a62f53bb9f001a5dbad5776bad96557fd95fb639a"
+      }
+    }
+  ]
+}

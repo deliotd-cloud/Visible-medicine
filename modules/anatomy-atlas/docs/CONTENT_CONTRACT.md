@@ -2,7 +2,9 @@
 
 ## Delivered scope
 
-**Current pelvic-vessel extension:** [24 original drafts](PELVIC_VESSEL_CURRICULUM.md) cover twelve existing vessels. Body totals: Anatomy 876 draft/146 identity-only; Function 932 draft/86 identity-only/four pending. `authoringBeforePelvicVessels` verifies/restores these topics before twenty-three prior projections; 1,366 edits remain pinned against the original baseline. Four unresolved readiness holds remain protected. Runtime/export stay current; no schema/source/geometry/review migration.
+**Current upper-limb vessel extension:** [92 original drafts](UPPER_LIMB_VESSEL_CURRICULUM.md) cover 46 existing vessels in 23 paired teaching groups. Body totals: Anatomy 922 draft/100 identity-only; Function 978 draft/40 identity-only/four pending. `authoringBeforeUpperLimbVessels` verifies/restores these topics before twenty-four prior projections; 1,458 edits remain pinned against the original baseline. Four unresolved readiness holds remain protected. Runtime/export stay current; no schema/source/geometry/review migration.
+
+**Historical pelvic-vessel extension:** [24 original drafts](PELVIC_VESSEL_CURRICULUM.md) cover twelve existing vessels. At that milestone: Anatomy 876 draft/146 identity-only; Function 932 draft/86 identity-only/four pending. `authoringBeforePelvicVessels` restores those topics before twenty-three earlier projections.
 
 **Historical abdominal-vessel extension:** [28 original drafts](ABDOMINAL_VESSEL_CURRICULUM.md) cover fourteen existing vessels. At that milestone: Anatomy 864 draft/158 identity-only; Function 920 draft/98 identity-only/four pending. `authoringBeforeAbdominalVessels` restores those topics before twenty-two earlier projections. Earlier report totals are historical.
 

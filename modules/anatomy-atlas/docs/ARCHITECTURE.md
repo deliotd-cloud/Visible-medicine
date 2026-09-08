@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Upper-limb vessel teaching dispatch
+
+The newer [upper-limb extension](UPPER_LIMB_VESSEL_CURRICULUM.md) uses `lib/upper-limb-vessel-curriculum.ts`: 23 explicit paired definitions resolve 46 FMA/side-specific lessons. Each checks vessel system/category, primary region and all recorded region memberships. Its pinned offline transition runs before pelvic and earlier projections; display/export remain current. No source binding or review schema changes.
+
 ## Pelvic vessel teaching dispatch
 
 `lib/pelvic-vessel-curriculum.ts` supplies twelve exact definitions, guarded by FMA, side, vessel system/category, pelvis primary region and all abdomen/pelvis/thigh memberships. Compound selections are not relabelled as tributaries. Its offline transition runs before the abdominal and earlier projections; display/export remain current. See [scope and evidence](PELVIC_VESSEL_CURRICULUM.md).

@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Upper-limb vessel teaching gates
+
+The newer [upper-limb drafts](UPPER_LIMB_VESSEL_CURRICULUM.md) require review of arterial origins, boundaries between named vessels, superficial/deep venous junctions, palmar and scapular connections, component identity and wording. Named arteries do not validate missing nerves, perfusion territories, arch completeness, flap viability or safe access. Costocervical roots and venous termination are not forced into mirrored anatomy. Source/device and four unresolved Function holds remain.
+
 ## Pelvic vessel teaching gates
 
 The [pelvic drafts](PELVIC_VESSEL_CURRICULUM.md) need independent review of iliac bifurcations/confluences, side-specific artery–vein crossings, inguinal transitions, pelvic tributaries, source compounds and wording. Static overlap is not May–Thurner syndrome; source-file counts are not branch counts. No vascular patency, Doppler finding, female pelvic vessel model, procedural corridor or registration is established. The four unresolved Function holds and existing clinical/device gates remain.
