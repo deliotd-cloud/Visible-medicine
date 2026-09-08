@@ -1,0 +1,326 @@
+{
+  "sourceCommit": "3722ecef2403a34e80b542cead884944c1387017",
+  "reason": "80 original Anatomy/Function drafts for 40 existing regional-vessel representations; preserve source limitations and unrelated teaching.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
+      "fmaId": "FMA3941",
+      "sections": {
+        "anatomy": "d29581278a50ebd00592a2921a1348346421664bf8dfaf7b29efa834bcc77eeb",
+        "function": "98c791a03bc6e4e18505e9da7680ac6b3e72a55e524b6a8993716d78f01172b2"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
+      "fmaId": "FMA4058",
+      "sections": {
+        "anatomy": "2f54a3131b04089fce98e3f35b1c5a4e00165d6b1b8fa99a46201d93984627d5",
+        "function": "7b0aa755463437a73500160521cd76d4365049302f82f53e5baac19a4bfed9e3"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-internal-carotid-artery",
+      "fmaId": "FMA3949",
+      "sections": {
+        "anatomy": "bedc2c596875746bb8f8e976ba4dfb54e31fdc18a4a2c2b79d80295c08d428bb",
+        "function": "30c5232e315817e25d136536062342a6441842d3520c4a198061a8463948de94"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
+      "fmaId": "FMA4062",
+      "sections": {
+        "anatomy": "847370a44f5d9af518624e99a4577d3bb24db3da6b815effb1eb949357f64147",
+        "function": "cfeb7d733d1a3a6b75a3f858eb84acb4aa28fb138e3e6910d5eded168eb6fc91"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-vertebral-artery",
+      "fmaId": "FMA3958",
+      "sections": {
+        "anatomy": "fc5238e3f3094ea04494118597aa74f0d3b0f3c7a3c4785fac9c8a46acd69ca1",
+        "function": "e480f6507332c442e503894d2940821bacd99e1e83fdc15cdc07b3e65556f8b3"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-vertebral-artery",
+      "fmaId": "FMA4066",
+      "sections": {
+        "anatomy": "81cef939abcb098693d2a0f3584a2c5f5675c6e310706ab3933c849dbbb247cc",
+        "function": "c3820f37937c47da56adf8e39ee78f381a9b1b7b483666acf7ec73091dd7bc7f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-internal-jugular-vein",
+      "fmaId": "FMA4754",
+      "sections": {
+        "anatomy": "37f89968265f559d540e92d808058722cce553eb02f3d5cc4758928dcdf9a018",
+        "function": "ae342b7571f4d973a771448af22cf9f91142235d3ce390920765e2a7b45832eb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-internal-jugular-vein",
+      "fmaId": "FMA4762",
+      "sections": {
+        "anatomy": "4253e657f10a6109a9b942b7b9e59649dbabccb6c019dae825a3dabb64362284",
+        "function": "28557ef205cf364bfd1c5629638768e67254610906ad918262144efdd0aa6838"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:vessel:basilar-artery",
+      "fmaId": "FMA50542",
+      "sections": {
+        "anatomy": "7609cc0e9cea27b7904848531299ba0b5c0d45d691717d303ef570e536f78344",
+        "function": "339be30ca21311a7056c0e48cefd345e7576a41d55f9155c2ec0c72ec047dd7a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:vessel:anterior-communicating-artery",
+      "fmaId": "FMA50169",
+      "sections": {
+        "anatomy": "cace55ff105b6393f7b85dc1ee22f7243d2e03e3e51f0147d227eccd0ae726d9",
+        "function": "5acf6b2ca00712d999f780640e7aeb587ea9b0ffc7351a0c160b0294c5a21a2a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-anterior-cerebral-artery",
+      "fmaId": "FMA50029",
+      "sections": {
+        "anatomy": "305df842caf6e422aa3f5bc5e96fb2bff3fd0916eb8a55ba6bd34647fc9f1ce9",
+        "function": "afaf1329ac349492e40141feaaa1df8748dcb565966a89e610d2165f5c3ade9a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
+      "fmaId": "FMA50030",
+      "sections": {
+        "anatomy": "adf8f65f92339a88e74afb2df90f9a9847fe3ada527175ec0e6d343642aa9daf",
+        "function": "bf9f372de87d35c832e83b49fe2ef551053dd640e377851ac6509dea9fea40bc"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-cerebral-artery",
+      "fmaId": "FMA50584",
+      "sections": {
+        "anatomy": "c4c6cb663a97c7d60240b76e5aed254e0c62608981bed22907c8437495ef1d48",
+        "function": "38af0e3e581d78f7afef9714613dcf477b755bdbac6f590f085f15fb4ab57410"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-cerebral-artery",
+      "fmaId": "FMA50585",
+      "sections": {
+        "anatomy": "befbcc93c2bddc10481c8a36a6185d560945c15e4b9947f9993e6b7850dfe193",
+        "function": "3bc5bb53963bdf7c97de09bd8a023affc2184fb7d69a735dc27e74bfa2ccd5ba"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-communicating-artery",
+      "fmaId": "FMA50085",
+      "sections": {
+        "anatomy": "03ae3ef2de97fbca7bfcc8496a9aa1ae994541d64461354a733be8f75868c56d",
+        "function": "cd197df1f2be5ab46b3268ae8810998e34c57d21a57739d1f055766f33f59651"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-communicating-artery",
+      "fmaId": "FMA50086",
+      "sections": {
+        "anatomy": "8190a9a6562f6192983a7a3b050342dc26819f022cfae81757a8147613fb3f58",
+        "function": "1b2ce98447f8a4f0c65abf9a9dd7c64a94d6a789bee49914da0385637bb1f5e9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-femoral-artery",
+      "fmaId": "FMA70249",
+      "sections": {
+        "anatomy": "e7fb6a1e6c3d3b6aa017d4309d5bd9e1fdc6a066e504d1cfae337fe1dc93dc2c",
+        "function": "c66478330fa98d0f87d0cce0a7f9d3e7b51f1de001cb5ca55fbcb57d8be644a9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-femoral-artery",
+      "fmaId": "FMA70250",
+      "sections": {
+        "anatomy": "d95b18c385d4fe82f0a3124c2d23bdc6009f202600045978fcb5d87b89d624e1",
+        "function": "6a41395342bec557649c5340f3b5e269e6f2eab016448dafcf994fb46c0c81cb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
+      "fmaId": "FMA20796",
+      "sections": {
+        "anatomy": "da98bf39ac21ff59e2d77d8ff467c61c2de810d661b060f29a3e4887ca9d6600",
+        "function": "d4b345d95d03692f654043606056b989874cb81b7c807656e04118129e9f07ff"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery",
+      "fmaId": "FMA20797",
+      "sections": {
+        "anatomy": "bd95c1952194d919f4cafd1132999a9221565d085ad73d3e73fbdb5467a35441",
+        "function": "f0a5c829c85cfa9a6a045fdecf3486c482d7d260860754d8d30d40c4ae06c0dd"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
+      "fmaId": "FMA21188",
+      "sections": {
+        "anatomy": "c7a336dc1124ea91cb77985f9da1e490285bd3e5660db6c7db4293241534565a",
+        "function": "f28c50567213d66ddc411bedf54d1379d3df230e124933a3cef121ca0b22124d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
+      "fmaId": "FMA21189",
+      "sections": {
+        "anatomy": "6fa888354bc508fdcdf553711e418d1e21048da030b8d5c210f9133fa81f23f5",
+        "function": "2f880b35faf634095068b24b5ee5f2eeaf633ec9b2b04045fdaa949df9da9d53"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
+      "fmaId": "FMA21379",
+      "sections": {
+        "anatomy": "d294385338200c9b4aa952fb8c8c551c00bf4ceb2874bb5a9148f00db26617a9",
+        "function": "e717550407f7b4f1e4d4e31a254a6cab46916703848a3d681226cccc9ed663d8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+      "fmaId": "FMA21380",
+      "sections": {
+        "anatomy": "fc2ce6166fc876e11c71c56643e3b7e2d507a5fb082e0ee8d06737964cdad55b",
+        "function": "3f8b16a02c2d6b49d71a599a34cacafbb6aacd43015d8ba35671c64610f376d1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+      "fmaId": "FMA77380",
+      "sections": {
+        "anatomy": "948bb5595fae1727b34bac190f82dde90e10b52b94a86e9599321e4acdce64fa",
+        "function": "1131ed198e038fb11dfdf07091a4cd18b4b5a9cff0bf455c89f8d019f91751dc"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+      "fmaId": "FMA77381",
+      "sections": {
+        "anatomy": "198c3282ae0ccfae695774fc01ad2fb871320ef053f7ad8d52f635d1e8fca303",
+        "function": "5e72dd2dc9f6fc6827d83a62e34e0fa9edcb5d2357e34bcc507594b9f99172bd"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-artery",
+      "fmaId": "FMA43896",
+      "sections": {
+        "anatomy": "0b096802f35dcc2cef3efe41af1f6dadf3f36cb6d8a36bd33b28e795078cf020",
+        "function": "fe76fd93bed0cdf773eccc701cb1816a0f3468ad25d5b5969631485b2c661da4"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-artery",
+      "fmaId": "FMA43897",
+      "sections": {
+        "anatomy": "bd9eda51506e26b78df3a210fdbc8e3aff5ebf83418908689fccb5d97a36f3de",
+        "function": "5f6bc4daf3606e86f813f6c59819251a6d31c5e39b6007fd1c9b78672f3b0fef"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-artery",
+      "fmaId": "FMA43898",
+      "sections": {
+        "anatomy": "841c76263ef3c01123475b92064f0e184301eec4fb9ce0d0b42a83fa76232338",
+        "function": "ad59308b882ca01b7e2934f8d22ad6ce5c17a19133e6bfbc5dd61680850d80d8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-artery",
+      "fmaId": "FMA43899",
+      "sections": {
+        "anatomy": "ee74f2900f03e371a21404f6320a347dd956b71d8618eb730674b61210bbeb2d",
+        "function": "ec69b8d89eaf4384a211b75684ca7e5b8880028fb67a81927c7f769a744a3ed1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
+      "fmaId": "FMA44328",
+      "sections": {
+        "anatomy": "ae9fc0801cc712ff556b39b5532595563c6f8d5448a6b959df8be70c3132cbe5",
+        "function": "3d8c4794da72780f7cadb400934919edc479ad7a7c79d8a9e800d9e597841b95"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-vein",
+      "fmaId": "FMA44329",
+      "sections": {
+        "anatomy": "e731f90f06ca7bf06fc8896c1cfa63f44aa92e379b0a33b4aaed85d15441ec2d",
+        "function": "0fae14d277d2d9c5d942e0dacd3050a0f47fd7262e48184eda8fc5ef1f58d8f2"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-small-saphenous-vein",
+      "fmaId": "FMA44334",
+      "sections": {
+        "anatomy": "e00791fb4d5c5837e7d165820994c38942e0a2ed30723698a7f4a19d6e2c182c",
+        "function": "7cd34be9100254434939962cbb675ab61400f869e686fbac5facc2149e354e89"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-small-saphenous-vein",
+      "fmaId": "FMA44335",
+      "sections": {
+        "anatomy": "050153394be34cbb3b684cdb00de5e5661774d33737b1e805392b9fd69510dfb",
+        "function": "4ce1c44be9adef89ff3e7cb1e2a489ba887c932c0b7b18b9ca4fc6a6ddedc4ab"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
+      "fmaId": "FMA43916",
+      "sections": {
+        "anatomy": "5d09f90e020798277d23a5b164efe76338db3bf5d6b917c7fb90f82cae944bf1",
+        "function": "cf9382e40cd2c63e122880adc10f314daeb950dfe8de28a823457f1ded81b0c1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
+      "fmaId": "FMA43917",
+      "sections": {
+        "anatomy": "5a51577818afaeb7bc512c557a1511f96144c370a3304b5b59a869e4fabe503d",
+        "function": "d9b063e81f4cbabf484549f0f7bcf6c0b1910ba65ec0f160382d5af0924140f4"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+      "fmaId": "FMA43929",
+      "sections": {
+        "anatomy": "31a0bef3d854f89db25d456c8ebae15378198d72e8c908e130d62418905d7e69",
+        "function": "8ae29061c0580ebffd95b3096ee8ced46a1a8f317ada8d51f224d8f0fe4059ad"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+      "fmaId": "FMA43930",
+      "sections": {
+        "anatomy": "bd15686a4cfbb358b44f07c7d2a235ab25e8cce67ef4dbe8db74b4185f28a91d",
+        "function": "637ea9c5d0f0a6731d454802d6a945a7a0686a6c8d181682a2882259a493a56c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
+      "fmaId": "FMA43931",
+      "sections": {
+        "anatomy": "7d725a8e2d33e22d98400f2ff0f9321d8079463d48a690284e1902693a31b855",
+        "function": "676c9136430db79cd79d2a486ccfed37c582f4152fd221b31171652102ea3f05"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
+      "fmaId": "FMA43932",
+      "sections": {
+        "anatomy": "3b7446327288b48345dc8da2a94356d0a279f72b3bcb830f68bc532d57fd0097",
+        "function": "a125d8b09c3e2e27488fa7caa2a9a754979899cec4de5d284db03e00a85ed00f"
+      }
+    }
+  ]
+}

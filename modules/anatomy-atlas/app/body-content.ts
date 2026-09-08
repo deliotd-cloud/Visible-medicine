@@ -43,6 +43,7 @@ import { thoracicVesselLesson } from '../lib/thoracic-vessel-curriculum';
 import { abdominalVesselLesson } from '../lib/abdominal-vessel-curriculum';
 import { pelvicVesselLesson } from '../lib/pelvic-vessel-curriculum';
 import { upperLimbVesselLesson } from '../lib/upper-limb-vessel-curriculum';
+import { regionalVesselLesson } from '../lib/regional-vessel-curriculum';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -141,6 +142,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (pelvicVessel) return pelvicVessel;
   const upperLimbVessel = upperLimbVesselLesson(s, tab);
   if (upperLimbVessel) return upperLimbVessel;
+  const regionalVessel = regionalVesselLesson(s, tab);
+  if (regionalVessel) return regionalVessel;
   const axial =
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??

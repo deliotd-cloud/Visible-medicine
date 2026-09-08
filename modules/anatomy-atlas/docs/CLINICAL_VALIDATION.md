@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Regional vessel teaching gates
+
+The [head/neck and lower-limb drafts](REGIONAL_VESSEL_CURRICULUM.md) require source-specific review of origins, branching, named boundaries, cerebral connections, deep/superficial venous identity, plantar arches, compound files and wording. Midline selections are not paired arteries; file counts are not branch counts. No collateral adequacy, infarct map, patent lumen, reflux, procedural safety or modality acquisition is validated. The four unresolved Function holds and source/device gates remain.
+
 ## Upper-limb vessel teaching gates
 
 The newer [upper-limb drafts](UPPER_LIMB_VESSEL_CURRICULUM.md) require review of arterial origins, boundaries between named vessels, superficial/deep venous junctions, palmar and scapular connections, component identity and wording. Named arteries do not validate missing nerves, perfusion territories, arch completeness, flap viability or safe access. Costocervical roots and venous termination are not forced into mirrored anatomy. Source/device and four unresolved Function holds remain.

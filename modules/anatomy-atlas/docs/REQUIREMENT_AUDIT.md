@@ -29,7 +29,7 @@ The reproducible [inventory](requirement-audit.json) executes the actual content
 
 ## Teaching depth: actual displayed copy
 
-The latest [upper-limb vessel curriculum](UPPER_LIMB_VESSEL_CURRICULUM.md) adds 92 cited Anatomy/Function drafts across 46 existing vessels in 23 paired teaching groups. Four Function records remain pending: two grouped foot-sesamoid selections and the muscle/fornical holds. Another 40 Function records remain identity-only, not completed teaching. Source geometry, vascular continuity, territories and physiology remain unvalidated. Older milestone counts below are historical.
+The latest [regional vessel curriculum](REGIONAL_VESSEL_CURRICULUM.md) adds 80 cited Anatomy/Function drafts across forty existing head/neck and lower-limb vessels in 21 teaching groups. Four Function records remain pending: two grouped foot-sesamoid selections and the muscle/fornical holds. Function identity-only count is now zero, but sixty Anatomy sections and most specialist topics remain unauthored. Source geometry, vascular continuity, territories and physiology remain unvalidated. Older milestone counts below are historical.
 
 The latest [organ curriculum](ORGAN_CURRICULUM.md) supplies 46 cited Anatomy/Function drafts for 23 existing representations. No organ-system Function entry is now pending, but that does not imply complete organ geometry or clinical teaching. Source eye-component asymmetry, adult-male tract, fixed-age thymus and internal-layer limitations are explicit. Unresolved muscle FMA19728 and fornical commissure FMA61970 remain pending. Earlier milestone counts below are historical; the table and generated inventory are current.
 
@@ -37,8 +37,8 @@ These are counts among the **1,022 body representations**, not unique lessons, a
 
 | Body topic | Specific or source-group draft | Generic identity/disclaimer | Explicitly pending | Generated identification prompt |
 | --- | ---: | ---: | ---: | ---: |
-| Anatomy | 922 | 100 | 0 | 0 |
-| Function | 978 | 40 | 4 | 0 |
+| Anatomy | 962 | 60 | 0 | 0 |
+| Function | 1018 | 0 | 4 | 0 |
 | CT | 11 | 0 | 1,011 | 0 |
 | MRI | 11 | 0 | 1,011 | 0 |
 | Ultrasound | 11 | 0 | 1,011 | 0 |

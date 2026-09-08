@@ -1,5 +1,7 @@
 # Third-party notices
 
+The regional vessel update adds brief original factual teaching with medical/university citation links, not publisher prose, diagrams, tables, scans or datasets. NC/NC-ND reference terms and university availability are not commercial asset grants. Original code/text retain MIT terms; exact DBCLS BodyParts3D source evidence retains separate CC BY 4.0 obligations. No new assets, dependencies, paid APIs or private data. See `../docs/REGIONAL_VESSEL_CURRICULUM.md`.
+
 The upper-limb vessel update adds brief original factual teaching linked to medical and university references, not publisher prose, figures, tables, scans or datasets. StatPearls NC-ND terms, Kenhub copyright and university-hosted content are not commercial asset grants. Original code/text retain MIT terms; exact DBCLS BodyParts3D source evidence retains separate CC BY 4.0 obligations. No new assets, dependencies, paid APIs or private data. See `../docs/UPPER_LIMB_VESSEL_CURRICULUM.md`.
 
 The pelvic-vessel update adds brief original factual teaching linked to medical references and a university-hosted study abstract, not publisher prose, tables, figures, scans or datasets. Copyright/NC-ND reference terms and the study's exclusive publishing licence are not commercial asset grants. Original code/text retain MIT terms; exact DBCLS BodyParts3D source evidence retains separate CC BY 4.0 obligations. No new assets, dependencies, paid APIs or private data. See `../docs/PELVIC_VESSEL_CURRICULUM.md`.

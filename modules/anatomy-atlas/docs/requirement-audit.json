@@ -9,8 +9,8 @@
     "content/review-revisions.json": "abc8f9410e00b41282e149d2bb6020d96ad6367aed769888519940c4c24118a0",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "b777714901da4001b97763643441513533da67539f80b0225ae142863471db42",
-    "explicitTopicReadiness": "63f5fd6355b21ec261cb51f523fa410eb47d78093829d7dbf73f9018223af269"
+    "resolvedContentAndRecipeData": "ab23163faf4b24657c83b8845df16bf1ea0a02016ec44cb2994fa0a1116ab653",
+    "explicitTopicReadiness": "a99f9aeb22bc560a7135359f6e9ed8f014ede32d56c39076d80e152f9e13f7e6"
   },
   "anatomy": {
     "bodyRepresentations": 1022,
@@ -101,14 +101,14 @@
     "classificationLimit": "Explicit readiness from authoring branches; not inferred from titles and not clinical approval. Existing shoulder authoring is explicitly draft.",
     "body": {
       "anatomy": {
-        "specificDraft": 922,
-        "identityOnly": 100,
+        "specificDraft": 962,
+        "identityOnly": 60,
         "pending": 0,
         "generatedIdentification": 0
       },
       "function": {
-        "specificDraft": 978,
-        "identityOnly": 40,
+        "specificDraft": 1018,
+        "identityOnly": 0,
         "pending": 4,
         "generatedIdentification": 0
       },
@@ -202,14 +202,14 @@
     "byRegion": {
       "head-neck": {
         "anatomy": {
-          "specificDraft": 242,
-          "identityOnly": 33,
+          "specificDraft": 258,
+          "identityOnly": 17,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 258,
-          "identityOnly": 16,
+          "specificDraft": 274,
+          "identityOnly": 0,
           "pending": 1,
           "generatedIdentification": 0
         },
@@ -252,14 +252,14 @@
       },
       "thorax": {
         "anatomy": {
-          "specificDraft": 127,
-          "identityOnly": 26,
+          "specificDraft": 135,
+          "identityOnly": 18,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 145,
-          "identityOnly": 8,
+          "specificDraft": 153,
+          "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
@@ -352,14 +352,14 @@
       },
       "pelvis": {
         "anatomy": {
-          "specificDraft": 56,
-          "identityOnly": 9,
+          "specificDraft": 64,
+          "identityOnly": 1,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 56,
-          "identityOnly": 8,
+          "specificDraft": 64,
+          "identityOnly": 0,
           "pending": 1,
           "generatedIdentification": 0
         },
@@ -552,14 +552,14 @@
       },
       "thigh": {
         "anatomy": {
-          "specificDraft": 73,
-          "identityOnly": 8,
+          "specificDraft": 81,
+          "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 73,
-          "identityOnly": 8,
+          "specificDraft": 81,
+          "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
@@ -602,14 +602,14 @@
       },
       "leg": {
         "anatomy": {
-          "specificDraft": 40,
-          "identityOnly": 20,
+          "specificDraft": 58,
+          "identityOnly": 2,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 42,
-          "identityOnly": 18,
+          "specificDraft": 60,
+          "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
@@ -652,14 +652,14 @@
       },
       "foot": {
         "anatomy": {
-          "specificDraft": 96,
-          "identityOnly": 22,
+          "specificDraft": 112,
+          "identityOnly": 6,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 100,
-          "identityOnly": 16,
+          "specificDraft": 116,
+          "identityOnly": 0,
           "pending": 2,
           "generatedIdentification": 0
         },

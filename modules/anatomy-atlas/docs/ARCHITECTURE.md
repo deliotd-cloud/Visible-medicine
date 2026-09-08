@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Regional vessel teaching dispatch
+
+The [regional vessel extension](REGIONAL_VESSEL_CURRICULUM.md) uses `lib/regional-vessel-curriculum.ts`: nineteen paired definitions and two midline definitions resolve forty FMA/side-specific entries. Common-carotid origins have side-specific copy. Vessel system/category, primary region and all required memberships are guarded. Its pinned offline transition precedes upper-limb and older projections; display/export stay current. Source binding, imaging and review schemas are unchanged.
+
 ## Upper-limb vessel teaching dispatch
 
 The newer [upper-limb extension](UPPER_LIMB_VESSEL_CURRICULUM.md) uses `lib/upper-limb-vessel-curriculum.ts`: 23 explicit paired definitions resolve 46 FMA/side-specific lessons. Each checks vessel system/category, primary region and all recorded region memberships. Its pinned offline transition runs before pelvic and earlier projections; display/export remain current. No source binding or review schema changes.
