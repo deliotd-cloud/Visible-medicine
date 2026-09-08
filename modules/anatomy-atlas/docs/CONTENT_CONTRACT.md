@@ -1,5 +1,7 @@
 # Versioned anatomy content export
 
+**Current lower-leg clinical extension:** [56 drafts](LEG_CLINICAL_CURRICULUM.md) cover 28 entries. Clinical and Pathology each now have 187 draft/835 pending. Thirty-five offline projections protect 1,954 edits; old captures and original baseline are unchanged. Other topics, geometry and approval state are preserved. Earlier totals below are historical.
+
 ## Delivered scope
 
 **Current hip/thigh clinical extension:** [108 drafts](THIGH_CLINICAL_CURRICULUM.md) cover 54 entries, preserving source-labelled heads/portions and regional overlaps. Clinical and Pathology each reach 159 draft/863 pending. Thirty-four offline projections protect 1,898 edits; all older captures and original baseline remain unchanged. Other topics, geometry and approval state are preserved. Earlier totals below are historical.

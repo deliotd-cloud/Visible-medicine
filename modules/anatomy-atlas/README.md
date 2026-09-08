@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+The [lower-leg clinical extension](docs/LEG_CLINICAL_CURRICULUM.md) adds 56 cited Clinical/Pathology drafts across 28 existing muscle/head entries. It covers calf, tendon and nerve patterns in the existing tabs, without new controls or medical-approval claims. Run `npm run leg-clinical-curriculum:test -- --source`.
+
 ## Current scope and remaining work
 
 The [hip/thigh clinical extension](docs/THIGH_CLINICAL_CURRICULUM.md) adds 108 cited drafts across 54 muscle/head/portion entries, preserving pelvic and spinal links. It covers injuries, hip stability and nerve patterns in the existing tabs, without new controls or approval claims. Run `npm run thigh-clinical-curriculum:test -- --source`.

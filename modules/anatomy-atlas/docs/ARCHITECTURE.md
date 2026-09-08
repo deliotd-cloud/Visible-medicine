@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Lower-leg clinical teaching
+
+The [lower-leg extension](LEG_CLINICAL_CURRICULUM.md) uses thirteen definitions with 28 exact FMA/side/single-file ISA identities and sole-leg membership guards. Gastrocnemius heads retain shared Achilles context, not separate pathological subtendons. Thirty-five offline projections preserve 1,954 pinned edits; prior thigh totals are historical. Runtime/export remain current. No UI, geometry, schema or dependency changes.
+
 ## Hip and thigh clinical teaching
 
 The [hip/thigh extension](THIGH_CLINICAL_CURRICULUM.md) uses twenty definitions with exact single-file identities plus primary/ordered regional membership guards. Pelvic overlap and psoas's spine primary region are preserved. The new offline projection precedes 33 historical ones (1,898 pinned edits); runtime/export are current and the prior hand report is historical. No UI, geometry, schema, review or dependency changes.

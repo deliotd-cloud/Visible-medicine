@@ -1,14 +1,14 @@
 {
   "passed": true,
-  "checks": 19464,
-  "bodyRepresentations": 54,
-  "sourceComponents": 54,
-  "lessonGroups": 20,
-  "explicitTopicEdits": 108,
-  "combinedPinnedCurriculumSections": 1898,
-  "sourceIndexChecks": 54,
+  "checks": 17931,
+  "bodyRepresentations": 28,
+  "sourceComponents": 28,
+  "lessonGroups": 13,
+  "explicitTopicEdits": 56,
+  "combinedPinnedCurriculumSections": 1954,
+  "sourceIndexChecks": 28,
   "negativeCases": 12,
-  "bodyReadinessAtThighClinicalMilestone": {
+  "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
       "identity-only": 2,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 159,
+      "draft": 187,
       "identity-only": 0,
-      "pending": 863,
+      "pending": 835,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 159,
+      "draft": 187,
       "identity-only": 0,
-      "pending": 863,
+      "pending": 835,
       "generated-identification": 0
     },
     "quiz": {
@@ -63,6 +63,6 @@
   "clinicalApproval": false,
   "scanContentAdded": false,
   "browserTesting": false,
-  "copyAndRecipeHashAtThighClinicalMilestone": "602caa78ac245c9c3b3eebda6df04c85cac9052e84b6bd059479236fb2fd5f9b",
-  "limitations": "Original short hip/thigh clinical overviews with shared tendon/head/portion context and exact cross-region memberships; not validated lesions, nerve territories, disease simulation, diagnosis, treatment rules or clinical approval."
+  "copyAndRecipeHash": "50cdcb3110c7796608bf3732d9f136ec12f8a30fcd81562470c8d5e7aeadfd0b",
+  "limitations": "Original short lower-leg clinical drafts, including shared gastrocnemius/Achilles context; not validated tendon lesions, nerve territories, compartment pressures, diagnosis, treatment rules or clinical approval."
 }

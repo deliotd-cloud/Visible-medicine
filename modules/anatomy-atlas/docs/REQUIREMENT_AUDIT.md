@@ -1,5 +1,7 @@
 # Atlas requirement and acceptance audit
 
+**Current lower-leg extension:** [56 cited drafts](LEG_CLINICAL_CURRICULUM.md) bring Clinical and Pathology to 187 draft/835 pending each. Existing identities, surfaces and controls are unchanged. Draft counts are not complete disease coverage, diagnostic accuracy or specialist sign-off. Earlier milestone totals below are historical.
+
 ## Current decision — 8 September 2026
 
 The [hip/thigh clinical extension](THIGH_CLINICAL_CURRICULUM.md) adds 108 drafts across 54 existing entries. Both topics now have 159 draft/863 pending body representations. Shared anatomy, cross-region links and evidence limitations remain explicit. This is not complete disease coverage, diagnostic validation or specialist sign-off. Earlier totals below are historical.
@@ -52,8 +54,8 @@ These are counts among the **1,022 body representations**, not unique lessons, a
 | CT | 11 | 0 | 1,011 | 0 |
 | MRI | 11 | 0 | 1,011 | 0 |
 | Ultrasound | 11 | 0 | 1,011 | 0 |
-| Pathology | 159 | 0 | 863 | 0 |
-| Clinical | 159 | 0 | 863 | 0 |
+| Pathology | 187 | 0 | 835 | 0 |
+| Clinical | 187 | 0 | 835 | 0 |
 | Quiz notes | 11 | 0 | 0 | 1,011 |
 
 “Specific draft” now means the authoring branch explicitly marks its lesson draft. It does **not** promise complete attachments, innervation, detailed citations, correct facts or independent review. The generated Quiz note is separate from the working multi-question identification session. The report contains the same breakdown for each region; do not sum overlapping regional rows. The original audit had 259/617 Function draft/pending counts; explicit metadata corrects pending FMA61970/FMA62072, whose headings previously fooled the title heuristic.

@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Lower-leg Clinical / Pathology review
+
+Review the [56 new drafts](LEG_CLINICAL_CURRICULUM.md) for tendon-versus-neurological weakness, peroneal variants, FHL clinical correlation, calf injury/thrombosis differentials, acute compartment-syndrome wording, ligament contributions to arch collapse and shared Achilles context. No diagnosis, treatment protocol, pressure simulation or clinical approval supplied. Independent foot/ankle, MSK and neurological review remains required.
+
 ## Hip and thigh Clinical / Pathology review
 
 Review the [108 new drafts](THIGH_CLINICAL_CURRICULUM.md) for tendon-versus-muscle injury, supported-side pelvic drop, deep gluteal differentials, asymptomatic imaging findings, shared insertions, nerve variation and referral wording. Exact regional/source guards do not establish disease location or diagnostic accuracy. No scan, treatment protocol, gait simulation or approval added; independent MSK/neurological sign-off remains required.
