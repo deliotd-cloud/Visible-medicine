@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+The [foot clinical extension](docs/FOOT_CLINICAL_CURRICULUM.md) adds 72 cited Clinical/Pathology drafts across 36 existing muscle/head/slip entries, with no new controls. It distinguishes nerve patterns, toe imbalance, sesamoid conditions and uncertain anatomy. Independent clinical review remains required. Run `npm run foot-clinical-curriculum:test -- --source`.
+
 The [lower-leg clinical extension](docs/LEG_CLINICAL_CURRICULUM.md) adds 56 cited Clinical/Pathology drafts across 28 existing muscle/head entries. It covers calf, tendon and nerve patterns in the existing tabs, without new controls or medical-approval claims. Run `npm run leg-clinical-curriculum:test -- --source`.
 
 ## Current scope and remaining work

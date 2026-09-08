@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Foot Clinical / Pathology review
+
+Review the [72 new drafts](FOOT_CLINICAL_CURRICULUM.md) for plantar versus fibular motor patterns, toe-joint terminology, intrinsic imbalance, the uncertain diagnostic value of ADM fatty infiltration, variable opponens identity, plantar-complex injury and normal sesamoid variants. The unresolved sesamoid groups remain on hold. No disease simulation, patient scan, treatment protocol or approval added; independent foot/ankle, MSK and neurological sign-off is required.
+
 ## Lower-leg Clinical / Pathology review
 
 Review the [56 new drafts](LEG_CLINICAL_CURRICULUM.md) for tendon-versus-neurological weakness, peroneal variants, FHL clinical correlation, calf injury/thrombosis differentials, acute compartment-syndrome wording, ligament contributions to arch collapse and shared Achilles context. No diagnosis, treatment protocol, pressure simulation or clinical approval supplied. Independent foot/ankle, MSK and neurological review remains required.

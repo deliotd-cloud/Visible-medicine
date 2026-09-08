@@ -5,7 +5,6 @@ import {
   contentRoot,
   readContentJson,
 } from './content-contract-tools.mjs';
-import { authoringBeforeLegClinical } from './leg-clinical-curriculum-transition.mjs';
 import { authoringBeforeFootClinical } from './foot-clinical-curriculum-transition.mjs';
 import {
   curriculumHash,
@@ -23,13 +22,12 @@ const check = (v, l) => {
 const context = await contentContext(),
   { api, catalog, body } = context;
 const before = await readContentJson(
-  'content/leg-clinical-curriculum.before.json',
+  'content/foot-clinical-curriculum.before.json',
 );
 const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
-const previous = await authoringBeforeLegClinical(context);
-const milestone = await authoringBeforeFootClinical(context);
+const previous = await authoringBeforeFootClinical(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
@@ -47,41 +45,49 @@ same(
 );
 // Independently observed official source rows, not inferred from runtime lessons.
 const expected = [
-  ['FMA22548', 'right', 'FJ1406'],
-  ['FMA22549', 'left', 'FJ1406M'],
-  ['FMA22546', 'right', 'FJ1408'],
-  ['FMA22547', 'left', 'FJ1408M'],
-  ['FMA22554', 'right', 'FJ1409'],
-  ['FMA22555', 'left', 'FJ1409M'],
-  ['FMA22552', 'right', 'FJ1410'],
-  ['FMA22553', 'left', 'FJ1410M'],
-  ['FMA22550', 'right', 'FJ1411'],
-  ['FMA22551', 'left', 'FJ1411M'],
-  ['FMA65016', 'right', 'FJ1414'],
-  ['FMA65017', 'left', 'FJ1414M'],
-  ['FMA65014', 'right', 'FJ1415'],
-  ['FMA65015', 'left', 'FJ1415M'],
-  ['FMA22560', 'right', 'FJ1429'],
-  ['FMA22561', 'left', 'FJ1429M'],
-  ['FMA22591', 'right', 'FJ1430'],
-  ['FMA22592', 'left', 'FJ1430M'],
-  ['FMA22558', 'right', 'FJ1437'],
-  ['FMA22559', 'left', 'FJ1437M'],
-  ['FMA22544', 'right', 'FJ1439'],
-  ['FMA22545', 'left', 'FJ1439M'],
-  ['FMA65018', 'right', 'FJ1440'],
-  ['FMA65019', 'left', 'FJ1440M'],
-  ['FMA45957', 'right', 'FJ1397'],
-  ['FMA45958', 'left', 'FJ1397M'],
-  ['FMA45960', 'right', 'FJ1394'],
-  ['FMA45961', 'left', 'FJ1394M'],
+  ['FMA37717', 'right', 'FJ1383'],
+  ['FMA37718', 'left', 'FJ1383M'],
+  ['FMA37719', 'right', 'FJ1385'],
+  ['FMA37720', 'left', 'FJ1385M'],
+  ['FMA37485', 'right', 'FJ1387'],
+  ['FMA37486', 'left', 'FJ1387M'],
+  ['FMA37483', 'right', 'FJ1389'],
+  ['FMA37484', 'left', 'FJ1389M'],
+  ['FMA37745', 'right', 'FJ1384'],
+  ['FMA37746', 'left', 'FJ1384M'],
+  ['FMA37743', 'right', 'FJ1386'],
+  ['FMA37744', 'left', 'FJ1386M'],
+  ['FMA37741', 'right', 'FJ1388'],
+  ['FMA37742', 'left', 'FJ1388M'],
+  ['FMA37463', 'right', 'FJ1390'],
+  ['FMA37464', 'left', 'FJ1390M'],
+  ['FMA37471', 'right', 'FJ1391'],
+  ['FMA37472', 'left', 'FJ1391M'],
+  ['FMA86034', 'right', 'FJ1399'],
+  ['FMA86035', 'left', 'FJ1399M'],
+  ['FMA37459', 'right', 'FJ1400'],
+  ['FMA37460', 'left', 'FJ1400M'],
+  ['FMA51144', 'right', 'FJ1407'],
+  ['FMA51145', 'left', 'FJ1407M'],
+  ['FMA37465', 'right', 'FJ1412'],
+  ['FMA37466', 'left', 'FJ1412M'],
+  ['FMA37461', 'right', 'FJ1413'],
+  ['FMA37462', 'left', 'FJ1413M'],
+  ['FMA45971', 'right', 'FJ1396'],
+  ['FMA45972', 'left', 'FJ1396M'],
+  ['FMA45973', 'right', 'FJ1393'],
+  ['FMA45974', 'left', 'FJ1393M'],
+  ['FMA46018', 'right', 'FJ1398'],
+  ['FMA46019', 'left', 'FJ1398M'],
+  ['FMA46020', 'right', 'FJ1445'],
+  ['FMA46021', 'left', 'FJ1445M'],
 ];
 const ids = expected.map((e) => e[0]),
   tabs = ['pathology', 'clinical'];
-same(api.legClinicalGroups.length, 13);
+same(api.footClinicalGroups.length, 12);
 const byIdentity = (a, b) => a[0].localeCompare(b[0]);
 same(
-  api.legClinicalGroups.flatMap((g) => g.identities).sort(byIdentity),
+  api.footClinicalGroups.flatMap((g) => g.identities).sort(byIdentity),
   [...expected].sort(byIdentity),
 );
 same(before.entries.map((e) => e.fmaId).sort(), [...ids].sort());
@@ -99,16 +105,16 @@ for (const [f, side, file] of expected) {
       s.sourceTree,
       s.sources.map((p) => p.file),
     ],
-    ['muscles', 'muscle', side, 'leg', ['leg'], 'isa', [file]],
+    ['muscles', 'muscle', side, 'foot', ['foot'], 'isa', [file]],
   );
   same(e.sourceIndexFiles, [file]);
   same(e.omittedSourceFiles, []);
-  const group = api.legClinicalGroups.find((g) =>
+  const group = api.footClinicalGroups.find((g) =>
     g.identities.some((i) => i[0] === f),
   );
   const record = body.find((r) => r.id === s.id);
   for (const t of tabs) {
-    const result = api.legClinicalLesson(s, t);
+    const result = api.footClinicalLesson(s, t);
     same(result, api.bodyLesson(s, t));
     same(result.readiness, 'draft');
     same(result.body, group[t].body);
@@ -120,7 +126,7 @@ for (const [f, side, file] of expected) {
     if (s.coverageNote) check(result.note.includes(s.coverageNote));
     check(
       api
-        .legClinicalLesson({ ...s, coverageNote: 'Keep warning' }, t)
+        .footClinicalLesson({ ...s, coverageNote: 'Keep warning' }, t)
         .note.includes('Keep warning'),
     );
     for (const url of result.citations) same(new URL(url).protocol, 'https:');
@@ -140,7 +146,7 @@ for (const [f, side, file] of expected) {
       { category: 'tendon' },
       { region: 'head-neck' },
       { regions: [] },
-      { regions: ['leg', 'head-neck'] },
+      { regions: ['foot', 'head-neck'] },
       { laterality: side === 'left' ? 'right' : 'left' },
       { fmaId: 'FMA_UNKNOWN' },
       { sourceTree: 'partof' },
@@ -148,74 +154,87 @@ for (const [f, side, file] of expected) {
       { sources: [{ ...s.sources[0], file: 'WRONG' }] },
       { sources: [...s.sources, ...s.sources] },
     ])
-      same(api.legClinicalLesson({ ...s, ...mutation }, t), undefined);
+      same(api.footClinicalLesson({ ...s, ...mutation }, t), undefined);
   }
 }
 for (const s of catalog.structures)
   for (const t of api.contentTabs) {
     if (!ids.includes(s.fmaId) || !tabs.includes(t)) {
-      same(api.legClinicalLesson(s, t), undefined);
+      same(api.footClinicalLesson(s, t), undefined);
       same(
-        milestone.bodyLesson(s, t),
+        api.bodyLesson(s, t),
         previous.bodyLesson(s, t),
         'Every unrelated section preserved',
       );
     }
   }
-const group = (k) => api.legClinicalGroups.find((g) => g.key === k);
+const group = (k) => api.footClinicalGroups.find((g) => g.key === k);
+
+check(group('first-lumbrical').clinical.body.includes('medial plantar'));
+check(group('lateral-lumbricals').clinical.body.includes('lateral plantar'));
+check(group('lateral-lumbricals').clinical.body.includes('median/ulnar'));
+check(group('plantar-interossei').clinical.body.includes('second-toe axis'));
+check(group('plantar-interossei').scope.includes('absent dorsal interossei'));
 check(
-  group('extensor-digitorum-longus').clinical.body.includes('motor/sensory'),
-);
-check(
-  group('extensor-hallucis-longus').pathology.bullets[0].includes(
-    'does not prove an L5',
+  group('abductor-digiti-minimi').pathology.bullets[0].includes(
+    'association uncertain',
   ),
 );
 check(
-  group('fibularis-brevis').clinical.bullets[1].includes(
-    'cannot demonstrate dynamic',
+  group('abductor-digiti-minimi').references.includes(
+    'https://pubmed.ncbi.nlm.nih.gov/40836398/',
   ),
 );
 check(
-  group('fibularis-longus').clinical.bullets[0].includes(
-    'does not establish that variant',
+  group('flexor-digiti-minimi-brevis').clinical.body.includes(
+    'not the distal toe joint',
   ),
 );
 check(
-  group('fibularis-tertius').clinical.body.includes('anterior compartment'),
+  group('opponens-digiti-minimi').clinical.body.includes('not the hypothenar'),
 );
 check(
-  group('fibularis-tertius').clinical.bullets[0].includes(
-    'not be assigned the superficial',
+  group('opponens-digiti-minimi').pathology.bullets[0].includes(
+    'No structure-specific disease pattern',
   ),
 );
 check(
-  group('flexor-digitorum-longus').clinical.bullets[0].includes(
-    'one digital slip',
+  group('abductor-hallucis').clinical.bullets[0].includes(
+    'not a nerve-conduction test',
   ),
 );
 check(
-  group('flexor-hallucis-longus').clinical.bullets[0].includes(
-    'does not establish prevalence',
+  group('extensor-hallucis-brevis').clinical.bullets[0].includes(
+    'deep fibular',
   ),
 );
-check(group('plantaris').pathology.body.includes('not automatically'));
-check(group('plantaris').clinical.bullets[1].includes('excludes thrombosis'));
 check(
-  group('popliteus').clinical.bullets[0].includes('does not cross the ankle'),
-);
-check(group('soleus').clinical.body.includes('not the knee'));
-check(group('soleus').clinical.bullets[1].includes('does not model pressure'));
-check(
-  group('tibialis-anterior').pathology.bullets[0].includes('not synonymous'),
-);
-check(
-  group('tibialis-posterior').pathology.bullets[0].includes('multi-structure'),
-);
-check(
-  group('gastrocnemius').clinical.bullets[1].includes(
-    'not a separate Achilles subtendon',
+  group('quadratus-plantae').clinical.body.includes(
+    'rather than attaching directly',
   ),
+);
+check(
+  group('flexor-digitorum-brevis').pathology.bullets[0].includes(
+    'proximal interphalangeal',
+  ),
+);
+check(group('flexor-hallucis-brevis').scope.includes('unresolved sesamoid'));
+check(
+  group('flexor-hallucis-brevis').clinical.bullets[0].includes(
+    'not automatically a fracture',
+  ),
+);
+check(
+  group('adductor-hallucis').clinical.bullets[0].includes(
+    'does not simulate corrective surgery',
+  ),
+);
+same(
+  catalog.structures
+    .filter((s) => s.system === 'muscles' && s.regions.includes('foot'))
+    .map((s) => s.fmaId)
+    .sort(),
+  [...ids].sort(),
 );
 const unresolved = ['FMA45097', 'FMA45098', 'FMA19728', 'FMA61970'];
 for (const f of unresolved)
@@ -242,14 +261,14 @@ if (process.argv.includes('--source')) {
   }
 }
 const negatives = [
-  ['FMA22548', 'clinical', 'body'],
-  ['FMA22546', 'pathology', 'readiness'],
-  ['FMA45957', 'pathology', 'body'],
-  ['FMA65019', 'clinical', 'readiness'],
-  ['FMA22554', 'anatomy', 'body'],
-  ['FMA22553', 'function', 'body'],
-  ['FMA65014', 'mri', 'body'],
-  ['FMA22452', 'clinical', 'body'],
+  ['FMA37717', 'clinical', 'body'],
+  ['FMA37463', 'pathology', 'readiness'],
+  ['FMA45971', 'pathology', 'body'],
+  ['FMA86035', 'clinical', 'readiness'],
+  ['FMA37745', 'anatomy', 'body'],
+  ['FMA51145', 'function', 'body'],
+  ['FMA37465', 'mri', 'body'],
+  ['FMA22544', 'clinical', 'body'],
   ...unresolved.map((f) => [f, 'function', 'readiness']),
 ];
 for (const [f, t, field] of negatives) {
@@ -287,17 +306,16 @@ const counts = (t) =>
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter(
-          (s) => milestone.bodyLesson(s, t).readiness === r,
-        ).length,
+        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
+          .length,
       ],
     ),
   );
 for (const t of tabs)
   same(counts(t), {
-    draft: 187,
+    draft: 223,
     'identity-only': 0,
-    pending: 835,
+    pending: 799,
     'generated-identification': 0,
   });
 for (const t of ['ct', 'mri', 'ultrasound'])
@@ -330,28 +348,25 @@ for (const f of api.shoulderArmLessons.flatMap((l) => l.fmaIds))
 const report = {
   passed: true,
   checks,
-  bodyRepresentations: 28,
-  sourceComponents: 28,
-  lessonGroups: 13,
-  explicitTopicEdits: 56,
-  combinedPinnedCurriculumSections: 1954,
+  bodyRepresentations: 36,
+  sourceComponents: 36,
+  lessonGroups: 12,
+  explicitTopicEdits: 72,
+  combinedPinnedCurriculumSections: 2026,
   sourceIndexChecks,
   negativeCases: negatives.length,
-  historicalMilestoneBodyReadiness: Object.fromEntries(
-    api.contentTabs.map((t) => [t, counts(t)]),
-  ),
-  historicalProjectionOnly: true,
+  bodyReadiness: Object.fromEntries(api.contentTabs.map((t) => [t, counts(t)])),
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,
   scanContentAdded: false,
   browserTesting: false,
-  copyAndRecipeHash: curriculumHash(copy(milestone)),
+  copyAndRecipeHash: curriculumHash(copy(api)),
   limitations:
-    'Original short lower-leg clinical drafts, including shared gastrocnemius/Achilles context; not validated tendon lesions, nerve territories, compartment pressures, diagnosis, treatment rules or clinical approval.',
+    'Original short intrinsic-foot clinical drafts; not validated deformities, tendon lesions, nerve territories, sesamoid identities, diagnosis, treatment rules or clinical approval.',
 };
 await writeFile(
-  new URL('docs/leg-clinical-curriculum-validation.json', contentRoot),
+  new URL('docs/foot-clinical-curriculum-validation.json', contentRoot),
   JSON.stringify(report, null, 2) + '\n',
 );
 console.log(JSON.stringify(report, null, 2));

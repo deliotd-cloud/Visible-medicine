@@ -1,5 +1,7 @@
 # Third-party notices
 
+The foot clinical extension adds brief original factual notes with medical, university, society and study reference links. No publisher prose, images, tables, scans or questions are shipped; citations do not grant commercial asset rights or override NC-ND restrictions. MIT original text/code and existing BodyParts3D CC BY 4.0 obligations are unchanged. No new asset, dependency, font, paid API or private data. See `../docs/FOOT_CLINICAL_CURRICULUM.md`.
+
 The lower-leg clinical extension adds original brief factual notes linked to AAOS, references and study abstracts. No publisher prose, figures, tables, scans or questions are shipped. Citations/public access/NCBI hosting are not commercial asset grants or exceptions to NC-ND restrictions. Original text/code retain MIT terms; BodyParts3D evidence retains CC BY 4.0 duties. No new font, mesh, texture, package, paid API or private data. See `../docs/LEG_CLINICAL_CURRICULUM.md`.
 
 The hip/thigh clinical extension adds original brief factual notes linked to AAOS, medical references and study abstracts. No publisher prose, diagrams, tables, scans or questions are shipped. Citations/public access/NCBI hosting are not commercial asset grants or exceptions to NC-ND restrictions. Original text/code retain MIT terms; BodyParts3D evidence retains CC BY 4.0 duties. No added asset, font, dependency, paid API or patient data. See `../docs/THIGH_CLINICAL_CURRICULUM.md`.

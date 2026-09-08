@@ -1,14 +1,14 @@
 {
   "passed": true,
-  "checks": 17931,
-  "bodyRepresentations": 28,
-  "sourceComponents": 28,
-  "lessonGroups": 13,
-  "explicitTopicEdits": 56,
-  "combinedPinnedCurriculumSections": 1954,
-  "sourceIndexChecks": 28,
+  "checks": 18357,
+  "bodyRepresentations": 36,
+  "sourceComponents": 36,
+  "lessonGroups": 12,
+  "explicitTopicEdits": 72,
+  "combinedPinnedCurriculumSections": 2026,
+  "sourceIndexChecks": 36,
   "negativeCases": 12,
-  "historicalMilestoneBodyReadiness": {
+  "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
       "identity-only": 2,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 187,
+      "draft": 223,
       "identity-only": 0,
-      "pending": 835,
+      "pending": 799,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 187,
+      "draft": 223,
       "identity-only": 0,
-      "pending": 835,
+      "pending": 799,
       "generated-identification": 0
     },
     "quiz": {
@@ -58,12 +58,11 @@
       "generated-identification": 1011
     }
   },
-  "historicalProjectionOnly": true,
   "unrelatedCopyAndRecipesPreserved": true,
   "sourceGeometryChanged": false,
   "clinicalApproval": false,
   "scanContentAdded": false,
   "browserTesting": false,
-  "copyAndRecipeHash": "50cdcb3110c7796608bf3732d9f136ec12f8a30fcd81562470c8d5e7aeadfd0b",
-  "limitations": "Original short lower-leg clinical drafts, including shared gastrocnemius/Achilles context; not validated tendon lesions, nerve territories, compartment pressures, diagnosis, treatment rules or clinical approval."
+  "copyAndRecipeHash": "e18ceaa46b1d19ce3a0c40a0183566d3c6702a1fcdfe4e977926d405513e309b",
+  "limitations": "Original short intrinsic-foot clinical drafts; not validated deformities, tendon lesions, nerve territories, sesamoid identities, diagnosis, treatment rules or clinical approval."
 }

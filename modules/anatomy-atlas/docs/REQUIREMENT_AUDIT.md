@@ -1,5 +1,7 @@
 # Atlas requirement and acceptance audit
 
+**Current foot extension — 9 September 2026:** [72 cited drafts](FOOT_CLINICAL_CURRICULUM.md) bring Clinical and Pathology to 223 draft/799 pending each. The 36 existing source entries retain their geometry, exact identities and current controls. Uncertain anatomy and clinical-review requirements remain explicit. Earlier totals below describe historical milestones, not current coverage or acceptance.
+
 **Current lower-leg extension:** [56 cited drafts](LEG_CLINICAL_CURRICULUM.md) bring Clinical and Pathology to 187 draft/835 pending each. Existing identities, surfaces and controls are unchanged. Draft counts are not complete disease coverage, diagnostic accuracy or specialist sign-off. Earlier milestone totals below are historical.
 
 ## Current decision — 8 September 2026

@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Foot clinical teaching
+
+The [foot extension](FOOT_CLINICAL_CURRICULUM.md) uses twelve shared definitions with 36 exact single-file ISA identities, side/category/system and sole-foot guards. Source-labelled heads and uncertain slips retain individual identities without invented lesions. The new offline projection precedes lower-leg history, protecting 2,026 edits across 36 projections; runtime/export stay current. No UI, geometry, schema, review or dependency changes.
+
 ## Lower-leg clinical teaching
 
 The [lower-leg extension](LEG_CLINICAL_CURRICULUM.md) uses thirteen definitions with 28 exact FMA/side/single-file ISA identities and sole-leg membership guards. Gastrocnemius heads retain shared Achilles context, not separate pathological subtendons. Thirty-five offline projections preserve 1,954 pinned edits; prior thigh totals are historical. Runtime/export remain current. No UI, geometry, schema or dependency changes.
