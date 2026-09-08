@@ -2,6 +2,8 @@
 
 ## Current decision — 8 September 2026
 
+The [hand clinical extension](HAND_CLINICAL_CURRICULUM.md) adds 40 drafts across twenty muscle/head/group selections. Both topics now have 105 draft/917 pending entries. These are initial clinical overviews, not a complete disease catalogue, individual-muscle segmentation or independent review. Earlier milestone totals below are historical.
+
 The [forearm clinical extension](FOREARM_CLINICAL_CURRICULUM.md) adds 84 drafts across 42 existing entries. Clinical and Pathology each now have 85 draft/937 pending body representations. Shared tendon/head/compartment context is explicit; this is not a complete disease catalogue or clinical acceptance. Other topics, layout and geometry remain unchanged. Earlier milestone counts below are historical.
 
 The [scapular/arm clinical extension](SCAPULAR_ARM_CLINICAL_CURRICULUM.md) adds 28 drafts across fourteen existing muscle entries, completing initial Clinical/Pathology overviews for the original 32-entry muscle curriculum. Both topics now have 43 draft/979 pending body entries. This is not a complete regional disease catalogue. Layout, geometry, all other topics and clinical approval remain unchanged; earlier milestone counts below are historical.
@@ -48,8 +50,8 @@ These are counts among the **1,022 body representations**, not unique lessons, a
 | CT | 11 | 0 | 1,011 | 0 |
 | MRI | 11 | 0 | 1,011 | 0 |
 | Ultrasound | 11 | 0 | 1,011 | 0 |
-| Pathology | 85 | 0 | 937 | 0 |
-| Clinical | 85 | 0 | 937 | 0 |
+| Pathology | 105 | 0 | 917 | 0 |
+| Clinical | 105 | 0 | 917 | 0 |
 | Quiz notes | 11 | 0 | 0 | 1,011 |
 
 “Specific draft” now means the authoring branch explicitly marks its lesson draft. It does **not** promise complete attachments, innervation, detailed citations, correct facts or independent review. The generated Quiz note is separate from the working multi-question identification session. The report contains the same breakdown for each region; do not sum overlapping regional rows. The original audit had 259/617 Function draft/pending counts; explicit metadata corrects pending FMA61970/FMA62072, whose headings previously fooled the title heuristic.

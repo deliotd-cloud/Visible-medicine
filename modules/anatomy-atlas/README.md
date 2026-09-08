@@ -2,6 +2,8 @@
 
 ## Current scope and remaining work
 
+The [hand clinical extension](docs/HAND_CLINICAL_CURRICULUM.md) adds 40 cited drafts across 20 muscle/head/group selections, covering thumb function, intrinsic imbalance and nerve patterns in the existing tabs. Shared-group limits and pending clinical review remain explicit. Run `npm run hand-clinical-curriculum:test -- --source`.
+
 The [forearm clinical extension](docs/FOREARM_CLINICAL_CURRICULUM.md) adds 84 cited drafts across 42 muscle/head entries in the existing tabs. Tendon injury, nerve patterns and normal variants are distinguished without adding controls or claiming clinical approval. Run `npm run forearm-clinical-curriculum:test -- --source`. Earlier extensions below describe their delivery milestones.
 
 The [scapular/arm clinical extension](docs/SCAPULAR_ARM_CLINICAL_CURRICULUM.md) adds 28 cited drafts across fourteen remaining muscle entries, retaining the same tabs and simple layout. It distinguishes uncommon reported injuries, accessory anatomy and nerve-related weakness without claiming diagnoses or clinical approval. Run `npm run scapular-arm-clinical-curriculum:test -- --source`.

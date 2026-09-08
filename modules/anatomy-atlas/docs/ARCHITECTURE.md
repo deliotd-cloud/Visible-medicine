@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Hand clinical teaching
+
+The [hand extension](HAND_CLINICAL_CURRICULUM.md) reuses the typed clinical-group shape for nine definitions/twenty exact single-file ISA identities. It preserves sides, source scope, warnings and detached output. The new offline projection precedes 32 historical ones (1,790 pinned sections); runtime/export are current and the prior forearm report is explicitly historical. No UI, geometry, review, schema or dependency change.
+
 ## Forearm clinical teaching
 
 The [forearm extension](FOREARM_CLINICAL_CURRICULUM.md) uses sixteen typed groups/42 exact identities. Ordered multi-file guards retain ECU/FDS components. Two existing tabs gain drafts with detached arrays and source warnings. The new offline projection precedes 31 historical ones (1,750 pinned sections); old captures remain immutable and the prior report labels historical totals. No UI, model, schema, review or dependency changes.

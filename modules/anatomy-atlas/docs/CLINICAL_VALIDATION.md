@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Hand Clinical / Pathology review
+
+Review the [40 new drafts](HAND_CLINICAL_CURRICULUM.md) for thumb opposition versus adduction, compensatory pinch, mixed lumbrical supply, intrinsic imbalance, nerve-branch variation and pain-versus-weakness distinctions. Adductor heads and muscle groups do not independently localise neuropathy. Hand/MSK/neurological sign-off and full-body editorial persistence remain outstanding. No scan, treatment plan or approval added.
+
 ## Forearm Clinical / Pathology review
 
 Review the [84 new drafts](FOREARM_CLINICAL_CURRICULUM.md) for tendon-versus-nerve distinctions, AIN/PIN/proximal median/ulnar patterns, grouped components, normal variants, evidence strength and referral wording. No individual digital slips, nerve territories, disease geometry, patient imaging or treatment rules are validated. Independent MSK/neurological sign-off and full-body editorial persistence remain outstanding.
