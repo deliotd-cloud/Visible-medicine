@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Thoracic vessel teaching dispatch
+
+`lib/thoracic-vessel-curriculum.ts` provides 29 exact definitions for 34 existing vessels. FMA, laterality, system/category and all required regions gate dispatch; textbook position never overwrites source laterality. Multi-file aggregates are not assigned inferred branch identities. Its pinned offline transition precedes acral and earlier milestones; runtime and exports use current content. See [scope and limits](THORACIC_VESSEL_CURRICULUM.md).
+
 ## Connective teaching dispatch
 
 `lib/acral-bone-curriculum.ts` supplies 53 exact right/left definitions for 106 hand/foot bones. Explicit FMA pairs and digit/segment metadata drive shared helpers; no identity is inferred from name parsing, neighbouring FMA numbers or camera position. The two broad foot-sesamoid groups are excluded. A pinned offline transition precedes limb and older milestones and guards held readiness separately from displayed copy. See [scope and limits](ACRAL_BONE_CURRICULUM.md).

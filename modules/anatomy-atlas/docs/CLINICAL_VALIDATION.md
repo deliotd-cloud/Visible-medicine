@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Thoracic vessel teaching gates
+
+The [thoracic-vessel drafts](THORACIC_VESSEL_CURRICULUM.md) require independent review of branch/ostial continuity, compound membership, side-specific relationships, coronary territories, pulmonary drainage variants, venous termination and functional wording. Resolve differing right internal thoracic termination descriptions against source evidence. Display colours do not indicate oxygenation; meshes do not establish wall layers, lumen patency, haemodynamics, procedural safety, CTA/MRI registration or Doppler findings. Existing four unresolved Function holds and specialist-review gates remain.
+
 ## Connective teaching gates
 
 The [connective drafts](CONNECTIVE_CURRICULUM.md) require independent attachment, source-boundary and functional-wording review. Resolve the two-file cricoid union, cartilage maturation/variation, nasal continuity, laryngeal joint/ligament relations, orbital fascial identity and membrane sub-bundles. Source labels do not establish a complete pulley, patent airway, quantified stiffness or normal joint motion. Unspecified hyo-epiglottic laterality remains unchanged. No clinical approval, procedural guidance or real imaging is added.

@@ -2,7 +2,9 @@
 
 ## Delivered scope
 
-**Current hand/foot bone extension:** [212 original drafts](ACRAL_BONE_CURRICULUM.md) cover 106 individual bone entries. Body totals: Anatomy 816 draft/206 identity-only; Function 872 draft/146 identity-only/four pending. `authoringBeforeAcralBones` verifies/restores these topics before twenty prior projections; 1,246 edits remain pinned against the original baseline. It separately preserves the two unresolved foot-sesamoid groups' readiness. Limb and earlier report totals are historical. Runtime/export stay current; no schema/source/geometry/review migration.
+**Current thoracic-vessel extension:** [68 original drafts](THORACIC_VESSEL_CURRICULUM.md) cover 34 existing vessels. Body totals: Anatomy 850 draft/172 identity-only; Function 906 draft/112 identity-only/four pending. `authoringBeforeThoracicVessels` verifies/restores these topics before twenty-one prior projections; 1,314 edits remain pinned against the original baseline. Acral and earlier report totals are historical. Four unresolved readiness holds remain protected. Runtime/export stay current; no schema/source/geometry/review migration.
+
+**Historical hand/foot bone extension:** [212 original drafts](ACRAL_BONE_CURRICULUM.md) cover 106 individual bone entries. At that milestone: Anatomy 816 draft/206 identity-only; Function 872 draft/146 identity-only/four pending. `authoringBeforeAcralBones` restores those topics before twenty prior projections and separately preserves the two unresolved foot-sesamoid groups' readiness.
 
 **Current organ extension:** [46 original drafts](ORGAN_CURRICULUM.md) cover 23 existing organ-system entries. Body totals: Anatomy 575 draft / 447 identity-only; Function 631 draft / 146 identity-only / 245 pending. `authoringBeforeOrgans` verifies/restores only these topics before fourteen prior offline projections, preserving 764 pinned topic edits against the original baseline. Current runtime/export remain current; the CNS report labels historical counts. No schema, source, geometry or review migration. Earlier extension totals below are historical.
 

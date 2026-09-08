@@ -1,0 +1,278 @@
+{
+  "sourceCommit": "86f6c5b3833fd4ad4247fd594f7e8d4f45069a8d",
+  "reason": "68 original Anatomy/Function drafts for 34 existing thoracic-vessel representations; preserve source limitations and unrelated teaching.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
+      "fmaId": "FMA3736",
+      "sections": {
+        "anatomy": "c07764889de23204f1ef671de160116b7722c02a9d9ff376037db34627a8b69c",
+        "function": "1934f6500340f88873af08210b7b5ef3f301bf2b5f0a13e4aa3fcff46f9bd9cb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
+      "fmaId": "FMA3768",
+      "sections": {
+        "anatomy": "928d2975fa69aacd4cc383eff2faed1dd23d1da6e7968dfaf5d0cc76d92688cf",
+        "function": "aa77d719987a4da4d8d0b5969c81aed47ac91c51bc6c332a4ea4abf143e12e40"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta",
+      "fmaId": "FMA87217",
+      "sections": {
+        "anatomy": "045628d1783e2a15c08f305b3a214ffa57ec0ce1d48f71e8f45a405f0c42be03",
+        "function": "0353d479784950a0c24d15fb6b2deb8dfe7ac35b1182703d2a27044c12ae24bc"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:superior-vena-cava",
+      "fmaId": "FMA4720",
+      "sections": {
+        "anatomy": "eebad7a3d18ddf89936775b93f14aef926ee17afaa9f54dcb5214a9effad51d4",
+        "function": "4009b65e305dd38a676507c671467c66649ccb0a1de8522cd3aeb1a2fee44574"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:azygos-vein",
+      "fmaId": "FMA4838",
+      "sections": {
+        "anatomy": "cfec5a74a89a0235465309de73d5e9d5c423f86baaf4e758c933a70a9533a66f",
+        "function": "81f946bcb37d560b4b30ec5fedead1afe3e7fcde5772fbc25ab91c1435bd8d81"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+      "fmaId": "FMA4944",
+      "sections": {
+        "anatomy": "f9f79093ee33533ee27e0f8796ba61f2cefb3f45fc72ce9892f81cf565e15aed",
+        "function": "d0add9b9189c86e1cb312256053893542e1640c07350e42633aefedd88ad23c5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+      "fmaId": "FMA3932",
+      "sections": {
+        "anatomy": "00dc8119fc817b22f92122759b04bb29d965969e389ca2fe02d2892d62a26ae1",
+        "function": "e514275d90db40f9a73c494b578f888a8fd030df0e0f8b6a81e66a2a527b0be1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-subclavian-artery",
+      "fmaId": "FMA3953",
+      "sections": {
+        "anatomy": "cc4b0e5d7faa156f122fd26fcffb309193b08090fd74600f7b9bda3e0e9e8244",
+        "function": "35416c69bc68782ae7280c438e978b04bceaf8332d39c1032abdef1895c60964"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-subclavian-artery",
+      "fmaId": "FMA4694",
+      "sections": {
+        "anatomy": "91c1a63fbd8d80c8f842fc4fb1ac7d46d622816406af64e2b60b30390c410658",
+        "function": "bb3eebc36eab0d64c88f86bbd7a2a9cad0cabd56329f2edb8a22df08a7988fb8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-brachiocephalic-vein",
+      "fmaId": "FMA4751",
+      "sections": {
+        "anatomy": "ddccd855ebb868670b31b45573e6a9e5051059bace9cf27d9fca2012446ce9e0",
+        "function": "fd2de8ac1160f78b9e6d6f6b9ad1fac2fc179494aacdecbda05299531214b634"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-brachiocephalic-vein",
+      "fmaId": "FMA4761",
+      "sections": {
+        "anatomy": "1abe775e00651814637a2c5a9db0e5c9f003737b277080f13560642758ba19fc",
+        "function": "89828a460db6e4c182b05d3e9746da96799a06a16b06c62be7f4d1b7d654e0d7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-subclavian-vein",
+      "fmaId": "FMA4755",
+      "sections": {
+        "anatomy": "dd9c8b66cd8b71fbe6699fb4cfe014c68dad26390581b705668dea8580e3c0df",
+        "function": "ad443181db63ce619a10923976df559e1b129eee904867e889a167469517089e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-subclavian-vein",
+      "fmaId": "FMA4763",
+      "sections": {
+        "anatomy": "847520d5cadb1ad6f80b85c1a2c9962743e15ca1b51eedfd1027c0f0aca2a0cd",
+        "function": "02380a12c5604279f45d02b9151e981de51d6dd22d118cd09608925f5f0ce0ad"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:trunk-of-right-coronary-artery",
+      "fmaId": "FMA3802",
+      "sections": {
+        "anatomy": "54735a23cb4d3be61ed31436b6d4b776859a487aa4c929a8655b134df6edfdff",
+        "function": "0780385d49e2df86bf30e4bea37a3e5d3ecd1aadd97c4b4e9918b337e490aab7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:trunk-of-left-coronary-artery",
+      "fmaId": "FMA3855",
+      "sections": {
+        "anatomy": "293e3e3e7dc47aa54c34ff9e00e919bbeff5e93143b7e84b26a06010e8da3e28",
+        "function": "7332510128a948cf5b37efb422f98b090c8f3e01b9246dd9b8f3edfe0468540a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:anterior-interventricular-branch-of-left-coronary-artery",
+      "fmaId": "FMA3862",
+      "sections": {
+        "anatomy": "1a80fee854c37153ee5c195ae8d7b09ef4413de9cd2f22347b50546f454fd350",
+        "function": "daf6bb422c7410c12b0398727105c7a9af78823fee86f71b2d8d5c692bd0d774"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:circumflex-branch-of-left-coronary-artery",
+      "fmaId": "FMA3895",
+      "sections": {
+        "anatomy": "abbf6f6c19be6f81d0cea515dee9fec0e5a1046369305ea94c5150b0080570cf",
+        "function": "691a57296134f95d76d76927c6820b05c35ae1d5001841d3f498dc097e6b7af2"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:great-cardiac-vein",
+      "fmaId": "FMA4707",
+      "sections": {
+        "anatomy": "c5c1ce2276210e1ac8eb89e8625ac9095a222209c9de6cd02f3d2541eb048ec5",
+        "function": "2e8bfe02c25aa9e8e7492422a78b5edaebda8de998efdd87079aff486458cc98"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:middle-cardiac-vein",
+      "fmaId": "FMA4713",
+      "sections": {
+        "anatomy": "a895273f3231adf2298598ff85881d1aac4f76894350c2a46001a986ded10c8e",
+        "function": "a119ac973a0354a376f3dbb59b73aa15f321ac17dd4c8aca3351a0580e5213b6"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-pulmonary-artery",
+      "fmaId": "FMA50872",
+      "sections": {
+        "anatomy": "7655cfd29d4bf5aedd1fa2c8c6ec24ebd639cc6f423094cded16f3e04618330c",
+        "function": "95f4007f846ba1fea8fb0d02656863c411cc98e36c4e71a065bcd71763d925ad"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-pulmonary-artery",
+      "fmaId": "FMA50873",
+      "sections": {
+        "anatomy": "713dc9bfd7cf8211f74f528d67f965dc808b924edad9284c1c60b8de3f3b5d1b",
+        "function": "cf27073aa74baaf6f8a204992f554a62ecbd8be3e80b1d2929d50ac7b9de38b0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-superior-pulmonary-vein",
+      "fmaId": "FMA49914",
+      "sections": {
+        "anatomy": "b23524ea58c1d7ac26a51e49088fb3b4d8243d4aacfa72e7c3314bc9ca4f1ddc",
+        "function": "727d8efa16401d50d1bfee978b76a8b11d3c61ac439aa61741da1ec699477b69"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-superior-pulmonary-vein",
+      "fmaId": "FMA49916",
+      "sections": {
+        "anatomy": "67215963f7ef7ea5f12d2e655740e987b5c285e00206f877c125c634b16c0766",
+        "function": "84d239708f9f549ce3eadfb4c5d3485a40555389a3afef4d6da8904ca79fe518"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-inferior-pulmonary-vein",
+      "fmaId": "FMA49911",
+      "sections": {
+        "anatomy": "e63ab5c509375de29aca793c096280aa561567102065bad0cf693904a4cd5658",
+        "function": "284384fbdb6c0a4074a2286a9676df455eaad5917a3a497a273584011c439201"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-inferior-pulmonary-vein",
+      "fmaId": "FMA49913",
+      "sections": {
+        "anatomy": "da152de99b2784bf3e30d61388c9296544401e745a841d702cab96bc44a8a027",
+        "function": "045533fdebbf557003f88c7230d347e65773a286053bd804d55c097ba83f6a80"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
+      "fmaId": "FMA3969",
+      "sections": {
+        "anatomy": "c0541d0a59efd60e960c9c967389bbd9955dc8e08d10aed53d0ac53a8b782318",
+        "function": "4d7884106c9c815d72b39938ecc0153b3ce0fa71cdbc3e4cb74b6546e498a156"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-internal-thoracic-artery",
+      "fmaId": "FMA4068",
+      "sections": {
+        "anatomy": "5959a063185168cb330a619bb20f42c035bac83841e49ae7fd114b397d8e1855",
+        "function": "307f660fafb71503b6f912b5a90919a80c7d37aeb2231659b4ac01c936b77498"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+      "fmaId": "FMA3988",
+      "sections": {
+        "anatomy": "e0d1ccad3c7bf0629fc2b6fe19a8bf11c7063ef7c14bc21c3b0c145b00bb0b93",
+        "function": "f991ac100fd3308730220fe009cc480e6ff8545f72fa151abbdf89753ee7b267"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+      "fmaId": "FMA4083",
+      "sections": {
+        "anatomy": "e8d4616a2a07187e2bd4b78e85d661375b6942ef23c070aaec1ea47f62d9d718",
+        "function": "d61ad21aac17d3fe678a48f98c497be87209ace71bb31309f1182198a2f128c0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+      "fmaId": "FMA10692",
+      "sections": {
+        "anatomy": "c2be32e6f0ca0dc34b95b98dc64a32c1a2523672cfb0b6856dc648cb4f5c41fc",
+        "function": "24a23589ac4499140603cef35e4eaabb9eae567ae6c7ed7fc622096a06a2b91f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+      "fmaId": "FMA4077",
+      "sections": {
+        "anatomy": "3ef3e3062524b0e010fc820d4faed8fcf03bc63f4fe5b83d8023690e99a61c2a",
+        "function": "80e76f8141c5856bf2668909a404659d0fceeea8b01083ecac0b508e988e84de"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-vein",
+      "fmaId": "FMA4758",
+      "sections": {
+        "anatomy": "eb6f376fa7f267f08a1f60f9d66c1166a8eba23be44f03629d5b84572a9f47f4",
+        "function": "c57354f5bd864ba72587682ad815845eb3e761a4cd1236f7b849dd46f6f259bf"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+      "fmaId": "FMA4772",
+      "sections": {
+        "anatomy": "619192de35b287905b22a61685d6cb5dbd5edea0adbd370567b2563452670ff8",
+        "function": "b9091755c834a2067f36cc91165e6480349ac23a3326481418dbe6e684886478"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+      "fmaId": "FMA4786",
+      "sections": {
+        "anatomy": "7abe73360a33acfd7e967ef523b7d7c646f225b8c10b401a61add28a31d0c09f",
+        "function": "6acb37fbf6b202cc6e6485725cb433e8cb491b9f5edcbce6538e838aead69b0e"
+      }
+    }
+  ]
+}

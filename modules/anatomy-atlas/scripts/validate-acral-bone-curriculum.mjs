@@ -6,6 +6,7 @@ import {
   readContentJson,
 } from './content-contract-tools.mjs';
 import { authoringBeforeAcralBones } from './acral-bone-curriculum-transition.mjs';
+import { authoringBeforeThoracicVessels } from './thoracic-vessel-curriculum-transition.mjs';
 import {
   curriculumHash,
   copyBeforeShoulderArmCurriculum,
@@ -976,13 +977,15 @@ for (const [fma, t, field] of negatives) {
   );
   checks++;
 }
+const acralMilestone = await authoringBeforeThoracicVessels(context);
 const counts = (t) =>
   Object.fromEntries(
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
-          .length,
+        catalog.structures.filter(
+          (s) => acralMilestone.bodyLesson(s, t).readiness === r,
+        ).length,
       ],
     ),
   );
@@ -1017,7 +1020,10 @@ const report = {
   combinedPinnedCurriculumSections: 1246,
   sourceIndexChecks,
   negativeCases: negatives.length,
-  bodyReadiness: { anatomy: counts('anatomy'), function: counts('function') },
+  bodyReadinessAtAcralMilestone: {
+    anatomy: counts('anatomy'),
+    function: counts('function'),
+  },
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,
