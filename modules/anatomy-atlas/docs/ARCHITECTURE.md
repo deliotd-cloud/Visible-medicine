@@ -2,6 +2,8 @@
 
 ## Connective teaching dispatch
 
+`lib/spinal-bone-curriculum.ts` supplies 13 exact-FMA groups for 25 existing spinal-bone representations, guarded by system/category/primary and secondary region/laterality/tab. It changes only Anatomy/Function through the shared resolver. A pinned offline transition precedes the connective and earlier projections; runtime/export remain current. See [source scope and limits](SPINAL_BONE_CURRICULUM.md).
+
 `lib/connective-curriculum.ts` supplies 21 exact-FMA groups for 43 existing cartilage/ligament representations, including membrane complexes. The shared content resolver overrides only Anatomy/Function with system/category/region guards, retaining source warnings. An offline pinned transition precedes the earlier curriculum projections; current display/export remain current. See [scope and mechanical limits](CONNECTIVE_CURRICULUM.md).
 
 ## Organ teaching dispatch

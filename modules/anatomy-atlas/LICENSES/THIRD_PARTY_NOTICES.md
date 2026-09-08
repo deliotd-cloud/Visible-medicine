@@ -1,5 +1,7 @@
 # Third-party notices
 
+The spinal-bone update adds brief original factual teaching with linked medical references, not imported prose, figures, scans, tables or datasets. Publication copyright/NC-ND terms are not commercial asset grants. No new dependency, font, texture, mesh, paid API or private data. Original application code/text retain MIT terms; source-index evidence retains separate DBCLS BodyParts3D CC BY 4.0 attribution/change obligations. See `../docs/SPINAL_BONE_CURRICULUM.md`.
+
 The connective update adds brief original factual teaching linked to medical articles, study abstracts and a university lecture, not imported prose, figures, diagrams, tables or datasets. Publication copyright/NC-ND terms are not commercial asset grants. No new package, font, texture, mesh, paid API or private data. Original code/text retain MIT terms; source-index evidence retains separate DBCLS BodyParts3D CC BY 4.0 obligations. See `../docs/CONNECTIVE_CURRICULUM.md`.
 
 The organ update adds brief original factual notes with linked NIH, Society for Endocrinology, StatPearls and Histology Guide references, not imported prose, figures, scans or datasets. Publisher copyright and NC-ND terms are not commercial asset grants. No new dependency, font, texture, mesh, paid API or private data. Original application text/code retain MIT terms; source-index evidence retains separate DBCLS BodyParts3D CC BY 4.0 credit/change obligations. See `../docs/ORGAN_CURRICULUM.md`.
