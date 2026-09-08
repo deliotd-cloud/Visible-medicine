@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Shoulder and arm Clinical / Pathology review
+
+Review the [36 new sections](SHOULDER_CLINICAL_CURRICULUM.md) for tendon-versus-muscle scope, nerve localisation caveats, partial/full-thickness distinctions, proximal/distal biceps injury and shared triceps attachments. Examination names are associations, not diagnostic guarantees. Eighteen representations use nine definitions, not eighteen independently reviewed lesions. Musculoskeletal sign-off and full-body editorial persistence remain outstanding. No acquired imaging, simulated disease, treatment protocol or approval.
+
 ## Connective Anatomy review gates
 
 Review the [26 connective drafts](CONNECTIVE_ANATOMY_CURRICULUM.md) for ligament/tendon attachments and relationships, source laterality, regional disc anatomy, naming conventions and specimen-specific vertebral count. Disc bodies receive shared regional context, not 22 independently validated interval descriptions. General C2–C3 anatomy does not register a source mesh to a patient level. FJ3211 remains unresolved/excluded. Internal disc compartments, tendon subtendons/paratenon/bursae, ligament fascicles, attachment footprints and physiological deformation remain unvalidated or unsegmented. No scan, pathology diagnosis or clinical approval is added.

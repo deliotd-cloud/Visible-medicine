@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Shoulder clinical teaching
+
+The [clinical extension](SHOULDER_CLINICAL_CURRICULUM.md) uses nine definitions for eighteen exact identities, guarded by FMA, laterality, muscle system/category, sole region and source file/tree. Two existing tabs gain 36 drafts. A new offline projection precedes the 29 historical projections (1,638 pinned sections); runtime/export remain current. The dedicated shoulder, modality topics, model, schema, interface and review state are unchanged.
+
 ## Connective Anatomy and regional disc teaching
 
 The [connective extension](CONNECTIVE_ANATOMY_CURRICULUM.md) maps 26 exact source identities to two bilateral attachment definitions and three regional disc definitions. It requires connective system, category, side, primary region, all expected regional memberships and Anatomy topic. Source disc labels are retained without deriving patient-level intervals. The new offline transition precedes the 28 older projections; all current render/export paths use current drafts. No geometry, recipes, interface, schema or review changes.

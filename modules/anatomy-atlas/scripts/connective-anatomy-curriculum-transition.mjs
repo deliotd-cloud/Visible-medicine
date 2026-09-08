@@ -1,11 +1,13 @@
 import assert from 'node:assert/strict';
 import { readContentJson } from './content-contract-tools.mjs';
 import { createHash } from 'node:crypto';
+import { authoringBeforeShoulderClinical } from './shoulder-clinical-curriculum-transition.mjs';
 const hash = (v) =>
   createHash('sha256').update(JSON.stringify(v)).digest('hex');
 /** Offline historical comparison only. Runtime/export always use current teaching. */
 export async function authoringBeforeConnectiveAnatomy(context) {
-  const { api, catalog } = context;
+  const { catalog } = context;
+  const api = await authoringBeforeShoulderClinical(context);
   const before = await readContentJson(
     'content/connective-anatomy-curriculum.before.json',
   );

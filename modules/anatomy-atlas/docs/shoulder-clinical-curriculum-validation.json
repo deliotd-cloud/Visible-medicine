@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "checks": 17310,
+  "bodyRepresentations": 18,
+  "sourceComponents": 18,
+  "lessonGroups": 9,
+  "explicitTopicEdits": 36,
+  "combinedPinnedCurriculumSections": 1638,
+  "sourceIndexChecks": 18,
+  "negativeCases": 12,
+  "bodyReadiness": {
+    "anatomy": {
+      "draft": 1020,
+      "identity-only": 2,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "function": {
+      "draft": 1018,
+      "identity-only": 0,
+      "pending": 4,
+      "generated-identification": 0
+    },
+    "ct": {
+      "draft": 11,
+      "identity-only": 0,
+      "pending": 1011,
+      "generated-identification": 0
+    },
+    "mri": {
+      "draft": 11,
+      "identity-only": 0,
+      "pending": 1011,
+      "generated-identification": 0
+    },
+    "ultrasound": {
+      "draft": 11,
+      "identity-only": 0,
+      "pending": 1011,
+      "generated-identification": 0
+    },
+    "pathology": {
+      "draft": 29,
+      "identity-only": 0,
+      "pending": 993,
+      "generated-identification": 0
+    },
+    "clinical": {
+      "draft": 29,
+      "identity-only": 0,
+      "pending": 993,
+      "generated-identification": 0
+    },
+    "quiz": {
+      "draft": 11,
+      "identity-only": 0,
+      "pending": 0,
+      "generated-identification": 1011
+    }
+  },
+  "unrelatedCopyAndRecipesPreserved": true,
+  "sourceGeometryChanged": false,
+  "clinicalApproval": false,
+  "scanContentAdded": false,
+  "browserTesting": false,
+  "copyAndRecipeHash": "0af481dfc04fe815371c747921a32d36eb334fa221bf31afda529927dccf99e5",
+  "limitations": "Shared clinical teaching for muscle heads/portions; not individual tendon lesions, acquired studies, diagnostic algorithms, reviewed questions or clinical acceptance."
+}
