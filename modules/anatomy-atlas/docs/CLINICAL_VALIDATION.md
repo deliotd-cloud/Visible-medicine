@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Connective Anatomy review gates
+
+Review the [26 connective drafts](CONNECTIVE_ANATOMY_CURRICULUM.md) for ligament/tendon attachments and relationships, source laterality, regional disc anatomy, naming conventions and specimen-specific vertebral count. Disc bodies receive shared regional context, not 22 independently validated interval descriptions. General C2–C3 anatomy does not register a source mesh to a patient level. FJ3211 remains unresolved/excluded. Internal disc compartments, tendon subtendons/paratenon/bursae, ligament fascicles, attachment footprints and physiological deformation remain unvalidated or unsegmented. No scan, pathology diagnosis or clinical approval is added.
+
 ## Organ Anatomy review gates
 
 The [21 new organ/duct drafts](ORGAN_ANATOMY_CURRICULUM.md) require independent review of organ extent, laterality, relationships, named subdivisions and biliary/airway identity. The 472 included source components are not 472 anatomical subdivisions. Check the 33 excluded parent memberships against separate selections; do not infer missing anatomy from parent-selection counts. Lung segments, cardiac valves/conduction, hepatic segments, renal compartments, bowel layers, adrenal zones and duct lumina are not validated by these notes. Existing clinical/modality topics remain pending; no physiological animation, operative guidance or acquired imaging was added.

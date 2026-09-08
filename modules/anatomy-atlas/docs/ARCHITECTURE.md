@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Connective Anatomy and regional disc teaching
+
+The [connective extension](CONNECTIVE_ANATOMY_CURRICULUM.md) maps 26 exact source identities to two bilateral attachment definitions and three regional disc definitions. It requires connective system, category, side, primary region, all expected regional memberships and Anatomy topic. Source disc labels are retained without deriving patient-level intervals. The new offline transition precedes the 28 older projections; all current render/export paths use current drafts. No geometry, recipes, interface, schema or review changes.
+
 ## Organ location and aggregate-aware teaching
 
 The [organ Anatomy extension](ORGAN_ANATOMY_CURRICULUM.md) adds 21 exact-FMA, system/category, laterality and primary/secondary-region guarded Anatomy definitions. Existing Function and specialist sections are unchanged. Current region metadata, not historical tokens inside stable IDs, governs routing. The offline `authoringBeforeOrganAnatomy` projection precedes the 27 earlier projections and never enters runtime rendering. Source selection lists, aggregate exclusions and all geometry remain unchanged.

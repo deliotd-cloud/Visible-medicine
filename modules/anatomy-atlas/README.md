@@ -2,7 +2,9 @@
 
 ## Current scope and remaining work
 
-The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: four Function sections remain pending, 28 Anatomy sections remain identity-only, and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: four Function sections remain pending, two Anatomy sections remain identity-only, and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+
+The [connective Anatomy extension](docs/CONNECTIVE_ANATOMY_CURRICULUM.md) adds 26 drafts: bilateral long plantar ligaments and Achilles tendons, plus shared regional teaching for 22 source-labelled whole discs. Attachments, tissue compartments and source-level limitations are distinguished explicitly. No new geometry or scan-level registration. Run `npm run connective-anatomy-curriculum:test -- --source`; independent review remains required.
 
 The [organ Anatomy extension](docs/ORGAN_ANATOMY_CURRICULUM.md) adds location and relationship drafts for 21 existing organs and ducts, preserving their Function notes and current interface. Source aggregates are explicitly distinguished from complete organs and internal tissue compartments. Run `npm run organ-anatomy-curriculum:test -- --source` to include cached official source-index comparisons. No clinical approval or new geometry is implied.
 

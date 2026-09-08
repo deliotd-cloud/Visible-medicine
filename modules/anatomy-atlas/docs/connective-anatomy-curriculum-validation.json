@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "checks": 9229,
+  "bodyRepresentations": 26,
+  "sourceComponents": 26,
+  "discRepresentations": 22,
+  "lessonGroups": 5,
+  "explicitTopicEdits": 26,
+  "combinedPinnedCurriculumSections": 1602,
+  "sourceIndexChecks": 26,
+  "negativeCases": 12,
+  "bodyReadiness": {
+    "anatomy": {
+      "draft": 1020,
+      "identity-only": 2,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "function": {
+      "draft": 1018,
+      "identity-only": 0,
+      "pending": 4,
+      "generated-identification": 0
+    }
+  },
+  "unrelatedCopyAndRecipesPreserved": true,
+  "existingFunctionPreserved": true,
+  "sourceGeometryChanged": false,
+  "clinicalApproval": false,
+  "radiologicalLevelsValidated": false,
+  "scanContentAdded": false,
+  "browserTesting": false,
+  "limitations": "Shared regional disc teaching and bilateral attachment overviews; no internal tissue segmentation, resolved extra disc, patient-level registration, physiological simulation or clinical acceptance."
+}

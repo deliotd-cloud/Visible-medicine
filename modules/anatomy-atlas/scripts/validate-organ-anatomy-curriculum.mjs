@@ -6,6 +6,7 @@ import {
   readContentJson,
 } from './content-contract-tools.mjs';
 import { authoringBeforeOrganAnatomy } from './organ-anatomy-curriculum-transition.mjs';
+import { authoringBeforeConnectiveAnatomy } from './connective-anatomy-curriculum-transition.mjs';
 import {
   curriculumHash,
   copyBeforeShoulderArmCurriculum,
@@ -28,6 +29,7 @@ const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
 const previous = await authoringBeforeOrganAnatomy(context);
+const milestone = await authoringBeforeConnectiveAnatomy(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
@@ -221,8 +223,9 @@ const counts = (t) =>
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
-          .length,
+        catalog.structures.filter(
+          (s) => milestone.bodyLesson(s, t).readiness === r,
+        ).length,
       ],
     ),
   );
@@ -264,7 +267,10 @@ const report = {
   combinedPinnedCurriculumSections: 1576,
   sourceIndexChecks,
   negativeCases: negatives.length,
-  bodyReadiness: { anatomy: counts('anatomy'), function: counts('function') },
+  bodyReadinessAtOrganAnatomyMilestone: {
+    anatomy: counts('anatomy'),
+    function: counts('function'),
+  },
   unrelatedCopyAndRecipesPreserved: true,
   existingFunctionPreserved: true,
   sourceGeometryChanged: false,

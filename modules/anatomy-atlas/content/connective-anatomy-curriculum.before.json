@@ -1,0 +1,998 @@
+{
+  "sourceCommit": "0c8f268910b329fffd86182c2858ab90d2917cb6",
+  "copyAndRecipeHash": "a52c270c001710d1b3806081c343a2fbd19593182cb7d7ff5115fc839f5c881e",
+  "scope": "body",
+  "regions": [
+    "foot",
+    "leg",
+    "spine"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:foot:right:ligament:right-long-plantar-ligament",
+      "fmaId": "FMA44249",
+      "name": "Right long plantar ligament",
+      "category": "ligament",
+      "side": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1424"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Right long plantar ligament is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA44249",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1424"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:ligament:left-long-plantar-ligament",
+      "fmaId": "FMA44250",
+      "name": "Left long plantar ligament",
+      "category": "ligament",
+      "side": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1424M"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Left long plantar ligament is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA44250",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1424M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
+      "fmaId": "FMA258847",
+      "name": "Right calcaneal tendon",
+      "category": "tendon",
+      "side": "right",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1405"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Right calcaneal tendon is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA258847",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Calcaneal (Achilles) tendon surface. Subtendons, paratenon and enthesis are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1405"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
+      "fmaId": "FMA264844",
+      "name": "Left calcaneal tendon",
+      "category": "tendon",
+      "side": "left",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1405M"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Left calcaneal tendon is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA264844",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Calcaneal (Achilles) tendon surface. Subtendons, paratenon and enthesis are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1405M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-axis",
+      "fmaId": "FMA25058",
+      "name": "Intervertebral disk of axis",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3202"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of axis is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA25058",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3202"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-cervical-vertebra",
+      "fmaId": "FMA13896",
+      "name": "Intervertebral disk of third cervical vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3213"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of third cervical vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA13896",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3213"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-cervical-vertebra",
+      "fmaId": "FMA13897",
+      "name": "Intervertebral disk of fourth cervical vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3218"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of fourth cervical vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA13897",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3218"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-cervical-vertebra",
+      "fmaId": "FMA13898",
+      "name": "Intervertebral disk of fifth cervical vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3219"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of fifth cervical vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA13898",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3219"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-cervical-vertebra",
+      "fmaId": "FMA13899",
+      "name": "Intervertebral disk of sixth cervical vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3220"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of sixth cervical vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA13899",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3220"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-cervical-vertebra",
+      "fmaId": "FMA13900",
+      "name": "Intervertebral disk of seventh cervical vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3221"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of seventh cervical vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA13900",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3221"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-first-thoracic-vertebra",
+      "fmaId": "FMA10458",
+      "name": "Intervertebral disk of first thoracic vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3222"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of first thoracic vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA10458",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3222"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-thoracic-vertebra",
+      "fmaId": "FMA13495",
+      "name": "Intervertebral disk of second thoracic vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3223"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of second thoracic vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA13495",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3223"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-thoracic-vertebra",
+      "fmaId": "FMA13500",
+      "name": "Intervertebral disk of third thoracic vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3224"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of third thoracic vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA13500",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3224"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-thoracic-vertebra",
+      "fmaId": "FMA13501",
+      "name": "Intervertebral disk of fourth thoracic vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3203"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of fourth thoracic vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA13501",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3203"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-thoracic-vertebra",
+      "fmaId": "FMA13502",
+      "name": "Intervertebral disk of fifth thoracic vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3204"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of fifth thoracic vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA13502",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3204"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-thoracic-vertebra",
+      "fmaId": "FMA13503",
+      "name": "Intervertebral disk of sixth thoracic vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3205"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of sixth thoracic vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA13503",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3205"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-thoracic-vertebra",
+      "fmaId": "FMA13504",
+      "name": "Intervertebral disk of seventh thoracic vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3206"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of seventh thoracic vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA13504",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3206"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eighth-thoracic-vertebra",
+      "fmaId": "FMA13505",
+      "name": "Intervertebral disk of eighth thoracic vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3207"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of eighth thoracic vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA13505",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3207"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-ninth-thoracic-vertebra",
+      "fmaId": "FMA13506",
+      "name": "Intervertebral disk of ninth thoracic vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3208"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of ninth thoracic vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA13506",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3208"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-tenth-thoracic-vertebra",
+      "fmaId": "FMA13507",
+      "name": "Intervertebral disk of tenth thoracic vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3209"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of tenth thoracic vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA13507",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3209"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eleventh-thoracic-vertebra",
+      "fmaId": "FMA13508",
+      "name": "Intervertebral disk of eleventh thoracic vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3210"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of eleventh thoracic vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA13508",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3210"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-first-lumbar-vertebra",
+      "fmaId": "FMA16033",
+      "name": "Intervertebral disk of first lumbar vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3212"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of first lumbar vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA16033",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3212"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-lumbar-vertebra",
+      "fmaId": "FMA16034",
+      "name": "Intervertebral disk of second lumbar vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3214"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of second lumbar vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA16034",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3214"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-lumbar-vertebra",
+      "fmaId": "FMA16035",
+      "name": "Intervertebral disk of third lumbar vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3215"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of third lumbar vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA16035",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3215"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
+      "fmaId": "FMA16036",
+      "name": "Intervertebral disk of fourth lumbar vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3216"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of fourth lumbar vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA16036",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3216"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra",
+      "fmaId": "FMA16037",
+      "name": "Intervertebral disk of fifth lumbar vertebra",
+      "category": "cartilage",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3217"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Intervertebral disk of fifth lumbar vertebra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA16037",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3217"
+      ],
+      "omittedSourceFiles": []
+    }
+  ]
+}

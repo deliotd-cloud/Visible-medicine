@@ -46,6 +46,7 @@ import { upperLimbVesselLesson } from '../lib/upper-limb-vessel-curriculum';
 import { regionalVesselLesson } from '../lib/regional-vessel-curriculum';
 import { neuralAnatomyLesson } from '../lib/neural-anatomy-curriculum';
 import { organAnatomyLesson } from '../lib/organ-anatomy-curriculum';
+import { connectiveAnatomyLesson } from '../lib/connective-anatomy-curriculum';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -150,6 +151,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (neuralAnatomy) return neuralAnatomy;
   const organAnatomy = organAnatomyLesson(s, tab);
   if (organAnatomy) return organAnatomy;
+  const connectiveAnatomy = connectiveAnatomyLesson(s, tab);
+  if (connectiveAnatomy) return connectiveAnatomy;
   const axial =
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??

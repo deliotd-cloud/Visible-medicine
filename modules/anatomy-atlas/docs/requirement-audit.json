@@ -9,8 +9,8 @@
     "content/review-revisions.json": "abc8f9410e00b41282e149d2bb6020d96ad6367aed769888519940c4c24118a0",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "a52c270c001710d1b3806081c343a2fbd19593182cb7d7ff5115fc839f5c881e",
-    "explicitTopicReadiness": "dca5f0543540e69747fdb21433da1f9d3490994a02534b20655288636f437342"
+    "resolvedContentAndRecipeData": "72b8d2214bf1f7c50699b3e5246960035514ea0fe4b548518a7f6601a2e3abd8",
+    "explicitTopicReadiness": "0483f8bcf72af8501b467b5f960cae024391ac2b8e0059aa89b69bbc29522bd2"
   },
   "anatomy": {
     "bodyRepresentations": 1022,
@@ -101,8 +101,8 @@
     "classificationLimit": "Explicit readiness from authoring branches; not inferred from titles and not clinical approval. Existing shoulder authoring is explicitly draft.",
     "body": {
       "anatomy": {
-        "specificDraft": 994,
-        "identityOnly": 28,
+        "specificDraft": 1020,
+        "identityOnly": 2,
         "pending": 0,
         "generatedIdentification": 0
       },
@@ -202,8 +202,8 @@
     "byRegion": {
       "head-neck": {
         "anatomy": {
-          "specificDraft": 269,
-          "identityOnly": 6,
+          "specificDraft": 275,
+          "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
@@ -252,8 +252,8 @@
       },
       "thorax": {
         "anatomy": {
-          "specificDraft": 142,
-          "identityOnly": 11,
+          "specificDraft": 153,
+          "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
@@ -302,8 +302,8 @@
       },
       "abdomen": {
         "anatomy": {
-          "specificDraft": 89,
-          "identityOnly": 5,
+          "specificDraft": 94,
+          "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
@@ -602,8 +602,8 @@
       },
       "leg": {
         "anatomy": {
-          "specificDraft": 58,
-          "identityOnly": 2,
+          "specificDraft": 60,
+          "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
@@ -652,8 +652,8 @@
       },
       "foot": {
         "anatomy": {
-          "specificDraft": 112,
-          "identityOnly": 6,
+          "specificDraft": 116,
+          "identityOnly": 2,
           "pending": 0,
           "generatedIdentification": 0
         },
@@ -702,8 +702,8 @@
       },
       "spine": {
         "anatomy": {
-          "specificDraft": 90,
-          "identityOnly": 22,
+          "specificDraft": 112,
+          "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
