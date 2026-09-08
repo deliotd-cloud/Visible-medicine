@@ -6,6 +6,7 @@ import {
   readContentJson,
 } from './content-contract-tools.mjs';
 import { authoringBeforeCentralNeuro } from './central-neuro-curriculum-transition.mjs';
+import { authoringBeforeOrgans } from './organ-curriculum-transition.mjs';
 import {
   curriculumHash,
   copyBeforeShoulderArmCurriculum,
@@ -194,13 +195,15 @@ for (const [fma, t, field] of negatives) {
   );
   checks++;
 }
+const centralNeuroMilestone = await authoringBeforeOrgans(context);
 const counts = (t) =>
   Object.fromEntries(
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
-          .length,
+        catalog.structures.filter(
+          (s) => centralNeuroMilestone.bodyLesson(s, t).readiness === r,
+        ).length,
       ],
     ),
   );
@@ -237,7 +240,10 @@ const report = {
   combinedPinnedCurriculumSections: 718,
   sourceIndexChecks,
   negativeCases: negatives.length,
-  bodyReadiness: { anatomy: counts('anatomy'), function: counts('function') },
+  bodyReadinessAtCentralNeuroMilestone: {
+    anatomy: counts('anatomy'),
+    function: counts('function'),
+  },
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,

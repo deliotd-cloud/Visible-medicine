@@ -1,5 +1,7 @@
 # Third-party notices
 
+The organ update adds brief original factual notes with linked NIH, Society for Endocrinology, StatPearls and Histology Guide references, not imported prose, figures, scans or datasets. Publisher copyright and NC-ND terms are not commercial asset grants. No new dependency, font, texture, mesh, paid API or private data. Original application text/code retain MIT terms; source-index evidence retains separate DBCLS BodyParts3D CC BY 4.0 credit/change obligations. See `../docs/ORGAN_CURRICULUM.md`.
+
 The central-neuro update adds brief original evidence-aware notes with linked research/medical references, not imported prose, figures, scans, tables or datasets. Their publisher and NC-ND terms are not treated as commercial asset grants. No new asset, dependency, font, texture, paid API or private data. Original text/code retain MIT terms; source-index evidence retains separate BodyParts3D CC BY 4.0 credit/change obligations. See `../docs/CENTRAL_NEURO_CURRICULUM.md`.
 
 The orbital nerve curriculum adds brief original factual writing with linked medical references, not imported prose, tables, diagrams or assets. Kenhub rights and StatPearls NC-ND terms are not commercial asset grants. No new dependency, font, texture, mesh, paid API or private data is added. Original application text/code retain existing MIT terms; source-index evidence separately retains DBCLS BodyParts3D CC BY 4.0 attribution/change obligations. See `../docs/ORBITAL_NERVE_CURRICULUM.md`.

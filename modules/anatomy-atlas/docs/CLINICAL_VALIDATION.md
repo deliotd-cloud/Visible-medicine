@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Organ teaching gates
+
+The [organ drafts](ORGAN_CURRICULUM.md) require independent source-boundary/relationship and content review. Resolve unequal eye-component sets and absent independent retinal representation; assess fixed-reference thymus age, adult-male tract scope, gland/duct/wall detail and functional wording. A navigation region is not an anatomical cavity. No layer completeness, duct patency, patient physiology, diagnosis or clinical approval is established by the software checks. Unresolved muscle/fornical Function and specialist/imaging gates remain.
+
 ## Current acceptance scope
 
 The [requirement audit](REQUIREMENT_AUDIT.md) consolidates current coverage, actual teaching gaps and the next device-acceptance matrix. Current source contains 1,022 body representations, 138 stages and 120 focuses; counts in milestone-specific gates below are historical. Every unresolved gate remains relevant. Current local layout/explosion/recovery changes are not covered by the earlier browser session, and no clinical approval is created by source or software checks.

@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Organ teaching dispatch
+
+`lib/organ-curriculum.ts` supplies 15 exact-FMA lesson groups for 23 existing body representations through the existing `bodyLesson`/`bodyContent` dispatch. Only Anatomy/Function are overridden, guarded by system, category and region. Existing warnings, source IDs, geometry and panels remain intact. The offline organ transition pins this explicit edit before older preservation projections; exported content remains current. See [scope and source limitations](ORGAN_CURRICULUM.md).
+
 ## Current implementation and contract gaps
 
 Use the [requirement audit](REQUIREMENT_AUDIT.md) for current source counts and acceptance. Pipeline examples and earlier milestone counts below retain their historical scope. The [v2 content contract](CONTENT_CONTRACT.md) now supports multi-part mesh bindings, scope-specific representations and explicit topic readiness, with a schema-conforming shoulder export and all-body checks. `bodyLesson` exposes metadata while the existing `bodyContent` API preserves displayed text. Private clinical reviews are not part of this draft export; a production curriculum store/editor remains future work.

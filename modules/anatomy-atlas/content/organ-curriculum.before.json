@@ -1,0 +1,661 @@
+{
+  "sourceCommit": "812d8cd8ec7dcbdc5df8361a61bef2dae1765a79",
+  "copyAndRecipeHash": "c5f4bd17ed2e032c70c8c397e152dc93fbcef1fd679bbb140bd9c5b4432630a0",
+  "scope": "body",
+  "regions": [
+    "head-neck",
+    "thorax",
+    "abdomen",
+    "pelvis"
+  ],
+  "tabs": [
+    "anatomy",
+    "function"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:prostate",
+      "fmaId": "FMA9600",
+      "name": "Prostate",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Prostate is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA9600",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:organ:right-testis",
+      "fmaId": "FMA7211",
+      "name": "Right testis",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Right testis is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA7211",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:organ:left-testis",
+      "fmaId": "FMA7212",
+      "name": "Left testis",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Left testis is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA7212",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:organ:right-seminal-vesicle",
+      "fmaId": "FMA19387",
+      "name": "Right seminal vesicle",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Right seminal vesicle is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA19387",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:organ:left-seminal-vesicle",
+      "fmaId": "FMA19388",
+      "name": "Left seminal vesicle",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Left seminal vesicle is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA19388",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:organ:right-ureter",
+      "fmaId": "FMA15571",
+      "name": "Right ureter",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Right ureter is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA15571",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:organ:left-ureter",
+      "fmaId": "FMA15572",
+      "name": "Left ureter",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Left ureter is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA15572",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unpaired:organ:thymus",
+      "fmaId": "FMA9607",
+      "name": "Thymus",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Thymus is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA9607",
+            "2 source components grouped as one structure",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:pituitary-gland",
+      "fmaId": "FMA13889",
+      "name": "Pituitary gland",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Pituitary gland is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA13889",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "fmaId": "FMA12514",
+      "name": "Right eyeball",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Right eyeball is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA12514",
+            "8 source components grouped as one structure",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Compound eyeball surface. Internal components are grouped, not an independently reviewed ocular-layer dissection.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+      "fmaId": "FMA12515",
+      "name": "Left eyeball",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Left eyeball is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA12515",
+            "9 source components grouped as one structure",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Compound eyeball surface. Internal components are grouped, not an independently reviewed ocular-layer dissection.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:rectum",
+      "fmaId": "FMA14544",
+      "name": "Rectum",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Rectum is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA14544",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Source rectum surface separated from the large-intestine aggregate for selection. No wall-layer, sphincter or mesorectal dissection is supplied.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:tongue",
+      "fmaId": "FMA54640",
+      "name": "Tongue",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Tongue is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA54640",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
+      "fmaId": "FMA59102",
+      "name": "Right lacrimal gland",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Right lacrimal gland is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA59102",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
+      "fmaId": "FMA59103",
+      "name": "Left lacrimal gland",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Left lacrimal gland is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA59103",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-submandibular-gland",
+      "fmaId": "FMA59802",
+      "name": "Right submandibular gland",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Right submandibular gland is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA59802",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-submandibular-gland",
+      "fmaId": "FMA59803",
+      "name": "Left submandibular gland",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Left submandibular gland is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA59803",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-sublingual-gland",
+      "fmaId": "FMA59804",
+      "name": "Right sublingual gland",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Right sublingual gland is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA59804",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-sublingual-gland",
+      "fmaId": "FMA59805",
+      "name": "Left sublingual gland",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Left sublingual gland is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA59805",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:organ:right-epididymis",
+      "fmaId": "FMA18256",
+      "name": "Right epididymis",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Right epididymis is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA18256",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:organ:left-epididymis",
+      "fmaId": "FMA18257",
+      "name": "Left epididymis",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Left epididymis is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA18257",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:urethra",
+      "fmaId": "FMA19667",
+      "name": "Urethra",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Urethra is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA19667",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+      "fmaId": "FMA14542",
+      "name": "Appendix",
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Appendix is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA14542",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Reference appendix surface only; variation, wall layers and mesoappendix are not reconstructed. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        }
+      }
+    }
+  ]
+}

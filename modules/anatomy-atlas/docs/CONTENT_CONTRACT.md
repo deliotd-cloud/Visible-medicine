@@ -2,6 +2,8 @@
 
 ## Delivered scope
 
+**Current organ extension:** [46 original drafts](ORGAN_CURRICULUM.md) cover 23 existing organ-system entries. Body totals: Anatomy 575 draft / 447 identity-only; Function 631 draft / 146 identity-only / 245 pending. `authoringBeforeOrgans` verifies/restores only these topics before fourteen prior offline projections, preserving 764 pinned topic edits against the original baseline. Current runtime/export remain current; the CNS report labels historical counts. No schema, source, geometry or review migration. Earlier extension totals below are historical.
+
 **Current central-neuro extension:** [six topic edits](CENTRAL_NEURO_CURRICULUM.md) add three drafts, enrich two existing Anatomy drafts and retain a pending fornical Function clarification. Body totals: Anatomy 552 draft / 470 identity-only; Function 608 draft / 146 identity-only / 268 pending. `authoringBeforeCentralNeuro` verifies/restores these sections before thirteen prior projections; 718 edits remain pinned to the original baseline. Original commissural identity text is preserved; the orbital-nerve report now names historical counts. No schema/source/review migration.
 
 **Current orbital nerve extension:** [40 drafts](ORBITAL_NERVE_CURRICULUM.md) cover 20 exact existing entries. Body totals: Anatomy 551 draft / 471 identity-only; Function 606 draft / 146 identity-only / 270 pending. `authoringBeforeOrbitalNerve` verifies/restores only those sections before the twelve prior projections; all 712 topic edits remain pinned to the original baseline. Trunk report totals are explicitly historical. Current runtime/export, source IDs, schema and private-review boundaries are preserved.

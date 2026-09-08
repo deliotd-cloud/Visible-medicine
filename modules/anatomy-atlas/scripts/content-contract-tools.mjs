@@ -27,6 +27,7 @@ export * from './lib/deep-neck-curriculum.ts';
 export * from './lib/trunk-curriculum.ts';
 export * from './lib/orbital-nerve-curriculum.ts';
 export * from './lib/central-neuro-curriculum.ts';
+export * from './lib/organ-curriculum.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';`,
       resolveDir: fileURLToPath(contentRoot),
