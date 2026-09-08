@@ -1,14 +1,14 @@
 {
   "passed": true,
-  "checks": 17310,
-  "bodyRepresentations": 18,
-  "sourceComponents": 18,
-  "lessonGroups": 9,
-  "explicitTopicEdits": 36,
-  "combinedPinnedCurriculumSections": 1638,
-  "sourceIndexChecks": 18,
+  "checks": 17182,
+  "bodyRepresentations": 14,
+  "sourceComponents": 14,
+  "lessonGroups": 6,
+  "explicitTopicEdits": 28,
+  "combinedPinnedCurriculumSections": 1666,
+  "sourceIndexChecks": 14,
   "negativeCases": 12,
-  "bodyReadinessAtShoulderClinicalMilestone": {
+  "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
       "identity-only": 2,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 29,
+      "draft": 43,
       "identity-only": 0,
-      "pending": 993,
+      "pending": 979,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 29,
+      "draft": 43,
       "identity-only": 0,
-      "pending": 993,
+      "pending": 979,
       "generated-identification": 0
     },
     "quiz": {
@@ -63,6 +63,6 @@
   "clinicalApproval": false,
   "scanContentAdded": false,
   "browserTesting": false,
-  "copyAndRecipeHashAtShoulderClinicalMilestone": "0af481dfc04fe815371c747921a32d36eb334fa221bf31afda529927dccf99e5",
-  "limitations": "Shared clinical teaching for muscle heads/portions; not individual tendon lesions, acquired studies, diagnostic algorithms, reviewed questions or clinical acceptance."
+  "copyAndRecipeHash": "fc22a9fbfe86ebf18395e110d6c8aeb8d507f050e2d073747b17e0252e8a6cb9",
+  "limitations": "Original short clinical overviews, including rare case-report evidence and shared rhomboid context; not prevalence, diagnosis, treatment rules, scan findings or clinical approval."
 }

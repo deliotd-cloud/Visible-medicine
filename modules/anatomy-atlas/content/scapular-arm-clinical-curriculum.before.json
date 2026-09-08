@@ -1,0 +1,444 @@
+{
+  "sourceCommit": "6ff989dc6eeb3f1afa885b94d0ee1d621c9b069a",
+  "copyAndRecipeHash": "0af481dfc04fe815371c747921a32d36eb334fa221bf31afda529927dccf99e5",
+  "scope": "body",
+  "regions": [
+    "shoulder-arm"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-anconeus",
+      "fmaId": "FMA37705",
+      "name": "Right anconeus",
+      "category": "muscle",
+      "side": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1485"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1485"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-anconeus",
+      "fmaId": "FMA37706",
+      "name": "Left anconeus",
+      "category": "muscle",
+      "side": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1485M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1485M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-brachialis",
+      "fmaId": "FMA37668",
+      "name": "Right brachialis",
+      "category": "muscle",
+      "side": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1486"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1486"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-brachialis",
+      "fmaId": "FMA37669",
+      "name": "Left brachialis",
+      "category": "muscle",
+      "side": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1486M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1486M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-coracobrachialis",
+      "fmaId": "FMA37665",
+      "name": "Right coracobrachialis",
+      "category": "muscle",
+      "side": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1488"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1488"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-coracobrachialis",
+      "fmaId": "FMA37666",
+      "name": "Left coracobrachialis",
+      "category": "muscle",
+      "side": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1488M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1488M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-teres-major",
+      "fmaId": "FMA32551",
+      "name": "Right teres major",
+      "category": "muscle",
+      "side": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1507"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1507"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-teres-major",
+      "fmaId": "FMA32552",
+      "name": "Left teres major",
+      "category": "muscle",
+      "side": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1507M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1507M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-levator-scapulae",
+      "fmaId": "FMA32540",
+      "name": "Right levator scapulae",
+      "category": "muscle",
+      "side": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1532"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1532"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-levator-scapulae",
+      "fmaId": "FMA32541",
+      "name": "Left levator scapulae",
+      "category": "muscle",
+      "side": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1532M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1532M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-rhomboid-major",
+      "fmaId": "FMA13381",
+      "name": "Right rhomboid major",
+      "category": "muscle",
+      "side": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1536"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1536"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-rhomboid-major",
+      "fmaId": "FMA13382",
+      "name": "Left rhomboid major",
+      "category": "muscle",
+      "side": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1536M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1536M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-rhomboid-minor",
+      "fmaId": "FMA13383",
+      "name": "Right rhomboid minor",
+      "category": "muscle",
+      "side": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1537"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1537"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-rhomboid-minor",
+      "fmaId": "FMA13384",
+      "name": "Left rhomboid minor",
+      "category": "muscle",
+      "side": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1537M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1537M"
+      ],
+      "omittedSourceFiles": []
+    }
+  ]
+}

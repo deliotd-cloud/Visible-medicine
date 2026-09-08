@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Scapular and arm clinical teaching
+
+The [clinical continuation](SCAPULAR_ARM_CLINICAL_CURRICULUM.md) reuses the typed teaching-group shape for six definitions/fourteen exact-FMA muscle entries. Both existing tabs gain drafts, guarded by source file/tree, category/system, side and sole region. The new offline projection precedes thirty historical ones (1,666 pinned sections); runtime/export remain current. Prior shoulder report counts are explicitly historical. No UI, model, schema, review or dependency changes.
+
 ## Shoulder clinical teaching
 
 The [clinical extension](SHOULDER_CLINICAL_CURRICULUM.md) uses nine definitions for eighteen exact identities, guarded by FMA, laterality, muscle system/category, sole region and source file/tree. Two existing tabs gain 36 drafts. A new offline projection precedes the 29 historical projections (1,638 pinned sections); runtime/export remain current. The dedicated shoulder, modality topics, model, schema, interface and review state are unchanged.

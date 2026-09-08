@@ -2,6 +2,8 @@
 
 ## Current scope and remaining work
 
+The [scapular/arm clinical extension](docs/SCAPULAR_ARM_CLINICAL_CURRICULUM.md) adds 28 cited drafts across fourteen remaining muscle entries, retaining the same tabs and simple layout. It distinguishes uncommon reported injuries, accessory anatomy and nerve-related weakness without claiming diagnoses or clinical approval. Run `npm run scapular-arm-clinical-curriculum:test -- --source`.
+
 The [shoulder clinical extension](docs/SHOULDER_CLINICAL_CURRICULUM.md) adds 36 cited Pathology/Clinical drafts to 18 existing muscle/head/portion entries. They distinguish tendon injuries from nerve-related weakness without adding controls or claiming clinical approval. Other topics and geometry are unchanged. Run `npm run shoulder-clinical-curriculum:test -- --source`.
 
 The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: four Function sections remain pending, two Anatomy sections remain identity-only, and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.

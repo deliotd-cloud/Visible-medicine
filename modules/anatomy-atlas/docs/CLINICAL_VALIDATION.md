@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Scapular and arm clinical review
+
+Review the [28 new drafts](SCAPULAR_ARM_CLINICAL_CURRICULUM.md) for rare-case evidence limits, normal anconeus versus accessory epitrochlearis, coracobrachialis nerve relationships, teres-major/cuff distinction, levator pain and shared rhomboid context. These are possible mechanisms and clinical associations, not prevalence claims, patient findings, treatment rules or independent approvals. Exact source identity tests do not validate symptoms or nerve pathways.
+
 ## Shoulder and arm Clinical / Pathology review
 
 Review the [36 new sections](SHOULDER_CLINICAL_CURRICULUM.md) for tendon-versus-muscle scope, nerve localisation caveats, partial/full-thickness distinctions, proximal/distal biceps injury and shared triceps attachments. Examination names are associations, not diagnostic guarantees. Eighteen representations use nine definitions, not eighteen independently reviewed lesions. Musculoskeletal sign-off and full-body editorial persistence remain outstanding. No acquired imaging, simulated disease, treatment protocol or approval.

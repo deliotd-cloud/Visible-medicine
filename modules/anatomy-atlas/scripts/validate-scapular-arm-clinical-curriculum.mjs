@@ -5,7 +5,6 @@ import {
   contentRoot,
   readContentJson,
 } from './content-contract-tools.mjs';
-import { authoringBeforeShoulderClinical } from './shoulder-clinical-curriculum-transition.mjs';
 import { authoringBeforeScapularArmClinical } from './scapular-arm-clinical-curriculum-transition.mjs';
 import {
   curriculumHash,
@@ -23,13 +22,12 @@ const check = (v, l) => {
 const context = await contentContext(),
   { api, catalog, body } = context;
 const before = await readContentJson(
-  'content/shoulder-clinical-curriculum.before.json',
+  'content/scapular-arm-clinical-curriculum.before.json',
 );
 const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
-const previous = await authoringBeforeShoulderClinical(context);
-const milestone = await authoringBeforeScapularArmClinical(context);
+const previous = await authoringBeforeScapularArmClinical(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
@@ -47,31 +45,27 @@ same(
 );
 // Independently observed official source rows, not inferred from runtime lessons.
 const expected = [
-  ['FMA13398', 'right', 'FJ1459'],
-  ['FMA13399', 'left', 'FJ1459M'],
-  ['FMA32548', 'left', 'FJ1500M'],
-  ['FMA13415', 'left', 'FJ1504M'],
-  ['FMA32545', 'left', 'FJ1506M'],
-  ['FMA32554', 'left', 'FJ1508M'],
-  ['FMA34681', 'left', 'FJ1468M'],
-  ['FMA34683', 'left', 'FJ1467M'],
-  ['FMA34685', 'left', 'FJ1513M'],
-  ['FMA37684', 'right', 'FJ1512'],
-  ['FMA37685', 'left', 'FJ1512M'],
-  ['FMA37687', 'left', 'FJ1478M'],
-  ['FMA37695', 'right', 'FJ1480'],
-  ['FMA37696', 'left', 'FJ1480M'],
-  ['FMA37697', 'right', 'FJ1477'],
-  ['FMA37698', 'left', 'FJ1477M'],
-  ['FMA37699', 'right', 'FJ1479'],
-  ['FMA37700', 'left', 'FJ1479M'],
+  ['FMA37705', 'right', 'FJ1485'],
+  ['FMA37706', 'left', 'FJ1485M'],
+  ['FMA37668', 'right', 'FJ1486'],
+  ['FMA37669', 'left', 'FJ1486M'],
+  ['FMA37665', 'right', 'FJ1488'],
+  ['FMA37666', 'left', 'FJ1488M'],
+  ['FMA32551', 'right', 'FJ1507'],
+  ['FMA32552', 'left', 'FJ1507M'],
+  ['FMA32540', 'right', 'FJ1532'],
+  ['FMA32541', 'left', 'FJ1532M'],
+  ['FMA13381', 'right', 'FJ1536'],
+  ['FMA13382', 'left', 'FJ1536M'],
+  ['FMA13383', 'right', 'FJ1537'],
+  ['FMA13384', 'left', 'FJ1537M'],
 ];
 const ids = expected.map((e) => e[0]),
   tabs = ['pathology', 'clinical'];
-same(api.shoulderClinicalGroups.length, 9);
+same(api.scapularArmClinicalGroups.length, 6);
 const byIdentity = (a, b) => a[0].localeCompare(b[0]);
 same(
-  api.shoulderClinicalGroups.flatMap((g) => g.identities).sort(byIdentity),
+  api.scapularArmClinicalGroups.flatMap((g) => g.identities).sort(byIdentity),
   [...expected].sort(byIdentity),
 );
 same(before.entries.map((e) => e.fmaId).sort(), [...ids].sort());
@@ -101,12 +95,12 @@ for (const [f, side, file] of expected) {
   );
   same(e.sourceIndexFiles, [file]);
   same(e.omittedSourceFiles, []);
-  const group = api.shoulderClinicalGroups.find((g) =>
+  const group = api.scapularArmClinicalGroups.find((g) =>
     g.identities.some((i) => i[0] === f),
   );
   const record = body.find((r) => r.id === s.id);
   for (const t of tabs) {
-    const result = api.shoulderClinicalLesson(s, t);
+    const result = api.scapularArmClinicalLesson(s, t);
     same(result, api.bodyLesson(s, t));
     same(result.readiness, 'draft');
     same(result.body, group[t].body);
@@ -118,7 +112,7 @@ for (const [f, side, file] of expected) {
     if (s.coverageNote) check(result.note.includes(s.coverageNote));
     check(
       api
-        .shoulderClinicalLesson({ ...s, coverageNote: 'Keep warning' }, t)
+        .scapularArmClinicalLesson({ ...s, coverageNote: 'Keep warning' }, t)
         .note.includes('Keep warning'),
     );
     for (const url of result.citations) same(new URL(url).protocol, 'https:');
@@ -146,36 +140,38 @@ for (const [f, side, file] of expected) {
       { sources: [{ ...s.sources[0], file: 'WRONG' }] },
       { sources: [...s.sources, ...s.sources] },
     ])
-      same(api.shoulderClinicalLesson({ ...s, ...mutation }, t), undefined);
+      same(api.scapularArmClinicalLesson({ ...s, ...mutation }, t), undefined);
   }
 }
 for (const s of catalog.structures)
   for (const t of api.contentTabs) {
     if (!ids.includes(s.fmaId) || !tabs.includes(t)) {
-      same(api.shoulderClinicalLesson(s, t), undefined);
+      same(api.scapularArmClinicalLesson(s, t), undefined);
       same(
-        milestone.bodyLesson(s, t),
+        api.bodyLesson(s, t),
         previous.bodyLesson(s, t),
         'Every unrelated section preserved',
       );
     }
   }
-const group = (k) => api.shoulderClinicalGroups.find((g) => g.key === k);
-check(group('supraspinatus').pathology.bullets[0].includes('entire width'));
-check(group('biceps-short').pathology.body.includes('long-head'));
+const group = (k) => api.scapularArmClinicalGroups.find((g) => g.key === k);
+check(group('anconeus').scope.includes('not an accessory'));
+check(group('anconeus').pathology.bullets[0].includes('other elbow injuries'));
+check(group('brachialis').clinical.bullets[1].includes('limited evidence'));
 check(
-  group('biceps-long').pathology.bullets[1].includes('towards the shoulder'),
-);
-check(
-  group('teres-minor').clinical.bullets[1].includes(
-    'not part of the rotator cuff',
+  group('coracobrachialis').clinical.bullets[0].includes(
+    'own action is at the shoulder',
   ),
 );
 check(
-  group('infraspinatus').pathology.bullets[1].includes('spare supraspinatus'),
+  group('teres-major').pathology.bullets[1].includes(
+    'not a rotator-cuff muscle',
+  ),
 );
-check(group('deltoid').scope.includes('One deltoid portion'));
-check(group('triceps').scope.includes('One muscle head'));
+check(
+  group('levator').clinical.bullets[0].includes('cervical as well as dorsal'),
+);
+check(group('rhomboids').scope.includes('group-level'));
 const unresolved = ['FMA45097', 'FMA45098', 'FMA19728', 'FMA61970'];
 for (const f of unresolved)
   same(api.bodyLesson(entry(f), 'function').readiness, 'pending');
@@ -201,14 +197,14 @@ if (process.argv.includes('--source')) {
   }
 }
 const negatives = [
-  ['FMA13398', 'clinical', 'body'],
-  ['FMA32545', 'pathology', 'readiness'],
-  ['FMA37687', 'pathology', 'body'],
-  ['FMA37700', 'clinical', 'readiness'],
-  ['FMA13399', 'anatomy', 'body'],
-  ['FMA34681', 'function', 'body'],
-  ['FMA37685', 'mri', 'body'],
   ['FMA37705', 'clinical', 'body'],
+  ['FMA37668', 'pathology', 'readiness'],
+  ['FMA32551', 'pathology', 'body'],
+  ['FMA13384', 'clinical', 'readiness'],
+  ['FMA37665', 'anatomy', 'body'],
+  ['FMA32541', 'function', 'body'],
+  ['FMA13381', 'mri', 'body'],
+  ['FMA13398', 'clinical', 'body'],
   ...unresolved.map((f) => [f, 'function', 'readiness']),
 ];
 for (const [f, t, field] of negatives) {
@@ -246,17 +242,16 @@ const counts = (t) =>
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter(
-          (s) => milestone.bodyLesson(s, t).readiness === r,
-        ).length,
+        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
+          .length,
       ],
     ),
   );
 for (const t of tabs)
   same(counts(t), {
-    draft: 29,
+    draft: 43,
     'identity-only': 0,
-    pending: 993,
+    pending: 979,
     'generated-identification': 0,
   });
 for (const t of ['ct', 'mri', 'ultrasound'])
@@ -284,30 +279,30 @@ same(counts('quiz'), {
   pending: 0,
   'generated-identification': 1011,
 });
+for (const f of api.shoulderArmLessons.flatMap((l) => l.fmaIds))
+  for (const t of tabs) same(api.bodyLesson(entry(f), t).readiness, 'draft');
 const report = {
   passed: true,
   checks,
-  bodyRepresentations: 18,
-  sourceComponents: 18,
-  lessonGroups: 9,
-  explicitTopicEdits: 36,
-  combinedPinnedCurriculumSections: 1638,
+  bodyRepresentations: 14,
+  sourceComponents: 14,
+  lessonGroups: 6,
+  explicitTopicEdits: 28,
+  combinedPinnedCurriculumSections: 1666,
   sourceIndexChecks,
   negativeCases: negatives.length,
-  bodyReadinessAtShoulderClinicalMilestone: Object.fromEntries(
-    api.contentTabs.map((t) => [t, counts(t)]),
-  ),
+  bodyReadiness: Object.fromEntries(api.contentTabs.map((t) => [t, counts(t)])),
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,
   scanContentAdded: false,
   browserTesting: false,
-  copyAndRecipeHashAtShoulderClinicalMilestone: curriculumHash(copy(milestone)),
+  copyAndRecipeHash: curriculumHash(copy(api)),
   limitations:
-    'Shared clinical teaching for muscle heads/portions; not individual tendon lesions, acquired studies, diagnostic algorithms, reviewed questions or clinical acceptance.',
+    'Original short clinical overviews, including rare case-report evidence and shared rhomboid context; not prevalence, diagnosis, treatment rules, scan findings or clinical approval.',
 };
 await writeFile(
-  new URL('docs/shoulder-clinical-curriculum-validation.json', contentRoot),
+  new URL('docs/scapular-arm-clinical-curriculum-validation.json', contentRoot),
   JSON.stringify(report, null, 2) + '\n',
 );
 console.log(JSON.stringify(report, null, 2));

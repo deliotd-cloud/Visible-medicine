@@ -2,6 +2,8 @@
 
 ## Current decision — 8 September 2026
 
+The [scapular/arm clinical extension](SCAPULAR_ARM_CLINICAL_CURRICULUM.md) adds 28 drafts across fourteen existing muscle entries, completing initial Clinical/Pathology overviews for the original 32-entry muscle curriculum. Both topics now have 43 draft/979 pending body entries. This is not a complete regional disease catalogue. Layout, geometry, all other topics and clinical approval remain unchanged; earlier milestone counts below are historical.
+
 The [shoulder clinical extension](SHOULDER_CLINICAL_CURRICULUM.md) supplies 36 original Pathology/Clinical drafts for eighteen muscle/head/portion representations. Nine definitions preserve the simple interface, dedicated-shoulder copy and modality topics. Clinical and Pathology now each have 29 draft/993 pending body entries; geometry and approval status remain unchanged.
 
 The main interactive feature set is implemented. The product is **not a completed anatomical curriculum, a complete human model, a clinically approved atlas or a connected radiology viewer**. Private Site delivery was restored at the neural milestone (version 39, source `aaaef58d65000d4a83ac1fcd9845cb43c89a4533`); subsequent publication receipts identify later deployed revisions. The remote GitHub backup remains unverified for recent work. More controls are not the next priority.
@@ -44,8 +46,8 @@ These are counts among the **1,022 body representations**, not unique lessons, a
 | CT | 11 | 0 | 1,011 | 0 |
 | MRI | 11 | 0 | 1,011 | 0 |
 | Ultrasound | 11 | 0 | 1,011 | 0 |
-| Pathology | 29 | 0 | 993 | 0 |
-| Clinical | 29 | 0 | 993 | 0 |
+| Pathology | 43 | 0 | 979 | 0 |
+| Clinical | 43 | 0 | 979 | 0 |
 | Quiz notes | 11 | 0 | 0 | 1,011 |
 
 “Specific draft” now means the authoring branch explicitly marks its lesson draft. It does **not** promise complete attachments, innervation, detailed citations, correct facts or independent review. The generated Quiz note is separate from the working multi-question identification session. The report contains the same breakdown for each region; do not sum overlapping regional rows. The original audit had 259/617 Function draft/pending counts; explicit metadata corrects pending FMA61970/FMA62072, whose headings previously fooled the title heuristic.

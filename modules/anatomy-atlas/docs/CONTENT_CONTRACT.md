@@ -2,6 +2,8 @@
 
 ## Delivered scope
 
+**Current scapular/arm clinical extension:** [28 new drafts](SCAPULAR_ARM_CLINICAL_CURRICULUM.md) cover fourteen muscle entries. Clinical and Pathology each reach 43 draft/979 pending body representations. Thirty-one offline projections protect 1,666 explicit edits; original baseline and all older captures remain unchanged. The prior shoulder-clinical report now labels its milestone totals. Other topics, geometry and review state are preserved. Older totals below are historical.
+
 **Current shoulder clinical extension:** [36 Pathology/Clinical drafts](SHOULDER_CLINICAL_CURRICULUM.md) cover eighteen entries. Both topics now have 29 draft/993 pending body representations. Other topic totals, geometry and review state are unchanged. Thirty offline projections protect 1,638 edits; original baseline and all older hashes remain pinned. Earlier totals below are historical.
 
 **Current connective Anatomy extension:** [26 Anatomy edits](CONNECTIVE_ANATOMY_CURRICULUM.md) bring body totals to 1,020 draft/two identity-only Anatomy; Function remains 1,018 draft/zero identity-only/four pending. Twenty-nine offline projections protect 1,602 pinned edits. Existing Function, specialist topics, source memberships and review state are unchanged. The organ-Anatomy report now labels its historical totals. Older totals below are historical; no runtime rollback or baseline repinning occurs.
