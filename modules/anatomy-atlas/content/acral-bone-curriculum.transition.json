@@ -1,0 +1,854 @@
+{
+  "sourceCommit": "53e40a64a5d2bc34c007d2bb4da67828b174b51d",
+  "reason": "212 original Anatomy/Function drafts for 106 existing acral-bone representations; preserve source limitations and unrelated teaching.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-second-toe",
+      "fmaId": "FMA32653",
+      "sections": {
+        "anatomy": "af28ec74a347e4b2b5a18a1f71705b148dd58994a1648f3bbe4825824b424d97",
+        "function": "eda9c39ba38f6d189ad686dbfaafd2c43f7ff0b36192d05fcfebb2f4a3427888"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-third-toe",
+      "fmaId": "FMA32655",
+      "sections": {
+        "anatomy": "247ba1f7103ad5a5a3bf0a99afba8cfef3c778dade2a6d1cbfeb93de5046200f",
+        "function": "9f73c693580907499244dd32118705c461091a4daa7e1fa51b88c65176ec7e39"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-fourth-toe",
+      "fmaId": "FMA32657",
+      "sections": {
+        "anatomy": "5f7c3e444cdfde32b0e6859489acf292302d7cc2c79f929606c6c0451b090926",
+        "function": "97f86b4a4a00a9b7c6ede14f2a783d8586e5d13f70cd0044994c285b1abea699"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-big-toe",
+      "fmaId": "FMA32651",
+      "sections": {
+        "anatomy": "1418667a6aa9a7ed6a279aa78986207efcd0349a8194ad7724d988157b6cbb62",
+        "function": "397eaedf0de30c3ed3c810df8b975bb53538286f8eb81c93b67b61bb8bb3d5c1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-index-finger",
+      "fmaId": "FMA23953",
+      "sections": {
+        "anatomy": "37a570a274819dd82ea8124a844bbd9763deb12a6c517ad98f43456cc47065f1",
+        "function": "4dee2c01c02835ce66ed8eeba8193b8d24cac47f762d53d9dd4f48ed28f1baee"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-little-finger",
+      "fmaId": "FMA23959",
+      "sections": {
+        "anatomy": "9a581fccc45db7ebccab4b2d8749737c0748287a04b6842eacc36768f17a012c",
+        "function": "09de6a3de7d95ed32c74a4d5d41e5f2fa334730c94f817b56ac0cc406ef542f8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-little-toe",
+      "fmaId": "FMA32659",
+      "sections": {
+        "anatomy": "c2a60d37c24a5a77d25be772835dfc7efba6263cccc7049c613bbcac26f078bf",
+        "function": "03451e766f5c98a9c79cd297b28ed1d37cb4117f7ae464dc41e303190d4e2eae"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-middle-finger",
+      "fmaId": "FMA23955",
+      "sections": {
+        "anatomy": "1187ac047c55628f6dbf9c59f21476103ff2ddf1c78267f862416e4dd23f70a2",
+        "function": "2ec88894852d9ff0d0b84ecd163784beef588fc16d51389d76b32b7a9f8a156f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-ring-finger",
+      "fmaId": "FMA23957",
+      "sections": {
+        "anatomy": "3b51c3d7b31ddcb323980ccb17e3b63ce7624f22e82babcf90df0f10c8f695be",
+        "function": "16f23b192a76d35e437b1185cb94be0218de01efa9a04a1c199a8bb1a5f9c3ce"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-thumb",
+      "fmaId": "FMA23951",
+      "sections": {
+        "anatomy": "3d69ae89a8f1fc2860a802b287c58b943633560aaedd10f8f9ad87edace2c62b",
+        "function": "45e33cc79480a268bbff1388fd357f6eb4dac3e735cff224df633c0304d39cdb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-second-toe",
+      "fmaId": "FMA32652",
+      "sections": {
+        "anatomy": "4e0aa2763d7d4f81f4387f6ea9c762092be6d58f81be389f86008b27e0220acc",
+        "function": "2c5ba78da1fcb4d3badd3f22057b415864545f7bfda2a3ae94c7af6852f2c4c4"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-third-toe",
+      "fmaId": "FMA32654",
+      "sections": {
+        "anatomy": "57ca001e7f469c9dce48afc646f1a391637b495b26226be3407c464b31b0782b",
+        "function": "9624dc5f3042ec8dcecef5dda8de03495f2a2dbbde81e2cabd8b3823ac1d933b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-fourth-toe",
+      "fmaId": "FMA32656",
+      "sections": {
+        "anatomy": "79ec0746e7c37f64165740e53b7ab5ece785c0995e1026cacef2119a15306780",
+        "function": "ae03ab4c0c9757a610372e77b848a9f5cea0d04478ff2b84da1ef626c9fb0cb1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-big-toe",
+      "fmaId": "FMA32650",
+      "sections": {
+        "anatomy": "4491208f7f802d47283efe7c540abb01873a74e73088302132a007d9842bbdb0",
+        "function": "ca5f3a1f0f3742dbf564a28561720e5d167f112533fb43b4f4a9972fa3299aed"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-index-finger",
+      "fmaId": "FMA24460",
+      "sections": {
+        "anatomy": "2e7fa54f07c8d67cae62082066866d14554f41848e690ad1b887578fef6bc862",
+        "function": "65d6ea2136a9101a7da759791c0d9d819f94ac99a53b65596d3588b4ea6ef006"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-little-finger",
+      "fmaId": "FMA24463",
+      "sections": {
+        "anatomy": "5f4bf745e62c167763ef9d85d593ef77c3505bfd86e128d07e96cf241face3e4",
+        "function": "6445aa95d6ab0dd55ee8e7c10bec38fe633ad0717e393cd32ef07ebfaacc683e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-little-toe",
+      "fmaId": "FMA32658",
+      "sections": {
+        "anatomy": "1bd0d58410bf3f87bb24b9dfcfd22130dd5661d79870f0e585fe60d479d0e8f1",
+        "function": "5f85d347edcf88b8f0724a5c0a0d420b55143c0918dac8be8a01d216204d2be4"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-middle-finger",
+      "fmaId": "FMA24461",
+      "sections": {
+        "anatomy": "93eed3f891b61391f8b65e9f5865cb85b1f389e8ad437436c2a3ebb0d5a40df3",
+        "function": "ec103c06ba63b87bd7ba37c7c1c9f2255abdc1f4949fb5d61a381e2ab3a9092b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-ring-finger",
+      "fmaId": "FMA24462",
+      "sections": {
+        "anatomy": "104894a492094661e3ef3981bf4671d2f5729230aae329df16cf3ce5b1da72b9",
+        "function": "edde75e7344fc16936edd171a6a6b9eae5d19680c28fd3fa3b75dddd810e4056"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-thumb",
+      "fmaId": "FMA24459",
+      "sections": {
+        "anatomy": "0d783c53c971c20314d0d04d35ef6ec1a7704c46765cf6b65d03533b9c5a9ad2",
+        "function": "7f865e1e3c4e9df3855b2f69b6d97df03b7675e890b940c091963e6fcd607e63"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-first-metacarpal-bone",
+      "fmaId": "FMA24465",
+      "sections": {
+        "anatomy": "4b55564d429afb4440ecef58efa52eb366d8d53e63aa95ad1d1501d526c96ffd",
+        "function": "fdf6678e42de7e43a07cab624ea339d67540e9dcae8244afd88c1f68459be227"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-first-metatarsal-bone",
+      "fmaId": "FMA24508",
+      "sections": {
+        "anatomy": "0316a1ba8f186792db1e42c5fd12f5c0d744e5c96b1be4a59a27338333920439",
+        "function": "335f699c2d25ff38e0cdb48b681a5bc131675f119ef278052a44338e3416f449"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-second-metacarpal-bone",
+      "fmaId": "FMA24467",
+      "sections": {
+        "anatomy": "27dc8918cf0fb310a4694f60676818b27d9842697a036e596ad2ad62b37d5813",
+        "function": "a96a9d35769a42923f0967384da55ce3bc9a2f7df7dc6eec023ba262700ed78f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-second-metatarsal-bone",
+      "fmaId": "FMA24510",
+      "sections": {
+        "anatomy": "1290cdd983679ccd2efa80b45add8919811f6890a032f4b785b72dca006d4f17",
+        "function": "22f31fba1c28338163e2bc1c44280a4a84f6bf30f56061f2a4b9378c5a81faf3"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-third-metacarpal-bone",
+      "fmaId": "FMA24469",
+      "sections": {
+        "anatomy": "15e6bd7a575564c0dc699256b8e1c5c39283da7e676f2949c58c1b39a4602835",
+        "function": "fd6025d904b07fea2c929c82680bab21db1e60898d76d71fd5929e2c36624ea1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-third-metatarsal-bone",
+      "fmaId": "FMA24512",
+      "sections": {
+        "anatomy": "22550bbfb5bb26b15e69e44d52e6c8940250c574883e51719e0370621df3610c",
+        "function": "5362ab37b71f14a3a9e97f0883a930b53922307e50dc3ee840199ea338992fcf"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-fourth-metacarpal-bone",
+      "fmaId": "FMA24471",
+      "sections": {
+        "anatomy": "354b4565593376501efe389baed8eb4179576cf31ac4eb0ea86bb73b3d4a0be8",
+        "function": "a89f936b7d247eab5b5fed7dd73a3e47f0390ac42901a7fd4e4ea0b9447bd0e8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-fourth-metatarsal-bone",
+      "fmaId": "FMA24514",
+      "sections": {
+        "anatomy": "fca01a09dacdc29d75a1de74fb0e1a35971b1f4722a0bee75222802f45b36405",
+        "function": "04e6e68612225979d898c151b878fb355b6ad368cd36a5ac5df759ef0cef1073"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-fifth-metacarpal-bone",
+      "fmaId": "FMA24473",
+      "sections": {
+        "anatomy": "a25aaad5674926c7facb926c593ab0ed2fbc0e29788336ed9e60d903235711e4",
+        "function": "e9703f8e379bf3cb4c5f202db169c7007abe2da335aa3c805d33b5e49b697d99"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-fifth-metatarsal-bone",
+      "fmaId": "FMA24516",
+      "sections": {
+        "anatomy": "d561a43ddacbcfa88b30ed6d1d5f2d5848525a0cd8303fc11a782681d513ce59",
+        "function": "db2c437fe9f2ec12914c8345c09928e6090793e4f0c2a71087ce6840579dd43d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-calcaneus",
+      "fmaId": "FMA24498",
+      "sections": {
+        "anatomy": "a96de52113f46394cd776723abf2d778bd9f04cf86896c014ee8ff2bfea4fc52",
+        "function": "efd5c72aa1aea5680cb3812f102c1e821f1cab5853efb7e9b86133bef039e2a1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-capitate",
+      "fmaId": "FMA24447",
+      "sections": {
+        "anatomy": "0b51e1a6269bf625794cc7d498d729282c3b04ae227d602e862571653c6c56de",
+        "function": "993b6050825dfa1b2ebf3266bcce2aa8eeecfa8ffe119c4e4058d0337e1fa619"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-cuboid-bone",
+      "fmaId": "FMA24529",
+      "sections": {
+        "anatomy": "9ec215b5bd3cae76ba0edddfcee8d9f690b9a2eb72b72d5c81b25af5ee160afc",
+        "function": "6936b164c5a1c8201b33eb2f65c5d8dd0ef43fdcaf5198e6699f22e41280cc01"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-hamate",
+      "fmaId": "FMA24449",
+      "sections": {
+        "anatomy": "54f8d81b1fb2fd4d26ca7b1f8761dd87cd44b014c212e0cbee75ccf961abf02a",
+        "function": "6613a144bc47deb56c864b7e55784851114e7e504919c1141a32d7b8b9591059"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-intermediate-cuneiform-bone",
+      "fmaId": "FMA24524",
+      "sections": {
+        "anatomy": "683908bb4e5e5837219ec53dbb3a7e23c8fc4b78d205674145b4895da4517e57",
+        "function": "a1988cb3417f24933e9d35f82302e8b152d0843f4453b953192843a712915d35"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-lateral-cuneiform-bone",
+      "fmaId": "FMA24526",
+      "sections": {
+        "anatomy": "0643ab3c31bf156b2e0af98d09e0d334e2cef5b2adf32837cb4798a99ee1288f",
+        "function": "6e6bd3d06dcd06eb938ab034ba10b15a60109a3a12b6712e246e7325f4a8a136"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-lunate",
+      "fmaId": "FMA24438",
+      "sections": {
+        "anatomy": "a70ca1f7b367dcf183cac54c50b3fd4decf4105681a050a95599983dc865bfa9",
+        "function": "7f25b98926b051cfa8c1691f3282c4b73300c67c6358ba307608020fa817e624"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-medial-cuneiform-bone",
+      "fmaId": "FMA24522",
+      "sections": {
+        "anatomy": "faf71a69d51c1a0313fb68e7638c3c1944ffe48d91d05380dc82cb2d311f7c29",
+        "function": "dc21cc6c95ccbfaa04ceca618a3e0739ca2b1a7d7599aede9a9ac9b532b09a2c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-pisiform",
+      "fmaId": "FMA24442",
+      "sections": {
+        "anatomy": "61343ff9e3acc10bcad4ed25dc8b72aef756a408220dd4c0ed2a1596efb1163e",
+        "function": "6d6173e6bdaf27273e2d02bd195c0fa2f54dba9c3fa955400ab59b5512df07e3"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-scaphoid",
+      "fmaId": "FMA24436",
+      "sections": {
+        "anatomy": "421e865b47243df80d625672a65dfbd8d5a5ff93bed61567b4ff60441c3230df",
+        "function": "393141d47707a69048c4d7ba63b08090df49b7c572f8bcf2064d7c68e55d583e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-talus",
+      "fmaId": "FMA24483",
+      "sections": {
+        "anatomy": "bd19702baf55bde5a64cbc898b46ca022bf29c86ce8afa2b1ada0b33e7884f66",
+        "function": "f74732d9fe2c238b6584a56a6f59a55d0007cc0974ae477d47e06328f69733ab"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-trapezium",
+      "fmaId": "FMA24444",
+      "sections": {
+        "anatomy": "120f2401f4df96561a81c52ae03c4809f959c557329d348b540b4e28ba404460",
+        "function": "52c26060817bcd09e11a37b9e30b598ebf7d2acf1e520f46d65d397d3309ee2e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-trapezoid",
+      "fmaId": "FMA24445",
+      "sections": {
+        "anatomy": "d125d057bea5c43313bd0a91138812ff172892e8fcec4d995cba1876d5493f08",
+        "function": "d47a24052a501dc31f3ecb5bbbdd26184048882ef208313267341d279ea10859"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-triquetral",
+      "fmaId": "FMA24440",
+      "sections": {
+        "anatomy": "e9b0349e6bc40f34bb33ce58e61356381efcbfaca13323a1d50a5cf79dc42769",
+        "function": "9f723a3d446f0d5a580da2819d33bbe4998caf63499bb2d82ebf1a8d87be82ef"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-ring-finger",
+      "fmaId": "FMA23942",
+      "sections": {
+        "anatomy": "4f6bea3bb47cd5509585d034778c3b65a3fc5f392a6e98e702ff0eead898e1ef",
+        "function": "8ae24c3b76b661cda1469f2368848fd92bb65dde1daa14c5d2ccfdd7ebae0a57"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-ring-finger",
+      "fmaId": "FMA24457",
+      "sections": {
+        "anatomy": "ea63d87513e55adb847701ffff460fc833152eb1f2596e2a8572fd9afae2f9ae",
+        "function": "4d5051290235f2afa68e78999a68b7cacb2f83023f864c33937134755e90a405"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-second-toe",
+      "fmaId": "FMA32643",
+      "sections": {
+        "anatomy": "9b3ac18eb9d75237d2fcfc853e7351c8055a5de712b1a7e3a728994f37c5d3a6",
+        "function": "44c4efefb526a4d241c2ceafd758eb40133ec35a5e10b9a08e3cf7c240a84891"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-third-toe",
+      "fmaId": "FMA32645",
+      "sections": {
+        "anatomy": "55d66bc2c6e1547fc2ade672283018b75e1f0cba5e3ebf31357bccd2833a69c6",
+        "function": "a2cef2d08b7d459ed931549a1108f2e04b888e9d909e52c126f9a56e7afe63e6"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-fourth-toe",
+      "fmaId": "FMA32647",
+      "sections": {
+        "anatomy": "ba96d04de022fe1a7c08c5350295666e272e7f46c8f00e7d2ee1c7aff0390205",
+        "function": "1d94a574f06c0584539139b606d036ab04254ee34a8b27780cac9fe3b00cfbd0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-index-finger",
+      "fmaId": "FMA23938",
+      "sections": {
+        "anatomy": "28ae0534796b27a903e2136db9bf00981dff97255b5ad7502e50c707e3cdeb70",
+        "function": "179f97dac89391adc2ed313771968b85f8875ce610be1d3761fe5c7b93278eca"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-little-finger",
+      "fmaId": "FMA23944",
+      "sections": {
+        "anatomy": "629f29b45032e7a969fc248111bcc6a9a6b2c9e4b8b32dac257b9ab348cc5bfb",
+        "function": "b92c29a8d2d15ecd9ce2d948c4809f792dc2fcf13c3d92eb6ec782d8dce74ca4"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-little-toe",
+      "fmaId": "FMA230988",
+      "sections": {
+        "anatomy": "fc36cdbfe5531175b8d82e54bc8f0ecb2e9903c3c732766065edaf555ee420e8",
+        "function": "efcdfc1982b1305409ac351ee6ab4f8d0a6d4e228d707c4f7ac519cad04832a4"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-middle-finger",
+      "fmaId": "FMA23940",
+      "sections": {
+        "anatomy": "db912a7f703d76c4bc42c6f6b8722172bbb592ad3dc2a7ae8e04e8a3e29fcc34",
+        "function": "3a32911f542b95534a0f248755177c9e0f50b39e7cba8cb47c8bf18c93ff1b77"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-second-toe",
+      "fmaId": "FMA32642",
+      "sections": {
+        "anatomy": "edde18810cb47cc1eec4808a732e85c5cc1f5b0415a5ae3eca1a0f6245cbb96d",
+        "function": "38404e428d26b9628f1f52dfdb0cef792da56a4a46ca068e1511304c64dfd505"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-third-toe",
+      "fmaId": "FMA32644",
+      "sections": {
+        "anatomy": "2884b50464bbd2b2abdd53dd604a756c695bae96a8bfcad84bf31c3f667d8a30",
+        "function": "68524a67a01774e6dea416ddf54e2187b1aed46d29c6d55233d4d66d5809256c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-fourth-toe",
+      "fmaId": "FMA32646",
+      "sections": {
+        "anatomy": "4638104b47e570f58285b5ad9ea5cfd6b00a121a775eddebdddaf89d52037281",
+        "function": "e357118468e52b0f3c515d2345f43967beada29dea43287dee87cdac410a6556"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-index-finger",
+      "fmaId": "FMA24455",
+      "sections": {
+        "anatomy": "daee3c8c138ecf342b9c95e535314252cf14e4ad56d3d878248453ce6bc4a95f",
+        "function": "f362f4adbffbbf478ab1a2f8092867b1d434a3d3c9081ac179b34a51b0089513"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-little-finger",
+      "fmaId": "FMA24458",
+      "sections": {
+        "anatomy": "68cd4f4d1f630cd4cd86d8d5ac244d2cfc395e50c23fc4328551b585596ffee6",
+        "function": "e012afeb98af0331792c463fd909b8205373df332bb5212f527c354cd78bc1a2"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-little-toe",
+      "fmaId": "FMA230986",
+      "sections": {
+        "anatomy": "ff8d07cec5131077097d53516a95af053f3161ec35eb2b488b48b6d39b20e357",
+        "function": "a3d4f039679a30569122e2fd9794c68d2429346bebd9d00bf3c1806ce3e2104b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-middle-finger",
+      "fmaId": "FMA24456",
+      "sections": {
+        "anatomy": "5efaa389b5f383b96493d04e4e09ba901260313325aa7aacc4f563f55145cfce",
+        "function": "536293e61f784073561f9ac993359b7968fb835c89834c72690c0be67de5d867"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:navicular-bone-of-left-foot",
+      "fmaId": "FMA24501",
+      "sections": {
+        "anatomy": "68a31e15918f263618a693738441c503f9c3abfc92f7b775f61129dfb758f216",
+        "function": "8864852c38d191089fa13b9f05e375e6e2af90dc9f622b0eeea06f702db271ab"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:navicular-bone-of-right-foot",
+      "fmaId": "FMA24500",
+      "sections": {
+        "anatomy": "09c6107749b1a734e61a94287442c2e97cde9057ca6fa075ad12d3393932b1e2",
+        "function": "a881d506af729b823de2af6a6e28f4cf27061f83c8cb4245c923b61e5031b790"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-big-toe",
+      "fmaId": "FMA43253",
+      "sections": {
+        "anatomy": "26254dd7368562700b4fe1f7dbb202216adc3f7d8495d1ff4da3cb2c2c00a947",
+        "function": "b673301ab7f5670ec67edd2e7e9b13bc8e850d6008584d4bec228856c32f9165"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-third-toe",
+      "fmaId": "FMA32637",
+      "sections": {
+        "anatomy": "bf31bd0617d99b42c84eafdb483ce12edd1044eab0afa8901f67cd8d20847bff",
+        "function": "cddc734166f3951f32225caeeb35c6ecb4a075a01aaf47ffa80d5d9a6ca81a6b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-fourth-toe",
+      "fmaId": "FMA32639",
+      "sections": {
+        "anatomy": "1109fb9eb7c28dce31644cba3980b17125eeb47a4fd58f0621b90482406b92d8",
+        "function": "0ff84bcdee8866d57b7c97b94c5871fba34c8e8b802f0f944e444675682db4b5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-index-finger",
+      "fmaId": "FMA71915",
+      "sections": {
+        "anatomy": "5c790ab96a50cc70e09e8784d7a7c941b5bcd3c1d727f6fefafbdc69befce20c",
+        "function": "1bd2188e1ba02609441c2aa1666b75147e4bc8629d2d37dac716085057a59800"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-little-finger",
+      "fmaId": "FMA66791",
+      "sections": {
+        "anatomy": "d2a7d888d164cc909ae9a16b3e082bb62ff3266da2327b81619d141b37a4ba42",
+        "function": "3fc1ffa0bd54683c4816059050e3c93d0a72d87cfafe22c320ca322060eec37d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-little-toe",
+      "fmaId": "FMA32641",
+      "sections": {
+        "anatomy": "e6dca96e90f2393806625c2f9089dd299767abc88eca1708871ad9b8fbef3129",
+        "function": "86f411e065e1cac7df2af6aa6a336ab0c6b929416a89b5b2c16ff9cf53ecc23f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-middle-finger",
+      "fmaId": "FMA71908",
+      "sections": {
+        "anatomy": "87bdc0da43877a2383d74b836e3d684c8db8ad3a666bc0fbeb1520c6082cd24a",
+        "function": "0408c9f6e0edb54c2f6052d3e7b99781226e82a62e8ff397bbdbf56e665dfe44"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-ring-finger",
+      "fmaId": "FMA71916",
+      "sections": {
+        "anatomy": "534d21275dcd8a1043e19f0d5f191c2e17ac890e848828922e7f93788c7236e5",
+        "function": "f152bb5b36c9939b416e33ed66f09bc1b46291d21c07dce75b33eb8594fafbbb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-thumb",
+      "fmaId": "FMA65470",
+      "sections": {
+        "anatomy": "8194e31470d8fe8659026731db6874ad3b83d9edc94f28911d05bbae9fec6e46",
+        "function": "579d851775dfb6b3d2577cd73e10238b9b2133f86d9e8bb10cd4a85f402f55b5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-second-toe",
+      "fmaId": "FMA32634",
+      "sections": {
+        "anatomy": "465c207993be0b56bb10e35c5d90b364138ec9ff33cdec82928d356634ab2628",
+        "function": "05dce03df3069e61ea5820ea81f618bd268c1d9eeb71a66d215ddeacc470aed0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-third-toe",
+      "fmaId": "FMA32636",
+      "sections": {
+        "anatomy": "24e3c2fd21f5963b15d757f2cc9e024f2913e7dc06fe4e59f216701f14b42f3f",
+        "function": "1c872362148c06303623451e98a243d8f0df1d73f34bf439520bba3a1cefbd04"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-fourth-toe",
+      "fmaId": "FMA32638",
+      "sections": {
+        "anatomy": "0154d5ac83905def977005f2205b61e94f84bb6897a1a7bb4ab01c8636fa86fa",
+        "function": "0645d65c150721b2cb1b45f274d9b62fea6a62942163a4741c35345fb65c57f0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-index-finger",
+      "fmaId": "FMA24451",
+      "sections": {
+        "anatomy": "14f569b7cff83f1563de56a839a4544577f71264dc9c888ba4cd19e3f64d1ffa",
+        "function": "b0c29082cc39eccebf7be66123fcece0cd994d1d0c8404c959503f517d01e397"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-little-finger",
+      "fmaId": "FMA24454",
+      "sections": {
+        "anatomy": "55850dce1cb9bd4b567e796ac98a32d82088f1b1462d7fe833f483d720ac6c1c",
+        "function": "66d14e34d3a585d41b5a2365e17ac8d7d22756ece585f5039012a19926b5f5c4"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-little-toe",
+      "fmaId": "FMA32640",
+      "sections": {
+        "anatomy": "d59e07a6dc5894ad98545bd435c02311658098a98dcf55573467aefb3966dcbd",
+        "function": "e56abb33c7e2faa4249a05ee74364b346524405bdbe25ad52d3321dc7e9c5641"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-middle-finger",
+      "fmaId": "FMA24452",
+      "sections": {
+        "anatomy": "4f77c0d490923a2b818a131f357c9f66d5f2b341a51c063b3e40c541fc1d8de9",
+        "function": "508c9e8ab804ead7bb1ea24b31eee95084e8f6a59727899c6694a9a150155e93"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-ring-finger",
+      "fmaId": "FMA24453",
+      "sections": {
+        "anatomy": "5d705ea151bba3641d03d8c6c83364d612746ed02087c855fc89cf96dd538200",
+        "function": "dc375be547f395fa73b83fab69ce46c67a9643a722a095c9c79e6de6d0ebb31c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-thumb",
+      "fmaId": "FMA24450",
+      "sections": {
+        "anatomy": "92e2362a9611f04d314c1b2823021e2f4bf87be7684ade78dc15ac64a4ba3b63",
+        "function": "8311a0d2c08fc904c8f63f8d2b63c9ef51412d08822fd7e1745779bbf28c3179"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-second-toe",
+      "fmaId": "FMA32635",
+      "sections": {
+        "anatomy": "13272b5e4f91e171c01643cd510033b4462641542de0567b058c7ad88200a277",
+        "function": "b27df705d5d179206151fe137fb19ddda25abe5b07bab1f2617167ede93cf8e2"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-big-toe",
+      "fmaId": "FMA43254",
+      "sections": {
+        "anatomy": "916a65a85d322ac33e8efabdcbd6a369bbde4da12139af15763c26dbb191071e",
+        "function": "8ad90ec1559816b6e51c4a681903ca8a329c28441b63bdcd6b0e1d4fa6fa38dd"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-first-metacarpal-bone",
+      "fmaId": "FMA24464",
+      "sections": {
+        "anatomy": "492fef078eb75419ce4f69546cedc0a64a0bd3f91e21be4e3169daedef303ebb",
+        "function": "d11b41b6bd9a603500f41f7db0725c8eb84b600c0a1791cda168281b36c76d28"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-first-metatarsal-bone",
+      "fmaId": "FMA24507",
+      "sections": {
+        "anatomy": "f64e2b9a243fe8a82985e85c5030e5c3b065db1afedf82294dce5b647b3787bb",
+        "function": "a18392571cdd05e1fa215aa626cf6ffebdef9dc37c082d8ee0ba9458993eba45"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-second-metacarpal-bone",
+      "fmaId": "FMA24466",
+      "sections": {
+        "anatomy": "dbca3108052f96839e2b11cc9e4f859da17dbdef437368af4ffdf680aa2207c5",
+        "function": "bcd537a97a2639bf2ed4363b03126323494dc3da55c20406b9bc6ed7ec2321d2"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-second-metatarsal-bone",
+      "fmaId": "FMA24509",
+      "sections": {
+        "anatomy": "991246afd04a7eecbbdf1ad8128c87c59c24d165a90765035de84bf8898da0bf",
+        "function": "666f78deb0faafeb27f8563e3e737b1c4988aac10bbe99cf3830f47d0abf1a92"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-third-metacarpal-bone",
+      "fmaId": "FMA24468",
+      "sections": {
+        "anatomy": "2dd1481fae97a34a73a9e4918a35498b416e14a71403bcc83e2a7c0014e4557d",
+        "function": "7e7c0e39c53b3f61b41ab5c415428edaa1e1e179fbee35745c4141a964bcb3fe"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-third-metatarsal-bone",
+      "fmaId": "FMA24511",
+      "sections": {
+        "anatomy": "54027e5ecb4ef07d9d0abaaa61c32bdba0a6921277447486448acf748b6de204",
+        "function": "0e756ac5b9a80a12b96bb58ab6c8a391680ae3088250f0cd80ae7b6d9b78ef7c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-fourth-metacarpal-bone",
+      "fmaId": "FMA24470",
+      "sections": {
+        "anatomy": "847a259cd6e16b54582775ed198cbbb60282725225091da93db41856abca758f",
+        "function": "b0fafe6c5a1f4fde278ef7522f55aeb340b373ccae98a2597a96e72e9b57c29c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-fourth-metatarsal-bone",
+      "fmaId": "FMA24513",
+      "sections": {
+        "anatomy": "8777bff276428d68a2da3e6541dd885f150f866524df688f04d0f43117dd9caa",
+        "function": "5f9ed4c329eea20a9f413f78824ede72b0e0dccf50a892173ac9e9baa91390c9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-fifth-metacarpal-bone",
+      "fmaId": "FMA24472",
+      "sections": {
+        "anatomy": "a67f3b7d7d6bd3fcea8cd31e110e279b008aedfc440788354159f80d8cd95a5c",
+        "function": "89fb6e2aa39428ccd2815f3a3419cb3f24fa2cad05965c1dbd0fed9bf98130d0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-fifth-metatarsal-bone",
+      "fmaId": "FMA24515",
+      "sections": {
+        "anatomy": "fa113135b2407cc17fd6af7f62641b2fe3e7f962e91e2c4970bd3a48675e3ce1",
+        "function": "d8d13c3053eb2a66b7056020aa1cb7466ef82ea7022e726d5647af24fb5c4d71"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-calcaneus",
+      "fmaId": "FMA24497",
+      "sections": {
+        "anatomy": "24d40d3883d622a1ead03195916cfa146244b271f073fd8e33cbd62f986176aa",
+        "function": "1124d14970da079078071707363c380f33ec0c4eea332dd197941c8f333fc3de"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-capitate",
+      "fmaId": "FMA24446",
+      "sections": {
+        "anatomy": "4acc8b45d29dc9da6c3f3b7291cb3b52597c76e33e8f2ede3718cee97ec61d67",
+        "function": "bdaa1550b70a0a4480e8c46b10ebedb5f54da632d51033079da149558e3a8ee8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-cuboid-bone",
+      "fmaId": "FMA24528",
+      "sections": {
+        "anatomy": "5ff91828093fdd6213584a872cbe8f188d2cec0003e86d46c49f4e65659b88bd",
+        "function": "709679539d119c7ac0267bc214edff06ec5e63e429e2eb17363983e8c9d80be3"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-hamate",
+      "fmaId": "FMA24448",
+      "sections": {
+        "anatomy": "cdaf5a9a2c7ffe95bdddf4150ce15140e048d2bd73f9ea109ff66f8705a6f9a4",
+        "function": "048337e01f681c6f13663e0c557176f99497bb515751102d94c856f965dd5867"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-intermediate-cuneiform-bone",
+      "fmaId": "FMA24523",
+      "sections": {
+        "anatomy": "db4a4c8a59fac0046501ffd5c116a0299e98a740f50339c54e3700ab328cf6a4",
+        "function": "901f7cf59dec8ca8dca01eae42d715a55cccdd726b85c3721bb701158919c1b4"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-lateral-cuneiform-bone",
+      "fmaId": "FMA24525",
+      "sections": {
+        "anatomy": "f898840da2ca5894790be10b21d7458ebc5d73ec669e9756d92c3da40a6864e8",
+        "function": "93f1978c9eed093d55a5680497a7bf160875143b0503607257b676352ec3e77c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-lunate",
+      "fmaId": "FMA24437",
+      "sections": {
+        "anatomy": "8917a6196bdca0a222e6b1fef40281f19f154995a695bf7beb8db4717de4d240",
+        "function": "0a5596daa16c36fab173d7ebf9fd24554107865a31a1c2fe7c97232c64063527"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-medial-cuneiform-bone",
+      "fmaId": "FMA24521",
+      "sections": {
+        "anatomy": "173e57b38d2c550f758086c5536a38498fbcd888bf077bcd61415ce8dbb2f437",
+        "function": "c8f98a82499bcf61d6f00409c9c21ed4471dbec1649a0e99623101c43d5842f2"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-pisiform",
+      "fmaId": "FMA24441",
+      "sections": {
+        "anatomy": "bc598bdd77aca04357e5731e6d271c59da79cedb45f18d892e5432cb39fb8f60",
+        "function": "a7436a4c4bc40fd5eb9e47d752e31c5a04963736a177b10c6603dbd4857050e0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-scaphoid",
+      "fmaId": "FMA24435",
+      "sections": {
+        "anatomy": "7e9ba89452765c3f58f3b61e3fac2615efe556457420fd8319773cd11d274ac3",
+        "function": "ff37f61c3ecf9c5ae53157b4976cad486c2663dcdca382fd6eda8c54df0c4698"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-talus",
+      "fmaId": "FMA24482",
+      "sections": {
+        "anatomy": "fdae9f31215ca6da4b4e60a3404a3903f063f6d31f6ddbc7b22ff65ab85113ee",
+        "function": "34e4ccedb5c537a43adf90e44e3b1083034fe55db0017f073072cf21f0ab1e29"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-trapezium",
+      "fmaId": "FMA24443",
+      "sections": {
+        "anatomy": "1eeddcce6a23a7dd700e236cdcba7d0c2abb822d667dc7d50a57e07143ffe3aa",
+        "function": "e69341fd7ef763001d30c98c8ef6d14af2eac9c2226277b9bfc46ade49e6fe30"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-trapezoid",
+      "fmaId": "FMA23725",
+      "sections": {
+        "anatomy": "724d09d65ce40831b657e6d04712900d952e16852ce8fd68b8d022426675b8da",
+        "function": "467c28e0d4af527970a27c2176c2d602fbbc7dd490a20b3af5d4f80de33f48c6"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-triquetral",
+      "fmaId": "FMA24439",
+      "sections": {
+        "anatomy": "926a08622bdbb3e9c3f8730d09d6ccf7fd4d4045b0a9b15a1a1adc7557d264dd",
+        "function": "6776093f1f2b3a88294f3a23ad0ecc2f8af7e0a89184bf2c37c0e0169ebabd67"
+      }
+    }
+  ]
+}

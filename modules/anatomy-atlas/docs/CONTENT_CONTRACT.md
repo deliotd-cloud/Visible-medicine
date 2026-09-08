@@ -2,7 +2,7 @@
 
 ## Delivered scope
 
-**Current limb-bone extension:** [34 original drafts](LIMB_BONE_CURRICULUM.md) cover 17 existing girdle/major limb-bone entries. Body totals: Anatomy 710 draft/312 identity-only; Function 766 draft/146 identity-only/110 pending. `authoringBeforeLimbBones` verifies/restores only these topics before nineteen prior projections; 1,034 edits remain pinned against the original baseline. Cranial and earlier report totals are explicitly historical. Runtime/export stay current; no schema/source/geometry/review migration.
+**Current hand/foot bone extension:** [212 original drafts](ACRAL_BONE_CURRICULUM.md) cover 106 individual bone entries. Body totals: Anatomy 816 draft/206 identity-only; Function 872 draft/146 identity-only/four pending. `authoringBeforeAcralBones` verifies/restores these topics before twenty prior projections; 1,246 edits remain pinned against the original baseline. It separately preserves the two unresolved foot-sesamoid groups' readiness. Limb and earlier report totals are historical. Runtime/export stay current; no schema/source/geometry/review migration.
 
 **Current organ extension:** [46 original drafts](ORGAN_CURRICULUM.md) cover 23 existing organ-system entries. Body totals: Anatomy 575 draft / 447 identity-only; Function 631 draft / 146 identity-only / 245 pending. `authoringBeforeOrgans` verifies/restores only these topics before fourteen prior offline projections, preserving 764 pinned topic edits against the original baseline. Current runtime/export remain current; the CNS report labels historical counts. No schema, source, geometry or review migration. Earlier extension totals below are historical.
 

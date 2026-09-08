@@ -2,7 +2,9 @@
 
 ## Current scope and remaining work
 
-The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: 110 Function sections remain pending and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: four Function sections remain pending, 146 remain identity-only, and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+
+The [hand/foot bone update](docs/ACRAL_BONE_CURRICULUM.md) adds 212 cited Anatomy/Function drafts for 106 existing individual bones, preserving digit and joint distinctions. Two grouped foot-sesamoid selections retain their unresolved status. No new controls or geometry. Run `npm run acral-bone-curriculum:test`; anatomical and clinical review remain pending.
 
 The [girdle and limb-bone update](docs/LIMB_BONE_CURRICULUM.md) adds 34 cited Anatomy/Function drafts for 17 existing entries, preserving the right-shoulder pilot. Joint relationships and shared regional memberships are explicit without extra controls or geometry. Run `npm run limb-bone-curriculum:test`; source relationships and clinical acceptance remain unvalidated.
 

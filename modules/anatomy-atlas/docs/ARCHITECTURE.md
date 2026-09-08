@@ -2,6 +2,8 @@
 
 ## Connective teaching dispatch
 
+`lib/acral-bone-curriculum.ts` supplies 53 exact right/left definitions for 106 hand/foot bones. Explicit FMA pairs and digit/segment metadata drive shared helpers; no identity is inferred from name parsing, neighbouring FMA numbers or camera position. The two broad foot-sesamoid groups are excluded. A pinned offline transition precedes limb and older milestones and guards held readiness separately from displayed copy. See [scope and limits](ACRAL_BONE_CURRICULUM.md).
+
 `lib/limb-bone-curriculum.ts` supplies 10 definitions for 17 existing girdle/major limb-bone entries. Explicit ID/side bindings preserve the right-shoulder pilot; dispatch also guards primary and every required secondary region. An offline projection precedes cranial and older milestones without changing runtime/export semantics. See [scope and limits](LIMB_BONE_CURRICULUM.md).
 
 `lib/cranial-bone-curriculum.ts` supplies 15 exact-FMA definitions for 23 existing skull/hyoid entries, with system/category/primary and secondary region/laterality/tab guards. It retains the hyoid's two-source compound without inventing subparts. A pinned offline projection precedes thoracic and older milestones; display/export stay current. See [scope and limits](CRANIAL_BONE_CURRICULUM.md).

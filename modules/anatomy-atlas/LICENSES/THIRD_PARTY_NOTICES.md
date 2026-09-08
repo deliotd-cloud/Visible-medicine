@@ -1,5 +1,7 @@
 # Third-party notices
 
+The hand/foot bone update adds short original factual teaching with reference links, not publisher prose, illustrations, scans, tables or datasets. Reference copyright/NC-ND terms are not commercial asset grants. Original code/text remain MIT; separate DBCLS BodyParts3D CC BY 4.0 obligations remain. No new assets, dependencies, paid APIs or private data. The two grouped foot-sesamoid selections are not relabelled as individual components. See `../docs/ACRAL_BONE_CURRICULUM.md`.
+
 The girdle/limb-bone update adds brief original factual notes with medical reference links, not imported publisher prose, figures, tables, scans or datasets. Reference copyright/NC-ND terms are not commercial asset grants. No new dependency, font, texture, mesh, paid API or private data. Original code/text retain MIT terms; exact source evidence retains separate DBCLS BodyParts3D CC BY 4.0 attribution/change obligations. See `../docs/LIMB_BONE_CURRICULUM.md`.
 
 The skull/hyoid update adds brief original factual notes with medical reference links, not imported prose, figures, diagrams, scans, tables or datasets. Publisher NC-ND/copyright terms are not commercial asset grants. No new dependency, font, texture, model, paid API or private data. Original application code/text retain MIT terms; exact source-index evidence retains separate DBCLS BodyParts3D CC BY4 attribution/change obligations. See `../docs/CRANIAL_BONE_CURRICULUM.md`.

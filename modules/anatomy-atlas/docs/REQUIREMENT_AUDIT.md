@@ -29,7 +29,7 @@ The reproducible [inventory](requirement-audit.json) executes the actual content
 
 ## Teaching depth: actual displayed copy
 
-The latest [girdle/limb-bone curriculum](LIMB_BONE_CURRICULUM.md) adds 34 cited Anatomy/Function drafts across 17 existing entries, preserving the right-shoulder pilot. The preceding additions remain draft. The 110 remaining Function gaps comprise 108 hand/foot skeletal entries and the two explicit muscle/fornical holds. Source geometry, relationships and mechanics remain unvalidated. Older milestone counts below are historical.
+The latest [hand/foot bone curriculum](ACRAL_BONE_CURRICULUM.md) adds 212 cited Anatomy/Function drafts across 106 individually identified bones. Four Function records remain pending: two grouped foot-sesamoid selections and the muscle/fornical holds. Another 146 Function records remain identity-only, not completed teaching. Source geometry, relationships and mechanics remain unvalidated. Older milestone counts below are historical.
 
 The latest [organ curriculum](ORGAN_CURRICULUM.md) supplies 46 cited Anatomy/Function drafts for 23 existing representations. No organ-system Function entry is now pending, but that does not imply complete organ geometry or clinical teaching. Source eye-component asymmetry, adult-male tract, fixed-age thymus and internal-layer limitations are explicit. Unresolved muscle FMA19728 and fornical commissure FMA61970 remain pending. Earlier milestone counts below are historical; the table and generated inventory are current.
 
@@ -37,8 +37,8 @@ These are counts among the **1,022 body representations**, not unique lessons, a
 
 | Body topic | Specific or source-group draft | Generic identity/disclaimer | Explicitly pending | Generated identification prompt |
 | --- | ---: | ---: | ---: | ---: |
-| Anatomy | 710 | 312 | 0 | 0 |
-| Function | 766 | 146 | 110 | 0 |
+| Anatomy | 816 | 206 | 0 | 0 |
+| Function | 872 | 146 | 4 | 0 |
 | CT | 11 | 0 | 1,011 | 0 |
 | MRI | 11 | 0 | 1,011 | 0 |
 | Ultrasound | 11 | 0 | 1,011 | 0 |
@@ -73,7 +73,7 @@ Retain the source-level decisions and exact held IDs in `GAP_FILLING.md`, `SOURC
 ## Ordered next actions
 
 1. **Completed locally — content ingestion contract.** Multi-part source bindings, representation scopes and explicit topic readiness now have a v2 schema, actual shoulder export and whole-body/source/rejection checks. See `CONTENT_CONTRACT.md`. Clinical reviews, canonical IDs, displayed copy and private data are unchanged. Production curriculum storage and automatic legacy migration are not claimed.
-2. **Continue bounded regional teaching.** [Girdle/limb-bone teaching](LIMB_BONE_CURRICULUM.md) follows skull/hyoid and axial milestones, retaining joint and internal-structure limits. Remaining pending Function entries are 108 hand/foot skeletal, unresolved pelvic muscle FMA19728 and fornical commissure FMA61970. Cover hand/foot bones, followed by blood supply, clinical/pathology, modality teaching and reviewed questions in existing panels. The two unresolved identities/functions need specialist adjudication or new source evidence, not readiness promotion. Draft overviews do not establish full anatomy or validated pathways; do not replace unknown nerve geometry with guessed routes or fill scan tabs with synthetic findings.
+2. **Continue bounded regional teaching.** [Hand/foot bone teaching](ACRAL_BONE_CURRICULUM.md) follows the girdle/limb milestones. Audit the remaining 206 identity-only Anatomy and 146 identity-only Function records, then cover source-linked vascular/neural relationships, clinical/pathology, modality teaching and reviewed questions in existing panels. Foot-sesamoid groups FMA45097/FMA45098, pelvic muscle FMA19728 and fornical commissure FMA61970 require source evidence or specialist adjudication, not readiness promotion. Draft overviews do not establish full anatomy or validated pathways; do not replace unknown nerve geometry with guessed routes or fill scan tabs with synthetic findings.
 3. **Accept the current UI on actual devices when authorized/available.** Use the matrix below before calling navigation, labels or explosion visually complete. Fix observed defects rather than add speculative controls. A browser-testing request is required for this environment's browser workflow; no browser-only preview is started in background audit work.
 4. **Resolve source, specialist and imaging inputs.** Supply rights-cleared compatible geometry or qualified adjudication for held candidates; obtain revision-bound anatomical/editorial review. Connect the user's real imaging function only after its interface, scope and data/registration evidence exist.
 5. **Deliver the exact accepted revision.** Restore authorized source-service/GitHub access, then publish privately and update only the existing anatomy backup branch. Main-website integration needs a chosen route/embed and access policy; no sharing change is assumed.
