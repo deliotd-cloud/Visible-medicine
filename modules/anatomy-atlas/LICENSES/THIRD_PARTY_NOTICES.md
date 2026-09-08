@@ -1,5 +1,7 @@
 # Third-party notices
 
+The pelvic-vessel update adds brief original factual teaching linked to medical references and a university-hosted study abstract, not publisher prose, tables, figures, scans or datasets. Copyright/NC-ND reference terms and the study's exclusive publishing licence are not commercial asset grants. Original code/text retain MIT terms; exact DBCLS BodyParts3D source evidence retains separate CC BY 4.0 obligations. No new assets, dependencies, paid APIs or private data. See `../docs/PELVIC_VESSEL_CURRICULUM.md`.
+
 The abdominal-vessel update adds brief original factual teaching with medical reference links, not publisher prose, illustrations, tables, scans or datasets. Copyright/NC-ND reference terms are not commercial asset grants. Original code/text retain MIT terms; exact BodyParts3D source evidence retains separate DBCLS CC BY 4.0 obligations. No new assets, dependencies, paid APIs or private data. See `../docs/ABDOMINAL_VESSEL_CURRICULUM.md`.
 
 The thoracic-vessel update adds brief original factual teaching with medical/university reference links, not publisher prose, tables, figures, scans or datasets. Copyright/NC-ND and university publication rights are not commercial asset grants. Original code/text retain MIT terms; source-derived DBCLS BodyParts3D evidence retains separate CC BY 4.0 obligations. No new assets, dependencies, paid APIs or private data. See `../docs/THORACIC_VESSEL_CURRICULUM.md`.

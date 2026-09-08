@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Pelvic vessel teaching dispatch
+
+`lib/pelvic-vessel-curriculum.ts` supplies twelve exact definitions, guarded by FMA, side, vessel system/category, pelvis primary region and all abdomen/pelvis/thigh memberships. Compound selections are not relabelled as tributaries. Its offline transition runs before the abdominal and earlier projections; display/export remain current. See [scope and evidence](PELVIC_VESSEL_CURRICULUM.md).
+
 ## Abdominal vessel teaching dispatch
 
 `lib/abdominal-vessel-curriculum.ts` supplies fourteen exact definitions, guarded by FMA, side, system/category and required regions. Compound sources are not inferred branch maps. Its pinned offline transition precedes the thoracic and earlier milestones, while display/export use current lessons. See [scope and evidence](ABDOMINAL_VESSEL_CURRICULUM.md).

@@ -1,34 +1,32 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readContentJson } from './content-contract-tools.mjs';
-import { authoringBeforePelvicVessels } from './pelvic-vessel-curriculum-transition.mjs';
 const hash = (value) =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 /** Offline preservation only; runtime and exports always use current lessons. */
-export async function authoringBeforeAbdominalVessels(context) {
-  const { catalog } = context;
-  const api = await authoringBeforePelvicVessels(context);
+export async function authoringBeforePelvicVessels(context) {
+  const { api, catalog } = context;
   const before = await readContentJson(
-    'content/abdominal-vessel-curriculum.before.json',
+    'content/pelvic-vessel-curriculum.before.json',
   );
   const after = await readContentJson(
-    'content/abdominal-vessel-curriculum.transition.json',
+    'content/pelvic-vessel-curriculum.transition.json',
   );
   assert.equal(
     hash(before),
-    '3ce65798d1a24cfece2f125c80988f3d8d40b7f418d89f49818707a22ec73eb4',
+    'fb24260302fd0082486b582cf9baa7e6a4d7644b9e0ad44e87dfab085a82a9a7',
   );
   assert.equal(
     hash(after),
-    'cfbc47de0dfedebdf7dbcf215583a570e5d6bd91405c182f8989912ae551b969',
+    '37d8c931ebd2cd77b060011f2350961da9ae9b12c37d5df5851d5f8d0f392199',
   );
-  assert.equal(before.sourceCommit, '9cd9e2f29be0536c23e812c5f8ade06f011c9935');
+  assert.equal(before.sourceCommit, '39217578761b3c5aa2870fa84ea64c25b964be9d');
   assert.equal(after.sourceCommit, before.sourceCommit);
   assert.equal(before.scope, 'body');
-  assert.deepEqual(before.regions, ['abdomen']);
+  assert.deepEqual(before.regions, ['pelvis']);
   assert.deepEqual(before.tabs, ['anatomy', 'function']);
-  assert.equal(before.entries.length, 14);
+  assert.equal(before.entries.length, 12);
   assert.deepEqual(
     after.entries.map((e) => [e.id, e.fmaId]),
     before.entries.map((e) => [e.id, e.fmaId]),
@@ -53,14 +51,14 @@ export async function authoringBeforeAbdominalVessels(context) {
       assert.equal(
         hash(lesson),
         after.entries[i].sections[t],
-        'Unrecorded abdominal-vessel edit: ' + s.id + ' ' + t,
+        'Unrecorded pelvic-vessel edit: ' + s.id + ' ' + t,
       );
       const { readiness: _readiness, ...displayed } = lesson;
       assert.deepEqual(displayed, api.bodyContent(s, t));
     }
     originals.set(s.id, e.sections);
   }
-  assert.equal(originals.size, 14);
+  assert.equal(originals.size, 12);
   const bodyLesson = (s, t) =>
     originals.get(s.id)?.[t]
       ? structuredClone(originals.get(s.id)[t])

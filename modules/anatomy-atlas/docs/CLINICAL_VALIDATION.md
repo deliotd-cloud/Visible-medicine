@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Pelvic vessel teaching gates
+
+The [pelvic drafts](PELVIC_VESSEL_CURRICULUM.md) need independent review of iliac bifurcations/confluences, side-specific artery–vein crossings, inguinal transitions, pelvic tributaries, source compounds and wording. Static overlap is not May–Thurner syndrome; source-file counts are not branch counts. No vascular patency, Doppler finding, female pelvic vessel model, procedural corridor or registration is established. The four unresolved Function holds and existing clinical/device gates remain.
+
 ## Abdominal vessel teaching gates
 
 The [abdominal drafts](ABDOMINAL_VESSEL_CURRICULUM.md) require independent review of portal versus hepatic outflow, hepatic/renal variants, bowel supply territories, source compounds, vessel–organ clearance, branch/ostial continuity and wording. No fixed flow fractions, perfusion maps, patency, renal function, Doppler findings, wall pathology, procedural safety or patient registration are inferred. Four unresolved Function holds and existing specialist/device gates remain.
