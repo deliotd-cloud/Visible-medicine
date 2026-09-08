@@ -29,14 +29,16 @@ The reproducible [inventory](requirement-audit.json) executes the actual content
 
 ## Teaching depth: actual displayed copy
 
+The latest [connective curriculum](CONNECTIVE_CURRICULUM.md) adds 86 cited Anatomy/Function drafts across 43 existing cartilage, ligament and membrane entries. No connective-system Function entry is pending, but attachments, compound geometry and biomechanics are not clinically validated. The 202 remaining Function gaps comprise 200 skeletal entries and the two explicit muscle/fornical holds. Older milestone counts below are historical.
+
 The latest [organ curriculum](ORGAN_CURRICULUM.md) supplies 46 cited Anatomy/Function drafts for 23 existing representations. No organ-system Function entry is now pending, but that does not imply complete organ geometry or clinical teaching. Source eye-component asymmetry, adult-male tract, fixed-age thymus and internal-layer limitations are explicit. Unresolved muscle FMA19728 and fornical commissure FMA61970 remain pending. Earlier milestone counts below are historical; the table and generated inventory are current.
 
 These are counts among the **1,022 body representations**, not unique lessons, accepted anatomy or independent clinical reviews. The dedicated shoulder's nine entries have draft text in all eight topics; reuse supplies eleven body entries because component representations can share shoulder teaching.
 
 | Body topic | Specific or source-group draft | Generic identity/disclaimer | Explicitly pending | Generated identification prompt |
 | --- | ---: | ---: | ---: | ---: |
-| Anatomy | 575 | 447 | 0 | 0 |
-| Function | 631 | 146 | 245 | 0 |
+| Anatomy | 618 | 404 | 0 | 0 |
+| Function | 674 | 146 | 202 | 0 |
 | CT | 11 | 0 | 1,011 | 0 |
 | MRI | 11 | 0 | 1,011 | 0 |
 | Ultrasound | 11 | 0 | 1,011 | 0 |

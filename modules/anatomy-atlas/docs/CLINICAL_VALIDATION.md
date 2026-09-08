@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Connective teaching gates
+
+The [connective drafts](CONNECTIVE_CURRICULUM.md) require independent attachment, source-boundary and functional-wording review. Resolve the two-file cricoid union, cartilage maturation/variation, nasal continuity, laryngeal joint/ligament relations, orbital fascial identity and membrane sub-bundles. Source labels do not establish a complete pulley, patent airway, quantified stiffness or normal joint motion. Unspecified hyo-epiglottic laterality remains unchanged. No clinical approval, procedural guidance or real imaging is added.
+
 ## Organ teaching gates
 
 The [organ drafts](ORGAN_CURRICULUM.md) require independent source-boundary/relationship and content review. Resolve unequal eye-component sets and absent independent retinal representation; assess fixed-reference thymus age, adult-male tract scope, gland/duct/wall detail and functional wording. A navigation region is not an anatomical cavity. No layer completeness, duct patency, patient physiology, diagnosis or clinical approval is established by the software checks. Unresolved muscle/fornical Function and specialist/imaging gates remain.

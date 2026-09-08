@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Connective teaching dispatch
+
+`lib/connective-curriculum.ts` supplies 21 exact-FMA groups for 43 existing cartilage/ligament representations, including membrane complexes. The shared content resolver overrides only Anatomy/Function with system/category/region guards, retaining source warnings. An offline pinned transition precedes the earlier curriculum projections; current display/export remain current. See [scope and mechanical limits](CONNECTIVE_CURRICULUM.md).
+
 ## Organ teaching dispatch
 
 `lib/organ-curriculum.ts` supplies 15 exact-FMA lesson groups for 23 existing body representations through the existing `bodyLesson`/`bodyContent` dispatch. Only Anatomy/Function are overridden, guarded by system, category and region. Existing warnings, source IDs, geometry and panels remain intact. The offline organ transition pins this explicit edit before older preservation projections; exported content remains current. See [scope and source limitations](ORGAN_CURRICULUM.md).

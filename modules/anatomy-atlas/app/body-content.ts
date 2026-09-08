@@ -33,6 +33,7 @@ import { trunkMuscleLesson } from '../lib/trunk-curriculum';
 import { orbitalNerveLesson } from '../lib/orbital-nerve-curriculum';
 import { centralNeuroLesson } from '../lib/central-neuro-curriculum';
 import { organLesson } from '../lib/organ-curriculum';
+import { connectiveLesson } from '../lib/connective-curriculum';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -111,6 +112,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (centralNeuro) return centralNeuro;
   const organ = organLesson(s, tab);
   if (organ) return organ;
+  const connective = connectiveLesson(s, tab);
+  if (connective) return connective;
   const axial =
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??

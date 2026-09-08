@@ -1,5 +1,7 @@
 # Third-party notices
 
+The connective update adds brief original factual teaching linked to medical articles, study abstracts and a university lecture, not imported prose, figures, diagrams, tables or datasets. Publication copyright/NC-ND terms are not commercial asset grants. No new package, font, texture, mesh, paid API or private data. Original code/text retain MIT terms; source-index evidence retains separate DBCLS BodyParts3D CC BY 4.0 obligations. See `../docs/CONNECTIVE_CURRICULUM.md`.
+
 The organ update adds brief original factual notes with linked NIH, Society for Endocrinology, StatPearls and Histology Guide references, not imported prose, figures, scans or datasets. Publisher copyright and NC-ND terms are not commercial asset grants. No new dependency, font, texture, mesh, paid API or private data. Original application text/code retain MIT terms; source-index evidence retains separate DBCLS BodyParts3D CC BY 4.0 credit/change obligations. See `../docs/ORGAN_CURRICULUM.md`.
 
 The central-neuro update adds brief original evidence-aware notes with linked research/medical references, not imported prose, figures, scans, tables or datasets. Their publisher and NC-ND terms are not treated as commercial asset grants. No new asset, dependency, font, texture, paid API or private data. Original text/code retain MIT terms; source-index evidence retains separate BodyParts3D CC BY 4.0 credit/change obligations. See `../docs/CENTRAL_NEURO_CURRICULUM.md`.
