@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "checks": 9031,
+  "lessonDefinitions": 10,
+  "bodyRepresentations": 20,
+  "authoredSections": 40,
+  "combinedPinnedCurriculumSections": 712,
+  "bodyReadiness": {
+    "anatomy": {
+      "draft": 551,
+      "identity-only": 471,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "function": {
+      "draft": 606,
+      "identity-only": 146,
+      "pending": 270,
+      "generated-identification": 0
+    }
+  },
+  "pendingNervousSystemFunctions": [
+    "FMA61970",
+    "FMA62072",
+    "FMA78497"
+  ],
+  "sourceIndexChecks": 20,
+  "negativeCases": 10,
+  "unrelatedCopyAndRecipesPreserved": true,
+  "sourceGeometryChanged": false,
+  "clinicalApproval": false,
+  "scanContentAdded": false,
+  "browserTesting": false,
+  "limitations": "Software/source-index evidence, not validated nerve courses, every branch or fibre pathway, reflex simulation, clinical or device acceptance."
+}

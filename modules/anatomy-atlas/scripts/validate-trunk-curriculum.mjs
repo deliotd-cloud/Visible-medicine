@@ -6,6 +6,7 @@ import {
   readContentJson,
 } from './content-contract-tools.mjs';
 import { authoringBeforeTrunk } from './trunk-curriculum-transition.mjs';
+import { authoringBeforeOrbitalNerve } from './orbital-nerve-curriculum-transition.mjs';
 import {
   curriculumHash,
   copyBeforeShoulderArmCurriculum,
@@ -437,13 +438,15 @@ for (const [s, t, field] of negatives) {
   );
   checks++;
 }
+const trunkMilestone = await authoringBeforeOrbitalNerve(context);
 const counts = (t) =>
   Object.fromEntries(
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
-          .length,
+        catalog.structures.filter(
+          (s) => trunkMilestone.bodyLesson(s, t).readiness === r,
+        ).length,
       ],
     ),
   );
@@ -485,7 +488,10 @@ const report = {
   bodyRepresentations: 38,
   authoredSections: 76,
   combinedPinnedCurriculumSections: 672,
-  bodyReadiness: { anatomy: counts('anatomy'), function: counts('function') },
+  bodyReadinessAtTrunkMilestone: {
+    anatomy: counts('anatomy'),
+    function: counts('function'),
+  },
   pendingMuscleFunctions: 1,
   unresolvedMuscleIdentity: 'FMA19728',
   negativeCases: negatives.length,

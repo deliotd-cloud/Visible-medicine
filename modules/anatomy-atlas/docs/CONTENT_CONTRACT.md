@@ -2,6 +2,8 @@
 
 ## Delivered scope
 
+**Current orbital nerve extension:** [40 drafts](ORBITAL_NERVE_CURRICULUM.md) cover 20 exact existing entries. Body totals: Anatomy 551 draft / 471 identity-only; Function 606 draft / 146 identity-only / 270 pending. `authoringBeforeOrbitalNerve` verifies/restores only those sections before the twelve prior projections; all 712 topic edits remain pinned to the original baseline. Trunk report totals are explicitly historical. Current runtime/export, source IDs, schema and private-review boundaries are preserved.
+
 **Current trunk/back extension:** [76 drafts](TRUNK_CURRICULUM.md) cover 38 existing entries, including explicitly partial source groups and three trapezius portions. Body totals: Anatomy 531 draft / 491 identity-only; Function 586 draft / 146 identity-only / 290 pending. `authoringBeforeTrunk` verifies/restores those topics before eleven prior projections, preserving all 672 pinned edits against the original baseline. Runtime/export remain current; the deep-neck report now labels its historical counts. Source IDs, schema and private reviews are unchanged. Older totals below are historical.
 
 **Current deep-neck extension:** [56 basic drafts](DEEP_NECK_CURRICULUM.md) cover 28 existing spine-route entries. Body totals: Anatomy 493 draft / 529 identity-only; Function 548 draft / 146 identity-only / 328 pending. `authoringBeforeDeepNeck` verifies/restores only these topics before the ten previous offline projections. All 596 topic edits remain pinned to the original baseline; runtime/export stay current. The neck report now labels its historical totals explicitly. No source/schema/review migration occurs; older counts below are historical.
