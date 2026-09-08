@@ -1,10 +1,12 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readContentJson } from './content-contract-tools.mjs';
+import { authoringBeforeOrganAnatomy } from './organ-anatomy-curriculum-transition.mjs';
 const hash = (v) =>
   createHash('sha256').update(JSON.stringify(v)).digest('hex');
 /** Offline preservation only; never use these superseded descriptions at runtime. */
 export async function authoringBeforeNeuralAnatomy(context) {
+  context = { ...context, api: await authoringBeforeOrganAnatomy(context) };
   const { api, catalog } = context;
   const before = await readContentJson(
     'content/neural-anatomy-curriculum.before.json',

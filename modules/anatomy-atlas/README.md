@@ -2,7 +2,9 @@
 
 ## Current scope and remaining work
 
-The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: four Function sections remain pending, 49 Anatomy sections remain identity-only, and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: four Function sections remain pending, 28 Anatomy sections remain identity-only, and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+
+The [organ Anatomy extension](docs/ORGAN_ANATOMY_CURRICULUM.md) adds location and relationship drafts for 21 existing organs and ducts, preserving their Function notes and current interface. Source aggregates are explicitly distinguished from complete organs and internal tissue compartments. Run `npm run organ-anatomy-curriculum:test -- --source` to include cached official source-index comparisons. No clinical approval or new geometry is implied.
 
 The [neural Anatomy correction](docs/NEURAL_ANATOMY_CURRICULUM.md) adds eleven Anatomy drafts and corrects six Function descriptions that were attached to similarly named but different structures. Exact IDs distinguish sensory branches, CN IV and ciliary ganglia. No extra controls or geometry. Run `npm run neural-anatomy-curriculum:test`; clinical review remains pending.
 

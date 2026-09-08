@@ -2,6 +2,8 @@
 
 ## Delivered scope
 
+**Current organ Anatomy extension:** [21 explicit Anatomy edits](ORGAN_ANATOMY_CURRICULUM.md) bring body totals to 994 draft/28 identity-only Anatomy; Function remains 1,018 draft/zero identity-only/four pending. Twenty-eight offline projections preserve 1,576 pinned topic edits against the original baseline. Existing Function and all specialist topics are unchanged; the neural report labels its historical counts explicitly. No schema/source/geometry/review migration. All older totals below are historical.
+
 **Current neural Anatomy correction:** [Seventeen explicit topic edits](NEURAL_ANATOMY_CURRICULUM.md) cover eleven existing nervous-system representations: eleven Anatomy additions and six corrected Function descriptions. Body totals: Anatomy 973 draft/49 identity-only; Function 1,018 draft/zero identity-only/four pending. `authoringBeforeNeuralAnatomy` restores only those seventeen topics before twenty-six prior projections; 1,555 edits remain pinned. Historical erroneous text is offline evidence only. Four unresolved holds and all unrelated teaching remain protected; no schema/source/geometry/review migration.
 
 **Historical regional vessel extension:** [80 original drafts](REGIONAL_VESSEL_CURRICULUM.md) covered forty vessels. At that milestone: Anatomy 962 draft/60 identity-only; Function 1,018 draft/zero identity-only/four pending. Its projection precedes twenty-five older transitions.

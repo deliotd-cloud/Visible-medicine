@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "checks": 9408,
+  "bodyRepresentations": 21,
+  "sourceComponents": 472,
+  "sourceIndexMemberships": 505,
+  "excludedAggregateMemberships": 33,
+  "explicitTopicEdits": 21,
+  "combinedPinnedCurriculumSections": 1576,
+  "sourceIndexChecks": 21,
+  "negativeCases": 11,
+  "bodyReadiness": {
+    "anatomy": {
+      "draft": 994,
+      "identity-only": 28,
+      "pending": 0,
+      "generated-identification": 0
+    },
+    "function": {
+      "draft": 1018,
+      "identity-only": 0,
+      "pending": 4,
+      "generated-identification": 0
+    }
+  },
+  "unrelatedCopyAndRecipesPreserved": true,
+  "existingFunctionPreserved": true,
+  "sourceGeometryChanged": false,
+  "clinicalApproval": false,
+  "scanContentAdded": false,
+  "browserTesting": false,
+  "limitations": "Original basic Anatomy drafts, not validated tissue interiors, physiological motion, operative landmarks, scan registration or complete clinical curricula."
+}

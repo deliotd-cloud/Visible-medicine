@@ -2,7 +2,7 @@
 
 ## Current decision — 8 September 2026
 
-The main interactive feature set is implemented in local source. The product is **not a completed anatomical curriculum, a complete human model, a clinically approved atlas or a connected radiology viewer**. Recent local changes also have not reached the hosted atlas or remote GitHub backup. More controls are not the next priority.
+The main interactive feature set is implemented. The product is **not a completed anatomical curriculum, a complete human model, a clinically approved atlas or a connected radiology viewer**. Private Site delivery was restored at the neural milestone (version 39, source `aaaef58d65000d4a83ac1fcd9845cb43c89a4533`); subsequent publication receipts identify later deployed revisions. The remote GitHub backup remains unverified for recent work. More controls are not the next priority.
 
 This audit supersedes older milestone counts and “next action” paragraphs for current planning. Historical receipts remain evidence of their particular revision, not acceptance of the current one. `BROWSER_QA.md`, for example, describes an earlier 823-entry atlas and a mobile layout that has since been replaced.
 
@@ -29,7 +29,7 @@ The reproducible [inventory](requirement-audit.json) executes the actual content
 
 ## Teaching depth: actual displayed copy
 
-The latest [neural Anatomy correction](NEURAL_ANATOMY_CURRICULUM.md) adds eleven Anatomy drafts and fixes six Function descriptions wrongly selected by similar names. Four Function records remain pending: two grouped foot-sesamoid selections and the muscle/fornical holds. Function identity-only count is zero, but 49 Anatomy sections and most specialist topics remain unauthored. Draft counts do not establish correct facts or clinical review. Source geometry, neural/vascular continuity, territories and physiology remain unvalidated. Older milestone counts below are historical.
+The latest [organ Anatomy extension](ORGAN_ANATOMY_CURRICULUM.md) adds 21 location/relationship drafts and preserves existing Function descriptions. Four Function records remain pending: two grouped foot-sesamoid selections and the muscle/fornical holds. Function identity-only count is zero, but 28 Anatomy sections and most specialist topics remain unauthored. Draft counts do not establish correct facts or clinical review. Source geometry, internal anatomy, neural/vascular continuity, territories and physiology remain unvalidated. Older milestone counts below are historical.
 
 The latest [organ curriculum](ORGAN_CURRICULUM.md) supplies 46 cited Anatomy/Function drafts for 23 existing representations. No organ-system Function entry is now pending, but that does not imply complete organ geometry or clinical teaching. Source eye-component asymmetry, adult-male tract, fixed-age thymus and internal-layer limitations are explicit. Unresolved muscle FMA19728 and fornical commissure FMA61970 remain pending. Earlier milestone counts below are historical; the table and generated inventory are current.
 
@@ -37,7 +37,7 @@ These are counts among the **1,022 body representations**, not unique lessons, a
 
 | Body topic | Specific or source-group draft | Generic identity/disclaimer | Explicitly pending | Generated identification prompt |
 | --- | ---: | ---: | ---: | ---: |
-| Anatomy | 973 | 49 | 0 | 0 |
+| Anatomy | 994 | 28 | 0 | 0 |
 | Function | 1018 | 0 | 4 | 0 |
 | CT | 11 | 0 | 1,011 | 0 |
 | MRI | 11 | 0 | 1,011 | 0 |
@@ -73,7 +73,7 @@ Retain the source-level decisions and exact held IDs in `GAP_FILLING.md`, `SOURC
 ## Ordered next actions
 
 1. **Completed locally — content ingestion contract.** Multi-part source bindings, representation scopes and explicit topic readiness now have a v2 schema, actual shoulder export and whole-body/source/rejection checks. See `CONTENT_CONTRACT.md`. Clinical reviews, canonical IDs, displayed copy and private data are unchanged. Production curriculum storage and automatic legacy migration are not claimed.
-2. **Continue bounded regional teaching.** [Upper-limb vessel teaching](UPPER_LIMB_VESSEL_CURRICULUM.md) follows the pelvic milestone. Audit the remaining 100 identity-only Anatomy and 40 identity-only Function records, then cover source-linked vascular/neural relationships, clinical/pathology, modality teaching and reviewed questions in existing panels. Foot-sesamoid groups FMA45097/FMA45098, pelvic muscle FMA19728 and fornical commissure FMA61970 require source evidence or specialist adjudication, not readiness promotion. Draft overviews do not establish full anatomy or validated pathways; do not replace unknown nerve geometry with guessed routes or fill scan tabs with synthetic findings.
+2. **Continue source-linked teaching.** After the organ Anatomy milestone, 26 connective and two grouped foot-sesamoid Anatomy entries remain identity-only. Address these and audit their Function routing, then develop clinical/pathology, modality teaching and reviewed questions in existing panels. Foot-sesamoid groups FMA45097/FMA45098, pelvic muscle FMA19728 and fornical commissure FMA61970 require source evidence or specialist adjudication, not readiness promotion. Draft overviews do not establish full anatomy or validated pathways; do not replace unknown nerve geometry with guessed routes or fill scan tabs with synthetic findings.
 3. **Accept the current UI on actual devices when authorized/available.** Use the matrix below before calling navigation, labels or explosion visually complete. Fix observed defects rather than add speculative controls. A browser-testing request is required for this environment's browser workflow; no browser-only preview is started in background audit work.
 4. **Resolve source, specialist and imaging inputs.** Supply rights-cleared compatible geometry or qualified adjudication for held candidates; obtain revision-bound anatomical/editorial review. Connect the user's real imaging function only after its interface, scope and data/registration evidence exist.
 5. **Deliver the exact accepted revision.** Restore authorized source-service/GitHub access, then publish privately and update only the existing anatomy backup branch. Main-website integration needs a chosen route/embed and access policy; no sharing change is assumed.

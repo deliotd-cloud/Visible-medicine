@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Organ Anatomy review gates
+
+The [21 new organ/duct drafts](ORGAN_ANATOMY_CURRICULUM.md) require independent review of organ extent, laterality, relationships, named subdivisions and biliary/airway identity. The 472 included source components are not 472 anatomical subdivisions. Check the 33 excluded parent memberships against separate selections; do not infer missing anatomy from parent-selection counts. Lung segments, cardiac valves/conduction, hepatic segments, renal compartments, bowel layers, adrenal zones and duct lumina are not validated by these notes. Existing clinical/modality topics remain pending; no physiological animation, operative guidance or acquired imaging was added.
+
 ## Neural identity and teaching gates
 
 The [neural correction](NEURAL_ANATOMY_CURRICULUM.md) distinguishes infratrochlear/supratrochlear sensory branches from CN IV and nasociliary sensory roots from ciliary ganglia. Six formerly wrong draft Function descriptions are corrected; a draft marker alone was insufficient protection. Review exact source identities, fibre roles, courses, roots, territories and wording. The 59-file brain aggregate is not a functional parcellation. Four unresolved Function holds remain; no complete nerve map, procedure guidance, scan or clinical acceptance is claimed.

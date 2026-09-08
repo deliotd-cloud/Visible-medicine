@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Organ location and aggregate-aware teaching
+
+The [organ Anatomy extension](ORGAN_ANATOMY_CURRICULUM.md) adds 21 exact-FMA, system/category, laterality and primary/secondary-region guarded Anatomy definitions. Existing Function and specialist sections are unchanged. Current region metadata, not historical tokens inside stable IDs, governs routing. The offline `authoringBeforeOrganAnatomy` projection precedes the 27 earlier projections and never enters runtime rendering. Source selection lists, aggregate exclusions and all geometry remain unchanged.
+
 ## Neural Anatomy and exact-ID teaching
 
 The [neural extension](NEURAL_ANATOMY_CURRICULUM.md) adds eleven Anatomy sections and corrects six Function routing collisions through `lib/neural-anatomy-curriculum.ts`. Exact FMA/category/side/region/topic guards replace ambiguous name-substring fallbacks. The pinned offline transition precedes the regional-vessel and older projections; current exports never receive historical erroneous descriptions. No geometry, source or review schema migration.

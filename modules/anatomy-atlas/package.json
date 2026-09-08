@@ -95,7 +95,8 @@
     "pelvic-vessel-curriculum:test": "node scripts/validate-pelvic-vessel-curriculum.mjs",
     "upper-limb-vessel-curriculum:test": "node scripts/validate-upper-limb-vessel-curriculum.mjs",
     "regional-vessel-curriculum:test": "node scripts/validate-regional-vessel-curriculum.mjs",
-    "neural-anatomy-curriculum:test": "node scripts/validate-neural-anatomy-curriculum.mjs"
+    "neural-anatomy-curriculum:test": "node scripts/validate-neural-anatomy-curriculum.mjs",
+    "organ-anatomy-curriculum:test": "node scripts/validate-organ-anatomy-curriculum.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

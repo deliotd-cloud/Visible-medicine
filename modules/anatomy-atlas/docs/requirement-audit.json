@@ -9,8 +9,8 @@
     "content/review-revisions.json": "abc8f9410e00b41282e149d2bb6020d96ad6367aed769888519940c4c24118a0",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "f99a7b694594025b7619129f1fae87bf4f34431cf6fef2862321ce803584e6f2",
-    "explicitTopicReadiness": "3037ff746c0c9ca8aebdf9b9381d0c81ccfcd6dfc4e44debde087ba4b2fb4df2"
+    "resolvedContentAndRecipeData": "a52c270c001710d1b3806081c343a2fbd19593182cb7d7ff5115fc839f5c881e",
+    "explicitTopicReadiness": "dca5f0543540e69747fdb21433da1f9d3490994a02534b20655288636f437342"
   },
   "anatomy": {
     "bodyRepresentations": 1022,
@@ -101,8 +101,8 @@
     "classificationLimit": "Explicit readiness from authoring branches; not inferred from titles and not clinical approval. Existing shoulder authoring is explicitly draft.",
     "body": {
       "anatomy": {
-        "specificDraft": 973,
-        "identityOnly": 49,
+        "specificDraft": 994,
+        "identityOnly": 28,
         "pending": 0,
         "generatedIdentification": 0
       },
@@ -252,8 +252,8 @@
       },
       "thorax": {
         "anatomy": {
-          "specificDraft": 135,
-          "identityOnly": 18,
+          "specificDraft": 142,
+          "identityOnly": 11,
           "pending": 0,
           "generatedIdentification": 0
         },
@@ -302,8 +302,8 @@
       },
       "abdomen": {
         "anatomy": {
-          "specificDraft": 76,
-          "identityOnly": 18,
+          "specificDraft": 89,
+          "identityOnly": 5,
           "pending": 0,
           "generatedIdentification": 0
         },
@@ -352,8 +352,8 @@
       },
       "pelvis": {
         "anatomy": {
-          "specificDraft": 64,
-          "identityOnly": 1,
+          "specificDraft": 65,
+          "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },

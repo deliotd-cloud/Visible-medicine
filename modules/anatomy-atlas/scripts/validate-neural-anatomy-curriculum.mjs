@@ -6,6 +6,7 @@ import {
   readContentJson,
 } from './content-contract-tools.mjs';
 import { authoringBeforeNeuralAnatomy } from './neural-anatomy-curriculum-transition.mjs';
+import { authoringBeforeOrganAnatomy } from './organ-anatomy-curriculum-transition.mjs';
 import {
   curriculumHash,
   copyBeforeShoulderArmCurriculum,
@@ -21,6 +22,7 @@ const check = (a, label) => {
 };
 const context = await contentContext();
 const { api, catalog, body } = context;
+const milestone = await authoringBeforeOrganAnatomy(context);
 const before = await readContentJson(
   'content/neural-anatomy-curriculum.before.json',
 );
@@ -333,8 +335,9 @@ const counts = (t) =>
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
-          .length,
+        catalog.structures.filter(
+          (s) => milestone.bodyLesson(s, t).readiness === r,
+        ).length,
       ],
     ),
   );
@@ -369,7 +372,10 @@ const report = {
   combinedPinnedCurriculumSections: 1555,
   sourceIndexChecks,
   negativeCases: negatives.length,
-  bodyReadiness: { anatomy: counts('anatomy'), function: counts('function') },
+  bodyReadinessAtNeuralMilestone: {
+    anatomy: counts('anatomy'),
+    function: counts('function'),
+  },
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,
