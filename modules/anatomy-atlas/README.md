@@ -2,7 +2,9 @@
 
 ## Current scope and remaining work
 
-The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: four Function sections remain pending, sixty Anatomy sections remain identity-only, and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+The [requirement and acceptance audit](docs/REQUIREMENT_AUDIT.md) is the current checklist, separating implemented controls from anatomical, teaching, device, imaging and delivery gaps. It records 1,022 body representations, not complete anatomy: four Function sections remain pending, 49 Anatomy sections remain identity-only, and most specialist topics are unauthored. Run `npm run requirements:audit -- --check` to detect a stale source/content inventory. Earlier milestone receipts below describe their own revisions, not current visual or clinical acceptance.
+
+The [neural Anatomy correction](docs/NEURAL_ANATOMY_CURRICULUM.md) adds eleven Anatomy drafts and corrects six Function descriptions that were attached to similarly named but different structures. Exact IDs distinguish sensory branches, CN IV and ciliary ganglia. No extra controls or geometry. Run `npm run neural-anatomy-curriculum:test`; clinical review remains pending.
 
 The [regional vessel update](docs/REGIONAL_VESSEL_CURRICULUM.md) adds 80 cited Anatomy/Function drafts for forty existing head/neck and lower-limb vessels. It preserves asymmetric origins, midline identities and compound-source limits without extra controls or geometry. Run `npm run regional-vessel-curriculum:test`; independent clinical review remains pending.
 

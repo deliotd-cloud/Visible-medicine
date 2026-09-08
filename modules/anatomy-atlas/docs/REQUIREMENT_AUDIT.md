@@ -29,7 +29,7 @@ The reproducible [inventory](requirement-audit.json) executes the actual content
 
 ## Teaching depth: actual displayed copy
 
-The latest [regional vessel curriculum](REGIONAL_VESSEL_CURRICULUM.md) adds 80 cited Anatomy/Function drafts across forty existing head/neck and lower-limb vessels in 21 teaching groups. Four Function records remain pending: two grouped foot-sesamoid selections and the muscle/fornical holds. Function identity-only count is now zero, but sixty Anatomy sections and most specialist topics remain unauthored. Source geometry, vascular continuity, territories and physiology remain unvalidated. Older milestone counts below are historical.
+The latest [neural Anatomy correction](NEURAL_ANATOMY_CURRICULUM.md) adds eleven Anatomy drafts and fixes six Function descriptions wrongly selected by similar names. Four Function records remain pending: two grouped foot-sesamoid selections and the muscle/fornical holds. Function identity-only count is zero, but 49 Anatomy sections and most specialist topics remain unauthored. Draft counts do not establish correct facts or clinical review. Source geometry, neural/vascular continuity, territories and physiology remain unvalidated. Older milestone counts below are historical.
 
 The latest [organ curriculum](ORGAN_CURRICULUM.md) supplies 46 cited Anatomy/Function drafts for 23 existing representations. No organ-system Function entry is now pending, but that does not imply complete organ geometry or clinical teaching. Source eye-component asymmetry, adult-male tract, fixed-age thymus and internal-layer limitations are explicit. Unresolved muscle FMA19728 and fornical commissure FMA61970 remain pending. Earlier milestone counts below are historical; the table and generated inventory are current.
 
@@ -37,7 +37,7 @@ These are counts among the **1,022 body representations**, not unique lessons, a
 
 | Body topic | Specific or source-group draft | Generic identity/disclaimer | Explicitly pending | Generated identification prompt |
 | --- | ---: | ---: | ---: | ---: |
-| Anatomy | 962 | 60 | 0 | 0 |
+| Anatomy | 973 | 49 | 0 | 0 |
 | Function | 1018 | 0 | 4 | 0 |
 | CT | 11 | 0 | 1,011 | 0 |
 | MRI | 11 | 0 | 1,011 | 0 |

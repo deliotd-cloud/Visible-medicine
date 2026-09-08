@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Neural identity and teaching gates
+
+The [neural correction](NEURAL_ANATOMY_CURRICULUM.md) distinguishes infratrochlear/supratrochlear sensory branches from CN IV and nasociliary sensory roots from ciliary ganglia. Six formerly wrong draft Function descriptions are corrected; a draft marker alone was insufficient protection. Review exact source identities, fibre roles, courses, roots, territories and wording. The 59-file brain aggregate is not a functional parcellation. Four unresolved Function holds remain; no complete nerve map, procedure guidance, scan or clinical acceptance is claimed.
+
 ## Regional vessel teaching gates
 
 The [head/neck and lower-limb drafts](REGIONAL_VESSEL_CURRICULUM.md) require source-specific review of origins, branching, named boundaries, cerebral connections, deep/superficial venous identity, plantar arches, compound files and wording. Midline selections are not paired arteries; file counts are not branch counts. No collateral adequacy, infarct map, patent lumen, reflux, procedural safety or modality acquisition is validated. The four unresolved Function holds and source/device gates remain.

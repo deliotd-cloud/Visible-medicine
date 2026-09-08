@@ -5,6 +5,8 @@ import { build } from './workspace-test-build.mjs';
 import { fileURLToPath } from 'node:url';
 import { neuroDefinitions } from './neuro-selections.mjs';
 import { applyJunctionTransition } from './junction-transition.mjs';
+import { contentContext } from './content-contract-tools.mjs';
+import { authoringBeforeCentralNeuro } from './central-neuro-curriculum-transition.mjs';
 let checks = 0;
 const check = (v, message) => {
   checks++;
@@ -155,20 +157,27 @@ same(
   undefined,
   'Brain aggregate not silently relabelled',
 );
+// This source milestone predates the pinned central-neuro teaching corrections.
+// Compare its original copy through the verified offline transition chain.
+const historicalTeaching = await authoringBeforeCentralNeuro(
+  await contentContext(),
+);
 for (const s of additions) {
   const g = api.neuroGroupFor(s.fmaId);
   check(/^#[0-9a-f]{6}$/i.test(g.color));
-  const anatomy = api.bodyContent(s, 'anatomy');
+  const anatomy = historicalTeaching.bodyContent(s, 'anatomy');
   check(anatomy.title.includes('draft'));
   check(anatomy.note.includes('Unvalidated'));
   check(anatomy.bullets.some((text) => text.includes(s.fmaId)));
   same(
-    api.bodyContent(s, 'function').body,
+    historicalTeaching.bodyContent(s, 'function').body,
     g.function ??
       'A structure-specific function lesson is awaiting specialist authorship and review.',
   );
   for (const tab of ['ct', 'mri', 'ultrasound'])
-    check(api.bodyContent(s, tab).body.includes('No imaging study'));
+    check(
+      historicalTeaching.bodyContent(s, tab).body.includes('No imaging study'),
+    );
 }
 const profile = api.dissectionProfiles['head-neck'];
 for (const side of ['both', 'left', 'right']) {
@@ -252,6 +261,8 @@ const result = {
   labelViews: 6,
   clinicalValidation: false,
   browserInteractionTesting: false,
+  teachingComparison:
+    'Pinned pre-central-neuro historical projection; runtime/export remain current.',
 };
 await fs.writeFile(
   'docs/neuro-validation.json',

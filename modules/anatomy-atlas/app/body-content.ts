@@ -44,6 +44,7 @@ import { abdominalVesselLesson } from '../lib/abdominal-vessel-curriculum';
 import { pelvicVesselLesson } from '../lib/pelvic-vessel-curriculum';
 import { upperLimbVesselLesson } from '../lib/upper-limb-vessel-curriculum';
 import { regionalVesselLesson } from '../lib/regional-vessel-curriculum';
+import { neuralAnatomyLesson } from '../lib/neural-anatomy-curriculum';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -144,6 +145,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (upperLimbVessel) return upperLimbVessel;
   const regionalVessel = regionalVesselLesson(s, tab);
   if (regionalVessel) return regionalVessel;
+  const neuralAnatomy = neuralAnatomyLesson(s, tab);
+  if (neuralAnatomy) return neuralAnatomy;
   const axial =
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??
@@ -272,7 +275,7 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
         'https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html',
       ],
     };
-  if (tab === 'function' && /trochlear nerve/.test(s.sourceName))
+  if (tab === 'function' && ['FMA50881', 'FMA50882'].includes(s.fmaId))
     return {
       readiness: 'draft',
       title: 'Trochlear nerve (CN IV) · draft',
@@ -299,7 +302,7 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
       body: 'This entry makes a source-labelled vessel segment independently selectable. Its complete branches, tributaries, supplied territory and normal variants have not been authored as a reviewed lesson.',
       note: 'Gaps between displayed surfaces must not be interpreted as occlusion or as validated vessel endpoints. Red/blue identifies artery/vein, not oxygenation.',
     };
-  if (tab === 'function' && /ciliary ganglion/.test(s.sourceName))
+  if (tab === 'function' && ['FMA53549', 'FMA53550'].includes(s.fmaId))
     return {
       readiness: 'draft',
       title: 'Ciliary ganglion · draft',

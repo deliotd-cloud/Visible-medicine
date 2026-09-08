@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Neural Anatomy and exact-ID teaching
+
+The [neural extension](NEURAL_ANATOMY_CURRICULUM.md) adds eleven Anatomy sections and corrects six Function routing collisions through `lib/neural-anatomy-curriculum.ts`. Exact FMA/category/side/region/topic guards replace ambiguous name-substring fallbacks. The pinned offline transition precedes the regional-vessel and older projections; current exports never receive historical erroneous descriptions. No geometry, source or review schema migration.
+
 ## Regional vessel teaching dispatch
 
 The [regional vessel extension](REGIONAL_VESSEL_CURRICULUM.md) uses `lib/regional-vessel-curriculum.ts`: nineteen paired definitions and two midline definitions resolve forty FMA/side-specific entries. Common-carotid origins have side-specific copy. Vessel system/category, primary region and all required memberships are guarded. Its pinned offline transition precedes upper-limb and older projections; display/export stay current. Source binding, imaging and review schemas are unchanged.

@@ -1,12 +1,14 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readContentJson } from './content-contract-tools.mjs';
+import { authoringBeforeNeuralAnatomy } from './neural-anatomy-curriculum-transition.mjs';
 const hash = (value) =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 /** Offline preservation only; runtime and exports always use current lessons. */
 export async function authoringBeforeRegionalVessels(context) {
-  const { api, catalog } = context;
+  const { catalog } = context;
+  const api = await authoringBeforeNeuralAnatomy(context);
   const before = await readContentJson(
     'content/regional-vessel-curriculum.before.json',
   );

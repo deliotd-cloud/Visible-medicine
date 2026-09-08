@@ -39,6 +39,7 @@ export * from './lib/abdominal-vessel-curriculum.ts';
 export * from './lib/pelvic-vessel-curriculum.ts';
 export * from './lib/upper-limb-vessel-curriculum.ts';
 export * from './lib/regional-vessel-curriculum.ts';
+export * from './lib/neural-anatomy-curriculum.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';`,
       resolveDir: fileURLToPath(contentRoot),

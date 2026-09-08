@@ -2,7 +2,9 @@
 
 ## Delivered scope
 
-**Current regional vessel extension:** [80 original drafts](REGIONAL_VESSEL_CURRICULUM.md) cover forty existing vessels in 21 teaching groups. Body totals: Anatomy 962 draft/60 identity-only; Function 1,018 draft/zero identity-only/four pending. `authoringBeforeRegionalVessels` verifies/restores these topics before twenty-five prior projections; 1,538 edits remain pinned against the original baseline. Four unresolved readiness holds remain protected. Runtime/export stay current; no schema/source/geometry/review migration.
+**Current neural Anatomy correction:** [Seventeen explicit topic edits](NEURAL_ANATOMY_CURRICULUM.md) cover eleven existing nervous-system representations: eleven Anatomy additions and six corrected Function descriptions. Body totals: Anatomy 973 draft/49 identity-only; Function 1,018 draft/zero identity-only/four pending. `authoringBeforeNeuralAnatomy` restores only those seventeen topics before twenty-six prior projections; 1,555 edits remain pinned. Historical erroneous text is offline evidence only. Four unresolved holds and all unrelated teaching remain protected; no schema/source/geometry/review migration.
+
+**Historical regional vessel extension:** [80 original drafts](REGIONAL_VESSEL_CURRICULUM.md) covered forty vessels. At that milestone: Anatomy 962 draft/60 identity-only; Function 1,018 draft/zero identity-only/four pending. Its projection precedes twenty-five older transitions.
 
 **Historical upper-limb vessel extension:** [92 original drafts](UPPER_LIMB_VESSEL_CURRICULUM.md) cover 46 existing vessels in 23 paired groups. At that milestone: Anatomy 922 draft/100 identity-only; Function 978 draft/40 identity-only/four pending. `authoringBeforeUpperLimbVessels` restores those topics before twenty-four prior projections.
 

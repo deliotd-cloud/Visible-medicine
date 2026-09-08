@@ -1,5 +1,7 @@
 # Third-party notices
 
+The neural Anatomy correction adds brief original factual teaching and fixes six identity-routing errors using cited medical/university references. No publisher prose, diagrams, tables, scans or datasets are imported; copyright/NC-ND and online availability are not commercial asset grants. Original code/text retain MIT terms; DBCLS BodyParts3D source evidence retains its separate CC BY 4.0 obligations. No new dependency, paid API or private data. See `../docs/NEURAL_ANATOMY_CURRICULUM.md`.
+
 The regional vessel update adds brief original factual teaching with medical/university citation links, not publisher prose, diagrams, tables, scans or datasets. NC/NC-ND reference terms and university availability are not commercial asset grants. Original code/text retain MIT terms; exact DBCLS BodyParts3D source evidence retains separate CC BY 4.0 obligations. No new assets, dependencies, paid APIs or private data. See `../docs/REGIONAL_VESSEL_CURRICULUM.md`.
 
 The upper-limb vessel update adds brief original factual teaching linked to medical and university references, not publisher prose, figures, tables, scans or datasets. StatPearls NC-ND terms, Kenhub copyright and university-hosted content are not commercial asset grants. Original code/text retain MIT terms; exact DBCLS BodyParts3D source evidence retains separate CC BY 4.0 obligations. No new assets, dependencies, paid APIs or private data. See `../docs/UPPER_LIMB_VESSEL_CURRICULUM.md`.

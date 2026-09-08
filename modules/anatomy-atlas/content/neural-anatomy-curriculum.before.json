@@ -1,0 +1,441 @@
+{
+  "sourceCommit": "863687da05775f36f4abbb4d57d7ce19c07f3496",
+  "copyAndRecipeHash": "ab23163faf4b24657c83b8845df16bf1ea0a02016ec44cb2994fa0a1116ab653",
+  "scope": "body",
+  "regions": [
+    "head-neck"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-infratrochlear-nerve",
+      "fmaId": "FMA52699",
+      "name": "Left infratrochlear nerve",
+      "category": "nerve",
+      "side": "left",
+      "tree": "isa",
+      "files": [
+        "FJ1296"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Anatomical identity",
+          "body": "Left infratrochlear nerve is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA52699",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Detailed boundaries and regional classification still require independent anatomical review.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Trochlear nerve (CN IV) · draft",
+          "body": "The trochlear nerve supplies the superior oblique muscle of the eye. It emerges from the dorsal brainstem and reaches the orbit through the superior orbital fissure.",
+          "note": "The displayed source segment is not a validated reconstruction of the entire nerve course.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/nerves_head_neck.html"
+          ]
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:communicating-branch-of-left-nasociliary-nerve-with-left-ciliary-ganglion",
+      "fmaId": "FMA52674",
+      "name": "Communicating branch of left nasociliary nerve with left ciliary ganglion",
+      "category": "nerve",
+      "side": "left",
+      "tree": "isa",
+      "files": [
+        "FJ1311"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Anatomical identity",
+          "body": "Communicating branch of left nasociliary nerve with left ciliary ganglion is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA52674",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Detailed boundaries and regional classification still require independent anatomical review.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Ciliary ganglion · draft",
+          "body": "This orbital ganglion relays parasympathetic signals to the sphincter pupillae and ciliary muscle through short ciliary nerves.",
+          "note": "The small ganglion surface is selectable, but connecting roots and short ciliary nerve routes have not been reconstructed. Source identity and position require specialist review.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/nerves_head_neck.html"
+          ]
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-supratrochlear-nerve",
+      "fmaId": "FMA52644",
+      "name": "Left supratrochlear nerve",
+      "category": "nerve",
+      "side": "left",
+      "tree": "isa",
+      "files": [
+        "FJ1326"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Anatomical identity",
+          "body": "Left supratrochlear nerve is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA52644",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Detailed boundaries and regional classification still require independent anatomical review.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Trochlear nerve (CN IV) · draft",
+          "body": "The trochlear nerve supplies the superior oblique muscle of the eye. It emerges from the dorsal brainstem and reaches the orbit through the superior orbital fissure.",
+          "note": "The displayed source segment is not a validated reconstruction of the entire nerve course.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/nerves_head_neck.html"
+          ]
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-infratrochlear-nerve",
+      "fmaId": "FMA52698",
+      "name": "Right infratrochlear nerve",
+      "category": "nerve",
+      "side": "right",
+      "tree": "isa",
+      "files": [
+        "FJ1347"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Anatomical identity",
+          "body": "Right infratrochlear nerve is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA52698",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Detailed boundaries and regional classification still require independent anatomical review.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Trochlear nerve (CN IV) · draft",
+          "body": "The trochlear nerve supplies the superior oblique muscle of the eye. It emerges from the dorsal brainstem and reaches the orbit through the superior orbital fissure.",
+          "note": "The displayed source segment is not a validated reconstruction of the entire nerve course.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/nerves_head_neck.html"
+          ]
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:communicating-branch-of-right-nasociliary-nerve-with-right-ciliary-ganglion",
+      "fmaId": "FMA52673",
+      "name": "Communicating branch of right nasociliary nerve with right ciliary ganglion",
+      "category": "nerve",
+      "side": "right",
+      "tree": "isa",
+      "files": [
+        "FJ1362"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Anatomical identity",
+          "body": "Communicating branch of right nasociliary nerve with right ciliary ganglion is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA52673",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Detailed boundaries and regional classification still require independent anatomical review.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Ciliary ganglion · draft",
+          "body": "This orbital ganglion relays parasympathetic signals to the sphincter pupillae and ciliary muscle through short ciliary nerves.",
+          "note": "The small ganglion surface is selectable, but connecting roots and short ciliary nerve routes have not been reconstructed. Source identity and position require specialist review.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/nerves_head_neck.html"
+          ]
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-supratrochlear-nerve",
+      "fmaId": "FMA52643",
+      "name": "Right supratrochlear nerve",
+      "category": "nerve",
+      "side": "right",
+      "tree": "isa",
+      "files": [
+        "FJ1377"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Anatomical identity",
+          "body": "Right supratrochlear nerve is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA52643",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Detailed boundaries and regional classification still require independent anatomical review.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Trochlear nerve (CN IV) · draft",
+          "body": "The trochlear nerve supplies the superior oblique muscle of the eye. It emerges from the dorsal brainstem and reaches the orbit through the superior orbital fissure.",
+          "note": "The displayed source segment is not a validated reconstruction of the entire nerve course.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/anatomytables/nerves_head_neck.html"
+          ]
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "fmaId": "FMA50801",
+      "name": "Brain",
+      "category": "organ",
+      "side": "midline",
+      "tree": "partof",
+      "files": [
+        "FJ1730",
+        "FJ1731",
+        "FJ1732",
+        "FJ1733",
+        "FJ1738",
+        "FJ1739",
+        "FJ1740",
+        "FJ1743",
+        "FJ1744",
+        "FJ1745",
+        "FJ1746",
+        "FJ1747",
+        "FJ1748",
+        "FJ1749",
+        "FJ1750",
+        "FJ1751",
+        "FJ1758",
+        "FJ1759",
+        "FJ1760",
+        "FJ1762",
+        "FJ1767",
+        "FJ1769",
+        "FJ1770",
+        "FJ1775",
+        "FJ1779",
+        "FJ1780",
+        "FJ1781",
+        "FJ1783",
+        "FJ1784",
+        "FJ1785",
+        "FJ1786",
+        "FJ1787",
+        "FJ1788",
+        "FJ1789",
+        "FJ1790",
+        "FJ1791",
+        "FJ1792",
+        "FJ1795",
+        "FJ1797",
+        "FJ1798",
+        "FJ1800",
+        "FJ1801",
+        "FJ1806",
+        "FJ1807",
+        "FJ1808",
+        "FJ1810",
+        "FJ1814",
+        "FJ1817",
+        "FJ1822",
+        "FJ1826",
+        "FJ1828",
+        "FJ1830",
+        "FJ1831",
+        "FJ1833",
+        "FJ1834",
+        "FJ1835",
+        "FJ1836",
+        "FJ1841",
+        "FJ1842"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Anatomical identity",
+          "body": "Brain is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA50801",
+            "59 source components grouped as one structure",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Detailed boundaries and regional classification still require independent anatomical review.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
+      "fmaId": "FMA50881",
+      "name": "Right trochlear nerve",
+      "category": "nerve",
+      "side": "right",
+      "tree": "isa",
+      "files": [
+        "FJ1381"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Right trochlear nerve is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA50881",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Selected source cranial-nerve representation only; this does not add limb nerves or a complete cranial-nerve tree. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve",
+      "fmaId": "FMA50882",
+      "name": "Left trochlear nerve",
+      "category": "nerve",
+      "side": "left",
+      "tree": "isa",
+      "files": [
+        "FJ1330"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Left trochlear nerve is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA50882",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Selected source cranial-nerve representation only; this does not add limb nerves or a complete cranial-nerve tree. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+      "fmaId": "FMA53549",
+      "name": "Right ciliary ganglion",
+      "category": "organ",
+      "side": "right",
+      "tree": "isa",
+      "files": [
+        "FJ1339"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Right ciliary ganglion is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA53549",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Small orbital ganglion source; its roots and connecting nerve branches are not reconstructed. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+      "fmaId": "FMA53550",
+      "name": "Left ciliary ganglion",
+      "category": "organ",
+      "side": "left",
+      "tree": "isa",
+      "files": [
+        "FJ1288"
+      ],
+      "sections": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Recovered anatomy · review pending",
+          "body": "Left ciliary ganglion is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA53550",
+            "One source surface",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Small orbital ganglion source; its roots and connecting nerve branches are not reconstructed. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        }
+      }
+    }
+  ]
+}
