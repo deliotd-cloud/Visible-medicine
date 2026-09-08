@@ -1,5 +1,7 @@
 # Third-party notices
 
+The skull/hyoid update adds brief original factual notes with medical reference links, not imported prose, figures, diagrams, scans, tables or datasets. Publisher NC-ND/copyright terms are not commercial asset grants. No new dependency, font, texture, model, paid API or private data. Original application code/text retain MIT terms; exact source-index evidence retains separate DBCLS BodyParts3D CC BY4 attribution/change obligations. See `../docs/CRANIAL_BONE_CURRICULUM.md`.
+
 The ribs/sternum update adds brief original factual notes linked to medical references and a cadaver-study abstract, not imported prose, figures, tables, scans or datasets. Publisher NC-ND/copyright terms are not commercial asset grants. The consulted OpenStax page currently displays NC-SA and AI-use restrictions; no new OpenStax content or asset is included. No new dependency, font, texture, model, paid API or private data. Original application code/text retain MIT terms; source-index evidence retains separate DBCLS BodyParts3D CC BY4 obligations. See `../docs/THORACIC_BONE_CURRICULUM.md`.
 
 The spinal-bone update adds brief original factual teaching with linked medical references, not imported prose, figures, scans, tables or datasets. Publication copyright/NC-ND terms are not commercial asset grants. No new dependency, font, texture, mesh, paid API or private data. Original application code/text retain MIT terms; source-index evidence retains separate DBCLS BodyParts3D CC BY 4.0 attribution/change obligations. See `../docs/SPINAL_BONE_CURRICULUM.md`.

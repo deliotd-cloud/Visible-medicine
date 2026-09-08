@@ -1,34 +1,32 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readContentJson } from './content-contract-tools.mjs';
-import { authoringBeforeCranialBones } from './cranial-bone-curriculum-transition.mjs';
 const hash = (value) =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 /** Offline preservation only; runtime and exports always use current lessons. */
-export async function authoringBeforeThoracicBones(context) {
-  const { catalog } = context;
-  const api = await authoringBeforeCranialBones(context);
+export async function authoringBeforeCranialBones(context) {
+  const { api, catalog } = context;
   const before = await readContentJson(
-    'content/thoracic-bone-curriculum.before.json',
+    'content/cranial-bone-curriculum.before.json',
   );
   const after = await readContentJson(
-    'content/thoracic-bone-curriculum.transition.json',
+    'content/cranial-bone-curriculum.transition.json',
   );
   assert.equal(
     hash(before),
-    'abf2f34c210a3ad1ea8f7850911237d4a37b0bf90b5a48c2cd07d949bac107ac',
+    '7d1c46923c0fd5910b977bdbdf2451184163e448b4df2cccedca86134aad8bb7',
   );
   assert.equal(
     hash(after),
-    'ca298e98fe01607717dfe8a5581bf08aa8d881643cad896f4cd5b0e21b22f4f2',
+    '8ec7f1d909174d223c3ce934c6e0ded5467cd7edab6d7b54aefea0f002af9f09',
   );
-  assert.equal(before.sourceCommit, '062c47a791a9657d1f6d858c2d3e64065cd472d6');
+  assert.equal(before.sourceCommit, '4ac6e32ba235be3181b93f64b8ef6c85d05ab906');
   assert.equal(after.sourceCommit, before.sourceCommit);
   assert.equal(before.scope, 'body');
-  assert.deepEqual(before.regions, ['thorax']);
+  assert.deepEqual(before.regions, ['head-neck']);
   assert.deepEqual(before.tabs, ['anatomy', 'function']);
-  assert.equal(before.entries.length, 27);
+  assert.equal(before.entries.length, 23);
   assert.deepEqual(
     after.entries.map((e) => [e.id, e.fmaId]),
     before.entries.map((e) => [e.id, e.fmaId]),
@@ -40,7 +38,7 @@ export async function authoringBeforeThoracicBones(context) {
       s &&
         s.system === 'skeleton' &&
         s.category === 'bone' &&
-        s.region === 'thorax' &&
+        s.region === 'head-neck' &&
         ['left', 'right', 'midline'].includes(s.laterality) &&
         before.regions.some((r) => s.regions.includes(r)),
     );
@@ -56,14 +54,14 @@ export async function authoringBeforeThoracicBones(context) {
       assert.equal(
         hash(lesson),
         after.entries[i].sections[t],
-        'Unrecorded thoracic-bone edit: ' + s.id + ' ' + t,
+        'Unrecorded cranial-bone edit: ' + s.id + ' ' + t,
       );
       const { readiness: _readiness, ...displayed } = lesson;
       assert.deepEqual(displayed, api.bodyContent(s, t));
     }
     originals.set(s.id, e.sections);
   }
-  assert.equal(originals.size, 27);
+  assert.equal(originals.size, 23);
   const bodyLesson = (s, t) =>
     originals.get(s.id)?.[t]
       ? structuredClone(originals.get(s.id)[t])

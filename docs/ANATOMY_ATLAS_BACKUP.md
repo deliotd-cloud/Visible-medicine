@@ -1,5 +1,7 @@
 # Anatomy atlas backup — 8 September 2026
 
+**Latest local-only skull/hyoid checkpoint:** continued atlas work without retrying GitHub or using an alternate access route. Separate Site transport was not rechecked; its last dated failure remains historical evidence. No remote push, credential renewal, saved version, deployment, sharing change or main-website edit. Local saves are not remote delivery.
+
 **Latest local-only ribs/sternum checkpoint:** continued the atlas goal without retrying GitHub or using an alternate access route. Separate Site source transport was not rechecked; the preceding dated failure remains evidence, not a fresh observation. No remote push, credential renewal, saved version, deployment, sharing change or main-website edit. Local commits are not remote delivery.
 
 **Latest local-only spinal-bone checkpoint:** separate exact Site source transport failed port443 before authentication at01:31:03UTC/02:31:03local on8September (498ms). GitHub remains unattempted after its saved-permission denial, as the user requested continuing the atlas. No alternate access route, remote push, credential renewal, saved version, deployment, sharing change or main-website edit. Local commits are not remote delivery.
@@ -25,6 +27,8 @@
 This branch preserves the current standalone Visible Medicine anatomy application in [`modules/anatomy-atlas`](../modules/anatomy-atlas/). The existing main website files are unchanged. This is a source-and-assets checkpoint, **not an integration or website deployment**.
 
 ## Snapshot
+
+**Current skull/hyoid milestone:** 46 original Anatomy/Function drafts cover 23 existing bone entries in 15 definitions: 22 skull bones and the hyoid. Body Anatomy 693 draft/329 identity-only; Function 749 draft/146 identity-only/127 pending. Cranial 9,119 checks (23 source memberships, 24 source components, nine negatives), thoracic 9,326, content 31,373, shoulder export, requirement audit/check, type check, focused lint/format, diff check and production build pass. Nineteen offline transitions preserve 1,000 pinned topic edits. Internal skull landmarks, ear/sinus/TMJ anatomy and the hyoid's compound union remain unvalidated. No geometry, UI, dependency, scan or approval added. See `docs/CRANIAL_BONE_CURRICULUM.md`. Next: appendicular bones, then specialist teaching; 125 skeletal Function gaps and two unresolved muscle/fornical holds remain. Earlier milestone counts and next actions are historical.
 
 **Current thoracic-bone milestone:** 54 original Anatomy/Function drafts cover27existing ribs/sternal entries in15definitions, including level-specific articulations for ribs3–9. Body Anatomy670draft/352identity-only; Function726draft/146identity-only/150pending. Thoracic9,326 (27source checks/nine negatives), spinal9,187, content31,373, shoulder export/inventory/check/type/focused-lint/diff/build pass. Eighteen offline transitions preserve954pinned edits. Lower-rib attachment variation, bone/cartilage and three sternal-component limits remain explicit. No geometry, UI, dependency, scan or approval added. See `docs/THORACIC_BONE_CURRICULUM.md`. Next: cranial/hyoid and appendicular bone basics, then specialist teaching; 148skeletal Function gaps and two unresolved muscle/fornical holds remain. Earlier counts/next actions are historical.
 
@@ -68,11 +72,11 @@ The newest selection-recovery milestone explains hidden systems, removed selecti
 
 The latest shoulder workspace shares compact Explore / Dissect / Practice navigation, responsive side panels and grouped notes with the regional atlas. Camera/layer menus replace six buttons; the separation toolbar is outside the scene; orthographic presets, source meshes, saved views, review guards and imaging IDs are preserved. The 1,238-check shoulder suite (94 markup cases, 288 menu cases), existing navigation/model-first/recovery/explosion/bookmark/imaging/review checks, type checks, focused lint, build and licence audit pass. Nine display-review hashes expire; teaching hashes stay exact and imaging remains absent. No browser, touch, GPU or clinical acceptance is claimed. See the module's `docs/SHOULDER_WORKSPACE.md`; next work is hidden-selection feedback and targeted recovery.
 
-- Source application commit: `4ac6e32ba235be3181b93f64b8ef6c85d05ab906`.
-- Exact application source tree: `6d569c52888d8b4f92af2fcc87670e8866545a5d`.
+- Source application commit: `28c33de002d7ccc65ac7b22df7af8a8a15a97f6e`.
+- Exact application source tree: `c94b4d20d9fcb0f46f88d5acdc6900b914490af0`.
 - Main website base commit: `c4ff08f8afc90bd94d04162625f97af9d94401cf`.
 - GitHub backup branch: `backup/anatomy-atlas-2026-09-06`.
-- All 668 tracked application files (119,685,992 bytes) are preserved byte-for-byte from that source commit, including 87 GLB bundles, official brand lockups, content, scripts, configuration, dependency lockfile, licences, review schema/migration and documentation.
+- All 675 tracked application files (119,755,454 bytes) are preserved byte-for-byte from that source commit, including 87 GLB bundles, official brand lockups, content, scripts, configuration, dependency lockfile, licences, review schema/migration and documentation.
 - The atlas covers 1,022 selectable source representations, 11 regional explorers, 138 dissection stages, 120 focuses and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation. Previous milestone receipts below are historical.
 - The shoulder review workspace has independent geometry, teaching and imaging review tracks, evidence/issues, versioned records and revision-bound approval safeguards. Acquired scans and specialist approvals remain absent.
 - The deep-inspection update adds three-plane surface cutaways, tissue opacity, clipped-surface picking, regional/whole-body orthographic illustration and varied 5/10/20-question practice with results. No source geometry, anatomical coverage, licences or dependencies were changed.
@@ -246,4 +250,4 @@ The 4,301 head-detail assertions, 54,502 practice assertions, 189 automated revi
 
 Keep the atlas's [licence](../modules/anatomy-atlas/LICENSE), [third-party notices](../modules/anatomy-atlas/LICENSES/THIRD_PARTY_NOTICES.md), [BodyParts3D licence evidence](../modules/anatomy-atlas/LICENSES/BODYPARTS3D.md) and visible attribution together. MIT application code does not relicense third-party anatomy or the proprietary Visible Medicine brand marks.
 
-Keep the repository private unless public source/brand release is deliberately approved. The source snapshot is 119,685,992 bytes (about 119.69 MB); no Git LFS or new paid service was introduced for this backup. GitHub source storage is distinct from hosting, large future imaging collections and database backups; quotas and service pricing can change. Never add patient imaging or private review exports to this repository as a substitute for appropriate data storage.
+Keep the repository private unless public source/brand release is deliberately approved. The source snapshot is 119,755,454 bytes (about 119.76 MB); no Git LFS or new paid service was introduced for this backup. GitHub source storage is distinct from hosting, large future imaging collections and database backups; quotas and service pricing can change. Never add patient imaging or private review exports to this repository as a substitute for appropriate data storage.
