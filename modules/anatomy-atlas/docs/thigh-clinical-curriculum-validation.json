@@ -1,14 +1,14 @@
 {
   "passed": true,
-  "checks": 17498,
-  "bodyRepresentations": 20,
-  "sourceComponents": 20,
-  "lessonGroups": 9,
-  "explicitTopicEdits": 40,
-  "combinedPinnedCurriculumSections": 1790,
-  "sourceIndexChecks": 20,
+  "checks": 19464,
+  "bodyRepresentations": 54,
+  "sourceComponents": 54,
+  "lessonGroups": 20,
+  "explicitTopicEdits": 108,
+  "combinedPinnedCurriculumSections": 1898,
+  "sourceIndexChecks": 54,
   "negativeCases": 12,
-  "bodyReadinessAtHandClinicalMilestone": {
+  "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
       "identity-only": 2,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 105,
+      "draft": 159,
       "identity-only": 0,
-      "pending": 917,
+      "pending": 863,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 105,
+      "draft": 159,
       "identity-only": 0,
-      "pending": 917,
+      "pending": 863,
       "generated-identification": 0
     },
     "quiz": {
@@ -63,6 +63,6 @@
   "clinicalApproval": false,
   "scanContentAdded": false,
   "browserTesting": false,
-  "copyAndRecipeHashAtHandClinicalMilestone": "322cb95bfbe2478d03cb22ed51ac495e2a51357c901978ee3ed14094664fd495",
-  "limitations": "Original short hand clinical overviews with shared heads and intrinsic groups; not individually numbered muscles, segmented nerve territories, disease simulation, diagnosis, treatment rules or clinical approval."
+  "copyAndRecipeHash": "602caa78ac245c9c3b3eebda6df04c85cac9052e84b6bd059479236fb2fd5f9b",
+  "limitations": "Original short hip/thigh clinical overviews with shared tendon/head/portion context and exact cross-region memberships; not validated lesions, nerve territories, disease simulation, diagnosis, treatment rules or clinical approval."
 }

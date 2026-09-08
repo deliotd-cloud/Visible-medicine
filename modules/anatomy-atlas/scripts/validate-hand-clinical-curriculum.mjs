@@ -6,6 +6,7 @@ import {
   readContentJson,
 } from './content-contract-tools.mjs';
 import { authoringBeforeHandClinical } from './hand-clinical-curriculum-transition.mjs';
+import { authoringBeforeThighClinical } from './thigh-clinical-curriculum-transition.mjs';
 import {
   curriculumHash,
   copyBeforeShoulderArmCurriculum,
@@ -28,6 +29,7 @@ const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
 const previous = await authoringBeforeHandClinical(context);
+const milestone = await authoringBeforeThighClinical(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
@@ -146,7 +148,7 @@ for (const s of catalog.structures)
     if (!ids.includes(s.fmaId) || !tabs.includes(t)) {
       same(api.handClinicalLesson(s, t), undefined);
       same(
-        api.bodyLesson(s, t),
+        milestone.bodyLesson(s, t),
         previous.bodyLesson(s, t),
         'Every unrelated section preserved',
       );
@@ -248,8 +250,9 @@ const counts = (t) =>
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
-          .length,
+        catalog.structures.filter(
+          (s) => milestone.bodyLesson(s, t).readiness === r,
+        ).length,
       ],
     ),
   );
@@ -297,13 +300,15 @@ const report = {
   combinedPinnedCurriculumSections: 1790,
   sourceIndexChecks,
   negativeCases: negatives.length,
-  bodyReadiness: Object.fromEntries(api.contentTabs.map((t) => [t, counts(t)])),
+  bodyReadinessAtHandClinicalMilestone: Object.fromEntries(
+    api.contentTabs.map((t) => [t, counts(t)]),
+  ),
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,
   scanContentAdded: false,
   browserTesting: false,
-  copyAndRecipeHash: curriculumHash(copy(api)),
+  copyAndRecipeHashAtHandClinicalMilestone: curriculumHash(copy(milestone)),
   limitations:
     'Original short hand clinical overviews with shared heads and intrinsic groups; not individually numbered muscles, segmented nerve territories, disease simulation, diagnosis, treatment rules or clinical approval.',
 };

@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Hip and thigh Clinical / Pathology review
+
+Review the [108 new drafts](THIGH_CLINICAL_CURRICULUM.md) for tendon-versus-muscle injury, supported-side pelvic drop, deep gluteal differentials, asymptomatic imaging findings, shared insertions, nerve variation and referral wording. Exact regional/source guards do not establish disease location or diagnostic accuracy. No scan, treatment protocol, gait simulation or approval added; independent MSK/neurological sign-off remains required.
+
 ## Hand Clinical / Pathology review
 
 Review the [40 new drafts](HAND_CLINICAL_CURRICULUM.md) for thumb opposition versus adduction, compensatory pinch, mixed lumbrical supply, intrinsic imbalance, nerve-branch variation and pain-versus-weakness distinctions. Adductor heads and muscle groups do not independently localise neuropathy. Hand/MSK/neurological sign-off and full-body editorial persistence remain outstanding. No scan, treatment plan or approval added.

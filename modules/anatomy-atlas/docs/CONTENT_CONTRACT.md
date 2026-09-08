@@ -2,6 +2,8 @@
 
 ## Delivered scope
 
+**Current hip/thigh clinical extension:** [108 drafts](THIGH_CLINICAL_CURRICULUM.md) cover 54 entries, preserving source-labelled heads/portions and regional overlaps. Clinical and Pathology each reach 159 draft/863 pending. Thirty-four offline projections protect 1,898 edits; all older captures and original baseline remain unchanged. Other topics, geometry and approval state are preserved. Earlier totals below are historical.
+
 **Current hand clinical extension:** [40 drafts](HAND_CLINICAL_CURRICULUM.md) cover twenty hand entries. Clinical and Pathology each reach 105 draft/917 pending. Thirty-three offline projections protect 1,790 edits; old captures and original baseline remain unchanged. Other topics, geometry and approval state are preserved. All earlier totals below are historical.
 
 **Current forearm clinical extension:** [84 drafts](FOREARM_CLINICAL_CURRICULUM.md) cover 42 muscle/head entries. Clinical and Pathology each reach 85 draft/937 pending. Thirty-two offline projections protect 1,750 explicit edits; old captures and original baseline are unchanged. Runtime/export remain current. Other topics, geometry and review state are unchanged. All earlier milestone totals below are historical.

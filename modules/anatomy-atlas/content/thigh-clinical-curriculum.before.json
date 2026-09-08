@@ -1,0 +1,1708 @@
+{
+  "sourceCommit": "d8a9ab10aa725266ddf06fdf6b487e17590b2d7e",
+  "copyAndRecipeHash": "322cb95bfbe2478d03cb22ed51ac495e2a51357c901978ee3ed14094664fd495",
+  "scope": "body",
+  "regions": [
+    "thigh",
+    "pelvis",
+    "spine"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-adductor-brevis",
+      "fmaId": "FMA22452",
+      "name": "Right adductor brevis",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1401"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1401"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-adductor-brevis",
+      "fmaId": "FMA22454",
+      "name": "Left adductor brevis",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1401M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1401M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-adductor-longus",
+      "fmaId": "FMA22456",
+      "name": "Right adductor longus",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1402"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1402"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-adductor-longus",
+      "fmaId": "FMA22457",
+      "name": "Left adductor longus",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1402M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1402M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-adductor-magnus",
+      "fmaId": "FMA22459",
+      "name": "Right adductor magnus",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1403"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1403"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-adductor-magnus",
+      "fmaId": "FMA22460",
+      "name": "Left adductor magnus",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1403M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1403M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-adductor-minimus",
+      "fmaId": "FMA43886",
+      "name": "Right adductor minimus",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1404"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1404"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-adductor-minimus",
+      "fmaId": "FMA43887",
+      "name": "Left adductor minimus",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1404M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1404M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-gemellus-inferior",
+      "fmaId": "FMA22336",
+      "name": "Right gemellus inferior",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1416"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1416"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-gemellus-inferior",
+      "fmaId": "FMA22337",
+      "name": "Left gemellus inferior",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1416M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1416M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-gemellus-superior",
+      "fmaId": "FMA22334",
+      "name": "Right gemellus superior",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1417"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1417"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-gemellus-superior",
+      "fmaId": "FMA22335",
+      "name": "Left gemellus superior",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1417M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1417M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-gluteus-maximus",
+      "fmaId": "FMA22328",
+      "name": "Right gluteus maximus",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1418"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1418"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-gluteus-maximus",
+      "fmaId": "FMA22329",
+      "name": "Left gluteus maximus",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1418M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1418M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-gluteus-medius",
+      "fmaId": "FMA22330",
+      "name": "Right gluteus medius",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1419"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1419"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-gluteus-medius",
+      "fmaId": "FMA22331",
+      "name": "Left gluteus medius",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1419M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1419M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-gluteus-minimus",
+      "fmaId": "FMA22332",
+      "name": "Right gluteus minimus",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1420"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1420"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-gluteus-minimus",
+      "fmaId": "FMA22333",
+      "name": "Left gluteus minimus",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1420M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1420M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-gracilis",
+      "fmaId": "FMA43883",
+      "name": "Right gracilis",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1421"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1421"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-gracilis",
+      "fmaId": "FMA43884",
+      "name": "Left gracilis",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1421M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1421M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-iliacus",
+      "fmaId": "FMA22322",
+      "name": "Right iliacus",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1422"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1422"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-iliacus",
+      "fmaId": "FMA22323",
+      "name": "Left iliacus",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1422M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1422M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-obturator-externus",
+      "fmaId": "FMA22326",
+      "name": "Right obturator externus",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1425"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1425"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-obturator-externus",
+      "fmaId": "FMA22327",
+      "name": "Left obturator externus",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1425M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1425M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-obturator-internus",
+      "fmaId": "FMA22324",
+      "name": "Right obturator internus",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1426"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1426"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-obturator-internus",
+      "fmaId": "FMA22325",
+      "name": "Left obturator internus",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1426M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1426M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-pectineus",
+      "fmaId": "FMA22450",
+      "name": "Right pectineus",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1427"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1427"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-pectineus",
+      "fmaId": "FMA22451",
+      "name": "Left pectineus",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1427M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1427M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-piriformis",
+      "fmaId": "FMA22340",
+      "name": "Right piriformis",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1428"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1428"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-piriformis",
+      "fmaId": "FMA22341",
+      "name": "Left piriformis",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1428M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1428M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-psoas-major",
+      "fmaId": "FMA22342",
+      "name": "Right psoas major",
+      "category": "muscle",
+      "side": "right",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1431"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1431"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-psoas-major",
+      "fmaId": "FMA22343",
+      "name": "Left psoas major",
+      "category": "muscle",
+      "side": "left",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1431M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1431M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-quadratus-femoris",
+      "fmaId": "FMA22338",
+      "name": "Right quadratus femoris",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1432"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1432"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-quadratus-femoris",
+      "fmaId": "FMA22339",
+      "name": "Left quadratus femoris",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1432M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1432M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-sartorius",
+      "fmaId": "FMA22354",
+      "name": "Right sartorius",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1434"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1434"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-sartorius",
+      "fmaId": "FMA22355",
+      "name": "Left sartorius",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1434M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1434M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-semimembranosus",
+      "fmaId": "FMA22448",
+      "name": "Right semimembranosus",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1435"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1435"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-semimembranosus",
+      "fmaId": "FMA22449",
+      "name": "Left semimembranosus",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1435M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1435M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-semitendinosus",
+      "fmaId": "FMA22358",
+      "name": "Right semitendinosus",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1436"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1436"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-semitendinosus",
+      "fmaId": "FMA22359",
+      "name": "Left semitendinosus",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1436M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1436M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-tensor-fasciae-latae",
+      "fmaId": "FMA22425",
+      "name": "Right tensor fasciae latae",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1438"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1438"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-tensor-fasciae-latae",
+      "fmaId": "FMA22426",
+      "name": "Left tensor fasciae latae",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1438M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1438M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-rectus-femoris",
+      "fmaId": "FMA38928",
+      "name": "Right rectus femoris",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1433"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1433"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-rectus-femoris",
+      "fmaId": "FMA38929",
+      "name": "Left rectus femoris",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1433M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1433M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-vastus-lateralis",
+      "fmaId": "FMA38930",
+      "name": "Right vastus lateralis",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1442"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1442"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-vastus-lateralis",
+      "fmaId": "FMA38931",
+      "name": "Left vastus lateralis",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1442M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1442M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-vastus-medialis",
+      "fmaId": "FMA38932",
+      "name": "Right vastus medialis",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1443"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1443"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-vastus-medialis",
+      "fmaId": "FMA38933",
+      "name": "Left vastus medialis",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1443M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1443M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:right-vastus-intermedius",
+      "fmaId": "FMA38934",
+      "name": "Right vastus intermedius",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1441"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1441"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:left-vastus-intermedius",
+      "fmaId": "FMA38935",
+      "name": "Left vastus intermedius",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1441M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1441M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:long-head-of-right-biceps-femoris",
+      "fmaId": "FMA45888",
+      "name": "Long head of right biceps femoris",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1395"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1395"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:long-head-of-left-biceps-femoris",
+      "fmaId": "FMA45889",
+      "name": "Long head of left biceps femoris",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1395M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1395M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:muscle:short-head-of-right-biceps-femoris",
+      "fmaId": "FMA45891",
+      "name": "Short head of right biceps femoris",
+      "category": "muscle",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1444"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1444"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:muscle:short-head-of-left-biceps-femoris",
+      "fmaId": "FMA45892",
+      "name": "Short head of left biceps femoris",
+      "category": "muscle",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1444M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1444M"
+      ],
+      "omittedSourceFiles": []
+    }
+  ]
+}

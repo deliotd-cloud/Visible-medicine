@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Hip and thigh clinical teaching
+
+The [hip/thigh extension](THIGH_CLINICAL_CURRICULUM.md) uses twenty definitions with exact single-file identities plus primary/ordered regional membership guards. Pelvic overlap and psoas's spine primary region are preserved. The new offline projection precedes 33 historical ones (1,898 pinned edits); runtime/export are current and the prior hand report is historical. No UI, geometry, schema, review or dependency changes.
+
 ## Hand clinical teaching
 
 The [hand extension](HAND_CLINICAL_CURRICULUM.md) reuses the typed clinical-group shape for nine definitions/twenty exact single-file ISA identities. It preserves sides, source scope, warnings and detached output. The new offline projection precedes 32 historical ones (1,790 pinned sections); runtime/export are current and the prior forearm report is explicitly historical. No UI, geometry, review, schema or dependency change.
