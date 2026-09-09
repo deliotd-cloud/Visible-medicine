@@ -1,0 +1,118 @@
+{
+  "sourceCommit": "05781e6c1b60f2b1a35a72baa6339fe84699ea25",
+  "reason": "Twenty-eight original Clinical/Pathology drafts for 14 exact primary-forearm vessel selections. Original source categories, sides, ordered components and regional memberships preserved; no new geometry, vascular continuity, scans or clinical approval.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+      "fmaId": "FMA22733",
+      "sections": {
+        "pathology": "82cfc997db6f241573ef72da65463558c27b0f8e9b39cfeee1a890d1767eb40d",
+        "clinical": "470be7b45a16fc7a3d57f4bfcfb3671d5a9a1a4c5043ff7d34cae2aa8b6d9fe9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+      "fmaId": "FMA22734",
+      "sections": {
+        "pathology": "f9b1d6737c660ea0052422165c4fa6ad33fc4f5e1313bd1fa0c7803615afaaef",
+        "clinical": "2f6a2f11646c62a6f23c9dac4de291f949eaaaab9ae417c3be896da8ed4910d5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+      "fmaId": "FMA22797",
+      "sections": {
+        "pathology": "dad40186f276693f1f49663db85a097e94676f1e1c8a1e78a1741717ff5d54f1",
+        "clinical": "b1235c11d8c4ff7f885a232107a697def9332b1bfda88d8832888ab33950fff0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
+      "fmaId": "FMA22798",
+      "sections": {
+        "pathology": "d6df2a2c98e319f12acabe3fda78dca7eb8ca86fbaa9479bf1b225df492e0d7d",
+        "clinical": "bfd869ec385a368d9a3412fe331e85b7e7626b3eb454f299af4f934bc0fba897"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+      "fmaId": "FMA22812",
+      "sections": {
+        "pathology": "984c825f0c4b5895bc804c204b4a8af318076d87df67523e0803706662d4dc7e",
+        "clinical": "979d18bbdc09852d0631f85c2ee98a2590199529716329bce9447599b6f52200"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+      "fmaId": "FMA22813",
+      "sections": {
+        "pathology": "41b9d7c5a553a1ddbde79f73e8377948be983dfae2cbadb448c50ce3fbfff2a2",
+        "clinical": "52f6511c2dda57c1fbdf5950d3c619c72435a7b88335d4978db071202c253e01"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+      "fmaId": "FMA13325",
+      "sections": {
+        "pathology": "8241f898a14f2eae709600913808adb46d8715c6374c1e582586ee014e900ed6",
+        "clinical": "29b9b363f8478ba2f78565291a4108e2eb7018016a1408b1c9e70c12697ad7c0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
+      "fmaId": "FMA13326",
+      "sections": {
+        "pathology": "b5145aa01dbd9676249c0d631ab4b08fad7992e6609f9d79df80b887e31ccbf2",
+        "clinical": "5676240cb463e184714747f6fe88dfa891c2060341bd02ce875a045d2450bea0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
+      "fmaId": "FMA22909",
+      "sections": {
+        "pathology": "4f202fd2a25bf92a162c9e1e017bd91f72a0ae6a4e98e7c1c2ef06731ee74d6c",
+        "clinical": "2bb5c73d641f9e4e518d76ef50fe265e978f04d8da3908d8c04273c1847e7b1d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
+      "fmaId": "FMA22910",
+      "sections": {
+        "pathology": "c7fb4baea1c638d2529150ddf76a84b5ac558cf3c4bc6cc7916745ff73ed4ba3",
+        "clinical": "e0c4a49dada6889342c0d84ee05132852bf6002e4f4da303063eb18187755e78"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+      "fmaId": "FMA22808",
+      "sections": {
+        "pathology": "3850f566d1926437eb469bd4e5eb7be0053eafb87d966f874da9e1ca9c306ade",
+        "clinical": "f55c617d0bff77d1f29663dda84b1802514acfbe1e488f3f3176ed5c867abc79"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+      "fmaId": "FMA22807",
+      "sections": {
+        "pathology": "8b431c5013494f9f75653467e04898d6e0637c4e39e6636b33e55ebc22faf26b",
+        "clinical": "a1574f51c9d2853558687bab6598f618f7240697fb75fc42f8385240cfa9d521"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+      "fmaId": "FMA268669",
+      "sections": {
+        "pathology": "db1b614c7e6db2ba73354f0e6e2b15892807aff7828ca539eb7a81598078b455",
+        "clinical": "3d5cbf8dffe4ef1f014ffbff7c1b7679bf09eaaab43bf7d7c2e2c63f4808bdb1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
+      "fmaId": "FMA268667",
+      "sections": {
+        "pathology": "d302acff458d1c44c2924e72906036a7fd63756b7c63c8de40790743c0e05ce8",
+        "clinical": "52d0dcf04f424d55736e5d95de8505f0492294a05074fc8acc95054e702288ca"
+      }
+    }
+  ]
+}

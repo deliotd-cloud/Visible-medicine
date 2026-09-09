@@ -71,6 +71,7 @@ export * from './lib/abdominal-vessel-clinical-curriculum.ts';
 export * from './lib/pelvic-vessel-clinical-curriculum.ts';
 export * from './lib/head-neck-vessel-clinical-curriculum.ts';
 export * from './lib/shoulder-arm-vessel-clinical-curriculum.ts';
+export * from './lib/forearm-vessel-clinical-curriculum.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';`,
       resolveDir: fileURLToPath(contentRoot),

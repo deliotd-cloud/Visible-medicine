@@ -99,6 +99,7 @@
     "pelvic-vessel-clinical-curriculum:test": "node scripts/validate-pelvic-vessel-clinical-curriculum.mjs",
     "head-neck-vessel-clinical-curriculum:test": "node scripts/validate-head-neck-vessel-clinical-curriculum.mjs",
     "shoulder-arm-vessel-clinical-curriculum:test": "node scripts/validate-shoulder-arm-vessel-clinical-curriculum.mjs",
+    "forearm-vessel-clinical-curriculum:test": "node scripts/validate-forearm-vessel-clinical-curriculum.mjs",
     "forearm-curriculum:test": "node scripts/validate-forearm-curriculum.mjs",
     "hand-curriculum:test": "node scripts/validate-hand-curriculum.mjs",
     "thigh-curriculum:test": "node scripts/validate-thigh-curriculum.mjs",
