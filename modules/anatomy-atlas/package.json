@@ -81,6 +81,7 @@
     "head-clinical-curriculum:test": "node scripts/validate-head-clinical-curriculum.mjs",
     "neck-clinical-curriculum:test": "node scripts/validate-neck-clinical-curriculum.mjs",
     "limb-bone-clinical-curriculum:test": "node scripts/validate-limb-bone-clinical-curriculum.mjs",
+    "axial-bone-clinical-curriculum:test": "node scripts/validate-axial-bone-clinical-curriculum.mjs",
     "forearm-curriculum:test": "node scripts/validate-forearm-curriculum.mjs",
     "hand-curriculum:test": "node scripts/validate-hand-curriculum.mjs",
     "thigh-curriculum:test": "node scripts/validate-thigh-curriculum.mjs",

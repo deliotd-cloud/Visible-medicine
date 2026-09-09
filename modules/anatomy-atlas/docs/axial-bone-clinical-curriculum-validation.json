@@ -1,14 +1,13 @@
 {
   "passed": true,
-  "checks": 17375,
-  "bodyRepresentations": 17,
-  "sourceComponents": 17,
-  "lessonGroups": 10,
-  "explicitTopicEdits": 34,
-  "combinedPinnedCurriculumSections": 2356,
-  "sourceIndexChecks": 17,
-  "negativeCases": 17,
-  "readinessScope": "Historical limb-bone milestone; current direct/export assertions remain active",
+  "checks": 19244,
+  "bodyRepresentations": 52,
+  "sourceComponents": 52,
+  "lessonGroups": 15,
+  "explicitTopicEdits": 104,
+  "combinedPinnedCurriculumSections": 2460,
+  "sourceIndexChecks": 52,
+  "negativeCases": 19,
   "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
@@ -41,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 388,
+      "draft": 440,
       "identity-only": 0,
-      "pending": 634,
+      "pending": 582,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 388,
+      "draft": 440,
       "identity-only": 0,
-      "pending": 634,
+      "pending": 582,
       "generated-identification": 0
     },
     "quiz": {
@@ -64,6 +63,6 @@
   "clinicalApproval": false,
   "scanContentAdded": false,
   "browserTesting": false,
-  "copyAndRecipeHash": "649cd498f52ab450b81004feddd86f1a9980d2067a03a23f4a141468a8a97d54",
-  "limitations": "Original short major limb/hip bone clinical drafts; not validated fractures, neurovascular lesions, ligament stability, patient scans, procedural guidance or clinical approval."
+  "copyAndRecipeHash": "2b1708bfd6542d99a082d3abcdb02eec02b9b37fec9dd42470e8b01435926b75",
+  "limitations": "Original short vertebral/sacral/rib/sternal clinical drafts; not validated fractures, neural lesions, joint or ligament stability, breathing mechanics, patient scans, procedural guidance or clinical approval."
 }

@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Spine and chest-bone review
+
+Review [104 new drafts](AXIAL_BONE_CLINICAL_CURRICULUM.md) for bony/ligament/neural injury distinctions, fracture age/etiology limits, pars defect versus slip, sacral insufficiency detection, rib/respiratory terminology, sternal cardiac context and morphological variation. Anatomical, spinal/MSK, trauma and radiological review is required. No diagnostic clearance, procedure, acquired scan, validated mechanics or device acceptance is supplied.
+
 ## Major limb and hip bone review
 
 Review [34 new drafts](LIMB_BONE_CLINICAL_CURRICULUM.md) for fracture versus joint injury, radial/axillary nerve relationships, Monteggia/Galeazzi distinctions, pelvic-ring/socket identity, occult hip injury, plateau/compartment warnings, fibular syndesmotic associations and extensor-mechanism context. Anatomical and MSK/trauma review is required. No patient diagnosis, procedural guidance, actual scans or geometry/device acceptance is provided.

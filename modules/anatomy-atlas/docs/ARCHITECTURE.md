@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Spine and chest-bone clinical teaching
+
+The [axial-bone extension](AXIAL_BONE_CLINICAL_CURRICULUM.md) adds fifteen definitions for 52 exact skeleton/bone identities with ordered source and region guards. Its offline projection precedes limb-bone history (41 projections / 2,460 pinned sections). Runtime/export remain current; earlier captures and baseline stay fixed. No UI, geometry, dependency, schema or review migration. Older milestone totals below are historical.
+
 ## Major limb and hip bone clinical teaching
 
 The [bone extension](LIMB_BONE_CLINICAL_CURRICULUM.md) adds ten definitions for 17 exact skeleton/bone identities. Runtime guards source, side and ordered region/file membership; existing right-shoulder lessons remain untouched. Its offline projection precedes neck history (40 projections / 2,356 pinned edits). Runtime/export stay current; no UI, geometry, dependency, schema or review migration. Older milestone totals below are historical.
