@@ -1,0 +1,1239 @@
+{
+  "sourceCommit": "b03cdd8754d64f63195bb7e893ba767f2c126698",
+  "copyAndRecipeHash": "141b986314ca6a98a5c60a60b55612302e1dae0bd0b7e877bb1912d5a5595426",
+  "scope": "body",
+  "regions": [
+    "abdomen"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+      "fmaId": "FMA3789",
+      "name": "Abdominal aorta",
+      "category": "vessel",
+      "side": "midline",
+      "region": "abdomen",
+      "regions": [
+        "abdomen",
+        "pelvis",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1932"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1932"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+      "fmaId": "FMA10951",
+      "name": "Inferior vena cava",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen",
+        "pelvis",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3441",
+        "FJ3659"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3441",
+        "FJ3659"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+      "fmaId": "FMA50737",
+      "name": "Celiac artery",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1846",
+        "FJ2013"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1846",
+        "FJ2013"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+      "fmaId": "FMA14749",
+      "name": "Superior mesenteric artery",
+      "category": "vessel",
+      "side": "midline",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1928",
+        "FJ2011"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1928",
+        "FJ2011"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+      "fmaId": "FMA14750",
+      "name": "Inferior mesenteric artery",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3442"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3442"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+      "fmaId": "FMA14771",
+      "name": "Common hepatic artery",
+      "category": "vessel",
+      "side": "midline",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3078"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3078"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
+      "fmaId": "FMA14772",
+      "name": "Hepatic artery proper",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3081"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3081"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+      "fmaId": "FMA14773",
+      "name": "Splenic artery",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2562",
+        "FJ3420",
+        "FJ3544",
+        "FJ3640"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2562",
+        "FJ3420",
+        "FJ3544",
+        "FJ3640"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
+      "fmaId": "FMA14768",
+      "name": "Left gastric artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3499"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3499"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+      "fmaId": "FMA50735",
+      "name": "Hepatic portal vein",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1853"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1853"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
+      "fmaId": "FMA14752",
+      "name": "Right renal artery",
+      "category": "vessel",
+      "side": "right",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2038"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2038"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
+      "fmaId": "FMA14753",
+      "name": "Left renal artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2046"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2046"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
+      "fmaId": "FMA14338",
+      "name": "Right hepatic vein",
+      "category": "vessel",
+      "side": "right",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2416"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2416"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
+      "fmaId": "FMA14339",
+      "name": "Left hepatic vein",
+      "category": "vessel",
+      "side": "left",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2415"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2415"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+      "fmaId": "FMA14332",
+      "name": "Superior mesenteric vein",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3647"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3647"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+      "fmaId": "FMA14810",
+      "name": "Middle colic artery",
+      "category": "vessel",
+      "side": "midline",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3542"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3542"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+      "fmaId": "FMA14811",
+      "name": "Right colic artery",
+      "category": "vessel",
+      "side": "right",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3590"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3590"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+      "fmaId": "FMA14815",
+      "name": "Ileocolic artery",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3439"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3439"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+      "fmaId": "FMA14818",
+      "name": "Appendicular artery",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3410"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3410"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+      "fmaId": "FMA14820",
+      "name": "Ascending branch of inferior branch of ileocolic artery",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3414"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3414"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+      "fmaId": "FMA14824",
+      "name": "Marginal colic artery",
+      "category": "vessel",
+      "side": "midline",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2025"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2025"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+      "fmaId": "FMA14826",
+      "name": "Left colic artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3494"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3494"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+      "fmaId": "FMA14828",
+      "name": "Ascending branch of left colic artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3399"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3399"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+      "fmaId": "FMA14829",
+      "name": "Descending branch of left colic artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3428"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3428"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+      "fmaId": "FMA15391",
+      "name": "Inferior mesenteric vein",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3443"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3443"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+      "fmaId": "FMA15405",
+      "name": "Ileal vein",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3438"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3438"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+      "fmaId": "FMA15406",
+      "name": "Middle colic vein",
+      "category": "vessel",
+      "side": "midline",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3543"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3543"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+      "fmaId": "FMA15407",
+      "name": "Right colic vein",
+      "category": "vessel",
+      "side": "right",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3591"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3591"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+      "fmaId": "FMA14782",
+      "name": "Anterior superior pancreaticoduodenal artery",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3409"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3409"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+      "fmaId": "FMA14784",
+      "name": "Posterior superior pancreaticoduodenal artery",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3557"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3557"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+      "fmaId": "FMA14787",
+      "name": "Dorsal pancreatic artery",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3430"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3430"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+      "fmaId": "FMA14790",
+      "name": "Inferior pancreatic artery",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3444"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3444"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+      "fmaId": "FMA14792",
+      "name": "Great pancreatic artery",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3433"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3433"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+      "fmaId": "FMA14793",
+      "name": "Caudal pancreatic artery",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3419"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3419"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+      "fmaId": "FMA14805",
+      "name": "Inferior pancreaticoduodenal artery",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3446"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3446"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+      "fmaId": "FMA15398",
+      "name": "Pancreaticoduodenal vein",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3545",
+        "FJ3646",
+        "FJ3655"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3545",
+        "FJ3646",
+        "FJ3655"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+      "fmaId": "FMA70479",
+      "name": "Anterior inferior pancreaticoduodenal artery",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3401"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3401"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+      "fmaId": "FMA70480",
+      "name": "Posterior inferior pancreaticoduodenal artery",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3546"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3546"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+      "fmaId": "FMA76574",
+      "name": "Trunk of gastroduodenal artery",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3432"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3432"
+      ],
+      "omittedSourceFiles": []
+    }
+  ]
+}

@@ -67,6 +67,7 @@ export * from './lib/limb-connective-clinical-curriculum.ts';
 export * from './lib/axial-connective-clinical-curriculum.ts';
 export * from './lib/regional-connective-clinical-curriculum.ts';
 export * from './lib/thoracic-vessel-clinical-curriculum.ts';
+export * from './lib/abdominal-vessel-clinical-curriculum.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';`,
       resolveDir: fileURLToPath(contentRoot),

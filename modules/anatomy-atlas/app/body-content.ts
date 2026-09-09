@@ -72,6 +72,7 @@ import { limbConnectiveClinicalLesson } from '../lib/limb-connective-clinical-cu
 import { axialConnectiveClinicalLesson } from '../lib/axial-connective-clinical-curriculum';
 import { regionalConnectiveClinicalLesson } from '../lib/regional-connective-clinical-curriculum';
 import { thoracicVesselClinicalLesson } from '../lib/thoracic-vessel-clinical-curriculum';
+import { abdominalVesselClinicalLesson } from '../lib/abdominal-vessel-clinical-curriculum';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -228,6 +229,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (regionalConnectiveClinical) return regionalConnectiveClinical;
   const thoracicVesselClinical = thoracicVesselClinicalLesson(s, tab);
   if (thoracicVesselClinical) return thoracicVesselClinical;
+  const abdominalVesselClinical = abdominalVesselClinicalLesson(s, tab);
+  if (abdominalVesselClinical) return abdominalVesselClinical;
   const axial =
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??

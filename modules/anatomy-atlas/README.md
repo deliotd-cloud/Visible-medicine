@@ -1,6 +1,8 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
-The [thoracic vessel extension](docs/THORACIC_VESSEL_CLINICAL_CURRICULUM.md) adds 76 Clinical/Pathology drafts for 38 vessel selections without extra controls or geometry. Clinical/Pathology each reach 829 draft / 193 pending; the remaining pending entries are 189 vessels and four held identities. Run `npm run thoracic-vessel-clinical-curriculum:test -- --source`. Draft content requires independent clinical review. Older totals below are historical.
+The [abdominal vessel extension](docs/ABDOMINAL_VESSEL_CLINICAL_CURRICULUM.md) adds 78 Clinical/Pathology drafts for 39 vessel selections without extra controls or geometry. Clinical/Pathology each reach 868 draft / 154 pending: 150 vessels and four held identities. Run `npm run abdominal-vessel-clinical-curriculum:test -- --source`. Draft teaching still requires independent clinical review. Older totals below are historical.
+
+The [thoracic vessel extension](docs/THORACIC_VESSEL_CLINICAL_CURRICULUM.md) added 76 Clinical/Pathology drafts for 38 vessel selections, preserving the original compact interface and anatomy.
 
 The [regional connective extension](docs/REGIONAL_CONNECTIVE_CLINICAL_CURRICULUM.md) added 82 Clinical/Pathology drafts for 41 abdominal and head/neck connective selections. All represented connective entries have introductory drafts, not clinical approval.
 

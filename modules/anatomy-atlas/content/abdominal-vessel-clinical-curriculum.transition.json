@@ -1,0 +1,318 @@
+{
+  "sourceCommit": "b03cdd8754d64f63195bb7e893ba767f2c126698",
+  "reason": "Seventy-eight original Clinical/Pathology drafts for 39 exact primary-abdomen vessel selections. Original source categories, sides, ordered components and regional memberships preserved; no new geometry, vascular continuity, scans or clinical approval.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+      "fmaId": "FMA3789",
+      "sections": {
+        "pathology": "9c9c5b9309cc1a0ab02e365df8fca56e5622bb42dcc50e76dfc71006f6e2bc0e",
+        "clinical": "9d0a1d85e69a69bdc3eeb208b9cff3ee259cbb2fc3c8c3522346c9413f24ec46"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+      "fmaId": "FMA10951",
+      "sections": {
+        "pathology": "93715d504b25baed3107e832822611fc92259471153619cd5b48efa4f265618b",
+        "clinical": "8c7f37047757e128f3e29a58937e351ead30c08e3c0d519ace89f91cbc954d64"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+      "fmaId": "FMA50737",
+      "sections": {
+        "pathology": "249e087970401f0bb8bc132b6dcace9d8889bd0beb942a8972967fc1fd1c62df",
+        "clinical": "69146cd8699aa6dd319e1ac799a53f0249dc60fe5de31d92bef45400307669df"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+      "fmaId": "FMA14749",
+      "sections": {
+        "pathology": "0828bd48da883f785a413748979c3d5f0da1a69d972d6e953bc3d1c11803aae5",
+        "clinical": "4384f019bfd5c8dc44eb81986332e3e81b863b57cb5bfcafde75a075cb780114"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+      "fmaId": "FMA14750",
+      "sections": {
+        "pathology": "ab36ea26a4b304c60184bd0b9475a8bd364ba3b027892094145e71d6d8a2dd09",
+        "clinical": "a335403f8545f2d24dc55ebfa26fa33ef95807da90bc34fefdb17750a287141e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+      "fmaId": "FMA14771",
+      "sections": {
+        "pathology": "1daf2f08e2679e61e37ce4e974cb555cec65fa5aaf62928c3bbea8fa234a7862",
+        "clinical": "b4671d3e52ddd0a263c67774e66ab2abfd4d161057fb28a2cbf3e6a6b0829122"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
+      "fmaId": "FMA14772",
+      "sections": {
+        "pathology": "e0d5a6d9d694b36580ba157a5a13dd6b15a2502d799c967133babca19bfbd0fb",
+        "clinical": "6da1aae28248115506889beeb25b1e1604dc14d2247c4ed68cc9578c917c7db9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+      "fmaId": "FMA14773",
+      "sections": {
+        "pathology": "e92497fdf3d3e88d2142d4c46aca0ce4dc9889bc6c6613a8c5f76291b5b91c8d",
+        "clinical": "2bc8e9d23769f2387b090cbe05c99c6532a9548ddcf714946171ef2d1fcbece5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
+      "fmaId": "FMA14768",
+      "sections": {
+        "pathology": "5b61c55b5fa884316d62234212f252967edba0425496fabf8615df4fd0b03161",
+        "clinical": "d8eba4903af7bc567b073dfde22244ef33c66132af45ea30f67b112409c64014"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+      "fmaId": "FMA50735",
+      "sections": {
+        "pathology": "7d174094a38dbd3a02c31d1853342c75f779b5e3951e27b94ffb318cdacac473",
+        "clinical": "62bcbe927ab52b7f2ee390f277dad204c2568bb94f8cda369f8c404ba3a2cfed"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
+      "fmaId": "FMA14752",
+      "sections": {
+        "pathology": "1514ab8f1def37b8963771945c6aca86e74383fc796eef4fdf6c573011b01ba7",
+        "clinical": "8f141b38ac835b46258d2cb784d36d4185ab39d3b0284ea25118c9961258581a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
+      "fmaId": "FMA14753",
+      "sections": {
+        "pathology": "d201cfa9f142a944a47e6f6190b9e38da94571fbfb9c0d64a272f8fb765126f7",
+        "clinical": "1714a7781f68b55c3c3d120780e359586bd3dd55a23711de13d41b35b13d1fba"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
+      "fmaId": "FMA14338",
+      "sections": {
+        "pathology": "880498a1d114365d2528c67dfcdbb93f4043bf2060c21e0b0988c66ce9f8590c",
+        "clinical": "9499d23cfb39aa67a1bc7de9f6e1362cd18469383dfa6eaf04fb463de21cb232"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
+      "fmaId": "FMA14339",
+      "sections": {
+        "pathology": "d3f4d0065e24e7ebd6d8a312c95197f4f780dd0fcfac6c8c05497b04a908e96c",
+        "clinical": "85a1c5ce353a9b73f99392f0a3f59695866f74f6de08c4c85d837cbd51fa0e74"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+      "fmaId": "FMA14332",
+      "sections": {
+        "pathology": "df1076fbfcc370aea42b28454351d0a62c7e12e6670b29bfc46e06d8ecaaa5b5",
+        "clinical": "fa69380efff0cac551dd3de2f0426b728a891211abea94f724eed487d5ea7135"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+      "fmaId": "FMA14810",
+      "sections": {
+        "pathology": "66ff7829e8e3cba9cde2dee743bdbf208cce924eebb894ae8691e1e0f48b633d",
+        "clinical": "49c15d8ca6a39b2b911759d374768bcafcb46e146a0d5c1d80aff355e85f9a97"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+      "fmaId": "FMA14811",
+      "sections": {
+        "pathology": "7d314ff68900d813a40a35b1653748485bb44d2670db00b028af83cd30c495db",
+        "clinical": "de45c22ede86169ed916b514626011a9e76de6507665ce8cda94fc4ff8dd946f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+      "fmaId": "FMA14815",
+      "sections": {
+        "pathology": "a71481d7782606c107a9211c6a030728865d501060d289c0bc3a03ff68eeaa05",
+        "clinical": "ca3ac6307f70bb00201a459315585ee39f30c747d0a18006bddbae9c3128ba2b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+      "fmaId": "FMA14818",
+      "sections": {
+        "pathology": "02faa3e0f92ff1000adb03de9999778ec3ab939de26fd97c62afe8d380596dbc",
+        "clinical": "04a78545242e804b5f6668398d8920926049964e757d0e6f37ea265d15594894"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+      "fmaId": "FMA14820",
+      "sections": {
+        "pathology": "9e245bedab536441b75d4c7d35987261cc49c492a690c6db3ad4cf9dbe8a4372",
+        "clinical": "67f64ae4b2aa381f5093546adff306d32b9039c009c8f22120ffcd556df8da97"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+      "fmaId": "FMA14824",
+      "sections": {
+        "pathology": "3e5b7080581295d173776a88372e4019a3ec67d59903a66f069c8357dd75a860",
+        "clinical": "409878808660a05656a588da729c270a1909bf3453cc996125a88a8a7903aefb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+      "fmaId": "FMA14826",
+      "sections": {
+        "pathology": "ded18b67cc3f6ef44826f6cad5b993d9c81ea6491eb762b669be51bfb297f97d",
+        "clinical": "a8c373f40a983cab12755937fda89e288f4cd2a331304df7e27e779e486ca318"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+      "fmaId": "FMA14828",
+      "sections": {
+        "pathology": "ca80b899c2cb7223591cfc20448531ae64d6be74357d0927cfb26c70c5c99108",
+        "clinical": "f84d1f64f4877ed8c56d319c3fae3f3179e53f996989a6e0465ed06f833f6ef6"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+      "fmaId": "FMA14829",
+      "sections": {
+        "pathology": "6a8e09e8119cb501237a0326d68365e5da8d509c8f3bcc52210b793a7e39502b",
+        "clinical": "f629db8c60050ea000e721dd389524b6c5623f32849391dd2c6b7f1d095180e6"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+      "fmaId": "FMA15391",
+      "sections": {
+        "pathology": "cf105602892f9c23b8a3a7530ca5bfa22afb7e4df3c44c829831098393963825",
+        "clinical": "b7f740201268e6241b3744c4d7c709d5e94d2186fd92a00c0247d9cfecdc7f8c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+      "fmaId": "FMA15405",
+      "sections": {
+        "pathology": "488f4be897a1a9951d33d1b04ee4740781acec141a53cd5ccb9c13c794bb7cff",
+        "clinical": "0ea50fe838848308381a174e7ccadd703ab5fb9e0daa572fdb2aac59bbee705d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+      "fmaId": "FMA15406",
+      "sections": {
+        "pathology": "e9d4437d7ab64b78178dc0fb8c6422bf1b83da8c9065017e49274f71fa70b1db",
+        "clinical": "e58c33fdbe4820b17cb13e1cfd0d825f0a6845ee43f348328c25a118ce238038"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+      "fmaId": "FMA15407",
+      "sections": {
+        "pathology": "6d4f5c5dbebc5bfbdc6ddcab332a152f8ab724b1bbb90a3120a70d5be415b4c1",
+        "clinical": "626c3bcfaefaf0c16a08978b59bd778b437def1817c827fb7da7dbb2dd9df258"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+      "fmaId": "FMA14782",
+      "sections": {
+        "pathology": "1e14162bda54caad6768a960e91ad40e0176f89f4a58d5e7e336236b5e250ad7",
+        "clinical": "5ae9e42ffdada07e94216ad222b9462830c0af53663b350466207e8a6953b67b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+      "fmaId": "FMA14784",
+      "sections": {
+        "pathology": "83ad66e4b8546321d89fe0ce358b5cd2c85d2971e92b0231aea247a259104a1f",
+        "clinical": "e84c24657f46c4ee6a93f68a8cf63114a6286dbe5d249adc616a6f14826e5e5e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+      "fmaId": "FMA14787",
+      "sections": {
+        "pathology": "1d74a28ee90f8985771df9d6aed8fc053493acd9e59e343173d257c71cc03a5f",
+        "clinical": "fd40bea7d08f5c84671403ff38e6d93287ad9a4d63215d10126204d40df7e10d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+      "fmaId": "FMA14790",
+      "sections": {
+        "pathology": "12bcd53aabd7938b53c937d251022c157f10ed4629fe6cee24191af37aa4fe16",
+        "clinical": "6f1701c7934f809738508532c051aa63043c24198a201c1b49ab355f7e4f20c5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+      "fmaId": "FMA14792",
+      "sections": {
+        "pathology": "2dd9f8b807f9a969a181873cd15ea11d50e21c4bf020044fdfaad5d6d794fc32",
+        "clinical": "11859dfbd7f1406320ff2cf56e6bf6ce32b7075d84bb016eb7de2ed65b623a16"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+      "fmaId": "FMA14793",
+      "sections": {
+        "pathology": "afd308587fff73d8cca68c84418e3a8ae6555eb80ad2ecf4fdd347fe9cc38104",
+        "clinical": "5e23d38db02686dd68ed93f387280d21c2fc8852b038dad636d5e25090e4c3c6"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+      "fmaId": "FMA14805",
+      "sections": {
+        "pathology": "b815d8d56e1bf80dfa0f3a4de95cc27682d8b941073a77fedc7314e5577761f3",
+        "clinical": "d425ca2b6f24500441c6e0e1c52a588401402f69a0d483b4720eda43e7a42b20"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+      "fmaId": "FMA15398",
+      "sections": {
+        "pathology": "899881ad15c8ebee0c808ffe3256dad1825ce3fa0500405719da4c9ded086847",
+        "clinical": "c766fc463a87e751aa5df2e9ec9efd884db5029feb901c971d9368b22f51284e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+      "fmaId": "FMA70479",
+      "sections": {
+        "pathology": "7de052cf82062f45404e5671fee8142d4606f514aef462ff5a049bfabe3e665b",
+        "clinical": "67a8a4de8710c2eafcee537b44af0b794b630fb595e0ca41e5483160ce84c6b9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+      "fmaId": "FMA70480",
+      "sections": {
+        "pathology": "05ff091b4f83e3bd98d9365893c2d2592791170d05154ac5fa4303a36f4a6df6",
+        "clinical": "d4b565aff2235879e2d57761c052d725ff4278e61cf34b7f8d249c3625376118"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+      "fmaId": "FMA76574",
+      "sections": {
+        "pathology": "fc6d4dda52a1cba8ff2bd7ff246435453b07c24db53e46a01e8c1de73c620720",
+        "clinical": "21de9073d9192b76d31966d303eb2fb2104361f9ad185ba23588fd3671260966"
+      }
+    }
+  ]
+}

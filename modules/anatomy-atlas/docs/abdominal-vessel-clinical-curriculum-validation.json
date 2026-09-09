@@ -1,14 +1,14 @@
 {
   "passed": true,
-  "checks": 18771,
-  "bodyRepresentations": 41,
-  "sourceComponents": 42,
-  "lessonGroups": 13,
-  "explicitTopicEdits": 82,
-  "combinedPinnedCurriculumSections": 3162,
-  "sourceIndexChecks": 42,
-  "negativeCases": 56,
-  "historicalMilestoneReadiness": {
+  "checks": 18765,
+  "bodyRepresentations": 39,
+  "sourceComponents": 47,
+  "lessonGroups": 21,
+  "explicitTopicEdits": 78,
+  "combinedPinnedCurriculumSections": 3316,
+  "sourceIndexChecks": 47,
+  "negativeCases": 54,
+  "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
       "identity-only": 2,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 791,
+      "draft": 868,
       "identity-only": 0,
-      "pending": 231,
+      "pending": 154,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 791,
+      "draft": 868,
       "identity-only": 0,
-      "pending": 231,
+      "pending": 154,
       "generated-identification": 0
     },
     "quiz": {
@@ -64,5 +64,5 @@
   "scanContentAdded": false,
   "browserTesting": false,
   "copyAndRecipeHash": "a7b8a21c7021c56c3e83c775ffd2a6c6b61c01c3f4482408e856969bf4ee7865",
-  "limitations": "Original abdominal/head-neck connective drafts; exact source trees, categories, unspecified sides and two-component cricoid preserved. No new geometry, operative route, physiological simulation, patient diagnosis, scan or clinical approval."
+  "limitations": "Original primary-abdomen vessel drafts; exact source trees, categories, sides, ordered components and cross-region memberships retained. No new geometry, validated lumen, measured flow, procedural route, scan or clinical approval."
 }
