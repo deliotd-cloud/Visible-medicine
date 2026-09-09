@@ -1,0 +1,102 @@
+{
+  "sourceCommit": "a605cf0785e741deeacb9cf6df376fe8a53facdf",
+  "reason": "Twenty-four original Clinical/Pathology drafts for 12 exact primary-pelvis vessel selections. Original source categories, sides, ordered components and regional memberships preserved; no new geometry, vascular continuity, scans or clinical approval.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-artery",
+      "fmaId": "FMA14765",
+      "sections": {
+        "pathology": "b7ca8807f3648e77369a845ba70f492fd96f88ad3b640d16df14bef6b0c57445",
+        "clinical": "8b09fea196fd66e3c6ff2be5e452b52381dd45dfc71e98ce2018b61b741cf005"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-artery",
+      "fmaId": "FMA14766",
+      "sections": {
+        "pathology": "1e2ee26cef2e6a628ddf664752dc32ee3e14b41820cb3c35b3090e660f9bb0e8",
+        "clinical": "815ec91e99660e62753b46e0b32c303a65c51061de0f7b47ac33befb247a269c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-artery",
+      "fmaId": "FMA18806",
+      "sections": {
+        "pathology": "7e96a0ad23ead03ecae6161cff25aabb8061bc5d14747d5c56d30f55bd9422d1",
+        "clinical": "62aa2ee45249e0077adeeabb81b45732150ccbd5c958b166b604bfe96e8bbcfe"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-artery",
+      "fmaId": "FMA18807",
+      "sections": {
+        "pathology": "21c8ce5461dbd3aa171c7d8a9cfd3bb3669d33c5b03b3f78c77c4ebdf3a6fe70",
+        "clinical": "0173931172d1257d5fe37ad6ba8645defd7de40b142c7db8dd3b56f9d3b4f87d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-artery",
+      "fmaId": "FMA18809",
+      "sections": {
+        "pathology": "d1437901fa2e3b9c9492a2a247ec73543e91005204a6b4f53a547cf20348e693",
+        "clinical": "5837db86cb7f864899c374aa28814c9a60496cc6075c57911db4f94b5d0ff0a9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-artery",
+      "fmaId": "FMA18810",
+      "sections": {
+        "pathology": "404992a79930307380bfa2b92c5499c2ada6c676acb6e25d87f83476a783a34e",
+        "clinical": "7a42a311f173f50f5041e7e8d64bf7b03fc2229366f06cbf69ddd87f63aa2be7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-vein",
+      "fmaId": "FMA21387",
+      "sections": {
+        "pathology": "1804af7a704cdb8c47d3432cc044e922555f87dc0b883188259f39cd02188d0f",
+        "clinical": "e7b8592e867e59eee339fca6fab629ed91b9d55532514c0bd2f7629921546c71"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-vein",
+      "fmaId": "FMA21388",
+      "sections": {
+        "pathology": "0834a3b2ebaf91d6885b0c17c70cb0fc416f9edd060fa7afb34cee5872b60776",
+        "clinical": "f9cd72cc29c8c17c0bda1c3a2375c0db3cbb651f05ef54f19eae2b6a6eebd1d2"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-vein",
+      "fmaId": "FMA18885",
+      "sections": {
+        "pathology": "bd75552fa36a2a303eef350dc149a5821015e6fe46395197209a4f6ecd650f74",
+        "clinical": "c0d00a246a47cb515e5ad7a3ab5a4cb969ee7918dbb9d19bd26f4ada66944eb8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-vein",
+      "fmaId": "FMA18886",
+      "sections": {
+        "pathology": "7545383453d254067568cafc2993bc92b40c4dd607ff243c17f6a6ebcc8402ee",
+        "clinical": "f81e495926b9ad54a3fa5403fec8499642486177d176f683502091d991a7dfca"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-vein",
+      "fmaId": "FMA18887",
+      "sections": {
+        "pathology": "7ccfed47212c2bbe78b8fc7a4fbaf188aa4342e0eda9a3c0a402538c7bf567b1",
+        "clinical": "8b006007a4569ae44755dbf90ba81af1a00f7516a855ff3d60ec6180afc19c64"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-vein",
+      "fmaId": "FMA18888",
+      "sections": {
+        "pathology": "292eaf6544c8c56e9fff5cec327e002ad2787480ce93a462f236af4f2d9f1bde",
+        "clinical": "4bb97cdf7864febbf19a56c3aad30817fbebd2036995755340eeeff71ba8bf32"
+      }
+    }
+  ]
+}

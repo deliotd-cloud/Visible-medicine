@@ -1,0 +1,426 @@
+{
+  "sourceCommit": "a605cf0785e741deeacb9cf6df376fe8a53facdf",
+  "copyAndRecipeHash": "a7b8a21c7021c56c3e83c775ffd2a6c6b61c01c3f4482408e856969bf4ee7865",
+  "scope": "body",
+  "regions": [
+    "pelvis"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-artery",
+      "fmaId": "FMA14765",
+      "name": "Right common iliac artery",
+      "category": "vessel",
+      "side": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3565"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3565"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-artery",
+      "fmaId": "FMA14766",
+      "name": "Left common iliac artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3464"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3464"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-artery",
+      "fmaId": "FMA18806",
+      "name": "Right external iliac artery",
+      "category": "vessel",
+      "side": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3567"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3567"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-artery",
+      "fmaId": "FMA18807",
+      "name": "Left external iliac artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3466"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3466"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-artery",
+      "fmaId": "FMA18809",
+      "name": "Right internal iliac artery",
+      "category": "vessel",
+      "side": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3569"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3569"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-artery",
+      "fmaId": "FMA18810",
+      "name": "Left internal iliac artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3468"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3468"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-vein",
+      "fmaId": "FMA21387",
+      "name": "Right common iliac vein",
+      "category": "vessel",
+      "side": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3566"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3566"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-vein",
+      "fmaId": "FMA21388",
+      "name": "Left common iliac vein",
+      "category": "vessel",
+      "side": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3465"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3465"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-vein",
+      "fmaId": "FMA18885",
+      "name": "Right external iliac vein",
+      "category": "vessel",
+      "side": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3568"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3568"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-vein",
+      "fmaId": "FMA18886",
+      "name": "Left external iliac vein",
+      "category": "vessel",
+      "side": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3484",
+        "FJ3522",
+        "FJ3523",
+        "FJ3524"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3484",
+        "FJ3522",
+        "FJ3523",
+        "FJ3524"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-vein",
+      "fmaId": "FMA18887",
+      "name": "Right internal iliac vein",
+      "category": "vessel",
+      "side": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3570",
+        "FJ3571",
+        "FJ3572",
+        "FJ3607",
+        "FJ3608",
+        "FJ3609"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3570",
+        "FJ3571",
+        "FJ3572",
+        "FJ3607",
+        "FJ3608",
+        "FJ3609"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-vein",
+      "fmaId": "FMA18888",
+      "name": "Left internal iliac vein",
+      "category": "vessel",
+      "side": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3469",
+        "FJ3470",
+        "FJ3471"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3469",
+        "FJ3470",
+        "FJ3471"
+      ],
+      "omittedSourceFiles": []
+    }
+  ]
+}
