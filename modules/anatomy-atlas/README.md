@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+The [dental extension](docs/DENTAL_CLINICAL_CURRICULUM.md) adds 56 Clinical/Pathology drafts for 28 exact tooth selections without adding controls or geometry. Clinical/Pathology each reach 702 draft / 320 pending. Run `npm run dental-clinical-curriculum:test -- --source`. These introductory notes still need dental-specialist review; older totals below are historical.
+
 The [head/neck organ extension](docs/HEAD_ORGAN_CLINICAL_CURRICULUM.md) adds 34 Clinical/Pathology drafts for 17 existing selections in the current panels. Clinical/Pathology each reach 674 draft / 348 pending; the remaining 28 organ-system entries are teeth. Run `npm run head-organ-clinical-curriculum:test -- --source`. No new controls, geometry or paid dependencies; clinical review remains pending. Older totals below are historical.
 
 The [pelvic organ extension](docs/PELVIC_ORGAN_CLINICAL_CURRICULUM.md) adds 20 Clinical/Pathology drafts for ten existing selections in the current panels. Clinical and Pathology each now have 657 draft / 365 pending body entries; 45 organ-system entries remain. Run `npm run pelvic-organ-clinical-curriculum:test -- --source`. No new controls, geometry or paid dependencies; clinical review remains pending and older totals below are historical.

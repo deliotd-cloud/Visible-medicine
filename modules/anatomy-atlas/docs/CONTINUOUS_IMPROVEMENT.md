@@ -1,5 +1,9 @@
 # Continuous atlas improvement programme
 
+## Latest milestone — dental clinical teaching
+
+[Twenty-eight tooth selections](DENTAL_CLINICAL_CURRICULUM.md) now have Clinical/Pathology introductions in the existing panels. No added controls or geometry. The next clinical gaps are 89 connective / 227 vessel entries and four unresolved holds, followed by richer reviewed questions, editorial persistence and future imaging. The broad goal remains active; GitHub remains deferred.
+
 ## Latest milestone — head/neck organ clinical teaching
 
 Added [34 referenced drafts](HEAD_ORGAN_CLINICAL_CURRICULUM.md) for 17 non-dental selections without interface clutter or geometry changes. Clinical/Pathology each reach 674 draft / 348 pending; 28 permanent-tooth entries are next, then connective tissue and vessels. Continue richer reviewed questions, full-body editorial persistence and future imaging integration after the source-specific curriculum. Preserve all identity/clinical/imaging gates and GitHub deferral; publish privately and save matching local backups. Older milestones below are historical.

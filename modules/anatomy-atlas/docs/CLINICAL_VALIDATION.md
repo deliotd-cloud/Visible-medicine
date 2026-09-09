@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Dental teaching remains unreviewed
+
+The [56 dental drafts](DENTAL_CLINICAL_CURRICULUM.md) require dental-specialist acceptance of identity, tissue limits, trauma/impaction/infection wording and adult/child applicability. Tooth surfaces do not validate pulp, canals, periodontal support, pathology or procedures. All unresolved identity holds remain; no scan or clinical approval is added.
+
 ## Head/neck organ teaching
 
 Review [34 new drafts](HEAD_ORGAN_CLINICAL_CURRICULUM.md) for endocrine mechanisms, lens/retinal distinctions, visual urgency, oral lesions, salivary disease, tear-production/drainage levels and epiglottitis. Check UK emergency wording, adult/child applicability and incomplete ocular/duct layers. Source-triangle agreement is not validated pathology, visual function, airway safety, a patent lumen, operative planning or patient imaging.

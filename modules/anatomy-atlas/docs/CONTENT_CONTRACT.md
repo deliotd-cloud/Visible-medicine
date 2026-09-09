@@ -1,5 +1,7 @@
 # Versioned anatomy content export
 
+**Current dental extension:** [56 drafts](DENTAL_CLINICAL_CURRICULUM.md) bring Clinical/Pathology to 702 draft / 320 pending each. Fifty offline projections protect 2,984 pinned sections, with 28 exact source memberships. The head-organ historical milestone remains explicit; current direct/export checks are preserved. Older totals below are historical.
+
 **Current head-organ extension:** [34 drafts](HEAD_ORGAN_CLINICAL_CURRICULUM.md) bring Clinical/Pathology to 674 draft / 348 pending each. Forty-nine offline projections protect 2,928 pinned sections. Exact paired identities, 32 source memberships, ocular aliases, tear-channel scope and holds remain checked. Pelvic historical comparisons use their explicit milestone while current runtime/export assertions remain intact. Older totals below are historical.
 
 **Current pelvic extension:** [20 drafts](PELVIC_ORGAN_CLINICAL_CURRICULUM.md) bring Clinical/Pathology to 657 draft / 365 pending each. Forty-eight offline projections protect 2,894 pinned sections. Exact paired identities, all ten official source rows, rectal ownership and held readiness remain checked. Abdominal historical comparisons use their explicit milestone while direct runtime/export assertions remain current. Older totals below are historical.

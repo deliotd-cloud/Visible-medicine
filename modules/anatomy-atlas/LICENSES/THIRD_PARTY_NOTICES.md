@@ -1,5 +1,7 @@
 # Third-party notices
 
+The dental extension adds original brief factual teaching with NIDCR, NHS/Nottingham University Hospitals and American Association of Endodontists links. No publisher prose, diagram, radiograph, procedure, clinical algorithm or question bank is imported. Links/public access are not asset licences; no new dependencies, fonts, models, textures or paid services. Original MIT and BodyParts3D CC BY 4.0 obligations remain. See `../docs/DENTAL_CLINICAL_CURRICULUM.md`.
+
 The head/neck organ clinical extension adds brief original factual notes with NCI, NEI, NHS, Cleveland Clinic and AAO EyeWiki links. No publisher prose, diagrams, scans, clinical algorithms, procedures, question banks or media are imported. Public access/citation is not an asset licence. Original MIT code/text and BodyParts3D CC BY 4.0 obligations remain unchanged; no new font, model, dependency, paid service or patient data. See `../docs/HEAD_ORGAN_CLINICAL_CURRICULUM.md`.
 
 The pelvic organ clinical extension adds brief original factual notes linked to NIDDK, NHS, Cleveland Clinic and the Urology Care Foundation. No publisher prose, diagrams, scans, tables, treatment protocols, question banks or other media are imported. Citation/access is not an asset licence. Existing MIT original code/text and BodyParts3D CC BY 4.0 obligations remain unchanged; no new font, mesh, dependency, paid service or patient data. See `../docs/PELVIC_ORGAN_CLINICAL_CURRICULUM.md`.

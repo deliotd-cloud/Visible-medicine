@@ -1,14 +1,14 @@
 {
   "passed": true,
-  "checks": 17082,
-  "bodyRepresentations": 10,
-  "sourceComponents": 10,
-  "lessonGroups": 7,
-  "explicitTopicEdits": 20,
-  "combinedPinnedCurriculumSections": 2894,
-  "sourceIndexChecks": 10,
-  "negativeCases": 26,
-  "historicalMilestoneReadiness": {
+  "checks": 18180,
+  "bodyRepresentations": 28,
+  "sourceComponents": 28,
+  "lessonGroups": 6,
+  "explicitTopicEdits": 56,
+  "combinedPinnedCurriculumSections": 2984,
+  "sourceIndexChecks": 28,
+  "negativeCases": 44,
+  "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
       "identity-only": 2,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 657,
+      "draft": 702,
       "identity-only": 0,
-      "pending": 365,
+      "pending": 320,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 657,
+      "draft": 702,
       "identity-only": 0,
-      "pending": 365,
+      "pending": 320,
       "generated-identification": 0
     },
     "quiz": {
@@ -64,5 +64,5 @@
   "scanContentAdded": false,
   "browserTesting": false,
   "copyAndRecipeHash": "3c92d14f7645090d5081685917b79add91742c4f8148be7edd0f4df515393ead",
-  "limitations": "Original pelvic organ clinical drafts; exact paired sides, adult-male source scope and separately owned rectum remain unchanged. No female anatomy, validated lumen, perfusion, fertility, disease simulation, procedural plan, patient scan or clinical approval."
+  "limitations": "Original permanent-tooth clinical drafts; exact sides, arches and named tooth positions retained. No wisdom-tooth addition, invented clinical numbering, internal dental segmentation, patient diagnosis, procedure, scan or clinical approval."
 }

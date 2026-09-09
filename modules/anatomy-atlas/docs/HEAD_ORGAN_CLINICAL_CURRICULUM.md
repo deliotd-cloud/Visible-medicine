@@ -1,5 +1,7 @@
 # Head and neck organ clinical teaching
 
+Historical milestone note: the later [dental extension](DENTAL_CLINICAL_CURRICULUM.md) adds 56 drafts. Head-organ totals and unrelated-topic comparisons below refer to the explicit pre-dental milestone; current direct/export assertions remain active.
+
 ## Scope — 9 September 2026
 
 Thirty-four original Clinical/Pathology drafts cover 17 existing non-dental head/neck selections in ten teaching groups. They use the current notes panels, without extra controls, geometry, dependencies, database or review-state changes.

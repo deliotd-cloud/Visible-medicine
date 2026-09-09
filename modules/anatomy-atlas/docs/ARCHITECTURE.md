@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Dental clinical teaching
+
+The [dental resolver](DENTAL_CLINICAL_CURRICULUM.md) binds 28 one-component ISA teeth to six topic groups. Current UI/export share the same exact-identity guard; tooth positions and sides are not combined or renumbered. Head-organ historical comparisons explicitly project pre-dental content. No UI, geometry, dependency, schema or review-state change.
+
 ## Head/neck organ clinical teaching
 
 The [head-organ extension](HEAD_ORGAN_CLINICAL_CURRICULUM.md) adds ten definitions for 17 exact selections / 32 components. Ordered identity guards retain seven bilateral groups, unequal eyeball sets and one canaliculus-labelled surface per side. Its offline projection precedes pelvic history: 49 projections / 2,928 pinned edits. Current runtime/export and historical checks remain separate; no UI, geometry, schema, dependency or review migration.
