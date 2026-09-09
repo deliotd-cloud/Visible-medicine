@@ -6,7 +6,6 @@ import {
   readContentJson,
 } from './content-contract-tools.mjs';
 import { authoringBeforeHeadClinical } from './head-clinical-curriculum-transition.mjs';
-import { authoringBeforeTrunkClinical } from './trunk-clinical-curriculum-transition.mjs';
 import {
   curriculumHash,
   copyBeforeShoulderArmCurriculum,
@@ -23,13 +22,12 @@ const check = (v, l) => {
 const context = await contentContext(),
   { api, catalog, body } = context;
 const before = await readContentJson(
-  'content/trunk-clinical-curriculum.before.json',
+  'content/head-clinical-curriculum.before.json',
 );
 const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
-const milestone = await authoringBeforeHeadClinical(context);
-const previous = await authoringBeforeTrunkClinical(context);
+const previous = await authoringBeforeHeadClinical(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
@@ -48,81 +46,94 @@ same(
 // Independently observed official source rows, not inferred from runtime lessons.
 /** @type {Array<[string, string, string, string[], string, string[]]>} */
 const expected = [
-  ['FMA46444', 'left', 'isa', ['FJ1449M', 'FJ2542'], 'pelvis', ['pelvis']],
-  ['FMA9756', 'midline', 'isa', ['FJ1451', 'FJ1451M'], 'thorax', ['thorax']],
-  ['FMA13336', 'right', 'isa', ['FJ1452'], 'abdomen', ['abdomen']],
-  ['FMA13337', 'left', 'isa', ['FJ1452M'], 'abdomen', ['abdomen']],
-  ['FMA9758', 'midline', 'isa', ['FJ1454', 'FJ1454M'], 'thorax', ['thorax']],
-  ['FMA9757', 'midline', 'isa', ['FJ1455', 'FJ1455M'], 'thorax', ['thorax']],
-  ['FMA13375', 'right', 'isa', ['FJ1456'], 'thorax', ['thorax']],
-  ['FMA13376', 'left', 'isa', ['FJ1456M'], 'thorax', ['thorax']],
-  ['FMA9761', 'right', 'isa', ['FJ1461'], 'thorax', ['thorax']],
-  ['FMA9762', 'left', 'isa', ['FJ1461M'], 'thorax', ['thorax']],
-  ['FMA23089', 'right', 'isa', ['FJ1522'], 'spine', ['spine', 'abdomen']],
-  ['FMA23090', 'left', 'isa', ['FJ1522M'], 'spine', ['spine', 'abdomen']],
+  ['FMA49051', 'left', 'isa', ['FJ1294'], 'head-neck', ['head-neck']],
+  ['FMA49047', 'left', 'isa', ['FJ1295'], 'head-neck', ['head-neck']],
+  ['FMA49055', 'left', 'isa', ['FJ1304'], 'head-neck', ['head-neck']],
+  ['FMA49049', 'left', 'isa', ['FJ1306'], 'head-neck', ['head-neck']],
+  ['FMA49057', 'left', 'isa', ['FJ1308'], 'head-neck', ['head-neck']],
+  ['FMA49053', 'left', 'isa', ['FJ1322'], 'head-neck', ['head-neck']],
+  ['FMA49045', 'left', 'isa', ['FJ1323'], 'head-neck', ['head-neck']],
+  ['FMA49050', 'right', 'isa', ['FJ1345'], 'head-neck', ['head-neck']],
+  ['FMA49046', 'right', 'isa', ['FJ1346'], 'head-neck', ['head-neck']],
+  ['FMA49054', 'right', 'isa', ['FJ1355'], 'head-neck', ['head-neck']],
+  ['FMA49048', 'right', 'isa', ['FJ1357'], 'head-neck', ['head-neck']],
+  ['FMA49056', 'right', 'isa', ['FJ1359'], 'head-neck', ['head-neck']],
+  ['FMA49052', 'right', 'isa', ['FJ1373'], 'head-neck', ['head-neck']],
+  ['FMA49044', 'right', 'isa', ['FJ1374'], 'head-neck', ['head-neck']],
   [
-    'FMA23083',
-    'midline',
+    'FMA46293',
+    'left',
     'isa',
-    ['FJ1525', 'FJ1525M'],
-    'spine',
-    ['spine', 'thorax'],
-  ],
-  ['FMA22740', 'right', 'isa', ['FJ1527'], 'spine', ['spine']],
-  ['FMA22741', 'left', 'isa', ['FJ1527M'], 'spine', ['spine']],
-  ['FMA22742', 'right', 'isa', ['FJ1528'], 'spine', ['spine']],
-  ['FMA22743', 'left', 'isa', ['FJ1528M'], 'spine', ['spine']],
-  ['FMA22751', 'right', 'isa', ['FJ1535'], 'spine', ['spine']],
-  ['FMA22753', 'left', 'isa', ['FJ1535M'], 'spine', ['spine']],
-  ['FMA22872', 'right', 'isa', ['FJ1540'], 'spine', ['spine']],
-  ['FMA22873', 'left', 'isa', ['FJ1540M'], 'spine', ['spine']],
-  ['FMA13405', 'right', 'isa', ['FJ1541'], 'spine', ['spine']],
-  ['FMA13406', 'left', 'isa', ['FJ1541M'], 'spine', ['spine']],
-  ['FMA13403', 'right', 'isa', ['FJ1542'], 'spine', ['spine']],
-  ['FMA13404', 'left', 'isa', ['FJ1542M'], 'spine', ['spine']],
-  [
-    'FMA77179',
-    'midline',
-    'isa',
-    ['FJ1543', 'FJ1543M', 'FJ1544', 'FJ1544M'],
-    'spine',
-    ['spine'],
+    ['FJ1555', 'FJ1560', 'FJ1578'],
+    'head-neck',
+    ['head-neck'],
   ],
   [
-    'FMA22850',
-    'midline',
+    'FMA46292',
+    'right',
     'isa',
-    ['FJ1547', 'FJ1547M'],
-    'spine',
-    ['spine', 'abdomen'],
+    ['FJ1556', 'FJ1579'],
+    'head-neck',
+    ['head-neck'],
   ],
+  ['FMA46327', 'left', 'isa', ['FJ1559'], 'head-neck', ['head-neck']],
+  ['FMA46322', 'left', 'isa', ['FJ1562'], 'head-neck', ['head-neck']],
+  ['FMA13349', 'left', 'isa', ['FJ1565'], 'head-neck', ['head-neck']],
+  ['FMA13347', 'left', 'isa', ['FJ1574'], 'head-neck', ['head-neck']],
+  ['FMA13351', 'left', 'isa', ['FJ1575'], 'head-neck', ['head-neck']],
+  ['FMA45827', 'left', 'isa', ['FJ1576'], 'head-neck', ['head-neck']],
+  ['FMA13353', 'left', 'isa', ['FJ1577'], 'head-neck', ['head-neck']],
+  ['FMA46326', 'right', 'isa', ['FJ1580'], 'head-neck', ['head-neck']],
+  ['FMA46321', 'right', 'isa', ['FJ1583'], 'head-neck', ['head-neck']],
+  ['FMA13348', 'right', 'isa', ['FJ1586'], 'head-neck', ['head-neck']],
+  ['FMA13346', 'right', 'isa', ['FJ1596'], 'head-neck', ['head-neck']],
+  ['FMA13350', 'right', 'isa', ['FJ1597'], 'head-neck', ['head-neck']],
+  ['FMA45826', 'right', 'isa', ['FJ1598'], 'head-neck', ['head-neck']],
+  ['FMA13352', 'right', 'isa', ['FJ1599'], 'head-neck', ['head-neck']],
+  ['FMA46702', 'left', 'isa', ['FJ2738'], 'head-neck', ['head-neck']],
+  ['FMA46704', 'left', 'isa', ['FJ2739'], 'head-neck', ['head-neck']],
+  ['FMA46636', 'left', 'isa', ['FJ2740'], 'head-neck', ['head-neck']],
+  ['FMA46729', 'left', 'isa', ['FJ2741'], 'head-neck', ['head-neck']],
+  ['FMA46672', 'left', 'isa', ['FJ2743'], 'head-neck', ['head-neck']],
+  ['FMA46670', 'left', 'isa', ['FJ2745'], 'head-neck', ['head-neck']],
+  ['FMA46668', 'left', 'isa', ['FJ2746'], 'head-neck', ['head-neck']],
+  ['FMA46632', 'left', 'isa', ['FJ2747'], 'head-neck', ['head-neck']],
+  ['FMA46732', 'left', 'isa', ['FJ2748'], 'head-neck', ['head-neck']],
+  ['FMA46698', 'right', 'isa', ['FJ2750'], 'head-neck', ['head-neck']],
+  ['FMA46703', 'right', 'isa', ['FJ2751'], 'head-neck', ['head-neck']],
+  ['FMA46635', 'right', 'isa', ['FJ2752'], 'head-neck', ['head-neck']],
+  ['FMA46728', 'right', 'isa', ['FJ2753'], 'head-neck', ['head-neck']],
+  ['FMA46671', 'right', 'isa', ['FJ2755'], 'head-neck', ['head-neck']],
+  ['FMA46669', 'right', 'isa', ['FJ2757'], 'head-neck', ['head-neck']],
+  ['FMA46667', 'right', 'isa', ['FJ2758'], 'head-neck', ['head-neck']],
+  ['FMA46631', 'right', 'isa', ['FJ2759'], 'head-neck', ['head-neck']],
+  ['FMA46731', 'right', 'isa', ['FJ2760'], 'head-neck', ['head-neck']],
+  ['FMA46733', 'midline', 'isa', ['FJ2762'], 'head-neck', ['head-neck']],
+  ['FMA46581', 'left', 'isa', ['FJ2778'], 'head-neck', ['head-neck']],
+  ['FMA46585', 'left', 'isa', ['FJ2780'], 'head-neck', ['head-neck']],
+  ['FMA46578', 'left', 'isa', ['FJ2782'], 'head-neck', ['head-neck']],
+  ['FMA46590', 'left', 'isa', ['FJ2784', 'FJ2785'], 'head-neck', ['head-neck']],
+  ['FMA46593', 'left', 'isa', ['FJ2788'], 'head-neck', ['head-neck']],
+  ['FMA46580', 'right', 'isa', ['FJ2796'], 'head-neck', ['head-neck']],
+  ['FMA46584', 'right', 'isa', ['FJ2798'], 'head-neck', ['head-neck']],
+  ['FMA46577', 'right', 'isa', ['FJ2800'], 'head-neck', ['head-neck']],
   [
-    'FMA22851',
-    'midline',
+    'FMA46589',
+    'right',
     'isa',
-    ['FJ1548', 'FJ1548M'],
-    'spine',
-    ['spine', 'abdomen'],
+    ['FJ2802', 'FJ2803'],
+    'head-neck',
+    ['head-neck'],
   ],
-  ['FMA22890', 'right', 'isa', ['FJ1551'], 'spine', ['spine']],
-  ['FMA22891', 'left', 'isa', ['FJ1551M'], 'spine', ['spine']],
-  ['FMA46443', 'right', 'isa', ['FJ2547'], 'pelvis', ['pelvis']],
-  ['FMA13295', 'midline', 'isa', ['FJ3131'], 'thorax', ['thorax']],
-  ['FMA33581', 'right', 'isa', ['FJ1520'], 'spine', ['spine']],
-  ['FMA33583', 'left', 'isa', ['FJ1520M'], 'spine', ['spine']],
-  ['FMA33584', 'right', 'isa', ['FJ1554'], 'spine', ['spine']],
-  ['FMA33585', 'left', 'isa', ['FJ1554M'], 'spine', ['spine']],
-  ['FMA33586', 'right', 'isa', ['FJ1521'], 'spine', ['spine']],
-  ['FMA33587', 'left', 'isa', ['FJ1521M'], 'spine', ['spine']],
-  ['FMA13373', 'right', 'partof', ['FJ1446', 'FJ1464'], 'thorax', ['thorax']],
-  ['FMA13374', 'left', 'partof', ['FJ1446M', 'FJ1464M'], 'thorax', ['thorax']],
+  ['FMA46592', 'right', 'isa', ['FJ2806'], 'head-neck', ['head-neck']],
+  ['FMA46582', 'midline', 'isa', ['FJ2809'], 'head-neck', ['head-neck']],
 ];
 const ids = expected.map((e) => e[0]),
   tabs = ['pathology', 'clinical'];
-same(api.trunkClinicalGroups.length, 17);
+same(api.headClinicalGroups.length, 29);
 const byIdentity = (a, b) => a[0].localeCompare(b[0]);
 same(
-  api.trunkClinicalGroups.flatMap((g) => g.identities).sort(byIdentity),
+  api.headClinicalGroups.flatMap((g) => g.identities).sort(byIdentity),
   [...expected].sort(byIdentity),
 );
 same(before.entries.map((e) => e.fmaId).sort(), [...ids].sort());
@@ -147,12 +158,12 @@ for (const [f, side, tree, files, region, regions] of expected) {
     [...files].sort(),
   );
   same(e.omittedSourceFiles, []);
-  const group = api.trunkClinicalGroups.find((g) =>
+  const group = api.headClinicalGroups.find((g) =>
     g.identities.some((i) => i[0] === f),
   );
   const record = body.find((r) => r.id === s.id);
   for (const t of tabs) {
-    const result = api.trunkClinicalLesson(s, t);
+    const result = api.headClinicalLesson(s, t);
     same(result, api.bodyLesson(s, t));
     same(result.readiness, 'draft');
     same(result.body, group[t].body);
@@ -164,7 +175,7 @@ for (const [f, side, tree, files, region, regions] of expected) {
     if (s.coverageNote) check(result.note.includes(s.coverageNote));
     check(
       api
-        .trunkClinicalLesson({ ...s, coverageNote: 'Keep warning' }, t)
+        .headClinicalLesson({ ...s, coverageNote: 'Keep warning' }, t)
         .note.includes('Keep warning'),
     );
     for (const url of result.citations) same(new URL(url).protocol, 'https:');
@@ -182,9 +193,9 @@ for (const [f, side, tree, files, region, regions] of expected) {
     for (const mutation of [
       { system: 'bones' },
       { category: 'tendon' },
-      { region: 'head-neck' },
+      { region: 'thorax' },
       { regions: [] },
-      { regions: [...regions, 'head-neck'] },
+      { regions: [...regions, 'thorax'] },
       { laterality: side === 'left' ? 'right' : 'left' },
       { fmaId: 'FMA_UNKNOWN' },
       { sourceTree: tree === 'isa' ? 'partof' : 'isa' },
@@ -199,52 +210,64 @@ for (const [f, side, tree, files, region, regions] of expected) {
         : []),
       ...(s.regions.length > 1 ? [{ regions: [...s.regions].reverse() }] : []),
     ])
-      same(api.trunkClinicalLesson({ ...s, ...mutation }, t), undefined);
+      same(api.headClinicalLesson({ ...s, ...mutation }, t), undefined);
   }
 }
 for (const s of catalog.structures)
   for (const t of api.contentTabs) {
     if (!ids.includes(s.fmaId) || !tabs.includes(t)) {
-      same(api.trunkClinicalLesson(s, t), undefined);
+      same(api.headClinicalLesson(s, t), undefined);
       same(
-        milestone.bodyLesson(s, t),
+        api.bodyLesson(s, t),
         previous.bodyLesson(s, t),
         'Every unrelated section preserved',
       );
     }
   }
-const group = (k) => api.trunkClinicalGroups.find((g) => g.key === k);
-check(group('internal-intercostal').clinical.body.includes('parasternal'));
+const group = (k) => api.headClinicalGroups.find((g) => g.key === k);
+check(group('medial-rectus').pathology.body.includes('Internuclear'));
+check(group('medial-rectus').pathology.bullets[0].includes('may be preserved'));
+check(group('inferior-oblique').pathology.body.includes('Brown syndrome'));
 check(
-  group('innermost-intercostal').clinical.bullets[0].includes('Do not use'),
+  group('inferior-rectus').pathology.bullets[0].includes(
+    'does not by itself prove',
+  ),
 );
-check(group('external-oblique').scope.includes('deeper abdominal-wall'));
-check(group('pectoralis-major').scope.includes('absent, not torn'));
+check(group('superior-rectus').clinical.bullets[0].includes('pupil-sparing'));
 check(
-  group('pectoralis-major').clinical.bullets[0].includes('dedicated coverage'),
-);
-check(group('diaphragm').pathology.body.includes('not specific for paralysis'));
-check(group('diaphragm').clinical.bullets[0].includes('Dynamic ultrasound'));
-check(group('trapezius').pathology.body.includes('Spinal accessory'));
-check(
-  group('serratus-posterior').scope.includes('respiratory role is debated'),
+  group('levator-palpebrae').clinical.bullets[0].includes('superior tarsal'),
 );
 check(
-  group('serratus-posterior').pathology.bullets[0].includes('Do not transfer'),
+  group('digastric').scope.includes('file count is not a count of bellies'),
 );
-check(group('erector-spinae').scope.includes('unresolved spinalis'));
+check(group('geniohyoid').clinical.body.includes('C1 fibres'));
+check(group('thyrohyoid').clinical.body.includes('C1 fibres'));
 check(
-  group('erector-spinae').pathology.bullets[0].includes('emergency assessment'),
+  group('sternothyroid').clinical.body.includes(
+    'not insertion into the thyroid gland',
+  ),
 );
-check(group('thoracic-interspinales').scope.includes('sparse and variable'));
-check(group('coccygeus').pathology.bullets[0].includes('impaired relaxation'));
-check(group('coccygeus').clinical.bullets[1].includes('interstitial cystitis'));
-check(group('coccygeus').scope.includes('two components and right one'));
-same(ids.length, 40);
-same(new Set(ids).size, 40);
+check(group('stylohyoid').pathology.body.includes('ligament'));
+check(group('mylohyoid').pathology.body.includes('Ludwig'));
+check(group('genioglossus').pathology.bullets[0].includes('supranuclear'));
+check(group('tensor-veli').clinical.body.includes('V3'));
+check(group('stylopharyngeus').clinical.body.includes('(IX)'));
+check(group('superior-constrictor').scope.includes('middle constrictors'));
+check(
+  group('inferior-constrictor').pathology.body.includes('mucosa/submucosa'),
+);
+check(group('posterior-cricoarytenoid').clinical.body.includes('abducts'));
+check(
+  group('posterior-cricoarytenoid').pathology.bullets[0].includes('emergency'),
+);
+check(group('laryngeal-adductors').clinical.body.includes('adduction'));
+check(group('thyroarytenoid').scope.includes('Two source files'));
+check(group('vocalis').clinical.body.includes('connective vocal ligament'));
+same(ids.length, 60);
+same(new Set(ids).size, 60);
 same(
   expected.reduce((n, e) => n + e[3].length, 0),
-  52,
+  65,
 );
 for (const t of tabs)
   same(api.bodyLesson(entry('FMA19728'), t).readiness, 'pending');
@@ -279,14 +302,15 @@ if (process.argv.includes('--source')) {
   }
 }
 const negatives = [
+  ['FMA49057', 'clinical', 'body'],
+  ['FMA49045', 'pathology', 'readiness'],
+  ['FMA46293', 'clinical', 'body'],
+  ['FMA46590', 'pathology', 'readiness'],
+  ['FMA46582', 'clinical', 'body'],
+  ['FMA49047', 'anatomy', 'body'],
+  ['FMA46702', 'function', 'body'],
+  ['FMA46578', 'ultrasound', 'body'],
   ['FMA9756', 'clinical', 'body'],
-  ['FMA13295', 'pathology', 'readiness'],
-  ['FMA13373', 'clinical', 'body'],
-  ['FMA46444', 'pathology', 'readiness'],
-  ['FMA22850', 'anatomy', 'body'],
-  ['FMA77179', 'function', 'body'],
-  ['FMA13295', 'ultrasound', 'body'],
-  ['FMA37717', 'clinical', 'body'],
   ...unresolved.map((f) => [f, 'function', 'readiness']),
 ];
 
@@ -325,17 +349,16 @@ const counts = (t) =>
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter(
-          (s) => milestone.bodyLesson(s, t).readiness === r,
-        ).length,
+        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
+          .length,
       ],
     ),
   );
 for (const t of tabs)
   same(counts(t), {
-    draft: 263,
+    draft: 323,
     'identity-only': 0,
-    pending: 759,
+    pending: 699,
     'generated-identification': 0,
   });
 for (const t of ['ct', 'mri', 'ultrasound'])
@@ -368,27 +391,25 @@ for (const f of api.shoulderArmLessons.flatMap((l) => l.fmaIds))
 const report = {
   passed: true,
   checks,
-  bodyRepresentations: 40,
-  sourceComponents: 52,
-  lessonGroups: 17,
-  explicitTopicEdits: 80,
-  combinedPinnedCurriculumSections: 2106,
+  bodyRepresentations: 60,
+  sourceComponents: 65,
+  lessonGroups: 29,
+  explicitTopicEdits: 120,
+  combinedPinnedCurriculumSections: 2226,
   sourceIndexChecks,
   negativeCases: negatives.length,
-  readinessScope:
-    'Historical trunk milestone; current direct/export assertions remain active',
   bodyReadiness: Object.fromEntries(api.contentTabs.map((t) => [t, counts(t)])),
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,
   scanContentAdded: false,
   browserTesting: false,
-  copyAndRecipeHash: curriculumHash(copy(milestone)),
+  copyAndRecipeHash: curriculumHash(copy(api)),
   limitations:
-    'Original short trunk/coccygeus clinical drafts; not validated muscle lesions, respiratory mechanics, procedural corridors, pelvic-floor function, patient scans or clinical approval.',
+    'Original short orbital/swallowing/voice clinical drafts; not validated eye motility, tendon restriction, nerve lesions, swallow physiology, vocal-fold motion, procedural corridors, patient scans or clinical approval.',
 };
 await writeFile(
-  new URL('docs/trunk-clinical-curriculum-validation.json', contentRoot),
+  new URL('docs/head-clinical-curriculum-validation.json', contentRoot),
   JSON.stringify(report, null, 2) + '\n',
 );
 console.log(JSON.stringify(report, null, 2));

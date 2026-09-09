@@ -1,5 +1,7 @@
 # Atlas requirement and acceptance audit
 
+**Current head extension — 9 September 2026:** [120 new drafts](HEAD_CLINICAL_CURRICULUM.md) bring Clinical and Pathology to 323 draft/699 pending each. Sixty exact eye/swallowing/voice selections retain 65 source components and the existing interface. Facial-expression and masticatory geometry remain gaps. Older totals below are historical; specialist review, missing anatomy, device acceptance and real imaging integration remain open.
+
 **Current trunk/coccygeus extension — 9 September 2026:** [80 new drafts](TRUNK_CLINICAL_CURRICULUM.md) bring Clinical and Pathology to 263 draft/759 pending each. Forty exact selections retain 52 source components, stable identity and the existing uncluttered interface. Draft counts are not reviewed disease coverage. Earlier milestone counts below are historical; medical, geometry, device and imaging acceptance remain outstanding.
 
 **Current foot extension — 9 September 2026:** [72 cited drafts](FOOT_CLINICAL_CURRICULUM.md) bring Clinical and Pathology to 223 draft/799 pending each. The 36 existing source entries retain their geometry, exact identities and current controls. Uncertain anatomy and clinical-review requirements remain explicit. Earlier totals below describe historical milestones, not current coverage or acceptance.

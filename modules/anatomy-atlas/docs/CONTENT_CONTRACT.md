@@ -1,5 +1,7 @@
 # Versioned anatomy content export
 
+**Current head extension:** [120 drafts](HEAD_CLINICAL_CURRICULUM.md) cover 60 eye/swallowing/voice muscle selections. Clinical and Pathology each have 323 draft/699 pending entries. Thirty-eight offline projections protect 2,226 edits. Earlier pins and original baseline remain unchanged; all older milestone totals below are historical. Other topics, geometry and approval state are preserved.
+
 **Current trunk/coccygeus extension:** [80 drafts](TRUNK_CLINICAL_CURRICULUM.md) cover 40 exact selections and 52 source components. Clinical and Pathology each have 263 draft/759 pending entries. Thirty-seven offline projections protect 2,106 edits; earlier captures/pins and the original baseline stay unchanged. Runtime/export remain current. All milestone totals below are historical; geometry, other topics and approval state are preserved.
 
 **Foot clinical milestone:** [72 drafts](FOOT_CLINICAL_CURRICULUM.md) covered 36 exact source entries. Clinical and Pathology each reached 223 draft/799 pending. Thirty-six offline projections protected 2,026 edits without changing earlier captures or the original baseline. Runtime/export stay current; these totals are historical. Geometry, other topics and approval state are preserved.

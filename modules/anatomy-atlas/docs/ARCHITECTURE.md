@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Head clinical teaching
+
+The [head extension](HEAD_CLINICAL_CURRICULUM.md) guards sixty exact identities and 65 ordered components through twenty-nine definitions. A new offline projection precedes trunk history (38 projections / 2,226 pinned edits). Runtime/export stay current; no UI, geometry, dependency, schema or review change.
+
 ## Trunk and coccygeus clinical teaching
 
 The [trunk extension](TRUNK_CLINICAL_CURRICULUM.md) uses seventeen definitions across forty exact identities and 52 ordered source components. Runtime guards tree, side, category/system and primary/ordered regions; PART-OF pectoralis and bilateral groups are preserved. The offline projection precedes foot history (37 projections / 2,106 pinned edits); runtime/export remain current. No UI, geometry, schema, review or dependency change.

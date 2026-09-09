@@ -1,5 +1,7 @@
 # Third-party notices
 
+The head clinical extension adds short original factual teaching with society, university, NIH/NHS and medical-reference links. No publisher prose, images, tables, scans, questions or models are shipped; public access and citations are not commercial asset grants or exceptions to restrictive publisher terms. Original MIT text/code and existing BodyParts3D CC BY 4.0 duties remain. No new package, font, paid API or patient data. See `../docs/HEAD_CLINICAL_CURRICULUM.md`.
+
 The trunk/coccygeus clinical extension adds brief original factual synthesis with society, medical, university, NHS/NIDDK and primary-study links. No publisher prose, figures, tables, scans or questions are shipped; citations and public access do not grant commercial asset rights or override NC-ND restrictions. Original MIT text/code and existing BodyParts3D CC BY 4.0 obligations remain. No new assets, packages, fonts, paid services or patient data. See `../docs/TRUNK_CLINICAL_CURRICULUM.md`.
 
 The foot clinical extension adds brief original factual notes with medical, university, society and study reference links. No publisher prose, images, tables, scans or questions are shipped; citations do not grant commercial asset rights or override NC-ND restrictions. MIT original text/code and existing BodyParts3D CC BY 4.0 obligations are unchanged. No new asset, dependency, font, paid API or private data. See `../docs/FOOT_CLINICAL_CURRICULUM.md`.

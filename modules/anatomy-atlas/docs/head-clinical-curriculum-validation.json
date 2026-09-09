@@ -1,14 +1,13 @@
 {
   "passed": true,
-  "checks": 18624,
-  "bodyRepresentations": 40,
-  "sourceComponents": 52,
-  "lessonGroups": 17,
-  "explicitTopicEdits": 80,
-  "combinedPinnedCurriculumSections": 2106,
-  "sourceIndexChecks": 52,
-  "negativeCases": 12,
-  "readinessScope": "Historical trunk milestone; current direct/export assertions remain active",
+  "checks": 19650,
+  "bodyRepresentations": 60,
+  "sourceComponents": 65,
+  "lessonGroups": 29,
+  "explicitTopicEdits": 120,
+  "combinedPinnedCurriculumSections": 2226,
+  "sourceIndexChecks": 65,
+  "negativeCases": 13,
   "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
@@ -41,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 263,
+      "draft": 323,
       "identity-only": 0,
-      "pending": 759,
+      "pending": 699,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 263,
+      "draft": 323,
       "identity-only": 0,
-      "pending": 759,
+      "pending": 699,
       "generated-identification": 0
     },
     "quiz": {
@@ -64,6 +63,6 @@
   "clinicalApproval": false,
   "scanContentAdded": false,
   "browserTesting": false,
-  "copyAndRecipeHash": "66aac3c62eb997a155dda37d76cd267ff556b948f97cc4b7de1e1d4e098039a4",
-  "limitations": "Original short trunk/coccygeus clinical drafts; not validated muscle lesions, respiratory mechanics, procedural corridors, pelvic-floor function, patient scans or clinical approval."
+  "copyAndRecipeHash": "ff9ea45479fddb6c4a9c103a54a7429b3ffd5f0526b56fa1a02cc9031bb2697b",
+  "limitations": "Original short orbital/swallowing/voice clinical drafts; not validated eye motility, tendon restriction, nerve lesions, swallow physiology, vocal-fold motion, procedural corridors, patient scans or clinical approval."
 }

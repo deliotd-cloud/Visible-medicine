@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Eye, swallowing and voice review
+
+Review [head clinical drafts](HEAD_CLINICAL_CURRICULUM.md) for central versus peripheral localisation, restriction versus weakness, pupil/red-flag wording, C1/cranial-nerve distinctions, infection spaces, palate closure, Zenker anatomy and vocal-fold opening/closure. Require ophthalmology, ENT and speech/swallowing expertise; no diagnostic, procedural or clinical acceptance is supplied. Unmodelled facial/masticatory anatomy and withheld pharyngeal/laryngeal structures remain gaps.
+
 ## Trunk and coccygeus Clinical / Pathology review
 
 Review the [80 new drafts](TRUNK_CLINICAL_CURRICULUM.md) for chest-pain and spinal red flags, intercostal-layer distinctions, pectoral source omissions versus injuries, diaphragm movement versus position, accessory-neuropathy context, deep-back localisation, disputed posterior-serratus function and pelvic-floor relaxation versus weakness. Independent specialist sign-off remains required. FMA19728 is still unresolved; no patient scans, procedural corridors, disease simulation or treatment protocol is supplied.
