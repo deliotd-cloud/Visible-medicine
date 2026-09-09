@@ -1,0 +1,294 @@
+{
+  "sourceCommit": "e90a86e02d305eb8cc3bd8eb2e7142cacb87acba",
+  "reason": "Seventy-two Clinical/Pathology drafts for 36 exact costal cartilage and intervertebral disc selections. Source naming retained, without radiological level inference, internal tissue segmentation or patient findings.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-first-costal-cartilage",
+      "fmaId": "FMA7875",
+      "sections": {
+        "pathology": "c46294abe2841d09f9038de393ef02824eb23f5ea23cf04c56223f8230eeb7d5",
+        "clinical": "8eb2d88171333d0d0259038400237cf98610cd3b31a4805adadcee944fec5fe5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-first-costal-cartilage",
+      "fmaId": "FMA8005",
+      "sections": {
+        "pathology": "f7e5ff9edce662f2d75263213ddacbb2f058d29d39260d893bcf8c930f62bcea",
+        "clinical": "82f73e05128ce068fd85d552c4f0e621898f86e1d50779efbb7b3bf40143a39b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-second-costal-cartilage",
+      "fmaId": "FMA7886",
+      "sections": {
+        "pathology": "52d8653e60c4a96999aea7f4175cf380e16f303e5216bd41031dbd11031175e2",
+        "clinical": "90ce38e94ee3a752b79daa4413aea94a43714b7ee1b0c4f6e82d27a4a422235d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-second-costal-cartilage",
+      "fmaId": "FMA8031",
+      "sections": {
+        "pathology": "c1caaad43d3df30610389aa82033045e9aaf93ec94a8aa9cae70fa05ca4cf393",
+        "clinical": "6a5124cab2daf7ae3aaffb642802c896a0cdeefa1d3d276c598709e6efabfda9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-third-costal-cartilage",
+      "fmaId": "FMA7913",
+      "sections": {
+        "pathology": "9edbb7d6f516247a503b948779aba9623909f2f79736e9ed9d0982a772c36abe",
+        "clinical": "b0fb2ad69bdfaf445f0e8b227826de30e1ce4b0c1fea5a6a234f7b337b196388"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-third-costal-cartilage",
+      "fmaId": "FMA8058",
+      "sections": {
+        "pathology": "a7fad5038c7aa9b1cc8b50d251ec6de81580a82f1f68c4afb024e34805f9b7ae",
+        "clinical": "9b9c76f1ef2994cc175a0e06a97a1077e61c8206e9d31fb8deea8b91ce9014d9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-fourth-costal-cartilage",
+      "fmaId": "FMA7976",
+      "sections": {
+        "pathology": "d43d0f8bec070ee2f45ee829f7fd25f7604ce461e08da181f3ab568cca69fb7d",
+        "clinical": "8b5dd0475b4fe5edd0c47f20a97b46fb32251e779f1d5fdfb9dd0fb9e4ff67f8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-fourth-costal-cartilage",
+      "fmaId": "FMA8167",
+      "sections": {
+        "pathology": "7c54f239f06789b92580930ca72be175713fe78ff550c14c348d9fc888b036dd",
+        "clinical": "86336e66606c935de578ee29bc8f1fb58065ea264c56053e18cb1394be7420a1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-fifth-costal-cartilage",
+      "fmaId": "FMA8070",
+      "sections": {
+        "pathology": "777c01027b45e3ba6187c09f357c12dba4044259290dfaca4e00a52b399c7661",
+        "clinical": "4e194ed3bc58d99d163c54f523483d35c832afb3ad11c8833308794ee734baef"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-fifth-costal-cartilage",
+      "fmaId": "FMA8112",
+      "sections": {
+        "pathology": "fd6b322123f05a489cb9a0a9e63189b307e18a59112515266fc73b181399c507",
+        "clinical": "0106803964153c61e271b72efaf7c118390c512dfa9fd04689bbee564b393174"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-sixth-costal-cartilage",
+      "fmaId": "FMA8194",
+      "sections": {
+        "pathology": "95edcc638f40f02a1be579d148838c758754d78f64fd0ac9f2644d4ffcbab243",
+        "clinical": "7f93b8ef76546b20d19dcc7f314f476e604cb8b0e0f72f41554940857de115e9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-sixth-costal-cartilage",
+      "fmaId": "FMA8221",
+      "sections": {
+        "pathology": "f65f413d9f2aacac017e76b94675f222992eea3f1628991ca83265262e48094d",
+        "clinical": "4fc17cc2623a11e429b9c81b1659aebbc3807d68c0b2396a8468606073a23084"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-seventh-costal-cartilage",
+      "fmaId": "FMA8248",
+      "sections": {
+        "pathology": "2af738c4d63a0f62392335befe2a524e4ebd093f4dab0fc4b3c75da1f28a5df3",
+        "clinical": "3b3bf24156296915c80f95a122806a22edce848859f7f9c4f111a62dd2926697"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-seventh-costal-cartilage",
+      "fmaId": "FMA8275",
+      "sections": {
+        "pathology": "699b98937a2d037d8d2f5a8cb7c4b796b2ad5a7bb06594c2ef28479543634caa",
+        "clinical": "ba1e82649b9abc3e53d8376dedabd7279da4950b0b013bd950d170a783b7e313"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-axis",
+      "fmaId": "FMA25058",
+      "sections": {
+        "pathology": "eebe856432459f7523ced72821991cb36ed7247ed6d3fbc9baeb54383f174365",
+        "clinical": "203f96baf48bac5b73b43f56aebac0c6715b96188645c95a62e6c20cef9321e7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-cervical-vertebra",
+      "fmaId": "FMA13896",
+      "sections": {
+        "pathology": "769853a79572fef8f114b81007bf6f271f38a1fed29612df47d9287342ffecc8",
+        "clinical": "a9881a749ea325b12adfe444c32a6c93070e438669131be785f872a33346e800"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-cervical-vertebra",
+      "fmaId": "FMA13897",
+      "sections": {
+        "pathology": "d1d71ee6df7bc1a0b5bcba088b8cd6076cd2871275f9f63f5bd578a8c18b0fe0",
+        "clinical": "8efdd9913142952ad9cec9c2a2d055f46a07eae9a3de45d4727fbf0e5b210e90"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-cervical-vertebra",
+      "fmaId": "FMA13898",
+      "sections": {
+        "pathology": "3cdb738f7339109a511a1ed878b889b067c482edc3f4fbba084b223fce5af669",
+        "clinical": "62b27b328b9bbbb3f65e8504ef4ba07f64186c230ec4aa1a679fa48094ade18e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-cervical-vertebra",
+      "fmaId": "FMA13899",
+      "sections": {
+        "pathology": "d92948ef4134c0e674bf6c1cab554dbe21fef8b9eafe49c0fffb159857e922ca",
+        "clinical": "d07e11e984f79fb55b3c794013cfa6bb79fdebe0e9d89a3b640924eebe209ed5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-cervical-vertebra",
+      "fmaId": "FMA13900",
+      "sections": {
+        "pathology": "6f3d0fdf38ae6beea838874e1036d0f973148abe7a3b35ee84f88d55384904de",
+        "clinical": "e7d6f145b27de0d8f1b95b08e9aa84c166ed8e295f21be07b1c6313db309609d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-first-thoracic-vertebra",
+      "fmaId": "FMA10458",
+      "sections": {
+        "pathology": "f5f539bd3e9637c2cf9202eb41f36cfbb87d99fae2f99ccc34ba52334d36617f",
+        "clinical": "b5dd1c5b09a5b491fa98c7e12d559ba2a63ad2ea0e55d50d72cb2900ecd598a0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-thoracic-vertebra",
+      "fmaId": "FMA13495",
+      "sections": {
+        "pathology": "8acaf6ffd10060d2c14ff015fea606fb3dd40f40207c17779fb5e97ae390dc4c",
+        "clinical": "5e6ac1bac1efeabacbd8d54b49340081a03c16542d780bdfd99c352b32fa0fa1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-thoracic-vertebra",
+      "fmaId": "FMA13500",
+      "sections": {
+        "pathology": "5569be1cdb9e6564c1c46ef71823b8d50f687c67c7cdbc742c00ae7d5ed08004",
+        "clinical": "498c74f8b89d9b902a33372c7682cb918d6557cf33dbaaf241a79400cc50bc88"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-thoracic-vertebra",
+      "fmaId": "FMA13501",
+      "sections": {
+        "pathology": "326821c01589d9b5976158e131f5c2d99e4e529139704b0a48c0f8ab1c97824a",
+        "clinical": "9a1732ea7f98427dc82a778f2f7d4af978287c6a46ad4ff15b7ecae09a1cbba6"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-thoracic-vertebra",
+      "fmaId": "FMA13502",
+      "sections": {
+        "pathology": "3752b52b3870d610da1a60b68cde762199c3d3c982d5f34c7d3a15c4b071f887",
+        "clinical": "12ba03272d0ada8d8ca524f49e152f31658700e848afb027fbe93ce9c003c07a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-thoracic-vertebra",
+      "fmaId": "FMA13503",
+      "sections": {
+        "pathology": "47f8a3a57099cda4c9e479672463040672acca866c33440464167a0ebab727bc",
+        "clinical": "b70e7b5ba0adde3159efc6fab3709680cc45ca88509aa01fbe8a5f58a22eb9ad"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-thoracic-vertebra",
+      "fmaId": "FMA13504",
+      "sections": {
+        "pathology": "76596833c29069bf2ffce63f0e3f1f1be307a38e7c7994647894753b4c87e0c3",
+        "clinical": "6cfb6d1f27eb990094626728975768797cf0345080c073218851832bfd19593a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eighth-thoracic-vertebra",
+      "fmaId": "FMA13505",
+      "sections": {
+        "pathology": "7c3ddefb18e77ab83e48ddb3886cd2b43e4879556592a97492d67a220e6d9347",
+        "clinical": "6ec37c4911c9f67526cb7b2a53145b60b0009cb4a1ef271387daa87e0b868250"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-ninth-thoracic-vertebra",
+      "fmaId": "FMA13506",
+      "sections": {
+        "pathology": "0f0e464ec115873d2eb03ad9092c9f6a41da4c89ce21b3bdfa1807c6b7c345b2",
+        "clinical": "269b729526e6f5b7173e052e73ee0e1ac25ed4cd7f11dc144e433e1eb14aea9a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-tenth-thoracic-vertebra",
+      "fmaId": "FMA13507",
+      "sections": {
+        "pathology": "19419587f34d8b312b71cfb795c5a29f36d6d5f264368fd82f6be6ea6e24d31d",
+        "clinical": "65fc4b74c66aa8761cc04b225078e69259996522ec9e595bf5cc80cf940c90c6"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eleventh-thoracic-vertebra",
+      "fmaId": "FMA13508",
+      "sections": {
+        "pathology": "8ce4494af45c167506fc0e7efb82648b24c18ca256fc32b92af5c2d0ea552fdb",
+        "clinical": "e80edd30ff1a5df75d1ec8f5e48a5915e437e9fff793a071fb9ede0d40ec25cb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-first-lumbar-vertebra",
+      "fmaId": "FMA16033",
+      "sections": {
+        "pathology": "b8842a233b92b8c8fd5f2d7215e26dfc4a445599b82e9a1419c3adfd78027bd1",
+        "clinical": "75d6c9340b9f455cc97fc2c2cd1176cb19e64813fa2330e408ad024b52564bd8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-lumbar-vertebra",
+      "fmaId": "FMA16034",
+      "sections": {
+        "pathology": "3caed4fa58e61ac5ee14e89aab8fad2c982b2766db68c2902ed6aa40b917dcdb",
+        "clinical": "502d04bbb59929b4ace3ec92d9ef5934ed51f7bf03e4240a441b226ff7c1b10e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-lumbar-vertebra",
+      "fmaId": "FMA16035",
+      "sections": {
+        "pathology": "f8e175fbd8d56e41d104c2155ef78ac4d580490a07f7117db13b1d97e231f3c4",
+        "clinical": "024acc2ff25056a5706ea42d3f102b1236447578040effd0a7c00fc2293f52ed"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra",
+      "fmaId": "FMA16036",
+      "sections": {
+        "pathology": "31927d6205ace12c09de0ee3f0067242214d31eb3a47666e0cdfa799a817e3e8",
+        "clinical": "b1a18b43ae6f21d95f6331d3f9802cfc4e8c357a57236b56dafd98b8e3fe24cd"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra",
+      "fmaId": "FMA16037",
+      "sections": {
+        "pathology": "77b17b2853532538c3c2e543c9433e71b355477093b3e7e500f83faa8bdc6682",
+        "clinical": "ae50e5fa5fbb7ccffc3f03ae2b5f32143345e7d19a0989e6fb6d2bdf64a6961a"
+      }
+    }
+  ]
+}

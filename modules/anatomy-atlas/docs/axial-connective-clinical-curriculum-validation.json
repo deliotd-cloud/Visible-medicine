@@ -1,14 +1,14 @@
 {
   "passed": true,
-  "checks": 18180,
-  "bodyRepresentations": 28,
-  "sourceComponents": 28,
-  "lessonGroups": 6,
-  "explicitTopicEdits": 56,
-  "combinedPinnedCurriculumSections": 2984,
-  "sourceIndexChecks": 28,
-  "negativeCases": 44,
-  "historicalMilestoneReadiness": {
+  "checks": 18529,
+  "bodyRepresentations": 36,
+  "sourceComponents": 36,
+  "lessonGroups": 4,
+  "explicitTopicEdits": 72,
+  "combinedPinnedCurriculumSections": 3080,
+  "sourceIndexChecks": 36,
+  "negativeCases": 51,
+  "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
       "identity-only": 2,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 702,
+      "draft": 750,
       "identity-only": 0,
-      "pending": 320,
+      "pending": 272,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 702,
+      "draft": 750,
       "identity-only": 0,
-      "pending": 320,
+      "pending": 272,
       "generated-identification": 0
     },
     "quiz": {
@@ -64,5 +64,5 @@
   "scanContentAdded": false,
   "browserTesting": false,
   "copyAndRecipeHash": "552eb273a4f64205ed97639975d6b5bf0616349c471ffa4a9eef212430b9d4f8",
-  "limitations": "Original permanent-tooth clinical drafts; exact sides, arches and named tooth positions retained. No wisdom-tooth addition, invented clinical numbering, internal dental segmentation, patient diagnosis, procedure, scan or clinical approval."
+  "limitations": "Original axial connective Clinical/Pathology drafts; exact costal sides and source disc names retained. No validated radiological level annotation, new geometry, internal disc segmentation, patient diagnosis, procedure, scan or clinical approval."
 }

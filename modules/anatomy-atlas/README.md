@@ -1,6 +1,8 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
-The [limb connective extension](docs/LIMB_CONNECTIVE_CLINICAL_CURRICULUM.md) adds 24 Clinical/Pathology drafts for 12 exact ligament, tendon and fascia selections without adding controls or geometry. Clinical/Pathology each reach 714 draft / 308 pending. Run `npm run limb-connective-clinical-curriculum:test -- --source`. These introductory notes require specialist review; older totals below are historical.
+The [axial connective extension](docs/AXIAL_CONNECTIVE_CLINICAL_CURRICULUM.md) adds 72 Clinical/Pathology drafts for 14 costal cartilages and 22 whole-disc selections without adding controls or geometry. Clinical/Pathology each reach 750 draft / 272 pending. Run `npm run axial-connective-clinical-curriculum:test -- --source`. Disc source names are not validated scan-level labels; specialist review remains required. Older totals below are historical.
+
+The [limb connective extension](docs/LIMB_CONNECTIVE_CLINICAL_CURRICULUM.md) added 24 Clinical/Pathology drafts for 12 exact ligament, tendon and fascia selections. Run `npm run limb-connective-clinical-curriculum:test -- --source`.
 
 The [dental extension](docs/DENTAL_CLINICAL_CURRICULUM.md) added 56 Clinical/Pathology drafts for 28 exact tooth selections. Run `npm run dental-clinical-curriculum:test -- --source`. Dental-specialist review remains pending.
 

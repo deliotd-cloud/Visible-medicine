@@ -64,6 +64,7 @@ export * from './lib/pelvic-organ-clinical-curriculum.ts';
 export * from './lib/head-organ-clinical-curriculum.ts';
 export * from './lib/dental-clinical-curriculum.ts';
 export * from './lib/limb-connective-clinical-curriculum.ts';
+export * from './lib/axial-connective-clinical-curriculum.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';`,
       resolveDir: fileURLToPath(contentRoot),
