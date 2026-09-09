@@ -19,7 +19,16 @@ import {
 } from '@/components/ui/dialog';
 import { BodyScene, retryBodyAssets } from './body-scene';
 import { allBodySystems, type BodyStructure } from './body-types';
-import { initialInspection } from '@/lib/inspection-state';
+import {
+  initialInspection,
+  sectionAxes,
+  type InspectionState,
+  type SectionPlane,
+} from '@/lib/inspection-state';
+import {
+  selectionBounds,
+  selectionVisibility,
+} from '@/lib/selection-visibility';
 import {
   eyeCatalog,
   eyeLayersFor,
@@ -38,8 +47,95 @@ import type { BodyLayout } from '@/lib/body-arrangement';
 import type { RendererHealth } from '@/lib/renderer-health';
 import './eye-layers.css';
 
+const eyeCutPlanes: Record<SectionPlane, string> = {
+  off: 'Off · whole components',
+  axial: 'Axial · horizontal',
+  coronal: 'Coronal · front–back',
+  sagittal: 'Sagittal · right–left',
+};
+
+export function EyeCutawayControls({
+  value,
+  onChange,
+}: {
+  value: InspectionState;
+  onChange: (next: InspectionState) => void;
+}) {
+  const axis = value.plane === 'off' ? null : sectionAxes[value.plane];
+  return (
+    <details className="eye-layer-cutaway">
+      <summary>
+        Cutaway · {value.plane === 'off' ? 'Off' : eyeCutPlanes[value.plane]}
+      </summary>
+      <Select
+        value={value.plane}
+        onValueChange={(plane) => {
+          if (plane && Object.hasOwn(eyeCutPlanes, plane))
+            onChange({
+              ...initialInspection,
+              plane: plane as SectionPlane,
+            });
+        }}
+      >
+        <SelectTrigger aria-label="Eye cutaway plane">
+          <SelectValue>{eyeCutPlanes[value.plane]}</SelectValue>
+        </SelectTrigger>
+        <SelectContent>
+          {Object.entries(eyeCutPlanes).map(([plane, label]) => (
+            <SelectItem key={plane} value={plane}>
+              {label}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+      {axis && (
+        <>
+          <label htmlFor="eye-layer-cut-position">
+            Cut position · {value.position}%
+          </label>
+          <Slider
+            id="eye-layer-cut-position"
+            aria-label="Eye cutaway position"
+            aria-valuetext={`${value.position}% from ${axis.low.toLowerCase()} to ${axis.high.toLowerCase()}`}
+            min={0}
+            max={100}
+            step={1}
+            value={[value.position]}
+            onValueChange={(values) => {
+              const position = Array.isArray(values) ? values[0] : values;
+              if (Number.isFinite(position))
+                onChange({
+                  ...value,
+                  position: Math.max(0, Math.min(100, position)),
+                });
+            }}
+          />
+          <div className="eye-layer-cut-axis" aria-hidden="true">
+            <span>{axis.low}</span>
+            <span>{axis.high}</span>
+          </div>
+          <Button
+            size="sm"
+            variant="outline"
+            aria-label="Reverse eye cutaway side"
+            onClick={() => onChange({ ...value, flipped: !value.flipped })}
+          >
+            Keep {value.flipped ? axis.low : axis.high} · reverse
+          </Button>
+          <p>
+            Artificial open-surface cut, not a scan or reconstructed tissue. It
+            also cuts the selected component and follows separated parts.
+          </p>
+        </>
+      )}
+    </details>
+  );
+}
+
 export function EyeLayerView({ parent }: { parent: BodyStructure }) {
   const layers = useMemo(() => eyeLayersFor(parent), [parent]);
+  const frame = useMemo(() => selectionBounds(layers), [layers]);
+  const [inspection, setInspection] = useState(initialInspection);
   const [{ selectedId, hidden, history, preset: currentPreset }, dispatch] =
     useReducer(
       (state: EyeLayerState, action: EyeAction) =>
@@ -64,6 +160,15 @@ export function EyeLayerView({ parent }: { parent: BodyStructure }) {
   }, []);
   const onFailure = useCallback(() => setFailed(true), []);
   const selected = layers.find((s) => s.id === selectedId);
+  const cutSelection = selected
+    ? selectionVisibility({
+        system: selected.system,
+        enabled: true,
+        bounds: selected.bounds,
+        frame,
+        inspection,
+      })
+    : null;
   const appearance = useMemo(
     () =>
       Object.fromEntries(
@@ -89,6 +194,7 @@ export function EyeLayerView({ parent }: { parent: BodyStructure }) {
     setExplode(0);
     setIsolated(false);
     setFocus(false);
+    setInspection(initialInspection);
   }
   const unavailable = eyeCatalog.excluded.filter(
     (s) => s.parentId === parent.id,
@@ -123,7 +229,7 @@ export function EyeLayerView({ parent }: { parent: BodyStructure }) {
           reset={reset}
           focus={focus}
           exam={false}
-          inspection={initialInspection}
+          inspection={inspection}
           plate={false}
           appearance={appearance}
           retries={{ 'eye-layers': retry }}
@@ -216,9 +322,24 @@ export function EyeLayerView({ parent }: { parent: BodyStructure }) {
             <RotateCcw /> Frame eye
           </Button>
         </div>
-        {explode > 0 && (
+        {(explode > 0 || inspection.plane !== 'off') && (
           <p className="eye-layer-layout-note">
-            Separated teaching layout · not anatomical positions
+            <span>
+              {explode > 0 &&
+                'Separated teaching layout · not anatomical positions'}
+              {explode > 0 && inspection.plane !== 'off' && ' · '}
+              {inspection.plane !== 'off' &&
+                `${eyeCutPlanes[inspection.plane]} cut · ${inspection.position}% · not a scan`}
+            </span>
+            {inspection.plane !== 'off' && (
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => setInspection(initialInspection)}
+              >
+                Restore whole view
+              </Button>
+            )}
           </p>
         )}
       </div>
@@ -297,7 +418,7 @@ export function EyeLayerView({ parent }: { parent: BodyStructure }) {
               setIsolated(false);
             }}
           >
-            Undo
+            Undo layers
           </Button>
           <Button
             size="sm"
@@ -310,6 +431,13 @@ export function EyeLayerView({ parent }: { parent: BodyStructure }) {
             Reassemble
           </Button>
         </div>
+        <EyeCutawayControls
+          value={inspection}
+          onChange={(next) => {
+            setInspection(next);
+            setFocus(false);
+          }}
+        />
         <details className="eye-layer-separation">
           <summary>Separate components</summary>
           <Select
@@ -350,6 +478,13 @@ export function EyeLayerView({ parent }: { parent: BodyStructure }) {
             <span className="eye-layer-source-id">
               {selected.fmaId} · Draft
             </span>
+            {cutSelection?.clipped && (
+              <output className="eye-layer-cut-warning">
+                {cutSelection.reasons.includes('Selection clipped by cutaway')
+                  ? 'This component is fully cut away. Use Restore whole view to see it.'
+                  : 'The cutaway may hide part of this component.'}
+              </output>
+            )}
             <p>{eyeNotes[selected.kind].anatomy}</p>
             <p>{eyeNotes[selected.kind].function}</p>
             <div className="eye-layer-actions">

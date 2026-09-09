@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import ts from 'typescript';
-import { Matrix4, Vector3 } from 'three';
+import { Box3, Matrix4, Vector3 } from 'three';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { build } from './workspace-component-test-build.mjs';
@@ -600,6 +600,190 @@ runInNewContext(compiled.outputFiles[0].text, {
 });
 const React = require('react'),
   { renderToStaticMarkup } = require('react-dom/server');
+const inspectionApi = await moduleFor('lib/inspection-state.ts');
+const geometryApi = await moduleFor('lib/inspection-geometry.ts');
+const visibilityApi = await moduleFor('lib/selection-visibility.ts');
+const { initialInspection, sectionAxes } = inspectionApi;
+// Execute the actual stateless cutaway control callbacks. GPU/DOM behaviour is
+// not simulated; the shared renderer math is checked against both eye frames.
+function elements(node) {
+  if (!node || typeof node !== 'object') return [];
+  if (Array.isArray(node)) return node.flatMap(elements);
+  return [node, ...elements(node.props?.children)];
+}
+let cutState = initialInspection;
+const cutNodes = () =>
+  elements(
+    component.exports.EyeCutawayControls({
+      value: cutState,
+      onChange: (value) => {
+        cutState = value;
+      },
+    }),
+  );
+const planeControl = () =>
+  cutNodes().find(
+    (n) => n.props?.onValueChange && n.props?.value === cutState.plane,
+  );
+for (const plane of ['axial', 'coronal', 'sagittal']) {
+  planeControl().props.onValueChange(plane);
+  same(cutState, { ...initialInspection, plane });
+  const axis = sectionAxes[plane];
+  const slider = () =>
+    cutNodes().find((n) => n.props?.['aria-label'] === 'Eye cutaway position');
+  for (const [input, expected] of [
+    [[25], 25],
+    [75, 75],
+    [[-5], 0],
+    [[105], 100],
+  ]) {
+    slider().props.onValueChange(input);
+    same(cutState.position, expected);
+  }
+  for (const invalid of [[], [NaN], [Infinity], ['50']]) {
+    const before = cutState;
+    slider().props.onValueChange(invalid);
+    same(cutState, before);
+  }
+  slider().props.onValueChange([50]);
+  for (const flipped of [false, true]) {
+    const html = renderToStaticMarkup(
+      React.createElement(component.exports.EyeCutawayControls, {
+        value: cutState,
+        onChange: () => {},
+      }),
+    );
+    check(html.includes(`Keep ${flipped ? axis.low : axis.high}`));
+    check(html.includes('not a scan or reconstructed tissue'));
+    check(html.includes('Eye cutaway position'));
+    check(
+      !/<details[^>]*\bopen(?:[\s=>])/.test(html),
+      'Cutaway starts collapsed',
+    );
+    cutNodes()
+      .find((n) => n.props?.['aria-label'] === 'Reverse eye cutaway side')
+      .props.onClick();
+    same(cutState.flipped, !flipped);
+  }
+}
+for (const invalid of [null, '', 'unknown', '__proto__', 'constructor']) {
+  const before = cutState;
+  planeControl().props.onValueChange(invalid);
+  same(cutState, before);
+}
+planeControl().props.onValueChange('off');
+same(cutState, initialInspection);
+check(
+  !cutNodes().some((n) => n.props?.['aria-label'] === 'Eye cutaway position'),
+);
+check(
+  ui.includes('inspection={inspection}'),
+  'Controlled cut passed to renderer',
+);
+check(ui.includes('Restore whole view'));
+check(ui.includes('Undo layers'));
+// Presets reset the cut along with separation. Restore whole view only resets
+// the cut, preserving visibility/selection/separation and camera state.
+const eyeAst = ts.createSourceFile(
+  'eye.tsx',
+  ui,
+  ts.ScriptTarget.Latest,
+  true,
+  ts.ScriptKind.TSX,
+);
+let presetFunction, restoreCallback;
+function findCutBindings(n) {
+  if (ts.isFunctionDeclaration(n) && n.name?.text === 'preset')
+    presetFunction = n.getText(eyeAst);
+  if (
+    ts.isJsxAttribute(n) &&
+    n.name.text === 'onClick' &&
+    n.initializer?.expression?.getText(eyeAst) ===
+      '() => setInspection(initialInspection)'
+  )
+    restoreCallback = n.initializer.expression.getText(eyeAst);
+  ts.forEachChild(n, findCutBindings);
+}
+findCutBindings(eyeAst);
+check(presetFunction && restoreCallback);
+const actions = [];
+const cutEnv = {
+  initialInspection,
+  dispatch: (v) => actions.push(['dispatch', v]),
+  setExplode: (v) => actions.push(['explode', v]),
+  setIsolated: (v) => actions.push(['isolated', v]),
+  setFocus: (v) => actions.push(['focus', v]),
+  setInspection: (v) => actions.push(['inspection', v]),
+};
+runInNewContext(ts.transpile(`${presetFunction}; preset('wall');`), cutEnv);
+same(actions, [
+  ['dispatch', { type: 'preset', value: 'wall' }],
+  ['explode', 0],
+  ['isolated', false],
+  ['focus', false],
+  ['inspection', initialInspection],
+]);
+actions.length = 0;
+runInNewContext(`(${restoreCallback})();`, cutEnv);
+same(actions, [['inspection', initialInspection]]);
+let cutawayGeometryCases = 0;
+for (const side of ['left', 'right']) {
+  const layers = manifest.structures.filter((s) => s.laterality === side);
+  const bounds = visibilityApi.selectionBounds(layers);
+  const frame = new Box3(
+    new Vector3(...bounds.min),
+    new Vector3(...bounds.max),
+  );
+  for (const plane of ['axial', 'coronal', 'sagittal'])
+    for (const position of [0, 50, 100])
+      for (const flipped of [false, true]) {
+        const state = { ...initialInspection, plane, position, flipped };
+        const base = geometryApi.sectionPlanes(
+          frame,
+          state,
+          new Vector3(),
+          true,
+        );
+        same(base.length, 1, 'Selected eye surfaces are still clipped');
+        for (const layer of layers) {
+          const report = visibilityApi.selectionVisibility({
+            system: layer.system,
+            enabled: true,
+            bounds: layer.bounds,
+            frame: bounds,
+            inspection: state,
+          });
+          const corners = [];
+          for (const x of [layer.bounds.min[0], layer.bounds.max[0]])
+            for (const y of [layer.bounds.min[1], layer.bounds.max[1]])
+              for (const z of [layer.bounds.min[2], layer.bounds.max[2]])
+                corners.push(new Vector3(x, y, z));
+          const allClipped = corners.every(
+            (p) => !geometryApi.pointRetained(p.toArray(), base),
+          );
+          same(
+            report.reasons.includes('Selection clipped by cutaway'),
+            allClipped,
+          );
+          same(
+            report.clipped,
+            corners.some((p) => !geometryApi.pointRetained(p.toArray(), base)),
+          );
+          // Existing cut transform must remain identical before/after arbitrary
+          // component displacement (covers lift and tray without a camera).
+          const offset = new Vector3(0.31, -0.17, 0.23);
+          const moved = geometryApi.sectionPlanes(frame, state, offset, true);
+          for (const p of corners)
+            check(
+              Math.abs(
+                base[0].distanceToPoint(p) -
+                  moved[0].distanceToPoint(p.clone().add(offset)),
+              ) < 1e-10,
+            );
+          cutawayGeometryCases++;
+        }
+      }
+}
 for (const side of ['left', 'right']) {
   const parent = catalog.structures.find(
     (s) => s.fmaId === (side === 'left' ? 'FMA12515' : 'FMA12514'),
@@ -611,6 +795,11 @@ for (const side of ['left', 'right']) {
   check(html.includes('Clinical') || html.includes('clinical'));
   check(html.includes('Anterior structures'));
   check(html.includes('Reassemble'));
+  check(html.includes('Cutaway · Off'));
+  check(
+    !html.includes('Restore whole view'),
+    'Whole view has no active-cut banner',
+  );
   same(html.includes('36 tiny disconnected triangles'), side === 'right');
 }
 const result = {
@@ -634,6 +823,8 @@ const result = {
   suppressedAreaMm2,
   unrelatedDisplayedRecordsChanged: 0,
   controlMarkupCases: 2,
+  cutawayControlMarkupCases: 6,
+  cutawayGeometryCases,
   clinicalValidation: false,
   browserInteractionTesting: false,
 };

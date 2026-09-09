@@ -49,12 +49,14 @@
   font-size: 0.875rem;
 }
 .eye-layer-presets label,
+.eye-layer-cutaway label,
 .eye-layer-separation label {
   display: block;
   margin: 0.45rem 0;
   font-weight: 600;
 }
 .eye-layer-presets [data-slot='select-trigger'],
+.eye-layer-cutaway [data-slot='select-trigger'],
 .eye-layer-separation [data-slot='select-trigger'] {
   width: 100%;
 }
@@ -91,16 +93,19 @@
   font-size: 0.875rem;
 }
 .eye-layer-separation,
+.eye-layer-cutaway,
 .eye-layer-limits {
   border-top: 1px solid var(--border);
   padding: 0.65rem 0;
 }
 .eye-layer-separation summary,
+.eye-layer-cutaway summary,
 .eye-layer-limits summary {
   cursor: pointer;
   font-weight: 600;
 }
-.eye-layer-separation [data-slot='select-trigger'] {
+.eye-layer-separation [data-slot='select-trigger'],
+.eye-layer-cutaway [data-slot='select-trigger'] {
   margin: 0.65rem 0;
 }
 .eye-layer-teaching {
@@ -115,6 +120,7 @@
   margin: 0;
 }
 .eye-layer-teaching p,
+.eye-layer-cutaway p,
 .eye-layer-limits p {
   line-height: 1.55;
   margin: 0.5rem 0;
@@ -159,6 +165,25 @@
   background: var(--background);
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem;
+}
+.eye-layer-cut-axis {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.45rem 0;
+  color: var(--muted-foreground);
+  font-size: 0.8125rem;
+}
+.eye-layer-cut-warning {
+  display: block;
+  line-height: 1.55;
+  margin: 0.5rem 0;
+  border-left: 3px solid var(--primary);
+  padding-left: 0.6rem;
 }
 .eye-layer-status {
   position: absolute;
