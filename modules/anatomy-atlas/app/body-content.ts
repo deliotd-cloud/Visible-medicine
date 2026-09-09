@@ -64,6 +64,7 @@ import { acralBoneClinicalLesson } from '../lib/acral-bone-clinical-curriculum';
 import { orbitalNeuralClinicalLesson } from '../lib/orbital-neural-clinical-curriculum';
 import { centralNeuralClinicalLesson } from '../lib/central-neural-clinical-curriculum';
 import { thoracicOrganClinicalLesson } from '../lib/thoracic-organ-clinical-curriculum';
+import { abdominalOrganClinicalLesson } from '../lib/abdominal-organ-clinical-curriculum';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -204,6 +205,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (centralNeuralClinical) return centralNeuralClinical;
   const thoracicOrganClinical = thoracicOrganClinicalLesson(s, tab);
   if (thoracicOrganClinical) return thoracicOrganClinical;
+  const abdominalOrganClinical = abdominalOrganClinicalLesson(s, tab);
+  if (abdominalOrganClinical) return abdominalOrganClinical;
   const axial =
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??

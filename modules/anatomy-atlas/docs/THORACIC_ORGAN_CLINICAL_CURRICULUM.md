@@ -1,5 +1,7 @@
 # Thoracic organ clinical teaching
 
+Historical milestone: subsequent [abdominal teaching](ABDOMINAL_ORGAN_CLINICAL_CURRICULUM.md) brings current Clinical/Pathology to 647 draft / 375 pending. Totals and next steps below describe the thoracic delivery; its validator retains this historical readiness separately from current runtime/export checks.
+
 ## Scope — 9 September 2026
 
 Sixteen original Clinical/Pathology drafts cover eight already represented organs in six teaching groups. They appear in the existing notes panels without additional controls, geometry or navigation changes. Draft status and source warnings remain visible.

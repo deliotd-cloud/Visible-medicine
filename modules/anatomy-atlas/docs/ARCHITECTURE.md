@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Abdominal organ clinical teaching
+
+The [abdominal extension](ABDOMINAL_ORGAN_CLINICAL_CURRICULUM.md) adds 14 definitions for 17 exact selections / 135 source components. Identity guards retain the liver/bowel exclusions, five separate owners, paired sides, cross-region ureters/appendix and legacy gallbladder ID. Its offline projection precedes thoracic history: 47 projections / 2,874 pinned edits. Current runtime/export and historical comparison are separate; no UI, geometry, schema, dependency or review migration.
+
 ## Thoracic organ clinical teaching
 
 The [thoracic organ extension](THORACIC_ORGAN_CLINICAL_CURRICULUM.md) adds six definitions for eight exact organ selections / 342 rendered source components. Ordered identity guards preserve the heart/lung aggregates, two-component thymus and differing right/left main-bronchus source trees. Twenty-seven components omitted from the heart aggregate retain their five existing coronary-vessel owners. Its offline projection precedes central neural history: 46 projections / 2,840 pinned edits. Current runtime/export and historical comparisons remain separate; no UI, geometry, schema, dependency or review migration.

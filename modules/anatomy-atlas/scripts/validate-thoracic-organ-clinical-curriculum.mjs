@@ -5,6 +5,7 @@ import {
   contentRoot,
   readContentJson,
 } from './content-contract-tools.mjs';
+import { authoringBeforeAbdominalOrganClinical } from './abdominal-organ-clinical-curriculum-transition.mjs';
 import { authoringBeforeThoracicOrganClinical } from './thoracic-organ-clinical-curriculum-transition.mjs';
 import {
   curriculumHash,
@@ -28,6 +29,7 @@ const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
 const previous = await authoringBeforeThoracicOrganClinical(context);
+const milestone = await authoringBeforeAbdominalOrganClinical(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
@@ -548,7 +550,7 @@ for (const s of catalog.structures)
     if (!ids.includes(s.fmaId) || !tabs.includes(t)) {
       same(api.thoracicOrganClinicalLesson(s, t), undefined);
       same(
-        api.bodyLesson(s, t),
+        milestone.bodyLesson(s, t),
         previous.bodyLesson(s, t),
         'Every unrelated section preserved',
       );
@@ -636,7 +638,7 @@ same(
     (s) =>
       s.system === 'organs' &&
       s.region === 'thorax' &&
-      api.bodyLesson(s, 'clinical').readiness === 'pending',
+      milestone.bodyLesson(s, 'clinical').readiness === 'pending',
   ).length,
   0,
 );
@@ -644,7 +646,7 @@ same(
   catalog.structures.filter(
     (s) =>
       s.system === 'organs' &&
-      api.bodyLesson(s, 'clinical').readiness === 'pending',
+      milestone.bodyLesson(s, 'clinical').readiness === 'pending',
   ).length,
   72,
 );
@@ -666,7 +668,7 @@ same(
     .filter(
       (s) =>
         s.system === 'skeleton' &&
-        api.bodyLesson(s, 'clinical').readiness === 'pending',
+        milestone.bodyLesson(s, 'clinical').readiness === 'pending',
     )
     .map((s) => s.fmaId)
     .sort(),
@@ -776,8 +778,9 @@ const counts = (t) =>
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
-          .length,
+        catalog.structures.filter(
+          (s) => milestone.bodyLesson(s, t).readiness === r,
+        ).length,
       ],
     ),
   );
@@ -825,7 +828,9 @@ const report = {
   combinedPinnedCurriculumSections: 2840,
   sourceIndexChecks,
   negativeCases: negatives.length,
-  bodyReadiness: Object.fromEntries(api.contentTabs.map((t) => [t, counts(t)])),
+  historicalMilestoneReadiness: Object.fromEntries(
+    api.contentTabs.map((t) => [t, counts(t)]),
+  ),
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,

@@ -1,0 +1,142 @@
+{
+  "sourceCommit": "8a289acdb4b9e0818f0fcd6072be4d8779582367",
+  "reason": "Thirty-four Clinical/Pathology drafts for 17 exact abdominal organ selections; aggregate exclusions, cross-region identities and all unresolved holds remain unchanged.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+      "fmaId": "FMA7197",
+      "sections": {
+        "pathology": "b32218aede3e76550bb1fe222c905011f78b868eee2305a69cf571d96d2440d0",
+        "clinical": "86172176b3e94e8ea6d78231ca7f2a3fa276bd6a408b7872f0dc4284267c5daa"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
+      "fmaId": "FMA7198",
+      "sections": {
+        "pathology": "b0b54ea492d6622d4397b7dc36410063b9eecc3a50f1394bd5c2cd5c8d0b6f50",
+        "clinical": "49a5bffebd710c268e7c999669a5c844794b94a58775bc6ffdae6df713e73a82"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:stomach",
+      "fmaId": "FMA7148",
+      "sections": {
+        "pathology": "89643a122f228bc640f32e61905283c1fce30bc34d0ee9599b041c26be1a10ff",
+        "clinical": "ade20d2bc560d934fe6b8e5ad0550a2292224cf483984503b0a358fdecb7d23e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:small-intestine",
+      "fmaId": "FMA7200",
+      "sections": {
+        "pathology": "5a96d4e3bcdfa7798b2d2ec0561667405c7515785b75ffe04aec83362f02482e",
+        "clinical": "c7f76a2034c6f2b1eca57bca26eb21d827132ced51ddcfaaf14a9d71e3328436"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:large-intestine",
+      "fmaId": "FMA7201",
+      "sections": {
+        "pathology": "121439c562937b45077f417d72a0aba5f61880c3fe88b34b93deebcdfc281845",
+        "clinical": "d2c48c080162a173b95620ed833b717de663d72c0baa392c498a83ca161f95f4"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:gallbladder",
+      "fmaId": "FMA7202",
+      "sections": {
+        "pathology": "37be083c09d58866b9bc9bd9eb82958ba73d9eeee1200b257d23a0caec815f22",
+        "clinical": "f5156ce20e22c532b7949a823d5115c753b3ca5a85d98007a2fc7c13b0de6b0c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:organ:right-kidney",
+      "fmaId": "FMA7204",
+      "sections": {
+        "pathology": "c4373b7302c4e53b258bd3ee3f883cbcda1610671fb59ce07e58868c79fdfc7c",
+        "clinical": "f8fd646034c56a159212adb1b813bbac526275ab0c2c33b83a13469e1201986f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:organ:left-kidney",
+      "fmaId": "FMA7205",
+      "sections": {
+        "pathology": "4215e727fe6f6c5bf7fa10ebad242e71c89ff3156c272a68f7481d1d748a6e5e",
+        "clinical": "5f9ae78b91befb16090da0c9e6a8611654499f670a96ae29de839f3f0574979b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:spleen",
+      "fmaId": "FMA7196",
+      "sections": {
+        "pathology": "b47baf78f87e1441e7af05424c0268ab2aff07c9ddbb2ef8b87ea7d296555377",
+        "clinical": "b941ca9bb25354f82adbd51460f16e821c2fb448246a72a64ddffc236f30b8d8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:organ:right-adrenal-gland",
+      "fmaId": "FMA15629",
+      "sections": {
+        "pathology": "e0f5c5c56e2e47e26b157e6a93f11971ef3ab3490f66a5fa3a5acbfe975cc048",
+        "clinical": "854387471c84e1841aec6751b1c3b6ed31b83fed15c192025a6f30ea970c656d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:organ:left-adrenal-gland",
+      "fmaId": "FMA15630",
+      "sections": {
+        "pathology": "eb87a2f62a9491d8124a6f0af499317e6f23ade2692f09da3d8cb01ce9505d14",
+        "clinical": "4100ebbf67704d0a14ba1d61a251a5795ba7d69ef1265958488ff71cbb521263"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:organ:right-ureter",
+      "fmaId": "FMA15571",
+      "sections": {
+        "pathology": "885a274f770f41043ee73b64ba10226ddb1ae420ab832e8573bab420cc5fd946",
+        "clinical": "fef2fb3f71a59b10a83852acf66b482b10f0f2fd2faeff5831fdb28ae54fbcdf"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:organ:left-ureter",
+      "fmaId": "FMA15572",
+      "sections": {
+        "pathology": "6fe9b9296299c4476bf6b9aed2907b402f6a500a338b499ee5ecd80506b42a3c",
+        "clinical": "2f89aa7257928e317ea5b4a1c3ef52f405db4c4ca5e998bfe89c62352fbc6748"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+      "fmaId": "FMA14539",
+      "sections": {
+        "pathology": "2303dd1cb1d5964c8eee802373fd83deaa46972daad7e6d7586eaf6a2c09c7c4",
+        "clinical": "e6c7de06b75d4d8bca0c7e4faa97b097e1d62f1052e658404799fc3cef7211d5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
+      "fmaId": "FMA14668",
+      "sections": {
+        "pathology": "5ed0edbc19698cdfc51282f5057a630e65bc6ab5212cd6d41b066f67516c92f3",
+        "clinical": "b94503448e10a3eec0f5946403474c04c1444f3fab062161df813f05aaeb29f5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+      "fmaId": "FMA14542",
+      "sections": {
+        "pathology": "cdf619840724247e8de194d5163134c8c67db9b61c3ca6a87221775ea052670d",
+        "clinical": "f569abf55c873965793d262ac26a47404bd0dd734119cebfeec6da8aecf4d205"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:ileocecal-junction",
+      "fmaId": "FMA11338",
+      "sections": {
+        "pathology": "4f6caa5b72d4e24be4c342ad9491cd2d1866884c518d22422642376d9420c073",
+        "clinical": "94c1ee248f165d6068c1f7025a5309fc71d3e6cb1390459966eace8ecd0182ca"
+      }
+    }
+  ]
+}

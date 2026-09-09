@@ -1,14 +1,14 @@
 {
   "passed": true,
-  "checks": 17324,
-  "bodyRepresentations": 8,
-  "sourceComponents": 342,
-  "lessonGroups": 6,
-  "explicitTopicEdits": 16,
-  "combinedPinnedCurriculumSections": 2840,
-  "sourceIndexChecks": 342,
-  "negativeCases": 23,
-  "historicalMilestoneReadiness": {
+  "checks": 17567,
+  "bodyRepresentations": 17,
+  "sourceComponents": 135,
+  "lessonGroups": 14,
+  "explicitTopicEdits": 34,
+  "combinedPinnedCurriculumSections": 2874,
+  "sourceIndexChecks": 135,
+  "negativeCases": 33,
+  "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
       "identity-only": 2,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 630,
+      "draft": 647,
       "identity-only": 0,
-      "pending": 392,
+      "pending": 375,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 630,
+      "draft": 647,
       "identity-only": 0,
-      "pending": 392,
+      "pending": 375,
       "generated-identification": 0
     },
     "quiz": {
@@ -64,5 +64,5 @@
   "scanContentAdded": false,
   "browserTesting": false,
   "copyAndRecipeHash": "c253fb9a5b840a1a27c7cabd452dde6cb52e9a3c19dd4b326d6407253b435aab",
-  "limitations": "Original thoracic organ clinical drafts; aggregate heart/lung boundaries and separately owned coronary components remain exact. Not validated cardiac function, airway lumen, disease simulation, paediatric anatomy, patient scans, procedural guidance or clinical approval."
+  "limitations": "Original abdominal organ clinical drafts; aggregate liver/bowel boundaries, duct identities, paired sides and cross-region IDs remain exact. Not validated internal tissue, luminal patency, disease simulation, patient scans, procedural guidance or clinical approval."
 }

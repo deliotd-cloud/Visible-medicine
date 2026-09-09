@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Abdominal organ teaching
+
+Review [34 new drafts](ABDOMINAL_ORGAN_CLINICAL_CURRICULUM.md) for liver disease/function, pancreatic and bowel disease, biliary levels, renal/adrenal distinctions, splenic trauma, appendicitis and ileocecal Crohn's context. Verify source aggregate exclusions and cross-region/side identities. The junction remains an unvalidated aliased source surface, not a complete cecum or valve. Clinical wording, warning language and anatomy require independent specialty acceptance; software checks do not validate lumen, disease, surgery, scan registration or a patient diagnosis.
+
 ## Thoracic organ teaching
 
 Review [16 new drafts](THORACIC_ORGAN_CLINICAL_CURRICULUM.md) for myocardial infarction versus heart failure/arrest, alveolar versus pleural disease, central-airway stenosis, reflux/stricture/Barrett distinctions, thymic disease and paediatric foreign-body warnings. Verify cardiac, pulmonary, gastroenterological, ENT, oncological and age-specific applicability; localise UK emergency wording before other-jurisdiction use. Check aggregate/source extents and the separately owned coronary components. No physiological simulation, patient diagnosis, airway-device planning, tumour staging or clinical approval is provided; automated checks do not replace specialist or device acceptance.
