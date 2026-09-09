@@ -1,32 +1,30 @@
 import assert from 'node:assert/strict';
-import { authoringBeforeRegionalConnectiveClinical } from './regional-connective-clinical-curriculum-transition.mjs';
 import { readContentJson } from './content-contract-tools.mjs';
 import { createHash } from 'node:crypto';
 const hash = (v) =>
   createHash('sha256').update(JSON.stringify(v)).digest('hex');
 /** Offline historical comparison only. Runtime/export always use current teaching. */
-export async function authoringBeforeAxialConnectiveClinical(context) {
-  const { catalog } = context;
-  const api = await authoringBeforeRegionalConnectiveClinical(context);
+export async function authoringBeforeRegionalConnectiveClinical(context) {
+  const { api, catalog } = context;
   const before = await readContentJson(
-    'content/axial-connective-clinical-curriculum.before.json',
+    'content/regional-connective-clinical-curriculum.before.json',
   );
   const after = await readContentJson(
-    'content/axial-connective-clinical-curriculum.transition.json',
+    'content/regional-connective-clinical-curriculum.transition.json',
   );
   assert.equal(
     hash(before),
-    '53737acbc49bee219cc45d89092ef984f248b03d22a57fb70a5a7eb63490be1e',
+    'bda2a86544ad3695b97cd0c778e78c15a992445396a8e009af3be06f6ce1d5aa',
   );
   assert.equal(
     hash(after),
-    'df7b2fd0cb27f25fbb3331cd59f4dfe6c1a1828f5ada2c3a647acab9735bce12',
+    '555827d317cde0b4a1ac0b6d40a055672d0ae5ff9c30afac0c18916bea271202',
   );
-  assert.equal(before.sourceCommit, 'e90a86e02d305eb8cc3bd8eb2e7142cacb87acba');
+  assert.equal(before.sourceCommit, '02775e00e203f809331af83476153d3012990a41');
   assert.equal(after.sourceCommit, before.sourceCommit);
   assert.equal(before.scope, 'body');
-  assert.deepEqual(before.regions, ['thorax', 'spine', 'head-neck', 'abdomen']);
-  assert.equal(before.entries.length, 36);
+  assert.deepEqual(before.regions, ['head-neck', 'abdomen']);
+  assert.equal(before.entries.length, 41);
   assert.deepEqual(
     after.entries.map((e) => [e.id, e.fmaId]),
     before.entries.map((e) => [e.id, e.fmaId]),
@@ -58,14 +56,14 @@ export async function authoringBeforeAxialConnectiveClinical(context) {
       assert.equal(
         hash(lesson),
         after.entries[i].sections[t],
-        'Unrecorded axial connective clinical edit: ' + s.id + ' / ' + t,
+        'Unrecorded regional connective clinical edit: ' + s.id + ' / ' + t,
       );
       const { readiness: _r, ...shown } = lesson;
       assert.deepEqual(shown, api.bodyContent(s, t));
       originals.set(s.id + '|' + t, e.sections[t]);
     }
   }
-  assert.equal(originals.size, 72);
+  assert.equal(originals.size, 82);
   const bodyLesson = (s, t) =>
     originals.has(s.id + '|' + t)
       ? structuredClone(originals.get(s.id + '|' + t))

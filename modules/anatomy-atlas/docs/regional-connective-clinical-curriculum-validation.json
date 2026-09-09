@@ -1,14 +1,14 @@
 {
   "passed": true,
-  "checks": 18529,
-  "bodyRepresentations": 36,
-  "sourceComponents": 36,
-  "lessonGroups": 4,
-  "explicitTopicEdits": 72,
-  "combinedPinnedCurriculumSections": 3080,
-  "sourceIndexChecks": 36,
-  "negativeCases": 51,
-  "historicalMilestoneReadiness": {
+  "checks": 18771,
+  "bodyRepresentations": 41,
+  "sourceComponents": 42,
+  "lessonGroups": 13,
+  "explicitTopicEdits": 82,
+  "combinedPinnedCurriculumSections": 3162,
+  "sourceIndexChecks": 42,
+  "negativeCases": 56,
+  "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
       "identity-only": 2,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 750,
+      "draft": 791,
       "identity-only": 0,
-      "pending": 272,
+      "pending": 231,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 750,
+      "draft": 791,
       "identity-only": 0,
-      "pending": 272,
+      "pending": 231,
       "generated-identification": 0
     },
     "quiz": {
@@ -64,5 +64,5 @@
   "scanContentAdded": false,
   "browserTesting": false,
   "copyAndRecipeHash": "44748167cdc4bcc9a019fa2f5fbb25738774b2c71d397b4b7d8cbf64bea60242",
-  "limitations": "Original axial connective Clinical/Pathology drafts; exact costal sides and source disc names retained. No validated radiological level annotation, new geometry, internal disc segmentation, patient diagnosis, procedure, scan or clinical approval."
+  "limitations": "Original abdominal/head-neck connective drafts; exact source trees, categories, unspecified sides and two-component cricoid preserved. No new geometry, operative route, physiological simulation, patient diagnosis, scan or clinical approval."
 }

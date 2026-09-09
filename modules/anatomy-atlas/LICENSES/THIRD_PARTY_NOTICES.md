@@ -1,5 +1,7 @@
 # Third-party notices
 
+The regional connective extension adds brief original factual notes linked to NHS providers, NIH, AAPOS, a hernia-society guideline and clinical reports. No publisher text, illustration, scan, video, warning-card design, clinical protocol or question bank is imported; no EyeWiki material is incorporated as a new source/asset in this update. Citation/public access is not an asset licence. Original MIT and existing BodyParts3D CC BY 4.0 obligations remain; no new dependency, font, model, texture or paid service. See `../docs/REGIONAL_CONNECTIVE_CLINICAL_CURRICULUM.md`.
+
 The axial connective extension adds brief original factual notes linked to NHS, East Sussex MSK, AAOS and AANS resources. No publisher wording, illustrations, scans, warning-card designs, protocols or procedures are imported. Citation does not grant asset rights. No new dependency, font, model, texture or paid service; original MIT and existing BodyParts3D CC BY 4.0 obligations remain. See `../docs/AXIAL_CONNECTIVE_CLINICAL_CURRICULUM.md`.
 
 The limb connective extension adds brief original factual notes linked to AAOS educational pages and primary plantar-ligament/forearm clinical research. No publisher prose, illustration, video, scan, procedure or protocol is imported. References are not asset-reuse licences. No new dependency, font, model, texture or paid service; original MIT and existing BodyParts3D CC BY 4.0 obligations remain. See `../docs/LIMB_CONNECTIVE_CLINICAL_CURRICULUM.md`.

@@ -1,12 +1,11 @@
 import assert from 'node:assert/strict';
-import { authoringBeforeRegionalConnectiveClinical } from './regional-connective-clinical-curriculum-transition.mjs';
 import { readFile, writeFile } from 'node:fs/promises';
 import {
   contentContext,
   contentRoot,
   readContentJson,
 } from './content-contract-tools.mjs';
-import { authoringBeforeAxialConnectiveClinical } from './axial-connective-clinical-curriculum-transition.mjs';
+import { authoringBeforeRegionalConnectiveClinical } from './regional-connective-clinical-curriculum-transition.mjs';
 import {
   curriculumHash,
   copyBeforeShoulderArmCurriculum,
@@ -23,13 +22,12 @@ const check = (v, l) => {
 const context = await contentContext(),
   { api, catalog, body } = context;
 const before = await readContentJson(
-  'content/axial-connective-clinical-curriculum.before.json',
+  'content/regional-connective-clinical-curriculum.before.json',
 );
 const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
-const previous = await authoringBeforeAxialConnectiveClinical(context);
-const milestone = await authoringBeforeRegionalConnectiveClinical(context);
+const previous = await authoringBeforeRegionalConnectiveClinical(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
@@ -50,225 +48,366 @@ same(
 const omittedByFma = {};
 /** @type {Array<[string, string, string, string[], string, string[], string]>} */
 const expected = [
-  ['FMA7875', 'right', 'isa', ['FJ3333'], 'thorax', ['thorax'], 'cartilage'],
-  ['FMA8005', 'left', 'isa', ['FJ3239'], 'thorax', ['thorax'], 'cartilage'],
-  ['FMA7886', 'right', 'isa', ['FJ3335'], 'thorax', ['thorax'], 'cartilage'],
-  ['FMA8031', 'left', 'isa', ['FJ3242'], 'thorax', ['thorax'], 'cartilage'],
-  ['FMA7913', 'right', 'isa', ['FJ3337'], 'thorax', ['thorax'], 'cartilage'],
-  ['FMA8058', 'left', 'isa', ['FJ3245'], 'thorax', ['thorax'], 'cartilage'],
-  ['FMA7976', 'right', 'isa', ['FJ3339'], 'thorax', ['thorax'], 'cartilage'],
-  ['FMA8167', 'left', 'isa', ['FJ3248'], 'thorax', ['thorax'], 'cartilage'],
-  ['FMA8070', 'right', 'isa', ['FJ3341'], 'thorax', ['thorax'], 'cartilage'],
-  ['FMA8112', 'left', 'isa', ['FJ3251'], 'thorax', ['thorax'], 'cartilage'],
-  ['FMA8194', 'right', 'isa', ['FJ3343'], 'thorax', ['thorax'], 'cartilage'],
-  ['FMA8221', 'left', 'isa', ['FJ3254'], 'thorax', ['thorax'], 'cartilage'],
-  ['FMA8248', 'right', 'isa', ['FJ3345'], 'thorax', ['thorax'], 'cartilage'],
-  ['FMA8275', 'left', 'isa', ['FJ3255'], 'thorax', ['thorax'], 'cartilage'],
   [
-    'FMA25058',
+    'FMA59503',
     'midline',
-    'isa',
-    ['FJ3202'],
-    'spine',
-    ['spine', 'head-neck'],
+    'partof',
+    ['FJ2557'],
+    'head-neck',
+    ['head-neck'],
     'cartilage',
   ],
   [
-    'FMA13896',
-    'midline',
-    'isa',
-    ['FJ3213'],
-    'spine',
-    ['spine', 'head-neck'],
+    'FMA59505',
+    'right',
+    'partof',
+    ['FJ2554'],
+    'head-neck',
+    ['head-neck'],
     'cartilage',
   ],
   [
-    'FMA13897',
-    'midline',
-    'isa',
-    ['FJ3218'],
-    'spine',
-    ['spine', 'head-neck'],
+    'FMA59506',
+    'left',
+    'partof',
+    ['FJ2555'],
+    'head-neck',
+    ['head-neck'],
     'cartilage',
   ],
   [
-    'FMA13898',
-    'midline',
-    'isa',
-    ['FJ3219'],
-    'spine',
-    ['spine', 'head-neck'],
+    'FMA59512',
+    'right',
+    'partof',
+    ['FJ2558'],
+    'head-neck',
+    ['head-neck'],
     'cartilage',
   ],
   [
-    'FMA13899',
-    'midline',
-    'isa',
-    ['FJ3220'],
-    'spine',
-    ['spine', 'head-neck'],
+    'FMA59513',
+    'left',
+    'partof',
+    ['FJ2556'],
+    'head-neck',
+    ['head-neck'],
     'cartilage',
   ],
   [
-    'FMA13900',
+    'FMA55099',
     'midline',
     'isa',
-    ['FJ3221'],
-    'spine',
-    ['spine', 'head-neck'],
+    ['FJ2808'],
+    'head-neck',
+    ['head-neck'],
     'cartilage',
   ],
   [
-    'FMA10458',
+    'FMA9615',
     'midline',
     'isa',
-    ['FJ3222'],
-    'spine',
-    ['spine', 'thorax'],
+    ['FJ2440', 'FJ2769'],
+    'head-neck',
+    ['head-neck'],
     'cartilage',
   ],
   [
-    'FMA13495',
-    'midline',
+    'FMA55113',
+    'right',
     'isa',
-    ['FJ3223'],
-    'spine',
-    ['spine', 'thorax'],
+    ['FJ2792'],
+    'head-neck',
+    ['head-neck'],
     'cartilage',
   ],
   [
-    'FMA13500',
-    'midline',
+    'FMA55114',
+    'left',
     'isa',
-    ['FJ3224'],
-    'spine',
-    ['spine', 'thorax'],
+    ['FJ2775'],
+    'head-neck',
+    ['head-neck'],
     'cartilage',
   ],
   [
-    'FMA13501',
-    'midline',
+    'FMA55115',
+    'right',
     'isa',
-    ['FJ3203'],
-    'spine',
-    ['spine', 'thorax'],
+    ['FJ2793'],
+    'head-neck',
+    ['head-neck'],
     'cartilage',
   ],
   [
-    'FMA13502',
-    'midline',
+    'FMA55116',
+    'left',
     'isa',
-    ['FJ3204'],
-    'spine',
-    ['spine', 'thorax'],
+    ['FJ2776'],
+    'head-neck',
+    ['head-neck'],
     'cartilage',
   ],
   [
-    'FMA13503',
-    'midline',
+    'FMA55117',
+    'right',
     'isa',
-    ['FJ3205'],
-    'spine',
-    ['spine', 'thorax'],
+    ['FJ2795'],
+    'head-neck',
+    ['head-neck'],
     'cartilage',
   ],
   [
-    'FMA13504',
-    'midline',
+    'FMA55118',
+    'left',
     'isa',
-    ['FJ3206'],
-    'spine',
-    ['spine', 'thorax'],
+    ['FJ2773'],
+    'head-neck',
+    ['head-neck'],
     'cartilage',
   ],
   [
-    'FMA13505',
+    'FMA49144',
+    'right',
+    'isa',
+    ['FJ1334'],
+    'head-neck',
+    ['head-neck'],
+    'ligament',
+  ],
+  [
+    'FMA49145',
+    'left',
+    'isa',
+    ['FJ1284'],
+    'head-neck',
+    ['head-neck'],
+    'ligament',
+  ],
+  [
+    'FMA49147',
+    'right',
+    'isa',
+    ['FJ1335'],
+    'head-neck',
+    ['head-neck'],
+    'ligament',
+  ],
+  [
+    'FMA49148',
+    'left',
+    'isa',
+    ['FJ1292'],
+    'head-neck',
+    ['head-neck'],
+    'ligament',
+  ],
+  [
+    'FMA55138',
     'midline',
     'isa',
-    ['FJ3207'],
-    'spine',
-    ['spine', 'thorax'],
+    ['FJ2790'],
+    'head-neck',
+    ['head-neck'],
+    'ligament',
+  ],
+  [
+    'FMA55140',
+    'right',
+    'isa',
+    ['FJ2797'],
+    'head-neck',
+    ['head-neck'],
+    'ligament',
+  ],
+  [
+    'FMA55141',
+    'left',
+    'isa',
+    ['FJ2779'],
+    'head-neck',
+    ['head-neck'],
+    'ligament',
+  ],
+  [
+    'FMA55227',
+    'unspecified',
+    'isa',
+    ['FJ2771'],
+    'head-neck',
+    ['head-neck'],
+    'ligament',
+  ],
+  [
+    'FMA55230',
+    'midline',
+    'isa',
+    ['FJ2807'],
+    'head-neck',
+    ['head-neck'],
+    'ligament',
+  ],
+  [
+    'FMA55237',
+    'midline',
+    'isa',
+    ['FJ2789'],
+    'head-neck',
+    ['head-neck'],
+    'ligament',
+  ],
+  [
+    'FMA55245',
+    'right',
+    'isa',
+    ['FJ2805'],
+    'head-neck',
+    ['head-neck'],
+    'ligament',
+  ],
+  [
+    'FMA55246',
+    'left',
+    'isa',
+    ['FJ2787'],
+    'head-neck',
+    ['head-neck'],
+    'ligament',
+  ],
+  [
+    'FMA72309',
+    'right',
+    'isa',
+    ['FJ2764'],
+    'head-neck',
+    ['head-neck'],
+    'ligament',
+  ],
+  [
+    'FMA72311',
+    'left',
+    'isa',
+    ['FJ2763'],
+    'head-neck',
+    ['head-neck'],
+    'ligament',
+  ],
+  ['FMA11336', 'midline', 'isa', ['FJ1448'], 'abdomen', ['abdomen'], 'fascia'],
+  [
+    'FMA49067',
+    'right',
+    'isa',
+    ['FJ1380'],
+    'head-neck',
+    ['head-neck'],
     'cartilage',
   ],
   [
-    'FMA13506',
-    'midline',
+    'FMA49068',
+    'left',
     'isa',
-    ['FJ3208'],
-    'spine',
-    ['spine', 'thorax'],
+    ['FJ1329'],
+    'head-neck',
+    ['head-neck'],
     'cartilage',
   ],
   [
-    'FMA13507',
+    'FMA49072',
+    'right',
+    'isa',
+    ['FJ1342'],
+    'head-neck',
+    ['head-neck'],
+    'tendon',
+  ],
+  ['FMA49073', 'left', 'isa', ['FJ1291'], 'head-neck', ['head-neck'], 'tendon'],
+  [
+    'FMA14643',
     'midline',
     'isa',
-    ['FJ3209'],
-    'spine',
-    ['spine', 'thorax'],
-    'cartilage',
+    ['FJ3396'],
+    'abdomen',
+    ['abdomen'],
+    'membrane',
   ],
   [
-    'FMA13508',
+    'FMA14647',
     'midline',
     'isa',
-    ['FJ3210'],
-    'spine',
-    ['spine', 'thorax'],
-    'cartilage',
+    ['FJ3398'],
+    'abdomen',
+    ['abdomen'],
+    'membrane',
   ],
   [
-    'FMA16033',
-    'midline',
+    'FMA16549',
+    'unspecified',
     'isa',
-    ['FJ3212'],
-    'spine',
-    ['spine', 'abdomen'],
-    'cartilage',
+    ['FJ3397'],
+    'abdomen',
+    ['abdomen'],
+    'membrane',
   ],
   [
-    'FMA16034',
-    'midline',
+    'FMA59091',
+    'right',
     'isa',
-    ['FJ3214'],
-    'spine',
-    ['spine', 'abdomen'],
-    'cartilage',
+    ['FJ1375'],
+    'head-neck',
+    ['head-neck'],
+    'connective-tissue',
   ],
   [
-    'FMA16035',
-    'midline',
+    'FMA59092',
+    'left',
     'isa',
-    ['FJ3215'],
-    'spine',
-    ['spine', 'abdomen'],
-    'cartilage',
+    ['FJ1324'],
+    'head-neck',
+    ['head-neck'],
+    'connective-tissue',
   ],
   [
-    'FMA16036',
-    'midline',
+    'FMA59089',
+    'right',
     'isa',
-    ['FJ3216'],
-    'spine',
-    ['spine', 'abdomen'],
-    'cartilage',
+    ['FJ1379'],
+    'head-neck',
+    ['head-neck'],
+    'connective-tissue',
   ],
   [
-    'FMA16037',
-    'midline',
+    'FMA59090',
+    'left',
     'isa',
-    ['FJ3217'],
-    'spine',
-    ['spine', 'abdomen'],
-    'cartilage',
+    ['FJ1328'],
+    'head-neck',
+    ['head-neck'],
+    'connective-tissue',
+  ],
+  [
+    'FMA55133',
+    'right',
+    'isa',
+    ['FJ2804'],
+    'head-neck',
+    ['head-neck'],
+    'membrane',
+  ],
+  [
+    'FMA55134',
+    'left',
+    'isa',
+    ['FJ2786'],
+    'head-neck',
+    ['head-neck'],
+    'membrane',
   ],
 ];
 const ids = expected.map((e) => e[0]),
   tabs = ['pathology', 'clinical'];
-same(api.axialConnectiveClinicalGroups.length, 4);
+same(api.regionalConnectiveClinicalGroups.length, 13);
 const byIdentity = (a, b) => a[0].localeCompare(b[0]);
 same(
-  api.axialConnectiveClinicalGroups
+  api.regionalConnectiveClinicalGroups
     .flatMap((g) => g.identities)
     .sort(byIdentity),
   [...expected].sort(byIdentity),
@@ -295,12 +434,12 @@ for (const [f, side, tree, files, region, regions, category] of expected) {
     [...files, ...(omittedByFma[f] ?? [])].sort((a, b) => a.localeCompare(b)),
   );
   same(e.omittedSourceFiles, omittedByFma[f] ?? []);
-  const group = api.axialConnectiveClinicalGroups.find((g) =>
+  const group = api.regionalConnectiveClinicalGroups.find((g) =>
     g.identities.some((i) => i[0] === f),
   );
   const record = body.find((r) => r.id === s.id);
   for (const t of tabs) {
-    const result = api.axialConnectiveClinicalLesson(s, t);
+    const result = api.regionalConnectiveClinicalLesson(s, t);
     same(result, api.bodyLesson(s, t));
     same(result.readiness, 'draft');
     same(result.body, group[t].body);
@@ -312,7 +451,7 @@ for (const [f, side, tree, files, region, regions, category] of expected) {
     if (s.coverageNote) check(result.note.includes(s.coverageNote));
     check(
       api
-        .axialConnectiveClinicalLesson(
+        .regionalConnectiveClinicalLesson(
           { ...s, coverageNote: 'Keep warning' },
           t,
         )
@@ -351,7 +490,7 @@ for (const [f, side, tree, files, region, regions, category] of expected) {
       ...(s.regions.length > 1 ? [{ regions: [...s.regions].reverse() }] : []),
     ])
       same(
-        api.axialConnectiveClinicalLesson({ ...s, ...mutation }, t),
+        api.regionalConnectiveClinicalLesson({ ...s, ...mutation }, t),
         undefined,
       );
   }
@@ -359,52 +498,92 @@ for (const [f, side, tree, files, region, regions, category] of expected) {
 for (const s of catalog.structures)
   for (const t of api.contentTabs) {
     if (!ids.includes(s.fmaId) || !tabs.includes(t)) {
-      same(api.axialConnectiveClinicalLesson(s, t), undefined);
+      same(api.regionalConnectiveClinicalLesson(s, t), undefined);
       same(
-        milestone.bodyLesson(s, t),
+        api.bodyLesson(s, t),
         previous.bodyLesson(s, t),
         'Every unrelated section preserved',
       );
     }
   }
-same(ids.length, 36);
-same(new Set(ids).size, 36);
-same(new Set(expected.flatMap((e) => e[3])).size, 36);
-same(expected.filter((e) => e[1] === 'left').length, 7);
-same(expected.filter((e) => e[1] === 'right').length, 7);
-same(expected.filter((e) => e[1] === 'midline').length, 22);
-same(expected.filter((e) => e[6] === 'cartilage').length, 36);
+same(ids.length, 41);
+same(new Set(ids).size, 41);
+same(new Set(expected.flatMap((e) => e[3])).size, 42);
+same(expected.filter((e) => e[1] === 'left').length, 15);
+same(expected.filter((e) => e[1] === 'right').length, 15);
+same(expected.filter((e) => e[1] === 'midline').length, 9);
+same(expected.filter((e) => e[1] === 'unspecified').length, 2);
+same(expected.filter((e) => e[2] === 'partof').length, 5);
+same(expected.filter((e) => e[2] === 'isa').length, 36);
 same(
-  api.axialConnectiveClinicalGroups.map((g) => [g.key, g.identities.length]),
+  Object.fromEntries(
+    [
+      'cartilage',
+      'ligament',
+      'fascia',
+      'tendon',
+      'membrane',
+      'connective-tissue',
+    ].map((c) => [c, expected.filter((e) => e[6] === c).length]),
+  ),
+  {
+    cartilage: 15,
+    ligament: 14,
+    fascia: 1,
+    tendon: 2,
+    membrane: 5,
+    'connective-tissue': 4,
+  },
+);
+same(
+  api.regionalConnectiveClinicalGroups.map((g) => [g.key, g.identities.length]),
   [
-    ['costal-cartilages', 14],
-    ['cervical-discs', 6],
-    ['thoracic-discs', 11],
-    ['lumbar-discs', 5],
+    ['nasal-septum', 1],
+    ['external-nasal-framework', 4],
+    ['laryngeal-cartilages', 8],
+    ['laryngeal-connective-support', 8],
+    ['vocal-ligaments', 2],
+    ['stylohyoid-chain', 2],
+    ['orbital-check-ligaments', 4],
+    ['superior-oblique-trochleae', 2],
+    ['common-tendinous-rings', 2],
+    ['eyelid-tarsal-plates', 4],
+    ['linea-alba', 1],
+    ['intestinal-mesenteries', 2],
+    ['mesoappendix', 1],
   ],
 );
-for (const g of api.axialConnectiveClinicalGroups) {
+for (const g of api.regionalConnectiveClinicalGroups) {
   check(g.pathology.body.length > 100);
   check(g.clinical.body.length > 100);
-  if (g.key.includes('discs'))
-    check(g.scope.includes('segmented') || g.scope.includes('segmentation'));
 }
-check(api.axialConnectiveClinicalGroups[0].clinical.body.includes('call 999'));
-check(
-  api.axialConnectiveClinicalGroups[2].scope.includes('not proof of complete'),
+same(
+  entry('FMA9615').sources.map((s) => s.file),
+  ['FJ2440', 'FJ2769'],
 );
+for (const f of ['FMA55227', 'FMA16549'])
+  for (const tab of tabs)
+    same(
+      api.regionalConnectiveClinicalLesson(
+        { ...entry(f), laterality: 'midline' },
+        tab,
+      ),
+      undefined,
+    );
+for (const f of ['FMA59091', 'FMA59092', 'FMA59089', 'FMA59090'])
+  same(entry(f).category, 'connective-tissue');
 same(
   catalog.structures.filter(
     (s) =>
       s.system === 'connective' &&
-      milestone.bodyLesson(s, 'clinical').readiness === 'pending',
+      api.bodyLesson(s, 'clinical').readiness === 'pending',
   ).length,
-  41,
+  0,
 );
 const legacyRightShoulder = ['FMA13322', 'FMA23130', 'FMA13395'];
 for (const f of legacyRightShoulder)
   for (const t of tabs) {
-    same(api.axialConnectiveClinicalLesson(entry(f), t), undefined);
+    same(api.regionalConnectiveClinicalLesson(entry(f), t), undefined);
     same(api.bodyLesson(entry(f), t), previous.bodyLesson(entry(f), t));
   }
 for (const t of tabs)
@@ -412,7 +591,7 @@ for (const t of tabs)
 for (const f of ['FMA45097', 'FMA45098'])
   for (const tab of tabs) {
     same(api.bodyLesson(entry(f), tab).readiness, 'pending');
-    same(api.axialConnectiveClinicalLesson(entry(f), tab), undefined);
+    same(api.regionalConnectiveClinicalLesson(entry(f), tab), undefined);
   }
 same(
   catalog.structures
@@ -460,46 +639,51 @@ if (process.argv.includes('--source')) {
 }
 
 const negatives = [
-  ['FMA7875', 'pathology', 'readiness'],
-  ['FMA8005', 'clinical', 'body'],
-  ['FMA7886', 'pathology', 'body'],
-  ['FMA8031', 'clinical', 'body'],
-  ['FMA7913', 'pathology', 'readiness'],
-  ['FMA8058', 'clinical', 'body'],
-  ['FMA7976', 'pathology', 'body'],
-  ['FMA8167', 'clinical', 'body'],
-  ['FMA8070', 'pathology', 'readiness'],
-  ['FMA8112', 'clinical', 'body'],
-  ['FMA8194', 'pathology', 'body'],
-  ['FMA8221', 'clinical', 'body'],
-  ['FMA8248', 'pathology', 'readiness'],
-  ['FMA8275', 'clinical', 'body'],
-  ['FMA25058', 'pathology', 'body'],
-  ['FMA13896', 'clinical', 'body'],
-  ['FMA13897', 'pathology', 'readiness'],
-  ['FMA13898', 'clinical', 'body'],
-  ['FMA13899', 'pathology', 'body'],
-  ['FMA13900', 'clinical', 'body'],
-  ['FMA10458', 'pathology', 'readiness'],
-  ['FMA13495', 'clinical', 'body'],
-  ['FMA13500', 'pathology', 'body'],
-  ['FMA13501', 'clinical', 'body'],
-  ['FMA13502', 'pathology', 'readiness'],
-  ['FMA13503', 'clinical', 'body'],
-  ['FMA13504', 'pathology', 'body'],
-  ['FMA13505', 'clinical', 'body'],
-  ['FMA13506', 'pathology', 'readiness'],
-  ['FMA13507', 'clinical', 'body'],
-  ['FMA13508', 'pathology', 'body'],
-  ['FMA16033', 'clinical', 'body'],
-  ['FMA16034', 'pathology', 'readiness'],
-  ['FMA16035', 'clinical', 'body'],
-  ['FMA16036', 'pathology', 'body'],
+  ['FMA59503', 'pathology', 'readiness'],
+  ['FMA59505', 'clinical', 'body'],
+  ['FMA59506', 'pathology', 'body'],
+  ['FMA59512', 'clinical', 'body'],
+  ['FMA59513', 'pathology', 'readiness'],
+  ['FMA55099', 'clinical', 'body'],
+  ['FMA9615', 'pathology', 'body'],
+  ['FMA55113', 'clinical', 'body'],
+  ['FMA55114', 'pathology', 'readiness'],
+  ['FMA55115', 'clinical', 'body'],
+  ['FMA55116', 'pathology', 'body'],
+  ['FMA55117', 'clinical', 'body'],
+  ['FMA55118', 'pathology', 'readiness'],
+  ['FMA49144', 'clinical', 'body'],
+  ['FMA49145', 'pathology', 'body'],
+  ['FMA49147', 'clinical', 'body'],
+  ['FMA49148', 'pathology', 'readiness'],
+  ['FMA55138', 'clinical', 'body'],
+  ['FMA55140', 'pathology', 'body'],
+  ['FMA55141', 'clinical', 'body'],
+  ['FMA55227', 'pathology', 'readiness'],
+  ['FMA55230', 'clinical', 'body'],
+  ['FMA55237', 'pathology', 'body'],
+  ['FMA55245', 'clinical', 'body'],
+  ['FMA55246', 'pathology', 'readiness'],
+  ['FMA72309', 'clinical', 'body'],
+  ['FMA72311', 'pathology', 'body'],
+  ['FMA11336', 'clinical', 'body'],
+  ['FMA49067', 'pathology', 'readiness'],
+  ['FMA49068', 'clinical', 'body'],
+  ['FMA49072', 'pathology', 'body'],
+  ['FMA49073', 'clinical', 'body'],
+  ['FMA14643', 'pathology', 'readiness'],
+  ['FMA14647', 'clinical', 'body'],
+  ['FMA16549', 'pathology', 'body'],
+  ['FMA59091', 'clinical', 'body'],
+  ['FMA59092', 'pathology', 'readiness'],
+  ['FMA59089', 'clinical', 'body'],
+  ['FMA59090', 'pathology', 'body'],
+  ['FMA55133', 'clinical', 'body'],
+  ['FMA55134', 'pathology', 'readiness'],
+  ['FMA59503', 'anatomy', 'body'],
+  ['FMA55227', 'function', 'body'],
+  ['FMA9615', 'ct', 'body'],
   ['FMA16037', 'clinical', 'body'],
-  ['FMA25058', 'anatomy', 'body'],
-  ['FMA13900', 'function', 'body'],
-  ['FMA16037', 'ct', 'body'],
-  ['FMA258847', 'clinical', 'body'],
   ['FMA45097', 'clinical', 'readiness'],
   ['FMA45097', 'function', 'readiness'],
   ['FMA45098', 'clinical', 'readiness'],
@@ -557,17 +741,16 @@ const counts = (t) =>
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter(
-          (s) => milestone.bodyLesson(s, t).readiness === r,
-        ).length,
+        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
+          .length,
       ],
     ),
   );
 for (const t of tabs)
   same(counts(t), {
-    draft: 750,
+    draft: 791,
     'identity-only': 0,
-    pending: 272,
+    pending: 231,
     'generated-identification': 0,
   });
 for (const t of ['ct', 'mri', 'ultrasound'])
@@ -600,16 +783,14 @@ for (const f of api.shoulderArmLessons.flatMap((l) => l.fmaIds))
 const report = {
   passed: true,
   checks,
-  bodyRepresentations: 36,
-  sourceComponents: 36,
-  lessonGroups: 4,
-  explicitTopicEdits: 72,
-  combinedPinnedCurriculumSections: 3080,
+  bodyRepresentations: 41,
+  sourceComponents: 42,
+  lessonGroups: 13,
+  explicitTopicEdits: 82,
+  combinedPinnedCurriculumSections: 3162,
   sourceIndexChecks,
   negativeCases: negatives.length,
-  historicalMilestoneReadiness: Object.fromEntries(
-    api.contentTabs.map((t) => [t, counts(t)]),
-  ),
+  bodyReadiness: Object.fromEntries(api.contentTabs.map((t) => [t, counts(t)])),
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,
@@ -617,11 +798,11 @@ const report = {
   browserTesting: false,
   copyAndRecipeHash: curriculumHash(copy(api)),
   limitations:
-    'Original axial connective Clinical/Pathology drafts; exact costal sides and source disc names retained. No validated radiological level annotation, new geometry, internal disc segmentation, patient diagnosis, procedure, scan or clinical approval.',
+    'Original abdominal/head-neck connective drafts; exact source trees, categories, unspecified sides and two-component cricoid preserved. No new geometry, operative route, physiological simulation, patient diagnosis, scan or clinical approval.',
 };
 await writeFile(
   new URL(
-    'docs/axial-connective-clinical-curriculum-validation.json',
+    'docs/regional-connective-clinical-curriculum-validation.json',
     contentRoot,
   ),
   JSON.stringify(report, null, 2) + '\n',

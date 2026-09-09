@@ -1,0 +1,334 @@
+{
+  "sourceCommit": "02775e00e203f809331af83476153d3012990a41",
+  "reason": "Eighty-two Clinical/Pathology drafts for 41 exact abdominal and head-neck connective selections. Categories, unspecified sides, source trees and multi-component cricoid remain exact. No new geometry, operative planes, physiology or clinical approval.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:head-neck:midline:cartilage:septal-nasal-cartilage",
+      "fmaId": "FMA59503",
+      "sections": {
+        "pathology": "aa772dced5acf5e2f0c356ee750ddf0e44160ffbafda49f76e46ffbc61f1aa3c",
+        "clinical": "dbe805e8d9be7673fc4bd1b15edbb41897b3f03e8d1ff096103b0c19892c1f52"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-major-alar-cartilage",
+      "fmaId": "FMA59505",
+      "sections": {
+        "pathology": "d838464e53e4f2548ef36dfb64e297a39bc39201ef4e787261a2a950a92ed71d",
+        "clinical": "8837246a222aec7a8a4318fecef2cd55629a5cbfbc65a7cff0c09eb488da95ad"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-major-alar-cartilage",
+      "fmaId": "FMA59506",
+      "sections": {
+        "pathology": "d84fbf8b2317766926e9cf74f50ba72ec705f54f73ca527691dbf978a5423b00",
+        "clinical": "d8952fd4f13f763382fd225f675db8533b3150fd95e62ea235add00556e73683"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-lateral-nasal-cartilage",
+      "fmaId": "FMA59512",
+      "sections": {
+        "pathology": "772b52142731493a69ee7605ca2f5c00d5550c1699d951af6e9675c90111d985",
+        "clinical": "f045e0c5e5227916dafb2514219043516702de71c820c5965eb919ec5bae2752"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-lateral-nasal-cartilage",
+      "fmaId": "FMA59513",
+      "sections": {
+        "pathology": "528209e17a582f00262abede9f9352ac00db9209bcf7e29ff28c96a37832a4da",
+        "clinical": "415eca8b5945f1090a6ec20b889f7fdcb5485f595e2c103044a0cd4f34432e53"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+      "fmaId": "FMA55099",
+      "sections": {
+        "pathology": "56ba22ec4f213def1eac8e01826ed8a1f00ea786c0f1fffdac2e7aa39cc0816c",
+        "clinical": "bcb22e2fd9e4b8caa0065a92fb3fbaf505d3a1769f3e42a38ae06fc7d5bc39c9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:cartilage:cricoid-cartilage",
+      "fmaId": "FMA9615",
+      "sections": {
+        "pathology": "94e069935de5a0d2f661101200d3651ad01ec97e670500e69869043a909e902b",
+        "clinical": "87ac4ca501e11b152d11ff9ea8d53e5d1ba2830a8f534850c595a61615033338"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-arytenoid-cartilage",
+      "fmaId": "FMA55113",
+      "sections": {
+        "pathology": "46e00e949f4e1bab2eaa843222f3c1b57bc6820422e7f0e3555636df60aae269",
+        "clinical": "21700027421e00281aa2f0b921c84ad3109e51d2b662d379b4094fe9000da79b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-arytenoid-cartilage",
+      "fmaId": "FMA55114",
+      "sections": {
+        "pathology": "5a3f3a023a66ab8cb12061f63c51b07ca1f82bc2f257e62cbbfb71a5705db208",
+        "clinical": "40f0607048a6aa1c454f6f31a4de497da2fc33154634bae998667277fd554114"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-corniculate-cartilage",
+      "fmaId": "FMA55115",
+      "sections": {
+        "pathology": "42388ef0d548278564479cba309c7185a812e6df23a1cc1cd8f845c7d261408d",
+        "clinical": "f0d86f31256cc9aa82566ee0c8e89fca16dfd6d55ddcdcbf86a7fe2b0c77990b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-corniculate-cartilage",
+      "fmaId": "FMA55116",
+      "sections": {
+        "pathology": "9e22c03ad7bcf8ff9c30a334e5a69221530d0068ffe4371adaad6f4a91ff15fa",
+        "clinical": "01bec31ea72a172d629d827e2d265c88fdf688f61f35a3cc0d996df6fae9bfa7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:right-cuneiform-cartilage",
+      "fmaId": "FMA55117",
+      "sections": {
+        "pathology": "5d60afe747c28217023b5af2783d3fec367d80e2471e59112fc41d4f32d5849b",
+        "clinical": "d71f682783ec1ee53fffc116150e4aef192da118d217c4eb6241160db9a8b10d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:left-cuneiform-cartilage",
+      "fmaId": "FMA55118",
+      "sections": {
+        "pathology": "123f708efb0c3293fde9b0c0d86bcb47ea451b649ebeab5e13aae32440c973cd",
+        "clinical": "d09d89f1e5bcc16c367cbd91de2a9081d98bfd028bd338796e46f5e9afbc824d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-lateral-rectus",
+      "fmaId": "FMA49144",
+      "sections": {
+        "pathology": "75e929778de77d3844c28cfb1d5447c72c13f742423831f8b4713f37b80e4fa0",
+        "clinical": "6eed9b7dfd5babeb76f7495f0e4c65df13a7f7a4594121a70445ae6f0619c154"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-lateral-rectus",
+      "fmaId": "FMA49145",
+      "sections": {
+        "pathology": "5d299d45cbc86a1f038bc5d9bfd0e9e1802709ccfa0f4a1b27416a29a16b6d47",
+        "clinical": "76ef347e396255fd9e815893d6355573389e0ef4fb7d18164d4c25dc125d8303"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-medial-rectus",
+      "fmaId": "FMA49147",
+      "sections": {
+        "pathology": "da6e99e834cab1a9670b1b1f05317d51d280b73be21a63bbba0848ba70486fb8",
+        "clinical": "b51b7311036ea6212e1a48b238595ffd4b9d97b503740d4172143eb80ef31e35"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-medial-rectus",
+      "fmaId": "FMA49148",
+      "sections": {
+        "pathology": "80b60a0abafcca8fd7c8215726212a3173e15eb0c13218f57877e1a175104481",
+        "clinical": "f4b8e9c5abdc3e5463e3357553143c45a91d9841afd782dd9281ec2773f51585"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:ligament:median-thyrohyoid-ligament",
+      "fmaId": "FMA55138",
+      "sections": {
+        "pathology": "46b8ab38f22ca57c7f25501fa24404a1f6731a7438b592f1b42973d3e594e8e3",
+        "clinical": "070613d9698d0bfaa23ee31b2da9413a4a8efedfeb4e46e43c556a86ef2c3476"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
+      "fmaId": "FMA55140",
+      "sections": {
+        "pathology": "8abec3b615089a1e60a41ccac3e5b4f15159e44f922d23d9ac14208d98c506aa",
+        "clinical": "8b1dcf33f16d5260ee3d14f04aca2906ca9011de44d50c71340c94edeeb85630"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
+      "fmaId": "FMA55141",
+      "sections": {
+        "pathology": "cda7884299223f7bd8ab51c857305a556a2af8d60f63762a72fe225683bfdd12",
+        "clinical": "0ddfc31d6fb4b79dbaf9eeec92bfec3f274c0e643e6ebd3712b0d06af6b58777"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unspecified:ligament:hyo-epiglottic-ligament",
+      "fmaId": "FMA55227",
+      "sections": {
+        "pathology": "9154d611dc2c02f36d9557a43374b626bc26c84807f081706c705484953c4137",
+        "clinical": "7ea87c8f54ab665a7f26feeb84bdbb40e2e497e508a15bd823907d6bab054bf6"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:ligament:thyro-epiglottic-ligament",
+      "fmaId": "FMA55230",
+      "sections": {
+        "pathology": "e56071bebb5250e5a41c02d52cf1f4850921ea728f5165a51d7452769a01c739",
+        "clinical": "90b1cb6ac089500e04ab9de3415d6a39f0628e63851561faf31aaa7eeac2b8f9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:ligament:median-cricothyroid-ligament",
+      "fmaId": "FMA55237",
+      "sections": {
+        "pathology": "7a5126f7cd55338e0d5fb86ac8dd88bc06bfbe16b030198ddebb4ae31c021a38",
+        "clinical": "665fa005aaa7cb0e225dc601ecaabdcade5b2dc52ddb68107aab149db9d9fd44"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:right-vocal-ligament",
+      "fmaId": "FMA55245",
+      "sections": {
+        "pathology": "425c4a81832b2e2e8b9a48733057bbed27c1e44da2fa10d2fe305b4477fc74dd",
+        "clinical": "f21c61dfce40bd081582d18ec5c6624ca475a73e473244264b9bd410aefd7651"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament",
+      "fmaId": "FMA55246",
+      "sections": {
+        "pathology": "4a8f805c6dd4970a1766f515d93561d3bae03479ededd79bccc9119211cb393d",
+        "clinical": "b13a8516c9a15bac6a400dbc618187392d50be8c9b46bc6affb27c448b41cf4e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
+      "fmaId": "FMA72309",
+      "sections": {
+        "pathology": "2c5b633ba23483356e49ee41d5c57cef2cd86b970ae4725a272e016295b386e8",
+        "clinical": "36bde2be88f431d3ce28401b8d97841aa80c82e606c05794c1aa7efe130c48ac"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
+      "fmaId": "FMA72311",
+      "sections": {
+        "pathology": "2b44fb0f58e5c7ca881f0d4845c5db80867451d262a04e561d778e8ebc82f706",
+        "clinical": "2fafab5e705d3310b8c6095e350f5f9c482c11d64037e342898bb1e5e027a494"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
+      "fmaId": "FMA11336",
+      "sections": {
+        "pathology": "4ce309fa5bca86a66cb282550067300ddd13d230310d39e7e2954b160c2a8b69",
+        "clinical": "127490ea4b38bffccfdb4ba3bdf8a294b5eb36428337e5c45998bfb16ae25df7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
+      "fmaId": "FMA49067",
+      "sections": {
+        "pathology": "748ec8a495984933246ed5da5afef170cd3ed8c1d657235cd665445a42f70b55",
+        "clinical": "e167f2afdda06290fb8a79b55f9f2dd333ff511d840ccaae188122e517c2d5b4"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
+      "fmaId": "FMA49068",
+      "sections": {
+        "pathology": "f3836aaba31ae54f061aaff2e052b2eb47a6ecbb6fb06722f9278044ec689a88",
+        "clinical": "80e33b77b0021ab24c91085b7a85ed7eff7d56a896ac1c2703c418f60f50f8f1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring",
+      "fmaId": "FMA49072",
+      "sections": {
+        "pathology": "d1330cd67e2fa7947386d1bd4ddbbd234f23a4d3289545e6eb39dc8e4e6b3369",
+        "clinical": "3589ecb77b32bd16332f1a4a768ce08b8c0cabb49a21f222a177c09206b07c35"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
+      "fmaId": "FMA49073",
+      "sections": {
+        "pathology": "c95fe6c00bd7bb4f25b6e2860eb168385976da7a3738cb748e460905346bed96",
+        "clinical": "1b4833752782c9ffbe6ab8085b803ce1f4615a67c484d58a8424011d4fa769d3"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+      "fmaId": "FMA14643",
+      "sections": {
+        "pathology": "e003cfc09a1d35c886cec2f3e6325fa18754c3d41ea3a14c5b74d8d89032673f",
+        "clinical": "f32b66fc90825fe97816d11ff771ea38b8bbb0b0520c8fabb61ae225668eb1e1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+      "fmaId": "FMA14647",
+      "sections": {
+        "pathology": "5ba2d2948ee6a8067cd47cc5a1c823697ae104187c96143daef105cbcf2fac94",
+        "clinical": "b00bfc841fc4a5fd307954d52ceb71b28ee00baf3fe7c5d0b331a7707f0ade47"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
+      "fmaId": "FMA16549",
+      "sections": {
+        "pathology": "1133b0ae331de1c65316354a055cbdcb50848f6373bd5bf8d533fbf2981efb2a",
+        "clinical": "ffe15f78db93a65b3a7ab70b42ce5bb396fe5891829703d427ca071f2089ab45"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
+      "fmaId": "FMA59091",
+      "sections": {
+        "pathology": "87d32b72f44ac01d27d8b2595274b823396cba517d3085b9f83b5bb8c7196cb7",
+        "clinical": "69806ac3057fc81932886c5c1e15cc6d56b2925b606cb446f9656a864a2b0209"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
+      "fmaId": "FMA59092",
+      "sections": {
+        "pathology": "42a5fd2aede29568d48b87dea915cf745bded24fd99047fb8e2eb8d011149b7c",
+        "clinical": "54cdd70570c876604dd731350af21c593ec6729bcb102f6e391bc6eb940afdaa"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
+      "fmaId": "FMA59089",
+      "sections": {
+        "pathology": "271127ec47ae84db42968943b3c1d1d95b1424be43232ae05ebde4d0a0519074",
+        "clinical": "1049352ac5193392db3f3ad1b028688682d14e55a79aa5b957a4e9ff07f3fe4a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
+      "fmaId": "FMA59090",
+      "sections": {
+        "pathology": "c94e6f7b67fc815c81953d197e43127867356cdfdeed74bb75d0a2de7c55cb6e",
+        "clinical": "afe3333a21c2b0f95a9f7926f293d6238f1905faf91681dd8f12100fbd13bee3"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
+      "fmaId": "FMA55133",
+      "sections": {
+        "pathology": "8d45386ce74d156593766de0d6ca760fe9992b5cec5e602bde751707e32bd9e7",
+        "clinical": "e18b2d56a0fdc014646188d8a3316625afb38d3c3fd794c9350c07a570787d37"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
+      "fmaId": "FMA55134",
+      "sections": {
+        "pathology": "9fad43cddce01705a7a4aaaec3da65f22887b75feec14450d829c16c88f6fc9a",
+        "clinical": "69840c012d6e987d0179850df2e04271692a78b198651af1b1ce48a47f1c1d18"
+      }
+    }
+  ]
+}
