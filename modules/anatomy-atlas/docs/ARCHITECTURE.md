@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Skull, facial-bone and hyoid clinical teaching
+
+The [cranial-bone extension](CRANIAL_BONE_CLINICAL_CURRICULUM.md) uses fifteen lesson definitions for 23 exact identities / 24 source components. Ordered identity guards preserve both hyoid files and side/region specificity. Its offline projection precedes axial-bone history (42 projections / 2,506 pinned edits); runtime/export stay current and older captures/baseline stay fixed. No geometry, interface, schema, dependency or review migration.
+
 ## Spine and chest-bone clinical teaching
 
 The [axial-bone extension](AXIAL_BONE_CLINICAL_CURRICULUM.md) adds fifteen definitions for 52 exact skeleton/bone identities with ordered source and region guards. Its offline projection precedes limb-bone history (41 projections / 2,460 pinned sections). Runtime/export remain current; earlier captures and baseline stay fixed. No UI, geometry, dependency, schema or review migration. Older milestone totals below are historical.

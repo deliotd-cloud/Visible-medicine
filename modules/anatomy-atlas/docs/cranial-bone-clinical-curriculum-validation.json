@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "checks": 19244,
-  "bodyRepresentations": 52,
-  "sourceComponents": 52,
+  "checks": 17703,
+  "bodyRepresentations": 23,
+  "sourceComponents": 24,
   "lessonGroups": 15,
-  "explicitTopicEdits": 104,
-  "combinedPinnedCurriculumSections": 2460,
-  "sourceIndexChecks": 52,
-  "negativeCases": 19,
+  "explicitTopicEdits": 46,
+  "combinedPinnedCurriculumSections": 2506,
+  "sourceIndexChecks": 24,
+  "negativeCases": 22,
   "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 440,
+      "draft": 463,
       "identity-only": 0,
-      "pending": 582,
+      "pending": 559,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 440,
+      "draft": 463,
       "identity-only": 0,
-      "pending": 582,
+      "pending": 559,
       "generated-identification": 0
     },
     "quiz": {
@@ -63,7 +63,6 @@
   "clinicalApproval": false,
   "scanContentAdded": false,
   "browserTesting": false,
-  "countsScope": "Historical axial-bone milestone; current direct/export assertions remain active",
-  "copyAndRecipeHash": "2b1708bfd6542d99a082d3abcdb02eec02b9b37fec9dd42470e8b01435926b75",
-  "limitations": "Original short vertebral/sacral/rib/sternal clinical drafts; not validated fractures, neural lesions, joint or ligament stability, breathing mechanics, patient scans, procedural guidance or clinical approval."
+  "copyAndRecipeHash": "b374123eef66153c8f36a7fd5db47ed24889770901cab4d44aee9f5ef4bb6b4f",
+  "limitations": "Original short skull/facial/hyoid clinical drafts; not validated fractures, cranial-nerve lesions, airway or visual function, patient scans, procedural guidance or clinical approval."
 }

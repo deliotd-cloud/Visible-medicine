@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Skull, facial-bone and hyoid review
+
+Review [46 new drafts](CRANIAL_BONE_CLINICAL_CURRICULUM.md) for bone/nerve/soft-tissue distinctions, head/eye/airway warning language, nasal-septal complications, hearing/tear/palate context, grouped hyoid identity and evidence limits. Require anatomical, maxillofacial, ENT, ophthalmic, neurosurgical and radiological review; assess paediatric applicability separately. No clinical clearance, diagnostic simulation, procedure, acquired scan or browser/device acceptance is provided.
+
 ## Spine and chest-bone review
 
 Review [104 new drafts](AXIAL_BONE_CLINICAL_CURRICULUM.md) for bony/ligament/neural injury distinctions, fracture age/etiology limits, pars defect versus slip, sacral insufficiency detection, rib/respiratory terminology, sternal cardiac context and morphological variation. Anatomical, spinal/MSK, trauma and radiological review is required. No diagnostic clearance, procedure, acquired scan, validated mechanics or device acceptance is supplied.

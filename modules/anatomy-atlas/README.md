@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+The [skull/facial/hyoid extension](docs/CRANIAL_BONE_CLINICAL_CURRICULUM.md) adds 46 Clinical/Pathology drafts for 23 exact selections, distinguishing adjacent bony, neural and soft-tissue problems without extra controls. Run `npm run cranial-bone-clinical-curriculum:test -- --source`. Clinical review remains required; earlier milestone totals below are historical.
+
 The [spine/chest-bone extension](docs/AXIAL_BONE_CLINICAL_CURRICULUM.md) adds 104 Clinical/Pathology drafts for 52 exact vertebral, sacral, rib and sternal selections. It distinguishes injury patterns, warning signs and normal variation without additional controls or scan/clinical-approval claims. Run `npm run axial-bone-clinical-curriculum:test -- --source`.
 
 The [major limb/hip bone extension](docs/LIMB_BONE_CLINICAL_CURRICULUM.md) adds 34 Clinical/Pathology drafts for 17 exact bone selections, without new controls or changes to existing right-shoulder teaching. Fracture location, adjacent joints and neurovascular context remain explicitly educational and unvalidated. Run `npm run limb-bone-clinical-curriculum:test -- --source`.

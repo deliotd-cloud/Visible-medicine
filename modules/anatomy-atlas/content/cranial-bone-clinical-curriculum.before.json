@@ -1,0 +1,725 @@
+{
+  "sourceCommit": "8b3367d54e616112c43b973485c4bdb78a49f2aa",
+  "copyAndRecipeHash": "2b1708bfd6542d99a082d3abcdb02eec02b9b37fec9dd42470e8b01435926b75",
+  "scope": "body",
+  "regions": [
+    "head-neck"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:hyoid-bone",
+      "fmaId": "FMA52749",
+      "name": "Hyoid bone",
+      "category": "bone",
+      "side": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2772",
+        "FJ3201"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2772",
+        "FJ3201"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:ethmoid",
+      "fmaId": "FMA52740",
+      "name": "Ethmoid",
+      "category": "bone",
+      "side": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3199"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3199"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:frontal-bone",
+      "fmaId": "FMA52734",
+      "name": "Frontal bone",
+      "category": "bone",
+      "side": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3200"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3200"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-inferior-nasal-concha",
+      "fmaId": "FMA54738",
+      "name": "Left inferior nasal concha",
+      "category": "bone",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3263"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3263"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-lacrimal-bone",
+      "fmaId": "FMA53646",
+      "name": "Left lacrimal bone",
+      "category": "bone",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3265"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3265"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-maxilla",
+      "fmaId": "FMA53650",
+      "name": "Left maxilla",
+      "category": "bone",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3269"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3269"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-nasal-bone",
+      "fmaId": "FMA53648",
+      "name": "Left nasal bone",
+      "category": "bone",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3272"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3272"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-palatine-bone",
+      "fmaId": "FMA53656",
+      "name": "Left palatine bone",
+      "category": "bone",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3273"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3273"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-parietal-bone",
+      "fmaId": "FMA52789",
+      "name": "Left parietal bone",
+      "category": "bone",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3274"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3274"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-temporal-bone",
+      "fmaId": "FMA52739",
+      "name": "Left temporal bone",
+      "category": "bone",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3281"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3281"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-zygomatic-bone",
+      "fmaId": "FMA52893",
+      "name": "Left zygomatic bone",
+      "category": "bone",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3287"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3287"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:mandible",
+      "fmaId": "FMA52748",
+      "name": "Mandible",
+      "category": "bone",
+      "side": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3289"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3289"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:occipital-bone",
+      "fmaId": "FMA52735",
+      "name": "Occipital bone",
+      "category": "bone",
+      "side": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3309"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3309"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-inferior-nasal-concha",
+      "fmaId": "FMA54737",
+      "name": "Right inferior nasal concha",
+      "category": "bone",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3369"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3369"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-lacrimal-bone",
+      "fmaId": "FMA53645",
+      "name": "Right lacrimal bone",
+      "category": "bone",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3371"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3371"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-maxilla",
+      "fmaId": "FMA53649",
+      "name": "Right maxilla",
+      "category": "bone",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3375"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3375"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-nasal-bone",
+      "fmaId": "FMA53647",
+      "name": "Right nasal bone",
+      "category": "bone",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3378"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3378"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-palatine-bone",
+      "fmaId": "FMA53655",
+      "name": "Right palatine bone",
+      "category": "bone",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3379"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3379"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-parietal-bone",
+      "fmaId": "FMA52788",
+      "name": "Right parietal bone",
+      "category": "bone",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3380"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3380"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-temporal-bone",
+      "fmaId": "FMA52738",
+      "name": "Right temporal bone",
+      "category": "bone",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3386"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3386"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-zygomatic-bone",
+      "fmaId": "FMA52892",
+      "name": "Right zygomatic bone",
+      "category": "bone",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3392"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3392"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:sphenoid-bone",
+      "fmaId": "FMA52736",
+      "name": "Sphenoid bone",
+      "category": "bone",
+      "side": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3394"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3394"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:vomer",
+      "fmaId": "FMA9710",
+      "name": "Vomer",
+      "category": "bone",
+      "side": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3395"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3395"
+      ],
+      "omittedSourceFiles": []
+    }
+  ]
+}

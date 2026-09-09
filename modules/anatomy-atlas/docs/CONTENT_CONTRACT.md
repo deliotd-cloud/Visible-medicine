@@ -1,5 +1,7 @@
 # Versioned anatomy content export
 
+**Current skull/facial/hyoid extension:** [46 drafts](CRANIAL_BONE_CLINICAL_CURRICULUM.md) bring Clinical and Pathology to 463 draft / 559 pending body entries each. Forty-two projections protect 2,506 pinned sections. Earlier captures and baseline remain unchanged; older totals below are historical. All other topics, geometry and approval state are preserved.
+
 **Current spine/chest-bone extension:** [104 drafts](AXIAL_BONE_CLINICAL_CURRICULUM.md) bring Clinical and Pathology to 440 draft/582 pending body entries each. Forty-one projections protect 2,460 pinned sections. Earlier captures and original baseline stay unchanged; older totals below are historical. Other topics, geometry and approval state are preserved.
 
 **Current major limb/hip bone extension:** [34 drafts](LIMB_BONE_CLINICAL_CURRICULUM.md) bring Clinical and Pathology to 388 draft/634 pending body entries each. Forty projections protect 2,356 pinned edits. Earlier captures and the original baseline are unchanged; all older milestone totals below are historical. Right-shoulder teaching, other topics, geometry and approval state are preserved.
