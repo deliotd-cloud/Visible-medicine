@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+The [remaining-source geometry screen](docs/SOURCE_GEOMETRY_SCREEN.md) verifies all 48 held source files plus four orbital-nerve/small-artery candidate files. It fills 47 missing fingerprints and records exact cross-tree matches without admitting uncertain anatomy. The visible atlas and teaching remain unchanged by this preparatory audit.
+
 **Dissect → Undo / Redo** now supports [replaying regional dissection changes](docs/DISSECTION_HISTORY.md). Forty meaningful layer, focus and removal changes are kept in memory; repeat clicks do not consume history. The compact toolbar, existing saved views and practice restrictions are preserved.
 
 **Knee & leg → femur, tibia or patella → Imaging** now includes [knee-specific CT/MRI comparison guides](docs/KNEE_IMAGING.md), with ultrasound landmarks for the patella. Fourteen new sided draft sections use the existing panels. Whole bones remain whole; no missing ligaments, menisci, cartilage or patient scans are invented.

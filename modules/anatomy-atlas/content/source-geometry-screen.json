@@ -1,0 +1,5822 @@
+{
+  "schemaVersion": 1,
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "licenseUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+  "releaseNotesUrl": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/release_4.0_e.html",
+  "archives": [
+    {
+      "tree": "isa",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "directorySha256": "879093c967e40eca17a8f21ba5b08ba9913760118502e99f68ce3c03f659b559",
+      "entryCount": 2234
+    },
+    {
+      "tree": "partof",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/partof_BP3D_4.0_obj_99.zip",
+      "directorySha256": "eec3420cee5f54a6039a441b9801402bf205145719dedaf72fbfd03538fde144",
+      "entryCount": 1258
+    }
+  ],
+  "summary": {
+    "evaluatedFiles": 52,
+    "verifiedSourceBytes": 11312418,
+    "heldFiles": 48,
+    "previouslyUnfingerprintedHeldFiles": 47,
+    "candidateDefinitions": 3,
+    "candidateFiles": 4,
+    "displayedSourceFilesScreened": 1674,
+    "indexedFingerprintsScreened": 2819,
+    "candidateFilesWithExactHeldOrDisplayedMatch": 0,
+    "heldFilesWithExactDisplayedMatch": 1,
+    "admissions": 0
+  },
+  "candidates": [
+    {
+      "tree": "isa",
+      "id": "FMA7041",
+      "name": "short ciliary nerve",
+      "files": [
+        "FJ1319",
+        "FJ1370"
+      ],
+      "decision": "adjacency-endpoints-and-anatomical-extent-review-required",
+      "admissionApproved": false
+    },
+    {
+      "tree": "isa",
+      "id": "FMA50146",
+      "name": "branch of right anterior choroidal artery to posterior limb of right internal capsule",
+      "files": [
+        "FJ1674"
+      ],
+      "decision": "adjacency-endpoints-and-anatomical-extent-review-required",
+      "admissionApproved": false
+    },
+    {
+      "tree": "isa",
+      "id": "FMA50147",
+      "name": "branch of left anterior choroidal artery to posterior limb of left internal capsule",
+      "files": [
+        "FJ1674M"
+      ],
+      "decision": "adjacency-endpoints-and-anatomical-extent-review-required",
+      "admissionApproved": false
+    }
+  ],
+  "files": [
+    {
+      "tree": "isa",
+      "file": "FJ1313",
+      "bytes": 115439,
+      "crc32": 4218374292,
+      "heldBy": [
+        "FMA50878"
+      ],
+      "candidateFor": [],
+      "sha256": "a20cd06d796575d9041a6b6e01724f70fb50f1807e324941f43dcdc3e8c51e40",
+      "geometrySha256": "05806d4d1a81584a5cbd4cdcd6da1aa9a11e0cd61e3172a216fd8826af7fc0c7",
+      "bounds": {
+        "min": [
+          0.0202998,
+          -142.537,
+          1518.28
+        ],
+        "max": [
+          30.0673,
+          -102.154,
+          1542.23
+        ]
+      },
+      "centre": [
+        15.0437999,
+        -122.3455,
+        1530.255
+      ],
+      "extent": [
+        30.0470002,
+        40.38300000000001,
+        23.950000000000045
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 1027
+      },
+      "topology": null,
+      "vertices": 1027,
+      "triangles": 1860,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA5913",
+          "name": "nerve trunk",
+          "componentCount": 8
+        },
+        {
+          "id": "FMA11195",
+          "name": "segment of neural tree organ",
+          "componentCount": 36
+        },
+        {
+          "id": "FMA50863",
+          "name": "optic nerve",
+          "componentCount": 4
+        },
+        {
+          "id": "FMA50878",
+          "name": "left optic nerve",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        },
+        {
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1319",
+      "bytes": 44470,
+      "crc32": 1567792412,
+      "heldBy": [],
+      "candidateFor": [
+        "FMA7041"
+      ],
+      "sha256": "7f45ad84f0874a8aeb62085affb9e9303057bea8b46068cc0b3e7e341a1258e7",
+      "geometrySha256": "b8c9affd268760da53cbaee207f9bbd2f98d0bdcfe3339b63e425a5766af8487",
+      "bounds": {
+        "min": [
+          23.1257,
+          -147.06,
+          1521.59
+        ],
+        "max": [
+          32.2086,
+          -131.749,
+          1525.76
+        ]
+      },
+      "centre": [
+        27.66715,
+        -139.40449999999998,
+        1523.675
+      ],
+      "extent": [
+        9.082899999999999,
+        15.311000000000007,
+        4.170000000000073
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 461
+      },
+      "topology": {
+        "sourceVertices": 461,
+        "exactUniqueVertices": 305,
+        "unusedUniqueVertices": 0,
+        "triangles": 602,
+        "edges": 903,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 4,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 384,
+            "vertices": 194,
+            "bounds": {
+              "min": [
+                23.1257,
+                -147.06,
+                1521.59
+              ],
+              "max": [
+                30.3099,
+                -131.881,
+                1525.76
+              ]
+            },
+            "areaMm2": 49.27970370015928,
+            "algebraicVolumeMm3": 5.743374546166893
+          },
+          {
+            "firstFace": 131,
+            "triangles": 218,
+            "vertices": 111,
+            "bounds": {
+              "min": [
+                24.2036,
+                -146.179,
+                1522.19
+              ],
+              "max": [
+                32.2086,
+                -131.749,
+                1525.4
+              ]
+            },
+            "areaMm2": 25.09814259049322,
+            "algebraicVolumeMm3": 2.83696241116705
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "vertices": 461,
+      "triangles": 602,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA7037",
+          "name": "branch of ciliary ganglion",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA7041",
+          "name": "short ciliary nerve",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA45638",
+          "name": "subdivision of nervous system",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA55652",
+          "name": "anatomical set",
+          "componentCount": 56
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA65539",
+          "name": "subdivision of parasympathetic nervous system",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA65551",
+          "name": "subdivisionof autonomic nervous system",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA78590",
+          "name": "set of heterogeneous clusters",
+          "componentCount": 2
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1364",
+      "bytes": 117132,
+      "crc32": 3051352376,
+      "heldBy": [
+        "FMA50875"
+      ],
+      "candidateFor": [],
+      "sha256": "e6a52be718612218521df5194422c0fe7b05fd2f94976ac8e5c526b1fb743b5c",
+      "geometrySha256": "39f26eaf5075074b294b9d76ea3b3993f05631148322b2a62b850d8fde4c4702",
+      "bounds": {
+        "min": [
+          -31.3523,
+          -142.503,
+          1518.29
+        ],
+        "max": [
+          -1.31636,
+          -102.147,
+          1542.24
+        ]
+      },
+      "centre": [
+        -16.33433,
+        -122.32499999999999,
+        1530.2649999999999
+      ],
+      "extent": [
+        30.03594,
+        40.35599999999998,
+        23.950000000000045
+      ],
+      "sourceXDistribution": {
+        "negative": 1041,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": null,
+      "vertices": 1041,
+      "triangles": 1858,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA5913",
+          "name": "nerve trunk",
+          "componentCount": 8
+        },
+        {
+          "id": "FMA11195",
+          "name": "segment of neural tree organ",
+          "componentCount": 36
+        },
+        {
+          "id": "FMA50863",
+          "name": "optic nerve",
+          "componentCount": 4
+        },
+        {
+          "id": "FMA50875",
+          "name": "right optic nerve",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        },
+        {
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1370",
+      "bytes": 46865,
+      "crc32": 264555341,
+      "heldBy": [],
+      "candidateFor": [
+        "FMA7041"
+      ],
+      "sha256": "8e8853c389c874fa12b5db73c008755eb5a98a3fe9ce7457757c809ef0c9ded9",
+      "geometrySha256": "ab87c9c9e25025e1c5cf7d16ff3e85aaee46d42d302d029623a76b771028b20e",
+      "bounds": {
+        "min": [
+          -33.5066,
+          -147.06,
+          1521.59
+        ],
+        "max": [
+          -24.4337,
+          -131.756,
+          1525.78
+        ]
+      },
+      "centre": [
+        -28.97015,
+        -139.40800000000002,
+        1523.685
+      ],
+      "extent": [
+        9.072899999999997,
+        15.304000000000002,
+        4.190000000000055
+      ],
+      "sourceXDistribution": {
+        "negative": 476,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": {
+        "sourceVertices": 476,
+        "exactUniqueVertices": 323,
+        "unusedUniqueVertices": 0,
+        "triangles": 638,
+        "edges": 957,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 4,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 58,
+            "triangles": 420,
+            "vertices": 212,
+            "bounds": {
+              "min": [
+                -31.6394,
+                -147.06,
+                1521.59
+              ],
+              "max": [
+                -24.4337,
+                -131.849,
+                1525.78
+              ]
+            },
+            "areaMm2": 50.05486372073328,
+            "algebraicVolumeMm3": 5.969021026833462
+          },
+          {
+            "firstFace": 0,
+            "triangles": 218,
+            "vertices": 111,
+            "bounds": {
+              "min": [
+                -33.5066,
+                -146.194,
+                1522.18
+              ],
+              "max": [
+                -25.5115,
+                -131.756,
+                1525.41
+              ]
+            },
+            "areaMm2": 25.248208796073897,
+            "algebraicVolumeMm3": 2.864053725666688
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "vertices": 476,
+      "triangles": 638,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA7037",
+          "name": "branch of ciliary ganglion",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA7041",
+          "name": "short ciliary nerve",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA45638",
+          "name": "subdivision of nervous system",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA55652",
+          "name": "anatomical set",
+          "componentCount": 56
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA65539",
+          "name": "subdivision of parasympathetic nervous system",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA65551",
+          "name": "subdivisionof autonomic nervous system",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA78590",
+          "name": "set of heterogeneous clusters",
+          "componentCount": 2
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1453M",
+      "bytes": 321290,
+      "crc32": 1703451372,
+      "heldBy": [
+        "FMA45859"
+      ],
+      "candidateFor": [],
+      "sha256": "32c66e9739f2a0074be36918181d288dad7c79e781d0ca680212d10e85a01429",
+      "geometrySha256": "f9202cb805b29cd9089b1b7a064f3c2aed32461bcdf367a5e0839cf98f3cb9d6",
+      "bounds": {
+        "min": [
+          0.657022,
+          -88.4009,
+          776.036
+        ],
+        "max": [
+          49.1884,
+          -15.0662,
+          821.722
+        ]
+      },
+      "centre": [
+        24.922711,
+        -51.733549999999994,
+        798.8789999999999
+      ],
+      "extent": [
+        48.531378000000004,
+        73.3347,
+        45.686000000000035
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 3288
+      },
+      "topology": null,
+      "vertices": 3288,
+      "triangles": 3862,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA10474",
+          "name": "zone of muscle organ",
+          "componentCount": 38
+        },
+        {
+          "id": "FMA19089",
+          "name": "zone of levator ani",
+          "componentCount": 9
+        },
+        {
+          "id": "FMA19092",
+          "name": "iliococcygeus",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA45859",
+          "name": "left iliococcygeus",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA55268",
+          "name": "organ zone",
+          "componentCount": 156
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1457M",
+      "bytes": 348032,
+      "crc32": 4234311330,
+      "heldBy": [
+        "FMA45855"
+      ],
+      "candidateFor": [],
+      "sha256": "8ed11be992637e9e9a13c19191767cdda90f0f822444c3571e8f3784c7c43940",
+      "geometrySha256": "8c4357cc1f8a8188010200dbf8c4a56db0032d8d150f783ef377520d7ad9ab90",
+      "bounds": {
+        "min": [
+          3.16466,
+          -100.53,
+          767.231
+        ],
+        "max": [
+          35.4065,
+          -10.482,
+          814.623
+        ]
+      },
+      "centre": [
+        19.28558,
+        -55.506,
+        790.927
+      ],
+      "extent": [
+        32.24184,
+        90.048,
+        47.39200000000005
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 3296
+      },
+      "topology": null,
+      "vertices": 3296,
+      "triangles": 4616,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA10474",
+          "name": "zone of muscle organ",
+          "componentCount": 38
+        },
+        {
+          "id": "FMA19089",
+          "name": "zone of levator ani",
+          "componentCount": 9
+        },
+        {
+          "id": "FMA19090",
+          "name": "pubococcygeus",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA45855",
+          "name": "left pubococcygeus",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA55268",
+          "name": "organ zone",
+          "componentCount": 156
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1458M",
+      "bytes": 342998,
+      "crc32": 2009420610,
+      "heldBy": [
+        "FMA45857"
+      ],
+      "candidateFor": [],
+      "sha256": "9a1b0ccb5c9221adc38d914567bf9ec7ca060787e923bced5aa608040c21926a",
+      "geometrySha256": "86d1e56368806c8ca8dfedb021322dfb090d75db07544a81454bde491ee0f659",
+      "bounds": {
+        "min": [
+          3.21461,
+          -102.803,
+          763.102
+        ],
+        "max": [
+          32.6258,
+          -21.3057,
+          791.816
+        ]
+      },
+      "centre": [
+        17.920205,
+        -62.05435,
+        777.4590000000001
+      ],
+      "extent": [
+        29.411189999999998,
+        81.4973,
+        28.714000000000055
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 3817
+      },
+      "topology": null,
+      "vertices": 3817,
+      "triangles": 3634,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA10474",
+          "name": "zone of muscle organ",
+          "componentCount": 38
+        },
+        {
+          "id": "FMA19089",
+          "name": "zone of levator ani",
+          "componentCount": 9
+        },
+        {
+          "id": "FMA19091",
+          "name": "puborectalis",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA45857",
+          "name": "left puborectalis",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA55268",
+          "name": "organ zone",
+          "componentCount": 156
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1463",
+      "bytes": 916816,
+      "crc32": 4095503680,
+      "heldBy": [
+        "FMA71313",
+        "FMA74075"
+      ],
+      "candidateFor": [],
+      "sha256": "cd5be879267b0cc9d9eb648a684a97931b4b4b0b44a16c30ca628cd1db357114",
+      "geometrySha256": "4eadb171e51c73bb6ac0f6901c83f8383749a44194dfa1d224a9aed079bcb94e",
+      "bounds": {
+        "min": [
+          -74.5211,
+          -72.497,
+          1061.21
+        ],
+        "max": [
+          -28.6357,
+          -4.29501,
+          1380.3
+        ]
+      },
+      "centre": [
+        -51.5784,
+        -38.396005,
+        1220.755
+      ],
+      "extent": [
+        45.885400000000004,
+        68.20199,
+        319.0899999999999
+      ],
+      "sourceXDistribution": {
+        "negative": 8260,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": null,
+      "vertices": 8260,
+      "triangles": 12210,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA32558",
+          "name": "musculature",
+          "componentCount": 18
+        },
+        {
+          "id": "FMA50185",
+          "name": "musculature of subdivision of trunk",
+          "componentCount": 8
+        },
+        {
+          "id": "FMA55652",
+          "name": "anatomical set",
+          "componentCount": 56
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA70779",
+          "name": "set of organs",
+          "componentCount": 18
+        },
+        {
+          "id": "FMA71313",
+          "name": "set of levatores costarum longi",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA74075",
+          "name": "set of right levatores costarum longi",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA74779",
+          "name": "musculature of chest",
+          "componentCount": 4
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1463M",
+      "bytes": 908762,
+      "crc32": 178720631,
+      "heldBy": [
+        "FMA71313",
+        "FMA74076"
+      ],
+      "candidateFor": [],
+      "sha256": "23a79d5aa4231c94f27c4ead30389a621989fab6d78e80ae39052181d12e6de6",
+      "geometrySha256": "19540db7eb95fec3a3b76b2f4786ce04a4c93862895a7dbb7d7bd40331a94041",
+      "bounds": {
+        "min": [
+          28.6357,
+          -72.497,
+          1061.21
+        ],
+        "max": [
+          74.5211,
+          -4.29501,
+          1380.3
+        ]
+      },
+      "centre": [
+        51.5784,
+        -38.396005,
+        1220.755
+      ],
+      "extent": [
+        45.885400000000004,
+        68.20199,
+        319.0899999999999
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 8256
+      },
+      "topology": null,
+      "vertices": 8256,
+      "triangles": 12210,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA32558",
+          "name": "musculature",
+          "componentCount": 18
+        },
+        {
+          "id": "FMA50185",
+          "name": "musculature of subdivision of trunk",
+          "componentCount": 8
+        },
+        {
+          "id": "FMA55652",
+          "name": "anatomical set",
+          "componentCount": 56
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA70779",
+          "name": "set of organs",
+          "componentCount": 18
+        },
+        {
+          "id": "FMA71313",
+          "name": "set of levatores costarum longi",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA74076",
+          "name": "set of left levatores costarum longi",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA74779",
+          "name": "musculature of chest",
+          "componentCount": 4
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1465",
+      "bytes": 47990,
+      "crc32": 110561038,
+      "heldBy": [
+        "FMA46442"
+      ],
+      "candidateFor": [],
+      "sha256": "d708ce55831bbb0954e193439539f36f0055b1f46d73bfea23d238f68958a3cc",
+      "geometrySha256": "dfee9dc8a9257cf172138409ccec9cc08fd8806ff4c287835ad8e26a5bdf3653",
+      "bounds": {
+        "min": [
+          -49.0718,
+          -102.46,
+          786.678
+        ],
+        "max": [
+          -23.7635,
+          -36.2938,
+          820.334
+        ]
+      },
+      "centre": [
+        -36.41765,
+        -69.37689999999999,
+        803.506
+      ],
+      "extent": [
+        25.308300000000003,
+        66.1662,
+        33.65599999999995
+      ],
+      "sourceXDistribution": {
+        "negative": 454,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": null,
+      "vertices": 454,
+      "triangles": 722,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA9721",
+          "name": "tendon",
+          "componentCount": 6
+        },
+        {
+          "id": "FMA14065",
+          "name": "organ component",
+          "componentCount": 66
+        },
+        {
+          "id": "FMA46442",
+          "name": "tendinous arch of levator ani",
+          "componentCount": 4
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1465M",
+      "bytes": 47560,
+      "crc32": 2322559233,
+      "heldBy": [
+        "FMA46442"
+      ],
+      "candidateFor": [],
+      "sha256": "af0914273b298fc93267504b4a14672de1f0f56b197cbcec59c9446845847024",
+      "geometrySha256": "5da7337b32fb929a9c835879019ed56959200e9252879abdb1d743e60fa71bf8",
+      "bounds": {
+        "min": [
+          23.7635,
+          -102.46,
+          786.678
+        ],
+        "max": [
+          49.0718,
+          -36.2938,
+          820.334
+        ]
+      },
+      "centre": [
+        36.41765,
+        -69.37689999999999,
+        803.506
+      ],
+      "extent": [
+        25.308300000000003,
+        66.1662,
+        33.65599999999995
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 454
+      },
+      "topology": null,
+      "vertices": 454,
+      "triangles": 722,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA9721",
+          "name": "tendon",
+          "componentCount": 6
+        },
+        {
+          "id": "FMA14065",
+          "name": "organ component",
+          "componentCount": 66
+        },
+        {
+          "id": "FMA46442",
+          "name": "tendinous arch of levator ani",
+          "componentCount": 4
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1469",
+      "bytes": 64473,
+      "crc32": 1387569677,
+      "heldBy": [
+        "FMA37389"
+      ],
+      "candidateFor": [],
+      "sha256": "090600879d9395564824bedc16918c66b8fac325cf7fb2bac6c062bdb62560aa",
+      "geometrySha256": "095e999e34b39667bfcf21399efc261ff3ed58e10686d3f0591b635aafbf58de",
+      "bounds": {
+        "min": [
+          -301.25,
+          -153.121,
+          766.555
+        ],
+        "max": [
+          -256.014,
+          -125.253,
+          794.052
+        ]
+      },
+      "centre": [
+        -278.632,
+        -139.187,
+        780.3035
+      ],
+      "extent": [
+        45.23599999999999,
+        27.86800000000001,
+        27.49700000000007
+      ],
+      "sourceXDistribution": {
+        "negative": 735,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": null,
+      "vertices": 735,
+      "triangles": 714,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA5022",
+          "name": "muscle organ",
+          "componentCount": 323
+        },
+        {
+          "id": "FMA9621",
+          "name": "muscle of upper limb",
+          "componentCount": 78
+        },
+        {
+          "id": "FMA37348",
+          "name": "muscle of free upper limb",
+          "componentCount": 56
+        },
+        {
+          "id": "FMA37372",
+          "name": "muscle of hand",
+          "componentCount": 12
+        },
+        {
+          "id": "FMA37378",
+          "name": "flexor pollicis brevis",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA37389",
+          "name": "left flexor pollicis brevis",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA42380",
+          "name": "intrinsic muscle of hand",
+          "componentCount": 12
+        },
+        {
+          "id": "FMA55665",
+          "name": "nonparenchymatous organ",
+          "componentCount": 386
+        },
+        {
+          "id": "FMA55670",
+          "name": "solid organ",
+          "componentCount": 402
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA64916",
+          "name": "thenar muscle",
+          "componentCount": 6
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67498",
+          "name": "organ",
+          "componentCount": 649
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1469M",
+      "bytes": 63714,
+      "crc32": 262462391,
+      "heldBy": [
+        "FMA37388"
+      ],
+      "candidateFor": [],
+      "sha256": "dbab9fdb424e8370bed0229f47af76209ab5f61613fc1c910d427a73e6ee8bd7",
+      "geometrySha256": "85ec1f0e7ff3be9ceac21ea2c2f85945eca1260fcf9eafc1c895986130efc891",
+      "bounds": {
+        "min": [
+          256.014,
+          -153.121,
+          766.555
+        ],
+        "max": [
+          301.25,
+          -125.253,
+          794.053
+        ]
+      },
+      "centre": [
+        278.632,
+        -139.187,
+        780.304
+      ],
+      "extent": [
+        45.23599999999999,
+        27.86800000000001,
+        27.498000000000047
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 735
+      },
+      "topology": null,
+      "vertices": 735,
+      "triangles": 714,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA5022",
+          "name": "muscle organ",
+          "componentCount": 323
+        },
+        {
+          "id": "FMA9621",
+          "name": "muscle of upper limb",
+          "componentCount": 78
+        },
+        {
+          "id": "FMA37348",
+          "name": "muscle of free upper limb",
+          "componentCount": 56
+        },
+        {
+          "id": "FMA37372",
+          "name": "muscle of hand",
+          "componentCount": 12
+        },
+        {
+          "id": "FMA37378",
+          "name": "flexor pollicis brevis",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA37388",
+          "name": "right flexor pollicis brevis",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA42380",
+          "name": "intrinsic muscle of hand",
+          "componentCount": 12
+        },
+        {
+          "id": "FMA55665",
+          "name": "nonparenchymatous organ",
+          "componentCount": 386
+        },
+        {
+          "id": "FMA55670",
+          "name": "solid organ",
+          "componentCount": 402
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA64916",
+          "name": "thenar muscle",
+          "componentCount": 6
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67498",
+          "name": "organ",
+          "componentCount": 649
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1674",
+      "bytes": 34249,
+      "crc32": 3301999703,
+      "heldBy": [],
+      "candidateFor": [
+        "FMA50146"
+      ],
+      "sha256": "202680975274f9b744dbfb3cae561f0d4a63f53c35fe0c00702b62fe9b9c5fa5",
+      "geometrySha256": "31bed53956d0686ddf80fbd6f8264b4881a9a5106c8f45afe394825c8cfe850b",
+      "bounds": {
+        "min": [
+          -31.4861,
+          -90.6504,
+          1538.54
+        ],
+        "max": [
+          -19.4128,
+          -74.131,
+          1570.49
+        ]
+      },
+      "centre": [
+        -25.44945,
+        -82.39070000000001,
+        1554.5149999999999
+      ],
+      "extent": [
+        12.0733,
+        16.519400000000005,
+        31.950000000000045
+      ],
+      "sourceXDistribution": {
+        "negative": 400,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": {
+        "sourceVertices": 400,
+        "exactUniqueVertices": 175,
+        "unusedUniqueVertices": 0,
+        "triangles": 346,
+        "edges": 519,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 346,
+            "vertices": 175,
+            "bounds": {
+              "min": [
+                -31.4861,
+                -90.6504,
+                1538.54
+              ],
+              "max": [
+                -19.4128,
+                -74.131,
+                1570.49
+              ]
+            },
+            "areaMm2": 70.10454323266592,
+            "algebraicVolumeMm3": 8.570809033949947
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "vertices": 400,
+      "triangles": 346,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA50112",
+          "name": "branch of anterior choroidal artery",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA50119",
+          "name": "branch of anterior choroidal artery to posterior limb of internal capsule",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA50146",
+          "name": "branch of right anterior choroidal artery to posterior limb of right internal capsule",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA50720",
+          "name": "artery",
+          "componentCount": 562
+        },
+        {
+          "id": "FMA50722",
+          "name": "region of vascular tree organ",
+          "componentCount": 974
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA66464",
+          "name": "systemic artery",
+          "componentCount": 463
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA70504",
+          "name": "subdivision of common carotid artery",
+          "componentCount": 71
+        },
+        {
+          "id": "FMA70506",
+          "name": "subdivision of internal carotid artery",
+          "componentCount": 69
+        },
+        {
+          "id": "FMA70523",
+          "name": "subdivision of cerebral part of internal carotid artery",
+          "componentCount": 69
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        },
+        {
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200
+        },
+        {
+          "id": "FMA86187",
+          "name": "segment of arterial tree organ",
+          "componentCount": 603
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1674M",
+      "bytes": 33850,
+      "crc32": 1501303485,
+      "heldBy": [],
+      "candidateFor": [
+        "FMA50147"
+      ],
+      "sha256": "a4fbf6ec7035f2db91998bbe660209a9af4ca6070136bda0c10ef5c14cc11bac",
+      "geometrySha256": "e5bb7efc2865af38a520e394c6188242892cab69f31073671baf55903650e256",
+      "bounds": {
+        "min": [
+          19.4128,
+          -90.6504,
+          1538.54
+        ],
+        "max": [
+          31.4861,
+          -74.131,
+          1570.49
+        ]
+      },
+      "centre": [
+        25.44945,
+        -82.39070000000001,
+        1554.5149999999999
+      ],
+      "extent": [
+        12.0733,
+        16.519400000000005,
+        31.950000000000045
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 400
+      },
+      "topology": {
+        "sourceVertices": 400,
+        "exactUniqueVertices": 175,
+        "unusedUniqueVertices": 0,
+        "triangles": 346,
+        "edges": 519,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 346,
+            "vertices": 175,
+            "bounds": {
+              "min": [
+                19.4128,
+                -90.6504,
+                1538.54
+              ],
+              "max": [
+                31.4861,
+                -74.131,
+                1570.49
+              ]
+            },
+            "areaMm2": 70.08816685430085,
+            "algebraicVolumeMm3": 8.568663738316719
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "vertices": 400,
+      "triangles": 346,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA50112",
+          "name": "branch of anterior choroidal artery",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA50119",
+          "name": "branch of anterior choroidal artery to posterior limb of internal capsule",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA50147",
+          "name": "branch of left anterior choroidal artery to posterior limb of left internal capsule",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA50720",
+          "name": "artery",
+          "componentCount": 562
+        },
+        {
+          "id": "FMA50722",
+          "name": "region of vascular tree organ",
+          "componentCount": 974
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA66464",
+          "name": "systemic artery",
+          "componentCount": 463
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA70504",
+          "name": "subdivision of common carotid artery",
+          "componentCount": 71
+        },
+        {
+          "id": "FMA70506",
+          "name": "subdivision of internal carotid artery",
+          "componentCount": 69
+        },
+        {
+          "id": "FMA70523",
+          "name": "subdivision of cerebral part of internal carotid artery",
+          "componentCount": 69
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        },
+        {
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200
+        },
+        {
+          "id": "FMA86187",
+          "name": "segment of arterial tree organ",
+          "componentCount": 603
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1772",
+      "bytes": 146521,
+      "crc32": 1606144737,
+      "heldBy": [
+        "FMA50878"
+      ],
+      "candidateFor": [],
+      "sha256": "314b4a735672c1ce6690d29199856569fa3db4864f2d94690e091432e085e057",
+      "geometrySha256": "4251a2ae961e46691fe627890f32f09426e640e3f4901c1dcd69c1b259d24310",
+      "bounds": {
+        "min": [
+          -0.00264154,
+          -151.743,
+          1520.2
+        ],
+        "max": [
+          31.9976,
+          -102.141,
+          1542.31
+        ]
+      },
+      "centre": [
+        15.99747923,
+        -126.94200000000001,
+        1531.255
+      ],
+      "extent": [
+        32.00024154,
+        49.60199999999999,
+        22.1099999999999
+      ],
+      "sourceXDistribution": {
+        "negative": 1,
+        "zero": 0,
+        "positive": 1250
+      },
+      "topology": null,
+      "vertices": 1251,
+      "triangles": 2376,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA5913",
+          "name": "nerve trunk",
+          "componentCount": 8
+        },
+        {
+          "id": "FMA11195",
+          "name": "segment of neural tree organ",
+          "componentCount": 36
+        },
+        {
+          "id": "FMA50863",
+          "name": "optic nerve",
+          "componentCount": 4
+        },
+        {
+          "id": "FMA50878",
+          "name": "left optic nerve",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        },
+        {
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ1819",
+      "bytes": 146608,
+      "crc32": 3374519355,
+      "heldBy": [
+        "FMA50875"
+      ],
+      "candidateFor": [],
+      "sha256": "3fde0d489978522bb0c916db61287c42aedfb4c6660b6f8016a148ffccef89f4",
+      "geometrySha256": "841be24e1f4cc40befbee26c177e663661382f77585b686ec89d5cba4217333d",
+      "bounds": {
+        "min": [
+          -33.3074,
+          -151.746,
+          1520.22
+        ],
+        "max": [
+          -1.28971,
+          -102.175,
+          1542.31
+        ]
+      },
+      "centre": [
+        -17.298555,
+        -126.9605,
+        1531.2649999999999
+      ],
+      "extent": [
+        32.01769,
+        49.57100000000001,
+        22.089999999999918
+      ],
+      "sourceXDistribution": {
+        "negative": 1242,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": null,
+      "vertices": 1242,
+      "triangles": 2378,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA5913",
+          "name": "nerve trunk",
+          "componentCount": 8
+        },
+        {
+          "id": "FMA11195",
+          "name": "segment of neural tree organ",
+          "componentCount": 36
+        },
+        {
+          "id": "FMA50863",
+          "name": "optic nerve",
+          "componentCount": 4
+        },
+        {
+          "id": "FMA50875",
+          "name": "right optic nerve",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        },
+        {
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2034",
+      "bytes": 8726,
+      "crc32": 1863537706,
+      "heldBy": [
+        "FMA14819"
+      ],
+      "candidateFor": [],
+      "sha256": "6023328056bfe189051a2fe69a50bb2aed3de187d62aa03868caf9e436d5e53f",
+      "geometrySha256": "9fc24af4a77c5542156d6ccec021b77f59058cd78deac51336e03ffed79b78ca",
+      "bounds": {
+        "min": [
+          -53.3772,
+          -132.9,
+          936.6
+        ],
+        "max": [
+          -29.1211,
+          -121.695,
+          956.951
+        ]
+      },
+      "centre": [
+        -41.24915,
+        -127.2975,
+        946.7755
+      ],
+      "extent": [
+        24.256100000000004,
+        11.205000000000013,
+        20.351
+      ],
+      "sourceXDistribution": {
+        "negative": 94,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": null,
+      "vertices": 94,
+      "triangles": 114,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA14819",
+          "name": "ileal branch of inferior branch of ileocolic artery",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA14821",
+          "name": "branch of ileocolic artery",
+          "componentCount": 6
+        },
+        {
+          "id": "FMA21520",
+          "name": "branch of inferior branch of ileocolic artery",
+          "componentCount": 6
+        },
+        {
+          "id": "FMA50720",
+          "name": "artery",
+          "componentCount": 562
+        },
+        {
+          "id": "FMA50722",
+          "name": "region of vascular tree organ",
+          "componentCount": 974
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA66464",
+          "name": "systemic artery",
+          "componentCount": 463
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA70478",
+          "name": "subdivision of superior mesenteric artery",
+          "componentCount": 13
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        },
+        {
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200
+        },
+        {
+          "id": "FMA86187",
+          "name": "segment of arterial tree organ",
+          "componentCount": 603
+        }
+      ],
+      "exactGeometryMatches": [
+        {
+          "tree": "partof",
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ],
+          "displayedBy": []
+        }
+      ],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2128",
+      "bytes": 71237,
+      "crc32": 292011839,
+      "heldBy": [
+        "FMA44884"
+      ],
+      "candidateFor": [],
+      "sha256": "1dceba6badac3114601ce3d453b86b8e7810aea85f146feb8675741bce930fc2",
+      "geometrySha256": "bfa0f769d93b1e407cf2e4a781fb81b4441807e70837db1d2b5537a4d4dad3f1",
+      "bounds": {
+        "min": [
+          68.7537,
+          -130.91,
+          -64.069
+        ],
+        "max": [
+          113.59,
+          -101.498,
+          -41.0073
+        ]
+      },
+      "centre": [
+        91.17185,
+        -116.20400000000001,
+        -52.53815
+      ],
+      "extent": [
+        44.83630000000001,
+        29.411999999999992,
+        23.061700000000002
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 605
+      },
+      "topology": null,
+      "vertices": 605,
+      "triangles": 1200,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA44489",
+          "name": "plantar venous arch of foot",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA44884",
+          "name": "plantar venous arch of left foot",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA50722",
+          "name": "region of vascular tree organ",
+          "componentCount": 974
+        },
+        {
+          "id": "FMA50723",
+          "name": "vein",
+          "componentCount": 342
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA66644",
+          "name": "systemic vein",
+          "componentCount": 219
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA78049",
+          "name": "subdivision of inferior vena caval tree",
+          "componentCount": 115
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        },
+        {
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200
+        },
+        {
+          "id": "FMA86188",
+          "name": "segment of venous tree organ",
+          "componentCount": 371
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2129",
+      "bytes": 73675,
+      "crc32": 125263998,
+      "heldBy": [
+        "FMA44883"
+      ],
+      "candidateFor": [],
+      "sha256": "92481625802756875b17b8323c78f3c058a58b9f02832de79afe13fe3f439a04",
+      "geometrySha256": "e82fec186820fd462552ac9f085cc5700c553bef6da02f60391f3a7a0dc95d71",
+      "bounds": {
+        "min": [
+          -113.579,
+          -130.899,
+          -64.0708
+        ],
+        "max": [
+          -68.743,
+          -101.496,
+          -41.0154
+        ]
+      },
+      "centre": [
+        -91.161,
+        -116.19749999999999,
+        -52.5431
+      ],
+      "extent": [
+        44.836,
+        29.403000000000006,
+        23.055400000000006
+      ],
+      "sourceXDistribution": {
+        "negative": 621,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": null,
+      "vertices": 621,
+      "triangles": 1230,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA44489",
+          "name": "plantar venous arch of foot",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA44883",
+          "name": "plantar venous arch of right foot",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA50722",
+          "name": "region of vascular tree organ",
+          "componentCount": 974
+        },
+        {
+          "id": "FMA50723",
+          "name": "vein",
+          "componentCount": 342
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA66644",
+          "name": "systemic vein",
+          "componentCount": 219
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA78049",
+          "name": "subdivision of inferior vena caval tree",
+          "componentCount": 115
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        },
+        {
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200
+        },
+        {
+          "id": "FMA86188",
+          "name": "segment of venous tree organ",
+          "componentCount": 371
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2319",
+      "bytes": 124224,
+      "crc32": 3921495950,
+      "heldBy": [
+        "FMA85103"
+      ],
+      "candidateFor": [],
+      "sha256": "53ac45fad1eca7bb375ed8eea9a0dad718b6c211f2ba522ab51b5aedef64116a",
+      "geometrySha256": "8de739b4e8ffb537d83f41801ade98a76b606c7461241620b5e386c7d30e996f",
+      "bounds": {
+        "min": [
+          237.961,
+          -150.11,
+          720.503
+        ],
+        "max": [
+          295.903,
+          -126.918,
+          770.1
+        ]
+      },
+      "centre": [
+        266.932,
+        -138.514,
+        745.3015
+      ],
+      "extent": [
+        57.94200000000001,
+        23.192000000000007,
+        49.59699999999998
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 1068
+      },
+      "topology": null,
+      "vertices": 1068,
+      "triangles": 2070,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA22917",
+          "name": "tributary of venous anastomosis",
+          "componentCount": 22
+        },
+        {
+          "id": "FMA22922",
+          "name": "tributary of superficial palmar venous arch",
+          "componentCount": 20
+        },
+        {
+          "id": "FMA22926",
+          "name": "tributary of common palmar digital vein",
+          "componentCount": 18
+        },
+        {
+          "id": "FMA30314",
+          "name": "venous trunk",
+          "componentCount": 29
+        },
+        {
+          "id": "FMA50722",
+          "name": "region of vascular tree organ",
+          "componentCount": 974
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        },
+        {
+          "id": "FMA85095",
+          "name": "proper palmar digital vein of little finger",
+          "componentCount": 6
+        },
+        {
+          "id": "FMA85103",
+          "name": "proper palmar digital vein of left little finger",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200
+        },
+        {
+          "id": "FMA86188",
+          "name": "segment of venous tree organ",
+          "componentCount": 371
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2321",
+      "bytes": 53378,
+      "crc32": 758315698,
+      "heldBy": [
+        "FMA85103"
+      ],
+      "candidateFor": [],
+      "sha256": "7fcaf6db351dc940fc35ff4ddaf5068f13df0ce455513dd909a47534d035cad8",
+      "geometrySha256": "c76fe68842b58569e8174c1d81268eef24768db76e17fc2ddcc14d1e32df996f",
+      "bounds": {
+        "min": [
+          218.412,
+          -175.358,
+          683.429
+        ],
+        "max": [
+          239.566,
+          -129.409,
+          760.35
+        ]
+      },
+      "centre": [
+        228.989,
+        -152.3835,
+        721.8895
+      ],
+      "extent": [
+        21.153999999999996,
+        45.94900000000001,
+        76.92100000000005
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 474
+      },
+      "topology": null,
+      "vertices": 474,
+      "triangles": 878,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA22917",
+          "name": "tributary of venous anastomosis",
+          "componentCount": 22
+        },
+        {
+          "id": "FMA22922",
+          "name": "tributary of superficial palmar venous arch",
+          "componentCount": 20
+        },
+        {
+          "id": "FMA22926",
+          "name": "tributary of common palmar digital vein",
+          "componentCount": 18
+        },
+        {
+          "id": "FMA30314",
+          "name": "venous trunk",
+          "componentCount": 29
+        },
+        {
+          "id": "FMA50722",
+          "name": "region of vascular tree organ",
+          "componentCount": 974
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        },
+        {
+          "id": "FMA85095",
+          "name": "proper palmar digital vein of little finger",
+          "componentCount": 6
+        },
+        {
+          "id": "FMA85103",
+          "name": "proper palmar digital vein of left little finger",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200
+        },
+        {
+          "id": "FMA86188",
+          "name": "segment of venous tree organ",
+          "componentCount": 371
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2329",
+      "bytes": 33428,
+      "crc32": 3329336039,
+      "heldBy": [
+        "FMA85103"
+      ],
+      "candidateFor": [],
+      "sha256": "254be60fa4f1ccf26b78a446a9ac4f47e3882faa6e72a47430b9db98cdc1b6b6",
+      "geometrySha256": "cc985ffe3561af95f92e3fea97f18eeecdf9ba62262b96331d9988017b27309a",
+      "bounds": {
+        "min": [
+          223.553,
+          -175.134,
+          680.751
+        ],
+        "max": [
+          239.275,
+          -148.065,
+          728.119
+        ]
+      },
+      "centre": [
+        231.414,
+        -161.59949999999998,
+        704.435
+      ],
+      "extent": [
+        15.722000000000008,
+        27.06899999999999,
+        47.36800000000005
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 305
+      },
+      "topology": null,
+      "vertices": 305,
+      "triangles": 538,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA22917",
+          "name": "tributary of venous anastomosis",
+          "componentCount": 22
+        },
+        {
+          "id": "FMA22922",
+          "name": "tributary of superficial palmar venous arch",
+          "componentCount": 20
+        },
+        {
+          "id": "FMA22926",
+          "name": "tributary of common palmar digital vein",
+          "componentCount": 18
+        },
+        {
+          "id": "FMA30314",
+          "name": "venous trunk",
+          "componentCount": 29
+        },
+        {
+          "id": "FMA50722",
+          "name": "region of vascular tree organ",
+          "componentCount": 974
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        },
+        {
+          "id": "FMA85095",
+          "name": "proper palmar digital vein of little finger",
+          "componentCount": 6
+        },
+        {
+          "id": "FMA85103",
+          "name": "proper palmar digital vein of left little finger",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200
+        },
+        {
+          "id": "FMA86188",
+          "name": "segment of venous tree organ",
+          "componentCount": 371
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2349",
+      "bytes": 126878,
+      "crc32": 2129639294,
+      "heldBy": [
+        "FMA85102"
+      ],
+      "candidateFor": [],
+      "sha256": "1992bd5b95aa2aa96b71d25536cf45298d05c80f434151b48c4b6c5d47aac628",
+      "geometrySha256": "39d701ebee415e48694482f19ba38cae56e049ee65210b3290871ec13c653881",
+      "bounds": {
+        "min": [
+          -295.92,
+          -150.113,
+          720.499
+        ],
+        "max": [
+          -237.928,
+          -126.897,
+          770.11
+        ]
+      },
+      "centre": [
+        -266.924,
+        -138.505,
+        745.3045
+      ],
+      "extent": [
+        57.99200000000002,
+        23.215999999999994,
+        49.61099999999999
+      ],
+      "sourceXDistribution": {
+        "negative": 1080,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": null,
+      "vertices": 1080,
+      "triangles": 2088,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA22917",
+          "name": "tributary of venous anastomosis",
+          "componentCount": 22
+        },
+        {
+          "id": "FMA22922",
+          "name": "tributary of superficial palmar venous arch",
+          "componentCount": 20
+        },
+        {
+          "id": "FMA22926",
+          "name": "tributary of common palmar digital vein",
+          "componentCount": 18
+        },
+        {
+          "id": "FMA30314",
+          "name": "venous trunk",
+          "componentCount": 29
+        },
+        {
+          "id": "FMA50722",
+          "name": "region of vascular tree organ",
+          "componentCount": 974
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        },
+        {
+          "id": "FMA85095",
+          "name": "proper palmar digital vein of little finger",
+          "componentCount": 6
+        },
+        {
+          "id": "FMA85102",
+          "name": "proper palmar digital vein of right little finger",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200
+        },
+        {
+          "id": "FMA86188",
+          "name": "segment of venous tree organ",
+          "componentCount": 371
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2351",
+      "bytes": 54279,
+      "crc32": 3442870607,
+      "heldBy": [
+        "FMA85102"
+      ],
+      "candidateFor": [],
+      "sha256": "5fea67a3ba8a25230b1c4f3ea4dc3366d360149048da555afaf41bda36f41e6e",
+      "geometrySha256": "8805cf383539b0e73669e75cc84c2fd3e82dad20cae2d1d58b61a7806fc032b6",
+      "bounds": {
+        "min": [
+          -239.586,
+          -175.37,
+          683.426
+        ],
+        "max": [
+          -218.411,
+          -129.4,
+          760.342
+        ]
+      },
+      "centre": [
+        -228.9985,
+        -152.385,
+        721.884
+      ],
+      "extent": [
+        21.17500000000001,
+        45.97,
+        76.91599999999994
+      ],
+      "sourceXDistribution": {
+        "negative": 479,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": null,
+      "vertices": 479,
+      "triangles": 886,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA22917",
+          "name": "tributary of venous anastomosis",
+          "componentCount": 22
+        },
+        {
+          "id": "FMA22922",
+          "name": "tributary of superficial palmar venous arch",
+          "componentCount": 20
+        },
+        {
+          "id": "FMA22926",
+          "name": "tributary of common palmar digital vein",
+          "componentCount": 18
+        },
+        {
+          "id": "FMA30314",
+          "name": "venous trunk",
+          "componentCount": 29
+        },
+        {
+          "id": "FMA50722",
+          "name": "region of vascular tree organ",
+          "componentCount": 974
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        },
+        {
+          "id": "FMA85095",
+          "name": "proper palmar digital vein of little finger",
+          "componentCount": 6
+        },
+        {
+          "id": "FMA85102",
+          "name": "proper palmar digital vein of right little finger",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200
+        },
+        {
+          "id": "FMA86188",
+          "name": "segment of venous tree organ",
+          "componentCount": 371
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2360",
+      "bytes": 33726,
+      "crc32": 3323820871,
+      "heldBy": [
+        "FMA85102"
+      ],
+      "candidateFor": [],
+      "sha256": "1ae2aa10322ba94522a86be414ed4812fd8ee434e671b097a86507922b8c112d",
+      "geometrySha256": "d6cb6cff7a015d77e597ade5d083b2abd8d3fba595ee52e4ac043e065f292dd2",
+      "bounds": {
+        "min": [
+          -239.259,
+          -175.134,
+          680.741
+        ],
+        "max": [
+          -223.514,
+          -148.072,
+          728.123
+        ]
+      },
+      "centre": [
+        -231.3865,
+        -161.603,
+        704.432
+      ],
+      "extent": [
+        15.744999999999976,
+        27.061999999999983,
+        47.38200000000006
+      ],
+      "sourceXDistribution": {
+        "negative": 302,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": null,
+      "vertices": 302,
+      "triangles": 548,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA22917",
+          "name": "tributary of venous anastomosis",
+          "componentCount": 22
+        },
+        {
+          "id": "FMA22922",
+          "name": "tributary of superficial palmar venous arch",
+          "componentCount": 20
+        },
+        {
+          "id": "FMA22926",
+          "name": "tributary of common palmar digital vein",
+          "componentCount": 18
+        },
+        {
+          "id": "FMA30314",
+          "name": "venous trunk",
+          "componentCount": 29
+        },
+        {
+          "id": "FMA50722",
+          "name": "region of vascular tree organ",
+          "componentCount": 974
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        },
+        {
+          "id": "FMA85095",
+          "name": "proper palmar digital vein of little finger",
+          "componentCount": 6
+        },
+        {
+          "id": "FMA85102",
+          "name": "proper palmar digital vein of right little finger",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200
+        },
+        {
+          "id": "FMA86188",
+          "name": "segment of venous tree organ",
+          "componentCount": 371
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2544",
+      "bytes": 296272,
+      "crc32": 2654709741,
+      "heldBy": [
+        "FMA45859"
+      ],
+      "candidateFor": [],
+      "sha256": "9f6862a86ca831359adb98d87ef2b051433827727f2c4b51c4fbf59c8212b84c",
+      "geometrySha256": "6ad1f4c1d15f696aa155f9d2197fe1ab505103f01efb6a403bec986cff80555e",
+      "bounds": {
+        "min": [
+          0.676444,
+          -88.0783,
+          776.097
+        ],
+        "max": [
+          49.0794,
+          -15.0949,
+          821.629
+        ]
+      },
+      "centre": [
+        24.877921999999998,
+        -51.5866,
+        798.863
+      ],
+      "extent": [
+        48.402956,
+        72.9834,
+        45.53200000000004
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 2898
+      },
+      "topology": null,
+      "vertices": 2898,
+      "triangles": 3846,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA10474",
+          "name": "zone of muscle organ",
+          "componentCount": 38
+        },
+        {
+          "id": "FMA19089",
+          "name": "zone of levator ani",
+          "componentCount": 9
+        },
+        {
+          "id": "FMA19092",
+          "name": "iliococcygeus",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA45859",
+          "name": "left iliococcygeus",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA55268",
+          "name": "organ zone",
+          "componentCount": 156
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2545",
+      "bytes": 327718,
+      "crc32": 2689520987,
+      "heldBy": [
+        "FMA45855"
+      ],
+      "candidateFor": [],
+      "sha256": "1ef611b58e0beba262d31c1015ade4a5e5ad0bd6cdbc08d3fd68be8d3444d393",
+      "geometrySha256": "439b309e2b5831d6ef71fd1a310b8309d2c4b60a559532df40b9f8dce57725c9",
+      "bounds": {
+        "min": [
+          3.16191,
+          -100.419,
+          767.159
+        ],
+        "max": [
+          35.3417,
+          -10.4693,
+          814.51
+        ]
+      },
+      "centre": [
+        19.251805,
+        -55.44415,
+        790.8344999999999
+      ],
+      "extent": [
+        32.179790000000004,
+        89.94969999999999,
+        47.351
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 2937
+      },
+      "topology": null,
+      "vertices": 2937,
+      "triangles": 4670,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA10474",
+          "name": "zone of muscle organ",
+          "componentCount": 38
+        },
+        {
+          "id": "FMA19089",
+          "name": "zone of levator ani",
+          "componentCount": 9
+        },
+        {
+          "id": "FMA19090",
+          "name": "pubococcygeus",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA45855",
+          "name": "left pubococcygeus",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA55268",
+          "name": "organ zone",
+          "componentCount": 156
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2546",
+      "bytes": 304204,
+      "crc32": 129947194,
+      "heldBy": [
+        "FMA45857"
+      ],
+      "candidateFor": [],
+      "sha256": "c128924a00c0eb58eb0ee74249cf9a63a1b962e5e91133c0f958d268f019fb72",
+      "geometrySha256": "b6f0c00758b5fc7200af4dba3454c179962e7d775a75d5453c364fe53658cefc",
+      "bounds": {
+        "min": [
+          3.23087,
+          -102.805,
+          763.045
+        ],
+        "max": [
+          32.6242,
+          -21.3865,
+          791.788
+        ]
+      },
+      "centre": [
+        17.927535000000002,
+        -62.09575,
+        777.4165
+      ],
+      "extent": [
+        29.393330000000002,
+        81.41850000000001,
+        28.743000000000052
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 3163
+      },
+      "topology": null,
+      "vertices": 3163,
+      "triangles": 3618,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA10474",
+          "name": "zone of muscle organ",
+          "componentCount": 38
+        },
+        {
+          "id": "FMA19089",
+          "name": "zone of levator ani",
+          "componentCount": 9
+        },
+        {
+          "id": "FMA19091",
+          "name": "puborectalis",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA45857",
+          "name": "left puborectalis",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA55268",
+          "name": "organ zone",
+          "componentCount": 156
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2549",
+      "bytes": 325824,
+      "crc32": 4215895704,
+      "heldBy": [
+        "FMA45858"
+      ],
+      "candidateFor": [],
+      "sha256": "b5733ded901a2785ed87a12451f77118f4ca3e72abba87d1900a5fd758f23ccc",
+      "geometrySha256": "bbe75123c0394f41f977d26e579f3729ecf888f056243d34d685f7c2d7530058",
+      "bounds": {
+        "min": [
+          -49.1884,
+          -88.1942,
+          776.094
+        ],
+        "max": [
+          44.3877,
+          -15.0529,
+          821.722
+        ]
+      },
+      "centre": [
+        -2.4003499999999995,
+        -51.623549999999994,
+        798.908
+      ],
+      "extent": [
+        93.5761,
+        73.1413,
+        45.62799999999993
+      ],
+      "sourceXDistribution": {
+        "negative": 3231,
+        "zero": 0,
+        "positive": 88
+      },
+      "topology": null,
+      "vertices": 3319,
+      "triangles": 3864,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA10474",
+          "name": "zone of muscle organ",
+          "componentCount": 38
+        },
+        {
+          "id": "FMA19089",
+          "name": "zone of levator ani",
+          "componentCount": 9
+        },
+        {
+          "id": "FMA19092",
+          "name": "iliococcygeus",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA45858",
+          "name": "right iliococcygeus",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA55268",
+          "name": "organ zone",
+          "componentCount": 156
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2550",
+      "bytes": 364094,
+      "crc32": 2316578153,
+      "heldBy": [
+        "FMA45854"
+      ],
+      "candidateFor": [],
+      "sha256": "7621e58ec06b0bd01e66d84e8d3f9d7245c1a892bdf44e514cc7a8694df8d574",
+      "geometrySha256": "72a8f8827ae7f4e1272800687059bf54d9b28edd4636abce8b1e25679b3f7df4",
+      "bounds": {
+        "min": [
+          -35.4065,
+          -100.53,
+          767.246
+        ],
+        "max": [
+          28.2547,
+          -10.482,
+          814.623
+        ]
+      },
+      "centre": [
+        -3.5759000000000007,
+        -55.506,
+        790.9345000000001
+      ],
+      "extent": [
+        63.6612,
+        90.048,
+        47.377000000000066
+      ],
+      "sourceXDistribution": {
+        "negative": 3348,
+        "zero": 0,
+        "positive": 150
+      },
+      "topology": null,
+      "vertices": 3498,
+      "triangles": 4616,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA10474",
+          "name": "zone of muscle organ",
+          "componentCount": 38
+        },
+        {
+          "id": "FMA19089",
+          "name": "zone of levator ani",
+          "componentCount": 9
+        },
+        {
+          "id": "FMA19090",
+          "name": "pubococcygeus",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA45854",
+          "name": "right pubococcygeus",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA55268",
+          "name": "organ zone",
+          "componentCount": 156
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2551",
+      "bytes": 367735,
+      "crc32": 3885179437,
+      "heldBy": [
+        "FMA45856"
+      ],
+      "candidateFor": [],
+      "sha256": "e6fd6ceaabdfdab3c0af96815aede5e76d16bc59c52da4dd393c5b6f42239a81",
+      "geometrySha256": "ee7bf5ddb337c15b06a226fa585c84cab615a8ec3ed93b8111faecd4b41868bb",
+      "bounds": {
+        "min": [
+          -32.4661,
+          -102.803,
+          763.008
+        ],
+        "max": [
+          24.6095,
+          -21.3057,
+          791.816
+        ]
+      },
+      "centre": [
+        -3.9282999999999983,
+        -62.05435,
+        777.412
+      ],
+      "extent": [
+        57.075599999999994,
+        81.4973,
+        28.807999999999993
+      ],
+      "sourceXDistribution": {
+        "negative": 3744,
+        "zero": 0,
+        "positive": 420
+      },
+      "topology": null,
+      "vertices": 4164,
+      "triangles": 3638,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA10474",
+          "name": "zone of muscle organ",
+          "componentCount": 38
+        },
+        {
+          "id": "FMA19089",
+          "name": "zone of levator ani",
+          "componentCount": 9
+        },
+        {
+          "id": "FMA19091",
+          "name": "puborectalis",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA45856",
+          "name": "right puborectalis",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA55268",
+          "name": "organ zone",
+          "componentCount": 156
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2552",
+      "bytes": 46449,
+      "crc32": 21984913,
+      "heldBy": [
+        "FMA46442"
+      ],
+      "candidateFor": [],
+      "sha256": "4737618e8f21b301c79f7fe5dfc0ee74a360d7dadc172590d0a6a411b415808f",
+      "geometrySha256": "74afa32fcb633fa7cd9c7aa24a4a6ccc178a99c347f38b9f986788c5f2820e84",
+      "bounds": {
+        "min": [
+          23.826,
+          -102.428,
+          786.718
+        ],
+        "max": [
+          49.0786,
+          -36.3927,
+          820.279
+        ]
+      },
+      "centre": [
+        36.4523,
+        -69.41035,
+        803.4984999999999
+      ],
+      "extent": [
+        25.2526,
+        66.0353,
+        33.561000000000035
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 440
+      },
+      "topology": null,
+      "vertices": 440,
+      "triangles": 710,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA9721",
+          "name": "tendon",
+          "componentCount": 6
+        },
+        {
+          "id": "FMA14065",
+          "name": "organ component",
+          "componentCount": 66
+        },
+        {
+          "id": "FMA46442",
+          "name": "tendinous arch of levator ani",
+          "componentCount": 4
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2553",
+      "bytes": 46895,
+      "crc32": 1688668148,
+      "heldBy": [
+        "FMA46442"
+      ],
+      "candidateFor": [],
+      "sha256": "16b089edb9ee8093de2d05ba3baa976d0c8e3fd38036b90d3bf89a3caf6489c8",
+      "geometrySha256": "cb400fe68987121f03e3e651784cfcc71997a96aa74dce23fdcfaf37444785e9",
+      "bounds": {
+        "min": [
+          -49.1063,
+          -102.46,
+          786.648
+        ],
+        "max": [
+          -23.7588,
+          -36.2938,
+          820.334
+        ]
+      },
+      "centre": [
+        -36.43255,
+        -69.37689999999999,
+        803.491
+      ],
+      "extent": [
+        25.347499999999997,
+        66.1662,
+        33.68599999999992
+      ],
+      "sourceXDistribution": {
+        "negative": 434,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": null,
+      "vertices": 434,
+      "triangles": 722,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA9721",
+          "name": "tendon",
+          "componentCount": 6
+        },
+        {
+          "id": "FMA14065",
+          "name": "organ component",
+          "componentCount": 66
+        },
+        {
+          "id": "FMA46442",
+          "name": "tendinous arch of levator ani",
+          "componentCount": 4
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2742",
+      "bytes": 406874,
+      "crc32": 1189272098,
+      "heldBy": [
+        "FMA46633"
+      ],
+      "candidateFor": [],
+      "sha256": "b242673d67bc4abc71432268d4fb03df4bb6e707ccdf890829b7544d14d87d26",
+      "geometrySha256": "d382bb21b604143b25e542d0d05ec95163b8e4f1e425f9e874f9806b9a87da09",
+      "bounds": {
+        "min": [
+          -0.662964,
+          -122.932,
+          1430.11
+        ],
+        "max": [
+          17.6506,
+          -91.3659,
+          1470.35
+        ]
+      },
+      "centre": [
+        8.493818000000001,
+        -107.14895,
+        1450.23
+      ],
+      "extent": [
+        18.313564,
+        31.566100000000006,
+        40.24000000000001
+      ],
+      "sourceXDistribution": {
+        "negative": 598,
+        "zero": 0,
+        "positive": 2899
+      },
+      "topology": null,
+      "vertices": 3497,
+      "triangles": 5904,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA5022",
+          "name": "muscle organ",
+          "componentCount": 323
+        },
+        {
+          "id": "FMA9617",
+          "name": "muscle of neck",
+          "componentCount": 54
+        },
+        {
+          "id": "FMA46619",
+          "name": "muscle of pharynx",
+          "componentCount": 12
+        },
+        {
+          "id": "FMA46620",
+          "name": "constrictor muscle of pharynx",
+          "componentCount": 6
+        },
+        {
+          "id": "FMA46622",
+          "name": "middle pharyngeal constrictor",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA46633",
+          "name": "right middle pharyngeal constrictor",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA55665",
+          "name": "nonparenchymatous organ",
+          "componentCount": 386
+        },
+        {
+          "id": "FMA55670",
+          "name": "solid organ",
+          "componentCount": 402
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67498",
+          "name": "organ",
+          "componentCount": 649
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2744",
+      "bytes": 130451,
+      "crc32": 3769170173,
+      "heldBy": [
+        "FMA55620"
+      ],
+      "candidateFor": [],
+      "sha256": "00c921a224843038217ab5f3c9d1e7a561a6dd041b0a4b7d563f6ad69fd149de",
+      "geometrySha256": "aaffec1fcb2eee5404920709c21e0a27bfe5fc341d7187e281938edb767d1afa",
+      "bounds": {
+        "min": [
+          25.3863,
+          -130.344,
+          1460.94
+        ],
+        "max": [
+          33.7155,
+          -118.524,
+          1482.94
+        ]
+      },
+      "centre": [
+        29.5509,
+        -124.434,
+        1471.94
+      ],
+      "extent": [
+        8.3292,
+        11.819999999999993,
+        22
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 1214
+      },
+      "topology": null,
+      "vertices": 1214,
+      "triangles": 1982,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA9657",
+          "name": "anatomical line",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA50705",
+          "name": "anatomical boundary entity",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA55618",
+          "name": "pterygomandibular raphe",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA55620",
+          "name": "left pterygomandibular raphe",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67112",
+          "name": "immaterial anatomical entity",
+          "componentCount": 12
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2749",
+      "bytes": 1210966,
+      "crc32": 1035276125,
+      "heldBy": [
+        "FMA55077"
+      ],
+      "candidateFor": [],
+      "sha256": "62957c500f1d400e6d88ac869b03434e3d6fc1abe2fddb6ed2909f99a2999a9c",
+      "geometrySha256": "68abf5dd4695f819805f874ca897ffedda14b61618a4e82c83f769fcacf7e491",
+      "bounds": {
+        "min": [
+          -1.6755,
+          -99.3891,
+          1385.56
+        ],
+        "max": [
+          0.574499,
+          -84.8757,
+          1500.41
+        ]
+      },
+      "centre": [
+        -0.5505005000000001,
+        -92.13239999999999,
+        1442.9850000000001
+      ],
+      "extent": [
+        2.249999,
+        14.513400000000004,
+        114.85000000000014
+      ],
+      "sourceXDistribution": {
+        "negative": 8594,
+        "zero": 0,
+        "positive": 3920
+      },
+      "topology": null,
+      "vertices": 12514,
+      "triangles": 12968,
+      "degenerateTriangles": 3,
+      "sameTreeAliases": [
+        {
+          "id": "FMA9657",
+          "name": "anatomical line",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA50705",
+          "name": "anatomical boundary entity",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA55077",
+          "name": "pharyngeal raphe",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67112",
+          "name": "immaterial anatomical entity",
+          "componentCount": 12
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2754",
+      "bytes": 406587,
+      "crc32": 3951750132,
+      "heldBy": [
+        "FMA46634"
+      ],
+      "candidateFor": [],
+      "sha256": "9583ea54a06a4d8d52aa9f3578a0f97931634c86db01aa2f37059f9974fdab39",
+      "geometrySha256": "9fdcb4087174227bf3cb6ea49462550acc78543d7b371b3c30b23cc5e6269088",
+      "bounds": {
+        "min": [
+          -19.2071,
+          -123.312,
+          1429.99
+        ],
+        "max": [
+          -0.421954,
+          -91.3296,
+          1470.46
+        ]
+      },
+      "centre": [
+        -9.814527,
+        -107.32079999999999,
+        1450.225
+      ],
+      "extent": [
+        18.785146,
+        31.9824,
+        40.47000000000003
+      ],
+      "sourceXDistribution": {
+        "negative": 3454,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": null,
+      "vertices": 3454,
+      "triangles": 5912,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA5022",
+          "name": "muscle organ",
+          "componentCount": 323
+        },
+        {
+          "id": "FMA9617",
+          "name": "muscle of neck",
+          "componentCount": 54
+        },
+        {
+          "id": "FMA46619",
+          "name": "muscle of pharynx",
+          "componentCount": 12
+        },
+        {
+          "id": "FMA46620",
+          "name": "constrictor muscle of pharynx",
+          "componentCount": 6
+        },
+        {
+          "id": "FMA46622",
+          "name": "middle pharyngeal constrictor",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA46634",
+          "name": "left middle pharyngeal constrictor",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA55665",
+          "name": "nonparenchymatous organ",
+          "componentCount": 386
+        },
+        {
+          "id": "FMA55670",
+          "name": "solid organ",
+          "componentCount": 402
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67498",
+          "name": "organ",
+          "componentCount": 649
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2756",
+      "bytes": 129932,
+      "crc32": 3235486555,
+      "heldBy": [
+        "FMA55619"
+      ],
+      "candidateFor": [],
+      "sha256": "2e31cca191d30db9f95b09a9a98013d007b63b96d958ae2594f08cbc41a64015",
+      "geometrySha256": "dcc43e814d9648b262a35cb6c8eed46a68f118dab8f01b04eecacc5b25d024e8",
+      "bounds": {
+        "min": [
+          -35.0318,
+          -130.355,
+          1460.93
+        ],
+        "max": [
+          -26.6914,
+          -118.516,
+          1482.93
+        ]
+      },
+      "centre": [
+        -30.8616,
+        -124.43549999999999,
+        1471.93
+      ],
+      "extent": [
+        8.340399999999995,
+        11.838999999999984,
+        22
+      ],
+      "sourceXDistribution": {
+        "negative": 1186,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": null,
+      "vertices": 1186,
+      "triangles": 1982,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA9657",
+          "name": "anatomical line",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA50705",
+          "name": "anatomical boundary entity",
+          "componentCount": 3
+        },
+        {
+          "id": "FMA55618",
+          "name": "pterygomandibular raphe",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA55619",
+          "name": "right pterygomandibular raphe",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67112",
+          "name": "immaterial anatomical entity",
+          "componentCount": 12
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2774",
+      "bytes": 482718,
+      "crc32": 3347626632,
+      "heldBy": [
+        "FMA46605"
+      ],
+      "candidateFor": [],
+      "sha256": "a7922984f588cdb61a10fd9d6bc901cf843db3520ce0a5a38ba8edfb51e05bab",
+      "geometrySha256": "49021220a7a089eeeb45114c92d92a07e755b6f387173d756921605606bffc01",
+      "bounds": {
+        "min": [
+          3.5512,
+          -108.822,
+          1409.42
+        ],
+        "max": [
+          7.85456,
+          -96.7822,
+          1432.45
+        ]
+      },
+      "centre": [
+        5.70288,
+        -102.8021,
+        1420.935
+      ],
+      "extent": [
+        4.30336,
+        12.0398,
+        23.029999999999973
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 5804
+      },
+      "topology": null,
+      "vertices": 5804,
+      "triangles": 4510,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA10474",
+          "name": "zone of muscle organ",
+          "componentCount": 38
+        },
+        {
+          "id": "FMA46601",
+          "name": "zone of oblique arytenoid",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA46602",
+          "name": "aryepiglotticus",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA46605",
+          "name": "left aryepiglotticus",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA55268",
+          "name": "organ zone",
+          "componentCount": 156
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2777",
+      "bytes": 309120,
+      "crc32": 1191772527,
+      "heldBy": [
+        "FMA55252"
+      ],
+      "candidateFor": [],
+      "sha256": "4f12686c550ea45f54b88d3fdb6e48c7ce577332fdb3d6b0465722516acd6230",
+      "geometrySha256": "97ba2ccddc76e4efa5a0bda02bd950133e9d21c36f766ed78c6ba0db10ebdd38",
+      "bounds": {
+        "min": [
+          -6.75,
+          -115.641,
+          1391.92
+        ],
+        "max": [
+          8.17148,
+          -97.5042,
+          1404.73
+        ]
+      },
+      "centre": [
+        0.7107400000000004,
+        -106.5726,
+        1398.325
+      ],
+      "extent": [
+        14.92148,
+        18.136800000000008,
+        12.809999999999945
+      ],
+      "sourceXDistribution": {
+        "negative": 52,
+        "zero": 0,
+        "positive": 2806
+      },
+      "topology": null,
+      "vertices": 2858,
+      "triangles": 4306,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA14065",
+          "name": "organ component",
+          "componentCount": 66
+        },
+        {
+          "id": "FMA55250",
+          "name": "conus elasticus",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA55252",
+          "name": "left conus elasticus",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA75445",
+          "name": "membrane organ component",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2791",
+      "bytes": 431727,
+      "crc32": 4292662779,
+      "heldBy": [
+        "FMA46604"
+      ],
+      "candidateFor": [],
+      "sha256": "588ffa8fcec00eaa9ce1488576161a548941ba4dd3866a58063b5a78da7c891d",
+      "geometrySha256": "230f029c90926021d121b5ffcb3bbdb0ad8670b5d17ecff9e90c667b521dc120",
+      "bounds": {
+        "min": [
+          -9.1688,
+          -108.823,
+          1409.42
+        ],
+        "max": [
+          7.5112,
+          -96.7789,
+          1432.45
+        ]
+      },
+      "centre": [
+        -0.8287999999999998,
+        -102.80095,
+        1420.935
+      ],
+      "extent": [
+        16.68,
+        12.0441,
+        23.029999999999973
+      ],
+      "sourceXDistribution": {
+        "negative": 4839,
+        "zero": 0,
+        "positive": 108
+      },
+      "topology": null,
+      "vertices": 4947,
+      "triangles": 4366,
+      "degenerateTriangles": 3,
+      "sameTreeAliases": [
+        {
+          "id": "FMA10474",
+          "name": "zone of muscle organ",
+          "componentCount": 38
+        },
+        {
+          "id": "FMA46601",
+          "name": "zone of oblique arytenoid",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA46602",
+          "name": "aryepiglotticus",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA46604",
+          "name": "right aryepiglotticus",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA55268",
+          "name": "organ zone",
+          "componentCount": 156
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ2794",
+      "bytes": 391940,
+      "crc32": 2989415329,
+      "heldBy": [
+        "FMA55251"
+      ],
+      "candidateFor": [],
+      "sha256": "f3729b2837d39fe4ac58afcfcd4467fbe1999c78e6ad5737566f9494ddc01ff2",
+      "geometrySha256": "2f5b80daaedc73f2ffb00ac6f9927b50adb19cfa6c2ca382e6b1fa7805307e5b",
+      "bounds": {
+        "min": [
+          -9.47259,
+          -115.691,
+          1391.96
+        ],
+        "max": [
+          -2.15,
+          -97.5244,
+          1404.77
+        ]
+      },
+      "centre": [
+        -5.811295,
+        -106.6077,
+        1398.365
+      ],
+      "extent": [
+        7.32259,
+        18.166600000000003,
+        12.809999999999945
+      ],
+      "sourceXDistribution": {
+        "negative": 4274,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": null,
+      "vertices": 4274,
+      "triangles": 4366,
+      "degenerateTriangles": 2,
+      "sameTreeAliases": [
+        {
+          "id": "FMA14065",
+          "name": "organ component",
+          "componentCount": 66
+        },
+        {
+          "id": "FMA55250",
+          "name": "conus elasticus",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA55251",
+          "name": "right conus elasticus",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA75445",
+          "name": "membrane organ component",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ3437",
+      "bytes": 13000,
+      "crc32": 3261105556,
+      "heldBy": [
+        "FMA14809"
+      ],
+      "candidateFor": [],
+      "sha256": "008f2f9c91d9ae5949c77db35a420e8411d8804e2c30c9270bda8b2afc2d65d6",
+      "geometrySha256": "8a58d87d9c2d38fc51dcf3b915ba75cf7a8f4244a37a115f746cbacbb8f2dabf",
+      "bounds": {
+        "min": [
+          -53.3066,
+          -132.3,
+          936.634
+        ],
+        "max": [
+          -29.1445,
+          -121.474,
+          957.031
+        ]
+      },
+      "centre": [
+        -41.22555,
+        -126.887,
+        946.8325
+      ],
+      "extent": [
+        24.162100000000002,
+        10.826000000000008,
+        20.396999999999935
+      ],
+      "sourceXDistribution": {
+        "negative": 134,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": null,
+      "vertices": 134,
+      "triangles": 186,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA14809",
+          "name": "ileal artery",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA50720",
+          "name": "artery",
+          "componentCount": 562
+        },
+        {
+          "id": "FMA50722",
+          "name": "region of vascular tree organ",
+          "componentCount": 974
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA66464",
+          "name": "systemic artery",
+          "componentCount": 463
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA70478",
+          "name": "subdivision of superior mesenteric artery",
+          "componentCount": 13
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        },
+        {
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200
+        },
+        {
+          "id": "FMA86187",
+          "name": "segment of arterial tree organ",
+          "componentCount": 603
+        }
+      ],
+      "exactGeometryMatches": [
+        {
+          "tree": "partof",
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ],
+          "displayedBy": []
+        }
+      ],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ3530",
+      "bytes": 186511,
+      "crc32": 1589443419,
+      "heldBy": [
+        "FMA4785"
+      ],
+      "candidateFor": [],
+      "sha256": "4d07d6dc4625ed7279c68e5a650a65d79354b4f9ef8db3ed770f9fac6195dc4b",
+      "geometrySha256": "57ffc1cf27e9620d9e3185aac059301413b1a24e1c810dbb6bf27086f1be97c1",
+      "bounds": {
+        "min": [
+          14.1574,
+          -201,
+          806.682
+        ],
+        "max": [
+          43.6225,
+          -138.602,
+          933.302
+        ]
+      },
+      "centre": [
+        28.889950000000002,
+        -169.801,
+        869.992
+      ],
+      "extent": [
+        29.4651,
+        62.397999999999996,
+        126.62
+      ],
+      "sourceXDistribution": {
+        "negative": 0,
+        "zero": 0,
+        "positive": 1597
+      },
+      "topology": null,
+      "vertices": 1597,
+      "triangles": 2938,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA4731",
+          "name": "superior epigastric vein",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA4785",
+          "name": "left superior epigastric vein",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA14293",
+          "name": "tributary of internal thoracic vein",
+          "componentCount": 4
+        },
+        {
+          "id": "FMA50722",
+          "name": "region of vascular tree organ",
+          "componentCount": 974
+        },
+        {
+          "id": "FMA50723",
+          "name": "vein",
+          "componentCount": 342
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA66644",
+          "name": "systemic vein",
+          "componentCount": 219
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA77883",
+          "name": "subdivision of brachiocephalic vein",
+          "componentCount": 44
+        },
+        {
+          "id": "FMA78048",
+          "name": "subdivision of superior vena caval tree",
+          "componentCount": 60
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        },
+        {
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200
+        },
+        {
+          "id": "FMA86188",
+          "name": "segment of venous tree organ",
+          "componentCount": 371
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ3615",
+      "bytes": 198373,
+      "crc32": 985232257,
+      "heldBy": [
+        "FMA4771"
+      ],
+      "candidateFor": [],
+      "sha256": "ccf663d4c14d3e8c22e7878ac5661256d97d650cbc941fc3b4f960174d711c1c",
+      "geometrySha256": "90fbce3dfd06046ed874a5207fa59646abdadb3b246259fbc59defd009e001d1",
+      "bounds": {
+        "min": [
+          -43.6304,
+          -201.004,
+          805.161
+        ],
+        "max": [
+          -14.1476,
+          -132.467,
+          933.348
+        ]
+      },
+      "centre": [
+        -28.889000000000003,
+        -166.7355,
+        869.2545
+      ],
+      "extent": [
+        29.4828,
+        68.53699999999998,
+        128.187
+      ],
+      "sourceXDistribution": {
+        "negative": 1649,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": null,
+      "vertices": 1649,
+      "triangles": 3142,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA4731",
+          "name": "superior epigastric vein",
+          "componentCount": 2
+        },
+        {
+          "id": "FMA4771",
+          "name": "right superior epigastric vein",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA14293",
+          "name": "tributary of internal thoracic vein",
+          "componentCount": 4
+        },
+        {
+          "id": "FMA50722",
+          "name": "region of vascular tree organ",
+          "componentCount": 974
+        },
+        {
+          "id": "FMA50723",
+          "name": "vein",
+          "componentCount": 342
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA66644",
+          "name": "systemic vein",
+          "componentCount": 219
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA77883",
+          "name": "subdivision of brachiocephalic vein",
+          "componentCount": 44
+        },
+        {
+          "id": "FMA78048",
+          "name": "subdivision of superior vena caval tree",
+          "componentCount": 60
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        },
+        {
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200
+        },
+        {
+          "id": "FMA86188",
+          "name": "segment of venous tree organ",
+          "componentCount": 371
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "isa",
+      "file": "FJ3644",
+      "bytes": 90698,
+      "crc32": 780614258,
+      "heldBy": [
+        "FMA66358"
+      ],
+      "candidateFor": [],
+      "sha256": "5efa2442405cfef5576676fe96b3db696a049f298c50186adf3decdf2ad78d0e",
+      "geometrySha256": "153dcdbe2c69e7598efb9de8eab5f4fd6af30ed7af2b276aa27c56c09db89456",
+      "bounds": {
+        "min": [
+          -60.8868,
+          -151.188,
+          909.407
+        ],
+        "max": [
+          8.58199,
+          -112.053,
+          1054.73
+        ]
+      },
+      "centre": [
+        -26.152405,
+        -131.6205,
+        982.0685000000001
+      ],
+      "extent": [
+        69.46879,
+        39.13499999999999,
+        145.32299999999998
+      ],
+      "sourceXDistribution": {
+        "negative": 660,
+        "zero": 0,
+        "positive": 122
+      },
+      "topology": null,
+      "vertices": 782,
+      "triangles": 1506,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA30313",
+          "name": "arterial trunk",
+          "componentCount": 26
+        },
+        {
+          "id": "FMA49918",
+          "name": "systemic arterial trunk",
+          "componentCount": 24
+        },
+        {
+          "id": "FMA50722",
+          "name": "region of vascular tree organ",
+          "componentCount": 974
+        },
+        {
+          "id": "FMA61775",
+          "name": "physical anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA62955",
+          "name": "anatomical entity",
+          "componentCount": 2234
+        },
+        {
+          "id": "FMA66358",
+          "name": "trunk of superior mesenteric artery",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA67135",
+          "name": "anatomical structure",
+          "componentCount": 2166
+        },
+        {
+          "id": "FMA67165",
+          "name": "material anatomical entity",
+          "componentCount": 2222
+        },
+        {
+          "id": "FMA67619",
+          "name": "organ region",
+          "componentCount": 1356
+        },
+        {
+          "id": "FMA82472",
+          "name": "cardinal organ part",
+          "componentCount": 1455
+        },
+        {
+          "id": "FMA86140",
+          "name": "organ segment",
+          "componentCount": 1200
+        },
+        {
+          "id": "FMA86187",
+          "name": "segment of arterial tree organ",
+          "componentCount": 603
+        }
+      ],
+      "exactGeometryMatches": [
+        {
+          "tree": "partof",
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ],
+          "displayedBy": []
+        }
+      ],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "partof",
+      "file": "FJ1737",
+      "bytes": 46911,
+      "crc32": 2141046699,
+      "heldBy": [
+        "FMA7647"
+      ],
+      "candidateFor": [],
+      "sha256": "c86dd74640e7c820eda28783944a90998045ff42a131a7a1456a64fdff0e6471",
+      "geometrySha256": "0bb86aec0799a79edc512abeca73d057fa86cfb8363fb2a81cce380956b4cdfe",
+      "bounds": {
+        "min": [
+          -1.76275,
+          -64.9962,
+          1458.6
+        ],
+        "max": [
+          0.456541,
+          -51.8654,
+          1494.19
+        ]
+      },
+      "centre": [
+        -0.6531045,
+        -58.430800000000005,
+        1476.395
+      ],
+      "extent": [
+        2.219291,
+        13.1308,
+        35.590000000000146
+      ],
+      "sourceXDistribution": {
+        "negative": 366,
+        "zero": 0,
+        "positive": 61
+      },
+      "topology": null,
+      "vertices": 427,
+      "triangles": 728,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA7157",
+          "name": "nervous system",
+          "componentCount": 60
+        },
+        {
+          "id": "FMA7647",
+          "name": "spinal cord",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA20394",
+          "name": "human body",
+          "componentCount": 1258
+        },
+        {
+          "id": "FMA55675",
+          "name": "neuraxis",
+          "componentCount": 60
+        },
+        {
+          "id": "FMA75007",
+          "name": "cavity of neuraxis",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA78497",
+          "name": "central canal of spinal cord",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA242675",
+          "name": "ventricular system of neuraxis",
+          "componentCount": 6
+        }
+      ],
+      "exactGeometryMatches": [
+        {
+          "tree": "isa",
+          "file": "FJ1737",
+          "heldBy": [],
+          "displayedBy": [
+            "vm:anatomy:body:spine:midline:space:central-canal-of-spinal-cord"
+          ]
+        }
+      ],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "partof",
+      "file": "FJ2034",
+      "bytes": 8729,
+      "crc32": 2639049366,
+      "heldBy": [
+        "FMA14819"
+      ],
+      "candidateFor": [],
+      "sha256": "7242f071018cd378e8875f289d4d504f69440c5431b252f93915d99380d2dcd3",
+      "geometrySha256": "9fc24af4a77c5542156d6ccec021b77f59058cd78deac51336e03ffed79b78ca",
+      "bounds": {
+        "min": [
+          -53.3772,
+          -132.9,
+          936.6
+        ],
+        "max": [
+          -29.1211,
+          -121.695,
+          956.951
+        ]
+      },
+      "centre": [
+        -41.24915,
+        -127.2975,
+        946.7755
+      ],
+      "extent": [
+        24.256100000000004,
+        11.205000000000013,
+        20.351
+      ],
+      "sourceXDistribution": {
+        "negative": 94,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": null,
+      "vertices": 94,
+      "triangles": 114,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA7161",
+          "name": "cardiovascular system",
+          "componentCount": 627
+        },
+        {
+          "id": "FMA14749",
+          "name": "superior mesenteric artery",
+          "componentCount": 14
+        },
+        {
+          "id": "FMA14815",
+          "name": "ileocolic artery",
+          "componentCount": 7
+        },
+        {
+          "id": "FMA14819",
+          "name": "ileal branch of inferior branch of ileocolic artery",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA14823",
+          "name": "inferior branch of ileocolic artery",
+          "componentCount": 6
+        },
+        {
+          "id": "FMA20394",
+          "name": "human body",
+          "componentCount": 1258
+        },
+        {
+          "id": "FMA45623",
+          "name": "systemic arterial system",
+          "componentCount": 335
+        },
+        {
+          "id": "FMA49894",
+          "name": "systemic arterial tree",
+          "componentCount": 324
+        },
+        {
+          "id": "FMA228642",
+          "name": "vasculature of body",
+          "componentCount": 605
+        }
+      ],
+      "exactGeometryMatches": [
+        {
+          "tree": "isa",
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ],
+          "displayedBy": []
+        }
+      ],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "partof",
+      "file": "FJ3211",
+      "bytes": 358666,
+      "crc32": 4056951777,
+      "heldBy": [
+        "FMA10446",
+        "FMA25511"
+      ],
+      "candidateFor": [],
+      "sha256": "312819388c2857a2908b6529b463f43406f090748a464d3aa4bd00f0f3920ccd",
+      "geometrySha256": "0270e3f9f1cb3412b760849ad5faaed8b8f46efcc2c34c8902e7477c1aa1336b",
+      "bounds": {
+        "min": [
+          -21.7746,
+          -105.126,
+          1061.5
+        ],
+        "max": [
+          20.4661,
+          -65.797,
+          1078.89
+        ]
+      },
+      "centre": [
+        -0.6542499999999993,
+        -85.4615,
+        1070.1950000000002
+      ],
+      "extent": [
+        42.240700000000004,
+        39.32900000000001,
+        17.3900000000001
+      ],
+      "sourceXDistribution": {
+        "negative": 1801,
+        "zero": 0,
+        "positive": 2330
+      },
+      "topology": null,
+      "vertices": 4131,
+      "triangles": 3476,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA7482",
+          "name": "musculoskeletal system",
+          "componentCount": 138
+        },
+        {
+          "id": "FMA7483",
+          "name": "axial skeletal system",
+          "componentCount": 95
+        },
+        {
+          "id": "FMA10446",
+          "name": "intervertebral disk",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA13478",
+          "name": "vertebral column",
+          "componentCount": 48
+        },
+        {
+          "id": "FMA20394",
+          "name": "human body",
+          "componentCount": 1258
+        },
+        {
+          "id": "FMA23876",
+          "name": "skeleton (in vivo)",
+          "componentCount": 138
+        },
+        {
+          "id": "FMA23881",
+          "name": "skeletal system",
+          "componentCount": 138
+        },
+        {
+          "id": "FMA25511",
+          "name": "intervertebral symphysis",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA71221",
+          "name": "axial skeleton",
+          "componentCount": 48
+        }
+      ],
+      "exactGeometryMatches": [],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "partof",
+      "file": "FJ3437",
+      "bytes": 13003,
+      "crc32": 3952764938,
+      "heldBy": [
+        "FMA14809"
+      ],
+      "candidateFor": [],
+      "sha256": "0cfda48cc950fa823f4ee2ea1c633b509aabacc6337794338ec82478e4c46255",
+      "geometrySha256": "8a58d87d9c2d38fc51dcf3b915ba75cf7a8f4244a37a115f746cbacbb8f2dabf",
+      "bounds": {
+        "min": [
+          -53.3066,
+          -132.3,
+          936.634
+        ],
+        "max": [
+          -29.1445,
+          -121.474,
+          957.031
+        ]
+      },
+      "centre": [
+        -41.22555,
+        -126.887,
+        946.8325
+      ],
+      "extent": [
+        24.162100000000002,
+        10.826000000000008,
+        20.396999999999935
+      ],
+      "sourceXDistribution": {
+        "negative": 134,
+        "zero": 0,
+        "positive": 0
+      },
+      "topology": null,
+      "vertices": 134,
+      "triangles": 186,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA7161",
+          "name": "cardiovascular system",
+          "componentCount": 627
+        },
+        {
+          "id": "FMA14749",
+          "name": "superior mesenteric artery",
+          "componentCount": 14
+        },
+        {
+          "id": "FMA14809",
+          "name": "ileal artery",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA20394",
+          "name": "human body",
+          "componentCount": 1258
+        },
+        {
+          "id": "FMA45623",
+          "name": "systemic arterial system",
+          "componentCount": 335
+        },
+        {
+          "id": "FMA49894",
+          "name": "systemic arterial tree",
+          "componentCount": 324
+        },
+        {
+          "id": "FMA228642",
+          "name": "vasculature of body",
+          "componentCount": 605
+        }
+      ],
+      "exactGeometryMatches": [
+        {
+          "tree": "isa",
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ],
+          "displayedBy": []
+        }
+      ],
+      "displayedBy": [],
+      "admitted": false
+    },
+    {
+      "tree": "partof",
+      "file": "FJ3644",
+      "bytes": 90701,
+      "crc32": 1098898400,
+      "heldBy": [
+        "FMA66358"
+      ],
+      "candidateFor": [],
+      "sha256": "2692d062e09638f7696155b4543ca677651592e1f9f9a7fe9921c32ff9bc3d72",
+      "geometrySha256": "153dcdbe2c69e7598efb9de8eab5f4fd6af30ed7af2b276aa27c56c09db89456",
+      "bounds": {
+        "min": [
+          -60.8868,
+          -151.188,
+          909.407
+        ],
+        "max": [
+          8.58199,
+          -112.053,
+          1054.73
+        ]
+      },
+      "centre": [
+        -26.152405,
+        -131.6205,
+        982.0685000000001
+      ],
+      "extent": [
+        69.46879,
+        39.13499999999999,
+        145.32299999999998
+      ],
+      "sourceXDistribution": {
+        "negative": 660,
+        "zero": 0,
+        "positive": 122
+      },
+      "topology": null,
+      "vertices": 782,
+      "triangles": 1506,
+      "degenerateTriangles": 0,
+      "sameTreeAliases": [
+        {
+          "id": "FMA7161",
+          "name": "cardiovascular system",
+          "componentCount": 627
+        },
+        {
+          "id": "FMA14749",
+          "name": "superior mesenteric artery",
+          "componentCount": 14
+        },
+        {
+          "id": "FMA20394",
+          "name": "human body",
+          "componentCount": 1258
+        },
+        {
+          "id": "FMA45623",
+          "name": "systemic arterial system",
+          "componentCount": 335
+        },
+        {
+          "id": "FMA49894",
+          "name": "systemic arterial tree",
+          "componentCount": 324
+        },
+        {
+          "id": "FMA66358",
+          "name": "trunk of superior mesenteric artery",
+          "componentCount": 1
+        },
+        {
+          "id": "FMA228642",
+          "name": "vasculature of body",
+          "componentCount": 605
+        }
+      ],
+      "exactGeometryMatches": [
+        {
+          "tree": "isa",
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ],
+          "displayedBy": []
+        }
+      ],
+      "displayedBy": [],
+      "admitted": false
+    }
+  ],
+  "clinicalValidation": false,
+  "admissionsChanged": false,
+  "limitations": [
+    "A separate preparatory screen: does not modify the historical inventory, catalogue, importer policy or displayed anatomy.",
+    "Exact geometry hashes retain vertex/face order, coordinates and winding; they do not detect reindexed, reversed, translated, mirrored or near-coincident surfaces.",
+    "All current displayed source files have indexed fingerprints; non-displayed archive files without fingerprints remain unknown, except the 48 held and four candidate files checked here.",
+    "Topology is measured only for the four candidates; manifold topology is not a self-intersection proof or anatomical validation.",
+    "Positive source X is the source left-side convention, not an independently validated anatomical label. The short ciliary source remains one paired, unsided definition; no sided identity is invented.",
+    "No attachment, ganglion-to-globe continuity, vascular territory, branch completeness, patient registration or clinical accuracy has been validated.",
+    "Existing central-canal and whole-spinal-cord identities must remain distinct despite any source geometry match. A finding does not authorize deletion, relabelling, repair or admission."
+  ]
+}

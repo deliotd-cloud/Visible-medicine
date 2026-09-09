@@ -25,7 +25,7 @@ The four pre-existing excluded records remain exclusions. Their IDs, source tree
 
 - `no-known-source-hold` deliberately does **not** mean approved, accurate or anatomically complete.
 - File identities are tree-specific. Matching `isa`/`partof` filenames alone are not geometry equivalence. The existing central-canal surface remains a canal representation, never a complete spinal cord.
-- Only one of the 48 held tree-specific files has an existing geometry fingerprint in the inventory; 47 are unknown at that level. This pass neither downloads nor fingerprints them. It does not detect cross-archive, reordered, translated or near-overlapping alternatives.
+- Only one of the 48 held tree-specific files has an existing geometry fingerprint in the historical inventory; 47 are unknown at that level. This original screen neither downloads nor fingerprints them. The subsequent [source geometry screen](SOURCE_GEOMETRY_SCREEN.md) records verified fingerprints for all 48 in a separate report, including cross-tree exact matches. Neither pass detects reordered, translated or near-overlapping alternatives, and the importer policy is unchanged.
 - Before adding a candidate, verify its exact bytes against source/archive evidence, compare its geometry with held and displayed surfaces across both trees, review source-version drift and confirm anatomical extent, boundaries and laterality. Any disputed component or alias needs explicit expert adjudication; do not mirror, relabel, truncate or infer absent tissue.
 - Preserve licence/credit requirements, source hashes, transformation logs and draft review status. Browser/device acceptance and qualified clinical review remain separate requirements.
 
