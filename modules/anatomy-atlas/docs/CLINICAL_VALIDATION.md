@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Neck and axial-muscle clinical review
+
+Review [the new drafts](NECK_CLINICAL_CURRICULUM.md) for dystonic versus compensatory activity, cord/vascular/trauma warnings, longus-capitis versus longus-colli identity, nerve-pain versus muscle attribution and grouped cervical/lumbar/rib anatomy. Require neurological, MSK, trauma and anatomical review. No diagnostic, procedural, imaging or device acceptance is provided.
+
 ## Eye, swallowing and voice review
 
 Review [head clinical drafts](HEAD_CLINICAL_CURRICULUM.md) for central versus peripheral localisation, restriction versus weakness, pupil/red-flag wording, C1/cranial-nerve distinctions, infection spaces, palate closure, Zenker anatomy and vocal-fold opening/closure. Require ophthalmology, ENT and speech/swallowing expertise; no diagnostic, procedural or clinical acceptance is supplied. Unmodelled facial/masticatory anatomy and withheld pharyngeal/laryngeal structures remain gaps.

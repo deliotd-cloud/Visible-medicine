@@ -1,5 +1,7 @@
 # Atlas requirement and acceptance audit
 
+**Current neck/axial extension — 9 September 2026:** [96 drafts](NECK_CLINICAL_CURRICULUM.md) bring Clinical/Pathology to 371 draft/651 pending each. There are 368 muscle entries with introductory drafts and one unresolved perineal category still pending. These are editorial counts, not complete or clinically validated muscle teaching. Previous spine-primary counts included lumbar and thoracic groups, not solely cervical anatomy. All older milestone totals below are historical.
+
 **Current head extension — 9 September 2026:** [120 new drafts](HEAD_CLINICAL_CURRICULUM.md) bring Clinical and Pathology to 323 draft/699 pending each. Sixty exact eye/swallowing/voice selections retain 65 source components and the existing interface. Facial-expression and masticatory geometry remain gaps. Older totals below are historical; specialist review, missing anatomy, device acceptance and real imaging integration remain open.
 
 **Current trunk/coccygeus extension — 9 September 2026:** [80 new drafts](TRUNK_CLINICAL_CURRICULUM.md) bring Clinical and Pathology to 263 draft/759 pending each. Forty exact selections retain 52 source components, stable identity and the existing uncluttered interface. Draft counts are not reviewed disease coverage. Earlier milestone counts below are historical; medical, geometry, device and imaging acceptance remain outstanding.

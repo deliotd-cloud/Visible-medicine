@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+The [neck and remaining axial-muscle extension](docs/NECK_CLINICAL_CURRICULUM.md) adds 96 Clinical/Pathology drafts for 48 exact selections without additional controls. Initial muscle teaching remains incomplete and unvalidated; the unresolved perineal category is still pending. Run `npm run neck-clinical-curriculum:test -- --source`.
+
 The [eye, swallowing and voice extension](docs/HEAD_CLINICAL_CURRICULUM.md) adds 120 Clinical/Pathology drafts for 60 exact muscle selections using the existing tabs. Facial and masticatory geometry gaps remain explicit. Independent specialist review is required. Run `npm run head-clinical-curriculum:test -- --source`.
 
 The [trunk and coccygeus extension](docs/TRUNK_CLINICAL_CURRICULUM.md) adds 80 Clinical/Pathology drafts across 40 exact source selections, without extra controls. It covers chest-wall, respiratory, pectoral, deep-back and pelvic-floor context while preserving uncertain identities. Independent clinical review remains required. Run `npm run trunk-clinical-curriculum:test -- --source`.

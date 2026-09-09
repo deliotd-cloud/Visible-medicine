@@ -1,14 +1,13 @@
 {
   "passed": true,
-  "checks": 19650,
-  "bodyRepresentations": 60,
-  "sourceComponents": 65,
-  "lessonGroups": 29,
-  "explicitTopicEdits": 120,
-  "combinedPinnedCurriculumSections": 2226,
-  "sourceIndexChecks": 65,
-  "negativeCases": 13,
-  "readinessScope": "Historical head milestone; current direct/export assertions remain active",
+  "checks": 19054,
+  "bodyRepresentations": 48,
+  "sourceComponents": 52,
+  "lessonGroups": 26,
+  "explicitTopicEdits": 96,
+  "combinedPinnedCurriculumSections": 2322,
+  "sourceIndexChecks": 52,
+  "negativeCases": 14,
   "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
@@ -41,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 323,
+      "draft": 371,
       "identity-only": 0,
-      "pending": 699,
+      "pending": 651,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 323,
+      "draft": 371,
       "identity-only": 0,
-      "pending": 699,
+      "pending": 651,
       "generated-identification": 0
     },
     "quiz": {
@@ -64,6 +63,6 @@
   "clinicalApproval": false,
   "scanContentAdded": false,
   "browserTesting": false,
-  "copyAndRecipeHash": "ff9ea45479fddb6c4a9c103a54a7429b3ffd5f0526b56fa1a02cc9031bb2697b",
-  "limitations": "Original short orbital/swallowing/voice clinical drafts; not validated eye motility, tendon restriction, nerve lesions, swallow physiology, vocal-fold motion, procedural corridors, patient scans or clinical approval."
+  "copyAndRecipeHash": "c224b5847861e5c95f0addac8f72cf8fab622b35fdd5d0fe2d44950537292bb4",
+  "limitations": "Original short neck/remaining axial muscle clinical drafts; not validated disease localisation, nerve courses, joint stability, muscle activation, procedural corridors, patient scans or clinical approval."
 }

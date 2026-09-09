@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Neck clinical teaching
+
+The [neck/axial extension](NECK_CLINICAL_CURRICULUM.md) adds twenty-six definitions for 48 exact identities and 52 ordered components. The new offline projection precedes head history (39 projections / 2,322 pinned edits). Runtime/export stay current, with no UI, geometry, dependency, schema or review migration.
+
 ## Head clinical teaching
 
 The [head extension](HEAD_CLINICAL_CURRICULUM.md) guards sixty exact identities and 65 ordered components through twenty-nine definitions. A new offline projection precedes trunk history (38 projections / 2,226 pinned edits). Runtime/export stay current; no UI, geometry, dependency, schema or review change.

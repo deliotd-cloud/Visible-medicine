@@ -5,6 +5,7 @@ import {
   contentRoot,
   readContentJson,
 } from './content-contract-tools.mjs';
+import { authoringBeforeNeckClinical } from './neck-clinical-curriculum-transition.mjs';
 import { authoringBeforeHeadClinical } from './head-clinical-curriculum-transition.mjs';
 import {
   curriculumHash,
@@ -27,6 +28,7 @@ const before = await readContentJson(
 const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
+const milestone = await authoringBeforeNeckClinical(context);
 const previous = await authoringBeforeHeadClinical(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
@@ -218,7 +220,7 @@ for (const s of catalog.structures)
     if (!ids.includes(s.fmaId) || !tabs.includes(t)) {
       same(api.headClinicalLesson(s, t), undefined);
       same(
-        api.bodyLesson(s, t),
+        milestone.bodyLesson(s, t),
         previous.bodyLesson(s, t),
         'Every unrelated section preserved',
       );
@@ -349,8 +351,9 @@ const counts = (t) =>
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
-          .length,
+        catalog.structures.filter(
+          (s) => milestone.bodyLesson(s, t).readiness === r,
+        ).length,
       ],
     ),
   );
@@ -398,13 +401,15 @@ const report = {
   combinedPinnedCurriculumSections: 2226,
   sourceIndexChecks,
   negativeCases: negatives.length,
+  readinessScope:
+    'Historical head milestone; current direct/export assertions remain active',
   bodyReadiness: Object.fromEntries(api.contentTabs.map((t) => [t, counts(t)])),
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,
   scanContentAdded: false,
   browserTesting: false,
-  copyAndRecipeHash: curriculumHash(copy(api)),
+  copyAndRecipeHash: curriculumHash(copy(milestone)),
   limitations:
     'Original short orbital/swallowing/voice clinical drafts; not validated eye motility, tendon restriction, nerve lesions, swallow physiology, vocal-fold motion, procedural corridors, patient scans or clinical approval.',
 };

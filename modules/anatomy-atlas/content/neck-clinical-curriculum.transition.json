@@ -1,0 +1,390 @@
+{
+  "sourceCommit": "077fff0d024abe4124bf38f8c01d85689edaa1a0",
+  "reason": "Ninety-six Pathology/Clinical drafts for forty-eight neck and remaining axial muscle representations; all other topics preserved.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-subclavius",
+      "fmaId": "FMA13412",
+      "sections": {
+        "pathology": "cd04a7cd9a92df8bf77cce72327803d3bb491fbb72222a1cea32f1242ccbaa23",
+        "clinical": "d29ac7ff0a69eb545b4ec2c8b458175772f39c3df8ecd5ef301ac31ab619074d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-subclavius",
+      "fmaId": "FMA13411",
+      "sections": {
+        "pathology": "7c7954dff4c53cac9ea1c2d1e18e4c01b377440824f73d8461c18d4f0d5992dd",
+        "clinical": "e4cb6d49538332a49436e63de0941744ff8f4cf06908af4fe6c561e2f349d064"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-cervical-rotator",
+      "fmaId": "FMA81752",
+      "sections": {
+        "pathology": "abb8b3f9b138a038cfc736e598615856a76ff9b3436812840f054b1cd2b4d8e8",
+        "clinical": "c6e43b774f4224a70a3e3c73b49e0f376f65ad74247ba5d6ab6dde0677efb31d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-cervical-rotator",
+      "fmaId": "FMA81753",
+      "sections": {
+        "pathology": "e0d87aa9a7842f6c2b3933d1842ea0dabcaa847a5e6ab091d94e84726b153f50",
+        "clinical": "b833363bf6e5761337053b39b154f0de0d3918c6907d9fde587b2374f50d3b2d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-iliocostalis-cervicis",
+      "fmaId": "FMA22744",
+      "sections": {
+        "pathology": "ce6d65d4e548d2c1ce8e56d3a2cd267cf51bfc758ae6dcbc3781f845fa493ed0",
+        "clinical": "a32f48cdd61af37df8188f4cb023cda9111ee6475b491cfe0710032b9ca48833"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-iliocostalis-cervicis",
+      "fmaId": "FMA22745",
+      "sections": {
+        "pathology": "f86eb9db31d57a86164d66de43a634f1d14defd92d395404e11f76828afcb551",
+        "clinical": "1005f3ea674db4afb09681bef8560f57ccf7038f2ce989dcfe282a049cc95a66"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-longissimus-capitis",
+      "fmaId": "FMA22754",
+      "sections": {
+        "pathology": "cf4c6a251004c86e7f66dd9a818990cd158b55f0235c28358bd01ff6acea448f",
+        "clinical": "576d7273ab6fc3de21528d632c66f82a7fe546b46d05178a508bea01542d8477"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-longissimus-capitis",
+      "fmaId": "FMA22756",
+      "sections": {
+        "pathology": "f39388f8d331b2b481e85ae1ef41a9bc3d9bffd8afb17cbacc1708e079f53aa3",
+        "clinical": "761af1b63c11a9ff78a002a78c29d1a673e465199ac3f16e43382b0af26fe408"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-longissimus-cervicis",
+      "fmaId": "FMA22757",
+      "sections": {
+        "pathology": "72e4f0213fa3c0f5788fc134cbdbab03f80e7585510784f5a0577e7038b7f28a",
+        "clinical": "bab87f4b57f336e2408a9181ac7215b841544fb6975e7a8738b9a5450d2187eb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-longissimus-cervicis",
+      "fmaId": "FMA22758",
+      "sections": {
+        "pathology": "1a85b7f6b3e205aaf0f002deebda6177234b3bc9d9b4b68d5b1b799f5f3d9f5c",
+        "clinical": "4d622415aa72d65fbf1f328fa62cca408621d9ed704db9f8090817b3aa23c825"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-semispinalis-capitis",
+      "fmaId": "FMA22876",
+      "sections": {
+        "pathology": "ed3e2136a40a78af8aff7863b9259f41a7631ad0e12f0ea0836397f050041418",
+        "clinical": "729d74763e2d03b796504eb09b54d2525d921916c080c7659c52c3f9b2cf82ba"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-semispinalis-capitis",
+      "fmaId": "FMA22877",
+      "sections": {
+        "pathology": "a978fcf4b682fedde7c48b118871f034fb55632546e069bc27ab5f29ae4ca996",
+        "clinical": "fdccd0a725011ae5acdb30bd9f1e5c887eddbb3a434cccac237f2d7527ea4240"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-semispinalis-cervicis",
+      "fmaId": "FMA22874",
+      "sections": {
+        "pathology": "607ee2828c77d2f2eb0de4d3930ee11e5f0f6bbe1b633a2fd9e67509c6f85ba8",
+        "clinical": "4468abdcbadd06d2c1604878ce00d9ae9030e042a6737d0b6f16e07331287bca"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-semispinalis-cervicis",
+      "fmaId": "FMA22875",
+      "sections": {
+        "pathology": "67e25d079a7226783db7b62180d158279b2308ab6344f24105af8418903816a3",
+        "clinical": "2fc19e7ed4068feeddbd60ca201b35afbe67f28034e73cb97bc66e90ce1e067a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-splenius-capitis",
+      "fmaId": "FMA22728",
+      "sections": {
+        "pathology": "0780ab1e174018ddc7a604a2b17d15a4c277f55452e2cd970e8d5dac0b3ebfab",
+        "clinical": "9496a59f2fc25833ea9260331f2745695e581c27968daedf1cf0d3a0088a5b58"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-splenius-capitis",
+      "fmaId": "FMA22729",
+      "sections": {
+        "pathology": "4fcdee979b0af2ac3116f8b67de85bcea9bfc07c767bf69984246bca06ff0259",
+        "clinical": "22968e0d61763a3ff6e4bc186a898d9b1266cd30af408786cee49e7902b7a01a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-splenius-cervicis",
+      "fmaId": "FMA22726",
+      "sections": {
+        "pathology": "bec84f8d8ac9fd4cc06cb5dda37f0038760bde99c58a22878d83332564d58ccd",
+        "clinical": "42b4835b11f9db947d248eeb0dddb3850026afea134cf3be886b3672f6a6ae8a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-splenius-cervicis",
+      "fmaId": "FMA22727",
+      "sections": {
+        "pathology": "2ad86f5ce033f909439fea25353cb99e0c652425763d0d5d1e54a41add46cc21",
+        "clinical": "01dd9fa942087848507c39ed962c355c5449a99ecc9dafa4397d4ba031ab6676"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-platysma",
+      "fmaId": "FMA45740",
+      "sections": {
+        "pathology": "6d8da545967ddb56db580da2d7afe61520208c295d0b1b748e7f24a8f45b7aa2",
+        "clinical": "fef22a7991e95c318ce1e3a07e03de3070631720c7511ddba05f409ef9db946c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-longus-capitis",
+      "fmaId": "FMA46310",
+      "sections": {
+        "pathology": "f10442bf922954945b71c8a79005947ad738146213a08d82d71ef71c5d1aa520",
+        "clinical": "bfaea6e5d7e95eea0c41b7b6c2f101884162082ff607ad67e2bafad6a452fda5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-obliquus-capitis-inferior",
+      "fmaId": "FMA32537",
+      "sections": {
+        "pathology": "2e40ad0accf15a8d27958a791dc1c97c6247218f2c9c54f7236deee8c0121009",
+        "clinical": "ac1055aac0a0df2480224fd1da7d711fd9658ba66ff4e2361a80d0d49af8af47"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-obliquus-capitis-superior",
+      "fmaId": "FMA32535",
+      "sections": {
+        "pathology": "c034fbf6be839ca6cb8c3ad5a9b3b623de7422acf063f27d05406680b5ac7f73",
+        "clinical": "be19c18d97f04e9b96c7f23a8fc837ab40147552dbe32fa426ee5d4e8efd0a54"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-anterior",
+      "fmaId": "FMA46314",
+      "sections": {
+        "pathology": "7b4b71c1e8e125b4bfd90781d26d0be51efd8b165409fd789db57f1455a104a2",
+        "clinical": "6adc85e35b8322e48cb301ede4b43fdfb6ae8b57a733770e700c6e2944fc4942"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-posterior-major",
+      "fmaId": "FMA32531",
+      "sections": {
+        "pathology": "4d446bc0f494b92b36d25983c84d731b8bfbd965470ab7dd9586a7602cd306c2",
+        "clinical": "5843f6e14de7618942ab44628ca4b67fd068da9b9343b1bedd92764894ffe703"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-posterior-minor",
+      "fmaId": "FMA32533",
+      "sections": {
+        "pathology": "43c4a39f61830322d1084bf843e2153ff97b2b7502cacb799c9f616fd96836b6",
+        "clinical": "f4d136572985d70446e7de7dbc88d71a303a2bd20c033da105fc392d722d4002"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-lateralis",
+      "fmaId": "FMA46318",
+      "sections": {
+        "pathology": "9e29661e6d1b3a8d2eef5b5177a716808388aec1438e098820d501c4e5fdc2bb",
+        "clinical": "4173ccb6901c0570ab42cea2322d311fda2264e414722663fb3a6469a8471e87"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-scalenus-anterior",
+      "fmaId": "FMA13393",
+      "sections": {
+        "pathology": "0732fc98e0a9661ab9c116aa8b5887438b1165a1678ac9b91bcf44bbb1d42f36",
+        "clinical": "490bc6c10fecae9b065c9560ecad01ae3943a0fe7753b11dbdfdce9b37eeb8a1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-scalenus-medius",
+      "fmaId": "FMA13391",
+      "sections": {
+        "pathology": "4d6cc1cc7ca924573d31786b403e3dc1620d8dc83e2458071a900d15b99fd599",
+        "clinical": "a00a4f94e342f2c7f318ec60b91d66dbec06b438b8b0f959ce232fe49fea2f79"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-scalenus-posterior",
+      "fmaId": "FMA13389",
+      "sections": {
+        "pathology": "d4e04deeee977a81280c435eab684b81a699c69dcd6764f9753c5b9d5ef16a29",
+        "clinical": "b2bb5ea4d4c9eabf94f1ef9d783ccaa20ea6fc30a2455c0357686af721fa6675"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:left-sternocleidomastoid",
+      "fmaId": "FMA13409",
+      "sections": {
+        "pathology": "a57b72422af98567c96d5eb5a0a6d368d4e5688cc2812ca2d9c7a547ca741656",
+        "clinical": "63eee0eb3a3e87515f4fa3d3b36098d449e6084bd4ff41387080d35de19a7b7c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-longus-capitis",
+      "fmaId": "FMA46309",
+      "sections": {
+        "pathology": "46aed2076ae157e9900d4956d780a506a0fa5ffbf8c3ae7088589ef349a96c45",
+        "clinical": "1b3f5028e79c19d76bcaf68a5aadcb6256a608d376005661b234945f38eb7132"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-obliquus-capitis-inferior",
+      "fmaId": "FMA32536",
+      "sections": {
+        "pathology": "ef31d8464966f4cbdfa8ca5eac2147367a128e71c51ab62bd654f3171106c5e1",
+        "clinical": "616fe7181ef303d4c487730cacbde642c1978b7939404b8eb226206e7820e224"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-obliquus-capitis-superior",
+      "fmaId": "FMA32534",
+      "sections": {
+        "pathology": "8dca98d2c73d73cac46198e9b27517f9f59fad79f1717b028f2fd96f553107ac",
+        "clinical": "3f354c07683c5ec62ab763aadd28fac7cf916bc9b25a69b7659f1de75749b7d1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-platysma",
+      "fmaId": "FMA45739",
+      "sections": {
+        "pathology": "af8c3f318bc7d094311e7ad9f2199060a622b24206fe821a4a491d71e08d6a1f",
+        "clinical": "3677227afe5646760339cde9706083a20b119b2341fbf0987143af5e60e55fd5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-anterior",
+      "fmaId": "FMA46313",
+      "sections": {
+        "pathology": "17b8a5b6e3b38cc0083a72e46354ba31ab81530745fdac9e24bf42203e2a8fe7",
+        "clinical": "091de9f453db37a3a5a7c40bd221f9aa378577f16d5c6a88229cbec4e8274262"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-posterior-major",
+      "fmaId": "FMA32530",
+      "sections": {
+        "pathology": "1741c521fea6c49d7d5ecd2475fd00d2c6cc11681ce0ab565381bc2e41e04d03",
+        "clinical": "9c065f38a97687a1377eb9f41a693b985e314cb4458a044ecf7f7363c76870d7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-posterior-minor",
+      "fmaId": "FMA32532",
+      "sections": {
+        "pathology": "26cd2cc17f91cbdb5757e47501247b566e8fc2451489ecf0e2c9aa41fa5905aa",
+        "clinical": "f56d10bea9ae5383a3c1cea03b923355449033151088cb41d0265433fa70afe8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-lateralis",
+      "fmaId": "FMA46317",
+      "sections": {
+        "pathology": "b42bf9e9815a6eab2b15d4d6dbe50f8ebf63d46b70df289711c817a07d234e51",
+        "clinical": "f507cb320bd79571fa36fe806613db82b3eddbe5f77fcd1e2d7d678ae1e433f2"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-scalenus-anterior",
+      "fmaId": "FMA13392",
+      "sections": {
+        "pathology": "1e7af44e49cee0776d481a944f0085285ae40b60d30e60c30ba0a62b69b9a131",
+        "clinical": "a9d7f4f1543e0c9d7e77501d53f1df307a7974ff640cdd641016c474dbcbdbe4"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-scalenus-medius",
+      "fmaId": "FMA13390",
+      "sections": {
+        "pathology": "d69a5a6c0d219c609b2e36c18f1ca60b1932fd1d29b51d66f96748f0691e779a",
+        "clinical": "c8ac91a160cc13e050633848f0e94c51c9b66def72bad2440e6d90e1efd550cc"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-scalenus-posterior",
+      "fmaId": "FMA13388",
+      "sections": {
+        "pathology": "d927a3b073794d5e5ff86e8ea83fbdf4a37df737ff9722aca0733a56b4b9e794",
+        "clinical": "185bb3d4e8efe9c5e3a6d684422adf5c70bc321539d8950dad9e332e995abaa1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:muscle:right-sternocleidomastoid",
+      "fmaId": "FMA13408",
+      "sections": {
+        "pathology": "ed852e5ce23361e82700de55295dc43c124babbad69b49eb38507d514b4e2173",
+        "clinical": "707f53990ea184527b994f11cd4899260c399a35f6bdf1730dabe53c59300579"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum",
+      "fmaId": "FMA71307",
+      "sections": {
+        "pathology": "af680135f44adece4a55cd7e0146aa28182d5ec42c82be115c37843832565852",
+        "clinical": "93bbd19cf2d9016a1cb9b618b4adf9bff57f10ba68d3fec968471ae17acf6a60"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-cervicis",
+      "fmaId": "FMA71309",
+      "sections": {
+        "pathology": "f6cc11305b6b163d7de48de72872f19a894e8b255138ee43a06002e558e4306c",
+        "clinical": "09f3f8ceeb18df4bd6630dd654b329ad147090b1188e3acc82a6a5185b5270be"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
+      "fmaId": "FMA71442",
+      "sections": {
+        "pathology": "18a636ee8e6cf35927ff7283b154ab1c259decc6bab9b3d092cacfaa0ed73064",
+        "clinical": "63fb45a2f66a52542eaa3a513f9c9c79614a4c3c252542f220ec7d0efa713c28"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
+      "fmaId": "FMA71443",
+      "sections": {
+        "pathology": "efd8b3ad118306561edcaeda7970cd64d2b43969d3340c6142fca88fc1ecf6d1",
+        "clinical": "b3ce99429736f43ac1a74b32a81e99b5ce9885ae9ea72550928f23b82d870e70"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
+      "fmaId": "FMA74077",
+      "sections": {
+        "pathology": "62f5b09dde3bf79fec50073873fc394c8a84ca113ddc90dd557f2e24156689c4",
+        "clinical": "6bb5955651a96a16c058a7480a6f59522a5ff9c03508ea46b7da091d4695e8c6"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+      "fmaId": "FMA74078",
+      "sections": {
+        "pathology": "34566cb6a6d17bd0338c615b270d1e34f791ec2ce8493a2e40ad212251f521fd",
+        "clinical": "4ac0a1570221cb4172687a569d73f43e3cfd857a5034419ec8cb8a5982a45f08"
+      }
+    }
+  ]
+}
