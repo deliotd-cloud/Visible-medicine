@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Thoracic organ clinical teaching
+
+The [thoracic organ extension](THORACIC_ORGAN_CLINICAL_CURRICULUM.md) adds six definitions for eight exact organ selections / 342 rendered source components. Ordered identity guards preserve the heart/lung aggregates, two-component thymus and differing right/left main-bronchus source trees. Twenty-seven components omitted from the heart aggregate retain their five existing coronary-vessel owners. Its offline projection precedes central neural history: 46 projections / 2,840 pinned edits. Current runtime/export and historical comparisons remain separate; no UI, geometry, schema, dependency or review migration.
+
 ## Central neural clinical teaching
 
 The [central neural extension](CENTRAL_NEURAL_CLINICAL_CURRICULUM.md) adds fifteen definitions for 23 exact nervous-system selections / 83 indexed source components, including one space-category central canal and 22 organ-category entries. It preserves the 59-component PART-OF brain and two-component choroid-plexus/mammillary groups without inventing subdivisions. Category, FMA, side, source tree, ordered files and primary/ordered regions are guarded. Its offline projection precedes orbital-neural history, giving 45 projections / 2,824 pinned edits. Runtime/export remain current; older captures and baseline remain fixed. No geometry, interface, schema, dependency or review migration.

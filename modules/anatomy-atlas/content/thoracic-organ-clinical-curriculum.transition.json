@@ -1,0 +1,70 @@
+{
+  "sourceCommit": "cca440fc1db64e17f39af51338bc46cc28307163",
+  "reason": "Sixteen Clinical/Pathology drafts for eight exact thoracic organ selections; source groups, omitted heart components and all identity/function holds remain unchanged.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:thorax:unpaired:organ:heart",
+      "fmaId": "FMA7088",
+      "sections": {
+        "pathology": "0a8f2bde6b779565fbc5784ca02b466b559aef845bac681e3ce0c1ff777db6dc",
+        "clinical": "25919ba5ee37537730dde461e21326cc8de77841bf510dfb7026026aa89a9b4e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:organ:right-lung",
+      "fmaId": "FMA7309",
+      "sections": {
+        "pathology": "86c6f1ccc7834472b66bd51149f70499baca0386c754f43cb7e8eb1a7ed3d0ac",
+        "clinical": "a39b97280cd92602b0fcd808347ea0257666ea8ce4f11ea036328410f3f7d129"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:organ:left-lung",
+      "fmaId": "FMA7310",
+      "sections": {
+        "pathology": "aed00d6f3fc30b350e9472b8f1a1acec1e0032ae61502deee7bdd5e979caa750",
+        "clinical": "851bbcc7bc71640e08418c37ad16bc13f1c9f9aa233a212b95ca75e0aa3ab7a1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unpaired:organ:esophagus",
+      "fmaId": "FMA7131",
+      "sections": {
+        "pathology": "48bfa3a772c9aad743451bea38c41f4c92c244fdc4b90590bce163f7bdb390ec",
+        "clinical": "3bea00ccdbbf24e720c973fab8ed18fc62598ba05921e61a01f4b1f63c0a4d6c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unpaired:organ:trachea",
+      "fmaId": "FMA7394",
+      "sections": {
+        "pathology": "716d1511a91b7cedc7aba048ec58094712fd28d30b7de80c3de9194a06549a69",
+        "clinical": "e0d2c76067c7081aa4b1932e81a0c26b23e256059fcc46bfd923105f68a1085d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unpaired:organ:thymus",
+      "fmaId": "FMA9607",
+      "sections": {
+        "pathology": "1aca6989772ce262cbf2c6e470838d9a2794836cefe5ed4980badc20cace63ba",
+        "clinical": "34274acc52c2e690521af25b5174b1df71a12923985629a8f39b28a643978d64"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+      "fmaId": "FMA7395",
+      "sections": {
+        "pathology": "ea4784fe9767823340ebd4eaca87716131007bdd86a13a11aee2826488e03ab7",
+        "clinical": "15599f40844a5b4741d48c0fd466c02a685e89234f2398ae70edcc764de76af8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
+      "fmaId": "FMA7396",
+      "sections": {
+        "pathology": "8783d93a4ef476386990c4748a125875ed4159e4cfbbdf428dcfc452eb6d9586",
+        "clinical": "6dea697ad9aa98d5714cdbf0f2127c99dd40c62eb1e60ccf8bd5c431e80012e6"
+      }
+    }
+  ]
+}

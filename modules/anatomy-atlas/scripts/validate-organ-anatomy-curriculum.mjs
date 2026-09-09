@@ -132,7 +132,7 @@ for (const e of before.entries) {
     same(api.organAnatomyLesson({ ...s, ...mutation }, 'anatomy'), undefined);
   for (const t of api.contentTabs.filter((t) => t !== 'anatomy')) {
     same(api.organAnatomyLesson(s, t), undefined);
-    same(api.bodyLesson(s, t), previous.bodyLesson(s, t));
+    same(milestone.bodyLesson(s, t), previous.bodyLesson(s, t));
   }
 }
 for (const s of catalog.structures)

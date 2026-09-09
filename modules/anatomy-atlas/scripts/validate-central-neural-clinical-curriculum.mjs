@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { authoringBeforeThoracicOrganClinical } from './thoracic-organ-clinical-curriculum-transition.mjs';
 import { readFile, writeFile } from 'node:fs/promises';
 import {
   contentContext,
@@ -28,6 +29,7 @@ const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
 const previous = await authoringBeforeCentralNeuralClinical(context);
+const milestone = await authoringBeforeThoracicOrganClinical(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
@@ -279,7 +281,7 @@ for (const s of catalog.structures)
     if (!ids.includes(s.fmaId) || !tabs.includes(t)) {
       same(api.centralNeuralClinicalLesson(s, t), undefined);
       same(
-        api.bodyLesson(s, t),
+        milestone.bodyLesson(s, t),
         previous.bodyLesson(s, t),
         'Every unrelated section preserved',
       );
@@ -471,8 +473,9 @@ const counts = (t) =>
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
-          .length,
+        catalog.structures.filter(
+          (s) => milestone.bodyLesson(s, t).readiness === r,
+        ).length,
       ],
     ),
   );
@@ -520,7 +523,9 @@ const report = {
   combinedPinnedCurriculumSections: 2824,
   sourceIndexChecks,
   negativeCases: negatives.length,
-  bodyReadiness: Object.fromEntries(api.contentTabs.map((t) => [t, counts(t)])),
+  historicalMilestoneReadiness: Object.fromEntries(
+    api.contentTabs.map((t) => [t, counts(t)]),
+  ),
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,

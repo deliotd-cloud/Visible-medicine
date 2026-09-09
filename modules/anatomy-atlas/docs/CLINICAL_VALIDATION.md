@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Thoracic organ teaching
+
+Review [16 new drafts](THORACIC_ORGAN_CLINICAL_CURRICULUM.md) for myocardial infarction versus heart failure/arrest, alveolar versus pleural disease, central-airway stenosis, reflux/stricture/Barrett distinctions, thymic disease and paediatric foreign-body warnings. Verify cardiac, pulmonary, gastroenterological, ENT, oncological and age-specific applicability; localise UK emergency wording before other-jurisdiction use. Check aggregate/source extents and the separately owned coronary components. No physiological simulation, patient diagnosis, airway-device planning, tumour staging or clinical approval is provided; automated checks do not replace specialist or device acceptance.
+
 ## Central neural teaching
 
 Review [46 new drafts](CENTRAL_NEURAL_CLINICAL_CURRICULUM.md) for exact deep-nucleus/commissural identities, paired versus grouped sources, basal-ganglia circuits, central visual/auditory distinctions, memory pathways, syringomyelia, developmental abnormalities and CSF-related disease. Require anatomical, neurological and neuroradiological review; seek neuro-ophthalmic, audiological and paediatric review where relevant. Verify the strength and limits of individual case reports, local stroke/emergency wording and applicability beyond adults. The disputed forniceal commissure remains held. No validated tracts/nuclear subdivisions, complete cord, simulated lesions, testing, treatment protocol, patient imaging or clinical approval is supplied.

@@ -86,6 +86,7 @@
     "acral-bone-clinical-curriculum:test": "node scripts/validate-acral-bone-clinical-curriculum.mjs",
     "orbital-neural-clinical-curriculum:test": "node scripts/validate-orbital-neural-clinical-curriculum.mjs",
     "central-neural-clinical-curriculum:test": "node scripts/validate-central-neural-clinical-curriculum.mjs",
+    "thoracic-organ-clinical-curriculum:test": "node scripts/validate-thoracic-organ-clinical-curriculum.mjs",
     "forearm-curriculum:test": "node scripts/validate-forearm-curriculum.mjs",
     "hand-curriculum:test": "node scripts/validate-hand-curriculum.mjs",
     "thigh-curriculum:test": "node scripts/validate-thigh-curriculum.mjs",

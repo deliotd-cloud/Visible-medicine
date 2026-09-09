@@ -1,14 +1,14 @@
 {
   "passed": true,
-  "checks": 17841,
-  "bodyRepresentations": 23,
-  "sourceComponents": 83,
-  "lessonGroups": 15,
-  "explicitTopicEdits": 46,
-  "combinedPinnedCurriculumSections": 2824,
-  "sourceIndexChecks": 83,
-  "negativeCases": 29,
-  "historicalMilestoneReadiness": {
+  "checks": 17324,
+  "bodyRepresentations": 8,
+  "sourceComponents": 342,
+  "lessonGroups": 6,
+  "explicitTopicEdits": 16,
+  "combinedPinnedCurriculumSections": 2840,
+  "sourceIndexChecks": 342,
+  "negativeCases": 23,
+  "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
       "identity-only": 2,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 622,
+      "draft": 630,
       "identity-only": 0,
-      "pending": 400,
+      "pending": 392,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 622,
+      "draft": 630,
       "identity-only": 0,
-      "pending": 400,
+      "pending": 392,
       "generated-identification": 0
     },
     "quiz": {
@@ -64,5 +64,5 @@
   "scanContentAdded": false,
   "browserTesting": false,
   "copyAndRecipeHash": "41f49aadea63f1cc7284361ccad358dbdda96ac258fcdedb6804d456118c1722",
-  "limitations": "Original central neural clinical drafts; forniceal commissure and all unresolved identity/function holds remain unchanged. Not nuclear or tract segmentation, symptom prediction, perimetry, audiology, memory testing, procedural targets, patient scans or clinical approval."
+  "limitations": "Original thoracic organ clinical drafts; aggregate heart/lung boundaries and separately owned coronary components remain exact. Not validated cardiac function, airway lumen, disease simulation, paediatric anatomy, patient scans, procedural guidance or clinical approval."
 }

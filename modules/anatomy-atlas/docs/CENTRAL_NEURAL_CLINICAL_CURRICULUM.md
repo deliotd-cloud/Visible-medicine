@@ -1,5 +1,7 @@
 # Central neural clinical teaching
 
+Counts below describe this historical milestone. The subsequent [thoracic organ extension](THORACIC_ORGAN_CLINICAL_CURRICULUM.md) adds unrelated lessons; central neural direct/export checks remain current while milestone-wide comparisons use the explicitly pinned historical projection.
+
 ## Scope — 9 September 2026
 
 Forty-six original Clinical/Pathology drafts cover 23 existing nervous-system selections, bound to 83 exact official source-index components in fifteen teaching groups. The existing notes tabs, compact navigation, dissection controls, labels, branding and geometry are unchanged. These are draft educational associations, not validated anatomy, disease models or clinical release.

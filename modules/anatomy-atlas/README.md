@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+The [thoracic organ extension](docs/THORACIC_ORGAN_CLINICAL_CURRICULUM.md) adds 16 Clinical/Pathology drafts for the heart, lungs, main bronchi, trachea, oesophagus and thymus, using the existing panels. Clinical and Pathology each now have 630 draft / 392 pending body entries. Run `npm run thoracic-organ-clinical-curriculum:test -- --source`. Seventy-two organ-system entries and independent clinical review remain outstanding. Older milestone counts below are historical.
+
 The [central neural extension](docs/CENTRAL_NEURAL_CLINICAL_CURRICULUM.md) adds 46 Clinical/Pathology drafts for 23 existing brain, commissural and central-canal selections. Clinical and Pathology each now have 622 draft / 400 pending body entries. Run `npm run central-neural-clinical-curriculum:test -- --source`. The disputed forniceal commissure remains held; independent clinical review and the remaining organ/connective/vessel lessons are still needed. No new controls or geometry are added. Previous milestone totals below are historical.
 
 The [orbital nerve extension](docs/ORBITAL_NEURAL_CLINICAL_CURRICULUM.md) adds 60 Clinical/Pathology drafts for 28 nerve selections and two ciliary ganglia, without extra controls. Run `npm run orbital-neural-clinical-curriculum:test -- --source`. Central neural lessons and specialist review remain outstanding; older milestones below are historical.
