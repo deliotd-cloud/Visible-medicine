@@ -49,7 +49,7 @@ const oldCopy = await copyBeforeShoulderArmCurriculum(context);
 same(
   sha(JSON.stringify(oldCopy)),
   baseline.copyAndRecipeHash,
-  'Only the 3340 pinned curriculum sections change; unrelated copy/recipes are preserved through the pelvic-vessel-clinical extension',
+  'Only the 3372 pinned curriculum sections change; unrelated copy/recipes are preserved through the head-neck-vessel-clinical extension',
 );
 same(shoulder.length, 9);
 same(body.length, 1022);

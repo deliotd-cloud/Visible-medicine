@@ -1,0 +1,134 @@
+{
+  "sourceCommit": "5f049b701725e0a2873a0448fff1c8ad0df1b114",
+  "reason": "Thirty-two original Clinical/Pathology drafts for 16 exact primary-head-neck vessel selections. Original source categories, sides, ordered components and regional memberships preserved; no new geometry, vascular continuity, scans or clinical approval.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
+      "fmaId": "FMA3941",
+      "sections": {
+        "pathology": "1708b198a4c2f794e1566ac556c533db22e27ac3ce3ec6eebe0b2bb64963bcaa",
+        "clinical": "3e5145ee13b117512ef1455b241112d4bb49783b3f6a07f748ad362a5a50d70d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
+      "fmaId": "FMA4058",
+      "sections": {
+        "pathology": "6472e031823c32b8b0041fee3e50672ae8c151f3cb96a302a5506c38fc708a63",
+        "clinical": "100d8506638acbc3a63501555269799150109351ce000280e64f70ead1b72d79"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-internal-carotid-artery",
+      "fmaId": "FMA3949",
+      "sections": {
+        "pathology": "c50bb718ca93d9be43ef1f7f921f28e945f87845009bb0d5fd3e6295e623ab7f",
+        "clinical": "73f57754d242c9bc0fb075242a218058c5533663174d60c7040faff8bbb41b73"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
+      "fmaId": "FMA4062",
+      "sections": {
+        "pathology": "78af166804c3d0d852883cc75811586b2477a55c85ee00292bece5a1a4df3632",
+        "clinical": "f9cb56d22154df233585ed6e9cd5f05100c3e248f8d78837ce483a45026a8075"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-vertebral-artery",
+      "fmaId": "FMA3958",
+      "sections": {
+        "pathology": "83696a4e0e84f597c0ad36931a8c1ee7bba2fa3706bc0d78d6a0adeaecb885af",
+        "clinical": "38a202e46e7a7e25d506abcbca4e6fcb6ab3bc063fd8355413248d8a9744cff6"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-vertebral-artery",
+      "fmaId": "FMA4066",
+      "sections": {
+        "pathology": "103734f49e3d17b30aee29311862a96d688f065837f404985abcd25850b742ad",
+        "clinical": "4468534e0a480d51f45ca45d6443c24186f2a82db96095b4c059954b33c483b4"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-internal-jugular-vein",
+      "fmaId": "FMA4754",
+      "sections": {
+        "pathology": "67b3352fe561e3001fc57bb181faf0597c297f9c24d843c9c97175b90aef63f6",
+        "clinical": "d73531c6979828733345206eac985d7ae288c9df0c6297271ac4c2d1ab3bde5d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-internal-jugular-vein",
+      "fmaId": "FMA4762",
+      "sections": {
+        "pathology": "071e773e67f092fa99123160bf2c05735ec0ece39fc6d211fdb096828f552d1f",
+        "clinical": "e8d1c5010b2b4018d38064195dafbd2285ea404786bca0e7ee2a9fab2c8a3517"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:vessel:basilar-artery",
+      "fmaId": "FMA50542",
+      "sections": {
+        "pathology": "3fa19c6df710eef26b8fdb384b235e83cc2ef9994645c11b686e21c22555ae56",
+        "clinical": "4f7f5ab89a15292ab2168e843f0d9b1e834205ad66eab1142eb1725244fe5d49"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:vessel:anterior-communicating-artery",
+      "fmaId": "FMA50169",
+      "sections": {
+        "pathology": "fde301a13033eb9fd7c8c9f2ab7315d4056e6b8f9178ef566f56c1030cecaa73",
+        "clinical": "4ad292285af345ad161950d2addd1050b456562940896f91098e29310043c894"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-anterior-cerebral-artery",
+      "fmaId": "FMA50029",
+      "sections": {
+        "pathology": "7df6183db27e420695189616e930fc0faee9f532af0ccd5b7c758d27b56d0067",
+        "clinical": "67561d02f2ec82f323346ef24972ee8b69bfd17b336682fb1fd819a920b087df"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
+      "fmaId": "FMA50030",
+      "sections": {
+        "pathology": "1975698d5caa9d1874492aae5c051da361650863bfb4b32e6f8883b4c183c62d",
+        "clinical": "65e4a429e081d76d3f238684bbfffb583d7604e876534b841487733eca7244ae"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-cerebral-artery",
+      "fmaId": "FMA50584",
+      "sections": {
+        "pathology": "e00b467b2c0587d38254be0f018947964a1a4dacda40a5f5ca1b05ad08a09882",
+        "clinical": "c1fa2e3f661410dd8c2762b5d3a3358a63635e4e13acf9302b7f6537aaa4ad93"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-cerebral-artery",
+      "fmaId": "FMA50585",
+      "sections": {
+        "pathology": "6085850a5bdfebb83be988af33d0e8f22c44af79a09dd1f364e2f6fa45790111",
+        "clinical": "60708633983561feda7af9f81a6ba10f2788f4b6d4fb72622ea7343c760a70b5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-communicating-artery",
+      "fmaId": "FMA50085",
+      "sections": {
+        "pathology": "cf26de67336ad553cae3ce2a506c9c68233687dcad6b0c044b127e6b32b8a80e",
+        "clinical": "541d190745e7f3343eac4af3d5330dec75ca0a068bfe2b20f8441b1a88fcea55"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-communicating-artery",
+      "fmaId": "FMA50086",
+      "sections": {
+        "pathology": "0146df67ee12a95b0863e289564a1c7fef8aa0176467c8c425646a2ff31703d3",
+        "clinical": "66cf2fdca795e74004e0489f6d5fae37f625a5450c6a6050a1c8b587b3a5ec16"
+      }
+    }
+  ]
+}

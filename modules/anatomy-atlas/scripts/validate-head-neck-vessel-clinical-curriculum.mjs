@@ -1,12 +1,11 @@
 import assert from 'node:assert/strict';
-import { authoringBeforeHeadNeckVesselClinical } from './head-neck-vessel-clinical-curriculum-transition.mjs';
 import { readFile, writeFile } from 'node:fs/promises';
 import {
   contentContext,
   contentRoot,
   readContentJson,
 } from './content-contract-tools.mjs';
-import { authoringBeforePelvicVesselClinical } from './pelvic-vessel-clinical-curriculum-transition.mjs';
+import { authoringBeforeHeadNeckVesselClinical } from './head-neck-vessel-clinical-curriculum-transition.mjs';
 import {
   curriculumHash,
   copyBeforeShoulderArmCurriculum,
@@ -23,13 +22,12 @@ const check = (v, l) => {
 const context = await contentContext(),
   { api, catalog, body } = context;
 const before = await readContentJson(
-  'content/pelvic-vessel-clinical-curriculum.before.json',
+  'content/head-neck-vessel-clinical-curriculum.before.json',
 );
 const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
-const previous = await authoringBeforePelvicVesselClinical(context);
-const milestone = await authoringBeforeHeadNeckVesselClinical(context);
+const previous = await authoringBeforeHeadNeckVesselClinical(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
@@ -51,120 +49,178 @@ const omittedByFma = {};
 /** @type {Array<[string, string, string, string[], string, string[], string]>} */
 const expected = [
   [
-    'FMA14765',
+    'FMA3941',
     'right',
     'isa',
-    ['FJ3565'],
-    'pelvis',
-    ['pelvis', 'abdomen', 'thigh'],
+    ['FJ3564'],
+    'head-neck',
+    ['head-neck', 'thorax'],
     'vessel',
   ],
   [
-    'FMA14766',
+    'FMA4058',
     'left',
     'isa',
-    ['FJ3464'],
-    'pelvis',
-    ['pelvis', 'abdomen', 'thigh'],
+    ['FJ3483'],
+    'head-neck',
+    ['head-neck', 'thorax'],
     'vessel',
   ],
   [
-    'FMA18806',
+    'FMA3949',
     'right',
     'isa',
-    ['FJ3567'],
-    'pelvis',
-    ['pelvis', 'abdomen', 'thigh'],
+    ['FJ1682'],
+    'head-neck',
+    ['head-neck', 'thorax'],
     'vessel',
   ],
   [
-    'FMA18807',
+    'FMA4062',
     'left',
     'isa',
-    ['FJ3466'],
-    'pelvis',
-    ['pelvis', 'abdomen', 'thigh'],
+    ['FJ1682M'],
+    'head-neck',
+    ['head-neck', 'thorax'],
     'vessel',
   ],
   [
-    'FMA18809',
+    'FMA3958',
     'right',
     'isa',
-    ['FJ3569'],
-    'pelvis',
-    ['pelvis', 'abdomen', 'thigh'],
+    ['FJ1725'],
+    'head-neck',
+    ['head-neck', 'thorax'],
     'vessel',
   ],
   [
-    'FMA18810',
+    'FMA4066',
     'left',
     'isa',
-    ['FJ3468'],
-    'pelvis',
-    ['pelvis', 'abdomen', 'thigh'],
+    ['FJ1725M'],
+    'head-neck',
+    ['head-neck', 'thorax'],
     'vessel',
   ],
   [
-    'FMA21387',
+    'FMA4754',
     'right',
     'isa',
-    ['FJ3566'],
-    'pelvis',
-    ['pelvis', 'abdomen', 'thigh'],
+    ['FJ3585'],
+    'head-neck',
+    ['head-neck', 'thorax'],
     'vessel',
   ],
   [
-    'FMA21388',
+    'FMA4762',
     'left',
     'isa',
-    ['FJ3465'],
-    'pelvis',
-    ['pelvis', 'abdomen', 'thigh'],
+    ['FJ3485'],
+    'head-neck',
+    ['head-neck', 'thorax'],
     'vessel',
   ],
   [
-    'FMA18885',
+    'FMA50542',
+    'midline',
+    'isa',
+    ['FJ1672', 'FJ1844'],
+    'head-neck',
+    ['head-neck'],
+    'vessel',
+  ],
+  [
+    'FMA50169',
+    'midline',
+    'isa',
+    ['FJ1655'],
+    'head-neck',
+    ['head-neck'],
+    'vessel',
+  ],
+  [
+    'FMA50029',
     'right',
     'isa',
-    ['FJ3568'],
-    'pelvis',
-    ['pelvis', 'abdomen', 'thigh'],
+    ['FJ1654'],
+    'head-neck',
+    ['head-neck'],
     'vessel',
   ],
   [
-    'FMA18886',
+    'FMA50030',
     'left',
     'isa',
-    ['FJ3484', 'FJ3522', 'FJ3523', 'FJ3524'],
-    'pelvis',
-    ['pelvis', 'abdomen', 'thigh'],
+    ['FJ1654M'],
+    'head-neck',
+    ['head-neck'],
     'vessel',
   ],
   [
-    'FMA18887',
+    'FMA50584',
+    'right',
+    'partof',
+    [
+      'FJ1661',
+      'FJ1675',
+      'FJ1677',
+      'FJ1678',
+      'FJ1680',
+      'FJ1687',
+      'FJ1691',
+      'FJ1720',
+      'FJ1727',
+    ],
+    'head-neck',
+    ['head-neck'],
+    'vessel',
+  ],
+  [
+    'FMA50585',
+    'left',
+    'partof',
+    [
+      'FJ1661M',
+      'FJ1675M',
+      'FJ1677M',
+      'FJ1678M',
+      'FJ1680M',
+      'FJ1687M',
+      'FJ1691M',
+      'FJ1720M',
+      'FJ1727M',
+    ],
+    'head-neck',
+    ['head-neck'],
+    'vessel',
+  ],
+  [
+    'FMA50085',
     'right',
     'isa',
-    ['FJ3570', 'FJ3571', 'FJ3572', 'FJ3607', 'FJ3608', 'FJ3609'],
-    'pelvis',
-    ['pelvis', 'abdomen', 'thigh'],
+    ['FJ1713'],
+    'head-neck',
+    ['head-neck'],
     'vessel',
   ],
   [
-    'FMA18888',
+    'FMA50086',
     'left',
     'isa',
-    ['FJ3469', 'FJ3470', 'FJ3471'],
-    'pelvis',
-    ['pelvis', 'abdomen', 'thigh'],
+    ['FJ1713M'],
+    'head-neck',
+    ['head-neck'],
     'vessel',
   ],
 ];
 const ids = expected.map((e) => e[0]),
   tabs = ['pathology', 'clinical'];
-same(api.pelvicVesselClinicalGroups.length, 7);
+same(api.headNeckVesselClinicalGroups.length, 9);
 const byIdentity = (a, b) => a[0].localeCompare(b[0]);
 same(
-  api.pelvicVesselClinicalGroups.flatMap((g) => g.identities).sort(byIdentity),
+  api.headNeckVesselClinicalGroups
+    .flatMap((g) => g.identities)
+    .sort(byIdentity),
   [...expected].sort(byIdentity),
 );
 same(before.entries.map((e) => e.fmaId).sort(), [...ids].sort());
@@ -189,12 +245,12 @@ for (const [f, side, tree, files, region, regions, category] of expected) {
     [...files, ...(omittedByFma[f] ?? [])].sort((a, b) => a.localeCompare(b)),
   );
   same(e.omittedSourceFiles, omittedByFma[f] ?? []);
-  const group = api.pelvicVesselClinicalGroups.find((g) =>
+  const group = api.headNeckVesselClinicalGroups.find((g) =>
     g.identities.some((i) => i[0] === f),
   );
   const record = body.find((r) => r.id === s.id);
   for (const t of tabs) {
-    const result = api.pelvicVesselClinicalLesson(s, t);
+    const result = api.headNeckVesselClinicalLesson(s, t);
     same(result, api.bodyLesson(s, t));
     same(result.readiness, 'draft');
     same(result.body, group[t].body);
@@ -206,7 +262,7 @@ for (const [f, side, tree, files, region, regions, category] of expected) {
     if (s.coverageNote) check(result.note.includes(s.coverageNote));
     check(
       api
-        .pelvicVesselClinicalLesson({ ...s, coverageNote: 'Keep warning' }, t)
+        .headNeckVesselClinicalLesson({ ...s, coverageNote: 'Keep warning' }, t)
         .note.includes('Keep warning'),
     );
     for (const url of result.citations) same(new URL(url).protocol, 'https:');
@@ -241,70 +297,81 @@ for (const [f, side, tree, files, region, regions, category] of expected) {
         : []),
       ...(s.regions.length > 1 ? [{ regions: [...s.regions].reverse() }] : []),
     ])
-      same(api.pelvicVesselClinicalLesson({ ...s, ...mutation }, t), undefined);
+      same(
+        api.headNeckVesselClinicalLesson({ ...s, ...mutation }, t),
+        undefined,
+      );
   }
 }
 for (const s of catalog.structures)
   for (const t of api.contentTabs) {
     if (!ids.includes(s.fmaId) || !tabs.includes(t)) {
-      same(api.pelvicVesselClinicalLesson(s, t), undefined);
+      same(api.headNeckVesselClinicalLesson(s, t), undefined);
       same(
-        milestone.bodyLesson(s, t),
+        api.bodyLesson(s, t),
         previous.bodyLesson(s, t),
         'Every unrelated section preserved',
       );
     }
   }
-same(ids.length, 12);
-same(new Set(ids).size, 12);
-same(new Set(expected.flatMap((e) => e[3])).size, 22);
-same(expected.filter((e) => e[1] === 'left').length, 6);
-same(expected.filter((e) => e[1] === 'right').length, 6);
+same(ids.length, 16);
+same(new Set(ids).size, 16);
+same(new Set(expected.flatMap((e) => e[3])).size, 33);
+same(expected.filter((e) => e[1] === 'left').length, 7);
+same(expected.filter((e) => e[1] === 'right').length, 7);
+same(expected.filter((e) => e[1] === 'midline').length, 2);
+same(expected.filter((e) => e[2] === 'isa').length, 14);
+same(expected.filter((e) => e[2] === 'partof').length, 2);
 same(
-  expected.every((e) => e[2] === 'isa' && e[6] === 'vessel'),
+  expected.every((e) => e[6] === 'vessel'),
   true,
 );
+same(expected.flatMap((e) => e[3]).filter((f) => f.endsWith('M')).length, 13);
 same(
-  api.pelvicVesselClinicalGroups.map((g) => [g.key, g.identities.length]),
+  api.headNeckVesselClinicalGroups.map((g) => [g.key, g.identities.length]),
   [
-    ['common-iliac-arteries', 2],
-    ['external-iliac-arteries', 2],
-    ['internal-iliac-arteries', 2],
-    ['right-common-iliac-vein', 1],
-    ['left-common-iliac-vein', 1],
-    ['external-iliac-veins', 2],
-    ['internal-iliac-veins', 2],
+    ['common-carotid-arteries', 2],
+    ['internal-carotid-arteries', 2],
+    ['vertebral-arteries', 2],
+    ['internal-jugular-veins', 2],
+    ['basilar-artery', 1],
+    ['anterior-communicating-artery', 1],
+    ['anterior-cerebral-arteries', 2],
+    ['posterior-cerebral-arteries', 2],
+    ['posterior-communicating-arteries', 2],
   ],
 );
-for (const g of api.pelvicVesselClinicalGroups) {
+for (const g of api.headNeckVesselClinicalGroups) {
   check(g.pathology.body.length > 100);
   check(g.clinical.body.length > 100);
 }
 for (const [f, n] of [
-  ['FMA18885', 1],
-  ['FMA18886', 4],
-  ['FMA18887', 6],
-  ['FMA18888', 3],
+  ['FMA50542', 2],
+  ['FMA50584', 9],
+  ['FMA50585', 9],
 ])
   same(entry(f).sources.length, n);
-for (const f of ids) same(entry(f).regions, ['pelvis', 'abdomen', 'thigh']);
+for (const f of ['FMA50584', 'FMA50585']) same(entry(f).sourceTree, 'partof');
+for (const f of ['FMA50542', 'FMA50169']) same(entry(f).laterality, 'midline');
+same(entry('FMA4062').sources[0].file, 'FJ1682M');
+same(entry('FMA4066').sources[0].file, 'FJ1725M');
 same(
-  api.pelvicVesselClinicalGroups
-    .find((g) => g.key === 'left-common-iliac-vein')
-    .pathology.body.includes('right common iliac artery'),
+  api.headNeckVesselClinicalGroups
+    .find((g) => g.key === 'posterior-communicating-arteries')
+    .pathology.body.includes('pupil sparing alone cannot exclude'),
   true,
 );
 same(
-  api.pelvicVesselClinicalGroups
-    .find((g) => g.key === 'internal-iliac-veins')
-    .scope.includes('Six right and three left'),
+  api.headNeckVesselClinicalGroups
+    .find((g) => g.key === 'posterior-cerebral-arteries')
+    .pathology.body.includes('both eyes'),
   true,
 );
 same(
   catalog.structures.filter(
     (s) =>
       s.system === 'vessels' &&
-      s.region === 'pelvis' &&
+      s.region === 'head-neck' &&
       api.bodyLesson(s, 'clinical').readiness === 'pending',
   ).length,
   0,
@@ -312,7 +379,7 @@ same(
 const legacyRightShoulder = ['FMA13322', 'FMA23130', 'FMA13395'];
 for (const f of legacyRightShoulder)
   for (const t of tabs) {
-    same(api.pelvicVesselClinicalLesson(entry(f), t), undefined);
+    same(api.headNeckVesselClinicalLesson(entry(f), t), undefined);
     same(api.bodyLesson(entry(f), t), previous.bodyLesson(entry(f), t));
   }
 for (const t of tabs)
@@ -320,7 +387,7 @@ for (const t of tabs)
 for (const f of ['FMA45097', 'FMA45098'])
   for (const tab of tabs) {
     same(api.bodyLesson(entry(f), tab).readiness, 'pending');
-    same(api.pelvicVesselClinicalLesson(entry(f), tab), undefined);
+    same(api.headNeckVesselClinicalLesson(entry(f), tab), undefined);
   }
 same(
   catalog.structures
@@ -368,21 +435,25 @@ if (process.argv.includes('--source')) {
 }
 
 const negatives = [
-  ['FMA14765', 'pathology', 'readiness'],
-  ['FMA14766', 'clinical', 'body'],
-  ['FMA18806', 'pathology', 'body'],
-  ['FMA18807', 'clinical', 'body'],
-  ['FMA18809', 'pathology', 'readiness'],
-  ['FMA18810', 'clinical', 'body'],
-  ['FMA21387', 'pathology', 'body'],
-  ['FMA21388', 'clinical', 'body'],
-  ['FMA18885', 'pathology', 'readiness'],
-  ['FMA18886', 'clinical', 'body'],
-  ['FMA18887', 'pathology', 'body'],
-  ['FMA18888', 'clinical', 'body'],
-  ['FMA14765', 'anatomy', 'body'],
-  ['FMA18888', 'function', 'body'],
-  ['FMA21388', 'ct', 'body'],
+  ['FMA3941', 'pathology', 'readiness'],
+  ['FMA4058', 'clinical', 'body'],
+  ['FMA3949', 'pathology', 'body'],
+  ['FMA4062', 'clinical', 'body'],
+  ['FMA3958', 'pathology', 'readiness'],
+  ['FMA4066', 'clinical', 'body'],
+  ['FMA4754', 'pathology', 'body'],
+  ['FMA4762', 'clinical', 'body'],
+  ['FMA50542', 'pathology', 'readiness'],
+  ['FMA50169', 'clinical', 'body'],
+  ['FMA50029', 'pathology', 'body'],
+  ['FMA50030', 'clinical', 'body'],
+  ['FMA50584', 'pathology', 'readiness'],
+  ['FMA50585', 'clinical', 'body'],
+  ['FMA50085', 'pathology', 'body'],
+  ['FMA50086', 'clinical', 'body'],
+  ['FMA3941', 'anatomy', 'body'],
+  ['FMA50585', 'function', 'body'],
+  ['FMA4754', 'ct', 'body'],
   ['FMA16037', 'clinical', 'body'],
   ['FMA45097', 'clinical', 'readiness'],
   ['FMA45097', 'function', 'readiness'],
@@ -441,17 +512,16 @@ const counts = (t) =>
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter(
-          (s) => milestone.bodyLesson(s, t).readiness === r,
-        ).length,
+        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
+          .length,
       ],
     ),
   );
 for (const t of tabs)
   same(counts(t), {
-    draft: 880,
+    draft: 896,
     'identity-only': 0,
-    pending: 142,
+    pending: 126,
     'generated-identification': 0,
   });
 for (const t of ['ct', 'mri', 'ultrasound'])
@@ -484,16 +554,14 @@ for (const f of api.shoulderArmLessons.flatMap((l) => l.fmaIds))
 const report = {
   passed: true,
   checks,
-  bodyRepresentations: 12,
-  sourceComponents: 22,
-  lessonGroups: 7,
-  explicitTopicEdits: 24,
-  combinedPinnedCurriculumSections: 3340,
+  bodyRepresentations: 16,
+  sourceComponents: 33,
+  lessonGroups: 9,
+  explicitTopicEdits: 32,
+  combinedPinnedCurriculumSections: 3372,
   sourceIndexChecks,
   negativeCases: negatives.length,
-  historicalMilestoneReadiness: Object.fromEntries(
-    api.contentTabs.map((t) => [t, counts(t)]),
-  ),
+  bodyReadiness: Object.fromEntries(api.contentTabs.map((t) => [t, counts(t)])),
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,
@@ -501,11 +569,11 @@ const report = {
   browserTesting: false,
   copyAndRecipeHash: curriculumHash(copy(api)),
   limitations:
-    'Original primary-pelvis vessel drafts; exact source trees, categories, sides, ordered components and cross-region memberships retained. No new geometry, validated lumen, measured flow, procedural route, scan or clinical approval.',
+    'Original primary-head-neck vessel drafts; exact source trees, categories, sides, ordered components and cross-region memberships retained. No new geometry, validated lumen, measured flow, procedural route, scan or clinical approval.',
 };
 await writeFile(
   new URL(
-    'docs/pelvic-vessel-clinical-curriculum-validation.json',
+    'docs/head-neck-vessel-clinical-curriculum-validation.json',
     contentRoot,
   ),
   JSON.stringify(report, null, 2) + '\n',

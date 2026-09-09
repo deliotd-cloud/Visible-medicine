@@ -1,0 +1,548 @@
+{
+  "sourceCommit": "5f049b701725e0a2873a0448fff1c8ad0df1b114",
+  "copyAndRecipeHash": "d2c46bf2e4384e77074953e6a259fd7a2d51644e883a14de1b10028f4548ef38",
+  "scope": "body",
+  "regions": [
+    "head-neck"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
+      "fmaId": "FMA3941",
+      "name": "Right common carotid artery",
+      "category": "vessel",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3564"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3564"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
+      "fmaId": "FMA4058",
+      "name": "Left common carotid artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3483"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3483"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-internal-carotid-artery",
+      "fmaId": "FMA3949",
+      "name": "Right internal carotid artery",
+      "category": "vessel",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1682"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1682"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
+      "fmaId": "FMA4062",
+      "name": "Left internal carotid artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1682M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1682M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-vertebral-artery",
+      "fmaId": "FMA3958",
+      "name": "Right vertebral artery",
+      "category": "vessel",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1725"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1725"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-vertebral-artery",
+      "fmaId": "FMA4066",
+      "name": "Left vertebral artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1725M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1725M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-internal-jugular-vein",
+      "fmaId": "FMA4754",
+      "name": "Right internal jugular vein",
+      "category": "vessel",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3585"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3585"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-internal-jugular-vein",
+      "fmaId": "FMA4762",
+      "name": "Left internal jugular vein",
+      "category": "vessel",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3485"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3485"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:vessel:basilar-artery",
+      "fmaId": "FMA50542",
+      "name": "Basilar artery",
+      "category": "vessel",
+      "side": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1672",
+        "FJ1844"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1672",
+        "FJ1844"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:vessel:anterior-communicating-artery",
+      "fmaId": "FMA50169",
+      "name": "Anterior communicating artery",
+      "category": "vessel",
+      "side": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1655"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1655"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-anterior-cerebral-artery",
+      "fmaId": "FMA50029",
+      "name": "Right anterior cerebral artery",
+      "category": "vessel",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1654"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1654"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
+      "fmaId": "FMA50030",
+      "name": "Left anterior cerebral artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1654M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1654M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-cerebral-artery",
+      "fmaId": "FMA50584",
+      "name": "Right posterior cerebral artery",
+      "category": "vessel",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "partof",
+      "files": [
+        "FJ1661",
+        "FJ1675",
+        "FJ1677",
+        "FJ1678",
+        "FJ1680",
+        "FJ1687",
+        "FJ1691",
+        "FJ1720",
+        "FJ1727"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1661",
+        "FJ1675",
+        "FJ1677",
+        "FJ1678",
+        "FJ1680",
+        "FJ1687",
+        "FJ1691",
+        "FJ1720",
+        "FJ1727"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-cerebral-artery",
+      "fmaId": "FMA50585",
+      "name": "Left posterior cerebral artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "partof",
+      "files": [
+        "FJ1661M",
+        "FJ1675M",
+        "FJ1677M",
+        "FJ1678M",
+        "FJ1680M",
+        "FJ1687M",
+        "FJ1691M",
+        "FJ1720M",
+        "FJ1727M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1661M",
+        "FJ1675M",
+        "FJ1677M",
+        "FJ1678M",
+        "FJ1680M",
+        "FJ1687M",
+        "FJ1691M",
+        "FJ1720M",
+        "FJ1727M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-communicating-artery",
+      "fmaId": "FMA50085",
+      "name": "Right posterior communicating artery",
+      "category": "vessel",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1713"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1713"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-communicating-artery",
+      "fmaId": "FMA50086",
+      "name": "Left posterior communicating artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1713M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1713M"
+      ],
+      "omittedSourceFiles": []
+    }
+  ]
+}
