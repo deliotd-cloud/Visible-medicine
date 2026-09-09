@@ -1,6 +1,8 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
-The [hand/foot bone extension](docs/ACRAL_BONE_CLINICAL_CURRICULUM.md) adds 212 Clinical/Pathology drafts for 106 exact bones without extra controls. Two unresolved grouped foot-sesamoid selections stay pending. Run `npm run acral-bone-clinical-curriculum:test -- --source`. Specialist review remains required; older milestone totals below are historical.
+The [orbital nerve extension](docs/ORBITAL_NEURAL_CLINICAL_CURRICULUM.md) adds 60 Clinical/Pathology drafts for 28 nerve selections and two ciliary ganglia, without extra controls. Run `npm run orbital-neural-clinical-curriculum:test -- --source`. Central neural lessons and specialist review remain outstanding; older milestones below are historical.
+
+The [hand/foot bone extension](docs/ACRAL_BONE_CLINICAL_CURRICULUM.md) adds 212 Clinical/Pathology drafts for 106 exact bones. Two unresolved grouped foot-sesamoid selections stay pending.
 
 The [skull/facial/hyoid extension](docs/CRANIAL_BONE_CLINICAL_CURRICULUM.md) adds 46 Clinical/Pathology drafts for 23 exact selections, distinguishing adjacent bony, neural and soft-tissue problems without extra controls. Run `npm run cranial-bone-clinical-curriculum:test -- --source`. Clinical review remains required; earlier milestone totals below are historical.
 

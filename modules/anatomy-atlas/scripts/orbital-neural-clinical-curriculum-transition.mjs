@@ -1,32 +1,30 @@
 import assert from 'node:assert/strict';
-import { authoringBeforeOrbitalNeuralClinical } from './orbital-neural-clinical-curriculum-transition.mjs';
 import { readContentJson } from './content-contract-tools.mjs';
 import { createHash } from 'node:crypto';
 const hash = (v) =>
   createHash('sha256').update(JSON.stringify(v)).digest('hex');
 /** Offline historical comparison only. Runtime/export always use current teaching. */
-export async function authoringBeforeAcralBoneClinical(context) {
-  const { catalog } = context;
-  const api = await authoringBeforeOrbitalNeuralClinical(context);
+export async function authoringBeforeOrbitalNeuralClinical(context) {
+  const { api, catalog } = context;
   const before = await readContentJson(
-    'content/acral-bone-clinical-curriculum.before.json',
+    'content/orbital-neural-clinical-curriculum.before.json',
   );
   const after = await readContentJson(
-    'content/acral-bone-clinical-curriculum.transition.json',
+    'content/orbital-neural-clinical-curriculum.transition.json',
   );
   assert.equal(
     hash(before),
-    '563ff5fda3cbd97dd03d9dc79f0ee6ff1f92ac2884d11217403fd536f2b7a114',
+    'b55af543d53ffdd6e24619bce1f17aa5e18b8ebb7b1a7a4914e9456a448b3d72',
   );
   assert.equal(
     hash(after),
-    'a8159db6bded4116d8d698fb663e8021308c5cb1120c0272ced30ef5c43d84c9',
+    '8f11e4e542e497439ea64ff7215cff5f7c7404a5c8610dfc4d121da6eff8c288',
   );
-  assert.equal(before.sourceCommit, '62645e18b2d677870e60271d2d61467d6f873169');
+  assert.equal(before.sourceCommit, '0f5d8a8563b12120f8a3e734cca04cfc6507da5a');
   assert.equal(after.sourceCommit, before.sourceCommit);
   assert.equal(before.scope, 'body');
-  assert.deepEqual(before.regions, ['hand', 'foot']);
-  assert.equal(before.entries.length, 106);
+  assert.deepEqual(before.regions, ['head-neck']);
+  assert.equal(before.entries.length, 30);
   assert.deepEqual(
     after.entries.map((e) => [e.id, e.fmaId]),
     before.entries.map((e) => [e.id, e.fmaId]),
@@ -34,7 +32,7 @@ export async function authoringBeforeAcralBoneClinical(context) {
   const originals = new Map();
   for (const [i, e] of before.entries.entries()) {
     const s = catalog.structures.find((s) => s.id === e.id);
-    assert(s && s.system === 'skeleton');
+    assert(s && s.system === 'nerves');
     for (const [field, key] of [
       ['fmaId', 'fmaId'],
       ['name', 'name'],
@@ -58,14 +56,14 @@ export async function authoringBeforeAcralBoneClinical(context) {
       assert.equal(
         hash(lesson),
         after.entries[i].sections[t],
-        'Unrecorded acral-bone clinical edit: ' + s.id + ' / ' + t,
+        'Unrecorded orbital neural clinical edit: ' + s.id + ' / ' + t,
       );
       const { readiness: _r, ...shown } = lesson;
       assert.deepEqual(shown, api.bodyContent(s, t));
       originals.set(s.id + '|' + t, e.sections[t]);
     }
   }
-  assert.equal(originals.size, 212);
+  assert.equal(originals.size, 60);
   const bodyLesson = (s, t) =>
     originals.has(s.id + '|' + t)
       ? structuredClone(originals.get(s.id + '|' + t))

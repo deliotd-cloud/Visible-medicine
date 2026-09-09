@@ -2,7 +2,7 @@
 
 ## Hand and foot bone clinical teaching
 
-The [acral-bone extension](ACRAL_BONE_CLINICAL_CURRICULUM.md) adds 28 definitions for 106 exact ISA identities/components, with side, ordered source and region guards. Two grouped foot-sesamoid identities remain excluded. Its offline projection precedes cranial-bone history (43 projections / 2,718 pinned edits). Current runtime/export stay current; prior captures and baseline remain fixed. No geometry, interface, schema, dependency or review migration.
+The [orbital neural extension](ORBITAL_NEURAL_CLINICAL_CURRICULUM.md) adds 15 definitions for 30 exact ISA selections: 28 nerves and two organ-category ciliary ganglia. Category, FMA, side, ordered files and primary/ordered regions are guarded. Its offline projection precedes the [acral-bone extension](ACRAL_BONE_CLINICAL_CURRICULUM.md), giving 44 projections / 2,778 pinned edits. Runtime/export stay current; prior captures and baseline remain fixed. No geometry, interface, schema, dependency or review migration.
 
 ## Skull, facial-bone and hyoid clinical teaching
 

@@ -162,7 +162,7 @@ for (const [fma, [side, category, tree, files]] of Object.entries(expected)) {
     const result = api.neuralAnatomyLesson(s, t);
     if (!(t === 'anatomy' || (t === 'function' && corrected.has(fma)))) {
       same(result, undefined);
-      same(api.bodyLesson(s, t), previous.bodyLesson(s, t));
+      same(milestone.bodyLesson(s, t), previous.bodyLesson(s, t));
       continue;
     }
     edits++;

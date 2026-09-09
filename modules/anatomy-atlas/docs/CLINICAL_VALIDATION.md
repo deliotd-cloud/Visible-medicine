@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Orbital nerves and ciliary ganglia
+
+Review [60 new drafts](ORBITAL_NEURAL_CLINICAL_CURRICULUM.md) for exact side/branch/category, sensory versus motor localization, parasympathetic relay versus traversing fibres, corneal disease, shingles, ocular-motor mimics and pupil warning language. Anatomical consequences are explicitly identified as inference, not a diagnosed syndrome. Require anatomy, neuro-ophthalmic and neuroradiological review, plus paediatric and local emergency-service applicability. No nerve blocks, diagnostic testing, simulated lesions, patient imaging or clinical approval are provided.
+
 ## Hand and foot bone review
 
 Review [212 new drafts](ACRAL_BONE_CLINICAL_CURRICULUM.md) for exact side/digit/segment mapping, bone versus tendon/ligament injury, occult-fracture and vascular limits, thumb/hallux IP terminology, carpal and midfoot joint context, toe warning wording and paediatric applicability. Require anatomical, hand, foot-and-ankle and MSK-radiological review. Two grouped foot-sesamoid identities remain on hold. No patient diagnosis, validated injury mechanics, procedural instruction, scan registration or device acceptance is provided.

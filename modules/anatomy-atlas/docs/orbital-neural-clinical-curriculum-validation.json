@@ -1,14 +1,14 @@
 {
   "passed": true,
-  "checks": 22012,
-  "bodyRepresentations": 106,
-  "sourceComponents": 106,
-  "lessonGroups": 28,
-  "explicitTopicEdits": 212,
-  "combinedPinnedCurriculumSections": 2718,
-  "sourceIndexChecks": 106,
-  "negativeCases": 40,
-  "historicalMilestoneReadiness": {
+  "checks": 18117,
+  "bodyRepresentations": 30,
+  "sourceComponents": 30,
+  "lessonGroups": 15,
+  "explicitTopicEdits": 60,
+  "combinedPinnedCurriculumSections": 2778,
+  "sourceIndexChecks": 30,
+  "negativeCases": 29,
+  "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
       "identity-only": 2,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 569,
+      "draft": 599,
       "identity-only": 0,
-      "pending": 453,
+      "pending": 423,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 569,
+      "draft": 599,
       "identity-only": 0,
-      "pending": 453,
+      "pending": 423,
       "generated-identification": 0
     },
     "quiz": {
@@ -64,5 +64,5 @@
   "scanContentAdded": false,
   "browserTesting": false,
   "copyAndRecipeHash": "65b5583cc2497259574ed26f6b2f81796f017d288946b3bd6f3a793c6fe9d6d7",
-  "limitations": "Original short hand/foot bone clinical drafts; two grouped foot-sesamoid identities remain pending. Not fracture reconstruction, ligament/tendon testing, measured loading or perfusion, patient scans, procedural guidance or clinical approval."
+  "limitations": "Original orbital nerve/ganglion clinical drafts; central neural entries and all unresolved holds remain unchanged. Not lesion mapping, corneal or pupil testing, disease simulation, nerve-block guidance, patient scans or clinical approval."
 }
