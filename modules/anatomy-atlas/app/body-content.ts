@@ -57,6 +57,7 @@ import { footClinicalLesson } from '../lib/foot-clinical-curriculum';
 import { trunkClinicalLesson } from '../lib/trunk-clinical-curriculum';
 import { headClinicalLesson } from '../lib/head-clinical-curriculum';
 import { neckClinicalLesson } from '../lib/neck-clinical-curriculum';
+import { limbBoneClinicalLesson } from '../lib/limb-bone-clinical-curriculum';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -183,6 +184,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (headClinical) return headClinical;
   const neckClinical = neckClinicalLesson(s, tab);
   if (neckClinical) return neckClinical;
+  const limbBoneClinical = limbBoneClinicalLesson(s, tab);
+  if (limbBoneClinical) return limbBoneClinical;
   const axial =
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??

@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+The [major limb/hip bone extension](docs/LIMB_BONE_CLINICAL_CURRICULUM.md) adds 34 Clinical/Pathology drafts for 17 exact bone selections, without new controls or changes to existing right-shoulder teaching. Fracture location, adjacent joints and neurovascular context remain explicitly educational and unvalidated. Run `npm run limb-bone-clinical-curriculum:test -- --source`.
+
 The [neck and remaining axial-muscle extension](docs/NECK_CLINICAL_CURRICULUM.md) adds 96 Clinical/Pathology drafts for 48 exact selections without additional controls. Initial muscle teaching remains incomplete and unvalidated; the unresolved perineal category is still pending. Run `npm run neck-clinical-curriculum:test -- --source`.
 
 The [eye, swallowing and voice extension](docs/HEAD_CLINICAL_CURRICULUM.md) adds 120 Clinical/Pathology drafts for 60 exact muscle selections using the existing tabs. Facial and masticatory geometry gaps remain explicit. Independent specialist review is required. Run `npm run head-clinical-curriculum:test -- --source`.

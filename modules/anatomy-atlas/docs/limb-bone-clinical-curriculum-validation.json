@@ -1,14 +1,13 @@
 {
   "passed": true,
-  "checks": 19054,
-  "bodyRepresentations": 48,
-  "sourceComponents": 52,
-  "lessonGroups": 26,
-  "explicitTopicEdits": 96,
-  "combinedPinnedCurriculumSections": 2322,
-  "sourceIndexChecks": 52,
-  "negativeCases": 14,
-  "readinessScope": "Historical neck milestone; current direct/export assertions remain active",
+  "checks": 17375,
+  "bodyRepresentations": 17,
+  "sourceComponents": 17,
+  "lessonGroups": 10,
+  "explicitTopicEdits": 34,
+  "combinedPinnedCurriculumSections": 2356,
+  "sourceIndexChecks": 17,
+  "negativeCases": 17,
   "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
@@ -41,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 371,
+      "draft": 388,
       "identity-only": 0,
-      "pending": 651,
+      "pending": 634,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 371,
+      "draft": 388,
       "identity-only": 0,
-      "pending": 651,
+      "pending": 634,
       "generated-identification": 0
     },
     "quiz": {
@@ -64,6 +63,6 @@
   "clinicalApproval": false,
   "scanContentAdded": false,
   "browserTesting": false,
-  "copyAndRecipeHash": "c224b5847861e5c95f0addac8f72cf8fab622b35fdd5d0fe2d44950537292bb4",
-  "limitations": "Original short neck/remaining axial muscle clinical drafts; not validated disease localisation, nerve courses, joint stability, muscle activation, procedural corridors, patient scans or clinical approval."
+  "copyAndRecipeHash": "649cd498f52ab450b81004feddd86f1a9980d2067a03a23f4a141468a8a97d54",
+  "limitations": "Original short major limb/hip bone clinical drafts; not validated fractures, neurovascular lesions, ligament stability, patient scans, procedural guidance or clinical approval."
 }

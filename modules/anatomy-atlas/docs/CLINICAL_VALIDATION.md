@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Major limb and hip bone review
+
+Review [34 new drafts](LIMB_BONE_CLINICAL_CURRICULUM.md) for fracture versus joint injury, radial/axillary nerve relationships, Monteggia/Galeazzi distinctions, pelvic-ring/socket identity, occult hip injury, plateau/compartment warnings, fibular syndesmotic associations and extensor-mechanism context. Anatomical and MSK/trauma review is required. No patient diagnosis, procedural guidance, actual scans or geometry/device acceptance is provided.
+
 ## Neck and axial-muscle clinical review
 
 Review [the new drafts](NECK_CLINICAL_CURRICULUM.md) for dystonic versus compensatory activity, cord/vascular/trauma warnings, longus-capitis versus longus-colli identity, nerve-pain versus muscle attribution and grouped cervical/lumbar/rib anatomy. Require neurological, MSK, trauma and anatomical review. No diagnostic, procedural, imaging or device acceptance is provided.

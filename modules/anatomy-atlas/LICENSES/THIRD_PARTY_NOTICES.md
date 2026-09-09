@@ -1,5 +1,7 @@
 # Third-party notices
 
+The major limb/hip bone clinical extension adds brief original factual teaching with AAOS, AO and NCBI reference links. No publisher prose, diagrams, scans, tables, classification charts or procedural content is imported. Links do not license commercial asset reuse. Original MIT code/text and existing BodyParts3D CC BY 4.0 obligations remain unchanged; no new dependency, font, paid service or patient data. See `../docs/LIMB_BONE_CLINICAL_CURRICULUM.md`.
+
 The neck/axial clinical extension adds brief original factual teaching and reference links. No publisher prose, diagrams, tables, article files, questions, scans or meshes are imported. Public access and citations are not commercial asset grants; original MIT text/code and existing BodyParts3D CC BY 4.0 obligations remain. No new dependency, font, paid service or patient data. See `../docs/NECK_CLINICAL_CURRICULUM.md`.
 
 The head clinical extension adds short original factual teaching with society, university, NIH/NHS and medical-reference links. No publisher prose, images, tables, scans, questions or models are shipped; public access and citations are not commercial asset grants or exceptions to restrictive publisher terms. Original MIT text/code and existing BodyParts3D CC BY 4.0 duties remain. No new package, font, paid API or patient data. See `../docs/HEAD_CLINICAL_CURRICULUM.md`.

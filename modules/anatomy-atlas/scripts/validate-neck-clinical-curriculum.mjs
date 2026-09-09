@@ -6,6 +6,7 @@ import {
   readContentJson,
 } from './content-contract-tools.mjs';
 import { authoringBeforeNeckClinical } from './neck-clinical-curriculum-transition.mjs';
+import { authoringBeforeLimbBoneClinical } from './limb-bone-clinical-curriculum-transition.mjs';
 import {
   curriculumHash,
   copyBeforeShoulderArmCurriculum,
@@ -28,6 +29,7 @@ const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
 const previous = await authoringBeforeNeckClinical(context);
+const milestone = await authoringBeforeLimbBoneClinical(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
@@ -206,9 +208,9 @@ for (const s of catalog.structures)
     if (!ids.includes(s.fmaId) || !tabs.includes(t)) {
       same(api.neckClinicalLesson(s, t), undefined);
       same(
-        api.bodyLesson(s, t),
+        milestone.bodyLesson(s, t),
         previous.bodyLesson(s, t),
-        'Every unrelated section preserved',
+        'Every unrelated section preserved at the historical neck milestone',
       );
     }
   }
@@ -378,8 +380,9 @@ const counts = (t) =>
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
-          .length,
+        catalog.structures.filter(
+          (s) => milestone.bodyLesson(s, t).readiness === r,
+        ).length,
       ],
     ),
   );
@@ -427,13 +430,15 @@ const report = {
   combinedPinnedCurriculumSections: 2322,
   sourceIndexChecks,
   negativeCases: negatives.length,
+  readinessScope:
+    'Historical neck milestone; current direct/export assertions remain active',
   bodyReadiness: Object.fromEntries(api.contentTabs.map((t) => [t, counts(t)])),
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,
   scanContentAdded: false,
   browserTesting: false,
-  copyAndRecipeHash: curriculumHash(copy(api)),
+  copyAndRecipeHash: curriculumHash(copy(milestone)),
   limitations:
     'Original short neck/remaining axial muscle clinical drafts; not validated disease localisation, nerve courses, joint stability, muscle activation, procedural corridors, patient scans or clinical approval.',
 };

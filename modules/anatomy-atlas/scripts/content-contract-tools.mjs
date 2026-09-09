@@ -52,6 +52,7 @@ export * from './lib/foot-clinical-curriculum.ts';
 export * from './lib/trunk-clinical-curriculum.ts';
 export * from './lib/head-clinical-curriculum.ts';
 export * from './lib/neck-clinical-curriculum.ts';
+export * from './lib/limb-bone-clinical-curriculum.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';`,
       resolveDir: fileURLToPath(contentRoot),
