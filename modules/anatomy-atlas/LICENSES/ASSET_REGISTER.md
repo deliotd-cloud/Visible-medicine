@@ -1,5 +1,9 @@
 # Asset register
 
+## Eye-layer extension — 9 September 2026
+
+`public/models/bodyparts3d/eye-layers/eye-layers.glb`: 11 independently selectable source components, 2,004,404 bytes, SHA-256 `1596149e72ddfaf01720bd596e4934034aa0b574bd6e961143cbc31c8af19e84`. Uses 12 existing parent OBJ files under the retained BodyParts3D v4 CC BY 4.0 licence. Eight left components; right iris, lens and vitreous body only. The sidecar `catalog.json` retains exact file hashes, source table evidence, parent IDs, coordinate mapping, excluded components and credit. Four right component definitions (five files) are withheld for laterality discrepancies. The previous 87 main/shoulder GLBs are unchanged; this additional sidecar makes 88 bundled GLBs overall. No new fonts, textures or third-party teaching media. See `../docs/EYE_LAYERS.md`; specialist review pending.
+
 ## Brand and coordinated-rendering update — 6 September 2026
 
 Two exact approved Visible Medicine lockup PNGs have been reused at the user's request from their existing website project. These are proprietary brand assets, excluded from the application MIT licence; not CC0 or freely sublicensed. Exact hashes and provenance are in `docs/BRAND_ALIGNMENT.md`. No new font binaries, textures, anatomical meshes, scans or paid dependencies were added. The new shoulder orthographic plates are runtime adaptations of the existing attributed BodyParts3D meshes and retain their CC BY 4.0 source notice.

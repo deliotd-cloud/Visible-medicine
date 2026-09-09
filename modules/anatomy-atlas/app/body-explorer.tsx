@@ -119,7 +119,12 @@ import {
 import { relatedStudyViews } from '@/lib/study-navigation';
 import type { StudyCamera, StudyView } from '@/lib/study-views';
 import { anatomyRetryPlan } from '@/lib/anatomy-load-retry';
-import { rendererReady, type RendererHealth } from '@/lib/renderer-health';
+import {
+  copyRecoveryCamera,
+  rendererReady,
+  type RendererHealth,
+} from '@/lib/renderer-health';
+import { eyeLayersFor } from '@/lib/eye-layers';
 import {
   anatomyLoadReducer,
   initialAnatomyLoads,
@@ -136,6 +141,7 @@ import {
 const Scene = dynamic(() => import('./body-scene').then((m) => m.BodyScene), {
   ssr: false,
 });
+const EyeLayers = dynamic(() => import('./eye-layers'), { ssr: false });
 const systemKeys = Object.keys(bodySystems) as BodySystem[];
 const icons = {
   skeleton: Bone,
@@ -204,6 +210,12 @@ export default function BodyExplorer({
   const [plate, setPlate] = useState(false);
   const cameraCapture = useRef<StudyCamera | null>(null);
   const cameraRestore = useRef<StudyCamera | null>(null);
+  const [eyeParent, setEyeParent] = useState<BodyStructure | null>(null);
+  const eyeLauncher = useRef<HTMLButtonElement | null>(null);
+  const closeEyeLayers = useCallback(() => {
+    setEyeParent(null);
+    requestAnimationFrame(() => eyeLauncher.current?.focus());
+  }, []);
   const [view, setView] = useState<DissectionView>(profile.stages[0].view),
     [zoom, setZoom] = useState(1),
     [reset, setReset] = useState(0);
@@ -220,6 +232,9 @@ export default function BodyExplorer({
   const [practiceSampling, setPracticeSampling] =
     useState<PracticeSampling>('landmarks');
   const exam = practice.status === 'active';
+  useEffect(() => {
+    if (eyeParent && (exam || eyeParent.id !== selectedId)) closeEyeLayers();
+  }, [exam, selectedId, eyeParent, closeEyeLayers]);
   const examTargets = practice.questions.map((q) => q.target);
   const question = practice.index;
   const response = practice.responses[question];
@@ -1181,36 +1196,38 @@ export default function BodyExplorer({
                 </SelectContent>
               </Select>
             </div>
-            <Scene
-              catalog={catalog}
-              structures={sceneStructures}
-              selectedId={selectedId}
-              systems={systems}
-              isolated={isolated && !exam}
-              hiddenIds={hiddenIds}
-              ghostRemoved={ghostRemoved && !exam}
-              illustrated={illustrated}
-              landmarks={exam ? [] : stageLandmarks}
-              explode={explode}
-              layout={exam ? 'spatial' : layout}
-              anchorSkeleton={anchorSkeleton}
-              showOrigins={showOrigins && !exam}
-              labels={labels && !exam}
-              view={view}
-              zoom={zoom}
-              reset={reset}
-              focus={focus}
-              exam={exam}
-              inspection={exam ? initialInspection : inspection}
-              plate={plate && !exam}
-              cameraCapture={cameraCapture}
-              cameraRestore={cameraRestore}
-              retries={retries}
-              onSelect={onSceneSelect}
-              onLoaded={onLoaded}
-              onFailure={onFailure}
-              onRendererHealth={setRendererHealth}
-            />
+            {!eyeParent && (
+              <Scene
+                catalog={catalog}
+                structures={sceneStructures}
+                selectedId={selectedId}
+                systems={systems}
+                isolated={isolated && !exam}
+                hiddenIds={hiddenIds}
+                ghostRemoved={ghostRemoved && !exam}
+                illustrated={illustrated}
+                landmarks={exam ? [] : stageLandmarks}
+                explode={explode}
+                layout={exam ? 'spatial' : layout}
+                anchorSkeleton={anchorSkeleton}
+                showOrigins={showOrigins && !exam}
+                labels={labels && !exam}
+                view={view}
+                zoom={zoom}
+                reset={reset}
+                focus={focus}
+                exam={exam}
+                inspection={exam ? initialInspection : inspection}
+                plate={plate && !exam}
+                cameraCapture={cameraCapture}
+                cameraRestore={cameraRestore}
+                retries={retries}
+                onSelect={onSceneSelect}
+                onLoaded={onLoaded}
+                onFailure={onFailure}
+                onRendererHealth={setRendererHealth}
+              />
+            )}
             {pending.length > 0 && (
               <output className="body-loading">
                 Loading anatomy · {loadStatus.loaded.length}/{required.length}{' '}
@@ -1697,6 +1714,23 @@ export default function BodyExplorer({
                     </div>
                     <h2>{selected.name}</h2>
                     <ReviewStatus structureId={selected.id} />
+                    {!exam && eyeLayersFor(selected).length > 0 && (
+                      <div className="body-selection-actions">
+                        <Button
+                          ref={eyeLauncher}
+                          size="sm"
+                          variant="outline"
+                          onClick={() => {
+                            cameraRestore.current = copyRecoveryCamera(
+                              cameraCapture.current,
+                            );
+                            setEyeParent(selected);
+                          }}
+                        >
+                          <Layers3 /> Explore eye layers
+                        </Button>
+                      </div>
+                    )}
                     <div className="body-selection-actions">
                       <Button
                         size="sm"
@@ -1906,6 +1940,9 @@ export default function BodyExplorer({
           )}
         </AnatomyInfoPanel>
       </div>
+      {eyeParent && !exam && eyeParent.id === selectedId && (
+        <EyeLayers parent={eyeParent} onClose={closeEyeLayers} />
+      )}
     </AtlasWorkspace>
   );
 }

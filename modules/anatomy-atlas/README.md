@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+The [eye-layer dissection](docs/EYE_LAYERS.md) opens from **Explore eye layers** when an eyeball is selected in the regional or whole-body atlas. It adds eight independently selectable left-eye components and three right-eye components, compact study presets, removal/undo, rotation and two separation styles. Four right components are excluded for source laterality discrepancies; no geometry is invented or mirrored. The original main catalogue is unchanged. Run `npm run eye-layers:test`; specialist and browser/device review remain pending.
+
 The [remaining-source geometry screen](docs/SOURCE_GEOMETRY_SCREEN.md) verifies all 48 held source files plus four orbital-nerve/small-artery candidates. Its [spatial follow-up](docs/CANDIDATE_SPATIAL_REVIEW.md) checks 84 nearby-structure pairs and ten geometric end-band relationships. The visible atlas and teaching remain unchanged while source identity and anatomical connections are reviewed.
 
 **Dissect → Undo / Redo** now supports [replaying regional dissection changes](docs/DISSECTION_HISTORY.md). Forty meaningful layer, focus and removal changes are kept in memory; repeat clicks do not consume history. The compact toolbar, existing saved views and practice restrictions are preserved.

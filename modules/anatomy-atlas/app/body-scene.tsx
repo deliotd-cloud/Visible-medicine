@@ -63,6 +63,7 @@ type Props = {
   cameraCapture?: RefObject<StudyCamera | null>;
   cameraRestore?: RefObject<StudyCamera | null>;
   retries?: Record<string, number>;
+  appearance?: Record<string, { color: string; opacity: number }>;
   onSelect: (id: string) => void;
   onLoaded: (id: string) => void;
   onFailure: (id: string) => void;
@@ -136,11 +137,9 @@ function Bundle({
           position,
           selected,
         );
-        const opacity = systemOpacity(
-          props.inspection,
-          structure.system,
-          selected,
-        );
+        const opacity =
+          systemOpacity(props.inspection, structure.system, selected) *
+          (props.appearance?.[structure.id]?.opacity ?? 1);
         const select = (e: ThreeEvent<MouseEvent>) => {
           if (removed) return;
           e.stopPropagation();
@@ -180,7 +179,10 @@ function Bundle({
               >
                 <AnatomyTissue
                   geometry={geometry}
-                  color={colorFor(structure)}
+                  color={
+                    props.appearance?.[structure.id]?.color ??
+                    colorFor(structure)
+                  }
                   selected={selected}
                   ghost={faded}
                   muscle={structure.system === 'muscles'}

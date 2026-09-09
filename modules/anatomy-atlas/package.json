@@ -6,6 +6,8 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "eye-layers:export": "node scripts/export-eye-layers.mjs",
+    "eye-layers:test": "node scripts/validate-eye-layers.mjs",
     "dev": "vinext dev",
     "build": "npm run reviews:revisions && vinext build",
     "reviews:revisions": "node scripts/review-revisions.mjs",

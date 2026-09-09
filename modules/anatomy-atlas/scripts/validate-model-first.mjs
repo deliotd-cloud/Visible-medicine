@@ -124,6 +124,10 @@ for (const retired of [
   migratedCallbacks.splice(index, 1);
 }
 migratedCallbacks.push(
+  // Eye-layer launcher and close binding are additional contextual actions;
+  // eye-layers:test executes the actual launcher/close camera and focus handlers.
+  'onClick/19b9bed728996789c3a52e1b3194dca5d4d17282b9a75cf3b4876b0e2ea64429',
+  'onClose/60c57b3a219c2b3b1146ff6cbba2e23c8d45a0cb592b4ff9da14740449663e97',
   'onValueChange/0a47af2ff2ca38eeefe73e3a4bb54336655a2c09f40dda30b663ca1dc712832a',
   'onRecover/41f5b811c870740268f0a368584b495627dec0abce7038ad9a74a8857774fa90',
   'onReapply/8549d8cba04d43b531b1379e407534a86e1eb98200d169963ce48e290bde225d',
@@ -198,7 +202,8 @@ const compiled = await build({
           loader: 'tsx',
         }));
         b.onLoad({ filter: /body-scene\.tsx$/ }, () => ({
-          contents: 'export const BodyScene = () => null;',
+          contents:
+            'export const BodyScene = () => null; export const retryBodyAssets = () => {};',
           loader: 'tsx',
         }));
         b.onLoad({ filter: /atlas-workspace\.tsx$/ }, async () => ({
@@ -563,6 +568,7 @@ const result = {
   explicitReasoningSelectorMigration: 1,
   explicitExplosionHandlerMigration: 1,
   preservedControlCallbacks: baseline.callbacks.length - 7,
+  addedEyeLayerCallbacks: 2,
   explicitNavigationReplacementCallbacks: 4,
   explicitExplosionReplacementCallbacks: 1,
   explicitSelectionRecoveryHandler: 1,
