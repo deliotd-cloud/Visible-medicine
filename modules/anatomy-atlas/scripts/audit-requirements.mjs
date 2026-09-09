@@ -46,6 +46,12 @@ const {
 const catalogPath = 'public/models/bodyparts3d/full-body/catalog.json';
 const catalog = await json(catalogPath);
 const manifest = await json('public/models/bodyparts3d/manifest.json');
+const eyeLayers = await json(
+  'public/models/bodyparts3d/eye-layers/catalog.json',
+);
+const ventricular = await json(
+  'public/models/bodyparts3d/ventricles/catalog.json',
+);
 const learning = parseLearningDocument(
   await json('content/learning-resources.v1.json'),
 );
@@ -144,6 +150,9 @@ const sourceHashes = {};
 for (const path of [
   catalogPath,
   'public/models/bodyparts3d/manifest.json',
+  'public/models/bodyparts3d/eye-layers/catalog.json',
+  'public/models/bodyparts3d/eye-layers/display-correction.json',
+  'public/models/bodyparts3d/ventricles/catalog.json',
   'package-lock.json',
   'content/schema/anatomy-structure.schema.json',
   'content/review-revisions.json',
@@ -213,6 +222,14 @@ const report = {
     })),
     shoulderRepresentations: shoulder.length,
     shoulderSourceParts: manifest.parts.length,
+    nestedDissections: {
+      eyeComponents: eyeLayers.structures.length,
+      ventricularSpaces: ventricular.ventricularIds.length,
+      ventricularContext: ventricular.contextIds.length,
+      additionalUniqueWholeBodyAnatomy: 0,
+      limitation:
+        'Nested selections subdivide existing parent representations; context reuses existing structures. Their short drafts are separate from the eight-topic body inventory. Original catalogue counts exclude these alternate display assets.',
+    },
     regionalMembershipsOverlap: true,
     shoulderAndBodyRepresentationsOverlap: true,
     anatomicalCompletenessMeasured: false,

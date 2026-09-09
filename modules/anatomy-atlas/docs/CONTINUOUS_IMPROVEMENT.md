@@ -16,6 +16,8 @@ Three [orbital motor-supply study views](ORBITAL_MOTOR_STUDIES.md) now reuse Dis
 
 ## Ordered work
 
+The [ventricular dissection](VENTRICULAR_DISSECTION.md) separates four existing brain source spaces with removal/undo, three separation styles and optional deep-brain context. Together with the [eye component view and cutaway](EYE_LAYERS.md), this adds genuine nested selection without new unique whole-body claims or patient scans. Further brain/organ decomposition should reuse exact source ownership and avoid simultaneous parent/child rendering; specialist and device review remain outstanding.
+
 The [dissection Undo/Redo history](DISSECTION_HISTORY.md) now supports reversible regional layer/focus/removal exploration without a new panel. It retains40 actual changes, preserves Redo through no-op clicks and guards active practice. Source anatomy and teaching remain unchanged; browser/device acceptance is still outstanding.
 
 The [knee imaging guides](KNEE_IMAGING.md) extend CT/MRI teaching to the six femur/tibia/patella representations and ultrasound teaching to both patellae (14 sections). Existing Imaging panels are reused. Separate joint tissues and all patient correspondence remain absent; independent clinical/educator review is required.

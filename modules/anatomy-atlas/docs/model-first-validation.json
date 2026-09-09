@@ -1,7 +1,8 @@
 {
   "passed": true,
-  "checks": 2504,
+  "checks": 2512,
   "markupCases": 72,
+  "nestedLauncherMarkupCases": 4,
   "panelCases": 4,
   "stylesheetViewportCases": 7,
   "preservedNamedHandlers": 14,
@@ -13,6 +14,7 @@
   "explicitExplosionHandlerMigration": 1,
   "preservedControlCallbacks": 48,
   "addedEyeLayerCallbacks": 2,
+  "addedVentricularCallbacks": 2,
   "explicitNavigationReplacementCallbacks": 4,
   "explicitExplosionReplacementCallbacks": 1,
   "explicitSelectionRecoveryHandler": 1,

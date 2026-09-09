@@ -6,6 +6,8 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "ventricles:export": "node scripts/export-ventricles.mjs",
+    "ventricles:test": "node scripts/validate-ventricles.mjs",
     "eye-layers:export": "node scripts/export-eye-layers.mjs",
     "eye-layers:test": "node scripts/validate-eye-layers.mjs",
     "dev": "vinext dev",

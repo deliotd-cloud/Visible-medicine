@@ -125,6 +125,7 @@ import {
   type RendererHealth,
 } from '@/lib/renderer-health';
 import { eyeLayersFor } from '@/lib/eye-layers';
+import { ventriclesFor } from '@/lib/ventricles';
 import { bodyDisplayCatalog } from '@/lib/body-display-catalog';
 import {
   anatomyLoadReducer,
@@ -143,6 +144,7 @@ const Scene = dynamic(() => import('./body-scene').then((m) => m.BodyScene), {
   ssr: false,
 });
 const EyeLayers = dynamic(() => import('./eye-layers'), { ssr: false });
+const Ventricles = dynamic(() => import('./ventricles'), { ssr: false });
 const systemKeys = Object.keys(bodySystems) as BodySystem[];
 const icons = {
   skeleton: Bone,
@@ -217,6 +219,14 @@ export default function BodyExplorer({
     setEyeParent(null);
     requestAnimationFrame(() => eyeLauncher.current?.focus());
   }, []);
+  const [ventricleParent, setVentricleParent] = useState<BodyStructure | null>(
+    null,
+  );
+  const ventricleLauncher = useRef<HTMLButtonElement | null>(null);
+  const closeVentricles = useCallback(() => {
+    setVentricleParent(null);
+    requestAnimationFrame(() => ventricleLauncher.current?.focus());
+  }, []);
   const [view, setView] = useState<DissectionView>(profile.stages[0].view),
     [zoom, setZoom] = useState(1),
     [reset, setReset] = useState(0);
@@ -236,6 +246,10 @@ export default function BodyExplorer({
   useEffect(() => {
     if (eyeParent && (exam || eyeParent.id !== selectedId)) closeEyeLayers();
   }, [exam, selectedId, eyeParent, closeEyeLayers]);
+  useEffect(() => {
+    if (ventricleParent && (exam || ventricleParent.id !== selectedId))
+      closeVentricles();
+  }, [exam, selectedId, ventricleParent, closeVentricles]);
   const examTargets = practice.questions.map((q) => q.target);
   const question = practice.index;
   const response = practice.responses[question];
@@ -1197,7 +1211,7 @@ export default function BodyExplorer({
                 </SelectContent>
               </Select>
             </div>
-            {!eyeParent && (
+            {!eyeParent && !ventricleParent && (
               <Scene
                 catalog={catalog}
                 structures={sceneStructures}
@@ -1737,6 +1751,23 @@ export default function BodyExplorer({
                         </Button>
                       </div>
                     )}
+                    {!exam && ventriclesFor(selected).length > 0 && (
+                      <div className="body-selection-actions">
+                        <Button
+                          ref={ventricleLauncher}
+                          size="sm"
+                          variant="outline"
+                          onClick={() => {
+                            cameraRestore.current = copyRecoveryCamera(
+                              cameraCapture.current,
+                            );
+                            setVentricleParent(selected);
+                          }}
+                        >
+                          <Layers3 /> Explore ventricles
+                        </Button>
+                      </div>
+                    )}
                     <div className="body-selection-actions">
                       <Button
                         size="sm"
@@ -1948,6 +1979,9 @@ export default function BodyExplorer({
       </div>
       {eyeParent && !exam && eyeParent.id === selectedId && (
         <EyeLayers parent={eyeParent} onClose={closeEyeLayers} />
+      )}
+      {ventricleParent && !exam && ventricleParent.id === selectedId && (
+        <Ventricles parent={ventricleParent} onClose={closeVentricles} />
       )}
     </AtlasWorkspace>
   );

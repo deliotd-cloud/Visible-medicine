@@ -548,7 +548,7 @@ runInNewContext(`(${close})();`, env);
 same(chosen, null);
 same(focused, 1);
 check(
-  /!eyeParent\s*&&\s*\(\s*<Scene/.test(source),
+  /!eyeParent\s*&&\s*!ventricleParent\s*&&\s*\(\s*<Scene/.test(source),
   'Parent scene unmounted while child dissection is open',
 );
 check(source.includes('eyeParent.id === selectedId'));

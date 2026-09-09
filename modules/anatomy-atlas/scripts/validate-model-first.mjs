@@ -124,6 +124,10 @@ for (const retired of [
   migratedCallbacks.splice(index, 1);
 }
 migratedCallbacks.push(
+  // Ventricular launcher/close are additional contextual actions. The dedicated
+  // ventricles:test executes camera capture, close and focus restoration.
+  'onClick/2a26e80ca000beaf9da567f5fa88354745f1f582c4a17ff9862167061fd28cff',
+  'onClose/789c6bfced27a464cda59e97851a09db44d1fad704cf0bfdae78efb13a9d0b62',
   // Eye-layer launcher and close binding are additional contextual actions;
   // eye-layers:test executes the actual launcher/close camera and focus handlers.
   'onClick/19b9bed728996789c3a52e1b3194dca5d4d17282b9a75cf3b4876b0e2ea64429',
@@ -327,6 +331,23 @@ for (const mode of ['explore', 'dissect', 'practice'])
       }
       markupCases++;
     }
+  }
+
+// Both nested launchers must appear only on their exact parent in the real
+// loaded explorer markup, including whole-body navigation.
+let nestedLauncherMarkupCases = 0;
+context.__atlasMode = 'explore';
+for (const region of ['head-neck', 'whole-body'])
+  for (const fma of ['FMA50801', 'FMA12515']) {
+    context.__atlasSelected = catalog.structures.find(
+      (s) => s.fmaId === fma,
+    ).id;
+    const html = renderToStaticMarkup(
+      React.createElement(vmModule.exports.default, { initialRegion: region }),
+    );
+    same(html.includes('Explore ventricles'), fma === 'FMA50801');
+    same(html.includes('Explore eye layers'), fma === 'FMA12515');
+    nestedLauncherMarkupCases++;
   }
 
 // Exercise the real responsive component's state and effect callbacks. The Sheet
@@ -556,6 +577,7 @@ const result = {
   passed: true,
   checks,
   markupCases,
+  nestedLauncherMarkupCases,
   panelCases,
   stylesheetViewportCases: dimensions.length,
   preservedNamedHandlers: Object.entries(baseline.functions).filter(
@@ -569,6 +591,7 @@ const result = {
   explicitExplosionHandlerMigration: 1,
   preservedControlCallbacks: baseline.callbacks.length - 7,
   addedEyeLayerCallbacks: 2,
+  addedVentricularCallbacks: 2,
   explicitNavigationReplacementCallbacks: 4,
   explicitExplosionReplacementCallbacks: 1,
   explicitSelectionRecoveryHandler: 1,
