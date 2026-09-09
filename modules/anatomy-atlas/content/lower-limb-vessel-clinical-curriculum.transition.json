@@ -1,0 +1,262 @@
+{
+  "sourceCommit": "c77800231a528cee535172f143e236ebac9b603a",
+  "reason": "Sixty-four original Clinical/Pathology drafts for 32 exact primary-thigh/leg/foot vessel selections. Original source categories, sides, ordered components and regional memberships preserved; no new geometry, vascular continuity, scans or clinical approval.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-femoral-artery",
+      "fmaId": "FMA70249",
+      "sections": {
+        "pathology": "b4e7c8cd21cae2b1e7938483315d965cf08d9f6d9f9ee441ac006532e7ac1c55",
+        "clinical": "11eca5065539f0b847858fc437299e3e458973fe29940832499895cd9be7ba5b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-femoral-artery",
+      "fmaId": "FMA70250",
+      "sections": {
+        "pathology": "c1ef562be7403cc0afacb3c3d2de0db4e920f4b7ed6ffe8494dc0977246242a6",
+        "clinical": "860b8e4b9f61ecadbaab9d2a62589db48356ea6e76e145af927341a7fff5c0ac"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
+      "fmaId": "FMA20796",
+      "sections": {
+        "pathology": "de229d3d8bdf804b6440c34e4dfbd6fcb5a69e5d103caa4ba8798f66f50128ec",
+        "clinical": "8e82cc773aebbb20d9a7d143669f84caf604c68a41996fdc72a286d18a1204a4"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery",
+      "fmaId": "FMA20797",
+      "sections": {
+        "pathology": "9bf2837980468f1c5c5fd5e868fba2b0bea188357fccac9c53979516723aa4aa",
+        "clinical": "24e2ffbe0c7f12de4c56c1a2c29b8b15242f7e942d23517c68839e069b6fc0f1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
+      "fmaId": "FMA21188",
+      "sections": {
+        "pathology": "8d577d424a3c298bcb3166cfe56885eab91b93efcfccb44c66c7acdab3b4679e",
+        "clinical": "1aec5b57fde56b8a9a296628a990e6f72523e6bb1c1905465a8a801cbabfa8a2"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
+      "fmaId": "FMA21189",
+      "sections": {
+        "pathology": "34a6e86c3d58f91835569f442024e65832082f2b2d82b2dcd4891d14cc83c107",
+        "clinical": "12dadd8119ad5d9759ea4984e115f4f5557f42c027cacc49f940ae028deed7de"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
+      "fmaId": "FMA21379",
+      "sections": {
+        "pathology": "0b30861e4d0df7affb8731e4db7fe6b23f712b2df85c307e20f026af19f24872",
+        "clinical": "b269a3986aed73eff84fe8d62e7b663c41e410325b9d64411afcf28b067183b4"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+      "fmaId": "FMA21380",
+      "sections": {
+        "pathology": "5bb90095c5726a1643467d77279975da4282860a369806a5d0570e3de5afca9b",
+        "clinical": "48688b236f428975b79f9dd9fb93015e068ff3540faaf17501adb9170a816545"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+      "fmaId": "FMA77380",
+      "sections": {
+        "pathology": "296b996e2b8f89b51ec1ec97021a308397c03da90cad00072b5fb6e175311e31",
+        "clinical": "6729bf0b8df70c88d4b4f1b365a0bc1ba32ccd53535c207dda8932823265303e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+      "fmaId": "FMA77381",
+      "sections": {
+        "pathology": "97bdc6a51650a91197a02cc478fd5736c1e7201418714f61af1e65c312511b5f",
+        "clinical": "a123c73baefa61e7ff7c3af75c5c33f09b62d4e061cd4499d58903bd95aa5310"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-artery",
+      "fmaId": "FMA43896",
+      "sections": {
+        "pathology": "cbfe282e969c0f10820161a8f5e0841755d7ba92da73fc2fedf8735988368fde",
+        "clinical": "18be53c54da49343fce607b202439d1f456a2cd1dcad1b07675c744f8d6defa0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-artery",
+      "fmaId": "FMA43897",
+      "sections": {
+        "pathology": "109ac933df8bbec0f9a796521d951c079cc9ef2f13267c5033a1b63af287b8bc",
+        "clinical": "ea596865e2f74d5f0c54d3df92d9e8e144c61f59418ac1e1ffea26a5892a03f2"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-artery",
+      "fmaId": "FMA43898",
+      "sections": {
+        "pathology": "5d88e24ec2db876dee97b56be9f884cb45146404a89940f7e4354c2ac4369fd1",
+        "clinical": "cc63a192812546b79a912509efcc4eff7a0d71750b398abe32986a96a294620a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-artery",
+      "fmaId": "FMA43899",
+      "sections": {
+        "pathology": "a6f3e8b233357ab9438cf6878f49edd5f0459406af336380041d7218f76a4570",
+        "clinical": "15ebbe6191f722d62afa077254e8b36d23d19b42a17b3845a8b83856c241ba89"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
+      "fmaId": "FMA44328",
+      "sections": {
+        "pathology": "c8ebeafec5312ecfc1a6f765caaf1a6fb13232f96f7bd055309febe47e34ce7c",
+        "clinical": "e9f3a949367d48b2c0761c5172d27e093c5bc5295729887385ae5741f9b9f046"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-vein",
+      "fmaId": "FMA44329",
+      "sections": {
+        "pathology": "f500eee86affc2000b1156cb376167944ebc4cc4b374d8a0e705d14c9eba78eb",
+        "clinical": "6121cc0cd25336efbe872dc368078bf9b8a7290826fa8fb2f12d862657944c7f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-small-saphenous-vein",
+      "fmaId": "FMA44334",
+      "sections": {
+        "pathology": "7de7455a210be2b0d69074be432541feb6b10336877c1b450a5085cc859a5ab4",
+        "clinical": "2f6e2f0b3e7acd63dd94a7010aa298d363d14d6420e9d1bf326ecce352fa26f7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-small-saphenous-vein",
+      "fmaId": "FMA44335",
+      "sections": {
+        "pathology": "bc8420f128f3039c832aeceec7711771f001ed6c6989c443d3dd1289c704fd85",
+        "clinical": "718dfcbcc553606823b20c16134b349f2ef43debbebd9b24fcf6f5e3468fb9ad"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
+      "fmaId": "FMA43916",
+      "sections": {
+        "pathology": "0fc8076305a57d20e1e5d69b4a3c28e19ea751295cbe0970837a3b9422352733",
+        "clinical": "85dbd205bf687d039073cc1fa5e524fc6ca54a99987c6a9bb8a0ea841a8bbf7c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
+      "fmaId": "FMA43917",
+      "sections": {
+        "pathology": "68365c73000ed9a347f34174144c63af190cc8086706941dcfd5e9c5abaef723",
+        "clinical": "7762dca58eb30d753607e19575795dc7df447d50b956191e28fa0dd793195348"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+      "fmaId": "FMA43929",
+      "sections": {
+        "pathology": "073dba2010390c5cea3977efc6066ea42f70f7a10deada2770436a5d46875b3f",
+        "clinical": "0d0a16117827d213a06a7bfd644c6a895943d19cbf1f118e226df6adc84e83b4"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+      "fmaId": "FMA43930",
+      "sections": {
+        "pathology": "6db518fb3bcbdd86362443c9d9c236f09db146cb32600df48fd67dcba5bcfd95",
+        "clinical": "47b82da29b0d4f0a5ff190cfba84ab20c8fa1a5fa76647ee8b8505f472cb0837"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
+      "fmaId": "FMA43931",
+      "sections": {
+        "pathology": "0741ee6443136f0dd3617513490946481330b2aefcea70ea13b8b659ca550798",
+        "clinical": "9f43681b0e51f463e56376dfd976556ac9b7d4544a49cbf1830f89008457cb6c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
+      "fmaId": "FMA43932",
+      "sections": {
+        "pathology": "28aa73e21bba15f88d66a0f0c7b42215592d85c448cd30433c15497a114180e2",
+        "clinical": "0f544522cf6ad83e2f2a193bdf0c8e1a4b3cb354d8c1626c8bb69639e49f4c7a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+      "fmaId": "FMA43943",
+      "sections": {
+        "pathology": "dd40ba89898e9cb5f5f466716c037ff0930996e9daa1ca76c1cfe9e80f30fbe5",
+        "clinical": "ad97ff88eb85ae2d02532856d208ae05c6cc08a1b82b5cb3083a4832d51b2848"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+      "fmaId": "FMA43944",
+      "sections": {
+        "pathology": "a8227adffeb4240fc31279e8ffc44a9e98d26a7dd97ee85db8455c0e70f7a43c",
+        "clinical": "8197af301d150f83ef5fdd4675c73adacf55b84316f76c00e67b808f2b19c11a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+      "fmaId": "FMA69514",
+      "sections": {
+        "pathology": "ec45a572e8d067337b23a749dbb953145d2311c69e38664e8d831a72c36a8165",
+        "clinical": "86b4b0aa67a2e483dc229e9ddc75e11f2eea219d27163784a99e2ebc0c6d1994"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+      "fmaId": "FMA69515",
+      "sections": {
+        "pathology": "42f8def884dc7b0a15b68eba84e89a14543602d61b24919416ddc87deb464673",
+        "clinical": "3401c1675cb9b70951c0f71e62122aa08dea8860018f4ea268171bddb1097b3b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+      "fmaId": "FMA43937",
+      "sections": {
+        "pathology": "3a85b6bf0e5d6dea0951396c9d8d4dec90d8b2cab7693d020ab618c5c467496a",
+        "clinical": "7cfee4805bef9470dc95401fcf2f28bcce9c458eba145900df50343a19d49e31"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+      "fmaId": "FMA43938",
+      "sections": {
+        "pathology": "55bcd3727c08e107dc6519227a8c88af01dad2a49dd06eaebe6763724b50d889",
+        "clinical": "c78b271b2a845ee52d87d8b5d96315218d4dc3af18bae3e5c91c45b1846b06b0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+      "fmaId": "FMA44881",
+      "sections": {
+        "pathology": "ad825091a7786140e5503ac8134d379e608b2d6adb249529f6bfda0cacb20032",
+        "clinical": "103f50d18095c5e58802b940162d53f14c321cbb5d5e0ab78ab79acb9a7da259"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+      "fmaId": "FMA44882",
+      "sections": {
+        "pathology": "808dea2204081dd5e6a9113af115984f9a44ae1b8fc4e07de0b0a5c4ee9fb12d",
+        "clinical": "7a2f20e424b03a30aa0c203ccd7326a39ea813eb4f428f0ffb0178660ae7639c"
+      }
+    }
+  ]
+}

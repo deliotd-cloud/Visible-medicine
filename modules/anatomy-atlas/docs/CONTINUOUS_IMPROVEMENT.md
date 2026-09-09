@@ -1,5 +1,7 @@
 # Continuous atlas improvement programme
 
+**Current milestone — lower-limb vessel teaching:** [LOWER_LIMB_VESSEL_CLINICAL_CURRICULUM.md](LOWER_LIMB_VESSEL_CLINICAL_CURRICULUM.md) adds 64 original Clinical/Pathology drafts across 32 exact thigh/leg/foot identities and 36 source components. Each tab now has 1,018 drafts and four deliberately held identities. Introductory draft coverage does not establish exhaustive teaching or clinical approval. Geometry, controls, brand, dissection/explode, source grouping and imaging bindings are unchanged. Next: reconcile full-objective evidence and develop source-cited, educator-reviewable reasoning quizzes through existing Practice navigation. Keep generated identification separate from authored drafts and accepted education; preserve unresolved identities, source rights, clinical/spatial/device/imaging gates and the deferred GitHub restriction. This paragraph supersedes older counts and next actions below.
+
 ## Latest milestone — dental clinical teaching
 
 [Twenty-eight tooth selections](DENTAL_CLINICAL_CURRICULUM.md) now have Clinical/Pathology introductions in the existing panels. No added controls or geometry. The next clinical gaps are 89 connective / 227 vessel entries and four unresolved holds, followed by richer reviewed questions, editorial persistence and future imaging. The broad goal remains active; GitHub remains deferred.

@@ -1,32 +1,30 @@
 import assert from 'node:assert/strict';
-import { authoringBeforeLowerLimbVesselClinical } from './lower-limb-vessel-clinical-curriculum-transition.mjs';
 import { readContentJson } from './content-contract-tools.mjs';
 import { createHash } from 'node:crypto';
 const hash = (v) =>
   createHash('sha256').update(JSON.stringify(v)).digest('hex');
 /** Offline historical comparison only. Runtime/export always use current teaching. */
-export async function authoringBeforeHandVesselClinical(context) {
-  const { catalog } = context;
-  const api = await authoringBeforeLowerLimbVesselClinical(context);
+export async function authoringBeforeLowerLimbVesselClinical(context) {
+  const { api, catalog } = context;
   const before = await readContentJson(
-    'content/hand-vessel-clinical-curriculum.before.json',
+    'content/lower-limb-vessel-clinical-curriculum.before.json',
   );
   const after = await readContentJson(
-    'content/hand-vessel-clinical-curriculum.transition.json',
+    'content/lower-limb-vessel-clinical-curriculum.transition.json',
   );
   assert.equal(
     hash(before),
-    '2329c52334ca9c90efa54f09d5247f6e57d57ac292ed4b213b99c5eaa124df89',
+    '178be837166cdc2cc50c202d4b8502f3e5785b7126a2256dfa391a0d97ae3314',
   );
   assert.equal(
     hash(after),
-    '5f8f99c58392b25e9e2475a7ac5e707373df83947e4dde8f49db1ed2eaf98343',
+    '9a6f70436e9919ee9f762ae34fedbf3493c65ca3b12dd59c174d6dfe3d770202',
   );
-  assert.equal(before.sourceCommit, '7b41c4682faa34183c0071cac1e10e936ec9d443');
+  assert.equal(before.sourceCommit, 'c77800231a528cee535172f143e236ebac9b603a');
   assert.equal(after.sourceCommit, before.sourceCommit);
   assert.equal(before.scope, 'body');
-  assert.deepEqual(before.regions, ['hand']);
-  assert.equal(before.entries.length, 42);
+  assert.deepEqual(before.regions, ['thigh', 'leg', 'foot']);
+  assert.equal(before.entries.length, 32);
   assert.deepEqual(
     after.entries.map((e) => [e.id, e.fmaId]),
     before.entries.map((e) => [e.id, e.fmaId]),
@@ -58,14 +56,14 @@ export async function authoringBeforeHandVesselClinical(context) {
       assert.equal(
         hash(lesson),
         after.entries[i].sections[t],
-        'Unrecorded hand vessel clinical edit: ' + s.id + ' / ' + t,
+        'Unrecorded lower-limb vessel clinical edit: ' + s.id + ' / ' + t,
       );
       const { readiness: _r, ...shown } = lesson;
       assert.deepEqual(shown, api.bodyContent(s, t));
       originals.set(s.id + '|' + t, e.sections[t]);
     }
   }
-  assert.equal(originals.size, 84);
+  assert.equal(originals.size, 64);
   const bodyLesson = (s, t) =>
     originals.has(s.id + '|' + t)
       ? structuredClone(originals.get(s.id + '|' + t))
