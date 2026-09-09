@@ -14,6 +14,8 @@ Prefer CC0, MIT, BSD or Apache-2.0 assets. CC-BY may be usable when attribution 
 
 ## Technical pipeline
 
+For the existing full-body importer, first run `node scripts/ingest-full-body.mjs --preflight-only`. The [source-component hold screen](SOURCE_HOLD_SAFEGUARDS.md) rejects known held identities and same-tree components, including broader parent aliases, before archive access or geometry output. This is not the clinical/rights admission gate and does not establish cross-archive geometry equivalence.
+
 - Keep source meshes outside `public/` during review.
 - Repair topology and normals in a reproducible toolchain; preserve a transformation log.
 - Use millimetres as source units and record the conversion to Three.js metres/scene units.

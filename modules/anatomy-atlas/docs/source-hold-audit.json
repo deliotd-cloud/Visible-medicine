@@ -1,0 +1,4444 @@
+{
+  "schemaVersion": 1,
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "summary": {
+    "screenedDefinitions": 4273,
+    "blockedDefinitions": 125,
+    "directlyHeldDefinitions": 38,
+    "propagatedDefinitions": 87,
+    "unusedAvailableWithComponentHolds": 19,
+    "heldTreeSpecificFiles": 48,
+    "heldFilesWithExistingGeometryFingerprint": 1,
+    "heldFilesWithoutGeometryFingerprint": 47,
+    "currentDisplayedDefinitionsWithoutKnownSameTreeHold": 1022
+  },
+  "affected": [
+    {
+      "tree": "isa",
+      "id": "FMA4731",
+      "name": "superior epigastric vein",
+      "inventoryStatus": "unused-available",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ3530",
+          "heldBy": [
+            "FMA4785"
+          ]
+        },
+        {
+          "file": "FJ3615",
+          "heldBy": [
+            "FMA4771"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA4771",
+      "name": "right superior epigastric vein",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ3615",
+          "heldBy": [
+            "FMA4771"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA4785",
+      "name": "left superior epigastric vein",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ3530",
+          "heldBy": [
+            "FMA4785"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA5022",
+      "name": "muscle organ",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1469",
+          "heldBy": [
+            "FMA37389"
+          ]
+        },
+        {
+          "file": "FJ1469M",
+          "heldBy": [
+            "FMA37388"
+          ]
+        },
+        {
+          "file": "FJ2742",
+          "heldBy": [
+            "FMA46633"
+          ]
+        },
+        {
+          "file": "FJ2754",
+          "heldBy": [
+            "FMA46634"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA5913",
+      "name": "nerve trunk",
+      "inventoryStatus": "unused-available",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1313",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1364",
+          "heldBy": [
+            "FMA50875"
+          ]
+        },
+        {
+          "file": "FJ1772",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1819",
+          "heldBy": [
+            "FMA50875"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA9617",
+      "name": "muscle of neck",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2742",
+          "heldBy": [
+            "FMA46633"
+          ]
+        },
+        {
+          "file": "FJ2754",
+          "heldBy": [
+            "FMA46634"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA9621",
+      "name": "muscle of upper limb",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1469",
+          "heldBy": [
+            "FMA37389"
+          ]
+        },
+        {
+          "file": "FJ1469M",
+          "heldBy": [
+            "FMA37388"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA9657",
+      "name": "anatomical line",
+      "inventoryStatus": "unused-available",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2744",
+          "heldBy": [
+            "FMA55620"
+          ]
+        },
+        {
+          "file": "FJ2749",
+          "heldBy": [
+            "FMA55077"
+          ]
+        },
+        {
+          "file": "FJ2756",
+          "heldBy": [
+            "FMA55619"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA9721",
+      "name": "tendon",
+      "inventoryStatus": "unused-available",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1465",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ1465M",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ2552",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ2553",
+          "heldBy": [
+            "FMA46442"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA10474",
+      "name": "zone of muscle organ",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1453M",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ1457M",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ1458M",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ2544",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ2545",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ2546",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ2549",
+          "heldBy": [
+            "FMA45858"
+          ]
+        },
+        {
+          "file": "FJ2550",
+          "heldBy": [
+            "FMA45854"
+          ]
+        },
+        {
+          "file": "FJ2551",
+          "heldBy": [
+            "FMA45856"
+          ]
+        },
+        {
+          "file": "FJ2774",
+          "heldBy": [
+            "FMA46605"
+          ]
+        },
+        {
+          "file": "FJ2791",
+          "heldBy": [
+            "FMA46604"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA11195",
+      "name": "segment of neural tree organ",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1313",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1364",
+          "heldBy": [
+            "FMA50875"
+          ]
+        },
+        {
+          "file": "FJ1772",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1819",
+          "heldBy": [
+            "FMA50875"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA14065",
+      "name": "organ component",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1465",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ1465M",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ2552",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ2553",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ2777",
+          "heldBy": [
+            "FMA55252"
+          ]
+        },
+        {
+          "file": "FJ2794",
+          "heldBy": [
+            "FMA55251"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA14293",
+      "name": "tributary of internal thoracic vein",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ3530",
+          "heldBy": [
+            "FMA4785"
+          ]
+        },
+        {
+          "file": "FJ3615",
+          "heldBy": [
+            "FMA4771"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA14809",
+      "name": "ileal artery",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA14819",
+      "name": "ileal branch of inferior branch of ileocolic artery",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA14821",
+      "name": "branch of ileocolic artery",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA19089",
+      "name": "zone of levator ani",
+      "inventoryStatus": "unused-available",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1453M",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ1457M",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ1458M",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ2544",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ2545",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ2546",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ2549",
+          "heldBy": [
+            "FMA45858"
+          ]
+        },
+        {
+          "file": "FJ2550",
+          "heldBy": [
+            "FMA45854"
+          ]
+        },
+        {
+          "file": "FJ2551",
+          "heldBy": [
+            "FMA45856"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA19090",
+      "name": "pubococcygeus",
+      "inventoryStatus": "unused-available",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1457M",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ2545",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ2550",
+          "heldBy": [
+            "FMA45854"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA19091",
+      "name": "puborectalis",
+      "inventoryStatus": "unused-available",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1458M",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ2546",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ2551",
+          "heldBy": [
+            "FMA45856"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA19092",
+      "name": "iliococcygeus",
+      "inventoryStatus": "unused-available",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1453M",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ2544",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ2549",
+          "heldBy": [
+            "FMA45858"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA21520",
+      "name": "branch of inferior branch of ileocolic artery",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA22917",
+      "name": "tributary of venous anastomosis",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2319",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2321",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2329",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2349",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2351",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2360",
+          "heldBy": [
+            "FMA85102"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA22922",
+      "name": "tributary of superficial palmar venous arch",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2319",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2321",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2329",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2349",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2351",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2360",
+          "heldBy": [
+            "FMA85102"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA22926",
+      "name": "tributary of common palmar digital vein",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2319",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2321",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2329",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2349",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2351",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2360",
+          "heldBy": [
+            "FMA85102"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA30313",
+      "name": "arterial trunk",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA30314",
+      "name": "venous trunk",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2319",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2321",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2329",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2349",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2351",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2360",
+          "heldBy": [
+            "FMA85102"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA32558",
+      "name": "musculature",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1463",
+          "heldBy": [
+            "FMA71313",
+            "FMA74075"
+          ]
+        },
+        {
+          "file": "FJ1463M",
+          "heldBy": [
+            "FMA71313",
+            "FMA74076"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA37348",
+      "name": "muscle of free upper limb",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1469",
+          "heldBy": [
+            "FMA37389"
+          ]
+        },
+        {
+          "file": "FJ1469M",
+          "heldBy": [
+            "FMA37388"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA37372",
+      "name": "muscle of hand",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1469",
+          "heldBy": [
+            "FMA37389"
+          ]
+        },
+        {
+          "file": "FJ1469M",
+          "heldBy": [
+            "FMA37388"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA37378",
+      "name": "flexor pollicis brevis",
+      "inventoryStatus": "unused-available",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1469",
+          "heldBy": [
+            "FMA37389"
+          ]
+        },
+        {
+          "file": "FJ1469M",
+          "heldBy": [
+            "FMA37388"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA37388",
+      "name": "right flexor pollicis brevis",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ1469M",
+          "heldBy": [
+            "FMA37388"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA37389",
+      "name": "left flexor pollicis brevis",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ1469",
+          "heldBy": [
+            "FMA37389"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA42380",
+      "name": "intrinsic muscle of hand",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1469",
+          "heldBy": [
+            "FMA37389"
+          ]
+        },
+        {
+          "file": "FJ1469M",
+          "heldBy": [
+            "FMA37388"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA44489",
+      "name": "plantar venous arch of foot",
+      "inventoryStatus": "unused-available",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2128",
+          "heldBy": [
+            "FMA44884"
+          ]
+        },
+        {
+          "file": "FJ2129",
+          "heldBy": [
+            "FMA44883"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA44883",
+      "name": "plantar venous arch of right foot",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ2129",
+          "heldBy": [
+            "FMA44883"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA44884",
+      "name": "plantar venous arch of left foot",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ2128",
+          "heldBy": [
+            "FMA44884"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA45854",
+      "name": "right pubococcygeus",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ2550",
+          "heldBy": [
+            "FMA45854"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA45855",
+      "name": "left pubococcygeus",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ1457M",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ2545",
+          "heldBy": [
+            "FMA45855"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA45856",
+      "name": "right puborectalis",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ2551",
+          "heldBy": [
+            "FMA45856"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA45857",
+      "name": "left puborectalis",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ1458M",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ2546",
+          "heldBy": [
+            "FMA45857"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA45858",
+      "name": "right iliococcygeus",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ2549",
+          "heldBy": [
+            "FMA45858"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA45859",
+      "name": "left iliococcygeus",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ1453M",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ2544",
+          "heldBy": [
+            "FMA45859"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA46442",
+      "name": "tendinous arch of levator ani",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ1465",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ1465M",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ2552",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ2553",
+          "heldBy": [
+            "FMA46442"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA46601",
+      "name": "zone of oblique arytenoid",
+      "inventoryStatus": "unused-available",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2774",
+          "heldBy": [
+            "FMA46605"
+          ]
+        },
+        {
+          "file": "FJ2791",
+          "heldBy": [
+            "FMA46604"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA46602",
+      "name": "aryepiglotticus",
+      "inventoryStatus": "unused-available",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2774",
+          "heldBy": [
+            "FMA46605"
+          ]
+        },
+        {
+          "file": "FJ2791",
+          "heldBy": [
+            "FMA46604"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA46604",
+      "name": "right aryepiglotticus",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ2791",
+          "heldBy": [
+            "FMA46604"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA46605",
+      "name": "left aryepiglotticus",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ2774",
+          "heldBy": [
+            "FMA46605"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA46619",
+      "name": "muscle of pharynx",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2742",
+          "heldBy": [
+            "FMA46633"
+          ]
+        },
+        {
+          "file": "FJ2754",
+          "heldBy": [
+            "FMA46634"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA46620",
+      "name": "constrictor muscle of pharynx",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2742",
+          "heldBy": [
+            "FMA46633"
+          ]
+        },
+        {
+          "file": "FJ2754",
+          "heldBy": [
+            "FMA46634"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA46622",
+      "name": "middle pharyngeal constrictor",
+      "inventoryStatus": "unused-available",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2742",
+          "heldBy": [
+            "FMA46633"
+          ]
+        },
+        {
+          "file": "FJ2754",
+          "heldBy": [
+            "FMA46634"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA46633",
+      "name": "right middle pharyngeal constrictor",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ2742",
+          "heldBy": [
+            "FMA46633"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA46634",
+      "name": "left middle pharyngeal constrictor",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ2754",
+          "heldBy": [
+            "FMA46634"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA49918",
+      "name": "systemic arterial trunk",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA50185",
+      "name": "musculature of subdivision of trunk",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1463",
+          "heldBy": [
+            "FMA71313",
+            "FMA74075"
+          ]
+        },
+        {
+          "file": "FJ1463M",
+          "heldBy": [
+            "FMA71313",
+            "FMA74076"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA50705",
+      "name": "anatomical boundary entity",
+      "inventoryStatus": "unused-available",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2744",
+          "heldBy": [
+            "FMA55620"
+          ]
+        },
+        {
+          "file": "FJ2749",
+          "heldBy": [
+            "FMA55077"
+          ]
+        },
+        {
+          "file": "FJ2756",
+          "heldBy": [
+            "FMA55619"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA50720",
+      "name": "artery",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        },
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA50722",
+      "name": "region of vascular tree organ",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        },
+        {
+          "file": "FJ2128",
+          "heldBy": [
+            "FMA44884"
+          ]
+        },
+        {
+          "file": "FJ2129",
+          "heldBy": [
+            "FMA44883"
+          ]
+        },
+        {
+          "file": "FJ2319",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2321",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2329",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2349",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2351",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2360",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        },
+        {
+          "file": "FJ3530",
+          "heldBy": [
+            "FMA4785"
+          ]
+        },
+        {
+          "file": "FJ3615",
+          "heldBy": [
+            "FMA4771"
+          ]
+        },
+        {
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA50723",
+      "name": "vein",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2128",
+          "heldBy": [
+            "FMA44884"
+          ]
+        },
+        {
+          "file": "FJ2129",
+          "heldBy": [
+            "FMA44883"
+          ]
+        },
+        {
+          "file": "FJ3530",
+          "heldBy": [
+            "FMA4785"
+          ]
+        },
+        {
+          "file": "FJ3615",
+          "heldBy": [
+            "FMA4771"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA50863",
+      "name": "optic nerve",
+      "inventoryStatus": "unused-available",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1313",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1364",
+          "heldBy": [
+            "FMA50875"
+          ]
+        },
+        {
+          "file": "FJ1772",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1819",
+          "heldBy": [
+            "FMA50875"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA50875",
+      "name": "right optic nerve",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ1364",
+          "heldBy": [
+            "FMA50875"
+          ]
+        },
+        {
+          "file": "FJ1819",
+          "heldBy": [
+            "FMA50875"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA50878",
+      "name": "left optic nerve",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ1313",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1772",
+          "heldBy": [
+            "FMA50878"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA55077",
+      "name": "pharyngeal raphe",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ2749",
+          "heldBy": [
+            "FMA55077"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA55250",
+      "name": "conus elasticus",
+      "inventoryStatus": "unused-available",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2777",
+          "heldBy": [
+            "FMA55252"
+          ]
+        },
+        {
+          "file": "FJ2794",
+          "heldBy": [
+            "FMA55251"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA55251",
+      "name": "right conus elasticus",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ2794",
+          "heldBy": [
+            "FMA55251"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA55252",
+      "name": "left conus elasticus",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ2777",
+          "heldBy": [
+            "FMA55252"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA55268",
+      "name": "organ zone",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1453M",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ1457M",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ1458M",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ2544",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ2545",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ2546",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ2549",
+          "heldBy": [
+            "FMA45858"
+          ]
+        },
+        {
+          "file": "FJ2550",
+          "heldBy": [
+            "FMA45854"
+          ]
+        },
+        {
+          "file": "FJ2551",
+          "heldBy": [
+            "FMA45856"
+          ]
+        },
+        {
+          "file": "FJ2774",
+          "heldBy": [
+            "FMA46605"
+          ]
+        },
+        {
+          "file": "FJ2791",
+          "heldBy": [
+            "FMA46604"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA55618",
+      "name": "pterygomandibular raphe",
+      "inventoryStatus": "unused-available",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2744",
+          "heldBy": [
+            "FMA55620"
+          ]
+        },
+        {
+          "file": "FJ2756",
+          "heldBy": [
+            "FMA55619"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA55619",
+      "name": "right pterygomandibular raphe",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ2756",
+          "heldBy": [
+            "FMA55619"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA55620",
+      "name": "left pterygomandibular raphe",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ2744",
+          "heldBy": [
+            "FMA55620"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA55652",
+      "name": "anatomical set",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1463",
+          "heldBy": [
+            "FMA71313",
+            "FMA74075"
+          ]
+        },
+        {
+          "file": "FJ1463M",
+          "heldBy": [
+            "FMA71313",
+            "FMA74076"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA55665",
+      "name": "nonparenchymatous organ",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1469",
+          "heldBy": [
+            "FMA37389"
+          ]
+        },
+        {
+          "file": "FJ1469M",
+          "heldBy": [
+            "FMA37388"
+          ]
+        },
+        {
+          "file": "FJ2742",
+          "heldBy": [
+            "FMA46633"
+          ]
+        },
+        {
+          "file": "FJ2754",
+          "heldBy": [
+            "FMA46634"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA55670",
+      "name": "solid organ",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1469",
+          "heldBy": [
+            "FMA37389"
+          ]
+        },
+        {
+          "file": "FJ1469M",
+          "heldBy": [
+            "FMA37388"
+          ]
+        },
+        {
+          "file": "FJ2742",
+          "heldBy": [
+            "FMA46633"
+          ]
+        },
+        {
+          "file": "FJ2754",
+          "heldBy": [
+            "FMA46634"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA61775",
+      "name": "physical anatomical entity",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1313",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1364",
+          "heldBy": [
+            "FMA50875"
+          ]
+        },
+        {
+          "file": "FJ1453M",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ1457M",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ1458M",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ1463",
+          "heldBy": [
+            "FMA71313",
+            "FMA74075"
+          ]
+        },
+        {
+          "file": "FJ1463M",
+          "heldBy": [
+            "FMA71313",
+            "FMA74076"
+          ]
+        },
+        {
+          "file": "FJ1465",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ1465M",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ1469",
+          "heldBy": [
+            "FMA37389"
+          ]
+        },
+        {
+          "file": "FJ1469M",
+          "heldBy": [
+            "FMA37388"
+          ]
+        },
+        {
+          "file": "FJ1772",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1819",
+          "heldBy": [
+            "FMA50875"
+          ]
+        },
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        },
+        {
+          "file": "FJ2128",
+          "heldBy": [
+            "FMA44884"
+          ]
+        },
+        {
+          "file": "FJ2129",
+          "heldBy": [
+            "FMA44883"
+          ]
+        },
+        {
+          "file": "FJ2319",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2321",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2329",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2349",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2351",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2360",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2544",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ2545",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ2546",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ2549",
+          "heldBy": [
+            "FMA45858"
+          ]
+        },
+        {
+          "file": "FJ2550",
+          "heldBy": [
+            "FMA45854"
+          ]
+        },
+        {
+          "file": "FJ2551",
+          "heldBy": [
+            "FMA45856"
+          ]
+        },
+        {
+          "file": "FJ2552",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ2553",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ2742",
+          "heldBy": [
+            "FMA46633"
+          ]
+        },
+        {
+          "file": "FJ2744",
+          "heldBy": [
+            "FMA55620"
+          ]
+        },
+        {
+          "file": "FJ2749",
+          "heldBy": [
+            "FMA55077"
+          ]
+        },
+        {
+          "file": "FJ2754",
+          "heldBy": [
+            "FMA46634"
+          ]
+        },
+        {
+          "file": "FJ2756",
+          "heldBy": [
+            "FMA55619"
+          ]
+        },
+        {
+          "file": "FJ2774",
+          "heldBy": [
+            "FMA46605"
+          ]
+        },
+        {
+          "file": "FJ2777",
+          "heldBy": [
+            "FMA55252"
+          ]
+        },
+        {
+          "file": "FJ2791",
+          "heldBy": [
+            "FMA46604"
+          ]
+        },
+        {
+          "file": "FJ2794",
+          "heldBy": [
+            "FMA55251"
+          ]
+        },
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        },
+        {
+          "file": "FJ3530",
+          "heldBy": [
+            "FMA4785"
+          ]
+        },
+        {
+          "file": "FJ3615",
+          "heldBy": [
+            "FMA4771"
+          ]
+        },
+        {
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA62955",
+      "name": "anatomical entity",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1313",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1364",
+          "heldBy": [
+            "FMA50875"
+          ]
+        },
+        {
+          "file": "FJ1453M",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ1457M",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ1458M",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ1463",
+          "heldBy": [
+            "FMA71313",
+            "FMA74075"
+          ]
+        },
+        {
+          "file": "FJ1463M",
+          "heldBy": [
+            "FMA71313",
+            "FMA74076"
+          ]
+        },
+        {
+          "file": "FJ1465",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ1465M",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ1469",
+          "heldBy": [
+            "FMA37389"
+          ]
+        },
+        {
+          "file": "FJ1469M",
+          "heldBy": [
+            "FMA37388"
+          ]
+        },
+        {
+          "file": "FJ1772",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1819",
+          "heldBy": [
+            "FMA50875"
+          ]
+        },
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        },
+        {
+          "file": "FJ2128",
+          "heldBy": [
+            "FMA44884"
+          ]
+        },
+        {
+          "file": "FJ2129",
+          "heldBy": [
+            "FMA44883"
+          ]
+        },
+        {
+          "file": "FJ2319",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2321",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2329",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2349",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2351",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2360",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2544",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ2545",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ2546",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ2549",
+          "heldBy": [
+            "FMA45858"
+          ]
+        },
+        {
+          "file": "FJ2550",
+          "heldBy": [
+            "FMA45854"
+          ]
+        },
+        {
+          "file": "FJ2551",
+          "heldBy": [
+            "FMA45856"
+          ]
+        },
+        {
+          "file": "FJ2552",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ2553",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ2742",
+          "heldBy": [
+            "FMA46633"
+          ]
+        },
+        {
+          "file": "FJ2744",
+          "heldBy": [
+            "FMA55620"
+          ]
+        },
+        {
+          "file": "FJ2749",
+          "heldBy": [
+            "FMA55077"
+          ]
+        },
+        {
+          "file": "FJ2754",
+          "heldBy": [
+            "FMA46634"
+          ]
+        },
+        {
+          "file": "FJ2756",
+          "heldBy": [
+            "FMA55619"
+          ]
+        },
+        {
+          "file": "FJ2774",
+          "heldBy": [
+            "FMA46605"
+          ]
+        },
+        {
+          "file": "FJ2777",
+          "heldBy": [
+            "FMA55252"
+          ]
+        },
+        {
+          "file": "FJ2791",
+          "heldBy": [
+            "FMA46604"
+          ]
+        },
+        {
+          "file": "FJ2794",
+          "heldBy": [
+            "FMA55251"
+          ]
+        },
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        },
+        {
+          "file": "FJ3530",
+          "heldBy": [
+            "FMA4785"
+          ]
+        },
+        {
+          "file": "FJ3615",
+          "heldBy": [
+            "FMA4771"
+          ]
+        },
+        {
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA64916",
+      "name": "thenar muscle",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1469",
+          "heldBy": [
+            "FMA37389"
+          ]
+        },
+        {
+          "file": "FJ1469M",
+          "heldBy": [
+            "FMA37388"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA66358",
+      "name": "trunk of superior mesenteric artery",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA66464",
+      "name": "systemic artery",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        },
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA66644",
+      "name": "systemic vein",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2128",
+          "heldBy": [
+            "FMA44884"
+          ]
+        },
+        {
+          "file": "FJ2129",
+          "heldBy": [
+            "FMA44883"
+          ]
+        },
+        {
+          "file": "FJ3530",
+          "heldBy": [
+            "FMA4785"
+          ]
+        },
+        {
+          "file": "FJ3615",
+          "heldBy": [
+            "FMA4771"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA67112",
+      "name": "immaterial anatomical entity",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2744",
+          "heldBy": [
+            "FMA55620"
+          ]
+        },
+        {
+          "file": "FJ2749",
+          "heldBy": [
+            "FMA55077"
+          ]
+        },
+        {
+          "file": "FJ2756",
+          "heldBy": [
+            "FMA55619"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA67135",
+      "name": "anatomical structure",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1313",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1364",
+          "heldBy": [
+            "FMA50875"
+          ]
+        },
+        {
+          "file": "FJ1453M",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ1457M",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ1458M",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ1465",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ1465M",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ1469",
+          "heldBy": [
+            "FMA37389"
+          ]
+        },
+        {
+          "file": "FJ1469M",
+          "heldBy": [
+            "FMA37388"
+          ]
+        },
+        {
+          "file": "FJ1772",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1819",
+          "heldBy": [
+            "FMA50875"
+          ]
+        },
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        },
+        {
+          "file": "FJ2128",
+          "heldBy": [
+            "FMA44884"
+          ]
+        },
+        {
+          "file": "FJ2129",
+          "heldBy": [
+            "FMA44883"
+          ]
+        },
+        {
+          "file": "FJ2319",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2321",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2329",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2349",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2351",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2360",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2544",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ2545",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ2546",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ2549",
+          "heldBy": [
+            "FMA45858"
+          ]
+        },
+        {
+          "file": "FJ2550",
+          "heldBy": [
+            "FMA45854"
+          ]
+        },
+        {
+          "file": "FJ2551",
+          "heldBy": [
+            "FMA45856"
+          ]
+        },
+        {
+          "file": "FJ2552",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ2553",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ2742",
+          "heldBy": [
+            "FMA46633"
+          ]
+        },
+        {
+          "file": "FJ2754",
+          "heldBy": [
+            "FMA46634"
+          ]
+        },
+        {
+          "file": "FJ2774",
+          "heldBy": [
+            "FMA46605"
+          ]
+        },
+        {
+          "file": "FJ2777",
+          "heldBy": [
+            "FMA55252"
+          ]
+        },
+        {
+          "file": "FJ2791",
+          "heldBy": [
+            "FMA46604"
+          ]
+        },
+        {
+          "file": "FJ2794",
+          "heldBy": [
+            "FMA55251"
+          ]
+        },
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        },
+        {
+          "file": "FJ3530",
+          "heldBy": [
+            "FMA4785"
+          ]
+        },
+        {
+          "file": "FJ3615",
+          "heldBy": [
+            "FMA4771"
+          ]
+        },
+        {
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA67165",
+      "name": "material anatomical entity",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1313",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1364",
+          "heldBy": [
+            "FMA50875"
+          ]
+        },
+        {
+          "file": "FJ1453M",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ1457M",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ1458M",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ1463",
+          "heldBy": [
+            "FMA71313",
+            "FMA74075"
+          ]
+        },
+        {
+          "file": "FJ1463M",
+          "heldBy": [
+            "FMA71313",
+            "FMA74076"
+          ]
+        },
+        {
+          "file": "FJ1465",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ1465M",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ1469",
+          "heldBy": [
+            "FMA37389"
+          ]
+        },
+        {
+          "file": "FJ1469M",
+          "heldBy": [
+            "FMA37388"
+          ]
+        },
+        {
+          "file": "FJ1772",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1819",
+          "heldBy": [
+            "FMA50875"
+          ]
+        },
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        },
+        {
+          "file": "FJ2128",
+          "heldBy": [
+            "FMA44884"
+          ]
+        },
+        {
+          "file": "FJ2129",
+          "heldBy": [
+            "FMA44883"
+          ]
+        },
+        {
+          "file": "FJ2319",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2321",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2329",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2349",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2351",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2360",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2544",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ2545",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ2546",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ2549",
+          "heldBy": [
+            "FMA45858"
+          ]
+        },
+        {
+          "file": "FJ2550",
+          "heldBy": [
+            "FMA45854"
+          ]
+        },
+        {
+          "file": "FJ2551",
+          "heldBy": [
+            "FMA45856"
+          ]
+        },
+        {
+          "file": "FJ2552",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ2553",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ2742",
+          "heldBy": [
+            "FMA46633"
+          ]
+        },
+        {
+          "file": "FJ2754",
+          "heldBy": [
+            "FMA46634"
+          ]
+        },
+        {
+          "file": "FJ2774",
+          "heldBy": [
+            "FMA46605"
+          ]
+        },
+        {
+          "file": "FJ2777",
+          "heldBy": [
+            "FMA55252"
+          ]
+        },
+        {
+          "file": "FJ2791",
+          "heldBy": [
+            "FMA46604"
+          ]
+        },
+        {
+          "file": "FJ2794",
+          "heldBy": [
+            "FMA55251"
+          ]
+        },
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        },
+        {
+          "file": "FJ3530",
+          "heldBy": [
+            "FMA4785"
+          ]
+        },
+        {
+          "file": "FJ3615",
+          "heldBy": [
+            "FMA4771"
+          ]
+        },
+        {
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA67498",
+      "name": "organ",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1469",
+          "heldBy": [
+            "FMA37389"
+          ]
+        },
+        {
+          "file": "FJ1469M",
+          "heldBy": [
+            "FMA37388"
+          ]
+        },
+        {
+          "file": "FJ2742",
+          "heldBy": [
+            "FMA46633"
+          ]
+        },
+        {
+          "file": "FJ2754",
+          "heldBy": [
+            "FMA46634"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA67619",
+      "name": "organ region",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1313",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1364",
+          "heldBy": [
+            "FMA50875"
+          ]
+        },
+        {
+          "file": "FJ1453M",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ1457M",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ1458M",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ1772",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1819",
+          "heldBy": [
+            "FMA50875"
+          ]
+        },
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        },
+        {
+          "file": "FJ2128",
+          "heldBy": [
+            "FMA44884"
+          ]
+        },
+        {
+          "file": "FJ2129",
+          "heldBy": [
+            "FMA44883"
+          ]
+        },
+        {
+          "file": "FJ2319",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2321",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2329",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2349",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2351",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2360",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2544",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ2545",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ2546",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ2549",
+          "heldBy": [
+            "FMA45858"
+          ]
+        },
+        {
+          "file": "FJ2550",
+          "heldBy": [
+            "FMA45854"
+          ]
+        },
+        {
+          "file": "FJ2551",
+          "heldBy": [
+            "FMA45856"
+          ]
+        },
+        {
+          "file": "FJ2774",
+          "heldBy": [
+            "FMA46605"
+          ]
+        },
+        {
+          "file": "FJ2791",
+          "heldBy": [
+            "FMA46604"
+          ]
+        },
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        },
+        {
+          "file": "FJ3530",
+          "heldBy": [
+            "FMA4785"
+          ]
+        },
+        {
+          "file": "FJ3615",
+          "heldBy": [
+            "FMA4771"
+          ]
+        },
+        {
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA70478",
+      "name": "subdivision of superior mesenteric artery",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        },
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA70779",
+      "name": "set of organs",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1463",
+          "heldBy": [
+            "FMA71313",
+            "FMA74075"
+          ]
+        },
+        {
+          "file": "FJ1463M",
+          "heldBy": [
+            "FMA71313",
+            "FMA74076"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA71313",
+      "name": "set of levatores costarum longi",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ1463",
+          "heldBy": [
+            "FMA71313",
+            "FMA74075"
+          ]
+        },
+        {
+          "file": "FJ1463M",
+          "heldBy": [
+            "FMA71313",
+            "FMA74076"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA74075",
+      "name": "set of right levatores costarum longi",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ1463",
+          "heldBy": [
+            "FMA71313",
+            "FMA74075"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA74076",
+      "name": "set of left levatores costarum longi",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ1463M",
+          "heldBy": [
+            "FMA71313",
+            "FMA74076"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA74779",
+      "name": "musculature of chest",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1463",
+          "heldBy": [
+            "FMA71313",
+            "FMA74075"
+          ]
+        },
+        {
+          "file": "FJ1463M",
+          "heldBy": [
+            "FMA71313",
+            "FMA74076"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA75445",
+      "name": "membrane organ component",
+      "inventoryStatus": "unused-available",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2777",
+          "heldBy": [
+            "FMA55252"
+          ]
+        },
+        {
+          "file": "FJ2794",
+          "heldBy": [
+            "FMA55251"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA77883",
+      "name": "subdivision of brachiocephalic vein",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ3530",
+          "heldBy": [
+            "FMA4785"
+          ]
+        },
+        {
+          "file": "FJ3615",
+          "heldBy": [
+            "FMA4771"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA78048",
+      "name": "subdivision of superior vena caval tree",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ3530",
+          "heldBy": [
+            "FMA4785"
+          ]
+        },
+        {
+          "file": "FJ3615",
+          "heldBy": [
+            "FMA4771"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA78049",
+      "name": "subdivision of inferior vena caval tree",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2128",
+          "heldBy": [
+            "FMA44884"
+          ]
+        },
+        {
+          "file": "FJ2129",
+          "heldBy": [
+            "FMA44883"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA82472",
+      "name": "cardinal organ part",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1313",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1364",
+          "heldBy": [
+            "FMA50875"
+          ]
+        },
+        {
+          "file": "FJ1453M",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ1457M",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ1458M",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ1465",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ1465M",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ1772",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1819",
+          "heldBy": [
+            "FMA50875"
+          ]
+        },
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        },
+        {
+          "file": "FJ2128",
+          "heldBy": [
+            "FMA44884"
+          ]
+        },
+        {
+          "file": "FJ2129",
+          "heldBy": [
+            "FMA44883"
+          ]
+        },
+        {
+          "file": "FJ2319",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2321",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2329",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2349",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2351",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2360",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2544",
+          "heldBy": [
+            "FMA45859"
+          ]
+        },
+        {
+          "file": "FJ2545",
+          "heldBy": [
+            "FMA45855"
+          ]
+        },
+        {
+          "file": "FJ2546",
+          "heldBy": [
+            "FMA45857"
+          ]
+        },
+        {
+          "file": "FJ2549",
+          "heldBy": [
+            "FMA45858"
+          ]
+        },
+        {
+          "file": "FJ2550",
+          "heldBy": [
+            "FMA45854"
+          ]
+        },
+        {
+          "file": "FJ2551",
+          "heldBy": [
+            "FMA45856"
+          ]
+        },
+        {
+          "file": "FJ2552",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ2553",
+          "heldBy": [
+            "FMA46442"
+          ]
+        },
+        {
+          "file": "FJ2774",
+          "heldBy": [
+            "FMA46605"
+          ]
+        },
+        {
+          "file": "FJ2777",
+          "heldBy": [
+            "FMA55252"
+          ]
+        },
+        {
+          "file": "FJ2791",
+          "heldBy": [
+            "FMA46604"
+          ]
+        },
+        {
+          "file": "FJ2794",
+          "heldBy": [
+            "FMA55251"
+          ]
+        },
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        },
+        {
+          "file": "FJ3530",
+          "heldBy": [
+            "FMA4785"
+          ]
+        },
+        {
+          "file": "FJ3615",
+          "heldBy": [
+            "FMA4771"
+          ]
+        },
+        {
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA85095",
+      "name": "proper palmar digital vein of little finger",
+      "inventoryStatus": "unused-available",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2319",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2321",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2329",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2349",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2351",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2360",
+          "heldBy": [
+            "FMA85102"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA85102",
+      "name": "proper palmar digital vein of right little finger",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ2349",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2351",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2360",
+          "heldBy": [
+            "FMA85102"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA85103",
+      "name": "proper palmar digital vein of left little finger",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ2319",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2321",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2329",
+          "heldBy": [
+            "FMA85103"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA86140",
+      "name": "organ segment",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1313",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1364",
+          "heldBy": [
+            "FMA50875"
+          ]
+        },
+        {
+          "file": "FJ1772",
+          "heldBy": [
+            "FMA50878"
+          ]
+        },
+        {
+          "file": "FJ1819",
+          "heldBy": [
+            "FMA50875"
+          ]
+        },
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        },
+        {
+          "file": "FJ2128",
+          "heldBy": [
+            "FMA44884"
+          ]
+        },
+        {
+          "file": "FJ2129",
+          "heldBy": [
+            "FMA44883"
+          ]
+        },
+        {
+          "file": "FJ2319",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2321",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2329",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2349",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2351",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2360",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        },
+        {
+          "file": "FJ3530",
+          "heldBy": [
+            "FMA4785"
+          ]
+        },
+        {
+          "file": "FJ3615",
+          "heldBy": [
+            "FMA4771"
+          ]
+        },
+        {
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA86187",
+      "name": "segment of arterial tree organ",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        },
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        },
+        {
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "isa",
+      "id": "FMA86188",
+      "name": "segment of venous tree organ",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2128",
+          "heldBy": [
+            "FMA44884"
+          ]
+        },
+        {
+          "file": "FJ2129",
+          "heldBy": [
+            "FMA44883"
+          ]
+        },
+        {
+          "file": "FJ2319",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2321",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2329",
+          "heldBy": [
+            "FMA85103"
+          ]
+        },
+        {
+          "file": "FJ2349",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2351",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ2360",
+          "heldBy": [
+            "FMA85102"
+          ]
+        },
+        {
+          "file": "FJ3530",
+          "heldBy": [
+            "FMA4785"
+          ]
+        },
+        {
+          "file": "FJ3615",
+          "heldBy": [
+            "FMA4771"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA7157",
+      "name": "nervous system",
+      "inventoryStatus": "represented-not-selectable",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1737",
+          "heldBy": [
+            "FMA7647"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA7161",
+      "name": "cardiovascular system",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        },
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        },
+        {
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA7482",
+      "name": "musculoskeletal system",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ3211",
+          "heldBy": [
+            "FMA10446",
+            "FMA25511"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA7483",
+      "name": "axial skeletal system",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ3211",
+          "heldBy": [
+            "FMA10446",
+            "FMA25511"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA7647",
+      "name": "spinal cord",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ1737",
+          "heldBy": [
+            "FMA7647"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA10446",
+      "name": "intervertebral disk",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ3211",
+          "heldBy": [
+            "FMA10446",
+            "FMA25511"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA13478",
+      "name": "vertebral column",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ3211",
+          "heldBy": [
+            "FMA10446",
+            "FMA25511"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA14749",
+      "name": "superior mesenteric artery",
+      "inventoryStatus": "admitted-other-definition",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        },
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        },
+        {
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA14809",
+      "name": "ileal artery",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA14815",
+      "name": "ileocolic artery",
+      "inventoryStatus": "admitted-other-definition",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA14819",
+      "name": "ileal branch of inferior branch of ileocolic artery",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA14823",
+      "name": "inferior branch of ileocolic artery",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA20394",
+      "name": "human body",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1737",
+          "heldBy": [
+            "FMA7647"
+          ]
+        },
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        },
+        {
+          "file": "FJ3211",
+          "heldBy": [
+            "FMA10446",
+            "FMA25511"
+          ]
+        },
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        },
+        {
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA23876",
+      "name": "skeleton (in vivo)",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ3211",
+          "heldBy": [
+            "FMA10446",
+            "FMA25511"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA23881",
+      "name": "skeletal system",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ3211",
+          "heldBy": [
+            "FMA10446",
+            "FMA25511"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA25511",
+      "name": "intervertebral symphysis",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ3211",
+          "heldBy": [
+            "FMA10446",
+            "FMA25511"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA45623",
+      "name": "systemic arterial system",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        },
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        },
+        {
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA49894",
+      "name": "systemic arterial tree",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        },
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        },
+        {
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA55675",
+      "name": "neuraxis",
+      "inventoryStatus": "represented-not-selectable",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1737",
+          "heldBy": [
+            "FMA7647"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA66358",
+      "name": "trunk of superior mesenteric artery",
+      "inventoryStatus": "held-source-review",
+      "directHold": true,
+      "components": [
+        {
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA71221",
+      "name": "axial skeleton",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ3211",
+          "heldBy": [
+            "FMA10446",
+            "FMA25511"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA75007",
+      "name": "cavity of neuraxis",
+      "inventoryStatus": "represented-not-selectable",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1737",
+          "heldBy": [
+            "FMA7647"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA78497",
+      "name": "central canal of spinal cord",
+      "inventoryStatus": "admitted",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1737",
+          "heldBy": [
+            "FMA7647"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA228642",
+      "name": "vasculature of body",
+      "inventoryStatus": "partly-represented",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ2034",
+          "heldBy": [
+            "FMA14819"
+          ]
+        },
+        {
+          "file": "FJ3437",
+          "heldBy": [
+            "FMA14809"
+          ]
+        },
+        {
+          "file": "FJ3644",
+          "heldBy": [
+            "FMA66358"
+          ]
+        }
+      ]
+    },
+    {
+      "tree": "partof",
+      "id": "FMA242675",
+      "name": "ventricular system of neuraxis",
+      "inventoryStatus": "represented-not-selectable",
+      "directHold": false,
+      "components": [
+        {
+          "file": "FJ1737",
+          "heldBy": [
+            "FMA7647"
+          ]
+        }
+      ]
+    }
+  ],
+  "admissionApproved": false,
+  "geometryEquivalenceChecked": false,
+  "limitations": [
+    "This separate report leaves the historical availability inventory unchanged. Available is not approved.",
+    "Blocks explicit held concepts and exact held component IDs within the same source tree, including broader parent definitions and partial selections.",
+    "Cross-archive filenames are not compared as geometry. Known and unknown cross-archive, reordered, translated and near-overlap aliases require a separate byte/geometry audit.",
+    "Most held files lack fingerprints in the inventory. Missing hashes are unknown evidence, never clearance.",
+    "The existing central-canal representation remains a space, not a whole spinal cord. This screen does not adjudicate that cross-archive source alias.",
+    "Passing this screen does not validate laterality, boundaries, extent, licences, source version drift or clinical accuracy."
+  ]
+}

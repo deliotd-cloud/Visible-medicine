@@ -1,6 +1,8 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
+import { loadSourceHolds } from './load-source-holds.mjs';
+import { preflightSourceHolds } from './source-hold-policy.mjs';
 import * as THREE from 'three';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
@@ -10,7 +12,6 @@ import {
 } from 'three/addons/utils/BufferGeometryUtils.js';
 import {
   archiveReader,
-  conceptMap,
   parallelMap,
   sourceTable,
 } from './bodyparts-archive.mjs';
@@ -31,18 +32,18 @@ import { ocularSelections } from './ocular-selections.mjs';
 import { laryngealSelections } from './laryngeal-selections.mjs';
 import { forearmVascularSelections } from './forearm-vascular-selections.mjs';
 
-const [isa, partof, isaZip, partofZip] = await Promise.all([
-  conceptMap('isa'),
-  conceptMap('partof'),
-  archiveReader('isa'),
-  archiveReader('partof'),
-]);
-const out = path.resolve('public/models/bodyparts3d/full-body');
-await fs.mkdir(out, { recursive: true });
-const selections = [];
-const previous = JSON.parse(
-  await fs.readFile(path.join(out, 'catalog.json'), 'utf8').catch(() => '{}'),
+const sourceHoldData = await loadSourceHolds();
+const [isa, partof] = ['isa', 'partof'].map(
+  (tree) =>
+    new Map(
+      sourceHoldData.records
+        .filter((r) => r.tree === tree && r.files.length)
+        .map((r) => [r.id, r]),
+    ),
 );
+const out = path.resolve('public/models/bodyparts3d/full-body');
+const selections = [];
+const previous = sourceHoldData.catalog;
 function addAtomic(root, system) {
   const used = new Set(),
     allowed = new Set(isa.get(root).files);
@@ -377,6 +378,42 @@ function regionOf(record, bounds) {
   if (c.z < 1120) return 'abdomen';
   return 'thorax';
 }
+// Stop on known component holds before fetching/transforming/exporting meshes.
+// Availability in the source index is not anatomical admission approval.
+const quarantine = preflightSourceHolds(
+  sourceHoldData.policy,
+  selections,
+  previous.excluded,
+);
+if (process.argv.includes('--preflight-only')) {
+  console.log(
+    JSON.stringify({
+      sourceHoldPreflight: 'passed',
+      selected: selections.length,
+      excluded: quarantine.size,
+      renderable: selections.length - quarantine.size,
+      selectionBindingsSha256: createHash('sha256')
+        .update(
+          JSON.stringify(
+            selections
+              .map((r) => [r.tree, r.fma, r.name, r.files])
+              .sort((a, b) =>
+                `${a[0]}/${a[1]}`.localeCompare(`${b[0]}/${b[1]}`, 'en'),
+              ),
+          ),
+        )
+        .digest('hex'),
+      geometryGenerated: false,
+      clinicalValidation: false,
+    }),
+  );
+  process.exit(0);
+}
+const [isaZip, partofZip] = await Promise.all([
+  archiveReader('isa'),
+  archiveReader('partof'),
+]);
+await fs.mkdir(out, { recursive: true });
 const jobs = [
   ...new Map(
     selections.flatMap((r) =>
@@ -410,7 +447,6 @@ matrix.premultiply(new THREE.Matrix4().makeScale(scale, scale, scale));
 const bundles = new Map(),
   catalog = [],
   excluded = [];
-const quarantine = new Set(['FMA37388', 'FMA37389', 'FMA46633', 'FMA46634']);
 for (const record of selections) {
   const sourceBounds = new THREE.Box3(),
     geometries = [];

@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+The [source-component safeguards](docs/SOURCE_HOLD_SAFEGUARDS.md) now prevent known held anatomy from re-entering through broader source definitions. Run `npm run source-holds:test` or the non-writing `node scripts/ingest-full-body.mjs --preflight-only`. Current models and UI are unchanged; passing this screen is not anatomical approval.
+
 The [learning-resource linking contract](docs/LEARNING_RESOURCE_CONTRACT.md) now supports typed CT/MRI/X-ray/US annotations and lecture/quiz anchors, with exact-source bindings and separate Atlas/lecture eligibility gates. Explicit bundles, expiry and revocation are tested policy foundations, not a live billing system. No external resources or extra controls are enabled yet; the existing provisional projects retain their review/privacy restrictions.
 
 Start with [generated current status](docs/CURRENT_STATUS.md), [the ordered improvement plan](docs/CONTINUOUS_IMPROVEMENT.md) and [the CT/MRI/X-ray/US and course-linking plan](docs/MULTIMODAL_LEARNING_PLAN.md). The [shoulder/arm, forearm and hand reasoning pilot](docs/REASONING_PRACTICE.md) is inside Practice, with 26 source-bound concepts and post-answer explanations. All teaching remains draft. Cumulative extension paragraphs below are historical milestones, not current totals.

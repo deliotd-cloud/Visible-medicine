@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": 9388,
+  "rejections": 699,
+  "screenedDefinitions": 4273,
+  "blockedDefinitions": 125,
+  "directlyHeldDefinitions": 38,
+  "propagatedDefinitions": 87,
+  "unusedAvailableWithComponentHolds": 19,
+  "heldTreeSpecificFiles": 48,
+  "heldFilesWithExistingGeometryFingerprint": 1,
+  "heldFilesWithoutGeometryFingerprint": 47,
+  "currentDisplayedDefinitionsWithoutKnownSameTreeHold": 1022,
+  "actualImporterPreflight": true,
+  "selectionBindingsSha256": "54583dec1840f82af0855bca9a61760b03470b6336feaa65c266478784275a93",
+  "geometryGenerated": false,
+  "crossArchiveEquivalenceChecked": false,
+  "clinicalValidation": false,
+  "browserInteractionTesting": false
+}
