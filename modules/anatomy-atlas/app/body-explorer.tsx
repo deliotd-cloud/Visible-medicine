@@ -1570,9 +1570,10 @@ export default function BodyExplorer({
                       <a href="/regions/forearm">Forearm</a>,{' '}
                       <a href="/regions/hand">Hand</a>,{' '}
                       <a href="/regions/thigh">Hip &amp; thigh</a>,{' '}
-                      <a href="/regions/leg">Knee &amp; leg</a> or{' '}
-                      <a href="/regions/foot">Foot</a>, or use an identification
-                      mode.
+                      <a href="/regions/leg">Knee &amp; leg</a>,{' '}
+                      <a href="/regions/foot">Foot</a> or{' '}
+                      <a href="/regions/head-neck">Head &amp; neck</a>, or use
+                      an identification mode.
                     </p>
                   )}
                   <Button

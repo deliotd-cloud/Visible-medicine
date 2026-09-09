@@ -75,15 +75,16 @@ const create = (
   random = () => 0.314159,
 ) => api.createPracticeSession(scope, bundles, options(extra), random);
 const bound = all.filter(api.reasoningConceptFor);
-same(api.reasoningConcepts.length, 60);
-same(bound.length, 120);
+same(api.reasoningConcepts.length, 80);
+same(bound.length, 160);
 same(bound.filter((s) => s.region === 'shoulder-arm').length, 20);
 same(bound.filter((s) => s.region === 'forearm').length, 12);
 same(bound.filter((s) => s.region === 'hand').length, 20);
 same(bound.filter((s) => s.region === 'thigh').length, 24);
 same(bound.filter((s) => s.region === 'leg').length, 28);
 same(bound.filter((s) => s.region === 'foot').length, 16);
-same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 60);
+same(bound.filter((s) => s.region === 'head-neck').length, 40);
+same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 80);
 same(
   hash(
     JSON.stringify(
@@ -109,11 +110,22 @@ same(
 same(
   hash(
     JSON.stringify(
-      api.reasoningConcepts.filter((c) => !['leg', 'foot'].includes(c.region)),
+      api.reasoningConcepts.filter(
+        (c) => !['leg', 'foot', 'head-neck'].includes(c.region),
+      ),
     ),
   ),
   'bd2679e4ab16c7308d6f789b940a2180f9bbeb415037a19417a0f33a4a205aad',
   'All 38 earlier question records are unchanged',
+);
+same(
+  hash(
+    JSON.stringify(
+      api.reasoningConcepts.filter((c) => c.region !== 'head-neck'),
+    ),
+  ),
+  '719a8996a39b802df8cd26153fc29d8df53ada101c31426713486e8264089ec3',
+  'All 60 earlier question records are unchanged',
 );
 same(
   hash(catalogBytes),
@@ -132,9 +144,19 @@ for (const concept of api.reasoningConcepts) {
   for (const ref of concept.references)
     check(new URL(ref.url).protocol === 'https:');
   for (const binding of concept.bindings) {
+    const files = binding.files ?? [binding.file];
+    same(new Set(files).size, files.length, 'No repeated source part');
+    check(
+      files.length > 0 &&
+        files.every((file) => typeof file === 'string' && file.length > 0),
+    );
+    check(
+      'file' in binding !== 'files' in binding,
+      'One unambiguous binding format',
+    );
     same(
       rows.filter((row) => row[0] === binding.fma).map((row) => row[2]),
-      [binding.file],
+      files,
       'Complete official element-file membership',
     );
     const s = bound.find((s) => s.fmaId === binding.fma);
@@ -157,11 +179,11 @@ for (const concept of api.reasoningConcepts) {
       { system: 'organs' },
       { category: 'unknown' },
       { sourceTree: 'partof' },
-      { region: 'head-neck' },
+      { region: 'thorax' },
       { region: concept.region === 'forearm' ? 'shoulder-arm' : 'forearm' },
       { regions: [concept.region === 'forearm' ? 'shoulder-arm' : 'forearm'] },
       { regions: ['shoulder-arm', 'hand'] },
-      { regions: ['head-neck'] },
+      { regions: ['thorax'] },
       { regions: [] },
       { regions: [...s.regions, 'spine'] },
       ...(s.regions.length > 1
@@ -174,6 +196,19 @@ for (const concept of api.reasoningConcepts) {
       { sources: [] },
       { sources: [...s.sources, ...s.sources] },
       { sources: [{ ...s.sources[0], file: 'FJ0000' }] },
+      ...(s.sources.length > 1
+        ? [
+            { sources: [s.sources[0]] },
+            { sources: s.sources.slice(1) },
+            { sources: [...s.sources].reverse() },
+            {
+              sources: [
+                s.sources[0],
+                ...s.sources.slice(1).map((p) => ({ ...p, file: 'FJ0000' })),
+              ],
+            },
+          ]
+        : []),
     ]) {
       negativeCases++;
       same(
@@ -184,6 +219,18 @@ for (const concept of api.reasoningConcepts) {
     }
   }
 }
+same(
+  bound
+    .filter((s) => s.sources.length > 1)
+    .map((s) => [s.fmaId, s.sources.map((p) => p.file)]),
+  [
+    ['FMA46293', ['FJ1555', 'FJ1560', 'FJ1578']],
+    ['FMA46292', ['FJ1556', 'FJ1579']],
+    ['FMA46590', ['FJ2784', 'FJ2785']],
+    ['FMA46589', ['FJ2802', 'FJ2803']],
+  ],
+  'Only four explicitly authored multi-part source representations are admitted',
+);
 for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
   for (const side of ['both', 'left', 'right']) {
     const scope = all.filter(
@@ -209,12 +256,13 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
         'pelvis',
         'leg',
         'foot',
+        'head-neck',
       ].includes(region)
     )
       same(session, null, 'No unbound regional question is invented');
     if (!session) continue;
     const expected =
-      region === 'whole-body'
+      region === 'whole-body' || region === 'head-neck'
         ? 20
         : region === 'forearm'
           ? 6
@@ -288,7 +336,7 @@ for (const count of [1, 5, 10, 20, 100, NaN, Infinity, -10]) {
   same(
     create(all, { count }).questions.length,
     Math.min(
-      60,
+      80,
       Math.max(1, Math.min(20, Math.floor(Number.isFinite(count) ? count : 5))),
     ),
   );
@@ -595,7 +643,9 @@ const report = {
     thigh: 12,
     leg: 14,
     foot: 8,
+    'head-neck': 20,
   },
+  multiPartRepresentations: bound.filter((s) => s.sources.length > 1).length,
   sharedRegionConcepts: { pelvis: 2 },
   sourceHashes: {
     catalog: hash(catalogBytes),
@@ -604,6 +654,7 @@ const report = {
   },
   verification: [
     'Official complete FMA/file membership',
+    'Ordered multi-part bindings reject partial, reordered and substituted components',
     'Exact identity/scope rejection',
     'Visible/loaded/focus/retry eligibility',
     'One question per concept',

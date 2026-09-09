@@ -1,27 +1,30 @@
 {
   "schemaVersion": 1,
-  "checks": 6087,
-  "negativeIdentityCases": 1812,
-  "concepts": 60,
-  "exactRepresentations": 120,
+  "checks": 8280,
+  "negativeIdentityCases": 2428,
+  "concepts": 80,
+  "exactRepresentations": 160,
   "regionalConcepts": {
     "shoulder-arm": 10,
     "forearm": 6,
     "hand": 10,
     "thigh": 12,
     "leg": 14,
-    "foot": 8
+    "foot": 8,
+    "head-neck": 20
   },
+  "multiPartRepresentations": 4,
   "sharedRegionConcepts": {
     "pelvis": 2
   },
   "sourceHashes": {
     "catalog": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
     "officialElementIndex": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf",
-    "questions": "719a8996a39b802df8cd26153fc29d8df53ada101c31426713486e8264089ec3"
+    "questions": "309529bda0dd03063b56bfb2af9272fba105d083f8cad728008d1095c92cc9d1"
   },
   "verification": [
     "Official complete FMA/file membership",
+    "Ordered multi-part bindings reject partial, reordered and substituted components",
     "Exact identity/scope rejection",
     "Visible/loaded/focus/retry eligibility",
     "One question per concept",

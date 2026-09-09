@@ -4,13 +4,25 @@ import { handReasoningConcepts } from './hand-reasoning';
 import { thighReasoningConcepts } from './thigh-reasoning';
 import { legReasoningConcepts } from './leg-reasoning';
 import { footReasoningConcepts } from './foot-reasoning';
+import { headNeckReasoningConcepts } from './head-neck-reasoning';
+type ReasoningBinding = { fma: string; side: 'right' | 'left' } & (
+  | { file: string; files?: never }
+  | { file?: never; files: readonly [string, string, ...string[]] }
+);
 export interface ReasoningConcept {
   key: string;
-  region: 'shoulder-arm' | 'forearm' | 'hand' | 'thigh' | 'leg' | 'foot';
+  region:
+    | 'shoulder-arm'
+    | 'forearm'
+    | 'hand'
+    | 'thigh'
+    | 'leg'
+    | 'foot'
+    | 'head-neck';
   // Exact ordered source memberships for a cross-region representation.
   // Omission retains the original single-region contract.
   sourceRegions?: readonly string[];
-  bindings: readonly { fma: string; side: 'right' | 'left'; file: string }[];
+  bindings: readonly ReasoningBinding[];
   prompt: string;
   explanation: string;
   references: readonly { title: string; url: string }[];
@@ -316,13 +328,14 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   ...thighReasoningConcepts,
   ...legReasoningConcepts,
   ...footReasoningConcepts,
+  ...headNeckReasoningConcepts,
 ];
 export function reasoningConceptFor(s: BodyStructure) {
   if (
     s.system !== 'muscles' ||
     s.category !== 'muscle' ||
     s.sourceTree !== 'isa' ||
-    s.sources.length !== 1
+    s.sources.length === 0
   )
     return undefined;
   return reasoningConcepts.find(
@@ -332,11 +345,14 @@ export function reasoningConceptFor(s: BodyStructure) {
       s.regions.every(
         (region, index) => region === (c.sourceRegions ?? [c.region])[index],
       ) &&
-      c.bindings.some(
-        (b) =>
+      c.bindings.some((b) => {
+        const files = b.files ?? [b.file];
+        return (
           b.fma === s.fmaId &&
           b.side === s.laterality &&
-          b.file === s.sources[0].file,
-      ),
+          files.length === s.sources.length &&
+          files.every((file, index) => file === s.sources[index].file)
+        );
+      }),
   );
 }

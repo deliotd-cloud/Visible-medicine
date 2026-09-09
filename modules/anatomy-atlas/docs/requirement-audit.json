@@ -16,7 +16,7 @@
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
     "resolvedContentAndRecipeData": "fd50acb85998726b79cf3ecb646acf9897117b50f6768e5ea65bd6c89dfb629c",
     "explicitTopicReadiness": "51f5f10de5a09021a0445fc3262b6996db78f8282dcc80907518e7716cf6929a",
-    "reasoningQuestionData": "719a8996a39b802df8cd26153fc29d8df53ada101c31426713486e8264089ec3"
+    "reasoningQuestionData": "309529bda0dd03063b56bfb2af9272fba105d083f8cad728008d1095c92cc9d1"
   },
   "anatomy": {
     "bodyRepresentations": 1022,
@@ -103,9 +103,10 @@
       "name"
     ],
     "reasoning": {
-      "concepts": 60,
-      "exactRepresentations": 120,
+      "concepts": 80,
+      "exactRepresentations": 160,
       "regions": [
+        "head-neck",
         "foot",
         "thigh",
         "leg",
