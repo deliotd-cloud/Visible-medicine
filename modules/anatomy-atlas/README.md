@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Knee & leg → femur, tibia or patella → Imaging** now includes [knee-specific CT/MRI comparison guides](docs/KNEE_IMAGING.md), with ultrasound landmarks for the patella. Fourteen new sided draft sections use the existing panels. Whole bones remain whole; no missing ligaments, menisci, cartilage or patient scans are invented.
+
 **Search atlas** now accepts [common names and anatomical abbreviations](docs/SEARCH_VOCABULARY.md), including Achilles, collarbone, peroneus, quadratus plantae and CN IV. Existing source labels and left/right navigation stay intact; no extra toolbar or external search service is added.
 
 **Leg or Foot → calcaneal (Achilles) tendon → Imaging** now includes [MRI and ultrasound comparison guides](docs/ACHILLES_IMAGING.md) for both sides. These cited drafts explain viewing planes and modality-specific pitfalls beside the existing 3D model. No scans, signal simulation, measurements or patient registration are loaded; independent radiology/educator review remains required.

@@ -14,8 +14,8 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "f5b7fafd4ddfcf5e2231d066bf4741e585c45e16d709c536f6552915db4e04b1",
-    "explicitTopicReadiness": "59dd90319110fe768b1bb6cbec6141e589db3e3a8ecea34caa3270c6cca70fe0",
+    "resolvedContentAndRecipeData": "32e173ee70a0812c6215b057fd8534695157f361f6d911d5b3731fadc108e152",
+    "explicitTopicReadiness": "b57c441aa76f7bd23f1c97de13289cedf350bc884d99be676c35cc9998f8e5a9",
     "reasoningQuestionData": "309529bda0dd03063b56bfb2af9272fba105d083f8cad728008d1095c92cc9d1"
   },
   "anatomy": {
@@ -156,21 +156,21 @@
         "generatedIdentification": 0
       },
       "ct": {
-        "specificDraft": 11,
+        "specificDraft": 17,
         "identityOnly": 0,
-        "pending": 1011,
+        "pending": 1005,
         "generatedIdentification": 0
       },
       "mri": {
-        "specificDraft": 13,
+        "specificDraft": 19,
         "identityOnly": 0,
-        "pending": 1009,
+        "pending": 1003,
         "generatedIdentification": 0
       },
       "ultrasound": {
-        "specificDraft": 13,
+        "specificDraft": 15,
         "identityOnly": 0,
-        "pending": 1009,
+        "pending": 1007,
         "generatedIdentification": 0
       },
       "pathology": {
@@ -407,15 +407,15 @@
           "generatedIdentification": 0
         },
         "ct": {
-          "specificDraft": 0,
+          "specificDraft": 2,
           "identityOnly": 0,
-          "pending": 65,
+          "pending": 63,
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 0,
+          "specificDraft": 2,
           "identityOnly": 0,
-          "pending": 65,
+          "pending": 63,
           "generatedIdentification": 0
         },
         "ultrasound": {
@@ -607,15 +607,15 @@
           "generatedIdentification": 0
         },
         "ct": {
-          "specificDraft": 0,
+          "specificDraft": 2,
           "identityOnly": 0,
-          "pending": 81,
+          "pending": 79,
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 0,
+          "specificDraft": 2,
           "identityOnly": 0,
-          "pending": 81,
+          "pending": 79,
           "generatedIdentification": 0
         },
         "ultrasound": {
@@ -657,21 +657,21 @@
           "generatedIdentification": 0
         },
         "ct": {
-          "specificDraft": 0,
+          "specificDraft": 6,
           "identityOnly": 0,
-          "pending": 60,
+          "pending": 54,
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 2,
+          "specificDraft": 8,
           "identityOnly": 0,
-          "pending": 58,
+          "pending": 52,
           "generatedIdentification": 0
         },
         "ultrasound": {
-          "specificDraft": 2,
+          "specificDraft": 4,
           "identityOnly": 0,
-          "pending": 58,
+          "pending": 56,
           "generatedIdentification": 0
         },
         "pathology": {

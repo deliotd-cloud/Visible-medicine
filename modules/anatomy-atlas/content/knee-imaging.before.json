@@ -1,0 +1,460 @@
+{
+  "sourceCommit": "e4c83c099239b1e41126ad19f90012a8207262f6",
+  "copyAndRecipeHash": "16d6b117fc1a003cd5a218b9935124e85f486615404e1f88e5f014022d667beb",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:thigh:left:bone:left-femur",
+      "fmaId": "FMA24475",
+      "identity": {
+        "id": "vm:anatomy:body:thigh:left:bone:left-femur",
+        "fmaId": "FMA24475",
+        "name": "Left femur",
+        "sourceName": "left femur",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis",
+          "leg"
+        ],
+        "bundle": "thigh-skeleton",
+        "nodeName": "FMA24475",
+        "bounds": {
+          "min": [
+            0.3196620047092438,
+            -4.319439888000488,
+            -0.005177993793040514
+          ],
+          "max": [
+            1.502369999885559,
+            0.34239014983177185,
+            0.622759997844696
+          ]
+        },
+        "center": [
+          0.9110160022974014,
+          -1.9885248690843582,
+          0.30879100202582777
+        ],
+        "anchor": [
+          0.9478089809417725,
+          -2.004189968109131,
+          0.308991014957428
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3259",
+            "sha256": "d291cc3619c32c68edb9d29e0b755634c2cb85e3db89f0d0b63a316f879ef86d"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "sections": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:bone:left-patella",
+      "fmaId": "FMA24487",
+      "identity": {
+        "id": "vm:anatomy:body:leg:left:bone:left-patella",
+        "fmaId": "FMA24487",
+        "name": "Left patella",
+        "sourceName": "left patella",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "bundle": "leg-skeleton",
+        "nodeName": "FMA24487",
+        "bounds": {
+          "min": [
+            0.6059249639511108,
+            -4.3850297927856445,
+            0.5090100169181824
+          ],
+          "max": [
+            1.0222400426864624,
+            -3.9923698902130127,
+            0.7275099754333496
+          ]
+        },
+        "center": [
+          0.8140825033187866,
+          -4.188699841499329,
+          0.618259996175766
+        ],
+        "anchor": [
+          0.8300420641899109,
+          -4.148429870605469,
+          0.5871900320053101
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3275",
+            "sha256": "768362d04f0f91cea9a28f4aeae9d9f63f3c82450b68d185fa4afefe75d75cc1"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "sections": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:bone:left-tibia",
+      "fmaId": "FMA24478",
+      "identity": {
+        "id": "vm:anatomy:body:leg:left:bone:left-tibia",
+        "fmaId": "FMA24478",
+        "name": "Left tibia",
+        "sourceName": "left tibia",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "bundle": "leg-skeleton",
+        "nodeName": "FMA24478",
+        "bounds": {
+          "min": [
+            0.3503419756889343,
+            -8.060953140258789,
+            0.019821014255285263
+          ],
+          "max": [
+            1.0945500135421753,
+            -4.261380195617676,
+            0.6451500058174133
+          ]
+        },
+        "center": [
+          0.7224459946155548,
+          -6.161166667938232,
+          0.3324855100363493
+        ],
+        "anchor": [
+          0.7442640066146851,
+          -6.160630226135254,
+          0.2990489900112152
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3282",
+            "sha256": "40e55d7d28f060be61815603ee5eb1c0ba4c2e93af6fed6b5db7ca88d4ed82ef"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "sections": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:bone:right-femur",
+      "fmaId": "FMA24474",
+      "identity": {
+        "id": "vm:anatomy:body:thigh:right:bone:right-femur",
+        "fmaId": "FMA24474",
+        "name": "Right femur",
+        "sourceName": "right femur",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis",
+          "leg"
+        ],
+        "bundle": "thigh-skeleton",
+        "nodeName": "FMA24474",
+        "bounds": {
+          "min": [
+            -1.5013400316238403,
+            -4.31850004196167,
+            -0.004697990603744984
+          ],
+          "max": [
+            -0.31894299387931824,
+            0.342520147562027,
+            0.6219199895858765
+          ]
+        },
+        "center": [
+          -0.9101415127515793,
+          -1.9879899471998215,
+          0.30861099949106574
+        ],
+        "anchor": [
+          -0.9391549825668335,
+          -2.0242297649383545,
+          0.31437796354293823
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3365",
+            "sha256": "5eff0f92905dd45bd0e79b1de0144dc15988c73c683468163255ba1452d58037"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "sections": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-patella",
+      "fmaId": "FMA24486",
+      "identity": {
+        "id": "vm:anatomy:body:leg:right:bone:right-patella",
+        "fmaId": "FMA24486",
+        "name": "Right patella",
+        "sourceName": "right patella",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "bundle": "leg-skeleton",
+        "nodeName": "FMA24486",
+        "bounds": {
+          "min": [
+            -1.0228800773620605,
+            -4.3851399421691895,
+            0.5099199414253235
+          ],
+          "max": [
+            -0.6062080264091492,
+            -3.9920401573181152,
+            0.7272699475288391
+          ]
+        },
+        "center": [
+          -0.8145440518856049,
+          -4.188590049743652,
+          0.6185949444770813
+        ],
+        "anchor": [
+          -0.8611350059509277,
+          -4.189239978790283,
+          0.5913699865341187
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3381",
+            "sha256": "b513b8cb6b37e3eb4211fd35a4469efdf79de37887a0af8c582efc836a6f6307"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "sections": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+      "fmaId": "FMA24477",
+      "identity": {
+        "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+        "fmaId": "FMA24477",
+        "name": "Right tibia",
+        "sourceName": "right tibia",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "bundle": "leg-skeleton",
+        "nodeName": "FMA24477",
+        "bounds": {
+          "min": [
+            -1.0935299396514893,
+            -8.060371398925781,
+            0.02072898857295513
+          ],
+          "max": [
+            -0.3521600067615509,
+            -4.260799884796143,
+            0.6483500003814697
+          ]
+        },
+        "center": [
+          -0.7228449732065201,
+          -6.160585641860962,
+          0.33453949447721243
+        ],
+        "anchor": [
+          -0.6983820199966431,
+          -6.1077399253845215,
+          0.3267289698123932
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3387",
+            "sha256": "01879d7310938e82eecc02e1115332497e94085ff5cc1fa8eeee47ad1f5d3578"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "sections": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

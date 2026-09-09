@@ -4,11 +4,14 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { contentContext, readContentJson } from './content-contract-tools.mjs';
 import { curriculumHash } from './curriculum-transition.mjs';
 import { authoringBeforeAchillesImaging } from './achilles-imaging-transition.mjs';
+import { authoringBeforeKneeImaging } from './knee-imaging-transition.mjs';
 import { achillesImagingLesson } from '../lib/achilles-imaging.ts';
 import { bodyStudyScope, studyDestinations } from '../lib/study-links.ts';
 const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const context = await contentContext();
-const { api, catalog, body } = context;
+const { catalog, body } = context;
+// The separately verified knee addition is removed only for historical comparisons.
+const api = await authoringBeforeKneeImaging(context);
 const previous = await authoringBeforeAchillesImaging(context);
 const before = await readContentJson('content/achilles-imaging.before.json');
 assert.equal(
@@ -145,9 +148,9 @@ for (const [fma, side, file] of expected) {
   }
 }
 const modifiedApi = {
-  ...api,
+  ...context.api,
   bodyLesson(s, tab) {
-    const lesson = api.bodyLesson(s, tab);
+    const lesson = context.api.bodyLesson(s, tab);
     return s.fmaId === expected[0][0] && tab === 'mri'
       ? { ...lesson, body: 'unrecorded change' }
       : lesson;

@@ -1,0 +1,56 @@
+{
+  "sourceCommit": "e4c83c099239b1e41126ad19f90012a8207262f6",
+  "reason": "Fourteen source-bound knee CT/MRI/patellar ultrasound draft sections. Six existing bone representations; no geometry, other teaching, registration or entitlement changes.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:thigh:left:bone:left-femur",
+      "fmaId": "FMA24475",
+      "sections": {
+        "ct": "6f3dc506a22233ada20c7ea898284c91b6f4709d77030f0d76fd4970ff48645c",
+        "mri": "c5f282c51dd60b19c3b91d73ae4a37ab13cb3921cf620b5e21e67f626871fd96"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:bone:left-patella",
+      "fmaId": "FMA24487",
+      "sections": {
+        "ct": "6910b6f6da63f02aeac232c6a996ce4f22b354c695bb0019699c1449f9a9ff00",
+        "mri": "93e94f9921d77bccfe3164897201d288bda522e06adfa827943bc37606e2ee5f",
+        "ultrasound": "1a02a92a6e4ee6ffdf5c4cc642c41ab7df11cfc3ffd1a6f32fc52d30bc145ec3"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:bone:left-tibia",
+      "fmaId": "FMA24478",
+      "sections": {
+        "ct": "3d21b2e1c6572fc7956f6912e630ee1cbe992214727495312e0437dd3be10221",
+        "mri": "d9654ae18141660f43827871bf1b7bd1df915bed39b78866f15d0dee2dead128"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:bone:right-femur",
+      "fmaId": "FMA24474",
+      "sections": {
+        "ct": "660aee40d2a1058ecd1369d8dba78dcf3e8b47b84b4e04774dc9e186729cdc90",
+        "mri": "fa2d640d3129b63a743e8ed3b5aac85f2792ccab5ef1d36f671c3b8a76e238bb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-patella",
+      "fmaId": "FMA24486",
+      "sections": {
+        "ct": "6376e580eafae3a25aa75d4ae2b217a90d214fb8f236f2ffa29b84bd7cfe9caa",
+        "mri": "0ae582dcd92f95371ac05a3fc565eda16a8a91f1cbacf20c697a8ea520ee69d2",
+        "ultrasound": "f60fcb70d83d4e37a7e8dec313a0dda85188854679d6f4a61fa1161c4c7b3706"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+      "fmaId": "FMA24477",
+      "sections": {
+        "ct": "8bd1a2af344daa3d8642d62fa6c8ac35eb7c8f9e84bdf3c5af855ed0f8cbaebb",
+        "mri": "7fdae183102314b80db23661c322de1e068b4f5411c6b8a13a6e23620b3646ff"
+      }
+    }
+  ]
+}

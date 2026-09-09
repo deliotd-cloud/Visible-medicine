@@ -499,9 +499,9 @@ for (const t of tabs)
   });
 for (const t of ['ct', 'mri', 'ultrasound'])
   same(counts(t), {
-    draft: t === 'ct' ? 11 : 13,
+    draft: t === 'ct' ? 17 : t === 'mri' ? 19 : 15,
     'identity-only': 0,
-    pending: t === 'ct' ? 1011 : 1009,
+    pending: t === 'ct' ? 1005 : t === 'mri' ? 1003 : 1007,
     'generated-identification': 0,
   });
 same(counts('anatomy'), {
@@ -531,8 +531,9 @@ const report = {
   sourceComponents: 36,
   lessonGroups: 16,
   explicitTopicEdits: 64,
-  combinedPinnedCurriculumSections: 3620,
+  combinedPinnedCurriculumSections: 3634,
   separatelyPinnedAchillesImagingSections: 4,
+  separatelyPinnedKneeImagingSections: 14,
   sourceIndexChecks,
   negativeCases: negatives.length,
   bodyReadiness: Object.fromEntries(api.contentTabs.map((t) => [t, counts(t)])),

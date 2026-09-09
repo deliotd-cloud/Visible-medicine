@@ -16,6 +16,8 @@ Three [orbital motor-supply study views](ORBITAL_MOTOR_STUDIES.md) now reuse Dis
 
 ## Ordered work
 
+The [knee imaging guides](KNEE_IMAGING.md) extend CT/MRI teaching to the six femur/tibia/patella representations and ultrasound teaching to both patellae (14 sections). Existing Imaging panels are reused. Separate joint tissues and all patient correspondence remain absent; independent clinical/educator review is required.
+
 The [curated search vocabulary](SEARCH_VOCABULARY.md) now makes familiar names, anatomical abbreviations and formatted FMA IDs usable through the existing compact search dialog. Canonical labels, source-bound navigation and exam guards remain in force; current device acceptance is still open.
 
 1. **Software milestone verified:** reasoning pilot, identification regressions, handler migration, feedback gates, content/source preservation and production build. Save/publish the exact revision and record release/recovery evidence; independent educator and device acceptance remain open.
