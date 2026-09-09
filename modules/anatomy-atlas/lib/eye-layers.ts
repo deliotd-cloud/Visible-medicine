@@ -21,6 +21,7 @@ export const eyeCatalog = raw as unknown as Omit<
     sources: BodyStructure['sources'];
   }>;
   structures: EyeLayer[];
+  sourceCleanup: Array<{ file: string; count: number }>;
   excluded: Array<{
     fmaId: string;
     name: string;

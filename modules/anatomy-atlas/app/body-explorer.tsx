@@ -125,6 +125,7 @@ import {
   type RendererHealth,
 } from '@/lib/renderer-health';
 import { eyeLayersFor } from '@/lib/eye-layers';
+import { bodyDisplayCatalog } from '@/lib/body-display-catalog';
 import {
   anatomyLoadReducer,
   initialAnatomyLoads,
@@ -259,7 +260,7 @@ export default function BodyExplorer({
         return r.json();
       })
       .then((data) => {
-        const value = data as BodyCatalog;
+        const value = bodyDisplayCatalog(data as BodyCatalog);
         if (
           !Array.isArray(value.structures) ||
           !Array.isArray(value.bundles) ||
@@ -1714,6 +1715,11 @@ export default function BodyExplorer({
                     </div>
                     <h2>{selected.name}</h2>
                     <ReviewStatus structureId={selected.id} />
+                    {selected.bundle === 'eye-corrected-parent' && (
+                      <p className="vm-practice-note">
+                        Source-cleaned eye model · anatomical review pending.
+                      </p>
+                    )}
                     {!exam && eyeLayersFor(selected).length > 0 && (
                       <div className="body-selection-actions">
                         <Button

@@ -11,6 +11,9 @@ import { build } from './workspace-component-test-build.mjs';
 import { loadSourceHolds } from './load-source-holds.mjs';
 import { cache } from './bodyparts-archive.mjs';
 import { eyeLayerDefinitions } from './eye-layer-definitions.mjs';
+import { cleanEyeGeometry, eyeCleanupRecipes } from './eye-source-cleanup.mjs';
+import { sourceObjShape } from './source-surface-audit.mjs';
+import { sourceTopology } from './source-topology.mjs';
 
 let checks = 0;
 const compare = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
@@ -37,13 +40,16 @@ same(
 );
 same(manifest.license, 'CC-BY-4.0');
 same(manifest.coordinateSystem, catalog.coordinateSystem);
-same(manifest.structures.length, 11);
+same(manifest.structures.length, 15);
+same(manifest.excluded, []);
 same(
-  manifest.excluded.map((s) => s.fmaId),
-  ['FMA58239', 'FMA58839', 'FMA58299', 'FMA58271'],
+  manifest.sourceCleanup.reduce((sum, s) => sum + s.count, 0),
+  36,
 );
 const bundle = manifest.bundles[0],
-  bytes = await readFile('public' + bundle.url);
+  bytes = await readFile(
+    'public' + new URL(bundle.url, 'https://local.invalid').pathname,
+  );
 same(bytes.length, bundle.bytes);
 same(hash(bytes), bundle.sha256);
 const gltf = await new GLTFLoader().parseAsync(
@@ -54,7 +60,7 @@ const meshes = new Map();
 gltf.scene.traverse((n) => {
   if (n.isMesh) meshes.set(n.name, n);
 });
-same(meshes.size, 11);
+same(meshes.size, 15);
 const matrix = new Matrix4().fromArray(
   catalog.coordinateSystem.sourceToSceneColumnMajor,
 );
@@ -63,12 +69,19 @@ const triangleKey = (pts) =>
     .map((p) => p.map((v) => Math.fround(v).toFixed(5)).join(','))
     .sort(compare)
     .join('|');
-function triangles(geometry, transform = null) {
+function triangles(geometry, transform = null, suppressOpposite = false) {
   const p = geometry.getAttribute('position'),
     index = geometry.index,
     result = [];
   for (let i = 0; i < (index?.count ?? p.count); i += 3) {
     const pts = [];
+    // Independent expected geometry: retain every right-sided source face.
+    // The generator removes pinned face ranges instead of this side predicate.
+    if (
+      suppressOpposite &&
+      [0, 1, 2].every((j) => p.getX(index ? index.getX(i + j) : i + j) > 0)
+    )
+      continue;
     for (let j = 0; j < 3; j++) {
       const v = new Vector3().fromBufferAttribute(
         p,
@@ -106,7 +119,14 @@ for (const [parentFma, side, fma, name, files, kind] of eyeLayerDefinitions) {
     const obj = await readFile(`${cache}/partof/${source.file}.obj`);
     same(hash(obj), source.sha256);
     new OBJLoader().parse(obj.toString()).traverse((n) => {
-      if (n.isMesh) sourceTriangles.push(...triangles(n.geometry, matrix));
+      if (n.isMesh)
+        sourceTriangles.push(
+          ...triangles(
+            n.geometry,
+            matrix,
+            eyeCleanupRecipes.some((r) => r.file === source.file),
+          ),
+        );
     });
   }
   if (manifest.excluded.includes(row)) {
@@ -166,12 +186,258 @@ async function moduleFor(entry) {
 }
 const api = await moduleFor('lib/eye-layers.ts'),
   stateApi = await moduleFor('lib/eye-layer-state.ts');
+const displayApi = await moduleFor('lib/body-display-catalog.ts');
+const correction = JSON.parse(
+  await readFile(
+    'public/models/bodyparts3d/eye-layers/display-correction.json',
+  ),
+);
+const untouched = JSON.stringify(catalog),
+  display = displayApi.bodyDisplayCatalog(catalog);
+same(
+  JSON.stringify(catalog),
+  untouched,
+  'Display correction never rewrites archived source',
+);
+same(display.structures.length, catalog.structures.length);
+same(
+  display.structures.map((s) => s.id),
+  catalog.structures.map((s) => s.id),
+);
+same(
+  display.structures.filter(
+    (s, i) => JSON.stringify(s) !== JSON.stringify(catalog.structures[i]),
+  ).length,
+  1,
+);
+same(
+  displayApi.bodyDisplayCatalog(display),
+  display,
+  'Idempotent display adapter',
+);
+same(
+  correction.original,
+  catalog.structures.find((s) => s.id === correction.original.id),
+);
+same(
+  display.structures.find((s) => s.id === correction.original.id),
+  correction.replacement,
+);
+same(display.bundles.at(-1), correction.bundle);
+same(
+  api.eyeLayersFor(correction.replacement).length,
+  7,
+  'Nested dissection accepts the corrected parent with original source bindings',
+);
+const parentBytes = await readFile(
+  'public' + new URL(correction.bundle.url, 'https://local.invalid').pathname,
+);
+same(hash(parentBytes), correction.bundle.sha256);
+same(parentBytes.length, correction.bundle.bytes);
+const parentGltf = await new GLTFLoader().parseAsync(
+  parentBytes.buffer.slice(
+    parentBytes.byteOffset,
+    parentBytes.byteOffset + parentBytes.byteLength,
+  ),
+  '',
+);
+const parentMeshes = [];
+parentGltf.scene.traverse((n) => {
+  if (n.isMesh) parentMeshes.push(n);
+});
+same(parentMeshes.length, 1);
+same(parentMeshes[0].name, correction.replacement.nodeName);
+const parentTriangles = triangles(parentMeshes[0].geometry);
+const childTriangles = manifest.structures
+  .filter((s) => s.parentId === correction.original.id)
+  .flatMap((s) => triangles(meshes.get(s.nodeName).geometry))
+  .sort(compare);
+same(
+  hash(JSON.stringify(parentTriangles)),
+  hash(JSON.stringify(childTriangles)),
+  'Main model uses exactly the seven cleaned child surfaces, once each',
+);
+parentMeshes[0].geometry.computeBoundingBox();
+same(
+  parentMeshes[0].geometry.boundingBox.min.toArray(),
+  correction.replacement.bounds.min,
+);
+same(
+  parentMeshes[0].geometry.boundingBox.max.toArray(),
+  correction.replacement.bounds.max,
+);
+check(
+  correction.original.bounds.max[0] > 0 &&
+    correction.replacement.bounds.max[0] < 0,
+);
+const geometryPositions = parentMeshes[0].geometry.getAttribute('position');
+let anchorPresent = false;
+for (let i = 0; i < geometryPositions.count; i++) {
+  check(geometryPositions.getX(i) < 0);
+  if (
+    [
+      geometryPositions.getX(i),
+      geometryPositions.getY(i),
+      geometryPositions.getZ(i),
+    ].every((v, k) => v === correction.replacement.anchor[k])
+  )
+    anchorPresent = true;
+}
+check(
+  anchorPresent,
+  'Corrected label anchor is an actual retained source vertex',
+);
+const linkApi = await moduleFor('lib/anatomy-link-registry.ts');
+const contentApi = await moduleFor('app/body-content.ts');
+for (const tab of [
+  'anatomy',
+  'function',
+  'ct',
+  'mri',
+  'ultrasound',
+  'pathology',
+  'clinical',
+  'quiz',
+]) {
+  const before = contentApi.bodyLesson(correction.original, tab),
+    after = contentApi.bodyLesson(correction.replacement, tab);
+  same(
+    after.readiness,
+    before.readiness,
+    'Source cleanup does not elevate clinical readiness',
+  );
+  same(after.body, before.body, 'Existing factual lesson body remains bound');
+}
+const oldEntry = linkApi
+    .bodyLinkEntries(catalog)
+    .find((s) => s.id === correction.original.id),
+  newEntry = linkApi
+    .bodyLinkEntries(display)
+    .find((s) => s.id === correction.original.id);
+same(newEntry.sources, oldEntry.sources);
+same(newEntry.id, oldEntry.id);
+check(
+  newEntry.reference.point[0] < -17,
+  'Outgoing runtime reference uses corrected bounds, not midline-biased archived bounds',
+);
+check(Math.abs(newEntry.reference.point[0] - oldEntry.reference.point[0]) > 20);
+const loadApi = await moduleFor('lib/anatomy-load-state.ts');
+const selectedParent = [correction.replacement],
+  systems = {
+    skeleton: true,
+    muscles: true,
+    organs: true,
+    nerves: true,
+    vessels: true,
+    connective: true,
+  };
+same(loadApi.requestedAnatomyBundles(selectedParent, systems, [], false), [
+  correction.bundle.id,
+]);
+same(
+  loadApi.requestedAnatomyBundles(
+    selectedParent,
+    systems,
+    [correction.original.id],
+    false,
+  ),
+  [],
+);
+same(
+  loadApi.requestedAnatomyBundles(
+    selectedParent,
+    systems,
+    [correction.original.id],
+    true,
+  ),
+  [correction.bundle.id],
+);
+const practiceApi = await moduleFor('lib/anatomy-practice.ts');
+same(
+  practiceApi.practicePool(selectedParent, [correction.original.bundle]),
+  [],
+  'Old aggregate loading cannot falsely enable corrected-eye practice',
+);
+same(
+  practiceApi
+    .practicePool(selectedParent, [correction.bundle.id])
+    .map((s) => s.id),
+  [correction.original.id],
+);
+for (const mutation of [
+  (c) =>
+    (c.structures.find(
+      (s) => s.id === correction.original.id,
+    ).sources[0].sha256 = '0'.repeat(64)),
+  (c) =>
+    (c.structures.find((s) => s.id === correction.original.id).bounds.max[0] +=
+      1),
+  (c) =>
+    (c.structures.find((s) => s.id === correction.original.id).anchor[0] += 1),
+  (c) =>
+    c.structures.push(
+      c.structures.find((s) => s.id === correction.original.id),
+    ),
+  (c) => (c.coordinateSystem.sourceToSceneColumnMajor[0] = 1),
+  (c) => c.bundles.push(correction.bundle),
+]) {
+  const changed = structuredClone(catalog);
+  mutation(changed);
+  checks++;
+  assert.throws(() => displayApi.bodyDisplayCatalog(changed));
+}
+for (const mutation of [
+  (c) => c.bundles.pop(),
+  (c) => (c.bundles.at(-1).sha256 = '0'.repeat(64)),
+  (c) =>
+    (c.structures.find((s) => s.id === correction.original.id).bundle =
+      'other'),
+]) {
+  const changed = structuredClone(display);
+  mutation(changed);
+  checks++;
+  assert.throws(() => displayApi.bodyDisplayCatalog(changed));
+}
+let suppressedAreaMm2 = 0,
+  suppressedComponents = 0;
+for (const recipe of eyeCleanupRecipes) {
+  const bytes = await readFile(`${cache}/partof/${recipe.file}.obj`);
+  same(hash(bytes), recipe.sha256);
+  const topology = sourceTopology(sourceObjShape(bytes));
+  const fragments = topology.components.filter((c) => c.bounds.min[0] > 0);
+  same(
+    fragments.reduce((n, c) => n + c.triangles, 0),
+    recipe.count,
+  );
+  const record = correction.cleanup.find((c) => c.file === recipe.file);
+  same(record.fragments, fragments);
+  suppressedComponents += fragments.length;
+  suppressedAreaMm2 += fragments.reduce((n, c) => n + c.areaMm2, 0);
+  check(
+    fragments.every(
+      (c) =>
+        c.bounds.max.every((v, k) => v - c.bounds.min[k] < 0.1) &&
+        c.areaMm2 < 0.01,
+    ),
+  );
+  const shape = new OBJLoader()
+    .parse(bytes.toString())
+    .children.find((n) => n.isMesh).geometry;
+  checks++;
+  assert.throws(() =>
+    cleanEyeGeometry(shape, { ...recipe, sha256: '0'.repeat(64) }),
+  );
+  const changed = shape.clone();
+  changed.getAttribute('position').setX(recipe.start * 3, -1);
+  checks++;
+  assert.throws(() => cleanEyeGeometry(changed, recipe));
+}
 for (const side of ['left', 'right']) {
   const parent = catalog.structures.find(
     (s) => s.fmaId === (side === 'left' ? 'FMA12515' : 'FMA12514'),
   );
   const layers = api.eyeLayersFor(parent);
-  same(layers.length, side === 'left' ? 8 : 3);
+  same(layers.length, side === 'left' ? 8 : 7);
   for (const mutation of [
     (p) => (p.id += '-foreign'),
     (p) => (p.fmaId = 'FMA0'),
@@ -195,12 +461,7 @@ for (const side of ['left', 'right']) {
     check(!state.hidden.includes(state.selectedId));
     check(state.hidden.every((id) => layers.some((s) => s.id === id)));
   };
-  for (const preset of [
-    'all',
-    'anterior',
-    'lens',
-    ...(side === 'left' ? ['wall'] : []),
-  ]) {
+  for (const preset of ['all', 'anterior', 'lens', 'wall']) {
     update({ type: 'preset', value: preset });
     same(state.hidden, api.eyePresetHidden(layers, preset));
     same(state.preset, preset);
@@ -233,6 +494,12 @@ for (const side of ['left', 'right']) {
 
 // Execute the real launcher/close callbacks without mounting a browser or GPU.
 const source = await readFile('app/body-explorer.tsx', 'utf8');
+check(source.includes('const value = bodyDisplayCatalog(data as BodyCatalog)'));
+check(
+  source.indexOf('bodyDisplayCatalog(data as BodyCatalog)') <
+    source.indexOf('bodyLinkEntries(value)'),
+  'Source display correction precedes reference validation',
+);
 const ast = ts.createSourceFile(
   'body.tsx',
   source,
@@ -340,25 +607,32 @@ for (const side of ['left', 'right']) {
   const html = renderToStaticMarkup(
     React.createElement(component.exports.EyeLayerView, { parent }),
   );
-  same((html.match(/role="switch"/g) || []).length, side === 'left' ? 8 : 3);
+  same((html.match(/role="switch"/g) || []).length, side === 'left' ? 8 : 7);
   check(html.includes('Clinical') || html.includes('clinical'));
   check(html.includes('Anterior structures'));
   check(html.includes('Reassemble'));
-  same(html.includes('4 right-eye components unavailable'), side === 'right');
+  same(html.includes('36 tiny disconnected triangles'), side === 'right');
 }
 const result = {
   passed: true,
   checks,
-  selectableComponents: 11,
+  selectableComponents: 15,
   left: 8,
-  right: 3,
-  quarantined: 4,
+  right: 7,
+  suppressedSourceTriangles: 36,
   sourceFilesConsidered: 17,
-  renderedSourceFiles: 12,
+  renderedSourceFiles: 17,
   triangles: triangleCount,
   glbBytes: bytes.length,
   glbSha256: hash(bytes),
   rootCatalogueChanged: false,
+  runtimeRightEyeCorrected: true,
+  correctedParentBytes: parentBytes.length,
+  correctedParentSha256: hash(parentBytes),
+  correctedParentTriangles: parentTriangles.length,
+  suppressedComponents,
+  suppressedAreaMm2,
+  unrelatedDisplayedRecordsChanged: 0,
   controlMarkupCases: 2,
   clinicalValidation: false,
   browserInteractionTesting: false,

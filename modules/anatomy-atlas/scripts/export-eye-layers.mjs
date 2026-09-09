@@ -11,6 +11,9 @@ import {
 import { loadSourceHolds } from './load-source-holds.mjs';
 import { cache } from './bodyparts-archive.mjs';
 import { eyeLayerDefinitions } from './eye-layer-definitions.mjs';
+import { cleanEyeGeometry, eyeCleanupRecipes } from './eye-source-cleanup.mjs';
+import { sourceObjShape } from './source-surface-audit.mjs';
+import { sourceTopology } from './source-topology.mjs';
 
 const hash = (b) => createHash('sha256').update(b).digest('hex');
 const compare = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
@@ -23,7 +26,7 @@ const group = new Group(),
   structures = [],
   excluded = [],
   loader = new OBJLoader();
-const quarantined = new Set(['FMA58239', 'FMA58839', 'FMA58299', 'FMA58271']);
+const cleanupEvidence = [];
 const matrix = new Matrix4().fromArray(
   catalog.coordinateSystem.sourceToSceneColumnMajor,
 );
@@ -42,11 +45,34 @@ for (const [parentFma, side, fma, name, files, kind] of eyeLayerDefinitions) {
   for (const source of sources) {
     const raw = await readFile(`${cache}/partof/${source.file}.obj`);
     assert.equal(hash(raw), source.sha256);
+    const recipe = eyeCleanupRecipes.find((r) => r.file === source.file);
+    if (recipe) {
+      const topology = sourceTopology(sourceObjShape(raw));
+      const fragments = topology.components.filter((c) => c.bounds.min[0] > 0);
+      assert.equal(
+        fragments.reduce((sum, c) => sum + c.triangles, 0),
+        recipe.count,
+      );
+      assert(
+        fragments.every(
+          (c) =>
+            c.bounds.max.every((v, i) => v - c.bounds.min[i] < 0.1) &&
+            c.areaMm2 < 0.01,
+        ),
+        'Opposite-side component is not a reviewed speck',
+      );
+      cleanupEvidence.push({
+        ...recipe,
+        fragments,
+        retainedFaces: recipe.faces - recipe.count,
+      });
+    }
     loader.parse(raw.toString()).traverse((mesh) => {
       if (!mesh.isMesh) return;
       let g = mesh.geometry.clone();
       g.deleteAttribute('normal');
       g.deleteAttribute('uv');
+      g = cleanEyeGeometry(g, source);
       g = mergeVertices(g, 0.0001);
       g.computeVertexNormals();
       g.applyMatrix4(matrix);
@@ -61,25 +87,6 @@ for (const [parentFma, side, fma, name, files, kind] of eyeLayerDefinitions) {
   const oppositeVertices = Array.from({ length: position.count }, (_, i) =>
     position.getX(i),
   ).filter((x) => (side === 'right' ? x >= 0 : x <= 0)).length;
-  if (quarantined.has(fma)) {
-    assert(
-      oppositeVertices > 0,
-      'Expected side discrepancy changed; review the source',
-    );
-    excluded.push({
-      fmaId: fma,
-      name,
-      parentId: parent.id,
-      kind,
-      sources,
-      sourceTree: 'partof',
-      oppositeVertices,
-      reason:
-        'Source component contains opposite-side vertices. Withheld from independent layer rendering pending source review; no trimming, reflection or repair.',
-    });
-    geometry.dispose();
-    continue;
-  }
   assert.equal(
     oppositeVertices,
     0,
@@ -186,7 +193,7 @@ const manifest = {
   bundles: [
     {
       id: 'eye-layers',
-      url: '/models/bodyparts3d/eye-layers/eye-layers.glb',
+      url: '/models/bodyparts3d/eye-layers/eye-layers.glb?v=' + hash(bytes),
       bytes: bytes.length,
       sha256: hash(bytes),
       structures: structures.length,
@@ -195,13 +202,82 @@ const manifest = {
   coverage: {
     nerves: 'Not included in this component view.',
     organs:
-      'Eight left-eye components; right iris, lens and vitreous body only. Four right components have source laterality discrepancies and are withheld. Retina and finer tissue layers are not independently segmented.',
+      'Eight left-eye and seven right-eye components. Thirty-six pinned opposite-side source triangles are suppressed from four right components. Retina, finer layers and a right anterior chamber are not independently segmented.',
   },
+  sourceCleanup: cleanupEvidence,
   excluded,
 };
 await writeFile(
   `${output}/catalog.json`,
   JSON.stringify(manifest, null, 2) + '\n',
+);
+// Separate aggregate for the main atlas: one corrected source representation,
+// never rendered together with its independently selectable child layers.
+const original = parents.find((p) => p.fmaId === 'FMA12514');
+const right = structures.filter((s) => s.parentId === original.id);
+const parentGeometry = mergeGeometries(
+  right.map((s) => group.children.find((m) => m.name === s.nodeName).geometry),
+);
+parentGeometry.computeBoundingBox();
+const box = parentGeometry.boundingBox,
+  center = box.getCenter(new Vector3()),
+  p = parentGeometry.getAttribute('position');
+let anchor = center.clone(),
+  distance = Infinity;
+for (let i = 0; i < p.count; i++) {
+  const point = new Vector3().fromBufferAttribute(p, i),
+    d = point.distanceToSquared(center);
+  if (d < distance) {
+    distance = d;
+    anchor = point;
+  }
+}
+const parentMesh = new Mesh(parentGeometry, new MeshStandardMaterial());
+parentMesh.name = original.nodeName;
+parentMesh.userData = {
+  structureId: original.id,
+  fmaId: original.fmaId,
+  sourceCleanup: 'eye-fragments-v1',
+};
+const parentGroup = new Group();
+parentGroup.add(parentMesh);
+const parentBytes = Buffer.from(
+  await new GLTFExporter().parseAsync(parentGroup, { binary: true }),
+);
+await writeFile(`${output}/right-eyeball.glb`, parentBytes);
+const replacement = {
+  ...original,
+  bundle: 'eye-corrected-parent',
+  bounds: { min: box.min.toArray(), max: box.max.toArray() },
+  center: center.toArray(),
+  anchor: anchor.toArray(),
+  coverageNote:
+    'Source-derived right eyeball with 36 exact disconnected opposite-side triangles suppressed. All retained source surfaces are unchanged in position; anatomical and clinical review pending.',
+};
+await writeFile(
+  `${output}/display-correction.json`,
+  JSON.stringify(
+    {
+      version: 1,
+      original,
+      replacement,
+      bundle: {
+        id: 'eye-corrected-parent',
+        url:
+          '/models/bodyparts3d/eye-layers/right-eyeball.glb?v=' +
+          hash(parentBytes),
+        bytes: parentBytes.length,
+        sha256: hash(parentBytes),
+        structures: 1,
+      },
+      coordinateSystem: catalog.coordinateSystem,
+      cleanup: cleanupEvidence,
+      license: catalog.license,
+      credit: catalog.credit,
+    },
+    null,
+    2,
+  ) + '\n',
 );
 console.log({
   components: structures.length,
@@ -214,4 +290,9 @@ console.log({
   bytes: bytes.length,
   sha256: hash(bytes),
   parentCatalogueChanged: false,
+  correctedParent: {
+    bytes: parentBytes.length,
+    sha256: hash(parentBytes),
+    bounds: replacement.bounds,
+  },
 });

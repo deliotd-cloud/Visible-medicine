@@ -148,6 +148,63 @@
   ],
   "structures": [
     {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-cornea",
+      "fmaId": "FMA58239",
+      "name": "Right cornea",
+      "sourceName": "right cornea",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "eye-layers",
+      "nodeName": "FMA58239",
+      "bounds": {
+        "min": [
+          -0.381509006023407,
+          7.1072998046875,
+          1.111549973487854
+        ],
+        "max": [
+          -0.24066899716854095,
+          7.248000621795654,
+          1.1605099439620972
+        ]
+      },
+      "center": [
+        -0.31108900159597397,
+        7.177650213241577,
+        1.1360299587249756
+      ],
+      "anchor": [
+        -0.3136190176010132,
+        7.176300048828125,
+        1.1517000198364258
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1340",
+          "sha256": "20cc1b1156cd9fdebd96d8a7710ff3d6d6fc9fef79b7173ef41491e2b6e650a3"
+        }
+      ],
+      "coverageNote": "Existing eyeball source component, independently selectable only in the eye-layer view. Anatomical and clinical validation pending; not a microscopic layer or patient segmentation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "kind": "cornea"
+    },
+    {
       "id": "vm:anatomy:body:head-neck:right:organ:right-iris",
       "fmaId": "FMA58236",
       "name": "Right iris",
@@ -262,6 +319,63 @@
       "kind": "lens"
     },
     {
+      "id": "vm:anatomy:body:head-neck:right:ligament:suspensory-ligament-of-right-lens",
+      "fmaId": "FMA58839",
+      "name": "Suspensory ligament of right lens",
+      "sourceName": "suspensory ligament of right lens",
+      "system": "connective",
+      "category": "ligament",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "eye-layers",
+      "nodeName": "FMA58839",
+      "bounds": {
+        "min": [
+          -0.3910129964351654,
+          7.096500396728516,
+          1.0851199626922607
+        ],
+        "max": [
+          -0.2277979999780655,
+          7.259799957275391,
+          1.1108099222183228
+        ]
+      },
+      "center": [
+        -0.30940549820661545,
+        7.178150177001953,
+        1.0979649424552917
+      ],
+      "anchor": [
+        -0.27844399213790894,
+        7.194399356842041,
+        1.1020199060440063
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1371",
+          "sha256": "8dc5ab248fc952170f9057aaf4bbd2339d9ee4c30b40b32ce793e54b22706738"
+        }
+      ],
+      "coverageNote": "Existing eyeball source component, independently selectable only in the eye-layer view. Anatomical and clinical validation pending; not a microscopic layer or patient segmentation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "kind": "zonule"
+    },
+    {
       "id": "vm:anatomy:body:head-neck:right:organ:right-vitreous-body",
       "fmaId": "FMA58828",
       "name": "Right vitreous body",
@@ -317,6 +431,124 @@
       },
       "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
       "kind": "vitreous"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-choroid",
+      "fmaId": "FMA58299",
+      "name": "Right choroid",
+      "sourceName": "right choroid",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "eye-layers",
+      "nodeName": "FMA58299",
+      "bounds": {
+        "min": [
+          -0.4245489835739136,
+          7.061200141906738,
+          0.899940013885498
+        ],
+        "max": [
+          -0.18466800451278687,
+          7.30019998550415,
+          1.1239100694656372
+        ]
+      },
+      "center": [
+        -0.3046084940433502,
+        7.180700063705444,
+        1.0119250416755676
+      ],
+      "anchor": [
+        -0.3047710061073303,
+        7.180300235748291,
+        0.9105499386787415
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1336",
+          "sha256": "518f78b01de0273ea1cdd6152f2215f9432f2ce00ac2164cea8aa3a420cd897c"
+        },
+        {
+          "file": "FJ1337",
+          "sha256": "db3077437828f311b6afa07dc9dc7a27ab0e005ddce62570420c61af31643f22"
+        }
+      ],
+      "coverageNote": "Existing eyeball source component, independently selectable only in the eye-layer view. Anatomical and clinical validation pending; not a microscopic layer or patient segmentation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "kind": "choroid"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-sclera",
+      "fmaId": "FMA58271",
+      "name": "Right sclera",
+      "sourceName": "right sclera",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "eye-layers",
+      "nodeName": "FMA58271",
+      "bounds": {
+        "min": [
+          -0.436180979013443,
+          7.049599647521973,
+          0.8882899284362793
+        ],
+        "max": [
+          -0.17298001050949097,
+          7.311899185180664,
+          1.134640097618103
+        ]
+      },
+      "center": [
+        -0.304580494761467,
+        7.180749416351318,
+        1.0114650130271912
+      ],
+      "anchor": [
+        -0.30542799830436707,
+        7.181899547576904,
+        0.8999600410461426
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1368",
+          "sha256": "6fce2e1842730573a8d1360a88a9512b2ee5fe0ebe55e669cd265601da663b49"
+        }
+      ],
+      "coverageNote": "Existing eyeball source component, independently selectable only in the eye-layer view. Anatomical and clinical validation pending; not a microscopic layer or patient segmentation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "kind": "sclera"
     },
     {
       "id": "vm:anatomy:body:head-neck:left:organ:left-cornea",
@@ -782,80 +1014,228 @@
   "bundles": [
     {
       "id": "eye-layers",
-      "url": "/models/bodyparts3d/eye-layers/eye-layers.glb",
-      "bytes": 2004404,
-      "sha256": "1596149e72ddfaf01720bd596e4934034aa0b574bd6e961143cbc31c8af19e84",
-      "structures": 11
+      "url": "/models/bodyparts3d/eye-layers/eye-layers.glb?v=4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "bytes": 3578388,
+      "sha256": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "structures": 15
     }
   ],
   "coverage": {
     "nerves": "Not included in this component view.",
-    "organs": "Eight left-eye components; right iris, lens and vitreous body only. Four right components have source laterality discrepancies and are withheld. Retina and finer tissue layers are not independently segmented."
+    "organs": "Eight left-eye and seven right-eye components. Thirty-six pinned opposite-side source triangles are suppressed from four right components. Retina, finer layers and a right anterior chamber are not independently segmented."
   },
-  "excluded": [
+  "sourceCleanup": [
     {
-      "fmaId": "FMA58239",
-      "name": "right cornea",
-      "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
-      "kind": "cornea",
-      "sources": [
+      "file": "FJ1340",
+      "sha256": "20cc1b1156cd9fdebd96d8a7710ff3d6d6fc9fef79b7173ef41491e2b6e650a3",
+      "faces": 4606,
+      "start": 4588,
+      "count": 18,
+      "fragments": [
         {
-          "file": "FJ1340",
-          "sha256": "20cc1b1156cd9fdebd96d8a7710ff3d6d6fc9fef79b7173ef41491e2b6e650a3"
-        }
-      ],
-      "sourceTree": "partof",
-      "oppositeVertices": 13,
-      "reason": "Source component contains opposite-side vertices. Withheld from independent layer rendering pending source review; no trimming, reflection or repair."
-    },
-    {
-      "fmaId": "FMA58839",
-      "name": "suspensory ligament of right lens",
-      "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
-      "kind": "zonule",
-      "sources": [
-        {
-          "file": "FJ1371",
-          "sha256": "8dc5ab248fc952170f9057aaf4bbd2339d9ee4c30b40b32ce793e54b22706738"
-        }
-      ],
-      "sourceTree": "partof",
-      "oppositeVertices": 6,
-      "reason": "Source component contains opposite-side vertices. Withheld from independent layer rendering pending source review; no trimming, reflection or repair."
-    },
-    {
-      "fmaId": "FMA58299",
-      "name": "right choroid",
-      "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
-      "kind": "choroid",
-      "sources": [
-        {
-          "file": "FJ1336",
-          "sha256": "518f78b01de0273ea1cdd6152f2215f9432f2ce00ac2164cea8aa3a420cd897c"
+          "firstFace": 4590,
+          "triangles": 8,
+          "vertices": 5,
+          "bounds": {
+            "min": [
+              27.6991,
+              -161.951,
+              1524.47
+            ],
+            "max": [
+              27.7,
+              -161.951,
+              1524.48
+            ]
+          },
+          "areaMm2": 0.000008999999999970839,
+          "algebraicVolumeMm3": 0
         },
         {
-          "file": "FJ1337",
-          "sha256": "db3077437828f311b6afa07dc9dc7a27ab0e005ddce62570420c61af31643f22"
+          "firstFace": 4598,
+          "triangles": 8,
+          "vertices": 5,
+          "bounds": {
+            "min": [
+              30.8533,
+              -161.788,
+              1524.7
+            ],
+            "max": [
+              30.8543,
+              -161.786,
+              1524.7
+            ]
+          },
+          "areaMm2": 0.0000020000000000048886,
+          "algebraicVolumeMm3": 0
+        },
+        {
+          "firstFace": 4588,
+          "triangles": 2,
+          "vertices": 3,
+          "bounds": {
+            "min": [
+              22.7888,
+              -162.06,
+              1517.01
+            ],
+            "max": [
+              22.7904,
+              -162.059,
+              1517.01
+            ]
+          },
+          "areaMm2": 0.0000014000000000069746,
+          "algebraicVolumeMm3": 0
         }
       ],
-      "sourceTree": "partof",
-      "oppositeVertices": 9,
-      "reason": "Source component contains opposite-side vertices. Withheld from independent layer rendering pending source review; no trimming, reflection or repair."
+      "retainedFaces": 4588
     },
     {
-      "fmaId": "FMA58271",
-      "name": "right sclera",
-      "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
-      "kind": "sclera",
-      "sources": [
+      "file": "FJ1371",
+      "sha256": "8dc5ab248fc952170f9057aaf4bbd2339d9ee4c30b40b32ce793e54b22706738",
+      "faces": 7376,
+      "start": 7372,
+      "count": 4,
+      "fragments": [
         {
-          "file": "FJ1368",
-          "sha256": "6fce2e1842730573a8d1360a88a9512b2ee5fe0ebe55e669cd265601da663b49"
+          "firstFace": 7372,
+          "triangles": 2,
+          "vertices": 3,
+          "bounds": {
+            "min": [
+              37.3912,
+              -158.891,
+              1520.12
+            ],
+            "max": [
+              37.3922,
+              -158.89,
+              1520.12
+            ]
+          },
+          "areaMm2": 0.0000010000000000095496,
+          "algebraicVolumeMm3": 0
+        },
+        {
+          "firstFace": 7374,
+          "triangles": 2,
+          "vertices": 3,
+          "bounds": {
+            "min": [
+              37.2811,
+              -158.971,
+              1520.44
+            ],
+            "max": [
+              37.2901,
+              -158.961,
+              1520.46
+            ]
+          },
+          "areaMm2": 0.00023720033726758074,
+          "algebraicVolumeMm3": -3.308722450212111e-24
         }
       ],
-      "sourceTree": "partof",
-      "oppositeVertices": 6,
-      "reason": "Source component contains opposite-side vertices. Withheld from independent layer rendering pending source review; no trimming, reflection or repair."
+      "retainedFaces": 7372
+    },
+    {
+      "file": "FJ1337",
+      "sha256": "db3077437828f311b6afa07dc9dc7a27ab0e005ddce62570420c61af31643f22",
+      "faces": 28872,
+      "start": 28862,
+      "count": 10,
+      "fragments": [
+        {
+          "firstFace": 28862,
+          "triangles": 8,
+          "vertices": 6,
+          "bounds": {
+            "min": [
+              30.9922,
+              -158.543,
+              1509.58
+            ],
+            "max": [
+              31.0618,
+              -158.516,
+              1509.6
+            ]
+          },
+          "areaMm2": 0.0026841642890057067,
+          "algebraicVolumeMm3": 0.000006944000000000306
+        },
+        {
+          "firstFace": 28870,
+          "triangles": 2,
+          "vertices": 3,
+          "bounds": {
+            "min": [
+              34.5872,
+              -158.367,
+              1511.14
+            ],
+            "max": [
+              34.5885,
+              -158.366,
+              1511.14
+            ]
+          },
+          "areaMm2": 0.0000012999999999697821,
+          "algebraicVolumeMm3": 0
+        }
+      ],
+      "retainedFaces": 28862
+    },
+    {
+      "file": "FJ1368",
+      "sha256": "6fce2e1842730573a8d1360a88a9512b2ee5fe0ebe55e669cd265601da663b49",
+      "faces": 39524,
+      "start": 39520,
+      "count": 4,
+      "fragments": [
+        {
+          "firstFace": 39520,
+          "triangles": 2,
+          "vertices": 3,
+          "bounds": {
+            "min": [
+              30.2353,
+              -163.148,
+              1524.76
+            ],
+            "max": [
+              30.2882,
+              -163.142,
+              1524.76
+            ]
+          },
+          "areaMm2": 0.000053900000000250406,
+          "algebraicVolumeMm3": 0
+        },
+        {
+          "firstFace": 39522,
+          "triangles": 2,
+          "vertices": 3,
+          "bounds": {
+            "min": [
+              31.259,
+              -163.072,
+              1524.63
+            ],
+            "max": [
+              31.2616,
+              -163.069,
+              1524.63
+            ]
+          },
+          "areaMm2": 0.00000540000000002741,
+          "algebraicVolumeMm3": 0
+        }
+      ],
+      "retainedFaces": 39520
     }
-  ]
+  ],
+  "excluded": []
 }

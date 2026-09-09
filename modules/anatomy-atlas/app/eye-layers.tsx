@@ -390,6 +390,13 @@ export function EyeLayerView({ parent }: { parent: BodyStructure }) {
         )}
         <details className="eye-layer-limits">
           <summary>Source and limitations</summary>
+          {parent.laterality === 'right' && (
+            <p>
+              Four components use source-cleaned surfaces: 36 tiny disconnected
+              triangles on the opposite side were removed. Retained surfaces
+              were not moved or mirrored. Anatomical review remains pending.
+            </p>
+          )}
           <p>
             Colours and transparency aid viewing, not optical simulation. Retina
             and finer tissue layers are not separately segmented. CT/MRI/US
@@ -398,8 +405,9 @@ export function EyeLayerView({ parent }: { parent: BodyStructure }) {
           <p>{eyeCatalog.credit}</p>
           <p>
             Components separated from the source aggregate, transformed,
-            recoloured and normal-smoothed for this viewer. No source geometry
-            has been mirrored or anatomically repaired.
+            recoloured and normal-smoothed for this viewer. Pinned opposite-side
+            fragments are suppressed on the right; retained surfaces are not
+            moved or mirrored.
           </p>
           <a
             href="https://creativecommons.org/licenses/by/4.0/"
