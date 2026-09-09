@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Hand and foot bone clinical teaching
+
+The [acral-bone extension](ACRAL_BONE_CLINICAL_CURRICULUM.md) adds 28 definitions for 106 exact ISA identities/components, with side, ordered source and region guards. Two grouped foot-sesamoid identities remain excluded. Its offline projection precedes cranial-bone history (43 projections / 2,718 pinned edits). Current runtime/export stay current; prior captures and baseline remain fixed. No geometry, interface, schema, dependency or review migration.
+
 ## Skull, facial-bone and hyoid clinical teaching
 
 The [cranial-bone extension](CRANIAL_BONE_CLINICAL_CURRICULUM.md) uses fifteen lesson definitions for 23 exact identities / 24 source components. Ordered identity guards preserve both hyoid files and side/region specificity. Its offline projection precedes axial-bone history (42 projections / 2,506 pinned edits); runtime/export stay current and older captures/baseline stay fixed. No geometry, interface, schema, dependency or review migration.

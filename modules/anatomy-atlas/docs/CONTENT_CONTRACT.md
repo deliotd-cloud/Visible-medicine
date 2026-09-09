@@ -1,5 +1,7 @@
 # Versioned anatomy content export
 
+**Current hand/foot bone extension:** [212 drafts](ACRAL_BONE_CLINICAL_CURRICULUM.md) bring Clinical and Pathology to 569 draft / 453 pending body entries each. Forty-three projections protect 2,718 pinned sections. Two foot-sesamoid Clinical/Pathology holds are also checked directly for readiness, which displayed-copy hashes omit. Original baseline and older captures remain fixed; previous totals below are historical.
+
 **Current skull/facial/hyoid extension:** [46 drafts](CRANIAL_BONE_CLINICAL_CURRICULUM.md) bring Clinical and Pathology to 463 draft / 559 pending body entries each. Forty-two projections protect 2,506 pinned sections. Earlier captures and baseline remain unchanged; older totals below are historical. All other topics, geometry and approval state are preserved.
 
 **Current spine/chest-bone extension:** [104 drafts](AXIAL_BONE_CLINICAL_CURRICULUM.md) bring Clinical and Pathology to 440 draft/582 pending body entries each. Forty-one projections protect 2,460 pinned sections. Earlier captures and original baseline stay unchanged; older totals below are historical. Other topics, geometry and approval state are preserved.

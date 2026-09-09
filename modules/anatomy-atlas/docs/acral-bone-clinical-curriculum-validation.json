@@ -1,13 +1,13 @@
 {
   "passed": true,
-  "checks": 17703,
-  "bodyRepresentations": 23,
-  "sourceComponents": 24,
-  "lessonGroups": 15,
-  "explicitTopicEdits": 46,
-  "combinedPinnedCurriculumSections": 2506,
-  "sourceIndexChecks": 24,
-  "negativeCases": 22,
+  "checks": 22012,
+  "bodyRepresentations": 106,
+  "sourceComponents": 106,
+  "lessonGroups": 28,
+  "explicitTopicEdits": 212,
+  "combinedPinnedCurriculumSections": 2718,
+  "sourceIndexChecks": 106,
+  "negativeCases": 40,
   "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 463,
+      "draft": 569,
       "identity-only": 0,
-      "pending": 559,
+      "pending": 453,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 463,
+      "draft": 569,
       "identity-only": 0,
-      "pending": 559,
+      "pending": 453,
       "generated-identification": 0
     },
     "quiz": {
@@ -63,7 +63,6 @@
   "clinicalApproval": false,
   "scanContentAdded": false,
   "browserTesting": false,
-  "countsScope": "Historical cranial-bone milestone; current direct/export assertions remain active",
-  "copyAndRecipeHash": "b374123eef66153c8f36a7fd5db47ed24889770901cab4d44aee9f5ef4bb6b4f",
-  "limitations": "Original short skull/facial/hyoid clinical drafts; not validated fractures, cranial-nerve lesions, airway or visual function, patient scans, procedural guidance or clinical approval."
+  "copyAndRecipeHash": "eeab6641ed5a9ce57149252c928f173fe88fa2daf6d54c65e8faf7570f9748b4",
+  "limitations": "Original short hand/foot bone clinical drafts; two grouped foot-sesamoid identities remain pending. Not fracture reconstruction, ligament/tendon testing, measured loading or perfusion, patient scans, procedural guidance or clinical approval."
 }

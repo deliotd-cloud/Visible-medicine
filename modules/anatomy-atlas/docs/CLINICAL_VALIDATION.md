@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Hand and foot bone review
+
+Review [212 new drafts](ACRAL_BONE_CLINICAL_CURRICULUM.md) for exact side/digit/segment mapping, bone versus tendon/ligament injury, occult-fracture and vascular limits, thumb/hallux IP terminology, carpal and midfoot joint context, toe warning wording and paediatric applicability. Require anatomical, hand, foot-and-ankle and MSK-radiological review. Two grouped foot-sesamoid identities remain on hold. No patient diagnosis, validated injury mechanics, procedural instruction, scan registration or device acceptance is provided.
+
 ## Skull, facial-bone and hyoid review
 
 Review [46 new drafts](CRANIAL_BONE_CLINICAL_CURRICULUM.md) for bone/nerve/soft-tissue distinctions, head/eye/airway warning language, nasal-septal complications, hearing/tear/palate context, grouped hyoid identity and evidence limits. Require anatomical, maxillofacial, ENT, ophthalmic, neurosurgical and radiological review; assess paediatric applicability separately. No clinical clearance, diagnostic simulation, procedure, acquired scan or browser/device acceptance is provided.

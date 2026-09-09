@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+The [hand/foot bone extension](docs/ACRAL_BONE_CLINICAL_CURRICULUM.md) adds 212 Clinical/Pathology drafts for 106 exact bones without extra controls. Two unresolved grouped foot-sesamoid selections stay pending. Run `npm run acral-bone-clinical-curriculum:test -- --source`. Specialist review remains required; older milestone totals below are historical.
+
 The [skull/facial/hyoid extension](docs/CRANIAL_BONE_CLINICAL_CURRICULUM.md) adds 46 Clinical/Pathology drafts for 23 exact selections, distinguishing adjacent bony, neural and soft-tissue problems without extra controls. Run `npm run cranial-bone-clinical-curriculum:test -- --source`. Clinical review remains required; earlier milestone totals below are historical.
 
 The [spine/chest-bone extension](docs/AXIAL_BONE_CLINICAL_CURRICULUM.md) adds 104 Clinical/Pathology drafts for 52 exact vertebral, sacral, rib and sternal selections. It distinguishes injury patterns, warning signs and normal variation without additional controls or scan/clinical-approval claims. Run `npm run axial-bone-clinical-curriculum:test -- --source`.

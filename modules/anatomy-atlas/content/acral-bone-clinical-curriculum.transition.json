@@ -1,0 +1,854 @@
+{
+  "sourceCommit": "62645e18b2d677870e60271d2d61467d6f873169",
+  "reason": "Two hundred twelve Pathology/Clinical drafts for 106 exact hand/foot bones; two unresolved grouped foot-sesamoid selections remain pending.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-second-toe",
+      "fmaId": "FMA32653",
+      "sections": {
+        "pathology": "e9d6fff9309fbaa516277121c0fd1eb0b191b78f3f23401a10a974987d28881c",
+        "clinical": "222800817d99933744815e4734b5762313760f557bc6f650ba5bc45d2814ce83"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-third-toe",
+      "fmaId": "FMA32655",
+      "sections": {
+        "pathology": "9ea0edebd1e602b2aa649a322e477bce9b8af14e3aa9dd3cf61d015f02794d19",
+        "clinical": "b16e837dfb593a4eb7a27840034d872b16025f06e9e9f03c5e07c4c63d083ad7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-fourth-toe",
+      "fmaId": "FMA32657",
+      "sections": {
+        "pathology": "c6f06a4e208d91d4c173cc3989db08ca05097ff27a4bc99fe53b3214e30a6be5",
+        "clinical": "c31b362f567adbbe01bc44cc147d8ea9c88d460ebc8a94683408e5541603efd8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-big-toe",
+      "fmaId": "FMA32651",
+      "sections": {
+        "pathology": "554cb9baef5e9b4ef447c61a28595070c083c63c6cb7b73d1fb7036b4d88528d",
+        "clinical": "eba7d1180474661db9d3df0782d743a8ff2b0af33087b505ade29875c4c724a8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-index-finger",
+      "fmaId": "FMA23953",
+      "sections": {
+        "pathology": "480ed9ea2ad9b54097b0395fef8f658e58c8f365d047f36d4b47b954588ef8eb",
+        "clinical": "21c8b8ac865ad55880fa23c145b7169c8c61eabb642c5848c64fbb524b5b157f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-little-finger",
+      "fmaId": "FMA23959",
+      "sections": {
+        "pathology": "023bd459a85cc765e493d415504094791b5e3e62936e8933f08c1537e7338605",
+        "clinical": "fa9d5c4199aaba5f385b3cd1964c285586c70bedbb575e3a8c48ef923aa78316"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-little-toe",
+      "fmaId": "FMA32659",
+      "sections": {
+        "pathology": "98481a6960c66a193b5c411421c7ba9010beecae41289212c9c79fc7d963a634",
+        "clinical": "8147bfb422aa59efc3139d5f99c7d6323f360e12cf62a43695e132a721be9abf"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-middle-finger",
+      "fmaId": "FMA23955",
+      "sections": {
+        "pathology": "088861894efa165a5a2eac66f80ba399b0ef775229ae9c4b2ef9cb7a7c545773",
+        "clinical": "0cddf34d3f8a6861d227337c715b9b90aa41a1266e0b7bf6d5edb1dc9dafa42c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-ring-finger",
+      "fmaId": "FMA23957",
+      "sections": {
+        "pathology": "c6ef3335ac974d5b606d5080458c54d588fa02b8fc89058eeb2f9d98d1c883c8",
+        "clinical": "9fd9325fa045a4c979dfb6661dea8aaa2c68f79a8ba296464692f240228bc422"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-thumb",
+      "fmaId": "FMA23951",
+      "sections": {
+        "pathology": "0be759033853268382905d9e8e386a5c65bb60d59ef4032bc491abfc869da9a8",
+        "clinical": "e34f705a722735e57597a3b943839dc8dac429702062422dc195777c89018258"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-second-toe",
+      "fmaId": "FMA32652",
+      "sections": {
+        "pathology": "a6c5681b181c4360d7d3522fe379387cec5832180b5bb3ceb35053f946bb03af",
+        "clinical": "ae0b28d3f689c1391b67486983645de83c9f052ce800024973022d9a5b61a8bf"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-third-toe",
+      "fmaId": "FMA32654",
+      "sections": {
+        "pathology": "7887c22ca5ff6272ff45f6f7835f7b867b4aa07733ff22701249feec86768534",
+        "clinical": "30818803150676b276175ab7e38930a351a8bcf31aee4c8b7b402c0861cacb2a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-fourth-toe",
+      "fmaId": "FMA32656",
+      "sections": {
+        "pathology": "403e629c8e07b8c41d726ce442fe0903399cceb3c458ef29e5d8f4cf5acc4c40",
+        "clinical": "b3a7e0414a89f183e98db127da377fb09e5d71e30d7d9721b980495dbd6d9bb0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-big-toe",
+      "fmaId": "FMA32650",
+      "sections": {
+        "pathology": "0f2e356260fbcd7a001341c1418db55befe0ceae9c0bac8aa43704227adffc9e",
+        "clinical": "59707045bee8307da93a5d52af232b4b742aa86080b952f752cfe4ed446ded04"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-index-finger",
+      "fmaId": "FMA24460",
+      "sections": {
+        "pathology": "fd0cd317d339b7cd82a53b67d5cbea85ffa22393e88edb84b216e12f7e426f3a",
+        "clinical": "4549efe3a59df97fe7ae2deb94584917d7cd4144ad92dfe0db4499d7a7eb29f0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-little-finger",
+      "fmaId": "FMA24463",
+      "sections": {
+        "pathology": "5191570bd223546eb094025b80f0e085891385f65ba7c96cf13ad1005bf574dd",
+        "clinical": "51f909fbc1ffbcf1c4361a8e06609c146b4d2c5cd6e755dbe5cdb7f395c1e5a5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-little-toe",
+      "fmaId": "FMA32658",
+      "sections": {
+        "pathology": "684c1a41e175fea023cddd5b4db1a7793dc232bbae8895c4867b0cc96b0705d0",
+        "clinical": "a607953cd6fd837c6baa597ea269617fae7378be2cd16c5b80b4ca5db484e09d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-middle-finger",
+      "fmaId": "FMA24461",
+      "sections": {
+        "pathology": "2bd41b511e3029eeae9ee0b893359e9ecce2c8a824e8f1a87f26c104382e8bee",
+        "clinical": "1eaf5b397769efaecb5236c9997f2125bb645ed70c800b5d86c2d4e255ef0506"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-ring-finger",
+      "fmaId": "FMA24462",
+      "sections": {
+        "pathology": "86fbf80b0a51fcc7c55946999e976d939c9d004a924d028799e56af1f69fba73",
+        "clinical": "588f5e5bba906bf92e146cd6f76161ff06cfe750ab84700c25c9f4b76a888bbb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-thumb",
+      "fmaId": "FMA24459",
+      "sections": {
+        "pathology": "746210c18ab6af97c69ac3418d75b8738664059b98bb076dfdfafab55eada369",
+        "clinical": "2a5d300d8d9eb68f6f2e69eb86806bf5be2376be728555a2a0a00cf8f2894aff"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-first-metacarpal-bone",
+      "fmaId": "FMA24465",
+      "sections": {
+        "pathology": "f948eea671668ab15bd9809b541624c024dfc0dbb1b781c54dca1ab11b8171bc",
+        "clinical": "7a8f0d52c5de8b9a6e75670152ffd4e5357c9894e9dc40ff78edfe5395618436"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-first-metatarsal-bone",
+      "fmaId": "FMA24508",
+      "sections": {
+        "pathology": "13e6267f6006254d7b0db4e1bb66d36b2b627d659f448554813830ee70b68c16",
+        "clinical": "1dbafce61b9a3edc86c3bc7af7e4329f8e2ee9fc1b339ffa1895481cd1c52f68"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-second-metacarpal-bone",
+      "fmaId": "FMA24467",
+      "sections": {
+        "pathology": "ab7d3b00266cb331fc3a90b5c9dcf54d7a8cd2d2d8dff7f83d82b43a4e01a8af",
+        "clinical": "4290798883842250eac681a6322cd506a483590dd737df147f0d4b11769c199e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-second-metatarsal-bone",
+      "fmaId": "FMA24510",
+      "sections": {
+        "pathology": "8d2b9c9a8c193df9822797bcca516fc52a9281c18a4739e9073505af9ab6f9e3",
+        "clinical": "b9251c83ad29997cf91969a9bdb40b1fe2892f3c10e189d48b59e853fd80d080"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-third-metacarpal-bone",
+      "fmaId": "FMA24469",
+      "sections": {
+        "pathology": "3c07256062def2c8488373fe4459b98929ba72123a6fdf4cf1c48139e61f6473",
+        "clinical": "a564f9a5aa2afc9907ab75d650c77f9bd5cc5dcc8275c6be8d540dae638946df"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-third-metatarsal-bone",
+      "fmaId": "FMA24512",
+      "sections": {
+        "pathology": "7860bff04db6dcec045b2f87b91634dc47f256aa8aa408934546b1c73baf4b3c",
+        "clinical": "c983e3a400de1284ea84bdd1f6d55bbb8f060e586511560da8099f689ab58e67"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-fourth-metacarpal-bone",
+      "fmaId": "FMA24471",
+      "sections": {
+        "pathology": "16353a738f9b7c26ad6d5d26fa3a9ad808b44571a69d46f95b05bd9863055907",
+        "clinical": "83051caa7239df204be2617093a57ea2eac0c829b2c89249c3e30024df1528d0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-fourth-metatarsal-bone",
+      "fmaId": "FMA24514",
+      "sections": {
+        "pathology": "2b7c4d819a5e300f5a447e9d1e365cc1c80e89a8582639d84466446cfe28ee84",
+        "clinical": "c20fdeb9eaea9b4373a66af3245bd88683ce5c2c1b8a44085300f3d011de7700"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-fifth-metacarpal-bone",
+      "fmaId": "FMA24473",
+      "sections": {
+        "pathology": "507379186164929c8b3f9f9ff0626cab5e5a7f0d175c81f35e2cc06425d1e47e",
+        "clinical": "33398d01d99c129630da7ef4a14c7c332a7591a58999fcbe5c8f9a3af110be62"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-fifth-metatarsal-bone",
+      "fmaId": "FMA24516",
+      "sections": {
+        "pathology": "c12ef356664491133b96bac815b2e81f4375f738c1c60d2c68fb81f6331f6205",
+        "clinical": "307abf7a9aafc4fed5d824ed00b8bd9a195bc1c7954a929f8a572a689a0c1b39"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-calcaneus",
+      "fmaId": "FMA24498",
+      "sections": {
+        "pathology": "87589f4497b8ca92f0bad0e57bc3d4ce2757668287244e40809d30ee3e21f9e6",
+        "clinical": "b8b65903611ea204f1739aca191a8af9c3fc39162ed3e176319f7a462a5e427c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-capitate",
+      "fmaId": "FMA24447",
+      "sections": {
+        "pathology": "47dc1271d529f325331de4187e68212b0e9b49c8a5d60ba94db5fd2d2617ed03",
+        "clinical": "18e5d1b46afe9d1c4c06bbaf354eaf3d2878439a7e12d236b615cc661b09c754"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-cuboid-bone",
+      "fmaId": "FMA24529",
+      "sections": {
+        "pathology": "f07cd2761803b2b9d679cd29f6e2ee48e3b718877458709716193587f2f86626",
+        "clinical": "3a4e00600438a1e24fe4166be53a21d586b50a42831b1a07a0ecd2abe92b8ac1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-hamate",
+      "fmaId": "FMA24449",
+      "sections": {
+        "pathology": "462d5c863cc95055b445b341e896843e3f2f8f94b7bd0b6ac64900161421e5e4",
+        "clinical": "ca7f48ab2faa3aa395518d57939ce2ee2f1a57cb1ce9e2e326e5b60c16f1b642"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-intermediate-cuneiform-bone",
+      "fmaId": "FMA24524",
+      "sections": {
+        "pathology": "ae1650c56c0d8c1ead04569249ab1489d3981d6650b5928fe25298a869d8dc75",
+        "clinical": "4943474661d544e93553371c58bfc2cd894a7dc7aac58f67bd878e8c8593afb0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-lateral-cuneiform-bone",
+      "fmaId": "FMA24526",
+      "sections": {
+        "pathology": "11e3a03d6e8edbe09bcd9239be1ebf10f68cee969ca20678722d3218d586869e",
+        "clinical": "9bf3f374f759caccdf2bd70d45364bffd43689745f01b07d0fe315ca308d9e2e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-lunate",
+      "fmaId": "FMA24438",
+      "sections": {
+        "pathology": "5ba6784db61dd784f6dfec7cd3c72b21fc223bc640b226c1ae031fe513c429e3",
+        "clinical": "4d8d9f2c1ec5292797fdcd4a7d37bbebc6c5579669238c28d6a907ab57b43ea0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-medial-cuneiform-bone",
+      "fmaId": "FMA24522",
+      "sections": {
+        "pathology": "6dd7fad63e12196e15a1ba1a695801fc096ea14dfc1a99c42843c8e8ae21ee85",
+        "clinical": "4d0a48f2d85f7c11a15e9a324d1392cbf6c16e9e577a858991519ece551ba65b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-pisiform",
+      "fmaId": "FMA24442",
+      "sections": {
+        "pathology": "3a79f28effa4206e00a9e34249e01e1730b38580884181e3edd712c40e82788f",
+        "clinical": "261380c53dfd281f1e00ec9160c4e174758fe6fb22ec9d43bf96e311c5d75472"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-scaphoid",
+      "fmaId": "FMA24436",
+      "sections": {
+        "pathology": "d8a74054e7042bf6b169ee089af74b74528f7f49f6cbed7b0b2712e50a004cf0",
+        "clinical": "8174703891d4bb552e57342039cdcf13774b0797b9e868acb832a2efd5fd6480"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-talus",
+      "fmaId": "FMA24483",
+      "sections": {
+        "pathology": "227f4149cfbfa999a1ed3902318dce96acadb413bb52fced19dfb2f4416140ea",
+        "clinical": "c6b3f7fe7222fc10f6b05851f11317f9fb30c797df269a53b2fc32977f7c0e38"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-trapezium",
+      "fmaId": "FMA24444",
+      "sections": {
+        "pathology": "90a0c5749f5917e9251f15887781fa2a09757241f94910fa85e41e4d59a09db8",
+        "clinical": "9bc20eafd9a30d173aecdbdda978c3cb936a1d5243d67fc124595bc81e6cfa67"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-trapezoid",
+      "fmaId": "FMA24445",
+      "sections": {
+        "pathology": "a7cf43ab13559c0a7f796012e5d2e246b7de79bc27bf9660d81c3c1aae3711c5",
+        "clinical": "95d2f945252ca3068af98e51b29f2e1423cec80fcfeb9bb2bc2a94e3b7a45db7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-triquetral",
+      "fmaId": "FMA24440",
+      "sections": {
+        "pathology": "c87250438cfbb56be79269efad02a8114c674afcefd3e76d9c87221a44428402",
+        "clinical": "8871f94736e3add7970b4865498cc8c8b0073482117839178eaae33fcb76b1a5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-ring-finger",
+      "fmaId": "FMA23942",
+      "sections": {
+        "pathology": "4071209f93f9b14f475e5180f5a5ad1476323e5c5b3165a4d54fa609d3e1285e",
+        "clinical": "afdb893dfa577abea75cdfd5bb40f6746cb0e43198d1faa074aa33c56d33247e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-ring-finger",
+      "fmaId": "FMA24457",
+      "sections": {
+        "pathology": "156d1ab5840a6dfeacabf04bb928f5580f5cc34a6b8173489a485f96b7098fbb",
+        "clinical": "1350caaefe5dba08bf97e114b81c8cb60e9c6d9a705b69bf00629a7fa12e3ade"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-second-toe",
+      "fmaId": "FMA32643",
+      "sections": {
+        "pathology": "3771bfa2acff1711422a93df5aec32a076cf343f4ae78e50aeada4ebe6f86aee",
+        "clinical": "d383c6bde47b5692dbea69870a2c04af140482ce18292f08cb428b8e04a6f9d6"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-third-toe",
+      "fmaId": "FMA32645",
+      "sections": {
+        "pathology": "a7ac0b391c5834990189b7eeacdb8c68c041c472620d8d475da8fb82b288b248",
+        "clinical": "aec864c2a5f6594e3595eb46fa4e6298d6a959381e2938c18e013d6cb27cec9e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-fourth-toe",
+      "fmaId": "FMA32647",
+      "sections": {
+        "pathology": "75c4545eead995b76047961b7c32e545d866846534827cb38165d48621f16323",
+        "clinical": "10b600254f4210fb24e9d848b896a0e4e3dde87da5a8710b1c96e1e47fd0afe7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-index-finger",
+      "fmaId": "FMA23938",
+      "sections": {
+        "pathology": "2f821a317f5355096be96f1bec53d61417ae5f5a07519b78ad63c67a62c89061",
+        "clinical": "05fc0e78312bd7164d00daae91c27056ae223f9440deb8ca8100857f0a03ac45"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-little-finger",
+      "fmaId": "FMA23944",
+      "sections": {
+        "pathology": "a3a2878b241974da766294eadcec3954c68cec0791faece23dd78c008230e72a",
+        "clinical": "dbbe3cacb3fb00a7abdfc27c410401eaedbd818cadd12b5b6bc5c7276b1a9197"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-little-toe",
+      "fmaId": "FMA230988",
+      "sections": {
+        "pathology": "20b1858f10d45d6648b2db110a4b4862aab5b25a835d7df657c6021da607dda4",
+        "clinical": "e5c2792d0991ce9f2cf907672da4f2e02726e502ef71bcbbd4922ac2070bb128"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-middle-finger",
+      "fmaId": "FMA23940",
+      "sections": {
+        "pathology": "a36d4ec4c026f774a736f393dcf9f0429bd86cae0406544f326329fe9e25f774",
+        "clinical": "9ff00eee5b491d07fe8efaa758a9917732665f8aeb8eba0d65457e30fc0da485"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-second-toe",
+      "fmaId": "FMA32642",
+      "sections": {
+        "pathology": "977e3f121872301953ab6bb45868f4f89f1cef91a161ec5399d0b41e0bde92b4",
+        "clinical": "0dcfa07ed15eafcd14f0cff251408c6343720d645677cbe85afce9648973303d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-third-toe",
+      "fmaId": "FMA32644",
+      "sections": {
+        "pathology": "a814ba43695f3ec8d32f0872150024ba38b931a77d76e913a5f66f53d16887bc",
+        "clinical": "912c707008439cea12c2330ead94cfb4d1c4aee6895627885fd813dc796312f0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-fourth-toe",
+      "fmaId": "FMA32646",
+      "sections": {
+        "pathology": "8b1de576e16dd8554660f38fc6649adee73b817dfcb23fbe83fec0b4ce158af2",
+        "clinical": "5a24109d19ba8c42f18f39deba28e58b97c4a7df0d174bf0efe3a8ebd0e962ae"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-index-finger",
+      "fmaId": "FMA24455",
+      "sections": {
+        "pathology": "71992d2c703d8e0a02cdaa018d34f9c86aaa13000cc80fa6890770747a0f2a24",
+        "clinical": "7bfd3d3c9015ddcbc2b606a07a636b0c129ab4c554d9bac669a81d9c4fbed7ff"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-little-finger",
+      "fmaId": "FMA24458",
+      "sections": {
+        "pathology": "2e44ac503322d83952b1c8f6d6cdfa8b3f858c86f3ff4924d0edd2d6c39575c8",
+        "clinical": "0caf91230b004e161778d3c33859199e0087d097bc21060d2e401c8593327c5b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-little-toe",
+      "fmaId": "FMA230986",
+      "sections": {
+        "pathology": "3438e9ef56727dc2943b638de19e93df5257568c4e32e76c3a1de6a620cbe001",
+        "clinical": "1542021406ee97ab1f1822db57fcfbb612f276c2fb07056721efb67dcb142f55"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-middle-finger",
+      "fmaId": "FMA24456",
+      "sections": {
+        "pathology": "6d7029e2531a3fdde29594c02289fb0f878da701c832457607bbd556f9eb9ec6",
+        "clinical": "893d0e3c31d0dfd45719530e19b5735d9185c436b1c7e21ae985cde83be73be4"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:navicular-bone-of-left-foot",
+      "fmaId": "FMA24501",
+      "sections": {
+        "pathology": "6ccc5238c2b4db4f7f7b8b7ca4596d2bde2996f81c2efe09cbac0d7d7ed64340",
+        "clinical": "e9a06243e3f0d1cfb70d9698f722a143d3de8533e8b10486374d490bac64f899"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:navicular-bone-of-right-foot",
+      "fmaId": "FMA24500",
+      "sections": {
+        "pathology": "b703e5e8fad6fdfbb9b2e3bf7e0455732b9456ebd1a07bb0687db3fd3254e042",
+        "clinical": "b6f962d61e53abca8c820b4a6998ffbe46db638f920137632fac28b3a52dbc8b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-big-toe",
+      "fmaId": "FMA43253",
+      "sections": {
+        "pathology": "2a60f90c092218730690610affeaef0ff0bb40e795dea67e0430458e46cf9999",
+        "clinical": "c031d5d16ca47f152e1b181ea4c59b994c71ad3dfd9cc85b10f5b65086443d21"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-third-toe",
+      "fmaId": "FMA32637",
+      "sections": {
+        "pathology": "f4bb6bb806c5314080fc0918671e5d18f9675346a2595579093e9d7dbc9c5155",
+        "clinical": "c530b3356a0f66f943545d2653c9e8d3381d580f23fdfac546c5d039d2605e0a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-fourth-toe",
+      "fmaId": "FMA32639",
+      "sections": {
+        "pathology": "f556ccfc992e1fc4e78fdf438e731e6245bf3d41f954f1a6ef68d1d221227b8f",
+        "clinical": "c06e564c84da917b3383de3615ece8b798ce5d2dd448a69aead9c898d82ce7c9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-index-finger",
+      "fmaId": "FMA71915",
+      "sections": {
+        "pathology": "4cc401907bed9e2088d85b5ac0b19fb0590a92cce879a3b792797539c6941326",
+        "clinical": "901da5539fddf1630ff37b42a4f26089436376fed17fe8d55de43d2e7553610c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-little-finger",
+      "fmaId": "FMA66791",
+      "sections": {
+        "pathology": "24ca2167dbdbcbada68d966f794b04b01cab1973ee6fa45481b744b0c33f833f",
+        "clinical": "f36dc3b1b39db83aafe5f1437ede61fee3894882c035b3dd05284293b01befa9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-little-toe",
+      "fmaId": "FMA32641",
+      "sections": {
+        "pathology": "5accd864d365ba2bd5d6ba612025487795b63db65a70e708ee9e88169ec48b50",
+        "clinical": "7614e81db90c80972d170fca92fb8b888097497520f271142a047963d53a917d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-middle-finger",
+      "fmaId": "FMA71908",
+      "sections": {
+        "pathology": "cf6733947f06ec87cd6861ec9c83f6ba9f31f45917c1799260f77077dfbacb86",
+        "clinical": "f876bf29868e18ecea9199c275a9c9d7807b99189a8fdc7e89b0d1b639ae512f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-ring-finger",
+      "fmaId": "FMA71916",
+      "sections": {
+        "pathology": "d96ceaf8bdf53e9331beb8ec83209ab25d2acb94840d4778c3f3d58c6f8d6701",
+        "clinical": "99df89e79c9bb628c65aa0cf559626b897bf870c8e9cb578ac561c0865cc3766"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-thumb",
+      "fmaId": "FMA65470",
+      "sections": {
+        "pathology": "28b9cc5fad32489de3370ba27307366bbf63f0b88df3a4b9543cc7ae349abbc5",
+        "clinical": "ce90c4848d197d114b4185cdaa03f5e91f49e4d1840cf3156416547b8354aeab"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-second-toe",
+      "fmaId": "FMA32634",
+      "sections": {
+        "pathology": "b51f24d660ac5fcf15ec24688c17b9885cf457a19f81979114bf5b01d08b9e1a",
+        "clinical": "1b9f39f4898f63886259829dd252112e275b6245c46532feba84bb912b6025bb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-third-toe",
+      "fmaId": "FMA32636",
+      "sections": {
+        "pathology": "784a4a0175bd7556b342ff7ce3394a85e9b1c6e3f00fe9cc865dc6d13c4a454a",
+        "clinical": "779e9051d4591ec807358e6c104be1b51c1ed263482c0cbc81394df0954a0c7c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-fourth-toe",
+      "fmaId": "FMA32638",
+      "sections": {
+        "pathology": "0d455d3a3112de1fb5f6b3d3fe3a49791613d8d12d87fe1ad4604a8555ab3a3d",
+        "clinical": "9cac3116bc5686416a7d0a60e27737ce7a1a06eddc96d798beb1ac78dfb3ec3f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-index-finger",
+      "fmaId": "FMA24451",
+      "sections": {
+        "pathology": "59285e09b1d4882f4f33c67751ec96d4ba49ad363d490bde44e3eeb2c5c81057",
+        "clinical": "0f3adea164117448c2a1cfb5f6fa7a7fecf56079a9297fec43903f5c56e4bf33"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-little-finger",
+      "fmaId": "FMA24454",
+      "sections": {
+        "pathology": "dfcd329e3752519ca1dbcf848b37033bf647db31f6e99224bcf995a02357448c",
+        "clinical": "c14dc7080d163453ab533369da5e927e6cc9c4254d527966d9738b2c1287452e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-little-toe",
+      "fmaId": "FMA32640",
+      "sections": {
+        "pathology": "e41e4dd2ca122cd659f63b257a7bdff44acf63a729b22199bdcb23f13b0c2512",
+        "clinical": "84718b68b504398b666d037e01cda6c351b43b821d6af18da7a50a5843535039"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-middle-finger",
+      "fmaId": "FMA24452",
+      "sections": {
+        "pathology": "eea1e362ac0d8d7ed1fb486c28b07e3b91eda68ab53eab98d79ddd1ee356fdd4",
+        "clinical": "0f3c90edc0e87e90b73962166775c6d8baa60fe81edaeba9c32553c6a90b8d09"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-ring-finger",
+      "fmaId": "FMA24453",
+      "sections": {
+        "pathology": "36c64807daf03b4060fa99167a273297609ff0ee8162fd133358c785782ea9ca",
+        "clinical": "a6b3caf3c34c399e021db9c341b934aff535894944063b9b57c353494b2d9164"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-thumb",
+      "fmaId": "FMA24450",
+      "sections": {
+        "pathology": "54d1f3cac5c2ea8cbbc7c7a935abdae83fd683b583403b8fe0f37e445b38e8ab",
+        "clinical": "399e71dc92ac7ce136170816c1e65ced922da87a5aab2efc2649664283209381"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-second-toe",
+      "fmaId": "FMA32635",
+      "sections": {
+        "pathology": "e12e306b3407564ee9a27989b5fc0ac72cfb24e3010c3f492d3b201d2007a36b",
+        "clinical": "611e12d2e665394517099acd17f585ac258412fad23184bb9358e305687fc8fb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-big-toe",
+      "fmaId": "FMA43254",
+      "sections": {
+        "pathology": "0b0360e60173cbbd82f0e75da7ea0d8a48ee3bef20eb0a5e09e44f7b051ed96a",
+        "clinical": "6b09e15f1a946867bfdd8b4b605a96e02086b4865ddd21c9dac267f3586b6fa3"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-first-metacarpal-bone",
+      "fmaId": "FMA24464",
+      "sections": {
+        "pathology": "196f13d592771f4041d96ae9768284d753e3edd4d85e5d231164346aadf4b09a",
+        "clinical": "84dabcfec6141ca81fb8b3b308134883608cf108a2ed021a945ac9bdf21d566e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-first-metatarsal-bone",
+      "fmaId": "FMA24507",
+      "sections": {
+        "pathology": "4d6687221418110e3ccc8185e7696b35dd25cab9561913aaa1b9db3266d9d337",
+        "clinical": "bbfe9d6ebb28f934bddb83b7b04130a51e72942800161752b329def060550ab9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-second-metacarpal-bone",
+      "fmaId": "FMA24466",
+      "sections": {
+        "pathology": "165da9248f1cb0de50921ec419a2f0ab5fc37688b3470df2fffcf221c02fac47",
+        "clinical": "f343053d2ea4e7b13da61d9d29b117e87814ad9fc9a79401626442e7ca3d5cdb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-second-metatarsal-bone",
+      "fmaId": "FMA24509",
+      "sections": {
+        "pathology": "c13ab099f3039259fb6f6ec7114c014c5707239356fd4bf63e91787e97cdaca4",
+        "clinical": "62fe99a65624a8ed8080eeb85f75688a1c8765a4ac93689ce6b64a4b7f326388"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-third-metacarpal-bone",
+      "fmaId": "FMA24468",
+      "sections": {
+        "pathology": "73c65a87b43175a4360ef9040d30e30fffa72b65ab716d77bd15569920c1eaf4",
+        "clinical": "a3e87baac02257d1531ecf09fb292cc848c657a0f800299c1ed2da71b749bc67"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-third-metatarsal-bone",
+      "fmaId": "FMA24511",
+      "sections": {
+        "pathology": "aa3d9670e27ce24f15548164396be23bf45bbdd88928189406c3ee5709710571",
+        "clinical": "520dcea8b4d6466118af10fe97fee94424fbca700e6fb012e6c42d445b010efe"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-fourth-metacarpal-bone",
+      "fmaId": "FMA24470",
+      "sections": {
+        "pathology": "364ca9cc35400f2baec3a2b3b5b93040f48e085c0c784e6fcc2edc440919ef5c",
+        "clinical": "74a861f65f9ca3f594324fd556beeaee478ac786a405c513e94ff213975c7897"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-fourth-metatarsal-bone",
+      "fmaId": "FMA24513",
+      "sections": {
+        "pathology": "2f50e9b6d48c664bce41944c32c22c63b6fcbfae7aa0938b61c3d2d355ec9eaa",
+        "clinical": "469c21a3c3afecb2d25577a1185ff2f2320faa5743ba6bfba0e703a34bf4ed7d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-fifth-metacarpal-bone",
+      "fmaId": "FMA24472",
+      "sections": {
+        "pathology": "1caf30a59f7580985733d45050ea49f32efc0a2fc4d4d969c35b552d387df879",
+        "clinical": "ce93dd172936a0ca57bf08c3d1ab838fd5b6c4fadad119eed01f69f5d4a7ccfb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-fifth-metatarsal-bone",
+      "fmaId": "FMA24515",
+      "sections": {
+        "pathology": "cae03c27c03a43a6380b308d9499b03d8381bcd7d52d57223971e850587b6fc5",
+        "clinical": "8a920966721c172b819c653579e5b710753514fbd4ff0a021ccbe4985220bc87"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-calcaneus",
+      "fmaId": "FMA24497",
+      "sections": {
+        "pathology": "201bf5b60faded688b66319e71771747679d609e3ed9b95bb28efc993c7d735c",
+        "clinical": "301b556c6973bce007a3da772f04c1bc1abcad489b0df8a66ec23956d1db7aaa"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-capitate",
+      "fmaId": "FMA24446",
+      "sections": {
+        "pathology": "59a648896879e99c3d385a81f9eac27d4107d498f02927977684d92903e04d1c",
+        "clinical": "a1c8040baaf57ec22a4b98290e7ab8d9a17b414ebf032d8fda24e2faaa29844f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-cuboid-bone",
+      "fmaId": "FMA24528",
+      "sections": {
+        "pathology": "15e56d233956492f54b8d061a91c0c8b4f6384e5e81c179d09a140f60750bb63",
+        "clinical": "436bb9f3fed7cea003245d8a0f983533d2f6b1e4a0ccb0ee56cb5c53f989da43"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-hamate",
+      "fmaId": "FMA24448",
+      "sections": {
+        "pathology": "cad8b7128ab56ae0660b288d5d4f0ab325ac01b23095ab5e5630476e5705ec4e",
+        "clinical": "78a9caf77f3fe4a27b540e246e3313ef3a9678947b49ba10ba56e8d77573ee78"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-intermediate-cuneiform-bone",
+      "fmaId": "FMA24523",
+      "sections": {
+        "pathology": "67108fb9d74b9ba01e63795b7218c79b857c595d3aed393de640f20d0699aa0b",
+        "clinical": "294c43939f9f513c2c0119a50936140782f712262f1226ec7ca4aad642a9fee5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-lateral-cuneiform-bone",
+      "fmaId": "FMA24525",
+      "sections": {
+        "pathology": "c5eaece99a57340440f4ed0b8420ca79ff7501c0b4d78a37ba4b163765d7a45d",
+        "clinical": "ecc2943a00ddb9b6414e29f2ee7855e1b538beb44cbaa64c47df0433075e7cab"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-lunate",
+      "fmaId": "FMA24437",
+      "sections": {
+        "pathology": "608f19807ceb4c48f2cc2a0ab475836350ce575fbe7c3cfbdb69362489c08bcf",
+        "clinical": "cfbc219eab78c1659aab0f92ef116394a2393a44156075269837020de1cbc13b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-medial-cuneiform-bone",
+      "fmaId": "FMA24521",
+      "sections": {
+        "pathology": "14803f0233cbb95e3e6a43c2b1f4df052e2ca9872407310e475a71a371adbddd",
+        "clinical": "6b64d66acf048c37bdc11fad2c653baa52912bde8bbb41c533d97867cc777583"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-pisiform",
+      "fmaId": "FMA24441",
+      "sections": {
+        "pathology": "15d6cb2141485286df37bf93fddf42ed652f45b4efe3154eff51badb4cd6cb0e",
+        "clinical": "3e9e2b8c2c12dd5ecb0d10b44a1ec23156756a4c9c5d73e8de403b7b975bc4ee"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-scaphoid",
+      "fmaId": "FMA24435",
+      "sections": {
+        "pathology": "539184a3c2649187c5f7bc09d5a5279227e831313cfe24ea46b61838c0c370f9",
+        "clinical": "5a79cc648fe68470c3090c022655151ad9743bf064f3149a76c77d24a273a2d8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-talus",
+      "fmaId": "FMA24482",
+      "sections": {
+        "pathology": "914c862024134caa15c92442d682f156891733bb618509b06a1f954a9a2671d0",
+        "clinical": "b5d5af27b6bc9fcd998c500a2ba0156504706be0e1fd27c7aaeb361d073d07c6"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-trapezium",
+      "fmaId": "FMA24443",
+      "sections": {
+        "pathology": "b8efcdb158bc70166cbd89bb2f7a6ffb004f129565edabaa236a7c0a312e7280",
+        "clinical": "d5b0df03c0ed45becc0ef854dc9ba0f7d1c2ca932a813b97cd27bafbaa3f3eca"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-trapezoid",
+      "fmaId": "FMA23725",
+      "sections": {
+        "pathology": "a0c4a89d89c22a3d1c1175af2f9295ffd78f0f19a326f303385477401be9a61a",
+        "clinical": "df3df6e1286b2a4afa29a32ced036be2988f56e46c400dd1226ffd24f4399c1d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-triquetral",
+      "fmaId": "FMA24439",
+      "sections": {
+        "pathology": "2e74d2d95c2acac3057e7038e7c5a4a7bc38e73411fdf54051695a5d7e31c6a8",
+        "clinical": "69eecd478dac9779d281e8609adf82e67f09568ce6cbdec7bdc4da9f875a4216"
+      }
+    }
+  ]
+}

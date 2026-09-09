@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { authoringBeforeAcralBoneClinical } from './acral-bone-clinical-curriculum-transition.mjs';
 import { readFile, writeFile } from 'node:fs/promises';
 import {
   contentContext,
@@ -28,6 +29,7 @@ const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
 const previous = await authoringBeforeCranialBoneClinical(context);
+const milestone = await authoringBeforeAcralBoneClinical(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
@@ -167,9 +169,9 @@ for (const s of catalog.structures)
     if (!ids.includes(s.fmaId) || !tabs.includes(t)) {
       same(api.cranialBoneClinicalLesson(s, t), undefined);
       same(
-        api.bodyLesson(s, t),
+        milestone.bodyLesson(s, t),
         previous.bodyLesson(s, t),
-        'Every unrelated section preserved',
+        'Every unrelated section preserved at the historical cranial-bone milestone',
       );
     }
   }
@@ -301,8 +303,9 @@ const counts = (t) =>
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
-          .length,
+        catalog.structures.filter(
+          (s) => milestone.bodyLesson(s, t).readiness === r,
+        ).length,
       ],
     ),
   );
@@ -356,7 +359,9 @@ const report = {
   clinicalApproval: false,
   scanContentAdded: false,
   browserTesting: false,
-  copyAndRecipeHash: curriculumHash(copy(api)),
+  countsScope:
+    'Historical cranial-bone milestone; current direct/export assertions remain active',
+  copyAndRecipeHash: curriculumHash(copy(milestone)),
   limitations:
     'Original short skull/facial/hyoid clinical drafts; not validated fractures, cranial-nerve lesions, airway or visual function, patient scans, procedural guidance or clinical approval.',
 };
