@@ -54,7 +54,7 @@ export type VentricularState = VentricularSnapshot & {
 export type VentricularAction =
   | { type: 'select'; id: string }
   | { type: 'visibility'; id: string; visible: boolean }
-  | { type: 'preset'; value: 'all' | 'lateral' | 'midline' }
+  | { type: 'preset'; value: string }
   | { type: 'undo' };
 export function initialVentricles(layers: BodyStructure[]): VentricularState {
   return { selectedId: layers[0]?.id ?? null, hidden: [], history: [] };
@@ -63,6 +63,11 @@ export function reduceVentricles(
   layers: BodyStructure[],
   state: VentricularState,
   action: VentricularAction,
+  presets: Record<string, string[]> = {
+    all: layers.map((s) => s.id),
+    lateral: layers.filter((s) => s.laterality !== 'midline').map((s) => s.id),
+    midline: layers.filter((s) => s.laterality === 'midline').map((s) => s.id),
+  },
 ): VentricularState {
   if (action.type === 'undo') {
     const previous = state.history.at(-1);
@@ -72,15 +77,9 @@ export function reduceVentricles(
   }
   let { selectedId, hidden } = state;
   if (action.type === 'preset') {
-    if (!['all', 'lateral', 'midline'].includes(action.value)) return state;
+    if (!Object.hasOwn(presets, action.value)) return state;
     hidden = layers
-      .filter((s) =>
-        action.value === 'lateral'
-          ? s.laterality === 'midline'
-          : action.value === 'midline'
-            ? s.laterality !== 'midline'
-            : false,
-      )
+      .filter((s) => !presets[action.value].includes(s.id))
       .map((s) => s.id);
     selectedId = layers.find((s) => !hidden.includes(s.id))?.id ?? null;
   } else {

@@ -52,6 +52,9 @@ const eyeLayers = await json(
 const ventricular = await json(
   'public/models/bodyparts3d/ventricles/catalog.json',
 );
+const brainstem = await json(
+  'public/models/bodyparts3d/brainstem/catalog.json',
+);
 const learning = parseLearningDocument(
   await json('content/learning-resources.v1.json'),
 );
@@ -153,6 +156,7 @@ for (const path of [
   'public/models/bodyparts3d/eye-layers/catalog.json',
   'public/models/bodyparts3d/eye-layers/display-correction.json',
   'public/models/bodyparts3d/ventricles/catalog.json',
+  'public/models/bodyparts3d/brainstem/catalog.json',
   'package-lock.json',
   'content/schema/anatomy-structure.schema.json',
   'content/review-revisions.json',
@@ -226,6 +230,8 @@ const report = {
       eyeComponents: eyeLayers.structures.length,
       ventricularSpaces: ventricular.ventricularIds.length,
       ventricularContext: ventricular.contextIds.length,
+      brainstemCompounds: brainstem.selectableIds.length,
+      brainstemContext: brainstem.contextIds.length,
       additionalUniqueWholeBodyAnatomy: 0,
       limitation:
         'Nested selections subdivide existing parent representations; context reuses existing structures. Their short drafts are separate from the eight-topic body inventory. Original catalogue counts exclude these alternate display assets.',

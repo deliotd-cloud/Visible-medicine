@@ -301,7 +301,7 @@ check(source.includes('!exam && ventriclesFor(selected).length > 0'));
 const ui = await readFile('app/ventricles.tsx', 'utf8');
 check(ui.includes('!context || explode > 0'));
 check(ui.includes('disabled={explode > 0}'));
-check(ui.includes('landmarks={ventricleCatalog.ventricularIds}'));
+check(ui.includes('landmarks={selectableIds}'));
 const compiled = await build({
   entryPoints: ['app/ventricles.tsx'],
   bundle: true,

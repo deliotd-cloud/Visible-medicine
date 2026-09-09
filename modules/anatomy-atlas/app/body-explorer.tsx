@@ -1764,7 +1764,7 @@ export default function BodyExplorer({
                             setVentricleParent(selected);
                           }}
                         >
-                          <Layers3 /> Explore ventricles
+                          <Layers3 /> Dissect brain
                         </Button>
                       </div>
                     )}

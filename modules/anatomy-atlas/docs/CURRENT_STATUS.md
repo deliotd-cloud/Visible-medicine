@@ -6,7 +6,7 @@ Generated from the actual catalogue, teaching resolver, dissection profiles and 
 
 - 1022 body representations, 86 body GLBs, 11 regions plus whole body.
 - Dedicated shoulder: 9 representations / 11 source parts, overlapping the body catalogue.
-- Nested dissections: 15 eye components and 4 ventricular spaces, with 5 reused deep-brain context structures. These subdivide existing selections, not additional unique whole-body anatomy. Their brief drafts are separate from the eight-topic inventory below. 90 GLBs are retained overall, including archived originals and alternate display assets.
+- Nested dissections: 15 eye components, 4 ventricular spaces and 4 brainstem/cerebellar compounds. Ventricular context reuses 5 deep-brain structures; brainstem context reuses 1 ventricular space. These subdivide existing selections, not additional unique whole-body anatomy. Their brief drafts are separate from the eight-topic inventory below. 91 GLBs are retained overall, including archived originals and alternate display assets.
 - 141 dissection stages and 123 focuses. These operate on supplied surfaces; they do not establish complete anatomy.
 - Find/name identification practice; 80 draft reasoning concepts bound to 160 representations in head-neck, foot, thigh, leg, pelvis, shoulder-arm, hand, forearm. One concept per session, without contralateral repetition. See [practice scope and tests](REASONING_PRACTICE.md).
 - [Learning-resource contract](LEARNING_RESOURCE_CONTRACT.md): version 1, ct/mri/xray/ultrasound/lecture/quiz anchors; 0 configured resources / 0 correspondences. Read-only linking infrastructure, not a connected external viewer or publication approval.

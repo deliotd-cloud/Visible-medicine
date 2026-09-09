@@ -345,7 +345,7 @@ for (const region of ['head-neck', 'whole-body'])
     const html = renderToStaticMarkup(
       React.createElement(vmModule.exports.default, { initialRegion: region }),
     );
-    same(html.includes('Explore ventricles'), fma === 'FMA50801');
+    same(html.includes('Dissect brain'), fma === 'FMA50801');
     same(html.includes('Explore eye layers'), fma === 'FMA12515');
     nestedLauncherMarkupCases++;
   }

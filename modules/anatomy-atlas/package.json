@@ -6,6 +6,8 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "brainstem:export": "node scripts/export-brainstem.mjs",
+    "brainstem:test": "node scripts/validate-brainstem.mjs",
     "ventricles:export": "node scripts/export-ventricles.mjs",
     "ventricles:test": "node scripts/validate-ventricles.mjs",
     "eye-layers:export": "node scripts/export-eye-layers.mjs",
