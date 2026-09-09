@@ -1,5 +1,7 @@
 # Third-party notices
 
+The hand reasoning extension adds ten short original draft concepts tied to existing muscle/head/group selections. Factual citations point to TTUHSC and Loyola University anatomy references and Skoff's published report on abductor pollicis brevis. No university diagram, table, article prose, patient scan or publisher question bank is imported or relicensed. Public access is not a commercial asset licence. Existing BodyParts3D attribution and dependency obligations remain; no application dependency, font, texture or mesh is added.
+
 The forearm reasoning extension adds six short original questions/rationales, checked against the TTUHSC university anatomy reference on 2026-09-09. Its copyrighted table, publisher text and diagrams are not imported. The source's availability is not a licence to redistribute it; only factual citations and original teaching are included. Existing anatomy-model attribution remains required. No application dependency, font, texture or mesh is added.
 
 The learning-resource contract introduces original TypeScript parsing/indexing code and synthetic transport-only test fixtures. It imports no image, scan, model, presentation, audio or external dataset and adds no dependency or paid service. Resource provenance fields and host-policy gates do not grant commercial rights. Existing code/content and BodyParts3D/dependency notices remain unchanged; the other Visible Medicine projects' assets require their own clearance before linking or distribution.

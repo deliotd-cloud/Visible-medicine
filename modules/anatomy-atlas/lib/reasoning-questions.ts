@@ -1,8 +1,9 @@
 import type { BodyStructure } from '../app/body-types';
 import { forearmReasoningConcepts } from './forearm-reasoning';
+import { handReasoningConcepts } from './hand-reasoning';
 export interface ReasoningConcept {
   key: string;
-  region: 'shoulder-arm' | 'forearm';
+  region: 'shoulder-arm' | 'forearm' | 'hand';
   bindings: readonly { fma: string; side: 'right' | 'left'; file: string }[];
   prompt: string;
   explanation: string;
@@ -305,6 +306,7 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
     revision: 1,
   },
   ...forearmReasoningConcepts,
+  ...handReasoningConcepts,
 ];
 export function reasoningConceptFor(s: BodyStructure) {
   if (

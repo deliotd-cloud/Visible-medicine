@@ -16,7 +16,7 @@
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
     "resolvedContentAndRecipeData": "fd50acb85998726b79cf3ecb646acf9897117b50f6768e5ea65bd6c89dfb629c",
     "explicitTopicReadiness": "51f5f10de5a09021a0445fc3262b6996db78f8282dcc80907518e7716cf6929a",
-    "reasoningQuestionData": "f4003687431080f6978cfd5fec6400cb0ee309d0a2c62119251558e3d647089e"
+    "reasoningQuestionData": "4d38a5948cf93eb4e58d5666805d02b00f0d4d844fb5528e5d7208b9d93dc60b"
   },
   "anatomy": {
     "bodyRepresentations": 1022,
@@ -103,10 +103,11 @@
       "name"
     ],
     "reasoning": {
-      "concepts": 16,
-      "exactRepresentations": 32,
+      "concepts": 26,
+      "exactRepresentations": 52,
       "regions": [
         "shoulder-arm",
+        "hand",
         "forearm"
       ],
       "readiness": "draft",
