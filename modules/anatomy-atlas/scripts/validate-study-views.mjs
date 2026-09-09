@@ -298,10 +298,25 @@ for (const [region, profile] of Object.entries(a.dissectionProfiles)) {
         resolved.visible.map((s) => s.id),
         'Explicit visibility survives stage recipe round trip',
       );
+      const undone = a.dissectionReducer(restored, { type: 'undo' });
+      const {
+        history: _history,
+        future: _future,
+        ...loadedVisibility
+      } = restored;
       same(
-        a.dissectionReducer(restored, { type: 'undo' }),
-        a.initialDissection,
-        'Undo restored visibility snapshot',
+        undone,
+        { ...a.initialDissection, future: [loadedVisibility] },
+        'Undo restores the original visibility and keeps the loaded view available for Redo',
+      );
+      same(
+        a.dissectionReducer(undone, { type: 'redo' }),
+        restored,
+        'Redo reapplies the exact loaded visibility and history',
+      );
+      check(
+        !Object.hasOwn(parsed, 'history') && !Object.hasOwn(parsed, 'future'),
+        'Bookmarks contain current visibility, never session history',
       );
       check(
         !a.compatibleStudyView(parsed, { ...scope, revision: 'changed' }),

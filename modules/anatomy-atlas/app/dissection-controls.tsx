@@ -1,6 +1,13 @@
 'use client';
 import { useMemo, useRef, useState } from 'react';
-import { ArrowLeft, ArrowRight, RotateCcw, Undo2, Layers3 } from 'lucide-react';
+import {
+  ArrowLeft,
+  ArrowRight,
+  RotateCcw,
+  Undo2,
+  Redo2,
+  Layers3,
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
 import {
@@ -34,6 +41,7 @@ export function DissectionControls({
   onStage,
   onFocus,
   onUndo,
+  onRedo,
   onReset,
   ghost,
   onGhost,
@@ -49,6 +57,7 @@ export function DissectionControls({
   onStage: (id: string) => void;
   onFocus: (id: string) => void;
   onUndo: () => void;
+  onRedo: () => void;
   onReset: () => void;
   ghost: boolean;
   onGhost: (value: boolean) => void;
@@ -108,9 +117,21 @@ export function DissectionControls({
           onClick={onUndo}
           disabled={disabled || !state.history.length}
           aria-label="Undo last dissection change"
+          title="Undo a dissection step or removal; camera and display settings are separate"
         >
           <Undo2 />
           Undo
+        </Button>
+        <Button
+          size="sm"
+          variant="ghost"
+          onClick={onRedo}
+          disabled={disabled || !state.future.length}
+          aria-label="Redo last undone dissection change"
+          title="Reapply the last undone dissection step or removal"
+        >
+          <Redo2 />
+          Redo
         </Button>
         <Button size="sm" variant="ghost" onClick={onReset} disabled={disabled}>
           <RotateCcw />

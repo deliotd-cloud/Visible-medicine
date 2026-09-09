@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Dissect → Undo / Redo** now supports [replaying regional dissection changes](docs/DISSECTION_HISTORY.md). Forty meaningful layer, focus and removal changes are kept in memory; repeat clicks do not consume history. The compact toolbar, existing saved views and practice restrictions are preserved.
+
 **Knee & leg → femur, tibia or patella → Imaging** now includes [knee-specific CT/MRI comparison guides](docs/KNEE_IMAGING.md), with ultrasound landmarks for the patella. Fourteen new sided draft sections use the existing panels. Whole bones remain whole; no missing ligaments, menisci, cartilage or patient scans are invented.
 
 **Search atlas** now accepts [common names and anatomical abbreviations](docs/SEARCH_VOCABULARY.md), including Achilles, collarbone, peroneus, quadratus plantae and CN IV. Existing source labels and left/right navigation stay intact; no extra toolbar or external search service is added.

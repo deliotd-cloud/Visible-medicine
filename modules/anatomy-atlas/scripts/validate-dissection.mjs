@@ -207,7 +207,7 @@ assert(
 );
 let stress = initialDissection;
 for (let i = 0; i < 80; i++)
-  stress = dissectionReducer(stress, { type: 'stage', id: 'bones' });
+  stress = dissectionReducer(stress, { type: 'stage', id: i % 2 ? 'assembled' : 'bones' });
 assert.equal(stress.history.length, 40);
 const manifest = {
   version: 1,

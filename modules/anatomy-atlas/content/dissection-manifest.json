@@ -13985,7 +13985,9 @@
       ],
       "references": [
         "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
-        "https://nba.uth.tmc.edu/neuroanatomy/L10/Lab10p18_index.html"
+        "https://nba.uth.tmc.edu/neuroanatomy/L10/Lab10p18_index.html",
+        "https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/nerve-tables/nerves-of-the-head-and-neck/",
+        "https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/so.htm"
       ],
       "stages": [
         {
@@ -16039,6 +16041,128 @@
             "vm:anatomy:body:head-neck:right:muscle:right-superior-pharyngeal-constrictor",
             "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage"
           ]
+        },
+        {
+          "id": "orbital-motor-iii-superior",
+          "title": "CN III superior division & muscles",
+          "description": "Compare the supplied superior oculomotor divisions with superior rectus and levator palpebrae. One muscle moves the globe; the other raises the upper lid. The grouped eyeballs provide context, not separate eyelid layers.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA52574",
+                "FMA52575"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA49044",
+                "FMA49045",
+                "FMA49048",
+                "FMA49049",
+                "FMA12514",
+                "FMA12515"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "superior branch of .*oculomotor",
+            "superior rectus",
+            "levator palpebrae"
+          ],
+          "inspect": "Choose one side for a closer comparison. Select a nerve or muscle, then rotate, isolate or set it aside; Undo restores removal. These are draft source relationships: terminal branches, attachment endpoints and nerve conduction are not validated or simulated.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:muscle:left-levator-palpebrae-superioris",
+            "vm:anatomy:body:head-neck:left:muscle:left-superior-rectus",
+            "vm:anatomy:body:head-neck:right:muscle:right-levator-palpebrae-superioris",
+            "vm:anatomy:body:head-neck:right:muscle:right-superior-rectus",
+            "vm:anatomy:body:head-neck:left:nerve:superior-branch-of-left-oculomotor-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:superior-branch-of-right-oculomotor-nerve",
+            "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+            "vm:anatomy:body:head-neck:left:organ:left-eyeball"
+          ]
+        },
+        {
+          "id": "orbital-motor-iii-inferior",
+          "title": "CN III inferior division & muscles",
+          "description": "Compare the supplied inferior oculomotor divisions with medial rectus, inferior rectus and inferior oblique. This motor-muscle view does not include or reconstruct the division’s parasympathetic route through the ciliary ganglion.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA52576",
+                "FMA52577"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA49056",
+                "FMA49057",
+                "FMA49046",
+                "FMA49047",
+                "FMA49050",
+                "FMA49051",
+                "FMA12514",
+                "FMA12515"
+              ]
+            }
+          ],
+          "view": "inferior",
+          "landmarks": [
+            "inferior branch of .*oculomotor",
+            "medial rectus",
+            "inferior oblique"
+          ],
+          "inspect": "Choose one side for a closer comparison. Select a nerve or muscle, then rotate, isolate or set it aside; Undo restores removal. These are draft source relationships: terminal branches, attachment endpoints and nerve conduction are not validated or simulated.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:muscle:left-inferior-oblique",
+            "vm:anatomy:body:head-neck:left:muscle:left-inferior-rectus",
+            "vm:anatomy:body:head-neck:left:muscle:left-medial-rectus",
+            "vm:anatomy:body:head-neck:right:muscle:right-inferior-oblique",
+            "vm:anatomy:body:head-neck:right:muscle:right-inferior-rectus",
+            "vm:anatomy:body:head-neck:right:muscle:right-medial-rectus",
+            "vm:anatomy:body:head-neck:left:nerve:inferior-branch-of-left-oculomotor-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:inferior-branch-of-right-oculomotor-nerve",
+            "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+            "vm:anatomy:body:head-neck:left:organ:left-eyeball"
+          ]
+        },
+        {
+          "id": "orbital-motor-iv",
+          "title": "CN IV & superior oblique",
+          "description": "Compare the supplied trochlear nerves with superior oblique and the grouped eyeballs. Superior oblique depresses an adducted eye; the atlas does not animate gaze or reconstruct the complete intracranial nerve course.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA50881",
+                "FMA50882"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA49052",
+                "FMA49053",
+                "FMA12514",
+                "FMA12515"
+              ]
+            }
+          ],
+          "view": "superior",
+          "landmarks": [
+            "^(right|left) trochlear nerve$",
+            "superior oblique"
+          ],
+          "inspect": "Choose one side for a closer comparison. Select a nerve or muscle, then rotate, isolate or set it aside; Undo restores removal. These are draft source relationships: terminal branches, attachment endpoints and nerve conduction are not validated or simulated.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:muscle:left-superior-oblique",
+            "vm:anatomy:body:head-neck:right:muscle:right-superior-oblique",
+            "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+            "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+            "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
+            "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve"
+          ]
         }
       ],
       "focuses": [
@@ -17287,6 +17411,128 @@
             "vm:anatomy:body:head-neck:right:muscle:right-stylopharyngeus",
             "vm:anatomy:body:head-neck:right:muscle:right-superior-pharyngeal-constrictor",
             "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage"
+          ]
+        },
+        {
+          "id": "orbital-motor-iii-superior",
+          "title": "CN III superior division & muscles",
+          "rule": {
+            "fmaIds": [
+              "FMA52574",
+              "FMA52575"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA49044",
+                "FMA49045",
+                "FMA49048",
+                "FMA49049",
+                "FMA12514",
+                "FMA12515"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the supplied superior oculomotor divisions with superior rectus and levator palpebrae. One muscle moves the globe; the other raises the upper lid. The grouped eyeballs provide context, not separate eyelid layers.",
+          "inspect": "Choose one side for a closer comparison. Select a nerve or muscle, then rotate, isolate or set it aside; Undo restores removal. These are draft source relationships: terminal branches, attachment endpoints and nerve conduction are not validated or simulated.",
+          "landmarks": [
+            "superior branch of .*oculomotor",
+            "superior rectus",
+            "levator palpebrae"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:muscle:left-levator-palpebrae-superioris",
+            "vm:anatomy:body:head-neck:left:muscle:left-superior-rectus",
+            "vm:anatomy:body:head-neck:right:muscle:right-levator-palpebrae-superioris",
+            "vm:anatomy:body:head-neck:right:muscle:right-superior-rectus",
+            "vm:anatomy:body:head-neck:left:nerve:superior-branch-of-left-oculomotor-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:superior-branch-of-right-oculomotor-nerve",
+            "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+            "vm:anatomy:body:head-neck:left:organ:left-eyeball"
+          ]
+        },
+        {
+          "id": "orbital-motor-iii-inferior",
+          "title": "CN III inferior division & muscles",
+          "rule": {
+            "fmaIds": [
+              "FMA52576",
+              "FMA52577"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA49056",
+                "FMA49057",
+                "FMA49046",
+                "FMA49047",
+                "FMA49050",
+                "FMA49051",
+                "FMA12514",
+                "FMA12515"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "inferior",
+          "description": "Compare the supplied inferior oculomotor divisions with medial rectus, inferior rectus and inferior oblique. This motor-muscle view does not include or reconstruct the division’s parasympathetic route through the ciliary ganglion.",
+          "inspect": "Choose one side for a closer comparison. Select a nerve or muscle, then rotate, isolate or set it aside; Undo restores removal. These are draft source relationships: terminal branches, attachment endpoints and nerve conduction are not validated or simulated.",
+          "landmarks": [
+            "inferior branch of .*oculomotor",
+            "medial rectus",
+            "inferior oblique"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:muscle:left-inferior-oblique",
+            "vm:anatomy:body:head-neck:left:muscle:left-inferior-rectus",
+            "vm:anatomy:body:head-neck:left:muscle:left-medial-rectus",
+            "vm:anatomy:body:head-neck:right:muscle:right-inferior-oblique",
+            "vm:anatomy:body:head-neck:right:muscle:right-inferior-rectus",
+            "vm:anatomy:body:head-neck:right:muscle:right-medial-rectus",
+            "vm:anatomy:body:head-neck:left:nerve:inferior-branch-of-left-oculomotor-nerve",
+            "vm:anatomy:body:head-neck:right:nerve:inferior-branch-of-right-oculomotor-nerve",
+            "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+            "vm:anatomy:body:head-neck:left:organ:left-eyeball"
+          ]
+        },
+        {
+          "id": "orbital-motor-iv",
+          "title": "CN IV & superior oblique",
+          "rule": {
+            "fmaIds": [
+              "FMA50881",
+              "FMA50882"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA49052",
+                "FMA49053",
+                "FMA12514",
+                "FMA12515"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "superior",
+          "description": "Compare the supplied trochlear nerves with superior oblique and the grouped eyeballs. Superior oblique depresses an adducted eye; the atlas does not animate gaze or reconstruct the complete intracranial nerve course.",
+          "inspect": "Choose one side for a closer comparison. Select a nerve or muscle, then rotate, isolate or set it aside; Undo restores removal. These are draft source relationships: terminal branches, attachment endpoints and nerve conduction are not validated or simulated.",
+          "landmarks": [
+            "^(right|left) trochlear nerve$",
+            "superior oblique"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:left:muscle:left-superior-oblique",
+            "vm:anatomy:body:head-neck:right:muscle:right-superior-oblique",
+            "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+            "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+            "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
+            "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve"
           ]
         }
       ]

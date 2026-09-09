@@ -2,10 +2,10 @@
   "passed": true,
   "regions": 11,
   "wholeBody": true,
-  "stages": 138,
-  "focusedViews": 120,
-  "checks": 4086,
-  "cameraChecks": 9936,
+  "stages": 141,
+  "focusedViews": 123,
+  "checks": 4176,
+  "cameraChecks": 10152,
   "structures": 1022,
   "clinicalValidation": false,
   "browserInteractionTesting": false,
@@ -905,6 +905,27 @@
       "kind": "window",
       "visible": 12,
       "removed": 263
+    },
+    {
+      "region": "head-neck",
+      "stage": "orbital-motor-iii-superior",
+      "kind": "window",
+      "visible": 8,
+      "removed": 267
+    },
+    {
+      "region": "head-neck",
+      "stage": "orbital-motor-iii-inferior",
+      "kind": "window",
+      "visible": 10,
+      "removed": 265
+    },
+    {
+      "region": "head-neck",
+      "stage": "orbital-motor-iv",
+      "kind": "window",
+      "visible": 6,
+      "removed": 269
     },
     {
       "region": "spine",

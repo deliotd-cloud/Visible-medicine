@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": 79713,
+  "scopes": 36,
+  "replayedTransitions": 1746,
+  "historyLimit": 40,
+  "handlerCases": 6,
+  "markupCases": 6,
+  "handlerHashes": {
+    "undoDissection": "c0fdb9b5834ce86baf29f0a3f23711f2dee0126bdb139c961944f5cbad85441c",
+    "redoDissection": "ad3ec5d87baeb4b2b0ecb7bb62575cdae423454acb62c2bb3a2f8e51ae0b913f"
+  },
+  "noOpPreservesRedo": true,
+  "newActionClearsRedo": true,
+  "snapshotsExcludeHistory": true,
+  "examAndEmptyHistoryGuards": true,
+  "sourceGeometryChanged": false,
+  "clinicalValidation": false,
+  "browserInteractionTesting": false,
+  "limitations": "In-memory dissection steps and manual visibility only; not camera, source meshes, system switches, saved-bookmark history, clinical correctness or browser/device acceptance."
+}

@@ -94,8 +94,14 @@ same(
       '3b084e597bd7ae9535fb16419967177bf35d651d4f85c0d474d3cb37746f532e',
     nextQuestion:
       '42d469196801b688c7c7ad3582a9f1dda9224b07c7a3c4cebea791b4110a2229',
+    // Bounded dissection history: actual Undo/Redo handlers are exercised by
+    // dissection-history:test, including empty-stack and practice guards.
+    undoDissection:
+      'c0fdb9b5834ce86baf29f0a3f23711f2dee0126bdb139c961944f5cbad85441c',
+    redoDissection:
+      'ad3ec5d87baeb4b2b0ecb7bb62575cdae423454acb62c2bb3a2f8e51ae0b913f',
   },
-  'Named handlers preserved except explicit explosion, selection-recovery and reasoning migrations',
+  'Named handlers preserved except explicit explosion, selection-recovery, reasoning and dissection-history migrations',
 );
 // Explicit navigation migration: remove the redundant Quiz-start button,
 // region-only combobox and six-direction button callback. Their replacements
@@ -127,6 +133,7 @@ migratedCallbacks.push(
   'onFocus/60791bef659a508c1030f248019b00646b1ab73d283d43374aa87641fdfce003',
   'onSelect/610c7aa707c1e7792cda3854a7ec79d0a63ef3319881a1625f5f6eae7a2cf70d',
   'onWindow/5ebc5e51cd113d7d309d4f55e844e0c769431ad7b05ed51a6496b64fc3e157c6',
+  'onRedo/8676ea82820286a822f522e5b4085358175c84ed30c8a0e96be77ae3e45036c2',
 );
 same(
   bindings(source).callbacks,
@@ -546,7 +553,12 @@ const result = {
   markupCases,
   panelCases,
   stylesheetViewportCases: dimensions.length,
-  preservedNamedHandlers: Object.keys(baseline.functions).length - 4,
+  preservedNamedHandlers: Object.entries(baseline.functions).filter(
+    ([name, fingerprint]) => bindings(source).functions[name] === fingerprint,
+  ).length,
+  explicitDissectionHistoryHandlerMigration: 1,
+  addedDissectionRedoHandler: 1,
+  addedDissectionRedoCallback: 1,
   explicitReasoningHandlerMigrations: 3,
   explicitReasoningSelectorMigration: 1,
   explicitExplosionHandlerMigration: 1,

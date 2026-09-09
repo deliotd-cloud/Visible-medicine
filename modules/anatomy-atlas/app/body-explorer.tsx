@@ -553,7 +553,16 @@ export default function BodyExplorer({
     setReset((n) => n + 1);
   }
   function undoDissection() {
+    if (exam || !dissection.history.length) return;
     dispatch({ type: 'undo' });
+    setSelectedId(null);
+    setFocus(false);
+    setIsolated(false);
+    setZoom(1);
+  }
+  function redoDissection() {
+    if (exam || !dissection.future.length) return;
+    dispatch({ type: 'redo' });
     setSelectedId(null);
     setFocus(false);
     setIsolated(false);
@@ -911,6 +920,7 @@ export default function BodyExplorer({
             onStage={changeStage}
             onFocus={changeFocus}
             onUndo={undoDissection}
+            onRedo={redoDissection}
             onReset={() => changeStage('assembled')}
             ghost={ghostRemoved}
             onGhost={setGhostRemoved}

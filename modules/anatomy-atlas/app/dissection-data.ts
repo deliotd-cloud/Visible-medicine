@@ -1227,6 +1227,7 @@ export type DissectionSnapshot = {
 };
 export type DissectionState = DissectionSnapshot & {
   history: DissectionSnapshot[];
+  future: DissectionSnapshot[];
 };
 export const initialDissection: DissectionState = {
   stageId: 'assembled',
@@ -1234,6 +1235,7 @@ export const initialDissection: DissectionState = {
   removed: [],
   restored: [],
   history: [],
+  future: [],
 };
 export type DissectionAction =
   | { type: 'load-view'; hiddenIds: string[] }
@@ -1241,15 +1243,51 @@ export type DissectionAction =
   | { type: 'focus'; id: string }
   | { type: 'remove' | 'restore'; id: string }
   | { type: 'restore-many'; ids: string[] }
-  | { type: 'undo' | 'reset' | 'free' };
+  | { type: 'undo' | 'redo' | 'reset' | 'free' };
+const dissectionHistoryLimit = 40;
+function dissectionSnapshot(state: DissectionSnapshot): DissectionSnapshot {
+  return {
+    stageId: state.stageId,
+    focusId: state.focusId,
+    removed: [...state.removed],
+    restored: [...state.restored],
+  };
+}
+function sameDissectionSnapshot(a: DissectionSnapshot, b: DissectionSnapshot) {
+  const sameIds = (a: string[], b: string[]) =>
+    a.length === b.length && a.every((id) => b.includes(id));
+  return (
+    a.stageId === b.stageId &&
+    a.focusId === b.focusId &&
+    sameIds(a.removed, b.removed) &&
+    sameIds(a.restored, b.restored)
+  );
+}
 export function dissectionReducer(
   state: DissectionState,
   action: DissectionAction,
 ): DissectionState {
-  const { history, ...snapshot } = state;
+  const { history, future } = state;
+  const snapshot = dissectionSnapshot(state);
   if (action.type === 'undo') {
     const prior = history.at(-1);
-    return prior ? { ...prior, history: history.slice(0, -1) } : state;
+    return prior
+      ? {
+          ...dissectionSnapshot(prior),
+          history: history.slice(0, -1),
+          future: [...future, snapshot].slice(-dissectionHistoryLimit),
+        }
+      : state;
+  }
+  if (action.type === 'redo') {
+    const next = future.at(-1);
+    return next
+      ? {
+          ...dissectionSnapshot(next),
+          history: [...history, snapshot].slice(-dissectionHistoryLimit),
+          future: future.slice(0, -1),
+        }
+      : state;
   }
   let next: DissectionSnapshot = { ...snapshot };
   if (action.type === 'load-view')
@@ -1259,7 +1297,7 @@ export function dissectionReducer(
       removed: [...new Set(action.hiddenIds)],
       restored: [],
     };
-  if (action.type === 'reset') next = { ...initialDissection };
+  if (action.type === 'reset') next = dissectionSnapshot(initialDissection);
   if (action.type === 'free')
     next = { stageId: 'free', focusId: null, removed: [], restored: [] };
   if (action.type === 'stage')
@@ -1287,7 +1325,13 @@ export function dissectionReducer(
       restored: [...new Set([...state.restored, ...ids])],
     };
   }
-  return { ...next, history: [...history, snapshot].slice(-40) };
+  // Repeated clicks must not consume Undo or erase a possible Redo.
+  if (sameDissectionSnapshot(next, snapshot)) return state;
+  return {
+    ...next,
+    history: [...history, snapshot].slice(-dissectionHistoryLimit),
+    future: [],
+  };
 }
 export function resolveDissection(
   structures: BodyStructure[],
