@@ -85,8 +85,16 @@ same(
     // Selection recovery is independently executed by selection-visibility:test.
     revealSelection:
       '1cea695fbb227711161f4179f516ad6de36aa6c937b5605b96d819dc585e82eb',
+    // Reasoning mode is an explicit, bounded migration; actual handlers are
+    // executed by reasoning-practice:test. The original baseline stays pinned.
+    onSceneSelect:
+      '8c46bc0dafa78adb611e6377e9e1615b11f03d526a1037c254f1738a808598f0',
+    startExam:
+      '3b084e597bd7ae9535fb16419967177bf35d651d4f85c0d474d3cb37746f532e',
+    nextQuestion:
+      '42d469196801b688c7c7ad3582a9f1dda9224b07c7a3c4cebea791b4110a2229',
   },
-  'Named handlers preserved except the explicit explosion-style migration',
+  'Named handlers preserved except explicit explosion, selection-recovery and reasoning migrations',
 );
 // Explicit navigation migration: remove the redundant Quiz-start button,
 // region-only combobox and six-direction button callback. Their replacements
@@ -101,12 +109,15 @@ for (const retired of [
   'onClick/979eebf6f969f80fa3c18ba941b24c6626b3dcb4ff4efe4ebd3643c9e8e4f750',
   // The whole-view Reveal uncut reset is replaced by targeted selected-surface recovery.
   'onClick/152e04a7bcd7e6a5521a9d1296b5caeae71d73e8ec97233701f2801d3647053f',
+  // Reasoning adds one recognized value to the existing practice-mode selector.
+  'onValueChange/e02d02d2ec0fa4547a6be5be6d341521a86b814c81738e73e25cd995da13f2ba',
 ]) {
   const index = migratedCallbacks.indexOf(retired);
   check(index >= 0);
   migratedCallbacks.splice(index, 1);
 }
 migratedCallbacks.push(
+  'onValueChange/0a47af2ff2ca38eeefe73e3a4bb54336655a2c09f40dda30b663ca1dc712832a',
   'onRecover/41f5b811c870740268f0a368584b495627dec0abce7038ad9a74a8857774fa90',
   'onReapply/8549d8cba04d43b531b1379e407534a86e1eb98200d169963ce48e290bde225d',
   'onClick/41f5b811c870740268f0a368584b495627dec0abce7038ad9a74a8857774fa90',
@@ -534,9 +545,11 @@ const result = {
   markupCases,
   panelCases,
   stylesheetViewportCases: dimensions.length,
-  preservedNamedHandlers: Object.keys(baseline.functions).length - 1,
+  preservedNamedHandlers: Object.keys(baseline.functions).length - 4,
+  explicitReasoningHandlerMigrations: 3,
+  explicitReasoningSelectorMigration: 1,
   explicitExplosionHandlerMigration: 1,
-  preservedControlCallbacks: baseline.callbacks.length - 6,
+  preservedControlCallbacks: baseline.callbacks.length - 7,
   explicitNavigationReplacementCallbacks: 4,
   explicitExplosionReplacementCallbacks: 1,
   explicitSelectionRecoveryHandler: 1,

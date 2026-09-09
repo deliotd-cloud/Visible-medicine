@@ -19,6 +19,7 @@
     "axial:test": "node scripts/validate-axial-anatomy.mjs",
     "head-detail:test": "node scripts/validate-head-detail.mjs",
     "practice:test": "node scripts/validate-practice.mjs",
+    "reasoning-practice:test": "node scripts/validate-reasoning-practice.mjs",
     "dissection-workbench:test": "node scripts/validate-dissection-workbench.mjs",
     "arrangement:test": "node scripts/validate-body-arrangement.mjs",
     "explode-styles:test": "node scripts/validate-explode-styles.mjs",

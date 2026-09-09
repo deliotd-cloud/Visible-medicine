@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "checks": 1334,
+  "negativeIdentityCases": 220,
+  "concepts": 10,
+  "exactRepresentations": 20,
+  "sourceHashes": {
+    "catalog": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "officialElementIndex": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf",
+    "questions": "e63933a0b8e7fb49676bd032a3300c9ab60dbf7e2d0b212ed0c9632f854195d9"
+  },
+  "verification": [
+    "Official complete FMA/file membership",
+    "Exact identity/scope rejection",
+    "Visible/loaded/focus/retry eligibility",
+    "One question per concept",
+    "Same-side curated alternatives",
+    "Answer-once and stale-response guards",
+    "Actual React server-rendered feedback gate",
+    "Actual scene-pick, start, next and mode-selector handler execution",
+    "Existing identification algorithm parity"
+  ],
+  "boundaries": {
+    "clinicalApproval": false,
+    "educatorApproval": false,
+    "browserInteraction": false,
+    "spatialValidation": false,
+    "validatedAssessment": false
+  }
+}

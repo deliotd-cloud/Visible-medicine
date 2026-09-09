@@ -100,10 +100,12 @@ import {
   practicePool,
   practiceCanStart,
   practiceRenderIds,
+  practiceQuestionCount,
   missedPracticeIds,
   type PracticeMode,
   type PracticeSampling,
-} from '@/lib/anatomy-practice';
+} from '@/lib/atlas-practice';
+import { ReasoningFeedback } from './reasoning-feedback';
 import { StudyViews } from './study-views';
 import { StructureNavigator } from './structure-navigator';
 import { RelatedStudy } from './related-study';
@@ -386,6 +388,10 @@ export default function BodyExplorer({
     practiceSampling === 'focus' ? focusTargetIds : undefined,
   );
   const practiceReady = practiceCanStart(practiceEligible, practiceMode);
+  const availableQuestions = practiceQuestionCount(
+    practiceEligible,
+    practiceMode,
+  );
   const practiceLoadStatus = anatomyLoadSummary(
     available.map((s) => s.bundle),
     loaded,
@@ -395,6 +401,11 @@ export default function BodyExplorer({
     practiceLoadStatus.pending.length > 0 || !practiceReady || !displayReady;
   const retryIds = missedPracticeIds(practiceResult ?? []).filter((id) =>
     practiceEligible.some((s) => s.id === id),
+  );
+  const retryCount = practiceQuestionCount(
+    practiceEligible,
+    practiceMode,
+    retryIds,
   );
   const sceneStructures = exam
     ? regionStructures.filter((s) => practiceRenderIds(practice).includes(s.id))
@@ -569,7 +580,8 @@ export default function BodyExplorer({
   function onSceneSelect(id: string) {
     if (!displayReady) return;
     if (exam) {
-      if (practice.mode === 'find') submitPractice(id);
+      if (practice.mode === 'find' || practice.mode === 'reason')
+        submitPractice(id);
     } else select(id);
   }
   function submitPractice(chosen: string | null) {
@@ -604,14 +616,14 @@ export default function BodyExplorer({
     setReset((n) => n + 1);
   }
   function startExam(retry = false) {
-    if (exam || practiceBlocked || (retry && !retryIds.length)) return;
+    if (exam || practiceBlocked || (retry && !retryCount)) return;
     const session = createPracticeSession(
       available,
       practiceLoadStatus.loaded,
       {
         id: ++practiceSerial.current,
         mode: practiceMode,
-        count: retry ? retryIds.length : practiceCount,
+        count: retry ? retryCount : practiceCount,
         sampling: practiceSampling,
         focusIds: focusTargetIds,
         retryIds: retry ? retryIds : undefined,
@@ -631,7 +643,7 @@ export default function BodyExplorer({
   function nextQuestion() {
     if (practicePaused) return;
     practiceDispatch({ type: 'next', sessionId: practice.id, index: question });
-    if (practice.mode === 'name') {
+    if (practice.mode === 'name' || practice.mode === 'reason') {
       setZoom(1);
       setReset((n) => n + 1);
     }
@@ -1224,12 +1236,15 @@ export default function BodyExplorer({
             {exam && (
               <div className="body-exam-prompt">
                 <span>
-                  IDENTIFY {question + 1} OF {examTargets.length}
+                  {practice.mode === 'reason' ? 'APPLY ANATOMY' : 'IDENTIFY'}{' '}
+                  {question + 1} OF {examTargets.length}
                 </span>
                 <strong>
-                  {practice.mode === 'name'
-                    ? 'Name the isolated structure'
-                    : `Find ${target?.name.toLowerCase()}`}
+                  {practice.mode === 'reason'
+                    ? 'Choose the best match in Practice'
+                    : practice.mode === 'name'
+                      ? 'Name the isolated structure'
+                      : `Find ${target?.name.toLowerCase()}`}
                 </strong>
               </div>
             )}
@@ -1342,19 +1357,27 @@ export default function BodyExplorer({
                 {`Question ${question + 1} of ${examTargets.length}. ${
                   answered
                     ? `${answer === target?.id ? 'Correct.' : answer === null ? 'Skipped.' : 'Not quite.'} ${target?.name ?? ''}.`
-                    : practice.mode === 'name'
-                      ? 'Name the isolated structure.'
-                      : `Find ${target?.name ?? 'the requested structure'}.`
+                    : practice.mode === 'reason'
+                      ? practice.questions[question].reasoning?.prompt
+                      : practice.mode === 'name'
+                        ? 'Name the isolated structure.'
+                        : `Find ${target?.name ?? 'the requested structure'}.`
                 }`}
               </output>
-              <div className="eyebrow">IDENTIFICATION PRACTICE</div>
+              <div className="eyebrow">
+                {practice.mode === 'reason'
+                  ? 'APPLY ANATOMY · DRAFT'
+                  : 'IDENTIFICATION PRACTICE'}
+              </div>
               <h2>
                 {question + 1} / {examTargets.length}
               </h2>
               <p>
-                {practice.mode === 'name'
-                  ? 'Rotate the isolated structure and choose its name. You can use the keyboard to move between answer buttons.'
-                  : 'Find the named structure on the model. Labels and selection hints are hidden.'}
+                {practice.mode === 'reason'
+                  ? practice.questions[question].reasoning?.prompt
+                  : practice.mode === 'name'
+                    ? 'Rotate the isolated structure and choose its name. You can use the keyboard to move between answer buttons.'
+                    : 'Find the named structure on the model. Labels and selection hints are hidden.'}
               </p>
               {practicePaused && (
                 <output aria-live="polite" className="vm-practice-note">
@@ -1388,21 +1411,28 @@ export default function BodyExplorer({
                       Correct answer: <strong>{target?.name}</strong>.
                     </p>
                   )}
+                  <ReasoningFeedback session={practice} />
                   <Button onClick={nextQuestion} disabled={practicePaused}>
                     {question + 1 === examTargets.length
                       ? 'Finish practice'
-                      : 'Next structure'}
+                      : practice.mode === 'reason'
+                        ? 'Next question'
+                        : 'Next structure'}
                     <ChevronRight />
                   </Button>
                 </div>
               ) : (
                 <>
-                  {practice.mode === 'name' ? (
+                  {practice.mode !== 'find' ? (
                     <fieldset
                       className="vm-practice-choices"
                       disabled={practicePaused}
                     >
-                      <legend>Choose the anatomical name</legend>
+                      <legend>
+                        {practice.mode === 'reason'
+                          ? 'Choose the best match'
+                          : 'Choose the anatomical name'}
+                      </legend>
                       {practice.questions[question].choices.map((id) => (
                         <Button
                           key={`${practice.id}-${question}-${id}`}
@@ -1449,7 +1479,7 @@ export default function BodyExplorer({
                 modes={['practice']}
                 className="atlas-practice-setup"
               >
-                <h2>Identification practice</h2>
+                <h2>Anatomy practice</h2>
                 <p>
                   Choose your question style and targets, then start. Use
                   Dissect to prepare a focused anatomy set.
@@ -1457,15 +1487,21 @@ export default function BodyExplorer({
                 <details className="vm-practice-options" open>
                   <summary>
                     Practice options ·{' '}
-                    {practiceMode === 'name'
-                      ? 'Name isolated anatomy'
-                      : 'Find on model'}
+                    {practiceMode === 'reason'
+                      ? 'Apply anatomy'
+                      : practiceMode === 'name'
+                        ? 'Name isolated anatomy'
+                        : 'Find on model'}
                   </summary>
                   <label htmlFor="practice-answer-mode">Answer mode</label>
                   <Select
                     value={practiceMode}
                     onValueChange={(value) => {
-                      if (value === 'find' || value === 'name')
+                      if (
+                        value === 'find' ||
+                        value === 'name' ||
+                        value === 'reason'
+                      )
                         setPracticeMode(value);
                     }}
                   >
@@ -1479,6 +1515,9 @@ export default function BodyExplorer({
                       <SelectItem value="find">Find on model</SelectItem>
                       <SelectItem value="name">
                         Name isolated structure
+                      </SelectItem>
+                      <SelectItem value="reason">
+                        Apply anatomy · shoulder pilot
                       </SelectItem>
                     </SelectContent>
                   </Select>
@@ -1511,21 +1550,34 @@ export default function BodyExplorer({
                     </SelectContent>
                   </Select>
                   <p className="vm-practice-note">
-                    {practiceEligible.length} loaded candidates.{' '}
-                    {practiceSampling === 'landmarks'
-                      ? 'Emphasises larger surfaces.'
-                      : practiceSampling === 'focus'
-                        ? 'Uses the selected focus targets, excluding its added context. Choose a focus in Guided dissection first.'
-                        : 'Includes small structures without the landmark size cutoff.'}{' '}
+                    {practiceMode === 'reason'
+                      ? `${availableQuestions} source-bound draft questions available. One question per concept; both sides are not repeated. `
+                      : `${practiceEligible.length} loaded candidates. `}
+                    {practiceMode === 'reason' && practiceSampling !== 'focus'
+                      ? 'Uses eligible shoulder/arm concepts, without the landmark size preference.'
+                      : practiceSampling === 'landmarks'
+                        ? 'Emphasises larger surfaces.'
+                        : practiceSampling === 'focus'
+                          ? 'Uses the selected focus targets, excluding its added context. Choose a focus in Guided dissection first.'
+                          : 'Includes small structures without the landmark size cutoff.'}{' '}
                     {practiceMode === 'name' &&
                       'Naming needs at least two distinct candidates; there may be fewer than four answer choices.'}
                   </p>
+                  {practiceMode === 'reason' && !practiceReady && (
+                    <p className="vm-practice-note">
+                      No complete question set is loaded in this scope. Each
+                      question needs its target and at least one same-side
+                      alternative. Enable the relevant muscles in{' '}
+                      <a href="/regions/shoulder-arm">Shoulder &amp; arm</a>, or
+                      use an identification mode.
+                    </p>
+                  )}
                   <Button
                     variant="outline"
                     onClick={() => startExam()}
                     disabled={practiceBlocked}
                   >
-                    Start {Math.min(practiceCount, practiceEligible.length)}{' '}
+                    Start {Math.min(practiceCount, availableQuestions)}{' '}
                     questions
                   </Button>
                 </details>
@@ -1560,7 +1612,7 @@ export default function BodyExplorer({
                       below to study it.
                     </p>
                     <ul>
-                      {practiceResult.map((r) => (
+                      {practiceResult.map((r, index) => (
                         <li key={r.target}>
                           <button
                             type="button"
@@ -1577,6 +1629,18 @@ export default function BodyExplorer({
                                 ?.name
                             }
                           </button>
+                          {practice.questions[index]?.reasoning && (
+                            <details>
+                              <summary>Review explanation</summary>
+                              <p>
+                                {practice.questions[index].reasoning?.prompt}
+                              </p>
+                              <ReasoningFeedback
+                                session={practice}
+                                index={index}
+                              />
+                            </details>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -1586,9 +1650,9 @@ export default function BodyExplorer({
                           size="sm"
                           variant="outline"
                           onClick={() => startExam(true)}
-                          disabled={practiceBlocked || retryIds.length === 0}
+                          disabled={practiceBlocked || retryCount === 0}
                         >
-                          Retry missed ({retryIds.length} available)
+                          Retry missed ({retryCount} available)
                         </Button>
                         <p className="vm-practice-note">
                           Retries respect the current visible, loaded scope and

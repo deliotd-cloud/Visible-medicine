@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+Start with [generated current status](docs/CURRENT_STATUS.md), [the ordered improvement plan](docs/CONTINUOUS_IMPROVEMENT.md) and [the CT/MRI/X-ray/US and course-linking plan](docs/MULTIMODAL_LEARNING_PLAN.md). The [shoulder/arm reasoning pilot](docs/REASONING_PRACTICE.md) is inside Practice, with post-answer explanations. All teaching remains draft. Cumulative extension paragraphs below are historical milestones, not current totals.
+
 The [lower-limb vessel extension](docs/LOWER_LIMB_VESSEL_CLINICAL_CURRICULUM.md) adds 64 Clinical/Pathology drafts for 32 thigh, leg and foot selections, without new controls. Each tab now has 1,018 draft / four held entries. This is introductory coverage, not clinical approval. Run `npm run lower-limb-vessel-clinical-curriculum:test -- --source`. Earlier totals below are historical.
 
 The [hand vessel extension](docs/HAND_VESSEL_CLINICAL_CURRICULUM.md) adds 84 Clinical/Pathology drafts for 42 hand-vessel selections, preserving grouped components and asymmetric finger coverage without new controls. Each tab reaches 986 draft / 36 pending: 32 lower-limb vessels and four held identities. Run `npm run hand-vessel-clinical-curriculum:test -- --source`. Clinical review is still required; earlier totals below are historical.

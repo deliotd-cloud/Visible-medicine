@@ -2,7 +2,7 @@
 
 ## Current behaviour
 
-Regional and whole-body explorers offer two answer modes under **Practice options**:
+Regional and whole-body explorers offer the two general identification modes below under **Practice options**, plus the bounded [Apply anatomy reasoning pilot](REASONING_PRACTICE.md) for eligible shoulder/arm muscles. The pilot uses the same scope and answer-once safeguards; its prompts, alternatives and feedback are documented separately.
 
 - **Find on model:** select a named structure from the practice surfaces. Labels and selected-structure hints remain hidden.
 - **Name isolated structure:** one target surface is shown at a time, with two to four anatomical-name buttons. Buttons support normal keyboard focus and activation; the model remains rotatable. No named model label or correct-answer text is shown before an answer. This is visual identification with a keyboard response path, not a nonvisual equivalent of the 3D model.

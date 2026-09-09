@@ -10,7 +10,8 @@
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
     "resolvedContentAndRecipeData": "fd50acb85998726b79cf3ecb646acf9897117b50f6768e5ea65bd6c89dfb629c",
-    "explicitTopicReadiness": "51f5f10de5a09021a0445fc3262b6996db78f8282dcc80907518e7716cf6929a"
+    "explicitTopicReadiness": "51f5f10de5a09021a0445fc3262b6996db78f8282dcc80907518e7716cf6929a",
+    "reasoningQuestionData": "e63933a0b8e7fb49676bd032a3300c9ab60dbf7e2d0b212ed0c9632f854195d9"
   },
   "anatomy": {
     "bodyRepresentations": 1022,
@@ -90,6 +91,21 @@
   "study": {
     "stages": 138,
     "focuses": 120
+  },
+  "practice": {
+    "identificationModes": [
+      "find",
+      "name"
+    ],
+    "reasoning": {
+      "concepts": 10,
+      "exactRepresentations": 20,
+      "regions": [
+        "shoulder-arm"
+      ],
+      "readiness": "draft",
+      "limitation": "Separate from Quiz-tab notes. Authored anatomical-reasoning pilot, not educator-approved or a validated assessment."
+    }
   },
   "teaching": {
     "classification": {

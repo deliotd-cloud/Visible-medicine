@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { readFile, readdir, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { build } from './workspace-test-build.mjs';
+import { renderRequirementSummary } from './requirement-summary.mjs';
 
 // This inventory executes the real content resolver. It measures displayed copy,
 // not medical correctness, complete lessons, browser acceptance or approval.
@@ -14,7 +15,8 @@ const bundled = await build({
   stdin: {
     contents: `export { bodyContent, bodyLesson } from './app/body-content.ts';
 export { structures } from './app/anatomy-data.ts';
-export { dissectionProfiles } from './app/dissection-data.ts';`,
+export { dissectionProfiles } from './app/dissection-data.ts';
+export { reasoningConcepts, reasoningConceptFor } from './lib/reasoning-questions.ts';`,
     resolveDir: fileURLToPath(root),
     sourcefile: 'requirements-audit-entry.ts',
     loader: 'ts',
@@ -29,6 +31,8 @@ const {
   bodyLesson,
   structures: shoulder,
   dissectionProfiles,
+  reasoningConcepts,
+  reasoningConceptFor,
 } = await import(
   'data:text/javascript;base64,' +
     Buffer.from(bundled.outputFiles[0].text).toString('base64')
@@ -150,6 +154,7 @@ sourceHashes.explicitTopicReadiness = hash(
     contentRows.map(({ entry, readiness }) => ({ id: entry.id, readiness })),
   ),
 );
+sourceHashes.reasoningQuestionData = hash(JSON.stringify(reasoningConcepts));
 const publicFiles = [];
 async function inventory(directory) {
   for (const entry of await readdir(new URL(directory, root), {
@@ -202,6 +207,22 @@ const report = {
       (total, profile) => total + profile.focuses.length,
       0,
     ),
+  },
+  practice: {
+    identificationModes: ['find', 'name'],
+    reasoning: {
+      concepts: reasoningConcepts.length,
+      exactRepresentations:
+        catalog.structures.filter(reasoningConceptFor).length,
+      regions: [
+        ...new Set(
+          catalog.structures.filter(reasoningConceptFor).map((s) => s.region),
+        ),
+      ],
+      readiness: 'draft',
+      limitation:
+        'Separate from Quiz-tab notes. Authored anatomical-reasoning pilot, not educator-approved or a validated assessment.',
+    },
   },
   teaching: {
     classification: {
@@ -260,17 +281,25 @@ const report = {
 };
 const destination = new URL('docs/requirement-audit.json', root);
 const output = JSON.stringify(report, null, 2) + '\n';
+const summaryPath = new URL('docs/CURRENT_STATUS.md', root);
+const summary = renderRequirementSummary(report);
 if (process.argv.includes('--check')) {
   assert.equal(
     await readFile(destination, 'utf8'),
     output,
     'Requirement inventory is stale; rerun requirements:audit and review its conclusions.',
   );
+  assert.equal(
+    await readFile(summaryPath, 'utf8'),
+    summary,
+    'Current status summary is stale; run requirements:audit.',
+  );
   console.log(
     'Requirement inventory matches current source and displayed content.',
   );
 } else {
   await writeFile(destination, output);
+  await writeFile(summaryPath, summary);
   console.log(
     JSON.stringify(
       {
