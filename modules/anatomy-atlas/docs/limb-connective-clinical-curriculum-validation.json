@@ -1,14 +1,14 @@
 {
   "passed": true,
-  "checks": 18180,
-  "bodyRepresentations": 28,
-  "sourceComponents": 28,
+  "checks": 17165,
+  "bodyRepresentations": 12,
+  "sourceComponents": 12,
   "lessonGroups": 6,
-  "explicitTopicEdits": 56,
-  "combinedPinnedCurriculumSections": 2984,
-  "sourceIndexChecks": 28,
-  "negativeCases": 44,
-  "historicalMilestoneReadiness": {
+  "explicitTopicEdits": 24,
+  "combinedPinnedCurriculumSections": 3008,
+  "sourceIndexChecks": 12,
+  "negativeCases": 27,
+  "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
       "identity-only": 2,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 702,
+      "draft": 714,
       "identity-only": 0,
-      "pending": 320,
+      "pending": 308,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 702,
+      "draft": 714,
       "identity-only": 0,
-      "pending": 320,
+      "pending": 308,
       "generated-identification": 0
     },
     "quiz": {
@@ -64,5 +64,5 @@
   "scanContentAdded": false,
   "browserTesting": false,
   "copyAndRecipeHash": "bbd29c160fb64b177f53979e52fd63e8786b1eb9772622683f92957256fbc022",
-  "limitations": "Original permanent-tooth clinical drafts; exact sides, arches and named tooth positions retained. No wisdom-tooth addition, invented clinical numbering, internal dental segmentation, patient diagnosis, procedure, scan or clinical approval."
+  "limitations": "Original limb connective Clinical/Pathology drafts; exact sides, categories and source extents retained. No new geometry, patient diagnosis, procedure, biomechanical simulation, scan or clinical approval."
 }

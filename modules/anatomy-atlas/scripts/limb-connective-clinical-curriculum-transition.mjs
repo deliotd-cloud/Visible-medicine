@@ -1,32 +1,37 @@
 import assert from 'node:assert/strict';
-import { authoringBeforeLimbConnectiveClinical } from './limb-connective-clinical-curriculum-transition.mjs';
 import { readContentJson } from './content-contract-tools.mjs';
 import { createHash } from 'node:crypto';
 const hash = (v) =>
   createHash('sha256').update(JSON.stringify(v)).digest('hex');
 /** Offline historical comparison only. Runtime/export always use current teaching. */
-export async function authoringBeforeDentalClinical(context) {
-  const { catalog } = context;
-  const api = await authoringBeforeLimbConnectiveClinical(context);
+export async function authoringBeforeLimbConnectiveClinical(context) {
+  const { api, catalog } = context;
   const before = await readContentJson(
-    'content/dental-clinical-curriculum.before.json',
+    'content/limb-connective-clinical-curriculum.before.json',
   );
   const after = await readContentJson(
-    'content/dental-clinical-curriculum.transition.json',
+    'content/limb-connective-clinical-curriculum.transition.json',
   );
   assert.equal(
     hash(before),
-    '368c7471e804a0ea14d7473b3628739434a5b85b36f820643e67b1cd478d09f4',
+    '7318ed30a05d8eadf710ea8f0f86a15a378c6380be20ca2ae1acb89914554c52',
   );
   assert.equal(
     hash(after),
-    '5e156a861ede654e0f3e031da3fa605fd1b61e6a3eab394e71df9ba14da9de26',
+    '8985bfdc83b5e290e9d974e5d99836355534bee2758fdbd61952fd2064ae792d',
   );
-  assert.equal(before.sourceCommit, 'fc87a2453fad475be90d9dcb27a9cc8715a601f0');
+  assert.equal(before.sourceCommit, '211e955aba56e6d667843b1b1485b5e73c04ce99');
   assert.equal(after.sourceCommit, before.sourceCommit);
   assert.equal(before.scope, 'body');
-  assert.deepEqual(before.regions, ['head-neck']);
-  assert.equal(before.entries.length, 28);
+  assert.deepEqual(before.regions, [
+    'foot',
+    'forearm',
+    'leg',
+    'hand',
+    'thigh',
+    'pelvis',
+  ]);
+  assert.equal(before.entries.length, 12);
   assert.deepEqual(
     after.entries.map((e) => [e.id, e.fmaId]),
     before.entries.map((e) => [e.id, e.fmaId]),
@@ -34,7 +39,7 @@ export async function authoringBeforeDentalClinical(context) {
   const originals = new Map();
   for (const [i, e] of before.entries.entries()) {
     const s = catalog.structures.find((s) => s.id === e.id);
-    assert(s && s.system === 'organs');
+    assert(s && s.system === 'connective');
     for (const [field, key] of [
       ['fmaId', 'fmaId'],
       ['name', 'name'],
@@ -58,14 +63,14 @@ export async function authoringBeforeDentalClinical(context) {
       assert.equal(
         hash(lesson),
         after.entries[i].sections[t],
-        'Unrecorded dental clinical edit: ' + s.id + ' / ' + t,
+        'Unrecorded limb connective clinical edit: ' + s.id + ' / ' + t,
       );
       const { readiness: _r, ...shown } = lesson;
       assert.deepEqual(shown, api.bodyContent(s, t));
       originals.set(s.id + '|' + t, e.sections[t]);
     }
   }
-  assert.equal(originals.size, 56);
+  assert.equal(originals.size, 24);
   const bodyLesson = (s, t) =>
     originals.has(s.id + '|' + t)
       ? structuredClone(originals.get(s.id + '|' + t))

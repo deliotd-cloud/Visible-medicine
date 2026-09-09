@@ -1,5 +1,7 @@
 # Third-party notices
 
+The limb connective extension adds brief original factual notes linked to AAOS educational pages and primary plantar-ligament/forearm clinical research. No publisher prose, illustration, video, scan, procedure or protocol is imported. References are not asset-reuse licences. No new dependency, font, model, texture or paid service; original MIT and existing BodyParts3D CC BY 4.0 obligations remain. See `../docs/LIMB_CONNECTIVE_CLINICAL_CURRICULUM.md`.
+
 The dental extension adds original brief factual teaching with NIDCR, NHS/Nottingham University Hospitals and American Association of Endodontists links. No publisher prose, diagram, radiograph, procedure, clinical algorithm or question bank is imported. Links/public access are not asset licences; no new dependencies, fonts, models, textures or paid services. Original MIT and BodyParts3D CC BY 4.0 obligations remain. See `../docs/DENTAL_CLINICAL_CURRICULUM.md`.
 
 The head/neck organ clinical extension adds brief original factual notes with NCI, NEI, NHS, Cleveland Clinic and AAO EyeWiki links. No publisher prose, diagrams, scans, clinical algorithms, procedures, question banks or media are imported. Public access/citation is not an asset licence. Original MIT code/text and BodyParts3D CC BY 4.0 obligations remain unchanged; no new font, model, dependency, paid service or patient data. See `../docs/HEAD_ORGAN_CLINICAL_CURRICULUM.md`.

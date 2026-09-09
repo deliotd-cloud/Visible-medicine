@@ -68,6 +68,7 @@ import { abdominalOrganClinicalLesson } from '../lib/abdominal-organ-clinical-cu
 import { pelvicOrganClinicalLesson } from '../lib/pelvic-organ-clinical-curriculum';
 import { headOrganClinicalLesson } from '../lib/head-organ-clinical-curriculum';
 import { dentalClinicalLesson } from '../lib/dental-clinical-curriculum';
+import { limbConnectiveClinicalLesson } from '../lib/limb-connective-clinical-curriculum';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -216,6 +217,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (headOrganClinical) return headOrganClinical;
   const dentalClinical = dentalClinicalLesson(s, tab);
   if (dentalClinical) return dentalClinical;
+  const limbConnectiveClinical = limbConnectiveClinicalLesson(s, tab);
+  if (limbConnectiveClinical) return limbConnectiveClinical;
   const axial =
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??

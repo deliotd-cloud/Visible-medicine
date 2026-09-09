@@ -1,0 +1,102 @@
+{
+  "sourceCommit": "211e955aba56e6d667843b1b1485b5e73c04ce99",
+  "reason": "Twenty-four Clinical/Pathology drafts for 12 exact limb connective surfaces; independent sides and source categories retained. No new tissue layers, patient findings or biomechanical simulation.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:foot:right:ligament:right-long-plantar-ligament",
+      "fmaId": "FMA44249",
+      "sections": {
+        "pathology": "ab9eff20716fa2d63fab707544f78a6548aa6de76f89f969a2a7b8ed92602cb9",
+        "clinical": "5b191971aa4422f25fe2317d07629b65c5f30f7557cf55e372196d2368335ba7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:ligament:left-long-plantar-ligament",
+      "fmaId": "FMA44250",
+      "sections": {
+        "pathology": "0e1994975885d75033149a89162081c0162a60f2b5c1a2f846cb0211c4a475c7",
+        "clinical": "86f819423e6b05c18c1927c8a6bf0b755b28ab23c3f46ab40fb8f0c239a1f4c9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
+      "fmaId": "FMA23707",
+      "sections": {
+        "pathology": "09f9f162f7b0f0aeb593fa1c40d9f738e4621c72d23af61ca6414874d81ddb3e",
+        "clinical": "7b359ed32bf986b2727a7330e545baf5bf240945bcb6669116352460db0e5350"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
+      "fmaId": "FMA23708",
+      "sections": {
+        "pathology": "2f2fc1d8d1a447abbbf6010165726b485ae3ea87030dae231ad84d89741f7d89",
+        "clinical": "bf95dfc0acb7d9c5396220125d4b9f169ed7d869de0e2bae24dfd8806e83da28"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:ligament:interosseous-membrane-of-right-leg",
+      "fmaId": "FMA35192",
+      "sections": {
+        "pathology": "19268eb77aeeb041d658a30bab16b632b7aef4ce05b6569d146e7c382a7ea3d9",
+        "clinical": "aa560343e3d4fd831cb9338e81dcc24bb5893846b1c3d71f1d391c66cfcbd48e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:ligament:interosseous-membrane-of-left-leg",
+      "fmaId": "FMA35193",
+      "sections": {
+        "pathology": "b8b6637ddb98477dff8c71eb235738c5c84218dac852c88d5c96d5ac83510944",
+        "clinical": "bf38a8a241c44b53648808e514d1c0e058e53b3daaee323c9b3817df879a4c98"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
+      "fmaId": "FMA258847",
+      "sections": {
+        "pathology": "89c0cfa2bc63b699f06025b1988fe7222ad8a3c79473648d8d855e45a59a1956",
+        "clinical": "c3f93722764519acf33bbd1229048e6ced8b6b9eeac80fdd16106aeacf4eeee8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
+      "fmaId": "FMA264844",
+      "sections": {
+        "pathology": "29b653ece9ede8c90fae0ef1d08938fd2d3209745a1cfba01e9d04c96497ca2c",
+        "clinical": "e8214c52308798f9dbbb7d34ed876a36345081bcc987b14128fe293d5831362f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+      "fmaId": "FMA40120",
+      "sections": {
+        "pathology": "1eee1b92b9fdc1989213d95319c4e9a527d1ca40d2f287d078a112d08b3e46b0",
+        "clinical": "146ed6e19a48730196d9bfaa0de2accf28c7d9599dc7730e64748b05c5b2ce5c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+      "fmaId": "FMA40121",
+      "sections": {
+        "pathology": "2abfcf09e0641b00dd2a1edaff02c3562d1520584871242da7cf1284d2c6e899",
+        "clinical": "56b4a39e94f225a7ef005af69a6f704a0ddb06d968f7faa3816dc8b7385d2b05"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+      "fmaId": "FMA58776",
+      "sections": {
+        "pathology": "b19daad913a3c0eb323d695b92cc433cd356daa263ed9f58c15ba763268ba803",
+        "clinical": "ca92ee506994d7f18fd3884b7aa0b9d04de9d33b75972718dbd729e091ee9fec"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+      "fmaId": "FMA58777",
+      "sections": {
+        "pathology": "75a0dbec047a8192ce2a48a4e24253911deb6c55077c4b8febc496b813bc380d",
+        "clinical": "e09f61aecaea0624935e0cc69f29724507aab01e2057eb03921340f452a9d9fd"
+      }
+    }
+  ]
+}

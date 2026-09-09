@@ -1,5 +1,13 @@
 # Anatomy atlas backup — 9 September 2026
 
+**Current limb connective checkpoint — saved, publication pending:** source `e90a86e02d305eb8cc3bd8eb2e7142cacb87acba` is committed locally and successfully pushed to the private Sites source repository. The validated site archive upload failed twice (internal error, then a 60-second blob-upload timeout); no new saved version or deployment was created. Verified live/latest remains dental version 62. Do not describe these limb lessons as live. Owner-only access policy was checked before and exactly unchanged after.
+
+Twenty-four Clinical/Pathology drafts cover 12 independent ligament/tendon/fascia selections in six bilateral groups. Clinical/Pathology each reach 714 draft / 308 pending in the saved source. Fifty-one offline projections protect 3,008 topic edits. No new controls, geometry, dependencies, scan, review state, mechanics or clinical approval.
+
+Limb validation passed 17,165 checks / 12 official components / 27 negative cases; dental 18,180 / 28; head-organ 17,511 / 32; shared content contract 31,373 / 87 GLBs / 36 rejects. Requirements/export freshness, TypeScript, focused formatting and production build passed. Local module backup: 899 byte-matched files / 122,775,662 bytes / 87 GLBs; no common credential-signature matches. Browser testing was skipped for background work.
+
+The complete original local recovery and incremental bundles remain available. This GitHub-targeted checkout is LOCAL only: no GitHub retry or alternate route. Private review database and raw conversation logs are not included. Next: remaining axial/head-neck connective teaching, vessel content and broader goal; retry publishing the newest validated source in a later pass. Older receipts below describe historical deliveries.
+
 **Current dental checkpoint — privately published:** source `211e955aba56e6d667843b1b1485b5e73c04ce99` was saved as Site version 62 and deployed successfully at 07:06:59 UTC / 08:06:59 London on 9 September. Owner/custom/one-account/zero-external/no-group policy was verified before and exactly unchanged after. Production: https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site . This GitHub-targeted checkout remains LOCAL only; no GitHub retry or alternate route. Older receipts are historical.
 
 Fifty-six Clinical/Pathology drafts cover 28 exact permanent-tooth selections / 28 source components in six teaching groups. Each side, arch and named tooth position is retained; no wisdom teeth, invented clinical numbering or internal dental segmentation is added. Clinical/Pathology each reach 702 draft / 320 pending. Fifty offline projections protect 2,984 topic edits. No new UI, geometry, dependency, patient scan, review state or clinical approval.
@@ -212,11 +220,11 @@ The newest selection-recovery milestone explains hidden systems, removed selecti
 
 The latest shoulder workspace shares compact Explore / Dissect / Practice navigation, responsive side panels and grouped notes with the regional atlas. Camera/layer menus replace six buttons; the separation toolbar is outside the scene; orthographic presets, source meshes, saved views, review guards and imaging IDs are preserved. The 1,238-check shoulder suite (94 markup cases, 288 menu cases), existing navigation/model-first/recovery/explosion/bookmark/imaging/review checks, type checks, focused lint, build and licence audit pass. Nine display-review hashes expire; teaching hashes stay exact and imaging remains absent. No browser, touch, GPU or clinical acceptance is claimed. See the module's `docs/SHOULDER_WORKSPACE.md`; next work is hidden-selection feedback and targeted recovery.
 
-- Source application commit: `211e955aba56e6d667843b1b1485b5e73c04ce99`.
-- Exact application source tree: `02fdd187beaed5d6b45b2aec9cee390b52301681`.
+- Source application commit: `e90a86e02d305eb8cc3bd8eb2e7142cacb87acba`.
+- Exact application source tree: `6cc3bb2f4bec9f1f3e4d70790489a271eba09ac2`.
 - Main website base commit: `c4ff08f8afc90bd94d04162625f97af9d94401cf`.
 - GitHub backup branch: `backup/anatomy-atlas-2026-09-06`.
-- All 892 tracked application files (122,720,890 bytes) are preserved byte-for-byte from that source commit, including 87 GLB bundles, official brand lockups, content, scripts, configuration, dependency lockfile, licences, review schema/migration and documentation.
+- All 899 tracked application files (122,775,662 bytes) are preserved byte-for-byte from that source commit, including 87 GLB bundles, official brand lockups, content, scripts, configuration, dependency lockfile, licences, review schema/migration and documentation.
 - The atlas covers 1,022 selectable source representations, 11 regional explorers, 138 dissection stages, 120 focuses and the dedicated nine-structure shoulder pilot. These are not claims of anatomical completeness or clinical validation. Previous milestone receipts below are historical.
 - The shoulder review workspace has independent geometry, teaching and imaging review tracks, evidence/issues, versioned records and revision-bound approval safeguards. Acquired scans and specialist approvals remain absent.
 - The deep-inspection update adds three-plane surface cutaways, tissue opacity, clipped-surface picking, regional/whole-body orthographic illustration and varied 5/10/20-question practice with results. No source geometry, anatomical coverage, licences or dependencies were changed.
@@ -390,4 +398,4 @@ The 4,301 head-detail assertions, 54,502 practice assertions, 189 automated revi
 
 Keep the atlas's [licence](../modules/anatomy-atlas/LICENSE), [third-party notices](../modules/anatomy-atlas/LICENSES/THIRD_PARTY_NOTICES.md), [BodyParts3D licence evidence](../modules/anatomy-atlas/LICENSES/BODYPARTS3D.md) and visible attribution together. MIT application code does not relicense third-party anatomy or the proprietary Visible Medicine brand marks.
 
-Keep the repository private unless public source/brand release is deliberately approved. The source snapshot is 122,720,890 bytes (about 122.72 MB); no Git LFS or new paid service was introduced for this backup. GitHub source storage is distinct from hosting, large future imaging collections and database backups; quotas and service pricing can change. Never add patient imaging or private review exports to this repository as a substitute for appropriate data storage.
+Keep the repository private unless public source/brand release is deliberately approved. The source snapshot is 122,775,662 bytes (about 122.78 MB); no Git LFS or new paid service was introduced for this backup. GitHub source storage is distinct from hosting, large future imaging collections and database backups; quotas and service pricing can change. Never add patient imaging or private review exports to this repository as a substitute for appropriate data storage.

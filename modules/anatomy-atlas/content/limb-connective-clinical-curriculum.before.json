@@ -1,0 +1,395 @@
+{
+  "sourceCommit": "211e955aba56e6d667843b1b1485b5e73c04ce99",
+  "copyAndRecipeHash": "3c92d14f7645090d5081685917b79add91742c4f8148be7edd0f4df515393ead",
+  "scope": "body",
+  "regions": [
+    "foot",
+    "forearm",
+    "leg",
+    "hand",
+    "thigh",
+    "pelvis"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:foot:right:ligament:right-long-plantar-ligament",
+      "fmaId": "FMA44249",
+      "name": "Right long plantar ligament",
+      "category": "ligament",
+      "side": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1424"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1424"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:ligament:left-long-plantar-ligament",
+      "fmaId": "FMA44250",
+      "name": "Left long plantar ligament",
+      "category": "ligament",
+      "side": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1424M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1424M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
+      "fmaId": "FMA23707",
+      "name": "Interosseous membrane of right forearm",
+      "category": "ligament",
+      "side": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1476"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1476"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
+      "fmaId": "FMA23708",
+      "name": "Interosseous membrane of left forearm",
+      "category": "ligament",
+      "side": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1476M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1476M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:ligament:interosseous-membrane-of-right-leg",
+      "fmaId": "FMA35192",
+      "name": "Interosseous membrane of right leg",
+      "category": "ligament",
+      "side": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1392"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1392"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:ligament:interosseous-membrane-of-left-leg",
+      "fmaId": "FMA35193",
+      "name": "Interosseous membrane of left leg",
+      "category": "ligament",
+      "side": "left",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1392M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1392M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
+      "fmaId": "FMA258847",
+      "name": "Right calcaneal tendon",
+      "category": "tendon",
+      "side": "right",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1405"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1405"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
+      "fmaId": "FMA264844",
+      "name": "Left calcaneal tendon",
+      "category": "tendon",
+      "side": "left",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1405M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1405M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+      "fmaId": "FMA40120",
+      "name": "Flexor retinaculum of right wrist",
+      "category": "ligament",
+      "side": "right",
+      "region": "hand",
+      "regions": [
+        "hand",
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1471"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1471"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+      "fmaId": "FMA40121",
+      "name": "Flexor retinaculum of left wrist",
+      "category": "ligament",
+      "side": "left",
+      "region": "hand",
+      "regions": [
+        "hand",
+        "forearm"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1471M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1471M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+      "fmaId": "FMA58776",
+      "name": "Right iliotibial tract",
+      "category": "fascia",
+      "side": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1423"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1423"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+      "fmaId": "FMA58777",
+      "name": "Left iliotibial tract",
+      "category": "fascia",
+      "side": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1423M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1423M"
+      ],
+      "omittedSourceFiles": []
+    }
+  ]
+}
