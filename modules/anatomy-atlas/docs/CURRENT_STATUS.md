@@ -19,8 +19,8 @@ Counts are representations with displayed copy, not unique lessons, complete top
 | Anatomy | 1020 | 2 | 0 | 0 |
 | Function | 1018 | 0 | 4 | 0 |
 | CT | 11 | 0 | 1011 | 0 |
-| MRI | 11 | 0 | 1011 | 0 |
-| Ultrasound | 11 | 0 | 1011 | 0 |
+| MRI | 13 | 0 | 1009 | 0 |
+| Ultrasound | 13 | 0 | 1009 | 0 |
 | Pathology | 1018 | 0 | 4 | 0 |
 | Clinical | 1018 | 0 | 4 | 0 |
 | Quiz notes | 11 | 0 | 0 | 1011 |

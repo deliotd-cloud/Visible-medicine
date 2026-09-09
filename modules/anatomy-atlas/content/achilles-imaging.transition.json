@@ -1,0 +1,22 @@
+{
+  "sourceCommit": "cb3d29bef8f48b27c18e302e6f66ed7354e36060",
+  "reason": "Four source-bound MRI/ultrasound draft sections for the two existing Achilles tendon representations. No source, other teaching, patient scans, registration, review or entitlement changes.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
+      "fmaId": "FMA258847",
+      "sections": {
+        "mri": "5cec15141831b71244adf19a7f3866216b2a2b4f6640a27c1016dadaf43c5a1c",
+        "ultrasound": "b557f0993a0c3b08ab48f621fd1c8f1110284d3abe01adfdda927857202b31a8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
+      "fmaId": "FMA264844",
+      "sections": {
+        "mri": "fb83dad0d4a3b57029061aa61e83c87294211a692c36a2f0cc93c51026a63002",
+        "ultrasound": "811e941d341adf36009ff8e926e089584baa384c9d40b727698928d2c7137c83"
+      }
+    }
+  ]
+}

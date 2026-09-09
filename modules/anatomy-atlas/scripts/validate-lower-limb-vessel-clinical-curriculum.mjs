@@ -6,6 +6,7 @@ import {
   readContentJson,
 } from './content-contract-tools.mjs';
 import { authoringBeforeLowerLimbVesselClinical } from './lower-limb-vessel-clinical-curriculum-transition.mjs';
+import { authoringBeforeAchillesImaging } from './achilles-imaging-transition.mjs';
 import {
   curriculumHash,
   copyBeforeShoulderArmCurriculum,
@@ -28,6 +29,7 @@ const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
 const previous = await authoringBeforeLowerLimbVesselClinical(context);
+const beforeImaging = await authoringBeforeAchillesImaging(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
@@ -251,9 +253,9 @@ for (const s of catalog.structures)
     if (!ids.includes(s.fmaId) || !tabs.includes(t)) {
       same(api.lowerLimbVesselClinicalLesson(s, t), undefined);
       same(
-        api.bodyLesson(s, t),
+        beforeImaging.bodyLesson(s, t),
         previous.bodyLesson(s, t),
-        'Every unrelated section preserved',
+        'Every unrelated section preserved before the separately pinned Achilles imaging addition',
       );
     }
   }
@@ -497,9 +499,9 @@ for (const t of tabs)
   });
 for (const t of ['ct', 'mri', 'ultrasound'])
   same(counts(t), {
-    draft: 11,
+    draft: t === 'ct' ? 11 : 13,
     'identity-only': 0,
-    pending: 1011,
+    pending: t === 'ct' ? 1011 : 1009,
     'generated-identification': 0,
   });
 same(counts('anatomy'), {
@@ -529,7 +531,8 @@ const report = {
   sourceComponents: 36,
   lessonGroups: 16,
   explicitTopicEdits: 64,
-  combinedPinnedCurriculumSections: 3616,
+  combinedPinnedCurriculumSections: 3620,
+  separatelyPinnedAchillesImagingSections: 4,
   sourceIndexChecks,
   negativeCases: negatives.length,
   bodyReadiness: Object.fromEntries(api.contentTabs.map((t) => [t, counts(t)])),

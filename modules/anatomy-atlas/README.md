@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Leg or Foot → calcaneal (Achilles) tendon → Imaging** now includes [MRI and ultrasound comparison guides](docs/ACHILLES_IMAGING.md) for both sides. These cited drafts explain viewing planes and modality-specific pitfalls beside the existing 3D model. No scans, signal simulation, measurements or patient registration are loaded; independent radiology/educator review remains required.
+
 **Head & neck → Dissect** now includes three [orbital motor-supply views](docs/ORBITAL_MOTOR_STUDIES.md): the two CN III divisions and CN IV with their supplied muscles. They also appear under **Study together** when a participating structure is selected. Existing source surfaces, compact controls, side filters and Undo are reused; no nerve endpoints or functional movements are invented.
 
 **Head & neck → Practice → Practice options → Apply anatomy · draft** now includes 20 orbital, hyoid and laryngeal questions. The atlas has 80 original reasoning concepts / 160 sided source representations across head/neck and limb regions. Complete multipart digastric and thyroarytenoid selections are supported without inventing individual parts or changing meshes. The compact interface and 20-question cap are preserved. [Scope, references and review limits](docs/REASONING_PRACTICE.md). These are draft educational questions, not a validated assessment.

@@ -5,7 +5,8 @@
   "sourceComponents": 36,
   "lessonGroups": 16,
   "explicitTopicEdits": 64,
-  "combinedPinnedCurriculumSections": 3616,
+  "combinedPinnedCurriculumSections": 3620,
+  "separatelyPinnedAchillesImagingSections": 4,
   "sourceIndexChecks": 36,
   "negativeCases": 47,
   "bodyReadiness": {
@@ -28,15 +29,15 @@
       "generated-identification": 0
     },
     "mri": {
-      "draft": 11,
+      "draft": 13,
       "identity-only": 0,
-      "pending": 1011,
+      "pending": 1009,
       "generated-identification": 0
     },
     "ultrasound": {
-      "draft": 11,
+      "draft": 13,
       "identity-only": 0,
-      "pending": 1011,
+      "pending": 1009,
       "generated-identification": 0
     },
     "pathology": {
@@ -63,6 +64,6 @@
   "clinicalApproval": false,
   "scanContentAdded": false,
   "browserTesting": false,
-  "copyAndRecipeHash": "fd50acb85998726b79cf3ecb646acf9897117b50f6768e5ea65bd6c89dfb629c",
+  "copyAndRecipeHash": "16d6b117fc1a003cd5a218b9935124e85f486615404e1f88e5f014022d667beb",
   "limitations": "Original primary-thigh/leg/foot vessel drafts; exact source trees, categories, sides, ordered components and cross-region memberships retained. No new geometry, validated lumen, measured flow, procedural route, scan or clinical approval."
 }
