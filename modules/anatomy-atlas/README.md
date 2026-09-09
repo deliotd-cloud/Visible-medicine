@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+The [hand vessel extension](docs/HAND_VESSEL_CLINICAL_CURRICULUM.md) adds 84 Clinical/Pathology drafts for 42 hand-vessel selections, preserving grouped components and asymmetric finger coverage without new controls. Each tab reaches 986 draft / 36 pending: 32 lower-limb vessels and four held identities. Run `npm run hand-vessel-clinical-curriculum:test -- --source`. Clinical review is still required; earlier totals below are historical.
+
 The [forearm vessel extension](docs/FOREARM_VESSEL_CLINICAL_CURRICULUM.md) adds 28 Clinical/Pathology drafts for 14 vessel selections with no extra controls or geometry. Each tab reaches 944 draft / 78 pending: 74 vessels and four held identities. Run `npm run forearm-vessel-clinical-curriculum:test -- --source`. Independent clinical review remains required. Earlier totals below are historical.
 
 The [shoulder/arm vessel extension](docs/SHOULDER_ARM_VESSEL_CLINICAL_CURRICULUM.md) adds 68 Clinical/Pathology drafts for 34 vessel selections without extra controls or geometry. Clinical/Pathology each reach 930 draft / 92 pending: 88 vessels and four held identities. Run `npm run shoulder-arm-vessel-clinical-curriculum:test -- --source`. Independent clinical review remains required. Earlier totals below are historical.

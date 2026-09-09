@@ -77,6 +77,7 @@ import { pelvicVesselClinicalLesson } from '../lib/pelvic-vessel-clinical-curric
 import { headNeckVesselClinicalLesson } from '../lib/head-neck-vessel-clinical-curriculum';
 import { shoulderArmVesselClinicalLesson } from '../lib/shoulder-arm-vessel-clinical-curriculum';
 import { forearmVesselClinicalLesson } from '../lib/forearm-vessel-clinical-curriculum';
+import { handVesselClinicalLesson } from '../lib/hand-vessel-clinical-curriculum';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -243,6 +244,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (shoulderArmVesselClinical) return shoulderArmVesselClinical;
   const forearmVesselClinical = forearmVesselClinicalLesson(s, tab);
   if (forearmVesselClinical) return forearmVesselClinical;
+  const handVesselClinical = handVesselClinicalLesson(s, tab);
+  if (handVesselClinical) return handVesselClinical;
   const axial =
     axialGroupFor(s.fmaId) ??
     headDetailGroupFor(s.fmaId) ??

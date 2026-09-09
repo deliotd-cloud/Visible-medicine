@@ -9,8 +9,8 @@
     "content/review-revisions.json": "abc8f9410e00b41282e149d2bb6020d96ad6367aed769888519940c4c24118a0",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "6dc6c26cb89bbc9db015601fe7a5b616aeffcb7cffebab3df38210540c21d9c4",
-    "explicitTopicReadiness": "2893ad8df6ca1034d14cb53f2d46baf594e639547601cb40ff24bf9be4ab6052"
+    "resolvedContentAndRecipeData": "a3907cbdf9d67b112cb48d106e2972d53322db298d2fa0e6895c44ac1706a924",
+    "explicitTopicReadiness": "71bc008406873a0e22d5453866a94b02e4ca585a0ca06c8a9a8ce66dc783f861"
   },
   "anatomy": {
     "bodyRepresentations": 1022,
@@ -131,15 +131,15 @@
         "generatedIdentification": 0
       },
       "pathology": {
-        "specificDraft": 944,
+        "specificDraft": 986,
         "identityOnly": 0,
-        "pending": 78,
+        "pending": 36,
         "generatedIdentification": 0
       },
       "clinical": {
-        "specificDraft": 944,
+        "specificDraft": 986,
         "identityOnly": 0,
-        "pending": 78,
+        "pending": 36,
         "generatedIdentification": 0
       },
       "quiz": {
@@ -532,15 +532,15 @@
           "generatedIdentification": 0
         },
         "pathology": {
-          "specificDraft": 82,
+          "specificDraft": 124,
           "identityOnly": 0,
-          "pending": 42,
+          "pending": 0,
           "generatedIdentification": 0
         },
         "clinical": {
-          "specificDraft": 82,
+          "specificDraft": 124,
           "identityOnly": 0,
-          "pending": 42,
+          "pending": 0,
           "generatedIdentification": 0
         },
         "quiz": {

@@ -1,0 +1,342 @@
+{
+  "sourceCommit": "7b41c4682faa34183c0071cac1e10e936ec9d443",
+  "reason": "Eighty-four original Clinical/Pathology drafts for 42 exact primary-hand vessel selections. Original source categories, sides, ordered components and regional memberships preserved; no new geometry, vascular continuity, scans or clinical approval.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+      "fmaId": "FMA22839",
+      "sections": {
+        "pathology": "23e45e14bf47c009122356dfeb52be734e5349ec0c8323c6d3102157fec36b39",
+        "clinical": "4beb84632d8308a43253b466a9fc742d2fec1dde520009c31df606c2563c5b0d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
+      "fmaId": "FMA22840",
+      "sections": {
+        "pathology": "b2252039b89bf0cfcc6d1f957a9b12ca43ac03e34c135ed6d2afd9c8fed39e8f",
+        "clinical": "2c77bde2915a5b6c9d8b340ca4ca8ab42ff4af625d85d10d5779a626bfca3ac5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch",
+      "fmaId": "FMA22835",
+      "sections": {
+        "pathology": "221c66dcab9d62e06e5208246bfe0b2913cb5420d147bd06115fc866f523f4ca",
+        "clinical": "01c05780ee2ac788dd1c3aba2b5df660e84d591798b89d8d200db61cd473e2d3"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+      "fmaId": "FMA22837",
+      "sections": {
+        "pathology": "f6eab284e407ba51cc13d1cb31f9dee6b3bda631b8527466e72ab0148615d113",
+        "clinical": "3b055ed24d433041039e807ec6809a501180841681aaf022ac1f3d02d04b0f2b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+      "fmaId": "FMA22864",
+      "sections": {
+        "pathology": "959b9e8fa641016152757ebd1df84f3d4bad78649a54d1ff3801e3564f20158f",
+        "clinical": "d97f6fc2bee162a591058a8fdaf3a0689e9cf7550d58274d90f071b9c6372116"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+      "fmaId": "FMA22865",
+      "sections": {
+        "pathology": "10c68a3de2a3a398498a78bca02bcf30d8bfa590a31fa1e303880c8a3065db11",
+        "clinical": "292c44d25820c0bbf79a53174cbe8b5947a2fc93ce66ddf04b1e046ff367dd78"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+      "fmaId": "FMA22905",
+      "sections": {
+        "pathology": "bca1a2a607b13b0f68f04ec8d1482e0de4a485517bc94bd9f07cdee2b9a4130a",
+        "clinical": "94164271d4f5c867ce84e4964eda9919515a1524869cc0a9b01b1c7647244dcb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+      "fmaId": "FMA22907",
+      "sections": {
+        "pathology": "d8a4f2dcb88a2e75deb7fa1e9f4950f2f9fa755c4efa7b422a6219de6802a02c",
+        "clinical": "ae006ee8b5123d7b0bc99f40ac70c36f3d09ba653d5745abb882d59b45148f17"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
+      "fmaId": "FMA22777",
+      "sections": {
+        "pathology": "39d0e47d67866f4434330d20922b063cd3b0f66a1faf557806e3ef05fb07838b",
+        "clinical": "6ff30a83dd4fb1087d05ea70c418791b2aa150628e7831259baf47916e3c7333"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
+      "fmaId": "FMA22778",
+      "sections": {
+        "pathology": "37595aec188bc5dd2decea7f019640ade6f4d2d825eae3cba1ee3a2449b3fc25",
+        "clinical": "d43d74426180a7cb9dff95f1f0b295dd374ca0000a1460e4ff74eaa8171972b6"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+      "fmaId": "FMA22856",
+      "sections": {
+        "pathology": "26a85c6157a997bbbd80fd72528e1c52a7abf383f8ffb037dae7be1d980a41b9",
+        "clinical": "2ce242b83dba8edda1c2ebeb909c57404a7ae8cb43443e9a83058d02f87e9d82"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+      "fmaId": "FMA85118",
+      "sections": {
+        "pathology": "98913dd30fde8fa8e7df588a9b6f5c577dd932bd904a3f940e9017c0f3ae7ca2",
+        "clinical": "7fe29781de09d59cd9b32a3cf38a6f58ed8ef94d7d96a6bd8a8342466e9b8d32"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+      "fmaId": "FMA85119",
+      "sections": {
+        "pathology": "d48c45b4bd7a0634914f5f71ef62667dc2d00179051c4ede8e357cc3f9032a41",
+        "clinical": "2c3924078dd25a27de71e987aba8b3ae066719b59d555997e755c3197f2ac112"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+      "fmaId": "FMA85120",
+      "sections": {
+        "pathology": "5d81756e3ab8afbcac382c76d29b12ebc8dad593f1b0ec5c71f7cad9dbc7ca22",
+        "clinical": "2ac88610bbe97e16f902b2f1b9d37bdbd900e424dddfa509f31f92c149e41bc8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery",
+      "fmaId": "FMA85121",
+      "sections": {
+        "pathology": "22bddaa4a063093c48a287dea6078edafcf11dd1015fa6599b744952e17c83fe",
+        "clinical": "0074d0795f6e69101fc694479c78f718c79afe689da2cf2ac9403bf9dadd5b18"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+      "fmaId": "FMA85122",
+      "sections": {
+        "pathology": "ffade476b089f7422c9d877046030a35032766152129e4dbb41d404458ce3260",
+        "clinical": "221fb069f9b5003d68aac183a5b27ce43711f473f04e3a746e742253e79ab3a9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+      "fmaId": "FMA85123",
+      "sections": {
+        "pathology": "2d71579060a997833ca3105f37d719e5eec7a2378775a3b32a893c1a53332930",
+        "clinical": "79c7690883cfe3e7ebc87ebce15be5895ebc7343bb040bbba63d4fbacdeeb19a"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+      "fmaId": "FMA85124",
+      "sections": {
+        "pathology": "6195471b8e1d07eeecfe0c817f43bca6466718e46618dc7e11365615d0897684",
+        "clinical": "a631f16371493786680acd2e35bf1dce48ce6ecf6a1ceaa1be44b9ab92ad3959"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+      "fmaId": "FMA22858",
+      "sections": {
+        "pathology": "4d8e8e4b4db3c39604e17e243ad38ae7a54c654a4cba1fd10e16e0b86e3eeebb",
+        "clinical": "31b6453e8f2a728e01a997c2270ddae079e2d903595b8ccaa59b2ac10439d09b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+      "fmaId": "FMA22860",
+      "sections": {
+        "pathology": "9dae43e64f93a8955aaeef2fd8f3d7f18e04fe55ad6a7d262a618269eb5ccf7a",
+        "clinical": "af8361d6f5248f8ce219c8f95210a7c13c39c968f442c48150bb22a91ae297ab"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+      "fmaId": "FMA23050",
+      "sections": {
+        "pathology": "f2028e8234038ad9314720312ad5f5db1e61bf0e38bfc68112d34dd83bf89a79",
+        "clinical": "b21119e60a3f9efb7e2d86ed54d0a65d9e7fcd7bf98c358bcb2b249869a3c8f8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
+      "fmaId": "FMA23051",
+      "sections": {
+        "pathology": "d379198a13054b4eeb38857600347332727f313279ce9a6a46ff504886a144c7",
+        "clinical": "bd1282ce32ef8e237950e7a7100c9e88b9259be1488708f9d7666104c49240b3"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+      "fmaId": "FMA23052",
+      "sections": {
+        "pathology": "51bfb4acc1ff8f2f7e8689c3a26754a8c80ae0fa704d5cbdacf019b81868aa89",
+        "clinical": "8469797339c7d3c5e5b7cf776e73762aeccca9987fa70c9e945463c24ade151e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+      "fmaId": "FMA23054",
+      "sections": {
+        "pathology": "c8d93789319fccbe028ed1f68d86b764c2e741a3152440cefcbbd7bb505baae9",
+        "clinical": "7ab78fd34c511df01b9492a3f87f8b67bcf774dad97e6439edc8c7088bc60180"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+      "fmaId": "FMA23055",
+      "sections": {
+        "pathology": "5dfaad8507c30778bfd9531b2db98e7a753db776850b2171ba5fa42e6f7289c3",
+        "clinical": "5512a7b2f3ac9db74ea106448efbefcf3180bb789d7d653e19319a3e593bb402"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+      "fmaId": "FMA85112",
+      "sections": {
+        "pathology": "b3f4fb0270ce2f5a1edb9f518edb9021a31b0418b6658889357b138c2cc4942a",
+        "clinical": "b47cbe603903aa7e8a8f7162bbb4f45cc0aedf7512e3587b650f6203eff20771"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+      "fmaId": "FMA85115",
+      "sections": {
+        "pathology": "0ac5acfcbafef902e5e348338b3a9b8b797f3b926d9d2b3ac5fd0a9a55c62f26",
+        "clinical": "1c38bd8d078615407800307b9414bfbea9ea0183c1ab80a63106f6c0ca78d13b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+      "fmaId": "FMA85116",
+      "sections": {
+        "pathology": "3ef1cce273688afc2a22cd98355d5fe5947bc96099e935710483eea795f43339",
+        "clinical": "ccbb53bf8db01068161aa81f3abb07a75344c0f05d33bad6c67bc3c9f39494ab"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-deep-palmar-venous-arch",
+      "fmaId": "FMA22912",
+      "sections": {
+        "pathology": "4086f7b3b3efeb64a113a77bc383149b881e66d23e5af3678da3b4c364952250",
+        "clinical": "7e3a84de78ee5901057af4d734c97aab9bb754d4e27e80b233f62635ca478c08"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-deep-palmar-venous-arch",
+      "fmaId": "FMA22913",
+      "sections": {
+        "pathology": "f6a3a2406160abcce8e2f868dc620cd3236fa8283c4f03d1d882471ce889e308",
+        "clinical": "44de13ac0ddbb940f78a67f9b97fdb85d38022cdb3e14f1331507863ae12443c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-venous-arch",
+      "fmaId": "FMA22915",
+      "sections": {
+        "pathology": "5eadae4fa513135088e27d3dcb355a1fba7275180f368b863deea68c8360959e",
+        "clinical": "f6849babb0fab7bc9a4ddceb4332b87f02d9f6df51894032af9c785cc3c3f934"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-venous-arch",
+      "fmaId": "FMA22916",
+      "sections": {
+        "pathology": "50e682470c419b2ac020a8b258981e4fa6e40449e17d6e9666ac8ce28d392090",
+        "clinical": "cde55137084c000722eb111b07031c706f99c9270bb5dc8f2b2e9dd8cf60567d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:dorsal-venous-network-of-right-hand",
+      "fmaId": "FMA62506",
+      "sections": {
+        "pathology": "67a0a707f618a643af53d3b833438fb21e171df3cb64b0a7c8b7fbc2dad010dd",
+        "clinical": "f1c537fbe63657dfc36c4d3df86a7f55f91383812abd16431b70a18e62604a14"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:dorsal-venous-network-of-left-hand",
+      "fmaId": "FMA62507",
+      "sections": {
+        "pathology": "64e463f55d19bb72e287096e2ed6d2b68499f07b464380e12484c19a716a37f4",
+        "clinical": "1305f944f7eef18cc4f0225d9692827d58477ca0721a6c412154b8d908459ba9"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-vein",
+      "fmaId": "FMA22920",
+      "sections": {
+        "pathology": "013410cdd29a8114b6578da360b4b3440fba34a29a484b307f9fe630427d4936",
+        "clinical": "fea55c03831f220a9fac95fda0e3f08275ed073af9969e78917e0c85722bf07e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-vein",
+      "fmaId": "FMA22921",
+      "sections": {
+        "pathology": "bc770b551b65e2301de4328fb0e63333a87d649fca6bfee1bce80ebb73c68c55",
+        "clinical": "8c4917a286037002b69e54034e10ecbcecc37df3eb77e13fe272bf3e46fb2720"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-index-finger",
+      "fmaId": "FMA85096",
+      "sections": {
+        "pathology": "d84e854dfd5140fdd07ae745a0719db8964adb7a4da350968e4c257843c2fb28",
+        "clinical": "8aeb34889fb3886b4c62ca1b40098e9b0baf2ba5c5ec06a749e0d34925d8cd48"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-index-finger",
+      "fmaId": "FMA85097",
+      "sections": {
+        "pathology": "257c995b7083d0da8be087b526662e9bb762941e413e697c77dda2768d8b0a3d",
+        "clinical": "78958ab25bbbfbf6c3e02edbeca5685d034af2b1d7be5fe9ca61d17a1ea33f89"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-middle-finger",
+      "fmaId": "FMA85098",
+      "sections": {
+        "pathology": "c880d2e788ff95f2fbfdf7b167cc7f69f77fd6f9983c087c7e5ecfd16fad1333",
+        "clinical": "016c17f1d87d05c3dd96ba915bb14e360b9ea036da2360905c691d4c260144b3"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-middle-finger",
+      "fmaId": "FMA85099",
+      "sections": {
+        "pathology": "9b8eaac9937d8e7a7b8b78f2ebd698d700467bcd06c59dfcc6e653264abe2206",
+        "clinical": "4144b8116d28c73e306e8db08a80af69469b4f7301b0e8bb693127ba156208b1"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
+      "fmaId": "FMA85100",
+      "sections": {
+        "pathology": "de6ed1e554fc0e496e33ecd9926173417fd419ad1627510f30c08f571449c27b",
+        "clinical": "78f84c5776e199c1ac9f4a0673cce5f10848a44fc8813f207a60de37e2cfb819"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger",
+      "fmaId": "FMA85101",
+      "sections": {
+        "pathology": "db368617d65965be565112dd712f63eaba25b2c2ab5cbe7e1833f91b02ee62b3",
+        "clinical": "578d349fb36d8f7b6cd48d740a6f6b1f5db2845f59690e6a818b70c1b1abec43"
+      }
+    }
+  ]
+}
