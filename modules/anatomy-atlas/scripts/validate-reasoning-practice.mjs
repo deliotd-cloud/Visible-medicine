@@ -75,18 +75,20 @@ const create = (
   random = () => 0.314159,
 ) => api.createPracticeSession(scope, bundles, options(extra), random);
 const bound = all.filter(api.reasoningConceptFor);
-same(api.reasoningConcepts.length, 38);
-same(bound.length, 76);
+same(api.reasoningConcepts.length, 60);
+same(bound.length, 120);
 same(bound.filter((s) => s.region === 'shoulder-arm').length, 20);
 same(bound.filter((s) => s.region === 'forearm').length, 12);
 same(bound.filter((s) => s.region === 'hand').length, 20);
 same(bound.filter((s) => s.region === 'thigh').length, 24);
-same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 38);
+same(bound.filter((s) => s.region === 'leg').length, 28);
+same(bound.filter((s) => s.region === 'foot').length, 16);
+same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 60);
 same(
   hash(
     JSON.stringify(
-      api.reasoningConcepts.filter(
-        (c) => !['hand', 'thigh'].includes(c.region),
+      api.reasoningConcepts.filter((c) =>
+        ['shoulder-arm', 'forearm'].includes(c.region),
       ),
     ),
   ),
@@ -95,10 +97,23 @@ same(
 );
 same(
   hash(
-    JSON.stringify(api.reasoningConcepts.filter((c) => c.region !== 'thigh')),
+    JSON.stringify(
+      api.reasoningConcepts.filter((c) =>
+        ['shoulder-arm', 'forearm', 'hand'].includes(c.region),
+      ),
+    ),
   ),
   '4d38a5948cf93eb4e58d5666805d02b00f0d4d844fb5528e5d7208b9d93dc60b',
   'All 26 earlier question records are unchanged',
+);
+same(
+  hash(
+    JSON.stringify(
+      api.reasoningConcepts.filter((c) => !['leg', 'foot'].includes(c.region)),
+    ),
+  ),
+  'bd2679e4ab16c7308d6f789b940a2180f9bbeb415037a19417a0f33a4a205aad',
+  'All 38 earlier question records are unchanged',
 );
 same(
   hash(catalogBytes),
@@ -142,11 +157,11 @@ for (const concept of api.reasoningConcepts) {
       { system: 'organs' },
       { category: 'unknown' },
       { sourceTree: 'partof' },
-      { region: 'foot' },
+      { region: 'head-neck' },
       { region: concept.region === 'forearm' ? 'shoulder-arm' : 'forearm' },
       { regions: [concept.region === 'forearm' ? 'shoulder-arm' : 'forearm'] },
       { regions: ['shoulder-arm', 'hand'] },
-      { regions: ['foot'] },
+      { regions: ['head-neck'] },
       { regions: [] },
       { regions: [...s.regions, 'spine'] },
       ...(s.regions.length > 1
@@ -192,6 +207,8 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
         'hand',
         'thigh',
         'pelvis',
+        'leg',
+        'foot',
       ].includes(region)
     )
       same(session, null, 'No unbound regional question is invented');
@@ -205,7 +222,11 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
             ? 12
             : region === 'pelvis'
               ? 2
-              : 10;
+              : region === 'leg'
+                ? 14
+                : region === 'foot'
+                  ? 8
+                  : 10;
     same(session.questions.length, expected);
     same(
       new Set(session.questions.map((q) => q.reasoning.key)).size,
@@ -267,7 +288,7 @@ for (const count of [1, 5, 10, 20, 100, NaN, Infinity, -10]) {
   same(
     create(all, { count }).questions.length,
     Math.min(
-      38,
+      60,
       Math.max(1, Math.min(20, Math.floor(Number.isFinite(count) ? count : 5))),
     ),
   );
@@ -567,7 +588,14 @@ const report = {
   negativeIdentityCases: negativeCases,
   concepts: api.reasoningConcepts.length,
   exactRepresentations: bound.length,
-  regionalConcepts: { 'shoulder-arm': 10, forearm: 6, hand: 10, thigh: 12 },
+  regionalConcepts: {
+    'shoulder-arm': 10,
+    forearm: 6,
+    hand: 10,
+    thigh: 12,
+    leg: 14,
+    foot: 8,
+  },
   sharedRegionConcepts: { pelvis: 2 },
   sourceHashes: {
     catalog: hash(catalogBytes),

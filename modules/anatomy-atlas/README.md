@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Knee & leg / Foot → Practice → Apply anatomy · draft** now adds 22 original questions, bringing reasoning to 60 concepts / 120 sided representations. Gastrocnemius and adductor hallucis heads remain distinct; the existing 20-question session cap and compact controls are preserved. [Scope, references and review limits](docs/REASONING_PRACTICE.md). These are draft educational questions, not a validated assessment or new anatomy meshes.
+
 **Hip & thigh → Practice → Apply anatomy · draft** now includes twelve original source-bound questions, bringing regional reasoning to 38 concepts / 76 sided representations. The two gluteal concepts also work in their existing pelvic scope without duplication in whole-body sessions. [Scope, factual references and review limits](docs/REASONING_PRACTICE.md). Existing models, branding and compact controls are preserved.
 
 The [source-component safeguards](docs/SOURCE_HOLD_SAFEGUARDS.md) now prevent known held anatomy from re-entering through broader source definitions. Run `npm run source-holds:test` or the non-writing `node scripts/ingest-full-body.mjs --preflight-only`. Current models and UI are unchanged; passing this screen is not anatomical approval.

@@ -1565,14 +1565,14 @@ export default function BodyExplorer({
                   </p>
                   {practiceMode === 'reason' && !practiceReady && (
                     <p className="vm-practice-note">
-                      No complete question set is loaded in this scope. Each
-                      question needs its target and at least one same-side
-                      alternative. Enable the relevant muscles in{' '}
+                      Show a target and at least one same-side alternative. Try{' '}
                       <a href="/regions/shoulder-arm">Shoulder &amp; arm</a>,{' '}
                       <a href="/regions/forearm">Forearm</a>,{' '}
-                      <a href="/regions/hand">Hand</a> or{' '}
-                      <a href="/regions/thigh">Hip &amp; thigh</a>, or use an
-                      identification mode.
+                      <a href="/regions/hand">Hand</a>,{' '}
+                      <a href="/regions/thigh">Hip &amp; thigh</a>,{' '}
+                      <a href="/regions/leg">Knee &amp; leg</a> or{' '}
+                      <a href="/regions/foot">Foot</a>, or use an identification
+                      mode.
                     </p>
                   )}
                   <Button

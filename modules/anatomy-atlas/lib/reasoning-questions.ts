@@ -2,9 +2,11 @@ import type { BodyStructure } from '../app/body-types';
 import { forearmReasoningConcepts } from './forearm-reasoning';
 import { handReasoningConcepts } from './hand-reasoning';
 import { thighReasoningConcepts } from './thigh-reasoning';
+import { legReasoningConcepts } from './leg-reasoning';
+import { footReasoningConcepts } from './foot-reasoning';
 export interface ReasoningConcept {
   key: string;
-  region: 'shoulder-arm' | 'forearm' | 'hand' | 'thigh';
+  region: 'shoulder-arm' | 'forearm' | 'hand' | 'thigh' | 'leg' | 'foot';
   // Exact ordered source memberships for a cross-region representation.
   // Omission retains the original single-region contract.
   sourceRegions?: readonly string[];
@@ -312,6 +314,8 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   ...forearmReasoningConcepts,
   ...handReasoningConcepts,
   ...thighReasoningConcepts,
+  ...legReasoningConcepts,
+  ...footReasoningConcepts,
 ];
 export function reasoningConceptFor(s: BodyStructure) {
   if (
