@@ -2,9 +2,24 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readContentJson } from './content-contract-tools.mjs';
 import { authoringBeforeForearm } from './forearm-curriculum-transition.mjs';
+import { historicalRecipeProfiles } from './recipe-history.mjs';
 
-export const curriculumHash = (value) =>
-  createHash('sha256').update(JSON.stringify(value)).digest('hex');
+// Complete historical copy snapshots account for the separately verified
+// orbital-motor recipe addition. Individual lesson/transition hashes stay raw.
+export const curriculumHash = (value) => {
+  const comparison =
+    Array.isArray(value?.body) &&
+    Array.isArray(value?.shoulder) &&
+    value?.dissectionProfiles
+      ? {
+          ...value,
+          dissectionProfiles: historicalRecipeProfiles(
+            value.dissectionProfiles,
+          ),
+        }
+      : value;
+  return createHash('sha256').update(JSON.stringify(comparison)).digest('hex');
+};
 
 /** Keep the original all-copy baseline intact. First unwind the later forearm
  * transition, then these 64 explicitly pinned sections to the original snapshot
@@ -79,6 +94,6 @@ export async function copyBeforeShoulderArmCurriculum(context) {
   return {
     body,
     shoulder: api.structures,
-    dissectionProfiles: api.dissectionProfiles,
+    dissectionProfiles: historicalRecipeProfiles(api.dissectionProfiles),
   };
 }

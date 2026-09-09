@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Head & neck → Dissect** now includes three [orbital motor-supply views](docs/ORBITAL_MOTOR_STUDIES.md): the two CN III divisions and CN IV with their supplied muscles. They also appear under **Study together** when a participating structure is selected. Existing source surfaces, compact controls, side filters and Undo are reused; no nerve endpoints or functional movements are invented.
+
 **Head & neck → Practice → Practice options → Apply anatomy · draft** now includes 20 orbital, hyoid and laryngeal questions. The atlas has 80 original reasoning concepts / 160 sided source representations across head/neck and limb regions. Complete multipart digastric and thyroarytenoid selections are supported without inventing individual parts or changing meshes. The compact interface and 20-question cap are preserved. [Scope, references and review limits](docs/REASONING_PRACTICE.md). These are draft educational questions, not a validated assessment.
 
 The [source-component safeguards](docs/SOURCE_HOLD_SAFEGUARDS.md) now prevent known held anatomy from re-entering through broader source definitions. Run `npm run source-holds:test` or the non-writing `node scripts/ingest-full-body.mjs --preflight-only`. Current models and UI are unchanged; passing this screen is not anatomical approval.

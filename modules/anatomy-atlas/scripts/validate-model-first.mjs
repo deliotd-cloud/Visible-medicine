@@ -8,6 +8,7 @@ import { runInNewContext } from 'node:vm';
 import { build } from './workspace-component-test-build.mjs';
 import ts from 'typescript';
 import { dissectionProfiles } from '../app/dissection-data.ts';
+import { historicalRecipeProfiles } from './recipe-history.mjs';
 
 const hash = (b) => createHash('sha256').update(b).digest('hex');
 const compare = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
@@ -141,7 +142,7 @@ same(
   '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7',
 );
 same(
-  hash(JSON.stringify(dissectionProfiles)),
+  hash(JSON.stringify(historicalRecipeProfiles(dissectionProfiles))),
   'd127268c45678a49ff8eeae4c5622172d4549497aca33d5b3b19507557d83e9c',
 );
 for (const b of catalog.bundles)

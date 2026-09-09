@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { historicalRecipeProfiles } from './recipe-history.mjs';
 import { readFile, writeFile, mkdtemp, unlink, rmdir } from 'node:fs/promises';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
@@ -44,7 +45,7 @@ same(
   '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7',
 );
 same(
-  hash(originalProfiles),
+  hash(JSON.stringify(historicalRecipeProfiles(dissectionProfiles))),
   'd127268c45678a49ff8eeae4c5622172d4549497aca33d5b3b19507557d83e9c',
 );
 const systems = [

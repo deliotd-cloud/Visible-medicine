@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "assertions": 105061,
+  "assertions": 105541,
   "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
   "rows": [
     {
@@ -217,22 +217,22 @@
       "region": "head-neck",
       "side": "both",
       "structures": 275,
-      "selectionsWithGroups": 197,
-      "memberships": 299
+      "selectionsWithGroups": 203,
+      "memberships": 323
     },
     {
       "region": "head-neck",
       "side": "right",
       "structures": 160,
-      "selectionsWithGroups": 113,
-      "memberships": 171
+      "selectionsWithGroups": 116,
+      "memberships": 183
     },
     {
       "region": "head-neck",
       "side": "left",
       "structures": 160,
-      "selectionsWithGroups": 113,
-      "memberships": 171
+      "selectionsWithGroups": 116,
+      "memberships": 183
     },
     {
       "region": "spine",

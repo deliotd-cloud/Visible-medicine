@@ -11,6 +11,10 @@ import { footVascularStudySets } from '../lib/foot-vascular-anatomy.ts';
 import { ocularStudySets } from '../lib/ocular-anatomy.ts';
 import { laryngealStudySets } from '../lib/laryngeal-anatomy.ts';
 import { forearmVascularStudySets } from '../lib/forearm-vascular-anatomy.ts';
+import {
+  orbitalMotorStudySets,
+  orbitalMotorReferences,
+} from '../lib/orbital-motor-studies.ts';
 
 export type DissectionView =
   | 'anterior'
@@ -1145,6 +1149,7 @@ for (const study of [
   ...ocularStudySets,
   ...laryngealStudySets,
   ...forearmVascularStudySets,
+  ...orbitalMotorStudySets,
 ]) {
   for (const [index, region] of study.regions.entries()) {
     const rule = { fmaIds: study.targetFmaIds };
@@ -1173,6 +1178,8 @@ for (const study of [
       );
   }
 }
+
+dissectionProfiles['head-neck'].references.push(...orbitalMotorReferences);
 
 export function matchesRule(s: BodyStructure, rule: TissueRule): boolean {
   return (

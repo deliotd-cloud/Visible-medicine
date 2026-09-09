@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 /* oxlint-disable react-hooks/rules-of-hooks, react-hooks/exhaustive-deps -- Deliberately injected hooks exercise the monitor outside React; actual components retain normal hook rules. */
 /* oxlint-disable typescript/unbound-method -- Tests retain original method identities and invoke retired methods with an explicit receiver. */
 import assert from 'node:assert/strict';
+import { historicalRecipeProfiles } from './recipe-history.mjs';
 import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
@@ -34,7 +35,7 @@ same(
   '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7',
 );
 same(
-  hash(JSON.stringify(dissectionProfiles)),
+  hash(JSON.stringify(historicalRecipeProfiles(dissectionProfiles))),
   'd127268c45678a49ff8eeae4c5622172d4549497aca33d5b3b19507557d83e9c',
 );
 for (const b of catalog.bundles)

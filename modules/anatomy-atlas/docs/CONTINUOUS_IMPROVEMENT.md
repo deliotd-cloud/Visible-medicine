@@ -12,6 +12,8 @@ Preserve source IDs/registration, clinical-review separation, private publishing
 
 The [reasoning pilot](REASONING_PRACTICE.md) adds a compact Practice option with source-bound alternatives and post-answer explanations across head/neck and limb regions. It now includes exact multipart source identities; all questions remain drafts. Use the generated current status for current counts. The [multimodal learning plan](MULTIMODAL_LEARNING_PLAN.md) records the user's provisional CT/MRI head atlas and eight X-ray/ultrasound course topics, with readiness and authority boundaries.
 
+Three [orbital motor-supply study views](ORBITAL_MOTOR_STUDIES.md) now reuse Dissect, Study together and source-pinned links. They pair the supplied CN III division/CN IV surfaces with their muscle targets as factual teaching, not measured nerve continuity or new geometry. Every previous recipe remains preserved.
+
 ## Ordered work
 
 1. **Software milestone verified:** reasoning pilot, identification regressions, handler migration, feedback gates, content/source preservation and production build. Save/publish the exact revision and record release/recovery evidence; independent educator and device acceptance remain open.

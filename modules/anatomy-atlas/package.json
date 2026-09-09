@@ -42,6 +42,7 @@
     "ocular-candidates:test": "node scripts/validate-ocular-candidates.mjs",
     "ocular:audit": "node scripts/audit-ocular-geometry.mjs",
     "ocular:test": "node scripts/validate-ocular.mjs",
+    "orbital-motor:test": "node scripts/validate-orbital-motor.mjs",
     "laryngeal:audit": "node scripts/audit-laryngeal-anatomy.mjs",
     "laryngeal:test": "node scripts/validate-laryngeal.mjs",
     "renderer:test": "node scripts/validate-scene-recovery.mjs",
