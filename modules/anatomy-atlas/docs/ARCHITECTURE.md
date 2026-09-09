@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Head/neck organ clinical teaching
+
+The [head-organ extension](HEAD_ORGAN_CLINICAL_CURRICULUM.md) adds ten definitions for 17 exact selections / 32 components. Ordered identity guards retain seven bilateral groups, unequal eyeball sets and one canaliculus-labelled surface per side. Its offline projection precedes pelvic history: 49 projections / 2,928 pinned edits. Current runtime/export and historical checks remain separate; no UI, geometry, schema, dependency or review migration.
+
 ## Pelvic organ clinical teaching
 
 The [pelvic extension](PELVIC_ORGAN_CLINICAL_CURRICULUM.md) adds seven definitions for ten exact single-component selections. Identity guards retain paired sides, adult-male tract scope and separately owned rectum. The offline projection precedes abdominal history: 48 projections / 2,894 pinned edits. Current runtime/export and historical comparisons stay separate; no UI, geometry, schema, dependency or review migration.

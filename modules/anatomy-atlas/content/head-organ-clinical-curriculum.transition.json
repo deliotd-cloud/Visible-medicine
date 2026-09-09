@@ -1,0 +1,142 @@
+{
+  "sourceCommit": "aad6ecfa6037eda46dfed1add919ebfbe315cf0d",
+  "reason": "Thirty-four Clinical/Pathology drafts for 17 exact non-dental head/neck organ selections; unequal eyeball component sets, source-labelled tear passages and all unresolved holds remain unchanged.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:pituitary-gland",
+      "fmaId": "FMA13889",
+      "sections": {
+        "pathology": "93db406284886482f895704790258e5ae0eb151d3f3ef33c7f67cf425fda124b",
+        "clinical": "83b28d764931f212fe89770788f122c7f452fa450a12a9e1a6ab55fa1e9c2ca0"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "fmaId": "FMA12514",
+      "sections": {
+        "pathology": "56c807800295c4fcabda281b23179a8598cbf54b3ea0691defab4260b26a3851",
+        "clinical": "6a67586c103d1bcd782b42d9964f58bd66cfcd5fd2971c66af35dfae242ed80d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+      "fmaId": "FMA12515",
+      "sections": {
+        "pathology": "a7536c00814fec3b81b1fe96fc6ae9aaa95456580d4f3ed6e54d0dc68d6e7229",
+        "clinical": "1b7f3fee61c5c9e951576e344b4102bd037d84717a114f46b1d857a25f63f07e"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:tongue",
+      "fmaId": "FMA54640",
+      "sections": {
+        "pathology": "4d718a4f893bbc115336b0cc7fbfd683492edc37686efb74edc95ddb55a3eac4",
+        "clinical": "e0a1a32a0caff166470582424be00a91ab35c927f52d3374c001e7b443a9868c"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
+      "fmaId": "FMA59102",
+      "sections": {
+        "pathology": "5607861b8faf0694485c2f4aa79657068d5e4d7b702e508c79a16e87498b27e0",
+        "clinical": "a3929d04892eb82656d37708422ff13375d16596f724ae41619305966cb830bb"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
+      "fmaId": "FMA59103",
+      "sections": {
+        "pathology": "de09c1f86690a0ca329a9548966a8e46c3ed015e352faf157e95b2c083296fc6",
+        "clinical": "b30fd1e9b6c1241d2ace935ad70054863b460dddadf1edfb78a4cb2214614a7d"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-submandibular-gland",
+      "fmaId": "FMA59802",
+      "sections": {
+        "pathology": "11302000e2d51cff1ce3c46c6a4dadd08c7af591f4e878616ece0aa5cd69b190",
+        "clinical": "005e96bcd34f96c5c229b3211d32131f2e3c7e55d5ac7b8ec01940173642e72b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-submandibular-gland",
+      "fmaId": "FMA59803",
+      "sections": {
+        "pathology": "d7af1ff0fad27e446b43ef5a462c1c5cdb05c481c8bdaf2662a52d9e1354ca4d",
+        "clinical": "4d72206be2156c687f697b9cb746c49a6d16cb16a8cf51c715afecc27879f32f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-sublingual-gland",
+      "fmaId": "FMA59804",
+      "sections": {
+        "pathology": "2bbfa0f4eac313678c64914a0f3a05d4a06771f404557d2c1227ff00b363ddd5",
+        "clinical": "5abaf11ddade737d1cccda07714affee89eb451d1a6b48ae6929c6797c0c70ed"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-sublingual-gland",
+      "fmaId": "FMA59805",
+      "sections": {
+        "pathology": "59c874bc0d1864681b856a7a767848203195b2eb38e2fb398226328cc708aa29",
+        "clinical": "9622394f1be98c7fbbb735006a6d69b60ea89dc43ab2cef37600a131c9767e9b"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:epiglottis",
+      "fmaId": "FMA55130",
+      "sections": {
+        "pathology": "b11e0fb3c407bf34f038fa755b3ec32cd2970497454f7144afede7715ac4886f",
+        "clinical": "16e066bfd0e1988052bb393d61a65ee44ad815259d50e59e57cc04626f426e91"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-canaliculus",
+      "fmaId": "FMA59582",
+      "sections": {
+        "pathology": "a3eee8e1d61920cd7850a823d4aaeb2903058bf3af9aa8aa7c5cefb4009bc792",
+        "clinical": "1377994b1471c1d6efd46efb112339f6d146451ffb8c24e4f19ee316d28f1f39"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-canaliculus",
+      "fmaId": "FMA59583",
+      "sections": {
+        "pathology": "e692553a57576933f407ad204731f5f21dd3d3040fb18d98afbf35d3bef8fcc2",
+        "clinical": "6bf6b6ebc163b589681b85caa7526b1bac4799cc1667fdbf17abc8be13bf6bf5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-nasolacrimal-duct",
+      "fmaId": "FMA59555",
+      "sections": {
+        "pathology": "abc18d0d9a0308ab35b19d5125823f64123b3f8c34fa36a07b8fed2a2743a34d",
+        "clinical": "37277f5ff192d09a1eea141c8670a023d69c4d2579eafcbd15940a13e3fabeaf"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
+      "fmaId": "FMA59556",
+      "sections": {
+        "pathology": "76969a1576fe560408c76742798ccf5147ac5bb12eb992cd9cd6dd87da333ad7",
+        "clinical": "f8e1de06969ab4bfe37b752a59c73320b0ca6293056e2bf54e25686a6b7e4f76"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
+      "fmaId": "FMA59545",
+      "sections": {
+        "pathology": "26de24ff7e0a55c48198bfc08ce6d8910aec3fe1138cda1bf0a9a79fdc8b4649",
+        "clinical": "911cd2269f7ed904070e121ae4cdb9cf48f38c9a5c090fd7328c90cea7b4e47f"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac",
+      "fmaId": "FMA59546",
+      "sections": {
+        "pathology": "b926f55c5d91e19f365443d6a4468e03f89cc5d46a62af15a57e17fc03240581",
+        "clinical": "77b4298bf37c2fdb2f4784b749a4ee499ffec4900ec2e1f17f383685e70b56b5"
+      }
+    }
+  ]
+}

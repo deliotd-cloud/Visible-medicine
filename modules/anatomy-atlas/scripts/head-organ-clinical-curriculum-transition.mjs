@@ -1,32 +1,30 @@
 import assert from 'node:assert/strict';
-import { authoringBeforeHeadOrganClinical } from './head-organ-clinical-curriculum-transition.mjs';
 import { readContentJson } from './content-contract-tools.mjs';
 import { createHash } from 'node:crypto';
 const hash = (v) =>
   createHash('sha256').update(JSON.stringify(v)).digest('hex');
 /** Offline historical comparison only. Runtime/export always use current teaching. */
-export async function authoringBeforePelvicOrganClinical(context) {
-  const { catalog } = context;
-  const api = await authoringBeforeHeadOrganClinical(context);
+export async function authoringBeforeHeadOrganClinical(context) {
+  const { api, catalog } = context;
   const before = await readContentJson(
-    'content/pelvic-organ-clinical-curriculum.before.json',
+    'content/head-organ-clinical-curriculum.before.json',
   );
   const after = await readContentJson(
-    'content/pelvic-organ-clinical-curriculum.transition.json',
+    'content/head-organ-clinical-curriculum.transition.json',
   );
   assert.equal(
     hash(before),
-    'a9740db49de08e306e6b976e33f539cba1d1c6b36afb62eefe4946ea892dbbb3',
+    '9516947a97f0caa0f353e0b22de02f0f16cedee5237365f35ef39ee219e80be6',
   );
   assert.equal(
     hash(after),
-    '1eede2572b1f6addc3e10bd8d2da67bf7be2263fa86e572dec5a6e95527ac671',
+    '90f368d4bddb3f4e729a5ba5a45a9ab73f8949eea3de3d672ce6fc266637831d',
   );
-  assert.equal(before.sourceCommit, '27a28be5b2b3746f5dba80c8cb32b9da35761db4');
+  assert.equal(before.sourceCommit, 'aad6ecfa6037eda46dfed1add919ebfbe315cf0d');
   assert.equal(after.sourceCommit, before.sourceCommit);
   assert.equal(before.scope, 'body');
-  assert.deepEqual(before.regions, ['pelvis']);
-  assert.equal(before.entries.length, 10);
+  assert.deepEqual(before.regions, ['head-neck']);
+  assert.equal(before.entries.length, 17);
   assert.deepEqual(
     after.entries.map((e) => [e.id, e.fmaId]),
     before.entries.map((e) => [e.id, e.fmaId]),
@@ -58,14 +56,14 @@ export async function authoringBeforePelvicOrganClinical(context) {
       assert.equal(
         hash(lesson),
         after.entries[i].sections[t],
-        'Unrecorded pelvic organ clinical edit: ' + s.id + ' / ' + t,
+        'Unrecorded head/neck organ clinical edit: ' + s.id + ' / ' + t,
       );
       const { readiness: _r, ...shown } = lesson;
       assert.deepEqual(shown, api.bodyContent(s, t));
       originals.set(s.id + '|' + t, e.sections[t]);
     }
   }
-  assert.equal(originals.size, 20);
+  assert.equal(originals.size, 34);
   const bodyLesson = (s, t) =>
     originals.has(s.id + '|' + t)
       ? structuredClone(originals.get(s.id + '|' + t))

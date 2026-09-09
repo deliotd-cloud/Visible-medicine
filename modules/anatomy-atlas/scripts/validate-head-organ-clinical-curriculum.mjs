@@ -6,7 +6,6 @@ import {
   readContentJson,
 } from './content-contract-tools.mjs';
 import { authoringBeforeHeadOrganClinical } from './head-organ-clinical-curriculum-transition.mjs';
-import { authoringBeforePelvicOrganClinical } from './pelvic-organ-clinical-curriculum-transition.mjs';
 import {
   curriculumHash,
   copyBeforeShoulderArmCurriculum,
@@ -23,13 +22,12 @@ const check = (v, l) => {
 const context = await contentContext(),
   { api, catalog, body } = context;
 const before = await readContentJson(
-  'content/pelvic-organ-clinical-curriculum.before.json',
+  'content/head-organ-clinical-curriculum.before.json',
 );
 const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
-const previous = await authoringBeforePelvicOrganClinical(context);
-const milestone = await authoringBeforeHeadOrganClinical(context);
+const previous = await authoringBeforeHeadOrganClinical(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
@@ -50,23 +48,89 @@ same(
 const omittedByFma = {};
 /** @type {Array<[string, string, string, string[], string, string[], string]>} */
 const expected = [
-  ['FMA15900', 'unpaired', 'partof', ['FJ3149'], 'pelvis', ['pelvis'], 'organ'],
-  ['FMA9600', 'unpaired', 'partof', ['FJ3139'], 'pelvis', ['pelvis'], 'organ'],
-  ['FMA7211', 'right', 'isa', ['FJ3142'], 'pelvis', ['pelvis'], 'organ'],
-  ['FMA7212', 'left', 'isa', ['FJ3138'], 'pelvis', ['pelvis'], 'organ'],
-  ['FMA19387', 'right', 'isa', ['FJ3143'], 'pelvis', ['pelvis'], 'organ'],
-  ['FMA19388', 'left', 'isa', ['FJ3137'], 'pelvis', ['pelvis'], 'organ'],
-  ['FMA14544', 'unpaired', 'isa', ['FJ2571'], 'pelvis', ['pelvis'], 'organ'],
-  ['FMA18256', 'right', 'isa', ['FJ3141'], 'pelvis', ['pelvis'], 'organ'],
-  ['FMA18257', 'left', 'isa', ['FJ3136'], 'pelvis', ['pelvis'], 'organ'],
-  ['FMA19667', 'unpaired', 'isa', ['FJ3148'], 'pelvis', ['pelvis'], 'organ'],
+  [
+    'FMA13889',
+    'unpaired',
+    'isa',
+    ['FJ1796'],
+    'head-neck',
+    ['head-neck'],
+    'organ',
+  ],
+  [
+    'FMA12514',
+    'right',
+    'partof',
+    [
+      'FJ1336',
+      'FJ1337',
+      'FJ1340',
+      'FJ1348',
+      'FJ1356',
+      'FJ1368',
+      'FJ1371',
+      'FJ1382',
+    ],
+    'head-neck',
+    ['head-neck'],
+    'organ',
+  ],
+  [
+    'FMA12515',
+    'left',
+    'partof',
+    [
+      'FJ1282',
+      'FJ1285',
+      'FJ1286',
+      'FJ1289',
+      'FJ1297',
+      'FJ1305',
+      'FJ1317',
+      'FJ1320',
+      'FJ1331',
+    ],
+    'head-neck',
+    ['head-neck'],
+    'organ',
+  ],
+  [
+    'FMA54640',
+    'unpaired',
+    'isa',
+    ['FJ2761'],
+    'head-neck',
+    ['head-neck'],
+    'organ',
+  ],
+  ['FMA59102', 'right', 'isa', ['FJ1350'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA59103', 'left', 'isa', ['FJ1299'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA59802', 'right', 'isa', ['FJ2768'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA59803', 'left', 'isa', ['FJ2766'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA59804', 'right', 'isa', ['FJ2767'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA59805', 'left', 'isa', ['FJ2765'], 'head-neck', ['head-neck'], 'organ'],
+  [
+    'FMA55130',
+    'unpaired',
+    'isa',
+    ['FJ2770'],
+    'head-neck',
+    ['head-neck'],
+    'organ',
+  ],
+  ['FMA59582', 'right', 'isa', ['FJ1349'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA59583', 'left', 'isa', ['FJ1298'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA59555', 'right', 'isa', ['FJ1353'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA59556', 'left', 'isa', ['FJ1302'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA59545', 'right', 'isa', ['FJ1360'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA59546', 'left', 'isa', ['FJ1309'], 'head-neck', ['head-neck'], 'organ'],
 ];
 const ids = expected.map((e) => e[0]),
   tabs = ['pathology', 'clinical'];
-same(api.pelvicOrganClinicalGroups.length, 7);
+same(api.headOrganClinicalGroups.length, 10);
 const byIdentity = (a, b) => a[0].localeCompare(b[0]);
 same(
-  api.pelvicOrganClinicalGroups.flatMap((g) => g.identities).sort(byIdentity),
+  api.headOrganClinicalGroups.flatMap((g) => g.identities).sort(byIdentity),
   [...expected].sort(byIdentity),
 );
 same(before.entries.map((e) => e.fmaId).sort(), [...ids].sort());
@@ -91,12 +155,12 @@ for (const [f, side, tree, files, region, regions, category] of expected) {
     [...files, ...(omittedByFma[f] ?? [])].sort((a, b) => a.localeCompare(b)),
   );
   same(e.omittedSourceFiles, omittedByFma[f] ?? []);
-  const group = api.pelvicOrganClinicalGroups.find((g) =>
+  const group = api.headOrganClinicalGroups.find((g) =>
     g.identities.some((i) => i[0] === f),
   );
   const record = body.find((r) => r.id === s.id);
   for (const t of tabs) {
-    const result = api.pelvicOrganClinicalLesson(s, t);
+    const result = api.headOrganClinicalLesson(s, t);
     same(result, api.bodyLesson(s, t));
     same(result.readiness, 'draft');
     same(result.body, group[t].body);
@@ -108,7 +172,7 @@ for (const [f, side, tree, files, region, regions, category] of expected) {
     if (s.coverageNote) check(result.note.includes(s.coverageNote));
     check(
       api
-        .pelvicOrganClinicalLesson({ ...s, coverageNote: 'Keep warning' }, t)
+        .headOrganClinicalLesson({ ...s, coverageNote: 'Keep warning' }, t)
         .note.includes('Keep warning'),
     );
     for (const url of result.citations) same(new URL(url).protocol, 'https:');
@@ -143,41 +207,50 @@ for (const [f, side, tree, files, region, regions, category] of expected) {
         : []),
       ...(s.regions.length > 1 ? [{ regions: [...s.regions].reverse() }] : []),
     ])
-      same(api.pelvicOrganClinicalLesson({ ...s, ...mutation }, t), undefined);
+      same(api.headOrganClinicalLesson({ ...s, ...mutation }, t), undefined);
   }
 }
 for (const s of catalog.structures)
   for (const t of api.contentTabs) {
     if (!ids.includes(s.fmaId) || !tabs.includes(t)) {
-      same(api.pelvicOrganClinicalLesson(s, t), undefined);
+      same(api.headOrganClinicalLesson(s, t), undefined);
       same(
-        milestone.bodyLesson(s, t),
+        api.bodyLesson(s, t),
         previous.bodyLesson(s, t),
         'Every unrelated section preserved',
       );
     }
   }
-const group = (k) => api.pelvicOrganClinicalGroups.find((g) => g.key === k);
-same(ids.length, 10);
-same(new Set(ids).size, 10);
+const group = (k) => api.headOrganClinicalGroups.find((g) => g.key === k);
+same(ids.length, 17);
+same(new Set(ids).size, 17);
 same(
   expected.reduce((n, e) => n + e[3].length, 0),
-  10,
+  32,
 );
-same(expected.filter((e) => e[6] === 'organ').length, 10);
+same(expected.filter((e) => e[6] === 'organ').length, 17);
 same(
   expected.filter((e) => e[2] === 'partof').map((e) => e[0]),
-  ['FMA15900', 'FMA9600'],
+  ['FMA12514', 'FMA12515'],
 );
+same(
+  [entry('FMA12514').sources.length, entry('FMA12515').sources.length],
+  [8, 9],
+);
+check(entry('FMA12515').sources.some((p) => p.file === 'FJ1282'));
+check(!entry('FMA12514').sources.some((p) => p.file === 'FJ1282'));
 for (const f of ids) {
-  same(entry(f).region, 'pelvis');
-  same(entry(f).regions, ['pelvis']);
-  same(entry(f).sources.length, 1);
+  same(entry(f).region, 'head-neck');
+  same(entry(f).regions, ['head-neck']);
 }
 for (const [key, right, left] of [
-  ['testes', 'FMA7211', 'FMA7212'],
-  ['seminal-vesicles', 'FMA19387', 'FMA19388'],
-  ['epididymides', 'FMA18256', 'FMA18257'],
+  ['eyeballs', 'FMA12514', 'FMA12515'],
+  ['lacrimal-glands', 'FMA59102', 'FMA59103'],
+  ['submandibular-glands', 'FMA59802', 'FMA59803'],
+  ['sublingual-glands', 'FMA59804', 'FMA59805'],
+  ['canaliculi', 'FMA59582', 'FMA59583'],
+  ['nasolacrimal-ducts', 'FMA59555', 'FMA59556'],
+  ['lacrimal-sacs', 'FMA59545', 'FMA59546'],
 ]) {
   same(
     group(key).identities.map((i) => [i[0], i[1]]),
@@ -186,74 +259,65 @@ for (const [key, right, left] of [
       [left, 'left'],
     ],
   );
-  check(entry(right).sources[0].file !== entry(left).sources[0].file);
+  check(
+    entry(right).sources.every(
+      (p) => !entry(left).sources.some((q) => q.file === p.file),
+    ),
+  );
 }
-check(group('bladder').pathology.body.includes('kidneys'));
-check(group('prostate').pathology.body.includes('non-cancerous'));
 check(
-  group('prostate').pathology.bullets.some((b) =>
-    b.includes('not reliably track prostate size'),
+  group('pituitary').pathology.body.includes(
+    'no clinical hormone-excess syndrome',
   ),
 );
 check(
-  group('testes').scope.includes(
-    'not a claim that the testis lies within the pelvic cavity',
+  group('eyeballs').scope.includes(
+    'Neither set independently identifies a retinal component',
   ),
 );
-check(group('testes').clinical.body.includes('999'));
+check(group('eyeballs').clinical.body.includes('immediate eye-care'));
+check(group('tongue').clinical.body.includes('three weeks'));
+check(group('lacrimal-glands').pathology.body.includes('upper outer'));
+check(group('submandibular-glands').pathology.body.includes('around meals'));
+check(group('sublingual-glands').pathology.body.includes('saliva-containing'));
+check(group('epiglottis').clinical.body.includes('999'));
 check(
-  group('seminal-vesicles').pathology.bullets.some((b) =>
-    b.includes('several parts'),
+  group('canaliculi').scope.includes(
+    'not independently modelled upper, lower and common',
   ),
 );
-check(group('rectum').pathology.body.includes('little inflammation'));
-check(group('rectum').clinical.body.includes('Tenesmus'));
 check(
-  group('epididymides').clinical.body.includes(
-    'must not be dismissed as infection',
-  ),
+  group('nasolacrimal-ducts').pathology.body.includes('congenital or acquired'),
 );
-check(group('epididymides').clinical.body.includes('999'));
-check(group('urethra').scope.includes('not female urethral anatomy'));
-check(
-  group('urethra').pathology.body.includes('inadequate bladder contraction'),
-);
-same(
-  catalog.structures
-    .filter((s) => s.sources.some((p) => p.file === 'FJ2571'))
-    .map((s) => s.fmaId),
-  ['FMA14544'],
-);
-check(!entry('FMA7201').sources.some((p) => p.file === 'FJ2571'));
-same(
-  api.bodyLesson(entry('FMA7201'), 'clinical'),
-  previous.bodyLesson(entry('FMA7201'), 'clinical'),
-);
+check(group('lacrimal-sacs').pathology.body.includes('inner eye corner'));
+for (const f of [
+  'FMA59582',
+  'FMA59583',
+  'FMA59555',
+  'FMA59556',
+  'FMA59545',
+  'FMA59546',
+])
+  same(entry(f).sources.length, 1);
 for (const tab of tabs) {
   same(api.bodyLesson(entry('FMA61970'), tab).readiness, 'pending');
-  same(api.pelvicOrganClinicalLesson(entry('FMA61970'), tab), undefined);
+  same(api.headOrganClinicalLesson(entry('FMA61970'), tab), undefined);
 }
-same(
-  catalog.structures.filter(
-    (s) =>
-      s.system === 'organs' &&
-      s.region === 'pelvis' &&
-      milestone.bodyLesson(s, 'clinical').readiness === 'pending',
-  ).length,
-  0,
+const pendingOrgans = catalog.structures.filter(
+  (s) =>
+    s.system === 'organs' &&
+    api.bodyLesson(s, 'clinical').readiness === 'pending',
 );
-same(
-  catalog.structures.filter(
-    (s) =>
-      s.system === 'organs' &&
-      milestone.bodyLesson(s, 'clinical').readiness === 'pending',
-  ).length,
-  45,
+same(pendingOrgans.length, 28);
+check(
+  pendingOrgans.every(
+    (s) => s.region === 'head-neck' && s.name.endsWith('tooth'),
+  ),
 );
 const legacyRightShoulder = ['FMA13322', 'FMA23130', 'FMA13395'];
 for (const f of legacyRightShoulder)
   for (const t of tabs) {
-    same(api.pelvicOrganClinicalLesson(entry(f), t), undefined);
+    same(api.headOrganClinicalLesson(entry(f), t), undefined);
     same(api.bodyLesson(entry(f), t), previous.bodyLesson(entry(f), t));
   }
 for (const t of tabs)
@@ -261,14 +325,14 @@ for (const t of tabs)
 for (const f of ['FMA45097', 'FMA45098'])
   for (const tab of tabs) {
     same(api.bodyLesson(entry(f), tab).readiness, 'pending');
-    same(api.pelvicOrganClinicalLesson(entry(f), tab), undefined);
+    same(api.headOrganClinicalLesson(entry(f), tab), undefined);
   }
 same(
   catalog.structures
     .filter(
       (s) =>
         s.system === 'skeleton' &&
-        milestone.bodyLesson(s, 'clinical').readiness === 'pending',
+        api.bodyLesson(s, 'clinical').readiness === 'pending',
     )
     .map((s) => s.fmaId)
     .sort(),
@@ -306,23 +370,49 @@ if (process.argv.includes('--source')) {
       sourceIndexChecks++;
     }
   }
+  check(
+    indexes.isa.some(
+      (r) =>
+        r[0] === 'FMA58082' &&
+        r[1] === 'anterior chamber of left eyeball' &&
+        r[2] === 'FJ1282',
+    ),
+  );
+  const ocularFiles = [
+    ...entry('FMA12514').sources,
+    ...entry('FMA12515').sources,
+  ].map((p) => p.file);
+  same(
+    indexes.isa.filter(
+      (r) => ocularFiles.includes(r[2]) && /retina/i.test(r[1]),
+    ).length,
+    0,
+  );
 }
 const negatives = [
+  ['FMA13889', 'clinical', 'body'],
+  ['FMA12514', 'pathology', 'body'],
+  ['FMA12515', 'clinical', 'body'],
+  ['FMA54640', 'pathology', 'readiness'],
+  ['FMA59102', 'clinical', 'body'],
+  ['FMA59103', 'pathology', 'body'],
+  ['FMA59802', 'clinical', 'body'],
+  ['FMA59803', 'pathology', 'body'],
+  ['FMA59804', 'clinical', 'body'],
+  ['FMA59805', 'pathology', 'body'],
+  ['FMA55130', 'clinical', 'body'],
+  ['FMA59582', 'pathology', 'body'],
+  ['FMA59583', 'clinical', 'body'],
+  ['FMA59555', 'pathology', 'body'],
+  ['FMA59556', 'clinical', 'body'],
+  ['FMA59545', 'pathology', 'body'],
+  ['FMA59546', 'clinical', 'body'],
+  ['FMA13889', 'anatomy', 'body'],
+  ['FMA55130', 'function', 'body'],
+  ['FMA12514', 'ct', 'body'],
   ['FMA15900', 'clinical', 'body'],
-  ['FMA9600', 'pathology', 'body'],
-  ['FMA7211', 'clinical', 'body'],
-  ['FMA7212', 'pathology', 'readiness'],
-  ['FMA19387', 'clinical', 'body'],
-  ['FMA19388', 'pathology', 'body'],
-  ['FMA14544', 'clinical', 'body'],
-  ['FMA18256', 'pathology', 'body'],
-  ['FMA18257', 'clinical', 'body'],
-  ['FMA19667', 'pathology', 'body'],
-  ['FMA15900', 'anatomy', 'body'],
-  ['FMA9600', 'function', 'body'],
-  ['FMA7211', 'ct', 'body'],
   ['FMA7197', 'clinical', 'body'],
-  ['FMA7088', 'clinical', 'body'],
+  ['FMA55680', 'clinical', 'body'],
   ['FMA45097', 'clinical', 'readiness'],
   ['FMA45098', 'clinical', 'readiness'],
   ['FMA61970', 'clinical', 'readiness'],
@@ -380,17 +470,16 @@ const counts = (t) =>
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter(
-          (s) => milestone.bodyLesson(s, t).readiness === r,
-        ).length,
+        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
+          .length,
       ],
     ),
   );
 for (const t of tabs)
   same(counts(t), {
-    draft: 657,
+    draft: 674,
     'identity-only': 0,
-    pending: 365,
+    pending: 348,
     'generated-identification': 0,
   });
 for (const t of ['ct', 'mri', 'ultrasound'])
@@ -423,16 +512,14 @@ for (const f of api.shoulderArmLessons.flatMap((l) => l.fmaIds))
 const report = {
   passed: true,
   checks,
-  bodyRepresentations: 10,
-  sourceComponents: 10,
-  lessonGroups: 7,
-  explicitTopicEdits: 20,
-  combinedPinnedCurriculumSections: 2894,
+  bodyRepresentations: 17,
+  sourceComponents: 32,
+  lessonGroups: 10,
+  explicitTopicEdits: 34,
+  combinedPinnedCurriculumSections: 2928,
   sourceIndexChecks,
   negativeCases: negatives.length,
-  historicalMilestoneReadiness: Object.fromEntries(
-    api.contentTabs.map((t) => [t, counts(t)]),
-  ),
+  bodyReadiness: Object.fromEntries(api.contentTabs.map((t) => [t, counts(t)])),
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,
@@ -440,10 +527,10 @@ const report = {
   browserTesting: false,
   copyAndRecipeHash: curriculumHash(copy(api)),
   limitations:
-    'Original pelvic organ clinical drafts; exact paired sides, adult-male source scope and separately owned rectum remain unchanged. No female anatomy, validated lumen, perfusion, fertility, disease simulation, procedural plan, patient scan or clinical approval.',
+    'Original head/neck organ clinical drafts; unequal eyeball sets and independently labelled tear passages remain exact. No complete retinal/ocular-layer dissection, validated lumen, paediatric anatomy, physiological simulation, diagnosis, procedure, patient scan or clinical approval.',
 };
 await writeFile(
-  new URL('docs/pelvic-organ-clinical-curriculum-validation.json', contentRoot),
+  new URL('docs/head-organ-clinical-curriculum-validation.json', contentRoot),
   JSON.stringify(report, null, 2) + '\n',
 );
 console.log(JSON.stringify(report, null, 2));

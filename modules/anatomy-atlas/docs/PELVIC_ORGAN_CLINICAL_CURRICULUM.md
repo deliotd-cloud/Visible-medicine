@@ -1,5 +1,7 @@
 # Pelvic organ clinical teaching
 
+Historical milestone: the subsequent [head/neck organ extension](HEAD_ORGAN_CLINICAL_CURRICULUM.md) brings current Clinical/Pathology to 674 draft / 348 pending. Counts and next steps below describe the pelvic delivery; historical comparisons remain separate from current runtime/export tests.
+
 ## Scope — 9 September 2026
 
 Twenty original Clinical/Pathology drafts cover ten existing pelvic-primary selections in seven groups. They use the existing notes panels: no extra controls, geometry, dependencies, review state or database changes.

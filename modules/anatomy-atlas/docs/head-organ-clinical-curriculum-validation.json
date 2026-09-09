@@ -1,14 +1,14 @@
 {
   "passed": true,
-  "checks": 17082,
-  "bodyRepresentations": 10,
-  "sourceComponents": 10,
-  "lessonGroups": 7,
-  "explicitTopicEdits": 20,
-  "combinedPinnedCurriculumSections": 2894,
-  "sourceIndexChecks": 10,
-  "negativeCases": 26,
-  "historicalMilestoneReadiness": {
+  "checks": 17511,
+  "bodyRepresentations": 17,
+  "sourceComponents": 32,
+  "lessonGroups": 10,
+  "explicitTopicEdits": 34,
+  "combinedPinnedCurriculumSections": 2928,
+  "sourceIndexChecks": 32,
+  "negativeCases": 34,
+  "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
       "identity-only": 2,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 657,
+      "draft": 674,
       "identity-only": 0,
-      "pending": 365,
+      "pending": 348,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 657,
+      "draft": 674,
       "identity-only": 0,
-      "pending": 365,
+      "pending": 348,
       "generated-identification": 0
     },
     "quiz": {
@@ -64,5 +64,5 @@
   "scanContentAdded": false,
   "browserTesting": false,
   "copyAndRecipeHash": "d385b6e1bd836c0dd6ff25ff500a9dc0158231e884acc2bd20bc2657a27784e1",
-  "limitations": "Original pelvic organ clinical drafts; exact paired sides, adult-male source scope and separately owned rectum remain unchanged. No female anatomy, validated lumen, perfusion, fertility, disease simulation, procedural plan, patient scan or clinical approval."
+  "limitations": "Original head/neck organ clinical drafts; unequal eyeball sets and independently labelled tear passages remain exact. No complete retinal/ocular-layer dissection, validated lumen, paediatric anatomy, physiological simulation, diagnosis, procedure, patient scan or clinical approval."
 }

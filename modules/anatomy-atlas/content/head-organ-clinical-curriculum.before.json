@@ -1,0 +1,567 @@
+{
+  "sourceCommit": "aad6ecfa6037eda46dfed1add919ebfbe315cf0d",
+  "copyAndRecipeHash": "9e3c749f7c6f39cc63f9e296732ecc52b9d1fa5e38931672f794258d8c51debf",
+  "scope": "body",
+  "regions": [
+    "head-neck"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:pituitary-gland",
+      "fmaId": "FMA13889",
+      "name": "Pituitary gland",
+      "category": "organ",
+      "side": "unpaired",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1796"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1796"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "fmaId": "FMA12514",
+      "name": "Right eyeball",
+      "category": "organ",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "partof",
+      "files": [
+        "FJ1336",
+        "FJ1337",
+        "FJ1340",
+        "FJ1348",
+        "FJ1356",
+        "FJ1368",
+        "FJ1371",
+        "FJ1382"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1336",
+        "FJ1337",
+        "FJ1340",
+        "FJ1348",
+        "FJ1356",
+        "FJ1368",
+        "FJ1371",
+        "FJ1382"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+      "fmaId": "FMA12515",
+      "name": "Left eyeball",
+      "category": "organ",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "partof",
+      "files": [
+        "FJ1282",
+        "FJ1285",
+        "FJ1286",
+        "FJ1289",
+        "FJ1297",
+        "FJ1305",
+        "FJ1317",
+        "FJ1320",
+        "FJ1331"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1282",
+        "FJ1285",
+        "FJ1286",
+        "FJ1289",
+        "FJ1297",
+        "FJ1305",
+        "FJ1317",
+        "FJ1320",
+        "FJ1331"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:tongue",
+      "fmaId": "FMA54640",
+      "name": "Tongue",
+      "category": "organ",
+      "side": "unpaired",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2761"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2761"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-gland",
+      "fmaId": "FMA59102",
+      "name": "Right lacrimal gland",
+      "category": "organ",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1350"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1350"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-gland",
+      "fmaId": "FMA59103",
+      "name": "Left lacrimal gland",
+      "category": "organ",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1299"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1299"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-submandibular-gland",
+      "fmaId": "FMA59802",
+      "name": "Right submandibular gland",
+      "category": "organ",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2768"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2768"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-submandibular-gland",
+      "fmaId": "FMA59803",
+      "name": "Left submandibular gland",
+      "category": "organ",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2766"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2766"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-sublingual-gland",
+      "fmaId": "FMA59804",
+      "name": "Right sublingual gland",
+      "category": "organ",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2767"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2767"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-sublingual-gland",
+      "fmaId": "FMA59805",
+      "name": "Left sublingual gland",
+      "category": "organ",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2765"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2765"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:unpaired:organ:epiglottis",
+      "fmaId": "FMA55130",
+      "name": "Epiglottis",
+      "category": "organ",
+      "side": "unpaired",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2770"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2770"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-canaliculus",
+      "fmaId": "FMA59582",
+      "name": "Right lacrimal canaliculus",
+      "category": "organ",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1349"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1349"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-canaliculus",
+      "fmaId": "FMA59583",
+      "name": "Left lacrimal canaliculus",
+      "category": "organ",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1298"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1298"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-nasolacrimal-duct",
+      "fmaId": "FMA59555",
+      "name": "Right nasolacrimal duct",
+      "category": "organ",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1353"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1353"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
+      "fmaId": "FMA59556",
+      "name": "Left nasolacrimal duct",
+      "category": "organ",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1302"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1302"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
+      "fmaId": "FMA59545",
+      "name": "Right lacrimal sac",
+      "category": "organ",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1360"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1360"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac",
+      "fmaId": "FMA59546",
+      "name": "Left lacrimal sac",
+      "category": "organ",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1309"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1309"
+      ],
+      "omittedSourceFiles": []
+    }
+  ]
+}

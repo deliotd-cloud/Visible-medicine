@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Head/neck organ teaching
+
+Review [34 new drafts](HEAD_ORGAN_CLINICAL_CURRICULUM.md) for endocrine mechanisms, lens/retinal distinctions, visual urgency, oral lesions, salivary disease, tear-production/drainage levels and epiglottitis. Check UK emergency wording, adult/child applicability and incomplete ocular/duct layers. Source-triangle agreement is not validated pathology, visual function, airway safety, a patent lumen, operative planning or patient imaging.
+
 ## Pelvic organ teaching
 
 Review [20 new drafts](PELVIC_ORGAN_CLINICAL_CURRICULUM.md) for urinary infection/retention, BPH distinctions, torsion urgency versus epididymal infection, non-localising seminal-tract symptoms and rectal inflammatory/radiation injury. Verify paired source sides, adult-male scope and UK emergency wording. No female/paediatric geometry, fertility assessment, perfusion, measured lumen, procedure, scan registration or clinical acceptance is provided.
