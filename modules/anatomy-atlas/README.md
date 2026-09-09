@@ -1,6 +1,8 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
-Start with [generated current status](docs/CURRENT_STATUS.md), [the ordered improvement plan](docs/CONTINUOUS_IMPROVEMENT.md) and [the CT/MRI/X-ray/US and course-linking plan](docs/MULTIMODAL_LEARNING_PLAN.md). The [shoulder/arm reasoning pilot](docs/REASONING_PRACTICE.md) is inside Practice, with post-answer explanations. All teaching remains draft. Cumulative extension paragraphs below are historical milestones, not current totals.
+The [learning-resource linking contract](docs/LEARNING_RESOURCE_CONTRACT.md) now supports typed CT/MRI/X-ray/US annotations and lecture/quiz anchors, with exact-source bindings and separate Atlas/lecture eligibility gates. Explicit bundles, expiry and revocation are tested policy foundations, not a live billing system. No external resources or extra controls are enabled yet; the existing provisional projects retain their review/privacy restrictions.
+
+Start with [generated current status](docs/CURRENT_STATUS.md), [the ordered improvement plan](docs/CONTINUOUS_IMPROVEMENT.md) and [the CT/MRI/X-ray/US and course-linking plan](docs/MULTIMODAL_LEARNING_PLAN.md). The [shoulder/arm and forearm reasoning pilot](docs/REASONING_PRACTICE.md) is inside Practice, with 16 source-bound concepts and post-answer explanations. All teaching remains draft. Cumulative extension paragraphs below are historical milestones, not current totals.
 
 The [lower-limb vessel extension](docs/LOWER_LIMB_VESSEL_CLINICAL_CURRICULUM.md) adds 64 Clinical/Pathology drafts for 32 thigh, leg and foot selections, without new controls. Each tab now has 1,018 draft / four held entries. This is introductory coverage, not clinical approval. Run `npm run lower-limb-vessel-clinical-curriculum:test -- --source`. Earlier totals below are historical.
 

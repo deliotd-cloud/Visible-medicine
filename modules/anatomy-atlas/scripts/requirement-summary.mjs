@@ -1,6 +1,13 @@
 // The human summary and JSON inventory are generated and freshness-checked together.
 export function renderRequirementSummary(report) {
-  const { anatomy, study, teaching, practice, assetsAndRights } = report;
+  const {
+    anatomy,
+    study,
+    teaching,
+    practice,
+    assetsAndRights,
+    learningIntegration,
+  } = report;
   const names = {
     anatomy: 'Anatomy',
     function: 'Function',
@@ -27,6 +34,7 @@ Generated from the actual catalogue, teaching resolver, dissection profiles and 
 - Dedicated shoulder: ${anatomy.shoulderRepresentations} representations / ${anatomy.shoulderSourceParts} source parts, overlapping the body catalogue.
 - ${study.stages} dissection stages and ${study.focuses} focuses. These operate on supplied surfaces; they do not establish complete anatomy.
 - Find/name identification practice; ${practice.reasoning.concepts} draft reasoning concepts bound to ${practice.reasoning.exactRepresentations} representations in ${practice.reasoning.regions.join(', ')}. One concept per session, without contralateral repetition. See [practice scope and tests](REASONING_PRACTICE.md).
+- [Learning-resource contract](LEARNING_RESOURCE_CONTRACT.md): version ${learningIntegration.contractVersion}, ${learningIntegration.supportedKinds.join('/')} anchors; ${learningIntegration.configuredResources} configured resources / ${learningIntegration.configuredCorrespondences} correspondences. Read-only linking infrastructure, not a connected external viewer or publication approval.
 
 ## Body teaching readiness
 

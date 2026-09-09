@@ -4,6 +4,8 @@ Current teaching totals are generated in [CURRENT_STATUS.md](CURRENT_STATUS.md).
 
 ## Delivered scope
 
+The separate [learning-resource v1 contract](LEARNING_RESOURCE_CONTRACT.md) links scope-specific anatomy to resource/anchor revisions without changing this v2 teaching-seed schema. It imports no clinical approvals and currently configures no external resources.
+
 The version-2 draft seed separates source representations from topic text and clinical approval. Existing body and shoulder identities, source bindings and clinical-review boundaries are preserved. Interactive reasoning questions remain a separate practice inventory, not promoted Quiz-tab lesson text or validated exam records. The [multimodal plan](MULTIMODAL_LEARNING_PLAN.md) does not change this schema or add an imaging/lecture database.
 
 ## Record identity and multi-part geometry

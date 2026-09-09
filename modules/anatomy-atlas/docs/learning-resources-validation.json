@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "checks": 229,
+  "rejectionCases": 41,
+  "entitlementChecks": 51,
+  "anatomyRepresentations": 1031,
+  "resourceKinds": [
+    "ct",
+    "mri",
+    "xray",
+    "ultrasound",
+    "lecture",
+    "quiz"
+  ],
+  "productionResources": 0,
+  "productionCorrespondences": 0,
+  "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+  "shoulderManifestSha256": "619e3ab84712487bd032b84a8f8b52f94d10883d8db7798057049bab287de857",
+  "features": [
+    "Strict versioned transport",
+    "Exact multipart source/representation binding",
+    "Stable modality and lecture anchors",
+    "Bidirectional lookups",
+    "Current host-policy gates with default denial",
+    "Separate Atlas/lecture products; explicit bundles; expiry/revocation",
+    "Detached data and deterministic locators",
+    "No URL/coordinate forwarding"
+  ],
+  "boundaries": {
+    "clinicalApproval": false,
+    "rightsApproval": false,
+    "patientDataImported": false,
+    "imagingRegistration": false,
+    "authenticationImplemented": false,
+    "externalViewerConnected": false,
+    "browserTesting": false
+  }
+}

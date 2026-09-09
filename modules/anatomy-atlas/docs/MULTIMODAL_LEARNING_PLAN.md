@@ -2,6 +2,8 @@
 
 Status: integration proposal and related-project inventory, recorded 9 September 2026. No external project, patient image, presentation or clinical approval was changed/imported. This plan is not a deployed connection.
 
+The [v1 linking contract](LEARNING_RESOURCE_CONTRACT.md) is now implemented and tested: strict resource/annotation/slide locators, exact source bindings, forward/reverse lookups and current host-policy gates. The production registry has no resources or correspondences; the actual viewers, course player and owner-approved manifests still need integration. The conceptual tables below describe the broader target, not a claim that spatial synchronization is implemented.
+
 ## Existing projects to reuse
 
 The user's **Visible medicine— CT Head Atlas** task owns the provisional CT and MRI head atlas. Do not create a competing head atlas here. The latest accessible task preview lagged behind its saved project state, so the local `work/segmentation/LATEST_ATLAS_STATE.json` was also checked read-only. The following is a dated observation, not a permanent release status:
@@ -60,6 +62,8 @@ Deliver semantic selection/deep links first. Later crosshair or segmentation syn
 X-ray is a projection and ultrasound may be a freehand plane/time sequence. Do not apply a generic CT-volume crosshair assumption to them. Exploded mesh positions, display centres and label anchors must never be exported as patient-space coordinates.
 
 ## Implementation order and release gates
+
+Commercial access clarification (2026-09-09): Atlas access and paid lecture/section access are independent. An Atlas-only subscriber may see an approved public course promotion but cannot receive protected lecture content. Lecture-only access likewise does not unlock paid Atlas functionality. Bundle inclusion must be explicit. The [implemented contract](LEARNING_RESOURCE_CONTRACT.md#separate-atlas-and-lecture-subscriptions) tests both sides' current access, expiry and revocation; actual website authentication/billing and a separate public catalogue remain future integration work.
 
 1. Agree shared resource/correspondence schema and stable course/annotation anchors with the owning projects. Reuse their actual manifests and objective IDs; no duplicate head dataset or course production.
 2. Add a small, tested read-only resource registry with only rights-cleared, eligible links. Test missing/stale/deleted anchors, side/age mismatch, unavailable resources and current review state.

@@ -75,8 +75,10 @@ const create = (
   random = () => 0.314159,
 ) => api.createPracticeSession(scope, bundles, options(extra), random);
 const bound = all.filter(api.reasoningConceptFor);
-same(api.reasoningConcepts.length, 10);
-same(bound.length, 20);
+same(api.reasoningConcepts.length, 16);
+same(bound.length, 32);
+same(bound.filter((s) => s.region === 'shoulder-arm').length, 20);
+same(bound.filter((s) => s.region === 'forearm').length, 12);
 same(
   hash(catalogBytes),
   '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7',
@@ -86,6 +88,7 @@ for (const concept of api.reasoningConcepts) {
   same(concept.readiness, 'draft');
   same(concept.revision, 1);
   same(concept.bindings.length, 2);
+  same(new Set(concept.bindings.map((b) => b.side)).size, 2);
   same(new Set(concept.distractors).size, 3);
   check(!concept.distractors.includes(concept.key));
   check(concept.prompt.length > 40 && concept.explanation.length > 40);
@@ -100,6 +103,7 @@ for (const concept of api.reasoningConcepts) {
     );
     const s = bound.find((s) => s.fmaId === binding.fma);
     check(s && s.laterality === binding.side);
+    same(s.region, concept.region);
     same(api.reasoningConceptFor(s)?.key, concept.key);
     same(
       api.reasoningConceptFor({
@@ -117,6 +121,8 @@ for (const concept of api.reasoningConcepts) {
       { category: 'unknown' },
       { sourceTree: 'partof' },
       { region: 'hand' },
+      { region: concept.region === 'forearm' ? 'shoulder-arm' : 'forearm' },
+      { regions: [concept.region === 'forearm' ? 'shoulder-arm' : 'forearm'] },
       { regions: ['shoulder-arm', 'hand'] },
       { regions: ['hand'] },
       { sources: [] },
@@ -147,13 +153,15 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
       'UI availability equals actual unique concept count',
     );
     same(api.practiceCanStart(scope, 'reason'), count > 0);
-    if (region !== 'whole-body' && region !== 'shoulder-arm')
+    if (!['whole-body', 'shoulder-arm', 'forearm'].includes(region))
       same(session, null, 'No unbound regional question is invented');
     if (!session) continue;
-    same(session.questions.length, 10);
+    const expected =
+      region === 'whole-body' ? 16 : region === 'forearm' ? 6 : 10;
+    same(session.questions.length, expected);
     same(
       new Set(session.questions.map((q) => q.reasoning.key)).size,
-      10,
+      expected,
       'Do not repeat contralateral versions',
     );
     for (const q of session.questions) {
@@ -211,19 +219,19 @@ for (const count of [1, 5, 10, 20, 100, NaN, Infinity, -10]) {
   same(
     create(all, { count }).questions.length,
     Math.min(
-      10,
+      16,
       Math.max(1, Math.min(20, Math.floor(Number.isFinite(count) ? count : 5))),
     ),
   );
 }
 for (const value of [NaN, Infinity, -Infinity, -1, 0, 1, 20])
   check(
-    create(all, {}, loaded, () => value)?.questions.length === 10,
+    create(all, {}, loaded, () => value)?.questions.length === 16,
     'Random edge remains finite',
   );
 same(create(all, { id: 0 }), null);
 same(create(all, { id: 1.5 }), null);
-const session = create();
+const session = create(all, { count: 10 });
 const markup = (session, index) =>
   renderToStaticMarkup(
     createElement(api.ReasoningFeedback, { session, index }),
@@ -509,8 +517,9 @@ const report = {
   schemaVersion: 1,
   checks,
   negativeIdentityCases: negativeCases,
-  concepts: 10,
-  exactRepresentations: 20,
+  concepts: api.reasoningConcepts.length,
+  exactRepresentations: bound.length,
+  regionalConcepts: { 'shoulder-arm': 10, forearm: 6 },
   sourceHashes: {
     catalog: hash(catalogBytes),
     officialElementIndex: hash(indexBytes),

@@ -1,6 +1,8 @@
 import type { BodyStructure } from '../app/body-types';
+import { forearmReasoningConcepts } from './forearm-reasoning';
 export interface ReasoningConcept {
   key: string;
+  region: 'shoulder-arm' | 'forearm';
   bindings: readonly { fma: string; side: 'right' | 'left'; file: string }[];
   prompt: string;
   explanation: string;
@@ -14,6 +16,7 @@ export interface ReasoningConcept {
 export const reasoningConcepts: readonly ReasoningConcept[] = [
   {
     key: 'supraspinatus',
+    region: 'shoulder-arm',
     bindings: [
       {
         fma: 'FMA32544',
@@ -42,6 +45,7 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   },
   {
     key: 'infraspinatus',
+    region: 'shoulder-arm',
     bindings: [
       {
         fma: 'FMA32547',
@@ -70,6 +74,7 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   },
   {
     key: 'subscapularis',
+    region: 'shoulder-arm',
     bindings: [
       {
         fma: 'FMA13414',
@@ -98,6 +103,7 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   },
   {
     key: 'teres-minor',
+    region: 'shoulder-arm',
     bindings: [
       {
         fma: 'FMA32553',
@@ -126,6 +132,7 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   },
   {
     key: 'teres-major',
+    region: 'shoulder-arm',
     bindings: [
       {
         fma: 'FMA32551',
@@ -154,6 +161,7 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   },
   {
     key: 'serratus-anterior',
+    region: 'shoulder-arm',
     bindings: [
       {
         fma: 'FMA13398',
@@ -182,6 +190,7 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   },
   {
     key: 'brachialis',
+    region: 'shoulder-arm',
     bindings: [
       {
         fma: 'FMA37668',
@@ -210,6 +219,7 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   },
   {
     key: 'coracobrachialis',
+    region: 'shoulder-arm',
     bindings: [
       {
         fma: 'FMA37665',
@@ -238,6 +248,7 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   },
   {
     key: 'biceps-long-head',
+    region: 'shoulder-arm',
     bindings: [
       {
         fma: 'FMA37686',
@@ -266,6 +277,7 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   },
   {
     key: 'triceps-long-head',
+    region: 'shoulder-arm',
     bindings: [
       {
         fma: 'FMA37699',
@@ -292,24 +304,26 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
     readiness: 'draft',
     revision: 1,
   },
+  ...forearmReasoningConcepts,
 ];
 export function reasoningConceptFor(s: BodyStructure) {
   if (
     s.system !== 'muscles' ||
     s.category !== 'muscle' ||
     s.sourceTree !== 'isa' ||
-    s.region !== 'shoulder-arm' ||
     s.regions.length !== 1 ||
-    s.regions[0] !== 'shoulder-arm' ||
     s.sources.length !== 1
   )
     return undefined;
-  return reasoningConcepts.find((c) =>
-    c.bindings.some(
-      (b) =>
-        b.fma === s.fmaId &&
-        b.side === s.laterality &&
-        b.file === s.sources[0].file,
-    ),
+  return reasoningConcepts.find(
+    (c) =>
+      s.region === c.region &&
+      s.regions[0] === c.region &&
+      c.bindings.some(
+        (b) =>
+          b.fma === s.fmaId &&
+          b.side === s.laterality &&
+          b.file === s.sources[0].file,
+      ),
   );
 }

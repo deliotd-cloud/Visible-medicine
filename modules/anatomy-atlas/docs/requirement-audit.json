@@ -7,11 +7,16 @@
     "package-lock.json": "a6a8277be904e06c3735ce00f9148372937a94209cb6219cb94487efc1ae74e5",
     "content/schema/anatomy-structure.schema.json": "0a8e76b6a98e23e25f60a2d9269664dc42974b7a349c63b77e4615fa46887826",
     "content/review-revisions.json": "abc8f9410e00b41282e149d2bb6020d96ad6367aed769888519940c4c24118a0",
+    "content/learning-resources.v1.json": "799fec602114a944b4f675d341b445982dac56786cca9b5800d52db7d95899e5",
+    "lib/learning-resource-types.ts": "c210bbf9279ec7f1ec22d65876041c724f56cc0a9aa4626e80a2084ec2034f2f",
+    "lib/learning-resources.ts": "61009f9c571d07d394c54d47fa5f3f05137b774f28aa92fbb20105945559fb91",
+    "lib/learning-anatomy.ts": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3",
+    "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
     "resolvedContentAndRecipeData": "fd50acb85998726b79cf3ecb646acf9897117b50f6768e5ea65bd6c89dfb629c",
     "explicitTopicReadiness": "51f5f10de5a09021a0445fc3262b6996db78f8282dcc80907518e7716cf6929a",
-    "reasoningQuestionData": "e63933a0b8e7fb49676bd032a3300c9ab60dbf7e2d0b212ed0c9632f854195d9"
+    "reasoningQuestionData": "f4003687431080f6978cfd5fec6400cb0ee309d0a2c62119251558e3d647089e"
   },
   "anatomy": {
     "bodyRepresentations": 1022,
@@ -98,14 +103,30 @@
       "name"
     ],
     "reasoning": {
-      "concepts": 10,
-      "exactRepresentations": 20,
+      "concepts": 16,
+      "exactRepresentations": 32,
       "regions": [
-        "shoulder-arm"
+        "shoulder-arm",
+        "forearm"
       ],
       "readiness": "draft",
       "limitation": "Separate from Quiz-tab notes. Authored anatomical-reasoning pilot, not educator-approved or a validated assessment."
     }
+  },
+  "learningIntegration": {
+    "contractVersion": 1,
+    "supportedKinds": [
+      "ct",
+      "mri",
+      "xray",
+      "ultrasound",
+      "lecture",
+      "quiz"
+    ],
+    "configuredResources": 0,
+    "configuredCorrespondences": 0,
+    "liveViewerIntegration": false,
+    "limitation": "Strict read-only transport and source/anchor registry with host-policy gates. Configured records are not approvals. No external resources are configured at this milestone."
   },
   "teaching": {
     "classification": {

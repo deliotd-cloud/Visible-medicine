@@ -1,13 +1,17 @@
 {
   "schemaVersion": 1,
-  "checks": 1334,
-  "negativeIdentityCases": 220,
-  "concepts": 10,
-  "exactRepresentations": 20,
+  "checks": 2075,
+  "negativeIdentityCases": 416,
+  "concepts": 16,
+  "exactRepresentations": 32,
+  "regionalConcepts": {
+    "shoulder-arm": 10,
+    "forearm": 6
+  },
   "sourceHashes": {
     "catalog": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
     "officialElementIndex": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf",
-    "questions": "e63933a0b8e7fb49676bd032a3300c9ab60dbf7e2d0b212ed0c9632f854195d9"
+    "questions": "f4003687431080f6978cfd5fec6400cb0ee309d0a2c62119251558e3d647089e"
   },
   "verification": [
     "Official complete FMA/file membership",

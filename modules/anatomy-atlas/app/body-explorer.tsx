@@ -1517,7 +1517,7 @@ export default function BodyExplorer({
                         Name isolated structure
                       </SelectItem>
                       <SelectItem value="reason">
-                        Apply anatomy · shoulder pilot
+                        Apply anatomy · draft
                       </SelectItem>
                     </SelectContent>
                   </Select>
@@ -1554,7 +1554,7 @@ export default function BodyExplorer({
                       ? `${availableQuestions} source-bound draft questions available. One question per concept; both sides are not repeated. `
                       : `${practiceEligible.length} loaded candidates. `}
                     {practiceMode === 'reason' && practiceSampling !== 'focus'
-                      ? 'Uses eligible shoulder/arm concepts, without the landmark size preference.'
+                      ? 'Uses eligible shoulder/arm and forearm concepts, without the landmark size preference.'
                       : practiceSampling === 'landmarks'
                         ? 'Emphasises larger surfaces.'
                         : practiceSampling === 'focus'
@@ -1568,8 +1568,9 @@ export default function BodyExplorer({
                       No complete question set is loaded in this scope. Each
                       question needs its target and at least one same-side
                       alternative. Enable the relevant muscles in{' '}
-                      <a href="/regions/shoulder-arm">Shoulder &amp; arm</a>, or
-                      use an identification mode.
+                      <a href="/regions/shoulder-arm">Shoulder &amp; arm</a> or{' '}
+                      <a href="/regions/forearm">Forearm</a>, or use an
+                      identification mode.
                     </p>
                   )}
                   <Button

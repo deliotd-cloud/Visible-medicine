@@ -16,7 +16,9 @@ const bundled = await build({
     contents: `export { bodyContent, bodyLesson } from './app/body-content.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';
-export { reasoningConcepts, reasoningConceptFor } from './lib/reasoning-questions.ts';`,
+export { reasoningConcepts, reasoningConceptFor } from './lib/reasoning-questions.ts';
+export { createLearningRegistry, parseLearningDocument, learningResourceKinds } from './lib/learning-resources.ts';
+export { learningAnatomyRepresentations } from './lib/learning-anatomy.ts';`,
     resolveDir: fileURLToPath(root),
     sourcefile: 'requirements-audit-entry.ts',
     loader: 'ts',
@@ -33,6 +35,10 @@ const {
   dissectionProfiles,
   reasoningConcepts,
   reasoningConceptFor,
+  createLearningRegistry,
+  parseLearningDocument,
+  learningResourceKinds,
+  learningAnatomyRepresentations,
 } = await import(
   'data:text/javascript;base64,' +
     Buffer.from(bundled.outputFiles[0].text).toString('base64')
@@ -40,6 +46,14 @@ const {
 const catalogPath = 'public/models/bodyparts3d/full-body/catalog.json';
 const catalog = await json(catalogPath);
 const manifest = await json('public/models/bodyparts3d/manifest.json');
+const learning = parseLearningDocument(
+  await json('content/learning-resources.v1.json'),
+);
+assert(learning, 'Invalid learning-resource contract');
+createLearningRegistry(
+  learning,
+  learningAnatomyRepresentations(catalog, manifest, shoulder),
+);
 const revisions = await json('content/review-revisions.json');
 const licenses = await json('LICENSES/dependency-license-audit.json');
 const lock = await json('package-lock.json');
@@ -133,6 +147,11 @@ for (const path of [
   'package-lock.json',
   'content/schema/anatomy-structure.schema.json',
   'content/review-revisions.json',
+  'content/learning-resources.v1.json',
+  'lib/learning-resource-types.ts',
+  'lib/learning-resources.ts',
+  'lib/learning-anatomy.ts',
+  'lib/learning-entitlements.ts',
   'public/brand/visible-medicine-lockup-dark.png',
   'public/brand/visible-medicine-lockup-light.png',
 ])
@@ -223,6 +242,15 @@ const report = {
       limitation:
         'Separate from Quiz-tab notes. Authored anatomical-reasoning pilot, not educator-approved or a validated assessment.',
     },
+  },
+  learningIntegration: {
+    contractVersion: learning.schemaVersion,
+    supportedKinds: learningResourceKinds,
+    configuredResources: learning.resources.length,
+    configuredCorrespondences: learning.links.length,
+    liveViewerIntegration: false,
+    limitation:
+      'Strict read-only transport and source/anchor registry with host-policy gates. Configured records are not approvals. No external resources are configured at this milestone.',
   },
   teaching: {
     classification: {
