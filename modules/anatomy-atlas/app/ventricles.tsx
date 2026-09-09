@@ -37,6 +37,16 @@ import {
   brainstemReferences,
   brainstemPresets,
 } from '@/lib/brainstem';
+import {
+  cerebralCatalog,
+  cerebralFor,
+  cerebralGroups,
+  cerebralNotes,
+  cerebralReferences,
+  cerebralPresets,
+  type CerebralStructure,
+} from '@/lib/cerebral';
+import { CerebralLayers } from './cerebral-layers';
 import type { DissectionView } from './dissection-data';
 import type { BodyLayout } from '@/lib/body-arrangement';
 import type { RendererHealth } from '@/lib/renderer-health';
@@ -52,7 +62,7 @@ const cameraViews = [
 ] as const;
 const colours = ['#71b6ca', '#a1c8a1', '#cdad65', '#b396bd'];
 
-export type BrainStudy = 'ventricles' | 'brainstem';
+export type BrainStudy = 'ventricles' | 'brainstem' | 'cerebral';
 // Shared compact source-component workbench; the keyed parent resets state between studies.
 export function VentricularView({
   parent,
@@ -62,40 +72,68 @@ export function VentricularView({
   study?: BrainStudy;
 }) {
   const isBrainstem = study === 'brainstem';
-  const ventricleCatalog = isBrainstem ? brainstemCatalog : ventricularCatalog;
+  const isCerebral = study === 'cerebral';
+  const ventricleCatalog = isCerebral
+    ? cerebralCatalog
+    : isBrainstem
+      ? brainstemCatalog
+      : ventricularCatalog;
   const layers = useMemo(
-    () => (isBrainstem ? brainstemFor(parent) : ventriclesFor(parent)),
-    [parent, isBrainstem],
+    () =>
+      isCerebral
+        ? cerebralFor(parent)
+        : isBrainstem
+          ? brainstemFor(parent)
+          : ventriclesFor(parent),
+    [parent, isBrainstem, isCerebral],
   );
   const selectableIds = useMemo(() => layers.map((s) => s.id), [layers]);
   const presets = useMemo<Record<string, string[]>>(
     () =>
-      isBrainstem
-        ? brainstemPresets(layers)
-        : {
-            all: layers.map((s) => s.id),
-            lateral: layers
-              .filter((s) => s.laterality !== 'midline')
-              .map((s) => s.id),
-            midline: layers
-              .filter((s) => s.laterality === 'midline')
-              .map((s) => s.id),
-          },
-    [isBrainstem, layers],
+      isCerebral
+        ? cerebralPresets(layers)
+        : isBrainstem
+          ? brainstemPresets(layers)
+          : {
+              all: layers.map((s) => s.id),
+              lateral: layers
+                .filter((s) => s.laterality !== 'midline')
+                .map((s) => s.id),
+              midline: layers
+                .filter((s) => s.laterality === 'midline')
+                .map((s) => s.id),
+            },
+    [isBrainstem, isCerebral, layers],
   );
-  const presetNames: Record<string, string> = isBrainstem
+  const presetNames: Record<string, string> = isCerebral
     ? {
-        all: 'Brainstem and cerebellum',
-        brainstem: 'Brainstem only',
-        cerebellum: 'Cerebellum only',
+        all: 'All supplied regions',
+        left: 'Left regions',
+        right: 'Right regions',
+        insula: 'Insulae',
+        temporal: 'Temporal regions',
       }
-    : {
-        all: 'All four spaces',
-        lateral: 'Lateral ventricles',
-        midline: 'Third and fourth',
-      };
-  const title = isBrainstem ? 'Brainstem' : 'Ventricular';
-  const notes = isBrainstem ? brainstemNotes : ventricleNotes;
+    : isBrainstem
+      ? {
+          all: 'Brainstem and cerebellum',
+          brainstem: 'Brainstem only',
+          cerebellum: 'Cerebellum only',
+        }
+      : {
+          all: 'All four spaces',
+          lateral: 'Lateral ventricles',
+          midline: 'Third and fourth',
+        };
+  const title = isCerebral
+    ? 'Cerebral'
+    : isBrainstem
+      ? 'Brainstem'
+      : 'Ventricular';
+  const notes = isCerebral
+    ? cerebralNotes
+    : isBrainstem
+      ? brainstemNotes
+      : ventricleNotes;
   const [{ selectedId, hidden, history }, dispatch] = useReducer(
     (state: VentricularState, action: VentricularAction) =>
       reduceVentricles(layers, state, action, presets),
@@ -146,13 +184,20 @@ export function VentricularView({
           return [
             s.id,
             {
-              color: index < 0 ? '#9ba7a5' : colours[index],
+              color:
+                index < 0
+                  ? '#9ba7a5'
+                  : isCerebral
+                    ? (cerebralGroups.find(
+                        (g) => g.id === (s as CerebralStructure).group,
+                      )?.colour ?? '#9ba7a5')
+                    : colours[index],
               opacity: index < 0 ? 0.12 : 1,
             },
           ];
         }),
       ),
-    [ventricleCatalog, selectableIds],
+    [ventricleCatalog, selectableIds, isCerebral],
   );
   function select(id: string) {
     dispatch({ type: 'select', id });
@@ -318,29 +363,43 @@ export function VentricularView({
             </SelectContent>
           </Select>
         </div>
-        <ul className="eye-layer-list">
-          {layers.map((s) => (
-            <li key={s.id}>
-              <Button
-                size="sm"
-                variant={selectedId === s.id ? 'secondary' : 'ghost'}
-                aria-pressed={selectedId === s.id}
-                onClick={() => select(s.id)}
-              >
-                {s.name.replace(' ventricle', '')}
-              </Button>
-              <Switch
-                checked={!hidden.includes(s.id)}
-                aria-label={`Show ${s.name.toLowerCase()}`}
-                onCheckedChange={(visible) => {
-                  dispatch({ type: 'visibility', id: s.id, visible });
-                  setFocus(false);
-                  if (!visible && selectedId === s.id) setIsolated(false);
-                }}
-              />
-            </li>
-          ))}
-        </ul>
+        {isCerebral ? (
+          <CerebralLayers
+            layers={layers as CerebralStructure[]}
+            selectedId={selectedId}
+            hidden={hidden}
+            onSelect={select}
+            onVisibility={(id, visible) => {
+              dispatch({ type: 'visibility', id, visible });
+              setFocus(false);
+              if (!visible && selectedId === id) setIsolated(false);
+            }}
+          />
+        ) : (
+          <ul className="eye-layer-list">
+            {layers.map((s) => (
+              <li key={s.id}>
+                <Button
+                  size="sm"
+                  variant={selectedId === s.id ? 'secondary' : 'ghost'}
+                  aria-pressed={selectedId === s.id}
+                  onClick={() => select(s.id)}
+                >
+                  {s.name.replace(' ventricle', '')}
+                </Button>
+                <Switch
+                  checked={!hidden.includes(s.id)}
+                  aria-label={`Show ${s.name.toLowerCase()}`}
+                  onCheckedChange={(visible) => {
+                    dispatch({ type: 'visibility', id: s.id, visible });
+                    setFocus(false);
+                    if (!visible && selectedId === s.id) setIsolated(false);
+                  }}
+                />
+              </li>
+            ))}
+          </ul>
+        )}
         <div className="eye-layer-actions">
           <Button
             size="sm"
@@ -371,19 +430,25 @@ export function VentricularView({
             disabled={explode > 0}
             onClick={() => setContext((v) => !v)}
           >
-            {isBrainstem ? 'Show fourth ventricle' : 'Show brain context'}
+            {isCerebral
+              ? 'Show lateral ventricles'
+              : isBrainstem
+                ? 'Show fourth ventricle'
+                : 'Show brain context'}
           </Button>
         </div>
         {context && explode === 0 && (
           <p>
-            {isBrainstem
-              ? 'Faint context shows the fourth ventricular space, not tissue or a measured cavity wall.'
-              : 'Faint context: thalami, caudate nuclei and corpus callosum. These are whole structures, not separately segmented ventricular walls.'}
+            {isCerebral
+              ? 'Faint lateral ventricular spaces provide orientation, not a registered scan or cortical boundary.'
+              : isBrainstem
+                ? 'Faint context shows the fourth ventricular space, not tissue or a measured cavity wall.'
+                : 'Faint context: thalami, caudate nuclei and corpus callosum. These are whole structures, not separately segmented ventricular walls.'}
           </p>
         )}
         <details className="eye-layer-separation">
           <summary>
-            {isBrainstem ? 'Separate structures' : 'Separate spaces'}
+            {study !== 'ventricles' ? 'Separate structures' : 'Separate spaces'}
           </summary>
           <Select
             value={layout}
@@ -424,7 +489,14 @@ export function VentricularView({
             <h3>{selected.name}</h3>
             <span className="eye-layer-source-id">
               {selected.fmaId} ·{' '}
-              {isBrainstem ? 'Source compound' : 'Space representation'} · Draft
+              {isCerebral
+                ? cerebralCatalog.supplementalIds.includes(selected.id)
+                  ? 'Additional source part'
+                  : 'Partial source coverage'
+                : isBrainstem
+                  ? 'Source compound'
+                  : 'Space representation'}{' '}
+              · Draft
             </span>
             <p>{notes[selected.fmaId]}</p>
             <div className="eye-layer-actions">
@@ -449,7 +521,23 @@ export function VentricularView({
         )}
         <details className="eye-layer-limits">
           <summary>Learning and limitations</summary>
-          {isBrainstem ? (
+          {isCerebral ? (
+            <>
+              <p>
+                These are supplied cortical regions, not a complete cortex.
+                Eight original lobe representations and two insulae are
+                supplemented by four separately labelled superior temporal
+                subdivisions from the same source version.
+              </p>
+              <p>
+                The added parts were absent from the original brain. Reference
+                surfaces agree in source coordinates, but this is not clinical
+                registration. Small detached frontal components remain
+                unchanged. Limbic lobes, full white matter and functional
+                territories are not independently delineated.
+              </p>
+            </>
+          ) : isBrainstem ? (
             <>
               <p>
                 Four complete source-table compounds, not proof of complete
@@ -477,15 +565,18 @@ export function VentricularView({
             approval is provided. The main brain is not rendered over these
             components.
           </p>
-          {(isBrainstem ? brainstemReferences : [ventricleReference]).map(
-            (href, i) => (
-              <p key={href}>
-                <a href={href} target="_blank" rel="noreferrer">
-                  University neuroanatomy reference {i + 1}
-                </a>
-              </p>
-            ),
-          )}
+          {(isCerebral
+            ? cerebralReferences
+            : isBrainstem
+              ? brainstemReferences
+              : [ventricleReference]
+          ).map((href, i) => (
+            <p key={href}>
+              <a href={href} target="_blank" rel="noreferrer">
+                University neuroanatomy reference {i + 1}
+              </a>
+            </p>
+          ))}
           <p>{ventricleCatalog.credit}</p>
           <p>
             Source components separated, transformed, normal-smoothed and
@@ -525,13 +616,14 @@ export default function Ventricles({
           <div>
             <DialogTitle>Brain · source dissection</DialogTitle>
             <DialogDescription>
-              Explore existing brain components. Clinical validation pending.
+              Source-based anatomy studies. Clinical validation pending.
             </DialogDescription>
           </div>
           <Select
             value={study}
             onValueChange={(v) => {
-              if (v === 'brainstem' || v === 'ventricles') setStudy(v);
+              if (v === 'brainstem' || v === 'ventricles' || v === 'cerebral')
+                setStudy(v);
             }}
           >
             <SelectTrigger aria-label="Brain dissection study">
@@ -542,6 +634,7 @@ export default function Ventricles({
                 Brainstem and cerebellum
               </SelectItem>
               <SelectItem value="ventricles">Ventricular spaces</SelectItem>
+              <SelectItem value="cerebral">Cerebral regions</SelectItem>
             </SelectContent>
           </Select>
           <Button variant="outline" onClick={onClose}>

@@ -16,6 +16,8 @@ Three [orbital motor-supply study views](ORBITAL_MOTOR_STUDIES.md) now reuse Dis
 
 ## Ordered work
 
+The [cerebral-region dissection](CEREBRAL_DISSECTION.md) now separates eight lobe representations and two insulae, and adds four official superior temporal subdivisions previously absent from the brain aggregate. Paired controls keep all 14 selections in seven rows. Evidence records exact source membership, cross-archive reference-coordinate agreement and remaining partial cortical coverage. Next extend useful inner-brain relationships or nested anatomical teaching/registry bindings, preserving separate scan subjects, lecture entitlements and all review gates. Do not claim complete cortex from these source groups.
+
 The [brainstem/cerebellar dissection](BRAINSTEM_DISSECTION.md) adds four source-complete compounds (13 existing source files) inside the same **Dissect brain** workspace as the ventricles. It retains both hemispheric source halves and documents original pons artefacts. Next inspect source-defined cortical/lobar groupings for a bounded extension; reject partial compounds and overlapping child ownership rather than assigning guessed anatomy. Qualified anatomical and device review remain required.
 
 The [ventricular dissection](VENTRICULAR_DISSECTION.md) separates four existing brain source spaces with removal/undo, three separation styles and optional deep-brain context. Together with the [eye component view and cutaway](EYE_LAYERS.md), this adds genuine nested selection without new unique whole-body claims or patient scans. Further brain/organ decomposition should reuse exact source ownership and avoid simultaneous parent/child rendering; specialist and device review remain outstanding.

@@ -55,6 +55,7 @@ const ventricular = await json(
 const brainstem = await json(
   'public/models/bodyparts3d/brainstem/catalog.json',
 );
+const cerebral = await json('public/models/bodyparts3d/cerebral/catalog.json');
 const learning = parseLearningDocument(
   await json('content/learning-resources.v1.json'),
 );
@@ -157,6 +158,8 @@ for (const path of [
   'public/models/bodyparts3d/eye-layers/display-correction.json',
   'public/models/bodyparts3d/ventricles/catalog.json',
   'public/models/bodyparts3d/brainstem/catalog.json',
+  'public/models/bodyparts3d/cerebral/catalog.json',
+  'content/cerebral-supplement-audit.json',
   'package-lock.json',
   'content/schema/anatomy-structure.schema.json',
   'content/review-revisions.json',
@@ -232,9 +235,14 @@ const report = {
       ventricularContext: ventricular.contextIds.length,
       brainstemCompounds: brainstem.selectableIds.length,
       brainstemContext: brainstem.contextIds.length,
-      additionalUniqueWholeBodyAnatomy: 0,
+      cerebralSelections: cerebral.selectableIds.length,
+      cerebralParentSubdivisions:
+        cerebral.selectableIds.length - cerebral.supplementalIds.length,
+      cerebralAdditionalSourceParts: cerebral.supplementalIds.length,
+      cerebralContext: cerebral.contextIds.length,
+      additionalUniqueWholeBodyAnatomy: cerebral.supplementalIds.length,
       limitation:
-        'Nested selections subdivide existing parent representations; context reuses existing structures. Their short drafts are separate from the eight-topic body inventory. Original catalogue counts exclude these alternate display assets.',
+        'Nested selections generally subdivide existing parents. Four superior temporal ISA source parts are additional anatomy, available only inside the cerebral study; context reuses existing structures. Short drafts are separate from the eight-topic body inventory. The unchanged archival catalogue excludes these alternate display assets and additions.',
     },
     regionalMembershipsOverlap: true,
     shoulderAndBodyRepresentationsOverlap: true,

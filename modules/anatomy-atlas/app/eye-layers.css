@@ -91,6 +91,44 @@
 .eye-layer-list [data-slot='switch'] {
   flex: none;
 }
+.cerebral-pairs {
+  margin: 0.65rem 0;
+}
+.cerebral-pair,
+.cerebral-pair-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 64px 64px;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.3rem 0;
+}
+.cerebral-pair-heading {
+  font-weight: 600;
+}
+.cerebral-pair-heading > span:not(:first-child) {
+  text-align: center;
+}
+.cerebral-pair {
+  border-top: 1px solid var(--border);
+}
+.cerebral-pair-name {
+  overflow-wrap: anywhere;
+  line-height: 1.4;
+}
+.cerebral-side {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.cerebral-side > button:first-child {
+  width: 27px;
+  height: 36px;
+  padding: 0;
+  flex: none;
+}
+.cerebral-side [data-slot='switch'] {
+  flex: none;
+}
 .eye-layer-actions {
   display: flex;
   flex-wrap: wrap;

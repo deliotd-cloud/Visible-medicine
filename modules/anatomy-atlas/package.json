@@ -6,6 +6,9 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "cerebral:source": "node scripts/audit-cerebral-supplements.mjs",
+    "cerebral:export": "node scripts/export-cerebral.mjs",
+    "cerebral:test": "node scripts/validate-cerebral.mjs",
     "brainstem:export": "node scripts/export-brainstem.mjs",
     "brainstem:test": "node scripts/validate-brainstem.mjs",
     "ventricles:export": "node scripts/export-ventricles.mjs",

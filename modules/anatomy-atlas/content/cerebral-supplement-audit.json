@@ -1,0 +1,410 @@
+{
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "registrationReferences": [
+    {
+      "file": "FJ1748",
+      "isaSha256": "b7553aaa8a282d5882d9d2809f5fedd7b35ef50710773ac103cfa82f9f184245",
+      "partofSha256": "deca1e77a904006224aa6cc34e3710c8d963d1fc89e474ac42258e1f2f3315fd",
+      "byteIdentical": false,
+      "exactSharedTriangles": 2448,
+      "geometryIdentical": true
+    },
+    {
+      "file": "FJ1787",
+      "isaSha256": "de3c1098d95fc81060b72603e72a4a2a55529b0fb82063dbd0dfc4f3955d720c",
+      "partofSha256": "9bc4568f6633e999f98ba932ac18608251aa36d689433fbbb536f72d6c4d3d6d",
+      "byteIdentical": false,
+      "exactSharedTriangles": 3416,
+      "geometryIdentical": true
+    }
+  ],
+  "candidates": [
+    {
+      "fmaId": "FMA72801",
+      "name": "anterior part of left superior temporal gyrus",
+      "file": "FJ1837",
+      "tree": "isa",
+      "sha256": "2fb61c24b880e134ff2034558fa6abbfcbcd8506b0aca18ee2cc844fa6783de6",
+      "bytes": 114207,
+      "archiveCrc32": 3986257700,
+      "topology": {
+        "sourceVertices": 1039,
+        "exactUniqueVertices": 904,
+        "unusedUniqueVertices": 0,
+        "triangles": 1804,
+        "edges": 2706,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1804,
+            "vertices": 904,
+            "bounds": {
+              "min": [
+                26.6374,
+                -128.034,
+                1523.8
+              ],
+              "max": [
+                62.4139,
+                -54.233,
+                1572.75
+              ]
+            },
+            "areaMm2": 5404.421043616296,
+            "algebraicVolumeMm3": 10265.347052212303
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "exactSharedParentTriangles": 0,
+      "neighbour": "FJ1789",
+      "candidateToNeighbour": {
+        "samples": 116,
+        "withinTenthMm": 5,
+        "withinQuarterMm": 8,
+        "withinOneMm": 16,
+        "medianMm": 9.939135329518063,
+        "maxMm": 21.796804246997457,
+        "closePointBounds": {
+          "min": [
+            39.6504,
+            -124.809,
+            1528.93
+          ],
+          "max": [
+            50.2465,
+            -90.5324,
+            1540.97
+          ]
+        }
+      },
+      "neighbourToCandidate": {
+        "samples": 128,
+        "withinTenthMm": 3,
+        "withinQuarterMm": 6,
+        "withinOneMm": 10,
+        "medianMm": 21.582990894171314,
+        "maxMm": 51.28167705311515,
+        "closePointBounds": {
+          "min": [
+            41.1165,
+            -124.72,
+            1530.7
+          ],
+          "max": [
+            51.8825,
+            -91.1895,
+            1544.4
+          ]
+        }
+      },
+      "inParentSourceList": false
+    },
+    {
+      "fmaId": "FMA72800",
+      "name": "anterior part of right superior temporal gyrus",
+      "file": "FJ1838",
+      "tree": "isa",
+      "sha256": "342678a0d5a35ca049870e95536c19b9d66915c7f636f0b738162e5db833746b",
+      "bytes": 120477,
+      "archiveCrc32": 3252871432,
+      "topology": {
+        "sourceVertices": 1082,
+        "exactUniqueVertices": 948,
+        "unusedUniqueVertices": 0,
+        "triangles": 1892,
+        "edges": 2838,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1892,
+            "vertices": 948,
+            "bounds": {
+              "min": [
+                -63.6027,
+                -128.082,
+                1523.79
+              ],
+              "max": [
+                -28.0005,
+                -54.2086,
+                1572.77
+              ]
+            },
+            "areaMm2": 5364.020670233669,
+            "algebraicVolumeMm3": 10120.217031006665
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "exactSharedParentTriangles": 0,
+      "neighbour": "FJ1790",
+      "candidateToNeighbour": {
+        "samples": 121,
+        "withinTenthMm": 2,
+        "withinQuarterMm": 7,
+        "withinOneMm": 12,
+        "medianMm": 9.254699986433396,
+        "maxMm": 22.28223337977311,
+        "closePointBounds": {
+          "min": [
+            -53.072,
+            -124.271,
+            1528.9
+          ],
+          "max": [
+            -40.5109,
+            -100.921,
+            1542.27
+          ]
+        }
+      },
+      "neighbourToCandidate": {
+        "samples": 121,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 3,
+        "withinOneMm": 11,
+        "medianMm": 20.424849454358384,
+        "maxMm": 49.00973914611257,
+        "closePointBounds": {
+          "min": [
+            -57.3224,
+            -120.483,
+            1538.69
+          ],
+          "max": [
+            -46.6544,
+            -102.708,
+            1544.72
+          ]
+        }
+      },
+      "inParentSourceList": false
+    },
+    {
+      "fmaId": "FMA72805",
+      "name": "posterior part of left superior temporal gyrus",
+      "file": "FJ1839",
+      "tree": "isa",
+      "sha256": "a26f20cb2f22b373ea82a0ab8d8adc815d5e7ec81fd7ea93947c3322ce79ad77",
+      "bytes": 139270,
+      "archiveCrc32": 2315504357,
+      "topology": {
+        "sourceVertices": 1200,
+        "exactUniqueVertices": 1134,
+        "unusedUniqueVertices": 0,
+        "triangles": 2264,
+        "edges": 3396,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 2264,
+            "vertices": 1134,
+            "bounds": {
+              "min": [
+                37.9849,
+                -95.583,
+                1533.9
+              ],
+              "max": [
+                69.6987,
+                -21.8681,
+                1572.99
+              ]
+            },
+            "areaMm2": 7027.634482227258,
+            "algebraicVolumeMm3": 16183.540843443792
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "exactSharedParentTriangles": 0,
+      "neighbour": "FJ1789",
+      "candidateToNeighbour": {
+        "samples": 120,
+        "withinTenthMm": 3,
+        "withinQuarterMm": 6,
+        "withinOneMm": 18,
+        "medianMm": 7.916169031166601,
+        "maxMm": 19.724399854139737,
+        "closePointBounds": {
+          "min": [
+            44.9736,
+            -82.3373,
+            1536.46
+          ],
+          "max": [
+            60.9898,
+            -26.0159,
+            1552.78
+          ]
+        }
+      },
+      "neighbourToCandidate": {
+        "samples": 128,
+        "withinTenthMm": 2,
+        "withinQuarterMm": 8,
+        "withinOneMm": 15,
+        "medianMm": 8.40075631802206,
+        "maxMm": 37.98981191016871,
+        "closePointBounds": {
+          "min": [
+            41.4071,
+            -91.1895,
+            1540.95
+          ],
+          "max": [
+            63.4392,
+            -35.5506,
+            1555.85
+          ]
+        }
+      },
+      "inParentSourceList": false
+    },
+    {
+      "fmaId": "FMA72804",
+      "name": "posterior part of right superior temporal gyrus",
+      "file": "FJ1840",
+      "tree": "isa",
+      "sha256": "4d68654bdf8e258a8253decbd2f246d388f693b6b2a37f809ffcfdd4d4bc25f7",
+      "bytes": 141396,
+      "archiveCrc32": 403793268,
+      "topology": {
+        "sourceVertices": 1220,
+        "exactUniqueVertices": 1134,
+        "unusedUniqueVertices": 0,
+        "triangles": 2264,
+        "edges": 3396,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 2264,
+            "vertices": 1134,
+            "bounds": {
+              "min": [
+                -71.1499,
+                -95.608,
+                1533.93
+              ],
+              "max": [
+                -39.2986,
+                -21.7206,
+                1572.85
+              ]
+            },
+            "areaMm2": 7025.577610180599,
+            "algebraicVolumeMm3": 16147.299925299201
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "exactSharedParentTriangles": 0,
+      "neighbour": "FJ1790",
+      "candidateToNeighbour": {
+        "samples": 122,
+        "withinTenthMm": 5,
+        "withinQuarterMm": 9,
+        "withinOneMm": 22,
+        "medianMm": 7.9481459018692195,
+        "maxMm": 19.676419323941413,
+        "closePointBounds": {
+          "min": [
+            -66.052,
+            -91.1296,
+            1540.53
+          ],
+          "max": [
+            -44.8274,
+            -30.7869,
+            1554.47
+          ]
+        }
+      },
+      "neighbourToCandidate": {
+        "samples": 121,
+        "withinTenthMm": 1,
+        "withinQuarterMm": 2,
+        "withinOneMm": 14,
+        "medianMm": 8.03627078605425,
+        "maxMm": 37.100799411872494,
+        "closePointBounds": {
+          "min": [
+            -47.2286,
+            -75.9255,
+            1548.9
+          ],
+          "max": [
+            -44.4011,
+            -59.4627,
+            1551.33
+          ]
+        }
+      },
+      "inParentSourceList": false
+    }
+  ],
+  "limitation": "Source geometry and bounded surface samples only; no anatomical continuity, full-overlap exclusion, clinical approval or patient registration is inferred.",
+  "clinicalApproval": false
+}
