@@ -442,7 +442,9 @@ export function AtlasSearch({
           Find structures and regions across the body, or study views in this
           region. Opening a region starts a fresh view; save custom work first.
         </DialogDescription>
-        <label htmlFor={`${id}-query`}>Name, anatomical ID or study view</label>
+        <label htmlFor={`${id}-query`}>
+          Name, common name, anatomical ID or study view
+        </label>
         <input
           id={`${id}-query`}
           type="search"
@@ -453,7 +455,7 @@ export function AtlasSearch({
             setLimit(12);
             setPreview(null);
           }}
-          placeholder="e.g. humerus, larynx, FMA…"
+          placeholder="e.g. Achilles, peroneus, CN IV, FMA…"
         />
         <label htmlFor={`${id}-kind`}>Search within</label>
         <select

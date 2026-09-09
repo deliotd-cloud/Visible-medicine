@@ -6,6 +6,11 @@ import {
   type StudySide,
 } from './study-links.ts';
 import { studyLibrary } from './study-library.ts';
+import {
+  structureSearchAliases,
+  normalizeAnatomySearch,
+  anatomySearchWordMatches,
+} from './anatomy-search.ts';
 
 export type WorkspaceMode = 'explore' | 'dissect' | 'practice';
 export const workspaceModes: WorkspaceMode[] = [
@@ -32,6 +37,7 @@ export type AtlasSearchEntry = {
   label: string;
   detail: string;
   keywords: string;
+  aliases?: string[];
   kind: 'region' | 'structure' | 'view';
   action:
     | { type: 'link'; href: string }
@@ -70,6 +76,7 @@ export function atlasSearchIndex(
     action: { type: 'link', href: '/shoulder' },
   });
   for (const s of catalog.structures) {
+    const aliases = structureSearchAliases(s);
     const destination = s.regions.find((r) =>
       catalog.regions.some((item) => item.id === r),
     );
@@ -89,7 +96,8 @@ export function atlasSearchIndex(
       kind: 'structure',
       label: s.name,
       detail: `${s.fmaId} · ${local.has(s.id) ? 'Select in this view' : 'Open ' + (catalog.regions.find((r) => r.id === destination)?.name ?? 'whole body')}`,
-      keywords: `${s.name} ${s.sourceName} ${s.fmaId} ${s.id} ${s.system} ${s.laterality}`,
+      keywords: `${s.name} ${s.sourceName} ${s.fmaId} ${s.id} ${s.system} ${s.laterality} ${aliases.join(' ')}`,
+      aliases,
       action: local.has(s.id)
         ? { type: 'select', id: s.id }
         : { type: 'link', href: href! },
@@ -105,7 +113,7 @@ export function atlasSearchIndex(
           kind: 'view',
           label: recipe.title,
           detail: `${recipe.kind === 'window' ? 'Study window' : 'Compartment focus'} · this region · resets custom dissection`,
-          keywords: `${recipe.title} ${recipe.id} ${recipe.visible.map((s) => `${s.name} ${s.fmaId}`).join(' ')}`,
+          keywords: `${recipe.title} ${recipe.id} ${recipe.visible.map((s) => `${s.name} ${s.fmaId} ${structureSearchAliases(s).join(' ')}`).join(' ')}`,
           action: { type: recipe.kind, id: recipe.id },
         });
     }
@@ -116,24 +124,39 @@ export function filterAtlasSearch(
   query: string,
   kind: AtlasSearchEntry['kind'] | 'all' = 'all',
 ) {
-  const words = query
-    .slice(0, 256)
-    .trim()
-    .toLowerCase()
-    .split(/\s+/)
-    .filter(Boolean);
+  const needle = normalizeAnatomySearch(query.slice(0, 256));
+  if (!needle && query.trim()) return [];
+  const words = needle.split(' ').filter(Boolean);
   return entries
-    .filter(
-      (e) =>
-        (kind === 'all' || e.kind === kind) &&
-        words.every((w) => e.keywords.toLowerCase().includes(w)),
-    )
+    .flatMap((entry) => {
+      if (kind !== 'all' && entry.kind !== kind) return [];
+      const keywords = normalizeAnatomySearch(entry.keywords);
+      if (!words.every((word) => anatomySearchWordMatches(keywords, word)))
+        return [];
+      const label = normalizeAnatomySearch(entry.label);
+      // Exact names/IDs, then aliases, then label matches, then contextual matches.
+      const rank = !needle
+        ? 0
+        : label === needle ||
+            (/^fma\d+$/.test(needle) && keywords.split(' ').includes(needle))
+          ? 0
+          : entry.aliases?.some(
+                (alias) => normalizeAnatomySearch(alias) === needle,
+              )
+            ? 1
+            : words.every((word) => anatomySearchWordMatches(label, word))
+              ? 2
+              : 3;
+      return [{ entry, rank }];
+    })
     .sort(
       (a, b) =>
-        Number(b.label.toLowerCase() === query.trim().toLowerCase()) -
-          Number(a.label.toLowerCase() === query.trim().toLowerCase()) ||
-        Number(b.action.type === 'select') -
-          Number(a.action.type === 'select') ||
-        a.label.localeCompare(b.label, 'en'),
-    );
+        a.rank - b.rank ||
+        Number(b.entry.action.type === 'select') -
+          Number(a.entry.action.type === 'select') ||
+        Number(b.entry.kind === 'structure') -
+          Number(a.entry.kind === 'structure') ||
+        a.entry.label.localeCompare(b.entry.label, 'en'),
+    )
+    .map(({ entry }) => entry);
 }

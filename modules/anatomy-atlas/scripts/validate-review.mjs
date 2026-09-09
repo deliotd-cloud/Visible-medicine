@@ -3,6 +3,7 @@ import { DatabaseSync } from 'node:sqlite';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { build } from './workspace-test-build.mjs';
+import { reviewDocumentBeforeSearch } from './review-history.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const bundled = await build({
@@ -162,6 +163,43 @@ const snapshot = {
   checklistVersion: api.checklistVersion,
 };
 ok(!api.staleReview(snapshot), 'Current review not stale');
+const reviewDocument = JSON.parse(
+  await readFile(
+    new URL('../content/review-revisions.json', import.meta.url),
+    'utf8',
+  ),
+);
+const sourceManifest = JSON.parse(
+  await readFile(
+    new URL('../public/models/bodyparts3d/manifest.json', import.meta.url),
+    'utf8',
+  ),
+);
+const beforeSearch = await reviewDocumentBeforeSearch(
+  reviewDocument,
+  sourceManifest,
+  structures,
+);
+for (const structure of structures) {
+  ok(
+    api.staleReview({
+      ...snapshot,
+      structureId: structure.id,
+      track: 'geometry',
+      revisionHash: beforeSearch.revisions[structure.id].geometry,
+    }),
+    'Previous display review must be stale after search UI changes',
+  );
+  ok(
+    !api.staleReview({
+      ...snapshot,
+      structureId: structure.id,
+      track: 'teaching',
+      revisionHash: beforeSearch.revisions[structure.id].teaching,
+    }),
+    'Unchanged teaching revision is not silently invalidated',
+  );
+}
 ok(
   api.staleReview({ ...snapshot, revisionHash: '0'.repeat(64) }),
   'Changed geometry invalidates approval',

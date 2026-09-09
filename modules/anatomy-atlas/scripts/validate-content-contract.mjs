@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFile, writeFile } from 'node:fs/promises';
 import { copyBeforeShoulderArmCurriculum } from './curriculum-transition.mjs';
+import { reviewDocumentBeforeSearch } from './review-history.mjs';
 import {
   contentContext,
   contentRoot,
@@ -38,13 +39,22 @@ for (const [path, expected] of [
   ],
   ['public/models/bodyparts3d/full-body/catalog.json', baseline.catalogHash],
   ['public/models/bodyparts3d/manifest.json', baseline.manifestHash],
-  ['content/review-revisions.json', baseline.reviewRevisionsHash],
 ])
   same(
     sha(await readFile(new URL(path, contentRoot))),
     expected,
     'Original source/legacy/review bytes: ' + path,
   );
+const originalReviewDocument = await reviewDocumentBeforeSearch(
+  revisions,
+  manifest,
+  api.structures,
+);
+same(
+  sha(JSON.stringify(originalReviewDocument, null, 2) + '\n'),
+  baseline.reviewRevisionsHash,
+  'Original review baseline retained through the exact search-display revision transition',
+);
 const oldCopy = await copyBeforeShoulderArmCurriculum(context);
 same(
   sha(JSON.stringify(oldCopy)),
@@ -365,6 +375,7 @@ const report = {
   explicitlyUpdatedBodySections: 3620,
   sourceGeometryChanged: false,
   clinicalApprovalsImported: false,
+  displayReviewTransitionVerified: true,
   patientDataImported: false,
   databaseWrites: false,
   browserInteractionTesting: false,

@@ -36,6 +36,7 @@ const displayPaths = [
   'app/anatomy-control-rail.tsx',
   'app/body-explorer.css',
   'lib/atlas-navigation.ts',
+  'lib/anatomy-search.ts',
   'app/globals.css',
   'lib/explode-layout.mjs',
   'lib/body-arrangement.ts',

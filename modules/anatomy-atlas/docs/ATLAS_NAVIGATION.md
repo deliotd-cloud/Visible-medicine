@@ -1,5 +1,7 @@
 # Simple atlas navigation
 
+The [curated common-name search extension](SEARCH_VOCABULARY.md) now adds aliases, normalized identifiers and disambiguated cranial-nerve numbers. The milestone details below describe the original navigation change; use `CURRENT_STATUS.md` for current anatomy/recipe counts.
+
 ## User-directed changes
 
 These changes apply to all eleven regional explorers and whole body. The dedicated shoulder interface, source meshes and teaching data are unchanged.

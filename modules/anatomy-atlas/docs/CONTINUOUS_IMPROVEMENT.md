@@ -16,6 +16,8 @@ Three [orbital motor-supply study views](ORBITAL_MOTOR_STUDIES.md) now reuse Dis
 
 ## Ordered work
 
+The [curated search vocabulary](SEARCH_VOCABULARY.md) now makes familiar names, anatomical abbreviations and formatted FMA IDs usable through the existing compact search dialog. Canonical labels, source-bound navigation and exam guards remain in force; current device acceptance is still open.
+
 1. **Software milestone verified:** reasoning pilot, identification regressions, handler migration, feedback gates, content/source preservation and production build. Save/publish the exact revision and record release/recovery evidence; independent educator and device acceptance remain open.
 2. **Linking contract implemented:** [versioned resource/anchor/source registry](LEARNING_RESOURCE_CONTRACT.md), bidirectional lookup, stable locators and host-controlled eligibility gates. No external resource is configured. Next obtain owner-approved identifiers, manifests/interfaces and rights/review metadata from the existing CT/MRI/head and course projects, then add a bounded adapter; do not build a duplicate head atlas.
 3. **Initial modality-teaching draft implemented:** the [Achilles MRI/ultrasound pilot](ACHILLES_IMAGING.md) uses the existing Imaging panels and direct society/university references, without importing scans. Two topics cover the two exact sided surfaces; independent radiological/educator review is still required. CT and X-ray remain unfilled by this pilot. Head anatomy remains the first candidate for actual integration with the provisional CT/MRI project once its review/publication gates are satisfied. Keep CT and each MRI sequence's subject/frame/segmentation evidence distinct. No unapproved pixel transfer.
