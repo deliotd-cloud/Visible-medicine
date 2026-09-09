@@ -1,0 +1,1284 @@
+{
+  "sourceCommit": "910684092e85f0063a2e6a84552ae6757a0ca1ae",
+  "copyAndRecipeHash": "44748167cdc4bcc9a019fa2f5fbb25738774b2c71d397b4b7d8cbf64bea60242",
+  "scope": "body",
+  "regions": [
+    "thorax"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
+      "fmaId": "FMA3736",
+      "name": "Ascending aorta",
+      "category": "vessel",
+      "side": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3413"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3413"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
+      "fmaId": "FMA3768",
+      "name": "Arch of aorta",
+      "category": "vessel",
+      "side": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3411"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3411"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta",
+      "fmaId": "FMA87217",
+      "name": "Descending thoracic aorta",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1931"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1931"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:superior-vena-cava",
+      "fmaId": "FMA4720",
+      "name": "Superior vena cava",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3645"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3645"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:azygos-vein",
+      "fmaId": "FMA4838",
+      "name": "Azygos vein",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3416"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3416"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+      "fmaId": "FMA4944",
+      "name": "Hemiazygos vein",
+      "category": "vessel",
+      "side": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3434"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3434"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+      "fmaId": "FMA3932",
+      "name": "Brachiocephalic artery",
+      "category": "vessel",
+      "side": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3417"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3417"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-subclavian-artery",
+      "fmaId": "FMA3953",
+      "name": "Right subclavian artery",
+      "category": "vessel",
+      "side": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3579"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3579"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-subclavian-artery",
+      "fmaId": "FMA4694",
+      "name": "Left subclavian artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3479"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3479"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-brachiocephalic-vein",
+      "fmaId": "FMA4751",
+      "name": "Right brachiocephalic vein",
+      "category": "vessel",
+      "side": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3583"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3583"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-brachiocephalic-vein",
+      "fmaId": "FMA4761",
+      "name": "Left brachiocephalic vein",
+      "category": "vessel",
+      "side": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3482"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3482"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-subclavian-vein",
+      "fmaId": "FMA4755",
+      "name": "Right subclavian vein",
+      "category": "vessel",
+      "side": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3587"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3587"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-subclavian-vein",
+      "fmaId": "FMA4763",
+      "name": "Left subclavian vein",
+      "category": "vessel",
+      "side": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3486"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3486"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:trunk-of-right-coronary-artery",
+      "fmaId": "FMA3802",
+      "name": "Trunk of right coronary artery",
+      "category": "vessel",
+      "side": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2723"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2723"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:trunk-of-left-coronary-artery",
+      "fmaId": "FMA3855",
+      "name": "Trunk of left coronary artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2737"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2737"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:anterior-interventricular-branch-of-left-coronary-artery",
+      "fmaId": "FMA3862",
+      "name": "Anterior interventricular branch of left coronary artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "partof",
+      "files": [
+        "FJ2631",
+        "FJ2632",
+        "FJ2633",
+        "FJ2634",
+        "FJ2635",
+        "FJ2636",
+        "FJ2637",
+        "FJ2638",
+        "FJ2639",
+        "FJ2640",
+        "FJ2641",
+        "FJ2642",
+        "FJ2643",
+        "FJ2644",
+        "FJ2645",
+        "FJ2646",
+        "FJ2647",
+        "FJ2648"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2631",
+        "FJ2632",
+        "FJ2633",
+        "FJ2634",
+        "FJ2635",
+        "FJ2636",
+        "FJ2637",
+        "FJ2638",
+        "FJ2639",
+        "FJ2640",
+        "FJ2641",
+        "FJ2642",
+        "FJ2643",
+        "FJ2644",
+        "FJ2645",
+        "FJ2646",
+        "FJ2647",
+        "FJ2648"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:circumflex-branch-of-left-coronary-artery",
+      "fmaId": "FMA3895",
+      "name": "Circumflex branch of left coronary artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2649",
+        "FJ2650",
+        "FJ2651",
+        "FJ2652",
+        "FJ2653",
+        "FJ2654"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2649",
+        "FJ2650",
+        "FJ2651",
+        "FJ2652",
+        "FJ2653",
+        "FJ2654"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:great-cardiac-vein",
+      "fmaId": "FMA4707",
+      "name": "Great cardiac vein",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2656"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2656"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:unspecified:vessel:middle-cardiac-vein",
+      "fmaId": "FMA4713",
+      "name": "Middle cardiac vein",
+      "category": "vessel",
+      "side": "unspecified",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2678",
+        "FJ2679",
+        "FJ2680",
+        "FJ2681",
+        "FJ2682",
+        "FJ2683",
+        "FJ2684",
+        "FJ2685",
+        "FJ2686",
+        "FJ2687",
+        "FJ2688",
+        "FJ2689",
+        "FJ2690",
+        "FJ2691"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2678",
+        "FJ2679",
+        "FJ2680",
+        "FJ2681",
+        "FJ2682",
+        "FJ2683",
+        "FJ2684",
+        "FJ2685",
+        "FJ2686",
+        "FJ2687",
+        "FJ2688",
+        "FJ2689",
+        "FJ2690",
+        "FJ2691"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-pulmonary-artery",
+      "fmaId": "FMA50872",
+      "name": "Right pulmonary artery",
+      "category": "vessel",
+      "side": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3019"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3019"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-pulmonary-artery",
+      "fmaId": "FMA50873",
+      "name": "Left pulmonary artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2924"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2924"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-superior-pulmonary-vein",
+      "fmaId": "FMA49914",
+      "name": "Right superior pulmonary vein",
+      "category": "vessel",
+      "side": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3020"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3020"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-superior-pulmonary-vein",
+      "fmaId": "FMA49916",
+      "name": "Left superior pulmonary vein",
+      "category": "vessel",
+      "side": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2925",
+        "FJ2933"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2925",
+        "FJ2933"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-inferior-pulmonary-vein",
+      "fmaId": "FMA49911",
+      "name": "Right inferior pulmonary vein",
+      "category": "vessel",
+      "side": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3040"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3040"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-inferior-pulmonary-vein",
+      "fmaId": "FMA49913",
+      "name": "Left inferior pulmonary vein",
+      "category": "vessel",
+      "side": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2944",
+        "FJ2950",
+        "FJ2955"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2944",
+        "FJ2950",
+        "FJ2955"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
+      "fmaId": "FMA3969",
+      "name": "Right internal thoracic artery",
+      "category": "vessel",
+      "side": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1937"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1937"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-internal-thoracic-artery",
+      "fmaId": "FMA4068",
+      "name": "Left internal thoracic artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1972"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1972"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+      "fmaId": "FMA3988",
+      "name": "Right superior epigastric artery",
+      "category": "vessel",
+      "side": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1936"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1936"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+      "fmaId": "FMA4083",
+      "name": "Left superior epigastric artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1971"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1971"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+      "fmaId": "FMA10692",
+      "name": "Right musculophrenic artery",
+      "category": "vessel",
+      "side": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1969"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1969"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+      "fmaId": "FMA4077",
+      "name": "Left musculophrenic artery",
+      "category": "vessel",
+      "side": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1979"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1979"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-vein",
+      "fmaId": "FMA4758",
+      "name": "Right internal thoracic vein",
+      "category": "vessel",
+      "side": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1993"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1993"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+      "fmaId": "FMA4772",
+      "name": "Right musculophrenic vein",
+      "category": "vessel",
+      "side": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1996"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1996"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+      "fmaId": "FMA4786",
+      "name": "Left musculophrenic vein",
+      "category": "vessel",
+      "side": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1988"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1988"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+      "fmaId": "FMA4149",
+      "name": "Esophageal artery",
+      "category": "vessel",
+      "side": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1934"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1934"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+      "fmaId": "FMA10704",
+      "name": "Variant bronchial artery",
+      "category": "vessel",
+      "side": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3418"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3418"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+      "fmaId": "FMA68109",
+      "name": "Bronchial artery",
+      "category": "vessel",
+      "side": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1933"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1933"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
+      "fmaId": "FMA71537",
+      "name": "Set of oesophageal branches of thoracic aorta",
+      "category": "vessel",
+      "side": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3431"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3431"
+      ],
+      "omittedSourceFiles": []
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
-The [regional connective extension](docs/REGIONAL_CONNECTIVE_CLINICAL_CURRICULUM.md) adds 82 Clinical/Pathology drafts for 41 abdominal and head/neck connective selections without extra controls or geometry. Clinical/Pathology each reach 791 draft / 231 pending. All represented connective entries have introductory drafts, not clinical approval. Run `npm run regional-connective-clinical-curriculum:test -- --source`. Older totals below are historical.
+The [thoracic vessel extension](docs/THORACIC_VESSEL_CLINICAL_CURRICULUM.md) adds 76 Clinical/Pathology drafts for 38 vessel selections without extra controls or geometry. Clinical/Pathology each reach 829 draft / 193 pending; the remaining pending entries are 189 vessels and four held identities. Run `npm run thoracic-vessel-clinical-curriculum:test -- --source`. Draft content requires independent clinical review. Older totals below are historical.
+
+The [regional connective extension](docs/REGIONAL_CONNECTIVE_CLINICAL_CURRICULUM.md) added 82 Clinical/Pathology drafts for 41 abdominal and head/neck connective selections. All represented connective entries have introductory drafts, not clinical approval.
 
 The [axial connective extension](docs/AXIAL_CONNECTIVE_CLINICAL_CURRICULUM.md) added 72 Clinical/Pathology drafts for 14 costal cartilages and 22 whole-disc selections. Disc source names are not validated scan-level labels. Run `npm run axial-connective-clinical-curriculum:test -- --source`.
 

@@ -1,14 +1,14 @@
 {
   "passed": true,
-  "checks": 18529,
-  "bodyRepresentations": 36,
-  "sourceComponents": 36,
-  "lessonGroups": 4,
-  "explicitTopicEdits": 72,
-  "combinedPinnedCurriculumSections": 3080,
-  "sourceIndexChecks": 36,
-  "negativeCases": 51,
-  "historicalMilestoneReadiness": {
+  "checks": 18727,
+  "bodyRepresentations": 38,
+  "sourceComponents": 76,
+  "lessonGroups": 20,
+  "explicitTopicEdits": 76,
+  "combinedPinnedCurriculumSections": 3238,
+  "sourceIndexChecks": 76,
+  "negativeCases": 53,
+  "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
       "identity-only": 2,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 750,
+      "draft": 829,
       "identity-only": 0,
-      "pending": 272,
+      "pending": 193,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 750,
+      "draft": 829,
       "identity-only": 0,
-      "pending": 272,
+      "pending": 193,
       "generated-identification": 0
     },
     "quiz": {
@@ -64,5 +64,5 @@
   "scanContentAdded": false,
   "browserTesting": false,
   "copyAndRecipeHash": "141b986314ca6a98a5c60a60b55612302e1dae0bd0b7e877bb1912d5a5595426",
-  "limitations": "Original axial connective Clinical/Pathology drafts; exact costal sides and source disc names retained. No validated radiological level annotation, new geometry, internal disc segmentation, patient diagnosis, procedure, scan or clinical approval."
+  "limitations": "Original primary-thorax vessel drafts; exact source trees, categories, sides, ordered components and cross-region memberships retained. No new geometry, validated lumen, measured flow, procedural route, scan or clinical approval."
 }
