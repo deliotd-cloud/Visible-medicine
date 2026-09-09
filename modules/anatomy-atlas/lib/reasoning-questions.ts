@@ -1,9 +1,13 @@
 import type { BodyStructure } from '../app/body-types';
 import { forearmReasoningConcepts } from './forearm-reasoning';
 import { handReasoningConcepts } from './hand-reasoning';
+import { thighReasoningConcepts } from './thigh-reasoning';
 export interface ReasoningConcept {
   key: string;
-  region: 'shoulder-arm' | 'forearm' | 'hand';
+  region: 'shoulder-arm' | 'forearm' | 'hand' | 'thigh';
+  // Exact ordered source memberships for a cross-region representation.
+  // Omission retains the original single-region contract.
+  sourceRegions?: readonly string[];
   bindings: readonly { fma: string; side: 'right' | 'left'; file: string }[];
   prompt: string;
   explanation: string;
@@ -307,20 +311,23 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   },
   ...forearmReasoningConcepts,
   ...handReasoningConcepts,
+  ...thighReasoningConcepts,
 ];
 export function reasoningConceptFor(s: BodyStructure) {
   if (
     s.system !== 'muscles' ||
     s.category !== 'muscle' ||
     s.sourceTree !== 'isa' ||
-    s.regions.length !== 1 ||
     s.sources.length !== 1
   )
     return undefined;
   return reasoningConcepts.find(
     (c) =>
       s.region === c.region &&
-      s.regions[0] === c.region &&
+      s.regions.length === (c.sourceRegions ?? [c.region]).length &&
+      s.regions.every(
+        (region, index) => region === (c.sourceRegions ?? [c.region])[index],
+      ) &&
       c.bindings.some(
         (b) =>
           b.fma === s.fmaId &&

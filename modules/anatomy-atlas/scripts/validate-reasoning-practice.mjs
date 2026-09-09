@@ -75,18 +75,30 @@ const create = (
   random = () => 0.314159,
 ) => api.createPracticeSession(scope, bundles, options(extra), random);
 const bound = all.filter(api.reasoningConceptFor);
-same(api.reasoningConcepts.length, 26);
-same(bound.length, 52);
+same(api.reasoningConcepts.length, 38);
+same(bound.length, 76);
 same(bound.filter((s) => s.region === 'shoulder-arm').length, 20);
 same(bound.filter((s) => s.region === 'forearm').length, 12);
 same(bound.filter((s) => s.region === 'hand').length, 20);
-same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 26);
+same(bound.filter((s) => s.region === 'thigh').length, 24);
+same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 38);
 same(
   hash(
-    JSON.stringify(api.reasoningConcepts.filter((c) => c.region !== 'hand')),
+    JSON.stringify(
+      api.reasoningConcepts.filter(
+        (c) => !['hand', 'thigh'].includes(c.region),
+      ),
+    ),
   ),
   'f4003687431080f6978cfd5fec6400cb0ee309d0a2c62119251558e3d647089e',
   'Existing shoulder/forearm question records are unchanged',
+);
+same(
+  hash(
+    JSON.stringify(api.reasoningConcepts.filter((c) => c.region !== 'thigh')),
+  ),
+  '4d38a5948cf93eb4e58d5666805d02b00f0d4d844fb5528e5d7208b9d93dc60b',
+  'All 26 earlier question records are unchanged',
 );
 same(
   hash(catalogBytes),
@@ -113,6 +125,7 @@ for (const concept of api.reasoningConcepts) {
     const s = bound.find((s) => s.fmaId === binding.fma);
     check(s && s.laterality === binding.side);
     same(s.region, concept.region);
+    same(s.regions, concept.sourceRegions ?? [concept.region]);
     same(api.reasoningConceptFor(s)?.key, concept.key);
     same(
       api.reasoningConceptFor({
@@ -134,6 +147,15 @@ for (const concept of api.reasoningConcepts) {
       { regions: [concept.region === 'forearm' ? 'shoulder-arm' : 'forearm'] },
       { regions: ['shoulder-arm', 'hand'] },
       { regions: ['foot'] },
+      { regions: [] },
+      { regions: [...s.regions, 'spine'] },
+      ...(s.regions.length > 1
+        ? [
+            { regions: [s.regions[0]] },
+            { regions: [...s.regions].reverse() },
+            { regions: [s.regions[0], s.regions[0]] },
+          ]
+        : []),
       { sources: [] },
       { sources: [...s.sources, ...s.sources] },
       { sources: [{ ...s.sources[0], file: 'FJ0000' }] },
@@ -162,11 +184,28 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
       'Available concept count respects the existing 20-question session cap',
     );
     same(api.practiceCanStart(scope, 'reason'), count > 0);
-    if (!['whole-body', 'shoulder-arm', 'forearm', 'hand'].includes(region))
+    if (
+      ![
+        'whole-body',
+        'shoulder-arm',
+        'forearm',
+        'hand',
+        'thigh',
+        'pelvis',
+      ].includes(region)
+    )
       same(session, null, 'No unbound regional question is invented');
     if (!session) continue;
     const expected =
-      region === 'whole-body' ? 20 : region === 'forearm' ? 6 : 10;
+      region === 'whole-body'
+        ? 20
+        : region === 'forearm'
+          ? 6
+          : region === 'thigh'
+            ? 12
+            : region === 'pelvis'
+              ? 2
+              : 10;
     same(session.questions.length, expected);
     same(
       new Set(session.questions.map((q) => q.reasoning.key)).size,
@@ -176,7 +215,7 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
     for (const q of session.questions) {
       const target = scope.find((s) => s.id === q.target),
         concept = api.reasoningConceptFor(target);
-      same(q.choices.length, 4);
+      same(q.choices.length, region === 'pelvis' ? 2 : 4);
       same(new Set(q.choices).size, q.choices.length);
       check(q.choices.includes(q.target));
       for (const id of q.choices) {
@@ -228,7 +267,7 @@ for (const count of [1, 5, 10, 20, 100, NaN, Infinity, -10]) {
   same(
     create(all, { count }).questions.length,
     Math.min(
-      26,
+      38,
       Math.max(1, Math.min(20, Math.floor(Number.isFinite(count) ? count : 5))),
     ),
   );
@@ -528,7 +567,8 @@ const report = {
   negativeIdentityCases: negativeCases,
   concepts: api.reasoningConcepts.length,
   exactRepresentations: bound.length,
-  regionalConcepts: { 'shoulder-arm': 10, forearm: 6, hand: 10 },
+  regionalConcepts: { 'shoulder-arm': 10, forearm: 6, hand: 10, thigh: 12 },
+  sharedRegionConcepts: { pelvis: 2 },
   sourceHashes: {
     catalog: hash(catalogBytes),
     officialElementIndex: hash(indexBytes),

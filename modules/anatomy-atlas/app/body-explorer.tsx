@@ -1569,9 +1569,10 @@ export default function BodyExplorer({
                       question needs its target and at least one same-side
                       alternative. Enable the relevant muscles in{' '}
                       <a href="/regions/shoulder-arm">Shoulder &amp; arm</a>,{' '}
-                      <a href="/regions/forearm">Forearm</a> or{' '}
-                      <a href="/regions/hand">Hand</a>, or use an identification
-                      mode.
+                      <a href="/regions/forearm">Forearm</a>,{' '}
+                      <a href="/regions/hand">Hand</a> or{' '}
+                      <a href="/regions/thigh">Hip &amp; thigh</a>, or use an
+                      identification mode.
                     </p>
                   )}
                   <Button

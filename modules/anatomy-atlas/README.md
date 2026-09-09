@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Hip & thigh → Practice → Apply anatomy · draft** now includes twelve original source-bound questions, bringing regional reasoning to 38 concepts / 76 sided representations. The two gluteal concepts also work in their existing pelvic scope without duplication in whole-body sessions. [Scope, factual references and review limits](docs/REASONING_PRACTICE.md). Existing models, branding and compact controls are preserved.
+
 The [source-component safeguards](docs/SOURCE_HOLD_SAFEGUARDS.md) now prevent known held anatomy from re-entering through broader source definitions. Run `npm run source-holds:test` or the non-writing `node scripts/ingest-full-body.mjs --preflight-only`. Current models and UI are unchanged; passing this screen is not anatomical approval.
 
 The [learning-resource linking contract](docs/LEARNING_RESOURCE_CONTRACT.md) now supports typed CT/MRI/X-ray/US annotations and lecture/quiz anchors, with exact-source bindings and separate Atlas/lecture eligibility gates. Explicit bundles, expiry and revocation are tested policy foundations, not a live billing system. No external resources or extra controls are enabled yet; the existing provisional projects retain their review/privacy restrictions.

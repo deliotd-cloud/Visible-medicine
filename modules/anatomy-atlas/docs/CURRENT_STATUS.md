@@ -7,7 +7,7 @@ Generated from the actual catalogue, teaching resolver, dissection profiles and 
 - 1022 body representations, 86 body GLBs, 11 regions plus whole body.
 - Dedicated shoulder: 9 representations / 11 source parts, overlapping the body catalogue.
 - 138 dissection stages and 120 focuses. These operate on supplied surfaces; they do not establish complete anatomy.
-- Find/name identification practice; 26 draft reasoning concepts bound to 52 representations in shoulder-arm, hand, forearm. One concept per session, without contralateral repetition. See [practice scope and tests](REASONING_PRACTICE.md).
+- Find/name identification practice; 38 draft reasoning concepts bound to 76 representations in thigh, pelvis, shoulder-arm, hand, forearm. One concept per session, without contralateral repetition. See [practice scope and tests](REASONING_PRACTICE.md).
 - [Learning-resource contract](LEARNING_RESOURCE_CONTRACT.md): version 1, ct/mri/xray/ultrasound/lecture/quiz anchors; 0 configured resources / 0 correspondences. Read-only linking infrastructure, not a connected external viewer or publication approval.
 
 ## Body teaching readiness

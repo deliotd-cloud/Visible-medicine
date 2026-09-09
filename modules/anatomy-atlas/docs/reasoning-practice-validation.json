@@ -1,18 +1,22 @@
 {
   "schemaVersion": 1,
-  "checks": 2994,
-  "negativeIdentityCases": 676,
-  "concepts": 26,
-  "exactRepresentations": 52,
+  "checks": 4223,
+  "negativeIdentityCases": 1152,
+  "concepts": 38,
+  "exactRepresentations": 76,
   "regionalConcepts": {
     "shoulder-arm": 10,
     "forearm": 6,
-    "hand": 10
+    "hand": 10,
+    "thigh": 12
+  },
+  "sharedRegionConcepts": {
+    "pelvis": 2
   },
   "sourceHashes": {
     "catalog": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
     "officialElementIndex": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf",
-    "questions": "4d38a5948cf93eb4e58d5666805d02b00f0d4d844fb5528e5d7208b9d93dc60b"
+    "questions": "bd2679e4ab16c7308d6f789b940a2180f9bbeb415037a19417a0f33a4a205aad"
   },
   "verification": [
     "Official complete FMA/file membership",

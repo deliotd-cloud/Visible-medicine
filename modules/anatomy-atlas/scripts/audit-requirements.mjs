@@ -235,7 +235,9 @@ const report = {
         catalog.structures.filter(reasoningConceptFor).length,
       regions: [
         ...new Set(
-          catalog.structures.filter(reasoningConceptFor).map((s) => s.region),
+          catalog.structures
+            .filter(reasoningConceptFor)
+            .flatMap((s) => s.regions),
         ),
       ],
       readiness: 'draft',
