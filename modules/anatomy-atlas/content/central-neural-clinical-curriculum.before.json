@@ -1,0 +1,844 @@
+{
+  "sourceCommit": "842125b28e9d0c4a7da0a80e70834660121495bc",
+  "copyAndRecipeHash": "65b5583cc2497259574ed26f6b2f81796f017d288946b3bd6f3a793c6fe9d6d7",
+  "scope": "body",
+  "regions": [
+    "head-neck",
+    "spine"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "fmaId": "FMA50801",
+      "name": "Brain",
+      "category": "organ",
+      "side": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "partof",
+      "files": [
+        "FJ1730",
+        "FJ1731",
+        "FJ1732",
+        "FJ1733",
+        "FJ1738",
+        "FJ1739",
+        "FJ1740",
+        "FJ1743",
+        "FJ1744",
+        "FJ1745",
+        "FJ1746",
+        "FJ1747",
+        "FJ1748",
+        "FJ1749",
+        "FJ1750",
+        "FJ1751",
+        "FJ1758",
+        "FJ1759",
+        "FJ1760",
+        "FJ1762",
+        "FJ1767",
+        "FJ1769",
+        "FJ1770",
+        "FJ1775",
+        "FJ1779",
+        "FJ1780",
+        "FJ1781",
+        "FJ1783",
+        "FJ1784",
+        "FJ1785",
+        "FJ1786",
+        "FJ1787",
+        "FJ1788",
+        "FJ1789",
+        "FJ1790",
+        "FJ1791",
+        "FJ1792",
+        "FJ1795",
+        "FJ1797",
+        "FJ1798",
+        "FJ1800",
+        "FJ1801",
+        "FJ1806",
+        "FJ1807",
+        "FJ1808",
+        "FJ1810",
+        "FJ1814",
+        "FJ1817",
+        "FJ1822",
+        "FJ1826",
+        "FJ1828",
+        "FJ1830",
+        "FJ1831",
+        "FJ1833",
+        "FJ1834",
+        "FJ1835",
+        "FJ1836",
+        "FJ1841",
+        "FJ1842"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1730",
+        "FJ1731",
+        "FJ1732",
+        "FJ1733",
+        "FJ1738",
+        "FJ1739",
+        "FJ1740",
+        "FJ1743",
+        "FJ1744",
+        "FJ1745",
+        "FJ1746",
+        "FJ1747",
+        "FJ1748",
+        "FJ1749",
+        "FJ1750",
+        "FJ1751",
+        "FJ1758",
+        "FJ1759",
+        "FJ1760",
+        "FJ1762",
+        "FJ1767",
+        "FJ1769",
+        "FJ1770",
+        "FJ1775",
+        "FJ1779",
+        "FJ1780",
+        "FJ1781",
+        "FJ1783",
+        "FJ1784",
+        "FJ1785",
+        "FJ1786",
+        "FJ1787",
+        "FJ1788",
+        "FJ1789",
+        "FJ1790",
+        "FJ1791",
+        "FJ1792",
+        "FJ1795",
+        "FJ1797",
+        "FJ1798",
+        "FJ1800",
+        "FJ1801",
+        "FJ1806",
+        "FJ1807",
+        "FJ1808",
+        "FJ1810",
+        "FJ1814",
+        "FJ1817",
+        "FJ1822",
+        "FJ1826",
+        "FJ1828",
+        "FJ1830",
+        "FJ1831",
+        "FJ1833",
+        "FJ1834",
+        "FJ1835",
+        "FJ1836",
+        "FJ1841",
+        "FJ1842"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:space:central-canal-of-spinal-cord",
+      "fmaId": "FMA78497",
+      "name": "Central canal of spinal cord",
+      "category": "space",
+      "side": "midline",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1737"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1737"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+      "fmaId": "FMA72826",
+      "name": "Right caudate nucleus",
+      "category": "organ",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1802"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1802"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+      "fmaId": "FMA72827",
+      "name": "Left caudate nucleus",
+      "category": "organ",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1754"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1754"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-putamen",
+      "fmaId": "FMA72828",
+      "name": "Right putamen",
+      "category": "organ",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1823"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1823"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-putamen",
+      "fmaId": "FMA72829",
+      "name": "Left putamen",
+      "category": "organ",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1776"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1776"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+      "fmaId": "FMA72830",
+      "name": "Right globus pallidus",
+      "category": "organ",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1805"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1805"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+      "fmaId": "FMA72831",
+      "name": "Left globus pallidus",
+      "category": "organ",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1757"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1757"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+      "fmaId": "FMA72832",
+      "name": "Right amygdala",
+      "category": "organ",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1829"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1829"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+      "fmaId": "FMA72833",
+      "name": "Left amygdala",
+      "category": "organ",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1753"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1753"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+      "fmaId": "FMA258714",
+      "name": "Right thalamus",
+      "category": "organ",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1827"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1827"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+      "fmaId": "FMA258716",
+      "name": "Left thalamus",
+      "category": "organ",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1782"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1782"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+      "fmaId": "FMA73303",
+      "name": "Right lateral geniculate body",
+      "category": "organ",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1813"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1813"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+      "fmaId": "FMA73304",
+      "name": "Left lateral geniculate body",
+      "category": "organ",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1766"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1766"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+      "fmaId": "FMA73309",
+      "name": "Right medial geniculate body",
+      "category": "organ",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1816"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1816"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+      "fmaId": "FMA73310",
+      "name": "Left medial geniculate body",
+      "category": "organ",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1816M"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1816M"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+      "fmaId": "FMA72924",
+      "name": "Right fornix of forebrain",
+      "category": "organ",
+      "side": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1804"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1804"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+      "fmaId": "FMA72925",
+      "name": "Left fornix of forebrain",
+      "category": "organ",
+      "side": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1756"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1756"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+      "fmaId": "FMA61961",
+      "name": "Anterior commissure",
+      "category": "organ",
+      "side": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1734"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1734"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+      "fmaId": "FMA62072",
+      "name": "Posterior commissure",
+      "category": "organ",
+      "side": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1799"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1799"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+      "fmaId": "FMA86464",
+      "name": "Corpus callosum",
+      "category": "organ",
+      "side": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1742"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1742"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+      "fmaId": "FMA61934",
+      "name": "Choroid plexus of cerebral hemisphere",
+      "category": "organ",
+      "side": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1755",
+        "FJ1803"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1755",
+        "FJ1803"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+      "fmaId": "FMA74877",
+      "name": "Mammillary body",
+      "category": "organ",
+      "side": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ1768",
+        "FJ1815"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ1768",
+        "FJ1815"
+      ],
+      "omittedSourceFiles": []
+    }
+  ]
+}

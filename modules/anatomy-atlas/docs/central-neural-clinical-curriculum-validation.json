@@ -1,14 +1,14 @@
 {
   "passed": true,
-  "checks": 18117,
-  "bodyRepresentations": 30,
-  "sourceComponents": 30,
+  "checks": 17841,
+  "bodyRepresentations": 23,
+  "sourceComponents": 83,
   "lessonGroups": 15,
-  "explicitTopicEdits": 60,
-  "combinedPinnedCurriculumSections": 2778,
-  "sourceIndexChecks": 30,
+  "explicitTopicEdits": 46,
+  "combinedPinnedCurriculumSections": 2824,
+  "sourceIndexChecks": 83,
   "negativeCases": 29,
-  "historicalMilestoneReadiness": {
+  "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
       "identity-only": 2,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 599,
+      "draft": 622,
       "identity-only": 0,
-      "pending": 423,
+      "pending": 400,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 599,
+      "draft": 622,
       "identity-only": 0,
-      "pending": 423,
+      "pending": 400,
       "generated-identification": 0
     },
     "quiz": {
@@ -64,5 +64,5 @@
   "scanContentAdded": false,
   "browserTesting": false,
   "copyAndRecipeHash": "64ad5bbf261c2750ef07a2dd6d357edec50bde70ab7b7a3cd2d78015c808e646",
-  "limitations": "Original orbital nerve/ganglion clinical drafts; central neural entries and all unresolved holds remain unchanged. Not lesion mapping, corneal or pupil testing, disease simulation, nerve-block guidance, patient scans or clinical approval."
+  "limitations": "Original central neural clinical drafts; forniceal commissure and all unresolved identity/function holds remain unchanged. Not nuclear or tract segmentation, symptom prediction, perimetry, audiology, memory testing, procedural targets, patient scans or clinical approval."
 }

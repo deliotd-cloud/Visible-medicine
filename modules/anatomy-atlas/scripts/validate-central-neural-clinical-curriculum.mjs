@@ -1,12 +1,11 @@
 import assert from 'node:assert/strict';
-import { authoringBeforeCentralNeuralClinical } from './central-neural-clinical-curriculum-transition.mjs';
 import { readFile, writeFile } from 'node:fs/promises';
 import {
   contentContext,
   contentRoot,
   readContentJson,
 } from './content-contract-tools.mjs';
-import { authoringBeforeOrbitalNeuralClinical } from './orbital-neural-clinical-curriculum-transition.mjs';
+import { authoringBeforeCentralNeuralClinical } from './central-neural-clinical-curriculum-transition.mjs';
 import {
   curriculumHash,
   copyBeforeShoulderArmCurriculum,
@@ -23,13 +22,12 @@ const check = (v, l) => {
 const context = await contentContext(),
   { api, catalog, body } = context;
 const before = await readContentJson(
-  'content/orbital-neural-clinical-curriculum.before.json',
+  'content/central-neural-clinical-curriculum.before.json',
 );
 const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
-const previous = await authoringBeforeOrbitalNeuralClinical(context);
-const milestone = await authoringBeforeCentralNeuralClinical(context);
+const previous = await authoringBeforeCentralNeuralClinical(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
@@ -48,43 +46,152 @@ same(
 // Independently observed official source rows, not inferred from runtime lessons.
 /** @type {Array<[string, string, string, string[], string, string[], string]>} */
 const expected = [
-  ['FMA52677', 'left', 'isa', ['FJ1283'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52640', 'left', 'isa', ['FJ1290'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52577', 'left', 'isa', ['FJ1293'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52699', 'left', 'isa', ['FJ1296'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52630', 'left', 'isa', ['FJ1300'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52670', 'left', 'isa', ['FJ1310'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52674', 'left', 'isa', ['FJ1311'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52623', 'left', 'isa', ['FJ1312'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52716', 'left', 'isa', ['FJ1315'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA82735', 'left', 'isa', ['FJ1318'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52575', 'left', 'isa', ['FJ1321'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52657', 'left', 'isa', ['FJ1325'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52644', 'left', 'isa', ['FJ1326'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52676', 'right', 'isa', ['FJ1333'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52639', 'right', 'isa', ['FJ1341'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52576', 'right', 'isa', ['FJ1344'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52698', 'right', 'isa', ['FJ1347'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52629', 'right', 'isa', ['FJ1351'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52669', 'right', 'isa', ['FJ1361'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52673', 'right', 'isa', ['FJ1362'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52622', 'right', 'isa', ['FJ1363'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52715', 'right', 'isa', ['FJ1366'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA82734', 'right', 'isa', ['FJ1369'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52574', 'right', 'isa', ['FJ1372'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52656', 'right', 'isa', ['FJ1376'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA52643', 'right', 'isa', ['FJ1377'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA50881', 'right', 'isa', ['FJ1381'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA50882', 'left', 'isa', ['FJ1330'], 'head-neck', ['head-neck'], 'nerve'],
-  ['FMA53549', 'right', 'isa', ['FJ1339'], 'head-neck', ['head-neck'], 'organ'],
-  ['FMA53550', 'left', 'isa', ['FJ1288'], 'head-neck', ['head-neck'], 'organ'],
+  [
+    'FMA50801',
+    'midline',
+    'partof',
+    [
+      'FJ1730',
+      'FJ1731',
+      'FJ1732',
+      'FJ1733',
+      'FJ1738',
+      'FJ1739',
+      'FJ1740',
+      'FJ1743',
+      'FJ1744',
+      'FJ1745',
+      'FJ1746',
+      'FJ1747',
+      'FJ1748',
+      'FJ1749',
+      'FJ1750',
+      'FJ1751',
+      'FJ1758',
+      'FJ1759',
+      'FJ1760',
+      'FJ1762',
+      'FJ1767',
+      'FJ1769',
+      'FJ1770',
+      'FJ1775',
+      'FJ1779',
+      'FJ1780',
+      'FJ1781',
+      'FJ1783',
+      'FJ1784',
+      'FJ1785',
+      'FJ1786',
+      'FJ1787',
+      'FJ1788',
+      'FJ1789',
+      'FJ1790',
+      'FJ1791',
+      'FJ1792',
+      'FJ1795',
+      'FJ1797',
+      'FJ1798',
+      'FJ1800',
+      'FJ1801',
+      'FJ1806',
+      'FJ1807',
+      'FJ1808',
+      'FJ1810',
+      'FJ1814',
+      'FJ1817',
+      'FJ1822',
+      'FJ1826',
+      'FJ1828',
+      'FJ1830',
+      'FJ1831',
+      'FJ1833',
+      'FJ1834',
+      'FJ1835',
+      'FJ1836',
+      'FJ1841',
+      'FJ1842',
+    ],
+    'head-neck',
+    ['head-neck'],
+    'organ',
+  ],
+  ['FMA78497', 'midline', 'isa', ['FJ1737'], 'spine', ['spine'], 'space'],
+  ['FMA72826', 'right', 'isa', ['FJ1802'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA72827', 'left', 'isa', ['FJ1754'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA72828', 'right', 'isa', ['FJ1823'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA72829', 'left', 'isa', ['FJ1776'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA72830', 'right', 'isa', ['FJ1805'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA72831', 'left', 'isa', ['FJ1757'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA72832', 'right', 'isa', ['FJ1829'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA72833', 'left', 'isa', ['FJ1753'], 'head-neck', ['head-neck'], 'organ'],
+  [
+    'FMA258714',
+    'right',
+    'isa',
+    ['FJ1827'],
+    'head-neck',
+    ['head-neck'],
+    'organ',
+  ],
+  ['FMA258716', 'left', 'isa', ['FJ1782'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA73303', 'right', 'isa', ['FJ1813'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA73304', 'left', 'isa', ['FJ1766'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA73309', 'right', 'isa', ['FJ1816'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA73310', 'left', 'isa', ['FJ1816M'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA72924', 'right', 'isa', ['FJ1804'], 'head-neck', ['head-neck'], 'organ'],
+  ['FMA72925', 'left', 'isa', ['FJ1756'], 'head-neck', ['head-neck'], 'organ'],
+  [
+    'FMA61961',
+    'midline',
+    'isa',
+    ['FJ1734'],
+    'head-neck',
+    ['head-neck'],
+    'organ',
+  ],
+  [
+    'FMA62072',
+    'midline',
+    'isa',
+    ['FJ1799'],
+    'head-neck',
+    ['head-neck'],
+    'organ',
+  ],
+  [
+    'FMA86464',
+    'midline',
+    'isa',
+    ['FJ1742'],
+    'head-neck',
+    ['head-neck'],
+    'organ',
+  ],
+  [
+    'FMA61934',
+    'midline',
+    'isa',
+    ['FJ1755', 'FJ1803'],
+    'head-neck',
+    ['head-neck'],
+    'organ',
+  ],
+  [
+    'FMA74877',
+    'midline',
+    'isa',
+    ['FJ1768', 'FJ1815'],
+    'head-neck',
+    ['head-neck'],
+    'organ',
+  ],
 ];
 const ids = expected.map((e) => e[0]),
   tabs = ['pathology', 'clinical'];
-same(api.orbitalNeuralClinicalGroups.length, 15);
+same(api.centralNeuralClinicalGroups.length, 15);
 const byIdentity = (a, b) => a[0].localeCompare(b[0]);
 same(
-  api.orbitalNeuralClinicalGroups.flatMap((g) => g.identities).sort(byIdentity),
+  api.centralNeuralClinicalGroups.flatMap((g) => g.identities).sort(byIdentity),
   [...expected].sort(byIdentity),
 );
 same(before.entries.map((e) => e.fmaId).sort(), [...ids].sort());
@@ -109,12 +216,12 @@ for (const [f, side, tree, files, region, regions, category] of expected) {
     [...files].sort(),
   );
   same(e.omittedSourceFiles, []);
-  const group = api.orbitalNeuralClinicalGroups.find((g) =>
+  const group = api.centralNeuralClinicalGroups.find((g) =>
     g.identities.some((i) => i[0] === f),
   );
   const record = body.find((r) => r.id === s.id);
   for (const t of tabs) {
-    const result = api.orbitalNeuralClinicalLesson(s, t);
+    const result = api.centralNeuralClinicalLesson(s, t);
     same(result, api.bodyLesson(s, t));
     same(result.readiness, 'draft');
     same(result.body, group[t].body);
@@ -126,7 +233,7 @@ for (const [f, side, tree, files, region, regions, category] of expected) {
     if (s.coverageNote) check(result.note.includes(s.coverageNote));
     check(
       api
-        .orbitalNeuralClinicalLesson({ ...s, coverageNote: 'Keep warning' }, t)
+        .centralNeuralClinicalLesson({ ...s, coverageNote: 'Keep warning' }, t)
         .note.includes('Keep warning'),
     );
     for (const url of result.citations) same(new URL(url).protocol, 'https:');
@@ -143,7 +250,7 @@ for (const [f, side, tree, files, region, regions, category] of expected) {
     });
     for (const mutation of [
       { system: 'muscles' },
-      { category: category === 'nerve' ? 'organ' : 'nerve' },
+      { category: category === 'organ' ? 'space' : 'organ' },
       { region: region === 'thorax' ? 'spine' : 'thorax' },
       { regions: [] },
       { regions: [...regions, 'thorax'] },
@@ -162,7 +269,7 @@ for (const [f, side, tree, files, region, regions, category] of expected) {
       ...(s.regions.length > 1 ? [{ regions: [...s.regions].reverse() }] : []),
     ])
       same(
-        api.orbitalNeuralClinicalLesson({ ...s, ...mutation }, t),
+        api.centralNeuralClinicalLesson({ ...s, ...mutation }, t),
         undefined,
       );
   }
@@ -170,90 +277,73 @@ for (const [f, side, tree, files, region, regions, category] of expected) {
 for (const s of catalog.structures)
   for (const t of api.contentTabs) {
     if (!ids.includes(s.fmaId) || !tabs.includes(t)) {
-      same(api.orbitalNeuralClinicalLesson(s, t), undefined);
+      same(api.centralNeuralClinicalLesson(s, t), undefined);
       same(
-        milestone.bodyLesson(s, t),
+        api.bodyLesson(s, t),
         previous.bodyLesson(s, t),
         'Every unrelated section preserved',
       );
     }
   }
-const group = (k) => api.orbitalNeuralClinicalGroups.find((g) => g.key === k);
+const group = (k) => api.centralNeuralClinicalGroups.find((g) => g.key === k);
 
+check(group('brain').pathology.body.includes('bleeding'));
+check(group('central-canal').pathology.body.includes('not be diagnosed'));
+check(group('caudate').pathology.body.includes('Huntington'));
+check(group('putamen').pathology.body.includes('substantia nigra'));
+check(group('pallidum').pathology.body.includes('other causes'));
+check(group('amygdala').pathology.body.includes('networks'));
+check(group('thalamus').pathology.body.includes('not inevitable'));
+check(group('lateral-geniculate').clinical.body.includes('both eyes'));
+check(group('medial-geniculate').clinical.body.includes('one-ear'));
+check(group('fornix').pathology.body.includes('unilateral'));
 check(
-  group('ophthalmic')
-    .pathology.body.toLowerCase()
-    .includes('ophthalmic trigeminal'),
+  group('anterior-commissure').pathology.body.includes(
+    'other brain malformations',
+  ),
 );
-check(
-  group('frontal')
-    .pathology.body.toLowerCase()
-    .includes('anatomical inference'),
-);
-check(group('supraorbital').pathology.body.toLowerCase().includes('trauma'));
-check(group('supratrochlear').clinical.body.toLowerCase().includes('cn iv'));
-check(
-  group('infratrochlear')
-    .clinical.body.toLowerCase()
-    .includes('different pathways'),
-);
-check(group('lacrimal').clinical.body.toLowerCase().includes('cn vii'));
-check(
-  group('nasociliary')
-    .pathology.body.toLowerCase()
-    .includes('does not exclude'),
-);
-check(
-  group('anterior-ethmoidal')
-    .pathology.body.toLowerCase()
-    .includes('loss of smell'),
-);
-check(
-  group('posterior-ethmoidal')
-    .clinical.body.toLowerCase()
-    .includes('olfaction'),
-);
-check(
-  group('long-ciliary').clinical.body.toLowerCase().includes('sympathetic'),
-);
-check(
-  group('sensory-root')
-    .clinical.body.toLowerCase()
-    .includes('without synapsing'),
-);
-check(
-  group('superior-oculomotor').pathology.body.toLowerCase().includes('levator'),
-);
-check(
-  group('inferior-oculomotor')
-    .pathology.body.toLowerCase()
-    .includes('preganglionic'),
-);
-check(group('trochlear').pathology.body.toLowerCase().includes('binocular'));
-check(
-  group('ciliary-ganglion')
-    .pathology.body.toLowerCase()
-    .includes('tonic pupil'),
-);
-same(ids.length, 30);
-same(new Set(ids).size, 30);
+check(group('posterior-commissure').pathology.body.includes('Dorsal-midbrain'));
+check(group('corpus-callosum').pathology.body.includes('developmental'));
+check(group('choroid-plexus').pathology.body.includes('hydrocephalus'));
+check(group('mammillary').pathology.body.includes('thiamine'));
+same(ids.length, 23);
+same(new Set(ids).size, 23);
 same(
   expected.reduce((n, e) => n + e[3].length, 0),
-  30,
+  83,
 );
-same(expected.filter((e) => e[6] === 'nerve').length, 28);
-same(expected.filter((e) => e[6] === 'organ').length, 2);
-for (const key of [
-  'superior-oculomotor',
-  'inferior-oculomotor',
-  'trochlear',
-  'ciliary-ganglion',
-])
-  check(group(key).clinical.bullets.some((b) => b.includes('999/A&E')));
+same(expected.filter((e) => e[6] === 'organ').length, 22);
+same(expected.filter((e) => e[6] === 'space').length, 1);
+same(entry('FMA50801').sources.length, 59);
+for (const f of ['FMA61934', 'FMA74877']) {
+  same(entry(f).laterality, 'midline');
+  same(entry(f).sources.length, 2);
+}
+same(entry('FMA73310').sources[0].file, 'FJ1816M');
+for (const tab of tabs) {
+  same(api.bodyLesson(entry('FMA61970'), tab).readiness, 'pending');
+  same(api.centralNeuralClinicalLesson(entry('FMA61970'), tab), undefined);
+}
+same(
+  catalog.structures
+    .filter(
+      (s) =>
+        s.system === 'nerves' &&
+        api.bodyLesson(s, 'clinical').readiness === 'pending',
+    )
+    .map((s) => s.fmaId),
+  ['FMA61970'],
+);
+check(group('brain').clinical.bullets.some((b) => b.includes('999')));
+check(
+  group('mammillary').clinical.bullets.some((b) =>
+    b.includes('medical emergency'),
+  ),
+);
 const legacyRightShoulder = ['FMA13322', 'FMA23130', 'FMA13395'];
 for (const f of legacyRightShoulder)
   for (const t of tabs) {
-    same(api.orbitalNeuralClinicalLesson(entry(f), t), undefined);
+    same(api.centralNeuralClinicalLesson(entry(f), t), undefined);
     same(api.bodyLesson(entry(f), t), previous.bodyLesson(entry(f), t));
   }
 for (const t of tabs)
@@ -261,7 +351,7 @@ for (const t of tabs)
 for (const f of ['FMA45097', 'FMA45098'])
   for (const tab of tabs) {
     same(api.bodyLesson(entry(f), tab).readiness, 'pending');
-    same(api.orbitalNeuralClinicalLesson(entry(f), tab), undefined);
+    same(api.centralNeuralClinicalLesson(entry(f), tab), undefined);
   }
 same(
   catalog.structures
@@ -305,24 +395,24 @@ if (process.argv.includes('--source')) {
   }
 }
 const negatives = [
-  ['FMA52622', 'clinical', 'body'],
-  ['FMA52639', 'pathology', 'readiness'],
-  ['FMA52656', 'clinical', 'body'],
-  ['FMA52643', 'pathology', 'body'],
-  ['FMA52698', 'clinical', 'body'],
-  ['FMA52629', 'pathology', 'body'],
-  ['FMA52669', 'clinical', 'body'],
-  ['FMA52676', 'pathology', 'body'],
-  ['FMA52715', 'clinical', 'body'],
-  ['FMA82734', 'pathology', 'body'],
-  ['FMA52673', 'clinical', 'body'],
-  ['FMA52574', 'pathology', 'body'],
-  ['FMA52576', 'clinical', 'body'],
-  ['FMA50881', 'pathology', 'body'],
-  ['FMA53549', 'clinical', 'body'],
-  ['FMA52622', 'anatomy', 'body'],
-  ['FMA53549', 'function', 'body'],
-  ['FMA50881', 'ultrasound', 'body'],
+  ['FMA50801', 'clinical', 'body'],
+  ['FMA78497', 'pathology', 'readiness'],
+  ['FMA72826', 'clinical', 'body'],
+  ['FMA72828', 'pathology', 'body'],
+  ['FMA72830', 'clinical', 'body'],
+  ['FMA72832', 'pathology', 'body'],
+  ['FMA258714', 'clinical', 'body'],
+  ['FMA73303', 'pathology', 'body'],
+  ['FMA73309', 'clinical', 'body'],
+  ['FMA72924', 'pathology', 'body'],
+  ['FMA61961', 'clinical', 'body'],
+  ['FMA62072', 'pathology', 'body'],
+  ['FMA86464', 'clinical', 'body'],
+  ['FMA61934', 'pathology', 'body'],
+  ['FMA74877', 'clinical', 'body'],
+  ['FMA50801', 'anatomy', 'body'],
+  ['FMA61934', 'function', 'body'],
+  ['FMA78497', 'ultrasound', 'body'],
   ['FMA45097', 'clinical', 'readiness'],
   ['FMA45098', 'clinical', 'readiness'],
   ['FMA61970', 'clinical', 'readiness'],
@@ -381,17 +471,16 @@ const counts = (t) =>
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter(
-          (s) => milestone.bodyLesson(s, t).readiness === r,
-        ).length,
+        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
+          .length,
       ],
     ),
   );
 for (const t of tabs)
   same(counts(t), {
-    draft: 599,
+    draft: 622,
     'identity-only': 0,
-    pending: 423,
+    pending: 400,
     'generated-identification': 0,
   });
 for (const t of ['ct', 'mri', 'ultrasound'])
@@ -424,16 +513,14 @@ for (const f of api.shoulderArmLessons.flatMap((l) => l.fmaIds))
 const report = {
   passed: true,
   checks,
-  bodyRepresentations: 30,
-  sourceComponents: 30,
+  bodyRepresentations: 23,
+  sourceComponents: 83,
   lessonGroups: 15,
-  explicitTopicEdits: 60,
-  combinedPinnedCurriculumSections: 2778,
+  explicitTopicEdits: 46,
+  combinedPinnedCurriculumSections: 2824,
   sourceIndexChecks,
   negativeCases: negatives.length,
-  historicalMilestoneReadiness: Object.fromEntries(
-    api.contentTabs.map((t) => [t, counts(t)]),
-  ),
+  bodyReadiness: Object.fromEntries(api.contentTabs.map((t) => [t, counts(t)])),
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,
@@ -441,11 +528,11 @@ const report = {
   browserTesting: false,
   copyAndRecipeHash: curriculumHash(copy(api)),
   limitations:
-    'Original orbital nerve/ganglion clinical drafts; central neural entries and all unresolved holds remain unchanged. Not lesion mapping, corneal or pupil testing, disease simulation, nerve-block guidance, patient scans or clinical approval.',
+    'Original central neural clinical drafts; forniceal commissure and all unresolved identity/function holds remain unchanged. Not nuclear or tract segmentation, symptom prediction, perimetry, audiology, memory testing, procedural targets, patient scans or clinical approval.',
 };
 await writeFile(
   new URL(
-    'docs/orbital-neural-clinical-curriculum-validation.json',
+    'docs/central-neural-clinical-curriculum-validation.json',
     contentRoot,
   ),
   JSON.stringify(report, null, 2) + '\n',

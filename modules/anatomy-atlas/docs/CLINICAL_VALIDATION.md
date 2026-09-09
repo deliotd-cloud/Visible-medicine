@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Central neural teaching
+
+Review [46 new drafts](CENTRAL_NEURAL_CLINICAL_CURRICULUM.md) for exact deep-nucleus/commissural identities, paired versus grouped sources, basal-ganglia circuits, central visual/auditory distinctions, memory pathways, syringomyelia, developmental abnormalities and CSF-related disease. Require anatomical, neurological and neuroradiological review; seek neuro-ophthalmic, audiological and paediatric review where relevant. Verify the strength and limits of individual case reports, local stroke/emergency wording and applicability beyond adults. The disputed forniceal commissure remains held. No validated tracts/nuclear subdivisions, complete cord, simulated lesions, testing, treatment protocol, patient imaging or clinical approval is supplied.
+
 ## Orbital nerves and ciliary ganglia
 
 Review [60 new drafts](ORBITAL_NEURAL_CLINICAL_CURRICULUM.md) for exact side/branch/category, sensory versus motor localization, parasympathetic relay versus traversing fibres, corneal disease, shingles, ocular-motor mimics and pupil warning language. Anatomical consequences are explicitly identified as inference, not a diagnosed syndrome. Require anatomy, neuro-ophthalmic and neuroradiological review, plus paediatric and local emergency-service applicability. No nerve blocks, diagnostic testing, simulated lesions, patient imaging or clinical approval are provided.

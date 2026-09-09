@@ -1,5 +1,7 @@
 # Orbital nerve and ciliary-ganglion clinical teaching
 
+This document retains its historical milestone counts. The subsequent [central neural extension](CENTRAL_NEURAL_CLINICAL_CURRICULUM.md) adds separate lessons; the orbital suite still tests its current direct/export content and compares unrelated sections through the explicitly pinned historical projection.
+
 ## Scope — 9 September 2026
 
 Sixty original Clinical/Pathology drafts cover 28 existing orbital nerve selections and two ciliary ganglia. Fifteen paired definitions bind to 30 individually observed ISA identities and source files. Pairing shares teaching, not inferred geometry or contralateral IDs. The existing tabs, compact layout, dissection controls, branding and meshes are unchanged.

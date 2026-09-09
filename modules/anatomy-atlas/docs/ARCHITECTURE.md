@@ -1,6 +1,10 @@
 # Spatial anatomy architecture
 
-## Hand and foot bone clinical teaching
+## Central neural clinical teaching
+
+The [central neural extension](CENTRAL_NEURAL_CLINICAL_CURRICULUM.md) adds fifteen definitions for 23 exact nervous-system selections / 83 indexed source components, including one space-category central canal and 22 organ-category entries. It preserves the 59-component PART-OF brain and two-component choroid-plexus/mammillary groups without inventing subdivisions. Category, FMA, side, source tree, ordered files and primary/ordered regions are guarded. Its offline projection precedes orbital-neural history, giving 45 projections / 2,824 pinned edits. Runtime/export remain current; older captures and baseline remain fixed. No geometry, interface, schema, dependency or review migration.
+
+## Orbital neural clinical teaching
 
 The [orbital neural extension](ORBITAL_NEURAL_CLINICAL_CURRICULUM.md) adds 15 definitions for 30 exact ISA selections: 28 nerves and two organ-category ciliary ganglia. Category, FMA, side, ordered files and primary/ordered regions are guarded. Its offline projection precedes the [acral-bone extension](ACRAL_BONE_CLINICAL_CURRICULUM.md), giving 44 projections / 2,778 pinned edits. Runtime/export stay current; prior captures and baseline remain fixed. No geometry, interface, schema, dependency or review migration.
 
