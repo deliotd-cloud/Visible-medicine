@@ -1,14 +1,14 @@
 {
   "passed": true,
-  "checks": 17467,
-  "bodyRepresentations": 16,
-  "sourceComponents": 33,
-  "lessonGroups": 9,
-  "explicitTopicEdits": 32,
-  "combinedPinnedCurriculumSections": 3372,
-  "sourceIndexChecks": 33,
-  "negativeCases": 31,
-  "historicalMilestoneReadiness": {
+  "checks": 18443,
+  "bodyRepresentations": 34,
+  "sourceComponents": 36,
+  "lessonGroups": 17,
+  "explicitTopicEdits": 68,
+  "combinedPinnedCurriculumSections": 3440,
+  "sourceIndexChecks": 36,
+  "negativeCases": 49,
+  "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
       "identity-only": 2,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 896,
+      "draft": 930,
       "identity-only": 0,
-      "pending": 126,
+      "pending": 92,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 896,
+      "draft": 930,
       "identity-only": 0,
-      "pending": 126,
+      "pending": 92,
       "generated-identification": 0
     },
     "quiz": {
@@ -64,5 +64,5 @@
   "scanContentAdded": false,
   "browserTesting": false,
   "copyAndRecipeHash": "1875765d01b75963a346976d31d6480d1cc5028a5c350b28d5d1ac3b8a7b2b0e",
-  "limitations": "Original primary-head-neck vessel drafts; exact source trees, categories, sides, ordered components and cross-region memberships retained. No new geometry, validated lumen, measured flow, procedural route, scan or clinical approval."
+  "limitations": "Original primary-shoulder-arm vessel drafts; exact source trees, categories, sides, ordered components and cross-region memberships retained. No new geometry, validated lumen, measured flow, procedural route, scan or clinical approval."
 }

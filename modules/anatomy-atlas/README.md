@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+The [shoulder/arm vessel extension](docs/SHOULDER_ARM_VESSEL_CLINICAL_CURRICULUM.md) adds 68 Clinical/Pathology drafts for 34 vessel selections without extra controls or geometry. Clinical/Pathology each reach 930 draft / 92 pending: 88 vessels and four held identities. Run `npm run shoulder-arm-vessel-clinical-curriculum:test -- --source`. Independent clinical review remains required. Earlier totals below are historical.
+
 The [head/neck vessel extension](docs/HEAD_NECK_VESSEL_CLINICAL_CURRICULUM.md) adds 32 Clinical/Pathology drafts for 16 vessel selections without extra controls or geometry. Clinical/Pathology each reach 896 draft / 126 pending: 122 vessels and four held identities. Run `npm run head-neck-vessel-clinical-curriculum:test -- --source`. Draft teaching still requires independent clinical review. Older totals below are historical.
 
 The [pelvic vessel extension](docs/PELVIC_VESSEL_CLINICAL_CURRICULUM.md) added 24 Clinical/Pathology drafts for 12 vessel selections without extra controls or geometry.
