@@ -1,5 +1,9 @@
 # Continuous atlas improvement programme
 
+## Latest milestone — pelvic organ clinical teaching
+
+Added [20 referenced drafts](PELVIC_ORGAN_CLINICAL_CURRICULUM.md) for ten existing selections without adding interface clutter or changing geometry. Clinical/Pathology each reach 657 draft / 365 pending; 45 head/neck organ entries remain before connective tissue and vessels. Next extend those organ lessons, then richer reviewed questions and full-body editorial persistence. Keep all identity/clinical/imaging gates and GitHub deferral; publish privately and save matching local backups. Older milestones and next steps below are historical.
+
 ## Latest milestone — abdominal organ clinical teaching
 
 Added [34 source-linked drafts](ABDOMINAL_ORGAN_CLINICAL_CURRICULUM.md) for 17 existing selections, retaining the compact UI and exact source geometry. Clinical/Pathology each reach 647 draft / 375 pending; 55 organ-system entries remain (ten pelvic, 45 head/neck). Next author pelvic-organ teaching, then head/neck organs, connective tissue and vessels, before richer reviewed questions and full-body editorial persistence. All unresolved identity, clinical and imaging gates remain. GitHub retries stay deferred; continue private Sites publishing and exact local backups. Older milestone counts and upload plans below are historical.

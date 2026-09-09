@@ -60,6 +60,7 @@ export * from './lib/orbital-neural-clinical-curriculum.ts';
 export * from './lib/central-neural-clinical-curriculum.ts';
 export * from './lib/thoracic-organ-clinical-curriculum.ts';
 export * from './lib/abdominal-organ-clinical-curriculum.ts';
+export * from './lib/pelvic-organ-clinical-curriculum.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';`,
       resolveDir: fileURLToPath(contentRoot),

@@ -1,14 +1,14 @@
 {
   "passed": true,
-  "checks": 17567,
-  "bodyRepresentations": 17,
-  "sourceComponents": 135,
-  "lessonGroups": 14,
-  "explicitTopicEdits": 34,
-  "combinedPinnedCurriculumSections": 2874,
-  "sourceIndexChecks": 135,
-  "negativeCases": 33,
-  "historicalMilestoneReadiness": {
+  "checks": 17082,
+  "bodyRepresentations": 10,
+  "sourceComponents": 10,
+  "lessonGroups": 7,
+  "explicitTopicEdits": 20,
+  "combinedPinnedCurriculumSections": 2894,
+  "sourceIndexChecks": 10,
+  "negativeCases": 26,
+  "bodyReadiness": {
     "anatomy": {
       "draft": 1020,
       "identity-only": 2,
@@ -40,15 +40,15 @@
       "generated-identification": 0
     },
     "pathology": {
-      "draft": 647,
+      "draft": 657,
       "identity-only": 0,
-      "pending": 375,
+      "pending": 365,
       "generated-identification": 0
     },
     "clinical": {
-      "draft": 647,
+      "draft": 657,
       "identity-only": 0,
-      "pending": 375,
+      "pending": 365,
       "generated-identification": 0
     },
     "quiz": {
@@ -64,5 +64,5 @@
   "scanContentAdded": false,
   "browserTesting": false,
   "copyAndRecipeHash": "9e3c749f7c6f39cc63f9e296732ecc52b9d1fa5e38931672f794258d8c51debf",
-  "limitations": "Original abdominal organ clinical drafts; aggregate liver/bowel boundaries, duct identities, paired sides and cross-region IDs remain exact. Not validated internal tissue, luminal patency, disease simulation, patient scans, procedural guidance or clinical approval."
+  "limitations": "Original pelvic organ clinical drafts; exact paired sides, adult-male source scope and separately owned rectum remain unchanged. No female anatomy, validated lumen, perfusion, fertility, disease simulation, procedural plan, patient scan or clinical approval."
 }

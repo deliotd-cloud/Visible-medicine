@@ -1,5 +1,7 @@
 # Abdominal organ clinical teaching
 
+Historical milestone: the subsequent [pelvic extension](PELVIC_ORGAN_CLINICAL_CURRICULUM.md) brings current Clinical/Pathology to 657 draft / 365 pending. Counts and next steps below describe the abdominal delivery; its validator keeps those historical counts separate from current runtime/export checks.
+
 ## Scope — 9 September 2026
 
 Thirty-four original Clinical/Pathology drafts cover 17 existing abdominal-primary selections in 14 teaching groups. They use the existing notes panels without adding controls or changing navigation, geometry, registration, dependencies or the database. Draft status and source warnings remain visible.

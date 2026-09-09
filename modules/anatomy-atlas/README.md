@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+The [pelvic organ extension](docs/PELVIC_ORGAN_CLINICAL_CURRICULUM.md) adds 20 Clinical/Pathology drafts for ten existing selections in the current panels. Clinical and Pathology each now have 657 draft / 365 pending body entries; 45 organ-system entries remain. Run `npm run pelvic-organ-clinical-curriculum:test -- --source`. No new controls, geometry or paid dependencies; clinical review remains pending and older totals below are historical.
+
 The [abdominal organ extension](docs/ABDOMINAL_ORGAN_CLINICAL_CURRICULUM.md) adds 34 Clinical/Pathology drafts for 17 existing selections using the current panels. Clinical and Pathology each now have 647 draft / 375 pending body entries. Run `npm run abdominal-organ-clinical-curriculum:test -- --source`. Fifty-five organ-system entries and independent clinical review remain outstanding. No new controls, geometry or paid dependencies; older milestone counts below are historical.
 
 The [thoracic organ extension](docs/THORACIC_ORGAN_CLINICAL_CURRICULUM.md) adds 16 Clinical/Pathology drafts for the heart, lungs, main bronchi, trachea, oesophagus and thymus, using the existing panels. Clinical and Pathology each now have 630 draft / 392 pending body entries. Run `npm run thoracic-organ-clinical-curriculum:test -- --source`. Seventy-two organ-system entries and independent clinical review remain outstanding. Older milestone counts below are historical.

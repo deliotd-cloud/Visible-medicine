@@ -6,7 +6,6 @@ import {
   readContentJson,
 } from './content-contract-tools.mjs';
 import { authoringBeforePelvicOrganClinical } from './pelvic-organ-clinical-curriculum-transition.mjs';
-import { authoringBeforeAbdominalOrganClinical } from './abdominal-organ-clinical-curriculum-transition.mjs';
 import {
   curriculumHash,
   copyBeforeShoulderArmCurriculum,
@@ -23,13 +22,12 @@ const check = (v, l) => {
 const context = await contentContext(),
   { api, catalog, body } = context;
 const before = await readContentJson(
-  'content/abdominal-organ-clinical-curriculum.before.json',
+  'content/pelvic-organ-clinical-curriculum.before.json',
 );
 const baseline = await readContentJson(
   'content/content-contract-baseline.json',
 );
-const previous = await authoringBeforeAbdominalOrganClinical(context);
-const milestone = await authoringBeforePelvicOrganClinical(context);
+const previous = await authoringBeforePelvicOrganClinical(context);
 const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
@@ -46,225 +44,27 @@ same(
   baseline.copyAndRecipeHash,
 );
 // Independently observed official source rows, not inferred from runtime lessons.
-const omittedByFma = {
-  FMA7197: ['FJ2415', 'FJ2416', 'FJ3081'],
-  FMA7200: ['FJ2599'],
-  FMA7201: ['FJ2571', 'FJ2599'],
-};
+/** @type {Record<string, string[]>} */
+const omittedByFma = {};
 /** @type {Array<[string, string, string, string[], string, string[], string]>} */
 const expected = [
-  [
-    'FMA7197',
-    'unpaired',
-    'partof',
-    [
-      'FJ1883',
-      'FJ1893',
-      'FJ1913',
-      'FJ1914',
-      'FJ1916',
-      'FJ2386',
-      'FJ2404',
-      'FJ2405',
-      'FJ2409',
-      'FJ2816',
-      'FJ2818',
-      'FJ2819',
-      'FJ2820',
-      'FJ2821',
-      'FJ2822',
-      'FJ2823',
-      'FJ2824',
-      'FJ3071',
-      'FJ3072',
-      'FJ3073',
-      'FJ3074',
-      'FJ3075',
-      'FJ3076',
-      'FJ3077',
-      'FJ3083',
-      'FJ3086',
-      'FJ3088',
-      'FJ3089',
-      'FJ3090',
-      'FJ3091',
-      'FJ3092',
-      'FJ3093',
-      'FJ3095',
-      'FJ3096',
-      'FJ3102',
-      'FJ3103',
-      'FJ3104',
-      'FJ3105',
-      'FJ3106',
-      'FJ3107',
-      'FJ3108',
-      'FJ3109',
-      'FJ3110',
-      'FJ3111',
-      'FJ3112',
-      'FJ3113',
-      'FJ3114',
-      'FJ3115',
-      'FJ3116',
-      'FJ3117',
-      'FJ3122',
-      'FJ3123',
-      'FJ3124',
-      'FJ3125',
-      'FJ3126',
-      'FJ3127',
-      'FJ3128',
-    ],
-    'abdomen',
-    ['abdomen'],
-    'organ',
-  ],
-  [
-    'FMA7198',
-    'unpaired',
-    'partof',
-    ['FJ1895', 'FJ1896', 'FJ2629', 'FJ2630'],
-    'abdomen',
-    ['abdomen'],
-    'organ',
-  ],
-  [
-    'FMA7148',
-    'unpaired',
-    'partof',
-    ['FJ2564'],
-    'abdomen',
-    ['abdomen'],
-    'organ',
-  ],
-  [
-    'FMA7200',
-    'unpaired',
-    'partof',
-    [
-      'FJ2573',
-      'FJ2574',
-      'FJ2575',
-      'FJ2576',
-      'FJ2577',
-      'FJ2578',
-      'FJ2579',
-      'FJ2580',
-      'FJ2581',
-      'FJ2582',
-      'FJ2583',
-      'FJ2584',
-      'FJ2585',
-      'FJ2586',
-      'FJ2587',
-      'FJ2588',
-      'FJ2589',
-      'FJ2590',
-      'FJ2591',
-      'FJ2592',
-      'FJ2593',
-      'FJ2594',
-      'FJ2595',
-      'FJ2596',
-      'FJ2597',
-      'FJ2598',
-      'FJ2600',
-      'FJ2601',
-      'FJ2602',
-      'FJ2603',
-      'FJ2604',
-      'FJ2605',
-      'FJ2606',
-      'FJ2607',
-      'FJ2608',
-      'FJ2609',
-      'FJ2610',
-      'FJ2611',
-      'FJ2612',
-      'FJ2613',
-      'FJ2614',
-      'FJ2615',
-      'FJ2616',
-      'FJ2617',
-      'FJ2618',
-      'FJ2619',
-      'FJ2620',
-      'FJ2621',
-      'FJ2622',
-      'FJ2623',
-      'FJ2624',
-      'FJ2625',
-      'FJ2626',
-      'FJ2627',
-      'FJ2628',
-    ],
-    'abdomen',
-    ['abdomen'],
-    'organ',
-  ],
-  [
-    'FMA7201',
-    'unpaired',
-    'partof',
-    ['FJ2566', 'FJ2567', 'FJ2568', 'FJ2569', 'FJ2570', 'FJ2572'],
-    'abdomen',
-    ['abdomen'],
-    'organ',
-  ],
-  [
-    'FMA7202',
-    'unpaired',
-    'partof',
-    ['FJ2817'],
-    'abdomen',
-    ['abdomen'],
-    'organ',
-  ],
-  ['FMA7204', 'right', 'partof', ['FJ3147'], 'abdomen', ['abdomen'], 'organ'],
-  ['FMA7205', 'left', 'partof', ['FJ3145'], 'abdomen', ['abdomen'], 'organ'],
-  ['FMA7196', 'unpaired', 'isa', ['FJ2561'], 'abdomen', ['abdomen'], 'organ'],
-  ['FMA15629', 'right', 'isa', ['FJ3130'], 'abdomen', ['abdomen'], 'organ'],
-  ['FMA15630', 'left', 'isa', ['FJ3129'], 'abdomen', ['abdomen'], 'organ'],
-  [
-    'FMA15571',
-    'right',
-    'partof',
-    ['FJ3146'],
-    'abdomen',
-    ['abdomen', 'pelvis'],
-    'organ',
-  ],
-  [
-    'FMA15572',
-    'left',
-    'partof',
-    ['FJ3144'],
-    'abdomen',
-    ['abdomen', 'pelvis'],
-    'organ',
-  ],
-  ['FMA14539', 'unpaired', 'isa', ['FJ3080'], 'abdomen', ['abdomen'], 'organ'],
-  ['FMA14668', 'unpaired', 'isa', ['FJ3079'], 'abdomen', ['abdomen'], 'organ'],
-  [
-    'FMA14542',
-    'unpaired',
-    'isa',
-    ['FJ2565'],
-    'abdomen',
-    ['abdomen', 'pelvis'],
-    'organ',
-  ],
-  ['FMA11338', 'unpaired', 'isa', ['FJ2599'], 'abdomen', ['abdomen'], 'organ'],
+  ['FMA15900', 'unpaired', 'partof', ['FJ3149'], 'pelvis', ['pelvis'], 'organ'],
+  ['FMA9600', 'unpaired', 'partof', ['FJ3139'], 'pelvis', ['pelvis'], 'organ'],
+  ['FMA7211', 'right', 'isa', ['FJ3142'], 'pelvis', ['pelvis'], 'organ'],
+  ['FMA7212', 'left', 'isa', ['FJ3138'], 'pelvis', ['pelvis'], 'organ'],
+  ['FMA19387', 'right', 'isa', ['FJ3143'], 'pelvis', ['pelvis'], 'organ'],
+  ['FMA19388', 'left', 'isa', ['FJ3137'], 'pelvis', ['pelvis'], 'organ'],
+  ['FMA14544', 'unpaired', 'isa', ['FJ2571'], 'pelvis', ['pelvis'], 'organ'],
+  ['FMA18256', 'right', 'isa', ['FJ3141'], 'pelvis', ['pelvis'], 'organ'],
+  ['FMA18257', 'left', 'isa', ['FJ3136'], 'pelvis', ['pelvis'], 'organ'],
+  ['FMA19667', 'unpaired', 'isa', ['FJ3148'], 'pelvis', ['pelvis'], 'organ'],
 ];
 const ids = expected.map((e) => e[0]),
   tabs = ['pathology', 'clinical'];
-same(api.abdominalOrganClinicalGroups.length, 14);
+same(api.pelvicOrganClinicalGroups.length, 7);
 const byIdentity = (a, b) => a[0].localeCompare(b[0]);
 same(
-  api.abdominalOrganClinicalGroups
-    .flatMap((g) => g.identities)
-    .sort(byIdentity),
+  api.pelvicOrganClinicalGroups.flatMap((g) => g.identities).sort(byIdentity),
   [...expected].sort(byIdentity),
 );
 same(before.entries.map((e) => e.fmaId).sort(), [...ids].sort());
@@ -289,12 +89,12 @@ for (const [f, side, tree, files, region, regions, category] of expected) {
     [...files, ...(omittedByFma[f] ?? [])].sort((a, b) => a.localeCompare(b)),
   );
   same(e.omittedSourceFiles, omittedByFma[f] ?? []);
-  const group = api.abdominalOrganClinicalGroups.find((g) =>
+  const group = api.pelvicOrganClinicalGroups.find((g) =>
     g.identities.some((i) => i[0] === f),
   );
   const record = body.find((r) => r.id === s.id);
   for (const t of tabs) {
-    const result = api.abdominalOrganClinicalLesson(s, t);
+    const result = api.pelvicOrganClinicalLesson(s, t);
     same(result, api.bodyLesson(s, t));
     same(result.readiness, 'draft');
     same(result.body, group[t].body);
@@ -306,7 +106,7 @@ for (const [f, side, tree, files, region, regions, category] of expected) {
     if (s.coverageNote) check(result.note.includes(s.coverageNote));
     check(
       api
-        .abdominalOrganClinicalLesson({ ...s, coverageNote: 'Keep warning' }, t)
+        .pelvicOrganClinicalLesson({ ...s, coverageNote: 'Keep warning' }, t)
         .note.includes('Keep warning'),
     );
     for (const url of result.citations) same(new URL(url).protocol, 'https:');
@@ -341,94 +141,102 @@ for (const [f, side, tree, files, region, regions, category] of expected) {
         : []),
       ...(s.regions.length > 1 ? [{ regions: [...s.regions].reverse() }] : []),
     ])
-      same(
-        api.abdominalOrganClinicalLesson({ ...s, ...mutation }, t),
-        undefined,
-      );
+      same(api.pelvicOrganClinicalLesson({ ...s, ...mutation }, t), undefined);
   }
 }
 for (const s of catalog.structures)
   for (const t of api.contentTabs) {
     if (!ids.includes(s.fmaId) || !tabs.includes(t)) {
-      same(api.abdominalOrganClinicalLesson(s, t), undefined);
+      same(api.pelvicOrganClinicalLesson(s, t), undefined);
       same(
-        milestone.bodyLesson(s, t),
+        api.bodyLesson(s, t),
         previous.bodyLesson(s, t),
         'Every unrelated section preserved',
       );
     }
   }
-const group = (k) => api.abdominalOrganClinicalGroups.find((g) => g.key === k);
-same(ids.length, 17);
-same(new Set(ids).size, 17);
+const group = (k) => api.pelvicOrganClinicalGroups.find((g) => g.key === k);
+same(ids.length, 10);
+same(new Set(ids).size, 10);
 same(
   expected.reduce((n, e) => n + e[3].length, 0),
-  135,
+  10,
 );
-same(expected.filter((e) => e[6] === 'organ').length, 17);
+same(expected.filter((e) => e[6] === 'organ').length, 10);
 same(
-  ['FMA7197', 'FMA7198', 'FMA7200', 'FMA7201'].map(
-    (f) => entry(f).sources.length,
-  ),
-  [57, 4, 55, 6],
+  expected.filter((e) => e[2] === 'partof').map((e) => e[0]),
+  ['FMA15900', 'FMA9600'],
 );
-same(entry('FMA7202').id, 'vm:anatomy:body:pelvis:unpaired:organ:gallbladder');
-same(entry('FMA7202').region, 'abdomen');
-for (const f of ['FMA15571', 'FMA15572', 'FMA14542'])
-  same(entry(f).regions, ['abdomen', 'pelvis']);
-check(group('liver').pathology.body.includes('portal hypertension'));
-check(group('pancreas').pathology.body.includes('sometimes no cause'));
-check(group('stomach').pathology.body.includes('Helicobacter pylori'));
-check(group('small-intestine').pathology.body.includes('partial or complete'));
-check(
-  group('large-intestine').pathology.body.includes('not be used as synonyms'),
-);
-check(group('gallbladder').pathology.body.includes('not the same'));
-check(group('kidneys').clinical.body.includes('urine albumin'));
-check(group('spleen').clinical.body.includes('medical emergency'));
-check(group('adrenals').pathology.body.includes('pituitary'));
-check(group('ureters').clinical.body.includes('fever, chills'));
-check(group('cystic-duct').pathology.body.includes('cholecystitis'));
-check(group('common-hepatic-duct').clinical.body.includes('upstream'));
-check(group('appendix').clinical.body.includes('not universal'));
-check(group('appendix').scope.includes('separately represented mesoappendix'));
-check(
-  group('ileocecal-junction').scope.includes(
-    'not make it a validated complete cecum',
-  ),
-);
-check(
-  group('ileocecal-junction').clinical.body.includes('exclude other causes'),
-);
-const omittedOwners = {
-  FJ2415: 'FMA14339',
-  FJ2416: 'FMA14338',
-  FJ3081: 'FMA14772',
-  FJ2571: 'FMA14544',
-  FJ2599: 'FMA11338',
-};
-same(Object.values(omittedByFma).flat().length, 6);
-same(
-  [...new Set(Object.values(omittedByFma).flat())].sort(),
-  Object.keys(omittedOwners).sort(),
-);
-for (const [file, owner] of Object.entries(omittedOwners))
+for (const f of ids) {
+  same(entry(f).region, 'pelvis');
+  same(entry(f).regions, ['pelvis']);
+  same(entry(f).sources.length, 1);
+}
+for (const [key, right, left] of [
+  ['testes', 'FMA7211', 'FMA7212'],
+  ['seminal-vesicles', 'FMA19387', 'FMA19388'],
+  ['epididymides', 'FMA18256', 'FMA18257'],
+]) {
   same(
-    catalog.structures
-      .filter((s) => s.sources.some((p) => p.file === file))
-      .map((s) => s.fmaId),
-    [owner],
+    group(key).identities.map((i) => [i[0], i[1]]),
+    [
+      [right, 'right'],
+      [left, 'left'],
+    ],
   );
+  check(entry(right).sources[0].file !== entry(left).sources[0].file);
+}
+check(group('bladder').pathology.body.includes('kidneys'));
+check(group('prostate').pathology.body.includes('non-cancerous'));
+check(
+  group('prostate').pathology.bullets.some((b) =>
+    b.includes('not reliably track prostate size'),
+  ),
+);
+check(
+  group('testes').scope.includes(
+    'not a claim that the testis lies within the pelvic cavity',
+  ),
+);
+check(group('testes').clinical.body.includes('999'));
+check(
+  group('seminal-vesicles').pathology.bullets.some((b) =>
+    b.includes('several parts'),
+  ),
+);
+check(group('rectum').pathology.body.includes('little inflammation'));
+check(group('rectum').clinical.body.includes('Tenesmus'));
+check(
+  group('epididymides').clinical.body.includes(
+    'must not be dismissed as infection',
+  ),
+);
+check(group('epididymides').clinical.body.includes('999'));
+check(group('urethra').scope.includes('not female urethral anatomy'));
+check(
+  group('urethra').pathology.body.includes('inadequate bladder contraction'),
+);
+same(
+  catalog.structures
+    .filter((s) => s.sources.some((p) => p.file === 'FJ2571'))
+    .map((s) => s.fmaId),
+  ['FMA14544'],
+);
+check(!entry('FMA7201').sources.some((p) => p.file === 'FJ2571'));
+same(
+  api.bodyLesson(entry('FMA7201'), 'clinical'),
+  previous.bodyLesson(entry('FMA7201'), 'clinical'),
+);
 for (const tab of tabs) {
   same(api.bodyLesson(entry('FMA61970'), tab).readiness, 'pending');
-  same(api.abdominalOrganClinicalLesson(entry('FMA61970'), tab), undefined);
+  same(api.pelvicOrganClinicalLesson(entry('FMA61970'), tab), undefined);
 }
 same(
   catalog.structures.filter(
     (s) =>
       s.system === 'organs' &&
-      s.region === 'abdomen' &&
-      milestone.bodyLesson(s, 'clinical').readiness === 'pending',
+      s.region === 'pelvis' &&
+      api.bodyLesson(s, 'clinical').readiness === 'pending',
   ).length,
   0,
 );
@@ -436,14 +244,14 @@ same(
   catalog.structures.filter(
     (s) =>
       s.system === 'organs' &&
-      milestone.bodyLesson(s, 'clinical').readiness === 'pending',
+      api.bodyLesson(s, 'clinical').readiness === 'pending',
   ).length,
-  55,
+  45,
 );
 const legacyRightShoulder = ['FMA13322', 'FMA23130', 'FMA13395'];
 for (const f of legacyRightShoulder)
   for (const t of tabs) {
-    same(api.abdominalOrganClinicalLesson(entry(f), t), undefined);
+    same(api.pelvicOrganClinicalLesson(entry(f), t), undefined);
     same(api.bodyLesson(entry(f), t), previous.bodyLesson(entry(f), t));
   }
 for (const t of tabs)
@@ -451,14 +259,14 @@ for (const t of tabs)
 for (const f of ['FMA45097', 'FMA45098'])
   for (const tab of tabs) {
     same(api.bodyLesson(entry(f), tab).readiness, 'pending');
-    same(api.abdominalOrganClinicalLesson(entry(f), tab), undefined);
+    same(api.pelvicOrganClinicalLesson(entry(f), tab), undefined);
   }
 same(
   catalog.structures
     .filter(
       (s) =>
         s.system === 'skeleton' &&
-        milestone.bodyLesson(s, 'clinical').readiness === 'pending',
+        api.bodyLesson(s, 'clinical').readiness === 'pending',
     )
     .map((s) => s.fmaId)
     .sort(),
@@ -498,28 +306,21 @@ if (process.argv.includes('--source')) {
   }
 }
 const negatives = [
+  ['FMA15900', 'clinical', 'body'],
+  ['FMA9600', 'pathology', 'body'],
+  ['FMA7211', 'clinical', 'body'],
+  ['FMA7212', 'pathology', 'readiness'],
+  ['FMA19387', 'clinical', 'body'],
+  ['FMA19388', 'pathology', 'body'],
+  ['FMA14544', 'clinical', 'body'],
+  ['FMA18256', 'pathology', 'body'],
+  ['FMA18257', 'clinical', 'body'],
+  ['FMA19667', 'pathology', 'body'],
+  ['FMA15900', 'anatomy', 'body'],
+  ['FMA9600', 'function', 'body'],
+  ['FMA7211', 'ct', 'body'],
   ['FMA7197', 'clinical', 'body'],
-  ['FMA7198', 'pathology', 'body'],
-  ['FMA7148', 'clinical', 'body'],
-  ['FMA7200', 'pathology', 'readiness'],
-  ['FMA7201', 'clinical', 'body'],
-  ['FMA7202', 'pathology', 'body'],
-  ['FMA7204', 'clinical', 'body'],
-  ['FMA7205', 'pathology', 'body'],
-  ['FMA7196', 'clinical', 'body'],
-  ['FMA15629', 'pathology', 'body'],
-  ['FMA15630', 'clinical', 'body'],
-  ['FMA15571', 'pathology', 'body'],
-  ['FMA15572', 'clinical', 'body'],
-  ['FMA14539', 'pathology', 'body'],
-  ['FMA14668', 'clinical', 'body'],
-  ['FMA14542', 'pathology', 'body'],
-  ['FMA11338', 'clinical', 'body'],
-  ['FMA7197', 'anatomy', 'body'],
-  ['FMA7198', 'function', 'body'],
-  ['FMA7204', 'ct', 'body'],
   ['FMA7088', 'clinical', 'body'],
-  ['FMA50801', 'clinical', 'body'],
   ['FMA45097', 'clinical', 'readiness'],
   ['FMA45098', 'clinical', 'readiness'],
   ['FMA61970', 'clinical', 'readiness'],
@@ -577,17 +378,16 @@ const counts = (t) =>
     ['draft', 'identity-only', 'pending', 'generated-identification'].map(
       (r) => [
         r,
-        catalog.structures.filter(
-          (s) => milestone.bodyLesson(s, t).readiness === r,
-        ).length,
+        catalog.structures.filter((s) => api.bodyLesson(s, t).readiness === r)
+          .length,
       ],
     ),
   );
 for (const t of tabs)
   same(counts(t), {
-    draft: 647,
+    draft: 657,
     'identity-only': 0,
-    pending: 375,
+    pending: 365,
     'generated-identification': 0,
   });
 for (const t of ['ct', 'mri', 'ultrasound'])
@@ -620,16 +420,14 @@ for (const f of api.shoulderArmLessons.flatMap((l) => l.fmaIds))
 const report = {
   passed: true,
   checks,
-  bodyRepresentations: 17,
-  sourceComponents: 135,
-  lessonGroups: 14,
-  explicitTopicEdits: 34,
-  combinedPinnedCurriculumSections: 2874,
+  bodyRepresentations: 10,
+  sourceComponents: 10,
+  lessonGroups: 7,
+  explicitTopicEdits: 20,
+  combinedPinnedCurriculumSections: 2894,
   sourceIndexChecks,
   negativeCases: negatives.length,
-  historicalMilestoneReadiness: Object.fromEntries(
-    api.contentTabs.map((t) => [t, counts(t)]),
-  ),
+  bodyReadiness: Object.fromEntries(api.contentTabs.map((t) => [t, counts(t)])),
   unrelatedCopyAndRecipesPreserved: true,
   sourceGeometryChanged: false,
   clinicalApproval: false,
@@ -637,13 +435,10 @@ const report = {
   browserTesting: false,
   copyAndRecipeHash: curriculumHash(copy(api)),
   limitations:
-    'Original abdominal organ clinical drafts; aggregate liver/bowel boundaries, duct identities, paired sides and cross-region IDs remain exact. Not validated internal tissue, luminal patency, disease simulation, patient scans, procedural guidance or clinical approval.',
+    'Original pelvic organ clinical drafts; exact paired sides, adult-male source scope and separately owned rectum remain unchanged. No female anatomy, validated lumen, perfusion, fertility, disease simulation, procedural plan, patient scan or clinical approval.',
 };
 await writeFile(
-  new URL(
-    'docs/abdominal-organ-clinical-curriculum-validation.json',
-    contentRoot,
-  ),
+  new URL('docs/pelvic-organ-clinical-curriculum-validation.json', contentRoot),
   JSON.stringify(report, null, 2) + '\n',
 );
 console.log(JSON.stringify(report, null, 2));

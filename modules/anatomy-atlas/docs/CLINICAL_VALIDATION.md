@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Pelvic organ teaching
+
+Review [20 new drafts](PELVIC_ORGAN_CLINICAL_CURRICULUM.md) for urinary infection/retention, BPH distinctions, torsion urgency versus epididymal infection, non-localising seminal-tract symptoms and rectal inflammatory/radiation injury. Verify paired source sides, adult-male scope and UK emergency wording. No female/paediatric geometry, fertility assessment, perfusion, measured lumen, procedure, scan registration or clinical acceptance is provided.
+
 ## Abdominal organ teaching
 
 Review [34 new drafts](ABDOMINAL_ORGAN_CLINICAL_CURRICULUM.md) for liver disease/function, pancreatic and bowel disease, biliary levels, renal/adrenal distinctions, splenic trauma, appendicitis and ileocecal Crohn's context. Verify source aggregate exclusions and cross-region/side identities. The junction remains an unvalidated aliased source surface, not a complete cecum or valve. Clinical wording, warning language and anatomy require independent specialty acceptance; software checks do not validate lumen, disease, surgery, scan registration or a patient diagnosis.

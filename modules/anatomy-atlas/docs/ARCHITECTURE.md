@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Pelvic organ clinical teaching
+
+The [pelvic extension](PELVIC_ORGAN_CLINICAL_CURRICULUM.md) adds seven definitions for ten exact single-component selections. Identity guards retain paired sides, adult-male tract scope and separately owned rectum. The offline projection precedes abdominal history: 48 projections / 2,894 pinned edits. Current runtime/export and historical comparisons stay separate; no UI, geometry, schema, dependency or review migration.
+
 ## Abdominal organ clinical teaching
 
 The [abdominal extension](ABDOMINAL_ORGAN_CLINICAL_CURRICULUM.md) adds 14 definitions for 17 exact selections / 135 source components. Identity guards retain the liver/bowel exclusions, five separate owners, paired sides, cross-region ureters/appendix and legacy gallbladder ID. Its offline projection precedes thoracic history: 47 projections / 2,874 pinned edits. Current runtime/export and historical comparison are separate; no UI, geometry, schema, dependency or review migration.

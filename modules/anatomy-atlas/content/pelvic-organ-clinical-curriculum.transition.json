@@ -1,0 +1,86 @@
+{
+  "sourceCommit": "27a28be5b2b3746f5dba80c8cb32b9da35761db4",
+  "reason": "Twenty Clinical/Pathology drafts for ten exact pelvic organ selections; adult-male source scope, independent paired sides and all unresolved holds remain unchanged.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:urinary-bladder",
+      "fmaId": "FMA15900",
+      "sections": {
+        "pathology": "803fe1d5b7baf239b9f0fa8db4af6880ed5b79b3e2940f17443b450d7a203b40",
+        "clinical": "dec9213af3b7330c8d84ee3e1dbb6f3e5dc2189ad4e6fadbd45f8a4eabbdf341"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:prostate",
+      "fmaId": "FMA9600",
+      "sections": {
+        "pathology": "b67474c5c18b396fb61f67ac97fe210eb2e9726c595953381cf2f32abdca8508",
+        "clinical": "a9e0d4d1a311ebb879375e235cbfdf3fa5d2647e974a21f83432b04836caeae8"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:organ:right-testis",
+      "fmaId": "FMA7211",
+      "sections": {
+        "pathology": "35d772f22c0e57dea4add33e9e67178bd41cd0b4937619a48b0c93ef01b8f63e",
+        "clinical": "2e1ab1c3fd7bd9e04238d34db54ab948600f8d40e607d8c513c5222ade165271"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:organ:left-testis",
+      "fmaId": "FMA7212",
+      "sections": {
+        "pathology": "216ae2d4289b531de37b3ddda8a8f1fecf05c426b1faf47eb016f23a976cb01a",
+        "clinical": "68287880b89df03f9a89cc7685ad7f9c35965a3f5a5da21fee01f432eb4979ef"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:organ:right-seminal-vesicle",
+      "fmaId": "FMA19387",
+      "sections": {
+        "pathology": "9d41e5eb7da4d5f9c9238cb356599378d8b2b97b66fb2aa513a0ba981ec05a6b",
+        "clinical": "b097b556caec01dcbd7858aae407b06a754eea3dff106b74b0d82a0a7f1f6280"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:organ:left-seminal-vesicle",
+      "fmaId": "FMA19388",
+      "sections": {
+        "pathology": "618a2c8da015cb612c937bb88ed6e21836d524a7f626180c8b8045f5430a2cd4",
+        "clinical": "cec075a3f0638756434dac045f68fa9d52f5bc3a1900669fa54a2727e45625f5"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:rectum",
+      "fmaId": "FMA14544",
+      "sections": {
+        "pathology": "d5720109b4523dc6116f636057ec624ec5e20fcbda2f247d858f02e0a610c195",
+        "clinical": "1191ad7cb28534e364e0c75f326dfa80fe1c401aa1a9c5e0a5049dd61ddadefc"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:organ:right-epididymis",
+      "fmaId": "FMA18256",
+      "sections": {
+        "pathology": "43834bd6f3ec422327c4d10a559d5d34672b28183c715a11440b421328f497c1",
+        "clinical": "1ace0c3b386c624b2bc8976af061d11795eec54aebff2404e7e35d99c9241c99"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:organ:left-epididymis",
+      "fmaId": "FMA18257",
+      "sections": {
+        "pathology": "5cf5fcd5f2614ba3262cccaea35f188787fda815be22bfd9aac89b3bf5205176",
+        "clinical": "c4147982d34441e430262fdebd48e50dddb8597961782866acf10ffae53bf5f7"
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:urethra",
+      "fmaId": "FMA19667",
+      "sections": {
+        "pathology": "8836840b5885e41fde0ec00e5880db726be1e8a05d160d66f3287c02970d6d32",
+        "clinical": "679f294c591afcbf27969c7171e6db2e4c62672bc161e16634e316890d454981"
+      }
+    }
+  ]
+}

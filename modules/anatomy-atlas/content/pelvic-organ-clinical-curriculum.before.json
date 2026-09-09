@@ -1,0 +1,320 @@
+{
+  "sourceCommit": "27a28be5b2b3746f5dba80c8cb32b9da35761db4",
+  "copyAndRecipeHash": "c253fb9a5b840a1a27c7cabd452dde6cb52e9a3c19dd4b326d6407253b435aab",
+  "scope": "body",
+  "regions": [
+    "pelvis"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:urinary-bladder",
+      "fmaId": "FMA15900",
+      "name": "Urinary bladder",
+      "category": "organ",
+      "side": "unpaired",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "tree": "partof",
+      "files": [
+        "FJ3149"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3149"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:prostate",
+      "fmaId": "FMA9600",
+      "name": "Prostate",
+      "category": "organ",
+      "side": "unpaired",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "tree": "partof",
+      "files": [
+        "FJ3139"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3139"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:organ:right-testis",
+      "fmaId": "FMA7211",
+      "name": "Right testis",
+      "category": "organ",
+      "side": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3142"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3142"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:organ:left-testis",
+      "fmaId": "FMA7212",
+      "name": "Left testis",
+      "category": "organ",
+      "side": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3138"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3138"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:organ:right-seminal-vesicle",
+      "fmaId": "FMA19387",
+      "name": "Right seminal vesicle",
+      "category": "organ",
+      "side": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3143"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3143"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:organ:left-seminal-vesicle",
+      "fmaId": "FMA19388",
+      "name": "Left seminal vesicle",
+      "category": "organ",
+      "side": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3137"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3137"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:rectum",
+      "fmaId": "FMA14544",
+      "name": "Rectum",
+      "category": "organ",
+      "side": "unpaired",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ2571"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ2571"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:organ:right-epididymis",
+      "fmaId": "FMA18256",
+      "name": "Right epididymis",
+      "category": "organ",
+      "side": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3141"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3141"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:organ:left-epididymis",
+      "fmaId": "FMA18257",
+      "name": "Left epididymis",
+      "category": "organ",
+      "side": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3136"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3136"
+      ],
+      "omittedSourceFiles": []
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:urethra",
+      "fmaId": "FMA19667",
+      "name": "Urethra",
+      "category": "organ",
+      "side": "unpaired",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "tree": "isa",
+      "files": [
+        "FJ3148"
+      ],
+      "sections": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        }
+      },
+      "sourceIndexFiles": [
+        "FJ3148"
+      ],
+      "omittedSourceFiles": []
+    }
+  ]
+}
