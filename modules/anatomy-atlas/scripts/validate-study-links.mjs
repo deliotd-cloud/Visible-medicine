@@ -14,6 +14,7 @@ import {
   dissectionReducer,
   initialDissection,
   resolveDissection,
+  matchesRule,
 } from '../app/dissection-data.ts';
 // Check the installed route runtime's actual duplicate-parameter collection too.
 import { collectAppPageSearchParams } from '../node_modules/vinext/dist/server/app-page-head.js';
@@ -66,7 +67,9 @@ for (const [region, profile] of Object.entries(dissectionProfiles)) {
           ),
         ).visible;
         const href = makeStudyLink(catalog, region, selected.id, side, focus);
-        if (!expected.includes(selected)) {
+        const definition = profile.focuses.find((item) => item.id === focus);
+        const missingTarget = definition && !scope.some((item) => matchesRule(item, definition.rule));
+        if (missingTarget || !expected.includes(selected)) {
           same(href, null);
           continue;
         }

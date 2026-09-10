@@ -1,0 +1,245 @@
+{
+  "checks": 10899,
+  "studySets": 4,
+  "focuses": 8,
+  "newStages": 0,
+  "sourceRepresentations": [
+    {
+      "id": "vm:anatomy:body:abdomen:right:organ:right-kidney",
+      "fmaId": "FMA7204",
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ3147",
+          "sha256": "e21e2ebd5224b1cbf8caabbf4fa788d894819a328a006dcdb2eb8aa6eee5875a"
+        }
+      ],
+      "sourceDefinitionFiles": [
+        "FJ3147"
+      ],
+      "partofDefinitionFiles": [
+        "FJ3147"
+      ],
+      "additionalPartofFilesNotIncluded": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:organ:left-kidney",
+      "fmaId": "FMA7205",
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ3145",
+          "sha256": "b52066a987f767ad9e5c3092958bf5dd760d9f05f1497d1fc7f7ff11539bdfd2"
+        }
+      ],
+      "sourceDefinitionFiles": [
+        "FJ3145"
+      ],
+      "partofDefinitionFiles": [
+        "FJ3145"
+      ],
+      "additionalPartofFilesNotIncluded": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
+      "fmaId": "FMA14752",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2038",
+          "sha256": "2bf3da140369524e15335694773718b4e83b254234bc3e8376a4708565276045"
+        }
+      ],
+      "sourceDefinitionFiles": [
+        "FJ2038"
+      ],
+      "partofDefinitionFiles": [
+        "FJ2038",
+        "FJ3576",
+        "FJ3581",
+        "FJ3582",
+        "FJ3584"
+      ],
+      "additionalPartofFilesNotIncluded": [
+        "FJ3576",
+        "FJ3581",
+        "FJ3582",
+        "FJ3584"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
+      "fmaId": "FMA14753",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2046",
+          "sha256": "b1a9ce8a37cd9c89fbf4c90a68a554184bf2919dbad391c552c0f4c8dd788845"
+        }
+      ],
+      "sourceDefinitionFiles": [
+        "FJ2046"
+      ],
+      "partofDefinitionFiles": [
+        "FJ2046",
+        "FJ3467",
+        "FJ3476",
+        "FJ3481"
+      ],
+      "additionalPartofFilesNotIncluded": [
+        "FJ3467",
+        "FJ3476",
+        "FJ3481"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:organ:right-ureter",
+      "fmaId": "FMA15571",
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ3146",
+          "sha256": "780889608ce700962d98be95432f94d58ca121b240099adeb83d8278ca8a779d"
+        }
+      ],
+      "sourceDefinitionFiles": [
+        "FJ3146"
+      ],
+      "partofDefinitionFiles": [
+        "FJ3146"
+      ],
+      "additionalPartofFilesNotIncluded": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:organ:left-ureter",
+      "fmaId": "FMA15572",
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ3144",
+          "sha256": "1235a492a66c738eceafaafa512def0ed82785741367a29835aae2fdb706d59a"
+        }
+      ],
+      "sourceDefinitionFiles": [
+        "FJ3144"
+      ],
+      "partofDefinitionFiles": [
+        "FJ3144"
+      ],
+      "additionalPartofFilesNotIncluded": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:organ:right-adrenal-gland",
+      "fmaId": "FMA15629",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3130",
+          "sha256": "c4d17a1accdd2e684d919582c36c1d51c7b6d382e221525c87e04c2575ccc3c6"
+        }
+      ],
+      "sourceDefinitionFiles": [
+        "FJ3130"
+      ],
+      "partofDefinitionFiles": [
+        "FJ3130"
+      ],
+      "additionalPartofFilesNotIncluded": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:organ:left-adrenal-gland",
+      "fmaId": "FMA15630",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3129",
+          "sha256": "bff9553c5d66c854bb54577136eb734dfd004075323013456f1e995ac8f8e545"
+        }
+      ],
+      "sourceDefinitionFiles": [
+        "FJ3129"
+      ],
+      "partofDefinitionFiles": [
+        "FJ3129"
+      ],
+      "additionalPartofFilesNotIncluded": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+      "fmaId": "FMA3789",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1932",
+          "sha256": "c74d3742308c1f05ce9e85c4508d348e3debf57d4aab5bfbc42041d682d39e02"
+        }
+      ],
+      "sourceDefinitionFiles": [
+        "FJ1932"
+      ],
+      "partofDefinitionFiles": [
+        "FJ1932"
+      ],
+      "additionalPartofFilesNotIncluded": []
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+      "fmaId": "FMA10951",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3441",
+          "sha256": "7b03ef0464b622d0a839c3c55aedcec2a713b4399112e7ce6efa1ac51861b606"
+        },
+        {
+          "file": "FJ3659",
+          "sha256": "2241af6de027922eb74cb58d882433a5d0ffb7ecce41a1925f05e13dd78d666c"
+        }
+      ],
+      "sourceDefinitionFiles": [
+        "FJ3441",
+        "FJ3659"
+      ],
+      "partofDefinitionFiles": [
+        "FJ3441",
+        "FJ3659"
+      ],
+      "additionalPartofFilesNotIncluded": []
+    }
+  ],
+  "sourceEvidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "profilesSha256": "d25343bee51c7e2708ef96790f7a8ab0913b735d4d35d648ac4a81145acded45",
+  "previousProfilesSha256": "646198113536b582de64366f719bd54fb88e228205f45597f89e1cbd501f4701",
+  "missingInternalSourceLabelMatches": [],
+  "limitations": {
+    "clinicalApproval": false,
+    "browserAcceptance": false,
+    "newGeometry": false,
+    "internalRenalDissection": false,
+    "renalVeinsIncluded": false,
+    "scanCorrespondence": false
+  }
+}

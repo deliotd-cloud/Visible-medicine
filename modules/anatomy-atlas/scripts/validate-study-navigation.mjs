@@ -112,7 +112,10 @@ for (const [region, profile] of Object.entries(dissectionProfiles)) {
           ids(resolveDissection(scope, profile, focusedState).visible),
           view.visibleIds,
         );
-        same(dissectionReducer(focusedState, { type: 'undo' }), removedState);
+        const undone = dissectionReducer(focusedState, { type: 'undo' });
+        same({ ...undone, future: [] }, removedState);
+        same(undone.future.length, 1);
+        same(dissectionReducer(undone, { type: 'redo' }), focusedState);
       }
       // Search must find stable public IDs as well as FMA labels and source names.
       check(filterStudyStructures(scope, item.id).includes(item));

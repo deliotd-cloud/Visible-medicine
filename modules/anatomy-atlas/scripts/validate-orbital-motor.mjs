@@ -22,6 +22,7 @@ import {
   historicalRecipeProfiles,
   preOrbitalMotorProfilesHash,
   orbitalMotorProfilesHash,
+  preRenalRecipeProfiles,
 } from './recipe-history.mjs';
 
 let checks = 0;
@@ -41,11 +42,12 @@ same(
   '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7',
 );
 const before = JSON.stringify(dissectionProfiles);
-same(hash(before), orbitalMotorProfilesHash);
+same(hash(JSON.stringify(preRenalRecipeProfiles(dissectionProfiles))), orbitalMotorProfilesHash);
 same(
   hash(JSON.stringify(historicalRecipeProfiles(dissectionProfiles))),
   preOrbitalMotorProfilesHash,
 );
+/** @type {Array<[string, string[], string[]]>} */
 const expected = [
   [
     'orbital-motor-iii-superior',
@@ -159,7 +161,10 @@ for (const [id, nerves, muscles] of expected) {
       });
       const focused = dissectionReducer(removed, { type: 'focus', id });
       same(resolveDissection(scope, profile, focused).visible, actual);
-      same(dissectionReducer(focused, { type: 'undo' }), removed);
+      const undone = dissectionReducer(focused, { type: 'undo' });
+      same({ ...undone, future: [] }, removed);
+      same(undone.future.length, 1);
+      same(dissectionReducer(undone, { type: 'redo' }), focused);
       const href = makeStudyLink(catalog, 'head-neck', selected.id, side, id);
       check(href?.startsWith('/regions/head-neck?'));
       const url = new URL(href, 'https://atlas.test');

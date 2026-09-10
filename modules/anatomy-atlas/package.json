@@ -76,6 +76,7 @@
     "ocular:audit": "node scripts/audit-ocular-geometry.mjs",
     "ocular:test": "node scripts/validate-ocular.mjs",
     "orbital-motor:test": "node scripts/validate-orbital-motor.mjs",
+    "renal-studies:test": "node scripts/validate-renal-studies.mjs",
     "achilles-imaging:test": "node scripts/validate-achilles-imaging.mjs",
     "knee-imaging:test": "node scripts/validate-knee-imaging.mjs",
     "laryngeal:audit": "node scripts/audit-laryngeal-anatomy.mjs",

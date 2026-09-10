@@ -1,6 +1,7 @@
 import type { BodyStructure, BodySystem } from './body-types';
 import { neuroStudySets, neuroStudyIds } from '../lib/neuroanatomy.ts';
 import { axialStudySets } from '../lib/axial-anatomy.ts';
+import { renalStudySets, renalStudyReferences } from '../lib/renal-studies.ts';
 import { headDetailStudySets } from '../lib/head-detail.ts';
 import { mesentericStudySets } from '../lib/mesenteric-anatomy.ts';
 import { pancreaticStudySets } from '../lib/pancreatic-anatomy.ts';
@@ -1180,6 +1181,27 @@ for (const study of [
 }
 
 dissectionProfiles['head-neck'].references.push(...orbitalMotorReferences);
+
+// Focus-only entries keep target-presence gating under laterality filters.
+// They remain searchable and support the same removal, isolation and history
+// controls without suggesting successive surgical layers or an internal cutaway.
+for (const study of renalStudySets) {
+  for (const region of study.regions) {
+    dissectionProfiles[region].focuses.push({
+      id: study.id,
+      title: study.title,
+      rule: { fmaIds: study.targetFmaIds },
+      context: study.context,
+      includeSkeleton: false,
+      view: study.view,
+      description: study.description,
+      inspect: study.inspect,
+      landmarks: study.landmarks,
+    });
+  }
+}
+for (const region of ['abdomen', 'whole-body'])
+  dissectionProfiles[region].references.push(...renalStudyReferences);
 
 export function matchesRule(s: BodyStructure, rule: TissueRule): boolean {
   return (

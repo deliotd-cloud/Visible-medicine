@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Abdomen / Whole body → Study windows & focuses** now includes four [kidney relationship studies](docs/RENAL_STUDIES.md), using existing renal arteries, ureters, adrenals and great-vessel context. Side-aware cards reuse the compact dissection controls. These are source-grounded relationship views, not an invented internal kidney cutaway.
+
 **Cerebral regions → Learn more** now includes [insular and anterior-temporal Pathology/CT/MRI drafts](docs/CEREBRAL_TEACHING.md). Five shared paragraphs support four exact source selections, with primary references and explicit limits on lesion localisation. They add teaching, not scans, pathological meshes or clinical approval. [Current coverage](docs/CURRENT_STATUS.md) is the authoritative inventory.
 
 **Internal dissection → Separate → Show original position** provides [optional selected-part guides](docs/ORIGIN_GUIDES.md) without a permanent extra toolbar. The source outline and positional line are display aids, not anatomical connections.

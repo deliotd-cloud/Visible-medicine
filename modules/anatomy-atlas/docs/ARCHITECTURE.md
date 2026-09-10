@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Renal relationships
+
+[Renal study recipes](RENAL_STUDIES.md) add four focus-only definitions to both abdomen and whole-body scopes. Exact FMA targets and context reuse the current library, navigation, history and deep-link contracts. Focus target-presence gating prevents context-only opposite-side entries; no additional permanent controls, runtime assets or source identities are introduced. The recipe-history guard records only this exact addition and still verifies all earlier profiles byte-for-byte.
+
 ## Cardiac vessel relationships
 
 [Cardiac context](CARDIAC_VESSEL_RELATIONSHIPS.md) pins eight existing root vessel records and their bundle to the exact heart parent. Four relationships reuse the shared study/preset controls; only the chosen guide's context is appended, and it is absent during separation. These remain nonselectable orientation surfaces, outside nested teaching/navigation identities and paid-resource entitlements.

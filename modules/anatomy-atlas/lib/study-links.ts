@@ -1,5 +1,5 @@
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
-import { dissectionProfiles, stageStructures } from '../app/dissection-data.ts';
+import { dissectionProfiles, stageStructures, matchesRule } from '../app/dissection-data.ts';
 import { relatedStudyViews } from './study-navigation.ts';
 import { resolveNestedTarget, type NestedSelection } from './nested-anatomy.ts';
 
@@ -147,7 +147,7 @@ export function resolveStudyLink(
   const focus = request.focusId
     ? profile.focuses.find((item) => item.id === request.focusId)
     : null;
-  if (request.focusId && !focus)
+  if (request.focusId && (!focus || !scope.some((item) => matchesRule(item, focus.rule))))
     return {
       status: 'rejected' as const,
       reason: 'focus-unavailable' as const,

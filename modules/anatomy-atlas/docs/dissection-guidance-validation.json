@@ -1,29 +1,29 @@
 {
   "passed": true,
-  "assertions": 1428968,
+  "assertions": 1444168,
   "scopes": 36,
-  "recipeScopes": 792,
-  "variants": 15840,
-  "actions": 18000,
+  "recipeScopes": 816,
+  "variants": 16320,
+  "actions": 18400,
   "markupCases": 72,
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
       "structures": 1022,
-      "recipes": 9
+      "recipes": 13
     },
     {
       "region": "whole-body",
       "side": "left",
       "structures": 590,
-      "recipes": 9
+      "recipes": 13
     },
     {
       "region": "whole-body",
       "side": "right",
       "structures": 589,
-      "recipes": 9
+      "recipes": 13
     },
     {
       "region": "shoulder-arm",
@@ -155,19 +155,19 @@
       "region": "abdomen",
       "side": "both",
       "structures": 94,
-      "recipes": 35
+      "recipes": 39
     },
     {
       "region": "abdomen",
       "side": "left",
       "structures": 76,
-      "recipes": 35
+      "recipes": 39
     },
     {
       "region": "abdomen",
       "side": "right",
       "structures": 74,
-      "recipes": 35
+      "recipes": 39
     },
     {
       "region": "pelvis",
@@ -225,7 +225,7 @@
     }
   ],
   "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
-  "profilesSha256": "646198113536b582de64366f719bd54fb88e228205f45597f89e1cbd501f4701",
+  "profilesSha256": "d25343bee51c7e2708ef96790f7a8ab0913b735d4d35d648ac4a81145acded45",
   "geometryChanged": false,
   "clinicalValidation": false,
   "browserInteractionTesting": false,
