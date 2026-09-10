@@ -7,6 +7,7 @@ import { cardiacCatalog, cardiacFor } from './cardiac.ts';
 import { pulmonaryCatalog, pulmonaryFor } from './pulmonary.ts';
 import { hepaticCatalog, hepaticFor } from './hepatic.ts';
 import { renalCatalog, renalFor } from './renal.ts';
+import { visualPathwayCatalog, visualPathwayFor } from './visual-pathway.ts';
 
 export type NestedStudy =
   | 'eye'
@@ -16,7 +17,8 @@ export type NestedStudy =
   | 'cardiac'
   | 'pulmonary'
   | 'hepatic'
-  | 'renal';
+  | 'renal'
+  | 'visual-pathway';
 export type NestedSelection = {
   study: NestedStudy;
   structureId: string;
@@ -80,6 +82,12 @@ const studies = [
     title: 'Cerebral regions',
     catalog: cerebralCatalog,
     layers: cerebralFor,
+  },
+  {
+    study: 'visual-pathway',
+    title: 'Optic chiasm and tracts',
+    catalog: visualPathwayCatalog,
+    layers: visualPathwayFor,
   },
 ] as const;
 

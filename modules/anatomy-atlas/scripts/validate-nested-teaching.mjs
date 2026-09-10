@@ -22,7 +22,8 @@ const compiled = await build({
     export { cardiacCatalog as cardiac } from './lib/cardiac';
     export { pulmonaryCatalog as pulmonary } from './lib/pulmonary';
     export { hepaticCatalog as hepatic } from './lib/hepatic';
-    export { renalCatalog as renal } from './lib/renal';`,
+    export { renalCatalog as renal } from './lib/renal';
+    export { visualPathwayCatalog as 'visual-pathway' } from './lib/visual-pathway';`,
     resolveDir: process.cwd(),
     loader: 'tsx',
   },
@@ -55,9 +56,12 @@ const catalog = api.bodyDisplayCatalog(
 );
 const targets = api.nestedStudyTargets(catalog);
 const initial = JSON.stringify(catalog);
-same(targets.length, 60);
-same(api.nestedConcepts.length, 37);
-same(new Set(api.nestedConcepts.map((c) => c.id)).size, 37);
+same(targets.length, 63);
+same(api.nestedConcepts.length, 39);
+same(new Set(api.nestedConcepts.map((c) => c.id)).size, 39);
+const retainedConcepts = api.nestedConcepts.filter(
+  (c) => c.study !== 'visual-pathway',
+);
 const renalConceptIds = [
   'renal-ureteric-arteries',
   'renal-inferior-suprarenal-artery',
@@ -73,7 +77,7 @@ const digest = (value) =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
 // Captured from v112, before renal Pathology/CT/MRI/US authoring.
 same(
-  digest(api.nestedConcepts.filter((c) => c.study !== 'renal')),
+  digest(retainedConcepts.filter((c) => c.study !== 'renal')),
   'dd440ef1198291f2be25b6949f5650c8c7fca2f448ae0863c395f208cebcd8ab',
   'All non-renal teaching remains unchanged',
 );
@@ -95,16 +99,28 @@ same(
   '211229ef9ddb9cdf2aff4f1a01b2cfedf3744c02f279d0fc5892ade7e6ac8eba',
   'Renal identities, core teaching, limitations and recall questions unchanged',
 );
+const pins = JSON.parse(
+  await readFile('content/nested-teaching-bindings.v1.json'),
+);
 same(
   createHash('sha256')
-    .update(await readFile('content/nested-teaching-bindings.v1.json'))
+    .update(
+      JSON.stringify(
+        {
+          ...pins,
+          bindings: pins.bindings.filter((b) => b.study !== 'visual-pathway'),
+        },
+        null,
+        2,
+      ) + '\n',
+    )
     .digest('hex'),
   '081abf168557c14a16f770f7bcc5d2d0e338e0e3f83c2d1bc333ae08ace00ed0',
-  'No teaching source rebinds accompany editorial expansion',
+  'All 60 existing teaching source bindings and parents remain byte-equivalent',
 );
 same(
   digest(
-    api.nestedConcepts
+    retainedConcepts
       .filter((c) => !renalConceptIds.includes(c.id))
       .filter(
         (c) =>
@@ -331,6 +347,7 @@ for (const target of targets) {
     'pulmonary',
     'hepatic',
     'renal',
+    'visual-pathway',
   ].filter((s) => s !== target.study))
     same(api.nestedTeachingFor(parent, otherStudy, selected), null);
   const bundle = api[target.study].bundles.find(
@@ -367,7 +384,9 @@ for (const target of targets) {
       check(!sectionHtml.includes('Content pending'));
     }
   }
-  if (['hepatic', 'pulmonary', 'renal'].includes(target.study)) {
+  if (
+    ['hepatic', 'pulmonary', 'renal', 'visual-pathway'].includes(target.study)
+  ) {
     for (const topic of ['clinical', 'pathology']) {
       const lesson = api.nestedTopicLesson(cleanConcept, topic);
       const sectionNode = nodes.find(
@@ -408,19 +427,19 @@ for (const target of targets) {
     null,
   );
 }
-same(seen.size, 37);
+same(seen.size, 39);
 same(
   answerKeys.size,
-  60,
+  63,
   'Changing either study or side resets revealed answer',
 );
-same(coverage.pathology, { draft: 60, pending: 0 });
-same(coverage.clinical, { draft: 60, pending: 0 });
+same(coverage.pathology, { draft: 63, pending: 0 });
+same(coverage.clinical, { draft: 63, pending: 0 });
 for (const tab of ['anatomy', 'function', 'quiz'])
-  same(coverage[tab], { draft: 60, pending: 0 });
-same(coverage.ct, { draft: 19, pending: 41 });
-same(coverage.mri, { draft: 18, pending: 42 });
-same(coverage.ultrasound, { draft: 15, pending: 45 });
+  same(coverage[tab], { draft: 63, pending: 0 });
+same(coverage.ct, { draft: 19, pending: 44 });
+same(coverage.mri, { draft: 18, pending: 45 });
+same(coverage.ultrasound, { draft: 15, pending: 48 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
 const hosts = new Set([
@@ -481,11 +500,11 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 57);
+same(Object.keys(wordsBySource).length, 58);
 same(
   new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
     .size,
-  57,
+  58,
   'Do not split one source into duplicate reference keys',
 );
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {

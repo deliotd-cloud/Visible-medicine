@@ -81,6 +81,8 @@
     "renal-vascular:prototype": "node scripts/export-renal-vascular-prototype.mjs",
     "renal:export": "node scripts/export-renal.mjs",
     "renal:test": "node scripts/validate-renal.mjs",
+    "visual-pathway:export": "node scripts/export-visual-pathway.mjs",
+    "visual-pathway:test": "node scripts/validate-visual-pathway.mjs",
     "achilles-imaging:test": "node scripts/validate-achilles-imaging.mjs",
     "knee-imaging:test": "node scripts/validate-knee-imaging.mjs",
     "laryngeal:audit": "node scripts/audit-laryngeal-anatomy.mjs",

@@ -6648,6 +6648,202 @@
       }
     },
     {
+      "conceptId": "visual-optic-chiasm",
+      "study": "visual-pathway",
+      "sourceHash": "c9698e52e4678c06a5ed5df8212e3ecb1ce89d9a25d4e1859f0ec5be7d4864bc",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:optic-chiasm",
+        "fmaId": "FMA62045",
+        "name": "Optic chiasm",
+        "sourceName": "optic chiasm",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "visual-pathway",
+        "nodeName": "FMA62045",
+        "bounds": {
+          "min": [
+            -0.0797858014702797,
+            7.359099864959717,
+            0.5011199712753296
+          ],
+          "max": [
+            0.06642360240221024,
+            7.440100193023682,
+            0.6043099761009216
+          ]
+        },
+        "center": [
+          -0.006681099534034729,
+          7.399600028991699,
+          0.5527149736881256
+        ],
+        "anchor": [
+          -0.00626505,
+          7.4079999999999995,
+          0.5559900000000003
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1771",
+            "sha256": "35525fbff0dae57779ca901612c148df339e2ff9dc01ad265577e2aacd7b10c1"
+          },
+          {
+            "file": "FJ1818",
+            "sha256": "080b278fab566f29df1aa026d562b722ddc4c1d77172527be9bb0eb253fe8ef8"
+          }
+        ],
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "coverageNote": "Source-labelled optic chiasm or tract, additional to the supplied brain aggregate. Chiasm halves retain one compound identity; fibre crossing, geniculate terminations and clinical anatomy remain unvalidated.",
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "additional-source-part"
+      }
+    },
+    {
+      "conceptId": "visual-optic-tracts",
+      "study": "visual-pathway",
+      "sourceHash": "c9698e52e4678c06a5ed5df8212e3ecb1ce89d9a25d4e1859f0ec5be7d4864bc",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-optic-tract",
+        "fmaId": "FMA62382",
+        "name": "Right optic tract",
+        "sourceName": "right optic tract",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "visual-pathway",
+        "nodeName": "FMA62382",
+        "bounds": {
+          "min": [
+            -0.2607159912586212,
+            7.359799861907959,
+            0.19628499448299408
+          ],
+          "max": [
+            -0.012707199901342392,
+            7.440000057220459,
+            0.574429988861084
+          ]
+        },
+        "center": [
+          -0.1367115955799818,
+          7.399899959564209,
+          0.38535749167203903
+        ],
+        "anchor": [
+          -0.191438,
+          7.4001,
+          0.4176850000000004
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1820",
+            "sha256": "53b9d1b4f549c2e3926e110dac77a665b1627517f5c9309a9c3b1f1dfaf1b176"
+          }
+        ],
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "coverageNote": "Source-labelled optic chiasm or tract, additional to the supplied brain aggregate. Chiasm halves retain one compound identity; fibre crossing, geniculate terminations and clinical anatomy remain unvalidated.",
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "additional-source-part"
+      }
+    },
+    {
+      "conceptId": "visual-optic-tracts",
+      "study": "visual-pathway",
+      "sourceHash": "c9698e52e4678c06a5ed5df8212e3ecb1ce89d9a25d4e1859f0ec5be7d4864bc",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-optic-tract",
+        "fmaId": "FMA67936",
+        "name": "Left optic tract",
+        "sourceName": "left optic tract",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "visual-pathway",
+        "nodeName": "FMA67936",
+        "bounds": {
+          "min": [
+            -0.0002056439989246428,
+            7.360000133514404,
+            0.19613400101661682
+          ],
+          "max": [
+            0.2476149946451187,
+            7.440000057220459,
+            0.5743899941444397
+          ]
+        },
+        "center": [
+          0.12370467532309704,
+          7.400000095367432,
+          0.38526199758052826
+        ],
+        "anchor": [
+          0.177886,
+          7.401900000000001,
+          0.4175680000000004
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1773",
+            "sha256": "c6b08e9c445dcf174e31bb91f3034dcdec7317782dcbdf0aa3c9cc2fa92d50a1"
+          }
+        ],
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "coverageNote": "Source-labelled optic chiasm or tract, additional to the supplied brain aggregate. Chiasm halves retain one compound identity; fibre crossing, geniculate terminations and clinical anatomy remain unvalidated.",
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "additional-source-part"
+      }
+    },
+    {
       "conceptId": "eye-cornea",
       "study": "eye",
       "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",

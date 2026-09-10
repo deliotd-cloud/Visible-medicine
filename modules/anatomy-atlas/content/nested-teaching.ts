@@ -1,4 +1,5 @@
 import type { NestedStudy } from '../lib/nested-anatomy';
+import { visualPathwayConcepts } from './visual-pathway-teaching.ts';
 import { renalConcepts, renalTeachingReferences } from './renal-teaching.ts';
 import {
   cerebralTeaching,
@@ -42,6 +43,10 @@ export const nestedTeachingReferences: Record<
   string,
   { title: string; url: string }
 > = {
+  visualCentral: {
+    title: 'UTHealth · Central visual pathway anatomy',
+    url: 'https://nba.uth.tmc.edu/neuroanatomy/L8/Lab08p07_index.html',
+  },
   ...renalTeachingReferences,
   ...cardiacTeachingReferences,
   ...hepaticTeachingReferences,
@@ -187,6 +192,7 @@ const quiz = (
 // Original, concise teaching drafts. These are conceptual lessons shared by
 // explicitly pinned source representations, not patient-specific findings.
 export const nestedConcepts: NestedConcept[] = [
+  ...visualPathwayConcepts,
   ...renalConcepts,
   ...(
     [

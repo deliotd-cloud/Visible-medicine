@@ -1,5 +1,11 @@
 # Asset register
 
+## Visual-pathway runtime derivative — 10 September 2026
+
+`public/models/bodyparts3d/visual-pathway/visual-pathway.glb`: 120,068 bytes, SHA-256 `c9698e52e4678c06a5ed5df8212e3ecb1ce89d9a25d4e1859f0ec5be7d4864bc`. Three selectable surfaces / four source files / 6,456 triangles; every position and triangle index equals the prototype below. Changes relative to that prototype are runtime metadata only. Four optional landmarks reuse existing GLBs. Public/archive GLBs now total 99; source-controlled GLBs total 100 including the retained prototype. These are storage counts, not anatomical completeness. BodyParts3D CC BY 4.0 credit and modification notices remain required. See [runtime/source evidence](../docs/VISUAL_PATHWAY_DISSECTION.md). The staging entry below is historical.
+
+Two teaching concepts add original short factual summaries and recall questions with UTHealth primary-reference links. No UTHealth diagram, chapter, question bank or scan is copied, bundled or relicensed; copyright remains with its owners. No dependency, font, texture or paid service is added.
+
 ## Visual-pathway prototype — source-stored, not displayed, 10 September 2026
 
 `content/prototypes/visual-pathway/visual-pathway-prototype.glb`: 120,020 bytes, SHA-256 `c85eb132948e1b9ad8d6b618c95f04f6772a36268a9583f892d91b1f3df1598b`. Three neural groups / four original OBJ files / 6,456 retained triangles. The chiasm retains two closed source halves under one identity. Processing uses the existing transform, exact-coordinate welding and recomputed display normals; no inferred fibre is added. BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International. Exact sources and limits are in the sidecar and [review](../docs/VISUAL_PATHWAY_SOURCE_REVIEW.md). This nonpublic prototype is preserved with source, not delivered as a live selection. Public/archive GLBs remain 98; source-controlled GLBs total 99 including this prototype. No texture, font, dependency or paid service is introduced.

@@ -1,6 +1,12 @@
 # Spatial anatomy architecture
 
-Nonpublic anatomy prototypes may be retained under `content/prototypes/` with source IDs, rights notices, hashes, geometry checks and a non-admission sidecar. They must not be imported into application code or copied into `public/` implicitly. The optic-chiasm/tract prototype follows this path so source storage preserves the actual derivative while the live catalogue remains unchanged; see [integration gates](VISUAL_PATHWAY_SOURCE_REVIEW.md).
+Nonpublic anatomy prototypes may be retained under `content/prototypes/` with source IDs, rights notices, hashes, geometry checks and a non-admission sidecar. They must not be imported into application code or copied into `public/` implicitly. The optic-chiasm/tract prototype remains an immutable source artifact; its explicitly exported runtime derivative is separately recorded in [the visual-pathway study](VISUAL_PATHWAY_DISSECTION.md).
+
+## Visual-pathway workbench
+
+`lib/visual-pathway.ts` requires the exact brain parent, suppresses its solid aggregate and serves three neural surfaces with four optional existing landmarks. `app/ventricles.tsx` adds one brain-study choice, an inferior initial camera and five presets; existing selection, cutaway, history, labels and three separation layouts are reused. Context starts off and is absent while separated. The chiasm stays one selectable identity despite two closed source halves; no fibre or geniculate connection is generated.
+
+`scripts/export-visual-pathway.mjs --check` verifies a metadata-only derivative against the pinned prototype, source audit and raw files. `content/visual-pathway-teaching.ts` supplies two shared concepts with eight short Anatomy/Function/Clinical/Pathology drafts and two recall questions; CT/MRI/US remain pending. Three exact bindings are appended without changing the prior 60 or any parent. Search, study links and optional learning transport admit the new study; production resources remain empty and independently entitled. Source/controlled-component tests are not clinical or device acceptance.
 
 ## Renal vascular workbench
 

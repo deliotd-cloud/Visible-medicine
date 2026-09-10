@@ -1,6 +1,6 @@
 # Optic chiasm and tract source review
 
-Three source-defined neural surfaces have been prepared for a future brain dissection study. They are **not selectable in the live atlas yet**. The actual prototype is retained in source storage under `content/prototypes/visual-pathway/`, outside `public/`, rather than retaining only instructions for recreating it.
+Integration update: these three source surfaces now have an explicitly exported runtime derivative in [Optic chiasm and tracts](VISUAL_PATHWAY_DISSECTION.md). The prototype and its non-admission sidecar remain unchanged under `content/prototypes/visual-pathway/`, outside `public/`. The source-stage checks and counts below describe the earlier preparation milestone, not current displayed coverage; anatomical/device review remains open.
 
 ## Exact source scope
 
@@ -42,7 +42,7 @@ Prototype: `visual-pathway-prototype.glb`, 120,020 bytes, SHA-256 `c85eb132948e1
 3. `node scripts/export-visual-pathway-prototype.mjs --check` regenerates in memory and verifies the existing prototype bytes and sidecar. The default export refuses to overwrite an existing destination.
 4. `--record` checks the existing artifact before refreshing its derived validation receipt. It does not approve or publish anatomy.
 
-## Next integration and clinical gates
+## Original integration plan and remaining clinical gates
 
 Add these three selections to the existing brain workspace using its compact study selector, with source-bound search and return navigation. Suppress the solid brain aggregate and reuse hide/restore, cutaway, separation, origin guides and history. Keep the chiasm as one compound. Do not present a complete visual pathway or infer fibres from the seam.
 

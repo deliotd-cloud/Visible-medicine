@@ -1,5 +1,21 @@
 # Anatomy atlas backup — 10 September 2026
 
+## Current checkpoint: optic chiasm and tract dissection
+
+Privately published source `88d8f32d68145f318cffdfea82dafc4efe7f82b8`, tree `bca32870440d6d56f207b1cc7a52c85564e14b07`. Sites version 115 `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_5a5e758de3ac8191a56e8a2c00826890`; deployment `appgdep_6aa2cc3d46388191a46695cfdea76167` succeeded `2026-09-10T15:27:12.534048+00:00`. [Private atlas](https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site). Full access policy, mode, owner role and invitation setting match before/after: one owner/account, no external visitors/groups/additional editors.
+
+Dissect brain now offers three source-bound optic chiasm/tract surfaces with an inferior initial view, five presets, optional four existing thalamic/LGN landmarks and shared labels/hide/isolate/fade/Undo/Redo/cutaway/separation/origin guides. Solid brain is suppressed; context is initially off and absent during separation. Two teaching concepts add eight brief original sections and two recall questions in the collapsed panel; their CT/MRI/US notes remain pending. The chiasm seam, uncertain geniculate boundaries and absent fibres remain explicit. No clinical approval or scan/lecture connection is added.
+
+Runtime GLB 120,068 bytes / `c9698e52e4678c06a5ed5df8212e3ecb1ce89d9a25d4e1859f0ec5be7d4864bc`; every position/index matches the retained source prototype. Three surfaces / four source files / 6,456 triangles. BodyParts3D CC BY 4.0 credit and modification notices remain; UTHealth references are factual citations, not redistributed diagrams or chapters. No new dependency/font/texture/paid service. Scope and remaining clinical/device review: `modules/anatomy-atlas/docs/VISUAL_PATHWAY_DISSECTION.md`.
+
+Passed: visual105; history149,328 (9 families/12 study-parent views); cutaway5,183; origins3,510; navigation26,080; teaching6,779; learning/access5,076; renal250; source pin/export and inventory freshness; TypeScript; focused lint except the unchanged existing control-character regex rule in the learning parser; diff check; production build. Existing chunk-size/route warnings remain. Browser/GPU/mobile acceptance was not performed. Previous60 bindings/parents and core teaching retained; nested63/39 concepts/58 references, production0resources/0correspondences; independent Atlas/lecture gates unchanged.
+
+Source/module preparation audit: 1,195 files / 146,485,339 bytes / 100 source-controlled GLBs (99 public/archive plus one nonpublic prototype), zero common credential-signature warnings (not exhaustive). Native saved deployment archive: 258 files / 126,515,200 bytes / `sha256:7c317b0e2eea76de0c04b1bd6a6bafad76edf0aa66e0eb3701717a7280d9cc08`.
+
+Immutable recovery stem `work/atlas-visual-pathway-study-2026-09-10`: 37 paths / 295 Site entries. Site 89,086,881 bytes / `81240e18f49f208c2e8a9d8bb7a90389df668b2fbb87e2b1377a021b90655024`; delta 972,800 bytes / `2fb6608fa8931578f028704e6f0aec6ad1c501ab5988963dc4d577c8fc1b2cc9`; incremental 124,551 bytes / `cae9a0c90f04a323d4868dce944e5e6bd738d21ce2f4067734fe0a99bc89c55c`. Incremental requires source `3760273ca0b065484b45ed31ecd3b216ec4500b1`, not standalone. Backup parent `35986df14c0994c42b5a98f3449f0161babd0170`. Preparation JSON flags predate this terminal publication receipt; do not rerun the helper. Main website outside module/receipt is unchanged.
+
+Native Sites source/version storage and SAME-PC recovery do not establish GitHub delivery, independently tested off-device restore, conversation-history or review-database backup. The remaining entries are historical, not current publication or coverage.
+
 ## Current checkpoint: optic chiasm/tract source preparation
 
 Privately published source `3760273ca0b065484b45ed31ecd3b216ec4500b1`, tree `5853efffc8538edcb8db889eb260b50eb3ed7b30`. Sites version 114 `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_c8fbaa3152ac819183665ad515439183`; deployment `appgdep_6aa2c67e484c8191b3ba238420785824` succeeded `2026-09-10T15:02:41.449437+00:00`. [Private atlas](https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site). Full access policy, mode, owner role and invitation setting are unchanged before/after; one owner/account, no external viewers or groups. The live model and interface are unchanged.

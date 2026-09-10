@@ -88,7 +88,7 @@ const targets = api.nestedStudyTargets(catalog);
 const cases = [
   ...new Map(targets.map((t) => [`${t.study}/${t.parentId}`, t])).values(),
 ];
-same(cases.length, 11);
+same(cases.length, 12);
 const nodes = (n) =>
   !n || typeof n !== 'object'
     ? []
@@ -201,6 +201,31 @@ for (const target of cases) {
   render();
   check(button('Undo layers').disabled);
   check(button('Redo layers').disabled);
+  if (target.study === 'visual-pathway') {
+    same(scene().view, 'inferior');
+    same(scene().contextIds, []);
+    same(button('Show brain landmarks')['aria-pressed'], false);
+    check(text(tree).includes('Neural source surface'));
+    button('Show brain landmarks').onClick();
+    render();
+    same(scene().contextIds.length, 4);
+    check(!scene().structures.some((s) => s.id === parent.id));
+    const selected = scene().selectedId;
+    for (const id of scene().contextIds) {
+      scene().onSelect(id);
+      render();
+      same(scene().selectedId, selected);
+    }
+    scene().onFailure('visual-pathway');
+    render();
+    check(text(tree).includes('Some structures could not load.'));
+    button('Retry').onClick();
+    render();
+    same(scene().retries['visual-pathway'], 1);
+    for (const bundle of scene().catalog.bundles) scene().onLoaded(bundle.id);
+    render();
+    check(!text(tree).includes('Loading optic pathway view'));
+  }
   if (target.study === 'renal') {
     same(scene().contextIds.length, 6);
     same(button('Show kidney & vessel context')['aria-pressed'], true);
@@ -272,6 +297,14 @@ for (const target of cases) {
     );
     check(button('Show kidney & vessel context').disabled);
   }
+  if (target.study === 'visual-pathway') {
+    same(scene().contextIds, []);
+    check(button('Show brain landmarks').disabled);
+    same(
+      scene().structures.map((s) => s.id),
+      layers.map((s) => s.id),
+    );
+  }
   visibility(layers[0], false);
   const afterHidden = copy(scene().hiddenIds);
   same(scene().selectedId, null);
@@ -307,6 +340,7 @@ for (const target of cases) {
   check(button('Redo layers').disabled);
   same(scene().explode, 0);
   if (target.study === 'renal') same(scene().contextIds.length, 6);
+  if (target.study === 'visual-pathway') same(scene().contextIds.length, 4);
   same(scene().showOrigins, true);
   const html = renderToStaticMarkup(React.createElement(View, props));
   check(
@@ -360,7 +394,7 @@ for (const target of cases) {
 const report = {
   passed: true,
   checks,
-  studyFamilies: 8,
+  studyFamilies: 9,
   parentViews: cases.length,
   representations: targets.length,
   historyLimit: 30,

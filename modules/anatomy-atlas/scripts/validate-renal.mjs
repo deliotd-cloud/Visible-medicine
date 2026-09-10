@@ -151,14 +151,16 @@ const pins = JSON.parse(
 );
 const parentIds = renalCatalog.parents.map((p) => p.id);
 same(pins.parents.length, 9);
-same(pins.bindings.length, 60);
+same(pins.bindings.length, 63);
 // Full v111 arrays, in original order: the extension must not silently rebind old lessons.
 same(
   digest(pins.parents.filter((p) => !parentIds.includes(p.id))),
   '8fcc57f9abb2be6e17abffede258ad400c4e1f52c01bdea77cf3761bb548cd37',
 );
 same(
-  digest(pins.bindings.filter((b) => b.study !== 'renal')),
+  digest(
+    pins.bindings.filter((b) => !['renal', 'visual-pathway'].includes(b.study)),
+  ),
   'b8d77e23bb282aea65637acc3214e389799a683d4a850dd534bb204baf9e45b4',
 );
 same(pins.bindings.filter((b) => b.study === 'renal').length, 7);

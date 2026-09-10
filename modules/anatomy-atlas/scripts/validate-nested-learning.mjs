@@ -59,13 +59,13 @@ const reject = (fn, message) => {
   assert.throws(fn, message);
 };
 same(legacy.length, 1031);
-same(anatomy.length, 1091);
+same(anatomy.length, 1094);
 same(
   anatomy.filter((t) => t.scope !== 'nested'),
   legacy,
   'Legacy 1,031 bindings unchanged',
 );
-same(nested.length, 60);
+same(nested.length, 63);
 same(
   nested.map((t) => t.structureId).sort(),
   targets.map((t) => t.structureId).sort(),
@@ -159,7 +159,7 @@ const links = nested.flatMap((target, i) =>
   })),
 );
 const document = { schemaVersion: 2, resources, links };
-// All 360 synthetic links now exceed the deliberate 2 MB transport cap.
+// All 378 synthetic links exceed the deliberate 2 MB transport cap.
 // Keep that production limit and exercise every link through bounded batches.
 const encodedDocument = JSON.stringify(document);
 check(new TextEncoder().encode(encodedDocument).length > 2_000_000);

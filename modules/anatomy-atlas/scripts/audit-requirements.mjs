@@ -74,6 +74,9 @@ const cerebral = await json('public/models/bodyparts3d/cerebral/catalog.json');
 const cardiac = await json('public/models/bodyparts3d/cardiac/catalog.json');
 const hepatic = await json('public/models/bodyparts3d/hepatic/catalog.json');
 const renal = await json('public/models/bodyparts3d/renal/catalog.json');
+const visualPathway = await json(
+  'public/models/bodyparts3d/visual-pathway/catalog.json',
+);
 const pulmonary = await json(
   'public/models/bodyparts3d/pulmonary/catalog.json',
 );
@@ -215,6 +218,10 @@ for (const path of [
   'content/renal-teaching.ts',
   'public/models/bodyparts3d/renal/catalog.json',
   'docs/renal-vascular-source-audit.json',
+  'lib/visual-pathway.ts',
+  'content/visual-pathway-teaching.ts',
+  'public/models/bodyparts3d/visual-pathway/catalog.json',
+  'docs/visual-pathway-source-audit.json',
   'public/models/bodyparts3d/hepatic/catalog.json',
   'docs/hepatic-source-audit.json',
   'lib/pulmonary.ts',
@@ -353,10 +360,18 @@ const report = {
         0,
       ),
       renalInternalTissueParts: 0,
+      visualPathwayGroups: visualPathway.selectableIds.length,
+      visualPathwaySourceFiles: visualPathway.structures.reduce(
+        (n, s) => n + s.sources.length,
+        0,
+      ),
+      visualPathwayContextLandmarks: visualPathway.contextRecords.length,
       additionalUniqueWholeBodyAnatomy:
-        cerebral.supplementalIds.length + renal.structures.length,
+        cerebral.supplementalIds.length +
+        renal.structures.length +
+        visualPathway.structures.length,
       limitation:
-        'Nested selections generally subdivide existing parents. Four superior temporal source parts and seven renal/suprarenal vascular groups are additional anatomy in nested studies; context reuses existing structures. Kidney association is navigation, not tissue membership. Nested teaching is counted separately from the root-body inventory. The unchanged archival catalogue excludes these alternate display assets and additions.',
+        'Nested selections generally subdivide existing parents. Four superior temporal source parts, seven renal/suprarenal vascular groups and three optic-chiasm/tract surfaces are additional anatomy in nested studies; context reuses existing structures. Kidney association is navigation, not tissue membership. Visual surfaces do not depict continuous fibres. Nested teaching is counted separately from the root-body inventory. The unchanged archival catalogue excludes these alternate display assets and additions.',
     },
     regionalMembershipsOverlap: true,
     shoulderAndBodyRepresentationsOverlap: true,
