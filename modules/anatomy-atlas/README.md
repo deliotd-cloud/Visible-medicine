@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Internal brain studies → Learn more → CT / MRI** now includes [14 short imaging-teaching drafts](docs/BRAIN_IMAGING_TEACHING.md) across the ventricular spaces, midbrain, pons, medulla and cerebellum. Learn about ventricular assessment, fluid-flow artefacts, posterior-fossa CT limitations and sequence-dependent MRI detail. Existing panels stay collapsed; these are referenced teaching notes, not scans, diagnostic rules or clinical approvals.
+
 **Brain → Dissect brain → Optic chiasm and tracts** opens a [three-part visual-pathway study](docs/VISUAL_PATHWAY_DISSECTION.md), initially viewed from below. Select the chiasm or either tract, isolate/fade, hide/Undo/Redo, cut away or choose a separation style. Brain landmarks are optional; teaching stays collapsed. Source surfaces and referenced introductory notes are not a complete fibre pathway, clinical approval or scan registration.
 
 **Renal vessels → Learn more** now adds [14 short Pathology/CT/MRI/Ultrasound teaching drafts](docs/RENAL_TEACHING.md), with five primary-reference links and explicit side-specific examples. The existing collapsed panel is reused; adrenal-vessel ultrasound, clinical approval and actual scan correspondence remain pending.

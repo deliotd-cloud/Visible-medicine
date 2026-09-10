@@ -220,6 +220,7 @@ for (const path of [
   'docs/renal-vascular-source-audit.json',
   'lib/visual-pathway.ts',
   'content/visual-pathway-teaching.ts',
+  'content/brain-imaging-teaching.ts',
   'public/models/bodyparts3d/visual-pathway/catalog.json',
   'docs/visual-pathway-source-audit.json',
   'public/models/bodyparts3d/hepatic/catalog.json',

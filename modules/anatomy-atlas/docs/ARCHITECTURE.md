@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Internal brain imaging teaching
+
+`content/brain-imaging-teaching.ts` adds explicit CT/MRI fields to seven existing ventricular/brainstem concepts, displayed for eight exact selections through the unchanged nested resolver and collapsed panel. Five primary-reference links support introductory notes; no new topic, UI state, geometry, source binding, resource configuration or entitlement is added. The complete v115 teaching graph is hash-checked after removing only those seven new imaging fields, preserving every previous lesson, question and identity. All 63 source pins stay unchanged. See [evidence, scope and clinical gates](BRAIN_IMAGING_TEACHING.md).
+
 Nonpublic anatomy prototypes may be retained under `content/prototypes/` with source IDs, rights notices, hashes, geometry checks and a non-admission sidecar. They must not be imported into application code or copied into `public/` implicitly. The optic-chiasm/tract prototype remains an immutable source artifact; its explicitly exported runtime derivative is separately recorded in [the visual-pathway study](VISUAL_PATHWAY_DISSECTION.md).
 
 ## Visual-pathway workbench

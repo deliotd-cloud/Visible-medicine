@@ -1,5 +1,17 @@
 # Anatomy atlas backup — 10 September 2026
 
+## Current checkpoint: internal-brain CT/MRI teaching
+
+Privately published source `e0ca27c208eb2771eb7cf762a0b394aea8d63670`, tree `315a7a1d029f9657de941de394bd2f7c50d61eb8`. Sites version116 `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_1c90b0d67d9881918b1219f871678e39`; deployment `appgdep_6aa2cf5eb10081919d499a6db7ffa4ac` succeeded `2026-09-10T15:40:30.391681+00:00`. [Private atlas](https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site). Complete before/after policy, access mode, owner role and invitation setting match: one owner/account, no external viewers/groups/additional editors.
+
+Fourteen original CT/MRI drafts now serve seven ventricular/brainstem concepts (eight selections) through the unchanged collapsed panel. Five primary references distinguish ventricular shape/flow, FLAIR artefact, posterior-fossa CT limitations and sequence-dependent MRI detail. No geometry, UI, old teaching, source binding, review state, resource manifest or entitlement changed. No scan, diagram, article, patient case, dependency or paid service imported. Specialist/device review remains pending; see `modules/anatomy-atlas/docs/BRAIN_IMAGING_TEACHING.md`.
+
+Passed teaching7,046 checks, exact63-binding freshness, TypeScript, requirement audit/freshness, diff checks and production build. Existing chunk/route-classification warnings remain. Geometry/access inputs were unchanged, so their suites were not redundantly rerun; no browser/device or clinical approval claimed. Nested scope63/39concepts/63refs; CT27/MRI26/US15 with36/37/48pending. Production resources/correspondences remain zero and Atlas/paid-lecture eligibility remains independent.
+
+Preparation source/module audit1,197files/146,504,514bytes/100GLBs (99public/archive+one retained prototype), zero common credential signatures (not exhaustive). Native saved archive258files/126,525,440bytes/`sha256:d42bb8c796dae4890e28874770f711b114ec8f2cedc944dac5b220b600fe7556`. Recovery stem `work/atlas-brain-imaging-teaching-2026-09-10` has13paths/295Siteentries: Site89,090,904bytes/`d2b4fa9b9a45ec182859b37b83d4ffe70739410a6699c477e49675f4537e1858`; delta368,640/`4bbe4a6a9c35274436d59737230040d2089ff596b3b09b8647d65859fb776316`; incremental11,257/`496793333edef8cd7e998783817e580f3629296b4cadaf98421eb8e11b849734`. Incremental requires source `88d8f32d68145f318cffdfea82dafc4efe7f82b8`, not standalone. Backup parent `279963a91699bea40ad9f92eb441ab8d825c77dc`; preparation JSON flags predate this terminal publication receipt. Do not rerun or overwrite recovery artifacts.
+
+Native Sites storage and SAME-PC recovery do not establish GitHub delivery, tested off-device restore, conversation-history or private-review database backup. Main website outside module/receipt is preserved. The following entries are historical, not current publication status or coverage.
+
 ## Current checkpoint: optic chiasm and tract dissection
 
 Privately published source `88d8f32d68145f318cffdfea82dafc4efe7f82b8`, tree `bca32870440d6d56f207b1cc7a52c85564e14b07`. Sites version 115 `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_5a5e758de3ac8191a56e8a2c00826890`; deployment `appgdep_6aa2cc3d46388191a46695cfdea76167` succeeded `2026-09-10T15:27:12.534048+00:00`. [Private atlas](https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site). Full access policy, mode, owner role and invitation setting match before/after: one owner/account, no external visitors/groups/additional editors.

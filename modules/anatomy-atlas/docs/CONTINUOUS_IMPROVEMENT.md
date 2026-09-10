@@ -1,8 +1,10 @@
 # Continuous atlas improvement plan
 
+Latest teaching extension: [14 internal-brain CT/MRI drafts](BRAIN_IMAGING_TEACHING.md) cover seven existing concepts/eight selections (ventricular spaces, midbrain, pons, medulla and cerebellum) through the collapsed panel. Five primary references distinguish structural imaging, CSF artefact/flow and posterior-fossa detection limits. No scans, clinical approvals, new geometry or access changes. Current nested coverage: CT27/MRI26/US15, with36/37/48 pending; these are copy counts, not completed imaging atlases.
+
 Latest spatial extension: [Optic chiasm and tracts](VISUAL_PATHWAY_DISSECTION.md) adds three source surfaces within Dissect brain, bringing nested support to nine study families, twelve study-parent views and 63 selections. The chiasm remains one compound, the solid brain is suppressed and optional landmarks disappear during separation. Search/history/cutaway/origin guides and two referenced teaching concepts reuse existing controls. No fibres, complete visual pathway, patient registration or clinical approval are inferred.
 
-Next bounded work: deepen useful brain/eye modality teaching against primary references, while keeping partial-surface limitations explicit. Continue auditing source-backed regional and organ gaps rather than inventing anatomy. Independently reviewed meshes, device acceptance and approved external viewer/course manifests remain separate gates; the broad atlas goal remains active.
+Next bounded work: extend useful eye/visual-pathway modality teaching where exact source scope and suitable primary references support it, and continue source-backed regional/organ detail. Do not replace missing anatomy with generic lessons or inferred fibres. Independently reviewed meshes, device acceptance and approved external viewer/course manifests remain separate gates; the broad atlas goal remains active.
 
 Recent teaching progress: [renal vascular teaching](RENAL_TEACHING.md) adds 14 referenced Pathology/CT/MRI/US drafts within the same compact panel. The [renal workbench](RENAL_VASCULAR_STUDY.md) provides seven source-labelled vascular groups across both kidneys. No missing renal tissue, patient scan, diagnostic metric or lecture entitlement is inferred. Obtain independent clinical/device review and approved viewer manifests for actual integration.
 

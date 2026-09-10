@@ -1,4 +1,8 @@
 import type { NestedStudy } from '../lib/nested-anatomy';
+import {
+  brainImagingTeaching,
+  brainImagingReferences,
+} from './brain-imaging-teaching.ts';
 import { visualPathwayConcepts } from './visual-pathway-teaching.ts';
 import { renalConcepts, renalTeachingReferences } from './renal-teaching.ts';
 import {
@@ -43,6 +47,7 @@ export const nestedTeachingReferences: Record<
   string,
   { title: string; url: string }
 > = {
+  ...brainImagingReferences,
   visualCentral: {
     title: 'UTHealth · Central visual pathway anatomy',
     url: 'https://nba.uth.tmc.edu/neuroanatomy/L8/Lab08p07_index.html',
@@ -598,6 +603,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'ventricular-lateral',
     study: 'ventricles',
+    imaging: brainImagingTeaching.lateral,
     fmaIds: ['FMA78450', 'FMA78449'],
     sections: {
       anatomy: section(
@@ -628,6 +634,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'ventricular-third',
     study: 'ventricles',
+    imaging: brainImagingTeaching.third,
     fmaIds: ['FMA78454'],
     sections: {
       anatomy: section(
@@ -659,6 +666,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'ventricular-fourth',
     study: 'ventricles',
+    imaging: brainImagingTeaching.fourth,
     fmaIds: ['FMA78469'],
     sections: {
       anatomy: section(
@@ -689,6 +697,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'brainstem-midbrain',
     study: 'brainstem',
+    imaging: brainImagingTeaching.midbrain,
     fmaIds: ['FMA61993'],
     sections: {
       anatomy: section(
@@ -720,6 +729,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'brainstem-pons',
     study: 'brainstem',
+    imaging: brainImagingTeaching.pons,
     fmaIds: ['FMA67943'],
     sections: {
       anatomy: section(
@@ -752,6 +762,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'brainstem-medulla',
     study: 'brainstem',
+    imaging: brainImagingTeaching.medulla,
     fmaIds: ['FMA62004'],
     sections: {
       anatomy: section(
@@ -783,6 +794,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'brainstem-cerebellum',
     study: 'brainstem',
+    imaging: brainImagingTeaching.cerebellum,
     fmaIds: ['FMA67944'],
     sections: {
       anatomy: section(

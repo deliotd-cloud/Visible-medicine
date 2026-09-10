@@ -60,6 +60,8 @@ The [lung branch study](PULMONARY_DISSECTION.md) separates ${anatomy.nestedDisse
 
 ## Nested anatomy teaching
 
+The [internal-brain imaging extension](BRAIN_IMAGING_TEACHING.md) adds 14 original CT/MRI drafts across seven existing concepts/eight selections: ventricular spaces, midbrain, pons, medulla and cerebellum. Five primary references cover ventricular assessment and fluid-flow artefacts, posterior-fossa CT limitations and sequence-dependent brainstem MRI detail. Existing identities, core teaching, geometry and access gates are unchanged. Ultrasound and actual scan correspondence remain separate work; clinical/editorial review is pending.
+
 Internal dissection includes [Undo/Redo layers](NESTED_HISTORY.md) across all nine study families. This bounded layer/selection history reuses the compact action row and does not rewind camera, cutaway or separation settings. Device acceptance remains pending.
 
 The [renal vascular study](RENAL_VASCULAR_STUDY.md) adds ${anatomy.nestedDissections.renalVascularGroups} source-labelled vascular groups across ${anatomy.nestedDissections.renalParentViews} kidney views, from ${anatomy.nestedDissections.renalSourceFiles} source files. Optional same-side tissue/vessel context is shown initially and disappears during separation. Renal veins, adrenal vessels and ureteric arterial branches are not a complete circulation or internal kidney tissue. The defective left inferior suprarenal artery remains excluded. [Fourteen shared teaching drafts](RENAL_TEACHING.md) now cover Pathology/CT/MRI, plus ultrasound for ureteric arterial and renal venous groups. Adrenal-vessel ultrasound remains pending; side-specific reference examples do not validate contralateral imaging or any source mesh.

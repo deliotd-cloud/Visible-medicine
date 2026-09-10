@@ -1,5 +1,9 @@
 # Asset register
 
+## Internal-brain imaging teaching — no new assets, 10 September 2026
+
+Fourteen original concise CT/MRI drafts cite official ACR/RSNA Head CT education and primary research by Hwang et al. (2012), Shepherd et al. (2020), Bakshi et al. (2000) and Stoquart-El Sankari et al. (2009), using their public abstracts as recorded in [the teaching evidence](../docs/BRAIN_IMAGING_TEACHING.md). No article text, image, diagram, patient case, scan, acquisition dataset or question bank is bundled or relicensed. Copyright remains with the respective owners. No model, texture, font, dependency or paid service is added; existing attribution obligations remain.
+
 ## Visual-pathway runtime derivative — 10 September 2026
 
 `public/models/bodyparts3d/visual-pathway/visual-pathway.glb`: 120,068 bytes, SHA-256 `c9698e52e4678c06a5ed5df8212e3ecb1ce89d9a25d4e1859f0ec5be7d4864bc`. Three selectable surfaces / four source files / 6,456 triangles; every position and triangle index equals the prototype below. Changes relative to that prototype are runtime metadata only. Four optional landmarks reuse existing GLBs. Public/archive GLBs now total 99; source-controlled GLBs total 100 including the retained prototype. These are storage counts, not anatomical completeness. BodyParts3D CC BY 4.0 credit and modification notices remain required. See [runtime/source evidence](../docs/VISUAL_PATHWAY_DISSECTION.md). The staging entry below is historical.

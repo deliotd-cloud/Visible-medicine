@@ -59,7 +59,23 @@ const initial = JSON.stringify(catalog);
 same(targets.length, 63);
 same(api.nestedConcepts.length, 39);
 same(new Set(api.nestedConcepts.map((c) => c.id)).size, 39);
-const retainedConcepts = api.nestedConcepts.filter(
+const brainImagingIds = new Set([
+  'ventricular-lateral',
+  'ventricular-third',
+  'ventricular-fourth',
+  'brainstem-midbrain',
+  'brainstem-pons',
+  'brainstem-medulla',
+  'brainstem-cerebellum',
+]);
+// Project only the seven intentional new imaging fields out of the v115 baseline.
+// Identity, core teaching, quizzes and every earlier modality must remain exact.
+const previousConcepts = api.nestedConcepts.map((c) => {
+  if (!brainImagingIds.has(c.id)) return c;
+  const { imaging: _newImaging, ...previous } = c;
+  return previous;
+});
+const retainedConcepts = previousConcepts.filter(
   (c) => c.study !== 'visual-pathway',
 );
 const renalConceptIds = [
@@ -75,6 +91,19 @@ same(
 // Captured from validated v108 source 649dfc3d, before this cerebral extension.
 const digest = (value) =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
+same(
+  digest(previousConcepts),
+  '7909676e839dfbc412cd742e5885df92da1539b55a41d63661de723a99a0d322',
+  'Complete v115 teaching retained except seven explicitly added imaging fields',
+);
+same(api.nestedConcepts.filter((c) => brainImagingIds.has(c.id)).length, 7);
+same(
+  createHash('sha256')
+    .update(await readFile('content/nested-teaching-bindings.v1.json'))
+    .digest('hex'),
+  '4ae3bf423a67da6eee5541579dea469297b22f04d8f2c7889ed40456a3084fb3',
+  'All 63 v115 source bindings remain unchanged; no repinning',
+);
 // Captured from v112, before renal Pathology/CT/MRI/US authoring.
 same(
   digest(retainedConcepts.filter((c) => c.study !== 'renal')),
@@ -232,8 +261,9 @@ for (const target of targets) {
   check(concept, selected.id);
   seen.add(concept.id);
   check(concept.fmaIds.includes(selected.fmaId));
-  const expectedImaging =
-    concept.study === 'renal'
+  const expectedImaging = brainImagingIds.has(concept.id)
+    ? ['ct', 'mri']
+    : concept.study === 'renal'
       ? ['renal-veins', 'renal-ureteric-arteries'].includes(concept.id)
         ? ['ct', 'mri', 'ultrasound']
         : ['ct', 'mri']
@@ -437,8 +467,8 @@ same(coverage.pathology, { draft: 63, pending: 0 });
 same(coverage.clinical, { draft: 63, pending: 0 });
 for (const tab of ['anatomy', 'function', 'quiz'])
   same(coverage[tab], { draft: 63, pending: 0 });
-same(coverage.ct, { draft: 19, pending: 44 });
-same(coverage.mri, { draft: 18, pending: 45 });
+same(coverage.ct, { draft: 27, pending: 36 });
+same(coverage.mri, { draft: 26, pending: 37 });
 same(coverage.ultrasound, { draft: 15, pending: 48 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
@@ -500,11 +530,11 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 58);
+same(Object.keys(wordsBySource).length, 63);
 same(
   new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
     .size,
-  58,
+  63,
   'Do not split one source into duplicate reference keys',
 );
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {
