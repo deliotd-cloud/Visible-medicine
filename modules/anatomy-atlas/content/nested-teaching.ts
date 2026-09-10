@@ -13,6 +13,7 @@ import {
 } from './visual-pathway-teaching.ts';
 import { renalConcepts, renalTeachingReferences } from './renal-teaching.ts';
 import { pancreaticConcepts, pancreaticTeachingReferences } from './pancreatic-teaching.ts';
+import { cricothyroidConcepts, cricothyroidTeachingReferences } from './cricothyroid-teaching.ts';
 import {
   cerebralTeaching,
   cerebralTeachingReferences,
@@ -64,6 +65,7 @@ export const nestedTeachingReferences: Record<
   },
   ...renalTeachingReferences,
   ...pancreaticTeachingReferences,
+  ...cricothyroidTeachingReferences,
   ...cardiacTeachingReferences,
   ...hepaticTeachingReferences,
   ...pulmonaryTeachingReferences,
@@ -208,6 +210,7 @@ const quiz = (
 // Original, concise teaching drafts. These are conceptual lessons shared by
 // explicitly pinned source representations, not patient-specific findings.
 export const nestedConcepts: NestedConcept[] = [
+  ...cricothyroidConcepts,
   ...pancreaticConcepts,
   ...visualPathwayConcepts,
   ...renalConcepts,

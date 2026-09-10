@@ -1,5 +1,9 @@
 # Asset register
 
+## Cricothyroid runtime study
+
+`public/models/bodyparts3d/cricothyroid/` contains the attributed four-part GLB/catalogue, derived from the retained prototype below. Runtime metadata only is changed; positions, normals, indices/winding and transforms are identical. Existing thyroid/cricoid cartilage assets are optional nonselectable landmarks. CC BY 4.0 credit, licence and the 12-face modification notice are preserved in the interface and documentation. Teaching uses short original factual paraphrases and reference links, not imported articles, figures, scans or diagrams. No dependency/font/texture/paid service is added. [Evidence and limitations](../docs/CRICOTHYROID_DISSECTION.md).
+
 ## Non-public cricothyroid prototype
 
 `content/prototypes/cricothyroid/` contains four BodyParts3D 4.0 IS-A originals (FJ2801, FJ2783, FJ2799, FJ2781), a 17,636-triangle GLB and hash-pinned provenance catalogue. Licence: CC BY 4.0; credit: BodyParts3D, © The Database Center for Life Science. Original files remain byte-identical; the display derivative omits 12 specifically reviewed detached opposite-winding duplicate faces, preserves all retained triangle coordinates/order/winding and recomputes display normals. This is not clinical validation or a new proprietary anatomy dataset. Preserve attribution, licence and modification disclosure. No external diagram, texture, font, scan, article, service or dependency was added. [Detailed evidence](../docs/CRICOTHYROID_PROTOTYPE.md); [official terms](https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html), checked 2026-09-10.

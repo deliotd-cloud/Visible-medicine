@@ -83,6 +83,7 @@ const cardiac = await json('public/models/bodyparts3d/cardiac/catalog.json');
 const hepatic = await json('public/models/bodyparts3d/hepatic/catalog.json');
 const renal = await json('public/models/bodyparts3d/renal/catalog.json');
 const pancreatic = await json('public/models/bodyparts3d/pancreatic/catalog.json');
+const cricothyroid = await json('public/models/bodyparts3d/cricothyroid/catalog.json');
 const visualPathway = await json(
   'public/models/bodyparts3d/visual-pathway/catalog.json',
 );
@@ -228,6 +229,9 @@ for (const path of [
   'lib/hepatic.ts',
   'lib/renal.ts',
   'lib/pancreatic.ts',
+  'lib/cricothyroid.ts',
+  'content/cricothyroid-teaching.ts',
+  'public/models/bodyparts3d/cricothyroid/catalog.json',
   'content/pancreatic-teaching.ts',
   'public/models/bodyparts3d/pancreatic/catalog.json',
   'lib/renal-relationships.ts',
@@ -393,6 +397,10 @@ const report = {
       pancreaticReferenceSurfaces: pancreatic.contextIds.length,
       pancreaticSourceFiles: pancreatic.structures.reduce((n, s) => n + s.sources.length, 0),
       pancreaticValidatedLumens: 0,
+      cricothyroidMuscleParts: cricothyroid.selectableIds.length,
+      cricothyroidCartilageLandmarks: cricothyroid.contextRecords.length,
+      cricothyroidRemovedArtifactFaces: cricothyroid.structures.reduce((n, s) => n + s.derivative.removedSourceFaces.length, 0),
+      cricothyroidClinicalApproval: false,
       visualPathwayGroups: visualPathway.selectableIds.length,
       visualPathwaySourceFiles: visualPathway.structures.reduce(
         (n, s) => n + s.sources.length,
@@ -406,9 +414,10 @@ const report = {
       additionalUniqueWholeBodyAnatomy:
         cerebral.supplementalIds.length +
         renal.structures.length +
-        visualPathway.structures.length,
+        visualPathway.structures.length +
+        cricothyroid.structures.length,
       limitation:
-        'Nested selections generally subdivide existing parents. Four superior temporal source parts, seven renal/suprarenal vascular groups and three optic-chiasm/tract surfaces are additional anatomy in nested studies; context reuses existing structures. Kidney association is navigation, not tissue membership. Visual surfaces do not depict continuous fibres. Nested teaching is counted separately from the root-body inventory. The unchanged archival catalogue excludes these alternate display assets and additions.',
+        'Nested selections generally subdivide existing parents. Four superior temporal source parts, seven renal/suprarenal vascular groups, three optic-chiasm/tract surfaces and four cricothyroid muscle parts add source-defined anatomy in nested studies; context reuses existing structures. Kidney and thyroid-cartilage associations are navigation, not tissue membership. Visual surfaces do not depict continuous fibres. Nested teaching is counted separately from the root-body inventory. The unchanged archival catalogue excludes these alternate display assets and additions.',
     },
     regionalMembershipsOverlap: true,
     shoulderAndBodyRepresentationsOverlap: true,
@@ -527,7 +536,8 @@ const report = {
       'Revision fingerprints are not approvals; persisted review UI currently targets the shoulder pilot only.',
   },
   boundaries: {
-    importedNewAnatomy: false,
+    scope: 'Current source implementation, not operations performed by this inventory script',
+    importedNewAnatomy: cricothyroid.selectableIds.length > 0,
     importedScans: false,
     clinicalValidation: false,
     browserInteractionTesting: false,

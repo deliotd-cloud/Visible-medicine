@@ -12,6 +12,15 @@ import {
   pancreaticReferences,
 } from '@/lib/pancreatic';
 import {
+  cricothyroidCatalog,
+  cricothyroidFor,
+  cricothyroidViewCatalog,
+  cricothyroidPresets,
+  cricothyroidNotes,
+  cricothyroidColour,
+  cricothyroidReferences,
+} from '@/lib/cricothyroid';
+import {
   visualPathwayCatalog,
   visualPathwayFor,
   visualPathwayPresets,
@@ -149,7 +158,13 @@ const relationshipSelectionIds = (r: {
 export type BrainStudy =
   'ventricles' | 'brainstem' | 'cerebral' | 'visual-pathway';
 export type ComponentStudy =
-  BrainStudy | 'cardiac' | 'pulmonary' | 'hepatic' | 'pancreatic' | 'renal';
+  | BrainStudy
+  | 'cardiac'
+  | 'pulmonary'
+  | 'hepatic'
+  | 'pancreatic'
+  | 'renal'
+  | 'cricothyroid';
 // Shared compact source-component workbench; the keyed parent resets state between studies.
 export function VentricularView({
   parent,
@@ -169,42 +184,48 @@ export function VentricularView({
   const isHepatic = study === 'hepatic';
   const isRenal = study === 'renal';
   const isPancreatic = study === 'pancreatic';
+  const isCricothyroid = study === 'cricothyroid';
   const isVisual = study === 'visual-pathway';
   const lungCatalog = useMemo(() => pulmonaryViewCatalog(parent), [parent]);
-  const baseCatalog = isPancreatic
-    ? pancreaticCatalog
-    : isVisual
-      ? visualPathwayCatalog
-      : isPulmonary
-        ? lungCatalog
-        : isCardiac
-          ? cardiacCatalog
-          : isCerebral
-            ? cerebralCatalog
-            : isBrainstem
-              ? brainstemCatalog
-              : ventricularCatalog;
+  const baseCatalog = isCricothyroid
+    ? cricothyroidCatalog
+    : isPancreatic
+      ? pancreaticCatalog
+      : isVisual
+        ? visualPathwayCatalog
+        : isPulmonary
+          ? lungCatalog
+          : isCardiac
+            ? cardiacCatalog
+            : isCerebral
+              ? cerebralCatalog
+              : isBrainstem
+                ? brainstemCatalog
+                : ventricularCatalog;
   const layers = useMemo(
     () =>
-      isPancreatic
-        ? pancreaticFor(parent)
-        : isVisual
-          ? visualPathwayFor(parent)
-          : isRenal
-            ? renalFor(parent)
-            : isHepatic
-              ? hepaticFor(parent)
-              : isPulmonary
-                ? pulmonaryFor(parent)
-                : isCardiac
-                  ? cardiacFor(parent)
-                  : isCerebral
-                    ? cerebralFor(parent)
-                    : isBrainstem
-                      ? brainstemFor(parent)
-                      : ventriclesFor(parent),
+      isCricothyroid
+        ? cricothyroidFor(parent)
+        : isPancreatic
+          ? pancreaticFor(parent)
+          : isVisual
+            ? visualPathwayFor(parent)
+            : isRenal
+              ? renalFor(parent)
+              : isHepatic
+                ? hepaticFor(parent)
+                : isPulmonary
+                  ? pulmonaryFor(parent)
+                  : isCardiac
+                    ? cardiacFor(parent)
+                    : isCerebral
+                      ? cerebralFor(parent)
+                      : isBrainstem
+                        ? brainstemFor(parent)
+                        : ventriclesFor(parent),
     [
       parent,
+      isCricothyroid,
       isPancreatic,
       isBrainstem,
       isCerebral,
@@ -237,28 +258,20 @@ export function VentricularView({
   );
   const presets = useMemo<Record<string, string[]>>(
     () =>
-      isPancreatic
-        ? pancreaticPresets(layers)
-        : isVisual
-          ? {
-              ...visualPathwayPresets(layers),
-              ...Object.fromEntries(
-                relationships.map((r) => [r.id, [r.spaceId]]),
-              ),
-            }
-          : isRenal
+      isCricothyroid
+        ? cricothyroidPresets(layers)
+        : isPancreatic
+          ? pancreaticPresets(layers)
+          : isVisual
             ? {
-                ...renalPresets(layers),
+                ...visualPathwayPresets(layers),
                 ...Object.fromEntries(
-                  relationships.map((r) => [
-                    r.id,
-                    relationshipSelectionIds(r),
-                  ]),
+                  relationships.map((r) => [r.id, [r.spaceId]]),
                 ),
               }
-            : isHepatic
+            : isRenal
               ? {
-                  ...hepaticPresets(layers),
+                  ...renalPresets(layers),
                   ...Object.fromEntries(
                     relationships.map((r) => [
                       r.id,
@@ -266,32 +279,43 @@ export function VentricularView({
                     ]),
                   ),
                 }
-              : isPulmonary
-                ? pulmonaryPresets(layers)
-                : isCardiac
-                  ? {
-                      ...cardiacPresets(layers),
-                      ...Object.fromEntries(
-                        relationships.map((r) => [r.id, [r.spaceId]]),
-                      ),
-                    }
-                  : isCerebral
-                    ? cerebralPresets(layers)
-                    : isBrainstem
-                      ? brainstemPresets(layers)
-                      : {
-                          all: layers.map((s) => s.id),
-                          lateral: layers
-                            .filter((s) => s.laterality !== 'midline')
-                            .map((s) => s.id),
-                          midline: layers
-                            .filter((s) => s.laterality === 'midline')
-                            .map((s) => s.id),
-                          ...Object.fromEntries(
-                            relationships.map((r) => [r.id, [r.spaceId]]),
-                          ),
-                        },
+              : isHepatic
+                ? {
+                    ...hepaticPresets(layers),
+                    ...Object.fromEntries(
+                      relationships.map((r) => [
+                        r.id,
+                        relationshipSelectionIds(r),
+                      ]),
+                    ),
+                  }
+                : isPulmonary
+                  ? pulmonaryPresets(layers)
+                  : isCardiac
+                    ? {
+                        ...cardiacPresets(layers),
+                        ...Object.fromEntries(
+                          relationships.map((r) => [r.id, [r.spaceId]]),
+                        ),
+                      }
+                    : isCerebral
+                      ? cerebralPresets(layers)
+                      : isBrainstem
+                        ? brainstemPresets(layers)
+                        : {
+                            all: layers.map((s) => s.id),
+                            lateral: layers
+                              .filter((s) => s.laterality !== 'midline')
+                              .map((s) => s.id),
+                            midline: layers
+                              .filter((s) => s.laterality === 'midline')
+                              .map((s) => s.id),
+                            ...Object.fromEntries(
+                              relationships.map((r) => [r.id, [r.spaceId]]),
+                            ),
+                          },
     [
+      isCricothyroid,
       isPancreatic,
       isBrainstem,
       isCerebral,
@@ -304,116 +328,130 @@ export function VentricularView({
       relationships,
     ],
   );
-  const presetNames: Record<string, string> = isPancreatic
+  const presetNames: Record<string, string> = isCricothyroid
     ? {
-        all: 'Both duct sources',
-        duct: 'Pancreatic duct',
-        tree: 'Duct-tree source',
+        all: 'All four muscle parts',
+        straight: 'Straight parts',
+        oblique: 'Oblique parts',
+        right: 'Right muscle parts',
+        left: 'Left muscle parts',
       }
-    : isVisual
+    : isPancreatic
       ? {
-          all: 'Chiasm and both tracts',
-          chiasm: 'Chiasm only',
-          tracts: 'Both optic tracts',
-          right: 'Chiasm and right tract',
-          left: 'Chiasm and left tract',
-          ...Object.fromEntries(relationships.map((r) => [r.id, r.title])),
+          all: 'Both duct sources',
+          duct: 'Pancreatic duct',
+          tree: 'Duct-tree source',
         }
-      : isRenal
+      : isVisual
         ? {
-            all: 'All supplied vessels',
-            arteries: 'Arterial branches',
-            veins: 'Venous groups',
-            adrenal: 'Adrenal vessels',
+            all: 'Chiasm and both tracts',
+            chiasm: 'Chiasm only',
+            tracts: 'Both optic tracts',
+            right: 'Chiasm and right tract',
+            left: 'Chiasm and left tract',
             ...Object.fromEntries(relationships.map((r) => [r.id, r.title])),
           }
-        : isHepatic
+        : isRenal
           ? {
-              all: 'All internal branches',
-              artery: 'Hepatic arterial branches',
-              portal: 'Portal vein branches',
-              biliary: 'Bile ducts',
-              venous: 'Middle hepatic vein tributary',
+              all: 'All supplied vessels',
+              arteries: 'Arterial branches',
+              veins: 'Venous groups',
+              adrenal: 'Adrenal vessels',
               ...Object.fromEntries(
                 relationships.map((r) => [r.id, r.title]),
               ),
             }
-          : isPulmonary
-            ? Object.fromEntries(
-                Object.keys(presets).map((key) => [
-                  key,
-                  key === 'all'
-                    ? 'All supplied branch groups'
-                    : `${key[0].toUpperCase() + key.slice(1)} lobe branches`,
-                ]),
-              )
-            : isCardiac
-              ? {
-                  all: 'Four chamber spaces',
-                  right: 'Right heart spaces',
-                  left: 'Left heart spaces',
-                  atria: 'Atrial spaces',
-                  ventricles: 'Ventricular spaces',
-                  ...Object.fromEntries(
-                    relationships.map((r) => [r.id, r.title]),
-                  ),
-                }
-              : isCerebral
+          : isHepatic
+            ? {
+                all: 'All internal branches',
+                artery: 'Hepatic arterial branches',
+                portal: 'Portal vein branches',
+                biliary: 'Bile ducts',
+                venous: 'Middle hepatic vein tributary',
+                ...Object.fromEntries(
+                  relationships.map((r) => [r.id, r.title]),
+                ),
+              }
+            : isPulmonary
+              ? Object.fromEntries(
+                  Object.keys(presets).map((key) => [
+                    key,
+                    key === 'all'
+                      ? 'All supplied branch groups'
+                      : `${key[0].toUpperCase() + key.slice(1)} lobe branches`,
+                  ]),
+                )
+              : isCardiac
                 ? {
-                    all: 'All supplied regions',
-                    left: 'Left regions',
-                    right: 'Right regions',
-                    insula: 'Insulae',
-                    temporal: 'Temporal regions',
+                    all: 'Four chamber spaces',
+                    right: 'Right heart spaces',
+                    left: 'Left heart spaces',
+                    atria: 'Atrial spaces',
+                    ventricles: 'Ventricular spaces',
+                    ...Object.fromEntries(
+                      relationships.map((r) => [r.id, r.title]),
+                    ),
                   }
-                : isBrainstem
+                : isCerebral
                   ? {
-                      all: 'Brainstem and cerebellum',
-                      brainstem: 'Brainstem only',
-                      cerebellum: 'Cerebellum only',
+                      all: 'All supplied regions',
+                      left: 'Left regions',
+                      right: 'Right regions',
+                      insula: 'Insulae',
+                      temporal: 'Temporal regions',
                     }
-                  : {
-                      all: 'All four spaces',
-                      lateral: 'Lateral ventricles',
-                      midline: 'Third and fourth',
-                      ...Object.fromEntries(
-                        relationships.map((r) => [r.id, r.title]),
-                      ),
-                    };
-  const title = isPancreatic
-    ? 'Pancreatic'
-    : isVisual
-      ? 'Optic pathway'
-      : isRenal
-        ? 'Renal vascular'
-        : isHepatic
-          ? 'Liver'
-          : isPulmonary
-            ? 'Lung'
-            : isCardiac
-              ? 'Cardiac'
-              : isCerebral
-                ? 'Cerebral'
-                : isBrainstem
-                  ? 'Brainstem'
-                  : 'Ventricular';
-  const notes = isPancreatic
-    ? pancreaticNotes
-    : isVisual
-      ? visualPathwayNotes
-      : isRenal
-        ? renalNotes
-        : isHepatic
-          ? hepaticNotes
-          : isPulmonary
-            ? pulmonaryNotes
-            : isCardiac
-              ? cardiacNotes
-              : isCerebral
-                ? cerebralNotes
-                : isBrainstem
-                  ? brainstemNotes
-                  : ventricleNotes;
+                  : isBrainstem
+                    ? {
+                        all: 'Brainstem and cerebellum',
+                        brainstem: 'Brainstem only',
+                        cerebellum: 'Cerebellum only',
+                      }
+                    : {
+                        all: 'All four spaces',
+                        lateral: 'Lateral ventricles',
+                        midline: 'Third and fourth',
+                        ...Object.fromEntries(
+                          relationships.map((r) => [r.id, r.title]),
+                        ),
+                      };
+  const title = isCricothyroid
+    ? 'Cricothyroid'
+    : isPancreatic
+      ? 'Pancreatic'
+      : isVisual
+        ? 'Optic pathway'
+        : isRenal
+          ? 'Renal vascular'
+          : isHepatic
+            ? 'Liver'
+            : isPulmonary
+              ? 'Lung'
+              : isCardiac
+                ? 'Cardiac'
+                : isCerebral
+                  ? 'Cerebral'
+                  : isBrainstem
+                    ? 'Brainstem'
+                    : 'Ventricular';
+  const notes = isCricothyroid
+    ? cricothyroidNotes
+    : isPancreatic
+      ? pancreaticNotes
+      : isVisual
+        ? visualPathwayNotes
+        : isRenal
+          ? renalNotes
+          : isHepatic
+            ? hepaticNotes
+            : isPulmonary
+              ? pulmonaryNotes
+              : isCardiac
+                ? cardiacNotes
+                : isCerebral
+                  ? cerebralNotes
+                  : isBrainstem
+                    ? brainstemNotes
+                    : ventricleNotes;
   const [{ selectedId, hidden, history, future }, dispatch] = useReducer(
     (state: VentricularState, action: VentricularAction) =>
       reduceVentricles(layers, state, action, presets),
@@ -423,7 +461,9 @@ export function VentricularView({
       ...(initialSelection ? { selectedId: initialSelection } : {}),
     }),
   );
-  const [context, setContext] = useState(isRenal || isPancreatic),
+  const [context, setContext] = useState(
+      isRenal || isPancreatic || isCricothyroid,
+    ),
     [labels, setLabels] = useState(true);
   const [explode, setExplode] = useState(0),
     [layout, setLayout] = useState<BodyLayout>('extract');
@@ -445,38 +485,41 @@ export function VentricularView({
   );
   const ventricleCatalog = useMemo(
     () =>
-      isPancreatic
-        ? pancreaticViewCatalog(parent, context && explode === 0)
-        : isVisual
-          ? visualContextViewCatalog(
-              parent,
-              context && explode === 0,
-              relationshipId,
-            )
-          : isRenal
-            ? renalRelationshipViewCatalog(
+      isCricothyroid
+        ? cricothyroidViewCatalog(parent, context && explode === 0)
+        : isPancreatic
+          ? pancreaticViewCatalog(parent, context && explode === 0)
+          : isVisual
+            ? visualContextViewCatalog(
                 parent,
                 context && explode === 0,
                 relationshipId,
               )
-            : isCardiac
-              ? cardiacContextViewCatalog(
+            : isRenal
+              ? renalRelationshipViewCatalog(
                   parent,
-                  context && explode === 0 ? relationshipId : null,
+                  context && explode === 0,
+                  relationshipId,
                 )
-              : isHepatic
-                ? hepaticBiliaryViewCatalog(
+              : isCardiac
+                ? cardiacContextViewCatalog(
                     parent,
-                    context && explode === 0,
-                    relationshipId,
+                    context && explode === 0 ? relationshipId : null,
                   )
-                : isPulmonary
-                  ? pulmonaryContextViewCatalog(
+                : isHepatic
+                  ? hepaticBiliaryViewCatalog(
                       parent,
                       context && explode === 0,
+                      relationshipId,
                     )
-                  : baseCatalog,
+                  : isPulmonary
+                    ? pulmonaryContextViewCatalog(
+                        parent,
+                        context && explode === 0,
+                      )
+                    : baseCatalog,
     [
+      isCricothyroid,
       isPancreatic,
       isCardiac,
       isPulmonary,
@@ -538,42 +581,47 @@ export function VentricularView({
           return [
             s.id,
             {
-              color: isPancreatic
-                ? pancreaticColour(s)
-                : isVisual
-                  ? visualPathwayColour(s)
-                  : isRenal
-                    ? renalColour(s)
-                    : isHepatic
-                      ? hepaticBiliaryColour(s)
-                      : index < 0
-                        ? isPulmonary
-                          ? pulmonaryAirwayColour(s)
-                          : isCardiac && guidedAppearance
-                            ? cardiacVesselColour(s)
-                            : guidedAppearance
-                              ? (neuroGroupFor(s.fmaId)?.color ?? '#9ba7a5')
-                              : '#9ba7a5'
-                        : isCerebral
-                          ? (cerebralGroups.find(
-                              (g) => g.id === (s as CerebralStructure).group,
-                            )?.colour ?? '#9ba7a5')
-                          : colours[index],
+              color: isCricothyroid
+                ? cricothyroidColour(s)
+                : isPancreatic
+                  ? pancreaticColour(s)
+                  : isVisual
+                    ? visualPathwayColour(s)
+                    : isRenal
+                      ? renalColour(s)
+                      : isHepatic
+                        ? hepaticBiliaryColour(s)
+                        : index < 0
+                          ? isPulmonary
+                            ? pulmonaryAirwayColour(s)
+                            : isCardiac && guidedAppearance
+                              ? cardiacVesselColour(s)
+                              : guidedAppearance
+                                ? (neuroGroupFor(s.fmaId)?.color ?? '#9ba7a5')
+                                : '#9ba7a5'
+                          : isCerebral
+                            ? (cerebralGroups.find(
+                                (g) =>
+                                  g.id === (s as CerebralStructure).group,
+                              )?.colour ?? '#9ba7a5')
+                            : colours[index],
               opacity:
                 index < 0
-                  ? isRenal
-                    ? s.system === 'organs'
-                      ? 0.12
-                      : 0.35
-                    : isHepatic
-                      ? hepaticCatalog.contextIds.includes(s.id)
+                  ? isCricothyroid
+                    ? 0.3
+                    : isRenal
+                      ? s.system === 'organs'
                         ? 0.12
-                        : 0.45
-                      : isPulmonary
-                        ? 0.34
-                        : guidedAppearance
-                          ? 0.42
-                          : 0.12
+                        : 0.35
+                      : isHepatic
+                        ? hepaticCatalog.contextIds.includes(s.id)
+                          ? 0.12
+                          : 0.45
+                        : isPulmonary
+                          ? 0.34
+                          : guidedAppearance
+                            ? 0.42
+                            : 0.12
                   : guidedAppearance
                     ? 0.7
                     : 1,
@@ -583,6 +631,7 @@ export function VentricularView({
       ),
     [
       ventricleCatalog,
+      isCricothyroid,
       isPancreatic,
       selectableIds,
       isCerebral,
@@ -634,17 +683,19 @@ export function VentricularView({
     return (
       <p role="alert">
         The{' '}
-        {isPancreatic
-          ? 'pancreas'
-          : isRenal
-            ? 'kidney'
-            : isHepatic
-              ? 'liver'
-              : isPulmonary
-                ? 'lung'
-                : isCardiac
-                  ? 'heart'
-                  : 'brain'}{' '}
+        {isCricothyroid
+          ? 'thyroid cartilage'
+          : isPancreatic
+            ? 'pancreas'
+            : isRenal
+              ? 'kidney'
+              : isHepatic
+                ? 'liver'
+                : isPulmonary
+                  ? 'lung'
+                  : isCardiac
+                    ? 'heart'
+                    : 'brain'}{' '}
         source binding has changed. This dissection is unavailable pending
         review.
       </p>
@@ -906,35 +957,48 @@ export function VentricularView({
                 setContext((v) => !v);
               }}
             >
-              {isPancreatic
-                ? 'Show pancreatic envelope'
-                : isVisual
-                  ? relationship
-                    ? 'Show pituitary landmark'
-                    : 'Show brain landmarks'
-                  : isRenal
+              {isCricothyroid
+                ? 'Show cartilage landmarks'
+                : isPancreatic
+                  ? 'Show pancreatic envelope'
+                  : isVisual
                     ? relationship
-                      ? 'Show drainage landmarks'
-                      : 'Show kidney & vessel context'
-                    : isHepatic
+                      ? 'Show pituitary landmark'
+                      : 'Show brain landmarks'
+                    : isRenal
                       ? relationship
-                        ? 'Show biliary landmarks'
-                        : 'Show liver tissue context'
-                      : isPulmonary
-                        ? 'Show airway landmarks'
-                        : isCardiac
-                          ? relationship
-                            ? 'Show vessel landmarks'
-                            : 'Show atrial walls'
-                          : isCerebral
-                            ? 'Show lateral ventricles'
-                            : isBrainstem
-                              ? 'Show fourth ventricle'
-                              : 'Show brain context'}
+                        ? 'Show drainage landmarks'
+                        : 'Show kidney & vessel context'
+                      : isHepatic
+                        ? relationship
+                          ? 'Show biliary landmarks'
+                          : 'Show liver tissue context'
+                        : isPulmonary
+                          ? 'Show airway landmarks'
+                          : isCardiac
+                            ? relationship
+                              ? 'Show vessel landmarks'
+                              : 'Show atrial walls'
+                            : isCerebral
+                              ? 'Show lateral ventricles'
+                              : isBrainstem
+                                ? 'Show fourth ventricle'
+                                : 'Show brain context'}
             </Button>
           )}
         </div>
-        {isPancreatic ? (
+        {isCricothyroid ? (
+          <section
+            className="ventricular-relationship"
+            aria-label="Cricothyroid source guide"
+          >
+            <p>
+              Four supplied straight/oblique muscle parts. Faint thyroid and
+              cricoid cartilages are orientation landmarks, not selectable
+              muscle tissue. They disappear during separation.
+            </p>
+          </section>
+        ) : isPancreatic ? (
           <section
             className="ventricular-relationship"
             aria-label="Pancreatic duct guide"
@@ -1223,21 +1287,25 @@ export function VentricularView({
             <h3>{selected.name}</h3>
             <span className="eye-layer-source-id">
               {selected.fmaId} ·{' '}
-              {isPancreatic
-                ? 'Duct source'
-                : isVisual
-                  ? 'Neural source surface'
-                  : isRenal
-                    ? 'Partial vascular group'
-                    : isCerebral
-                      ? cerebralCatalog.supplementalIds.includes(selected.id)
-                        ? 'Additional source part'
-                        : 'Partial source coverage'
-                      : isPulmonary || isHepatic
-                        ? 'Partial branch group'
-                        : isBrainstem
-                          ? 'Source compound'
-                          : 'Space representation'}{' '}
+              {isCricothyroid
+                ? 'Muscle-part source'
+                : isPancreatic
+                  ? 'Duct source'
+                  : isVisual
+                    ? 'Neural source surface'
+                    : isRenal
+                      ? 'Partial vascular group'
+                      : isCerebral
+                        ? cerebralCatalog.supplementalIds.includes(
+                            selected.id,
+                          )
+                          ? 'Additional source part'
+                          : 'Partial source coverage'
+                        : isPulmonary || isHepatic
+                          ? 'Partial branch group'
+                          : isBrainstem
+                            ? 'Source compound'
+                            : 'Space representation'}{' '}
               · Draft
             </span>
             <p>{notes[selected.fmaId]}</p>
@@ -1280,7 +1348,22 @@ export function VentricularView({
         )}
         <details className="eye-layer-limits">
           <summary>Learning and limitations</summary>
-          {isPancreatic ? (
+          {isCricothyroid ? (
+            <>
+              <p>
+                Straight and oblique source parts are shown on each side. This
+                is not complete cricothyroid anatomy: a horizontal belly
+                described in human research and intramuscular nerve branches
+                are not separately supplied.
+              </p>
+              <p>
+                Cartilage is a navigation landmark, not a muscle tissue
+                parent. Attachments, tissue intersections and functional
+                movement need specialist review. No phonation, airway, thyroid
+                gland or operative plane is simulated.
+              </p>
+            </>
+          ) : isPancreatic ? (
             <>
               <p>
                 The pancreatic duct and singleton IS-A duct-tree component are
@@ -1431,7 +1514,9 @@ export function VentricularView({
           <p>
             No CT/MRI correspondence, diagnostic measurement or clinical
             approval is provided.{' '}
-            {isRenal ? (
+            {isCricothyroid ? (
+              'Cartilage landmarks are optional orientation surfaces. Separation is a teaching layout, not muscle action.'
+            ) : isRenal ? (
               'The kidney surface is optional orientation context; it does not define the vascular lumen or tissue territories.'
             ) : (
               <>
@@ -1449,44 +1534,48 @@ export function VentricularView({
               </>
             )}
           </p>
-          {(isPancreatic
-            ? pancreaticReferences
-            : isVisual
-              ? visualPathwayReferences
-              : isRenal
-                ? renalReferences
-                : isHepatic
-                  ? [hepaticReference]
-                  : isPulmonary
-                    ? pulmonaryReferences
-                    : isCardiac
-                      ? [cardiacReference]
-                      : isCerebral
-                        ? cerebralReferences
-                        : isBrainstem
-                          ? brainstemReferences
-                          : [ventricleReference]
+          {(isCricothyroid
+            ? cricothyroidReferences
+            : isPancreatic
+              ? pancreaticReferences
+              : isVisual
+                ? visualPathwayReferences
+                : isRenal
+                  ? renalReferences
+                  : isHepatic
+                    ? [hepaticReference]
+                    : isPulmonary
+                      ? pulmonaryReferences
+                      : isCardiac
+                        ? [cardiacReference]
+                        : isCerebral
+                          ? cerebralReferences
+                          : isBrainstem
+                            ? brainstemReferences
+                            : [ventricleReference]
           ).map((href, i) => (
             <p key={href}>
               <a href={href} target="_blank" rel="noreferrer">
-                {isPancreatic
-                  ? 'NCI pancreatic anatomy'
-                  : isRenal
-                    ? 'Renal anatomy'
-                    : isHepatic
-                      ? 'NCI digestive anatomy'
-                      : isPulmonary
-                        ? 'NCI lung anatomy'
-                        : `University ${isCardiac ? 'cardiac anatomy' : 'neuroanatomy'}`}{' '}
+                {isCricothyroid
+                  ? 'Laryngeal anatomy'
+                  : isPancreatic
+                    ? 'NCI pancreatic anatomy'
+                    : isRenal
+                      ? 'Renal anatomy'
+                      : isHepatic
+                        ? 'NCI digestive anatomy'
+                        : isPulmonary
+                          ? 'NCI lung anatomy'
+                          : `University ${isCardiac ? 'cardiac anatomy' : 'neuroanatomy'}`}{' '}
                 reference {i + 1}
               </a>
             </p>
           ))}
           <p>{ventricleCatalog.credit}</p>
           <p>
-            Source components separated, transformed, normal-smoothed and
-            recoloured; no triangles intentionally removed or coordinates
-            reconstructed. Context reuses existing source surfaces.
+            {isCricothyroid
+              ? 'The display derivative omits 12 specifically audited faces from six detached, reversed duplicate-face islands. All retained coordinates, triangles and winding are unchanged; raw originals are preserved. Display normals and colours are adapted. This cleanup is not anatomical validation.'
+              : 'Source components separated, transformed, normal-smoothed and recoloured; no triangles intentionally removed or coordinates reconstructed. Context reuses existing source surfaces.'}
           </p>
           <a
             href="https://creativecommons.org/licenses/by/4.0/"
@@ -1519,23 +1608,26 @@ export default function Ventricles({
   const isHepatic = hepaticFor(parent).length > 0;
   const isRenal = renalFor(parent).length > 0;
   const isPancreatic = pancreaticFor(parent).length > 0;
+  const isCricothyroid = cricothyroidFor(parent).length > 0;
   const startingStudy =
-    isPancreatic || initialStudy === 'pancreatic'
-      ? 'pancreatic'
-      : isRenal
-        ? 'renal'
-        : isHepatic
-          ? 'hepatic'
-          : isPulmonary
-            ? 'pulmonary'
-            : isCardiac
-              ? 'cardiac'
-              : initialStudy === 'cardiac' ||
-                  initialStudy === 'pulmonary' ||
-                  initialStudy === 'hepatic' ||
-                  initialStudy === 'renal'
-                ? 'brainstem'
-                : (initialStudy ?? 'brainstem');
+    isCricothyroid || initialStudy === 'cricothyroid'
+      ? 'cricothyroid'
+      : isPancreatic || initialStudy === 'pancreatic'
+        ? 'pancreatic'
+        : isRenal
+          ? 'renal'
+          : isHepatic
+            ? 'hepatic'
+            : isPulmonary
+              ? 'pulmonary'
+              : isCardiac
+                ? 'cardiac'
+                : initialStudy === 'cardiac' ||
+                    initialStudy === 'pulmonary' ||
+                    initialStudy === 'hepatic' ||
+                    initialStudy === 'renal'
+                  ? 'brainstem'
+                  : (initialStudy ?? 'brainstem');
   const [study, setStudy] = useState<ComponentStudy>(startingStudy);
   return (
     <Dialog
@@ -1548,17 +1640,19 @@ export default function Ventricles({
         <header className="eye-layer-heading brain-study-heading">
           <div>
             <DialogTitle>
-              {isPancreatic || study === 'pancreatic'
-                ? 'Pancreas · duct dissection'
-                : isRenal
-                  ? `${parent.name} · vascular relationships`
-                  : isHepatic
-                    ? 'Liver · internal branch dissection'
-                    : isPulmonary
-                      ? `${parent.name} · branch dissection`
-                      : isCardiac
-                        ? 'Heart · chamber spaces'
-                        : 'Brain · source dissection'}
+              {isCricothyroid || study === 'cricothyroid'
+                ? 'Larynx · cricothyroid muscle parts'
+                : isPancreatic || study === 'pancreatic'
+                  ? 'Pancreas · duct dissection'
+                  : isRenal
+                    ? `${parent.name} · vascular relationships`
+                    : isHepatic
+                      ? 'Liver · internal branch dissection'
+                      : isPulmonary
+                        ? `${parent.name} · branch dissection`
+                        : isCardiac
+                          ? 'Heart · chamber spaces'
+                          : 'Brain · source dissection'}
             </DialogTitle>
             <DialogDescription>
               Source-based anatomy studies. Clinical validation pending.
@@ -1568,6 +1662,8 @@ export default function Ventricles({
             !isPulmonary &&
             !isHepatic &&
             !isRenal &&
+            !isCricothyroid &&
+            study !== 'cricothyroid' &&
             study !== 'pancreatic' && (
               <Select
                 value={study}

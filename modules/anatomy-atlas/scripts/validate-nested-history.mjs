@@ -91,7 +91,7 @@ const targets = api.nestedStudyTargets(catalog);
 const cases = [
   ...new Map(targets.map((t) => [`${t.study}/${t.parentId}`, t])).values(),
 ];
-same(cases.length, 13);
+same(cases.length, 14);
 const nodes = (n) =>
   !n || typeof n !== 'object'
     ? []
@@ -204,6 +204,32 @@ for (const target of cases) {
   render();
   check(button('Undo layers').disabled);
   check(button('Redo layers').disabled);
+  if (target.study === 'cricothyroid') {
+    same(scene().view, 'anterior');
+    same(scene().contextIds.length, 2);
+    same(scene().structures.length, 6);
+    same(button('Show cartilage landmarks')['aria-pressed'], true);
+    for (const id of scene().contextIds) {
+      same(scene().appearance[id].opacity, 0.3);
+      const before = scene().selectedId;
+      scene().onSelect(id); render();
+      same(scene().selectedId, before, 'Cartilage is not selectable muscle tissue');
+    }
+    check(text(tree).includes('12 specifically audited faces'));
+    check(text(tree).includes('Muscle-part source'));
+    check(!text(tree).includes('Space representation'));
+    check(!text(tree).includes('Faint context: thalami'));
+    check(!text(tree).includes('no triangles intentionally removed'));
+    button('Show cartilage landmarks').onClick(); render();
+    same(scene().contextIds, []); same(scene().structures.length, 4);
+    button('Show cartilage landmarks').onClick(); render();
+    scene().onFailure('cricothyroid'); render();
+    button('Retry').onClick(); render();
+    same(scene().retries.cricothyroid, 1);
+    for (const b of scene().catalog.bundles) scene().onLoaded(b.id);
+    scene().onRendererHealth('ready'); render();
+    check(!button('Frame selected').disabled);
+  }
   if (target.study === 'pancreatic') {
     same(scene().view, 'anterior');
     same(scene().contextIds.length, 1);
@@ -320,6 +346,11 @@ for (const target of cases) {
   render();
   const cut = copy(scene().inspection),
     beforeHidden = copy(scene().hiddenIds);
+  if (target.study === 'cricothyroid') {
+    same(scene().contextIds, []);
+    same(scene().structures.map((s) => s.id), layers.map((s) => s.id));
+    check(button('Show cartilage landmarks').disabled);
+  }
   if (target.study === 'pancreatic') {
     same(scene().contextIds, []);
     same(
@@ -379,6 +410,7 @@ for (const target of cases) {
   check(button('Redo layers').disabled);
   same(scene().explode, 0);
   if (target.study === 'pancreatic') same(scene().contextIds.length, 1);
+  if (target.study === 'cricothyroid') same(scene().contextIds.length, 2);
   if (target.study === 'renal') same(scene().contextIds.length, 6);
   if (target.study === 'visual-pathway') same(scene().contextIds.length, 4);
   same(scene().showOrigins, true);

@@ -22,6 +22,9 @@ const reject = (fn) => {
 };
 const hash = (b) => createHash('sha256').update(b).digest('hex');
 const directory = 'content/prototypes/cricothyroid';
+const checkoutPrefix = execFileSync('git', ['rev-parse', '--show-prefix'], {
+  encoding: 'utf8',
+}).trim();
 const manifest = JSON.parse(await readFile(`${directory}/catalog.json`));
 const auditBytes = await readFile('docs/cricothyroid-source-audit.json');
 const audit = JSON.parse(auditBytes);
@@ -59,11 +62,22 @@ let triangles = 0,
 for (const candidate of cricothyroidCandidates) {
   const raw = await readFile(`${directory}/source/${candidate.file}.obj`);
   equal(hash(raw), candidate.sha256);
-  const checkoutBytes = execFileSync('git', [
-    '-c', 'core.autocrlf=true', 'cat-file', '--filters',
-    `HEAD:${directory}/source/${candidate.file}.obj`,
-  ], { maxBuffer: 2 * 1024 * 1024 });
-  equal(hash(checkoutBytes), candidate.sha256, 'Windows checkout must retain original bytes');
+  const checkoutBytes = execFileSync(
+    'git',
+    [
+      '-c',
+      'core.autocrlf=true',
+      'cat-file',
+      '--filters',
+      `HEAD:${checkoutPrefix}${directory}/source/${candidate.file}.obj`,
+    ],
+    { maxBuffer: 2 * 1024 * 1024 },
+  );
+  equal(
+    hash(checkoutBytes),
+    candidate.sha256,
+    'Windows checkout must retain original bytes',
+  );
   const altered = Buffer.concat([
     raw,
     Buffer.from('\n# unreviewed change\n'),
@@ -234,7 +248,8 @@ console.log(
     rejected,
     sourceTrianglesCompared: triangles,
     removedSourceFaces: removed,
-    publicAtlasUnchanged: true,
+    rootCatalogUnchanged: true,
+    prototypeUnmodified: true,
     admitted: false,
   }),
 );

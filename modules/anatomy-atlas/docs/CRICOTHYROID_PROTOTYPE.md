@@ -1,6 +1,6 @@
 # Cricothyroid muscle-part prototype
 
-Status: reproducible, non-public staging artifact, **not admitted to the live atlas and not clinically validated**. Existing 1,022 root representations, 65 nested representations, dissection controls, teaching and product access remain unchanged. This prepares a source-grounded head-and-neck extension rather than inventing gland or nerve geometry.
+Historical staging evidence: this reproducible prototype and its raw originals remain non-public and clinically unvalidated. A separate [runtime dissection derivative](CRICOTHYROID_DISSECTION.md) now integrates its four source parts with unchanged geometry. The earlier admission/pending flags in the prototype catalogue record its preparation milestone, not the current runtime status. No gland or nerve geometry is invented.
 
 ## Source and derivative
 

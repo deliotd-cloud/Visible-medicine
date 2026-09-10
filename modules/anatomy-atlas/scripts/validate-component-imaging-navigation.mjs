@@ -277,7 +277,7 @@ for (const parentId of parents) {
 }
 same(counts, { ct: 35, mri: 35, ultrasound: 28 });
 same(drafts, 98);
-same(pending, 97);
+same(pending, 109);
 same(
   JSON.stringify(catalog),
   before,

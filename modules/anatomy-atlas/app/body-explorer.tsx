@@ -134,6 +134,7 @@ import { pulmonaryFor } from '@/lib/pulmonary';
 import { hepaticFor } from '@/lib/hepatic';
 import { renalFor } from '@/lib/renal';
 import { pancreaticFor } from '@/lib/pancreatic';
+import { cricothyroidFor } from '@/lib/cricothyroid';
 import { bodyDisplayCatalog } from '@/lib/body-display-catalog';
 import {
   resolveNestedTarget,
@@ -1886,7 +1887,8 @@ export default function BodyExplorer({
                         pulmonaryFor(selected).length > 0 ||
                         hepaticFor(selected).length > 0 ||
                         renalFor(selected).length > 0 ||
-                        pancreaticFor(selected).length > 0) && (
+                        pancreaticFor(selected).length > 0 ||
+                        cricothyroidFor(selected).length > 0) && (
                         <div className="body-selection-actions">
                           <Button
                             ref={ventricleLauncher}
@@ -1900,7 +1902,9 @@ export default function BodyExplorer({
                             }}
                           >
                             <Layers3 />{' '}
-                            {pancreaticFor(selected).length
+                            {cricothyroidFor(selected).length
+                              ? 'Explore cricothyroid muscles'
+                              : pancreaticFor(selected).length
                               ? 'Explore pancreatic ducts'
                               : renalFor(selected).length
                                 ? 'Explore renal vessels'

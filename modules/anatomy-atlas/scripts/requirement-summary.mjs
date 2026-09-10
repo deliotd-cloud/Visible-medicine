@@ -30,6 +30,8 @@ Generated from the actual catalogue, teaching resolver, dissection profiles and 
 
 ## Delivered source scope
 
+The [cricothyroid dissection](CRICOTHYROID_DISSECTION.md) adds ${anatomy.nestedDissections.cricothyroidMuscleParts} source-defined muscle parts with ${anatomy.nestedDissections.cricothyroidCartilageLandmarks} optional, nonselectable cartilage landmarks. It reuses the compact selection, cutaway, separation, labels and Undo/Redo controls. The source-preserving derivative explicitly omits ${anatomy.nestedDissections.cricothyroidRemovedArtifactFaces} audited artifact faces; this is disclosed, not clinical approval. Introductory teaching is draft and CT/MRI/US remain pending for these parts. Cartilage is a navigation landmark, not the muscle's tissue parent.
+
 The [biliary and gallbladder relationship view](HEPATIC_BILIARY_RELATIONSHIPS.md) adds ${study.hepaticBiliaryRelationshipPresets} liver study preset using ${study.hepaticBiliaryLandmarks} existing gallbladder/duct landmarks alongside faint liver tissue. Both internal biliary groups remain selectable; landmarks are nonselectable and disappear during separation. Source labels and geometry are unchanged; no common-bile-duct completion, junction validation, scan or surgical model is inferred.
 
 [Component imaging shortcuts](COMPONENT_IMAGING_NAVIGATION.md) connect supported parent organs to existing child CT/MRI/US drafts through a collapsed, source-labelled picker. Opening selects the exact part and its imaging topic in the existing dissection. Pending lessons are omitted; root teaching coverage, scan/lecture entitlements and source geometry remain unchanged. This is local teaching navigation, not patient synchronization or additional clinical coverage.

@@ -20,6 +20,9 @@
     "lib/hepatic.ts": "86a6ac1226f1ab496c3dc7aee6279da3ef662a0c3316fee10862cb8ba30fae80",
     "lib/renal.ts": "d048169e7267d1b5339ee22a5ecaedc004abbdc95dadf82f078b184eb3efc936",
     "lib/pancreatic.ts": "ad475405272bc11360d3d9242e2a85d92c58997d8489f3f4fb54119e741cb8f9",
+    "lib/cricothyroid.ts": "1e7d88df1c8f24a4b33b520637d00bdf64d498a5017c332a6ce4d2a1cc0828b9",
+    "content/cricothyroid-teaching.ts": "43e6e81da3b782aaefb0f806e57517edee327e1a24b9eaa748896aef93c033db",
+    "public/models/bodyparts3d/cricothyroid/catalog.json": "bf52f5d63c8d3917179c52fb5d62f0a931d1f57dff4c27de615329d058fa7479",
     "content/pancreatic-teaching.ts": "9e8a890f18d9dc9fb5105e854340db4623e762a0785dd4c08b8e5f4d80773817",
     "public/models/bodyparts3d/pancreatic/catalog.json": "d138ba3d14314bdf84abf5eb80a873b73a542fd69d3d9cee5419158b1cb67028",
     "lib/renal-relationships.ts": "f9a070d2b59be090ab63c591c555410cd0b13833c692e2c9e587236e6a173a2a",
@@ -42,13 +45,13 @@
     "public/models/bodyparts3d/pulmonary/catalog.json": "b62ccd78dfc2ced8674b94eba67596add4de482f54c3f242814982b4e3dab9ea",
     "docs/pulmonary-source-audit.json": "734fc23b6d4812b81ffb007214c271096562bcb8376766fc9d609bfddabc95db",
     "content/cerebral-supplement-audit.json": "a186519bbf31065f5c4e58472c542a9cbd2a6b64d35423a4f6c92d7bae1d69d7",
-    "content/nested-teaching.ts": "11fdf251a4d96bfe6a8ab30ab7b4c8c81036d70f21db7a2fbcb231415be38467",
+    "content/nested-teaching.ts": "2b74cea70e7ff7c48075cd7e53b7787c9a08618a748a5df6e4791094ca0c9d68",
     "content/cardiac-teaching.ts": "48fab7d90b23ce6c59a45d694a17fbb8026daa5371c904b2a04f88754658dc0b",
     "content/hepatic-teaching.ts": "793d49e8e33bc4daed5889b9bc58403a11280d39dd1d6894d0f5ff7c8fc0372d",
     "content/pulmonary-teaching.ts": "dec60fd4009651ed0e0f11e67763db54c367aa22968c7653dadaf128918b77b0",
     "content/cerebral-teaching.ts": "ba741cc7373be4ffad1dd7a04af2605d5a033bbe6d40723196241d89d905b1a0",
-    "content/nested-teaching-bindings.v1.json": "1958e42e9f84f80d20bfcbc09d339d134e1f47e153af53726adbb632e1089148",
-    "lib/nested-anatomy.ts": "d330aff84b629a54a3ebed028bcc12646582d5194786fb5d423a0e14eb8365cd",
+    "content/nested-teaching-bindings.v1.json": "d8225296b269fa93cfbde974820ee1dedaf3e9adb836e9e9873416a231376ae6",
+    "lib/nested-anatomy.ts": "05fc8a7f73d950bb320879b7786a65c1659c0b902bc681baff8b145f81e39de7",
     "lib/nested-teaching.ts": "abcef365ef8fb3208483454500fbcb3af3b8edd2411b58a1f4b0988de11c47ea",
     "app/nested-teaching.tsx": "12670ac0366f65105ca0cfb74a8bc37a8d107d3fe993918060e86bbf21f5a17b",
     "app/nested-teaching.css": "d912bfc774cc744511a4c0e87a0a35f6b693def9f4bddc25b6f010f07dfa83bc",
@@ -56,14 +59,14 @@
     "content/schema/anatomy-structure.schema.json": "0a8e76b6a98e23e25f60a2d9269664dc42974b7a349c63b77e4615fa46887826",
     "content/review-revisions.json": "4e130ad0c0a5ec170069ae5ed89b1f3aab401f37282048d648f82f8f293c2104",
     "content/learning-resources.v1.json": "799fec602114a944b4f675d341b445982dac56786cca9b5800d52db7d95899e5",
-    "lib/learning-resource-types.ts": "86979d66edd9a1984f94b62078123a4f2b0b2eaaa14b654840098cb0b4fb255f",
-    "lib/learning-resources.ts": "adce2e7e69a7e0fa2277acf753cef956c3ff802c663ef0f80cc4cf1d43bf3a45",
+    "lib/learning-resource-types.ts": "281e717d00034f3ac0b887b99d920ce77fa7a38c22ac75b4b6fa96ee6a2d9174",
+    "lib/learning-resources.ts": "10648608aa9c98f16094127d6c3afa5326083f462d374a8e7b84f57cc8bebb17",
     "lib/learning-anatomy.ts": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3",
     "lib/nested-learning-anatomy.ts": "0a635f713f9bc99d00c62c14cc4c5d05a4eb639f9633afc9f2ae2b440bb4dcc7",
     "lib/ventricular-relationships.ts": "b9d2bd5ea079a600c2593ca522f325ceb03c2f2704a26747b4262ef6838c84df",
     "lib/cardiac-context.ts": "428c871b7a942e34c87833ff97441e59e7757c4ae0f5610713e779396df432ef",
     "public/models/bodyparts3d/cardiac/great-vessel-context.json": "fac546e54237db4bed783d583b01c583f423a35a74bd759727d519074de0af85",
-    "app/ventricles.tsx": "c3eeed97ca4402435db84c3708ab18a96b8ff9b9b79fa6d80388b0511866ee89",
+    "app/ventricles.tsx": "cd9ea82d9148c44a288f34ac84da151f056c91fdc1addcdd4e48cadbd7043bbf",
     "app/ventricular-relationships.css": "7dfa2927b9f203aa13dbd1f2205c9429e7b79ffbaa86108b57fb3c69b1b71400",
     "app/body-scene.tsx": "bdc5d86284feb07906acbf70abadfe1db74cc59463083dc1d5ae3acffa1229c4",
     "lib/origin-guides.ts": "b333566888bf13805da9559004fbfbfa6596095a65d7ca8772de8259ca974ff6",
@@ -73,7 +76,7 @@
     "resolvedContentAndRecipeData": "011e0c5dc8e7cac46df5d556838d5bdcee760243b3d918ce9c40f41971bc1713",
     "explicitTopicReadiness": "b57c441aa76f7bd23f1c97de13289cedf350bc884d99be676c35cc9998f8e5a9",
     "reasoningQuestionData": "309529bda0dd03063b56bfb2af9272fba105d083f8cad728008d1095c92cc9d1",
-    "nestedTeachingData": "7f098ed1d09f30b7c91f832b56fc292ed1917913ad26a44ed990b084822ed57e"
+    "nestedTeachingData": "b74ddd2f8575fe1bef1d07424db49de126bc94700166eec88f5dc0c2e79e1770"
   },
   "anatomy": {
     "displayCorrections": [
@@ -184,11 +187,15 @@
       "pancreaticReferenceSurfaces": 1,
       "pancreaticSourceFiles": 3,
       "pancreaticValidatedLumens": 0,
+      "cricothyroidMuscleParts": 4,
+      "cricothyroidCartilageLandmarks": 2,
+      "cricothyroidRemovedArtifactFaces": 12,
+      "cricothyroidClinicalApproval": false,
       "visualPathwayGroups": 3,
       "visualPathwaySourceFiles": 4,
       "visualPathwayContextLandmarks": 5,
-      "additionalUniqueWholeBodyAnatomy": 14,
-      "limitation": "Nested selections generally subdivide existing parents. Four superior temporal source parts, seven renal/suprarenal vascular groups and three optic-chiasm/tract surfaces are additional anatomy in nested studies; context reuses existing structures. Kidney association is navigation, not tissue membership. Visual surfaces do not depict continuous fibres. Nested teaching is counted separately from the root-body inventory. The unchanged archival catalogue excludes these alternate display assets and additions."
+      "additionalUniqueWholeBodyAnatomy": 18,
+      "limitation": "Nested selections generally subdivide existing parents. Four superior temporal source parts, seven renal/suprarenal vascular groups, three optic-chiasm/tract surfaces and four cricothyroid muscle parts add source-defined anatomy in nested studies; context reuses existing structures. Kidney and thyroid-cartilage associations are navigation, not tissue membership. Visual surfaces do not depict continuous fibres. Nested teaching is counted separately from the root-body inventory. The unchanged archival catalogue excludes these alternate display assets and additions."
     },
     "regionalMembershipsOverlap": true,
     "shoulderAndBodyRepresentationsOverlap": true,
@@ -235,8 +242,8 @@
       1,
       2
     ],
-    "availableRepresentations": 1096,
-    "nestedRepresentations": 65,
+    "availableRepresentations": 1100,
+    "nestedRepresentations": 69,
     "supportedKinds": [
       "ct",
       "mri",
@@ -309,18 +316,18 @@
       }
     },
     "nested": {
-      "representations": 65,
-      "concepts": 40,
-      "references": 78,
+      "representations": 69,
+      "concepts": 41,
+      "references": 81,
       "topics": {
         "anatomy": {
-          "specificDraft": 65,
+          "specificDraft": 69,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 65,
+          "specificDraft": 69,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
@@ -328,35 +335,35 @@
         "ct": {
           "specificDraft": 35,
           "identityOnly": 0,
-          "pending": 30,
+          "pending": 34,
           "generatedIdentification": 0
         },
         "mri": {
           "specificDraft": 35,
           "identityOnly": 0,
-          "pending": 30,
+          "pending": 34,
           "generatedIdentification": 0
         },
         "ultrasound": {
           "specificDraft": 28,
           "identityOnly": 0,
-          "pending": 37,
+          "pending": 41,
           "generatedIdentification": 0
         },
         "pathology": {
-          "specificDraft": 65,
+          "specificDraft": 69,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
         "clinical": {
-          "specificDraft": 65,
+          "specificDraft": 69,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
         "quiz": {
-          "specificDraft": 65,
+          "specificDraft": 69,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
@@ -973,8 +980,8 @@
       "png": 4,
       "svg": 2,
       "md": 1,
-      "glb": 101,
-      "json": 18,
+      "glb": 102,
+      "json": 19,
       "html": 1,
       "tsv": 1
     },
@@ -990,7 +997,8 @@
     "status": "Revision fingerprints are not approvals; persisted review UI currently targets the shoulder pilot only."
   },
   "boundaries": {
-    "importedNewAnatomy": false,
+    "scope": "Current source implementation, not operations performed by this inventory script",
+    "importedNewAnatomy": true,
     "importedScans": false,
     "clinicalValidation": false,
     "browserInteractionTesting": false,

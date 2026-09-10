@@ -1,6 +1,6 @@
 # Clinical validation checklist
 
-The [cricothyroid prototype](CRICOTHYROID_PROTOTYPE.md) remains non-public and unvalidated. Review the four supplied part labels/laterality, absent described bellies, attachment footprints, cartilage intersections and modification disclosure before admission. Six detached opposite-face islands were omitted only in a pinned display derivative; originals are retained. Engineering topology/precision does not establish anatomical accuracy, phonation, safe operative planes, nerve completeness or CT/MRI/US correspondence. Prior laryngeal source holds remain unchanged.
+The [cricothyroid dissection](CRICOTHYROID_DISSECTION.md) is an unvalidated educational source subset; its original prototype remains retained separately. Specialist review is still required for the four part labels/laterality, absent described bellies, attachment footprints, cartilage intersections, cleanup disclosure and brief teaching. Engineering admission is not clinical approval. Six detached opposite-face islands were omitted only in the pinned display derivative; originals are retained. No anatomical accuracy, phonation, operative planes, nerve completeness or CT/MRI/US correspondence is certified. Prior laryngeal source holds remain unchanged.
 
 ## Biliary relationship landmarks
 

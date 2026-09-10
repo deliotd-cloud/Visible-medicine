@@ -9,6 +9,7 @@ import { hepaticCatalog, hepaticFor } from './hepatic.ts';
 import { renalCatalog, renalFor } from './renal.ts';
 import { pancreaticCatalog, pancreaticFor } from './pancreatic.ts';
 import { visualPathwayCatalog, visualPathwayFor } from './visual-pathway.ts';
+import { cricothyroidCatalog, cricothyroidFor } from './cricothyroid.ts';
 
 export type NestedStudy =
   | 'eye'
@@ -20,7 +21,8 @@ export type NestedStudy =
   | 'hepatic'
   | 'renal'
   | 'pancreatic'
-  | 'visual-pathway';
+  | 'visual-pathway'
+  | 'cricothyroid';
 export type NestedSelection = {
   study: NestedStudy;
   structureId: string;
@@ -37,6 +39,12 @@ export type NestedRequest = NestedSelection & {
   parentHash: string;
 };
 const studies = [
+  {
+    study: 'cricothyroid',
+    title: 'Cricothyroid muscle parts',
+    catalog: cricothyroidCatalog,
+    layers: cricothyroidFor,
+  },
   {
     study: 'pancreatic',
     title: 'Pancreatic duct sources',
