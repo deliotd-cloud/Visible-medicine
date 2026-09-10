@@ -3,6 +3,10 @@ import {
   cardiacTeaching,
   cardiacTeachingReferences,
 } from './cardiac-teaching.ts';
+import {
+  hepaticTeaching,
+  hepaticTeachingReferences,
+} from './hepatic-teaching.ts';
 
 export type NestedTopic = 'anatomy' | 'function' | 'clinical' | 'pathology';
 export type NestedImagingTopic = 'ct' | 'mri' | 'ultrasound';
@@ -30,6 +34,7 @@ export const nestedTeachingReferences: Record<
   { title: string; url: string }
 > = {
   ...cardiacTeachingReferences,
+  ...hepaticTeachingReferences,
   hepaticArteries: {
     title: 'Texas Tech · Abdominal arteries',
     url: 'https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html',
@@ -222,13 +227,10 @@ export const nestedConcepts: NestedConcept[] = [
       sections: {
         anatomy: section(anatomy, ref),
         function: section(fn, ref),
-        clinical: pending(
-          'Structure-specific clinical interpretation awaits specialist authoring and review.',
-        ),
-        pathology: pending(
-          'No disease-specific lesson or pathological liver geometry has been supplied.',
-        ),
+        clinical: hepaticTeaching[kind].clinical,
+        pathology: hepaticTeaching[kind].pathology,
       },
+      imaging: hepaticTeaching[kind].imaging,
       modelLimit:
         'Original source branch groups only; no proven lumen continuity, complete drainage tree, Couinaud segment boundaries, surgical planes or scan registration. Liver tissue context retains unresolved source segment conflicts.',
       quiz:

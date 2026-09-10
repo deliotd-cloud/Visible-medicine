@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Liver branches → Learn more** now adds [clinical and imaging teaching](docs/HEPATIC_TEACHING.md) for arterial supply, portal inflow, bile drainage and hepatic venous outflow. The seven source groups receive 15 shared, referenced draft paragraphs in the existing panel, including ultrasound, biliary MRCP and venous CT/MRI concepts. No validated segment map, scan access or clinical approval is implied.
+
 **Heart chambers → Learn more** now includes [chamber-specific clinical and imaging drafts](docs/CARDIAC_TEACHING.md): Clinical context, Pathology, CT, MRI and Ultrasound for each of the four cavities. The existing collapsed panel keeps the canvas uncluttered. These are sourced teaching notes, not patient scans, measurements, validated diagnoses or a lecture-access grant. Specialist review is pending.
 
 **Heart chambers → Study view** now includes [four chamber–vessel comparisons](docs/CARDIAC_VESSEL_RELATIONSHIPS.md), with optional source-bound landmarks, a compact colour key and useful camera presets. Only the relevant vessels appear; they hide during separation and work with the stable cutaway. No missing valve, vessel opening or continuous flow path is invented.

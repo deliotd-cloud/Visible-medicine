@@ -216,6 +216,8 @@ for (const path of [
   'docs/pulmonary-source-audit.json',
   'content/cerebral-supplement-audit.json',
   'content/nested-teaching.ts',
+  'content/cardiac-teaching.ts',
+  'content/hepatic-teaching.ts',
   'content/nested-teaching-bindings.v1.json',
   'lib/nested-anatomy.ts',
   'lib/nested-teaching.ts',
@@ -258,6 +260,14 @@ sourceHashes.explicitTopicReadiness = hash(
   ),
 );
 sourceHashes.reasoningQuestionData = hash(JSON.stringify(reasoningConcepts));
+// Include resolved nested text and references, including separately imported
+// organ modules. Coverage counts alone do not detect an altered paragraph.
+sourceHashes.nestedTeachingData = hash(
+  JSON.stringify({
+    concepts: nestedConcepts,
+    references: nestedTeachingReferences,
+  }),
+);
 const publicFiles = [];
 async function inventory(directory) {
   for (const entry of await readdir(new URL(directory, root), {
