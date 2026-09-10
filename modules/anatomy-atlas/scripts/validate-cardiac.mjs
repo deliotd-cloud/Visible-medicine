@@ -4,7 +4,6 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
-import { execFileSync } from 'node:child_process';
 import { Matrix4, Vector3 } from 'three';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
@@ -248,36 +247,25 @@ for (const c of manifest.sourceConflicts) {
     ),
   );
 }
-// Preserve all pre-existing lesson snapshots, not simply their count.
-const oldPins = JSON.parse(
-  execFileSync(
-    'git',
-    [
-      'show',
-      'a8bdf17591b657cd9dc545165cb685c261efd22d:content/nested-teaching-bindings.v1.json',
-    ],
-    { encoding: 'utf8' },
-  ),
-);
+// Preserve complete pre-cardiac JSON snapshots, including order, without needing
+// the native Sites Git history in a downloaded or module-only project copy.
+// Digests independently captured from source a8bdf17591b657cd9dc545165cb685c261efd22d.
 const pins = JSON.parse(
   await readFile('content/nested-teaching-bindings.v1.json'),
 );
-for (const p of oldPins.parents)
-  same(
-    pins.parents.find((r) => r.id === p.id),
-    p,
-  );
-for (const b of oldPins.bindings)
-  same(
-    pins.bindings.find(
-      (r) =>
-        r.study === b.study &&
-        r.parentId === b.parentId &&
-        r.structure.id === b.structure.id,
-    ),
-    b,
-  );
-same(pins.bindings.length - oldPins.bindings.length, 4);
+const previousParents = pins.parents.filter((p) => p.id !== parent.id);
+const previousBindings = pins.bindings.filter((b) => b.study !== 'cardiac');
+same(previousParents.length, 3);
+same(previousBindings.length, 37);
+same(
+  hash(JSON.stringify(previousParents)),
+  'fb188a501dac7030a5bf48b3f61f00c1536521adbfa065822d554baa9c928e56',
+);
+same(
+  hash(JSON.stringify(previousBindings)),
+  'a08317b8f4c4613442ab748db2c9630921a15344911aaf72a46458f78525c353',
+);
+same(pins.bindings.length - previousBindings.length, 4);
 function nodes(n) {
   if (!n || typeof n !== 'object') return [];
   if (Array.isArray(n)) return n.flatMap(nodes);
@@ -400,7 +388,7 @@ const report = {
   bytes: bytes.length,
   sourceConflictsExcluded: 3,
   markupCases,
-  previousTeachingBindingsPreserved: oldPins.bindings.length,
+  previousTeachingBindingsPreserved: previousBindings.length,
   browserTesting: false,
   clinicalApproval: false,
   patientScansAdded: false,
