@@ -29,7 +29,7 @@ The optional context initially shows the same-side kidney, adrenal gland, ureter
 
 ## Teaching and future integration
 
-Four new shared concepts serve seven source-bound parts, bringing nested teaching to 37 concepts / 60 representations. Anatomy, Function, introductory Clinical context and unscored self-checks are drafts. Renal Pathology/CT/MRI/Ultrasound remain explicitly pending. Two reference URLs reuse existing abdominal-table keys, retaining one combined word budget per source. No reference tables or images are copied.
+Four shared concepts serve seven source-bound parts, within 37 nested concepts / 60 representations. Core teaching and unscored self-checks remain drafts. The [renal teaching extension](RENAL_TEACHING.md) adds 14 shared sections: Pathology/CT/MRI for all seven parts and ultrasound for the ureteric arterial and renal venous groups. Adrenal-vessel ultrasound stays pending. Right- or left-specific reference examples are explicitly identified; a shared lesson is not evidence of equivalent contralateral imaging. Five new references complement the two existing abdominal-table keys, with one combined word budget per source. No reference tables or images are copied.
 
 The opt-in learning registry now supports 1,091 representations (1,031 legacy plus 60 nested), but production still configures zero resources and zero correspondences. The renal study discriminator does not authorize scans or separately paid lectures. Atlas and target-resource access, review clearance, revision and exact source binding remain independent checks. The 2 MB import cap is unchanged; growing test fixtures are validated in bounded batches. This is not live CT/MRI/X-ray/US synchronization or a billing integration.
 

@@ -2,6 +2,8 @@
 
 ## Renal vascular workbench
 
+Renal Pathology and modality drafts are authored in `content/renal-teaching.ts`, using the existing `NestedConcept`/`NestedSection` resolver and collapsed `NestedTeaching` panel. No schema, component, source binding, review state, resource manifest or geometry changes accompany this editorial extension. The validator pins the complete non-renal content and retained renal core to v112, exercises every authored topic in rendered markup, and keeps missing modalities pending. See [evidence and remaining review](RENAL_TEACHING.md).
+
 `lib/renal.ts` binds seven source groups to exact right/left kidney records. This is a navigation association, not tissue part-of semantics. `app/ventricles.tsx` remains the shared compact organ workbench; the root kidney launcher and source-bound search enter it with `study: renal`. Only same-side selectable groups and optional same-side/midline context are rendered. Context uses original root bundles, cannot become a child selection and disappears during separation. Internal tissue is not reconstructed.
 
 `scripts/export-renal.mjs` validates the staged source audit/raw hashes, reexports only metadata and compares every vertex/index with the prototype. The one 266,784-byte public bundle contains seven groups; opposite-side meshes are filtered from each view. `--check` verifies deterministic bytes without overwriting the artifact. Teaching extends the existing pins by seven bindings, retaining all 53 historical bindings exactly. Learning transport supports the new study identity but keeps its 2 MB JSON limit, default-deny policy and separate Atlas/resource grants. No production scan or lecture correspondence is configured. See [scope and validation](RENAL_VASCULAR_STUDY.md).

@@ -1,5 +1,5 @@
 import type { NestedStudy } from '../lib/nested-anatomy';
-import { renalConcepts } from './renal-teaching.ts';
+import { renalConcepts, renalTeachingReferences } from './renal-teaching.ts';
 import {
   cerebralTeaching,
   cerebralTeachingReferences,
@@ -42,6 +42,7 @@ export const nestedTeachingReferences: Record<
   string,
   { title: string; url: string }
 > = {
+  ...renalTeachingReferences,
   ...cardiacTeachingReferences,
   ...hepaticTeachingReferences,
   ...pulmonaryTeachingReferences,

@@ -71,6 +71,37 @@ same(
 // Captured from validated v108 source 649dfc3d, before this cerebral extension.
 const digest = (value) =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
+// Captured from v112, before renal Pathology/CT/MRI/US authoring.
+same(
+  digest(api.nestedConcepts.filter((c) => c.study !== 'renal')),
+  'dd440ef1198291f2be25b6949f5650c8c7fca2f448ae0863c395f208cebcd8ab',
+  'All non-renal teaching remains unchanged',
+);
+same(
+  digest(
+    api.nestedConcepts
+      .filter((c) => c.study === 'renal')
+      .map((c) => ({
+        id: c.id,
+        study: c.study,
+        fmaIds: c.fmaIds,
+        anatomy: c.sections.anatomy,
+        function: c.sections.function,
+        clinical: c.sections.clinical,
+        modelLimit: c.modelLimit,
+        quiz: c.quiz,
+      })),
+  ),
+  '211229ef9ddb9cdf2aff4f1a01b2cfedf3744c02f279d0fc5892ade7e6ac8eba',
+  'Renal identities, core teaching, limitations and recall questions unchanged',
+);
+same(
+  createHash('sha256')
+    .update(await readFile('content/nested-teaching-bindings.v1.json'))
+    .digest('hex'),
+  '081abf168557c14a16f770f7bcc5d2d0e338e0e3f83c2d1bc333ae08ace00ed0',
+  'No teaching source rebinds accompany editorial expansion',
+);
 same(
   digest(
     api.nestedConcepts
@@ -186,21 +217,25 @@ for (const target of targets) {
   seen.add(concept.id);
   check(concept.fmaIds.includes(selected.fmaId));
   const expectedImaging =
-    concept.study === 'cardiac'
-      ? ['ct', 'mri', 'ultrasound']
-      : concept.study === 'hepatic'
-        ? concept.id === 'hepatic-venous-tributary'
-          ? ['ct', 'mri', 'ultrasound']
-          : concept.id === 'hepatic-biliary'
-            ? ['mri', 'ultrasound']
-            : ['ultrasound']
-        : concept.study === 'pulmonary'
-          ? ['ct']
-          : concept.id === 'cerebral-insula'
-            ? ['ct', 'mri']
-            : concept.id === 'cerebral-superior-temporal-anterior'
-              ? ['mri']
-              : [];
+    concept.study === 'renal'
+      ? ['renal-veins', 'renal-ureteric-arteries'].includes(concept.id)
+        ? ['ct', 'mri', 'ultrasound']
+        : ['ct', 'mri']
+      : concept.study === 'cardiac'
+        ? ['ct', 'mri', 'ultrasound']
+        : concept.study === 'hepatic'
+          ? concept.id === 'hepatic-venous-tributary'
+            ? ['ct', 'mri', 'ultrasound']
+            : concept.id === 'hepatic-biliary'
+              ? ['mri', 'ultrasound']
+              : ['ultrasound']
+          : concept.study === 'pulmonary'
+            ? ['ct']
+            : concept.id === 'cerebral-insula'
+              ? ['ct', 'mri']
+              : concept.id === 'cerebral-superior-temporal-anterior'
+                ? ['mri']
+                : [];
   same(
     Object.keys(concept.imaging ?? {}).sort(),
     [...expectedImaging].sort(),
@@ -332,7 +367,7 @@ for (const target of targets) {
       check(!sectionHtml.includes('Content pending'));
     }
   }
-  if (['hepatic', 'pulmonary'].includes(target.study)) {
+  if (['hepatic', 'pulmonary', 'renal'].includes(target.study)) {
     for (const topic of ['clinical', 'pathology']) {
       const lesson = api.nestedTopicLesson(cleanConcept, topic);
       const sectionNode = nodes.find(
@@ -379,16 +414,19 @@ same(
   60,
   'Changing either study or side resets revealed answer',
 );
-same(coverage.pathology, { draft: 53, pending: 7 });
+same(coverage.pathology, { draft: 60, pending: 0 });
 same(coverage.clinical, { draft: 60, pending: 0 });
 for (const tab of ['anatomy', 'function', 'quiz'])
   same(coverage[tab], { draft: 60, pending: 0 });
-same(coverage.ct, { draft: 12, pending: 48 });
-same(coverage.mri, { draft: 11, pending: 49 });
-same(coverage.ultrasound, { draft: 11, pending: 49 });
+same(coverage.ct, { draft: 19, pending: 41 });
+same(coverage.mri, { draft: 18, pending: 42 });
+same(coverage.ultrasound, { draft: 15, pending: 45 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
 const hosts = new Set([
+  'uroweb.org',
+  'cdt.amegroups.org',
+  'academic.oup.com',
   'www.nia.nih.gov',
   'www.cdc.gov',
   'www.brit-thoracic.org.uk',
@@ -443,11 +481,11 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 52);
+same(Object.keys(wordsBySource).length, 57);
 same(
   new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
     .size,
-  52,
+  57,
   'Do not split one source into duplicate reference keys',
 );
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {

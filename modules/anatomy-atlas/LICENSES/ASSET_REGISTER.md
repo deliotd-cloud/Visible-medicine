@@ -1,5 +1,9 @@
 # Asset register
 
+## Renal teaching extension — no asset additions, 10 September 2026
+
+Four source-pinned concepts gain 14 original Pathology/CT/MRI/US sections through five reference links. No external image, diagram, table, dataset, mesh, texture or font is imported. All 98 existing GLBs and the renal catalogue remain unchanged. References are provenance for factual teaching, not asset licences or clinical approval. See [teaching evidence](../docs/RENAL_TEACHING.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
+
 ## Renal vascular study — integrated, 10 September 2026
 
 `public/models/bodyparts3d/renal/renal-vascular.glb`: 266,784 bytes, SHA-256 `410fb0c4179785c91d018e549cd0ffbdd48c8e9919620dc0f32cdac3559c6a3e`. Seven BodyParts3D v4 groups / ten source files / 14,332 triangles. The exporter replaces prototype-only metadata; every position and triangle index is unchanged from the audited prototype below. Exact files, source-tree identities, raw hashes, bounds and exclusions are recorded in the adjacent catalogue. Kidney/adrenal/ureter/great-vessel context reuses existing root assets. BodyParts3D, © The Database Center for Life Science, CC Attribution 4.0 International; existing attribution and modification obligations apply. No texture, font, dependency, publisher diagram or paid API is added. There are now 98 retained public/archive GLBs; this is an asset count, not anatomical completeness. See [integration and limits](../docs/RENAL_VASCULAR_STUDY.md).

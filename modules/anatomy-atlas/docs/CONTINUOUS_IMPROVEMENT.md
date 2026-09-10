@@ -1,5 +1,11 @@
 # Continuous atlas improvement plan
 
+Current teaching progress: [renal vascular teaching](RENAL_TEACHING.md) adds 14 referenced Pathology/CT/MRI/US drafts within the same compact panel. The [renal workbench](RENAL_VASCULAR_STUDY.md) provides seven new source-labelled vascular groups across both kidneys, bringing nested interaction support to eight families/eleven parent views. No missing renal tissue, patient scan, diagnostic metric or lecture entitlement is inferred. Next prioritize remaining source-backed regional/organ detail and useful modality teaching; obtain independent clinical/device review and approved viewer manifests for actual integration. The broad atlas goal remains unfinished.
+
+## Earlier milestones
+
+The "latest" descriptions below preserve earlier release history. Current counts and remaining gaps are in [CURRENT_STATUS.md](CURRENT_STATUS.md).
+
 Latest interaction improvement: [internal-dissection Undo/Redo](NESTED_HISTORY.md) now covers seven study families/nine parent views in the existing compact controls. Layer/selection history is bounded, supports all-hidden recovery and preserves cutaway/separation settings; new edits clear the redo branch. All geometry, teaching and external-access gates remain unchanged. Continue source-backed spatial detail and useful imaging anatomy, with independent device/clinical acceptance still outstanding.
 
 Latest pulmonary teaching: [nine shared clinical/pathology/CT paragraphs](PULMONARY_TEACHING.md) now serve all five source-bound branch groups inside the existing collapsed panel. MRI/US and actual scan correspondence remain pending. Unrelated teaching, core notes, source identities and geometry are unchanged. Next address the remaining nested brain pathology and useful organ-modality gaps, while continuing source-grounded spatial detail. All notes still require specialist and device acceptance; older “next” items below are historical milestones.
