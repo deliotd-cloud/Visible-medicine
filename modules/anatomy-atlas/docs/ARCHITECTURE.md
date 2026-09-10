@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Cardiac vessel relationships
+
+[Cardiac context](CARDIAC_VESSEL_RELATIONSHIPS.md) pins eight existing root vessel records and their bundle to the exact heart parent. Four relationships reuse the shared study/preset controls; only the chosen guide's context is appended, and it is absent during separation. These remain nonselectable orientation surfaces, outside nested teaching/navigation identities and paid-resource entitlements.
+
 ## Shared organ cutaway
 
 [Nested cutaway controls](NESTED_CUTAWAY.md) reuse the eye interaction across all six other nested families. Each workbench owns inspection state; an optional source-bounds clipping frame in `BodyScene` keeps context toggles from moving the cut without changing camera framing. Existing geometry, section mathematics, source pins and entitlements are unchanged.

@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Cardiac vessel context
+
+Review the [four chamber–vessel comparisons](CARDIAC_VESSEL_RELATIONSHIPS.md) for source identity, vessel extent, compound pulmonary-vein mappings, orientation and misleading surface contact/gaps. Clean individual meshes do not prove continuous lumens, ostia, valves, flow or patient correspondence. The IVC, separately delineated pulmonary trunk and valve structures are not supplied by these guides. All guide text remains draft; browser/device acceptance is separate.
+
 ## Organ cutaway interpretation
 
 The [shared organ cutaway](NESTED_CUTAWAY.md) needs visual/device and clinical review for orientation, clipped selection/label behaviour and misleading open edges. It adds no caps, tissue, scan registration or source correction. Cavities remain space representations; pulmonary tissue/fissures and validated hepatic segment boundaries are still missing. Automated clipping checks are software evidence only.

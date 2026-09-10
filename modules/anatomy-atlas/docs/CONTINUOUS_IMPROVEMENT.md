@@ -1,5 +1,7 @@
 # Continuous atlas improvement plan
 
+Latest spatial teaching: [cardiac vessel guides](CARDIAC_VESSEL_RELATIONSHIPS.md) compare each chamber with relevant existing great-vessel surfaces, using four Study view choices and no new toolbar or geometry. Exact-source audit and controlled callbacks cover the new context; source continuity, clinical and device acceptance remain unproven. Continue improving source-grounded organ detail and teaching without guessing missing valves, lumens, tissue or scan correspondence.
+
 Latest viewing progress: [shared organ cutaway](NESTED_CUTAWAY.md) extends the eye controls to all six other nested families with stable source-bound ranges, reverse-side control, clipping warnings and cut-only recovery. The interface remains collapsed by default. Automated acceptance is separate from GPU/device/clinical review. Next: improve useful source-grounded spatial relationships and organ detail while retaining the unresolved source holds below; do not treat artificial cuts as missing tissue or scans.
 
 Latest progress: [liver internal-branch dissection](HEPATIC_DISSECTION.md) separates seven explicit source groups with optional tissue context. Detailed audit found unresolved VI/VII near-overlap, VIII grouping and IV topology defects; no clinically labelled segment map is admitted. Next organ work should investigate accurate, licensable segment definitions and improve useful spatial relationships without silently repairing or relabelling these source surfaces. Previous teaching bindings and all original geometry stay intact.

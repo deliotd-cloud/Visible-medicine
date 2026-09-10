@@ -23,7 +23,8 @@ export { bodyDisplayCatalog } from './lib/body-display-catalog.ts';
 export { nestedStudyTargets } from './lib/nested-anatomy.ts';
 export { nestedTeachingFor, nestedTopicLesson } from './lib/nested-teaching.ts';
 export { nestedConcepts, nestedTeachingReferences } from './content/nested-teaching.ts';
-export { ventricularRelationshipsFor } from './lib/ventricular-relationships.ts';`,
+export { ventricularRelationshipsFor } from './lib/ventricular-relationships.ts';
+export { cardiacRelationshipsFor, cardiacVesselSource } from './lib/cardiac-context.ts';`,
     resolveDir: fileURLToPath(root),
     sourcefile: 'requirements-audit-entry.ts',
     loader: 'ts',
@@ -51,6 +52,8 @@ const {
   nestedConcepts,
   nestedTeachingReferences,
   ventricularRelationshipsFor,
+  cardiacRelationshipsFor,
+  cardiacVesselSource,
 } = await import(
   'data:text/javascript;base64,' +
     Buffer.from(bundled.outputFiles[0].text).toString('base64')
@@ -227,6 +230,8 @@ for (const path of [
   'lib/learning-anatomy.ts',
   'lib/nested-learning-anatomy.ts',
   'lib/ventricular-relationships.ts',
+  'lib/cardiac-context.ts',
+  'public/models/bodyparts3d/cardiac/great-vessel-context.json',
   'app/ventricles.tsx',
   'app/ventricular-relationships.css',
   'app/body-scene.tsx',
@@ -326,6 +331,8 @@ const report = {
     anatomicalCompletenessMeasured: false,
   },
   study: {
+    cardiacVesselLandmarks: cardiacVesselSource.structures.length,
+    cardiacRelationshipPresets: cardiacRelationshipsFor(cardiac.parent).length,
     pulmonaryAirwayLandmarks: pulmonaryContext.structures.length,
     pulmonaryAirwayContexts: pulmonaryContext.bindings.length,
     ventricularRelationshipPresets: ventricularRelationshipsFor(

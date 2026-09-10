@@ -62,6 +62,11 @@ import {
 } from '@/lib/cardiac';
 import { ventricularRelationshipsFor } from '@/lib/ventricular-relationships';
 import {
+  cardiacRelationshipsFor,
+  cardiacContextViewCatalog,
+  cardiacVesselColour,
+} from '@/lib/cardiac-context';
+import {
   pulmonaryFor,
   pulmonaryViewCatalog,
   pulmonaryNotes,
@@ -147,8 +152,13 @@ export function VentricularView({
   const [inspection, setInspection] = useState(initialInspection);
   const initialSelection = layers.find((s) => s.id === initialSelectedId)?.id;
   const relationships = useMemo(
-    () => (study === 'ventricles' ? ventricularRelationshipsFor(parent) : []),
-    [parent, study],
+    () =>
+      isCardiac
+        ? cardiacRelationshipsFor(parent)
+        : study === 'ventricles'
+          ? ventricularRelationshipsFor(parent)
+          : [],
+    [parent, study, isCardiac],
   );
   const presets = useMemo<Record<string, string[]>>(
     () =>
@@ -157,7 +167,12 @@ export function VentricularView({
         : isPulmonary
           ? pulmonaryPresets(layers)
           : isCardiac
-            ? cardiacPresets(layers)
+            ? {
+                ...cardiacPresets(layers),
+                ...Object.fromEntries(
+                  relationships.map((r) => [r.id, [r.spaceId]]),
+                ),
+              }
             : isCerebral
               ? cerebralPresets(layers)
               : isBrainstem
@@ -208,6 +223,7 @@ export function VentricularView({
             left: 'Left heart spaces',
             atria: 'Atrial spaces',
             ventricles: 'Ventricular spaces',
+            ...Object.fromEntries(relationships.map((r) => [r.id, r.title])),
           }
         : isCerebral
           ? {
@@ -281,12 +297,26 @@ export function VentricularView({
   );
   const ventricleCatalog = useMemo(
     () =>
-      isHepatic
-        ? hepaticViewCatalog(parent, context && explode === 0)
-        : isPulmonary
-          ? pulmonaryContextViewCatalog(parent, context && explode === 0)
-          : baseCatalog,
-    [isPulmonary, isHepatic, parent, context, explode, baseCatalog],
+      isCardiac
+        ? cardiacContextViewCatalog(
+            parent,
+            context && explode === 0 ? relationshipId : null,
+          )
+        : isHepatic
+          ? hepaticViewCatalog(parent, context && explode === 0)
+          : isPulmonary
+            ? pulmonaryContextViewCatalog(parent, context && explode === 0)
+            : baseCatalog,
+    [
+      isCardiac,
+      isPulmonary,
+      isHepatic,
+      parent,
+      context,
+      explode,
+      baseCatalog,
+      relationshipId,
+    ],
   );
   const relationship = relationships.find((r) => r.id === relationshipId);
   const guidedAppearance = !!relationship && context && explode === 0;
@@ -341,9 +371,11 @@ export function VentricularView({
                 : index < 0
                   ? isPulmonary
                     ? pulmonaryAirwayColour(s)
-                    : guidedAppearance
-                      ? (neuroGroupFor(s.fmaId)?.color ?? '#9ba7a5')
-                      : '#9ba7a5'
+                    : isCardiac && guidedAppearance
+                      ? cardiacVesselColour(s)
+                      : guidedAppearance
+                        ? (neuroGroupFor(s.fmaId)?.color ?? '#9ba7a5')
+                        : '#9ba7a5'
                   : isCerebral
                     ? (cerebralGroups.find(
                         (g) => g.id === (s as CerebralStructure).group,
@@ -371,6 +403,7 @@ export function VentricularView({
       isCerebral,
       isPulmonary,
       isHepatic,
+      isCardiac,
       guidedAppearance,
     ],
   );
@@ -657,7 +690,7 @@ export function VentricularView({
               aria-pressed={context}
               disabled={explode > 0}
               onClick={() => {
-                setRelationshipId(null);
+                if (!isCardiac) setRelationshipId(null);
                 setContext((v) => !v);
               }}
             >
@@ -666,7 +699,9 @@ export function VentricularView({
                 : isPulmonary
                   ? 'Show airway landmarks'
                   : isCardiac
-                    ? 'Show atrial walls'
+                    ? relationship
+                      ? 'Show vessel landmarks'
+                      : 'Show atrial walls'
                     : isCerebral
                       ? 'Show lateral ventricles'
                       : isBrainstem
@@ -739,7 +774,11 @@ export function VentricularView({
         ) : relationship && context && explode === 0 ? (
           <section
             className="ventricular-relationship"
-            aria-label="Ventricular relationship guide"
+            aria-label={
+              isCardiac
+                ? 'Cardiac vessel relationship guide'
+                : 'Ventricular relationship guide'
+            }
           >
             <p>{relationship.guide}</p>
             <ul aria-label="Context colour key">
@@ -747,21 +786,27 @@ export function VentricularView({
                 <li key={s.id}>
                   <span
                     aria-hidden="true"
-                    style={{ backgroundColor: neuroGroupFor(s.fmaId)?.color }}
+                    style={{
+                      backgroundColor: isCardiac
+                        ? cardiacVesselColour(s)
+                        : neuroGroupFor(s.fmaId)?.color,
+                    }}
                   />
                   {s.name}
                 </li>
               ))}
             </ul>
             <p>
-              Space shown translucently; nearby structures are orientation
-              context, not selectable walls.
+              {isCardiac
+                ? 'Cavity and vessel surfaces are orientation aids, not a connected flow model. Valves and vessel openings are not validated. Colours distinguish landmarks, not scan signal.'
+                : 'Space shown translucently; nearby structures are orientation context, not selectable walls.'}
             </p>
             {isolated && (
               <p>Turn off Fade others to compare the nearby structures.</p>
             )}
             <a href={relationship.reference} target="_blank" rel="noreferrer">
-              Anatomy reference · UTHealth
+              Anatomy reference ·{' '}
+              {isCardiac ? 'University of Minnesota' : 'UTHealth'}
             </a>
           </section>
         ) : (

@@ -32,6 +32,8 @@ The opt-in [nested learning registry](NESTED_LEARNING_LINKS.md) exposes 53 exact
 
 The ventricular study also has 3 [guided relationship presets](VENTRICULAR_RELATIONSHIPS.md), using existing source spaces and context without adding unique anatomy or another panel. Context disappears during separation; pointer handlers do not block selectable structures beneath it. Device acceptance remains pending.
 
+The [cardiac vessel guides](CARDIAC_VESSEL_RELATIONSHIPS.md) add 4 chamber–vessel comparisons using 8 existing source landmarks. Only the chosen view's vessel surfaces are displayed; one shared source bundle loads on demand. No new mesh files or selectable identities are added. Context is not a connected flow model, validated ostium or valve; clinical/device review remains pending.
+
 The [lung branch study](PULMONARY_DISSECTION.md) separates 5 source-defined groups across two lungs. All 280 source files already belonged to the parent lung compounds; none is a separately delineated lobe tissue envelope or fissure. The missing parenchymal surfaces remain a documented gap, not a completed lobe dissection.
 
 ## Nested anatomy teaching

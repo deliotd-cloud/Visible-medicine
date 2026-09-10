@@ -6,6 +6,8 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "cardiac-context:audit": "node scripts/audit-cardiac-context.mjs",
+    "cardiac-context:test": "node scripts/validate-cardiac-context.mjs",
     "nested-cutaway:test": "node scripts/validate-nested-cutaway.mjs",
     "hepatic:audit": "node scripts/audit-hepatic-source.mjs",
     "hepatic:export": "node scripts/export-hepatic.mjs",

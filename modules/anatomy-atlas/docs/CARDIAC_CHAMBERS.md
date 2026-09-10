@@ -1,5 +1,7 @@
 # Cardiac chamber study
 
+Current extension: [four chamber–vessel guides](CARDIAC_VESSEL_RELATIONSHIPS.md) add eight existing great-vessel landmarks to the Study view menu, with no new GLBs or selectable identities. Earlier milestone counts below are historical; see [current generated status](CURRENT_STATUS.md). Original cardiac source exclusions remain unchanged.
+
 Select **Heart → Explore heart chambers**, or search for a cardiac cavity name/FMA ID. The same model-first workspace now serves a thoracic organ: four selectable cavity shapes, optional faint atrial-wall references, six camera presets, labels, visibility switches, Undo layers, fade/frame and three separation mechanisms. Study presets compare all four spaces, the right or left pair, the atria or the ventricles. No new permanent sidebar or route is added.
 
 ## What is represented
