@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Next anatomy preparation, not yet displayed:** an audited [optic chiasm and paired optic-tract prototype](docs/VISUAL_PATHWAY_SOURCE_REVIEW.md) retains three source groups for future brain dissection. The GLB and sidecar are saved with source, outside public delivery. No live selection count or clinical approval is changed.
+
 **Renal vessels → Learn more** now adds [14 short Pathology/CT/MRI/Ultrasound teaching drafts](docs/RENAL_TEACHING.md), with five primary-reference links and explicit side-specific examples. The existing collapsed panel is reused; adrenal-vessel ultrasound, clinical approval and actual scan correspondence remain pending.
 
 **Kidney → Explore renal vessels** opens a [side-specific vascular study](docs/RENAL_VASCULAR_STUDY.md): seven additional source-labelled groups across both kidneys, arterial/venous/adrenal presets, optional context, cutaway, hide/Undo/Redo and separation with original-position guides. Search also opens individual vessels. Introductory teaching remains draft; internal kidney tissue, clinical validation and scan connections are not supplied.

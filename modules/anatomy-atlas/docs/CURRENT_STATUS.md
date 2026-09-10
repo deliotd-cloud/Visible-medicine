@@ -4,6 +4,8 @@ Generated from the actual catalogue, teaching resolver, dissection profiles and 
 
 ## Delivered source scope
 
+The [optic chiasm and paired optic-tract prototype](VISUAL_PATHWAY_SOURCE_REVIEW.md) is retained with project source outside public delivery. Three groups / four source files are prepared for brain-workspace integration, not added to the displayed counts below. Source seams and geniculate boundaries still need anatomical review; no complete visual pathway or patient correspondence is supplied.
+
 - 1022 body representations, 86 body GLBs, 11 regions plus whole body.
 - Dedicated shoulder: 9 representations / 11 source parts, overlapping the body catalogue.
 - Nested dissections: 15 eye components, 4 ventricular spaces, 4 brainstem/cerebellar compounds, 14 cerebral selections, 4 cardiac cavities, 5 partial lung branch groups, 7 liver branch groups and 7 renal/adrenal vascular groups. Four superior temporal source parts and seven renal/adrenal groups add coverage; other nested studies subdivide existing parents. Context reuses existing structures. These are partial source surfaces, not complete organ interiors or clinical approvals. Brief drafts are separate from the root-body inventory below. 98 GLBs are retained overall, including archived originals and alternate display assets. The original catalogue counts remain unchanged.

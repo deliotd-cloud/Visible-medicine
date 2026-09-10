@@ -1,5 +1,9 @@
 # Asset register
 
+## Visual-pathway prototype — source-stored, not displayed, 10 September 2026
+
+`content/prototypes/visual-pathway/visual-pathway-prototype.glb`: 120,020 bytes, SHA-256 `c85eb132948e1b9ad8d6b618c95f04f6772a36268a9583f892d91b1f3df1598b`. Three neural groups / four original OBJ files / 6,456 retained triangles. The chiasm retains two closed source halves under one identity. Processing uses the existing transform, exact-coordinate welding and recomputed display normals; no inferred fibre is added. BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International. Exact sources and limits are in the sidecar and [review](../docs/VISUAL_PATHWAY_SOURCE_REVIEW.md). This nonpublic prototype is preserved with source, not delivered as a live selection. Public/archive GLBs remain 98; source-controlled GLBs total 99 including this prototype. No texture, font, dependency or paid service is introduced.
+
 ## Renal teaching extension — no asset additions, 10 September 2026
 
 Four source-pinned concepts gain 14 original Pathology/CT/MRI/US sections through five reference links. No external image, diagram, table, dataset, mesh, texture or font is imported. All 98 existing GLBs and the renal catalogue remain unchanged. References are provenance for factual teaching, not asset licences or clinical approval. See [teaching evidence](../docs/RENAL_TEACHING.md) and [third-party notices](THIRD_PARTY_NOTICES.md).

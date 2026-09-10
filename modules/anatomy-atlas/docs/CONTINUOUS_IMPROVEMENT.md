@@ -1,5 +1,7 @@
 # Continuous atlas improvement plan
 
+Next concrete integration: the [optic chiasm and paired optic-tract prototype](VISUAL_PATHWAY_SOURCE_REVIEW.md) passed reproducible source/serialization checks and is stored with source, outside public delivery. Add a compact visual-pathway study within Dissect brain; preserve the two-half chiasm compound, suppress the solid brain parent and retain geniculate-boundary limitations. Extend existing search, history, teaching and learning bindings without guessing fibres or patient registration. The live catalogue is unchanged; anatomical/device review remains open.
+
 Current teaching progress: [renal vascular teaching](RENAL_TEACHING.md) adds 14 referenced Pathology/CT/MRI/US drafts within the same compact panel. The [renal workbench](RENAL_VASCULAR_STUDY.md) provides seven new source-labelled vascular groups across both kidneys, bringing nested interaction support to eight families/eleven parent views. No missing renal tissue, patient scan, diagnostic metric or lecture entitlement is inferred. Next prioritize remaining source-backed regional/organ detail and useful modality teaching; obtain independent clinical/device review and approved viewer manifests for actual integration. The broad atlas goal remains unfinished.
 
 ## Earlier milestones

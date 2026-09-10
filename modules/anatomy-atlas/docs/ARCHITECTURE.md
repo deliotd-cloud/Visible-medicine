@@ -1,5 +1,7 @@
 # Spatial anatomy architecture
 
+Nonpublic anatomy prototypes may be retained under `content/prototypes/` with source IDs, rights notices, hashes, geometry checks and a non-admission sidecar. They must not be imported into application code or copied into `public/` implicitly. The optic-chiasm/tract prototype follows this path so source storage preserves the actual derivative while the live catalogue remains unchanged; see [integration gates](VISUAL_PATHWAY_SOURCE_REVIEW.md).
+
 ## Renal vascular workbench
 
 Renal Pathology and modality drafts are authored in `content/renal-teaching.ts`, using the existing `NestedConcept`/`NestedSection` resolver and collapsed `NestedTeaching` panel. No schema, component, source binding, review state, resource manifest or geometry changes accompany this editorial extension. The validator pins the complete non-renal content and retained renal core to v112, exercises every authored topic in rendered markup, and keeps missing modalities pending. See [evidence and remaining review](RENAL_TEACHING.md).
