@@ -66,7 +66,8 @@ export function parseStudyLink(params: StudySearchParams): ParsedStudyLink {
           detail !== 'brainstem' &&
           detail !== 'cerebral' &&
           detail !== 'cardiac' &&
-          detail !== 'pulmonary') ||
+          detail !== 'pulmonary' &&
+          detail !== 'hepatic') ||
         typeof part !== 'string' ||
         !identity.test(part) ||
         typeof partSource !== 'string' ||

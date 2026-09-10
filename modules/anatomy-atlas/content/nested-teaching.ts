@@ -21,6 +21,18 @@ export const nestedTeachingReferences: Record<
   string,
   { title: string; url: string }
 > = {
+  hepaticArteries: {
+    title: 'Texas Tech · Abdominal arteries',
+    url: 'https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html',
+  },
+  hepaticVeins: {
+    title: 'Texas Tech · Abdominal veins',
+    url: 'https://anatomy.ttuhscep.edu/anatomytables/veins_abdomen.html',
+  },
+  hepaticDigestion: {
+    title: 'NIDDK · The digestive system',
+    url: 'https://www.niddk.nih.gov/health-information/digestive-diseases/digestive-system-how-it-works',
+  },
   pulmonaryLobes: {
     title: 'NCI SEER · Lung anatomy',
     url: 'https://training.seer.cancer.gov/lung/anatomy/',
@@ -154,6 +166,68 @@ const quiz = (
 // Original, concise teaching drafts. These are conceptual lessons shared by
 // explicitly pinned source representations, not patient-specific findings.
 export const nestedConcepts: NestedConcept[] = [
+  ...(
+    [
+      [
+        'arterial',
+        ['FMA14778', 'FMA14779'],
+        'The right and left hepatic arteries usually arise from the proper hepatic artery. Branching variants occur.',
+        'They supply liver tissue. The supplied meshes do not establish an individual perfusion territory.',
+        'Which vessel usually divides into right and left hepatic arteries?',
+        'The proper hepatic artery.',
+        'hepaticArteries',
+      ],
+      [
+        'portal',
+        ['FMA15414', 'FMA15415'],
+        'The portal vein divides into right and left branches before entering the liver.',
+        'Portal blood reaches liver sinusoids from the digestive circulation; this is inflow, not hepatic venous outflow.',
+        'Are portal and hepatic veins interchangeable labels?',
+        'No. Portal branches carry blood into the liver; hepatic veins drain towards the inferior vena cava.',
+        'hepaticVeins',
+      ],
+      [
+        'biliary',
+        ['FMA71857', 'FMA71858'],
+        'Bile ducts transport bile made by the liver. Right and left source groups are shown separately.',
+        'Bile contributes to fat digestion; this model does not simulate bile movement or duct patency.',
+        'Does a coloured duct surface establish patency?',
+        'No. A static source surface cannot establish whether a duct is open or obstructed.',
+        'hepaticDigestion',
+      ],
+      [
+        'venous-tributary',
+        ['FMA15800'],
+        'The middle hepatic vein receives segmental tributaries and drains into the inferior vena cava.',
+        'Hepatic venous drainage carries blood away from liver tissue. This selected source group is only one named tributary.',
+        'Is this two-component source group the entire middle hepatic vein?',
+        'No. It is labelled as its anterior inferior segmental tributary.',
+        'hepaticVeins',
+      ],
+    ] as const
+  ).map(
+    ([kind, ids, anatomy, fn, question, answer, ref]): NestedConcept => ({
+      id: `hepatic-${kind}`,
+      study: 'hepatic',
+      fmaIds: [...ids],
+      sections: {
+        anatomy: section(anatomy, ref),
+        function: section(fn, ref),
+        clinical: pending(
+          'Structure-specific clinical interpretation awaits specialist authoring and review.',
+        ),
+        pathology: pending(
+          'No disease-specific lesson or pathological liver geometry has been supplied.',
+        ),
+      },
+      modelLimit:
+        'Original source branch groups only; no proven lumen continuity, complete drainage tree, Couinaud segment boundaries, surgical planes or scan registration. Liver tissue context retains unresolved source segment conflicts.',
+      quiz:
+        kind === 'biliary' || kind === 'venous-tributary'
+          ? quiz(question, answer)
+          : quiz(question, answer, ref),
+    }),
+  ),
   ...(
     [
       [

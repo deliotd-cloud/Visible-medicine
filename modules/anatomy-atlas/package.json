@@ -6,6 +6,9 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "hepatic:audit": "node scripts/audit-hepatic-source.mjs",
+    "hepatic:export": "node scripts/export-hepatic.mjs",
+    "hepatic:test": "node scripts/validate-hepatic.mjs",
     "pulmonary-context:audit": "node scripts/audit-pulmonary-context.mjs",
     "pulmonary-context:test": "node scripts/validate-pulmonary-context.mjs",
     "pulmonary:audit": "node scripts/audit-pulmonary-source.mjs",

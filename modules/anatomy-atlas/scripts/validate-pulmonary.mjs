@@ -274,7 +274,9 @@ same(duplicateFaces, 1);
 const pins = JSON.parse(
   await readFile('content/nested-teaching-bindings.v1.json'),
 );
-const previousBindings = pins.bindings.filter((b) => b.study !== 'pulmonary');
+const previousBindings = pins.bindings.filter((b) =>
+  ['eye', 'ventricles', 'brainstem', 'cerebral', 'cardiac'].includes(b.study),
+);
 const previousParents = pins.parents.filter((p) =>
   previousBindings.some((b) => b.parentId === p.id),
 );

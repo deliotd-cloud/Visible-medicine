@@ -15,7 +15,8 @@ export type NestedLearningStudy =
   | 'brainstem'
   | 'cerebral'
   | 'cardiac'
-  | 'pulmonary';
+  | 'pulmonary'
+  | 'hepatic';
 export type LearningAge = 'adult' | 'paediatric' | 'mixed' | 'unspecified';
 export type LearningSide =
   | 'left'

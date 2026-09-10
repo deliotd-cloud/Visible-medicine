@@ -199,10 +199,31 @@ for (const s of source.structures) {
 }
 same(triangles, 13600);
 same(api.pulmonaryAirwayFor(null), []);
+// Portable original46 snapshot, excluding explicitly extended future families.
+const oldPins = JSON.parse(
+  await readFile('content/nested-teaching-bindings.v1.json'),
+);
+const oldBindings = oldPins.bindings.filter((b) =>
+  [
+    'eye',
+    'ventricles',
+    'brainstem',
+    'cerebral',
+    'cardiac',
+    'pulmonary',
+  ].includes(b.study),
+);
+const oldParents = oldPins.parents.filter((p) =>
+  oldBindings.some((b) => b.parentId === p.id),
+);
+same(oldBindings.length, 46);
 same(
-  hash(await readFile('content/nested-teaching-bindings.v1.json')),
-  'f3d7d7e180d32b6b5b0d8c1e3231388d0cf5631214050fdf9c972a0e8bcfcce4',
-  'All46 teaching bindings unchanged',
+  hash(JSON.stringify(oldBindings)),
+  '9d7a65f292c5dd1b485375639c0e71f72d5b66562579f583e4ec970b6570809f',
+);
+same(
+  hash(JSON.stringify(oldParents)),
+  'a18fd1eb44f6a3de8c2daf8b26d1b1d5b0aed7555007418f5a21006e56ce4609',
 );
 same(
   hash(await readFile('public/models/bodyparts3d/pulmonary/catalog.json')),

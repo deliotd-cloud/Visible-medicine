@@ -1,5 +1,7 @@
 # Continuous atlas improvement plan
 
+Latest progress: [liver internal-branch dissection](HEPATIC_DISSECTION.md) separates seven explicit source groups with optional tissue context. Detailed audit found unresolved VI/VII near-overlap, VIII grouping and IV topology defects; no clinically labelled segment map is admitted. Next organ work should investigate accurate, licensable segment definitions and improve useful spatial relationships without silently repairing or relabelling these source surfaces. Previous teaching bindings and all original geometry stay intact.
+
 ## Objective and boundaries
 
 Improve anatomical coverage, educational depth, functionality and diagrammatic presentation while preserving easy navigation, official Visible Medicine branding and minimal scrolling. Prepare interoperable links to CT, MRI, X-ray, ultrasound and lectures without claiming those external integrations already exist.

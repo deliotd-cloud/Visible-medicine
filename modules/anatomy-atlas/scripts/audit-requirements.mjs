@@ -69,6 +69,7 @@ const brainstem = await json(
 );
 const cerebral = await json('public/models/bodyparts3d/cerebral/catalog.json');
 const cardiac = await json('public/models/bodyparts3d/cardiac/catalog.json');
+const hepatic = await json('public/models/bodyparts3d/hepatic/catalog.json');
 const pulmonary = await json(
   'public/models/bodyparts3d/pulmonary/catalog.json',
 );
@@ -202,6 +203,9 @@ for (const path of [
   'public/models/bodyparts3d/cerebral/catalog.json',
   'public/models/bodyparts3d/cardiac/catalog.json',
   'lib/cardiac.ts',
+  'lib/hepatic.ts',
+  'public/models/bodyparts3d/hepatic/catalog.json',
+  'docs/hepatic-source-audit.json',
   'lib/pulmonary.ts',
   'lib/pulmonary-context.ts',
   'public/models/bodyparts3d/pulmonary/airway-context.json',
@@ -301,6 +305,12 @@ const report = {
       cerebralContext: cerebral.contextIds.length,
       cardiacCavities: cardiac.selectableIds.length,
       cardiacContextWalls: cardiac.contextIds.length,
+      hepaticBranchGroups: hepatic.selectableIds.length,
+      hepaticSourceFiles: hepatic.structures.reduce(
+        (n, s) => n + s.sources.length,
+        0,
+      ),
+      hepaticValidatedSegments: 0,
       pulmonaryBranchGroups: pulmonary.selectableIds.length,
       pulmonarySourceFiles: pulmonary.structures.reduce(
         (n, s) => n + s.sources.length,

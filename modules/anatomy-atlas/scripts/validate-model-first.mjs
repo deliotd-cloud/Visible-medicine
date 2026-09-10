@@ -341,7 +341,14 @@ for (const mode of ['explore', 'dissect', 'practice'])
 let nestedLauncherMarkupCases = 0;
 context.__atlasMode = 'explore';
 for (const region of ['whole-body', 'regional'])
-  for (const fma of ['FMA50801', 'FMA12515', 'FMA7088', 'FMA7309', 'FMA7310']) {
+  for (const fma of [
+    'FMA50801',
+    'FMA12515',
+    'FMA7088',
+    'FMA7309',
+    'FMA7310',
+    'FMA7197',
+  ]) {
     context.__atlasSelected = catalog.structures.find(
       (s) => s.fmaId === fma,
     ).id;
@@ -351,7 +358,9 @@ for (const region of ['whole-body', 'regional'])
           region === 'regional'
             ? ['FMA50801', 'FMA12515'].includes(fma)
               ? 'head-neck'
-              : 'thorax'
+              : fma === 'FMA7197'
+                ? 'abdomen'
+                : 'thorax'
             : region,
       }),
     );
@@ -359,6 +368,11 @@ for (const region of ['whole-body', 'regional'])
     same(html.includes('Explore eye layers'), fma === 'FMA12515');
     same(html.includes('Explore heart chambers'), fma === 'FMA7088');
     const isLung = ['FMA7309', 'FMA7310'].includes(fma);
+    same(html.includes('Explore liver branches'), fma === 'FMA7197');
+    same(
+      html.includes('Liver segment boundaries are not validated'),
+      fma === 'FMA7197',
+    );
     same(html.includes('Explore lung branches'), isLung);
     same(html.includes('This model shows airway and vessel branches.'), isLung);
     if (isLung)

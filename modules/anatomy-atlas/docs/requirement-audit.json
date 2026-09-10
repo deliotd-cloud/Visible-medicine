@@ -11,15 +11,18 @@
     "public/models/bodyparts3d/cerebral/catalog.json": "8dbcf8e0cbc5aff4c468e2eeda2e57fb048c65515ce35257b56f2247267624de",
     "public/models/bodyparts3d/cardiac/catalog.json": "59cebff69d885e243a9b5b8048d9735eb7f4e7848b7f21a40fa6c12873c5b0a3",
     "lib/cardiac.ts": "482facae9feb332a9899d008cca33aa6bb950046ae7ea96ea2ee67a89001c6ea",
+    "lib/hepatic.ts": "86a6ac1226f1ab496c3dc7aee6279da3ef662a0c3316fee10862cb8ba30fae80",
+    "public/models/bodyparts3d/hepatic/catalog.json": "53962f7814854e576efde820bed1ccd2f7393b1296798898dee25f773e24d6c8",
+    "docs/hepatic-source-audit.json": "dea39ac53b5bffeebed7ecd52c46a4186631fe2c5ecdf75e91a943356e1a26a3",
     "lib/pulmonary.ts": "82d22b0bf752b53044efb1333a35331a0e371637bd2a1be9cae915d70ce69670",
     "lib/pulmonary-context.ts": "cce895c7a6dff6b9ce34c49539491e8b87cf4a2738e72c583436f7ae0cdde620",
     "public/models/bodyparts3d/pulmonary/airway-context.json": "294ba340df060770edf390bc08f4260f8ed3cbd08250d39ef9b40c611a7ca5d4",
     "public/models/bodyparts3d/pulmonary/catalog.json": "b62ccd78dfc2ced8674b94eba67596add4de482f54c3f242814982b4e3dab9ea",
     "docs/pulmonary-source-audit.json": "734fc23b6d4812b81ffb007214c271096562bcb8376766fc9d609bfddabc95db",
     "content/cerebral-supplement-audit.json": "a186519bbf31065f5c4e58472c542a9cbd2a6b64d35423a4f6c92d7bae1d69d7",
-    "content/nested-teaching.ts": "63bffae65735330e6b29c24e7ef3bee334ebc8a5a3d63c912bda36128984c433",
-    "content/nested-teaching-bindings.v1.json": "f3d7d7e180d32b6b5b0d8c1e3231388d0cf5631214050fdf9c972a0e8bcfcce4",
-    "lib/nested-anatomy.ts": "48ce0b2d880a70bc3032e60981255a5a6d283e7191642b914337724017b88823",
+    "content/nested-teaching.ts": "bb227f4c841ea44ba71f0701dffbb7da5348bdb2d85d5c8b0bfec55a349ca155",
+    "content/nested-teaching-bindings.v1.json": "3a79d284a59a3c803c416ff6e3f0f1de1084852317f14313f4e6965a39b3cb46",
+    "lib/nested-anatomy.ts": "eeb61c652567783608545a5008a31e8586a67e68f9277d7cb2ba60484cdc448b",
     "lib/nested-teaching.ts": "985fe484097b3e1de7278e0666e9a586cfdcca69c20a1758286efc63f48e08a2",
     "app/nested-teaching.tsx": "b002f7a3126e1bad26203867752607ea5092017eae89489ec1443dd6cfa4ac4b",
     "app/nested-teaching.css": "d912bfc774cc744511a4c0e87a0a35f6b693def9f4bddc25b6f010f07dfa83bc",
@@ -27,12 +30,12 @@
     "content/schema/anatomy-structure.schema.json": "0a8e76b6a98e23e25f60a2d9269664dc42974b7a349c63b77e4615fa46887826",
     "content/review-revisions.json": "4e130ad0c0a5ec170069ae5ed89b1f3aab401f37282048d648f82f8f293c2104",
     "content/learning-resources.v1.json": "799fec602114a944b4f675d341b445982dac56786cca9b5800d52db7d95899e5",
-    "lib/learning-resource-types.ts": "36ba7bc3bbedac30fdd151709fa264486ae7ad0c582b3467da55a048f627bdb8",
-    "lib/learning-resources.ts": "3217a7e6c41dda23f6061c105a7a59547e9127e86846dcee8d40a0643ce5687d",
+    "lib/learning-resource-types.ts": "28cb04e259be4032caccea616e06c4160f35fa8fb15a83f6727ad65e625d3e52",
+    "lib/learning-resources.ts": "26bb26ab0e9bbc5bc4789dfa8df675e9a03f963c7e1f150ec16d0e8258f3a17d",
     "lib/learning-anatomy.ts": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3",
     "lib/nested-learning-anatomy.ts": "6e7e1b4836406926af2406e7277a4f62f7ffc1668a644cd180b50d463443d8e1",
     "lib/ventricular-relationships.ts": "b9d2bd5ea079a600c2593ca522f325ceb03c2f2704a26747b4262ef6838c84df",
-    "app/ventricles.tsx": "c3445a7ff68dd86d938030a3b7fa5533af53d12fbe47bbfbbada6825f7b93377",
+    "app/ventricles.tsx": "28ecfb89f00efb7530a94bf3bc9209b703efc7c39a0fa51dc734b9d93c1f4815",
     "app/ventricular-relationships.css": "7dfa2927b9f203aa13dbd1f2205c9429e7b79ffbaa86108b57fb3c69b1b71400",
     "app/body-scene.tsx": "a81d6f17b2eaf4f9f32446ecd1c11e60a7c4b3435e8d6e2bc02d8b79261253e6",
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
@@ -125,6 +128,9 @@
       "cerebralContext": 2,
       "cardiacCavities": 4,
       "cardiacContextWalls": 2,
+      "hepaticBranchGroups": 7,
+      "hepaticSourceFiles": 57,
+      "hepaticValidatedSegments": 0,
       "pulmonaryBranchGroups": 5,
       "pulmonarySourceFiles": 280,
       "pulmonaryLobeSurfaces": 0,
@@ -170,8 +176,8 @@
       1,
       2
     ],
-    "availableRepresentations": 1077,
-    "nestedRepresentations": 46,
+    "availableRepresentations": 1084,
+    "nestedRepresentations": 53,
     "supportedKinds": [
       "ct",
       "mri",
@@ -244,18 +250,18 @@
       }
     },
     "nested": {
-      "representations": 46,
-      "concepts": 29,
-      "references": 27,
+      "representations": 53,
+      "concepts": 33,
+      "references": 30,
       "topics": {
         "anatomy": {
-          "specificDraft": 46,
+          "specificDraft": 53,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 46,
+          "specificDraft": 53,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
@@ -263,35 +269,35 @@
         "ct": {
           "specificDraft": 0,
           "identityOnly": 0,
-          "pending": 46,
+          "pending": 53,
           "generatedIdentification": 0
         },
         "mri": {
           "specificDraft": 0,
           "identityOnly": 0,
-          "pending": 46,
+          "pending": 53,
           "generatedIdentification": 0
         },
         "ultrasound": {
           "specificDraft": 0,
           "identityOnly": 0,
-          "pending": 46,
+          "pending": 53,
           "generatedIdentification": 0
         },
         "pathology": {
           "specificDraft": 33,
           "identityOnly": 0,
-          "pending": 13,
+          "pending": 20,
           "generatedIdentification": 0
         },
         "clinical": {
           "specificDraft": 37,
           "identityOnly": 0,
-          "pending": 9,
+          "pending": 16,
           "generatedIdentification": 0
         },
         "quiz": {
-          "specificDraft": 46,
+          "specificDraft": 53,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
@@ -908,8 +914,8 @@
       "png": 4,
       "svg": 2,
       "md": 1,
-      "glb": 95,
-      "json": 10,
+      "glb": 97,
+      "json": 11,
       "html": 1,
       "tsv": 1
     },

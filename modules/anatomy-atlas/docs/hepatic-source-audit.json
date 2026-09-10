@@ -1,0 +1,5854 @@
+{
+  "version": 1,
+  "sourceVersion": "4.0",
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "parent": {
+    "id": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+    "fmaId": "FMA7197",
+    "name": "Liver",
+    "sourceName": "liver",
+    "system": "organs",
+    "category": "organ",
+    "laterality": "unpaired",
+    "region": "abdomen",
+    "regions": [
+      "abdomen"
+    ],
+    "bundle": "abdomen-organs",
+    "nodeName": "FMA7197",
+    "bounds": {
+      "min": [
+        -1.1506400108337402,
+        2.2793993949890137,
+        -0.06671299040317535
+      ],
+      "max": [
+        0.943668007850647,
+        3.831400156021118,
+        1.5241299867630005
+      ]
+    },
+    "center": [
+      -0.10348600149154663,
+      3.055399775505066,
+      0.7287084981799126
+    ],
+    "anchor": [
+      -0.10570300370454788,
+      3.0470995903015137,
+      0.7280399799346924
+    ],
+    "sourceTree": "partof",
+    "sources": [
+      {
+        "file": "FJ1883",
+        "sha256": "305fb8169521520bd373a91e8825597d4dc8200e522e2239b520ca4d1bc67d6e"
+      },
+      {
+        "file": "FJ1893",
+        "sha256": "c92536c5059b17366769bfb48700bc3aa3d1500f9c0e21d94f9cd98e3e9372a6"
+      },
+      {
+        "file": "FJ1913",
+        "sha256": "a305c27d3f093693dcd36b79d17494eec4b854623abd5ef1bf9b8cfcc1924fef"
+      },
+      {
+        "file": "FJ1914",
+        "sha256": "48313d7172ce57ada4fecbaedf82ab5420193bf958b3d74e2397d03c129fa992"
+      },
+      {
+        "file": "FJ1916",
+        "sha256": "5d19f212509f20499e3a7c1f8c7e80d4bb84c0a0d4a0afcb42d4a0f6146c0b64"
+      },
+      {
+        "file": "FJ2386",
+        "sha256": "4669f05fe9d27ef45b2a183b8a21676314d3b11d9491cb497bd93487bf55133b"
+      },
+      {
+        "file": "FJ2404",
+        "sha256": "316a7b553981cafff7ac1279140251cff0c6a88d4cf91f5d729cdb02702405b8"
+      },
+      {
+        "file": "FJ2405",
+        "sha256": "dbeafcb261e23112037b6616d8ffd130f9c96d9e30e70d61855e2f7ef71fccc1"
+      },
+      {
+        "file": "FJ2409",
+        "sha256": "4662aac785711a9b0ca91b860720d018f4e61e8457e919722b68ce814bc27e84"
+      },
+      {
+        "file": "FJ2816",
+        "sha256": "81c86ccdd356c27a960f957f49b4ea883d22d7e75fef29aa794e154d4f5da51e"
+      },
+      {
+        "file": "FJ2818",
+        "sha256": "773b11b267fd680f399e0dbc71217aef981c6f8ee2a2273723481edc5864ee8a"
+      },
+      {
+        "file": "FJ2819",
+        "sha256": "ba7174ecd641887a57116848661d56c2c377659cc3aca4235132e8f548bbd8b9"
+      },
+      {
+        "file": "FJ2820",
+        "sha256": "af49d0747496fb3008b7b33be23ea1c169bb4667ccfad0fa0208d42390737c22"
+      },
+      {
+        "file": "FJ2821",
+        "sha256": "13886d9c2d473e121e27083fa03218fe22e4a75aab3402dcf53754a1375948f9"
+      },
+      {
+        "file": "FJ2822",
+        "sha256": "8f64d0c177586089610214a5a32a189a6a659ca2770b15d193c9255667c8afd2"
+      },
+      {
+        "file": "FJ2823",
+        "sha256": "a89dd2a52ffee337e9777376d1235330463577331fc7f18a40ccf8bc6c99a8d0"
+      },
+      {
+        "file": "FJ2824",
+        "sha256": "2f5e34fceea6c8b718bd3f50a125bf24c434ae7eb3d925b9795b0585272c1349"
+      },
+      {
+        "file": "FJ3071",
+        "sha256": "818576ec6fe49301bb43a34df894f22b6e2af846c59ed5a41ba826e2e66dd0df"
+      },
+      {
+        "file": "FJ3072",
+        "sha256": "0e5ec3bfde87ac0924359c11e59f62a1559fc8692ac4c40c54049c3eb5f1c712"
+      },
+      {
+        "file": "FJ3073",
+        "sha256": "d5a6c22e5680ecf272e36b26bc387279e76d99ea7e6cd0637b69570b6da1159a"
+      },
+      {
+        "file": "FJ3074",
+        "sha256": "8de7ebf4db8679e5db99cdedceb59df6a43c4e33e4cf707e1e4666cd6e50679b"
+      },
+      {
+        "file": "FJ3075",
+        "sha256": "d0aa3b26c1866580abbfa1f9bf44b4d2bc9302ddda0838605b738a3eea912597"
+      },
+      {
+        "file": "FJ3076",
+        "sha256": "45223049350ffe29c9b4842c832efa9248fb60bc16955db35fbfd3b7953ba8da"
+      },
+      {
+        "file": "FJ3077",
+        "sha256": "67bd46a0f91ca9d635f6d7750e96452a72586dc7df2b592be7198ac3d28fe72b"
+      },
+      {
+        "file": "FJ3083",
+        "sha256": "2d5997d5b9ac3ef4bc8461779eed5fe77feadcd0c3ef21bea43f9ee2cb73e90c"
+      },
+      {
+        "file": "FJ3086",
+        "sha256": "974e8d71edc4a0de74480bc4f4a3431082daf60922109f3a0f644d9f953b4af5"
+      },
+      {
+        "file": "FJ3088",
+        "sha256": "b4d46c97bc201e818a86f794a3d3342c99252770eb828465d3a39129adeec44c"
+      },
+      {
+        "file": "FJ3089",
+        "sha256": "8fcc701eabba3de0ed5c7796dc668d78286150901081abd44a69f1a0757de02f"
+      },
+      {
+        "file": "FJ3090",
+        "sha256": "08269713ea808adcc06cddeedfc5a6560e402518a7ea8feab456d2a6618656b4"
+      },
+      {
+        "file": "FJ3091",
+        "sha256": "e9d8c27658e99f33f81f8babae551404b526b5eec7814befd73157966dedd8e6"
+      },
+      {
+        "file": "FJ3092",
+        "sha256": "4e0facfaf6fcf60d1709143982ed5c40dc45fadbb39cc61262908bf12d2a2ac6"
+      },
+      {
+        "file": "FJ3093",
+        "sha256": "5eee760c2aec02f46a9976870c184f1ec61079155bf92f67b59cf962c3803a7f"
+      },
+      {
+        "file": "FJ3095",
+        "sha256": "e53e52448e647cb04154eb2f1f1ae1823c9672aa495d369a0dacf36408675f21"
+      },
+      {
+        "file": "FJ3096",
+        "sha256": "c4f34b49d7a1b657ac99631a0614b283ff3cff231bfcb4d41a5ed48b4c8ab15b"
+      },
+      {
+        "file": "FJ3102",
+        "sha256": "34942cd65cf922f32fdacf165ceab2f35a90f074a2bf3e342abe5d4b8b90ce80"
+      },
+      {
+        "file": "FJ3103",
+        "sha256": "651f3eea6af28fc2fc9ae0431260661bc9709b1bfda5d3cd56475fbb330bf3cd"
+      },
+      {
+        "file": "FJ3104",
+        "sha256": "8a78e25b0446fe08a18ae2c55c021951640274f8a5194205ee5d7d6ba691f7cf"
+      },
+      {
+        "file": "FJ3105",
+        "sha256": "ca3519645aec712c6f25749609888241124ca9047063a352b77279d19b61a47e"
+      },
+      {
+        "file": "FJ3106",
+        "sha256": "6a915804cff8434c4cddc3cb21ae643480fbee3eb6b0838037d51c4d1c1148e4"
+      },
+      {
+        "file": "FJ3107",
+        "sha256": "0cb461fc8492d383e8acfb946d9fbf568b011644b9855b1c65059253d66398b3"
+      },
+      {
+        "file": "FJ3108",
+        "sha256": "751c75af681299c75f8424a589e0aade0d1c15e31056ad2ed48d3ccd70a24c83"
+      },
+      {
+        "file": "FJ3109",
+        "sha256": "37a65eb6bdb90b815de604952b35649a4b7433c34dc2cb1b099889a83a4f4bc4"
+      },
+      {
+        "file": "FJ3110",
+        "sha256": "b562dd3f3bcf6a520d382ce41aa95536b37568949aec3c3ed23226a682f0743b"
+      },
+      {
+        "file": "FJ3111",
+        "sha256": "be81ba12835c12dcfc80ec9bff9afac3bfb0508b3cad4063de981caa60dfee0c"
+      },
+      {
+        "file": "FJ3112",
+        "sha256": "86d033cb87c87b08a0a387c9b40b94ae3507af62aa969ec9b3f81b2a827a513f"
+      },
+      {
+        "file": "FJ3113",
+        "sha256": "cf50d8358b5612e561d32099f85e46826a1e2eec087d6326adbbebc477bb1d19"
+      },
+      {
+        "file": "FJ3114",
+        "sha256": "a234049c9964ccf5042b9b20030c08824ac58ec80b758a2546f3027533c86706"
+      },
+      {
+        "file": "FJ3115",
+        "sha256": "0b91de2f1433e506092600fbc25ddca37b9c5254858196de31b3c9b69f9ba4e6"
+      },
+      {
+        "file": "FJ3116",
+        "sha256": "3fa2c973eb6a00e00972035a8926794f03e7b04cccf0ec4fa80ee30e85170f29"
+      },
+      {
+        "file": "FJ3117",
+        "sha256": "ba48e5808de07cdaf52ef051062651be5db56862f305f6648d0537938dd41b23"
+      },
+      {
+        "file": "FJ3122",
+        "sha256": "ff00a9830cf1ab18c4de3186ddce1920d62daffe57ec51d6adc6bd64cd13beab"
+      },
+      {
+        "file": "FJ3123",
+        "sha256": "67c97c70cce9aed074743d4b3ceba046d34e1d3b05bc5ca35e39a37499e7a66d"
+      },
+      {
+        "file": "FJ3124",
+        "sha256": "a5427ce74353d9c3a2eb535961c78e5aae25a6d57a1e35100c304b000b906403"
+      },
+      {
+        "file": "FJ3125",
+        "sha256": "adf3f9e59b7f0823541a33214fd1b0c127c7cb9d917b48a7fd3075522a74cd9d"
+      },
+      {
+        "file": "FJ3126",
+        "sha256": "c21b4c470358525f91162c4a0bff632f6bd25e09d2ad1b6df10ef2df09cb54b8"
+      },
+      {
+        "file": "FJ3127",
+        "sha256": "8e265e380cefb97c042957abc9c65180dcc59669dcd91888008483a2b601353f"
+      },
+      {
+        "file": "FJ3128",
+        "sha256": "c5586090113b7e556268612565d98737aca9eeceddd11c8d070110f883e00932"
+      }
+    ],
+    "coverageNote": "Display aggregate excludes the separately selectable hepatic artery proper surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable right hepatic vein surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable left hepatic vein surface. Source coordinates are unchanged.",
+    "provenance": {
+      "method": "licensed-source-mesh",
+      "license": "CC-BY-4.0",
+      "sourceVersion": "4.0",
+      "recovered": false
+    },
+    "validation": {
+      "status": "unvalidated",
+      "anatomicalReview": false
+    }
+  },
+  "groups": [
+    {
+      "definition": {
+        "id": "FMA14778",
+        "name": "right hepatic artery",
+        "representation": "BP9810",
+        "files": [
+          "FJ1916",
+          "FJ2386",
+          "FJ3075",
+          "FJ3076",
+          "FJ3114",
+          "FJ3115",
+          "FJ3116",
+          "FJ3117"
+        ],
+        "tree": "partof"
+      },
+      "name": "Right hepatic arterial branches",
+      "kind": "artery",
+      "laterality": "right"
+    },
+    {
+      "definition": {
+        "id": "FMA14779",
+        "name": "left hepatic artery",
+        "representation": "BP9377",
+        "files": [
+          "FJ3077",
+          "FJ3091",
+          "FJ3092",
+          "FJ3093",
+          "FJ3095",
+          "FJ3106",
+          "FJ3107"
+        ],
+        "tree": "partof"
+      },
+      "name": "Left hepatic arterial branches",
+      "kind": "artery",
+      "laterality": "left"
+    },
+    {
+      "definition": {
+        "id": "FMA15414",
+        "name": "right portal vein",
+        "representation": "BP9460",
+        "files": [
+          "FJ1913",
+          "FJ1914",
+          "FJ2405",
+          "FJ3073",
+          "FJ3074",
+          "FJ3111",
+          "FJ3112",
+          "FJ3113",
+          "FJ3122"
+        ],
+        "tree": "partof"
+      },
+      "name": "Right portal vein branches",
+      "kind": "portal",
+      "laterality": "right"
+    },
+    {
+      "definition": {
+        "id": "FMA15415",
+        "name": "left portal vein",
+        "representation": "BP9694",
+        "files": [
+          "FJ1893",
+          "FJ2404",
+          "FJ3102",
+          "FJ3124",
+          "FJ3125",
+          "FJ3126",
+          "FJ3127",
+          "FJ3128"
+        ],
+        "tree": "partof"
+      },
+      "name": "Left portal vein branches",
+      "kind": "portal",
+      "laterality": "left"
+    },
+    {
+      "definition": {
+        "id": "FMA71857",
+        "name": "right hepatic biliary tree",
+        "representation": "BP9899",
+        "files": [
+          "FJ3071",
+          "FJ3072",
+          "FJ3108",
+          "FJ3109",
+          "FJ3110",
+          "FJ3123"
+        ],
+        "tree": "partof"
+      },
+      "name": "Right hepatic bile ducts",
+      "kind": "biliary",
+      "laterality": "right"
+    },
+    {
+      "definition": {
+        "id": "FMA71858",
+        "name": "left hepatic biliary tree",
+        "representation": "BP9327",
+        "files": [
+          "FJ1883",
+          "FJ3088",
+          "FJ3089",
+          "FJ3090",
+          "FJ3096",
+          "FJ3103",
+          "FJ3104",
+          "FJ3105"
+        ],
+        "tree": "partof"
+      },
+      "name": "Left hepatic bile ducts",
+      "kind": "biliary",
+      "laterality": "left"
+    },
+    {
+      "definition": {
+        "id": "FMA15800",
+        "name": "anterior inferior segmental tributary of middle hepatic vein",
+        "representation": "BP9879",
+        "files": [
+          "FJ3083",
+          "FJ3086"
+        ],
+        "tree": "partof"
+      },
+      "name": "Anterior inferior tributary of middle hepatic vein",
+      "kind": "venous",
+      "laterality": "unspecified"
+    }
+  ],
+  "files": [
+    {
+      "file": "FJ1883",
+      "sha256": "305fb8169521520bd373a91e8825597d4dc8200e522e2239b520ca4d1bc67d6e",
+      "labels": [
+        {
+          "id": "FMA71889",
+          "name": "caudate lobe tributary of left hepatic biliary tree",
+          "representation": "BP5653",
+          "files": [
+            "FJ1883"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA71889",
+          "name": "caudate lobe tributary of left hepatic biliary tree",
+          "representation": "BP7465",
+          "files": [
+            "FJ1883"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -17.6389,
+        -154.816,
+        1107.98
+      ],
+      "max": [
+        1.43618,
+        -116.921,
+        1133.36
+      ],
+      "topology": {
+        "sourceVertices": 283,
+        "exactUniqueVertices": 216,
+        "unusedUniqueVertices": 0,
+        "triangles": 428,
+        "edges": 642,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 428,
+            "vertices": 216,
+            "bounds": {
+              "min": [
+                -17.6389,
+                -154.816,
+                1107.98
+              ],
+              "max": [
+                1.43618,
+                -116.921,
+                1133.36
+              ]
+            },
+            "areaMm2": 262.7876423652928,
+            "algebraicVolumeMm3": 106.80675246725234
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ1893",
+      "sha256": "c92536c5059b17366769bfb48700bc3aa3d1500f9c0e21d94f9cd98e3e9372a6",
+      "labels": [
+        {
+          "id": "FMA15415",
+          "name": "left portal vein",
+          "representation": "BP5788",
+          "files": [
+            "FJ1893",
+            "FJ2404"
+          ],
+          "tree": "isa"
+        }
+      ],
+      "min": [
+        -25.247,
+        -199.504,
+        1108.32
+      ],
+      "max": [
+        56.4309,
+        -150.359,
+        1157.57
+      ],
+      "topology": {
+        "sourceVertices": 786,
+        "exactUniqueVertices": 683,
+        "unusedUniqueVertices": 0,
+        "triangles": 1354,
+        "edges": 2031,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 6,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 643,
+            "triangles": 488,
+            "vertices": 246,
+            "bounds": {
+              "min": [
+                23.5588,
+                -199.504,
+                1108.32
+              ],
+              "max": [
+                36.125,
+                -187.693,
+                1132.89
+              ]
+            },
+            "areaMm2": 144.004173984777,
+            "algebraicVolumeMm3": 47.99261502933278
+          },
+          {
+            "firstFace": 0,
+            "triangles": 460,
+            "vertices": 232,
+            "bounds": {
+              "min": [
+                -25.247,
+                -179.234,
+                1136.54
+              ],
+              "max": [
+                -17.1536,
+                -165.187,
+                1148.33
+              ]
+            },
+            "areaMm2": 110.05761597572256,
+            "algebraicVolumeMm3": 33.52887922200007
+          },
+          {
+            "firstFace": 460,
+            "triangles": 406,
+            "vertices": 205,
+            "bounds": {
+              "min": [
+                28.3262,
+                -173.332,
+                1150.22
+              ],
+              "max": [
+                56.4309,
+                -150.359,
+                1157.57
+              ]
+            },
+            "areaMm2": 176.2044057709841,
+            "algebraicVolumeMm3": 63.533880864667545
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ1913",
+      "sha256": "a305c27d3f093693dcd36b79d17494eec4b854623abd5ef1bf9b8cfcc1924fef",
+      "labels": [
+        {
+          "id": "FMA15414",
+          "name": "right portal vein",
+          "representation": "BP5787",
+          "files": [
+            "FJ1913",
+            "FJ2405"
+          ],
+          "tree": "isa"
+        }
+      ],
+      "min": [
+        -101.458,
+        -174.363,
+        1076.87
+      ],
+      "max": [
+        -45.5628,
+        -66.8528,
+        1152.26
+      ],
+      "topology": {
+        "sourceVertices": 1910,
+        "exactUniqueVertices": 1663,
+        "unusedUniqueVertices": 0,
+        "triangles": 3286,
+        "edges": 4929,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 20,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 2241,
+            "triangles": 732,
+            "vertices": 368,
+            "bounds": {
+              "min": [
+                -78.2818,
+                -174.363,
+                1082.65
+              ],
+              "max": [
+                -63.2222,
+                -159.164,
+                1103.42
+              ]
+            },
+            "areaMm2": 126.4483958973324,
+            "algebraicVolumeMm3": 31.27219302333326
+          },
+          {
+            "firstFace": 383,
+            "triangles": 392,
+            "vertices": 198,
+            "bounds": {
+              "min": [
+                -101.458,
+                -129.379,
+                1076.87
+              ],
+              "max": [
+                -80.4359,
+                -117.048,
+                1085.96
+              ]
+            },
+            "areaMm2": 87.15474504694657,
+            "algebraicVolumeMm3": 22.362029506333013
+          },
+          {
+            "firstFace": 1810,
+            "triangles": 304,
+            "vertices": 154,
+            "bounds": {
+              "min": [
+                -74.5869,
+                -151.457,
+                1121.5
+              ],
+              "max": [
+                -56.1891,
+                -142.708,
+                1131.69
+              ]
+            },
+            "areaMm2": 142.15902960547956,
+            "algebraicVolumeMm3": 70.31168393516634
+          },
+          {
+            "firstFace": 628,
+            "triangles": 298,
+            "vertices": 151,
+            "bounds": {
+              "min": [
+                -89.4051,
+                -125.168,
+                1093.31
+              ],
+              "max": [
+                -72.9417,
+                -112.595,
+                1097.79
+              ]
+            },
+            "areaMm2": 71.47754543802442,
+            "algebraicVolumeMm3": 18.37870206983327
+          },
+          {
+            "firstFace": 75,
+            "triangles": 294,
+            "vertices": 149,
+            "bounds": {
+              "min": [
+                -73.9057,
+                -70.3321,
+                1132.97
+              ],
+              "max": [
+                -61.7052,
+                -66.8528,
+                1138.24
+              ]
+            },
+            "areaMm2": 37.31125929420028,
+            "algebraicVolumeMm3": 7.679728039566537
+          },
+          {
+            "firstFace": 0,
+            "triangles": 288,
+            "vertices": 146,
+            "bounds": {
+              "min": [
+                -92.2894,
+                -104.324,
+                1115.05
+              ],
+              "max": [
+                -62.7541,
+                -89.986,
+                1127.89
+              ]
+            },
+            "areaMm2": 158.94598783793026,
+            "algebraicVolumeMm3": 53.68751902926908
+          },
+          {
+            "firstFace": 1093,
+            "triangles": 276,
+            "vertices": 140,
+            "bounds": {
+              "min": [
+                -84.5121,
+                -152.065,
+                1136.37
+              ],
+              "max": [
+                -69.8216,
+                -145.955,
+                1143.64
+              ]
+            },
+            "areaMm2": 89.55942563833196,
+            "algebraicVolumeMm3": 33.82456645799964
+          },
+          {
+            "firstFace": 914,
+            "triangles": 262,
+            "vertices": 133,
+            "bounds": {
+              "min": [
+                -58.5815,
+                -83.3578,
+                1128.68
+              ],
+              "max": [
+                -45.5628,
+                -73.8579,
+                1139.59
+              ]
+            },
+            "areaMm2": 61.88311897812136,
+            "algebraicVolumeMm3": 15.737932504583927
+          },
+          {
+            "firstFace": 1919,
+            "triangles": 246,
+            "vertices": 125,
+            "bounds": {
+              "min": [
+                -58.6379,
+                -147.557,
+                1124.6
+              ],
+              "max": [
+                -50.3686,
+                -131.669,
+                1152.26
+              ]
+            },
+            "areaMm2": 218.75415658135836,
+            "algebraicVolumeMm3": 121.62640175499969
+          },
+          {
+            "firstFace": 2715,
+            "triangles": 194,
+            "vertices": 99,
+            "bounds": {
+              "min": [
+                -60.8354,
+                -155.107,
+                1094.64
+              ],
+              "max": [
+                -57.69,
+                -152.46,
+                1108.54
+              ]
+            },
+            "areaMm2": 43.16021950058219,
+            "algebraicVolumeMm3": 9.40271947916677
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ1914",
+      "sha256": "48313d7172ce57ada4fecbaedf82ab5420193bf958b3d74e2397d03c129fa992",
+      "labels": [
+        {
+          "id": "FMA82706",
+          "name": "caudate lobe branch of right portal vein",
+          "representation": "BP5784",
+          "files": [
+            "FJ1914"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA82706",
+          "name": "caudate lobe branch of right portal vein",
+          "representation": "BP6746",
+          "files": [
+            "FJ1914"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -29.5156,
+        -139.151,
+        1110.07
+      ],
+      "max": [
+        -16.4042,
+        -129.244,
+        1120.55
+      ],
+      "topology": {
+        "sourceVertices": 180,
+        "exactUniqueVertices": 160,
+        "unusedUniqueVertices": 0,
+        "triangles": 316,
+        "edges": 474,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 316,
+            "vertices": 160,
+            "bounds": {
+              "min": [
+                -29.5156,
+                -139.151,
+                1110.07
+              ],
+              "max": [
+                -16.4042,
+                -129.244,
+                1120.55
+              ]
+            },
+            "areaMm2": 94.65937661573726,
+            "algebraicVolumeMm3": 33.6486292354996
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ1916",
+      "sha256": "5d19f212509f20499e3a7c1f8c7e80d4bb84c0a0d4a0afcb42d4a0f6146c0b64",
+      "labels": [
+        {
+          "id": "FMA70447",
+          "name": "caudate lobe branch of right hepatic artery",
+          "representation": "BP6172",
+          "files": [
+            "FJ1916",
+            "FJ2386"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA70447",
+          "name": "caudate lobe branch of right hepatic artery",
+          "representation": "BP6949",
+          "files": [
+            "FJ1916",
+            "FJ2386"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -33.0129,
+        -141.666,
+        1106.72
+      ],
+      "max": [
+        -16.5124,
+        -128.359,
+        1119.57
+      ],
+      "topology": {
+        "sourceVertices": 214,
+        "exactUniqueVertices": 183,
+        "unusedUniqueVertices": 0,
+        "triangles": 362,
+        "edges": 543,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 362,
+            "vertices": 183,
+            "bounds": {
+              "min": [
+                -33.0129,
+                -141.666,
+                1106.72
+              ],
+              "max": [
+                -16.5124,
+                -128.359,
+                1119.57
+              ]
+            },
+            "areaMm2": 89.3577579223393,
+            "algebraicVolumeMm3": 24.031164316833355
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ2386",
+      "sha256": "4669f05fe9d27ef45b2a183b8a21676314d3b11d9491cb497bd93487bf55133b",
+      "labels": [
+        {
+          "id": "FMA70447",
+          "name": "caudate lobe branch of right hepatic artery",
+          "representation": "BP6172",
+          "files": [
+            "FJ1916",
+            "FJ2386"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA70447",
+          "name": "caudate lobe branch of right hepatic artery",
+          "representation": "BP6949",
+          "files": [
+            "FJ1916",
+            "FJ2386"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -33.0129,
+        -141.666,
+        1106.72
+      ],
+      "max": [
+        -16.5124,
+        -128.359,
+        1119.57
+      ],
+      "topology": {
+        "sourceVertices": 214,
+        "exactUniqueVertices": 183,
+        "unusedUniqueVertices": 0,
+        "triangles": 362,
+        "edges": 543,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 362,
+            "vertices": 183,
+            "bounds": {
+              "min": [
+                -33.0129,
+                -141.666,
+                1106.72
+              ],
+              "max": [
+                -16.5124,
+                -128.359,
+                1119.57
+              ]
+            },
+            "areaMm2": 89.3577579223393,
+            "algebraicVolumeMm3": 24.031164316833355
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ2404",
+      "sha256": "316a7b553981cafff7ac1279140251cff0c6a88d4cf91f5d729cdb02702405b8",
+      "labels": [
+        {
+          "id": "FMA15415",
+          "name": "left portal vein",
+          "representation": "BP5788",
+          "files": [
+            "FJ1893",
+            "FJ2404"
+          ],
+          "tree": "isa"
+        }
+      ],
+      "min": [
+        -87.0472,
+        -193.404,
+        1074.29
+      ],
+      "max": [
+        50.7205,
+        -121.089,
+        1163.47
+      ],
+      "topology": {
+        "sourceVertices": 4965,
+        "exactUniqueVertices": 3357,
+        "unusedUniqueVertices": 0,
+        "triangles": 6706,
+        "edges": 10059,
+        "duplicateFaces": 2,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 4,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 6702,
+            "vertices": 3351,
+            "bounds": {
+              "min": [
+                -87.0472,
+                -193.404,
+                1074.29
+              ],
+              "max": [
+                50.6453,
+                -121.089,
+                1163.47
+              ]
+            },
+            "areaMm2": 7919.4077122247245,
+            "algebraicVolumeMm3": 9021.686489396314
+          },
+          {
+            "firstFace": 6489,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                38.2485,
+                -169.435,
+                1140.25
+              ],
+              "max": [
+                38.3825,
+                -169.383,
+                1140.41
+              ]
+            },
+            "areaMm2": 0.021051759926438866,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 6699,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                50.5518,
+                -166.704,
+                1131.69
+              ],
+              "max": [
+                50.7205,
+                -166.499,
+                1131.71
+              ]
+            },
+            "areaMm2": 0.02760669005875383,
+            "algebraicVolumeMm3": 0
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ2405",
+      "sha256": "dbeafcb261e23112037b6616d8ffd130f9c96d9e30e70d61855e2f7ef71fccc1",
+      "labels": [
+        {
+          "id": "FMA15414",
+          "name": "right portal vein",
+          "representation": "BP5787",
+          "files": [
+            "FJ1913",
+            "FJ2405"
+          ],
+          "tree": "isa"
+        }
+      ],
+      "min": [
+        -97.6318,
+        -151.643,
+        1081.11
+      ],
+      "max": [
+        -21.5251,
+        -49.5854,
+        1138.68
+      ],
+      "topology": {
+        "sourceVertices": 2605,
+        "exactUniqueVertices": 1615,
+        "unusedUniqueVertices": 0,
+        "triangles": 3230,
+        "edges": 4845,
+        "duplicateFaces": 1,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 10,
+            "triangles": 3220,
+            "vertices": 1606,
+            "bounds": {
+              "min": [
+                -97.6318,
+                -151.643,
+                1081.11
+              ],
+              "max": [
+                -21.5251,
+                -49.5854,
+                1138.68
+              ]
+            },
+            "areaMm2": 3196.225985317912,
+            "algebraicVolumeMm3": 3561.4755937910386
+          },
+          {
+            "firstFace": 0,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -91.195,
+                -84.4339,
+                1125.19
+              ],
+              "max": [
+                -91.113,
+                -84.3568,
+                1125.26
+              ]
+            },
+            "areaMm2": 0.012503995328920024,
+            "algebraicVolumeMm3": 0.00010072349999989551
+          },
+          {
+            "firstFace": 8,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -90.9055,
+                -84.989,
+                1125.41
+              ],
+              "max": [
+                -90.7493,
+                -84.8609,
+                1125.49
+              ]
+            },
+            "areaMm2": 0.019553185802987837,
+            "algebraicVolumeMm3": -6.776263578034403e-21
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ2409",
+      "sha256": "4662aac785711a9b0ca91b860720d018f4e61e8457e919722b68ce814bc27e84",
+      "labels": [
+        {
+          "id": "FMA15745",
+          "name": "hepatovenous segment vii",
+          "representation": "BP6444",
+          "files": [
+            "FJ2409"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15745",
+          "name": "hepatovenous segment vii",
+          "representation": "BP7470",
+          "files": [
+            "FJ2409"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -114.768,
+        -165.212,
+        1027.94
+      ],
+      "max": [
+        -21.0945,
+        -44.2721,
+        1110.78
+      ],
+      "topology": {
+        "sourceVertices": 5091,
+        "exactUniqueVertices": 4271,
+        "unusedUniqueVertices": 0,
+        "triangles": 8534,
+        "edges": 12801,
+        "duplicateFaces": 1,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 4,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 8532,
+            "vertices": 4268,
+            "bounds": {
+              "min": [
+                -114.768,
+                -165.212,
+                1027.94
+              ],
+              "max": [
+                -21.0945,
+                -44.2721,
+                1110.78
+              ]
+            },
+            "areaMm2": 26409.63002741133,
+            "algebraicVolumeMm3": 235222.59555517978
+          },
+          {
+            "firstFace": 939,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -105.025,
+                -152.078,
+                1108.45
+              ],
+              "max": [
+                -104.967,
+                -152.001,
+                1108.59
+              ]
+            },
+            "areaMm2": 0.013871480418458766,
+            "algebraicVolumeMm3": -6.776263578034403e-21
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ2816",
+      "sha256": "81c86ccdd356c27a960f957f49b4ea883d22d7e75fef29aa794e154d4f5da51e",
+      "labels": [
+        {
+          "id": "FMA13365",
+          "name": "caudate lobe of liver",
+          "representation": "BP8727",
+          "files": [
+            "FJ2816"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA14495",
+          "name": "segment of liver",
+          "representation": "BP8728",
+          "files": [
+            "FJ2816"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA82494",
+          "name": "lobular segment",
+          "representation": "BP8729",
+          "files": [
+            "FJ2816"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA13365",
+          "name": "caudate lobe of liver",
+          "representation": "BP9928",
+          "files": [
+            "FJ2816"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -33.827,
+        -140.356,
+        1093.74
+      ],
+      "max": [
+        11.2576,
+        -104.528,
+        1168.55
+      ],
+      "topology": {
+        "sourceVertices": 2526,
+        "exactUniqueVertices": 2512,
+        "unusedUniqueVertices": 0,
+        "triangles": 5020,
+        "edges": 7530,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 5020,
+            "vertices": 2512,
+            "bounds": {
+              "min": [
+                -33.827,
+                -140.356,
+                1093.74
+              ],
+              "max": [
+                11.2576,
+                -104.528,
+                1168.55
+              ]
+            },
+            "areaMm2": 6907.889260149662,
+            "algebraicVolumeMm3": 35049.8947307253
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ2818",
+      "sha256": "773b11b267fd680f399e0dbc71217aef981c6f8ee2a2273723481edc5864ee8a",
+      "labels": [
+        {
+          "id": "FMA15739",
+          "name": "hepatovenous segment ii",
+          "representation": "BP8890",
+          "files": [
+            "FJ2818"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15739",
+          "name": "hepatovenous segment ii",
+          "representation": "BP10036",
+          "files": [
+            "FJ2818"
+          ],
+          "tree": "partof"
+        },
+        {
+          "id": "FMA15751",
+          "name": "posterior sector of left liver",
+          "representation": "BP10037",
+          "files": [
+            "FJ2818"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        2.52503,
+        -200.039,
+        1119.62
+      ],
+      "max": [
+        94.3668,
+        -91.5573,
+        1173.09
+      ],
+      "topology": {
+        "sourceVertices": 7482,
+        "exactUniqueVertices": 7165,
+        "unusedUniqueVertices": 0,
+        "triangles": 14326,
+        "edges": 21489,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 14326,
+            "vertices": 7165,
+            "bounds": {
+              "min": [
+                2.52503,
+                -200.039,
+                1119.62
+              ],
+              "max": [
+                94.3668,
+                -91.5573,
+                1173.09
+              ]
+            },
+            "areaMm2": 19247.92492420705,
+            "algebraicVolumeMm3": 113567.37723825058
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ2819",
+      "sha256": "ba7174ecd641887a57116848661d56c2c377659cc3aca4235132e8f548bbd8b9",
+      "labels": [
+        {
+          "id": "FMA15741",
+          "name": "hepatovenous segment iii",
+          "representation": "BP8982",
+          "files": [
+            "FJ2819"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15741",
+          "name": "hepatovenous segment iii",
+          "representation": "BP10081",
+          "files": [
+            "FJ2819"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -1.59219,
+        -202.413,
+        1086.57
+      ],
+      "max": [
+        73.4476,
+        -119.538,
+        1153.18
+      ],
+      "topology": {
+        "sourceVertices": 5487,
+        "exactUniqueVertices": 5165,
+        "unusedUniqueVertices": 0,
+        "triangles": 10326,
+        "edges": 15489,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 10326,
+            "vertices": 5165,
+            "bounds": {
+              "min": [
+                -1.59219,
+                -202.413,
+                1086.57
+              ],
+              "max": [
+                73.4476,
+                -119.538,
+                1153.18
+              ]
+            },
+            "areaMm2": 14661.09376274749,
+            "algebraicVolumeMm3": 101291.53785535603
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ2820",
+      "sha256": "af49d0747496fb3008b7b33be23ea1c169bb4667ccfad0fa0208d42390737c22",
+      "labels": [
+        {
+          "id": "FMA15742",
+          "name": "hepatovenous segment iv",
+          "representation": "BP8871",
+          "files": [
+            "FJ2820"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15742",
+          "name": "hepatovenous segment iv",
+          "representation": "BP10028",
+          "files": [
+            "FJ2820"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -46.3087,
+        -200.539,
+        1060.81
+      ],
+      "max": [
+        11.4549,
+        -120.754,
+        1179.37
+      ],
+      "topology": {
+        "sourceVertices": 11418,
+        "exactUniqueVertices": 8991,
+        "unusedUniqueVertices": 0,
+        "triangles": 17942,
+        "edges": 26907,
+        "duplicateFaces": 5,
+        "collapsedFaces": 2,
+        "degenerateFaces": 3,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 7,
+        "nonManifoldVertices": 8,
+        "inconsistentWindingEdges": 1,
+        "eulerCharacteristic": 26,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 16180,
+            "vertices": 8084,
+            "bounds": {
+              "min": [
+                -46.3087,
+                -200.539,
+                1060.81
+              ],
+              "max": [
+                11.4549,
+                -120.754,
+                1179.37
+              ]
+            },
+            "areaMm2": 24747.99129532477,
+            "algebraicVolumeMm3": 229443.92126602933
+          },
+          {
+            "firstFace": 8194,
+            "triangles": 930,
+            "vertices": 460,
+            "bounds": {
+              "min": [
+                -21.0922,
+                -166.836,
+                1110.86
+              ],
+              "max": [
+                -14.4734,
+                -144.111,
+                1140.75
+              ]
+            },
+            "areaMm2": 662.5194313244924,
+            "algebraicVolumeMm3": -657.3180602889988
+          },
+          {
+            "firstFace": 4861,
+            "triangles": 444,
+            "vertices": 220,
+            "bounds": {
+              "min": [
+                -31.4,
+                -144.111,
+                1110.09
+              ],
+              "max": [
+                -27.8,
+                -142.392,
+                1114
+              ]
+            },
+            "areaMm2": 18.185171250991782,
+            "algebraicVolumeMm3": -1.482204003500001
+          },
+          {
+            "firstFace": 15872,
+            "triangles": 232,
+            "vertices": 118,
+            "bounds": {
+              "min": [
+                2.61094,
+                -129.161,
+                1164.25
+              ],
+              "max": [
+                8.29844,
+                -125.599,
+                1167.49
+              ]
+            },
+            "areaMm2": 28.54130678636657,
+            "algebraicVolumeMm3": -8.65397569080014
+          },
+          {
+            "firstFace": 9433,
+            "triangles": 28,
+            "vertices": 16,
+            "bounds": {
+              "min": [
+                -19.8203,
+                -144.22,
+                1114.2
+              ],
+              "max": [
+                -19.5984,
+                -143.798,
+                1114.42
+              ]
+            },
+            "areaMm2": 0.0909512917811507,
+            "algebraicVolumeMm3": -0.0003200766666669394
+          },
+          {
+            "firstFace": 4236,
+            "triangles": 16,
+            "vertices": 10,
+            "bounds": {
+              "min": [
+                -31.8,
+                -144.03,
+                1111.77
+              ],
+              "max": [
+                -31.5703,
+                -143.97,
+                1112
+              ]
+            },
+            "areaMm2": 0.028427543690747816,
+            "algebraicVolumeMm3": -0.00017806333333325334
+          },
+          {
+            "firstFace": 9422,
+            "triangles": 14,
+            "vertices": 9,
+            "bounds": {
+              "min": [
+                -19.8141,
+                -144.614,
+                1114.8
+              ],
+              "max": [
+                -19.7859,
+                -144.4,
+                1115.01
+              ]
+            },
+            "areaMm2": 0.013461385812662945,
+            "algebraicVolumeMm3": -0.00003963666666661523
+          },
+          {
+            "firstFace": 16921,
+            "triangles": 12,
+            "vertices": 8,
+            "bounds": {
+              "min": [
+                7.69219,
+                -133.908,
+                1135
+              ],
+              "max": [
+                7.9254,
+                -133.4,
+                1135.51
+              ]
+            },
+            "areaMm2": 0.2755993315292189,
+            "algebraicVolumeMm3": -0.008103274733330309
+          },
+          {
+            "firstFace": 4248,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -31.8078,
+                -143.808,
+                1112.99
+              ],
+              "max": [
+                -31.7922,
+                -143.792,
+                1113.01
+              ]
+            },
+            "areaMm2": 0.0005119024907142347,
+            "algebraicVolumeMm3": -8.319999999987379e-7
+          },
+          {
+            "firstFace": 4953,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -31.4,
+                -143.492,
+                1113.51
+              ],
+              "max": [
+                -31.1078,
+                -143.308,
+                1113.69
+              ]
+            },
+            "areaMm2": 0.0830173942925518,
+            "algebraicVolumeMm3": -0.0016129440000005352
+          },
+          {
+            "firstFace": 4963,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -31.0984,
+                -143.298,
+                1113.7
+              ],
+              "max": [
+                -30.9016,
+                -143.009,
+                1114
+              ]
+            },
+            "areaMm2": 0.10222860436477083,
+            "algebraicVolumeMm3": -0.0018958400000005649
+          },
+          {
+            "firstFace": 5583,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -29.0828,
+                -143.683,
+                1109.52
+              ],
+              "max": [
+                -28.7859,
+                -143.517,
+                1109.68
+              ]
+            },
+            "areaMm2": 0.0743720176352972,
+            "algebraicVolumeMm3": -0.0013142773333339685
+          },
+          {
+            "firstFace": 6288,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -28.2953,
+                -142.295,
+                1113.7
+              ],
+              "max": [
+                -28.1047,
+                -142.105,
+                1113.9
+              ]
+            },
+            "areaMm2": 0.06487363251738913,
+            "algebraicVolumeMm3": -0.0012071333333335927
+          },
+          {
+            "firstFace": 9248,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -19.8141,
+                -145.414,
+                1116.19
+              ],
+              "max": [
+                -19.7859,
+                -145.386,
+                1116.21
+              ]
+            },
+            "areaMm2": 0.00112034109091748,
+            "algebraicVolumeMm3": -0.0000026319999999966495
+          },
+          {
+            "firstFace": 9349,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -19.8172,
+                -143.817,
+                1113.78
+              ],
+              "max": [
+                -19.7828,
+                -143.783,
+                1113.82
+              ]
+            },
+            "areaMm2": 0.002260738852675523,
+            "algebraicVolumeMm3": -0.000007797333333330427
+          },
+          {
+            "firstFace": 9411,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -19.8109,
+                -145.011,
+                1115.59
+              ],
+              "max": [
+                -19.7891,
+                -144.989,
+                1115.61
+              ]
+            },
+            "areaMm2": 0.0007833978299682276,
+            "algebraicVolumeMm3": -0.0000015986666666645067
+          },
+          {
+            "firstFace": 11097,
+            "triangles": 8,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                -15.4016,
+                -147.802,
+                1111.8
+              ],
+              "max": [
+                -15.3984,
+                -147.798,
+                1111.8
+              ]
+            },
+            "areaMm2": 0.00001279999999996876,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 16899,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                7.50781,
+                -137.292,
+                1136.71
+              ],
+              "max": [
+                7.69219,
+                -137.108,
+                1136.89
+              ]
+            },
+            "areaMm2": 0.05787376212419488,
+            "algebraicVolumeMm3": -0.0010177776000003462
+          },
+          {
+            "firstFace": 9458,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                -19.6047,
+                -144.005,
+                1114.6
+              ],
+              "max": [
+                -19.6,
+                -143.995,
+                1114.6
+              ]
+            },
+            "areaMm2": 0.0000469999999999543,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 17901,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                10.7889,
+                -121.011,
+                1155.79
+              ],
+              "max": [
+                10.8,
+                -121,
+                1155.8
+              ]
+            },
+            "areaMm2": 0.00019831643905621684,
+            "algebraicVolumeMm3": 0
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ2821",
+      "sha256": "13886d9c2d473e121e27083fa03218fe22e4a75aab3402dcf53754a1375948f9",
+      "labels": [
+        {
+          "id": "FMA15743",
+          "name": "hepatovenous segment v",
+          "representation": "BP8976",
+          "files": [
+            "FJ2821"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15743",
+          "name": "hepatovenous segment v",
+          "representation": "BP10079",
+          "files": [
+            "FJ2821"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -104.585,
+        -198.69,
+        1046.42
+      ],
+      "max": [
+        -26.3054,
+        -107.889,
+        1116.09
+      ],
+      "topology": {
+        "sourceVertices": 6605,
+        "exactUniqueVertices": 5723,
+        "unusedUniqueVertices": 0,
+        "triangles": 11442,
+        "edges": 17163,
+        "duplicateFaces": 2,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 11438,
+            "vertices": 5717,
+            "bounds": {
+              "min": [
+                -104.585,
+                -198.69,
+                1046.42
+              ],
+              "max": [
+                -26.3054,
+                -107.889,
+                1116.09
+              ]
+            },
+            "areaMm2": 15735.521583225182,
+            "algebraicVolumeMm3": 114044.09829259694
+          },
+          {
+            "firstFace": 10347,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -34.4658,
+                -133.243,
+                1112.09
+              ],
+              "max": [
+                -34.4025,
+                -133.176,
+                1112.24
+              ]
+            },
+            "areaMm2": 0.01409279045080426,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 10956,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -32.1748,
+                -120.056,
+                1096.84
+              ],
+              "max": [
+                -32.0748,
+                -120.052,
+                1096.85
+              ]
+            },
+            "areaMm2": 0.0010205880657728002,
+            "algebraicVolumeMm3": 0
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ2822",
+      "sha256": "8f64d0c177586089610214a5a32a189a6a659ca2770b15d193c9255667c8afd2",
+      "labels": [
+        {
+          "id": "FMA15744",
+          "name": "hepatovenous segment vi",
+          "representation": "BP9210",
+          "files": [
+            "FJ2822"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15744",
+          "name": "hepatovenous segment vi",
+          "representation": "BP10201",
+          "files": [
+            "FJ2822"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -114.575,
+        -164.947,
+        1027.96
+      ],
+      "max": [
+        -21.4193,
+        -44.5192,
+        1110.48
+      ],
+      "topology": {
+        "sourceVertices": 9988,
+        "exactUniqueVertices": 9727,
+        "unusedUniqueVertices": 0,
+        "triangles": 19450,
+        "edges": 29175,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 19450,
+            "vertices": 9727,
+            "bounds": {
+              "min": [
+                -114.575,
+                -164.947,
+                1027.96
+              ],
+              "max": [
+                -21.4193,
+                -44.5192,
+                1110.48
+              ]
+            },
+            "areaMm2": 26374.761439509435,
+            "algebraicVolumeMm3": 212525.2267400603
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ2823",
+      "sha256": "a89dd2a52ffee337e9777376d1235330463577331fc7f18a40ccf8bc6c99a8d0",
+      "labels": [
+        {
+          "id": "FMA15746",
+          "name": "hepatovenous segment viii",
+          "representation": "BP8866",
+          "files": [
+            "FJ2823",
+            "FJ2824"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15746",
+          "name": "hepatovenous segment viii",
+          "representation": "BP10023",
+          "files": [
+            "FJ2823",
+            "FJ2824"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -115.064,
+        -151.812,
+        1090.15
+      ],
+      "max": [
+        -20.192,
+        -43.3287,
+        1174.84
+      ],
+      "topology": {
+        "sourceVertices": 10230,
+        "exactUniqueVertices": 9580,
+        "unusedUniqueVertices": 0,
+        "triangles": 19156,
+        "edges": 28734,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 19156,
+            "vertices": 9580,
+            "bounds": {
+              "min": [
+                -115.064,
+                -151.812,
+                1090.15
+              ],
+              "max": [
+                -20.192,
+                -43.3287,
+                1174.84
+              ]
+            },
+            "areaMm2": 25959.97398609104,
+            "algebraicVolumeMm3": 283885.7286576142
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ2824",
+      "sha256": "2f5e34fceea6c8b718bd3f50a125bf24c434ae7eb3d925b9795b0585272c1349",
+      "labels": [
+        {
+          "id": "FMA15746",
+          "name": "hepatovenous segment viii",
+          "representation": "BP8866",
+          "files": [
+            "FJ2823",
+            "FJ2824"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15746",
+          "name": "hepatovenous segment viii",
+          "representation": "BP10023",
+          "files": [
+            "FJ2823",
+            "FJ2824"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -109.329,
+        -198.73,
+        1108.18
+      ],
+      "max": [
+        -17.5186,
+        -70.8945,
+        1183.14
+      ],
+      "topology": {
+        "sourceVertices": 11459,
+        "exactUniqueVertices": 10798,
+        "unusedUniqueVertices": 0,
+        "triangles": 21592,
+        "edges": 32388,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 21592,
+            "vertices": 10798,
+            "bounds": {
+              "min": [
+                -109.329,
+                -198.73,
+                1108.18
+              ],
+              "max": [
+                -17.5186,
+                -70.8945,
+                1183.14
+              ]
+            },
+            "areaMm2": 29725.952665181794,
+            "algebraicVolumeMm3": 346903.3670818731
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3071",
+      "sha256": "818576ec6fe49301bb43a34df894f22b6e2af846c59ed5a41ba826e2e66dd0df",
+      "labels": [
+        {
+          "id": "FMA71867",
+          "name": "anterior superior tributary of right hepatic biliary tree",
+          "representation": "BP8932",
+          "files": [
+            "FJ3071"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA71867",
+          "name": "anterior superior tributary of right hepatic biliary tree",
+          "representation": "BP10058",
+          "files": [
+            "FJ3071"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -79.5971,
+        -151.01,
+        1103.91
+      ],
+      "max": [
+        -27.4422,
+        -130.798,
+        1151.31
+      ],
+      "topology": {
+        "sourceVertices": 395,
+        "exactUniqueVertices": 345,
+        "unusedUniqueVertices": 0,
+        "triangles": 686,
+        "edges": 1029,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 686,
+            "vertices": 345,
+            "bounds": {
+              "min": [
+                -79.5971,
+                -151.01,
+                1103.91
+              ],
+              "max": [
+                -27.4422,
+                -130.798,
+                1151.31
+              ]
+            },
+            "areaMm2": 456.9341180071321,
+            "algebraicVolumeMm3": 231.97710417266848
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3072",
+      "sha256": "0e5ec3bfde87ac0924359c11e59f62a1559fc8692ac4c40c54049c3eb5f1c712",
+      "labels": [
+        {
+          "id": "FMA71868",
+          "name": "anterior inferior tributary of right hepatic biliary tree",
+          "representation": "BP9262",
+          "files": [
+            "FJ3072"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA71868",
+          "name": "anterior inferior tributary of right hepatic biliary tree",
+          "representation": "BP10219",
+          "files": [
+            "FJ3072"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -83.4342,
+        -174.632,
+        1082.41
+      ],
+      "max": [
+        -43.8486,
+        -131.264,
+        1152.35
+      ],
+      "topology": {
+        "sourceVertices": 1265,
+        "exactUniqueVertices": 862,
+        "unusedUniqueVertices": 0,
+        "triangles": 1708,
+        "edges": 2562,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 8,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 668,
+            "triangles": 834,
+            "vertices": 419,
+            "bounds": {
+              "min": [
+                -78.6374,
+                -174.632,
+                1082.41
+              ],
+              "max": [
+                -43.8486,
+                -147.899,
+                1114.49
+              ]
+            },
+            "areaMm2": 280.1315427882999,
+            "algebraicVolumeMm3": 77.00738828133466
+          },
+          {
+            "firstFace": 333,
+            "triangles": 332,
+            "vertices": 168,
+            "bounds": {
+              "min": [
+                -57.6659,
+                -149.417,
+                1118.31
+              ],
+              "max": [
+                -50.4446,
+                -131.264,
+                1152.35
+              ]
+            },
+            "areaMm2": 185.4473227417326,
+            "algebraicVolumeMm3": 73.82951386950015
+          },
+          {
+            "firstFace": 244,
+            "triangles": 290,
+            "vertices": 147,
+            "bounds": {
+              "min": [
+                -74.2628,
+                -151.972,
+                1120.5
+              ],
+              "max": [
+                -55.7349,
+                -144.764,
+                1128.43
+              ]
+            },
+            "areaMm2": 64.11893702997351,
+            "algebraicVolumeMm3": 12.978836916500216
+          },
+          {
+            "firstFace": 0,
+            "triangles": 252,
+            "vertices": 128,
+            "bounds": {
+              "min": [
+                -83.4342,
+                -152.314,
+                1136.05
+              ],
+              "max": [
+                -69.4178,
+                -147.666,
+                1142.25
+              ]
+            },
+            "areaMm2": 56.02071500666505,
+            "algebraicVolumeMm3": 13.207722798999914
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3073",
+      "sha256": "d5a6c22e5680ecf272e36b26bc387279e76d99ea7e6cd0637b69570b6da1159a",
+      "labels": [
+        {
+          "id": "FMA15420",
+          "name": "anterior superior segmental branch of right portal vein",
+          "representation": "BP7908",
+          "files": [
+            "FJ3073"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15420",
+          "name": "anterior superior segmental branch of right portal vein",
+          "representation": "BP9458",
+          "files": [
+            "FJ3073"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -80.1902,
+        -149.041,
+        1104.62
+      ],
+      "max": [
+        -14.9097,
+        -131.015,
+        1152.1
+      ],
+      "topology": {
+        "sourceVertices": 404,
+        "exactUniqueVertices": 387,
+        "unusedUniqueVertices": 0,
+        "triangles": 770,
+        "edges": 1155,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 770,
+            "vertices": 387,
+            "bounds": {
+              "min": [
+                -80.1902,
+                -149.041,
+                1104.62
+              ],
+              "max": [
+                -14.9097,
+                -131.015,
+                1152.1
+              ]
+            },
+            "areaMm2": 994.5443146028094,
+            "algebraicVolumeMm3": 990.6845607358343
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3074",
+      "sha256": "8de7ebf4db8679e5db99cdedceb59df6a43c4e33e4cf707e1e4666cd6e50679b",
+      "labels": [
+        {
+          "id": "FMA15421",
+          "name": "anterior inferior segmental branch of right portal vein",
+          "representation": "BP8473",
+          "files": [
+            "FJ3074"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15421",
+          "name": "anterior inferior segmental branch of right portal vein",
+          "representation": "BP9788",
+          "files": [
+            "FJ3074"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -90.9415,
+        -174.349,
+        1082.65
+      ],
+      "max": [
+        -39.2388,
+        -85.3489,
+        1152.25
+      ],
+      "topology": {
+        "sourceVertices": 1582,
+        "exactUniqueVertices": 1426,
+        "unusedUniqueVertices": 0,
+        "triangles": 2832,
+        "edges": 4248,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 10,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 1102,
+            "triangles": 1522,
+            "vertices": 763,
+            "bounds": {
+              "min": [
+                -78.2876,
+                -174.349,
+                1082.65
+              ],
+              "max": [
+                -39.2388,
+                -143.736,
+                1116.05
+              ]
+            },
+            "areaMm2": 427.0093112789731,
+            "algebraicVolumeMm3": 147.56216168550145
+          },
+          {
+            "firstFace": 508,
+            "triangles": 402,
+            "vertices": 203,
+            "bounds": {
+              "min": [
+                -74.5853,
+                -151.465,
+                1121.47
+              ],
+              "max": [
+                -56.3741,
+                -142.685,
+                1131.64
+              ]
+            },
+            "areaMm2": 143.71875807091251,
+            "algebraicVolumeMm3": 72.6401348155
+          },
+          {
+            "firstFace": 655,
+            "triangles": 400,
+            "vertices": 202,
+            "bounds": {
+              "min": [
+                -58.6781,
+                -147.427,
+                1124.34
+              ],
+              "max": [
+                -50.699,
+                -131.695,
+                1152.25
+              ]
+            },
+            "areaMm2": 221.62870906089017,
+            "algebraicVolumeMm3": 126.68623044749978
+          },
+          {
+            "firstFace": 156,
+            "triangles": 352,
+            "vertices": 178,
+            "bounds": {
+              "min": [
+                -84.5025,
+                -152.07,
+                1136.36
+              ],
+              "max": [
+                -69.8409,
+                -145.922,
+                1143.76
+              ]
+            },
+            "areaMm2": 91.68400859689712,
+            "algebraicVolumeMm3": 35.72829844566636
+          },
+          {
+            "firstFace": 0,
+            "triangles": 156,
+            "vertices": 80,
+            "bounds": {
+              "min": [
+                -90.9415,
+                -91.0682,
+                1124.8
+              ],
+              "max": [
+                -84.5365,
+                -85.3489,
+                1127.78
+              ]
+            },
+            "areaMm2": 19.546565140526358,
+            "algebraicVolumeMm3": 3.4259506536335205
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3075",
+      "sha256": "d0aa3b26c1866580abbfa1f9bf44b4d2bc9302ddda0838605b738a3eea912597",
+      "labels": [
+        {
+          "id": "FMA70443",
+          "name": "anterior inferior segmental hepatic artery",
+          "representation": "BP8869",
+          "files": [
+            "FJ3075"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA70443",
+          "name": "anterior inferior segmental hepatic artery",
+          "representation": "BP10026",
+          "files": [
+            "FJ3075"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -84.4492,
+        -174.97,
+        1082.91
+      ],
+      "max": [
+        -43.7533,
+        -132.42,
+        1152.46
+      ],
+      "topology": {
+        "sourceVertices": 1244,
+        "exactUniqueVertices": 841,
+        "unusedUniqueVertices": 0,
+        "triangles": 1666,
+        "edges": 2499,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 8,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 667,
+            "triangles": 794,
+            "vertices": 399,
+            "bounds": {
+              "min": [
+                -78.3611,
+                -174.97,
+                1082.91
+              ],
+              "max": [
+                -43.7533,
+                -147.967,
+                1117.81
+              ]
+            },
+            "areaMm2": 291.3719055472733,
+            "algebraicVolumeMm3": 79.36240125149907
+          },
+          {
+            "firstFace": 395,
+            "triangles": 314,
+            "vertices": 159,
+            "bounds": {
+              "min": [
+                -57.3507,
+                -149.943,
+                1122.13
+              ],
+              "max": [
+                -49.7158,
+                -132.42,
+                1152.46
+              ]
+            },
+            "areaMm2": 138.98386980024927,
+            "algebraicVolumeMm3": 44.31769378433292
+          },
+          {
+            "firstFace": 0,
+            "triangles": 308,
+            "vertices": 156,
+            "bounds": {
+              "min": [
+                -84.4492,
+                -152.53,
+                1136.74
+              ],
+              "max": [
+                -69.3693,
+                -148.122,
+                1143.42
+              ]
+            },
+            "areaMm2": 44.70695877647353,
+            "algebraicVolumeMm3": 8.624649614333364
+          },
+          {
+            "firstFace": 308,
+            "triangles": 250,
+            "vertices": 127,
+            "bounds": {
+              "min": [
+                -74.1844,
+                -151.683,
+                1121.95
+              ],
+              "max": [
+                -55.202,
+                -144.993,
+                1129.93
+              ]
+            },
+            "areaMm2": 77.98075573406923,
+            "algebraicVolumeMm3": 22.01933751583298
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3076",
+      "sha256": "45223049350ffe29c9b4842c832efa9248fb60bc16955db35fbfd3b7953ba8da",
+      "labels": [
+        {
+          "id": "FMA70442",
+          "name": "anterior superior segmental hepatic artery",
+          "representation": "BP9163",
+          "files": [
+            "FJ3076"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA70442",
+          "name": "anterior superior segmental hepatic artery",
+          "representation": "BP10177",
+          "files": [
+            "FJ3076"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -79.8082,
+        -150.994,
+        1107.35
+      ],
+      "max": [
+        -18.0397,
+        -131.575,
+        1152.47
+      ],
+      "topology": {
+        "sourceVertices": 459,
+        "exactUniqueVertices": 448,
+        "unusedUniqueVertices": 0,
+        "triangles": 892,
+        "edges": 1338,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 892,
+            "vertices": 448,
+            "bounds": {
+              "min": [
+                -79.8082,
+                -150.994,
+                1107.35
+              ],
+              "max": [
+                -18.0397,
+                -131.575,
+                1152.47
+              ]
+            },
+            "areaMm2": 649.5922503988613,
+            "algebraicVolumeMm3": 431.3982834720031
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3077",
+      "sha256": "67bd46a0f91ca9d635f6d7750e96452a72586dc7df2b592be7198ac3d28fe72b",
+      "labels": [
+        {
+          "id": "FMA70455",
+          "name": "caudate lobe branch of left hepatic artery",
+          "representation": "BP9178",
+          "files": [
+            "FJ3077"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA70455",
+          "name": "caudate lobe branch of left hepatic artery",
+          "representation": "BP10182",
+          "files": [
+            "FJ3077"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -18.4867,
+        -153.795,
+        1112.29
+      ],
+      "max": [
+        1.90867,
+        -116.957,
+        1132.29
+      ],
+      "topology": {
+        "sourceVertices": 250,
+        "exactUniqueVertices": 217,
+        "unusedUniqueVertices": 0,
+        "triangles": 430,
+        "edges": 645,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 430,
+            "vertices": 217,
+            "bounds": {
+              "min": [
+                -18.4867,
+                -153.795,
+                1112.29
+              ],
+              "max": [
+                1.90867,
+                -116.957,
+                1132.29
+              ]
+            },
+            "areaMm2": 268.64715637097817,
+            "algebraicVolumeMm3": 115.14600650168492
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3083",
+      "sha256": "2d5997d5b9ac3ef4bc8461779eed5fe77feadcd0c3ef21bea43f9ee2cb73e90c",
+      "labels": [
+        {
+          "id": "FMA15800",
+          "name": "anterior inferior segmental tributary of middle hepatic vein",
+          "representation": "BP8633",
+          "files": [
+            "FJ3083",
+            "FJ3086"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15800",
+          "name": "anterior inferior segmental tributary of middle hepatic vein",
+          "representation": "BP9879",
+          "files": [
+            "FJ3083",
+            "FJ3086"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -75.6125,
+        -171.465,
+        1077.85
+      ],
+      "max": [
+        -13.487,
+        -118.924,
+        1172.24
+      ],
+      "topology": {
+        "sourceVertices": 1409,
+        "exactUniqueVertices": 1405,
+        "unusedUniqueVertices": 0,
+        "triangles": 2806,
+        "edges": 4209,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 2806,
+            "vertices": 1405,
+            "bounds": {
+              "min": [
+                -75.6125,
+                -171.465,
+                1077.85
+              ],
+              "max": [
+                -13.487,
+                -118.924,
+                1172.24
+              ]
+            },
+            "areaMm2": 2115.6603925616046,
+            "algebraicVolumeMm3": 3025.6748694111843
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3086",
+      "sha256": "974e8d71edc4a0de74480bc4f4a3431082daf60922109f3a0f644d9f953b4af5",
+      "labels": [
+        {
+          "id": "FMA15800",
+          "name": "anterior inferior segmental tributary of middle hepatic vein",
+          "representation": "BP8633",
+          "files": [
+            "FJ3083",
+            "FJ3086"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15800",
+          "name": "anterior inferior segmental tributary of middle hepatic vein",
+          "representation": "BP9879",
+          "files": [
+            "FJ3083",
+            "FJ3086"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -68.91,
+        -178.285,
+        1073.76
+      ],
+      "max": [
+        -55.8899,
+        -168.232,
+        1119.97
+      ],
+      "topology": {
+        "sourceVertices": 502,
+        "exactUniqueVertices": 497,
+        "unusedUniqueVertices": 0,
+        "triangles": 990,
+        "edges": 1485,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 990,
+            "vertices": 497,
+            "bounds": {
+              "min": [
+                -68.91,
+                -178.285,
+                1073.76
+              ],
+              "max": [
+                -55.8899,
+                -168.232,
+                1119.97
+              ]
+            },
+            "areaMm2": 319.60254500411617,
+            "algebraicVolumeMm3": 168.5573501486663
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3088",
+      "sha256": "b4d46c97bc201e818a86f794a3d3342c99252770eb828465d3a39129adeec44c",
+      "labels": [
+        {
+          "id": "FMA71887",
+          "name": "lateral superior tributary of left hepatic biliary tree",
+          "representation": "BP8734",
+          "files": [
+            "FJ3088",
+            "FJ3090"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA71887",
+          "name": "lateral superior tributary of left hepatic biliary tree",
+          "representation": "BP9933",
+          "files": [
+            "FJ3088",
+            "FJ3090"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        3.75489,
+        -156.805,
+        1126.17
+      ],
+      "max": [
+        57.6872,
+        -129.56,
+        1162.48
+      ],
+      "topology": {
+        "sourceVertices": 368,
+        "exactUniqueVertices": 306,
+        "unusedUniqueVertices": 0,
+        "triangles": 608,
+        "edges": 912,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 608,
+            "vertices": 306,
+            "bounds": {
+              "min": [
+                3.75489,
+                -156.805,
+                1126.17
+              ],
+              "max": [
+                57.6872,
+                -129.56,
+                1162.48
+              ]
+            },
+            "areaMm2": 392.9495683984871,
+            "algebraicVolumeMm3": 182.69154214865029
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3089",
+      "sha256": "8fcc701eabba3de0ed5c7796dc668d78286150901081abd44a69f1a0757de02f",
+      "labels": [
+        {
+          "id": "FMA71888",
+          "name": "lateral inferior tributary of left hepatic biliary tree",
+          "representation": "BP8845",
+          "files": [
+            "FJ3089"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA71888",
+          "name": "lateral inferior tributary of left hepatic biliary tree",
+          "representation": "BP10013",
+          "files": [
+            "FJ3089"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        7.46213,
+        -190.888,
+        1123.7
+      ],
+      "max": [
+        52.1499,
+        -154.378,
+        1136.1
+      ],
+      "topology": {
+        "sourceVertices": 443,
+        "exactUniqueVertices": 334,
+        "unusedUniqueVertices": 0,
+        "triangles": 664,
+        "edges": 996,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 664,
+            "vertices": 334,
+            "bounds": {
+              "min": [
+                7.46213,
+                -190.888,
+                1123.7
+              ],
+              "max": [
+                52.1499,
+                -154.378,
+                1136.1
+              ]
+            },
+            "areaMm2": 274.85019466321853,
+            "algebraicVolumeMm3": 89.63507699476811
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3090",
+      "sha256": "08269713ea808adcc06cddeedfc5a6560e402518a7ea8feab456d2a6618656b4",
+      "labels": [
+        {
+          "id": "FMA71887",
+          "name": "lateral superior tributary of left hepatic biliary tree",
+          "representation": "BP8734",
+          "files": [
+            "FJ3088",
+            "FJ3090"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA71887",
+          "name": "lateral superior tributary of left hepatic biliary tree",
+          "representation": "BP9933",
+          "files": [
+            "FJ3088",
+            "FJ3090"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        25.293,
+        -198.243,
+        1108.75
+      ],
+      "max": [
+        56.4169,
+        -150.277,
+        1156.18
+      ],
+      "topology": {
+        "sourceVertices": 503,
+        "exactUniqueVertices": 408,
+        "unusedUniqueVertices": 0,
+        "triangles": 808,
+        "edges": 1212,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 4,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 418,
+            "vertices": 211,
+            "bounds": {
+              "min": [
+                29.3259,
+                -173.126,
+                1148.08
+              ],
+              "max": [
+                56.4169,
+                -150.277,
+                1156.18
+              ]
+            },
+            "areaMm2": 129.83696809527598,
+            "algebraicVolumeMm3": 35.34779285466662
+          },
+          {
+            "firstFace": 244,
+            "triangles": 390,
+            "vertices": 197,
+            "bounds": {
+              "min": [
+                25.293,
+                -198.243,
+                1108.75
+              ],
+              "max": [
+                35.6918,
+                -186.947,
+                1132.38
+              ]
+            },
+            "areaMm2": 80.06756865438969,
+            "algebraicVolumeMm3": 15.281139982166584
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3091",
+      "sha256": "e9d8c27658e99f33f81f8babae551404b526b5eec7814befd73157966dedd8e6",
+      "labels": [
+        {
+          "id": "FMA70452",
+          "name": "lateral superior segmental hepatic artery",
+          "representation": "BP7851",
+          "files": [
+            "FJ3091",
+            "FJ3093"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA70452",
+          "name": "lateral superior segmental hepatic artery",
+          "representation": "BP9375",
+          "files": [
+            "FJ3091",
+            "FJ3093"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        2.12887,
+        -159.515,
+        1127.36
+      ],
+      "max": [
+        57.4493,
+        -128.529,
+        1163.59
+      ],
+      "topology": {
+        "sourceVertices": 341,
+        "exactUniqueVertices": 301,
+        "unusedUniqueVertices": 0,
+        "triangles": 598,
+        "edges": 897,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 598,
+            "vertices": 301,
+            "bounds": {
+              "min": [
+                2.12887,
+                -159.515,
+                1127.36
+              ],
+              "max": [
+                57.4493,
+                -128.529,
+                1163.59
+              ]
+            },
+            "areaMm2": 423.1320476682353,
+            "algebraicVolumeMm3": 207.43799495691786
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3092",
+      "sha256": "4e0facfaf6fcf60d1709143982ed5c40dc45fadbb39cc61262908bf12d2a2ac6",
+      "labels": [
+        {
+          "id": "FMA70453",
+          "name": "lateral inferior segmental hepatic artery",
+          "representation": "BP8814",
+          "files": [
+            "FJ3092"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA70453",
+          "name": "lateral inferior segmental hepatic artery",
+          "representation": "BP9983",
+          "files": [
+            "FJ3092"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        5.37329,
+        -190.928,
+        1122.88
+      ],
+      "max": [
+        51.9979,
+        -156.729,
+        1133.94
+      ],
+      "topology": {
+        "sourceVertices": 364,
+        "exactUniqueVertices": 311,
+        "unusedUniqueVertices": 0,
+        "triangles": 618,
+        "edges": 927,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 618,
+            "vertices": 311,
+            "bounds": {
+              "min": [
+                5.37329,
+                -190.928,
+                1122.88
+              ],
+              "max": [
+                51.9979,
+                -156.729,
+                1133.94
+              ]
+            },
+            "areaMm2": 361.87880665045174,
+            "algebraicVolumeMm3": 159.36631419895156
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3093",
+      "sha256": "5eee760c2aec02f46a9976870c184f1ec61079155bf92f67b59cf962c3803a7f",
+      "labels": [
+        {
+          "id": "FMA70452",
+          "name": "lateral superior segmental hepatic artery",
+          "representation": "BP7851",
+          "files": [
+            "FJ3091",
+            "FJ3093"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA70452",
+          "name": "lateral superior segmental hepatic artery",
+          "representation": "BP9375",
+          "files": [
+            "FJ3091",
+            "FJ3093"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        25.4142,
+        -198.521,
+        1108.66
+      ],
+      "max": [
+        56.6066,
+        -151.207,
+        1156.62
+      ],
+      "topology": {
+        "sourceVertices": 460,
+        "exactUniqueVertices": 333,
+        "unusedUniqueVertices": 0,
+        "triangles": 658,
+        "edges": 987,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 4,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 334,
+            "vertices": 169,
+            "bounds": {
+              "min": [
+                31.7046,
+                -172.748,
+                1150.09
+              ],
+              "max": [
+                56.6066,
+                -151.207,
+                1156.62
+              ]
+            },
+            "areaMm2": 112.95513158855465,
+            "algebraicVolumeMm3": 28.64814824100005
+          },
+          {
+            "firstFace": 163,
+            "triangles": 324,
+            "vertices": 164,
+            "bounds": {
+              "min": [
+                25.4142,
+                -198.521,
+                1108.66
+              ],
+              "max": [
+                36.4131,
+                -187.69,
+                1131.2
+              ]
+            },
+            "areaMm2": 73.56045587926788,
+            "algebraicVolumeMm3": 13.160749374666583
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3095",
+      "sha256": "e53e52448e647cb04154eb2f1f1ae1823c9672aa495d369a0dacf36408675f21",
+      "labels": [
+        {
+          "id": "FMA70457",
+          "name": "trunk of left hepatic artery",
+          "representation": "BP8671",
+          "files": [
+            "FJ3095"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA70457",
+          "name": "trunk of left hepatic artery",
+          "representation": "BP9905",
+          "files": [
+            "FJ3095"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -22.0322,
+        -159.796,
+        1107.24
+      ],
+      "max": [
+        5.21715,
+        -147.022,
+        1130.75
+      ],
+      "topology": {
+        "sourceVertices": 666,
+        "exactUniqueVertices": 666,
+        "unusedUniqueVertices": 0,
+        "triangles": 1328,
+        "edges": 1992,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1328,
+            "vertices": 666,
+            "bounds": {
+              "min": [
+                -22.0322,
+                -159.796,
+                1107.24
+              ],
+              "max": [
+                5.21715,
+                -147.022,
+                1130.75
+              ]
+            },
+            "areaMm2": 434.29485972815064,
+            "algebraicVolumeMm3": 395.25738970101514
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3096",
+      "sha256": "c4f34b49d7a1b657ac99631a0614b283ff3cff231bfcb4d41a5ed48b4c8ab15b",
+      "labels": [
+        {
+          "id": "FMA14670",
+          "name": "left hepatic duct",
+          "representation": "BP8715",
+          "files": [
+            "FJ3096"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA14670",
+          "name": "left hepatic duct",
+          "representation": "BP9922",
+          "files": [
+            "FJ3096"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -25.7726,
+        -157.429,
+        1099.29
+      ],
+      "max": [
+        7.39447,
+        -140.041,
+        1130
+      ],
+      "topology": {
+        "sourceVertices": 428,
+        "exactUniqueVertices": 426,
+        "unusedUniqueVertices": 0,
+        "triangles": 848,
+        "edges": 1272,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 848,
+            "vertices": 426,
+            "bounds": {
+              "min": [
+                -25.7726,
+                -157.429,
+                1099.29
+              ],
+              "max": [
+                7.39447,
+                -140.041,
+                1130
+              ]
+            },
+            "areaMm2": 596.0329005436204,
+            "algebraicVolumeMm3": 547.7265577761827
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3102",
+      "sha256": "34942cd65cf922f32fdacf165ceab2f35a90f074a2bf3e342abe5d4b8b90ce80",
+      "labels": [
+        {
+          "id": "FMA82697",
+          "name": "trunk of left portal vein",
+          "representation": "BP9233",
+          "files": [
+            "FJ3102"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA82697",
+          "name": "trunk of left portal vein",
+          "representation": "BP10211",
+          "files": [
+            "FJ3102"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -21.2142,
+        -158.299,
+        1104.08
+      ],
+      "max": [
+        8.23729,
+        -137.308,
+        1138.04
+      ],
+      "topology": {
+        "sourceVertices": 367,
+        "exactUniqueVertices": 367,
+        "unusedUniqueVertices": 0,
+        "triangles": 730,
+        "edges": 1095,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 730,
+            "vertices": 367,
+            "bounds": {
+              "min": [
+                -21.2142,
+                -158.299,
+                1104.08
+              ],
+              "max": [
+                8.23729,
+                -137.308,
+                1138.04
+              ]
+            },
+            "areaMm2": 959.9238355396299,
+            "algebraicVolumeMm3": 1465.6883643561519
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3103",
+      "sha256": "651f3eea6af28fc2fc9ae0431260661bc9709b1bfda5d3cd56475fbb330bf3cd",
+      "labels": [
+        {
+          "id": "FMA71886",
+          "name": "medial inferior tributary of left hepatic biliary tree",
+          "representation": "BP7806",
+          "files": [
+            "FJ3103"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA71886",
+          "name": "medial inferior tributary of left hepatic biliary tree",
+          "representation": "BP9325",
+          "files": [
+            "FJ3103"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -22.4128,
+        -195.83,
+        1100.86
+      ],
+      "max": [
+        7.8449,
+        -154.331,
+        1133.83
+      ],
+      "topology": {
+        "sourceVertices": 432,
+        "exactUniqueVertices": 351,
+        "unusedUniqueVertices": 0,
+        "triangles": 698,
+        "edges": 1047,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 698,
+            "vertices": 351,
+            "bounds": {
+              "min": [
+                -22.4128,
+                -195.83,
+                1100.86
+              ],
+              "max": [
+                7.8449,
+                -154.331,
+                1133.83
+              ]
+            },
+            "areaMm2": 387.9052569664734,
+            "algebraicVolumeMm3": 178.8857718537959
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3104",
+      "sha256": "8a78e25b0446fe08a18ae2c55c021951640274f8a5194205ee5d7d6ba691f7cf",
+      "labels": [
+        {
+          "id": "FMA71885",
+          "name": "medial superior tributary of left hepatic biliary tree",
+          "representation": "BP8213",
+          "files": [
+            "FJ3104",
+            "FJ3105"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA71885",
+          "name": "medial superior tributary of left hepatic biliary tree",
+          "representation": "BP9670",
+          "files": [
+            "FJ3104",
+            "FJ3105"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -31.8292,
+        -168.754,
+        1130.41
+      ],
+      "max": [
+        -0.696245,
+        -151.869,
+        1148.09
+      ],
+      "topology": {
+        "sourceVertices": 344,
+        "exactUniqueVertices": 287,
+        "unusedUniqueVertices": 0,
+        "triangles": 570,
+        "edges": 855,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 570,
+            "vertices": 287,
+            "bounds": {
+              "min": [
+                -31.8292,
+                -168.754,
+                1130.41
+              ],
+              "max": [
+                -0.696245,
+                -151.869,
+                1148.09
+              ]
+            },
+            "areaMm2": 181.54572008696763,
+            "algebraicVolumeMm3": 59.395455144779184
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3105",
+      "sha256": "ca3519645aec712c6f25749609888241124ca9047063a352b77279d19b61a47e",
+      "labels": [
+        {
+          "id": "FMA71885",
+          "name": "medial superior tributary of left hepatic biliary tree",
+          "representation": "BP8213",
+          "files": [
+            "FJ3104",
+            "FJ3105"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA71885",
+          "name": "medial superior tributary of left hepatic biliary tree",
+          "representation": "BP9670",
+          "files": [
+            "FJ3104",
+            "FJ3105"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -24.7019,
+        -179.194,
+        1133.63
+      ],
+      "max": [
+        -17.2459,
+        -164.774,
+        1148.68
+      ],
+      "topology": {
+        "sourceVertices": 371,
+        "exactUniqueVertices": 249,
+        "unusedUniqueVertices": 0,
+        "triangles": 494,
+        "edges": 741,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 494,
+            "vertices": 249,
+            "bounds": {
+              "min": [
+                -24.7019,
+                -179.194,
+                1133.63
+              ],
+              "max": [
+                -17.2459,
+                -164.774,
+                1148.68
+              ]
+            },
+            "areaMm2": 86.28918959502695,
+            "algebraicVolumeMm3": 18.94234101549994
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3106",
+      "sha256": "6a915804cff8434c4cddc3cb21ae643480fbee3eb6b0838037d51c4d1c1148e4",
+      "labels": [
+        {
+          "id": "FMA70450",
+          "name": "medial inferior segmental hepatic artery",
+          "representation": "BP8177",
+          "files": [
+            "FJ3106"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA70450",
+          "name": "medial inferior segmental hepatic artery",
+          "representation": "BP9655",
+          "files": [
+            "FJ3106"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -22.3055,
+        -196.078,
+        1102.25
+      ],
+      "max": [
+        4.9834,
+        -156.607,
+        1139.36
+      ],
+      "topology": {
+        "sourceVertices": 425,
+        "exactUniqueVertices": 379,
+        "unusedUniqueVertices": 0,
+        "triangles": 754,
+        "edges": 1131,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 754,
+            "vertices": 379,
+            "bounds": {
+              "min": [
+                -22.3055,
+                -196.078,
+                1102.25
+              ],
+              "max": [
+                4.9834,
+                -156.607,
+                1139.36
+              ]
+            },
+            "areaMm2": 419.49505175268,
+            "algebraicVolumeMm3": 207.70042236999294
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3107",
+      "sha256": "0cb461fc8492d383e8acfb946d9fbf568b011644b9855b1c65059253d66398b3",
+      "labels": [
+        {
+          "id": "FMA70449",
+          "name": "medial superior segmental hepatic artery",
+          "representation": "BP8099",
+          "files": [
+            "FJ3107"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA70449",
+          "name": "medial superior segmental hepatic artery",
+          "representation": "BP9610",
+          "files": [
+            "FJ3107"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -31.1104,
+        -179.039,
+        1133.04
+      ],
+      "max": [
+        -8.16851,
+        -150.985,
+        1148.36
+      ],
+      "topology": {
+        "sourceVertices": 496,
+        "exactUniqueVertices": 308,
+        "unusedUniqueVertices": 0,
+        "triangles": 612,
+        "edges": 918,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 612,
+            "vertices": 308,
+            "bounds": {
+              "min": [
+                -31.1104,
+                -179.039,
+                1133.04
+              ],
+              "max": [
+                -8.16851,
+                -150.985,
+                1148.36
+              ]
+            },
+            "areaMm2": 198.09154068086522,
+            "algebraicVolumeMm3": 55.146589253583656
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3108",
+      "sha256": "751c75af681299c75f8424a589e0aade0d1c15e31056ad2ed48d3ccd70a24c83",
+      "labels": [
+        {
+          "id": "FMA71870",
+          "name": "posterior inferior tributary of right hepatic biliary tree",
+          "representation": "BP9072",
+          "files": [
+            "FJ3108"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA71870",
+          "name": "posterior inferior tributary of right hepatic biliary tree",
+          "representation": "BP10132",
+          "files": [
+            "FJ3108"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -82.3554,
+        -146.872,
+        1068.71
+      ],
+      "max": [
+        -27.7019,
+        -111.487,
+        1112.29
+      ],
+      "topology": {
+        "sourceVertices": 503,
+        "exactUniqueVertices": 437,
+        "unusedUniqueVertices": 0,
+        "triangles": 870,
+        "edges": 1305,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 870,
+            "vertices": 437,
+            "bounds": {
+              "min": [
+                -82.3554,
+                -146.872,
+                1068.71
+              ],
+              "max": [
+                -27.7019,
+                -111.487,
+                1112.29
+              ]
+            },
+            "areaMm2": 582.0898785545866,
+            "algebraicVolumeMm3": 295.62553435132844
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3109",
+      "sha256": "37a65eb6bdb90b815de604952b35649a4b7433c34dc2cb1b099889a83a4f4bc4",
+      "labels": [
+        {
+          "id": "FMA71869",
+          "name": "posterior superior tributary of right hepatic biliary tree",
+          "representation": "BP8658",
+          "files": [
+            "FJ3109",
+            "FJ3110"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA71869",
+          "name": "posterior superior tributary of right hepatic biliary tree",
+          "representation": "BP9897",
+          "files": [
+            "FJ3109",
+            "FJ3110"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -63.2162,
+        -118.489,
+        1107.02
+      ],
+      "max": [
+        -55.0851,
+        -55.416,
+        1135.34
+      ],
+      "topology": {
+        "sourceVertices": 404,
+        "exactUniqueVertices": 316,
+        "unusedUniqueVertices": 0,
+        "triangles": 628,
+        "edges": 942,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 628,
+            "vertices": 316,
+            "bounds": {
+              "min": [
+                -63.2162,
+                -118.489,
+                1107.02
+              ],
+              "max": [
+                -55.0851,
+                -55.416,
+                1135.34
+              ]
+            },
+            "areaMm2": 230.94638463329898,
+            "algebraicVolumeMm3": 57.52913951948339
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3110",
+      "sha256": "b562dd3f3bcf6a520d382ce41aa95536b37568949aec3c3ed23226a682f0743b",
+      "labels": [
+        {
+          "id": "FMA71869",
+          "name": "posterior superior tributary of right hepatic biliary tree",
+          "representation": "BP8658",
+          "files": [
+            "FJ3109",
+            "FJ3110"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA71869",
+          "name": "posterior superior tributary of right hepatic biliary tree",
+          "representation": "BP9897",
+          "files": [
+            "FJ3109",
+            "FJ3110"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -91.8446,
+        -125.805,
+        1092.77
+      ],
+      "max": [
+        -45.1855,
+        -67.1616,
+        1138.95
+      ],
+      "topology": {
+        "sourceVertices": 896,
+        "exactUniqueVertices": 606,
+        "unusedUniqueVertices": 0,
+        "triangles": 1196,
+        "edges": 1794,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 8,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 430,
+            "vertices": 217,
+            "bounds": {
+              "min": [
+                -91.8446,
+                -102.704,
+                1113.46
+              ],
+              "max": [
+                -61.4996,
+                -84.765,
+                1127.36
+              ]
+            },
+            "areaMm2": 100.73253319853778,
+            "algebraicVolumeMm3": 17.12526015728356
+          },
+          {
+            "firstFace": 224,
+            "triangles": 264,
+            "vertices": 134,
+            "bounds": {
+              "min": [
+                -73.734,
+                -71.7894,
+                1132.1
+              ],
+              "max": [
+                -59.9071,
+                -67.1616,
+                1136.7
+              ]
+            },
+            "areaMm2": 32.13842313452303,
+            "algebraicVolumeMm3": 4.835588810566454
+          },
+          {
+            "firstFace": 778,
+            "triangles": 252,
+            "vertices": 128,
+            "bounds": {
+              "min": [
+                -57.0129,
+                -83.6004,
+                1127.94
+              ],
+              "max": [
+                -45.1855,
+                -73.7414,
+                1138.95
+              ]
+            },
+            "areaMm2": 37.922330273134854,
+            "algebraicVolumeMm3": 5.780344091550023
+          },
+          {
+            "firstFace": 606,
+            "triangles": 250,
+            "vertices": 127,
+            "bounds": {
+              "min": [
+                -89.3428,
+                -125.805,
+                1092.77
+              ],
+              "max": [
+                -73.3203,
+                -114.193,
+                1096.37
+              ]
+            },
+            "areaMm2": 45.35733796445822,
+            "algebraicVolumeMm3": 7.641697208666508
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3111",
+      "sha256": "be81ba12835c12dcfc80ec9bff9afac3bfb0508b3cad4063de981caa60dfee0c",
+      "labels": [
+        {
+          "id": "FMA15424",
+          "name": "posterior inferior segmental branch of right portal vein",
+          "representation": "BP8786",
+          "files": [
+            "FJ3111"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15424",
+          "name": "posterior inferior segmental branch of right portal vein",
+          "representation": "BP9972",
+          "files": [
+            "FJ3111"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -83.1964,
+        -143.151,
+        1068.63
+      ],
+      "max": [
+        -24.4276,
+        -111.227,
+        1116.82
+      ],
+      "topology": {
+        "sourceVertices": 1100,
+        "exactUniqueVertices": 1099,
+        "unusedUniqueVertices": 0,
+        "triangles": 2194,
+        "edges": 3291,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 2194,
+            "vertices": 1099,
+            "bounds": {
+              "min": [
+                -83.1964,
+                -143.151,
+                1068.63
+              ],
+              "max": [
+                -24.4276,
+                -111.227,
+                1116.82
+              ]
+            },
+            "areaMm2": 728.1558418781631,
+            "algebraicVolumeMm3": 430.55894123833104
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3112",
+      "sha256": "86d033cb87c87b08a0a387c9b40b94ae3507af62aa969ec9b3f81b2a827a513f",
+      "labels": [
+        {
+          "id": "FMA15423",
+          "name": "posterior superior segmental branch of right portal vein",
+          "representation": "BP8515",
+          "files": [
+            "FJ3112",
+            "FJ3113"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15423",
+          "name": "posterior superior segmental branch of right portal vein",
+          "representation": "BP9817",
+          "files": [
+            "FJ3112",
+            "FJ3113"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -64.6249,
+        -116.221,
+        1109.48
+      ],
+      "max": [
+        -57.1358,
+        -55.0143,
+        1135.83
+      ],
+      "topology": {
+        "sourceVertices": 554,
+        "exactUniqueVertices": 552,
+        "unusedUniqueVertices": 0,
+        "triangles": 1100,
+        "edges": 1650,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1100,
+            "vertices": 552,
+            "bounds": {
+              "min": [
+                -64.6249,
+                -116.221,
+                1109.48
+              ],
+              "max": [
+                -57.1358,
+                -55.0143,
+                1135.83
+              ]
+            },
+            "areaMm2": 352.2597771171199,
+            "algebraicVolumeMm3": 142.11159173426728
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3113",
+      "sha256": "cf50d8358b5612e561d32099f85e46826a1e2eec087d6326adbbebc477bb1d19",
+      "labels": [
+        {
+          "id": "FMA15423",
+          "name": "posterior superior segmental branch of right portal vein",
+          "representation": "BP8515",
+          "files": [
+            "FJ3112",
+            "FJ3113"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15423",
+          "name": "posterior superior segmental branch of right portal vein",
+          "representation": "BP9817",
+          "files": [
+            "FJ3112",
+            "FJ3113"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -101.437,
+        -139.137,
+        1076.84
+      ],
+      "max": [
+        -16.4453,
+        -66.8876,
+        1139.59
+      ],
+      "topology": {
+        "sourceVertices": 1031,
+        "exactUniqueVertices": 868,
+        "unusedUniqueVertices": 0,
+        "triangles": 1712,
+        "edges": 2568,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 12,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 349,
+            "triangles": 392,
+            "vertices": 198,
+            "bounds": {
+              "min": [
+                -101.437,
+                -129.374,
+                1076.84
+              ],
+              "max": [
+                -80.4358,
+                -117.048,
+                1085.96
+              ]
+            },
+            "areaMm2": 87.53514779580902,
+            "algebraicVolumeMm3": 22.525241428832857
+          },
+          {
+            "firstFace": 0,
+            "triangles": 302,
+            "vertices": 153,
+            "bounds": {
+              "min": [
+                -92.2894,
+                -104.305,
+                1115.03
+              ],
+              "max": [
+                -62.7383,
+                -89.9586,
+                1127.89
+              ]
+            },
+            "areaMm2": 159.5165278330835,
+            "algebraicVolumeMm3": 54.24898788096745
+          },
+          {
+            "firstFace": 582,
+            "triangles": 264,
+            "vertices": 134,
+            "bounds": {
+              "min": [
+                -89.425,
+                -125.168,
+                1093.37
+              ],
+              "max": [
+                -72.9416,
+                -112.595,
+                1097.79
+              ]
+            },
+            "areaMm2": 71.18878409754447,
+            "algebraicVolumeMm3": 17.9595572150002
+          },
+          {
+            "firstFace": 859,
+            "triangles": 262,
+            "vertices": 133,
+            "bounds": {
+              "min": [
+                -58.5815,
+                -83.3578,
+                1128.68
+              ],
+              "max": [
+                -45.5628,
+                -73.8579,
+                1139.59
+              ]
+            },
+            "areaMm2": 61.89706655912524,
+            "algebraicVolumeMm3": 15.75630935675059
+          },
+          {
+            "firstFace": 1464,
+            "triangles": 248,
+            "vertices": 126,
+            "bounds": {
+              "min": [
+                -29.4831,
+                -139.137,
+                1110.14
+              ],
+              "max": [
+                -16.4453,
+                -129.262,
+                1120.58
+              ]
+            },
+            "areaMm2": 92.23891620716253,
+            "algebraicVolumeMm3": 31.142270125166846
+          },
+          {
+            "firstFace": 73,
+            "triangles": 244,
+            "vertices": 124,
+            "bounds": {
+              "min": [
+                -73.9057,
+                -70.3334,
+                1132.97
+              ],
+              "max": [
+                -61.7056,
+                -66.8876,
+                1138.24
+              ]
+            },
+            "areaMm2": 35.891027851237446,
+            "algebraicVolumeMm3": 6.942736091916809
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3114",
+      "sha256": "a234049c9964ccf5042b9b20030c08824ac58ec80b758a2546f3027533c86706",
+      "labels": [
+        {
+          "id": "FMA70446",
+          "name": "posterior inferior segmental hepatic artery",
+          "representation": "BP8896",
+          "files": [
+            "FJ3114"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA70446",
+          "name": "posterior inferior segmental hepatic artery",
+          "representation": "BP10041",
+          "files": [
+            "FJ3114"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -82.2391,
+        -148.674,
+        1069.08
+      ],
+      "max": [
+        -27.3331,
+        -113.209,
+        1114.1
+      ],
+      "topology": {
+        "sourceVertices": 479,
+        "exactUniqueVertices": 388,
+        "unusedUniqueVertices": 0,
+        "triangles": 772,
+        "edges": 1158,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 772,
+            "vertices": 388,
+            "bounds": {
+              "min": [
+                -82.2391,
+                -148.674,
+                1069.08
+              ],
+              "max": [
+                -27.3331,
+                -113.209,
+                1114.1
+              ]
+            },
+            "areaMm2": 487.88857692277975,
+            "algebraicVolumeMm3": 193.4352617471624
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3115",
+      "sha256": "0b91de2f1433e506092600fbc25ddca37b9c5254858196de31b3c9b69f9ba4e6",
+      "labels": [
+        {
+          "id": "FMA70445",
+          "name": "posterior superior segmental hepatic artery",
+          "representation": "BP8503",
+          "files": [
+            "FJ3115",
+            "FJ3116"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA70445",
+          "name": "posterior superior segmental hepatic artery",
+          "representation": "BP9808",
+          "files": [
+            "FJ3115",
+            "FJ3116"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -101.458,
+        -141.673,
+        1077.5
+      ],
+      "max": [
+        -16.5156,
+        -55.2834,
+        1134.81
+      ],
+      "topology": {
+        "sourceVertices": 1037,
+        "exactUniqueVertices": 816,
+        "unusedUniqueVertices": 0,
+        "triangles": 1616,
+        "edges": 2424,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 8,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 656,
+            "vertices": 330,
+            "bounds": {
+              "min": [
+                -64.5106,
+                -120.029,
+                1107.97
+              ],
+              "max": [
+                -54.9239,
+                -55.2834,
+                1134.81
+              ]
+            },
+            "areaMm2": 247.13520724420096,
+            "algebraicVolumeMm3": 65.66124079605018
+          },
+          {
+            "firstFace": 1240,
+            "triangles": 376,
+            "vertices": 190,
+            "bounds": {
+              "min": [
+                -33.0622,
+                -141.673,
+                1106.74
+              ],
+              "max": [
+                -16.5156,
+                -128.349,
+                1119.57
+              ]
+            },
+            "areaMm2": 88.41555613175258,
+            "algebraicVolumeMm3": 23.350396106000375
+          },
+          {
+            "firstFace": 172,
+            "triangles": 330,
+            "vertices": 167,
+            "bounds": {
+              "min": [
+                -101.458,
+                -129.747,
+                1077.5
+              ],
+              "max": [
+                -79.0266,
+                -117.586,
+                1086.93
+              ]
+            },
+            "areaMm2": 65.54268635219621,
+            "algebraicVolumeMm3": 11.674902836333809
+          },
+          {
+            "firstFace": 317,
+            "triangles": 254,
+            "vertices": 129,
+            "bounds": {
+              "min": [
+                -88.959,
+                -125.774,
+                1093.52
+              ],
+              "max": [
+                -73.3162,
+                -114.555,
+                1096.94
+              ]
+            },
+            "areaMm2": 47.75351418425983,
+            "algebraicVolumeMm3": 8.697202854666552
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3116",
+      "sha256": "3fa2c973eb6a00e00972035a8926794f03e7b04cccf0ec4fa80ee30e85170f29",
+      "labels": [
+        {
+          "id": "FMA70445",
+          "name": "posterior superior segmental hepatic artery",
+          "representation": "BP8503",
+          "files": [
+            "FJ3115",
+            "FJ3116"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA70445",
+          "name": "posterior superior segmental hepatic artery",
+          "representation": "BP9808",
+          "files": [
+            "FJ3115",
+            "FJ3116"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -91.9306,
+        -103.572,
+        1113.26
+      ],
+      "max": [
+        -45.3082,
+        -66.7137,
+        1139.01
+      ],
+      "topology": {
+        "sourceVertices": 631,
+        "exactUniqueVertices": 413,
+        "unusedUniqueVertices": 0,
+        "triangles": 814,
+        "edges": 1221,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 6,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 390,
+            "vertices": 197,
+            "bounds": {
+              "min": [
+                -91.9306,
+                -103.572,
+                1113.26
+              ],
+              "max": [
+                -62.7075,
+                -84.8294,
+                1126.95
+              ]
+            },
+            "areaMm2": 121.18495404918865,
+            "algebraicVolumeMm3": 25.516666166100585
+          },
+          {
+            "firstFace": 124,
+            "triangles": 238,
+            "vertices": 121,
+            "bounds": {
+              "min": [
+                -74.1064,
+                -71.6633,
+                1131.59
+              ],
+              "max": [
+                -60.6231,
+                -66.7137,
+                1137.61
+              ]
+            },
+            "areaMm2": 33.62543780787445,
+            "algebraicVolumeMm3": 5.321001105683383
+          },
+          {
+            "firstFace": 522,
+            "triangles": 186,
+            "vertices": 95,
+            "bounds": {
+              "min": [
+                -58.2583,
+                -83.6979,
+                1127.14
+              ],
+              "max": [
+                -45.3082,
+                -73.3799,
+                1139.01
+              ]
+            },
+            "areaMm2": 35.65929065646651,
+            "algebraicVolumeMm3": 4.861056153350053
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3117",
+      "sha256": "ba48e5808de07cdaf52ef051062651be5db56862f305f6648d0537938dd41b23",
+      "labels": [
+        {
+          "id": "FMA70456",
+          "name": "trunk of right hepatic artery",
+          "representation": "BP8942",
+          "files": [
+            "FJ3117"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA70456",
+          "name": "trunk of right hepatic artery",
+          "representation": "BP10065",
+          "files": [
+            "FJ3117"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -30.1293,
+        -151.001,
+        1107.3
+      ],
+      "max": [
+        -18.0209,
+        -145.247,
+        1113.13
+      ],
+      "topology": {
+        "sourceVertices": 223,
+        "exactUniqueVertices": 223,
+        "unusedUniqueVertices": 0,
+        "triangles": 442,
+        "edges": 663,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 442,
+            "vertices": 223,
+            "bounds": {
+              "min": [
+                -30.1293,
+                -151.001,
+                1107.3
+              ],
+              "max": [
+                -18.0209,
+                -145.247,
+                1113.13
+              ]
+            },
+            "areaMm2": 151.8513259949336,
+            "algebraicVolumeMm3": 130.1672271510005
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3122",
+      "sha256": "ff00a9830cf1ab18c4de3186ddce1920d62daffe57ec51d6adc6bd64cd13beab",
+      "labels": [
+        {
+          "id": "FMA82695",
+          "name": "trunk of right portal vein",
+          "representation": "BP8922",
+          "files": [
+            "FJ3122"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA82695",
+          "name": "trunk of right portal vein",
+          "representation": "BP10055",
+          "files": [
+            "FJ3122"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -28.9291,
+        -144.206,
+        1104.62
+      ],
+      "max": [
+        -14.9449,
+        -137.749,
+        1113.79
+      ],
+      "topology": {
+        "sourceVertices": 105,
+        "exactUniqueVertices": 105,
+        "unusedUniqueVertices": 0,
+        "triangles": 206,
+        "edges": 309,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 206,
+            "vertices": 105,
+            "bounds": {
+              "min": [
+                -28.9291,
+                -144.206,
+                1104.62
+              ],
+              "max": [
+                -14.9449,
+                -137.749,
+                1113.79
+              ]
+            },
+            "areaMm2": 262.4678193441351,
+            "algebraicVolumeMm3": 322.8702794236682
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3123",
+      "sha256": "67c97c70cce9aed074743d4b3ceba046d34e1d3b05bc5ca35e39a37499e7a66d",
+      "labels": [
+        {
+          "id": "FMA14669",
+          "name": "right hepatic duct",
+          "representation": "BP9268",
+          "files": [
+            "FJ3123"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA14669",
+          "name": "right hepatic duct",
+          "representation": "BP10222",
+          "files": [
+            "FJ3123"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -31.2841,
+        -147.471,
+        1099.35
+      ],
+      "max": [
+        -21.7666,
+        -140.011,
+        1107.51
+      ],
+      "topology": {
+        "sourceVertices": 115,
+        "exactUniqueVertices": 115,
+        "unusedUniqueVertices": 0,
+        "triangles": 226,
+        "edges": 339,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 226,
+            "vertices": 115,
+            "bounds": {
+              "min": [
+                -31.2841,
+                -147.471,
+                1099.35
+              ],
+              "max": [
+                -21.7666,
+                -140.011,
+                1107.51
+              ]
+            },
+            "areaMm2": 149.93231041010228,
+            "algebraicVolumeMm3": 133.61183046083403
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3124",
+      "sha256": "a5427ce74353d9c3a2eb535961c78e5aae25a6d57a1e35100c304b000b906403",
+      "labels": [
+        {
+          "id": "FMA15425",
+          "name": "caudate lobe branch of left portal vein",
+          "representation": "BP8904",
+          "files": [
+            "FJ3124"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15425",
+          "name": "caudate lobe branch of left portal vein",
+          "representation": "BP10044",
+          "files": [
+            "FJ3124"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -13.3218,
+        -150.301,
+        1117.77
+      ],
+      "max": [
+        9.56085,
+        -116.44,
+        1134.04
+      ],
+      "topology": {
+        "sourceVertices": 319,
+        "exactUniqueVertices": 249,
+        "unusedUniqueVertices": 0,
+        "triangles": 494,
+        "edges": 741,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 494,
+            "vertices": 249,
+            "bounds": {
+              "min": [
+                -13.3218,
+                -150.301,
+                1117.77
+              ],
+              "max": [
+                9.56085,
+                -116.44,
+                1134.04
+              ]
+            },
+            "areaMm2": 261.77414155745623,
+            "algebraicVolumeMm3": 104.4352371610536
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3125",
+      "sha256": "adf3f9e59b7f0823541a33214fd1b0c127c7cb9d917b48a7fd3075522a74cd9d",
+      "labels": [
+        {
+          "id": "FMA15432",
+          "name": "lateral inferior segmental branch of left portal vein",
+          "representation": "BP8988",
+          "files": [
+            "FJ3125"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15432",
+          "name": "lateral inferior segmental branch of left portal vein",
+          "representation": "BP10082",
+          "files": [
+            "FJ3125"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        2.80427,
+        -199.507,
+        1108.3
+      ],
+      "max": [
+        52.3378,
+        -152.9,
+        1137.75
+      ],
+      "topology": {
+        "sourceVertices": 1161,
+        "exactUniqueVertices": 1144,
+        "unusedUniqueVertices": 0,
+        "triangles": 2284,
+        "edges": 3426,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 2284,
+            "vertices": 1144,
+            "bounds": {
+              "min": [
+                2.80427,
+                -199.507,
+                1108.3
+              ],
+              "max": [
+                52.3378,
+                -152.9,
+                1137.75
+              ]
+            },
+            "areaMm2": 750.4760928911757,
+            "algebraicVolumeMm3": 501.23557423603006
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3126",
+      "sha256": "c21b4c470358525f91162c4a0bff632f6bd25e09d2ad1b6df10ef2df09cb54b8",
+      "labels": [
+        {
+          "id": "FMA15431",
+          "name": "lateral superior segmental branch of left portal vein",
+          "representation": "BP8843",
+          "files": [
+            "FJ3126"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15431",
+          "name": "lateral superior segmental branch of left portal vein",
+          "representation": "BP10010",
+          "files": [
+            "FJ3126"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        2.90141,
+        -173.314,
+        1132.55
+      ],
+      "max": [
+        57.3275,
+        -128.277,
+        1163.06
+      ],
+      "topology": {
+        "sourceVertices": 1217,
+        "exactUniqueVertices": 1184,
+        "unusedUniqueVertices": 0,
+        "triangles": 2364,
+        "edges": 3546,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 2364,
+            "vertices": 1184,
+            "bounds": {
+              "min": [
+                2.90141,
+                -173.314,
+                1132.55
+              ],
+              "max": [
+                57.3275,
+                -128.277,
+                1163.06
+              ]
+            },
+            "areaMm2": 783.8300702567085,
+            "algebraicVolumeMm3": 547.8123462301301
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3127",
+      "sha256": "8e265e380cefb97c042957abc9c65180dcc59669dcd91888008483a2b601353f",
+      "labels": [
+        {
+          "id": "FMA15428",
+          "name": "medial superior segmental branch of left portal vein",
+          "representation": "BP8270",
+          "files": [
+            "FJ3127"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15428",
+          "name": "medial superior segmental branch of left portal vein",
+          "representation": "BP9692",
+          "files": [
+            "FJ3127"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -32.2659,
+        -179.216,
+        1128.12
+      ],
+      "max": [
+        -3.14715,
+        -150.947,
+        1149.4
+      ],
+      "topology": {
+        "sourceVertices": 662,
+        "exactUniqueVertices": 583,
+        "unusedUniqueVertices": 0,
+        "triangles": 1162,
+        "edges": 1743,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1162,
+            "vertices": 583,
+            "bounds": {
+              "min": [
+                -32.2659,
+                -179.216,
+                1128.12
+              ],
+              "max": [
+                -3.14715,
+                -150.947,
+                1149.4
+              ]
+            },
+            "areaMm2": 377.98472622183294,
+            "algebraicVolumeMm3": 177.8514486999006
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ3128",
+      "sha256": "c5586090113b7e556268612565d98737aca9eeceddd11c8d070110f883e00932",
+      "labels": [
+        {
+          "id": "FMA15429",
+          "name": "medial inferior segmental branch of left portal vein",
+          "representation": "BP9093",
+          "files": [
+            "FJ3128"
+          ],
+          "tree": "isa"
+        },
+        {
+          "id": "FMA15429",
+          "name": "medial inferior segmental branch of left portal vein",
+          "representation": "BP10140",
+          "files": [
+            "FJ3128"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "min": [
+        -23.1388,
+        -195.468,
+        1100.92
+      ],
+      "max": [
+        8.56892,
+        -158.36,
+        1137.34
+      ],
+      "topology": {
+        "sourceVertices": 838,
+        "exactUniqueVertices": 832,
+        "unusedUniqueVertices": 0,
+        "triangles": 1660,
+        "edges": 2490,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1660,
+            "vertices": 832,
+            "bounds": {
+              "min": [
+                -23.1388,
+                -195.468,
+                1100.92
+              ],
+              "max": [
+                8.56892,
+                -158.36,
+                1137.34
+              ]
+            },
+            "areaMm2": 542.7309538429133,
+            "algebraicVolumeMm3": 355.1551937035484
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    }
+  ],
+  "tissueFiles": [
+    "FJ2409",
+    "FJ2816",
+    "FJ2818",
+    "FJ2819",
+    "FJ2820",
+    "FJ2821",
+    "FJ2822",
+    "FJ2823",
+    "FJ2824"
+  ],
+  "segmentPairDiagnostic": [
+    {
+      "from": "FJ2822",
+      "to": "FJ2409",
+      "stride": 19,
+      "originalVertices": 9727,
+      "distances": {
+        "samples": 512,
+        "minMm": 0.002677669192515963,
+        "medianMm": 0.20664226050494663,
+        "maxMm": 8.609834824069479,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 102,
+            "weightedFraction": 0.19921875
+          },
+          {
+            "mm": 0.25,
+            "count": 281,
+            "weightedFraction": 0.548828125
+          },
+          {
+            "mm": 1,
+            "count": 402,
+            "weightedFraction": 0.78515625
+          },
+          {
+            "mm": 2,
+            "count": 442,
+            "weightedFraction": 0.86328125
+          }
+        ]
+      }
+    },
+    {
+      "from": "FJ2409",
+      "to": "FJ2822",
+      "stride": 9,
+      "originalVertices": 4271,
+      "distances": {
+        "samples": 475,
+        "minMm": 0.004815813439360572,
+        "medianMm": 0.43062118027816126,
+        "maxMm": 8.33684850123967,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 39,
+            "weightedFraction": 0.08210526315789474
+          },
+          {
+            "mm": 0.25,
+            "count": 148,
+            "weightedFraction": 0.31157894736842107
+          },
+          {
+            "mm": 1,
+            "count": 357,
+            "weightedFraction": 0.751578947368421
+          },
+          {
+            "mm": 2,
+            "count": 403,
+            "weightedFraction": 0.848421052631579
+          }
+        ]
+      }
+    }
+  ],
+  "decision": "Expose seven explicitly source-labelled vessel/duct groups. Preserve nine residual tissue files as one optional nonselectable context, never a validated Couinaud segment map.",
+  "limitations": [
+    "FJ2822 (source segment VI) and FJ2409 (source segment VII) have nearly identical extents and sampled near-coincident surfaces; distinct segment boundaries require adjudication. No relabelling, alignment or repair.",
+    "Source segment VIII combines FJ2823 and FJ2824; do not split or assign a new segment identity to either file.",
+    "Segment IV source FJ2820 has nonmanifold/degenerate geometry and detached internal remnants. Other source duplicate faces remain. Context is not a clean envelope or a measured organ volume.",
+    "These are partial source groups, not a complete continuous vascular/biliary tree, individual perfusion territories, surgical planes or clinical validation.",
+    "Right/left hepatic veins and hepatic artery proper were already separated from the parent aggregate; no complete venous outflow is represented by this nested subset."
+  ]
+}

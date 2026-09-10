@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Liver → Explore liver branches** adds [internal hepatic dissection](docs/HEPATIC_DISSECTION.md): seven arterial, portal, biliary and venous-tributary groups, optional tissue context, colour-coded presets, hide/Undo, fade and three separation styles. Source segment conflicts prevent a reliable Couinaud map; individual segment labels remain withheld. Search and collapsed teaching use exact source bindings. Clinical/imaging review remains pending.
+
 **Lung branch dissection → Show airway landmarks** adds optional trachea/ipsilateral main-bronchus orientation surfaces, a compact colour key, and automatic hiding during separation. Existing geometry and teaching bindings are unchanged. The main lung selection now also explains that tissue and fissure surfaces are missing; context does not establish continuous airway lumens or scan registration. See [source evidence and limitations](docs/PULMONARY_DISSECTION.md).
 
 **Lung → Explore lung branches** opens [lobe-group dissection](docs/PULMONARY_DISSECTION.md): three right and two left airway/vessel groups, each with compact selection, hide/Undo, fade and three separation styles. These are partial branch representations, **not lung tissue or fissure surfaces**. Search and future source-bound links reach 46 nested selections; the new branch-group lessons remain drafts. Each view loads only its selected lung.

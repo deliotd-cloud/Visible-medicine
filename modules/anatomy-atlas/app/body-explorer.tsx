@@ -128,6 +128,7 @@ import { eyeLayersFor } from '@/lib/eye-layers';
 import { ventriclesFor } from '@/lib/ventricles';
 import { cardiacFor } from '@/lib/cardiac';
 import { pulmonaryFor } from '@/lib/pulmonary';
+import { hepaticFor } from '@/lib/hepatic';
 import { bodyDisplayCatalog } from '@/lib/body-display-catalog';
 import {
   resolveNestedTarget,
@@ -1783,6 +1784,13 @@ export default function BodyExplorer({
                     </div>
                     <h2>{selected.name}</h2>
                     <ReviewStatus structureId={selected.id} />
+                    {!exam && hepaticFor(selected).length > 0 && (
+                      <p className="vm-practice-note">
+                        Liver segment boundaries are not validated. Explore the
+                        supplied internal vessel and bile-duct groups
+                        separately.
+                      </p>
+                    )}
                     {!exam && pulmonaryFor(selected).length > 0 && (
                       <p className="vm-practice-note">
                         This model shows airway and vessel branches. Lung tissue
@@ -1814,7 +1822,8 @@ export default function BodyExplorer({
                     {!exam &&
                       (ventriclesFor(selected).length > 0 ||
                         cardiacFor(selected).length > 0 ||
-                        pulmonaryFor(selected).length > 0) && (
+                        pulmonaryFor(selected).length > 0 ||
+                        hepaticFor(selected).length > 0) && (
                         <div className="body-selection-actions">
                           <Button
                             ref={ventricleLauncher}
@@ -1828,11 +1837,13 @@ export default function BodyExplorer({
                             }}
                           >
                             <Layers3 />{' '}
-                            {pulmonaryFor(selected).length
-                              ? 'Explore lung branches'
-                              : cardiacFor(selected).length
-                                ? 'Explore heart chambers'
-                                : 'Dissect brain'}
+                            {hepaticFor(selected).length
+                              ? 'Explore liver branches'
+                              : pulmonaryFor(selected).length
+                                ? 'Explore lung branches'
+                                : cardiacFor(selected).length
+                                  ? 'Explore heart chambers'
+                                  : 'Dissect brain'}
                           </Button>
                         </div>
                       )}
