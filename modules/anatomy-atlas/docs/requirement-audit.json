@@ -71,6 +71,11 @@
     "app/ventricles.tsx": "cd9ea82d9148c44a288f34ac84da151f056c91fdc1addcdd4e48cadbd7043bbf",
     "app/ventricular-relationships.css": "7dfa2927b9f203aa13dbd1f2205c9429e7b79ffbaa86108b57fb3c69b1b71400",
     "app/body-scene.tsx": "12755c0012553c7df3d101487984b9aa86ac58ab27f803440023698e5036d5dc",
+    "app/um-knee-study.tsx": "355811ebf55d2666dc04bfb30f17cf17e03b13235ddaac4cf4b30838df9707e4",
+    "app/um-knee-study.css": "cdbbbce845f156f6bcf88d6989df28ba2cfe367de3a0ab476c954ed9f46290ea",
+    "app/um-knee-entry.css": "b68e0232a417ca07cc3ae07ed3e756c93833623981a5cf5323b7a71db7017339",
+    "lib/um-knee-study.ts": "80908fce33eb88fe5d217d8ed70c948559c19981c48a7daf034353224ee25b55",
+    "public/models/um-knee/catalog.json": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e",
     "lib/origin-guides.ts": "b333566888bf13805da9559004fbfbfa6596095a65d7ca8772de8259ca974ff6",
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
@@ -81,6 +86,17 @@
     "nestedTeachingData": "b74ddd2f8575fe1bef1d07424db49de126bc94700166eec88f5dc0c2e79e1770"
   },
   "anatomy": {
+    "independentSpecimens": [
+      {
+        "id": "um-5t6tz7-v1-2:knee",
+        "representations": 15,
+        "source": "https://doi.org/10.22452/RD/5T6TZ7",
+        "license": "CC0-1.0",
+        "registeredToBodyParts3D": false,
+        "clinicalApproval": false,
+        "detailedTeaching": "pending; not counted as root-body or nested teaching"
+      }
+    ],
     "displayCorrections": [
       {
         "fmaId": "FMA7198",
@@ -1066,8 +1082,8 @@
       "png": 4,
       "svg": 2,
       "md": 1,
-      "glb": 102,
-      "json": 19,
+      "glb": 103,
+      "json": 20,
       "html": 1,
       "tsv": 1
     },

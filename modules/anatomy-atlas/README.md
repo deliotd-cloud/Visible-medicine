@@ -1,8 +1,8 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
-A [CC0 independent knee reference](docs/UM_KNEE_SOURCE.md) is prepared with 15 source surfaces, including cruciate/collateral ligaments, cartilage and a meniscus group. It is **not yet in the live atlas** and is not registered to the existing body. Original source files, licence evidence and reproducible geometry checks are saved for the next integration step.
+**Knee & leg → Knee tissues · separate specimen** opens an [independent CC0 knee reference](docs/UM_KNEE_SOURCE.md) with 15 selectable source surfaces and six study views. Select, search, fade others, set aside/restore, Undo/Redo and choose Spread/Extract/Tray separation. This is a different source subject, not registered to the existing body or clinically approved. Original files, licence evidence and reproducible geometry checks are retained.
 
-**Knee & leg → Study views → Knee** opens [three joint close-up dissections](docs/KNEE_STUDIES.md): bony relationships, patella set aside and posterior popliteus. Left/right filters and existing removal/history controls work with unchanged whole source structures. Menisci, ligaments and cartilage remain absent.
+**Knee & leg → Study views → Knee** opens [three joint close-up dissections](docs/KNEE_STUDIES.md): bony relationships, patella set aside and posterior popliteus. Left/right filters and existing removal/history controls work with unchanged whole source structures. Menisci, ligaments and cartilage remain absent from that body subject; the new separate knee specimen does not silently fill its gaps.
 
 **Spine → Study views** now includes [six focused spinal-level dissections](docs/SPINAL_LEVEL_STUDIES.md), from C1–C2 to L5–S1. Inspect small bone/disc groups with the existing compact controls. T12–L1 is clearly marked bones-only because its source disc is unresolved. [Development priority](docs/DEVELOPMENT_PRIORITIES.md) is now the wider atlas and body regions; detailed oral work is deferred.
 

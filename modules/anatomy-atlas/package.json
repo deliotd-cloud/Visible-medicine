@@ -7,6 +7,8 @@
   },
   "scripts": {
     "um-knee:prototype": "node scripts/export-um-knee-prototype.mjs",
+    "um-knee:export": "node scripts/export-um-knee-study.mjs",
+    "um-knee:test": "node scripts/export-um-knee-study.mjs --check && node scripts/validate-um-knee-study.mjs",
     "um-knee:check": "node scripts/export-um-knee-prototype.mjs --check && node scripts/validate-um-knee-prototype.mjs",
     "knee-studies:test": "node scripts/validate-knee-studies.mjs",
     "spinal-level-studies:test": "node scripts/validate-spinal-level-studies.mjs",

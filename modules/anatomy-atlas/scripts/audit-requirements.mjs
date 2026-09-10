@@ -84,6 +84,7 @@ const hepatic = await json('public/models/bodyparts3d/hepatic/catalog.json');
 const renal = await json('public/models/bodyparts3d/renal/catalog.json');
 const pancreatic = await json('public/models/bodyparts3d/pancreatic/catalog.json');
 const cricothyroid = await json('public/models/bodyparts3d/cricothyroid/catalog.json');
+const independentKnee = await json('public/models/um-knee/catalog.json');
 const visualPathway = await json(
   'public/models/bodyparts3d/visual-pathway/catalog.json',
 );
@@ -281,6 +282,11 @@ for (const path of [
   'app/ventricles.tsx',
   'app/ventricular-relationships.css',
   'app/body-scene.tsx',
+  'app/um-knee-study.tsx',
+  'app/um-knee-study.css',
+  'app/um-knee-entry.css',
+  'lib/um-knee-study.ts',
+  'public/models/um-knee/catalog.json',
   'lib/origin-guides.ts',
   'lib/learning-entitlements.ts',
   'public/brand/visible-medicine-lockup-dark.png',
@@ -340,6 +346,15 @@ const report = {
     'Offline source and displayed-copy inventory; no clinical or browser certification.',
   sourceHashes,
   anatomy: {
+    independentSpecimens: [{
+      id: independentKnee.specimenId,
+      representations: independentKnee.structures.length,
+      source: independentKnee.source.doi,
+      license: independentKnee.source.license,
+      registeredToBodyParts3D: independentKnee.registeredToBodyParts3D,
+      clinicalApproval: independentKnee.structures.every((s) => s.validation.anatomicalReview),
+      detailedTeaching: 'pending; not counted as root-body or nested teaching',
+    }],
     displayCorrections: displayCatalog.structures
       .filter(
         (s, i) => JSON.stringify(s) !== JSON.stringify(catalog.structures[i]),

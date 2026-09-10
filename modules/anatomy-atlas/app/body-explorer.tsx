@@ -1,4 +1,5 @@
 'use client';
+import './um-knee-entry.css';
 import {
   useCallback,
   useEffect,
@@ -160,6 +161,7 @@ const Scene = dynamic(() => import('./body-scene').then((m) => m.BodyScene), {
 });
 const EyeLayers = dynamic(() => import('./eye-layers'), { ssr: false });
 const Ventricles = dynamic(() => import('./ventricles'), { ssr: false });
+const KneeSpecimen = dynamic(() => import('./um-knee-study'), { ssr: false });
 const systemKeys = Object.keys(bodySystems) as BodySystem[];
 const icons = {
   skeleton: Bone,
@@ -233,6 +235,12 @@ export default function BodyExplorer({
   >(null);
   const nestedReturnFocus = useRef<HTMLButtonElement | null>(null);
   const [eyeParent, setEyeParent] = useState<BodyStructure | null>(null);
+  const [kneeSpecimenOpen, setKneeSpecimenOpen] = useState(false);
+  const kneeSpecimenLauncher = useRef<HTMLButtonElement | null>(null);
+  const closeKneeSpecimen = useCallback(() => {
+    setKneeSpecimenOpen(false);
+    requestAnimationFrame(() => kneeSpecimenLauncher.current?.focus());
+  }, []);
   const eyeLauncher = useRef<HTMLButtonElement | null>(null);
   const closeEyeLayers = useCallback(() => {
     setEyeParent(null);
@@ -1063,6 +1071,13 @@ export default function BodyExplorer({
         </details>
       </WorkspaceOnly>
       <WorkspaceOnly modes={['explore', 'dissect']}>
+        {initialRegion === 'leg' && (
+          <Button ref={kneeSpecimenLauncher} variant="outline" size="sm"
+            className="um-knee-launch" disabled={exam}
+            onClick={() => setKneeSpecimenOpen(true)}>
+            Knee tissues · separate specimen
+          </Button>
+        )}
         <details className="body-display-tools">
           <summary>
             Display options<small>Quick views · arrangement · surfaces</small>
@@ -2161,6 +2176,9 @@ export default function BodyExplorer({
           initialTeachingTopic={nestedSelection?.teachingTopic}
           onClose={closeEyeLayers}
         />
+      )}
+      {kneeSpecimenOpen && initialRegion === 'leg' && !exam && (
+        <KneeSpecimen onClose={closeKneeSpecimen} />
       )}
       {ventricleParent && !exam && ventricleParent.id === selectedId && (
         <Ventricles

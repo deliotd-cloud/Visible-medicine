@@ -10,7 +10,7 @@ The two gingiva candidates and original bytes remain preserved in the [source re
 
 ## Main workstream
 
-Next concrete integration: the [independent CC0 knee reference](UM_KNEE_SOURCE.md) supplies actual joint tissues in its own source frame. The 15-surface prototype and originals are prepared. Integrate it as a separately labelled specimen, not a graft into BodyParts3D. Peripheral-nerve gaps remain open. Avoid redoing the completed source-ingestion checks without a changed input.
+The [independent CC0 knee reference](UM_KNEE_SOURCE.md) now has a dedicated compact interactive study with 15 surfaces and six reversible dissection choices. It remains separate from BodyParts3D and clinically unvalidated. Continue meaningful body-region anatomy and source-specific teaching; major peripheral-nerve gaps remain open. Avoid redoing completed ingestion/view checks without a changed input or returning to routine oral sculpting. Additional anatomy from the same licensed limb source may be assessed regionally without downloading its patient scans.
 
 1. Improve focused dissection of the spine and major limb regions using accurate existing relationships and well-scoped source additions. Keep local anatomy visible without unrelated full-body clutter. The [spinal-level studies](SPINAL_LEVEL_STUDIES.md) and [knee studies with close-ups](KNEE_STUDIES.md) begin this work after the priority change.
 2. Prioritise clinically useful missing limb/axial anatomy: major peripheral nerves and plexuses, joint/ligament and fascial detail. Licence, identity and shared-coordinate evidence must precede import. Do not draw guessed nerve routes or mislabel the existing central-canal mesh as spinal cord.

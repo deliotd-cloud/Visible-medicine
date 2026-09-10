@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Independent knee specimen](UM_KNEE_SOURCE.md): ${anatomy.independentSpecimens[0].representations} selectable CC0 source surfaces in six compact dissection views, including cruciate/collateral ligaments, cartilage and grouped menisci. Open from Knee & leg. These belong to a different source subject, not the body below; registration, clinical approval and detailed specimen-specific teaching remain pending.
+
 [Knee dissection studies](KNEE_STUDIES.md) add three compact views with automatic joint close-ups: bony relationships, patella set aside and posterior popliteus. Ten existing source representations remain whole; cartilage, ligaments and menisci are not added.
 
 [Development priority](DEVELOPMENT_PRIORITIES.md) is the wider atlas and body regions; detailed oral work is deferred. Six [spinal-level studies](SPINAL_LEVEL_STUDIES.md) expose existing bone/disc groups with compact controls. T12–L1 is explicitly bones-only because its source disc is unresolved.
