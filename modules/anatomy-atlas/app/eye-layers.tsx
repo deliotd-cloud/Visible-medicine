@@ -20,12 +20,12 @@ import {
 } from '@/components/ui/dialog';
 import { BodyScene, retryBodyAssets } from './body-scene';
 import { allBodySystems, type BodyStructure } from './body-types';
+import { initialInspection } from '@/lib/inspection-state';
 import {
-  initialInspection,
-  sectionAxes,
-  type InspectionState,
-  type SectionPlane,
-} from '@/lib/inspection-state';
+  CutawayControls as EyeCutawayControls,
+  cutPlanes as eyeCutPlanes,
+} from './cutaway-controls';
+export { CutawayControls as EyeCutawayControls } from './cutaway-controls';
 import {
   selectionBounds,
   selectionVisibility,
@@ -47,91 +47,6 @@ import type { DissectionView } from './dissection-data';
 import type { BodyLayout } from '@/lib/body-arrangement';
 import type { RendererHealth } from '@/lib/renderer-health';
 import './eye-layers.css';
-
-const eyeCutPlanes: Record<SectionPlane, string> = {
-  off: 'Off · whole components',
-  axial: 'Axial · horizontal',
-  coronal: 'Coronal · front–back',
-  sagittal: 'Sagittal · right–left',
-};
-
-export function EyeCutawayControls({
-  value,
-  onChange,
-}: {
-  value: InspectionState;
-  onChange: (next: InspectionState) => void;
-}) {
-  const axis = value.plane === 'off' ? null : sectionAxes[value.plane];
-  return (
-    <details className="eye-layer-cutaway">
-      <summary>
-        Cutaway · {value.plane === 'off' ? 'Off' : eyeCutPlanes[value.plane]}
-      </summary>
-      <Select
-        value={value.plane}
-        onValueChange={(plane) => {
-          if (plane && Object.hasOwn(eyeCutPlanes, plane))
-            onChange({
-              ...initialInspection,
-              plane: plane as SectionPlane,
-            });
-        }}
-      >
-        <SelectTrigger aria-label="Eye cutaway plane">
-          <SelectValue>{eyeCutPlanes[value.plane]}</SelectValue>
-        </SelectTrigger>
-        <SelectContent>
-          {Object.entries(eyeCutPlanes).map(([plane, label]) => (
-            <SelectItem key={plane} value={plane}>
-              {label}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
-      {axis && (
-        <>
-          <label htmlFor="eye-layer-cut-position">
-            Cut position · {value.position}%
-          </label>
-          <Slider
-            id="eye-layer-cut-position"
-            aria-label="Eye cutaway position"
-            aria-valuetext={`${value.position}% from ${axis.low.toLowerCase()} to ${axis.high.toLowerCase()}`}
-            min={0}
-            max={100}
-            step={1}
-            value={[value.position]}
-            onValueChange={(values) => {
-              const position = Array.isArray(values) ? values[0] : values;
-              if (Number.isFinite(position))
-                onChange({
-                  ...value,
-                  position: Math.max(0, Math.min(100, position)),
-                });
-            }}
-          />
-          <div className="eye-layer-cut-axis" aria-hidden="true">
-            <span>{axis.low}</span>
-            <span>{axis.high}</span>
-          </div>
-          <Button
-            size="sm"
-            variant="outline"
-            aria-label="Reverse eye cutaway side"
-            onClick={() => onChange({ ...value, flipped: !value.flipped })}
-          >
-            Keep {value.flipped ? axis.low : axis.high} · reverse
-          </Button>
-          <p>
-            Artificial open-surface cut, not a scan or reconstructed tissue. It
-            also cuts the selected component and follows separated parts.
-          </p>
-        </>
-      )}
-    </details>
-  );
-}
 
 export function EyeLayerView({
   parent,

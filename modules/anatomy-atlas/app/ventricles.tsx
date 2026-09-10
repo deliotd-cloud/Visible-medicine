@@ -22,6 +22,11 @@ import { BodyScene, retryBodyAssets } from './body-scene';
 import { allBodySystems, type BodyStructure } from './body-types';
 import { initialInspection } from '@/lib/inspection-state';
 import {
+  selectionBounds,
+  selectionVisibility,
+} from '@/lib/selection-visibility';
+import { CutawayControls, cutPlanes } from './cutaway-controls';
+import {
   initialVentricles,
   reduceVentricles,
   ventricleCatalog as ventricularCatalog,
@@ -137,6 +142,9 @@ export function VentricularView({
     [parent, isBrainstem, isCerebral, isCardiac, isPulmonary, isHepatic],
   );
   const selectableIds = useMemo(() => layers.map((s) => s.id), [layers]);
+  // Only the complete selectable source set defines the cut; context/hiding never shifts it.
+  const inspectionBounds = useMemo(() => selectionBounds(layers), [layers]);
+  const [inspection, setInspection] = useState(initialInspection);
   const initialSelection = layers.find((s) => s.id === initialSelectedId)?.id;
   const relationships = useMemo(
     () => (study === 'ventricles' ? ventricularRelationshipsFor(parent) : []),
@@ -291,6 +299,15 @@ export function VentricularView({
     [],
   );
   const selected = layers.find((s) => s.id === selectedId);
+  const cutSelection = selected
+    ? selectionVisibility({
+        system: selected.system,
+        enabled: true,
+        bounds: selected.bounds,
+        frame: inspectionBounds,
+        inspection,
+      })
+    : null;
   const hiddenIds = [
     ...hidden,
     ...(!context || explode > 0 ? ventricleCatalog.contextIds : []),
@@ -376,6 +393,7 @@ export function VentricularView({
     setExplode(0);
     setFocus(false);
     setIsolated(false);
+    setInspection(initialInspection);
   }
   const presetValue =
     relationship?.id ??
@@ -426,7 +444,8 @@ export function VentricularView({
           reset={reset}
           focus={focus}
           exam={false}
-          inspection={initialInspection}
+          inspection={inspection}
+          inspectionBounds={inspectionBounds}
           plate={false}
           appearance={appearance}
           retries={Object.fromEntries(
@@ -508,10 +527,24 @@ export function VentricularView({
             <RotateCcw /> Frame all
           </Button>
         </div>
-        {explode > 0 && (
+        {(explode > 0 || inspection.plane !== 'off') && (
           <p className="eye-layer-layout-note">
-            Separated teaching layout · not anatomical positions. Context hidden
-            until reassembled.
+            <span>
+              {explode > 0 &&
+                'Separated teaching layout · not anatomical positions. Context hidden until reassembled.'}
+              {explode > 0 && inspection.plane !== 'off' && ' · '}
+              {inspection.plane !== 'off' &&
+                `${cutPlanes[inspection.plane]} cut · ${inspection.position}% · not a scan`}
+            </span>
+            {inspection.plane !== 'off' && (
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => setInspection(initialInspection)}
+              >
+                Restore whole view
+              </Button>
+            )}
           </p>
         )}
       </div>
@@ -745,6 +778,15 @@ export function VentricularView({
             </p>
           )
         )}
+        <CutawayControls
+          value={inspection}
+          subject={title}
+          positionId={`nested-${study}-cut-position`}
+          onChange={(next) => {
+            setInspection(next);
+            setFocus(false);
+          }}
+        />
         <details className="eye-layer-separation">
           <summary>
             {study !== 'ventricles' && !isCardiac
@@ -802,6 +844,13 @@ export function VentricularView({
               · Draft
             </span>
             <p>{notes[selected.fmaId]}</p>
+            {cutSelection?.clipped && (
+              <output className="eye-layer-cut-warning">
+                {cutSelection.reasons.includes('Selection clipped by cutaway')
+                  ? 'This component is fully cut away. Use Restore whole view to see it.'
+                  : 'The cutaway may hide part of this component.'}
+              </output>
+            )}
             <div className="eye-layer-actions">
               <Button
                 size="sm"

@@ -29,6 +29,7 @@ import { AnatomyTissue } from './anatomy-tissue';
 import type { DissectionView } from './dissection-data';
 import { sectionPlanes, pointRetained } from '@/lib/inspection-geometry';
 import { systemOpacity, type InspectionState } from '@/lib/inspection-state';
+import type { SelectionBounds } from '@/lib/selection-visibility';
 import type { StudyCamera } from '@/lib/study-views';
 import { neuroGroupFor } from '@/lib/neuroanatomy';
 import { sceneLabelIds } from '@/lib/scene-labels';
@@ -59,6 +60,8 @@ type Props = {
   focus: boolean;
   exam: boolean;
   inspection: InspectionState;
+  /** Optional stable cut frame, independent of camera framing and context visibility. */
+  inspectionBounds?: SelectionBounds | null;
   plate: boolean;
   cameraCapture?: RefObject<StudyCamera | null>;
   cameraRestore?: RefObject<StudyCamera | null>;
@@ -264,6 +267,15 @@ export function BodyScene(props: Props) {
     return box;
   }, [props.structures]);
   const center = useMemo(() => frame.getCenter(new THREE.Vector3()), [frame]);
+  const cutFrame = useMemo(() => {
+    const bounds = props.inspectionBounds;
+    return bounds
+      ? new THREE.Box3(
+          new THREE.Vector3().fromArray(bounds.min),
+          new THREE.Vector3().fromArray(bounds.max),
+        )
+      : frame;
+  }, [props.inspectionBounds, frame]);
   const layout = props.exam ? 'spatial' : props.layout;
   const tray = useMemo(
     () =>
@@ -378,7 +390,7 @@ export function BodyScene(props: Props) {
                     items={rendered.filter((s) => s.bundle === bundle.id)}
                     props={props}
                     offsets={offsets}
-                    frame={frame}
+                    frame={cutFrame}
                     labelIds={labelIds}
                     renderedCount={rendered.length}
                   />

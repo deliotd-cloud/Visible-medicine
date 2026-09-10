@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Organ cutaway interpretation
+
+The [shared organ cutaway](NESTED_CUTAWAY.md) needs visual/device and clinical review for orientation, clipped selection/label behaviour and misleading open edges. It adds no caps, tissue, scan registration or source correction. Cavities remain space representations; pulmonary tissue/fissures and validated hepatic segment boundaries are still missing. Automated clipping checks are software evidence only.
+
 ## Dental teaching remains unreviewed
 
 The [56 dental drafts](DENTAL_CLINICAL_CURRICULUM.md) require dental-specialist acceptance of identity, tissue limits, trauma/impaction/infection wording and adult/child applicability. Tooth surfaces do not validate pulp, canals, periodontal support, pathology or procedures. All unresolved identity holds remain; no scan or clinical approval is added.

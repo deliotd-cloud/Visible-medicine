@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "nested-cutaway:test": "node scripts/validate-nested-cutaway.mjs",
     "hepatic:audit": "node scripts/audit-hepatic-source.mjs",
     "hepatic:export": "node scripts/export-hepatic.mjs",
     "hepatic:test": "node scripts/validate-hepatic.mjs",

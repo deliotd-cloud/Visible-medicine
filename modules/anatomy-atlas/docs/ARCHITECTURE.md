@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Shared organ cutaway
+
+[Nested cutaway controls](NESTED_CUTAWAY.md) reuse the eye interaction across all six other nested families. Each workbench owns inspection state; an optional source-bounds clipping frame in `BodyScene` keeps context toggles from moving the cut without changing camera framing. Existing geometry, section mathematics, source pins and entitlements are unchanged.
+
 ## Dental clinical teaching
 
 The [dental resolver](DENTAL_CLINICAL_CURRICULUM.md) binds 28 one-component ISA teeth to six topic groups. Current UI/export share the same exact-identity guard; tooth positions and sides are not combined or renumbered. Head-organ historical comparisons explicitly project pre-dental content. No UI, geometry, dependency, schema or review-state change.

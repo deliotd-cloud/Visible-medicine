@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Organ dissection → Cutaway** now extends the eye's compact axial/coronal/sagittal controls to brain, heart, lung and liver studies. Cut positions stay stable when context changes; reverse the retained side or use **Restore whole view** without losing selection. Tools start collapsed. These are open-surface teaching cuts, not scans or newly reconstructed anatomy. See [behaviour and validation](docs/NESTED_CUTAWAY.md).
+
 **Liver → Explore liver branches** adds [internal hepatic dissection](docs/HEPATIC_DISSECTION.md): seven arterial, portal, biliary and venous-tributary groups, optional tissue context, colour-coded presets, hide/Undo, fade and three separation styles. Source segment conflicts prevent a reliable Couinaud map; individual segment labels remain withheld. Search and collapsed teaching use exact source bindings. Clinical/imaging review remains pending.
 
 **Lung branch dissection → Show airway landmarks** adds optional trachea/ipsilateral main-bronchus orientation surfaces, a compact colour key, and automatic hiding during separation. Existing geometry and teaching bindings are unchanged. The main lung selection now also explains that tissue and fissure surfaces are missing; context does not establish continuous airway lumens or scan registration. See [source evidence and limitations](docs/PULMONARY_DISSECTION.md).
