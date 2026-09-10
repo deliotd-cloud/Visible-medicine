@@ -6,6 +6,9 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "gingiva:audit": "node scripts/audit-gingiva-source.mjs",
+    "gingiva:prototype": "node scripts/export-gingiva-prototype.mjs",
+    "gingiva:test": "node scripts/export-gingiva-prototype.mjs --check && node scripts/validate-gingiva-source.mjs",
     "pancreatic-dissection:export": "node scripts/export-pancreatic.mjs",
     "pancreatic-dissection:test": "node scripts/export-pancreatic.mjs --check && node scripts/validate-pancreatic-dissection.mjs",
     "cardiac-context:audit": "node scripts/audit-cardiac-context.mjs",

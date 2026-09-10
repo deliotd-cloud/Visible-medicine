@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+A [dental gingiva source review](docs/GINGIVA_SOURCE_REVIEW.md) preserves two licensed gum-envelope candidates, original files and a reproducible 3D prototype. They are **not in the live atlas**: coarse margins, tooth relationships and upper-mesh fragments require further adjudication. Existing dental studies are unchanged.
+
 **Select a shoulder bone → Imaging → X-ray** opens [source-linked orientation notes](docs/XRAY_TEACHING.md) for the scapula, proximal humerus and clavicle. Other structures remain explicitly pending. The compact information groups are retained; no radiograph, patient registration or paid-lecture access is implied.
 
 **Thyroid cartilage → Explore cricothyroid muscles**, or search “cricothyroid”, opens a [four-part laryngeal dissection](docs/CRICOTHYROID_DISSECTION.md). Select straight/oblique or right/left parts, show optional cartilage landmarks, and reuse cutaway, separation, labels and Undo/Redo. Source cleanup is disclosed and originals are preserved. Teaching remains draft; clinical validation and part-specific imaging are pending.

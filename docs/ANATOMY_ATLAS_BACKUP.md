@@ -1,6 +1,18 @@
 # Anatomy atlas backup — 10 September 2026
 
-## 10 September 2026 — live model orientation (current)
+## 10 September 2026 — gingiva source review (current)
+
+Source `ab3be594b6131f9029eeb3873d6b22dd1035ed1c`, tree `2e844c7f2e3c91b522a2c01bd511ac00c856e6c9`, parent `516b8ba21c6c911f59cf068f0b1f43e69ba12427`. Fourteen source paths mirrored into `modules/anatomy-atlas`; the main website is unchanged. Two licensed source gum envelopes and original OBJ files are retained as a non-public prototype, with 1,022-envelope/108-comparison source audit and 31 pinned tooth/jaw context records. Upper fragments/duplicate and coarse dental boundaries remain unresolved; all 3,766 original triangles are preserved. No clinical or runtime admission is implied. No dependency, public geometry, teaching, access entitlement or source hold changed.
+
+Sites saved version131 `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_4e30f9845a348191bf83ef2c69708f30` from the exact pushed source. Native archive270 files/127,590,400 bytes, SHA256`6b87688bee0a4683306f2b9daa25a246db79bd4522b813fe58202113b9934134`. This is a source/review-artifact checkpoint; unchanged live runtime remains version130. No deployment was requested for these non-public artifacts. Existing owner-private access is preserved and source credential cleared.
+
+Passed: reproducible full source audit, 1,125 dedicated integrity checks, exact GLB round-trip export with maximum positional error0.0000243 mm, original-source/hash/context checks and production build. No clinical, browser/GPU or device acceptance is claimed. Byte mirror:1,279 files/152,066,294 bytes/105 GLBs including three non-public prototypes; no common credential signatures found (not exhaustive).
+
+Recovery stem `work/atlas-gingiva-review-2026-09-10`: deployable archive89,785,189 bytes SHA256`f7dff792e3809cd81d56364484185f647f2b9ad93f33b4f6fce3a2f4463771b8`; delta2,017,280 bytes SHA256`54a10219f4febe9052bc7f92088a119da38095711e0b1b4d4d69578a7f5ac5c3`; incremental bundle379,059 bytes SHA256`0aabd846c944ff3122889d1c4ff0266ee31bb5a8db63ff930f91d8063c3356ff`. The bundle REQUIRES the source parent above. Preparation JSON flags precede this receipt; do not rerun/overwrite one-shot artifacts.
+
+This verifies Sites saving plus same-PC recovery, not GitHub delivery, off-device restoration, conversation-history or private-database backup. Goal remains active; see module `docs/GINGIVA_SOURCE_REVIEW.md` for actual anatomy gates and a compact future integration plan.
+
+## 10 September 2026 — live model orientation
 
 Source `516b8ba21c6c911f59cf068f0b1f43e69ba12427`, tree `299082b504eb6e3647eb2176da2720a5cf72632b`, parent `87be059878e20442ce8c5a64d2be4d51e72dc9ec`. Nine paths mirrored into `modules/anatomy-atlas`; the main website is unchanged. A read-only direction line follows actual camera orientation in the shared regional/organ renderer, without overlaying labels or expanding the page. Source axes are validated; exam/recovery states suppress the readout. No anatomy, dependencies or entitlements changed.
 

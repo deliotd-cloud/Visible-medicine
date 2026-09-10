@@ -1,0 +1,1926 @@
+{
+  "schemaVersion": 1,
+  "prototypeOnly": true,
+  "admitted": false,
+  "clinicalApproval": false,
+  "auditSha256": "21aec7193cc0879dfc93f5ee62af065a79329757086912e9b5ad20b035637420",
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "sourceArchives": {
+    "isa": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+    "partof": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/partof_BP3D_4.0_obj_99.zip"
+  },
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "sourceOriginals": [
+    {
+      "tree": "isa",
+      "file": "source/FJ1252.obj",
+      "sha256": "f183027cd4512a5886d307aeb33737f0f2b20c841eac18583b332cc716c155b9",
+      "bytes": 120953
+    },
+    {
+      "tree": "isa",
+      "file": "source/FJ1253.obj",
+      "sha256": "da17256397f8e2667ed76557aa49e48a57806e12d9cbb8109a3404a76dcc6a08",
+      "bytes": 117509
+    }
+  ],
+  "structures": [
+    {
+      "id": "vm:anatomy:component:oral:unpaired:gingiva:upper",
+      "fmaId": "FMA59763",
+      "sourceName": "gingiva of upper jaw",
+      "name": "Gingiva of upper jaw",
+      "laterality": "unpaired",
+      "arch": "upper",
+      "system": "organs",
+      "category": "gingiva",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "nodeName": "FMA59763",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1252",
+          "sha256": "f183027cd4512a5886d307aeb33737f0f2b20c841eac18583b332cc716c155b9"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.35429298877716064,
+          6.614200115203857,
+          0.7776399850845337
+        ],
+        "max": [
+          0.3410260081291199,
+          6.797999858856201,
+          1.3164199590682983
+        ]
+      },
+      "center": [
+        -0.006633490324020386,
+        6.706099987030029,
+        1.047029972076416
+      ],
+      "anchor": [
+        0.0018359000000000001,
+        6.738800000000001,
+        1.0494200000000005
+      ],
+      "triangles": 1848,
+      "orderedSourceTrianglesSha256": "d9b9cb121fbfcfae37acd34b9ef0367a0a023533849fbc8853073686da8447b3",
+      "retainedSourceFaceCount": 1848,
+      "removedSourceFaces": [],
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "coverageNote": "Source-labelled gingiva envelope, not individually segmented free/attached/interdental gingiva or complete periodontium. Coarse margins and dental relationships require specialist review; no clinical numbering, mucogingival boundary, pocket, disease or scan alignment is supplied."
+    },
+    {
+      "id": "vm:anatomy:component:oral:unpaired:gingiva:lower",
+      "fmaId": "FMA59764",
+      "sourceName": "gingiva of lower jaw",
+      "name": "Gingiva of lower jaw",
+      "laterality": "unpaired",
+      "arch": "lower",
+      "system": "organs",
+      "category": "gingiva",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "nodeName": "FMA59764",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1253",
+          "sha256": "da17256397f8e2667ed76557aa49e48a57806e12d9cbb8109a3404a76dcc6a08"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.38329800963401794,
+          6.341300010681152,
+          0.7113500237464905
+        ],
+        "max": [
+          0.3699829876422882,
+          6.701300144195557,
+          1.246000051498413
+        ]
+      },
+      "center": [
+        -0.006657510995864868,
+        6.5213000774383545,
+        0.9786750376224518
+      ],
+      "anchor": [
+        -0.110769,
+        6.443399999999999,
+        1.0374400000000006
+      ],
+      "triangles": 1918,
+      "orderedSourceTrianglesSha256": "99f3aae10f437555318c78e9109eeeb989cc386b431e67a81f17926efe9a79f2",
+      "retainedSourceFaceCount": 1918,
+      "removedSourceFaces": [],
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "coverageNote": "Source-labelled gingiva envelope, not individually segmented free/attached/interdental gingiva or complete periodontium. Coarse margins and dental relationships require specialist review; no clinical numbering, mucogingival boundary, pocket, disease or scan alignment is supplied."
+    }
+  ],
+  "contextRecords": [
+    {
+      "id": "vm:anatomy:body:head-neck:right:bone:right-maxilla",
+      "fmaId": "FMA53649",
+      "name": "Right maxilla",
+      "sourceName": "right maxilla",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-skeleton",
+      "nodeName": "FMA53649",
+      "bounds": {
+        "min": [
+          -0.47610700130462646,
+          6.639899730682373,
+          0.793739914894104
+        ],
+        "max": [
+          -0.0025105399545282125,
+          7.333499908447266,
+          1.3402900695800781
+        ]
+      },
+      "center": [
+        -0.23930877062957734,
+        6.986699819564819,
+        1.067014992237091
+      ],
+      "anchor": [
+        -0.22227899730205536,
+        6.961999416351318,
+        1.0361300706863403
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3375",
+          "sha256": "99fde288184e5d9ccb08ff5547fc1a693b2ef0d6a12a80e47b711f51bd3f7906"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:bone:left-maxilla",
+      "fmaId": "FMA53650",
+      "name": "Left maxilla",
+      "sourceName": "left maxilla",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-skeleton",
+      "nodeName": "FMA53650",
+      "bounds": {
+        "min": [
+          -0.03067930042743683,
+          6.639899730682373,
+          0.7681400179862976
+        ],
+        "max": [
+          0.45795199275016785,
+          7.332900524139404,
+          1.328800082206726
+        ]
+      },
+      "center": [
+        0.2136363461613655,
+        6.986400127410889,
+        1.0484700500965118
+      ],
+      "anchor": [
+        0.20491400361061096,
+        6.958700180053711,
+        1.0374200344085693
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3269",
+          "sha256": "ba97a37d471d6db65bca375a6413fd09e69e102017fb8a104d07255212d1b576"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:mandible",
+      "fmaId": "FMA52748",
+      "name": "Mandible",
+      "sourceName": "mandible",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-skeleton",
+      "nodeName": "FMA52748",
+      "bounds": {
+        "min": [
+          -0.5384590029716492,
+          6.216300010681152,
+          0.3985369801521301
+        ],
+        "max": [
+          0.5255410075187683,
+          7.060999870300293,
+          1.238319993019104
+        ]
+      },
+      "center": [
+        -0.00645899772644043,
+        6.638649940490723,
+        0.8184284865856171
+      ],
+      "anchor": [
+        -0.22634099423885345,
+        6.529200553894043,
+        0.8416999578475952
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3289",
+          "sha256": "c38102c34660e2b767a7b95a341380bf4a52c754c6235fcd322be5c7b8cb1745"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-lateral-secondary-incisor-tooth",
+      "fmaId": "FMA55680",
+      "name": "Right upper lateral secondary incisor tooth",
+      "sourceName": "right upper lateral secondary incisor tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55680",
+      "bounds": {
+        "min": [
+          -0.16875499486923218,
+          6.516700267791748,
+          1.1893401145935059
+        ],
+        "max": [
+          -0.07300999760627747,
+          6.805899620056152,
+          1.3025000095367432
+        ]
+      },
+      "center": [
+        -0.12088249623775482,
+        6.66129994392395,
+        1.2459200620651245
+      ],
+      "anchor": [
+        -0.1381939947605133,
+        6.651500225067139,
+        1.2288099527359009
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1280",
+          "sha256": "5c06c01ee01c337523fc9cf641c31c65856a52c74237d9d86989d93dd6847c0e"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-central-secondary-incisor-tooth",
+      "fmaId": "FMA55681",
+      "name": "Right upper central secondary incisor tooth",
+      "sourceName": "right upper central secondary incisor tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55681",
+      "bounds": {
+        "min": [
+          -0.09679479897022247,
+          6.523699760437012,
+          1.204609990119934
+        ],
+        "max": [
+          -0.00808877032250166,
+          6.787600040435791,
+          1.3333200216293335
+        ]
+      },
+      "center": [
+        -0.052441784646362066,
+        6.655649900436401,
+        1.2689650058746338
+      ],
+      "anchor": [
+        -0.05636829882860184,
+        6.671600341796875,
+        1.2843600511550903
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1279",
+          "sha256": "e8b9c01f57a8a723f9ea0497dfbe2df5f95e23786d0663f196a3608f995d6b22"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-central-secondary-incisor-tooth",
+      "fmaId": "FMA55682",
+      "name": "Left upper central secondary incisor tooth",
+      "sourceName": "left upper central secondary incisor tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55682",
+      "bounds": {
+        "min": [
+          -0.0048429099842906,
+          6.523599624633789,
+          1.204699993133545
+        ],
+        "max": [
+          0.08366909623146057,
+          6.787900447845459,
+          1.333490014076233
+        ]
+      },
+      "center": [
+        0.039413093123584986,
+        6.655750036239624,
+        1.269095003604889
+      ],
+      "anchor": [
+        0.046865902841091156,
+        6.672600269317627,
+        1.2829899787902832
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1265",
+          "sha256": "bd094c59fb378809a534467b70b5b24ae0b147bc31f42c004e7ddadf8f0b7328"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-lateral-secondary-incisor-tooth",
+      "fmaId": "FMA55683",
+      "name": "Left upper lateral secondary incisor tooth",
+      "sourceName": "left upper lateral secondary incisor tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55683",
+      "bounds": {
+        "min": [
+          0.05988119915127754,
+          6.516700267791748,
+          1.1893699169158936
+        ],
+        "max": [
+          0.1559869945049286,
+          6.805999755859375,
+          1.30610990524292
+        ]
+      },
+      "center": [
+        0.10793409682810307,
+        6.6613500118255615,
+        1.2477399110794067
+      ],
+      "anchor": [
+        0.13142800331115723,
+        6.665200233459473,
+        1.257390022277832
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1266",
+          "sha256": "4df1ab640352a074623d02e755e7632de180da9dc957503f887c791a533d5ea5"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-premolar-tooth",
+      "fmaId": "FMA55688",
+      "name": "Right upper second secondary premolar tooth",
+      "sourceName": "right upper second secondary premolar tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55688",
+      "bounds": {
+        "min": [
+          -0.28940701484680176,
+          6.558399677276611,
+          1.0358500480651855
+        ],
+        "max": [
+          -0.19647498428821564,
+          6.81790018081665,
+          1.1116299629211426
+        ]
+      },
+      "center": [
+        -0.2429409995675087,
+        6.688149929046631,
+        1.073740005493164
+      ],
+      "anchor": [
+        -0.2519890069961548,
+        6.686700344085693,
+        1.052109956741333
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1278",
+          "sha256": "32f4db913923278b7cbfcaf8e64d1073604951dd58493e3310da30bec1ff3829"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-premolar-tooth",
+      "fmaId": "FMA55689",
+      "name": "Right upper first secondary premolar tooth",
+      "sourceName": "right upper first secondary premolar tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55689",
+      "bounds": {
+        "min": [
+          -0.25951099395751953,
+          6.547399997711182,
+          1.0949699878692627
+        ],
+        "max": [
+          -0.1643810123205185,
+          6.83180046081543,
+          1.175339937210083
+        ]
+      },
+      "center": [
+        -0.211946003139019,
+        6.689600229263306,
+        1.1351549625396729
+      ],
+      "anchor": [
+        -0.21589000523090363,
+        6.695899486541748,
+        1.1162800788879395
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1277",
+          "sha256": "46d0a4b9528553387811d65040836ccfe7dc971fec56254e01c9eabdc16156a0"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-premolar-tooth",
+      "fmaId": "FMA55690",
+      "name": "Left upper first secondary premolar tooth",
+      "sourceName": "left upper first secondary premolar tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55690",
+      "bounds": {
+        "min": [
+          0.1516139954328537,
+          6.547199726104736,
+          1.0949000120162964
+        ],
+        "max": [
+          0.24632900953292847,
+          6.831700325012207,
+          1.1751400232315063
+        ]
+      },
+      "center": [
+        0.19897150248289108,
+        6.689450025558472,
+        1.1350200176239014
+      ],
+      "anchor": [
+        0.2058040052652359,
+        6.689000129699707,
+        1.1162699460983276
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1262",
+          "sha256": "5f45ec1015edb7c7539a3ef7a7577d4a0a723beb4dbfb18e36eca77663431c18"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-premolar-tooth",
+      "fmaId": "FMA55691",
+      "name": "Left upper second secondary premolar tooth",
+      "sourceName": "left upper second secondary premolar tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55691",
+      "bounds": {
+        "min": [
+          0.1832839995622635,
+          6.558499813079834,
+          1.0359199047088623
+        ],
+        "max": [
+          0.2762629985809326,
+          6.81790018081665,
+          1.111680030822754
+        ]
+      },
+      "center": [
+        0.22977349907159805,
+        6.688199996948242,
+        1.073799967765808
+      ],
+      "anchor": [
+        0.2183459997177124,
+        6.689699649810791,
+        1.0517200231552124
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1264",
+          "sha256": "e882218931e8f197490f16ba8058a87502edccc5e8e1f2d50fbd715a0386d33b"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-second-secondary-molar-tooth",
+      "fmaId": "FMA55697",
+      "name": "Right upper second secondary molar tooth",
+      "sourceName": "right upper second secondary molar tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55697",
+      "bounds": {
+        "min": [
+          -0.3086110055446625,
+          6.614699840545654,
+          0.8483700752258301
+        ],
+        "max": [
+          -0.18951000273227692,
+          6.841400146484375,
+          0.9463800191879272
+        ]
+      },
+      "center": [
+        -0.2490605041384697,
+        6.728049993515015,
+        0.8973750472068787
+      ],
+      "anchor": [
+        -0.2529680132865906,
+        6.746300220489502,
+        0.9009599089622498
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1275",
+          "sha256": "457c1d089e24d7e120abf97c2af844ff609a58c3292446e4b1814137d3691416"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-first-secondary-molar-tooth",
+      "fmaId": "FMA55698",
+      "name": "Right upper first secondary molar tooth",
+      "sourceName": "right upper first secondary molar tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55698",
+      "bounds": {
+        "min": [
+          -0.3118959963321686,
+          6.578700065612793,
+          0.9266499280929565
+        ],
+        "max": [
+          -0.19628798961639404,
+          6.824200630187988,
+          1.041640043258667
+        ]
+      },
+      "center": [
+        -0.2540919929742813,
+        6.701450347900391,
+        0.9841449856758118
+      ],
+      "anchor": [
+        -0.25598299503326416,
+        6.703800201416016,
+        0.9567500352859497
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1276",
+          "sha256": "95ba31eb43e4975d8f36be7595e383baf31b21b68c829a5e6c419a0125682ef6"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-first-secondary-molar-tooth",
+      "fmaId": "FMA55699",
+      "name": "Left upper first secondary molar tooth",
+      "sourceName": "left upper first secondary molar tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55699",
+      "bounds": {
+        "min": [
+          0.18311600387096405,
+          6.578700065612793,
+          0.9264599680900574
+        ],
+        "max": [
+          0.2988629937171936,
+          6.824399471282959,
+          1.041849970817566
+        ]
+      },
+      "center": [
+        0.24098949879407883,
+        6.701549768447876,
+        0.9841549694538116
+      ],
+      "anchor": [
+        0.2616569995880127,
+        6.70229959487915,
+        0.9618200659751892
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1261",
+          "sha256": "529061a7fdb28af07855e7350f788f93ef6c97e3bfead2e28bb9efe0256b0728"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-second-secondary-molar-tooth",
+      "fmaId": "FMA55700",
+      "name": "Left upper second secondary molar tooth",
+      "sourceName": "left upper second secondary molar tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55700",
+      "bounds": {
+        "min": [
+          0.17670899629592896,
+          6.614699840545654,
+          0.848110020160675
+        ],
+        "max": [
+          0.2952449917793274,
+          6.841300010681152,
+          0.9466999769210815
+        ]
+      },
+      "center": [
+        0.23597699403762817,
+        6.727999925613403,
+        0.8974049985408783
+      ],
+      "anchor": [
+        0.23817600309848785,
+        6.746400356292725,
+        0.9012500047683716
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1263",
+          "sha256": "5811bdc8cfed255f8aa9e10fa8dd4815b5d0924c2a23f1d7e373c8521be6c65a"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-upper-secondary-canine-tooth",
+      "fmaId": "FMA55798",
+      "name": "Right upper secondary canine tooth",
+      "sourceName": "right upper secondary canine tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55798",
+      "bounds": {
+        "min": [
+          -0.22753499448299408,
+          6.531300067901611,
+          1.1661300659179688
+        ],
+        "max": [
+          -0.13495799899101257,
+          6.845099925994873,
+          1.2593200206756592
+        ]
+      },
+      "center": [
+        -0.18124649673700333,
+        6.688199996948242,
+        1.212725043296814
+      ],
+      "anchor": [
+        -0.18500299751758575,
+        6.695999622344971,
+        1.2300100326538086
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1281",
+          "sha256": "2d8f105ee772e727e3b4ccbb6370a893a213174c0f90155054dac20bc053512c"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-upper-secondary-canine-tooth",
+      "fmaId": "FMA55799",
+      "name": "Left upper secondary canine tooth",
+      "sourceName": "left upper secondary canine tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55799",
+      "bounds": {
+        "min": [
+          0.12203900516033173,
+          6.531400203704834,
+          1.1662499904632568
+        ],
+        "max": [
+          0.21450398862361908,
+          6.845200061798096,
+          1.259299874305725
+        ]
+      },
+      "center": [
+        0.1682714968919754,
+        6.688300132751465,
+        1.212774932384491
+      ],
+      "anchor": [
+        0.17238301038742065,
+        6.698699951171875,
+        1.2285000085830688
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1267",
+          "sha256": "44f5accf76e8b0a1ac2aefb55d031508fedad0bacda03b598aef71f88ca2462d"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-lateral-secondary-incisor-tooth",
+      "fmaId": "FMA57140",
+      "name": "Right lower lateral secondary incisor tooth",
+      "sourceName": "right lower lateral secondary incisor tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA57140",
+      "bounds": {
+        "min": [
+          -0.1269340068101883,
+          6.28380012512207,
+          1.1096999645233154
+        ],
+        "max": [
+          -0.04844469949603081,
+          6.535200119018555,
+          1.2783199548721313
+        ]
+      },
+      "center": [
+        -0.08768935315310955,
+        6.4095001220703125,
+        1.1940099596977234
+      ],
+      "anchor": [
+        -0.08895750343799591,
+        6.406700611114502,
+        1.1985299587249756
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1273",
+          "sha256": "43ca036b3bf66dad24be63b0f95a2a8ecf839b61d2d83981659e03b4a357f869"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-lateral-secondary-incisor-tooth",
+      "fmaId": "FMA57141",
+      "name": "Left lower lateral secondary incisor tooth",
+      "sourceName": "left lower lateral secondary incisor tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA57141",
+      "bounds": {
+        "min": [
+          0.03527599945664406,
+          6.28380012512207,
+          1.1097599267959595
+        ],
+        "max": [
+          0.11386699974536896,
+          6.535200119018555,
+          1.2780299186706543
+        ]
+      },
+      "center": [
+        0.07457149960100651,
+        6.4095001220703125,
+        1.1938949227333069
+      ],
+      "anchor": [
+        0.0789543017745018,
+        6.404499530792236,
+        1.1874499320983887
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1259",
+          "sha256": "f2a5c7fb06457bf61d55f8cab4048983651418f01b3bad013e9a2dea7a383b62"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-central-secondary-incisor-tooth",
+      "fmaId": "FMA57142",
+      "name": "Right lower central secondary incisor tooth",
+      "sourceName": "right lower central secondary incisor tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA57142",
+      "bounds": {
+        "min": [
+          -0.0670199990272522,
+          6.280999660491943,
+          1.1026099920272827
+        ],
+        "max": [
+          -0.008278420194983482,
+          6.535600662231445,
+          1.2849699258804321
+        ]
+      },
+      "center": [
+        -0.03764920961111784,
+        6.408300161361694,
+        1.1937899589538574
+      ],
+      "anchor": [
+        -0.04531030356884003,
+        6.408100605010986,
+        1.2001899480819702
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1272",
+          "sha256": "17927707d17fa7a78f9743f90b4150d6e7b4eaa4fe5c8ad29a961b4ea795272b"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-central-secondary-incisor-tooth",
+      "fmaId": "FMA57143",
+      "name": "Left lower central secondary incisor tooth",
+      "sourceName": "left lower central secondary incisor tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA57143",
+      "bounds": {
+        "min": [
+          -0.004914449993520975,
+          6.280799388885498,
+          1.1026899814605713
+        ],
+        "max": [
+          0.05391119793057442,
+          6.535500526428223,
+          1.2849000692367554
+        ]
+      },
+      "center": [
+        0.02449837396852672,
+        6.40814995765686,
+        1.1937950253486633
+      ],
+      "anchor": [
+        0.032981500029563904,
+        6.404699802398682,
+        1.1951500177383423
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1258",
+          "sha256": "56fe0ccb8277f4ae0c945d3f2b3cf0a3a816ec2edf31eae4ab46a91954bde7aa"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-secondary-canine-tooth",
+      "fmaId": "FMA55686",
+      "name": "Right lower secondary canine tooth",
+      "sourceName": "right lower secondary canine tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55686",
+      "bounds": {
+        "min": [
+          -0.17620399594306946,
+          6.271500110626221,
+          1.0825700759887695
+        ],
+        "max": [
+          -0.08995530009269714,
+          6.539799690246582,
+          1.238569974899292
+        ]
+      },
+      "center": [
+        -0.1330796480178833,
+        6.405649900436401,
+        1.1605700254440308
+      ],
+      "anchor": [
+        -0.1467519998550415,
+        6.404900074005127,
+        1.1580100059509277
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1274",
+          "sha256": "a7ded2520e6c1e41154d89a389b4ded0daf733f23d47e4a02fb97230c07b4907"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-secondary-canine-tooth",
+      "fmaId": "FMA55687",
+      "name": "Left lower secondary canine tooth",
+      "sourceName": "left lower secondary canine tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55687",
+      "bounds": {
+        "min": [
+          0.07689439505338669,
+          6.271500110626221,
+          1.0825999975204468
+        ],
+        "max": [
+          0.1630450040102005,
+          6.539799690246582,
+          1.2385600805282593
+        ]
+      },
+      "center": [
+        0.1199696995317936,
+        6.405649900436401,
+        1.160580039024353
+      ],
+      "anchor": [
+        0.13303400576114655,
+        6.401299953460693,
+        1.1577900648117065
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1260",
+          "sha256": "4dd682c058f3949b30077712296603c1c508423a58998ad909baeec5bfa56b72"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-premolar-tooth",
+      "fmaId": "FMA55692",
+      "name": "Left lower second secondary premolar tooth",
+      "sourceName": "left lower second secondary premolar tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55692",
+      "bounds": {
+        "min": [
+          0.1557929962873459,
+          6.324599742889404,
+          0.973580002784729
+        ],
+        "max": [
+          0.23697499930858612,
+          6.558399677276611,
+          1.1065601110458374
+        ]
+      },
+      "center": [
+        0.196383997797966,
+        6.441499710083008,
+        1.0400700569152832
+      ],
+      "anchor": [
+        0.18607598543167114,
+        6.433000564575195,
+        1.0538699626922607
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1257",
+          "sha256": "b4e2d2cb7d5e7d41d82bc6e48b3de5cb628a0786ae0d82abadd39250f6dff3a7"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-premolar-tooth",
+      "fmaId": "FMA55693",
+      "name": "Left lower first secondary premolar tooth",
+      "sourceName": "left lower first secondary premolar tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55693",
+      "bounds": {
+        "min": [
+          0.12587299942970276,
+          6.320799350738525,
+          1.033769965171814
+        ],
+        "max": [
+          0.20498301088809967,
+          6.545699596405029,
+          1.1749999523162842
+        ]
+      },
+      "center": [
+        0.16542800515890121,
+        6.433249473571777,
+        1.104384958744049
+      ],
+      "anchor": [
+        0.1917169988155365,
+        6.439300537109375,
+        1.0979100465774536
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1255",
+          "sha256": "6cbac9debf9b9cd9825f096c5ac84911f91020a36ec6f95fdfc49f10a679822b"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-premolar-tooth",
+      "fmaId": "FMA55694",
+      "name": "Right lower first secondary premolar tooth",
+      "sourceName": "right lower first secondary premolar tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55694",
+      "bounds": {
+        "min": [
+          -0.21780700981616974,
+          6.320699691772461,
+          1.0337600708007812
+        ],
+        "max": [
+          -0.13834799826145172,
+          6.545899868011475,
+          1.1752299070358276
+        ]
+      },
+      "center": [
+        -0.17807750403881073,
+        6.433299779891968,
+        1.1044949889183044
+      ],
+      "anchor": [
+        -0.20411700010299683,
+        6.441600322723389,
+        1.0972501039505005
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1269",
+          "sha256": "7b3067782910e38d45b03901ba998fcf35088b9f85c523b3cc890cf11adbf17f"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-premolar-tooth",
+      "fmaId": "FMA55695",
+      "name": "Right lower second secondary premolar tooth",
+      "sourceName": "right lower second secondary premolar tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55695",
+      "bounds": {
+        "min": [
+          -0.2500530183315277,
+          6.324599742889404,
+          0.9732600450515747
+        ],
+        "max": [
+          -0.16891199350357056,
+          6.558199405670166,
+          1.106510043144226
+        ]
+      },
+      "center": [
+        -0.20948250591754913,
+        6.441399574279785,
+        1.0398850440979004
+      ],
+      "anchor": [
+        -0.20316600799560547,
+        6.426800727844238,
+        1.0520598888397217
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1271",
+          "sha256": "220723db70ad6e5edd497977f656be1df7d407804d5ca31302bca598a3d81c41"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-second-secondary-molar-tooth",
+      "fmaId": "FMA55703",
+      "name": "Left lower second secondary molar tooth",
+      "sourceName": "left lower second secondary molar tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55703",
+      "bounds": {
+        "min": [
+          0.2005929946899414,
+          6.444699764251709,
+          0.7633999586105347
+        ],
+        "max": [
+          0.32158198952674866,
+          6.63170051574707,
+          0.9284100532531738
+        ]
+      },
+      "center": [
+        0.26108749210834503,
+        6.53820013999939,
+        0.8459050059318542
+      ],
+      "anchor": [
+        0.22723700106143951,
+        6.525100231170654,
+        0.8359500169754028
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1256",
+          "sha256": "a5dfb507dc76447d6ca09e4a5e11b8750571227d13b582cfffac1d2f35cd1bec"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lower-first-secondary-molar-tooth",
+      "fmaId": "FMA55704",
+      "name": "Left lower first secondary molar tooth",
+      "sourceName": "left lower first secondary molar tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55704",
+      "bounds": {
+        "min": [
+          0.1642090082168579,
+          6.39109992980957,
+          0.8897200226783752
+        ],
+        "max": [
+          0.28755101561546326,
+          6.588100433349609,
+          1.0407800674438477
+        ]
+      },
+      "center": [
+        0.22588001191616058,
+        6.48960018157959,
+        0.9652500450611115
+      ],
+      "anchor": [
+        0.23141099512577057,
+        6.463199615478516,
+        0.9469200372695923
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1254",
+          "sha256": "7ac5ee013326492b1d51795eb292a7e5bba0647b74c30b09dc715f9a1dc28754"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-first-secondary-molar-tooth",
+      "fmaId": "FMA55705",
+      "name": "Right lower first secondary molar tooth",
+      "sourceName": "right lower first secondary molar tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55705",
+      "bounds": {
+        "min": [
+          -0.30054399371147156,
+          6.39109992980957,
+          0.8896499872207642
+        ],
+        "max": [
+          -0.17738300561904907,
+          6.588299751281738,
+          1.0407600402832031
+        ]
+      },
+      "center": [
+        -0.23896349966526031,
+        6.489699840545654,
+        0.9652050137519836
+      ],
+      "anchor": [
+        -0.24129600822925568,
+        6.463199615478516,
+        0.9466299414634705
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1268",
+          "sha256": "692c5313517c8b049fac739a068710f8bdbd1f3e201a1b88819aff6f8f1a6eda"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lower-second-secondary-molar-tooth",
+      "fmaId": "FMA55706",
+      "name": "Right lower second secondary molar tooth",
+      "sourceName": "right lower second secondary molar tooth",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-head-detail",
+      "nodeName": "FMA55706",
+      "bounds": {
+        "min": [
+          -0.33447498083114624,
+          6.444900035858154,
+          0.7634100317955017
+        ],
+        "max": [
+          -0.21375499665737152,
+          6.63170051574707,
+          0.9286300539970398
+        ]
+      },
+      "center": [
+        -0.2741149887442589,
+        6.538300275802612,
+        0.8460200428962708
+      ],
+      "anchor": [
+        -0.2400370091199875,
+        6.529900074005127,
+        0.8325200080871582
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1270",
+          "sha256": "722d80bd11c7e814c3c1c2b20fe2621ed8327319028ad67c6e4dce24d7ee4458"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. One source-labelled secondary tooth; no third molars, primary dentition, separately segmented enamel/dentine/pulp, periodontal tissues or certified occlusal/root anatomy. No Universal, FDI or Palmer numbering has been assigned. No patient registration or imaging appearance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextBundles": [
+    {
+      "id": "head-neck-skeleton",
+      "url": "/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+      "bytes": 2355384,
+      "sha256": "c1b950c82fd76e69cf153757ca275a6bd27fd25d74d3fd24259b15f9172a39d4",
+      "structures": 23
+    },
+    {
+      "id": "head-neck-organs-head-detail",
+      "url": "/models/bodyparts3d/full-body/head-neck-organs-head-detail.glb",
+      "bytes": 745932,
+      "sha256": "3375bde94900a77d8ab7c6c37ec934b30e2a745495006630b1645053522c040a",
+      "structures": 28
+    }
+  ],
+  "artifact": {
+    "file": "gingiva-prototype.glb",
+    "sha256": "2fb2e2af77c3207cd0d83f301cefd7d795116baf6f521c5b1c8290266cf888d6",
+    "bytes": 70732,
+    "meshes": 2,
+    "triangles": 3766,
+    "maxPositionErrorMm": 0.000024229931789112653
+  },
+  "modification": "Exact-coordinate vertex indexing and recomputed display normals; existing root source-to-scene transform and Float32 storage. Every source face and its winding is retained. No smoothing of positions, decimation, bridging, mirroring, relocated attachment or mesh repair.",
+  "pending": [
+    "Assess actual gingival coverage, coarse marginal boundaries and source tooth/jaw intersections. A plausible arch shape and clean topology do not establish correct soft-tissue anatomy.",
+    "Adjudicate the upper source detached components, including the duplicate triangle. Preserve source originals and record any future face-specific derivative explicitly.",
+    "Choose clinically defensible scope before runtime admission. Neither envelope establishes a periodontal layer, dental pocket, gum thickness or safe operative plane.",
+    "Then integrate a compact teeth/jaws study using unchanged source positions, independent visibility, selection, same-side labels, reversible separation and known-context bindings.",
+    "Author original, referenced, exact-ID teaching; leave CT/MRI/X-ray/US and paid lecture access pending separate verified mapping and authorization."
+  ]
+}
