@@ -2,6 +2,8 @@
 
 ## Renal relationships
 
+[Renal vascular source review](RENAL_VASCULAR_SOURCE_REVIEW.md) prepares seven additional groups outside `public/` with a pinned, round-trip-checked prototype. It deliberately does not alter the root catalogue, nested registry, source review identities or learning entitlements before the dedicated study integration is completed.
+
 [Renal study recipes](RENAL_STUDIES.md) add four focus-only definitions to both abdomen and whole-body scopes. Exact FMA targets and context reuse the current library, navigation, history and deep-link contracts. Focus target-presence gating prevents context-only opposite-side entries; no additional permanent controls, runtime assets or source identities are introduced. The recipe-history guard records only this exact addition and still verifies all earlier profiles byte-for-byte.
 
 ## Cardiac vessel relationships

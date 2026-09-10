@@ -1,5 +1,7 @@
 # Renal relationship studies
 
+Additional vascular source groups now have a [separate source review and staged prototype](RENAL_VASCULAR_SOURCE_REVIEW.md). They are not yet integrated into these live studies; the limits below remain unchanged.
+
 Open **Abdomen** or **Whole body → Study windows & focuses** and search for “kidney”, “renal” or “ureter”. Four focus cards reuse the existing rotate, select, isolate, fade, separate, set-aside, Undo/Redo and source-pinned link controls. Selecting a member also exposes its related studies. Nothing is added to the permanent toolbar.
 
 | Study | Targets | Explicit context |

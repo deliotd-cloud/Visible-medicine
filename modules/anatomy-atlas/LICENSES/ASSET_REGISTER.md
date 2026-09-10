@@ -1,5 +1,9 @@
 # Asset register
 
+## Renal vascular prototype — staged only, 10 September 2026
+
+Outside the published asset tree: `../work/renal-vascular-prototype/renal-vascular-prototype.glb`, 266,720 bytes, SHA-256 `ea98bfe8d3b8eaf480b5c893b90b7bf21abcb1c2aaa4e01ab2ef492e3e710424`. Seven source-labelled groups / ten original OBJ files / 14,332 retained triangles. Exact source hashes, CC BY 4.0 attribution, exclusions and transformation evidence are retained in the prototype sidecar and `docs/renal-vascular-prototype-validation.json`. This is not admitted to the live catalogue, not a new published GLB and not clinical validation. See [review and next integration gates](../docs/RENAL_VASCULAR_SOURCE_REVIEW.md). Existing live anatomy counts remain unchanged.
+
 ## Ventricular dissection — 10 September 2026
 
 `public/models/bodyparts3d/ventricles/ventricles.glb`: four source space representations, 46,794 triangles, 846,988 bytes, SHA-256 `e99326a0fd0b0bdc0a64d2a1adbb7a63c758af6f765199b8febe851e62b9eab1`. BodyParts3D v4 PART-OF sources FJ1767/FJ1814/FJ1730/FJ1731 already belong to the 59-file brain aggregate; its original asset is unchanged. The sidecar retains exact source hashes, parent binding, topology evidence and transform. Five faint context records reuse existing deep-brain assets. This makes 90 retained GLBs overall, including 87 archived originals and three derived display assets; it does not add four unique structures to the whole-body count. Existing CC BY 4.0 attribution, licence link and modification notice are displayed. Source surfaces remain unvalidated; see `../docs/VENTRICULAR_DISSECTION.md`. No new font, texture, publisher diagram, patient scan or paid dependency.

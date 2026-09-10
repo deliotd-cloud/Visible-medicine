@@ -1,0 +1,156 @@
+{
+  "prototypeOnly": true,
+  "admitted": false,
+  "auditSha256": "276282aca048255f421856c0fa7f2332e8c19e71501664e4b43a2d208d9eb262",
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "sourceGroups": [
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:ureteric-segment-of-right-renal-artery",
+      "fmaId": "FMA70492",
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ3581",
+          "sha256": "00896e3b9da9900822733640ae94ff19265665a67b44d845a93d614a2a729a77"
+        },
+        {
+          "file": "FJ3582",
+          "sha256": "e73ade72f7f868af514bab99ba626e98e496995fa55972ba9a4f310f3242bf1d"
+        }
+      ],
+      "role": "ureteric"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:ureteric-segment-of-left-renal-artery",
+      "fmaId": "FMA70493",
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ3481",
+          "sha256": "574b3b363b93b8a542259336d6fed632db907251a39e7b19332a7ee207f4de4a"
+        }
+      ],
+      "role": "ureteric"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-inferior-suprarenal-artery",
+      "fmaId": "FMA69265",
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ3584",
+          "sha256": "445644cb2d0342f24978aed1743e32b2ece4100a9050eded56537263db07cc9f"
+        }
+      ],
+      "role": "suprarenal-artery"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-renal-vein",
+      "fmaId": "FMA14335",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3577",
+          "sha256": "36125db169fc547f88860a3f8ea873742437d8be55b6f5f1a7f877219b759449"
+        },
+        {
+          "file": "FJ3578",
+          "sha256": "ccb15ddc46ef6b11ef62fa8dd6923b6fdeedb9b3371ab80513ff11a0fc120734"
+        }
+      ],
+      "role": "renal-vein"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-renal-vein",
+      "fmaId": "FMA14336",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3477",
+          "sha256": "3299a1375f6f86c5d523d7f3abd1bce371f13d0b4b586e53bf95600b6ed17adf"
+        },
+        {
+          "file": "FJ3478",
+          "sha256": "06a4b0b274aac5458aeb7ff33881f05afcd2a15e776ddfb9af59e61a06b4b2a1"
+        }
+      ],
+      "role": "renal-vein"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-suprarenal-vein",
+      "fmaId": "FMA14343",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3580",
+          "sha256": "47e80d6a3c1a62cc33bd629f1fc7f31424cb5f123bc065e27b10b499398df88e"
+        }
+      ],
+      "role": "suprarenal-vein"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-suprarenal-vein",
+      "fmaId": "FMA14349",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3480",
+          "sha256": "07d9a1c324de143b9b5c8a3f1d2950c954ba90004722d48d2d286532d9ccc2ba"
+        }
+      ],
+      "role": "suprarenal-vein"
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "FMA66363",
+      "reason": "Alternative right renal trunk occupies the existing artery course; do not double-render it."
+    },
+    {
+      "id": "FMA66364",
+      "reason": "Near-coincident left renal trunk is an alternative surface, not extra anatomy."
+    },
+    {
+      "id": "FMA69266",
+      "reason": "Left inferior suprarenal artery includes an isolated two-face zero-volume duplicate component. Retained in raw evidence; not repaired or exported."
+    }
+  ],
+  "artifact": {
+    "file": "renal-vascular-prototype.glb",
+    "sha256": "ea98bfe8d3b8eaf480b5c893b90b7bf21abcb1c2aaa4e01ab2ef492e3e710424",
+    "bytes": 266720,
+    "meshes": 7,
+    "triangles": 14332,
+    "maxPositionErrorMm": 0.000012331652414027319
+  },
+  "pending": [
+    "Kidney-bound study integration and same-side context",
+    "Selection, labels, removal/restore, cutaway, separation and history tests",
+    "Exact-ID teaching and licence notices in the published bundle",
+    "Specialist anatomical validation and source junction review",
+    "Browser/device acceptance; no scan registration or paid-resource access implied"
+  ]
+}
