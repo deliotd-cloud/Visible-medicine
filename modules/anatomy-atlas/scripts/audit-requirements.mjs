@@ -13,7 +13,8 @@ const json = async (path) => JSON.parse(await read(path));
 const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const bundled = await build({
   stdin: {
-    contents: `export { bodyContent, bodyLesson } from './app/body-content.ts';
+    contents: `export { limbDefinitions } from './lib/um-limb-studies.ts';
+export { bodyContent, bodyLesson } from './app/body-content.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';
 export { reasoningConcepts, reasoningConceptFor } from './lib/reasoning-questions.ts';
@@ -38,6 +39,7 @@ export { cardiacRelationshipsFor, cardiacVesselSource } from './lib/cardiac-cont
   platform: 'node',
 });
 const {
+  limbDefinitions,
   bodyContent,
   bodyLesson,
   structures: shoulder,
@@ -85,6 +87,7 @@ const renal = await json('public/models/bodyparts3d/renal/catalog.json');
 const pancreatic = await json('public/models/bodyparts3d/pancreatic/catalog.json');
 const cricothyroid = await json('public/models/bodyparts3d/cricothyroid/catalog.json');
 const independentKnee = await json('public/models/um-knee/catalog.json');
+const independentLimb = await json('public/models/um-limb/catalog.json');
 const visualPathway = await json(
   'public/models/bodyparts3d/visual-pathway/catalog.json',
 );
@@ -286,6 +289,10 @@ for (const path of [
   'app/um-knee-study.css',
   'app/um-knee-entry.css',
   'lib/um-knee-study.ts',
+  'lib/um-limb-studies.ts',
+  'lib/independent-specimen.ts',
+  'app/um-limb-study.tsx',
+  'public/models/um-limb/catalog.json',
   'public/models/um-knee/catalog.json',
   'lib/origin-guides.ts',
   'lib/learning-entitlements.ts',
@@ -347,12 +354,14 @@ const report = {
   sourceHashes,
   anatomy: {
     independentSpecimens: [{
-      id: independentKnee.specimenId,
-      representations: independentKnee.structures.length,
+      id: independentLimb.specimenId,
+      representations: new Set([...independentKnee.structures, ...independentLimb.structures].map((s) => s.id)).size,
+      kneeRepresentationsIncluded: independentKnee.structures.length,
+      regionalStudies: Object.values(limbDefinitions).map((d) => ({ id: d.key, selections: d.surfaces.length, studies: d.studies.length })),
       source: independentKnee.source.doi,
       license: independentKnee.source.license,
       registeredToBodyParts3D: independentKnee.registeredToBodyParts3D,
-      clinicalApproval: independentKnee.structures.every((s) => s.validation.anatomicalReview),
+      clinicalApproval: [...independentKnee.structures, ...independentLimb.structures].every((s) => s.validation.anatomicalReview),
       detailedTeaching: 'pending; not counted as root-body or nested teaching',
     }],
     displayCorrections: displayCatalog.structures

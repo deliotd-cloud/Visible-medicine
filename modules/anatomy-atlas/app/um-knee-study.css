@@ -18,6 +18,7 @@
 .um-knee-toggle { display: flex; align-items: center; justify-content: space-between; gap: .5rem; min-height: 36px; }
 .um-knee-list li > button:first-child { height: auto; min-height: 36px; white-space: normal; text-align: left; font-size: .875rem; }
 .um-knee-source-id { overflow-wrap: anywhere; }
+.um-source-caution { border-left: 2px solid var(--primary); padding-left: .5rem; }
 .um-knee-scene-caption { font-size: .8125rem; line-height: 1.4; color: var(--muted-foreground); margin: 0; }
 @media (max-width: 700px) {
   .um-knee-workbench { grid-template-rows: minmax(190px, 1fr) minmax(0, 1fr); }

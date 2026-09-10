@@ -71,10 +71,14 @@
     "app/ventricles.tsx": "cd9ea82d9148c44a288f34ac84da151f056c91fdc1addcdd4e48cadbd7043bbf",
     "app/ventricular-relationships.css": "7dfa2927b9f203aa13dbd1f2205c9429e7b79ffbaa86108b57fb3c69b1b71400",
     "app/body-scene.tsx": "12755c0012553c7df3d101487984b9aa86ac58ab27f803440023698e5036d5dc",
-    "app/um-knee-study.tsx": "355811ebf55d2666dc04bfb30f17cf17e03b13235ddaac4cf4b30838df9707e4",
-    "app/um-knee-study.css": "cdbbbce845f156f6bcf88d6989df28ba2cfe367de3a0ab476c954ed9f46290ea",
+    "app/um-knee-study.tsx": "f4a685bc7d9c22d6239f67cbd2ea276fde90deec24b7dbc6f1aa5094d4a21450",
+    "app/um-knee-study.css": "987a268b4450718651ee4ecee7ec66fd6a89672c33beaaf1dc62d7367c5304c4",
     "app/um-knee-entry.css": "b68e0232a417ca07cc3ae07ed3e756c93833623981a5cf5323b7a71db7017339",
     "lib/um-knee-study.ts": "80908fce33eb88fe5d217d8ed70c948559c19981c48a7daf034353224ee25b55",
+    "lib/um-limb-studies.ts": "a544d566b88d1a55c23f85e743d5cbabcc2518c54458c18eff6faa429a9ce810",
+    "lib/independent-specimen.ts": "5c6d6d6d8b1c2fc288bf5c0793732cf53a30f716adb8896005230cc2c65164f8",
+    "app/um-limb-study.tsx": "dbcfd6e17c453a03939b27a1837642943db6b3e4039923c1879cf74b250a8781",
+    "public/models/um-limb/catalog.json": "fc27b778fe8a0e13f773f272bd0bd9bdf9d22117029bd5a5b5d11f0dc39c83fb",
     "public/models/um-knee/catalog.json": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e",
     "lib/origin-guides.ts": "b333566888bf13805da9559004fbfbfa6596095a65d7ca8772de8259ca974ff6",
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
@@ -88,8 +92,36 @@
   "anatomy": {
     "independentSpecimens": [
       {
-        "id": "um-5t6tz7-v1-2:knee",
-        "representations": 15,
+        "id": "um-5t6tz7-v1-2:lower-limb",
+        "representations": 67,
+        "kneeRepresentationsIncluded": 15,
+        "regionalStudies": [
+          {
+            "id": "um-5t6tz7-v1-2:knee",
+            "selections": 15,
+            "studies": 6
+          },
+          {
+            "id": "um-5t6tz7-v1-2:lower-limb:hip-thigh",
+            "selections": 34,
+            "studies": 8
+          },
+          {
+            "id": "um-5t6tz7-v1-2:lower-limb:calf",
+            "selections": 15,
+            "studies": 5
+          },
+          {
+            "id": "um-5t6tz7-v1-2:lower-limb:foot",
+            "selections": 23,
+            "studies": 6
+          },
+          {
+            "id": "um-5t6tz7-v1-2:lower-limb:whole",
+            "selections": 67,
+            "studies": 1
+          }
+        ],
         "source": "https://doi.org/10.22452/RD/5T6TZ7",
         "license": "CC0-1.0",
         "registeredToBodyParts3D": false,
@@ -1082,8 +1114,8 @@
       "png": 4,
       "svg": 2,
       "md": 1,
-      "glb": 103,
-      "json": 20,
+      "glb": 107,
+      "json": 21,
       "html": 1,
       "tsv": 1
     },

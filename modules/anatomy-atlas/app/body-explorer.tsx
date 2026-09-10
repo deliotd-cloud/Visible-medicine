@@ -161,7 +161,7 @@ const Scene = dynamic(() => import('./body-scene').then((m) => m.BodyScene), {
 });
 const EyeLayers = dynamic(() => import('./eye-layers'), { ssr: false });
 const Ventricles = dynamic(() => import('./ventricles'), { ssr: false });
-const KneeSpecimen = dynamic(() => import('./um-knee-study'), { ssr: false });
+const KneeSpecimen = dynamic(() => import('./um-limb-study'), { ssr: false });
 const systemKeys = Object.keys(bodySystems) as BodySystem[];
 const icons = {
   skeleton: Bone,
@@ -1071,11 +1071,11 @@ export default function BodyExplorer({
         </details>
       </WorkspaceOnly>
       <WorkspaceOnly modes={['explore', 'dissect']}>
-        {initialRegion === 'leg' && (
+        {['leg', 'foot', 'thigh', 'pelvis'].includes(initialRegion) && (
           <Button ref={kneeSpecimenLauncher} variant="outline" size="sm"
             className="um-knee-launch" disabled={exam}
             onClick={() => setKneeSpecimenOpen(true)}>
-            Knee tissues · separate specimen
+            {initialRegion === 'leg' ? 'Knee tissues' : initialRegion === 'foot' ? 'Foot dissection' : 'Hip & thigh dissection'} · separate specimen
           </Button>
         )}
         <details className="body-display-tools">
@@ -2177,8 +2177,8 @@ export default function BodyExplorer({
           onClose={closeEyeLayers}
         />
       )}
-      {kneeSpecimenOpen && initialRegion === 'leg' && !exam && (
-        <KneeSpecimen onClose={closeKneeSpecimen} />
+      {kneeSpecimenOpen && ['leg', 'foot', 'thigh', 'pelvis'].includes(initialRegion) && !exam && (
+        <KneeSpecimen initialRegion={initialRegion} onClose={closeKneeSpecimen} />
       )}
       {ventricleParent && !exam && ventricleParent.id === selectedId && (
         <Ventricles

@@ -2,6 +2,8 @@
 
 ## Status
 
+The same source specimen now also has [hip/thigh, calf, ankle/foot and whole-limb studies](UM_LIMB_DISSECTION.md) through the compact modal region selector. The original15 knee IDs, source files, GLB and six knee presets remain unchanged; broader views reuse them, without duplicating anatomy counts.
+
 A 15-surface knee reference is available through **Knee & leg → Knee tissues · separate specimen**. It is an independent source subject, not an extension registered to the BodyParts3D body. Existing body anatomy, approval states, teaching and imaging links are unchanged. The original preparation remains immutable under `content/prototypes/um-knee`; runtime assets are in `public/models/um-knee`.
 
 The selected source surfaces are four bones (femur, tibia, fibula, patella); distal femoral, tibial and patellar cartilage; ACL, PCL, MCL, LCL and patellar ligament; the source meniscus group; quadriceps tendon; and popliteus. The tibial cartilage and meniscus remain grouped entries. No medial/lateral component, attachment footprint or ontology crosswalk is invented.
