@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
@@ -56,6 +57,31 @@ const initial = JSON.stringify(catalog);
 same(targets.length, 53);
 same(api.nestedConcepts.length, 33);
 same(new Set(api.nestedConcepts.map((c) => c.id)).size, 33);
+// Captured from validated v103 source aaa85b4c, before the chamber extension.
+const digest = (value) =>
+  createHash('sha256').update(JSON.stringify(value)).digest('hex');
+same(
+  digest(api.nestedConcepts.filter((c) => c.study !== 'cardiac')),
+  'e64105fe2f4453e7074c2ef93c3ce009807c701d1895f4bff00831d7760173bf',
+  'Unrelated nested teaching unchanged',
+);
+same(
+  digest(
+    api.nestedConcepts
+      .filter((c) => c.study === 'cardiac')
+      .map((c) => ({
+        id: c.id,
+        study: c.study,
+        fmaIds: c.fmaIds,
+        anatomy: c.sections.anatomy,
+        function: c.sections.function,
+        modelLimit: c.modelLimit,
+        quiz: c.quiz,
+      })),
+  ),
+  '1e4ee703f753c8b5f7324599618916f526ab73437abffd9bd85b271d9a80dd3f',
+  'Existing cardiac identities, core notes, model limits and questions unchanged',
+);
 const topics = [
   'anatomy',
   'function',
@@ -89,8 +115,22 @@ for (const target of targets) {
     check(Object.hasOwn(coverage[topic], lesson.readiness));
     coverage[topic][lesson.readiness]++;
     if (['ct', 'mri', 'ultrasound'].includes(topic)) {
-      same(lesson.readiness, 'pending');
-      check(!lesson.citations?.length);
+      if (concept.study === 'cardiac') {
+        same(lesson.readiness, 'draft');
+        same(lesson.body, concept.imaging[topic].body);
+        same(
+          lesson.citations,
+          concept.imaging[topic].references.map(
+            (ref) => api.nestedTeachingReferences[ref].url,
+          ),
+        );
+        check(lesson.note.includes('specialist review pending'));
+        check(lesson.note.includes('No scan access or synchronization'));
+      } else {
+        same(lesson.readiness, 'pending');
+        check(!lesson.citations?.length);
+        check(!concept.imaging, 'No unrequested imaging expansion');
+      }
       check(lesson.note.includes('not a scan'));
     } else if (topic === 'quiz' && concept.quiz.basis === 'model-scope') {
       same(lesson.citations, []);
@@ -105,6 +145,10 @@ for (const target of targets) {
   concept.quiz.answer = 'mutated';
   concept.fmaIds.push('FMA0');
   concept.sections.anatomy.references.length = 0;
+  if (concept.imaging) {
+    concept.imaging.ct.body = 'mutated imaging';
+    concept.imaging.ct.references.length = 0;
+  }
   same(
     JSON.stringify(api.nestedTeachingFor(parent, target.study, selected)),
     clean,
@@ -172,6 +216,21 @@ for (const target of targets) {
   same(tree.type, 'details');
   check(!tree.props.open, 'Teaching collapsed by default');
   const nodes = elements(tree);
+  const cleanConcept = JSON.parse(clean);
+  if (target.study === 'cardiac') {
+    for (const topic of ['ct', 'mri', 'ultrasound']) {
+      const lesson = api.nestedTopicLesson(cleanConcept, topic);
+      const sectionNode = nodes.find(
+        (n) => n.props?.['aria-label'] === lesson.title,
+      );
+      check(sectionNode, 'Imaging section is present in existing topic tree');
+      const sectionHtml = renderToStaticMarkup(sectionNode);
+      check(sectionHtml.includes('Teaching references'));
+      check(sectionHtml.includes('specialist review pending'));
+      for (const url of lesson.citations) check(sectionHtml.includes(url));
+      check(!sectionHtml.includes('Content pending'));
+    }
+  }
   const answer = nodes.find(
     (n) => n.props?.className === 'nested-teaching-answer',
   );
@@ -202,15 +261,19 @@ same(
   53,
   'Changing either study or side resets revealed answer',
 );
-same(coverage.pathology, { draft: 33, pending: 20 });
-same(coverage.clinical, { draft: 37, pending: 16 });
+same(coverage.pathology, { draft: 37, pending: 16 });
+same(coverage.clinical, { draft: 41, pending: 12 });
 for (const tab of ['anatomy', 'function', 'quiz'])
   same(coverage[tab], { draft: 53, pending: 0 });
 for (const tab of ['ct', 'mri', 'ultrasound'])
-  same(coverage[tab], { draft: 0, pending: 53 });
+  same(coverage[tab], { draft: 4, pending: 49 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
 const hosts = new Set([
+  'www.heart.org',
+  'www.radiologyinfo.org',
+  'jcmr-online.biomedcentral.com',
+  'www.asecho.org',
   'anatomy.ttuhscep.edu',
   'www.niddk.nih.gov',
   'training.seer.cancer.gov',
@@ -232,6 +295,7 @@ for (const concept of api.nestedConcepts) {
   );
   const sections = [
     ...Object.values(concept.sections),
+    ...Object.values(concept.imaging ?? {}),
     {
       body: concept.quiz.question + ' ' + concept.quiz.answer,
       references: concept.quiz.references,
@@ -254,7 +318,23 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 30);
+same(Object.keys(wordsBySource).length, 37);
+same(
+  new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
+    .size,
+  37,
+  'Do not split one source into duplicate reference keys',
+);
+for (const concept of api.nestedConcepts.filter((c) => c.study === 'cardiac')) {
+  const missing = copy(concept);
+  delete missing.imaging;
+  for (const tab of ['ct', 'mri', 'ultrasound']) {
+    const fallback = api.nestedTopicLesson(missing, tab);
+    same(fallback.readiness, 'pending');
+    check(!fallback.citations?.length);
+    check(fallback.body.includes('have not yet been added'));
+  }
+}
 for (const [ref, words] of Object.entries(wordsBySource))
   check(words <= 200, `Conservative source word budget: ${ref} ${words}`);
 console.log({

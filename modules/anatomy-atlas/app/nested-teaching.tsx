@@ -107,7 +107,7 @@ export function NestedTeaching({
                   tab === 'clinical' ||
                   tab === 'pathology'
                     ? concept.sections[tab].references
-                    : [];
+                    : (concept.imaging?.[tab]?.references ?? []);
                 return (
                   <TabsContent key={tab} value={tab}>
                     <section

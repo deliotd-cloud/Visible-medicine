@@ -1,14 +1,22 @@
 import type { NestedStudy } from '../lib/nested-anatomy';
+import {
+  cardiacTeaching,
+  cardiacTeachingReferences,
+} from './cardiac-teaching.ts';
 
 export type NestedTopic = 'anatomy' | 'function' | 'clinical' | 'pathology';
+export type NestedImagingTopic = 'ct' | 'mri' | 'ultrasound';
+export type NestedSection = {
+  body: string;
+  references: string[];
+  readiness: 'draft' | 'pending';
+};
 export type NestedConcept = {
   id: string;
   study: NestedStudy;
   fmaIds: string[];
-  sections: Record<
-    NestedTopic,
-    { body: string; references: string[]; readiness: 'draft' | 'pending' }
-  >;
+  sections: Record<NestedTopic, NestedSection>;
+  imaging?: Partial<Record<NestedImagingTopic, NestedSection>>;
   modelLimit: string;
   quiz: {
     question: string;
@@ -21,6 +29,7 @@ export const nestedTeachingReferences: Record<
   string,
   { title: string; url: string }
 > = {
+  ...cardiacTeachingReferences,
   hepaticArteries: {
     title: 'Texas Tech · Abdominal arteries',
     url: 'https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html',
@@ -321,13 +330,10 @@ export const nestedConcepts: NestedConcept[] = [
           'cardiacChambers',
         ),
         function: section(functionText, 'cardiacChambers'),
-        clinical: pending(
-          'Chamber-specific clinical interpretation has not yet been authored and reviewed. This source cavity is not a patient measurement.',
-        ),
-        pathology: pending(
-          'No disease-specific cardiac lesson or pathological geometry is provided for this cavity.',
-        ),
+        clinical: cardiacTeaching[id].clinical,
+        pathology: cardiacTeaching[id].pathology,
       },
+      imaging: cardiacTeaching[id].imaging,
       modelLimit:
         'Static source cavity only; no cardiac-phase, volume, wall thickness, valve motion or registered scan. Atrial walls are optional nonselectable reference surfaces.',
       quiz: quiz(question, answer, 'cardiacFlow'),

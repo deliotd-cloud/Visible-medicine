@@ -20,11 +20,11 @@
     "public/models/bodyparts3d/pulmonary/catalog.json": "b62ccd78dfc2ced8674b94eba67596add4de482f54c3f242814982b4e3dab9ea",
     "docs/pulmonary-source-audit.json": "734fc23b6d4812b81ffb007214c271096562bcb8376766fc9d609bfddabc95db",
     "content/cerebral-supplement-audit.json": "a186519bbf31065f5c4e58472c542a9cbd2a6b64d35423a4f6c92d7bae1d69d7",
-    "content/nested-teaching.ts": "bb227f4c841ea44ba71f0701dffbb7da5348bdb2d85d5c8b0bfec55a349ca155",
+    "content/nested-teaching.ts": "4c43ae7b2c192c83e368775a4b76dde6e911290d48992e94bf1a98c3fb76fc0a",
     "content/nested-teaching-bindings.v1.json": "3a79d284a59a3c803c416ff6e3f0f1de1084852317f14313f4e6965a39b3cb46",
     "lib/nested-anatomy.ts": "eeb61c652567783608545a5008a31e8586a67e68f9277d7cb2ba60484cdc448b",
-    "lib/nested-teaching.ts": "985fe484097b3e1de7278e0666e9a586cfdcca69c20a1758286efc63f48e08a2",
-    "app/nested-teaching.tsx": "b002f7a3126e1bad26203867752607ea5092017eae89489ec1443dd6cfa4ac4b",
+    "lib/nested-teaching.ts": "abcef365ef8fb3208483454500fbcb3af3b8edd2411b58a1f4b0988de11c47ea",
+    "app/nested-teaching.tsx": "5b33c54cff129a48a32d5e3ad920b4c586e7e8706caa628b6a7463be4c057d1b",
     "app/nested-teaching.css": "d912bfc774cc744511a4c0e87a0a35f6b693def9f4bddc25b6f010f07dfa83bc",
     "package-lock.json": "a6a8277be904e06c3735ce00f9148372937a94209cb6219cb94487efc1ae74e5",
     "content/schema/anatomy-structure.schema.json": "0a8e76b6a98e23e25f60a2d9269664dc42974b7a349c63b77e4615fa46887826",
@@ -256,7 +256,7 @@
     "nested": {
       "representations": 53,
       "concepts": 33,
-      "references": 30,
+      "references": 37,
       "topics": {
         "anatomy": {
           "specificDraft": 53,
@@ -271,33 +271,33 @@
           "generatedIdentification": 0
         },
         "ct": {
-          "specificDraft": 0,
+          "specificDraft": 4,
           "identityOnly": 0,
-          "pending": 53,
+          "pending": 49,
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 0,
+          "specificDraft": 4,
           "identityOnly": 0,
-          "pending": 53,
+          "pending": 49,
           "generatedIdentification": 0
         },
         "ultrasound": {
-          "specificDraft": 0,
+          "specificDraft": 4,
           "identityOnly": 0,
-          "pending": 53,
+          "pending": 49,
           "generatedIdentification": 0
         },
         "pathology": {
-          "specificDraft": 33,
-          "identityOnly": 0,
-          "pending": 20,
-          "generatedIdentification": 0
-        },
-        "clinical": {
           "specificDraft": 37,
           "identityOnly": 0,
           "pending": 16,
+          "generatedIdentification": 0
+        },
+        "clinical": {
+          "specificDraft": 41,
+          "identityOnly": 0,
+          "pending": 12,
           "generatedIdentification": 0
         },
         "quiz": {

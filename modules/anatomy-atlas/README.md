@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Heart chambers → Learn more** now includes [chamber-specific clinical and imaging drafts](docs/CARDIAC_TEACHING.md): Clinical context, Pathology, CT, MRI and Ultrasound for each of the four cavities. The existing collapsed panel keeps the canvas uncluttered. These are sourced teaching notes, not patient scans, measurements, validated diagnoses or a lecture-access grant. Specialist review is pending.
+
 **Heart chambers → Study view** now includes [four chamber–vessel comparisons](docs/CARDIAC_VESSEL_RELATIONSHIPS.md), with optional source-bound landmarks, a compact colour key and useful camera presets. Only the relevant vessels appear; they hide during separation and work with the stable cutaway. No missing valve, vessel opening or continuous flow path is invented.
 
 **Organ dissection → Cutaway** now extends the eye's compact axial/coronal/sagittal controls to brain, heart, lung and liver studies. Cut positions stay stable when context changes; reverse the retained side or use **Restore whole view** without losing selection. Tools start collapsed. These are open-surface teaching cuts, not scans or newly reconstructed anatomy. See [behaviour and validation](docs/NESTED_CUTAWAY.md).

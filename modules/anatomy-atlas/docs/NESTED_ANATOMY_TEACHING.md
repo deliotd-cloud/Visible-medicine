@@ -1,5 +1,11 @@
 # Nested brain and eye teaching
 
+## Current extension
+
+The original brain/eye milestone below is retained as history. Subsequent heart, lung and liver studies bring the registry to 33 concepts / 53 source representations / seven parents. [Cardiac clinical and imaging teaching](CARDIAC_TEACHING.md) adds 20 draft sections and seven reference links, bringing the total to 37. Clinical coverage is 41 draft / 12 pending; Pathology is 37 draft / 16 pending. CT, MRI and Ultrasound each have four draft / 49 pending representations. All 53 still have draft Anatomy, Function and Quiz. Consult [generated current status](CURRENT_STATUS.md) for current totals.
+
+Optional `NestedConcept.imaging` sections now resolve only when explicitly authored; an absent topic keeps its original pending response. No root-body paragraph is borrowed. The same source-identity guards and detached-data boundary apply, and no source pin is regenerated for a prose-only change. Imaging citations render within the existing three-group, seven-topic disclosure, with an explicit no-scan/no-synchronization note.
+
 ## Delivered scope
 
 Select a part inside **Explore eye layers** or **Dissect brain**, then expand **Learn more · anatomy, clinical & quiz** beneath its existing brief notes. Anatomy, Clinical and Imaging groups contain seven topics; a separate unscored self-check has a collapsed answer. The existing 260px control rail, canvas, short notes, dissection history, search and separation controls remain in place. No permanent additional panel is introduced.
