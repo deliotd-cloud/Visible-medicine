@@ -72,22 +72,23 @@
     "app/ventricular-relationships.css": "7dfa2927b9f203aa13dbd1f2205c9429e7b79ffbaa86108b57fb3c69b1b71400",
     "app/body-scene.tsx": "12755c0012553c7df3d101487984b9aa86ac58ab27f803440023698e5036d5dc",
     "app/um-knee-study.tsx": "0c6b40d872cbfe6239becfc6d5fd4153a20a3e7359e2c84390c16f9f99ea8b73",
-    "app/um-knee-study.css": "41e04bdbfbde34fd8e538412a84bf94782e85fca46ffc7ac020f71a254743ec9",
+    "app/um-knee-study.css": "47ed3faa0bc9e92f9f3f867f0a74b38eb0989015752029c3886f82f493920bb6",
     "app/um-knee-entry.css": "b68e0232a417ca07cc3ae07ed3e756c93833623981a5cf5323b7a71db7017339",
     "lib/um-knee-study.ts": "80908fce33eb88fe5d217d8ed70c948559c19981c48a7daf034353224ee25b55",
     "lib/um-limb-studies.ts": "a544d566b88d1a55c23f85e743d5cbabcc2518c54458c18eff6faa429a9ce810",
-    "lib/um-limb-teaching.ts": "d41bf15ac44b977d892e6b9460fe9fb0a7e6ac39382cb8db1cb680b899304558",
-    "content/um-limb-teaching.ts": "83c9dbc91272e483fa0ef25ea9eb0051819fad3c94a3d706f7f22373028f6b71",
-    "content/um-limb-teaching-bindings.v1.json": "78e4c8da73fdeb04f3e1e783f6a20aa8de3f870f0ae50f8f506479bf29fb2ef9",
-    "lib/specimen-links.ts": "3bee7ab2192627f07909278d81a44b88bc5212b6dd673251dccbeaad1f9042ea",
-    "lib/um-limb-navigation.ts": "3e02d65cb0280ec34681e8dd603c9128498bd506ecf733d62ae51eacec83dcfb",
+    "lib/um-limb-teaching.ts": "df91dac09be82707f42bd5bafc593396a155013be22d2a9acbacbc49efeced18",
+    "content/um-limb-teaching.ts": "da9ad546fce9a430edab9aa504bb99d7325d22ebf8a57ec8fd3b75e09d2895ca",
+    "content/um-limb-clinical.ts": "6e1d7be5f85c485879c994a865748acf7d10d30500ceed0b42a08772bf626e7b",
+    "content/um-limb-teaching-bindings.v1.json": "c99f8dbe603534f1898824d0960539034c5d8abf4c0aea49db012f34e7cb088d",
+    "lib/specimen-links.ts": "a185fc2f0c8f439c423660acfe1ada45605245e1131b6e317d130a7339944d76",
+    "lib/um-limb-navigation.ts": "75c727d4ee64afe9c385adbac1c11b64cb4831ef2021bad488d2264fa399163b",
     "content/um-limb-navigation.v1.json": "34833f71e385972efb27f5798a094cb23f4df608c8baa4ca8256bb725332174c",
-    "app/specimen-study-link.tsx": "c41ae8c8a2e420c2fa5fedfc72156e9353fe64c2e3159c04b033a0acf5f392a4",
+    "app/specimen-study-link.tsx": "be97629c695d6568f07cf8af0b7248076daec9f82be689ccfd79a7d4d9cec918",
     "app/specimens/lower-limb/page.tsx": "328f61a5443e7d5cb4f1ea06d96d1c100fc4eaa705e4ddd3576912f532cb745f",
     "app/specimens/lower-limb/specimen-linked-page.tsx": "307aa24d529359cc1ed537b285ceda1dc3088d88ff981bc42e747f0f8425942a",
-    "app/um-limb-learning.tsx": "3c1380e3863f2687b9deb59c092152ec533f3a0960d5494aa43090ac95fbc540",
+    "app/um-limb-learning.tsx": "bba0b816b8f89d7645bf32ea84d430ea7ad88ad19b953462e872869de2170be8",
     "lib/independent-specimen.ts": "5c6d6d6d8b1c2fc288bf5c0793732cf53a30f716adb8896005230cc2c65164f8",
-    "app/um-limb-study.tsx": "4bd6013b12398cbe0ae59389be725e8db00ef9b3bf61378e427d02f95987fa4e",
+    "app/um-limb-study.tsx": "30a8b2c8066fb502a89e54bbc7f288e897d2439253fe77af3e6643db4fdfb421",
     "public/models/um-limb/catalog.json": "fc27b778fe8a0e13f773f272bd0bd9bdf9d22117029bd5a5b5d11f0dc39c83fb",
     "public/models/um-knee/catalog.json": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e",
     "lib/origin-guides.ts": "b333566888bf13805da9559004fbfbfa6596095a65d7ca8772de8259ca974ff6",
@@ -168,15 +169,49 @@
           ],
           "topics": [
             "anatomy",
-            "function"
+            "function",
+            "clinical",
+            "pathology",
+            "ct",
+            "mri",
+            "xray",
+            "ultrasound"
           ],
+          "exactDraftRequired": true,
           "grantsAccessOrRegistration": false
         },
         "detailedTeaching": {
           "anatomyFunctionDrafts": 67,
           "muscleAttachmentDrafts": 42,
           "identificationPractice": "up to 10 visible pinned source selections per round; first-try/reveal/retry-missed",
-          "clinicalPathologyImaging": "pending; no registration or lecture entitlement",
+          "extendedTopics": {
+            "clinical": {
+              "draft": 10,
+              "pending": 57
+            },
+            "pathology": {
+              "draft": 10,
+              "pending": 57
+            },
+            "ct": {
+              "draft": 3,
+              "pending": 64
+            },
+            "mri": {
+              "draft": 8,
+              "pending": 59
+            },
+            "xray": {
+              "draft": 10,
+              "pending": 57
+            },
+            "ultrasound": {
+              "draft": 5,
+              "pending": 62
+            }
+          },
+          "clinicalSelfChecks": 10,
+          "clinicalPathologyImaging": "introductory drafts for selected structures; no clinical approval, scan registration or lecture entitlement",
           "countedAsRootOrNestedTeaching": false
         }
       }

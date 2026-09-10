@@ -29,6 +29,8 @@
 .um-limb-learning dt { font-weight: 600; margin-top: .5rem; }
 .um-limb-learning dd { margin: .2rem 0 .5rem; line-height: 1.5; }
 .um-limb-learning details { margin-top: .6rem; }
+.um-limb-learning [data-slot="tabs-list"] { max-width: 100%; height: auto; flex-wrap: wrap; justify-content: flex-start; }
+.um-limb-learning [data-slot="tabs-trigger"] { min-height: 2rem; white-space: normal; }
 .um-limb-learning ul, .um-knee-controls > ul { padding-left: 1.2rem; }
 .um-limb-learning li { margin: .35rem 0; overflow-wrap: anywhere; }
 .um-limb-answer-options { display: grid; gap: .5rem; margin: 1rem 0; }

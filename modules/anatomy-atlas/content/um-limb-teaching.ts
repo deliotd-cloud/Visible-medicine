@@ -1,10 +1,12 @@
 import { thighMuscleLessons } from '../lib/thigh-curriculum';
 import { legMuscleLessons } from '../lib/leg-curriculum';
 import { footMuscleLessons } from '../lib/foot-curriculum';
+import { specimenClinicalLessons, type SpecimenClinicalLesson } from './um-limb-clinical';
 
 export type SpecimenLesson = {
   anatomy: string; function: string; references: readonly string[];
   attachments?: { proximal: string; distal: string; motor: string };
+  extended?: SpecimenClinicalLesson;
 };
 const bones = 'https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb';
 const joints = 'https://openstax.org/books/anatomy-and-physiology-2e/pages/9-6-anatomy-of-selected-synovial-joints';
@@ -79,3 +81,9 @@ Object.assign(specimenLessons, {
   'patellar-cartilage': note('Cartilage covering the patellar articular surface.', 'Supports low-friction patellofemoral contact.', joints),
   'femoral-head-cartilage': note('Supplied femoral-head cartilage; opposing acetabular cartilage is not included.', 'Supports low-friction hip articulation.', joints),
 } satisfies Record<string, SpecimenLesson>);
+
+// Deliberate concepts only; source/lesson pins are regenerated after review.
+for (const [slug, extended] of Object.entries(specimenClinicalLessons)) {
+  if (!specimenLessons[slug]) throw new Error(`Clinical concept lacks an authored anatomy binding: ${slug}`);
+  specimenLessons[slug].extended = extended;
+}

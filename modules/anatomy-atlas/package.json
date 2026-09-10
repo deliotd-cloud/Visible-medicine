@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "um-limb-clinical:test": "node scripts/pin-um-limb-teaching.mjs --check && node scripts/validate-um-limb-clinical.mjs",
     "um-limb-navigation:test": "node scripts/pin-um-limb-navigation.mjs --check && node scripts/validate-um-limb-navigation.mjs",
     "um-limb-learning:test": "node scripts/pin-um-limb-teaching.mjs --check && node scripts/validate-um-limb-learning.mjs",
     "um-limb:export": "node scripts/export-um-limb.mjs",

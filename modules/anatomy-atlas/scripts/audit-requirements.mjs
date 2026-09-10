@@ -16,7 +16,7 @@ const bundled = await build({
     contents: `export { limbDefinitions } from './lib/um-limb-studies.ts';
 export { specimenTeachingFor } from './lib/um-limb-teaching.ts';
 export { makeSpecimenLink, resolveSpecimenLink } from './lib/um-limb-navigation.ts';
-export { parseSpecimenLink } from './lib/specimen-links.ts';
+export { parseSpecimenLink, specimenTopics } from './lib/specimen-links.ts';
 export { bodyContent, bodyLesson } from './app/body-content.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';
@@ -47,6 +47,7 @@ const {
   makeSpecimenLink,
   resolveSpecimenLink,
   parseSpecimenLink,
+  specimenTopics,
   bodyContent,
   bodyLesson,
   structures: shoulder,
@@ -299,6 +300,7 @@ for (const path of [
   'lib/um-limb-studies.ts',
   'lib/um-limb-teaching.ts',
   'content/um-limb-teaching.ts',
+  'content/um-limb-clinical.ts',
   'content/um-limb-teaching-bindings.v1.json',
   'lib/specimen-links.ts',
   'lib/um-limb-navigation.ts',
@@ -395,12 +397,17 @@ const report = {
       registeredToBodyParts3D: independentKnee.registeredToBodyParts3D,
       clinicalApproval: [...independentKnee.structures, ...independentLimb.structures].every((s) => s.validation.anatomicalReview),
       navigation: { route: '/specimens/lower-limb', sourceAndRecipePinned: true,
-        scopes: independentNavigation, topics: ['anatomy', 'function'], grantsAccessOrRegistration: false },
+        scopes: independentNavigation, topics: specimenTopics, exactDraftRequired: true, grantsAccessOrRegistration: false },
       detailedTeaching: {
         anatomyFunctionDrafts: limbDefinitions.whole.surfaces.filter(s => specimenTeachingFor(limbDefinitions.whole, s)).length,
         muscleAttachmentDrafts: limbDefinitions.whole.surfaces.filter(s => specimenTeachingFor(limbDefinitions.whole, s)?.attachments).length,
         identificationPractice: 'up to 10 visible pinned source selections per round; first-try/reveal/retry-missed',
-        clinicalPathologyImaging: 'pending; no registration or lecture entitlement',
+        extendedTopics: Object.fromEntries(specimenTopics.slice(2).map(topic => {
+          const draft = limbDefinitions.whole.surfaces.filter(s => specimenTeachingFor(limbDefinitions.whole, s)?.extended?.topics[topic]?.readiness === 'draft').length;
+          return [topic, { draft, pending: limbDefinitions.whole.surfaces.length - draft }];
+        })),
+        clinicalSelfChecks: limbDefinitions.whole.surfaces.filter(s => specimenTeachingFor(limbDefinitions.whole, s)?.extended?.selfCheck).length,
+        clinicalPathologyImaging: 'introductory drafts for selected structures; no clinical approval, scan registration or lecture entitlement',
         countedAsRootOrNestedTeaching: false,
       },
     }],

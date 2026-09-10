@@ -3,6 +3,7 @@ import { limbDefinitions } from './um-limb-studies';
 import { initialSpecimen, reduceSpecimen, specimenAction, type SpecimenDefinition } from './independent-specimen';
 import { canonicalSpecimenValue, parseSpecimenLink, specimenNavigationPayload, type ParsedSpecimenLink, type SpecimenLinkRequest, type SpecimenScope, type SpecimenTopic } from './specimen-links';
 import type { DissectionView } from '../app/dissection-data';
+import { availableSpecimenTopics } from './um-limb-teaching';
 
 function requestParams(request: SpecimenLinkRequest) {
   return { specimen: 'um-limb-1', specimenScope: request.scope, specimenPart: request.structureId, specimenSource: request.sourceHash,
@@ -20,6 +21,7 @@ export function resolveSpecimenLink(link: ParsedSpecimenLink, definitions: Recor
   if (bundle.sha256 !== r.sourceHash) return { status: 'rejected' as const, reason: 'source-changed' as const };
   const study = definition.studies.find(s => s.id === (r.studyId ?? 'all'));
   if (!study || !study.ids.includes(selected.id)) return { status: 'rejected' as const, reason: 'study-mismatch' as const };
+  if (r.topic && !availableSpecimenTopics(definition, selected.id).includes(r.topic)) return { status: 'rejected' as const, reason: 'topic-unavailable' as const };
   const preset = specimenAction(definition, study.id)!;
   const state = reduceSpecimen(definition, reduceSpecimen(definition, initialSpecimen(definition), preset), { type: 'select', id: selected.id });
   return { status: 'ready' as const, scope: r.scope, selectedId: selected.id, view: r.view, topic: r.topic,

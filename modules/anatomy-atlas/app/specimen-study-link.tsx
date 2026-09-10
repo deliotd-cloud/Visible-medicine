@@ -5,16 +5,18 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { makeSpecimenLink } from '@/lib/um-limb-navigation';
 import type { SpecimenDefinition } from '@/lib/independent-specimen';
-import type { SpecimenTopic } from '@/lib/specimen-links';
+import { specimenTopicLabels, type SpecimenTopic } from '@/lib/specimen-links';
+import { availableSpecimenTopics } from '@/lib/um-limb-teaching';
 import type { DissectionView } from './dissection-data';
 
 export function SpecimenStudyLink({ definition, selectedId, studyId, view }: { definition: SpecimenDefinition; selectedId: string; studyId: string | null; view: DissectionView }) {
   const [topic, setTopic] = useState<SpecimenTopic | null>(null);
+  const topics = availableSpecimenTopics(definition, selectedId);
   const href = makeSpecimenLink(definition, { selectedId, studyId, view, topic });
   return <details className="um-knee-details"><summary>Link to this study</summary>
-    <Select value={topic ?? 'model'} onValueChange={v => setTopic(v === 'anatomy' || v === 'function' ? v : null)}>
+    <Select value={topic ?? 'model'} onValueChange={v => setTopic(topics.includes(v as SpecimenTopic) ? v as SpecimenTopic : null)}>
       <SelectTrigger aria-label="Study link opens"><SelectValue /></SelectTrigger>
-      <SelectContent><SelectItem value="model">3D model</SelectItem><SelectItem value="anatomy">Anatomy notes</SelectItem><SelectItem value="function">Function notes</SelectItem></SelectContent>
+      <SelectContent><SelectItem value="model">3D model</SelectItem>{topics.map(t => <SelectItem key={t} value={t}>{specimenTopicLabels[t]} notes</SelectItem>)}</SelectContent>
     </Select>
     {!studyId && <p>Custom dissection: the link opens this structure with the region’s source context. Hidden tissues and separation are not saved.</p>}
     {href ? <CopySpecimenLink key={href} href={href} /> : <p>A link cannot be made for this source binding.</p>}

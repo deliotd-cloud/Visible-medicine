@@ -1,6 +1,7 @@
 import pins from '../content/um-limb-teaching-bindings.v1.json' with { type: 'json' };
 import type { SpecimenLesson } from '../content/um-limb-teaching';
 import type { SpecimenDefinition, SpecimenSurface } from './independent-specimen';
+import { specimenTopics, type SpecimenTopic } from './specimen-links';
 const canonical = (value: unknown): string => Array.isArray(value) ? `[${value.map(canonical).join(',')}]`
   : value && typeof value === 'object' ? `{${Object.keys(value).sort().map(k => `${JSON.stringify(k)}:${canonical((value as Record<string, unknown>)[k])}`).join(',')}}` : JSON.stringify(value);
 
@@ -12,6 +13,14 @@ export function specimenTeachingFor(definition: SpecimenDefinition, selected: Sp
   const bundle = definition.catalog.bundles.find(b => b.id === selected.bundle);
   if (!current || !pin || !bundle || bundle.sha256 !== pin.bundleSha256 || canonical(current) !== canonical(pin.surface) || canonical(selected) !== canonical(current)) return null;
   return JSON.parse(JSON.stringify(pin.lesson)) as SpecimenLesson;
+}
+
+/** Only exact bound drafts are linkable; absence is not a generic completed lesson. */
+export function availableSpecimenTopics(definition: SpecimenDefinition, selectedId: string): SpecimenTopic[] {
+  const selected = definition.surfaces.find(s => s.id === selectedId);
+  const lesson = selected && specimenTeachingFor(definition, selected);
+  if (!lesson) return [];
+  return specimenTopics.filter(topic => topic === 'anatomy' || topic === 'function' || lesson.extended?.topics[topic]?.readiness === 'draft');
 }
 
 export type IdentificationQuestion = { targetId: string; options: string[] };

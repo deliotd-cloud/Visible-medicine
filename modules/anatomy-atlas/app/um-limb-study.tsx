@@ -28,7 +28,7 @@ export default function LimbSpecimenDialog({ initialRegion, initialLink = noSpec
       </div>
       {blocked ? <section className="um-specimen-link-warning" role="alert">
         <h2>This specimen link cannot be opened</h2>
-        <p>{resolved.reason === 'source-changed' || resolved.reason === 'revision-changed' ? 'Its source model or study revision differs from the current specimen.' : 'It is incomplete or does not match the specified structure and study.'} No alternative structure has been selected.</p>
+        <p>{resolved.reason === 'source-changed' || resolved.reason === 'revision-changed' ? 'Its source model or study revision differs from the current specimen.' : resolved.reason === 'topic-unavailable' ? 'The requested teaching topic is not available for this exact source structure.' : 'It is incomplete or does not match the specified structure and study.'} No alternative structure has been selected.</p>
         <p>Choose another region above, or explicitly open the current source view to make a new link.</p>
         <Button variant="outline" onClick={() => setIgnoreLink(true)}>Open current source view</Button>
       </section> : <KneeSpecimenView key={scope} specimen={specimen} initialNavigation={!ignoreLink && resolved.status === 'ready' ? resolved : undefined} />}

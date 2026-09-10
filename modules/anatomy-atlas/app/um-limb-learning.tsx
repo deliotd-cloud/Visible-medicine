@@ -11,14 +11,25 @@ import type { SpecimenDefinition, SpecimenSurface } from '@/lib/independent-spec
 import type { DissectionView } from './dissection-data';
 import { createIdentification, reduceIdentification, specimenTeachingFor, type IdentificationState } from '@/lib/um-limb-teaching';
 import type { SpecimenTopic } from '@/lib/specimen-links';
+import { specimenTopicLabels } from '@/lib/specimen-links';
+import { specimenClinicalReferences } from '@/content/um-limb-clinical';
+
+const clinicalTopics = ['clinical', 'pathology'] as const;
+const imagingTopics = ['ct', 'mri', 'xray', 'ultrasound'] as const;
+function ClinicalReferences({ urls }: { urls: readonly string[] }) {
+  return urls.length ? <ul aria-label="Topic references">{urls.map(url => <li key={url}><a href={url} target="_blank" rel="noreferrer">{Object.values(specimenClinicalReferences).find(r => r.url === url)?.title ?? new URL(url).hostname}</a></li>)}</ul> : null;
+}
 
 export function SpecimenLearning({ definition, selected, initialTopic }: { definition: SpecimenDefinition; selected: SpecimenSurface; initialTopic?: SpecimenTopic | null }) {
   const lesson = specimenTeachingFor(definition, selected);
+  const group = initialTopic && clinicalTopics.includes(initialTopic as typeof clinicalTopics[number]) ? 'clinical' : initialTopic && imagingTopics.includes(initialTopic as typeof imagingTopics[number]) ? 'imaging' : 'anatomy';
   return <details className="um-knee-details um-limb-learning" key={`${selected.id}:${initialTopic ?? 'closed'}`} open={!!initialTopic}>
-    <summary>Learn · anatomy & function</summary>
+    <summary>Learn · anatomy, clinical & imaging</summary>
     {!lesson ? <p>Teaching unavailable for this source binding; no substitute was used.</p> : <>
-      <p className="um-knee-scene-caption">Teaching draft · specialist review pending.</p>
-      <Tabs defaultValue={initialTopic ?? 'anatomy'}>
+      <p className="um-knee-scene-caption">Teaching draft · specialist review pending. Education, not diagnosis or treatment.</p>
+      <Tabs defaultValue={group}>
+        <TabsList aria-label="Specimen information groups" variant="line"><TabsTrigger value="anatomy">Anatomy</TabsTrigger><TabsTrigger value="clinical">Clinical</TabsTrigger><TabsTrigger value="imaging">Imaging</TabsTrigger></TabsList>
+        <TabsContent value="anatomy"><Tabs defaultValue={initialTopic === 'function' ? 'function' : 'anatomy'}>
         <TabsList aria-label="Specimen teaching topics" variant="line"><TabsTrigger value="anatomy">Anatomy</TabsTrigger><TabsTrigger value="function">Function</TabsTrigger></TabsList>
         <TabsContent value="anatomy"><p>{lesson.anatomy}</p>{lesson.attachments && <dl>
           <dt>Proximal attachment</dt><dd>{lesson.attachments.proximal}</dd><dt>Distal attachment</dt><dd>{lesson.attachments.distal}</dd>
@@ -26,10 +37,26 @@ export function SpecimenLearning({ definition, selected, initialTopic }: { defin
         <TabsContent value="function"><p>{lesson.function}</p>{lesson.attachments && <dl><dt>Motor supply</dt><dd>{lesson.attachments.motor}</dd></dl>}
           <p>Typical function, not simulated motion. Nerve routes and attachment footprints are not reconstructed.</p>
         </TabsContent>
+        </Tabs></TabsContent>
+        {(['clinical', 'imaging'] as const).map(g => <TabsContent key={g} value={g}>
+          <Tabs defaultValue={group === g && initialTopic ? initialTopic : g === 'clinical' ? 'clinical' : (['mri', 'ct', 'xray', 'ultrasound'] as const).find(t => lesson.extended?.topics[t]) ?? 'mri'}>
+            <TabsList aria-label={g === 'clinical' ? 'Clinical topics' : 'Imaging modalities'} variant="line">
+              {(g === 'clinical' ? clinicalTopics : imagingTopics).map(t => <TabsTrigger key={t} value={t}>{specimenTopicLabels[t]}</TabsTrigger>)}
+            </TabsList>
+            {(g === 'clinical' ? clinicalTopics : imagingTopics).map(t => {
+              const draft = lesson.extended?.topics[t];
+              return <TabsContent key={t} value={t}>{draft ? <><p>{draft.body}</p><ClinicalReferences urls={draft.references} /></> : <p>{specimenTopicLabels[t]} teaching is pending for this source selection. No generic lesson or different structure has been substituted.</p>}
+                {g === 'imaging' && <p className="um-knee-scene-caption">Modality teaching only · No patient images, scan alignment or measured pathology.</p>}
+              </TabsContent>;
+            })}
+          </Tabs>
+          {lesson.extended && <p className="um-source-caution">Model limit: {lesson.extended.modelLimit}</p>}
+        </TabsContent>)}
       </Tabs>
       <details><summary>Self-check</summary><p>Recall this structure’s functional role before revealing the answer.</p><details><summary>Reveal answer</summary><p>{lesson.function}</p></details></details>
+      {lesson.extended && <details><summary>Clinical self-check</summary><p>{lesson.extended.selfCheck.question}</p><details><summary>Reveal explanation</summary><p>{lesson.extended.selfCheck.answer}</p><ClinicalReferences urls={lesson.extended.selfCheck.references} /></details></details>}
       <details><summary>References & next content</summary><ul>{lesson.references.map((url, i) => <li key={url}><a href={url} target="_blank" rel="noreferrer">Reference {i + 1} · {new URL(url).hostname}</a></li>)}</ul>
-        <p>Clinical/pathology and CT/MRI/X-ray/US lessons for this independent specimen remain pending. No scan correspondence or separately paid lecture access is implied.</p>
+        <p>Clinical/pathology and imaging coverage is incomplete; each topic shows its own draft or pending state. No scan correspondence or separately paid lecture access is implied.</p>
       </details>
     </>}
   </details>;

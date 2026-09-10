@@ -4,7 +4,9 @@ import type { StudySearchParams } from './study-links';
 
 export const specimenScopes = ['knee', 'hip-thigh', 'calf', 'foot', 'whole'] as const;
 export type SpecimenScope = typeof specimenScopes[number];
-export type SpecimenTopic = 'anatomy' | 'function';
+export const specimenTopics = ['anatomy', 'function', 'clinical', 'pathology', 'ct', 'mri', 'xray', 'ultrasound'] as const;
+export type SpecimenTopic = typeof specimenTopics[number];
+export const specimenTopicLabels: Record<SpecimenTopic, string> = { anatomy: 'Anatomy', function: 'Function', clinical: 'Clinical', pathology: 'Pathology', ct: 'CT', mri: 'MRI', xray: 'X-ray', ultrasound: 'Ultrasound' };
 export type SpecimenLinkRequest = {
   scope: SpecimenScope; structureId: string; sourceHash: string; revision: string;
   studyId: string | null; view: DissectionView; topic: SpecimenTopic | null;
@@ -30,7 +32,7 @@ export function parseSpecimenLink(params: StudySearchParams): ParsedSpecimenLink
     || typeof part !== 'string' || !/^vm:reference:um-5t6tz7-v1-2:(?:knee|lower-limb):[a-z0-9-]{1,100}$/.test(part)
     || typeof source !== 'string' || !hash.test(source) || typeof revision !== 'string' || !hash.test(revision)
     || (study !== undefined && (typeof study !== 'string' || !/^[a-z0-9-]{1,80}$/.test(study)))
-    || typeof view !== 'string' || !views.includes(view) || (topic !== undefined && topic !== 'anatomy' && topic !== 'function')) return { status: 'invalid' };
+    || typeof view !== 'string' || !views.includes(view) || (topic !== undefined && !specimenTopics.includes(topic as SpecimenTopic))) return { status: 'invalid' };
   return { status: 'requested', request: { scope: scope as SpecimenScope, structureId: part, sourceHash: source, revision,
     studyId: study ?? null, view: view as DissectionView, topic: (topic as SpecimenTopic | undefined) ?? null } };
 }

@@ -41,7 +41,7 @@ for (const [scope, definition] of Object.entries(limbDefinitions)) {
     const missing = { ...params }; delete missing[key]; same(parseSpecimenLink(missing).status, 'invalid');
     same(parseSpecimenLink({ ...params, [key]: [params[key], params[key]] }).status, 'invalid');
   }
-  for (const bad of [{ specimenScope: '__proto__' }, { specimenPart: 'FMA24474' }, { specimenPart: 'x'.repeat(4096) }, { specimenStudy: '' }, { specimenView: 'javascript:alert(1)' }, { specimenTopic: 'mri' }, { specimenAccess: 'paid' }, { structure: selected.id }]) same(parseSpecimenLink({ ...params, ...bad }).status, 'invalid');
+  for (const bad of [{ specimenScope: '__proto__' }, { specimenPart: 'FMA24474' }, { specimenPart: 'x'.repeat(4096) }, { specimenStudy: '' }, { specimenView: 'javascript:alert(1)' }, { specimenTopic: 'unvalidated-scan' }, { specimenAccess: 'paid' }, { structure: selected.id }]) same(parseSpecimenLink({ ...params, ...bad }).status, 'invalid');
   same(resolveSpecimenLink(parseSpecimenLink({ ...params, specimenStudy: 'not-a-study' })).status, 'rejected');
   const changed = clone(definition); changed.surfaces[0].bounds.min[0] += .1;
   same(makeSpecimenLink(changed, { selectedId: selected.id, view: 'anterior' }), null);

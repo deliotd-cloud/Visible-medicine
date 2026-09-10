@@ -1,8 +1,10 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
-**Independent lower limb → Link to this study** creates a [source-checked direct link](docs/UM_LIMB_NAVIGATION.md) to a selected structure, study and camera direction, optionally opening Anatomy or Function notes. Links open a dedicated specimen page without loading the other body atlas. Source/revision mismatches stop with a warning; no paid-resource access or scan alignment is granted.
+**Independent lower limb → Learn** now includes [46 clinical/pathology/imaging drafts for ten knee and hindfoot structures](docs/UM_LIMB_CLINICAL.md), with ten clinical self-checks. Three compact groups keep Anatomy, Clinical and Imaging inside the existing collapsed panel. Pending topics are explicit; no clinical approval or patient-scan correspondence is claimed.
 
-**Independent lower limb → Learn / Practise identification** adds [67 source-bound anatomy/function drafts](docs/UM_LIMB_LEARNING.md), including attachments and motor supply for 42 muscles. Practise naming highlighted surfaces in short rounds, reveal answers or retry missed structures, then return to the preserved dissection. Clinical/imaging teaching and specialist validation remain pending.
+**Independent lower limb → Link to this study** creates a [source-checked direct link](docs/UM_LIMB_NAVIGATION.md) to a selected structure, study and camera direction, optionally opening any available teaching topic. Links open a dedicated specimen page without loading the other body atlas. Source/revision mismatches and unavailable topics stop with a warning; no paid-resource access or scan alignment is granted.
+
+**Independent lower limb → Learn / Practise identification** adds [67 source-bound anatomy/function drafts](docs/UM_LIMB_LEARNING.md), including attachments and motor supply for 42 muscles. Practise naming highlighted surfaces in short rounds, reveal answers or retry missed structures, then return to the preserved dissection. Further clinical/imaging teaching and specialist validation remain pending.
 
 **Hip & thigh / Pelvis & hip / Ankle & foot → Dissection · separate specimen** opens the [extended independent lower limb](docs/UM_LIMB_DISSECTION.md). 52 additional source surfaces join the preserved 15-part knee study: 67 unique surfaces and 26 regional/whole-limb study choices. Reuse selection, reversible dissection, labels and three separation modes in a single compact modal. Grouped source bones and mesh defects remain disclosed; this is not complete or clinically approved anatomy.
 
