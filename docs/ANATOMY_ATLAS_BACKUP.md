@@ -1,6 +1,22 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — knee/hindfoot clinical and imaging drafts (current)
+## 11 September 2026 — lower-limb motor relationships (current)
+
+Source `0621e5ce17bcc489dde76b0a4d6bed07305b4143`, tree `3b0260e84a666a247bd412bcb9cd137fd6cc8085`, parent `3168f9db2c82f397c91091e0c3a1e8df51de83d5`. Eighteen paths mirrored into `modules/anatomy-atlas`; main website unchanged. Exact source pushed to Sites main; full HEAD verified after success, ephemeral credential cleared.
+
+The collapsed Muscles by nerve control offers 15 nerve/branch groups, 43 explicitly authored relationships and 42 exact muscle selections across five independent limb scopes. It shows supplied targets with regional bones in one reversible visibility step; individual selection reuses Learn/Frame/dissection. Dual adductor-magnus territory, distinct biceps heads and variable pectineus/gemellar supply are qualified. No nerve geometry, root/sensory map, donor-specific innervation, lesion simulation, scan registration or paid access is implied. All source geometry, 67 baseline lessons, prior clinical drafts, navigation source/recipe pins and nine shoulder review fingerprints remain intact; 42 lessons gain pinned motor metadata only.
+
+Reference-only checks included Texas Tech Health El Paso, NCBI anatomy teaching and a primary deep-hip innervation study. A bounded peripheral-source review records the Cevallos scanned-plexus lead: its Interactive Model link points to video, without established downloadable mesh bytes/rights. Z-Anatomy still needs component-level rights; no candidate was downloaded/imported. No dependency, font, texture, source model, entitlement or database change.
+
+Passed: new motor scope/binding/history checks (34 regional groups and five collapsed React markup cases), existing learning/clinical/navigation/knee suites, TypeScript, production build and final inventory freshness. No full-limb geometry re-audit or browser/GPU/clinical acceptance claim. Standard Windows wrappers failed; established npm build and retained official package helper succeeded. Source and backup state remain separate from deployment.
+
+One native archive-save attempt timed out after 60,004 ms at the North Europe file-blob host, request `04290402-e65a-4ec3-8cd4-104216d2288d`. Reconciled history remains version 135, source `a89a75be103f476206c4eee0d54fa32a12c0c79b`; no new version/deployment was created. This and the preceding wider-limb milestones are saved/pushed source but NOT live. Archive hash stayed unchanged; no upload loop, shell HTTP workaround or omitted-archive bypass.
+
+Recovery stem `work/atlas-um-limb-motor-2026-09-11`: runtime archive 127,704,515 bytes SHA256 `928fa099bc163a3c07c9e51d4af9fc81f9e0bae0089dbf8123d3c3267c065c8a`; delta 522,240 bytes SHA256 `47117a7608999141a2ba5f533d7d451767a2b2009cae84f08dfd328f2b001300`; incremental bundle 15,276 bytes SHA256 `f3ae5304ab3cc3c17275a7ddf5aecd744d2e749c36c7a4204fd7c2da889247dc`. Bundle requires the source parent above, not standalone. Runtime archive: 340 entries. Exact mirror: 1,406 files / 334,267,045 bytes / 111 GLBs; no common credential-signature warnings (not exhaustive). Recovery JSON flags precede this receipt; do not rerun the one-shot helper. Older artifacts retained.
+
+This is same-PC recovery plus Sites source saving, not GitHub delivery, independent restoration, chat-history or review-database backup. Final state/next actions: `work/ATLAS_UM_LIMB_MOTOR_2026-09-11.md`. Continue substantive wider-body anatomy and teaching, not repeated motor metadata or routine oral detail. The goal remains active; publication failure alone has not stopped meaningful source work.
+
+## 11 September 2026 — knee/hindfoot clinical and imaging drafts
 
 Source `3168f9db2c82f397c91091e0c3a1e8df51de83d5`, tree `94760c7f4c3d6d102e2e0fbac58b2f6b31579925`, parent `df95b14d355bc562730dfbe4a43a7e509697973e`. Twenty-three source paths mirrored into `modules/anatomy-atlas`; main website unchanged. Exact source pushed to Sites main with ephemeral authentication and full HEAD verified afterward; credential cleared.
 

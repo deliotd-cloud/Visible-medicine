@@ -21,6 +21,8 @@ import type { VentricularState } from '@/lib/ventricles';
 import { createIdentification, type IdentificationState } from '@/lib/um-limb-teaching';
 import { SpecimenLearning, SpecimenIdentification } from './um-limb-learning';
 import { SpecimenStudyLink } from './specimen-study-link';
+import { SpecimenMotorExplorer } from './um-limb-motor';
+import { motorStudyAction, specimenMotorGroups } from '@/lib/um-limb-motor';
 import type { ResolvedSpecimenNavigation } from '@/lib/um-limb-navigation';
 import './eye-layers.css';
 import './um-knee-study.css';
@@ -122,6 +124,11 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation 
         <Button size="sm" variant="outline" disabled={!future.length} onClick={() => historyStep('redo')}><Redo2 />Redo</Button>
         <span aria-live="polite">{visible.length}/{kneeStructures.length} visible</span>
       </div>
+      <SpecimenMotorExplorer definition={specimen} selectedId={selectedId} onSelect={select} onExplore={nerve => {
+        const action = motorStudyAction(specimen, nerve), group = specimenMotorGroups(specimen).find(g => g.key === nerve);
+        if (!action || !group) return;
+        dispatch(action); assembledDisplay(); setQuery(''); setJointCloseUp(false); setView(group.view);
+      }} />
       <section className="um-knee-selection" aria-label="Selected specimen structure">
         <h3>{selected?.name ?? 'Select a structure'}</h3>
         {selected && <>

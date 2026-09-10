@@ -35,13 +35,20 @@ export function specimenCatalog({ key, source, surfaces, bundles, matrix }: {
     regions: [], excluded: [], coverage: { nerves: 'Not supplied', organs: 'Not applicable' },
   };
 }
-export type SpecimenAction = VentricularAction | { type: 'group'; tissue: string; visible: boolean };
+export type SpecimenAction = VentricularAction | { type: 'group'; tissue: string; visible: boolean }
+  | { type: 'show-only'; ids: string[]; selectedId: string };
 export function specimenAction(specimen: SpecimenDefinition, value: string): VentricularAction | null {
   const study = specimen.studies.find((s) => s.id === value);
   return study ? { type: 'preset', value, selectedId: study.selectedId } : null;
 }
 export function reduceSpecimen(specimen: SpecimenDefinition, state: VentricularState, action: SpecimenAction) {
   const structures = specimen.catalog.structures;
+  if (action.type === 'show-only') {
+    // Reject malformed/foreign sets instead of silently opening another tissue.
+    if (!action.ids.length || new Set(action.ids).size !== action.ids.length || !action.ids.includes(action.selectedId)
+      || action.ids.some(id => !structures.some(s => s.id === id))) return state;
+    return reduceVentricles(structures, state, { type: 'preset', value: 'selection', selectedId: action.selectedId }, { selection: action.ids });
+  }
   if (action.type !== 'group') return reduceVentricles(structures, state, action, Object.fromEntries(specimen.studies.map((s) => [s.id, s.ids])));
   const members = new Set(specimen.surfaces.filter((s) => s.tissue === action.tissue).map((s) => s.id));
   if (!members.size) return state;

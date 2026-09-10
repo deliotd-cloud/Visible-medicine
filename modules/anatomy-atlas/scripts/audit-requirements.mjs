@@ -15,6 +15,7 @@ const bundled = await build({
   stdin: {
     contents: `export { limbDefinitions } from './lib/um-limb-studies.ts';
 export { specimenTeachingFor } from './lib/um-limb-teaching.ts';
+export { specimenMotorGroups } from './lib/um-limb-motor.ts';
 export { makeSpecimenLink, resolveSpecimenLink } from './lib/um-limb-navigation.ts';
 export { parseSpecimenLink, specimenTopics } from './lib/specimen-links.ts';
 export { bodyContent, bodyLesson } from './app/body-content.ts';
@@ -44,6 +45,7 @@ export { cardiacRelationshipsFor, cardiacVesselSource } from './lib/cardiac-cont
 const {
   limbDefinitions,
   specimenTeachingFor,
+  specimenMotorGroups,
   makeSpecimenLink,
   resolveSpecimenLink,
   parseSpecimenLink,
@@ -301,6 +303,9 @@ for (const path of [
   'lib/um-limb-teaching.ts',
   'content/um-limb-teaching.ts',
   'content/um-limb-clinical.ts',
+  'content/um-limb-motor.ts',
+  'lib/um-limb-motor.ts',
+  'app/um-limb-motor.tsx',
   'content/um-limb-teaching-bindings.v1.json',
   'lib/specimen-links.ts',
   'lib/um-limb-navigation.ts',
@@ -399,6 +404,12 @@ const report = {
       navigation: { route: '/specimens/lower-limb', sourceAndRecipePinned: true,
         scopes: independentNavigation, topics: specimenTopics, exactDraftRequired: true, grantsAccessOrRegistration: false },
       detailedTeaching: {
+        motorExplorer: {
+          groups: specimenMotorGroups(limbDefinitions.whole).length,
+          muscleSelections: new Set(specimenMotorGroups(limbDefinitions.whole).flatMap(g => g.targets.map(t => t.surface.id))).size,
+          relationships: specimenMotorGroups(limbDefinitions.whole).reduce((n, g) => n + g.targets.length, 0),
+          nerveMeshesAdded: 0, donorInnervationConfirmed: false,
+        },
         anatomyFunctionDrafts: limbDefinitions.whole.surfaces.filter(s => specimenTeachingFor(limbDefinitions.whole, s)).length,
         muscleAttachmentDrafts: limbDefinitions.whole.surfaces.filter(s => specimenTeachingFor(limbDefinitions.whole, s)?.attachments).length,
         identificationPractice: 'up to 10 visible pinned source selections per round; first-try/reveal/retry-missed',

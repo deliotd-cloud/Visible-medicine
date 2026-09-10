@@ -34,6 +34,11 @@
 .um-limb-learning ul, .um-knee-controls > ul { padding-left: 1.2rem; }
 .um-limb-learning li { margin: .35rem 0; overflow-wrap: anywhere; }
 .um-limb-answer-options { display: grid; gap: .5rem; margin: 1rem 0; }
+.um-limb-motor .eye-layer-list { grid-template-columns: 1fr; }
+.um-limb-motor .eye-layer-list li > div { width: 100%; min-width: 0; }
+.um-limb-motor button, .um-limb-motor [data-slot='select-trigger'] { height: auto; min-height: 36px; white-space: normal; text-align: left; }
+.um-limb-motor [data-slot='select-value'] { min-width: 0; white-space: normal; }
+.um-limb-motor details { margin-top: .5rem; }
 .um-limb-answer-options button { min-height: 44px; height: auto; padding: .6rem; white-space: normal; text-align: left; justify-content: flex-start; }
 .um-knee-scene-caption { font-size: .8125rem; line-height: 1.4; color: var(--muted-foreground); margin: 0; }
 @media (max-width: 700px) {
