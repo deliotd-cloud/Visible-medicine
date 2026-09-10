@@ -14,6 +14,7 @@ const compiled = await build({
  export * from './lib/explode-layout.mjs'; export * from './lib/study-views';
  export * from './lib/inspection-geometry'; export * from './lib/inspection-state';
  export * from './lib/anatomy-load-state'; export * from './lib/scene-labels';
+ export * from './lib/origin-guides';
  export * from './app/anatomy-data'; export * from './app/body-types';`,
     resolveDir: process.cwd(),
     loader: 'ts',
@@ -465,6 +466,7 @@ const replacements = {
   './body-types': a,
   '@/lib/inspection-geometry': a,
   '@/lib/inspection-state': a,
+  '@/lib/origin-guides': a,
   '@/components/ui/button': { Button: 'Button' },
   './scene-recovery': {
     SceneRecovery: 'SceneRecovery',

@@ -200,6 +200,14 @@ for (const target of cases) {
   render();
   check(button('Undo layers').disabled);
   check(button('Redo layers').disabled);
+  const originToggle = () => nodes(tree).find((n) => n.props?.['aria-label'] === 'Show original position').props;
+  same(scene().showOrigins, false);
+  same(scene().originStyle, 'selected-guide');
+  check(nodes(tree).some((n) => n.type === 'details' && !n.props.open &&
+    nodes(n).some((child) => child.props?.['aria-label'] === 'Show original position')));
+  originToggle().onCheckedChange(true);
+  render();
+  same(scene().showOrigins, true);
   const controls = nodes(tree).find(
     (n) => n.type === api.CutawayControls,
   ).props;
@@ -229,6 +237,7 @@ for (const target of cases) {
   same(scene().hiddenIds, afterHidden);
   same(scene().inspection, cut);
   same(scene().explode, 35);
+  same(scene().showOrigins, true);
   check(button('Redo layers').disabled);
   button('Undo layers').onClick();
   render();
@@ -247,6 +256,7 @@ for (const target of cases) {
   check(layers.every((l) => !scene().hiddenIds.includes(l.id)));
   check(button('Redo layers').disabled);
   same(scene().explode, 0);
+  same(scene().showOrigins, true);
   const html = renderToStaticMarkup(React.createElement(View, props));
   check(
     /<button[^>]*disabled[^>]*>Redo layers<\/button>/.test(html),
@@ -256,6 +266,7 @@ for (const target of cases) {
   slots = [];
   render();
   check(button('Undo layers').disabled && button('Redo layers').disabled);
+  same(scene().showOrigins, false);
   const studySelect = () =>
     nodes(tree).find(
       (n) =>

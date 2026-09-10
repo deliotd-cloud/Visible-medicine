@@ -282,6 +282,7 @@ export function VentricularView({
     [labels, setLabels] = useState(true);
   const [explode, setExplode] = useState(0),
     [layout, setLayout] = useState<BodyLayout>('extract');
+  const [showOrigins, setShowOrigins] = useState(false);
   const [view, setView] = useState<DissectionView>('anterior'),
     [reset, setReset] = useState(0);
   const [focus, setFocus] = useState(false),
@@ -471,7 +472,8 @@ export function VentricularView({
           explode={explode}
           layout={layout}
           anchorSkeleton={false}
-          showOrigins={false}
+          showOrigins={showOrigins}
+          originStyle="selected-guide"
           view={view}
           zoom={1}
           reset={reset}
@@ -884,6 +886,21 @@ export function VentricularView({
           <p>
             Separate for shape comparison; return to 0% to study anatomical
             relationships. This is not a surgical or fluid-flow simulation.
+          </p>
+          <label className="origin-guide-toggle" htmlFor="nested-origin-guide">
+            Show original position
+            <Switch
+              id="nested-origin-guide"
+              checked={showOrigins}
+              onCheckedChange={setShowOrigins}
+              aria-label="Show original position"
+              aria-describedby="nested-origin-guide-note"
+            />
+          </label>
+          <p id="nested-origin-guide-note">
+            Selected part only: a faint outline and line back to its source
+            position, not a tissue connection. Hidden at 0%, in flat-plate or
+            cutaway views, or when the part is hidden or not moving.
           </p>
         </details>
         {selected && (

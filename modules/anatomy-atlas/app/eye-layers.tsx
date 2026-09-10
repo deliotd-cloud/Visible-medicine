@@ -77,6 +77,7 @@ export function EyeLayerView({
     );
   const [explode, setExplode] = useState(0),
     [layout, setLayout] = useState<BodyLayout>('extract');
+  const [showOrigins, setShowOrigins] = useState(false);
   const [view, setView] = useState<DissectionView>('anterior'),
     [labels, setLabels] = useState(true);
   const [isolated, setIsolated] = useState(!!initialSelection),
@@ -155,7 +156,8 @@ export function EyeLayerView({
           explode={explode}
           layout={layout}
           anchorSkeleton={false}
-          showOrigins={false}
+          showOrigins={showOrigins}
+          originStyle="selected-guide"
           view={view}
           zoom={1}
           reset={reset}
@@ -415,6 +417,21 @@ export function EyeLayerView({
           />
           <p>
             Drag to rotate in lift mode; spread mode uses a flat teaching plate.
+          </p>
+          <label className="origin-guide-toggle" htmlFor="eye-origin-guide">
+            Show original position
+            <Switch
+              id="eye-origin-guide"
+              checked={showOrigins}
+              onCheckedChange={setShowOrigins}
+              aria-label="Show original position"
+              aria-describedby="eye-origin-guide-note"
+            />
+          </label>
+          <p id="eye-origin-guide-note">
+            Selected part only: a faint outline and line back to its source
+            position, not a tissue connection. Hidden at 0%, in flat-plate or
+            cutaway views, or when the part is hidden or not moving.
           </p>
         </details>
         {selected && (

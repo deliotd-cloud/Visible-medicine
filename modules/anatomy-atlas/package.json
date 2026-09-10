@@ -10,6 +10,7 @@
     "cardiac-context:test": "node scripts/validate-cardiac-context.mjs",
     "nested-cutaway:test": "node scripts/validate-nested-cutaway.mjs",
     "nested-history:test": "node scripts/validate-nested-history.mjs",
+    "origin-guides:test": "node scripts/validate-origin-guides.mjs",
     "hepatic:audit": "node scripts/audit-hepatic-source.mjs",
     "hepatic:export": "node scripts/export-hepatic.mjs",
     "hepatic:test": "node scripts/validate-hepatic.mjs",

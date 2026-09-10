@@ -241,6 +241,7 @@ for (const path of [
   'app/ventricles.tsx',
   'app/ventricular-relationships.css',
   'app/body-scene.tsx',
+  'lib/origin-guides.ts',
   'lib/learning-entitlements.ts',
   'public/brand/visible-medicine-lockup-dark.png',
   'public/brand/visible-medicine-lockup-light.png',

@@ -9,7 +9,7 @@ import {
 } from 'react';
 import { type ThreeEvent } from '@react-three/fiber';
 import { AnatomyCanvas as Canvas } from './anatomy-canvas';
-import { useGLTF } from '@react-three/drei';
+import { Line, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 import { FittedCamera } from './fitted-camera';
 import { translatedBox } from '@/lib/explode-layout.mjs';
@@ -38,6 +38,7 @@ import { vesselColor } from '@/lib/anatomy-vessels';
 import { renderedAnatomyStructures } from '@/lib/anatomy-load-state';
 import { SceneRecovery, RendererMonitor } from './scene-recovery';
 import type { RendererHealth } from '@/lib/renderer-health';
+import { selectedOriginGuide, type OriginGuide } from '@/lib/origin-guides';
 
 type Props = {
   catalog: BodyCatalog;
@@ -53,6 +54,8 @@ type Props = {
   layout: BodyLayout;
   anchorSkeleton: boolean;
   showOrigins: boolean;
+  /** Default preserves the regional viewer's existing whole-model wireframes. */
+  originStyle?: 'wireframe' | 'selected-guide';
   labels: boolean;
   view: DissectionView;
   zoom: number;
@@ -108,6 +111,7 @@ function Bundle({
   frame,
   labelIds,
   renderedCount,
+  originGuide,
 }: {
   bundle: BodyCatalog['bundles'][number];
   items: BodyStructure[];
@@ -116,6 +120,7 @@ function Bundle({
   frame: THREE.Box3;
   labelIds: string[];
   renderedCount: number;
+  originGuide: OriginGuide | null;
 }) {
   const { scene } = useGLTF(bundle.url);
   const onLoaded = props.onLoaded;
@@ -155,7 +160,8 @@ function Bundle({
         const labelIndex = labelIds.indexOf(structure.id);
         return (
           <group key={structure.id}>
-            {props.showOrigins &&
+            {props.originStyle !== 'selected-guide' &&
+              props.showOrigins &&
               props.layout !== 'tray' &&
               props.explode > 0 &&
               position.lengthSq() > 0 &&
@@ -172,6 +178,28 @@ function Bundle({
                   />
                 </mesh>
               )}
+            {originGuide?.id === structure.id && (
+              <group>
+                <mesh geometry={geometry} raycast={() => null}>
+                  <meshBasicMaterial
+                    color="#16c6b2"
+                    wireframe
+                    transparent
+                    opacity={0.12}
+                    depthWrite={false}
+                  />
+                </mesh>
+                <Line
+                  points={[originGuide.start, originGuide.end]}
+                  color="#16c6b2"
+                  lineWidth={1}
+                  transparent
+                  opacity={0.6}
+                  depthWrite={false}
+                  raycast={() => null}
+                />
+              </group>
+            )}
             <group position={position}>
               <group
                 onClick={select}
@@ -315,6 +343,26 @@ export function BodyScene(props: Props) {
       tray,
     ],
   );
+  const originGuide = useMemo(
+    () => selectedOriginGuide({
+      enabled: props.originStyle === 'selected-guide' && props.showOrigins,
+      exam: props.exam,
+      layout,
+      explode: props.explode,
+      selectedId: props.selectedId,
+      structures: rendered,
+      hiddenIds: props.hiddenIds,
+      contextIds: props.contextIds,
+      inspection: props.inspection,
+      offsets,
+      appearance: props.appearance,
+    }),
+    [
+      props.originStyle, props.showOrigins, props.exam, layout, props.explode,
+      props.selectedId, rendered, props.hiddenIds, props.contextIds,
+      props.inspection, offsets, props.appearance,
+    ],
+  );
   const bounds = useMemo(() => {
     let list = rendered.length ? rendered : props.structures;
     if (focusId) {
@@ -326,7 +374,11 @@ export function BodyScene(props: Props) {
       result.union(translatedBox(s.bounds, offsets.get(s.id)));
     if (result.isEmpty())
       result.set(new THREE.Vector3(-2, -8, -1), new THREE.Vector3(2, 8, 1));
-    if (props.showOrigins && layout !== 'tray' && !focusId) result.union(frame);
+    if (originGuide) result.union(translatedBox(originGuide.bounds));
+    if (
+      props.originStyle !== 'selected-guide' && props.showOrigins &&
+      layout !== 'tray' && !focusId
+    ) result.union(frame);
     return result;
   }, [
     props.structures,
@@ -335,6 +387,8 @@ export function BodyScene(props: Props) {
     offsets,
     layout,
     props.showOrigins,
+    props.originStyle,
+    originGuide,
     frame,
   ]);
   const bundles = props.catalog.bundles.filter((b) =>
@@ -393,6 +447,7 @@ export function BodyScene(props: Props) {
                     frame={cutFrame}
                     labelIds={labelIds}
                     renderedCount={rendered.length}
+                    originGuide={originGuide}
                   />
                 </Suspense>
               </AssetBoundary>
