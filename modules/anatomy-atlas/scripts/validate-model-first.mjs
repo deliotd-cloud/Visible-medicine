@@ -124,6 +124,9 @@ for (const retired of [
   migratedCallbacks.splice(index, 1);
 }
 migratedCallbacks.push(
+  // Source-bound child search is executed by nested-navigation:test. All original
+  // launcher bindings and the portable baseline remain unchanged.
+  'onDissect/4b3e76ba12a91c7a45ae6b7e2e9dfb7ab63f951831d4d099633f0bad2245a109',
   // Ventricular launcher/close are additional contextual actions. The dedicated
   // ventricles:test executes camera capture, close and focus restoration.
   'onClick/2a26e80ca000beaf9da567f5fa88354745f1f582c4a17ff9862167061fd28cff',
@@ -592,6 +595,7 @@ const result = {
   preservedControlCallbacks: baseline.callbacks.length - 7,
   addedEyeLayerCallbacks: 2,
   addedVentricularCallbacks: 2,
+  addedNestedSearchCallback: 1,
   explicitNavigationReplacementCallbacks: 4,
   explicitExplosionReplacementCallbacks: 1,
   explicitSelectionRecoveryHandler: 1,

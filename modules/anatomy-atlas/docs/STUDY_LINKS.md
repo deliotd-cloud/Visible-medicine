@@ -10,7 +10,7 @@ Links preserve the current region, selected public anatomy ID, side and an avail
 
 ## Contract
 
-The allowlisted route is `/` or `/regions/{known-region}`. The query contains only `study=1`, `structure`, `side`, `source` and optional `focus`. `source` pins the selected structure's model-bundle SHA-256. No user-supplied URL, model path, script, camera matrix, patient ID or remote resource is fetched from the query.
+The allowlisted route is `/` or `/regions/{known-region}`. Root links contain `study=1`, `structure`, `side`, `source` and optional `focus`. `source` pins the selected structure's model-bundle SHA-256. [Nested brain/eye links](NESTED_ANATOMY_NAVIGATION.md) use `study=2` with mandatory `detail`, `part` and `partSource`, binding both the parent bundle and child bundle; they do not accept `focus`. No user-supplied URL, model path, script, camera matrix, patient ID or remote resource is fetched from the query.
 
 `lib/study-links.ts` parses bounded scalar values and rejects repeated fields, incomplete requests, unsupported format versions, malformed IDs, invalid sides and hashes. Unknown unrelated parameters are ignored and not copied into generated links. Profile lookups require an own property and a known catalogue region; prototype names and path traversal do not select a profile.
 

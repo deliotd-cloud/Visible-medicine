@@ -14,8 +14,8 @@ export async function reviewDocumentBeforeSearch(
 ) {
   assert.equal(
     hash(encode(revisions)),
-    '409ffb44fabf97ae06ab89601ea9aa3a87e9c6aee6bd7045b5e2329178c77d50',
-    'Exact search-display review transition',
+    '37a61b04a86955c0ab6cda39b95e33c2cf0f8df7f6cc01bfc13261389719fad7',
+    'Exact nested-search display review transition',
   );
   for (const [path, expected] of revisions.display) {
     const source = await readFile(
@@ -28,7 +28,39 @@ export async function reviewDocumentBeforeSearch(
       'Stale display fingerprint: ' + path,
     );
   }
-  const previous = structuredClone(revisions);
+  // Undo only the two shared search-display source changes for historical
+  // comparison. Never retain/migrate a private approval to the new revision.
+  const beforeNested = structuredClone(revisions);
+  const nestedReplaced = {
+    'app/atlas-workspace.tsx':
+      'a34ba88618f9c3afdd29565395ed4b1861624fe558eb4128fe227ca0c591d4c4',
+    'lib/atlas-navigation.ts':
+      'ce57355238c1b34a8e6a714e5c82f09aa095172eddb6b9ad543f249fa054fe68',
+  };
+  beforeNested.display = beforeNested.display.map(([path, fingerprint]) => [
+    path,
+    nestedReplaced[path] ?? fingerprint,
+  ]);
+  for (const s of structures) {
+    beforeNested.revisions[s.id].geometry = hash(
+      JSON.stringify({
+        model: manifest.sha256,
+        manifest,
+        display: beforeNested.display,
+        identity: { id: s.id, name: s.name, latinName: s.latinName },
+      }),
+    );
+    assert.notEqual(
+      beforeNested.revisions[s.id].geometry,
+      revisions.revisions[s.id].geometry,
+    );
+  }
+  assert.equal(
+    hash(encode(beforeNested)),
+    '409ffb44fabf97ae06ab89601ea9aa3a87e9c6aee6bd7045b5e2329178c77d50',
+    'Previous search revision reproduced exactly; teaching and original evidence unchanged',
+  );
+  const previous = structuredClone(beforeNested);
   const replaced = {
     'app/atlas-workspace.tsx':
       'f0f6939077c79c88e5a32e7a92d152c87ae19b712bbdbb43deed7d01b1eea2f3',

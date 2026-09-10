@@ -132,8 +132,15 @@ export function EyeCutawayControls({
   );
 }
 
-export function EyeLayerView({ parent }: { parent: BodyStructure }) {
+export function EyeLayerView({
+  parent,
+  initialSelectedId,
+}: {
+  parent: BodyStructure;
+  initialSelectedId?: string;
+}) {
   const layers = useMemo(() => eyeLayersFor(parent), [parent]);
+  const initialSelection = layers.find((s) => s.id === initialSelectedId)?.id;
   const frame = useMemo(() => selectionBounds(layers), [layers]);
   const [inspection, setInspection] = useState(initialInspection);
   const [{ selectedId, hidden, history, preset: currentPreset }, dispatch] =
@@ -141,13 +148,21 @@ export function EyeLayerView({ parent }: { parent: BodyStructure }) {
       (state: EyeLayerState, action: EyeAction) =>
         reduceEyeLayers(layers, state, action),
       layers,
-      initialEyeLayers,
+      (items) =>
+        initialSelection
+          ? {
+              selectedId: initialSelection,
+              hidden: [],
+              history: [],
+              preset: 'all' as const,
+            }
+          : initialEyeLayers(items),
     );
   const [explode, setExplode] = useState(0),
     [layout, setLayout] = useState<BodyLayout>('extract');
   const [view, setView] = useState<DissectionView>('anterior'),
     [labels, setLabels] = useState(true);
-  const [isolated, setIsolated] = useState(false),
+  const [isolated, setIsolated] = useState(!!initialSelection),
     [focus, setFocus] = useState(false),
     [reset, setReset] = useState(0);
   const [health, setHealth] = useState<RendererHealth>('starting');
@@ -565,9 +580,11 @@ export function EyeLayerView({ parent }: { parent: BodyStructure }) {
 export default function EyeLayers({
   parent,
   onClose,
+  initialSelectedId,
 }: {
   parent: BodyStructure;
   onClose: () => void;
+  initialSelectedId?: string;
 }) {
   return (
     <Dialog
@@ -592,7 +609,11 @@ export default function EyeLayers({
             <ArrowLeft /> Back to atlas
           </Button>
         </header>
-        <EyeLayerView key={parent.id} parent={parent} />
+        <EyeLayerView
+          key={parent.id}
+          parent={parent}
+          initialSelectedId={initialSelectedId}
+        />
       </DialogContent>
     </Dialog>
   );

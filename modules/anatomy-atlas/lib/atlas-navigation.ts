@@ -7,6 +7,11 @@ import {
 } from './study-links.ts';
 import { studyLibrary } from './study-library.ts';
 import {
+  nestedStudyTargets,
+  nestedSideMatches,
+  type NestedRequest,
+} from './nested-anatomy.ts';
+import {
   structureSearchAliases,
   normalizeAnatomySearch,
   anatomySearchWordMatches,
@@ -42,6 +47,7 @@ export type AtlasSearchEntry = {
   action:
     | { type: 'link'; href: string }
     | { type: 'select'; id: string }
+    | { type: 'dissect'; target: NestedRequest }
     | { type: 'window' | 'focus'; id: string };
 };
 /** One index of actual source identities, valid source-bound links and current
@@ -100,6 +106,45 @@ export function atlasSearchIndex(
       aliases,
       action: local.has(s.id)
         ? { type: 'select', id: s.id }
+        : { type: 'link', href: href! },
+    });
+  }
+  for (const target of nestedStudyTargets(catalog)) {
+    const s = target.structure;
+    const here = local.has(target.parentId) && nestedSideMatches(s, side);
+    const selection = {
+      study: target.study,
+      structureId: s.id,
+      sourceHash: target.sourceHash,
+    };
+    const href = here
+      ? null
+      : makeStudyLink(
+          catalog,
+          'head-neck',
+          target.parentId,
+          s.laterality === 'left' || s.laterality === 'right'
+            ? s.laterality
+            : 'both',
+          null,
+          selection,
+        );
+    if (!here && !href) continue;
+    entries.push({
+      key: `nested:${target.study}:${s.id}`,
+      kind: 'structure',
+      label: s.name,
+      detail: `${s.fmaId} · ${target.title} · ${here ? 'Open dissection' : 'Open Head & neck dissection'} · draft`,
+      keywords: `${s.name} ${s.sourceName} ${s.fmaId} ${s.id} ${s.system} ${s.laterality} ${target.title}`,
+      action: here
+        ? {
+            type: 'dissect',
+            target: {
+              ...selection,
+              parentId: target.parentId,
+              parentHash: target.parentHash,
+            },
+          }
         : { type: 'link', href: href! },
     });
   }

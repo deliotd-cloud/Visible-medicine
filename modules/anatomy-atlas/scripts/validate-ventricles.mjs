@@ -275,6 +275,8 @@ let chosen,
   focused = 0;
 const env = {
   selected: parent,
+  setNestedSelection: () => {},
+  nestedReturnFocus: { current: null },
   cameraCapture: { current: { pan: [1, 2, 3], distance: 4 } },
   cameraRestore: { current: null },
   copyRecoveryCamera: structuredClone,

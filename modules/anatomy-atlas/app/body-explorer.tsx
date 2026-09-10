@@ -128,6 +128,11 @@ import { eyeLayersFor } from '@/lib/eye-layers';
 import { ventriclesFor } from '@/lib/ventricles';
 import { bodyDisplayCatalog } from '@/lib/body-display-catalog';
 import {
+  resolveNestedTarget,
+  type NestedSelection,
+  type NestedRequest,
+} from '@/lib/nested-anatomy';
+import {
   anatomyLoadReducer,
   initialAnatomyLoads,
   anatomyLoadSummary,
@@ -213,11 +218,17 @@ export default function BodyExplorer({
   const [plate, setPlate] = useState(false);
   const cameraCapture = useRef<StudyCamera | null>(null);
   const cameraRestore = useRef<StudyCamera | null>(null);
+  const [nestedSelection, setNestedSelection] =
+    useState<NestedSelection | null>(null);
+  const nestedReturnFocus = useRef<HTMLButtonElement | null>(null);
   const [eyeParent, setEyeParent] = useState<BodyStructure | null>(null);
   const eyeLauncher = useRef<HTMLButtonElement | null>(null);
   const closeEyeLayers = useCallback(() => {
     setEyeParent(null);
-    requestAnimationFrame(() => eyeLauncher.current?.focus());
+    setNestedSelection(null);
+    const returnTo = nestedReturnFocus.current;
+    nestedReturnFocus.current = null;
+    requestAnimationFrame(() => (returnTo ?? eyeLauncher.current)?.focus());
   }, []);
   const [ventricleParent, setVentricleParent] = useState<BodyStructure | null>(
     null,
@@ -225,7 +236,12 @@ export default function BodyExplorer({
   const ventricleLauncher = useRef<HTMLButtonElement | null>(null);
   const closeVentricles = useCallback(() => {
     setVentricleParent(null);
-    requestAnimationFrame(() => ventricleLauncher.current?.focus());
+    setNestedSelection(null);
+    const returnTo = nestedReturnFocus.current;
+    nestedReturnFocus.current = null;
+    requestAnimationFrame(() =>
+      (returnTo ?? ventricleLauncher.current)?.focus(),
+    );
   }, []);
   const [view, setView] = useState<DissectionView>(profile.stages[0].view),
     [zoom, setZoom] = useState(1),
@@ -297,6 +313,12 @@ export default function BodyExplorer({
                   : { type: 'stage', id: 'assembled' },
               );
               setView(result.view);
+              if (result.nested) {
+                setNestedSelection(result.nested);
+                if (result.nested.study === 'eye')
+                  setEyeParent(result.selected);
+                else setVentricleParent(result.selected);
+              }
               setSelectionNotice({
                 id: result.selected.id,
                 message: `Linked ${result.focusTitle ?? 'assembled anatomy'} view opened. ${result.selected.name} selected.`,
@@ -520,6 +542,35 @@ export default function BodyExplorer({
       publishSelection(id);
     },
     [applySelection, publishSelection, exam, regionStructures],
+  );
+  const openNested = useCallback(
+    (request: NestedRequest, launcher: HTMLButtonElement | null) => {
+      if (
+        exam ||
+        !catalog ||
+        !regionStructures.some((s) => s.id === request.parentId)
+      )
+        return;
+      const target = resolveNestedTarget(
+        catalog,
+        request.parentId,
+        request,
+        side,
+      );
+      const parent = regionStructures.find((s) => s.id === request.parentId);
+      if (!target || !parent || target.parentHash !== request.parentHash)
+        return;
+      cameraRestore.current = cameraCapture.current
+        ? copyRecoveryCamera(cameraCapture.current)
+        : null;
+      nestedReturnFocus.current = launcher;
+      // Select locally, without publishing a parent as if it were the requested child.
+      applySelection(parent.id);
+      setNestedSelection(target);
+      if (target.study === 'eye') setEyeParent(parent);
+      else setVentricleParent(parent);
+    },
+    [exam, catalog, regionStructures, side, applySelection],
   );
   function changeStage(id: string) {
     if (
@@ -1112,6 +1163,7 @@ export default function BodyExplorer({
           onSelect={select}
           onWindow={changeStage}
           onFocus={changeFocus}
+          onDissect={openNested}
         />
         <WorkspaceFocus />
         <WorkspaceOnly modes={['practice']} className="vm-practice-start">
@@ -1978,10 +2030,23 @@ export default function BodyExplorer({
         </AnatomyInfoPanel>
       </div>
       {eyeParent && !exam && eyeParent.id === selectedId && (
-        <EyeLayers parent={eyeParent} onClose={closeEyeLayers} />
+        <EyeLayers
+          parent={eyeParent}
+          initialSelectedId={nestedSelection?.structureId}
+          onClose={closeEyeLayers}
+        />
       )}
       {ventricleParent && !exam && ventricleParent.id === selectedId && (
-        <Ventricles parent={ventricleParent} onClose={closeVentricles} />
+        <Ventricles
+          parent={ventricleParent}
+          initialStudy={
+            nestedSelection?.study === 'eye'
+              ? undefined
+              : nestedSelection?.study
+          }
+          initialSelectedId={nestedSelection?.structureId}
+          onClose={closeVentricles}
+        />
       )}
     </AtlasWorkspace>
   );

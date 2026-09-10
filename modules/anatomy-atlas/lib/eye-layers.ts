@@ -1,4 +1,4 @@
-import raw from '../public/models/bodyparts3d/eye-layers/catalog.json';
+import raw from '../public/models/bodyparts3d/eye-layers/catalog.json' with { type: 'json' };
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
 export type EyeKind =
   | 'cornea'

@@ -67,9 +67,11 @@ export type BrainStudy = 'ventricles' | 'brainstem' | 'cerebral';
 export function VentricularView({
   parent,
   study = 'ventricles',
+  initialSelectedId,
 }: {
   parent: BodyStructure;
   study?: BrainStudy;
+  initialSelectedId?: string;
 }) {
   const isBrainstem = study === 'brainstem';
   const isCerebral = study === 'cerebral';
@@ -88,6 +90,7 @@ export function VentricularView({
     [parent, isBrainstem, isCerebral],
   );
   const selectableIds = useMemo(() => layers.map((s) => s.id), [layers]);
+  const initialSelection = layers.find((s) => s.id === initialSelectedId)?.id;
   const presets = useMemo<Record<string, string[]>>(
     () =>
       isCerebral
@@ -138,7 +141,10 @@ export function VentricularView({
     (state: VentricularState, action: VentricularAction) =>
       reduceVentricles(layers, state, action, presets),
     layers,
-    initialVentricles,
+    (items) => ({
+      ...initialVentricles(items),
+      ...(initialSelection ? { selectedId: initialSelection } : {}),
+    }),
   );
   const [context, setContext] = useState(false),
     [labels, setLabels] = useState(true);
@@ -147,7 +153,7 @@ export function VentricularView({
   const [view, setView] = useState<DissectionView>('anterior'),
     [reset, setReset] = useState(0);
   const [focus, setFocus] = useState(false),
-    [isolated, setIsolated] = useState(false);
+    [isolated, setIsolated] = useState(!!initialSelection);
   const [loaded, setLoaded] = useState<string[]>([]),
     [failed, setFailed] = useState<string[]>([]),
     [retry, setRetry] = useState(0);
@@ -599,11 +605,15 @@ export function VentricularView({
 export default function Ventricles({
   parent,
   onClose,
+  initialStudy = 'brainstem',
+  initialSelectedId,
 }: {
   parent: BodyStructure;
   onClose: () => void;
+  initialStudy?: BrainStudy;
+  initialSelectedId?: string;
 }) {
-  const [study, setStudy] = useState<BrainStudy>('brainstem');
+  const [study, setStudy] = useState<BrainStudy>(initialStudy);
   return (
     <Dialog
       open
@@ -645,6 +655,9 @@ export default function Ventricles({
           key={`${parent.id}:${study}`}
           parent={parent}
           study={study}
+          initialSelectedId={
+            study === initialStudy ? initialSelectedId : undefined
+          }
         />
       </DialogContent>
     </Dialog>

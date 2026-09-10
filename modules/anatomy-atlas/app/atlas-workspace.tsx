@@ -6,6 +6,7 @@ import {
   useEffect,
   useMemo,
   useState,
+  useRef,
   useId,
   type ReactNode,
 } from 'react';
@@ -362,6 +363,7 @@ export function AtlasSearch({
   onSelect,
   onWindow,
   onFocus,
+  onDissect,
 }: {
   catalog: BodyCatalog;
   region: string;
@@ -369,6 +371,10 @@ export function AtlasSearch({
   onSelect: (id: string) => void;
   onWindow: (id: string) => void;
   onFocus: (id: string) => void;
+  onDissect: (
+    target: import('@/lib/nested-anatomy').NestedRequest,
+    launcher: HTMLButtonElement | null,
+  ) => void;
 }) {
   const workspace = useAtlasWorkspace(),
     id = useId();
@@ -377,6 +383,8 @@ export function AtlasSearch({
     [kind, setKind] = useState<AtlasSearchEntry['kind'] | 'all'>('all'),
     [limit, setLimit] = useState(12);
   const [preview, setPreview] = useState<AtlasSearchEntry | null>(null);
+  const launcher = useRef<HTMLButtonElement | null>(null);
+  const dissecting = useRef(false);
   const entries = useMemo(
     () => atlasSearchIndex(catalog, region, side),
     [catalog, region, side],
@@ -402,7 +410,11 @@ export function AtlasSearch({
       setPreview(entry);
       return;
     }
-    if (entry.action.type === 'select') {
+    if (entry.action.type === 'dissect') {
+      dissecting.current = true;
+      if (workspace.mode === 'practice') workspace.chooseMode('explore');
+      onDissect(entry.action.target, launcher.current);
+    } else if (entry.action.type === 'select') {
       onSelect(entry.action.id);
       if (workspace.mode === 'practice') workspace.chooseMode('explore');
       workspace.showInfo();
@@ -422,12 +434,14 @@ export function AtlasSearch({
       open={open && !workspace.exam}
       onOpenChange={(value) => {
         setOpen(value);
+        if (value) dissecting.current = false;
         setPreview(null);
       }}
     >
       <DialogTrigger
         render={
           <Button
+            ref={launcher}
             variant="outline"
             className="atlas-search-trigger"
             disabled={workspace.exam}
@@ -436,11 +450,15 @@ export function AtlasSearch({
       >
         <Search /> Search atlas
       </DialogTrigger>
-      <DialogContent className="atlas-search-dialog">
+      <DialogContent
+        className="atlas-search-dialog"
+        finalFocus={() => (dissecting.current ? false : launcher.current)}
+      >
         <DialogTitle>Search the atlas</DialogTitle>
         <DialogDescription>
-          Find structures and regions across the body, or study views in this
-          region. Opening a region starts a fresh view; save custom work first.
+          Find structures, including brain and eye dissection parts, or study
+          views. Opening another region starts a fresh view; save custom work
+          first.
         </DialogDescription>
         <label htmlFor={`${id}-query`}>
           Name, common name, anatomical ID or study view

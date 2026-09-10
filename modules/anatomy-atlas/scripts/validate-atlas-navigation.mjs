@@ -39,7 +39,7 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)])
     const index = atlasSearchIndex(catalog, region, side);
     same(new Set(index.map((e) => e.key)).size, index.length);
     same(
-      index.filter((e) => e.kind === 'structure').length,
+      index.filter((e) => e.key.startsWith('structure:')).length,
       catalog.structures.length,
     );
     same(index.filter((e) => e.kind === 'region').length, 13);
@@ -54,7 +54,7 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)])
       expectedViews,
     );
     for (const entry of index) {
-      if (entry.kind === 'structure') {
+      if (entry.key.startsWith('structure:')) {
         const id = entry.key.slice('structure:'.length);
         const item = catalog.structures.find((s) => s.id === id);
         same(entry.label, item.name);
@@ -128,6 +128,7 @@ const shim = {
   useMemo: (fn, deps) => (active ? fn() : React.useMemo(fn, deps)),
   useContext: (value) => (active ? context : React.useContext(value)),
   useId: () => (active ? 'navigation-test' : React.useId()),
+  useRef: (value) => (active ? { current: value } : React.useRef(value)),
   useEffect: (fn, deps) =>
     active ? effects.push(fn) : React.useEffect(fn, deps),
 };

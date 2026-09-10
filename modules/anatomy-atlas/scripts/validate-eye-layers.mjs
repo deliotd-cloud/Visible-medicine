@@ -532,6 +532,8 @@ let chosen = 'unset',
 const env = {
   cameraRestore: { current: null },
   cameraCapture: { current: camera },
+  setNestedSelection: () => {},
+  nestedReturnFocus: { current: null },
   selected: catalog.structures[0],
   setEyeParent: (v) => {
     chosen = v;

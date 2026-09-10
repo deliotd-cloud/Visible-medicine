@@ -1,6 +1,6 @@
-import raw from '../public/models/bodyparts3d/cerebral/catalog.json';
+import raw from '../public/models/bodyparts3d/cerebral/catalog.json' with { type: 'json' };
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
-import { ventriclesFor, ventricleCatalog } from './ventricles';
+import { ventriclesFor, ventricleCatalog } from './ventricles.ts';
 
 export type CerebralStructure = BodyStructure & {
   group: string;

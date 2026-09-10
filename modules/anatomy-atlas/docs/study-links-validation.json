@@ -1,9 +1,9 @@
 {
   "passed": true,
-  "assertions": 232200,
-  "links": 12397,
-  "focusedLinks": 7500,
-  "destinationsTested": 5720,
+  "assertions": 234753,
+  "links": 12445,
+  "focusedLinks": 7548,
+  "destinationsTested": 5768,
   "rows": [
     {
       "region": "whole-body",
@@ -189,19 +189,19 @@
       "region": "head-neck",
       "side": "both",
       "structures": 275,
-      "testedLinks": 784
+      "testedLinks": 808
     },
     {
       "region": "head-neck",
       "side": "left",
       "structures": 160,
-      "testedLinks": 485
+      "testedLinks": 497
     },
     {
       "region": "head-neck",
       "side": "right",
       "structures": 160,
-      "testedLinks": 485
+      "testedLinks": 497
     },
     {
       "region": "spine",

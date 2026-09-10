@@ -1,6 +1,6 @@
-import raw from '../public/models/bodyparts3d/brainstem/catalog.json';
+import raw from '../public/models/bodyparts3d/brainstem/catalog.json' with { type: 'json' };
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
-import { ventriclesFor, ventricleCatalog } from './ventricles';
+import { ventriclesFor, ventricleCatalog } from './ventricles.ts';
 
 export const brainstemCatalog = raw as unknown as BodyCatalog & {
   parent: BodyStructure;

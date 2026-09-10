@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "nested-navigation:test": "node scripts/validate-nested-navigation.mjs",
     "cerebral:source": "node scripts/audit-cerebral-supplements.mjs",
     "cerebral:export": "node scripts/export-cerebral.mjs",
     "cerebral:test": "node scripts/validate-cerebral.mjs",

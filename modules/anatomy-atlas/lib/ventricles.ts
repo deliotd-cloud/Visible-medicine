@@ -1,4 +1,4 @@
-import raw from '../public/models/bodyparts3d/ventricles/catalog.json';
+import raw from '../public/models/bodyparts3d/ventricles/catalog.json' with { type: 'json' };
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
 
 export const ventricleCatalog = raw as unknown as BodyCatalog & {
