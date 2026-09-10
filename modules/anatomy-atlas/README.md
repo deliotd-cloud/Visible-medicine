@@ -1,5 +1,13 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Cerebral regions → Learn more** now includes [insular and anterior-temporal Pathology/CT/MRI drafts](docs/CEREBRAL_TEACHING.md). Five shared paragraphs support four exact source selections, with primary references and explicit limits on lesion localisation. They add teaching, not scans, pathological meshes or clinical approval. [Current coverage](docs/CURRENT_STATUS.md) is the authoritative inventory.
+
+**Internal dissection → Separate → Show original position** provides [optional selected-part guides](docs/ORIGIN_GUIDES.md) without a permanent extra toolbar. The source outline and positional line are display aids, not anatomical connections.
+
+## Earlier milestones
+
+Counts and pending work described below record earlier releases; consult the current inventory above for today's coverage.
+
 **Internal dissection → Redo layers** now complements Undo across eye, brain, heart, lung and liver studies. Revisit layer/selection changes without rebuilding them; the existing compact action row is reused. Cutaway, separation and camera settings are not rewound. See [behaviour and limits](docs/NESTED_HISTORY.md).
 
 **Lung branches → Learn more** now adds [clinical, pathology and CT drafts](docs/PULMONARY_TEACHING.md) for upper, middle and lower lobe groups: location versus diagnosis, middle-lobe collapse and posture-dependent aspiration patterns. Nine shared paragraphs serve five existing selections without new controls. Tissue, fissures, segment boundaries, MRI/US lessons and scan connections remain incomplete; specialist review is required.

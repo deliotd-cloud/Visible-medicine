@@ -222,6 +222,7 @@ for (const path of [
   'content/cardiac-teaching.ts',
   'content/hepatic-teaching.ts',
   'content/pulmonary-teaching.ts',
+  'content/cerebral-teaching.ts',
   'content/nested-teaching-bindings.v1.json',
   'lib/nested-anatomy.ts',
   'lib/nested-teaching.ts',

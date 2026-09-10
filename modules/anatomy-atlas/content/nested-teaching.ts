@@ -1,5 +1,9 @@
 import type { NestedStudy } from '../lib/nested-anatomy';
 import {
+  cerebralTeaching,
+  cerebralTeachingReferences,
+} from './cerebral-teaching.ts';
+import {
   cardiacTeaching,
   cardiacTeachingReferences,
 } from './cardiac-teaching.ts';
@@ -40,6 +44,7 @@ export const nestedTeachingReferences: Record<
   ...cardiacTeachingReferences,
   ...hepaticTeachingReferences,
   ...pulmonaryTeachingReferences,
+  ...cerebralTeachingReferences,
   hepaticArteries: {
     title: 'Texas Tech · Abdominal arteries',
     url: 'https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html',
@@ -165,11 +170,6 @@ const section = (body: string, ...references: string[]) => ({
   body,
   references,
   readiness: 'draft' as const,
-});
-const pending = (body: string) => ({
-  body,
-  references: [],
-  readiness: 'pending' as const,
 });
 const quiz = (
   question: string,
@@ -940,10 +940,9 @@ export const nestedConcepts: NestedConcept[] = [
         'Its hidden position explains why overlying lobes must be removed or faded to inspect it. Surface exposure does not identify every internal connection.',
         'cortex',
       ),
-      pathology: pending(
-        'A disease-specific insular syndrome is not assigned here: the supplied surface cannot establish functional territories or the extent of an individual lesion.',
-      ),
+      pathology: cerebralTeaching.insula.pathology,
     },
+    imaging: cerebralTeaching.insula.imaging,
     modelLimit:
       'Whole insular source surfaces only; individual gyri, autonomic/gustatory subregions and adjacent white matter are not segmented.',
     quiz: quiz(
@@ -969,10 +968,9 @@ export const nestedConcepts: NestedConcept[] = [
         'An anatomical part boundary must not be used as a substitute for an individual functional localisation.',
         'temporal',
       ),
-      pathology: pending(
-        'No lesion-specific syndrome is assigned to this anterior source fragment; adjacent cortex and connections would need clinical assessment.',
-      ),
+      pathology: cerebralTeaching.anteriorSuperiorTemporal.pathology,
     },
+    imaging: cerebralTeaching.anteriorSuperiorTemporal.imaging,
     modelLimit:
       'Additional ISA source part, absent from the original brain aggregate. It is not independently validated Heschl cortex or an auditory territory.',
     quiz: quiz(

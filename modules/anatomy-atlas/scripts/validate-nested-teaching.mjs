@@ -57,13 +57,26 @@ const initial = JSON.stringify(catalog);
 same(targets.length, 53);
 same(api.nestedConcepts.length, 33);
 same(new Set(api.nestedConcepts.map((c) => c.id)).size, 33);
-// Captured from validated v105 source 60c5a98d, before the lung extension.
+// Captured from validated v108 source 649dfc3d, before this cerebral extension.
 const digest = (value) =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
 same(
-  digest(api.nestedConcepts.filter((c) => c.study !== 'pulmonary')),
-  'd2182f88e1d627af7d12ac4f02b9faa51160b8f4a82b4d676b071800a6a593ef',
+  digest(api.nestedConcepts.filter((c) => ![
+    'cerebral-insula', 'cerebral-superior-temporal-anterior',
+  ].includes(c.id))),
+  '93ba424b634421287a413acb087ab872d8a27135ff6d4c8d054040304b2bb8fb',
   'Unrelated nested teaching unchanged',
+);
+same(
+  digest(api.nestedConcepts.filter((c) => [
+    'cerebral-insula', 'cerebral-superior-temporal-anterior',
+  ].includes(c.id)).map((c) => ({
+    id: c.id, study: c.study, fmaIds: c.fmaIds,
+    anatomy: c.sections.anatomy, function: c.sections.function,
+    clinical: c.sections.clinical, modelLimit: c.modelLimit, quiz: c.quiz,
+  }))),
+  '8c792cb82ecd7ba1e2c929d13437c9d04c49344c5f0276d0845169dd200022c0',
+  'Cerebral identities, existing anatomy/function/clinical, limits and questions unchanged',
 );
 same(
   digest(
@@ -154,7 +167,11 @@ for (const target of targets) {
             : ['ultrasound']
         : concept.study === 'pulmonary'
           ? ['ct']
-          : [];
+          : concept.id === 'cerebral-insula'
+            ? ['ct', 'mri']
+            : concept.id === 'cerebral-superior-temporal-anterior'
+              ? ['mri']
+              : [];
   same(
     Object.keys(concept.imaging ?? {}).sort(),
     [...expectedImaging].sort(),
@@ -329,16 +346,17 @@ same(
   53,
   'Changing either study or side resets revealed answer',
 );
-same(coverage.pathology, { draft: 49, pending: 4 });
+same(coverage.pathology, { draft: 53, pending: 0 });
 same(coverage.clinical, { draft: 53, pending: 0 });
 for (const tab of ['anatomy', 'function', 'quiz'])
   same(coverage[tab], { draft: 53, pending: 0 });
-same(coverage.ct, { draft: 10, pending: 43 });
-same(coverage.mri, { draft: 7, pending: 46 });
+same(coverage.ct, { draft: 12, pending: 41 });
+same(coverage.mri, { draft: 11, pending: 42 });
 same(coverage.ultrasound, { draft: 11, pending: 42 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
 const hosts = new Set([
+  'www.nia.nih.gov',
   'www.cdc.gov',
   'www.brit-thoracic.org.uk',
   'pubmed.ncbi.nlm.nih.gov',
@@ -392,11 +410,11 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 48);
+same(Object.keys(wordsBySource).length, 52);
 same(
   new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
     .size,
-  48,
+  52,
   'Do not split one source into duplicate reference keys',
 );
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {
