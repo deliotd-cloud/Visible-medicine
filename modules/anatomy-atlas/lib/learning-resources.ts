@@ -110,6 +110,7 @@ function anatomy(value: unknown): value is AnatomyRepresentation {
       'ventricles',
       'brainstem',
       'cerebral',
+      'cardiac',
     ]) &&
     namespaced(value.nested.parentId, 'vm:anatomy:') &&
     value.nested.parentId !== value.structureId &&

@@ -1,4 +1,5 @@
 import { readFile, writeFile } from 'node:fs/promises';
+import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import { build } from './workspace-component-test-build.mjs';
@@ -67,10 +68,38 @@ if (process.argv.includes('--check')) {
     if (e.code !== 'ENOENT') throw e;
     return null;
   });
-  if (existing !== null && existing !== text)
-    throw Error(
-      'Existing teaching pins differ; do not migrate them automatically',
-    );
+  if (existing !== null && existing !== text) {
+    if (!process.argv.includes('--extend-only'))
+      throw Error(
+        'Existing teaching pins differ; do not migrate them automatically',
+      );
+    const previous = JSON.parse(existing);
+    assert.equal(previous.schemaVersion, result.schemaVersion);
+    assert.equal(previous.purpose, result.purpose);
+    // Explicit editorial extension only. Never rewrite/rebind an existing lesson.
+    for (const parent of previous.parents)
+      assert.deepEqual(
+        JSON.parse(
+          JSON.stringify(result.parents.find((p) => p.id === parent.id)),
+        ),
+        parent,
+      );
+    for (const binding of previous.bindings)
+      assert.deepEqual(
+        JSON.parse(
+          JSON.stringify(
+            result.bindings.find(
+              (b) =>
+                b.study === binding.study &&
+                b.parentId === binding.parentId &&
+                b.structure.id === binding.structure.id,
+            ),
+          ),
+        ),
+        binding,
+      );
+    assert(result.bindings.length > previous.bindings.length);
+  }
   await writeFile(path, text);
 }
 console.log(

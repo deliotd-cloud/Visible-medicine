@@ -126,6 +126,7 @@ import {
 } from '@/lib/renderer-health';
 import { eyeLayersFor } from '@/lib/eye-layers';
 import { ventriclesFor } from '@/lib/ventricles';
+import { cardiacFor } from '@/lib/cardiac';
 import { bodyDisplayCatalog } from '@/lib/body-display-catalog';
 import {
   resolveNestedTarget,
@@ -1803,23 +1804,28 @@ export default function BodyExplorer({
                         </Button>
                       </div>
                     )}
-                    {!exam && ventriclesFor(selected).length > 0 && (
-                      <div className="body-selection-actions">
-                        <Button
-                          ref={ventricleLauncher}
-                          size="sm"
-                          variant="outline"
-                          onClick={() => {
-                            cameraRestore.current = copyRecoveryCamera(
-                              cameraCapture.current,
-                            );
-                            setVentricleParent(selected);
-                          }}
-                        >
-                          <Layers3 /> Dissect brain
-                        </Button>
-                      </div>
-                    )}
+                    {!exam &&
+                      (ventriclesFor(selected).length > 0 ||
+                        cardiacFor(selected).length > 0) && (
+                        <div className="body-selection-actions">
+                          <Button
+                            ref={ventricleLauncher}
+                            size="sm"
+                            variant="outline"
+                            onClick={() => {
+                              cameraRestore.current = copyRecoveryCamera(
+                                cameraCapture.current,
+                              );
+                              setVentricleParent(selected);
+                            }}
+                          >
+                            <Layers3 />{' '}
+                            {cardiacFor(selected).length
+                              ? 'Explore heart chambers'
+                              : 'Dissect brain'}
+                          </Button>
+                        </div>
+                      )}
                     <div className="body-selection-actions">
                       <Button
                         size="sm"

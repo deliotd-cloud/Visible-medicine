@@ -21,6 +21,14 @@ export const nestedTeachingReferences: Record<
   string,
   { title: string; url: string }
 > = {
+  cardiacChambers: {
+    title: 'NHLBI · Heart chambers and tissue',
+    url: 'https://www.nhlbi.nih.gov/health/heart/anatomy',
+  },
+  cardiacFlow: {
+    title: 'University of Minnesota · The human heart',
+    url: 'https://www.vhlab.umn.edu/atlas/physiology-tutorial/the-human-heart.shtml',
+  },
   eyes: {
     title: 'NEI · How the eyes work',
     url: 'https://www.nei.nih.gov/eye-health-information/healthy-vision/how-eyes-work',
@@ -138,6 +146,64 @@ const quiz = (
 // Original, concise teaching drafts. These are conceptual lessons shared by
 // explicitly pinned source representations, not patient-specific findings.
 export const nestedConcepts: NestedConcept[] = [
+  ...(
+    [
+      [
+        'FMA11359',
+        'right-atrium',
+        'right atrium',
+        'An atrium is a receiving chamber.',
+        'Which chamber receives systemic venous return?',
+        'The right atrium.',
+      ],
+      [
+        'FMA9465',
+        'left-atrium',
+        'left atrium',
+        'Blood returning from the lungs enters an atrium before passing to a ventricle.',
+        'Which chamber receives pulmonary venous return?',
+        'The left atrium.',
+      ],
+      [
+        'FMA9291',
+        'right-ventricle',
+        'right ventricle',
+        'Ventricles pump blood out of the heart.',
+        'Which chamber pumps towards the pulmonary arteries?',
+        'The right ventricle.',
+      ],
+      [
+        'FMA9466',
+        'left-ventricle',
+        'left ventricle',
+        'The ventricular pump supplies blood outside the heart.',
+        'Which chamber pumps into the aorta?',
+        'The left ventricle.',
+      ],
+    ] as const
+  ).map(
+    ([fma, id, chamber, functionText, question, answer]): NestedConcept => ({
+      id: `cardiac-${id}`,
+      study: 'cardiac',
+      fmaIds: [fma],
+      sections: {
+        anatomy: section(
+          `The ${chamber} is one of the four heart chambers. This model shows its cavity space, not surrounding muscle.`,
+          'cardiacChambers',
+        ),
+        function: section(functionText, 'cardiacChambers'),
+        clinical: pending(
+          'Chamber-specific clinical interpretation has not yet been authored and reviewed. This source cavity is not a patient measurement.',
+        ),
+        pathology: pending(
+          'No disease-specific cardiac lesson or pathological geometry is provided for this cavity.',
+        ),
+      },
+      modelLimit:
+        'Static source cavity only; no cardiac-phase, volume, wall thickness, valve motion or registered scan. Atrial walls are optional nonselectable reference surfaces.',
+      quiz: quiz(question, answer, 'cardiacFlow'),
+    }),
+  ),
   {
     id: 'eye-cornea',
     study: 'eye',

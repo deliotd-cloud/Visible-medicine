@@ -14,8 +14,8 @@ export async function reviewDocumentBeforeSearch(
 ) {
   assert.equal(
     hash(encode(revisions)),
-    '37a61b04a86955c0ab6cda39b95e33c2cf0f8df7f6cc01bfc13261389719fad7',
-    'Exact nested-search display review transition',
+    '4e130ad0c0a5ec170069ae5ed89b1f3aab401f37282048d648f82f8f293c2104',
+    'Exact region-aware nested-search display review transition',
   );
   for (const [path, expected] of revisions.display) {
     const source = await readFile(
@@ -28,9 +28,35 @@ export async function reviewDocumentBeforeSearch(
       'Stale display fingerprint: ' + path,
     );
   }
-  // Undo only the two shared search-display source changes for historical
+  const beforeCardiac = structuredClone(revisions);
+  beforeCardiac.display = beforeCardiac.display.map(([path, fingerprint]) => [
+    path,
+    path === 'lib/atlas-navigation.ts'
+      ? '1f0e329e0e03b72fccaa3e5908a8b8ef4630d1b1abee26dd53707bf2112cd5f9'
+      : fingerprint,
+  ]);
+  for (const s of structures) {
+    beforeCardiac.revisions[s.id].geometry = hash(
+      JSON.stringify({
+        model: manifest.sha256,
+        manifest,
+        display: beforeCardiac.display,
+        identity: { id: s.id, name: s.name, latinName: s.latinName },
+      }),
+    );
+    assert.notEqual(
+      beforeCardiac.revisions[s.id].geometry,
+      revisions.revisions[s.id].geometry,
+    );
+  }
+  assert.equal(
+    hash(encode(beforeCardiac)),
+    '37a61b04a86955c0ab6cda39b95e33c2cf0f8df7f6cc01bfc13261389719fad7',
+    'Previous nested-search document reproduced; no approval migration',
+  );
+  // Undo only the two earlier shared search-display source changes for historical
   // comparison. Never retain/migrate a private approval to the new revision.
-  const beforeNested = structuredClone(revisions);
+  const beforeNested = structuredClone(beforeCardiac);
   const nestedReplaced = {
     'app/atlas-workspace.tsx':
       'a34ba88618f9c3afdd29565395ed4b1861624fe558eb4128fe227ca0c591d4c4',

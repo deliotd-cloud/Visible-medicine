@@ -1,10 +1,10 @@
 {
   "passed": true,
-  "checks": 15256,
-  "selectableNestedParts": 37,
-  "directActions": 160,
-  "linkedActions": 1172,
-  "loadedLinkCases": 74,
+  "checks": 16913,
+  "selectableNestedParts": 41,
+  "directActions": 176,
+  "linkedActions": 1300,
+  "loadedLinkCases": 82,
   "sourceBoundLinkVersion": 2,
   "unchangedRootStudyLinks": true,
   "geometryChanged": false,
@@ -12,5 +12,5 @@
   "browserInteractionTesting": false,
   "imagingEventsAdded": false,
   "lectureAccessChanged": false,
-  "limitations": "Source-bound routes, real search/launcher closures and 111 SSR child-selection cases. Browser keyboard/focus, mobile and GPU acceptance remain pending."
+  "limitations": "Source-bound routes, real search/launcher closures and 123 SSR child-selection cases. Browser keyboard/focus, mobile and GPU acceptance remain pending."
 }

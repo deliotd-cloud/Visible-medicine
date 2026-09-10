@@ -59,13 +59,13 @@ const reject = (fn, message) => {
   assert.throws(fn, message);
 };
 same(legacy.length, 1031);
-same(anatomy.length, 1068);
+same(anatomy.length, 1072);
 same(
   anatomy.filter((t) => t.scope !== 'nested'),
   legacy,
   'Legacy 1,031 bindings unchanged',
 );
-same(nested.length, 37);
+same(nested.length, 41);
 same(
   nested.map((t) => t.structureId).sort(),
   targets.map((t) => t.structureId).sort(),
@@ -219,7 +219,7 @@ for (const entry of nested) {
       'Child side is checked, not only parent',
     );
     if (!accepted) continue;
-    for (const region of ['head-neck', 'whole-body']) {
+    for (const region of [target.structure.region, 'whole-body']) {
       const href = api.makeStudyLink(
         current,
         region,

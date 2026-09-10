@@ -13,7 +13,8 @@ export type NestedLearningStudy =
   | 'eye'
   | 'ventricles'
   | 'brainstem'
-  | 'cerebral';
+  | 'cerebral'
+  | 'cardiac';
 export type LearningAge = 'adult' | 'paediatric' | 'mixed' | 'unspecified';
 export type LearningSide =
   | 'left'

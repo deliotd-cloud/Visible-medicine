@@ -102,17 +102,17 @@ const raw = JSON.parse(
 const catalog = api.bodyDisplayCatalog(raw),
   before = JSON.stringify(catalog);
 const targets = nestedStudyTargets(catalog);
-same(targets.length, 37);
+same(targets.length, 41);
 same(
   Object.fromEntries(
-    ['eye', 'ventricles', 'brainstem', 'cerebral'].map((study) => [
+    ['eye', 'ventricles', 'brainstem', 'cerebral', 'cardiac'].map((study) => [
       study,
       targets.filter((t) => t.study === study).length,
     ]),
   ),
-  { eye: 15, ventricles: 4, brainstem: 4, cerebral: 14 },
+  { eye: 15, ventricles: 4, brainstem: 4, cerebral: 14, cardiac: 4 },
 );
-same(new Set(targets.map((t) => t.structureId)).size, 37);
+same(new Set(targets.map((t) => t.structureId)).size, 41);
 const parse = (href) => {
   const url = new URL(href, 'https://atlas.invalid');
   return { url, parsed: parseStudyLink(Object.fromEntries(url.searchParams)) };
@@ -123,7 +123,7 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
   for (const side of ['both', 'left', 'right']) {
     const index = atlasSearchIndex(catalog, region, side);
     const nested = index.filter((e) => e.key.startsWith('nested:'));
-    same(nested.length, 37);
+    same(nested.length, 41);
     for (const target of targets) {
       const entry = nested.find(
         (e) => e.key === `nested:${target.study}:${target.structureId}`,
@@ -159,8 +159,12 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
         same(entry.action.type, 'link');
         const { url, parsed } = parse(entry.action.href);
         same(url.origin, 'https://atlas.invalid');
-        same(url.pathname, '/regions/head-neck');
-        const result = resolveStudyLink(catalog, 'head-neck', parsed);
+        same(url.pathname, '/regions/' + target.structure.region);
+        const result = resolveStudyLink(
+          catalog,
+          target.structure.region,
+          parsed,
+        );
         same(result.status, 'ready');
         same(result.selected.id, target.parentId);
         same(result.nested.structureId, target.structureId);
@@ -172,9 +176,10 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
 }
 
 for (const target of targets) {
+  const targetRegion = target.structure.region;
   const href = makeStudyLink(
     catalog,
-    'head-neck',
+    targetRegion,
     target.parentId,
     'both',
     null,
@@ -184,7 +189,7 @@ for (const target of targets) {
     params = Object.fromEntries(url.searchParams);
   same(params.study, '2');
   same(
-    resolveStudyLink(catalog, 'head-neck', parsed).nested.structureId,
+    resolveStudyLink(catalog, targetRegion, parsed).nested.structureId,
     target.structureId,
   );
   for (const key of ['detail', 'part', 'partSource']) {
@@ -215,16 +220,20 @@ for (const target of targets) {
     same(
       resolveStudyLink(
         catalog,
-        'head-neck',
+        targetRegion,
         parseStudyLink({ ...params, ...extra }),
       ).status,
       'rejected',
     );
-  for (const study of ['eye', 'ventricles', 'brainstem', 'cerebral'].filter(
-    (s) => s !== target.study,
-  ))
+  for (const study of [
+    'eye',
+    'ventricles',
+    'brainstem',
+    'cerebral',
+    'cardiac',
+  ].filter((s) => s !== target.study))
     same(
-      makeStudyLink(catalog, 'head-neck', target.parentId, 'both', null, {
+      makeStudyLink(catalog, targetRegion, target.parentId, 'both', null, {
         ...target,
         study,
       }),
@@ -235,7 +244,7 @@ for (const target of targets) {
     same(
       makeStudyLink(
         catalog,
-        'head-neck',
+        targetRegion,
         target.parentId,
         opposite,
         null,
@@ -247,7 +256,7 @@ for (const target of targets) {
   const stale = structuredClone(catalog);
   stale.structures.find((s) => s.id === target.parentId).sources[0].sha256 =
     '0'.repeat(64);
-  same(resolveStudyLink(stale, 'head-neck', parsed).status, 'rejected');
+  same(resolveStudyLink(stale, targetRegion, parsed).status, 'rejected');
   const parent = catalog.structures.find((s) => s.id === target.parentId);
   const props = {
     parent,
@@ -392,7 +401,14 @@ check(
 let loadedLinkCases = 0;
 for (const target of targets) {
   const { parsed } = parse(
-    makeStudyLink(catalog, 'head-neck', target.parentId, 'both', null, target),
+    makeStudyLink(
+      catalog,
+      target.structure.region,
+      target.parentId,
+      'both',
+      null,
+      target,
+    ),
   );
   for (const accepted of [true, false]) {
     const changes = {};
@@ -404,7 +420,7 @@ for (const target of targets) {
       bodyLinkEntries: () => {},
       active: true,
       appliedStudyLink: { current: false },
-      initialRegion: 'head-neck',
+      initialRegion: target.structure.region,
       studyLink: link,
       resolveStudyLink,
       allBodySystems: {},
@@ -477,7 +493,7 @@ for (const target of targets) {
     launcher: { focus: () => focused++ },
     exam: false,
     catalog,
-    regionStructures: bodyStudyScope(catalog, 'head-neck', 'both'),
+    regionStructures: bodyStudyScope(catalog, target.structure.region, 'both'),
     side: 'both',
     resolveNestedTarget,
     copyRecoveryCamera: structuredClone,
@@ -530,8 +546,7 @@ const report = {
   browserInteractionTesting: false,
   imagingEventsAdded: false,
   lectureAccessChanged: false,
-  limitations:
-    'Source-bound routes, real search/launcher closures and 111 SSR child-selection cases. Browser keyboard/focus, mobile and GPU acceptance remain pending.',
+  limitations: `Source-bound routes, real search/launcher closures and ${targets.length * 3} SSR child-selection cases. Browser keyboard/focus, mobile and GPU acceptance remain pending.`,
 };
 await writeFile(
   'docs/nested-navigation-validation.json',

@@ -51,9 +51,11 @@ The opt-in [nested learning registry](NESTED_LEARNING_LINKS.md) exposes ${learni
 
 The ventricular study also has ${study.ventricularRelationshipPresets} [guided relationship presets](VENTRICULAR_RELATIONSHIPS.md), using existing source spaces and context without adding unique anatomy or another panel. Context disappears during separation; pointer handlers do not block selectable structures beneath it. Device acceptance remains pending.
 
-## Nested brain and eye teaching
+## Nested anatomy teaching
 
-The collapsed [Learn more section](NESTED_ANATOMY_TEACHING.md) has ${teaching.nested.concepts} source-pinned concepts across ${teaching.nested.representations} selectable parts, with ${teaching.nested.references} primary-reference links. These counts are separate from the root-body table and overlap parent anatomy. Each part has draft Anatomy, Function, Clinical and an unscored self-check; Pathology has ${teaching.nested.topics.pathology.specificDraft} draft / ${teaching.nested.topics.pathology.pending} pending representations. CT, MRI and ultrasound each remain ${teaching.nested.topics.ct.pending} pending. Five conceptual self-checks test documented model limitations instead of medical recall. No clinical approvals or external resource access are implied.
+The collapsed [Learn more section](NESTED_ANATOMY_TEACHING.md) has ${teaching.nested.concepts} source-pinned concepts across ${teaching.nested.representations} selectable parts, with ${teaching.nested.references} primary-reference links. These counts are separate from the root-body table and overlap parent anatomy. Each part has draft Anatomy, Function and an unscored self-check. Clinical has ${teaching.nested.topics.clinical.specificDraft} draft / ${teaching.nested.topics.clinical.pending} pending; Pathology has ${teaching.nested.topics.pathology.specificDraft} draft / ${teaching.nested.topics.pathology.pending} pending representations. CT, MRI and ultrasound each remain ${teaching.nested.topics.ct.pending} pending. Five conceptual self-checks test documented model limitations instead of medical recall. No clinical approvals or external resource access are implied.
+
+The [cardiac chamber study](CARDIAC_CHAMBERS.md) exposes ${anatomy.nestedDissections.cardiacCavities} existing cavity shapes and ${anatomy.nestedDissections.cardiacContextWalls} atrial-wall references. These are spaces and context, not new unique anatomy or a complete dissectible heart. Ambiguous source labels are documented and not admitted to this study.
 
 ## Boundaries and next work
 

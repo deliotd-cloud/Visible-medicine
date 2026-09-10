@@ -299,7 +299,14 @@ check(
     'ventricleParent && !exam && ventricleParent.id === selectedId',
   ),
 );
-check(source.includes('!exam && ventriclesFor(selected).length > 0'));
+check(
+  source
+    .replace(/\s+/g, '')
+    .includes(
+      '!exam&&(ventriclesFor(selected).length>0||cardiacFor(selected).length>0)&&(',
+    ),
+  'Both nested launchers retain the exam guard',
+);
 const ui = await readFile('app/ventricles.tsx', 'utf8');
 check(ui.includes('!context || explode > 0'));
 check(ui.includes('disabled={explode > 0}'));

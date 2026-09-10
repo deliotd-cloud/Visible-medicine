@@ -121,7 +121,7 @@ export function atlasSearchIndex(
       ? null
       : makeStudyLink(
           catalog,
-          'head-neck',
+          s.region,
           target.parentId,
           s.laterality === 'left' || s.laterality === 'right'
             ? s.laterality
@@ -134,7 +134,7 @@ export function atlasSearchIndex(
       key: `nested:${target.study}:${s.id}`,
       kind: 'structure',
       label: s.name,
-      detail: `${s.fmaId} · ${target.title} · ${here ? 'Open dissection' : 'Open Head & neck dissection'} · draft`,
+      detail: `${s.fmaId} · ${target.title} · ${here ? 'Open dissection' : `Open ${catalog.regions.find((r) => r.id === s.region)?.name ?? 'regional'} dissection`} · draft`,
       keywords: `${s.name} ${s.sourceName} ${s.fmaId} ${s.id} ${s.system} ${s.laterality} ${target.title}`,
       action: here
         ? {

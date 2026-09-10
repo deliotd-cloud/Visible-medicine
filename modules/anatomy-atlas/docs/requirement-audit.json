@@ -9,23 +9,25 @@
     "public/models/bodyparts3d/ventricles/catalog.json": "9a9852fe7e3f245c73525b94cd6fee08bd974f015cab5010d01d56e49ceb0a68",
     "public/models/bodyparts3d/brainstem/catalog.json": "1f405d0df3656da30f34c063bd81c3442cb33e8d2566b17447126460c95c3a38",
     "public/models/bodyparts3d/cerebral/catalog.json": "8dbcf8e0cbc5aff4c468e2eeda2e57fb048c65515ce35257b56f2247267624de",
+    "public/models/bodyparts3d/cardiac/catalog.json": "59cebff69d885e243a9b5b8048d9735eb7f4e7848b7f21a40fa6c12873c5b0a3",
+    "lib/cardiac.ts": "482facae9feb332a9899d008cca33aa6bb950046ae7ea96ea2ee67a89001c6ea",
     "content/cerebral-supplement-audit.json": "a186519bbf31065f5c4e58472c542a9cbd2a6b64d35423a4f6c92d7bae1d69d7",
-    "content/nested-teaching.ts": "5d0f2f67e73961a9b3019278815c9a9148fbdcdf6a67f790da366e0eb2eced1f",
-    "content/nested-teaching-bindings.v1.json": "c486f7d13b6e9f9ede93d4b96817016a4084fc759474dcbec12eeac984a6b02b",
-    "lib/nested-anatomy.ts": "853ccea7e93c3f8da12b17c1050e1e9bd7e672bab776fd49bb08c4ad81864061",
+    "content/nested-teaching.ts": "1af9b4c9729f0d0c761a6487633fca1519bf6861fb5fd386d715dd1fe0699450",
+    "content/nested-teaching-bindings.v1.json": "d13ee4c4863405dfbe6f738b964e55a9c7985cabe39456a3268d1cd56559ef99",
+    "lib/nested-anatomy.ts": "f56427e8d920f8299225b91387a16fb9a239c888216fb3da0ac4454861ade3d4",
     "lib/nested-teaching.ts": "985fe484097b3e1de7278e0666e9a586cfdcca69c20a1758286efc63f48e08a2",
     "app/nested-teaching.tsx": "b002f7a3126e1bad26203867752607ea5092017eae89489ec1443dd6cfa4ac4b",
     "app/nested-teaching.css": "d912bfc774cc744511a4c0e87a0a35f6b693def9f4bddc25b6f010f07dfa83bc",
     "package-lock.json": "a6a8277be904e06c3735ce00f9148372937a94209cb6219cb94487efc1ae74e5",
     "content/schema/anatomy-structure.schema.json": "0a8e76b6a98e23e25f60a2d9269664dc42974b7a349c63b77e4615fa46887826",
-    "content/review-revisions.json": "37a61b04a86955c0ab6cda39b95e33c2cf0f8df7f6cc01bfc13261389719fad7",
+    "content/review-revisions.json": "4e130ad0c0a5ec170069ae5ed89b1f3aab401f37282048d648f82f8f293c2104",
     "content/learning-resources.v1.json": "799fec602114a944b4f675d341b445982dac56786cca9b5800d52db7d95899e5",
-    "lib/learning-resource-types.ts": "0d8d309b1ee94577aee7f4af8e76620ff8001f725253b62f302b6f156554b01f",
-    "lib/learning-resources.ts": "791ed1f7f033ce4f4309a6878f25070802f543ccfd6cce8c8c17ef7fb3c5b412",
+    "lib/learning-resource-types.ts": "edb9d11b45d8679c334c7742127d30f35ab529f30a68de05bd336597ba4ac138",
+    "lib/learning-resources.ts": "082d5eec95df668a3cf8a594a7d398387bd5e7eccd655f71548b764215ebb92c",
     "lib/learning-anatomy.ts": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3",
     "lib/nested-learning-anatomy.ts": "6e7e1b4836406926af2406e7277a4f62f7ffc1668a644cd180b50d463443d8e1",
     "lib/ventricular-relationships.ts": "b9d2bd5ea079a600c2593ca522f325ceb03c2f2704a26747b4262ef6838c84df",
-    "app/ventricles.tsx": "68023e03d82593930f59a1bd47e0cdd0cd0e72be04657453a4bc265aa3f6debb",
+    "app/ventricles.tsx": "721b0f7cfba141172b4d97376dae756741e659ab71d151f571a38d7453ee2de3",
     "app/ventricular-relationships.css": "7dfa2927b9f203aa13dbd1f2205c9429e7b79ffbaa86108b57fb3c69b1b71400",
     "app/body-scene.tsx": "a81d6f17b2eaf4f9f32446ecd1c11e60a7c4b3435e8d6e2bc02d8b79261253e6",
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
@@ -116,6 +118,8 @@
       "cerebralParentSubdivisions": 10,
       "cerebralAdditionalSourceParts": 4,
       "cerebralContext": 2,
+      "cardiacCavities": 4,
+      "cardiacContextWalls": 2,
       "additionalUniqueWholeBodyAnatomy": 4,
       "limitation": "Nested selections generally subdivide existing parents. Four superior temporal ISA source parts are additional anatomy, available only inside the cerebral study; context reuses existing structures. Nested teaching is counted separately from the root-body inventory. The unchanged archival catalogue excludes these alternate display assets and additions."
     },
@@ -156,8 +160,8 @@
       1,
       2
     ],
-    "availableRepresentations": 1068,
-    "nestedRepresentations": 37,
+    "availableRepresentations": 1072,
+    "nestedRepresentations": 41,
     "supportedKinds": [
       "ct",
       "mri",
@@ -230,18 +234,18 @@
       }
     },
     "nested": {
-      "representations": 37,
-      "concepts": 22,
-      "references": 23,
+      "representations": 41,
+      "concepts": 26,
+      "references": 25,
       "topics": {
         "anatomy": {
-          "specificDraft": 37,
+          "specificDraft": 41,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 37,
+          "specificDraft": 41,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
@@ -249,35 +253,35 @@
         "ct": {
           "specificDraft": 0,
           "identityOnly": 0,
-          "pending": 37,
+          "pending": 41,
           "generatedIdentification": 0
         },
         "mri": {
           "specificDraft": 0,
           "identityOnly": 0,
-          "pending": 37,
+          "pending": 41,
           "generatedIdentification": 0
         },
         "ultrasound": {
           "specificDraft": 0,
           "identityOnly": 0,
-          "pending": 37,
+          "pending": 41,
           "generatedIdentification": 0
         },
         "pathology": {
           "specificDraft": 33,
           "identityOnly": 0,
-          "pending": 4,
+          "pending": 8,
           "generatedIdentification": 0
         },
         "clinical": {
           "specificDraft": 37,
           "identityOnly": 0,
-          "pending": 0,
+          "pending": 4,
           "generatedIdentification": 0
         },
         "quiz": {
-          "specificDraft": 37,
+          "specificDraft": 41,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
@@ -894,8 +898,8 @@
       "png": 4,
       "svg": 2,
       "md": 1,
-      "glb": 92,
-      "json": 7,
+      "glb": 93,
+      "json": 8,
       "html": 1,
       "tsv": 1
     },
