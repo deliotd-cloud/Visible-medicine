@@ -34,7 +34,7 @@ const manifest = JSON.parse(
 );
 const current = api.bodyDisplayCatalog(catalog);
 const legacy = api.learningAnatomyRepresentations(
-  catalog,
+  current,
   manifest,
   api.structures,
 );

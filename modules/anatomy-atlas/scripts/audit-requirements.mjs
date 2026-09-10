@@ -210,6 +210,9 @@ for (const path of [
   'public/models/bodyparts3d/manifest.json',
   'public/models/bodyparts3d/eye-layers/catalog.json',
   'public/models/bodyparts3d/eye-layers/display-correction.json',
+  'public/models/bodyparts3d/pancreas/display-correction.json',
+  'lib/body-display-catalog.ts',
+  'docs/pancreatic-source-audit.json',
   'lib/eye-layer-state.ts',
   'lib/ventricles.ts',
   'app/eye-layers.tsx',
@@ -323,6 +326,15 @@ const report = {
     'Offline source and displayed-copy inventory; no clinical or browser certification.',
   sourceHashes,
   anatomy: {
+    displayCorrections: displayCatalog.structures
+      .filter(
+        (s, i) => JSON.stringify(s) !== JSON.stringify(catalog.structures[i]),
+      )
+      .map((s) => ({
+        fmaId: s.fmaId,
+        bundle: s.bundle,
+        retainedSources: s.sources.length,
+      })),
     bodyRepresentations: catalog.structures.length,
     bodyBundles: catalog.bundles.length,
     bodyBundleBytes: catalog.bundles.reduce(

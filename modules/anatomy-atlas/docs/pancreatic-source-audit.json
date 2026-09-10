@@ -1,0 +1,890 @@
+{
+  "schemaVersion": 1,
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "parent": {
+    "id": "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
+    "fmaId": "FMA7198",
+    "name": "Pancreas",
+    "sourceName": "pancreas",
+    "system": "organs",
+    "category": "organ",
+    "laterality": "unpaired",
+    "region": "abdomen",
+    "regions": [
+      "abdomen"
+    ],
+    "bundle": "abdomen-organs",
+    "nodeName": "FMA7198",
+    "bounds": {
+      "min": [
+        -0.5670689940452576,
+        2.043599843978882,
+        0.45412003993988037
+      ],
+      "max": [
+        0.7267439961433411,
+        2.7809996604919434,
+        0.9637899994850159
+      ]
+    },
+    "center": [
+      0.07983750104904175,
+      2.4122997522354126,
+      0.7089550197124481
+    ],
+    "anchor": [
+      0.11720399558544159,
+      2.427800178527832,
+      0.7501899600028992
+    ],
+    "sourceTree": "partof",
+    "sources": [
+      {
+        "file": "FJ1895",
+        "sha256": "fea8a371ac940fb8c5c13e9d459af6c2bd50e1b499f8989c63883a7db0f149ae"
+      },
+      {
+        "file": "FJ1896",
+        "sha256": "17213b1a13963da2a60c792ac6f4047268890f1836d9d03e0383f783b7b73312"
+      },
+      {
+        "file": "FJ2629",
+        "sha256": "a1b00fb55bd8f6f40f2eee606730f9e72daefb4b6b36f6d0207791b64d291669"
+      },
+      {
+        "file": "FJ2630",
+        "sha256": "50cee3fbe96c857f11a9de653e603ecd0b24b2a9b1d3cc1e53c711ca2ae2b6cc"
+      }
+    ],
+    "coverageNote": null,
+    "provenance": {
+      "method": "licensed-source-mesh",
+      "license": "CC-BY-4.0",
+      "sourceVersion": "4.0",
+      "recovered": false
+    },
+    "validation": {
+      "status": "unvalidated",
+      "anatomicalReview": false
+    }
+  },
+  "definitions": [
+    {
+      "id": "FMA7198",
+      "name": "pancreas",
+      "representation": "BP4631",
+      "files": [
+        "FJ1895"
+      ],
+      "tree": "isa"
+    },
+    {
+      "id": "FMA10419",
+      "name": "pancreatic duct",
+      "representation": "BP6710",
+      "files": [
+        "FJ1896"
+      ],
+      "tree": "partof"
+    },
+    {
+      "id": "FMA63120",
+      "name": "parenchyma of pancreas",
+      "representation": "BP10192",
+      "files": [
+        "FJ2629"
+      ],
+      "tree": "partof"
+    },
+    {
+      "id": "FMA63103",
+      "name": "pancreatic duct tree",
+      "representation": "BP9652",
+      "files": [
+        "FJ1896",
+        "FJ2630"
+      ],
+      "tree": "partof"
+    },
+    {
+      "id": "FMA63103",
+      "name": "pancreatic duct tree",
+      "representation": "BP8172",
+      "files": [
+        "FJ2630"
+      ],
+      "tree": "isa"
+    }
+  ],
+  "sources": [
+    {
+      "file": "FJ1895",
+      "sha256": "fea8a371ac940fb8c5c13e9d459af6c2bd50e1b499f8989c63883a7db0f149ae",
+      "bytes": 307898,
+      "definitions": [
+        {
+          "id": "FMA7198",
+          "name": "pancreas",
+          "representation": "BP4631",
+          "files": [
+            "FJ1895"
+          ],
+          "tree": "isa"
+        }
+      ],
+      "topology": {
+        "sourceVertices": 2462,
+        "exactUniqueVertices": 2447,
+        "unusedUniqueVertices": 0,
+        "triangles": 4890,
+        "edges": 7335,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 4890,
+            "vertices": 2447,
+            "bounds": {
+              "min": [
+                -47.9048,
+                -146.379,
+                1004.36
+              ],
+              "max": [
+                72.6744,
+                -95.412,
+                1078.1
+              ]
+            },
+            "areaMm2": 12567.767411348204,
+            "algebraicVolumeMm3": 64629.19584454689
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ1896",
+      "sha256": "17213b1a13963da2a60c792ac6f4047268890f1836d9d03e0383f783b7b73312",
+      "bytes": 344668,
+      "definitions": [
+        {
+          "id": "FMA10419",
+          "name": "pancreatic duct",
+          "representation": "BP6710",
+          "files": [
+            "FJ1896"
+          ],
+          "tree": "partof"
+        },
+        {
+          "id": "FMA63103",
+          "name": "pancreatic duct tree",
+          "representation": "BP9652",
+          "files": [
+            "FJ1896",
+            "FJ2630"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "topology": {
+        "sourceVertices": 3941,
+        "exactUniqueVertices": 1686,
+        "unusedUniqueVertices": 0,
+        "triangles": 3368,
+        "edges": 5052,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 3368,
+            "vertices": 1686,
+            "bounds": {
+              "min": [
+                -49.5436,
+                -138.103,
+                1021.38
+              ],
+              "max": [
+                61.4969,
+                -101.955,
+                1066.71
+              ]
+            },
+            "areaMm2": 930.876110117619,
+            "algebraicVolumeMm3": 265.7814840727511
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ2629",
+      "sha256": "a1b00fb55bd8f6f40f2eee606730f9e72daefb4b6b36f6d0207791b64d291669",
+      "bytes": 267567,
+      "definitions": [
+        {
+          "id": "FMA63120",
+          "name": "parenchyma of pancreas",
+          "representation": "BP10192",
+          "files": [
+            "FJ2629"
+          ],
+          "tree": "partof"
+        }
+      ],
+      "topology": {
+        "sourceVertices": 2153,
+        "exactUniqueVertices": 2138,
+        "unusedUniqueVertices": 0,
+        "triangles": 4272,
+        "edges": 6408,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 4272,
+            "vertices": 2138,
+            "bounds": {
+              "min": [
+                -47.9048,
+                -146.379,
+                1004.55
+              ],
+              "max": [
+                72.6701,
+                -95.4208,
+                1078.1
+              ]
+            },
+            "areaMm2": 12528.7748434639,
+            "algebraicVolumeMm3": 64445.531926801734
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "file": "FJ2630",
+      "sha256": "50cee3fbe96c857f11a9de653e603ecd0b24b2a9b1d3cc1e53c711ca2ae2b6cc",
+      "bytes": 405264,
+      "definitions": [
+        {
+          "id": "FMA63103",
+          "name": "pancreatic duct tree",
+          "representation": "BP9652",
+          "files": [
+            "FJ1896",
+            "FJ2630"
+          ],
+          "tree": "partof"
+        },
+        {
+          "id": "FMA63103",
+          "name": "pancreatic duct tree",
+          "representation": "BP8172",
+          "files": [
+            "FJ2630"
+          ],
+          "tree": "isa"
+        }
+      ],
+      "topology": {
+        "sourceVertices": 4340,
+        "exactUniqueVertices": 2218,
+        "unusedUniqueVertices": 0,
+        "triangles": 4432,
+        "edges": 6648,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 4432,
+            "vertices": 2218,
+            "bounds": {
+              "min": [
+                -56.7069,
+                -138.466,
+                1020.14
+              ],
+              "max": [
+                59.1244,
+                -103.721,
+                1068.51
+              ]
+            },
+            "areaMm2": 1184.3105591832825,
+            "algebraicVolumeMm3": 438.5712068363333
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "files": [
+        "FJ1895",
+        "FJ1896"
+      ],
+      "exactSharedTriangles": 0,
+      "translationComparison": {
+        "diagnosticTranslationMm": [
+          -6.408150000000003,
+          0.866500000000002,
+          2.8150000000000546
+        ],
+        "aToAlignedB": {
+          "samples": 124,
+          "withinTenthMm": 0,
+          "medianMm": 10.287877047889959,
+          "maxMm": 22.48671998208043
+        },
+        "alignedBToA": {
+          "samples": 128,
+          "withinTenthMm": 2,
+          "medianMm": 5.675078450063628,
+          "maxMm": 9.19409248194121
+        },
+        "similar": false
+      },
+      "firstToSecond": {
+        "samples": 2447,
+        "minMm": 0.2795808838696429,
+        "medianMm": 9.212837233447674,
+        "maxMm": 28.469639060732757,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 2,
+            "weightedFraction": 0.0008173273395995096
+          },
+          {
+            "mm": 2,
+            "count": 7,
+            "weightedFraction": 0.0028606456885982836
+          }
+        ]
+      },
+      "secondToFirst": {
+        "samples": 1686,
+        "minMm": 0.04293365800632524,
+        "medianMm": 5.930260445965881,
+        "maxMm": 9.017731147299715,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 1,
+            "weightedFraction": 0.0005931198102016608
+          },
+          {
+            "mm": 0.25,
+            "count": 2,
+            "weightedFraction": 0.0011862396204033216
+          },
+          {
+            "mm": 1,
+            "count": 18,
+            "weightedFraction": 0.010676156583629894
+          },
+          {
+            "mm": 2,
+            "count": 50,
+            "weightedFraction": 0.02965599051008304
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "FJ1895",
+        "FJ2629"
+      ],
+      "exactSharedTriangles": 93,
+      "translationComparison": {
+        "diagnosticTranslationMm": [
+          -0.0021500000000003183,
+          -0.004400000000003956,
+          0.09499999999979991
+        ],
+        "aToAlignedB": {
+          "samples": 124,
+          "withinTenthMm": 110,
+          "medianMm": 0.04507550997879394,
+          "maxMm": 0.4428184846263803
+        },
+        "alignedBToA": {
+          "samples": 127,
+          "withinTenthMm": 124,
+          "medianMm": 0.030860785194677935,
+          "maxMm": 0.12662724655437116
+        },
+        "similar": false
+      },
+      "firstToSecond": {
+        "samples": 2447,
+        "minMm": 0,
+        "medianMm": 0.0015773024627650574,
+        "maxMm": 0.6298834909006833,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 2194,
+            "weightedFraction": 0.896608091540662
+          },
+          {
+            "mm": 0.25,
+            "count": 2366,
+            "weightedFraction": 0.9668982427462198
+          },
+          {
+            "mm": 1,
+            "count": 2447,
+            "weightedFraction": 1
+          },
+          {
+            "mm": 2,
+            "count": 2447,
+            "weightedFraction": 1
+          }
+        ]
+      },
+      "secondToFirst": {
+        "samples": 2138,
+        "minMm": 0,
+        "medianMm": 0.0009048220549503417,
+        "maxMm": 0.18813840820742558,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 2134,
+            "weightedFraction": 0.9981290926099158
+          },
+          {
+            "mm": 0.25,
+            "count": 2138,
+            "weightedFraction": 1
+          },
+          {
+            "mm": 1,
+            "count": 2138,
+            "weightedFraction": 1
+          },
+          {
+            "mm": 2,
+            "count": 2138,
+            "weightedFraction": 1
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "FJ1895",
+        "FJ2630"
+      ],
+      "exactSharedTriangles": 0,
+      "translationComparison": {
+        "diagnosticTranslationMm": [
+          -11.17605,
+          -0.1980000000000075,
+          3.0950000000000273
+        ],
+        "aToAlignedB": {
+          "samples": 124,
+          "withinTenthMm": 0,
+          "medianMm": 10.785990342680616,
+          "maxMm": 24.31260524013208
+        },
+        "alignedBToA": {
+          "samples": 128,
+          "withinTenthMm": 1,
+          "medianMm": 3.282421053693934,
+          "maxMm": 8.71601121164517
+        },
+        "similar": false
+      },
+      "firstToSecond": {
+        "samples": 2447,
+        "minMm": 0.0436376810281906,
+        "medianMm": 9.479995236813144,
+        "maxMm": 27.329090069230276,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 1,
+            "weightedFraction": 0.0004086636697997548
+          },
+          {
+            "mm": 0.25,
+            "count": 3,
+            "weightedFraction": 0.0012259910093992644
+          },
+          {
+            "mm": 1,
+            "count": 5,
+            "weightedFraction": 0.002043318348998774
+          },
+          {
+            "mm": 2,
+            "count": 10,
+            "weightedFraction": 0.004086636697997548
+          }
+        ]
+      },
+      "secondToFirst": {
+        "samples": 2218,
+        "minMm": 0.12310087297020887,
+        "medianMm": 6.14859814998509,
+        "maxMm": 10.872641919116575,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 2,
+            "weightedFraction": 0.0009017132551848512
+          },
+          {
+            "mm": 1,
+            "count": 5,
+            "weightedFraction": 0.002254283137962128
+          },
+          {
+            "mm": 2,
+            "count": 43,
+            "weightedFraction": 0.0193868349864743
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "FJ1896",
+        "FJ2629"
+      ],
+      "exactSharedTriangles": 0,
+      "translationComparison": {
+        "diagnosticTranslationMm": [
+          6.406000000000002,
+          -0.870900000000006,
+          -2.7200000000002547
+        ],
+        "aToAlignedB": {
+          "samples": 128,
+          "withinTenthMm": 2,
+          "medianMm": 5.667956612426674,
+          "maxMm": 9.209884353390304
+        },
+        "alignedBToA": {
+          "samples": 127,
+          "withinTenthMm": 1,
+          "medianMm": 11.033419800768806,
+          "maxMm": 23.58382104791346
+        },
+        "similar": false
+      },
+      "firstToSecond": {
+        "samples": 1686,
+        "minMm": 0.03799628424440156,
+        "medianMm": 5.9283018790228255,
+        "maxMm": 8.914215215053483,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 1,
+            "weightedFraction": 0.0005931198102016608
+          },
+          {
+            "mm": 0.25,
+            "count": 2,
+            "weightedFraction": 0.0011862396204033216
+          },
+          {
+            "mm": 1,
+            "count": 20,
+            "weightedFraction": 0.011862396204033215
+          },
+          {
+            "mm": 2,
+            "count": 52,
+            "weightedFraction": 0.03084223013048636
+          }
+        ]
+      },
+      "secondToFirst": {
+        "samples": 2138,
+        "minMm": 0.8783231758462207,
+        "medianMm": 9.23682203195445,
+        "maxMm": 27.892657271045334,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 1,
+            "weightedFraction": 0.0004677268475210477
+          },
+          {
+            "mm": 2,
+            "count": 6,
+            "weightedFraction": 0.002806361085126286
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "FJ1896",
+        "FJ2630"
+      ],
+      "exactSharedTriangles": 0,
+      "translationComparison": {
+        "diagnosticTranslationMm": [
+          -4.767899999999997,
+          -1.0645000000000095,
+          0.2799999999999727
+        ],
+        "aToAlignedB": {
+          "samples": 128,
+          "withinTenthMm": 1,
+          "medianMm": 3.5203371535627874,
+          "maxMm": 7.261533516413771
+        },
+        "alignedBToA": {
+          "samples": 128,
+          "withinTenthMm": 1,
+          "medianMm": 4.150689203724352,
+          "maxMm": 7.7289957229064985
+        },
+        "similar": false
+      },
+      "firstToSecond": {
+        "samples": 1686,
+        "minMm": 0.000020240037593978623,
+        "medianMm": 1.9442666886881457,
+        "maxMm": 7.918879266473988,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 67,
+            "weightedFraction": 0.039739027283511266
+          },
+          {
+            "mm": 0.25,
+            "count": 163,
+            "weightedFraction": 0.0966785290628707
+          },
+          {
+            "mm": 1,
+            "count": 442,
+            "weightedFraction": 0.26215895610913403
+          },
+          {
+            "mm": 2,
+            "count": 866,
+            "weightedFraction": 0.5136417556346382
+          }
+        ]
+      },
+      "secondToFirst": {
+        "samples": 2218,
+        "minMm": 0.00036735077269983105,
+        "medianMm": 2.150518404943257,
+        "maxMm": 11.193362363472382,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 38,
+            "weightedFraction": 0.017132551848512173
+          },
+          {
+            "mm": 0.25,
+            "count": 95,
+            "weightedFraction": 0.04283137962128043
+          },
+          {
+            "mm": 1,
+            "count": 399,
+            "weightedFraction": 0.17989179440937783
+          },
+          {
+            "mm": 2,
+            "count": 1015,
+            "weightedFraction": 0.457619477006312
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "FJ2629",
+        "FJ2630"
+      ],
+      "exactSharedTriangles": 0,
+      "translationComparison": {
+        "diagnosticTranslationMm": [
+          -11.1739,
+          -0.19360000000000355,
+          3.0000000000002274
+        ],
+        "aToAlignedB": {
+          "samples": 127,
+          "withinTenthMm": 0,
+          "medianMm": 11.980581932028516,
+          "maxMm": 22.73209243162661
+        },
+        "alignedBToA": {
+          "samples": 128,
+          "withinTenthMm": 1,
+          "medianMm": 3.285576322161957,
+          "maxMm": 8.745164102373332
+        },
+        "similar": false
+      },
+      "firstToSecond": {
+        "samples": 2138,
+        "minMm": 0.043631930344343525,
+        "medianMm": 9.510193546400664,
+        "maxMm": 27.007793276832196,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 1,
+            "weightedFraction": 0.0004677268475210477
+          },
+          {
+            "mm": 0.25,
+            "count": 3,
+            "weightedFraction": 0.001403180542563143
+          },
+          {
+            "mm": 1,
+            "count": 5,
+            "weightedFraction": 0.0023386342376052385
+          },
+          {
+            "mm": 2,
+            "count": 9,
+            "weightedFraction": 0.00420954162768943
+          }
+        ]
+      },
+      "secondToFirst": {
+        "samples": 2218,
+        "minMm": 0.04356076571102278,
+        "medianMm": 6.15270984675555,
+        "maxMm": 10.872668325290636,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 1,
+            "weightedFraction": 0.0004508566275924256
+          },
+          {
+            "mm": 0.25,
+            "count": 3,
+            "weightedFraction": 0.001352569882777277
+          },
+          {
+            "mm": 1,
+            "count": 5,
+            "weightedFraction": 0.002254283137962128
+          },
+          {
+            "mm": 2,
+            "count": 51,
+            "weightedFraction": 0.022993688007213707
+          }
+        ]
+      }
+    }
+  ],
+  "licence": {
+    "id": "CC-BY-4.0",
+    "url": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+    "checked": "2026-09-10",
+    "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
+  },
+  "sourceCoordinatesUnchanged": true,
+  "automaticallyAdmitted": false,
+  "clinicalApproval": false,
+  "limitations": "Exact source identities, raw hashes, topology and all-vertex nearest-surface distances. Not a self-intersection, tissue identity, duct continuity/patency, complete pancreas, microscopic layer or clinical validation. PART-OF duct tree contains the named duct; do not duplicate it as an independent full tree."
+}

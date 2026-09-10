@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Pancreas display correction
+
+`lib/body-display-catalog.ts` now composes exact-record pancreas and eye corrections without mutating archived anatomy. The pancreatic derivative omits the near-coincident FJ2629 envelope, preserves all retained positions and replaces geometry/bounds/anchor/source binding together. Draft teaching alone recognises the exact replacement; imaging/lecture bindings must use its three retained sources and are not silently migrated. See [source evidence and next dissection gates](PANCREATIC_SOURCE_REVIEW.md).
+
 ## Renal venous relationships
 
 `lib/renal-relationships.ts` resolves two exact-side presets per kidney from existing source groups and context. The shared Study view menu changes focus and visibility atomically through a validated optional `selectedId` preset action. One Undo restores previous layers/selection. A relationship can retain several selectable parts, supporting both left adrenal and renal veins. Separation suppresses context; normal defaults and geometry remain unchanged. See [behaviour, references and acceptance gates](RENAL_VENOUS_RELATIONSHIPS.md).

@@ -63,15 +63,16 @@ export function nestedLearningAnatomyRepresentations(
   });
 }
 
-/** Unified opt-in registry. Legacy callers retain their original 1,031 entries. */
+/** Unified current-display registry. The separate legacy helper can still read archives. */
 export function allLearningAnatomyRepresentations(
   catalog: BodyCatalog,
   manifest: Parameters<typeof learningAnatomyRepresentations>[1],
   names: Parameters<typeof learningAnatomyRepresentations>[2],
 ): AnatomyRepresentation[] {
+  const current = currentCatalog(catalog);
   return [
-    ...learningAnatomyRepresentations(catalog, manifest, names),
-    ...nestedLearningAnatomyRepresentations(catalog),
+    ...learningAnatomyRepresentations(current, manifest, names),
+    ...nestedLearningAnatomyRepresentations(current),
   ];
 }
 

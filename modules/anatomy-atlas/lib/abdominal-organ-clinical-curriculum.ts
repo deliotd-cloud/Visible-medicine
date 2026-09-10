@@ -1,6 +1,7 @@
 import type { ContentTab } from '../app/anatomy-data';
 import type { BodyStructure } from '../app/body-types';
 import type { ContentLesson } from './content-types';
+import { isPancreasDisplayRecord } from './body-display-catalog';
 
 type AbdominalOrganClinicalIdentity = readonly [
   fma: string,
@@ -657,10 +658,11 @@ export function abdominalOrganClinicalLesson(
     s.sourceTree !== tree ||
     s.region !== region ||
     !same(s.regions, regions) ||
-    !same(
+    (!same(
       s.sources.map((p) => p.file),
       files,
-    )
+    ) &&
+      !isPancreasDisplayRecord(s))
   )
     return undefined;
   const { group } = match,
@@ -669,7 +671,12 @@ export function abdominalOrganClinicalLesson(
     readiness: 'draft',
     title: `${s.name} · ${tab === 'pathology' ? 'Injury & disease' : 'Clinical context'} · draft`,
     body: topic.body,
-    bullets: [...topic.bullets, group.scope],
+    bullets: [
+      ...topic.bullets,
+      isPancreasDisplayRecord(s)
+        ? 'The display retains one pancreatic envelope and two duct-source components. The near-coincident parenchymal alternative is archived, not drawn as an extra layer. No enzyme activity, duct patency, endocrine function, necrosis or validated internal layers are simulated.'
+        : group.scope,
+    ],
     note: [
       'Draft teaching; independent anatomical and clinical review pending. Educational context, not a patient diagnosis or treatment plan.',
       s.coverageNote,

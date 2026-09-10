@@ -206,7 +206,9 @@ same(
 );
 same(
   display.structures.filter(
-    (s, i) => JSON.stringify(s) !== JSON.stringify(catalog.structures[i]),
+    (s, i) =>
+      s.fmaId !== 'FMA7198' &&
+      JSON.stringify(s) !== JSON.stringify(catalog.structures[i]),
   ).length,
   1,
 );
@@ -473,7 +475,11 @@ for (const side of ['left', 'right']) {
     update({ type: 'visibility', id: layer.id, visible: false });
     same(state.selectedId, null);
     update({ type: 'undo' });
-    same({ ...state, future: before.future }, before, 'Undo restores selection, preset and visibility');
+    same(
+      { ...state, future: before.future },
+      before,
+      'Undo restores selection, preset and visibility',
+    );
     check(state.future.length > 0, 'Undone layers remain redoable');
   }
   for (let i = 0; i < 70; i++)
@@ -795,8 +801,18 @@ for (const side of ['left', 'right']) {
     React.createElement(component.exports.EyeLayerView, { parent }),
   );
   const switches = html.match(/<[^>]*role="switch"[^>]*>/g) || [];
-  same(switches.filter((tag) => tag.includes('aria-label="Show original position"')).length, 1);
-  same(switches.filter((tag) => !tag.includes('aria-label="Show original position"')).length, side === 'left' ? 8 : 7);
+  same(
+    switches.filter((tag) =>
+      tag.includes('aria-label="Show original position"'),
+    ).length,
+    1,
+  );
+  same(
+    switches.filter(
+      (tag) => !tag.includes('aria-label="Show original position"'),
+    ).length,
+    side === 'left' ? 8 : 7,
+  );
   check(html.includes('Clinical') || html.includes('clinical'));
   check(html.includes('Anterior structures'));
   check(html.includes('Reassemble'));
@@ -826,7 +842,7 @@ const result = {
   correctedParentTriangles: parentTriangles.length,
   suppressedComponents,
   suppressedAreaMm2,
-  unrelatedDisplayedRecordsChanged: 0,
+  unrelatedToEyeOrPancreasDisplayedRecordsChanged: 0,
   controlMarkupCases: 2,
   cutawayControlMarkupCases: 6,
   cutawayGeometryCases,

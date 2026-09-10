@@ -1,6 +1,7 @@
 import type { ContentTab } from '../app/anatomy-data';
 import type { BodyStructure } from '../app/body-types';
 import type { ContentLesson } from './content-types';
+import { isPancreasDisplayRecord } from './body-display-catalog';
 
 interface OrganAnatomyDefinition {
   fmaId: string;
@@ -255,7 +256,9 @@ export function organAnatomyLesson(
     title: `${s.name} · Location & relationships · draft`,
     body: l.anatomy,
     bullets: [
-      l.distinction,
+      isPancreasDisplayRecord(s)
+        ? 'The display omits a near-coincident parenchymal alternative while preserving the four-file archive. Retained surfaces are not independently selectable anatomical divisions. Duct junctions, endocrine islets and tissue layers remain unresolved.'
+        : l.distinction,
       `Source identity: ${s.fmaId} · ${s.sources.length} source component${s.sources.length === 1 ? '' : 's'}. Component counts are not anatomical subdivision counts; excluded components and absent tissue are not reconstructed.`,
     ],
     note: [

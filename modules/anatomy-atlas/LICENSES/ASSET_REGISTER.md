@@ -1,5 +1,9 @@
 # Asset register
 
+## Pancreas display derivative — 10 September 2026
+
+`public/models/bodyparts3d/pancreas/pancreas.glb`: 229,880 bytes, SHA-256 `716e391810aa6dcc7a415b9d97c20b9cc70cc7e0f4561495a9a700ea73a774bf`. One existing anatomical identity / three retained source files / 12,690 triangles. The 4,272-triangle near-coincident FJ2629 envelope is omitted from display only; the original four-file aggregate and raw sources remain intact. Common coordinates and retained faces are unchanged; display normals are recomputed. BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International. Retain licence/attribution/modification notices. No new font, texture, dependency or paid service. [Evidence and limitations](../docs/PANCREATIC_SOURCE_REVIEW.md). Public/archive GLBs now total100; source-controlled GLBs total101 including the retained visual-pathway prototype. Earlier totals below are historical.
+
 ## Internal-brain imaging teaching — no new assets, 10 September 2026
 
 Fourteen original concise CT/MRI drafts cite official ACR/RSNA Head CT education and primary research by Hwang et al. (2012), Shepherd et al. (2020), Bakshi et al. (2000) and Stoquart-El Sankari et al. (2009), using their public abstracts as recorded in [the teaching evidence](../docs/BRAIN_IMAGING_TEACHING.md). No article text, image, diagram, patient case, scan, acquisition dataset or question bank is bundled or relicensed. Copyright remains with the respective owners. No model, texture, font, dependency or paid service is added; existing attribution obligations remain.

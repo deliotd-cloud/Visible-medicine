@@ -30,6 +30,8 @@ Generated from the actual catalogue, teaching resolver, dissection profiles and 
 
 ## Delivered source scope
 
+The [pancreatic display correction](PANCREATIC_SOURCE_REVIEW.md) removes one near-coincident envelope from rendering only, keeping all original files and the same anatomical ID. Its retained 12,690 triangles preserve source positions; duct components remain a combined organ selection. Teaching stays draft, and old four-source imaging/lecture bindings are not silently mapped to the three-source display. Deeper pancreatic dissection and clinical/device acceptance remain outstanding.
+
 The [optic chiasm and tract study](VISUAL_PATHWAY_DISSECTION.md) adds ${anatomy.nestedDissections.visualPathwayGroups} selectable neural surfaces from ${anatomy.nestedDissections.visualPathwaySourceFiles} source files inside Dissect brain. It opens from below with landmarks off. Across its views, ${anatomy.nestedDissections.visualPathwayContextLandmarks} existing landmarks are available: four posterior landmarks or the pituitary in the [chiasm–pituitary relationship view](VISUAL_PATHWAY_RELATIONSHIPS.md). Shared dissection controls and MRI teaching stay compact. Source seams and relationships still need anatomical review; no complete fibre pathway or patient correspondence is supplied. The original nonpublic prototype remains retained separately.
 
 - ${anatomy.bodyRepresentations} body representations, ${anatomy.bodyBundles} body GLBs, ${anatomy.regions.length} regions plus whole body.
