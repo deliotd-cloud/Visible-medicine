@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+Development: a [four-part cricothyroid prototype](docs/CRICOTHYROID_PROTOTYPE.md) is source-audited and saved **outside the live atlas**. It preserves the originals and documents a narrowly tested duplicate-face cleanup. Compact laryngeal dissection integration and specialist anatomical validation remain next; existing live counts and controls are unchanged.
+
 **Liver → Explore liver branches → Study view → Bile ducts & gallbladder** opens a [focused relationship view](docs/HEPATIC_BILIARY_RELATIONSHIPS.md). Both internal biliary groups remain selectable alongside optional existing gallbladder and duct landmarks. Landmarks hide during separation; no missing duct connection or surgical anatomy is inferred.
 
 **Organ → Imaging → Component notes** now gives [direct access to available component teaching](docs/COMPONENT_IMAGING_NAVIGATION.md). Choose a part and open its dissection with the requested CT, MRI or ultrasound notes already expanded. The compact picker stays collapsed until needed and omits pending lessons. No scan or paid-lecture access is granted.

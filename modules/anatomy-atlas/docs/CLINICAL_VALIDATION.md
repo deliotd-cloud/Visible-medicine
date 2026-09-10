@@ -1,5 +1,7 @@
 # Clinical validation checklist
 
+The [cricothyroid prototype](CRICOTHYROID_PROTOTYPE.md) remains non-public and unvalidated. Review the four supplied part labels/laterality, absent described bellies, attachment footprints, cartilage intersections and modification disclosure before admission. Six detached opposite-face islands were omitted only in a pinned display derivative; originals are retained. Engineering topology/precision does not establish anatomical accuracy, phonation, safe operative planes, nerve completeness or CT/MRI/US correspondence. Prior laryngeal source holds remain unchanged.
+
 ## Biliary relationship landmarks
 
 Review the [liver/gallbladder relationship preset](HEPATIC_BILIARY_RELATIONSHIPS.md): source FMA14668's full common-hepatic-duct extent and boundaries, cystic/gallbladder junctions and both intrahepatic groups. No common bile duct, ampulla, open lumen, bile flow or safe operative plane has been reconstructed. Source topology/triangle preservation is not clinical validation. Check landmark visibility, colour distinctions, paired selection, context toggling and separation/reassembly on actual desktop/mobile devices; independent scan and paid-lecture entitlements remain unchanged.

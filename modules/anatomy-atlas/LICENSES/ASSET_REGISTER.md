@@ -1,5 +1,9 @@
 # Asset register
 
+## Non-public cricothyroid prototype
+
+`content/prototypes/cricothyroid/` contains four BodyParts3D 4.0 IS-A originals (FJ2801, FJ2783, FJ2799, FJ2781), a 17,636-triangle GLB and hash-pinned provenance catalogue. Licence: CC BY 4.0; credit: BodyParts3D, © The Database Center for Life Science. Original files remain byte-identical; the display derivative omits 12 specifically reviewed detached opposite-winding duplicate faces, preserves all retained triangle coordinates/order/winding and recomputes display normals. This is not clinical validation or a new proprietary anatomy dataset. Preserve attribution, licence and modification disclosure. No external diagram, texture, font, scan, article, service or dependency was added. [Detailed evidence](../docs/CRICOTHYROID_PROTOTYPE.md); [official terms](https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html), checked 2026-09-10.
+
 ## Biliary relationship context — existing assets reused, 10 September 2026
 
 The new `hepatic/biliary-context.json` pins three already distributed BodyParts3D source records (FMA7202/FJ2817 PART-OF, FMA14539/FJ3080 IS-A, FMA14668/FJ3079 IS-A) to existing bundle metadata. No new mesh or changed triangle; 4,038 existing triangles provide optional landmarks. BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International. Attribution and adaptation notices remain required. Official licence/source pages were rechecked. NIDDK supports an original short guide; no article, diagram, image or scan is bundled. No dependency, font, texture or paid service is added. [Source audit and limitations](../docs/HEPATIC_BILIARY_RELATIONSHIPS.md).

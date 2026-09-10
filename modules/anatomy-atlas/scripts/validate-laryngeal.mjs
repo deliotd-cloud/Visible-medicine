@@ -406,7 +406,19 @@ for (const study of api.laryngealStudySets)
         api.resolveDissection(scope, profile, removed).visible,
         visible.filter((v) => v.id !== s.id),
       );
-      same(api.dissectionReducer(removed, { type: 'undo' }), state);
+      const undone = api.dissectionReducer(removed, { type: 'undo' });
+      // Undo restores the visible state AND retains the removed state for Redo.
+      // This older test predates the shared workbench's redo history.
+      same(undone, {
+        ...state,
+        future: [{
+          stageId: removed.stageId,
+          focusId: removed.focusId,
+          removed: removed.removed,
+          restored: removed.restored,
+        }],
+      });
+      same(api.dissectionReducer(undone, { type: 'redo' }), removed);
       same(
         api.resolveDissection(
           scope,
