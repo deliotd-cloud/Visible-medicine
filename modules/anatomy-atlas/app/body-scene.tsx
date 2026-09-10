@@ -64,6 +64,8 @@ type Props = {
   cameraRestore?: RefObject<StudyCamera | null>;
   retries?: Record<string, number>;
   appearance?: Record<string, { color: string; opacity: number }>;
+  /** Non-selectable orientation surfaces; pointer events must pass through them. */
+  contextIds?: string[];
   onSelect: (id: string) => void;
   onLoaded: (id: string) => void;
   onFailure: (id: string) => void;
@@ -131,6 +133,8 @@ function Bundle({
         const position = offsets.get(structure.id) ?? new THREE.Vector3();
         const removed = props.hiddenIds.includes(structure.id),
           faded = removed || (props.isolated && !selected);
+        const interactive =
+          !removed && !props.contextIds?.includes(structure.id);
         const clippingPlanes = sectionPlanes(
           frame,
           props.inspection,
@@ -141,7 +145,7 @@ function Bundle({
           systemOpacity(props.inspection, structure.system, selected) *
           (props.appearance?.[structure.id]?.opacity ?? 1);
         const select = (e: ThreeEvent<MouseEvent>) => {
-          if (removed) return;
+          if (!interactive) return;
           e.stopPropagation();
           props.onSelect(structure.id);
         };
@@ -169,11 +173,12 @@ function Bundle({
               <group
                 onClick={select}
                 onPointerOver={(e) => {
-                  if (removed) return;
+                  if (!interactive) return;
                   e.stopPropagation();
                   document.body.style.cursor = 'pointer';
                 }}
                 onPointerOut={() => {
+                  if (props.contextIds?.includes(structure.id)) return;
                   document.body.style.cursor = '';
                 }}
               >

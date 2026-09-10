@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "ventricular-relationships:test": "node scripts/validate-ventricular-relationships.mjs",
     "nested-learning:test": "node scripts/validate-nested-learning.mjs",
     "nested-teaching:test": "node scripts/pin-nested-teaching.mjs --check && node scripts/validate-nested-teaching.mjs",
     "nested-navigation:test": "node scripts/validate-nested-navigation.mjs",

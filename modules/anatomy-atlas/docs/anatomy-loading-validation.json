@@ -1,10 +1,10 @@
 {
   "passed": true,
-  "assertions": 92106,
+  "assertions": 94249,
   "scopes": 36,
-  "recipeScopes": 774,
-  "renderScopes": 12384,
-  "sessions": 1545,
+  "recipeScopes": 792,
+  "renderScopes": 12672,
+  "sessions": 1581,
   "rows": [
     {
       "region": "whole-body",
@@ -190,19 +190,19 @@
       "region": "head-neck",
       "side": "both",
       "structures": 275,
-      "recipes": 51
+      "recipes": 57
     },
     {
       "region": "head-neck",
       "side": "left",
       "structures": 160,
-      "recipes": 51
+      "recipes": 57
     },
     {
       "region": "head-neck",
       "side": "right",
       "structures": 160,
-      "recipes": 51
+      "recipes": 57
     },
     {
       "region": "spine",

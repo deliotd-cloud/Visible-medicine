@@ -301,7 +301,14 @@ check(
 );
 check(
   explorer.includes(
-    'if (exam || practiceBlocked || (retry && !retryIds.length)) return;',
+    'if (exam || practiceBlocked || (retry && !retryCount)) return;',
+  ),
+);
+// Retry readiness uses the actual question count, including concept-aware
+// deduplication, rather than the older raw representation-ID count.
+check(
+  explorer.includes(
+    'const retryCount = practiceQuestionCount( practiceEligible, practiceMode, retryIds, );',
   ),
 );
 check(explorer.includes('loadStatus.loaded.length'));

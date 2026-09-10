@@ -1,0 +1,38 @@
+.ventricular-relationship {
+  border-top: 1px solid var(--border);
+  padding-top: 0.5rem;
+  overflow-wrap: anywhere;
+}
+.ventricular-relationship p {
+  font-size: 1rem;
+  line-height: 1.55;
+}
+.ventricular-relationship ul {
+  display: grid;
+  gap: 0.35rem;
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+.ventricular-relationship li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.ventricular-relationship li > span {
+  flex: 0 0 0.7rem;
+  height: 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+}
+.ventricular-relationship a {
+  font-size: 0.875rem;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.ventricular-relationship a:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}

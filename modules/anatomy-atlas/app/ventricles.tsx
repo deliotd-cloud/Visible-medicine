@@ -48,10 +48,13 @@ import {
   type CerebralStructure,
 } from '@/lib/cerebral';
 import { CerebralLayers } from './cerebral-layers';
+import { ventricularRelationshipsFor } from '@/lib/ventricular-relationships';
+import { neuroGroupFor } from '@/lib/neuroanatomy';
 import type { DissectionView } from './dissection-data';
 import type { BodyLayout } from '@/lib/body-arrangement';
 import type { RendererHealth } from '@/lib/renderer-health';
 import './eye-layers.css';
+import './ventricular-relationships.css';
 
 const cameraViews = [
   'anterior',
@@ -92,6 +95,10 @@ export function VentricularView({
   );
   const selectableIds = useMemo(() => layers.map((s) => s.id), [layers]);
   const initialSelection = layers.find((s) => s.id === initialSelectedId)?.id;
+  const relationships = useMemo(
+    () => (study === 'ventricles' ? ventricularRelationshipsFor(parent) : []),
+    [parent, study],
+  );
   const presets = useMemo<Record<string, string[]>>(
     () =>
       isCerebral
@@ -106,8 +113,11 @@ export function VentricularView({
               midline: layers
                 .filter((s) => s.laterality === 'midline')
                 .map((s) => s.id),
+              ...Object.fromEntries(
+                relationships.map((r) => [r.id, [r.spaceId]]),
+              ),
             },
-    [isBrainstem, isCerebral, layers],
+    [isBrainstem, isCerebral, layers, relationships],
   );
   const presetNames: Record<string, string> = isCerebral
     ? {
@@ -127,6 +137,7 @@ export function VentricularView({
           all: 'All four spaces',
           lateral: 'Lateral ventricles',
           midline: 'Third and fourth',
+          ...Object.fromEntries(relationships.map((r) => [r.id, r.title])),
         };
   const title = isCerebral
     ? 'Cerebral'
@@ -159,6 +170,9 @@ export function VentricularView({
     [failed, setFailed] = useState<string[]>([]),
     [retry, setRetry] = useState(0);
   const [health, setHealth] = useState<RendererHealth>('starting');
+  const [relationshipId, setRelationshipId] = useState<string | null>(null);
+  const relationship = relationships.find((r) => r.id === relationshipId);
+  const guidedAppearance = !!relationship && context && explode === 0;
   const onLoaded = useCallback((id: string) => {
     setLoaded((v) => (v.includes(id) ? v : [...v, id]));
     setFailed((v) => v.filter((s) => s !== id));
@@ -171,6 +185,11 @@ export function VentricularView({
   const hiddenIds = [
     ...hidden,
     ...(!context || explode > 0 ? ventricleCatalog.contextIds : []),
+    ...(relationship
+      ? ventricleCatalog.contextIds.filter(
+          (id) => !relationship.context.some((s) => s.id === id),
+        )
+      : []),
   ];
   const required = [
     ...new Set(
@@ -193,35 +212,58 @@ export function VentricularView({
             {
               color:
                 index < 0
-                  ? '#9ba7a5'
+                  ? guidedAppearance
+                    ? (neuroGroupFor(s.fmaId)?.color ?? '#9ba7a5')
+                    : '#9ba7a5'
                   : isCerebral
                     ? (cerebralGroups.find(
                         (g) => g.id === (s as CerebralStructure).group,
                       )?.colour ?? '#9ba7a5')
                     : colours[index],
-              opacity: index < 0 ? 0.12 : 1,
+              opacity:
+                index < 0
+                  ? guidedAppearance
+                    ? 0.42
+                    : 0.12
+                  : guidedAppearance
+                    ? 0.7
+                    : 1,
             },
           ];
         }),
       ),
-    [ventricleCatalog, selectableIds, isCerebral],
+    [ventricleCatalog, selectableIds, isCerebral, guidedAppearance],
   );
   function select(id: string) {
+    if (!selectableIds.includes(id)) return;
     dispatch({ type: 'select', id });
+    if (relationship && id !== relationship.spaceId) setRelationshipId(null);
     setFocus(false);
   }
   function preset(value: string) {
+    if (!Object.hasOwn(presets, value)) return;
     dispatch({ type: 'preset', value });
+    const nextRelationship = relationships.find((r) => r.id === value);
+    setRelationshipId(nextRelationship?.id ?? null);
+    if (nextRelationship) {
+      setContext(true);
+      setView(nextRelationship.view);
+      setReset((v) => v + 1);
+    }
     setExplode(0);
     setFocus(false);
     setIsolated(false);
   }
   const presetValue =
-    Object.keys(presets).find((value) =>
-      layers.every(
-        (s) => hidden.includes(s.id) === !presets[value].includes(s.id),
-      ),
-    ) ?? 'custom';
+    relationship?.id ??
+    Object.keys(presets)
+      .filter((value) => !relationships.some((r) => r.id === value))
+      .find((value) =>
+        layers.every(
+          (s) => hidden.includes(s.id) === !presets[value].includes(s.id),
+        ),
+      ) ??
+    'custom';
   if (!layers.length)
     return (
       <p role="alert">
@@ -243,6 +285,7 @@ export function VentricularView({
           illustrated
           labels={labels}
           landmarks={selectableIds}
+          contextIds={ventricleCatalog.contextIds}
           explode={explode}
           layout={layout}
           anchorSkeleton={false}
@@ -377,6 +420,7 @@ export function VentricularView({
             hidden={hidden}
             onSelect={select}
             onVisibility={(id, visible) => {
+              setRelationshipId(null);
               dispatch({ type: 'visibility', id, visible });
               setFocus(false);
               if (!visible && selectedId === id) setIsolated(false);
@@ -398,6 +442,7 @@ export function VentricularView({
                   checked={!hidden.includes(s.id)}
                   aria-label={`Show ${s.name.toLowerCase()}`}
                   onCheckedChange={(visible) => {
+                    setRelationshipId(null);
                     dispatch({ type: 'visibility', id: s.id, visible });
                     setFocus(false);
                     if (!visible && selectedId === s.id) setIsolated(false);
@@ -414,6 +459,7 @@ export function VentricularView({
             disabled={!history.length}
             onClick={() => {
               dispatch({ type: 'undo' });
+              setRelationshipId(null);
               setFocus(false);
               setIsolated(false);
             }}
@@ -435,7 +481,10 @@ export function VentricularView({
             variant={context ? 'default' : 'outline'}
             aria-pressed={context}
             disabled={explode > 0}
-            onClick={() => setContext((v) => !v)}
+            onClick={() => {
+              setRelationshipId(null);
+              setContext((v) => !v);
+            }}
           >
             {isCerebral
               ? 'Show lateral ventricles'
@@ -444,14 +493,45 @@ export function VentricularView({
                 : 'Show brain context'}
           </Button>
         </div>
-        {context && explode === 0 && (
-          <p>
-            {isCerebral
-              ? 'Faint lateral ventricular spaces provide orientation, not a registered scan or cortical boundary.'
-              : isBrainstem
-                ? 'Faint context shows the fourth ventricular space, not tissue or a measured cavity wall.'
-                : 'Faint context: thalami, caudate nuclei and corpus callosum. These are whole structures, not separately segmented ventricular walls.'}
-          </p>
+        {relationship && context && explode === 0 ? (
+          <section
+            className="ventricular-relationship"
+            aria-label="Ventricular relationship guide"
+          >
+            <p>{relationship.guide}</p>
+            <ul aria-label="Context colour key">
+              {relationship.context.map((s) => (
+                <li key={s.id}>
+                  <span
+                    aria-hidden="true"
+                    style={{ backgroundColor: neuroGroupFor(s.fmaId)?.color }}
+                  />
+                  {s.name}
+                </li>
+              ))}
+            </ul>
+            <p>
+              Space shown translucently; nearby structures are orientation
+              context, not selectable walls.
+            </p>
+            {isolated && (
+              <p>Turn off Fade others to compare the nearby structures.</p>
+            )}
+            <a href={relationship.reference} target="_blank" rel="noreferrer">
+              Anatomy reference · UTHealth
+            </a>
+          </section>
+        ) : (
+          context &&
+          explode === 0 && (
+            <p>
+              {isCerebral
+                ? 'Faint lateral ventricular spaces provide orientation, not a registered scan or cortical boundary.'
+                : isBrainstem
+                  ? 'Faint context shows the fourth ventricular space, not tissue or a measured cavity wall.'
+                  : 'Faint context: thalami, caudate nuclei and corpus callosum. These are whole structures, not separately segmented ventricular walls.'}
+            </p>
+          )
         )}
         <details className="eye-layer-separation">
           <summary>

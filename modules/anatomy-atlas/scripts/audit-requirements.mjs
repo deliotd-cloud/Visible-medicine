@@ -22,7 +22,8 @@ export { allLearningAnatomyRepresentations } from './lib/nested-learning-anatomy
 export { bodyDisplayCatalog } from './lib/body-display-catalog.ts';
 export { nestedStudyTargets } from './lib/nested-anatomy.ts';
 export { nestedTeachingFor, nestedTopicLesson } from './lib/nested-teaching.ts';
-export { nestedConcepts, nestedTeachingReferences } from './content/nested-teaching.ts';`,
+export { nestedConcepts, nestedTeachingReferences } from './content/nested-teaching.ts';
+export { ventricularRelationshipsFor } from './lib/ventricular-relationships.ts';`,
     resolveDir: fileURLToPath(root),
     sourcefile: 'requirements-audit-entry.ts',
     loader: 'ts',
@@ -49,6 +50,7 @@ const {
   nestedTopicLesson,
   nestedConcepts,
   nestedTeachingReferences,
+  ventricularRelationshipsFor,
 } = await import(
   'data:text/javascript;base64,' +
     Buffer.from(bundled.outputFiles[0].text).toString('base64')
@@ -206,6 +208,10 @@ for (const path of [
   'lib/learning-resources.ts',
   'lib/learning-anatomy.ts',
   'lib/nested-learning-anatomy.ts',
+  'lib/ventricular-relationships.ts',
+  'app/ventricles.tsx',
+  'app/ventricular-relationships.css',
+  'app/body-scene.tsx',
   'lib/learning-entitlements.ts',
   'public/brand/visible-medicine-lockup-dark.png',
   'public/brand/visible-medicine-lockup-light.png',
@@ -288,6 +294,9 @@ const report = {
     anatomicalCompletenessMeasured: false,
   },
   study: {
+    ventricularRelationshipPresets: ventricularRelationshipsFor(
+      ventricular.parent,
+    ).length,
     stages: profiles.reduce(
       (total, profile) => total + profile.stages.length,
       0,

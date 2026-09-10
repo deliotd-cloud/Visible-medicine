@@ -16,6 +16,8 @@ Three [orbital motor-supply study views](ORBITAL_MOTOR_STUDIES.md) now reuse Dis
 
 ## Ordered work
 
+Three [guided ventricular relationship views](VENTRICULAR_RELATIONSHIPS.md) now pair existing spaces with selected nearby deep-brain context, using the current preset selector and a small colour key. Context pointer handlers pass events through; source geometry and nested identity counts stay unchanged. Next extend useful source-defined dissection/teaching depth and complete explicitly requested device acceptance. Do not treat transparent reference surfaces as segmented ventricular walls or patient registration.
+
 The [nested learning-link foundation](NESTED_LEARNING_LINKS.md) extends source-bound destinations to all 37 brain/eye children without changing legacy root bindings or the compact UI. Document v2 carries exact parent/study/bundle identity; existing locator and study routes remain compatible. Production resources stay empty and independent Atlas/lecture gates remain in force. Next use approved resource manifests for a bounded adapter when available; meanwhile continue useful source-defined anatomy and teaching improvements without inventing patient registration or external anchors.
 
 The [nested brain/eye teaching](NESTED_ANATOMY_TEACHING.md) now adds 22 source-pinned concepts for all 37 nested parts behind one collapsed section. Draft core topics, referenced or model-scope self-checks and explicitly pending imaging preserve the compact interface. Next extend the external learning representation registry and investigate useful source-defined internal relationships, without treating these teaching bindings as clinical registration or paid-lecture access. Specialist editorial review and device acceptance remain open.

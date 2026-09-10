@@ -30,6 +30,8 @@ Quiz-tab notes are separate from interactive practice. X-ray has no authored top
 
 The opt-in [nested learning registry](NESTED_LEARNING_LINKS.md) exposes 37 exact child destinations within 1068 scope-specific representations. It supports document versions 1 and 2, while the configured production document stays version 1 with no resources. Nested parent/child source and bundle bindings can resolve into the existing dissection routes; this is not a live viewer connection or entitlement.
 
+The ventricular study also has 3 [guided relationship presets](VENTRICULAR_RELATIONSHIPS.md), using existing source spaces and context without adding unique anatomy or another panel. Context disappears during separation; pointer handlers do not block selectable structures beneath it. Device acceptance remains pending.
+
 ## Nested brain and eye teaching
 
 The collapsed [Learn more section](NESTED_ANATOMY_TEACHING.md) has 22 source-pinned concepts across 37 selectable parts, with 23 primary-reference links. These counts are separate from the root-body table and overlap parent anatomy. Each part has draft Anatomy, Function, Clinical and an unscored self-check; Pathology has 33 draft / 4 pending representations. CT, MRI and ultrasound each remain 37 pending. Five conceptual self-checks test documented model limitations instead of medical recall. No clinical approvals or external resource access are implied.

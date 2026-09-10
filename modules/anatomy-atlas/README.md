@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Brain → Dissect brain → Ventricular spaces → Study view** now includes three [guided relationship views](docs/VENTRICULAR_RELATIONSHIPS.md). Translucent spaces, selected nearby source structures and a named colour key reuse the existing rail; context hides during separation. Context pointer handlers no longer intentionally block selectable anatomy beneath. No new anatomy, scan, clinical approval or panel is implied; device acceptance remains pending.
+
 The [nested learning-link foundation](docs/NESTED_LEARNING_LINKS.md) now supports all 37 selectable brain/eye parts as exact future scan/lecture destinations, alongside the unchanged body/shoulder registry. Parent/child source hashes, study and side are checked before returning an existing dissection request. Older links remain compatible; Atlas and paid-lecture eligibility remain independent. This is groundwork only: no external resources, new controls, scan registration or patient data are enabled.
 
 **Nested brain/eye selection → Learn more** adds [source-pinned teaching](docs/NESTED_ANATOMY_TEACHING.md) for all 37 selectable parts: Anatomy, Function, Clinical, introductory Pathology and unscored self-checks, organized into 22 shared concepts. The section starts collapsed to preserve the model-first workspace. Four Pathology representations and every nested CT/MRI/ultrasound topic remain explicitly pending; no scan connection, paid-lecture entitlement, new geometry or clinical approval is implied.
