@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Renal venous relationships
+
+`lib/renal-relationships.ts` resolves two exact-side presets per kidney from existing source groups and context. The shared Study view menu changes focus and visibility atomically through a validated optional `selectedId` preset action. One Undo restores previous layers/selection. A relationship can retain several selectable parts, supporting both left adrenal and renal veins. Separation suppresses context; normal defaults and geometry remain unchanged. See [behaviour, references and acceptance gates](RENAL_VENOUS_RELATIONSHIPS.md).
+
 ## Chiasm–pituitary relationship and MRI teaching
 
 `lib/visual-pathway-context.ts` resolves one exact-parent relationship and reuses the existing pituitary record/bundle pinned in `public/models/bodyparts3d/visual-pathway/sellar-context.json`. The existing Study view menu and generic relationship state provide a right-sided view, chiasm selection, landmark visibility, colour key and separation suppression. Default posterior landmarks, cutaway bounds and selectable identities stay unchanged. No source mesh is transformed, exported or repinned. Two explicit MRI sections extend the existing visual-pathway concepts; a complete v117 teaching projection preserves all previous content. See [source, verification and remaining gates](VISUAL_PATHWAY_RELATIONSHIPS.md).

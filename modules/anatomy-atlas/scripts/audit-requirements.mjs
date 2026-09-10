@@ -25,6 +25,7 @@ export { nestedTeachingFor, nestedTopicLesson } from './lib/nested-teaching.ts';
 export { nestedConcepts, nestedTeachingReferences } from './content/nested-teaching.ts';
 export { ventricularRelationshipsFor } from './lib/ventricular-relationships.ts';
 export { visualRelationshipsFor, visualSellarSource } from './lib/visual-pathway-context.ts';
+export { renalRelationshipsFor } from './lib/renal-relationships.ts';
 export { cardiacRelationshipsFor, cardiacVesselSource } from './lib/cardiac-context.ts';`,
     resolveDir: fileURLToPath(root),
     sourcefile: 'requirements-audit-entry.ts',
@@ -55,6 +56,7 @@ const {
   ventricularRelationshipsFor,
   visualRelationshipsFor,
   visualSellarSource,
+  renalRelationshipsFor,
   cardiacRelationshipsFor,
   cardiacVesselSource,
 } = await import(
@@ -218,6 +220,7 @@ for (const path of [
   'lib/cardiac.ts',
   'lib/hepatic.ts',
   'lib/renal.ts',
+  'lib/renal-relationships.ts',
   'content/renal-teaching.ts',
   'public/models/bodyparts3d/renal/catalog.json',
   'docs/renal-vascular-source-audit.json',
@@ -389,6 +392,10 @@ const report = {
     anatomicalCompletenessMeasured: false,
   },
   study: {
+    renalRelationshipPresets: renal.parents.reduce(
+      (total, parent) => total + renalRelationshipsFor(parent).length,
+      0,
+    ),
     visualPathwayRelationshipPresets: visualRelationshipsFor(
       visualPathway.parent,
     ).length,

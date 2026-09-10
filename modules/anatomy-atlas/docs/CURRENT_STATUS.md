@@ -41,6 +41,8 @@ The [lung branch study](PULMONARY_DISSECTION.md) separates 5 source-defined grou
 
 ## Nested anatomy teaching
 
+The [renal venous relationships](RENAL_VENOUS_RELATIONSHIPS.md) add 4 side-specific views through the existing Study view menu, reusing supplied renal/adrenal veins and landmarks. The left adrenal view keeps both veins selectable. Choosing a view is one Undo step; context disappears during separation. No new geometry, connected lumen, flow, clinical approval or resource entitlement is inferred.
+
 The [internal-brain imaging extension](BRAIN_IMAGING_TEACHING.md) adds 14 original CT/MRI drafts across seven existing concepts/eight selections: ventricular spaces, midbrain, pons, medulla and cerebellum. Five primary references cover ventricular assessment and fluid-flow artefacts, posterior-fossa CT limitations and sequence-dependent brainstem MRI detail. Existing identities, core teaching, geometry and access gates are unchanged. Ultrasound and actual scan correspondence remain separate work; clinical/editorial review is pending.
 
 Internal dissection includes [Undo/Redo layers](NESTED_HISTORY.md) across all nine study families. This bounded layer/selection history reuses the compact action row and does not rewind camera, cutaway or separation settings. Device acceptance remains pending.

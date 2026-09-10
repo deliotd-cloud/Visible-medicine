@@ -55,11 +55,16 @@ export type VentricularState = VentricularSnapshot & {
 export type VentricularAction =
   | { type: 'select'; id: string }
   | { type: 'visibility'; id: string; visible: boolean }
-  | { type: 'preset'; value: string }
+  | { type: 'preset'; value: string; selectedId?: string }
   | { type: 'undo' }
   | { type: 'redo' };
 export function initialVentricles(layers: BodyStructure[]): VentricularState {
-  return { selectedId: layers[0]?.id ?? null, hidden: [], history: [], future: [] };
+  return {
+    selectedId: layers[0]?.id ?? null,
+    hidden: [],
+    history: [],
+    future: [],
+  };
 }
 export function reduceVentricles(
   layers: BodyStructure[],
@@ -97,10 +102,21 @@ export function reduceVentricles(
   let { selectedId, hidden } = state;
   if (action.type === 'preset') {
     if (!Object.hasOwn(presets, action.value)) return state;
+    // A multi-part study may choose its teaching focus atomically with visibility.
+    // Reject foreign/hidden focus requests; one Undo must restore the whole step.
+    if (
+      action.selectedId !== undefined &&
+      (!layers.some((s) => s.id === action.selectedId) ||
+        !presets[action.value].includes(action.selectedId))
+    )
+      return state;
     hidden = layers
       .filter((s) => !presets[action.value].includes(s.id))
       .map((s) => s.id);
-    selectedId = layers.find((s) => !hidden.includes(s.id))?.id ?? null;
+    selectedId =
+      action.selectedId ??
+      layers.find((s) => !hidden.includes(s.id))?.id ??
+      null;
   } else {
     if (!layers.some((s) => s.id === action.id)) return state;
     if (action.type === 'select') {
@@ -122,10 +138,7 @@ export function reduceVentricles(
   return {
     selectedId,
     hidden,
-    history: [
-      ...state.history.slice(-29),
-      before,
-    ],
+    history: [...state.history.slice(-29), before],
     future: [],
   };
 }

@@ -1,5 +1,7 @@
 # Continuous atlas improvement plan
 
+Latest spatial extension: [renal and adrenal venous relationships](RENAL_VENOUS_RELATIONSHIPS.md) add four side-specific arrangements through the existing Study view menu. The left adrenal view keeps both veins selectable; landmarks remain optional and disappear during separation. Focus and visibility form one Undo step. Geometry, teaching and access gates are unchanged. Continue source-backed organ/region detail and orientation aids without permanent extra toolbars or invented structures.
+
 Latest relationship and teaching extension: [Chiasm & pituitary](VISUAL_PATHWAY_RELATIONSHIPS.md) reuses the existing gland in one side-on Study view, with nonselectable context suppressed during separation. Two referenced MRI drafts cover the existing chiasm/tract concepts. Default controls, geometry and source pins are preserved. Current nested coverage: CT31/MRI33/US26, with32/30/37 pending; these are introductory copy counts, not clinical approval or connected imaging atlases.
 
 Recent teaching extension: [ten eye imaging drafts](EYE_IMAGING_TEACHING.md) cover eight existing concepts/fifteen selections through the unchanged collapsed panel. Six primary-reference links distinguish anterior-segment UBM, corneal measurements, vitreous findings and selected CT/MRI assessment. The absent retinal mesh and left-only anterior chamber remain explicit.

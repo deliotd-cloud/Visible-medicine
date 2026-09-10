@@ -15,12 +15,15 @@ import {
 } from '@/lib/visual-pathway-context';
 import {
   renalFor,
-  renalViewCatalog,
   renalPresets,
   renalNotes,
   renalColour,
   renalReferences,
 } from '@/lib/renal';
+import {
+  renalRelationshipsFor,
+  renalRelationshipViewCatalog,
+} from '@/lib/renal-relationships';
 import { ArrowLeft, RotateCcw, Tags } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
@@ -123,6 +126,10 @@ const cameraViews = [
   'inferior',
 ] as const;
 const colours = ['#71b6ca', '#a1c8a1', '#cdad65', '#b396bd'];
+const relationshipSelectionIds = (r: {
+  spaceId: string;
+  visibleIds?: string[];
+}) => r.visibleIds ?? [r.spaceId];
 
 export type BrainStudy =
   | 'ventricles'
@@ -201,12 +208,14 @@ export function VentricularView({
     () =>
       isVisual
         ? visualRelationshipsFor(parent)
-        : isCardiac
-          ? cardiacRelationshipsFor(parent)
-          : study === 'ventricles'
-            ? ventricularRelationshipsFor(parent)
-            : [],
-    [parent, study, isCardiac, isVisual],
+        : isRenal
+          ? renalRelationshipsFor(parent)
+          : isCardiac
+            ? cardiacRelationshipsFor(parent)
+            : study === 'ventricles'
+              ? ventricularRelationshipsFor(parent)
+              : [],
+    [parent, study, isCardiac, isVisual, isRenal],
   );
   const presets = useMemo<Record<string, string[]>>(
     () =>
@@ -218,7 +227,12 @@ export function VentricularView({
             ),
           }
         : isRenal
-          ? renalPresets(layers)
+          ? {
+              ...renalPresets(layers),
+              ...Object.fromEntries(
+                relationships.map((r) => [r.id, relationshipSelectionIds(r)]),
+              ),
+            }
           : isHepatic
             ? hepaticPresets(layers)
             : isPulmonary
@@ -273,6 +287,7 @@ export function VentricularView({
           arteries: 'Arterial branches',
           veins: 'Venous groups',
           adrenal: 'Adrenal vessels',
+          ...Object.fromEntries(relationships.map((r) => [r.id, r.title])),
         }
       : isHepatic
         ? {
@@ -392,7 +407,11 @@ export function VentricularView({
             relationshipId,
           )
         : isRenal
-          ? renalViewCatalog(parent, context && explode === 0)
+          ? renalRelationshipViewCatalog(
+              parent,
+              context && explode === 0,
+              relationshipId,
+            )
           : isCardiac
             ? cardiacContextViewCatalog(
                 parent,
@@ -518,13 +537,18 @@ export function VentricularView({
   function select(id: string) {
     if (!selectableIds.includes(id)) return;
     dispatch({ type: 'select', id });
-    if (relationship && id !== relationship.spaceId) setRelationshipId(null);
+    if (relationship && !relationshipSelectionIds(relationship).includes(id))
+      setRelationshipId(null);
     setFocus(false);
   }
   function preset(value: string) {
     if (!Object.hasOwn(presets, value)) return;
-    dispatch({ type: 'preset', value });
     const nextRelationship = relationships.find((r) => r.id === value);
+    dispatch({
+      type: 'preset',
+      value,
+      ...(nextRelationship ? { selectedId: nextRelationship.spaceId } : {}),
+    });
     setRelationshipId(nextRelationship?.id ?? null);
     if (nextRelationship) {
       setContext(true);
@@ -815,7 +839,8 @@ export function VentricularView({
               aria-pressed={context}
               disabled={explode > 0}
               onClick={() => {
-                if (!isCardiac && !isVisual) setRelationshipId(null);
+                if (!isCardiac && !isVisual && !isRenal)
+                  setRelationshipId(null);
                 setContext((v) => !v);
               }}
             >
@@ -824,7 +849,9 @@ export function VentricularView({
                   ? 'Show pituitary landmark'
                   : 'Show brain landmarks'
                 : isRenal
-                  ? 'Show kidney & vessel context'
+                  ? relationship
+                    ? 'Show drainage landmarks'
+                    : 'Show kidney & vessel context'
                   : isHepatic
                     ? 'Show liver tissue context'
                     : isPulmonary
@@ -851,7 +878,7 @@ export function VentricularView({
               Surface proximity does not prove fibre connections.
             </p>
           </section>
-        ) : isRenal ? (
+        ) : isRenal && !relationship ? (
           <section
             className="ventricular-relationship"
             aria-label="Renal vessel guide"
@@ -950,9 +977,11 @@ export function VentricularView({
             aria-label={
               isVisual
                 ? 'Chiasm and pituitary relationship guide'
-                : isCardiac
-                  ? 'Cardiac vessel relationship guide'
-                  : 'Ventricular relationship guide'
+                : isRenal
+                  ? 'Renal venous relationship guide'
+                  : isCardiac
+                    ? 'Cardiac vessel relationship guide'
+                    : 'Ventricular relationship guide'
             }
           >
             <p>{relationship.guide}</p>
@@ -964,9 +993,11 @@ export function VentricularView({
                     style={{
                       backgroundColor: isVisual
                         ? visualPathwayColour(s)
-                        : isCardiac
-                          ? cardiacVesselColour(s)
-                          : neuroGroupFor(s.fmaId)?.color,
+                        : isRenal
+                          ? renalColour(s)
+                          : isCardiac
+                            ? cardiacVesselColour(s)
+                            : neuroGroupFor(s.fmaId)?.color,
                     }}
                   />
                   {s.name}
@@ -976,9 +1007,11 @@ export function VentricularView({
             <p>
               {isVisual
                 ? 'Orientation surfaces only: no tumour, compression, fibre crossing or patient scan is modelled. The gland is a landmark, not a selectable nerve structure.'
-                : isCardiac
-                  ? 'Cavity and vessel surfaces are orientation aids, not a connected flow model. Valves and vessel openings are not validated. Colours distinguish landmarks, not scan signal.'
-                  : 'Space shown translucently; nearby structures are orientation context, not selectable walls.'}
+                : isRenal
+                  ? 'Arterial red and venous blue identify supplied surfaces, not flow. Glands and large vessels are nonselectable landmarks. Drainage is anatomical teaching, not verified mesh continuity or a clinical assessment.'
+                  : isCardiac
+                    ? 'Cavity and vessel surfaces are orientation aids, not a connected flow model. Valves and vessel openings are not validated. Colours distinguish landmarks, not scan signal.'
+                    : 'Space shown translucently; nearby structures are orientation context, not selectable walls.'}
             </p>
             {isolated && (
               <p>Turn off Fade others to compare the nearby structures.</p>
@@ -987,9 +1020,11 @@ export function VentricularView({
               Anatomy reference ·{' '}
               {isVisual
                 ? 'MRI anatomical study'
-                : isCardiac
-                  ? 'University of Minnesota'
-                  : 'UTHealth'}
+                : isRenal
+                  ? 'Venous anatomy study'
+                  : isCardiac
+                    ? 'University of Minnesota'
+                    : 'UTHealth'}
             </a>
           </section>
         ) : (

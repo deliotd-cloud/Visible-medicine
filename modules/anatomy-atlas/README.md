@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Kidney → Explore renal vessels → Study view** adds [renal and adrenal venous relationship views](docs/RENAL_VENOUS_RELATIONSHIPS.md) for each side. Landmarks are optional; the left adrenal view keeps both veins selectable. Choosing a view is one Undo step. Existing separation and cutaway controls are reused without new geometry, scan access or clinical approval.
+
 **Optic chiasm and tracts → Study view → Chiasm & pituitary** opens a [side-on relationship view](docs/VISUAL_PATHWAY_RELATIONSHIPS.md) using the existing gland as an optional landmark. It hides during separation and remains nonselectable. Two new MRI drafts explain localisation and the difference between a surface and diffusion imaging. No extra toolbar, fibre model, tumour or scan access is added.
 
 **Eye dissection → Learn more** adds [ten targeted imaging drafts](docs/EYE_IMAGING_TEACHING.md) for eight existing eye concepts: anterior-segment and vitreous ultrasound, lens CT, and choroid/sclera imaging. The compact panel is unchanged. The left-only anterior chamber and absent retinal layer remain explicit; these notes are not scans, diagnoses or clinical approval.

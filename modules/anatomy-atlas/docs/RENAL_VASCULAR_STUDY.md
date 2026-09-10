@@ -20,7 +20,7 @@ The optional context initially shows the same-side kidney, adrenal gland, ureter
 
 ## Compact controls
 
-- Presets: all supplied vessels, arterial branches, venous groups, adrenal vessels.
+- Presets: all supplied vessels, arterial branches, venous groups, adrenal vessels, plus [side-specific renal/adrenal venous relationships](RENAL_VENOUS_RELATIONSHIPS.md). The left adrenal view keeps both veins selectable; choosing a view is one Undo step.
 - Select, hide, Undo/Redo layers, fade/isolate, frame selection and reassemble.
 - Existing camera directions, free rotation and labels.
 - Existing separation choices: spread in 3D, layers and lift selected; the optional original-position guide is a display aid, not an anatomical attachment.
@@ -28,6 +28,8 @@ The optional context initially shows the same-side kidney, adrenal gland, ureter
 - Source-bound search and study links; missing assets expose Retry, and rejected source bindings fail closed.
 
 ## Teaching and future integration
+
+Counts below record the original renal milestone; see [current coverage](CURRENT_STATUS.md) for later additions.
 
 Four shared concepts serve seven source-bound parts, within 37 nested concepts / 60 representations. Core teaching and unscored self-checks remain drafts. The [renal teaching extension](RENAL_TEACHING.md) adds 14 shared sections: Pathology/CT/MRI for all seven parts and ultrasound for the ureteric arterial and renal venous groups. Adrenal-vessel ultrasound stays pending. Right- or left-specific reference examples are explicitly identified; a shared lesson is not evidence of equivalent contralateral imaging. Five new references complement the two existing abdominal-table keys, with one combined word budget per source. No reference tables or images are copied.
 
