@@ -1,5 +1,9 @@
 # Liver branch clinical and imaging teaching
 
+## Biliary CT extension — 10 September 2026
+
+The [duct-imaging extension](DUCT_IMAGING_TEACHING.md) adds one shared CT note for the right and left intrahepatic bile-duct source groups. Their MRI/US notes and all existing teaching remain unchanged. No scan, source geometry, stone, stricture, connection or clinical approval is supplied. Earlier coverage below describes historical milestones; consult [current status](CURRENT_STATUS.md).
+
 ## Delivered scope
 
 In **Abdomen → Liver → Explore liver branches**, select a group and expand **Learn more · anatomy, clinical & quiz**. The existing three information groups contain 15 new short, referenced paragraphs shared by seven exact-source targets. The model-first layout, collapsed disclosure, search, dissection and unscored self-check remain unchanged.

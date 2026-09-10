@@ -1,5 +1,9 @@
 # Asset register
 
+## Pancreatic and biliary imaging teaching — no asset additions, 10 September 2026
+
+Four original concise modality notes cite NIDDK and ACR/RSNA RadiologyInfo primary pages. No articles, illustrations, scans, patient cases, tables, question banks, fonts or textures are imported or relicensed. The 102 existing source-controlled GLBs, including the nonpublic prototype, are unchanged. Existing BodyParts3D CC BY 4.0 attribution and modification obligations remain. No dependency or paid service is added; reference links are evidence, not redistribution licences or endorsement. See [retrieval scope and review requirements](../docs/DUCT_IMAGING_TEACHING.md).
+
 ## Pancreatic dissection derivative — 10 September 2026
 
 `public/models/bodyparts3d/pancreatic/pancreatic.glb`: 232,172 bytes, SHA-256 `e96b496cb36205d2338204d6d0c6f94cb6e3722f7ff9a7a4e176d435d6de0b1c`. Three retained source files / 12,690 triangles become two selectable duct components and one optional envelope. Every triangle matches the corrected parent; raw IS-A/PART-OF provenance is retained separately. BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International. Preserve attribution, licence and modification notices. No accessory duct or lumen is reconstructed. Original concise teaching links to NCI SEER and NIDDK; no article, diagram, scan or question bank is bundled. No font, texture, dependency or paid service is added. [Scope and evidence](../docs/PANCREATIC_DISSECTION.md). Public/archive GLBs total 101; source-controlled GLBs total 102 including the retained nonpublic prototype. Earlier totals below are historical.

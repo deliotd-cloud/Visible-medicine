@@ -63,6 +63,8 @@ The [lung branch study](PULMONARY_DISSECTION.md) separates ${anatomy.nestedDisse
 
 ## Nested anatomy teaching
 
+The [pancreatic and biliary imaging extension](DUCT_IMAGING_TEACHING.md) supplies three pancreatic CT/MRI/US drafts and one biliary CT draft across four existing source selections. Existing core teaching, quizzes, models, source pins and compact disclosures are unchanged. These are referenced orientation notes, not scans, validated duct communications or automatic access to an imaging atlas or paid lecture.
+
 The [renal venous relationships](RENAL_VENOUS_RELATIONSHIPS.md) add ${study.renalRelationshipPresets} side-specific views through the existing Study view menu, reusing supplied renal/adrenal veins and landmarks. The left adrenal view keeps both veins selectable. Choosing a view is one Undo step; context disappears during separation. No new geometry, connected lumen, flow, clinical approval or resource entitlement is inferred.
 
 The [internal-brain imaging extension](BRAIN_IMAGING_TEACHING.md) adds 14 original CT/MRI drafts across seven existing concepts/eight selections: ventricular spaces, midbrain, pons, medulla and cerebellum. Five primary references cover ventricular assessment and fluid-flow artefacts, posterior-fossa CT limitations and sequence-dependent brainstem MRI detail. Existing identities, core teaching, geometry and access gates are unchanged. Ultrasound and actual scan correspondence remain separate work; clinical/editorial review is pending.

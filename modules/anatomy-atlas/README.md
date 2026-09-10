@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Pancreatic ducts → Learn more → Imaging** now includes [CT, MRCP and ultrasound teaching](docs/DUCT_IMAGING_TEACHING.md). The right and left intrahepatic bile-duct groups also gain CT notes. Existing compact disclosures are unchanged; these are referenced drafts, not connected scans or clinical approval.
+
 **Pancreas → Explore pancreatic ducts** opens the [pancreatic dissection](docs/PANCREATIC_DISSECTION.md): two independently selectable source components, one optional faint envelope, compact presets, cutaway, three separation styles, labels, undo/redo and draft teaching. Search `pancreatic duct` to go directly to a component. The [display correction](docs/PANCREATIC_SOURCE_REVIEW.md) remains intact; no accessory duct, validated lumen, clinical approval or scan access is inferred.
 
 **Kidney → Explore renal vessels → Study view** adds [renal and adrenal venous relationship views](docs/RENAL_VENOUS_RELATIONSHIPS.md) for each side. Landmarks are optional; the left adrenal view keeps both veins selectable. Choosing a view is one Undo step. Existing separation and cutaway controls are reused without new geometry, scan access or clinical approval.

@@ -9,10 +9,22 @@ export const pancreaticTeachingReferences = {
     title: 'NIDDK · Definition and facts for pancreatitis',
     url: 'https://www.niddk.nih.gov/health-information/digestive-diseases/pancreatitis/definition-facts',
   },
+  pancreaticImagingDiagnosis: {
+    title: 'NIDDK · Diagnosis of pancreatitis: imaging tests',
+    url: 'https://www.niddk.nih.gov/health-information/digestive-diseases/pancreatitis/diagnosis',
+  },
+  pancreaticMRCP: {
+    title: 'ACR / RSNA · MR cholangiopancreatography (MRCP)',
+    url: 'https://www.radiologyinfo.org/en/info/mrcp',
+  },
+  pancreaticUltrasoundWindow: {
+    title: 'ACR / RSNA · Abdominal ultrasound: limitations',
+    url: 'https://www.radiologyinfo.org/en/info/abdominus',
+  },
 };
-const draft = (body: string, reference: string): NestedSection => ({
+const draft = (body: string, ...references: string[]): NestedSection => ({
   body,
-  references: [reference],
+  references,
   readiness: 'draft',
 });
 export const pancreaticConcepts: NestedConcept[] = [
@@ -36,6 +48,21 @@ export const pancreaticConcepts: NestedConcept[] = [
       pathology: draft(
         'Pancreatitis means inflammation of the pancreas. These are source anatomy surfaces, not examples of inflammation, obstruction or a patient-specific abnormality.',
         'pancreaticDuctInflammation',
+      ),
+    },
+    imaging: {
+      ct: draft(
+        'CT examines the pancreas alongside the gallbladder and bile ducts and can reveal pancreatitis or pancreatic cancer. When studying an approved CT examination, relate the duct course to the surrounding organ rather than treating an isolated tube as the whole assessment. These source surfaces contain no CT attenuation, enhancement, calcification or patient-specific disease findings.',
+        'pancreaticImagingDiagnosis',
+      ),
+      mri: draft(
+        'MRCP is an MRI technique that examines the pancreatic and biliary ducts without X-rays and can investigate causes of pancreatitis. Distinguish it from ERCP, which combines endoscopy, injected iodinated contrast and X-ray imaging. Use the selected duct sources for orientation only: neither source colour nor apparent surface contact demonstrates an MR signal, duct communication or an individual branching variant.',
+        'pancreaticMRCP',
+      ),
+      ultrasound: draft(
+        'Abdominal ultrasound can identify gallstones when investigating pancreatitis. Overlying bowel gas can obscure deeper organs and limit the available acoustic window. An unobstructed 3D view therefore does not mean the same duct is visible on an ultrasound examination. These static surfaces contain no sonographic texture, measured duct calibre or probe position, and are not an endoscopic ultrasound study.',
+        'pancreaticImagingDiagnosis',
+        'pancreaticUltrasoundWindow',
       ),
     },
     modelLimit:

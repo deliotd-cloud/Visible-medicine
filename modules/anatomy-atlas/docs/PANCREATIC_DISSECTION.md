@@ -1,5 +1,7 @@
 # Pancreatic duct dissection
 
+The subsequent [duct-imaging teaching extension](DUCT_IMAGING_TEACHING.md) adds CT, MRI/MRCP and ultrasound notes to both selections. Their source identities, geometry, core teaching and controls remain unchanged. Imaging “pending” below records the original dissection milestone; live scan correspondence and clinical approval are still pending.
+
 ## Using the study
 
 Select Pancreas in the abdominal or whole-body atlas, then **Explore pancreatic ducts**. Alternatively search `pancreatic duct`, `FMA10419` or `FMA63103` from any region. Source-bound links open the correct study and selected part; Back to atlas preserves the local parent view and camera. Exam guards remain in place.

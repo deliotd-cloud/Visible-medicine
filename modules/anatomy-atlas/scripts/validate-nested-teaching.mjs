@@ -60,11 +60,23 @@ const initial = JSON.stringify(catalog);
 same(targets.length, 65);
 same(api.nestedConcepts.length, 40);
 same(new Set(api.nestedConcepts.map((c) => c.id)).size, 40);
+// Only these four explicitly authored modality fields extend the complete v121 baseline.
+const beforeDuctImaging = api.nestedConcepts.map((c) => {
+  if (c.id === 'pancreatic-ductal-system') {
+    const { imaging: _newImaging, ...previous } = c;
+    return previous;
+  }
+  if (c.id === 'hepatic-biliary') {
+    const { ct: _newCT, ...previousImaging } = c.imaging;
+    return { ...c, imaging: previousImaging };
+  }
+  return c;
+});
 const visualImagingIds = new Set([
   'visual-optic-chiasm',
   'visual-optic-tracts',
 ]);
-const beforeVisualImaging = api.nestedConcepts
+const beforeVisualImaging = beforeDuctImaging
   .filter((c) => c.study !== 'pancreatic')
   .map((c) => {
     if (!visualImagingIds.has(c.id)) return c;
@@ -119,6 +131,35 @@ same(
 // Captured from validated v108 source 649dfc3d, before this cerebral extension.
 const digest = (value) =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
+same(
+  digest(beforeDuctImaging),
+  'c0b79048174d7a3f5cd8209181325f242cc49c255b3adcf4003a141bd85b9444',
+  'All v121 teaching, identities, quizzes and limits retained outside four added modality fields',
+);
+const addedDuctReferences = new Set([
+  'pancreaticImagingDiagnosis',
+  'pancreaticMRCP',
+  'pancreaticUltrasoundWindow',
+  'hepaticBiliaryCT',
+]);
+same(
+  digest(
+    Object.fromEntries(
+      Object.entries(api.nestedTeachingReferences).filter(
+        ([key]) => !addedDuctReferences.has(key),
+      ),
+    ),
+  ),
+  'c644091ce653a697f6e79bdad804d69ae5e329a793c2e52ef6d330ea059ddceb',
+  'Every existing reference remains exact',
+);
+same(
+  createHash('sha256')
+    .update(await readFile('content/nested-teaching-bindings.v1.json'))
+    .digest('hex'),
+  '1958e42e9f84f80d20bfcbc09d339d134e1f47e153af53726adbb632e1089148',
+  'All 65 source bindings and ten parents are unchanged; no repinning for prose',
+);
 same(
   digest(beforeVisualImaging),
   'de6f9b2668bb1ad459fa3e03c08e39217d612c10eb9ae27b3615b3052dcb02d4',
@@ -312,30 +353,32 @@ for (const target of targets) {
   seen.add(concept.id);
   check(concept.fmaIds.includes(selected.fmaId));
   const expectedImaging =
-    (visualImagingIds.has(concept.id)
-      ? ['mri']
-      : eyeImagingScope[concept.id]) ??
-    (brainImagingIds.has(concept.id)
-      ? ['ct', 'mri']
-      : concept.study === 'renal'
-        ? ['renal-veins', 'renal-ureteric-arteries'].includes(concept.id)
-          ? ['ct', 'mri', 'ultrasound']
-          : ['ct', 'mri']
-        : concept.study === 'cardiac'
-          ? ['ct', 'mri', 'ultrasound']
-          : concept.study === 'hepatic'
-            ? concept.id === 'hepatic-venous-tributary'
+    concept.study === 'pancreatic'
+      ? ['ct', 'mri', 'ultrasound']
+      : ((visualImagingIds.has(concept.id)
+          ? ['mri']
+          : eyeImagingScope[concept.id]) ??
+        (brainImagingIds.has(concept.id)
+          ? ['ct', 'mri']
+          : concept.study === 'renal'
+            ? ['renal-veins', 'renal-ureteric-arteries'].includes(concept.id)
               ? ['ct', 'mri', 'ultrasound']
-              : concept.id === 'hepatic-biliary'
-                ? ['mri', 'ultrasound']
-                : ['ultrasound']
-            : concept.study === 'pulmonary'
-              ? ['ct']
-              : concept.id === 'cerebral-insula'
-                ? ['ct', 'mri']
-                : concept.id === 'cerebral-superior-temporal-anterior'
-                  ? ['mri']
-                  : []);
+              : ['ct', 'mri']
+            : concept.study === 'cardiac'
+              ? ['ct', 'mri', 'ultrasound']
+              : concept.study === 'hepatic'
+                ? concept.id === 'hepatic-venous-tributary'
+                  ? ['ct', 'mri', 'ultrasound']
+                  : concept.id === 'hepatic-biliary'
+                    ? ['ct', 'mri', 'ultrasound']
+                    : ['ultrasound']
+                : concept.study === 'pulmonary'
+                  ? ['ct']
+                  : concept.id === 'cerebral-insula'
+                    ? ['ct', 'mri']
+                    : concept.id === 'cerebral-superior-temporal-anterior'
+                      ? ['mri']
+                      : []));
   same(
     Object.keys(concept.imaging ?? {}).sort(),
     [...expectedImaging].sort(),
@@ -524,9 +567,9 @@ same(coverage.pathology, { draft: 65, pending: 0 });
 same(coverage.clinical, { draft: 65, pending: 0 });
 for (const tab of ['anatomy', 'function', 'quiz'])
   same(coverage[tab], { draft: 65, pending: 0 });
-same(coverage.ct, { draft: 31, pending: 34 });
-same(coverage.mri, { draft: 33, pending: 32 });
-same(coverage.ultrasound, { draft: 26, pending: 39 });
+same(coverage.ct, { draft: 35, pending: 30 });
+same(coverage.mri, { draft: 35, pending: 30 });
+same(coverage.ultrasound, { draft: 28, pending: 37 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
 const hosts = new Set([
@@ -587,11 +630,11 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 74);
+same(Object.keys(wordsBySource).length, 78);
 same(
   new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
     .size,
-  74,
+  78,
   'Do not split one source into duplicate reference keys',
 );
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {

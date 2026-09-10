@@ -1,6 +1,10 @@
 import type { NestedImagingTopic, NestedSection } from './nested-teaching';
 
 export const hepaticTeachingReferences = {
+  hepaticBiliaryCT: {
+    title: 'ACR / RSNA · Gallstones: imaging evaluation',
+    url: 'https://www.radiologyinfo.org/en/info/gallstones',
+  },
   hepaticArterialComplications: {
     title:
       'Iida et al. · Arterial complications after living-donor liver transplantation (2014)',
@@ -87,6 +91,10 @@ export const hepaticTeaching = {
       'hepaticPSC',
     ),
     imaging: {
+      ct: draft(
+        'CT can assess the gallbladder and bile ducts for signs of inflammation or obstructed bile flow. These right and left intrahepatic source groups provide orientation, not a complete examination of that drainage route. They contain no stone, tumour, measured duct dilatation or validated connection to the extrahepatic ducts; apparent gaps are not CT evidence of obstruction.',
+        'hepaticBiliaryCT',
+      ),
       mri: draft(
         'MRCP uses MRI to depict bile ducts and is commonly used when investigating primary sclerosing cholangitis. Compare right and left ductal branching as an orientation exercise. MRCP is distinct from ERCP, which combines endoscopy and X-rays and can also treat a narrowed duct. No cholangiogram is supplied here.',
         'hepaticMRCP',

@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Pancreatic and biliary imaging notes
+
+Review the [four new modality sections](DUCT_IMAGING_TEACHING.md) for clinical/editorial accuracy, useful depth and fit to the selected source extent. These introductory notes are not scans, protocol recommendations or normal-calibre/variant standards. In particular, apparent source contact must not be read as duct communication, and absent ultrasound visibility must not be inferred from an unobstructed 3D view. Validated image examples, patient transforms and separate resource entitlements are still required before live synchronization.
+
 ## Pancreatic duct study
 
 Review the [two source selections and optional envelope](PANCREATIC_DISSECTION.md) for identity, retained position, overlap, misleading apparent junctions and the distinction between IS-A and PART-OF source groups. Neither an accessory duct nor a patent lumen/papillary opening is established. Assess separation, clipping and label readability on desktop/mobile; validate teaching independently. Imaging correspondence, patient-space registration and protected-resource delivery require separate review and authorization. Source-triangle equality and controlled UI tests are not clinical or device acceptance.
