@@ -222,7 +222,8 @@ for (const layer of layers) {
   });
   same(state.selectedId, null);
   state = reduceVentricles(layers, state, { type: 'undo' });
-  same(state, before);
+  same({ ...state, future: before.future }, before);
+  check(state.future.length > 0);
 }
 for (let i = 0; i < 65; i++)
   state = reduceVentricles(layers, state, {
@@ -299,14 +300,29 @@ check(
     'ventricleParent && !exam && ventricleParent.id === selectedId',
   ),
 );
-check(
-  source
-    .replace(/\s+/g, '')
-    .includes(
-      '!exam&&(ventriclesFor(selected).length>0||cardiacFor(selected).length>0||pulmonaryFor(selected).length>0)&&(',
-    ),
-  'Both nested launchers retain the exam guard',
-);
+// Evaluate the actual launcher guard: the previous fixed string predated liver support.
+let launcherGuard;
+function findLauncherGuard(n) {
+  if (ts.isBinaryExpression(n) && n.operatorToken.kind === ts.SyntaxKind.AmpersandAmpersandToken) {
+    let right = n.right;
+    while (ts.isParenthesizedExpression(right)) right = right.expression;
+    if (ts.isJsxElement(right) && right.getText(ast).includes('setVentricleParent(selected)'))
+      launcherGuard = n.left.getText(ast);
+  }
+  ts.forEachChild(n, findLauncherGuard);
+}
+findLauncherGuard(ast);
+check(launcherGuard, 'Find the real nested launcher condition');
+for (const exam of [false, true]) {
+  for (let mask = 0; mask < 16; mask++) {
+    const context = { exam, selected: parent };
+    ['ventriclesFor', 'cardiacFor', 'pulmonaryFor', 'hepaticFor'].forEach((name, i) => {
+      context[name] = () => mask & (1 << i) ? [parent] : [];
+    });
+    same(runInNewContext(launcherGuard, context), !exam && mask !== 0);
+  }
+}
+check(source.replace(/\s+/g, '').includes('!exam&&eyeLayersFor(selected).length>0&&('), 'Eye launcher retains its exam guard');
 const ui = await readFile('app/ventricles.tsx', 'utf8');
 check(ui.includes('!context || explode > 0'));
 check(ui.includes('disabled={explode > 0}'));

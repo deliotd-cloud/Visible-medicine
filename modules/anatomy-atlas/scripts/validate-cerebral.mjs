@@ -420,7 +420,8 @@ for (const layer of layers) {
   reduce({ type: 'visibility', id: layer.id, visible: false });
   same(state.selectedId, null);
   reduce({ type: 'undo' });
-  same(state, { ...before, history: before.history.slice(-29) });
+  same({ ...state, future: before.future }, { ...before, history: before.history.slice(-29) });
+  check(state.future.length > 0);
   reduce({ type: 'visibility', id: layer.id, visible: false });
   reduce({ type: 'select', id: layer.id });
   check(!state.hidden.includes(layer.id));

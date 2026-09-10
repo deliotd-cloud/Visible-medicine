@@ -473,7 +473,8 @@ for (const side of ['left', 'right']) {
     update({ type: 'visibility', id: layer.id, visible: false });
     same(state.selectedId, null);
     update({ type: 'undo' });
-    same(state, before, 'Undo restores selection, preset and visibility');
+    same({ ...state, future: before.future }, before, 'Undo restores selection, preset and visibility');
+    check(state.future.length > 0, 'Undone layers remain redoable');
   }
   for (let i = 0; i < 70; i++)
     update({ type: 'preset', value: i % 2 ? 'lens' : 'all' });

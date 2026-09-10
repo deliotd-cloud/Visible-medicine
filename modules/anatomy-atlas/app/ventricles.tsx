@@ -269,7 +269,7 @@ export function VentricularView({
           : isBrainstem
             ? brainstemNotes
             : ventricleNotes;
-  const [{ selectedId, hidden, history }, dispatch] = useReducer(
+  const [{ selectedId, hidden, history, future }, dispatch] = useReducer(
     (state: VentricularState, action: VentricularAction) =>
       reduceVentricles(layers, state, action, presets),
     layers,
@@ -672,6 +672,20 @@ export function VentricularView({
             }}
           >
             Undo layers
+          </Button>
+          <Button
+            size="sm"
+            variant="outline"
+            disabled={!future.length}
+            title="Reapply the last undone layer or selection change"
+            onClick={() => {
+              dispatch({ type: 'redo' });
+              setRelationshipId(null);
+              setFocus(false);
+              setIsolated(false);
+            }}
+          >
+            Redo layers
           </Button>
           <Button
             size="sm"

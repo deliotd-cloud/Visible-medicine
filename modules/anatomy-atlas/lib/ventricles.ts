@@ -50,14 +50,16 @@ export type VentricularSnapshot = {
 };
 export type VentricularState = VentricularSnapshot & {
   history: VentricularSnapshot[];
+  future: VentricularSnapshot[];
 };
 export type VentricularAction =
   | { type: 'select'; id: string }
   | { type: 'visibility'; id: string; visible: boolean }
   | { type: 'preset'; value: string }
-  | { type: 'undo' };
+  | { type: 'undo' }
+  | { type: 'redo' };
 export function initialVentricles(layers: BodyStructure[]): VentricularState {
-  return { selectedId: layers[0]?.id ?? null, hidden: [], history: [] };
+  return { selectedId: layers[0]?.id ?? null, hidden: [], history: [], future: [] };
 }
 export function reduceVentricles(
   layers: BodyStructure[],
@@ -69,10 +71,27 @@ export function reduceVentricles(
     midline: layers.filter((s) => s.laterality === 'midline').map((s) => s.id),
   },
 ): VentricularState {
+  const before = { selectedId: state.selectedId, hidden: [...state.hidden] };
   if (action.type === 'undo') {
     const previous = state.history.at(-1);
     return previous
-      ? { ...previous, history: state.history.slice(0, -1) }
+      ? {
+          ...previous,
+          hidden: [...previous.hidden],
+          history: state.history.slice(0, -1),
+          future: [...state.future, before].slice(-30),
+        }
+      : state;
+  }
+  if (action.type === 'redo') {
+    const next = state.future.at(-1);
+    return next
+      ? {
+          ...next,
+          hidden: [...next.hidden],
+          history: [...state.history, before].slice(-30),
+          future: state.future.slice(0, -1),
+        }
       : state;
   }
   let { selectedId, hidden } = state;
@@ -105,7 +124,8 @@ export function reduceVentricles(
     hidden,
     history: [
       ...state.history.slice(-29),
-      { selectedId: state.selectedId, hidden: [...state.hidden] },
+      before,
     ],
+    future: [],
   };
 }

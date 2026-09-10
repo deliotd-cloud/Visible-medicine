@@ -5,18 +5,23 @@ type Snapshot = {
   selectedId: string | null;
   preset: EyePreset | 'custom';
 };
-export type EyeLayerState = Snapshot & { history: Snapshot[] };
+export type EyeLayerState = Snapshot & {
+  history: Snapshot[];
+  future: Snapshot[];
+};
 export type EyeAction =
   | { type: 'select'; id: string }
   | { type: 'visibility'; id: string; visible: boolean }
   | { type: 'preset'; value: EyePreset }
-  | { type: 'undo' };
+  | { type: 'undo' }
+  | { type: 'redo' };
 export function initialEyeLayers(layers: EyeLayer[]): EyeLayerState {
   return {
     hidden: eyePresetHidden(layers, 'anterior'),
     selectedId: layers.find((s) => s.kind === 'iris')?.id ?? null,
     preset: 'anterior',
     history: [],
+    future: [],
   };
 }
 /** Only this side's source-bound IDs are accepted; snapshots never contain history. */
@@ -25,17 +30,33 @@ export function reduceEyeLayers(
   state: EyeLayerState,
   action: EyeAction,
 ): EyeLayerState {
-  if (action.type === 'undo') {
-    const previous = state.history.at(-1);
-    return previous
-      ? { ...previous, history: state.history.slice(0, -1) }
-      : state;
-  }
   const before: Snapshot = {
-    hidden: state.hidden,
+    hidden: [...state.hidden],
     selectedId: state.selectedId,
     preset: state.preset,
   };
+  if (action.type === 'undo') {
+    const previous = state.history.at(-1);
+    return previous
+      ? {
+          ...previous,
+          hidden: [...previous.hidden],
+          history: state.history.slice(0, -1),
+          future: [...state.future, before].slice(-30),
+        }
+      : state;
+  }
+  if (action.type === 'redo') {
+    const next = state.future.at(-1);
+    return next
+      ? {
+          ...next,
+          hidden: [...next.hidden],
+          history: [...state.history, before].slice(-30),
+          future: state.future.slice(0, -1),
+        }
+      : state;
+  }
   let next: Snapshot = before;
   if (action.type === 'preset') {
     if (!['all', 'anterior', 'lens', 'wall'].includes(action.value))
@@ -76,5 +97,9 @@ export function reduceEyeLayers(
     next.hidden.every((id) => before.hidden.includes(id))
   )
     return state;
-  return { ...next, history: [...state.history, before].slice(-30) };
+  return {
+    ...next,
+    history: [...state.history, before].slice(-30),
+    future: [],
+  };
 }

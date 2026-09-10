@@ -59,7 +59,7 @@ export function EyeLayerView({
   const initialSelection = layers.find((s) => s.id === initialSelectedId)?.id;
   const frame = useMemo(() => selectionBounds(layers), [layers]);
   const [inspection, setInspection] = useState(initialInspection);
-  const [{ selectedId, hidden, history, preset: currentPreset }, dispatch] =
+  const [{ selectedId, hidden, history, future, preset: currentPreset }, dispatch] =
     useReducer(
       (state: EyeLayerState, action: EyeAction) =>
         reduceEyeLayers(layers, state, action),
@@ -70,6 +70,7 @@ export function EyeLayerView({
               selectedId: initialSelection,
               hidden: [],
               history: [],
+              future: [],
               preset: 'all' as const,
             }
           : initialEyeLayers(items),
@@ -350,6 +351,19 @@ export function EyeLayerView({
             }}
           >
             Undo layers
+          </Button>
+          <Button
+            size="sm"
+            variant="outline"
+            disabled={!future.length}
+            title="Reapply the last undone layer or selection change"
+            onClick={() => {
+              dispatch({ type: 'redo' });
+              setFocus(false);
+              setIsolated(false);
+            }}
+          >
+            Redo layers
           </Button>
           <Button
             size="sm"

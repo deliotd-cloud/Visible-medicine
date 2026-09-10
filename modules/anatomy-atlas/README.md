@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Internal dissection → Redo layers** now complements Undo across eye, brain, heart, lung and liver studies. Revisit layer/selection changes without rebuilding them; the existing compact action row is reused. Cutaway, separation and camera settings are not rewound. See [behaviour and limits](docs/NESTED_HISTORY.md).
+
 **Lung branches → Learn more** now adds [clinical, pathology and CT drafts](docs/PULMONARY_TEACHING.md) for upper, middle and lower lobe groups: location versus diagnosis, middle-lobe collapse and posture-dependent aspiration patterns. Nine shared paragraphs serve five existing selections without new controls. Tissue, fissures, segment boundaries, MRI/US lessons and scan connections remain incomplete; specialist review is required.
 
 **Liver branches → Learn more** now adds [clinical and imaging teaching](docs/HEPATIC_TEACHING.md) for arterial supply, portal inflow, bile drainage and hepatic venous outflow. The seven source groups receive 15 shared, referenced draft paragraphs in the existing panel, including ultrasound, biliary MRCP and venous CT/MRI concepts. No validated segment map, scan access or clinical approval is implied.
