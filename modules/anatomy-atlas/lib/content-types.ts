@@ -5,6 +5,7 @@ export const contentTabs: readonly ContentTab[] = [
   'function',
   'ct',
   'mri',
+  'xray',
   'ultrasound',
   'pathology',
   'clinical',
@@ -13,12 +14,11 @@ export const contentTabs: readonly ContentTab[] = [
 
 /** Editorial coverage only; none of these values represents clinical approval. */
 export type ContentReadiness =
-  | 'draft'
-  | 'identity-only'
-  | 'pending'
-  | 'generated-identification';
-export type ContentLesson = ContentSection & { readiness: ContentReadiness };
+  'draft' | 'identity-only' | 'pending' | 'generated-identification';
+export type ContentLesson = ContentSection & {
+  readiness: ContentReadiness;
+};
 
 export function draftLesson(section: ContentSection): ContentLesson {
-  return { ...section, readiness: 'draft' };
+  return { ...section, readiness: section.readiness ?? 'draft' };
 }

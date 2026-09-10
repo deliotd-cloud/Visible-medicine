@@ -2024,7 +2024,9 @@ export default function BodyExplorer({
                             <WorkspaceModeButton mode="practice">
                               Practise this anatomy
                             </WorkspaceModeButton>
-                            {['ct', 'mri', 'ultrasound'].includes(value) && (
+                            {['ct', 'mri', 'xray', 'ultrasound'].includes(
+                              value,
+                            ) && (
                               <>
                                 <ComponentImagingNotes
                                   key={`${selected.id}:${value}:${side}`}

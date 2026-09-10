@@ -125,7 +125,7 @@ const render = (selected = structures[0]) => {
 const groups = {
   anatomy: ['anatomy', 'function'],
   clinical: ['clinical', 'pathology'],
-  imaging: ['ct', 'mri', 'ultrasound'],
+  imaging: ['ct', 'mri', 'xray', 'ultrasound'],
 };
 for (const selected of structures) {
   for (const mode of ['explore', 'dissect', 'practice']) {

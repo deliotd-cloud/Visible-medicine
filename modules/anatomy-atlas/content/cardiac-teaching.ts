@@ -36,7 +36,7 @@ export const cardiacTeachingReferences = {
 type ChamberTeaching = {
   clinical: NestedSection;
   pathology: NestedSection;
-  imaging: Record<NestedImagingTopic, NestedSection>;
+  imaging: Partial<Record<NestedImagingTopic, NestedSection>>;
 };
 const draft = (body: string, ...references: string[]): NestedSection => ({
   body,

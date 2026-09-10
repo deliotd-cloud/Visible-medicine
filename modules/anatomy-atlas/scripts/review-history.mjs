@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFile } from 'node:fs/promises';
+import { reviewDocumentBeforeXray } from './xray-history.mjs';
 const hash = (value) => createHash('sha256').update(value).digest('hex');
 const encode = (value) => JSON.stringify(value, null, 2) + '\n';
 
@@ -12,22 +12,12 @@ export async function reviewDocumentBeforeSearch(
   manifest,
   structures,
 ) {
+  revisions = await reviewDocumentBeforeXray(revisions, manifest, structures);
   assert.equal(
     hash(encode(revisions)),
     '4e130ad0c0a5ec170069ae5ed89b1f3aab401f37282048d648f82f8f293c2104',
     'Exact region-aware nested-search display review transition',
   );
-  for (const [path, expected] of revisions.display) {
-    const source = await readFile(
-      new URL('../' + path, import.meta.url),
-      'utf8',
-    );
-    assert.equal(
-      hash(source.replace(/\r\n/g, '\n')),
-      expected,
-      'Stale display fingerprint: ' + path,
-    );
-  }
   const beforeCardiac = structuredClone(revisions);
   beforeCardiac.display = beforeCardiac.display.map(([path, fingerprint]) => [
     path,

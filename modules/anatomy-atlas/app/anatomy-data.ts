@@ -1,15 +1,20 @@
+import { pendingXrayLesson, shoulderXrayLesson } from '../lib/xray-teaching.ts';
+
 export type SystemKey = 'skeleton' | 'muscles' | 'soft-tissue';
 export type ContentTab =
   | 'anatomy'
   | 'function'
   | 'ct'
   | 'mri'
+  | 'xray'
   | 'ultrasound'
   | 'pathology'
   | 'clinical'
   | 'quiz';
 
 export type ContentSection = {
+  readiness?:
+    'draft' | 'pending' | 'identity-only' | 'generated-identification';
   title: string;
   body: string;
   bullets?: string[];
@@ -48,6 +53,7 @@ export const structures: AnatomyStructure[] = [
     color: '#e7dfcf',
     synonyms: ['shoulder blade', 'glenoid', 'acromion'],
     sections: {
+      xray: shoulderXrayLesson('scapula'),
       anatomy: {
         title: 'Overview',
         body: 'A flat triangular bone linking the upper limb to the axial skeleton through the clavicle. Its lateral angle forms the glenoid fossa.',
@@ -118,6 +124,7 @@ export const structures: AnatomyStructure[] = [
     color: '#f1eadc',
     synonyms: ['humeral head', 'greater tuberosity', 'lesser tuberosity'],
     sections: {
+      xray: shoulderXrayLesson('humerus'),
       anatomy: {
         title: 'Overview',
         body: 'The hemispherical humeral head articulates with the shallow glenoid. The anatomical and surgical necks separate the head, tuberosities and shaft.',
@@ -177,6 +184,7 @@ export const structures: AnatomyStructure[] = [
     color: '#dfd5c1',
     synonyms: ['collarbone', 'acromioclavicular joint', 'ac joint'],
     sections: {
+      xray: shoulderXrayLesson('clavicle'),
       anatomy: {
         title: 'Overview',
         body: 'An S-shaped strut joining the sternum to the acromion and maintaining the shoulder away from the thorax.',
@@ -237,6 +245,7 @@ export const structures: AnatomyStructure[] = [
       'posterior deltoid',
     ],
     sections: {
+      xray: pendingXrayLesson(),
       anatomy: {
         title: 'Overview',
         body: 'A multipennate muscle forming the rounded contour of the shoulder.',
@@ -296,6 +305,7 @@ export const structures: AnatomyStructure[] = [
     color: '#ef897c',
     synonyms: ['supraspinatus tendon', 'superior rotator cuff'],
     sections: {
+      xray: pendingXrayLesson(),
       anatomy: {
         title: 'Overview',
         body: 'Occupies the supraspinous fossa and passes beneath the acromion to the superior facet of the greater tuberosity.',
@@ -355,6 +365,7 @@ export const structures: AnatomyStructure[] = [
     color: '#be4f49',
     synonyms: ['infraspinatus tendon', 'posterior cuff'],
     sections: {
+      xray: pendingXrayLesson(),
       anatomy: {
         title: 'Overview',
         body: 'Arises from the infraspinous fossa and inserts on the middle facet of the greater tuberosity.',
@@ -410,6 +421,7 @@ export const structures: AnatomyStructure[] = [
     color: '#a9423e',
     synonyms: ['subscapularis tendon', 'anterior cuff'],
     sections: {
+      xray: pendingXrayLesson(),
       anatomy: {
         title: 'Overview',
         body: 'Arises from the subscapular fossa and inserts on the lesser tuberosity.',
@@ -465,6 +477,7 @@ export const structures: AnatomyStructure[] = [
     color: '#b55b55',
     synonyms: ['LHB', 'biceps tendon', 'bicipital tendon'],
     sections: {
+      xray: pendingXrayLesson(),
       anatomy: {
         title: 'Long head and proximal tendon',
         body: 'The long head begins at the superior glenoid region, crosses the joint and descends through the intertubercular groove before joining the muscle belly in the arm.',
@@ -525,6 +538,7 @@ export const structures: AnatomyStructure[] = [
     color: '#a94b48',
     synonyms: ['small round muscle', 'inferior posterior cuff'],
     sections: {
+      xray: pendingXrayLesson(),
       anatomy: {
         title: 'Posterior cuff',
         body: 'This narrow cuff muscle lies along the lateral scapula, below infraspinatus and above teres major.',
@@ -596,7 +610,11 @@ export const systemMeta: Record<
   SystemKey,
   { name: string; description: string; color: string }
 > = {
-  skeleton: { name: 'Skeleton', description: '3 structures', color: '#c6b798' },
+  skeleton: {
+    name: 'Skeleton',
+    description: '3 structures',
+    color: '#c6b798',
+  },
   muscles: {
     name: 'Shoulder muscles',
     description: 'Cuff + deltoid',

@@ -44,10 +44,14 @@ export function ComponentImagingNotes({
   const [choice, setChoice] = useState('');
   const keyOf = (target: NestedRequest) =>
     `${target.study}:${target.structureId}`;
-  const target =
-    targets.find((entry) => keyOf(entry) === choice) ?? targets[0];
+  const target = targets.find((entry) => keyOf(entry) === choice) ?? targets[0];
   if (!target || disabled || !isComponentImagingTopic(topic)) return null;
-  const label = topic === 'ultrasound' ? 'Ultrasound' : topic.toUpperCase();
+  const label =
+    topic === 'ultrasound'
+      ? 'Ultrasound'
+      : topic === 'xray'
+        ? 'X-ray'
+        : topic.toUpperCase();
   return (
     <details className="component-imaging-notes">
       <summary>

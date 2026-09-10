@@ -122,6 +122,10 @@
         "mri": {
           "$ref": "#/$defs/section"
         },
+        "xray": {
+          "$ref": "#/$defs/section",
+          "description": "Optional additive topic for compatibility with existing v2 exports; current exports include an explicit draft or pending lesson."
+        },
         "ultrasound": {
           "$ref": "#/$defs/section"
         },

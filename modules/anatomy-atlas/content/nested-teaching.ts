@@ -32,7 +32,7 @@ import {
 } from './pulmonary-teaching.ts';
 
 export type NestedTopic = 'anatomy' | 'function' | 'clinical' | 'pathology';
-export type NestedImagingTopic = 'ct' | 'mri' | 'ultrasound';
+export type NestedImagingTopic = 'ct' | 'mri' | 'xray' | 'ultrasound';
 export type NestedSection = {
   body: string;
   references: string[];

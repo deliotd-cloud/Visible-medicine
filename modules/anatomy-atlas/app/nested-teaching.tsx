@@ -40,6 +40,7 @@ const groups = [
     sections: [
       ['ct', 'CT'],
       ['mri', 'MRI'],
+      ['xray', 'X-ray'],
       ['ultrasound', 'Ultrasound'],
     ],
   },

@@ -191,13 +191,13 @@ for (const structure of structures) {
     'Previous display review must be stale after search UI changes',
   );
   ok(
-    !api.staleReview({
+    api.staleReview({
       ...snapshot,
       structureId: structure.id,
       track: 'teaching',
       revisionHash: beforeSearch.revisions[structure.id].teaching,
     }),
-    'Unchanged teaching revision is not silently invalidated',
+    'New X-ray draft/pending sections require re-review; old teaching approval cannot cover them',
   );
 }
 ok(

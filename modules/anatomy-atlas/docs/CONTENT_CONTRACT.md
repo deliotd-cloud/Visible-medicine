@@ -1,5 +1,7 @@
 # Draft content contract
 
+X-ray is an additive ninth topic in current exports with explicit draft/pending readiness. It remains optional in the v2 shape schema for older exports, but stale teaching still fails the exact current-revision check. [Scope and compatibility](XRAY_TEACHING.md). Original eight-topic authoring and historical baselines are preserved; no approval or database migration is performed.
+
 Current teaching totals are generated in [CURRENT_STATUS.md](CURRENT_STATUS.md). Historical additions and preservation transitions are retained in [the contract history](CONTENT_CONTRACT_HISTORY_2026-09-09.md); they are not current readiness totals.
 
 ## Delivered scope

@@ -10,7 +10,12 @@ import { nestedTeachingFor } from './nested-teaching';
 export function isComponentImagingTopic(
   topic: string,
 ): topic is NestedImagingTopic {
-  return topic === 'ct' || topic === 'mri' || topic === 'ultrasound';
+  return (
+    topic === 'ct' ||
+    topic === 'mri' ||
+    topic === 'xray' ||
+    topic === 'ultrasound'
+  );
 }
 
 /** Local teaching navigation only. A child lesson is neither whole-organ

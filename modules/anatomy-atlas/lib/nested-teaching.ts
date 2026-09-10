@@ -69,11 +69,11 @@ export function nestedTopicLesson(
   concept: NestedConcept,
   tab: ContentTab,
 ): ContentLesson {
-  if (tab === 'ct' || tab === 'mri' || tab === 'ultrasound') {
+  if (tab === 'ct' || tab === 'mri' || tab === 'xray' || tab === 'ultrasound') {
     const imaging = concept.imaging?.[tab];
     if (imaging)
       return {
-        title: `${tab === 'ultrasound' ? 'Ultrasound' : tab.toUpperCase()} · ${imaging.readiness === 'draft' ? 'teaching draft' : 'pending'}`,
+        title: `${tab === 'ultrasound' ? 'Ultrasound' : tab === 'xray' ? 'X-ray' : tab.toUpperCase()} · ${imaging.readiness === 'draft' ? 'teaching draft' : 'pending'}`,
         body: imaging.body,
         note: 'Teaching only; specialist review pending. The 3D surface is not a scan, segmentation or diagnostic measurement. No scan access or synchronization is provided.',
         readiness: imaging.readiness,
@@ -82,7 +82,7 @@ export function nestedTopicLesson(
         ),
       };
     return {
-      title: `${tab === 'ultrasound' ? 'Ultrasound' : tab.toUpperCase()} · pending`,
+      title: `${tab === 'ultrasound' ? 'Ultrasound' : tab === 'xray' ? 'X-ray' : tab.toUpperCase()} · pending`,
       body: 'Structure-specific imaging teaching and approved scan correspondence have not yet been added for this part.',
       note: 'The 3D surface is not a scan, segmentation or diagnostic measurement.',
       readiness: 'pending',

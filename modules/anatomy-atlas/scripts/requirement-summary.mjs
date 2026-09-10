@@ -13,6 +13,7 @@ export function renderRequirementSummary(report) {
     function: 'Function',
     ct: 'CT',
     mri: 'MRI',
+    xray: 'X-ray',
     ultrasound: 'Ultrasound',
     pathology: 'Pathology',
     clinical: 'Clinical',
@@ -29,6 +30,8 @@ export function renderRequirementSummary(report) {
 Generated from the actual catalogue, teaching resolver, dissection profiles and question definitions. Run \`npm run requirements:audit\`; \`npm run requirements:audit -- --check\` checks this page and [the JSON inventory](requirement-audit.json) together. Historical milestone totals elsewhere are not current coverage.
 
 ## Delivered source scope
+
+[X-ray orientation](XRAY_TEACHING.md) is available in the existing Imaging group: ${teaching.body.xray.specificDraft} source-pinned body drafts and ${teaching.shoulder.xray.specificDraft} overlapping shoulder drafts cover three shoulder-bone concepts. Other entries remain pending, including all ${teaching.nested.topics.xray.pending} nested selections. No radiographs, calibrated projections or paid-lecture access are supplied. Old display/teaching approvals require re-review; all previous topics are preserved.
 
 The [cricothyroid dissection](CRICOTHYROID_DISSECTION.md) adds ${anatomy.nestedDissections.cricothyroidMuscleParts} source-defined muscle parts with ${anatomy.nestedDissections.cricothyroidCartilageLandmarks} optional, nonselectable cartilage landmarks. It reuses the compact selection, cutaway, separation, labels and Undo/Redo controls. The source-preserving derivative explicitly omits ${anatomy.nestedDissections.cricothyroidRemovedArtifactFaces} audited artifact faces; this is disclosed, not clinical approval. Introductory teaching is draft and CT/MRI/US remain pending for these parts. Cartilage is a navigation landmark, not the muscle's tissue parent.
 
@@ -51,13 +54,13 @@ The [optic chiasm and tract study](VISUAL_PATHWAY_DISSECTION.md) adds ${anatomy.
 
 ## Body teaching readiness
 
-Counts are representations with displayed copy, not unique lessons, complete topic coverage or clinical approvals. Shared source-group copy is counted per representation. The dedicated shoulder has draft text in all eight topics; do not add overlapping representations to claim more unique anatomy.
+Counts are representations with displayed copy, not unique lessons, complete topic coverage or clinical approvals. Shared source-group copy is counted per representation. The dedicated shoulder retains draft text in its original eight topics; X-ray adds ${teaching.shoulder.xray.specificDraft} draft and ${teaching.shoulder.xray.pending} pending entries. Do not add overlapping representations to claim more unique anatomy.
 
 | Topic | Specific/source-group draft | Identity only | Pending | Generated identification |
 | --- | ---: | ---: | ---: | ---: |
 ${rows}
 
-Quiz-tab notes are separate from interactive practice. X-ray has no authored topic/viewer yet. CT/MRI/US text is not a scan viewer, segmentation or validated spatial correspondence.
+Quiz-tab notes are separate from interactive practice. [X-ray orientation](XRAY_TEACHING.md) now has three shoulder-bone drafts across six exact body sources and the three overlapping dedicated-shoulder bones. Other X-ray topics remain pending. Imaging text is not an acquired-image viewer, segmentation or validated spatial correspondence.
 
 The opt-in [nested learning registry](NESTED_LEARNING_LINKS.md) exposes ${learningIntegration.nestedRepresentations} exact child destinations within ${learningIntegration.availableRepresentations} scope-specific representations. It supports document versions ${learningIntegration.supportedDocumentVersions.join(' and ')}, while the configured production document stays version ${learningIntegration.contractVersion} with no resources. Nested parent/child source and bundle bindings can resolve into the existing dissection routes; this is not a live viewer connection or entitlement.
 

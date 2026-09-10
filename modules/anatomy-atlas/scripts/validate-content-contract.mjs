@@ -145,10 +145,12 @@ for (const record of [...shoulder, ...body]) {
             tab,
           )
         : api.structures.find((entry) => entry.id === record.id).sections[tab];
+    const { readiness: authoredReadiness, ...expectedDisplay } = expected;
+    if (authoredReadiness) same(readiness, authoredReadiness);
     // Serialization deliberately drops optional undefined properties.
     same(
       JSON.parse(JSON.stringify(section)),
-      JSON.parse(JSON.stringify(expected)),
+      JSON.parse(JSON.stringify(expectedDisplay)),
     );
   }
   for (const binding of record.meshBindings) {

@@ -1,11 +1,13 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readContentJson } from './content-contract-tools.mjs';
+import { authoringBeforeXray } from './xray-history.mjs';
 const hash = (value) =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 /** Exact offline history only; runtime/export never substitute earlier lessons. */
 export async function authoringBeforeKneeImaging({ api, catalog }) {
+  api = authoringBeforeXray({ api, catalog });
   const before = await readContentJson('content/knee-imaging.before.json');
   const after = await readContentJson('content/knee-imaging.transition.json');
   assert.equal(

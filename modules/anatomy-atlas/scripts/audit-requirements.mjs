@@ -131,6 +131,7 @@ const tabs = [
   'function',
   'ct',
   'mri',
+  'xray',
   'ultrasound',
   'pathology',
   'clinical',
@@ -217,6 +218,8 @@ for (const path of [
   'public/models/bodyparts3d/eye-layers/display-correction.json',
   'public/models/bodyparts3d/pancreas/display-correction.json',
   'lib/body-display-catalog.ts',
+  'lib/xray-teaching.ts',
+  'content/shoulder-xray-bindings.json',
   'docs/pancreatic-source-audit.json',
   'lib/eye-layer-state.ts',
   'lib/ventricles.ts',
@@ -491,7 +494,7 @@ const report = {
         'Generated find-this-structure prompt, not an authored clinical question.',
     },
     classificationLimit:
-      'Explicit readiness from authoring branches; not inferred from titles and not clinical approval. Existing shoulder authoring is explicitly draft.',
+      'Explicit readiness from authoring branches; not inferred from titles and not clinical approval. Legacy shoulder topics are draft; new X-ray authoring explicitly distinguishes draft and pending.',
     body: summarize(contentRows),
     nested: {
       representations: nestedRows.length,
@@ -504,7 +507,7 @@ const report = {
     shoulder: summarize(
       shoulder.map((entry) => ({
         sections: entry.sections,
-        readiness: Object.fromEntries(tabs.map((tab) => [tab, 'draft'])),
+        readiness: Object.fromEntries(tabs.map((tab) => [tab, entry.sections[tab].readiness ?? 'draft'])),
       })),
     ),
     byRegion: Object.fromEntries(

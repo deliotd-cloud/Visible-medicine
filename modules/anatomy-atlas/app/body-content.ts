@@ -81,6 +81,7 @@ import { handVesselClinicalLesson } from '../lib/hand-vessel-clinical-curriculum
 import { lowerLimbVesselClinicalLesson } from '../lib/lower-limb-vessel-clinical-curriculum';
 import { achillesImagingLesson } from '../lib/achilles-imaging';
 import { kneeImagingLesson } from '../lib/knee-imaging';
+import { bodyXrayLesson } from '../lib/xray-teaching';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -125,6 +126,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const xray = bodyXrayLesson(s, tab);
+  if (xray) return xray;
   const existing = shoulderStructures.find((item) =>
     item.sourceFmaIds?.includes(s.fmaId),
   );

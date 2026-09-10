@@ -344,6 +344,7 @@ const topics = [
   'pathology',
   'ct',
   'mri',
+  'xray',
   'ultrasound',
   'quiz',
 ];
@@ -401,7 +402,7 @@ for (const target of targets) {
     check(lesson.body.trim());
     check(Object.hasOwn(coverage[topic], lesson.readiness));
     coverage[topic][lesson.readiness]++;
-    if (['ct', 'mri', 'ultrasound'].includes(topic)) {
+    if (['ct', 'mri', 'xray', 'ultrasound'].includes(topic)) {
       if (expectedImaging.includes(topic)) {
         same(lesson.readiness, 'draft');
         same(lesson.body, concept.imaging[topic].body);
@@ -552,7 +553,7 @@ for (const target of targets) {
   same(
     nodes.filter((n) => n.props?.className === 'nested-teaching-section')
       .length,
-    7,
+    8,
   );
   const html = renderToStaticMarkup(
     React.createElement(api.NestedTeaching, props),
@@ -582,6 +583,7 @@ for (const tab of ['anatomy', 'function', 'quiz'])
   same(coverage[tab], { draft: 69, pending: 0 });
 same(coverage.ct, { draft: 35, pending: 34 });
 same(coverage.mri, { draft: 35, pending: 34 });
+same(coverage.xray, { draft: 0, pending: 69 });
 same(coverage.ultrasound, { draft: 28, pending: 41 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
@@ -653,7 +655,7 @@ same(
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {
   const missing = copy(concept);
   delete missing.imaging;
-  for (const tab of ['ct', 'mri', 'ultrasound']) {
+  for (const tab of ['ct', 'mri', 'xray', 'ultrasound']) {
     const fallback = api.nestedTopicLesson(missing, tab);
     same(fallback.readiness, 'pending');
     check(!fallback.citations?.length);

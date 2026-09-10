@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Select a shoulder bone → Imaging → X-ray** opens [source-linked orientation notes](docs/XRAY_TEACHING.md) for the scapula, proximal humerus and clavicle. Other structures remain explicitly pending. The compact information groups are retained; no radiograph, patient registration or paid-lecture access is implied.
+
 **Thyroid cartilage → Explore cricothyroid muscles**, or search “cricothyroid”, opens a [four-part laryngeal dissection](docs/CRICOTHYROID_DISSECTION.md). Select straight/oblique or right/left parts, show optional cartilage landmarks, and reuse cutaway, separation, labels and Undo/Redo. Source cleanup is disclosed and originals are preserved. Teaching remains draft; clinical validation and part-specific imaging are pending.
 
 **Liver → Explore liver branches → Study view → Bile ducts & gallbladder** opens a [focused relationship view](docs/HEPATIC_BILIARY_RELATIONSHIPS.md). Both internal biliary groups remain selectable alongside optional existing gallbladder and duct landmarks. Landmarks hide during separation; no missing duct connection or surgical anatomy is inferred.

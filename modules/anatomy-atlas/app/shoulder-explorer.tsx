@@ -178,7 +178,10 @@ export default function ShoulderExplorer({
       mode: 'find',
       status: 'active',
       index: 0,
-      questions: quizQuestions.map((q) => ({ target: q.answer, choices: [] })),
+      questions: quizQuestions.map((q) => ({
+        target: q.answer,
+        choices: [],
+      })),
       renderedIds: structures.map((s) => s.id),
       responses: [],
     };
@@ -263,7 +266,10 @@ export default function ShoulderExplorer({
       slug === 'teres-minor'
     )
       setView('posterior');
-    setVisibleSystems((current) => ({ ...current, [structure.system]: true }));
+    setVisibleSystems((current) => ({
+      ...current,
+      [structure.system]: true,
+    }));
     return true;
   }, []);
 
@@ -323,7 +329,11 @@ export default function ShoulderExplorer({
     if (mode === 'study') beginShoulderPractice();
     setIsolated(false);
     setLayer('cuff');
-    setVisibleSystems({ skeleton: true, muscles: true, 'soft-tissue': true });
+    setVisibleSystems({
+      skeleton: true,
+      muscles: true,
+      'soft-tissue': true,
+    });
     setExplode(0);
   };
 
@@ -483,7 +493,10 @@ export default function ShoulderExplorer({
   function revealSelection() {
     if (mode !== 'study' || !selectedVisibility) return;
     if (selectedVisibility.systemOff)
-      setVisibleSystems((current) => ({ ...current, [selected.system]: true }));
+      setVisibleSystems((current) => ({
+        ...current,
+        [selected.system]: true,
+      }));
     setInspection((current) =>
       recoverSelectionInspection(current, selectedVisibility),
     );
@@ -1155,19 +1168,22 @@ export default function ShoulderExplorer({
                         const modality = {
                           ct: 'CT',
                           mri: 'MRI',
+                          xray: 'X-ray',
                           ultrasound: 'Ultrasound',
-                        }[tab as 'ct' | 'mri' | 'ultrasound'];
+                        }[tab as 'ct' | 'mri' | 'xray' | 'ultrasound'];
                         return (
                           <div className="shoulder-note">
                             {modality && (
                               <div className="imaging-empty">
                                 <ScanLine />
                                 <span>No {modality} study loaded</span>
-                                <button type="button" onClick={toggleSync}>
-                                  {syncPlane
-                                    ? 'Hide reference plane'
-                                    : 'Preview 3D reference plane'}
-                                </button>
+                                {tab !== 'xray' && (
+                                  <button type="button" onClick={toggleSync}>
+                                    {syncPlane
+                                      ? 'Hide reference plane'
+                                      : 'Preview 3D reference plane'}
+                                  </button>
+                                )}
                               </div>
                             )}
                             <div className="eyebrow">{section.title}</div>
@@ -1182,6 +1198,20 @@ export default function ShoulderExplorer({
                             {section.note && (
                               <div className="content-note">{section.note}</div>
                             )}
+                            {section.citations?.length ? (
+                              <div className="body-reference-links">
+                                {section.citations.map((url, i) => (
+                                  <a
+                                    key={url}
+                                    href={url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                  >
+                                    Reference {i + 1} ↗
+                                  </a>
+                                ))}
+                              </div>
+                            ) : null}
                           </div>
                         );
                       }}

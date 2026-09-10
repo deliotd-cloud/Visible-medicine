@@ -4,6 +4,8 @@ Generated from the actual catalogue, teaching resolver, dissection profiles and 
 
 ## Delivered source scope
 
+[X-ray orientation](XRAY_TEACHING.md) is available in the existing Imaging group: 6 source-pinned body drafts and 3 overlapping shoulder drafts cover three shoulder-bone concepts. Other entries remain pending, including all 69 nested selections. No radiographs, calibrated projections or paid-lecture access are supplied. Old display/teaching approvals require re-review; all previous topics are preserved.
+
 The [cricothyroid dissection](CRICOTHYROID_DISSECTION.md) adds 4 source-defined muscle parts with 2 optional, nonselectable cartilage landmarks. It reuses the compact selection, cutaway, separation, labels and Undo/Redo controls. The source-preserving derivative explicitly omits 12 audited artifact faces; this is disclosed, not clinical approval. Introductory teaching is draft and CT/MRI/US remain pending for these parts. Cartilage is a navigation landmark, not the muscle's tissue parent.
 
 The [biliary and gallbladder relationship view](HEPATIC_BILIARY_RELATIONSHIPS.md) adds 1 liver study preset using 3 existing gallbladder/duct landmarks alongside faint liver tissue. Both internal biliary groups remain selectable; landmarks are nonselectable and disappear during separation. Source labels and geometry are unchanged; no common-bile-duct completion, junction validation, scan or surgical model is inferred.
@@ -25,7 +27,7 @@ The [optic chiasm and tract study](VISUAL_PATHWAY_DISSECTION.md) adds 3 selectab
 
 ## Body teaching readiness
 
-Counts are representations with displayed copy, not unique lessons, complete topic coverage or clinical approvals. Shared source-group copy is counted per representation. The dedicated shoulder has draft text in all eight topics; do not add overlapping representations to claim more unique anatomy.
+Counts are representations with displayed copy, not unique lessons, complete topic coverage or clinical approvals. Shared source-group copy is counted per representation. The dedicated shoulder retains draft text in its original eight topics; X-ray adds 3 draft and 6 pending entries. Do not add overlapping representations to claim more unique anatomy.
 
 | Topic | Specific/source-group draft | Identity only | Pending | Generated identification |
 | --- | ---: | ---: | ---: | ---: |
@@ -33,12 +35,13 @@ Counts are representations with displayed copy, not unique lessons, complete top
 | Function | 1018 | 0 | 4 | 0 |
 | CT | 17 | 0 | 1005 | 0 |
 | MRI | 19 | 0 | 1003 | 0 |
+| X-ray | 6 | 0 | 1016 | 0 |
 | Ultrasound | 15 | 0 | 1007 | 0 |
 | Pathology | 1018 | 0 | 4 | 0 |
 | Clinical | 1018 | 0 | 4 | 0 |
 | Quiz notes | 11 | 0 | 0 | 1011 |
 
-Quiz-tab notes are separate from interactive practice. X-ray has no authored topic/viewer yet. CT/MRI/US text is not a scan viewer, segmentation or validated spatial correspondence.
+Quiz-tab notes are separate from interactive practice. [X-ray orientation](XRAY_TEACHING.md) now has three shoulder-bone drafts across six exact body sources and the three overlapping dedicated-shoulder bones. Other X-ray topics remain pending. Imaging text is not an acquired-image viewer, segmentation or validated spatial correspondence.
 
 The opt-in [nested learning registry](NESTED_LEARNING_LINKS.md) exposes 69 exact child destinations within 1100 scope-specific representations. It supports document versions 1 and 2, while the configured production document stays version 1 with no resources. Nested parent/child source and bundle bindings can resolve into the existing dissection routes; this is not a live viewer connection or entitlement.
 

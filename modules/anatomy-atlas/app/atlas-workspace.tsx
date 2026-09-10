@@ -287,6 +287,7 @@ export const noteGroups: Array<{
     sections: [
       ['ct', 'CT'],
       ['mri', 'MRI'],
+      ['xray', 'X-ray'],
       ['ultrasound', 'Ultrasound'],
     ],
   },

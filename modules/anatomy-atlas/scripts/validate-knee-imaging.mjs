@@ -24,10 +24,10 @@ assert.equal(
     body: catalog.structures.map((s) => ({
       id: s.id,
       sections: Object.fromEntries(
-        api.contentTabs.map((t) => [t, previous.bodyContent(s, t)]),
+        previous.contentTabs.map((t) => [t, previous.bodyContent(s, t)]),
       ),
     })),
-    shoulder: api.structures,
+    shoulder: previous.structures,
     dissectionProfiles: api.dissectionProfiles,
   }),
   before.copyAndRecipeHash,
@@ -45,7 +45,7 @@ let sections = 0,
   sourceRowsVerified = 0;
 const topics = new Set();
 for (const s of catalog.structures)
-  for (const tab of api.contentTabs) {
+  for (const tab of previous.contentTabs) {
     const lesson = kneeImagingLesson(s, tab);
     if (!lesson) {
       unchangedSections++;

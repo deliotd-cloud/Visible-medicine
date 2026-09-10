@@ -115,10 +115,10 @@ const action = ts.transpile(
 );
 let drafts = 0,
   pending = 0;
-const counts = { ct: 0, mri: 0, ultrasound: 0 };
+const counts = { ct: 0, mri: 0, xray: 0, ultrasound: 0 };
 for (const parentId of parents) {
   const parent = catalog.structures.find((s) => s.id === parentId);
-  for (const topic of ['ct', 'mri', 'ultrasound']) {
+  for (const topic of ['ct', 'mri', 'xray', 'ultrasound']) {
     const choices = api.componentImagingTargets(
       catalog,
       parentId,
@@ -275,9 +275,9 @@ for (const parentId of parents) {
     0,
   );
 }
-same(counts, { ct: 35, mri: 35, ultrasound: 28 });
+same(counts, { ct: 35, mri: 35, xray: 0, ultrasound: 28 });
 same(drafts, 98);
-same(pending, 109);
+same(pending, 178);
 same(
   JSON.stringify(catalog),
   before,

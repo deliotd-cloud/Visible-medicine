@@ -1,5 +1,7 @@
 # Clinical validation checklist
 
+The [X-ray orientation drafts](XRAY_TEACHING.md) require independent anatomy, radiology and educator review. Verify the three bone concepts, projection wording, source-specific landmarks and crop limitations; confirm users cannot confuse free camera rotation, exploded gaps or the 3D reference plane with a calibrated radiograph. Current X-ray coverage is introductory text only, not acquired images, an acquisition protocol, diagnostic interpretation, patient registration or permission to access a paid lecture. Previous shoulder teaching/display approval must not be carried over to the new revision.
+
 The [cricothyroid dissection](CRICOTHYROID_DISSECTION.md) is an unvalidated educational source subset; its original prototype remains retained separately. Specialist review is still required for the four part labels/laterality, absent described bellies, attachment footprints, cartilage intersections, cleanup disclosure and brief teaching. Engineering admission is not clinical approval. Six detached opposite-face islands were omitted only in the pinned display derivative; originals are retained. No anatomical accuracy, phonation, operative planes, nerve completeness or CT/MRI/US correspondence is certified. Prior laryngeal source holds remain unchanged.
 
 ## Biliary relationship landmarks
