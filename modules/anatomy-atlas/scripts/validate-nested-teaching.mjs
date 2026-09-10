@@ -21,7 +21,8 @@ const compiled = await build({
     export { cerebralCatalog as cerebral } from './lib/cerebral';
     export { cardiacCatalog as cardiac } from './lib/cardiac';
     export { pulmonaryCatalog as pulmonary } from './lib/pulmonary';
-    export { hepaticCatalog as hepatic } from './lib/hepatic';`,
+    export { hepaticCatalog as hepatic } from './lib/hepatic';
+    export { renalCatalog as renal } from './lib/renal';`,
     resolveDir: process.cwd(),
     loader: 'tsx',
   },
@@ -54,27 +55,55 @@ const catalog = api.bodyDisplayCatalog(
 );
 const targets = api.nestedStudyTargets(catalog);
 const initial = JSON.stringify(catalog);
-same(targets.length, 53);
-same(api.nestedConcepts.length, 33);
-same(new Set(api.nestedConcepts.map((c) => c.id)).size, 33);
+same(targets.length, 60);
+same(api.nestedConcepts.length, 37);
+same(new Set(api.nestedConcepts.map((c) => c.id)).size, 37);
+const renalConceptIds = [
+  'renal-ureteric-arteries',
+  'renal-inferior-suprarenal-artery',
+  'renal-veins',
+  'renal-suprarenal-veins',
+];
+same(
+  api.nestedConcepts.filter((c) => c.study === 'renal').map((c) => c.id),
+  renalConceptIds,
+);
 // Captured from validated v108 source 649dfc3d, before this cerebral extension.
 const digest = (value) =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
 same(
-  digest(api.nestedConcepts.filter((c) => ![
-    'cerebral-insula', 'cerebral-superior-temporal-anterior',
-  ].includes(c.id))),
+  digest(
+    api.nestedConcepts
+      .filter((c) => !renalConceptIds.includes(c.id))
+      .filter(
+        (c) =>
+          !['cerebral-insula', 'cerebral-superior-temporal-anterior'].includes(
+            c.id,
+          ),
+      ),
+  ),
   '93ba424b634421287a413acb087ab872d8a27135ff6d4c8d054040304b2bb8fb',
   'Unrelated nested teaching unchanged',
 );
 same(
-  digest(api.nestedConcepts.filter((c) => [
-    'cerebral-insula', 'cerebral-superior-temporal-anterior',
-  ].includes(c.id)).map((c) => ({
-    id: c.id, study: c.study, fmaIds: c.fmaIds,
-    anatomy: c.sections.anatomy, function: c.sections.function,
-    clinical: c.sections.clinical, modelLimit: c.modelLimit, quiz: c.quiz,
-  }))),
+  digest(
+    api.nestedConcepts
+      .filter((c) =>
+        ['cerebral-insula', 'cerebral-superior-temporal-anterior'].includes(
+          c.id,
+        ),
+      )
+      .map((c) => ({
+        id: c.id,
+        study: c.study,
+        fmaIds: c.fmaIds,
+        anatomy: c.sections.anatomy,
+        function: c.sections.function,
+        clinical: c.sections.clinical,
+        modelLimit: c.modelLimit,
+        quiz: c.quiz,
+      })),
+  ),
   '8c792cb82ecd7ba1e2c929d13437c9d04c49344c5f0276d0845169dd200022c0',
   'Cerebral identities, existing anatomy/function/clinical, limits and questions unchanged',
 );
@@ -263,6 +292,10 @@ for (const target of targets) {
     'ventricles',
     'brainstem',
     'cerebral',
+    'cardiac',
+    'pulmonary',
+    'hepatic',
+    'renal',
   ].filter((s) => s !== target.study))
     same(api.nestedTeachingFor(parent, otherStudy, selected), null);
   const bundle = api[target.study].bundles.find(
@@ -340,19 +373,19 @@ for (const target of targets) {
     null,
   );
 }
-same(seen.size, 33);
+same(seen.size, 37);
 same(
   answerKeys.size,
-  53,
+  60,
   'Changing either study or side resets revealed answer',
 );
-same(coverage.pathology, { draft: 53, pending: 0 });
-same(coverage.clinical, { draft: 53, pending: 0 });
+same(coverage.pathology, { draft: 53, pending: 7 });
+same(coverage.clinical, { draft: 60, pending: 0 });
 for (const tab of ['anatomy', 'function', 'quiz'])
-  same(coverage[tab], { draft: 53, pending: 0 });
-same(coverage.ct, { draft: 12, pending: 41 });
-same(coverage.mri, { draft: 11, pending: 42 });
-same(coverage.ultrasound, { draft: 11, pending: 42 });
+  same(coverage[tab], { draft: 60, pending: 0 });
+same(coverage.ct, { draft: 12, pending: 48 });
+same(coverage.mri, { draft: 11, pending: 49 });
+same(coverage.ultrasound, { draft: 11, pending: 49 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
 const hosts = new Set([

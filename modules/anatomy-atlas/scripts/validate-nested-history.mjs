@@ -88,7 +88,7 @@ const targets = api.nestedStudyTargets(catalog);
 const cases = [
   ...new Map(targets.map((t) => [`${t.study}/${t.parentId}`, t])).values(),
 ];
-same(cases.length, 9);
+same(cases.length, 11);
 const nodes = (n) =>
   !n || typeof n !== 'object'
     ? []
@@ -103,7 +103,8 @@ const text = (n) =>
       : Array.isArray(n)
         ? n.map(text).join('')
         : text(n.props?.children);
-const snapshot = ({ history: _history, future: _future, ...state }) => copy(state);
+const snapshot = ({ history: _history, future: _future, ...state }) =>
+  copy(state);
 const { renderToStaticMarkup } = require('react-dom/server');
 for (const target of cases) {
   const parent = catalog.structures.find((s) => s.id === target.parentId);
@@ -200,11 +201,52 @@ for (const target of cases) {
   render();
   check(button('Undo layers').disabled);
   check(button('Redo layers').disabled);
-  const originToggle = () => nodes(tree).find((n) => n.props?.['aria-label'] === 'Show original position').props;
+  if (target.study === 'renal') {
+    same(scene().contextIds.length, 6);
+    same(button('Show kidney & vessel context')['aria-pressed'], true);
+    const oldSelection = scene().selectedId;
+    for (const id of scene().contextIds) {
+      scene().onSelect(id);
+      render();
+      same(
+        scene().selectedId,
+        oldSelection,
+        'Context cannot become a selectable child',
+      );
+      const s = scene().structures.find((s) => s.id === id);
+      check(
+        s.laterality === parent.laterality ||
+          ['unpaired', 'midline', 'unspecified'].includes(s.laterality),
+      );
+      same(scene().appearance[id].opacity, s.system === 'organs' ? 0.12 : 0.35);
+    }
+    scene().onFailure('renal-vascular');
+    render();
+    check(text(tree).includes('Some structures could not load.'));
+    button('Retry').onClick();
+    render();
+    same(scene().retries['renal-vascular'], 1);
+    for (const bundle of scene().catalog.bundles) scene().onLoaded(bundle.id);
+    render();
+    check(!text(tree).includes('Loading renal vascular view'));
+    check(!text(tree).includes('Some structures could not load.'));
+  }
+  const originToggle = () =>
+    nodes(tree).find(
+      (n) => n.props?.['aria-label'] === 'Show original position',
+    ).props;
   same(scene().showOrigins, false);
   same(scene().originStyle, 'selected-guide');
-  check(nodes(tree).some((n) => n.type === 'details' && !n.props.open &&
-    nodes(n).some((child) => child.props?.['aria-label'] === 'Show original position')));
+  check(
+    nodes(tree).some(
+      (n) =>
+        n.type === 'details' &&
+        !n.props.open &&
+        nodes(n).some(
+          (child) => child.props?.['aria-label'] === 'Show original position',
+        ),
+    ),
+  );
   originToggle().onCheckedChange(true);
   render();
   same(scene().showOrigins, true);
@@ -222,6 +264,14 @@ for (const target of cases) {
   render();
   const cut = copy(scene().inspection),
     beforeHidden = copy(scene().hiddenIds);
+  if (target.study === 'renal') {
+    same(scene().contextIds, []);
+    same(
+      scene().structures.map((s) => s.id),
+      layers.map((s) => s.id),
+    );
+    check(button('Show kidney & vessel context').disabled);
+  }
   visibility(layers[0], false);
   const afterHidden = copy(scene().hiddenIds);
   same(scene().selectedId, null);
@@ -256,6 +306,7 @@ for (const target of cases) {
   check(layers.every((l) => !scene().hiddenIds.includes(l.id)));
   check(button('Redo layers').disabled);
   same(scene().explode, 0);
+  if (target.study === 'renal') same(scene().contextIds.length, 6);
   same(scene().showOrigins, true);
   const html = renderToStaticMarkup(React.createElement(View, props));
   check(
@@ -309,7 +360,7 @@ for (const target of cases) {
 const report = {
   passed: true,
   checks,
-  studyFamilies: 7,
+  studyFamilies: 8,
   parentViews: cases.length,
   representations: targets.length,
   historyLimit: 30,

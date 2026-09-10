@@ -1,6 +1,14 @@
 'use client';
 import { useCallback, useMemo, useReducer, useState } from 'react';
 import { NestedTeaching } from './nested-teaching';
+import {
+  renalFor,
+  renalViewCatalog,
+  renalPresets,
+  renalNotes,
+  renalColour,
+  renalReferences,
+} from '@/lib/renal';
 import { ArrowLeft, RotateCcw, Tags } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
@@ -105,7 +113,8 @@ const cameraViews = [
 const colours = ['#71b6ca', '#a1c8a1', '#cdad65', '#b396bd'];
 
 export type BrainStudy = 'ventricles' | 'brainstem' | 'cerebral';
-export type ComponentStudy = BrainStudy | 'cardiac' | 'pulmonary' | 'hepatic';
+export type ComponentStudy =
+  BrainStudy | 'cardiac' | 'pulmonary' | 'hepatic' | 'renal';
 // Shared compact source-component workbench; the keyed parent resets state between studies.
 export function VentricularView({
   parent,
@@ -121,6 +130,7 @@ export function VentricularView({
   const isCardiac = study === 'cardiac';
   const isPulmonary = study === 'pulmonary';
   const isHepatic = study === 'hepatic';
+  const isRenal = study === 'renal';
   const lungCatalog = useMemo(() => pulmonaryViewCatalog(parent), [parent]);
   const baseCatalog = isPulmonary
     ? lungCatalog
@@ -133,18 +143,28 @@ export function VentricularView({
           : ventricularCatalog;
   const layers = useMemo(
     () =>
-      isHepatic
-        ? hepaticFor(parent)
-        : isPulmonary
-          ? pulmonaryFor(parent)
-          : isCardiac
-            ? cardiacFor(parent)
-            : isCerebral
-              ? cerebralFor(parent)
-              : isBrainstem
-                ? brainstemFor(parent)
-                : ventriclesFor(parent),
-    [parent, isBrainstem, isCerebral, isCardiac, isPulmonary, isHepatic],
+      isRenal
+        ? renalFor(parent)
+        : isHepatic
+          ? hepaticFor(parent)
+          : isPulmonary
+            ? pulmonaryFor(parent)
+            : isCardiac
+              ? cardiacFor(parent)
+              : isCerebral
+                ? cerebralFor(parent)
+                : isBrainstem
+                  ? brainstemFor(parent)
+                  : ventriclesFor(parent),
+    [
+      parent,
+      isBrainstem,
+      isCerebral,
+      isCardiac,
+      isPulmonary,
+      isHepatic,
+      isRenal,
+    ],
   );
   const selectableIds = useMemo(() => layers.map((s) => s.id), [layers]);
   // Only the complete selectable source set defines the cut; context/hiding never shifts it.
@@ -162,113 +182,127 @@ export function VentricularView({
   );
   const presets = useMemo<Record<string, string[]>>(
     () =>
-      isHepatic
-        ? hepaticPresets(layers)
-        : isPulmonary
-          ? pulmonaryPresets(layers)
-          : isCardiac
-            ? {
-                ...cardiacPresets(layers),
-                ...Object.fromEntries(
-                  relationships.map((r) => [r.id, [r.spaceId]]),
-                ),
-              }
-            : isCerebral
-              ? cerebralPresets(layers)
-              : isBrainstem
-                ? brainstemPresets(layers)
-                : {
-                    all: layers.map((s) => s.id),
-                    lateral: layers
-                      .filter((s) => s.laterality !== 'midline')
-                      .map((s) => s.id),
-                    midline: layers
-                      .filter((s) => s.laterality === 'midline')
-                      .map((s) => s.id),
-                    ...Object.fromEntries(
-                      relationships.map((r) => [r.id, [r.spaceId]]),
-                    ),
-                  },
+      isRenal
+        ? renalPresets(layers)
+        : isHepatic
+          ? hepaticPresets(layers)
+          : isPulmonary
+            ? pulmonaryPresets(layers)
+            : isCardiac
+              ? {
+                  ...cardiacPresets(layers),
+                  ...Object.fromEntries(
+                    relationships.map((r) => [r.id, [r.spaceId]]),
+                  ),
+                }
+              : isCerebral
+                ? cerebralPresets(layers)
+                : isBrainstem
+                  ? brainstemPresets(layers)
+                  : {
+                      all: layers.map((s) => s.id),
+                      lateral: layers
+                        .filter((s) => s.laterality !== 'midline')
+                        .map((s) => s.id),
+                      midline: layers
+                        .filter((s) => s.laterality === 'midline')
+                        .map((s) => s.id),
+                      ...Object.fromEntries(
+                        relationships.map((r) => [r.id, [r.spaceId]]),
+                      ),
+                    },
     [
       isBrainstem,
       isCerebral,
       isCardiac,
       isPulmonary,
       isHepatic,
+      isRenal,
       layers,
       relationships,
     ],
   );
-  const presetNames: Record<string, string> = isHepatic
+  const presetNames: Record<string, string> = isRenal
     ? {
-        all: 'All internal branches',
-        artery: 'Hepatic arterial branches',
-        portal: 'Portal vein branches',
-        biliary: 'Bile ducts',
-        venous: 'Middle hepatic vein tributary',
+        all: 'All supplied vessels',
+        arteries: 'Arterial branches',
+        veins: 'Venous groups',
+        adrenal: 'Adrenal vessels',
       }
-    : isPulmonary
-      ? Object.fromEntries(
-          Object.keys(presets).map((key) => [
-            key,
-            key === 'all'
-              ? 'All supplied branch groups'
-              : `${key[0].toUpperCase() + key.slice(1)} lobe branches`,
-          ]),
-        )
-      : isCardiac
-        ? {
-            all: 'Four chamber spaces',
-            right: 'Right heart spaces',
-            left: 'Left heart spaces',
-            atria: 'Atrial spaces',
-            ventricles: 'Ventricular spaces',
-            ...Object.fromEntries(relationships.map((r) => [r.id, r.title])),
-          }
-        : isCerebral
+    : isHepatic
+      ? {
+          all: 'All internal branches',
+          artery: 'Hepatic arterial branches',
+          portal: 'Portal vein branches',
+          biliary: 'Bile ducts',
+          venous: 'Middle hepatic vein tributary',
+        }
+      : isPulmonary
+        ? Object.fromEntries(
+            Object.keys(presets).map((key) => [
+              key,
+              key === 'all'
+                ? 'All supplied branch groups'
+                : `${key[0].toUpperCase() + key.slice(1)} lobe branches`,
+            ]),
+          )
+        : isCardiac
           ? {
-              all: 'All supplied regions',
-              left: 'Left regions',
-              right: 'Right regions',
-              insula: 'Insulae',
-              temporal: 'Temporal regions',
+              all: 'Four chamber spaces',
+              right: 'Right heart spaces',
+              left: 'Left heart spaces',
+              atria: 'Atrial spaces',
+              ventricles: 'Ventricular spaces',
+              ...Object.fromEntries(relationships.map((r) => [r.id, r.title])),
             }
-          : isBrainstem
+          : isCerebral
             ? {
-                all: 'Brainstem and cerebellum',
-                brainstem: 'Brainstem only',
-                cerebellum: 'Cerebellum only',
+                all: 'All supplied regions',
+                left: 'Left regions',
+                right: 'Right regions',
+                insula: 'Insulae',
+                temporal: 'Temporal regions',
               }
-            : {
-                all: 'All four spaces',
-                lateral: 'Lateral ventricles',
-                midline: 'Third and fourth',
-                ...Object.fromEntries(
-                  relationships.map((r) => [r.id, r.title]),
-                ),
-              };
-  const title = isHepatic
-    ? 'Liver'
-    : isPulmonary
-      ? 'Lung'
-      : isCardiac
-        ? 'Cardiac'
-        : isCerebral
-          ? 'Cerebral'
-          : isBrainstem
-            ? 'Brainstem'
-            : 'Ventricular';
-  const notes = isHepatic
-    ? hepaticNotes
-    : isPulmonary
-      ? pulmonaryNotes
-      : isCardiac
-        ? cardiacNotes
-        : isCerebral
-          ? cerebralNotes
-          : isBrainstem
-            ? brainstemNotes
-            : ventricleNotes;
+            : isBrainstem
+              ? {
+                  all: 'Brainstem and cerebellum',
+                  brainstem: 'Brainstem only',
+                  cerebellum: 'Cerebellum only',
+                }
+              : {
+                  all: 'All four spaces',
+                  lateral: 'Lateral ventricles',
+                  midline: 'Third and fourth',
+                  ...Object.fromEntries(
+                    relationships.map((r) => [r.id, r.title]),
+                  ),
+                };
+  const title = isRenal
+    ? 'Renal vascular'
+    : isHepatic
+      ? 'Liver'
+      : isPulmonary
+        ? 'Lung'
+        : isCardiac
+          ? 'Cardiac'
+          : isCerebral
+            ? 'Cerebral'
+            : isBrainstem
+              ? 'Brainstem'
+              : 'Ventricular';
+  const notes = isRenal
+    ? renalNotes
+    : isHepatic
+      ? hepaticNotes
+      : isPulmonary
+        ? pulmonaryNotes
+        : isCardiac
+          ? cardiacNotes
+          : isCerebral
+            ? cerebralNotes
+            : isBrainstem
+              ? brainstemNotes
+              : ventricleNotes;
   const [{ selectedId, hidden, history, future }, dispatch] = useReducer(
     (state: VentricularState, action: VentricularAction) =>
       reduceVentricles(layers, state, action, presets),
@@ -278,7 +312,7 @@ export function VentricularView({
       ...(initialSelection ? { selectedId: initialSelection } : {}),
     }),
   );
-  const [context, setContext] = useState(false),
+  const [context, setContext] = useState(isRenal),
     [labels, setLabels] = useState(true);
   const [explode, setExplode] = useState(0),
     [layout, setLayout] = useState<BodyLayout>('extract');
@@ -298,21 +332,24 @@ export function VentricularView({
   );
   const ventricleCatalog = useMemo(
     () =>
-      isCardiac
-        ? cardiacContextViewCatalog(
-            parent,
-            context && explode === 0 ? relationshipId : null,
-          )
-        : isHepatic
-          ? hepaticViewCatalog(parent, context && explode === 0)
-          : isPulmonary
-            ? pulmonaryContextViewCatalog(parent, context && explode === 0)
-            : baseCatalog,
+      isRenal
+        ? renalViewCatalog(parent, context && explode === 0)
+        : isCardiac
+          ? cardiacContextViewCatalog(
+              parent,
+              context && explode === 0 ? relationshipId : null,
+            )
+          : isHepatic
+            ? hepaticViewCatalog(parent, context && explode === 0)
+            : isPulmonary
+              ? pulmonaryContextViewCatalog(parent, context && explode === 0)
+              : baseCatalog,
     [
       isCardiac,
       isPulmonary,
       isHepatic,
       parent,
+      isRenal,
       context,
       explode,
       baseCatalog,
@@ -367,30 +404,36 @@ export function VentricularView({
           return [
             s.id,
             {
-              color: isHepatic
-                ? hepaticColour(s)
-                : index < 0
-                  ? isPulmonary
-                    ? pulmonaryAirwayColour(s)
-                    : isCardiac && guidedAppearance
-                      ? cardiacVesselColour(s)
-                      : guidedAppearance
-                        ? (neuroGroupFor(s.fmaId)?.color ?? '#9ba7a5')
-                        : '#9ba7a5'
-                  : isCerebral
-                    ? (cerebralGroups.find(
-                        (g) => g.id === (s as CerebralStructure).group,
-                      )?.colour ?? '#9ba7a5')
-                    : colours[index],
+              color: isRenal
+                ? renalColour(s)
+                : isHepatic
+                  ? hepaticColour(s)
+                  : index < 0
+                    ? isPulmonary
+                      ? pulmonaryAirwayColour(s)
+                      : isCardiac && guidedAppearance
+                        ? cardiacVesselColour(s)
+                        : guidedAppearance
+                          ? (neuroGroupFor(s.fmaId)?.color ?? '#9ba7a5')
+                          : '#9ba7a5'
+                    : isCerebral
+                      ? (cerebralGroups.find(
+                          (g) => g.id === (s as CerebralStructure).group,
+                        )?.colour ?? '#9ba7a5')
+                      : colours[index],
               opacity:
                 index < 0
-                  ? isHepatic
-                    ? 0.12
-                    : isPulmonary
-                      ? 0.34
-                      : guidedAppearance
-                        ? 0.42
-                        : 0.12
+                  ? isRenal
+                    ? s.system === 'organs'
+                      ? 0.12
+                      : 0.35
+                    : isHepatic
+                      ? 0.12
+                      : isPulmonary
+                        ? 0.34
+                        : guidedAppearance
+                          ? 0.42
+                          : 0.12
                   : guidedAppearance
                     ? 0.7
                     : 1,
@@ -406,6 +449,7 @@ export function VentricularView({
       isHepatic,
       isCardiac,
       guidedAppearance,
+      isRenal,
     ],
   );
   function select(id: string) {
@@ -443,13 +487,15 @@ export function VentricularView({
     return (
       <p role="alert">
         The{' '}
-        {isHepatic
-          ? 'liver'
-          : isPulmonary
-            ? 'lung'
-            : isCardiac
-              ? 'heart'
-              : 'brain'}{' '}
+        {isRenal
+          ? 'kidney'
+          : isHepatic
+            ? 'liver'
+            : isPulmonary
+              ? 'lung'
+              : isCardiac
+                ? 'heart'
+                : 'brain'}{' '}
         source binding has changed. This dissection is unavailable pending
         review.
       </p>
@@ -710,23 +756,57 @@ export function VentricularView({
                 setContext((v) => !v);
               }}
             >
-              {isHepatic
-                ? 'Show liver tissue context'
-                : isPulmonary
-                  ? 'Show airway landmarks'
-                  : isCardiac
-                    ? relationship
-                      ? 'Show vessel landmarks'
-                      : 'Show atrial walls'
-                    : isCerebral
-                      ? 'Show lateral ventricles'
-                      : isBrainstem
-                        ? 'Show fourth ventricle'
-                        : 'Show brain context'}
+              {isRenal
+                ? 'Show kidney & vessel context'
+                : isHepatic
+                  ? 'Show liver tissue context'
+                  : isPulmonary
+                    ? 'Show airway landmarks'
+                    : isCardiac
+                      ? relationship
+                        ? 'Show vessel landmarks'
+                        : 'Show atrial walls'
+                      : isCerebral
+                        ? 'Show lateral ventricles'
+                        : isBrainstem
+                          ? 'Show fourth ventricle'
+                          : 'Show brain context'}
             </Button>
           )}
         </div>
-        {isHepatic ? (
+        {isRenal ? (
+          <section
+            className="ventricular-relationship"
+            aria-label="Renal vessel guide"
+          >
+            <ul aria-label="Renal vessel colour key">
+              <li>
+                <span
+                  aria-hidden="true"
+                  style={{ backgroundColor: '#c86059' }}
+                />
+                Arterial
+              </li>
+              <li>
+                <span
+                  aria-hidden="true"
+                  style={{ backgroundColor: '#657fb0' }}
+                />
+                Venous
+              </li>
+            </ul>
+            <p>
+              Partial vascular groups, not kidney internal tissue or a
+              continuous circulation.
+            </p>
+            {parent.laterality === 'left' && (
+              <p>
+                The left inferior adrenal artery is withheld because of a source
+                defect.
+              </p>
+            )}
+          </section>
+        ) : isHepatic ? (
           <section
             className="ventricular-relationship"
             aria-label="Liver branch guide"
@@ -950,7 +1030,21 @@ export function VentricularView({
         )}
         <details className="eye-layer-limits">
           <summary>Learning and limitations</summary>
-          {isHepatic ? (
+          {isRenal ? (
+            <>
+              <p>
+                Four right-sided or three left-sided vessel groups preserve the
+                supplied source geometry. Arterial red and venous blue
+                distinguish vessel types, not flow, oxygenation or scan signal.
+              </p>
+              <p>
+                Kidney cortex, medulla, calyces and pelvis are not individually
+                represented. The left inferior suprarenal artery and overlapping
+                alternative renal trunks are excluded. Source group components
+                are not certified connected lumens or surgical planes.
+              </p>
+            </>
+          ) : isHepatic ? (
             <>
               <p>
                 Seven branch groups reuse 48 existing source files. The optional
@@ -1046,35 +1140,46 @@ export function VentricularView({
           )}
           <p>
             No CT/MRI correspondence, diagnostic measurement or clinical
-            approval is provided. The main{' '}
-            {isHepatic
-              ? 'liver aggregate'
-              : isPulmonary
-                ? 'lung'
-                : isCardiac
-                  ? 'heart'
-                  : 'brain'}{' '}
-            is not rendered over these components.
+            approval is provided.{' '}
+            {isRenal ? (
+              'The kidney surface is optional orientation context; it does not define the vascular lumen or tissue territories.'
+            ) : (
+              <>
+                The main{' '}
+                {isHepatic
+                  ? 'liver aggregate'
+                  : isPulmonary
+                    ? 'lung'
+                    : isCardiac
+                      ? 'heart'
+                      : 'brain'}{' '}
+                is not rendered over these components.
+              </>
+            )}
           </p>
-          {(isHepatic
-            ? [hepaticReference]
-            : isPulmonary
-              ? pulmonaryReferences
-              : isCardiac
-                ? [cardiacReference]
-                : isCerebral
-                  ? cerebralReferences
-                  : isBrainstem
-                    ? brainstemReferences
-                    : [ventricleReference]
+          {(isRenal
+            ? renalReferences
+            : isHepatic
+              ? [hepaticReference]
+              : isPulmonary
+                ? pulmonaryReferences
+                : isCardiac
+                  ? [cardiacReference]
+                  : isCerebral
+                    ? cerebralReferences
+                    : isBrainstem
+                      ? brainstemReferences
+                      : [ventricleReference]
           ).map((href, i) => (
             <p key={href}>
               <a href={href} target="_blank" rel="noreferrer">
-                {isHepatic
-                  ? 'NCI digestive anatomy'
-                  : isPulmonary
-                    ? 'NCI lung anatomy'
-                    : `University ${isCardiac ? 'cardiac anatomy' : 'neuroanatomy'}`}{' '}
+                {isRenal
+                  ? 'Renal anatomy'
+                  : isHepatic
+                    ? 'NCI digestive anatomy'
+                    : isPulmonary
+                      ? 'NCI lung anatomy'
+                      : `University ${isCardiac ? 'cardiac anatomy' : 'neuroanatomy'}`}{' '}
                 reference {i + 1}
               </a>
             </p>
@@ -1112,17 +1217,21 @@ export default function Ventricles({
   const isCardiac = cardiacFor(parent).length > 0;
   const isPulmonary = pulmonaryFor(parent).length > 0;
   const isHepatic = hepaticFor(parent).length > 0;
-  const startingStudy = isHepatic
-    ? 'hepatic'
-    : isPulmonary
-      ? 'pulmonary'
-      : isCardiac
-        ? 'cardiac'
-        : initialStudy === 'cardiac' ||
-            initialStudy === 'pulmonary' ||
-            initialStudy === 'hepatic'
-          ? 'brainstem'
-          : (initialStudy ?? 'brainstem');
+  const isRenal = renalFor(parent).length > 0;
+  const startingStudy = isRenal
+    ? 'renal'
+    : isHepatic
+      ? 'hepatic'
+      : isPulmonary
+        ? 'pulmonary'
+        : isCardiac
+          ? 'cardiac'
+          : initialStudy === 'cardiac' ||
+              initialStudy === 'pulmonary' ||
+              initialStudy === 'hepatic' ||
+              initialStudy === 'renal'
+            ? 'brainstem'
+            : (initialStudy ?? 'brainstem');
   const [study, setStudy] = useState<ComponentStudy>(startingStudy);
   return (
     <Dialog
@@ -1135,19 +1244,21 @@ export default function Ventricles({
         <header className="eye-layer-heading brain-study-heading">
           <div>
             <DialogTitle>
-              {isHepatic
-                ? 'Liver · internal branch dissection'
-                : isPulmonary
-                  ? `${parent.name} · branch dissection`
-                  : isCardiac
-                    ? 'Heart · chamber spaces'
-                    : 'Brain · source dissection'}
+              {isRenal
+                ? `${parent.name} · vascular relationships`
+                : isHepatic
+                  ? 'Liver · internal branch dissection'
+                  : isPulmonary
+                    ? `${parent.name} · branch dissection`
+                    : isCardiac
+                      ? 'Heart · chamber spaces'
+                      : 'Brain · source dissection'}
             </DialogTitle>
             <DialogDescription>
               Source-based anatomy studies. Clinical validation pending.
             </DialogDescription>
           </div>
-          {!isCardiac && !isPulmonary && !isHepatic && (
+          {!isCardiac && !isPulmonary && !isHepatic && !isRenal && (
             <Select
               value={study}
               onValueChange={(v) => {

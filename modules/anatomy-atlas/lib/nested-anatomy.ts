@@ -6,6 +6,7 @@ import { cerebralCatalog, cerebralFor } from './cerebral.ts';
 import { cardiacCatalog, cardiacFor } from './cardiac.ts';
 import { pulmonaryCatalog, pulmonaryFor } from './pulmonary.ts';
 import { hepaticCatalog, hepaticFor } from './hepatic.ts';
+import { renalCatalog, renalFor } from './renal.ts';
 
 export type NestedStudy =
   | 'eye'
@@ -14,7 +15,8 @@ export type NestedStudy =
   | 'cerebral'
   | 'cardiac'
   | 'pulmonary'
-  | 'hepatic';
+  | 'hepatic'
+  | 'renal';
 export type NestedSelection = {
   study: NestedStudy;
   structureId: string;
@@ -31,6 +33,12 @@ export type NestedRequest = NestedSelection & {
   parentHash: string;
 };
 const studies = [
+  {
+    study: 'renal',
+    title: 'Renal vascular relationships',
+    catalog: renalCatalog,
+    layers: renalFor,
+  },
   {
     study: 'hepatic',
     title: 'Liver internal branches',

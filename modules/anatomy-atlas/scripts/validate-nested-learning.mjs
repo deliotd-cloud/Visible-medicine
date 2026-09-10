@@ -59,13 +59,13 @@ const reject = (fn, message) => {
   assert.throws(fn, message);
 };
 same(legacy.length, 1031);
-same(anatomy.length, 1084);
+same(anatomy.length, 1091);
 same(
   anatomy.filter((t) => t.scope !== 'nested'),
   legacy,
   'Legacy 1,031 bindings unchanged',
 );
-same(nested.length, 53);
+same(nested.length, 60);
 same(
   nested.map((t) => t.structureId).sort(),
   targets.map((t) => t.structureId).sort(),
@@ -159,11 +159,21 @@ const links = nested.flatMap((target, i) =>
   })),
 );
 const document = { schemaVersion: 2, resources, links };
+// All 360 synthetic links now exceed the deliberate 2 MB transport cap.
+// Keep that production limit and exercise every link through bounded batches.
+const encodedDocument = JSON.stringify(document);
+check(new TextEncoder().encode(encodedDocument).length > 2_000_000);
 same(
-  api.parseLearningJson(JSON.stringify(document)),
-  document,
-  'v2 JSON transport round trip',
+  api.parseLearningJson(encodedDocument),
+  null,
+  'Oversized transport stays rejected',
 );
+for (let start = 0; start < links.length; start += 100) {
+  const batch = { ...document, links: links.slice(start, start + 100) };
+  const decoded = api.parseLearningJson(JSON.stringify(batch));
+  check(decoded, 'Bounded transport parses');
+  same(decoded, batch, 'v2 JSON transport round trip');
+}
 const allow = {
   canNavigate: () => true,
   canAccessAnatomy: () => true,

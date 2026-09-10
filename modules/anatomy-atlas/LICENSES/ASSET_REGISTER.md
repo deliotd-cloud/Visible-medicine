@@ -1,5 +1,11 @@
 # Asset register
 
+## Renal vascular study — integrated, 10 September 2026
+
+`public/models/bodyparts3d/renal/renal-vascular.glb`: 266,784 bytes, SHA-256 `410fb0c4179785c91d018e549cd0ffbdd48c8e9919620dc0f32cdac3559c6a3e`. Seven BodyParts3D v4 groups / ten source files / 14,332 triangles. The exporter replaces prototype-only metadata; every position and triangle index is unchanged from the audited prototype below. Exact files, source-tree identities, raw hashes, bounds and exclusions are recorded in the adjacent catalogue. Kidney/adrenal/ureter/great-vessel context reuses existing root assets. BodyParts3D, © The Database Center for Life Science, CC Attribution 4.0 International; existing attribution and modification obligations apply. No texture, font, dependency, publisher diagram or paid API is added. There are now 98 retained public/archive GLBs; this is an asset count, not anatomical completeness. See [integration and limits](../docs/RENAL_VASCULAR_STUDY.md).
+
+The following staging entry records the earlier v111 state; it is superseded by the integration above.
+
 ## Renal vascular prototype — staged only, 10 September 2026
 
 Outside the published asset tree: `../work/renal-vascular-prototype/renal-vascular-prototype.glb`, 266,720 bytes, SHA-256 `ea98bfe8d3b8eaf480b5c893b90b7bf21abcb1c2aaa4e01ab2ef492e3e710424`. Seven source-labelled groups / ten original OBJ files / 14,332 retained triangles. Exact source hashes, CC BY 4.0 attribution, exclusions and transformation evidence are retained in the prototype sidecar and `docs/renal-vascular-prototype-validation.json`. This is not admitted to the live catalogue, not a new published GLB and not clinical validation. See [review and next integration gates](../docs/RENAL_VASCULAR_SOURCE_REVIEW.md). Existing live anatomy counts remain unchanged.

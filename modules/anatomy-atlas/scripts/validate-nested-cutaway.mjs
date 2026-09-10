@@ -90,7 +90,7 @@ const targets = api
 const cases = [
   ...new Map(targets.map((t) => [`${t.study}/${t.parentId}`, t])).values(),
 ];
-same(cases.length, 7);
+same(cases.length, 9);
 const nodes = (n) =>
   !n || typeof n !== 'object'
     ? []
@@ -319,7 +319,7 @@ check(renderer.includes('const center = useMemo(() => frame.getCenter'));
 check(renderer.includes('pointRetained('));
 const report = {
   checks,
-  studies: 6,
+  studies: 7,
   parentViews: cases.length,
   geometryCases,
   result: 'passed',

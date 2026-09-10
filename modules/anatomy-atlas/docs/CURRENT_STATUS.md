@@ -6,7 +6,7 @@ Generated from the actual catalogue, teaching resolver, dissection profiles and 
 
 - 1022 body representations, 86 body GLBs, 11 regions plus whole body.
 - Dedicated shoulder: 9 representations / 11 source parts, overlapping the body catalogue.
-- Nested dissections: 15 eye components, 4 ventricular spaces, 4 brainstem/cerebellar compounds and 14 cerebral selections, 4 cardiac cavity spaces and 5 partial lung branch groups. The cerebral study contains 10 existing-parent subdivisions plus 4 additional superior temporal source parts; only those four are new anatomical coverage. Context reuses 5 deep-brain structures in the ventricular view, 1 ventricular space in brainstem and 2 in cerebral. Brief drafts are separate from the eight-topic inventory below. 97 GLBs are retained overall, including archived originals and alternate display assets. The original catalogue counts remain unchanged.
+- Nested dissections: 15 eye components, 4 ventricular spaces, 4 brainstem/cerebellar compounds, 14 cerebral selections, 4 cardiac cavities, 5 partial lung branch groups, 7 liver branch groups and 7 renal/adrenal vascular groups. Four superior temporal source parts and seven renal/adrenal groups add coverage; other nested studies subdivide existing parents. Context reuses existing structures. These are partial source surfaces, not complete organ interiors or clinical approvals. Brief drafts are separate from the root-body inventory below. 98 GLBs are retained overall, including archived originals and alternate display assets. The original catalogue counts remain unchanged.
 - 141 dissection stages and 131 focuses. These operate on supplied surfaces; they do not establish complete anatomy.
 - Internal studies have optional selected-part original-position guides inside their collapsed separation controls. Guides use the source surface and the exact display displacement; flat plates, cutaways, hidden/context parts and exam mode suppress them. They are display annotations, not anatomical connections. See [scope and checks](ORIGIN_GUIDES.md).
 - Find/name identification practice; 80 draft reasoning concepts bound to 160 representations in head-neck, foot, thigh, leg, pelvis, shoulder-arm, hand, forearm. One concept per session, without contralateral repetition. See [practice scope and tests](REASONING_PRACTICE.md).
@@ -29,7 +29,7 @@ Counts are representations with displayed copy, not unique lessons, complete top
 
 Quiz-tab notes are separate from interactive practice. X-ray has no authored topic/viewer yet. CT/MRI/US text is not a scan viewer, segmentation or validated spatial correspondence.
 
-The opt-in [nested learning registry](NESTED_LEARNING_LINKS.md) exposes 53 exact child destinations within 1084 scope-specific representations. It supports document versions 1 and 2, while the configured production document stays version 1 with no resources. Nested parent/child source and bundle bindings can resolve into the existing dissection routes; this is not a live viewer connection or entitlement.
+The opt-in [nested learning registry](NESTED_LEARNING_LINKS.md) exposes 60 exact child destinations within 1091 scope-specific representations. It supports document versions 1 and 2, while the configured production document stays version 1 with no resources. Nested parent/child source and bundle bindings can resolve into the existing dissection routes; this is not a live viewer connection or entitlement.
 
 The ventricular study also has 3 [guided relationship presets](VENTRICULAR_RELATIONSHIPS.md), using existing source spaces and context without adding unique anatomy or another panel. Context disappears during separation; pointer handlers do not block selectable structures beneath it. Device acceptance remains pending.
 
@@ -39,7 +39,9 @@ The [lung branch study](PULMONARY_DISSECTION.md) separates 5 source-defined grou
 
 ## Nested anatomy teaching
 
-Internal dissection includes [Undo/Redo layers](NESTED_HISTORY.md) across all seven study families. This bounded layer/selection history reuses the compact action row and does not rewind camera, cutaway or separation settings. Device acceptance remains pending.
+Internal dissection includes [Undo/Redo layers](NESTED_HISTORY.md) across all eight study families. This bounded layer/selection history reuses the compact action row and does not rewind camera, cutaway or separation settings. Device acceptance remains pending.
+
+The [renal vascular study](RENAL_VASCULAR_STUDY.md) adds 7 source-labelled vascular groups across 2 kidney views, from 10 source files. Optional same-side tissue/vessel context is shown initially and disappears during separation. Renal veins, adrenal vessels and ureteric arterial branches are not a complete circulation or internal kidney tissue. The defective left inferior suprarenal artery remains excluded. Pathology and imaging teaching remain pending for these new groups.
 
 The [pulmonary teaching extension](PULMONARY_TEACHING.md) supplies nine shared Clinical/Pathology/CT drafts for five partial branch groups in the existing collapsed panel. MRI/US remain pending for these groups. No tissue, fissure, disease geometry or scan correspondence is inferred.
 
@@ -49,7 +51,7 @@ The [liver internal-branch study](HEPATIC_DISSECTION.md) exposes 7 source groups
 
 Optional pulmonary airway context reuses 3 existing trachea/main-bronchus landmarks across 2 per-lung views. It is off by default and absent during separation, with no new model files or nested identities. Main-lung selection now discloses the missing tissue/fissure surfaces. Context is orientation, not validated airway continuity.
 
-The collapsed [Learn more section](NESTED_ANATOMY_TEACHING.md) has 33 source-pinned concepts across 53 selectable parts, with 52 primary-reference links. These counts are separate from the root-body table and overlap parent anatomy. Each part has draft Anatomy, Function and an unscored self-check. Clinical has 53 draft / 0 pending; Pathology has 53 draft / 0 pending representations. Current authored imaging notes cover CT 12 draft / 41 pending, MRI 11 draft / 42 pending, and ultrasound 11 draft / 42 pending. These are introductory notes, not complete clinical coverage, scans or synchronized viewers. Model-scope self-checks test documented model limitations instead of medical recall. No clinical approvals or external resource access are implied.
+The collapsed [Learn more section](NESTED_ANATOMY_TEACHING.md) has 37 source-pinned concepts across 60 selectable parts, with 52 primary-reference links. These counts are separate from the root-body table and overlap parent anatomy. Each part has draft Anatomy, Function and an unscored self-check. Clinical has 60 draft / 0 pending; Pathology has 53 draft / 7 pending representations. Current authored imaging notes cover CT 12 draft / 48 pending, MRI 11 draft / 49 pending, and ultrasound 11 draft / 49 pending. These are introductory notes, not complete clinical coverage, scans or synchronized viewers. Model-scope self-checks test documented model limitations instead of medical recall. No clinical approvals or external resource access are implied.
 
 The [cardiac chamber study](CARDIAC_CHAMBERS.md) exposes 4 existing cavity shapes and 2 atrial-wall references. These are spaces and context, not new unique anatomy or a complete dissectible heart. Ambiguous source labels are documented and not admitted to this study.
 

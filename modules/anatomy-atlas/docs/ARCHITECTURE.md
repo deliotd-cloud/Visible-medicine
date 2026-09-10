@@ -1,5 +1,11 @@
 # Spatial anatomy architecture
 
+## Renal vascular workbench
+
+`lib/renal.ts` binds seven source groups to exact right/left kidney records. This is a navigation association, not tissue part-of semantics. `app/ventricles.tsx` remains the shared compact organ workbench; the root kidney launcher and source-bound search enter it with `study: renal`. Only same-side selectable groups and optional same-side/midline context are rendered. Context uses original root bundles, cannot become a child selection and disappears during separation. Internal tissue is not reconstructed.
+
+`scripts/export-renal.mjs` validates the staged source audit/raw hashes, reexports only metadata and compares every vertex/index with the prototype. The one 266,784-byte public bundle contains seven groups; opposite-side meshes are filtered from each view. `--check` verifies deterministic bytes without overwriting the artifact. Teaching extends the existing pins by seven bindings, retaining all 53 historical bindings exactly. Learning transport supports the new study identity but keeps its 2 MB JSON limit, default-deny policy and separate Atlas/resource grants. No production scan or lecture correspondence is configured. See [scope and validation](RENAL_VASCULAR_STUDY.md).
+
 ## Renal relationships
 
 [Renal vascular source review](RENAL_VASCULAR_SOURCE_REVIEW.md) prepares seven additional groups outside `public/` with a pinned, round-trip-checked prototype. It deliberately does not alter the root catalogue, nested registry, source review identities or learning entitlements before the dedicated study integration is completed.

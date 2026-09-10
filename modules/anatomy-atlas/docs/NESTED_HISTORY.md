@@ -1,6 +1,6 @@
 # Undo and Redo in internal dissection
 
-**Redo layers** sits beside **Undo layers** in the existing organ controls. It covers both eyes, ventricular spaces, brainstem/cerebellar components, cerebral parts, heart chambers, both lungs and liver branches: seven study families / nine parent views / 53 existing selections. No additional panel, toolbar or download is introduced.
+**Redo layers** sits beside **Undo layers** in the existing organ controls. It covers both eyes, ventricular spaces, brainstem/cerebellar components, cerebral parts, heart chambers, both lungs, liver branches and both renal vascular studies: eight study families / eleven parent views / 60 selections. The history control adds no panel or toolbar; the renal study has its own documented asset addition.
 
 ## Behaviour
 
@@ -16,7 +16,7 @@
 
 `lib/eye-layer-state.ts` and `lib/ventricles.ts` add bounded `future` stacks with nonrecursive snapshots. New layer changes clear future only after the existing no-change/invalid-action guards. Hidden arrays are copied when recording or restoring snapshots. `app/eye-layers.tsx` and `app/ventricles.tsx` expose the button within the existing action row; source geometry, appearance, cutaway maths, teaching and source bindings are unchanged.
 
-Run `npm run nested-history:test`. It exercises the actual reducers and controlled view callbacks for all nine parent views, including source-ID rejection, input immutability, every part's hide/undo/redo, every available view preset, bounded history, exhausted-stack no-ops, divergent edits, side/session initialization, all-hidden recovery and unchanged cut/separation settings. Only GPU rendering is replaced in the fixture. Native disabled-button markup is checked. The existing eye/ventricular/brainstem/cerebral tests retain their previous snapshot assertions while explicitly accounting for redo state.
+Run `npm run nested-history:test`. It exercises the actual reducers and controlled view callbacks for all eleven parent views, including source-ID rejection, input immutability, every part's hide/undo/redo, every available view preset, bounded history, exhausted-stack no-ops, divergent edits, side/session initialization, all-hidden recovery and unchanged cut/separation settings. Renal cases additionally check same-side nonselectable context, colour/opacity, load retry and context removal during separation. Only GPU rendering is replaced in the fixture. Native disabled-button markup is checked. Historical study assertions remain in place.
 
 The test report is [nested-history-validation.json](nested-history-validation.json). These are software/controlled-callback checks, **not** browser, GPU, mobile-device, keyboard/screen-reader user testing or clinical acceptance. Those acceptance checks remain required before release. No new anatomy or teaching approval is implied.
 

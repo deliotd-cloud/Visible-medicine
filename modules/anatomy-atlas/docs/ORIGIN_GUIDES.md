@@ -2,7 +2,7 @@
 
 Open **Separate components / structures / spaces**, switch on **Show original position**, select a part and increase separation. The optional teal wireframe marks its original source position; one thin line joins its source anchor to its displaced anchor. Only the selected part is annotated. Camera framing includes both the source and moved bounds, including Focus selected.
 
-Applies to nine parent views across the eye, ventricles, brainstem, cerebral, cardiac, pulmonary and hepatic studies (53 source-bound selectable representations). Eyes support lift; the other studies support lift and 3D spread. Existing region/whole-body original-wireframe behaviour and the dedicated shoulder renderer are preserved.
+Applies to eleven parent views across the eye, ventricles, brainstem, cerebral, cardiac, pulmonary, hepatic and renal studies (60 source-bound selectable representations). Eyes support lift; the other studies support lift and 3D spread. Existing region/whole-body original-wireframe behaviour and the dedicated shoulder renderer are preserved.
 
 The preference starts off for each newly mounted study. Undo/Redo and Reassemble keep that preference; Reassemble returns separation to zero, so the annotation disappears. The annotation is suppressed at zero displacement, in flat-plate layout, during any cutaway, in exam mode, without a visible selected part, for context-only parts, and below 20% selected opacity. Neither the ghost nor line intercepts pointer events. Nothing is persisted to a server or shared URL.
 

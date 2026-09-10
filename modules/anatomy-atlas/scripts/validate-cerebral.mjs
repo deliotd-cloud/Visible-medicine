@@ -517,8 +517,10 @@ for (const study of ['cerebral', 'brainstem', 'ventricles']) {
   const html = require('react-dom/server').renderToStaticMarkup(
     React.createElement(uiModule.exports.VentricularView, { parent, study }),
   );
+  const switches = html.match(/<[^>]*role="switch"[^>]*>/g) || [];
+  same(switches.filter((tag) => tag.includes('aria-label="Show original position"')).length, 1);
   same(
-    (html.match(/role="switch"/g) || []).length,
+    switches.filter((tag) => !tag.includes('aria-label="Show original position"')).length,
     study === 'cerebral' ? 14 : 4,
   );
   for (const text of study === 'cerebral'

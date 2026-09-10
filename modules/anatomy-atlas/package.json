@@ -79,6 +79,8 @@
     "renal-studies:test": "node scripts/validate-renal-studies.mjs",
     "renal-vascular:audit": "node scripts/audit-renal-vascular-source.mjs",
     "renal-vascular:prototype": "node scripts/export-renal-vascular-prototype.mjs",
+    "renal:export": "node scripts/export-renal.mjs",
+    "renal:test": "node scripts/validate-renal.mjs",
     "achilles-imaging:test": "node scripts/validate-achilles-imaging.mjs",
     "knee-imaging:test": "node scripts/validate-knee-imaging.mjs",
     "laryngeal:audit": "node scripts/audit-laryngeal-anatomy.mjs",

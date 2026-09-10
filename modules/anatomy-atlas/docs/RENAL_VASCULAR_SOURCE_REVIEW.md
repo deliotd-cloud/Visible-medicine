@@ -1,6 +1,6 @@
 # Renal vascular detail: source review and staged prototype
 
-This is preparatory anatomy work, not a published expansion of the atlas. The live renal studies still use the ten root representations documented in [Renal studies](RENAL_STUDIES.md). No candidate below has been added to the live model or clinical teaching registry.
+This records the preparatory source audit completed before integration. Its seven admitted prototype groups now appear in the [renal vascular study](RENAL_VASCULAR_STUDY.md); the three exclusions remain withheld. The ten root representations and four original [renal focus recipes](RENAL_STUDIES.md) are unchanged. The staging evidence below is historical, not a claim that integration remains pending or that clinical approval has been granted.
 
 ## What the source adds
 

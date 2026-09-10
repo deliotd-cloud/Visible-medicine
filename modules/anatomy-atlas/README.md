@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Kidney → Explore renal vessels** opens a [side-specific vascular study](docs/RENAL_VASCULAR_STUDY.md): seven additional source-labelled groups across both kidneys, arterial/venous/adrenal presets, optional context, cutaway, hide/Undo/Redo and separation with original-position guides. Search also opens individual vessels. Introductory teaching remains draft; internal kidney tissue, clinical validation and scan connections are not supplied.
+
 **Abdomen / Whole body → Study windows & focuses** now includes four [kidney relationship studies](docs/RENAL_STUDIES.md), using existing renal arteries, ureters, adrenals and great-vessel context. Side-aware cards reuse the compact dissection controls. These are source-grounded relationship views, not an invented internal kidney cutaway.
 
 **Cerebral regions → Learn more** now includes [insular and anterior-temporal Pathology/CT/MRI drafts](docs/CEREBRAL_TEACHING.md). Five shared paragraphs support four exact source selections, with primary references and explicit limits on lesion localisation. They add teaching, not scans, pathological meshes or clinical approval. [Current coverage](docs/CURRENT_STATUS.md) is the authoritative inventory.

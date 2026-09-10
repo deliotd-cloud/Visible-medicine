@@ -314,9 +314,9 @@ function findLauncherGuard(n) {
 findLauncherGuard(ast);
 check(launcherGuard, 'Find the real nested launcher condition');
 for (const exam of [false, true]) {
-  for (let mask = 0; mask < 16; mask++) {
+  for (let mask = 0; mask < 32; mask++) {
     const context = { exam, selected: parent };
-    ['ventriclesFor', 'cardiacFor', 'pulmonaryFor', 'hepaticFor'].forEach((name, i) => {
+    ['ventriclesFor', 'cardiacFor', 'pulmonaryFor', 'hepaticFor', 'renalFor'].forEach((name, i) => {
       context[name] = () => mask & (1 << i) ? [parent] : [];
     });
     same(runInNewContext(launcherGuard, context), !exam && mask !== 0);
@@ -358,7 +358,9 @@ runInNewContext(compiled.outputFiles[0].text, {
 const html = require('react-dom/server').renderToStaticMarkup(
   React.createElement(testModule.exports.VentricularView, { parent }),
 );
-same((html.match(/role="switch"/g) || []).length, 4);
+const switches = html.match(/<[^>]*role="switch"[^>]*>/g) || [];
+same(switches.filter((tag) => tag.includes('aria-label="Show original position"')).length, 1);
+same(switches.filter((tag) => !tag.includes('aria-label="Show original position"')).length, 4);
 for (const text of [
   'All four spaces',
   'Show brain context',

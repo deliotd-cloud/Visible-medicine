@@ -1,6 +1,6 @@
 # Organ-dissection cutaway
 
-The existing eye cutaway is now shared by the ventricular, brainstem, cerebral, cardiac, pulmonary and hepatic workbenches. Open a structure's dissection, then expand **Cutaway** beside the model. Choose axial, coronal or sagittal, move the 0–100% slider, and reverse the retained side if needed. The control starts collapsed and adds no global toolbar or route.
+The existing eye cutaway is now shared by the ventricular, brainstem, cerebral, cardiac, pulmonary, hepatic and renal workbenches. Open a structure's dissection, then expand **Cutaway** beside the model. Choose axial, coronal or sagittal, move the 0–100% slider, and reverse the retained side if needed. The control starts collapsed and adds no global toolbar or route. Cutting renal surfaces does not reconstruct missing kidney tissue.
 
 ## Behaviour
 

@@ -15,6 +15,10 @@
     "public/models/bodyparts3d/cardiac/catalog.json": "59cebff69d885e243a9b5b8048d9735eb7f4e7848b7f21a40fa6c12873c5b0a3",
     "lib/cardiac.ts": "482facae9feb332a9899d008cca33aa6bb950046ae7ea96ea2ee67a89001c6ea",
     "lib/hepatic.ts": "86a6ac1226f1ab496c3dc7aee6279da3ef662a0c3316fee10862cb8ba30fae80",
+    "lib/renal.ts": "d048169e7267d1b5339ee22a5ecaedc004abbdc95dadf82f078b184eb3efc936",
+    "content/renal-teaching.ts": "049db009049f8898d89a11ee3f491a15ca6aff7cc3f757430fdb0ce7cc2a72e1",
+    "public/models/bodyparts3d/renal/catalog.json": "8549a481da385d6751e049478f156cdcdf014d804a922420f19ef6fe948d5d9d",
+    "docs/renal-vascular-source-audit.json": "276282aca048255f421856c0fa7f2332e8c19e71501664e4b43a2d208d9eb262",
     "public/models/bodyparts3d/hepatic/catalog.json": "53962f7814854e576efde820bed1ccd2f7393b1296798898dee25f773e24d6c8",
     "docs/hepatic-source-audit.json": "dea39ac53b5bffeebed7ecd52c46a4186631fe2c5ecdf75e91a943356e1a26a3",
     "lib/pulmonary.ts": "82d22b0bf752b53044efb1333a35331a0e371637bd2a1be9cae915d70ce69670",
@@ -23,13 +27,13 @@
     "public/models/bodyparts3d/pulmonary/catalog.json": "b62ccd78dfc2ced8674b94eba67596add4de482f54c3f242814982b4e3dab9ea",
     "docs/pulmonary-source-audit.json": "734fc23b6d4812b81ffb007214c271096562bcb8376766fc9d609bfddabc95db",
     "content/cerebral-supplement-audit.json": "a186519bbf31065f5c4e58472c542a9cbd2a6b64d35423a4f6c92d7bae1d69d7",
-    "content/nested-teaching.ts": "11066a20a89ddfc63fbd46bd9f221b51ecf6db4ed4238e9c8abe13e4a9161e76",
+    "content/nested-teaching.ts": "454f1aab63836baa2541f5b45201c69f3808911d402732b4e90afe06865a88a8",
     "content/cardiac-teaching.ts": "48fab7d90b23ce6c59a45d694a17fbb8026daa5371c904b2a04f88754658dc0b",
     "content/hepatic-teaching.ts": "9840b0ffa63ba65e91d9e2c327d7ce5e5fb96afcf8f75707c786e17fcb86f74d",
     "content/pulmonary-teaching.ts": "dec60fd4009651ed0e0f11e67763db54c367aa22968c7653dadaf128918b77b0",
     "content/cerebral-teaching.ts": "ba741cc7373be4ffad1dd7a04af2605d5a033bbe6d40723196241d89d905b1a0",
-    "content/nested-teaching-bindings.v1.json": "3a79d284a59a3c803c416ff6e3f0f1de1084852317f14313f4e6965a39b3cb46",
-    "lib/nested-anatomy.ts": "eeb61c652567783608545a5008a31e8586a67e68f9277d7cb2ba60484cdc448b",
+    "content/nested-teaching-bindings.v1.json": "081abf168557c14a16f770f7bcc5d2d0e338e0e3f83c2d1bc333ae08ace00ed0",
+    "lib/nested-anatomy.ts": "b24b6e7725a6735ef3da62e347c44e77cf9f2bda2734cebf4fe396381a2d3a2e",
     "lib/nested-teaching.ts": "abcef365ef8fb3208483454500fbcb3af3b8edd2411b58a1f4b0988de11c47ea",
     "app/nested-teaching.tsx": "5b33c54cff129a48a32d5e3ad920b4c586e7e8706caa628b6a7463be4c057d1b",
     "app/nested-teaching.css": "d912bfc774cc744511a4c0e87a0a35f6b693def9f4bddc25b6f010f07dfa83bc",
@@ -37,14 +41,14 @@
     "content/schema/anatomy-structure.schema.json": "0a8e76b6a98e23e25f60a2d9269664dc42974b7a349c63b77e4615fa46887826",
     "content/review-revisions.json": "4e130ad0c0a5ec170069ae5ed89b1f3aab401f37282048d648f82f8f293c2104",
     "content/learning-resources.v1.json": "799fec602114a944b4f675d341b445982dac56786cca9b5800d52db7d95899e5",
-    "lib/learning-resource-types.ts": "28cb04e259be4032caccea616e06c4160f35fa8fb15a83f6727ad65e625d3e52",
-    "lib/learning-resources.ts": "26bb26ab0e9bbc5bc4789dfa8df675e9a03f963c7e1f150ec16d0e8258f3a17d",
+    "lib/learning-resource-types.ts": "a4e6700e041aeaf9cea571106f81879779145ced37f71300d58c0708e7e3e55b",
+    "lib/learning-resources.ts": "8d0bff66e98b07f24d031d6cc31232f2d380879eb0a268cf85bc3c191e9c53be",
     "lib/learning-anatomy.ts": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3",
     "lib/nested-learning-anatomy.ts": "6e7e1b4836406926af2406e7277a4f62f7ffc1668a644cd180b50d463443d8e1",
     "lib/ventricular-relationships.ts": "b9d2bd5ea079a600c2593ca522f325ceb03c2f2704a26747b4262ef6838c84df",
     "lib/cardiac-context.ts": "428c871b7a942e34c87833ff97441e59e7757c4ae0f5610713e779396df432ef",
     "public/models/bodyparts3d/cardiac/great-vessel-context.json": "fac546e54237db4bed783d583b01c583f423a35a74bd759727d519074de0af85",
-    "app/ventricles.tsx": "be72291e770d990abe7f1939cfa90ed96ef9a7b769a42760c518b61323660a68",
+    "app/ventricles.tsx": "0c1113e52d32c33eb5c59428be5fdc1ae98f86ae0fb4f1087b456e3a67f6c603",
     "app/ventricular-relationships.css": "7dfa2927b9f203aa13dbd1f2205c9429e7b79ffbaa86108b57fb3c69b1b71400",
     "app/body-scene.tsx": "bdc5d86284feb07906acbf70abadfe1db74cc59463083dc1d5ae3acffa1229c4",
     "lib/origin-guides.ts": "b333566888bf13805da9559004fbfbfa6596095a65d7ca8772de8259ca974ff6",
@@ -54,7 +58,7 @@
     "resolvedContentAndRecipeData": "011e0c5dc8e7cac46df5d556838d5bdcee760243b3d918ce9c40f41971bc1713",
     "explicitTopicReadiness": "b57c441aa76f7bd23f1c97de13289cedf350bc884d99be676c35cc9998f8e5a9",
     "reasoningQuestionData": "309529bda0dd03063b56bfb2af9272fba105d083f8cad728008d1095c92cc9d1",
-    "nestedTeachingData": "6ac7e520b6417570bbf47434c73a6d19225893b7ee1bf1e3ca559ef59e4dec22"
+    "nestedTeachingData": "794b95630918beb119641224b8606e89a84f1ab8083c0c4e5cdf003797d9061f"
   },
   "anatomy": {
     "bodyRepresentations": 1022,
@@ -145,8 +149,12 @@
       "pulmonaryBranchGroups": 5,
       "pulmonarySourceFiles": 280,
       "pulmonaryLobeSurfaces": 0,
-      "additionalUniqueWholeBodyAnatomy": 4,
-      "limitation": "Nested selections generally subdivide existing parents. Four superior temporal ISA source parts are additional anatomy, available only inside the cerebral study; context reuses existing structures. Nested teaching is counted separately from the root-body inventory. The unchanged archival catalogue excludes these alternate display assets and additions."
+      "renalVascularGroups": 7,
+      "renalParentViews": 2,
+      "renalSourceFiles": 10,
+      "renalInternalTissueParts": 0,
+      "additionalUniqueWholeBodyAnatomy": 11,
+      "limitation": "Nested selections generally subdivide existing parents. Four superior temporal source parts and seven renal/suprarenal vascular groups are additional anatomy in nested studies; context reuses existing structures. Kidney association is navigation, not tissue membership. Nested teaching is counted separately from the root-body inventory. The unchanged archival catalogue excludes these alternate display assets and additions."
     },
     "regionalMembershipsOverlap": true,
     "shoulderAndBodyRepresentationsOverlap": true,
@@ -189,8 +197,8 @@
       1,
       2
     ],
-    "availableRepresentations": 1084,
-    "nestedRepresentations": 53,
+    "availableRepresentations": 1091,
+    "nestedRepresentations": 60,
     "supportedKinds": [
       "ct",
       "mri",
@@ -263,18 +271,18 @@
       }
     },
     "nested": {
-      "representations": 53,
-      "concepts": 33,
+      "representations": 60,
+      "concepts": 37,
       "references": 52,
       "topics": {
         "anatomy": {
-          "specificDraft": 53,
+          "specificDraft": 60,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 53,
+          "specificDraft": 60,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
@@ -282,35 +290,35 @@
         "ct": {
           "specificDraft": 12,
           "identityOnly": 0,
-          "pending": 41,
+          "pending": 48,
           "generatedIdentification": 0
         },
         "mri": {
           "specificDraft": 11,
           "identityOnly": 0,
-          "pending": 42,
+          "pending": 49,
           "generatedIdentification": 0
         },
         "ultrasound": {
           "specificDraft": 11,
           "identityOnly": 0,
-          "pending": 42,
+          "pending": 49,
           "generatedIdentification": 0
         },
         "pathology": {
           "specificDraft": 53,
           "identityOnly": 0,
-          "pending": 0,
+          "pending": 7,
           "generatedIdentification": 0
         },
         "clinical": {
-          "specificDraft": 53,
+          "specificDraft": 60,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
         "quiz": {
-          "specificDraft": 53,
+          "specificDraft": 60,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
@@ -927,8 +935,8 @@
       "png": 4,
       "svg": 2,
       "md": 1,
-      "glb": 97,
-      "json": 12,
+      "glb": 98,
+      "json": 13,
       "html": 1,
       "tsv": 1
     },

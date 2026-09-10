@@ -129,6 +129,7 @@ import { ventriclesFor } from '@/lib/ventricles';
 import { cardiacFor } from '@/lib/cardiac';
 import { pulmonaryFor } from '@/lib/pulmonary';
 import { hepaticFor } from '@/lib/hepatic';
+import { renalFor } from '@/lib/renal';
 import { bodyDisplayCatalog } from '@/lib/body-display-catalog';
 import {
   resolveNestedTarget,
@@ -1823,7 +1824,8 @@ export default function BodyExplorer({
                       (ventriclesFor(selected).length > 0 ||
                         cardiacFor(selected).length > 0 ||
                         pulmonaryFor(selected).length > 0 ||
-                        hepaticFor(selected).length > 0) && (
+                        hepaticFor(selected).length > 0 ||
+                        renalFor(selected).length > 0) && (
                         <div className="body-selection-actions">
                           <Button
                             ref={ventricleLauncher}
@@ -1837,7 +1839,7 @@ export default function BodyExplorer({
                             }}
                           >
                             <Layers3 />{' '}
-                            {hepaticFor(selected).length
+                            {renalFor(selected).length ? 'Explore renal vessels' : hepaticFor(selected).length
                               ? 'Explore liver branches'
                               : pulmonaryFor(selected).length
                                 ? 'Explore lung branches'

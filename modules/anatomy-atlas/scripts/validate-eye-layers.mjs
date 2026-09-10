@@ -794,7 +794,9 @@ for (const side of ['left', 'right']) {
   const html = renderToStaticMarkup(
     React.createElement(component.exports.EyeLayerView, { parent }),
   );
-  same((html.match(/role="switch"/g) || []).length, side === 'left' ? 8 : 7);
+  const switches = html.match(/<[^>]*role="switch"[^>]*>/g) || [];
+  same(switches.filter((tag) => tag.includes('aria-label="Show original position"')).length, 1);
+  same(switches.filter((tag) => !tag.includes('aria-label="Show original position"')).length, side === 'left' ? 8 : 7);
   check(html.includes('Clinical') || html.includes('clinical'));
   check(html.includes('Anterior structures'));
   check(html.includes('Reassemble'));
