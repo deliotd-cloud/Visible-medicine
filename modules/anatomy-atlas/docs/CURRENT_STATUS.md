@@ -28,6 +28,10 @@ Counts are representations with displayed copy, not unique lessons, complete top
 
 Quiz-tab notes are separate from interactive practice. X-ray has no authored topic/viewer yet. CT/MRI/US text is not a scan viewer, segmentation or validated spatial correspondence.
 
+## Nested brain and eye teaching
+
+The collapsed [Learn more section](NESTED_ANATOMY_TEACHING.md) has 22 source-pinned concepts across 37 selectable parts, with 23 primary-reference links. These counts are separate from the root-body table and overlap parent anatomy. Each part has draft Anatomy, Function, Clinical and an unscored self-check; Pathology has 33 draft / 4 pending representations. CT, MRI and ultrasound each remain 37 pending. Five conceptual self-checks test documented model limitations instead of medical recall. No clinical approvals or external resource access are implied.
+
 ## Boundaries and next work
 
 - All new teaching and reasoning questions remain drafts requiring independent anatomical, clinical and educator review. Private shoulder review records are not read by this inventory.

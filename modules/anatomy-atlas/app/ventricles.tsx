@@ -1,5 +1,6 @@
 'use client';
 import { useCallback, useMemo, useReducer, useState } from 'react';
+import { NestedTeaching } from './nested-teaching';
 import { ArrowLeft, RotateCcw, Tags } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
@@ -523,6 +524,7 @@ export function VentricularView({
                 Frame selected
               </Button>
             </div>
+            <NestedTeaching parent={parent} study={study} selected={selected} />
           </section>
         )}
         <details className="eye-layer-limits">

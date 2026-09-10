@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Nested brain/eye selection → Learn more** adds [source-pinned teaching](docs/NESTED_ANATOMY_TEACHING.md) for all 37 selectable parts: Anatomy, Function, Clinical, introductory Pathology and unscored self-checks, organized into 22 shared concepts. The section starts collapsed to preserve the model-first workspace. Four Pathology representations and every nested CT/MRI/ultrasound topic remain explicitly pending; no scan connection, paid-lecture entitlement, new geometry or clinical approval is implied.
+
 **Search atlas** now finds all 37 [nested brain and eye parts](docs/NESTED_ANATOMY_NAVIGATION.md). Search a name or FMA ID to open the correct dissection with that part visibly isolated. Return to the main atlas without losing the captured camera; cross-region results use source-pinned links. No new permanent controls, anatomy geometry, imaging correspondence or lecture access are introduced.
 
 **Brain → Dissect brain → Cerebral regions** adds [paired cortical-region dissection](docs/CEREBRAL_DISSECTION.md): eight lobe representations, both insulae and four additional superior temporal source parts. Seven compact left/right rows, matched pair colours, hemisphere/insula/temporal presets, hide/Undo and three separation styles reuse the existing workspace. The source coverage is explicitly partial; no complete cortex, functional territories or patient registration is claimed. The four added parts are separately identified, not silently inserted into the original brain.

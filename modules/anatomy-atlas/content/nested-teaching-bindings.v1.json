@@ -1,0 +1,2955 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Draft teaching bindings only; not clinical approval or imaging registration",
+  "parents": [
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "fmaId": "FMA50801",
+      "name": "Brain",
+      "sourceName": "brain",
+      "system": "nerves",
+      "category": "organ",
+      "laterality": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves",
+      "nodeName": "FMA50801",
+      "bounds": {
+        "min": [
+          -0.6994040012359619,
+          6.644999980926514,
+          -0.6032930016517639
+        ],
+        "max": [
+          0.6889340281486511,
+          8.30459976196289,
+          1.1967700719833374
+        ]
+      },
+      "center": [
+        -0.0052349865436553955,
+        7.474799871444702,
+        0.29673853516578674
+      ],
+      "anchor": [
+        -0.006699590012431145,
+        7.463000297546387,
+        0.28210097551345825
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1730",
+          "sha256": "7acd4a30d13b409221aea7267ae302ef7c100162a6185d891c91843ec876dd79"
+        },
+        {
+          "file": "FJ1731",
+          "sha256": "b56e1cd574977821f5331174a31a830ec6a477e2c6c3f32667f7e46a6716eae8"
+        },
+        {
+          "file": "FJ1732",
+          "sha256": "661e99ae245f0392bd7bfd63aa65074f61fb47e9c35641310f1804c9973acb9a"
+        },
+        {
+          "file": "FJ1733",
+          "sha256": "4f154c33e0c43d68d75aaec659b9a6f65ca42ef4b8ea6462a4482e2178b92a0f"
+        },
+        {
+          "file": "FJ1738",
+          "sha256": "089159be9815563e0645e5a28e7302fbc0bc842af760ac886bf3d0542f34a8f3"
+        },
+        {
+          "file": "FJ1739",
+          "sha256": "26feea54a830b6cf523926e9a50f64935591d30206511f2804cfe79bed423d11"
+        },
+        {
+          "file": "FJ1740",
+          "sha256": "deb04b668a1aa817aa01472ab0191add32393a1bdba518b19d5c8f29431d136f"
+        },
+        {
+          "file": "FJ1743",
+          "sha256": "e2c529932bb78ebae41cbc82496dcfe512f15455b6d806783e019444d10b2eae"
+        },
+        {
+          "file": "FJ1744",
+          "sha256": "055774da0ba432560fb8e65b2b474ddaf5ac1a683f5b4fbcc1e8cac6e9536c25"
+        },
+        {
+          "file": "FJ1745",
+          "sha256": "6210acb1780932a25c00b2f4cbdf5ab28cd9ed95eef46ef792ab3647a42c1b47"
+        },
+        {
+          "file": "FJ1746",
+          "sha256": "4be36eec071bfe6d1878acfa535e74dbf91c773c351dea9bc9a4704e3db3fe2e"
+        },
+        {
+          "file": "FJ1747",
+          "sha256": "0e04dea5d156768ae580670b771197c882d9b652132358ef6197ae3f823640f6"
+        },
+        {
+          "file": "FJ1748",
+          "sha256": "deca1e77a904006224aa6cc34e3710c8d963d1fc89e474ac42258e1f2f3315fd"
+        },
+        {
+          "file": "FJ1749",
+          "sha256": "564190a0427db7acf0b27dc124673d028ff99c3dbd0aaa54ec0c236ee3baf754"
+        },
+        {
+          "file": "FJ1750",
+          "sha256": "ac3d98925d313c0db553ec22a26c20520657f3d9f78c07b0b3cc6d72c5837e93"
+        },
+        {
+          "file": "FJ1751",
+          "sha256": "8f66e76ffc8bccc07a7fb14e49441bc061e23ba1251571439b8197f82acd50df"
+        },
+        {
+          "file": "FJ1758",
+          "sha256": "017e0c54769998fa71f65b60918a6f721bbc723e441bc22ea580284567e708a2"
+        },
+        {
+          "file": "FJ1759",
+          "sha256": "f64b3cea9f760a352cb8981f6cb577700a66392d8a8395ffb45dfebdccee7344"
+        },
+        {
+          "file": "FJ1760",
+          "sha256": "cc6db16b990c3fa607ef64f6c0482fd05cb986213d011da9641ccf50182af897"
+        },
+        {
+          "file": "FJ1762",
+          "sha256": "64a455fe3ae2f5adc06be7b407e50116f56102f9036a4eea3b6f6b7dae4b3b84"
+        },
+        {
+          "file": "FJ1767",
+          "sha256": "17b278c20399a85a9d373ba6a934f9fe61901dd9c9480107baaef2b513f22ee3"
+        },
+        {
+          "file": "FJ1769",
+          "sha256": "ab318e2ca0b27656d06edb4a3d3315669c70d7625989a3573fa66a0e586c6afc"
+        },
+        {
+          "file": "FJ1770",
+          "sha256": "727a267ac80375fd0769bf92067d88adac02aa80220a3099cd530b32ddd88a5b"
+        },
+        {
+          "file": "FJ1775",
+          "sha256": "caecdd922b67fa47e0219e2e7ae05e3efd986a2c869cf57b77ded1c615d1bfc9"
+        },
+        {
+          "file": "FJ1779",
+          "sha256": "0fa8374655959d8e815c2d95105b3471d91a86fb9aa959d37522cab85c46c528"
+        },
+        {
+          "file": "FJ1780",
+          "sha256": "dc2212c4c0c7c9e00375a7bcb24014938f45e15b068df36f6247df0cdb301881"
+        },
+        {
+          "file": "FJ1781",
+          "sha256": "6f66f4912c7519ea6a018324ef4f6d46eb266350574d05a905afeb2c88c575ed"
+        },
+        {
+          "file": "FJ1783",
+          "sha256": "2ea98ec904ba5de8229ed9aeff99c1b34f4030a080e758bdd063f8cc7e92d5f3"
+        },
+        {
+          "file": "FJ1784",
+          "sha256": "b6e11d4565f77ca8c0b815540a6a7cc77f48616f81263cb6352c183cdbd0f1da"
+        },
+        {
+          "file": "FJ1785",
+          "sha256": "87db9ae2691ad71d47210ad27a8d56353fb3e9400f68f1b1350f59cfdf4880b4"
+        },
+        {
+          "file": "FJ1786",
+          "sha256": "9f4a8e120131ee6041a48635c3b6dc74cac8d6dcd50e80ef38b2aec56a66ce38"
+        },
+        {
+          "file": "FJ1787",
+          "sha256": "9bc4568f6633e999f98ba932ac18608251aa36d689433fbbb536f72d6c4d3d6d"
+        },
+        {
+          "file": "FJ1788",
+          "sha256": "e72da8ed193cd1b514207a4056bfb41fef1fabd548090dcc4cd5108ded280fa8"
+        },
+        {
+          "file": "FJ1789",
+          "sha256": "4985721171ebf94eb7607822073dba045e42bec2428982a7befa96204b4b4c1a"
+        },
+        {
+          "file": "FJ1790",
+          "sha256": "47b2ce1a7536c8dccaeba6e14139475ce65805b2d0af6036cda4db18aabe4559"
+        },
+        {
+          "file": "FJ1791",
+          "sha256": "b8f2b6ac30aaf72f9ef0e7c00892edd7d4b27b1a6589971d25c973a8894e09f2"
+        },
+        {
+          "file": "FJ1792",
+          "sha256": "860b8fd92e2fae9dd28f782c88170fb591d00b3154da78b57098ff5119692d96"
+        },
+        {
+          "file": "FJ1795",
+          "sha256": "e3f5a0e1d1ebdf8a97329d1e71904f18d70e40038f89eb1990eb8a1f086dfc36"
+        },
+        {
+          "file": "FJ1797",
+          "sha256": "030dbec5dbfc8f29059727f18f867e962fc5debfeea4cab45883edc2c996ec6b"
+        },
+        {
+          "file": "FJ1798",
+          "sha256": "a7c633819d776ef3610be33e0c2ddf47e7da39b6da476b7876418f8245f27c25"
+        },
+        {
+          "file": "FJ1800",
+          "sha256": "34c447cb8bf5e98493cfe52911af1fa9ebd0eaf32c7c5578457666575f5d8cc0"
+        },
+        {
+          "file": "FJ1801",
+          "sha256": "f8ddd0851486a930ef02ff586badabd34cbcf31b034dd7b5ad1b6466f12d28c3"
+        },
+        {
+          "file": "FJ1806",
+          "sha256": "1581396feaf5a2afee55eac865273c126dd0862ef64e756b189b97f85bc898b5"
+        },
+        {
+          "file": "FJ1807",
+          "sha256": "6ae0c7024c63059599eedabc36fe4650e5979d99ca7d8f9b8bd2389c89d6c5a4"
+        },
+        {
+          "file": "FJ1808",
+          "sha256": "9e6fe3664aa909ce2d26683de807b627b076a1e68906f4bf4ffc59cf984e4bc4"
+        },
+        {
+          "file": "FJ1810",
+          "sha256": "3102a4f96ff71fc9c1e9686ca5e7aefe2e48bb15b3df9c731bde44f9a3dc553c"
+        },
+        {
+          "file": "FJ1814",
+          "sha256": "38ca1d48bc0518256be6ee7a947169f24a402e91a49dde23bced70fc59a6a5d3"
+        },
+        {
+          "file": "FJ1817",
+          "sha256": "b05b314182e27a015072a39847bd750a7c0899962d7d6357541cedf1358f05db"
+        },
+        {
+          "file": "FJ1822",
+          "sha256": "bbe90f2e0a971bdbde65b9da78b3dff921ed92d2de4bfb81b9629b920d41d7de"
+        },
+        {
+          "file": "FJ1826",
+          "sha256": "c468ce1835bf10dbc68f7351a99a788731418bc29b83a3ec2af6135766a69d69"
+        },
+        {
+          "file": "FJ1828",
+          "sha256": "14f9e2dbd68f455314424315b049df5a1a84c248d4c56895b8f8ab426cc40a66"
+        },
+        {
+          "file": "FJ1830",
+          "sha256": "d35574d86994e5e49e0e1ee41174a927c666735d7eb7b9cbdae2a709ae4a0bb9"
+        },
+        {
+          "file": "FJ1831",
+          "sha256": "dccbbe50f38efa0e95660b6b99ffe1e16a2baf37a29e0200d697446f5299c476"
+        },
+        {
+          "file": "FJ1833",
+          "sha256": "8f4548f67acff09574bc46bfc9c78c31ad8d4f16a34cfe28b95e19b640d2208c"
+        },
+        {
+          "file": "FJ1834",
+          "sha256": "9a52d502e5af633cb6d1cae76e5e9230e60f78ee987982c23b02776fd3adc9ea"
+        },
+        {
+          "file": "FJ1835",
+          "sha256": "d8c6c241f6e98a6b8bfa9cd97943173d18a91251a66029d9a5681fc09f691be4"
+        },
+        {
+          "file": "FJ1836",
+          "sha256": "367b62ae6f27730d3587f4776ad948ad114f9182be35e776faf7aa576d97ae41"
+        },
+        {
+          "file": "FJ1841",
+          "sha256": "473636ae8d030582d4d7a76d6fa93d2fc785a415060411fe9b93ce63738ee2bf"
+        },
+        {
+          "file": "FJ1842",
+          "sha256": "dd46c1ccde03f979fb0e23071ab5816d7a4bda05776b66604e784f735127c0c2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "fmaId": "FMA12514",
+      "name": "Right eyeball",
+      "sourceName": "right eyeball",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "eye-corrected-parent",
+      "nodeName": "FMA12514",
+      "bounds": {
+        "min": [
+          -0.436180979013443,
+          7.049599647521973,
+          0.8882899284362793
+        ],
+        "max": [
+          -0.17298001050949097,
+          7.311899185180664,
+          1.1605099439620972
+        ]
+      },
+      "center": [
+        -0.304580494761467,
+        7.180749416351318,
+        1.0243999361991882
+      ],
+      "anchor": [
+        -0.310016006231308,
+        7.178900241851807,
+        1.0682499408721924
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1336",
+          "sha256": "518f78b01de0273ea1cdd6152f2215f9432f2ce00ac2164cea8aa3a420cd897c"
+        },
+        {
+          "file": "FJ1337",
+          "sha256": "db3077437828f311b6afa07dc9dc7a27ab0e005ddce62570420c61af31643f22"
+        },
+        {
+          "file": "FJ1340",
+          "sha256": "20cc1b1156cd9fdebd96d8a7710ff3d6d6fc9fef79b7173ef41491e2b6e650a3"
+        },
+        {
+          "file": "FJ1348",
+          "sha256": "1120c896903582ef7349b5be68a03bfb215def235851a82b1f1f44cfe212ad9e"
+        },
+        {
+          "file": "FJ1356",
+          "sha256": "767e9107cf299b87729c9eb921a2ede22d3bfd03ae7027b6fb88631c1a0ec150"
+        },
+        {
+          "file": "FJ1368",
+          "sha256": "6fce2e1842730573a8d1360a88a9512b2ee5fe0ebe55e669cd265601da663b49"
+        },
+        {
+          "file": "FJ1371",
+          "sha256": "8dc5ab248fc952170f9057aaf4bbd2339d9ee4c30b40b32ce793e54b22706738"
+        },
+        {
+          "file": "FJ1382",
+          "sha256": "de22335a9c3ad8036e0651eb09aa975e15151bb5ac6e3d142cf8260204fa633f"
+        }
+      ],
+      "coverageNote": "Source-derived right eyeball with 36 exact disconnected opposite-side triangles suppressed. All retained source surfaces are unchanged in position; anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+      "fmaId": "FMA12515",
+      "name": "Left eyeball",
+      "sourceName": "left eyeball",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-organs-recovery",
+      "nodeName": "FMA12515",
+      "bounds": {
+        "min": [
+          0.1598919928073883,
+          7.049599647521973,
+          0.8882899284362793
+        ],
+        "max": [
+          0.4231039881706238,
+          7.311899185180664,
+          1.1604899168014526
+        ]
+      },
+      "center": [
+        0.29149799048900604,
+        7.180749416351318,
+        1.024389922618866
+      ],
+      "anchor": [
+        0.2958019971847534,
+        7.178399562835693,
+        1.068350076675415
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1282",
+          "sha256": "c66ed172ed90448e3e9508f21b116f319cfd1036cb7281e2f3541ede5f2adb1f"
+        },
+        {
+          "file": "FJ1285",
+          "sha256": "dd7677f804c1c370a2c6d11966877934efa9ca09c6b100e18f06fd4508ccbbb6"
+        },
+        {
+          "file": "FJ1286",
+          "sha256": "ba4e6f7156124700b63d526a882933b35b89fa0e9fd53495964d57aa5de1c989"
+        },
+        {
+          "file": "FJ1289",
+          "sha256": "6edadfa812d834f5b90d17d427baa0c6688a4cc32856c2b8c6320907bbc05150"
+        },
+        {
+          "file": "FJ1297",
+          "sha256": "e9359237794eef61117f1c12a6822dafdd0cfc70ada8d2447e3d26d4fcda9bd7"
+        },
+        {
+          "file": "FJ1305",
+          "sha256": "a2b7f9b53dd2d14a352dfa0d3e01452031a2957aae62aa7c904d7c1d1922954c"
+        },
+        {
+          "file": "FJ1317",
+          "sha256": "81a184bd0d3d8602af3c2186405a16565bcabd0d305fcbad7e02b979335d9582"
+        },
+        {
+          "file": "FJ1320",
+          "sha256": "a73a8e48e83cd65e15eda97533b59cac7f3f687a7b117e587bc561bf4f7b50a1"
+        },
+        {
+          "file": "FJ1331",
+          "sha256": "417bc91c6719b2982cb60640058ddcce9f50ecfb5a20db02393f2cf7bad82a0b"
+        }
+      ],
+      "coverageNote": "Compound eyeball surface. Internal components are grouped, not an independently reviewed ocular-layer dissection.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "bindings": [
+    {
+      "conceptId": "ventricular-lateral",
+      "study": "ventricles",
+      "sourceHash": "e99326a0fd0b0bdc0a64d2a1adbb7a63c758af6f765199b8febe851e62b9eab1",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:left:space:left-lateral-ventricle",
+        "fmaId": "FMA78450",
+        "name": "Left lateral ventricle",
+        "sourceName": "left lateral ventricle",
+        "system": "nerves",
+        "category": "space",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "ventricles",
+        "nodeName": "FMA78450",
+        "bounds": {
+          "min": [
+            -0.004472049884498119,
+            7.3031005859375,
+            -0.3239060044288635
+          ],
+          "max": [
+            0.38097500801086426,
+            7.793399810791016,
+            0.7694000005722046
+          ]
+        },
+        "center": [
+          0.18825147906318307,
+          7.548250198364258,
+          0.22274699807167053
+        ],
+        "anchor": [
+          0.17605899274349213,
+          7.580400466918945,
+          0.15507201850414276
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1767",
+            "sha256": "17b278c20399a85a9d373ba6a934f9fe61901dd9c9480107baaef2b513f22ee3"
+          }
+        ],
+        "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "coverageNote": "Existing brain source space representation, not solid brain tissue, an acquired scan, or validated patient segmentation. Fine channels and apertures are not independently segmented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "ventricular-lateral",
+      "study": "ventricles",
+      "sourceHash": "e99326a0fd0b0bdc0a64d2a1adbb7a63c758af6f765199b8febe851e62b9eab1",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:space:right-lateral-ventricle",
+        "fmaId": "FMA78449",
+        "name": "Right lateral ventricle",
+        "sourceName": "right lateral ventricle",
+        "system": "nerves",
+        "category": "space",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "ventricles",
+        "nodeName": "FMA78449",
+        "bounds": {
+          "min": [
+            -0.3940579891204834,
+            7.3031005859375,
+            -0.32392799854278564
+          ],
+          "max": [
+            -0.008513479493558407,
+            7.793399810791016,
+            0.7694000005722046
+          ]
+        },
+        "center": [
+          -0.2012857343070209,
+          7.548250198364258,
+          0.22273600101470947
+        ],
+        "anchor": [
+          -0.1865379959344864,
+          7.581700325012207,
+          0.15631896257400513
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1814",
+            "sha256": "38ca1d48bc0518256be6ee7a947169f24a402e91a49dde23bced70fc59a6a5d3"
+          }
+        ],
+        "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "coverageNote": "Existing brain source space representation, not solid brain tissue, an acquired scan, or validated patient segmentation. Fine channels and apertures are not independently segmented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "ventricular-third",
+      "study": "ventricles",
+      "sourceHash": "e99326a0fd0b0bdc0a64d2a1adbb7a63c758af6f765199b8febe851e62b9eab1",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:midline:space:third-ventricle",
+        "fmaId": "FMA78454",
+        "name": "Third ventricle",
+        "sourceName": "third ventricle",
+        "system": "nerves",
+        "category": "space",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "ventricles",
+        "nodeName": "FMA78454",
+        "bounds": {
+          "min": [
+            -0.045600999146699905,
+            7.375799655914307,
+            0.15049895644187927
+          ],
+          "max": [
+            0.032051898539066315,
+            7.606899261474609,
+            0.5515499711036682
+          ]
+        },
+        "center": [
+          -0.006774550303816795,
+          7.491349458694458,
+          0.35102446377277374
+        ],
+        "anchor": [
+          -0.04043180122971535,
+          7.48900032043457,
+          0.35658401250839233
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1730",
+            "sha256": "7acd4a30d13b409221aea7267ae302ef7c100162a6185d891c91843ec876dd79"
+          }
+        ],
+        "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "coverageNote": "Existing brain source space representation, not solid brain tissue, an acquired scan, or validated patient segmentation. Fine channels and apertures are not independently segmented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "ventricular-fourth",
+      "study": "ventricles",
+      "sourceHash": "e99326a0fd0b0bdc0a64d2a1adbb7a63c758af6f765199b8febe851e62b9eab1",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:midline:space:fourth-ventricle",
+        "fmaId": "FMA78469",
+        "name": "Fourth ventricle",
+        "sourceName": "fourth ventricle",
+        "system": "nerves",
+        "category": "space",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "ventricles",
+        "nodeName": "FMA78469",
+        "bounds": {
+          "min": [
+            -0.1479090005159378,
+            6.911099910736084,
+            0.013202019035816193
+          ],
+          "max": [
+            0.13481999933719635,
+            7.288399696350098,
+            0.247731015086174
+          ]
+        },
+        "center": [
+          -0.0065445005893707275,
+          7.099749803543091,
+          0.1304665170609951
+        ],
+        "anchor": [
+          -0.010083700530230999,
+          7.094699859619141,
+          0.1390010118484497
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1731",
+            "sha256": "b56e1cd574977821f5331174a31a830ec6a477e2c6c3f32667f7e46a6716eae8"
+          }
+        ],
+        "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "coverageNote": "Existing brain source space representation, not solid brain tissue, an acquired scan, or validated patient segmentation. Fine channels and apertures are not independently segmented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "brainstem-midbrain",
+      "study": "brainstem",
+      "sourceHash": "fd1d8d04656a300fe0e8271a418ec0807b227baa96d6afa822d0df6ad0bf72ba",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:midbrain",
+        "fmaId": "FMA61993",
+        "name": "Midbrain",
+        "sourceName": "midbrain",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "brainstem",
+        "nodeName": "FMA61993",
+        "bounds": {
+          "min": [
+            -0.153221994638443,
+            7.284899711608887,
+            0.1658090204000473
+          ],
+          "max": [
+            0.14011099934577942,
+            7.463599681854248,
+            0.4595169723033905
+          ]
+        },
+        "center": [
+          -0.006555497646331787,
+          7.374249696731567,
+          0.3126629963517189
+        ],
+        "anchor": [
+          -0.006551919970661402,
+          7.383800029754639,
+          0.2678090035915375
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1738",
+            "sha256": "089159be9815563e0645e5a28e7302fbc0bc842af760ac886bf3d0542f34a8f3"
+          },
+          {
+            "file": "FJ1762",
+            "sha256": "64a455fe3ae2f5adc06be7b407e50116f56102f9036a4eea3b6f6b7dae4b3b84"
+          },
+          {
+            "file": "FJ1770",
+            "sha256": "727a267ac80375fd0769bf92067d88adac02aa80220a3099cd530b32ddd88a5b"
+          },
+          {
+            "file": "FJ1779",
+            "sha256": "0fa8374655959d8e815c2d95105b3471d91a86fb9aa959d37522cab85c46c528"
+          },
+          {
+            "file": "FJ1810",
+            "sha256": "3102a4f96ff71fc9c1e9686ca5e7aefe2e48bb15b3df9c731bde44f9a3dc553c"
+          },
+          {
+            "file": "FJ1817",
+            "sha256": "b05b314182e27a015072a39847bd750a7c0899962d7d6357541cedf1358f05db"
+          },
+          {
+            "file": "FJ1826",
+            "sha256": "c468ce1835bf10dbc68f7351a99a788731418bc29b83a3ec2af6135766a69d69"
+          }
+        ],
+        "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "coverageNote": "Complete source-table compound from the existing brain, not proof of anatomical completeness. Internal nuclei, pathways and cerebellar lobules are not separately selectable. Original pons source remnants are retained.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "brainstem-pons",
+      "study": "brainstem",
+      "sourceHash": "fd1d8d04656a300fe0e8271a418ec0807b227baa96d6afa822d0df6ad0bf72ba",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:pons",
+        "fmaId": "FMA67943",
+        "name": "Pons",
+        "sourceName": "pons",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "brainstem",
+        "nodeName": "FMA67943",
+        "bounds": {
+          "min": [
+            -0.21750499308109283,
+            7.020699501037598,
+            0.12580600380897522
+          ],
+          "max": [
+            0.20446600019931793,
+            7.306899547576904,
+            0.4698660373687744
+          ]
+        },
+        "center": [
+          -0.006519496440887451,
+          7.163799524307251,
+          0.2978360205888748
+        ],
+        "anchor": [
+          -0.006486260332167149,
+          7.164699554443359,
+          0.23365096747875214
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1775",
+            "sha256": "caecdd922b67fa47e0219e2e7ae05e3efd986a2c869cf57b77ded1c615d1bfc9"
+          },
+          {
+            "file": "FJ1822",
+            "sha256": "bbe90f2e0a971bdbde65b9da78b3dff921ed92d2de4bfb81b9629b920d41d7de"
+          }
+        ],
+        "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "coverageNote": "Complete source-table compound from the existing brain, not proof of anatomical completeness. Internal nuclei, pathways and cerebellar lobules are not separately selectable. Original pons source remnants are retained.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "brainstem-medulla",
+      "study": "brainstem",
+      "sourceHash": "fd1d8d04656a300fe0e8271a418ec0807b227baa96d6afa822d0df6ad0bf72ba",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:medulla-oblongata",
+        "fmaId": "FMA62004",
+        "name": "Medulla oblongata",
+        "sourceName": "medulla oblongata",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "brainstem",
+        "nodeName": "FMA62004",
+        "bounds": {
+          "min": [
+            -0.14020399749279022,
+            6.644999980926514,
+            0.012391014024615288
+          ],
+          "max": [
+            0.12713100016117096,
+            7.05780029296875,
+            0.3443949818611145
+          ]
+        },
+        "center": [
+          -0.006536498665809631,
+          6.851400136947632,
+          0.1783929979428649
+        ],
+        "anchor": [
+          -0.006592209916561842,
+          6.833199501037598,
+          0.19328200817108154
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1769",
+            "sha256": "ab318e2ca0b27656d06edb4a3d3315669c70d7625989a3573fa66a0e586c6afc"
+          },
+          {
+            "file": "FJ1831",
+            "sha256": "dccbbe50f38efa0e95660b6b99ffe1e16a2baf37a29e0200d697446f5299c476"
+          }
+        ],
+        "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "coverageNote": "Complete source-table compound from the existing brain, not proof of anatomical completeness. Internal nuclei, pathways and cerebellar lobules are not separately selectable. Original pons source remnants are retained.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "brainstem-cerebellum",
+      "study": "brainstem",
+      "sourceHash": "fd1d8d04656a300fe0e8271a418ec0807b227baa96d6afa822d0df6ad0bf72ba",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:cerebellum",
+        "fmaId": "FMA67944",
+        "name": "Cerebellum",
+        "sourceName": "cerebellum",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "brainstem",
+        "nodeName": "FMA67944",
+        "bounds": {
+          "min": [
+            -0.5392990112304688,
+            6.872399806976318,
+            -0.37825700640678406
+          ],
+          "max": [
+            0.5260990262031555,
+            7.405099868774414,
+            0.18466103076934814
+          ]
+        },
+        "center": [
+          -0.006599992513656616,
+          7.138749837875366,
+          -0.09679798781871796
+        ],
+        "anchor": [
+          -0.006841380149126053,
+          7.114499568939209,
+          -0.09076900780200958
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1781",
+            "sha256": "6f66f4912c7519ea6a018324ef4f6d46eb266350574d05a905afeb2c88c575ed"
+          },
+          {
+            "file": "FJ1830",
+            "sha256": "d35574d86994e5e49e0e1ee41174a927c666735d7eb7b9cbdae2a709ae4a0bb9"
+          }
+        ],
+        "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "coverageNote": "Complete source-table compound from the existing brain, not proof of anatomical completeness. Internal nuclei, pathways and cerebellar lobules are not separately selectable. Original pons source remnants are retained.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "cerebral-frontal",
+      "study": "cerebral",
+      "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-frontal-lobe",
+        "fmaId": "FMA72970",
+        "name": "Left frontal lobe",
+        "sourceName": "left frontal lobe",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "group": "frontal",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cerebral",
+        "nodeName": "FMA72970",
+        "bounds": {
+          "min": [
+            0.0019045899389311671,
+            7.469000339508057,
+            -0.10727401822805405
+          ],
+          "max": [
+            0.628853976726532,
+            8.30459976196289,
+            1.1967700719833374
+          ]
+        },
+        "center": [
+          0.3153792833327316,
+          7.886800050735474,
+          0.5447480268776417
+        ],
+        "anchor": [
+          0.2934059798717499,
+          7.898499965667725,
+          0.5494700074195862
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1744",
+            "sha256": "055774da0ba432560fb8e65b2b474ddaf5ac1a683f5b4fbcc1e8cac6e9536c25"
+          },
+          {
+            "file": "FJ1787",
+            "sha256": "9bc4568f6633e999f98ba932ac18608251aa36d689433fbbb536f72d6c4d3d6d"
+          },
+          {
+            "file": "FJ1800",
+            "sha256": "34c447cb8bf5e98493cfe52911af1fa9ebd0eaf32c7c5578457666575f5d8cc0"
+          },
+          {
+            "file": "FJ1833",
+            "sha256": "8f4548f67acff09574bc46bfc9c78c31ad8d4f16a34cfe28b95e19b640d2208c"
+          }
+        ],
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "parent-component",
+        "coverageNote": "All members of the official PART-OF definition, not complete anatomical coverage. Superior temporal source subdivisions are separate additions. Detached frontal fragments are retained; no filled-in cortex is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "cerebral-frontal",
+      "study": "cerebral",
+      "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-frontal-lobe",
+        "fmaId": "FMA72969",
+        "name": "Right frontal lobe",
+        "sourceName": "right frontal lobe",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "group": "frontal",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cerebral",
+        "nodeName": "FMA72969",
+        "bounds": {
+          "min": [
+            -0.6415089964866638,
+            7.464799880981445,
+            -0.1065409854054451
+          ],
+          "max": [
+            -0.015545099973678589,
+            8.304200172424316,
+            1.1966900825500488
+          ]
+        },
+        "center": [
+          -0.3285270482301712,
+          7.884500026702881,
+          0.5450745485723019
+        ],
+        "anchor": [
+          -0.33552199602127075,
+          7.87030029296875,
+          0.5550199747085571
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1745",
+            "sha256": "6210acb1780932a25c00b2f4cbdf5ab28cd9ed95eef46ef792ab3647a42c1b47"
+          },
+          {
+            "file": "FJ1788",
+            "sha256": "e72da8ed193cd1b514207a4056bfb41fef1fabd548090dcc4cd5108ded280fa8"
+          },
+          {
+            "file": "FJ1801",
+            "sha256": "f8ddd0851486a930ef02ff586badabd34cbcf31b034dd7b5ad1b6466f12d28c3"
+          },
+          {
+            "file": "FJ1834",
+            "sha256": "9a52d502e5af633cb6d1cae76e5e9230e60f78ee987982c23b02776fd3adc9ea"
+          }
+        ],
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "parent-component",
+        "coverageNote": "All members of the official PART-OF definition, not complete anatomical coverage. Superior temporal source subdivisions are separate additions. Detached frontal fragments are retained; no filled-in cortex is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "cerebral-parietal",
+      "study": "cerebral",
+      "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-parietal-lobe",
+        "fmaId": "FMA72974",
+        "name": "Left parietal lobe",
+        "sourceName": "left parietal lobe",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "group": "parietal",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cerebral",
+        "nodeName": "FMA72974",
+        "bounds": {
+          "min": [
+            0.001833299989812076,
+            7.392900466918945,
+            -0.563048779964447
+          ],
+          "max": [
+            0.6878629922866821,
+            8.236800193786621,
+            0.37916702032089233
+          ]
+        },
+        "center": [
+          0.3448481461382471,
+          7.814850330352783,
+          -0.09194087982177734
+        ],
+        "anchor": [
+          0.3531480133533478,
+          7.854499340057373,
+          -0.08768600225448608
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1732",
+            "sha256": "661e99ae245f0392bd7bfd63aa65074f61fb47e9c35641310f1804c9973acb9a"
+          },
+          {
+            "file": "FJ1797",
+            "sha256": "030dbec5dbfc8f29059727f18f867e962fc5debfeea4cab45883edc2c996ec6b"
+          },
+          {
+            "file": "FJ1835",
+            "sha256": "d8c6c241f6e98a6b8bfa9cd97943173d18a91251a66029d9a5681fc09f691be4"
+          },
+          {
+            "file": "FJ1841",
+            "sha256": "473636ae8d030582d4d7a76d6fa93d2fc785a415060411fe9b93ce63738ee2bf"
+          }
+        ],
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "parent-component",
+        "coverageNote": "All members of the official PART-OF definition, not complete anatomical coverage. Superior temporal source subdivisions are separate additions. Detached frontal fragments are retained; no filled-in cortex is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "cerebral-parietal",
+      "study": "cerebral",
+      "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-parietal-lobe",
+        "fmaId": "FMA72973",
+        "name": "Right parietal lobe",
+        "sourceName": "right parietal lobe",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "group": "parietal",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cerebral",
+        "nodeName": "FMA72973",
+        "bounds": {
+          "min": [
+            -0.697052001953125,
+            7.393899917602539,
+            -0.5645769834518433
+          ],
+          "max": [
+            -0.01445470005273819,
+            8.236899375915527,
+            0.3776789903640747
+          ]
+        },
+        "center": [
+          -0.3557533510029316,
+          7.815399646759033,
+          -0.09344899654388428
+        ],
+        "anchor": [
+          -0.34381401538848877,
+          7.836899280548096,
+          -0.08225200325250626
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1733",
+            "sha256": "4f154c33e0c43d68d75aaec659b9a6f65ca42ef4b8ea6462a4482e2178b92a0f"
+          },
+          {
+            "file": "FJ1798",
+            "sha256": "a7c633819d776ef3610be33e0c2ddf47e7da39b6da476b7876418f8245f27c25"
+          },
+          {
+            "file": "FJ1836",
+            "sha256": "367b62ae6f27730d3587f4776ad948ad114f9182be35e776faf7aa576d97ae41"
+          },
+          {
+            "file": "FJ1842",
+            "sha256": "dd46c1ccde03f979fb0e23071ab5816d7a4bda05776b66604e784f735127c0c2"
+          }
+        ],
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "parent-component",
+        "coverageNote": "All members of the official PART-OF definition, not complete anatomical coverage. Superior temporal source subdivisions are separate additions. Detached frontal fragments are retained; no filled-in cortex is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "cerebral-temporal",
+      "study": "cerebral",
+      "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-temporal-lobe",
+        "fmaId": "FMA72972",
+        "name": "Left temporal lobe",
+        "sourceName": "left temporal lobe",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "group": "temporal",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cerebral",
+        "nodeName": "FMA72972",
+        "bounds": {
+          "min": [
+            0.0893218070268631,
+            7.135000228881836,
+            -0.3600670099258423
+          ],
+          "max": [
+            0.6889340281486511,
+            7.558499813079834,
+            0.7495400309562683
+          ]
+        },
+        "center": [
+          0.3891279175877571,
+          7.346750020980835,
+          0.194736510515213
+        ],
+        "anchor": [
+          0.38909801840782166,
+          7.356800556182861,
+          0.20867203176021576
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1746",
+            "sha256": "4be36eec071bfe6d1878acfa535e74dbf91c773c351dea9bc9a4704e3db3fe2e"
+          },
+          {
+            "file": "FJ1783",
+            "sha256": "2ea98ec904ba5de8229ed9aeff99c1b34f4030a080e758bdd063f8cc7e92d5f3"
+          },
+          {
+            "file": "FJ1785",
+            "sha256": "87db9ae2691ad71d47210ad27a8d56353fb3e9400f68f1b1350f59cfdf4880b4"
+          },
+          {
+            "file": "FJ1789",
+            "sha256": "4985721171ebf94eb7607822073dba045e42bec2428982a7befa96204b4b4c1a"
+          }
+        ],
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "parent-component",
+        "coverageNote": "All members of the official PART-OF definition, not complete anatomical coverage. Superior temporal source subdivisions are separate additions. Detached frontal fragments are retained; no filled-in cortex is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "cerebral-temporal",
+      "study": "cerebral",
+      "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-temporal-lobe",
+        "fmaId": "FMA72971",
+        "name": "Right temporal lobe",
+        "sourceName": "right temporal lobe",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "group": "temporal",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cerebral",
+        "nodeName": "FMA72971",
+        "bounds": {
+          "min": [
+            -0.6994040012359619,
+            7.135500431060791,
+            -0.35706400871276855
+          ],
+          "max": [
+            -0.10180199891328812,
+            7.556999683380127,
+            0.7495200634002686
+          ]
+        },
+        "center": [
+          -0.400603000074625,
+          7.346250057220459,
+          0.19622802734375
+        ],
+        "anchor": [
+          -0.41155102849006653,
+          7.345099925994873,
+          0.1852089762687683
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1747",
+            "sha256": "0e04dea5d156768ae580670b771197c882d9b652132358ef6197ae3f823640f6"
+          },
+          {
+            "file": "FJ1784",
+            "sha256": "b6e11d4565f77ca8c0b815540a6a7cc77f48616f81263cb6352c183cdbd0f1da"
+          },
+          {
+            "file": "FJ1786",
+            "sha256": "9f4a8e120131ee6041a48635c3b6dc74cac8d6dcd50e80ef38b2aec56a66ce38"
+          },
+          {
+            "file": "FJ1790",
+            "sha256": "47b2ce1a7536c8dccaeba6e14139475ce65805b2d0af6036cda4db18aabe4559"
+          }
+        ],
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "parent-component",
+        "coverageNote": "All members of the official PART-OF definition, not complete anatomical coverage. Superior temporal source subdivisions are separate additions. Detached frontal fragments are retained; no filled-in cortex is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "cerebral-occipital",
+      "study": "cerebral",
+      "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-occipital-lobe",
+        "fmaId": "FMA72976",
+        "name": "Left occipital lobe",
+        "sourceName": "left occipital lobe",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "group": "occipital",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cerebral",
+        "nodeName": "FMA72976",
+        "bounds": {
+          "min": [
+            0.0011104700388386846,
+            7.177800178527832,
+            -0.6032930016517639
+          ],
+          "max": [
+            0.4352700114250183,
+            7.7153000831604,
+            0.02932300604879856
+          ]
+        },
+        "center": [
+          0.2181902407319285,
+          7.446550130844116,
+          -0.2869849978014827
+        ],
+        "anchor": [
+          0.18708200752735138,
+          7.401999473571777,
+          -0.3214170038700104
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1791",
+            "sha256": "b8f2b6ac30aaf72f9ef0e7c00892edd7d4b27b1a6589971d25c973a8894e09f2"
+          }
+        ],
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "parent-component",
+        "coverageNote": "All members of the official PART-OF definition, not complete anatomical coverage. Superior temporal source subdivisions are separate additions. Detached frontal fragments are retained; no filled-in cortex is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "cerebral-occipital",
+      "study": "cerebral",
+      "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-occipital-lobe",
+        "fmaId": "FMA72975",
+        "name": "Right occipital lobe",
+        "sourceName": "right occipital lobe",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "group": "occipital",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cerebral",
+        "nodeName": "FMA72975",
+        "bounds": {
+          "min": [
+            -0.44824400544166565,
+            7.1774001121521,
+            -0.6026179790496826
+          ],
+          "max": [
+            -0.015561599284410477,
+            7.715600490570068,
+            0.02951500006020069
+          ]
+        },
+        "center": [
+          -0.23190280236303806,
+          7.446500301361084,
+          -0.28655148949474096
+        ],
+        "anchor": [
+          -0.20538300275802612,
+          7.398499965667725,
+          -0.317113995552063
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1792",
+            "sha256": "860b8fd92e2fae9dd28f782c88170fb591d00b3154da78b57098ff5119692d96"
+          }
+        ],
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "parent-component",
+        "coverageNote": "All members of the official PART-OF definition, not complete anatomical coverage. Superior temporal source subdivisions are separate additions. Detached frontal fragments are retained; no filled-in cortex is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "cerebral-insula",
+      "study": "cerebral",
+      "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-insula",
+        "fmaId": "FMA72978",
+        "name": "Left insula",
+        "sourceName": "left insula",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "group": "insula",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cerebral",
+        "nodeName": "FMA72978",
+        "bounds": {
+          "min": [
+            0.2501550018787384,
+            7.455300331115723,
+            0.2064170092344284
+          ],
+          "max": [
+            0.44279399514198303,
+            7.800999641418457,
+            0.7227100133895874
+          ]
+        },
+        "center": [
+          0.3464744985103607,
+          7.62814998626709,
+          0.4645635113120079
+        ],
+        "anchor": [
+          0.3325510025024414,
+          7.626800537109375,
+          0.46469002962112427
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1748",
+            "sha256": "deca1e77a904006224aa6cc34e3710c8d963d1fc89e474ac42258e1f2f3315fd"
+          }
+        ],
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "parent-component",
+        "coverageNote": "All members of the official PART-OF definition, not complete anatomical coverage. Superior temporal source subdivisions are separate additions. Detached frontal fragments are retained; no filled-in cortex is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "cerebral-insula",
+      "study": "cerebral",
+      "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-insula",
+        "fmaId": "FMA72977",
+        "name": "Right insula",
+        "sourceName": "right insula",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "group": "insula",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cerebral",
+        "nodeName": "FMA72977",
+        "bounds": {
+          "min": [
+            -0.455903023481369,
+            7.455799579620361,
+            0.20675399899482727
+          ],
+          "max": [
+            -0.26344600319862366,
+            7.800600528717041,
+            0.7242299914360046
+          ]
+        },
+        "center": [
+          -0.35967451333999634,
+          7.628200054168701,
+          0.46549199521541595
+        ],
+        "anchor": [
+          -0.34277400374412537,
+          7.641500473022461,
+          0.45652198791503906
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1749",
+            "sha256": "564190a0427db7acf0b27dc124673d028ff99c3dbd0aaa54ec0c236ee3baf754"
+          }
+        ],
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "parent-component",
+        "coverageNote": "All members of the official PART-OF definition, not complete anatomical coverage. Superior temporal source subdivisions are separate additions. Detached frontal fragments are retained; no filled-in cortex is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "cerebral-superior-temporal-anterior",
+      "study": "cerebral",
+      "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:left:organ:anterior-part-of-left-superior-temporal-gyrus",
+        "fmaId": "FMA72801",
+        "name": "Anterior part of left superior temporal gyrus",
+        "sourceName": "anterior part of left superior temporal gyrus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "group": "superior-temporal-anterior",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cerebral",
+        "nodeName": "FMA72801",
+        "bounds": {
+          "min": [
+            0.26637399196624756,
+            7.238000392913818,
+            0.04233001545071602
+          ],
+          "max": [
+            0.6241390109062195,
+            7.727499961853027,
+            0.7803399562835693
+          ]
+        },
+        "center": [
+          0.4452565014362335,
+          7.482750177383423,
+          0.4113349858671427
+        ],
+        "anchor": [
+          0.4226129949092865,
+          7.49709939956665,
+          0.41642600297927856
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1837",
+            "sha256": "2fb61c24b880e134ff2034558fa6abbfcbcd8506b0aca18ee2cc844fa6783de6"
+          }
+        ],
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "supplemental-source",
+        "coverageNote": "Additional official ISA source subdivision, absent from the original parent; not a validated complete superior temporal gyrus or functional territory.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "cerebral-superior-temporal-anterior",
+      "study": "cerebral",
+      "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:organ:anterior-part-of-right-superior-temporal-gyrus",
+        "fmaId": "FMA72800",
+        "name": "Anterior part of right superior temporal gyrus",
+        "sourceName": "anterior part of right superior temporal gyrus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "group": "superior-temporal-anterior",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cerebral",
+        "nodeName": "FMA72800",
+        "bounds": {
+          "min": [
+            -0.6360269784927368,
+            7.237900257110596,
+            0.04208599030971527
+          ],
+          "max": [
+            -0.28000500798225403,
+            7.727700233459473,
+            0.7808200120925903
+          ]
+        },
+        "center": [
+          -0.4580159932374954,
+          7.482800245285034,
+          0.4114530012011528
+        ],
+        "anchor": [
+          -0.4425690174102783,
+          7.495899677276611,
+          0.4255950152873993
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1838",
+            "sha256": "342678a0d5a35ca049870e95536c19b9d66915c7f636f0b738162e5db833746b"
+          }
+        ],
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "supplemental-source",
+        "coverageNote": "Additional official ISA source subdivision, absent from the original parent; not a validated complete superior temporal gyrus or functional territory.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "cerebral-superior-temporal-posterior",
+      "study": "cerebral",
+      "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:left:organ:posterior-part-of-left-superior-temporal-gyrus",
+        "fmaId": "FMA72805",
+        "name": "Posterior part of left superior temporal gyrus",
+        "sourceName": "posterior part of left superior temporal gyrus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "group": "superior-temporal-posterior",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cerebral",
+        "nodeName": "FMA72805",
+        "bounds": {
+          "min": [
+            0.37984901666641235,
+            7.339000225067139,
+            -0.2813190221786499
+          ],
+          "max": [
+            0.696986973285675,
+            7.729899883270264,
+            0.45583000779151917
+          ]
+        },
+        "center": [
+          0.5384179949760437,
+          7.534450054168701,
+          0.08725549280643463
+        ],
+        "anchor": [
+          0.522159993648529,
+          7.527500152587891,
+          0.07480999082326889
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1839",
+            "sha256": "a26f20cb2f22b373ea82a0ab8d8adc815d5e7ec81fd7ea93947c3322ce79ad77"
+          }
+        ],
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "supplemental-source",
+        "coverageNote": "Additional official ISA source subdivision, absent from the original parent; not a validated complete superior temporal gyrus or functional territory.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "cerebral-superior-temporal-posterior",
+      "study": "cerebral",
+      "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:organ:posterior-part-of-right-superior-temporal-gyrus",
+        "fmaId": "FMA72804",
+        "name": "Posterior part of right superior temporal gyrus",
+        "sourceName": "posterior part of right superior temporal gyrus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "group": "superior-temporal-posterior",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cerebral",
+        "nodeName": "FMA72804",
+        "bounds": {
+          "min": [
+            -0.711499035358429,
+            7.339300632476807,
+            -0.2827939987182617
+          ],
+          "max": [
+            -0.392985999584198,
+            7.728499889373779,
+            0.45608001947402954
+          ]
+        },
+        "center": [
+          -0.5522425174713135,
+          7.533900260925293,
+          0.08664301037788391
+        ],
+        "anchor": [
+          -0.5529449582099915,
+          7.543699741363525,
+          0.11431197822093964
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1840",
+            "sha256": "4d68654bdf8e258a8253decbd2f246d388f693b6b2a37f809ffcfdd4d4bc25f7"
+          }
+        ],
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "supplemental-source",
+        "coverageNote": "Additional official ISA source subdivision, absent from the original parent; not a validated complete superior temporal gyrus or functional territory.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "eye-cornea",
+      "study": "eye",
+      "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "parentHash": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-cornea",
+        "fmaId": "FMA58239",
+        "name": "Right cornea",
+        "sourceName": "right cornea",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "eye-layers",
+        "nodeName": "FMA58239",
+        "bounds": {
+          "min": [
+            -0.381509006023407,
+            7.1072998046875,
+            1.111549973487854
+          ],
+          "max": [
+            -0.24066899716854095,
+            7.248000621795654,
+            1.1605099439620972
+          ]
+        },
+        "center": [
+          -0.31108900159597397,
+          7.177650213241577,
+          1.1360299587249756
+        ],
+        "anchor": [
+          -0.3136190176010132,
+          7.176300048828125,
+          1.1517000198364258
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1340",
+            "sha256": "20cc1b1156cd9fdebd96d8a7710ff3d6d6fc9fef79b7173ef41491e2b6e650a3"
+          }
+        ],
+        "coverageNote": "Existing eyeball source component, independently selectable only in the eye-layer view. Anatomical and clinical validation pending; not a microscopic layer or patient segmentation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+        "kind": "cornea"
+      }
+    },
+    {
+      "conceptId": "eye-iris",
+      "study": "eye",
+      "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "parentHash": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-iris",
+        "fmaId": "FMA58236",
+        "name": "Right iris",
+        "sourceName": "right iris",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "eye-layers",
+        "nodeName": "FMA58236",
+        "bounds": {
+          "min": [
+            -0.3750379979610443,
+            7.113000392913818,
+            1.09621000289917
+          ],
+          "max": [
+            -0.24649100005626678,
+            7.241600513458252,
+            1.1269700527191162
+          ]
+        },
+        "center": [
+          -0.31076449900865555,
+          7.177300453186035,
+          1.111590027809143
+        ],
+        "anchor": [
+          -0.32148897647857666,
+          7.165999889373779,
+          1.1151700019836426
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1348",
+            "sha256": "1120c896903582ef7349b5be68a03bfb215def235851a82b1f1f44cfe212ad9e"
+          }
+        ],
+        "coverageNote": "Existing eyeball source component, independently selectable only in the eye-layer view. Anatomical and clinical validation pending; not a microscopic layer or patient segmentation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+        "kind": "iris"
+      }
+    },
+    {
+      "conceptId": "eye-lens",
+      "study": "eye",
+      "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "parentHash": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-lens",
+        "fmaId": "FMA58242",
+        "name": "Right lens",
+        "sourceName": "right lens",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "eye-layers",
+        "nodeName": "FMA58242",
+        "bounds": {
+          "min": [
+            -0.3609899878501892,
+            7.12660026550293,
+            1.068269968032837
+          ],
+          "max": [
+            -0.25795799493789673,
+            7.230999946594238,
+            1.115959882736206
+          ]
+        },
+        "center": [
+          -0.30947399139404297,
+          7.178800106048584,
+          1.0921149253845215
+        ],
+        "anchor": [
+          -0.31032800674438477,
+          7.177199840545654,
+          1.1157499551773071
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1356",
+            "sha256": "767e9107cf299b87729c9eb921a2ede22d3bfd03ae7027b6fb88631c1a0ec150"
+          }
+        ],
+        "coverageNote": "Existing eyeball source component, independently selectable only in the eye-layer view. Anatomical and clinical validation pending; not a microscopic layer or patient segmentation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+        "kind": "lens"
+      }
+    },
+    {
+      "conceptId": "eye-zonule",
+      "study": "eye",
+      "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "parentHash": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:ligament:suspensory-ligament-of-right-lens",
+        "fmaId": "FMA58839",
+        "name": "Suspensory ligament of right lens",
+        "sourceName": "suspensory ligament of right lens",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "eye-layers",
+        "nodeName": "FMA58839",
+        "bounds": {
+          "min": [
+            -0.3910129964351654,
+            7.096500396728516,
+            1.0851199626922607
+          ],
+          "max": [
+            -0.2277979999780655,
+            7.259799957275391,
+            1.1108099222183228
+          ]
+        },
+        "center": [
+          -0.30940549820661545,
+          7.178150177001953,
+          1.0979649424552917
+        ],
+        "anchor": [
+          -0.27844399213790894,
+          7.194399356842041,
+          1.1020199060440063
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1371",
+            "sha256": "8dc5ab248fc952170f9057aaf4bbd2339d9ee4c30b40b32ce793e54b22706738"
+          }
+        ],
+        "coverageNote": "Existing eyeball source component, independently selectable only in the eye-layer view. Anatomical and clinical validation pending; not a microscopic layer or patient segmentation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+        "kind": "zonule"
+      }
+    },
+    {
+      "conceptId": "eye-vitreous",
+      "study": "eye",
+      "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "parentHash": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-vitreous-body",
+        "fmaId": "FMA58828",
+        "name": "Right vitreous body",
+        "sourceName": "right vitreous body",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "eye-layers",
+        "nodeName": "FMA58828",
+        "bounds": {
+          "min": [
+            -0.40651100873947144,
+            7.079100131988525,
+            0.91798996925354
+          ],
+          "max": [
+            -0.2027280032634735,
+            7.281999588012695,
+            1.0950199365615845
+          ]
+        },
+        "center": [
+          -0.3046195060014725,
+          7.18054986000061,
+          1.0065049529075623
+        ],
+        "anchor": [
+          -0.310016006231308,
+          7.178900241851807,
+          1.0682499408721924
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1382",
+            "sha256": "de22335a9c3ad8036e0651eb09aa975e15151bb5ac6e3d142cf8260204fa633f"
+          }
+        ],
+        "coverageNote": "Existing eyeball source component, independently selectable only in the eye-layer view. Anatomical and clinical validation pending; not a microscopic layer or patient segmentation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+        "kind": "vitreous"
+      }
+    },
+    {
+      "conceptId": "eye-choroid",
+      "study": "eye",
+      "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "parentHash": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-choroid",
+        "fmaId": "FMA58299",
+        "name": "Right choroid",
+        "sourceName": "right choroid",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "eye-layers",
+        "nodeName": "FMA58299",
+        "bounds": {
+          "min": [
+            -0.4245489835739136,
+            7.061200141906738,
+            0.899940013885498
+          ],
+          "max": [
+            -0.18466800451278687,
+            7.30019998550415,
+            1.1239100694656372
+          ]
+        },
+        "center": [
+          -0.3046084940433502,
+          7.180700063705444,
+          1.0119250416755676
+        ],
+        "anchor": [
+          -0.3047710061073303,
+          7.180300235748291,
+          0.9105499386787415
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1336",
+            "sha256": "518f78b01de0273ea1cdd6152f2215f9432f2ce00ac2164cea8aa3a420cd897c"
+          },
+          {
+            "file": "FJ1337",
+            "sha256": "db3077437828f311b6afa07dc9dc7a27ab0e005ddce62570420c61af31643f22"
+          }
+        ],
+        "coverageNote": "Existing eyeball source component, independently selectable only in the eye-layer view. Anatomical and clinical validation pending; not a microscopic layer or patient segmentation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+        "kind": "choroid"
+      }
+    },
+    {
+      "conceptId": "eye-sclera",
+      "study": "eye",
+      "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "parentHash": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-sclera",
+        "fmaId": "FMA58271",
+        "name": "Right sclera",
+        "sourceName": "right sclera",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "eye-layers",
+        "nodeName": "FMA58271",
+        "bounds": {
+          "min": [
+            -0.436180979013443,
+            7.049599647521973,
+            0.8882899284362793
+          ],
+          "max": [
+            -0.17298001050949097,
+            7.311899185180664,
+            1.134640097618103
+          ]
+        },
+        "center": [
+          -0.304580494761467,
+          7.180749416351318,
+          1.0114650130271912
+        ],
+        "anchor": [
+          -0.30542799830436707,
+          7.181899547576904,
+          0.8999600410461426
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1368",
+            "sha256": "6fce2e1842730573a8d1360a88a9512b2ee5fe0ebe55e669cd265601da663b49"
+          }
+        ],
+        "coverageNote": "Existing eyeball source component, independently selectable only in the eye-layer view. Anatomical and clinical validation pending; not a microscopic layer or patient segmentation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "parentId": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+        "kind": "sclera"
+      }
+    },
+    {
+      "conceptId": "eye-cornea",
+      "study": "eye",
+      "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+      "parentHash": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-cornea",
+        "fmaId": "FMA58240",
+        "name": "Left cornea",
+        "sourceName": "left cornea",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "eye-layers",
+        "nodeName": "FMA58240",
+        "bounds": {
+          "min": [
+            0.22752100229263306,
+            7.1072998046875,
+            1.111799955368042
+          ],
+          "max": [
+            0.3684230148792267,
+            7.248000621795654,
+            1.1604899168014526
+          ]
+        },
+        "center": [
+          0.29797200858592987,
+          7.177650213241577,
+          1.1361449360847473
+        ],
+        "anchor": [
+          0.30060699582099915,
+          7.176700592041016,
+          1.1517000198364258
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1289",
+            "sha256": "6edadfa812d834f5b90d17d427baa0c6688a4cc32856c2b8c6320907bbc05150"
+          }
+        ],
+        "coverageNote": "Existing eyeball source component, independently selectable only in the eye-layer view. Anatomical and clinical validation pending; not a microscopic layer or patient segmentation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+        "kind": "cornea"
+      }
+    },
+    {
+      "conceptId": "eye-iris",
+      "study": "eye",
+      "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+      "parentHash": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-iris",
+        "fmaId": "FMA58237",
+        "name": "Left iris",
+        "sourceName": "left iris",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "eye-layers",
+        "nodeName": "FMA58237",
+        "bounds": {
+          "min": [
+            0.2333810031414032,
+            7.113100528717041,
+            1.09621000289917
+          ],
+          "max": [
+            0.36191800236701965,
+            7.241600513458252,
+            1.1269999742507935
+          ]
+        },
+        "center": [
+          0.2976495027542114,
+          7.1773505210876465,
+          1.1116049885749817
+        ],
+        "anchor": [
+          0.3070560097694397,
+          7.164999961853027,
+          1.1152399778366089
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1297",
+            "sha256": "e9359237794eef61117f1c12a6822dafdd0cfc70ada8d2447e3d26d4fcda9bd7"
+          }
+        ],
+        "coverageNote": "Existing eyeball source component, independently selectable only in the eye-layer view. Anatomical and clinical validation pending; not a microscopic layer or patient segmentation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+        "kind": "iris"
+      }
+    },
+    {
+      "conceptId": "eye-lens",
+      "study": "eye",
+      "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+      "parentHash": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-lens",
+        "fmaId": "FMA58243",
+        "name": "Left lens",
+        "sourceName": "left lens",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "eye-layers",
+        "nodeName": "FMA58243",
+        "bounds": {
+          "min": [
+            0.24489900469779968,
+            7.126700401306152,
+            1.0682300329208374
+          ],
+          "max": [
+            0.3479340076446533,
+            7.231100082397461,
+            1.115959882736206
+          ]
+        },
+        "center": [
+          0.2964165061712265,
+          7.178900241851807,
+          1.0920949578285217
+        ],
+        "anchor": [
+          0.2958019971847534,
+          7.178399562835693,
+          1.068350076675415
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1305",
+            "sha256": "a2b7f9b53dd2d14a352dfa0d3e01452031a2957aae62aa7c904d7c1d1922954c"
+          }
+        ],
+        "coverageNote": "Existing eyeball source component, independently selectable only in the eye-layer view. Anatomical and clinical validation pending; not a microscopic layer or patient segmentation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+        "kind": "lens"
+      }
+    },
+    {
+      "conceptId": "eye-zonule",
+      "study": "eye",
+      "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+      "parentHash": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:left:ligament:suspensory-ligament-of-left-lens",
+        "fmaId": "FMA58840",
+        "name": "Suspensory ligament of left lens",
+        "sourceName": "suspensory ligament of left lens",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "eye-layers",
+        "nodeName": "FMA58840",
+        "bounds": {
+          "min": [
+            0.21477599442005157,
+            7.096700668334961,
+            1.0853400230407715
+          ],
+          "max": [
+            0.3777640163898468,
+            7.259900093078613,
+            1.1106399297714233
+          ]
+        },
+        "center": [
+          0.2962700054049492,
+          7.178300380706787,
+          1.0979899764060974
+        ],
+        "anchor": [
+          0.2659189999103546,
+          7.160500526428223,
+          1.100469946861267
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1320",
+            "sha256": "a73a8e48e83cd65e15eda97533b59cac7f3f687a7b117e587bc561bf4f7b50a1"
+          }
+        ],
+        "coverageNote": "Existing eyeball source component, independently selectable only in the eye-layer view. Anatomical and clinical validation pending; not a microscopic layer or patient segmentation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+        "kind": "zonule"
+      }
+    },
+    {
+      "conceptId": "eye-vitreous",
+      "study": "eye",
+      "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+      "parentHash": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-vitreous-body",
+        "fmaId": "FMA58829",
+        "name": "Left vitreous body",
+        "sourceName": "left vitreous body",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "eye-layers",
+        "nodeName": "FMA58829",
+        "bounds": {
+          "min": [
+            0.18965201079845428,
+            7.079200267791748,
+            0.9179499745368958
+          ],
+          "max": [
+            0.393466979265213,
+            7.282199859619141,
+            1.095099925994873
+          ]
+        },
+        "center": [
+          0.29155949503183365,
+          7.180700063705444,
+          1.0065249502658844
+        ],
+        "anchor": [
+          0.2995989918708801,
+          7.18120002746582,
+          1.0682100057601929
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1331",
+            "sha256": "417bc91c6719b2982cb60640058ddcce9f50ecfb5a20db02393f2cf7bad82a0b"
+          }
+        ],
+        "coverageNote": "Existing eyeball source component, independently selectable only in the eye-layer view. Anatomical and clinical validation pending; not a microscopic layer or patient segmentation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+        "kind": "vitreous"
+      }
+    },
+    {
+      "conceptId": "eye-choroid",
+      "study": "eye",
+      "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+      "parentHash": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-choroid",
+        "fmaId": "FMA58300",
+        "name": "Left choroid",
+        "sourceName": "left choroid",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "eye-layers",
+        "nodeName": "FMA58300",
+        "bounds": {
+          "min": [
+            0.17154300212860107,
+            7.061200141906738,
+            0.8999499678611755
+          ],
+          "max": [
+            0.41144001483917236,
+            7.300300121307373,
+            1.12391996383667
+          ]
+        },
+        "center": [
+          0.2914915084838867,
+          7.180750131607056,
+          1.0119349658489227
+        ],
+        "anchor": [
+          0.29407399892807007,
+          7.182700157165527,
+          0.910599946975708
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1285",
+            "sha256": "dd7677f804c1c370a2c6d11966877934efa9ca09c6b100e18f06fd4508ccbbb6"
+          },
+          {
+            "file": "FJ1286",
+            "sha256": "ba4e6f7156124700b63d526a882933b35b89fa0e9fd53495964d57aa5de1c989"
+          }
+        ],
+        "coverageNote": "Existing eyeball source component, independently selectable only in the eye-layer view. Anatomical and clinical validation pending; not a microscopic layer or patient segmentation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+        "kind": "choroid"
+      }
+    },
+    {
+      "conceptId": "eye-sclera",
+      "study": "eye",
+      "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+      "parentHash": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-sclera",
+        "fmaId": "FMA58272",
+        "name": "Left sclera",
+        "sourceName": "left sclera",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "eye-layers",
+        "nodeName": "FMA58272",
+        "bounds": {
+          "min": [
+            0.1598919928073883,
+            7.049599647521973,
+            0.8882899284362793
+          ],
+          "max": [
+            0.4231039881706238,
+            7.311899185180664,
+            1.1345499753952026
+          ]
+        },
+        "center": [
+          0.29149799048900604,
+          7.180749416351318,
+          1.011419951915741
+        ],
+        "anchor": [
+          0.28972500562667847,
+          7.183800220489502,
+          0.8999999761581421
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1317",
+            "sha256": "81a184bd0d3d8602af3c2186405a16565bcabd0d305fcbad7e02b979335d9582"
+          }
+        ],
+        "coverageNote": "Existing eyeball source component, independently selectable only in the eye-layer view. Anatomical and clinical validation pending; not a microscopic layer or patient segmentation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+        "kind": "sclera"
+      }
+    },
+    {
+      "conceptId": "eye-chamber",
+      "study": "eye",
+      "sourceHash": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+      "parentHash": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:left:space:anterior-chamber-of-left-eyeball",
+        "fmaId": "FMA58082",
+        "name": "Anterior chamber of left eyeball",
+        "sourceName": "anterior chamber of left eyeball",
+        "system": "organs",
+        "category": "space",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "eye-layers",
+        "nodeName": "FMA58082",
+        "bounds": {
+          "min": [
+            0.23408500850200653,
+            7.114100456237793,
+            1.1146200895309448
+          ],
+          "max": [
+            0.36158400774002075,
+            7.241700649261475,
+            1.1520100831985474
+          ]
+        },
+        "center": [
+          0.29783450812101364,
+          7.177900552749634,
+          1.133315086364746
+        ],
+        "anchor": [
+          0.2993299961090088,
+          7.180600643157959,
+          1.125599980354309
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1282",
+            "sha256": "c66ed172ed90448e3e9508f21b116f319cfd1036cb7281e2f3541ede5f2adb1f"
+          }
+        ],
+        "coverageNote": "Existing eyeball source component, independently selectable only in the eye-layer view. Anatomical and clinical validation pending; not a microscopic layer or patient segmentation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "parentId": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+        "kind": "chamber"
+      }
+    }
+  ]
+}

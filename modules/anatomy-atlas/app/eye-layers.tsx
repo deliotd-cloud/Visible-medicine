@@ -1,5 +1,6 @@
 'use client';
 import { useCallback, useMemo, useReducer, useState } from 'react';
+import { NestedTeaching } from './nested-teaching';
 import { ArrowLeft, RotateCcw, Eye, Focus, Tags } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
@@ -520,6 +521,7 @@ export function EyeLayerView({
                 <Focus /> Frame
               </Button>
             </div>
+            <NestedTeaching parent={parent} study="eye" selected={selected} />
           </section>
         )}
         {unavailable.length > 0 && (

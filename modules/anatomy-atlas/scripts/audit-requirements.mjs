@@ -18,7 +18,11 @@ export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';
 export { reasoningConcepts, reasoningConceptFor } from './lib/reasoning-questions.ts';
 export { createLearningRegistry, parseLearningDocument, learningResourceKinds } from './lib/learning-resources.ts';
-export { learningAnatomyRepresentations } from './lib/learning-anatomy.ts';`,
+export { learningAnatomyRepresentations } from './lib/learning-anatomy.ts';
+export { bodyDisplayCatalog } from './lib/body-display-catalog.ts';
+export { nestedStudyTargets } from './lib/nested-anatomy.ts';
+export { nestedTeachingFor, nestedTopicLesson } from './lib/nested-teaching.ts';
+export { nestedConcepts, nestedTeachingReferences } from './content/nested-teaching.ts';`,
     resolveDir: fileURLToPath(root),
     sourcefile: 'requirements-audit-entry.ts',
     loader: 'ts',
@@ -39,6 +43,12 @@ const {
   parseLearningDocument,
   learningResourceKinds,
   learningAnatomyRepresentations,
+  bodyDisplayCatalog,
+  nestedStudyTargets,
+  nestedTeachingFor,
+  nestedTopicLesson,
+  nestedConcepts,
+  nestedTeachingReferences,
 } = await import(
   'data:text/javascript;base64,' +
     Buffer.from(bundled.outputFiles[0].text).toString('base64')
@@ -141,6 +151,26 @@ function summarize(rows) {
     }),
   );
 }
+const displayCatalog = bodyDisplayCatalog(catalog);
+const nestedRows = nestedStudyTargets(displayCatalog).map((target) => {
+  const parent = displayCatalog.structures.find(
+    (s) => s.id === target.parentId,
+  );
+  const concept = nestedTeachingFor(parent, target.study, target.structure);
+  assert(
+    concept,
+    'Missing source-bound nested teaching: ' + target.structureId,
+  );
+  const sections = Object.fromEntries(
+    tabs.map((tab) => [tab, nestedTopicLesson(concept, tab)]),
+  );
+  return {
+    sections,
+    readiness: Object.fromEntries(
+      tabs.map((tab) => [tab, sections[tab].readiness]),
+    ),
+  };
+});
 const countsBySystem = Object.fromEntries(
   ['skeleton', 'muscles', 'nerves', 'organs', 'vessels', 'connective'].map(
     (system) => [
@@ -160,6 +190,12 @@ for (const path of [
   'public/models/bodyparts3d/brainstem/catalog.json',
   'public/models/bodyparts3d/cerebral/catalog.json',
   'content/cerebral-supplement-audit.json',
+  'content/nested-teaching.ts',
+  'content/nested-teaching-bindings.v1.json',
+  'lib/nested-anatomy.ts',
+  'lib/nested-teaching.ts',
+  'app/nested-teaching.tsx',
+  'app/nested-teaching.css',
   'package-lock.json',
   'content/schema/anatomy-structure.schema.json',
   'content/review-revisions.json',
@@ -242,7 +278,7 @@ const report = {
       cerebralContext: cerebral.contextIds.length,
       additionalUniqueWholeBodyAnatomy: cerebral.supplementalIds.length,
       limitation:
-        'Nested selections generally subdivide existing parents. Four superior temporal ISA source parts are additional anatomy, available only inside the cerebral study; context reuses existing structures. Short drafts are separate from the eight-topic body inventory. The unchanged archival catalogue excludes these alternate display assets and additions.',
+        'Nested selections generally subdivide existing parents. Four superior temporal ISA source parts are additional anatomy, available only inside the cerebral study; context reuses existing structures. Nested teaching is counted separately from the root-body inventory. The unchanged archival catalogue excludes these alternate display assets and additions.',
     },
     regionalMembershipsOverlap: true,
     shoulderAndBodyRepresentationsOverlap: true,
@@ -298,6 +334,14 @@ const report = {
     classificationLimit:
       'Explicit readiness from authoring branches; not inferred from titles and not clinical approval. Existing shoulder authoring is explicitly draft.',
     body: summarize(contentRows),
+    nested: {
+      representations: nestedRows.length,
+      concepts: nestedConcepts.length,
+      references: Object.keys(nestedTeachingReferences).length,
+      topics: summarize(nestedRows),
+      limitation:
+        'Original, source-pinned introductory drafts and unscored recall questions. Not complete disease teaching, specialist approval, a scored exam, an imaging connection or paid-lecture entitlement. Counts overlap existing parent anatomy.',
+    },
     shoulder: summarize(
       shoulder.map((entry) => ({
         sections: entry.sections,

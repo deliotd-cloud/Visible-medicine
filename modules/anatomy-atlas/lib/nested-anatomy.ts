@@ -47,6 +47,17 @@ const studies = [
   },
 ] as const;
 
+export function nestedPartsFor(parent: BodyStructure, study: NestedStudy) {
+  return studies.find((entry) => entry.study === study)?.layers(parent) ?? [];
+}
+export function nestedBundleHash(study: NestedStudy, bundle: string) {
+  return (
+    studies
+      .find((entry) => entry.study === study)
+      ?.catalog.bundles.find((entry) => entry.id === bundle)?.sha256 ?? null
+  );
+}
+
 /** Navigation-only bindings. Context meshes, exclusions and unsupported parents
  * never become selectable children or imaging/lecture entitlements. */
 export function nestedStudyTargets(catalog: BodyCatalog): NestedTarget[] {
