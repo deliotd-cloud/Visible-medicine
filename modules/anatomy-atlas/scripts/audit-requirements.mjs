@@ -14,6 +14,7 @@ const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const bundled = await build({
   stdin: {
     contents: `export { limbDefinitions } from './lib/um-limb-studies.ts';
+export { specimenTeachingFor } from './lib/um-limb-teaching.ts';
 export { bodyContent, bodyLesson } from './app/body-content.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';
@@ -40,6 +41,7 @@ export { cardiacRelationshipsFor, cardiacVesselSource } from './lib/cardiac-cont
 });
 const {
   limbDefinitions,
+  specimenTeachingFor,
   bodyContent,
   bodyLesson,
   structures: shoulder,
@@ -290,6 +292,10 @@ for (const path of [
   'app/um-knee-entry.css',
   'lib/um-knee-study.ts',
   'lib/um-limb-studies.ts',
+  'lib/um-limb-teaching.ts',
+  'content/um-limb-teaching.ts',
+  'content/um-limb-teaching-bindings.v1.json',
+  'app/um-limb-learning.tsx',
   'lib/independent-specimen.ts',
   'app/um-limb-study.tsx',
   'public/models/um-limb/catalog.json',
@@ -362,7 +368,13 @@ const report = {
       license: independentKnee.source.license,
       registeredToBodyParts3D: independentKnee.registeredToBodyParts3D,
       clinicalApproval: [...independentKnee.structures, ...independentLimb.structures].every((s) => s.validation.anatomicalReview),
-      detailedTeaching: 'pending; not counted as root-body or nested teaching',
+      detailedTeaching: {
+        anatomyFunctionDrafts: limbDefinitions.whole.surfaces.filter(s => specimenTeachingFor(limbDefinitions.whole, s)).length,
+        muscleAttachmentDrafts: limbDefinitions.whole.surfaces.filter(s => specimenTeachingFor(limbDefinitions.whole, s)?.attachments).length,
+        identificationPractice: 'up to 10 visible pinned source selections per round; first-try/reveal/retry-missed',
+        clinicalPathologyImaging: 'pending; no registration or lecture entitlement',
+        countedAsRootOrNestedTeaching: false,
+      },
     }],
     displayCorrections: displayCatalog.structures
       .filter(

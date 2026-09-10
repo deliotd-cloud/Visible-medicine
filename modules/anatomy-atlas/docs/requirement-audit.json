@@ -71,11 +71,15 @@
     "app/ventricles.tsx": "cd9ea82d9148c44a288f34ac84da151f056c91fdc1addcdd4e48cadbd7043bbf",
     "app/ventricular-relationships.css": "7dfa2927b9f203aa13dbd1f2205c9429e7b79ffbaa86108b57fb3c69b1b71400",
     "app/body-scene.tsx": "12755c0012553c7df3d101487984b9aa86ac58ab27f803440023698e5036d5dc",
-    "app/um-knee-study.tsx": "f4a685bc7d9c22d6239f67cbd2ea276fde90deec24b7dbc6f1aa5094d4a21450",
-    "app/um-knee-study.css": "987a268b4450718651ee4ecee7ec66fd6a89672c33beaaf1dc62d7367c5304c4",
+    "app/um-knee-study.tsx": "f36e6711b340342490d385077e7224edde4865a57016b4cfae3b6657dd891903",
+    "app/um-knee-study.css": "d159a84f77d0bd8cdbc9f6feaf0e01b7ea4cde18a399e26a8085e45323aab0fa",
     "app/um-knee-entry.css": "b68e0232a417ca07cc3ae07ed3e756c93833623981a5cf5323b7a71db7017339",
     "lib/um-knee-study.ts": "80908fce33eb88fe5d217d8ed70c948559c19981c48a7daf034353224ee25b55",
     "lib/um-limb-studies.ts": "a544d566b88d1a55c23f85e743d5cbabcc2518c54458c18eff6faa429a9ce810",
+    "lib/um-limb-teaching.ts": "d41bf15ac44b977d892e6b9460fe9fb0a7e6ac39382cb8db1cb680b899304558",
+    "content/um-limb-teaching.ts": "83c9dbc91272e483fa0ef25ea9eb0051819fad3c94a3d706f7f22373028f6b71",
+    "content/um-limb-teaching-bindings.v1.json": "78e4c8da73fdeb04f3e1e783f6a20aa8de3f870f0ae50f8f506479bf29fb2ef9",
+    "app/um-limb-learning.tsx": "b7bc8e8339e9a0a019a9dbe578b0707653623162a4b80b5780491b559c06dc6e",
     "lib/independent-specimen.ts": "5c6d6d6d8b1c2fc288bf5c0793732cf53a30f716adb8896005230cc2c65164f8",
     "app/um-limb-study.tsx": "dbcfd6e17c453a03939b27a1837642943db6b3e4039923c1879cf74b250a8781",
     "public/models/um-limb/catalog.json": "fc27b778fe8a0e13f773f272bd0bd9bdf9d22117029bd5a5b5d11f0dc39c83fb",
@@ -126,7 +130,13 @@
         "license": "CC0-1.0",
         "registeredToBodyParts3D": false,
         "clinicalApproval": false,
-        "detailedTeaching": "pending; not counted as root-body or nested teaching"
+        "detailedTeaching": {
+          "anatomyFunctionDrafts": 67,
+          "muscleAttachmentDrafts": 42,
+          "identificationPractice": "up to 10 visible pinned source selections per round; first-try/reveal/retry-missed",
+          "clinicalPathologyImaging": "pending; no registration or lecture entitlement",
+          "countedAsRootOrNestedTeaching": false
+        }
       }
     ],
     "displayCorrections": [
