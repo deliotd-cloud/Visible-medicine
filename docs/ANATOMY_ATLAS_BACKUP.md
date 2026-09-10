@@ -1,6 +1,16 @@
 # Anatomy atlas backup — 10 September 2026
 
-## 10 September 2026 — wrist and foot bone studies (current)
+## 10 September 2026 — live model orientation (current)
+
+Source `516b8ba21c6c911f59cf068f0b1f43e69ba12427`, tree `299082b504eb6e3647eb2176da2720a5cf72632b`, parent `87be059878e20442ce8c5a64d2be4d51e72dc9ec`. Nine paths mirrored into `modules/anatomy-atlas`; the main website is unchanged. A read-only direction line follows actual camera orientation in the shared regional/organ renderer, without overlaying labels or expanding the page. Source axes are validated; exam/recovery states suppress the readout. No anatomy, dependencies or entitlements changed.
+
+Sites saved version130 `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_7cdf66b1d2608191b5c56b34fa95f7ee`. Native archive270 files/127,590,400 bytes, hash`sha256:a4eab9f7de4549a7991a8085aa2fb23ce123673e71364d6664ee18e33ea6901b`. Final private publication status is recorded in the separate local checkpoint. Source credential cleared.
+
+Passed: 137 orientation checks, 3,926 origin-guide checks, 704 renderer-recovery checks, TypeScript and production build. Clinical/browser/device acceptance remains outstanding. Same-PC mirror audit:1,269 files/150,230,736 bytes/104 GLBs; no common credential signatures found (not exhaustive).
+
+Recovery artifacts use `work/atlas-live-orientation-2026-09-10`; the `.recovery.json` records exact archive/delta/bundle hashes. The incremental bundle REQUIRES the source parent above. Preparation flags precede this committed receipt and publication; do not rerun/overwrite one-shot artifacts. This is Sites saving plus same-PC recovery, NOT GitHub/off-device, conversation-history or private-database backup. The atlas goal remains active.
+
+## 10 September 2026 — wrist and foot bone studies
 
 Source `87be059878e20442ce8c5a64d2be4d51e72dc9ec`, tree `bed1cdb7945e16115630f0de33bf525e5f04b17d`, parent `7b16d16a9c5c0d9449b0fdb0980a065623b7f188`. Fourteen source paths were mirrored into `modules/anatomy-atlas`; the main website is unchanged. Four focused wrist/foot bone windows reuse 30 existing sided representations, without new geometry, dependencies, teaching entitlements or permanent controls. Existing source anatomy and all previous recipes are preserved. The generated manifest also catches up eight previously implemented renal focuses. Current runtime totals: 145 stages / 135 focuses / 1,022 root representations.
 

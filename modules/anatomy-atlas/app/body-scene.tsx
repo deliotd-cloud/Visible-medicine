@@ -1,6 +1,7 @@
 'use client';
 import {
   Component,
+  createRef,
   Suspense,
   useEffect,
   useMemo,
@@ -39,6 +40,8 @@ import { renderedAnatomyStructures } from '@/lib/anatomy-load-state';
 import { SceneRecovery, RendererMonitor } from './scene-recovery';
 import type { RendererHealth } from '@/lib/renderer-health';
 import { selectedOriginGuide, type OriginGuide } from '@/lib/origin-guides';
+import { SceneOrientation } from './scene-orientation';
+import './scene-orientation.css';
 
 type Props = {
   catalog: BodyCatalog;
@@ -401,6 +404,7 @@ export function BodyScene(props: Props) {
     props.focus,
   );
   const orthographic = props.plate || layout === 'tray';
+  const orientationOutput = useMemo(() => createRef<HTMLSpanElement>(), []);
   return (
     <SceneRecovery
       className="body-scene"
@@ -418,6 +422,12 @@ export function BodyScene(props: Props) {
       cameraRestore={props.cameraRestore}
     >
       {(onHealth) => (
+        <div className="anatomy-oriented-scene" data-orientation={!props.exam}>
+          {!props.exam && (
+            <p className="anatomy-live-orientation" aria-live="off">
+              View from: <span ref={orientationOutput}>unavailable</span>
+            </p>
+          )}
         <Canvas
           onFailure={() => onHealth('failed')}
           orthographic={orthographic}
@@ -427,6 +437,11 @@ export function BodyScene(props: Props) {
           gl={{ antialias: true, alpha: true, localClippingEnabled: true }}
         >
           <RendererMonitor onHealth={onHealth} />
+          <SceneOrientation
+            output={orientationOutput}
+            coordinates={props.catalog.coordinateSystem}
+            enabled={!props.exam}
+          />
           <ambientLight intensity={1.4} />
           <hemisphereLight args={['#fffef8', '#a38b70', 1.1]} />
           <directionalLight position={[8, 15, 10]} intensity={2.3} />
@@ -477,6 +492,7 @@ export function BodyScene(props: Props) {
             cameraRestore={props.cameraRestore}
           />
         </Canvas>
+        </div>
       )}
     </SceneRecovery>
   );

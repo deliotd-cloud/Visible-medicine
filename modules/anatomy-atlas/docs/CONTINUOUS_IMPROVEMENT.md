@@ -1,5 +1,7 @@
 # Continuous atlas improvement plan
 
+Latest orientation improvement: [live model-view direction](LIVE_CAMERA_ORIENTATION.md) follows the actual camera using verified source axes in the shared regional/organ renderer. It reserves a compact line within the current image height, with no new toolbar or geometry. Continue substantive source-backed anatomical detail and dissection functionality; do not substitute orientation aids or teaching counts for missing anatomy. Clinical/device and external scan/lecture acceptance remain separate.
+
 Latest regional navigation: [wrist and foot bone exposure studies](ACRAL_BONE_STUDIES.md) add four compact, source-ID-defined windows for carpal rows and hindfoot/midfoot. All 30 bone representations already existed; no tissue or source geometry was invented. Continue source-backed regional relationships and source adjudication, keeping clinical/device acceptance and actual imaging/lecture integration separate. The broad goal remains active.
 
 Latest source/presentation correction: [pancreatic envelope overlap](PANCREATIC_SOURCE_REVIEW.md). The display omits one near-coincident tissue alternative, retains both duct-source components and all archived files, and keeps the existing organ identity and factual teaching. Next implement source-scoped pancreatic duct dissection with one optional tissue reference; do not reinterpret the omitted envelope as an internal layer or the two index definitions as independent complete duct trees. Clinical/device and imaging/lecture acceptance remain separate.

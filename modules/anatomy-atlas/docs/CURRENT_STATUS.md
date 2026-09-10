@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Live camera direction](LIVE_CAMERA_ORIENTATION.md) now follows actual rotation in regional, whole-body and nested viewers. A reserved read-only line distinguishes model-left/right from screen position, without covering labels or expanding the page. It hides in exam/recovery states and does not imply patient-scan orientation. Anatomy counts and the dedicated shoulder renderer are unchanged.
+
 [Wrist and foot bone exposure studies](ACRAL_BONE_STUDIES.md) add four compact Study choices using 30 existing bone representations, with no new geometry. Side filters, selection/removal and Undo/Redo reuse the established dissection controls. These are unvalidated source-bone arrangements, not cartilage, ligament or radiographic joint models.
 
 Generated from the actual catalogue, teaching resolver, dissection profiles and question definitions. Run `npm run requirements:audit`; `npm run requirements:audit -- --check` checks this page and [the JSON inventory](requirement-audit.json) together. Historical milestone totals elsewhere are not current coverage.
