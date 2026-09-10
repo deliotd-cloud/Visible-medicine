@@ -6,6 +6,8 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "um-knee:prototype": "node scripts/export-um-knee-prototype.mjs",
+    "um-knee:check": "node scripts/export-um-knee-prototype.mjs --check && node scripts/validate-um-knee-prototype.mjs",
     "knee-studies:test": "node scripts/validate-knee-studies.mjs",
     "spinal-level-studies:test": "node scripts/validate-spinal-level-studies.mjs",
     "gingiva:audit": "node scripts/audit-gingiva-source.mjs",
