@@ -19,6 +19,8 @@ Every retained triangle preserves its original coordinates, ordering and winding
 
 `content/prototypes/cricothyroid/` retains the four byte-identical original OBJ files, a four-mesh GLB and a provenance catalogue. The artifact is outside `public/` and is not imported by the application. Names and independent part IDs can support a later selection registry; they do not create imaging correspondence or paid-resource access.
 
+Path-specific `.gitattributes` disables text conversion and textual diffs for these four originals. Their source trailing whitespace is deliberately preserved, not formatted. The validation script also checks Git's checkout filtering with Windows-style automatic line-ending conversion enabled. General whitespace checks apply to authored files, not to immutable third-party original bytes.
+
 ## Evidence and safeguards
 
 `docs/cricothyroid-source-audit.json` pins source definitions, all relevant alias-definition hashes, raw hashes, existing hold policy, catalogue, coordinate system, removal coordinates/indices and retained triangle hashes. Broad aggregate aliases such as “zone of cricothyroid” are not extra structures. No current root owner, cross-tree filename owner or represented exact geometry fingerprint matches these candidates.

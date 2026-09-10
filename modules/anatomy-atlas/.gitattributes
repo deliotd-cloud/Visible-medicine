@@ -1,2 +1,4 @@
 # Retain the official dataset evidence byte-for-byte, including line endings.
 LICENSES/bodyparts3d-v4-index/*.txt -text
+# Preserve original OBJ bytes/whitespace; do not normalize or render huge diffs.
+content/prototypes/cricothyroid/source/*.obj -text -diff

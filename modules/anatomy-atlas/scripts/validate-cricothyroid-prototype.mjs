@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
 import { sourceObjShape } from './source-surface-audit.mjs';
 import { sourceTopology } from './source-topology.mjs';
 import { prepareShape } from './vessel-shape-math.mjs';
@@ -58,6 +59,11 @@ let triangles = 0,
 for (const candidate of cricothyroidCandidates) {
   const raw = await readFile(`${directory}/source/${candidate.file}.obj`);
   equal(hash(raw), candidate.sha256);
+  const checkoutBytes = execFileSync('git', [
+    '-c', 'core.autocrlf=true', 'cat-file', '--filters',
+    `HEAD:${directory}/source/${candidate.file}.obj`,
+  ], { maxBuffer: 2 * 1024 * 1024 });
+  equal(hash(checkoutBytes), candidate.sha256, 'Windows checkout must retain original bytes');
   const altered = Buffer.concat([
     raw,
     Buffer.from('\n# unreviewed change\n'),
