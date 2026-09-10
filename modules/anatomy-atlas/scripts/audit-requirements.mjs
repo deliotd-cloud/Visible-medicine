@@ -26,6 +26,7 @@ export { nestedConcepts, nestedTeachingReferences } from './content/nested-teach
 export { ventricularRelationshipsFor } from './lib/ventricular-relationships.ts';
 export { visualRelationshipsFor, visualSellarSource } from './lib/visual-pathway-context.ts';
 export { renalRelationshipsFor } from './lib/renal-relationships.ts';
+export { hepaticBiliaryRelationshipsFor, hepaticBiliarySource } from './lib/hepatic-biliary-context.ts';
 export { cardiacRelationshipsFor, cardiacVesselSource } from './lib/cardiac-context.ts';`,
     resolveDir: fileURLToPath(root),
     sourcefile: 'requirements-audit-entry.ts',
@@ -57,6 +58,8 @@ const {
   visualRelationshipsFor,
   visualSellarSource,
   renalRelationshipsFor,
+  hepaticBiliaryRelationshipsFor,
+  hepaticBiliarySource,
   cardiacRelationshipsFor,
   cardiacVesselSource,
 } = await import(
@@ -412,6 +415,8 @@ const report = {
     anatomicalCompletenessMeasured: false,
   },
   study: {
+    hepaticBiliaryLandmarks: hepaticBiliarySource.structures.length,
+    hepaticBiliaryRelationshipPresets: hepaticBiliaryRelationshipsFor(hepaticBiliarySource.parent).length,
     renalRelationshipPresets: renal.parents.reduce(
       (total, parent) => total + renalRelationshipsFor(parent).length,
       0,

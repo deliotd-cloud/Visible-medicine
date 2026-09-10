@@ -1,5 +1,7 @@
 # Liver internal branch dissection
 
+The [biliary/gallbladder relationship preset](HEPATIC_BILIARY_RELATIONSHIPS.md) adds three existing nonselectable landmarks to the paired internal biliary groups, with faint tissue context. The default study and original source geometry remain unchanged. Source boundaries and duct junctions require review; this is not a complete biliary or surgical model.
+
 In **Abdomen** or **Whole body**, select **Liver → Explore liver branches**. The existing compact workspace supports rotation, six camera presets, labels, selection, hide/Undo/recovery, fade, group presets and three separation mechanisms. Search atlas and source-bound deep links find the seven children. The parent liver aggregate is not superimposed.
 
 The default view loads only the branch bundle. **Show liver tissue context** adds the separate, nonselectable tissue bundle at low opacity. Context is omitted during separation and restored on reassembly. Four named colours distinguish arterial, portal, biliary and venous-tributary groups, not oxygenation or simulated flow. No permanent main-toolbar control or route is added.

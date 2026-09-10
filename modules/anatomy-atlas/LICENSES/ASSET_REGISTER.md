@@ -1,5 +1,9 @@
 # Asset register
 
+## Biliary relationship context — existing assets reused, 10 September 2026
+
+The new `hepatic/biliary-context.json` pins three already distributed BodyParts3D source records (FMA7202/FJ2817 PART-OF, FMA14539/FJ3080 IS-A, FMA14668/FJ3079 IS-A) to existing bundle metadata. No new mesh or changed triangle; 4,038 existing triangles provide optional landmarks. BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International. Attribution and adaptation notices remain required. Official licence/source pages were rechecked. NIDDK supports an original short guide; no article, diagram, image or scan is bundled. No dependency, font, texture or paid service is added. [Source audit and limitations](../docs/HEPATIC_BILIARY_RELATIONSHIPS.md).
+
 ## Pancreatic and biliary imaging teaching — no asset additions, 10 September 2026
 
 Four original concise modality notes cite NIDDK and ACR/RSNA RadiologyInfo primary pages. No articles, illustrations, scans, patient cases, tables, question banks, fonts or textures are imported or relicensed. The 102 existing source-controlled GLBs, including the nonpublic prototype, are unchanged. Existing BodyParts3D CC BY 4.0 attribution and modification obligations remain. No dependency or paid service is added; reference links are evidence, not redistribution licences or endorsement. See [retrieval scope and review requirements](../docs/DUCT_IMAGING_TEACHING.md).

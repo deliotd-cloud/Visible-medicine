@@ -95,6 +95,11 @@ import {
 } from '@/lib/cardiac';
 import { ventricularRelationshipsFor } from '@/lib/ventricular-relationships';
 import {
+  hepaticBiliaryRelationshipsFor,
+  hepaticBiliaryViewCatalog,
+  hepaticBiliaryColour,
+} from '@/lib/hepatic-biliary-context';
+import {
   cardiacRelationshipsFor,
   cardiacContextViewCatalog,
   cardiacVesselColour,
@@ -112,7 +117,7 @@ import {
   hepaticViewCatalog,
   hepaticNotes,
   hepaticPresets,
-  hepaticColour,
+  hepaticCatalog,
   hepaticReference,
 } from '@/lib/hepatic';
 import {
@@ -221,12 +226,14 @@ export function VentricularView({
         ? visualRelationshipsFor(parent)
         : isRenal
           ? renalRelationshipsFor(parent)
-          : isCardiac
-            ? cardiacRelationshipsFor(parent)
-            : study === 'ventricles'
-              ? ventricularRelationshipsFor(parent)
-              : [],
-    [parent, study, isCardiac, isVisual, isRenal],
+          : isHepatic
+            ? hepaticBiliaryRelationshipsFor(parent)
+            : isCardiac
+              ? cardiacRelationshipsFor(parent)
+              : study === 'ventricles'
+                ? ventricularRelationshipsFor(parent)
+                : [],
+    [parent, study, isCardiac, isVisual, isRenal, isHepatic],
   );
   const presets = useMemo<Record<string, string[]>>(
     () =>
@@ -250,7 +257,15 @@ export function VentricularView({
                 ),
               }
             : isHepatic
-              ? hepaticPresets(layers)
+              ? {
+                  ...hepaticPresets(layers),
+                  ...Object.fromEntries(
+                    relationships.map((r) => [
+                      r.id,
+                      relationshipSelectionIds(r),
+                    ]),
+                  ),
+                }
               : isPulmonary
                 ? pulmonaryPresets(layers)
                 : isCardiac
@@ -319,6 +334,9 @@ export function VentricularView({
               portal: 'Portal vein branches',
               biliary: 'Bile ducts',
               venous: 'Middle hepatic vein tributary',
+              ...Object.fromEntries(
+                relationships.map((r) => [r.id, r.title]),
+              ),
             }
           : isPulmonary
             ? Object.fromEntries(
@@ -447,7 +465,11 @@ export function VentricularView({
                   context && explode === 0 ? relationshipId : null,
                 )
               : isHepatic
-                ? hepaticViewCatalog(parent, context && explode === 0)
+                ? hepaticBiliaryViewCatalog(
+                    parent,
+                    context && explode === 0,
+                    relationshipId,
+                  )
                 : isPulmonary
                   ? pulmonaryContextViewCatalog(
                       parent,
@@ -523,7 +545,7 @@ export function VentricularView({
                   : isRenal
                     ? renalColour(s)
                     : isHepatic
-                      ? hepaticColour(s)
+                      ? hepaticBiliaryColour(s)
                       : index < 0
                         ? isPulmonary
                           ? pulmonaryAirwayColour(s)
@@ -544,7 +566,9 @@ export function VentricularView({
                       ? 0.12
                       : 0.35
                     : isHepatic
-                      ? 0.12
+                      ? hepaticCatalog.contextIds.includes(s.id)
+                        ? 0.12
+                        : 0.45
                       : isPulmonary
                         ? 0.34
                         : guidedAppearance
@@ -877,7 +901,7 @@ export function VentricularView({
               aria-pressed={context}
               disabled={explode > 0}
               onClick={() => {
-                if (!isCardiac && !isVisual && !isRenal)
+                if (!isCardiac && !isVisual && !isRenal && !isHepatic)
                   setRelationshipId(null);
                 setContext((v) => !v);
               }}
@@ -893,7 +917,9 @@ export function VentricularView({
                       ? 'Show drainage landmarks'
                       : 'Show kidney & vessel context'
                     : isHepatic
-                      ? 'Show liver tissue context'
+                      ? relationship
+                        ? 'Show biliary landmarks'
+                        : 'Show liver tissue context'
                       : isPulmonary
                         ? 'Show airway landmarks'
                         : isCardiac
@@ -977,7 +1003,7 @@ export function VentricularView({
               </p>
             )}
           </section>
-        ) : isHepatic ? (
+        ) : isHepatic && !guidedAppearance ? (
           <section
             className="ventricular-relationship"
             aria-label="Liver branch guide"
@@ -1055,9 +1081,11 @@ export function VentricularView({
                 ? 'Chiasm and pituitary relationship guide'
                 : isRenal
                   ? 'Renal venous relationship guide'
-                  : isCardiac
-                    ? 'Cardiac vessel relationship guide'
-                    : 'Ventricular relationship guide'
+                  : isHepatic
+                    ? 'Biliary and gallbladder relationship guide'
+                    : isCardiac
+                      ? 'Cardiac vessel relationship guide'
+                      : 'Ventricular relationship guide'
             }
           >
             <p>{relationship.guide}</p>
@@ -1071,9 +1099,11 @@ export function VentricularView({
                         ? visualPathwayColour(s)
                         : isRenal
                           ? renalColour(s)
-                          : isCardiac
-                            ? cardiacVesselColour(s)
-                            : neuroGroupFor(s.fmaId)?.color,
+                          : isHepatic
+                            ? hepaticBiliaryColour(s)
+                            : isCardiac
+                              ? cardiacVesselColour(s)
+                              : neuroGroupFor(s.fmaId)?.color,
                     }}
                   />
                   {s.name}
@@ -1085,9 +1115,11 @@ export function VentricularView({
                 ? 'Orientation surfaces only: no tumour, compression, fibre crossing or patient scan is modelled. The gland is a landmark, not a selectable nerve structure.'
                 : isRenal
                   ? 'Arterial red and venous blue identify supplied surfaces, not flow. Glands and large vessels are nonselectable landmarks. Drainage is anatomical teaching, not verified mesh continuity or a clinical assessment.'
-                  : isCardiac
-                    ? 'Cavity and vessel surfaces are orientation aids, not a connected flow model. Valves and vessel openings are not validated. Colours distinguish landmarks, not scan signal.'
-                    : 'Space shown translucently; nearby structures are orientation context, not selectable walls.'}
+                  : isHepatic
+                    ? 'Landmarks are nonselectable source surfaces. The long common-hepatic-duct source retains its original label; its boundaries and junctions require review. No separate common bile duct, open lumen, flow or surgical plane is supplied.'
+                    : isCardiac
+                      ? 'Cavity and vessel surfaces are orientation aids, not a connected flow model. Valves and vessel openings are not validated. Colours distinguish landmarks, not scan signal.'
+                      : 'Space shown translucently; nearby structures are orientation context, not selectable walls.'}
             </p>
             {isolated && (
               <p>Turn off Fade others to compare the nearby structures.</p>
@@ -1098,9 +1130,11 @@ export function VentricularView({
                 ? 'MRI anatomical study'
                 : isRenal
                   ? 'Venous anatomy study'
-                  : isCardiac
-                    ? 'University of Minnesota'
-                    : 'UTHealth'}
+                  : isHepatic
+                    ? 'NIDDK'
+                    : isCardiac
+                      ? 'University of Minnesota'
+                      : 'UTHealth'}
             </a>
           </section>
         ) : (

@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Biliary relationship landmarks
+
+Review the [liver/gallbladder relationship preset](HEPATIC_BILIARY_RELATIONSHIPS.md): source FMA14668's full common-hepatic-duct extent and boundaries, cystic/gallbladder junctions and both intrahepatic groups. No common bile duct, ampulla, open lumen, bile flow or safe operative plane has been reconstructed. Source topology/triangle preservation is not clinical validation. Check landmark visibility, colour distinctions, paired selection, context toggling and separation/reassembly on actual desktop/mobile devices; independent scan and paid-lecture entitlements remain unchanged.
+
 ## Pancreatic and biliary imaging notes
 
 Review the [four new modality sections](DUCT_IMAGING_TEACHING.md) for clinical/editorial accuracy, useful depth and fit to the selected source extent. These introductory notes are not scans, protocol recommendations or normal-calibre/variant standards. In particular, apparent source contact must not be read as duct communication, and absent ultrasound visibility must not be inferred from an unobstructed 3D view. Validated image examples, patient transforms and separate resource entitlements are still required before live synchronization.

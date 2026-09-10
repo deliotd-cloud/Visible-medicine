@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Liver → Explore liver branches → Study view → Bile ducts & gallbladder** opens a [focused relationship view](docs/HEPATIC_BILIARY_RELATIONSHIPS.md). Both internal biliary groups remain selectable alongside optional existing gallbladder and duct landmarks. Landmarks hide during separation; no missing duct connection or surgical anatomy is inferred.
+
 **Organ → Imaging → Component notes** now gives [direct access to available component teaching](docs/COMPONENT_IMAGING_NAVIGATION.md). Choose a part and open its dissection with the requested CT, MRI or ultrasound notes already expanded. The compact picker stays collapsed until needed and omits pending lessons. No scan or paid-lecture access is granted.
 
 **Pancreatic ducts → Learn more → Imaging** now includes [CT, MRCP and ultrasound teaching](docs/DUCT_IMAGING_TEACHING.md). The right and left intrahepatic bile-duct groups also gain CT notes. Existing compact disclosures are unchanged; these are referenced drafts, not connected scans or clinical approval.

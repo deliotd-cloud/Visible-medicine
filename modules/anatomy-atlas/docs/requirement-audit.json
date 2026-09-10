@@ -63,7 +63,7 @@
     "lib/ventricular-relationships.ts": "b9d2bd5ea079a600c2593ca522f325ceb03c2f2704a26747b4262ef6838c84df",
     "lib/cardiac-context.ts": "428c871b7a942e34c87833ff97441e59e7757c4ae0f5610713e779396df432ef",
     "public/models/bodyparts3d/cardiac/great-vessel-context.json": "fac546e54237db4bed783d583b01c583f423a35a74bd759727d519074de0af85",
-    "app/ventricles.tsx": "f1a850be54cf7d6a70f85f19291a77b8bf50561b7667f7e7636dd6be42bfffc9",
+    "app/ventricles.tsx": "c3eeed97ca4402435db84c3708ab18a96b8ff9b9b79fa6d80388b0511866ee89",
     "app/ventricular-relationships.css": "7dfa2927b9f203aa13dbd1f2205c9429e7b79ffbaa86108b57fb3c69b1b71400",
     "app/body-scene.tsx": "bdc5d86284feb07906acbf70abadfe1db74cc59463083dc1d5ae3acffa1229c4",
     "lib/origin-guides.ts": "b333566888bf13805da9559004fbfbfa6596095a65d7ca8772de8259ca974ff6",
@@ -195,6 +195,8 @@
     "anatomicalCompletenessMeasured": false
   },
   "study": {
+    "hepaticBiliaryLandmarks": 3,
+    "hepaticBiliaryRelationshipPresets": 1,
     "renalRelationshipPresets": 4,
     "visualPathwayRelationshipPresets": 1,
     "cardiacVesselLandmarks": 8,
@@ -972,7 +974,7 @@
       "svg": 2,
       "md": 1,
       "glb": 101,
-      "json": 17,
+      "json": 18,
       "html": 1,
       "tsv": 1
     },
