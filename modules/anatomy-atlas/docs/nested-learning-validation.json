@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "checks": 3443,
+  "legacyRepresentations": 1031,
+  "nestedRepresentations": 37,
+  "combinedRepresentations": 1068,
+  "syntheticCorrespondences": 222,
+  "resourceKinds": [
+    "ct",
+    "mri",
+    "xray",
+    "ultrasound",
+    "lecture",
+    "quiz"
+  ],
+  "studyRoutes": 160,
+  "supportedDocumentVersions": [
+    1,
+    2
+  ],
+  "locatorVersion": 1,
+  "productionResources": 0,
+  "productionCorrespondences": 0,
+  "geometryChanged": false,
+  "patientDataImported": false,
+  "clinicalApproval": false,
+  "externalViewerConnected": false,
+  "browserTesting": false
+}

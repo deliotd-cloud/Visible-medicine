@@ -328,7 +328,7 @@ same(
 same(api.learningReviewPayload({ ...resources[0], approved: true }), null);
 
 for (const mutate of [
-  (d) => (d.schemaVersion = 2),
+  (d) => (d.schemaVersion = 3),
   (d) => (d.approved = true),
   (d) => (d.patientId = 'test-only'),
   (d) => (d.resources[0].url = 'https://example.test/untrusted'),

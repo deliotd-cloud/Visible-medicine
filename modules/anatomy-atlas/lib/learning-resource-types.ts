@@ -8,7 +8,12 @@ export const learningResourceKinds = [
   'quiz',
 ] as const;
 export type ResourceKind = (typeof learningResourceKinds)[number];
-export type RepresentationScope = 'body' | 'shoulder-pilot';
+export type RepresentationScope = 'body' | 'shoulder-pilot' | 'nested';
+export type NestedLearningStudy =
+  | 'eye'
+  | 'ventricles'
+  | 'brainstem'
+  | 'cerebral';
 export type LearningAge = 'adult' | 'paediatric' | 'mixed' | 'unspecified';
 export type LearningSide =
   | 'left'
@@ -16,11 +21,26 @@ export type LearningSide =
   | 'bilateral'
   | 'midline'
   | 'unspecified';
-export type AnatomyRepresentation = {
-  scope: RepresentationScope;
+export type RootAnatomyRepresentation = {
+  scope: 'body' | 'shoulder-pilot';
   structureId: string;
   sources: { file: string; sha256: string }[];
 };
+export type NestedAnatomyRepresentation = {
+  scope: 'nested';
+  structureId: string;
+  sources: RootAnatomyRepresentation['sources'];
+  nested: {
+    study: NestedLearningStudy;
+    parentId: string;
+    parentSources: RootAnatomyRepresentation['sources'];
+    parentBundleSha256: string;
+    bundleSha256: string;
+  };
+};
+export type AnatomyRepresentation =
+  | RootAnatomyRepresentation
+  | NestedAnatomyRepresentation;
 export type LearningAnchor =
   | {
       type: 'volume';
@@ -78,7 +98,8 @@ export type LearningCorrespondence = {
   relation: 'exact' | 'component' | 'broader' | 'related';
 };
 export type LearningDocument = {
-  schemaVersion: 1;
+  /** v1 preserves root representations only; v2 also admits explicit nested bindings. */
+  schemaVersion: 1 | 2;
   resources: LearningResource[];
   links: LearningCorrespondence[];
 };

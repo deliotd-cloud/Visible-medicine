@@ -6,6 +6,8 @@ The [v1 linking contract](LEARNING_RESOURCE_CONTRACT.md) is now implemented and 
 
 ## Existing projects to reuse
 
+The [nested learning extension](NESTED_LEARNING_LINKS.md), added 10 September, includes the 37 exact brain/eye child destinations and can resolve authorized correspondences into existing dissection requests. It preserves separate parent/child provenance and all access/review gates. This does not change the dated external-project observations below or authorize any provisional scan transfer.
+
 The user's **Visible medicine— CT Head Atlas** task owns the provisional CT and MRI head atlas. Do not create a competing head atlas here. The latest accessible task preview lagged behind its saved project state, so the local `work/segmentation/LATEST_ATLAS_STATE.json` was also checked read-only. The following is a dated observation, not a permanent release status:
 
 - CT: `CTH-B02-LOBES-EXTENT`; four revised frontal/temporal extent drafts within an eight-structure review batch. The checkpoint states `DRAFT_REVISIONS_FOR_CONSULTANT_REVIEW` and `NOT_FOR_PUBLICATION`. Some earlier boundaries have scoped acceptance; this is not approval of complete structures or every current revision. The tentorium remains without geometry in that checkpoint.

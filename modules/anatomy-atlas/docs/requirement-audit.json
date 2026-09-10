@@ -20,9 +20,10 @@
     "content/schema/anatomy-structure.schema.json": "0a8e76b6a98e23e25f60a2d9269664dc42974b7a349c63b77e4615fa46887826",
     "content/review-revisions.json": "37a61b04a86955c0ab6cda39b95e33c2cf0f8df7f6cc01bfc13261389719fad7",
     "content/learning-resources.v1.json": "799fec602114a944b4f675d341b445982dac56786cca9b5800d52db7d95899e5",
-    "lib/learning-resource-types.ts": "c210bbf9279ec7f1ec22d65876041c724f56cc0a9aa4626e80a2084ec2034f2f",
-    "lib/learning-resources.ts": "61009f9c571d07d394c54d47fa5f3f05137b774f28aa92fbb20105945559fb91",
+    "lib/learning-resource-types.ts": "0d8d309b1ee94577aee7f4af8e76620ff8001f725253b62f302b6f156554b01f",
+    "lib/learning-resources.ts": "791ed1f7f033ce4f4309a6878f25070802f543ccfd6cce8c8c17ef7fb3c5b412",
     "lib/learning-anatomy.ts": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3",
+    "lib/nested-learning-anatomy.ts": "6e7e1b4836406926af2406e7277a4f62f7ffc1668a644cd180b50d463443d8e1",
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
@@ -146,6 +147,12 @@
   },
   "learningIntegration": {
     "contractVersion": 1,
+    "supportedDocumentVersions": [
+      1,
+      2
+    ],
+    "availableRepresentations": 1068,
+    "nestedRepresentations": 37,
     "supportedKinds": [
       "ct",
       "mri",

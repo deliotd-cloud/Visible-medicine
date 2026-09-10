@@ -27,7 +27,7 @@ const regions = new Set([
   'foot',
   'spine',
 ]);
-const scopes = ['body', 'shoulder-pilot'];
+const scopes = ['body', 'shoulder-pilot', 'nested'];
 const kindAnchor = {
   ct: 'volume',
   mri: 'volume',
@@ -73,18 +73,49 @@ function record(
 function unique<T>(items: T[], key: (item: T) => string) {
   return new Set(items.map(key)).size === items.length;
 }
-function anatomy(value: unknown): value is AnatomyRepresentation {
+function sourceSet(value: unknown): value is AnatomyRepresentation['sources'] {
   return (
-    record(value, ['scope', 'structureId', 'sources']) &&
-    member(value.scope, scopes) &&
-    namespaced(value.structureId, 'vm:anatomy:') &&
-    Array.isArray(value.sources) &&
-    value.sources.length > 0 &&
-    value.sources.length <= 200 &&
-    value.sources.every(
+    Array.isArray(value) &&
+    value.length > 0 &&
+    value.length <= 200 &&
+    value.every(
       (s) => record(s, ['file', 'sha256']) && id(s.file) && digest(s.sha256),
     ) &&
-    unique(value.sources, (s) => s.file)
+    unique(value, (s) => s.file)
+  );
+}
+function anatomy(value: unknown): value is AnatomyRepresentation {
+  if (!value || typeof value !== 'object') return false;
+  const scope = Object.getOwnPropertyDescriptor(value, 'scope')?.value;
+  if (scope !== 'nested')
+    return (
+      record(value, ['scope', 'structureId', 'sources']) &&
+      member(value.scope, ['body', 'shoulder-pilot']) &&
+      namespaced(value.structureId, 'vm:anatomy:') &&
+      sourceSet(value.sources)
+    );
+  return (
+    record(value, ['scope', 'structureId', 'sources', 'nested']) &&
+    namespaced(value.structureId, 'vm:anatomy:') &&
+    sourceSet(value.sources) &&
+    record(value.nested, [
+      'study',
+      'parentId',
+      'parentSources',
+      'parentBundleSha256',
+      'bundleSha256',
+    ]) &&
+    member(value.nested.study, [
+      'eye',
+      'ventricles',
+      'brainstem',
+      'cerebral',
+    ]) &&
+    namespaced(value.nested.parentId, 'vm:anatomy:') &&
+    value.nested.parentId !== value.structureId &&
+    sourceSet(value.nested.parentSources) &&
+    digest(value.nested.parentBundleSha256) &&
+    digest(value.nested.bundleSha256)
   );
 }
 function anchor(value: unknown): value is LearningAnchor {
@@ -267,13 +298,15 @@ export function parseLearningDocument(value: unknown): LearningDocument | null {
   try {
     if (
       !record(value, ['schemaVersion', 'resources', 'links']) ||
-      value.schemaVersion !== 1 ||
+      (value.schemaVersion !== 1 && value.schemaVersion !== 2) ||
       !Array.isArray(value.resources) ||
       value.resources.length > 1000 ||
       !value.resources.every(resource) ||
       !Array.isArray(value.links) ||
       value.links.length > 10000 ||
       !value.links.every(correspondence) ||
+      (value.schemaVersion === 1 &&
+        value.links.some((link) => link.anatomy.scope === 'nested')) ||
       !unique(value.resources, (r) => r.id) ||
       !unique(value.links, (l) => l.id)
     )
@@ -379,6 +412,29 @@ const sourceKey = (sources: AnatomyRepresentation['sources']) =>
       .sort((a, b) => (a.file < b.file ? -1 : a.file > b.file ? 1 : 0))
       .map((s) => [s.file, s.sha256]),
   );
+/** Complete anatomical binding identity, not a patient transform or an approval.
+ * Source-set ordering is irrelevant; nested parent/study/bundle identity is not. */
+export function learningAnatomyBindingKey(value: unknown): string | null {
+  try {
+    if (!anatomy(value)) return null;
+    return JSON.stringify([
+      value.scope,
+      value.structureId,
+      sourceKey(value.sources),
+      ...(value.scope === 'nested'
+        ? [
+            value.nested.study,
+            value.nested.parentId,
+            sourceKey(value.nested.parentSources),
+            value.nested.parentBundleSha256,
+            value.nested.bundleSha256,
+          ]
+        : []),
+    ]);
+  } catch {
+    return null;
+  }
+}
 const locatorFor = (link: LearningCorrespondence): LearningLocator => ({
   version: 1,
   linkId: link.id,
@@ -425,7 +481,8 @@ export function createLearningRegistry(
     const r = resources.get(link.resourceId);
     if (
       !target ||
-      sourceKey(target.sources) !== sourceKey(link.anatomy.sources)
+      learningAnatomyBindingKey(target) !==
+        learningAnatomyBindingKey(link.anatomy)
     )
       throw Error('Unknown or stale anatomical source binding');
     if (

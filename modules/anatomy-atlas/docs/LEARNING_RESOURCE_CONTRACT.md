@@ -1,10 +1,10 @@
-# Learning-resource linking contract v1
+# Learning-resource linking contract v1/v2
 
 Implemented infrastructure, not a connected radiology viewer or publication approval. The current source-controlled `content/learning-resources.v1.json` deliberately contains zero resources and zero correspondences. The user's provisional CT/MRI images and existing course packages are not copied, fabricated or promoted into published learning resources.
 
 ## One strict transport format
 
-`lib/learning-resource-types.ts` defines the contract; `lib/learning-resources.ts` is its runtime parser/index. A document has exactly `schemaVersion: 1`, `resources` and `links`. Unknown fields, unsupported versions, duplicate IDs/anchors, incomplete bindings, invalid hashes and malformed locators are rejected. `parseLearningJson` limits UTF-8 transport to 2 MB; callers still need request/file body limits. This is a pure same-process library, not an upload API, database, authentication service or browser messaging boundary.
+`lib/learning-resource-types.ts` defines the contract; `lib/learning-resources.ts` is its runtime parser/index. A document has exactly `schemaVersion`, `resources` and `links`. Version 1 retains body/shoulder representations; version 2 additionally supports [explicit nested parent/child bindings](NESTED_LEARNING_LINKS.md). Version 1 rejects nested records; existing locator version 1 is unchanged. The configured production document remains version 1 and empty. Unknown fields, unsupported versions, duplicate IDs/anchors, incomplete bindings, invalid hashes and malformed locators are rejected. `parseLearningJson` limits UTF-8 transport to 2 MB; callers still need request/file body limits. This is a pure same-process library, not an upload API, database, authentication service or browser messaging boundary.
 
 Each resource has an opaque product resource ID, positive revision, kind, title, age group, laterality, regional membership, material digest/origin and its typed anchors. Names/titles are display metadata, not identity. Acquired images, synthetic images and authored lessons remain explicitly distinguished. These labels do not prove rights or medical correctness.
 
@@ -20,7 +20,7 @@ All anchor IDs must come from the owning resource's actual manifest. The format 
 
 ## Exact anatomical binding and explicit correspondence
 
-The anatomy key is `(scope, structureId)`: `body` and `shoulder-pilot` are not interchangeable. `learningAnatomyRepresentations` reuses the existing source/reference registries to expose all 1,031 scope-specific entries and complete source filename/hash sets, without copying display centres into patient coordinates. Array/key ordering does not change the meaning of a source set. A grouped structure must retain all its source components.
+The anatomy key is `(scope, structureId)`: `body`, `shoulder-pilot` and `nested` are not interchangeable. `learningAnatomyRepresentations` retains the existing 1,031 body/shoulder entries and complete source filename/hash sets. The opt-in `allLearningAnatomyRepresentations` adds 37 nested children with exact parent sources, study and parent/child bundle digests. These are overlapping scope-specific representations, not unique anatomy counts. No display centre becomes a patient coordinate. Array/key ordering does not change the meaning of a source set. A grouped structure must retain all its source components.
 
 A correspondence has its own ID/revision, anatomy key/source set, resource ID/revision/material digest, anchor ID and relation. Its direction is **resource annotation/topic relative to selected anatomy**:
 

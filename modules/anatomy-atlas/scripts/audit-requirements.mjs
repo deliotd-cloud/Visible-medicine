@@ -18,7 +18,7 @@ export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';
 export { reasoningConcepts, reasoningConceptFor } from './lib/reasoning-questions.ts';
 export { createLearningRegistry, parseLearningDocument, learningResourceKinds } from './lib/learning-resources.ts';
-export { learningAnatomyRepresentations } from './lib/learning-anatomy.ts';
+export { allLearningAnatomyRepresentations } from './lib/nested-learning-anatomy.ts';
 export { bodyDisplayCatalog } from './lib/body-display-catalog.ts';
 export { nestedStudyTargets } from './lib/nested-anatomy.ts';
 export { nestedTeachingFor, nestedTopicLesson } from './lib/nested-teaching.ts';
@@ -42,7 +42,7 @@ const {
   createLearningRegistry,
   parseLearningDocument,
   learningResourceKinds,
-  learningAnatomyRepresentations,
+  allLearningAnatomyRepresentations,
   bodyDisplayCatalog,
   nestedStudyTargets,
   nestedTeachingFor,
@@ -70,10 +70,12 @@ const learning = parseLearningDocument(
   await json('content/learning-resources.v1.json'),
 );
 assert(learning, 'Invalid learning-resource contract');
-createLearningRegistry(
-  learning,
-  learningAnatomyRepresentations(catalog, manifest, shoulder),
+const learningTargets = allLearningAnatomyRepresentations(
+  catalog,
+  manifest,
+  shoulder,
 );
+createLearningRegistry(learning, learningTargets);
 const revisions = await json('content/review-revisions.json');
 const licenses = await json('LICENSES/dependency-license-audit.json');
 const lock = await json('package-lock.json');
@@ -203,6 +205,7 @@ for (const path of [
   'lib/learning-resource-types.ts',
   'lib/learning-resources.ts',
   'lib/learning-anatomy.ts',
+  'lib/nested-learning-anatomy.ts',
   'lib/learning-entitlements.ts',
   'public/brand/visible-medicine-lockup-dark.png',
   'public/brand/visible-medicine-lockup-light.png',
@@ -314,6 +317,10 @@ const report = {
   },
   learningIntegration: {
     contractVersion: learning.schemaVersion,
+    supportedDocumentVersions: [1, 2],
+    availableRepresentations: learningTargets.length,
+    nestedRepresentations: learningTargets.filter((t) => t.scope === 'nested')
+      .length,
     supportedKinds: learningResourceKinds,
     configuredResources: learning.resources.length,
     configuredCorrespondences: learning.links.length,

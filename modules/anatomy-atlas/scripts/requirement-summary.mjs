@@ -47,6 +47,8 @@ ${rows}
 
 Quiz-tab notes are separate from interactive practice. X-ray has no authored topic/viewer yet. CT/MRI/US text is not a scan viewer, segmentation or validated spatial correspondence.
 
+The opt-in [nested learning registry](NESTED_LEARNING_LINKS.md) exposes ${learningIntegration.nestedRepresentations} exact child destinations within ${learningIntegration.availableRepresentations} scope-specific representations. It supports document versions ${learningIntegration.supportedDocumentVersions.join(' and ')}, while the configured production document stays version ${learningIntegration.contractVersion} with no resources. Nested parent/child source and bundle bindings can resolve into the existing dissection routes; this is not a live viewer connection or entitlement.
+
 ## Nested brain and eye teaching
 
 The collapsed [Learn more section](NESTED_ANATOMY_TEACHING.md) has ${teaching.nested.concepts} source-pinned concepts across ${teaching.nested.representations} selectable parts, with ${teaching.nested.references} primary-reference links. These counts are separate from the root-body table and overlap parent anatomy. Each part has draft Anatomy, Function, Clinical and an unscored self-check; Pathology has ${teaching.nested.topics.pathology.specificDraft} draft / ${teaching.nested.topics.pathology.pending} pending representations. CT, MRI and ultrasound each remain ${teaching.nested.topics.ct.pending} pending. Five conceptual self-checks test documented model limitations instead of medical recall. No clinical approvals or external resource access are implied.
