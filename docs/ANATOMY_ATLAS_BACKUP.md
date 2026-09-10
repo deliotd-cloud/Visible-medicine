@@ -1,6 +1,18 @@
 # Anatomy atlas backup — 10 September 2026
 
-## 10 September 2026 — X-ray orientation topic (current)
+## 10 September 2026 — wrist and foot bone studies (current)
+
+Source `87be059878e20442ce8c5a64d2be4d51e72dc9ec`, tree `bed1cdb7945e16115630f0de33bf525e5f04b17d`, parent `7b16d16a9c5c0d9449b0fdb0980a065623b7f188`. Fourteen source paths were mirrored into `modules/anatomy-atlas`; the main website is unchanged. Four focused wrist/foot bone windows reuse 30 existing sided representations, without new geometry, dependencies, teaching entitlements or permanent controls. Existing source anatomy and all previous recipes are preserved. The generated manifest also catches up eight previously implemented renal focuses. Current runtime totals: 145 stages / 135 focuses / 1,022 root representations.
+
+Sites saved version 129, `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_f00e2e1499a081918db1fc1429a3db23`, from the exact pushed source above. Native archive: 268 files / 127,580,160 bytes / `sha256:293a25cc889455ecb22dd1bcec90366a255e53efbba1fbaf28ed07b960387fec`. Owner-only access settings are unchanged; the source credential was cleared. Private publication was dispatched as `appgdep_6aa30c17625c81918c5e06c5c4b6fd7d`; its final result is recorded separately in the local checkpoint, not inferred from saving.
+
+Checks passed: four study views across 12 side scopes, unchanged catalogue and historical recipe hashes, compact-card/search integration, removal/Undo/Redo/reset, shared guidance/handlers, renal regression, 10,440 camera-bound checks and production build. Clinical, browser/device and actual scan/lecture integration acceptance remain outstanding. The shared regression now checks target-presence availability, allowing bone focuses and correctly unavailable contralateral renal focuses.
+
+Recovery stem `work/atlas-acral-bone-studies-2026-09-10`: archive 89,783,575 bytes SHA256 `e4461205c4cdb8f0a6c64a095c3e29a221db6a44b06db7b781e5e89030548696`; delta 1,351,680 bytes SHA256 `6440d48356d6e883728a164fe46eccc9f37852a5b6c3967cb72ffc38f8fb4a2c`; incremental bundle 15,893 bytes SHA256 `fe6233274c07b3b00902fe7f9827de2ec2a886506ad7676f30f0273e17c853d1`. The bundle REQUIRES the source parent above. Mirror audit: 1,264 files / 150,213,680 bytes / 104 GLBs; no common credential signatures found (not exhaustive). Preparation JSON flags precede this receipt. Do not rerun the one-shot helper or overwrite recovery artifacts.
+
+This establishes a Sites source save and same-PC recovery copy, not GitHub delivery, off-device restoration, conversation-history backup or private-review database backup. The broader atlas goal remains active.
+
+## 10 September 2026 — X-ray orientation topic
 
 Source `7b16d16a9c5c0d9449b0fdb0980a065623b7f188`, tree `d623196c93106a84e57ba4751c104d54ab1add05`, parent `a1b9c5719d5059e75cf2e93e84e45b208764fffb`. Forty source paths add X-ray inside the existing Imaging group, three source-linked shoulder-bone concepts across six body records/three overlapping shoulder bones, explicit pending states elsewhere, narrow-panel wrapping and source-reference links. No radiograph, calibrated projection, source geometry, dependency or entitlement changes. New teaching/display fingerprints invalidate older shoulder approvals; exact pre-X-ray review/curriculum reconstruction preserves the historical evidence. See module `docs/XRAY_TEACHING.md`.
 

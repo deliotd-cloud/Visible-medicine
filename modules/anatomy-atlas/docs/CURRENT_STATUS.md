@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Wrist and foot bone exposure studies](ACRAL_BONE_STUDIES.md) add four compact Study choices using 30 existing bone representations, with no new geometry. Side filters, selection/removal and Undo/Redo reuse the established dissection controls. These are unvalidated source-bone arrangements, not cartilage, ligament or radiographic joint models.
+
 Generated from the actual catalogue, teaching resolver, dissection profiles and question definitions. Run `npm run requirements:audit`; `npm run requirements:audit -- --check` checks this page and [the JSON inventory](requirement-audit.json) together. Historical milestone totals elsewhere are not current coverage.
 
 ## Delivered source scope
@@ -20,7 +22,7 @@ The [optic chiasm and tract study](VISUAL_PATHWAY_DISSECTION.md) adds 3 selectab
 - Dedicated shoulder: 9 representations / 11 source parts, overlapping the body catalogue.
 - Pancreatic dissection: 2 selectable duct components and 1 optional reference surface. These subdivide the corrected pancreas, not new unique anatomy.
 - Nested dissections: 15 eye components, 4 ventricular spaces, 4 brainstem/cerebellar compounds, 14 cerebral selections, 4 cardiac cavities, 5 partial lung branch groups, 7 liver branch groups, 7 renal/adrenal vascular groups and 3 chiasm/tract surfaces. Four superior temporal source parts, seven renal/adrenal groups and three chiasm/tract surfaces add coverage; other nested studies subdivide existing parents. Context reuses existing structures. These are partial source surfaces, not complete organ interiors or clinical approvals. Brief drafts are separate from the root-body inventory below. 102 public/archive GLBs are retained, including original and alternate display assets. The original catalogue counts remain unchanged.
-- 141 dissection stages and 131 focuses. These operate on supplied surfaces; they do not establish complete anatomy.
+- 145 dissection stages and 135 focuses. These operate on supplied surfaces; they do not establish complete anatomy.
 - Internal studies have optional selected-part original-position guides inside their collapsed separation controls. Guides use the source surface and the exact display displacement; flat plates, cutaways, hidden/context parts and exam mode suppress them. They are display annotations, not anatomical connections. See [scope and checks](ORIGIN_GUIDES.md).
 - Find/name identification practice; 80 draft reasoning concepts bound to 160 representations in head-neck, foot, thigh, leg, pelvis, shoulder-arm, hand, forearm. One concept per session, without contralateral repetition. See [practice scope and tests](REASONING_PRACTICE.md).
 - [Learning-resource contract](LEARNING_RESOURCE_CONTRACT.md): version 1, ct/mri/xray/ultrasound/lecture/quiz anchors; 0 configured resources / 0 correspondences. Read-only linking infrastructure, not a connected external viewer or publication approval.

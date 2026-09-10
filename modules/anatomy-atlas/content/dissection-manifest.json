@@ -14,7 +14,9 @@
       ],
       "references": [
         "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
-        "https://anatomy.elpaso.ttuhsc.edu/schemes/thigh_tables.html"
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/thigh_tables.html",
+        "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
       ],
       "stages": [
         {
@@ -3446,6 +3448,149 @@
             "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
             "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger"
           ]
+        },
+        {
+          "id": "renal-right-relationships",
+          "title": "Right kidney relationships",
+          "rule": {
+            "fmaIds": [
+              "FMA7204"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA14752",
+                "FMA15571",
+                "FMA15629",
+                "FMA3789",
+                "FMA10951"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Study the right kidney with its renal artery, ureter and adrenal gland, using the aorta and inferior vena cava as reference surfaces. The normal right renal artery passes behind the inferior vena cava; inspect the source relationship without assuming a validated vessel junction.",
+          "inspect": "Rotate the assembled view first; select, isolate or set aside a surface, then Undo to restore it. Explode separates objects for inspection and does not preserve anatomical distances. Kidney cortex, medulla, calyces, renal pelvis and renal veins are not separately represented. These draft surfaces do not establish lumen continuity, vessel attachment or a surgical plane.",
+          "landmarks": [
+            "right kidney",
+            "right renal artery",
+            "right ureter"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:right:organ:right-kidney",
+            "vm:anatomy:body:abdomen:right:organ:right-adrenal-gland",
+            "vm:anatomy:body:abdomen:right:organ:right-ureter",
+            "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+            "vm:anatomy:body:abdomen:right:vessel:right-renal-artery"
+          ]
+        },
+        {
+          "id": "renal-left-relationships",
+          "title": "Left kidney relationships",
+          "rule": {
+            "fmaIds": [
+              "FMA7205"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA14753",
+                "FMA15572",
+                "FMA15630",
+                "FMA3789",
+                "FMA10951"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Study the left kidney with its renal artery, ureter and adrenal gland. Rotate toward the medial kidney margin to compare the supplied surfaces. No renal vein or internal collecting-system mesh is supplied in this study.",
+          "inspect": "Rotate the assembled view first; select, isolate or set aside a surface, then Undo to restore it. Explode separates objects for inspection and does not preserve anatomical distances. Kidney cortex, medulla, calyces, renal pelvis and renal veins are not separately represented. These draft surfaces do not establish lumen continuity, vessel attachment or a surgical plane.",
+          "landmarks": [
+            "left kidney",
+            "left renal artery",
+            "left ureter"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:left:organ:left-kidney",
+            "vm:anatomy:body:abdomen:left:organ:left-adrenal-gland",
+            "vm:anatomy:body:abdomen:left:organ:left-ureter",
+            "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+            "vm:anatomy:body:abdomen:left:vessel:left-renal-artery"
+          ]
+        },
+        {
+          "id": "renal-arterial-relationships",
+          "title": "Renal arteries & great vessels",
+          "rule": {
+            "fmaIds": [
+              "FMA14752",
+              "FMA14753"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA7204",
+                "FMA7205",
+                "FMA3789",
+                "FMA10951"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the renal arteries alongside the kidneys, abdominal aorta and inferior vena cava. Renal arteries normally arise from the abdominal aorta. Displayed surfaces are not a complete arterial branching tree or a simulation of blood flow.",
+          "inspect": "Rotate the assembled view first; select, isolate or set aside a surface, then Undo to restore it. Explode separates objects for inspection and does not preserve anatomical distances. Kidney cortex, medulla, calyces, renal pelvis and renal veins are not separately represented. These draft surfaces do not establish lumen continuity, vessel attachment or a surgical plane.",
+          "landmarks": [
+            "renal artery",
+            "abdominal aorta",
+            "inferior vena cava"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:right:organ:right-kidney",
+            "vm:anatomy:body:abdomen:left:organ:left-kidney",
+            "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+            "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-renal-artery"
+          ]
+        },
+        {
+          "id": "renal-ureter-relationships",
+          "title": "Kidneys & proximal ureter relationships",
+          "rule": {
+            "fmaIds": [
+              "FMA15571",
+              "FMA15572"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA7204",
+                "FMA7205"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Compare the kidney surfaces and the supplied ureters from behind. Ureters normally carry urine from the renal pelvis toward the bladder. This view omits the bladder and does not reconstruct the pelvis, calyces or a continuous urinary lumen.",
+          "inspect": "Rotate the assembled view first; select, isolate or set aside a surface, then Undo to restore it. Explode separates objects for inspection and does not preserve anatomical distances. Kidney cortex, medulla, calyces, renal pelvis and renal veins are not separately represented. These draft surfaces do not establish lumen continuity, vessel attachment or a surgical plane.",
+          "landmarks": [
+            "kidney",
+            "ureter"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:right:organ:right-kidney",
+            "vm:anatomy:body:abdomen:left:organ:left-kidney",
+            "vm:anatomy:body:abdomen:right:organ:right-ureter",
+            "vm:anatomy:body:abdomen:left:organ:left-ureter"
+          ]
         }
       ]
     },
@@ -5076,7 +5221,8 @@
         "Wrist flexor retinacula are available. Palmar aponeurosis, extensor retinacula, tendon sheaths and digital nerves remain absent. Arterial source numbers are retained, not validated textbook branch counts."
       ],
       "references": [
-        "https://anatomy.elpaso.ttuhsc.edu/schemes/hand_tables.html"
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/hand_tables.html",
+        "https://anatomy.ttuhscep.edu/musculoskeletal_system/hand_ans.html"
       ],
       "stages": [
         {
@@ -6270,6 +6416,82 @@
             "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
             "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger"
           ]
+        },
+        {
+          "id": "carpal-proximal-row",
+          "title": "Wrist: proximal carpal row",
+          "description": "Expose scaphoid, lunate, triquetral and pisiform without the distal row or overlying tissues. The pisiform lies on the palmar side of the triquetral rather than forming a flat four-bone line. Rotate to inspect that depth relationship.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA24435",
+                "FMA24436",
+                "FMA24437",
+                "FMA24438",
+                "FMA24439",
+                "FMA24440",
+                "FMA24441",
+                "FMA24442"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "scaphoid$",
+            "lunate$",
+            "triquetral$",
+            "pisiform$"
+          ],
+          "inspect": "Choose Left or Right for a closer view. Select and set aside a bone to expose its neighbours; Undo restores it. Return separation to zero before comparing source positions. Joint cartilage, ligament layers and normal joint-space measurements are not supplied by these bone surfaces.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:hand:left:bone:left-lunate",
+            "vm:anatomy:body:hand:left:bone:left-pisiform",
+            "vm:anatomy:body:hand:left:bone:left-scaphoid",
+            "vm:anatomy:body:hand:left:bone:left-triquetral",
+            "vm:anatomy:body:hand:right:bone:right-lunate",
+            "vm:anatomy:body:hand:right:bone:right-pisiform",
+            "vm:anatomy:body:hand:right:bone:right-scaphoid",
+            "vm:anatomy:body:hand:right:bone:right-triquetral"
+          ]
+        },
+        {
+          "id": "carpal-distal-row",
+          "title": "Wrist: distal carpal row",
+          "description": "Expose trapezium, trapezoid, capitate and hamate, ordered anatomically from the thumb side towards the little-finger side. Select each bone to distinguish its shape. Use Retinaculum & carpal arch to return to both rows with the roof surface.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA24443",
+                "FMA24444",
+                "FMA23725",
+                "FMA24445",
+                "FMA24446",
+                "FMA24447",
+                "FMA24448",
+                "FMA24449"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "trapezium$",
+            "trapezoid$",
+            "capitate$",
+            "hamate$"
+          ],
+          "inspect": "Choose Left or Right for a closer view. Select and set aside a bone to expose its neighbours; Undo restores it. Return separation to zero before comparing source positions. Joint cartilage, ligament layers and normal joint-space measurements are not supplied by these bone surfaces.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:hand:left:bone:left-capitate",
+            "vm:anatomy:body:hand:left:bone:left-hamate",
+            "vm:anatomy:body:hand:left:bone:left-trapezium",
+            "vm:anatomy:body:hand:left:bone:left-trapezoid",
+            "vm:anatomy:body:hand:right:bone:right-capitate",
+            "vm:anatomy:body:hand:right:bone:right-hamate",
+            "vm:anatomy:body:hand:right:bone:right-trapezium",
+            "vm:anatomy:body:hand:right:bone:right-trapezoid"
+          ]
         }
       ],
       "focuses": [
@@ -7279,6 +7501,80 @@
             "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-middle-finger",
             "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
             "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger"
+          ]
+        },
+        {
+          "id": "carpal-proximal-row",
+          "title": "Wrist: proximal carpal row",
+          "rule": {
+            "fmaIds": [
+              "FMA24435",
+              "FMA24436",
+              "FMA24437",
+              "FMA24438",
+              "FMA24439",
+              "FMA24440",
+              "FMA24441",
+              "FMA24442"
+            ]
+          },
+          "context": [],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Expose scaphoid, lunate, triquetral and pisiform without the distal row or overlying tissues. The pisiform lies on the palmar side of the triquetral rather than forming a flat four-bone line. Rotate to inspect that depth relationship.",
+          "inspect": "Choose Left or Right for a closer view. Select and set aside a bone to expose its neighbours; Undo restores it. Return separation to zero before comparing source positions. Joint cartilage, ligament layers and normal joint-space measurements are not supplied by these bone surfaces.",
+          "landmarks": [
+            "scaphoid$",
+            "lunate$",
+            "triquetral$",
+            "pisiform$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:hand:left:bone:left-lunate",
+            "vm:anatomy:body:hand:left:bone:left-pisiform",
+            "vm:anatomy:body:hand:left:bone:left-scaphoid",
+            "vm:anatomy:body:hand:left:bone:left-triquetral",
+            "vm:anatomy:body:hand:right:bone:right-lunate",
+            "vm:anatomy:body:hand:right:bone:right-pisiform",
+            "vm:anatomy:body:hand:right:bone:right-scaphoid",
+            "vm:anatomy:body:hand:right:bone:right-triquetral"
+          ]
+        },
+        {
+          "id": "carpal-distal-row",
+          "title": "Wrist: distal carpal row",
+          "rule": {
+            "fmaIds": [
+              "FMA24443",
+              "FMA24444",
+              "FMA23725",
+              "FMA24445",
+              "FMA24446",
+              "FMA24447",
+              "FMA24448",
+              "FMA24449"
+            ]
+          },
+          "context": [],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Expose trapezium, trapezoid, capitate and hamate, ordered anatomically from the thumb side towards the little-finger side. Select each bone to distinguish its shape. Use Retinaculum & carpal arch to return to both rows with the roof surface.",
+          "inspect": "Choose Left or Right for a closer view. Select and set aside a bone to expose its neighbours; Undo restores it. Return separation to zero before comparing source positions. Joint cartilage, ligament layers and normal joint-space measurements are not supplied by these bone surfaces.",
+          "landmarks": [
+            "trapezium$",
+            "trapezoid$",
+            "capitate$",
+            "hamate$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:hand:left:bone:left-capitate",
+            "vm:anatomy:body:hand:left:bone:left-hamate",
+            "vm:anatomy:body:hand:left:bone:left-trapezium",
+            "vm:anatomy:body:hand:left:bone:left-trapezoid",
+            "vm:anatomy:body:hand:right:bone:right-capitate",
+            "vm:anatomy:body:hand:right:bone:right-hamate",
+            "vm:anatomy:body:hand:right:bone:right-trapezium",
+            "vm:anatomy:body:hand:right:bone:right-trapezoid"
           ]
         }
       ]
@@ -8686,7 +8982,9 @@
       ],
       "references": [
         "https://anatomy.elpaso.ttuhsc.edu/schemes/leg_tables.html",
-        "https://teachmeanatomy.info/lower-limb/muscles/foot/"
+        "https://teachmeanatomy.info/lower-limb/muscles/foot/",
+        "https://anatomy.med.utah.edu/diganat/anatomy_tutorials/digital_dissector/index.php?add=/ankle_foot&lab=35&menu=35+Ankle/Foot&rcount=1&selectsize=Small&textsize=Small",
+        "https://www.ncbi.nlm.nih.gov/books/NBK546698/"
       ],
       "stages": [
         {
@@ -9642,6 +9940,75 @@
             "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
             "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
           ]
+        },
+        {
+          "id": "tarsal-hindfoot",
+          "title": "Foot: hindfoot bones",
+          "description": "Keep the talus and calcaneus only. Rotate from above to a side view, then set the talus aside to inspect the underlying calcaneal surface. This is a bone exposure, not a simulation of subtalar motion or an ankle mortise.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA24482",
+                "FMA24483",
+                "FMA24497",
+                "FMA24498"
+              ]
+            }
+          ],
+          "view": "superior",
+          "landmarks": [
+            "talus$",
+            "calcaneus$"
+          ],
+          "inspect": "Choose Left or Right for a closer view. Select and set aside a bone to expose its neighbours; Undo restores it. Return separation to zero before comparing source positions. Joint cartilage, ligament layers and normal joint-space measurements are not supplied by these bone surfaces.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:foot:left:bone:left-calcaneus",
+            "vm:anatomy:body:foot:left:bone:left-talus",
+            "vm:anatomy:body:foot:right:bone:right-calcaneus",
+            "vm:anatomy:body:foot:right:bone:right-talus"
+          ]
+        },
+        {
+          "id": "tarsal-midfoot",
+          "title": "Foot: midfoot bones",
+          "description": "Expose the navicular, cuboid and three cuneiforms without the hindfoot, metatarsals or toes. Compare the medial navicular–cuneiform region with the lateral cuboid. The Skeletal framework view restores the broader bony context; Lisfranc ligaments are not reconstructed.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA24500",
+                "FMA24501",
+                "FMA24528",
+                "FMA24529",
+                "FMA24521",
+                "FMA24522",
+                "FMA24523",
+                "FMA24524",
+                "FMA24525",
+                "FMA24526"
+              ]
+            }
+          ],
+          "view": "superior",
+          "landmarks": [
+            "navicular bone",
+            "cuboid bone$",
+            "cuneiform bone$"
+          ],
+          "inspect": "Choose Left or Right for a closer view. Select and set aside a bone to expose its neighbours; Undo restores it. Return separation to zero before comparing source positions. Joint cartilage, ligament layers and normal joint-space measurements are not supplied by these bone surfaces.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:foot:left:bone:left-cuboid-bone",
+            "vm:anatomy:body:foot:left:bone:left-intermediate-cuneiform-bone",
+            "vm:anatomy:body:foot:left:bone:left-lateral-cuneiform-bone",
+            "vm:anatomy:body:foot:left:bone:left-medial-cuneiform-bone",
+            "vm:anatomy:body:foot:left:bone:navicular-bone-of-left-foot",
+            "vm:anatomy:body:foot:right:bone:navicular-bone-of-right-foot",
+            "vm:anatomy:body:foot:right:bone:right-cuboid-bone",
+            "vm:anatomy:body:foot:right:bone:right-intermediate-cuneiform-bone",
+            "vm:anatomy:body:foot:right:bone:right-lateral-cuneiform-bone",
+            "vm:anatomy:body:foot:right:bone:right-medial-cuneiform-bone"
+          ]
         }
       ],
       "focuses": [
@@ -10298,6 +10665,73 @@
             "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
             "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
             "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
+          ]
+        },
+        {
+          "id": "tarsal-hindfoot",
+          "title": "Foot: hindfoot bones",
+          "rule": {
+            "fmaIds": [
+              "FMA24482",
+              "FMA24483",
+              "FMA24497",
+              "FMA24498"
+            ]
+          },
+          "context": [],
+          "includeSkeleton": false,
+          "view": "superior",
+          "description": "Keep the talus and calcaneus only. Rotate from above to a side view, then set the talus aside to inspect the underlying calcaneal surface. This is a bone exposure, not a simulation of subtalar motion or an ankle mortise.",
+          "inspect": "Choose Left or Right for a closer view. Select and set aside a bone to expose its neighbours; Undo restores it. Return separation to zero before comparing source positions. Joint cartilage, ligament layers and normal joint-space measurements are not supplied by these bone surfaces.",
+          "landmarks": [
+            "talus$",
+            "calcaneus$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:foot:left:bone:left-calcaneus",
+            "vm:anatomy:body:foot:left:bone:left-talus",
+            "vm:anatomy:body:foot:right:bone:right-calcaneus",
+            "vm:anatomy:body:foot:right:bone:right-talus"
+          ]
+        },
+        {
+          "id": "tarsal-midfoot",
+          "title": "Foot: midfoot bones",
+          "rule": {
+            "fmaIds": [
+              "FMA24500",
+              "FMA24501",
+              "FMA24528",
+              "FMA24529",
+              "FMA24521",
+              "FMA24522",
+              "FMA24523",
+              "FMA24524",
+              "FMA24525",
+              "FMA24526"
+            ]
+          },
+          "context": [],
+          "includeSkeleton": false,
+          "view": "superior",
+          "description": "Expose the navicular, cuboid and three cuneiforms without the hindfoot, metatarsals or toes. Compare the medial navicular–cuneiform region with the lateral cuboid. The Skeletal framework view restores the broader bony context; Lisfranc ligaments are not reconstructed.",
+          "inspect": "Choose Left or Right for a closer view. Select and set aside a bone to expose its neighbours; Undo restores it. Return separation to zero before comparing source positions. Joint cartilage, ligament layers and normal joint-space measurements are not supplied by these bone surfaces.",
+          "landmarks": [
+            "navicular bone",
+            "cuboid bone$",
+            "cuneiform bone$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:foot:left:bone:left-cuboid-bone",
+            "vm:anatomy:body:foot:left:bone:left-intermediate-cuneiform-bone",
+            "vm:anatomy:body:foot:left:bone:left-lateral-cuneiform-bone",
+            "vm:anatomy:body:foot:left:bone:left-medial-cuneiform-bone",
+            "vm:anatomy:body:foot:left:bone:navicular-bone-of-left-foot",
+            "vm:anatomy:body:foot:right:bone:navicular-bone-of-right-foot",
+            "vm:anatomy:body:foot:right:bone:right-cuboid-bone",
+            "vm:anatomy:body:foot:right:bone:right-intermediate-cuneiform-bone",
+            "vm:anatomy:body:foot:right:bone:right-lateral-cuneiform-bone",
+            "vm:anatomy:body:foot:right:bone:right-medial-cuneiform-bone"
           ]
         }
       ]
@@ -11995,7 +12429,9 @@
         "Organ removal is an educational visibility change, not a surgical sequence."
       ],
       "references": [
-        "https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html"
+        "https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html",
+        "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
       ],
       "stages": [
         {
@@ -13472,6 +13908,149 @@
             "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein"
+          ]
+        },
+        {
+          "id": "renal-right-relationships",
+          "title": "Right kidney relationships",
+          "rule": {
+            "fmaIds": [
+              "FMA7204"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA14752",
+                "FMA15571",
+                "FMA15629",
+                "FMA3789",
+                "FMA10951"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Study the right kidney with its renal artery, ureter and adrenal gland, using the aorta and inferior vena cava as reference surfaces. The normal right renal artery passes behind the inferior vena cava; inspect the source relationship without assuming a validated vessel junction.",
+          "inspect": "Rotate the assembled view first; select, isolate or set aside a surface, then Undo to restore it. Explode separates objects for inspection and does not preserve anatomical distances. Kidney cortex, medulla, calyces, renal pelvis and renal veins are not separately represented. These draft surfaces do not establish lumen continuity, vessel attachment or a surgical plane.",
+          "landmarks": [
+            "right kidney",
+            "right renal artery",
+            "right ureter"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:right:organ:right-kidney",
+            "vm:anatomy:body:abdomen:right:organ:right-adrenal-gland",
+            "vm:anatomy:body:abdomen:right:organ:right-ureter",
+            "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+            "vm:anatomy:body:abdomen:right:vessel:right-renal-artery"
+          ]
+        },
+        {
+          "id": "renal-left-relationships",
+          "title": "Left kidney relationships",
+          "rule": {
+            "fmaIds": [
+              "FMA7205"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA14753",
+                "FMA15572",
+                "FMA15630",
+                "FMA3789",
+                "FMA10951"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Study the left kidney with its renal artery, ureter and adrenal gland. Rotate toward the medial kidney margin to compare the supplied surfaces. No renal vein or internal collecting-system mesh is supplied in this study.",
+          "inspect": "Rotate the assembled view first; select, isolate or set aside a surface, then Undo to restore it. Explode separates objects for inspection and does not preserve anatomical distances. Kidney cortex, medulla, calyces, renal pelvis and renal veins are not separately represented. These draft surfaces do not establish lumen continuity, vessel attachment or a surgical plane.",
+          "landmarks": [
+            "left kidney",
+            "left renal artery",
+            "left ureter"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:left:organ:left-kidney",
+            "vm:anatomy:body:abdomen:left:organ:left-adrenal-gland",
+            "vm:anatomy:body:abdomen:left:organ:left-ureter",
+            "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+            "vm:anatomy:body:abdomen:left:vessel:left-renal-artery"
+          ]
+        },
+        {
+          "id": "renal-arterial-relationships",
+          "title": "Renal arteries & great vessels",
+          "rule": {
+            "fmaIds": [
+              "FMA14752",
+              "FMA14753"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA7204",
+                "FMA7205",
+                "FMA3789",
+                "FMA10951"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the renal arteries alongside the kidneys, abdominal aorta and inferior vena cava. Renal arteries normally arise from the abdominal aorta. Displayed surfaces are not a complete arterial branching tree or a simulation of blood flow.",
+          "inspect": "Rotate the assembled view first; select, isolate or set aside a surface, then Undo to restore it. Explode separates objects for inspection and does not preserve anatomical distances. Kidney cortex, medulla, calyces, renal pelvis and renal veins are not separately represented. These draft surfaces do not establish lumen continuity, vessel attachment or a surgical plane.",
+          "landmarks": [
+            "renal artery",
+            "abdominal aorta",
+            "inferior vena cava"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:right:organ:right-kidney",
+            "vm:anatomy:body:abdomen:left:organ:left-kidney",
+            "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+            "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+            "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
+            "vm:anatomy:body:abdomen:left:vessel:left-renal-artery"
+          ]
+        },
+        {
+          "id": "renal-ureter-relationships",
+          "title": "Kidneys & proximal ureter relationships",
+          "rule": {
+            "fmaIds": [
+              "FMA15571",
+              "FMA15572"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA7204",
+                "FMA7205"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Compare the kidney surfaces and the supplied ureters from behind. Ureters normally carry urine from the renal pelvis toward the bladder. This view omits the bladder and does not reconstruct the pelvis, calyces or a continuous urinary lumen.",
+          "inspect": "Rotate the assembled view first; select, isolate or set aside a surface, then Undo to restore it. Explode separates objects for inspection and does not preserve anatomical distances. Kidney cortex, medulla, calyces, renal pelvis and renal veins are not separately represented. These draft surfaces do not establish lumen continuity, vessel attachment or a surgical plane.",
+          "landmarks": [
+            "kidney",
+            "ureter"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:abdomen:right:organ:right-kidney",
+            "vm:anatomy:body:abdomen:left:organ:left-kidney",
+            "vm:anatomy:body:abdomen:right:organ:right-ureter",
+            "vm:anatomy:body:abdomen:left:organ:left-ureter"
           ]
         }
       ]

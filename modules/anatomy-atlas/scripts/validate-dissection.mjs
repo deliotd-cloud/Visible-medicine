@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import * as THREE from 'three';
+import { studyLibrary } from '../lib/study-library.ts';
 import {
   bodyOffset,
   translatedBox,
@@ -178,10 +179,17 @@ for (const [region, profile] of Object.entries(dissectionProfiles)) {
     }
     for (const focus of profile.focuses) {
       const list = stageStructures(scope, profile, 'free', focus.id);
-      assert(
-        list.some((s) => s.system !== 'skeleton' && matchesRule(s, focus.rule)),
-        `Empty focus ${region}/${focus.id}/${side}`,
-      );
+      const regionalTargets = catalog.structures.filter((s) =>
+        (region === 'whole-body' || s.regions.includes(region)) && matchesRule(s, focus.rule));
+      assert(regionalTargets.length > 0, `Unresolved focus ${region}/${focus.id}`);
+      const targets = scope.filter((s) => matchesRule(s, focus.rule));
+      // Bone targets are valid. A side-specific recipe can be unavailable on
+      // the opposite side; context alone must not make that recipe available.
+      const recipe = studyLibrary(scope, profile).flatMap((card) => card.recipes)
+        .find((entry) => entry.kind === 'focus' && entry.id === focus.id);
+      assert.equal(recipe.available, targets.length > 0);
+      assert(targets.every((s) => list.includes(s)));
+      assert(list.every((s) => scope.includes(s)));
       checks++;
     }
   }

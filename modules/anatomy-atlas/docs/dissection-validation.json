@@ -2,10 +2,10 @@
   "passed": true,
   "regions": 11,
   "wholeBody": true,
-  "stages": 141,
-  "focusedViews": 123,
-  "checks": 4176,
-  "cameraChecks": 10152,
+  "stages": 145,
+  "focusedViews": 135,
+  "checks": 4320,
+  "cameraChecks": 10440,
   "structures": 1022,
   "clinicalValidation": false,
   "browserInteractionTesting": false,
@@ -284,6 +284,20 @@
       "removed": 82
     },
     {
+      "region": "hand",
+      "stage": "carpal-proximal-row",
+      "kind": "window",
+      "visible": 8,
+      "removed": 116
+    },
+    {
+      "region": "hand",
+      "stage": "carpal-distal-row",
+      "kind": "window",
+      "visible": 8,
+      "removed": 116
+    },
+    {
       "region": "thigh",
       "stage": "assembled",
       "kind": "assembled",
@@ -464,6 +478,20 @@
       "kind": "window",
       "visible": 14,
       "removed": 104
+    },
+    {
+      "region": "foot",
+      "stage": "tarsal-hindfoot",
+      "kind": "window",
+      "visible": 4,
+      "removed": 114
+    },
+    {
+      "region": "foot",
+      "stage": "tarsal-midfoot",
+      "kind": "window",
+      "visible": 10,
+      "removed": 108
     },
     {
       "region": "thorax",

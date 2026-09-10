@@ -1,5 +1,7 @@
 # Continuous atlas improvement plan
 
+Latest regional navigation: [wrist and foot bone exposure studies](ACRAL_BONE_STUDIES.md) add four compact, source-ID-defined windows for carpal rows and hindfoot/midfoot. All 30 bone representations already existed; no tissue or source geometry was invented. Continue source-backed regional relationships and source adjudication, keeping clinical/device acceptance and actual imaging/lecture integration separate. The broad goal remains active.
+
 Latest source/presentation correction: [pancreatic envelope overlap](PANCREATIC_SOURCE_REVIEW.md). The display omits one near-coincident tissue alternative, retains both duct-source components and all archived files, and keeps the existing organ identity and factual teaching. Next implement source-scoped pancreatic duct dissection with one optional tissue reference; do not reinterpret the omitted envelope as an internal layer or the two index definitions as independent complete duct trees. Clinical/device and imaging/lecture acceptance remain separate.
 
 Latest spatial extension: [renal and adrenal venous relationships](RENAL_VENOUS_RELATIONSHIPS.md) add four side-specific arrangements through the existing Study view menu. The left adrenal view keeps both veins selectable; landmarks remain optional and disappear during separation. Focus and visibility form one Undo step. Geometry, teaching and access gates are unchanged. Continue source-backed organ/region detail and orientation aids without permanent extra toolbars or invented structures.

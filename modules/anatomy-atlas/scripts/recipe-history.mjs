@@ -15,8 +15,35 @@ const ids = [
   'orbital-motor-iv',
 ];
 
+export const acralBoneProfilesHash =
+  '4168423334b664572cd0ee4ec437aad7dd7e1905c2318b60ec3a71ca9836623f';
+
+/** Remove only the recorded four bone windows for older preservation tests. */
+export function preAcralBoneRecipeProfiles(profiles) {
+  if ([preOrbitalMotorProfilesHash, orbitalMotorProfilesHash, renalProfilesHash].includes(hash(profiles)))
+    return structuredClone(profiles);
+  assert.equal(hash(profiles), acralBoneProfilesHash, 'Unrecorded dissection profile edit');
+  const previous = structuredClone(profiles);
+  const addedIds = ['carpal-proximal-row', 'carpal-distal-row', 'tarsal-hindfoot', 'tarsal-midfoot'];
+  const regions = ['hand', 'foot'];
+  const addition = Object.fromEntries(regions.map((region) => [region, {
+    stages: previous[region].stages.filter((s) => addedIds.includes(s.id)),
+    focuses: previous[region].focuses.filter((s) => addedIds.includes(s.id)),
+    references: previous[region].references.slice(region === 'hand' ? -1 : -2),
+  }]));
+  assert.equal(hash(addition), '2c47520f5764b6e3f38f2de38fc5166ada34e9b579c0679187e9c5e6a59e53b8', 'Exact acral bone addition');
+  for (const region of regions) {
+    previous[region].stages = previous[region].stages.filter((s) => !addedIds.includes(s.id));
+    previous[region].focuses = previous[region].focuses.filter((s) => !addedIds.includes(s.id));
+    previous[region].references = previous[region].references.slice(0, region === 'hand' ? -1 : -2);
+  }
+  assert.equal(hash(previous), renalProfilesHash, 'Every earlier recipe is unchanged');
+  return previous;
+}
+
 /** Verify only the recorded renal addition before historical comparisons. */
 export function preRenalRecipeProfiles(profiles) {
+  profiles = preAcralBoneRecipeProfiles(profiles);
   if (
     [preOrbitalMotorProfilesHash, orbitalMotorProfilesHash].includes(
       hash(profiles),

@@ -78,6 +78,7 @@
     "ocular:audit": "node scripts/audit-ocular-geometry.mjs",
     "ocular:test": "node scripts/validate-ocular.mjs",
     "orbital-motor:test": "node scripts/validate-orbital-motor.mjs",
+    "acral-bone-studies:test": "node scripts/validate-acral-bone-studies.mjs",
     "renal-studies:test": "node scripts/validate-renal-studies.mjs",
     "renal-vascular:audit": "node scripts/audit-renal-vascular-source.mjs",
     "renal-vascular:prototype": "node scripts/export-renal-vascular-prototype.mjs",

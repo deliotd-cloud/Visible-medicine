@@ -22,6 +22,7 @@ import {
   preRenalRecipeProfiles,
   orbitalMotorProfilesHash,
   renalProfilesHash,
+  preAcralBoneRecipeProfiles,
 } from './recipe-history.mjs';
 
 let checks = 0;
@@ -37,7 +38,7 @@ const hash = (value) => createHash('sha256').update(value).digest('hex');
 const jsonHash = (value) => hash(JSON.stringify(value));
 const { catalog, records, policy, evidence } = await loadSourceHolds();
 const original = JSON.stringify(dissectionProfiles);
-same(jsonHash(dissectionProfiles), renalProfilesHash);
+same(jsonHash(preAcralBoneRecipeProfiles(dissectionProfiles)), renalProfilesHash);
 same(
   jsonHash(preRenalRecipeProfiles(dissectionProfiles)),
   orbitalMotorProfilesHash,
@@ -247,7 +248,7 @@ const report = {
   newStages: 0,
   sourceRepresentations: audited,
   sourceEvidence: evidence,
-  profilesSha256: renalProfilesHash,
+  profilesSha256: jsonHash(dissectionProfiles),
   previousProfilesSha256: orbitalMotorProfilesHash,
   missingInternalSourceLabelMatches: internalLabels,
   limitations: {
