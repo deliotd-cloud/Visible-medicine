@@ -8404,7 +8404,8 @@
         "Paired Achilles tendon and interosseous-membrane surfaces are available. Subtendons and knee-ligament dissection remain absent."
       ],
       "references": [
-        "https://anatomy.elpaso.ttuhsc.edu/schemes/leg_tables.html"
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/leg_tables.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/joints_lowerlimb.html"
       ],
       "stages": [
         {
@@ -8777,6 +8778,117 @@
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
             "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
           ]
+        },
+        {
+          "id": "knee-bones",
+          "title": "Knee: bony relationships",
+          "description": "Inspect the patella in front of the distal femur, the proximal tibia and the lateral fibular head. Overlying muscles are set aside; select Left or Right for a single knee.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA24474",
+                "FMA24475",
+                "FMA24477",
+                "FMA24478",
+                "FMA24480",
+                "FMA24481",
+                "FMA24486",
+                "FMA24487"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "patella$",
+            "tibia$",
+            "fibula$"
+          ],
+          "inspect": "Rotate to compare the femoral condyles, tibial plateau and patellar surface. The fibular head belongs to the proximal tibiofibular articulation, not the femorotibial bearing surface. Whole bones remain selectable; the close-up does not create new bone segments. Cartilage, menisci, cruciate/collateral ligaments and the joint capsule are not segmented. Return separation to 0% to compare source positions; this is not knee motion or a registered scan.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:thigh:left:bone:left-femur",
+            "vm:anatomy:body:leg:left:bone:left-fibula",
+            "vm:anatomy:body:leg:left:bone:left-patella",
+            "vm:anatomy:body:leg:left:bone:left-tibia",
+            "vm:anatomy:body:thigh:right:bone:right-femur",
+            "vm:anatomy:body:leg:right:bone:right-fibula",
+            "vm:anatomy:body:leg:right:bone:right-patella",
+            "vm:anatomy:body:leg:right:bone:right-tibia"
+          ]
+        },
+        {
+          "id": "knee-patella-off",
+          "title": "Knee: set the patella aside",
+          "description": "Hide the patella as well as soft tissues to inspect the anterior distal femur and proximal tibia. Use Undo or the bony-relationships study to put it back.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA24474",
+                "FMA24475",
+                "FMA24477",
+                "FMA24478",
+                "FMA24480",
+                "FMA24481"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "femur$",
+            "tibia$",
+            "fibula$"
+          ],
+          "inspect": "Compare the exposed femoral groove with the preceding view. This is a visibility exercise, not a patellar dislocation or a surgical approach. Whole bones remain selectable; the close-up does not create new bone segments. Cartilage, menisci, cruciate/collateral ligaments and the joint capsule are not segmented. Return separation to 0% to compare source positions; this is not knee motion or a registered scan.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:thigh:left:bone:left-femur",
+            "vm:anatomy:body:leg:left:bone:left-fibula",
+            "vm:anatomy:body:leg:left:bone:left-tibia",
+            "vm:anatomy:body:thigh:right:bone:right-femur",
+            "vm:anatomy:body:leg:right:bone:right-fibula",
+            "vm:anatomy:body:leg:right:bone:right-tibia"
+          ]
+        },
+        {
+          "id": "knee-popliteus",
+          "title": "Knee: posterior popliteus",
+          "description": "Expose the source popliteus surfaces against the femur, tibia and fibula. Gastrocnemius, soleus, plantaris and the longer posterior muscles are hidden.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA22591",
+                "FMA22592"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA24474",
+                "FMA24475",
+                "FMA24477",
+                "FMA24478",
+                "FMA24480",
+                "FMA24481"
+              ]
+            }
+          ],
+          "view": "posterior",
+          "landmarks": [
+            "popliteus$",
+            "tibia$",
+            "fibula$"
+          ],
+          "inspect": "Select popliteus, isolate it or set it aside, then restore it to compare its source position with the bones. Nerves, ligament attachments and a complete popliteal-fossa dissection are not supplied. Whole bones remain selectable; the close-up does not create new bone segments. Cartilage, menisci, cruciate/collateral ligaments and the joint capsule are not segmented. Return separation to 0% to compare source positions; this is not knee motion or a registered scan.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:thigh:left:bone:left-femur",
+            "vm:anatomy:body:leg:left:bone:left-fibula",
+            "vm:anatomy:body:leg:left:bone:left-tibia",
+            "vm:anatomy:body:thigh:right:bone:right-femur",
+            "vm:anatomy:body:leg:right:bone:right-fibula",
+            "vm:anatomy:body:leg:right:bone:right-tibia",
+            "vm:anatomy:body:leg:right:muscle:right-popliteus",
+            "vm:anatomy:body:leg:left:muscle:left-popliteus"
+          ]
         }
       ],
       "focuses": [
@@ -8967,6 +9079,115 @@
             "vm:anatomy:body:leg:left:muscle:lateral-head-of-left-gastrocnemius",
             "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
             "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon"
+          ]
+        },
+        {
+          "id": "knee-bones",
+          "title": "Knee: bony relationships",
+          "rule": {
+            "fmaIds": [
+              "FMA24474",
+              "FMA24475",
+              "FMA24477",
+              "FMA24478",
+              "FMA24480",
+              "FMA24481",
+              "FMA24486",
+              "FMA24487"
+            ]
+          },
+          "context": [],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Inspect the patella in front of the distal femur, the proximal tibia and the lateral fibular head. Overlying muscles are set aside; select Left or Right for a single knee.",
+          "inspect": "Rotate to compare the femoral condyles, tibial plateau and patellar surface. The fibular head belongs to the proximal tibiofibular articulation, not the femorotibial bearing surface. Whole bones remain selectable; the close-up does not create new bone segments. Cartilage, menisci, cruciate/collateral ligaments and the joint capsule are not segmented. Return separation to 0% to compare source positions; this is not knee motion or a registered scan.",
+          "landmarks": [
+            "patella$",
+            "tibia$",
+            "fibula$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:thigh:left:bone:left-femur",
+            "vm:anatomy:body:leg:left:bone:left-fibula",
+            "vm:anatomy:body:leg:left:bone:left-patella",
+            "vm:anatomy:body:leg:left:bone:left-tibia",
+            "vm:anatomy:body:thigh:right:bone:right-femur",
+            "vm:anatomy:body:leg:right:bone:right-fibula",
+            "vm:anatomy:body:leg:right:bone:right-patella",
+            "vm:anatomy:body:leg:right:bone:right-tibia"
+          ]
+        },
+        {
+          "id": "knee-patella-off",
+          "title": "Knee: set the patella aside",
+          "rule": {
+            "fmaIds": [
+              "FMA24474",
+              "FMA24475",
+              "FMA24477",
+              "FMA24478",
+              "FMA24480",
+              "FMA24481"
+            ]
+          },
+          "context": [],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Hide the patella as well as soft tissues to inspect the anterior distal femur and proximal tibia. Use Undo or the bony-relationships study to put it back.",
+          "inspect": "Compare the exposed femoral groove with the preceding view. This is a visibility exercise, not a patellar dislocation or a surgical approach. Whole bones remain selectable; the close-up does not create new bone segments. Cartilage, menisci, cruciate/collateral ligaments and the joint capsule are not segmented. Return separation to 0% to compare source positions; this is not knee motion or a registered scan.",
+          "landmarks": [
+            "femur$",
+            "tibia$",
+            "fibula$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:thigh:left:bone:left-femur",
+            "vm:anatomy:body:leg:left:bone:left-fibula",
+            "vm:anatomy:body:leg:left:bone:left-tibia",
+            "vm:anatomy:body:thigh:right:bone:right-femur",
+            "vm:anatomy:body:leg:right:bone:right-fibula",
+            "vm:anatomy:body:leg:right:bone:right-tibia"
+          ]
+        },
+        {
+          "id": "knee-popliteus",
+          "title": "Knee: posterior popliteus",
+          "rule": {
+            "fmaIds": [
+              "FMA22591",
+              "FMA22592"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA24474",
+                "FMA24475",
+                "FMA24477",
+                "FMA24478",
+                "FMA24480",
+                "FMA24481"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Expose the source popliteus surfaces against the femur, tibia and fibula. Gastrocnemius, soleus, plantaris and the longer posterior muscles are hidden.",
+          "inspect": "Select popliteus, isolate it or set it aside, then restore it to compare its source position with the bones. Nerves, ligament attachments and a complete popliteal-fossa dissection are not supplied. Whole bones remain selectable; the close-up does not create new bone segments. Cartilage, menisci, cruciate/collateral ligaments and the joint capsule are not segmented. Return separation to 0% to compare source positions; this is not knee motion or a registered scan.",
+          "landmarks": [
+            "popliteus$",
+            "tibia$",
+            "fibula$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:thigh:left:bone:left-femur",
+            "vm:anatomy:body:leg:left:bone:left-fibula",
+            "vm:anatomy:body:leg:left:bone:left-tibia",
+            "vm:anatomy:body:thigh:right:bone:right-femur",
+            "vm:anatomy:body:leg:right:bone:right-fibula",
+            "vm:anatomy:body:leg:right:bone:right-tibia",
+            "vm:anatomy:body:leg:right:muscle:right-popliteus",
+            "vm:anatomy:body:leg:left:muscle:left-popliteus"
           ]
         }
       ]

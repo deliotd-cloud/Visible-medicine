@@ -1,6 +1,18 @@
 # Anatomy atlas backup — 10 September 2026
 
-## 10 September 2026 — body-region priority and spinal-level studies (current)
+## 10 September 2026 — knee close-up dissections (current)
+
+Source `8c521c80df007073e90df029ba72c5ba179ddb2c`, tree `79d3f37d754de5190a94575de77bf5d8d8a2a411`, parent `23e988d64d422115f79cc2372d867a01b6891aa2`. Twenty source paths mirrored into `modules/anatomy-atlas`; the main website remains unchanged. Three compact Knee & leg studies cover bony relationships, patella set aside and posterior popliteus. Ten existing source representations are reused. Automatic joint framing keeps long bones whole; displaced label anchors use actual in-view mesh vertices. Ordinary framing/anchors remain in other modes. No new geometry, dependencies, paid services or entitlements. Oral detail remains deferred.
+
+Sites saved version133 `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_8cde0c4e3d508191ba8dbcab43f1c8a6` from the exact pushed source. Native archive270 files/127,610,880 bytes, SHA256`1121f3e228d30372be25f114ec50f1b70a2226817a337a5cf2690df963e62813`. Private publication was dispatched; terminal status and access-policy comparison are recorded in `work/ATLAS_KNEE_STUDIES_2026-09-10.md` outside this repository. Source credential used ephemerally and not persisted.
+
+Passed:395 knee checks including eight real source-bone label anchors and actual shared-renderer bounds,784 spinal regression checks,137 orientation checks,4,590 dissection/11,088 camera-bound checks,130,732 workbench checks,1,492,988 guidance assertions,TypeScript,production build and requirement-summary freshness. These are automated state/source/handler/markup checks, not clinical or GPU/browser/device acceptance. Current totals154 stages/144 focuses/1,022 root representations. Missing cartilage, menisci, knee ligaments and peripheral nerves remain disclosed.
+
+Recovery stem `work/atlas-knee-studies-2026-09-10`: archive89,792,829 bytes SHA256`ea31eecf2c3b69c9bfc568c5f9395c408d91bf934203a059da954b6e3c44e926`; delta1,658,880 bytes SHA256`2848727e795d543e8b86519144d74812262bf8c971c1f5fd61a48397d7f08c40`; incremental bundle16,454 bytes SHA256`251c1a3901f5874fb2e87d20348246bb080a6124a719c7346bdc8d26dac5c1d5`. Bundle REQUIRES the source parent above. Mirror:1,287 files/152,141,218 bytes/105 GLBs including three non-public prototypes; no common credential signatures found (not exhaustive). Preparation JSON flags precede this receipt and publication; do not overwrite or rerun the one-shot artifacts.
+
+This verifies Sites saving plus same-PC recovery, not GitHub delivery, off-device restoration, chat-history or private-database backup. The broader goal remains active. Continue substantial limb/axial anatomy and regional dissection; avoid further routine oral work or repeatedly rechecking completed views. See module `docs/KNEE_STUDIES.md` and `docs/DEVELOPMENT_PRIORITIES.md`.
+
+## 10 September 2026 — body-region priority and spinal-level studies
 
 Source `23e988d64d422115f79cc2372d867a01b6891aa2`, tree `df277c60692aee9d603564166855b3ab6f78328d`, parent `ab3be594b6131f9029eeb3873d6b22dd1035ed1c`. Seventeen source paths mirrored into `modules/anatomy-atlas`; the main website is unchanged. The owner's priority is now explicit: oral coverage has had a brief pass; gum prototypes stay non-public and further oral-detail work is deferred in favour of the wider body atlas. Six compact spinal windows cover C1–C2, C5–C6, C7–T1, T12–L1, L4–L5 and L5–S1. They reuse 15 existing representations and the existing study selector, search, source-bound links and dissection history. T12–L1 is explicitly bones-only because its disc is unresolved. No new geometry, dependencies, access entitlements or source approvals.
 

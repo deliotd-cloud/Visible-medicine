@@ -2,10 +2,10 @@
   "passed": true,
   "regions": 11,
   "wholeBody": true,
-  "stages": 151,
-  "focusedViews": 141,
-  "checks": 4500,
-  "cameraChecks": 10872,
+  "stages": 154,
+  "focusedViews": 144,
+  "checks": 4590,
+  "cameraChecks": 11088,
   "structures": 1022,
   "clinicalValidation": false,
   "browserInteractionTesting": false,
@@ -401,6 +401,27 @@
       "kind": "window",
       "visible": 14,
       "removed": 46
+    },
+    {
+      "region": "leg",
+      "stage": "knee-bones",
+      "kind": "window",
+      "visible": 8,
+      "removed": 52
+    },
+    {
+      "region": "leg",
+      "stage": "knee-patella-off",
+      "kind": "window",
+      "visible": 6,
+      "removed": 54
+    },
+    {
+      "region": "leg",
+      "stage": "knee-popliteus",
+      "kind": "window",
+      "visible": 8,
+      "removed": 52
     },
     {
       "region": "foot",

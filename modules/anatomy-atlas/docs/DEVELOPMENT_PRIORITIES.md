@@ -10,7 +10,7 @@ The two gingiva candidates and original bytes remain preserved in the [source re
 
 ## Main workstream
 
-1. Improve focused dissection of the spine and major limb regions using accurate existing relationships and well-scoped source additions. Keep local anatomy visible without unrelated full-body clutter. The [spinal-level studies](SPINAL_LEVEL_STUDIES.md) are the first step after this priority change.
+1. Improve focused dissection of the spine and major limb regions using accurate existing relationships and well-scoped source additions. Keep local anatomy visible without unrelated full-body clutter. The [spinal-level studies](SPINAL_LEVEL_STUDIES.md) and [knee studies with close-ups](KNEE_STUDIES.md) begin this work after the priority change.
 2. Prioritise clinically useful missing limb/axial anatomy: major peripheral nerves and plexuses, joint/ligament and fascial detail. Licence, identity and shared-coordinate evidence must precede import. Do not draw guessed nerve routes or mislabel the existing central-canal mesh as spinal cord.
 3. Improve completeness and usefulness of the existing regional teaching and identification/dissection experience. Keep the model prominent, reuse the compact controls/search, and avoid repeated minor presentation-only changes while anatomical or functional gaps remain.
 4. Preserve exact-ID hooks for the owner's separate CT/MRI/X-ray/US atlases and teaching projects. Use approved real resource manifests when available, without creating a competing head atlas or granting separately paid lecture access through an Atlas subscription.

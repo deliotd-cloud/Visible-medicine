@@ -34,6 +34,7 @@ import type { SelectionBounds } from '@/lib/selection-visibility';
 import type { StudyCamera } from '@/lib/study-views';
 import { neuroGroupFor } from '@/lib/neuroanatomy';
 import { sceneLabelIds } from '@/lib/scene-labels';
+import { closeUpLabelAnchor } from '@/lib/close-up-labels';
 import { SceneLabel, SceneLabelLayer } from './scene-label-layer';
 import { vesselColor } from '@/lib/anatomy-vessels';
 import { renderedAnatomyStructures } from '@/lib/anatomy-load-state';
@@ -68,6 +69,8 @@ type Props = {
   inspection: InspectionState;
   /** Optional stable cut frame, independent of camera framing and context visibility. */
   inspectionBounds?: SelectionBounds | null;
+  /** Camera-only close-up; original geometry and inspection frame stay intact. */
+  cameraBounds?: SelectionBounds | null;
   plate: boolean;
   cameraCapture?: RefObject<StudyCamera | null>;
   cameraRestore?: RefObject<StudyCamera | null>;
@@ -135,6 +138,12 @@ function Bundle({
     });
     return map;
   }, [scene]);
+  const labelAnchors = useMemo(() => new Map(items.map((structure) => {
+    const geometry = geometries.get(structure.nodeName);
+    return [structure.id, geometry
+      ? closeUpLabelAnchor(geometry, structure.anchor, props.cameraBounds)
+      : null];
+  })), [items, geometries, props.cameraBounds]);
   return (
     <group dispose={null}>
       {items.map((structure) => {
@@ -161,6 +170,7 @@ function Bundle({
           props.onSelect(structure.id);
         };
         const labelIndex = labelIds.indexOf(structure.id);
+        const labelAnchor = labelAnchors.get(structure.id);
         return (
           <group key={structure.id}>
             {props.originStyle !== 'selected-guide' &&
@@ -232,11 +242,12 @@ function Bundle({
                 />
               </group>
               {props.labels &&
+                labelAnchor &&
                 !props.exam &&
                 !faded &&
                 opacity >= 0.2 &&
                 pointRetained(
-                  new THREE.Vector3(...structure.anchor).add(position),
+                  new THREE.Vector3(...labelAnchor).add(position),
                   clippingPlanes,
                 ) &&
                 labelIndex >= 0 && (
@@ -244,7 +255,7 @@ function Bundle({
                     id={structure.id}
                     name={structure.name}
                     selected={selected}
-                    position={structure.anchor}
+                    position={labelAnchor}
                     priority={labelIndex}
                     onSelect={props.onSelect}
                   />
@@ -367,6 +378,11 @@ export function BodyScene(props: Props) {
     ],
   );
   const bounds = useMemo(() => {
+    if (props.cameraBounds && !focusId && !props.exam)
+      return new THREE.Box3(
+        new THREE.Vector3().fromArray(props.cameraBounds.min),
+        new THREE.Vector3().fromArray(props.cameraBounds.max),
+      );
     let list = rendered.length ? rendered : props.structures;
     if (focusId) {
       const selected = list.find((s) => s.id === focusId);
@@ -393,6 +409,8 @@ export function BodyScene(props: Props) {
     props.originStyle,
     originGuide,
     frame,
+    props.cameraBounds,
+    props.exam,
   ]);
   const bundles = props.catalog.bundles.filter((b) =>
     rendered.some((s) => s.bundle === b.id),

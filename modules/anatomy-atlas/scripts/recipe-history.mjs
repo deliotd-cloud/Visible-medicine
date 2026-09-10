@@ -21,8 +21,32 @@ export const acralBoneProfilesHash =
 export const spinalLevelProfilesHash =
   '14ae3dded68c96d62c9d7d578d1f1cbf4ff00272c745bf17610dfb11bc76769f';
 
+export const kneeStudyProfilesHash =
+  'dc6ea9198a24ac28e02df8729d9d06543eada6786a6ebd2d6b139f626043a4be';
+
+/** Strip only the recorded knee additions for historical regression checks. */
+export function preKneeStudyRecipeProfiles(profiles) {
+  if ([preOrbitalMotorProfilesHash, orbitalMotorProfilesHash, renalProfilesHash,
+    acralBoneProfilesHash, spinalLevelProfilesHash].includes(hash(profiles)))
+    return structuredClone(profiles);
+  assert.equal(hash(profiles), kneeStudyProfilesHash, 'Unrecorded knee recipe edit');
+  const previous = structuredClone(profiles), leg = previous.leg;
+  const ids = ['knee-bones', 'knee-patella-off', 'knee-popliteus'];
+  assert.equal(hash({
+    stages: leg.stages.filter((s) => ids.includes(s.id)),
+    focuses: leg.focuses.filter((s) => ids.includes(s.id)),
+    references: leg.references.slice(-1),
+  }), '10956bcb2bcd0848469a6c7ea59b80b27f59e117271f7ca7bb92facf7a9cd778');
+  leg.stages = leg.stages.filter((s) => !ids.includes(s.id));
+  leg.focuses = leg.focuses.filter((s) => !ids.includes(s.id));
+  leg.references = leg.references.slice(0, -1);
+  assert.equal(hash(previous), spinalLevelProfilesHash, 'Every earlier recipe retained');
+  return previous;
+}
+
 /** Preserve every earlier recipe; remove only the exact six spinal windows. */
 export function preSpinalLevelRecipeProfiles(profiles) {
+  profiles = preKneeStudyRecipeProfiles(profiles);
   if (
     [
       preOrbitalMotorProfilesHash,

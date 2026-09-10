@@ -24,6 +24,7 @@ import {
   preSpinalLevelRecipeProfiles,
   acralBoneProfilesHash,
   spinalLevelProfilesHash,
+  preKneeStudyRecipeProfiles,
 } from './recipe-history.mjs';
 
 let checks = 0;
@@ -40,7 +41,7 @@ same(
 const catalog = JSON.parse(raw),
   profile = dissectionProfiles.spine;
 const before = JSON.stringify(dissectionProfiles);
-same(hash(before), spinalLevelProfilesHash);
+same(hash(JSON.stringify(preKneeStudyRecipeProfiles(dissectionProfiles))), spinalLevelProfilesHash);
 same(
   hash(JSON.stringify(preSpinalLevelRecipeProfiles(dissectionProfiles))),
   acralBoneProfilesHash,
