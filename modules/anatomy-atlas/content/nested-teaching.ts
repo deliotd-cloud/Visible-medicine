@@ -1,5 +1,9 @@
 import type { NestedStudy } from '../lib/nested-anatomy';
 import {
+  eyeImagingTeaching,
+  eyeImagingReferences,
+} from './eye-imaging-teaching.ts';
+import {
   brainImagingTeaching,
   brainImagingReferences,
 } from './brain-imaging-teaching.ts';
@@ -47,6 +51,7 @@ export const nestedTeachingReferences: Record<
   string,
   { title: string; url: string }
 > = {
+  ...eyeImagingReferences,
   ...brainImagingReferences,
   visualCentral: {
     title: 'UTHealth · Central visual pathway anatomy',
@@ -238,24 +243,26 @@ export const nestedConcepts: NestedConcept[] = [
         'hepaticVeins',
       ],
     ] as const
-  ).map(([kind, ids, anatomy, fn, question, answer, ref]): NestedConcept => ({
-    id: `hepatic-${kind}`,
-    study: 'hepatic',
-    fmaIds: [...ids],
-    sections: {
-      anatomy: section(anatomy, ref),
-      function: section(fn, ref),
-      clinical: hepaticTeaching[kind].clinical,
-      pathology: hepaticTeaching[kind].pathology,
-    },
-    imaging: hepaticTeaching[kind].imaging,
-    modelLimit:
-      'Original source branch groups only; no proven lumen continuity, complete drainage tree, Couinaud segment boundaries, surgical planes or scan registration. Liver tissue context retains unresolved source segment conflicts.',
-    quiz:
-      kind === 'biliary' || kind === 'venous-tributary'
-        ? quiz(question, answer)
-        : quiz(question, answer, ref),
-  })),
+  ).map(
+    ([kind, ids, anatomy, fn, question, answer, ref]): NestedConcept => ({
+      id: `hepatic-${kind}`,
+      study: 'hepatic',
+      fmaIds: [...ids],
+      sections: {
+        anatomy: section(anatomy, ref),
+        function: section(fn, ref),
+        clinical: hepaticTeaching[kind].clinical,
+        pathology: hepaticTeaching[kind].pathology,
+      },
+      imaging: hepaticTeaching[kind].imaging,
+      modelLimit:
+        'Original source branch groups only; no proven lumen continuity, complete drainage tree, Couinaud segment boundaries, surgical planes or scan registration. Liver tissue context retains unresolved source segment conflicts.',
+      quiz:
+        kind === 'biliary' || kind === 'venous-tributary'
+          ? quiz(question, answer)
+          : quiz(question, answer, ref),
+    }),
+  ),
   ...(
     [
       [
@@ -280,24 +287,26 @@ export const nestedConcepts: NestedConcept[] = [
         'Yes. Its two lobes are upper and lower.',
       ],
     ] as const
-  ).map(([level, ids, anatomy, question, answer]): NestedConcept => ({
-    id: `pulmonary-${level}-branches`,
-    study: 'pulmonary',
-    fmaIds: [...ids],
-    sections: {
-      anatomy: section(anatomy, 'pulmonaryLobes'),
-      function: section(
-        'Lobar bronchi conduct air into the lung. Gas exchange takes place in the distal alveolar region, which is not represented by these branch meshes.',
-        'pulmonaryAirways',
-      ),
-      clinical: pulmonaryTeaching[level].clinical,
-      pathology: pulmonaryTeaching[level].pathology,
-    },
-    imaging: pulmonaryTeaching[level].imaging,
-    modelLimit:
-      'Airway and vessel files grouped by source lobe membership only. No parenchymal envelope, fissure surface, alveoli, measured lung volume or patient-scan registration.',
-    quiz: quiz(question, answer, 'pulmonaryLobes'),
-  })),
+  ).map(
+    ([level, ids, anatomy, question, answer]): NestedConcept => ({
+      id: `pulmonary-${level}-branches`,
+      study: 'pulmonary',
+      fmaIds: [...ids],
+      sections: {
+        anatomy: section(anatomy, 'pulmonaryLobes'),
+        function: section(
+          'Lobar bronchi conduct air into the lung. Gas exchange takes place in the distal alveolar region, which is not represented by these branch meshes.',
+          'pulmonaryAirways',
+        ),
+        clinical: pulmonaryTeaching[level].clinical,
+        pathology: pulmonaryTeaching[level].pathology,
+      },
+      imaging: pulmonaryTeaching[level].imaging,
+      modelLimit:
+        'Airway and vessel files grouped by source lobe membership only. No parenchymal envelope, fissure surface, alveoli, measured lung volume or patient-scan registration.',
+      quiz: quiz(question, answer, 'pulmonaryLobes'),
+    }),
+  ),
   ...(
     [
       [
@@ -356,6 +365,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'eye-cornea',
     study: 'eye',
+    imaging: eyeImagingTeaching.cornea,
     fmaIds: ['FMA58239', 'FMA58240'],
     sections: {
       anatomy: section(
@@ -387,6 +397,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'eye-iris',
     study: 'eye',
+    imaging: eyeImagingTeaching.iris,
     fmaIds: ['FMA58236', 'FMA58237'],
     sections: {
       anatomy: section(
@@ -417,6 +428,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'eye-lens',
     study: 'eye',
+    imaging: eyeImagingTeaching.lens,
     fmaIds: ['FMA58242', 'FMA58243'],
     sections: {
       anatomy: section(
@@ -451,6 +463,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'eye-zonule',
     study: 'eye',
+    imaging: eyeImagingTeaching.zonule,
     fmaIds: ['FMA58839', 'FMA58840'],
     sections: {
       anatomy: section(
@@ -482,6 +495,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'eye-vitreous',
     study: 'eye',
+    imaging: eyeImagingTeaching.vitreous,
     fmaIds: ['FMA58828', 'FMA58829'],
     sections: {
       anatomy: section(
@@ -513,6 +527,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'eye-choroid',
     study: 'eye',
+    imaging: eyeImagingTeaching.choroid,
     fmaIds: ['FMA58299', 'FMA58300'],
     sections: {
       anatomy: section(
@@ -543,6 +558,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'eye-sclera',
     study: 'eye',
+    imaging: eyeImagingTeaching.sclera,
     fmaIds: ['FMA58271', 'FMA58272'],
     sections: {
       anatomy: section(
@@ -572,6 +588,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'eye-chamber',
     study: 'eye',
+    imaging: eyeImagingTeaching.chamber,
     fmaIds: ['FMA58082'],
     sections: {
       anatomy: section(

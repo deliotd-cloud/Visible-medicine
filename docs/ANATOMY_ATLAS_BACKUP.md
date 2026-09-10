@@ -1,5 +1,17 @@
 # Anatomy atlas backup — 10 September 2026
 
+## Current checkpoint: eye CT/MRI/ultrasound teaching
+
+Privately published source `6c643beca6838b09989a2d37f1ca55df1caeb3c6`, tree `f1c784c446dd9b39f8b1a463a12d708fdd591231`. Sites version117 `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_a29165ceb99c8191b4d0f22040be4594`; deployment `appgdep_6aa2d32b02808191a7ded58551f3de23` succeeded `2026-09-10T15:56:43.215606+00:00`. [Private atlas](https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site). Complete before/after policy, access mode, owner role and invitation setting match: one owner/account, no external viewers/groups/additional editors.
+
+Ten original imaging drafts serve eight existing eye concepts/fifteen selections in the unchanged collapsed panel. Six primary references distinguish UBM, pachymetry, vitreous findings, lens position and choroidal/scleral assessment. Source retina remains absent; only a left anterior chamber is supplied. No geometry, identity, old teaching, source binding, review state, resource or entitlement changes. No third-party illustration, scan, article, patient case, dependency or paid service imported. Specialist/device review remains pending; see `modules/anatomy-atlas/docs/EYE_IMAGING_TEACHING.md`.
+
+Passed teaching7,313 checks, exact63-binding freshness, TypeScript, requirement audit/freshness, diff checks and production build. Existing chunk/route-classification warnings remain. Geometry/access inputs were preserved; no browser, GPU, touch-device or clinical acceptance claimed. Nested scope63/39concepts/69refs; CT31/MRI30/US26 with32/33/37pending. Production resources/correspondences remain zero; Atlas and paid-resource eligibility remains independent.
+
+Preparation source/module audit1,199files/146,520,024bytes/100GLBs (99public/archive+one retained prototype), zero common credential signatures (not exhaustive). Native saved archive258files/126,535,680bytes/`sha256:7289368a04a8fe1c1e61a51bedd26f758843f946512d6b9140a077801671c3b3`. Recovery stem `work/atlas-eye-imaging-teaching-2026-09-10` has11paths/295Siteentries: Site89,094,209bytes/`552a62719454fd94a4713b706702c2cbbca613ba58bbc64b68ad7a4a59459240`; delta348,160/`810b663b5977cabeeda0773f8c6452adc40b6f409b10e6dde71502de80918962`; incremental9,146/`5cb15c0397e34fb092d22c3b947189d22082b428baa96040f439fb9aa8d05e8d`. Incremental requires source `e0ca27c208eb2771eb7cf762a0b394aea8d63670`, not standalone. Backup parent `770c1204b7ceb88d3d841fa84bcde42802606e78`; preparation JSON flags predate this terminal publication receipt. Do not rerun or overwrite artifacts.
+
+Native Sites storage and SAME-PC recovery do not establish GitHub delivery, tested off-device restore, conversation-history or private-review database backup. Main website outside module/receipt is preserved. Following checkpoints are historical, not current publication status or coverage.
+
 ## Current checkpoint: internal-brain CT/MRI teaching
 
 Privately published source `e0ca27c208eb2771eb7cf762a0b394aea8d63670`, tree `315a7a1d029f9657de941de394bd2f7c50d61eb8`. Sites version116 `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_1c90b0d67d9881918b1219f871678e39`; deployment `appgdep_6aa2cf5eb10081919d499a6db7ffa4ac` succeeded `2026-09-10T15:40:30.391681+00:00`. [Private atlas](https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site). Complete before/after policy, access mode, owner role and invitation setting match: one owner/account, no external viewers/groups/additional editors.

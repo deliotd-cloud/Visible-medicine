@@ -221,6 +221,7 @@ for (const path of [
   'lib/visual-pathway.ts',
   'content/visual-pathway-teaching.ts',
   'content/brain-imaging-teaching.ts',
+  'content/eye-imaging-teaching.ts',
   'public/models/bodyparts3d/visual-pathway/catalog.json',
   'docs/visual-pathway-source-audit.json',
   'public/models/bodyparts3d/hepatic/catalog.json',

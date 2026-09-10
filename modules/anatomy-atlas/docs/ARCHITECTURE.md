@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Eye imaging teaching
+
+`content/eye-imaging-teaching.ts` supplies ten explicit draft modality sections to eight existing concepts/fifteen exact eye selections. The source-bound resolver, collapsed panel and unsupported-modality behaviour are unchanged. A full v116 content hash is checked after projecting out only these eight new fields; all earlier preservation guards and 63 exact source pins remain. No geometry, clinical-review state, paid-resource eligibility or viewer correspondence changes. See [source evidence and acceptance gates](EYE_IMAGING_TEACHING.md).
+
 ## Internal brain imaging teaching
 
 `content/brain-imaging-teaching.ts` adds explicit CT/MRI fields to seven existing ventricular/brainstem concepts, displayed for eight exact selections through the unchanged nested resolver and collapsed panel. Five primary-reference links support introductory notes; no new topic, UI state, geometry, source binding, resource configuration or entitlement is added. The complete v115 teaching graph is hash-checked after removing only those seven new imaging fields, preserving every previous lesson, question and identity. All 63 source pins stay unchanged. See [evidence, scope and clinical gates](BRAIN_IMAGING_TEACHING.md).

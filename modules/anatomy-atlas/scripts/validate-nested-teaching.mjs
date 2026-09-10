@@ -59,6 +59,22 @@ const initial = JSON.stringify(catalog);
 same(targets.length, 63);
 same(api.nestedConcepts.length, 39);
 same(new Set(api.nestedConcepts.map((c) => c.id)).size, 39);
+const eyeImagingScope = {
+  'eye-cornea': ['ultrasound'],
+  'eye-iris': ['ultrasound'],
+  'eye-lens': ['ct'],
+  'eye-zonule': ['ultrasound'],
+  'eye-vitreous': ['ultrasound'],
+  'eye-choroid': ['ultrasound', 'mri'],
+  'eye-sclera': ['ct', 'mri'],
+  'eye-chamber': ['ultrasound'],
+};
+// Remove only the eight newly authored eye-imaging fields to reconstruct v116.
+const beforeEyeImaging = api.nestedConcepts.map((c) => {
+  if (!Object.hasOwn(eyeImagingScope, c.id)) return c;
+  const { imaging: _newImaging, ...previous } = c;
+  return previous;
+});
 const brainImagingIds = new Set([
   'ventricular-lateral',
   'ventricular-third',
@@ -70,7 +86,7 @@ const brainImagingIds = new Set([
 ]);
 // Project only the seven intentional new imaging fields out of the v115 baseline.
 // Identity, core teaching, quizzes and every earlier modality must remain exact.
-const previousConcepts = api.nestedConcepts.map((c) => {
+const previousConcepts = beforeEyeImaging.map((c) => {
   if (!brainImagingIds.has(c.id)) return c;
   const { imaging: _newImaging, ...previous } = c;
   return previous;
@@ -91,6 +107,15 @@ same(
 // Captured from validated v108 source 649dfc3d, before this cerebral extension.
 const digest = (value) =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
+same(
+  digest(beforeEyeImaging),
+  'fe48b99e9beca00af5e9d0da1f6bb88e64e98fbce7d5114e59c0e736af2cc0c9',
+  'Complete v116 teaching retained except eight explicitly added imaging fields',
+);
+same(
+  api.nestedConcepts.filter((c) => Object.hasOwn(eyeImagingScope, c.id)).length,
+  8,
+);
 same(
   digest(previousConcepts),
   '7909676e839dfbc412cd742e5885df92da1539b55a41d63661de723a99a0d322',
@@ -261,27 +286,29 @@ for (const target of targets) {
   check(concept, selected.id);
   seen.add(concept.id);
   check(concept.fmaIds.includes(selected.fmaId));
-  const expectedImaging = brainImagingIds.has(concept.id)
-    ? ['ct', 'mri']
-    : concept.study === 'renal'
-      ? ['renal-veins', 'renal-ureteric-arteries'].includes(concept.id)
-        ? ['ct', 'mri', 'ultrasound']
-        : ['ct', 'mri']
-      : concept.study === 'cardiac'
-        ? ['ct', 'mri', 'ultrasound']
-        : concept.study === 'hepatic'
-          ? concept.id === 'hepatic-venous-tributary'
-            ? ['ct', 'mri', 'ultrasound']
-            : concept.id === 'hepatic-biliary'
-              ? ['mri', 'ultrasound']
-              : ['ultrasound']
-          : concept.study === 'pulmonary'
-            ? ['ct']
-            : concept.id === 'cerebral-insula'
-              ? ['ct', 'mri']
-              : concept.id === 'cerebral-superior-temporal-anterior'
-                ? ['mri']
-                : [];
+  const expectedImaging =
+    eyeImagingScope[concept.id] ??
+    (brainImagingIds.has(concept.id)
+      ? ['ct', 'mri']
+      : concept.study === 'renal'
+        ? ['renal-veins', 'renal-ureteric-arteries'].includes(concept.id)
+          ? ['ct', 'mri', 'ultrasound']
+          : ['ct', 'mri']
+        : concept.study === 'cardiac'
+          ? ['ct', 'mri', 'ultrasound']
+          : concept.study === 'hepatic'
+            ? concept.id === 'hepatic-venous-tributary'
+              ? ['ct', 'mri', 'ultrasound']
+              : concept.id === 'hepatic-biliary'
+                ? ['mri', 'ultrasound']
+                : ['ultrasound']
+            : concept.study === 'pulmonary'
+              ? ['ct']
+              : concept.id === 'cerebral-insula'
+                ? ['ct', 'mri']
+                : concept.id === 'cerebral-superior-temporal-anterior'
+                  ? ['mri']
+                  : []);
   same(
     Object.keys(concept.imaging ?? {}).sort(),
     [...expectedImaging].sort(),
@@ -467,9 +494,9 @@ same(coverage.pathology, { draft: 63, pending: 0 });
 same(coverage.clinical, { draft: 63, pending: 0 });
 for (const tab of ['anatomy', 'function', 'quiz'])
   same(coverage[tab], { draft: 63, pending: 0 });
-same(coverage.ct, { draft: 27, pending: 36 });
-same(coverage.mri, { draft: 26, pending: 37 });
-same(coverage.ultrasound, { draft: 15, pending: 48 });
+same(coverage.ct, { draft: 31, pending: 32 });
+same(coverage.mri, { draft: 30, pending: 33 });
+same(coverage.ultrasound, { draft: 26, pending: 37 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
 const hosts = new Set([
@@ -530,11 +557,11 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 63);
+same(Object.keys(wordsBySource).length, 69);
 same(
   new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
     .size,
-  63,
+  69,
   'Do not split one source into duplicate reference keys',
 );
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {

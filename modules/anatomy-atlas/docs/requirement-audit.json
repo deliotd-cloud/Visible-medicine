@@ -22,6 +22,7 @@
     "lib/visual-pathway.ts": "c0fe6c8821d7b48d3bdb97b46904c6d0f2a68c16887176713ac642ff35636a56",
     "content/visual-pathway-teaching.ts": "78b3f7f36d9c964e2780c5fdd38b7fd033bcac66189a4defe03332e79fe31ed3",
     "content/brain-imaging-teaching.ts": "584e9bcf307fbb67ee58fb203e6763ee3f1e2f2411f2706b76f32deba75d253c",
+    "content/eye-imaging-teaching.ts": "f9a837eb80e98b6a922144c8354dd9c949638f39113450350c06db762d04b20f",
     "public/models/bodyparts3d/visual-pathway/catalog.json": "6e92922cab267cc4bde9cc8262a6caccd619c89bab90fed6a4b346a022b24b32",
     "docs/visual-pathway-source-audit.json": "5b1a018edcc3b4d271eeb5ae0fe81aef1b92161e1c179585573602ffd57184f6",
     "public/models/bodyparts3d/hepatic/catalog.json": "53962f7814854e576efde820bed1ccd2f7393b1296798898dee25f773e24d6c8",
@@ -32,7 +33,7 @@
     "public/models/bodyparts3d/pulmonary/catalog.json": "b62ccd78dfc2ced8674b94eba67596add4de482f54c3f242814982b4e3dab9ea",
     "docs/pulmonary-source-audit.json": "734fc23b6d4812b81ffb007214c271096562bcb8376766fc9d609bfddabc95db",
     "content/cerebral-supplement-audit.json": "a186519bbf31065f5c4e58472c542a9cbd2a6b64d35423a4f6c92d7bae1d69d7",
-    "content/nested-teaching.ts": "3c559b060e548004cbd58bef0bc8ed33ea1e6ba172c59fdf2c5f51d7cd8872a0",
+    "content/nested-teaching.ts": "e985835f925ce6034ebd8ea585530e57f627ad82ad8b1f3f61c303d9e903bbb9",
     "content/cardiac-teaching.ts": "48fab7d90b23ce6c59a45d694a17fbb8026daa5371c904b2a04f88754658dc0b",
     "content/hepatic-teaching.ts": "9840b0ffa63ba65e91d9e2c327d7ce5e5fb96afcf8f75707c786e17fcb86f74d",
     "content/pulmonary-teaching.ts": "dec60fd4009651ed0e0f11e67763db54c367aa22968c7653dadaf128918b77b0",
@@ -63,7 +64,7 @@
     "resolvedContentAndRecipeData": "011e0c5dc8e7cac46df5d556838d5bdcee760243b3d918ce9c40f41971bc1713",
     "explicitTopicReadiness": "b57c441aa76f7bd23f1c97de13289cedf350bc884d99be676c35cc9998f8e5a9",
     "reasoningQuestionData": "309529bda0dd03063b56bfb2af9272fba105d083f8cad728008d1095c92cc9d1",
-    "nestedTeachingData": "16e57e222670c6db7d08b060bd5e99673d90dbc02f806c88d865634e00a0cdcd"
+    "nestedTeachingData": "345ce90b5334b5214a766dd283e62917a5cda551a5c9d94bda4f403531f5718a"
   },
   "anatomy": {
     "bodyRepresentations": 1022,
@@ -281,7 +282,7 @@
     "nested": {
       "representations": 63,
       "concepts": 39,
-      "references": 63,
+      "references": 69,
       "topics": {
         "anatomy": {
           "specificDraft": 63,
@@ -296,21 +297,21 @@
           "generatedIdentification": 0
         },
         "ct": {
-          "specificDraft": 27,
+          "specificDraft": 31,
           "identityOnly": 0,
-          "pending": 36,
+          "pending": 32,
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 26,
+          "specificDraft": 30,
           "identityOnly": 0,
-          "pending": 37,
+          "pending": 33,
           "generatedIdentification": 0
         },
         "ultrasound": {
-          "specificDraft": 15,
+          "specificDraft": 26,
           "identityOnly": 0,
-          "pending": 48,
+          "pending": 37,
           "generatedIdentification": 0
         },
         "pathology": {
