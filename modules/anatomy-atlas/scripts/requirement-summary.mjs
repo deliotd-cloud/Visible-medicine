@@ -30,7 +30,7 @@ Generated from the actual catalogue, teaching resolver, dissection profiles and 
 
 ## Delivered source scope
 
-The [optic chiasm and tract study](VISUAL_PATHWAY_DISSECTION.md) adds ${anatomy.nestedDissections.visualPathwayGroups} selectable neural surfaces from ${anatomy.nestedDissections.visualPathwaySourceFiles} source files inside Dissect brain. It opens from below, with ${anatomy.nestedDissections.visualPathwayContextLandmarks} optional existing landmarks, shared dissection controls and collapsed teaching. Source seams and geniculate boundaries still need anatomical review; no complete fibre pathway or patient correspondence is supplied. The original nonpublic prototype remains retained separately.
+The [optic chiasm and tract study](VISUAL_PATHWAY_DISSECTION.md) adds ${anatomy.nestedDissections.visualPathwayGroups} selectable neural surfaces from ${anatomy.nestedDissections.visualPathwaySourceFiles} source files inside Dissect brain. It opens from below with landmarks off. Across its views, ${anatomy.nestedDissections.visualPathwayContextLandmarks} existing landmarks are available: four posterior landmarks or the pituitary in the [chiasm–pituitary relationship view](VISUAL_PATHWAY_RELATIONSHIPS.md). Shared dissection controls and MRI teaching stay compact. Source seams and relationships still need anatomical review; no complete fibre pathway or patient correspondence is supplied. The original nonpublic prototype remains retained separately.
 
 - ${anatomy.bodyRepresentations} body representations, ${anatomy.bodyBundles} body GLBs, ${anatomy.regions.length} regions plus whole body.
 - Dedicated shoulder: ${anatomy.shoulderRepresentations} representations / ${anatomy.shoulderSourceParts} source parts, overlapping the body catalogue.

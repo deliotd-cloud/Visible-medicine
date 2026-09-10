@@ -5,10 +5,10 @@ Open **Head & neck / Whole body → Brain → Dissect brain → Optic chiasm and
 ## Compact interaction
 
 - Inferior initial view; free rotation, named camera views and Frame all remain available.
-- Select the chiasm, right tract or left tract. Five Study view presets show all, chiasm alone, both tracts or either chiasm–tract pair.
+- Select the chiasm, right tract or left tract. Five original Study view presets show all, chiasm alone, both tracts or either chiasm–tract pair. A sixth [Chiasm & pituitary view](VISUAL_PATHWAY_RELATIONSHIPS.md) opens from the side with the existing gland as an optional landmark.
 - Reuse labels, hide/show, fade/isolate, Undo/Redo layers, stable cutaway and the three existing separation styles. Optional original-position guides explain displacement, not nerve connections.
 - Four existing landmarks (paired thalami and lateral geniculate bodies) are optional, nonselectable and off initially. They disappear during separation; the enclosing solid brain is never rendered here.
-- Anatomy, Function, Clinical, Pathology and recall teaching remain in the collapsed Learn more panel. CT/MRI/US notes remain pending for these three selections.
+- Anatomy, Function, Clinical, Pathology and recall teaching remain in the collapsed Learn more panel. Two referenced MRI drafts now serve these three selections; CT/US remain pending. No scan access or correspondence is added.
 
 ## Source and licensing
 

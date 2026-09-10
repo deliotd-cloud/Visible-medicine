@@ -62,6 +62,7 @@ export function visualPathwayPresets(layers: BodyStructure[]) {
   };
 }
 export function visualPathwayColour(s: BodyStructure) {
+  if (s.fmaId === 'FMA13889') return '#bb8195';
   if (s.fmaId === 'FMA62045') return '#edd1a0';
   if (['FMA62382', 'FMA67936'].includes(s.fmaId)) return '#e2bd74';
   if (['FMA73303', 'FMA73304'].includes(s.fmaId)) return '#a690b5';

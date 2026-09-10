@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Optic chiasm and tracts → Study view → Chiasm & pituitary** opens a [side-on relationship view](docs/VISUAL_PATHWAY_RELATIONSHIPS.md) using the existing gland as an optional landmark. It hides during separation and remains nonselectable. Two new MRI drafts explain localisation and the difference between a surface and diffusion imaging. No extra toolbar, fibre model, tumour or scan access is added.
+
 **Eye dissection → Learn more** adds [ten targeted imaging drafts](docs/EYE_IMAGING_TEACHING.md) for eight existing eye concepts: anterior-segment and vitreous ultrasound, lens CT, and choroid/sclera imaging. The compact panel is unchanged. The left-only anterior chamber and absent retinal layer remain explicit; these notes are not scans, diagnoses or clinical approval.
 
 **Internal brain studies → Learn more → CT / MRI** now includes [14 short imaging-teaching drafts](docs/BRAIN_IMAGING_TEACHING.md) across the ventricular spaces, midbrain, pons, medulla and cerebellum. Learn about ventricular assessment, fluid-flow artefacts, posterior-fossa CT limitations and sequence-dependent MRI detail. Existing panels stay collapsed; these are referenced teaching notes, not scans, diagnostic rules or clinical approvals.

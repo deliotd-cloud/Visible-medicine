@@ -1,5 +1,9 @@
 # Spatial anatomy architecture
 
+## Chiasm–pituitary relationship and MRI teaching
+
+`lib/visual-pathway-context.ts` resolves one exact-parent relationship and reuses the existing pituitary record/bundle pinned in `public/models/bodyparts3d/visual-pathway/sellar-context.json`. The existing Study view menu and generic relationship state provide a right-sided view, chiasm selection, landmark visibility, colour key and separation suppression. Default posterior landmarks, cutaway bounds and selectable identities stay unchanged. No source mesh is transformed, exported or repinned. Two explicit MRI sections extend the existing visual-pathway concepts; a complete v117 teaching projection preserves all previous content. See [source, verification and remaining gates](VISUAL_PATHWAY_RELATIONSHIPS.md).
+
 ## Eye imaging teaching
 
 `content/eye-imaging-teaching.ts` supplies ten explicit draft modality sections to eight existing concepts/fifteen exact eye selections. The source-bound resolver, collapsed panel and unsupported-modality behaviour are unchanged. A full v116 content hash is checked after projecting out only these eight new fields; all earlier preservation guards and 63 exact source pins remain. No geometry, clinical-review state, paid-resource eligibility or viewer correspondence changes. See [source evidence and acceptance gates](EYE_IMAGING_TEACHING.md).

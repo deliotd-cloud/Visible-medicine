@@ -7,7 +7,10 @@ import {
   brainImagingTeaching,
   brainImagingReferences,
 } from './brain-imaging-teaching.ts';
-import { visualPathwayConcepts } from './visual-pathway-teaching.ts';
+import {
+  visualPathwayConcepts,
+  visualPathwayImagingReferences,
+} from './visual-pathway-teaching.ts';
 import { renalConcepts, renalTeachingReferences } from './renal-teaching.ts';
 import {
   cerebralTeaching,
@@ -52,6 +55,7 @@ export const nestedTeachingReferences: Record<
   { title: string; url: string }
 > = {
   ...eyeImagingReferences,
+  ...visualPathwayImagingReferences,
   ...brainImagingReferences,
   visualCentral: {
     title: 'UTHealth · Central visual pathway anatomy',

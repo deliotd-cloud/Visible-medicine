@@ -205,11 +205,24 @@ for (const r of relationships) {
   check(html.includes('Context colour key'));
   check(html.includes('Anatomy reference'));
   check(html.includes('Space shown translucently'));
+  // Original-position guides already add one non-layer switch. Assert exact
+  // purposes instead of mistaking every switch in the panel for a layer.
+  const expectedSwitches = [
+    ...catalog.ventricularIds.map(
+      (id) =>
+        `Show ${catalog.structures.find((s) => s.id === id).name.toLowerCase()}`,
+    ),
+    'Show original position',
+  ];
   same(
-    (html.match(/role="switch"/g) || []).length,
-    4,
-    'No extra layer controls',
+    nodes(tree)
+      .filter((n) => n.props?.onCheckedChange)
+      .map((n) => n.props['aria-label'])
+      .sort(),
+    expectedSwitches.sort(),
+    'Exactly the four source-layer switches and existing original-position guide',
   );
+  same((html.match(/role="switch"/g) || []).length, expectedSwitches.length);
   for (const c of r.context) check(html.includes(c.name));
   const selected = scene().selectedId;
   scene().onSelect(r.context[0].id);

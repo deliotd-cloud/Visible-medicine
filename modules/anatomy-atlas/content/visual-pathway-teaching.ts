@@ -1,7 +1,22 @@
 import type { NestedConcept, NestedSection } from './nested-teaching';
-const draft = (body: string, reference: string): NestedSection => ({
+export const visualPathwayImagingReferences = {
+  visualChiasmVariation: {
+    title: 'Optic chiasm location and adjacent angles on 3D MRI (2019)',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/30879711/',
+  },
+  visualCoronalAnatomy: {
+    title:
+      'Chen et al. · Coronal sectional anatomy of the optic pathways (2009)',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/19837645/',
+  },
+  visualResearchMRI: {
+    title: 'Vinogradov et al. · High-resolution optic-pathway MRI at 3T (2005)',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/16028247/',
+  },
+};
+const draft = (body: string, ...references: string[]): NestedSection => ({
   body,
-  references: [reference],
+  references,
   readiness: 'draft',
 });
 const limit =
@@ -10,6 +25,13 @@ export const visualPathwayConcepts: NestedConcept[] = [
   {
     id: 'visual-optic-chiasm',
     study: 'visual-pathway',
+    imaging: {
+      mri: draft(
+        'Coronal anatomical sections and MRI place the chiasm in relation to the floor of the third ventricle and pituitary stalk. A separate 3D MRI study documented variation in chiasmal position and adjacent angles. Cross-reference the actual planes rather than assuming one fixed relationship. The atlas supplies a whole-gland landmark, not a separately segmented stalk, a normal clearance measurement or a compressed chiasm.',
+        'visualCoronalAnatomy',
+        'visualChiasmVariation',
+      ),
+    },
     fmaIds: ['FMA62045'],
     sections: {
       anatomy: draft(
@@ -40,6 +62,13 @@ export const visualPathwayConcepts: NestedConcept[] = [
   {
     id: 'visual-optic-tracts',
     study: 'visual-pathway',
+    imaging: {
+      mri: draft(
+        'Follow each tract behind the chiasm across coronal sections and compare its position with the cerebral peduncle and geniculate region. A pilot 3T study used specialised acquisitions to distinguish anatomical surfaces from diffusion-derived fibre orientation. The atlas contains neither diffusion data nor individual axons; a coloured tract surface is not tractography, proof of geniculate termination or a patient-specific visual-field map.',
+        'visualCoronalAnatomy',
+        'visualResearchMRI',
+      ),
+    },
     fmaIds: ['FMA62382', 'FMA67936'],
     sections: {
       anatomy: draft(

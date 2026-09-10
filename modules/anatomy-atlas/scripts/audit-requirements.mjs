@@ -24,6 +24,7 @@ export { nestedStudyTargets } from './lib/nested-anatomy.ts';
 export { nestedTeachingFor, nestedTopicLesson } from './lib/nested-teaching.ts';
 export { nestedConcepts, nestedTeachingReferences } from './content/nested-teaching.ts';
 export { ventricularRelationshipsFor } from './lib/ventricular-relationships.ts';
+export { visualRelationshipsFor, visualSellarSource } from './lib/visual-pathway-context.ts';
 export { cardiacRelationshipsFor, cardiacVesselSource } from './lib/cardiac-context.ts';`,
     resolveDir: fileURLToPath(root),
     sourcefile: 'requirements-audit-entry.ts',
@@ -52,6 +53,8 @@ const {
   nestedConcepts,
   nestedTeachingReferences,
   ventricularRelationshipsFor,
+  visualRelationshipsFor,
+  visualSellarSource,
   cardiacRelationshipsFor,
   cardiacVesselSource,
 } = await import(
@@ -219,6 +222,8 @@ for (const path of [
   'public/models/bodyparts3d/renal/catalog.json',
   'docs/renal-vascular-source-audit.json',
   'lib/visual-pathway.ts',
+  'lib/visual-pathway-context.ts',
+  'public/models/bodyparts3d/visual-pathway/sellar-context.json',
   'content/visual-pathway-teaching.ts',
   'content/brain-imaging-teaching.ts',
   'content/eye-imaging-teaching.ts',
@@ -367,7 +372,11 @@ const report = {
         (n, s) => n + s.sources.length,
         0,
       ),
-      visualPathwayContextLandmarks: visualPathway.contextRecords.length,
+      visualPathwayContextLandmarks: new Set(
+        [...visualPathway.contextRecords, ...visualSellarSource.structures].map(
+          (s) => s.id,
+        ),
+      ).size,
       additionalUniqueWholeBodyAnatomy:
         cerebral.supplementalIds.length +
         renal.structures.length +
@@ -380,6 +389,9 @@ const report = {
     anatomicalCompletenessMeasured: false,
   },
   study: {
+    visualPathwayRelationshipPresets: visualRelationshipsFor(
+      visualPathway.parent,
+    ).length,
     cardiacVesselLandmarks: cardiacVesselSource.structures.length,
     cardiacRelationshipPresets: cardiacRelationshipsFor(cardiac.parent).length,
     pulmonaryAirwayLandmarks: pulmonaryContext.structures.length,
