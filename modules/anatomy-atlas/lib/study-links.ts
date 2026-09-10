@@ -73,6 +73,7 @@ export function parseStudyLink(params: StudySearchParams): ParsedStudyLink {
           detail !== 'pulmonary' &&
           detail !== 'hepatic' &&
           detail !== 'renal' &&
+          detail !== 'pancreatic' &&
           detail !== 'visual-pathway') ||
         typeof part !== 'string' ||
         !identity.test(part) ||

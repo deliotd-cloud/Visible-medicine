@@ -7,6 +7,7 @@ import { cardiacCatalog, cardiacFor } from './cardiac.ts';
 import { pulmonaryCatalog, pulmonaryFor } from './pulmonary.ts';
 import { hepaticCatalog, hepaticFor } from './hepatic.ts';
 import { renalCatalog, renalFor } from './renal.ts';
+import { pancreaticCatalog, pancreaticFor } from './pancreatic.ts';
 import { visualPathwayCatalog, visualPathwayFor } from './visual-pathway.ts';
 
 export type NestedStudy =
@@ -18,6 +19,7 @@ export type NestedStudy =
   | 'pulmonary'
   | 'hepatic'
   | 'renal'
+  | 'pancreatic'
   | 'visual-pathway';
 export type NestedSelection = {
   study: NestedStudy;
@@ -35,6 +37,12 @@ export type NestedRequest = NestedSelection & {
   parentHash: string;
 };
 const studies = [
+  {
+    study: 'pancreatic',
+    title: 'Pancreatic duct sources',
+    catalog: pancreaticCatalog,
+    layers: pancreaticFor,
+  },
   {
     study: 'renal',
     title: 'Renal vascular relationships',

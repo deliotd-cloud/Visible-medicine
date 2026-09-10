@@ -1,5 +1,7 @@
 # Undo and Redo in internal dissection
 
+The shared suite now includes the optic-pathway and pancreatic studies: ten study families / thirteen parent views / 65 selections. Pancreatic context remains nonselectable and hides on separation. The original milestone counts below are historical.
+
 **Redo layers** sits beside **Undo layers** in the existing organ controls. It covers both eyes, ventricular spaces, brainstem/cerebellar components, cerebral parts, heart chambers, both lungs, liver branches and both renal vascular studies: eight study families / eleven parent views / 60 selections. The history control adds no panel or toolbar; the renal study has its own documented asset addition.
 
 ## Behaviour

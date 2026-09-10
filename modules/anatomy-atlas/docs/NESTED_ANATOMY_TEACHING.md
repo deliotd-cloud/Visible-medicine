@@ -1,5 +1,7 @@
 # Nested brain and eye teaching
 
+Current extension: [pancreatic duct teaching](PANCREATIC_DISSECTION.md) adds one source-pinned concept for two selections, with four brief factual topics and unscored recall. Totals are 40 concepts / 65 representations / ten parents / 74 references. Previous bindings are preserved; CT/MRI/US remain pending for the two new selections. See [generated current status](CURRENT_STATUS.md); milestone counts below are historical.
+
 ## Current extension
 
 The [pulmonary teaching extension](PULMONARY_TEACHING.md) adds nine shared Clinical/Pathology/CT drafts across five existing groups, bringing the reference total to 48. Current Clinical coverage is 53 draft / zero pending; Pathology 49 / four; CT ten / 43; MRI seven / 46; Ultrasound 11 / 42. Anatomy, Function and Quiz remain draft for all 53 representations. Concepts, source pins and geometry are unchanged. The earlier totals below describe historical milestones, not current coverage.

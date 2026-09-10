@@ -19,6 +19,7 @@ const check = (v, message) => {
 const compiled = await build({
   stdin: {
     contents: `export {VentricularView} from './app/ventricles';
+      export {bodyDisplayCatalog} from './lib/body-display-catalog';
       export {EyeLayerView} from './app/eye-layers';
       export {initialEyeLayers, reduceEyeLayers} from './lib/eye-layer-state';
       export {initialVentricles, reduceVentricles} from './lib/ventricles';
@@ -81,14 +82,16 @@ runInNewContext(compiled.outputFiles[0].text, {
   require: (id) => (id === 'react' ? shim : require(id)),
 });
 const api = scope.exports;
-const catalog = JSON.parse(
-  await readFile('public/models/bodyparts3d/full-body/catalog.json'),
+const catalog = api.bodyDisplayCatalog(
+  JSON.parse(
+    await readFile('public/models/bodyparts3d/full-body/catalog.json'),
+  ),
 );
 const targets = api.nestedStudyTargets(catalog);
 const cases = [
   ...new Map(targets.map((t) => [`${t.study}/${t.parentId}`, t])).values(),
 ];
-same(cases.length, 12);
+same(cases.length, 13);
 const nodes = (n) =>
   !n || typeof n !== 'object'
     ? []
@@ -201,6 +204,34 @@ for (const target of cases) {
   render();
   check(button('Undo layers').disabled);
   check(button('Redo layers').disabled);
+  if (target.study === 'pancreatic') {
+    same(scene().view, 'anterior');
+    same(scene().contextIds.length, 1);
+    same(scene().structures.length, 3);
+    same(scene().appearance[scene().contextIds[0]].opacity, 0.12);
+    check(text(tree).includes('Duct source'));
+    check(text(tree).includes('not two complete independent duct trees'));
+    same(button('Show pancreatic envelope')['aria-pressed'], true);
+    const selectedBefore = scene().selectedId;
+    scene().onSelect(scene().contextIds[0]);
+    render();
+    same(scene().selectedId, selectedBefore, 'Reference cannot be selected');
+    button('Show pancreatic envelope').onClick();
+    render();
+    same(scene().contextIds, []);
+    same(scene().structures.length, 2);
+    button('Show pancreatic envelope').onClick();
+    render();
+    scene().onFailure('pancreatic-components');
+    render();
+    button('Retry').onClick();
+    render();
+    same(scene().retries['pancreatic-components'], 1);
+    scene().onLoaded('pancreatic-components');
+    scene().onRendererHealth('ready');
+    render();
+    check(!button('Frame selected').disabled);
+  }
   if (target.study === 'visual-pathway') {
     same(scene().view, 'inferior');
     same(scene().contextIds, []);
@@ -289,6 +320,14 @@ for (const target of cases) {
   render();
   const cut = copy(scene().inspection),
     beforeHidden = copy(scene().hiddenIds);
+  if (target.study === 'pancreatic') {
+    same(scene().contextIds, []);
+    same(
+      scene().structures.map((s) => s.id),
+      layers.map((s) => s.id),
+    );
+    check(button('Show pancreatic envelope').disabled);
+  }
   if (target.study === 'renal') {
     same(scene().contextIds, []);
     same(
@@ -339,6 +378,7 @@ for (const target of cases) {
   check(layers.every((l) => !scene().hiddenIds.includes(l.id)));
   check(button('Redo layers').disabled);
   same(scene().explode, 0);
+  if (target.study === 'pancreatic') same(scene().contextIds.length, 1);
   if (target.study === 'renal') same(scene().contextIds.length, 6);
   if (target.study === 'visual-pathway') same(scene().contextIds.length, 4);
   same(scene().showOrigins, true);
@@ -394,7 +434,7 @@ for (const target of cases) {
 const report = {
   passed: true,
   checks,
-  studyFamilies: 9,
+  studyFamilies: new Set(cases.map((t) => t.study)).size,
   parentViews: cases.length,
   representations: targets.length,
   historyLimit: 30,

@@ -1,5 +1,7 @@
 # Pancreatic source review and display correction
 
+The subsequent [duct dissection](PANCREATIC_DISSECTION.md) exposes the two retained duct files separately with one optional envelope. The findings and root display correction below remain unchanged; “combined selection” describes the root atlas view, not the new internal study.
+
 ## Finding
 
 The existing pancreas aggregate contains four BodyParts3D v4 PART-OF files. A source-coordinate audit found two nearly coincident outer surfaces, not evidence of separate dissectible tissue layers:

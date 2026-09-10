@@ -21,6 +21,7 @@ const check = (v, message) => {
 const compiled = await build({
   stdin: {
     contents: `export {VentricularView} from './app/ventricles';
+    export {bodyDisplayCatalog} from './lib/body-display-catalog';
     export * from './app/cutaway-controls'; export * from './lib/nested-anatomy';
     export * from './lib/inspection-state'; export * from './lib/inspection-geometry';
     export * from './lib/selection-visibility'; export {Box3, Vector3} from 'three';`,
@@ -81,8 +82,10 @@ runInNewContext(compiled.outputFiles[0].text, {
   require: (id) => (id === 'react' ? shim : require(id)),
 });
 const api = scope.exports;
-const catalog = JSON.parse(
-  await readFile('public/models/bodyparts3d/full-body/catalog.json', 'utf8'),
+const catalog = api.bodyDisplayCatalog(
+  JSON.parse(
+    await readFile('public/models/bodyparts3d/full-body/catalog.json', 'utf8'),
+  ),
 );
 const targets = api
   .nestedStudyTargets(catalog)
@@ -90,7 +93,7 @@ const targets = api
 const cases = [
   ...new Map(targets.map((t) => [`${t.study}/${t.parentId}`, t])).values(),
 ];
-same(cases.length, 10);
+same(cases.length, 11);
 const nodes = (n) =>
   !n || typeof n !== 'object'
     ? []
@@ -319,7 +322,7 @@ check(renderer.includes('const center = useMemo(() => frame.getCenter'));
 check(renderer.includes('pointRetained('));
 const report = {
   checks,
-  studies: 8,
+  studies: new Set(cases.map((t) => t.study)).size,
   parentViews: cases.length,
   geometryCases,
   result: 'passed',

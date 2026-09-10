@@ -18,6 +18,7 @@ export type NestedLearningStudy =
   | 'pulmonary'
   | 'hepatic'
   | 'renal'
+  | 'pancreatic'
   | 'visual-pathway';
 export type LearningAge = 'adult' | 'paediatric' | 'mixed' | 'unspecified';
 export type LearningSide =

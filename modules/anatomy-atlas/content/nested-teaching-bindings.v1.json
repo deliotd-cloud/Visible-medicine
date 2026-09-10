@@ -1779,6 +1779,69 @@
       }
     },
     {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
+      "fmaId": "FMA7198",
+      "name": "Pancreas",
+      "sourceName": "pancreas",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "unpaired",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "pancreas-corrected-parent",
+      "nodeName": "FMA7198",
+      "bounds": {
+        "min": [
+          -0.5670689940452576,
+          2.043599843978882,
+          0.45412003993988037
+        ],
+        "max": [
+          0.7267439961433411,
+          2.7809996604919434,
+          0.9637899994850159
+        ]
+      },
+      "center": [
+        0.07983750104904175,
+        2.4122997522354126,
+        0.7089550197124481
+      ],
+      "anchor": [
+        0.11720399558544159,
+        2.427800178527832,
+        0.7501899600028992
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1895",
+          "sha256": "fea8a371ac940fb8c5c13e9d459af6c2bd50e1b499f8989c63883a7db0f149ae"
+        },
+        {
+          "file": "FJ1896",
+          "sha256": "17213b1a13963da2a60c792ac6f4047268890f1836d9d03e0383f783b7b73312"
+        },
+        {
+          "file": "FJ2630",
+          "sha256": "50cee3fbe96c857f11a9de653e603ecd0b24b2a9b1d3cc1e53c711ca2ae2b6cc"
+        }
+      ],
+      "coverageNote": "One source-labelled pancreatic envelope and two duct-source components. A nearly coincident parenchymal alternative is omitted from display, not reconstructed as another tissue layer. Original sources are retained; tissue identity, duct continuity and clinical accuracy remain unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
       "id": "vm:anatomy:body:abdomen:right:organ:right-kidney",
       "fmaId": "FMA7204",
       "name": "Right kidney",
@@ -4653,6 +4716,134 @@
         "parentId": "vm:anatomy:body:abdomen:unpaired:organ:liver",
         "kind": "venous",
         "coverageNote": "Partial source-labelled group. Branch continuity, lumen and territory are not validated; not a complete vascular or biliary tree.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "pancreatic-ductal-system",
+      "study": "pancreatic",
+      "sourceHash": "e96b496cb36205d2338204d6d0c6f94cb6e3722f7ff9a7a4e176d435d6de0b1c",
+      "parentId": "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
+      "parentHash": "716e391810aa6dcc7a415b9d97c20b9cc70cc7e0f4561495a9a700ea73a774bf",
+      "structure": {
+        "id": "vm:anatomy:body:abdomen:unpaired:organ:pancreatic-duct-source",
+        "fmaId": "FMA10419",
+        "name": "Pancreatic duct",
+        "sourceName": "pancreatic duct",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "pancreatic-components",
+        "nodeName": "FMA10419",
+        "bounds": {
+          "min": [
+            -0.4954359829425812,
+            2.2137999534606934,
+            0.5195500254631042
+          ],
+          "max": [
+            0.61496901512146,
+            2.667099714279175,
+            0.8810299634933472
+          ]
+        },
+        "center": [
+          0.05976651608943939,
+          2.440449833869934,
+          0.7002899944782257
+        ],
+        "anchor": [
+          0.09029709547758102,
+          2.506199836730957,
+          0.8452200293540955
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1896",
+            "sha256": "17213b1a13963da2a60c792ac6f4047268890f1836d9d03e0383f783b7b73312"
+          }
+        ],
+        "parentId": "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
+        "role": "duct",
+        "coverageNote": "Exact source-labelled pancreatic duct surface, without verified lumen, junctions, papilla or functional drainage.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "pancreatic-ductal-system",
+      "study": "pancreatic",
+      "sourceHash": "e96b496cb36205d2338204d6d0c6f94cb6e3722f7ff9a7a4e176d435d6de0b1c",
+      "parentId": "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
+      "parentHash": "716e391810aa6dcc7a415b9d97c20b9cc70cc7e0f4561495a9a700ea73a774bf",
+      "structure": {
+        "id": "vm:anatomy:body:abdomen:unpaired:organ:pancreatic-tree-source",
+        "fmaId": "FMA63103",
+        "name": "Pancreatic duct-tree source",
+        "sourceName": "pancreatic duct tree",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "pancreatic-components",
+        "nodeName": "FMA63103",
+        "bounds": {
+          "min": [
+            -0.5670689940452576,
+            2.2014000415802,
+            0.5372099876403809
+          ],
+          "max": [
+            0.5912439823150635,
+            2.6851000785827637,
+            0.884660005569458
+          ]
+        },
+        "center": [
+          0.012087494134902954,
+          2.443250060081482,
+          0.7109349966049194
+        ],
+        "anchor": [
+          0.03594620153307915,
+          2.4656004905700684,
+          0.8608799576759338
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2630",
+            "sha256": "77e2f5c9bf24cfe0c74b354d1fe0ee559d2fc130e7fb62b1b32951298be5a3b5"
+          }
+        ],
+        "parentId": "vm:anatomy:body:abdomen:unpaired:organ:pancreas",
+        "role": "tree",
+        "coverageNote": "Exact IS-A duct-tree source component. The PART-OF tree includes this and the separately selected pancreatic duct. Not an accessory duct, separate complete drainage tree or validated lumen.",
         "provenance": {
           "method": "licensed-source-mesh",
           "license": "CC-BY-4.0",

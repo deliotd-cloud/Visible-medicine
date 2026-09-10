@@ -102,7 +102,7 @@ const raw = JSON.parse(
 const catalog = api.bodyDisplayCatalog(raw),
   before = JSON.stringify(catalog);
 const targets = nestedStudyTargets(catalog);
-same(targets.length, 63);
+same(targets.length, 65);
 same(
   Object.fromEntries(
     [
@@ -114,6 +114,7 @@ same(
       'pulmonary',
       'hepatic',
       'renal',
+      'pancreatic',
       'visual-pathway',
     ].map((study) => [study, targets.filter((t) => t.study === study).length]),
   ),
@@ -126,10 +127,11 @@ same(
     pulmonary: 5,
     hepatic: 7,
     renal: 7,
+    pancreatic: 2,
     'visual-pathway': 3,
   },
 );
-same(new Set(targets.map((t) => t.structureId)).size, 63);
+same(new Set(targets.map((t) => t.structureId)).size, 65);
 const parse = (href) => {
   const url = new URL(href, 'https://atlas.invalid');
   return { url, parsed: parseStudyLink(Object.fromEntries(url.searchParams)) };
@@ -140,7 +142,7 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
   for (const side of ['both', 'left', 'right']) {
     const index = atlasSearchIndex(catalog, region, side);
     const nested = index.filter((e) => e.key.startsWith('nested:'));
-    same(nested.length, 63);
+    same(nested.length, 65);
     for (const target of targets) {
       const entry = nested.find(
         (e) => e.key === `nested:${target.study}:${target.structureId}`,
@@ -251,6 +253,7 @@ for (const target of targets) {
     'pulmonary',
     'hepatic',
     'renal',
+    'pancreatic',
     'visual-pathway',
   ].filter((s) => s !== target.study))
     same(

@@ -1,6 +1,6 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
-The [pancreas display correction](docs/PANCREATIC_SOURCE_REVIEW.md) omits a nearly coincident source envelope while preserving the original files, existing selection and factual teaching. Retained surfaces are unchanged in position. This prepares deeper pancreatic dissection; it does not add an internal tissue layer or clinical approval.
+**Pancreas → Explore pancreatic ducts** opens the [pancreatic dissection](docs/PANCREATIC_DISSECTION.md): two independently selectable source components, one optional faint envelope, compact presets, cutaway, three separation styles, labels, undo/redo and draft teaching. Search `pancreatic duct` to go directly to a component. The [display correction](docs/PANCREATIC_SOURCE_REVIEW.md) remains intact; no accessory duct, validated lumen, clinical approval or scan access is inferred.
 
 **Kidney → Explore renal vessels → Study view** adds [renal and adrenal venous relationship views](docs/RENAL_VENOUS_RELATIONSHIPS.md) for each side. Landmarks are optional; the left adrenal view keeps both veins selectable. Choosing a view is one Undo step. Existing separation and cutaway controls are reused without new geometry, scan access or clinical approval.
 

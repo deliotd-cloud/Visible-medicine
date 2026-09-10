@@ -6,6 +6,8 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "pancreatic-dissection:export": "node scripts/export-pancreatic.mjs",
+    "pancreatic-dissection:test": "node scripts/export-pancreatic.mjs --check && node scripts/validate-pancreatic-dissection.mjs",
     "cardiac-context:audit": "node scripts/audit-cardiac-context.mjs",
     "cardiac-context:test": "node scripts/validate-cardiac-context.mjs",
     "nested-cutaway:test": "node scripts/validate-nested-cutaway.mjs",

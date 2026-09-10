@@ -59,13 +59,13 @@ const reject = (fn, message) => {
   assert.throws(fn, message);
 };
 same(legacy.length, 1031);
-same(anatomy.length, 1094);
+same(anatomy.length, 1096);
 same(
   anatomy.filter((t) => t.scope !== 'nested'),
   legacy,
   'Legacy 1,031 bindings unchanged',
 );
-same(nested.length, 63);
+same(nested.length, 65);
 same(
   nested.map((t) => t.structureId).sort(),
   targets.map((t) => t.structureId).sort(),

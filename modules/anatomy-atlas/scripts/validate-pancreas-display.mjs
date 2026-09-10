@@ -240,7 +240,7 @@ const manifest = await json('public/models/bodyparts3d/manifest.json');
 const archivedRepresentations = api.learningAnatomyRepresentations(catalog,manifest,api.structures);
 const currentRepresentations = api.allLearningAnatomyRepresentations(catalog,manifest,api.structures);
 same(currentRepresentations,api.allLearningAnatomyRepresentations(display,manifest,api.structures),'One current binding for raw and display callers');
-same(currentRepresentations.length,1094);
+same(currentRepresentations.length,1096);
 same(currentRepresentations.find(r=>r.structureId===original.id).sources,replacement.sources);
 same(currentRepresentations.filter(r=>r.scope!=='nested' && r.structureId!==original.id),archivedRepresentations.filter(r=>r.structureId!==original.id),'All other legacy bindings preserved');
 check(
@@ -283,9 +283,15 @@ for (const change of [
   same(api.isPancreasDisplayRecord(change), false);
   same(api.bodyLesson(change, 'clinical').readiness, 'pending');
 }
+const teachingPins = await json('content/nested-teaching-bindings.v1.json');
 same(
-  hash(await read('content/nested-teaching-bindings.v1.json')),
+  hash(JSON.stringify({
+    ...teachingPins,
+    parents: teachingPins.parents.filter(p => p.id !== original.id),
+    bindings: teachingPins.bindings.filter(b => b.study !== 'pancreatic'),
+  }, null, 2) + '\n'),
   '4ae3bf423a67da6eee5541579dea469297b22f04d8f2c7889ed40456a3084fb3',
+  'All pre-dissection teaching bindings and parent records remain byte-equivalent',
 );
 const report = {
   passed: true,

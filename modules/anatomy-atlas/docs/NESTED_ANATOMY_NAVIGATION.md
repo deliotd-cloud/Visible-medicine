@@ -1,5 +1,7 @@
 # Find individual brain and eye parts
 
+The shared registry now includes ten study families and 65 selectable nested representations, including [two pancreatic duct sources](PANCREATIC_DISSECTION.md). Search a source name/FMA ID from any region; links resolve the applicable regional route, not always Head & neck. Context is excluded and exam guards remain. Earlier brain/eye-only counts and examples below describe the original milestone.
+
 Use **Search atlas** in any regional or whole-body explorer. Search a source name or FMA ID, for example `left lens`, `pons`, `third ventricle` or `left insula`. The canonical source label remains visible; the result names its dissection study and marks the anatomy as draft. There is no new permanent panel or toolbar.
 
 The index includes 15 eye layers, 4 ventricular spaces, 4 brainstem/cerebellar compounds and 14 cerebral selections: 37 existing selectable representations, not 37 newly created anatomical structures. Context meshes and excluded source parts are not promoted into nested selections. Main-catalogue entries remain separate, including the brain and eyeball parents.

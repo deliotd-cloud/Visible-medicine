@@ -79,6 +79,7 @@ const cerebral = await json('public/models/bodyparts3d/cerebral/catalog.json');
 const cardiac = await json('public/models/bodyparts3d/cardiac/catalog.json');
 const hepatic = await json('public/models/bodyparts3d/hepatic/catalog.json');
 const renal = await json('public/models/bodyparts3d/renal/catalog.json');
+const pancreatic = await json('public/models/bodyparts3d/pancreatic/catalog.json');
 const visualPathway = await json(
   'public/models/bodyparts3d/visual-pathway/catalog.json',
 );
@@ -223,6 +224,9 @@ for (const path of [
   'lib/cardiac.ts',
   'lib/hepatic.ts',
   'lib/renal.ts',
+  'lib/pancreatic.ts',
+  'content/pancreatic-teaching.ts',
+  'public/models/bodyparts3d/pancreatic/catalog.json',
   'lib/renal-relationships.ts',
   'content/renal-teaching.ts',
   'public/models/bodyparts3d/renal/catalog.json',
@@ -382,6 +386,10 @@ const report = {
         0,
       ),
       renalInternalTissueParts: 0,
+      pancreaticDuctSelections: pancreatic.selectableIds.length,
+      pancreaticReferenceSurfaces: pancreatic.contextIds.length,
+      pancreaticSourceFiles: pancreatic.structures.reduce((n, s) => n + s.sources.length, 0),
+      pancreaticValidatedLumens: 0,
       visualPathwayGroups: visualPathway.selectableIds.length,
       visualPathwaySourceFiles: visualPathway.structures.reduce(
         (n, s) => n + s.sources.length,

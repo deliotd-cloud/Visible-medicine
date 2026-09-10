@@ -1,5 +1,5 @@
-import correction from '../public/models/bodyparts3d/eye-layers/display-correction.json';
-import pancreaticCorrection from '../public/models/bodyparts3d/pancreas/display-correction.json';
+import correction from '../public/models/bodyparts3d/eye-layers/display-correction.json' with { type: 'json' };
+import pancreaticCorrection from '../public/models/bodyparts3d/pancreas/display-correction.json' with { type: 'json' };
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
 
 const canonical = (value: unknown): string => {

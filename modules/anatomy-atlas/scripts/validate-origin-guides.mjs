@@ -10,6 +10,7 @@ const require = createRequire(import.meta.url),
 const compiled = await build({
   stdin: {
     contents: `export {BodyScene} from './app/body-scene';
+    export {bodyDisplayCatalog} from './lib/body-display-catalog';
     export {selectedOriginGuide} from './lib/origin-guides';
     export * from './lib/nested-anatomy';`,
     resolveDir: process.cwd(),
@@ -51,9 +52,9 @@ const nodes = (n) =>
     : Array.isArray(n)
       ? n.flatMap(nodes)
       : [n, ...nodes(n.props?.children)];
-const raw = JSON.parse(
+const raw = api.bodyDisplayCatalog(JSON.parse(
   await readFile('public/models/bodyparts3d/full-body/catalog.json'),
-);
+));
 const targets = api.nestedStudyTargets(raw);
 const cases = [
   ...new Map(targets.map((t) => [`${t.study}/${t.parentId}`, t])).values(),

@@ -1,5 +1,7 @@
 # Organ-dissection cutaway
 
+The shared cutaway also covers the optic-pathway and [pancreatic duct study](PANCREATIC_DISSECTION.md). The pancreatic frame uses both selectable source components, independent of envelope visibility. Cutting these surfaces does not demonstrate an open duct or reconstruct tissue.
+
 The existing eye cutaway is now shared by the ventricular, brainstem, cerebral, cardiac, pulmonary, hepatic and renal workbenches. Open a structure's dissection, then expand **Cutaway** beside the model. Choose axial, coronal or sagittal, move the 0–100% slider, and reverse the retained side if needed. The control starts collapsed and adds no global toolbar or route. Cutting renal surfaces does not reconstruct missing kidney tissue.
 
 ## Behaviour

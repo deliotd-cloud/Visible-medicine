@@ -1,5 +1,9 @@
 # Asset register
 
+## Pancreatic dissection derivative — 10 September 2026
+
+`public/models/bodyparts3d/pancreatic/pancreatic.glb`: 232,172 bytes, SHA-256 `e96b496cb36205d2338204d6d0c6f94cb6e3722f7ff9a7a4e176d435d6de0b1c`. Three retained source files / 12,690 triangles become two selectable duct components and one optional envelope. Every triangle matches the corrected parent; raw IS-A/PART-OF provenance is retained separately. BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International. Preserve attribution, licence and modification notices. No accessory duct or lumen is reconstructed. Original concise teaching links to NCI SEER and NIDDK; no article, diagram, scan or question bank is bundled. No font, texture, dependency or paid service is added. [Scope and evidence](../docs/PANCREATIC_DISSECTION.md). Public/archive GLBs total 101; source-controlled GLBs total 102 including the retained nonpublic prototype. Earlier totals below are historical.
+
 ## Pancreas display derivative — 10 September 2026
 
 `public/models/bodyparts3d/pancreas/pancreas.glb`: 229,880 bytes, SHA-256 `716e391810aa6dcc7a415b9d97c20b9cc70cc7e0f4561495a9a700ea73a774bf`. One existing anatomical identity / three retained source files / 12,690 triangles. The 4,272-triangle near-coincident FJ2629 envelope is omitted from display only; the original four-file aggregate and raw sources remain intact. Common coordinates and retained faces are unchanged; display normals are recomputed. BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International. Retain licence/attribution/modification notices. No new font, texture, dependency or paid service. [Evidence and limitations](../docs/PANCREATIC_SOURCE_REVIEW.md). Public/archive GLBs now total100; source-controlled GLBs total101 including the retained visual-pathway prototype. Earlier totals below are historical.

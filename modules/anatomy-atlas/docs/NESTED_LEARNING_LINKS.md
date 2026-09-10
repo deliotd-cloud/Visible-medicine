@@ -1,5 +1,7 @@
 # Linking nested anatomy to learning resources
 
+The shared contract now covers 65 nested selections across ten study families, including the source-bound `pancreatic` study. Context cannot be targeted. The new two-child bindings neither migrate the archived pancreas parent binding nor grant paid-resource access. Earlier brain/eye-only counts below are historical; [current scope](PANCREATIC_DISSECTION.md).
+
 This is a tested integration foundation, **not a connected scan viewer, lecture player, paywall or registration system**. The production resource document remains unchanged and empty. No provisional head-atlas image, mask, patient identifier, lecture file or private review record is imported.
 
 ## Exact child destinations

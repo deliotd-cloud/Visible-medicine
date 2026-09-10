@@ -1,5 +1,9 @@
 # Clinical validation checklist
 
+## Pancreatic duct study
+
+Review the [two source selections and optional envelope](PANCREATIC_DISSECTION.md) for identity, retained position, overlap, misleading apparent junctions and the distinction between IS-A and PART-OF source groups. Neither an accessory duct nor a patent lumen/papillary opening is established. Assess separation, clipping and label readability on desktop/mobile; validate teaching independently. Imaging correspondence, patient-space registration and protected-resource delivery require separate review and authorization. Source-triangle equality and controlled UI tests are not clinical or device acceptance.
+
 ## Cardiac vessel context
 
 Review the [four chamber–vessel comparisons](CARDIAC_VESSEL_RELATIONSHIPS.md) for source identity, vessel extent, compound pulmonary-vein mappings, orientation and misleading surface contact/gaps. Clean individual meshes do not prove continuous lumens, ostia, valves, flow or patient correspondence. The IVC, separately delineated pulmonary trunk and valve structures are not supplied by these guides. All guide text remains draft; browser/device acceptance is separate.
