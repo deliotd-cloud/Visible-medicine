@@ -69,6 +69,9 @@ const brainstem = await json(
 );
 const cerebral = await json('public/models/bodyparts3d/cerebral/catalog.json');
 const cardiac = await json('public/models/bodyparts3d/cardiac/catalog.json');
+const pulmonary = await json(
+  'public/models/bodyparts3d/pulmonary/catalog.json',
+);
 const learning = parseLearningDocument(
   await json('content/learning-resources.v1.json'),
 );
@@ -196,6 +199,9 @@ for (const path of [
   'public/models/bodyparts3d/cerebral/catalog.json',
   'public/models/bodyparts3d/cardiac/catalog.json',
   'lib/cardiac.ts',
+  'lib/pulmonary.ts',
+  'public/models/bodyparts3d/pulmonary/catalog.json',
+  'docs/pulmonary-source-audit.json',
   'content/cerebral-supplement-audit.json',
   'content/nested-teaching.ts',
   'content/nested-teaching-bindings.v1.json',
@@ -290,6 +296,12 @@ const report = {
       cerebralContext: cerebral.contextIds.length,
       cardiacCavities: cardiac.selectableIds.length,
       cardiacContextWalls: cardiac.contextIds.length,
+      pulmonaryBranchGroups: pulmonary.selectableIds.length,
+      pulmonarySourceFiles: pulmonary.structures.reduce(
+        (n, s) => n + s.sources.length,
+        0,
+      ),
+      pulmonaryLobeSurfaces: 0,
       additionalUniqueWholeBodyAnatomy: cerebral.supplementalIds.length,
       limitation:
         'Nested selections generally subdivide existing parents. Four superior temporal ISA source parts are additional anatomy, available only inside the cerebral study; context reuses existing structures. Nested teaching is counted separately from the root-body inventory. The unchanged archival catalogue excludes these alternate display assets and additions.',

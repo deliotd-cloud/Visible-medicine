@@ -253,8 +253,12 @@ for (const c of manifest.sourceConflicts) {
 const pins = JSON.parse(
   await readFile('content/nested-teaching-bindings.v1.json'),
 );
-const previousParents = pins.parents.filter((p) => p.id !== parent.id);
-const previousBindings = pins.bindings.filter((b) => b.study !== 'cardiac');
+const previousBindings = pins.bindings.filter((b) =>
+  ['eye', 'ventricles', 'brainstem', 'cerebral'].includes(b.study),
+);
+const previousParents = pins.parents.filter((p) =>
+  previousBindings.some((b) => b.parentId === p.id),
+);
 same(previousParents.length, 3);
 same(previousBindings.length, 37);
 same(
@@ -265,7 +269,7 @@ same(
   hash(JSON.stringify(previousBindings)),
   'a08317b8f4c4613442ab748db2c9630921a15344911aaf72a46458f78525c353',
 );
-same(pins.bindings.length - previousBindings.length, 4);
+same(pins.bindings.filter((b) => b.study === 'cardiac').length, 4);
 function nodes(n) {
   if (!n || typeof n !== 'object') return [];
   if (Array.isArray(n)) return n.flatMap(nodes);

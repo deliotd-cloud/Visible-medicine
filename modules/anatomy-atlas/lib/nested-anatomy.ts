@@ -4,13 +4,15 @@ import { ventricleCatalog, ventriclesFor } from './ventricles.ts';
 import { brainstemCatalog, brainstemFor } from './brainstem.ts';
 import { cerebralCatalog, cerebralFor } from './cerebral.ts';
 import { cardiacCatalog, cardiacFor } from './cardiac.ts';
+import { pulmonaryCatalog, pulmonaryFor } from './pulmonary.ts';
 
 export type NestedStudy =
   | 'eye'
   | 'ventricles'
   | 'brainstem'
   | 'cerebral'
-  | 'cardiac';
+  | 'cardiac'
+  | 'pulmonary';
 export type NestedSelection = {
   study: NestedStudy;
   structureId: string;
@@ -27,6 +29,12 @@ export type NestedRequest = NestedSelection & {
   parentHash: string;
 };
 const studies = [
+  {
+    study: 'pulmonary',
+    title: 'Lung branch groups',
+    catalog: pulmonaryCatalog,
+    layers: pulmonaryFor,
+  },
   {
     study: 'cardiac',
     title: 'Cardiac chamber spaces',

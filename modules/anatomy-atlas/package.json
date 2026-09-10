@@ -6,6 +6,9 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "pulmonary:audit": "node scripts/audit-pulmonary-source.mjs",
+    "pulmonary:export": "node scripts/export-pulmonary.mjs",
+    "pulmonary:test": "node scripts/validate-pulmonary.mjs",
     "cardiac:export": "node scripts/export-cardiac.mjs",
     "cardiac:test": "node scripts/validate-cardiac.mjs",
     "ventricular-relationships:test": "node scripts/validate-ventricular-relationships.mjs",

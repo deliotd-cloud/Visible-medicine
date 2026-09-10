@@ -21,6 +21,14 @@ export const nestedTeachingReferences: Record<
   string,
   { title: string; url: string }
 > = {
+  pulmonaryLobes: {
+    title: 'NCI SEER · Lung anatomy',
+    url: 'https://training.seer.cancer.gov/lung/anatomy/',
+  },
+  pulmonaryAirways: {
+    title: 'NCI SEER · Bronchi, bronchial tree and lungs',
+    url: 'https://training.seer.cancer.gov/anatomy/respiratory/passages/bronchi.html',
+  },
   cardiacChambers: {
     title: 'NHLBI · Heart chambers and tissue',
     url: 'https://www.nhlbi.nih.gov/health/heart/anatomy',
@@ -146,6 +154,53 @@ const quiz = (
 // Original, concise teaching drafts. These are conceptual lessons shared by
 // explicitly pinned source representations, not patient-specific findings.
 export const nestedConcepts: NestedConcept[] = [
+  ...(
+    [
+      [
+        'upper',
+        ['FMA7333', 'FMA7370'],
+        'Each lung has an upper lobe. The left lingula belongs to its upper lobe.',
+        'Is the lingula a separate left middle lobe?',
+        'No. It is part of the left upper lobe.',
+      ],
+      [
+        'middle',
+        ['FMA7383'],
+        'The right lung has a middle lobe; the left lung has no middle lobe.',
+        'Which lung has a middle lobe?',
+        'The right lung.',
+      ],
+      [
+        'lower',
+        ['FMA7337', 'FMA7371'],
+        'Both lungs have a lower lobe. The left has two lobes in total and the right has three.',
+        'Does the left lung have a lower lobe?',
+        'Yes. Its two lobes are upper and lower.',
+      ],
+    ] as const
+  ).map(
+    ([level, ids, anatomy, question, answer]): NestedConcept => ({
+      id: `pulmonary-${level}-branches`,
+      study: 'pulmonary',
+      fmaIds: [...ids],
+      sections: {
+        anatomy: section(anatomy, 'pulmonaryLobes'),
+        function: section(
+          'Lobar bronchi conduct air into the lung. Gas exchange takes place in the distal alveolar region, which is not represented by these branch meshes.',
+          'pulmonaryAirways',
+        ),
+        clinical: pending(
+          'Lobe-specific imaging and clinical interpretation await authoring and specialist review. These branches are not a tissue segmentation.',
+        ),
+        pathology: pending(
+          'No disease-specific lobe lesson or pathological lung geometry has been supplied.',
+        ),
+      },
+      modelLimit:
+        'Airway and vessel files grouped by source lobe membership only. No parenchymal envelope, fissure surface, alveoli, measured lung volume or patient-scan registration.',
+      quiz: quiz(question, answer, 'pulmonaryLobes'),
+    }),
+  ),
   ...(
     [
       [

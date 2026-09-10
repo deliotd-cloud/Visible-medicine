@@ -56,6 +56,13 @@ import {
   cardiacReference,
 } from '@/lib/cardiac';
 import { ventricularRelationshipsFor } from '@/lib/ventricular-relationships';
+import {
+  pulmonaryFor,
+  pulmonaryViewCatalog,
+  pulmonaryNotes,
+  pulmonaryPresets,
+  pulmonaryReferences,
+} from '@/lib/pulmonary';
 import { neuroGroupFor } from '@/lib/neuroanatomy';
 import type { DissectionView } from './dissection-data';
 import type { BodyLayout } from '@/lib/body-arrangement';
@@ -74,7 +81,7 @@ const cameraViews = [
 const colours = ['#71b6ca', '#a1c8a1', '#cdad65', '#b396bd'];
 
 export type BrainStudy = 'ventricles' | 'brainstem' | 'cerebral';
-export type ComponentStudy = BrainStudy | 'cardiac';
+export type ComponentStudy = BrainStudy | 'cardiac' | 'pulmonary';
 // Shared compact source-component workbench; the keyed parent resets state between studies.
 export function VentricularView({
   parent,
@@ -88,23 +95,29 @@ export function VentricularView({
   const isBrainstem = study === 'brainstem';
   const isCerebral = study === 'cerebral';
   const isCardiac = study === 'cardiac';
-  const ventricleCatalog = isCardiac
-    ? cardiacCatalog
-    : isCerebral
-      ? cerebralCatalog
-      : isBrainstem
-        ? brainstemCatalog
-        : ventricularCatalog;
+  const isPulmonary = study === 'pulmonary';
+  const lungCatalog = useMemo(() => pulmonaryViewCatalog(parent), [parent]);
+  const ventricleCatalog = isPulmonary
+    ? lungCatalog
+    : isCardiac
+      ? cardiacCatalog
+      : isCerebral
+        ? cerebralCatalog
+        : isBrainstem
+          ? brainstemCatalog
+          : ventricularCatalog;
   const layers = useMemo(
     () =>
-      isCardiac
-        ? cardiacFor(parent)
-        : isCerebral
-          ? cerebralFor(parent)
-          : isBrainstem
-            ? brainstemFor(parent)
-            : ventriclesFor(parent),
-    [parent, isBrainstem, isCerebral, isCardiac],
+      isPulmonary
+        ? pulmonaryFor(parent)
+        : isCardiac
+          ? cardiacFor(parent)
+          : isCerebral
+            ? cerebralFor(parent)
+            : isBrainstem
+              ? brainstemFor(parent)
+              : ventriclesFor(parent),
+    [parent, isBrainstem, isCerebral, isCardiac, isPulmonary],
   );
   const selectableIds = useMemo(() => layers.map((s) => s.id), [layers]);
   const initialSelection = layers.find((s) => s.id === initialSelectedId)?.id;
@@ -114,68 +127,83 @@ export function VentricularView({
   );
   const presets = useMemo<Record<string, string[]>>(
     () =>
-      isCardiac
-        ? cardiacPresets(layers)
-        : isCerebral
-          ? cerebralPresets(layers)
-          : isBrainstem
-            ? brainstemPresets(layers)
-            : {
-                all: layers.map((s) => s.id),
-                lateral: layers
-                  .filter((s) => s.laterality !== 'midline')
-                  .map((s) => s.id),
-                midline: layers
-                  .filter((s) => s.laterality === 'midline')
-                  .map((s) => s.id),
-                ...Object.fromEntries(
-                  relationships.map((r) => [r.id, [r.spaceId]]),
-                ),
-              },
-    [isBrainstem, isCerebral, isCardiac, layers, relationships],
+      isPulmonary
+        ? pulmonaryPresets(layers)
+        : isCardiac
+          ? cardiacPresets(layers)
+          : isCerebral
+            ? cerebralPresets(layers)
+            : isBrainstem
+              ? brainstemPresets(layers)
+              : {
+                  all: layers.map((s) => s.id),
+                  lateral: layers
+                    .filter((s) => s.laterality !== 'midline')
+                    .map((s) => s.id),
+                  midline: layers
+                    .filter((s) => s.laterality === 'midline')
+                    .map((s) => s.id),
+                  ...Object.fromEntries(
+                    relationships.map((r) => [r.id, [r.spaceId]]),
+                  ),
+                },
+    [isBrainstem, isCerebral, isCardiac, isPulmonary, layers, relationships],
   );
-  const presetNames: Record<string, string> = isCardiac
-    ? {
-        all: 'Four chamber spaces',
-        right: 'Right heart spaces',
-        left: 'Left heart spaces',
-        atria: 'Atrial spaces',
-        ventricles: 'Ventricular spaces',
-      }
-    : isCerebral
+  const presetNames: Record<string, string> = isPulmonary
+    ? Object.fromEntries(
+        Object.keys(presets).map((key) => [
+          key,
+          key === 'all'
+            ? 'All supplied branch groups'
+            : `${key[0].toUpperCase() + key.slice(1)} lobe branches`,
+        ]),
+      )
+    : isCardiac
       ? {
-          all: 'All supplied regions',
-          left: 'Left regions',
-          right: 'Right regions',
-          insula: 'Insulae',
-          temporal: 'Temporal regions',
+          all: 'Four chamber spaces',
+          right: 'Right heart spaces',
+          left: 'Left heart spaces',
+          atria: 'Atrial spaces',
+          ventricles: 'Ventricular spaces',
         }
-      : isBrainstem
+      : isCerebral
         ? {
-            all: 'Brainstem and cerebellum',
-            brainstem: 'Brainstem only',
-            cerebellum: 'Cerebellum only',
+            all: 'All supplied regions',
+            left: 'Left regions',
+            right: 'Right regions',
+            insula: 'Insulae',
+            temporal: 'Temporal regions',
           }
-        : {
-            all: 'All four spaces',
-            lateral: 'Lateral ventricles',
-            midline: 'Third and fourth',
-            ...Object.fromEntries(relationships.map((r) => [r.id, r.title])),
-          };
-  const title = isCardiac
-    ? 'Cardiac'
-    : isCerebral
-      ? 'Cerebral'
-      : isBrainstem
-        ? 'Brainstem'
-        : 'Ventricular';
-  const notes = isCardiac
-    ? cardiacNotes
-    : isCerebral
-      ? cerebralNotes
-      : isBrainstem
-        ? brainstemNotes
-        : ventricleNotes;
+        : isBrainstem
+          ? {
+              all: 'Brainstem and cerebellum',
+              brainstem: 'Brainstem only',
+              cerebellum: 'Cerebellum only',
+            }
+          : {
+              all: 'All four spaces',
+              lateral: 'Lateral ventricles',
+              midline: 'Third and fourth',
+              ...Object.fromEntries(relationships.map((r) => [r.id, r.title])),
+            };
+  const title = isPulmonary
+    ? 'Lung'
+    : isCardiac
+      ? 'Cardiac'
+      : isCerebral
+        ? 'Cerebral'
+        : isBrainstem
+          ? 'Brainstem'
+          : 'Ventricular';
+  const notes = isPulmonary
+    ? pulmonaryNotes
+    : isCardiac
+      ? cardiacNotes
+      : isCerebral
+        ? cerebralNotes
+        : isBrainstem
+          ? brainstemNotes
+          : ventricleNotes;
   const [{ selectedId, hidden, history }, dispatch] = useReducer(
     (state: VentricularState, action: VentricularAction) =>
       reduceVentricles(layers, state, action, presets),
@@ -294,8 +322,8 @@ export function VentricularView({
   if (!layers.length)
     return (
       <p role="alert">
-        The {isCardiac ? 'heart' : 'brain'} source binding has changed. This
-        dissection is unavailable pending review.
+        The {isPulmonary ? 'lung' : isCardiac ? 'heart' : 'brain'} source
+        binding has changed. This dissection is unavailable pending review.
       </p>
     );
   return (
@@ -415,6 +443,12 @@ export function VentricularView({
         className="eye-layer-controls"
         aria-label={`${title} dissection controls`}
       >
+        {isPulmonary && (
+          <p className="muted">
+            Airway and vessel groups only. Lobe tissue and fissure surfaces are
+            not supplied.
+          </p>
+        )}
         <div className="eye-layer-presets">
           <label htmlFor="ventricular-preset">Study view</label>
           <Select
@@ -507,24 +541,26 @@ export function VentricularView({
           >
             Reassemble
           </Button>
-          <Button
-            size="sm"
-            variant={context ? 'default' : 'outline'}
-            aria-pressed={context}
-            disabled={explode > 0}
-            onClick={() => {
-              setRelationshipId(null);
-              setContext((v) => !v);
-            }}
-          >
-            {isCardiac
-              ? 'Show atrial walls'
-              : isCerebral
-                ? 'Show lateral ventricles'
-                : isBrainstem
-                  ? 'Show fourth ventricle'
-                  : 'Show brain context'}
-          </Button>
+          {!isPulmonary && (
+            <Button
+              size="sm"
+              variant={context ? 'default' : 'outline'}
+              aria-pressed={context}
+              disabled={explode > 0}
+              onClick={() => {
+                setRelationshipId(null);
+                setContext((v) => !v);
+              }}
+            >
+              {isCardiac
+                ? 'Show atrial walls'
+                : isCerebral
+                  ? 'Show lateral ventricles'
+                  : isBrainstem
+                    ? 'Show fourth ventricle'
+                    : 'Show brain context'}
+            </Button>
+          )}
         </div>
         {relationship && context && explode === 0 ? (
           <section
@@ -646,7 +682,21 @@ export function VentricularView({
         )}
         <details className="eye-layer-limits">
           <summary>Learning and limitations</summary>
-          {isCardiac ? (
+          {isPulmonary ? (
+            <>
+              <p>
+                Each selectable item combines the existing airway and vessel
+                files assigned to one lobe in the source table. Colours
+                distinguish groups, not oxygenation or tissue types.
+              </p>
+              <p>
+                No lung tissue envelope, fissure surface, alveoli or complete
+                bronchopulmonary segment is demonstrated. The left upper group
+                retains one duplicate source face. Both source geometry and
+                anatomical membership need specialist review.
+              </p>
+            </>
+          ) : isCardiac ? (
             <>
               <p>
                 Four source cavity shapes, not solid heart chambers, measured
@@ -702,20 +752,25 @@ export function VentricularView({
           )}
           <p>
             No CT/MRI correspondence, diagnostic measurement or clinical
-            approval is provided. The main {isCardiac ? 'heart' : 'brain'} is
-            not rendered over these components.
+            approval is provided. The main{' '}
+            {isPulmonary ? 'lung' : isCardiac ? 'heart' : 'brain'} is not
+            rendered over these components.
           </p>
-          {(isCardiac
-            ? [cardiacReference]
-            : isCerebral
-              ? cerebralReferences
-              : isBrainstem
-                ? brainstemReferences
-                : [ventricleReference]
+          {(isPulmonary
+            ? pulmonaryReferences
+            : isCardiac
+              ? [cardiacReference]
+              : isCerebral
+                ? cerebralReferences
+                : isBrainstem
+                  ? brainstemReferences
+                  : [ventricleReference]
           ).map((href, i) => (
             <p key={href}>
               <a href={href} target="_blank" rel="noreferrer">
-                University {isCardiac ? 'cardiac anatomy' : 'neuroanatomy'}{' '}
+                {isPulmonary
+                  ? 'NCI lung anatomy'
+                  : `University ${isCardiac ? 'cardiac anatomy' : 'neuroanatomy'}`}{' '}
                 reference {i + 1}
               </a>
             </p>
@@ -751,11 +806,14 @@ export default function Ventricles({
   initialSelectedId?: string;
 }) {
   const isCardiac = cardiacFor(parent).length > 0;
-  const startingStudy = isCardiac
-    ? 'cardiac'
-    : initialStudy === 'cardiac'
-      ? 'brainstem'
-      : (initialStudy ?? 'brainstem');
+  const isPulmonary = pulmonaryFor(parent).length > 0;
+  const startingStudy = isPulmonary
+    ? 'pulmonary'
+    : isCardiac
+      ? 'cardiac'
+      : initialStudy === 'cardiac' || initialStudy === 'pulmonary'
+        ? 'brainstem'
+        : (initialStudy ?? 'brainstem');
   const [study, setStudy] = useState<ComponentStudy>(startingStudy);
   return (
     <Dialog
@@ -768,15 +826,17 @@ export default function Ventricles({
         <header className="eye-layer-heading brain-study-heading">
           <div>
             <DialogTitle>
-              {isCardiac
-                ? 'Heart · chamber spaces'
-                : 'Brain · source dissection'}
+              {isPulmonary
+                ? `${parent.name} · branch dissection`
+                : isCardiac
+                  ? 'Heart · chamber spaces'
+                  : 'Brain · source dissection'}
             </DialogTitle>
             <DialogDescription>
               Source-based anatomy studies. Clinical validation pending.
             </DialogDescription>
           </div>
-          {!isCardiac && (
+          {!isCardiac && !isPulmonary && (
             <Select
               value={study}
               onValueChange={(v) => {

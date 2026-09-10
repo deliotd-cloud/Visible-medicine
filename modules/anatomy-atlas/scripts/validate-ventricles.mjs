@@ -303,7 +303,7 @@ check(
   source
     .replace(/\s+/g, '')
     .includes(
-      '!exam&&(ventriclesFor(selected).length>0||cardiacFor(selected).length>0)&&(',
+      '!exam&&(ventriclesFor(selected).length>0||cardiacFor(selected).length>0||pulmonaryFor(selected).length>0)&&(',
     ),
   'Both nested launchers retain the exam guard',
 );

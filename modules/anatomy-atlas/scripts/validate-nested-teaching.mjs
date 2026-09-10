@@ -18,7 +18,8 @@ const compiled = await build({
     export { ventricleCatalog as ventricles } from './lib/ventricles';
     export { brainstemCatalog as brainstem } from './lib/brainstem';
     export { cerebralCatalog as cerebral } from './lib/cerebral';
-    export { cardiacCatalog as cardiac } from './lib/cardiac';`,
+    export { cardiacCatalog as cardiac } from './lib/cardiac';
+    export { pulmonaryCatalog as pulmonary } from './lib/pulmonary';`,
     resolveDir: process.cwd(),
     loader: 'tsx',
   },
@@ -51,9 +52,9 @@ const catalog = api.bodyDisplayCatalog(
 );
 const targets = api.nestedStudyTargets(catalog);
 const initial = JSON.stringify(catalog);
-same(targets.length, 41);
-same(api.nestedConcepts.length, 26);
-same(new Set(api.nestedConcepts.map((c) => c.id)).size, 26);
+same(targets.length, 46);
+same(api.nestedConcepts.length, 29);
+same(new Set(api.nestedConcepts.map((c) => c.id)).size, 29);
 const topics = [
   'anatomy',
   'function',
@@ -194,21 +195,22 @@ for (const target of targets) {
     null,
   );
 }
-same(seen.size, 26);
+same(seen.size, 29);
 same(
   answerKeys.size,
-  41,
+  46,
   'Changing either study or side resets revealed answer',
 );
-same(coverage.pathology, { draft: 33, pending: 8 });
-same(coverage.clinical, { draft: 37, pending: 4 });
+same(coverage.pathology, { draft: 33, pending: 13 });
+same(coverage.clinical, { draft: 37, pending: 9 });
 for (const tab of ['anatomy', 'function', 'quiz'])
-  same(coverage[tab], { draft: 41, pending: 0 });
+  same(coverage[tab], { draft: 46, pending: 0 });
 for (const tab of ['ct', 'mri', 'ultrasound'])
-  same(coverage[tab], { draft: 0, pending: 41 });
+  same(coverage[tab], { draft: 0, pending: 46 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
 const hosts = new Set([
+  'training.seer.cancer.gov',
   'www.nhlbi.nih.gov',
   'www.vhlab.umn.edu',
   'www.nei.nih.gov',
@@ -249,7 +251,7 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 25);
+same(Object.keys(wordsBySource).length, 27);
 for (const [ref, words] of Object.entries(wordsBySource))
   check(words <= 200, `Conservative source word budget: ${ref} ${words}`);
 console.log({

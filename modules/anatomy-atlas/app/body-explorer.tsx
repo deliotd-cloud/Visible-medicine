@@ -127,6 +127,7 @@ import {
 import { eyeLayersFor } from '@/lib/eye-layers';
 import { ventriclesFor } from '@/lib/ventricles';
 import { cardiacFor } from '@/lib/cardiac';
+import { pulmonaryFor } from '@/lib/pulmonary';
 import { bodyDisplayCatalog } from '@/lib/body-display-catalog';
 import {
   resolveNestedTarget,
@@ -1806,7 +1807,8 @@ export default function BodyExplorer({
                     )}
                     {!exam &&
                       (ventriclesFor(selected).length > 0 ||
-                        cardiacFor(selected).length > 0) && (
+                        cardiacFor(selected).length > 0 ||
+                        pulmonaryFor(selected).length > 0) && (
                         <div className="body-selection-actions">
                           <Button
                             ref={ventricleLauncher}
@@ -1820,9 +1822,11 @@ export default function BodyExplorer({
                             }}
                           >
                             <Layers3 />{' '}
-                            {cardiacFor(selected).length
-                              ? 'Explore heart chambers'
-                              : 'Dissect brain'}
+                            {pulmonaryFor(selected).length
+                              ? 'Explore lung branches'
+                              : cardiacFor(selected).length
+                                ? 'Explore heart chambers'
+                                : 'Dissect brain'}
                           </Button>
                         </div>
                       )}
