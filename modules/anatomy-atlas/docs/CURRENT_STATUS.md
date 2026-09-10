@@ -38,11 +38,13 @@ The [lung branch study](PULMONARY_DISSECTION.md) separates 5 source-defined grou
 
 ## Nested anatomy teaching
 
+The [pulmonary teaching extension](PULMONARY_TEACHING.md) supplies nine shared Clinical/Pathology/CT drafts for five partial branch groups in the existing collapsed panel. MRI/US remain pending for these groups. No tissue, fissure, disease geometry or scan correspondence is inferred.
+
 The [liver internal-branch study](HEPATIC_DISSECTION.md) exposes 7 source groups from 57 existing liver files. Arteries, portal veins, bile ducts and a partial venous tributary have distinct colours and presets. Optional tissue context is nonselectable. Unresolved source VI/VII near-overlap and VIII grouping prevent individual segment labels; no validated Couinaud map or clinical volume is supplied.
 
 Optional pulmonary airway context reuses 3 existing trachea/main-bronchus landmarks across 2 per-lung views. It is off by default and absent during separation, with no new model files or nested identities. Main-lung selection now discloses the missing tissue/fissure surfaces. Context is orientation, not validated airway continuity.
 
-The collapsed [Learn more section](NESTED_ANATOMY_TEACHING.md) has 33 source-pinned concepts across 53 selectable parts, with 43 primary-reference links. These counts are separate from the root-body table and overlap parent anatomy. Each part has draft Anatomy, Function and an unscored self-check. Clinical has 48 draft / 5 pending; Pathology has 44 draft / 9 pending representations. [Cardiac](CARDIAC_TEACHING.md) and [hepatic imaging teaching](HEPATIC_TEACHING.md) bring CT to 5 draft / 48 pending, MRI to 7 draft / 46 pending, and ultrasound to 11 draft / 42 pending. These are notes, not scans or synchronized viewers. Model-scope self-checks test documented model limitations instead of medical recall. No clinical approvals or external resource access are implied.
+The collapsed [Learn more section](NESTED_ANATOMY_TEACHING.md) has 33 source-pinned concepts across 53 selectable parts, with 48 primary-reference links. These counts are separate from the root-body table and overlap parent anatomy. Each part has draft Anatomy, Function and an unscored self-check. Clinical has 53 draft / 0 pending; Pathology has 49 draft / 4 pending representations. [Cardiac](CARDIAC_TEACHING.md) and [hepatic imaging teaching](HEPATIC_TEACHING.md) bring CT to 10 draft / 43 pending, MRI to 7 draft / 46 pending, and ultrasound to 11 draft / 42 pending. These are notes, not scans or synchronized viewers. Model-scope self-checks test documented model limitations instead of medical recall. No clinical approvals or external resource access are implied.
 
 The [cardiac chamber study](CARDIAC_CHAMBERS.md) exposes 4 existing cavity shapes and 2 atrial-wall references. These are spaces and context, not new unique anatomy or a complete dissectible heart. Ambiguous source labels are documented and not admitted to this study.
 

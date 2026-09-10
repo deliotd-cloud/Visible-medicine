@@ -57,13 +57,30 @@ const initial = JSON.stringify(catalog);
 same(targets.length, 53);
 same(api.nestedConcepts.length, 33);
 same(new Set(api.nestedConcepts.map((c) => c.id)).size, 33);
-// Captured from validated v104 source 71cbef0d, before the liver extension.
+// Captured from validated v105 source 60c5a98d, before the lung extension.
 const digest = (value) =>
   createHash('sha256').update(JSON.stringify(value)).digest('hex');
 same(
-  digest(api.nestedConcepts.filter((c) => c.study !== 'hepatic')),
-  '9393d190e311347d5dbe45c4fe8f364871fcd11e3e676ed8569c468e1eec8278',
+  digest(api.nestedConcepts.filter((c) => c.study !== 'pulmonary')),
+  'd2182f88e1d627af7d12ac4f02b9faa51160b8f4a82b4d676b071800a6a593ef',
   'Unrelated nested teaching unchanged',
+);
+same(
+  digest(
+    api.nestedConcepts
+      .filter((c) => c.study === 'pulmonary')
+      .map((c) => ({
+        id: c.id,
+        study: c.study,
+        fmaIds: c.fmaIds,
+        anatomy: c.sections.anatomy,
+        function: c.sections.function,
+        modelLimit: c.modelLimit,
+        quiz: c.quiz,
+      })),
+  ),
+  '6988daf730eb7fe5b9a47855c68ccf7d338d08739c6747f96948e339cd19d7e1',
+  'Existing pulmonary identities, core notes, limits and questions unchanged',
 );
 same(
   digest(
@@ -135,7 +152,9 @@ for (const target of targets) {
           : concept.id === 'hepatic-biliary'
             ? ['mri', 'ultrasound']
             : ['ultrasound']
-        : [];
+        : concept.study === 'pulmonary'
+          ? ['ct']
+          : [];
   same(
     Object.keys(concept.imaging ?? {}).sort(),
     [...expectedImaging].sort(),
@@ -263,13 +282,13 @@ for (const target of targets) {
       check(!sectionHtml.includes('Content pending'));
     }
   }
-  if (target.study === 'hepatic') {
+  if (['hepatic', 'pulmonary'].includes(target.study)) {
     for (const topic of ['clinical', 'pathology']) {
       const lesson = api.nestedTopicLesson(cleanConcept, topic);
       const sectionNode = nodes.find(
         (n) => n.props?.['aria-label'] === lesson.title,
       );
-      check(sectionNode, 'Liver clinical section in existing panel');
+      check(sectionNode, 'Organ clinical section in existing panel');
       const sectionHtml = renderToStaticMarkup(sectionNode);
       same(lesson.readiness, 'draft');
       check(sectionHtml.includes('Teaching references'));
@@ -297,7 +316,10 @@ for (const target of targets) {
   check(html.includes('Teaching references'));
   check(!html.includes('undefined'));
   same(
-    api.nestedTeachingFor(parent, target.study, { ...selected, id: 'unknown' }),
+    api.nestedTeachingFor(parent, target.study, {
+      ...selected,
+      id: 'unknown',
+    }),
     null,
   );
 }
@@ -307,16 +329,18 @@ same(
   53,
   'Changing either study or side resets revealed answer',
 );
-same(coverage.pathology, { draft: 44, pending: 9 });
-same(coverage.clinical, { draft: 48, pending: 5 });
+same(coverage.pathology, { draft: 49, pending: 4 });
+same(coverage.clinical, { draft: 53, pending: 0 });
 for (const tab of ['anatomy', 'function', 'quiz'])
   same(coverage[tab], { draft: 53, pending: 0 });
-same(coverage.ct, { draft: 5, pending: 48 });
+same(coverage.ct, { draft: 10, pending: 43 });
 same(coverage.mri, { draft: 7, pending: 46 });
 same(coverage.ultrasound, { draft: 11, pending: 42 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
 const hosts = new Set([
+  'www.cdc.gov',
+  'www.brit-thoracic.org.uk',
   'pubmed.ncbi.nlm.nih.gov',
   'aasldpubs.onlinelibrary.wiley.com',
   'www.aium.org',
@@ -368,11 +392,11 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 43);
+same(Object.keys(wordsBySource).length, 48);
 same(
   new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
     .size,
-  43,
+  48,
   'Do not split one source into duplicate reference keys',
 );
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {

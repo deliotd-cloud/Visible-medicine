@@ -2,6 +2,8 @@
 
 ## Current extension
 
+The [pulmonary teaching extension](PULMONARY_TEACHING.md) adds nine shared Clinical/Pathology/CT drafts across five existing groups, bringing the reference total to 48. Current Clinical coverage is 53 draft / zero pending; Pathology 49 / four; CT ten / 43; MRI seven / 46; Ultrasound 11 / 42. Anatomy, Function and Quiz remain draft for all 53 representations. Concepts, source pins and geometry are unchanged. The earlier totals below describe historical milestones, not current coverage.
+
 The [hepatic teaching extension](HEPATIC_TEACHING.md) subsequently brings the reference total to 43 without changing the 33 concepts, 53 representations or seven parents. Clinical now has 48 draft / five pending; Pathology 44 / nine; CT five / 48; MRI seven / 46; Ultrasound 11 / 42. All Anatomy, Function and Quiz entries remain draft. The earlier milestone counts below are historical. Optional imaging now includes partial organ coverage; an absent modality remains pending even when another modality exists for the same part.
 
 The original brain/eye milestone below is retained as history. Subsequent heart, lung and liver studies bring the registry to 33 concepts / 53 source representations / seven parents. [Cardiac clinical and imaging teaching](CARDIAC_TEACHING.md) adds 20 draft sections and seven reference links, bringing the total to 37. Clinical coverage is 41 draft / 12 pending; Pathology is 37 draft / 16 pending. CT, MRI and Ultrasound each have four draft / 49 pending representations. All 53 still have draft Anatomy, Function and Quiz. Consult [generated current status](CURRENT_STATUS.md) for current totals.

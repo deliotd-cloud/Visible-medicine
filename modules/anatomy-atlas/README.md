@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Lung branches → Learn more** now adds [clinical, pathology and CT drafts](docs/PULMONARY_TEACHING.md) for upper, middle and lower lobe groups: location versus diagnosis, middle-lobe collapse and posture-dependent aspiration patterns. Nine shared paragraphs serve five existing selections without new controls. Tissue, fissures, segment boundaries, MRI/US lessons and scan connections remain incomplete; specialist review is required.
+
 **Liver branches → Learn more** now adds [clinical and imaging teaching](docs/HEPATIC_TEACHING.md) for arterial supply, portal inflow, bile drainage and hepatic venous outflow. The seven source groups receive 15 shared, referenced draft paragraphs in the existing panel, including ultrasound, biliary MRCP and venous CT/MRI concepts. No validated segment map, scan access or clinical approval is implied.
 
 **Heart chambers → Learn more** now includes [chamber-specific clinical and imaging drafts](docs/CARDIAC_TEACHING.md): Clinical context, Pathology, CT, MRI and Ultrasound for each of the four cavities. The existing collapsed panel keeps the canvas uncluttered. These are sourced teaching notes, not patient scans, measurements, validated diagnoses or a lecture-access grant. Specialist review is pending.

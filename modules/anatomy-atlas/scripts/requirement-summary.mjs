@@ -57,6 +57,8 @@ The [lung branch study](PULMONARY_DISSECTION.md) separates ${anatomy.nestedDisse
 
 ## Nested anatomy teaching
 
+The [pulmonary teaching extension](PULMONARY_TEACHING.md) supplies nine shared Clinical/Pathology/CT drafts for five partial branch groups in the existing collapsed panel. MRI/US remain pending for these groups. No tissue, fissure, disease geometry or scan correspondence is inferred.
+
 The [liver internal-branch study](HEPATIC_DISSECTION.md) exposes ${anatomy.nestedDissections.hepaticBranchGroups} source groups from ${anatomy.nestedDissections.hepaticSourceFiles} existing liver files. Arteries, portal veins, bile ducts and a partial venous tributary have distinct colours and presets. Optional tissue context is nonselectable. Unresolved source VI/VII near-overlap and VIII grouping prevent individual segment labels; no validated Couinaud map or clinical volume is supplied.
 
 Optional pulmonary airway context reuses ${study.pulmonaryAirwayLandmarks} existing trachea/main-bronchus landmarks across ${study.pulmonaryAirwayContexts} per-lung views. It is off by default and absent during separation, with no new model files or nested identities. Main-lung selection now discloses the missing tissue/fissure surfaces. Context is orientation, not validated airway continuity.

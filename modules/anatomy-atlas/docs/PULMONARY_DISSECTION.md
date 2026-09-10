@@ -4,6 +4,8 @@ Select either lung in Thorax or Whole body, then **Explore lung branches**. The 
 
 ## What is actually represented
 
+**Learn more** now includes [clinical, pathology and CT drafts](PULMONARY_TEACHING.md) for all five branch groups. MRI/US remain pending. This extension changes teaching only; original source counts and the historical implementation evidence below are retained.
+
 **Show airway landmarks** optionally adds the existing trachea and the main bronchus on the selected side, with a compact colour key. The landmarks are nonselectable and their pointer handlers pass through to branches. They are omitted from the scene and from requested bundles during separation; reassembly restores the previous context choice. Context is off by default, so there is no extra initial model download. Main-atlas lung selection now also states the missing tissue/fissure coverage, and nested groups are labelled “Partial branch group”, not “Space representation”.
 
 These are **partial lobe representations consisting of airway and vessel branches**, not separately modelled lung tissue. All files were already inside the original parent lung compounds. A complete source-table partition is not evidence of complete lobe anatomy.
@@ -46,6 +48,6 @@ Brief original teaching uses factual references from [NCI SEER lung anatomy](htt
 
 - Specialist review of lobe assignment, source fidelity, laterality, branch relationships and source artefacts; none is clinically approved.
 - Independently licensed and validated lung/parenchymal surfaces, fissures, pleura, bronchopulmonary segment boundaries and finer airway/vascular anatomy. Do not create these from convex hulls, bounding boxes or generated images and imply anatomical validity.
-- Author/review clinical and pathology lessons, XR/CT/MRI/US material, and scan-specific correspondence. Separate subjects remain separate; no patient registration or quantitative volume is supplied.
+- Review the new clinical/pathology/CT drafts; author remaining XR/MRI/US material and separately validate scan-specific correspondence. Separate subjects remain separate; no patient registration or quantitative volume is supplied.
 - Explicitly requested browser/device checks for labels during rotation, actual picking, camera framing, touch, keyboard focus and smaller displays. Automated callback/markup checks are not a substitute.
 - Source-specific reviewer approvals, licensing provenance and independent lecture entitlement checks before any real external teaching resources are connected.

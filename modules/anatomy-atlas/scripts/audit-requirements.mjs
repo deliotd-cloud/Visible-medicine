@@ -218,6 +218,7 @@ for (const path of [
   'content/nested-teaching.ts',
   'content/cardiac-teaching.ts',
   'content/hepatic-teaching.ts',
+  'content/pulmonary-teaching.ts',
   'content/nested-teaching-bindings.v1.json',
   'lib/nested-anatomy.ts',
   'lib/nested-teaching.ts',
@@ -256,7 +257,10 @@ sourceHashes.resolvedContentAndRecipeData = hash(
 );
 sourceHashes.explicitTopicReadiness = hash(
   JSON.stringify(
-    contentRows.map(({ entry, readiness }) => ({ id: entry.id, readiness })),
+    contentRows.map(({ entry, readiness }) => ({
+      id: entry.id,
+      readiness,
+    })),
   ),
 );
 sourceHashes.reasoningQuestionData = hash(JSON.stringify(reasoningConcepts));

@@ -7,6 +7,10 @@ import {
   hepaticTeaching,
   hepaticTeachingReferences,
 } from './hepatic-teaching.ts';
+import {
+  pulmonaryTeaching,
+  pulmonaryTeachingReferences,
+} from './pulmonary-teaching.ts';
 
 export type NestedTopic = 'anatomy' | 'function' | 'clinical' | 'pathology';
 export type NestedImagingTopic = 'ct' | 'mri' | 'ultrasound';
@@ -35,6 +39,7 @@ export const nestedTeachingReferences: Record<
 > = {
   ...cardiacTeachingReferences,
   ...hepaticTeachingReferences,
+  ...pulmonaryTeachingReferences,
   hepaticArteries: {
     title: 'Texas Tech · Abdominal arteries',
     url: 'https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html',
@@ -219,26 +224,24 @@ export const nestedConcepts: NestedConcept[] = [
         'hepaticVeins',
       ],
     ] as const
-  ).map(
-    ([kind, ids, anatomy, fn, question, answer, ref]): NestedConcept => ({
-      id: `hepatic-${kind}`,
-      study: 'hepatic',
-      fmaIds: [...ids],
-      sections: {
-        anatomy: section(anatomy, ref),
-        function: section(fn, ref),
-        clinical: hepaticTeaching[kind].clinical,
-        pathology: hepaticTeaching[kind].pathology,
-      },
-      imaging: hepaticTeaching[kind].imaging,
-      modelLimit:
-        'Original source branch groups only; no proven lumen continuity, complete drainage tree, Couinaud segment boundaries, surgical planes or scan registration. Liver tissue context retains unresolved source segment conflicts.',
-      quiz:
-        kind === 'biliary' || kind === 'venous-tributary'
-          ? quiz(question, answer)
-          : quiz(question, answer, ref),
-    }),
-  ),
+  ).map(([kind, ids, anatomy, fn, question, answer, ref]): NestedConcept => ({
+    id: `hepatic-${kind}`,
+    study: 'hepatic',
+    fmaIds: [...ids],
+    sections: {
+      anatomy: section(anatomy, ref),
+      function: section(fn, ref),
+      clinical: hepaticTeaching[kind].clinical,
+      pathology: hepaticTeaching[kind].pathology,
+    },
+    imaging: hepaticTeaching[kind].imaging,
+    modelLimit:
+      'Original source branch groups only; no proven lumen continuity, complete drainage tree, Couinaud segment boundaries, surgical planes or scan registration. Liver tissue context retains unresolved source segment conflicts.',
+    quiz:
+      kind === 'biliary' || kind === 'venous-tributary'
+        ? quiz(question, answer)
+        : quiz(question, answer, ref),
+  })),
   ...(
     [
       [
@@ -263,29 +266,24 @@ export const nestedConcepts: NestedConcept[] = [
         'Yes. Its two lobes are upper and lower.',
       ],
     ] as const
-  ).map(
-    ([level, ids, anatomy, question, answer]): NestedConcept => ({
-      id: `pulmonary-${level}-branches`,
-      study: 'pulmonary',
-      fmaIds: [...ids],
-      sections: {
-        anatomy: section(anatomy, 'pulmonaryLobes'),
-        function: section(
-          'Lobar bronchi conduct air into the lung. Gas exchange takes place in the distal alveolar region, which is not represented by these branch meshes.',
-          'pulmonaryAirways',
-        ),
-        clinical: pending(
-          'Lobe-specific imaging and clinical interpretation await authoring and specialist review. These branches are not a tissue segmentation.',
-        ),
-        pathology: pending(
-          'No disease-specific lobe lesson or pathological lung geometry has been supplied.',
-        ),
-      },
-      modelLimit:
-        'Airway and vessel files grouped by source lobe membership only. No parenchymal envelope, fissure surface, alveoli, measured lung volume or patient-scan registration.',
-      quiz: quiz(question, answer, 'pulmonaryLobes'),
-    }),
-  ),
+  ).map(([level, ids, anatomy, question, answer]): NestedConcept => ({
+    id: `pulmonary-${level}-branches`,
+    study: 'pulmonary',
+    fmaIds: [...ids],
+    sections: {
+      anatomy: section(anatomy, 'pulmonaryLobes'),
+      function: section(
+        'Lobar bronchi conduct air into the lung. Gas exchange takes place in the distal alveolar region, which is not represented by these branch meshes.',
+        'pulmonaryAirways',
+      ),
+      clinical: pulmonaryTeaching[level].clinical,
+      pathology: pulmonaryTeaching[level].pathology,
+    },
+    imaging: pulmonaryTeaching[level].imaging,
+    modelLimit:
+      'Airway and vessel files grouped by source lobe membership only. No parenchymal envelope, fissure surface, alveoli, measured lung volume or patient-scan registration.',
+    quiz: quiz(question, answer, 'pulmonaryLobes'),
+  })),
   ...(
     [
       [

@@ -1,0 +1,40 @@
+# Pulmonary clinical and CT teaching
+
+Select a lung in **Thorax → Explore lung branches**, choose a branch group, then expand **Learn more**. Nine original paragraphs serve three shared concepts and five exact source representations, adding Clinical context, Pathology and CT within the existing panel. No extra toolbar, scrolling region, mesh or external service is introduced. All material is an educational draft awaiting specialist review.
+
+| Concept | Source representations | New topics |
+| --- | --- | --- |
+| Upper branches | FMA7333 right / FMA7370 left | Clinical evaluation vs location; TB radiographic patterns and diagnostic limits; CT orientation |
+| Middle branches | FMA7383 right only | Investigation of recurrent collapse; middle lobe syndrome; CT airway/tissue distinction |
+| Lower branches | FMA7337 right / FMA7371 left | Posture-dependent aspiration distribution; pneumonia vs chemical pneumonitis; CT context |
+
+These are **partial airway/vessel groups**, not lobe parenchyma, fissures or separately delineated bronchopulmonary segments. Disease examples are neither findings in the source model nor exclusive to the selected lobe. There is no pathological geometry, scan connection, measurement, patient registration or treatment guidance. MRI and Ultrasound remain explicitly pending for every pulmonary group.
+
+## Primary evidence and rights
+
+Checked 10 September 2026; concise factual paraphrases and links only:
+
+- [CDC clinical/laboratory TB diagnosis](https://www.cdc.gov/tb/hcp/testing-diagnosis/clinical-and-laboratory-diagnosis.html): clinical evaluation, infection-test limits, radiography and microbiology. [CDC 2005 healthcare-setting guidance](https://www.cdc.gov/mmwr/preview/mmwrhtml/rr5417a1.htm), chest-radiography subsection, supports the historical upper-lobe pattern; it is not presented as a current treatment or infection-control protocol.
+- [Freidkin et al. (2023), PubMed abstract, DOI 10.1111/1759-7714.15113](https://pubmed.ncbi.nlm.nih.gov/37704575/): a retrospective 66-person bronchoscopy series supports example causes and consequences of right middle lobe syndrome. No prevalence/risk extrapolation, procedural recommendation or copied case is included. Full-text retrieval encountered a browser challenge; the authored claims use the accessible abstract, not unseen tables or images.
+- [BTS / Simpson et al. aspiration statement (2023), DOI 10.1136/thorax-2022-219699](https://www.brit-thoracic.org.uk/document-library/clinical-statements/aspiration-pneumonia/bts-clinical-statement-on-aspiration-pneumonia/), printed p. s12 (PDF page 10): posture/distribution, differential diagnosis and CT context. “Superior lower-lobe segment” is the terminology used here for the statement's “apical segment of the lower lobe”. Model-limit statements are editorial, not claims of validated segment geometry.
+- [ACR/RSNA RadiologyInfo chest CT](https://www.radiologyinfo.org/en/info/chestct): multiplanar imaging and examination of lung abnormalities. Branch-to-tissue comparison is an atlas learning prompt, not a claim that this source supplies CT data or validates our model.
+
+No source illustration, scan, guideline, table, question bank or article is redistributed. Citations are not asset licences, endorsements or clinical approval. Source word budgets cover all concepts, not just individual paragraphs. No dependency, font, model, texture or paid API is added; existing BodyParts3D CC BY 4.0 and dependency notices remain. See [third-party notices](../LICENSES/THIRD_PARTY_NOTICES.md).
+
+## Implementation and verification
+
+`content/pulmonary-teaching.ts` supplies Clinical, Pathology and explicit CT sections; `content/nested-teaching.ts` connects them to the existing concepts. IDs, source/FMA/side/bundle bindings, Anatomy, Function, model limits and original questions are unchanged. No imaging data or lecture entitlements are added.
+
+`npm run nested-teaching:test` checks all 53 targets, source mutation rejection, detached results, exact per-concept modality scope, original pending fallbacks, actual rendered references, collapsed panels and source word budgets. Digests captured from v105 protect all nonpulmonary concepts and the pulmonary core; older hepatic/cardiac core protections remain. Pins are checked, not regenerated. The requirement audit fingerprints this module and the fully resolved concepts/references, including same-count prose changes.
+
+Nested totals: 33 shared concepts / 53 representations / seven parents / 48 references. Clinical 53 draft / zero pending; Pathology 49 / four; CT ten / 43; MRI seven / 46; Ultrasound 11 / 42. Anatomy, Function and Quiz remain 53 draft / zero pending each. Coverage is not clinical completeness or accuracy.
+
+## Remaining acceptance
+
+1. Respiratory physician, thoracic radiologist and educator review of wording, source support, current evidence, intended learner level and differential-diagnosis caveats.
+2. Independent validation of source lobe membership, laterality, branch identities, continuity and artefacts. Missing tissue, fissures, pleura and segment boundaries remain genuine anatomy gaps.
+3. Explicit browser/device acceptance of the existing tabs, references, keyboard access, text enlargement and mobile scrolling. Code/SSR tests are not browser, GPU or clinical acceptance.
+4. Separately licensed, de-identified and validated future scans, with subject-specific registration. The provisional head CT/MRI projects remain untouched and unlinked.
+5. Atlas access and paid-lecture access remain independent; the production resource manifest still contains no external resources or correspondences.
+
+Next: remaining nested brain pathology and useful modality-specific anatomy lessons, alongside source-backed spatial/detail work. Do not infer unavailable surfaces or patient-specific anatomy from a visual arrangement. Dated release checkpoints record saving and recovery separately.
