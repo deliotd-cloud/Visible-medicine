@@ -1,6 +1,22 @@
-# Anatomy atlas backup — 10 September 2026
+# Anatomy atlas backup — 11 September 2026
 
-## 10 September 2026 — source-bound lower-limb learning (current)
+## 11 September 2026 — independent lower-limb study links (current)
+
+Source `df95b14d355bc562730dfbe4a43a7e509697973e`, tree `6f118247049fbae9269600867dc387f0b2029cb7`, parent `541099f26bcef110ef298b9bea7fcf470b5426fd`. Twenty-five source paths mirrored into `modules/anatomy-atlas`. Exact source successfully pushed to the existing Sites main branch with an ephemeral credential, then full HEAD verified. No main-website changes.
+
+The collapsed **Link to this study** control opens a selected independent structure, exact study and camera direction, optionally expanding Anatomy or Function notes. All five scopes are supported. A dedicated `/specimens/lower-limb` route avoids mounting the other body model. Custom dissections link to framed/faded assembled source context, not arbitrary hidden tissues, separation, free-orbit pose or history. Clipboard has a manual-copy fallback. Same-route changes remount the viewer, and Back/Close uses fixed regional destinations.
+
+Complete scope source/recipe descriptors are pinned with canonical SHA256 revisions. Malformed, duplicated, mixed body/specimen, foreign, out-of-scope or outdated links fail closed with a warning; the user must explicitly choose current source context. No similarly named surface is substituted. No FMA/patient mapping, scan coordinates, credentials, quiz answers, return URL or entitlement is serialized. Metadata bindings are checked at runtime; existing export suites separately verify geometry bytes. No dependencies, fonts, models, textures, review identities, auth/database or access policy changed. Grouped source bones and defects remain unchanged and disclosed.
+
+Passed: 3,668 navigation/source/recipe/route/control checks and 446 generated round trips; 1,310 learning checks; 238 knee checks; 1,058 limb checks and all 2,263,968 original faces; TypeScript; production build; final requirement-inventory freshness. Component checks use installed React/Base UI with only the GPU boundary replaced, and the server route is tested at its browser-client boundary. Actual requested Function-tab selection is checked. Browser/GPU/mobile/clipboard/accessibility and clinical acceptance remain pending. The nine shoulder fingerprints remain unchanged. Known Windows build/package wrapper failures were handled by the established npm build and retained official LF-normalised package helper, without reinstallation or configuration changes.
+
+One native archive-save attempt failed during the file-blob upload after 60,008 ms (request `9d6fe49f-594d-4e5b-b20e-be1355acede2`). No new saved version/deployment was created. Final native history remains version 135 (`appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_2068a94a5144819193e29e25be44955f`, source `a89a75be103f476206c4eee0d54fa32a12c0c79b`), with private access unchanged. The wider-limb, learning and direct-link milestones are implemented and pushed as source but NOT yet live. No unchanged retry loop, shell HTTP upload, archive omission or invented version was used.
+
+Recovery stem `work/atlas-um-limb-navigation-2026-09-11`: runtime archive 127,680,204 bytes SHA256 `2da2f55532c1cfed78ddd3ee1a1fdff5cdad5c1ba34785b27b5576c1ac5d9c78`; delta 645,120 bytes SHA256 `48c6ecc163d43c6786bb9651c306647c66e5f7733c1777598c1261672bda1760`; incremental bundle 65,556 bytes SHA256 `ac845f79836251b61638ec78c33019d99a2c592ae06bc9a04c005d910b1cfacb`. Bundle REQUIRES the source parent above, not standalone. Byte mirror: 1,397 files / 334,174,340 bytes / 111 GLBs; no common credential-signature warnings (not exhaustive). Runtime archive has 340 entries. Recovery JSON flags predate this receipt; do not rerun/overwrite one-shot artifacts.
+
+This is pushed Sites source plus same-PC recovery, not GitHub delivery, off-device restoration, conversation-history or private-review database backup. The goal remains active with substantive progress. Next work: deeper clinical/imaging teaching and major-region/peripheral-nerve gaps, without repeating completed specimen ingestion/basic teaching/quiz/link work. The brief oral pass is complete and routine oral work remains deferred. Final backup commit/tree checks and resume notes are in `work/ATLAS_UM_LIMB_NAVIGATION_2026-09-11.md` outside this repository.
+
+## 10 September 2026 — source-bound lower-limb learning
 
 Source `541099f26bcef110ef298b9bea7fcf470b5426fd`, tree `211d10544e488ca2b5516d636a0a34ed987a766a`, parent `4fe5fa0b9579ae790d3a76607effb26e59c88f1c`. Twenty source paths mirrored into `modules/anatomy-atlas`. The exact source was pushed to the existing Sites source branch with ephemeral authentication, then full HEAD verified. Main website unchanged.
 

@@ -15,6 +15,8 @@ const bundled = await build({
   stdin: {
     contents: `export { limbDefinitions } from './lib/um-limb-studies.ts';
 export { specimenTeachingFor } from './lib/um-limb-teaching.ts';
+export { makeSpecimenLink, resolveSpecimenLink } from './lib/um-limb-navigation.ts';
+export { parseSpecimenLink } from './lib/specimen-links.ts';
 export { bodyContent, bodyLesson } from './app/body-content.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';
@@ -42,6 +44,9 @@ export { cardiacRelationshipsFor, cardiacVesselSource } from './lib/cardiac-cont
 const {
   limbDefinitions,
   specimenTeachingFor,
+  makeSpecimenLink,
+  resolveSpecimenLink,
+  parseSpecimenLink,
   bodyContent,
   bodyLesson,
   structures: shoulder,
@@ -295,6 +300,12 @@ for (const path of [
   'lib/um-limb-teaching.ts',
   'content/um-limb-teaching.ts',
   'content/um-limb-teaching-bindings.v1.json',
+  'lib/specimen-links.ts',
+  'lib/um-limb-navigation.ts',
+  'content/um-limb-navigation.v1.json',
+  'app/specimen-study-link.tsx',
+  'app/specimens/lower-limb/page.tsx',
+  'app/specimens/lower-limb/specimen-linked-page.tsx',
   'app/um-limb-learning.tsx',
   'lib/independent-specimen.ts',
   'app/um-limb-study.tsx',
@@ -353,6 +364,21 @@ for (const path of publicFiles) {
   const extension = path.split('.').at(-1).toLowerCase();
   extensions[extension] = (extensions[extension] ?? 0) + 1;
 }
+const independentNavigation = Object.values(limbDefinitions).map(definition => {
+  const roundTrip = (selectedId, studyId) => {
+    const href = makeSpecimenLink(definition, { selectedId, studyId, view: 'anterior', topic: 'anatomy' });
+    assert(href, 'Missing independent specimen link');
+    const parsed = parseSpecimenLink(Object.fromEntries(new URL(href, 'https://example.invalid').searchParams));
+    const resolved = resolveSpecimenLink(parsed);
+    assert.equal(resolved.status, 'ready');
+    assert.equal(resolved.selectedId, selectedId);
+    return 1;
+  };
+  return { id: definition.key,
+    structureLinks: definition.surfaces.reduce((n, s) => n + roundTrip(s.id, null), 0),
+    studyMemberLinks: definition.studies.reduce((n, s) => n + s.ids.reduce((m, id) => m + roundTrip(id, s.id), 0), 0),
+  };
+});
 const report = {
   schemaVersion: 1,
   method:
@@ -368,6 +394,8 @@ const report = {
       license: independentKnee.source.license,
       registeredToBodyParts3D: independentKnee.registeredToBodyParts3D,
       clinicalApproval: [...independentKnee.structures, ...independentLimb.structures].every((s) => s.validation.anatomicalReview),
+      navigation: { route: '/specimens/lower-limb', sourceAndRecipePinned: true,
+        scopes: independentNavigation, topics: ['anatomy', 'function'], grantsAccessOrRegistration: false },
       detailedTeaching: {
         anatomyFunctionDrafts: limbDefinitions.whole.surfaces.filter(s => specimenTeachingFor(limbDefinitions.whole, s)).length,
         muscleAttachmentDrafts: limbDefinitions.whole.surfaces.filter(s => specimenTeachingFor(limbDefinitions.whole, s)?.attachments).length,

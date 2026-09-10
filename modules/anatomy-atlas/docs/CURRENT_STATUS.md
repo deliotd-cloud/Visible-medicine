@@ -4,6 +4,8 @@
 
 [Knee dissection studies](KNEE_STUDIES.md) add three compact views with automatic joint close-ups: bony relationships, patella set aside and posterior popliteus. Ten existing source representations remain whole; cartilage, ligaments and menisci are not added.
 
+[Direct specimen links](UM_LIMB_NAVIGATION.md) open exact selections and studies across 5 scopes, optionally at Anatomy or Function notes. The dedicated page skips the other body model; mismatched sources/recipes stop with a warning. Links grant neither separately paid-resource access nor scan registration.
+
 [Development priority](DEVELOPMENT_PRIORITIES.md) is the wider atlas and body regions; detailed oral work is deferred. Six [spinal-level studies](SPINAL_LEVEL_STUDIES.md) expose existing bone/disc groups with compact controls. T12–L1 is explicitly bones-only because its source disc is unresolved.
 
 [Live camera direction](LIVE_CAMERA_ORIENTATION.md) now follows actual rotation in regional, whole-body and nested viewers. A reserved read-only line distinguishes model-left/right from screen position, without covering labels or expanding the page. It hides in exam/recovery states and does not imply patient-scan orientation. Anatomy counts and the dedicated shoulder renderer are unchanged.

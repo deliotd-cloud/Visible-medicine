@@ -10,14 +10,15 @@ import { rendererReady, type RendererHealth } from '@/lib/renderer-health';
 import type { SpecimenDefinition, SpecimenSurface } from '@/lib/independent-specimen';
 import type { DissectionView } from './dissection-data';
 import { createIdentification, reduceIdentification, specimenTeachingFor, type IdentificationState } from '@/lib/um-limb-teaching';
+import type { SpecimenTopic } from '@/lib/specimen-links';
 
-export function SpecimenLearning({ definition, selected }: { definition: SpecimenDefinition; selected: SpecimenSurface }) {
+export function SpecimenLearning({ definition, selected, initialTopic }: { definition: SpecimenDefinition; selected: SpecimenSurface; initialTopic?: SpecimenTopic | null }) {
   const lesson = specimenTeachingFor(definition, selected);
-  return <details className="um-knee-details um-limb-learning" key={selected.id}>
+  return <details className="um-knee-details um-limb-learning" key={`${selected.id}:${initialTopic ?? 'closed'}`} open={!!initialTopic}>
     <summary>Learn · anatomy & function</summary>
     {!lesson ? <p>Teaching unavailable for this source binding; no substitute was used.</p> : <>
       <p className="um-knee-scene-caption">Teaching draft · specialist review pending.</p>
-      <Tabs defaultValue="anatomy">
+      <Tabs defaultValue={initialTopic ?? 'anatomy'}>
         <TabsList aria-label="Specimen teaching topics" variant="line"><TabsTrigger value="anatomy">Anatomy</TabsTrigger><TabsTrigger value="function">Function</TabsTrigger></TabsList>
         <TabsContent value="anatomy"><p>{lesson.anatomy}</p>{lesson.attachments && <dl>
           <dt>Proximal attachment</dt><dd>{lesson.attachments.proximal}</dd><dt>Distal attachment</dt><dd>{lesson.attachments.distal}</dd>

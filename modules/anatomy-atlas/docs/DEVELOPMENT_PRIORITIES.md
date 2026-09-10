@@ -1,6 +1,6 @@
 # Development priorities
 
-Updated 10 September 2026 following the owner's instruction to give oral anatomy a quick pass and prioritise the rest of the atlas/body regions.
+Updated 11 September 2026 following the owner's instruction to give oral anatomy a quick pass and prioritise the rest of the atlas/body regions.
 
 ## Oral anatomy: brief pass completed, lower priority
 
@@ -10,7 +10,7 @@ The two gingiva candidates and original bytes remain preserved in the [source re
 
 ## Main workstream
 
-The [independent lower-limb specimen](UM_LIMB_DISSECTION.md) uses all 67 supplied surfaces across 26 studies, extending the unchanged 15-part knee with hip/thigh, calf, foot and an optional whole-limb view. [Source-bound learning](UM_LIMB_LEARNING.md) now supplies 67 anatomy/function drafts, 42 muscle attachment/motor-supply records and visible-pool identification practice. It remains separate from BodyParts3D and clinically unvalidated, with original source fragments/groups preserved and disclosed. Next useful work includes stable navigation links for these independent IDs and deeper clinical/imaging teaching, alongside major peripheral-nerve gaps elsewhere. Do not repeat completed ingestion or basic-teaching/quiz integration, add guessed missing foot parts, return to routine oral sculpting or download patient scans merely to keep the goal running.
+The [independent lower-limb specimen](UM_LIMB_DISSECTION.md) uses all 67 supplied surfaces across 26 studies, extending the unchanged 15-part knee with hip/thigh, calf, foot and an optional whole-limb view. [Source-bound learning](UM_LIMB_LEARNING.md) supplies 67 anatomy/function drafts, 42 muscle attachment/motor-supply records and visible-pool identification practice. [Direct study links](UM_LIMB_NAVIGATION.md) now open exact structures, source recipes and Anatomy/Function notes on a dedicated lightweight page. It remains separate from BodyParts3D and clinically unvalidated, with original source fragments/groups preserved and disclosed. Next useful work includes deeper clinical/imaging teaching and major peripheral-nerve gaps elsewhere. Do not repeat completed ingestion, basic-teaching/quiz or link integration, add guessed missing foot parts, return to routine oral sculpting or download patient scans merely to keep the goal running.
 
 1. Improve focused dissection of the spine and major limb regions using accurate existing relationships and well-scoped source additions. Keep local anatomy visible without unrelated full-body clutter. The [spinal-level studies](SPINAL_LEVEL_STUDIES.md) and [knee studies with close-ups](KNEE_STUDIES.md) begin this work after the priority change.
 2. Prioritise clinically useful missing limb/axial anatomy: major peripheral nerves and plexuses, joint/ligament and fascial detail. Licence, identity and shared-coordinate evidence must precede import. Do not draw guessed nerve routes or mislabel the existing central-canal mesh as spinal cord.

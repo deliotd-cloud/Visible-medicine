@@ -74,7 +74,7 @@ const component = await componentBuild({ entryPoints: ['app/um-knee-study.tsx'],
   api.onLoad({ filter: /body-scene\.tsx$/ }, () => ({ loader: 'js', contents: 'export function BodyScene(props) { globalThis.sceneProps = props; return null; } export function retryBodyAssets() {}' }));
 } }] });
 const require = createRequire(import.meta.url), React = require('react'), mod = { exports: {} };
-const context = { module: mod, exports: mod.exports, require, URL, console, process: { env: { NODE_ENV: 'test' } } };
+const context = { module: mod, exports: mod.exports, require, URL, URLSearchParams, console, process: { env: { NODE_ENV: 'test' } } };
 runInNewContext(component.outputFiles[0].text, context);
 const html = require('react-dom/server').renderToStaticMarkup(React.createElement(mod.exports.KneeSpecimenView));
 for (const label of ['Knee dissection study', 'Search knee specimen structures', 'Knee tissue separation', 'Fade others', 'Source &amp; limitations', 'Loading knee specimen']) same(html.includes(label), true, label);

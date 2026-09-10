@@ -20,6 +20,8 @@ import { initialSpecimen, reduceSpecimen, activeSpecimenStudy, specimenAction, f
 import type { VentricularState } from '@/lib/ventricles';
 import { createIdentification, type IdentificationState } from '@/lib/um-limb-teaching';
 import { SpecimenLearning, SpecimenIdentification } from './um-limb-learning';
+import { SpecimenStudyLink } from './specimen-study-link';
+import type { ResolvedSpecimenNavigation } from '@/lib/um-limb-navigation';
 import './eye-layers.css';
 import './um-knee-study.css';
 
@@ -30,15 +32,15 @@ const tissueGroups = [
   { id: 'tendon', name: 'Tendon' }, { id: 'muscle', name: 'Muscle' },
 ];
 
-export function KneeSpecimenView({ specimen = kneeDefinition }: { specimen?: SpecimenDefinition } = {}) {
+export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation }: { specimen?: SpecimenDefinition; initialNavigation?: ResolvedSpecimenNavigation } = {}) {
   const kneeSpecimen = { structures: specimen.surfaces, source: specimen.source };
   const kneeCatalog = specimen.catalog, kneeStructures = kneeCatalog.structures, kneeSpecimenStudies = specimen.studies;
-  const [state, dispatch] = useReducer((state: VentricularState, action: SpecimenAction) => reduceSpecimen(specimen, state, action), specimen, initialSpecimen);
+  const [state, dispatch] = useReducer((state: VentricularState, action: SpecimenAction) => reduceSpecimen(specimen, state, action), specimen, value => initialNavigation?.state ?? initialSpecimen(value));
   const { selectedId, hidden, history, future } = state;
-  const [query, setQuery] = useState(''), [isolated, setIsolated] = useState(false);
+  const [query, setQuery] = useState(''), [isolated, setIsolated] = useState(!!initialNavigation?.structureOnly);
   const [explode, setExplode] = useState(0), [layout, setLayout] = useState<BodyLayout>('extract');
-  const [view, setView] = useState<DissectionView>(specimen.studies.find((s) => s.id === specimen.initialStudy)?.view ?? 'anterior'), [labels, setLabels] = useState(true);
-  const [focus, setFocus] = useState(false), [jointCloseUp, setJointCloseUp] = useState(!!specimen.closeUp);
+  const [view, setView] = useState<DissectionView>(initialNavigation?.view ?? specimen.studies.find((s) => s.id === specimen.initialStudy)?.view ?? 'anterior'), [labels, setLabels] = useState(true);
+  const [focus, setFocus] = useState(!!initialNavigation?.structureOnly), [jointCloseUp, setJointCloseUp] = useState(!!specimen.closeUp);
   const [showOrigins, setShowOrigins] = useState(false), [illustrated, setIllustrated] = useState(true);
   const [reset, setReset] = useState(0), [zoom, setZoom] = useState(1);
   const [health, setHealth] = useState<RendererHealth>('starting');
@@ -130,7 +132,8 @@ export function KneeSpecimenView({ specimen = kneeDefinition }: { specimen?: Spe
             <Button size="sm" variant="outline" disabled={!ready} onClick={() => { setFocus(true); setReset((n) => n + 1); }}><Focus />Frame</Button>
             <Button size="sm" variant="outline" onClick={() => { dispatch({ type: 'visibility', id: selected.id, visible: false }); setFocus(false); }}>Set aside</Button>
           </div>
-          <SpecimenLearning definition={specimen} selected={selected} />
+          <SpecimenLearning definition={specimen} selected={selected} initialTopic={selected.id === initialNavigation?.selectedId ? initialNavigation.topic : null} />
+          <SpecimenStudyLink key={`${selected.id}:${active?.id ?? 'custom'}:${view}`} definition={specimen} selectedId={selected.id} studyId={active?.id ?? null} view={view} />
         </>}
       </section>
       <div className="um-knee-separation">

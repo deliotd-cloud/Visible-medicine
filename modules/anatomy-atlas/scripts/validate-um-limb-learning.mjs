@@ -94,5 +94,5 @@ const parent = await readFile('app/um-knee-study.tsx', 'utf8');
 same(parent.includes('if (practice) return <SpecimenIdentification'), true);
 same(parent.includes("restorePracticeFocus.current = true; setHealth('starting'); setPractice(null);"), true);
 same(parent.includes('ready && !practice && restorePracticeFocus.current'), true);
-same(parent.includes('<SpecimenLearning definition={specimen} selected={selected} />'), true);
+same(parent.includes('<SpecimenLearning definition={specimen} selected={selected} initialTopic='), true);
 console.log(JSON.stringify({ checks, exactSourceLessons: 67, muscleAttachmentLessons: 42, learningMarkupCases: 67, practiceMarkupCases: 5, rounds: 'up to 10, first-try/reveal/retry-missed verified', clinicalOrBrowserAcceptance: false }));

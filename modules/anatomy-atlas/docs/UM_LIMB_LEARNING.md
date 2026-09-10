@@ -23,4 +23,6 @@ The briefs are original factual prose, not copied reference tables or illustrati
 
 `npm run um-limb-learning:test` checks pin freshness, all 67 bindings, mutation/foreign-source rejection, 42 muscle records, round progression/reveals/retry scoring and installed React/Base UI markup. Component checks replace only the GPU scene. Retain the existing knee/limb suites for geometry and dissection regression. These checks are not clinical or browser acceptance.
 
-Still needed: specialist anatomy/content review; arterial supply and deeper relationships; source-specific clinical/pathology and CT/MRI/X-ray/US lessons; missing nerves/other structures; keyboard/screen-reader, GPU/mobile and performance acceptance; direct navigation to these independent IDs; approved imaging registration and the owner's real resource manifests. Root-body teaching counts, review authority and separately paid lecture entitlements are unchanged.
+[Direct study links](UM_LIMB_NAVIGATION.md) can now open an exact source selection with its Anatomy or Function notes expanded. They identify the specimen, not a patient or paid-content entitlement.
+
+Still needed: specialist anatomy/content review; arterial supply and deeper relationships; source-specific clinical/pathology and CT/MRI/X-ray/US lessons; missing nerves/other structures; keyboard/screen-reader, GPU/mobile and performance acceptance; approved imaging registration and the owner's real resource manifests. Root-body teaching counts, review authority and separately paid lecture entitlements are unchanged.

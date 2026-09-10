@@ -19,6 +19,12 @@
 .um-knee-list li > button:first-child { height: auto; min-height: 36px; white-space: normal; text-align: left; font-size: .875rem; }
 .um-knee-source-id { overflow-wrap: anywhere; }
 .um-source-caution { border-left: 2px solid var(--primary); padding-left: .5rem; }
+.um-specimen-link-warning { padding: 1rem; max-width: 46rem; line-height: 1.6; }
+.um-specimen-link-warning h2 { font-size: 1.25rem; font-weight: 600; }
+.um-specimen-link-warning p { margin: .75rem 0; }
+.specimen-linked-page { max-width: 80rem; margin: auto; padding: 1rem; }
+.specimen-linked-page > h1 { font-size: 1.25rem; font-weight: 600; }
+.specimen-linked-page > a { text-decoration: underline; }
 .um-limb-learning dl { margin: .5rem 0; }
 .um-limb-learning dt { font-weight: 600; margin-top: .5rem; }
 .um-limb-learning dd { margin: .2rem 0 .5rem; line-height: 1.5; }
