@@ -1,6 +1,7 @@
 'use client';
 import { useCallback, useMemo, useReducer, useState } from 'react';
 import { NestedTeaching } from './nested-teaching';
+import type { NestedImagingTopic } from '@/content/nested-teaching';
 import { ArrowLeft, RotateCcw, Eye, Focus, Tags } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
@@ -51,30 +52,34 @@ import './eye-layers.css';
 export function EyeLayerView({
   parent,
   initialSelectedId,
+  initialTeachingTopic,
 }: {
   parent: BodyStructure;
   initialSelectedId?: string;
+  initialTeachingTopic?: NestedImagingTopic;
 }) {
   const layers = useMemo(() => eyeLayersFor(parent), [parent]);
   const initialSelection = layers.find((s) => s.id === initialSelectedId)?.id;
   const frame = useMemo(() => selectionBounds(layers), [layers]);
   const [inspection, setInspection] = useState(initialInspection);
-  const [{ selectedId, hidden, history, future, preset: currentPreset }, dispatch] =
-    useReducer(
-      (state: EyeLayerState, action: EyeAction) =>
-        reduceEyeLayers(layers, state, action),
-      layers,
-      (items) =>
-        initialSelection
-          ? {
-              selectedId: initialSelection,
-              hidden: [],
-              history: [],
-              future: [],
-              preset: 'all' as const,
-            }
-          : initialEyeLayers(items),
-    );
+  const [
+    { selectedId, hidden, history, future, preset: currentPreset },
+    dispatch,
+  ] = useReducer(
+    (state: EyeLayerState, action: EyeAction) =>
+      reduceEyeLayers(layers, state, action),
+    layers,
+    (items) =>
+      initialSelection
+        ? {
+            selectedId: initialSelection,
+            hidden: [],
+            history: [],
+            future: [],
+            preset: 'all' as const,
+          }
+        : initialEyeLayers(items),
+  );
   const [explode, setExplode] = useState(0),
     [layout, setLayout] = useState<BodyLayout>('extract');
   const [showOrigins, setShowOrigins] = useState(false);
@@ -416,7 +421,8 @@ export function EyeLayerView({
             onValueChange={(v) => setExplode(Array.isArray(v) ? v[0] : v)}
           />
           <p>
-            Drag to rotate in lift mode; spread mode uses a flat teaching plate.
+            Drag to rotate in lift mode; spread mode uses a flat teaching
+            plate.
           </p>
           <label className="origin-guide-toggle" htmlFor="eye-origin-guide">
             Show original position
@@ -467,7 +473,16 @@ export function EyeLayerView({
                 <Focus /> Frame
               </Button>
             </div>
-            <NestedTeaching parent={parent} study="eye" selected={selected} />
+            <NestedTeaching
+              parent={parent}
+              study="eye"
+              selected={selected}
+              initialTopic={
+                selected.id === initialSelection
+                  ? initialTeachingTopic
+                  : undefined
+              }
+            />
           </section>
         )}
         {unavailable.length > 0 && (
@@ -490,22 +505,23 @@ export function EyeLayerView({
           <summary>Source and limitations</summary>
           {parent.laterality === 'right' && (
             <p>
-              Four components use source-cleaned surfaces: 36 tiny disconnected
-              triangles on the opposite side were removed. Retained surfaces
-              were not moved or mirrored. Anatomical review remains pending.
+              Four components use source-cleaned surfaces: 36 tiny
+              disconnected triangles on the opposite side were removed.
+              Retained surfaces were not moved or mirrored. Anatomical review
+              remains pending.
             </p>
           )}
           <p>
-            Colours and transparency aid viewing, not optical simulation. Retina
-            and finer tissue layers are not separately segmented. CT/MRI/US
-            links and clinical validation are pending.
+            Colours and transparency aid viewing, not optical simulation.
+            Retina and finer tissue layers are not separately segmented.
+            CT/MRI/US links and clinical validation are pending.
           </p>
           <p>{eyeCatalog.credit}</p>
           <p>
             Components separated from the source aggregate, transformed,
-            recoloured and normal-smoothed for this viewer. Pinned opposite-side
-            fragments are suppressed on the right; retained surfaces are not
-            moved or mirrored.
+            recoloured and normal-smoothed for this viewer. Pinned
+            opposite-side fragments are suppressed on the right; retained
+            surfaces are not moved or mirrored.
           </p>
           <a
             href="https://creativecommons.org/licenses/by/4.0/"
@@ -529,10 +545,12 @@ export default function EyeLayers({
   parent,
   onClose,
   initialSelectedId,
+  initialTeachingTopic,
 }: {
   parent: BodyStructure;
   onClose: () => void;
   initialSelectedId?: string;
+  initialTeachingTopic?: NestedImagingTopic;
 }) {
   return (
     <Dialog
@@ -561,6 +579,7 @@ export default function EyeLayers({
           key={parent.id}
           parent={parent}
           initialSelectedId={initialSelectedId}
+          initialTeachingTopic={initialTeachingTopic}
         />
       </DialogContent>
     </Dialog>

@@ -1,5 +1,7 @@
 # Nested brain and eye teaching
 
+[Component imaging shortcuts](COMPONENT_IMAGING_NAVIGATION.md) now connect a parent organ's imaging tab to its available source-bound child drafts. Requested notes open directly in the existing workbench; ordinary entry remains collapsed. Child coverage is not copied into whole-organ teaching and no scan/lecture entitlement changes.
+
 The [pancreatic/biliary imaging extension](DUCT_IMAGING_TEACHING.md) adds four shared sections across four existing selections, without changing 40 concepts / 65 source representations / ten parents. References now total 78. CT readiness is 35 draft / 30 pending; MRI 35 / 30; ultrasound 28 / 37. Core content and source pins are unchanged. Earlier totals below are historical.
 
 Current extension: [pancreatic duct teaching](PANCREATIC_DISSECTION.md) adds one source-pinned concept for two selections, with four brief factual topics and unscored recall. Totals are 40 concepts / 65 representations / ten parents / 74 references. Previous bindings are preserved; CT/MRI/US remain pending for the two new selections. See [generated current status](CURRENT_STATUS.md); milestone counts below are historical.

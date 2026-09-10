@@ -1,12 +1,18 @@
 'use client';
 import type { BodyStructure } from './body-types';
 import type { NestedStudy } from '@/lib/nested-anatomy';
+import type { NestedImagingTopic } from '@/content/nested-teaching';
 import {
   nestedTeachingFor,
   nestedTopicLesson,
   nestedTeachingReferences,
 } from '@/lib/nested-teaching';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from '@/components/ui/tabs';
 import './nested-teaching.css';
 
 // Match the main atlas's three information groups without importing its whole
@@ -41,7 +47,10 @@ const groups = [
 
 function References({ ids }: { ids: string[] }) {
   return ids.length > 0 ? (
-    <ul className="nested-teaching-references" aria-label="Teaching references">
+    <ul
+      className="nested-teaching-references"
+      aria-label="Teaching references"
+    >
       {ids.map((id) => (
         <li key={id}>
           <a
@@ -61,10 +70,12 @@ export function NestedTeaching({
   parent,
   study,
   selected,
+  initialTopic,
 }: {
   parent: BodyStructure;
   study: NestedStudy;
   selected: BodyStructure;
+  initialTopic?: NestedImagingTopic;
 }) {
   const concept = nestedTeachingFor(parent, study, selected);
   if (!concept)
@@ -74,14 +85,25 @@ export function NestedTeaching({
         structure has been substituted.
       </p>
     );
+  const imagingTopic =
+    initialTopic && concept.imaging?.[initialTopic]?.readiness === 'draft'
+      ? initialTopic
+      : undefined;
   return (
-    <details className="nested-teaching">
-      <summary>Learn more · anatomy, clinical &amp; quiz</summary>
+    <details
+      key={imagingTopic ?? 'default'}
+      className="nested-teaching"
+      open={!!imagingTopic}
+    >
+      <summary>Learn more · anatomy, imaging, clinical &amp; quiz</summary>
       <p className="nested-teaching-status">
         Teaching draft · specialist review pending. Educational use, not
         diagnosis or treatment.
       </p>
-      <Tabs defaultValue="anatomy" className="nested-teaching-tabs">
+      <Tabs
+        defaultValue={imagingTopic ? 'imaging' : 'anatomy'}
+        className="nested-teaching-tabs"
+      >
         <TabsList aria-label="Nested structure information" variant="line">
           {groups.map((group) => (
             <TabsTrigger key={group.id} value={group.id}>
@@ -91,7 +113,13 @@ export function NestedTeaching({
         </TabsList>
         {groups.map((group) => (
           <TabsContent key={group.id} value={group.id}>
-            <Tabs defaultValue={group.sections[0][0]}>
+            <Tabs
+              defaultValue={
+                group.id === 'imaging' && imagingTopic
+                  ? imagingTopic
+                  : group.sections[0][0]
+              }
+            >
               <TabsList aria-label={`${group.label} topics`}>
                 {group.sections.map(([tab, label]) => (
                   <TabsTrigger key={tab} value={tab}>
@@ -117,7 +145,9 @@ export function NestedTeaching({
                       <h4>{lesson.title}</h4>
                       <p>{lesson.body}</p>
                       {lesson.note && (
-                        <p className="nested-teaching-status">{lesson.note}</p>
+                        <p className="nested-teaching-status">
+                          {lesson.note}
+                        </p>
                       )}
                       {lesson.readiness === 'pending' && (
                         <span className="nested-teaching-status">
@@ -136,7 +166,10 @@ export function NestedTeaching({
       <p className="nested-teaching-limit">
         <strong>Model scope:</strong> {concept.modelLimit}
       </p>
-      <section className="nested-teaching-quiz" aria-label="Anatomy self-check">
+      <section
+        className="nested-teaching-quiz"
+        aria-label="Anatomy self-check"
+      >
         <h4>Self-check</h4>
         <p>{concept.quiz.question}</p>
         <details

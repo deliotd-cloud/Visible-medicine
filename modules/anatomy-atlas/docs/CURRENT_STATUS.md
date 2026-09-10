@@ -4,6 +4,8 @@ Generated from the actual catalogue, teaching resolver, dissection profiles and 
 
 ## Delivered source scope
 
+[Component imaging shortcuts](COMPONENT_IMAGING_NAVIGATION.md) connect supported parent organs to existing child CT/MRI/US drafts through a collapsed, source-labelled picker. Opening selects the exact part and its imaging topic in the existing dissection. Pending lessons are omitted; root teaching coverage, scan/lecture entitlements and source geometry remain unchanged. This is local teaching navigation, not patient synchronization or additional clinical coverage.
+
 The [pancreatic duct study](PANCREATIC_DISSECTION.md) separates 2 source components with 1 optional envelope, preserving all 12,690 retained triangles from 3 files. The existing compact controls provide presets, cutaway, separation and draft teaching. It does not infer an accessory duct, validated lumen or scan correspondence. The [root display correction](PANCREATIC_SOURCE_REVIEW.md) and original archives remain intact; old four-source imaging/lecture bindings are not silently mapped to the three-source display. Clinical/device acceptance remains outstanding.
 
 The [optic chiasm and tract study](VISUAL_PATHWAY_DISSECTION.md) adds 3 selectable neural surfaces from 4 source files inside Dissect brain. It opens from below with landmarks off. Across its views, 5 existing landmarks are available: four posterior landmarks or the pituitary in the [chiasm–pituitary relationship view](VISUAL_PATHWAY_RELATIONSHIPS.md). Shared dissection controls and MRI teaching stay compact. Source seams and relationships still need anatomical review; no complete fibre pathway or patient correspondence is supplied. The original nonpublic prototype remains retained separately.

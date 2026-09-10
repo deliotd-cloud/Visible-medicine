@@ -63,6 +63,9 @@ import {
   type BodySystem,
 } from './body-types';
 import { bodyContent } from './body-content';
+import { ComponentImagingNotes } from './component-imaging-notes';
+import { resolveComponentImagingTarget } from '@/lib/component-imaging-navigation';
+import type { NestedImagingTopic } from '@/content/nested-teaching';
 import { bodyLinkEntries } from '@/lib/anatomy-link-registry';
 import { ImagingLink, useImagingLink } from './imaging-link';
 import {
@@ -223,8 +226,9 @@ export default function BodyExplorer({
   const [plate, setPlate] = useState(false);
   const cameraCapture = useRef<StudyCamera | null>(null);
   const cameraRestore = useRef<StudyCamera | null>(null);
-  const [nestedSelection, setNestedSelection] =
-    useState<NestedSelection | null>(null);
+  const [nestedSelection, setNestedSelection] = useState<
+    (NestedSelection & { teachingTopic?: NestedImagingTopic }) | null
+  >(null);
   const nestedReturnFocus = useRef<HTMLButtonElement | null>(null);
   const [eyeParent, setEyeParent] = useState<BodyStructure | null>(null);
   const eyeLauncher = useRef<HTMLButtonElement | null>(null);
@@ -235,9 +239,8 @@ export default function BodyExplorer({
     nestedReturnFocus.current = null;
     requestAnimationFrame(() => (returnTo ?? eyeLauncher.current)?.focus());
   }, []);
-  const [ventricleParent, setVentricleParent] = useState<BodyStructure | null>(
-    null,
-  );
+  const [ventricleParent, setVentricleParent] =
+    useState<BodyStructure | null>(null);
   const ventricleLauncher = useRef<HTMLButtonElement | null>(null);
   const closeVentricles = useCallback(() => {
     setVentricleParent(null);
@@ -373,7 +376,9 @@ export default function BodyExplorer({
     [resolved],
   );
   const stage = profile.stages.find((s) => s.id === dissection.stageId);
-  const focusedStudy = profile.focuses.find((s) => s.id === dissection.focusId);
+  const focusedStudy = profile.focuses.find(
+    (s) => s.id === dissection.focusId,
+  );
   const stageLandmarks = useMemo(
     () =>
       dissectionLandmarks(
@@ -382,7 +387,8 @@ export default function BodyExplorer({
       ).map((s) => s.id),
     [stage, focusedStudy, resolved, systems],
   );
-  const selected = catalog?.structures.find((s) => s.id === selectedId) ?? null;
+  const selected =
+    catalog?.structures.find((s) => s.id === selectedId) ?? null;
   const selectionFrame = useMemo(
     () => selectionBounds(regionStructures),
     [regionStructures],
@@ -465,7 +471,9 @@ export default function BodyExplorer({
     retryIds,
   );
   const sceneStructures = exam
-    ? regionStructures.filter((s) => practiceRenderIds(practice).includes(s.id))
+    ? regionStructures.filter((s) =>
+        practiceRenderIds(practice).includes(s.id),
+      )
     : regionStructures;
   const required = requestedAnatomyBundles(
     sceneStructures,
@@ -549,7 +557,11 @@ export default function BodyExplorer({
     [applySelection, publishSelection, exam, regionStructures],
   );
   const openNested = useCallback(
-    (request: NestedRequest, launcher: HTMLButtonElement | null) => {
+    (
+      request: NestedRequest,
+      launcher: HTMLButtonElement | null,
+      teachingTopic?: NestedImagingTopic,
+    ) => {
       if (
         exam ||
         !catalog ||
@@ -565,13 +577,20 @@ export default function BodyExplorer({
       const parent = regionStructures.find((s) => s.id === request.parentId);
       if (!target || !parent || target.parentHash !== request.parentHash)
         return;
+      if (
+        teachingTopic !== undefined &&
+        !resolveComponentImagingTarget(catalog, request, teachingTopic, side)
+      )
+        return;
       cameraRestore.current = cameraCapture.current
         ? copyRecoveryCamera(cameraCapture.current)
         : null;
       nestedReturnFocus.current = launcher;
       // Select locally, without publishing a parent as if it were the requested child.
       applySelection(parent.id);
-      setNestedSelection(target);
+      setNestedSelection(
+        teachingTopic ? { ...target, teachingTopic } : target,
+      );
       if (target.study === 'eye') setEyeParent(parent);
       else setVentricleParent(parent);
     },
@@ -737,7 +756,11 @@ export default function BodyExplorer({
   }
   function nextQuestion() {
     if (practicePaused) return;
-    practiceDispatch({ type: 'next', sessionId: practice.id, index: question });
+    practiceDispatch({
+      type: 'next',
+      sessionId: practice.id,
+      index: question,
+    });
     if (practice.mode === 'name' || practice.mode === 'reason') {
       setZoom(1);
       setReset((n) => n + 1);
@@ -813,7 +836,9 @@ export default function BodyExplorer({
     return (
       <main className="body-status">
         <h1>The anatomy library could not load.</h1>
-        <p>The anatomy catalogue is unavailable or the connection timed out.</p>
+        <p>
+          The anatomy catalogue is unavailable or the connection timed out.
+        </p>
         <Button
           onClick={() => {
             setError(false);
@@ -905,7 +930,9 @@ export default function BodyExplorer({
     cameraRestore.current = state.camera;
     setReset((n) => n + 1);
   }
-  const target = catalog.structures.find((s) => s.id === examTargets[question]);
+  const target = catalog.structures.find(
+    (s) => s.id === examTargets[question],
+  );
   const studyGuide = (
     <DissectionGuide
       guidance={guidance}
@@ -936,7 +963,10 @@ export default function BodyExplorer({
           <small>Change region</small>
         </summary>
 
-        <Link className={`body-region-link ${whole ? 'active' : ''}`} href="/">
+        <Link
+          className={`body-region-link ${whole ? 'active' : ''}`}
+          href="/"
+        >
           <Accessibility />
           <span>Whole body</span>
           <small>{catalog.structures.length}</small>
@@ -966,7 +996,9 @@ export default function BodyExplorer({
       <div className="body-system-bar" aria-label="Anatomical systems">
         {systemKeys.map((system) => {
           const Icon = icons[system],
-            count = regionStructures.filter((s) => s.system === system).length;
+            count = regionStructures.filter(
+              (s) => s.system === system,
+            ).length;
           return (
             <div key={system} className={systems[system] ? 'active' : ''}>
               <Icon style={{ color: bodySystems[system].color }} />
@@ -1024,7 +1056,10 @@ export default function BodyExplorer({
           <summary>
             Display options<small>Quick views · arrangement · surfaces</small>
           </summary>
-          <div className="body-system-presets" aria-label="Quick anatomy views">
+          <div
+            className="body-system-presets"
+            aria-label="Quick anatomy views"
+          >
             {bodySystemPresets.map((item) => {
               const count = regionStructures.filter((structure) =>
                 item.systems.includes(structure.system),
@@ -1046,7 +1081,10 @@ export default function BodyExplorer({
               );
             })}
           </div>
-          <div className="body-layout-controls" aria-label="Model arrangement">
+          <div
+            className="body-layout-controls"
+            aria-label="Model arrangement"
+          >
             <p>
               {layout === 'tray' && !exam
                 ? 'Same-scale surfaces, grouped by system. At 100%, each catalogue entry has its own space—not an anatomical position.'
@@ -1082,8 +1120,8 @@ export default function BodyExplorer({
               </button>
               {layout === 'tray' && (
                 <span>
-                  All entries move in the tray. Select and frame a structure, or
-                  choose a system/region for fine detail.
+                  All entries move in the tray. Select and frame a structure,
+                  or choose a system/region for fine detail.
                 </span>
               )}
             </div>
@@ -1135,8 +1173,8 @@ export default function BodyExplorer({
               Selected source anatomy · review pending. Vessels are incomplete
               segments; red = artery, blue = vein, grey = unclassified vessel,
               not oxygenation. Connective coverage includes selected discs,
-              cartilage, ligaments, interosseous membranes and Achilles tendons;
-              it is incomplete.
+              cartilage, ligaments, interosseous membranes and Achilles
+              tendons; it is incomplete.
             </span>
           </div>
         )}
@@ -1174,9 +1212,14 @@ export default function BodyExplorer({
         <WorkspaceOnly modes={['practice']} className="vm-practice-start">
           <Select
             value={String(practiceCount)}
-            onValueChange={(value) => value && setPracticeCount(Number(value))}
+            onValueChange={(value) =>
+              value && setPracticeCount(Number(value))
+            }
           >
-            <SelectTrigger disabled={exam} aria-label="Practice session length">
+            <SelectTrigger
+              disabled={exam}
+              aria-label="Practice session length"
+            >
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -1201,10 +1244,15 @@ export default function BodyExplorer({
       </header>
       <div className="body-layout">
         <AnatomyControlRail>{railContent}</AnatomyControlRail>
-        <section className="body-workspace" aria-label={`${title} 3D anatomy`}>
+        <section
+          className="body-workspace"
+          aria-label={`${title} 3D anatomy`}
+        >
           <div className="body-heading">
             <div>
-              <div className="eyebrow">REFERENCE ANATOMY · REVIEW PENDING</div>
+              <div className="eyebrow">
+                REFERENCE ANATOMY · REVIEW PENDING
+              </div>
               <h1>{title}</h1>
               <p>
                 {whole
@@ -1387,7 +1435,9 @@ export default function BodyExplorer({
                   max={100}
                   step={1}
                   disabled={exam}
-                  onValueChange={(v) => setExplode(Array.isArray(v) ? v[0] : v)}
+                  onValueChange={(v) =>
+                    setExplode(Array.isArray(v) ? v[0] : v)
+                  }
                   aria-label={
                     layout === 'tray'
                       ? 'Arranged separation'
@@ -1452,7 +1502,11 @@ export default function BodyExplorer({
           )}
           {exam ? (
             <>
-              <output className="sr-only" aria-live="polite" aria-atomic="true">
+              <output
+                className="sr-only"
+                aria-live="polite"
+                aria-atomic="true"
+              >
                 {`Question ${question + 1} of ${examTargets.length}. ${
                   answered
                     ? `${answer === target?.id ? 'Correct.' : answer === null ? 'Skipped.' : 'Not quite.'} ${target?.name ?? ''}.`
@@ -1641,7 +1695,9 @@ export default function BodyExplorer({
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="landmarks">Major landmarks</SelectItem>
+                      <SelectItem value="landmarks">
+                        Major landmarks
+                      </SelectItem>
                       <SelectItem value="all">All visible anatomy</SelectItem>
                       <SelectItem value="focus" disabled={!focusedStudy}>
                         Current focus targets only
@@ -1664,7 +1720,8 @@ export default function BodyExplorer({
                   </p>
                   {practiceMode === 'reason' && !practiceReady && (
                     <p className="vm-practice-note">
-                      Show a target and at least one same-side alternative. Try{' '}
+                      Show a target and at least one same-side alternative.
+                      Try{' '}
                       <a href="/regions/shoulder-arm">Shoulder &amp; arm</a>,{' '}
                       <a href="/regions/forearm">Forearm</a>,{' '}
                       <a href="/regions/hand">Hand</a>,{' '}
@@ -1728,8 +1785,9 @@ export default function BodyExplorer({
                           >
                             {r.target === r.chosen ? '✓' : 'Review'} ·{' '}
                             {
-                              catalog.structures.find((s) => s.id === r.target)
-                                ?.name
+                              catalog.structures.find(
+                                (s) => s.id === r.target,
+                              )?.name
                             }
                           </button>
                           {practice.questions[index]?.reasoning && (
@@ -1758,8 +1816,9 @@ export default function BodyExplorer({
                           Retry missed ({retryCount} available)
                         </Button>
                         <p className="vm-practice-note">
-                          Retries respect the current visible, loaded scope and
-                          practice options. Skipped questions count as missed.
+                          Retries respect the current visible, loaded scope
+                          and practice options. Skipped questions count as
+                          missed.
                         </p>
                       </>
                     )}
@@ -1788,15 +1847,15 @@ export default function BodyExplorer({
                     <ReviewStatus structureId={selected.id} />
                     {!exam && hepaticFor(selected).length > 0 && (
                       <p className="vm-practice-note">
-                        Liver segment boundaries are not validated. Explore the
-                        supplied internal vessel and bile-duct groups
+                        Liver segment boundaries are not validated. Explore
+                        the supplied internal vessel and bile-duct groups
                         separately.
                       </p>
                     )}
                     {!exam && pulmonaryFor(selected).length > 0 && (
                       <p className="vm-practice-note">
-                        This model shows airway and vessel branches. Lung tissue
-                        and fissure surfaces are not modelled.
+                        This model shows airway and vessel branches. Lung
+                        tissue and fissure surfaces are not modelled.
                       </p>
                     )}
                     {selected.bundle === 'eye-corrected-parent' && (
@@ -1841,13 +1900,17 @@ export default function BodyExplorer({
                             }}
                           >
                             <Layers3 />{' '}
-                            {pancreaticFor(selected).length ? 'Explore pancreatic ducts' : renalFor(selected).length ? 'Explore renal vessels' : hepaticFor(selected).length
-                              ? 'Explore liver branches'
-                              : pulmonaryFor(selected).length
-                                ? 'Explore lung branches'
-                                : cardiacFor(selected).length
-                                  ? 'Explore heart chambers'
-                                  : 'Dissect brain'}
+                            {pancreaticFor(selected).length
+                              ? 'Explore pancreatic ducts'
+                              : renalFor(selected).length
+                                ? 'Explore renal vessels'
+                                : hepaticFor(selected).length
+                                  ? 'Explore liver branches'
+                                  : pulmonaryFor(selected).length
+                                    ? 'Explore lung branches'
+                                    : cardiacFor(selected).length
+                                      ? 'Explore heart chambers'
+                                      : 'Dissect brain'}
                           </Button>
                         </div>
                       )}
@@ -1958,10 +2021,21 @@ export default function BodyExplorer({
                               Practise this anatomy
                             </WorkspaceModeButton>
                             {['ct', 'mri', 'ultrasound'].includes(value) && (
-                              <div className="body-no-imaging">
-                                <ScanLine />
-                                No imaging study loaded
-                              </div>
+                              <>
+                                <ComponentImagingNotes
+                                  key={`${selected.id}:${value}:${side}`}
+                                  catalog={catalog}
+                                  parentId={selected.id}
+                                  topic={value}
+                                  side={side}
+                                  disabled={exam}
+                                  onOpen={openNested}
+                                />
+                                <div className="body-no-imaging">
+                                  <ScanLine />
+                                  No imaging study loaded
+                                </div>
+                              </>
                             )}
                           </div>
                         );
@@ -2018,12 +2092,13 @@ export default function BodyExplorer({
                     </div>
                     <h2>Choose a structure</h2>
                     <p>
-                      Select a structure to inspect its identity, isolate it, or
-                      explore the available teaching notes.
+                      Select a structure to inspect its identity, isolate it,
+                      or explore the available teaching notes.
                     </p>
                     <div className="body-content-note">
                       The geometry is source-based. New teaching entries are
-                      clearly marked where specialist content is still pending.
+                      clearly marked where specialist content is still
+                      pending.
                     </div>
                   </>
                 )}
@@ -2064,6 +2139,7 @@ export default function BodyExplorer({
         <EyeLayers
           parent={eyeParent}
           initialSelectedId={nestedSelection?.structureId}
+          initialTeachingTopic={nestedSelection?.teachingTopic}
           onClose={closeEyeLayers}
         />
       )}
@@ -2076,6 +2152,7 @@ export default function BodyExplorer({
               : nestedSelection?.study
           }
           initialSelectedId={nestedSelection?.structureId}
+          initialTeachingTopic={nestedSelection?.teachingTopic}
           onClose={closeVentricles}
         />
       )}

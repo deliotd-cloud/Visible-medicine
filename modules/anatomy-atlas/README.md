@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Organ → Imaging → Component notes** now gives [direct access to available component teaching](docs/COMPONENT_IMAGING_NAVIGATION.md). Choose a part and open its dissection with the requested CT, MRI or ultrasound notes already expanded. The compact picker stays collapsed until needed and omits pending lessons. No scan or paid-lecture access is granted.
+
 **Pancreatic ducts → Learn more → Imaging** now includes [CT, MRCP and ultrasound teaching](docs/DUCT_IMAGING_TEACHING.md). The right and left intrahepatic bile-duct groups also gain CT notes. Existing compact disclosures are unchanged; these are referenced drafts, not connected scans or clinical approval.
 
 **Pancreas → Explore pancreatic ducts** opens the [pancreatic dissection](docs/PANCREATIC_DISSECTION.md): two independently selectable source components, one optional faint envelope, compact presets, cutaway, three separation styles, labels, undo/redo and draft teaching. Search `pancreatic duct` to go directly to a component. The [display correction](docs/PANCREATIC_SOURCE_REVIEW.md) remains intact; no accessory duct, validated lumen, clinical approval or scan access is inferred.
