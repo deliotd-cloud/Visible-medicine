@@ -1,6 +1,18 @@
 # Anatomy atlas backup — 10 September 2026
 
-## 10 September 2026 — gingiva source review (current)
+## 10 September 2026 — body-region priority and spinal-level studies (current)
+
+Source `23e988d64d422115f79cc2372d867a01b6891aa2`, tree `df277c60692aee9d603564166855b3ab6f78328d`, parent `ab3be594b6131f9029eeb3873d6b22dd1035ed1c`. Seventeen source paths mirrored into `modules/anatomy-atlas`; the main website is unchanged. The owner's priority is now explicit: oral coverage has had a brief pass; gum prototypes stay non-public and further oral-detail work is deferred in favour of the wider body atlas. Six compact spinal windows cover C1–C2, C5–C6, C7–T1, T12–L1, L4–L5 and L5–S1. They reuse 15 existing representations and the existing study selector, search, source-bound links and dissection history. T12–L1 is explicitly bones-only because its disc is unresolved. No new geometry, dependencies, access entitlements or source approvals.
+
+Sites saved version132 `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_8043e7ca3fb08191833390cf4b42975e` from the exact pushed source. Native archive270 files/127,600,640 bytes, SHA256`caf2ed1fd792be69bda8581efabc674fbbc9d239f4d0ff00daccbb948c0e05c9`. Private deployment dispatched as `appgdep_6aa319d8a9f48191b3bc2bb88f1bc0dd`; terminal publication and full access-policy comparison are recorded in the separate local checkpoint. Source credential was used ephemerally and not persisted.
+
+Passed: 784 dedicated spinal checks, preserved acral/history recipes, 4,500 dissection and 10,872 camera-bound checks, 129,074 workbench checks, 1,481,008 shared guidance assertions, TypeScript, production build and requirement-summary freshness. These are automated checks, not clinical or browser/GPU/device acceptance. Runtime totals are now151 stages/141 focuses/1,022 root representations. Existing anatomy and teaching gaps remain.
+
+Recovery stem `work/atlas-spinal-levels-2026-09-10`: deployable archive89,788,873 bytes SHA256`5911accee0fe58e3d2207691d84d587cef81fb288cd8f8c6e84f4efdbe4a2826`; delta1,546,240 bytes SHA256`df1a8acbff842d18c1507fe63726536e9fcaf85eb3a8ac84ba438357182a2dab`; incremental bundle18,115 bytes SHA256`13f8c7b5b62865e80863f527ab5db1bc17a5b66b37a9892e6dfb4df4df0114ea`. The bundle REQUIRES the source parent above. Mirror audit:1,283 files/152,107,001 bytes/105 GLBs including three non-public prototypes, no common credential signatures found (not exhaustive). Preparation JSON flags precede this receipt and publication; do not rerun/overwrite the one-shot artifacts.
+
+This establishes Sites source saving and same-PC recovery, not GitHub delivery, off-device restoration, conversation-history or private-database backup. The goal remains active. Continue major limb/joint dissection and properly licensed peripheral anatomy work; do not return to routine gum work unless reprioritised. See module `docs/DEVELOPMENT_PRIORITIES.md` and `docs/SPINAL_LEVEL_STUDIES.md`.
+
+## 10 September 2026 — gingiva source review
 
 Source `ab3be594b6131f9029eeb3873d6b22dd1035ed1c`, tree `2e844c7f2e3c91b522a2c01bd511ac00c856e6c9`, parent `516b8ba21c6c911f59cf068f0b1f43e69ba12427`. Fourteen source paths mirrored into `modules/anatomy-atlas`; the main website is unchanged. Two licensed source gum envelopes and original OBJ files are retained as a non-public prototype, with 1,022-envelope/108-comparison source audit and 31 pinned tooth/jaw context records. Upper fragments/duplicate and coarse dental boundaries remain unresolved; all 3,766 original triangles are preserved. No clinical or runtime admission is implied. No dependency, public geometry, teaching, access entitlement or source hold changed.
 

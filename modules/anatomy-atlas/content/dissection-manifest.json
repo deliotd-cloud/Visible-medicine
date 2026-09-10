@@ -18126,7 +18126,9 @@
         "The central-canal mesh is not the spinal cord; no laminectomy is simulated."
       ],
       "references": [
-        "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html"
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html",
+        "https://www.ncbi.nlm.nih.gov/books/NBK563271/"
       ],
       "stages": [
         {
@@ -18881,6 +18883,162 @@
             "vm:anatomy:body:spine:midline:muscle:medial-lumbar-intertransversarius",
             "vm:anatomy:body:spine:midline:muscle:set-of-interspinales-lumborum"
           ]
+        },
+        {
+          "id": "spine-c1-c2",
+          "title": "C1–C2: atlas & axis",
+          "description": "Keep the atlas and axis only. Rotate above and around the ring of C1 to inspect its relationship to the dens, which remains part of C2.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA12519",
+                "FMA12520"
+              ]
+            }
+          ],
+          "view": "posterior",
+          "landmarks": [
+            "^atlas$",
+            "^axis$"
+          ],
+          "inspect": "There is no C1–C2 intervertebral disc. The transverse and alar ligaments are not supplied. Setting the atlas aside exposes bone shape, not joint stability or a safe range of rotation. Return separation to 0% before comparing positions. Explode is illustrative, not spinal movement. No scan is registered to these views.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:atlas",
+            "vm:anatomy:body:spine:midline:bone:axis"
+          ]
+        },
+        {
+          "id": "spine-c5-c6",
+          "title": "C5–C6: vertebrae & disc",
+          "description": "Expose C5, C6 and the supplied whole-disc surface between them. Compare the anterior bodies with the posterior bony elements from the side, then rotate to inspect both sides.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA12523",
+                "FMA12524",
+                "FMA13898"
+              ]
+            }
+          ],
+          "view": "right",
+          "landmarks": [
+            "^fifth cervical vertebra$",
+            "^sixth cervical vertebra$",
+            "^intervertebral disk of fifth cervical vertebra$"
+          ],
+          "inspect": "Select the disc and use Fade others, or set a vertebra aside to expose its contour. Annulus and nucleus are not separate meshes; a cutaway does not reveal validated internal disc tissues. Return separation to 0% before comparing positions. Explode is illustrative, not spinal movement. No scan is registered to these views.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:fifth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-cervical-vertebra"
+          ]
+        },
+        {
+          "id": "spine-c7-t1",
+          "title": "C7–T1: cervicothoracic junction",
+          "description": "Isolate the last cervical and first thoracic vertebrae with their source disc. The shoulders, ribs and neighbouring levels are set aside for a close view of this transition.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA12525",
+                "FMA9165",
+                "FMA13900"
+              ]
+            }
+          ],
+          "view": "right",
+          "landmarks": [
+            "^seventh cervical vertebra$",
+            "^first thoracic vertebra$",
+            "^intervertebral disk of seventh cervical vertebra$"
+          ],
+          "inspect": "Compare the two source vertebral shapes and the intervening disc. Ribs, joint capsules and exiting spinal nerves are not included; this view does not establish a nerve-root corridor. Return separation to 0% before comparing positions. Explode is illustrative, not spinal movement. No scan is registered to these views.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:seventh-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-cervical-vertebra"
+          ]
+        },
+        {
+          "id": "spine-t12-l1",
+          "title": "T12–L1: bones only",
+          "description": "Expose the last thoracic and first lumbar vertebrae. The T12–L1 disc is not supplied in the current admitted subset; no neighbouring disc is substituted.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA10081",
+                "FMA13072"
+              ]
+            }
+          ],
+          "view": "right",
+          "landmarks": [
+            "^twelfth thoracic vertebra$",
+            "^first lumbar vertebra$"
+          ],
+          "inspect": "The empty interval is a source-coverage gap, not normal absence of a disc or evidence of disease. Compare bone shape only; neural structures and ligament layers are not present. Return separation to 0% before comparing positions. Explode is illustrative, not spinal movement. No scan is registered to these views.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:twelfth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:first-lumbar-vertebra"
+          ]
+        },
+        {
+          "id": "spine-l4-l5",
+          "title": "L4–L5: vertebrae & disc",
+          "description": "Keep L4, L5 and their source disc, without the overlying muscles or the rest of the spine. Rotate posteriorly to compare the bony processes as well as the vertebral bodies.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA13075",
+                "FMA13076",
+                "FMA16036"
+              ]
+            }
+          ],
+          "view": "right",
+          "landmarks": [
+            "^fourth lumbar vertebra$",
+            "^fifth lumbar vertebra$",
+            "^intervertebral disk of fourth lumbar vertebra$"
+          ],
+          "inspect": "Select and set aside either vertebra, then Undo to restore it. The facets are portions of the bone meshes, not separate cartilage layers. Spinal nerves and the cauda equina are absent. Return separation to 0% before comparing positions. Explode is illustrative, not spinal movement. No scan is registered to these views.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:fourth-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fifth-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra"
+          ]
+        },
+        {
+          "id": "spine-l5-s1",
+          "title": "L5–S1: lumbosacral junction",
+          "description": "Inspect L5, its source disc and the sacrum. The entire fused sacrum remains one selectable surface; S1 is not falsely presented as a separate mesh.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA13076",
+                "FMA16202",
+                "FMA16037"
+              ]
+            }
+          ],
+          "view": "right",
+          "landmarks": [
+            "^fifth lumbar vertebra$",
+            "^sacrum$",
+            "^intervertebral disk of fifth lumbar vertebra$"
+          ],
+          "inspect": "Compare the source relationship from the side and behind. Do not measure normal alignment or infer instability from this unvalidated model. No transitional variant, nerve root or sacral canal contents are reconstructed. Return separation to 0% before comparing positions. Explode is illustrative, not spinal movement. No scan is registered to these views.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:fifth-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:sacrum",
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra"
+          ]
         }
       ],
       "focuses": [
@@ -19199,6 +19357,156 @@
             "vm:anatomy:body:spine:midline:bone:ninth-thoracic-vertebra",
             "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
             "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
+          ]
+        },
+        {
+          "id": "spine-c1-c2",
+          "title": "C1–C2: atlas & axis",
+          "rule": {
+            "fmaIds": [
+              "FMA12519",
+              "FMA12520"
+            ]
+          },
+          "context": [],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Keep the atlas and axis only. Rotate above and around the ring of C1 to inspect its relationship to the dens, which remains part of C2.",
+          "inspect": "There is no C1–C2 intervertebral disc. The transverse and alar ligaments are not supplied. Setting the atlas aside exposes bone shape, not joint stability or a safe range of rotation. Return separation to 0% before comparing positions. Explode is illustrative, not spinal movement. No scan is registered to these views.",
+          "landmarks": [
+            "^atlas$",
+            "^axis$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:atlas",
+            "vm:anatomy:body:spine:midline:bone:axis"
+          ]
+        },
+        {
+          "id": "spine-c5-c6",
+          "title": "C5–C6: vertebrae & disc",
+          "rule": {
+            "fmaIds": [
+              "FMA12523",
+              "FMA12524",
+              "FMA13898"
+            ]
+          },
+          "context": [],
+          "includeSkeleton": false,
+          "view": "right",
+          "description": "Expose C5, C6 and the supplied whole-disc surface between them. Compare the anterior bodies with the posterior bony elements from the side, then rotate to inspect both sides.",
+          "inspect": "Select the disc and use Fade others, or set a vertebra aside to expose its contour. Annulus and nucleus are not separate meshes; a cutaway does not reveal validated internal disc tissues. Return separation to 0% before comparing positions. Explode is illustrative, not spinal movement. No scan is registered to these views.",
+          "landmarks": [
+            "^fifth cervical vertebra$",
+            "^sixth cervical vertebra$",
+            "^intervertebral disk of fifth cervical vertebra$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:fifth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-cervical-vertebra"
+          ]
+        },
+        {
+          "id": "spine-c7-t1",
+          "title": "C7–T1: cervicothoracic junction",
+          "rule": {
+            "fmaIds": [
+              "FMA12525",
+              "FMA9165",
+              "FMA13900"
+            ]
+          },
+          "context": [],
+          "includeSkeleton": false,
+          "view": "right",
+          "description": "Isolate the last cervical and first thoracic vertebrae with their source disc. The shoulders, ribs and neighbouring levels are set aside for a close view of this transition.",
+          "inspect": "Compare the two source vertebral shapes and the intervening disc. Ribs, joint capsules and exiting spinal nerves are not included; this view does not establish a nerve-root corridor. Return separation to 0% before comparing positions. Explode is illustrative, not spinal movement. No scan is registered to these views.",
+          "landmarks": [
+            "^seventh cervical vertebra$",
+            "^first thoracic vertebra$",
+            "^intervertebral disk of seventh cervical vertebra$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:seventh-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-cervical-vertebra"
+          ]
+        },
+        {
+          "id": "spine-t12-l1",
+          "title": "T12–L1: bones only",
+          "rule": {
+            "fmaIds": [
+              "FMA10081",
+              "FMA13072"
+            ]
+          },
+          "context": [],
+          "includeSkeleton": false,
+          "view": "right",
+          "description": "Expose the last thoracic and first lumbar vertebrae. The T12–L1 disc is not supplied in the current admitted subset; no neighbouring disc is substituted.",
+          "inspect": "The empty interval is a source-coverage gap, not normal absence of a disc or evidence of disease. Compare bone shape only; neural structures and ligament layers are not present. Return separation to 0% before comparing positions. Explode is illustrative, not spinal movement. No scan is registered to these views.",
+          "landmarks": [
+            "^twelfth thoracic vertebra$",
+            "^first lumbar vertebra$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:twelfth-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:first-lumbar-vertebra"
+          ]
+        },
+        {
+          "id": "spine-l4-l5",
+          "title": "L4–L5: vertebrae & disc",
+          "rule": {
+            "fmaIds": [
+              "FMA13075",
+              "FMA13076",
+              "FMA16036"
+            ]
+          },
+          "context": [],
+          "includeSkeleton": false,
+          "view": "right",
+          "description": "Keep L4, L5 and their source disc, without the overlying muscles or the rest of the spine. Rotate posteriorly to compare the bony processes as well as the vertebral bodies.",
+          "inspect": "Select and set aside either vertebra, then Undo to restore it. The facets are portions of the bone meshes, not separate cartilage layers. Spinal nerves and the cauda equina are absent. Return separation to 0% before comparing positions. Explode is illustrative, not spinal movement. No scan is registered to these views.",
+          "landmarks": [
+            "^fourth lumbar vertebra$",
+            "^fifth lumbar vertebra$",
+            "^intervertebral disk of fourth lumbar vertebra$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:fourth-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fifth-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-lumbar-vertebra"
+          ]
+        },
+        {
+          "id": "spine-l5-s1",
+          "title": "L5–S1: lumbosacral junction",
+          "rule": {
+            "fmaIds": [
+              "FMA13076",
+              "FMA16202",
+              "FMA16037"
+            ]
+          },
+          "context": [],
+          "includeSkeleton": false,
+          "view": "right",
+          "description": "Inspect L5, its source disc and the sacrum. The entire fused sacrum remains one selectable surface; S1 is not falsely presented as a separate mesh.",
+          "inspect": "Compare the source relationship from the side and behind. Do not measure normal alignment or infer instability from this unvalidated model. No transitional variant, nerve root or sacral canal contents are reconstructed. Return separation to 0% before comparing positions. Explode is illustrative, not spinal movement. No scan is registered to these views.",
+          "landmarks": [
+            "^fifth lumbar vertebra$",
+            "^sacrum$",
+            "^intervertebral disk of fifth lumbar vertebra$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:fifth-lumbar-vertebra",
+            "vm:anatomy:body:spine:midline:bone:sacrum",
+            "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra"
           ]
         }
       ]

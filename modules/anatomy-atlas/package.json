@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "spinal-level-studies:test": "node scripts/validate-spinal-level-studies.mjs",
     "gingiva:audit": "node scripts/audit-gingiva-source.mjs",
     "gingiva:prototype": "node scripts/export-gingiva-prototype.mjs",
     "gingiva:test": "node scripts/export-gingiva-prototype.mjs --check && node scripts/validate-gingiva-source.mjs",

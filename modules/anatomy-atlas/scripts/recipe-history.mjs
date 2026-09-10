@@ -18,26 +18,116 @@ const ids = [
 export const acralBoneProfilesHash =
   '4168423334b664572cd0ee4ec437aad7dd7e1905c2318b60ec3a71ca9836623f';
 
+export const spinalLevelProfilesHash =
+  '14ae3dded68c96d62c9d7d578d1f1cbf4ff00272c745bf17610dfb11bc76769f';
+
+/** Preserve every earlier recipe; remove only the exact six spinal windows. */
+export function preSpinalLevelRecipeProfiles(profiles) {
+  if (
+    [
+      preOrbitalMotorProfilesHash,
+      orbitalMotorProfilesHash,
+      renalProfilesHash,
+      acralBoneProfilesHash,
+    ].includes(hash(profiles))
+  )
+    return structuredClone(profiles);
+  assert.equal(
+    hash(profiles),
+    spinalLevelProfilesHash,
+    'Unrecorded spinal recipe edit',
+  );
+  const previous = structuredClone(profiles),
+    spine = previous.spine;
+  const ids = [
+    'spine-c1-c2',
+    'spine-c5-c6',
+    'spine-c7-t1',
+    'spine-t12-l1',
+    'spine-l4-l5',
+    'spine-l5-s1',
+  ];
+  const addition = {
+    stages: spine.stages.filter((s) => ids.includes(s.id)),
+    focuses: spine.focuses.filter((s) => ids.includes(s.id)),
+    references: spine.references.slice(-2),
+  };
+  assert.equal(
+    hash(addition),
+    '863eae6633066200c80fa355f773b68ff79a5eab45d6e00cca790d5fd00dd302',
+    'Exact spinal addition',
+  );
+  spine.stages = spine.stages.filter((s) => !ids.includes(s.id));
+  spine.focuses = spine.focuses.filter((s) => !ids.includes(s.id));
+  spine.references = spine.references.slice(0, -2);
+  assert.equal(
+    hash(previous),
+    acralBoneProfilesHash,
+    'Every pre-spinal recipe is unchanged',
+  );
+  return previous;
+}
+
 /** Remove only the recorded four bone windows for older preservation tests. */
 export function preAcralBoneRecipeProfiles(profiles) {
-  if ([preOrbitalMotorProfilesHash, orbitalMotorProfilesHash, renalProfilesHash].includes(hash(profiles)))
+  profiles = preSpinalLevelRecipeProfiles(profiles);
+  if (
+    [
+      preOrbitalMotorProfilesHash,
+      orbitalMotorProfilesHash,
+      renalProfilesHash,
+    ].includes(hash(profiles))
+  )
     return structuredClone(profiles);
-  assert.equal(hash(profiles), acralBoneProfilesHash, 'Unrecorded dissection profile edit');
+  assert.equal(
+    hash(profiles),
+    acralBoneProfilesHash,
+    'Unrecorded dissection profile edit',
+  );
   const previous = structuredClone(profiles);
-  const addedIds = ['carpal-proximal-row', 'carpal-distal-row', 'tarsal-hindfoot', 'tarsal-midfoot'];
+  const addedIds = [
+    'carpal-proximal-row',
+    'carpal-distal-row',
+    'tarsal-hindfoot',
+    'tarsal-midfoot',
+  ];
   const regions = ['hand', 'foot'];
-  const addition = Object.fromEntries(regions.map((region) => [region, {
-    stages: previous[region].stages.filter((s) => addedIds.includes(s.id)),
-    focuses: previous[region].focuses.filter((s) => addedIds.includes(s.id)),
-    references: previous[region].references.slice(region === 'hand' ? -1 : -2),
-  }]));
-  assert.equal(hash(addition), '2c47520f5764b6e3f38f2de38fc5166ada34e9b579c0679187e9c5e6a59e53b8', 'Exact acral bone addition');
+  const addition = Object.fromEntries(
+    regions.map((region) => [
+      region,
+      {
+        stages: previous[region].stages.filter((s) => addedIds.includes(s.id)),
+        focuses: previous[region].focuses.filter((s) =>
+          addedIds.includes(s.id),
+        ),
+        references: previous[region].references.slice(
+          region === 'hand' ? -1 : -2,
+        ),
+      },
+    ]),
+  );
+  assert.equal(
+    hash(addition),
+    '2c47520f5764b6e3f38f2de38fc5166ada34e9b579c0679187e9c5e6a59e53b8',
+    'Exact acral bone addition',
+  );
   for (const region of regions) {
-    previous[region].stages = previous[region].stages.filter((s) => !addedIds.includes(s.id));
-    previous[region].focuses = previous[region].focuses.filter((s) => !addedIds.includes(s.id));
-    previous[region].references = previous[region].references.slice(0, region === 'hand' ? -1 : -2);
+    previous[region].stages = previous[region].stages.filter(
+      (s) => !addedIds.includes(s.id),
+    );
+    previous[region].focuses = previous[region].focuses.filter(
+      (s) => !addedIds.includes(s.id),
+    );
+    previous[region].references = previous[region].references.slice(
+      0,
+      region === 'hand' ? -1 : -2,
+    );
   }
-  assert.equal(hash(previous), renalProfilesHash, 'Every earlier recipe is unchanged');
+  assert.equal(
+    hash(previous),
+    renalProfilesHash,
+    'Every earlier recipe is unchanged',
+  );
   return previous;
 }
 

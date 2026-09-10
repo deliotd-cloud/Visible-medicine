@@ -2,10 +2,10 @@
   "passed": true,
   "regions": 11,
   "wholeBody": true,
-  "stages": 145,
-  "focusedViews": 135,
-  "checks": 4320,
-  "cameraChecks": 10440,
+  "stages": 151,
+  "focusedViews": 141,
+  "checks": 4500,
+  "cameraChecks": 10872,
   "structures": 1022,
   "clinicalValidation": false,
   "browserInteractionTesting": false,
@@ -1024,6 +1024,48 @@
       "kind": "window",
       "visible": 8,
       "removed": 104
+    },
+    {
+      "region": "spine",
+      "stage": "spine-c1-c2",
+      "kind": "window",
+      "visible": 2,
+      "removed": 110
+    },
+    {
+      "region": "spine",
+      "stage": "spine-c5-c6",
+      "kind": "window",
+      "visible": 3,
+      "removed": 109
+    },
+    {
+      "region": "spine",
+      "stage": "spine-c7-t1",
+      "kind": "window",
+      "visible": 3,
+      "removed": 109
+    },
+    {
+      "region": "spine",
+      "stage": "spine-t12-l1",
+      "kind": "window",
+      "visible": 2,
+      "removed": 110
+    },
+    {
+      "region": "spine",
+      "stage": "spine-l4-l5",
+      "kind": "window",
+      "visible": 3,
+      "removed": 109
+    },
+    {
+      "region": "spine",
+      "stage": "spine-l5-s1",
+      "kind": "window",
+      "visible": 3,
+      "removed": 109
     }
   ]
 }

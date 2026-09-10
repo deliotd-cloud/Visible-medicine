@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Spine → Study views** now includes [six focused spinal-level dissections](docs/SPINAL_LEVEL_STUDIES.md), from C1–C2 to L5–S1. Inspect small bone/disc groups with the existing compact controls. T12–L1 is clearly marked bones-only because its source disc is unresolved. [Development priority](docs/DEVELOPMENT_PRIORITIES.md) is now the wider atlas and body regions; detailed oral work is deferred.
+
 A [dental gingiva source review](docs/GINGIVA_SOURCE_REVIEW.md) preserves two licensed gum-envelope candidates, original files and a reproducible 3D prototype. They are **not in the live atlas**: coarse margins, tooth relationships and upper-mesh fragments require further adjudication. Existing dental studies are unchanged.
 
 **Select a shoulder bone → Imaging → X-ray** opens [source-linked orientation notes](docs/XRAY_TEACHING.md) for the scapula, proximal humerus and clavicle. Other structures remain explicitly pending. The compact information groups are retained; no radiograph, patient registration or paid-lecture access is implied.

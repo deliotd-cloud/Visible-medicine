@@ -1,10 +1,10 @@
 {
   "passed": true,
-  "assertions": 1460248,
+  "assertions": 1481008,
   "scopes": 36,
-  "recipeScopes": 840,
-  "variants": 16800,
-  "actions": 18880,
+  "recipeScopes": 876,
+  "variants": 17520,
+  "actions": 19600,
   "markupCases": 72,
   "rows": [
     {
@@ -209,23 +209,23 @@
       "region": "spine",
       "side": "both",
       "structures": 112,
-      "recipes": 17
+      "recipes": 29
     },
     {
       "region": "spine",
       "side": "left",
       "structures": 84,
-      "recipes": 17
+      "recipes": 29
     },
     {
       "region": "spine",
       "side": "right",
       "structures": 84,
-      "recipes": 17
+      "recipes": 29
     }
   ],
   "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
-  "profilesSha256": "4168423334b664572cd0ee4ec437aad7dd7e1905c2318b60ec3a71ca9836623f",
+  "profilesSha256": "14ae3dded68c96d62c9d7d578d1f1cbf4ff00272c745bf17610dfb11bc76769f",
   "geometryChanged": false,
   "clinicalValidation": false,
   "browserInteractionTesting": false,

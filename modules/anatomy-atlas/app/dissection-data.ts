@@ -13,6 +13,7 @@ import { ocularStudySets } from '../lib/ocular-anatomy.ts';
 import { laryngealStudySets } from '../lib/laryngeal-anatomy.ts';
 import { forearmVascularStudySets } from '../lib/forearm-vascular-anatomy.ts';
 import { acralBoneStudySets, acralBoneReferences } from '../lib/acral-bone-studies.ts';
+import { spinalLevelStudySets, spinalLevelReferences } from '../lib/spinal-level-studies.ts';
 import {
   orbitalMotorStudySets,
   orbitalMotorReferences,
@@ -1153,6 +1154,7 @@ for (const study of [
   ...forearmVascularStudySets,
   ...orbitalMotorStudySets,
   ...acralBoneStudySets,
+  ...spinalLevelStudySets,
 ]) {
   for (const [index, region] of study.regions.entries()) {
     const rule = { fmaIds: study.targetFmaIds };
@@ -1185,6 +1187,7 @@ for (const study of [
 dissectionProfiles['head-neck'].references.push(...orbitalMotorReferences);
 for (const region of ['hand', 'foot'] as const)
   dissectionProfiles[region].references.push(...acralBoneReferences[region]);
+dissectionProfiles.spine.references.push(...spinalLevelReferences);
 
 // Focus-only entries keep target-presence gating under laterality filters.
 // They remain searchable and support the same removal, isolation and history
