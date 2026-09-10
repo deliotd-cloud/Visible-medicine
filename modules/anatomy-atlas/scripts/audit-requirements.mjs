@@ -72,6 +72,9 @@ const cardiac = await json('public/models/bodyparts3d/cardiac/catalog.json');
 const pulmonary = await json(
   'public/models/bodyparts3d/pulmonary/catalog.json',
 );
+const pulmonaryContext = await json(
+  'public/models/bodyparts3d/pulmonary/airway-context.json',
+);
 const learning = parseLearningDocument(
   await json('content/learning-resources.v1.json'),
 );
@@ -200,6 +203,8 @@ for (const path of [
   'public/models/bodyparts3d/cardiac/catalog.json',
   'lib/cardiac.ts',
   'lib/pulmonary.ts',
+  'lib/pulmonary-context.ts',
+  'public/models/bodyparts3d/pulmonary/airway-context.json',
   'public/models/bodyparts3d/pulmonary/catalog.json',
   'docs/pulmonary-source-audit.json',
   'content/cerebral-supplement-audit.json',
@@ -311,6 +316,8 @@ const report = {
     anatomicalCompletenessMeasured: false,
   },
   study: {
+    pulmonaryAirwayLandmarks: pulmonaryContext.structures.length,
+    pulmonaryAirwayContexts: pulmonaryContext.bindings.length,
     ventricularRelationshipPresets: ventricularRelationshipsFor(
       ventricular.parent,
     ).length,

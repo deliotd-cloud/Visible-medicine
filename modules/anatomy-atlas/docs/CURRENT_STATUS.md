@@ -36,6 +36,8 @@ The [lung branch study](PULMONARY_DISSECTION.md) separates 5 source-defined grou
 
 ## Nested anatomy teaching
 
+Optional pulmonary airway context reuses 3 existing trachea/main-bronchus landmarks across 2 per-lung views. It is off by default and absent during separation, with no new model files or nested identities. Main-lung selection now discloses the missing tissue/fissure surfaces. Context is orientation, not validated airway continuity.
+
 The collapsed [Learn more section](NESTED_ANATOMY_TEACHING.md) has 29 source-pinned concepts across 46 selectable parts, with 27 primary-reference links. These counts are separate from the root-body table and overlap parent anatomy. Each part has draft Anatomy, Function and an unscored self-check. Clinical has 37 draft / 9 pending; Pathology has 33 draft / 13 pending representations. CT, MRI and ultrasound each remain 46 pending. Five conceptual self-checks test documented model limitations instead of medical recall. No clinical approvals or external resource access are implied.
 
 The [cardiac chamber study](CARDIAC_CHAMBERS.md) exposes 4 existing cavity shapes and 2 atrial-wall references. These are spaces and context, not new unique anatomy or a complete dissectible heart. Ambiguous source labels are documented and not admitted to this study.

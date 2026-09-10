@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Lung branch dissection → Show airway landmarks** adds optional trachea/ipsilateral main-bronchus orientation surfaces, a compact colour key, and automatic hiding during separation. Existing geometry and teaching bindings are unchanged. The main lung selection now also explains that tissue and fissure surfaces are missing; context does not establish continuous airway lumens or scan registration. See [source evidence and limitations](docs/PULMONARY_DISSECTION.md).
+
 **Lung → Explore lung branches** opens [lobe-group dissection](docs/PULMONARY_DISSECTION.md): three right and two left airway/vessel groups, each with compact selection, hide/Undo, fade and three separation styles. These are partial branch representations, **not lung tissue or fissure surfaces**. Search and future source-bound links reach 46 nested selections; the new branch-group lessons remain drafts. Each view loads only its selected lung.
 
 **Heart → Explore heart chambers** adds a [cardiac chamber study](docs/CARDIAC_CHAMBERS.md): four source cavity shapes, optional faint atrial-wall references, right/left and atrial/ventricular presets, hide/Undo and three separation styles. Source conflicts affecting wall/papillary/mitral labels are explicitly excluded from this study. These are static spaces, not a complete dissectible heart or measured blood volumes. Search and future resource bindings now reach all 46 nested brain, eye and cardiac selections; clinical and device review remain outstanding.

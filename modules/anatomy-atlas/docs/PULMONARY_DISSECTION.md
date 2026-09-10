@@ -4,6 +4,8 @@ Select either lung in Thorax or Whole body, then **Explore lung branches**. The 
 
 ## What is actually represented
 
+**Show airway landmarks** optionally adds the existing trachea and the main bronchus on the selected side, with a compact colour key. The landmarks are nonselectable and their pointer handlers pass through to branches. They are omitted from the scene and from requested bundles during separation; reassembly restores the previous context choice. Context is off by default, so there is no extra initial model download. Main-atlas lung selection now also states the missing tissue/fissure coverage, and nested groups are labelled “Partial branch group”, not “Space representation”.
+
 These are **partial lobe representations consisting of airway and vessel branches**, not separately modelled lung tissue. All files were already inside the original parent lung compounds. A complete source-table partition is not evidence of complete lobe anatomy.
 
 | Source FMA | Source name | Parent | Airway files | Artery files | Vein files |
@@ -22,7 +24,11 @@ The two new display bundles retain all 280 original files and 114,750 triangles.
 
 `npm run pulmonary:audit` verifies the pinned source tables, inventory, parent membership, raw SHA-256, smallest explicit labels and diagnostic topology. Its complete evidence is [pulmonary-source-audit.json](pulmonary-source-audit.json); add `-- --check` to verify freshness without writing. Role classification is a transparent summary of source names, not AI segmentation or clinical adjudication.
 
-`npm run pulmonary:export` uses that evidence and independently rechecks raw hashes and exact table membership. It retains the existing source-to-scene transform, vertex welding tolerance and normal smoothing. The renderer uses a **parent-scoped catalogue and separate left/right bundles**: no contralateral geometry is loaded as invisible or unlabelled context, and no parent aggregate is superimposed.
+`npm run pulmonary:export` uses that evidence and independently rechecks raw hashes and exact table membership. It retains the existing source-to-scene transform, vertex welding tolerance and normal smoothing. The default renderer uses a **parent-scoped catalogue and separate left/right bundles**. Optional airway context fetches two existing shared atlas bundles but renders only the trachea and the ipsilateral bronchus. Neither contralateral bronchus nor whole parent lung is rendered as context.
+
+`npm run pulmonary-context:audit -- --check` verifies the source-pinned [airway-context manifest](../public/models/bodyparts3d/pulmonary/airway-context.json). It reuses FMA7394/FJ2541 (PART-OF trachea), FMA7395/FJ2539 (PART-OF right main bronchus) and FMA7396/FJ2450 (ISA left main bronchus). Original definitions/tree choices are retained. These three existing surfaces contain 13,600 triangles. The right bronchus has six diagnostic components and two duplicate faces; the left has four components and three duplicate faces. All are retained, not silently cleaned or presented as proof of continuous airway lumens. The context files do not overlap the five selectable branch groups.
+
+`npm run pulmonary-context:test` compares all context triangles against the actual original source files in their established scene coordinates, including winding/multiplicity; tests parent/side binding, actual controls, context-off loading, failed-bundle recovery, all-hidden recovery, separation/reassembly, colours and nonselection. [Context validation](pulmonary-context-validation.json) is automated and does not establish browser acceptance. All 46 teaching bindings, original pulmonary catalogue and 95 model files remain unchanged. No new mesh, nested identity, external resource grant or clinical approval is added.
 
 `npm run pulmonary:test` verifies every transformed triangle with winding and multiplicity, actual bounds/surface anchors, finite attributes, source identity, invalid-parent rejection, bundle scoping and the real workbench callbacks using a GPU-only fixture. It covers presets, three separation mechanisms, hide/Undo, all-hidden recovery, initial selection, cross-side rejection and static markup. [Validation results](pulmonary-validation.json) are automated checks, not browser/device acceptance or clinical review.
 

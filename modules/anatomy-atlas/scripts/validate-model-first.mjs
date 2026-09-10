@@ -336,20 +336,36 @@ for (const mode of ['explore', 'dissect', 'practice'])
     }
   }
 
-// Both nested launchers must appear only on their exact parent in the real
+// Nested launchers and source limitations appear only on their exact parent in the real
 // loaded explorer markup, including whole-body navigation.
 let nestedLauncherMarkupCases = 0;
 context.__atlasMode = 'explore';
-for (const region of ['head-neck', 'whole-body'])
-  for (const fma of ['FMA50801', 'FMA12515']) {
+for (const region of ['whole-body', 'regional'])
+  for (const fma of ['FMA50801', 'FMA12515', 'FMA7088', 'FMA7309', 'FMA7310']) {
     context.__atlasSelected = catalog.structures.find(
       (s) => s.fmaId === fma,
     ).id;
     const html = renderToStaticMarkup(
-      React.createElement(vmModule.exports.default, { initialRegion: region }),
+      React.createElement(vmModule.exports.default, {
+        initialRegion:
+          region === 'regional'
+            ? ['FMA50801', 'FMA12515'].includes(fma)
+              ? 'head-neck'
+              : 'thorax'
+            : region,
+      }),
     );
     same(html.includes('Dissect brain'), fma === 'FMA50801');
     same(html.includes('Explore eye layers'), fma === 'FMA12515');
+    same(html.includes('Explore heart chambers'), fma === 'FMA7088');
+    const isLung = ['FMA7309', 'FMA7310'].includes(fma);
+    same(html.includes('Explore lung branches'), isLung);
+    same(html.includes('This model shows airway and vessel branches.'), isLung);
+    if (isLung)
+      check(
+        html.indexOf('This model shows airway and vessel branches.') <
+          html.indexOf('Explore lung branches'),
+      );
     nestedLauncherMarkupCases++;
   }
 

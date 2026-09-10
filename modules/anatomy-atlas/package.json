@@ -6,6 +6,8 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "pulmonary-context:audit": "node scripts/audit-pulmonary-context.mjs",
+    "pulmonary-context:test": "node scripts/validate-pulmonary-context.mjs",
     "pulmonary:audit": "node scripts/audit-pulmonary-source.mjs",
     "pulmonary:export": "node scripts/export-pulmonary.mjs",
     "pulmonary:test": "node scripts/validate-pulmonary.mjs",

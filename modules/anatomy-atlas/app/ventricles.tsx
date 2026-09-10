@@ -64,6 +64,12 @@ import {
   pulmonaryReferences,
 } from '@/lib/pulmonary';
 import { neuroGroupFor } from '@/lib/neuroanatomy';
+import {
+  pulmonaryAirwayFor,
+  pulmonaryContextViewCatalog,
+  pulmonaryAirwayColour,
+  pulmonaryAirwayReference,
+} from '@/lib/pulmonary-context';
 import type { DissectionView } from './dissection-data';
 import type { BodyLayout } from '@/lib/body-arrangement';
 import type { RendererHealth } from '@/lib/renderer-health';
@@ -97,7 +103,7 @@ export function VentricularView({
   const isCardiac = study === 'cardiac';
   const isPulmonary = study === 'pulmonary';
   const lungCatalog = useMemo(() => pulmonaryViewCatalog(parent), [parent]);
-  const ventricleCatalog = isPulmonary
+  const baseCatalog = isPulmonary
     ? lungCatalog
     : isCardiac
       ? cardiacCatalog
@@ -226,6 +232,17 @@ export function VentricularView({
     [retry, setRetry] = useState(0);
   const [health, setHealth] = useState<RendererHealth>('starting');
   const [relationshipId, setRelationshipId] = useState<string | null>(null);
+  const airwayContext = useMemo(
+    () => (isPulmonary ? pulmonaryAirwayFor(parent) : []),
+    [isPulmonary, parent],
+  );
+  const ventricleCatalog = useMemo(
+    () =>
+      isPulmonary
+        ? pulmonaryContextViewCatalog(parent, context && explode === 0)
+        : baseCatalog,
+    [isPulmonary, parent, context, explode, baseCatalog],
+  );
   const relationship = relationships.find((r) => r.id === relationshipId);
   const guidedAppearance = !!relationship && context && explode === 0;
   const onLoaded = useCallback((id: string) => {
@@ -267,9 +284,11 @@ export function VentricularView({
             {
               color:
                 index < 0
-                  ? guidedAppearance
-                    ? (neuroGroupFor(s.fmaId)?.color ?? '#9ba7a5')
-                    : '#9ba7a5'
+                  ? isPulmonary
+                    ? pulmonaryAirwayColour(s)
+                    : guidedAppearance
+                      ? (neuroGroupFor(s.fmaId)?.color ?? '#9ba7a5')
+                      : '#9ba7a5'
                   : isCerebral
                     ? (cerebralGroups.find(
                         (g) => g.id === (s as CerebralStructure).group,
@@ -277,9 +296,11 @@ export function VentricularView({
                     : colours[index],
               opacity:
                 index < 0
-                  ? guidedAppearance
-                    ? 0.42
-                    : 0.12
+                  ? isPulmonary
+                    ? 0.34
+                    : guidedAppearance
+                      ? 0.42
+                      : 0.12
                   : guidedAppearance
                     ? 0.7
                     : 1,
@@ -287,7 +308,13 @@ export function VentricularView({
           ];
         }),
       ),
-    [ventricleCatalog, selectableIds, isCerebral, guidedAppearance],
+    [
+      ventricleCatalog,
+      selectableIds,
+      isCerebral,
+      isPulmonary,
+      guidedAppearance,
+    ],
   );
   function select(id: string) {
     if (!selectableIds.includes(id)) return;
@@ -541,7 +568,7 @@ export function VentricularView({
           >
             Reassemble
           </Button>
-          {!isPulmonary && (
+          {(!isPulmonary || airwayContext.length > 0) && (
             <Button
               size="sm"
               variant={context ? 'default' : 'outline'}
@@ -552,17 +579,48 @@ export function VentricularView({
                 setContext((v) => !v);
               }}
             >
-              {isCardiac
-                ? 'Show atrial walls'
-                : isCerebral
-                  ? 'Show lateral ventricles'
-                  : isBrainstem
-                    ? 'Show fourth ventricle'
-                    : 'Show brain context'}
+              {isPulmonary
+                ? 'Show airway landmarks'
+                : isCardiac
+                  ? 'Show atrial walls'
+                  : isCerebral
+                    ? 'Show lateral ventricles'
+                    : isBrainstem
+                      ? 'Show fourth ventricle'
+                      : 'Show brain context'}
             </Button>
           )}
         </div>
-        {relationship && context && explode === 0 ? (
+        {isPulmonary && context && explode === 0 && airwayContext.length > 0 ? (
+          <section
+            className="ventricular-relationship"
+            aria-label="Lung airway landmarks"
+          >
+            <p>
+              Compare the trachea and the main bronchus on this side with the
+              lobe branch groups.
+            </p>
+            <ul aria-label="Airway landmark colour key">
+              {airwayContext.map((s) => (
+                <li key={s.id}>
+                  <span
+                    aria-hidden="true"
+                    style={{ backgroundColor: pulmonaryAirwayColour(s) }}
+                  />
+                  {s.name}
+                </li>
+              ))}
+            </ul>
+            <p>
+              Orientation surfaces only; continuous airway connections and lobar
+              boundaries are not validated.
+            </p>
+            {isolated && <p>Turn off Fade others to compare the landmarks.</p>}
+            <a href={pulmonaryAirwayReference} target="_blank" rel="noreferrer">
+              Anatomy reference · NCI SEER
+            </a>
+          </section>
+        ) : relationship && context && explode === 0 ? (
           <section
             className="ventricular-relationship"
             aria-label="Ventricular relationship guide"
@@ -653,9 +711,11 @@ export function VentricularView({
                 ? cerebralCatalog.supplementalIds.includes(selected.id)
                   ? 'Additional source part'
                   : 'Partial source coverage'
-                : isBrainstem
-                  ? 'Source compound'
-                  : 'Space representation'}{' '}
+                : isPulmonary
+                  ? 'Partial branch group'
+                  : isBrainstem
+                    ? 'Source compound'
+                    : 'Space representation'}{' '}
               · Draft
             </span>
             <p>{notes[selected.fmaId]}</p>
@@ -694,6 +754,12 @@ export function VentricularView({
                 bronchopulmonary segment is demonstrated. The left upper group
                 retains one duplicate source face. Both source geometry and
                 anatomical membership need specialist review.
+              </p>
+              <p>
+                Optional airway landmarks reuse the trachea and the main
+                bronchus on this side. Original bronchial remnants and duplicate
+                faces remain; these are not measured lumen boundaries or proof
+                of uninterrupted airway continuity.
               </p>
             </>
           ) : isCardiac ? (

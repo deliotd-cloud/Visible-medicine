@@ -1783,6 +1783,12 @@ export default function BodyExplorer({
                     </div>
                     <h2>{selected.name}</h2>
                     <ReviewStatus structureId={selected.id} />
+                    {!exam && pulmonaryFor(selected).length > 0 && (
+                      <p className="vm-practice-note">
+                        This model shows airway and vessel branches. Lung tissue
+                        and fissure surfaces are not modelled.
+                      </p>
+                    )}
                     {selected.bundle === 'eye-corrected-parent' && (
                       <p className="vm-practice-note">
                         Source-cleaned eye model · anatomical review pending.

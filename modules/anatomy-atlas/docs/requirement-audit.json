@@ -12,6 +12,8 @@
     "public/models/bodyparts3d/cardiac/catalog.json": "59cebff69d885e243a9b5b8048d9735eb7f4e7848b7f21a40fa6c12873c5b0a3",
     "lib/cardiac.ts": "482facae9feb332a9899d008cca33aa6bb950046ae7ea96ea2ee67a89001c6ea",
     "lib/pulmonary.ts": "82d22b0bf752b53044efb1333a35331a0e371637bd2a1be9cae915d70ce69670",
+    "lib/pulmonary-context.ts": "cce895c7a6dff6b9ce34c49539491e8b87cf4a2738e72c583436f7ae0cdde620",
+    "public/models/bodyparts3d/pulmonary/airway-context.json": "294ba340df060770edf390bc08f4260f8ed3cbd08250d39ef9b40c611a7ca5d4",
     "public/models/bodyparts3d/pulmonary/catalog.json": "b62ccd78dfc2ced8674b94eba67596add4de482f54c3f242814982b4e3dab9ea",
     "docs/pulmonary-source-audit.json": "734fc23b6d4812b81ffb007214c271096562bcb8376766fc9d609bfddabc95db",
     "content/cerebral-supplement-audit.json": "a186519bbf31065f5c4e58472c542a9cbd2a6b64d35423a4f6c92d7bae1d69d7",
@@ -30,7 +32,7 @@
     "lib/learning-anatomy.ts": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3",
     "lib/nested-learning-anatomy.ts": "6e7e1b4836406926af2406e7277a4f62f7ffc1668a644cd180b50d463443d8e1",
     "lib/ventricular-relationships.ts": "b9d2bd5ea079a600c2593ca522f325ceb03c2f2704a26747b4262ef6838c84df",
-    "app/ventricles.tsx": "0a3e370a0f8c303b67eb78e51ece146e64e57541b923154eb5a2c1f9c5d72d5e",
+    "app/ventricles.tsx": "c3445a7ff68dd86d938030a3b7fa5533af53d12fbe47bbfbbada6825f7b93377",
     "app/ventricular-relationships.css": "7dfa2927b9f203aa13dbd1f2205c9429e7b79ffbaa86108b57fb3c69b1b71400",
     "app/body-scene.tsx": "a81d6f17b2eaf4f9f32446ecd1c11e60a7c4b3435e8d6e2bc02d8b79261253e6",
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
@@ -134,6 +136,8 @@
     "anatomicalCompletenessMeasured": false
   },
   "study": {
+    "pulmonaryAirwayLandmarks": 3,
+    "pulmonaryAirwayContexts": 2,
     "ventricularRelationshipPresets": 3,
     "stages": 141,
     "focuses": 123
@@ -905,7 +909,7 @@
       "svg": 2,
       "md": 1,
       "glb": 95,
-      "json": 9,
+      "json": 10,
       "html": 1,
       "tsv": 1
     },
