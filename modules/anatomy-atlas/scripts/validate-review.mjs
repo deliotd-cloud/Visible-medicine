@@ -4,6 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { build } from './workspace-test-build.mjs';
 import { reviewDocumentBeforeSearch } from './review-history.mjs';
+import { reviewDocumentBeforeModelDelivery } from './model-delivery-history.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const bundled = await build({
@@ -175,6 +176,20 @@ const sourceManifest = JSON.parse(
     'utf8',
   ),
 );
+const beforeDelivery = await reviewDocumentBeforeModelDelivery(reviewDocument, sourceManifest, structures);
+for (const structure of structures) {
+  ok(api.staleReview({ ...snapshot, structureId: structure.id, track: 'geometry',
+    revisionHash: beforeDelivery.revisions[structure.id].geometry }),
+  'Lossless transport still requires current display approval');
+  ok(!api.staleReview({ ...snapshot, structureId: structure.id, track: 'teaching',
+    revisionHash: beforeDelivery.revisions[structure.id].teaching }),
+  'Unchanged teaching is not relabelled by a delivery change');
+  ok(beforeDelivery.revisions[structure.id].imaging === null,
+    'Transport does not create imaging evidence');
+}
+await assert.rejects(reviewDocumentBeforeModelDelivery(
+  { ...reviewDocument, modelHash: '0'.repeat(64) }, sourceManifest, structures));
+checks++;
 const beforeSearch = await reviewDocumentBeforeSearch(
   reviewDocument,
   sourceManifest,

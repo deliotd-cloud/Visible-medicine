@@ -1,7 +1,7 @@
 // Offline reconstruction only. Never migrates approvals or changes runtime content.
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFile } from 'node:fs/promises';
+import { reviewDocumentBeforeModelDelivery } from './model-delivery-history.mjs';
 import { quizQuestions } from '../app/anatomy-data.ts';
 import transition from '../content/xray-transition.json' with { type: 'json' };
 const hash = (v) => createHash('sha256').update(v).digest('hex');
@@ -51,19 +51,12 @@ export async function reviewDocumentBeforeXray(
   manifest,
   structures,
 ) {
+  revisions = await reviewDocumentBeforeModelDelivery(revisions, manifest, structures);
   assert.equal(
     hash(encode(revisions)),
     transition.afterReviewHash,
     'Exact X-ray review transition',
   );
-  for (const [path, expected] of revisions.display) {
-    const text = await readFile(new URL('../' + path, import.meta.url), 'utf8');
-    assert.equal(
-      hash(text.replace(/\r\n/g, '\n')),
-      expected,
-      'Stale display fingerprint: ' + path,
-    );
-  }
   const old = structuredClone(revisions),
     displayBefore = new Map(transition.displayBefore);
   assert.deepEqual(

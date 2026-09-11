@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Lossless production model delivery](MODEL_DELIVERY.md) retains canonical source hashes and anatomical detail while reducing transport file size. Each production build checks decoded buffers and installed-loader scene equality for every model. Catalogue hashes/byte counts remain canonical, with separate transport hashes in the generated delivery manifest. This is not new anatomy, browser-performance or clinical certification.
+
 [Muscles by nerve](UM_LIMB_MOTOR.md) links 42 source muscle selections through 43 typical motor relationships across 15 nerve/branch groups. One collapsed control shows available targets with bone context and reversible visibility. Dual/variable supply is qualified; no nerve geometry or donor-specific innervation is supplied. [Peripheral-source candidates](PERIPHERAL_NERVE_CANDIDATES.md) remain unimported pending actual files, rights and spatial review.
 
 [Independent lower-limb specimen](UM_LIMB_DISSECTION.md): 67 unique selectable CC0 source surfaces across 26 studies. Hip/thigh, calf, ankle/foot and an optional whole-limb view extend the unchanged 15-part knee study. Open from Pelvis & hip, Hip & thigh, Knee & leg or Ankle & foot. [Learning](UM_LIMB_LEARNING.md) includes 67 source-bound anatomy/function drafts, 42 muscle attachment/motor-supply records and visible-pool identification practice. Regional scopes overlap within one source subject; they are not added to the body below. Registration, clinical approval and further clinical/pathology/imaging teaching remain pending.

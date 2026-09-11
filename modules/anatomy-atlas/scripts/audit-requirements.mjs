@@ -295,6 +295,8 @@ for (const path of [
   'app/ventricles.tsx',
   'app/ventricular-relationships.css',
   'app/body-scene.tsx',
+  'scripts/glb-lossless-codec.mjs',
+  'scripts/compress-model-delivery.mjs',
   'app/um-knee-study.tsx',
   'app/um-knee-study.css',
   'app/um-knee-entry.css',

@@ -1,6 +1,20 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — lower-limb motor relationships (current)
+## 11 September 2026 — lossless model delivery (current)
+
+Source `edbfcf2502ee932bd825e0441cd983cb589c0d50`, tree `54902b8de1d66dea05b7266d19f41b9ebb06e4dd`, parent `0621e5ce17bcc489dde76b0a4d6bed07305b4143`. Twenty-three changed paths mirrored into `modules/anatomy-atlas`; main website unchanged. Source push to Sites main succeeded and full HEAD was verified afterward; ephemeral credential cleared.
+
+Production delivery now compresses all 107 GLBs with EXT_meshopt_compression, preserving every decoded buffer and scene: 1,175 mesh primitives and 3,525 buffer views. Raw delivery falls from 162,393,808 to 109,657,548 bytes (32.5%); runtime archive from 127,704,515 to 99,111,724 bytes. No quantization, reordering, simplification, anatomical removal or new anatomy asset. Canonical files, ingestion identities and teaching remain unchanged; transport has its own manifest and hashes. The already-installed MIT encoder is pinned directly for reproducibility; full notice retained. No new runtime service or decoder CDN dependency.
+
+Every model passed byte-exact decoding and original/encoded scene comparison with the installed Drei GLTFLoader/MeshoptDecoder. Deterministic/corrupt-input checks, production build, TypeScript, 235 review checks, 33,444 content-contract checks, 106,387 loading checks, 704 renderer-health checks, 521 fake-renderer root checks and 3,668 independent navigation checks passed. Display fingerprints intentionally advance; older display reviews require reconfirmation, teaching remains unchanged, and immutable/private records are not migrated. Historical before/after documents remain exactly reproducible. These tests do not establish browser/GPU/mobile, CSP, performance, accessibility or clinical acceptance.
+
+The smaller native archive upload SUCCEEDED: saved version 136, `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_ae95a41605ec819190cacb5c1a4c6c74`, exact source above. Private deployment `appgdep_6aa346da06a08191922db0a7cad11067` SUCCEEDED at `2026-09-11T00:11:53.254785+00:00`: https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site. This also publishes the preceding independent wider-limb, learning, navigation, clinical and motor additions previously saved only as source. No public-access change, GitHub upload, private-review database export or chat-history backup is claimed.
+
+Recovery stem `work/atlas-model-delivery-2026-09-11`: runtime archive 99,111,724 bytes SHA256 `b00ff631194f7709e4e91793f21885313733904f0242bf871cb42de088786034`; delta 870,400 bytes SHA256 `5d8de93ffc0390f92a526e0d1984c6fb28ea14dec603d6fdc163efc2bd04bbc8`; incremental bundle 15,585 bytes SHA256 `ec5ad0ee552d975e6c99ab6360d0ba76c62cc77e43e594a3e8b0e8fefd1f7958`. Bundle REQUIRES source parent above. Archive has 341 entries, valid Worker/hosting manifest, exact transport manifest and all 107 runtime GLBs. Mirror 1,412 files / 334,293,687 bytes / 111 GLBs, no common credential-signature warnings (not exhaustive). No old artifact deleted. Native archive receipt is stored separately from local packed-archive hashes; its tar byte count/hash is not asserted identical to local tar serialization.
+
+This is Sites source/version saving plus same-PC recovery, not GitHub delivery or an independently tested full off-device restore. Recovery JSON precedes receipt completion; never rerun the one-shot helper. Final publication/backup checks and next work: `work/ATLAS_MODEL_DELIVERY_2026-09-11.md`. Resume substantive wider-body anatomy and remaining clinical teaching, not routine oral sculpting, completed motor metadata or repeated delivery polishing.
+
+## 11 September 2026 — lower-limb motor relationships
 
 Source `0621e5ce17bcc489dde76b0a4d6bed07305b4143`, tree `3b0260e84a666a247bd412bcb9cd137fd6cc8085`, parent `3168f9db2c82f397c91091e0c3a1e8df51de83d5`. Eighteen paths mirrored into `modules/anatomy-atlas`; main website unchanged. Exact source pushed to Sites main; full HEAD verified after success, ephemeral credential cleared.
 

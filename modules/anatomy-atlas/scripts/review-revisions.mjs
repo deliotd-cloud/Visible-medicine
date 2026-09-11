@@ -18,6 +18,8 @@ const manifest = JSON.parse(
 if (hash(model) !== manifest.sha256)
   throw new Error('Shoulder mesh hash differs from its provenance manifest.');
 const displayPaths = [
+  'scripts/glb-lossless-codec.mjs',
+  'scripts/compress-model-delivery.mjs',
   'app/anatomy-scene.tsx',
   'app/scene-label-layer.tsx',
   'app/scene-label-layer.css',

@@ -51,7 +51,8 @@
     "eye-layers:export": "node scripts/export-eye-layers.mjs",
     "eye-layers:test": "node scripts/validate-eye-layers.mjs",
     "dev": "vinext dev",
-    "build": "npm run reviews:revisions && vinext build",
+    "build": "npm run reviews:revisions && vinext build && node scripts/compress-model-delivery.mjs",
+    "models:delivery-check": "node scripts/compress-model-delivery.mjs --check",
     "reviews:revisions": "node scripts/review-revisions.mjs",
     "reviews:test": "node scripts/validate-review.mjs",
     "inspection:test": "node scripts/validate-inspection.mjs",
@@ -222,6 +223,7 @@
     "vinext": "^1.0.0-beta.9"
   },
   "devDependencies": {
+    "meshoptimizer": "1.1.1",
     "@cloudflare/vite-plugin": "^1.54.4",
     "@cloudflare/workers-types": "^5.20260905.1",
     "@openai/sites-vite-plugin": "0.2.0",

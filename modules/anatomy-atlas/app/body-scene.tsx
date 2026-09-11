@@ -128,7 +128,8 @@ function Bundle({
   renderedCount: number;
   originGuide: OriginGuide | null;
 }) {
-  const { scene } = useGLTF(bundle.url);
+  // Production transport is byte-exact meshopt; the decoder is bundled locally.
+  const { scene } = useGLTF(bundle.url, false, true);
   const onLoaded = props.onLoaded;
   useEffect(() => onLoaded(bundle.id), [bundle.id, onLoaded]);
   const geometries = useMemo(() => {

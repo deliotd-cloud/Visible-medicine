@@ -1,28 +1,28 @@
 {
   "passed": true,
-  "assertions": 94249,
+  "assertions": 106387,
   "scopes": 36,
-  "recipeScopes": 792,
-  "renderScopes": 12672,
-  "sessions": 1581,
+  "recipeScopes": 894,
+  "renderScopes": 14304,
+  "sessions": 1785,
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
       "structures": 1022,
-      "recipes": 9
+      "recipes": 13
     },
     {
       "region": "whole-body",
       "side": "left",
       "structures": 590,
-      "recipes": 9
+      "recipes": 13
     },
     {
       "region": "whole-body",
       "side": "right",
       "structures": 589,
-      "recipes": 9
+      "recipes": 13
     },
     {
       "region": "shoulder-arm",
@@ -64,19 +64,19 @@
       "region": "hand",
       "side": "both",
       "structures": 124,
-      "recipes": 30
+      "recipes": 34
     },
     {
       "region": "hand",
       "side": "left",
       "structures": 61,
-      "recipes": 30
+      "recipes": 34
     },
     {
       "region": "hand",
       "side": "right",
       "structures": 63,
-      "recipes": 30
+      "recipes": 34
     },
     {
       "region": "thigh",
@@ -100,37 +100,37 @@
       "region": "leg",
       "side": "both",
       "structures": 60,
-      "recipes": 14
+      "recipes": 20
     },
     {
       "region": "leg",
       "side": "left",
       "structures": 30,
-      "recipes": 14
+      "recipes": 20
     },
     {
       "region": "leg",
       "side": "right",
       "structures": 30,
-      "recipes": 14
+      "recipes": 20
     },
     {
       "region": "foot",
       "side": "both",
       "structures": 118,
-      "recipes": 21
+      "recipes": 25
     },
     {
       "region": "foot",
       "side": "left",
       "structures": 59,
-      "recipes": 21
+      "recipes": 25
     },
     {
       "region": "foot",
       "side": "right",
       "structures": 59,
-      "recipes": 21
+      "recipes": 25
     },
     {
       "region": "thorax",
@@ -154,19 +154,19 @@
       "region": "abdomen",
       "side": "both",
       "structures": 94,
-      "recipes": 35
+      "recipes": 39
     },
     {
       "region": "abdomen",
       "side": "left",
       "structures": 76,
-      "recipes": 35
+      "recipes": 39
     },
     {
       "region": "abdomen",
       "side": "right",
       "structures": 74,
-      "recipes": 35
+      "recipes": 39
     },
     {
       "region": "pelvis",
@@ -208,19 +208,19 @@
       "region": "spine",
       "side": "both",
       "structures": 112,
-      "recipes": 17
+      "recipes": 29
     },
     {
       "region": "spine",
       "side": "left",
       "structures": 84,
-      "recipes": 17
+      "recipes": 29
     },
     {
       "region": "spine",
       "side": "right",
       "structures": 84,
-      "recipes": 17
+      "recipes": 29
     }
   ],
   "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",

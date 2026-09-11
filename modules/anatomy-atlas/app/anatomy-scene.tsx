@@ -248,7 +248,7 @@ function Tissue({
 }
 
 function Model(props: SceneProps & { offsets: Map<string, THREE.Vector3> }) {
-  const { scene } = useGLTF('/models/bodyparts3d/shoulder-right.glb');
+  const { scene } = useGLTF('/models/bodyparts3d/shoulder-right.glb', false, true);
   const onModelReady = props.onModelReady;
   useEffect(() => {
     onModelReady(true);

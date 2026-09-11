@@ -1,0 +1,22 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import { compressGlb, validateGlbDelivery, readGlb } from './glb-lossless-codec.mjs';
+const original = await readFile(new URL('../public/models/bodyparts3d/shoulder-right.glb', import.meta.url));
+const packed = await compressGlb(original), proof = await validateGlbDelivery(original, packed);
+assert.ok(proof.compressed); assert.ok(packed.length < original.length);
+assert.ok((await compressGlb(original)).equals(packed), 'Deterministic build encoding');
+assert.equal((await validateGlbDelivery(original, original)).compressed, false);
+await assert.rejects(compressGlb(original.subarray(0, original.length - 4)));
+const badVersion = Buffer.from(original); badVersion.writeUInt32LE(1, 4);
+await assert.rejects(compressGlb(badVersion));
+await assert.rejects(compressGlb(packed), 'Do not encode an already encoded source as canonical');
+const corrupted = Buffer.from(packed), meta = readGlb(packed).json;
+// Damage an encoded stream while retaining valid GLB/JSON structure.
+const binStart = 28 + packed.readUInt32LE(12), stream = meta.bufferViews[0].extensions.EXT_meshopt_compression;
+corrupted[binStart + stream.byteOffset] ^= 255;
+await assert.rejects(validateGlbDelivery(original, corrupted));
+const sourceText = await readFile(new URL('../app/body-scene.tsx', import.meta.url), 'utf8');
+const shoulderText = await readFile(new URL('../app/anatomy-scene.tsx', import.meta.url), 'utf8');
+assert.ok(sourceText.includes('useGLTF(bundle.url, false, true)'));
+assert.ok(shoulderText.includes("useGLTF('/models/bodyparts3d/shoulder-right.glb', false, true)"));
+console.log('Lossless delivery: deterministic output, exact installed-loader round trip, invalid/corrupt input rejection and both viewer decoder paths verified. Full model set is checked by the production build.');
