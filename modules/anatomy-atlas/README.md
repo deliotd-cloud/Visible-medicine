@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+The [female pelvic Learn panel](docs/HRA_FEMALE_PELVIS.md#structure-specific-teaching) now distinguishes 12 anatomical concepts across 17 source selections, with MRI, ultrasound and introductory clinical/pathology notes, two ovarian CT drafts and source-specific self-checks. Existing compact tabs are reused. All material is draft; this does not supply scans, diagnosis or registration.
+
 **Pelvis / Whole body → Female pelvis** opens a [separate HRA study](docs/HRA_FEMALE_PELVIS.md): 41 original source surfaces, eight compact dissection views and source-identification practice. Seventeen Anatomy/Function entries are draft; 24 remain unavailable. Six disputed/overlapping source groups are withheld. This is a separate CC BY 4.0 reference, not a complete female body, patient registration or clinical approval.
 
 **Pelvis / Whole body → Study → “Male pelvis: deferent ducts”** opens a [10-structure source-bound dissection](docs/DEFERENT_DUCTS.md), with two newly added original ducts and eight existing neighbouring organs. Use side filtering, selection, hide/Undo and separation; search also accepts “vas deferens” and “ductus deferens.” Current display: **1,060 selections**. Original source faces are preserved; teaching is draft, and imaging/clinical approval is pending. No extra permanent controls. Older milestone counts below are historical.

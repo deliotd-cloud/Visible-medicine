@@ -6,7 +6,19 @@ Open **Pelvis / Whole body → Female pelvis**, or `/specimens/female-pelvis`. T
 
 Eight studies: reproductive overview; all 41 surfaces; uterus/cervix; left adnexa; right adnexa; supporting surfaces; uterine vessel context; bladder/uterus/rectum. Context appears only when requested. The initial view contains 18 reproductive surfaces, not all 41.
 
-There are **17 source-bound draft Anatomy/Function selections**, with short original explanations supported by [NCI ovaries](https://training.seer.cancer.gov/anatomy/reproductive/female/ovaries.html) and [NCI genital tract](https://training.seer.cancer.gov/anatomy/reproductive/female/tract.html). The other 24 return teaching unavailable; CT/MRI/X-ray/US/pathology/clinical detail remains pending. Source-identification rounds use up to ten eligible visible selections. These are not validated exams.
+There are **17 source-bound draft Anatomy/Function selections**, with short original explanations supported by [NCI ovaries](https://training.seer.cancer.gov/anatomy/reproductive/female/ovaries.html) and [NCI genital tract](https://training.seer.cancer.gov/anatomy/reproductive/female/tract.html). The other 24 return teaching unavailable. The 17 taught selections now have distinct source-bound anatomy and introductory clinical/imaging coverage, described below; incomplete topics remain explicitly pending. Source-identification rounds use up to ten eligible visible selections. These are not validated exams.
+
+## Structure-specific teaching
+
+The 17 source selections map explicitly to **12 distinct anatomical concepts**: ovary; ampulla, tubal isthmus, infundibulum and fimbriae; uterine body, fundus and lower segment; cervix, internal os and external os; vagina. Bilateral surfaces share typical facts, not donor-specific pathology. Exact source/frame/recipe checks remain mandatory. Returned lessons are independent copies, so a consumer cannot mutate another selection’s teaching.
+
+The existing collapsed Learn panel now contains **69 extended draft placements**: Clinical 17, Pathology 17, MRI 17, Ultrasound 16 and CT 2 (ovaries only). X-ray remains pending throughout, as do CT elsewhere and vaginal ultrasound. These placements reuse **24 distinct topic texts across six relevant families**, not 69 unique lessons. Each of the 17 selections has a self-check; there are 12 distinct questions. The other 24 model selections remain unavailable for teaching.
+
+Topics include organ-of-origin assessment, hydrosalpinx versus ovarian lesions, uterine zonal MRI anatomy, external fundal contour versus cavity, cervical canal orientation and vaginal lesion location. They do not implement an O-RADS calculator, diagnostic threshold, cervical-length measurement, fertility assessment, cancer staging, procedural plan or patient image. No new toolbar or navigation step is added; references have readable source titles.
+
+References are factual reading sources, not redistributed material: Texas Tech pelvic tables; NCI/SEER reproductive/cervical anatomy; IDKD benign uterine imaging; ESUR 2024 adnexal imaging, 2026 cystic pelvic lesions and 2020 congenital anomaly guidance. The exact links are in `content/hra-pelvic-teaching.ts`. No article passage, table, figure or scan is imported. Older recommendations are used only for stable anatomy/orientation facts, not diagnostic cut-offs, preparation instructions or current management algorithms. AIUM’s 2024 parameter was discovered but not used as an evidence citation because the full technical text was not available through the reader.
+
+Run `node scripts/validate-hra-pelvic-teaching.mjs`: tests all mappings/counts, references, copy isolation, wrong-source rejection, unchanged geometry and 136 real React topic renderings, including pending/absent states. This verifies application behaviour, not medical correctness. Radiologist review must still approve terminology, contextual interpretation, modality notes and self-checks at the exact content revision.
 
 ## Original source and licensing
 

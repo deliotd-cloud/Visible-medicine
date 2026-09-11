@@ -9,6 +9,7 @@ import {
 } from '@/components/ui/dialog';
 import { KneeSpecimenView, type SpecimenSupplement } from './um-knee-study';
 import { SpecimenLearning } from './um-limb-learning';
+import { hraPelvicReferenceTitles } from '@/content/hra-pelvic-teaching';
 import {
   hraPelvisDefinition,
   hraPelvisSource,
@@ -33,6 +34,7 @@ export const hraPelvisSupplement: SpecimenSupplement = {
       definition={definition}
       selected={selected}
       resolveLesson={hraPelvicTeaching}
+      referenceTitles={hraPelvicReferenceTitles}
     />
   ),
   sourceDetails: (
@@ -70,9 +72,9 @@ export const hraPelvisSupplement: SpecimenSupplement = {
         · <a href="/models/hra-pelvis/NOTICE.md">Asset reuse notice</a>
       </p>
       <p>
-        Clinical/imaging teaching and your radiologist’s sign-off remain
-        pending. Atlas access does not unlock separately paid imaging or
-        lectures.
+        Clinical/imaging notes are draft and incomplete; your radiologist’s
+        sign-off remains pending. Atlas access does not unlock separately paid
+        imaging or lectures.
       </p>
     </>
   ),

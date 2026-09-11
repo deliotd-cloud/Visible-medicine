@@ -1,6 +1,22 @@
 # Anatomy atlas backup — 12 September 2026
 
-## 12 September 2026 — independent HRA female pelvic study (current source)
+## 12 September 2026 — source-specific HRA pelvic teaching (current source)
+
+Source `73ca79cea92f435fe40212c602dad407b4b3acd6`, tree `6491ca1ff6ebbced3654b212eac0e21a6242eb42`, parent `5cded314c29d62d53cf870c0f6c70e4b1c754836`. Sixteen exact source paths mirrored. Full module audit: 1,831 matching files / 445,981,431 bytes / 125 retained GLBs; zero common credential-signature warnings (not exhaustive). No geometry, source metadata, dependency, font, texture, database schema, auth, entitlement or patient-image change.
+
+Seventeen independent female pelvic selections now map to 12 distinct anatomical concepts with separate tubal regions, uterine regions and cervical openings. Existing Learn tabs contain 69 extended draft placements: Clinical 17, Pathology 17, MRI 17, US 16, CT 2; these reuse 24 topic texts across six relevant families. Seventeen self-check placements contain 12 distinct questions. Twenty-four other selections remain unavailable; X-ray, most CT and vaginal US remain pending. No new navigation controls. No risk scoring, diagnosis, staging, fertility/cervical-length measurement, patient registration or clinical approval.
+
+Original brief factual synthesis cites Texas Tech, NCI/SEER, IDKD and ESUR sources. No article prose, figure, table or scan is redistributed. All HRA geometry and six source holds remain unchanged under the previous CC BY 4.0 notices. Main body still has 1,060 selections. Radiologist review and actual-device acceptance remain outstanding.
+
+Passed: 17 exact source mappings, 12 distinct concepts, topic coverage, reference allowlist, caller-copy isolation, wrong source/frame rejection, unchanged model SHA, 136 actual React topic renderings including pending states, existing 41-surface/eight-study validation, abdominal teaching regression (751 checks), TypeScript and production build. The legacy model-first stale baseline noted in the preceding receipt is unchanged; a full legacy-suite pass is not claimed.
+
+Renderer revision `1cdc64a6d3f4e5473e91ee8cb4a7bc5936a1df0cee842f13e7a2133063e5c789`, 362 inputs; shoulder fingerprints unchanged. Lossless delivery remains 120 GLBs / 1,285 meshes / 3,855 buffer views, canonical 184,548,972 bytes / transport 124,554,376 / gzip transport 108,334,195. No FPS or clinical accuracy claim.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-hra-teaching-2026-09-12`: `.site.tar.gz` 113,779,921 bytes / SHA256 `e71a34b64cc94726c406fa4f680663fc7918fe0aa7e2ac53fff52b4420ae0818`; `.delta.tar` 573,440 bytes / `88c9f2d272a92ac00a11a5ca252de7aa297dfd2b0e1c18cf766ff81b18ebb312`; `.incremental.bundle` 14,594 bytes / `fcf91ece3393020238c8215f03b0c1a5d92fe5ff750220048fcdffe77accc9e9`. Archive contains 413 safe unique entries, exact manifest and both migrations. Bare restore `refs/verification/hra-teaching-20260912` has exact source SHA/tree and passes fsck; verifier main unchanged. Preserve all previous bundles because this increment requires its parent.
+
+Sites source main independently matches; private publication is in progress at this receipt. Terminal deployment and GitHub remote verification are recorded in the work/D: checkpoint. Source/runtime recovery does not back up conversation history, production database contents, private reviews, accounts, scans or lectures. The broad goal remains active.
+
+## 12 September 2026 — independent HRA female pelvic study (previous source)
 
 Source `5cded314c29d62d53cf870c0f6c70e4b1c754836`, tree `4be12626bc9a7936e417badec34e71ab2ebafade`, parent `925056d1681b0a6668d34cb9584cf565bbbc3a97`. Thirty-one exact source paths mirrored. Full module audit: 1,829 matching files / 445,953,578 bytes / 125 retained GLBs; no common credential-signature warnings (not exhaustive). Website main remains separate and unchanged.
 

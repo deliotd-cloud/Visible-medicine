@@ -36,6 +36,8 @@
 
 [Separate female pelvis](HRA_FEMALE_PELVIS.md): 41 original HRA surfaces, 8 dissection studies and 17 draft Anatomy/Function selections. The other 24 selections remain unavailable for teaching; six disputed/overlapping source groups are withheld. This independent CC BY 4.0 reference is not a complete female body or patient registration. Clinical/device sign-off is pending; main-body counts are unchanged.
 
+[Pelvic teaching detail](HRA_FEMALE_PELVIS.md#structure-specific-teaching) now distinguishes 12 anatomical concepts and adds 69 extended draft placements / 17 source-bound self-check placements. Clinical 17, Pathology 17, MRI 17, US 16 and CT 2 remain introductory drafts, not unique lessons per placement, acquired imaging or approval. Existing compact tabs are reused; other topics explicitly remain pending.
+
 [Abdominal-wall teaching](ABDOMINAL_WALL_SPECIMEN.md#detailed-teaching) supplies 8 exact-source Anatomy/Function lessons, 8 attachment/motor records, 48 introductory clinical/pathology/imaging topics and 8 self-checks. Three groups in the existing collapsed Learn panel keep the model prominent. Imaging notes explain recognition and limitations, not real scans or registration; source changes fail closed. Specialist validation remains pending.
 
 [Abdominal identification practice](ABDOMINAL_WALL_SPECIMEN.md#identification-practice) covers 8 source muscles across 7 studies. Visible muscles alone enter rounds; bones stay contextual, labels/guides are hidden, and first-try/reveal/retry-missed scoring preserves the dissection history. Exact source/frame checks reject mismatches. This is source-label practice, not a clinical examination or approval.

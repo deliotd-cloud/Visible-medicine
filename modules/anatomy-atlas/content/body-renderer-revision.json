@@ -130,7 +130,7 @@
     },
     {
       "path": "app/hra-pelvis-study.tsx",
-      "sha256": "4344cea55c9d3801561fa22e46e993eab9a8688d4e0b116ac31bd7c105d9576c"
+      "sha256": "3e1d13cb5f21cbb006683b5833b0aad83dfa6478260e0ccc676d0056cd3783d1"
     },
     {
       "path": "app/imaging-comparison.css",
@@ -383,6 +383,10 @@
     {
       "path": "content/hip-imaging-pins.json",
       "sha256": "aa6a306d480e42c8af77a628537fcb7fd694217e97a93e60bbd824c5fa8103c5"
+    },
+    {
+      "path": "content/hra-pelvic-teaching.ts",
+      "sha256": "ab61fa71c04a678144a040a77d04036e8f8f87bbaed288814fac8ea5496d7940"
     },
     {
       "path": "content/inferior-thyroid-context-pins.json",
@@ -874,7 +878,7 @@
     },
     {
       "path": "lib/hra-pelvis-teaching.ts",
-      "sha256": "c298684a3b56f9e46e491c95753aae7138351f7a2172ff4ea53f365111fdb615"
+      "sha256": "f65f1dfbe3bc99789962a7666fdddf9e127dc968102c067ae985d20f1c927f5c"
     },
     {
       "path": "lib/hra-pelvis.ts",
@@ -1457,5 +1461,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "b8dab17ffd813354e71e0d280323d0e75a0de9db498df44fc953b262937c3f98"
+  "sha256": "1cdc64a6d3f4e5473e91ee8cb4a7bc5936a1df0cee842f13e7a2133063e5c789"
 }

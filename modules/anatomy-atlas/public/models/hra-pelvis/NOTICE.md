@@ -19,4 +19,4 @@ Six original groups are withheld: left/right round ligaments (source label/side 
 
 This separate source assembly is not registered to the main atlas or patient CT/MRI. Open cut boundaries and multiple source shells remain. Not a complete female body, complete organ wall/lumen, pelvic floor, nerve network or operative plane. Clinical and device validation are pending.
 
-Brief original draft teaching uses NCI SEER factual references, linked in the interface. No source diagram, article passage, texture, font or patient scan is copied. Application code and original teaching are distinct from the CC BY model. No new runtime dependency, API key or paid service is required for this module.
+Brief original draft teaching uses NCI SEER, Texas Tech, IDKD and ESUR factual references, linked in the interface. No source diagram, article passage, texture, font or patient scan is copied. Application code and original teaching are distinct from the CC BY model. No new runtime dependency, API key or paid service is required for this module.
