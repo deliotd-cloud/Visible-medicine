@@ -15,7 +15,8 @@ const fromHref = href => Object.fromEntries(new URL(href, 'https://atlas.example
 const expected = ['acl', 'pcl', 'mcl', 'lcl', 'meniscus-group', 'quadriceps-tendon', 'patellar-ligament', 'achilles-tendon', 'talus', 'calcaneus',
   'femur', 'femoral-head-cartilage', 'gluteus-medius', 'gluteus-minimus', 'iliacus', 'psoas-major', 'adductor-longus', 'rectus-femoris', 'semimembranosus', 'semitendinosus', 'biceps-femoris-long-head', 'biceps-femoris-short-head',
   'extensor-digitorum-longus', 'extensor-hallucis-longus', 'peroneus-longus', 'flexor-digitorum-longus', 'flexor-hallucis-longus', 'popliteus', 'soleus', 'tibialis-anterior', 'tibialis-posterior', 'gastrocnemius-medial', 'gastrocnemius-lateral', 'abductor-hallucis', 'abductor-digiti-minimi', 'flexor-digitorum-brevis', 'quadratus-plantae', 'extensor-digitorum-brevis',
-  'adductor-brevis', 'adductor-magnus', 'gracilis', 'pectineus', 'superior-gemellus', 'inferior-gemellus', 'obturator-internus', 'obturator-externus', 'gluteus-maximus', 'piriformis', 'quadratus-femoris', 'sartorius', 'tensor-fasciae-latae', 'vastus-intermedius', 'vastus-lateralis', 'vastus-medialis'];
+  'adductor-brevis', 'adductor-magnus', 'gracilis', 'pectineus', 'superior-gemellus', 'inferior-gemellus', 'obturator-internus', 'obturator-externus', 'gluteus-maximus', 'piriformis', 'quadratus-femoris', 'sartorius', 'tensor-fasciae-latae', 'vastus-intermedius', 'vastus-lateralis', 'vastus-medialis',
+  'tibia', 'fibula', 'patella', 'femoral-cartilage', 'tibial-cartilage', 'patellar-cartilage', 'cuboid', 'navicular', 'medial-cuneiform', 'intermediate-cuneiform', 'lateral-cuneiform'];
 same(Object.keys(specimenClinicalLessons).sort(), expected.sort());
 const referenceWords = {}, knownURLs = new Set(Object.values(specimenClinicalReferences).map(r => r.url));
 function references(text, refs) {
@@ -42,7 +43,7 @@ for (const selected of whole.surfaces) {
   lesson.extended.topics.clinical.body = 'mutated';
   same(specimenTeachingFor(whole, selected).extended, extended);
 }
-same(counts, { clinical: 54, pathology: 54, ct: 4, mri: 27, xray: 20, ultrasound: 21 });
+same(counts, { clinical: 65, pathology: 65, ct: 11, mri: 35, xray: 31, ultrasound: 21 });
 const hipTopics = {
   femur: ['clinical', 'pathology', 'xray', 'ct', 'mri'],
   'femoral-head-cartilage': ['clinical', 'pathology', 'xray'],
@@ -100,12 +101,29 @@ for (const muscle of muscles) {
   same(specimenTeachingFor(whole, muscle).extended.topics.clinical.readiness, 'draft');
   same(specimenTeachingFor(whole, muscle).extended.topics.pathology.readiness, 'draft');
 }
-same(whole.surfaces.filter(s => !specimenClinicalLessons[s.slug]).length, 13);
-same(new Set(Object.values(specimenClinicalLessons).map(l => l.selfCheck.question)).size, 54);
+same(whole.surfaces.filter(s => !specimenClinicalLessons[s.slug]).map(s => s.slug).sort(), ['foot-bone-group', 'pelvis-group']);
+same(new Set(Object.values(specimenClinicalLessons).map(l => l.selfCheck.question)).size, 65);
 same(specimenClinicalLessons['vastus-medialis'].modelLimit.includes('No separately validated VMO/VML'), true);
 same(specimenClinicalLessons['tensor-fasciae-latae'].modelLimit.includes('iliotibial tract'), true);
 same(specimenClinicalLessons['quadratus-femoris'].topics.mri.body.includes('asymptomatic'), true);
 same(specimenClinicalLessons['obturator-externus'].modelLimit.includes('three-player report'), true);
+const boneCartilageTopics = {
+  tibia: ['xray', 'ct', 'mri'], fibula: ['xray', 'ct', 'mri'], patella: ['xray', 'ct'],
+  'femoral-cartilage': ['xray', 'mri'], 'tibial-cartilage': ['xray', 'mri'], 'patellar-cartilage': ['xray', 'mri'],
+  cuboid: ['xray', 'ct', 'mri'], navicular: ['xray', 'ct', 'mri'],
+  'medial-cuneiform': ['xray', 'mri'], 'intermediate-cuneiform': ['xray', 'ct'], 'lateral-cuneiform': ['xray', 'ct'],
+};
+for (const [slug, imaging] of Object.entries(boneCartilageTopics)) {
+  const lesson = specimenClinicalLessons[slug];
+  same(Object.keys(lesson.topics).sort(), ['clinical', 'pathology', ...imaging].sort(), `Bone/cartilage topics: ${slug}`);
+  same(Object.values(limbDefinitions).some(def => def.key !== whole.key && def.surfaces.some(s => s.slug === slug)), true);
+  same(Object.keys(lesson).sort(), ['modelLimit', 'selfCheck', 'topics']);
+  same(/FMA\d|FJ\d|"identities"|"scope"/.test(JSON.stringify(lesson)), false);
+}
+same(specimenClinicalLessons['femoral-cartilage'].modelLimit.includes('not femoral-head cartilage'), true);
+same(specimenClinicalLessons['tibial-cartilage'].modelLimit.includes('group remains grouped'), true);
+same(specimenClinicalLessons['intermediate-cuneiform'].modelLimit.includes('Do not assign a second-metatarsal lesion ID'), true);
+same(specimenClinicalLessons.navicular.topics.xray.body.includes('may not appear'), true);
 // Keep original summaries brief; no reference text/tables/diagrams are imported.
 for (const [url, words] of Object.entries(referenceWords)) same(words <= 200, true, `Excessive reliance on one reference: ${url} (${words})`);
 for (const def of Object.values(limbDefinitions)) for (const selected of def.surfaces) {
@@ -152,6 +170,16 @@ for (const selected of whole.surfaces.filter(s => specimenClinicalLessons[s.slug
   same(render('SpecimenLearning', { definition: whole, selected: forged, initialTopic: 'clinical' }).includes('Teaching unavailable for this source binding'), true);
 }
 const linkSource = await readFile('app/specimen-study-link.tsx', 'utf8');
+// The unresolved source groups retain baseline learning, never generic clinical filler.
+for (const slug of ['pelvis-group', 'foot-bone-group']) {
+  const selected = whole.surfaces.find(s => s.slug === slug);
+  same(availableSpecimenTopics(whole, selected.id), ['anatomy', 'function']);
+  for (const topic of specimenTopics.slice(2)) {
+    const html = render('SpecimenLearning', { definition: whole, selected, initialTopic: topic }); markupCases++;
+    same(html.includes('teaching is pending for this source selection'), true);
+    same(makeSpecimenLink(whole, { selectedId: selected.id, view: 'anterior', topic }), null);
+  }
+}
 same(linkSource.includes('availableSpecimenTopics(definition, selectedId)'), true);
 same(linkSource.includes('topics.map('), true);
 console.log(JSON.stringify({ checks, exactExtendedSelections: expected.length, draftTopics: counts, clinicalSelfChecks: expected.length, markupCases, sourceBoundTopicLinks: deepLinks, referenceWords, clinicalOrBrowserAcceptance: false }));

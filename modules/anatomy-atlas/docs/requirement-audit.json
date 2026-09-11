@@ -80,14 +80,15 @@
     "lib/um-limb-studies.ts": "a544d566b88d1a55c23f85e743d5cbabcc2518c54458c18eff6faa429a9ce810",
     "lib/um-limb-teaching.ts": "df91dac09be82707f42bd5bafc593396a155013be22d2a9acbacbc49efeced18",
     "content/um-limb-teaching.ts": "a595b6a56d315fe1a08e77aa8dcb3c4f1b7fe74589ef72140d38d605e8b2abb7",
-    "content/um-limb-clinical.ts": "a3b284a3cd08646690a4ac54c4461daadd6a7b7676c5b9c928871b26bcbe7577",
+    "content/um-limb-clinical.ts": "552cb9cf96de3173773ecb71e88e9e19a08904f7ff3bade456f74d815ad41161",
     "content/um-hip-thigh-clinical.ts": "07bb3a62231ffa4f8283b02da90703273e015cd051fbdb604ddaa3d5afe8b6ec",
     "content/um-calf-foot-clinical.ts": "aed9e450838c1c2bc74d904a46a75604af2ab429c3c8313a12da13d8a595476a",
     "content/um-hip-muscle-clinical.ts": "549770dd9f1b85494595b227c187b87ab91bb56e43d31f1f62fbb185cac5b252",
+    "content/um-bone-cartilage-clinical.ts": "a4fe264638d77bf5d2fb5dfeaaca2f69466075b5bbcd3f2f66f978c8204c0a8e",
     "content/um-limb-motor.ts": "28bd381dbe13677053a13710617041411125e143b3651aef2e8474de225a8b0c",
     "lib/um-limb-motor.ts": "f22ebd7d595c6b1c4a6918047f20fdadefd387db142ae91473e6da0e274bef68",
     "app/um-limb-motor.tsx": "b0cbc68e49b2ddb719a50adf4b0d982cdf77cadd3479f21790258a197dd2559c",
-    "content/um-limb-teaching-bindings.v1.json": "04a17399c71edfe984ac2b0d69dc6467ebbd3bc103fb8db587e69807305cd335",
+    "content/um-limb-teaching-bindings.v1.json": "f78af67e6db906e672e7a8b23e0b6bbc1d6b0edaa1ec091c2cd00f5f715154bf",
     "lib/specimen-links.ts": "a185fc2f0c8f439c423660acfe1ada45605245e1131b6e317d130a7339944d76",
     "lib/um-limb-navigation.ts": "75c727d4ee64afe9c385adbac1c11b64cb4831ef2021bad488d2264fa399163b",
     "content/um-limb-navigation.v1.json": "34833f71e385972efb27f5798a094cb23f4df608c8baa4ca8256bb725332174c",
@@ -201,31 +202,31 @@
           "identificationPractice": "up to 10 visible pinned source selections per round; first-try/reveal/retry-missed",
           "extendedTopics": {
             "clinical": {
-              "draft": 54,
-              "pending": 13
+              "draft": 65,
+              "pending": 2
             },
             "pathology": {
-              "draft": 54,
-              "pending": 13
+              "draft": 65,
+              "pending": 2
             },
             "ct": {
-              "draft": 4,
-              "pending": 63
+              "draft": 11,
+              "pending": 56
             },
             "mri": {
-              "draft": 27,
-              "pending": 40
+              "draft": 35,
+              "pending": 32
             },
             "xray": {
-              "draft": 20,
-              "pending": 47
+              "draft": 31,
+              "pending": 36
             },
             "ultrasound": {
               "draft": 21,
               "pending": 46
             }
           },
-          "clinicalSelfChecks": 54,
+          "clinicalSelfChecks": 65,
           "clinicalPathologyImaging": "introductory drafts for selected structures; no clinical approval, scan registration or lecture entitlement",
           "countedAsRootOrNestedTeaching": false
         }

@@ -158,7 +158,54 @@
         "function": "Carries load from knee to ankle.",
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK537024/"
-        ]
+        ],
+        "extended": {
+          "modelLimit": "The entire supplied tibia remains one selection. No plateau depression, fracture fragment, compartment pressure or separately graded malleolar injury is rendered; source defects are not fractures.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Assess proximal tibial injury together with surrounding soft tissues and neurovascular findings. Increasing severe pain or new numbness after injury needs urgent assessment; compartment syndrome is an emergency.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/fractures-of-the-proximal-tibia-shinbone/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "A tibial-plateau fracture extends into the knee joint; some proximal tibial fractures do not enter the joint. Articular injury and shaft injury are not equivalent.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/fractures-of-the-proximal-tibia-shinbone/"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "Radiographs locate tibial fractures and show alignment, but persistent suspicion of a plateau injury is not resolved by a negative film alone.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/fractures-of-the-proximal-tibia-shinbone/"
+              ]
+            },
+            "ct": {
+              "readiness": "draft",
+              "body": "CT characterises plateau involvement, fragment position and fracture complexity. The whole reference bone does not provide a patient fracture classification.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/fractures-of-the-proximal-tibia-shinbone/"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI may investigate an occult plateau injury or associated soft-tissue damage. It is not a routine requirement for every tibial fracture.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/fractures-of-the-proximal-tibia-shinbone/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "What distinguishes a tibial-plateau fracture from an extra-articular proximal tibial fracture?",
+            "answer": "A plateau fracture involves the knee joint surface. Not every proximal tibial fracture enters the joint.",
+            "references": [
+              "https://www.orthoinfo.org/diseases--conditions/fractures-of-the-proximal-tibia-shinbone/"
+            ]
+          }
+        }
       }
     },
     {
@@ -214,7 +261,55 @@
         "function": "Provides muscle attachments and lateral ankle stability.",
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK537024/"
-        ]
+        ],
+        "extended": {
+          "modelLimit": "A whole fibula is shown, without syndesmotic ligaments, a validated stress examination or ankle-fracture classification. Exploded spacing cannot demonstrate instability.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Follow the entire fibula rather than examining only its distal tip. Interpret its position alongside tibial, talar and ligamentous relationships.",
+              "references": [
+                "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/malleoli/suprasyndesmotic-proximal-fibular-fracture-medial-injury-posterior-fracture/definition"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "A proximal fibular fracture can be part of a wider ankle injury involving the syndesmosis and medial structures; distance from the ankle does not make it irrelevant.",
+              "references": [
+                "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/malleoli/suprasyndesmotic-proximal-fibular-fracture-medial-injury-posterior-fracture/definition"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "Ankle radiographs assess distal fibular injury and the surrounding mortise. Clinical concern for a more proximal injury requires assessment beyond the ankle alone.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/ankle-fractures-broken-ankle/",
+                "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/malleoli/suprasyndesmotic-proximal-fibular-fracture-medial-injury-posterior-fracture/definition"
+              ]
+            },
+            "ct": {
+              "readiness": "draft",
+              "body": "CT can clarify complex ankle fracture anatomy and joint involvement. It does not turn this isolated reference fibula into a mechanical stability test.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/ankle-fractures-broken-ankle/"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI may assess associated ankle ligament injury when needed, but is rarely required for straightforward ankle-fracture assessment.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/ankle-fractures-broken-ankle/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Can a proximal fibular fracture be relevant to an ankle injury?",
+            "answer": "Yes. Some patterns include proximal fibular, syndesmotic and medial injury; do not assume every proximal fracture has that pattern.",
+            "references": [
+              "https://surgeryreference.aofoundation.org/orthopedic-trauma/adult-trauma/malleoli/suprasyndesmotic-proximal-fibular-fracture-medial-injury-posterior-fracture/definition"
+            ]
+          }
+        }
       }
     },
     {
@@ -270,7 +365,47 @@
         "function": "Improves quadriceps leverage at the knee.",
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK500017/"
-        ]
+        ],
+        "extended": {
+          "modelLimit": "The supplied kneecap has no fracture grade, separately identified bipartite variant or dynamic extensor assessment. Source fragments cannot be interpreted as patient fracture fragments.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Relate the patella to the quadriceps tendon above, patellar tendon below and femoral articular surface behind.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/patellar-kneecap-fractures/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "A patellar fracture may impair active knee extension and damage the joint surface; its clinical importance is not just the number of bone fragments.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/patellar-kneecap-fractures/"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "Views from different angles assess a patellar fracture and displacement. A developmental bipartite patella can resemble a fracture and needs appropriate interpretation.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/patellar-kneecap-fractures/"
+              ]
+            },
+            "ct": {
+              "readiness": "draft",
+              "body": "CT may clarify a multifragmentary patellar fracture when detailed assessment is needed. Fragment count alone does not establish extensor function.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/patellar-kneecap-fractures/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does a two-part patellar appearance always mean an acute fracture?",
+            "answer": "No. A developmental bipartite patella can resemble a fracture; the history and appropriate radiographs help distinguish them.",
+            "references": [
+              "https://www.orthoinfo.org/diseases--conditions/patellar-kneecap-fractures/"
+            ]
+          }
+        }
       }
     },
     {
@@ -335,7 +470,45 @@
         "function": "Supports low-friction contact at knee articulations.",
         "references": [
           "https://openstax.org/books/anatomy-and-physiology-2e/pages/9-6-anatomy-of-selected-synovial-joints"
-        ]
+        ],
+        "extended": {
+          "modelLimit": "Only the supplied distal femoral cartilage surface is selected, not femoral-head cartilage. Condylar/trochlear defects, lesion depths and microscopic tissue quality are not separately mapped.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Knee pain and stiffness require clinical assessment across the joint; they do not localise a cartilage defect to this femoral surface.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/arthritis-of-the-knee/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Articular cartilage wear can accompany joint degeneration and adjacent bone changes. The supplied surface is not a staged osteoarthritis model.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/arthritis-of-the-knee/"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "Radiographs infer cartilage loss through joint-space changes and associated bone findings; they do not outline this cartilage surface directly.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/arthritis-of-the-knee/"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI can help assess cartilage and other joint tissues when needed. A smooth reference surface is not evidence of normal patient cartilage.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/arthritis-of-the-knee/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does this selection include the cartilage of the femoral head?",
+            "answer": "No. It is the distal femoral surface at the knee; femoral-head cartilage remains a separate source selection.",
+            "references": []
+          }
+        }
       }
     },
     {
@@ -400,7 +573,45 @@
         "function": "Supports low-friction femorotibial contact.",
         "references": [
           "https://openstax.org/books/anatomy-and-physiology-2e/pages/9-6-anatomy-of-selected-synovial-joints"
-        ]
+        ],
+        "extended": {
+          "modelLimit": "The original tibial cartilage group remains grouped and distinct from the menisci. No medial/lateral compartment grade, cartilage thickness measurement or load-bearing joint space is supplied.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Assess tibiofemoral symptoms with examination and appropriate imaging. This grouped articular surface cannot identify one symptomatic compartment.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/arthritis-of-the-knee/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Degeneration may involve cartilage with neighbouring bone and other joint tissues. An intact-looking tibial surface does not exclude disease elsewhere.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/arthritis-of-the-knee/"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "Joint-space narrowing is an indirect joint finding, not a direct measurement of this grouped cartilage mesh.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/arthritis-of-the-knee/"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI can assess joint soft tissues when clinically indicated; this cartilage selection alone does not establish meniscal integrity.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/arthritis-of-the-knee/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Is tibial articular cartilage the same source selection as the menisci?",
+            "answer": "No. The tibial cartilage group and meniscus group remain distinct supplied tissues; neither is split into invented lesion selections.",
+            "references": []
+          }
+        }
       }
     },
     {
@@ -456,7 +667,47 @@
         "function": "Supports low-friction patellofemoral contact.",
         "references": [
           "https://openstax.org/books/anatomy-and-physiology-2e/pages/9-6-anatomy-of-selected-synovial-joints"
-        ]
+        ],
+        "extended": {
+          "modelLimit": "This is the supplied patellar articular surface. No separate facet lesion, cartilage grade, patellar maltracking or trochlear dysplasia is reconstructed.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Patellofemoral arthritis may cause anterior knee pain, particularly during activities loading the joint. Symptoms alone do not establish a patellar cartilage lesion.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/patellofemoral-arthritis/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Cartilage degeneration on the patella and trochlear side can affect their articulation. A healed patellar fracture may still leave articular damage.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/patellofemoral-arthritis/"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "Radiographs from appropriate angles assess patellofemoral joint space, bone change and overall alignment; the cartilage itself is not directly outlined.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/patellofemoral-arthritis/"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI may better evaluate patellofemoral cartilage when needed. The selected surface cannot establish a patient lesion or its severity.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/patellofemoral-arthritis/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Can articular damage persist after a patellar fracture has healed?",
+            "answer": "Yes. Healing of bone does not ensure a smooth cartilage surface; residual joint damage can contribute to later arthritis.",
+            "references": [
+              "https://www.orthoinfo.org/diseases--conditions/patellofemoral-arthritis/"
+            ]
+          }
+        }
       }
     },
     {
@@ -1450,7 +1701,54 @@
         "function": "Supports the lateral foot column.",
         "references": [
           "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb"
-        ]
+        ],
+        "extended": {
+          "modelLimit": "One original cuboid surface is shown. Lateral-column shortening, articular depression and operative distraction are not measured or simulated; grouped adjacent bones do not acquire individual identities.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Study the cuboid between the calcaneus and lateral metatarsal bases rather than assessing it only in isolation.",
+              "references": [
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC6379735/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Cuboid injury can affect the length and joint relationships of the lateral foot column. This is different from simply identifying a loose bone fragment.",
+              "references": [
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC6379735/"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "Foot radiographs assess cuboid and adjacent joint injury, but overlap can hide an occult fracture. Persistent clinical suspicion may require additional imaging.",
+              "references": [
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC6379735/"
+              ]
+            },
+            "ct": {
+              "readiness": "draft",
+              "body": "CT clarifies fracture configuration and articular displacement. Reference explode distance is not a measurement of lateral-column shortening.",
+              "references": [
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC6379735/"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI can reveal an occult cuboid fracture when radiographs are unrevealing. Imaging findings require interpretation with symptoms and the wider foot injury.",
+              "references": [
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC6379735/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Why assess lateral-column relationships as well as a cuboid fracture line?",
+            "answer": "Loss of column length and articular displacement can alter foot mechanics. The atlas separation slider does not measure either.",
+            "references": [
+              "https://pmc.ncbi.nlm.nih.gov/articles/PMC6379735/"
+            ]
+          }
+        }
       }
     },
     {
@@ -1514,7 +1812,47 @@
         "function": "Contributes to midfoot support.",
         "references": [
           "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb"
-        ]
+        ],
+        "extended": {
+          "modelLimit": "The intermediate cuneiform is separately named, but its adjacent grouped foot bones are not individually resolved. Do not assign a second-metatarsal lesion ID through this selection.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Relate the selected cuneiform to the navicular and metatarsal bases, examining the joint assembly rather than a single bone.",
+              "references": [
+                "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Lisfranc-region injury can involve ligaments, fractures or dislocations across the midfoot joint complex. Intact-looking bones do not exclude a ligamentous injury.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/lisfranc-midfoot-injury"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "Assess midfoot alignment across the joint assembly; a normal non-weight-bearing film can miss subtle instability.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/lisfranc-midfoot-injury"
+              ]
+            },
+            "ct": {
+              "readiness": "draft",
+              "body": "CT clarifies the number of joints involved and fracture extent; it is not required for every Lisfranc injury.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/lisfranc-midfoot-injury"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Which metatarsal normally articulates with the intermediate cuneiform distally?",
+            "answer": "The second metatarsal. That anatomical relationship does not create an individually identified metatarsal within this specimen's unresolved foot-bone group.",
+            "references": [
+              "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb"
+            ]
+          }
+        }
       }
     },
     {
@@ -1578,7 +1916,45 @@
         "function": "Contributes to midfoot support.",
         "references": [
           "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb"
-        ]
+        ],
+        "extended": {
+          "modelLimit": "The lateral cuneiform is not the cuboid. No third-ray fracture, ligament tear or calibrated tarsometatarsal spacing is assigned to this intact reference bone.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Relate the selected cuneiform to the navicular and metatarsal bases, examining the joint assembly rather than a single bone.",
+              "references": [
+                "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Lisfranc-region injury can involve ligaments, fractures or dislocations across the midfoot joint complex. Intact-looking bones do not exclude a ligamentous injury.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/lisfranc-midfoot-injury"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "Interpret the cuneiform with neighbouring midfoot joints; radiographic alignment is not the same as exploded reference spacing.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/lisfranc-midfoot-injury"
+              ]
+            },
+            "ct": {
+              "readiness": "draft",
+              "body": "CT may define complex midfoot fractures and joint involvement; a single selected cuneiform does not describe the entire injury.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/lisfranc-midfoot-injury"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Is the lateral cuneiform another name for the cuboid?",
+            "answer": "No. They are distinct supplied tarsal bones and retain separate selections in this specimen.",
+            "references": []
+          }
+        }
       }
     },
     {
@@ -1642,7 +2018,47 @@
         "function": "Contributes to midfoot support.",
         "references": [
           "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb"
-        ]
+        ],
+        "extended": {
+          "modelLimit": "This source bone is distinct from the intermediate and lateral cuneiforms. No Lisfranc ligament, first/second-ray instability or patient diastasis is separately mapped.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Relate the selected cuneiform to the navicular and metatarsal bases, examining the joint assembly rather than a single bone.",
+              "references": [
+                "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Lisfranc-region injury can involve ligaments, fractures or dislocations across the midfoot joint complex. Intact-looking bones do not exclude a ligamentous injury.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/lisfranc-midfoot-injury"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "Clinician-directed weight-bearing views may reveal subtle midfoot widening not evident on non-weight-bearing films.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/lisfranc-midfoot-injury"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI may assess suspected Lisfranc ligament injury when the diagnosis remains uncertain; this bone is not that ligament.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/lisfranc-midfoot-injury"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does a normal non-weight-bearing film exclude a subtle Lisfranc injury?",
+            "answer": "No. Some instability is only apparent on further appropriately selected imaging.",
+            "references": [
+              "https://www.orthoinfo.org/diseases--conditions/lisfranc-midfoot-injury"
+            ]
+          }
+        }
       }
     },
     {
@@ -1706,7 +2122,54 @@
         "function": "Contributes to the medial arch.",
         "references": [
           "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb"
-        ]
+        ],
+        "extended": {
+          "modelLimit": "The foot navicular is not the wrist scaphoid. No stress-fracture line, accessory navicular, bone-strength test or marrow signal is represented.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Relate the navicular to the talar head and cuneiforms while distinguishing overuse injury from a single traumatic event.",
+              "references": [
+                "https://www.footcaremd.org/foot-and-ankle-conditions/midfoot/navicular-stress-fractures"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Repetitive loading can cause a navicular stress fracture with gradually developing midfoot pain. Early radiographs may appear normal.",
+              "references": [
+                "https://www.footcaremd.org/foot-and-ankle-conditions/midfoot/navicular-stress-fractures"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "Early navicular stress fractures may not appear on radiographs. Ongoing activity-related midfoot symptoms need clinical assessment despite a normal initial film.",
+              "references": [
+                "https://www.footcaremd.org/foot-and-ankle-conditions/midfoot/navicular-stress-fractures"
+              ]
+            },
+            "ct": {
+              "readiness": "draft",
+              "body": "CT can help investigate suspected navicular stress fracture when radiographs are inconclusive. This reference surface cannot establish healing or a return-to-sport date.",
+              "references": [
+                "https://www.footcaremd.org/foot-and-ankle-conditions/midfoot/navicular-stress-fractures"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI may reveal a suspected navicular stress injury not visible on radiographs. A normal-looking 3D surface is not equivalent to a negative scan.",
+              "references": [
+                "https://www.footcaremd.org/foot-and-ankle-conditions/midfoot/navicular-stress-fractures"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does a normal early X-ray exclude navicular stress fracture?",
+            "answer": "No. A clinically suspected stress fracture may need further assessment or imaging even when the initial radiograph looks normal.",
+            "references": [
+              "https://www.footcaremd.org/foot-and-ankle-conditions/midfoot/navicular-stress-fractures"
+            ]
+          }
+        }
       }
     },
     {

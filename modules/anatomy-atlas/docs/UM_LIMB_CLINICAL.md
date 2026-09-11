@@ -2,11 +2,28 @@
 
 ## Delivered scope
 
-Fifty-four exact source selections now have 180 introductory topic drafts and 54 clinical self-checks. All 42 supplied muscle selections have Clinical/Pathology drafts; this is introductory coverage, not complete muscle radiology or clinical validation. They use the existing Learn panel with three compact groups: Anatomy (Overview/Function), Clinical (Context/Pathology) and Imaging (CT/MRI/X-ray/Ultrasound). All 67 baseline anatomy/function lessons remain. Absent content is explicitly pending, not a generic completed lesson. No additional controls or expanded-by-default panel were added.
+Sixty-five exact source selections now have 228 introductory topic drafts and 65 clinical self-checks: Clinical 65, Pathology 65, CT 11, MRI 35, X-ray 31 and Ultrasound 21. All 42 supplied muscles have Clinical/Pathology drafts. This is introductory coverage, not complete radiology or clinical validation. The existing Learn panel retains three compact groups: Anatomy (Overview/Function), Clinical (Context/Pathology) and Imaging (CT/MRI/X-ray/Ultrasound). All 67 baseline anatomy/function lessons remain. The unresolved pelvic and foot-bone groups remain extended-topic pending; no generic filler or additional controls were added.
+
+### Bones and cartilage — 11 September 2026
+
+Eleven identified selections gain 48 topics and eleven original self-checks. They cover fracture/joint context, modality limitations and midfoot relationships without simulating patient injuries or importing another specimen's identities.
+
+| Selections | Clinical + Pathology | Added imaging |
+| --- | ---: | --- |
+| Tibia, fibula | 4 | X-ray, CT and MRI for each |
+| Patella | 2 | X-ray and CT |
+| Distal femoral, grouped tibial and patellar cartilage | 6 | X-ray and MRI for each |
+| Cuboid, navicular | 4 | X-ray, CT and MRI for each |
+| Medial cuneiform | 2 | X-ray and MRI |
+| Intermediate and lateral cuneiforms | 4 | X-ray and CT for each |
+
+Tibial plateau involvement is distinguished from extra-articular fracture; fibular teaching retains ankle/syndesmotic context without diagnosing every proximal fracture as a Maisonneuve injury. Patellar variants, occult midfoot injuries and indirect radiographic cartilage assessment are explained. Exploded spacing never measures instability, column shortening or joint space. Grouped cartilage remains grouped; no Lisfranc ligament, individual metatarsal, fracture fragment or cartilage grade is invented.
+
+Only eleven previously absent extended sets change from the remaining-hip checkpoint. All 67 baseline lessons, source entries and bundle hashes, the other 56 complete lessons, navigation/source pins and every mesh remain unchanged. `pelvis-group` and `foot-bone-group` need reliable individual identities before structure-specific extended lessons can be added.
 
 ### Remaining hip muscles — 11 September 2026
 
-Sixteen existing hip/thigh muscle selections gain 43 topics and sixteen original self-checks. These finish introductory Clinical/Pathology coverage for the independent specimen's 42 muscles, without importing another subject's identities or changing geometry. This does not close the remaining thirteen bone/cartilage teaching gaps or the many unauthored modality topics.
+Sixteen existing hip/thigh muscle selections gained 43 topics and sixteen original self-checks at this earlier checkpoint. These finished introductory Clinical/Pathology coverage for the independent specimen's 42 muscles, without importing another subject's identities or changing geometry. Thirteen bone/cartilage teaching gaps remained at that checkpoint; the newer extension above addresses eleven.
 
 | Selections | Clinical + Pathology | Added imaging |
 | --- | ---: | --- |
@@ -75,7 +92,7 @@ The material distinguishes partial/complete disruption, accompanying injuries an
 
 ## Exact identity and navigation
 
-`content/um-limb-clinical.ts` incorporates explicit concepts from `content/um-hip-thigh-clinical.ts`, `content/um-calf-foot-clinical.ts` and `content/um-hip-muscle-clinical.ts`; `content/um-limb-teaching.ts` attaches them only to existing named concepts. The teaching-pin script binds complete source entries, bundle hashes and lessons. Runtime resolution returns detached exact-bound content and rejects foreign or altered source entries. Grouped menisci stay grouped; source defects cannot be interpreted as disease. Reusing authored prose is not registration to another subject.
+`content/um-limb-clinical.ts` incorporates explicit concepts from `content/um-hip-thigh-clinical.ts`, `content/um-calf-foot-clinical.ts`, `content/um-hip-muscle-clinical.ts` and `content/um-bone-cartilage-clinical.ts`; `content/um-limb-teaching.ts` attaches them only to existing named concepts. The teaching-pin script binds complete source entries, bundle hashes and lessons. Runtime resolution returns detached exact-bound content and rejects foreign or altered source entries. Grouped menisci stay grouped; source defects cannot be interpreted as disease. Reusing authored prose is not registration to another subject.
 
 `availableSpecimenTopics` uses the actual bound lesson, not a global promise of availability. Copy/open links offer only available drafts; manually supplied unsupported topic requests fail closed with `topic-unavailable`. The dedicated route opens the appropriate outer group and topic. Existing Anatomy/Function links remain compatible. Opening Imaging normally chooses an available modality, preferring MRI where authored. No pending topic silently becomes an alternative.
 
@@ -89,9 +106,11 @@ These are reference-only sources for brief original factual synthesis. No articl
 
 ## Verification and outstanding review
 
-`npm run um-limb-clinical:test` checks all 54 exact source/lesson bindings, the 180-topic matrix and exact regional per-structure coverage, detachment/foreign-source rejection, available/pending link behavior in all five scopes and installed React markup for all 324 topic states. There are 405 source-bound extended-topic links across overlapping scopes. It verifies the requested group opens, references and cautions render, and pending states remain explicit. All 42 supplied muscles must have Clinical/Pathology drafts; all 54 self-check questions must be distinct. Explicit guards retain soleus/ADM cautions, distinguish lateral gastrocnemius, preserve VMO/tract/case-series/impingement limits and reject another specimen's identifiers or an invented separate EHB lesson. These are regression checks, not specialist or browser acceptance.
+`npm run um-limb-clinical:test` passes 6,080 checks: all 67 pins, 65 extended lessons, the 228-topic matrix, exact regional coverage, detachment/foreign-source rejection and available/pending links in all five scopes. Installed React markup covers 402 topic states, including all twelve states of the two held groups. There are 535 source-bound extended-topic links across overlapping scopes. All 42 muscles retain Clinical/Pathology drafts and all 65 self-check questions are distinct. Explicit guards retain prior muscle cautions, grouped-cartilage limits, separate femoral-head identity, occult-navicular cautions and unresolved metatarsal identities. These are regression checks, not specialist or browser acceptance.
 
-Required before clinical release: clinician/radiologist review of claims, nuance, local practice and references; orthopedic review of attachment/ligament grouping and source defects; real modality-specific image examples with de-identification and rights; scan-to-model registration validation before synchronized highlighting; browser/GPU/mobile, screen-reader, touch, keyboard and clipboard acceptance. Further content is still needed for thirteen independent bone/cartilage selections and the unauthored modality topics above. The broader atlas remains incomplete, including major peripheral nerves and many joint/fascial structures. Routine oral detail remains deferred.
+Required before clinical release: clinician/radiologist review of claims, nuance, local practice and references; orthopedic review of attachment/ligament grouping and source defects; real modality-specific image examples with de-identification and rights; scan-to-model registration validation before synchronized highlighting; browser/GPU/mobile, screen-reader, touch, keyboard and clipboard acceptance. The two unresolved source groups and many unauthored modality topics remain pending. The broader atlas remains incomplete, including major peripheral nerves and many joint/fascial structures. Routine oral detail remains deferred.
+
+Bone/cartilage references checked 11 September 2026: AAOS proximal-tibia, ankle/patella fracture, knee/patellofemoral arthritis and Lisfranc teaching; AO proximal-fibular injury definition; AOFAS navicular stress-fracture teaching; Angoules et al. cuboid review (2019); OpenStax lower-limb anatomy. Exact links are retained in `boneCartilageClinicalReferences` and attached to each draft. Brief original synthesis and appropriate existing MIT prose are reused, not publisher articles, diagrams or protocols. All independent cited topic/self-check text remains below 200 words per reference (maximum 185). No surgical thresholds, current treatment pathway, paid service or new asset is added.
 
 Remaining-hip reference pass, 11 September 2026: NCBI adductor strain and muscle anatomy, [AAOS pes bursitis](https://www.orthoinfo.org/diseases--conditions/pes-anserine-knee-tendon-bursitis), the existing AAOS snapping/quad-tendon and ESSR hip/knee guidance, [deep-gluteal review](https://pubmed.ncbi.nlm.nih.gov/32349600/), [externus case series](https://pubmed.ncbi.nlm.nih.gov/36143822/) and [asymptomatic ischiofemoral MRI study](https://pubmed.ncbi.nlm.nih.gov/25680726/). These support brief original orientation notes, not an exhaustive current evidence review or local treatment pathway. No publisher text, articles, tables, illustrations, scans or external questions are bundled. Aggregate cited topic/self-check synthesis across the independent lessons stays below 200 words per reference (maximum 185), including URLs shared with older lessons. Public access and NCBI hosting do not grant commercial asset rights or override NC-ND restrictions.
 

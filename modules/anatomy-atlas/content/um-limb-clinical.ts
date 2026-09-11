@@ -3,6 +3,7 @@
 import { hipThighClinicalLessons, hipThighClinicalReferences } from './um-hip-thigh-clinical';
 import { calfFootClinicalLessons, calfFootClinicalReferences } from './um-calf-foot-clinical';
 import { hipMuscleClinicalLessons, hipMuscleClinicalReferences } from './um-hip-muscle-clinical';
+import { boneCartilageClinicalLessons, boneCartilageClinicalReferences } from './um-bone-cartilage-clinical';
 export type SpecimenExtendedTopic = 'clinical' | 'pathology' | 'ct' | 'mri' | 'xray' | 'ultrasound';
 export type SpecimenTopicDraft = { readiness: 'draft'; body: string; references: string[] };
 export type SpecimenClinicalLesson = {
@@ -12,6 +13,7 @@ export type SpecimenClinicalLesson = {
 };
 const aaos = (slug: string) => `https://www.orthoinfo.org/diseases--conditions/${slug}/`;
 export const specimenClinicalReferences = {
+  ...boneCartilageClinicalReferences,
   ...hipMuscleClinicalReferences,
   ...calfFootClinicalReferences,
   ...hipThighClinicalReferences,
@@ -31,6 +33,7 @@ const urls = (...keys: Reference[]) => keys.map(k => specimenClinicalReferences[
 const draft = (body: string, ...refs: Reference[]): SpecimenTopicDraft => ({ readiness: 'draft', body, references: urls(...refs) });
 const quiz = (question: string, answer: string, ...refs: Reference[]) => ({ question, answer, references: urls(...refs) });
 export const specimenClinicalLessons: Record<string, SpecimenClinicalLesson> = {
+  ...boneCartilageClinicalLessons,
   ...hipMuscleClinicalLessons,
   ...calfFootClinicalLessons,
   ...hipThighClinicalLessons,

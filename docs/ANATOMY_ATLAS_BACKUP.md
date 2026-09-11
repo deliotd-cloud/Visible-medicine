@@ -1,6 +1,20 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — remaining hip-muscle teaching (current)
+## 11 September 2026 — bone/cartilage teaching (current)
+
+Source `50af727465b924f4de36034032fdb2e3cf7ec14b`, tree `00f27b1a45e4f952f81197ccaec32db67f449196`, parent `7aa5fe9eff40360bd3dae8a144ecc21ec314f748`. Eleven changed paths mirrored into `modules/anatomy-atlas`; main website unchanged. Exact Sites source push succeeded; full HEAD verified and ephemeral credential cleared.
+
+Eleven identified lower-limb bone/cartilage selections gain 48 topics and eleven self-checks. Current independent teaching: 65 extended selections, 228 topics, 65 self-checks; all 42 muscles retain introductory Clinical/Pathology. Unresolved pelvic and foot-bone groups remain extended-topic pending. All 67 base lessons/source/bundle bindings, the other 56 complete lessons, navigation pins, meshes and controls are unchanged. No invented individual metatarsal, Lisfranc ligament, fracture grade, measured instability or cartilage lesion. No patient scans, registration, entitlement, dependency, asset or fee changes.
+
+Passed 6,080 clinical checks / 402 installed-React topic states / 535 source-bound extended links; 1,310 baseline learning checks; TypeScript; inventory/diff checks; production build with byte-exact buffer/scene transport checks for all 107 runtime models. Nine shoulder review fingerprints remain unchanged. Clinical/browser/device/accessibility acceptance is not claimed.
+
+Native save 140 `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_65c3c99026e48191baf711718c157635` and private deployment `appgdep_6aa3574144488191b8272fb2c0fc953e` SUCCEEDED, terminal `2026-09-11T01:20:25.875085+00:00`, https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site. No pending save/deployment or audience change; background browser preserved.
+
+Recovery stem `work/atlas-um-bone-cartilage-clinical-2026-09-11`: runtime 99,185,518 bytes SHA256 `b405780c81a835d50cdf7ff839dc528f0ec4b9974090e99568ef213c248703f5`; delta 614,400 bytes SHA256 `73b7c09e8107f8afb956dac571ee1c708343338d0f036a2dcd63ae25023f2ae9`; incremental bundle 14,823 bytes SHA256 `fb7e7aefc3031e32d69aa8d12be8baae5a4747df89d4399fe95f33f794682ec6`. Bundle requires source parent, not standalone. Archive 341 entries; mirror 1,416 files / 334,479,035 bytes / 111 GLBs, no common credential signatures (not exhaustive). Preparation JSON predates receipt; never rerun helper or overwrite artifacts. Older files retained.
+
+Full checkpoint `work/ATLAS_UM_BONE_CARTILAGE_CLINICAL_2026-09-11.md`. Same-PC recovery and Sites saving are not GitHub delivery, chat/private-review database backup or independently tested full off-device restoration. Continue substantive regional development and genuinely cleared missing anatomy; routine oral detail and completed introductory passes remain deferred.
+
+## 11 September 2026 — remaining hip-muscle teaching
 
 Source `7aa5fe9eff40360bd3dae8a144ecc21ec314f748`, tree `faa505a7107070f9dbeab71187383f65a677ddad`, parent `ca49c62ef11895b6f9cbaa283e7750cfa5937f8d`. Eleven changed paths mirrored into `modules/anatomy-atlas`; main website unchanged. Exact Sites source push succeeded; full HEAD verified, credential cleared.
 
