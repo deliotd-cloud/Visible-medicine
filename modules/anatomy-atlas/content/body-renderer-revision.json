@@ -46,7 +46,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "4cc4eb6379e9d63ada620897efde95ad09e808c7c5a248d51573f6d2bf0515c4"
+      "sha256": "8593748178cfe37fe97b5d1c45dc7dd7e356a3b3b6ea2c3d921a05c8f3900f93"
     },
     {
       "path": "app/body-explorer.css",
@@ -319,6 +319,14 @@
     {
       "path": "content/hepatic-teaching.ts",
       "sha256": "793d49e8e33bc4daed5889b9bc58403a11280d39dd1d6894d0f5ff7c8fc0372d"
+    },
+    {
+      "path": "content/hip-imaging-concepts.ts",
+      "sha256": "d4f9b63d17e1a870f7c3bb74edcf77296f361446de8598a3d7f0ffd62285262e"
+    },
+    {
+      "path": "content/hip-imaging-pins.json",
+      "sha256": "aa6a306d480e42c8af77a628537fcb7fd694217e97a93e60bbd824c5fa8103c5"
     },
     {
       "path": "content/lower-limb-motor-pins.json",
@@ -697,6 +705,10 @@
       "sha256": "86a6ac1226f1ab496c3dc7aee6279da3ef662a0c3316fee10862cb8ba30fae80"
     },
     {
+      "path": "lib/hip-imaging.ts",
+      "sha256": "033f69852bf6b66e3a36b4f6399bc7b0e5e03b0ff1382e9f6017ecd308ef88b5"
+    },
+    {
       "path": "lib/imaging-sync.ts",
       "sha256": "2f3e6743dedbaa39154ced298badfd113bf5ce57e1c5989ff103589dab42daf9"
     },
@@ -1070,7 +1082,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "6b804efaaac54f63e3752636d7caf264b96c6dfc23e3c51eaad82413e40dd819"
+      "sha256": "4795a10ddd05a3ee4886efdf060a2755fb33a36626c284b40b2c33e59b8404b3"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1165,5 +1177,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "1df9b75ecf7490a14ec9a9cad8347aeab53d34aef1773722b2c16d6344fab2b6"
+  "sha256": "e561f0a0d5c4916f8311fcbb29b524c8e8e45ad4d914594d3752069a223a576b"
 }

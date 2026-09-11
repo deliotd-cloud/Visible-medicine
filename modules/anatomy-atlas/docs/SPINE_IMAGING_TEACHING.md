@@ -18,7 +18,7 @@ Open **Spine → select a vertebra or disc → Imaging → CT / MRI / X-ray**. T
 | Thoracic discs | 11 | Endplate relationships; unresolved T12–L1 source disc |
 | Lumbar discs | 5 | Disc versus neural findings and independent lumbosacral numbering |
 
-Selected structures retain their exact source names. Level-specific cautions supplement the shared group prose. The totals are 25 bone and 22 disc representations. Current root-body draft totals become **64 CT, 66 MRI and 53 X-ray**, including earlier lessons; independent specimens and overlapping dedicated-shoulder records are counted separately.
+Selected structures retain their exact source names. Level-specific cautions supplement the shared group prose. The totals are 25 bone and 22 disc representations. At this milestone, root-body draft totals became **64 CT, 66 MRI and 53 X-ray**; the later [hip/thigh addition](HIP_IMAGING_TEACHING.md) updates current totals without changing these spinal topics. Independent specimens and overlapping dedicated-shoulder records are counted separately.
 
 There is no C1–C2 intervertebral disc anatomically. The unresolved **T12–L1 mesh** is a source omission, not normal absence, collapse or fusion. The sacrum remains one surface, not independent S1. Whole-disc surfaces do not add annulus, nucleus, roots, ligaments, marrow, meninges or a clinically validated cord. Returning separation to zero restores source relationships, not patient registration.
 

@@ -65,10 +65,10 @@ Counts are representations with displayed copy, not unique lessons, complete top
 | --- | ---: | ---: | ---: | ---: |
 | Anatomy | 1020 | 2 | 0 | 0 |
 | Function | 1018 | 0 | 4 | 0 |
-| CT | 64 | 0 | 958 | 0 |
-| MRI | 66 | 0 | 956 | 0 |
+| CT | 90 | 0 | 932 | 0 |
+| MRI | 92 | 0 | 930 | 0 |
 | X-ray | 53 | 0 | 969 | 0 |
-| Ultrasound | 15 | 0 | 1007 | 0 |
+| Ultrasound | 41 | 0 | 981 | 0 |
 | Pathology | 1018 | 0 | 4 | 0 |
 | Clinical | 1018 | 0 | 4 | 0 |
 | Quiz notes | 11 | 0 | 0 | 1011 |

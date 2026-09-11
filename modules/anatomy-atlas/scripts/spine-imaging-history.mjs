@@ -1,6 +1,7 @@
 // Exact offline authoring reconstruction, never runtime content or approvals.
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
+import { authoringBeforeHipImaging } from './hip-imaging-history.mjs';
 import before from '../content/spine-imaging.before.json' with { type: 'json' };
 import after from '../content/spine-imaging.transition.json' with { type: 'json' };
 import pins from '../content/spine-imaging-pins.json' with { type: 'json' };
@@ -8,6 +9,7 @@ const hash = (v) =>
   createHash('sha256').update(JSON.stringify(v)).digest('hex');
 
 export function authoringBeforeSpineImaging({ api, catalog }) {
+  api = authoringBeforeHipImaging({ api, catalog });
   assert.equal(
     hash(before),
     '4efe17d830f8442d48bba78cfe9cb690f4f3fa08a4ebc9adfabd0a8bd134803f',

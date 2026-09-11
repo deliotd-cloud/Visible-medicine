@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Select a hip/thigh muscle → Imaging → CT / MRI / Ultrasound** now opens [source-bound orientation teaching](docs/HIP_IMAGING_TEACHING.md) for 26 existing selections: iliopsoas, abductors, rectus femoris, adductors, proximal hamstrings and quadratus femoris. Six groups supply 18 distinct modality topics with selection-specific cautions. The same compact notes panel is reused; these are drafts, not patient scans or clinical approval.
+
 **Pelvis & hip / Hip & thigh / Knee & leg / Ankle & foot → Dissect → Muscles by nerve** now connects [118 existing muscle selections to 15 nerve/branch groups](docs/LOWER_LIMB_MOTOR.md). Show a group with bones, switch sides and select muscles for their notes. The same collapsed control serves both limbs; mixed/variable supply is qualified. These are draft motor relationships, not modelled nerve paths, complete territories or patient findings.
 
 **Review workspace → Whole-body reviews** opens [source-bound material](docs/BODY_REVIEW_WORKSHEETS.md) for 1,022 body selections. A separate [private decision record](docs/BODY_REVIEW_DECISIONS.md) saves corrections, evidence and scoped anatomy/teaching decisions with append-only history and revision checks. Imaging approval is blocked until validated resources exist. The learner's atlas and existing shoulder records are unchanged; no clinical sign-off is pre-populated.

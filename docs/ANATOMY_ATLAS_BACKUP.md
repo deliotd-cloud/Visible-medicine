@@ -1,6 +1,18 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — root lower-limb motor studies (current source)
+## 11 September 2026 — hip/thigh imaging orientation (current source)
+
+Source `d0b61f72358a8e0718c09b26e9efa69916cd1012`, tree `1c739536a52d0929f77fa7fd4f88c8e708f2f727`, parent `fa1ce62ee804e439ca55e987b79a16ce64a41cac`. Twenty-three paths mirrored once; 1,529 matching source files / 414,192,918 bytes / 112 retained GLBs. Main website unchanged. No common credential-signature warnings (not exhaustive). Sites source push succeeded; complete HEAD verified afterward; temporary credential cleared. **Not confirmed GitHub delivery, conversation backup, private D1 backup or independently restored off-device.**
+
+Existing compact Imaging tabs now supply 78 introductory CT/MRI/US topic drafts for 26 unchanged source muscle/head selections (six groups, 18 distinct modality topics, thirteen selection cautions). Iliacus/psoas, abductor layers, rectus internal contributions, medial-thigh layers, proximal hamstring heads and deep quadratus limits remain distinct. No new control, geometry, scan, paid asset or lecture access. Routine oral work stays deferred.
+
+Passed exact source/name/file and catalogue/frame checks; 1,560 mutated-binding rejections; 78 actual note renders; every other 9,120 body topic plus original shoulder data and study recipe unchanged. Spinal history/141 notes, 1,022 review packets, 3,066 private-decision contexts with local SQLite migrations, 235 older review checks, 48,082 imaging-link assertions, TypeScript, requirement freshness and build passed. All 108 delivered model files preserve original decoded geometry. Clinical and browser/device acceptance remain outstanding.
+
+Recovery stem `work/atlas-hip-imaging-2026-09-11`: runtime archive 109,297,555 bytes, SHA256 `8c6fdcfe60640e8e7c7aec2c11d81e5fee040b1580027c63a3168723e6f15c9c`; delta 593,920 bytes, SHA256 `269ac5370e48bb6254da9523ef53c3bf6088fbfc99ab9e7a8f3dc81542ccc6e5`; incremental bundle 32,128 bytes, SHA256 `8cf144772b1ebfe30ed21e451c66ebbc09454914abd73c14b2a51b438ee00405`. Bundle requires source parent `fa1ce62ee804e439ca55e987b79a16ce64a41cac`; not standalone.
+
+Native version **148**, exact ID `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_359f5d50d0708191a684c159cb29985f`; private deployment `appgdep_6aa392b0287c8191a167019dd875f72c`. Final outcome recorded separately in `work/ATLAS_HIP_IMAGING_2026-09-11.md`; do not duplicate save/deployment. No private production review data or migrations changed. Continue wider-body anatomy/function or genuinely cleared missing source tissues; do not repeat this introductory imaging pass.
+
+## 11 September 2026 — root lower-limb motor studies (previous source)
 
 Source `fa1ce62ee804e439ca55e987b79a16ce64a41cac`, tree `f92cb90b31b1a6c0ac75817e01850f6c23bee5f7`, parent `bc3866d3ec33aeb16d02335b9d1b5076ba9182b9`. Twenty-three source paths mirrored once: 1,519 matching files / 414,026,858 bytes / 112 retained GLBs; no common credential-signature warnings (not an exhaustive audit). Main website remains separate. Sites source push succeeded and full HEAD was verified; temporary credential cleared. GitHub delivery, conversation recovery and private D1 backup are **not** established by this local snapshot.
 
