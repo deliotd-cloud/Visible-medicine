@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Shoulder & arm / Forearm / Hand → Dissect → Muscles by nerve** opens [17 nerve/branch groups](docs/UPPER_LIMB_MOTOR.md) linked to 102 existing muscle selections. Show a group with bones, switch sides and select muscles for their notes. The control stays collapsed; mixed supply and whole grouped surfaces are explicit. These are typical relationships, not nerve paths, patient findings or clinical approval.
+
 **Spine → select a vertebra or disc → Imaging** now adds [CT, MRI and X-ray orientation](docs/SPINE_IMAGING_TEACHING.md) for 47 existing source selections across nine concept groups. Use the same compact panel and focused level dissections. These are referenced drafts, not patient images, automatic level registration or clinical approval; missing tissues and the unresolved T12–L1 source disc stay explicit.
 
 **Abdominal wall → Learn** now adds [source-bound detailed teaching](docs/ABDOMINAL_WALL_SPECIMEN.md#detailed-teaching) for all eight muscles: origins/insertions, actions and motor supply, plus 48 introductory clinical/pathology/imaging topics and eight self-checks. Three compact groups stay within one collapsed panel. These are referenced teaching drafts, not patient images, simulated movement, clinical approval or paid-lecture access.

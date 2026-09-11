@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "upper-limb-motor:test": "node scripts/pin-upper-limb-motor.mjs --check && node scripts/validate-upper-limb-motor.mjs",
     "spine-imaging:test": "node scripts/validate-spine-imaging.mjs",
     "abdominal-wall:export": "node scripts/export-abdominal-wall.mjs",
     "abdominal-wall:test": "node scripts/validate-abdominal-wall.mjs",

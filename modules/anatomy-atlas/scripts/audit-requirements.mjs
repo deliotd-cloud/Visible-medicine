@@ -16,6 +16,8 @@ const bundled = await build({
     contents: `export { limbDefinitions } from './lib/um-limb-studies.ts';
 export { specimenTeachingFor } from './lib/um-limb-teaching.ts';
 export { specimenMotorGroups } from './lib/um-limb-motor.ts';
+export { upperLimbMotorGroups } from './lib/upper-limb-motor.ts';
+export { upperLimbMotorRegions } from './content/upper-limb-motor.ts';
 export { makeSpecimenLink, resolveSpecimenLink } from './lib/um-limb-navigation.ts';
 export { parseSpecimenLink, specimenTopics } from './lib/specimen-links.ts';
 export { bodyContent, bodyLesson } from './app/body-content.ts';
@@ -52,6 +54,8 @@ const {
   limbDefinitions,
   specimenTeachingFor,
   specimenMotorGroups,
+  upperLimbMotorGroups,
+  upperLimbMotorRegions,
   makeSpecimenLink,
   resolveSpecimenLink,
   parseSpecimenLink,
@@ -240,6 +244,11 @@ for (const path of [
   'public/models/bodyparts3d/pancreas/display-correction.json',
   'lib/body-display-catalog.ts',
   'lib/xray-teaching.ts',
+  'lib/upper-limb-motor.ts',
+  'content/upper-limb-motor.ts',
+  'content/upper-limb-motor-pins.json',
+  'app/upper-limb-motor.tsx',
+  'app/upper-limb-motor.css',
   'lib/spine-imaging.ts',
   'content/spine-imaging-concepts.ts',
   'content/spine-imaging-pins.json',
@@ -421,6 +430,13 @@ const report = {
     'Offline source and displayed-copy inventory; no clinical or browser certification.',
   sourceHashes,
   anatomy: {
+    upperLimbMotor: {
+      regions: upperLimbMotorRegions,
+      groups: new Set(upperLimbMotorRegions.flatMap(r => upperLimbMotorGroups(catalog, r).map(g => g.key))).size,
+      muscleSelections: new Set(upperLimbMotorRegions.flatMap(r => upperLimbMotorGroups(catalog, r).flatMap(g => g.targets.map(t => t.structure.id)))).size,
+      relationships: upperLimbMotorRegions.reduce((n,r) => n + upperLimbMotorGroups(catalog,r).reduce((m,g) => m + g.targets.length,0),0),
+      sourceAndFrameChecked: true, nerveGeometryAdded: false, clinicalApproval: false,
+    },
     abdominalWallSpecimen: {
       id: abdominalWall.specimenId, route: '/specimens/abdominal-wall',
       representations: abdominalWall.structures.length,

@@ -1,6 +1,20 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — spinal imaging orientation (current)
+## 11 September 2026 — upper-limb motor explorer (current)
+
+Source `f6fb4106c7fd79337547fb4230c46ac35048a97a`, tree `c80a4400b71745b5d1e73d31000a9f8d9943bd12`, parent `3143a76c24b541473792adb430bf37de5c17d645`. Seventeen changed source paths mirrored into `modules/anatomy-atlas`; main website unchanged. Sites source push succeeded and standalone full HEAD verified; temporary credential cleared. This is NOT confirmed GitHub delivery.
+
+Shoulder/arm, forearm and hand now offer one collapsed **Dissect → Muscles by nerve** control. Seventeen nerve/branch groups connect102existing muscle selections through112typical relationships. Complete166muscle/bone record, source/frame/bundle checks reject changed or foreign scopes. One existing reducer action shows group muscles with regional bones; both-side membership preserves side switching. Undo/Redo restores stage/focus/removals, not camera/system switches; that limit is explicit. Grouped lumbricals/FDP, subscapularis/levator mixed supply, variable radial brachialis and ECRB branches are qualified. No nerve path, sensory map, lesion, patient registration, new mesh/dependency/fee or lecture entitlement. Original teaching, study recipes, geometry and independent UM explorer remain unchanged.
+
+Passed: TypeScript;1,232focused checks incl54region/side plans,85altered binding cases,102official source records,63installed-React renders and actual parent-handler execution; existing UM motor tests;24,477spinal-imaging checks;235review checks; audit freshness; authored diff checks; production build and all108lossless model comparisons. Root-only panel styling is in its own file: original shared body/shoulder CSS and review fingerprints remain exact. No browser/GPU/touch/accessibility/educator or clinical acceptance. Original factual metadata links university/primary-study reading only; no publisher assets or question bank imported.
+
+Recovery stem `work/atlas-upper-limb-motor-2026-09-11`: runtime108,647,297 bytes SHA256`77035b49865f87777eb1cf7423d900bde1baa41d00f4d70aa90f156dbae9517d`; delta696,320 bytes SHA256`76b9f00542dc8522e04c5365d630b004df575d32625181440846f16a55953a2f`; incremental bundle51,343 bytes SHA256`656b33043842a80ac96b01757e12a0220e06237343b4fb5f321181569849f9c0`, requiring source parent. Runtime353entries; exact mirror1,486files/413,462,523bytes/112retained GLBs; no common credential signatures (not exhaustive). Preparation JSON predates final receipt; never rerun helper or overwrite artifacts.
+
+Native save **144** succeeded: `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_01adb2e8f8c88191b83279468104414d`. Private deployment `appgdep_6aa37908553881918cb28af20626fcf6` reached **SUCCEEDED** at **2026-09-11T03:44:29.943718+00:00**, https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site . No pending operation or audience change. Browser preserved in background; no thumbnail requested or generated. Existing143/earlier archives need no retry.
+
+Final checkpoint `work/ATLAS_UPPER_LIMB_MOTOR_2026-09-11.md`. Same-PC recovery/Sites source do not confirm GitHub delivery, chat/private-database backup or full off-device restoration. Broader goal active. Continue substantive anatomy/source work elsewhere; introductory upper/lower-limb motor exploration, spinal orientation and routine oral detail do not need repetition.
+
+## 11 September 2026 — spinal imaging orientation (previous release)
 
 Source `3143a76c24b541473792adb430bf37de5c17d645`, tree `142f6564dd895084b32f05052a5fd7b8a3ff0d10`, parent `59a567c7fb76c954cf3d91eeec62124e207bbbf9`. Twenty-five changed source paths mirrored into `modules/anatomy-atlas`; main website unchanged. Exact Sites source push succeeded and standalone full HEAD was verified; temporary credential cleared. This is NOT confirmed GitHub delivery.
 

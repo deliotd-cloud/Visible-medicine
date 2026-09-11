@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Upper-limb muscles by nerve](UPPER_LIMB_MOTOR.md) links 102 exact existing muscle selections through 112 typical relationships across 17 nerve/branch groups. In Shoulder & arm, Forearm or Hand, choose Dissect → Muscles by nerve to show the group's available muscles with bone context. The control stays collapsed; left/right filters, selection and existing dissection history remain usable. Mixed supply and grouped surfaces are qualified. No nerve route, sensory field, lesion simulation, scan registration or clinical approval is added.
+
 [Spinal imaging orientation](SPINE_IMAGING_TEACHING.md) adds 141 CT/MRI/X-ray topic drafts across 47 exact existing bone/disc source records: nine concept groups and 27 distinct modality topics, not 141 unique concepts. The existing compact Imaging panel and six focused level studies are retained. Other body teaching and geometry are unchanged; whole discs, unresolved T12–L1 geometry and absent neural tissues remain explicit. No patient scans, registration, paid-resource access or clinical approval are supplied.
 
 [Abdominal-wall teaching](ABDOMINAL_WALL_SPECIMEN.md#detailed-teaching) supplies 8 exact-source Anatomy/Function lessons, 8 attachment/motor records, 48 introductory clinical/pathology/imaging topics and 8 self-checks. Three groups in the existing collapsed Learn panel keep the model prominent. Imaging notes explain recognition and limitations, not real scans or registration; source changes fail closed. Specialist validation remains pending.

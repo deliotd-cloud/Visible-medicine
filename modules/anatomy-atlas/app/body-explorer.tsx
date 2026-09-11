@@ -1,5 +1,6 @@
 'use client';
 import './um-knee-entry.css';
+import './upper-limb-motor.css';
 import {
   useCallback,
   useEffect,
@@ -113,6 +114,8 @@ import { ReasoningFeedback } from './reasoning-feedback';
 import { StudyViews } from './study-views';
 import { StructureNavigator } from './structure-navigator';
 import { RelatedStudy } from './related-study';
+import { UpperLimbMotorExplorer } from './upper-limb-motor';
+import { upperLimbMotorPlan } from '@/lib/upper-limb-motor';
 import { StudyLinks } from './study-links';
 import {
   noStudyLink,
@@ -669,6 +672,26 @@ export default function BodyExplorer({
     });
     publishSelection(selectedId);
   }
+  function exploreMotorGroup(key: string) {
+    if (!catalog) return;
+    const plan = upperLimbMotorPlan(catalog, initialRegion, side, key, exam);
+    if (!plan) return;
+    dispatch(plan.action);
+    setSystems(prev => ({ ...prev, skeleton: true, muscles: true }));
+    setInspection(initialInspection);
+    setExplode(0);
+    setLayout('spatial');
+    setPlate(false);
+    setGhostRemoved(false);
+    setFocus(false);
+    setIsolated(false);
+    setZoom(1);
+    cameraRestore.current = null;
+    setSelectedId(plan.selectedId);
+    setSelectionNotice({ id: plan.selectedId, message: `${plan.label}: available muscle relationships shown. No nerve path or territory is modelled.` });
+    setReset(n => n + 1);
+    // A motor study is local visibility, not a nerve selection or imaging event.
+  }
   function openGuidanceRecipe(kind: 'recipe' | 'next') {
     const action = guidanceRecipeAction(guidance, kind, exam);
     if (!action) return;
@@ -1076,6 +1099,8 @@ export default function BodyExplorer({
             disabled={exam}
           />
         </details>
+        <UpperLimbMotorExplorer catalog={catalog} region={initialRegion} side={side} selectedId={selectedId}
+          disabled={exam} onSelect={select} onExplore={exploreMotorGroup} />
       </WorkspaceOnly>
       <WorkspaceOnly modes={['explore', 'dissect']}>
         {initialRegion === 'abdomen' && <Button ref={abdominalWallLauncher} variant="outline" size="sm" className="um-knee-launch" disabled={exam} onClick={() => setAbdominalWallOpen(true)}>Abdominal wall layers · separate specimen</Button>}
