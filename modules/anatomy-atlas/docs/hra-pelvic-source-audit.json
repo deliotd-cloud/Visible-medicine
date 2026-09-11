@@ -1,0 +1,4868 @@
+{
+  "sourceSha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422",
+  "sourceBytes": 374505632,
+  "rows": [
+    {
+      "nodeIndex": 437,
+      "nodeName": "VH_F_vagina",
+      "meshIndex": 406,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFVagina",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "vagina",
+        "ontologyid": "UBERON:0000996",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0000996",
+        "glb_file_of_single_organs": "VH_F_Vagina&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1290,
+        "NORMAL": 1291
+      },
+      "triangles": 8780,
+      "positionAccessorSha256": "f356da1a373a579568c4a44c81d7f5751068c5f74460f565a4bf2a4c88acbc4c",
+      "worldBoundsMm": {
+        "min": [
+          -34.5090851187706,
+          -52.08705738186836,
+          -82.8528180718422
+        ],
+        "max": [
+          10.017966851592064,
+          6.452033296227455,
+          -59.12921950221062
+        ]
+      },
+      "topology": {
+        "sourceVertices": 4461,
+        "exactUniqueVertices": 4461,
+        "unusedUniqueVertices": 0,
+        "triangles": 8780,
+        "edges": 13239,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 138,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 4634,
+            "vertices": 2353,
+            "bounds": {
+              "min": [
+                -34.5090851187706,
+                -52.08705738186836,
+                -82.8528180718422
+              ],
+              "max": [
+                10.017966851592064,
+                6.452033296227455,
+                -59.12921950221062
+              ]
+            },
+            "areaMm2": 5119.693698980933,
+            "algebraicVolumeMm3": 11975.518258040145
+          },
+          {
+            "firstFace": 4634,
+            "triangles": 4146,
+            "vertices": 2108,
+            "bounds": {
+              "min": [
+                -32.66357257962227,
+                -50.23166537284851,
+                -78.73004674911499
+              ],
+              "max": [
+                7.914199493825436,
+                5.139076616615057,
+                -60.81649661064148
+              ]
+            },
+            "areaMm2": 4188.184601736609,
+            "algebraicVolumeMm3": -5697.149003924617
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 438,
+      "nodeName": "VH_F_cervicovaginal_junction",
+      "meshIndex": 407,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUterus",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "-",
+        "ontologyid": "-",
+        "representation_of": "-",
+        "glb_file_of_single_organs": "VH_F_Uterus&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1293,
+        "NORMAL": 1294
+      },
+      "triangles": 3766,
+      "positionAccessorSha256": "75df318ec98ede11e463a2c65bc3454814f7525ff8a05f259b6683deb3a30405",
+      "worldBoundsMm": {
+        "min": [
+          -31.439855694770813,
+          2.4023675359785557,
+          -90.38802981376648
+        ],
+        "max": [
+          6.820926442742348,
+          25.683078914880753,
+          -65.05817174911499
+        ]
+      },
+      "topology": {
+        "sourceVertices": 1952,
+        "exactUniqueVertices": 1952,
+        "unusedUniqueVertices": 0,
+        "triangles": 3766,
+        "edges": 5718,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 138,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 3766,
+            "vertices": 1952,
+            "bounds": {
+              "min": [
+                -31.439855694770813,
+                2.4023675359785557,
+                -90.38802981376648
+              ],
+              "max": [
+                6.820926442742348,
+                25.683078914880753,
+                -65.05817174911499
+              ]
+            },
+            "areaMm2": 2340.309821841866,
+            "algebraicVolumeMm3": 2131.664839578225
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 441,
+      "nodeName": "VH_F_ampulla_of_uterine_tube_R",
+      "meshIndex": 408,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFRightFallopianTube",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Ampulla of right uterine tube",
+        "ontologyid": "FMA:18491",
+        "representation_of": "http://purl.org/sig/ont/fma/fma18491",
+        "glb_file_of_single_organs": "VH_F_Fallopian_Tube_R&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1296,
+        "NORMAL": 1297
+      },
+      "triangles": 10440,
+      "positionAccessorSha256": "28c075c98fb9861ddab524243048c4b8a45af1b8db5c03c927aee3c218abf404",
+      "worldBoundsMm": {
+        "min": [
+          -73.73370975255966,
+          42.75056719779968,
+          -51.96963995695114
+        ],
+        "max": [
+          -47.22654074430466,
+          84.49626713991165,
+          -37.10786625742912
+        ]
+      },
+      "topology": {
+        "sourceVertices": 5260,
+        "exactUniqueVertices": 5260,
+        "unusedUniqueVertices": 0,
+        "triangles": 10440,
+        "edges": 15700,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 80,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 5160,
+            "triangles": 5280,
+            "vertices": 2660,
+            "bounds": {
+              "min": [
+                -73.3066126704216,
+                43.20121556520462,
+                -51.823996007442474
+              ],
+              "max": [
+                -47.551192343235016,
+                83.91010016202927,
+                -37.51407563686371
+              ]
+            },
+            "areaMm2": 141.7774855778584,
+            "algebraicVolumeMm3": -27.55866201990485
+          },
+          {
+            "firstFace": 0,
+            "triangles": 5160,
+            "vertices": 2600,
+            "bounds": {
+              "min": [
+                -73.73370975255966,
+                42.75056719779968,
+                -51.96963995695114
+              ],
+              "max": [
+                -47.22654074430466,
+                84.49626713991165,
+                -37.10786625742912
+              ]
+            },
+            "areaMm2": 269.7777081587139,
+            "algebraicVolumeMm3": 94.73707431406258
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 442,
+      "nodeName": "VH_F_isthmus_of_fallopian_tube_R",
+      "meshIndex": 409,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFRightFallopianTube",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Isthmus of right uterine tube",
+        "ontologyid": "FMA:18493",
+        "representation_of": "http://purl.org/sig/ont/fma/fma18493",
+        "glb_file_of_single_organs": "VH_F_Fallopian_Tube_R&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1299,
+        "NORMAL": 1300
+      },
+      "triangles": 1600,
+      "positionAccessorSha256": "b34e01623a66bab6b635cf736bbd366dd887a4b6bef0c190af076ddc549f28c8",
+      "worldBoundsMm": {
+        "min": [
+          -47.84681275486946,
+          39.892785251140594,
+          -42.316894978284836
+        ],
+        "max": [
+          -39.32168707251549,
+          44.42785307765007,
+          -38.57158496975899
+        ]
+      },
+      "topology": {
+        "sourceVertices": 840,
+        "exactUniqueVertices": 840,
+        "unusedUniqueVertices": 0,
+        "triangles": 1600,
+        "edges": 2440,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 80,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 800,
+            "vertices": 420,
+            "bounds": {
+              "min": [
+                -47.84681275486946,
+                40.976446121931076,
+                -41.09638184309006
+              ],
+              "max": [
+                -39.58436846733093,
+                44.09870132803917,
+                -38.97600248456001
+              ]
+            },
+            "areaMm2": 30.68577944166648,
+            "algebraicVolumeMm3": -7.228784584237616
+          },
+          {
+            "firstFace": 798,
+            "triangles": 800,
+            "vertices": 420,
+            "bounds": {
+              "min": [
+                -47.78539389371872,
+                39.892785251140594,
+                -42.316894978284836
+              ],
+              "max": [
+                -39.32168707251549,
+                44.42785307765007,
+                -38.57158496975899
+              ]
+            },
+            "areaMm2": 55.70860058041504,
+            "algebraicVolumeMm3": 17.110663548155564
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 443,
+      "nodeName": "VH_F_fibria_of_uterine_tube_R",
+      "meshIndex": 410,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFRightFallopianTube",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Fimbria of right uterine tube",
+        "ontologyid": "FMA:18497",
+        "representation_of": "http://purl.org/sig/ont/fma/fma18497",
+        "glb_file_of_single_organs": "VH_F_Fallopian_Tube_R&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1302,
+        "NORMAL": 1303
+      },
+      "triangles": 3530,
+      "positionAccessorSha256": "a882a3a4663e15119e0909e517e91463e12028daafc2cd8d0e146c59e2abc023",
+      "worldBoundsMm": {
+        "min": [
+          -71.75300270318985,
+          70.94886898994446,
+          -57.50121921300888
+        ],
+        "max": [
+          -64.73498791456223,
+          75.34214109182358,
+          -51.71554535627365
+        ]
+      },
+      "topology": {
+        "sourceVertices": 1785,
+        "exactUniqueVertices": 1785,
+        "unusedUniqueVertices": 0,
+        "triangles": 3530,
+        "edges": 5315,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 40,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 3530,
+            "vertices": 1785,
+            "bounds": {
+              "min": [
+                -71.75300270318985,
+                70.94886898994446,
+                -57.50121921300888
+              ],
+              "max": [
+                -64.73498791456223,
+                75.34214109182358,
+                -51.71554535627365
+              ]
+            },
+            "areaMm2": 63.34441978998383,
+            "algebraicVolumeMm3": 3.7309960921784815
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 444,
+      "nodeName": "VH_F_uterine_tube_infundibulum_R",
+      "meshIndex": 411,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFRightFallopianTube",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Infundibulum of right uterine tube",
+        "ontologyid": "FMA:18489",
+        "representation_of": "http://purl.org/sig/ont/fma/fma18489",
+        "glb_file_of_single_organs": "VH_F_Fallopian_Tube_R&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1305,
+        "NORMAL": 1306
+      },
+      "triangles": 2200,
+      "positionAccessorSha256": "af6bc7f1a9dfc4f6d0b13ea25d6853a5513520b00d2dd49557b333ae8eec74e5",
+      "worldBoundsMm": {
+        "min": [
+          -72.47859984636307,
+          73.42655211687088,
+          -57.97962099313736
+        ],
+        "max": [
+          -64.89913910627365,
+          84.41268652677536,
+          -50.86631700396538
+        ]
+      },
+      "topology": {
+        "sourceVertices": 1140,
+        "exactUniqueVertices": 1140,
+        "unusedUniqueVertices": 0,
+        "triangles": 2200,
+        "edges": 3340,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 80,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1160,
+            "vertices": 600,
+            "bounds": {
+              "min": [
+                -71.94720953702927,
+                73.59405606985092,
+                -57.659756392240524
+              ],
+              "max": [
+                -65.38943946361542,
+                83.89656245708466,
+                -51.078300923109055
+              ]
+            },
+            "areaMm2": 117.58326165997127,
+            "algebraicVolumeMm3": -80.38578295844025
+          },
+          {
+            "firstFace": 1160,
+            "triangles": 1040,
+            "vertices": 540,
+            "bounds": {
+              "min": [
+                -72.47859984636307,
+                73.42655211687088,
+                -57.97962099313736
+              ],
+              "max": [
+                -64.89913910627365,
+                84.41268652677536,
+                -50.86631700396538
+              ]
+            },
+            "areaMm2": 155.24693695779695,
+            "algebraicVolumeMm3": 132.5943585752253
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 446,
+      "nodeName": "VH_F_uterine_tube_infundibulum_L",
+      "meshIndex": 412,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLeftFallopianTube",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Infundibulum of left uterine tube",
+        "ontologyid": "FMA:18490",
+        "representation_of": "http://purl.org/sig/ont/fma/fma18490",
+        "glb_file_of_single_organs": "VH_F_Fallopian_Tube_L&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1308,
+        "NORMAL": 1309
+      },
+      "triangles": 2116,
+      "positionAccessorSha256": "ee7747766a259f04646ad15cf63306dffa5579316dbd4c5b94f2d4333af99112",
+      "worldBoundsMm": {
+        "min": [
+          36.47768124938011,
+          74.14260506629944,
+          -51.67331546545029
+        ],
+        "max": [
+          44.939689338207245,
+          85.18481999635696,
+          -44.0741702914238
+        ]
+      },
+      "topology": {
+        "sourceVertices": 1098,
+        "exactUniqueVertices": 1098,
+        "unusedUniqueVertices": 0,
+        "triangles": 2116,
+        "edges": 3214,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 80,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1144,
+            "vertices": 594,
+            "bounds": {
+              "min": [
+                36.47768124938011,
+                74.14260506629944,
+                -51.67331546545029
+              ],
+              "max": [
+                44.939689338207245,
+                85.18481999635696,
+                -44.0741702914238
+              ]
+            },
+            "areaMm2": 158.55795133990185,
+            "algebraicVolumeMm3": 121.48230780036413
+          },
+          {
+            "firstFace": 8,
+            "triangles": 972,
+            "vertices": 504,
+            "bounds": {
+              "min": [
+                37.008702754974365,
+                74.28371161222458,
+                -50.29464513063431
+              ],
+              "max": [
+                44.07062381505966,
+                84.55962687730789,
+                -44.45842653512955
+              ]
+            },
+            "areaMm2": 104.41841022597633,
+            "algebraicVolumeMm3": -53.57634211823724
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 447,
+      "nodeName": "VH_F_fibria_of_uterine_tube_L",
+      "meshIndex": 413,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLeftFallopianTube",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Fimbria of left uterine tube",
+        "ontologyid": "FMA:18498",
+        "representation_of": "http://purl.org/sig/ont/fma/fma18498",
+        "glb_file_of_single_organs": "VH_F_Fallopian_Tube_L&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1311,
+        "NORMAL": 1312
+      },
+      "triangles": 2871,
+      "positionAccessorSha256": "9f1fe051ac1ad2bded0aa893e2bd3ffba81be1f7cfb5c2af58a813c5880a1862",
+      "worldBoundsMm": {
+        "min": [
+          35.46544909477234,
+          71.00818306207657,
+          -52.0339198410511
+        ],
+        "max": [
+          42.85121709108353,
+          76.20860636234283,
+          -43.78688707947731
+        ]
+      },
+      "topology": {
+        "sourceVertices": 1456,
+        "exactUniqueVertices": 1456,
+        "unusedUniqueVertices": 0,
+        "triangles": 2871,
+        "edges": 4327,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 41,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 2871,
+            "vertices": 1456,
+            "bounds": {
+              "min": [
+                35.46544909477234,
+                71.00818306207657,
+                -52.0339198410511
+              ],
+              "max": [
+                42.85121709108353,
+                76.20860636234283,
+                -43.78688707947731
+              ]
+            },
+            "areaMm2": 72.35235657481483,
+            "algebraicVolumeMm3": 6.165733185253635
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 448,
+      "nodeName": "VH_F_isthmus_of_fallopian_tube_L",
+      "meshIndex": 414,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLeftFallopianTube",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Isthmus of left uterine tube",
+        "ontologyid": "FMA:18494",
+        "representation_of": "http://purl.org/sig/ont/fma/fma18494",
+        "glb_file_of_single_organs": "VH_F_Fallopian_Tube_L&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1314,
+        "NORMAL": 1315
+      },
+      "triangles": 1870,
+      "positionAccessorSha256": "614f02c74bb632a5ad1be0cf155de4d2845c88bacddf9b13d16900321053135f",
+      "worldBoundsMm": {
+        "min": [
+          12.065276503562927,
+          40.88735580444336,
+          -41.7814627289772
+        ],
+        "max": [
+          22.17910625040531,
+          45.16258090734482,
+          -37.85453736782074
+        ]
+      },
+      "topology": {
+        "sourceVertices": 976,
+        "exactUniqueVertices": 976,
+        "unusedUniqueVertices": 0,
+        "triangles": 1870,
+        "edges": 2846,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 82,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 888,
+            "triangles": 968,
+            "vertices": 506,
+            "bounds": {
+              "min": [
+                12.065276503562927,
+                40.88735580444336,
+                -41.7814627289772
+              ],
+              "max": [
+                22.17910625040531,
+                45.16258090734482,
+                -37.85453736782074
+              ]
+            },
+            "areaMm2": 83.5642584631366,
+            "algebraicVolumeMm3": 32.36060845328528
+          },
+          {
+            "firstFace": 0,
+            "triangles": 902,
+            "vertices": 470,
+            "bounds": {
+              "min": [
+                12.431592680513859,
+                42.17441380023956,
+                -40.79890996217728
+              ],
+              "max": [
+                21.994246169924736,
+                44.496554881334305,
+                -38.7890599668026
+              ]
+            },
+            "areaMm2": 35.694315217892225,
+            "algebraicVolumeMm3": -7.404820483675029
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 449,
+      "nodeName": "VH_F_ampulla_of_uterine_tube_L",
+      "meshIndex": 415,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLeftFallopianTube",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Ampulla of left uterine tube",
+        "ontologyid": "FMA:18492",
+        "representation_of": "http://purl.org/sig/ont/fma/fma18492",
+        "glb_file_of_single_organs": "VH_F_Fallopian_Tube_L&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1317,
+        "NORMAL": 1318
+      },
+      "triangles": 11424,
+      "positionAccessorSha256": "45f907a615d5d07f6cf7fe8a2f0aabc5b2ec8347b8cae9be3567ccbd161aa0f6",
+      "worldBoundsMm": {
+        "min": [
+          21.76433429121971,
+          42.8430549800396,
+          -48.626404255628586
+        ],
+        "max": [
+          50.68828538060188,
+          85.35903692245483,
+          -33.484190702438354
+        ]
+      },
+      "topology": {
+        "sourceVertices": 5752,
+        "exactUniqueVertices": 5752,
+        "unusedUniqueVertices": 0,
+        "triangles": 11424,
+        "edges": 17176,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 80,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 6204,
+            "vertices": 3124,
+            "bounds": {
+              "min": [
+                21.76433429121971,
+                42.8430549800396,
+                -48.626404255628586
+              ],
+              "max": [
+                50.68828538060188,
+                85.35903692245483,
+                -33.484190702438354
+              ]
+            },
+            "areaMm2": 452.1384702322843,
+            "algebraicVolumeMm3": 258.05435109962224
+          },
+          {
+            "firstFace": 6204,
+            "triangles": 5220,
+            "vertices": 2628,
+            "bounds": {
+              "min": [
+                21.849021315574646,
+                43.516140431165695,
+                -47.60650545358658
+              ],
+              "max": [
+                50.27393251657486,
+                84.69981700181961,
+                -34.001484513282776
+              ]
+            },
+            "areaMm2": 212.10656357732503,
+            "algebraicVolumeMm3": -57.890861966419415
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 451,
+      "nodeName": "VH_F_uterovesical_pouch",
+      "meshIndex": 416,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLigamentsUterusOvaries",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Uterovesical pouch",
+        "ontologyid": "FMA:14729",
+        "representation_of": "http://purl.org/sig/ont/fma/fma14729",
+        "glb_file_of_single_organs": "VH_F_Ligaments_Uterus_Ovaries&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1320,
+        "NORMAL": 1321
+      },
+      "triangles": 25352,
+      "positionAccessorSha256": "be4164fa89af60216d243b8d3831f97e7519eedc88c6050cc808738a59662beb",
+      "worldBoundsMm": {
+        "min": [
+          -39.972055703401566,
+          13.171310536563396,
+          -62.07088381052017
+        ],
+        "max": [
+          11.801938526332378,
+          40.84102436900139,
+          1.9966887775808573
+        ]
+      },
+      "topology": {
+        "sourceVertices": 12840,
+        "exactUniqueVertices": 12840,
+        "unusedUniqueVertices": 0,
+        "triangles": 25352,
+        "edges": 38190,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 324,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 3128,
+            "triangles": 22224,
+            "vertices": 11207,
+            "bounds": {
+              "min": [
+                -39.972055703401566,
+                13.171310536563396,
+                -62.051352113485336
+              ],
+              "max": [
+                11.801938526332378,
+                40.84102436900139,
+                1.9966887775808573
+              ]
+            },
+            "areaMm2": 6649.143994582302,
+            "algebraicVolumeMm3": 1382.8661055239252
+          },
+          {
+            "firstFace": 0,
+            "triangles": 3128,
+            "vertices": 1633,
+            "bounds": {
+              "min": [
+                -29.80508655309677,
+                22.064322605729103,
+                -62.07088381052017
+              ],
+              "max": [
+                5.632171407341957,
+                40.83467274904251,
+                -27.596645057201385
+              ]
+            },
+            "areaMm2": 1201.3994092701246,
+            "algebraicVolumeMm3": -2831.440171496642
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 453,
+      "nodeName": "VH_F_right_round_ligament_of_uterus",
+      "meshIndex": 417,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLigamentsUterusOvaries",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Right round ligament of uterus",
+        "ontologyid": "FMA:57789",
+        "representation_of": "http://purl.org/sig/ont/fma/fma57789",
+        "glb_file_of_single_organs": "VH_F_Ligaments_Uterus_Ovaries&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1323,
+        "NORMAL": 1324
+      },
+      "triangles": 902,
+      "positionAccessorSha256": "921cc6dc637014b75f4b6e477154a81ff6798b5f08cfdf84f7f636e1978d034b",
+      "worldBoundsMm": {
+        "min": [
+          2.0686625503003597,
+          -15.039138495922089,
+          -38.823068141937256
+        ],
+        "max": [
+          48.97189885377884,
+          46.648673713207245,
+          9.94615163654089
+        ]
+      },
+      "topology": {
+        "sourceVertices": 453,
+        "exactUniqueVertices": 453,
+        "unusedUniqueVertices": 0,
+        "triangles": 902,
+        "edges": 1353,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 902,
+            "vertices": 453,
+            "bounds": {
+              "min": [
+                2.0686625503003597,
+                -15.039138495922089,
+                -38.823068141937256
+              ],
+              "max": [
+                48.97189885377884,
+                46.648673713207245,
+                9.94615163654089
+              ]
+            },
+            "areaMm2": 821.7113803252261,
+            "algebraicVolumeMm3": 352.1593622606302
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 454,
+      "nodeName": "VH_F_left_round_ligament_of_uterus",
+      "meshIndex": 418,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLigamentsUterusOvaries",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Left round ligament of uterus",
+        "ontologyid": "FMA:57790",
+        "representation_of": "http://purl.org/sig/ont/fma/fma57790",
+        "glb_file_of_single_organs": "VH_F_Ligaments_Uterus_Ovaries&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1326,
+        "NORMAL": 1327
+      },
+      "triangles": 1024,
+      "positionAccessorSha256": "ca7cb81564f9e2f06df672aa801160fceec7aa1b91c960474f4fd4383e59f727",
+      "worldBoundsMm": {
+        "min": [
+          -91.42684936523438,
+          -16.407432034611702,
+          -40.70678725838661
+        ],
+        "max": [
+          -30.598659068346024,
+          50.34885182976723,
+          4.402030725032091
+        ]
+      },
+      "topology": {
+        "sourceVertices": 514,
+        "exactUniqueVertices": 514,
+        "unusedUniqueVertices": 0,
+        "triangles": 1024,
+        "edges": 1536,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1024,
+            "vertices": 514,
+            "bounds": {
+              "min": [
+                -91.42684936523438,
+                -16.407432034611702,
+                -40.70678725838661
+              ],
+              "max": [
+                -30.598659068346024,
+                50.34885182976723,
+                4.402030725032091
+              ]
+            },
+            "areaMm2": 817.606562113117,
+            "algebraicVolumeMm3": 304.3869964976497
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 456,
+      "nodeName": "VH_F_right_uterosacral_ligament",
+      "meshIndex": 419,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLigamentsUterusOvaries",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Right uterosacral ligament",
+        "ontologyid": "FMA:19119",
+        "representation_of": "http://purl.org/sig/ont/fma/fma19119",
+        "glb_file_of_single_organs": "VH_F_Ligaments_Uterus_Ovaries&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1329,
+        "NORMAL": 1330
+      },
+      "triangles": 1990,
+      "positionAccessorSha256": "10481530b7b65796e897e495f2943f1c81a47e33541e56b9122f45b1df52c2a7",
+      "worldBoundsMm": {
+        "min": [
+          -35.52013263106346,
+          20.480375736951828,
+          -159.76135432720184
+        ],
+        "max": [
+          -21.66406624019146,
+          75.69011300802231,
+          -80.1418274641037
+        ]
+      },
+      "topology": {
+        "sourceVertices": 997,
+        "exactUniqueVertices": 997,
+        "unusedUniqueVertices": 0,
+        "triangles": 1990,
+        "edges": 2985,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1990,
+            "vertices": 997,
+            "bounds": {
+              "min": [
+                -35.52013263106346,
+                20.480375736951828,
+                -159.76135432720184
+              ],
+              "max": [
+                -21.66406624019146,
+                75.69011300802231,
+                -80.1418274641037
+              ]
+            },
+            "areaMm2": 658.9311727629284,
+            "algebraicVolumeMm3": 221.7107941478163
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 457,
+      "nodeName": "VH_F_left_uterosacral_ligament",
+      "meshIndex": 420,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLigamentsUterusOvaries",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Left uterosacral ligament",
+        "ontologyid": "FMA:19120",
+        "representation_of": "http://purl.org/sig/ont/fma/fma19120",
+        "glb_file_of_single_organs": "VH_F_Ligaments_Uterus_Ovaries&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1332,
+        "NORMAL": 1333
+      },
+      "triangles": 1948,
+      "positionAccessorSha256": "45ec5daeddce4d47b98c3b6cfbfa38b6173c2428e638747fdd5b2916352c2c31",
+      "worldBoundsMm": {
+        "min": [
+          0.48693656572140753,
+          21.851053461432457,
+          -160.64681112766266
+        ],
+        "max": [
+          6.852531339973211,
+          73.76773655414581,
+          -78.45687866210938
+        ]
+      },
+      "topology": {
+        "sourceVertices": 976,
+        "exactUniqueVertices": 976,
+        "unusedUniqueVertices": 0,
+        "triangles": 1948,
+        "edges": 2922,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1948,
+            "vertices": 976,
+            "bounds": {
+              "min": [
+                0.48693656572140753,
+                21.851053461432457,
+                -160.64681112766266
+              ],
+              "max": [
+                6.852531339973211,
+                73.76773655414581,
+                -78.45687866210938
+              ]
+            },
+            "areaMm2": 716.2807652355488,
+            "algebraicVolumeMm3": 255.04486770938712
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 459,
+      "nodeName": "VH_F_right_cardinal_ligament_of_uterus",
+      "meshIndex": 421,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLigamentsUterusOvaries",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Cardinal ligament",
+        "ontologyid": "FMA:77064",
+        "representation_of": "http://purl.org/sig/ont/fma/fma77064",
+        "glb_file_of_single_organs": "VH_F_Ligaments_Uterus_Ovaries&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1335,
+        "NORMAL": 1336
+      },
+      "triangles": 4056,
+      "positionAccessorSha256": "dad731360b50c7a7ab74334283c3083de8b11ee21a8da8334c71df02411af899",
+      "worldBoundsMm": {
+        "min": [
+          -83.83975923061371,
+          18.223389983177185,
+          -115.42129516601562
+        ],
+        "max": [
+          -17.134008929133415,
+          43.601129204034805,
+          -62.066610902547836
+        ]
+      },
+      "topology": {
+        "sourceVertices": 2030,
+        "exactUniqueVertices": 2030,
+        "unusedUniqueVertices": 0,
+        "triangles": 4056,
+        "edges": 6084,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 4056,
+            "vertices": 2030,
+            "bounds": {
+              "min": [
+                -83.83975923061371,
+                18.223389983177185,
+                -115.42129516601562
+              ],
+              "max": [
+                -17.134008929133415,
+                43.601129204034805,
+                -62.066610902547836
+              ]
+            },
+            "areaMm2": 3725.6840691866746,
+            "algebraicVolumeMm3": 2021.6177633723846
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 460,
+      "nodeName": "VH_F_left_cardinal_ligament_of_uterus",
+      "meshIndex": 422,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLigamentsUterusOvaries",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Cardinal ligament",
+        "ontologyid": "FMA:77064",
+        "representation_of": "http://purl.org/sig/ont/fma/fma77064",
+        "glb_file_of_single_organs": "VH_F_Ligaments_Uterus_Ovaries&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1338,
+        "NORMAL": 1339
+      },
+      "triangles": 4056,
+      "positionAccessorSha256": "7aa618a6768159693f6f57851f31ed6e78ebb152cb6318583d47470ced38cf66",
+      "worldBoundsMm": {
+        "min": [
+          -7.059134542942047,
+          20.12903243303299,
+          -110.05042493343353
+        ],
+        "max": [
+          55.4359033703804,
+          38.8839915394783,
+          -59.4281367957592
+        ]
+      },
+      "topology": {
+        "sourceVertices": 2030,
+        "exactUniqueVertices": 2030,
+        "unusedUniqueVertices": 0,
+        "triangles": 4056,
+        "edges": 6084,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 4056,
+            "vertices": 2030,
+            "bounds": {
+              "min": [
+                -7.059134542942047,
+                20.12903243303299,
+                -110.05042493343353
+              ],
+              "max": [
+                55.4359033703804,
+                38.8839915394783,
+                -59.4281367957592
+              ]
+            },
+            "areaMm2": 3714.075220951952,
+            "algebraicVolumeMm3": 1637.5567016291382
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 462,
+      "nodeName": "VH_F_suspensory_ligament_of_ovary_R",
+      "meshIndex": 423,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLigamentsUterusOvaries",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Suspensory ligament of right ovary",
+        "ontologyid": "FMA:19823",
+        "representation_of": "http://purl.org/sig/ont/fma/fma19823",
+        "glb_file_of_single_organs": "VH_F_Ligaments_Uterus_Ovaries&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1341,
+        "NORMAL": 1342
+      },
+      "triangles": 880,
+      "positionAccessorSha256": "5687ac68c481c7f4c335850b77cbbed99c49e229048981314c3e4e073e61abf3",
+      "worldBoundsMm": {
+        "min": [
+          -79.11372929811478,
+          71.14498317241669,
+          -60.90610474348068
+        ],
+        "max": [
+          -71.187324821949,
+          101.9563302397728,
+          -47.36644774675369
+        ]
+      },
+      "topology": {
+        "sourceVertices": 442,
+        "exactUniqueVertices": 442,
+        "unusedUniqueVertices": 0,
+        "triangles": 880,
+        "edges": 1320,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 880,
+            "vertices": 442,
+            "bounds": {
+              "min": [
+                -79.11372929811478,
+                71.14498317241669,
+                -60.90610474348068
+              ],
+              "max": [
+                -71.187324821949,
+                101.9563302397728,
+                -47.36644774675369
+              ]
+            },
+            "areaMm2": 316.7823354745767,
+            "algebraicVolumeMm3": 226.8530501369375
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 463,
+      "nodeName": "VH_F_suspensory_ligament_of_ovary_L",
+      "meshIndex": 424,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLigamentsUterusOvaries",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Suspensory ligament of left ovary",
+        "ontologyid": "FMA:19824",
+        "representation_of": "http://purl.org/sig/ont/fma/fma19824",
+        "glb_file_of_single_organs": "VH_F_Ligaments_Uterus_Ovaries&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1344,
+        "NORMAL": 1345
+      },
+      "triangles": 1270,
+      "positionAccessorSha256": "a097f5fb2ee4e04071bf3a64bb0129b63720a1f3212e725d042f743e5e345077",
+      "worldBoundsMm": {
+        "min": [
+          37.1561236679554,
+          71.05449587106705,
+          -68.95274668931961
+        ],
+        "max": [
+          47.98019304871559,
+          106.95113986730576,
+          -47.98087850213051
+        ]
+      },
+      "topology": {
+        "sourceVertices": 637,
+        "exactUniqueVertices": 637,
+        "unusedUniqueVertices": 0,
+        "triangles": 1270,
+        "edges": 1905,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1270,
+            "vertices": 637,
+            "bounds": {
+              "min": [
+                37.1561236679554,
+                71.05449587106705,
+                -68.95274668931961
+              ],
+              "max": [
+                47.98019304871559,
+                106.95113986730576,
+                -47.98087850213051
+              ]
+            },
+            "areaMm2": 379.29986355760894,
+            "algebraicVolumeMm3": 260.5829517564265
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 465,
+      "nodeName": "VH_F_ovarian_ligament_L",
+      "meshIndex": 425,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLigamentsUterusOvaries",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Left ovarian ligament",
+        "ontologyid": "FMA:55424",
+        "representation_of": "http://purl.org/sig/ont/fma/fma55424",
+        "glb_file_of_single_organs": "VH_F_Ligaments_Uterus_Ovaries&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1347,
+        "NORMAL": 1348
+      },
+      "triangles": 208,
+      "positionAccessorSha256": "028bb27e27158333c91fe9b90861a3ddf4d4d172c909d0a3160a488ce4e6e8f5",
+      "worldBoundsMm": {
+        "min": [
+          7.376641966402531,
+          38.403358310461044,
+          -44.658925384283066
+        ],
+        "max": [
+          39.880599826574326,
+          49.86972734332085,
+          -41.12869128584862
+        ]
+      },
+      "topology": {
+        "sourceVertices": 110,
+        "exactUniqueVertices": 110,
+        "unusedUniqueVertices": 0,
+        "triangles": 208,
+        "edges": 317,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 10,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 1,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 208,
+            "vertices": 110,
+            "bounds": {
+              "min": [
+                7.376641966402531,
+                38.403358310461044,
+                -44.658925384283066
+              ],
+              "max": [
+                39.880599826574326,
+                49.86972734332085,
+                -41.12869128584862
+              ]
+            },
+            "areaMm2": 155.30136652218513,
+            "algebraicVolumeMm3": 51.40823848925854
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 466,
+      "nodeName": "VH_F_ovarian_ligament_R",
+      "meshIndex": 426,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLigamentsUterusOvaries",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Right ovarian ligament",
+        "ontologyid": "FMA:55423",
+        "representation_of": "http://purl.org/sig/ont/fma/fma55423",
+        "glb_file_of_single_organs": "VH_F_Ligaments_Uterus_Ovaries&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1350,
+        "NORMAL": 1351
+      },
+      "triangles": 198,
+      "positionAccessorSha256": "12311c370be4261e9da52b9fa0b912433dfba555edc6b1b910b2c418a2893512",
+      "worldBoundsMm": {
+        "min": [
+          -66.07212126255035,
+          37.668418139219284,
+          -46.57043516635895
+        ],
+        "max": [
+          -32.768458127975464,
+          51.03854835033417,
+          -42.424313724040985
+        ]
+      },
+      "topology": {
+        "sourceVertices": 104,
+        "exactUniqueVertices": 104,
+        "unusedUniqueVertices": 0,
+        "triangles": 198,
+        "edges": 301,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 8,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 1,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 198,
+            "vertices": 104,
+            "bounds": {
+              "min": [
+                -66.07212126255035,
+                37.668418139219284,
+                -46.57043516635895
+              ],
+              "max": [
+                -32.768458127975464,
+                51.03854835033417,
+                -42.424313724040985
+              ]
+            },
+            "areaMm2": 134.31986279740394,
+            "algebraicVolumeMm3": 32.57437428977389
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 467,
+      "nodeName": "VH_F_broad_ligament",
+      "meshIndex": 427,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLigamentsUterusOvaries",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "broad ligament of uterus",
+        "ontologyid": "UBERON:0012332",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0012332",
+        "glb_file_of_single_organs": "VH_F_Ligaments_Uterus_Ovaries&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1353,
+        "NORMAL": 1354
+      },
+      "triangles": 29442,
+      "positionAccessorSha256": "59c397340de12c30931ec4adbc230c67d6d09a9e1a075e1bfe9ff77582278125",
+      "worldBoundsMm": {
+        "min": [
+          -83.92427116632462,
+          17.328329384326935,
+          -134.67147946357727
+        ],
+        "max": [
+          55.66488951444626,
+          79.93016391992569,
+          -8.539517410099506
+        ]
+      },
+      "topology": {
+        "sourceVertices": 14901,
+        "exactUniqueVertices": 14901,
+        "unusedUniqueVertices": 0,
+        "triangles": 29442,
+        "edges": 44343,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 360,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 29442,
+            "vertices": 14901,
+            "bounds": {
+              "min": [
+                -83.92427116632462,
+                17.328329384326935,
+                -134.67147946357727
+              ],
+              "max": [
+                55.66488951444626,
+                79.93016391992569,
+                -8.539517410099506
+              ]
+            },
+            "areaMm2": 29242.86158558036,
+            "algebraicVolumeMm3": 37186.48184909364
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 469,
+      "nodeName": "VH_F_mesosalpinx_L",
+      "meshIndex": 428,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLigamentsUterusOvaries",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Left mesosalpinx",
+        "ontologyid": "FMA:19810",
+        "representation_of": "http://purl.org/sig/ont/fma/fma19810",
+        "glb_file_of_single_organs": "VH_F_Ligaments_Uterus_Ovaries&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1356,
+        "NORMAL": 1357
+      },
+      "triangles": 1914,
+      "positionAccessorSha256": "74d947f781d64544dd743d8be45298fdefe893274c86a5ab937cb9bfa452831d",
+      "worldBoundsMm": {
+        "min": [
+          9.66936070472002,
+          33.84265676140785,
+          -48.081472516059875
+        ],
+        "max": [
+          54.316479712724686,
+          84.75642651319504,
+          -31.58002719283104
+        ]
+      },
+      "topology": {
+        "sourceVertices": 1057,
+        "exactUniqueVertices": 1057,
+        "unusedUniqueVertices": 0,
+        "triangles": 1914,
+        "edges": 2970,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 198,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 1,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1914,
+            "vertices": 1057,
+            "bounds": {
+              "min": [
+                9.66936070472002,
+                33.84265676140785,
+                -48.081472516059875
+              ],
+              "max": [
+                54.316479712724686,
+                84.75642651319504,
+                -31.58002719283104
+              ]
+            },
+            "areaMm2": 1389.987481634074,
+            "algebraicVolumeMm3": 933.7970627793534
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 470,
+      "nodeName": "VH_F_mesosalpinx_R",
+      "meshIndex": 429,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLigamentsUterusOvaries",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Right mesosalpinx",
+        "ontologyid": "FMA:19809",
+        "representation_of": "http://purl.org/sig/ont/fma/fma19809",
+        "glb_file_of_single_organs": "VH_F_Ligaments_Uterus_Ovaries&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1359,
+        "NORMAL": 1360
+      },
+      "triangles": 1755,
+      "positionAccessorSha256": "0620fa77bf8d7fe672a5cea2e3fbe39383c52c2506626535074e8d4ca9f5f427",
+      "worldBoundsMm": {
+        "min": [
+          -78.94016057252884,
+          36.0402874648571,
+          -52.21744254231453
+        ],
+        "max": [
+          -32.50095248222351,
+          84.61860567331314,
+          -33.698346465826035
+        ]
+      },
+      "topology": {
+        "sourceVertices": 969,
+        "exactUniqueVertices": 969,
+        "unusedUniqueVertices": 0,
+        "triangles": 1755,
+        "edges": 2723,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 181,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 1,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1755,
+            "vertices": 969,
+            "bounds": {
+              "min": [
+                -78.94016057252884,
+                36.0402874648571,
+                -52.21744254231453
+              ],
+              "max": [
+                -32.50095248222351,
+                84.61860567331314,
+                -33.698346465826035
+              ]
+            },
+            "areaMm2": 1110.182770327753,
+            "algebraicVolumeMm3": 442.3443137443697
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 472,
+      "nodeName": "VH_F_mesovarium_R",
+      "meshIndex": 430,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLigamentsUterusOvaries",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Right mesovarium",
+        "ontologyid": "FMA:19817",
+        "representation_of": "http://purl.org/sig/ont/fma/fma19817",
+        "glb_file_of_single_organs": "VH_F_Ligaments_Uterus_Ovaries&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1362,
+        "NORMAL": 1363
+      },
+      "triangles": 183,
+      "positionAccessorSha256": "3680ecd4081778ab8bf33630a7db82290548cc4eb4660ce5dbaa5d5280772d85",
+      "worldBoundsMm": {
+        "min": [
+          -78.79699766635895,
+          48.612404614686966,
+          -45.49907520413399
+        ],
+        "max": [
+          -66.49070233106613,
+          69.72339749336243,
+          -40.10173678398132
+        ]
+      },
+      "topology": {
+        "sourceVertices": 119,
+        "exactUniqueVertices": 119,
+        "unusedUniqueVertices": 0,
+        "triangles": 183,
+        "edges": 301,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 53,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 1,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 183,
+            "vertices": 119,
+            "bounds": {
+              "min": [
+                -78.79699766635895,
+                48.612404614686966,
+                -45.49907520413399
+              ],
+              "max": [
+                -66.49070233106613,
+                69.72339749336243,
+                -40.10173678398132
+              ]
+            },
+            "areaMm2": 96.66648565482203,
+            "algebraicVolumeMm3": -51.519650520402365
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 473,
+      "nodeName": "VH_F_mesovarium_L",
+      "meshIndex": 431,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLigamentsUterusOvaries",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Left mesovarium",
+        "ontologyid": "FMA:19818",
+        "representation_of": "http://purl.org/sig/ont/fma/fma19818",
+        "glb_file_of_single_organs": "VH_F_Ligaments_Uterus_Ovaries&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1365,
+        "NORMAL": 1366
+      },
+      "triangles": 644,
+      "positionAccessorSha256": "9650cf168318d1bf8870e8e7cf042ed48a6c554288ba00e50cba985c87ee6855",
+      "worldBoundsMm": {
+        "min": [
+          36.023616790771484,
+          47.847479581832886,
+          -48.83388429880142
+        ],
+        "max": [
+          53.56365069746971,
+          73.30405712127686,
+          -38.95549848675728
+        ]
+      },
+      "topology": {
+        "sourceVertices": 359,
+        "exactUniqueVertices": 359,
+        "unusedUniqueVertices": 0,
+        "triangles": 644,
+        "edges": 1002,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 72,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 1,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 644,
+            "vertices": 359,
+            "bounds": {
+              "min": [
+                36.023616790771484,
+                47.847479581832886,
+                -48.83388429880142
+              ],
+              "max": [
+                53.56365069746971,
+                73.30405712127686,
+                -38.95549848675728
+              ]
+            },
+            "areaMm2": 222.8749595915913,
+            "algebraicVolumeMm3": -254.14939021309857
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 475,
+      "nodeName": "VH_F_left_ovary",
+      "meshIndex": 432,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLeftOvary",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Left ovary",
+        "ontologyid": "FMA:7214",
+        "representation_of": "http://purl.org/sig/ont/fma/fma7214",
+        "glb_file_of_single_organs": "VH_F_Ovary_L&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1368,
+        "NORMAL": 1369
+      },
+      "triangles": 424,
+      "positionAccessorSha256": "9e8f963db80f00b85be8ca956de291223b008b1673a2ff38e0784417731c1a18",
+      "worldBoundsMm": {
+        "min": [
+          38.216304033994675,
+          48.97678270936012,
+          -50.7369227707386
+        ],
+        "max": [
+          50.49369856715202,
+          72.92377203702927,
+          -40.20275175571442
+        ]
+      },
+      "topology": {
+        "sourceVertices": 214,
+        "exactUniqueVertices": 214,
+        "unusedUniqueVertices": 0,
+        "triangles": 424,
+        "edges": 636,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 424,
+            "vertices": 214,
+            "bounds": {
+              "min": [
+                38.216304033994675,
+                48.97678270936012,
+                -50.7369227707386
+              ],
+              "max": [
+                50.49369856715202,
+                72.92377203702927,
+                -40.20275175571442
+              ]
+            },
+            "areaMm2": 589.6383089145335,
+            "algebraicVolumeMm3": 1000.789660247758
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 476,
+      "nodeName": "VH_F_right_ovary",
+      "meshIndex": 433,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFRightOvary",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Right ovary",
+        "ontologyid": "FMA:7213",
+        "representation_of": "http://purl.org/sig/ont/fma/fma7213",
+        "glb_file_of_single_organs": "VH_F_Ovary_R&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1371,
+        "NORMAL": 1372
+      },
+      "triangles": 410,
+      "positionAccessorSha256": "1997fc2836aa08695eeaaf3372691ac8b6ac968dd46e5a44855f077189bc5db6",
+      "worldBoundsMm": {
+        "min": [
+          -76.7170712351799,
+          48.90891909599304,
+          -50.816573202610016
+        ],
+        "max": [
+          -64.40738588571548,
+          72.89581000804901,
+          -40.18905386328697
+        ]
+      },
+      "topology": {
+        "sourceVertices": 207,
+        "exactUniqueVertices": 207,
+        "unusedUniqueVertices": 0,
+        "triangles": 410,
+        "edges": 615,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 410,
+            "vertices": 207,
+            "bounds": {
+              "min": [
+                -76.7170712351799,
+                48.90891909599304,
+                -50.816573202610016
+              ],
+              "max": [
+                -64.40738588571548,
+                72.89581000804901,
+                -40.18905386328697
+              ]
+            },
+            "areaMm2": 595.0497066754767,
+            "algebraicVolumeMm3": 1016.6682439629906
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 478,
+      "nodeName": "VH_F_abdominal_ostium_of_uterine_tube",
+      "meshIndex": 434,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUterus",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Abdominal ostium of uterine tube",
+        "ontologyid": "FMA:77049",
+        "representation_of": "http://purl.org/sig/ont/fma/fma77049",
+        "glb_file_of_single_organs": "VH_F_Uterus&lf;",
+        "node_type": "surface"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1374,
+        "NORMAL": 1375
+      },
+      "triangles": 546,
+      "positionAccessorSha256": "28307729793edaaaca77bbca498d4ad736bbffa01080b849146947ca620d07e4",
+      "worldBoundsMm": {
+        "min": [
+          -39.74504396319389,
+          39.46676105260849,
+          -42.1060174703598
+        ],
+        "max": [
+          12.742566876113415,
+          43.11982914805412,
+          -39.87690061330795
+        ]
+      },
+      "topology": {
+        "sourceVertices": 313,
+        "exactUniqueVertices": 313,
+        "unusedUniqueVertices": 0,
+        "triangles": 546,
+        "edges": 859,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 80,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 304,
+            "vertices": 171,
+            "bounds": {
+              "min": [
+                -39.74504396319389,
+                39.46676105260849,
+                -41.62155091762543
+              ],
+              "max": [
+                -33.16957503557205,
+                42.12642461061478,
+                -39.87690061330795
+              ]
+            },
+            "areaMm2": 23.838826430660834,
+            "algebraicVolumeMm3": -4.582417028094921
+          },
+          {
+            "firstFace": 304,
+            "triangles": 242,
+            "vertices": 142,
+            "bounds": {
+              "min": [
+                7.673253770917654,
+                40.941331535577774,
+                -42.1060174703598
+              ],
+              "max": [
+                12.742566876113415,
+                43.11982914805412,
+                -39.90413621068001
+              ]
+            },
+            "areaMm2": 17.864250048873725,
+            "algebraicVolumeMm3": -3.5242594115374053
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 479,
+      "nodeName": "VH_F_body_of_uterus",
+      "meshIndex": 435,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUterus",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "body of uterus",
+        "ontologyid": "UBERON:0009853",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0009853",
+        "glb_file_of_single_organs": "VH_F_Uterus&lf;",
+        "node_type": "surface"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1377,
+        "NORMAL": 1378
+      },
+      "triangles": 5344,
+      "positionAccessorSha256": "76ce76c6e3b60e57c759e54819a0518c15cb4d3f5d312f5eb81d14243eb4880d",
+      "worldBoundsMm": {
+        "min": [
+          -34.1830812394619,
+          21.46206796169281,
+          -65.69686532020569
+        ],
+        "max": [
+          8.935680612921715,
+          51.52751877903938,
+          -38.04643452167511
+        ]
+      },
+      "topology": {
+        "sourceVertices": 2823,
+        "exactUniqueVertices": 2823,
+        "unusedUniqueVertices": 0,
+        "triangles": 5344,
+        "edges": 8167,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 302,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 2770,
+            "vertices": 1466,
+            "bounds": {
+              "min": [
+                -34.1830812394619,
+                21.46206796169281,
+                -65.69686532020569
+              ],
+              "max": [
+                8.935680612921715,
+                51.52751877903938,
+                -38.04643452167511
+              ]
+            },
+            "areaMm2": 1820.6593471247495,
+            "algebraicVolumeMm3": 6649.446592279814
+          },
+          {
+            "firstFace": 2770,
+            "triangles": 2574,
+            "vertices": 1357,
+            "bounds": {
+              "min": [
+                -33.36295858025551,
+                26.916082948446274,
+                -61.57008931040764
+              ],
+              "max": [
+                8.340300992131233,
+                41.87577962875366,
+                -40.86120426654816
+              ]
+            },
+            "areaMm2": 835.5213537334314,
+            "algebraicVolumeMm3": -815.1647637426207
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 480,
+      "nodeName": "VH_F_fundus_of_uterus",
+      "meshIndex": 436,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUterus",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Fundus of uterus",
+        "ontologyid": "FMA:17561",
+        "representation_of": "http://purl.org/sig/ont/fma/fma17561",
+        "glb_file_of_single_organs": "VH_F_Uterus&lf;",
+        "node_type": "surface"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1380,
+        "NORMAL": 1381
+      },
+      "triangles": 3062,
+      "positionAccessorSha256": "0581794b27fd4cae3f3de1b775d11264e4c7d9b04d6cbba283379a9229c1f43a",
+      "worldBoundsMm": {
+        "min": [
+          -33.37022662162781,
+          32.0986732840538,
+          -49.555204808712006
+        ],
+        "max": [
+          8.037347346544266,
+          53.21197211742401,
+          -27.496622875332832
+        ]
+      },
+      "topology": {
+        "sourceVertices": 1640,
+        "exactUniqueVertices": 1640,
+        "unusedUniqueVertices": 0,
+        "triangles": 3062,
+        "edges": 4700,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 214,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 2028,
+            "vertices": 1064,
+            "bounds": {
+              "min": [
+                -33.145006746053696,
+                32.0986732840538,
+                -49.555204808712006
+              ],
+              "max": [
+                7.936077192425728,
+                53.21197211742401,
+                -27.496622875332832
+              ]
+            },
+            "areaMm2": 1419.3849623929605,
+            "algebraicVolumeMm3": 5276.5887955322105
+          },
+          {
+            "firstFace": 2028,
+            "triangles": 1034,
+            "vertices": 576,
+            "bounds": {
+              "min": [
+                -33.37022662162781,
+                36.72288730740547,
+                -43.915748596191406
+              ],
+              "max": [
+                8.037347346544266,
+                42.029399424791336,
+                -39.79473188519478
+              ]
+            },
+            "areaMm2": 206.07695455261424,
+            "algebraicVolumeMm3": -100.94335002566973
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 481,
+      "nodeName": "VH_F_cornua",
+      "meshIndex": 437,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUterus",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "-",
+        "ontologyid": "-",
+        "representation_of": "-",
+        "glb_file_of_single_organs": "VH_F_Uterus&lf;",
+        "node_type": "surface"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1383,
+        "NORMAL": 1384
+      },
+      "triangles": 660,
+      "positionAccessorSha256": "ce17b4640eb20c8151b8b51f07d6dc97627fcfc65d2d91802f0e64282386a7fd",
+      "worldBoundsMm": {
+        "min": [
+          -39.74319249391556,
+          37.0500348508358,
+          -45.91949284076691
+        ],
+        "max": [
+          12.725362554192543,
+          46.36550694704056,
+          -36.262739449739456
+        ]
+      },
+      "topology": {
+        "sourceVertices": 369,
+        "exactUniqueVertices": 369,
+        "unusedUniqueVertices": 0,
+        "triangles": 660,
+        "edges": 1029,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 78,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 380,
+            "vertices": 209,
+            "bounds": {
+              "min": [
+                -39.74319249391556,
+                37.0500348508358,
+                -45.91949284076691
+              ],
+              "max": [
+                -32.65615552663803,
+                44.61347311735153,
+                -38.04193437099457
+              ]
+            },
+            "areaMm2": 104.84959446008199,
+            "algebraicVolumeMm3": 69.46446660007362
+          },
+          {
+            "firstFace": 380,
+            "triangles": 280,
+            "vertices": 160,
+            "bounds": {
+              "min": [
+                6.235093809664249,
+                38.63525390625,
+                -43.76830905675888
+              ],
+              "max": [
+                12.725362554192543,
+                46.36550694704056,
+                -36.262739449739456
+              ]
+            },
+            "areaMm2": 91.60002930987186,
+            "algebraicVolumeMm3": 79.52331783906008
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 482,
+      "nodeName": "VH_F_lower_uterine_segment",
+      "meshIndex": 438,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUterus",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Lower uterine segment",
+        "ontologyid": "FMA:17752",
+        "representation_of": "http://purl.org/sig/ont/fma/fma17752",
+        "glb_file_of_single_organs": "VH_F_Uterus&lf;",
+        "node_type": "surface"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1386,
+        "NORMAL": 1387
+      },
+      "triangles": 1408,
+      "positionAccessorSha256": "c4c58329539247e47e0cd51abdf579d5c93842af6a0fa531bc868e1c90ef518f",
+      "worldBoundsMm": {
+        "min": [
+          -20.889349281787872,
+          17.684917896986008,
+          -71.43371552228928
+        ],
+        "max": [
+          -2.8578233905136585,
+          38.033902645111084,
+          -56.86080828309059
+        ]
+      },
+      "topology": {
+        "sourceVertices": 792,
+        "exactUniqueVertices": 792,
+        "unusedUniqueVertices": 0,
+        "triangles": 1408,
+        "edges": 2200,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 176,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 976,
+            "vertices": 549,
+            "bounds": {
+              "min": [
+                -20.889349281787872,
+                17.684917896986008,
+                -71.43371552228928
+              ],
+              "max": [
+                -2.8578233905136585,
+                38.033902645111084,
+                -56.86080828309059
+              ]
+            },
+            "areaMm2": 355.0883146966342,
+            "algebraicVolumeMm3": 1025.8158988602281
+          },
+          {
+            "firstFace": 976,
+            "triangles": 432,
+            "vertices": 243,
+            "bounds": {
+              "min": [
+                -13.889636844396591,
+                24.422282353043556,
+                -67.01789796352386
+              ],
+              "max": [
+                -7.042291108518839,
+                30.094871297478676,
+                -59.923820197582245
+              ]
+            },
+            "areaMm2": 75.36127353481461,
+            "algebraicVolumeMm3": -40.556425534923065
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 483,
+      "nodeName": "VH_F_posterior_wall_of_uterus",
+      "meshIndex": 439,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUterus",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Posterior wall of uterus",
+        "ontologyid": "FMA:224878",
+        "representation_of": "http://purl.org/sig/ont/fma/fma224878",
+        "glb_file_of_single_organs": "VH_F_Uterus&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1389,
+        "NORMAL": 1390,
+        "COLOR_0": 1391
+      },
+      "triangles": 12022,
+      "positionAccessorSha256": "29b01690555cf6cb4d07183e691141f0d526315026d0a8871ba8acd18d87719a",
+      "worldBoundsMm": {
+        "min": [
+          -34.01535004377365,
+          21.398210898041725,
+          -61.36665120720863
+        ],
+        "max": [
+          8.844166062772274,
+          47.326620668172836,
+          -27.685241773724556
+        ]
+      },
+      "topology": {
+        "sourceVertices": 6508,
+        "exactUniqueVertices": 6013,
+        "unusedUniqueVertices": 0,
+        "triangles": 12022,
+        "edges": 18033,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 12022,
+            "vertices": 6013,
+            "bounds": {
+              "min": [
+                -34.01535004377365,
+                21.398210898041725,
+                -61.36665120720863
+              ],
+              "max": [
+                8.844166062772274,
+                47.326620668172836,
+                -27.685241773724556
+              ]
+            },
+            "areaMm2": 3016.277609108236,
+            "algebraicVolumeMm3": 6354.946552080625
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 484,
+      "nodeName": "VH_F_anterior_wall_of_uterus",
+      "meshIndex": 440,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUterus",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Anterior wall of uterus",
+        "ontologyid": "FMA:224876",
+        "representation_of": "http://purl.org/sig/ont/fma/fma224876",
+        "glb_file_of_single_organs": "VH_F_Uterus&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1393,
+        "NORMAL": 1394,
+        "COLOR_0": 1395
+      },
+      "triangles": 10148,
+      "positionAccessorSha256": "f2c54ad7853df48ff1a2651b25c6d3d37f3e26465e9e8e25cd1d732305c4ef2b",
+      "worldBoundsMm": {
+        "min": [
+          -34.01535004377365,
+          28.414268046617508,
+          -65.70125371217728
+        ],
+        "max": [
+          8.844166062772274,
+          52.96699330210686,
+          -29.72673438489437
+        ]
+      },
+      "topology": {
+        "sourceVertices": 5584,
+        "exactUniqueVertices": 5077,
+        "unusedUniqueVertices": 0,
+        "triangles": 10148,
+        "edges": 15222,
+        "duplicateFaces": 1,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 1,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 3,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 10146,
+            "vertices": 5075,
+            "bounds": {
+              "min": [
+                -34.01535004377365,
+                28.414268046617508,
+                -65.70125371217728
+              ],
+              "max": [
+                8.844166062772274,
+                52.96699330210686,
+                -29.72673438489437
+              ]
+            },
+            "areaMm2": 2953.9372023076485,
+            "algebraicVolumeMm3": 8861.425914460422
+          },
+          {
+            "firstFace": 7902,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                1.1521673295646906,
+                38.21832686662674,
+                -46.17626219987869
+              ],
+              "max": [
+                1.5020989812910557,
+                38.513317704200745,
+                -45.75389623641968
+              ]
+            },
+            "areaMm2": 0.001875928814698207,
+            "algebraicVolumeMm3": 0
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 485,
+      "nodeName": "VH_F_cervix",
+      "meshIndex": 441,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUterus",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "uterine cervix",
+        "ontologyid": "UBERON:0000002",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0000002",
+        "glb_file_of_single_organs": "VH_F_Uterus&lf;",
+        "node_type": "surface"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1397,
+        "NORMAL": 1398
+      },
+      "triangles": 3508,
+      "positionAccessorSha256": "4cb91157da544959a046f2ccb041ae7068ce23bc8addb01147d16bfa33b4c5ca",
+      "worldBoundsMm": {
+        "min": [
+          -24.60305206477642,
+          6.2188454903662205,
+          -86.19216829538345
+        ],
+        "max": [
+          2.6926230639219284,
+          35.15302762389183,
+          -61.90929189324379
+        ]
+      },
+      "topology": {
+        "sourceVertices": 1825,
+        "exactUniqueVertices": 1825,
+        "unusedUniqueVertices": 0,
+        "triangles": 3508,
+        "edges": 5333,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 142,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 2860,
+            "vertices": 1474,
+            "bounds": {
+              "min": [
+                -24.60305206477642,
+                6.2188454903662205,
+                -86.19216829538345
+              ],
+              "max": [
+                2.6926230639219284,
+                35.15302762389183,
+                -61.90929189324379
+              ]
+            },
+            "areaMm2": 1716.0459118605672,
+            "algebraicVolumeMm3": 6667.31324768146
+          },
+          {
+            "firstFace": 2860,
+            "triangles": 648,
+            "vertices": 351,
+            "bounds": {
+              "min": [
+                -12.399706989526749,
+                17.205972224473953,
+                -79.74448800086975
+              ],
+              "max": [
+                -8.479469455778599,
+                25.495395064353943,
+                -68.38066130876541
+              ]
+            },
+            "areaMm2": 102.71097746725034,
+            "algebraicVolumeMm3": -40.26311865216149
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 486,
+      "nodeName": "VH_F_internal_cervical_os",
+      "meshIndex": 442,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUterus",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "internal cervical os",
+        "ontologyid": "UBERON:0013759",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0013759",
+        "glb_file_of_single_organs": "VH_F_Uterus&lf;",
+        "node_type": "surface"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1400,
+        "NORMAL": 1401
+      },
+      "triangles": 216,
+      "positionAccessorSha256": "164b087df3f8b3cd30b54832d1e4dbd43993da1b84a7488bb2e295160d255241",
+      "worldBoundsMm": {
+        "min": [
+          -12.525038793683052,
+          23.15264567732811,
+          -69.61788237094879
+        ],
+        "max": [
+          -9.072573855519295,
+          26.931418105959892,
+          -65.37212431430817
+        ]
+      },
+      "topology": {
+        "sourceVertices": 135,
+        "exactUniqueVertices": 135,
+        "unusedUniqueVertices": 0,
+        "triangles": 216,
+        "edges": 351,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 54,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 216,
+            "vertices": 135,
+            "bounds": {
+              "min": [
+                -12.525038793683052,
+                23.15264567732811,
+                -69.61788237094879
+              ],
+              "max": [
+                -9.072573855519295,
+                26.931418105959892,
+                -65.37212431430817
+              ]
+            },
+            "areaMm2": 29.494945557258156,
+            "algebraicVolumeMm3": -14.107174039994042
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 487,
+      "nodeName": "VH_F_external_cervical_os",
+      "meshIndex": 443,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUterus",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "external cervical os",
+        "ontologyid": "UBERON:0013760",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0013760",
+        "glb_file_of_single_organs": "VH_F_Uterus&lf;",
+        "node_type": "surface"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1403,
+        "NORMAL": 1404
+      },
+      "triangles": 270,
+      "positionAccessorSha256": "4adce4f5388ead9cabd2a685ec848e22e959e672862d350dff3f7f7c2849ddb3",
+      "worldBoundsMm": {
+        "min": [
+          -14.222287572920322,
+          13.049067929387093,
+          -84.1342881321907
+        ],
+        "max": [
+          -6.857067346572876,
+          20.107373595237732,
+          -78.32885533571243
+        ]
+      },
+      "topology": {
+        "sourceVertices": 162,
+        "exactUniqueVertices": 162,
+        "unusedUniqueVertices": 0,
+        "triangles": 270,
+        "edges": 432,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 54,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 270,
+            "vertices": 162,
+            "bounds": {
+              "min": [
+                -14.222287572920322,
+                13.049067929387093,
+                -84.1342881321907
+              ],
+              "max": [
+                -6.857067346572876,
+                20.107373595237732,
+                -78.32885533571243
+              ]
+            },
+            "areaMm2": 68.90951013334687,
+            "algebraicVolumeMm3": -48.847611836217624
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 598,
+      "nodeName": "VH_F_rectum",
+      "meshIndex": 524,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFLargeIntestine",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "rectum",
+        "ontologyid": "UBERON:0001052",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0001052",
+        "glb_file_of_single_organs": "SBU_F_Intestine_Large&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1660,
+        "NORMAL": 1661
+      },
+      "triangles": 1880,
+      "positionAccessorSha256": "0ce0fae362573a881c949e14b329aa6ecad88279790781bb8823e5b7ebcf155e",
+      "worldBoundsMm": {
+        "min": [
+          -23.85588362812996,
+          -13.28155118972063,
+          -146.50557935237885
+        ],
+        "max": [
+          29.071612283587456,
+          92.55766868591309,
+          -83.1364393234253
+        ]
+      },
+      "topology": {
+        "sourceVertices": 965,
+        "exactUniqueVertices": 965,
+        "unusedUniqueVertices": 0,
+        "triangles": 1880,
+        "edges": 2843,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 46,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 8,
+            "triangles": 990,
+            "vertices": 507,
+            "bounds": {
+              "min": [
+                -23.85588362812996,
+                -13.28155118972063,
+                -146.50557935237885
+              ],
+              "max": [
+                29.071612283587456,
+                92.55766868591309,
+                -83.1364393234253
+              ]
+            },
+            "areaMm2": 11656.618883268491,
+            "algebraicVolumeMm3": 73385.0900224126
+          },
+          {
+            "firstFace": 0,
+            "triangles": 890,
+            "vertices": 458,
+            "bounds": {
+              "min": [
+                -23.0642631649971,
+                -12.539810501039028,
+                -145.8779126405716
+              ],
+              "max": [
+                28.947576880455017,
+                91.74184501171112,
+                -83.18061381578445
+              ]
+            },
+            "areaMm2": 11067.337530856546,
+            "algebraicVolumeMm3": -66998.92997255636
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 707,
+      "nodeName": "VH_F_fundus_of_urinary_bladder_dome",
+      "meshIndex": 609,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUrinaryBladder",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "fundus of urinary bladder",
+        "ontologyid": "UBERON:0006082",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0006082",
+        "glb_file_of_single_organs": "VH_F_Urinary_Bladder&lf;",
+        "node_type": "surface"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1915,
+        "NORMAL": 1916
+      },
+      "triangles": 11916,
+      "positionAccessorSha256": "2e56e200aa446ff898203b6e329ef55c4e48a6128cb2bb9b57a6cc71fd281f41",
+      "worldBoundsMm": {
+        "min": [
+          -40.54019972681999,
+          7.800909224897623,
+          -58.76102298498154
+        ],
+        "max": [
+          11.43630687147379,
+          26.227213442325592,
+          2.4150912649929523
+        ]
+      },
+      "topology": {
+        "sourceVertices": 6138,
+        "exactUniqueVertices": 6138,
+        "unusedUniqueVertices": 0,
+        "triangles": 11916,
+        "edges": 18052,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 356,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 11502,
+            "vertices": 5876,
+            "bounds": {
+              "min": [
+                -40.54019972681999,
+                10.57147141546011,
+                -58.76102298498154
+              ],
+              "max": [
+                11.43630687147379,
+                26.227213442325592,
+                2.4150912649929523
+              ]
+            },
+            "areaMm2": 3074.073366781409,
+            "algebraicVolumeMm3": 12118.214126666493
+          },
+          {
+            "firstFace": 11502,
+            "triangles": 414,
+            "vertices": 262,
+            "bounds": {
+              "min": [
+                -30.011452734470367,
+                7.800909224897623,
+                -55.772680789232254
+              ],
+              "max": [
+                5.3123594261705875,
+                12.224913574755192,
+                -51.074255257844925
+              ]
+            },
+            "areaMm2": 101.813157202771,
+            "algebraicVolumeMm3": -73.31204817370406
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 708,
+      "nodeName": "VH_F_urinary_bladder_neck_smooth_muscle",
+      "meshIndex": 610,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUrinaryBladder",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "urinary bladder neck smooth muscle",
+        "ontologyid": "UBERON:0004230",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0004230",
+        "glb_file_of_single_organs": "VH_F_Urinary_Bladder&lf;",
+        "node_type": "surface"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1918,
+        "NORMAL": 1919
+      },
+      "triangles": 1790,
+      "positionAccessorSha256": "15535cf021c62d15d200e516ffc940dddb0ae9608e7eba06b028ab2823470845",
+      "worldBoundsMm": {
+        "min": [
+          -16.07695035636425,
+          -17.99396425485611,
+          -54.93762716650963
+        ],
+        "max": [
+          -9.19598899781704,
+          -13.756226748228073,
+          -49.2430105805397
+        ]
+      },
+      "topology": {
+        "sourceVertices": 935,
+        "exactUniqueVertices": 935,
+        "unusedUniqueVertices": 0,
+        "triangles": 1790,
+        "edges": 2725,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 80,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1790,
+            "vertices": 935,
+            "bounds": {
+              "min": [
+                -16.07695035636425,
+                -17.99396425485611,
+                -54.93762716650963
+              ],
+              "max": [
+                -9.19598899781704,
+                -13.756226748228073,
+                -49.2430105805397
+              ]
+            },
+            "areaMm2": 97.23934443507015,
+            "algebraicVolumeMm3": 26.610338955567048
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 709,
+      "nodeName": "VH_F_fundus_of_urinary_bladder_base",
+      "meshIndex": 611,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFUrinaryBladder",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "fundus of urinary bladder",
+        "ontologyid": "UBERON:0006082",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0006082",
+        "glb_file_of_single_organs": "VH_F_Urinary_Bladder&lf;",
+        "node_type": "surface"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1921,
+        "NORMAL": 1922
+      },
+      "triangles": 25526,
+      "positionAccessorSha256": "0b68ae4c54389a27ccfd902bacfb536ce8267ad1d66332269db5e479185e3810",
+      "worldBoundsMm": {
+        "min": [
+          -40.54019972681999,
+          -15.222308225929737,
+          -59.2840313911438
+        ],
+        "max": [
+          11.43630687147379,
+          20.149854943156242,
+          2.4150912649929523
+        ]
+      },
+      "topology": {
+        "sourceVertices": 13071,
+        "exactUniqueVertices": 13071,
+        "unusedUniqueVertices": 0,
+        "triangles": 25526,
+        "edges": 38596,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 614,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 1,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 14070,
+            "vertices": 7190,
+            "bounds": {
+              "min": [
+                -40.54019972681999,
+                -15.222308225929737,
+                -59.2840313911438
+              ],
+              "max": [
+                11.43630687147379,
+                20.149854943156242,
+                2.4150912649929523
+              ]
+            },
+            "areaMm2": 4097.362075292809,
+            "algebraicVolumeMm3": 17256.039633426728
+          },
+          {
+            "firstFace": 14070,
+            "triangles": 11456,
+            "vertices": 5881,
+            "bounds": {
+              "min": [
+                -39.56637158989906,
+                -14.56361636519432,
+                -54.958149790763855
+              ],
+              "max": [
+                10.428497567772865,
+                19.8865607380867,
+                1.4800223289057612
+              ]
+            },
+            "areaMm2": 3130.1909345679555,
+            "algebraicVolumeMm3": -8063.424369166763
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 736,
+      "nodeName": "VH_F_left_uterine_artery",
+      "meshIndex": 629,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFBloodVasculature",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Left uterine artery",
+        "ontologyid": "FMA:18831",
+        "representation_of": "http://purl.org/sig/ont/fma/fma18831",
+        "glb_file_of_single_organs": "3d-vh-f-blood-vasculature&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1978,
+        "NORMAL": 1979
+      },
+      "triangles": 1382,
+      "positionAccessorSha256": "d9e5e848d178ec0ca428a4c2d6aef57df9bf8e6ad4442acccdbe219a01e98a9f",
+      "worldBoundsMm": {
+        "min": [
+          -0.8386325789615512,
+          22.17555046081543,
+          -84.98939126729965
+        ],
+        "max": [
+          47.68482223153114,
+          37.51560300588608,
+          -48.879049718379974
+        ]
+      },
+      "topology": {
+        "sourceVertices": 700,
+        "exactUniqueVertices": 700,
+        "unusedUniqueVertices": 0,
+        "triangles": 1382,
+        "edges": 2081,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 16,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 1,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1382,
+            "vertices": 700,
+            "bounds": {
+              "min": [
+                -0.8386325789615512,
+                22.17555046081543,
+                -84.98939126729965
+              ],
+              "max": [
+                47.68482223153114,
+                37.51560300588608,
+                -48.879049718379974
+              ]
+            },
+            "areaMm2": 504.771553711701,
+            "algebraicVolumeMm3": 248.15595227196812
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 737,
+      "nodeName": "VH_F_right_uterine_artery",
+      "meshIndex": 630,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFBloodVasculature",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Right uterine artery",
+        "ontologyid": "FMA:18830",
+        "representation_of": "http://purl.org/sig/ont/fma/fma18830",
+        "glb_file_of_single_organs": "3d-vh-f-blood-vasculature&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1981,
+        "NORMAL": 1982
+      },
+      "triangles": 1392,
+      "positionAccessorSha256": "500396691d4c659e550a03cd9ff7beaa65fa3f6f0012c5ef2fb4508a89df0212",
+      "worldBoundsMm": {
+        "min": [
+          -71.33849710226059,
+          20.060759037733078,
+          -80.61664551496506
+        ],
+        "max": [
+          -25.880364701151848,
+          36.654625087976456,
+          -46.78317904472351
+        ]
+      },
+      "topology": {
+        "sourceVertices": 706,
+        "exactUniqueVertices": 706,
+        "unusedUniqueVertices": 0,
+        "triangles": 1392,
+        "edges": 2097,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 18,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 1,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1392,
+            "vertices": 706,
+            "bounds": {
+              "min": [
+                -71.33849710226059,
+                20.060759037733078,
+                -80.61664551496506
+              ],
+              "max": [
+                -25.880364701151848,
+                36.654625087976456,
+                -46.78317904472351
+              ]
+            },
+            "areaMm2": 508.9446791284464,
+            "algebraicVolumeMm3": 236.96713305315035
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 739,
+      "nodeName": "VH_F_left_uterine_vein",
+      "meshIndex": 631,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFBloodVasculature",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Left uterine vein",
+        "ontologyid": "FMA:18898",
+        "representation_of": "http://purl.org/sig/ont/fma/fma18898",
+        "glb_file_of_single_organs": "3d-vh-f-blood-vasculature&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1984,
+        "NORMAL": 1985
+      },
+      "triangles": 2474,
+      "positionAccessorSha256": "812b5d4496c217e5fb151885a8ce0a9c18772ab03acdbfb830cac78882c96165",
+      "worldBoundsMm": {
+        "min": [
+          -0.20471571770031005,
+          24.240341037511826,
+          -104.76341098546982
+        ],
+        "max": [
+          45.83873599767685,
+          55.344656109809875,
+          -47.384873032569885
+        ]
+      },
+      "topology": {
+        "sourceVertices": 1247,
+        "exactUniqueVertices": 1247,
+        "unusedUniqueVertices": 0,
+        "triangles": 2474,
+        "edges": 3720,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 18,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 1,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 2474,
+            "vertices": 1247,
+            "bounds": {
+              "min": [
+                -0.20471571770031005,
+                24.240341037511826,
+                -104.76341098546982
+              ],
+              "max": [
+                45.83873599767685,
+                55.344656109809875,
+                -47.384873032569885
+              ]
+            },
+            "areaMm2": 449.38001114459325,
+            "algebraicVolumeMm3": 121.88458675439875
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 740,
+      "nodeName": "VH_F_right_uterine_vein",
+      "meshIndex": 632,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFBloodVasculature",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "Right uterine vein",
+        "ontologyid": "FMA:18897",
+        "representation_of": "http://purl.org/sig/ont/fma/fma18897",
+        "glb_file_of_single_organs": "3d-vh-f-blood-vasculature&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 1987,
+        "NORMAL": 1988
+      },
+      "triangles": 2332,
+      "positionAccessorSha256": "81b154277d9586592bad2769ae570bdb7375003904bd93e1d6c7960b95d266f3",
+      "worldBoundsMm": {
+        "min": [
+          -74.49512183666229,
+          22.658376023173332,
+          -90.18554538488388
+        ],
+        "max": [
+          -27.304209768772125,
+          50.80932378768921,
+          -46.04751616716385
+        ]
+      },
+      "topology": {
+        "sourceVertices": 1175,
+        "exactUniqueVertices": 1175,
+        "unusedUniqueVertices": 0,
+        "triangles": 2332,
+        "edges": 3506,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 16,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 1,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 2332,
+            "vertices": 1175,
+            "bounds": {
+              "min": [
+                -74.49512183666229,
+                22.658376023173332,
+                -90.18554538488388
+              ],
+              "max": [
+                -27.304209768772125,
+                50.80932378768921,
+                -46.04751616716385
+              ]
+            },
+            "areaMm2": 424.4834463105601,
+            "algebraicVolumeMm3": 133.31716002145063
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    },
+    {
+      "nodeIndex": 1007,
+      "nodeName": "VH_F_sacrum",
+      "meshIndex": 825,
+      "metadata": {
+        "currentUVSet": "map1",
+        "anatomical_structure_of": "#VHFPelvis",
+        "source_spatial_entity": "#VHFemaleOrgans",
+        "label": "fused sacrum",
+        "ontologyid": "UBERON:0003690",
+        "representation_of": "http://purl.obolibrary.org/obo/UBERON_0003690",
+        "glb_file_of_single_organs": "VH_F_Pelvis&lf;",
+        "node_type": "mesh"
+      },
+      "worldMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "attributes": {
+        "POSITION": 2610,
+        "NORMAL": 2611
+      },
+      "triangles": 19636,
+      "positionAccessorSha256": "bc70544c6f9680e854ad787d66e3bd1234c0f4f0c27b54e389303c35f3219a31",
+      "worldBoundsMm": {
+        "min": [
+          -71.82217389345169,
+          43.841227889060974,
+          -182.45455622673035
+        ],
+        "max": [
+          55.596258491277695,
+          142.88178086280823,
+          -77.56024599075317
+        ]
+      },
+      "topology": {
+        "sourceVertices": 9786,
+        "exactUniqueVertices": 9786,
+        "unusedUniqueVertices": 0,
+        "triangles": 19636,
+        "edges": 29454,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": -32,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 19636,
+            "vertices": 9786,
+            "bounds": {
+              "min": [
+                -71.82217389345169,
+                43.841227889060974,
+                -182.45455622673035
+              ],
+              "max": [
+                55.596258491277695,
+                142.88178086280823,
+                -77.56024599075317
+              ]
+            },
+            "areaMm2": 43673.314222092034,
+            "algebraicVolumeMm3": 229581.68026735366
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      }
+    }
+  ],
+  "shared": [
+    {
+      "a": "VH_F_posterior_wall_of_uterus",
+      "b": "VH_F_anterior_wall_of_uterus",
+      "triangles": 234
+    }
+  ],
+  "uterineComparisons": [
+    {
+      "a": "VH_F_posterior_wall_of_uterus",
+      "b": "VH_F_body_of_uterus",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 49,
+        "withinQuarterMm": 77,
+        "withinOneMm": 88,
+        "medianMm": 0.13066038242592148,
+        "maxMm": 15.094616398708352,
+        "closePointBounds": {
+          "min": [
+            -30.958784744143486,
+            22.433709353208542,
+            -61.13143637776375
+          ],
+          "max": [
+            7.760858163237572,
+            40.73690250515938,
+            -40.42915254831314
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 123,
+        "withinTenthMm": 50,
+        "withinQuarterMm": 61,
+        "withinOneMm": 70,
+        "medianMm": 0.3947177374020207,
+        "maxMm": 14.769778366046786,
+        "closePointBounds": {
+          "min": [
+            -32.23781660199165,
+            22.789906710386276,
+            -59.798430651426315
+          ],
+          "max": [
+            7.581939455121756,
+            40.75414687395096,
+            -39.2649844288826
+          ]
+        }
+      },
+      "flagged": true
+    },
+    {
+      "a": "VH_F_posterior_wall_of_uterus",
+      "b": "VH_F_fundus_of_uterus",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 24,
+        "withinQuarterMm": 37,
+        "withinOneMm": 51,
+        "medianMm": 5.404403700021541,
+        "maxMm": 21.110345951610004,
+        "closePointBounds": {
+          "min": [
+            -31.82210773229599,
+            32.23102539777756,
+            -41.90811142325401
+          ],
+          "max": [
+            5.1780701614916325,
+            46.96950688958168,
+            -27.822207659482956
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 127,
+        "withinTenthMm": 42,
+        "withinQuarterMm": 68,
+        "withinOneMm": 90,
+        "medianMm": 0.20079148369023936,
+        "maxMm": 13.12858336522704,
+        "closePointBounds": {
+          "min": [
+            -33.232878893613815,
+            32.1032889187336,
+            -42.36335679888725
+          ],
+          "max": [
+            7.98465684056282,
+            44.73743215203285,
+            -27.521876618266106
+          ]
+        }
+      },
+      "flagged": true
+    },
+    {
+      "a": "VH_F_posterior_wall_of_uterus",
+      "b": "VH_F_lower_uterine_segment",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 4,
+        "withinQuarterMm": 5,
+        "withinOneMm": 6,
+        "medianMm": 17.15405920410255,
+        "maxMm": 35.86055096308923,
+        "closePointBounds": {
+          "min": [
+            -20.328301936388016,
+            22.433709353208542,
+            -61.13143637776375
+          ],
+          "max": [
+            -2.900476334616542,
+            28.627585619688034,
+            -57.39207938313484
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 4,
+        "withinQuarterMm": 5,
+        "withinOneMm": 14,
+        "medianMm": 4.310156883290569,
+        "maxMm": 13.005728825167706,
+        "closePointBounds": {
+          "min": [
+            -20.407704636454582,
+            23.95952120423317,
+            -60.58734655380249
+          ],
+          "max": [
+            -5.09443087503314,
+            28.54694239795208,
+            -58.1996887922287
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "VH_F_posterior_wall_of_uterus",
+      "b": "VH_F_cervix",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 128,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 23.110580165879558,
+        "maxMm": 42.30343609950973,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 122,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 18.151393105067548,
+        "maxMm": 26.457328587347583,
+        "closePointBounds": null
+      },
+      "flagged": false
+    },
+    {
+      "a": "VH_F_anterior_wall_of_uterus",
+      "b": "VH_F_body_of_uterus",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinTenthMm": 35,
+        "withinQuarterMm": 82,
+        "withinOneMm": 90,
+        "medianMm": 0.14158622308965596,
+        "maxMm": 14.530626882209614,
+        "closePointBounds": {
+          "min": [
+            -34.01535004377365,
+            29.456080868840218,
+            -64.70932066440582
+          ],
+          "max": [
+            4.437770694494247,
+            50.20767077803612,
+            -41.58702865242958
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 123,
+        "withinTenthMm": 23,
+        "withinQuarterMm": 59,
+        "withinOneMm": 68,
+        "medianMm": 0.349863531609991,
+        "maxMm": 9.009138085845583,
+        "closePointBounds": {
+          "min": [
+            -32.56753832101822,
+            29.953211545944214,
+            -65.24550914764404
+          ],
+          "max": [
+            7.665023673325777,
+            50.58082565665245,
+            -41.96159169077873
+          ]
+        }
+      },
+      "flagged": true
+    },
+    {
+      "a": "VH_F_anterior_wall_of_uterus",
+      "b": "VH_F_fundus_of_uterus",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinTenthMm": 1,
+        "withinQuarterMm": 28,
+        "withinOneMm": 47,
+        "medianMm": 5.555943724857479,
+        "maxMm": 21.469010336038536,
+        "closePointBounds": {
+          "min": [
+            -27.707470580935478,
+            39.102934300899506,
+            -48.76876622438431
+          ],
+          "max": [
+            6.894235499203205,
+            52.957840263843536,
+            -30.308207497000694
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 127,
+        "withinTenthMm": 4,
+        "withinQuarterMm": 33,
+        "withinOneMm": 70,
+        "medianMm": 0.7412520631552916,
+        "maxMm": 9.866775839418104,
+        "closePointBounds": {
+          "min": [
+            -32.474689185619354,
+            39.04622793197632,
+            -49.555204808712006
+          ],
+          "max": [
+            7.810563780367374,
+            52.79243364930153,
+            -35.06522998213768
+          ]
+        }
+      },
+      "flagged": true
+    },
+    {
+      "a": "VH_F_anterior_wall_of_uterus",
+      "b": "VH_F_lower_uterine_segment",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinTenthMm": 1,
+        "withinQuarterMm": 4,
+        "withinOneMm": 7,
+        "medianMm": 17.149564113009593,
+        "maxMm": 34.88307853013066,
+        "closePointBounds": {
+          "min": [
+            -20.31935565173626,
+            29.827842488884926,
+            -64.65660035610199
+          ],
+          "max": [
+            -6.715260446071625,
+            36.14042326807976,
+            -61.501044780015945
+          ]
+        }
+      },
+      "bToA": {
+        "samples": 114,
+        "withinTenthMm": 1,
+        "withinQuarterMm": 2,
+        "withinOneMm": 15,
+        "medianMm": 3.8985169711456615,
+        "maxMm": 10.852154112472492,
+        "closePointBounds": {
+          "min": [
+            -19.39484477043152,
+            28.54694239795208,
+            -63.46549838781357
+          ],
+          "max": [
+            -13.889636844396591,
+            34.22105684876442,
+            -60.58734655380249
+          ]
+        }
+      },
+      "flagged": false
+    },
+    {
+      "a": "VH_F_anterior_wall_of_uterus",
+      "b": "VH_F_cervix",
+      "exactTriangles": 0,
+      "aToB": {
+        "samples": 127,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 23.09769420188677,
+        "maxMm": 41.58231224578912,
+        "closePointBounds": null
+      },
+      "bToA": {
+        "samples": 122,
+        "withinTenthMm": 0,
+        "withinQuarterMm": 0,
+        "withinOneMm": 0,
+        "medianMm": 17.31125767820912,
+        "maxMm": 27.546948690980862,
+        "closePointBounds": null
+      },
+      "flagged": false
+    }
+  ],
+  "clinicalApproval": false,
+  "admitted": false
+}

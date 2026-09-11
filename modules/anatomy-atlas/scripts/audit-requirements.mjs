@@ -16,7 +16,9 @@ const json = async (path) => JSON.parse(await read(path));
 const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const bundled = await build({
   stdin: {
-    contents: `export { limbDefinitions } from './lib/um-limb-studies.ts';
+    contents: `export { hraPelvisDefinition } from './lib/hra-pelvis.ts';
+export { hraPelvicTeaching, hraPelvicPractice } from './lib/hra-pelvis-teaching.ts';
+export { limbDefinitions } from './lib/um-limb-studies.ts';
 export { specimenTeachingFor } from './lib/um-limb-teaching.ts';
 export { specimenMotorGroups } from './lib/um-limb-motor.ts';
 export { upperLimbMotorGroups } from './lib/upper-limb-motor.ts';
@@ -56,6 +58,9 @@ export { abdominalTeachingFor } from './lib/abdominal-wall-teaching.ts';`,
   platform: 'node',
 });
 const {
+  hraPelvisDefinition,
+  hraPelvicTeaching,
+  hraPelvicPractice,
   abdominalWallDefinition,
   abdominalWallPractice,
   abdominalTeachingFor,
@@ -461,6 +466,15 @@ for (const path of [
   'lib/specimen-identification.ts',
   'scripts/exclude-source-recovery.mjs',
   'app/abdominal-wall-study.tsx',
+  'app/hra-pelvis-study.tsx',
+  'app/specimens/female-pelvis/page.tsx',
+  'lib/hra-pelvis.ts',
+  'lib/hra-pelvis-teaching.ts',
+  'public/models/hra-pelvis/catalog.json',
+  'public/models/hra-pelvis/NOTICE.md',
+  'content/sources/hra-pelvis/metadata.json',
+  'content/sources/hra-pelvis/crosswalk.csv',
+  'docs/hra-pelvic-source-audit.json',
   'app/um-knee-study.tsx',
   'app/specimens/abdominal-wall/page.tsx',
   'public/models/bodyparts3d-v3/abdominal-wall/catalog.json',
@@ -641,6 +655,17 @@ const report = {
       muscleSelections: new Set(upperLimbMotorRegions.flatMap(r => upperLimbMotorGroups(catalog, r).flatMap(g => g.targets.map(t => t.structure.id)))).size,
       relationships: upperLimbMotorRegions.reduce((n,r) => n + upperLimbMotorGroups(catalog,r).reduce((m,g) => m + g.targets.length,0),0),
       sourceAndFrameChecked: true, nerveGeometryAdded: false, clinicalApproval: false,
+    },
+    femalePelvicSpecimen: {
+      id: hraPelvisDefinition.key, route: '/specimens/female-pelvis',
+      representations: hraPelvisDefinition.surfaces.length,
+      triangles: hraPelvisDefinition.surfaces.reduce((n,s)=>n+s.triangles,0),
+      studies: hraPelvisDefinition.studies.length,
+      anatomyFunctionDrafts: hraPelvisDefinition.surfaces.filter(s=>hraPelvicTeaching(hraPelvisDefinition,s)).length,
+      pendingTeaching: hraPelvisDefinition.surfaces.filter(s=>!hraPelvicTeaching(hraPelvisDefinition,s)).length,
+      practiceTargets: hraPelvicPractice.eligibleIds(hraPelvisDefinition,hraPelvisDefinition.surfaces.map(s=>s.id)).length,
+      source: hraPelvisDefinition.source, heldGroups: 6,
+      registeredToCurrentBody: false, realImaging: false, clinicalApproval: false, countedAsRootTeaching: false,
     },
     abdominalWallSpecimen: {
       id: abdominalWall.specimenId, route: '/specimens/abdominal-wall',

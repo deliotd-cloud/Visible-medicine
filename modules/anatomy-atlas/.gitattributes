@@ -27,3 +27,7 @@ content/prototypes/muscle-part-condition/*.obj -text -diff
 docs/muscle-part-condition-audit.json -text
 content/sources/deferent-ducts/*.obj -text -diff
 docs/deferent-duct-source-audit.json -text
+content/sources/hra-pelvis/*.json -text
+# Official crosswalk retains byte-exact CRLF and source whitespace.
+content/sources/hra-pelvis/*.csv -text -diff
+docs/hra-pelvic-source-audit.json -text

@@ -62,7 +62,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "5676702b9482998caeb82b8984dc162993bd93cff9185634ed35d7e0e038f62a"
+      "sha256": "965a4afd585c2d5be4f48a47f37849513c05638bad4aa7699a25a1eb7165376a"
     },
     {
       "path": "app/body-scene.tsx",
@@ -127,6 +127,10 @@
     {
       "path": "app/globals.css",
       "sha256": "c0b5616ff8bd0c4579f762fa0e895562645289ec6ead7bbc029ae4791cb61ea3"
+    },
+    {
+      "path": "app/hra-pelvis-study.tsx",
+      "sha256": "4344cea55c9d3801561fa22e46e993eab9a8688d4e0b116ac31bd7c105d9576c"
     },
     {
       "path": "app/imaging-comparison.css",
@@ -242,7 +246,7 @@
     },
     {
       "path": "app/um-knee-study.tsx",
-      "sha256": "f0d38a06e5199705304b8ee574513b8fccc376d7a45baaa6af36171a770879fe"
+      "sha256": "c5de29033639c5780be8cbfbbf9831411bcd693949375963bed520534adb2270"
     },
     {
       "path": "app/um-limb-learning.tsx",
@@ -869,6 +873,14 @@
       "sha256": "033f69852bf6b66e3a36b4f6399bc7b0e5e03b0ff1382e9f6017ecd308ef88b5"
     },
     {
+      "path": "lib/hra-pelvis-teaching.ts",
+      "sha256": "c298684a3b56f9e46e491c95753aae7138351f7a2172ff4ea53f365111fdb615"
+    },
+    {
+      "path": "lib/hra-pelvis.ts",
+      "sha256": "644feba6223ab73165d2e093671b1b76216a1ef866f35fd02d080c22e85537cd"
+    },
+    {
       "path": "lib/imaging-comparison.ts",
       "sha256": "558e99844f74462f39b14784b4ea95593792992479d9d335db866929b18f66f6"
     },
@@ -1421,6 +1433,10 @@
       "sha256": "f3ba11e16956eed6530df9449cdbca919364d76d8d838df2b3520ef678125c16"
     },
     {
+      "path": "public/models/hra-pelvis/catalog.json",
+      "sha256": "a0e997a2eb4af64d25bf5f6f9901ea70616fb59443696f7630e0aea6bd53c619"
+    },
+    {
       "path": "public/models/um-knee/catalog.json",
       "sha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e"
     },
@@ -1441,5 +1457,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "8f9206846d63e8b572b6b0ec01418183ba1a807b14addbd4c1bebdc53d8f573b"
+  "sha256": "b8dab17ffd813354e71e0d280323d0e75a0de9db498df44fc953b262937c3f98"
 }

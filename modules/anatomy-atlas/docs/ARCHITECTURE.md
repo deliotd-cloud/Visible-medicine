@@ -1,5 +1,7 @@
 # Spatial anatomy architecture
 
+[HRA female pelvis](HRA_FEMALE_PELVIS.md) is an independent source/version/frame, with 41 source-local selections and eight recipes. Its lessons/practice reject mismatched bundles, coordinates, surfaces and recipes. The generic specimen workbench accepts optional tissue groups without changing existing limb/abdominal defaults. No main-body source, imaging crosswalk, entitlement or approval is merged.
+
 [Deferent ducts](DEFERENT_DUCTS.md) use the existing atomic source-addition contract, binding two new records and eight exact context records to their source bundles/frame. One focus-only study in pelvis/whole-body uses the shared source gate for both actual parent transitions and incoming links. Whole-record aliases preserve canonical labels. A hash-pinned offline recipe inverse preserves historical comparisons without migrating runtime review approvals. No source meshes are cropped or connected.
 
 [Body batching](BODY_BATCHING.md) adds a capability-gated `BatchedMesh` per compatible source bundle. The hook owns/disposes copied buffers; source geometry is immutable. Per-instance colour/offset/visibility preserves IDs and R3F event identity. Mutable Three state is applied in layout effects after React commits. Selected, ghosted, transparent, cut and muscle surfaces retain `AnatomyTissue`; small scenes and unsupported devices allocate no batch. Labels/origin guides and camera/layout/inspection frames are unchanged. No new UI or source mesh.

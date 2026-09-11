@@ -38,6 +38,7 @@ const tissueGroups = [
 // Non-limb specimens reuse the dissection controls, never UM identity/teaching bindings.
 export type SpecimenSupplement = {
   colors: Record<string, string>;
+  tissueGroups?: ReadonlyArray<{ id: string; name: string; color: string }>;
   learning: (surface: SpecimenSurface, definition: SpecimenDefinition) => ReactNode;
   sourceDetails: ReactNode;
   identification?: SpecimenPracticeAdapter;
@@ -164,10 +165,10 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
       </div>
       <details className="um-knee-details" open>
         <summary>Tissues & search</summary>
-        <div className="um-knee-groups">{tissueGroups.filter((group) => kneeSpecimen.structures.some((s) => s.tissue === group.id)).map((group) => {
+        <div className="um-knee-groups">{(supplement?.tissueGroups ?? tissueGroups).filter((group) => kneeSpecimen.structures.some((s) => s.tissue === group.id)).map((group) => {
           const members = kneeSpecimen.structures.filter((s) => s.tissue === group.id);
           const count = members.filter((s) => !hidden.includes(s.id)).length;
-          return <label key={group.id}><span style={{ color: kneeTissueColours[group.id] }}>●</span>{group.name}<small>{count}/{members.length}</small>
+          return <label key={group.id}><span style={{ color: 'color' in group ? group.color as string : kneeTissueColours[group.id] }}>●</span>{group.name}<small>{count}/{members.length}</small>
             <Switch checked={count > 0} aria-label={`Show ${specimen.label.toLowerCase()} ${group.name.toLowerCase()}`} onCheckedChange={(checked) => {
               // One atomic history step for the entire group, not one per surface.
               dispatch({ type: 'group', tissue: group.id, visible: checked }); setFocus(false);

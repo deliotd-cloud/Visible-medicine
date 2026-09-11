@@ -1,5 +1,7 @@
 # Audited-source implementation — 11 September 2026
 
+Update 12 September: [original-source HRA female pelvis](HRA_FEMALE_PELVIS.md) now implements the first independent female regional module (41 selections; six held groups). This does not affect the male source-ID ledger below, nor establish a complete female body. Original official metadata and per-asset notices are retained; no mixed-donor competitor assembly is imported.
+
 This ledger began with the repository comparison and label-computation improvement. The [cubital-vein addition](CUBITAL_VEINS.md) adds four original superficial vessel selections with compact same-side navigation. The preceding [inferior-brachia addition](COLLICULAR_BRACHIA.md) adds two source references and withholds two superior candidates for contradictory laterality. It does not bulk-admit external models or claim anatomical completeness. The broader improvement goal remains active.
 
 ## Coverage result

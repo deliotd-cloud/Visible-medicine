@@ -1,6 +1,22 @@
-# Anatomy atlas backup — 11 September 2026
+# Anatomy atlas backup — 12 September 2026
 
-## 11 September 2026 — deferent ducts and focused male-pelvis dissection (current source)
+## 12 September 2026 — independent HRA female pelvic study (current source)
+
+Source `5cded314c29d62d53cf870c0f6c70e4b1c754836`, tree `4be12626bc9a7936e417badec34e71ab2ebafade`, parent `925056d1681b0a6668d34cb9584cf565bbbc3a97`. Thirty-one exact source paths mirrored. Full module audit: 1,829 matching files / 445,953,578 bytes / 125 retained GLBs; no common credential-signature warnings (not exhaustive). Website main remains separate and unchanged.
+
+Original HRA v1.10 female pelvic reference: 47 retained audit surfaces, 41 runtime selections, all 205,463 original ordered triangles, eight compact dissection views, 17 draft Anatomy/Function selections and source-identification practice. Six disputed or overlapping source groups remain withheld. Native source coordinates and donor identity are separate from the 1,060-selection main body. No mixed-donor skeleton, generated anatomy, pelvic floor, nerve network, continuous lumen, pregnancy or patient registration is claimed.
+
+Official model, release metadata and crosswalk are hash-pinned. Kristen Browne / Heidi Schlehlein / HuBMAP / NLM attribution and CC BY 4.0 terms are retained beside source and runtime assets. No new dependency, font, texture, diagram, API key, paid service, schema, authentication or entitlement change. Imaging/clinical teaching and 24 further anatomical entries remain pending; no radiologist approval is inferred.
+
+Passed: full-original-to-subset reproduction; 47 topology records; all runtime positions/normals/indices; installed decoder round-trip; eight study recipes; source/frame mismatch rejection; actual launcher/exam/close callbacks; React workbench/practice markup; abdominal practice and independent limb navigation regressions; 1,836 search cases; 3,180 isolated SQLite review tracks; TypeScript, production build and dependency audit (808 packages, zero unclassified). The legacy model-first test still fails preexisting handler pins; all 24 named handlers are unchanged from the preceding source. Its baseline was not silently replaced. No browser/GPU/mobile acceptance is claimed.
+
+Body renderer revision `b8dab17ffd813354e71e0d280323d0e75a0de9db498df44fc953b262937c3f98`, 361 inputs. Lossless delivery: 120 GLBs / 1,285 meshes / 3,855 buffer views; canonical 184,548,972 bytes, transport 124,554,376 bytes, gzip transport 108,334,195 bytes. Shoulder review fingerprints and existing geometry are unchanged.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-hra-pelvis-2026-09-12`: `.site.tar.gz` 113,788,503 bytes / SHA256 `626566b53d2f91d6437b48c816fdb19b497d0963dd61ab27f5bfd32c25ecfbbe`; `.delta.tar` 9,308,160 bytes / `4af553925cb86d4c68f28bd4772e2ff2f0f2b44c7b129ea6898ec32e0ea44415`; `.incremental.bundle` 4,627,521 bytes / `2c3193f879b4e789972e51d0152de02ab0f5b534d90c5bc6dd9317f341e58a90`. Archive: 413 safe unique entries, exact manifest and both original migrations. Independent bare restore `refs/verification/hra-pelvis-20260912` passes full fsck and exact SHA/tree; verifier main unchanged. Preserve earlier recovery bundles; this increment requires its parent.
+
+Sites source main independently matches the source. Private publication is in progress at this receipt; terminal deployment and GitHub remote verification are recorded in the work/D-drive checkpoint. These backups cover source/runtime, not conversation history, production database contents, personal reviews, accounts, scans or lectures. The broader goal remains active.
+
+## 11 September 2026 — deferent ducts and focused male-pelvis dissection (previous source)
 
 Source `925056d1681b0a6668d34cb9584cf565bbbc3a97`, tree `9cd29a22d40809fd956149f90ff847d25e10e42e`, parent `0b3c1fd3d80849a3cc3e7e860430f610c265eea7`. Sixty-two exact source paths mirrored. Full module audit: 1,812 matching files / 437,340,393 bytes / 123 retained GLBs; no common credential-signature warnings (not exhaustive). No dependency/lockfile, font, texture, database schema, authentication, entitlement or scan changes.
 

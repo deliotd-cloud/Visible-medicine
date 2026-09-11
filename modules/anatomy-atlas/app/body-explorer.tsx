@@ -177,6 +177,7 @@ const KneeSpecimen = dynamic(() => import('./um-limb-study'), { ssr: false });
 const AbdominalWallSpecimen = dynamic(() => import('./abdominal-wall-study'), {
   ssr: false,
 });
+const HraPelvisSpecimen = dynamic(() => import('./hra-pelvis-study'), { ssr: false });
 const systemKeys = Object.keys(bodySystems) as BodySystem[];
 const icons = {
   skeleton: Bone,
@@ -252,6 +253,12 @@ export default function BodyExplorer({
   const [eyeParent, setEyeParent] = useState<BodyStructure | null>(null);
   const [kneeSpecimenOpen, setKneeSpecimenOpen] = useState(false);
   const [abdominalWallOpen, setAbdominalWallOpen] = useState(false);
+  const [hraPelvisOpen, setHraPelvisOpen] = useState(false);
+  const hraPelvisLauncher = useRef<HTMLButtonElement | null>(null);
+  const closeHraPelvis = useCallback(() => {
+    setHraPelvisOpen(false);
+    requestAnimationFrame(() => hraPelvisLauncher.current?.focus());
+  }, []);
   const abdominalWallLauncher = useRef<HTMLButtonElement | null>(null);
   const closeAbdominalWall = useCallback(() => {
     setAbdominalWallOpen(false);
@@ -1198,6 +1205,11 @@ export default function BodyExplorer({
             onClick={() => setAbdominalWallOpen(true)}
           >
             Abdominal wall layers · separate specimen
+          </Button>
+        )}
+        {['pelvis', 'whole-body'].includes(initialRegion) && (
+          <Button ref={hraPelvisLauncher} variant="outline" size="sm" className="um-knee-launch" disabled={exam} onClick={() => { if (!exam) setHraPelvisOpen(true); }}>
+            Female pelvis · separate reference
           </Button>
         )}
         {['leg', 'foot', 'thigh', 'pelvis'].includes(initialRegion) && (
@@ -2322,6 +2334,9 @@ export default function BodyExplorer({
         )}
       {abdominalWallOpen && initialRegion === 'abdomen' && !exam && (
         <AbdominalWallSpecimen onClose={closeAbdominalWall} />
+      )}
+      {hraPelvisOpen && ['pelvis','whole-body'].includes(initialRegion) && !exam && (
+        <HraPelvisSpecimen onClose={closeHraPelvis} />
       )}
       {ventricleParent && !exam && ventricleParent.id === selectedId && (
         <Ventricles
