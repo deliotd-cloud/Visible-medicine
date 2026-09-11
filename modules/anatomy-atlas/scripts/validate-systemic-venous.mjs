@@ -40,8 +40,8 @@ const {
 const targets = catalog.structures.filter((s) =>
   Object.values(groups).some((g) => g.fmaIds.includes(s.fmaId)),
 );
-assert.equal(targets.length, 44);
-assert.equal(Object.keys(groups).length, 24);
+assert.equal(targets.length, 47);
+assert.equal(Object.keys(groups).length, 26);
 assert.equal(pins.entries.length, 239);
 const extra = JSON.parse(
   await readFile(
@@ -56,11 +56,19 @@ const deepLeg = JSON.parse(
 );
 pins.entries.push(...deepLeg.structures);
 pins.bundles.push(...deepLeg.bundles);
+const hepatic = JSON.parse(
+  await readFile('public/models/bodyparts3d/hepatic-veins/catalog.json'),
+);
+pins.entries.push(...hepatic.structures);
+pins.bundles.push(...hepatic.bundles);
 const byFma = (fma) => targets.find((s) => s.fmaId === fma);
 const infoFor = (fma) =>
   neighbours(catalog, 'whole-body', 'both', byFma(fma).id);
 // Independent, source-ID edge oracle. The reciprocal check alone would miss a reversed map.
 const pairs = [
+  ['FMA14340', 'FMA10951'],
+  ['FMA15791', 'FMA14338'],
+  ['FMA15794', 'FMA14339'],
   ['FMA44336', 'FMA44328'],
   ['FMA44337', 'FMA44329'],
   ['FMA44338', 'FMA44328'],
@@ -97,13 +105,13 @@ const pairs = [
   ['FMA14338', 'FMA10951'],
   ['FMA14339', 'FMA10951'],
 ];
-assert.equal(pairs.length, 46);
+assert.equal(pairs.length, 49);
 const sort = (a) =>
   a.map((v) => JSON.stringify(v)).sort((a, b) => a.localeCompare(b));
 const rows = targets.flatMap((s) =>
   infoFor(s.fmaId).rows.map((r) => ({ from: s.fmaId, ...r })),
 );
-assert.equal(rows.length, 92);
+assert.equal(rows.length, 98);
 assert.deepEqual(
   sort(
     rows
@@ -427,14 +435,14 @@ for (const selected of targets)
   }
 console.log(
   JSON.stringify({
-    veins: 44,
-    groups: 24,
-    relationships: 46,
-    reciprocalRows: 92,
+    veins: 47,
+    groups: 26,
+    relationships: 49,
+    reciprocalRows: 98,
     plans,
     links,
     rejections,
-    sourceRows: 44,
+    sourceRows: 47,
     actualComponentRenders: renders,
     actualParentHandlers: handlers,
     clinicalValidation: false,

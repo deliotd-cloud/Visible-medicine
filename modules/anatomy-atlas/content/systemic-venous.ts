@@ -1,5 +1,6 @@
 // Original factual teaching map. No imported tables, images, lumen or flow data.
 export const systemicVenousReferences = {
+  hepatic: 'https://anatomy.ttuhscep.edu/anatomytables/veins_abdomen.html',
   neck: 'https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/vein-tables/selected-veins-of-the-head-and-neck/',
   arm: 'https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/vein-tables/selected-veins-of-the-upper-limb/',
   leg: 'https://anatomy.ttuhscep.edu/anatomytables/veins_lowerlimb.html',
@@ -131,10 +132,20 @@ export const systemicVenousGroups = {
     'foot',
     'The dorsal arch remains one selection. Medial/lateral marginal routes are not separately labelled surfaces.',
   ),
+  middleHepatic: group(
+    ['FMA14340'],
+    'abdomen',
+    'The source-labelled middle hepatic vein drains towards the inferior cava. Its supplied surface does not validate a common trunk, a donor confluence or Couinaud territories.',
+  ),
+  hepaticTributaries: group(
+    ['FMA15791', 'FMA15794'],
+    'abdomen',
+    'Right and left source-labelled tributary groups drain towards their respective hepatic veins. Seven right and five left disconnected components stay grouped; no missing connection is reconstructed.',
+  ),
   hepatic: group(
     ['FMA14338', 'FMA14339'],
     'abdomen',
-    'Hepatic venous outflow is distinct from portal inflow. The middle hepatic vein, intraparenchymal channels and portal-systemic collaterals are not supplied by this map.',
+    'Hepatic venous outflow is distinct from portal inflow. Available tributary groups retain disconnected source surfaces; a complete intraparenchymal tree, segment map and portal-systemic collaterals are not supplied.',
   ),
 };
 export type VenousKind =
@@ -147,6 +158,18 @@ const relationship = (from: Key, to: Key, kind: VenousKind, note: string) => ({
   note,
 });
 export const systemicVenousRelationships = [
+  relationship(
+    'middleHepatic',
+    'ivc',
+    'tributary',
+    'Typical hepatic outflow, not a measured donor junction or a direct portal connection.',
+  ),
+  relationship(
+    'hepaticTributaries',
+    'hepatic',
+    'tributary',
+    'Source-labelled tributary group to its same-side hepatic vein. Disconnected surfaces are not bridged.',
+  ),
   relationship(
     'anteriorTibial',
     'popliteal',

@@ -259,6 +259,9 @@ for (const path of [
   'lib/tentorium.ts',
   'lib/deep-leg-veins.ts',
   'lib/portal-veins.ts',
+  'lib/hepatic-veins.ts',
+  'public/models/bodyparts3d/hepatic-veins/catalog.json',
+  'docs/hepatic-vein-source-audit.json',
   'lib/portal-drainage.ts',
   'lib/venous-drainage.ts',
   'public/models/bodyparts3d/portal-veins/catalog.json',
@@ -497,6 +500,11 @@ const report = {
     'Offline source and displayed-copy inventory; no clinical or browser certification.',
   sourceHashes,
   anatomy: {
+    hepaticVeins: {
+      sourceSelections: catalog.structures.filter(s=>s.bundle==='hepatic-veins').length,
+      originalTriangles: 13984, sourceFiles: 10, sourceComponents: 13,
+      exactSourceFacesRetained: true, clinicalApproval: false, connectedTreeClaimed: false,
+    },
     portalVeins: {
       sourceSelections: catalog.structures.filter(s=>s.bundle==='portal-veins').length,
       originalTriangles: 3892, sourceFiles: 5,
@@ -795,7 +803,7 @@ const report = {
     revisionIdentities: Object.keys(revisions.revisions).length,
     hasPrivateReviews: false,
     status:
-      `Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot and ${catalog.structures.length} displayed root-body selections. The 1,022-record archival catalogue is retained; later source-bound additions include the incomplete right-sided tentorium and limb/portal vein groups. This inventory never reads personal review records; nested/independent scopes and acquired imaging remain outside those approvals.`,
+      `Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot and ${catalog.structures.length} displayed root-body selections. The 1,022-record archival catalogue is retained; later source-bound additions include the incomplete right-sided tentorium and limb, portal and hepatic vein groups. This inventory never reads personal review records; nested/independent scopes and acquired imaging remain outside those approvals.`,
   },
   boundaries: {
     scope: 'Current source implementation, not operations performed by this inventory script',

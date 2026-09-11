@@ -50,7 +50,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "0ddf4f7b6e424951e37139ec63ddb3b8afdc117c29c52462a743538c46338720"
+      "sha256": "ff5d5f82f2bdb2589410cf59fc44b99995a789df69e8c498a0d6c76672948eb7"
     },
     {
       "path": "app/body-explorer.css",
@@ -418,7 +418,7 @@
     },
     {
       "path": "content/systemic-venous.ts",
-      "sha256": "410335cd18869f28af23cb6ef6d7479d82aad0e7490804f7c98b466ebe34cdb1"
+      "sha256": "0070b6d0aac8d2d971a7f21d4688ced194d50d33b1846ee10cebf823d7c375a2"
     },
     {
       "path": "content/tarsal-imaging-concepts.ts",
@@ -606,7 +606,7 @@
     },
     {
       "path": "lib/body-display-catalog.ts",
-      "sha256": "cc3f4043123c2e50559a98feceed4c94177371c08bc382c5ffe2d8e21c6e2eef"
+      "sha256": "b2456e597ae6c2d158e04d9aeaf941d0ffc98d9920be0ce7ce441585f8609857"
     },
     {
       "path": "lib/body-source-additions.ts",
@@ -799,6 +799,10 @@
     {
       "path": "lib/hepatic-biliary-context.ts",
       "sha256": "62585b9e742a4f62d96afffb045d19df225ddac07ceffcc7a07a6d34b4646a92"
+    },
+    {
+      "path": "lib/hepatic-veins.ts",
+      "sha256": "c0540137e37b35f37d85b9ffa07aa756ad76bea24b95264f155aea8bfe56523d"
     },
     {
       "path": "lib/hepatic.ts",
@@ -1106,7 +1110,7 @@
     },
     {
       "path": "lib/systemic-venous.ts",
-      "sha256": "6323aee5d161f5a3cc60bd7cdee41dc692a76774b94d15d84aa5d0e2186eca4a"
+      "sha256": "6dced6f6a7602a2117813541b5b838c5e6ce3a9c02d0fc5ee9131c634c70be1f"
     },
     {
       "path": "lib/tarsal-imaging.ts",
@@ -1230,7 +1234,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "468b0a9cc6d7a03d62dc4159474d792c361da4f6bdbe99f3fe40f3328861221f"
+      "sha256": "eb676f3f047c4418e565d351281d20a06e2c6d43cb160acaff08634772e129d6"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1271,6 +1275,10 @@
     {
       "path": "public/models/bodyparts3d/eye-layers/display-correction.json",
       "sha256": "61e09e972a1d301e56ebae9f1af90ffe9136309eda0242df1a03f84c6ad85dd2"
+    },
+    {
+      "path": "public/models/bodyparts3d/hepatic-veins/catalog.json",
+      "sha256": "493a2070ab758dd6afd0ccfd8ecd6fe3bb2b855b2ecd34b067806b5b8a465039"
     },
     {
       "path": "public/models/bodyparts3d/hepatic/biliary-context.json",
@@ -1341,5 +1349,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "cb45b4e1b8c10073e4b293466adc0e7abe613bed2646c487994e6beb367cc9d5"
+  "sha256": "093291ee44fd80370c46435945f23cfcb4831e4dd760ce71ea11985820e6d215"
 }

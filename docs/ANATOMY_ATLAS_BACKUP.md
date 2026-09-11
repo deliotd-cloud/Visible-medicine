@@ -1,6 +1,14 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — portal veins (current source)
+## 11 September 2026 — hepatic veins (current source)
+
+Source `1f9413f581fd35da56561001e23b803ce94951af`, tree `59767ddbd5d8b637ea64824a73244bcb08630673`, parent `3dc55195aeb37350fdbbfcba6f6f54e20e22e452`. Forty-six source paths mirrored once; 1,669 exact files / 428,921,011 bytes / 117 retained GLBs. Three whole hepatic-vein source groups retain ten original files, 13 components and 13,984 triangles. Existing drainage controls now cover 47 systemic sources and 49 typical relationships; no invented continuity, clinical approval or patient registration. Exact Sites source push and remote main confirmed; GitHub delivery remains unconfirmed.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-hepatic-veins-2026-09-11`: runtime .site.tar.gz 110,992,371 bytes (SHA-256 `ff22d1e2130254561001f527acb8ef0df292705fc98ff10e62dd4d30ed21e22a`); delta .delta.tar 3,409,920 bytes (`3408450337ec935713d1d414249678353b3aa95e3faa4b724f0594989792bc14`); .incremental.bundle 642,459 bytes (`f9ef13e169e462a3cc0c5cf8edb5e2b53a2ded0a92f3d05bce55f822d8fe461a`). Retain the full-source bundle and previous increments: this bundle requires the exact parent above. Not proof of an independent off-device backup.
+
+Restored into the retained D: bare verifier at refs/verification/hepatic-veins-20260911; full fsck passed, exact source/tree matched and original main was unchanged. Publication is in progress; final work/D: checkpoint records the terminal result without modifying this saved source. Main website outside the module/receipt remains untouched. The improvement goal remains active.
+
+## 11 September 2026 — portal veins (previous source)
 
 Source `3dc55195aeb37350fdbbfcba6f6f54e20e22e452`, tree `b999d46dd72074632a193fbe84f9c08086b2ec3d`, parent `f33f02fc9eb1c123011f02015f9b7f9cd22cf812`. Thirty-nine source paths mirrored once; 1,650 exact files / 426,191,292 bytes / 116 retained GLBs. Five whole source meshes add 3,892 triangles, with eleven-source portal drainage navigation in the existing compact panel. Original source bytes, earlier mesh/catalogue records and recipes remain intact. Private Sites source push and independent main ref match exactly. No common credential-signature warnings (not exhaustive).
 

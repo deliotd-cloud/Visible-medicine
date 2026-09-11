@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Hepatic veins](HEPATIC_VEINS.md) add ${anatomy.hepaticVeins.sourceSelections} genuine source groups with ${anatomy.hepaticVeins.originalTriangles} retained triangles from ${anatomy.hepaticVeins.sourceFiles} files. The middle hepatic vein and right/left tributary groups reuse selection, labels, dissection and the compact venous panel. All ${anatomy.hepaticVeins.sourceComponents} disconnected components remain in their original positions; no bridging, complete tree, Couinaud territory, flow or patient registration is claimed.
+
 [Portal tributaries](PORTAL_VEINS.md) add ${anatomy.portalVeins.sourceSelections} genuine source meshes (${anatomy.portalVeins.originalTriangles} retained triangles): splenic and paired gastric/gastroepiploic veins. The existing selected-vein panel now connects ${anatomy.portalVeins.mappedSelections} portal selections through ${anatomy.portalVeins.mappedRelationships} typical relationships, with reversible isolation and no new toolbar. Variable mesenteric outlets and missing sinusoidal/collateral networks remain explicit. No flow, scan registration or clinical approval is supplied.
 
 [Limb vascular dissection](LIMB_VASCULAR_STUDIES.md) adds ${anatomy.limbVascularStudies.studies} focused Study choices using ${anatomy.limbVascularStudies.sourceSelections} existing vessel, muscle and bone selections. Compare anterior/posterior calf and deep femoral relationships; hide a context muscle, extract a selected vessel and Undo. No permanent controls, new geometry, complete neurovascular bundle, surgical approach or imaging registration are supplied.

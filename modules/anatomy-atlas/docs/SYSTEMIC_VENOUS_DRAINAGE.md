@@ -1,5 +1,7 @@
 # Systemic venous drainage
 
+11 September hepatic extension: [three additional source groups](HEPATIC_VEINS.md) bring this map to 47 selections, 26 groups and 49 directed relationships. The middle hepatic vein points towards the inferior cava; right/left tributary groups point to their respective hepatic vein. Older milestone counts below describe earlier scope. Original pin records are retained and the new source records are appended; no direct portal-to-systemic edge is introduced.
+
 Select a supplied vein, then expand **Venous drainage** in its information panel. **Receives from** and **Drains towards** link the model's existing selections. **Show available veins & bones** isolates available neighbours with skeletal context in one reversible dissection step. Other-region neighbours open a source-bound whole-body study; they are not silently placed in the current region. No persistent toolbar or extra tab is added.
 
 ## Coverage and meaning

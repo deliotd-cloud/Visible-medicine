@@ -6,7 +6,7 @@ import { build } from './workspace-test-build.mjs';
 const compiled = await build({
   stdin: {
     contents:
-      "export * from './lib/brachial-veins'; export * from './lib/body-display-catalog'; export * from './lib/anatomy-link-registry'; export * from './lib/anatomy-coordinates'; export * from './lib/study-links'; export * from './app/dissection-data'; export {bodyLesson} from './app/body-content';",
+      "export * from './lib/hepatic-veins'; export * from './lib/portal-drainage'; export * from './lib/venous-drainage'; export * from './lib/systemic-venous'; export * from './lib/body-display-catalog'; export * from './lib/anatomy-link-registry'; export * from './lib/anatomy-coordinates'; export * from './lib/study-links'; export * from './app/dissection-data'; export {bodyLesson} from './app/body-content';",
     resolveDir: process.cwd(),
     loader: 'ts',
   },
@@ -29,30 +29,33 @@ assert.equal(
 const raw = JSON.parse(rawBytes),
   before = JSON.stringify(raw),
   pins = JSON.parse(
-    await readFile('public/models/bodyparts3d/brachial-veins/catalog.json'),
+    await readFile('public/models/bodyparts3d/hepatic-veins/catalog.json'),
   );
 const catalog = api.bodyDisplayCatalog(raw);
+assert(
+  !catalog.structures.some((s) => ['FMA44885', 'FMA44886'].includes(s.fmaId)),
+);
 assert.equal(raw.structures.length, 1022);
 assert.equal(catalog.structures.length, 1039);
 assert.equal(JSON.stringify(raw), before);
 assert.equal(api.bodyDisplayCatalog(catalog), catalog);
 assert.deepEqual(
-  catalog.structures.filter((s) => s.bundle === 'brachial-veins'),
+  catalog.structures.filter((s) => s.bundle === 'hepatic-veins'),
   pins.structures,
 );
-const detached = api.addBrachialVeins(raw);
+const detached = api.addHepaticVeins(raw);
 detached.structures.at(-1).anchor[0] = 999;
 assert.deepEqual(
-  api.addBrachialVeins(raw).structures.slice(-2),
+  api.addHepaticVeins(raw).structures.slice(-3),
   pins.structures,
 );
 const unrelated = { ...raw, structures: [], bundles: [] };
-assert.equal(api.addBrachialVeins(unrelated), unrelated);
+assert.equal(api.addHepaticVeins(unrelated), unrelated);
 let rejections = 0;
 const reject = (mutate) => {
   const bad = structuredClone(catalog);
   mutate(bad);
-  assert.throws(() => api.addBrachialVeins(bad));
+  assert.throws(() => api.addHepaticVeins(bad));
   rejections++;
 };
 for (const p of [...pins.contextRecords, ...pins.structures]) {
@@ -64,7 +67,7 @@ for (const p of [...pins.contextRecords, ...pins.structures]) {
   });
   for (const mutate of [
     (s) => (s.anchor[0] += 0.01),
-    (s) => (s.laterality = 'midline'),
+    (s) => (s.laterality = 'changed'),
     (s) => (s.sources[0].sha256 = 'changed'),
     (s) => (s.bundle = 'wrong'),
     (s) => (s.nodeName = 'wrong'),
@@ -88,7 +91,7 @@ for (const field of ['sourceVersion', 'license', 'coordinateSystem'])
     c[field] = 'changed';
   });
 const bytes = await readFile(
-  'public/models/bodyparts3d/brachial-veins/brachial-veins.glb',
+  'public/models/bodyparts3d/hepatic-veins/hepatic-veins.glb',
 );
 assert.equal(
   createHash('sha256').update(bytes).digest('hex'),
@@ -104,7 +107,7 @@ const meshes = [];
 scene.traverse((o) => {
   if (o.isMesh) meshes.push(o);
 });
-assert.equal(meshes.length, 2);
+assert.equal(meshes.length, 3);
 let links = 0,
   triangles = 0;
 const entries = api.bodyLinkEntries(catalog),
@@ -120,16 +123,14 @@ for (const s of pins.structures) {
       Array.from(positions.slice(i * 3, i * 3 + 3)),
     ).some((p) => JSON.stringify(p) === JSON.stringify(s.anchor)),
   );
-  assert(
-    Array.from(
-      { length: positions.length / 3 },
-      (_, i) => positions[i * 3],
-    ).every((x) => (s.laterality === 'right' ? x < 0 : x > 0)),
-  );
   for (const region of ['whole-body', ...s.regions])
     for (const side of ['both', 'right', 'left']) {
       const href = api.makeStudyLink(catalog, region, s.id, side);
-      if (side !== 'both' && side !== s.laterality) {
+      if (
+        side !== 'both' &&
+        ['left', 'right'].includes(s.laterality) &&
+        side !== s.laterality
+      ) {
         assert.equal(href, null);
         continue;
       }
@@ -176,14 +177,14 @@ for (const s of pins.structures) {
   for (const tab of ['ct', 'mri', 'xray', 'ultrasound'])
     assert.equal(api.bodyLesson(s, tab).readiness, 'pending');
   assert.equal(
-    api.brachialVeinLesson({ ...s, anchor: [0, 0, 0] }, 'anatomy'),
+    api.hepaticVeinLesson({ ...s, anchor: [0, 0, 0] }, 'anatomy'),
     undefined,
   );
 }
-assert.equal(triangles, 5422);
+assert.equal(triangles, 13984);
 console.log(
   JSON.stringify({
-    sourceSelections: 2,
+    sourceSelections: 3,
     displaySelections: 1039,
     triangles,
     links,

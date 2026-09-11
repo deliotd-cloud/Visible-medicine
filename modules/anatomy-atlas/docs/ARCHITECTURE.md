@@ -1,5 +1,7 @@
 # Spatial anatomy architecture
 
+The [hepatic-vein addition](HEPATIC_VEINS.md) follows the append-only source-admission pipeline in lib/body-source-additions.ts. Three complete definitions, context records, immutable source hashes and a GLB are appended after earlier display additions. Systemic traversal retains historical pins and appends the new exact records; source-side concepts prevent contralateral tributary links. The existing compact drainage component and parent visibility action are reused. Root and nested hepatic source scopes remain distinct; no registration or entitlement is created.
+
 ## Pancreas display correction
 
 `lib/body-display-catalog.ts` now composes exact-record pancreas and eye corrections without mutating archived anatomy. The pancreatic derivative omits the near-coincident FJ2629 envelope, preserves all retained positions and replaces geometry/bounds/anchor/source binding together. Draft teaching alone recognises the exact replacement; imaging/lecture bindings must use its three retained sources and are not silently migrated. See [source evidence and next dissection gates](PANCREATIC_SOURCE_REVIEW.md).
