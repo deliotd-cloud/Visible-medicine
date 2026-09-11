@@ -114,6 +114,8 @@ const brainstem = await json(
 );
 const collicularBrachia = await json('public/models/bodyparts3d/collicular-brachia/catalog.json');
 const cubitalVeins = await json('public/models/bodyparts3d/cubital-veins/catalog.json');
+const genicularArteries = await json('public/models/bodyparts3d/genicular-arteries/catalog.json');
+const genicularAudit = await json('docs/genicular-artery-source-audit.json');
 const cubitalVeinAudit = await json('docs/cubital-vein-source-audit.json');
 const collicularBrachiaAudit = await json('docs/collicular-brachia-source-audit.json');
 const cerebral = await json('public/models/bodyparts3d/cerebral/catalog.json');
@@ -338,6 +340,10 @@ for (const path of [
   'public/models/bodyparts3d/brainstem/catalog.json',
   'public/models/bodyparts3d/collicular-brachia/catalog.json',
   'public/models/bodyparts3d/cubital-veins/catalog.json',
+  'public/models/bodyparts3d/genicular-arteries/catalog.json',
+  'docs/genicular-artery-source-audit.json',
+  'lib/genicular-arteries.ts',
+  'scripts/current-source-holds.mjs',
   'docs/cubital-vein-source-audit.json',
   'lib/cubital-veins.ts',
   'docs/collicular-brachia-source-audit.json',
@@ -516,6 +522,14 @@ const report = {
     'Offline source and displayed-copy inventory; no clinical or browser certification.',
   sourceHashes,
   anatomy: {
+    genicularArteries: {
+      sourceSelections: genicularArteries.structures.length,
+      originalTriangles: genicularAudit.groups.reduce((sum,g)=>sum+g.topology.triangles,0),
+      sourceComponents: genicularAudit.groups.reduce((sum,g)=>sum+g.topology.components.length,0),
+      exactSourceFacesRetained: true,
+      completeAnastomosisClaimed: false,
+      clinicalApproval: false,
+    },
     cubitalVeins: {
       sourceSelections: cubitalVeins.structures.length,
       originalTriangles: cubitalVeinAudit.groups.reduce((sum, g) => sum + g.topology.triangles, 0),

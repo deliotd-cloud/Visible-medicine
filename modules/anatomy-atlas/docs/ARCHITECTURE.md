@@ -1,5 +1,7 @@
 # Spatial anatomy architecture
 
+[Genicular sources and current admission screening](GENICULAR_ARTERIES.md) append ten separately pinned records to the unchanged archival catalogue and arterial pins. `current-source-holds.mjs` composes tree-scoped supplemental holds from hash-pinned audit reports, blocks shared-file aliases/subsets and rejects incomplete export proposals. Historical `load-source-holds.mjs` is unchanged for reproducibility. New admissions must use the current gate as one prerequisite, not as geometry or clinical approval.
+
 ## Optional decoded-volume imaging
 
 The [volume viewer](VOLUME_VIEWER.md) adds patient-LPS affine reslicing and actual Canvas pixels behind the existing comparison/identity bridges. A trusted host must explicitly install it and resolve an already authorized exact source-bound image revision. Loading, revocation, cancellation and replacement clear previous pixels immediately; no default adapter, scan payload, persistence, entitlement change or patient-to-generic-anatomy transform is added. Controls remain inside the optional comparison surface, with window/level collapsed.

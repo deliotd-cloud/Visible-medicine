@@ -12,16 +12,23 @@ import {
 } from 'three';
 import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { sourceObjShape, mergeSourceShapes } from './source-surface-audit.mjs';
-import { deepLegVeinSources } from './deep-leg-vein-sources.mjs';
+import { sourceObjShape } from './source-surface-audit.mjs';
+import { genicularArterySources } from './genicular-artery-sources.mjs';
 import { loadSourceHolds } from './load-source-holds.mjs';
 import { preflightCurrentSourceHolds } from './current-source-holds.mjs';
-await preflightCurrentSourceHolds(deepLegVeinSources.filter(s=>s.status==='candidate').map(s=>({tree:'isa',id:s.id,name:s.name,files:s.files?.map(f=>f.file) ?? [s.file]})));
+await preflightCurrentSourceHolds(
+  genicularArterySources.map((s) => ({
+    tree: 'isa',
+    id: s.id,
+    name: s.name,
+    files: [s.file],
+  })),
+);
 const hash = (b) => createHash('sha256').update(b).digest('hex');
-const auditBytes = await readFile('docs/deep-leg-vein-source-audit.json');
+const auditBytes = await readFile('docs/genicular-artery-source-audit.json');
 assert.equal(
   hash(auditBytes),
-  '2ed4267b0ceae5448673eaf0743ed79a995fc7f879dac26c81e24109c7b201ec',
+  '77069502492c3ee86b0ff20ae61804f3b5383f833ab834ff79b041373c76f0a2',
 );
 const audit = JSON.parse(auditBytes),
   { catalog, evidence } = await loadSourceHolds();
@@ -33,18 +40,11 @@ const scene = new Scene(),
   structures = [],
   expected = new Map();
 const retained = [];
-for (const candidate of deepLegVeinSources.filter(
-  (c) => c.status === 'candidate',
-)) {
-  assert(audit.groups.some((g) => g.id === candidate.id));
-  const sourceShapes = [];
-  for (const source of candidate.files) {
-    const bytes = await readFile(`../work/bodyparts3d/isa/${source.file}.obj`);
-    assert.equal(hash(bytes), source.sha256);
-    retained.push({ file: source.file, bytes });
-    sourceShapes.push(sourceObjShape(bytes));
-  }
-  const shape = mergeSourceShapes(sourceShapes),
+for (const candidate of genicularArterySources) {
+  const bytes = await readFile(`../work/bodyparts3d/isa/${candidate.file}.obj`);
+  assert.equal(hash(bytes), candidate.sha256);
+  retained.push({ file: candidate.file, bytes });
+  const shape = sourceObjShape(bytes),
     points = [],
     lookup = new Map();
   const remap = shape.vertices.map((p) => {
@@ -68,17 +68,17 @@ for (const candidate of deepLegVeinSources.filter(
   geometry.computeVertexNormals();
   geometry.computeBoundingBox();
   const center = geometry.boundingBox.getCenter(new Vector3()),
-    id = `vm:anatomy:body:${candidate.region}:${candidate.side}:vessel:${candidate.name.replaceAll(' ', '-')}`;
+    id = `vm:anatomy:body:leg:${candidate.side}:vessel:${candidate.name.replaceAll(' ', '-')}`;
   const mesh = new Mesh(
     geometry,
-    new MeshStandardMaterial({ color: '#638bac', roughness: 0.65 }),
+    new MeshStandardMaterial({ color: '#be6157', roughness: 0.65 }),
   );
   mesh.name = candidate.id;
   mesh.userData = {
     structureId: id,
     fmaId: candidate.id,
     sourceTree: 'isa',
-    sourceFiles: candidate.files,
+    sourceSha256: candidate.sha256,
     anatomicalReview: false,
   };
   scene.add(mesh);
@@ -108,12 +108,12 @@ for (const candidate of deepLegVeinSources.filter(
     system: 'vessels',
     category: 'vessel',
     laterality: candidate.side,
-    region: candidate.region,
-    regions: candidate.regions,
-    bundle: 'deep-leg-veins',
+    region: 'leg',
+    regions: ['leg', 'thigh'],
+    bundle: 'genicular-arteries',
     nodeName: candidate.id,
     sourceTree: 'isa',
-    sources: candidate.files,
+    sources: [{ file: candidate.file, sha256: candidate.sha256 }],
     bounds: {
       min: geometry.boundingBox.min.toArray(),
       max: geometry.boundingBox.max.toArray(),
@@ -121,7 +121,7 @@ for (const candidate of deepLegVeinSources.filter(
     center: center.toArray(),
     anchor,
     coverageNote:
-      'Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.',
+      'Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.',
     provenance: {
       method: 'licensed-source-mesh',
       license: catalog.license,
@@ -159,23 +159,21 @@ loaded.scene.traverse((mesh) => {
   assert.deepEqual(mesh.userData, { name: mesh.name, ...before.userData });
   count++;
 });
-assert.equal(count, 6);
+assert.equal(count, 10);
 const contextFmas = [
-  'FMA21188',
-  'FMA21189',
-  'FMA44328',
-  'FMA44329',
   'FMA24474',
   'FMA24475',
   'FMA24477',
   'FMA24478',
   'FMA24480',
   'FMA24481',
+  'FMA77380',
+  'FMA77381',
 ];
 const contextRecords = catalog.structures.filter((s) =>
   contextFmas.includes(s.fmaId),
 );
-assert.equal(contextRecords.length, 10);
+assert.equal(contextRecords.length, 8);
 const result = {
   version: 1,
   sourceVersion: catalog.sourceVersion,
@@ -191,22 +189,25 @@ const result = {
   ),
   bundles: [
     {
-      id: 'deep-leg-veins',
-      url: `/models/bodyparts3d/deep-leg-veins/deep-leg-veins.glb?v=${hash(bytes)}`,
+      id: 'genicular-arteries',
+      url: `/models/bodyparts3d/genicular-arteries/genicular-arteries.glb?v=${hash(bytes)}`,
       bytes: bytes.length,
       sha256: hash(bytes),
-      structures: 6,
+      structures: 10,
     },
   ],
   modification:
     'Exact-coordinate welding for indexed normals plus Float32 GLB storage. Every original triangle is retained in order; no smoothing, fitting, mirroring, bridging or face removal.',
   clinicalApproval: false,
 };
-const path = 'public/models/bodyparts3d/deep-leg-veins',
-  sourcePath = 'content/sources/deep-leg-veins',
+const path = 'public/models/bodyparts3d/genicular-arteries',
+  sourcePath = 'content/sources/genicular-arteries',
   text = JSON.stringify(result, null, 2) + '\n';
 if (process.argv.includes('--check')) {
-  assert.equal(hash(await readFile(`${path}/deep-leg-veins.glb`)), hash(bytes));
+  assert.equal(
+    hash(await readFile(`${path}/genicular-arteries.glb`)),
+    hash(bytes),
+  );
   assert.equal(
     (await readFile(`${path}/catalog.json`, 'utf8')).replace(/\r\n/g, '\n'),
     text,
@@ -219,7 +220,7 @@ if (process.argv.includes('--check')) {
 } else {
   await mkdir(path);
   await mkdir(sourcePath);
-  await writeFile(`${path}/deep-leg-veins.glb`, bytes, { flag: 'wx' });
+  await writeFile(`${path}/genicular-arteries.glb`, bytes, { flag: 'wx' });
   await writeFile(`${path}/catalog.json`, text, { flag: 'wx' });
   for (const source of retained)
     await writeFile(`${sourcePath}/${source.file}.obj`, source.bytes, {
@@ -228,8 +229,8 @@ if (process.argv.includes('--check')) {
 }
 console.log(
   JSON.stringify({
-    selections: 6,
-    triangles: 71522,
+    selections: 10,
+    triangles: 21686,
     ...result.bundles[0],
     clinicalApproval: false,
   }),

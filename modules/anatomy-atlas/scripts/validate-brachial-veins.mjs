@@ -33,7 +33,7 @@ const raw = JSON.parse(rawBytes),
   );
 const catalog = api.bodyDisplayCatalog(raw);
 assert.equal(raw.structures.length, 1022);
-assert.equal(catalog.structures.length, 1046);
+assert.equal(catalog.structures.length, 1056);
 assert.equal(JSON.stringify(raw), before);
 assert.equal(api.bodyDisplayCatalog(catalog), catalog);
 assert.deepEqual(
@@ -184,7 +184,7 @@ assert.equal(triangles, 5422);
 console.log(
   JSON.stringify({
     sourceSelections: 2,
-    displaySelections: 1046,
+    displaySelections: 1056,
     triangles,
     links,
     rejections,

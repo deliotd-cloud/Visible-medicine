@@ -15,6 +15,8 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { sourceObjShape } from './source-surface-audit.mjs';
 import { brachialVeinSources } from './brachial-vein-sources.mjs';
 import { loadSourceHolds } from './load-source-holds.mjs';
+import { preflightCurrentSourceHolds } from './current-source-holds.mjs';
+await preflightCurrentSourceHolds(brachialVeinSources.map(s=>({tree:'isa',id:s.id,name:s.name,files:s.files?.map(f=>f.file) ?? [s.file]})));
 const hash = (b) => createHash('sha256').update(b).digest('hex');
 const auditBytes = await readFile('docs/brachial-vein-source-audit.json');
 assert.equal(

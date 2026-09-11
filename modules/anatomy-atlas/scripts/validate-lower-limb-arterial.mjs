@@ -50,13 +50,17 @@ const neighbours = upper
   plan = upper ? api.upperLimbArterialPlan : api.lowerLimbArterialPlan,
   concepts = upper ? api.upperArterialConcepts : api.arterialConcepts,
   relations = upper ? api.upperArterialRelations : api.arterialRelations;
-assert.equal(Object.keys(concepts).length, upper ? 26 : 15);
-assert.equal(relations.length, upper ? 28 : 15);
+assert.equal(Object.keys(concepts).length, upper ? 26 : 20);
+assert.equal(relations.length, upper ? 28 : 20);
 const targets = catalog.structures.filter((s) =>
   Object.values(concepts).some((c) => c.fmaIds.includes(s.fmaId)),
 );
-assert.equal(targets.length, upper ? 52 : 29);
+assert.equal(targets.length, upper ? 52 : 39);
 assert.equal(pins.entries.length, upper ? 116 : 94);
+if (!upper) {
+  const extra=JSON.parse(await readFile('public/models/bodyparts3d/genicular-arteries/catalog.json'));
+  pins.entries.push(...extra.structures);pins.bundles.push(...extra.bundles);
+}
 const allRows = targets.flatMap((s) =>
   neighbours(catalog, 'whole-body', 'both', s.id).rows.map((r) => ({
     from: s,
@@ -65,11 +69,11 @@ const allRows = targets.flatMap((s) =>
     direction: r.direction,
   })),
 );
-assert.equal(allRows.length, upper ? 112 : 60);
+assert.equal(allRows.length, upper ? 112 : 80);
 const uniqueEdges = new Set(
   allRows.map((r) => [r.from.id, r.to.id].sort().join('|')),
 );
-assert.equal(uniqueEdges.size, upper ? 56 : 30);
+assert.equal(uniqueEdges.size, upper ? 56 : 40);
 assert(
   allRows.every(
     (r) =>
@@ -179,7 +183,9 @@ for (const region of regions)
         api.limbArterialPlan(catalog, region, side, s.id),
         plan(catalog, region, side, s.id),
       );
-      assert.deepEqual(info, neighbours(raw, region, side, s.id));
+      if (upper) assert.deepEqual(info, neighbours(raw, region, side, s.id));
+      else assert.equal(neighbours(raw, region, side, s.id), null,
+        'The archival catalogue cannot stand in for the extended lower-limb graph');
       for (const row of info.rows) {
         assert.equal(row.availableHere, regionHas(row.structure, region));
         if (!row.availableHere) {

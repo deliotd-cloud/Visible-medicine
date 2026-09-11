@@ -50,7 +50,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "a322b58e53d4c066137e764e95a75c79dd7c273f05eae89ca553c9a6035591d6"
+      "sha256": "8ba94dcc97cfed6d9da849a5d58637fb951bb1aecc3b4e95996b2856b40c1463"
     },
     {
       "path": "app/body-explorer.css",
@@ -382,7 +382,7 @@
     },
     {
       "path": "content/lower-limb-arterial.ts",
-      "sha256": "9eb963fcbec4187a03b4a8aa861456483824ad056d3aaf1712aacd273a6715ca"
+      "sha256": "e8d37a6721002d91b8f546b59af40da3acaff1968aeb44936c44e1a95da83887"
     },
     {
       "path": "content/lower-limb-motor-pins.json",
@@ -622,7 +622,7 @@
     },
     {
       "path": "lib/body-display-catalog.ts",
-      "sha256": "8cd9b9b209a524fe01d36952d9df9e445dd85beed859de7373e75cf1d75e58e9"
+      "sha256": "e6dbf2c11762281322c7c997de7869b7e0fee4994e8f5911a788e8ff93c49776"
     },
     {
       "path": "lib/body-source-additions.ts",
@@ -773,6 +773,10 @@
       "sha256": "980f819d092940968360e5dbfe58fc23e8ade5343b50f97c5e4970f38af91fc7"
     },
     {
+      "path": "lib/genicular-arteries.ts",
+      "sha256": "2476e9f6b6224fb55b25abe3d48a7cb1ab83c7048e6072dc28b4ffac7b2a3494"
+    },
+    {
       "path": "lib/hand-clinical-curriculum.ts",
       "sha256": "7d8acf3e844828f900dcf01beed033e23556cc6bd4f1e61cbb58e0d8795171e9"
     },
@@ -910,7 +914,7 @@
     },
     {
       "path": "lib/lower-limb-arterial.ts",
-      "sha256": "2b133451561ed06eb3f4b8fd95c089552fea927ce53d18d1cf15b4b86f36e93c"
+      "sha256": "d332b1cced3f2b6dcea987b0d1f3861e0d5350d029927e4d71697bbeef7766d5"
     },
     {
       "path": "lib/lower-limb-motor.ts",
@@ -1313,6 +1317,10 @@
       "sha256": "61e09e972a1d301e56ebae9f1af90ffe9136309eda0242df1a03f84c6ad85dd2"
     },
     {
+      "path": "public/models/bodyparts3d/genicular-arteries/catalog.json",
+      "sha256": "45f141823a7d5fea53b490a718e8401ea1a627f89cb05bc4e9dd68f9020b292b"
+    },
+    {
       "path": "public/models/bodyparts3d/hepatic-veins/catalog.json",
       "sha256": "493a2070ab758dd6afd0ccfd8ecd6fe3bb2b855b2ecd34b067806b5b8a465039"
     },
@@ -1389,5 +1397,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "3a5fd96277236603b16c3a7fe21ca93b70c8a06030216416e4a014f320002cab"
+  "sha256": "7cbd9ba1d5568d52c77bf14baa923b4c58240cc50de9f10b9d88c61185964195"
 }

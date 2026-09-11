@@ -6,6 +6,31 @@ export const arterialReferences = {
   variation: 'https://pubmed.ncbi.nlm.nih.gov/16843754/',
 } as const;
 export const arterialConcepts = {
+  middleGenicular: {
+    fmaIds: ['FMA22562', 'FMA22563'],
+    context: 'leg',
+    note: 'Deep knee branch. Each source retains two disconnected pieces; the cruciate microvascular supply is not reconstructed.',
+  },
+  superiorMedialGenicular: {
+    fmaIds: ['FMA22586', 'FMA22587'],
+    context: 'leg',
+    note: 'Superior medial knee branch. A source surface is not a complete collateral network or perfusion territory.',
+  },
+  superiorLateralGenicular: {
+    fmaIds: ['FMA22588', 'FMA22589'],
+    context: 'leg',
+    note: 'Superior lateral knee branch. Exact junctions and the complete collateral network remain unvalidated.',
+  },
+  inferiorMedialGenicular: {
+    fmaIds: ['FMA43890', 'FMA43891'],
+    context: 'leg',
+    note: 'Inferior medial knee branch. Source position is not a validated angiographic roadmap or procedural target.',
+  },
+  inferiorLateralGenicular: {
+    fmaIds: ['FMA43892', 'FMA43893'],
+    context: 'leg',
+    note: 'Inferior lateral knee branch. No missing anastomosis is reconstructed from mesh proximity.',
+  },
   aorta: {
     fmaIds: ['FMA3789'],
     context: 'pelvis',
@@ -94,6 +119,36 @@ export const arterialRelations: readonly {
   kind: ArterialRelation;
   note: string;
 }[] = [
+  {
+    from: 'popliteal',
+    to: 'middleGenicular',
+    kind: 'branch',
+    note: 'Typical genicular branch; source pieces and donor junction remain unvalidated.',
+  },
+  {
+    from: 'popliteal',
+    to: 'superiorMedialGenicular',
+    kind: 'branch',
+    note: 'Typical genicular branch, not proof of a joined source lumen.',
+  },
+  {
+    from: 'popliteal',
+    to: 'superiorLateralGenicular',
+    kind: 'branch',
+    note: 'Typical genicular branch, not proof of a joined source lumen.',
+  },
+  {
+    from: 'popliteal',
+    to: 'inferiorMedialGenicular',
+    kind: 'branch',
+    note: 'Typical genicular branch, not proof of a joined source lumen.',
+  },
+  {
+    from: 'popliteal',
+    to: 'inferiorLateralGenicular',
+    kind: 'branch',
+    note: 'Typical genicular branch, not proof of a joined source lumen.',
+  },
   {
     from: 'aorta',
     to: 'commonIliac',

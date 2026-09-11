@@ -10,8 +10,9 @@ assert.equal(
 const catalog = JSON.parse(raw),
   ids = Object.values(arterialConcepts).flatMap((c) => c.fmaIds),
   regions = [...new Set(Object.values(arterialConcepts).map((c) => c.context))];
-assert.equal(ids.length, 29);
-assert.equal(new Set(ids).size, 29);
+assert.equal(ids.length, 39);
+assert.equal(new Set(ids).size, 39);
+// Original 29 arterial pins are unchanged; ten genicular sources are appended separately.
 const entries = catalog.structures.filter(
   (s) =>
     ids.includes(s.fmaId) ||

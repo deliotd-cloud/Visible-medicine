@@ -122,7 +122,9 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)])
         continue;
       }
       assert(info);
-      assert.deepEqual(info, neighbours(raw, region, side, selected.id));
+      if(selected.id === aorta.id) assert.equal(neighbours(raw, region, side, selected.id), null,
+        'Shared aortic map requires the complete extended lower-limb source set');
+      else assert.deepEqual(info, neighbours(raw, region, side, selected.id));
       const recipe = plan(catalog, region, side, selected.id);
       assert(recipe);
       plans++;
@@ -239,6 +241,13 @@ lowerCorrupt.structures.find((s) => s.fmaId === 'FMA70249').name += 'changed';
 assert.equal(neighbours(lowerCorrupt, 'abdomen', 'both', aorta.id), null);
 assert.equal(plan(lowerCorrupt, 'abdomen', 'both', aorta.id), null);
 assert(neighbours(lowerCorrupt, 'abdomen', 'both', celiac.id)); // Independent non-shared admission remains useful.
+for(const fma of ['FMA22562','FMA22563','FMA43890','FMA43891']) {
+  const incomplete=structuredClone(catalog);
+  incomplete.structures=incomplete.structures.filter(s=>s.fmaId!==fma);
+  assert.equal(neighbours(incomplete,'abdomen','both',aorta.id),null);
+  assert.equal(plan(incomplete,'abdomen','both',aorta.id),null);
+  assert(neighbours(incomplete,'abdomen','both',celiac.id));
+}
 for (const [region, side, id] of [
   ['__proto__', 'both', aorta.id],
   ['abdomen', 'invalid', aorta.id],

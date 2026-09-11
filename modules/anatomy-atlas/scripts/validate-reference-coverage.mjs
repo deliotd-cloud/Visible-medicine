@@ -74,6 +74,11 @@ const report = JSON.parse(
   await readFile('docs/reference-coverage-audit.json', 'utf8'),
 );
 assert.equal(report.summary.referenceSourceFiles, 2234);
+for(const file of ['FJ2190','FJ2194','FJ2200','FJ2184','FJ2187','FJ1735','FJ1736']) {
+  const row=report.rootDifferences.find(r=>r.file===file);
+  assert.equal(row.status,'known-source-hold');
+  assert(row.holds.some(h=>h.evidence && /^[a-f0-9]{64}$/.test(h.evidenceSha256)));
+}
 assert.equal(report.summary.rootOnlyDifferences, report.rootDifferences.length);
 assert.equal(
   report.rootDifferences.length,

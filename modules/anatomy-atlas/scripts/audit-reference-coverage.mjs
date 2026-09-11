@@ -5,7 +5,7 @@ import { execFileSync } from 'node:child_process';
 import { build } from 'esbuild';
 import { loadSourceHolds } from './load-source-holds.mjs';
 import { geometryFingerprint } from './anatomy-inventory.mjs';
-import { collicularBrachiaSources } from './collicular-brachia-sources.mjs';
+import { loadCurrentSourceHolds } from './current-source-holds.mjs';
 import {
   sourceBindingEvidence,
   sourceCoverageStatus,
@@ -14,25 +14,8 @@ import {
 
 const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const textHash = (value) => hash(JSON.stringify(value));
-const brachiaAuditBytes = await readFile(
-  'docs/collicular-brachia-source-audit.json',
-);
-const brachiaAudit = JSON.parse(brachiaAuditBytes);
-const additionalHolds = collicularBrachiaSources.filter(
-  (s) => s.status === 'held',
-);
-for (const hold of additionalHolds) {
-  const record = brachiaAudit.groups.find((g) => g.id === hold.id);
-  assert.equal(record.status, 'held');
-  assert.equal(record.file, hold.file);
-  assert.equal(record.sha256, hold.sha256);
-  assert.equal(record.reason, hold.reason);
-  assert.notEqual(record.coordinateSide, hold.side);
-  assert.equal(
-    hash(await readFile(`content/sources/collicular-brachia/${hold.file}.obj`)),
-    hold.sha256,
-  );
-}
+const current = await loadCurrentSourceHolds();
+const additionalHolds = current.supplemental.flatMap(h => h.files.map(s => ({...h, file:s.file, sha256:s.sha256})));
 const referenceBytes = await readFile('content/reference-male-inventory.json');
 const reference = JSON.parse(referenceBytes);
 assert.equal(reference.repository, 'ashemag/human-atlas');
@@ -195,6 +178,9 @@ for (const [file, referenceDisplaySystem] of reference.parts) {
   const definitions = h.records.filter(
     (r) => r.tree === 'isa' && r.files.includes(file),
   );
+  if(additionalHolds.some(h=>h.file===file)) assert(!matches.some(o=>
+    ['same-tree-source-binding','cross-tree-geometry-match'].includes(o.evidence)),
+    'Held supplemental source appears in runtime anatomy: '+file);
   assert(definitions.length, 'Missing official source definition: ' + file);
   const minimum = Math.min(...definitions.map((d) => d.files.length));
   const holds = [];
@@ -203,7 +189,8 @@ for (const [file, referenceDisplaySystem] of reference.parts) {
       tree: 'isa',
       conceptId: held.id,
       reason: held.reason,
-      evidence: 'docs/collicular-brachia-source-audit.json',
+      evidence: held.evidence,
+      evidenceSha256: held.evidenceSha256,
     });
   for (const tree of ['isa', 'partof']) {
     const reasons = new Map();
@@ -264,7 +251,7 @@ const report = {
   evidence: {
     ...h.evidence,
     crossTreeProofSha256: hash(crossBytes),
-    additionalSourceHoldProofSha256: hash(brachiaAuditBytes),
+    supplementalSourceHoldEvidence: current.supplementalEvidence,
     currentRootSha256: textHash(root),
     reachableNestedSha256: textHash(nested),
     shoulderManifestSha256: hash(shoulderBytes),

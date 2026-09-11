@@ -4,17 +4,19 @@ This ledger began with the repository comparison and label-computation improveme
 
 ## Coverage result
 
-The pinned male reference supplies 2,234 IS-A source file IDs. The current 1,046 root selections represent 1,706 of those IDs. The other **528 source pieces** resolve as follows:
+The latest [genicular addition and current source gate](GENICULAR_ARTERIES.md) add ten original knee artery groups and consolidate the five calf-vein files previously held only in their separate audit. Passing the gate is not admission or clinical approval; the original inventory policy and historical reports stay unchanged.
+
+The pinned male reference supplies 2,234 IS-A source file IDs. The current 1,056 root selections represent 1,716 of those IDs. The other **518 source pieces** resolve as follows:
 
 | Disposition | Source pieces |
 | --- | ---: |
 | Already represented by reachable nested selections | 24 |
-| Deliberate IS-A source holds | 45 |
+| Deliberate IS-A source holds | 50 |
 | Excluded by the existing pancreatic display correction | 1 |
 | Related unresolved PART-OF disc hold | 1 |
-| Need source and anatomical review | 457 |
+| Need source and anatomical review | 442 |
 
-The 457-piece queue contains 279 arterial and 134 venous pieces according to the reference's display groups. These groups are not an authoritative anatomy taxonomy: for example, its cardiac group includes an interventricular-foramen entry. No external grouping changes our learner-facing systems.
+The 442-piece queue contains 269 arterial and 129 venous pieces according to the reference's display groups. These groups are not an authoritative anatomy taxonomy: for example, its cardiac group includes an interventricular-foramen entry. No external grouping changes our learner-facing systems.
 
 This is source-file coverage, not a count of missing anatomical structures. It cannot establish whether a whole named structure, alternative envelope, branch, side or layer is complete. Independent CC0 limb and older abdominal-wall specimens remain distinct donors/releases; their conceptual equivalents are not counted as identical v4 files.
 
