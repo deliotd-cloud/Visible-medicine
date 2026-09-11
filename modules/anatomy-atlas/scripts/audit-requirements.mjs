@@ -415,6 +415,9 @@ for (const path of [
   'app/ventricles.tsx',
   'app/ventricular-relationships.css',
   'app/body-scene.tsx',
+  'app/body-batch.tsx',
+  'lib/body-batching.ts',
+  'docs/body-batching-baseline.json',
   'scripts/glb-lossless-codec.mjs',
   'scripts/compress-model-delivery.mjs',
   'app/um-knee-study.tsx',
@@ -532,6 +535,7 @@ const report = {
   method:
     'Offline source and displayed-copy inventory; no clinical or browser certification.',
   sourceHashes,
+  rendering: { bodyBatching: await json('docs/body-batching-baseline.json'), gpuAcceptance: false },
   anatomy: {
     inferiorThyroidArteries: {
       sourceSelections: inferiorThyroid.structures.length,

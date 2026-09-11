@@ -28,7 +28,9 @@ runInNewContext(compiled.outputFiles[0].text, {
   exports: scope.exports,
   require: (id) =>
     id === 'react'
-      ? { ...React, useMemo: (fn) => fn(), useEffect: () => {} }
+      ? { ...React, useMemo: (fn) => fn(), useEffect: () => {}, useLayoutEffect: (fn) => fn(), useState: value => [value, () => {}] }
+      : id === '@react-three/fiber'
+        ? { useThree: selector => selector({gl:{extensions:{has:()=>false}},invalidate(){}}) }
       : id === '@react-three/drei'
         ? { Line: 'origin-line', useGLTF: () => ({ scene: mockScene }) }
         : require(id),

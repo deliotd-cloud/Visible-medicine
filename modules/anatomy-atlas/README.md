@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+[Original-resolution surface batching](docs/BODY_BATCHING.md) groups compatible opaque surfaces in large views without adding controls or changing anatomy. Selection, transparency, cuts, muscle illustration and detailed views retain their existing rendering. Unsupported devices fall back automatically. Geometry and picking checks pass; actual GPU/mobile performance and visual acceptance remain to be measured.
+
 **Head & neck → search “inferior thyroid” → Arterial connections** adds [two original neck artery sources](docs/INFERIOR_THYROID_ARTERIES.md), same-side parent navigation and a focused cervical-bone context. Display: **1,058 selections**. No new toolbar or generated geometry. Four muscle-part candidates remain offline review evidence because of source fragments/duplicate faces; clinical and imaging approval remain pending.
 
 **Knee & leg / Whole body → Study → “genicular”** now opens a [focused knee artery dissection](docs/GENICULAR_ARTERIES.md#focused-knee-study): 11 existing structures per side, a stable posterior close-up and reversible removal. No extra toolbar or new geometry. Source fragments and clinical-review limits stay explicit.

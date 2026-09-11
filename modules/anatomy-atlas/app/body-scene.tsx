@@ -4,6 +4,7 @@ import {
   createRef,
   Suspense,
   useEffect,
+  useLayoutEffect,
   useMemo,
   type ReactNode,
   type RefObject,
@@ -27,6 +28,8 @@ import {
   type BodySystem,
 } from './body-types';
 import { AnatomyTissue } from './anatomy-tissue';
+import { useBodyBatch } from './body-batch';
+import { bodyBatchActive } from '@/lib/body-batching';
 import type { DissectionView } from './dissection-data';
 import { sectionPlanes, pointRetained } from '@/lib/inspection-geometry';
 import { systemOpacity, type InspectionState } from '@/lib/inspection-state';
@@ -139,6 +142,25 @@ function Bundle({
     });
     return map;
   }, [scene]);
+  const batchSources = useMemo(() => props.catalog.structures
+    .filter(s => s.bundle === bundle.id && s.system !== 'muscles' && geometries.has(s.nodeName))
+    .map(s => ({ id: s.id, geometry: geometries.get(s.nodeName)! })), [props.catalog, bundle.id, geometries]);
+  const batch = useBodyBatch(batchSources, renderedCount);
+  const display = items.map(s => {
+    const selected = !props.exam && s.id === props.selectedId;
+    const removed = props.hiddenIds.includes(s.id);
+    return {
+      id: s.id, selected, faded: removed || (props.isolated && !selected),
+      interactive: !removed && !props.contextIds?.includes(s.id),
+      position: offsets.get(s.id) ?? new THREE.Vector3(),
+      color: props.appearance?.[s.id]?.color ?? colorFor(s),
+      opacity: systemOpacity(props.inspection, s.system, selected) * (props.appearance?.[s.id]?.opacity ?? 1),
+    };
+  });
+  const cut = props.inspection.plane !== 'off';
+  const batchedIds = new Set(display.filter(s => batch?.instances.has(s.id) && bodyBatchActive(s, cut)).map(s => s.id));
+  // Apply mutable Three state only after React commits, not during speculative render.
+  useLayoutEffect(() => { batch?.update(display, cut); });
   const labelAnchors = useMemo(
     () =>
       sceneLabelAnchors(
@@ -156,6 +178,16 @@ function Bundle({
   );
   return (
     <group dispose={null}>
+      {batch && <primitive object={batch.mesh} dispose={null}
+        onClick={(e: ThreeEvent<MouseEvent>) => {
+          const id = batch.identity(e.batchId);
+          if (id) { e.stopPropagation(); props.onSelect(id); }
+        }}
+        onPointerOver={(e: ThreeEvent<PointerEvent>) => {
+          if (batch.identity(e.batchId)) { e.stopPropagation(); document.body.style.cursor = 'pointer'; }
+        }}
+        onPointerOut={() => { document.body.style.cursor = ''; }}
+      />}
       {items.map((structure) => {
         const selected = !props.exam && structure.id === props.selectedId;
         const geometry = geometries.get(structure.nodeName);
@@ -181,6 +213,11 @@ function Bundle({
         };
         const labelIndex = labelIds.indexOf(structure.id);
         const labelAnchor = labelAnchors.get(structure.id);
+        // Unselected batched surfaces need no individual scene groups unless
+        // they carry a label. Selected origin guides always use AnatomyTissue.
+        if (batchedIds.has(structure.id) &&
+            (!props.labels || props.exam || !labelAnchor || labelIndex < 0) &&
+            originGuide?.id !== structure.id) return null;
         return (
           <group key={structure.id}>
             {props.originStyle !== 'selected-guide' &&
@@ -236,7 +273,7 @@ function Bundle({
                   document.body.style.cursor = '';
                 }}
               >
-                <AnatomyTissue
+                {!batchedIds.has(structure.id) && <AnatomyTissue
                   geometry={geometry}
                   color={
                     props.appearance?.[structure.id]?.color ??
@@ -249,7 +286,7 @@ function Bundle({
                   outline={renderedCount < 150 || selected}
                   opacity={opacity}
                   clippingPlanes={clippingPlanes}
-                />
+                />}
               </group>
               {props.labels &&
                 labelAnchor &&

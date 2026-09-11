@@ -49,6 +49,10 @@
       "sha256": "b9100dc0294f3adfa38ddd90468fdcc84b834e74475459c41ba7367822a71a2c"
     },
     {
+      "path": "app/body-batch.tsx",
+      "sha256": "05b63136f4d8af290da9d4c190256bd1e17b6339842070b04c26b63238e0ae72"
+    },
+    {
       "path": "app/body-content.ts",
       "sha256": "f5c13f06ae2edaa2f7dbba07b5276ed23fa3c1e8b277b5b1f77f93694f727c99"
     },
@@ -62,7 +66,7 @@
     },
     {
       "path": "app/body-scene.tsx",
-      "sha256": "8eacd496574edee25596bd91e69f621704a024080c3a9885cb0f80f324d69879"
+      "sha256": "c0ac40edbdb03d3f379063d5f0f4dd45cdc4ceab15fb91fb66cbd98712707628"
     },
     {
       "path": "app/body-types.ts",
@@ -631,6 +635,10 @@
     {
       "path": "lib/body-arrangement.ts",
       "sha256": "5946d4bd5eb1797562309c7469e73d0e6594e88b883c8a4c45344c7d43206c59"
+    },
+    {
+      "path": "lib/body-batching.ts",
+      "sha256": "ed560af2055a9c77535f40145c7788267f1558af0209e98a11cfbb37b923165a"
     },
     {
       "path": "lib/body-display-catalog.ts",
@@ -1421,5 +1429,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "cf3adbbc09214c19762cc35cb248d8692f8d71b4552f478dc4a9a4f0bf76cdea"
+  "sha256": "93c5c65e629c11862380259e4553551592f57cc47e7dd5a932ffe543834833ae"
 }

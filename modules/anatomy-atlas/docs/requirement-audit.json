@@ -158,7 +158,10 @@
     "public/models/bodyparts3d/cardiac/great-vessel-context.json": "fac546e54237db4bed783d583b01c583f423a35a74bd759727d519074de0af85",
     "app/ventricles.tsx": "490b83b4e2084edcf5bff4443c869560f022da9bf7d65f4c28f32cc51f1d6151",
     "app/ventricular-relationships.css": "7dfa2927b9f203aa13dbd1f2205c9429e7b79ffbaa86108b57fb3c69b1b71400",
-    "app/body-scene.tsx": "8eacd496574edee25596bd91e69f621704a024080c3a9885cb0f80f324d69879",
+    "app/body-scene.tsx": "c0ac40edbdb03d3f379063d5f0f4dd45cdc4ceab15fb91fb66cbd98712707628",
+    "app/body-batch.tsx": "05b63136f4d8af290da9d4c190256bd1e17b6339842070b04c26b63238e0ae72",
+    "lib/body-batching.ts": "ed560af2055a9c77535f40145c7788267f1558af0209e98a11cfbb37b923165a",
+    "docs/body-batching-baseline.json": "ed78c94f7861cdaab7a2ef6551174e51dfc953c2e27a69c0e262fd3c721fc7ad",
     "scripts/glb-lossless-codec.mjs": "053f0a2a7a397600b8c70814fa07f0013928d60702b163a8c8514d1eaafba224",
     "scripts/compress-model-delivery.mjs": "b18e1c9b00891f31190f8f3ccc02287500673fab48d9e74f0490cc68e9fbddf4",
     "app/um-knee-study.tsx": "f0d38a06e5199705304b8ee574513b8fccc376d7a45baaa6af36171a770879fe",
@@ -208,6 +211,106 @@
     "explicitTopicReadiness": "7012f6c1bbb6f01007d320377c559aac3593facb67f382f720a412846975b9ff",
     "reasoningQuestionData": "caafb323ca7d5a04971f91ad369d68c3a8da5e43839b39d8cd76192d1497bad2",
     "nestedTeachingData": "8e14e4e7b62141619825ebe604bc8cfddba30a80629162aa70818b7dc7c09350"
+  },
+  "rendering": {
+    "bodyBatching": {
+      "passed": true,
+      "geometries": 550,
+      "vertices": 992437,
+      "indices": 5941338,
+      "retainedTriangles": 1980446,
+      "batches": 29,
+      "batchedSurfaces": 550,
+      "geometryCopyBytes": 47583840,
+      "baseline": {
+        "whole-body": {
+          "surfaces": 1058,
+          "batches": 29,
+          "batchedSurfaces": 550,
+          "geometryCopyBytes": 47583840,
+          "submissions": 537
+        },
+        "head-neck": {
+          "surfaces": 281,
+          "batches": 11,
+          "batchedSurfaces": 167,
+          "geometryCopyBytes": 22028280,
+          "submissions": 125
+        },
+        "shoulder-arm": {
+          "surfaces": 99,
+          "batches": 0,
+          "batchedSurfaces": 0,
+          "geometryCopyBytes": 0,
+          "submissions": 99
+        },
+        "forearm": {
+          "surfaces": 72,
+          "batches": 0,
+          "batchedSurfaces": 0,
+          "geometryCopyBytes": 0,
+          "submissions": 72
+        },
+        "hand": {
+          "surfaces": 124,
+          "batches": 0,
+          "batchedSurfaces": 0,
+          "geometryCopyBytes": 0,
+          "submissions": 124
+        },
+        "thorax": {
+          "surfaces": 155,
+          "batches": 9,
+          "batchedSurfaces": 125,
+          "geometryCopyBytes": 11668800,
+          "submissions": 39
+        },
+        "abdomen": {
+          "surfaces": 102,
+          "batches": 0,
+          "batchedSurfaces": 0,
+          "geometryCopyBytes": 0,
+          "submissions": 102
+        },
+        "pelvis": {
+          "surfaces": 65,
+          "batches": 0,
+          "batchedSurfaces": 0,
+          "geometryCopyBytes": 0,
+          "submissions": 65
+        },
+        "thigh": {
+          "surfaces": 93,
+          "batches": 0,
+          "batchedSurfaces": 0,
+          "geometryCopyBytes": 0,
+          "submissions": 93
+        },
+        "leg": {
+          "surfaces": 74,
+          "batches": 0,
+          "batchedSurfaces": 0,
+          "geometryCopyBytes": 0,
+          "submissions": 74
+        },
+        "foot": {
+          "surfaces": 122,
+          "batches": 0,
+          "batchedSurfaces": 0,
+          "geometryCopyBytes": 0,
+          "submissions": 122
+        },
+        "spine": {
+          "surfaces": 115,
+          "batches": 0,
+          "batchedSurfaces": 0,
+          "geometryCopyBytes": 0,
+          "submissions": 115
+        }
+      },
+      "measurement": "CPU geometry/submission model; not measured GPU draw calls, FPS or browser acceptance"
+    },
+    "gpuAcceptance": false
   },
   "anatomy": {
     "inferiorThyroidArteries": {

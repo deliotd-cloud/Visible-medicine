@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Original-resolution batching](BODY_BATCHING.md) groups 550 compatible opaque surfaces into 29 batches in the all-visible whole-body CPU model. Original geometry, anatomical identities and existing controls are retained; selected/transparent/cut/muscle surfaces and small views keep individual rendering. Unsupported devices fall back. This is not measured GPU performance, browser visual acceptance or clinical sign-off.
+
 [Inferior thyroid arteries](INFERIOR_THYROID_ARTERIES.md) add 2 original neck selections (962 retained triangles), same-side thyrocervical navigation and 8 existing context bones. Four muscle-part candidates remain offline source-condition evidence, not admitted geometry. No complete gland/nerve anatomy, joined lumen, clinical approval or patient registration is claimed.
 
 [Genicular knee study](GENICULAR_ARTERIES.md#focused-knee-study) groups 22 original selections into one compact posterior view in Knee & leg and Whole body. Source-bound transitions, stable close-up framing and reversible removal reuse existing controls. Ten genicular source groups retain all 21686 original triangles; disconnected middle-genicular pieces are not bridged. Clinical/device review and imaging registration remain outstanding.

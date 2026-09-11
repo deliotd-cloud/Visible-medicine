@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "geometries": 550,
+  "vertices": 992437,
+  "indices": 5941338,
+  "retainedTriangles": 1980446,
+  "batches": 29,
+  "batchedSurfaces": 550,
+  "geometryCopyBytes": 47583840,
+  "baseline": {
+    "whole-body": {
+      "surfaces": 1058,
+      "batches": 29,
+      "batchedSurfaces": 550,
+      "geometryCopyBytes": 47583840,
+      "submissions": 537
+    },
+    "head-neck": {
+      "surfaces": 281,
+      "batches": 11,
+      "batchedSurfaces": 167,
+      "geometryCopyBytes": 22028280,
+      "submissions": 125
+    },
+    "shoulder-arm": {
+      "surfaces": 99,
+      "batches": 0,
+      "batchedSurfaces": 0,
+      "geometryCopyBytes": 0,
+      "submissions": 99
+    },
+    "forearm": {
+      "surfaces": 72,
+      "batches": 0,
+      "batchedSurfaces": 0,
+      "geometryCopyBytes": 0,
+      "submissions": 72
+    },
+    "hand": {
+      "surfaces": 124,
+      "batches": 0,
+      "batchedSurfaces": 0,
+      "geometryCopyBytes": 0,
+      "submissions": 124
+    },
+    "thorax": {
+      "surfaces": 155,
+      "batches": 9,
+      "batchedSurfaces": 125,
+      "geometryCopyBytes": 11668800,
+      "submissions": 39
+    },
+    "abdomen": {
+      "surfaces": 102,
+      "batches": 0,
+      "batchedSurfaces": 0,
+      "geometryCopyBytes": 0,
+      "submissions": 102
+    },
+    "pelvis": {
+      "surfaces": 65,
+      "batches": 0,
+      "batchedSurfaces": 0,
+      "geometryCopyBytes": 0,
+      "submissions": 65
+    },
+    "thigh": {
+      "surfaces": 93,
+      "batches": 0,
+      "batchedSurfaces": 0,
+      "geometryCopyBytes": 0,
+      "submissions": 93
+    },
+    "leg": {
+      "surfaces": 74,
+      "batches": 0,
+      "batchedSurfaces": 0,
+      "geometryCopyBytes": 0,
+      "submissions": 74
+    },
+    "foot": {
+      "surfaces": 122,
+      "batches": 0,
+      "batchedSurfaces": 0,
+      "geometryCopyBytes": 0,
+      "submissions": 122
+    },
+    "spine": {
+      "surfaces": 115,
+      "batches": 0,
+      "batchedSurfaces": 0,
+      "geometryCopyBytes": 0,
+      "submissions": 115
+    }
+  },
+  "measurement": "CPU geometry/submission model; not measured GPU draw calls, FPS or browser acceptance"
+}

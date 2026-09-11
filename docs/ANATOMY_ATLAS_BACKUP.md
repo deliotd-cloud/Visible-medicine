@@ -1,6 +1,22 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — inferior thyroid arteries and focused neck context (current source)
+## 11 September 2026 — original-resolution opaque body batching (current source)
+
+Source `0b3c1fd3d80849a3cc3e7e860430f610c265eea7`, tree `7a4d12a2f2e7205fb65e6978394a4976359e37e3`, parent `7380be6c3dc3c23b8ecbedba6ab790f7705ac388`. Twenty-three exact source paths mirrored. Full module audit: 1,796 matching files / 436,650,868 bytes / 122 retained GLBs; no common credential-signature warnings (not exhaustive). No anatomy, dependency/lockfile, font, texture, database schema, authentication, entitlement or scan changed.
+
+Large body/region views now batch compatible opaque non-muscle surfaces through the installed Three.js implementation. Original vertices/normals/indices and anatomical IDs are retained. Device multi-draw support is required; unsupported devices and small scenes use the original renderer. Selected, transparent, ghosted, cut and muscle surfaces remain individual. Stable instances update colour/offset/visibility without reallocating geometry; context picks pass through, R3F hit identity stays distinct, and original source geometry is never disposed. Labels/selected origin guides remain separate; no new UI control.
+
+Checked-in CPU baseline: full body 1,058 surface submissions becomes 537 surface/batch submissions, with 550 surfaces in 29 batches; head/neck 281 to 125, thorax 155 to 39. This is an all-visible submission model, not measured GPU calls, FPS or device acceptance. Full-body batching copies 47,583,840 geometry-buffer bytes (plus instance textures/driver allocations); each bundle is limited to 16 MiB. Memory cost and actual visual/performance effects require device testing.
+
+Passed exact retention of 992,437 positions/normals and 5,941,338 indices (1,980,446 triangles), unchanged source hashes, real Three raycast comparison, 26 actual Bundle lifecycle transitions, all three real separation layouts at five amounts, picking/hover, label/exam safeguards, opacity/cut/ghost/detail/device fallbacks and disposal. Inspection, screen-side labels, selection visibility, loading, explode styles, camera orientation, origin guides and knee study regressions pass. Body review preserves 9,522 topic snapshots; 3,174 isolated SQLite tracks pass. TypeScript, production build, requirement freshness and whitespace pass. Browser/GPU/mobile/clinical acceptance remains outstanding.
+
+Renderer fingerprint `93c5c65e629c11862380259e4553551592f57cc47e7dd5a932ffe543834833ae`, 354 inputs. Lossless transport preserves all 118 delivered GLBs / 1,242 meshes, canonical 180,713,280 bytes / transport 121,933,684 / gzip transport 106,272,301. No new simplification, LOD, fitted anatomy or patient-registration claim.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-body-batching-2026-09-11`: `.site.tar.gz` 111,663,424 bytes / SHA256 `32a15b2fe533a8d326cc952399b7fa4dcb4f7edf7661c3296419518060a6af8b`; `.delta.tar` 655,360 bytes / `87aedeb49b8ddda5fc6cb2f034e5cb415fa4aa5b5e0b0cbf223ed34736a1b6de`; `.incremental.bundle` 19,181 bytes / `d621ca28e2ca907728fc9dc4c1d933489ce46f0f0290cf916cd58891fd62b862`. Runtime archive: 401 safe unique entries, exact hosting manifest and both original migrations. Independent bare restore `refs/verification/body-batching-20260911` passes full fsck and exact SHA/tree; verifier main unchanged. Preserve all prior recovery bundles; this increment requires its parent.
+
+Sites source main independently verified. Private publishing is in progress at this receipt; terminal deployment and verified GitHub remote are recorded in work/D: checkpoint. This is source/runtime recovery, not production database, personal-review, account, scan or lecture backup. The broad goal remains active; clinical approval and authorized real imaging integration remain separate.
+
+## 11 September 2026 — inferior thyroid arteries and focused neck context (previous source)
 
 Source `7380be6c3dc3c23b8ecbedba6ab790f7705ac388`, tree `b8662a9558d0c99ac86f42584b87ae3953d85a8e`, parent `4c30ff9f4a29249cdd716e616a55b98006d54a3a`. Fifty-three exact source paths mirrored. Full module audit: 1,790 matching files / 436,611,063 bytes / 122 retained GLBs; no common credential-signature warnings (not exhaustive). No dependency, font, texture, database schema, authentication, paid-resource entitlement or patient scan changed.
 

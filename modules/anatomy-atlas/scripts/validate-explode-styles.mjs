@@ -482,6 +482,8 @@ const replacements = {
     SceneLabelLayer: 'SceneLabelLayer',
   },
   './anatomy-tissue': { AnatomyTissue: 'AnatomyTissue' },
+  './body-batch': { useBodyBatch: () => null },
+  '@/lib/body-batching': { bodyBatchActive: () => false },
   '@/lib/neuroanatomy': {},
   '@/lib/scene-labels': a,
   '@/lib/anatomy-vessels': {},
