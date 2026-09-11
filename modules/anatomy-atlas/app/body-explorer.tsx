@@ -132,6 +132,7 @@ import type { StudyCamera, StudyView } from '@/lib/study-views';
 import { kneeStudyBounds } from '@/lib/knee-studies';
 import { elbowStudyBounds } from '@/lib/elbow-studies';
 import { limbVascularStudyReady } from '@/lib/limb-vascular-studies';
+import { longusColliStudyReady } from '@/lib/longus-colli';
 import { anatomyRetryPlan } from '@/lib/anatomy-load-retry';
 import {
   copyRecoveryCamera,
@@ -659,6 +660,7 @@ export default function BodyExplorer({
   function changeFocus(id: string) {
     if (exam || !profile.focuses.some((item) => item.id === id)) return false;
     if (!limbVascularStudyReady(catalog, initialRegion, id)) return false;
+    if (!longusColliStudyReady(catalog, initialRegion, id, side)) return false;
     cameraRestore.current = null;
     setInspection(initialInspection);
     if (layout === 'tray') setPlate(false);

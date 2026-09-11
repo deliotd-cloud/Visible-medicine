@@ -1,6 +1,7 @@
 {
   "version": 1,
   "reviewStatus": "draft-unvalidated",
+  "displayCatalogSha256": "3f59bfdf91d398d2857ed34e6fb5c51f1f716ca1258075dd3e7d9443144aa76b",
   "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
   "profiles": [
     {
@@ -16,7 +17,9 @@
         "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
         "https://anatomy.elpaso.ttuhsc.edu/schemes/thigh_tables.html",
         "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
-        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf"
       ],
       "stages": [
         {
@@ -1049,7 +1052,27 @@
             "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
             "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
             "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
-            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein",
+            "vm:anatomy:body:head-neck:right:connective:tentorium-source-portion",
+            "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein",
+            "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:splenic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-gastroepiploic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-gastroepiploic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-gastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:middle-hepatic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein",
+            "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli"
           ]
         },
         {
@@ -1643,7 +1666,10 @@
             "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
             "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
             "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
-            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+            "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli"
           ]
         },
         {
@@ -2490,7 +2516,23 @@
             "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
             "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
             "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
-            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein",
+            "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:splenic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-gastroepiploic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-gastroepiploic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-gastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:middle-hepatic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein"
           ]
         },
         {
@@ -2801,7 +2843,8 @@
             "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
             "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
             "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
-            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane"
+            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
+            "vm:anatomy:body:head-neck:right:connective:tentorium-source-portion"
           ]
         }
       ],
@@ -3446,7 +3489,23 @@
             "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-middle-finger",
             "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-middle-finger",
             "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
-            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger"
+            "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein",
+            "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:splenic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-gastroepiploic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-gastroepiploic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-gastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:middle-hepatic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein"
           ]
         },
         {
@@ -3591,6 +3650,97 @@
             "vm:anatomy:body:abdomen:right:organ:right-ureter",
             "vm:anatomy:body:abdomen:left:organ:left-ureter"
           ]
+        },
+        {
+          "id": "tentorium-source",
+          "title": "Tentorium: supplied right portion",
+          "rule": {
+            "fmaIds": [
+              "FMA83966"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA52735",
+                "FMA52738",
+                "FMA52736"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "superior",
+          "description": "Set the brain and overlying skull aside; keep the incomplete right-sided dural fold with occipital, right temporal and sphenoid context. Choose Both or Right.",
+          "inspect": "Rotate to inspect the sloping fold. Only a right-sided source surface is present: no left counterpart or complete notch has been generated. Bones are orientation, not validated attachment footprints; remove them individually to isolate the fold. Undo restores visibility. Separation is not tissue movement or a surgical approach.",
+          "landmarks": [
+            "tentorium",
+            "occipital bone",
+            "right temporal bone",
+            "sphenoid bone"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:midline:bone:occipital-bone",
+            "vm:anatomy:body:head-neck:right:bone:right-temporal-bone",
+            "vm:anatomy:body:head-neck:midline:bone:sphenoid-bone",
+            "vm:anatomy:body:head-neck:right:connective:tentorium-source-portion"
+          ]
+        },
+        {
+          "id": "longus-colli-left",
+          "title": "Longus colli: supplied left parts",
+          "rule": {
+            "fmaIds": [
+              "FMA46284",
+              "FMA46286",
+              "FMA46288"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA12519",
+                "FMA12520",
+                "FMA12521",
+                "FMA12522",
+                "FMA12523",
+                "FMA12524",
+                "FMA12525",
+                "FMA9165",
+                "FMA9187",
+                "FMA9209",
+                "FMA52735",
+                "FMA46310"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Expose the three supplied left longus-colli parts against available vertebral context. Choose Both or Left; no right counterpart has been generated.",
+          "inspect": "Select the superior oblique, vertical or inferior oblique part; hide a covering structure or extract one part, then Undo or reset separation. Whole body includes all retained vertebral, occipital and longus-capitis context. Head & neck omits upper-thoracic and longus-capitis context; Spine omits the occipital bone. Existing source memberships are preserved. Attachment levels and fascial planes remain unvalidated; this is not surgical retraction or simulated motion.",
+          "landmarks": [
+            "superior oblique part of left longus colli",
+            "vertical intermediate part of left longus colli",
+            "inferior oblique part of left longus colli",
+            "atlas$",
+            "left longus capitis$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:second-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:third-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:third-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fourth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fifth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:seventh-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:atlas",
+            "vm:anatomy:body:spine:midline:bone:axis",
+            "vm:anatomy:body:head-neck:midline:bone:occipital-bone",
+            "vm:anatomy:body:spine:left:muscle:left-longus-capitis",
+            "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli"
+          ]
         }
       ]
     },
@@ -3706,7 +3856,9 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
-            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
           ]
         },
         {
@@ -3814,7 +3966,9 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
-            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
           ]
         },
         {
@@ -3914,7 +4068,9 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
-            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
           ]
         },
         {
@@ -4051,7 +4207,9 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
-            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
           ]
         },
         {
@@ -4276,7 +4434,9 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
             "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
           ]
         },
         {
@@ -4408,7 +4568,9 @@
             "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
             "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
             "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
-            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
           ]
         },
         {
@@ -4483,7 +4645,9 @@
             "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
             "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
             "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
-            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
           ]
         },
         {
@@ -4558,7 +4722,9 @@
             "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
             "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
             "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
-            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
           ]
         },
         {
@@ -4621,7 +4787,9 @@
             "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
             "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
             "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
-            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
           ]
         },
         {
@@ -4684,7 +4852,9 @@
             "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
             "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
             "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
-            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
           ]
         },
         {
@@ -5194,7 +5364,9 @@
             "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
             "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
             "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
-            "vm:anatomy:body:forearm:left:vessel:left-basilic-vein"
+            "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
           ]
         },
         {
@@ -7903,7 +8075,10 @@
       ],
       "references": [
         "https://anatomy.elpaso.ttuhsc.edu/schemes/thigh_tables.html",
-        "https://teachmeanatomy.info/lower-limb/muscles/gluteal-region/"
+        "https://teachmeanatomy.info/lower-limb/muscles/gluteal-region/",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5381851/"
       ],
       "stages": [
         {
@@ -7995,7 +8170,9 @@
             "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
             "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
-            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+            "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein"
           ]
         },
         {
@@ -8092,7 +8269,9 @@
             "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
             "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
-            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+            "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein"
           ]
         },
         {
@@ -8188,7 +8367,9 @@
             "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
             "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
-            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+            "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein"
           ]
         },
         {
@@ -8277,7 +8458,9 @@
             "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
             "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
-            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+            "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein"
           ]
         },
         {
@@ -8365,7 +8548,9 @@
             "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
             "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
-            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+            "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein"
           ]
         },
         {
@@ -8432,7 +8617,9 @@
             "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
             "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
             "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
-            "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein"
+            "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+            "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein"
           ]
         },
         {
@@ -8659,7 +8846,9 @@
             "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
             "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
             "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
-            "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein"
+            "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+            "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein"
           ]
         },
         {
@@ -8706,6 +8895,64 @@
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
             "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
           ]
+        },
+        {
+          "id": "thigh-deep-femoral-vessels",
+          "title": "Thigh: deep femoral vessels",
+          "rule": {
+            "fmaIds": [
+              "FMA70249",
+              "FMA70250",
+              "FMA20796",
+              "FMA20797",
+              "FMA21188",
+              "FMA21189",
+              "FMA51042",
+              "FMA51043"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA24474",
+                "FMA24475",
+                "FMA22450",
+                "FMA22451",
+                "FMA22456",
+                "FMA22457",
+                "FMA22459",
+                "FMA22460"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare supplied femoral and deep femoral vessels with pectineus, adductor longus, adductor magnus and the femur. Sartorius and other covering muscles are set aside.",
+          "inspect": "Hide one context muscle at a time to inspect deeper surfaces. Femoral and deep femoral veins are distinct deep-system selections; the common femoral junction is not separately labelled. This is not a complete femoral-triangle or adductor-canal model. Whole source groups remain intact. Nerves, fascial boundaries, complete companion veins, lumens and exact junctions are not supplied. Source proximity is not verified continuity; separation is a teaching display, not surgery or patient imaging.",
+          "landmarks": [
+            "deep femoral vein$",
+            "deep femoral artery$",
+            "femoral vein$",
+            "adductor longus$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:thigh:left:bone:left-femur",
+            "vm:anatomy:body:thigh:right:bone:right-femur",
+            "vm:anatomy:body:thigh:right:muscle:right-adductor-longus",
+            "vm:anatomy:body:thigh:left:muscle:left-adductor-longus",
+            "vm:anatomy:body:thigh:right:muscle:right-adductor-magnus",
+            "vm:anatomy:body:thigh:left:muscle:left-adductor-magnus",
+            "vm:anatomy:body:thigh:right:muscle:right-pectineus",
+            "vm:anatomy:body:thigh:left:muscle:left-pectineus",
+            "vm:anatomy:body:thigh:right:vessel:right-femoral-artery",
+            "vm:anatomy:body:thigh:left:vessel:left-femoral-artery",
+            "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery",
+            "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
+            "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
+            "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein"
+          ]
         }
       ]
     },
@@ -8719,7 +8966,10 @@
       ],
       "references": [
         "https://anatomy.elpaso.ttuhsc.edu/schemes/leg_tables.html",
-        "https://anatomy.ttuhscep.edu/anatomytables/joints_lowerlimb.html"
+        "https://anatomy.ttuhscep.edu/anatomytables/joints_lowerlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5381851/"
       ],
       "stages": [
         {
@@ -8790,7 +9040,11 @@
             "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
             "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
-            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+            "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein"
           ]
         },
         {
@@ -8868,7 +9122,11 @@
             "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
             "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
-            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+            "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein"
           ]
         },
         {
@@ -8943,7 +9201,11 @@
             "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
             "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
-            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+            "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein"
           ]
         },
         {
@@ -9057,7 +9319,11 @@
             "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
             "vm:anatomy:body:leg:left:vessel:left-popliteal-vein",
             "vm:anatomy:body:leg:right:vessel:right-small-saphenous-vein",
-            "vm:anatomy:body:leg:left:vessel:left-small-saphenous-vein"
+            "vm:anatomy:body:leg:left:vessel:left-small-saphenous-vein",
+            "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein"
           ]
         },
         {
@@ -9346,7 +9612,11 @@
             "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
             "vm:anatomy:body:leg:left:vessel:left-popliteal-vein",
             "vm:anatomy:body:leg:right:vessel:right-small-saphenous-vein",
-            "vm:anatomy:body:leg:left:vessel:left-small-saphenous-vein"
+            "vm:anatomy:body:leg:left:vessel:left-small-saphenous-vein",
+            "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein"
           ]
         },
         {
@@ -9503,6 +9773,118 @@
             "vm:anatomy:body:leg:right:muscle:right-popliteus",
             "vm:anatomy:body:leg:left:muscle:left-popliteus"
           ]
+        },
+        {
+          "id": "calf-anterior-vessels",
+          "title": "Calf: anterior vessels & muscles",
+          "rule": {
+            "fmaIds": [
+              "FMA43896",
+              "FMA43897",
+              "FMA44336",
+              "FMA44337"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA24477",
+                "FMA24478",
+                "FMA24480",
+                "FMA24481",
+                "FMA22544",
+                "FMA22545",
+                "FMA22548",
+                "FMA22549",
+                "FMA22546",
+                "FMA22547",
+                "FMA22550",
+                "FMA22551"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the anterior tibial artery and supplied vein group with tibialis anterior, the long toe extensors and fibularis tertius. Choose a side for one calf.",
+          "inspect": "Select and hide a covering muscle to expose the vessels; Undo restores it. Extract selected can set one vessel aside. Return to 0% to compare source positions. Fibularis tertius belongs to the anterior, not lateral, muscle compartment. Whole source groups remain intact. Nerves, fascial boundaries, complete companion veins, lumens and exact junctions are not supplied. Source proximity is not verified continuity; separation is a teaching display, not surgery or patient imaging.",
+          "landmarks": [
+            "anterior tibial vein$",
+            "anterior tibial artery$",
+            "tibialis anterior$",
+            "tibia$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:leg:left:bone:left-fibula",
+            "vm:anatomy:body:leg:left:bone:left-tibia",
+            "vm:anatomy:body:leg:right:bone:right-fibula",
+            "vm:anatomy:body:leg:right:bone:right-tibia",
+            "vm:anatomy:body:leg:right:muscle:right-extensor-digitorum-longus",
+            "vm:anatomy:body:leg:left:muscle:left-extensor-digitorum-longus",
+            "vm:anatomy:body:leg:right:muscle:right-extensor-hallucis-longus",
+            "vm:anatomy:body:leg:left:muscle:left-extensor-hallucis-longus",
+            "vm:anatomy:body:leg:right:muscle:right-fibularis-tertius",
+            "vm:anatomy:body:leg:left:muscle:left-fibularis-tertius",
+            "vm:anatomy:body:leg:right:muscle:right-tibialis-anterior",
+            "vm:anatomy:body:leg:left:muscle:left-tibialis-anterior",
+            "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-artery",
+            "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-artery",
+            "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein"
+          ]
+        },
+        {
+          "id": "calf-posterior-vessels",
+          "title": "Calf: posterior vessels & muscles",
+          "rule": {
+            "fmaIds": [
+              "FMA43898",
+              "FMA43899",
+              "FMA44338",
+              "FMA44339"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA24477",
+                "FMA24478",
+                "FMA24480",
+                "FMA24481",
+                "FMA65018",
+                "FMA65019",
+                "FMA65016",
+                "FMA65017",
+                "FMA65014",
+                "FMA65015"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Set the superficial calf muscles aside and inspect posterior tibial vessels with tibialis posterior and the long toe flexors.",
+          "inspect": "Remove individual retained muscles to expose the vessel surfaces, then Undo. The fibular-vein source remains withheld; the deep posterior collecting system is incomplete. This is not a tarsal-tunnel dissection. Whole source groups remain intact. Nerves, fascial boundaries, complete companion veins, lumens and exact junctions are not supplied. Source proximity is not verified continuity; separation is a teaching display, not surgery or patient imaging.",
+          "landmarks": [
+            "posterior tibial vein$",
+            "posterior tibial artery$",
+            "tibialis posterior$",
+            "fibula$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:leg:left:bone:left-fibula",
+            "vm:anatomy:body:leg:left:bone:left-tibia",
+            "vm:anatomy:body:leg:right:bone:right-fibula",
+            "vm:anatomy:body:leg:right:bone:right-tibia",
+            "vm:anatomy:body:leg:right:muscle:right-flexor-digitorum-longus",
+            "vm:anatomy:body:leg:left:muscle:left-flexor-digitorum-longus",
+            "vm:anatomy:body:leg:right:muscle:right-flexor-hallucis-longus",
+            "vm:anatomy:body:leg:left:muscle:left-flexor-hallucis-longus",
+            "vm:anatomy:body:leg:right:muscle:right-tibialis-posterior",
+            "vm:anatomy:body:leg:left:muscle:left-tibialis-posterior",
+            "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-artery",
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-artery",
+            "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein"
+          ]
         }
       ]
     },
@@ -9648,7 +10030,11 @@
             "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
             "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
             "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
-            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
+            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+            "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein"
           ]
         },
         {
@@ -9782,7 +10168,11 @@
             "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
             "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
             "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
-            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
+            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+            "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein"
           ]
         },
         {
@@ -9906,7 +10296,11 @@
             "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
             "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
             "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
-            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
+            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+            "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein"
           ]
         },
         {
@@ -10019,7 +10413,11 @@
             "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
             "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
             "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
-            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
+            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+            "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein"
           ]
         },
         {
@@ -10188,7 +10586,11 @@
             "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
             "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
             "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
-            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot"
+            "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+            "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein"
           ]
         },
         {
@@ -10925,7 +11327,11 @@
             "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
             "vm:anatomy:body:leg:left:vessel:left-popliteal-vein",
             "vm:anatomy:body:leg:right:vessel:right-small-saphenous-vein",
-            "vm:anatomy:body:leg:left:vessel:left-small-saphenous-vein"
+            "vm:anatomy:body:leg:left:vessel:left-small-saphenous-vein",
+            "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein"
           ]
         },
         {
@@ -13071,7 +13477,15 @@
             "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
             "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
-            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery"
+            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:splenic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-gastroepiploic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-gastroepiploic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-gastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:middle-hepatic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein"
           ]
         },
         {
@@ -13186,7 +13600,15 @@
             "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
             "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
-            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery"
+            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:splenic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-gastroepiploic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-gastroepiploic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-gastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:middle-hepatic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein"
           ]
         },
         {
@@ -13365,7 +13787,15 @@
             "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
             "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
-            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery"
+            "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+            "vm:anatomy:body:abdomen:unspecified:vessel:splenic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-gastroepiploic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-gastroepiploic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-gastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:middle-hepatic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein"
           ]
         },
         {
@@ -13969,7 +14399,15 @@
             "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
             "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
             "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
-            "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein"
+            "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:splenic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-gastroepiploic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-gastroepiploic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:left-gastric-vein",
+            "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
+            "vm:anatomy:body:abdomen:unspecified:vessel:middle-hepatic-vein",
+            "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
+            "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein"
           ]
         },
         {
@@ -15092,7 +15530,7 @@
       "title": "Neck & cranial windows",
       "orientation": "The neck sequence removes selected superficial muscles. Separate cranial windows bypass the skull to expose the supplied neural subset.",
       "limitations": [
-        "Facial coverage is incomplete; meninges and most cranial nerves are absent. Selected neck and intracranial vessel segments are available.",
+        "Facial coverage is incomplete; only a right-sided tentorial source portion is supplied, not complete meninges. Most cranial nerves remain absent. Selected neck and intracranial vessel segments are available.",
         "Compound eyeballs are included, but no full orbital-layer, cranial-base or neck-fascia dissection is supplied.",
         "Cranial windows hide bone; they do not cut a skull flap.",
         "Deep-brain entries are unvalidated source surfaces. Colours identify study groups, not histology or MRI signal. The two-component choroid-plexus and mammillary records remain grouped across sides."
@@ -15101,7 +15539,9 @@
         "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
         "https://nba.uth.tmc.edu/neuroanatomy/L10/Lab10p18_index.html",
         "https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/nerve-tables/nerves-of-the-head-and-neck/",
-        "https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/so.htm"
+        "https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/so.htm",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf"
       ],
       "stages": [
         {
@@ -15387,7 +15827,11 @@
             "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
             "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
             "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
-            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane"
+            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
+            "vm:anatomy:body:head-neck:right:connective:tentorium-source-portion",
+            "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli"
           ]
         },
         {
@@ -15682,7 +16126,11 @@
             "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
             "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
             "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
-            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane"
+            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
+            "vm:anatomy:body:head-neck:right:connective:tentorium-source-portion",
+            "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli"
           ]
         },
         {
@@ -15976,7 +16424,11 @@
             "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
             "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
             "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
-            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane"
+            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
+            "vm:anatomy:body:head-neck:right:connective:tentorium-source-portion",
+            "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli"
           ]
         },
         {
@@ -16335,7 +16787,8 @@
             "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
             "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
             "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
-            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane"
+            "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
+            "vm:anatomy:body:head-neck:right:connective:tentorium-source-portion"
           ]
         },
         {
@@ -18648,6 +19101,93 @@
             "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
             "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve"
           ]
+        },
+        {
+          "id": "tentorium-source",
+          "title": "Tentorium: supplied right portion",
+          "rule": {
+            "fmaIds": [
+              "FMA83966"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA52735",
+                "FMA52738",
+                "FMA52736"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "superior",
+          "description": "Set the brain and overlying skull aside; keep the incomplete right-sided dural fold with occipital, right temporal and sphenoid context. Choose Both or Right.",
+          "inspect": "Rotate to inspect the sloping fold. Only a right-sided source surface is present: no left counterpart or complete notch has been generated. Bones are orientation, not validated attachment footprints; remove them individually to isolate the fold. Undo restores visibility. Separation is not tissue movement or a surgical approach.",
+          "landmarks": [
+            "tentorium",
+            "occipital bone",
+            "right temporal bone",
+            "sphenoid bone"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:head-neck:midline:bone:occipital-bone",
+            "vm:anatomy:body:head-neck:right:bone:right-temporal-bone",
+            "vm:anatomy:body:head-neck:midline:bone:sphenoid-bone",
+            "vm:anatomy:body:head-neck:right:connective:tentorium-source-portion"
+          ]
+        },
+        {
+          "id": "longus-colli-left",
+          "title": "Longus colli: supplied left parts",
+          "rule": {
+            "fmaIds": [
+              "FMA46284",
+              "FMA46286",
+              "FMA46288"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA12519",
+                "FMA12520",
+                "FMA12521",
+                "FMA12522",
+                "FMA12523",
+                "FMA12524",
+                "FMA12525",
+                "FMA9165",
+                "FMA9187",
+                "FMA9209",
+                "FMA52735",
+                "FMA46310"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Expose the three supplied left longus-colli parts against available vertebral context. Choose Both or Left; no right counterpart has been generated.",
+          "inspect": "Select the superior oblique, vertical or inferior oblique part; hide a covering structure or extract one part, then Undo or reset separation. Whole body includes all retained vertebral, occipital and longus-capitis context. Head & neck omits upper-thoracic and longus-capitis context; Spine omits the occipital bone. Existing source memberships are preserved. Attachment levels and fascial planes remain unvalidated; this is not surgical retraction or simulated motion.",
+          "landmarks": [
+            "superior oblique part of left longus colli",
+            "vertical intermediate part of left longus colli",
+            "inferior oblique part of left longus colli",
+            "atlas$",
+            "left longus capitis$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:third-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fourth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fifth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:seventh-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:atlas",
+            "vm:anatomy:body:spine:midline:bone:axis",
+            "vm:anatomy:body:head-neck:midline:bone:occipital-bone",
+            "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli"
+          ]
         }
       ]
     },
@@ -18663,7 +19203,9 @@
       "references": [
         "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
         "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html",
-        "https://www.ncbi.nlm.nih.gov/books/NBK563271/"
+        "https://www.ncbi.nlm.nih.gov/books/NBK563271/",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf"
       ],
       "stages": [
         {
@@ -18786,7 +19328,10 @@
             "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
             "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
             "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
-            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+            "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli"
           ]
         },
         {
@@ -18914,7 +19459,10 @@
             "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
             "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
             "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
-            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+            "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli"
           ]
         },
         {
@@ -19035,7 +19583,10 @@
             "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
             "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
             "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
-            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+            "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli"
           ]
         },
         {
@@ -19137,7 +19688,10 @@
             "vm:anatomy:body:spine:midline:muscle:set-of-anterior-cervical-intertransversarii",
             "vm:anatomy:body:spine:midline:muscle:set-of-posterior-cervical-intertransversarii",
             "vm:anatomy:body:spine:right:muscle:set-of-right-levatores-costarum-breves",
-            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves"
+            "vm:anatomy:body:spine:left:muscle:set-of-left-levatores-costarum-breves",
+            "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli"
           ]
         },
         {
@@ -20042,6 +20596,62 @@
             "vm:anatomy:body:spine:midline:bone:fifth-lumbar-vertebra",
             "vm:anatomy:body:spine:midline:bone:sacrum",
             "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-lumbar-vertebra"
+          ]
+        },
+        {
+          "id": "longus-colli-left",
+          "title": "Longus colli: supplied left parts",
+          "rule": {
+            "fmaIds": [
+              "FMA46284",
+              "FMA46286",
+              "FMA46288"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA12519",
+                "FMA12520",
+                "FMA12521",
+                "FMA12522",
+                "FMA12523",
+                "FMA12524",
+                "FMA12525",
+                "FMA9165",
+                "FMA9187",
+                "FMA9209",
+                "FMA52735",
+                "FMA46310"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Expose the three supplied left longus-colli parts against available vertebral context. Choose Both or Left; no right counterpart has been generated.",
+          "inspect": "Select the superior oblique, vertical or inferior oblique part; hide a covering structure or extract one part, then Undo or reset separation. Whole body includes all retained vertebral, occipital and longus-capitis context. Head & neck omits upper-thoracic and longus-capitis context; Spine omits the occipital bone. Existing source memberships are preserved. Attachment levels and fascial planes remain unvalidated; this is not surgical retraction or simulated motion.",
+          "landmarks": [
+            "superior oblique part of left longus colli",
+            "vertical intermediate part of left longus colli",
+            "inferior oblique part of left longus colli",
+            "atlas$",
+            "left longus capitis$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:second-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:third-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:third-thoracic-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fourth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:fifth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:seventh-cervical-vertebra",
+            "vm:anatomy:body:spine:midline:bone:atlas",
+            "vm:anatomy:body:spine:midline:bone:axis",
+            "vm:anatomy:body:spine:left:muscle:left-longus-capitis",
+            "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli"
           ]
         }
       ]

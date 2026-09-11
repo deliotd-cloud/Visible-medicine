@@ -1,0 +1,182 @@
+{
+  "sourceCommit": "1f9413f581fd35da56561001e23b803ce94951af",
+  "before": "15affa2fb0d39e48b08809891e24e10ac2487ef73d6cc2d9cb4e646a309766ed",
+  "after": "afba80ef8e232d6dd21f9b4c00b73284db7dcb7a8778c520fd4096d9990e9176",
+  "patches": [
+    {
+      "region": "head-neck",
+      "added": [
+        {
+          "id": "longus-colli-left",
+          "title": "Longus colli: supplied left parts",
+          "rule": {
+            "fmaIds": [
+              "FMA46284",
+              "FMA46286",
+              "FMA46288"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA12519",
+                "FMA12520",
+                "FMA12521",
+                "FMA12522",
+                "FMA12523",
+                "FMA12524",
+                "FMA12525",
+                "FMA9165",
+                "FMA9187",
+                "FMA9209",
+                "FMA52735",
+                "FMA46310"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Expose the three supplied left longus-colli parts against available vertebral context. Choose Both or Left; no right counterpart has been generated.",
+          "inspect": "Select the superior oblique, vertical or inferior oblique part; hide a covering structure or extract one part, then Undo or reset separation. Whole body includes all retained vertebral, occipital and longus-capitis context. Head & neck omits upper-thoracic and longus-capitis context; Spine omits the occipital bone. Existing source memberships are preserved. Attachment levels and fascial planes remain unvalidated; this is not surgical retraction or simulated motion.",
+          "landmarks": [
+            "superior oblique part of left longus colli",
+            "vertical intermediate part of left longus colli",
+            "inferior oblique part of left longus colli",
+            "atlas$",
+            "left longus capitis$"
+          ]
+        }
+      ],
+      "referencesBefore": [
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://nba.uth.tmc.edu/neuroanatomy/L10/Lab10p18_index.html",
+        "https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/nerve-tables/nerves-of-the-head-and-neck/",
+        "https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/so.htm"
+      ],
+      "referencesAfter": [
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://nba.uth.tmc.edu/neuroanatomy/L10/Lab10p18_index.html",
+        "https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/nerve-tables/nerves-of-the-head-and-neck/",
+        "https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/so.htm",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf"
+      ]
+    },
+    {
+      "region": "spine",
+      "added": [
+        {
+          "id": "longus-colli-left",
+          "title": "Longus colli: supplied left parts",
+          "rule": {
+            "fmaIds": [
+              "FMA46284",
+              "FMA46286",
+              "FMA46288"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA12519",
+                "FMA12520",
+                "FMA12521",
+                "FMA12522",
+                "FMA12523",
+                "FMA12524",
+                "FMA12525",
+                "FMA9165",
+                "FMA9187",
+                "FMA9209",
+                "FMA52735",
+                "FMA46310"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Expose the three supplied left longus-colli parts against available vertebral context. Choose Both or Left; no right counterpart has been generated.",
+          "inspect": "Select the superior oblique, vertical or inferior oblique part; hide a covering structure or extract one part, then Undo or reset separation. Whole body includes all retained vertebral, occipital and longus-capitis context. Head & neck omits upper-thoracic and longus-capitis context; Spine omits the occipital bone. Existing source memberships are preserved. Attachment levels and fascial planes remain unvalidated; this is not surgical retraction or simulated motion.",
+          "landmarks": [
+            "superior oblique part of left longus colli",
+            "vertical intermediate part of left longus colli",
+            "inferior oblique part of left longus colli",
+            "atlas$",
+            "left longus capitis$"
+          ]
+        }
+      ],
+      "referencesBefore": [
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html",
+        "https://www.ncbi.nlm.nih.gov/books/NBK563271/"
+      ],
+      "referencesAfter": [
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/joints_back.html",
+        "https://www.ncbi.nlm.nih.gov/books/NBK563271/",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf"
+      ]
+    },
+    {
+      "region": "whole-body",
+      "added": [
+        {
+          "id": "longus-colli-left",
+          "title": "Longus colli: supplied left parts",
+          "rule": {
+            "fmaIds": [
+              "FMA46284",
+              "FMA46286",
+              "FMA46288"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA12519",
+                "FMA12520",
+                "FMA12521",
+                "FMA12522",
+                "FMA12523",
+                "FMA12524",
+                "FMA12525",
+                "FMA9165",
+                "FMA9187",
+                "FMA9209",
+                "FMA52735",
+                "FMA46310"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Expose the three supplied left longus-colli parts against available vertebral context. Choose Both or Left; no right counterpart has been generated.",
+          "inspect": "Select the superior oblique, vertical or inferior oblique part; hide a covering structure or extract one part, then Undo or reset separation. Whole body includes all retained vertebral, occipital and longus-capitis context. Head & neck omits upper-thoracic and longus-capitis context; Spine omits the occipital bone. Existing source memberships are preserved. Attachment levels and fascial planes remain unvalidated; this is not surgical retraction or simulated motion.",
+          "landmarks": [
+            "superior oblique part of left longus colli",
+            "vertical intermediate part of left longus colli",
+            "inferior oblique part of left longus colli",
+            "atlas$",
+            "left longus capitis$"
+          ]
+        }
+      ],
+      "referencesBefore": [
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/thigh_tables.html",
+        "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+      ],
+      "referencesAfter": [
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/thigh_tables.html",
+        "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf"
+      ]
+    }
+  ]
+}

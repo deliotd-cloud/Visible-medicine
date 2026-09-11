@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Longus colli](LONGUS_COLLI.md) adds ${anatomy.longusColli.sourceSelections} source-preserving left muscle parts (${anatomy.longusColli.originalTriangles} triangles) and a focused study in Head & neck, Spine and Whole body. Use Both or Left; the right side is unavailable. Select parts, remove covering context and Undo without adding a permanent toolbar. Attachment geometry, fascial planes, clinical accuracy and imaging registration remain unvalidated.
+
 [Hepatic veins](HEPATIC_VEINS.md) add ${anatomy.hepaticVeins.sourceSelections} genuine source groups with ${anatomy.hepaticVeins.originalTriangles} retained triangles from ${anatomy.hepaticVeins.sourceFiles} files. The middle hepatic vein and right/left tributary groups reuse selection, labels, dissection and the compact venous panel. All ${anatomy.hepaticVeins.sourceComponents} disconnected components remain in their original positions; no bridging, complete tree, Couinaud territory, flow or patient registration is claimed.
 
 [Portal tributaries](PORTAL_VEINS.md) add ${anatomy.portalVeins.sourceSelections} genuine source meshes (${anatomy.portalVeins.originalTriangles} retained triangles): splenic and paired gastric/gastroepiploic veins. The existing selected-vein panel now connects ${anatomy.portalVeins.mappedSelections} portal selections through ${anatomy.portalVeins.mappedRelationships} typical relationships, with reversible isolation and no new toolbar. Variable mesenteric outlets and missing sinusoidal/collateral networks remain explicit. No flow, scan registration or clinical approval is supplied.

@@ -10,7 +10,7 @@ import { preLimbVascularRecipeProfiles } from './limb-vascular-recipe-history.mj
 const code = await build({
   stdin: {
     contents:
-      "export * from './content/limb-vascular-studies'; export * from './lib/limb-vascular-studies'; export * from './lib/body-display-catalog'; export * from './app/dissection-data'; export * from './lib/study-links'; export * from './lib/study-library'; export * from './lib/body-arrangement'; export * from './lib/explode-layout.mjs'; export {Vector3} from 'three';",
+      "export * from './content/limb-vascular-studies'; export * from './lib/limb-vascular-studies'; export * from './lib/longus-colli'; export * from './lib/body-display-catalog'; export * from './app/dissection-data'; export * from './lib/study-links'; export * from './lib/study-library'; export * from './lib/body-arrangement'; export * from './lib/explode-layout.mjs'; export {Vector3} from 'three';",
     resolveDir: process.cwd(),
     loader: 'ts',
   },
@@ -290,6 +290,8 @@ for (const study of a.limbVascularStudySets)
       cameraRestore = { current: { pending: true } },
       env = {
         catalog,
+        side: 'both',
+        longusColliStudyReady: a.longusColliStudyReady,
         initialRegion: study.regions[0],
         profile: a.dissectionProfiles[study.regions[0]],
         exam: mode === 'exam',

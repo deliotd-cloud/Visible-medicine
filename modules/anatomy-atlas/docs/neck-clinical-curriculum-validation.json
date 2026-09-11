@@ -1,12 +1,12 @@
 {
   "passed": true,
-  "checks": 19054,
+  "checks": 20998,
   "bodyRepresentations": 48,
   "sourceComponents": 52,
   "lessonGroups": 26,
   "explicitTopicEdits": 96,
   "combinedPinnedCurriculumSections": 2322,
-  "sourceIndexChecks": 52,
+  "sourceIndexChecks": 0,
   "negativeCases": 14,
   "readinessScope": "Historical neck milestone; current direct/export assertions remain active",
   "bodyReadiness": {
@@ -32,6 +32,12 @@
       "draft": 11,
       "identity-only": 0,
       "pending": 1011,
+      "generated-identification": 0
+    },
+    "xray": {
+      "draft": 6,
+      "identity-only": 0,
+      "pending": 1016,
       "generated-identification": 0
     },
     "ultrasound": {

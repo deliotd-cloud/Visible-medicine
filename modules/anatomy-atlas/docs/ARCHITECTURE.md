@@ -1,5 +1,7 @@
 # Spatial anatomy architecture
 
+The [longus-colli addition](LONGUS_COLLI.md) uses the existing atomic source-admission contract and source-frame transform. Three original left parts append without changing earlier surfaces. A focus-only recipe reuses regional controls and context memberships; changed source and right-only requests are rejected before camera/dissection mutation. Offline recipe history reverses only this exact addition, preserving earlier hashes. No imaging adapter, scan registration or lecture entitlement is introduced.
+
 The [hepatic-vein addition](HEPATIC_VEINS.md) follows the append-only source-admission pipeline in lib/body-source-additions.ts. Three complete definitions, context records, immutable source hashes and a GLB are appended after earlier display additions. Systemic traversal retains historical pins and appends the new exact records; source-side concepts prevent contralateral tributary links. The existing compact drainage component and parent visibility action are reused. Root and nested hepatic source scopes remain distinct; no registration or entitlement is created.
 
 ## Pancreas display correction

@@ -8,7 +8,7 @@ const compiled = await build({
     export * from './lib/body-system-presets'; export * from './lib/explode-layout.mjs';
     export * from './lib/study-views'; export * from './lib/study-camera';
     export * from './lib/inspection-geometry'; export * from './lib/scene-labels';
-    export * from './app/dissection-data';`,
+    export * from './app/dissection-data'; export * from './lib/body-display-catalog';`,
     resolveDir: process.cwd(),
     loader: 'ts',
   },
@@ -21,7 +21,7 @@ const a = await import(
   `data:text/javascript;base64,${Buffer.from(compiled.outputFiles[0].text).toString('base64')}`
 );
 const raw = await readFile('public/models/bodyparts3d/full-body/catalog.json');
-const catalog = JSON.parse(raw),
+const catalog = a.bodyDisplayCatalog(JSON.parse(raw)),
   original = JSON.stringify(catalog);
 const views = [
   'anterior',

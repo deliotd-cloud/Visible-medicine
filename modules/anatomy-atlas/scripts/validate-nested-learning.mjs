@@ -58,8 +58,8 @@ const reject = (fn, message) => {
   checks++;
   assert.throws(fn, message);
 };
-same(legacy.length, 1048);
-same(anatomy.length, 1117);
+same(legacy.length, 1051);
+same(anatomy.length, 1120);
 same(
   anatomy.filter((t) => t.scope !== 'nested'),
   legacy,

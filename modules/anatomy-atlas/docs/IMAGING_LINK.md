@@ -1,5 +1,7 @@
 # Imaging selection link — version 1
 
+The [viewer/CT design direction](VIEWER_CT_REFERENCE_DIRECTION.md) records the owner's two video references, observed interface patterns and a staged integration plan. It does not change the delivered selection-only scope below.
+
 ## Delivered scope
 
 The shoulder, all regions and whole-body explorer now expose the same opt-in, two-way **structure-selection** contract. The “Imaging link” disclosure starts **Not connected**. No adapter, study, segmentation or patient registration is installed by this milestone. Registering an adapter only establishes an in-process software connection; it does not verify that imaging is loaded or clinically reviewed.

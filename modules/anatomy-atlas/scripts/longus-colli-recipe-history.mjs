@@ -1,15 +1,13 @@
 // Exact offline history only; never runtime source or clinical approval migration.
-import { preLongusColliRecipeProfiles } from './longus-colli-recipe-history.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import record from '../content/limb-vascular-recipe-transition.json' with { type: 'json' };
+import record from '../content/longus-colli-recipe-transition.json' with { type: 'json' };
 const hash = (v) =>
   createHash('sha256').update(JSON.stringify(v)).digest('hex');
-export function preLimbVascularRecipeProfiles(profiles) {
-  profiles = preLongusColliRecipeProfiles(profiles);
+export function preLongusColliRecipeProfiles(profiles) {
   assert.equal(
     hash(record),
-    '678518559f057fe60a31f211def5dc0f828faab038f7c82de485ae13a7810315',
+    '254d6732d1ce420f541b63c5078b64530dd180915553b1e253dfbb14e17a5ae1',
   );
   if (hash(profiles) !== record.after) return profiles; // Earlier callers still enforce their own exact snapshot.
   const previous = structuredClone(profiles);

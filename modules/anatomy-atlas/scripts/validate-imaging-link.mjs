@@ -7,7 +7,7 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const compiled = await build({
   stdin: {
     contents:
-      "export * from './lib/anatomy-coordinates'; export * from './lib/anatomy-link-registry'; export * from './lib/imaging-sync'; export { structures } from './app/anatomy-data';",
+      "export * from './lib/anatomy-coordinates'; export * from './lib/anatomy-link-registry'; export * from './lib/imaging-sync'; export * from './lib/body-display-catalog'; export { structures } from './app/anatomy-data';",
     resolveDir: root,
     loader: 'ts',
   },
@@ -21,7 +21,7 @@ const a = await import(
 );
 const read = async (path) =>
   JSON.parse(await readFile(new URL('../' + path, import.meta.url), 'utf8'));
-const catalog = await read('public/models/bodyparts3d/full-body/catalog.json');
+const catalog = a.bodyDisplayCatalog(await read('public/models/bodyparts3d/full-body/catalog.json'));
 const manifest = await read('public/models/bodyparts3d/manifest.json');
 const body = a.bodyLinkEntries(catalog),
   shoulder = a.shoulderLinkEntries(manifest, a.structures);
@@ -49,7 +49,7 @@ const near = (left, right, message, tolerance = 1e-5) =>
   );
 same(
   body.length,
-  1022,
+  1042,
   'Every admitted body representation has a reference entry',
 );
 same(shoulder.length, 9, 'Every shoulder representation has a reference entry');

@@ -1,0 +1,935 @@
+{
+  "version": 1,
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "auditSha256": "23f10f7de763fb6e6d6ea38989869bd792efa7f0ac910b3182f0a7cc4cf639a3",
+  "structures": [
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
+      "fmaId": "FMA46284",
+      "name": "Superior oblique part of left longus colli",
+      "sourceName": "superior oblique part of left longus colli",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck",
+        "spine"
+      ],
+      "bundle": "longus-colli",
+      "nodeName": "FMA46284",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1600",
+          "sha256": "246c0e197149700a407255282bed9549927ebbad029169a936d1fe12289effe0"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.005415230058133602,
+          6.048399925231934,
+          0.2395319938659668
+        ],
+        "max": [
+          0.24698099493980408,
+          6.719600200653076,
+          0.4080429971218109
+        ]
+      },
+      "center": [
+        0.12078288244083524,
+        6.384000062942505,
+        0.32378749549388885
+      ],
+      "anchor": [
+        0.1522340029478073,
+        6.377799987792969,
+        0.3583559989929199
+      ],
+      "coverageNote": "Whole source-labelled left longus colli part; only three left parts are supplied, with no mirrored right counterpart. Original coordinates and every source face retained. Exact attachment footprints, fascia and individual slips are not validated. Anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
+      "fmaId": "FMA46286",
+      "name": "Vertical intermediate part of left longus colli",
+      "sourceName": "vertical intermediate part of left longus colli",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck",
+        "spine"
+      ],
+      "bundle": "longus-colli",
+      "nodeName": "FMA46286",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1601",
+          "sha256": "c16d1ec48c40b6f810b4ee7b81bd9af7d5a804b04eba95e6df83953e8eb1a5a3"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.0033104100730270147,
+          5.335599899291992,
+          0.2539229989051819
+        ],
+        "max": [
+          0.14836899936199188,
+          6.712800025939941,
+          0.42052701115608215
+        ]
+      },
+      "center": [
+        0.07252929464448243,
+        6.024199962615967,
+        0.337225005030632
+      ],
+      "anchor": [
+        0.09000369906425476,
+        6.0131001472473145,
+        0.3919619917869568
+      ],
+      "coverageNote": "Whole source-labelled left longus colli part; only three left parts are supplied, with no mirrored right counterpart. Original coordinates and every source face retained. Exact attachment footprints, fascia and individual slips are not validated. Anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli",
+      "fmaId": "FMA46288",
+      "name": "Inferior oblique part of left longus colli",
+      "sourceName": "inferior oblique part of left longus colli",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck",
+        "spine"
+      ],
+      "bundle": "longus-colli",
+      "nodeName": "FMA46288",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1557",
+          "sha256": "fbef1ad6ba831d68d0f6e51269896e5c0275193cc41b7bb4a1321257bd56e27f"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.022043900564312935,
+          5.117800235748291,
+          0.1921679973602295
+        ],
+        "max": [
+          0.2364950031042099,
+          5.913700103759766,
+          0.4016050100326538
+        ]
+      },
+      "center": [
+        0.12926945183426142,
+        5.515750169754028,
+        0.29688650369644165
+      ],
+      "anchor": [
+        0.12296699732542038,
+        5.513299942016602,
+        0.31842300295829773
+      ],
+      "coverageNote": "Whole source-labelled left longus colli part; only three left parts are supplied, with no mirrored right counterpart. Original coordinates and every source face retained. Exact attachment footprints, fascia and individual slips are not validated. Anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextRecords": [
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra",
+      "fmaId": "FMA9165",
+      "name": "First thoracic vertebra",
+      "sourceName": "first thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9165",
+      "bounds": {
+        "min": [
+          -0.37382999062538147,
+          5.4721999168396,
+          -0.329133003950119
+        ],
+        "max": [
+          0.35916197299957275,
+          5.769000053405762,
+          0.3687190115451813
+        ]
+      },
+      "center": [
+        -0.007334008812904358,
+        5.620599985122681,
+        0.019793003797531128
+      ],
+      "anchor": [
+        0.021189598366618156,
+        5.618599891662598,
+        0.026789017021656036
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3158",
+          "sha256": "aa69c48def3434d6a3e1c56fc78af45f01545931fde5422af17d5f98ce9ed8a3"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:second-thoracic-vertebra",
+      "fmaId": "FMA9187",
+      "name": "Second thoracic vertebra",
+      "sourceName": "second thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9187",
+      "bounds": {
+        "min": [
+          -0.3592210114002228,
+          5.265899658203125,
+          -0.37879499793052673
+        ],
+        "max": [
+          0.3457840085029602,
+          5.603600025177002,
+          0.3267579674720764
+        ]
+      },
+      "center": [
+        -0.006718501448631287,
+        5.4347498416900635,
+        -0.02601851522922516
+      ],
+      "anchor": [
+        0.020678000524640083,
+        5.457199573516846,
+        -0.02256900817155838
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3160",
+          "sha256": "20c1322be138314f42bbd1be3e69f3f6b590bbca7a8a3cd3414476f207721300"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:third-cervical-vertebra",
+      "fmaId": "FMA12521",
+      "name": "Third cervical vertebra",
+      "sourceName": "third cervical vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12521",
+      "bounds": {
+        "min": [
+          -0.2984279990196228,
+          6.170000076293945,
+          -0.11866901069879532
+        ],
+        "max": [
+          0.28539299964904785,
+          6.457399845123291,
+          0.37813201546669006
+        ]
+      },
+      "center": [
+        -0.006517499685287476,
+        6.313699960708618,
+        0.12973150238394737
+      ],
+      "anchor": [
+        0.008280440233647823,
+        6.285400390625,
+        0.06494998931884766
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3161",
+          "sha256": "8f0de55a4feef85c256501a8afff7bb5aa3f77f4681af4c91801da87b54db103"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:third-thoracic-vertebra",
+      "fmaId": "FMA9209",
+      "name": "Third thoracic vertebra",
+      "sourceName": "third thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9209",
+      "bounds": {
+        "min": [
+          -0.32966098189353943,
+          5.022299766540527,
+          -0.4863989055156708
+        ],
+        "max": [
+          0.3184089958667755,
+          5.418499946594238,
+          0.2673629820346832
+        ]
+      },
+      "center": [
+        -0.005625993013381958,
+        5.220399856567383,
+        -0.10951796174049377
+      ],
+      "anchor": [
+        -0.0007605130085721612,
+        5.221899509429932,
+        -0.1273920089006424
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3163",
+          "sha256": "3080ed603c54120fa5201816d77695354c81ea57275c599e68543bfb6ecb89c1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:fourth-cervical-vertebra",
+      "fmaId": "FMA12522",
+      "name": "Fourth cervical vertebra",
+      "sourceName": "fourth cervical vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12522",
+      "bounds": {
+        "min": [
+          -0.27753400802612305,
+          6.045999526977539,
+          -0.09306400269269943
+        ],
+        "max": [
+          0.2637749910354614,
+          6.321400165557861,
+          0.3910810053348541
+        ]
+      },
+      "center": [
+        -0.0068795084953308105,
+        6.1836998462677,
+        0.14900850132107735
+      ],
+      "anchor": [
+        -0.04486189782619476,
+        6.188299655914307,
+        0.1026729941368103
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3164",
+          "sha256": "a883dd5929817f87eb366a32ca9d82463fd0db40286c49b8adc9e9d1a8cecc34"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:fifth-cervical-vertebra",
+      "fmaId": "FMA12523",
+      "name": "Fifth cervical vertebra",
+      "sourceName": "fifth cervical vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12523",
+      "bounds": {
+        "min": [
+          -0.2969779968261719,
+          5.937700271606445,
+          -0.13917499780654907
+        ],
+        "max": [
+          0.2833319902420044,
+          6.1798996925354,
+          0.407725989818573
+        ]
+      },
+      "center": [
+        -0.00682300329208374,
+        6.058799982070923,
+        0.13427549600601196
+      ],
+      "anchor": [
+        -0.006795770023018122,
+        6.063100814819336,
+        0.12540000677108765
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3167",
+          "sha256": "b2485c3707b04f1fd455ee4d3a7b69670ec9c85d4ef9a54463e5c6089f1a69a7"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra",
+      "fmaId": "FMA12524",
+      "name": "Sixth cervical vertebra",
+      "sourceName": "sixth cervical vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12524",
+      "bounds": {
+        "min": [
+          -0.31265199184417725,
+          5.815899848937988,
+          -0.20820599794387817
+        ],
+        "max": [
+          0.2994770109653473,
+          6.047399997711182,
+          0.4167099893093109
+        ]
+      },
+      "center": [
+        -0.006587490439414978,
+        5.931649923324585,
+        0.10425199568271637
+      ],
+      "anchor": [
+        -0.02192229963839054,
+        5.937199592590332,
+        0.12316200137138367
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3170",
+          "sha256": "ac100888f7e271851c138e8d41a52168070e4fe5c63e8876a4bcfba08f3b59aa"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:seventh-cervical-vertebra",
+      "fmaId": "FMA12525",
+      "name": "Seventh cervical vertebra",
+      "sourceName": "seventh cervical vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12525",
+      "bounds": {
+        "min": [
+          -0.33229300379753113,
+          5.647099494934082,
+          -0.28733599185943604
+        ],
+        "max": [
+          0.31931599974632263,
+          5.918399810791016,
+          0.40031898021698
+        ]
+      },
+      "center": [
+        -0.006488502025604248,
+        5.782749652862549,
+        0.05649149417877197
+      ],
+      "anchor": [
+        -0.008737760595977306,
+        5.774100303649902,
+        0.07046298682689667
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3172",
+          "sha256": "43bc0a1f9b3adffd5f45256b61f75affa15b56c85b387fa733b59de310216104"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:atlas",
+      "fmaId": "FMA12519",
+      "name": "Atlas",
+      "sourceName": "atlas",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12519",
+      "bounds": {
+        "min": [
+          -0.41364601254463196,
+          6.62209939956665,
+          -0.09404201805591583
+        ],
+        "max": [
+          0.40230700373649597,
+          6.814300537109375,
+          0.3764420449733734
+        ]
+      },
+      "center": [
+        -0.005669504404067993,
+        6.718199968338013,
+        0.1412000134587288
+      ],
+      "anchor": [
+        -0.10565600544214249,
+        6.696400165557861,
+        0.2025810182094574
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3176",
+          "sha256": "8ac9ee6d7631edc066a322af278ed508eab4d9c0919e9a77657ead17c14c8a79"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:axis",
+      "fmaId": "FMA12520",
+      "name": "Axis",
+      "sourceName": "axis",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12520",
+      "bounds": {
+        "min": [
+          -0.2596159875392914,
+          6.331700325012207,
+          -0.13329102098941803
+        ],
+        "max": [
+          0.24574199318885803,
+          6.783499717712402,
+          0.3653910160064697
+        ]
+      },
+      "center": [
+        -0.006936997175216675,
+        6.557600021362305,
+        0.11604999750852585
+      ],
+      "anchor": [
+        0.013543100096285343,
+        6.581600189208984,
+        0.20394302904605865
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3177",
+          "sha256": "ae446bbf47561c5ff2a2c0a03bfb158ba2581477ae5078ac89cc95b92637adab"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:occipital-bone",
+      "fmaId": "FMA52735",
+      "name": "Occipital bone",
+      "sourceName": "occipital bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-skeleton",
+      "nodeName": "FMA52735",
+      "bounds": {
+        "min": [
+          -0.6196119785308838,
+          6.777700424194336,
+          -0.6800100207328796
+        ],
+        "max": [
+          0.6070529818534851,
+          7.845099925994873,
+          0.5095899701118469
+        ]
+      },
+      "center": [
+        -0.006279498338699341,
+        7.3114001750946045,
+        -0.08521002531051636
+      ],
+      "anchor": [
+        -0.011581499129533768,
+        7.092199802398682,
+        -0.3996880054473877
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3309",
+          "sha256": "c0262a08591e48504c8a53302525377e0c4ad1c165456475f3bb80aab6202d44"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-longus-capitis",
+      "fmaId": "FMA46310",
+      "name": "Left longus capitis",
+      "sourceName": "left longus capitis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA46310",
+      "bounds": {
+        "min": [
+          0.010373200289905071,
+          5.856999397277832,
+          0.27329200506210327
+        ],
+        "max": [
+          0.2548089921474457,
+          6.966400146484375,
+          0.4504860043525696
+        ]
+      },
+      "center": [
+        0.13259109621867537,
+        6.4116997718811035,
+        0.3618890047073364
+      ],
+      "anchor": [
+        0.17037099599838257,
+        6.4205002784729,
+        0.3883119821548462
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1561",
+          "sha256": "a805c03e24aadb8da137abb8533543f4561db28e050b7bc6bb6f7ba70a0f1ac0"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextBundles": [
+    {
+      "id": "head-neck-skeleton",
+      "url": "/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+      "bytes": 2355384,
+      "sha256": "c1b950c82fd76e69cf153757ca275a6bd27fd25d74d3fd24259b15f9172a39d4",
+      "structures": 23
+    },
+    {
+      "id": "spine-skeleton",
+      "url": "/models/bodyparts3d/full-body/spine-skeleton.glb",
+      "bytes": 1286192,
+      "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+      "structures": 25
+    },
+    {
+      "id": "spine-muscles",
+      "url": "/models/bodyparts3d/full-body/spine-muscles.glb",
+      "bytes": 5127960,
+      "sha256": "6cc6a2b15cda5a0defc35fdc2bebda607eac042571fec74bb1d2caba51748404",
+      "structures": 52
+    }
+  ],
+  "bundles": [
+    {
+      "id": "longus-colli",
+      "url": "/models/bodyparts3d/longus-colli/longus-colli.glb?v=b43cedda733267f51027a892b1ac08a35874853ce65802deca5304e039f6d08f",
+      "bytes": 133088,
+      "sha256": "b43cedda733267f51027a892b1ac08a35874853ce65802deca5304e039f6d08f",
+      "structures": 3
+    }
+  ],
+  "modification": "Exact-coordinate welding for indexed normals plus Float32 GLB storage. Every original triangle is retained in order; no smoothing, fitting, mirroring, bridging or face removal.",
+  "clinicalApproval": false
+}

@@ -1,5 +1,7 @@
 # Clinical review and future imaging gate
 
+Owner clarification, 11 September 2026: the owner is a radiologist and will perform clinical sign-off. Prepare revision-bound review batches for them; no prior approval is inferred. The [viewer/CT direction](VIEWER_CT_REFERENCE_DIRECTION.md) distinguishes current identity linking from future spatial synchronization.
+
 ## Separate status tracks
 
 `lib/review-status.ts` defines the conservative default tracks. The dedicated shoulder now loads the signed-in user's persisted review status and links to `/review`. Its expanded schema, checklists, evidence, issues, version-bound approvals and append-only history are described in [REVIEW_WORKSPACE.md](REVIEW_WORKSPACE.md). No reviews are pre-approved, no acquired imaging is loaded, and the whole-body viewer remains outside the shoulder-pilot review scope. The earlier `content/review-record.schema.json` is the legacy minimal contract, not the expanded dashboard save format.

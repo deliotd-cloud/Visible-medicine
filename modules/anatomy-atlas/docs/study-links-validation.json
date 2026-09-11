@@ -1,21 +1,21 @@
 {
   "passed": true,
-  "assertions": 261342,
-  "links": 13013,
-  "focusedLinks": 8032,
-  "destinationsTested": 6212,
+  "assertions": 266285,
+  "links": 13111,
+  "focusedLinks": 8112,
+  "destinationsTested": 6274,
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
-      "structures": 1039,
-      "testedLinks": 1698
+      "structures": 1042,
+      "testedLinks": 1716
     },
     {
       "region": "whole-body",
       "side": "left",
-      "structures": 599,
-      "testedLinks": 986
+      "structures": 602,
+      "testedLinks": 1004
     },
     {
       "region": "whole-body",
@@ -188,14 +188,14 @@
     {
       "region": "head-neck",
       "side": "both",
-      "structures": 276,
-      "testedLinks": 813
+      "structures": 279,
+      "testedLinks": 827
     },
     {
       "region": "head-neck",
       "side": "left",
-      "structures": 160,
-      "testedLinks": 497
+      "structures": 163,
+      "testedLinks": 511
     },
     {
       "region": "head-neck",
@@ -206,14 +206,14 @@
     {
       "region": "spine",
       "side": "both",
-      "structures": 112,
-      "testedLinks": 306
+      "structures": 115,
+      "testedLinks": 323
     },
     {
       "region": "spine",
       "side": "left",
-      "structures": 84,
-      "testedLinks": 266
+      "structures": 87,
+      "testedLinks": 283
     },
     {
       "region": "spine",
@@ -224,7 +224,7 @@
   ],
   "sourceGeometryChanged": false,
   "catalogueSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
-  "displaySelections": 1039,
+  "displaySelections": 1042,
   "actualInstalledRuntimeDuplicateParsingTested": true,
   "browserInteractionTesting": false,
   "clinicalValidation": false,

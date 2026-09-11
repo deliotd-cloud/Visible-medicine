@@ -260,6 +260,11 @@ for (const path of [
   'lib/deep-leg-veins.ts',
   'lib/portal-veins.ts',
   'lib/hepatic-veins.ts',
+  'lib/longus-colli.ts',
+  'content/longus-colli-studies.ts',
+  'content/longus-colli-recipe-transition.json',
+  'public/models/bodyparts3d/longus-colli/catalog.json',
+  'docs/longus-colli-source-audit.json',
   'public/models/bodyparts3d/hepatic-veins/catalog.json',
   'docs/hepatic-vein-source-audit.json',
   'lib/portal-drainage.ts',
@@ -500,6 +505,12 @@ const report = {
     'Offline source and displayed-copy inventory; no clinical or browser certification.',
   sourceHashes,
   anatomy: {
+    longusColli: {
+      sourceSelections: catalog.structures.filter(s=>s.bundle==='longus-colli').length,
+      originalTriangles: 7162, sourceFiles: 3, clinicalApproval: false,
+      laterality: 'left only', focusRegions: ['head-neck', 'spine', 'whole-body'],
+      exactSourceFacesRetained: true, rightCounterpartGenerated: false,
+    },
     hepaticVeins: {
       sourceSelections: catalog.structures.filter(s=>s.bundle==='hepatic-veins').length,
       originalTriangles: 13984, sourceFiles: 10, sourceComponents: 13,

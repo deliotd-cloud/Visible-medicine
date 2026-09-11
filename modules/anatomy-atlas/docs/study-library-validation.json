@@ -1,31 +1,31 @@
 {
   "passed": true,
-  "assertions": 52992,
+  "assertions": 53550,
   "scopes": 36,
-  "groups": 196,
-  "sourceRecipes": 266,
+  "groups": 199,
+  "sourceRecipes": 269,
   "combinedGroups": 70,
   "markupCases": 24,
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
-      "groups": 14,
-      "recipes": 14,
+      "groups": 15,
+      "recipes": 15,
       "combinedGroups": 0
     },
     {
       "region": "whole-body",
       "side": "left",
-      "groups": 14,
-      "recipes": 14,
+      "groups": 15,
+      "recipes": 15,
       "combinedGroups": 0
     },
     {
       "region": "whole-body",
       "side": "right",
-      "groups": 14,
-      "recipes": 14,
+      "groups": 15,
+      "recipes": 15,
       "combinedGroups": 0
     },
     {
@@ -220,43 +220,43 @@
     {
       "region": "head-neck",
       "side": "both",
-      "groups": 35,
-      "recipes": 54,
+      "groups": 36,
+      "recipes": 55,
       "combinedGroups": 19
     },
     {
       "region": "head-neck",
       "side": "left",
-      "groups": 35,
-      "recipes": 54,
+      "groups": 36,
+      "recipes": 55,
       "combinedGroups": 19
     },
     {
       "region": "head-neck",
       "side": "right",
-      "groups": 35,
-      "recipes": 54,
+      "groups": 36,
+      "recipes": 55,
       "combinedGroups": 19
     },
     {
       "region": "spine",
       "side": "both",
-      "groups": 16,
-      "recipes": 24,
+      "groups": 17,
+      "recipes": 25,
       "combinedGroups": 8
     },
     {
       "region": "spine",
       "side": "left",
-      "groups": 16,
-      "recipes": 24,
+      "groups": 17,
+      "recipes": 25,
       "combinedGroups": 8
     },
     {
       "region": "spine",
       "side": "right",
-      "groups": 16,
-      "recipes": 24,
+      "groups": 17,
+      "recipes": 25,
       "combinedGroups": 8
     }
   ],
@@ -264,5 +264,5 @@
   "clinicalValidation": false,
   "browserInteractionTesting": false,
   "sourceCatalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
-  "dissectionProfilesSha256": "15affa2fb0d39e48b08809891e24e10ac2487ef73d6cc2d9cb4e646a309766ed"
+  "dissectionProfilesSha256": "afba80ef8e232d6dd21f9b4c00b73284db7dcb7a8778c520fd4096d9990e9176"
 }

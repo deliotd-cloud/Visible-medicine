@@ -33,11 +33,11 @@ const copy = (a) => ({
   body: catalog.structures.map((s) => ({
     id: s.id,
     sections: Object.fromEntries(
-      api.contentTabs.map((t) => [t, a.bodyContent(s, t)]),
+      a.contentTabs.map((t) => [t, a.bodyContent(s, t)]),
     ),
   })),
-  shoulder: api.structures,
-  dissectionProfiles: api.dissectionProfiles,
+  shoulder: a.structures,
+  dissectionProfiles: a.dissectionProfiles,
 });
 same(
   curriculumHash(copy(previous)),

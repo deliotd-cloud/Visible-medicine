@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import * as THREE from 'three';
 import { studyLibrary } from '../lib/study-library.ts';
+import { bodyDisplayCatalog } from '../lib/body-display-catalog.ts';
 import {
   bodyOffset,
   translatedBox,
@@ -17,9 +18,9 @@ import {
   matchesRule,
 } from '../app/dissection-data.ts';
 
-const catalog = JSON.parse(
+const catalog = bodyDisplayCatalog(JSON.parse(
   await fs.readFile('public/models/bodyparts3d/full-body/catalog.json', 'utf8'),
-);
+));
 const rows = [];
 let checks = 0,
   cameraChecks = 0;
@@ -220,6 +221,7 @@ assert.equal(stress.history.length, 40);
 const manifest = {
   version: 1,
   reviewStatus: 'draft-unvalidated',
+  displayCatalogSha256: createHash('sha256').update(JSON.stringify(catalog)).digest('hex'),
   catalogSha256: createHash('sha256')
     .update(
       await fs.readFile('public/models/bodyparts3d/full-body/catalog.json'),

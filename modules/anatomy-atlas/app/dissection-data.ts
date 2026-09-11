@@ -17,6 +17,10 @@ import { spinalLevelStudySets, spinalLevelReferences } from '../lib/spinal-level
 import { kneeStudySets, kneeStudyReferences } from '../lib/knee-studies.ts';
 import { elbowStudySets, elbowStudyReferences } from '../content/elbow-studies.ts';
 import { tentoriumStudySets } from '../content/tentorium-studies.ts';
+import {
+  longusColliStudySets,
+  longusColliReferences,
+} from '../content/longus-colli-studies.ts';
 import { limbVascularStudySets, limbVascularReferences } from '../content/limb-vascular-studies.ts';
 import {
   orbitalMotorStudySets,
@@ -1200,7 +1204,7 @@ dissectionProfiles.forearm.references.push(...elbowStudyReferences);
 // Focus-only entries keep target-presence gating under laterality filters.
 // They remain searchable and support the same removal, isolation and history
 // controls without suggesting successive surgical layers or an internal cutaway.
-for (const study of [...renalStudySets, ...tentoriumStudySets, ...limbVascularStudySets]) {
+for (const study of [...renalStudySets, ...tentoriumStudySets, ...limbVascularStudySets, ...longusColliStudySets]) {
   for (const region of study.regions) {
     dissectionProfiles[region].focuses.push({
       id: study.id,
@@ -1219,6 +1223,9 @@ for (const region of ['abdomen', 'whole-body'])
   dissectionProfiles[region].references.push(...renalStudyReferences);
 for (const region of ['leg', 'thigh'])
   dissectionProfiles[region].references.push(...limbVascularReferences);
+
+for (const region of ['head-neck', 'spine', 'whole-body'])
+  dissectionProfiles[region].references.push(...longusColliReferences);
 
 export function matchesRule(s: BodyStructure, rule: TissueRule): boolean {
   return (

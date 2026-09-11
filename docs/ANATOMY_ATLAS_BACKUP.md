@@ -1,5 +1,19 @@
 # Anatomy atlas backup — 11 September 2026
 
+## 11 September 2026 — longus colli and CT viewer direction (current source)
+
+Source `f7a9743cb00da5aad6de71249eb108d2e1d5aaf3`, tree `f88480d0aef4ff2f1351732b9c3a70ee318f1bec`, parent `1f9413f581fd35da56561001e23b803ce94951af`. Sixty module paths mirrored once; 1,686 matching files / 430,257,300 bytes / 118 retained GLBs. Exact private Sites source push and remote main confirmed. No common credential signatures in the checkpoint scan (not exhaustive).
+
+Three entire official left longus-colli parts preserve 7,162 triangles and source coordinates. One compact Study choice covers head/neck, spine and whole body; Both/Left are supported, Right is deliberately unavailable. Current display catalogue is 1,042, archival catalogue remains 1,022. Six original Anatomy/Function drafts remain unapproved; no invented right counterpart, clinical sign-off or patient registration. The two user-supplied Instagram references informed the documented Explore / Dissect / Compare imaging direction; no media or assets were copied.
+
+New source, GLB and recipe-history checks passed, plus 18 direct / 80 focused links, 135 altered-source rejections and 12 actual parent-handler cases. Shared dissection, study/navigation, review/SQLite, imaging, explode, arrangement and curriculum checks passed against current display anatomy where applicable. Historical curriculum fixture bugs were repaired without repinning earlier content hashes. TypeScript, fresh requirements and production build passed; 114 delivered GLBs retain decoded geometry. No browser/device or clinical acceptance is claimed.
+
+Private version 157 `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_0d7d03674cd881918ae470ca07386c57` published successfully. Deployment `appgdep_6aa44e059edc8191b2b51c8d394ce90a` succeeded at 2026-09-11T18:53:16.295065+00:00. Owner-only access unchanged.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-longus-colli-2026-09-11`: .site.tar.gz 111,099,441 bytes / SHA-256 `e5a7fe3a38fd351414aa1aaa96f4f1cd33088c2ac276d65728f75c7f791b02df`; .delta.tar 3,450,880 bytes / `bd856aace58bed5ddaa49a30c39aa56227c4cbc092fdf5ce6799596bf103fa51`; .incremental.bundle 406,464 bytes / `d7d72577e704a6fc6ca86fa30a2e98d9151961e46701de7a97f830d7e1bb4559`. Restored into the retained D: bare verifier at refs/verification/longus-colli-20260911; full fsck passed, exact source/tree matched and original main was unchanged. Retain the earlier full bundle and all increments; this bundle requires the exact parent above.
+
+The final work/D: checkpoint records the verified GitHub delivery commit and remote refs after this receipt is committed and pushed. Main website paths outside the module/receipt remain untouched. This backs up source/models/docs, not private production review data, credentials, acquired scans or paid lectures. The improvement goal remains active.
+
 ## GitHub delivery verified — 11 September 2026
 
 The private repository **deliotd-cloud/Visible-medicine**, branch **backup/anatomy-atlas-2026-09-06**, now contains implementation/receipt commit `8e7a1d74ba90974c6d74d7431ad9be824f55266b`. The non-force push succeeded. GitHub's ref, commit and tree APIs independently confirmed module tree `59767ddbd5d8b637ea64824a73244bcb08630673`, exactly matching saved atlas source `1f9413f581fd35da56561001e23b803ce94951af`. Remote main remains `c4ff08f8afc90bd94d04162625f97af9d94401cf`; no merge or main-website change was made.

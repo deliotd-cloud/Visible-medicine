@@ -1,5 +1,7 @@
 # Asset register
 
+11 September 2026 — [Longus colli](../docs/LONGUS_COLLI.md): three left BodyParts3D v4 parts (FMA46284/FJ1600, FMA46286/FJ1601, FMA46288/FJ1557), original bytes under content/sources/longus-colli and derived GLB/catalogue under public/models/bodyparts3d/longus-colli. CC BY 4.0 with existing DBCLS credit; established transform and Float32 export only. No right-side synthesis, new texture, font, package, scan or paid service.
+
 11 September 2026 — [Tarsal imaging teaching](../docs/TARSAL_IMAGING_TEACHING.md): original notes and factual reading links only, no newly imported asset or dependency. Existing model licences/attribution and project MIT code/teaching terms remain unchanged. No source diagram, patient image or fee-bearing API is bundled.
 
 ## Partial tentorial reference

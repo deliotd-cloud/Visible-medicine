@@ -50,7 +50,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "ff5d5f82f2bdb2589410cf59fc44b99995a789df69e8c498a0d6c76672948eb7"
+      "sha256": "b0b823b4b59f4c7d3f0509d40173ebaa1c07638198e31b610b702370ab0f67ac"
     },
     {
       "path": "app/body-explorer.css",
@@ -58,7 +58,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "5b8c657669c2ecc68f9a4e8c35f5f45286f9750930d5f1c798c491d8bfa1eef1"
+      "sha256": "ab08ec01e505a7618a527cba701ca5f9ff35cf7e077743a03a085a5d9bf21eef"
     },
     {
       "path": "app/body-scene.tsx",
@@ -94,7 +94,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "ba9d9f010da61862e9fc6046362fc8d55dce23ea4e35d23bc2084e2ddb873dd5"
+      "sha256": "50fe34d99f0b96c677f9da77ac08e2db50dfd30bfe6e146c92c9da11e167492f"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -361,6 +361,10 @@
       "sha256": "2d0508aa622e396af8aa7412403c0ccf58bccc06ea4d5d1f9c6c9310d96c4876"
     },
     {
+      "path": "content/longus-colli-studies.ts",
+      "sha256": "586cde809529f252ff037874a5b756228ccc463128616b0c160a82a1f4797216"
+    },
+    {
       "path": "content/lower-limb-arterial-pins.json",
       "sha256": "274b0d2880de0b3f536f05858893c150cedb1230e0c14e2de84ecb1b4d9aba1b"
     },
@@ -606,7 +610,7 @@
     },
     {
       "path": "lib/body-display-catalog.ts",
-      "sha256": "b2456e597ae6c2d158e04d9aeaf941d0ffc98d9920be0ce7ce441585f8609857"
+      "sha256": "846464eb271018ba67c3c86c77f5a2f5955c29eb84c7b5746165617a94475c26"
     },
     {
       "path": "lib/body-source-additions.ts",
@@ -881,6 +885,10 @@
       "sha256": "b3e92cce438b0576798e77af9ab2c8380ee851b566e4223a23fb1bf760557553"
     },
     {
+      "path": "lib/longus-colli.ts",
+      "sha256": "2835bfa751ca5dd37ba8b895839f48c1a4e019b6c8bd8d6120cecf04912fdf99"
+    },
+    {
       "path": "lib/lower-limb-arterial.ts",
       "sha256": "2b133451561ed06eb3f4b8fd95c089552fea927ce53d18d1cf15b4b86f36e93c"
     },
@@ -1094,7 +1102,7 @@
     },
     {
       "path": "lib/study-links.ts",
-      "sha256": "a014a0e158f9c660bf092df4f20651c61796f17d2aee12bdfee5a3e3bdb17719"
+      "sha256": "055a478a8bd1e4ab6dbeccfaf071e8f7d042f8bd84908225410c45bc2c35f813"
     },
     {
       "path": "lib/study-navigation.ts",
@@ -1234,7 +1242,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "eb676f3f047c4418e565d351281d20a06e2c6d43cb160acaff08634772e129d6"
+      "sha256": "b5d33043297fcf8e026edb1409a716858ed49bda40dcf6be03358dd561ed8936"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1287,6 +1295,10 @@
     {
       "path": "public/models/bodyparts3d/hepatic/catalog.json",
       "sha256": "53962f7814854e576efde820bed1ccd2f7393b1296798898dee25f773e24d6c8"
+    },
+    {
+      "path": "public/models/bodyparts3d/longus-colli/catalog.json",
+      "sha256": "4dbf0fd67b985d5aa9ca910ab2757bc8fecf26c4b1315c98acab86d07fed5b38"
     },
     {
       "path": "public/models/bodyparts3d/pancreas/display-correction.json",
@@ -1349,5 +1361,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "093291ee44fd80370c46435945f23cfcb4831e4dd760ce71ea11985820e6d215"
+  "sha256": "1770554e90d04c8b0abcb6da88c991e31ebdf2dd7fb825a256e3739f6aa2ecc5"
 }
