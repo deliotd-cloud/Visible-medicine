@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { build } from './workspace-test-build.mjs';
 import { renderRequirementSummary } from './requirement-summary.mjs';
 import { limbVascularStudySets, limbVascularSourceIds } from '../content/limb-vascular-studies.ts';
+import { genicularStudy, genicularStudySourceIds } from '../content/genicular-study.ts';
 
 // This inventory executes the real content resolver. It measures displayed copy,
 // not medical correctness, complete lessons, browser acceptance or approval.
@@ -343,6 +344,9 @@ for (const path of [
   'public/models/bodyparts3d/genicular-arteries/catalog.json',
   'docs/genicular-artery-source-audit.json',
   'lib/genicular-arteries.ts',
+  'content/genicular-study.ts',
+  'content/genicular-study-pins.json',
+  'lib/genicular-study.ts',
   'scripts/current-source-holds.mjs',
   'docs/cubital-vein-source-audit.json',
   'lib/cubital-veins.ts',
@@ -523,6 +527,10 @@ const report = {
   sourceHashes,
   anatomy: {
     genicularArteries: {
+      focusRecipe: genicularStudy.id,
+      focusRegions: genicularStudy.regions,
+      focusSourceSelections: genicularStudySourceIds.length,
+      cameraOnlyCloseUp: true,
       sourceSelections: genicularArteries.structures.length,
       originalTriangles: genicularAudit.groups.reduce((sum,g)=>sum+g.topology.triangles,0),
       sourceComponents: genicularAudit.groups.reduce((sum,g)=>sum+g.topology.components.length,0),

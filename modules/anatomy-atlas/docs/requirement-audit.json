@@ -24,7 +24,7 @@
     "lib/venous-drainage.ts": "461295771de1b34288fb3db0b87833d1398b60f81eb88b4a410b18bed608524c",
     "public/models/bodyparts3d/portal-veins/catalog.json": "2ce331f3cecbd67a2fe75f873c79d0c187b67fc4131b34cab8a44833c4a37ae8",
     "docs/portal-vein-source-audit.json": "506b3aca1b61897dcb4f625c189e243a423957c0438f08baa42ae53a742ef5aa",
-    "lib/limb-vascular-studies.ts": "b3e92cce438b0576798e77af9ab2c8380ee851b566e4223a23fb1bf760557553",
+    "lib/limb-vascular-studies.ts": "35c491f8ee5c272cc8798fe995173cc7c9fa3086b10edc6158baa8ddb9ae1f13",
     "content/limb-vascular-studies.ts": "825f08810f16ae4d409e89a6579f78f739843d192cdb2f9946314c1c30227908",
     "content/limb-vascular-study-pins.json": "2d0508aa622e396af8aa7412403c0ccf58bccc06ea4d5d1f9c6c9310d96c4876",
     "public/models/bodyparts3d/deep-leg-veins/catalog.json": "bc3c1c7418d8fe31ef94b6fb8b74d20fe54d8e0f2e67aef4df3c1182b68d137a",
@@ -90,6 +90,9 @@
     "public/models/bodyparts3d/genicular-arteries/catalog.json": "45f141823a7d5fea53b490a718e8401ea1a627f89cb05bc4e9dd68f9020b292b",
     "docs/genicular-artery-source-audit.json": "77069502492c3ee86b0ff20ae61804f3b5383f833ab834ff79b041373c76f0a2",
     "lib/genicular-arteries.ts": "2476e9f6b6224fb55b25abe3d48a7cb1ab83c7048e6072dc28b4ffac7b2a3494",
+    "content/genicular-study.ts": "e3990bacdac2466a03bfec56e5fc8eecc0767b1f474d5b161e16cb84d5a1cfaa",
+    "content/genicular-study-pins.json": "fb98f5cedf269b60b8f25e5acada14d44961196478858502f3f48d1cd498890d",
+    "lib/genicular-study.ts": "b1654af910c5ac0581a48a76946d71398634bd2d513de778e4e9b92e7bf425cf",
     "scripts/current-source-holds.mjs": "8de7998eb9023a85d03a8d2ed2582730a79fb79abcb92fffc9dbc96625e1a272",
     "docs/cubital-vein-source-audit.json": "180268a3abd4a557e833a8f6c6b4822a167df3e1af1a6401f2e274a834b766a2",
     "lib/cubital-veins.ts": "1877da3b251cae1816573786fe271a94306571f606fb8410386a326efe3e30e6",
@@ -196,13 +199,20 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "2423949b30bb23413004c92c6fab324c675296951eb03b61714cf5ba2401338e",
+    "resolvedContentAndRecipeData": "2857e90ede7588b302a2c12b011f29a62b532d2d077b6fc4df1caeae5376410d",
     "explicitTopicReadiness": "81f1a714a2778c948a48c11a2e5de22d31c46b66acdcc30d02e0e4e4d4e767f8",
     "reasoningQuestionData": "caafb323ca7d5a04971f91ad369d68c3a8da5e43839b39d8cd76192d1497bad2",
     "nestedTeachingData": "8e14e4e7b62141619825ebe604bc8cfddba30a80629162aa70818b7dc7c09350"
   },
   "anatomy": {
     "genicularArteries": {
+      "focusRecipe": "knee-genicular-arteries",
+      "focusRegions": [
+        "leg",
+        "whole-body"
+      ],
+      "focusSourceSelections": 22,
+      "cameraOnlyCloseUp": true,
       "sourceSelections": 10,
       "originalTriangles": 21686,
       "sourceComponents": 12,
@@ -815,7 +825,7 @@
     "pulmonaryAirwayContexts": 2,
     "ventricularRelationshipPresets": 3,
     "stages": 159,
-    "focuses": 157
+    "focuses": 159
   },
   "practice": {
     "identificationModes": [

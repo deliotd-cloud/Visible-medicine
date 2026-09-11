@@ -1,0 +1,1298 @@
+{
+  "sourceCommit": "f5460a4548b7ba4761220c791ea6673b5c7ebb6f",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "entries": [
+    {
+      "id": "vm:anatomy:body:thigh:left:bone:left-femur",
+      "fmaId": "FMA24475",
+      "name": "Left femur",
+      "sourceName": "left femur",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "thigh-skeleton",
+      "nodeName": "FMA24475",
+      "bounds": {
+        "min": [
+          0.3196620047092438,
+          -4.319439888000488,
+          -0.005177993793040514
+        ],
+        "max": [
+          1.502369999885559,
+          0.34239014983177185,
+          0.622759997844696
+        ]
+      },
+      "center": [
+        0.9110160022974014,
+        -1.9885248690843582,
+        0.30879100202582777
+      ],
+      "anchor": [
+        0.9478089809417725,
+        -2.004189968109131,
+        0.308991014957428
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3259",
+          "sha256": "d291cc3619c32c68edb9d29e0b755634c2cb85e3db89f0d0b63a316f879ef86d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:bone:left-fibula",
+      "fmaId": "FMA24481",
+      "name": "Left fibula",
+      "sourceName": "left fibula",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24481",
+      "bounds": {
+        "min": [
+          0.8452900052070618,
+          -8.251906394958496,
+          -0.014659996144473553
+        ],
+        "max": [
+          1.2010799646377563,
+          -4.408689975738525,
+          0.28119003772735596
+        ]
+      },
+      "center": [
+        1.023184984922409,
+        -6.330298185348511,
+        0.1332650207914412
+      ],
+      "anchor": [
+        1.0649499893188477,
+        -6.316400051116943,
+        0.12487499415874481
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3260",
+          "sha256": "b5fbb694e1d881033ec8318b97c41e9d9bedc89a8df9845573b1aac528829331"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:bone:left-patella",
+      "fmaId": "FMA24487",
+      "name": "Left patella",
+      "sourceName": "left patella",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24487",
+      "bounds": {
+        "min": [
+          0.6059249639511108,
+          -4.3850297927856445,
+          0.5090100169181824
+        ],
+        "max": [
+          1.0222400426864624,
+          -3.9923698902130127,
+          0.7275099754333496
+        ]
+      },
+      "center": [
+        0.8140825033187866,
+        -4.188699841499329,
+        0.618259996175766
+      ],
+      "anchor": [
+        0.8300420641899109,
+        -4.148429870605469,
+        0.5871900320053101
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3275",
+          "sha256": "768362d04f0f91cea9a28f4aeae9d9f63f3c82450b68d185fa4afefe75d75cc1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:bone:left-tibia",
+      "fmaId": "FMA24478",
+      "name": "Left tibia",
+      "sourceName": "left tibia",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24478",
+      "bounds": {
+        "min": [
+          0.3503419756889343,
+          -8.060953140258789,
+          0.019821014255285263
+        ],
+        "max": [
+          1.0945500135421753,
+          -4.261380195617676,
+          0.6451500058174133
+        ]
+      },
+      "center": [
+        0.7224459946155548,
+        -6.161166667938232,
+        0.3324855100363493
+      ],
+      "anchor": [
+        0.7442640066146851,
+        -6.160630226135254,
+        0.2990489900112152
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3282",
+          "sha256": "40e55d7d28f060be61815603ee5eb1c0ba4c2e93af6fed6b5db7ca88d4ed82ef"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:bone:right-femur",
+      "fmaId": "FMA24474",
+      "name": "Right femur",
+      "sourceName": "right femur",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "thigh-skeleton",
+      "nodeName": "FMA24474",
+      "bounds": {
+        "min": [
+          -1.5013400316238403,
+          -4.31850004196167,
+          -0.004697990603744984
+        ],
+        "max": [
+          -0.31894299387931824,
+          0.342520147562027,
+          0.6219199895858765
+        ]
+      },
+      "center": [
+        -0.9101415127515793,
+        -1.9879899471998215,
+        0.30861099949106574
+      ],
+      "anchor": [
+        -0.9391549825668335,
+        -2.0242297649383545,
+        0.31437796354293823
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3365",
+          "sha256": "5eff0f92905dd45bd0e79b1de0144dc15988c73c683468163255ba1452d58037"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-fibula",
+      "fmaId": "FMA24480",
+      "name": "Right fibula",
+      "sourceName": "right fibula",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24480",
+      "bounds": {
+        "min": [
+          -1.2016500234603882,
+          -8.252799034118652,
+          -0.015125999227166176
+        ],
+        "max": [
+          -0.8434450030326843,
+          -4.4085001945495605,
+          0.28168800473213196
+        ]
+      },
+      "center": [
+        -1.0225475132465363,
+        -6.3306496143341064,
+        0.1332810027524829
+      ],
+      "anchor": [
+        -1.0324500799179077,
+        -6.344590187072754,
+        0.16410896182060242
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3366",
+          "sha256": "d03fee02cf8eefad1ecfcb9246e3f43ad3c4615c21ce08dc5e2b6901c6395a86"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-patella",
+      "fmaId": "FMA24486",
+      "name": "Right patella",
+      "sourceName": "right patella",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24486",
+      "bounds": {
+        "min": [
+          -1.0228800773620605,
+          -4.3851399421691895,
+          0.5099199414253235
+        ],
+        "max": [
+          -0.6062080264091492,
+          -3.9920401573181152,
+          0.7272699475288391
+        ]
+      },
+      "center": [
+        -0.8145440518856049,
+        -4.188590049743652,
+        0.6185949444770813
+      ],
+      "anchor": [
+        -0.8611350059509277,
+        -4.189239978790283,
+        0.5913699865341187
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3381",
+          "sha256": "b513b8cb6b37e3eb4211fd35a4469efdf79de37887a0af8c582efc836a6f6307"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+      "fmaId": "FMA24477",
+      "name": "Right tibia",
+      "sourceName": "right tibia",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24477",
+      "bounds": {
+        "min": [
+          -1.0935299396514893,
+          -8.060371398925781,
+          0.02072898857295513
+        ],
+        "max": [
+          -0.3521600067615509,
+          -4.260799884796143,
+          0.6483500003814697
+        ]
+      },
+      "center": [
+        -0.7228449732065201,
+        -6.160585641860962,
+        0.33453949447721243
+      ],
+      "anchor": [
+        -0.6983820199966431,
+        -6.1077399253845215,
+        0.3267289698123932
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3387",
+          "sha256": "01879d7310938e82eecc02e1115332497e94085ff5cc1fa8eeee47ad1f5d3578"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-popliteus",
+      "fmaId": "FMA22591",
+      "name": "Right popliteus",
+      "sourceName": "right popliteus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-muscles",
+      "nodeName": "FMA22591",
+      "bounds": {
+        "min": [
+          -1.0948799848556519,
+          -5.380780220031738,
+          -0.02419300004839897
+        ],
+        "max": [
+          -0.5662750005722046,
+          -3.9338901042938232,
+          0.43261200189590454
+        ]
+      },
+      "center": [
+        -0.8305774927139282,
+        -4.657335162162781,
+        0.20420950092375278
+      ],
+      "anchor": [
+        -0.8330259919166565,
+        -4.611370086669922,
+        0.2284419983625412
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1430",
+          "sha256": "78f5d5b80867116a0bbf59575efb8de3ed681030875a577bc00d310012df80fd"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-popliteus",
+      "fmaId": "FMA22592",
+      "name": "Left popliteus",
+      "sourceName": "left popliteus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-muscles",
+      "nodeName": "FMA22592",
+      "bounds": {
+        "min": [
+          0.5662750005722046,
+          -5.380780220031738,
+          -0.02419300004839897
+        ],
+        "max": [
+          1.0948799848556519,
+          -3.9338901042938232,
+          0.43261200189590454
+        ]
+      },
+      "center": [
+        0.8305774927139282,
+        -4.657335162162781,
+        0.20420950092375278
+      ],
+      "anchor": [
+        0.8330259919166565,
+        -4.611370086669922,
+        0.2284419983625412
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1430M",
+          "sha256": "96ece008a2edf30338e1b53611c86de64f2cc329af84fe5d54e9375469c3babd"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+      "fmaId": "FMA77380",
+      "name": "Right popliteal artery",
+      "sourceName": "right popliteal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "bundle": "leg-vessels-recovery",
+      "nodeName": "FMA77380",
+      "bounds": {
+        "min": [
+          -0.9584179520606995,
+          -5.167250156402588,
+          0.026954002678394318
+        ],
+        "max": [
+          -0.5585640072822571,
+          -3.1922197341918945,
+          0.4578710198402405
+        ]
+      },
+      "center": [
+        -0.7584909796714783,
+        -4.179734945297241,
+        0.2424125112593174
+      ],
+      "anchor": [
+        -0.7508899569511414,
+        -4.185960292816162,
+        0.11681099236011505
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2170",
+          "sha256": "4bc14302e06ca2162a6df730a7d9f8549b5e6e9b919ce34e35bbdbeec1b088b0"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+      "fmaId": "FMA77381",
+      "name": "Left popliteal artery",
+      "sourceName": "left popliteal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "bundle": "leg-vessels-recovery",
+      "nodeName": "FMA77381",
+      "bounds": {
+        "min": [
+          0.5585800409317017,
+          -5.167250156402588,
+          0.02696899324655533
+        ],
+        "max": [
+          0.958420991897583,
+          -3.1922500133514404,
+          0.4578530192375183
+        ]
+      },
+      "center": [
+        0.7585005164146423,
+        -4.179750084877014,
+        0.24241100624203682
+      ],
+      "anchor": [
+        0.7594419717788696,
+        -4.18257999420166,
+        0.11660099029541016
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2086",
+          "sha256": "20dac622c09e02e45fa95b6f3c2eba7e932fdc3eef507ac19d0d78ed71ef241c"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+      "fmaId": "FMA22562",
+      "name": "Right middle genicular artery",
+      "sourceName": "right middle genicular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "thigh"
+      ],
+      "bundle": "genicular-arteries",
+      "nodeName": "FMA22562",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2167",
+          "sha256": "8ab69c1b57bc47e6d2f5a06885808fbdae84a0453d037549de7ae99193fcf469"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -1.0987499952316284,
+          -4.254300117492676,
+          0.015204000286757946
+        ],
+        "max": [
+          -0.42679500579833984,
+          -3.983069896697998,
+          0.15320800244808197
+        ]
+      },
+      "center": [
+        -0.7627725005149841,
+        -4.118685007095337,
+        0.08420600136741996
+      ],
+      "anchor": [
+        -0.7745429873466492,
+        -4.09621000289917,
+        0.07830599695444107
+      ],
+      "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+      "fmaId": "FMA22563",
+      "name": "Left middle genicular artery",
+      "sourceName": "left middle genicular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "thigh"
+      ],
+      "bundle": "genicular-arteries",
+      "nodeName": "FMA22563",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2084",
+          "sha256": "a2f628de8834efc7051088a5d0d99e2c1489a2512f29dc5680d6fce78ddbef54"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.4268060028553009,
+          -4.254240036010742,
+          0.015018999576568604
+        ],
+        "max": [
+          1.098680019378662,
+          -3.9832301139831543,
+          0.1531040072441101
+        ]
+      },
+      "center": [
+        0.7627430111169815,
+        -4.118735074996948,
+        0.08406150341033936
+      ],
+      "anchor": [
+        0.7742879986763,
+        -4.096010208129883,
+        0.07565999776124954
+      ],
+      "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+      "fmaId": "FMA22586",
+      "name": "Right medial superior genicular artery",
+      "sourceName": "right medial superior genicular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "thigh"
+      ],
+      "bundle": "genicular-arteries",
+      "nodeName": "FMA22586",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2166",
+          "sha256": "3898b8e1fe2a48c8e1e54a6e538e0a9d8665df30299c53942fb953b9838bca35"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.7418090105056763,
+          -4.17533016204834,
+          0.13216200470924377
+        ],
+        "max": [
+          -0.326557993888855,
+          -3.769670009613037,
+          0.6091700196266174
+        ]
+      },
+      "center": [
+        -0.5341835021972656,
+        -3.9725000858306885,
+        0.3706660121679306
+      ],
+      "anchor": [
+        -0.41990500688552856,
+        -4.0659098625183105,
+        0.4440920054912567
+      ],
+      "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+      "fmaId": "FMA22587",
+      "name": "Left medial superior genicular artery",
+      "sourceName": "left medial superior genicular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "thigh"
+      ],
+      "bundle": "genicular-arteries",
+      "nodeName": "FMA22587",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2083",
+          "sha256": "b07405510eda9a39934d9071638a2a809d2b59252449dfce636ec81f7b281641"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.32660600543022156,
+          -4.175169944763184,
+          0.13214999437332153
+        ],
+        "max": [
+          0.7417749762535095,
+          -3.7697300910949707,
+          0.6092900037765503
+        ]
+      },
+      "center": [
+        0.5341904908418655,
+        -3.972450017929077,
+        0.3707199990749359
+      ],
+      "anchor": [
+        0.41496899724006653,
+        -4.063799858093262,
+        0.43825700879096985
+      ],
+      "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+      "fmaId": "FMA22588",
+      "name": "Right lateral superior genicular artery",
+      "sourceName": "right lateral superior genicular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "thigh"
+      ],
+      "bundle": "genicular-arteries",
+      "nodeName": "FMA22588",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2162",
+          "sha256": "839d8b65347f04461e87767555736e2768cc5c8d8c5b366dd0badf957bae0d10"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -1.1190400123596191,
+          -4.10152006149292,
+          0.14014500379562378
+        ],
+        "max": [
+          -0.7072539925575256,
+          -3.6958799362182617,
+          0.5342299938201904
+        ]
+      },
+      "center": [
+        -0.9131470024585724,
+        -3.898699998855591,
+        0.3371874988079071
+      ],
+      "anchor": [
+        -0.9450079798698425,
+        -3.840250015258789,
+        0.221342995762825
+      ],
+      "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+      "fmaId": "FMA22589",
+      "name": "Left lateral superior genicular artery",
+      "sourceName": "left lateral superior genicular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "thigh"
+      ],
+      "bundle": "genicular-arteries",
+      "nodeName": "FMA22589",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2080",
+          "sha256": "ee4b74a8e7423554d279b5a5c8cd90c301f0252dcb6fc8651cad417a85320516"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.7072409987449646,
+          -4.10152006149292,
+          0.1401589959859848
+        ],
+        "max": [
+          1.1189500093460083,
+          -3.6958999633789062,
+          0.5342199802398682
+        ]
+      },
+      "center": [
+        0.9130955040454865,
+        -3.898710012435913,
+        0.3371894881129265
+      ],
+      "anchor": [
+        0.9400039911270142,
+        -3.8385798931121826,
+        0.22063900530338287
+      ],
+      "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+      "fmaId": "FMA43890",
+      "name": "Right inferior medial genicular artery",
+      "sourceName": "right inferior medial genicular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "thigh"
+      ],
+      "bundle": "genicular-arteries",
+      "nodeName": "FMA43890",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2152",
+          "sha256": "73b7e6d3d0a244e966419c8f8b7a6213efd41bb39866f0f88de25ff8752c37d4"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.8154940009117126,
+          -4.659130096435547,
+          0.0928260013461113
+        ],
+        "max": [
+          -0.44663500785827637,
+          -4.475709915161133,
+          0.5659599900245667
+        ]
+      },
+      "center": [
+        -0.6310645043849945,
+        -4.56742000579834,
+        0.329392995685339
+      ],
+      "anchor": [
+        -0.47438400983810425,
+        -4.64238977432251,
+        0.3543969988822937
+      ],
+      "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+      "fmaId": "FMA43891",
+      "name": "Left inferior medial genicular artery",
+      "sourceName": "left inferior medial genicular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "thigh"
+      ],
+      "bundle": "genicular-arteries",
+      "nodeName": "FMA43891",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2077",
+          "sha256": "9418a9af9c5a8b67f450f5c66a8e767822e334c049222e9c7bd69b20687ad0fc"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.4465489983558655,
+          -4.659200191497803,
+          0.09295099973678589
+        ],
+        "max": [
+          0.8154569864273071,
+          -4.475840091705322,
+          0.5659000277519226
+        ]
+      },
+      "center": [
+        0.6310029923915863,
+        -4.5675201416015625,
+        0.32942551374435425
+      ],
+      "anchor": [
+        0.47701600193977356,
+        -4.643080234527588,
+        0.366007000207901
+      ],
+      "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+      "fmaId": "FMA43892",
+      "name": "Right inferior lateral genicular artery",
+      "sourceName": "right inferior lateral genicular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "thigh"
+      ],
+      "bundle": "genicular-arteries",
+      "nodeName": "FMA43892",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2150",
+          "sha256": "7a2e9fc70cca1ac7fe5a94fb48a2e105710e7f89fc63f18d7f492dcba961401e"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -1.1597599983215332,
+          -4.5959601402282715,
+          0.03790700063109398
+        ],
+        "max": [
+          -0.7942619919776917,
+          -4.178800106048584,
+          0.515749990940094
+        ]
+      },
+      "center": [
+        -0.9770109951496124,
+        -4.387380123138428,
+        0.276828495785594
+      ],
+      "anchor": [
+        -1.092079997062683,
+        -4.33696985244751,
+        0.18830999732017517
+      ],
+      "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
+      "fmaId": "FMA43893",
+      "name": "Left inferior lateral genicular artery",
+      "sourceName": "left inferior lateral genicular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "thigh"
+      ],
+      "bundle": "genicular-arteries",
+      "nodeName": "FMA43893",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2076",
+          "sha256": "e7e540baf3289dcfb29bf857a9d93754b9eb6897c3192110f4e563f7b7cb2c59"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.7943289875984192,
+          -4.595779895782471,
+          0.037755999714136124
+        ],
+        "max": [
+          1.1598000526428223,
+          -4.178800106048584,
+          0.5154500007629395
+        ]
+      },
+      "center": [
+        0.9770645201206207,
+        -4.387290000915527,
+        0.2766030002385378
+      ],
+      "anchor": [
+        1.1015299558639526,
+        -4.329410076141357,
+        0.20728300511837006
+      ],
+      "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "thigh-skeleton",
+      "url": "/models/bodyparts3d/full-body/thigh-skeleton.glb",
+      "bytes": 115852,
+      "sha256": "27bd799bd85387beea9fab40cbe2f83a5e780983170db4dfd1d2e0eda8fd2b59",
+      "structures": 2
+    },
+    {
+      "id": "leg-skeleton",
+      "url": "/models/bodyparts3d/full-body/leg-skeleton.glb",
+      "bytes": 118776,
+      "sha256": "8885078bc114d8cf5c2ebd12f393761965b2016bf6f5fc196c83549527e2c0af",
+      "structures": 6
+    },
+    {
+      "id": "leg-muscles",
+      "url": "/models/bodyparts3d/full-body/leg-muscles.glb",
+      "bytes": 1304804,
+      "sha256": "c535a021142b325daebfd0a8bca2b0406f05fae820870d524dc0a6993d3eb72d",
+      "structures": 24
+    },
+    {
+      "id": "leg-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/leg-vessels-recovery.glb",
+      "bytes": 2900368,
+      "sha256": "e2751d62cf20f86ec14865a79bad26e70245443965702d98512541378851e466",
+      "structures": 10
+    },
+    {
+      "id": "genicular-arteries",
+      "url": "/models/bodyparts3d/genicular-arteries/genicular-arteries.glb?v=a62ea69e56014790059ecd85cf9281bebb93280220b5a5677954c85b01ef5e9a",
+      "bytes": 403484,
+      "sha256": "a62ea69e56014790059ecd85cf9281bebb93280220b5a5677954c85b01ef5e9a",
+      "structures": 10
+    }
+  ]
+}

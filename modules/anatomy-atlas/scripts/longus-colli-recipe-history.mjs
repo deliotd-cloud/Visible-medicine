@@ -2,9 +2,11 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import record from '../content/longus-colli-recipe-transition.json' with { type: 'json' };
+import { preGenicularStudyProfiles } from './genicular-study-history.mjs';
 const hash = (v) =>
   createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function preLongusColliRecipeProfiles(profiles) {
+  profiles = preGenicularStudyProfiles(profiles);
   assert.equal(
     hash(record),
     '254d6732d1ce420f541b63c5078b64530dd180915553b1e253dfbb14e17a5ae1',

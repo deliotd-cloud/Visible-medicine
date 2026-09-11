@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Knee & leg / Whole body → Study → “genicular”** now opens a [focused knee artery dissection](docs/GENICULAR_ARTERIES.md#focused-knee-study): 11 existing structures per side, a stable posterior close-up and reversible removal. No extra toolbar or new geometry. Source fragments and clinical-review limits stay explicit.
+
 **Knee & leg / Hip & thigh / Whole body → search “genicular” → Arterial connections** adds [ten original knee artery sources](docs/GENICULAR_ARTERIES.md), retaining 21,686 triangles and existing compact controls. The display now has **1,056 selections**. Middle genicular groups retain disconnected source pieces; no artificial junction, complete collateral network or clinical approval is claimed. Clinical/imaging topics need review. The source-review gate also recognises the previously documented calf-vein holds.
 
 **Forearm / Shoulder & arm / Whole body → search “median cubital” or “median antebrachial” → Venous drainage** adds [four original superficial veins](docs/CUBITAL_VEINS.md), 15,704 retained source triangles, same-side navigation and reversible isolation. That milestone reached **1,046 selections**; the current total is above; systemic navigation covers 51 veins and 57 typical relationships. Alternative terminations remain explicit. Anatomy/Function/self-check are drafts; clinical and imaging topics require review. No new permanent controls, generated connections or patient images.

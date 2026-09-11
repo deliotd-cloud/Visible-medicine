@@ -1,5 +1,7 @@
 # Spatial anatomy architecture
 
+The [genicular Study preset](GENICULAR_ARTERIES.md#focused-knee-study) uses the existing focus-only library and vascular source gate. Twenty-two exact records/five bundles bind one recipe in leg/whole-body; changed source rejects both parent transitions and links. A source-envelope ROI covers whole artery/popliteus groups without editing geometry, and falls back to ordinary framing for separation/inspection/context restoration. Exact offline recipe history preserves earlier snapshots; runtime review approvals are never migrated.
+
 [Genicular sources and current admission screening](GENICULAR_ARTERIES.md) append ten separately pinned records to the unchanged archival catalogue and arterial pins. `current-source-holds.mjs` composes tree-scoped supplemental holds from hash-pinned audit reports, blocks shared-file aliases/subsets and rejects incomplete export proposals. Historical `load-source-holds.mjs` is unchanged for reproducibility. New admissions must use the current gate as one prerequisite, not as geometry or clinical approval.
 
 ## Optional decoded-volume imaging

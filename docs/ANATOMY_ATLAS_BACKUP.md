@@ -1,6 +1,20 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — genicular arteries and source holds (current source)
+## 11 September 2026 — focused genicular knee study (current source)
+
+Source `4c30ff9f4a29249cdd716e616a55b98006d54a3a`, tree `b390c3e10eb65ca670bb4a5f68431af05a19544d`, parent `f5460a4548b7ba4761220c791ea6673b5c7ebb6f`. Twenty-six exact source paths mirrored. Full module audit: 1,771 matching files / 435,723,597 bytes / 121 retained GLBs; no common credential-signature warnings (not exhaustive). No public anatomy asset, dependency, lockfile, font, texture, database schema, authentication, paid-resource entitlement or patient scan changed.
+
+One focus-only Study entry in Knee & leg and Whole body groups 22 existing source selections (11 per side): five genicular groups, popliteal artery, popliteus and four whole bones. A stable posterior camera envelope contains the vascular/muscle surfaces; original source coordinates and triangles are unchanged. Hide/Undo/Redo and existing separation/inspection controls are reused. The close-up is disabled for transformed/inspected/context-restored views. Exact source records and five bundles guard actual focus transitions and incoming links. Each middle genicular group still contains two disconnected source pieces. No complete anastomosis, lumen, operative plane or clinical/scan-registration claim.
+
+Passed: six side/region scopes; 88 source-bound links and real source-vertex close-up label anchors; 172 rejected source variants; six actual parent transitions; 12 server-rendered menus; exact historical recipe preservation; vascular, longus-colli and knee regressions. Shared study links: 273,522 assertions / 13,367 links; library: 53,998 assertions / 24 markup cases; navigation: 117,705 assertions; dissection history: 100,884 checks / 2,040 transitions. Body review retains 9,504 topic snapshots. TypeScript, production build, source/recipe pin checks, requirement freshness and Git whitespace passed. Browser/GPU/mobile/clinical review remain outstanding.
+
+Renderer fingerprint `c225b5f8bbb6a2e8ad81889122e2bd8e34edc7e09c4ac034df27506c900ea52d` covers 349 inputs. Build preserves all 117 delivered GLBs/1,240 meshes with unchanged decoded geometry and 121,917,488 transport bytes. Source profile hash `90643b1e4dc8d14e46f333235363ec6f9003aebeecf2925398e4e4f8b8ca3983`; offline transition restores the exact prior profile hash without migrating approvals.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-genicular-study-2026-09-11`: `.site.tar.gz` 111,626,557 bytes / SHA256 `8840ea388d4d6dddfbbaa30d0ebc1e8ec045df2dbe60a9a1fda0cfc3af78bb1d`; `.delta.tar` 655,360 bytes / `075ba9495d41a5478f422113329f0490f70f320ed6f2a30ac1527931261bd4b4`; `.incremental.bundle` 24,249 bytes / `cf42786b6e2eab735fadc2fc8c443761be0609694fd034c1a625dc96a9fc6f42`. Runtime archive: 398 safe unique entries, exact hosting manifest and two original migrations. Independent bare restore `refs/verification/genicular-study-20260911` passes full fsck and exact SHA/tree; verifier main unchanged. Preserve all prior recovery bundles; this increment requires its parent.
+
+Source push was independently verified against Sites main. Private publication is in progress at this receipt; its terminal result and the verified GitHub remote are recorded in the work/D: checkpoint. This is source/runtime recovery, not a backup of production databases, personal reviews, accounts, scans or lecture content. The wider atlas goal remains active.
+
+## 11 September 2026 — genicular arteries and source holds (previous source)
 
 Source `f5460a4548b7ba4761220c791ea6673b5c7ebb6f`, tree `ac5bafc201a27bf0cda6067ec3d550e2bd639099`, parent `1a9dfc505ddf6c79bbe349cfd77083ae80e66462`. Fifty-seven exact source paths mirrored. Full module audit: 1,763 matching files / 435,654,416 bytes / 121 retained GLBs; no common credential-signature warnings (not exhaustive). Private repository and main website remain unchanged. This operation does not back up production databases, personal reviews, accounts, scans or paid lectures.
 

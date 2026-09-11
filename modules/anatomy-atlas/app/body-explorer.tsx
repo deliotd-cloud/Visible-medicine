@@ -131,6 +131,7 @@ import {
 import { relatedStudyViews } from '@/lib/study-navigation';
 import type { StudyCamera, StudyView } from '@/lib/study-views';
 import { kneeStudyBounds } from '@/lib/knee-studies';
+import { genicularStudyBounds } from '@/lib/genicular-study';
 import { elbowStudyBounds } from '@/lib/elbow-studies';
 import { limbVascularStudyReady } from '@/lib/limb-vascular-studies';
 import { longusColliStudyReady } from '@/lib/longus-colli';
@@ -467,7 +468,7 @@ export default function BodyExplorer({
         layout === 'spatial' &&
         inspection.plane === 'off',
     };
-    return kneeStudyBounds(input) ?? elbowStudyBounds({ ...input, catalog });
+    return kneeStudyBounds(input) ?? elbowStudyBounds({ ...input, catalog }) ?? genicularStudyBounds({ ...input, catalog });
   }, [
     catalog,
     initialRegion,

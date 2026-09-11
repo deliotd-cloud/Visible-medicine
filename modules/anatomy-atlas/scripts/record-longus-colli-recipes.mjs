@@ -1,13 +1,15 @@
 import assert from 'node:assert/strict';
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { dissectionProfiles } from '../app/dissection-data.ts';
+import { dissectionProfiles as currentProfiles } from '../app/dissection-data.ts';
+import { preGenicularStudyProfiles } from './genicular-study-history.mjs';
 import {
   longusColliStudySets,
   longusColliReferences,
 } from '../content/longus-colli-studies.ts';
 const hash = (v) =>
   createHash('sha256').update(JSON.stringify(v)).digest('hex');
+const dissectionProfiles = preGenicularStudyProfiles(currentProfiles);
 const previous = structuredClone(dissectionProfiles),
   patches = [];
 for (const region of ['head-neck', 'spine', 'whole-body']) {

@@ -58,7 +58,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "55588b659b586a494a15354a13ee3f1ddfea1c208adc279591df221d163c448e"
+      "sha256": "5676702b9482998caeb82b8984dc162993bd93cff9185634ed35d7e0e038f62a"
     },
     {
       "path": "app/body-scene.tsx",
@@ -94,7 +94,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "50fe34d99f0b96c677f9da77ac08e2db50dfd30bfe6e146c92c9da11e167492f"
+      "sha256": "11a31290db5338d967d6f19218ca6546c2207ba9719573a985e969847fdb48f6"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -351,6 +351,14 @@
     {
       "path": "content/eye-imaging-teaching.ts",
       "sha256": "f9a837eb80e98b6a922144c8354dd9c949638f39113450350c06db762d04b20f"
+    },
+    {
+      "path": "content/genicular-study-pins.json",
+      "sha256": "fb98f5cedf269b60b8f25e5acada14d44961196478858502f3f48d1cd498890d"
+    },
+    {
+      "path": "content/genicular-study.ts",
+      "sha256": "e3990bacdac2466a03bfec56e5fc8eecc0767b1f474d5b161e16cb84d5a1cfaa"
     },
     {
       "path": "content/hepatic-teaching.ts",
@@ -777,6 +785,10 @@
       "sha256": "2476e9f6b6224fb55b25abe3d48a7cb1ab83c7048e6072dc28b4ffac7b2a3494"
     },
     {
+      "path": "lib/genicular-study.ts",
+      "sha256": "b1654af910c5ac0581a48a76946d71398634bd2d513de778e4e9b92e7bf425cf"
+    },
+    {
       "path": "lib/hand-clinical-curriculum.ts",
       "sha256": "7d8acf3e844828f900dcf01beed033e23556cc6bd4f1e61cbb58e0d8795171e9"
     },
@@ -906,7 +918,7 @@
     },
     {
       "path": "lib/limb-vascular-studies.ts",
-      "sha256": "b3e92cce438b0576798e77af9ab2c8380ee851b566e4223a23fb1bf760557553"
+      "sha256": "35c491f8ee5c272cc8798fe995173cc7c9fa3086b10edc6158baa8ddb9ae1f13"
     },
     {
       "path": "lib/longus-colli.ts",
@@ -1397,5 +1409,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "7cbd9ba1d5568d52c77bf14baa923b4c58240cc50de9f10b9d88c61185964195"
+  "sha256": "c225b5f8bbb6a2e8ad81889122e2bd8e34edc7e09c4ac034df27506c900ea52d"
 }

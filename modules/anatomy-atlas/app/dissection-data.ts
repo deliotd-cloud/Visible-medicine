@@ -22,6 +22,7 @@ import {
   longusColliReferences,
 } from '../content/longus-colli-studies.ts';
 import { limbVascularStudySets, limbVascularReferences } from '../content/limb-vascular-studies.ts';
+import { genicularStudy, genicularStudyReferences } from '../content/genicular-study.ts';
 import {
   orbitalMotorStudySets,
   orbitalMotorReferences,
@@ -1226,6 +1227,17 @@ for (const region of ['leg', 'thigh'])
 
 for (const region of ['head-neck', 'spine', 'whole-body'])
   dissectionProfiles[region].references.push(...longusColliReferences);
+
+for (const region of genicularStudy.regions) {
+  dissectionProfiles[region].focuses.push({
+    id: genicularStudy.id, title: genicularStudy.title,
+    rule: { fmaIds: genicularStudy.targetFmaIds }, context: genicularStudy.context,
+    includeSkeleton: false, view: genicularStudy.view,
+    description: genicularStudy.description, inspect: genicularStudy.inspect,
+    landmarks: genicularStudy.landmarks,
+  });
+  dissectionProfiles[region].references.push(...genicularStudyReferences);
+}
 
 export function matchesRule(s: BodyStructure, rule: TissueRule): boolean {
   return (

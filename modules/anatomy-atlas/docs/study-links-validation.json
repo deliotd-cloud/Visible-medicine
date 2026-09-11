@@ -1,63 +1,63 @@
 {
   "passed": true,
-  "assertions": 266285,
-  "links": 13111,
-  "focusedLinks": 8112,
-  "destinationsTested": 6274,
+  "assertions": 273522,
+  "links": 13367,
+  "focusedLinks": 8284,
+  "destinationsTested": 6430,
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
-      "structures": 1042,
-      "testedLinks": 1716
+      "structures": 1056,
+      "testedLinks": 1766
     },
     {
       "region": "whole-body",
       "side": "left",
-      "structures": 602,
-      "testedLinks": 1004
+      "structures": 609,
+      "testedLinks": 1029
     },
     {
       "region": "whole-body",
       "side": "right",
-      "structures": 599,
-      "testedLinks": 989
+      "structures": 606,
+      "testedLinks": 1014
     },
     {
       "region": "shoulder-arm",
       "side": "both",
-      "structures": 93,
-      "testedLinks": 222
+      "structures": 97,
+      "testedLinks": 230
     },
     {
       "region": "shoulder-arm",
       "side": "left",
-      "structures": 47,
-      "testedLinks": 112
+      "structures": 49,
+      "testedLinks": 116
     },
     {
       "region": "shoulder-arm",
       "side": "right",
-      "structures": 47,
-      "testedLinks": 112
+      "structures": 49,
+      "testedLinks": 116
     },
     {
       "region": "forearm",
       "side": "both",
-      "structures": 68,
-      "testedLinks": 246
+      "structures": 72,
+      "testedLinks": 254
     },
     {
       "region": "forearm",
       "side": "left",
-      "structures": 34,
-      "testedLinks": 123
+      "structures": 36,
+      "testedLinks": 127
     },
     {
       "region": "forearm",
       "side": "right",
-      "structures": 34,
-      "testedLinks": 123
+      "structures": 36,
+      "testedLinks": 127
     },
     {
       "region": "hand",
@@ -80,38 +80,38 @@
     {
       "region": "thigh",
       "side": "both",
-      "structures": 83,
-      "testedLinks": 213
+      "structures": 93,
+      "testedLinks": 233
     },
     {
       "region": "thigh",
       "side": "left",
-      "structures": 42,
-      "testedLinks": 110
+      "structures": 47,
+      "testedLinks": 120
     },
     {
       "region": "thigh",
       "side": "right",
-      "structures": 42,
-      "testedLinks": 110
+      "structures": 47,
+      "testedLinks": 120
     },
     {
       "region": "leg",
       "side": "both",
-      "structures": 64,
-      "testedLinks": 224
+      "structures": 74,
+      "testedLinks": 266
     },
     {
       "region": "leg",
       "side": "left",
-      "structures": 32,
-      "testedLinks": 112
+      "structures": 37,
+      "testedLinks": 133
     },
     {
       "region": "leg",
       "side": "right",
-      "structures": 32,
-      "testedLinks": 112
+      "structures": 37,
+      "testedLinks": 133
     },
     {
       "region": "foot",
@@ -224,7 +224,7 @@
   ],
   "sourceGeometryChanged": false,
   "catalogueSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
-  "displaySelections": 1042,
+  "displaySelections": 1056,
   "actualInstalledRuntimeDuplicateParsingTested": true,
   "browserInteractionTesting": false,
   "clinicalValidation": false,
