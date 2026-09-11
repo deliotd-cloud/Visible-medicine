@@ -1,5 +1,17 @@
 # Anatomy atlas backup — 11 September 2026
 
+## 11 September 2026 — optional decoded-volume renderer (current source)
+
+Source `fb85025eb3df7f3bdd3313c29a49f8a4e7899a89`, tree `4a64f3ae3c88d4182dbbd50b0c062121a4125ab1`, parent `f8929bc09f406884e576f6f23fa472d38b992ab3`. Thirteen exact source paths mirrored, without changing the main website. Original anatomy, dependency lockfile, both database migrations, private review data and CT-head source materials are unchanged.
+
+Implemented original patient-LPS affine axial/coronal/sagittal reslicing, trilinear interpolation, LINEAR/LINEAR_EXACT windowing, Canvas pixels, orientation labels and collapsed window/level tools. The optional source-bound dual-bridge adapter handles asynchronous cancellation, late-result rejection, source mismatch, permanent connection revocation, immediate pixel clearing, renderer-error recovery and disposal. It is not installed by default; no live scan, DICOM decoder or spatial registration is supplied. Clinical/release/access decisions belong to the authorized host and radiologist. No image, anatomical asset, library, font, texture, paid service or recurring fee added.
+
+Two hundred synthetic checks passed, including actual Canvas calls and component server markup; existing 49,002 imaging assertions and comparison tests passed. TypeScript, requirement freshness, current renderer fingerprint, 3,126 isolated SQLite review tracks and production build passed. No browser/device, actual-volume or clinical acceptance claimed. Renderer fingerprint is `178c19b1120df6b04c34f62b20e1f44559e6d147d4b5518d001447f03037a5b0`; the package script change updates its conservative dependency fingerprint. No prior clinical approval carried forward. All 114 delivered GLBs retain decoded geometry.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-volume-viewer-2026-09-11`: .site.tar.gz 111,103,737 bytes / SHA-256 `c0f1f97280980af5f67a78c59fadcf4349aa602453bcc67314def934faa25a33`; .delta.tar 378,880 bytes / `f5acb951d198e10db8d7070539583c96701b939ea526590d52e8ac40dd9246fa`; .incremental.bundle 20,011 bytes / `f3c6cd1d829c767a09f40edaefaeae9293db19cbde130c1b76a16141839b00c9`. Runtime archive has 389 safe unique entries and both original migrations. Bare restore at refs/verification/volume-viewer-20260911 passed full fsck and exact SHA/tree checks; original main unchanged. Retain the full bundle and all increments: this increment requires the exact parent above.
+
+The Site archive is being saved at this receipt. The final work/D: checkpoint records terminal private deployment and verified GitHub refs. This is application-source/model recovery, not a backup of private review databases, accounts, scans or paid lectures. The full atlas goal remains active.
+
 ## 11 September 2026 — compact imaging comparison host (current source)
 
 Source `f8929bc09f406884e576f6f23fa472d38b992ab3`, tree `a03ccd80d7f8e91083fe6932ef3b9465cf505a61`, parent `f7a9743cb00da5aad6de71249eb108d2e1d5aaf3`. Nine source paths mirrored once; 1,691 matching files / 430,291,989 bytes / 118 retained GLBs. Private Sites source push and independent main ref match exactly. Main website outside the module/receipt remains unchanged.

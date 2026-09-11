@@ -83,6 +83,7 @@
     "study:test": "node scripts/validate-study-views.mjs",
     "imaging:test": "node scripts/validate-imaging-link.mjs",
     "imaging-comparison:test": "node scripts/validate-imaging-comparison.mjs",
+    "volume-viewer:test": "node scripts/validate-volume-viewer.mjs",
     "inventory:audit": "node scripts/audit-anatomy-inventory.mjs",
     "inventory:test": "node scripts/validate-inventory.mjs",
     "source-holds:audit": "node scripts/audit-source-holds.mjs",

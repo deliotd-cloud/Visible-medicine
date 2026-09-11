@@ -1,6 +1,6 @@
 # Compact imaging comparison host
 
-Status: implemented integration foundation, September 2026. No patient image, CT/MRI volume loader, segmentation, MPR reconstruction, clinical registration or production adapter is included. The disconnected atlas retains its existing controls and anatomy. This implements the first comparison-shell step from [the reference-clip direction](VIEWER_CT_REFERENCE_DIRECTION.md), not the completed imaging product.
+Status: implemented integration foundation, September 2026. An optional [decoded-volume reslicer and Canvas renderer](VOLUME_VIEWER.md) is now available to host integrations. No patient image, CT/MRI loader, segmentation, clinical registration or connected production adapter is included. The disconnected atlas retains its existing controls and anatomy. This advances [the reference-clip direction](VIEWER_CT_REFERENCE_DIRECTION.md), not the completed imaging product.
 
 ## User flow
 
