@@ -27,6 +27,10 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Lower-limb muscles by nerve](LOWER_LIMB_MOTOR.md) links ${anatomy.lowerLimbMotor.muscleSelections} existing root-body selections through ${anatomy.lowerLimbMotor.relationships} typical relationships in ${anatomy.lowerLimbMotor.groups} groups. Pelvis/hip, thigh, leg and foot reuse the same collapsed control as the upper limb. Source/frame checks and dissection history are retained; no nerve path or patient correspondence is invented. The independent lower-limb specimen remains separate.
+
+[Private body reviews](BODY_REVIEW_DECISIONS.md) now record scoped decisions for root-body selections in a separate append-only store from the shoulder pilot. These records are not inspected by this inventory or propagated as clinical approval. Imaging approval remains unavailable without validated acquired resources.
+
 [Upper-limb muscles by nerve](UPPER_LIMB_MOTOR.md) links ${anatomy.upperLimbMotor.muscleSelections} exact existing muscle selections through ${anatomy.upperLimbMotor.relationships} typical relationships across ${anatomy.upperLimbMotor.groups} nerve/branch groups. In Shoulder & arm, Forearm or Hand, choose Dissect → Muscles by nerve to show the group's available muscles with bone context. The control stays collapsed; left/right filters, selection and existing dissection history remain usable. Mixed supply and grouped surfaces are qualified. No nerve route, sensory field, lesion simulation, scan registration or clinical approval is added.
 
 [Spinal imaging orientation](SPINE_IMAGING_TEACHING.md) adds 141 CT/MRI/X-ray topic drafts across 47 exact existing bone/disc source records: nine concept groups and 27 distinct modality topics, not 141 unique concepts. The existing compact Imaging panel and six focused level studies are retained. Other body teaching and geometry are unchanged; whole discs, unresolved T12–L1 geometry and absent neural tissues remain explicit. No patient scans, registration, paid-resource access or clinical approval are supplied.

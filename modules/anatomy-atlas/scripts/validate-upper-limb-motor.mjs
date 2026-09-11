@@ -336,7 +336,7 @@ for (const exam of [false, true]) {
     initialRegion: 'hand',
     side: 'right',
     exam,
-    upperLimbMotorPlan: plan,
+    limbMotorPlan: plan,
     initialInspection: { enabled: false },
     cameraRestore: { current: 'old' },
     dispatch: record('dispatch'),

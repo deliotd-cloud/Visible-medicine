@@ -9,10 +9,15 @@
     "public/models/bodyparts3d/pancreas/display-correction.json": "a7add6d985798dedd1dd78c3879b2fc91f8a6cacc126d2a526f7ba8c4b03fc1a",
     "lib/body-display-catalog.ts": "8a17c0b15b438bff1b3e2f9179420d43e6e5d51e62fc67bafba9be3a1a59f69e",
     "lib/xray-teaching.ts": "7a38c62a92467401cf5192adef611efdf21ad9ceb213371a984ee44fd425a6d1",
-    "lib/upper-limb-motor.ts": "ea0b3d99cc38e710becc39dc72318dfa02b9d63c4cbc7180b55d21ac78d30dca",
+    "lib/upper-limb-motor.ts": "7809b6454d0814836ccab7305215a5c08e1dc7758f54707a7a82f3920ef3e2b9",
+    "lib/regional-motor.ts": "82fa38c847c564ce12f6de1de718167408fa4757ca750e3a8221ec630fc25d0e",
+    "lib/limb-motor.ts": "853ccb6495673a5e33b1bac74bffc28ee5285f06903dd60f53d74fc507880426",
+    "lib/lower-limb-motor.ts": "e769da189fa98ef8997b2fd275638f9996517a7ed2dd5a1818a5283bb5653c56",
+    "content/lower-limb-motor.ts": "b94da1bcd39a91f513565135cb8a4e70c64998fff05aaba8df8a83d7f156f36b",
+    "content/lower-limb-motor-pins.json": "d397cac59e5a0428e803278a16f9acafa0836f9e1aaa1d2fe7f6e14cbf289928",
     "content/upper-limb-motor.ts": "05b57ea3be22d5a02db6e89b3db90625377b2bfb125bd70bb19058ccb8c551d7",
     "content/upper-limb-motor-pins.json": "d4d9c991e74899d9a10ef16aee9086fdfbe4da40c70dedf1be7db4f0bd09e3c5",
-    "app/upper-limb-motor.tsx": "cd58c85d5cc89dba174256d39c3aabe2fc26e2e6279082789638597778c5832b",
+    "app/upper-limb-motor.tsx": "a6bc0bb6b529f13266fdadd2762eb96e4217b803624afede302bd1b85a043701",
     "app/upper-limb-motor.css": "e4e643409be394c71b3bb3958799e90399ee1229611d4196439ee818d00ab6ca",
     "lib/spine-imaging.ts": "356b143c89bbf974c1b588463808354cac4a317de3eaf4458f7e70209ba66394",
     "content/spine-imaging-concepts.ts": "98d598a175bb38ce1a038662dffb768869aa5f198b01b4069735d0687bf8623a",
@@ -130,6 +135,20 @@
     "nestedTeachingData": "b74ddd2f8575fe1bef1d07424db49de126bc94700166eec88f5dc0c2e79e1770"
   },
   "anatomy": {
+    "lowerLimbMotor": {
+      "regions": [
+        "pelvis",
+        "thigh",
+        "leg",
+        "foot"
+      ],
+      "groups": 15,
+      "muscleSelections": 118,
+      "relationships": 120,
+      "sourceAndFrameChecked": true,
+      "nerveGeometryAdded": false,
+      "clinicalApproval": false
+    },
     "upperLimbMotor": {
       "regions": [
         "shoulder-arm",
@@ -1327,7 +1346,7 @@
   "review": {
     "revisionIdentities": 9,
     "hasPrivateReviews": false,
-    "status": "Revision fingerprints are not approvals; persisted review UI currently targets the shoulder pilot only."
+    "status": "Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot and 1,022 root-body selections. This inventory never reads personal review records; nested/independent scopes and acquired imaging remain outside those approvals."
   },
   "boundaries": {
     "scope": "Current source implementation, not operations performed by this inventory script",

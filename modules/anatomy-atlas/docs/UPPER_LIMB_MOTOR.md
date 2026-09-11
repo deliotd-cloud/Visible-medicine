@@ -1,5 +1,7 @@
 # Upper-limb muscles by nerve
 
+The shared control now also offers separately pinned [lower-limb groups](LOWER_LIMB_MOTOR.md). Upper-limb source definitions and membership below are unchanged; one shared source/visibility engine serves both region sets, and the full upper-limb regression suite remains applicable.
+
 In **Shoulder & arm, Forearm or Hand**, choose **Dissect → Muscles by nerve**. Select a nerve/branch, then **Show muscles & bones**. The existing viewer shows available source muscles with regional bony context. Select a muscle from the model or list for the existing anatomical and clinical notes. No second viewer or permanent list is added; the new control starts collapsed in the narrow rail and is absent in exam mode.
 
 ## Scope

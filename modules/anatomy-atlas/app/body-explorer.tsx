@@ -115,7 +115,7 @@ import { StudyViews } from './study-views';
 import { StructureNavigator } from './structure-navigator';
 import { RelatedStudy } from './related-study';
 import { UpperLimbMotorExplorer } from './upper-limb-motor';
-import { upperLimbMotorPlan } from '@/lib/upper-limb-motor';
+import { limbMotorPlan } from '@/lib/limb-motor';
 import { StudyLinks } from './study-links';
 import {
   noStudyLink,
@@ -674,7 +674,7 @@ export default function BodyExplorer({
   }
   function exploreMotorGroup(key: string) {
     if (!catalog) return;
-    const plan = upperLimbMotorPlan(catalog, initialRegion, side, key, exam);
+    const plan = limbMotorPlan(catalog, initialRegion, side, key, exam);
     if (!plan) return;
     dispatch(plan.action);
     setSystems(prev => ({ ...prev, skeleton: true, muscles: true }));

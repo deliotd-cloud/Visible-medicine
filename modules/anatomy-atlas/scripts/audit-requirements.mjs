@@ -18,6 +18,8 @@ export { specimenTeachingFor } from './lib/um-limb-teaching.ts';
 export { specimenMotorGroups } from './lib/um-limb-motor.ts';
 export { upperLimbMotorGroups } from './lib/upper-limb-motor.ts';
 export { upperLimbMotorRegions } from './content/upper-limb-motor.ts';
+export { lowerLimbMotorGroups } from './lib/lower-limb-motor.ts';
+export { lowerLimbMotorRegions } from './content/lower-limb-motor.ts';
 export { makeSpecimenLink, resolveSpecimenLink } from './lib/um-limb-navigation.ts';
 export { parseSpecimenLink, specimenTopics } from './lib/specimen-links.ts';
 export { bodyContent, bodyLesson } from './app/body-content.ts';
@@ -56,6 +58,8 @@ const {
   specimenMotorGroups,
   upperLimbMotorGroups,
   upperLimbMotorRegions,
+  lowerLimbMotorGroups,
+  lowerLimbMotorRegions,
   makeSpecimenLink,
   resolveSpecimenLink,
   parseSpecimenLink,
@@ -245,6 +249,11 @@ for (const path of [
   'lib/body-display-catalog.ts',
   'lib/xray-teaching.ts',
   'lib/upper-limb-motor.ts',
+  'lib/regional-motor.ts',
+  'lib/limb-motor.ts',
+  'lib/lower-limb-motor.ts',
+  'content/lower-limb-motor.ts',
+  'content/lower-limb-motor-pins.json',
   'content/upper-limb-motor.ts',
   'content/upper-limb-motor-pins.json',
   'app/upper-limb-motor.tsx',
@@ -430,6 +439,13 @@ const report = {
     'Offline source and displayed-copy inventory; no clinical or browser certification.',
   sourceHashes,
   anatomy: {
+    lowerLimbMotor: {
+      regions: lowerLimbMotorRegions,
+      groups: new Set(lowerLimbMotorRegions.flatMap(r => lowerLimbMotorGroups(catalog, r).map(g => g.key))).size,
+      muscleSelections: new Set(lowerLimbMotorRegions.flatMap(r => lowerLimbMotorGroups(catalog, r).flatMap(g => g.targets.map(t => t.structure.id)))).size,
+      relationships: new Set(lowerLimbMotorRegions.flatMap(r => lowerLimbMotorGroups(catalog, r).flatMap(g => g.targets.map(t => g.key + '|' + t.structure.id)))).size,
+      sourceAndFrameChecked: true, nerveGeometryAdded: false, clinicalApproval: false,
+    },
     upperLimbMotor: {
       regions: upperLimbMotorRegions,
       groups: new Set(upperLimbMotorRegions.flatMap(r => upperLimbMotorGroups(catalog, r).map(g => g.key))).size,
@@ -685,7 +701,7 @@ const report = {
     revisionIdentities: Object.keys(revisions.revisions).length,
     hasPrivateReviews: false,
     status:
-      'Revision fingerprints are not approvals; persisted review UI currently targets the shoulder pilot only.',
+      'Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot and 1,022 root-body selections. This inventory never reads personal review records; nested/independent scopes and acquired imaging remain outside those approvals.',
   },
   boundaries: {
     scope: 'Current source implementation, not operations performed by this inventory script',

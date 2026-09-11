@@ -54,7 +54,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "86746c9d27c59914b61516e3cdb03a8bd342a61664f2d73f11de771290a1b0dc"
+      "sha256": "39c90985333f1bd2fdb9421c988cf63b36390b1caaf96c31aa773bdfb5ec9d6a"
     },
     {
       "path": "app/body-scene.tsx",
@@ -246,7 +246,7 @@
     },
     {
       "path": "app/upper-limb-motor.tsx",
-      "sha256": "cd58c85d5cc89dba174256d39c3aabe2fc26e2e6279082789638597778c5832b"
+      "sha256": "a6bc0bb6b529f13266fdadd2762eb96e4217b803624afede302bd1b85a043701"
     },
     {
       "path": "app/ventricles.tsx",
@@ -319,6 +319,14 @@
     {
       "path": "content/hepatic-teaching.ts",
       "sha256": "793d49e8e33bc4daed5889b9bc58403a11280d39dd1d6894d0f5ff7c8fc0372d"
+    },
+    {
+      "path": "content/lower-limb-motor-pins.json",
+      "sha256": "d397cac59e5a0428e803278a16f9acafa0836f9e1aaa1d2fe7f6e14cbf289928"
+    },
+    {
+      "path": "content/lower-limb-motor.ts",
+      "sha256": "b94da1bcd39a91f513565135cb8a4e70c64998fff05aaba8df8a83d7f156f36b"
     },
     {
       "path": "content/nested-teaching-bindings.v1.json",
@@ -745,6 +753,14 @@
       "sha256": "22d62232cf0c95dfcf5835d39d79c1c81275876f9f3dba605c65335d00c3220a"
     },
     {
+      "path": "lib/limb-motor.ts",
+      "sha256": "853ccb6495673a5e33b1bac74bffc28ee5285f06903dd60f53d74fc507880426"
+    },
+    {
+      "path": "lib/lower-limb-motor.ts",
+      "sha256": "e769da189fa98ef8997b2fd275638f9996517a7ed2dd5a1818a5283bb5653c56"
+    },
+    {
       "path": "lib/lower-limb-vessel-clinical-curriculum.ts",
       "sha256": "eb79201901dfbe170f0336888ac864308507b6c8f47d1cdf1a0fcddd7e7d295b"
     },
@@ -847,6 +863,10 @@
     {
       "path": "lib/regional-connective-clinical-curriculum.ts",
       "sha256": "d741394acb5ba6a97b7da80688be07b4a35fa48bd07153385a7c67755d34fb61"
+    },
+    {
+      "path": "lib/regional-motor.ts",
+      "sha256": "82fa38c847c564ce12f6de1de718167408fa4757ca750e3a8221ec630fc25d0e"
     },
     {
       "path": "lib/regional-vessel-curriculum.ts",
@@ -1014,7 +1034,7 @@
     },
     {
       "path": "lib/upper-limb-motor.ts",
-      "sha256": "ea0b3d99cc38e710becc39dc72318dfa02b9d63c4cbc7180b55d21ac78d30dca"
+      "sha256": "7809b6454d0814836ccab7305215a5c08e1dc7758f54707a7a82f3920ef3e2b9"
     },
     {
       "path": "lib/upper-limb-vessel-curriculum.ts",
@@ -1050,7 +1070,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "88d2395f2d82399d84302e32a091191d49a0f2822e89a596d8e2ddd016060823"
+      "sha256": "6b804efaaac54f63e3752636d7caf264b96c6dfc23e3c51eaad82413e40dd819"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1145,5 +1165,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "305344859fa430f24be1935795ee6df222fda6e7c9592e52e8f2753d538771fc"
+  "sha256": "1df9b75ecf7490a14ec9a9cad8347aeab53d34aef1773722b2c16d6344fab2b6"
 }

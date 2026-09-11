@@ -8,7 +8,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { upperLimbMotorGroups } from '@/lib/upper-limb-motor';
+import { limbMotorGroups } from '@/lib/limb-motor';
 import type { BodyCatalog } from './body-types';
 
 export function UpperLimbMotorExplorer({
@@ -29,7 +29,7 @@ export function UpperLimbMotorExplorer({
   onExplore: (key: string) => void;
 }) {
   const groups = useMemo(
-    () => upperLimbMotorGroups(catalog, region, side),
+    () => limbMotorGroups(catalog, region, side),
     [catalog, region, side],
   );
   const [choice, setChoice] = useState('');
@@ -39,13 +39,19 @@ export function UpperLimbMotorExplorer({
     <details className="body-study-tools body-motor-explorer">
       <summary>Muscles by nerve</summary>
       <p>Typical motor supply · nerves are not modelled.</p>
+      {region === 'pelvis' && (
+        <p>
+          Pelvic-floor and compound perineal records are outside this limb-motor
+          scope.
+        </p>
+      )}
       <Select
         value={group?.key ?? ''}
         onValueChange={(v) => {
           if (groups.some((g) => g.key === v)) setChoice(v!);
         }}
       >
-        <SelectTrigger aria-label="Upper-limb motor nerve group">
+        <SelectTrigger aria-label="Motor nerve group">
           <SelectValue placeholder="Choose a nerve…" />
         </SelectTrigger>
         <SelectContent>
@@ -74,7 +80,7 @@ export function UpperLimbMotorDetails({
   onSelect,
   onExplore,
 }: {
-  group: ReturnType<typeof upperLimbMotorGroups>[number];
+  group: ReturnType<typeof limbMotorGroups>[number];
   selectedId: string | null;
   onSelect: (id: string) => void;
   onExplore: (key: string) => void;

@@ -1,6 +1,18 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — private whole-body review decisions (current source)
+## 11 September 2026 — root lower-limb motor studies (current source)
+
+Source `fa1ce62ee804e439ca55e987b79a16ce64a41cac`, tree `f92cb90b31b1a6c0ac75817e01850f6c23bee5f7`, parent `bc3866d3ec33aeb16d02335b9d1b5076ba9182b9`. Twenty-three source paths mirrored once: 1,519 matching files / 414,026,858 bytes / 112 retained GLBs; no common credential-signature warnings (not an exhaustive audit). Main website remains separate. Sites source push succeeded and full HEAD was verified; temporary credential cleared. GitHub delivery, conversation recovery and private D1 backup are **not** established by this local snapshot.
+
+The existing collapsed Muscles by nerve control now supports pelvis/hip, thigh, leg and foot: 15 groups / 120 typical motor relationships / 118 unchanged source muscle selections. Three pelvic-floor/perineal source records are outside this limb-motor scope. All 186 regional muscle/bone context records and source frames are pinned. Mixed supply and variable components are explicitly qualified; no nerve route or territory is fabricated. Both limbs reuse one source/visibility engine with independent authored bindings; the separate lower-limb specimen is unchanged. Side switching, current muscle selection and atomic dissection Undo/Redo remain functional. No new viewer, dependency, font, texture, model, licence or paid resource is introduced.
+
+Passed lower-limb official source identity, 69 region/side plans, 225 source rejection cases, 81 React renders and eight real parent-handler cases; existing upper-limb 1,232 checks / 54 plans / 63 renders; independent 42-muscle motor suite; 93,090 dissection-history checks; all 1,022 worksheets / 9,198 unchanged topics; 1,022 body-decision contexts / 3,066 tracks; 235 shoulder-review checks; TypeScript; requirements freshness; diff checks and production build. All 108 delivered model files / 1,204 meshes / 3,612 buffer views preserve source bytes/decoded scenes. Browser/device and clinical acceptance remain unproven.
+
+Recovery stem `work/atlas-lower-limb-motor-2026-09-11`: runtime archive 109,272,054 bytes, SHA256 `e9ead2f2cabdd2ff518123a28d640a52e501c2bf1b51bbbe0605faf8fc24cb71`; delta 798,720 bytes, SHA256 `f564ce1a8287cba687ad709e72bac03f006e46349334e64e933d9ffa07f55ca7`; incremental Git bundle 60,753 bytes, SHA256 `01808dec98aea3952d363e497908a1b8cd3f403a32bb8d32373f9bf1c4e31510`. Bundle requires source parent `bc3866d3ec33aeb16d02335b9d1b5076ba9182b9`; not standalone or independently restored off-device.
+
+Native saved version **147**, exact ID `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_02a22621950081919e3d787d66a2ddb7`. Private deployment `appgdep_6aa38e2f32408191817a3c40cf27e22a`; terminal outcome belongs in `work/ATLAS_LOWER_LIMB_MOTOR_2026-09-11.md`. Do not duplicate save/deployment. Source geometry/content and D1 migrations are unchanged; root renderer revisions invalidate old geometry reviews appropriately. Continue substantive regional anatomy/imaging teaching or cleared missing tissue work; introductory limb grouping and routine oral work should not be repeated.
+
+## 11 September 2026 — private whole-body review decisions (previous checkpoint)
 
 Source `bc3866d3ec33aeb16d02335b9d1b5076ba9182b9`, tree `80e19ab887b9c2fd25e7eda490deddfc19350f57`, parent `0ef5c7d4c44672eb5f692c2a27e3810319e25be0`. Twenty-five paths mirrored by the one-shot helper, with 1,511 matching files / 413,725,937 bytes / 112 retained GLBs. Main website unchanged; no common credential-signature warnings (not an exhaustive secret audit). Sites source push succeeded, full HEAD verified and transient credential cleared. **Not confirmed GitHub delivery, conversation backup or private D1 backup.**
 
