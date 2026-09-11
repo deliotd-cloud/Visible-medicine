@@ -84,6 +84,7 @@ for (const bundle of [
   'inferior-thyroid-arteries',
   'deep-leg-veins',
   'brachial-veins',
+  'deferent-ducts',
 ]) {
   const catalog = JSON.parse(
     await readFile(`public/models/bodyparts3d/${bundle}/catalog.json`),

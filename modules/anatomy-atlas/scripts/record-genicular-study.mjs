@@ -1,7 +1,9 @@
 import assert from 'node:assert/strict';
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { dissectionProfiles } from '../app/dissection-data.ts';
+import { dissectionProfiles as currentProfiles } from '../app/dissection-data.ts';
+import { preDeferentDuctProfiles } from './deferent-duct-study-history.mjs';
+const dissectionProfiles = preDeferentDuctProfiles(currentProfiles);
 import { genicularStudy, genicularStudyReferences } from '../content/genicular-study.ts';
 const hash = (v) => createHash('sha256').update(JSON.stringify(v)).digest('hex');
 const previous = structuredClone(dissectionProfiles), patches = [];

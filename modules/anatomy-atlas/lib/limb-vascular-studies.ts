@@ -3,6 +3,7 @@ import { limbVascularStudySets } from '../content/limb-vascular-studies.ts';
 import { sourceCanonical } from './body-source-additions.ts';
 import type { BodyCatalog } from '../app/body-types';
 import { genicularStudyReady } from './genicular-study.ts';
+import { deferentDuctStudyReady } from './deferent-ducts.ts';
 
 /** Guard only this family; existing study families retain their own admissions. */
 export function limbVascularStudyReady(
@@ -11,6 +12,7 @@ export function limbVascularStudyReady(
   recipeId: string | null,
 ) {
   if (!genicularStudyReady(catalog, region, recipeId)) return false;
+  if (!deferentDuctStudyReady(catalog, region, recipeId)) return false;
   const study = limbVascularStudySets.find((s) => s.id === recipeId);
   if (!study) return true;
   if (

@@ -42,30 +42,30 @@
         "sha256": "2ed4267b0ceae5448673eaf0743ed79a995fc7f879dac26c81e24109c7b201ec"
       }
     ],
-    "currentRootSha256": "680b11c1d2b6dd1ca487d424fafc625e483783f6f8874ee55799e7f10f5fdc6a",
+    "currentRootSha256": "e8c3cd0235bd5fca121cb8db58fba2b025839d8c99bb8a7776073016b61c10a0",
     "reachableNestedSha256": "3a105ee0e4963dd1ca46d3af1747b2975de9a8b27db7c198123f69c5e2a13fcb",
     "shoulderManifestSha256": "619e3ab84712487bd032b84a8f8b52f94d10883d8db7798057049bab287de857",
     "sourceIdSetSha256": "8e2057667c31e8fc99b87eb4c020467eadb9698ca09a87fc85cd76350254e655"
   },
   "summary": {
     "referenceSourceFiles": 2234,
-    "rootSelections": 1058,
-    "rootSourceFileIds": 1718,
+    "rootSelections": 1060,
+    "rootSourceFileIds": 1720,
     "reachableNestedSelections": 71,
-    "rootOnlyDifferences": 516,
+    "rootOnlyDifferences": 514,
     "rootBindingsNeedingEquivalenceReview": 0,
     "allSourceStatuses": {
       "excluded-by-display-correction": 1,
       "known-source-hold": 50,
-      "needs-source-and-anatomical-review": 440,
+      "needs-source-and-anatomical-review": 438,
       "nested-source-covered": 24,
       "related-cross-tree-hold": 1,
-      "root-source-covered": 1718
+      "root-source-covered": 1720
     },
     "rootDifferenceStatuses": {
       "excluded-by-display-correction": 1,
       "known-source-hold": 50,
-      "needs-source-and-anatomical-review": 440,
+      "needs-source-and-anatomical-review": 438,
       "nested-source-covered": 24,
       "related-cross-tree-hold": 1
     },
@@ -77,7 +77,7 @@
       "integumentary": 5,
       "muscular": 23,
       "nervous": 31,
-      "reproductive": 5,
+      "reproductive": 3,
       "respiratory": 2,
       "sensory": 8,
       "skeletal": 3,
@@ -91,7 +91,7 @@
       "integumentary": 5,
       "muscular": 4,
       "nervous": 15,
-      "reproductive": 5,
+      "reproductive": 3,
       "sensory": 8,
       "skeletal": 2,
       "venous": 129
@@ -9532,50 +9532,6 @@
       "source": {
         "bytes": 96112,
         "crc32": 844686213,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ3135",
-      "referenceDisplaySystem": "reproductive",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA19236",
-          "name": "left deferent duct",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 83086,
-        "crc32": 689372720,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ3140",
-      "referenceDisplaySystem": "reproductive",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA19235",
-          "name": "right deferent duct",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 74666,
-        "crc32": 1888409934,
         "sha256": null,
         "geometrySha256": null
       }

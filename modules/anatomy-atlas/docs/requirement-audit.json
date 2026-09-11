@@ -7,7 +7,7 @@
     "public/models/bodyparts3d/eye-layers/catalog.json": "3ae1d1b11eced1383b6de87df09fc8cbe9d24291b2144ae82b0a057d4e96daea",
     "public/models/bodyparts3d/eye-layers/display-correction.json": "61e09e972a1d301e56ebae9f1af90ffe9136309eda0242df1a03f84c6ad85dd2",
     "public/models/bodyparts3d/pancreas/display-correction.json": "a7add6d985798dedd1dd78c3879b2fc91f8a6cacc126d2a526f7ba8c4b03fc1a",
-    "lib/body-display-catalog.ts": "804f740efaef394b3d741335a9c989807ba78d02d09bd0847367868eee054869",
+    "lib/body-display-catalog.ts": "cd78422a329502375d39a8b979c9421f65be141f09c1ded85498de8c295c7e01",
     "lib/brachial-veins.ts": "d675f79d288ce1eb799e4c58a7d14fe5894257274ef302ce96e3a2990bda5b2c",
     "lib/tentorium.ts": "974332c66ba542c04d602721c3bfe810723ecfdb0e2f8796d33b7c545f55eeab",
     "lib/deep-leg-veins.ts": "2faa7dd187bc9bd00b48b4de00acea4ebdbd12d8f07a827ff3a63f8a214ed2a2",
@@ -24,7 +24,7 @@
     "lib/venous-drainage.ts": "461295771de1b34288fb3db0b87833d1398b60f81eb88b4a410b18bed608524c",
     "public/models/bodyparts3d/portal-veins/catalog.json": "2ce331f3cecbd67a2fe75f873c79d0c187b67fc4131b34cab8a44833c4a37ae8",
     "docs/portal-vein-source-audit.json": "506b3aca1b61897dcb4f625c189e243a423957c0438f08baa42ae53a742ef5aa",
-    "lib/limb-vascular-studies.ts": "35c491f8ee5c272cc8798fe995173cc7c9fa3086b10edc6158baa8ddb9ae1f13",
+    "lib/limb-vascular-studies.ts": "3881a406812f89ac6d933f036b3c3ef5d6f0daa6e057bcb1c0cea4b2a4c3114a",
     "content/limb-vascular-studies.ts": "825f08810f16ae4d409e89a6579f78f739843d192cdb2f9946314c1c30227908",
     "content/limb-vascular-study-pins.json": "2d0508aa622e396af8aa7412403c0ccf58bccc06ea4d5d1f9c6c9310d96c4876",
     "public/models/bodyparts3d/deep-leg-veins/catalog.json": "bc3c1c7418d8fe31ef94b6fb8b74d20fe54d8e0f2e67aef4df3c1182b68d137a",
@@ -95,6 +95,11 @@
     "docs/muscle-part-condition-audit.json": "f106c56d1eefa2b3589a87c27ed6ccab67de0d07217fa0624afce9958758e7b3",
     "content/inferior-thyroid-context-pins.json": "1928f2ecce49146511325abe3fe6331291dcbbbb0ca6308f99e95be2353f07f8",
     "lib/inferior-thyroid-arteries.ts": "cd1a636fef9058321d3256fc6d2e444d3de6d79ab34069bda8706076df0349a0",
+    "public/models/bodyparts3d/deferent-ducts/catalog.json": "7af85fbe970f87143697c069bbdfefaa3759374a031e0e6d36d65fcfe6761af1",
+    "docs/deferent-duct-source-audit.json": "adc8884597b4c29e68727fe19c57035d091b30919582cd1ab9bec8178434d40d",
+    "lib/deferent-ducts.ts": "23531f8eb7664f8d758998b0c0af47670c420168022af048306d03558f5c43e6",
+    "content/deferent-duct-study.ts": "175762062c00f6d92dbf5505cd50b4ab1b483f12e7d69161c0b53735dad66120",
+    "content/deferent-duct-study-transition.json": "68846773e80ccbc1595e91ff7f9e8cf9804ab99a6a886cfd65b7ac1334b0fb20",
     "content/genicular-study.ts": "e3990bacdac2466a03bfec56e5fc8eecc0767b1f474d5b161e16cb84d5a1cfaa",
     "content/genicular-study-pins.json": "fb98f5cedf269b60b8f25e5acada14d44961196478858502f3f48d1cd498890d",
     "lib/genicular-study.ts": "b1654af910c5ac0581a48a76946d71398634bd2d513de778e4e9b92e7bf425cf",
@@ -147,7 +152,7 @@
     "app/nested-teaching.css": "d912bfc774cc744511a4c0e87a0a35f6b693def9f4bddc25b6f010f07dfa83bc",
     "package-lock.json": "e55a3718d0786a13a27301297f39bf8f54ae0de2cb4bf5f6e7c65ff399ec5f22",
     "content/schema/anatomy-structure.schema.json": "6dbbd12aa859d306743bfe5efd2f5a91650c58f7f3e88216503ea491baa67031",
-    "content/review-revisions.json": "eed891c943c781fc0e7415fe47fefc14cfc9eecc12eaf19864e23d51dafe85f7",
+    "content/review-revisions.json": "5365d114752b157338dc9ebcf9e58dabe56be2d4d35296e717845bce939dfd05",
     "content/learning-resources.v1.json": "799fec602114a944b4f675d341b445982dac56786cca9b5800d52db7d95899e5",
     "lib/learning-resource-types.ts": "281e717d00034f3ac0b887b99d920ce77fa7a38c22ac75b4b6fa96ee6a2d9174",
     "lib/learning-resources.ts": "10648608aa9c98f16094127d6c3afa5326083f462d374a8e7b84f57cc8bebb17",
@@ -161,7 +166,7 @@
     "app/body-scene.tsx": "c0ac40edbdb03d3f379063d5f0f4dd45cdc4ceab15fb91fb66cbd98712707628",
     "app/body-batch.tsx": "05b63136f4d8af290da9d4c190256bd1e17b6339842070b04c26b63238e0ae72",
     "lib/body-batching.ts": "ed560af2055a9c77535f40145c7788267f1558af0209e98a11cfbb37b923165a",
-    "docs/body-batching-baseline.json": "ed78c94f7861cdaab7a2ef6551174e51dfc953c2e27a69c0e262fd3c721fc7ad",
+    "docs/body-batching-baseline.json": "a27717191ceb79afd01b16cc6fa5b0943b76a1d0d27261d8ba9d52ca10bf72ee",
     "scripts/glb-lossless-codec.mjs": "053f0a2a7a397600b8c70814fa07f0013928d60702b163a8c8514d1eaafba224",
     "scripts/compress-model-delivery.mjs": "b18e1c9b00891f31190f8f3ccc02287500673fab48d9e74f0490cc68e9fbddf4",
     "app/um-knee-study.tsx": "f0d38a06e5199705304b8ee574513b8fccc376d7a45baaa6af36171a770879fe",
@@ -207,8 +212,8 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "95061d9ad3b20c52421f8624f1dfc021166f7818d1b9d3c352ea8e39725a7f03",
-    "explicitTopicReadiness": "7012f6c1bbb6f01007d320377c559aac3593facb67f382f720a412846975b9ff",
+    "resolvedContentAndRecipeData": "ea6c12ff6ef6e09927a0704305eb3a59d390b451d3400e66c746ab6d3ea69665",
+    "explicitTopicReadiness": "e9c07a7b96e39d5363f292de777cf2fe610400a174c98ac3acbe8eb4559ab60a",
     "reasoningQuestionData": "caafb323ca7d5a04971f91ad369d68c3a8da5e43839b39d8cd76192d1497bad2",
     "nestedTeachingData": "8e14e4e7b62141619825ebe604bc8cfddba30a80629162aa70818b7dc7c09350"
   },
@@ -224,11 +229,11 @@
       "geometryCopyBytes": 47583840,
       "baseline": {
         "whole-body": {
-          "surfaces": 1058,
+          "surfaces": 1060,
           "batches": 29,
           "batchedSurfaces": 550,
           "geometryCopyBytes": 47583840,
-          "submissions": 537
+          "submissions": 539
         },
         "head-neck": {
           "surfaces": 281,
@@ -273,11 +278,11 @@
           "submissions": 102
         },
         "pelvis": {
-          "surfaces": 65,
+          "surfaces": 67,
           "batches": 0,
           "batchedSurfaces": 0,
           "geometryCopyBytes": 0,
-          "submissions": 65
+          "submissions": 67
         },
         "thigh": {
           "surfaces": 93,
@@ -313,6 +318,19 @@
     "gpuAcceptance": false
   },
   "anatomy": {
+    "deferentDucts": {
+      "sourceSelections": 2,
+      "originalTriangles": 2054,
+      "contextSelections": 8,
+      "focusRecipe": "pelvis-deferent-ducts",
+      "focusRegions": [
+        "pelvis",
+        "whole-body"
+      ],
+      "exactSourceFacesRetained": true,
+      "continuousLumenClaimed": false,
+      "clinicalApproval": false
+    },
     "inferiorThyroidArteries": {
       "sourceSelections": 2,
       "originalTriangles": 962,
@@ -825,16 +843,26 @@
         "fmaId": "FMA10680",
         "bundle": "inferior-thyroid-arteries",
         "clinicalApproval": false
+      },
+      {
+        "fmaId": "FMA19236",
+        "bundle": "deferent-ducts",
+        "clinicalApproval": false
+      },
+      {
+        "fmaId": "FMA19235",
+        "bundle": "deferent-ducts",
+        "clinicalApproval": false
       }
     ],
-    "bodyRepresentations": 1058,
-    "bodyBundles": 97,
-    "bodyBundleBytes": 101601808,
+    "bodyRepresentations": 1060,
+    "bodyBundles": 98,
+    "bodyBundleBytes": 101641420,
     "systems": {
       "skeleton": 203,
       "muscles": 372,
       "nerves": 54,
-      "organs": 80,
+      "organs": 82,
       "vessels": 259,
       "connective": 90
     },
@@ -857,7 +885,7 @@
       {
         "id": "pelvis",
         "name": "Pelvis & hip",
-        "entries": 65
+        "entries": 67
       },
       {
         "id": "shoulder-arm",
@@ -951,7 +979,7 @@
     "pulmonaryAirwayContexts": 2,
     "ventricularRelationshipPresets": 3,
     "stages": 159,
-    "focuses": 159
+    "focuses": 161
   },
   "practice": {
     "identificationModes": [
@@ -984,7 +1012,7 @@
       1,
       2
     ],
-    "availableRepresentations": 1138,
+    "availableRepresentations": 1140,
     "nestedRepresentations": 71,
     "supportedKinds": [
       "ct",
@@ -1009,13 +1037,13 @@
     "classificationLimit": "Explicit readiness from authoring branches; not inferred from titles and not clinical approval. Legacy shoulder topics are draft; new X-ray authoring explicitly distinguishes draft and pending.",
     "body": {
       "anatomy": {
-        "specificDraft": 1056,
+        "specificDraft": 1058,
         "identityOnly": 2,
         "pending": 0,
         "generatedIdentification": 0
       },
       "function": {
-        "specificDraft": 1054,
+        "specificDraft": 1056,
         "identityOnly": 0,
         "pending": 4,
         "generatedIdentification": 0
@@ -1023,41 +1051,41 @@
       "ct": {
         "specificDraft": 120,
         "identityOnly": 0,
-        "pending": 938,
+        "pending": 940,
         "generatedIdentification": 0
       },
       "mri": {
         "specificDraft": 122,
         "identityOnly": 0,
-        "pending": 936,
+        "pending": 938,
         "generatedIdentification": 0
       },
       "xray": {
         "specificDraft": 83,
         "identityOnly": 0,
-        "pending": 975,
+        "pending": 977,
         "generatedIdentification": 0
       },
       "ultrasound": {
         "specificDraft": 41,
         "identityOnly": 0,
-        "pending": 1017,
+        "pending": 1019,
         "generatedIdentification": 0
       },
       "pathology": {
         "specificDraft": 1018,
         "identityOnly": 0,
-        "pending": 40,
+        "pending": 42,
         "generatedIdentification": 0
       },
       "clinical": {
         "specificDraft": 1018,
         "identityOnly": 0,
-        "pending": 40,
+        "pending": 42,
         "generatedIdentification": 0
       },
       "quiz": {
-        "specificDraft": 27,
+        "specificDraft": 29,
         "identityOnly": 0,
         "pending": 0,
         "generatedIdentification": 1031
@@ -1352,13 +1380,13 @@
       },
       "pelvis": {
         "anatomy": {
-          "specificDraft": 65,
+          "specificDraft": 67,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 64,
+          "specificDraft": 66,
           "identityOnly": 0,
           "pending": 1,
           "generatedIdentification": 0
@@ -1366,41 +1394,41 @@
         "ct": {
           "specificDraft": 11,
           "identityOnly": 0,
-          "pending": 54,
+          "pending": 56,
           "generatedIdentification": 0
         },
         "mri": {
           "specificDraft": 11,
           "identityOnly": 0,
-          "pending": 54,
+          "pending": 56,
           "generatedIdentification": 0
         },
         "xray": {
           "specificDraft": 1,
           "identityOnly": 0,
-          "pending": 64,
+          "pending": 66,
           "generatedIdentification": 0
         },
         "ultrasound": {
           "specificDraft": 8,
           "identityOnly": 0,
-          "pending": 57,
+          "pending": 59,
           "generatedIdentification": 0
         },
         "pathology": {
           "specificDraft": 64,
           "identityOnly": 0,
-          "pending": 1,
+          "pending": 3,
           "generatedIdentification": 0
         },
         "clinical": {
           "specificDraft": 64,
           "identityOnly": 0,
-          "pending": 1,
+          "pending": 3,
           "generatedIdentification": 0
         },
         "quiz": {
-          "specificDraft": 0,
+          "specificDraft": 2,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 65
@@ -1806,8 +1834,8 @@
       "png": 4,
       "svg": 2,
       "md": 2,
-      "glb": 118,
-      "json": 32,
+      "glb": 119,
+      "json": 33,
       "zip": 1,
       "html": 1,
       "tsv": 1
@@ -1821,7 +1849,7 @@
   "review": {
     "revisionIdentities": 9,
     "hasPrivateReviews": false,
-    "status": "Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot and 1058 displayed root-body selections. The 1,022-record archival catalogue is retained; later source-bound additions include the incomplete right-sided tentorium and limb, portal and hepatic vein groups. This inventory never reads personal review records; nested/independent scopes and acquired imaging remain outside those approvals."
+    "status": "Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot and 1060 displayed root-body selections. The 1,022-record archival catalogue is retained; later source-bound additions include the incomplete right-sided tentorium and limb, portal and hepatic vein groups. This inventory never reads personal review records; nested/independent scopes and acquired imaging remain outside those approvals."
   },
   "boundaries": {
     "scope": "Current source implementation, not operations performed by this inventory script",

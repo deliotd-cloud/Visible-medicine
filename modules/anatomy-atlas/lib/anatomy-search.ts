@@ -18,6 +18,14 @@ type AliasGroup = {
 // in SEARCH_VOCABULARY.md. Existing source names remain the visible labels.
 export const anatomySearchAliases: readonly AliasGroup[] = [
   {
+    aliases: ['vas deferens', 'ductus deferens', 'vasa deferentia'],
+    system: 'organs', category: 'organ', tree: 'isa',
+    members: [
+      ['FMA19236', 'Left deferent duct', 'left', 'FJ3135'],
+      ['FMA19235', 'Right deferent duct', 'right', 'FJ3140'],
+    ],
+  },
+  {
     aliases: ['Achilles', 'Achilles tendon', 'Achilles tendons'],
     system: 'connective',
     category: 'tendon',

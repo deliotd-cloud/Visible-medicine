@@ -1,12 +1,10 @@
 // Offline exact history only, never a runtime approval migration.
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import record from '../content/genicular-study-transition.json' with { type: 'json' };
-import { preDeferentDuctProfiles } from './deferent-duct-study-history.mjs';
+import record from '../content/deferent-duct-study-transition.json' with { type: 'json' };
 const hash = (v) => createHash('sha256').update(JSON.stringify(v)).digest('hex');
-export function preGenicularStudyProfiles(profiles) {
-  profiles = preDeferentDuctProfiles(profiles);
-  assert.equal(hash(record), '6a2fa4b7f7889a203c8bd46c9ca8572ded68a8419208117c22fe6b5ec7e4a60e');
+export function preDeferentDuctProfiles(profiles) {
+  assert.equal(hash(record), '14d5396f9f5912ee19187a8cf7fc9b25f3fb39a75c3fe0a749361b16b76746e0');
   if (hash(profiles) !== record.after) return profiles;
   const previous = structuredClone(profiles);
   for (const p of record.patches) {

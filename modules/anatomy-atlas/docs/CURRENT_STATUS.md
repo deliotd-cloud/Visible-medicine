@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Male pelvis: deferent ducts](DEFERENT_DUCTS.md) adds 2 original selections and 2054 retained source triangles. The existing Study menu combines them with 8 nearby organ selections, side filtering and reversible removal. Search accepts vas/ductus deferens. Anatomy, Function and self-check are drafts; clinical/imaging teaching and device acceptance remain pending. No generated junction, continuous lumen or patient correspondence is claimed.
+
 [Original-resolution batching](BODY_BATCHING.md) groups 550 compatible opaque surfaces into 29 batches in the all-visible whole-body CPU model. Original geometry, anatomical identities and existing controls are retained; selected/transparent/cut/muscle surfaces and small views keep individual rendering. Unsupported devices fall back. This is not measured GPU performance, browser visual acceptance or clinical sign-off.
 
 [Inferior thyroid arteries](INFERIOR_THYROID_ARTERIES.md) add 2 original neck selections (962 retained triangles), same-side thyrocervical navigation and 8 existing context bones. Four muscle-part candidates remain offline source-condition evidence, not admitted geometry. No complete gland/nerve anatomy, joined lumen, clinical approval or patient registration is claimed.
@@ -72,11 +74,11 @@ The [pancreatic duct study](PANCREATIC_DISSECTION.md) separates 2 source compone
 
 The [optic chiasm and tract study](VISUAL_PATHWAY_DISSECTION.md) adds 3 selectable neural surfaces from 4 source files inside Dissect brain. It opens from below with landmarks off. Across its views, 5 existing landmarks are available: four posterior landmarks or the pituitary in the [chiasm–pituitary relationship view](VISUAL_PATHWAY_RELATIONSHIPS.md). Shared dissection controls and MRI teaching stay compact. Source seams and relationships still need anatomical review; no complete fibre pathway or patient correspondence is supplied. The original nonpublic prototype remains retained separately.
 
-- 1058 body representations, 97 body GLBs, 11 regions plus whole body.
+- 1060 body representations, 98 body GLBs, 11 regions plus whole body.
 - Dedicated shoulder: 9 representations / 11 source parts, overlapping the body catalogue.
 - Pancreatic dissection: 2 selectable duct components and 1 optional reference surface. These subdivide the corrected pancreas, not new unique anatomy.
-- Nested dissections: 15 eye components, 4 ventricular spaces, 4 brainstem/cerebellar compounds, 14 cerebral selections, 4 cardiac cavities, 5 partial lung branch groups, 7 liver branch groups, 7 renal/adrenal vascular groups and 3 chiasm/tract surfaces. Four superior temporal source parts, seven renal/adrenal groups and three chiasm/tract surfaces add coverage; other nested studies subdivide existing parents. Context reuses existing structures. These are partial source surfaces, not complete organ interiors or clinical approvals. Brief drafts are separate from the root-body inventory below. 118 public/archive GLBs are retained, including original and alternate display assets. The original catalogue counts remain unchanged.
-- 159 dissection stages and 159 focuses. These operate on supplied surfaces; they do not establish complete anatomy.
+- Nested dissections: 15 eye components, 4 ventricular spaces, 4 brainstem/cerebellar compounds, 14 cerebral selections, 4 cardiac cavities, 5 partial lung branch groups, 7 liver branch groups, 7 renal/adrenal vascular groups and 3 chiasm/tract surfaces. Four superior temporal source parts, seven renal/adrenal groups and three chiasm/tract surfaces add coverage; other nested studies subdivide existing parents. Context reuses existing structures. These are partial source surfaces, not complete organ interiors or clinical approvals. Brief drafts are separate from the root-body inventory below. 119 public/archive GLBs are retained, including original and alternate display assets. The original catalogue counts remain unchanged.
+- 159 dissection stages and 161 focuses. These operate on supplied surfaces; they do not establish complete anatomy.
 - Internal studies have optional selected-part original-position guides inside their collapsed separation controls. Guides use the source surface and the exact display displacement; flat plates, cutaways, hidden/context parts and exam mode suppress them. They are display annotations, not anatomical connections. See [scope and checks](ORIGIN_GUIDES.md).
 - Find/name identification practice; 100 draft reasoning concepts bound to 196 representations in head-neck, foot, thigh, leg, pelvis, spine, thorax, abdomen, shoulder-arm, hand, forearm. One concept per session, without contralateral repetition. See [practice scope and tests](REASONING_PRACTICE.md).
 - [Learning-resource contract](LEARNING_RESOURCE_CONTRACT.md): version 1, ct/mri/xray/ultrasound/lecture/quiz anchors; 0 configured resources / 0 correspondences. Read-only linking infrastructure, not a connected external viewer or publication approval.
@@ -87,19 +89,19 @@ Counts are representations with displayed copy, not unique lessons, complete top
 
 | Topic | Specific/source-group draft | Identity only | Pending | Generated identification |
 | --- | ---: | ---: | ---: | ---: |
-| Anatomy | 1056 | 2 | 0 | 0 |
-| Function | 1054 | 0 | 4 | 0 |
-| CT | 120 | 0 | 938 | 0 |
-| MRI | 122 | 0 | 936 | 0 |
-| X-ray | 83 | 0 | 975 | 0 |
-| Ultrasound | 41 | 0 | 1017 | 0 |
-| Pathology | 1018 | 0 | 40 | 0 |
-| Clinical | 1018 | 0 | 40 | 0 |
-| Quiz notes | 27 | 0 | 0 | 1031 |
+| Anatomy | 1058 | 2 | 0 | 0 |
+| Function | 1056 | 0 | 4 | 0 |
+| CT | 120 | 0 | 940 | 0 |
+| MRI | 122 | 0 | 938 | 0 |
+| X-ray | 83 | 0 | 977 | 0 |
+| Ultrasound | 41 | 0 | 1019 | 0 |
+| Pathology | 1018 | 0 | 42 | 0 |
+| Clinical | 1018 | 0 | 42 | 0 |
+| Quiz notes | 29 | 0 | 0 | 1031 |
 
 Quiz-tab notes are separate from interactive practice. [X-ray orientation](XRAY_TEACHING.md) retains three shoulder-bone concepts across six exact body sources and the three overlapping dedicated-shoulder bones; [spinal orientation](SPINE_IMAGING_TEACHING.md) adds 47 exact body sources. Other X-ray topics remain pending. Imaging text is not an acquired-image viewer, segmentation or validated spatial correspondence.
 
-The opt-in [nested learning registry](NESTED_LEARNING_LINKS.md) exposes 71 exact child destinations within 1138 scope-specific representations. It supports document versions 1 and 2, while the configured production document stays version 1 with no resources. Nested parent/child source and bundle bindings can resolve into the existing dissection routes; this is not a live viewer connection or entitlement.
+The opt-in [nested learning registry](NESTED_LEARNING_LINKS.md) exposes 71 exact child destinations within 1140 scope-specific representations. It supports document versions 1 and 2, while the configured production document stays version 1 with no resources. Nested parent/child source and bundle bindings can resolve into the existing dissection routes; this is not a live viewer connection or entitlement.
 
 The ventricular study also has 3 [guided relationship presets](VENTRICULAR_RELATIONSHIPS.md), using existing source spaces and context without adding unique anatomy or another panel. Context disappears during separation; pointer handlers do not block selectable structures beneath it. Device acceptance remains pending.
 

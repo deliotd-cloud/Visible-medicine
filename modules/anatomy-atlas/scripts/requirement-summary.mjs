@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Male pelvis: deferent ducts](DEFERENT_DUCTS.md) adds ${anatomy.deferentDucts.sourceSelections} original selections and ${anatomy.deferentDucts.originalTriangles} retained source triangles. The existing Study menu combines them with ${anatomy.deferentDucts.contextSelections} nearby organ selections, side filtering and reversible removal. Search accepts vas/ductus deferens. Anatomy, Function and self-check are drafts; clinical/imaging teaching and device acceptance remain pending. No generated junction, continuous lumen or patient correspondence is claimed.
+
 [Original-resolution batching](BODY_BATCHING.md) groups ${report.rendering.bodyBatching.batchedSurfaces} compatible opaque surfaces into ${report.rendering.bodyBatching.batches} batches in the all-visible whole-body CPU model. Original geometry, anatomical identities and existing controls are retained; selected/transparent/cut/muscle surfaces and small views keep individual rendering. Unsupported devices fall back. This is not measured GPU performance, browser visual acceptance or clinical sign-off.
 
 [Inferior thyroid arteries](INFERIOR_THYROID_ARTERIES.md) add ${anatomy.inferiorThyroidArteries.sourceSelections} original neck selections (${anatomy.inferiorThyroidArteries.originalTriangles} retained triangles), same-side thyrocervical navigation and ${anatomy.inferiorThyroidArteries.neckContextBones} existing context bones. Four muscle-part candidates remain offline source-condition evidence, not admitted geometry. No complete gland/nerve anatomy, joined lumen, clinical approval or patient registration is claimed.

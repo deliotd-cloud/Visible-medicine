@@ -13,8 +13,9 @@ Use **Search atlas** in any regional or whole-body explorer. A curated vocabular
 | CN III, CN3, cranial nerve 3 | Supplied superior/inferior oculomotor branches; not complete reconstructed nerves |
 | CN IV, CN4 | Supplied trochlear nerve surfaces |
 | oesophagus, gullet, food pipe | Esophagus |
+| vas deferens, ductus deferens, vasa deferentia | Left/right deferent duct; not a complete reconstructed reproductive tract |
 
-There are 11 vocabulary groups bound to 23 existing representations. Labels, anatomical IDs and source parts remain unchanged. These are selected navigation terms, not a complete terminology dataset or formal ontology equivalence map. Common plurals are included for Achilles tendons, collarbones, shoulder blades and kneecaps. The separate nine-structure shoulder combobox is unchanged.
+There are 12 vocabulary groups bound to 25 existing representations. Labels, anatomical IDs and source parts remain unchanged. These are selected navigation terms, not a complete terminology dataset or formal ontology equivalence map. Common plurals are included for Achilles tendons, collarbones, shoulder blades and kneecaps. The separate nine-structure shoulder combobox is unchanged.
 
 Search tolerates case, spacing, hyphens, accents and straight/curly apostrophes. `FMA:258847`, `FMA 258847` and `FMA258847` find the same structure. Cranial-nerve Roman and Arabic numbers normalize together, but whole number tokens must match: CN IV does not match CN VI, a digit inside an FMA ID or the word “division.” Unsupported nerves and invalid numeric codes do not acquire a guessed alias. This is not fuzzy spelling correction; similar anatomical names are not silently substituted.
 
@@ -23,6 +24,8 @@ Exact labels/IDs rank first, then exact aliases, then name matches, then broader
 The existing small search dialog, result limit, kind filter, study-view confirmation and exam lock remain. Typing changes neither the scene nor dissection; no new permanent toolbar, network search, query-history storage or paid service is added. Queries stay limited to 256 characters. An input consisting only of punctuation returns no matches rather than the whole catalogue.
 
 ## References and rights
+
+The deferent-duct aliases were checked on 11 September 2026 against the original source rows and [NCI/SEER Duct System](https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html). These aliases bind only the two admitted whole source records; no epididymis, ejaculatory duct or additional nerve is inferred.
 
 Terms were checked on 9 September 2026 against the retained BodyParts3D v4 IS-A/PART-OF source rows and these factual references:
 

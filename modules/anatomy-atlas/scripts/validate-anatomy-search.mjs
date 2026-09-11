@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
+import { bodyDisplayCatalog } from '../lib/body-display-catalog.ts';
 import {
   anatomySearchAliases,
   structureSearchAliases,
@@ -14,7 +15,7 @@ import {
 const bytes = await readFile(
   'public/models/bodyparts3d/full-body/catalog.json',
 );
-const catalog = JSON.parse(bytes);
+const catalog = bodyDisplayCatalog(JSON.parse(bytes));
 assert.equal(
   createHash('sha256').update(bytes).digest('hex'),
   '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7',
@@ -80,7 +81,7 @@ for (const group of anatomySearchAliases)
     aliases.push('mutable');
     assert(!structureSearchAliases(s).includes('mutable'));
   }
-assert.equal(boundRepresentations, 23);
+assert.equal(boundRepresentations, 25);
 const canonical = Object.fromEntries(
   catalog.structures.map((s) => ['structure:' + s.id, s]),
 );
@@ -131,6 +132,9 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)])
       ['fma 258847', ['FMA258847']],
       ['quadratus plantae', ['FMA37465', 'FMA37466']],
       ['gullet', ['FMA7131']],
+      ['vas deferens', ['FMA19235', 'FMA19236']],
+      ['left ductus deferens', ['FMA19236']],
+      ['right vas deferens', ['FMA19235']],
       ['---', []],
       ['<script>no-result', []],
     ]) {

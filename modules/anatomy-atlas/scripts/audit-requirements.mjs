@@ -6,6 +6,7 @@ import { build } from './workspace-test-build.mjs';
 import { renderRequirementSummary } from './requirement-summary.mjs';
 import { limbVascularStudySets, limbVascularSourceIds } from '../content/limb-vascular-studies.ts';
 import { genicularStudy, genicularStudySourceIds } from '../content/genicular-study.ts';
+import { deferentDuctStudy } from '../content/deferent-duct-study.ts';
 
 // This inventory executes the real content resolver. It measures displayed copy,
 // not medical correctness, complete lessons, browser acceptance or approval.
@@ -118,6 +119,8 @@ const cubitalVeins = await json('public/models/bodyparts3d/cubital-veins/catalog
 const genicularArteries = await json('public/models/bodyparts3d/genicular-arteries/catalog.json');
 const genicularAudit = await json('docs/genicular-artery-source-audit.json');
 const inferiorThyroid = await json('public/models/bodyparts3d/inferior-thyroid-arteries/catalog.json');
+const deferentDucts = await json('public/models/bodyparts3d/deferent-ducts/catalog.json');
+const deferentDuctAudit = await json('docs/deferent-duct-source-audit.json');
 const musclePartCondition = await json('docs/muscle-part-condition-audit.json');
 const cubitalVeinAudit = await json('docs/cubital-vein-source-audit.json');
 const collicularBrachiaAudit = await json('docs/collicular-brachia-source-audit.json');
@@ -351,6 +354,11 @@ for (const path of [
   'docs/muscle-part-condition-audit.json',
   'content/inferior-thyroid-context-pins.json',
   'lib/inferior-thyroid-arteries.ts',
+  'public/models/bodyparts3d/deferent-ducts/catalog.json',
+  'docs/deferent-duct-source-audit.json',
+  'lib/deferent-ducts.ts',
+  'content/deferent-duct-study.ts',
+  'content/deferent-duct-study-transition.json',
   'content/genicular-study.ts',
   'content/genicular-study-pins.json',
   'lib/genicular-study.ts',
@@ -537,6 +545,16 @@ const report = {
   sourceHashes,
   rendering: { bodyBatching: await json('docs/body-batching-baseline.json'), gpuAcceptance: false },
   anatomy: {
+    deferentDucts: {
+      sourceSelections: deferentDucts.structures.length,
+      originalTriangles: deferentDuctAudit.groups.reduce((sum, g) => sum + g.topology.triangles, 0),
+      contextSelections: deferentDucts.contextRecords.length,
+      focusRecipe: deferentDuctStudy.id,
+      focusRegions: deferentDuctStudy.regions,
+      exactSourceFacesRetained: true,
+      continuousLumenClaimed: false,
+      clinicalApproval: false,
+    },
     inferiorThyroidArteries: {
       sourceSelections: inferiorThyroid.structures.length,
       originalTriangles: 962,

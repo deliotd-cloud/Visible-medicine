@@ -94,6 +94,7 @@ import { longusColliLesson } from '../lib/longus-colli';
 import { cubitalVeinLesson } from '../lib/cubital-veins';
 import { genicularArteryLesson } from '../lib/genicular-arteries';
 import { inferiorThyroidLesson } from '../lib/inferior-thyroid-arteries';
+import { deferentDuctLesson } from '../lib/deferent-ducts';
 import { tarsalImagingLesson } from '../lib/tarsal-imaging';
 
 // Original short educational notes, not imported textbook prose. Review pending.
@@ -140,6 +141,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   const thyroid = inferiorThyroidLesson(s, tab);
+  const deferent = deferentDuctLesson(s, tab);
+  if (deferent) return deferent;
   if (thyroid) return thyroid;
   const genicular = genicularArteryLesson(s, tab);
   if (genicular) return genicular;

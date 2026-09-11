@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Pelvis / Whole body → Study → “Male pelvis: deferent ducts”** opens a [10-structure source-bound dissection](docs/DEFERENT_DUCTS.md), with two newly added original ducts and eight existing neighbouring organs. Use side filtering, selection, hide/Undo and separation; search also accepts “vas deferens” and “ductus deferens.” Current display: **1,060 selections**. Original source faces are preserved; teaching is draft, and imaging/clinical approval is pending. No extra permanent controls. Older milestone counts below are historical.
+
 [Original-resolution surface batching](docs/BODY_BATCHING.md) groups compatible opaque surfaces in large views without adding controls or changing anatomy. Selection, transparency, cuts, muscle illustration and detailed views retain their existing rendering. Unsupported devices fall back automatically. Geometry and picking checks pass; actual GPU/mobile performance and visual acceptance remain to be measured.
 
 **Head & neck → search “inferior thyroid” → Arterial connections** adds [two original neck artery sources](docs/INFERIOR_THYROID_ARTERIES.md), same-side parent navigation and a focused cervical-bone context. Display: **1,058 selections**. No new toolbar or generated geometry. Four muscle-part candidates remain offline review evidence because of source fragments/duplicate faces; clinical and imaging approval remain pending.

@@ -40,7 +40,7 @@ assert(
   !catalog.structures.some((s) => ['FMA44885', 'FMA44886'].includes(s.fmaId)),
 );
 assert.equal(raw.structures.length, 1022);
-assert.equal(catalog.structures.length, 1058);
+assert.equal(catalog.structures.length, 1060);
 assert.equal(JSON.stringify(raw), before);
 assert.equal(api.bodyDisplayCatalog(catalog), catalog);
 assert.deepEqual(
@@ -186,7 +186,7 @@ assert.equal(triangles, 3892);
 console.log(
   JSON.stringify({
     sourceSelections: 5,
-    displaySelections: 1058,
+    displaySelections: 1060,
     triangles,
     links,
     rejections,

@@ -20,7 +20,7 @@ import {
   shapeCandidate,
   compareTranslatedShape,
 } from './vessel-shape-math.mjs';
-import { genicularArterySources } from './genicular-artery-sources.mjs';
+import { deferentDuctSources } from './deferent-duct-sources.mjs';
 const hash = (b) => createHash('sha256').update(b).digest('hex');
 import { build } from 'esbuild';
 const {
@@ -51,9 +51,9 @@ const display = bodyDisplayCatalog(raw);
 const catalog = {
   ...display,
   structures: display.structures.filter(
-    (s) => !['genicular-arteries', 'inferior-thyroid-arteries', 'deferent-ducts'].includes(s.bundle),
+    (s) => s.bundle !== 'deferent-ducts',
   ),
-  bundles: display.bundles.filter((b) => !['genicular-arteries', 'inferior-thyroid-arteries', 'deferent-ducts'].includes(b.id)),
+  bundles: display.bundles.filter((b) => b.id !== 'deferent-ducts'),
 };
 async function shape(tree, file, sha) {
   const bytes = await readFile(`../work/bodyparts3d/${tree}/${file}.obj`);
@@ -62,7 +62,7 @@ async function shape(tree, file, sha) {
 }
 const shapes = new Map(),
   groups = [];
-for (const candidate of genicularArterySources) {
+for (const candidate of deferentDuctSources) {
   const definition = records.find(
     (r) => r.tree === 'isa' && r.id === candidate.id,
   );
@@ -126,7 +126,7 @@ for (const owner of catalog.structures) {
   const candidates = groups.filter(
     (g) =>
       sourceBoundsNear(shapes.get(g.id), bounds, 1.01) ||
-      (owner.system === 'vessels' && shapeCandidate(shapes.get(g.id), bounds)),
+      (owner.system === 'organs' && shapeCandidate(shapes.get(g.id), bounds)),
   );
   screened.push({
     id: owner.id,
@@ -157,7 +157,7 @@ for (const owner of catalog.structures) {
         nearest.get(g.id),
       ),
       translatedDiagnostic:
-        owner.system === 'vessels' && shapeCandidate(candidate, reference)
+        owner.system === 'organs' && shapeCandidate(candidate, reference)
           ? compareTranslatedShape(candidate, reference)
           : null,
     });
@@ -175,7 +175,7 @@ assert(
 );
 const result = {
   schemaVersion: 1,
-  sourceCommit: '1a9dfc505ddf6c79bbe349cfd77083ae80e66462',
+  sourceCommit: '0b3c1fd3d80849a3cc3e7e860430f610c265eea7',
   evidence,
   supplementalEvidence,
   license: catalog.license,
@@ -190,13 +190,13 @@ const result = {
   geometryModified: false,
   clinicalApproval: false,
   limitations: [
-    'Ten source-labelled genicular branches; each middle genicular surface has two disconnected components. Not complete anastomoses or a measured lumen.',
-    'Topology and bounded distances do not prove absence of self-intersection or clinical correctness. No donor junction or vessel centreline inferred.',
+    'Two complete source-labelled deferent duct definitions; surfaces do not establish continuous epididymal/ejaculatory connections, lumens or a complete spermatic cord.',
+    'Topology and bounded distances do not prove absence of self-intersection or clinical correctness. No donor duct junction or lumen inferred.',
     'No fitting, mirroring, smoothing, bridge or face removal. Archive CRC and size checked on retrieval; exact source hashes retained.',
   ],
 };
 const output = JSON.stringify(result, null, 2) + '\n',
-  path = 'docs/genicular-artery-source-audit.json';
+  path = 'docs/deferent-duct-source-audit.json';
 if (process.argv.includes('--check'))
   assert.equal((await readFile(path, 'utf8')).replace(/\r\n/g, '\n'), output);
 else await writeFile(path, output, { flag: 'wx' });
@@ -207,7 +207,7 @@ console.log(
     comparisons: comparisons.length,
     triangles: groups.reduce((n, g) => n + g.topology.triangles, 0),
     closest: comparisons
-      .filter((c) => /FMA7738[01]|FMA2447[45]|FMA2447[78]/.test(c.referenceFma))
+      .filter((c) => /FMA15900|FMA9600|FMA1938[78]|FMA721[12]/.test(c.referenceFma))
       .map((c) => ({
         candidate: c.candidate,
         to: c.referenceFma,

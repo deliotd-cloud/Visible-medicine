@@ -1,6 +1,22 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — original-resolution opaque body batching (current source)
+## 11 September 2026 — deferent ducts and focused male-pelvis dissection (current source)
+
+Source `925056d1681b0a6668d34cb9584cf565bbbc3a97`, tree `9cd29a22d40809fd956149f90ff847d25e10e42e`, parent `0b3c1fd3d80849a3cc3e7e860430f610c265eea7`. Sixty-two exact source paths mirrored. Full module audit: 1,812 matching files / 437,340,393 bytes / 123 retained GLBs; no common credential-signature warnings (not exhaustive). No dependency/lockfile, font, texture, database schema, authentication, entitlement or scan changes.
+
+Two original BodyParts3D v4 deferent-duct sources retain all 2,054 ordered triangles in a 39,612-byte GLB. Display: 1,060 selections. Pelvis / Whole body → Study → Male pelvis: deferent ducts includes ten source-bound selections (six per side): the two new ducts and existing bladder, prostate, seminal vesicles, testes and ureters. Existing selection, removal/Undo, extraction, separation and side filters are reused; no permanent control added. Search recognizes vas deferens, ductus deferens and vasa deferentia without renaming source labels. Exact original source/context/frame gates protect links and actual parent actions.
+
+Originals/derived geometry retain CC BY 4.0 attribution; NCI/SEER is a factual reading reference only. No competitor geometry, generated junction, repaired surface, continuous lumen, complete reproductive tract, procedural plane or patient registration is claimed. Epididymides, ejaculatory ducts, cord coverings and nerves are not added. Anatomy/Function/self-check remain drafts; clinical and imaging topics remain pending. Reference queue: 438 source pieces, not a count of missing anatomical structures. Peripheral nerve networks remain a genuine gap.
+
+Passed exact original-source/face roundtrips, 95 invalid admissions, 44 focused study links over six scopes, 20 invalid-source links, six actual parent event handlers, 12 rendered menus, hide/Undo, historical recipe/source audits, shared study library/links, 1,836 search cases, 9,540 body-review topic snapshots, 3,180 isolated SQLite tracks, 49,830 imaging-link assertions and 33,444 content-contract checks. Regional source regressions and 550-source batching geometry/lifecycle checks pass. TypeScript, production build, requirement freshness and whitespace pass. Actual browser/GPU/mobile acceptance and clinical sign-off remain outstanding.
+
+The shared search change intentionally updates all nine conservative shoulder display-review revisions, but not shoulder geometry/teaching. Exact offline history preserves earlier snapshots without migrating approvals. Body-renderer fingerprint: `8f9206846d63e8b572b6b0ec01418183ba1a807b14addbd4c1bebdc53d8f573b`, 357 inputs. Lossless delivery: 119 GLBs / 1,244 meshes / 3,732 buffer views, canonical 180,752,892 bytes / transport 121,965,192 / gzip transport 106,300,361. Full-body CPU submission estimate: 1,060 to 539; no FPS claim.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-deferent-ducts-2026-09-11`: `.site.tar.gz` 111,705,846 bytes / SHA256 `3951944488ae3cc975f66f5de1a5e518999a584ac735bfa534747381980a7990`; `.delta.tar` 1,935,360 bytes / `b2651580f78896526af6e2e8e1fe6aa2fd492c9ad42545154679c42a1e87638f`; `.incremental.bundle` 197,628 bytes / `d31844255d67080a62558bee7cea40d99df41ca7b0b6d0c071ff0b69e70c28ac`. Runtime archive: 404 safe unique entries, exact hosting manifest and both original migrations. Independent bare restore `refs/verification/deferent-ducts-20260911` passes full fsck and exact SHA/tree; verifier main unchanged. Preserve all earlier recovery bundles: this increment requires its parent.
+
+Sites source main independently verified. Private save/publication is in progress at this receipt; terminal deployment and verified GitHub remote are recorded in work/D: checkpoint. This backs up source/runtime, not production database contents, personal reviews, accounts, scans or lectures. The broader goal remains active; radiologist approval and authorized real imaging integration remain separate.
+
+## 11 September 2026 — original-resolution opaque body batching (previous source)
 
 Source `0b3c1fd3d80849a3cc3e7e860430f610c265eea7`, tree `7a4d12a2f2e7205fb65e6978394a4976359e37e3`, parent `7380be6c3dc3c23b8ecbedba6ab790f7705ac388`. Twenty-three exact source paths mirrored. Full module audit: 1,796 matching files / 436,650,868 bytes / 122 retained GLBs; no common credential-signature warnings (not exhaustive). No anatomy, dependency/lockfile, font, texture, database schema, authentication, entitlement or scan changed.
 

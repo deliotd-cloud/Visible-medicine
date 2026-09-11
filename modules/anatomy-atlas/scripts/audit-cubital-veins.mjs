@@ -30,7 +30,7 @@ const {bodyDisplayCatalog} = await import('data:text/javascript;base64,'+Buffer.
 const display = bodyDisplayCatalog(raw);
 // Audit is replayable after admission; exclude only this separately pinned addition.
 // Replay the original 1,042-record envelope screen; subsequent knee sources are outside that snapshot.
-const laterBundles = new Set(['cubital-veins', 'genicular-arteries', 'inferior-thyroid-arteries']);
+const laterBundles = new Set(['cubital-veins', 'genicular-arteries', 'inferior-thyroid-arteries', 'deferent-ducts']);
 const catalog = {...display, structures:display.structures.filter(s=>!laterBundles.has(s.bundle)), bundles:display.bundles.filter(b=>!laterBundles.has(b.id))};
 async function shape(tree, file, sha) {
   const bytes = await readFile(`../work/bodyparts3d/${tree}/${file}.obj`);

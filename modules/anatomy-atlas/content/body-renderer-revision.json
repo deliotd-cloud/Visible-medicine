@@ -54,7 +54,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "f5c13f06ae2edaa2f7dbba07b5276ed23fa3c1e8b277b5b1f77f93694f727c99"
+      "sha256": "271122a2be600b49fedff9fd5ab949847e1ffbbb39946197d0fdc704ce0b88f3"
     },
     {
       "path": "app/body-explorer.css",
@@ -98,7 +98,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "11a31290db5338d967d6f19218ca6546c2207ba9719573a985e969847fdb48f6"
+      "sha256": "8a1fed57ddc2ef676ede958ecba768eff5c1731eb03f826b5c82cef8bdb3ae33"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -345,6 +345,10 @@
       "sha256": "43e6e81da3b782aaefb0f806e57517edee327e1a24b9eaa748896aef93c033db"
     },
     {
+      "path": "content/deferent-duct-study.ts",
+      "sha256": "175762062c00f6d92dbf5505cd50b4ab1b483f12e7d69161c0b53735dad66120"
+    },
+    {
       "path": "content/elbow-studies.ts",
       "sha256": "57f958516bc4750cfb7863c5c642fe4612b2c5b7deab09f7a455b57b4fbe71a1"
     },
@@ -430,7 +434,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "eed891c943c781fc0e7415fe47fefc14cfc9eecc12eaf19864e23d51dafe85f7"
+      "sha256": "5365d114752b157338dc9ebcf9e58dabe56be2d4d35296e717845bce939dfd05"
     },
     {
       "path": "content/shoulder-xray-bindings.json",
@@ -602,7 +606,7 @@
     },
     {
       "path": "lib/anatomy-search.ts",
-      "sha256": "7c9c095c03827e820fbaee012bb7daf9ccb4b29eae0400b254af2b50840f4893"
+      "sha256": "b67d5f0eb9d8aa96e16edf91fafbbea322913887912e4140d7697caefaa3fa92"
     },
     {
       "path": "lib/anatomy-vessels.ts",
@@ -642,7 +646,7 @@
     },
     {
       "path": "lib/body-display-catalog.ts",
-      "sha256": "804f740efaef394b3d741335a9c989807ba78d02d09bd0847367868eee054869"
+      "sha256": "cd78422a329502375d39a8b979c9421f65be141f09c1ded85498de8c295c7e01"
     },
     {
       "path": "lib/body-source-additions.ts",
@@ -727,6 +731,10 @@
     {
       "path": "lib/deep-neck-curriculum.ts",
       "sha256": "9b88d3f73c59d7447893bfc73e2b8217cda07ecb0940638d32722b066b95d53e"
+    },
+    {
+      "path": "lib/deferent-ducts.ts",
+      "sha256": "23531f8eb7664f8d758998b0c0af47670c420168022af048306d03558f5c43e6"
     },
     {
       "path": "lib/dental-clinical-curriculum.ts",
@@ -934,7 +942,7 @@
     },
     {
       "path": "lib/limb-vascular-studies.ts",
-      "sha256": "35c491f8ee5c272cc8798fe995173cc7c9fa3086b10edc6158baa8ddb9ae1f13"
+      "sha256": "3881a406812f89ac6d933f036b3c3ef5d6f0daa6e057bcb1c0cea4b2a4c3114a"
     },
     {
       "path": "lib/longus-colli.ts",
@@ -1337,6 +1345,10 @@
       "sha256": "bc3c1c7418d8fe31ef94b6fb8b74d20fe54d8e0f2e67aef4df3c1182b68d137a"
     },
     {
+      "path": "public/models/bodyparts3d/deferent-ducts/catalog.json",
+      "sha256": "7af85fbe970f87143697c069bbdfefaa3759374a031e0e6d36d65fcfe6761af1"
+    },
+    {
       "path": "public/models/bodyparts3d/eye-layers/catalog.json",
       "sha256": "3ae1d1b11eced1383b6de87df09fc8cbe9d24291b2144ae82b0a057d4e96daea"
     },
@@ -1429,5 +1441,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "93c5c65e629c11862380259e4553551592f57cc47e7dd5a932ffe543834833ae"
+  "sha256": "8f9206846d63e8b572b6b0ec01418183ba1a807b14addbd4c1bebdc53d8f573b"
 }

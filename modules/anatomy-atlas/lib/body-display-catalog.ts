@@ -10,6 +10,7 @@ import { addLongusColli } from './longus-colli.ts';
 import { addCubitalVeins } from './cubital-veins.ts';
 import { addGenicularArteries } from './genicular-arteries.ts';
 import { addInferiorThyroidArteries } from './inferior-thyroid-arteries.ts';
+import { addDeferentDucts } from './deferent-ducts.ts';
 
 const canonical = (value: unknown): string => {
   if (Array.isArray(value)) return `[${value.map(canonical).join(',')}]`;
@@ -65,7 +66,7 @@ export function bodyDisplayCatalog(catalog: BodyCatalog): BodyCatalog {
       ),
     ),
   );
-  return addInferiorThyroidArteries(display);
+  return addDeferentDucts(addInferiorThyroidArteries(display));
 }
 
 function applyDisplayCorrection(
