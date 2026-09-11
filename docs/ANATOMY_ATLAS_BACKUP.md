@@ -1,6 +1,22 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — separate abdominal-wall specimen (current; publication pending)
+## 11 September 2026 — abdominal identification practice (current; publication pending)
+
+Source `df79d3e873a4ba92073dedb65e90ff65131aea31`, tree `11c1dd5c344621865f84be8b2ef69b73f28a421d`, parent `300f6577c1c291b2c3c75694361c1b7bedd5cf7b`. Nineteen changed paths mirrored into `modules/anatomy-atlas`; main website unchanged. Exact Sites source push succeeded and full HEAD was verified. Ephemeral credential cleared. This is NOT confirmed GitHub delivery.
+
+Identification practice covers all seven independent abdominal-wall studies and eight muscles. Only visible, exact source-bound muscles are question targets; labels/guides are hidden, bones remain faded context and the specimen is assembled. First-try scoring, reveal, retry missed and new rounds reuse the existing compact practice interface. Mutated source/frame definitions and foreign or duplicate targets are rejected. Returning preserves the parent dissection state. This is identification teaching, not a clinical examination or patient registration. Oral work remains complete/lower priority.
+
+Publishing now excludes only the generated 14,227,760-byte original-source recovery ZIP from runtime. Its exact original remains in source and this backup; the UI links to the complete official archive (about 127 MB), with its size/scope disclosed. No anatomy mesh, detail, source licence or shoulder review fingerprint changed. No new dependencies, images, fonts, patient scans or entitlement changes.
+
+Passed: 697 specimen checks including every original face corner; 661 new practice checks; 1,310 existing UM learning checks; 235 review/security/history checks; TypeScript; requirement freshness; authored diff checks; production build; byte-exact transport/scene checks for all 108 runtime GLBs; generated recovery policy checks. No browser/GPU/mobile, educator or clinical acceptance claimed.
+
+Recovery stem `work/atlas-abdominal-identification-2026-09-11`: runtime 108,535,026 bytes SHA256 `636cc7075113a2b4cd44f81c9d6b67944f01c2e97a4b68d2a735432c64f3b29a`; delta 409,600 bytes SHA256 `01167ced9f1fd6902313cdde2bcbaba0e8f78481558b5e87c0ff868d1060d9fc`; incremental bundle 13,400 bytes SHA256 `5a43c2417110c012b2e5828d65e5f895dbaa240591eabc24aa48558b4050d68d`. Bundle requires source parent, not standalone. Runtime archive 353 entries; source mirror 1,466 files / 412,862,538 bytes / 112 retained GLBs. Preparation JSON predates this receipt; never rerun the helper over these artifacts.
+
+Native upload of the smaller archive timed out after 60,005 ms, request `60990d07-52ef-4c46-9f17-b85390e6c014`. Reconciled saved versions afterward: latest remains **141**, source `0bf782a79d731b2621839d38015dcf22122e53f6`, version `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_49603a2ce468819188f732babd9e0b17`. No new saved version/deployment or audience change. This turn also retried the previous larger archive once, which timed out and was reconciled before proceeding. Package size is not a proven cause of the upload problem. Neither new abdominal specimen nor practice is confirmed live.
+
+Full final checkpoint `work/ATLAS_ABDOMINAL_IDENTIFICATION_2026-09-11.md`. Same-PC recovery and Sites source saving do not confirm GitHub delivery, chat/private database backup or full off-device restoration. Continue substantive wider-body work while preserving this pending release; avoid repeated unchanged upload attempts and routine oral expansion.
+
+## 11 September 2026 — separate abdominal-wall specimen (publication pending)
 
 Source `300f6577c1c291b2c3c75694361c1b7bedd5cf7b`, tree `f6c0f5fd17ad810a5e2daaf9757c6447ebbbe9f2`, parent `0bf782a79d731b2621839d38015dcf22122e53f6`. Sixty-one changed paths mirrored into `modules/anatomy-atlas`; main website unchanged. Sites source push succeeded and full HEAD was verified; ephemeral credential cleared. This is NOT confirmed GitHub delivery.
 

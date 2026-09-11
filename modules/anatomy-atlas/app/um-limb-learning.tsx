@@ -10,6 +10,7 @@ import { rendererReady, type RendererHealth } from '@/lib/renderer-health';
 import type { SpecimenDefinition, SpecimenSurface } from '@/lib/independent-specimen';
 import type { DissectionView } from './dissection-data';
 import { createIdentification, reduceIdentification, specimenTeachingFor, type IdentificationState } from '@/lib/um-limb-teaching';
+import type { SpecimenPracticeAdapter } from '@/lib/specimen-identification';
 import type { SpecimenTopic } from '@/lib/specimen-links';
 import { specimenTopicLabels } from '@/lib/specimen-links';
 import { specimenClinicalReferences } from '@/content/um-limb-clinical';
@@ -62,8 +63,9 @@ export function SpecimenLearning({ definition, selected, initialTopic }: { defin
   </details>;
 }
 
-export function SpecimenIdentification({ definition, initial, visibleIds, initialView, onClose }: {
+export function SpecimenIdentification({ definition, initial, visibleIds, initialView, onClose, adapter }: {
   definition: SpecimenDefinition; initial: IdentificationState; visibleIds: string[]; initialView: DissectionView; onClose: () => void;
+  adapter?: SpecimenPracticeAdapter;
 }) {
   const [state, setState] = useState(initial), [view, setView] = useState(initialView), [zoom, setZoom] = useState(1), [reset, setReset] = useState(0);
   const [health, setHealth] = useState<RendererHealth>('starting'), [loaded, setLoaded] = useState<string[]>([]), [failed, setFailed] = useState<string[]>([]);
@@ -76,7 +78,7 @@ export function SpecimenIdentification({ definition, initial, visibleIds, initia
   const ready = rendererReady(health) && required.every(b => loaded.includes(b.id) && !failed.includes(b.id));
   function next() { setState(s => reduceIdentification(s, { type: 'next' })); setZoom(1); setReset(n => n + 1); }
   function again(missed: boolean) {
-    const round = createIdentification(definition, visibleIds, Math.random, missed ? state.results.filter(r => !r.firstTry).map(r => r.targetId) : undefined);
+    const round = (adapter?.createRound ?? createIdentification)(definition, visibleIds, Math.random, missed ? state.results.filter(r => !r.firstTry).map(r => r.targetId) : undefined);
     if (round) { setState(round); setZoom(1); setReset(n => n + 1); }
   }
   return <div className="eye-layer-workbench um-knee-workbench">
@@ -107,14 +109,14 @@ export function SpecimenIdentification({ definition, initial, visibleIds, initia
         <div className="um-limb-answer-options">{question.options.map(id => <Button key={id} variant="outline" disabled={!ready || answered || state.wrong.includes(id)}
           onClick={() => setState(s => reduceIdentification(s, { type: 'answer', id }))}>{definition.surfaces.find(s => s.id === id)?.name}</Button>)}</div>
         <p role="status">{!ready ? 'Answering is paused until the model is ready.' : state.feedback === 'wrong' ? 'Not this surface. Rotate the model and try again.' : answered ? `${state.feedback === 'revealed' ? 'Answer' : 'Correct'}: ${target.name}` : 'Choose an answer using the buttons.'}</p>
-        {answered ? <><p>{specimenTeachingFor(definition, target)?.function}</p><Button onClick={next}>{state.index + 1 === state.questions.length ? 'Finish round' : 'Next structure'}</Button></>
+        {answered ? <><p>{adapter ? adapter.feedback(definition, target) : specimenTeachingFor(definition, target)?.function}</p><Button onClick={next}>{state.index + 1 === state.questions.length ? 'Finish round' : 'Next structure'}</Button></>
           : <Button variant="ghost" disabled={!ready} onClick={() => setState(s => reduceIdentification(s, { type: 'reveal' }))}>Reveal answer</Button>}
       </> : <>
         <p>{state.results.filter(r => r.firstTry).length} of {state.results.length} identified on the first try. Revealed answers do not count as correct.</p>
         <div className="eye-layer-actions"><Button onClick={() => again(false)}>New round</Button><Button variant="outline" disabled={state.results.every(r => r.firstTry)} onClick={() => again(true)}>Retry missed</Button></div>
         <ul>{state.results.map(r => <li key={r.targetId}>{definition.surfaces.find(s => s.id === r.targetId)?.name} · {r.firstTry ? 'First try' : r.revealed ? 'Revealed' : 'After retry'}</li>)}</ul>
       </>}
-      <p>Rounds use up to ten of the tissues visible when you started. Your dissection and its history are preserved on return. Progress lasts only for this round.</p>
+      <p>{adapter?.scopeNote ?? 'Rounds use up to ten of the tissues visible when you started. Your dissection and its history are preserved on return. Progress lasts only for this round.'}</p>
     </aside>
   </div>;
 }

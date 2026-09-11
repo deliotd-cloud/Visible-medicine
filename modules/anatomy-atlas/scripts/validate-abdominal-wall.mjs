@@ -88,8 +88,9 @@ const component=await componentBuild({stdin:{contents:"export { KneeSpecimenView
 const require=createRequire(import.meta.url),React=require('react'),mod={exports:{}},context={module:mod,exports:mod.exports,require,URL,URLSearchParams,console,process:{env:{NODE_ENV:'test'}}};
 runInNewContext(component.outputFiles[0].text,context);
 const html=require('react-dom/server').renderToStaticMarkup(React.createElement(mod.exports.KneeSpecimenView,{specimen:def,supplement:mod.exports.abdominalWallSupplement}));
-for(const text of ['Search abdominal wall specimen structures','CC BY-SA 2.1 Japan','Download original sources','tissue separation','right external oblique'])ok(html.toLowerCase().includes(text.toLowerCase()));
-for(const text of ['Practise identification','Muscles by nerve','Ontology mapping: pending','independent right-limb specimen'])same(html.includes(text),false);
+for(const text of ['Search abdominal wall specimen structures','CC BY-SA 2.1 Japan','Download official original source archive','tissue separation','right external oblique','Practise identification'])ok(html.toLowerCase().includes(text.toLowerCase()));
+ok(html.includes(raw.source.archive));
+for(const text of ['Muscles by nerve','Ontology mapping: pending','independent right-limb specimen'])same(html.includes(text),false);
 same(context.sceneProps.structures.length,29);same(context.sceneProps.catalog.sourceVersion,def.key);same(context.sceneProps.explode,0);
 same(context.sceneProps.plate,false);same(context.sceneProps.cameraBounds,null);same(context.sceneProps.hiddenIds.length,0);
 console.log(JSON.stringify({checks,sourceFaceCornersChecked:corners,maxErrorMm,surfaces:29,muscles:8,studies:def.studies.length,glbBytes:bytes.length,originalDownloadBytes:archive.length,sourceCoordinatesAndFaceOrder:'preserved',clinicalOrBrowserAcceptance:false}));

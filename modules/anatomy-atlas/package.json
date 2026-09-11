@@ -8,6 +8,7 @@
   "scripts": {
     "abdominal-wall:export": "node scripts/export-abdominal-wall.mjs",
     "abdominal-wall:test": "node scripts/validate-abdominal-wall.mjs",
+    "abdominal-practice:test": "node scripts/validate-abdominal-practice.mjs",
     "um-limb-clinical:test": "node scripts/pin-um-limb-teaching.mjs --check && node scripts/validate-um-limb-clinical.mjs",
     "um-limb-navigation:test": "node scripts/pin-um-limb-navigation.mjs --check && node scripts/validate-um-limb-navigation.mjs",
     "um-limb-learning:test": "node scripts/pin-um-limb-teaching.mjs --check && node scripts/validate-um-limb-learning.mjs",
@@ -53,7 +54,7 @@
     "eye-layers:export": "node scripts/export-eye-layers.mjs",
     "eye-layers:test": "node scripts/validate-eye-layers.mjs",
     "dev": "vinext dev",
-    "build": "npm run reviews:revisions && vinext build && node scripts/compress-model-delivery.mjs",
+    "build": "npm run reviews:revisions && vinext build && node scripts/compress-model-delivery.mjs && node scripts/exclude-source-recovery.mjs",
     "models:delivery-check": "node scripts/compress-model-delivery.mjs --check",
     "reviews:revisions": "node scripts/review-revisions.mjs",
     "reviews:test": "node scripts/validate-review.mjs",

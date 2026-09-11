@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Abdominal identification practice](ABDOMINAL_WALL_SPECIMEN.md#identification-practice) covers ${anatomy.abdominalWallSpecimen.identificationPractice.muscleTargets} source muscles across ${anatomy.abdominalWallSpecimen.identificationPractice.studies.length} studies. Visible muscles alone enter rounds; bones stay contextual, labels/guides are hidden, and first-try/reveal/retry-missed scoring preserves the dissection history. Exact source/frame checks reject mismatches. This is source-label practice, not a clinical examination or approval.
+
 [Separate abdominal-wall specimen](ABDOMINAL_WALL_SPECIMEN.md): ${anatomy.abdominalWallSpecimen.muscleSurfaces} version-3 muscle surfaces and ${anatomy.abdominalWallSpecimen.skeletalContext} partial skeletal context selections. Seven reversible studies expose the internal obliques, transversus and rectus pairs missing from the current body geometry. This is a separate source frame under ${anatomy.abdominalWallSpecimen.license}, with downloadable assets and reuse notices; not a registration into version 4 or a complete surgical wall. No source face is removed. Clinical, device and source-interface review remain pending.
 
 [Lossless production model delivery](MODEL_DELIVERY.md) retains canonical source hashes and anatomical detail while reducing transport file size. Each production build checks decoded buffers and installed-loader scene equality for every model. Catalogue hashes/byte counts remain canonical, with separate transport hashes in the generated delivery manifest. This is not new anatomy, browser-performance or clinical certification.

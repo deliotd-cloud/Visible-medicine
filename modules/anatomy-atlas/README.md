@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Abdominal wall → Practise identification** tests up to eight visible source muscles with labels hidden, first-try scoring, reveal and retry-missed rounds. Bones remain context. Exact source/frame checks and returning to the existing dissection keep the experience consistent; this is educational source-label practice, not a clinical examination.
+
 **Abdomen → Abdominal wall layers** opens a [separate source specimen](docs/ABDOMINAL_WALL_SPECIMEN.md): eight muscle surfaces, seven reversible studies and partial bony context. Inspect the rectus, internal oblique and transversus pairs without inventing their registration to the current body. Existing search, labels, fade, separation styles and undo remain in one compact viewer. Its source and adaptations are **CC BY-SA 2.1 Japan**, with downloadable originals and reuse notices; not proprietary assets or clinical approval.
 
 Production builds use [lossless model compression](docs/MODEL_DELIVERY.md), with every decoded geometry buffer and scene checked against unchanged originals. No structures, faces or precision are removed. This reduces delivery size; it is not a clinical or browser-performance certification.

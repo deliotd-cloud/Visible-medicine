@@ -24,6 +24,7 @@ import { SpecimenStudyLink } from './specimen-study-link';
 import { SpecimenMotorExplorer } from './um-limb-motor';
 import { motorStudyAction, specimenMotorGroups } from '@/lib/um-limb-motor';
 import type { ResolvedSpecimenNavigation } from '@/lib/um-limb-navigation';
+import type { SpecimenPracticeAdapter } from '@/lib/specimen-identification';
 import './eye-layers.css';
 import './um-knee-study.css';
 
@@ -39,6 +40,7 @@ export type SpecimenSupplement = {
   colors: Record<string, string>;
   learning: (surface: SpecimenSurface) => ReactNode;
   sourceDetails: ReactNode;
+  identification?: SpecimenPracticeAdapter;
 };
 export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation, supplement }: { specimen?: SpecimenDefinition; initialNavigation?: ResolvedSpecimenNavigation; supplement?: SpecimenSupplement } = {}) {
   const kneeSpecimen = { structures: specimen.surfaces, source: specimen.source };
@@ -65,6 +67,8 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
   const pending = required.filter((b) => !loaded.includes(b.id) && !failed.includes(b.id));
   const errors = required.filter((b) => failed.includes(b.id));
   const ready = required.length > 0 && !pending.length && !errors.length && rendererReady(health);
+  const practiceAdapter = supplement?.identification;
+  const practiceCount = practiceAdapter ? practiceAdapter.eligibleIds(specimen, visible.map(s => s.id)).length : supplement ? 0 : visible.length;
   useEffect(() => { if (ready && !practice && restorePracticeFocus.current) { practiceLauncher.current?.focus(); restorePracticeFocus.current = false; } }, [ready, practice]);
   const results = filterSpecimen(specimen, query);
   const appearance = useMemo(() => Object.fromEntries(specimen.surfaces.map((s) => [s.id, { color: supplement?.colors[s.id] ?? kneeTissueColours[s.tissue], opacity: 1 }])), [specimen, supplement]);
@@ -83,7 +87,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
     preset('all'); setQuery(''); setLayout('extract'); setJointCloseUp(!!specimen.closeUp);
     setLabels(true); setShowOrigins(false); setIllustrated(true);
   }
-  if (practice) return <SpecimenIdentification definition={specimen} initial={practice} visibleIds={visible.map(s => s.id)} initialView={view}
+  if (practice) return <SpecimenIdentification definition={specimen} initial={practice} visibleIds={visible.map(s => s.id)} initialView={view} adapter={practiceAdapter}
     onClose={() => { restorePracticeFocus.current = true; setHealth('starting'); setPractice(null); }} />;
   return <div className="eye-layer-workbench um-knee-workbench">
     <section className="um-knee-image" aria-label={`Independent ${specimen.label.toLowerCase()} 3D specimen`}>
@@ -96,7 +100,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
         <Button variant="outline" size="sm" onClick={() => setZoom((z) => Math.min(3, z + 0.2))} aria-label="Zoom in">+</Button>
         <Button variant="outline" size="sm" aria-pressed={labels} onClick={() => setLabels((v) => !v)}><Tags />Labels</Button>
         <Button variant="outline" size="sm" onClick={resetAll}><RotateCcw />Reset</Button>
-        {!supplement && <Button ref={practiceLauncher} variant="outline" size="sm" disabled={!ready || visible.length < 2} onClick={() => setPractice(createIdentification(specimen, visible.map(s => s.id)))}>Practise identification</Button>}
+        {(!supplement || practiceAdapter) && <Button ref={practiceLauncher} variant="outline" size="sm" disabled={!ready || practiceCount < 2} onClick={() => setPractice((practiceAdapter?.createRound ?? createIdentification)(specimen, visible.map(s => s.id)))}>Practise identification</Button>}
       </div>
       <div className="eye-layer-viewport">
         <BodyScene catalog={kneeCatalog} structures={kneeStructures} selectedId={selectedId}

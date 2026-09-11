@@ -32,7 +32,9 @@ export { ventricularRelationshipsFor } from './lib/ventricular-relationships.ts'
 export { visualRelationshipsFor, visualSellarSource } from './lib/visual-pathway-context.ts';
 export { renalRelationshipsFor } from './lib/renal-relationships.ts';
 export { hepaticBiliaryRelationshipsFor, hepaticBiliarySource } from './lib/hepatic-biliary-context.ts';
-export { cardiacRelationshipsFor, cardiacVesselSource } from './lib/cardiac-context.ts';`,
+export { cardiacRelationshipsFor, cardiacVesselSource } from './lib/cardiac-context.ts';
+export { abdominalWallDefinition } from './lib/abdominal-wall.ts';
+export { abdominalWallPractice } from './lib/abdominal-wall-practice.ts';`,
     resolveDir: fileURLToPath(root),
     sourcefile: 'requirements-audit-entry.ts',
     loader: 'ts',
@@ -43,6 +45,8 @@ export { cardiacRelationshipsFor, cardiacVesselSource } from './lib/cardiac-cont
   platform: 'node',
 });
 const {
+  abdominalWallDefinition,
+  abdominalWallPractice,
   limbDefinitions,
   specimenTeachingFor,
   specimenMotorGroups,
@@ -324,6 +328,9 @@ for (const path of [
   'app/um-limb-learning.tsx',
   'lib/independent-specimen.ts',
   'lib/abdominal-wall.ts',
+  'lib/abdominal-wall-practice.ts',
+  'lib/specimen-identification.ts',
+  'scripts/exclude-source-recovery.mjs',
   'app/abdominal-wall-study.tsx',
   'app/um-knee-study.tsx',
   'app/specimens/abdominal-wall/page.tsx',
@@ -414,6 +421,11 @@ const report = {
       triangles: abdominalWall.structures.reduce((n,s) => n + s.triangles,0),
       license: abdominalWall.source.license, source: abdominalWall.source.archive,
       registeredToCurrentBody: false, clinicalApproval: false, countedAsRootTeaching: false,
+      identificationPractice: {
+        muscleTargets: abdominalWallPractice.eligibleIds(abdominalWallDefinition, abdominalWall.structures.map(s => s.id)).length,
+        studies: abdominalWallDefinition.studies.map(s => ({ id: s.id, questions: abdominalWallPractice.createRound(abdominalWallDefinition, s.ids, () => .5)?.questions.length ?? 0 })),
+        clinicalCertification: false, sourceAndFrameChecked: true, sourceLabelsOnly: true,
+      },
       note: 'Separate v3 source specimen with layer studies; six muscle identities absent from v4 become inspectable without merging source frames. No complete sheath or neurovascular plane.',
     },
     independentSpecimens: [{

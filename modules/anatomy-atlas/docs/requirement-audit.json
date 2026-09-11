@@ -73,13 +73,13 @@
     "app/body-scene.tsx": "999017efa8dbe69ab120c6801e8e7f5abc72f1172430ae5fcf9e11c4f833aa04",
     "scripts/glb-lossless-codec.mjs": "053f0a2a7a397600b8c70814fa07f0013928d60702b163a8c8514d1eaafba224",
     "scripts/compress-model-delivery.mjs": "b18e1c9b00891f31190f8f3ccc02287500673fab48d9e74f0490cc68e9fbddf4",
-    "app/um-knee-study.tsx": "afa5564a502f25e94036a25725dc3080d12cdffe3dd8f28f5b62f83033542681",
+    "app/um-knee-study.tsx": "651068a3ab48bf5e07d534ddb98d30bcdbd59efb34f9155c8152ef7e67fce254",
     "app/um-knee-study.css": "0f9dcb118ae8634954963d1b911bd6c3c761d136513cb8da717cd37d80c05339",
     "app/um-knee-entry.css": "b68e0232a417ca07cc3ae07ed3e756c93833623981a5cf5323b7a71db7017339",
     "lib/um-knee-study.ts": "80908fce33eb88fe5d217d8ed70c948559c19981c48a7daf034353224ee25b55",
     "lib/um-limb-studies.ts": "a544d566b88d1a55c23f85e743d5cbabcc2518c54458c18eff6faa429a9ce810",
     "lib/trunk-reasoning.ts": "a98bd0dd78b8c27fdc0c72b52511e435a417eae09603a863e30305d9d18ef42d",
-    "lib/um-limb-teaching.ts": "df91dac09be82707f42bd5bafc593396a155013be22d2a9acbacbc49efeced18",
+    "lib/um-limb-teaching.ts": "f51b0532e23719646b5588188c637a49b7523acc5ff976c6cff7101ffa41bf4d",
     "content/um-limb-teaching.ts": "a595b6a56d315fe1a08e77aa8dcb3c4f1b7fe74589ef72140d38d605e8b2abb7",
     "content/um-limb-clinical.ts": "552cb9cf96de3173773ecb71e88e9e19a08904f7ff3bade456f74d815ad41161",
     "content/um-hip-thigh-clinical.ts": "07bb3a62231ffa4f8283b02da90703273e015cd051fbdb604ddaa3d5afe8b6ec",
@@ -96,10 +96,13 @@
     "app/specimen-study-link.tsx": "be97629c695d6568f07cf8af0b7248076daec9f82be689ccfd79a7d4d9cec918",
     "app/specimens/lower-limb/page.tsx": "328f61a5443e7d5cb4f1ea06d96d1c100fc4eaa705e4ddd3576912f532cb745f",
     "app/specimens/lower-limb/specimen-linked-page.tsx": "307aa24d529359cc1ed537b285ceda1dc3088d88ff981bc42e747f0f8425942a",
-    "app/um-limb-learning.tsx": "bba0b816b8f89d7645bf32ea84d430ea7ad88ad19b953462e872869de2170be8",
+    "app/um-limb-learning.tsx": "ad6ef576fc51526529794c1e847ccc411e9f38933a74b9ead4ddcf5cf673d57c",
     "lib/independent-specimen.ts": "158dddac1440445b0280414812496f8c673b7a6f05f45faa1551f8a4b5b026ed",
     "lib/abdominal-wall.ts": "06795f84c4440639f4b24ea31e10b5e0a37f0e8f494a261f512d12c8ea1687b7",
-    "app/abdominal-wall-study.tsx": "455834c4fc983198eb2c68d068d5ffc4965d90485e498652148a6bb82688e903",
+    "lib/abdominal-wall-practice.ts": "2b32f42eece085420ef6c6e20d00b1603ebaf8f49c942099458c769c4d7f9523",
+    "lib/specimen-identification.ts": "6f82c800c9c3572913f02db1cec19102a6fceb2604981d37ea98b716edb7b12a",
+    "scripts/exclude-source-recovery.mjs": "b4d1eb161942dea1b8561fe3dcba41bcd77cc703aa5a6c206f47338c6816c20a",
+    "app/abdominal-wall-study.tsx": "271f5f1e47cfd7de01f8344c02a4881c8ea851ba34ce9c46507e408b967a6c5c",
     "app/specimens/abdominal-wall/page.tsx": "d625556e60d6110e4827691768812a91e76960d2221bb61584141b1acf0cf960",
     "public/models/bodyparts3d-v3/abdominal-wall/catalog.json": "a2fa96e5203e8a2c0ce5898a0d190834523a34f0b61c4ebfbce502a933f6d03e",
     "public/models/bodyparts3d-v3/abdominal-wall/NOTICE.md": "da24e3c60a56b46d3d3c23933beee0752a5adac3fe3bf3967c9eac1a73ccc7f0",
@@ -128,6 +131,42 @@
       "registeredToCurrentBody": false,
       "clinicalApproval": false,
       "countedAsRootTeaching": false,
+      "identificationPractice": {
+        "muscleTargets": 8,
+        "studies": [
+          {
+            "id": "all",
+            "questions": 8
+          },
+          {
+            "id": "internal",
+            "questions": 6
+          },
+          {
+            "id": "transverse",
+            "questions": 4
+          },
+          {
+            "id": "rectus",
+            "questions": 2
+          },
+          {
+            "id": "right",
+            "questions": 4
+          },
+          {
+            "id": "left",
+            "questions": 4
+          },
+          {
+            "id": "muscles",
+            "questions": 8
+          }
+        ],
+        "clinicalCertification": false,
+        "sourceAndFrameChecked": true,
+        "sourceLabelsOnly": true
+      },
       "note": "Separate v3 source specimen with layer studies; six muscle identities absent from v4 become inspectable without merging source frames. No complete sheath or neurovascular plane."
     },
     "independentSpecimens": [
