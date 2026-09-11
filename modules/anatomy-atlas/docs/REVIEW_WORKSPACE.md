@@ -1,5 +1,7 @@
 # Shoulder review workspace
 
+The header also opens [Whole-body worksheets](BODY_REVIEW_WORKSHEETS.md), a separate read-only preparation workspace for all1,022 root-body selections. It does not read, save, import or approve private reviews. The persisted shoulder workflow below is unchanged; body, nested and independent scope approvals are not inferred from the pilot.
+
 ## What is delivered
 
 `/review` is the working review dashboard for the dedicated nine-structure shoulder pilot. It uses the approved Visible Medicine identity. Its structure links open the matching 3D selection in a new tab, preserving review drafts. The shoulder explorer links back to the selected structure's review.

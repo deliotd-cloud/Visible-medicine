@@ -1,6 +1,18 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — cardiac valve source screen (current source)
+## 11 September 2026 — whole-body review worksheets (current source/live)
+
+Source `0ef5c7d4c44672eb5f692c2a27e3810319e25be0`, tree `6938136c96f4f85696e0545097d21c880624452a`, parent `50f27f541417db751d28a79cdb0dc4cce0ff55de`. Fifteen source paths mirrored into the atlas module by the one-shot helper; main website unchanged. Sites source push succeeded and full HEAD verified afterward; credential cleared. Not confirmed GitHub delivery or a chat/private-D1 backup.
+
+New `/review/body` and authenticated read-only `/api/body-review` provide 1,022 root-body selections, all9,198 unchanged topic snapshots, exact display-corrected source/canonical bundle/frame metadata, scoped material fingerprints and downloadable external-review worksheets. Region/system/name filtering,20-item paging and collapsed topic/checklist sections are outside the learner's atlas. All1,022 model links resolve through existing source-pinned study links. No approval, imported sign-off, D1 write, patient image, paid-resource access or new anatomy. Existing private persisted review remains the nine-structure shoulder pilot. Source/teaching/checklist hashes are not signatures or renderer-revision approvals; nested/independent scopes and interactive questions remain separate.
+
+Passed: TypeScript; all1,022 packet/source links and9,198 unchanged snapshots; deterministic/detached material, display-correction and shared-pilot-ID checks; malformed response/authentication/download cases; six installed-React/Vinext renders;235 existing review/security/history checks; requirements freshness and diff checks; production build with108 model-source/decoded-scene checks. No browser/GPU/device/clinical acceptance claimed. No new dependency, font, texture, model, fee-bearing service or entitlement. All original geometry and clinical copy preserved.
+
+Private native save **145**, version `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_530de1f2e41481918f048f35d378ac32`; deployment `appgdep_6aa380e78d2c819191ede6aaed96be1f` **succeeded** at2026-09-11T04:18:03.454441+00:00. URL `https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site`. Owner-only access unchanged. No deployment/push/save remains pending; do not retry it.
+
+Recovery stem `work/atlas-body-review-2026-09-11`: site archive109,167,456bytes SHA256`2b1dc6b18b260279e8ea222eba44969e4781e9d2fb684e1db8ea40b99e478e5a`; delta307,200bytes SHA256`7e526c8050fcf67fc0137f7ed4cec14004faefa994730b9344e5efa2e8eb27a0`; incremental bundle25,635bytes SHA256`4b606f3ee256fc49bd22702e1e2dcd9f4fbad10bb3b0bab1708c4fa52310704e`, requires parent50f27f5..., not standalone. Helper matched1,498files/413,599,464bytes/112retainedGLBs without common credential-signature warnings (not exhaustive). Its preparation JSON flags are historical, not final status; don't overwrite or rerun. No backups removed; disk approximately734MB free. Oral overview remains complete/lower priority; goal active.
+
+## 11 September 2026 — cardiac valve source screen (earlier source-only checkpoint)
 
 Source `50f27f541417db751d28a79cdb0dc4cce0ff55de`, tree `ee692ea9aa9094b8da4f53bb0db07b3ed2d7869b`, parent `f6fb4106c7fd79337547fb4230c46ac35048a97a`. Seven documentation/diagnostic paths mirrored into `modules/anatomy-atlas` using an exact reviewed binary patch; main website untouched. Sites source push succeeded and standalone full HEAD verified. This is NOT confirmed GitHub delivery or private review/chat backup.
 

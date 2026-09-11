@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Review workspace → Whole-body worksheets** opens [source-bound review material](docs/BODY_REVIEW_WORKSHEETS.md) for1,022 body selections, with region/system filters, current teaching, exact model links and downloadable worksheets. It stays outside the learner's atlas. Worksheets grant no approval; saved review decisions remain shoulder-only.
+
 A [cardiac valve/subvalvar source review](docs/CARDIAC_VALVE_SOURCE_REVIEW.md) records 16 existing source files and their specific identity/mesh issues. No uncertain valve geometry is added to the live atlas; oral detail stays lower priority while wider-body development continues.
 
 **Shoulder & arm / Forearm / Hand → Dissect → Muscles by nerve** opens [17 nerve/branch groups](docs/UPPER_LIMB_MOTOR.md) linked to 102 existing muscle selections. Show a group with bones, switch sides and select muscles for their notes. The control stays collapsed; mixed supply and whole grouped surfaces are explicit. These are typical relationships, not nerve paths, patient findings or clinical approval.

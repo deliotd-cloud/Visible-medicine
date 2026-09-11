@@ -1,0 +1,382 @@
+'use client';
+import { useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
+import { Brand } from '../../brand';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from '@/components/ui/select';
+import { bodySystems } from '../../body-types';
+import {
+  bodyReviewQueue,
+  type BodyReviewSummary,
+} from '@/lib/body-review-search';
+import type { BodyReviewMaterial } from '@/lib/body-review-material';
+import { parseBodyReviewResponse } from '@/lib/body-review-response';
+
+const labels = {
+  anatomy: 'Anatomy',
+  function: 'Function',
+  ct: 'CT',
+  mri: 'MRI',
+  xray: 'X-ray',
+  ultrasound: 'Ultrasound',
+  pathology: 'Pathology',
+  clinical: 'Clinical',
+  quiz: 'Quiz notes',
+};
+const readiness = {
+  draft: 'Draft',
+  pending: 'Pending',
+  'identity-only': 'Identity only',
+  'generated-identification': 'Identification prompt only',
+};
+export function BodyReviewDashboard({
+  rows,
+  regions,
+  initialId,
+  initialRegion,
+}: {
+  rows: BodyReviewSummary[];
+  regions: { id: string; name: string }[];
+  initialId: string | null;
+  initialRegion: string;
+}) {
+  const [region, setRegion] = useState(initialRegion),
+    [system, setSystem] = useState('all'),
+    [query, setQuery] = useState('');
+  const [page, setPage] = useState(0),
+    [selected, setSelected] = useState(initialId);
+  const [material, setMaterial] = useState<BodyReviewMaterial | null>(null),
+    [error, setError] = useState(''),
+    [loading, setLoading] = useState(false),
+    [attempt, setAttempt] = useState(0);
+  const matches = useMemo(
+    () => bodyReviewQueue(rows, region, system, query),
+    [rows, region, system, query],
+  );
+  const currentPage = Math.min(
+    page,
+    Math.max(0, Math.ceil(matches.length / 20) - 1),
+  );
+  const visible = matches.slice(currentPage * 20, currentPage * 20 + 20);
+  useEffect(() => {
+    const controller = new AbortController();
+    let current = true;
+    setMaterial(null);
+    setError('');
+    if (!selected) {
+      setLoading(false);
+      return () => controller.abort();
+    }
+    setLoading(true);
+    fetch(`/api/body-review?structure=${encodeURIComponent(selected)}`, {
+      signal: controller.signal,
+      cache: 'no-store',
+    })
+      .then(async (response) => {
+        const data = await response.json();
+        if (!response.ok)
+          throw new Error(
+            data &&
+              typeof data === 'object' &&
+              'error' in data &&
+              typeof data.error === 'string'
+              ? data.error
+              : 'Unable to load the worksheet.',
+          );
+        const parsed = parseBodyReviewResponse(data, selected);
+        if (!parsed) throw new Error('Unexpected worksheet. Please retry.');
+        if (current) setMaterial(parsed);
+      })
+      .catch((e) => {
+        if (current && !controller.signal.aborted)
+          setError(
+            e instanceof Error ? e.message : 'Unable to load the worksheet.',
+          );
+      })
+      .finally(() => {
+        if (current) setLoading(false);
+      });
+    return () => {
+      current = false;
+      controller.abort();
+    };
+  }, [selected, attempt]);
+  function resetSelection() {
+    setPage(0);
+    setSelected(null);
+    setMaterial(null);
+    setError('');
+  }
+  return (
+    <div className="body-review-app">
+      <header className="body-review-header">
+        <Brand />
+        <span>Body review worksheets</span>
+        <Link href="/review">Shoulder review records</Link>
+        <Link href="/">Back to atlas</Link>
+      </header>
+      <main className="body-review-shell">
+        <h1>Review the wider body</h1>
+        <p>
+          Source details and current teaching for {rows.length.toLocaleString()}{' '}
+          body selections. Worksheets only — no decisions saved or approvals
+          granted.
+        </p>
+        <div className="body-review-grid">
+          <aside className="body-review-queue" aria-label="Body review queue">
+            <label htmlFor="body-review-query">Find a structure</label>
+            <Input
+              id="body-review-query"
+              value={query}
+              maxLength={256}
+              placeholder="Name or anatomical ID"
+              onChange={(e) => {
+                setQuery(e.target.value);
+                resetSelection();
+              }}
+            />
+            <label id="body-review-region-label">Region</label>
+            <Select
+              value={region}
+              onValueChange={(v) => {
+                if (v) {
+                  setRegion(v);
+                  resetSelection();
+                }
+              }}
+            >
+              <SelectTrigger aria-labelledby="body-review-region-label">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All regions</SelectItem>
+                {regions.map((r) => (
+                  <SelectItem value={r.id} key={r.id}>
+                    {r.name}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            <label id="body-review-system-label">System</label>
+            <Select
+              value={system}
+              onValueChange={(v) => {
+                if (v) {
+                  setSystem(v);
+                  resetSelection();
+                }
+              }}
+            >
+              <SelectTrigger aria-labelledby="body-review-system-label">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All systems</SelectItem>
+                {Object.entries(bodySystems).map(([id, s]) => (
+                  <SelectItem value={id} key={id}>
+                    {s.name}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            <p role="status">{matches.length} matching selections</p>
+            <ul>
+              {visible.map((s) => (
+                <li key={s.id}>
+                  <Button
+                    variant={selected === s.id ? 'secondary' : 'ghost'}
+                    aria-pressed={selected === s.id}
+                    onClick={() => {
+                      setMaterial(null);
+                      setError('');
+                      setSelected(s.id);
+                      setAttempt((n) => n + 1);
+                    }}
+                  >
+                    {s.name}
+                    <small>
+                      {s.fmaId} · {s.laterality}
+                    </small>
+                  </Button>
+                </li>
+              ))}
+            </ul>
+            {!matches.length && <p>No matches. Try another region or name.</p>}
+            <nav aria-label="Review queue pages">
+              <Button
+                variant="outline"
+                disabled={currentPage === 0}
+                onClick={() => setPage(currentPage - 1)}
+              >
+                Previous
+              </Button>
+              <span>
+                {matches.length ? currentPage + 1 : 0} /{' '}
+                {Math.ceil(matches.length / 20)}
+              </span>
+              <Button
+                variant="outline"
+                disabled={(currentPage + 1) * 20 >= matches.length}
+                onClick={() => setPage(currentPage + 1)}
+              >
+                Next
+              </Button>
+            </nav>
+          </aside>
+          <section
+            className="body-review-paper"
+            aria-label="Selected review worksheet"
+            aria-busy={loading}
+          >
+            {loading && (
+              <p role="status">Loading the selected source and teaching…</p>
+            )}
+            {error && (
+              <div role="alert">
+                <p>{error}</p>
+                <Button
+                  variant="outline"
+                  onClick={() => setAttempt((n) => n + 1)}
+                >
+                  Retry
+                </Button>
+                <p>
+                  <a
+                    href="/signin-with-chatgpt?return_to=%2Freview%2Fbody"
+                    target="_top"
+                  >
+                    Sign in to the review workspace
+                  </a>
+                  . No review decision has been saved.
+                </p>
+              </div>
+            )}
+            {!selected && (
+              <p>Choose a structure to inspect its source and teaching.</p>
+            )}
+            {material?.structureId === selected && (
+              <BodyReviewDetails material={material} />
+            )}
+          </section>
+        </div>
+      </main>
+    </div>
+  );
+}
+
+export function BodyReviewDetails({
+  material,
+}: {
+  material: BodyReviewMaterial;
+}) {
+  const s = material.source.structure;
+  return (
+    <>
+      <h2>{s.name}</h2>
+      <p>
+        {s.fmaId} · {s.laterality} · {s.sources.length} source parts
+      </p>
+      <div className="body-review-actions">
+        {material.atlasLink && (
+          <Link href={material.atlasLink}>Open this model</Link>
+        )}
+        <a
+          href={`/api/body-review?structure=${encodeURIComponent(s.id)}&download=1`}
+        >
+          Download review worksheet
+        </a>
+      </div>
+      {s.coverageNote && (
+        <p className="body-review-caution">{s.coverageNote}</p>
+      )}
+      <details>
+        <summary>Source & scope</summary>
+        <p>{material.source.credit}</p>
+        <p>
+          {material.source.licence} · source version{' '}
+          {material.source.sourceVersion} · {s.sourceTree}
+        </p>
+        <code>{s.id}</code>
+        <p>Canonical model checksum</p>
+        <code>{material.source.bundle.sha256}</code>
+        <p>Worksheet material fingerprint (not an approval or signature)</p>
+        <code>{material.materialHash}</code>
+        <ul>
+          {s.sources.map((p) => (
+            <li key={p.file}>
+              {p.file}
+              <code>{p.sha256}</code>
+            </li>
+          ))}
+        </ul>
+        <ul>
+          {material.limits.map((limit) => (
+            <li key={limit}>{limit}</li>
+          ))}
+        </ul>
+      </details>
+      <h3>Current teaching</h3>
+      <p>
+        Readiness describes available copy, not clinical approval. Expand a
+        topic to review it.
+      </p>
+      {material.topics.map((topic) => (
+        <details key={topic.tab}>
+          <summary>
+            {labels[topic.tab]} <span>{readiness[topic.readiness]}</span>
+          </summary>
+          <h4>{topic.title}</h4>
+          <p>{topic.body}</p>
+          {topic.bullets && (
+            <ul>
+              {topic.bullets.map((b, i) => (
+                <li key={i}>{b}</li>
+              ))}
+            </ul>
+          )}
+          {topic.note && <p>{topic.note}</p>}
+          {topic.citations?.map((url, i) =>
+            /^https?:\/\//i.test(url) ? (
+              <a
+                className="body-review-reference"
+                href={url}
+                target="_blank"
+                rel="noreferrer"
+                key={`${url}-${i}`}
+              >
+                Reference {i + 1} ↗
+              </a>
+            ) : (
+              <p key={i}>{url}</p>
+            ),
+          )}
+        </details>
+      ))}
+      <details>
+        <summary>Review checklist & handoff</summary>
+        <p>
+          Download the worksheet to record reviewer details, evidence and
+          corrections externally. It cannot be imported as a sign-off; the
+          private saved-review workflow remains shoulder-only.
+        </p>
+        {Object.entries(material.checklist).map(([track, items]) => (
+          <section key={track}>
+            <h4>{track}</h4>
+            <ul>
+              {items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </details>
+    </>
+  );
+}
