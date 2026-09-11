@@ -65,7 +65,17 @@ export const systemicVenousGroups = {
   cephalic: group(
     ['FMA13325', 'FMA13326'],
     'forearm',
-    'Superficial lateral drainage is distinct from deep veins. The missing median cubital communication is not drawn between cephalic and basilic.',
+    'Superficial lateral drainage is distinct from deep veins. A source-labelled median cubital vein is available; its typical communication is not a validated donor-specific junction.',
+  ),
+  medianCubital: group(
+    ['FMA22964', 'FMA22965'],
+    'forearm',
+    'A common superficial connection between cephalic and basilic routes. Cubital patterns vary; original surface gaps and junctions remain unmodified.',
+  ),
+  medianAntebrachial: group(
+    ['FMA22968', 'FMA22969'],
+    'forearm',
+    'Superficial anterior forearm return. Basilic and median cubital destinations are alternative variable patterns, not two established outlets in this source.',
   ),
   basilic: group(
     ['FMA22909', 'FMA22910'],
@@ -158,6 +168,10 @@ const relationship = (from: Key, to: Key, kind: VenousKind, note: string) => ({
   note,
 });
 export const systemicVenousRelationships = [
+  relationship('cephalic', 'medianCubital', 'variable', 'Common superficial communication towards basilic return, not a replacement for the cephalic route to axillary. No flow direction or donor junction is measured.'),
+  relationship('medianCubital', 'basilic', 'variable', 'Typical superficial communication; cubital patterns vary and this source does not validate an individual junction.'),
+  relationship('medianAntebrachial', 'basilic', 'variable', 'One possible termination. The median cubital route is an alternative, not a second proven outlet.'),
+  relationship('medianAntebrachial', 'medianCubital', 'variable', 'An alternative termination to basilic drainage; not a simultaneous second outlet or a measured source connection.'),
   relationship(
     'middleHepatic',
     'ivc',

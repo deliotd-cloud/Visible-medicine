@@ -113,6 +113,8 @@ const brainstem = await json(
   'public/models/bodyparts3d/brainstem/catalog.json',
 );
 const collicularBrachia = await json('public/models/bodyparts3d/collicular-brachia/catalog.json');
+const cubitalVeins = await json('public/models/bodyparts3d/cubital-veins/catalog.json');
+const cubitalVeinAudit = await json('docs/cubital-vein-source-audit.json');
 const collicularBrachiaAudit = await json('docs/collicular-brachia-source-audit.json');
 const cerebral = await json('public/models/bodyparts3d/cerebral/catalog.json');
 const cardiac = await json('public/models/bodyparts3d/cardiac/catalog.json');
@@ -335,6 +337,9 @@ for (const path of [
   'public/models/bodyparts3d/ventricles/catalog.json',
   'public/models/bodyparts3d/brainstem/catalog.json',
   'public/models/bodyparts3d/collicular-brachia/catalog.json',
+  'public/models/bodyparts3d/cubital-veins/catalog.json',
+  'docs/cubital-vein-source-audit.json',
+  'lib/cubital-veins.ts',
   'docs/collicular-brachia-source-audit.json',
   'lib/brainstem.ts',
   'content/collicular-brachia-teaching.ts',
@@ -511,6 +516,14 @@ const report = {
     'Offline source and displayed-copy inventory; no clinical or browser certification.',
   sourceHashes,
   anatomy: {
+    cubitalVeins: {
+      sourceSelections: cubitalVeins.structures.length,
+      originalTriangles: cubitalVeinAudit.groups.reduce((sum, g) => sum + g.topology.triangles, 0),
+      sourceFiles: cubitalVeins.structures.reduce((sum, s) => sum + s.sources.length, 0),
+      exactSourceFacesRetained: true,
+      clinicalApproval: false,
+      connectedLumenClaimed: false,
+    },
     longusColli: {
       sourceSelections: catalog.structures.filter(s=>s.bundle==='longus-colli').length,
       originalTriangles: 7162, sourceFiles: 3, clinicalApproval: false,

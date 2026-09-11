@@ -33,30 +33,30 @@
     ],
     "crossTreeProofSha256": "149aa0c50045717713a17706a8e8bbaa1002cc1dec4427d0425e860bf24946ed",
     "additionalSourceHoldProofSha256": "376863798d350db47711e802a9f5a0180b9d1c99f0972bbec769e6588e5c5b9a",
-    "currentRootSha256": "3f59bfdf91d398d2857ed34e6fb5c51f1f716ca1258075dd3e7d9443144aa76b",
+    "currentRootSha256": "e1322a10ec26ced39c68c3606350e996c324cdc7fc17d680fb6b45bfb8582cdc",
     "reachableNestedSha256": "3a105ee0e4963dd1ca46d3af1747b2975de9a8b27db7c198123f69c5e2a13fcb",
     "shoulderManifestSha256": "619e3ab84712487bd032b84a8f8b52f94d10883d8db7798057049bab287de857",
     "sourceIdSetSha256": "8e2057667c31e8fc99b87eb4c020467eadb9698ca09a87fc85cd76350254e655"
   },
   "summary": {
     "referenceSourceFiles": 2234,
-    "rootSelections": 1042,
-    "rootSourceFileIds": 1702,
+    "rootSelections": 1046,
+    "rootSourceFileIds": 1706,
     "reachableNestedSelections": 71,
-    "rootOnlyDifferences": 532,
+    "rootOnlyDifferences": 528,
     "rootBindingsNeedingEquivalenceReview": 0,
     "allSourceStatuses": {
       "excluded-by-display-correction": 1,
       "known-source-hold": 45,
-      "needs-source-and-anatomical-review": 461,
+      "needs-source-and-anatomical-review": 457,
       "nested-source-covered": 24,
       "related-cross-tree-hold": 1,
-      "root-source-covered": 1702
+      "root-source-covered": 1706
     },
     "rootDifferenceStatuses": {
       "excluded-by-display-correction": 1,
       "known-source-hold": 45,
-      "needs-source-and-anatomical-review": 461,
+      "needs-source-and-anatomical-review": 457,
       "nested-source-covered": 24,
       "related-cross-tree-hold": 1
     },
@@ -72,7 +72,7 @@
       "respiratory": 2,
       "sensory": 8,
       "skeletal": 3,
-      "venous": 154
+      "venous": 150
     },
     "reviewQueueReferenceGroups": {
       "arterial": 279,
@@ -85,7 +85,7 @@
       "reproductive": 5,
       "sensory": 8,
       "skeletal": 2,
-      "venous": 138
+      "venous": 134
     }
   },
   "limitations": [
@@ -7007,50 +7007,6 @@
       }
     },
     {
-      "file": "FJ2234",
-      "referenceDisplaySystem": "venous",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA22969",
-          "name": "left median antebrachial vein",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 334909,
-        "crc32": 3043951131,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ2235",
-      "referenceDisplaySystem": "venous",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA22965",
-          "name": "left median cubital vein",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 150387,
-        "crc32": 2859437884,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
       "file": "FJ2236",
       "referenceDisplaySystem": "arterial",
       "status": "needs-source-and-anatomical-review",
@@ -7464,50 +7420,6 @@
       "source": {
         "bytes": 227176,
         "crc32": 1155330133,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ2286",
-      "referenceDisplaySystem": "venous",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA22968",
-          "name": "right median antebrachial vein",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 342103,
-        "crc32": 171762157,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ2287",
-      "referenceDisplaySystem": "venous",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA22964",
-          "name": "right median cubital vein",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 151584,
-        "crc32": 2777738024,
         "sha256": null,
         "geometrySha256": null
       }

@@ -50,7 +50,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "b0b823b4b59f4c7d3f0509d40173ebaa1c07638198e31b610b702370ab0f67ac"
+      "sha256": "a322b58e53d4c066137e764e95a75c79dd7c273f05eae89ca553c9a6035591d6"
     },
     {
       "path": "app/body-explorer.css",
@@ -434,7 +434,7 @@
     },
     {
       "path": "content/systemic-venous.ts",
-      "sha256": "0070b6d0aac8d2d971a7f21d4688ced194d50d33b1846ee10cebf823d7c375a2"
+      "sha256": "b209da089da96d8585e069c2fa04764ce04d2ffd68d61ba236175e2a8b6a5bf2"
     },
     {
       "path": "content/tarsal-imaging-concepts.ts",
@@ -622,7 +622,7 @@
     },
     {
       "path": "lib/body-display-catalog.ts",
-      "sha256": "846464eb271018ba67c3c86c77f5a2f5955c29eb84c7b5746165617a94475c26"
+      "sha256": "8cd9b9b209a524fe01d36952d9df9e445dd85beed859de7373e75cf1d75e58e9"
     },
     {
       "path": "lib/body-source-additions.ts",
@@ -695,6 +695,10 @@
     {
       "path": "lib/cricothyroid.ts",
       "sha256": "1e7d88df1c8f24a4b33b520637d00bdf64d498a5017c332a6ce4d2a1cc0828b9"
+    },
+    {
+      "path": "lib/cubital-veins.ts",
+      "sha256": "1877da3b251cae1816573786fe271a94306571f606fb8410386a326efe3e30e6"
     },
     {
       "path": "lib/deep-leg-veins.ts",
@@ -1134,7 +1138,7 @@
     },
     {
       "path": "lib/systemic-venous.ts",
-      "sha256": "6dced6f6a7602a2117813541b5b838c5e6ce3a9c02d0fc5ee9131c634c70be1f"
+      "sha256": "3d7ea90f180f90efefd8e6a922f30add3d88c010147a9ed1ff197fbd2995a644"
     },
     {
       "path": "lib/tarsal-imaging.ts",
@@ -1293,6 +1297,10 @@
       "sha256": "bf52f5d63c8d3917179c52fb5d62f0a931d1f57dff4c27de615329d058fa7479"
     },
     {
+      "path": "public/models/bodyparts3d/cubital-veins/catalog.json",
+      "sha256": "623c140cea4f9273a4b0f0233274e617c2d705138a19cb4d7dc69e48054ff2be"
+    },
+    {
       "path": "public/models/bodyparts3d/deep-leg-veins/catalog.json",
       "sha256": "bc3c1c7418d8fe31ef94b6fb8b74d20fe54d8e0f2e67aef4df3c1182b68d137a"
     },
@@ -1381,5 +1389,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "fc097f2670aa7d7fd6d588051ee63f91d5f0145a2f7dcfaaaa5a36703a28815c"
+  "sha256": "3a5fd96277236603b16c3a7fe21ca93b70c8a06030216416e4a014f320002cab"
 }

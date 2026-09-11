@@ -40,8 +40,8 @@ const {
 const targets = catalog.structures.filter((s) =>
   Object.values(groups).some((g) => g.fmaIds.includes(s.fmaId)),
 );
-assert.equal(targets.length, 47);
-assert.equal(Object.keys(groups).length, 26);
+assert.equal(targets.length, 51);
+assert.equal(Object.keys(groups).length, 28);
 assert.equal(pins.entries.length, 239);
 const extra = JSON.parse(
   await readFile(
@@ -61,6 +61,9 @@ const hepatic = JSON.parse(
 );
 pins.entries.push(...hepatic.structures);
 pins.bundles.push(...hepatic.bundles);
+const cubital = JSON.parse(await readFile('public/models/bodyparts3d/cubital-veins/catalog.json'));
+pins.entries.push(...cubital.structures);
+pins.bundles.push(...cubital.bundles);
 const byFma = (fma) => targets.find((s) => s.fmaId === fma);
 const infoFor = (fma) =>
   neighbours(catalog, 'whole-body', 'both', byFma(fma).id);
@@ -78,6 +81,10 @@ const pairs = [
   ['FMA4944', 'FMA4838'],
   ['FMA4838', 'FMA4720'],
   ...[
+    ['FMA13325', 'FMA13326', 'FMA22964', 'FMA22965'],
+    ['FMA22964', 'FMA22965', 'FMA22909', 'FMA22910'],
+    ['FMA22968', 'FMA22969', 'FMA22909', 'FMA22910'],
+    ['FMA22968', 'FMA22969', 'FMA22964', 'FMA22965'],
     ['FMA4754', 'FMA4762', 'FMA4751', 'FMA4761'],
     ['FMA4755', 'FMA4763', 'FMA4751', 'FMA4761'],
     ['FMA13330', 'FMA13331', 'FMA4755', 'FMA4763'],
@@ -105,13 +112,13 @@ const pairs = [
   ['FMA14338', 'FMA10951'],
   ['FMA14339', 'FMA10951'],
 ];
-assert.equal(pairs.length, 49);
+assert.equal(pairs.length, 57);
 const sort = (a) =>
   a.map((v) => JSON.stringify(v)).sort((a, b) => a.localeCompare(b));
 const rows = targets.flatMap((s) =>
   infoFor(s.fmaId).rows.map((r) => ({ from: s.fmaId, ...r })),
 );
-assert.equal(rows.length, 98);
+assert.equal(rows.length, 114);
 assert.deepEqual(
   sort(
     rows
@@ -131,7 +138,7 @@ for (const row of rows) {
     b = row.structure.laterality;
   assert(!(a === 'right' && b === 'left') && !(a === 'left' && b === 'right'));
 }
-for (const fma of ['FMA44334', 'FMA44335'])
+for (const fma of ['FMA44334', 'FMA44335', 'FMA22964', 'FMA22965', 'FMA22968', 'FMA22969'])
   assert.equal(
     infoFor(fma).rows.find((r) => r.direction === 'outlet').kind,
     'variable',
@@ -435,14 +442,14 @@ for (const selected of targets)
   }
 console.log(
   JSON.stringify({
-    veins: 47,
-    groups: 26,
-    relationships: 49,
-    reciprocalRows: 98,
+    veins: targets.length,
+    groups: Object.keys(groups).length,
+    relationships: pairs.length,
+    reciprocalRows: rows.length,
     plans,
     links,
     rejections,
-    sourceRows: 47,
+    sourceRows: targets.length,
     actualComponentRenders: renders,
     actualParentHandlers: handlers,
     clinicalValidation: false,

@@ -91,6 +91,7 @@ import { deepLegVeinLesson } from '../lib/deep-leg-veins';
 import { portalVeinLesson } from '../lib/portal-veins';
 import { hepaticVeinLesson } from '../lib/hepatic-veins';
 import { longusColliLesson } from '../lib/longus-colli';
+import { cubitalVeinLesson } from '../lib/cubital-veins';
 import { tarsalImagingLesson } from '../lib/tarsal-imaging';
 
 // Original short educational notes, not imported textbook prose. Review pending.
@@ -136,6 +137,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const cubitalVein = cubitalVeinLesson(s, tab);
+  if (cubitalVein) return cubitalVein;
   const deepLegVein = deepLegVeinLesson(s, tab);
   if (deepLegVein) return deepLegVein;
   const longusColli = longusColliLesson(s, tab);

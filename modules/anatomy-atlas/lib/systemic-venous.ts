@@ -1,4 +1,5 @@
 import hepatic from '../public/models/bodyparts3d/hepatic-veins/catalog.json' with { type: 'json' };
+import cubital from '../public/models/bodyparts3d/cubital-veins/catalog.json' with { type: 'json' };
 import originalPins from '../content/systemic-venous-pins.json' with { type: 'json' };
 import brachial from '../public/models/bodyparts3d/brachial-veins/catalog.json' with { type: 'json' };
 import deepLeg from '../public/models/bodyparts3d/deep-leg-veins/catalog.json' with { type: 'json' };
@@ -21,12 +22,14 @@ const pins = {
     ...brachial.structures,
     ...deepLeg.structures,
     ...hepatic.structures,
+    ...cubital.structures,
   ],
   bundles: [
     ...originalPins.bundles,
     ...brachial.bundles,
     ...deepLeg.bundles,
     ...hepatic.bundles,
+    ...cubital.bundles,
   ],
 };
 // A separate concept per actual side prevents contralateral tributaries at paired vessels.

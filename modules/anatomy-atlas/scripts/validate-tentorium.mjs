@@ -28,7 +28,7 @@ const raw = JSON.parse(
 const before = JSON.stringify(raw),
   catalog = a.bodyDisplayCatalog(raw),
   s = catalog.structures.find((s) => s.fmaId === "FMA83966");
-assert.equal(catalog.structures.length, 1042);
+assert.equal(catalog.structures.length, 1046);
 assert.equal(JSON.stringify(raw), before);
 assert.equal(a.bodyDisplayCatalog(catalog), catalog);
 assert.deepEqual(s, pins.structures[0]);
@@ -216,7 +216,7 @@ const point = a
 point.forEach((v, i) => assert(Math.abs(v - s.center[i]) < 1e-8));
 console.log(
   JSON.stringify({
-    displaySelections: 1042,
+    displaySelections: 1046,
     newSurfaces: 1,
     triangles: 21924,
     coverage: "partial-right-source",
