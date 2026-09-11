@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import { readFile, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+const hash=(b)=>createHash('sha256').update(b).digest('hex');
+const bytes=await readFile('public/models/bodyparts3d/full-body/catalog.json');
+assert.equal(hash(bytes),'109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7');
+const catalog=JSON.parse(bytes), ids=['FMA52749','FMA12519','FMA12520','FMA12521','FMA12522','FMA12523','FMA12524','FMA12525'];
+const entries=catalog.structures.filter(s=>ids.includes(s.fmaId)); assert.equal(entries.length,8);
+const bundles=catalog.bundles.filter(b=>entries.some(s=>s.bundle===b.id));
+for(const b of bundles) assert.equal(hash(await readFile('public'+b.url.split('?')[0])),b.sha256);
+const data={sourceCommit:'4c30ff9f4a29249cdd716e616a55b98006d54a3a',sourceVersion:catalog.sourceVersion,license:catalog.license,coordinateSystem:catalog.coordinateSystem,entries,bundles};
+const output=JSON.stringify(data,null,2)+'\n',path='content/inferior-thyroid-context-pins.json';
+if(process.argv.includes('--check')) assert.equal((await readFile(path,'utf8')).replace(/\r\n/g,'\n'),output);
+else await writeFile(path,output,{flag:'wx'});
+console.log(JSON.stringify({contextBones:entries.length,bundles:bundles.length,geometryChanged:false}));

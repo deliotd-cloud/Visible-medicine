@@ -81,6 +81,7 @@ assert.throws(() => policy.assertNoKnownHolds([]));
 for (const bundle of [
   'cubital-veins',
   'genicular-arteries',
+  'inferior-thyroid-arteries',
   'deep-leg-veins',
   'brachial-veins',
 ]) {

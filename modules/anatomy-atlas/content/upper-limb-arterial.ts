@@ -5,6 +5,7 @@ import type {
 
 // Original bounded relationship map. No imported diagrams, vascular endpoints or donor findings.
 export const upperArterialReferences = {
+  neck: 'https://anatomy.ttuhscep.edu/nervous_system/antneck_tables.html',
   university:
     'https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html',
   landmarks:
@@ -126,7 +127,13 @@ export const upperArterialConcepts = {
   thyrocervical: {
     fmaIds: ['FMA3992', 'FMA4084'],
     context: 'shoulder-arm',
-    note: 'Only the shoulder-facing portion of this branch map is included. Neck/thyroid supply is not a complete tree here.',
+    note: 'The supplied inferior thyroid and shoulder-facing branches are mapped. Neck/thyroid supply is not a complete tree here.',
+  },
+  inferiorThyroid: {
+    fmaIds: ['FMA10697', 'FMA10680'],
+    context: 'head-neck',
+    contextFmaIds: ['FMA52749', 'FMA12519', 'FMA12520', 'FMA12521', 'FMA12522', 'FMA12523', 'FMA12524', 'FMA12525'],
+    note: 'A finite source artery surface, not the full thyroid/parathyroid vascular tree. Recurrent laryngeal nerves, gland tissue, lumens and exact source junctions are not supplied by this addition.',
   },
   costocervical: {
     fmaIds: ['FMA5039', 'FMA4086'],
@@ -151,6 +158,12 @@ export const upperArterialRelations: readonly {
   kind: ArterialRelationKind;
   note: string;
 }[] = [
+  {
+    from: 'thyrocervical',
+    to: 'inferiorThyroid',
+    kind: 'branch',
+    note: 'Typical inferior thyroid origin from the same-side thyrocervical trunk. Source proximity does not validate a continuous lumen or a donor-specific junction.',
+  },
   {
     from: 'subclavian',
     to: 'axillary',

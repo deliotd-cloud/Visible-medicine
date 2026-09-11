@@ -117,6 +117,8 @@ const collicularBrachia = await json('public/models/bodyparts3d/collicular-brach
 const cubitalVeins = await json('public/models/bodyparts3d/cubital-veins/catalog.json');
 const genicularArteries = await json('public/models/bodyparts3d/genicular-arteries/catalog.json');
 const genicularAudit = await json('docs/genicular-artery-source-audit.json');
+const inferiorThyroid = await json('public/models/bodyparts3d/inferior-thyroid-arteries/catalog.json');
+const musclePartCondition = await json('docs/muscle-part-condition-audit.json');
 const cubitalVeinAudit = await json('docs/cubital-vein-source-audit.json');
 const collicularBrachiaAudit = await json('docs/collicular-brachia-source-audit.json');
 const cerebral = await json('public/models/bodyparts3d/cerebral/catalog.json');
@@ -344,6 +346,11 @@ for (const path of [
   'public/models/bodyparts3d/genicular-arteries/catalog.json',
   'docs/genicular-artery-source-audit.json',
   'lib/genicular-arteries.ts',
+  'public/models/bodyparts3d/inferior-thyroid-arteries/catalog.json',
+  'docs/inferior-thyroid-source-audit.json',
+  'docs/muscle-part-condition-audit.json',
+  'content/inferior-thyroid-context-pins.json',
+  'lib/inferior-thyroid-arteries.ts',
   'content/genicular-study.ts',
   'content/genicular-study-pins.json',
   'lib/genicular-study.ts',
@@ -526,6 +533,14 @@ const report = {
     'Offline source and displayed-copy inventory; no clinical or browser certification.',
   sourceHashes,
   anatomy: {
+    inferiorThyroidArteries: {
+      sourceSelections: inferiorThyroid.structures.length,
+      originalTriangles: 962,
+      neckContextBones: 8,
+      clinicalApproval: false,
+      sourceOnlyMuscleCandidates: musclePartCondition.rows.length,
+      muscleCandidatesAdmitted: 0,
+    },
     genicularArteries: {
       focusRecipe: genicularStudy.id,
       focusRegions: genicularStudy.regions,

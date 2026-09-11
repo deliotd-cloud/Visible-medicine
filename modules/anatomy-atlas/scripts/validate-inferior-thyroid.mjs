@@ -8,7 +8,7 @@ import { build } from './workspace-test-build.mjs';
 const compiled = await build({
   stdin: {
     contents:
-      "export * from './lib/cubital-veins'; export * from './lib/body-display-catalog'; export * from './lib/anatomy-link-registry'; export * from './lib/anatomy-coordinates'; export * from './lib/study-links'; export * from './app/dissection-data'; export {bodyLesson} from './app/body-content';",
+      "export * from './lib/inferior-thyroid-arteries'; export * from './lib/arterial'; export * from './lib/body-display-catalog'; export * from './lib/anatomy-link-registry'; export * from './lib/anatomy-coordinates'; export * from './lib/study-links'; export * from './app/dissection-data'; export {bodyLesson} from './app/body-content';",
     resolveDir: process.cwd(),
     loader: 'ts',
   },
@@ -31,7 +31,7 @@ assert.equal(
 const raw = JSON.parse(rawBytes),
   before = JSON.stringify(raw),
   pins = JSON.parse(
-    await readFile('public/models/bodyparts3d/cubital-veins/catalog.json'),
+    await readFile('public/models/bodyparts3d/inferior-thyroid-arteries/catalog.json'),
   );
 const catalog = api.bodyDisplayCatalog(raw);
 assert(
@@ -42,22 +42,22 @@ assert.equal(catalog.structures.length, 1058);
 assert.equal(JSON.stringify(raw), before);
 assert.equal(api.bodyDisplayCatalog(catalog), catalog);
 assert.deepEqual(
-  catalog.structures.filter((s) => s.bundle === 'cubital-veins'),
+  catalog.structures.filter((s) => s.bundle === 'inferior-thyroid-arteries'),
   pins.structures,
 );
-const detached = api.addCubitalVeins(raw);
+const detached = api.addInferiorThyroidArteries(raw);
 detached.structures.at(-1).anchor[0] = 999;
 assert.deepEqual(
-  api.addCubitalVeins(raw).structures.slice(-4),
+  api.addInferiorThyroidArteries(raw).structures.slice(-2),
   pins.structures,
 );
 const unrelated = { ...raw, structures: [], bundles: [] };
-assert.equal(api.addCubitalVeins(unrelated), unrelated);
+assert.equal(api.addInferiorThyroidArteries(unrelated), unrelated);
 let rejections = 0;
 const reject = (mutate) => {
   const bad = structuredClone(catalog);
   mutate(bad);
-  assert.throws(() => api.addCubitalVeins(bad));
+  assert.throws(() => api.addInferiorThyroidArteries(bad));
   rejections++;
 };
 for (const p of [...pins.contextRecords, ...pins.structures]) {
@@ -93,7 +93,7 @@ for (const field of ['sourceVersion', 'license', 'coordinateSystem'])
     c[field] = 'changed';
   });
 const bytes = await readFile(
-  'public/models/bodyparts3d/cubital-veins/cubital-veins.glb',
+  'public/models/bodyparts3d/inferior-thyroid-arteries/inferior-thyroid-arteries.glb',
 );
 assert.equal(
   createHash('sha256').update(bytes).digest('hex'),
@@ -109,8 +109,8 @@ const meshes = [];
 scene.traverse((o) => {
   if (o.isMesh) meshes.push(o);
 });
-assert.equal(meshes.length, 4);
-const sourceShapes=[];
+assert.equal(meshes.length, 2);
+const sourceShapes = [];
 let links = 0,
   triangles = 0;
 const entries = api.bodyLinkEntries(catalog),
@@ -119,17 +119,45 @@ for (const s of pins.structures) {
   const mesh = meshes.find((m) => m.name === s.nodeName);
   assert(mesh);
   assert.equal(mesh.userData.structureId, s.id);
+  const info = api.arterialNeighbours(
+    catalog,
+    'whole-body',
+    s.laterality,
+    s.id,
+  );
+  const upstream = info.rows.filter((r) => r.direction === 'upstream');
+  assert.equal(upstream.length, 1);
+  assert.equal(
+    upstream[0].structure.fmaId,
+    s.laterality === 'right' ? 'FMA3992' : 'FMA4084',
+  );
+  assert.equal(upstream[0].kind, 'branch');
+  assert(info.rows.every((r) => r.structure.laterality === s.laterality));
+  assert.match(api.bodyLesson(s, 'anatomy').body, /thyrocervical/);
+
   const positions = mesh.geometry.attributes.position.array;
-  const original = await readFile('content/sources/cubital-veins/'+s.sources[0].file+'.obj');
-  assert.equal(createHash('sha256').update(original).digest('hex'),s.sources[0].sha256);
-  const shape=sourceObjShape(original), matrix=new Matrix4().fromArray(catalog.coordinateSystem.sourceToSceneColumnMajor);
+  const original = await readFile(
+    'content/sources/inferior-thyroid-arteries/' + s.sources[0].file + '.obj',
+  );
+  assert.equal(
+    createHash('sha256').update(original).digest('hex'),
+    s.sources[0].sha256,
+  );
+  const shape = sourceObjShape(original),
+    matrix = new Matrix4().fromArray(
+      catalog.coordinateSystem.sourceToSceneColumnMajor,
+    );
   sourceShapes.push(shape);
-  assert.equal(mesh.geometry.index.count,shape.faces.length*3);
-  for(let f=0;f<shape.faces.length;f++) for(let c=0;c<3;c++) {
-    const expected=new Vector3(...shape.vertices[shape.faces[f][c]]).applyMatrix4(matrix).toArray().map(Math.fround);
-    const i=mesh.geometry.index.array[f*3+c];
-    assert.deepEqual(Array.from(positions.slice(i*3,i*3+3)),expected);
-  }
+  assert.equal(mesh.geometry.index.count, shape.faces.length * 3);
+  for (let f = 0; f < shape.faces.length; f++)
+    for (let c = 0; c < 3; c++) {
+      const expected = new Vector3(...shape.vertices[shape.faces[f][c]])
+        .applyMatrix4(matrix)
+        .toArray()
+        .map(Math.fround);
+      const i = mesh.geometry.index.array[f * 3 + c];
+      assert.deepEqual(Array.from(positions.slice(i * 3, i * 3 + 3)), expected);
+    }
   triangles += mesh.geometry.index.count / 3;
   assert(
     Array.from({ length: positions.length / 3 }, (_, i) =>
@@ -189,21 +217,30 @@ for (const s of pins.structures) {
   );
   for (const tab of ['anatomy', 'function', 'quiz'])
     assert.equal(api.bodyLesson(s, tab).readiness, 'draft');
-  for (const tab of ['ct', 'mri', 'xray', 'ultrasound', 'clinical', 'pathology'])
+  for (const tab of [
+    'ct',
+    'mri',
+    'xray',
+    'ultrasound',
+    'clinical',
+    'pathology',
+  ])
     assert.equal(api.bodyLesson(s, tab).readiness, 'pending');
   assert.equal(
-    api.cubitalVeinLesson({ ...s, anchor: [0, 0, 0] }, 'anatomy'),
+    api.inferiorThyroidLesson({ ...s, anchor: [0, 0, 0] }, 'anatomy'),
     undefined,
   );
 }
-assert.equal(triangles, 15704);
-for(let i=0;i<sourceShapes.length;i++) for(let j=i+1;j<sourceShapes.length;j++){
-  const a=sourceTriangleSet(sourceShapes[i]), b=sourceTriangleSet(sourceShapes[j]);
-  assert(![...a].some(t=>b.has(t)));
-}
+assert.equal(triangles, 962);
+for (let i = 0; i < sourceShapes.length; i++)
+  for (let j = i + 1; j < sourceShapes.length; j++) {
+    const a = sourceTriangleSet(sourceShapes[i]),
+      b = sourceTriangleSet(sourceShapes[j]);
+    assert(![...a].some((t) => b.has(t)));
+  }
 console.log(
   JSON.stringify({
-    sourceSelections: 4,
+    sourceSelections: 2,
     displaySelections: 1058,
     triangles,
     links,

@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Head & neck → search “inferior thyroid” → Arterial connections** adds [two original neck artery sources](docs/INFERIOR_THYROID_ARTERIES.md), same-side parent navigation and a focused cervical-bone context. Display: **1,058 selections**. No new toolbar or generated geometry. Four muscle-part candidates remain offline review evidence because of source fragments/duplicate faces; clinical and imaging approval remain pending.
+
 **Knee & leg / Whole body → Study → “genicular”** now opens a [focused knee artery dissection](docs/GENICULAR_ARTERIES.md#focused-knee-study): 11 existing structures per side, a stable posterior close-up and reversible removal. No extra toolbar or new geometry. Source fragments and clinical-review limits stay explicit.
 
 **Knee & leg / Hip & thigh / Whole body → search “genicular” → Arterial connections** adds [ten original knee artery sources](docs/GENICULAR_ARTERIES.md), retaining 21,686 triangles and existing compact controls. The display now has **1,056 selections**. Middle genicular groups retain disconnected source pieces; no artificial junction, complete collateral network or clinical approval is claimed. Clinical/imaging topics need review. The source-review gate also recognises the previously documented calf-vein holds.

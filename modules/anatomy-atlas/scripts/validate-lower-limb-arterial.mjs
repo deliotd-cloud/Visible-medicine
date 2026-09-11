@@ -50,16 +50,21 @@ const neighbours = upper
   plan = upper ? api.upperLimbArterialPlan : api.lowerLimbArterialPlan,
   concepts = upper ? api.upperArterialConcepts : api.arterialConcepts,
   relations = upper ? api.upperArterialRelations : api.arterialRelations;
-assert.equal(Object.keys(concepts).length, upper ? 26 : 20);
-assert.equal(relations.length, upper ? 28 : 20);
+assert.equal(Object.keys(concepts).length, upper ? 27 : 20);
+assert.equal(relations.length, upper ? 29 : 20);
 const targets = catalog.structures.filter((s) =>
   Object.values(concepts).some((c) => c.fmaIds.includes(s.fmaId)),
 );
-assert.equal(targets.length, upper ? 52 : 39);
+assert.equal(targets.length, upper ? 54 : 39);
 assert.equal(pins.entries.length, upper ? 116 : 94);
-if (!upper) {
-  const extra=JSON.parse(await readFile('public/models/bodyparts3d/genicular-arteries/catalog.json'));
+{
+  const extra=JSON.parse(await readFile(upper ? 'public/models/bodyparts3d/inferior-thyroid-arteries/catalog.json' : 'public/models/bodyparts3d/genicular-arteries/catalog.json'));
   pins.entries.push(...extra.structures);pins.bundles.push(...extra.bundles);
+  if (upper) {
+    const context = JSON.parse(await readFile('content/inferior-thyroid-context-pins.json'));
+    pins.entries.push(...context.entries);
+    pins.bundles.push(...context.bundles.filter(b => !pins.bundles.some(p => p.id === b.id)));
+  }
 }
 const allRows = targets.flatMap((s) =>
   neighbours(catalog, 'whole-body', 'both', s.id).rows.map((r) => ({
@@ -69,11 +74,11 @@ const allRows = targets.flatMap((s) =>
     direction: r.direction,
   })),
 );
-assert.equal(allRows.length, upper ? 112 : 80);
+assert.equal(allRows.length, upper ? 116 : 80);
 const uniqueEdges = new Set(
   allRows.map((r) => [r.from.id, r.to.id].sort().join('|')),
 );
-assert.equal(uniqueEdges.size, upper ? 56 : 40);
+assert.equal(uniqueEdges.size, upper ? 58 : 40);
 assert(
   allRows.every(
     (r) =>
@@ -183,9 +188,8 @@ for (const region of regions)
         api.limbArterialPlan(catalog, region, side, s.id),
         plan(catalog, region, side, s.id),
       );
-      if (upper) assert.deepEqual(info, neighbours(raw, region, side, s.id));
-      else assert.equal(neighbours(raw, region, side, s.id), null,
-        'The archival catalogue cannot stand in for the extended lower-limb graph');
+      assert.equal(neighbours(raw, region, side, s.id), null,
+        'The archival catalogue cannot stand in for either source-extended arterial graph');
       for (const row of info.rows) {
         assert.equal(row.availableHere, regionHas(row.structure, region));
         if (!row.availableHere) {
@@ -242,7 +246,9 @@ for (const region of regions)
           (x) =>
             fmas.has(x.fmaId) ||
             (x.system === 'skeleton' &&
-              x.regions.includes(concepts[info.concept].context)),
+              (info.concept === 'inferiorThyroid'
+                ? ['FMA52749','FMA12519','FMA12520','FMA12521','FMA12522','FMA12523','FMA12524','FMA12525'].includes(x.fmaId)
+                : x.regions.includes(concepts[info.concept].context))),
         );
         assert.deepEqual(
           resolve(viewed, profiles[region], next).visible.map((x) => x.id),

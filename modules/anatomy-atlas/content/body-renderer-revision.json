@@ -50,7 +50,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "8ba94dcc97cfed6d9da849a5d58637fb951bb1aecc3b4e95996b2856b40c1463"
+      "sha256": "f5c13f06ae2edaa2f7dbba07b5276ed23fa3c1e8b277b5b1f77f93694f727c99"
     },
     {
       "path": "app/body-explorer.css",
@@ -373,6 +373,10 @@
       "sha256": "aa6a306d480e42c8af77a628537fcb7fd694217e97a93e60bbd824c5fa8103c5"
     },
     {
+      "path": "content/inferior-thyroid-context-pins.json",
+      "sha256": "1928f2ecce49146511325abe3fe6331291dcbbbb0ca6308f99e95be2353f07f8"
+    },
+    {
       "path": "content/limb-vascular-studies.ts",
       "sha256": "825f08810f16ae4d409e89a6579f78f739843d192cdb2f9946314c1c30227908"
     },
@@ -498,7 +502,7 @@
     },
     {
       "path": "content/upper-limb-arterial.ts",
-      "sha256": "da35f472911b1173ac84517cf6c4242950800da55e4b67c4b70571288a0ee853"
+      "sha256": "79b812a962e20e80ed5c847f20fc149be142274414591695c2ea36a974ef948f"
     },
     {
       "path": "content/upper-limb-motor-pins.json",
@@ -630,7 +634,7 @@
     },
     {
       "path": "lib/body-display-catalog.ts",
-      "sha256": "e6dbf2c11762281322c7c997de7869b7e0fee4994e8f5911a788e8ff93c49776"
+      "sha256": "804f740efaef394b3d741335a9c989807ba78d02d09bd0847367868eee054869"
     },
     {
       "path": "lib/body-source-additions.ts",
@@ -861,6 +865,10 @@
       "sha256": "158dddac1440445b0280414812496f8c673b7a6f05f45faa1551f8a4b5b026ed"
     },
     {
+      "path": "lib/inferior-thyroid-arteries.ts",
+      "sha256": "cd1a636fef9058321d3256fc6d2e444d3de6d79ab34069bda8706076df0349a0"
+    },
+    {
       "path": "lib/inspection-geometry.ts",
       "sha256": "b91829e161c1f14b605e35ff32d49cfcb800a122eee23362c2f38aab70431b58"
     },
@@ -1042,7 +1050,7 @@
     },
     {
       "path": "lib/regional-arterial.ts",
-      "sha256": "0d50f1d6be437f1922c585e3d234cc6666672d78233f0eba19f806b74dcecac5"
+      "sha256": "304c2141126aab659f8c6852a004ec004a2017dcb2cb266124cb82a9733edb8f"
     },
     {
       "path": "lib/regional-connective-clinical-curriculum.ts",
@@ -1230,7 +1238,7 @@
     },
     {
       "path": "lib/upper-limb-arterial.ts",
-      "sha256": "f8e6071e392d45a15e7f97915f35a628c700835a4982904f94d6c8081808fc89"
+      "sha256": "93a9ae45a1bc2a1fe8430bc2dd053a0c649fde868e095e809e7c5a904ef56b0c"
     },
     {
       "path": "lib/upper-limb-motor.ts",
@@ -1345,6 +1353,10 @@
       "sha256": "53962f7814854e576efde820bed1ccd2f7393b1296798898dee25f773e24d6c8"
     },
     {
+      "path": "public/models/bodyparts3d/inferior-thyroid-arteries/catalog.json",
+      "sha256": "c1887d76f71de08c25fb9277b00d5edc678affd43995faab4121bd347fc8a6b4"
+    },
+    {
       "path": "public/models/bodyparts3d/longus-colli/catalog.json",
       "sha256": "4dbf0fd67b985d5aa9ca910ab2757bc8fecf26c4b1315c98acab86d07fed5b38"
     },
@@ -1409,5 +1421,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "c225b5f8bbb6a2e8ad81889122e2bd8e34edc7e09c4ac034df27506c900ea52d"
+  "sha256": "cf3adbbc09214c19762cc35cb248d8692f8d71b4552f478dc4a9a4f0bf76cdea"
 }

@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Inferior thyroid arteries](INFERIOR_THYROID_ARTERIES.md) add ${anatomy.inferiorThyroidArteries.sourceSelections} original neck selections (${anatomy.inferiorThyroidArteries.originalTriangles} retained triangles), same-side thyrocervical navigation and ${anatomy.inferiorThyroidArteries.neckContextBones} existing context bones. Four muscle-part candidates remain offline source-condition evidence, not admitted geometry. No complete gland/nerve anatomy, joined lumen, clinical approval or patient registration is claimed.
+
 [Genicular knee study](GENICULAR_ARTERIES.md#focused-knee-study) groups ${anatomy.genicularArteries.focusSourceSelections} original selections into one compact posterior view in Knee & leg and Whole body. Source-bound transitions, stable close-up framing and reversible removal reuse existing controls. Ten genicular source groups retain all ${anatomy.genicularArteries.originalTriangles} original triangles; disconnected middle-genicular pieces are not bridged. Clinical/device review and imaging registration remain outstanding.
 
 [Inferior collicular brachia](COLLICULAR_BRACHIA.md) adds ${anatomy.nestedDissections.collicularBrachiaSelections} original neural surfaces (${anatomy.nestedDissections.collicularBrachiaOriginalTriangles} retained triangles) within brainstem dissection, with pair/midbrain views and source-bound auditory teaching. The ${anatomy.nestedDissections.collicularBrachiaLateralityHolds} superior candidates remain withheld for contradictory source laterality. Existing brainstem meshes are unchanged; no complete auditory pathway, fibre reconstruction, clinical approval or patient scan is supplied.

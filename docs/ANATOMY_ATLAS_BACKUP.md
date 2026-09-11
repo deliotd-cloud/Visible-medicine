@@ -1,6 +1,22 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — focused genicular knee study (current source)
+## 11 September 2026 — inferior thyroid arteries and focused neck context (current source)
+
+Source `7380be6c3dc3c23b8ecbedba6ab790f7705ac388`, tree `b8662a9558d0c99ac86f42584b87ae3953d85a8e`, parent `4c30ff9f4a29249cdd716e616a55b98006d54a3a`. Fifty-three exact source paths mirrored. Full module audit: 1,790 matching files / 436,611,063 bytes / 122 retained GLBs; no common credential-signature warnings (not exhaustive). No dependency, font, texture, database schema, authentication, paid-resource entitlement or patient scan changed.
+
+Two original inferior thyroid artery sources retain all 962 ordered triangles, source positions and original definitions in a 20,064-byte GLB. Display: 1,058 selections. The arterial explorer links each source to its same-side thyrocervical trunk, with eight exact-pinned existing neck bones as optional isolation context; no skull clutter or new permanent toolbar. All arterial maps now cover 120 arterial selections/130 typical relationships. Complete source definitions do not establish complete vessels, continuous lumens, gland tissue, nerves, procedural planes or CT registration. Anatomy/Function/self-check remain source-bound drafts for radiologist review; clinical/pathology/imaging topics are pending.
+
+Four original muscle-part candidates (clavicular pectoralis-major and superficial flexor-pollicis-brevis parts) are retained offline with a reproducible preliminary condition audit: 5,144 triangles, detached fragments and duplicate faces. They are not runtime additions, repaired anatomy or newly approved sources. Original and derived anatomy retain CC BY 4.0 attribution. No imported competitor code or paid assets.
+
+Passed: two exact original-source roundtrips/962 ordered faces, 16 deep links, 79 source-admission rejections; source condition and coverage audits; current hold gate; arterial maps (upper/neck: 54 selections/58 relationships, 284 plans, 80 cross-region links, 142 rejected catalogues and 108 actual parent actions); genicular study; genicular/cubital/deep-leg regressions; 9,522 body-review topics; 3,174 isolated SQLite decision tracks; 49,738 imaging-link assertions; 33,444 content-contract checks. TypeScript, production build, requirement freshness and Git whitespace passed. Browser/GPU/mobile and clinical acceptance remain outstanding.
+
+Renderer fingerprint `cf3adbbc09214c19762cc35cb248d8692f8d71b4552f478dc4a9a4f0bf76cdea` covers 352 inputs. Build preserves unchanged decoded geometry for 118 delivered GLBs / 1,242 meshes / 3,726 buffer views; canonical 180,713,280 bytes / transport 121,933,684 / gzip transport 106,272,301.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-inferior-thyroid-2026-09-11`: `.site.tar.gz` 111,660,174 bytes / SHA256 `f90ba2ecef50191ab63bb91d57ec1e15fc7b04fb2c0dc4312786d634c20a93f3`; `.delta.tar` 1,986,560 bytes / `18d2df9d7a35217bdd6a5d404a24fa79f338d8ac5ce9614d56f1ab4db578a6fe`; `.incremental.bundle` 270,963 bytes / `1f7475dedfb8f0043d90782e8dc66843bf5edd45a760f749fabd501bb31bb653`. Runtime archive: 401 safe unique entries, exact hosting manifest and both original migrations. Independent bare restore at `refs/verification/inferior-thyroid-20260911` passes full fsck and exact SHA/tree; verifier main unchanged. Retain previous recovery bundles; this increment requires its parent.
+
+Sites source push independently verified. Private publication is in progress at this receipt; terminal deployment and verified GitHub remote are recorded in the work/D: checkpoint. This is source/runtime recovery, not a backup of production databases, personal reviews, accounts, scans or lecture content. Provisional CT-head material remains untouched and NOT_FOR_PUBLICATION. The wider atlas goal remains active.
+
+## 11 September 2026 — focused genicular knee study (previous source)
 
 Source `4c30ff9f4a29249cdd716e616a55b98006d54a3a`, tree `b390c3e10eb65ca670bb4a5f68431af05a19544d`, parent `f5460a4548b7ba4761220c791ea6673b5c7ebb6f`. Twenty-six exact source paths mirrored. Full module audit: 1,771 matching files / 435,723,597 bytes / 121 retained GLBs; no common credential-signature warnings (not exhaustive). No public anatomy asset, dependency, lockfile, font, texture, database schema, authentication, paid-resource entitlement or patient scan changed.
 

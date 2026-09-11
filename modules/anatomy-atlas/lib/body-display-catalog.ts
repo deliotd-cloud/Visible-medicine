@@ -9,6 +9,7 @@ import { addHepaticVeins } from './hepatic-veins.ts';
 import { addLongusColli } from './longus-colli.ts';
 import { addCubitalVeins } from './cubital-veins.ts';
 import { addGenicularArteries } from './genicular-arteries.ts';
+import { addInferiorThyroidArteries } from './inferior-thyroid-arteries.ts';
 
 const canonical = (value: unknown): string => {
   if (Array.isArray(value)) return `[${value.map(canonical).join(',')}]`;
@@ -44,7 +45,7 @@ export function isPancreasDisplayRecord(s: BodyStructure) {
  * record is replaced atomically, so rendering, labels, practice, focus, saved
  * views and outgoing reference coordinates all consume the same geometry. */
 export function bodyDisplayCatalog(catalog: BodyCatalog): BodyCatalog {
-  return addGenicularArteries(
+  const display = addGenicularArteries(
     addCubitalVeins(
       addLongusColli(
         addHepaticVeins(
@@ -64,6 +65,7 @@ export function bodyDisplayCatalog(catalog: BodyCatalog): BodyCatalog {
       ),
     ),
   );
+  return addInferiorThyroidArteries(display);
 }
 
 function applyDisplayCorrection(

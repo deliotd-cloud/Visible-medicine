@@ -1,0 +1,551 @@
+{
+  "version": 1,
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "auditSha256": "3d7232b011b2e5058fac705d1dc8c2b725cab69d2539fb0c096f8ce7692c59bb",
+  "structures": [
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+      "fmaId": "FMA10697",
+      "name": "Right inferior thyroid artery",
+      "sourceName": "right inferior thyroid artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck",
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "inferior-thyroid-arteries",
+      "nodeName": "FMA10697",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2209",
+          "sha256": "229bf9cfcf4a5ba6f8bedf79e17cf395dd6c6c3290cef1ac2519012a0305eed4"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.434112012386322,
+          5.574999809265137,
+          0.4768590033054352
+        ],
+        "max": [
+          -0.28728699684143066,
+          5.90880012512207,
+          0.5582600235939026
+        ]
+      },
+      "center": [
+        -0.36069950461387634,
+        5.7418999671936035,
+        0.5175595134496689
+      ],
+      "anchor": [
+        -0.3927980065345764,
+        5.75629997253418,
+        0.5092099905014038
+      ],
+      "coverageNote": "Complete source-defined inferior thyroid artery surface, not a complete glandular supply tree. Thyroid/parathyroid tissue and recurrent laryngeal nerves are not supplied by this addition. Exact junctions, lumen and supply territories are not validated. Original coordinates and faces retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+      "fmaId": "FMA10680",
+      "name": "Left inferior thyroid artery",
+      "sourceName": "left inferior thyroid artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck",
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "inferior-thyroid-arteries",
+      "nodeName": "FMA10680",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2210",
+          "sha256": "b2a14e4d5558ba3132f99b12b09721fac476fa8997013e1e463229bd5c15c8e8"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.2875269949436188,
+          5.575099945068359,
+          0.47671398520469666
+        ],
+        "max": [
+          0.43411099910736084,
+          5.90880012512207,
+          0.5581600069999695
+        ]
+      },
+      "center": [
+        0.3608189970254898,
+        5.741950035095215,
+        0.5174369961023331
+      ],
+      "anchor": [
+        0.39309900999069214,
+        5.759099960327148,
+        0.5147200226783752
+      ],
+      "coverageNote": "Complete source-defined inferior thyroid artery surface, not a complete glandular supply tree. Thyroid/parathyroid tissue and recurrent laryngeal nerves are not supplied by this addition. Exact junctions, lumen and supply territories are not validated. Original coordinates and faces retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextRecords": [
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-subclavian-artery",
+      "fmaId": "FMA3953",
+      "name": "Right subclavian artery",
+      "sourceName": "right subclavian artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "bundle": "thorax-vessels-recovery",
+      "nodeName": "FMA3953",
+      "bounds": {
+        "min": [
+          -0.8217599987983704,
+          5.309399604797363,
+          0.44354599714279175
+        ],
+        "max": [
+          -0.0974728986620903,
+          5.530300140380859,
+          0.6222100257873535
+        ]
+      },
+      "center": [
+        -0.45961644873023033,
+        5.419849872589111,
+        0.5328780114650726
+      ],
+      "anchor": [
+        -0.458391010761261,
+        5.453499794006348,
+        0.5169299840927124
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3579",
+          "sha256": "1fb9231343dce90a8d62061c63e0102eb72d117f131eda7876abfeb0060b6ad3"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-subclavian-artery",
+      "fmaId": "FMA4694",
+      "name": "Left subclavian artery",
+      "sourceName": "left subclavian artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "bundle": "thorax-vessels-recovery",
+      "nodeName": "FMA4694",
+      "bounds": {
+        "min": [
+          0.17685699462890625,
+          5.073100566864014,
+          0.368478000164032
+        ],
+        "max": [
+          0.865464985370636,
+          5.564599514007568,
+          0.5563400387763977
+        ]
+      },
+      "center": [
+        0.5211609899997711,
+        5.318850040435791,
+        0.46240901947021484
+      ],
+      "anchor": [
+        0.6160910129547119,
+        5.413900375366211,
+        0.5066100358963013
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3479",
+          "sha256": "f6af4efb94e1ce94519c94684b1d0a0736272e5a0ed2677a63627e0ebfc228b1"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
+      "fmaId": "FMA3941",
+      "name": "Right common carotid artery",
+      "sourceName": "right common carotid artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "bundle": "head-neck-vessels-recovery",
+      "nodeName": "FMA3941",
+      "bounds": {
+        "min": [
+          -0.21257899701595306,
+          5.294200420379639,
+          0.5538300275802612
+        ],
+        "max": [
+          -0.08614440262317657,
+          5.733799934387207,
+          0.6754799485206604
+        ]
+      },
+      "center": [
+        -0.14936169981956482,
+        5.514000177383423,
+        0.6146549880504608
+      ],
+      "anchor": [
+        -0.1452919989824295,
+        5.530099868774414,
+        0.5932700634002686
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3564",
+          "sha256": "423585ec439b07b0f64878f904afca52d4866e1e0dc54c2ace31953d9b6156cf"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
+      "fmaId": "FMA4058",
+      "name": "Left common carotid artery",
+      "sourceName": "left common carotid artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck",
+        "thorax"
+      ],
+      "bundle": "head-neck-vessels-recovery",
+      "nodeName": "FMA4058",
+      "bounds": {
+        "min": [
+          0.10820800065994263,
+          5.07390022277832,
+          0.46006301045417786
+        ],
+        "max": [
+          0.22933000326156616,
+          5.736800670623779,
+          0.6222400069236755
+        ]
+      },
+      "center": [
+        0.1687690019607544,
+        5.40535044670105,
+        0.5411515086889267
+      ],
+      "anchor": [
+        0.18002599477767944,
+        5.409000396728516,
+        0.5512999892234802
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3483",
+          "sha256": "19f38e57365867279705090994fff228177163c1920ad0f8f9b15f830a42bc1d"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+      "fmaId": "FMA3992",
+      "name": "Right thyrocervical trunk",
+      "sourceName": "right thyrocervical trunk",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "head-neck",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA3992",
+      "bounds": {
+        "min": [
+          -0.4277290105819702,
+          5.521999359130859,
+          0.4754229784011841
+        ],
+        "max": [
+          -0.40075698494911194,
+          5.5794997215271,
+          0.49482595920562744
+        ]
+      },
+      "center": [
+        -0.4142429977655411,
+        5.5507495403289795,
+        0.48512446880340576
+      ],
+      "anchor": [
+        -0.41858500242233276,
+        5.532700061798096,
+        0.48956596851348877
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2307",
+          "sha256": "b81b463eeedf5999f8cd9e072d445799e9c3dcd23a618cda3fb867af39cfe123"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+      "fmaId": "FMA4084",
+      "name": "Left thyrocervical trunk",
+      "sourceName": "left thyrocervical trunk",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "head-neck",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA4084",
+      "bounds": {
+        "min": [
+          0.4013550281524658,
+          5.521899223327637,
+          0.4747239649295807
+        ],
+        "max": [
+          0.4276890158653259,
+          5.579100131988525,
+          0.49424201250076294
+        ]
+      },
+      "center": [
+        0.4145220220088959,
+        5.550499677658081,
+        0.4844829887151718
+      ],
+      "anchor": [
+        0.4182009994983673,
+        5.533499717712402,
+        0.4902590215206146
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2255",
+          "sha256": "15a93e07812a3d1aeed4d8be392335496fb024ab0d8bb1d4e30e281c3d93c810"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextBundles": [
+    {
+      "id": "thorax-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-vessels-recovery.glb",
+      "bytes": 1131748,
+      "sha256": "0c82e1cb2960c6f2474f2b4759974adab5871d8074a2f4e3712e1c3a37a48ca7",
+      "structures": 25
+    },
+    {
+      "id": "head-neck-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/head-neck-vessels-recovery.glb",
+      "bytes": 608992,
+      "sha256": "800d583a96a6df8fdd2b5fff86c6e719a90e897d6c3c89bbb1a3bd71b0e89cbb",
+      "structures": 16
+    },
+    {
+      "id": "shoulder-arm-vessels-inventory",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb",
+      "bytes": 616356,
+      "sha256": "d12d81529a1408f934b5055462bb39f0f79c84e25c878a25225652b9baac3e84",
+      "structures": 20
+    }
+  ],
+  "bundles": [
+    {
+      "id": "inferior-thyroid-arteries",
+      "url": "/models/bodyparts3d/inferior-thyroid-arteries/inferior-thyroid-arteries.glb?v=abe5a85b810ba231cf032546e26e35c6c6243b7cfd880853bf7110345da0b155",
+      "bytes": 20064,
+      "sha256": "abe5a85b810ba231cf032546e26e35c6c6243b7cfd880853bf7110345da0b155",
+      "structures": 2
+    }
+  ],
+  "modification": "Exact-coordinate welding for indexed normals plus Float32 GLB storage. Every original triangle is retained in order; no smoothing, fitting, mirroring, bridging or face removal.",
+  "clinicalApproval": false
+}

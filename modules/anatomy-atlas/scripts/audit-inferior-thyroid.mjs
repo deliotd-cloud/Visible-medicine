@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { Box3, Matrix4, Vector3 } from 'three';
-import { loadSourceHolds } from './load-source-holds.mjs';
+import { loadCurrentSourceHolds } from './current-source-holds.mjs';
 import { geometryFingerprint } from './anatomy-inventory.mjs';
 import {
   sourceObjShape,
@@ -20,18 +20,41 @@ import {
   shapeCandidate,
   compareTranslatedShape,
 } from './vessel-shape-math.mjs';
-import { cubitalVeinSources } from './cubital-vein-sources.mjs';
+import { inferiorThyroidSources } from './inferior-thyroid-sources.mjs';
 const hash = (b) => createHash('sha256').update(b).digest('hex');
 import { build } from 'esbuild';
-const { catalog: raw, inventory, records, policy, evidence } =
-  await loadSourceHolds();
-const built = await build({stdin:{contents:"export {bodyDisplayCatalog} from './lib/body-display-catalog'",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
-const {bodyDisplayCatalog} = await import('data:text/javascript;base64,'+Buffer.from(built.outputFiles[0].text).toString('base64'));
+const {
+  catalog: raw,
+  inventory,
+  records,
+  policy,
+  evidence,
+  supplementalEvidence,
+} = await loadCurrentSourceHolds();
+const built = await build({
+  stdin: {
+    contents: "export {bodyDisplayCatalog} from './lib/body-display-catalog'",
+    resolveDir: process.cwd(),
+    loader: 'ts',
+  },
+  bundle: true,
+  write: false,
+  platform: 'node',
+  format: 'esm',
+});
+const { bodyDisplayCatalog } = await import(
+  'data:text/javascript;base64,' +
+    Buffer.from(built.outputFiles[0].text).toString('base64')
+);
 const display = bodyDisplayCatalog(raw);
 // Audit is replayable after admission; exclude only this separately pinned addition.
-// Replay the original 1,042-record envelope screen; subsequent knee sources are outside that snapshot.
-const laterBundles = new Set(['cubital-veins', 'genicular-arteries', 'inferior-thyroid-arteries']);
-const catalog = {...display, structures:display.structures.filter(s=>!laterBundles.has(s.bundle)), bundles:display.bundles.filter(b=>!laterBundles.has(b.id))};
+const catalog = {
+  ...display,
+  structures: display.structures.filter(
+    (s) => s.bundle !== 'inferior-thyroid-arteries',
+  ),
+  bundles: display.bundles.filter((b) => b.id !== 'inferior-thyroid-arteries'),
+};
 async function shape(tree, file, sha) {
   const bytes = await readFile(`../work/bodyparts3d/${tree}/${file}.obj`);
   assert.equal(hash(bytes), sha);
@@ -39,7 +62,7 @@ async function shape(tree, file, sha) {
 }
 const shapes = new Map(),
   groups = [];
-for (const candidate of cubitalVeinSources) {
+for (const candidate of inferiorThyroidSources) {
   const definition = records.find(
     (r) => r.tree === 'isa' && r.id === candidate.id,
   );
@@ -52,7 +75,7 @@ for (const candidate of cubitalVeinSources) {
     topology = sourceTopology(s),
     fingerprint = geometryFingerprint(bytes);
   assert(topology.closedOrientedManifold);
-  assert.equal(topology.components.length, 1);
+  assert.equal(topology.components.length, candidate.components);
   assert(
     s.vertices.every((p) => (candidate.side === 'right' ? p[0] < 0 : p[0] > 0)),
   );
@@ -152,8 +175,9 @@ assert(
 );
 const result = {
   schemaVersion: 1,
-  sourceCommit: '513fb3c0b84c1e4eade357c87bd914491da4dffd',
+  sourceCommit: '4c30ff9f4a29249cdd716e616a55b98006d54a3a',
   evidence,
+  supplementalEvidence,
   license: catalog.license,
   credit: catalog.credit,
   coordinateSystem: catalog.coordinateSystem,
@@ -166,13 +190,13 @@ const result = {
   geometryModified: false,
   clinicalApproval: false,
   limitations: [
-    'Four source-labelled superficial veins, not a universal cubital pattern or a measured lumen.',
+    'Two complete source-labelled inferior thyroid artery definitions; finite surfaces are not complete thyroid supply, a joined lumen or a verified nerve relationship.',
     'Topology and bounded distances do not prove absence of self-intersection or clinical correctness. No donor junction or vessel centreline inferred.',
     'No fitting, mirroring, smoothing, bridge or face removal. Archive CRC and size checked on retrieval; exact source hashes retained.',
   ],
 };
 const output = JSON.stringify(result, null, 2) + '\n',
-  path = 'docs/cubital-vein-source-audit.json';
+  path = 'docs/inferior-thyroid-source-audit.json';
 if (process.argv.includes('--check'))
   assert.equal((await readFile(path, 'utf8')).replace(/\r\n/g, '\n'), output);
 else await writeFile(path, output, { flag: 'wx' });
@@ -183,11 +207,7 @@ console.log(
     comparisons: comparisons.length,
     triangles: groups.reduce((n, g) => n + g.topology.triangles, 0),
     closest: comparisons
-      .filter((c) =>
-        /FMA1332[56]|FMA229(09|10|35|36)/.test(
-          c.referenceFma,
-        ),
-      )
+      .filter((c) => /FMA7738[01]|FMA2447[45]|FMA2447[78]/.test(c.referenceFma))
       .map((c) => ({
         candidate: c.candidate,
         to: c.referenceFma,

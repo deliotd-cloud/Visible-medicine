@@ -21,7 +21,7 @@ export type ArterialRelationKind =
   | 'variant';
 export type ArterialDefinitions = Record<
   string,
-  { fmaIds: readonly string[]; context: string; note: string }
+  { fmaIds: readonly string[]; context: string; contextFmaIds?: readonly string[]; note: string }
 >;
 type SourcePins = {
   sourceVersion: string;
@@ -179,7 +179,9 @@ export function createArterialExplorer(
         .filter(
           (s) =>
             (s.system === 'skeleton' &&
-              s.regions.includes(arterialConcepts[info.concept].context)) ||
+              (arterialConcepts[info.concept].contextFmaIds
+                ? arterialConcepts[info.concept].contextFmaIds!.includes(s.fmaId)
+                : s.regions.includes(arterialConcepts[info.concept].context))) ||
             concepts.has(byFma.get(s.fmaId)!),
         )
         .map((s) => s.id),

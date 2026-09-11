@@ -51,9 +51,9 @@ const display = bodyDisplayCatalog(raw);
 const catalog = {
   ...display,
   structures: display.structures.filter(
-    (s) => s.bundle !== 'genicular-arteries',
+    (s) => !['genicular-arteries', 'inferior-thyroid-arteries'].includes(s.bundle),
   ),
-  bundles: display.bundles.filter((b) => b.id !== 'genicular-arteries'),
+  bundles: display.bundles.filter((b) => !['genicular-arteries', 'inferior-thyroid-arteries'].includes(b.id)),
 };
 async function shape(tree, file, sha) {
   const bytes = await readFile(`../work/bodyparts3d/${tree}/${file}.obj`);
