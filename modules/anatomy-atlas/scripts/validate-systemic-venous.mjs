@@ -374,7 +374,7 @@ for (const selected of targets)
         side: 'both',
         selectedId: selected.id,
         exam,
-        systemicVenousPlan: plan,
+        venousDrainagePlan: plan,
         initialInspection: { plane: 'off' },
         cameraRestore: { current: 'old' },
         dispatch: (value) => calls.push(['dispatch', value]),

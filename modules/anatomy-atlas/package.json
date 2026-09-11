@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "portal-veins:test": "node scripts/export-portal-veins.mjs --check && node scripts/validate-portal-veins.mjs",
     "limb-vascular-studies:test": "node scripts/pin-limb-vascular-studies.mjs --check && node scripts/record-limb-vascular-recipes.mjs --check && node scripts/validate-limb-vascular-studies.mjs",
     "deep-leg-veins:test": "node scripts/export-deep-leg-veins.mjs --check && node scripts/validate-deep-leg-veins.mjs",
     "tarsal-imaging:test": "node scripts/validate-tarsal-imaging.mjs",

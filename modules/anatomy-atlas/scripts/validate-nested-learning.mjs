@@ -58,12 +58,12 @@ const reject = (fn, message) => {
   checks++;
   assert.throws(fn, message);
 };
-same(legacy.length, 1031);
-same(anatomy.length, 1100);
+same(legacy.length, 1045);
+same(anatomy.length, 1114);
 same(
   anatomy.filter((t) => t.scope !== 'nested'),
   legacy,
-  'Legacy 1,031 bindings unchanged',
+  'Current body and shoulder bindings unchanged by the nested extension',
 );
 same(nested.length, 69);
 same(

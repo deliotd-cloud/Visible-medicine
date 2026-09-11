@@ -1,6 +1,14 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — limb vascular studies (current source)
+## 11 September 2026 — portal veins (current source)
+
+Source `3dc55195aeb37350fdbbfcba6f6f54e20e22e452`, tree `b999d46dd72074632a193fbe84f9c08086b2ec3d`, parent `f33f02fc9eb1c123011f02015f9b7f9cd22cf812`. Thirty-nine source paths mirrored once; 1,650 exact files / 426,191,292 bytes / 116 retained GLBs. Five whole source meshes add 3,892 triangles, with eleven-source portal drainage navigation in the existing compact panel. Original source bytes, earlier mesh/catalogue records and recipes remain intact. Private Sites source push and independent main ref match exactly. No common credential-signature warnings (not exhaustive).
+
+New recovery artifacts are under `D:/VisibleMedicine-Atlas-Recovery/atlas-portal-veins-2026-09-11`: runtime `.site.tar.gz` (110,797,935 bytes; SHA-256 `3cc981e19f19db8efc45f4a6d556ab3f3face22f1aec9308682a7deb43109072`), `.delta.tar` (1,792,000 bytes; `1ae5db4acd2b918c22bfe4611f8ecbc4a78895b8876c12afd6c97d7124c13db2`), and `.incremental.bundle` (280,160 bytes; `f2f0803f3c11094150b404fee4c65242bda0d01b564ea0d0cc99cd771adbbaf5`). The incremental needs the exact parent above; retain the earlier full bundle and all subsequent increments. These are local recovery copies, not a verified independent off-device backup.
+
+Publication is in progress at this receipt; the final work/D: checkpoint records the terminal publishing and restore-verification outcome without changing this exact source. GitHub delivery is unconfirmed and deferred. Main website paths outside this module/receipt remain untouched; clinical/device acceptance and acquired imaging/lecture integrations remain open.
+
+## 11 September 2026 — limb vascular studies (previous source)
 
 Source `f33f02fc9eb1c123011f02015f9b7f9cd22cf812`, tree `0dc095e82c3b1ad82b6caba8e860021cac11778a`, parent `fa4959b0c641e77086f2bc0228bb2f4231683bf7`. Thirty-two paths mirrored once; 1,634 matching files / 425,054,818 bytes / 115 retained GLBs. Private Sites source push and independent remote main match exactly. No common credential-signature warnings (not exhaustive). GitHub delivery remains unconfirmed; main website outside this module/receipt remains unchanged.
 

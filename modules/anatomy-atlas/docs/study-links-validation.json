@@ -1,27 +1,27 @@
 {
   "passed": true,
-  "assertions": 259698,
-  "links": 12941,
-  "focusedLinks": 7996,
-  "destinationsTested": 6176,
+  "assertions": 260703,
+  "links": 12985,
+  "focusedLinks": 8018,
+  "destinationsTested": 6198,
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
-      "structures": 1031,
-      "testedLinks": 1682
+      "structures": 1036,
+      "testedLinks": 1692
     },
     {
       "region": "whole-body",
       "side": "left",
-      "structures": 594,
-      "testedLinks": 976
+      "structures": 597,
+      "testedLinks": 982
     },
     {
       "region": "whole-body",
       "side": "right",
-      "structures": 594,
-      "testedLinks": 979
+      "structures": 597,
+      "testedLinks": 985
     },
     {
       "region": "shoulder-arm",
@@ -152,20 +152,20 @@
     {
       "region": "abdomen",
       "side": "both",
-      "structures": 94,
-      "testedLinks": 302
+      "structures": 99,
+      "testedLinks": 312
     },
     {
       "region": "abdomen",
       "side": "left",
-      "structures": 76,
-      "testedLinks": 254
+      "structures": 79,
+      "testedLinks": 260
     },
     {
       "region": "abdomen",
       "side": "right",
-      "structures": 74,
-      "testedLinks": 248
+      "structures": 77,
+      "testedLinks": 254
     },
     {
       "region": "pelvis",
@@ -224,7 +224,7 @@
   ],
   "sourceGeometryChanged": false,
   "catalogueSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
-  "displaySelections": 1031,
+  "displaySelections": 1036,
   "actualInstalledRuntimeDuplicateParsingTested": true,
   "browserInteractionTesting": false,
   "clinicalValidation": false,

@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Portal tributaries](PORTAL_VEINS.md) add ${anatomy.portalVeins.sourceSelections} genuine source meshes (${anatomy.portalVeins.originalTriangles} retained triangles): splenic and paired gastric/gastroepiploic veins. The existing selected-vein panel now connects ${anatomy.portalVeins.mappedSelections} portal selections through ${anatomy.portalVeins.mappedRelationships} typical relationships, with reversible isolation and no new toolbar. Variable mesenteric outlets and missing sinusoidal/collateral networks remain explicit. No flow, scan registration or clinical approval is supplied.
+
 [Limb vascular dissection](LIMB_VASCULAR_STUDIES.md) adds ${anatomy.limbVascularStudies.studies} focused Study choices using ${anatomy.limbVascularStudies.sourceSelections} existing vessel, muscle and bone selections. Compare anterior/posterior calf and deep femoral relationships; hide a context muscle, extract a selected vessel and Undo. No permanent controls, new geometry, complete neurovascular bundle, surgical approach or imaging registration are supplied.
 
 [Systemic venous drainage](SYSTEMIC_VENOUS_DRAINAGE.md) connects ${anatomy.venousDrainage.selections} existing source selections through ${anatomy.venousDrainage.relationships} typical relationships (${anatomy.venousDrainage.groups} groups). One collapsed selected-vein panel offers tributary/outlet navigation, cross-region links and reversible isolation with bones. Missing routes, variable small-saphenous outlets and unsegmented common-femoral regions remain explicit. Intracranial sinuses, portal/pulmonary/cardiac drainage and measured flow are not provided by this map.

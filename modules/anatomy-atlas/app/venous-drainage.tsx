@@ -2,7 +2,7 @@
 import { useMemo } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { systemicVenousNeighbours } from '@/lib/systemic-venous';
+import { venousDrainageNeighbours } from '@/lib/venous-drainage';
 import { makeStudyLink, type StudySide } from '@/lib/study-links';
 import type { BodyCatalog } from './body-types';
 
@@ -24,21 +24,22 @@ export function VenousDrainage({
   onShow: () => void;
 }) {
   const info = useMemo(
-    () => systemicVenousNeighbours(catalog, region, side, selectedId, disabled),
+    () => venousDrainageNeighbours(catalog, region, side, selectedId, disabled),
     [catalog, region, side, selectedId, disabled],
   );
   if (!info) return null;
+  const portal = info.territory === 'portal venous';
   const headings = { receives: 'Receives from', outlet: 'Drains towards' };
   const kinds = {
     tributary: 'Tributary',
     continuation: 'Continuation',
     confluence: 'Confluence',
     'via-unmodelled': 'Unmodelled part of route',
-    variable: 'Common pattern · variable termination',
+    variable: 'One pattern · variable termination',
   };
   return (
     <details className="body-study-tools body-motor-explorer">
-      <summary>Venous drainage</summary>
+      <summary>{portal ? 'Portal venous drainage' : 'Venous drainage'}</summary>
       <p>
         {info.selected.name} · common drainage relationships, not measured flow
         or verified donor junctions.
@@ -111,8 +112,10 @@ export function VenousDrainage({
       <details>
         <summary>Limits & references</summary>
         <p>
-          Specialist review pending. Intracranial sinuses, portal pathways,
-          pulmonary and cardiac drainage are not supplied by this systemic map.
+          Specialist review pending.{' '}
+          {portal
+            ? 'Sinusoids, collaterals, smaller tributaries and a complete pancreaticoduodenal network are not supplied by this portal map. Hepatic venous outflow is a separate circuit.'
+            : 'Intracranial sinuses, portal pathways, pulmonary and cardiac drainage are not supplied by this systemic map.'}
           Whole source surfaces stay unchanged.
         </p>
         <p>

@@ -23,6 +23,7 @@ export { lowerLimbMotorGroups } from './lib/lower-limb-motor.ts';
 export { lowerLimbMotorRegions } from './content/lower-limb-motor.ts';
 export { arterialNeighbours } from './lib/arterial.ts';
 export { systemicVenousNeighbours } from './lib/systemic-venous.ts';
+export { portalVenousNeighbours } from './lib/portal-drainage.ts';
 export { makeSpecimenLink, resolveSpecimenLink } from './lib/um-limb-navigation.ts';
 export { parseSpecimenLink, specimenTopics } from './lib/specimen-links.ts';
 export { bodyContent, bodyLesson } from './app/body-content.ts';
@@ -65,6 +66,7 @@ const {
   lowerLimbMotorRegions,
   arterialNeighbours,
   systemicVenousNeighbours,
+  portalVenousNeighbours,
   makeSpecimenLink,
   resolveSpecimenLink,
   parseSpecimenLink,
@@ -256,6 +258,11 @@ for (const path of [
   'lib/brachial-veins.ts',
   'lib/tentorium.ts',
   'lib/deep-leg-veins.ts',
+  'lib/portal-veins.ts',
+  'lib/portal-drainage.ts',
+  'lib/venous-drainage.ts',
+  'public/models/bodyparts3d/portal-veins/catalog.json',
+  'docs/portal-vein-source-audit.json',
   'lib/limb-vascular-studies.ts',
   'content/limb-vascular-studies.ts',
   'content/limb-vascular-study-pins.json',
@@ -490,6 +497,13 @@ const report = {
     'Offline source and displayed-copy inventory; no clinical or browser certification.',
   sourceHashes,
   anatomy: {
+    portalVeins: {
+      sourceSelections: catalog.structures.filter(s=>s.bundle==='portal-veins').length,
+      originalTriangles: 3892, sourceFiles: 5,
+      mappedSelections: catalog.structures.filter(s=>portalVenousNeighbours(catalog,'whole-body','both',s.id)).length,
+      mappedRelationships: catalog.structures.reduce((n,s)=>n+(portalVenousNeighbours(catalog,'whole-body','both',s.id)?.rows.filter(r=>r.direction==='outlet').length??0),0),
+      exactSourceFacesRetained: true, clinicalApproval: false, flowSimulated: false,
+    },
     limbVascularStudies: {
       studies: limbVascularStudySets.length,
       sourceSelections: catalog.structures.filter(s=>limbVascularSourceIds.includes(s.fmaId)).length,
@@ -781,7 +795,7 @@ const report = {
     revisionIdentities: Object.keys(revisions.revisions).length,
     hasPrivateReviews: false,
     status:
-      'Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot and 1,031 displayed root-body selections (1,022 archival records plus nine source-bound additions, including the incomplete right-sided tentorium and six deep leg vein groups). This inventory never reads personal review records; nested/independent scopes and acquired imaging remain outside those approvals.',
+      `Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot and ${catalog.structures.length} displayed root-body selections. The 1,022-record archival catalogue is retained; later source-bound additions include the incomplete right-sided tentorium and limb/portal vein groups. This inventory never reads personal review records; nested/independent scopes and acquired imaging remain outside those approvals.`,
   },
   boundaries: {
     scope: 'Current source implementation, not operations performed by this inventory script',

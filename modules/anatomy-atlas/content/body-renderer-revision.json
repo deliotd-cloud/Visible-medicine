@@ -50,7 +50,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "8ab3813017569d1cb1e8ed81c163c55fe91323bb02ef0d4c3c49bb463acf75cc"
+      "sha256": "0ddf4f7b6e424951e37139ec63ddb3b8afdc117c29c52462a743538c46338720"
     },
     {
       "path": "app/body-explorer.css",
@@ -58,7 +58,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "b75d7c7646b20774c5d1d859247b69e09f32635efd0710ccd23a78377bc2cfd0"
+      "sha256": "5b8c657669c2ecc68f9a4e8c35f5f45286f9750930d5f1c798c491d8bfa1eef1"
     },
     {
       "path": "app/body-scene.tsx",
@@ -254,7 +254,7 @@
     },
     {
       "path": "app/venous-drainage.tsx",
-      "sha256": "bf527dacc68ee5536ecce8b70c5f4796c7ee16fb401bd242ef2d707b09b227ee"
+      "sha256": "9d62f0473a6c6f29400e603e40d77fd7aeae47bc552d7f67ea75b6e6806d3fc7"
     },
     {
       "path": "app/ventricles.tsx",
@@ -606,7 +606,7 @@
     },
     {
       "path": "lib/body-display-catalog.ts",
-      "sha256": "8f3d83f1ca5c3b74c6b76af6736aeb26566f0bf505de7f4c44ad9a924ad16497"
+      "sha256": "cc3f4043123c2e50559a98feceed4c94177371c08bc382c5ffe2d8e21c6e2eef"
     },
     {
       "path": "lib/body-source-additions.ts",
@@ -973,6 +973,14 @@
       "sha256": "4531ad654cf9f49c11dbdf11adb275b13fb0e97785b7c22a3b74c569386dc7c1"
     },
     {
+      "path": "lib/portal-drainage.ts",
+      "sha256": "f60869bc7638505d9bac15c67c5fff0ced89a32f059151056785d1d86526aa10"
+    },
+    {
+      "path": "lib/portal-veins.ts",
+      "sha256": "ea4d982449805f6546b8c8bd856ee8b30cead28f6bd144134170de9f96ae8853"
+    },
+    {
       "path": "lib/pulmonary-context.ts",
       "sha256": "cce895c7a6dff6b9ce34c49539491e8b87cf4a2738e72c583436f7ae0cdde620"
     },
@@ -1189,6 +1197,10 @@
       "sha256": "9304a861c8673bee09e0f12de31773abbde503b02e59dfd74763ddec2e37cf05"
     },
     {
+      "path": "lib/venous-drainage.ts",
+      "sha256": "461295771de1b34288fb3db0b87833d1398b60f81eb88b4a410b18bed608524c"
+    },
+    {
       "path": "lib/ventricles.ts",
       "sha256": "46f8ae96624771fb1e3bfb73f26c4ddbe4467e201784374df6159e68834a630c"
     },
@@ -1218,7 +1230,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "6ea2e9a7307916353fe7619846744a36e1ba319ec1c722846aebcaf0e1c5efb9"
+      "sha256": "468b0a9cc6d7a03d62dc4159474d792c361da4f6bdbe99f3fe40f3328861221f"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1277,6 +1289,10 @@
       "sha256": "d138ba3d14314bdf84abf5eb80a873b73a542fd69d3d9cee5419158b1cb67028"
     },
     {
+      "path": "public/models/bodyparts3d/portal-veins/catalog.json",
+      "sha256": "2ce331f3cecbd67a2fe75f873c79d0c187b67fc4131b34cab8a44833c4a37ae8"
+    },
+    {
       "path": "public/models/bodyparts3d/pulmonary/airway-context.json",
       "sha256": "294ba340df060770edf390bc08f4260f8ed3cbd08250d39ef9b40c611a7ca5d4"
     },
@@ -1325,5 +1341,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "e6a219168044e900bdfb83e753bf2b52183b7e815d87fe15c661b77e80f0031c"
+  "sha256": "cb45b4e1b8c10073e4b293466adc0e7abe613bed2646c487994e6beb367cc9d5"
 }

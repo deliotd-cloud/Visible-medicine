@@ -118,7 +118,7 @@ import { UpperLimbMotorExplorer } from './upper-limb-motor';
 import { ArterialConnections } from './arterial-connections';
 import { arterialPlan } from '../lib/arterial';
 import { VenousDrainage } from './venous-drainage';
-import { systemicVenousPlan } from '../lib/systemic-venous';
+import { venousDrainagePlan } from '../lib/venous-drainage';
 import { limbMotorPlan } from '@/lib/limb-motor';
 import { StudyLinks } from './study-links';
 import {
@@ -732,7 +732,7 @@ export default function BodyExplorer({
   }
   function showVenousDrainage() {
     if (!catalog || !selectedId) return;
-    const plan = systemicVenousPlan(catalog, initialRegion, side, selectedId, exam);
+    const plan = venousDrainagePlan(catalog, initialRegion, side, selectedId, exam);
     if (!plan) return;
     dispatch(plan.action);
     setSystems(prev => ({ ...prev, skeleton: true, vessels: true }));
