@@ -13,7 +13,8 @@ const same = (a, b, message) => { checks++; assert.deepEqual(a, b, message); };
 const clone = value => JSON.parse(JSON.stringify(value));
 const fromHref = href => Object.fromEntries(new URL(href, 'https://atlas.example').searchParams);
 const expected = ['acl', 'pcl', 'mcl', 'lcl', 'meniscus-group', 'quadriceps-tendon', 'patellar-ligament', 'achilles-tendon', 'talus', 'calcaneus',
-  'femur', 'femoral-head-cartilage', 'gluteus-medius', 'gluteus-minimus', 'iliacus', 'psoas-major', 'adductor-longus', 'rectus-femoris', 'semimembranosus', 'semitendinosus', 'biceps-femoris-long-head', 'biceps-femoris-short-head'];
+  'femur', 'femoral-head-cartilage', 'gluteus-medius', 'gluteus-minimus', 'iliacus', 'psoas-major', 'adductor-longus', 'rectus-femoris', 'semimembranosus', 'semitendinosus', 'biceps-femoris-long-head', 'biceps-femoris-short-head',
+  'extensor-digitorum-longus', 'extensor-hallucis-longus', 'peroneus-longus', 'flexor-digitorum-longus', 'flexor-hallucis-longus', 'popliteus', 'soleus', 'tibialis-anterior', 'tibialis-posterior', 'gastrocnemius-medial', 'gastrocnemius-lateral', 'abductor-hallucis', 'abductor-digiti-minimi', 'flexor-digitorum-brevis', 'quadratus-plantae', 'extensor-digitorum-brevis'];
 same(Object.keys(specimenClinicalLessons).sort(), expected.sort());
 const referenceWords = {}, knownURLs = new Set(Object.values(specimenClinicalReferences).map(r => r.url));
 function references(text, refs) {
@@ -40,7 +41,7 @@ for (const selected of whole.surfaces) {
   lesson.extended.topics.clinical.body = 'mutated';
   same(specimenTeachingFor(whole, selected).extended, extended);
 }
-same(counts, { clinical: 22, pathology: 22, ct: 4, mri: 17, xray: 19, ultrasound: 12 });
+same(counts, { clinical: 38, pathology: 38, ct: 4, mri: 22, xray: 20, ultrasound: 15 });
 const hipTopics = {
   femur: ['clinical', 'pathology', 'xray', 'ct', 'mri'],
   'femoral-head-cartilage': ['clinical', 'pathology', 'xray'],
@@ -59,6 +60,26 @@ for (const [slug, topics] of Object.entries(hipTopics)) {
   same(Object.keys(specimenClinicalLessons[slug].topics).sort(), topics.sort(), `Exact hip/thigh topic coverage: ${slug}`);
   same(Object.values(limbDefinitions).some(def => def.key.endsWith(':hip-thigh') && def.surfaces.some(s => s.slug === slug)), true);
 }
+const calfFootTopics = {
+  'extensor-digitorum-longus': [], 'extensor-hallucis-longus': [],
+  'peroneus-longus': ['mri', 'ultrasound'], 'flexor-digitorum-longus': [], 'flexor-hallucis-longus': [],
+  popliteus: ['mri'], soleus: ['mri', 'ultrasound'], 'tibialis-anterior': [],
+  'tibialis-posterior': ['mri', 'xray'], 'gastrocnemius-medial': ['ultrasound'], 'gastrocnemius-lateral': [],
+  'abductor-hallucis': [], 'abductor-digiti-minimi': ['mri'], 'flexor-digitorum-brevis': [],
+  'quadratus-plantae': [], 'extensor-digitorum-brevis': [],
+};
+for (const [slug, imaging] of Object.entries(calfFootTopics)) {
+  const lesson = specimenClinicalLessons[slug];
+  same(Object.keys(lesson.topics).sort(), ['clinical', 'pathology', ...imaging].sort(), `Exact calf/foot topics: ${slug}`);
+  same(Object.values(limbDefinitions).some(def => /:(calf|foot|knee)$/.test(def.key) && def.surfaces.some(s => s.slug === slug)), true);
+  same(Object.keys(lesson).sort(), ['modelLimit', 'selfCheck', 'topics']);
+  same(/FMA\d|FJ\d|"identities"|"scope"/.test(JSON.stringify(lesson)), false, `No other-specimen identifiers: ${slug}`);
+}
+same(specimenClinicalLessons['extensor-hallucis-brevis'], undefined);
+same(specimenClinicalLessons['extensor-digitorum-brevis'].modelLimit.includes('separately validated extensor hallucis brevis'), true);
+same(specimenClinicalLessons['abductor-digiti-minimi'].topics.mri.body.includes('not an established stand-alone diagnosis'), true);
+same(specimenClinicalLessons.soleus.topics.ultrasound.body.includes('does not reliably exclude'), true);
+same(specimenClinicalLessons['gastrocnemius-lateral'].modelLimit.includes('not make a medial-head'), true);
 // Keep original summaries brief; no reference text/tables/diagrams are imported.
 for (const [url, words] of Object.entries(referenceWords)) same(words <= 200, true, `Excessive reliance on one reference: ${url} (${words})`);
 for (const def of Object.values(limbDefinitions)) for (const selected of def.surfaces) {

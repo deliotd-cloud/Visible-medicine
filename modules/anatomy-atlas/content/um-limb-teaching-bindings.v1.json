@@ -1247,6 +1247,37 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK526084/"
         ],
+        "extended": {
+          "modelLimit": "One muscle surface does not represent the complete posterolateral corner, popliteomeniscal fascicles or a separately graded tendon injury. The source does not simulate knee instability.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Relate symptoms to knee rotation and the wider ligament, meniscal and stability assessment.",
+              "references": [
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC8894959/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Popliteus injury may occur alone or as part of a wider posterolateral knee injury.",
+              "references": [
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC8894959/"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "Review popliteus alongside the wider posterolateral knee structures on MRI. An isolated injury is different from a combined injury; small athletic series do not define a universal recovery timeline.",
+              "references": [
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC8894959/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does hiding popliteus isolate the complete posterolateral corner?",
+            "answer": "No. This display does not separately include every ligament, fascicle or stabilising structure of that region.",
+            "references": []
+          }
+        },
         "motorGroups": [
           {
             "nerve": "tibial"
@@ -2072,6 +2103,39 @@
         "references": [
           "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
         ],
+        "extended": {
+          "modelLimit": "This is the foot muscle, not the hand muscle. It does not show fatty infiltration, a nerve lesion or a clinically verified Baxter entrapment site.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Correlate heel symptoms with the wider examination and actual imaging; the reference mesh cannot demonstrate denervation.",
+              "references": [
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC12367558/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "The nerve supplying this muscle is relevant to the proposed Baxter neuropathy explanation for plantar heel pain.",
+              "references": [
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC12367558/"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "Fatty infiltration of this muscle is not an established stand-alone diagnosis of Baxter neuropathy. The 2025 systematic review found insufficient robust evidence for that association.",
+              "references": [
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC12367558/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does fatty infiltration on MRI alone establish Baxter neuropathy?",
+            "answer": "No. The cited review found the proposed association uncertain; symptoms and the wider clinical evidence still matter.",
+            "references": [
+              "https://pmc.ncbi.nlm.nih.gov/articles/PMC12367558/"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "lateral-plantar"
@@ -2146,6 +2210,30 @@
         "references": [
           "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
         ],
+        "extended": {
+          "modelLimit": "The supplied medial intrinsic muscle does not establish tarsal-tunnel boundaries or a compressed nerve. Neither denervation nor a patient-specific arch deformity is rendered.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Relate hallux abduction and flexion to the medial plantar motor supply, alongside sensory symptoms and other muscles.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK539705/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Tibial or medial plantar nerve dysfunction can affect this medial intrinsic muscle.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK513273/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does this muscle selection localise a tarsal-tunnel lesion?",
+            "answer": "No. No nerve-compression site is mapped; the selection identifies the source muscle only.",
+            "references": []
+          }
+        },
         "motorGroups": [
           {
             "nerve": "medial-plantar"
@@ -2727,6 +2815,30 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK539705/"
         ],
+        "extended": {
+          "modelLimit": "The source provides one EDB surface. A separately validated extensor hallucis brevis and individual tendon slips are absent; do not transfer a different specimen's hallux-brevis identity here.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "This dorsal intrinsic extensor receives deep fibular motor supply, unlike plantar intrinsic muscles. Interpret toe movement alongside the long extensors rather than as an isolated EDB test.",
+              "references": [
+                "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Deep fibular motor dysfunction can affect the short dorsal extensor. The reference surface cannot establish the cause, severity or level of a neurological lesion.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK539705/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does this source contain a separate selectable extensor hallucis brevis?",
+            "answer": "No. Only the supplied EDB identity is bound here; an absent separate structure must not be inferred from another specimen.",
+            "references": []
+          }
+        },
         "motorGroups": [
           {
             "nerve": "deep-fibular"
@@ -2808,6 +2920,32 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK539725/"
         ],
+        "extended": {
+          "modelLimit": "One supplied muscle surface, not separately validated distal tendon slips or a nerve territory. Its reference shape cannot show weakness, compartment pressure or a tendon tear.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Compare lesser-toe extension with ankle dorsiflexion and the wider motor/sensory pattern.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK554393/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Weakness of the long toe extensors can accompany anterior-compartment muscle injury or dysfunction of their deep fibular motor supply.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK539725/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does weak lesser-toe extension identify one torn tendon?",
+            "answer": "No. Compare ankle movement and the wider neurological pattern; this selection does not isolate individual tendon slips.",
+            "references": [
+              "https://www.ncbi.nlm.nih.gov/books/NBK554393/"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "deep-fibular"
@@ -2889,6 +3027,30 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK539725/"
         ],
+        "extended": {
+          "modelLimit": "The long hallux extensor is supplied as one surface. No tear, root lesion or separate distal attachment footprint is segmented; selecting it does not test L5 function.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Assess hallux extension alongside other dorsiflexors and the neurological examination.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK554393/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Impaired great-toe extension may reflect local muscle/tendon injury or a neurological lesion.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK554393/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Can this selection establish an L5 root lesion?",
+            "answer": "No. It identifies a reference muscle, not the cause or distribution of weakness in a patient.",
+            "references": []
+          }
+        },
         "motorGroups": [
           {
             "nerve": "deep-fibular"
@@ -2963,6 +3125,30 @@
         "references": [
           "https://www.kenhub.com/en/library/anatomy/flexor-digitorum-brevis-muscle"
         ],
+        "extended": {
+          "modelLimit": "This supplied short-flexor surface does not separately grade digital tendon slips, toe deformities or passive joint flexibility. Grouped bones are not validated digit-specific lesion labels.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "The short flexor reaches the middle phalanges; the long flexor continues to the distal phalanges.",
+              "references": [
+                "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Lesser-toe deformity reflects the balance of muscles, tendons and joints, not simply shortening or rupture of the short flexor.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hammer-toe"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Can this grouped muscle prove that one digital tendon is ruptured?",
+            "answer": "No. It is a reference surface with no separately validated pathological tendon slips.",
+            "references": []
+          }
+        },
         "motorGroups": [
           {
             "nerve": "medial-plantar"
@@ -3120,6 +3306,32 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK537340/"
         ],
+        "extended": {
+          "modelLimit": "A supplied long-flexor surface is not four independently assessed distal tendon slips. The foot display does not validate individual pulley systems or tendon continuity.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Relate FDL to distal-joint flexion of toes 2–5, while recognising the combined action of long and intrinsic flexors.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK537340/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Long toe-flexor injury or tibial motor dysfunction can alter active lesser-toe flexion.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK537340/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does FDL stop at the middle phalanges like the short flexor?",
+            "answer": "No. Its distal attachments reach the distal phalanges of toes 2–5; the short flexor reaches the middle phalanges.",
+            "references": [
+              "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "tibial"
@@ -3195,6 +3407,32 @@
           "https://www.ncbi.nlm.nih.gov/books/NBK537340/",
           "https://www.ncbi.nlm.nih.gov/books/NBK526084/"
         ],
+        "extended": {
+          "modelLimit": "The reference surface does not segment tenosynovitis, impingement, a tear or its sheath. Historical surgical-series findings are not prevalence estimates or a treatment pathway.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Posteromedial ankle symptoms with hallux movement may prompt assessment of the FHL tendon and its sheath.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/9677077/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "FHL can develop tendon-sheath inflammation and tendon tears in dancers and nondancers.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/9677077/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Is FHL tendon disease restricted to dancers?",
+            "answer": "No. It has also been reported in nondancers; a selected clinical series cannot establish its population prevalence.",
+            "references": [
+              "https://pubmed.ncbi.nlm.nih.gov/9677077/"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "tibial"
@@ -3270,6 +3508,30 @@
           "https://www.ncbi.nlm.nih.gov/books/NBK459362/",
           "https://www.ncbi.nlm.nih.gov/books/NBK537340/"
         ],
+        "extended": {
+          "modelLimit": "Only the supplied lateral head is selected. Shared calf/Achilles context does not make a medial-head tennis-leg lesion a lateral-head diagnosis; no pathological head or tendon is modelled.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "The two gastrocnemius heads contribute to plantar flexion through the shared Achilles apparatus and also cross the knee. Interpret this lateral-head selection within that shared anatomy.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK459362/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "An injured gastrocnemius muscle and a ruptured Achilles tendon are different lesions. A lateral-head reference surface does not establish which tissue accounts for calf pain.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/12091669/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Is this lateral-head selection also a separate Achilles tendon selection?",
+            "answer": "No. The reference head and supplied Achilles tendon retain distinct identities despite their shared functional apparatus.",
+            "references": []
+          }
+        },
         "motorGroups": [
           {
             "nerve": "tibial"
@@ -3345,6 +3607,37 @@
           "https://www.ncbi.nlm.nih.gov/books/NBK459362/",
           "https://www.ncbi.nlm.nih.gov/books/NBK537340/"
         ],
+        "extended": {
+          "modelLimit": "Only the supplied medial head is selected. No strain, fluid collection or venous clot is rendered; source defects are not diagnostic findings and this is not a vascular scan.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Gastrocnemius crosses knee and ankle, whereas soleus does not. Both transmit force through the shared Achilles apparatus.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK459362/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Gastrocnemius strains and Achilles tendon ruptures are distinct injuries. Medial gastrocnemius injury is a common explanation for the clinical label tennis leg.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/12091669/"
+              ]
+            },
+            "ultrasound": {
+              "readiness": "draft",
+              "body": "Ultrasound can assess medial gastrocnemius injury and adjacent fluid. Calf pain also has non-muscular causes, including venous thrombosis; a muscle view alone does not exclude them.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/12091669/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does selecting this muscle exclude a vascular cause of calf pain?",
+            "answer": "No. The model is not a patient examination and does not evaluate veins or blood flow.",
+            "references": []
+          }
+        },
         "motorGroups": [
           {
             "nerve": "tibial"
@@ -4212,6 +4505,44 @@
           "https://www.ncbi.nlm.nih.gov/books/NBK519526/",
           "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
         ],
+        "extended": {
+          "modelLimit": "The source calls this peroneus longus (fibularis longus). Brevis, retinacula, os peroneum and tendon-sheath disease are not separate validated selections; separation is not tendon subluxation.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Relate eversion and first-ray support to the longus tendon course.",
+              "references": [
+                "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Fibularis longus tendon disease can cause lateral ankle or plantar-lateral foot pain.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK544354/"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI can assess the peroneal tendons and surrounding tissues for tears or inflammation. Findings must distinguish longus from brevis rather than assigning all lateral pain to longus.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK544354/"
+              ]
+            },
+            "ultrasound": {
+              "readiness": "draft",
+              "body": "Dynamic ultrasound can examine peroneal tendon movement and instability. Evidence from a selected surgical cohort does not establish universal accuracy; this static mesh cannot reproduce a dynamic examination.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/38337434/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does separation of this surface demonstrate peroneal tendon instability?",
+            "answer": "No. Explode mode only changes presentation; it contains no validated retinaculum, tendon tracking or dynamic scan.",
+            "references": []
+          }
+        },
         "motorGroups": [
           {
             "nerve": "superficial-fibular"
@@ -4549,6 +4880,32 @@
         "references": [
           "https://www.kenhub.com/en/library/anatomy/quadratus-plantae-muscle"
         ],
+        "extended": {
+          "modelLimit": "The supplied muscle is not separated into two validated head selections or individual FDL attachment slips. No lateral plantar nerve path or denervation pattern is modelled.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Quadratus plantae assists flexion through the long-flexor tendon apparatus, rather than attaching directly to a toe phalanx.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK539705/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Lateral plantar motor dysfunction may involve quadratus plantae alongside other intrinsic muscles.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK513273/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does quadratus plantae attach directly to a toe phalanx?",
+            "answer": "No. Its contribution is through the long-flexor tendon apparatus, not a direct phalangeal insertion.",
+            "references": [
+              "https://www.ncbi.nlm.nih.gov/books/NBK539705/"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "lateral-plantar"
@@ -5049,6 +5406,46 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK537340/"
         ],
+        "extended": {
+          "modelLimit": "The supplied soleus has no segmented intramuscular aponeuroses, strain grades or pressure compartments. Its separation from gastrocnemius is neither a tear nor a surgical decompression.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Soleus crosses the ankle, not the knee; bending the knee changes gastrocnemius length without turning movement into a perfectly isolated soleus test.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK537340/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Soleus strain and injury to the shared Achilles apparatus can both affect calf loading, but they are not the same lesion.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/12091669/"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI can localise soleus injury when a deeper lesion is not adequately shown by ultrasound. The referenced study used MRI as its comparison standard, not this atlas surface.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/24627005/"
+              ]
+            },
+            "ultrasound": {
+              "readiness": "draft",
+              "body": "A negative ultrasound does not reliably exclude a soleus injury. Deeper lesions were missed in the referenced clinical series; image quality, lesion location and the clinical question matter.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/24627005/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does a normal ultrasound necessarily exclude a deeper soleus strain?",
+            "answer": "No. Ultrasound missed lesions in the referenced series; clinical assessment determines whether further investigation is needed.",
+            "references": [
+              "https://pubmed.ncbi.nlm.nih.gov/24627005/"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "tibial"
@@ -5372,6 +5769,32 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK513304/"
         ],
+        "extended": {
+          "modelLimit": "This muscle reference is not a torn tendon or a mapped neurological lesion. It contains no motor testing, gait simulation or measured compartment pressure.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Assess ankle dorsiflexion and inversion alongside toe extension, sensation and gait.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK554393/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Tibialis-anterior tendon disease or rupture can impair dorsiflexion. Foot drop can also arise from nerve, root or other neurological disease.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK554393/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Is foot drop a diagnosis of tibialis-anterior tendon rupture?",
+            "answer": "No. It describes impaired dorsiflexion with several possible muscular, tendon and neurological causes.",
+            "references": [
+              "https://www.ncbi.nlm.nih.gov/books/NBK554393/"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "deep-fibular"
@@ -5485,6 +5908,44 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK539913/"
         ],
+        "extended": {
+          "modelLimit": "The muscle surface does not separately resolve every insertion slip or the ligament support of the arch. Reference bone spacing is not a weight-bearing deformity measurement.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Medial ankle/arch symptoms, standing alignment and heel-rise function help assess the posterior tibial apparatus.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/posterior-tibial-tendon-dysfunction"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Posterior tibial tendon dysfunction can contribute to progressive collapsing foot deformity.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/posterior-tibial-tendon-dysfunction"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI may assess posterior tibial tendon and associated ligament abnormalities when needed. Progressive arch collapse is not necessarily an isolated muscle lesion.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/posterior-tibial-tendon-dysfunction"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "Standing radiographs assess alignment and joint changes under load. They do not directly show tendon continuity; rotating or exploding this model is not a weight-bearing radiograph.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/posterior-tibial-tendon-dysfunction"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Can exploded arch spacing grade progressive collapsing foot deformity?",
+            "answer": "No. Display spacing is not a calibrated standing alignment study and the full ligament apparatus is absent.",
+            "references": []
+          }
+        },
         "motorGroups": [
           {
             "nerve": "tibial"

@@ -10,6 +10,8 @@ The two gingiva candidates and original bytes remain preserved in the [source re
 
 ## Main workstream
 
+[Calf/foot clinical teaching](UM_LIMB_CLINICAL.md) now covers all sixteen supplied regional muscles with 41 new topic drafts and sixteen self-checks. Independent extended teaching reaches 137 topics across 38 selections; 29 selections and many modality topics remain pending. Existing Learn groups are reused, and no meshes or controls change. Next prioritize meaningful remaining regional content or independently cleared major anatomy; do not repeat these completed introductory lessons or return to routine oral detail.
+
 [Hip/thigh clinical teaching](UM_LIMB_CLINICAL.md) adds 50 introductory topic drafts and twelve self-checks for twelve existing selections, bringing independent coverage to 96 extended topics across 22 selections. All 67 baseline lessons and the ten knee/hindfoot sets remain, without extra controls or altered meshes. Continue other substantive regional teaching and genuine missing-anatomy work; do not repeat this completed introductory pass. Real images, advanced modality detail, clinical review and integration remain outstanding.
 
 [Lossless model delivery](MODEL_DELIVERY.md) is now built into production: smaller transport files preserve every source geometry buffer and scene, with distinct canonical/transport hashes. Do not simplify meshes or remove regional anatomy merely to reduce publication size. This is delivery work, not closure of anatomy gaps; once this build is saved, resume substantive body-region content and source development.

@@ -2,7 +2,26 @@
 
 ## Delivered scope
 
-Twenty-two exact source selections now have 96 introductory topic drafts and 22 clinical self-checks. They use the existing Learn panel with three compact groups: Anatomy (Overview/Function), Clinical (Context/Pathology) and Imaging (CT/MRI/X-ray/Ultrasound). All 67 baseline anatomy/function lessons remain. Absent content is explicitly pending, not a generic completed lesson. No additional controls or expanded-by-default panel were added.
+Thirty-eight exact source selections now have 137 introductory topic drafts and 38 clinical self-checks. They use the existing Learn panel with three compact groups: Anatomy (Overview/Function), Clinical (Context/Pathology) and Imaging (CT/MRI/X-ray/Ultrasound). All 67 baseline anatomy/function lessons remain. Absent content is explicitly pending, not a generic completed lesson. No additional controls or expanded-by-default panel were added.
+
+### Calf/foot extension — 11 September 2026
+
+All sixteen supplied calf/foot muscle selections gain Clinical and Pathology context and an original self-check. Nine selected imaging notes bring this extension to 41 topics. It reuses appropriate original factual prose from the main atlas, but never its FMA/node IDs, laterality bindings or source-scope notes. Exact independent specimen bindings remain the only access path. This is introductory teaching, not completion of lower-limb radiology.
+
+| Selections | Clinical + Pathology | Additional imaging |
+| --- | ---: | --- |
+| EDL, EHL, tibialis anterior, FDL, FHL | 10 | Pending |
+| Fibularis longus (source: peroneus longus) | 2 | MRI, dynamic-US context |
+| Popliteus | 2 | MRI context |
+| Soleus | 2 | MRI, US limitations |
+| Tibialis posterior | 2 | MRI, standing-radiograph context |
+| Medial / lateral gastrocnemius | 4 | Medial-head US context only |
+| Abductor hallucis, FDB, quadratus plantae, EDB | 8 | Pending |
+| Foot abductor digiti minimi | 2 | MRI evidence limitation |
+
+The material distinguishes muscle strain from Achilles rupture, FDL from FDB attachments, a dorsal extensor from plantar intrinsic innervation, and a muscle selection from a nerve-localising examination. A normal US cannot reliably exclude deep soleus injury. ADM fatty infiltration is not presented as a stand-alone diagnosis of Baxter neuropathy. Medial-head tennis-leg context is not silently applied to a lateral-head diagnosis. No separate EHB, missing intrinsic muscle, nerve path, tendon slip, retinaculum or patient scan is invented.
+
+The extension changes sixteen extended lessons only: all 67 baseline lessons/source bindings and the other 51 complete lessons are unchanged from the preceding hip/thigh checkpoint. Existing source/recipe navigation pins and every mesh remain unchanged.
 
 ### Hip/thigh extension — 11 September 2026
 
@@ -38,7 +57,7 @@ The material distinguishes partial/complete disruption, accompanying injuries an
 
 ## Exact identity and navigation
 
-`content/um-limb-clinical.ts` incorporates the explicit hip/thigh concepts from `content/um-hip-thigh-clinical.ts`; `content/um-limb-teaching.ts` attaches them only to existing named concepts. The teaching-pin script binds complete source entries, bundle hashes and lessons. The hip/thigh extension changes twelve lessons; the other 55 (including the previous ten clinical sets), source meshes, null FMA mappings and source/recipe navigation pins remain unchanged. Runtime resolution returns detached exact-bound content and rejects foreign or altered source entries. Grouped menisci stay grouped; source defects cannot be interpreted as disease.
+`content/um-limb-clinical.ts` incorporates explicit concepts from `content/um-hip-thigh-clinical.ts` and `content/um-calf-foot-clinical.ts`; `content/um-limb-teaching.ts` attaches them only to existing named concepts. The teaching-pin script binds complete source entries, bundle hashes and lessons. Runtime resolution returns detached exact-bound content and rejects foreign or altered source entries. Grouped menisci stay grouped; source defects cannot be interpreted as disease. Reusing authored prose is not registration to another subject.
 
 `availableSpecimenTopics` uses the actual bound lesson, not a global promise of availability. Copy/open links offer only available drafts; manually supplied unsupported topic requests fail closed with `topic-unavailable`. The dedicated route opens the appropriate outer group and topic. Existing Anatomy/Function links remain compatible. Opening Imaging normally chooses an available modality, preferring MRI where authored. No pending topic silently becomes an alternative.
 
@@ -52,8 +71,10 @@ These are reference-only sources for brief original factual synthesis. No articl
 
 ## Verification and outstanding review
 
-`npm run um-limb-clinical:test` checks all 22 exact source/lesson bindings, the 96-topic matrix and exact hip/thigh per-structure coverage, detachment/foreign-source rejection, available/pending link behavior in all five scopes and installed React markup for all 132 topic states. There are 216 source-bound extended-topic links across overlapping scopes. It verifies the requested group opens, references and cautions render, and pending states remain explicit. Baseline learning/navigation and knee suites are regression checks, not specialist or browser acceptance.
+`npm run um-limb-clinical:test` checks all 38 exact source/lesson bindings, the 137-topic matrix and exact regional per-structure coverage, detachment/foreign-source rejection, available/pending link behavior in all five scopes and installed React markup for all 228 topic states. There are 319 source-bound extended-topic links across overlapping scopes. It verifies the requested group opens, references and cautions render, and pending states remain explicit. Explicit guards retain soleus/ADM cautions, distinguish lateral gastrocnemius and reject another specimen's identifiers or an invented separate EHB lesson. Baseline learning/navigation and knee suites are regression checks, not specialist or browser acceptance.
 
-Required before clinical release: clinician/radiologist review of claims, nuance, local practice and references; orthopedic review of attachment/ligament grouping and source defects; real modality-specific image examples with de-identification and rights; scan-to-model registration validation before synchronized highlighting; browser/GPU/mobile, screen-reader, touch, keyboard and clipboard acceptance. Further content is still needed for 45 other independent selections and the unauthored modality topics above. The broader atlas remains incomplete, including major peripheral nerves and many joint/fascial structures. Routine oral detail remains deferred.
+Required before clinical release: clinician/radiologist review of claims, nuance, local practice and references; orthopedic review of attachment/ligament grouping and source defects; real modality-specific image examples with de-identification and rights; scan-to-model registration validation before synchronized highlighting; browser/GPU/mobile, screen-reader, touch, keyboard and clipboard acceptance. Further content is still needed for 29 other independent selections and the unauthored modality topics above. The broader atlas remains incomplete, including major peripheral nerves and many joint/fascial structures. Routine oral detail remains deferred.
+
+Calf/foot references checked 11 September 2026 include [Texas Tech anatomy](https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html), NCBI anatomy/clinical references, [AAOS arch-collapse teaching](https://www.orthoinfo.org/diseases--conditions/posterior-tibial-tendon-dysfunction), [FHL injury series](https://pubmed.ncbi.nlm.nih.gov/9677077/), [popliteus review](https://pmc.ncbi.nlm.nih.gov/articles/PMC8894959/), [soleus US study](https://pubmed.ncbi.nlm.nih.gov/24627005/), [calf US differential study](https://pubmed.ncbi.nlm.nih.gov/12091669/), [operative peroneal imaging comparison](https://pubmed.ncbi.nlm.nih.gov/38337434/) and [ADM/Baxter evidence review](https://pmc.ncbi.nlm.nih.gov/articles/PMC12367558/). Each topic carries its specific reading link; complete reference titles/URLs are in the content module. Cohort-specific accuracy, prevalence and recovery estimates are not generalized. The 2025 evidence review is identified by date, not claimed to exhaust subsequent research. No article, table, diagram, protocol or question bank is redistributed. New cited topic/self-check text totals 19–111 words per referenced URL; model limitations are original descriptions of this application's scope.
 
 Hip/thigh references checked 11 September 2026: AAOS [hip fractures](https://www.orthoinfo.org/diseases--conditions/hip-fractures/), [hip osteoarthritis summary](https://orthoinfo.aaos.org/globalassets/pdfs/hip-osteoarthritis-cpg_pls.pdf), [snapping hip](https://www.orthoinfo.org/diseases--conditions/snapping-hip/), [hip strains](https://www.orthoinfo.org/diseases--conditions/hip-strains/), [thigh strains](https://www.orthoinfo.org/diseases--conditions/muscle-strains-in-the-thigh) and [hamstring injuries](https://www.orthoinfo.org/diseases--conditions/hamstring-muscle-injuries); Cambridge University Hospitals [gluteal tendinopathy](https://www.cuh.nhs.uk/patient-information/gluteal-tendinopathy/); Texas Tech [posterior-thigh teaching](https://anatomy.ttuhscep.edu/musculoskeletal_system/gluteal_ans.html); ESSR [hip ultrasound guidance](https://essr.org/content-essr/uploads/2016/10/hip.pdf). Older educational references inform stable introductory facts, not a current local treatment pathway. New cited lesson/self-check synthesis stays below 200 words per reference (59–163 words). No PDF, diagram, table or external question was copied into the atlas; source-specific model cautions describe local specimen limitations.

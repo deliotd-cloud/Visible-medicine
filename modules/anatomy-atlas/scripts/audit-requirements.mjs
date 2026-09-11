@@ -306,6 +306,7 @@ for (const path of [
   'content/um-limb-teaching.ts',
   'content/um-limb-clinical.ts',
   'content/um-hip-thigh-clinical.ts',
+  'content/um-calf-foot-clinical.ts',
   'content/um-limb-motor.ts',
   'lib/um-limb-motor.ts',
   'app/um-limb-motor.tsx',

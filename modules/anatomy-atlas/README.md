@@ -4,7 +4,7 @@ Production builds use [lossless model compression](docs/MODEL_DELIVERY.md): the 
 
 **Independent lower limb → Muscles by nerve** adds [15 motor-supply groups](docs/UM_LIMB_MOTOR.md) linked to 42 existing source muscle selections. Show a group's muscles with bones in one reversible step, then select a muscle for its notes. Dual/variable supply is qualified. The control stays collapsed; nerve paths themselves are still absent, not fabricated.
 
-**Independent lower limb → Learn** now includes [46 clinical/pathology/imaging drafts for ten knee and hindfoot structures](docs/UM_LIMB_CLINICAL.md), with ten clinical self-checks. Three compact groups keep Anatomy, Clinical and Imaging inside the existing collapsed panel. Pending topics are explicit; no clinical approval or patient-scan correspondence is claimed.
+**Independent lower limb → Learn** includes [137 clinical/pathology/imaging drafts across 38 source selections](docs/UM_LIMB_CLINICAL.md), with 38 clinical self-checks. All sixteen supplied calf/foot muscles now join the hip/thigh and knee/hindfoot teaching. Three compact groups keep Anatomy, Clinical and Imaging inside the existing collapsed panel. Pending topics are explicit; no clinical approval or patient-scan correspondence is claimed.
 
 **Independent lower limb → Link to this study** creates a [source-checked direct link](docs/UM_LIMB_NAVIGATION.md) to a selected structure, study and camera direction, optionally opening any available teaching topic. Links open a dedicated specimen page without loading the other body atlas. Source/revision mismatches and unavailable topics stop with a warning; no paid-resource access or scan alignment is granted.
 

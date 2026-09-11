@@ -1,6 +1,20 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — hip/thigh clinical teaching (current)
+## 11 September 2026 — calf/foot clinical teaching (current)
+
+Source `ca49c62ef11895b6f9cbaa283e7750cfa5937f8d`, tree `7c55470943b21403b961e9e8d4fca1ba3af47f70`, parent `a408eda6929f2c3779cc7f6c7485057aa605e221`. Twelve changed paths mirrored into `modules/anatomy-atlas`; main website unchanged. Sites source push succeeded, full HEAD verified and ephemeral credential cleared.
+
+Sixteen independent calf/foot muscles gain 41 topic drafts and sixteen original self-checks: 32 Clinical/Pathology, five MRI, one X-ray, three US. Overall independent extended teaching now 38 selections, 137 topics, 38 self-checks. All 67 source/baseline lessons and the other 51 complete lessons remain identical. No model/control changes, invented EHB or nerve paths, patient scan, registration or paid-lecture access. Existing compact Learn groups and topic links reused. Primary/professional references inform short original factual teaching; no external article, table, scan, image, protocol or questions imported. No new dependency, asset or fee.
+
+Passed: 4,325 clinical checks / 228 React topic states / 319 source-bound extended links; 1,310 baseline learning checks; 3,668 navigation checks / 446 round trips; motor regression; TypeScript; inventory/review freshness; production build and byte-exact buffer/scene verification of all 107 runtime models. Clinical, browser/GPU/mobile and accessibility acceptance are not claimed. Oral detail remains deferred; continue other substantive body work, not this completed introductory pass.
+
+Native archive save and private deployment SUCCEEDED: version138 `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_aeed3d89c7208191a61ff9797acbc491`; deployment `appgdep_6aa34f4771b4819199f36d9f91f61910`, terminal `2026-09-11T00:46:32.919639+00:00`, https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site. No pending save/deployment or audience change. Background continuation preserved browser; no visual acceptance claimed.
+
+Recovery stem `work/atlas-um-calf-foot-clinical-2026-09-11`: runtime 99,149,446 bytes SHA256 `219689dcfb7db714c7e859e44b843602f0b7585d01dac061281f2041fd5e7d6d`; delta 573,440 bytes SHA256 `3f340a23782fccccc08df348fade0e5991c8cb18ad23a0bb9769b09331d16498`; incremental bundle 15,220 bytes SHA256 `c42edb686311a42fd48e1acfa25b4747abbf4a5ba5005a90c9d8077a4f9022a0`. Bundle requires source parent, not standalone. Archive 341 entries; mirror 1,414 files / 334,386,228 bytes / 111 GLBs, no common credential signatures (not exhaustive). Recovery JSON predates receipt completion; never rerun one-shot helper. All older artifacts retained.
+
+Detailed receipt `work/ATLAS_UM_CALF_FOOT_CLINICAL_2026-09-11.md`. Same-PC recovery and Sites saving are not GitHub delivery, chat-history/private-review DB backup or independently tested full off-device restoration.
+
+## 11 September 2026 — hip/thigh clinical teaching
 
 Source `a408eda6929f2c3779cc7f6c7485057aa605e221`, tree `eeeb5ce1557b69b686ad47ab4c8dc28eed8fe7ce`, parent `edbfcf2502ee932bd825e0441cd983cb589c0d50`. Eleven changed paths mirrored into `modules/anatomy-atlas`; main website unchanged. Sites source push succeeded, exact HEAD verified afterward and ephemeral credential cleared.
 
