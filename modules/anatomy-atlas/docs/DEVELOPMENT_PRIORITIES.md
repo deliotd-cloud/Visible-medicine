@@ -10,6 +10,8 @@ The two gingiva candidates and original bytes remain preserved in the [source re
 
 ## Main workstream
 
+[Hip/thigh clinical teaching](UM_LIMB_CLINICAL.md) adds 50 introductory topic drafts and twelve self-checks for twelve existing selections, bringing independent coverage to 96 extended topics across 22 selections. All 67 baseline lessons and the ten knee/hindfoot sets remain, without extra controls or altered meshes. Continue other substantive regional teaching and genuine missing-anatomy work; do not repeat this completed introductory pass. Real images, advanced modality detail, clinical review and integration remain outstanding.
+
 [Lossless model delivery](MODEL_DELIVERY.md) is now built into production: smaller transport files preserve every source geometry buffer and scene, with distinct canonical/transport hashes. Do not simplify meshes or remove regional anatomy merely to reduce publication size. This is delivery work, not closure of anatomy gaps; once this build is saved, resume substantive body-region content and source development.
 
 The [motor-relationship explorer](UM_LIMB_MOTOR.md) now links 42 exact independent muscle selections to 15 nerve/branch groups, with explicit dual/variable-supply cautions and reversible group views. No nerve geometry has been added. A [bounded peripheral-source review](PERIPHERAL_NERVE_CANDIDATES.md) records new leads and their actual missing gates; do not repeatedly search the same unresolved links or substitute guessed nerve paths. Next useful work can deepen other regional anatomy or remaining independent clinical teaching while genuine nerve-source files/rights await clarification.

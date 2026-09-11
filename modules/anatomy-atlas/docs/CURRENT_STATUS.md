@@ -10,7 +10,7 @@
 
 [Direct specimen links](UM_LIMB_NAVIGATION.md) open exact selections and studies across 5 scopes at available teaching topics. The dedicated page skips the other body model; mismatched sources/recipes and pending topics stop with a warning. Links grant neither separately paid-resource access nor scan registration.
 
-[Independent clinical/imaging teaching](UM_LIMB_CLINICAL.md) adds 46 introductory topic drafts and 10 clinical self-checks across ten knee/hindfoot selections. Three compact groups reuse the Learn panel; pending topics remain explicit. These are source-bound educational drafts, not pathological meshes, patient images or clinical approval. The root-body counts below do not include them.
+[Independent clinical/imaging teaching](UM_LIMB_CLINICAL.md) adds 96 introductory topic drafts and 22 clinical self-checks across hip/thigh and knee/hindfoot selections. Three compact groups reuse the Learn panel; pending topics remain explicit. These are source-bound educational drafts, not pathological meshes, patient images or clinical approval. The root-body counts below do not include them.
 
 [Development priority](DEVELOPMENT_PRIORITIES.md) is the wider atlas and body regions; detailed oral work is deferred. Six [spinal-level studies](SPINAL_LEVEL_STUDIES.md) expose existing bone/disc groups with compact controls. T12–L1 is explicitly bones-only because its source disc is unresolved.
 

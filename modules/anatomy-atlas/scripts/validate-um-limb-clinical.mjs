@@ -12,7 +12,8 @@ let checks = 0, markupCases = 0, deepLinks = 0;
 const same = (a, b, message) => { checks++; assert.deepEqual(a, b, message); };
 const clone = value => JSON.parse(JSON.stringify(value));
 const fromHref = href => Object.fromEntries(new URL(href, 'https://atlas.example').searchParams);
-const expected = ['acl', 'pcl', 'mcl', 'lcl', 'meniscus-group', 'quadriceps-tendon', 'patellar-ligament', 'achilles-tendon', 'talus', 'calcaneus'];
+const expected = ['acl', 'pcl', 'mcl', 'lcl', 'meniscus-group', 'quadriceps-tendon', 'patellar-ligament', 'achilles-tendon', 'talus', 'calcaneus',
+  'femur', 'femoral-head-cartilage', 'gluteus-medius', 'gluteus-minimus', 'iliacus', 'psoas-major', 'adductor-longus', 'rectus-femoris', 'semimembranosus', 'semitendinosus', 'biceps-femoris-long-head', 'biceps-femoris-short-head'];
 same(Object.keys(specimenClinicalLessons).sort(), expected.sort());
 const referenceWords = {}, knownURLs = new Set(Object.values(specimenClinicalReferences).map(r => r.url));
 function references(text, refs) {
@@ -39,7 +40,25 @@ for (const selected of whole.surfaces) {
   lesson.extended.topics.clinical.body = 'mutated';
   same(specimenTeachingFor(whole, selected).extended, extended);
 }
-same(counts, { clinical: 10, pathology: 10, ct: 3, mri: 8, xray: 10, ultrasound: 5 });
+same(counts, { clinical: 22, pathology: 22, ct: 4, mri: 17, xray: 19, ultrasound: 12 });
+const hipTopics = {
+  femur: ['clinical', 'pathology', 'xray', 'ct', 'mri'],
+  'femoral-head-cartilage': ['clinical', 'pathology', 'xray'],
+  'gluteus-medius': ['clinical', 'pathology', 'mri', 'ultrasound'],
+  'gluteus-minimus': ['clinical', 'pathology', 'mri', 'ultrasound'],
+  iliacus: ['clinical', 'pathology', 'xray', 'ultrasound'],
+  'psoas-major': ['clinical', 'pathology', 'xray', 'ultrasound'],
+  'adductor-longus': ['clinical', 'pathology', 'mri', 'xray', 'ultrasound'],
+  'rectus-femoris': ['clinical', 'pathology', 'mri', 'xray', 'ultrasound'],
+  semimembranosus: ['clinical', 'pathology', 'mri', 'xray', 'ultrasound'],
+  semitendinosus: ['clinical', 'pathology', 'mri', 'xray'],
+  'biceps-femoris-long-head': ['clinical', 'pathology', 'mri', 'xray'],
+  'biceps-femoris-short-head': ['clinical', 'pathology', 'mri'],
+};
+for (const [slug, topics] of Object.entries(hipTopics)) {
+  same(Object.keys(specimenClinicalLessons[slug].topics).sort(), topics.sort(), `Exact hip/thigh topic coverage: ${slug}`);
+  same(Object.values(limbDefinitions).some(def => def.key.endsWith(':hip-thigh') && def.surfaces.some(s => s.slug === slug)), true);
+}
 // Keep original summaries brief; no reference text/tables/diagrams are imported.
 for (const [url, words] of Object.entries(referenceWords)) same(words <= 200, true, `Excessive reliance on one reference: ${url} (${words})`);
 for (const def of Object.values(limbDefinitions)) for (const selected of def.surfaces) {
@@ -88,4 +107,4 @@ for (const selected of whole.surfaces.filter(s => specimenClinicalLessons[s.slug
 const linkSource = await readFile('app/specimen-study-link.tsx', 'utf8');
 same(linkSource.includes('availableSpecimenTopics(definition, selectedId)'), true);
 same(linkSource.includes('topics.map('), true);
-console.log(JSON.stringify({ checks, exactExtendedSelections: 10, draftTopics: counts, clinicalSelfChecks: 10, markupCases, sourceBoundTopicLinks: deepLinks, referenceWords, clinicalOrBrowserAcceptance: false }));
+console.log(JSON.stringify({ checks, exactExtendedSelections: expected.length, draftTopics: counts, clinicalSelfChecks: expected.length, markupCases, sourceBoundTopicLinks: deepLinks, referenceWords, clinicalOrBrowserAcceptance: false }));

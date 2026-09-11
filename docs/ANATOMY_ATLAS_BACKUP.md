@@ -1,6 +1,20 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — lossless model delivery (current)
+## 11 September 2026 — hip/thigh clinical teaching (current)
+
+Source `a408eda6929f2c3779cc7f6c7485057aa605e221`, tree `eeeb5ce1557b69b686ad47ab4c8dc28eed8fe7ce`, parent `edbfcf2502ee932bd825e0441cd983cb589c0d50`. Eleven changed paths mirrored into `modules/anatomy-atlas`; main website unchanged. Sites source push succeeded, exact HEAD verified afterward and ephemeral credential cleared.
+
+Twelve independent hip/thigh selections now have 50 additional Clinical/Pathology/CT/MRI/X-ray/US orientation drafts and twelve original self-checks. Overall independent extended teaching: 96 topics and22 self-checks for22 selections. Exact new matrix:24 clinical/pathology,9 MRI,9 X-ray,1 CT,7 ultrasound. The same compact Learn panel and topic-specific links are reused. All67 baseline lessons,55 untouched full lessons (including the previous ten clinical sets), source geometries/bindings, motor relationships, source/recipe navigation and shoulder review fingerprints remain unchanged. No simulated disease, tendon reconstruction, modality images, extra controls, patient registration, fees or lecture entitlement.
+
+Nine primary/professional references checked11 September; brief original synthesis only, 59–163 cited words per new reference. No PDF, image, article, table, protocol or question bank imported. Mesh licences remain unchanged. Required clinician/radiologist and device/accessibility review is not replaced by these tests. Passed:3,507 clinical checks/132 installed-React topic states/216 extended links,1,310 baseline learning checks,3,668 navigation checks/446 round trips, existing motor guards, TypeScript, production build with all107 lossless model checks, source inventory/review freshness and diff checks. Twelve lesson deltas independently compared with parent; all baseline fields/source bindings and55 other lessons identical.
+
+Native save and private publication SUCCEEDED: version137 `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_d8bee67bee6481918df96121bc051db2`, source above; deployment `appgdep_6aa34ad2ce0c819196ace0095fe6ba24`, terminal confirmation `2026-09-11T00:27:23.029857+00:00`, https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site. No pending save/deployment or access change. Final checks: `work/ATLAS_UM_HIP_THIGH_CLINICAL_2026-09-11.md`.
+
+Recovery stem `work/atlas-um-hip-thigh-clinical-2026-09-11`: runtime99,129,113 bytes SHA256 `16ddba176a07b42e00bf26e0239561e03d40ee5631686db147a8f49a5d441d51`; delta460,800 bytes SHA256 `e35e68481d24a68401eb86608d9c562cb1e0a8fe8de956d7fd425fc35d018e24`; incremental bundle15,284 bytes SHA256 `5c3c14a6aca715b0e0156497e9b965854ed51ee897e26045fba7f75676cd1e49`. Bundle requires source parent above; not standalone. Archive341 entries with Worker/manifest verified. Mirror1,413 files334,341,067 bytes111GLBs, no common credential-signature warnings (not exhaustive). Recovery JSON predates receipt completion; do not rerun the one-shot helper. No old artifact deleted.
+
+Same-PC recovery and Sites saving are not GitHub delivery, chat-history/private-review DB backup or an independently tested full off-device restoration. Continue substantive wider-body teaching or verified missing anatomy; routine oral detail remains deferred. Do not repeat these completed hip/thigh introductory records.
+
+## 11 September 2026 — lossless model delivery
 
 Source `edbfcf2502ee932bd825e0441cd983cb589c0d50`, tree `54902b8de1d66dea05b7266d19f41b9ebb06e4dd`, parent `0621e5ce17bcc489dde76b0a4d6bed07305b4143`. Twenty-three changed paths mirrored into `modules/anatomy-atlas`; main website unchanged. Source push to Sites main succeeded and full HEAD was verified afterward; ephemeral credential cleared.
 

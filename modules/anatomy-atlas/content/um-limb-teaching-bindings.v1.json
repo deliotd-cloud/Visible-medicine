@@ -55,7 +55,54 @@
         "function": "Transfers load and provides a lever for limb movement.",
         "references": [
           "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb"
-        ]
+        ],
+        "extended": {
+          "modelLimit": "The original whole femur is shown, not a fractured bone. Head, neck and trochanteric regions are not separate injury selections; source irregularities are not fractures or osteonecrosis.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Hip pain and difficulty bearing weight after a fall warrant assessment for proximal femoral injury. Some incomplete fractures allow limited walking.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hip-fractures/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Femoral-neck and trochanteric fractures involve different regions. Displacement of a neck fracture can endanger femoral-head blood supply.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hip-fractures/"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "Radiographs usually demonstrate hip fractures and alignment, but an inconclusive film does not resolve persistent clinical suspicion.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hip-fractures/"
+              ]
+            },
+            "ct": {
+              "readiness": "draft",
+              "body": "CT adds cross-sectional detail about fracture configuration and displacement, and can help investigate a suspected fracture not evident on radiographs.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hip-fractures/"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI can reveal small or incomplete fractures missed on radiographs. Further imaging depends on the clinical question and preceding findings.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hip-fractures/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does being able to take a few steps exclude a hip fracture?",
+            "answer": "No. An incomplete fracture may still permit limited weight bearing; clinical assessment remains necessary.",
+            "references": [
+              "https://www.orthoinfo.org/diseases--conditions/hip-fractures/"
+            ]
+          }
+        }
       }
     },
     {
@@ -1924,7 +1971,38 @@
         "function": "Supports low-friction hip articulation.",
         "references": [
           "https://openstax.org/books/anatomy-and-physiology-2e/pages/9-6-anatomy-of-selected-synovial-joints"
-        ]
+        ],
+        "extended": {
+          "modelLimit": "Only the supplied femoral-head cartilage is selectable. Opposing acetabular cartilage, labrum and wear grades are absent; exploded spacing is not radiographic joint-space width.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Hip osteoarthritis can cause groin pain and stiffness during movement. Symptoms and examination matter alongside imaging.",
+              "references": [
+                "https://orthoinfo.aaos.org/globalassets/pdfs/hip-osteoarthritis-cpg_pls.pdf"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Articular cartilage loss can progress with adjacent bone changes. Osteophytes and subchondral changes concern the joint, not simply a detached cartilage shell.",
+              "references": [
+                "https://orthoinfo.aaos.org/globalassets/pdfs/hip-osteoarthritis-cpg_pls.pdf"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "Cartilage loss is inferred from reduced joint space rather than directly outlined cartilage. Osteophytes, sclerosis and cyst-like changes may accompany it.",
+              "references": [
+                "https://orthoinfo.aaos.org/globalassets/pdfs/hip-osteoarthritis-cpg_pls.pdf"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Can increasing this cartilage separation reproduce osteoarthritis on an X-ray?",
+            "answer": "No. Separation is a viewing aid, not cartilage loss, a validated projection or a joint-space measurement.",
+            "references": []
+          }
+        }
       }
     },
     {
@@ -2216,6 +2294,51 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK534775/"
         ],
+        "extended": {
+          "modelLimit": "The supplied muscle is not a complete pubic aponeurotic complex. Its tendon footprint, pubic symphysis injury and inguinal canal pathology are not independently mapped.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Medial-thigh or groin symptoms after loading can involve the adductors. Examination must also consider other hip and groin structures.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hip-strains/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Acute strain and repetitive overload can affect the muscle-tendon unit. Athletic pubalgia involves a broader lower-abdominal or groin soft-tissue problem.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hip-strains/"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI can evaluate the affected thigh muscles and tendons when further characterization is needed; pain alone does not specify the injured tissue.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/muscle-strains-in-the-thigh"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "Bone imaging may identify an attachment avulsion or another bony cause. It does not directly grade an adductor muscle tear.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hip-strains/"
+              ]
+            },
+            "ultrasound": {
+              "readiness": "draft",
+              "body": "Adductor longus occupies the superficial medial-thigh layer beside gracilis; brevis and magnus are deeper. Trace toward the pubic attachment.",
+              "references": [
+                "https://essr.org/content-essr/uploads/2016/10/hip.pdf"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does an adductor-longus selection represent the complete sports-hernia region?",
+            "answer": "No. The source does not separately map the pubic aponeuroses or inguinal structures; those require their own anatomical and clinical assessment.",
+            "references": []
+          }
+        },
         "motorGroups": [
           {
             "nerve": "obturator"
@@ -2383,6 +2506,46 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK546688/"
         ],
+        "extended": {
+          "modelLimit": "Long and short heads are separate source selections. Their shared distal tendon and a proximal tear footprint are not separate assets; the neighbouring sciatic course is incomplete.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Sprinting or sudden hamstring loading can cause posterior-thigh pain. Assess whether symptoms suggest muscle injury or a more proximal tendon avulsion.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hamstring-muscle-injuries"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "A severe proximal hamstring injury can detach tendon from bone. This differs from a limited muscle-belly strain.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hamstring-muscle-injuries"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI helps define hamstring injury severity and the affected soft tissues.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hamstring-muscle-injuries"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "An avulsed bony fragment may be visible; radiographs alone cannot exclude an isolated tendon tear.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hamstring-muscle-injuries"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Do both biceps heads arise from the ischial tuberosity?",
+            "answer": "No. The long head arises from the ischium; the short head starts on the femur and does not cross the hip.",
+            "references": [
+              "https://anatomy.ttuhscep.edu/musculoskeletal_system/gluteal_ans.html"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "sciatic-tibial"
@@ -2457,6 +2620,39 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK546688/"
         ],
+        "extended": {
+          "modelLimit": "This is the independently labelled short head, not a shortened or torn long head. Its intramuscular nerves and distal tendon slips are not individually segmented.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "The short head acts across the knee, not the hip. Its femoral origin must not be described as a proximal ischial hamstring attachment.",
+              "references": [
+                "https://anatomy.ttuhscep.edu/musculoskeletal_system/gluteal_ans.html"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "A thigh muscle strain can involve muscle or tendon. Neither displayed fragmentation nor dissection spacing establishes a tear or injury grade.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/muscle-strains-in-the-thigh"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI can evaluate thigh muscle-tendon injury; identifying the affected head matters before calling a lesion a proximal hamstring avulsion.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/muscle-strains-in-the-thigh"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Can an isolated short-head origin injury be an ischial avulsion?",
+            "answer": "No. Its origin is femoral, not ischial; the two biceps heads must retain distinct identities.",
+            "references": [
+              "https://anatomy.ttuhscep.edu/musculoskeletal_system/gluteal_ans.html"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "sciatic-fibular"
@@ -3298,6 +3494,46 @@
           "https://www.ncbi.nlm.nih.gov/books/NBK557509/",
           "https://pubmed.ncbi.nlm.nih.gov/34686966/"
         ],
+        "extended": {
+          "modelLimit": "This muscle surface does not separately map its tendon facets, tears or bursae. A group visibility change is not a Trendelenburg test or a simulated gait cycle.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Pain over the outer hip with side-lying or single-leg loading can involve the gluteal tendons. Location alone does not identify one injured tendon.",
+              "references": [
+                "https://www.cuh.nhs.uk/patient-information/gluteal-tendinopathy/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Greater trochanteric pain syndrome includes gluteal tendon disorders; it should not automatically be labelled isolated bursitis.",
+              "references": [
+                "https://www.cuh.nhs.uk/patient-information/gluteal-tendinopathy/"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI may help assess gluteal tendons when clinically needed; imaging is not required for every clinical diagnosis of gluteal tendinopathy.",
+              "references": [
+                "https://www.cuh.nhs.uk/patient-information/gluteal-tendinopathy/"
+              ]
+            },
+            "ultrasound": {
+              "readiness": "draft",
+              "body": "Follow medius toward the greater trochanter in two planes; distinguish its more superficial muscle layer from the deeper minimus.",
+              "references": [
+                "https://essr.org/content-essr/uploads/2016/10/hip.pdf"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does lateral hip pain prove that the trochanteric bursa is the only affected tissue?",
+            "answer": "No. Gluteal tendon pathology can contribute; clinical assessment considers the surrounding tissues.",
+            "references": [
+              "https://www.cuh.nhs.uk/patient-information/gluteal-tendinopathy/"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "superior-gluteal"
@@ -3372,6 +3608,44 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK556144/"
         ],
+        "extended": {
+          "modelLimit": "Minimus is independently selectable but its tendon and enthesis are not separate meshes. No labelled tear, perfusion map or clinical muscle-strength assessment is supplied.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Minimus tendon symptoms may overlap those of medius and hip-joint disease. A painful lateral hip is not a structure-specific diagnosis.",
+              "references": [
+                "https://www.cuh.nhs.uk/patient-information/gluteal-tendinopathy/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Gluteal tendinopathy and tendon tears may coexist with other hip pathology; the source surface cannot establish either condition.",
+              "references": [
+                "https://www.cuh.nhs.uk/patient-information/gluteal-tendinopathy/"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI can support assessment of the deep gluteal tendons when symptoms and examination require further investigation.",
+              "references": [
+                "https://www.cuh.nhs.uk/patient-information/gluteal-tendinopathy/"
+              ]
+            },
+            "ultrasound": {
+              "readiness": "draft",
+              "body": "Minimus lies deep to medius; its tendon reaches the anterior greater-trochanteric facet. Do not swap these two tendon identities.",
+              "references": [
+                "https://essr.org/content-essr/uploads/2016/10/hip.pdf"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does selecting the minimus outline identify a separate tendon tear?",
+            "answer": "No. This selection has no separately validated tendon segmentation or patient injury mapping.",
+            "references": []
+          }
+        },
         "motorGroups": [
           {
             "nerve": "superior-gluteal"
@@ -3526,6 +3800,44 @@
           "https://www.ncbi.nlm.nih.gov/books/NBK531508/",
           "https://www.ncbi.nlm.nih.gov/books/NBK500008/"
         ],
+        "extended": {
+          "modelLimit": "Iliacus is a separate source muscle, not a segmented iliopsoas tendon or bursa. Hip flexion, tendon excursion and the complete femoral neurovascular bundle are not simulated.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Hip-flexor loading can cause anterior hip symptoms. Pain, weakness and restricted movement require assessment rather than an automatic iliacus diagnosis.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hip-strains/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Hip strains may affect muscle, tendon or their junction, ranging from overstretching to disruption. They are not synonymous with bursitis.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hip-strains/"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "Radiographs may be normal in snapping hip; they mainly help assess bone or joint alternatives rather than show a moving iliacus tendon.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/snapping-hip/"
+              ]
+            },
+            "ultrasound": {
+              "readiness": "draft",
+              "body": "Use the iliac wing to orient iliacus and psoas, then follow the anterior iliopsoas complex; their muscle outlines are not interchangeable.",
+              "references": [
+                "https://essr.org/content-essr/uploads/2016/10/hip.pdf"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does moving iliacus away from psoas recreate an internal snapping hip?",
+            "answer": "No. Explode changes viewing positions; the model has no validated tendon movement or dynamic examination.",
+            "references": []
+          }
+        },
         "motorGroups": [
           {
             "nerve": "femoral"
@@ -4049,6 +4361,46 @@
           "https://www.ncbi.nlm.nih.gov/books/NBK531508/",
           "https://www.ncbi.nlm.nih.gov/books/NBK500008/"
         ],
+        "extended": {
+          "modelLimit": "The psoas surface is not a lumbar-plexus, tendon-sheath or retroperitoneal disease model. Neither internal snapping nor nerve compression can be diagnosed from its shape.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Anterior snapping may involve the iliopsoas tendon, but snapping can also arise outside or within the hip joint.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/snapping-hip/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "A moving tendon can be associated with bursal irritation. Labral or cartilage problems can also cause catching, so these mechanisms must not be conflated.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/snapping-hip/"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "A radiograph may help investigate bony alternatives but does not directly demonstrate the transient tendon movement causing a snap.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/snapping-hip/"
+              ]
+            },
+            "ultrasound": {
+              "readiness": "draft",
+              "body": "The iliopsoas tendon is deep within the anterior muscle complex; its bursa lies between tendon and anterior capsule, normally collapsed.",
+              "references": [
+                "https://essr.org/content-essr/uploads/2016/10/hip.pdf"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Is every catch or click inside the hip caused by iliopsoas?",
+            "answer": "No. Tendons at other locations and intra-articular cartilage or labral problems can produce mechanical symptoms.",
+            "references": [
+              "https://www.orthoinfo.org/diseases--conditions/snapping-hip/"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "lumbar-rami"
@@ -4271,6 +4623,51 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
         ],
+        "extended": {
+          "modelLimit": "The muscle surface does not separately segment direct/reflected tendons or central aponeurosis. This adult specimen cannot show an adolescent growth-plate avulsion.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Acute anterior-thigh pain during rapid activity can reflect muscle injury. Examine the hip, knee and extensor apparatus rather than localising by pain alone.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/muscle-strains-in-the-thigh"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Muscle injury may involve the belly or muscle-tendon junction. Partial disruption and complete tendon detachment are different injuries.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/muscle-strains-in-the-thigh"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI can characterize muscle and tendon injury when needed, including whether a suspected strain involves a more substantial tendon lesion.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/muscle-strains-in-the-thigh"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "Radiographs assess suspected bone injury; an unremarkable film does not establish that the rectus muscle-tendon unit is intact.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/muscle-strains-in-the-thigh"
+              ]
+            },
+            "ultrasound": {
+              "readiness": "draft",
+              "body": "The direct proximal tendon relates to the anterior inferior iliac spine; deeper central aponeurotic anatomy differs from the superficial tendon contribution.",
+              "references": [
+                "https://essr.org/content-essr/uploads/2016/10/hip.pdf"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Can this single muscle surface show which proximal rectus tendon has torn?",
+            "answer": "No. Its tendon components are not separate validated selections; imaging and clinical review would be needed.",
+            "references": []
+          }
+        },
         "motorGroups": [
           {
             "nerve": "femoral"
@@ -4419,6 +4816,51 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK542215/"
         ],
+        "extended": {
+          "modelLimit": "One muscle surface is supplied, without separate tendon expansions, tear margins or measured retraction. Its medial distal anatomy should not be replaced with a biceps-femoris label.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Localise this medial hamstring separately from lateral biceps femoris. Their distal attachments differ even though both contribute to knee flexion.",
+              "references": [
+                "https://anatomy.ttuhscep.edu/musculoskeletal_system/gluteal_ans.html"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Hamstring injury can affect muscle or tendon; severe proximal injury may detach tendon from the ischial origin.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hamstring-muscle-injuries"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI helps characterize hamstring soft-tissue injury and its severity; the atlas itself has no tear map.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hamstring-muscle-injuries"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "Radiographs can demonstrate a bony avulsion but do not directly establish hamstring soft-tissue continuity.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hamstring-muscle-injuries"
+              ]
+            },
+            "ultrasound": {
+              "readiness": "draft",
+              "body": "The ischial tuberosity orients the proximal hamstrings. Closely adjacent tendon origins may be difficult to separate; avoid assigning an unverified individual footprint.",
+              "references": [
+                "https://essr.org/content-essr/uploads/2016/10/hip.pdf"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does an apparent gap created by dissection demonstrate tendon retraction?",
+            "answer": "No. It is a reversible viewing arrangement, not measured traumatic displacement or a patient finding.",
+            "references": []
+          }
+        },
         "motorGroups": [
           {
             "nerve": "sciatic-tibial"
@@ -4493,6 +4935,46 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK542215/"
         ],
+        "extended": {
+          "modelLimit": "Semitendinosus remains distinct from semimembranosus. The pes anserinus and proximal shared tendon are not separately segmented or a complete graft-harvest simulation.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Its long distal tendon reaches the medial tibia through the pes anserinus. Do not confuse this with semimembranosus insertion.",
+              "references": [
+                "https://anatomy.ttuhscep.edu/musculoskeletal_system/gluteal_ans.html"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Overload can injure hamstring muscle or tendon; severe avulsion is different from a mild muscle strain.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hamstring-muscle-injuries"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI can assess the extent of a hamstring injury rather than infer severity from visible bruising alone.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hamstring-muscle-injuries"
+              ]
+            },
+            "xray": {
+              "readiness": "draft",
+              "body": "A tendon avulsion may pull off bone visible on a radiograph; an absent fragment does not prove tendon integrity.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/hamstring-muscle-injuries"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does semitendinosus share the lateral fibular attachment of biceps femoris?",
+            "answer": "No. Semitendinosus reaches the medial tibia through the pes anserinus, whereas biceps femoris attaches laterally.",
+            "references": [
+              "https://anatomy.ttuhscep.edu/musculoskeletal_system/gluteal_ans.html"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "sciatic-tibial"
