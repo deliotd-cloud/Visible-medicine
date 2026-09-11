@@ -15,6 +15,7 @@ const compiled = await build({
  export * from './lib/inspection-geometry'; export * from './lib/inspection-state';
  export * from './lib/anatomy-load-state'; export * from './lib/scene-labels';
  export * from './lib/origin-guides';
+ export * from './lib/close-up-labels'; export * from './lib/body-display-catalog';
  export * from './app/anatomy-data'; export * from './app/body-types';`,
     resolveDir: process.cwd(),
     loader: 'ts',
@@ -28,9 +29,10 @@ const a = await import(
   `data:text/javascript;base64,${Buffer.from(compiled.outputFiles[0].text).toString('base64')}`
 );
 const require = createRequire(import.meta.url);
-const catalog = JSON.parse(
+const rawCatalog = JSON.parse(
   await readFile('public/models/bodyparts3d/full-body/catalog.json', 'utf8'),
 );
+const catalog = a.bodyDisplayCatalog(rawCatalog);
 const manifest = JSON.parse(
   await readFile('public/models/bodyparts3d/manifest.json', 'utf8'),
 );
@@ -467,6 +469,9 @@ const replacements = {
   '@/lib/inspection-geometry': a,
   '@/lib/inspection-state': a,
   '@/lib/origin-guides': a,
+  '@/lib/close-up-labels': a,
+  './scene-orientation': { SceneOrientation: 'SceneOrientation' },
+  './scene-orientation.css': {},
   '@/components/ui/button': { Button: 'Button' },
   './scene-recovery': {
     SceneRecovery: 'SceneRecovery',

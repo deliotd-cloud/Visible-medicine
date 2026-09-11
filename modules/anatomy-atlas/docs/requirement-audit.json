@@ -11,6 +11,9 @@
     "lib/brachial-veins.ts": "d675f79d288ce1eb799e4c58a7d14fe5894257274ef302ce96e3a2990bda5b2c",
     "lib/tentorium.ts": "974332c66ba542c04d602721c3bfe810723ecfdb0e2f8796d33b7c545f55eeab",
     "lib/deep-leg-veins.ts": "2faa7dd187bc9bd00b48b4de00acea4ebdbd12d8f07a827ff3a63f8a214ed2a2",
+    "lib/limb-vascular-studies.ts": "b3e92cce438b0576798e77af9ab2c8380ee851b566e4223a23fb1bf760557553",
+    "content/limb-vascular-studies.ts": "825f08810f16ae4d409e89a6579f78f739843d192cdb2f9946314c1c30227908",
+    "content/limb-vascular-study-pins.json": "2d0508aa622e396af8aa7412403c0ccf58bccc06ea4d5d1f9c6c9310d96c4876",
     "public/models/bodyparts3d/deep-leg-veins/catalog.json": "bc3c1c7418d8fe31ef94b6fb8b74d20fe54d8e0f2e67aef4df3c1182b68d137a",
     "docs/deep-leg-vein-source-audit.json": "2ed4267b0ceae5448673eaf0743ed79a995fc7f879dac26c81e24109c7b201ec",
     "lib/body-source-additions.ts": "4f2fd863be487fa704443c2585b941d8fe8f9a534a8c613ff155334a28084708",
@@ -169,12 +172,23 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "0f2d53f7849214603ce50a29b005bd1463c290920dd7be920db66293d949945e",
+    "resolvedContentAndRecipeData": "27cf4bb6d127f1558c814176903a9346ef105531d81c4f697eb1b305aabb7895",
     "explicitTopicReadiness": "7dae20edb457ac0431a5763f09b90893e81ef430383f636e34c640b9882e08c2",
     "reasoningQuestionData": "caafb323ca7d5a04971f91ad369d68c3a8da5e43839b39d8cd76192d1497bad2",
     "nestedTeachingData": "b74ddd2f8575fe1bef1d07424db49de126bc94700166eec88f5dc0c2e79e1770"
   },
   "anatomy": {
+    "limbVascularStudies": {
+      "studies": 3,
+      "sourceSelections": 42,
+      "regions": [
+        "leg",
+        "thigh"
+      ],
+      "sourceAndFrameChecked": true,
+      "geometryChanged": false,
+      "clinicalApproval": false
+    },
     "deepLegVeins": {
       "sourceSelections": 6,
       "originalTriangles": 71522,
@@ -600,7 +614,7 @@
     "pulmonaryAirwayContexts": 2,
     "ventricularRelationshipPresets": 3,
     "stages": 159,
-    "focuses": 151
+    "focuses": 154
   },
   "practice": {
     "identificationModes": [

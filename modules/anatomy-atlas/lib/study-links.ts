@@ -5,6 +5,7 @@ import {
   matchesRule,
 } from '../app/dissection-data.ts';
 import { relatedStudyViews } from './study-navigation.ts';
+import { limbVascularStudyReady } from './limb-vascular-studies.ts';
 import { resolveNestedTarget, type NestedSelection } from './nested-anatomy.ts';
 
 export type StudySide = 'both' | 'right' | 'left';
@@ -152,6 +153,8 @@ export function resolveStudyLink(
       reason: 'nested-unavailable' as const,
     };
   const profile = dissectionProfiles[region];
+  if (!limbVascularStudyReady(catalog, region, request.focusId))
+    return { status: 'rejected' as const, reason: 'source-changed' as const };
   const focus = request.focusId
     ? profile.focuses.find((item) => item.id === request.focusId)
     : null;

@@ -7,7 +7,7 @@ import { elbowStudyBounds } from "../lib/elbow-studies.ts";
 import { closeUpLabelAnchor } from "../lib/close-up-labels.ts";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import {
-  dissectionProfiles,
+  dissectionProfiles as currentDissectionProfiles,
   stageStructures,
   initialDissection,
   dissectionReducer,
@@ -23,6 +23,8 @@ import {
   preElbowRecipeProfiles,
   elbowStudyProfilesHash,
 } from "./elbow-study-history.mjs";
+import { preTentoriumRecipeProfiles } from './tentorium-recipe-history.mjs';
+const dissectionProfiles = preTentoriumRecipeProfiles(currentDissectionProfiles);
 const hash = (value) => createHash("sha256").update(value).digest("hex");
 let checks = 0,
   links = 0,

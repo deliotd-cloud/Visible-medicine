@@ -31,7 +31,7 @@ assert.equal(
       ),
     })),
     shoulder: api.structures,
-    recipes: api.dissectionProfiles,
+    recipes: before.dissectionProfiles,
   }),
   pins.previousAllLessonsAndRecipesHash,
   "All earlier root lessons, shoulder content and study recipes retained",

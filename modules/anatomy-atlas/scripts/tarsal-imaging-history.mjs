@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import pins from "../content/tarsal-imaging-pins.json" with { type: "json" };
 import after from "../content/tarsal-imaging.transition.json" with { type: "json" };
+import { preLimbVascularRecipeProfiles } from './limb-vascular-recipe-history.mjs';
 export const tarsalContentHash = (v) =>
   createHash("sha256").update(JSON.stringify(v)).digest("hex");
 export function authoringBeforeTarsalImaging({ api, catalog }) {
@@ -44,6 +45,7 @@ export function authoringBeforeTarsalImaging({ api, catalog }) {
   };
   return {
     ...api,
+    dissectionProfiles: preLimbVascularRecipeProfiles(api.dissectionProfiles),
     bodyLesson,
     bodyContent(s, tab) {
       const { readiness: _r, ...section } = bodyLesson(s, tab);

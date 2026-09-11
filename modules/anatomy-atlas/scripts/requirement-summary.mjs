@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Limb vascular dissection](LIMB_VASCULAR_STUDIES.md) adds ${anatomy.limbVascularStudies.studies} focused Study choices using ${anatomy.limbVascularStudies.sourceSelections} existing vessel, muscle and bone selections. Compare anterior/posterior calf and deep femoral relationships; hide a context muscle, extract a selected vessel and Undo. No permanent controls, new geometry, complete neurovascular bundle, surgical approach or imaging registration are supplied.
+
 [Systemic venous drainage](SYSTEMIC_VENOUS_DRAINAGE.md) connects ${anatomy.venousDrainage.selections} existing source selections through ${anatomy.venousDrainage.relationships} typical relationships (${anatomy.venousDrainage.groups} groups). One collapsed selected-vein panel offers tributary/outlet navigation, cross-region links and reversible isolation with bones. Missing routes, variable small-saphenous outlets and unsegmented common-femoral regions remain explicit. Intracranial sinuses, portal/pulmonary/cardiac drainage and measured flow are not provided by this map.
 
 [Focused elbow dissection](ELBOW_STUDIES.md) adds five Forearm studies using eight existing bone/muscle selections. Stable source-derived close-ups, real-surface labels and reversible windows reuse the existing Study controls. Whole structures remain intact; no new nerve, ligament, cartilage, simulated motion or scan correspondence is supplied.

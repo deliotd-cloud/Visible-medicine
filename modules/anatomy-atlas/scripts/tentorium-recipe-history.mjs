@@ -2,8 +2,10 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import record from '../content/tentorium-recipe-transition.json' with { type: 'json' };
+import { preLimbVascularRecipeProfiles } from './limb-vascular-recipe-history.mjs';
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function preTentoriumRecipeProfiles(profiles) {
+  profiles = preLimbVascularRecipeProfiles(profiles);
   assert.equal(hash(record),'a2a63e053a88e8fbee02b2cc186289f5794135e67571085857dca1271a648e44');
   if(hash(profiles)!==record.after) return profiles; // Earlier historical caller still applies its own exact guard.
   const previous=structuredClone(profiles);

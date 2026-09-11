@@ -1,5 +1,7 @@
 # Continuous atlas improvement plan
 
+Current regional milestone: [limb vascular studies](LIMB_VASCULAR_STUDIES.md) bring the newly supplied tibial/deep femoral veins into three focused muscle/bone dissections. Existing Study, hide/Undo and extraction controls are reused; pending saved-camera restores no longer override intentional new recipe choices. This follows the six-source [deep leg vein addition](DEEP_LEG_VEINS.md). Continue substantive source-backed regional anatomy and dissection; clinical/device review, missing nerve/fascial geometry and registered imaging remain separate gates.
+
 Latest orientation improvement: [live model-view direction](LIVE_CAMERA_ORIENTATION.md) follows the actual camera using verified source axes in the shared regional/organ renderer. It reserves a compact line within the current image height, with no new toolbar or geometry. Continue substantive source-backed anatomical detail and dissection functionality; do not substitute orientation aids or teaching counts for missing anatomy. Clinical/device and external scan/lecture acceptance remain separate.
 
 Latest regional navigation: [wrist and foot bone exposure studies](ACRAL_BONE_STUDIES.md) add four compact, source-ID-defined windows for carpal rows and hindfoot/midfoot. All 30 bone representations already existed; no tissue or source geometry was invented. Continue source-backed regional relationships and source adjudication, keeping clinical/device acceptance and actual imaging/lecture integration separate. The broad goal remains active.

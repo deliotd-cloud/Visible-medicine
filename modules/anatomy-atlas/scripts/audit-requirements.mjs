@@ -4,6 +4,7 @@ import { readFile, readdir, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { build } from './workspace-test-build.mjs';
 import { renderRequirementSummary } from './requirement-summary.mjs';
+import { limbVascularStudySets, limbVascularSourceIds } from '../content/limb-vascular-studies.ts';
 
 // This inventory executes the real content resolver. It measures displayed copy,
 // not medical correctness, complete lessons, browser acceptance or approval.
@@ -255,6 +256,9 @@ for (const path of [
   'lib/brachial-veins.ts',
   'lib/tentorium.ts',
   'lib/deep-leg-veins.ts',
+  'lib/limb-vascular-studies.ts',
+  'content/limb-vascular-studies.ts',
+  'content/limb-vascular-study-pins.json',
   'public/models/bodyparts3d/deep-leg-veins/catalog.json',
   'docs/deep-leg-vein-source-audit.json',
   'lib/body-source-additions.ts',
@@ -486,6 +490,12 @@ const report = {
     'Offline source and displayed-copy inventory; no clinical or browser certification.',
   sourceHashes,
   anatomy: {
+    limbVascularStudies: {
+      studies: limbVascularStudySets.length,
+      sourceSelections: catalog.structures.filter(s=>limbVascularSourceIds.includes(s.fmaId)).length,
+      regions: [...new Set(limbVascularStudySets.flatMap(s=>s.regions))],
+      sourceAndFrameChecked: true, geometryChanged: false, clinicalApproval: false,
+    },
     deepLegVeins: {
       sourceSelections: catalog.structures.filter(s=>s.bundle==='deep-leg-veins').length,
       originalTriangles: 71522, sourceFiles: 8, heldFibularGroups: 2,

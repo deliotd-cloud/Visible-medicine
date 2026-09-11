@@ -1,6 +1,16 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — deep leg veins (current source)
+## 11 September 2026 — limb vascular studies (current source)
+
+Source `f33f02fc9eb1c123011f02015f9b7f9cd22cf812`, tree `0dc095e82c3b1ad82b6caba8e860021cac11778a`, parent `fa4959b0c641e77086f2bc0228bb2f4231683bf7`. Thirty-two paths mirrored once; 1,634 matching files / 425,054,818 bytes / 115 retained GLBs. Private Sites source push and independent remote main match exactly. No common credential-signature warnings (not exhaustive). GitHub delivery remains unconfirmed; main website outside this module/receipt remains unchanged.
+
+Three compact Study choices pair anterior/posterior calf and deep femoral vessels with existing muscles and bones (42 selections). Source/frame-bound focus and link admissions, reversible hide/extraction, and no added permanent control. Intentional new stage/focus clears a pending saved camera; rejected related-study actions cannot emit false success. No geometry, lecture entitlement, imaging registration, dependency or asset licence changes. Fibular-source holds and clinical/device review remain outstanding.
+
+Passed nine side scopes, 92 links, 552 extraction cases, 144 altered-source cases, 16 actual parent-handler cases and 12 real Study-library renders. Existing recipe hash restored exactly offline; historical elbow/tarsal/wrist/hip/spine guards retained. Broad links now cover all 1,031 display records (12,941 valid links); explode suite covers all 1,031 plus nine shoulder entries, 6,213 extraction cases and 12 scene cases. Old test fixtures were updated for current catalogue/helpers, not weakened to accept missing source data. Guidance, study/library/navigation, inspection, systemic veins, deep-vein source, body-review/decisions, TypeScript and build passed. All 111 delivered GLBs retain decoded geometry. Renderer SHA256 `e6a219168044e900bdfb83e753bf2b52183b7e815d87fe15c661b77e80f0031c`, 328 files. No browser/device or clinical acceptance.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-limb-vascular-studies-2026-09-11`: runtime 110,820,752 bytes, SHA256 `4e10ae22df26a98d25d6ea8991832d453132d04fc7dd533424c3e272b2ee1e31`; delta 757,760 bytes, SHA256 `aac1565a38bd3ef542a1bef4bd310812b43ff029cc2432d9946cb4e3d3124818`; incremental 32,465 bytes, SHA256 `60a0639bc95a57015752a6fbdd4c593f0c9a09ce3e3fa1dd9f24c80e9e2a5445`. Requires the exact parent above. Retain release150 full bundle and all subsequent increments. No original source, mirror or older recovery moved/deleted. Final restore/publication outcome belongs in `work/ATLAS_LIMB_VASCULAR_STUDIES_2026-09-11.md` and its D: companion. Goal remains active for substantive broader anatomy/dissection work.
+
+## 11 September 2026 — deep leg veins (previous source)
 
 Source `fa4959b0c641e77086f2bc0228bb2f4231683bf7`, tree `126202df9efb0eaa63c3c088dbe0ff64509d0d92`, parent `ea5cdbd18ccdcf22fa5708c9b0a00fc28fddcc80`. Thirty-four paths mirrored once; 1,625 matching files / 424,948,391 bytes / 115 retained GLBs. Private Sites source push and independent remote main match exactly. No common credential-signature warnings (not exhaustive). GitHub delivery remains unconfirmed; main website outside this module/receipt remains unchanged.
 

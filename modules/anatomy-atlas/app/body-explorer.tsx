@@ -131,6 +131,7 @@ import { relatedStudyViews } from '@/lib/study-navigation';
 import type { StudyCamera, StudyView } from '@/lib/study-views';
 import { kneeStudyBounds } from '@/lib/knee-studies';
 import { elbowStudyBounds } from '@/lib/elbow-studies';
+import { limbVascularStudyReady } from '@/lib/limb-vascular-studies';
 import { anatomyRetryPlan } from '@/lib/anatomy-load-retry';
 import {
   copyRecoveryCamera,
@@ -639,6 +640,7 @@ export default function BodyExplorer({
       (id !== 'free' && !profile.stages.some((item) => item.id === id))
     )
       return;
+    cameraRestore.current = null;
     setInspection(initialInspection);
     if (layout === 'tray') setPlate(false);
     setLayout('spatial');
@@ -655,7 +657,9 @@ export default function BodyExplorer({
     setReset((n) => n + 1);
   }
   function changeFocus(id: string) {
-    if (exam || !profile.focuses.some((item) => item.id === id)) return;
+    if (exam || !profile.focuses.some((item) => item.id === id)) return false;
+    if (!limbVascularStudyReady(catalog, initialRegion, id)) return false;
+    cameraRestore.current = null;
     setInspection(initialInspection);
     if (layout === 'tray') setPlate(false);
     setLayout('spatial');
@@ -668,11 +672,12 @@ export default function BodyExplorer({
     setZoom(1);
     setView(profile.focuses.find((s) => s.id === id)?.view ?? 'anterior');
     setReset((n) => n + 1);
+    return true;
   }
   function openRelatedStudy(id: string) {
     const next = relatedViews.find((item) => item.focusId === id);
     if (exam || !selectedId || !next?.visibleIds.includes(selectedId)) return;
-    changeFocus(id);
+    if (!changeFocus(id)) return;
     setSelectedId(selectedId);
     setSelectionNotice({
       id: selectedId,

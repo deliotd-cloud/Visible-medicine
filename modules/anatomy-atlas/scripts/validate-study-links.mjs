@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
+import { bodyDisplayCatalog } from '../lib/body-display-catalog.ts';
 import {
   parseStudyLink,
   makeStudyLink,
@@ -22,7 +23,10 @@ import { collectAppPageSearchParams } from '../node_modules/vinext/dist/server/a
 const bytes = await readFile(
   'public/models/bodyparts3d/full-body/catalog.json',
 );
-const catalog = JSON.parse(bytes);
+// Exercise the catalogue the actual explorer consumes, including source-bound additions.
+// The immutable raw bytes still have their original independent hash check below.
+const rawCatalog = JSON.parse(bytes);
+const catalog = bodyDisplayCatalog(rawCatalog);
 const before = JSON.stringify(catalog);
 const hash = (data) => createHash('sha256').update(data).digest('hex');
 let assertions = 0,
@@ -281,6 +285,7 @@ same(
   [],
 );
 same(JSON.stringify(catalog), before);
+same(JSON.stringify(rawCatalog), JSON.stringify(JSON.parse(bytes)));
 
 // Component/route wiring checks are offline, not browser interaction tests.
 const explorer = await readFile('app/body-explorer.tsx', 'utf8');
@@ -312,6 +317,7 @@ const report = {
   rows,
   sourceGeometryChanged: false,
   catalogueSha256: hash(bytes),
+  displaySelections: catalog.structures.length,
   actualInstalledRuntimeDuplicateParsingTested: true,
   browserInteractionTesting: false,
   clinicalValidation: false,

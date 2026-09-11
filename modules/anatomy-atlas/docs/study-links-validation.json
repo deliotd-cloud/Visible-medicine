@@ -1,63 +1,63 @@
 {
   "passed": true,
-  "assertions": 255595,
-  "links": 12741,
-  "focusedLinks": 7844,
-  "destinationsTested": 6018,
+  "assertions": 259698,
+  "links": 12941,
+  "focusedLinks": 7996,
+  "destinationsTested": 6176,
   "rows": [
     {
       "region": "whole-body",
       "side": "both",
-      "structures": 1022,
-      "testedLinks": 1661
+      "structures": 1031,
+      "testedLinks": 1682
     },
     {
       "region": "whole-body",
       "side": "left",
-      "structures": 590,
-      "testedLinks": 968
+      "structures": 594,
+      "testedLinks": 976
     },
     {
       "region": "whole-body",
       "side": "right",
-      "structures": 589,
-      "testedLinks": 966
+      "structures": 594,
+      "testedLinks": 979
     },
     {
       "region": "shoulder-arm",
       "side": "both",
-      "structures": 91,
-      "testedLinks": 218
+      "structures": 93,
+      "testedLinks": 222
     },
     {
       "region": "shoulder-arm",
       "side": "left",
-      "structures": 46,
-      "testedLinks": 110
+      "structures": 47,
+      "testedLinks": 112
     },
     {
       "region": "shoulder-arm",
       "side": "right",
-      "structures": 46,
-      "testedLinks": 110
+      "structures": 47,
+      "testedLinks": 112
     },
     {
       "region": "forearm",
       "side": "both",
-      "structures": 66,
-      "testedLinks": 242
+      "structures": 68,
+      "testedLinks": 246
     },
     {
       "region": "forearm",
       "side": "left",
-      "structures": 33,
-      "testedLinks": 121
+      "structures": 34,
+      "testedLinks": 123
     },
     {
       "region": "forearm",
       "side": "right",
-      "structures": 33,
-      "testedLinks": 121
+      "structures": 34,
+      "testedLinks": 123
     },
     {
       "region": "hand",
@@ -80,56 +80,56 @@
     {
       "region": "thigh",
       "side": "both",
-      "structures": 81,
-      "testedLinks": 193
+      "structures": 83,
+      "testedLinks": 213
     },
     {
       "region": "thigh",
       "side": "left",
-      "structures": 41,
-      "testedLinks": 100
+      "structures": 42,
+      "testedLinks": 110
     },
     {
       "region": "thigh",
       "side": "right",
-      "structures": 41,
-      "testedLinks": 100
+      "structures": 42,
+      "testedLinks": 110
     },
     {
       "region": "leg",
       "side": "both",
-      "structures": 60,
-      "testedLinks": 186
+      "structures": 64,
+      "testedLinks": 224
     },
     {
       "region": "leg",
       "side": "left",
-      "structures": 30,
-      "testedLinks": 93
+      "structures": 32,
+      "testedLinks": 112
     },
     {
       "region": "leg",
       "side": "right",
-      "structures": 30,
-      "testedLinks": 93
+      "structures": 32,
+      "testedLinks": 112
     },
     {
       "region": "foot",
       "side": "both",
-      "structures": 118,
-      "testedLinks": 558
+      "structures": 122,
+      "testedLinks": 566
     },
     {
       "region": "foot",
       "side": "left",
-      "structures": 59,
-      "testedLinks": 279
+      "structures": 61,
+      "testedLinks": 283
     },
     {
       "region": "foot",
       "side": "right",
-      "structures": 59,
-      "testedLinks": 279
+      "structures": 61,
+      "testedLinks": 283
     },
     {
       "region": "thorax",
@@ -188,8 +188,8 @@
     {
       "region": "head-neck",
       "side": "both",
-      "structures": 275,
-      "testedLinks": 808
+      "structures": 276,
+      "testedLinks": 813
     },
     {
       "region": "head-neck",
@@ -200,8 +200,8 @@
     {
       "region": "head-neck",
       "side": "right",
-      "structures": 160,
-      "testedLinks": 497
+      "structures": 161,
+      "testedLinks": 502
     },
     {
       "region": "spine",
@@ -224,6 +224,7 @@
   ],
   "sourceGeometryChanged": false,
   "catalogueSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+  "displaySelections": 1031,
   "actualInstalledRuntimeDuplicateParsingTested": true,
   "browserInteractionTesting": false,
   "clinicalValidation": false,

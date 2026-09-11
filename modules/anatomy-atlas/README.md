@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Knee & leg / Hip & thigh → Study** adds [three vascular dissection views](docs/LIMB_VASCULAR_STUDIES.md): anterior calf, posterior calf and deep femoral vessels. Forty-two existing selections provide muscle/bone context. Hide a covering muscle, extract a vessel, then Undo or return separation to zero. The current menus are reused, with no new permanent panel. These remain source-reference studies awaiting anatomical review, not complete neurovascular or surgical models.
+
 **Whole body / Knee & leg / Hip & thigh → select a deep vein → Venous drainage** adds [six source-bound tibial/deep femoral selections](docs/DEEP_LEG_VEINS.md), with 71,522 retained source triangles, existing compact controls and twelve Anatomy/Function drafts. The display catalogue now has **1,031 selections**; raw ingestion remains 1,022. The drainage map covers 44 veins with 46 typical relationships. Fibular groups are withheld for source review. These are unvalidated reference surfaces, not complete companion veins, lumens, patient scans or a clinical certification.
 
 **Ankle & foot → select a tarsal bone → Imaging** now provides [42 X-ray/CT/MRI draft sections](docs/TARSAL_IMAGING_TEACHING.md) for the fourteen supplied tarsal selections. Existing compact controls and geometry are unchanged. These are orientation notes, not acquired scans, clinical approval or a complete ankle-imaging curriculum.
