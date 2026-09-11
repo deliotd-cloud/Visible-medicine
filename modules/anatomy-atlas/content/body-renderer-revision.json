@@ -58,7 +58,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "ab08ec01e505a7618a527cba701ca5f9ff35cf7e077743a03a085a5d9bf21eef"
+      "sha256": "55588b659b586a494a15354a13ee3f1ddfea1c208adc279591df221d163c448e"
     },
     {
       "path": "app/body-scene.tsx",
@@ -123,6 +123,14 @@
     {
       "path": "app/globals.css",
       "sha256": "c0b5616ff8bd0c4579f762fa0e895562645289ec6ead7bbc029ae4791cb61ea3"
+    },
+    {
+      "path": "app/imaging-comparison.css",
+      "sha256": "9adb002431b3bd733f533d65c69a99a2fcf6bdde0542511c7406df7cdcacf738"
+    },
+    {
+      "path": "app/imaging-comparison.tsx",
+      "sha256": "844f24e44850556137438bc0615662acb062c401526e631862c29cc7d0ab73f6"
     },
     {
       "path": "app/imaging-link.css",
@@ -817,6 +825,10 @@
       "sha256": "033f69852bf6b66e3a36b4f6399bc7b0e5e03b0ff1382e9f6017ecd308ef88b5"
     },
     {
+      "path": "lib/imaging-comparison.ts",
+      "sha256": "558e99844f74462f39b14784b4ea95593792992479d9d335db866929b18f66f6"
+    },
+    {
       "path": "lib/imaging-sync.ts",
       "sha256": "2f3e6743dedbaa39154ced298badfd113bf5ce57e1c5989ff103589dab42daf9"
     },
@@ -1242,7 +1254,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "b5d33043297fcf8e026edb1409a716858ed49bda40dcf6be03358dd561ed8936"
+      "sha256": "51cf42fd06629a838633bbeb36bbf227e96ae1630312acdac04da5d4bbfa043d"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1361,5 +1373,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "1770554e90d04c8b0abcb6da88c991e31ebdf2dd7fb825a256e3739f6aa2ecc5"
+  "sha256": "8f9a35d6f5c7a9151128409832eddcaef1a256d1579eef44fc9f4ff1450a40b3"
 }

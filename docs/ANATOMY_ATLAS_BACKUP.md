@@ -1,5 +1,17 @@
 # Anatomy atlas backup — 11 September 2026
 
+## 11 September 2026 — compact imaging comparison host (current source)
+
+Source `f8929bc09f406884e576f6f23fa472d38b992ab3`, tree `a03ccd80d7f8e91083fe6932ef3b9465cf505a61`, parent `f7a9743cb00da5aad6de71249eb108d2e1d5aaf3`. Nine source paths mirrored once; 1,691 matching files / 430,291,989 bytes / 118 retained GLBs. Private Sites source push and independent main ref match exactly. Main website outside the module/receipt remains unchanged.
+
+The conditional comparison host pairs model and authorized CT/MRI teaching imagery, uses one pane on narrower screens, and preserves the mounted anatomy/dissection subtree. Exact identity/source mismatches, paused practice, disconnected/loading/missing/denied/error states withhold images. Monotonic frame revisions, immutable snapshots, stale-control rejection, bounded plane/slice controls and one-owner cleanup are covered. The installed identity bridge is unchanged. This is an integration foundation with no production imaging adapter, scan loader, MPR engine or spatial registration; disconnected users see no additional control. CT-head export was inspected read-only and remains NOT_FOR_PUBLICATION; no private data copied, publication/clinical approval inferred, new dependency or paid asset added.
+
+Focused bridge/component checks, 49,002 existing imaging assertions, 3,126 private-review tracks with isolated SQLite/both migrations, TypeScript, requirement freshness and production build passed. Renderer: 340 files, SHA-256 `8f9a35d6f5c7a9151128409832eddcaef1a256d1579eef44fc9f4ff1450a40b3`. All 114 delivered GLBs retain decoded geometry. Real browser/device, host-image correctness, entitlements and clinical approval remain outstanding.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-imaging-comparison-2026-09-11`: .site.tar.gz 111,103,279 bytes / SHA-256 `a57bd782c1909ea3437a40df445b54889c74d0b0542a4a9313f31dd99d27714c`; .delta.tar 296,960 bytes / `56a250f0d1f41224e0d011267649f6e7e7467cdc7d1d0fdcb7a05c8d3e0a3013`; .incremental.bundle 15,464 bytes / `a4d32cd44dedd2d12ec203d8950bbe2f7fb4cd62bdeeea3b2e949c237937517f`. Runtime archive has 389 safe unique entries and both original migrations. Restore into retained bare verifier at refs/verification/imaging-comparison-20260911 passed full fsck with exact commit/tree and original main unchanged. Retain the earlier full bundle and all increments; this one requires the exact parent above.
+
+The private Site upload is in progress at this receipt. Final work/D: checkpoint will record terminal publication and verified GitHub delivery refs after this commit. This is source/model/document recovery, not private review-database, patient-study, account or lecture backup. The atlas goal remains active.
+
 ## 11 September 2026 — longus colli and CT viewer direction (current source)
 
 Source `f7a9743cb00da5aad6de71249eb108d2e1d5aaf3`, tree `f88480d0aef4ff2f1351732b9c3a70ee318f1bec`, parent `1f9413f581fd35da56561001e23b803ce94951af`. Sixty module paths mirrored once; 1,686 matching files / 430,257,300 bytes / 118 retained GLBs. Exact private Sites source push and remote main confirmed. No common credential signatures in the checkpoint scan (not exhaustive).

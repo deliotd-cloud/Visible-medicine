@@ -70,6 +70,7 @@ import { resolveComponentImagingTarget } from '@/lib/component-imaging-navigatio
 import type { NestedImagingTopic } from '@/content/nested-teaching';
 import { bodyLinkEntries } from '@/lib/anatomy-link-registry';
 import { ImagingLink, useImagingLink } from './imaging-link';
+import { ImagingComparisonWorkspace } from './imaging-comparison';
 import {
   dissectionProfiles,
   dissectionReducer,
@@ -172,7 +173,9 @@ const Scene = dynamic(() => import('./body-scene').then((m) => m.BodyScene), {
 const EyeLayers = dynamic(() => import('./eye-layers'), { ssr: false });
 const Ventricles = dynamic(() => import('./ventricles'), { ssr: false });
 const KneeSpecimen = dynamic(() => import('./um-limb-study'), { ssr: false });
-const AbdominalWallSpecimen = dynamic(() => import('./abdominal-wall-study'), { ssr: false });
+const AbdominalWallSpecimen = dynamic(() => import('./abdominal-wall-study'), {
+  ssr: false,
+});
 const systemKeys = Object.keys(bodySystems) as BodySystem[];
 const icons = {
   skeleton: Bone,
@@ -266,8 +269,9 @@ export default function BodyExplorer({
     nestedReturnFocus.current = null;
     requestAnimationFrame(() => (returnTo ?? eyeLauncher.current)?.focus());
   }, []);
-  const [ventricleParent, setVentricleParent] =
-    useState<BodyStructure | null>(null);
+  const [ventricleParent, setVentricleParent] = useState<BodyStructure | null>(
+    null,
+  );
   const ventricleLauncher = useRef<HTMLButtonElement | null>(null);
   const closeVentricles = useCallback(() => {
     setVentricleParent(null);
@@ -403,9 +407,7 @@ export default function BodyExplorer({
     [resolved],
   );
   const stage = profile.stages.find((s) => s.id === dissection.stageId);
-  const focusedStudy = profile.focuses.find(
-    (s) => s.id === dissection.focusId,
-  );
+  const focusedStudy = profile.focuses.find((s) => s.id === dissection.focusId);
   const stageLandmarks = useMemo(
     () =>
       dissectionLandmarks(
@@ -414,8 +416,7 @@ export default function BodyExplorer({
       ).map((s) => s.id),
     [stage, focusedStudy, resolved, systems],
   );
-  const selected =
-    catalog?.structures.find((s) => s.id === selectedId) ?? null;
+  const selected = catalog?.structures.find((s) => s.id === selectedId) ?? null;
   const selectionFrame = useMemo(
     () => selectionBounds(regionStructures),
     [regionStructures],
@@ -452,16 +453,37 @@ export default function BodyExplorer({
   const enabledIds = new Set(available.map((item) => item.id));
   const jointCloseUp = useMemo(() => {
     const input = {
-    region: initialRegion,
-    recipeId: dissection.focusId ?? dissection.stageId,
-    structures: regionStructures,
-    visibleIds: available.map((s) => s.id),
-    enabled: !exam && !focus && !isolated && !ghostRemoved && !showOrigins &&
-      explode === 0 && layout === 'spatial' && inspection.plane === 'off',
+      region: initialRegion,
+      recipeId: dissection.focusId ?? dissection.stageId,
+      structures: regionStructures,
+      visibleIds: available.map((s) => s.id),
+      enabled:
+        !exam &&
+        !focus &&
+        !isolated &&
+        !ghostRemoved &&
+        !showOrigins &&
+        explode === 0 &&
+        layout === 'spatial' &&
+        inspection.plane === 'off',
     };
     return kneeStudyBounds(input) ?? elbowStudyBounds({ ...input, catalog });
-  }, [catalog, initialRegion, dissection.focusId, dissection.stageId, regionStructures,
-    available, exam, focus, isolated, ghostRemoved, showOrigins, explode, layout, inspection.plane]);
+  }, [
+    catalog,
+    initialRegion,
+    dissection.focusId,
+    dissection.stageId,
+    regionStructures,
+    available,
+    exam,
+    focus,
+    isolated,
+    ghostRemoved,
+    showOrigins,
+    explode,
+    layout,
+    inspection.plane,
+  ]);
   const guidance = dissectionGuidance(
     regionStructures,
     profile,
@@ -510,9 +532,7 @@ export default function BodyExplorer({
     retryIds,
   );
   const sceneStructures = exam
-    ? regionStructures.filter((s) =>
-        practiceRenderIds(practice).includes(s.id),
-      )
+    ? regionStructures.filter((s) => practiceRenderIds(practice).includes(s.id))
     : regionStructures;
   const required = requestedAnatomyBundles(
     sceneStructures,
@@ -627,9 +647,7 @@ export default function BodyExplorer({
       nestedReturnFocus.current = launcher;
       // Select locally, without publishing a parent as if it were the requested child.
       applySelection(parent.id);
-      setNestedSelection(
-        teachingTopic ? { ...target, teachingTopic } : target,
-      );
+      setNestedSelection(teachingTopic ? { ...target, teachingTopic } : target);
       if (target.study === 'eye') setEyeParent(parent);
       else setVentricleParent(parent);
     },
@@ -692,7 +710,7 @@ export default function BodyExplorer({
     const plan = limbMotorPlan(catalog, initialRegion, side, key, exam);
     if (!plan) return;
     dispatch(plan.action);
-    setSystems(prev => ({ ...prev, skeleton: true, muscles: true }));
+    setSystems((prev) => ({ ...prev, skeleton: true, muscles: true }));
     setInspection(initialInspection);
     setExplode(0);
     setLayout('spatial');
@@ -703,8 +721,11 @@ export default function BodyExplorer({
     setZoom(1);
     cameraRestore.current = null;
     setSelectedId(plan.selectedId);
-    setSelectionNotice({ id: plan.selectedId, message: `${plan.label}: available muscle relationships shown. No nerve path or territory is modelled.` });
-    setReset(n => n + 1);
+    setSelectionNotice({
+      id: plan.selectedId,
+      message: `${plan.label}: available muscle relationships shown. No nerve path or territory is modelled.`,
+    });
+    setReset((n) => n + 1);
     // A motor study is local visibility, not a nerve selection or imaging event.
   }
   function openGuidanceRecipe(kind: 'recipe' | 'next') {
@@ -718,7 +739,7 @@ export default function BodyExplorer({
     const plan = arterialPlan(catalog, initialRegion, side, selectedId, exam);
     if (!plan) return;
     dispatch(plan.action);
-    setSystems(prev => ({ ...prev, skeleton: true, vessels: true }));
+    setSystems((prev) => ({ ...prev, skeleton: true, vessels: true }));
     setInspection(initialInspection);
     setExplode(0);
     setLayout('spatial');
@@ -728,16 +749,25 @@ export default function BodyExplorer({
     setIsolated(false);
     setZoom(1);
     cameraRestore.current = null;
-    setSelectionNotice({ id: plan.selectedId, message: `${plan.label}: available arterial relationships shown. Missing segments remain unmodelled.` });
-    setReset(n => n + 1);
+    setSelectionNotice({
+      id: plan.selectedId,
+      message: `${plan.label}: available arterial relationships shown. Missing segments remain unmodelled.`,
+    });
+    setReset((n) => n + 1);
     // The existing selection is retained; this visibility action emits no imaging event.
   }
   function showVenousDrainage() {
     if (!catalog || !selectedId) return;
-    const plan = venousDrainagePlan(catalog, initialRegion, side, selectedId, exam);
+    const plan = venousDrainagePlan(
+      catalog,
+      initialRegion,
+      side,
+      selectedId,
+      exam,
+    );
     if (!plan) return;
     dispatch(plan.action);
-    setSystems(prev => ({ ...prev, skeleton: true, vessels: true }));
+    setSystems((prev) => ({ ...prev, skeleton: true, vessels: true }));
     setInspection(initialInspection);
     setExplode(0);
     setLayout('spatial');
@@ -747,8 +777,11 @@ export default function BodyExplorer({
     setIsolated(false);
     setZoom(1);
     cameraRestore.current = null;
-    setSelectionNotice({ id: plan.selectedId, message: `${plan.label}: available venous drainage shown. Missing routes remain unmodelled.` });
-    setReset(n => n + 1);
+    setSelectionNotice({
+      id: plan.selectedId,
+      message: `${plan.label}: available venous drainage shown. Missing routes remain unmodelled.`,
+    });
+    setReset((n) => n + 1);
     // Local visibility only; no imaging event, acquired flow or entitlement.
   }
   function reorientDissection() {
@@ -938,9 +971,7 @@ export default function BodyExplorer({
     return (
       <main className="body-status">
         <h1>The anatomy library could not load.</h1>
-        <p>
-          The anatomy catalogue is unavailable or the connection timed out.
-        </p>
+        <p>The anatomy catalogue is unavailable or the connection timed out.</p>
         <Button
           onClick={() => {
             setError(false);
@@ -1032,9 +1063,7 @@ export default function BodyExplorer({
     cameraRestore.current = state.camera;
     setReset((n) => n + 1);
   }
-  const target = catalog.structures.find(
-    (s) => s.id === examTargets[question],
-  );
+  const target = catalog.structures.find((s) => s.id === examTargets[question]);
   const studyGuide = (
     <DissectionGuide
       guidance={guidance}
@@ -1065,10 +1094,7 @@ export default function BodyExplorer({
           <small>Change region</small>
         </summary>
 
-        <Link
-          className={`body-region-link ${whole ? 'active' : ''}`}
-          href="/"
-        >
+        <Link className={`body-region-link ${whole ? 'active' : ''}`} href="/">
           <Accessibility />
           <span>Whole body</span>
           <small>{catalog.structures.length}</small>
@@ -1098,9 +1124,7 @@ export default function BodyExplorer({
       <div className="body-system-bar" aria-label="Anatomical systems">
         {systemKeys.map((system) => {
           const Icon = icons[system],
-            count = regionStructures.filter(
-              (s) => s.system === system,
-            ).length;
+            count = regionStructures.filter((s) => s.system === system).length;
           return (
             <div key={system} className={systems[system] ? 'active' : ''}>
               <Icon style={{ color: bodySystems[system].color }} />
@@ -1152,26 +1176,51 @@ export default function BodyExplorer({
             disabled={exam}
           />
         </details>
-        <UpperLimbMotorExplorer catalog={catalog} region={initialRegion} side={side} selectedId={selectedId}
-          disabled={exam} onSelect={select} onExplore={exploreMotorGroup} />
+        <UpperLimbMotorExplorer
+          catalog={catalog}
+          region={initialRegion}
+          side={side}
+          selectedId={selectedId}
+          disabled={exam}
+          onSelect={select}
+          onExplore={exploreMotorGroup}
+        />
       </WorkspaceOnly>
       <WorkspaceOnly modes={['explore', 'dissect']}>
-        {initialRegion === 'abdomen' && <Button ref={abdominalWallLauncher} variant="outline" size="sm" className="um-knee-launch" disabled={exam} onClick={() => setAbdominalWallOpen(true)}>Abdominal wall layers · separate specimen</Button>}
+        {initialRegion === 'abdomen' && (
+          <Button
+            ref={abdominalWallLauncher}
+            variant="outline"
+            size="sm"
+            className="um-knee-launch"
+            disabled={exam}
+            onClick={() => setAbdominalWallOpen(true)}
+          >
+            Abdominal wall layers · separate specimen
+          </Button>
+        )}
         {['leg', 'foot', 'thigh', 'pelvis'].includes(initialRegion) && (
-          <Button ref={kneeSpecimenLauncher} variant="outline" size="sm"
-            className="um-knee-launch" disabled={exam}
-            onClick={() => setKneeSpecimenOpen(true)}>
-            {initialRegion === 'leg' ? 'Knee tissues' : initialRegion === 'foot' ? 'Foot dissection' : 'Hip & thigh dissection'} · separate specimen
+          <Button
+            ref={kneeSpecimenLauncher}
+            variant="outline"
+            size="sm"
+            className="um-knee-launch"
+            disabled={exam}
+            onClick={() => setKneeSpecimenOpen(true)}
+          >
+            {initialRegion === 'leg'
+              ? 'Knee tissues'
+              : initialRegion === 'foot'
+                ? 'Foot dissection'
+                : 'Hip & thigh dissection'}{' '}
+            · separate specimen
           </Button>
         )}
         <details className="body-display-tools">
           <summary>
             Display options<small>Quick views · arrangement · surfaces</small>
           </summary>
-          <div
-            className="body-system-presets"
-            aria-label="Quick anatomy views"
-          >
+          <div className="body-system-presets" aria-label="Quick anatomy views">
             {bodySystemPresets.map((item) => {
               const count = regionStructures.filter((structure) =>
                 item.systems.includes(structure.system),
@@ -1193,10 +1242,7 @@ export default function BodyExplorer({
               );
             })}
           </div>
-          <div
-            className="body-layout-controls"
-            aria-label="Model arrangement"
-          >
+          <div className="body-layout-controls" aria-label="Model arrangement">
             <p>
               {layout === 'tray' && !exam
                 ? 'Same-scale surfaces, grouped by system. At 100%, each catalogue entry has its own space—not an anatomical position.'
@@ -1232,8 +1278,8 @@ export default function BodyExplorer({
               </button>
               {layout === 'tray' && (
                 <span>
-                  All entries move in the tray. Select and frame a structure,
-                  or choose a system/region for fine detail.
+                  All entries move in the tray. Select and frame a structure, or
+                  choose a system/region for fine detail.
                 </span>
               )}
             </div>
@@ -1285,8 +1331,8 @@ export default function BodyExplorer({
               Selected source anatomy · review pending. Vessels are incomplete
               segments; red = artery, blue = vein, grey = unclassified vessel,
               not oxygenation. Connective coverage includes selected discs,
-              cartilage, ligaments, interosseous membranes and Achilles
-              tendons; it is incomplete.
+              cartilage, ligaments, interosseous membranes and Achilles tendons;
+              it is incomplete.
             </span>
           </div>
         )}
@@ -1324,14 +1370,9 @@ export default function BodyExplorer({
         <WorkspaceOnly modes={['practice']} className="vm-practice-start">
           <Select
             value={String(practiceCount)}
-            onValueChange={(value) =>
-              value && setPracticeCount(Number(value))
-            }
+            onValueChange={(value) => value && setPracticeCount(Number(value))}
           >
-            <SelectTrigger
-              disabled={exam}
-              aria-label="Practice session length"
-            >
+            <SelectTrigger disabled={exam} aria-label="Practice session length">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -1356,15 +1397,10 @@ export default function BodyExplorer({
       </header>
       <div className="body-layout">
         <AnatomyControlRail>{railContent}</AnatomyControlRail>
-        <section
-          className="body-workspace"
-          aria-label={`${title} 3D anatomy`}
-        >
+        <section className="body-workspace" aria-label={`${title} 3D anatomy`}>
           <div className="body-heading">
             <div>
-              <div className="eyebrow">
-                REFERENCE ANATOMY · REVIEW PENDING
-              </div>
+              <div className="eyebrow">REFERENCE ANATOMY · REVIEW PENDING</div>
               <h1>{title}</h1>
               <p>
                 {whole
@@ -1391,216 +1427,223 @@ export default function BodyExplorer({
               }}
             />
           )}
-          <div className="body-canvas illustration-mode">
-            <div className="body-view-row">
-              <CameraViewMenu
-                value={view}
-                region={initialRegion}
-                onChange={(v) => {
-                  setView(v);
-                  setReset((n) => n + 1);
-                }}
-              />
-              {!exam && selected && <StructureDetailsButton />}
-              <Select
-                value={side}
-                onValueChange={(value) => {
-                  if (value) {
-                    setSide(value);
-                    setInspection(initialInspection);
-                    practiceDispatch({ type: 'dismiss' });
-                    setSelectedId(null);
-                    setFocus(false);
-                  }
-                }}
-              >
-                <SelectTrigger aria-label="Laterality filter" disabled={exam}>
-                  <SelectValue>
-                    {side === 'both'
-                      ? 'Both sides'
-                      : `${side[0].toUpperCase() + side.slice(1)} side`}
-                  </SelectValue>
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="both">Both sides</SelectItem>
-                  <SelectItem value="right">Right side</SelectItem>
-                  <SelectItem value="left">Left side</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            {!eyeParent && !ventricleParent && (
-              <Scene
-                catalog={catalog}
-                structures={sceneStructures}
-                selectedId={selectedId}
-                systems={systems}
-                isolated={isolated && !exam}
-                hiddenIds={hiddenIds}
-                ghostRemoved={ghostRemoved && !exam}
-                illustrated={illustrated}
-                landmarks={exam ? [] : stageLandmarks}
-                explode={explode}
-                layout={exam ? 'spatial' : layout}
-                anchorSkeleton={anchorSkeleton}
-                showOrigins={showOrigins && !exam}
-                labels={labels && !exam}
-                view={view}
-                zoom={zoom}
-                reset={reset}
-                focus={focus}
-                exam={exam}
-                inspection={exam ? initialInspection : inspection}
-                cameraBounds={jointCloseUp}
-                plate={plate && !exam}
-                cameraCapture={cameraCapture}
-                cameraRestore={cameraRestore}
-                retries={retries}
-                onSelect={onSceneSelect}
-                onLoaded={onLoaded}
-                onFailure={onFailure}
-                onRendererHealth={setRendererHealth}
-              />
-            )}
-            {pending.length > 0 && (
-              <output className="body-loading">
-                Loading anatomy · {loadStatus.loaded.length}/{required.length}{' '}
-                groups ready
-                {loadStatus.failed.length > 0
-                  ? ` · ${loadStatus.failed.length} unavailable`
-                  : ''}
-              </output>
-            )}
-            {loadStatus.failed.length > 0 && (
-              <div className="body-loading error" role="alert">
-                <p>
-                  Some anatomy could not load. Your dissection settings are
-                  retained.
-                </p>
-                <Button
-                  size="sm"
-                  variant="outline"
-                  disabled={retrying}
-                  onClick={() => void retryAnatomy()}
+          <ImagingComparisonWorkspace
+            selected={
+              linkEntries.find((entry) => entry.id === selected?.id) ?? null
+            }
+            link={imagingLink}
+          >
+            <div className="body-canvas illustration-mode">
+              <div className="body-view-row">
+                <CameraViewMenu
+                  value={view}
+                  region={initialRegion}
+                  onChange={(v) => {
+                    setView(v);
+                    setReset((n) => n + 1);
+                  }}
+                />
+                {!exam && selected && <StructureDetailsButton />}
+                <Select
+                  value={side}
+                  onValueChange={(value) => {
+                    if (value) {
+                      setSide(value);
+                      setInspection(initialInspection);
+                      practiceDispatch({ type: 'dismiss' });
+                      setSelectedId(null);
+                      setFocus(false);
+                    }
+                  }}
                 >
-                  {retrying ? 'Retrying…' : 'Retry missing anatomy'}
+                  <SelectTrigger aria-label="Laterality filter" disabled={exam}>
+                    <SelectValue>
+                      {side === 'both'
+                        ? 'Both sides'
+                        : `${side[0].toUpperCase() + side.slice(1)} side`}
+                    </SelectValue>
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="both">Both sides</SelectItem>
+                    <SelectItem value="right">Right side</SelectItem>
+                    <SelectItem value="left">Left side</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              {!eyeParent && !ventricleParent && (
+                <Scene
+                  catalog={catalog}
+                  structures={sceneStructures}
+                  selectedId={selectedId}
+                  systems={systems}
+                  isolated={isolated && !exam}
+                  hiddenIds={hiddenIds}
+                  ghostRemoved={ghostRemoved && !exam}
+                  illustrated={illustrated}
+                  landmarks={exam ? [] : stageLandmarks}
+                  explode={explode}
+                  layout={exam ? 'spatial' : layout}
+                  anchorSkeleton={anchorSkeleton}
+                  showOrigins={showOrigins && !exam}
+                  labels={labels && !exam}
+                  view={view}
+                  zoom={zoom}
+                  reset={reset}
+                  focus={focus}
+                  exam={exam}
+                  inspection={exam ? initialInspection : inspection}
+                  cameraBounds={jointCloseUp}
+                  plate={plate && !exam}
+                  cameraCapture={cameraCapture}
+                  cameraRestore={cameraRestore}
+                  retries={retries}
+                  onSelect={onSceneSelect}
+                  onLoaded={onLoaded}
+                  onFailure={onFailure}
+                  onRendererHealth={setRendererHealth}
+                />
+              )}
+              {pending.length > 0 && (
+                <output className="body-loading">
+                  Loading anatomy · {loadStatus.loaded.length}/{required.length}{' '}
+                  groups ready
+                  {loadStatus.failed.length > 0
+                    ? ` · ${loadStatus.failed.length} unavailable`
+                    : ''}
+                </output>
+              )}
+              {loadStatus.failed.length > 0 && (
+                <div className="body-loading error" role="alert">
+                  <p>
+                    Some anatomy could not load. Your dissection settings are
+                    retained.
+                  </p>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    disabled={retrying}
+                    onClick={() => void retryAnatomy()}
+                  >
+                    {retrying ? 'Retrying…' : 'Retry missing anatomy'}
+                  </Button>
+                  {retryError && <p role="alert">{retryError}</p>}
+                </div>
+              )}
+              {!available.length && (
+                <div className="body-empty">
+                  Choose a system with available anatomy, or restore hidden
+                  structures.
+                </div>
+              )}
+              {exam && (
+                <div className="body-exam-prompt">
+                  <span>
+                    {practice.mode === 'reason' ? 'APPLY ANATOMY' : 'IDENTIFY'}{' '}
+                    {question + 1} OF {examTargets.length}
+                  </span>
+                  <strong>
+                    {practice.mode === 'reason'
+                      ? 'Choose the best match in Practice'
+                      : practice.mode === 'name'
+                        ? 'Name the isolated structure'
+                        : `Find ${target?.name.toLowerCase()}`}
+                  </strong>
+                </div>
+              )}
+              <div className="body-zoom">
+                <Button
+                  size="icon"
+                  variant="outline"
+                  aria-label="Zoom in"
+                  onClick={() => setZoom((z) => Math.max(0.25, z - 0.15))}
+                >
+                  <Plus />
                 </Button>
-                {retryError && <p role="alert">{retryError}</p>}
+                <Button
+                  size="icon"
+                  variant="outline"
+                  aria-label="Zoom out"
+                  onClick={() => setZoom((z) => Math.min(2, z + 0.15))}
+                >
+                  <Minus />
+                </Button>
               </div>
-            )}
-            {!available.length && (
-              <div className="body-empty">
-                Choose a system with available anatomy, or restore hidden
-                structures.
-              </div>
-            )}
-            {exam && (
-              <div className="body-exam-prompt">
-                <span>
-                  {practice.mode === 'reason' ? 'APPLY ANATOMY' : 'IDENTIFY'}{' '}
-                  {question + 1} OF {examTargets.length}
-                </span>
-                <strong>
-                  {practice.mode === 'reason'
-                    ? 'Choose the best match in Practice'
-                    : practice.mode === 'name'
-                      ? 'Name the isolated structure'
-                      : `Find ${target?.name.toLowerCase()}`}
-                </strong>
-              </div>
-            )}
-            <div className="body-zoom">
-              <Button
-                size="icon"
-                variant="outline"
-                aria-label="Zoom in"
-                onClick={() => setZoom((z) => Math.max(0.25, z - 0.15))}
-              >
-                <Plus />
-              </Button>
-              <Button
-                size="icon"
-                variant="outline"
-                aria-label="Zoom out"
-                onClick={() => setZoom((z) => Math.min(2, z + 0.15))}
-              >
-                <Minus />
-              </Button>
-            </div>
-            <div className="body-toolbar">
-              <Button
-                size="icon"
-                variant={labels ? 'secondary' : 'ghost'}
-                aria-label="Toggle stage and selected labels"
-                disabled={exam}
-                onClick={() => setLabels((v) => !v)}
-              >
-                <Tags />
-              </Button>
-              <div className="body-explode">
-                <ExplodeStyleSelect
-                  value={exam ? 'spatial' : layout}
-                  disabled={exam || !available.length}
-                  onChange={changeLayout}
-                />
-                <Slider
-                  value={[explode]}
-                  min={0}
-                  max={100}
-                  step={1}
+              <div className="body-toolbar">
+                <Button
+                  size="icon"
+                  variant={labels ? 'secondary' : 'ghost'}
+                  aria-label="Toggle stage and selected labels"
                   disabled={exam}
-                  onValueChange={(v) =>
-                    setExplode(Array.isArray(v) ? v[0] : v)
-                  }
-                  aria-label={
-                    layout === 'tray'
-                      ? 'Arranged separation'
-                      : layout === 'extract'
-                        ? 'Selected structure separation'
-                        : 'Exploded separation'
-                  }
-                />
-                <output>{explode}%</output>
+                  onClick={() => setLabels((v) => !v)}
+                >
+                  <Tags />
+                </Button>
+                <div className="body-explode">
+                  <ExplodeStyleSelect
+                    value={exam ? 'spatial' : layout}
+                    disabled={exam || !available.length}
+                    onChange={changeLayout}
+                  />
+                  <Slider
+                    value={[explode]}
+                    min={0}
+                    max={100}
+                    step={1}
+                    disabled={exam}
+                    onValueChange={(v) =>
+                      setExplode(Array.isArray(v) ? v[0] : v)
+                    }
+                    aria-label={
+                      layout === 'tray'
+                        ? 'Arranged separation'
+                        : layout === 'extract'
+                          ? 'Selected structure separation'
+                          : 'Exploded separation'
+                    }
+                  />
+                  <output>{explode}%</output>
+                </div>
+                <Button
+                  size="icon"
+                  variant="ghost"
+                  aria-label="Reset camera and separation"
+                  onClick={resetView}
+                >
+                  <RotateCcw />
+                </Button>
               </div>
-              <Button
-                size="icon"
-                variant="ghost"
-                aria-label="Reset camera and separation"
-                onClick={resetView}
+              <div className="body-canvas-caption">
+                {jointCloseUp
+                  ? `${initialRegion === 'forearm' ? 'Elbow' : 'Knee'} close-up · Whole bones extend beyond the view · Pan / pinch to explore`
+                  : layout === 'tray' && !exam
+                    ? explode === 100
+                      ? 'Arranged view · Pan / pinch to zoom · Choose a direction · Not anatomical positions'
+                      : `Arrangement in progress · ${explode}% · Overlap is possible before 100%`
+                    : layout === 'extract' && !exam
+                      ? !selectedId ||
+                        !available.some((item) => item.id === selectedId)
+                        ? 'Select a visible structure to extract · Others stay assembled'
+                        : explode > 0
+                          ? 'Selected structure extracted · 0% restores anatomy · Overlap can recur when rotated'
+                          : 'Assembled anatomy · Increase separation to extract the selected structure'
+                      : explode > 0
+                        ? 'Exploded teaching view · Positions are not anatomical'
+                        : !exam && inspection.plane !== 'off'
+                          ? `${inspection.plane} surface cutaway · ${inspection.position}% · Not CT/MRI`
+                          : plate && !exam
+                            ? 'Orthographic illustration · Choose a direction · Use + / − to zoom'
+                            : 'Drag to rotate · Pinch to zoom · Select any visible structure'}
+              </div>
+              <a
+                className="model-credit"
+                href="/models/bodyparts3d/credits.html"
+                target="_blank"
+                rel="noreferrer"
               >
-                <RotateCcw />
-              </Button>
+                BodyParts3D · CC BY 4.0 · Adapted
+              </a>
             </div>
-            <div className="body-canvas-caption">
-              {jointCloseUp
-                ? `${initialRegion === 'forearm' ? 'Elbow' : 'Knee'} close-up · Whole bones extend beyond the view · Pan / pinch to explore`
-                : layout === 'tray' && !exam
-                ? explode === 100
-                  ? 'Arranged view · Pan / pinch to zoom · Choose a direction · Not anatomical positions'
-                  : `Arrangement in progress · ${explode}% · Overlap is possible before 100%`
-                : layout === 'extract' && !exam
-                  ? !selectedId ||
-                    !available.some((item) => item.id === selectedId)
-                    ? 'Select a visible structure to extract · Others stay assembled'
-                    : explode > 0
-                      ? 'Selected structure extracted · 0% restores anatomy · Overlap can recur when rotated'
-                      : 'Assembled anatomy · Increase separation to extract the selected structure'
-                  : explode > 0
-                    ? 'Exploded teaching view · Positions are not anatomical'
-                    : !exam && inspection.plane !== 'off'
-                      ? `${inspection.plane} surface cutaway · ${inspection.position}% · Not CT/MRI`
-                      : plate && !exam
-                        ? 'Orthographic illustration · Choose a direction · Use + / − to zoom'
-                        : 'Drag to rotate · Pinch to zoom · Select any visible structure'}
-            </div>
-            <a
-              className="model-credit"
-              href="/models/bodyparts3d/credits.html"
-              target="_blank"
-              rel="noreferrer"
-            >
-              BodyParts3D · CC BY 4.0 · Adapted
-            </a>
-          </div>
+          </ImagingComparisonWorkspace>
         </section>
         <AnatomyInfoPanel practice={exam}>
           {!exam && linkIssue && (
@@ -1617,11 +1660,7 @@ export default function BodyExplorer({
           )}
           {exam ? (
             <>
-              <output
-                className="sr-only"
-                aria-live="polite"
-                aria-atomic="true"
-              >
+              <output className="sr-only" aria-live="polite" aria-atomic="true">
                 {`Question ${question + 1} of ${examTargets.length}. ${
                   answered
                     ? `${answer === target?.id ? 'Correct.' : answer === null ? 'Skipped.' : 'Not quite.'} ${target?.name ?? ''}.`
@@ -1810,9 +1849,7 @@ export default function BodyExplorer({
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="landmarks">
-                        Major landmarks
-                      </SelectItem>
+                      <SelectItem value="landmarks">Major landmarks</SelectItem>
                       <SelectItem value="all">All visible anatomy</SelectItem>
                       <SelectItem value="focus" disabled={!focusedStudy}>
                         Current focus targets only
@@ -1835,9 +1872,9 @@ export default function BodyExplorer({
                   </p>
                   {practiceMode === 'reason' && !practiceReady && (
                     <p className="vm-practice-note">
-                      Show a target and at least one eligible alternative
-                      with matching laterality (including grouped selections).
-                      {' '}Widen the visible scope, try{' '}
+                      Show a target and at least one eligible alternative with
+                      matching laterality (including grouped selections). Widen
+                      the visible scope, try{' '}
                       <a href="/regions/spine">Spine &amp; back</a> or{' '}
                       <a href="/regions/thorax">Thorax</a>, or use an
                       identification mode.
@@ -1896,9 +1933,8 @@ export default function BodyExplorer({
                           >
                             {r.target === r.chosen ? '✓' : 'Review'} ·{' '}
                             {
-                              catalog.structures.find(
-                                (s) => s.id === r.target,
-                              )?.name
+                              catalog.structures.find((s) => s.id === r.target)
+                                ?.name
                             }
                           </button>
                           {practice.questions[index]?.reasoning && (
@@ -1927,9 +1963,8 @@ export default function BodyExplorer({
                           Retry missed ({retryCount} available)
                         </Button>
                         <p className="vm-practice-note">
-                          Retries respect the current visible, loaded scope
-                          and practice options. Skipped questions count as
-                          missed.
+                          Retries respect the current visible, loaded scope and
+                          practice options. Skipped questions count as missed.
                         </p>
                       </>
                     )}
@@ -1958,15 +1993,15 @@ export default function BodyExplorer({
                     <ReviewStatus structureId={selected.id} />
                     {!exam && hepaticFor(selected).length > 0 && (
                       <p className="vm-practice-note">
-                        Liver segment boundaries are not validated. Explore
-                        the supplied internal vessel and bile-duct groups
+                        Liver segment boundaries are not validated. Explore the
+                        supplied internal vessel and bile-duct groups
                         separately.
                       </p>
                     )}
                     {!exam && pulmonaryFor(selected).length > 0 && (
                       <p className="vm-practice-note">
-                        This model shows airway and vessel branches. Lung
-                        tissue and fissure surfaces are not modelled.
+                        This model shows airway and vessel branches. Lung tissue
+                        and fissure surfaces are not modelled.
                       </p>
                     )}
                     {selected.bundle === 'eye-corrected-parent' && (
@@ -2015,16 +2050,16 @@ export default function BodyExplorer({
                             {cricothyroidFor(selected).length
                               ? 'Explore cricothyroid muscles'
                               : pancreaticFor(selected).length
-                              ? 'Explore pancreatic ducts'
-                              : renalFor(selected).length
-                                ? 'Explore renal vessels'
-                                : hepaticFor(selected).length
-                                  ? 'Explore liver branches'
-                                  : pulmonaryFor(selected).length
-                                    ? 'Explore lung branches'
-                                    : cardiacFor(selected).length
-                                      ? 'Explore heart chambers'
-                                      : 'Dissect brain'}
+                                ? 'Explore pancreatic ducts'
+                                : renalFor(selected).length
+                                  ? 'Explore renal vessels'
+                                  : hepaticFor(selected).length
+                                    ? 'Explore liver branches'
+                                    : pulmonaryFor(selected).length
+                                      ? 'Explore lung branches'
+                                      : cardiacFor(selected).length
+                                        ? 'Explore heart chambers'
+                                        : 'Dissect brain'}
                           </Button>
                         </div>
                       )}
@@ -2172,10 +2207,24 @@ export default function BodyExplorer({
                       side={side as StudySide}
                       focusId={dissection.focusId}
                     />
-                    <ArterialConnections catalog={catalog} region={initialRegion} side={side} selectedId={selected.id}
-                      disabled={exam} onSelect={select} onShow={showArterialConnections} />
-                    <VenousDrainage catalog={catalog} region={initialRegion} side={side} selectedId={selected.id}
-                      disabled={exam} onSelect={select} onShow={showVenousDrainage} />
+                    <ArterialConnections
+                      catalog={catalog}
+                      region={initialRegion}
+                      side={side}
+                      selectedId={selected.id}
+                      disabled={exam}
+                      onSelect={select}
+                      onShow={showArterialConnections}
+                    />
+                    <VenousDrainage
+                      catalog={catalog}
+                      region={initialRegion}
+                      side={side}
+                      selectedId={selected.id}
+                      disabled={exam}
+                      onSelect={select}
+                      onShow={showVenousDrainage}
+                    />
                     <dl className="body-facts">
                       <div>
                         <dt>Region</dt>
@@ -2212,13 +2261,12 @@ export default function BodyExplorer({
                     </div>
                     <h2>Choose a structure</h2>
                     <p>
-                      Select a structure to inspect its identity, isolate it,
-                      or explore the available teaching notes.
+                      Select a structure to inspect its identity, isolate it, or
+                      explore the available teaching notes.
                     </p>
                     <div className="body-content-note">
                       The geometry is source-based. New teaching entries are
-                      clearly marked where specialist content is still
-                      pending.
+                      clearly marked where specialist content is still pending.
                     </div>
                   </>
                 )}
@@ -2263,10 +2311,17 @@ export default function BodyExplorer({
           onClose={closeEyeLayers}
         />
       )}
-      {kneeSpecimenOpen && ['leg', 'foot', 'thigh', 'pelvis'].includes(initialRegion) && !exam && (
-        <KneeSpecimen initialRegion={initialRegion} onClose={closeKneeSpecimen} />
+      {kneeSpecimenOpen &&
+        ['leg', 'foot', 'thigh', 'pelvis'].includes(initialRegion) &&
+        !exam && (
+          <KneeSpecimen
+            initialRegion={initialRegion}
+            onClose={closeKneeSpecimen}
+          />
+        )}
+      {abdominalWallOpen && initialRegion === 'abdomen' && !exam && (
+        <AbdominalWallSpecimen onClose={closeAbdominalWall} />
       )}
-      {abdominalWallOpen && initialRegion === 'abdomen' && !exam && <AbdominalWallSpecimen onClose={closeAbdominalWall} />}
       {ventricleParent && !exam && ventricleParent.id === selectedId && (
         <Ventricles
           parent={ventricleParent}
