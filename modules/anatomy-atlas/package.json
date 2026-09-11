@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "abdominal-arterial:test": "node scripts/pin-abdominal-arterial.mjs --check && node scripts/validate-abdominal-arterial.mjs",
     "arterial-connections:test": "node scripts/pin-lower-limb-arterial.mjs --check && node scripts/pin-upper-limb-arterial.mjs --check && node scripts/validate-lower-limb-arterial.mjs && node scripts/validate-lower-limb-arterial.mjs --upper",
     "hip-imaging:test": "node scripts/pin-hip-imaging.mjs --check && node scripts/validate-hip-imaging.mjs",
     "lower-limb-motor:test": "node scripts/pin-lower-limb-motor.mjs --check && node scripts/validate-lower-limb-motor.mjs",

@@ -1,6 +1,6 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
-**Select an upper- or lower-limb artery → Arterial connections** now offers [upstream/downstream exploration](docs/ARTERIAL_CONNECTIONS.md) across 81 existing selections, including 52 shoulder/arm, forearm and hand arteries. Show available neighbours with bones, follow source-bound links between regions and Undo the dissection change. The panel stays collapsed; missing segments, alternative origins and typical-versus-donor anatomy remain explicit. No flow or scan simulation.
+**Select an abdominal or limb artery → Arterial connections** offers [upstream/downstream exploration](docs/ARTERIAL_CONNECTIONS.md) across 108 existing selections. Abdominal routes now include pancreatic arcades and colonic communications; the shared aorta keeps both visceral and iliac connections. Show available neighbours with bones, follow source-bound links between regions and Undo the dissection change. The panel stays collapsed; missing segments, alternative origins and typical-versus-donor anatomy remain explicit. No flow or scan simulation.
 
 **Select a hip/thigh muscle → Imaging → CT / MRI / Ultrasound** now opens [source-bound orientation teaching](docs/HIP_IMAGING_TEACHING.md) for 26 existing selections: iliopsoas, abductors, rectus femoris, adductors, proximal hamstrings and quadratus femoris. Six groups supply 18 distinct modality topics with selection-specific cautions. The same compact notes panel is reused; these are drafts, not patient scans or clinical approval.
 

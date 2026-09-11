@@ -20,7 +20,7 @@ export { upperLimbMotorGroups } from './lib/upper-limb-motor.ts';
 export { upperLimbMotorRegions } from './content/upper-limb-motor.ts';
 export { lowerLimbMotorGroups } from './lib/lower-limb-motor.ts';
 export { lowerLimbMotorRegions } from './content/lower-limb-motor.ts';
-export { limbArterialNeighbours } from './lib/limb-arterial.ts';
+export { arterialNeighbours } from './lib/arterial.ts';
 export { makeSpecimenLink, resolveSpecimenLink } from './lib/um-limb-navigation.ts';
 export { parseSpecimenLink, specimenTopics } from './lib/specimen-links.ts';
 export { bodyContent, bodyLesson } from './app/body-content.ts';
@@ -61,7 +61,7 @@ const {
   upperLimbMotorRegions,
   lowerLimbMotorGroups,
   lowerLimbMotorRegions,
-  limbArterialNeighbours,
+  arterialNeighbours,
   makeSpecimenLink,
   resolveSpecimenLink,
   parseSpecimenLink,
@@ -258,6 +258,10 @@ for (const path of [
   'lib/upper-limb-arterial.ts',
   'lib/regional-arterial.ts',
   'lib/limb-arterial.ts',
+  'lib/arterial.ts',
+  'lib/abdominal-arterial.ts',
+  'content/abdominal-arterial.ts',
+  'content/abdominal-arterial-pins.json',
   'content/upper-limb-arterial.ts',
   'content/upper-limb-arterial-pins.json',
   'content/lower-limb-arterial.ts',
@@ -447,7 +451,7 @@ const independentNavigation = Object.values(limbDefinitions).map(definition => {
     studyMemberLinks: definition.studies.reduce((n, s) => n + s.ids.reduce((m, id) => m + roundTrip(id, s.id), 0), 0),
   };
 });
-const arterialEntries = catalog.structures.filter(s=>s.system==='vessels').map(s=>limbArterialNeighbours(catalog,'whole-body','both',s.id)).filter(Boolean);
+const arterialEntries = catalog.structures.filter(s=>s.system==='vessels').map(s=>arterialNeighbours(catalog,'whole-body','both',s.id)).filter(Boolean);
 const report = {
   schemaVersion: 1,
   method:
@@ -457,7 +461,7 @@ const report = {
     arterialConnections: {
       selections: arterialEntries.length,
       concepts: new Set(arterialEntries.map(e=>e.territory+'|'+e.concept)).size,
-      territories: Object.fromEntries(['lower-limb','upper-limb'].map(t=>[t, arterialEntries.filter(e=>e.territory===t).length])),
+      territories: Object.fromEntries(['lower-limb','upper-limb','abdominal','abdominal and lower-limb'].map(t=>[t, arterialEntries.filter(e=>e.territory===t).length])),
       alternativeRelationships: new Set(arterialEntries.flatMap(e=>e.rows.filter(r=>r.kind==='variant').map(r=>[e.selected.id,r.structure.id].sort().join('|')))).size,
       relationships: new Set(arterialEntries.flatMap(e=>e.rows.map(r=>[e.selected.id,r.structure.id].sort().join('|')))).size,
       sourceAndFrameChecked: true, geometryAdded: false, flowSimulated: false, clinicalApproval: false,

@@ -1,6 +1,16 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — SPARC nerve candidate review (current source; live site unchanged)
+## 11 September 2026 — abdominal arterial connections (current source)
+
+Source `56e9dc9e0e16f6cfbf3087a5af01aefde50e30d1`, tree `3ba6524ec64c798c0ec3be0d5928e02ae0343dea`, parent `7238d3e5a85a2c549cd7457aaa3fc0c6540ad88b`. Twenty paths mirrored once; 1,551 matching source files / 414,698,457 bytes / 112 retained GLBs. No common credential-signature warnings (not exhaustive). Private Sites source push and independent remote main match exactly. GitHub delivery remains unconfirmed; this is not a conversation/private-D1 backup.
+
+The same collapsed panel now supports 28 abdominal selections / 27 concepts / 32 source-instance relationships, including distinct pancreatic arcades and qualified colonic communications. The shared aorta preserves both abdominal and lower-limb routes in one reversible isolation step. Combined map: 108 unique selections / 67 concepts / 118 relationships / five alternative-origin relationships. No new geometry, flow, scan, dependency, paid asset or lecture entitlement. SPARC provenance now explicitly records fitted BodyParts3D/Anatomography inputs; component-specific rights remain unresolved, so the separate candidate stays outside the live product. Continue other anatomy, not repeated source retrieval or routine oral detail.
+
+Abdominal tests passed: 160 regional/side plans, 30 cross-region links, 78 malformed-catalogue rejections, 56 actual component renders and 56 actual parent-handler cases. Both existing limb suites passed unchanged anatomy/content checks for all 9,198 body topics and existing shoulder/recipes. TypeScript, inventory freshness, renderer revision, 3,066 private-review contexts, 235 shoulder review checks, 48,082 imaging-link assertions and production build passed. All 108 delivered models / 1,204 meshes / 3,612 buffer views preserve source geometry. Clinical and browser/device validation remain outstanding; no browser opened or navigated.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-abdominal-arterial-2026-09-11`: runtime archive 109,421,185 bytes, SHA256 `9803498bb3d26c939796957bc15bcf8caaaa9746678248d9ff7068e145138ac6`; delta 604,160 bytes, SHA256 `3c5990bba1778b216e093e0d0d52c55c57573866ab21b4fbe4ac65f2abdc0628`; incremental bundle 26,675 bytes, SHA256 `3514e63aa4b885925c9abd4a26f0f84bbd93b3e09bdff5b7d711a0d051e4286d`. Bundle verified; requires source parent above. Restore chain is the retained release150 full-source bundle, SPARC source-audit incremental, then this incremental. New archives and packaging stage use D:; existing source, mirror, backups and retained verification repo were not moved/deleted. Final native version/deployment outcome belongs in `work/ATLAS_ABDOMINAL_ARTERIAL_2026-09-11.md` and the D: companion checkpoint; do not duplicate publishing.
+
+## 11 September 2026 — SPARC nerve candidate review (previous source; runtime unchanged)
 
 Source `7238d3e5a85a2c549cd7457aaa3fc0c6540ad88b`, tree `72a31e6509b5f625c80e32edb8627cae145cb9cb`, parent `4972359643323eadd505824217f8d70c60cee2e6`. Six documentation/offline-audit paths mirrored; 1,545 files match / 414,607,142 bytes / 112 retained GLBs, without common credential-signature warnings (not exhaustive). Sites source push and remote main independently match the exact revision. GitHub delivery remains unconfirmed.
 
@@ -8,7 +18,7 @@ Five SPARC dataset-307-v8 originals (14,568,863 bytes) are retained separately o
 
 Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-sparc-nerve-source-2026-09-11`: delta 143,360 bytes, SHA256 `23837df7b4671c992b30f9064609dff4817c04a38aaa8c63a32e3b35f355b22f`; incremental bundle 10,430 bytes, SHA256 `a8b0b2a8c87e02f013fe8bd1259e1067535a6a4ff092c168fe832a2de7b715a7`. Bundle requires the source parent above, available in the retained full-source backup. Research originals are local D: files, not an off-device backup. Audit reproduction, source hashes, script syntax, requirements freshness and diff checks passed. No runtime/build/database changes, so no new build or deployment. The live site remains version 150 below. No browser navigation or QA.
 
-## 11 September 2026 — upper-limb arterial connections (current live release)
+## 11 September 2026 — upper-limb arterial connections (previous live release)
 
 Source `4972359643323eadd505824217f8d70c60cee2e6`, tree `86ae3907cf17336b9f53552450ac716319b7429a`, parent `d723e7051319e17db4992bb941755ebc85a25c1d`. Twenty paths mirrored once; 1,542 matching source files / 414,584,028 bytes / 112 retained GLBs. Main website unchanged. No common credential-signature warnings (not exhaustive). Sites source push and remote branch were independently verified at the full source revision. **Not confirmed GitHub delivery, conversation/private-D1 backup or an independent off-device restore.**
 

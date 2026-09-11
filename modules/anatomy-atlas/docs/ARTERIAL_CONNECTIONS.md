@@ -1,4 +1,4 @@
-# Upper- and lower-limb arterial connections
+# Abdominal and limb arterial connections
 
 Select a participating artery and open **Arterial connections** in its information panel. The section starts collapsed and is absent for unrelated structures and exam mode. No additional global toolbar, diagram or permanent list.
 
@@ -44,6 +44,22 @@ Upper-limb references, factual synthesis only:
 - [UAMS upper-limb arteries](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/artery-tables/arteries-of-the-upper-limb/): naming landmarks, subscapular parent and shoulder inflow distinctions.
 - [Relative frequency of a subclavian vs. a transverse cervical origin for the dorsal scapular artery](https://pubmed.ncbi.nlm.nih.gov/8808401/): alternative origin routes; no frequency adopted or assigned to the donor.
 - [Superficial palmar arch: an arterial diameter study](https://pubmed.ncbi.nlm.nih.gov/15061757/): arch and radial-side variation. Indexed abstract/figure descriptions support the caution; no figure, measurement or text imported. Study percentages are not generalised.
+
+## Abdominal extension
+
+**28 source selections / 27 concepts / 32 relationships** add visceral and renal routes. One aortic selection is shared with the lower-limb map, giving **108 unique selections / 67 concepts / 118 relationships** across all three maps. Reciprocal rows are not extra anatomical connections. No extra global control or permanent panel.
+
+The compact section covers celiac, common/proper hepatic, gastroduodenal, splenic, left gastric, renal, superior/inferior mesenteric, selected colic and pancreatic routes. Anterior/posterior pancreaticoduodenal arcades stay distinct from inferior pancreatic supply. Marginal-colic communications do not establish a complete arcade, flow direction or adequate collateral supply. Appendicular origin is unresolved: direct ileocolic and indirect cecal routes are not a confirmed direct junction. The ambiguous ascending ileocolic subdivision and missing sigmoid, hepatic, gastric and intestinal branches are not assigned guessed parents.
+
+`content/abdominal-arterial-pins.json` binds 28 arterial records and five lumbar-bone context records to exact frame, licence, bundles and component memberships. Celiac and superior mesenteric each have two official components; splenic has four. All other admissions have one. No component becomes an invented branch identity.
+
+The factory keeps its default same-side rule for limbs. The abdominal map uses explicit concepts: left gastric and right/left colic names are not mirrored branch pairs. Visibility still follows the main viewer's side filter, including midline/unpaired/unspecified categories; no source laterality changes. Use Both sides for the complete mapped abdominal set. Single-side views still exclude catalogue-labelled contralateral selections.
+
+`lib/arterial.ts` is the main-view dispatcher. At the shared aorta, both abdominal and lower-limb bindings must pass. Neighbours and bone context combine in one reversible action; neither map silently substitutes for a stale other map. Non-shared selections retain separate admission rules. The old limb API is preserved.
+
+Reading references: [UAMS abdominal arteries](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/artery-tables/arteries-of-the-abdomen/), [Texas Tech abdominal arteries](https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html), [celiac/hepatic variation in 5,002 patients](https://pubmed.ncbi.nlm.nih.gov/20308464/), [dorsal pancreatic origin review](https://pubmed.ncbi.nlm.nih.gov/35177332/) and [right-colic origin review](https://pubmed.ncbi.nlm.nih.gov/29196959/). The last two were indexed while direct PubMed pages challenged access; no prevalence or additional unverified variants were adopted. No publisher prose, table, figure, scan or diagnostic protocol is imported. Relationship metadata and source-limit notes are original; existing mesh attribution stays unchanged.
+
+Run **both** `npm run abdominal-arterial:test` and the existing `npm run arterial-connections:test`. The new suite covers 160 regional/side plans, 30 cross-region links, 78 altered/duplicate-source rejections, 56 actual component renders and 56 real parent-handler cases. It checks official component memberships, reciprocal labels, side switching, exact visibility, one-step Undo/Redo, idempotence, shared-aorta failure handling and exam guards. Existing limb tests now inject the real new parent dispatcher while still checking unchanged limb contracts. No browser/device/clinical validation is inferred.
 
 ## Geometry, identity and interactions
 

@@ -12,7 +12,7 @@ const testRegion = upper ? 'forearm' : 'leg';
 const compiled = await build({
   stdin: {
     contents:
-      "export * from './lib/lower-limb-arterial'; export * from './lib/upper-limb-arterial'; export * from './lib/limb-arterial'; export * from './content/upper-limb-arterial'; export * from './content/lower-limb-arterial'; export * from './app/dissection-data'; export * from './lib/study-links'; export {bodyDisplayCatalog} from './lib/body-display-catalog';",
+      "export * from './lib/lower-limb-arterial'; export * from './lib/upper-limb-arterial'; export * from './lib/limb-arterial'; export * from './lib/arterial'; export * from './content/upper-limb-arterial'; export * from './content/lower-limb-arterial'; export * from './app/dissection-data'; export * from './lib/study-links'; export {bodyDisplayCatalog} from './lib/body-display-catalog';",
     resolveDir: process.cwd(),
     loader: 'ts',
   },
@@ -484,7 +484,7 @@ for (const selected of upper
         side: 'both',
         selectedId: selected.id,
         exam,
-        limbArterialPlan: api.limbArterialPlan,
+        arterialPlan: api.arterialPlan,
         initialInspection: { enabled: false },
         cameraRestore: { current: 'old' },
         dispatch: (v) => calls.push(['dispatch', v]),

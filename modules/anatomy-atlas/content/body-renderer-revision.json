@@ -38,7 +38,7 @@
     },
     {
       "path": "app/arterial-connections.tsx",
-      "sha256": "4ee96f994774523877fdd44dcd4f48c4e48059338320de8f8c82dc39e293dc87"
+      "sha256": "b1afc45839a634a7329b7e09c92e57fb2673adf70d757714437a681d83a79695"
     },
     {
       "path": "app/atlas-workspace.css",
@@ -58,7 +58,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "d2fcfe972773a587fe0a1046ac29b4fe9d41569e31e42e270da66a3228a21b08"
+      "sha256": "6e79a38f4cb906a89a66bd9f296db10b126eae0b06db580264fc9c931fa7b9a2"
     },
     {
       "path": "app/body-scene.tsx",
@@ -297,6 +297,14 @@
       "sha256": "dd914d769bc223b5d5ea56839a7752e534eb475f8d2897d5675606c368bbca1f"
     },
     {
+      "path": "content/abdominal-arterial-pins.json",
+      "sha256": "173b19ad9e1ee70e9af87eea6dc4f9c026d5adbdce3d10975e27b35daa8c1573"
+    },
+    {
+      "path": "content/abdominal-arterial.ts",
+      "sha256": "8d3adf0135a17a01281b5cbdf3d9cbd62167849043c6bf4948382f8cb8956ec1"
+    },
+    {
       "path": "content/abdominal-wall-teaching.ts",
       "sha256": "b0da512ba08095bb8516538b11f6f052f5e1bd052f2a418fc1015602fe8f5896"
     },
@@ -441,6 +449,10 @@
       "sha256": "7e5fd834fb125b12047a5ea3471baa7eef12d90a4c223332fa32e8a36f6bcfdd"
     },
     {
+      "path": "lib/abdominal-arterial.ts",
+      "sha256": "29a81d40909eff2d828e72bda5e2cc8660e51371e602c99cdf05fc1c5e32aa51"
+    },
+    {
       "path": "lib/abdominal-organ-clinical-curriculum.ts",
       "sha256": "2945f5c4cb8c7ff6656130ca73f03f4cecafd9cadcf342de606a97612d8e8d6a"
     },
@@ -515,6 +527,10 @@
     {
       "path": "lib/anatomy-vessels.ts",
       "sha256": "3f1e5ef5ebb26101f4aa5cfeccf39a95915732047f1c84c80b14eba9c6469586"
+    },
+    {
+      "path": "lib/arterial.ts",
+      "sha256": "4b477e3bf1f88eb6befd80dbf5456546ef0798422430dd4d04dec650472eec56"
     },
     {
       "path": "lib/atlas-navigation.ts",
@@ -902,7 +918,7 @@
     },
     {
       "path": "lib/regional-arterial.ts",
-      "sha256": "ad8e1094c8c83aceb00ed36463708db3211ce43820e6b7089080e477bb3d9aab"
+      "sha256": "0d50f1d6be437f1922c585e3d234cc6666672d78233f0eba19f806b74dcecac5"
     },
     {
       "path": "lib/regional-connective-clinical-curriculum.ts",
@@ -1118,7 +1134,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "d25ca8d0b477f833348a2e51d7dd4e866c57f7332647c85b9d91a77991090a66"
+      "sha256": "32603593e33fe50fa1478c263ddc962c3c99bf3e0b3a0bd877d3e05a15b1bbaa"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1213,5 +1229,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "e1c57c166d0dbc2e4011db8f5f21ad7740418e913e4010d86a4a152eba42d570"
+  "sha256": "a9c3ab88c5bd15e1c15bcf71e869075001600f2d6ac5f81795dd76880b7269f9"
 }

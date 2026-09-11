@@ -48,6 +48,7 @@ export function createArterialExplorer(
   }[],
   arterialReferences: Record<string, string>,
   territory: string,
+  pairing: 'same-side' | 'explicit-concept' = 'same-side',
 ) {
   const pinnedById = new Map(pins.entries.map((s) => [s.id, canonical(s)]));
   const byFma = new Map<string, string>(
@@ -79,7 +80,9 @@ export function createArterialExplorer(
   const inRegion = (s: BodyStructure, region: string) =>
     region === 'whole-body' || s.regions.includes(region);
   const inSide = (s: BodyStructure, side: string) =>
-    side === 'both' || s.laterality === side || s.laterality === 'midline';
+    side === 'both' ||
+    s.laterality === side ||
+    ['midline', 'unpaired', 'unspecified'].includes(s.laterality);
   /** Typical anatomical relationships, never inferred from mesh proximity or lumen continuity. */
   function neighbours(
     catalog: BodyCatalog,
@@ -123,7 +126,8 @@ export function createArterialExplorer(
         // A midline inflow can reach both sides; paired vessels never cross sides.
         if (
           !inSide(structure, side) ||
-          (selected.laterality !== 'midline' &&
+          (pairing === 'same-side' &&
+            selected.laterality !== 'midline' &&
             structure.laterality !== 'midline' &&
             selected.laterality !== structure.laterality)
         )

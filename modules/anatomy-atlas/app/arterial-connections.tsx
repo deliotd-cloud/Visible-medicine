@@ -2,7 +2,7 @@
 import { useMemo } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { limbArterialNeighbours } from '@/lib/limb-arterial';
+import { arterialNeighbours } from '@/lib/arterial';
 import { makeStudyLink, type StudySide } from '@/lib/study-links';
 import type { BodyCatalog } from './body-types';
 
@@ -24,7 +24,7 @@ export function ArterialConnections({
   onShow: () => void;
 }) {
   const info = useMemo(
-    () => limbArterialNeighbours(catalog, region, side, selectedId, disabled),
+    () => arterialNeighbours(catalog, region, side, selectedId, disabled),
     [catalog, region, side, selectedId, disabled],
   );
   if (!info) return null;
