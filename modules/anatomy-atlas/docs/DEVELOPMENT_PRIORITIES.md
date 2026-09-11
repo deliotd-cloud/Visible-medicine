@@ -4,6 +4,8 @@ Updated 11 September 2026 following the owner's instruction to give oral anatomy
 
 ## Oral anatomy: brief pass completed, lower priority
 
+The [whole-body decision workspace](BODY_REVIEW_DECISIONS.md) now records private corrections and scoped review decisions for 1,022 root selections, with append-only history and stale-material checks. No learner toolbar change or fabricated review. Do not repeat this storage pass or expand administration at the expense of anatomy. Next return to substantive regional anatomy/functional teaching or genuinely cleared major missing structures; nested/independent review scopes, real scans and lecture integration remain separate later work.
+
 The current source catalogue includes 28 secondary tooth surfaces, mandible/maxillae, tongue, and paired submandibular/sublingual glands. Existing upper/lower dental and Teeth & jaws windows remain usable. This is not a complete oral cavity: third molars, internal dental/periodontal tissues and validated occlusion are missing; this check does not establish full salivary duct, parotid or oral mucosal coverage.
 
 The two gingiva candidates and original bytes remain preserved in the [source review](GINGIVA_SOURCE_REVIEW.md), outside the live atlas. Do not continue fragment repair, gum sculpting, new oral features or repeated dental audits during automatic goal continuation unless the owner reprioritises them or a critical defect demands attention.

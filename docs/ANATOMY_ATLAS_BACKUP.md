@@ -1,6 +1,18 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — whole-body review worksheets (current source/live)
+## 11 September 2026 — private whole-body review decisions (current source)
+
+Source `bc3866d3ec33aeb16d02335b9d1b5076ba9182b9`, tree `80e19ab887b9c2fd25e7eda490deddfc19350f57`, parent `0ef5c7d4c44672eb5f692c2a27e3810319e25be0`. Twenty-five paths mirrored by the one-shot helper, with 1,511 matching files / 413,725,937 bytes / 112 retained GLBs. Main website unchanged; no common credential-signature warnings (not an exhaustive secret audit). Sites source push succeeded, full HEAD verified and transient credential cleared. **Not confirmed GitHub delivery, conversation backup or private D1 backup.**
+
+Root-body review records now save privately in separate append-only `body_review_events`: exact source/teaching/renderer/checklist revisions, three scoped tracks, evidence/corrections, personal attestation, version conflicts, retained working drafts, guarded navigation, explicit refresh/reconciliation and paginated/exportable history. Existing shoulder table/API remain unchanged even for shared IDs. Generated additive migration 0001 is included; migration 0000 is untouched. No production review is seeded. Imaging approval is blocked; pending topics, interactive question banks, nested/independent specimens and paid lecture access are not approved by these records.
+
+Passed all 1,022 body contexts / 3,066 tracks; actual in-memory SQLite migrations, preserved shoulder sentinel, authentication/CSRF/body limits, optimistic writes, 24-version history, source/client parser and reconciliation tests; three new and six existing React renders; all 9,198 unchanged worksheet topics; 235 shoulder checks; TypeScript, requirement freshness, diff checks and production build. All 108 compressed models / 1,204 meshes / 3,612 buffer views preserve source bytes and decoded scenes. No browser/device/clinical acceptance claimed. No anatomy, dependency, font, texture, licence or learner toolbar change.
+
+Recovery stem `work/atlas-body-decisions-2026-09-11`: runtime archive 109,197,407 bytes, SHA256 `9bdb1839248445870e54d69619a9f1a0333bd4947a797d07e8c75d40c90f2ddc`; delta 430,080 bytes, SHA256 `0b06fdda5600342ce4958a45b8eb19531f9f933a84fb30de1a8cd494b85e72e3`; incremental Git bundle 53,678 bytes, SHA256 `0c8a838b9dd7ab55409c14db5f298b9a7507ba266b83e26feac6b3c77584c561`. Bundle requires source parent `0ef5c7d4c44672eb5f692c2a27e3810319e25be0`; it is not standalone. These are local recovery artifacts, not independently tested off-device restoration.
+
+Native saved version **146**, ID `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_9a85576bbca481919090a3b08c9887c1`. Private deployment dispatched as `appgdep_6aa388eb98d88191ad06abc9cd4b1742`; terminal outcome belongs in `work/ATLAS_BODY_DECISIONS_2026-09-11.md`. Do not duplicate the save or rewrite generated/applied migration history. Resume substantive regional anatomy/functional teaching after this checkpoint; routine oral expansion remains lower priority.
+
+## 11 September 2026 — whole-body review worksheets (previous checkpoint)
 
 Source `0ef5c7d4c44672eb5f692c2a27e3810319e25be0`, tree `6938136c96f4f85696e0545097d21c880624452a`, parent `50f27f541417db751d28a79cdb0dc4cce0ff55de`. Fifteen source paths mirrored into the atlas module by the one-shot helper; main website unchanged. Sites source push succeeded and full HEAD verified afterward; credential cleared. Not confirmed GitHub delivery or a chat/private-D1 backup.
 

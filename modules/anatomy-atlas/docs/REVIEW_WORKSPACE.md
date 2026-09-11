@@ -1,6 +1,6 @@
 # Shoulder review workspace
 
-The header also opens [Whole-body worksheets](BODY_REVIEW_WORKSHEETS.md), a separate read-only preparation workspace for all1,022 root-body selections. It does not read, save, import or approve private reviews. The persisted shoulder workflow below is unchanged; body, nested and independent scope approvals are not inferred from the pilot.
+The header also opens [Whole-body reviews](BODY_REVIEW_DECISIONS.md), a separate source-bound workspace for all 1,022 root-body selections. Worksheets stay read-only, while a separate body decision store saves private, versioned reviews. The shoulder workflow below is unchanged; body, nested and independent approvals are not inferred from the pilot. The two tables are never merged, even when IDs overlap.
 
 ## What is delivered
 

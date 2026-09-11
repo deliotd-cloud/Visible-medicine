@@ -232,7 +232,7 @@ for (const region of ['shoulder-arm', 'forearm', 'thigh']) {
       initialRegion: region,
     }),
   );
-  assert(html.includes('no decisions saved or approvals granted'));
+  assert(html.includes('private, versioned corrections and review records'));
   assert(html.includes('Choose a structure'));
   assert(html.includes('Review queue pages'));
   renders++;

@@ -18,6 +18,7 @@ import {
 } from '@/lib/body-review-search';
 import type { BodyReviewMaterial } from '@/lib/body-review-material';
 import { parseBodyReviewResponse } from '@/lib/body-review-response';
+import { BodyDecisionEditor } from './body-decision-editor';
 
 const labels = {
   anatomy: 'Anatomy',
@@ -52,6 +53,24 @@ export function BodyReviewDashboard({
     [query, setQuery] = useState('');
   const [page, setPage] = useState(0),
     [selected, setSelected] = useState(initialId);
+  const [dirty, setDirty] = useState(false);
+  useEffect(() => {
+    if (!dirty) return;
+    const guard = (event: BeforeUnloadEvent) => {
+      event.preventDefault();
+      event.returnValue = '';
+    };
+    window.addEventListener('beforeunload', guard);
+    return () => window.removeEventListener('beforeunload', guard);
+  }, [dirty]);
+  function canLeave() {
+    return (
+      !dirty ||
+      window.confirm(
+        'Leave this structure and discard unsaved review edits? Export or save them first if needed.',
+      )
+    );
+  }
   const [material, setMaterial] = useState<BodyReviewMaterial | null>(null),
     [error, setError] = useState(''),
     [loading, setLoading] = useState(false),
@@ -109,16 +128,33 @@ export function BodyReviewDashboard({
     };
   }, [selected, attempt]);
   function resetSelection() {
+    setDirty(false);
     setPage(0);
     setSelected(null);
     setMaterial(null);
     setError('');
   }
   return (
-    <div className="body-review-app">
+    <div
+      className="body-review-app"
+      onClickCapture={(event) => {
+        const anchor = (event.target as Element).closest('a');
+        if (
+          !anchor ||
+          anchor.target === '_blank' ||
+          anchor.hasAttribute('download') ||
+          anchor.getAttribute('href')?.startsWith('/api/body-review')
+        )
+          return;
+        if (!canLeave()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+      }}
+    >
       <header className="body-review-header">
         <Brand />
-        <span>Body review worksheets</span>
+        <span>Body review workspace</span>
         <Link href="/review">Shoulder review records</Link>
         <Link href="/">Back to atlas</Link>
       </header>
@@ -126,8 +162,8 @@ export function BodyReviewDashboard({
         <h1>Review the wider body</h1>
         <p>
           Source details and current teaching for {rows.length.toLocaleString()}{' '}
-          body selections. Worksheets only — no decisions saved or approvals
-          granted.
+          body selections. Keep private, versioned corrections and review
+          records without adding controls to the learner's atlas.
         </p>
         <div className="body-review-grid">
           <aside className="body-review-queue" aria-label="Body review queue">
@@ -138,6 +174,7 @@ export function BodyReviewDashboard({
               maxLength={256}
               placeholder="Name or anatomical ID"
               onChange={(e) => {
+                if (!canLeave()) return;
                 setQuery(e.target.value);
                 resetSelection();
               }}
@@ -146,7 +183,7 @@ export function BodyReviewDashboard({
             <Select
               value={region}
               onValueChange={(v) => {
-                if (v) {
+                if (v && canLeave()) {
                   setRegion(v);
                   resetSelection();
                 }
@@ -168,7 +205,7 @@ export function BodyReviewDashboard({
             <Select
               value={system}
               onValueChange={(v) => {
-                if (v) {
+                if (v && canLeave()) {
                   setSystem(v);
                   resetSelection();
                 }
@@ -194,6 +231,8 @@ export function BodyReviewDashboard({
                     variant={selected === s.id ? 'secondary' : 'ghost'}
                     aria-pressed={selected === s.id}
                     onClick={() => {
+                      if (!canLeave()) return;
+                      setDirty(false);
                       setMaterial(null);
                       setError('');
                       setSelected(s.id);
@@ -262,7 +301,15 @@ export function BodyReviewDashboard({
               <p>Choose a structure to inspect its source and teaching.</p>
             )}
             {material?.structureId === selected && (
-              <BodyReviewDetails material={material} />
+              <>
+                <BodyReviewDetails material={material} />
+                <BodyDecisionEditor
+                  key={`${material.structureId}-${material.materialHash}`}
+                  id={material.structureId}
+                  materialHash={material.materialHash}
+                  onDirty={setDirty}
+                />
+              </>
             )}
           </section>
         </div>
@@ -363,8 +410,9 @@ export function BodyReviewDetails({
         <summary>Review checklist & handoff</summary>
         <p>
           Download the worksheet to record reviewer details, evidence and
-          corrections externally. It cannot be imported as a sign-off; the
-          private saved-review workflow remains shoulder-only.
+          corrections externally. The worksheet cannot be imported as a
+          sign-off. Use the separate private record below to save revision-bound
+          decisions.
         </p>
         {Object.entries(material.checklist).map(([track, items]) => (
           <section key={track}>

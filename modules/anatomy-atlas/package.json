@@ -6,6 +6,8 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "body-decisions:test": "node scripts/body-renderer-revisions.mjs --check && node scripts/validate-body-decisions.mjs",
+    "body-reviews:revisions": "node scripts/body-renderer-revisions.mjs",
     "body-review:test": "node scripts/validate-body-review.mjs",
     "upper-limb-motor:test": "node scripts/pin-upper-limb-motor.mjs --check && node scripts/validate-upper-limb-motor.mjs",
     "spine-imaging:test": "node scripts/validate-spine-imaging.mjs",
@@ -58,7 +60,7 @@
     "eye-layers:export": "node scripts/export-eye-layers.mjs",
     "eye-layers:test": "node scripts/validate-eye-layers.mjs",
     "dev": "vinext dev",
-    "build": "npm run reviews:revisions && vinext build && node scripts/compress-model-delivery.mjs && node scripts/exclude-source-recovery.mjs",
+    "build": "npm run reviews:revisions && npm run body-reviews:revisions && vinext build && node scripts/compress-model-delivery.mjs && node scripts/exclude-source-recovery.mjs",
     "models:delivery-check": "node scripts/compress-model-delivery.mjs --check",
     "reviews:revisions": "node scripts/review-revisions.mjs",
     "reviews:test": "node scripts/validate-review.mjs",

@@ -1,6 +1,6 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
-**Review workspace → Whole-body worksheets** opens [source-bound review material](docs/BODY_REVIEW_WORKSHEETS.md) for1,022 body selections, with region/system filters, current teaching, exact model links and downloadable worksheets. It stays outside the learner's atlas. Worksheets grant no approval; saved review decisions remain shoulder-only.
+**Review workspace → Whole-body reviews** opens [source-bound material](docs/BODY_REVIEW_WORKSHEETS.md) for 1,022 body selections. A separate [private decision record](docs/BODY_REVIEW_DECISIONS.md) saves corrections, evidence and scoped anatomy/teaching decisions with append-only history and revision checks. Imaging approval is blocked until validated resources exist. The learner's atlas and existing shoulder records are unchanged; no clinical sign-off is pre-populated.
 
 A [cardiac valve/subvalvar source review](docs/CARDIAC_VALVE_SOURCE_REVIEW.md) records 16 existing source files and their specific identity/mesh issues. No uncertain valve geometry is added to the live atlas; oral detail stays lower priority while wider-body development continues.
 

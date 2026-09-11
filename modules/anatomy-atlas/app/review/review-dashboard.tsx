@@ -298,7 +298,7 @@ export function ReviewDashboard({ initialId }: { initialId: string }) {
       <header className="review-header">
         <Brand />
         <span>Review workspace</span>
-        <Link href="/review/body">Whole-body worksheets</Link>
+        <Link href="/review/body">Whole-body reviews</Link>
         <Link href="/shoulder">
           Anatomy explorer <ArrowUpRight size={16} />
         </Link>
