@@ -1,6 +1,14 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — abdominal arterial connections (current source)
+## 11 September 2026 — wrist-bone imaging orientation (current source)
+
+Source `6c9acd0c0ea1ae10f10f363495d8052242901168`, tree `cfe3bc411699d7ecf60dc8101ad2eb1c94303d99`, parent `56e9dc9e0e16f6cfbf3087a5af01aefde50e30d1`. Twenty-five paths mirrored once; 1,561 matching files / 414,812,343 bytes / 112 retained GLBs. No common credential-signature warnings (not exhaustive). Private Sites source push and independent remote main match exactly. GitHub delivery remains unconfirmed; this is not conversation or private-D1 recovery. Main website unchanged outside this module/receipt.
+
+Existing Imaging tabs now add 48 X-ray/CT/MRI drafts for sixteen exact carpal selections (five groups / fifteen modality topics / eight bone-specific cautions). All other 9,150 body topics, original shoulder records and recipes remain unchanged. No model, patient scan, new control, dependency, paid asset or entitlement. Wrist, hip, spinal, both limb-arterial, 3,066 private-review contexts, 235 shoulder-review and 48,082 imaging-link checks passed, with TypeScript, requirements freshness and build. Actual wrist note renders: 48; changed-binding rejections: 960. All 108 delivered models preserve decoded geometry. Clinical and real browser/device acceptance remain outstanding; browser untouched.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-wrist-imaging-2026-09-11`: runtime 109,443,202 bytes, SHA256 `1ab31804ca3771d0e09abcdbe646a60454afe273a631a60cd89c90dfe6b61cd2`; delta 593,920 bytes, SHA256 `e4ad6184e3a6879ab8dde9e12a9ab08ed243bc80c5a660bc118e3e669a17611e`; incremental bundle 29,110 bytes, SHA256 `f4335c61764445ab49695f95ccb9eed99d080340ea6ae283f42530ff019cce10`. Bundle requires the source parent above, not standalone. Retain the full release150 bundle plus SPARC, abdominal and wrist incrementals. Existing C:/D: source, mirror, archives and verification repo untouched except additive recovery verification. Final native publication/restore evidence belongs in `work/ATLAS_WRIST_IMAGING_2026-09-11.md` and its D: companion; do not duplicate publishing. Continue broader anatomy/teaching, not repeated introductory wrist notes or routine oral expansion.
+
+## 11 September 2026 — abdominal arterial connections (previous source)
 
 Source `56e9dc9e0e16f6cfbf3087a5af01aefde50e30d1`, tree `3ba6524ec64c798c0ec3be0d5928e02ae0343dea`, parent `7238d3e5a85a2c549cd7457aaa3fc0c6540ad88b`. Twenty paths mirrored once; 1,551 matching source files / 414,698,457 bytes / 112 retained GLBs. No common credential-signature warnings (not exhaustive). Private Sites source push and independent remote main match exactly. GitHub delivery remains unconfirmed; this is not a conversation/private-D1 backup.
 

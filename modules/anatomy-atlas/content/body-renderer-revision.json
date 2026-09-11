@@ -50,7 +50,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "8593748178cfe37fe97b5d1c45dc7dd7e356a3b3b6ea2c3d921a05c8f3900f93"
+      "sha256": "4f5b8f78a205e12fea96583c52647fca39997c8d2e6b46bf9e960512ebb96179"
     },
     {
       "path": "app/body-explorer.css",
@@ -447,6 +447,14 @@
     {
       "path": "content/visual-pathway-teaching.ts",
       "sha256": "7e5fd834fb125b12047a5ea3471baa7eef12d90a4c223332fa32e8a36f6bcfdd"
+    },
+    {
+      "path": "content/wrist-imaging-concepts.ts",
+      "sha256": "977984f68e2bf0eba819fa4b5332f9220dae56530311988a4a5a4b3f2c91f2e8"
+    },
+    {
+      "path": "content/wrist-imaging-pins.json",
+      "sha256": "3f187b82214165b932599c9df5a47a2f65d9416747e2d651231acb99db4fbf33"
     },
     {
       "path": "lib/abdominal-arterial.ts",
@@ -1125,6 +1133,10 @@
       "sha256": "d57ede3b0e06388b222377d5aba1418d1c770ed856f01ea7322de765107acc87"
     },
     {
+      "path": "lib/wrist-imaging.ts",
+      "sha256": "6d61c1e5e947e5d9f4067c40d9b97e996b40dbc07999cc773db43be471f58cf4"
+    },
+    {
       "path": "lib/xray-teaching.ts",
       "sha256": "7a38c62a92467401cf5192adef611efdf21ad9ceb213371a984ee44fd425a6d1"
     },
@@ -1134,7 +1146,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "32603593e33fe50fa1478c263ddc962c3c99bf3e0b3a0bd877d3e05a15b1bbaa"
+      "sha256": "dcc50b9d2dfa2e6e02bd6fe389d56fde2701ab6174b8bd31f81dc369b40f76ea"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1229,5 +1241,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "a9c3ab88c5bd15e1c15bcf71e869075001600f2d6ac5f81795dd76880b7269f9"
+  "sha256": "81dd84599d72e9fb1cdf2334f362a5d06b3ea69b7d42a66f1ff96c720943a99d"
 }

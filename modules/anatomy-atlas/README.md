@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Hand → select a carpal bone → Imaging → X-ray / CT / MRI** opens [wrist-bone orientation notes](docs/WRIST_IMAGING_TEACHING.md) for all eight existing carpal pairs. Five groups provide 15 distinct modality topics and bone-specific cautions through the same compact tabs. No scan, new mesh or clinical approval is implied.
+
 **Select an abdominal or limb artery → Arterial connections** offers [upstream/downstream exploration](docs/ARTERIAL_CONNECTIONS.md) across 108 existing selections. Abdominal routes now include pancreatic arcades and colonic communications; the shared aorta keeps both visceral and iliac connections. Show available neighbours with bones, follow source-bound links between regions and Undo the dissection change. The panel stays collapsed; missing segments, alternative origins and typical-versus-donor anatomy remain explicit. No flow or scan simulation.
 
 **Select a hip/thigh muscle → Imaging → CT / MRI / Ultrasound** now opens [source-bound orientation teaching](docs/HIP_IMAGING_TEACHING.md) for 26 existing selections: iliopsoas, abductors, rectus femoris, adductors, proximal hamstrings and quadratus femoris. Six groups supply 18 distinct modality topics with selection-specific cautions. The same compact notes panel is reused; these are drafts, not patient scans or clinical approval.

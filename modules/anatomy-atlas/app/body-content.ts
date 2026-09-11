@@ -84,6 +84,7 @@ import { kneeImagingLesson } from '../lib/knee-imaging';
 import { bodyXrayLesson } from '../lib/xray-teaching';
 import { spineImagingLesson } from '../lib/spine-imaging';
 import { hipImagingLesson } from '../lib/hip-imaging';
+import { wristImagingLesson } from '../lib/wrist-imaging';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -128,6 +129,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const wristImaging = wristImagingLesson(s, tab);
+  if (wristImaging) return wristImaging;
   const hipImaging = hipImagingLesson(s, tab);
   if (hipImaging) return hipImaging;
   const spineImaging = spineImagingLesson(s, tab);

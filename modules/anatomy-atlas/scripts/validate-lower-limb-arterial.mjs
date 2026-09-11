@@ -7,6 +7,7 @@ import ts from 'typescript';
 import { build } from './workspace-test-build.mjs';
 import { build as componentBuild } from './workspace-component-test-build.mjs';
 import { contentContext } from './content-contract-tools.mjs';
+import { authoringBeforeWristImaging } from './wrist-imaging-history.mjs';
 const upper = process.argv.includes('--upper');
 const testRegion = upper ? 'forearm' : 'leg';
 const compiled = await build({
@@ -364,6 +365,7 @@ for (const s of targets) {
 }
 // No content topic or recipe was replaced by the new relationship browser.
 const ctx = await contentContext();
+const arterialMilestone = authoringBeforeWristImaging(ctx);
 assert.equal(
   createHash('sha256')
     .update(
@@ -371,7 +373,7 @@ assert.equal(
         body: ctx.catalog.structures.map((s) => ({
           id: s.id,
           sections: Object.fromEntries(
-            ctx.api.contentTabs.map((t) => [t, ctx.api.bodyLesson(s, t)]),
+            ctx.api.contentTabs.map((t) => [t, arterialMilestone.bodyLesson(s, t)]),
           ),
         })),
         shoulder: ctx.api.structures,

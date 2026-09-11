@@ -1,30 +1,28 @@
 // Offline, exact teaching-history reconstruction; never runtime content or approvals.
-import assert from 'node:assert/strict';
-import { createHash } from 'node:crypto';
-import { authoringBeforeWristImaging } from './wrist-imaging-history.mjs';
-import before from '../content/hip-imaging.before.json' with { type: 'json' };
-import after from '../content/hip-imaging.transition.json' with { type: 'json' };
-import pins from '../content/hip-imaging-pins.json' with { type: 'json' };
+import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
+import before from "../content/wrist-imaging.before.json" with { type: "json" };
+import after from "../content/wrist-imaging.transition.json" with { type: "json" };
+import pins from "../content/wrist-imaging-pins.json" with { type: "json" };
 const hash = (v) =>
-  createHash('sha256').update(JSON.stringify(v)).digest('hex');
-export function authoringBeforeHipImaging({ api, catalog }) {
-  api = authoringBeforeWristImaging({ api, catalog });
+  createHash("sha256").update(JSON.stringify(v)).digest("hex");
+export function authoringBeforeWristImaging({ api, catalog }) {
   assert.equal(
     hash(before),
-    '04c7a4562f6bba8435d426b78263039904aed34909c7764ba8cef582aa8af266',
+    "6503f2a45ef89001cf485ad5a0397606f2bcd2616593c958e347da69ed606c3c",
   );
   assert.equal(
     hash(after),
-    '60eba766ac54140f572b34cae482f17c1e01e94b24f03e9c21ec70bb29e4d330',
+    "916ff46a96c43f2d2a67d69ce140b2c027e1cc9595276d1a4ebeaf350a7f0e7a",
   );
   assert.equal(
     hash(pins),
-    '923a0e35e632ee658a05803f7c1840b89ee65afecd92da4d7ea51d94209c628e',
+    "318ca7e848669adbbde6b5c3f2092dc750f346c5412db0558a8b68abe6efe878",
   );
-  assert.equal(before.sourceCommit, 'fa1ce62ee804e439ca55e987b79a16ce64a41cac');
+  assert.equal(before.sourceCommit, "56e9dc9e0e16f6cfbf3087a5af01aefde50e30d1");
   assert.equal(after.sourceCommit, before.sourceCommit);
   assert.equal(pins.sourceCommit, before.sourceCommit);
-  assert.deepEqual(before.tabs, ['ct', 'mri', 'ultrasound']);
+  assert.deepEqual(before.tabs, ["ct", "mri", "xray"]);
   assert.deepEqual(
     before.entries.map(({ identity, group }) => ({ identity, group })),
     pins.entries,
@@ -42,21 +40,21 @@ export function authoringBeforeHipImaging({ api, catalog }) {
     assert.deepEqual(Object.keys(e.sections), before.tabs);
     assert.deepEqual(Object.keys(after.entries[i].sections), before.tabs);
     for (const tab of before.tabs) {
-      assert.equal(e.sections[tab].readiness, 'pending');
+      assert.equal(e.sections[tab].readiness, "pending");
       assert.equal(
         hash(api.bodyLesson(e.identity, tab)),
         after.entries[i].sections[tab],
-        'Unrecorded hip teaching change',
+        "Unrecorded wrist teaching change",
       );
-      original.set(e.identity.id + '|' + tab, {
+      original.set(e.identity.id + "|" + tab, {
         identity: e.identity,
         lesson: e.sections[tab],
       });
     }
   }
-  assert.equal(original.size, 78);
+  assert.equal(original.size, 48);
   const bodyLesson = (s, tab) => {
-    const e = original.get(s.id + '|' + tab);
+    const e = original.get(s.id + "|" + tab);
     if (!e) return api.bodyLesson(s, tab);
     assert.deepEqual(s, e.identity);
     return structuredClone(e.lesson);

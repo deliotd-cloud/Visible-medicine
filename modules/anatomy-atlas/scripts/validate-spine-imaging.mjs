@@ -11,12 +11,14 @@ import {
 } from './content-contract-tools.mjs';
 import { authoringBeforeSpineImaging } from './spine-imaging-history.mjs';
 import { authoringBeforeHipImaging } from './hip-imaging-history.mjs';
+import { authoringBeforeWristImaging } from './wrist-imaging-history.mjs';
 
 const context = await contentContext(),
   { api, catalog, body, registry } = context;
 const previous = authoringBeforeSpineImaging(context);
 // Remove the separately verified later hip transition for this historical comparison.
 const afterSpine = authoringBeforeHipImaging(context);
+const afterHip = authoringBeforeWristImaging(context);
 const pins = await readContentJson('content/spine-imaging-pins.json');
 const before = await readContentJson('content/spine-imaging.before.json');
 let checks = 0,
@@ -129,7 +131,7 @@ same(
   Object.fromEntries(
     before.tabs.map((t) => [
       t,
-      body.filter((r) => r.content[t].readiness === 'draft').length,
+      catalog.structures.filter((s) => afterHip.bodyLesson(s, t).readiness === 'draft').length,
     ]),
   ),
   { ct: 90, mri: 92, xray: 53 },
