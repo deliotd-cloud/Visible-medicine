@@ -1,4 +1,5 @@
-import pins from '../content/systemic-venous-pins.json' with { type: 'json' };
+import originalPins from '../content/systemic-venous-pins.json' with { type: 'json' };
+import brachial from '../public/models/bodyparts3d/brachial-veins/catalog.json' with { type: 'json' };
 import {
   systemicVenousGroups as groups,
   systemicVenousRelationships as relationships,
@@ -10,6 +11,12 @@ import {
 } from './regional-arterial';
 
 // Reuse only the source-admission/traversal core, never arterial anatomy or labels.
+// Retain the original admissions unchanged; append separately audited source records.
+const pins = {
+  ...originalPins,
+  entries: [...originalPins.entries, ...brachial.structures],
+  bundles: [...originalPins.bundles, ...brachial.bundles],
+};
 // A separate concept per actual side prevents contralateral tributaries at paired vessels.
 const concepts: ArterialDefinitions = {};
 const groupForConcept = new Map<string, keyof typeof groups>();

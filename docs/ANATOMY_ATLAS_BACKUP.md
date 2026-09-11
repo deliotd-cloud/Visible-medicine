@@ -1,6 +1,16 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — systemic venous drainage (current source)
+## 11 September 2026 — medial brachial anatomy (current source)
+
+Source `813d307edd2c8efc1acfc839030a7897942fc68b`, tree `aa1ef2c08d3ce48040b676bd76761847904d4117`, parent `9b1de740f5091efc4b4a6c6240d516499cd8d4ee`. Thirty paths mirrored once; 1,588 matching files / 416,063,204 bytes / 113 retained GLBs. Private Sites source push and independent remote main match exactly. No common credential-signature warnings (not exhaustive). GitHub delivery remains unconfirmed; this is not conversation or private-D1 recovery. Main website outside this module/receipt remains unchanged.
+
+Two genuinely new medial brachial-vein surfaces (FMA22935/FJ2341 and FMA22936/FJ2313) retain all 5,422 original triangles and coordinates, with exact-coordinate welding for normals and Float32 storage only. Original sources, hashes, audit and CC BY 4.0 attribution/adaptation notices are retained. The unchanged 1,022-record archive feeds a source-bound 1,024-record display; both additions work in whole-body/shoulder/forearm dissection, source links and reviews. Drainage now covers 38 veins / 21 groups / 40 typical relationships. Existing compact controls are reused. Clinical/device/GPU validation remains pending; no complete deep-vein system, connected lumen, patient scan, paid service or lecture entitlement is claimed.
+
+Passed source audit (1,022 envelopes / 52 comparisons), exact GLB/source reproduction, 98 new admission rejections / 12 new side/region links, 250 drainage plans / 120 cross-region links / 364 rejections / 38 actual component renders / 76 parent handlers. Existing elbow, wrist, abdominal arterial, nested navigation, study-link, imaging, renderer-root, labels, selection visibility and private-review checks passed. TypeScript and production build passed; all 109 delivered models retain exact decoded geometry (1,206 meshes / 3,618 buffer views). Current body renderer SHA256 `b9e94d7df4674ffd3f649f92762a3cfdd736a8c88eb7564888bf29ce7922781a` across 316 files. Browser untouched.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-brachial-veins-2026-09-11`: runtime 109,646,643 bytes, SHA256 `f85bccbea1ec77fbef58e36142c9d13c85716b2f316a1475bc29d9d0677924da`; delta 1,310,720 bytes, SHA256 `e3123aa14013191c52d3743dd8e854341454b52b5a8164e83d495a3274e165fb`; incremental 276,827 bytes, SHA256 `bda7c0645b4d88fb85f144f8e9c0c439763aa871a3b1a3f2fdb3fc77ada40f2e`. Bundle requires exact parent above. Retain the release150 full-source bundle plus all SPARC, abdominal, wrist, elbow, systemic-venous and brachial incrementals. No source, mirror, older archive or verification repository was moved/deleted. Final restore/publication result belongs in `work/ATLAS_BRACHIAL_VEINS_2026-09-11.md` and its D: companion. Continue another substantial wider-body anatomy/function gap; do not repeat this admission or routine oral work.
+
+## 11 September 2026 — systemic venous drainage (previous source)
 
 Source `9b1de740f5091efc4b4a6c6240d516499cd8d4ee`, tree `c993244f466ca0d83f2d9b598dab7edff052476e`, parent `33682c3e1ba1924ae4c419cca498e526b2b98595`. Seventeen paths mirrored once; 1,577 matching files / 415,265,860 bytes / 112 retained GLBs. No common credential-signature warnings (not exhaustive). Private Sites source push and independent remote main match exactly. GitHub delivery remains unconfirmed; this is not conversation or private-D1 recovery. Website content outside this module/receipt is unchanged.
 

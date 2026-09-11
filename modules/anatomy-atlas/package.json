@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "brachial-veins:test": "node scripts/export-brachial-veins.mjs --check && node scripts/validate-brachial-veins.mjs",
     "systemic-venous:test": "node scripts/pin-systemic-venous.mjs --check && node scripts/validate-systemic-venous.mjs",
     "elbow-studies:test": "node scripts/pin-elbow-studies.mjs --check && node scripts/validate-elbow-studies.mjs",
     "wrist-imaging:test": "node scripts/pin-wrist-imaging.mjs --check && node scripts/validate-wrist-imaging.mjs",

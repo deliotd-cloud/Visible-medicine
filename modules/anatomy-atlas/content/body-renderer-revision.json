@@ -50,7 +50,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "4f5b8f78a205e12fea96583c52647fca39997c8d2e6b46bf9e960512ebb96179"
+      "sha256": "8e951a01f1e0a9be488650d01f6aa6751f3e1b3950648e9923903ed15b33a626"
     },
     {
       "path": "app/body-explorer.css",
@@ -410,7 +410,7 @@
     },
     {
       "path": "content/systemic-venous.ts",
-      "sha256": "9a1d28b9a2e964bc6e41b8aa240a9e9d4836c514e11d9da54a7b63623a7f212b"
+      "sha256": "7dba2944dd1b4f37e5103bbc1418dab694024b9df45cfdf17ee7fa4ccc59475e"
     },
     {
       "path": "content/um-bone-cartilage-clinical.ts",
@@ -586,11 +586,15 @@
     },
     {
       "path": "lib/body-display-catalog.ts",
-      "sha256": "8a17c0b15b438bff1b3e2f9179420d43e6e5d51e62fc67bafba9be3a1a59f69e"
+      "sha256": "b90f3c99ea372586bd3c8717e92bc92826edbda69a7aff64442188bf836de5b5"
     },
     {
       "path": "lib/body-system-presets.ts",
       "sha256": "67b34405e32541d49c85ad931cc818d5a1d9ab923b317f91e83d9a0fb6fbe285"
+    },
+    {
+      "path": "lib/brachial-veins.ts",
+      "sha256": "d675f79d288ce1eb799e4c58a7d14fe5894257274ef302ce96e3a2990bda5b2c"
     },
     {
       "path": "lib/brainstem.ts",
@@ -1062,7 +1066,7 @@
     },
     {
       "path": "lib/systemic-venous.ts",
-      "sha256": "4e58e8e54f79d860acaf19b520a65993801169a44797936eef7e7173a041cff5"
+      "sha256": "ce94c530c51cbb1d753c9bf1578e0129be387b66d698819de432fc5bf9fba31d"
     },
     {
       "path": "lib/thigh-clinical-curriculum.ts",
@@ -1174,11 +1178,15 @@
     },
     {
       "path": "package.json",
-      "sha256": "8b8ce37a579d4bea8cdec944e1d92a35fb76144dd85dbbb3f52238c53a0e8702"
+      "sha256": "934dcf296b3314a11f58a92656c8b9a15e1dde7338eb00c011f4e5a84d7cb8c7"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
       "sha256": "a2fa96e5203e8a2c0ce5898a0d190834523a34f0b61c4ebfbce502a933f6d03e"
+    },
+    {
+      "path": "public/models/bodyparts3d/brachial-veins/catalog.json",
+      "sha256": "d0fc1d879d8f7158d84fc70f1e6e1fc1b8ef71ba761bf22abe4407d4b6c73aa3"
     },
     {
       "path": "public/models/bodyparts3d/brainstem/catalog.json",
@@ -1269,5 +1277,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "494c3a5856704aee2ea2e35bfdff6e5f4a73e17a240ca5fc712c4d678f7557d3"
+  "sha256": "b9e94d7df4674ffd3f649f92762a3cfdd736a8c88eb7564888bf29ce7922781a"
 }

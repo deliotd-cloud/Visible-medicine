@@ -53,7 +53,12 @@ export const systemicVenousGroups = {
   axillary: group(
     ['FMA13330', 'FMA13331'],
     'shoulder-arm',
-    'Basilic and deep brachial veins contribute to formation of the axillary vein; brachial veins are not separately supplied here.',
+    'Basilic and deep brachial veins contribute to formation of the axillary vein. One medial brachial source vein per side is supplied, not the entire deep venous system.',
+  ),
+  medialBrachial: group(
+    ['FMA22935', 'FMA22936'],
+    'shoulder-arm',
+    'One medial brachial vein per side. Companion veins, valves and exact donor junctions remain unvalidated; proximity does not establish continuity.',
   ),
   cephalic: group(
     ['FMA13325', 'FMA13326'],
@@ -176,7 +181,13 @@ export const systemicVenousRelationships = [
     'basilic',
     'axillary',
     'confluence',
-    'Deep brachial veins also contribute but are not selectable here.',
+    'Deep brachial veins also contribute; the supplied medial vein is only part of that system.',
+  ),
+  relationship(
+    'medialBrachial',
+    'axillary',
+    'confluence',
+    'Typical deep contribution alongside basilic return; the exact donor confluence is not reconstructed.',
   ),
   relationship(
     'handNetwork',

@@ -1,5 +1,9 @@
 # Asset register
 
+## Medial brachial veins
+
+`public/models/bodyparts3d/brachial-veins/` adds two BodyParts3D 4.0 CC BY 4.0 surfaces (FMA22935/FJ2341 and FMA22936/FJ2313), with unchanged source coordinates and all 5,422 triangles. Originals remain in `content/sources/brachial-veins/`. Required BodyParts3D/Database Center for Life Science attribution and adaptation notices are retained. No font, texture, dependency, paid service or scan. See [hashes, source audit, licence evidence and clinical limits](../docs/BRACHIAL_VEIN_ADDITION.md).
+
 ## Cricothyroid runtime study
 
 `public/models/bodyparts3d/cricothyroid/` contains the attributed four-part GLB/catalogue, derived from the retained prototype below. Runtime metadata only is changed; positions, normals, indices/winding and transforms are identical. Existing thyroid/cricoid cartilage assets are optional nonselectable landmarks. CC BY 4.0 credit, licence and the 12-face modification notice are preserved in the interface and documentation. Teaching uses short original factual paraphrases and reference links, not imported articles, figures, scans or diagrams. No dependency/font/texture/paid service is added. [Evidence and limitations](../docs/CRICOTHYROID_DISSECTION.md).

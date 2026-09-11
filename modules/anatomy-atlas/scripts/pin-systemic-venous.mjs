@@ -11,8 +11,10 @@ const catalog = JSON.parse(raw),
   groups = Object.values(systemicVenousGroups);
 const ids = groups.flatMap((g) => g.fmaIds),
   regions = groups.map((g) => g.context);
-assert.equal(ids.length, 36);
-assert.equal(new Set(ids).size, 36);
+assert.equal(ids.length, 38);
+assert.equal(new Set(ids).size, 38);
+// This historical pin set covers the immutable 1022-record ingestion catalogue.
+// The two medial brachial additions have separate audited source admissions.
 const entries = catalog.structures.filter(
   (s) =>
     ids.includes(s.fmaId) ||

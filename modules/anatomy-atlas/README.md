@@ -1,6 +1,8 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
-**Select a supplied systemic vein → Venous drainage** opens [tributary/outlet navigation](docs/SYSTEMIC_VENOUS_DRAINAGE.md) for 36 existing veins across the neck, thorax, arms and legs. Show available neighbours with bones, follow cross-region links and Undo the visibility change. The panel stays collapsed and does not add simulated flow, missing veins or patient imaging.
+**Whole body / Shoulder & arm / Forearm → medial brachial vein** now adds [two source-audited 3D vein surfaces](docs/BRACHIAL_VEIN_ADDITION.md), with existing selection, labels, dissection, study links and drainage controls. All 5,422 source triangles are retained. The displayed body now has 1,024 selections; the immutable ingestion catalogue remains 1,022. These CC BY 4.0 additions require attribution and clinical review, not a fee.
+
+**Select a supplied systemic vein → Venous drainage** opens [tributary/outlet navigation](docs/SYSTEMIC_VENOUS_DRAINAGE.md) for 38 veins across the neck, thorax, arms and legs. Show available neighbours with bones, follow cross-region links and Undo the visibility change. The panel stays collapsed and does not simulate flow, reconstruct missing veins or supply patient imaging.
 
 **Forearm → Study → Elbow** opens [five focused dissection views](docs/ELBOW_STUDIES.md), with stable close-ups, source-surface labels and reversible removal. Compare the three bony articulations or expose supinator; whole source structures remain intact. No new toolbar, nerve route, ligament or motion simulation.
 

@@ -97,7 +97,8 @@ const {
     Buffer.from(bundled.outputFiles[0].text).toString('base64')
 );
 const catalogPath = 'public/models/bodyparts3d/full-body/catalog.json';
-const catalog = await json(catalogPath);
+const archivalCatalog = await json(catalogPath);
+const catalog = bodyDisplayCatalog(archivalCatalog);
 const manifest = await json('public/models/bodyparts3d/manifest.json');
 const eyeLayers = await json(
   'public/models/bodyparts3d/eye-layers/catalog.json',
@@ -251,6 +252,9 @@ for (const path of [
   'public/models/bodyparts3d/eye-layers/display-correction.json',
   'public/models/bodyparts3d/pancreas/display-correction.json',
   'lib/body-display-catalog.ts',
+  'lib/brachial-veins.ts',
+  'public/models/bodyparts3d/brachial-veins/catalog.json',
+  'docs/brachial-vein-source-audit.json',
   'lib/elbow-studies.ts',
   'content/elbow-studies.ts',
   'content/elbow-study-pins.json',
@@ -554,13 +558,15 @@ const report = {
     }],
     displayCorrections: displayCatalog.structures
       .filter(
-        (s, i) => JSON.stringify(s) !== JSON.stringify(catalog.structures[i]),
+        (s) => archivalCatalog.structures.some(original => original.id === s.id && JSON.stringify(s) !== JSON.stringify(original)),
       )
       .map((s) => ({
         fmaId: s.fmaId,
         bundle: s.bundle,
         retainedSources: s.sources.length,
       })),
+    archivalBodyRepresentations: archivalCatalog.structures.length,
+    displayAdditions: catalog.structures.filter(s => !archivalCatalog.structures.some(original => original.id === s.id)).map(s => ({fmaId:s.fmaId, bundle:s.bundle, clinicalApproval:false})),
     bodyRepresentations: catalog.structures.length,
     bodyBundles: catalog.bundles.length,
     bodyBundleBytes: catalog.bundles.reduce(
@@ -748,7 +754,7 @@ const report = {
     revisionIdentities: Object.keys(revisions.revisions).length,
     hasPrivateReviews: false,
     status:
-      'Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot and 1,022 root-body selections. This inventory never reads personal review records; nested/independent scopes and acquired imaging remain outside those approvals.',
+      'Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot and 1,024 displayed root-body selections (1,022 archival records plus two source-bound additions). This inventory never reads personal review records; nested/independent scopes and acquired imaging remain outside those approvals.',
   },
   boundaries: {
     scope: 'Current source implementation, not operations performed by this inventory script',

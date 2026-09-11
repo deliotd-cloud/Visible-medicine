@@ -1,9 +1,9 @@
 {
   "passed": true,
-  "assertions": 245867,
-  "links": 12537,
-  "focusedLinks": 7640,
-  "destinationsTested": 5814,
+  "assertions": 252799,
+  "links": 12741,
+  "focusedLinks": 7844,
+  "destinationsTested": 6018,
   "rows": [
     {
       "region": "whole-body",
@@ -45,37 +45,37 @@
       "region": "forearm",
       "side": "both",
       "structures": 66,
-      "testedLinks": 216
+      "testedLinks": 242
     },
     {
       "region": "forearm",
       "side": "left",
       "structures": 33,
-      "testedLinks": 108
+      "testedLinks": 121
     },
     {
       "region": "forearm",
       "side": "right",
       "structures": 33,
-      "testedLinks": 108
+      "testedLinks": 121
     },
     {
       "region": "hand",
       "side": "both",
       "structures": 124,
-      "testedLinks": 670
+      "testedLinks": 686
     },
     {
       "region": "hand",
       "side": "left",
       "structures": 61,
-      "testedLinks": 330
+      "testedLinks": 338
     },
     {
       "region": "hand",
       "side": "right",
       "structures": 63,
-      "testedLinks": 340
+      "testedLinks": 348
     },
     {
       "region": "thigh",
@@ -99,37 +99,37 @@
       "region": "leg",
       "side": "both",
       "structures": 60,
-      "testedLinks": 164
+      "testedLinks": 186
     },
     {
       "region": "leg",
       "side": "left",
       "structures": 30,
-      "testedLinks": 82
+      "testedLinks": 93
     },
     {
       "region": "leg",
       "side": "right",
       "structures": 30,
-      "testedLinks": 82
+      "testedLinks": 93
     },
     {
       "region": "foot",
       "side": "both",
       "structures": 118,
-      "testedLinks": 544
+      "testedLinks": 558
     },
     {
       "region": "foot",
       "side": "left",
       "structures": 59,
-      "testedLinks": 272
+      "testedLinks": 279
     },
     {
       "region": "foot",
       "side": "right",
       "structures": 59,
-      "testedLinks": 272
+      "testedLinks": 279
     },
     {
       "region": "thorax",
@@ -207,19 +207,19 @@
       "region": "spine",
       "side": "both",
       "structures": 112,
-      "testedLinks": 290
+      "testedLinks": 306
     },
     {
       "region": "spine",
       "side": "left",
       "structures": 84,
-      "testedLinks": 250
+      "testedLinks": 266
     },
     {
       "region": "spine",
       "side": "right",
       "structures": 84,
-      "testedLinks": 250
+      "testedLinks": 266
     }
   ],
   "sourceGeometryChanged": false,

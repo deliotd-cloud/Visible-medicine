@@ -40,9 +40,17 @@ const {
 const targets = catalog.structures.filter((s) =>
   Object.values(groups).some((g) => g.fmaIds.includes(s.fmaId)),
 );
-assert.equal(targets.length, 36);
-assert.equal(Object.keys(groups).length, 20);
+assert.equal(targets.length, 38);
+assert.equal(Object.keys(groups).length, 21);
 assert.equal(pins.entries.length, 239);
+const extra = JSON.parse(
+  await readFile(
+    'public/models/bodyparts3d/brachial-veins/catalog.json',
+    'utf8',
+  ),
+);
+pins.entries.push(...extra.structures);
+pins.bundles.push(...extra.bundles);
 const byFma = (fma) => targets.find((s) => s.fmaId === fma);
 const infoFor = (fma) =>
   neighbours(catalog, 'whole-body', 'both', byFma(fma).id);
@@ -56,6 +64,7 @@ const pairs = [
     ['FMA13330', 'FMA13331', 'FMA4755', 'FMA4763'],
     ['FMA13325', 'FMA13326', 'FMA13330', 'FMA13331'],
     ['FMA22909', 'FMA22910', 'FMA13330', 'FMA13331'],
+    ['FMA22935', 'FMA22936', 'FMA13330', 'FMA13331'],
     ['FMA62506', 'FMA62507', 'FMA13325', 'FMA13326'],
     ['FMA62506', 'FMA62507', 'FMA22909', 'FMA22910'],
     ['FMA18885', 'FMA18886', 'FMA21387', 'FMA21388'],
@@ -77,13 +86,13 @@ const pairs = [
   ['FMA14338', 'FMA10951'],
   ['FMA14339', 'FMA10951'],
 ];
-assert.equal(pairs.length, 38);
+assert.equal(pairs.length, 40);
 const sort = (a) =>
   a.map((v) => JSON.stringify(v)).sort((a, b) => a.localeCompare(b));
 const rows = targets.flatMap((s) =>
   infoFor(s.fmaId).rows.map((r) => ({ from: s.fmaId, ...r })),
 );
-assert.equal(rows.length, 76);
+assert.equal(rows.length, 80);
 assert.deepEqual(
   sort(
     rows
@@ -138,7 +147,11 @@ for (const selected of targets)
       }
       assert(info && recipe);
       plans++;
-      assert.deepEqual(info, neighbours(raw, region, side, selected.id));
+      assert.deepEqual(
+        info,
+        neighbours(api.bodyDisplayCatalog(catalog), region, side, selected.id),
+      );
+      assert.equal(neighbours(raw, region, side, selected.id), null);
       // An independently derived neighbourhood is retained on both sides for later side changes.
       const selectedGroup = Object.values(groups).find((g) =>
         g.fmaIds.includes(selected.fmaId),
@@ -403,14 +416,14 @@ for (const selected of targets)
   }
 console.log(
   JSON.stringify({
-    veins: 36,
-    groups: 20,
-    relationships: 38,
-    reciprocalRows: 76,
+    veins: 38,
+    groups: 21,
+    relationships: 40,
+    reciprocalRows: 80,
     plans,
     links,
     rejections,
-    sourceRows: 36,
+    sourceRows: 38,
     actualComponentRenders: renders,
     actualParentHandlers: handlers,
     clinicalValidation: false,

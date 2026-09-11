@@ -22,7 +22,7 @@ const api = await import(
     Buffer.from(compiled.outputFiles[0].text).toString('base64')
 );
 const rows = api.bodyReviewSummaries;
-assert.equal(rows.length, 1022);
+assert.equal(rows.length, 1024);
 assert.equal(new Set(rows.map((s) => s.id)).size, rows.length);
 let links = 0,
   topics = 0;
@@ -49,8 +49,8 @@ for (const row of rows) {
   }
   packets.push(packet);
 }
-assert.equal(topics, 9198);
-assert.equal(links, 1022);
+assert.equal(topics, 9216);
+assert.equal(links, 1024);
 assert.equal(new Set(packets.map((p) => p.materialHash)).size, rows.length);
 const selected = packets.find((p) =>
   p.source.structure.regions.includes('forearm'),
