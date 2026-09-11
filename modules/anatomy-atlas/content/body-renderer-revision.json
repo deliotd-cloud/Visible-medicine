@@ -58,7 +58,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "a9b469695572c4633b2d9cc2dbc1086eb4269e2e8489980e948f7ea19deef02e"
+      "sha256": "f7dcbc15ccddb5447f0fbb24930a9f3ac3b19d2f5c5af96bce006fda0ef6e2c3"
     },
     {
       "path": "app/body-scene.tsx",
@@ -253,6 +253,10 @@
       "sha256": "a6bc0bb6b529f13266fdadd2762eb96e4217b803624afede302bd1b85a043701"
     },
     {
+      "path": "app/venous-drainage.tsx",
+      "sha256": "bf527dacc68ee5536ecce8b70c5f4796c7ee16fb401bd242ef2d707b09b227ee"
+    },
+    {
       "path": "app/ventricles.tsx",
       "sha256": "cd9ea82d9148c44a288f34ac84da151f056c91fdc1addcdd4e48cadbd7043bbf"
     },
@@ -399,6 +403,14 @@
     {
       "path": "content/spine-imaging-pins.json",
       "sha256": "4976164571345045f0a0c8d1a16f12afa4122858ecd522fc9ea3949ff18bc6de"
+    },
+    {
+      "path": "content/systemic-venous-pins.json",
+      "sha256": "675c7fe7bfd3e3a24eb02377f3522c59fa949b9ac9ff6a5499ad49f0e42e6ff0"
+    },
+    {
+      "path": "content/systemic-venous.ts",
+      "sha256": "9a1d28b9a2e964bc6e41b8aa240a9e9d4836c514e11d9da54a7b63623a7f212b"
     },
     {
       "path": "content/um-bone-cartilage-clinical.ts",
@@ -1049,6 +1061,10 @@
       "sha256": "74a5678392927149fbab787300d28347d2f613df6db1e9d753f7d3110dee7102"
     },
     {
+      "path": "lib/systemic-venous.ts",
+      "sha256": "4e58e8e54f79d860acaf19b520a65993801169a44797936eef7e7173a041cff5"
+    },
+    {
       "path": "lib/thigh-clinical-curriculum.ts",
       "sha256": "68570f667509ba89549288c8e8b0ec39c64e1ed964dc7280d1d43ae237542c9a"
     },
@@ -1158,7 +1174,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "95554ba34cc8353bef9906703f0ad277d8ef9c75b333b90e88aa42bbc8d13601"
+      "sha256": "8b8ce37a579d4bea8cdec944e1d92a35fb76144dd85dbbb3f52238c53a0e8702"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1253,5 +1269,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "bfdd7fdeddf4c74429a4dd39028d818b0eb95c08002a3fe68be673325d168fe4"
+  "sha256": "494c3a5856704aee2ea2e35bfdff6e5f4a73e17a240ca5fc712c4d678f7557d3"
 }

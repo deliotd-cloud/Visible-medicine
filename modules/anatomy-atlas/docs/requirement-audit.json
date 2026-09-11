@@ -29,6 +29,10 @@
     "content/lower-limb-arterial.ts": "9eb963fcbec4187a03b4a8aa861456483824ad056d3aaf1712aacd273a6715ca",
     "content/lower-limb-arterial-pins.json": "274b0d2880de0b3f536f05858893c150cedb1230e0c14e2de84ecb1b4d9aba1b",
     "app/arterial-connections.tsx": "b1afc45839a634a7329b7e09c92e57fb2673adf70d757714437a681d83a79695",
+    "lib/systemic-venous.ts": "4e58e8e54f79d860acaf19b520a65993801169a44797936eef7e7173a041cff5",
+    "content/systemic-venous.ts": "9a1d28b9a2e964bc6e41b8aa240a9e9d4836c514e11d9da54a7b63623a7f212b",
+    "content/systemic-venous-pins.json": "675c7fe7bfd3e3a24eb02377f3522c59fa949b9ac9ff6a5499ad49f0e42e6ff0",
+    "app/venous-drainage.tsx": "bf527dacc68ee5536ecce8b70c5f4796c7ee16fb401bd242ef2d707b09b227ee",
     "content/lower-limb-motor.ts": "b94da1bcd39a91f513565135cb8a4e70c64998fff05aaba8df8a83d7f156f36b",
     "content/lower-limb-motor-pins.json": "d397cac59e5a0428e803278a16f9acafa0836f9e1aaa1d2fe7f6e14cbf289928",
     "content/upper-limb-motor.ts": "05b57ea3be22d5a02db6e89b3db90625377b2bfb125bd70bb19058ccb8c551d7",
@@ -157,6 +161,16 @@
     "nestedTeachingData": "b74ddd2f8575fe1bef1d07424db49de126bc94700166eec88f5dc0c2e79e1770"
   },
   "anatomy": {
+    "venousDrainage": {
+      "selections": 36,
+      "groups": 20,
+      "relationships": 38,
+      "variableOutlets": 2,
+      "sourceAndFrameChecked": true,
+      "geometryAdded": false,
+      "flowSimulated": false,
+      "clinicalApproval": false
+    },
     "arterialConnections": {
       "selections": 108,
       "concepts": 67,

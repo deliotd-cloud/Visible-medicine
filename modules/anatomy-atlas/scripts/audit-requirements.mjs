@@ -21,6 +21,7 @@ export { upperLimbMotorRegions } from './content/upper-limb-motor.ts';
 export { lowerLimbMotorGroups } from './lib/lower-limb-motor.ts';
 export { lowerLimbMotorRegions } from './content/lower-limb-motor.ts';
 export { arterialNeighbours } from './lib/arterial.ts';
+export { systemicVenousNeighbours } from './lib/systemic-venous.ts';
 export { makeSpecimenLink, resolveSpecimenLink } from './lib/um-limb-navigation.ts';
 export { parseSpecimenLink, specimenTopics } from './lib/specimen-links.ts';
 export { bodyContent, bodyLesson } from './app/body-content.ts';
@@ -62,6 +63,7 @@ const {
   lowerLimbMotorGroups,
   lowerLimbMotorRegions,
   arterialNeighbours,
+  systemicVenousNeighbours,
   makeSpecimenLink,
   resolveSpecimenLink,
   parseSpecimenLink,
@@ -270,6 +272,10 @@ for (const path of [
   'content/lower-limb-arterial.ts',
   'content/lower-limb-arterial-pins.json',
   'app/arterial-connections.tsx',
+  'lib/systemic-venous.ts',
+  'content/systemic-venous.ts',
+  'content/systemic-venous-pins.json',
+  'app/venous-drainage.tsx',
   'content/lower-limb-motor.ts',
   'content/lower-limb-motor-pins.json',
   'content/upper-limb-motor.ts',
@@ -458,12 +464,20 @@ const independentNavigation = Object.values(limbDefinitions).map(definition => {
   };
 });
 const arterialEntries = catalog.structures.filter(s=>s.system==='vessels').map(s=>arterialNeighbours(catalog,'whole-body','both',s.id)).filter(Boolean);
+const venousEntries = catalog.structures.filter(s=>s.system==='vessels').map(s=>systemicVenousNeighbours(catalog,'whole-body','both',s.id)).filter(Boolean);
 const report = {
   schemaVersion: 1,
   method:
     'Offline source and displayed-copy inventory; no clinical or browser certification.',
   sourceHashes,
   anatomy: {
+    venousDrainage: {
+      selections: venousEntries.length,
+      groups: new Set(venousEntries.map(e=>e.group)).size,
+      relationships: venousEntries.reduce((n,e)=>n+e.rows.filter(r=>r.direction==='outlet').length,0),
+      variableOutlets: venousEntries.reduce((n,e)=>n+e.rows.filter(r=>r.direction==='outlet'&&r.kind==='variable').length,0),
+      sourceAndFrameChecked: true, geometryAdded: false, flowSimulated: false, clinicalApproval: false,
+    },
     arterialConnections: {
       selections: arterialEntries.length,
       concepts: new Set(arterialEntries.map(e=>e.territory+'|'+e.concept)).size,

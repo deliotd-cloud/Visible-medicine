@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Systemic venous drainage](SYSTEMIC_VENOUS_DRAINAGE.md) connects 36 existing source selections through 38 typical relationships (20 groups). One collapsed selected-vein panel offers tributary/outlet navigation, cross-region links and reversible isolation with bones. Missing routes, variable small-saphenous outlets and unsegmented common-femoral regions remain explicit. Intracranial sinuses, portal/pulmonary/cardiac drainage and measured flow are not provided by this map.
+
 [Focused elbow dissection](ELBOW_STUDIES.md) adds five Forearm studies using eight existing bone/muscle selections. Stable source-derived close-ups, real-surface labels and reversible windows reuse the existing Study controls. Whole structures remain intact; no new nerve, ligament, cartilage, simulated motion or scan correspondence is supplied.
 
 [Wrist-bone imaging orientation](WRIST_IMAGING_TEACHING.md) adds 48 X-ray/CT/MRI drafts across sixteen existing carpal selections: five groups / fifteen distinct modality topics, with eight bone-specific cautions. The existing Imaging tabs are reused. No new surface, radiograph, CT voxel, MR signal, patient registration or clinical approval is supplied; ultrasound remains unchanged.

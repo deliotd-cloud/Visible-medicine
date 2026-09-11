@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Select a supplied systemic vein → Venous drainage** opens [tributary/outlet navigation](docs/SYSTEMIC_VENOUS_DRAINAGE.md) for 36 existing veins across the neck, thorax, arms and legs. Show available neighbours with bones, follow cross-region links and Undo the visibility change. The panel stays collapsed and does not add simulated flow, missing veins or patient imaging.
+
 **Forearm → Study → Elbow** opens [five focused dissection views](docs/ELBOW_STUDIES.md), with stable close-ups, source-surface labels and reversible removal. Compare the three bony articulations or expose supinator; whole source structures remain intact. No new toolbar, nerve route, ligament or motion simulation.
 
 **Hand → select a carpal bone → Imaging → X-ray / CT / MRI** opens [wrist-bone orientation notes](docs/WRIST_IMAGING_TEACHING.md) for all eight existing carpal pairs. Five groups provide 15 distinct modality topics and bone-specific cautions through the same compact tabs. No scan, new mesh or clinical approval is implied.

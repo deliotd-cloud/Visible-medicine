@@ -1,5 +1,7 @@
 # Third-party notices
 
+The [systemic venous explorer](../docs/SYSTEMIC_VENOUS_DRAINAGE.md) adds original MIT navigation code and a brief factual relationship map using 36 already licensed source selections. University/professional/publication references are reading links only; no table, figure, scan, PDF or publisher prose is imported. Existing BodyParts3D credits and terms remain unchanged. No new model, font, texture, dependency, paid API or lecture entitlement.
+
 The [elbow studies](../docs/ELBOW_STUDIES.md) reuse eight existing BodyParts3D selections without changing geometry or source membership. New MIT code and original short instructions use UAMS pages as factual reading references only; no tables, images or publisher prose are imported. Existing CC BY 4.0 credits remain. No new model, font, texture, dependency, paid API, scan registration or lecture entitlement.
 
 The [wrist-bone imaging notes](../docs/WRIST_IMAGING_TEACHING.md) add original MIT code and brief source-bound educational synthesis. RSNA/PubMed citations are optional reading links; no publisher prose, figure, table, scan, PDF, font, texture, model, dependency or paid service is imported. Existing source licences/credits are unchanged. Clinical validation, actual imaging correspondence and separately paid-lecture access are not supplied.

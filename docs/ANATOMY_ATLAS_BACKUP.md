@@ -1,6 +1,16 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — focused elbow dissection (current source)
+## 11 September 2026 — systemic venous drainage (current source)
+
+Source `9b1de740f5091efc4b4a6c6240d516499cd8d4ee`, tree `c993244f466ca0d83f2d9b598dab7edff052476e`, parent `33682c3e1ba1924ae4c419cca498e526b2b98595`. Seventeen paths mirrored once; 1,577 matching files / 415,265,860 bytes / 112 retained GLBs. No common credential-signature warnings (not exhaustive). Private Sites source push and independent remote main match exactly. GitHub delivery remains unconfirmed; this is not conversation or private-D1 recovery. Website content outside this module/receipt is unchanged.
+
+One collapsed selected-vein panel adds tributary/outlet exploration for 36 existing veins / 20 groups / 38 typical relationships. Explicit lateral pairing, variable small-saphenous outlets and unmodelled common-femoral/marginal routes prevent false junction claims. Local stepping, whole-body links and one-step isolation with bones reuse existing controls/history. No new surface, scan, flow simulation, dependency, paid asset or entitlement. University/professional sources are factual reading references, not imported assets/prose. Intracranial sinuses and portal/pulmonary/cardiac pathways remain outside this map. Existing elbow/wrist work is included; original teaching and recipes remain unchanged.
+
+Passed 238 region/side plans, 112 cross-region links, 356 changed-source/gating rejections, 36 official source identities, 36 actual component renders and 72 actual parent-action cases. Existing elbow, abdominal arterial and wrist suites passed, plus TypeScript, requirement freshness, 3,066 private-review contexts, 235 shoulder-review checks, 48,082 imaging-link assertions and production build. All 108 delivered models preserve decoded geometry. Browser/device/GPU and clinical acceptance remain outstanding; browser untouched.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-systemic-venous-2026-09-11`: runtime 109,565,618 bytes, SHA256 `b578c5b773be3753da80644394991b6785f7e3c29b92c011d936c3b9cee0ab10`; delta 890,880 bytes, SHA256 `9787602afb34d991ec4abcea264664865ae4eab0c45e3246fae876b6c0095041`; incremental 74,962 bytes, SHA256 `508c321f4ebce5b181d5b31c1eccc55f659e054547cc6868d761fd319f7402db`. Bundle requires exact parent above; retain the release150 full-source bundle and SPARC, abdominal, wrist, elbow and systemic-venous incrementals. Existing source, mirror, backups and retained verification repository remain. Final native publication and restore evidence belongs in `work/ATLAS_SYSTEMIC_VENOUS_2026-09-11.md` and its D: companion, not this pre-publication receipt. Continue substantive anatomy elsewhere, not repeated systemic navigation or routine oral detail.
+
+## 11 September 2026 — focused elbow dissection (previous source)
 
 Source `33682c3e1ba1924ae4c419cca498e526b2b98595`, tree `803d3b8b83605eec140c3509c0c9bc5ff0b6c80c`, parent `6c9acd0c0ea1ae10f10f363495d8052242901168`. Thirty paths mirrored once; 1,570 matching files / 414,875,209 bytes / 112 retained GLBs. No common credential-signature warnings (not exhaustive). Private Sites source push and independent remote main match exactly. GitHub delivery remains unconfirmed; this is not conversation or private-D1 recovery. Main website unchanged outside this module/receipt.
 

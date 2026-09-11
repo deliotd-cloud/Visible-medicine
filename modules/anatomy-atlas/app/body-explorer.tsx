@@ -117,6 +117,8 @@ import { RelatedStudy } from './related-study';
 import { UpperLimbMotorExplorer } from './upper-limb-motor';
 import { ArterialConnections } from './arterial-connections';
 import { arterialPlan } from '../lib/arterial';
+import { VenousDrainage } from './venous-drainage';
+import { systemicVenousPlan } from '../lib/systemic-venous';
 import { limbMotorPlan } from '@/lib/limb-motor';
 import { StudyLinks } from './study-links';
 import {
@@ -722,6 +724,25 @@ export default function BodyExplorer({
     setSelectionNotice({ id: plan.selectedId, message: `${plan.label}: available arterial relationships shown. Missing segments remain unmodelled.` });
     setReset(n => n + 1);
     // The existing selection is retained; this visibility action emits no imaging event.
+  }
+  function showVenousDrainage() {
+    if (!catalog || !selectedId) return;
+    const plan = systemicVenousPlan(catalog, initialRegion, side, selectedId, exam);
+    if (!plan) return;
+    dispatch(plan.action);
+    setSystems(prev => ({ ...prev, skeleton: true, vessels: true }));
+    setInspection(initialInspection);
+    setExplode(0);
+    setLayout('spatial');
+    setPlate(false);
+    setGhostRemoved(false);
+    setFocus(false);
+    setIsolated(false);
+    setZoom(1);
+    cameraRestore.current = null;
+    setSelectionNotice({ id: plan.selectedId, message: `${plan.label}: available venous drainage shown. Missing routes remain unmodelled.` });
+    setReset(n => n + 1);
+    // Local visibility only; no imaging event, acquired flow or entitlement.
   }
   function reorientDissection() {
     if (exam) return;
@@ -2146,6 +2167,8 @@ export default function BodyExplorer({
                     />
                     <ArterialConnections catalog={catalog} region={initialRegion} side={side} selectedId={selected.id}
                       disabled={exam} onSelect={select} onShow={showArterialConnections} />
+                    <VenousDrainage catalog={catalog} region={initialRegion} side={side} selectedId={selected.id}
+                      disabled={exam} onSelect={select} onShow={showVenousDrainage} />
                     <dl className="body-facts">
                       <div>
                         <dt>Region</dt>
