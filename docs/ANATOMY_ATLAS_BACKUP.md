@@ -1,5 +1,11 @@
 # Anatomy atlas backup — 11 September 2026
 
+## GitHub delivery verified — 11 September 2026
+
+The private repository **deliotd-cloud/Visible-medicine**, branch **backup/anatomy-atlas-2026-09-06**, now contains implementation/receipt commit `8e7a1d74ba90974c6d74d7431ad9be824f55266b`. The non-force push succeeded. GitHub's ref, commit and tree APIs independently confirmed module tree `59767ddbd5d8b637ea64824a73244bcb08630673`, exactly matching saved atlas source `1f9413f581fd35da56561001e23b803ce94951af`. Remote main remains `c4ff08f8afc90bd94d04162625f97af9d94401cf`; no merge or main-website change was made.
+
+Private atlas version 156 also published successfully (deployment `appgdep_6aa44302d29c8191abc8d6217137a006`, 2026-09-11T18:06:18.901772+00:00). These verified outcomes supersede the in-progress/unconfirmed statements retained in historical receipts below. Final work/D: checkpoint contains recovery hashes and the receipt follow-up commit. The GitHub module is a source/model backup, not a backup of private production reviews, credentials or acquired imaging.
+
 ## 11 September 2026 — hepatic veins (current source)
 
 Source `1f9413f581fd35da56561001e23b803ce94951af`, tree `59767ddbd5d8b637ea64824a73244bcb08630673`, parent `3dc55195aeb37350fdbbfcba6f6f54e20e22e452`. Forty-six source paths mirrored once; 1,669 exact files / 428,921,011 bytes / 117 retained GLBs. Three whole hepatic-vein source groups retain ten original files, 13 components and 13,984 triangles. Existing drainage controls now cover 47 systemic sources and 49 typical relationships; no invented continuity, clinical approval or patient registration. Exact Sites source push and remote main confirmed; GitHub delivery remains unconfirmed.
