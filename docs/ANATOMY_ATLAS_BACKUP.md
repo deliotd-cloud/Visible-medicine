@@ -1,6 +1,16 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — upper-limb motor explorer (current)
+## 11 September 2026 — cardiac valve source screen (current source)
+
+Source `50f27f541417db751d28a79cdb0dc4cce0ff55de`, tree `ee692ea9aa9094b8da4f53bb0db07b3ed2d7869b`, parent `f6fb4106c7fd79337547fb4230c46ac35048a97a`. Seven documentation/diagnostic paths mirrored into `modules/anatomy-atlas` using an exact reviewed binary patch; main website untouched. Sites source push succeeded and standalone full HEAD verified. This is NOT confirmed GitHub delivery or private review/chat backup.
+
+Six cardiac valve/papillary compounds resolve to 16 original PART-OF files (38,792 triangles). Offline original-hash/topology checks document seven source-role/membership conflicts, three multi-component files and a duplicate face. All sixteen cached IS-A counterparts have identical vertex/face fingerprints despite differing raw bytes. No chordae tendineae row in either retained English index does not prove absence of chord-like features within compounds. No repair, relabelling, clinical approval or new live anatomy/UI. The brief oral pass remains complete and lower priority; do not repeat this finished screen without new evidence.
+
+Passed: repeatable complete source-evidence comparison, script syntax and authored diff checks; 1,489 mirrored files/413,558,105 bytes/112 retained GLBs match with no common credential-signature warnings (not exhaustive). No runtime source/model/teaching/dependency changed, so no rebuild, runtime archive or republish was needed. **Live private release remains144**, from prior source `f6fb410...`, as recorded below; current source is ahead by documentation only. Browser/device/clinical acceptance remains pending.
+
+Small recovery files: `work/atlas-cardiac-valve-screen-2026-09-11.diff` and `.incremental.bundle`; bundle verified and requires source parent `f6fb4106c7fd79337547fb4230c46ac35048a97a`. Existing full recovery archives are preserved. This is a source-only checkpoint, not a replacement production package; do not attempt to deploy these artifacts or rerun the archive-requiring module helper over them.
+
+## 11 September 2026 — upper-limb motor explorer (current live release)
 
 Source `f6fb4106c7fd79337547fb4230c46ac35048a97a`, tree `c80a4400b71745b5d1e73d31000a9f8d9943bd12`, parent `3143a76c24b541473792adb430bf37de5c17d645`. Seventeen changed source paths mirrored into `modules/anatomy-atlas`; main website unchanged. Sites source push succeeded and standalone full HEAD verified; temporary credential cleared. This is NOT confirmed GitHub delivery.
 
