@@ -4,13 +4,15 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { contentContext, readContentJson } from './content-contract-tools.mjs';
 import { curriculumHash } from './curriculum-transition.mjs';
 import { authoringBeforeKneeImaging } from './knee-imaging-transition.mjs';
+import { authoringBeforeSpineImaging } from './spine-imaging-history.mjs';
 import {
   kneeImagingLesson,
   kneeImagingIdentities,
 } from '../lib/knee-imaging.ts';
 import { bodyStudyScope } from '../lib/study-links.ts';
 const context = await contentContext();
-const { api, catalog, body } = context;
+const { catalog, body } = context;
+const api = authoringBeforeSpineImaging(context);
 const previous = await authoringBeforeKneeImaging(context);
 const before = await readContentJson('content/knee-imaging.before.json');
 assert.equal(
@@ -126,9 +128,9 @@ for (const i of kneeImagingIdentities) {
     assert.equal(api.bodyLesson(s, 'ultrasound').readiness, 'pending');
 }
 const changedApi = {
-  ...api,
+  ...context.api,
   bodyLesson(s, t) {
-    const lesson = api.bodyLesson(s, t);
+    const lesson = context.api.bodyLesson(s, t);
     return s.fmaId === 'FMA24487' && t === 'mri'
       ? { ...lesson, body: 'unrecorded change' }
       : lesson;

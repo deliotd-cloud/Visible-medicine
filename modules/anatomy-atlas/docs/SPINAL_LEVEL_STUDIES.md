@@ -1,5 +1,7 @@
 # Focused spinal-level dissection
 
+Select a participating vertebra/disc and open **Imaging → CT / MRI / X-ray** for [source-bound orientation notes](SPINE_IMAGING_TEACHING.md). These extend to 47 spinal bone/disc selections, not only the 15 targets below. The same compact panel is reused; real scans, soft-tissue segmentation and independent level registration remain absent.
+
 Six new windows in **Spine → Study views** expose small existing source groups. They use the same compact searchable cards, selection, hiding, Undo/Redo, fade, cutaway, separation and source-bound study links; no new permanent panel, dependency or geometry is added. Search for a level, for example `L4`, or open a related study from a selected participating vertebra/disc.
 
 | Study | Exact source targets | Scope |

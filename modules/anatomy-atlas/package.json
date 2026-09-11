@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "spine-imaging:test": "node scripts/validate-spine-imaging.mjs",
     "abdominal-wall:export": "node scripts/export-abdominal-wall.mjs",
     "abdominal-wall:test": "node scripts/validate-abdominal-wall.mjs",
     "abdominal-practice:test": "node scripts/validate-abdominal-practice.mjs",

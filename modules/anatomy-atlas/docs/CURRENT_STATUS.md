@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Spinal imaging orientation](SPINE_IMAGING_TEACHING.md) adds 141 CT/MRI/X-ray topic drafts across 47 exact existing bone/disc source records: nine concept groups and 27 distinct modality topics, not 141 unique concepts. The existing compact Imaging panel and six focused level studies are retained. Other body teaching and geometry are unchanged; whole discs, unresolved T12–L1 geometry and absent neural tissues remain explicit. No patient scans, registration, paid-resource access or clinical approval are supplied.
+
 [Abdominal-wall teaching](ABDOMINAL_WALL_SPECIMEN.md#detailed-teaching) supplies 8 exact-source Anatomy/Function lessons, 8 attachment/motor records, 48 introductory clinical/pathology/imaging topics and 8 self-checks. Three groups in the existing collapsed Learn panel keep the model prominent. Imaging notes explain recognition and limitations, not real scans or registration; source changes fail closed. Specialist validation remains pending.
 
 [Abdominal identification practice](ABDOMINAL_WALL_SPECIMEN.md#identification-practice) covers 8 source muscles across 7 studies. Visible muscles alone enter rounds; bones stay contextual, labels/guides are hidden, and first-try/reveal/retry-missed scoring preserves the dissection history. Exact source/frame checks reject mismatches. This is source-label practice, not a clinical examination or approval.
@@ -28,7 +30,7 @@ Generated from the actual catalogue, teaching resolver, dissection profiles and 
 
 ## Delivered source scope
 
-[X-ray orientation](XRAY_TEACHING.md) is available in the existing Imaging group: 6 source-pinned body drafts and 3 overlapping shoulder drafts cover three shoulder-bone concepts. Other entries remain pending, including all 69 nested selections. No radiographs, calibrated projections or paid-lecture access are supplied. Old display/teaching approvals require re-review; all previous topics are preserved.
+[X-ray orientation](XRAY_TEACHING.md) is available in the existing Imaging group: 53 source-pinned body drafts now include six shoulder-bone sources plus 47 spinal sources. The 3 overlapping dedicated-shoulder drafts cover three shoulder-bone concepts separately. Other entries remain pending, including all 69 nested selections. No radiographs, calibrated projections or paid-lecture access are supplied. Old display/teaching approvals require re-review; earlier topics are preserved through exact authoring transitions.
 
 The [cricothyroid dissection](CRICOTHYROID_DISSECTION.md) adds 4 source-defined muscle parts with 2 optional, nonselectable cartilage landmarks. It reuses the compact selection, cutaway, separation, labels and Undo/Redo controls. The source-preserving derivative explicitly omits 12 audited artifact faces; this is disclosed, not clinical approval. Introductory teaching is draft and CT/MRI/US remain pending for these parts. Cartilage is a navigation landmark, not the muscle's tissue parent.
 
@@ -57,15 +59,15 @@ Counts are representations with displayed copy, not unique lessons, complete top
 | --- | ---: | ---: | ---: | ---: |
 | Anatomy | 1020 | 2 | 0 | 0 |
 | Function | 1018 | 0 | 4 | 0 |
-| CT | 17 | 0 | 1005 | 0 |
-| MRI | 19 | 0 | 1003 | 0 |
-| X-ray | 6 | 0 | 1016 | 0 |
+| CT | 64 | 0 | 958 | 0 |
+| MRI | 66 | 0 | 956 | 0 |
+| X-ray | 53 | 0 | 969 | 0 |
 | Ultrasound | 15 | 0 | 1007 | 0 |
 | Pathology | 1018 | 0 | 4 | 0 |
 | Clinical | 1018 | 0 | 4 | 0 |
 | Quiz notes | 11 | 0 | 0 | 1011 |
 
-Quiz-tab notes are separate from interactive practice. [X-ray orientation](XRAY_TEACHING.md) now has three shoulder-bone drafts across six exact body sources and the three overlapping dedicated-shoulder bones. Other X-ray topics remain pending. Imaging text is not an acquired-image viewer, segmentation or validated spatial correspondence.
+Quiz-tab notes are separate from interactive practice. [X-ray orientation](XRAY_TEACHING.md) retains three shoulder-bone concepts across six exact body sources and the three overlapping dedicated-shoulder bones; [spinal orientation](SPINE_IMAGING_TEACHING.md) adds 47 exact body sources. Other X-ray topics remain pending. Imaging text is not an acquired-image viewer, segmentation or validated spatial correspondence.
 
 The opt-in [nested learning registry](NESTED_LEARNING_LINKS.md) exposes 69 exact child destinations within 1100 scope-specific representations. It supports document versions 1 and 2, while the configured production document stays version 1 with no resources. Nested parent/child source and bundle bindings can resolve into the existing dissection routes; this is not a live viewer connection or entitlement.
 

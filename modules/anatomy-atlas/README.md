@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Spine → select a vertebra or disc → Imaging** now adds [CT, MRI and X-ray orientation](docs/SPINE_IMAGING_TEACHING.md) for 47 existing source selections across nine concept groups. Use the same compact panel and focused level dissections. These are referenced drafts, not patient images, automatic level registration or clinical approval; missing tissues and the unresolved T12–L1 source disc stay explicit.
+
 **Abdominal wall → Learn** now adds [source-bound detailed teaching](docs/ABDOMINAL_WALL_SPECIMEN.md#detailed-teaching) for all eight muscles: origins/insertions, actions and motor supply, plus 48 introductory clinical/pathology/imaging topics and eight self-checks. Three compact groups stay within one collapsed panel. These are referenced teaching drafts, not patient images, simulated movement, clinical approval or paid-lecture access.
 
 **Abdominal wall → Practise identification** tests up to eight visible source muscles with labels hidden, first-try scoring, reveal and retry-missed rounds. Bones remain context. Exact source/frame checks and returning to the existing dissection keep the experience consistent; this is educational source-label practice, not a clinical examination.
@@ -26,7 +28,7 @@ Production builds use [lossless model compression](docs/MODEL_DELIVERY.md), with
 
 A [dental gingiva source review](docs/GINGIVA_SOURCE_REVIEW.md) preserves two licensed gum-envelope candidates, original files and a reproducible 3D prototype. They are **not in the live atlas**: coarse margins, tooth relationships and upper-mesh fragments require further adjudication. Existing dental studies are unchanged.
 
-**Select a shoulder bone → Imaging → X-ray** opens [source-linked orientation notes](docs/XRAY_TEACHING.md) for the scapula, proximal humerus and clavicle. Other structures remain explicitly pending. The compact information groups are retained; no radiograph, patient registration or paid-lecture access is implied.
+**Select a shoulder bone → Imaging → X-ray** opens [source-linked orientation notes](docs/XRAY_TEACHING.md) for the scapula, proximal humerus and clavicle. Spinal orientation is covered separately above; unsupported structures remain explicitly pending. The compact information groups are retained; no radiograph, patient registration or paid-lecture access is implied.
 
 **Thyroid cartilage → Explore cricothyroid muscles**, or search “cricothyroid”, opens a [four-part laryngeal dissection](docs/CRICOTHYROID_DISSECTION.md). Select straight/oblique or right/left parts, show optional cartilage landmarks, and reuse cutaway, separation, labels and Undo/Redo. Source cleanup is disclosed and originals are preserved. Teaching remains draft; clinical validation and part-specific imaging are pending.
 

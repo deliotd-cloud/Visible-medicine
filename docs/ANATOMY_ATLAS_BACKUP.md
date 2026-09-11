@@ -1,6 +1,20 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — abdominal-wall teaching (current)
+## 11 September 2026 — spinal imaging orientation (current)
+
+Source `3143a76c24b541473792adb430bf37de5c17d645`, tree `142f6564dd895084b32f05052a5fd7b8a3ff0d10`, parent `59a567c7fb76c954cf3d91eeec62124e207bbbf9`. Twenty-five changed source paths mirrored into `modules/anatomy-atlas`; main website unchanged. Exact Sites source push succeeded and standalone full HEAD was verified; temporary credential cleared. This is NOT confirmed GitHub delivery.
+
+47 unchanged spinal selections (25 bones, 22 discs) receive 141 introductory CT/MRI/X-ray topic drafts, organized as nine concept groups/27 distinct modality topics. Existing compact Imaging notes and six spinal study views remain in place. Complete source-record matching, detached arrays, exact authoring history and explicit source/scan limitations avoid name-only fallback or approval migration. Source frame/bundle checks are offline, not runtime patient registration. C1–C2 has no disc; unresolved T12–L1 source geometry is not normal absence or disease; sacrum remains whole. All 9,057 non-target body sections, shoulder teaching/recipes and geometry are unchanged. Root draft totals now CT64/MRI66/X-ray53; independent specimens are separate. No new model/dependency/font/texture/fee, patient scan, ultrasound teaching or paid-lecture access.
+
+Passed: TypeScript; 24,477 focused checks/141 actual React note renders/2,538 altered binding rejections/47 official source rows; 784 spinal-study checks; 3,206 X-ray checks; knee/Achilles regressions; 33,444 content-contract checks; 235 review checks; audit freshness; authored diff checks; production build and all108 lossless model checks. Original prose references AO, ACR, RadiologyInfo, AAOS and medical publications without importing assets or publisher material. Clinical, educator, browser/GPU/touch/accessibility and real-scan validation remain outstanding.
+
+Recovery stem `work/atlas-spine-imaging-2026-09-11`: runtime108,576,254 bytes SHA256 `503f33334d796e55ba8b7398b14462bdb84508b4e2592b048c8259ffbdf67d2c`; delta696,320 bytes SHA256 `0ce577fda33a0f9409d40d88f65b7ad84288f3f2a55a1b34aaa58aa8241fc4cb`; incremental bundle39,758 bytes SHA256 `3601f8cb7a25f40950e68a6ddfc9e7ece58e28824cca046b20da6fdc3fa49336`, requiring source parent. Runtime353 entries; exact mirror1,478 files/413,182,004 bytes/112 retained GLBs; no common credential signatures (not exhaustive). Preparation JSON predates final receipt; never overwrite recovery artifacts or rerun the one-shot helper.
+
+Native save **143** succeeded: `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_d3f18ae47a5881918c9792bc1066aad0`. Private deployment `appgdep_6aa3743af7e08191820e27e531e188f3` reached **SUCCEEDED** at **2026-09-11T03:24:48.310692+00:00**, https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site . No pending operation or audience change; background browser preserved. This supersedes142 without needing any older archive retries.
+
+Full final checkpoint: `work/ATLAS_SPINE_IMAGING_2026-09-11.md`. Same-PC backup/Sites source are not chat/private-database backups or confirmed GitHub/off-device restoration. Continue substantive wider-body anatomy/function; introductory spine orientation and routine oral detail do not need repetition. Broad atlas goal remains active.
+
+## 11 September 2026 — abdominal-wall teaching (previous release)
 
 Source `59a567c7fb76c954cf3d91eeec62124e207bbbf9`, tree `03b65703a4944a2a9cb1d442747f84ab9850d9fc`, parent `df79d3e873a4ba92073dedb65e90ff65131aea31`. Seventeen changed source paths mirrored into `modules/anatomy-atlas`; main website unchanged. Sites source push succeeded and full HEAD was independently verified; ephemeral credential cleared. This is NOT confirmed GitHub delivery.
 

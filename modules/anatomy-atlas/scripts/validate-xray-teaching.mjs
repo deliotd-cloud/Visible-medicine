@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import ts from 'typescript';
+import { authoringBeforeSpineImaging } from './spine-imaging-history.mjs';
 import Ajv2020 from 'ajv/dist/2020.js';
 import {
   contentContext,
@@ -11,7 +12,11 @@ import {
   readContentJson,
 } from './content-contract-tools.mjs';
 
-const { api, catalog, shoulder, body, registry } = await contentContext();
+const context = await contentContext();
+const { catalog, shoulder, body, registry } = context;
+// Test this historical milestone after explicitly verifying/reversing the later pass.
+// Export validation below still uses today's unmodified runtime records.
+const api = authoringBeforeSpineImaging(context);
 const pins = await readContentJson('content/shoulder-xray-bindings.json');
 let checks = 0;
 const same = (a, b) => {
@@ -118,7 +123,13 @@ same(
   ).readiness,
   'pending',
 );
-same(body.filter((r) => r.content.xray.readiness === 'draft').length, 6);
+same(
+  catalog.structures.filter(
+    (s) => api.bodyLesson(s, 'xray').readiness === 'draft',
+  ).length,
+  6,
+);
+same(body.filter((r) => r.content.xray.readiness === 'draft').length, 53);
 same(shoulder.filter((r) => r.content.xray.readiness === 'draft').length, 3);
 same(shoulder.filter((r) => r.content.xray.readiness === 'pending').length, 6);
 const validate = await contentValidator(registry);
@@ -224,8 +235,9 @@ same(
 console.log(
   JSON.stringify({
     checks,
-    bodyDrafts: 6,
-    bodyPending: 1016,
+    milestoneBodyDrafts: 6,
+    milestoneBodyPending: 1016,
+    currentBodyDrafts: 53,
     shoulderDrafts: 3,
     shoulderPending: 6,
     originalEightTopicsPreserved: true,

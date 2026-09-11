@@ -375,6 +375,11 @@ const report = {
   rejectionCases: negative.length + 3,
   unrelatedDisplayedCopyAndRecipesPreserved: true,
   explicitlyUpdatedBodySections: 3634,
+  additionalSpinalImagingSections: catalog.structures.reduce(
+    (n, s) =>
+      n + api.contentTabs.filter((t) => api.spineImagingLesson(s, t)).length,
+    0,
+  ),
   sourceGeometryChanged: false,
   clinicalApprovalsImported: false,
   displayReviewTransitionVerified: true,

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { reviewDocumentBeforeModelDelivery } from './model-delivery-history.mjs';
 import { quizQuestions } from '../app/anatomy-data.ts';
+import { authoringBeforeSpineImaging } from './spine-imaging-history.mjs';
 import transition from '../content/xray-transition.json' with { type: 'json' };
 const hash = (v) => createHash('sha256').update(v).digest('hex');
 const encode = (v) => JSON.stringify(v, null, 2) + '\n';
@@ -29,6 +30,7 @@ assert.equal(
 );
 
 export function authoringBeforeXray({ api, catalog }) {
+  api = authoringBeforeSpineImaging({ api, catalog });
   assert.equal(
     hash(
       JSON.stringify({
