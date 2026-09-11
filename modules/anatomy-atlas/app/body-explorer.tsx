@@ -162,6 +162,7 @@ const Scene = dynamic(() => import('./body-scene').then((m) => m.BodyScene), {
 const EyeLayers = dynamic(() => import('./eye-layers'), { ssr: false });
 const Ventricles = dynamic(() => import('./ventricles'), { ssr: false });
 const KneeSpecimen = dynamic(() => import('./um-limb-study'), { ssr: false });
+const AbdominalWallSpecimen = dynamic(() => import('./abdominal-wall-study'), { ssr: false });
 const systemKeys = Object.keys(bodySystems) as BodySystem[];
 const icons = {
   skeleton: Bone,
@@ -236,6 +237,12 @@ export default function BodyExplorer({
   const nestedReturnFocus = useRef<HTMLButtonElement | null>(null);
   const [eyeParent, setEyeParent] = useState<BodyStructure | null>(null);
   const [kneeSpecimenOpen, setKneeSpecimenOpen] = useState(false);
+  const [abdominalWallOpen, setAbdominalWallOpen] = useState(false);
+  const abdominalWallLauncher = useRef<HTMLButtonElement | null>(null);
+  const closeAbdominalWall = useCallback(() => {
+    setAbdominalWallOpen(false);
+    requestAnimationFrame(() => abdominalWallLauncher.current?.focus());
+  }, []);
   const kneeSpecimenLauncher = useRef<HTMLButtonElement | null>(null);
   const closeKneeSpecimen = useCallback(() => {
     setKneeSpecimenOpen(false);
@@ -1071,6 +1078,7 @@ export default function BodyExplorer({
         </details>
       </WorkspaceOnly>
       <WorkspaceOnly modes={['explore', 'dissect']}>
+        {initialRegion === 'abdomen' && <Button ref={abdominalWallLauncher} variant="outline" size="sm" className="um-knee-launch" disabled={exam} onClick={() => setAbdominalWallOpen(true)}>Abdominal wall layers · separate specimen</Button>}
         {['leg', 'foot', 'thigh', 'pelvis'].includes(initialRegion) && (
           <Button ref={kneeSpecimenLauncher} variant="outline" size="sm"
             className="um-knee-launch" disabled={exam}
@@ -2176,6 +2184,7 @@ export default function BodyExplorer({
       {kneeSpecimenOpen && ['leg', 'foot', 'thigh', 'pelvis'].includes(initialRegion) && !exam && (
         <KneeSpecimen initialRegion={initialRegion} onClose={closeKneeSpecimen} />
       )}
+      {abdominalWallOpen && initialRegion === 'abdomen' && !exam && <AbdominalWallSpecimen onClose={closeAbdominalWall} />}
       {ventricleParent && !exam && ventricleParent.id === selectedId && (
         <Ventricles
           parent={ventricleParent}

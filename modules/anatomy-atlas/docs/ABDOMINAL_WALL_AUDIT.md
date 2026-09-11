@@ -1,5 +1,7 @@
 # Abdominal-wall source decision
 
+**11 September update:** the original audit below remains evidence of the unresolved v4 registration gap. The [separate v3 specimen](ABDOMINAL_WALL_SPECIMEN.md) now redistributes these six exact 99%-archive source files under their rechecked asset/version-specific CC BY-SA 2.1 Japan grant, alongside paired external obliques and same-source skeletal context. No v3 mesh has been inserted into the main v4 catalogue. The `admitted: false` fields in this earlier audit refer to v4 admission, not availability of the new unregistered specimen.
+
 The 892-entry catalogue at this audit's baseline was unchanged by this audit. The later dental/orbital milestone raises the catalogue to 924 entries without admitting these abdominal-wall candidates. Six specifically named candidates were rechecked against both official BodyParts3D v4 indexes: right/left rectus abdominis (FMA13377/FMA13378), internal oblique (FMA13892/FMA13893) and transversus abdominis (FMA22344/FMA22345). None has an entry in the current v4 indexes. All six resolve to single, separately named OBJ files in the official version-3 archive.
 
 The broad v4 anterior-abdominal-wall definitions FMA20278, FMA14627 and FMA78435 use only FJ1452/FJ1452M, already rendered under the external-oblique identities. An aggregate wall label does not establish a rectus, transversus or internal-oblique segmentation and must not be used to relabel those surfaces.

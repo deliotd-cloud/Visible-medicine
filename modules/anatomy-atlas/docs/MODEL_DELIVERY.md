@@ -1,8 +1,10 @@
 # Lossless model delivery
 
-Production builds compress the atlas's 107 GLBs with `EXT_meshopt_compression`, using **no quantization, vertex/index reordering, simplification, geometry filters or anatomy removal**. The original files under `public/models` and all ingestion originals remain unchanged. Only generated `dist/client/models` files are replaced, after verification. Unsupported future asset layouts fail the build explicitly instead of dropping data.
+Production builds compress every runtime GLB with `EXT_meshopt_compression`, using **no quantization, vertex/index reordering, simplification, geometry filters or anatomy removal**. The original files under `public/models` and all ingestion originals remain unchanged. Only generated `dist/client/models` files are replaced, after verification. Unsupported future asset layouts fail the build explicitly instead of dropping data.
 
 ## Measured outcome
+
+The separate abdominal-wall milestone raises runtime delivery to **108 GLBs / 1,204 mesh primitives / 3,612 buffer views**. Canonical files total 177,729,660 bytes; transport files total 119,816,632 bytes. The new specimen itself is 15,335,852 canonical bytes / 10,159,084 transport bytes, with unchanged decoded triangles and normals. The optional original-source ZIP is separate from GLB totals and loads only when downloaded. Measurements below preserve the earlier 107-file baseline.
 
 The 11 September 2026 source set contains 1,175 mesh primitives and 3,525 buffer views. Raw GLB delivery falls from 162,393,808 to 109,657,548 bytes (32.5% smaller). Independently gzip-compressed file totals fall from 129,280,234 to 95,073,460 bytes (26.5% smaller). These are file measurements, not measured network latency, GPU memory, frame rate or a guarantee that publication succeeds. HTTP content encoding and whole-archive compression can produce different totals.
 

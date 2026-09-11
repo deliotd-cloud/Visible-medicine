@@ -1,6 +1,20 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — trunk/back reasoning practice (current)
+## 11 September 2026 — separate abdominal-wall specimen (current; publication pending)
+
+Source `300f6577c1c291b2c3c75694361c1b7bedd5cf7b`, tree `f6c0f5fd17ad810a5e2daaf9757c6447ebbbe9f2`, parent `0bf782a79d731b2621839d38015dcf22122e53f6`. Sixty-one changed paths mirrored into `modules/anatomy-atlas`; main website unchanged. Sites source push succeeded and full HEAD was verified; ephemeral credential cleared. This is NOT confirmed GitHub delivery.
+
+Eight version-3 abdominal muscles plus 21 partial skeletal context selections, seven reversible layer/side studies and shared compact controls. Six previously unavailable v4 muscle identities are now inspectable only in this separate unregistered source frame. Exact source/version CC BY-SA 2.1 Japan licence, original source ZIP, attribution, asset rights and ShareAlike scope are documented. All 686,326 triangles remain; source fragments and right rectus non-manifold edges are disclosed. No complete sheath, surgical plane, model/patient registration, clinical approval, imaging or lecture entitlement is claimed. Oral overview remains complete/lower priority.
+
+Passed 696 specimen checks including 2,058,978 source face corners, original ZIP contents, exact bindings, history/studies and actual React control markup (WebGL boundary excluded); existing UM limb 1,058 checks; TypeScript; requirement freshness; 8,821 inventory checks; production build and all 108 model transport/scene checks. Four trailing spaces in the original source README are preserved intentionally; authored-code diff checks pass. No browser/device/clinical acceptance.
+
+Runtime archive `work/atlas-abdominal-wall-specimen-2026-09-11.site.tar.gz`: 122,756,851 bytes, SHA256 `a642b3ee116fd104613359f112163d6700e4f383798b039d5755fbf05c939ff1`. Delta 78,858,240 bytes, SHA256 `ef194e748a07218b87a6365c6594881e9d20c9407c26d191c640becbb11f0a4a`. Incremental bundle 38,493,127 bytes, SHA256 `6c63987a114f6f153920b945f7b89dd8b7d4d7900e3185a88f3798aacf9e9f19`; requires source parent. Mirror 1,462 files / 412,840,211 bytes / 112 retained GLBs. Preparation JSON is historical and predates this receipt; never rerun it over existing artifacts.
+
+Two native archive uploads timed out at 60 seconds, first North Europe, then Denmark East. Both were reconciled with version listings: no version for this source. Latest saved/live remains **141**, source `0bf782a79d731b2621839d38015dcf22122e53f6`, version `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_49603a2ce468819188f732babd9e0b17`. No new deployment started or audience changed. Resume with the existing unchanged archive/source through native Sites; reconcile before retrying. Do not claim the new route is live.
+
+Full checkpoint `work/ATLAS_ABDOMINAL_WALL_SPECIMEN_2026-09-11.md`. Larger 95%-archive technical evidence remains separately under `work/abdominal-wall-95-evidence`, outside runtime/source/module backup. Same-PC copies and Sites source saving are not complete off-device restoration or chat/private-database backups. Continue wider-body development; do not repeat oral work or the completed legacy source search.
+
+## 11 September 2026 — trunk/back reasoning practice
 
 Source `0bf782a79d731b2621839d38015dcf22122e53f6`, tree `3b1246f8400d25467ca8bc3bd9fe2e455d65ff3a`, parent `50af727465b924f4de36034032fdb2e3cf7ec14b`. Thirteen changed paths mirrored into `modules/anatomy-atlas`; main website unchanged. Sites source push succeeded; full HEAD verified, ephemeral credential cleared.
 

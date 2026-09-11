@@ -1,5 +1,5 @@
 'use client';
-import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useReducer, useRef, useState, type ReactNode } from 'react';
 import { ArrowLeft, Focus, RotateCcw, Tags, Undo2, Redo2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -16,7 +16,7 @@ import { initialInspection } from '@/lib/inspection-state';
 import { rendererReady, type RendererHealth } from '@/lib/renderer-health';
 import { kneeTissueColours } from '@/lib/um-knee-study';
 import { kneeDefinition } from '@/lib/um-limb-studies';
-import { initialSpecimen, reduceSpecimen, activeSpecimenStudy, specimenAction, filterSpecimen, type SpecimenDefinition, type SpecimenAction } from '@/lib/independent-specimen';
+import { initialSpecimen, reduceSpecimen, activeSpecimenStudy, specimenAction, filterSpecimen, type SpecimenDefinition, type SpecimenAction, type SpecimenSurface } from '@/lib/independent-specimen';
 import type { VentricularState } from '@/lib/ventricles';
 import { createIdentification, type IdentificationState } from '@/lib/um-limb-teaching';
 import { SpecimenLearning, SpecimenIdentification } from './um-limb-learning';
@@ -34,7 +34,13 @@ const tissueGroups = [
   { id: 'tendon', name: 'Tendon' }, { id: 'muscle', name: 'Muscle' },
 ];
 
-export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation }: { specimen?: SpecimenDefinition; initialNavigation?: ResolvedSpecimenNavigation } = {}) {
+// Non-limb specimens reuse the dissection controls, never UM identity/teaching bindings.
+export type SpecimenSupplement = {
+  colors: Record<string, string>;
+  learning: (surface: SpecimenSurface) => ReactNode;
+  sourceDetails: ReactNode;
+};
+export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation, supplement }: { specimen?: SpecimenDefinition; initialNavigation?: ResolvedSpecimenNavigation; supplement?: SpecimenSupplement } = {}) {
   const kneeSpecimen = { structures: specimen.surfaces, source: specimen.source };
   const kneeCatalog = specimen.catalog, kneeStructures = kneeCatalog.structures, kneeSpecimenStudies = specimen.studies;
   const [state, dispatch] = useReducer((state: VentricularState, action: SpecimenAction) => reduceSpecimen(specimen, state, action), specimen, value => initialNavigation?.state ?? initialSpecimen(value));
@@ -61,7 +67,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation 
   const ready = required.length > 0 && !pending.length && !errors.length && rendererReady(health);
   useEffect(() => { if (ready && !practice && restorePracticeFocus.current) { practiceLauncher.current?.focus(); restorePracticeFocus.current = false; } }, [ready, practice]);
   const results = filterSpecimen(specimen, query);
-  const appearance = useMemo(() => Object.fromEntries(specimen.surfaces.map((s) => [s.id, { color: kneeTissueColours[s.tissue], opacity: 1 }])), [specimen]);
+  const appearance = useMemo(() => Object.fromEntries(specimen.surfaces.map((s) => [s.id, { color: supplement?.colors[s.id] ?? kneeTissueColours[s.tissue], opacity: 1 }])), [specimen, supplement]);
   function assembledDisplay() {
     setExplode(0); setIsolated(false); setFocus(false); setZoom(1); setReset((n) => n + 1);
   }
@@ -90,7 +96,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation 
         <Button variant="outline" size="sm" onClick={() => setZoom((z) => Math.min(3, z + 0.2))} aria-label="Zoom in">+</Button>
         <Button variant="outline" size="sm" aria-pressed={labels} onClick={() => setLabels((v) => !v)}><Tags />Labels</Button>
         <Button variant="outline" size="sm" onClick={resetAll}><RotateCcw />Reset</Button>
-        <Button ref={practiceLauncher} variant="outline" size="sm" disabled={!ready || visible.length < 2} onClick={() => setPractice(createIdentification(specimen, visible.map(s => s.id)))}>Practise identification</Button>
+        {!supplement && <Button ref={practiceLauncher} variant="outline" size="sm" disabled={!ready || visible.length < 2} onClick={() => setPractice(createIdentification(specimen, visible.map(s => s.id)))}>Practise identification</Button>}
       </div>
       <div className="eye-layer-viewport">
         <BodyScene catalog={kneeCatalog} structures={kneeStructures} selectedId={selectedId}
@@ -107,7 +113,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation 
         }}>Retry</Button></div>}
         {!visible.length && <div className="eye-layer-status">All tissues are hidden. <Button size="sm" onClick={() => preset('all')}>Show all</Button></div>}
       </div>
-      <p className="um-knee-scene-caption">{explode > 0 ? 'Separated teaching view — not joint motion. Return to 0% for source positions.' : 'Source positions · Drag to rotate · Scroll or pinch to zoom'}</p>
+      <p className="um-knee-scene-caption">{explode > 0 ? supplement ? 'Separated teaching view — not tissue motion or a surgical plane. Return to 0% for source positions.' : 'Separated teaching view — not joint motion. Return to 0% for source positions.' : 'Source positions · Drag to rotate · Scroll or pinch to zoom'}</p>
     </section>
     <aside className="eye-layer-controls um-knee-controls" aria-label={`${specimen.label} specimen controls`}>
       <label className="um-knee-label" htmlFor="um-knee-study">Study</label>
@@ -124,11 +130,11 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation 
         <Button size="sm" variant="outline" disabled={!future.length} onClick={() => historyStep('redo')}><Redo2 />Redo</Button>
         <span aria-live="polite">{visible.length}/{kneeStructures.length} visible</span>
       </div>
-      <SpecimenMotorExplorer definition={specimen} selectedId={selectedId} onSelect={select} onExplore={nerve => {
+      {!supplement && <SpecimenMotorExplorer definition={specimen} selectedId={selectedId} onSelect={select} onExplore={nerve => {
         const action = motorStudyAction(specimen, nerve), group = specimenMotorGroups(specimen).find(g => g.key === nerve);
         if (!action || !group) return;
         dispatch(action); assembledDisplay(); setQuery(''); setJointCloseUp(false); setView(group.view);
-      }} />
+      }} />}
       <section className="um-knee-selection" aria-label="Selected specimen structure">
         <h3>{selected?.name ?? 'Select a structure'}</h3>
         {selected && <>
@@ -139,8 +145,10 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation 
             <Button size="sm" variant="outline" disabled={!ready} onClick={() => { setFocus(true); setReset((n) => n + 1); }}><Focus />Frame</Button>
             <Button size="sm" variant="outline" onClick={() => { dispatch({ type: 'visibility', id: selected.id, visible: false }); setFocus(false); }}>Set aside</Button>
           </div>
-          <SpecimenLearning definition={specimen} selected={selected} initialTopic={selected.id === initialNavigation?.selectedId ? initialNavigation.topic : null} />
-          <SpecimenStudyLink key={`${selected.id}:${active?.id ?? 'custom'}:${view}`} definition={specimen} selectedId={selected.id} studyId={active?.id ?? null} view={view} />
+          {supplement ? supplement.learning(selected) : <>
+            <SpecimenLearning definition={specimen} selected={selected} initialTopic={selected.id === initialNavigation?.selectedId ? initialNavigation.topic : null} />
+            <SpecimenStudyLink key={`${selected.id}:${active?.id ?? 'custom'}:${view}`} definition={specimen} selectedId={selected.id} studyId={active?.id ?? null} view={view} />
+          </>}
         </>}
       </section>
       <div className="um-knee-separation">
@@ -175,12 +183,14 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation 
         <label className="um-knee-toggle">Selected origin guide<Switch checked={showOrigins} onCheckedChange={setShowOrigins} disabled={layout === 'tray'} /></label>
       </details>
       <details className="um-knee-details"><summary>Source & limitations</summary>
+        {supplement ? supplement.sourceDetails : <>
         <p>{kneeSpecimen.source.credit}</p>
         <a href="https://researchdata.um.edu.my/dataset.xhtml?persistentId=doi:10.22452/RD/5T6TZ7" target="_blank" rel="noreferrer">Source dataset · CC0 1.0</a>
         <p>Different subject from the body atlas; no registration, mirrored opposite limb, scan synchronisation or clinical approval. {specimen.limitations}</p>
         <p>{specimen.omittedFaces} exactly zero-area source triangles are omitted from this view’s surfaces. Original files and the omission record are retained. Shapes are not sculpted or fitted to the other body model.</p>
         {selected && <p className="um-knee-source-id">{selected.id}<br />Ontology mapping: pending.</p>}
         <p>Source-bound anatomy and function drafts are available under Learn. Clinical, pathology and imaging lessons still require authoring and review. No CT/MRI/X-ray/US or paid lecture is unlocked by this view.</p>
+        </>}
       </details>
     </aside>
   </div>;

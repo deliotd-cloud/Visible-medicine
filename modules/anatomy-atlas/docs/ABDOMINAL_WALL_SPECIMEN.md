@@ -1,0 +1,38 @@
+# Separate abdominal-wall specimen
+
+Open **Abdomen → Abdominal wall layers · separate specimen**, or `/specimens/abdominal-wall`. One optional launch control leaves the main image and navigation uncluttered. The standalone route does not render or download the root-body GLBs.
+
+## Scope and interaction
+
+Eight muscle surfaces: right and left external oblique, internal oblique, transversus abdominis and rectus abdominis. Twenty-one same-source skeletal context selections: paired hip bones, sacrum, L1–L5, xiphoid and paired ribs 7–12. These context selections are incomplete bony context, not all attachment structures. Six muscle identities absent from the current v4 model become inspectable; the root catalogue remains 1,022 representations and is not combined with this separate specimen to inflate unique anatomy counts.
+
+Seven studies: all supplied surfaces; external obliques hidden; both oblique pairs hidden; rectus pair; right wall; left wall; muscles only. Camera presets, rotation, zoom, labels, search, tissue toggles, select/fade, frame, set aside, atomic undo/redo, display style and separation mechanisms reuse the existing controls. Separation returns to source positions at zero and is not tissue motion or a surgical plane. Right/left mean anatomical source laterality, not fixed screen side. Brief source-bound anatomy/function notes remain collapsed. Limb-specific motor/quiz/deep-link controls are not shown for this different source. Specimen examination questions and rich clinical/imaging content remain pending, explicitly so in the viewer.
+
+## Source, rights and commercial reuse
+
+The [official version-3 README](https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/README_e.html) and **each retained OBJ header** identify CC Attribution-Share Alike 2.1 Japan. The exact archive is [BodyParts3D_3.0_obj_99.zip](https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/BodyParts3D_3.0_obj_99.zip). Do not substitute the newer v4 grant. Commercial use/adaptation is permitted under the [licence conditions](https://creativecommons.org/licenses/by-sa/2.1/jp/deed.en); consult its [governing legal code](https://creativecommons.org/licenses/by-sa/2.1/jp/legalcode.ja), particularly the adaptation, collection and recipient-rights terms. This is an engineering rights record, not legal advice or a guarantee concerning every future product use.
+
+Required credit: **BodyParts3D, Copyright© The Database Center for Life Science licensed by CC Attribution-Share Alike 2.1 Japan**. The viewer, GLB metadata, download notice and original source headers retain credit/licence. Sources and the display model can be downloaded. Original licence evidence and names are in the source package. Recipients retain their licensed reuse rights; future subscriptions or lecture licences must not claim exclusivity over these assets or impose conflicting restrictions/DRM. Existing Sites owner-private access is not changed by this work.
+
+ShareAlike scope is explicit: `public/models/bodyparts3d-v3/abdominal-wall/**`, original/derived specimen source data in `content/sources/bodyparts3d-v3-abdominal-wall/**`, and `lib/abdominal-wall.ts` (specimen data, study definitions and notes) remain CC BY-SA 2.1 Japan. Original shared viewer code stays under its existing MIT grant. The source README/licence evidence retains its own notices. This separate collection is not an assertion that every future combination or lecture adaptation avoids ShareAlike; assess those derivatives before release. No new dependency, texture, font, fee-bearing service, scanned image or paid lecture is included.
+
+Short factual notes are original synthesis with [OpenStax anatomy reading](https://openstax.org/books/anatomy-and-physiology-2e/pages/11-4-axial-muscles-of-the-abdominal-wall-and-thorax). No book prose, image or table is imported; the page's current NC-SA notice is not treated as a commercial asset grant.
+
+## Geometry and reproducibility
+
+`node scripts/export-abdominal-wall.mjs` obtains exact named atomic files using CRC/size-checked archive ranges. It retains 29 original OBJ files, the source names table, source/license snapshots, hashes and topology diagnostics. All **686,326 source triangles** are retained in order. Indexed storage shares only identical original vertex/normal index tuples; it does not tolerance-weld, repair, subdivide, smooth, invent or remove geometry. Source normals are rotated and normalized for display. Material colours distinguish muscle layers; they are not fibre maps. Canonical GLB: 15,335,852 bytes. Original downloadable source ZIP: approximately 14.2 MB. Production lossless compression changes transport storage only.
+
+One common proper rotation/translation and scale applies to every surface:
+
+`display = (source.x / 100, (source.z - 1050) / 100, -(source.y + 100) / 100)`.
+
+This is **not registration into v4**. No side is mirrored or independently shifted to fit another source. The [older audit](ABDOMINAL_WALL_AUDIT.md) and its six source hashes remain unchanged; tests compare those exact source bytes. A 95%-archive technical trial had 3,133,792 triangles and a 225,665,312-byte unindexed prototype. It is retained outside runtime in the work checkpoint; it was not admitted or deleted. The source's lighter 99%-archive edition avoids that delivery burden without applying an additional agent-made decimation.
+
+`npm run abdominal-wall:test` checks names/licence headers/hashes, all 2,058,978 face corners against source coordinates (maximum measured round-trip error 0.00001192 mm), normal directions, face order, bounds, anchors, original ZIP contents, unchanged root catalogue, study identities, visibility/history, foreign-identity rejection and actual React control markup with only the WebGL boundary replaced. Existing lower-limb control/geometry tests also pass. These are engineering tests, not visual, clinical or browser/device acceptance.
+
+## Remaining validation
+
+- All eight muscle sources contain disconnected parts (2–42 diagnostic components). The right rectus source has four non-manifold edges. These are retained with a visible caution, not assigned new anatomical labels or cosmetically repaired. Topology diagnostics do not prove absence of self-intersections or validate compartments.
+- Confirm laterality, boundaries, attachment regions, muscle/aponeurotic extent, layer intersections, bony context and teaching notes with an anatomist/radiologist. Neither a complete rectus sheath/linea alba nor the inguinal canal, transversalis fascia, peritoneum or neurovascular planes are claimed.
+- Confirm legibility, focus restoration, label positioning, touch interaction and load/frame performance on actual devices. No browser/GPU acceptance was run in the automatic background continuation.
+- Keep source version, FMA concept, mesh hash and coordinate frame separate in future imaging links. FMA equality alone never registers this model to v4, CT/MRI/X-ray/US or a patient. No patient data is loaded and no paid lecture entitlement is inferred.

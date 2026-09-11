@@ -98,6 +98,7 @@ const pancreatic = await json('public/models/bodyparts3d/pancreatic/catalog.json
 const cricothyroid = await json('public/models/bodyparts3d/cricothyroid/catalog.json');
 const independentKnee = await json('public/models/um-knee/catalog.json');
 const independentLimb = await json('public/models/um-limb/catalog.json');
+const abdominalWall = await json('public/models/bodyparts3d-v3/abdominal-wall/catalog.json');
 const visualPathway = await json(
   'public/models/bodyparts3d/visual-pathway/catalog.json',
 );
@@ -322,6 +323,12 @@ for (const path of [
   'app/specimens/lower-limb/specimen-linked-page.tsx',
   'app/um-limb-learning.tsx',
   'lib/independent-specimen.ts',
+  'lib/abdominal-wall.ts',
+  'app/abdominal-wall-study.tsx',
+  'app/um-knee-study.tsx',
+  'app/specimens/abdominal-wall/page.tsx',
+  'public/models/bodyparts3d-v3/abdominal-wall/catalog.json',
+  'public/models/bodyparts3d-v3/abdominal-wall/NOTICE.md',
   'app/um-limb-study.tsx',
   'public/models/um-limb/catalog.json',
   'public/models/um-knee/catalog.json',
@@ -399,6 +406,16 @@ const report = {
     'Offline source and displayed-copy inventory; no clinical or browser certification.',
   sourceHashes,
   anatomy: {
+    abdominalWallSpecimen: {
+      id: abdominalWall.specimenId, route: '/specimens/abdominal-wall',
+      representations: abdominalWall.structures.length,
+      muscleSurfaces: abdominalWall.structures.filter(s => s.tissue === 'muscle').length,
+      skeletalContext: abdominalWall.structures.filter(s => s.tissue === 'skeleton').length,
+      triangles: abdominalWall.structures.reduce((n,s) => n + s.triangles,0),
+      license: abdominalWall.source.license, source: abdominalWall.source.archive,
+      registeredToCurrentBody: false, clinicalApproval: false, countedAsRootTeaching: false,
+      note: 'Separate v3 source specimen with layer studies; six muscle identities absent from v4 become inspectable without merging source frames. No complete sheath or neurovascular plane.',
+    },
     independentSpecimens: [{
       id: independentLimb.specimenId,
       representations: new Set([...independentKnee.structures, ...independentLimb.structures].map((s) => s.id)).size,

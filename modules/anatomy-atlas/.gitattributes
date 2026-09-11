@@ -7,3 +7,7 @@ content/prototypes/gingiva/source/*.obj -text -diff
 LICENSES/um-lower-limb-v1-2/* -text
 content/prototypes/um-knee/source/*.stl -text -diff
 content/sources/um-limb/*.stl -text -diff
+# Exact legacy source hashes and downloadable licence evidence survive checkouts.
+content/sources/bodyparts3d-v3-abdominal-wall/* -text
+content/sources/bodyparts3d-v3-abdominal-wall/*.obj -diff
+public/models/bodyparts3d-v3/abdominal-wall/* -text

@@ -6,6 +6,8 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "abdominal-wall:export": "node scripts/export-abdominal-wall.mjs",
+    "abdominal-wall:test": "node scripts/validate-abdominal-wall.mjs",
     "um-limb-clinical:test": "node scripts/pin-um-limb-teaching.mjs --check && node scripts/validate-um-limb-clinical.mjs",
     "um-limb-navigation:test": "node scripts/pin-um-limb-navigation.mjs --check && node scripts/validate-um-limb-navigation.mjs",
     "um-limb-learning:test": "node scripts/pin-um-limb-teaching.mjs --check && node scripts/validate-um-limb-learning.mjs",

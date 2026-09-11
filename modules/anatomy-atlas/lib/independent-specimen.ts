@@ -2,7 +2,7 @@ import type { BodyCatalog, BodyStructure, Vec3 } from '../app/body-types';
 import type { DissectionView } from '../app/dissection-data';
 import { initialVentricles, reduceVentricles, type VentricularAction, type VentricularState } from './ventricles';
 export type SpecimenSurface = {
-  id: string; slug: string; name: string; sourceName: string; fmaId: null;
+  id: string; slug: string; name: string; sourceName: string; fmaId: string | null;
   tissue: string; laterality: string; bundle: string; nodeName: string;
   bounds: { min: number[]; max: number[] }; center: number[]; anchor: number[];
   sources: Array<{ file: string; sha256: string }>; triangles: number;
