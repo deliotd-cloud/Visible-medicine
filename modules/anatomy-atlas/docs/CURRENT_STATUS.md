@@ -1,6 +1,6 @@
 # Current atlas status
 
-[Arterial connections](ARTERIAL_CONNECTIONS.md) offers upstream/downstream and communicating-neighbour exploration for 29 existing source selections through 30 typical relationships (15 concepts). A selected-artery panel stays collapsed; regional isolation is reversible and outside neighbours use source-bound whole-body links. Missing segments remain explicit; no vessel lumen, flow or patient registration is invented.
+[Arterial connections](ARTERIAL_CONNECTIONS.md) offers upstream/downstream and communicating-neighbour exploration for 81 existing source selections through 86 mapped relationships (41 concepts; 4 alternative routes, not simultaneous donor connections). A selected-artery panel stays collapsed; regional isolation is reversible and outside neighbours use source-bound whole-body links. Missing segments remain explicit; no vessel lumen, flow or patient registration is invented.
 
 [Lower-limb muscles by nerve](LOWER_LIMB_MOTOR.md) links 118 existing root-body selections through 120 typical relationships in 15 groups. Pelvis/hip, thigh, leg and foot reuse the same collapsed control as the upper limb. Source/frame checks and dissection history are retained; no nerve path or patient correspondence is invented. The independent lower-limb specimen remains separate.
 

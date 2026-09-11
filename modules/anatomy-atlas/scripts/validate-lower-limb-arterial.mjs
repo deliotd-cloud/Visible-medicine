@@ -7,10 +7,12 @@ import ts from 'typescript';
 import { build } from './workspace-test-build.mjs';
 import { build as componentBuild } from './workspace-component-test-build.mjs';
 import { contentContext } from './content-contract-tools.mjs';
+const upper = process.argv.includes('--upper');
+const testRegion = upper ? 'forearm' : 'leg';
 const compiled = await build({
   stdin: {
     contents:
-      "export * from './lib/lower-limb-arterial'; export * from './content/lower-limb-arterial'; export * from './app/dissection-data'; export * from './lib/study-links'; export {bodyDisplayCatalog} from './lib/body-display-catalog';",
+      "export * from './lib/lower-limb-arterial'; export * from './lib/upper-limb-arterial'; export * from './lib/limb-arterial'; export * from './content/upper-limb-arterial'; export * from './content/lower-limb-arterial'; export * from './app/dissection-data'; export * from './lib/study-links'; export {bodyDisplayCatalog} from './lib/body-display-catalog';",
     resolveDir: process.cwd(),
     loader: 'ts',
   },
@@ -28,25 +30,32 @@ const raw = JSON.parse(
   ),
   catalog = api.bodyDisplayCatalog(raw),
   pins = JSON.parse(
-    await readFile('content/lower-limb-arterial-pins.json', 'utf8'),
+    await readFile(
+      upper
+        ? 'content/upper-limb-arterial-pins.json'
+        : 'content/lower-limb-arterial-pins.json',
+      'utf8',
+    ),
   );
 const {
-  lowerLimbArterialNeighbours: neighbours,
-  lowerLimbArterialPlan: plan,
-  arterialConcepts: concepts,
-  arterialRelations: relations,
   dissectionReducer: reduce,
   resolveDissection: resolve,
   initialDissection: initial,
   dissectionProfiles: profiles,
 } = api;
-assert.equal(Object.keys(concepts).length, 15);
-assert.equal(relations.length, 15);
+const neighbours = upper
+    ? api.upperLimbArterialNeighbours
+    : api.lowerLimbArterialNeighbours,
+  plan = upper ? api.upperLimbArterialPlan : api.lowerLimbArterialPlan,
+  concepts = upper ? api.upperArterialConcepts : api.arterialConcepts,
+  relations = upper ? api.upperArterialRelations : api.arterialRelations;
+assert.equal(Object.keys(concepts).length, upper ? 26 : 15);
+assert.equal(relations.length, upper ? 28 : 15);
 const targets = catalog.structures.filter((s) =>
   Object.values(concepts).some((c) => c.fmaIds.includes(s.fmaId)),
 );
-assert.equal(targets.length, 29);
-assert.equal(pins.entries.length, 94);
+assert.equal(targets.length, upper ? 52 : 29);
+assert.equal(pins.entries.length, upper ? 116 : 94);
 const allRows = targets.flatMap((s) =>
   neighbours(catalog, 'whole-body', 'both', s.id).rows.map((r) => ({
     from: s,
@@ -55,11 +64,11 @@ const allRows = targets.flatMap((s) =>
     direction: r.direction,
   })),
 );
-assert.equal(allRows.length, 60);
+assert.equal(allRows.length, upper ? 112 : 60);
 const uniqueEdges = new Set(
   allRows.map((r) => [r.from.id, r.to.id].sort().join('|')),
 );
-assert.equal(uniqueEdges.size, 30);
+assert.equal(uniqueEdges.size, upper ? 56 : 30);
 assert(
   allRows.every(
     (r) =>
@@ -76,46 +85,76 @@ for (const r of allRows) {
   assert.equal(inverse.kind, r.kind);
   assert.equal(
     inverse.direction,
-    r.direction === 'communication'
-      ? 'communication'
+    ['communication', 'alternative'].includes(r.direction)
+      ? r.direction
       : r.direction === 'upstream'
         ? 'downstream'
         : 'upstream',
   );
 }
 const byFma = (f) => catalog.structures.find((s) => s.fmaId === f),
-  leg = byFma('FMA77380');
-assert.equal(
-  neighbours(catalog, 'leg', 'right', leg.id).rows.find(
-    (r) => r.structure.fmaId === 'FMA43898',
-  ).kind,
-  'via-unmodelled',
-);
-assert(neighbours(catalog, 'leg', 'right', leg.id).note.includes('fibular'));
-assert.equal(
-  neighbours(catalog, 'foot', 'right', byFma('FMA69514').id).rows.find(
-    (r) => r.structure.fmaId === 'FMA43943',
-  ).direction,
-  'communication',
-);
-assert(
-  !neighbours(catalog, 'foot', 'right', byFma('FMA43929').id).rows.some(
-    (r) => r.structure.fmaId === 'FMA43943',
-  ),
-);
+  leg = byFma(upper ? 'FMA22733' : 'FMA77380');
+if (!upper) {
+  assert.equal(
+    neighbours(catalog, testRegion, 'right', leg.id).rows.find(
+      (r) => r.structure.fmaId === 'FMA43898',
+    ).kind,
+    'via-unmodelled',
+  );
+  assert(
+    neighbours(catalog, testRegion, 'right', leg.id).note.includes('fibular'),
+  );
+  assert.equal(
+    neighbours(catalog, 'foot', 'right', byFma('FMA69514').id).rows.find(
+      (r) => r.structure.fmaId === 'FMA43943',
+    ).direction,
+    'communication',
+  );
+  assert(
+    !neighbours(catalog, 'foot', 'right', byFma('FMA43929').id).rows.some(
+      (r) => r.structure.fmaId === 'FMA43943',
+    ),
+  );
+} else {
+  const info = (f, region = 'whole-body') =>
+    neighbours(catalog, region, 'right', byFma(f).id);
+  const row = (from, to) =>
+    info(from).rows.find((r) => r.structure.fmaId === to);
+  assert.equal(row('FMA3953', 'FMA22655').kind, 'continuation');
+  assert.match(
+    row('FMA22655', 'FMA22691').note,
+    /inferior border of teres major/,
+  );
+  for (const f of ['FMA23180', 'FMA66321']) {
+    assert.equal(row('FMA22655', f).kind, 'via-unmodelled');
+    assert.match(row('FMA22655', f).note, /subscapular/);
+  }
+  assert.equal(row('FMA22807', 'FMA268667').kind, 'via-unmodelled');
+  assert.match(row('FMA22807', 'FMA268667').note, /posterior interosseous/);
+  assert.equal(row('FMA22733', 'FMA22839').kind, 'continuation');
+  assert.equal(row('FMA22797', 'FMA22839').direction, 'communication');
+  assert.equal(row('FMA22797', 'FMA22835').kind, 'continuation');
+  assert.match(row('FMA22733', 'FMA22835').note, /not guaranteed/);
+  assert.equal(row('FMA22839', 'FMA22864').kind, 'branch');
+  assert.equal(
+    info('FMA4057').rows.filter((r) => r.direction === 'alternative').length,
+    2,
+  );
+  assert(info('FMA4057').rows.every((r) => r.kind === 'variant'));
+  assert.match(row('FMA3992', 'FMA4057').note, /transverse cervical/);
+  assert.match(info('FMA22905').note, /Origins vary/);
+  assert.match(
+    info('FMA22835').note,
+    /digital arteries are not assigned parents/,
+  );
+}
 const isSide = (s, side) =>
   side === 'both' || s.laterality === side || s.laterality === 'midline';
 const regionHas = (s, region) =>
   region === 'whole-body' || s.regions.includes(region);
-const regions = [
-  'whole-body',
-  'abdomen',
-  'thorax',
-  'pelvis',
-  'thigh',
-  'leg',
-  'foot',
-];
+const regions = upper
+  ? ['whole-body', ...catalog.regions.map((r) => r.id)]
+  : ['whole-body', 'abdomen', 'thorax', 'pelvis', 'thigh', 'leg', 'foot'];
 let plans = 0,
   links = 0,
   rejections = 0,
@@ -131,6 +170,14 @@ for (const region of regions)
         continue;
       }
       assert(info);
+      assert.deepEqual(
+        api.limbArterialNeighbours(catalog, region, side, s.id),
+        info,
+      );
+      assert.deepEqual(
+        api.limbArterialPlan(catalog, region, side, s.id),
+        plan(catalog, region, side, s.id),
+      );
       assert.deepEqual(info, neighbours(raw, region, side, s.id));
       for (const row of info.rows) {
         assert.equal(row.availableHere, regionHas(row.structure, region));
@@ -212,8 +259,8 @@ for (const s of catalog.structures.filter(
 for (const s of pins.entries) {
   const bad = structuredClone(catalog);
   bad.structures.find((x) => x.id === s.id).sources[0].sha256 = '0'.repeat(64);
-  assert.equal(neighbours(bad, 'leg', 'right', leg.id), null);
-  assert.equal(plan(bad, 'leg', 'right', leg.id), null);
+  assert.equal(neighbours(bad, testRegion, 'right', leg.id), null);
+  assert.equal(plan(bad, testRegion, 'right', leg.id), null);
   rejections++;
 }
 for (const mutate of [
@@ -271,13 +318,13 @@ for (const mutate of [
 ]) {
   const bad = structuredClone(catalog);
   mutate(bad);
-  assert.equal(neighbours(bad, 'leg', 'right', leg.id), null);
-  assert.equal(plan(bad, 'leg', 'right', leg.id), null);
+  assert.equal(neighbours(bad, testRegion, 'right', leg.id), null);
+  assert.equal(plan(bad, testRegion, 'right', leg.id), null);
   rejections++;
 }
 assert.equal(neighbours(catalog, '__proto__', 'both', leg.id), null);
-assert.equal(neighbours(catalog, 'leg', 'invalid', leg.id), null);
-assert.equal(neighbours(catalog, 'leg', 'left', leg.id), null);
+assert.equal(neighbours(catalog, testRegion, 'invalid', leg.id), null);
+assert.equal(neighbours(catalog, testRegion, 'left', leg.id), null);
 const sourceRows = Object.fromEntries(
   await Promise.all(
     ['isa', 'partof'].map(async (tree) => [
@@ -292,10 +339,23 @@ const sourceRows = Object.fromEntries(
 for (const s of targets) {
   assert.equal(
     s.sourceTree,
-    ['FMA20796', 'FMA20797'].includes(s.fmaId) ? 'partof' : 'isa',
+    !upper && ['FMA20796', 'FMA20797'].includes(s.fmaId) ? 'partof' : 'isa',
   );
   const matched = sourceRows[s.sourceTree].filter((r) => r[0] === s.fmaId);
-  assert.equal(matched.length, s.sourceTree === 'partof' ? 2 : 1);
+  const pairedComponentIds = [
+    'FMA22685',
+    'FMA22687',
+    'FMA22905',
+    'FMA22907',
+    'FMA22777',
+    'FMA22778',
+  ];
+  assert.equal(
+    matched.length,
+    s.sourceTree === 'partof' || (upper && pairedComponentIds.includes(s.fmaId))
+      ? 2
+      : 1,
+  );
   assert.deepEqual([...new Set(matched.map((r) => r[1]))], [s.sourceName]);
   assert.deepEqual(
     matched.flatMap((r) => r[2].split(',')).sort(),
@@ -361,6 +421,11 @@ for (const s of targets)
       html = render(props);
     renders++;
     assert(html.includes('Arterial connections'));
+    assert(html.includes(upper ? 'upper-limb' : 'lower-limb'));
+    if (upper && ['FMA4057', 'FMA10552'].includes(s.fmaId)) {
+      assert(html.includes('Alternative origins'));
+      assert(html.includes('not simultaneous connections'));
+    }
     assert(html.includes(s.name));
     assert(html.includes('Specialist review pending'));
     assert(html.includes('Show available connections &amp; bones'));
@@ -408,12 +473,9 @@ assert(
     wiring.includes('onShow={showArterialConnections}') &&
     wiring.includes('disabled={exam}'),
 );
-for (const selected of [
-  byFma('FMA3789'),
-  byFma('FMA70249'),
-  leg,
-  byFma('FMA43943'),
-])
+for (const selected of upper
+  ? targets
+  : [byFma('FMA3789'), byFma('FMA70249'), leg, byFma('FMA43943')])
   for (const exam of [false, true]) {
     const calls = [],
       env = {
@@ -422,7 +484,7 @@ for (const selected of [
         side: 'both',
         selectedId: selected.id,
         exam,
-        lowerLimbArterialPlan: plan,
+        limbArterialPlan: api.limbArterialPlan,
         initialInspection: { enabled: false },
         cameraRestore: { current: 'old' },
         dispatch: (v) => calls.push(['dispatch', v]),
@@ -469,11 +531,12 @@ for (const selected of [
   }
 console.log(
   JSON.stringify({
-    arteries: 29,
-    concepts: 15,
-    typicalRelationships: 30,
-    reciprocalNeighbourRows: 60,
-    sourceRows: 29,
+    territory: upper ? 'upper-limb' : 'lower-limb',
+    arteries: targets.length,
+    concepts: Object.keys(concepts).length,
+    mappedRelationships: uniqueEdges.size,
+    reciprocalNeighbourRows: allRows.length,
+    sourceRows: targets.length,
     plans,
     crossRegionLinks: links,
     rejectedCatalogues: rejections,

@@ -1,4 +1,4 @@
-# Lower-limb arterial connections
+# Upper- and lower-limb arterial connections
 
 Select a participating artery and open **Arterial connections** in its information panel. The section starts collapsed and is absent for unrelated structures and exam mode. No additional global toolbar, diagram or permanent list.
 
@@ -9,7 +9,7 @@ Select a participating artery and open **Arterial connections** in its informati
 - Open an out-of-region neighbour in the whole-body atlas through the existing source-bound study link. This intentionally opens a new study; it is not a promise to preserve the old camera/removal state across routes.
 - Read an explicit distinction between branch, continuation, anastomosis and a route through a segment not separately modelled. No flow direction is assigned to anastomoses.
 
-## Anatomical scope
+## Lower-limb scope
 
 **29 existing arterial selections, 15 concepts, 30 paired/midline relationships**; 60 reciprocal neighbour rows are two views of the same relationships, not 60 separate pathways. The abdominal aorta is midline; fourteen concepts are paired. The bounded map covers common/external/internal iliac, femoral/deep femoral, popliteal, anterior/posterior tibial, dorsalis pedis, medial/lateral plantar, deep plantar, superficial medial plantar and plantar arch selections.
 
@@ -20,6 +20,30 @@ This is not a complete arterial tree. In particular:
 - Deep femoral source records are two-component `partof` aggregates per side, not invented individually labelled circumflex or perforating branches. Their complete official memberships are retained.
 - Medial plantar is not made the usual principal contributor to the deep plantar arch. The lateral plantar continuation and deep plantar communication stay distinct. Source-labelled plantar arches retain their existing arterial classification.
 - Pelvic, genicular, circumflex, digital and other unlisted branches/variants remain outside this limited map. No downstream row does not imply an anatomical end.
+
+## Upper-limb extension
+
+**52 additional existing selections, 26 concepts, 56 bilateral relationships** (112 reciprocal rows). Four relationships are alternative dorsal-scapular origin routes; they are not simultaneous connections in a donor. Both limb maps together cover 81 selections / 41 concepts / 86 relationships, not a complete body arterial tree.
+
+The map spans supplied subclavian/axillary/brachial selections, deep brachial and humeral/scapular branches, the thoracoacromial trunk and three named branches, radial/ulnar and supplied interosseous selections, both palmar arches, grouped palmar metacarpals, princeps pollicis and radialis indicis. Thyrocervical, costocervical, dorsal scapular and suprascapular selections provide limited shoulder inflow context. Use the same collapsed panel in shoulder/arm, forearm, hand or another regional view containing a participating selection.
+
+- Subclavian–axillary and axillary–brachial are continuations, not side branches. Unpaired aortic-arch/brachiocephalic origins are outside this map; right and left proximal origins are not made symmetrical.
+- Circumflex scapular and thoracodorsal routes explicitly pass through a **missing independently selectable subscapular artery**. Common-to-recurrent interosseous passes through the missing **posterior interosseous trunk**; the recurrent surface is not a replacement for that trunk.
+- Radial/deep-arch and ulnar/superficial-arch principal contributions stay distinct from communicating contributions. The deep ulnar and superficial radial palmar branches are not separately supplied. Surface completeness, collateral adequacy and joined lumina are not established; no flow direction is assigned to communications.
+- Dorsal scapular may have a direct subclavian origin or a transverse-cervical route. The latter is labelled via an unmodelled segment, not a direct thyrocervical branch. **Alternative origins** has its own section. Isolation may display alternatives for comparison but does not assert simultaneous inflow.
+- Thumb/index origins vary; the radial-system teaching relationship is not proof of the source junction. Source-numbered common/proper digital selections are deliberately not wired into this map without adjudicated identities. Unlisted branches are not anatomically absent.
+- All 52 source identities use the official `isa` membership. Posterior circumflex humeral, princeps pollicis and radialis indicis each have two official component rows per side. These remain grouped, with all six paired selections' complete memberships checked; no component becomes an invented new branch.
+
+`content/upper-limb-arterial-pins.json` binds all 52 complete arterial records and 64 existing skeletal-context records to their source frame/licence/bundles. Context bones are limited to the pinned shoulder/arm, forearm and hand sets and the current regional crop; head/neck or thorax crops may contain arteries without that bone context. Outside neighbours use explicit whole-body links. Lower-limb admissions remain separate and unchanged.
+
+The shared `lib/regional-arterial.ts` engine enforces both sets' complete bindings. `lib/limb-arterial.ts` dispatches only between disjoint admitted identities; it does not substitute one dataset for a failed binding. Variant rows are neither ordinary downstream branches nor anastomotic flow statements.
+
+Upper-limb references, factual synthesis only:
+
+- [Texas Tech upper-limb arteries](https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html): branch identities and palmar contributions. Indexed text was available when the direct fetch timed out.
+- [UAMS upper-limb arteries](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/artery-tables/arteries-of-the-upper-limb/): naming landmarks, subscapular parent and shoulder inflow distinctions.
+- [Relative frequency of a subclavian vs. a transverse cervical origin for the dorsal scapular artery](https://pubmed.ncbi.nlm.nih.gov/8808401/): alternative origin routes; no frequency adopted or assigned to the donor.
+- [Superficial palmar arch: an arterial diameter study](https://pubmed.ncbi.nlm.nih.gov/15061757/): arch and radial-side variation. Indexed abstract/figure descriptions support the caution; no figure, measurement or text imported. Study percentages are not generalised.
 
 ## Geometry, identity and interactions
 

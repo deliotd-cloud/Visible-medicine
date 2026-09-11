@@ -1,6 +1,18 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — lower-limb arterial connections (current source)
+## 11 September 2026 — upper-limb arterial connections (current source)
+
+Source `4972359643323eadd505824217f8d70c60cee2e6`, tree `86ae3907cf17336b9f53552450ac716319b7429a`, parent `d723e7051319e17db4992bb941755ebc85a25c1d`. Twenty paths mirrored once; 1,542 matching source files / 414,584,028 bytes / 112 retained GLBs. Main website unchanged. No common credential-signature warnings (not exhaustive). Sites source push and remote branch were independently verified at the full source revision. **Not confirmed GitHub delivery, conversation/private-D1 backup or an independent off-device restore.**
+
+The same compact selected-artery panel now adds 52 upper-limb selections, 26 concepts and 56 bilateral relationships, including four alternative-origin relationships, not simultaneous donor connections. Lower-limb scope remains unchanged; combined coverage is 81 selections / 41 concepts / 86 relationships. Missing subscapular, posterior interosseous and transverse cervical routes are explicit; numbered digital parentage is not guessed. No new model, flow, scan, paid asset or lecture entitlement.
+
+Both limb suites pass: 444 region/side plans, 120 source-bound cross-region link cases, 242 altered-catalogue rejections, 162 actual component renders and 112 actual parent-handler cases. All 9,198 body topics, dedicated shoulder content and recipes remain unchanged. Review/private-decision, 48,082 imaging-link and 235 shoulder-review checks, TypeScript, requirements and build passed. Specialist and browser/device validation remain outstanding.
+
+Owner-approved **new recovery location** is `D:/VisibleMedicine-Atlas-Recovery`; existing C: files/backups are untouched. Recovery stem `atlas-upper-arterial-2026-09-11`: runtime archive 109,403,425 bytes, SHA256 `027ad2dc7e23e500c88c41ddff5ccdfa2ed675289d590d306078c2796341282c`; delta 727,040 bytes, SHA256 `0768596d4e8cb7f1c5b484e56b748fc4209a70594cefae1e4e3c4a3a32515f17`; incremental bundle 46,079 bytes, SHA256 `8c8e6d690aeef0875a380f1945ca50391a8da6bf925240b1a5de09a78e6f3cea`. Bundle requires source parent `d723e7051319e17db4992bb941755ebc85a25c1d`, not standalone. Packaging temporary data also uses the dedicated D: directory.
+
+Native save/deployment outcomes are recorded separately in `work/ATLAS_UPPER_ARTERIAL_PUBLISHED_2026-09-11.md` when confirmed; this receipt records prepared source/build, not a deployment success claim. Database migrations and production records unchanged. Keep oral work deferred; continue substantive broader anatomy/function after this release.
+
+## 11 September 2026 — lower-limb arterial connections (previous source)
 
 Source `d723e7051319e17db4992bb941755ebc85a25c1d`, tree `e7ae2c57bf01ab42ab0705dad7adcf8b473210c9`, parent `d0b61f72358a8e0718c09b26e9efa69916cd1012`. Seventeen paths mirrored once; 1,536 matching source files / 414,378,664 bytes / 112 retained GLBs. No main-website edits; no common credential-signature warnings (not exhaustive). Sites source push succeeded, full HEAD verified afterward and temporary credential cleared. **Not confirmed GitHub delivery, conversation/private-D1 backup or an off-device restore.**
 

@@ -116,7 +116,7 @@ import { StructureNavigator } from './structure-navigator';
 import { RelatedStudy } from './related-study';
 import { UpperLimbMotorExplorer } from './upper-limb-motor';
 import { ArterialConnections } from './arterial-connections';
-import { lowerLimbArterialPlan } from '../lib/lower-limb-arterial';
+import { limbArterialPlan } from '../lib/limb-arterial';
 import { limbMotorPlan } from '@/lib/limb-motor';
 import { StudyLinks } from './study-links';
 import {
@@ -702,7 +702,7 @@ export default function BodyExplorer({
   }
   function showArterialConnections() {
     if (!catalog || !selectedId) return;
-    const plan = lowerLimbArterialPlan(catalog, initialRegion, side, selectedId, exam);
+    const plan = limbArterialPlan(catalog, initialRegion, side, selectedId, exam);
     if (!plan) return;
     dispatch(plan.action);
     setSystems(prev => ({ ...prev, skeleton: true, vessels: true }));

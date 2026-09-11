@@ -38,7 +38,7 @@
     },
     {
       "path": "app/arterial-connections.tsx",
-      "sha256": "684bf032444e0b157f1c40240a6a02e5632680414d871a601264404638c9e546"
+      "sha256": "4ee96f994774523877fdd44dcd4f48c4e48059338320de8f8c82dc39e293dc87"
     },
     {
       "path": "app/atlas-workspace.css",
@@ -58,7 +58,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "a04dc03df828cd02a703ec69637ed12ffbbf4a5c638ab9d5598fbc24b0f025ac"
+      "sha256": "d2fcfe972773a587fe0a1046ac29b4fe9d41569e31e42e270da66a3228a21b08"
     },
     {
       "path": "app/body-scene.tsx",
@@ -421,6 +421,14 @@
       "sha256": "a595b6a56d315fe1a08e77aa8dcb3c4f1b7fe74589ef72140d38d605e8b2abb7"
     },
     {
+      "path": "content/upper-limb-arterial-pins.json",
+      "sha256": "92a761df3eefcf1770a446de6a106f4144119a442847a7909839660ce6d6e352"
+    },
+    {
+      "path": "content/upper-limb-arterial.ts",
+      "sha256": "da35f472911b1173ac84517cf6c4242950800da55e4b67c4b70571288a0ee853"
+    },
+    {
       "path": "content/upper-limb-motor-pins.json",
       "sha256": "d4d9c991e74899d9a10ef16aee9086fdfbe4da40c70dedf1be7db4f0bd09e3c5"
     },
@@ -765,6 +773,10 @@
       "sha256": "d94d6ea36a8962684935ed07bc235852095b624abc189dd7611d5551cd30022b"
     },
     {
+      "path": "lib/limb-arterial.ts",
+      "sha256": "42608e39680c2188aff69a6c017556dd848900f8f7c26c89a87cd6269128b59a"
+    },
+    {
       "path": "lib/limb-bone-clinical-curriculum.ts",
       "sha256": "1ef0b447da72cf1207aadff79164327e8ab2b6be3e6413964e68e5945b52d9c5"
     },
@@ -782,7 +794,7 @@
     },
     {
       "path": "lib/lower-limb-arterial.ts",
-      "sha256": "18377554b51ca27a2766dfd907f3a51c8bb83eb40d77ad6e3afb9ae431036a5a"
+      "sha256": "2b133451561ed06eb3f4b8fd95c089552fea927ce53d18d1cf15b4b86f36e93c"
     },
     {
       "path": "lib/lower-limb-motor.ts",
@@ -887,6 +899,10 @@
     {
       "path": "lib/reasoning-questions.ts",
       "sha256": "4c1f3ae40872d57ba7fa1d4e10a33d5606121b57321bf80be93a7fb9691820eb"
+    },
+    {
+      "path": "lib/regional-arterial.ts",
+      "sha256": "ad8e1094c8c83aceb00ed36463708db3211ce43820e6b7089080e477bb3d9aab"
     },
     {
       "path": "lib/regional-connective-clinical-curriculum.ts",
@@ -1061,6 +1077,10 @@
       "sha256": "f51b0532e23719646b5588188c637a49b7523acc5ff976c6cff7101ffa41bf4d"
     },
     {
+      "path": "lib/upper-limb-arterial.ts",
+      "sha256": "f8e6071e392d45a15e7f97915f35a628c700835a4982904f94d6c8081808fc89"
+    },
+    {
       "path": "lib/upper-limb-motor.ts",
       "sha256": "7809b6454d0814836ccab7305215a5c08e1dc7758f54707a7a82f3920ef3e2b9"
     },
@@ -1098,7 +1118,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "3d4e6474c39d920032c3a0d3c144e69ba69ede830f436e795d21d5de505298b2"
+      "sha256": "d25ca8d0b477f833348a2e51d7dd4e866c57f7332647c85b9d91a77991090a66"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1193,5 +1213,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "91268a80930bb1d2589e26fe59382c9292f5c2738c06f05e5d8fcdb53f8c608e"
+  "sha256": "e1c57c166d0dbc2e4011db8f5f21ad7740418e913e4010d86a4a152eba42d570"
 }
