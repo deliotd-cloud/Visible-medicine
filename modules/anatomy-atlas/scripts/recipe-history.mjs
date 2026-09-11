@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
+import { preElbowRecipeProfiles } from './elbow-study-history.mjs';
 
 export const preOrbitalMotorProfilesHash =
   'd127268c45678a49ff8eeae4c5622172d4549497aca33d5b3b19507557d83e9c';
@@ -29,6 +30,7 @@ export function preKneeStudyRecipeProfiles(profiles) {
   if ([preOrbitalMotorProfilesHash, orbitalMotorProfilesHash, renalProfilesHash,
     acralBoneProfilesHash, spinalLevelProfilesHash].includes(hash(profiles)))
     return structuredClone(profiles);
+  profiles = preElbowRecipeProfiles(profiles);
   assert.equal(hash(profiles), kneeStudyProfilesHash, 'Unrecorded knee recipe edit');
   const previous = structuredClone(profiles), leg = previous.leg;
   const ids = ['knee-bones', 'knee-patella-off', 'knee-popliteus'];

@@ -45,7 +45,7 @@ same(
           ),
         })),
         shoulder: api.structures,
-        recipes: api.dissectionProfiles,
+        recipes: previous.dissectionProfiles,
       }),
     )
     .digest('hex'),

@@ -377,7 +377,7 @@ assert.equal(
           ),
         })),
         shoulder: ctx.api.structures,
-        recipes: ctx.api.dissectionProfiles,
+        recipes: arterialMilestone.dissectionProfiles,
       }),
     )
     .digest('hex'),

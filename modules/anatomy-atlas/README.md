@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Forearm → Study → Elbow** opens [five focused dissection views](docs/ELBOW_STUDIES.md), with stable close-ups, source-surface labels and reversible removal. Compare the three bony articulations or expose supinator; whole source structures remain intact. No new toolbar, nerve route, ligament or motion simulation.
+
 **Hand → select a carpal bone → Imaging → X-ray / CT / MRI** opens [wrist-bone orientation notes](docs/WRIST_IMAGING_TEACHING.md) for all eight existing carpal pairs. Five groups provide 15 distinct modality topics and bone-specific cautions through the same compact tabs. No scan, new mesh or clinical approval is implied.
 
 **Select an abdominal or limb artery → Arterial connections** offers [upstream/downstream exploration](docs/ARTERIAL_CONNECTIONS.md) across 108 existing selections. Abdominal routes now include pancreatic arcades and colonic communications; the shared aorta keeps both visceral and iliac connections. Show available neighbours with bones, follow source-bound links between regions and Undo the dissection change. The panel stays collapsed; missing segments, alternative origins and typical-versus-donor anatomy remain explicit. No flow or scan simulation.

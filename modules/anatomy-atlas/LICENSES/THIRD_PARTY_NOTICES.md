@@ -1,5 +1,7 @@
 # Third-party notices
 
+The [elbow studies](../docs/ELBOW_STUDIES.md) reuse eight existing BodyParts3D selections without changing geometry or source membership. New MIT code and original short instructions use UAMS pages as factual reading references only; no tables, images or publisher prose are imported. Existing CC BY 4.0 credits remain. No new model, font, texture, dependency, paid API, scan registration or lecture entitlement.
+
 The [wrist-bone imaging notes](../docs/WRIST_IMAGING_TEACHING.md) add original MIT code and brief source-bound educational synthesis. RSNA/PubMed citations are optional reading links; no publisher prose, figure, table, scan, PDF, font, texture, model, dependency or paid service is imported. Existing source licences/credits are unchanged. Clinical validation, actual imaging correspondence and separately paid-lecture access are not supplied.
 
 The [abdominal arterial connection extension](../docs/ARTERIAL_CONNECTIONS.md#abdominal-extension) adds original MIT code and compact factual relationship metadata for existing BodyParts3D selections. All original mesh licences, credits and modification notices remain. University and PubMed links are reading references only; no table, publisher prose, illustration, scan, model, texture, font, dependency or paid service is imported. Typical arterial routes and displayed communications are not donor verification, clinical approval or patient registration. The separately researched SPARC nerve files remain outside the live application.

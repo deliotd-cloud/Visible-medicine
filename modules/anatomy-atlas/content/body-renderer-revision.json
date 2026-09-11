@@ -58,7 +58,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "6e79a38f4cb906a89a66bd9f296db10b126eae0b06db580264fc9c931fa7b9a2"
+      "sha256": "a9b469695572c4633b2d9cc2dbc1086eb4269e2e8489980e948f7ea19deef02e"
     },
     {
       "path": "app/body-scene.tsx",
@@ -94,7 +94,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "76181deafef831347d5f7d93865823ec68375d52fa523629a0072de443e93f23"
+      "sha256": "52fe4bc31eb8a99667e64cc1996c454788b9c0d693f0811cbf26c80799e3364d"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -323,6 +323,14 @@
     {
       "path": "content/cricothyroid-teaching.ts",
       "sha256": "43e6e81da3b782aaefb0f806e57517edee327e1a24b9eaa748896aef93c033db"
+    },
+    {
+      "path": "content/elbow-studies.ts",
+      "sha256": "57f958516bc4750cfb7863c5c642fe4612b2c5b7deab09f7a455b57b4fbe71a1"
+    },
+    {
+      "path": "content/elbow-study-pins.json",
+      "sha256": "5289bca1081ec5e42e3e1cadcb8bcd63616fca38837b93460389db918489a5b1"
     },
     {
       "path": "content/eye-imaging-teaching.ts",
@@ -647,6 +655,10 @@
     {
       "path": "lib/dissection-workbench.ts",
       "sha256": "7b12978528d0c08743aa4d4fbe8e08df7f787596576978c39ffdc003227215be"
+    },
+    {
+      "path": "lib/elbow-studies.ts",
+      "sha256": "dace97bb58a6ef824a49f1fe3874a049cd3aa6f148204670a8c535f121b75589"
     },
     {
       "path": "lib/explode-layout.mjs",
@@ -1146,7 +1158,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "dcc50b9d2dfa2e6e02bd6fe389d56fde2701ab6174b8bd31f81dc369b40f76ea"
+      "sha256": "95554ba34cc8353bef9906703f0ad277d8ef9c75b333b90e88aa42bbc8d13601"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1241,5 +1253,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "81dd84599d72e9fb1cdf2334f362a5d06b3ea69b7d42a66f1ff96c720943a99d"
+  "sha256": "bfdd7fdeddf4c74429a4dd39028d818b0eb95c08002a3fe68be673325d168fe4"
 }

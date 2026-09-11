@@ -8,6 +8,9 @@
     "public/models/bodyparts3d/eye-layers/display-correction.json": "61e09e972a1d301e56ebae9f1af90ffe9136309eda0242df1a03f84c6ad85dd2",
     "public/models/bodyparts3d/pancreas/display-correction.json": "a7add6d985798dedd1dd78c3879b2fc91f8a6cacc126d2a526f7ba8c4b03fc1a",
     "lib/body-display-catalog.ts": "8a17c0b15b438bff1b3e2f9179420d43e6e5d51e62fc67bafba9be3a1a59f69e",
+    "lib/elbow-studies.ts": "dace97bb58a6ef824a49f1fe3874a049cd3aa6f148204670a8c535f121b75589",
+    "content/elbow-studies.ts": "57f958516bc4750cfb7863c5c642fe4612b2c5b7deab09f7a455b57b4fbe71a1",
+    "content/elbow-study-pins.json": "5289bca1081ec5e42e3e1cadcb8bcd63616fca38837b93460389db918489a5b1",
     "lib/xray-teaching.ts": "7a38c62a92467401cf5192adef611efdf21ad9ceb213371a984ee44fd425a6d1",
     "lib/upper-limb-motor.ts": "7809b6454d0814836ccab7305215a5c08e1dc7758f54707a7a82f3920ef3e2b9",
     "lib/regional-motor.ts": "82fa38c847c564ce12f6de1de718167408fa4757ca750e3a8221ec630fc25d0e",
@@ -148,7 +151,7 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "712d2d90168afc1f08c27b252ee7c8f9f90c7c024ccdc51d6858d1b7babce35f",
+    "resolvedContentAndRecipeData": "311f03976c2c8369c807b41afe3399f011ea6f1ad4ccc928b4b9276ef155f6d1",
     "explicitTopicReadiness": "5652c4ce7fc49028a46cf768f64b6f25c49236fc90e25fce0f42c66d42dfab31",
     "reasoningQuestionData": "caafb323ca7d5a04971f91ad369d68c3a8da5e43839b39d8cd76192d1497bad2",
     "nestedTeachingData": "b74ddd2f8575fe1bef1d07424db49de126bc94700166eec88f5dc0c2e79e1770"
@@ -510,8 +513,8 @@
     "pulmonaryAirwayLandmarks": 3,
     "pulmonaryAirwayContexts": 2,
     "ventricularRelationshipPresets": 3,
-    "stages": 154,
-    "focuses": 144
+    "stages": 159,
+    "focuses": 149
   },
   "practice": {
     "identificationModes": [

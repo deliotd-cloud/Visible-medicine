@@ -2,10 +2,10 @@
   "passed": true,
   "regions": 11,
   "wholeBody": true,
-  "stages": 154,
-  "focusedViews": 144,
-  "checks": 4590,
-  "cameraChecks": 11088,
+  "stages": 159,
+  "focusedViews": 149,
+  "checks": 4740,
+  "cameraChecks": 11448,
   "structures": 1022,
   "clinicalValidation": false,
   "browserInteractionTesting": false,
@@ -177,6 +177,41 @@
       "kind": "window",
       "visible": 16,
       "removed": 50
+    },
+    {
+      "region": "forearm",
+      "stage": "elbow-bones",
+      "kind": "window",
+      "visible": 6,
+      "removed": 60
+    },
+    {
+      "region": "forearm",
+      "stage": "elbow-humeroulnar",
+      "kind": "window",
+      "visible": 4,
+      "removed": 62
+    },
+    {
+      "region": "forearm",
+      "stage": "elbow-radiocapitellar",
+      "kind": "window",
+      "visible": 4,
+      "removed": 62
+    },
+    {
+      "region": "forearm",
+      "stage": "elbow-proximal-radioulnar",
+      "kind": "window",
+      "visible": 4,
+      "removed": 62
+    },
+    {
+      "region": "forearm",
+      "stage": "elbow-supinator",
+      "kind": "window",
+      "visible": 8,
+      "removed": 58
     },
     {
       "region": "hand",

@@ -1,6 +1,7 @@
 // Offline, exact teaching-history reconstruction; never runtime content or approvals.
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
+import { preElbowRecipeProfiles } from './elbow-study-history.mjs';
 import before from "../content/wrist-imaging.before.json" with { type: "json" };
 import after from "../content/wrist-imaging.transition.json" with { type: "json" };
 import pins from "../content/wrist-imaging-pins.json" with { type: "json" };
@@ -63,5 +64,5 @@ export function authoringBeforeWristImaging({ api, catalog }) {
     const { readiness: _r, ...shown } = bodyLesson(s, tab);
     return shown;
   };
-  return { ...api, bodyLesson, bodyContent };
+  return { ...api, bodyLesson, bodyContent, dissectionProfiles: preElbowRecipeProfiles(api.dissectionProfiles) };
 }

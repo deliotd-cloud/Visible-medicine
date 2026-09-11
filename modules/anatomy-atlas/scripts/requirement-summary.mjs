@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Focused elbow dissection](ELBOW_STUDIES.md) adds five Forearm studies using eight existing bone/muscle selections. Stable source-derived close-ups, real-surface labels and reversible windows reuse the existing Study controls. Whole structures remain intact; no new nerve, ligament, cartilage, simulated motion or scan correspondence is supplied.
+
 [Wrist-bone imaging orientation](WRIST_IMAGING_TEACHING.md) adds 48 X-ray/CT/MRI drafts across sixteen existing carpal selections: five groups / fifteen distinct modality topics, with eight bone-specific cautions. The existing Imaging tabs are reused. No new surface, radiograph, CT voxel, MR signal, patient registration or clinical approval is supplied; ultrasound remains unchanged.
 
 [Arterial connections](ARTERIAL_CONNECTIONS.md) offers upstream/downstream and communicating-neighbour exploration for ${anatomy.arterialConnections.selections} existing source selections through ${anatomy.arterialConnections.relationships} mapped relationships (${anatomy.arterialConnections.concepts} concepts; ${anatomy.arterialConnections.alternativeRelationships} alternative routes, not simultaneous donor connections). A selected-artery panel stays collapsed; regional isolation is reversible and outside neighbours use source-bound whole-body links. Missing segments remain explicit; no vessel lumen, flow or patient registration is invented.

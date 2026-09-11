@@ -15,6 +15,7 @@ import { forearmVascularStudySets } from '../lib/forearm-vascular-anatomy.ts';
 import { acralBoneStudySets, acralBoneReferences } from '../lib/acral-bone-studies.ts';
 import { spinalLevelStudySets, spinalLevelReferences } from '../lib/spinal-level-studies.ts';
 import { kneeStudySets, kneeStudyReferences } from '../lib/knee-studies.ts';
+import { elbowStudySets, elbowStudyReferences } from '../content/elbow-studies.ts';
 import {
   orbitalMotorStudySets,
   orbitalMotorReferences,
@@ -1157,6 +1158,7 @@ for (const study of [
   ...acralBoneStudySets,
   ...spinalLevelStudySets,
   ...kneeStudySets,
+  ...elbowStudySets,
 ]) {
   for (const [index, region] of study.regions.entries()) {
     const rule = { fmaIds: study.targetFmaIds };
@@ -1191,6 +1193,7 @@ for (const region of ['hand', 'foot'] as const)
   dissectionProfiles[region].references.push(...acralBoneReferences[region]);
 dissectionProfiles.spine.references.push(...spinalLevelReferences);
 dissectionProfiles.leg.references.push(...kneeStudyReferences);
+dissectionProfiles.forearm.references.push(...elbowStudyReferences);
 
 // Focus-only entries keep target-presence gating under laterality filters.
 // They remain searchable and support the same removal, isolation and history

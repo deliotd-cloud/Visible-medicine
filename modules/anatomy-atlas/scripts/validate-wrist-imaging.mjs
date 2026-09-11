@@ -26,7 +26,7 @@ assert.equal(
       ),
     })),
     shoulder: api.structures,
-    recipes: api.dissectionProfiles,
+    recipes: previous.dissectionProfiles,
   }),
   before.allLessonsAndRecipesHash,
   "Every earlier lesson and study recipe preserved",

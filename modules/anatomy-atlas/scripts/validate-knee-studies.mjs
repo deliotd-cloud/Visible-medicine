@@ -9,6 +9,7 @@ import { dissectionProfiles, stageStructures, initialDissection, dissectionReduc
 import { studyLibrary, filterStudyLibrary } from '../lib/study-library.ts';
 import { makeStudyLink, parseStudyLink, resolveStudyLink } from '../lib/study-links.ts';
 import { preKneeStudyRecipeProfiles, spinalLevelProfilesHash, kneeStudyProfilesHash } from './recipe-history.mjs';
+import { preElbowRecipeProfiles } from './elbow-study-history.mjs';
 
 let checks = 0;
 const same = (actual, expected, message) => { checks++; assert.deepEqual(actual, expected, message); };
@@ -16,7 +17,7 @@ const hash = (value) => createHash('sha256').update(value).digest('hex');
 const raw = await readFile('public/models/bodyparts3d/full-body/catalog.json');
 same(hash(raw), '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7');
 const catalog = JSON.parse(raw), before = JSON.stringify(catalog), profile = dissectionProfiles.leg;
-same(hash(JSON.stringify(dissectionProfiles)), kneeStudyProfilesHash);
+same(hash(JSON.stringify(preElbowRecipeProfiles(dissectionProfiles))), kneeStudyProfilesHash);
 same(hash(JSON.stringify(preKneeStudyRecipeProfiles(dissectionProfiles))), spinalLevelProfilesHash);
 const expectedNames = {
   'knee-bones': ['femur', 'fibula', 'patella', 'tibia'],

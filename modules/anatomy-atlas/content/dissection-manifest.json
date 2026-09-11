@@ -4329,7 +4329,9 @@
         "Source muscle heads may extend across the elbow; tendons are not always independent objects."
       ],
       "references": [
-        "https://anatomy.elpaso.ttuhsc.edu/schemes/forearm_tables.html"
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/forearm_tables.html",
+        "https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/joint-tables/joints-and-ligaments-of-the-upper-limb/",
+        "https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-upper-limb/"
       ],
       "stages": [
         {
@@ -4867,6 +4869,164 @@
             "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
             "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
           ]
+        },
+        {
+          "id": "elbow-bones",
+          "title": "Elbow: bony relationships",
+          "description": "Expose the distal humerus and proximal radius/ulna. Select Left or Right for one elbow, then rotate to compare the three articulations.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA23130",
+                "FMA23131",
+                "FMA23464",
+                "FMA23465",
+                "FMA23467",
+                "FMA23468"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "humerus$",
+            "radius$",
+            "ulna$"
+          ],
+          "inspect": "Distinguish humeroulnar, radiocapitellar and proximal radioulnar relationships. A common region does not make these the same articular surface. Whole source bones and muscles remain selectable; the close-up is camera framing, not segmentation. Cartilage, capsule, collateral/annular ligaments and radial nerve branches are not supplied by these views. Zero separation shows source positions; this is not joint motion, a surgical approach, injury or a registered scan.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+            "vm:anatomy:body:forearm:left:bone:left-radius",
+            "vm:anatomy:body:forearm:left:bone:left-ulna",
+            "vm:anatomy:body:forearm:right:bone:right-radius",
+            "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+            "vm:anatomy:body:forearm:right:bone:right-ulna"
+          ]
+        },
+        {
+          "id": "elbow-humeroulnar",
+          "title": "Elbow: humeroulnar window",
+          "description": "Set the radius and soft tissues aside to compare the humerus with the proximal ulna. Undo or Bony relationships restores the radius.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA23130",
+                "FMA23131",
+                "FMA23467",
+                "FMA23468"
+              ]
+            }
+          ],
+          "view": "posterior",
+          "landmarks": [
+            "humerus$",
+            "ulna$"
+          ],
+          "inspect": "Rotate from the olecranon towards the trochlear-notch region. Removing a whole radius only opens the view; it is not a dislocation or resection. Whole source bones and muscles remain selectable; the close-up is camera framing, not segmentation. Cartilage, capsule, collateral/annular ligaments and radial nerve branches are not supplied by these views. Zero separation shows source positions; this is not joint motion, a surgical approach, injury or a registered scan.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+            "vm:anatomy:body:forearm:left:bone:left-ulna",
+            "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+            "vm:anatomy:body:forearm:right:bone:right-ulna"
+          ]
+        },
+        {
+          "id": "elbow-radiocapitellar",
+          "title": "Elbow: radiocapitellar window",
+          "description": "Set the ulna and soft tissues aside to compare the radial head with the lateral distal humerus. Both bones retain their original position.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA23130",
+                "FMA23131",
+                "FMA23464",
+                "FMA23465"
+              ]
+            }
+          ],
+          "view": "anterior",
+          "landmarks": [
+            "humerus$",
+            "radius$"
+          ],
+          "inspect": "Identify the radial head opposite the capitulum rather than the humeral trochlea. Source contact and display gaps do not measure cartilage or joint congruence. Whole source bones and muscles remain selectable; the close-up is camera framing, not segmentation. Cartilage, capsule, collateral/annular ligaments and radial nerve branches are not supplied by these views. Zero separation shows source positions; this is not joint motion, a surgical approach, injury or a registered scan.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+            "vm:anatomy:body:forearm:left:bone:left-radius",
+            "vm:anatomy:body:forearm:right:bone:right-radius",
+            "vm:anatomy:upper-limb:shoulder:right:bone:humerus"
+          ]
+        },
+        {
+          "id": "elbow-proximal-radioulnar",
+          "title": "Elbow: proximal radioulnar window",
+          "description": "Set the humerus aside to compare the proximal radius and ulna. Start from above and rotate freely to understand their relationship.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA23464",
+                "FMA23465",
+                "FMA23467",
+                "FMA23468"
+              ]
+            }
+          ],
+          "view": "superior",
+          "landmarks": [
+            "radius$",
+            "ulna$"
+          ],
+          "inspect": "Compare the radial-head circumference with the radial-notch region of the ulna. The annular ligament normally retains this relationship but is not modelled here; camera rotation is not forearm pronation/supination. Whole source bones and muscles remain selectable; the close-up is camera framing, not segmentation. Cartilage, capsule, collateral/annular ligaments and radial nerve branches are not supplied by these views. Zero separation shows source positions; this is not joint motion, a surgical approach, injury or a registered scan.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:forearm:left:bone:left-radius",
+            "vm:anatomy:body:forearm:left:bone:left-ulna",
+            "vm:anatomy:body:forearm:right:bone:right-radius",
+            "vm:anatomy:body:forearm:right:bone:right-ulna"
+          ]
+        },
+        {
+          "id": "elbow-supinator",
+          "title": "Elbow: supinator exposed",
+          "description": "Expose the supplied supinator surfaces against the three bones, with overlying forearm muscles hidden. Select the muscle for its existing teaching.",
+          "only": [
+            {
+              "fmaIds": [
+                "FMA38513",
+                "FMA38514"
+              ]
+            },
+            {
+              "fmaIds": [
+                "FMA23130",
+                "FMA23131",
+                "FMA23464",
+                "FMA23465",
+                "FMA23467",
+                "FMA23468"
+              ]
+            }
+          ],
+          "view": "posterior",
+          "landmarks": [
+            "supinator$",
+            "radius$",
+            "ulna$"
+          ],
+          "inspect": "Supinator turns the radius during supination; this static view does not simulate that action. Left/right selections represent whole source muscles, not separately segmented layers or a validated nerve tunnel. Anconeus belongs to the current arm scope and is not silently imported into this view. Whole source bones and muscles remain selectable; the close-up is camera framing, not segmentation. Cartilage, capsule, collateral/annular ligaments and radial nerve branches are not supplied by these views. Zero separation shows source positions; this is not joint motion, a surgical approach, injury or a registered scan.",
+          "kind": "window",
+          "visibleStructureIds": [
+            "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+            "vm:anatomy:body:forearm:left:bone:left-radius",
+            "vm:anatomy:body:forearm:left:bone:left-ulna",
+            "vm:anatomy:body:forearm:right:bone:right-radius",
+            "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+            "vm:anatomy:body:forearm:right:bone:right-ulna",
+            "vm:anatomy:body:forearm:right:muscle:right-supinator",
+            "vm:anatomy:body:forearm:left:muscle:left-supinator"
+          ]
         }
       ],
       "focuses": [
@@ -5207,6 +5367,160 @@
             "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
             "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
             "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
+          ]
+        },
+        {
+          "id": "elbow-bones",
+          "title": "Elbow: bony relationships",
+          "rule": {
+            "fmaIds": [
+              "FMA23130",
+              "FMA23131",
+              "FMA23464",
+              "FMA23465",
+              "FMA23467",
+              "FMA23468"
+            ]
+          },
+          "context": [],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Expose the distal humerus and proximal radius/ulna. Select Left or Right for one elbow, then rotate to compare the three articulations.",
+          "inspect": "Distinguish humeroulnar, radiocapitellar and proximal radioulnar relationships. A common region does not make these the same articular surface. Whole source bones and muscles remain selectable; the close-up is camera framing, not segmentation. Cartilage, capsule, collateral/annular ligaments and radial nerve branches are not supplied by these views. Zero separation shows source positions; this is not joint motion, a surgical approach, injury or a registered scan.",
+          "landmarks": [
+            "humerus$",
+            "radius$",
+            "ulna$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+            "vm:anatomy:body:forearm:left:bone:left-radius",
+            "vm:anatomy:body:forearm:left:bone:left-ulna",
+            "vm:anatomy:body:forearm:right:bone:right-radius",
+            "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+            "vm:anatomy:body:forearm:right:bone:right-ulna"
+          ]
+        },
+        {
+          "id": "elbow-humeroulnar",
+          "title": "Elbow: humeroulnar window",
+          "rule": {
+            "fmaIds": [
+              "FMA23130",
+              "FMA23131",
+              "FMA23467",
+              "FMA23468"
+            ]
+          },
+          "context": [],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Set the radius and soft tissues aside to compare the humerus with the proximal ulna. Undo or Bony relationships restores the radius.",
+          "inspect": "Rotate from the olecranon towards the trochlear-notch region. Removing a whole radius only opens the view; it is not a dislocation or resection. Whole source bones and muscles remain selectable; the close-up is camera framing, not segmentation. Cartilage, capsule, collateral/annular ligaments and radial nerve branches are not supplied by these views. Zero separation shows source positions; this is not joint motion, a surgical approach, injury or a registered scan.",
+          "landmarks": [
+            "humerus$",
+            "ulna$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+            "vm:anatomy:body:forearm:left:bone:left-ulna",
+            "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+            "vm:anatomy:body:forearm:right:bone:right-ulna"
+          ]
+        },
+        {
+          "id": "elbow-radiocapitellar",
+          "title": "Elbow: radiocapitellar window",
+          "rule": {
+            "fmaIds": [
+              "FMA23130",
+              "FMA23131",
+              "FMA23464",
+              "FMA23465"
+            ]
+          },
+          "context": [],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Set the ulna and soft tissues aside to compare the radial head with the lateral distal humerus. Both bones retain their original position.",
+          "inspect": "Identify the radial head opposite the capitulum rather than the humeral trochlea. Source contact and display gaps do not measure cartilage or joint congruence. Whole source bones and muscles remain selectable; the close-up is camera framing, not segmentation. Cartilage, capsule, collateral/annular ligaments and radial nerve branches are not supplied by these views. Zero separation shows source positions; this is not joint motion, a surgical approach, injury or a registered scan.",
+          "landmarks": [
+            "humerus$",
+            "radius$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+            "vm:anatomy:body:forearm:left:bone:left-radius",
+            "vm:anatomy:body:forearm:right:bone:right-radius",
+            "vm:anatomy:upper-limb:shoulder:right:bone:humerus"
+          ]
+        },
+        {
+          "id": "elbow-proximal-radioulnar",
+          "title": "Elbow: proximal radioulnar window",
+          "rule": {
+            "fmaIds": [
+              "FMA23464",
+              "FMA23465",
+              "FMA23467",
+              "FMA23468"
+            ]
+          },
+          "context": [],
+          "includeSkeleton": false,
+          "view": "superior",
+          "description": "Set the humerus aside to compare the proximal radius and ulna. Start from above and rotate freely to understand their relationship.",
+          "inspect": "Compare the radial-head circumference with the radial-notch region of the ulna. The annular ligament normally retains this relationship but is not modelled here; camera rotation is not forearm pronation/supination. Whole source bones and muscles remain selectable; the close-up is camera framing, not segmentation. Cartilage, capsule, collateral/annular ligaments and radial nerve branches are not supplied by these views. Zero separation shows source positions; this is not joint motion, a surgical approach, injury or a registered scan.",
+          "landmarks": [
+            "radius$",
+            "ulna$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:forearm:left:bone:left-radius",
+            "vm:anatomy:body:forearm:left:bone:left-ulna",
+            "vm:anatomy:body:forearm:right:bone:right-radius",
+            "vm:anatomy:body:forearm:right:bone:right-ulna"
+          ]
+        },
+        {
+          "id": "elbow-supinator",
+          "title": "Elbow: supinator exposed",
+          "rule": {
+            "fmaIds": [
+              "FMA38513",
+              "FMA38514"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA23130",
+                "FMA23131",
+                "FMA23464",
+                "FMA23465",
+                "FMA23467",
+                "FMA23468"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Expose the supplied supinator surfaces against the three bones, with overlying forearm muscles hidden. Select the muscle for its existing teaching.",
+          "inspect": "Supinator turns the radius during supination; this static view does not simulate that action. Left/right selections represent whole source muscles, not separately segmented layers or a validated nerve tunnel. Anconeus belongs to the current arm scope and is not silently imported into this view. Whole source bones and muscles remain selectable; the close-up is camera framing, not segmentation. Cartilage, capsule, collateral/annular ligaments and radial nerve branches are not supplied by these views. Zero separation shows source positions; this is not joint motion, a surgical approach, injury or a registered scan.",
+          "landmarks": [
+            "supinator$",
+            "radius$",
+            "ulna$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+            "vm:anatomy:body:forearm:left:bone:left-radius",
+            "vm:anatomy:body:forearm:left:bone:left-ulna",
+            "vm:anatomy:body:forearm:right:bone:right-radius",
+            "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+            "vm:anatomy:body:forearm:right:bone:right-ulna",
+            "vm:anatomy:body:forearm:right:muscle:right-supinator",
+            "vm:anatomy:body:forearm:left:muscle:left-supinator"
           ]
         }
       ]

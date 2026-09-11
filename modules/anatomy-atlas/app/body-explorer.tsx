@@ -128,6 +128,7 @@ import {
 import { relatedStudyViews } from '@/lib/study-navigation';
 import type { StudyCamera, StudyView } from '@/lib/study-views';
 import { kneeStudyBounds } from '@/lib/knee-studies';
+import { elbowStudyBounds } from '@/lib/elbow-studies';
 import { anatomyRetryPlan } from '@/lib/anatomy-load-retry';
 import {
   copyRecoveryCamera,
@@ -445,14 +446,17 @@ export default function BodyExplorer({
     (s) => systems[s.system] && !hiddenIds.includes(s.id),
   );
   const enabledIds = new Set(available.map((item) => item.id));
-  const kneeCloseUp = useMemo(() => kneeStudyBounds({
+  const jointCloseUp = useMemo(() => {
+    const input = {
     region: initialRegion,
     recipeId: dissection.focusId ?? dissection.stageId,
     structures: regionStructures,
     visibleIds: available.map((s) => s.id),
     enabled: !exam && !focus && !isolated && !ghostRemoved && !showOrigins &&
       explode === 0 && layout === 'spatial' && inspection.plane === 'off',
-  }), [initialRegion, dissection.focusId, dissection.stageId, regionStructures,
+    };
+    return kneeStudyBounds(input) ?? elbowStudyBounds({ ...input, catalog });
+  }, [catalog, initialRegion, dissection.focusId, dissection.stageId, regionStructures,
     available, exam, focus, isolated, ghostRemoved, showOrigins, explode, layout, inspection.plane]);
   const guidance = dissectionGuidance(
     regionStructures,
@@ -1418,7 +1422,7 @@ export default function BodyExplorer({
                 focus={focus}
                 exam={exam}
                 inspection={exam ? initialInspection : inspection}
-                cameraBounds={kneeCloseUp}
+                cameraBounds={jointCloseUp}
                 plate={plate && !exam}
                 cameraCapture={cameraCapture}
                 cameraRestore={cameraRestore}
@@ -1539,8 +1543,8 @@ export default function BodyExplorer({
               </Button>
             </div>
             <div className="body-canvas-caption">
-              {kneeCloseUp
-                ? 'Knee close-up · Whole bones extend beyond the view · Pan / pinch to explore'
+              {jointCloseUp
+                ? `${initialRegion === 'forearm' ? 'Elbow' : 'Knee'} close-up · Whole bones extend beyond the view · Pan / pinch to explore`
                 : layout === 'tray' && !exam
                 ? explode === 100
                   ? 'Arranged view · Pan / pinch to zoom · Choose a direction · Not anatomical positions'

@@ -1,6 +1,16 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — wrist-bone imaging orientation (current source)
+## 11 September 2026 — focused elbow dissection (current source)
+
+Source `33682c3e1ba1924ae4c419cca498e526b2b98595`, tree `803d3b8b83605eec140c3509c0c9bc5ff0b6c80c`, parent `6c9acd0c0ea1ae10f10f363495d8052242901168`. Thirty paths mirrored once; 1,570 matching files / 414,875,209 bytes / 112 retained GLBs. No common credential-signature warnings (not exhaustive). Private Sites source push and independent remote main match exactly. GitHub delivery remains unconfirmed; this is not conversation or private-D1 recovery. Main website unchanged outside this module/receipt.
+
+Forearm → Study adds five elbow windows using eight existing selections: bony, humeroulnar, radiocapitellar, proximal radioulnar and exposed supinator. Stable per-side camera bounds and actual in-view vertex labels preserve whole source meshes. Removal/Undo/Redo, side choices and links use existing controls. Unsupported sources, unrelated restored anatomy, separation, exam/isolate and cutaway revert to ordinary framing. Existing knee views and all 9,198 body teaching topics are preserved, including the previous wrist drafts. No new geometry, simulated joint motion, patient scans, dependency, paid asset or entitlement. UAMS is a factual reading reference, not imported imagery or prose. Clinical and real browser/device acceptance remain outstanding; browser untouched.
+
+Passed: 605 elbow checks / 15 side scopes / 52 links / 52 label checks / 171 rejection cases; 395 existing knee checks; 4,740 dissection and 11,448 camera checks; 97,605 Undo/Redo checks; wrist/hip/spinal imaging, both limb-arterial suites, 3,066 private-review contexts, 235 shoulder-review and imaging-link checks; TypeScript, focused lint, inventory freshness and production build. All 108 delivered models preserve decoded geometry. The final lint fix only supplies explicit test sort comparators; renderer fingerprint remains unchanged from the successful build.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-elbow-studies-2026-09-11`: runtime 109,451,713 bytes, SHA256 `44f8833387d152f7e4e5b1bf06ca34f71dedfe60296bf0ee40e6c83550f4ec9e`; delta 1,894,400 bytes, SHA256 `9deb3cb8ecc579c24ec7854d1bb82a6df1b8ec7613041589666488519e22f489`; incremental bundle 23,841 bytes, SHA256 `16b59dfb6317099e46b7c38b21e0ddf49e2ad59285e5a337d5ceeb9cd3f3e9e4`. Bundle requires the exact source parent, not standalone. Retain the full release150 bundle plus SPARC, abdominal, wrist and elbow incrementals. Existing C:/D: source, mirror, archives and verification repo remain. Final publication and restore evidence belongs in `work/ATLAS_ELBOW_STUDIES_2026-09-11.md` and its D: companion; do not duplicate a saved deployment. Continue wider anatomy/dissection, not this introductory elbow pass or routine oral expansion.
+
+## 11 September 2026 — wrist-bone imaging orientation (previous source)
 
 Source `6c9acd0c0ea1ae10f10f363495d8052242901168`, tree `cfe3bc411699d7ecf60dc8101ad2eb1c94303d99`, parent `56e9dc9e0e16f6cfbf3087a5af01aefde50e30d1`. Twenty-five paths mirrored once; 1,561 matching files / 414,812,343 bytes / 112 retained GLBs. No common credential-signature warnings (not exhaustive). Private Sites source push and independent remote main match exactly. GitHub delivery remains unconfirmed; this is not conversation or private-D1 recovery. Main website unchanged outside this module/receipt.
 
