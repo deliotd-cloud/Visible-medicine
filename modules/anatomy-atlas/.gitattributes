@@ -11,3 +11,7 @@ content/sources/um-limb/*.stl -text -diff
 content/sources/bodyparts3d-v3-abdominal-wall/* -text
 content/sources/bodyparts3d-v3-abdominal-wall/*.obj -diff
 public/models/bodyparts3d-v3/abdominal-wall/* -text
+# Byte-pinned comparative-source metadata and original cross-tree audit evidence.
+content/reference-male-inventory.json -text
+content/prototypes/reference-cross-tree/*/*.obj -text -diff
+docs/reference-cross-tree-audit.json -text

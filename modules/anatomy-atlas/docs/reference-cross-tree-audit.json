@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "scope": "Audit-only retained original source bytes; no mesh admission, clinical approval, geometry repair or patient registration.",
+  "archives": [
+    {
+      "tree": "isa",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "directorySha256": "879093c967e40eca17a8f21ba5b08ba9913760118502e99f68ce3c03f659b559",
+      "entryCount": 2234
+    },
+    {
+      "tree": "partof",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/partof_BP3D_4.0_obj_99.zip",
+      "directorySha256": "eec3420cee5f54a6039a441b9801402bf205145719dedaf72fbfd03538fde144",
+      "entryCount": 1258
+    }
+  ],
+  "sources": [
+    {
+      "tree": "isa",
+      "file": "FJ3481",
+      "path": "content/prototypes/reference-cross-tree/isa/FJ3481.obj",
+      "bytes": 89028,
+      "sha256": "78cea8621b3af0eb51ec9335e6ccfb47f2196fadb22e77ee507753af9db27fd6",
+      "geometrySha256": "2a770c96d15522f20993c92626944a0b422339942ad2c682645641d2c341cd4a"
+    },
+    {
+      "tree": "isa",
+      "file": "FJ3581",
+      "path": "content/prototypes/reference-cross-tree/isa/FJ3581.obj",
+      "bytes": 30181,
+      "sha256": "d4302364811871902decf8cb1975f043f7780736d9eec17334524abf935b2274",
+      "geometrySha256": "2f25a27957969c4c0e2854d1cc6698943cd5a71debfb9488702d9dc51ee3ee11"
+    },
+    {
+      "tree": "isa",
+      "file": "FJ3582",
+      "path": "content/prototypes/reference-cross-tree/isa/FJ3582.obj",
+      "bytes": 39276,
+      "sha256": "d8e54545de3adad19315175c677c637150f1bdf34594b9e99bbe02b870c0d9a3",
+      "geometrySha256": "8e81fad008c5ecdc149c73476fbb43d612eab8f8282b4a9b5e9371d95f936241"
+    },
+    {
+      "tree": "isa",
+      "file": "FJ3584",
+      "path": "content/prototypes/reference-cross-tree/isa/FJ3584.obj",
+      "bytes": 58362,
+      "sha256": "d71a9a39bc150c49d6610911863ad69f6cc8e77ae67b2d7b086bbbfd295a6481",
+      "geometrySha256": "3995399a28157deb5c40ba065753a60b9cc788bff31f78f83aa14b8b10f4e96b"
+    },
+    {
+      "tree": "partof",
+      "file": "FJ3481",
+      "path": "content/prototypes/reference-cross-tree/partof/FJ3481.obj",
+      "bytes": 89031,
+      "sha256": "574b3b363b93b8a542259336d6fed632db907251a39e7b19332a7ee207f4de4a",
+      "geometrySha256": "2a770c96d15522f20993c92626944a0b422339942ad2c682645641d2c341cd4a"
+    },
+    {
+      "tree": "partof",
+      "file": "FJ3581",
+      "path": "content/prototypes/reference-cross-tree/partof/FJ3581.obj",
+      "bytes": 30184,
+      "sha256": "00896e3b9da9900822733640ae94ff19265665a67b44d845a93d614a2a729a77",
+      "geometrySha256": "2f25a27957969c4c0e2854d1cc6698943cd5a71debfb9488702d9dc51ee3ee11"
+    },
+    {
+      "tree": "partof",
+      "file": "FJ3582",
+      "path": "content/prototypes/reference-cross-tree/partof/FJ3582.obj",
+      "bytes": 39279,
+      "sha256": "e73ade72f7f868af514bab99ba626e98e496995fa55972ba9a4f310f3242bf1d",
+      "geometrySha256": "8e81fad008c5ecdc149c73476fbb43d612eab8f8282b4a9b5e9371d95f936241"
+    },
+    {
+      "tree": "partof",
+      "file": "FJ3584",
+      "path": "content/prototypes/reference-cross-tree/partof/FJ3584.obj",
+      "bytes": 58365,
+      "sha256": "445644cb2d0342f24978aed1743e32b2ece4100a9050eded56537263db07cc9f",
+      "geometrySha256": "3995399a28157deb5c40ba065753a60b9cc788bff31f78f83aa14b8b10f4e96b"
+    }
+  ],
+  "comparisons": [
+    {
+      "file": "FJ3481",
+      "identicalBytes": false,
+      "identicalGeometry": true
+    },
+    {
+      "file": "FJ3581",
+      "identicalBytes": false,
+      "identicalGeometry": true
+    },
+    {
+      "file": "FJ3582",
+      "identicalBytes": false,
+      "identicalGeometry": true
+    },
+    {
+      "file": "FJ3584",
+      "identicalBytes": false,
+      "identicalGeometry": true
+    }
+  ]
+}

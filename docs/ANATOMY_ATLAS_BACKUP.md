@@ -1,5 +1,17 @@
 # Anatomy atlas backup — 11 September 2026
 
+## 11 September 2026 — audited-source coverage and label work (current source)
+
+Source `b14ac8555c78af461fd28772691632117079e180`, tree `a1add43f528e787e3b44f886f8bc33a4a40c6fc9`, parent `fb85025eb3df7f3bdd3313c29a49f8a4e7899a89`. Twenty-six exact source paths mirrored. Source backup audit: 1,716 matching files / 431,187,773 bytes / 118 retained GLBs; common credential-signature scan clear (not exhaustive). The repository remains private, the main website is unchanged, and no private review database, acquired scan or paid lecture is included.
+
+The pinned 2,234-file reference comparison resolves the 532 root-only differences into 22 nested-covered pieces, 43 direct holds, one display exclusion, one related cross-tree hold and 465 review candidates. Four renal-study IS-A/PART-OF equivalents now have independently retained original vertex/face evidence; all eight OBJ originals are audit-only under CC BY 4.0. MIT metadata-extraction notice retained. This is not 465 confirmed missing structures, automatic mesh admission or clinical approval.
+
+Shared close-up label work now resolves only requested labels: 1,042 synthetic candidates yield eight resolver calls, one in focus and zero with labels suppressed. No runtime anatomy, source resolution, diagram appearance, clipping, separation mechanism or UI layout changed. Source ledger/cross-tree/hash tests, 981,170 screen-label checks, knee/elbow regressions, TypeScript, fresh requirements, renderer fingerprint, isolated 3,126-track SQLite review tests and production build passed. No browser/GPU/mobile or clinical acceptance claimed. Renderer fingerprint: `d27acf47df5d8a9044937809e77615e0f8a4f554f78640142ed80664309fa4c8`; existing approvals do not silently carry forward.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-reference-coverage-2026-09-11`: .site.tar.gz 111,103,914 bytes / SHA-256 `394e52f1659feeea9e4ea8a8cb77979d11d947c2063dc82638c817146eb693a4`; .delta.tar 1,208,320 bytes / `bb8e1d8ee3efb499250c85285dcf184c81d1fe8f6473847081002bc5b90a582d`; .incremental.bundle 119,023 bytes / `0e94b8369e342857c7009cfc008dec12a33ae23a4f53f222c87ac3eeac13e651`. Runtime archive: 389 safe unique entries, exact hosting manifest and both original migrations. Bare restore at `refs/verification/reference-coverage-20260911` passed full fsck and exact SHA/tree checks; verifier main unchanged. Retain the full bundle and every increment; this increment requires the parent above.
+
+Private Site version 160 has been saved from this exact source; deployment is in progress at this receipt. The final work/D: checkpoint records its terminal status and the verified GitHub commit. No audience or website-main change. Next: source-audited regional vessel/neural additions, measured batching, independently sourced female/brain/renal modules, authorized CT-head integration and compact imaging/clinical teaching. The broad goal remains active; earlier milestone sections below are history.
+
 ## 11 September 2026 — optional decoded-volume renderer (current source)
 
 Source `fb85025eb3df7f3bdd3313c29a49f8a4e7899a89`, tree `4a64f3ae3c88d4182dbbd50b0c062121a4125ab1`, parent `f8929bc09f406884e576f6f23fa472d38b992ab3`. Thirteen exact source paths mirrored, without changing the main website. Original anatomy, dependency lockfile, both database migrations, private review data and CT-head source materials are unchanged.

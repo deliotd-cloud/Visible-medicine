@@ -33,7 +33,7 @@ import { systemOpacity, type InspectionState } from '@/lib/inspection-state';
 import type { SelectionBounds } from '@/lib/selection-visibility';
 import type { StudyCamera } from '@/lib/study-views';
 import { neuroGroupFor } from '@/lib/neuroanatomy';
-import { sceneLabelIds } from '@/lib/scene-labels';
+import { sceneLabelIds, sceneLabelAnchors } from '@/lib/scene-labels';
 import { closeUpLabelAnchor } from '@/lib/close-up-labels';
 import { SceneLabel, SceneLabelLayer } from './scene-label-layer';
 import { vesselColor } from '@/lib/anatomy-vessels';
@@ -139,12 +139,21 @@ function Bundle({
     });
     return map;
   }, [scene]);
-  const labelAnchors = useMemo(() => new Map(items.map((structure) => {
-    const geometry = geometries.get(structure.nodeName);
-    return [structure.id, geometry
-      ? closeUpLabelAnchor(geometry, structure.anchor, props.cameraBounds)
-      : null];
-  })), [items, geometries, props.cameraBounds]);
+  const labelAnchors = useMemo(
+    () =>
+      sceneLabelAnchors(
+        props.labels && !props.exam,
+        labelIds,
+        items,
+        (structure) => {
+          const geometry = geometries.get(structure.nodeName);
+          return geometry
+            ? closeUpLabelAnchor(geometry, structure.anchor, props.cameraBounds)
+            : null;
+        },
+      ),
+    [items, geometries, props.cameraBounds, props.labels, props.exam, labelIds],
+  );
   return (
     <group dispose={null}>
       {items.map((structure) => {
