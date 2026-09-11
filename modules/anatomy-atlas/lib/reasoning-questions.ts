@@ -5,7 +5,9 @@ import { thighReasoningConcepts } from './thigh-reasoning';
 import { legReasoningConcepts } from './leg-reasoning';
 import { footReasoningConcepts } from './foot-reasoning';
 import { headNeckReasoningConcepts } from './head-neck-reasoning';
-type ReasoningBinding = { fma: string; side: 'right' | 'left' } & (
+import { trunkReasoningConcepts } from './trunk-reasoning';
+// "midline" retains the exact catalogue tag, including bilateral source groups.
+type ReasoningBinding = { fma: string; side: 'right' | 'left' | 'midline' } & (
   | { file: string; files?: never }
   | { file?: never; files: readonly [string, string, ...string[]] }
 );
@@ -18,10 +20,15 @@ export interface ReasoningConcept {
     | 'thigh'
     | 'leg'
     | 'foot'
-    | 'head-neck';
+    | 'head-neck'
+    | 'spine'
+    | 'thorax'
+    | 'abdomen';
   // Exact ordered source memberships for a cross-region representation.
   // Omission retains the original single-region contract.
   sourceRegions?: readonly string[];
+  // Default preserves earlier isa bindings; partof must be explicitly authored.
+  sourceTree?: 'isa' | 'partof';
   bindings: readonly ReasoningBinding[];
   prompt: string;
   explanation: string;
@@ -329,17 +336,18 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   ...legReasoningConcepts,
   ...footReasoningConcepts,
   ...headNeckReasoningConcepts,
+  ...trunkReasoningConcepts,
 ];
 export function reasoningConceptFor(s: BodyStructure) {
   if (
     s.system !== 'muscles' ||
     s.category !== 'muscle' ||
-    s.sourceTree !== 'isa' ||
     s.sources.length === 0
   )
     return undefined;
   return reasoningConcepts.find(
     (c) =>
+      s.sourceTree === (c.sourceTree ?? 'isa') &&
       s.region === c.region &&
       s.regions.length === (c.sourceRegions ?? [c.region]).length &&
       s.regions.every(

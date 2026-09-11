@@ -1,6 +1,20 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — bone/cartilage teaching (current)
+## 11 September 2026 — trunk/back reasoning practice (current)
+
+Source `0bf782a79d731b2621839d38015dcf22122e53f6`, tree `3b1246f8400d25467ca8bc3bd9fe2e455d65ff3a`, parent `50af727465b924f4de36034032fdb2e3cf7ec14b`. Thirteen changed paths mirrored into `modules/anatomy-atlas`; main website unchanged. Sites source push succeeded; full HEAD verified, ephemeral credential cleared.
+
+Twenty original trunk/back concepts add 36 exact source selections: twelve primarily spinal, seven thoracic and one abdominal concept. Current total 100 concepts / 196 representations. Existing 80 questions hash-pinned unchanged. Four midline-tagged selections preserve diaphragm/bilateral intercostal grouping; pectoralis major explicitly requires its complete `partof` identity. Existing compact Practice controls, 20-question cap, post-answer feedback and eligibility guards remain. No anatomy mesh, source catalogue, independent lower-limb lesson, review fingerprint, dependency, patient scan, registration or lecture entitlement changes.
+
+Passed 10,611 reasoning checks including 3,000 negative identity cases and real React feedback for every new choice/skip; 55,935 identification checks across twelve regions; TypeScript; inventory/diff checks; production build and all 107 exact geometry/scene transport checks. The old identification test wrongly required nonempty targets for an opposite-side renal focus; now it verifies the precise eligible set and forbids context-only fallback. Runtime identification/dissection code is unchanged. Clinical/educator/browser/device approval is not claimed.
+
+Native save 141 `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_49603a2ce468819188f732babd9e0b17` and private deployment `appgdep_6aa35b4877888191bca684638faf4e75` SUCCEEDED, terminal `2026-09-11T01:37:38.777276+00:00`, https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site. No pending save/deployment or audience change; background browser preserved.
+
+Recovery stem `work/atlas-trunk-reasoning-2026-09-11`: runtime 99,189,501 bytes SHA256 `edae5ad2c99c59332631324fc62336fe5ff39163b453e53d7b797e0507ef1843`; delta 440,320 bytes SHA256 `211aa185ba5e6db2ec150424adcc11cf04f96a9dbdf5458a9004735fc82d3ccd`; incremental bundle 18,797 bytes SHA256 `8572406b9f56f88754769764a9a7c0c03a0f12a010d89682b8878028d81d05bc`. Bundle requires source parent, not standalone. Archive 341 entries; mirror 1,417 files / 334,504,324 bytes / 111 GLBs; no common credential signatures (not exhaustive). Preparation JSON predates final receipt/publication; never rerun helper or overwrite older artifacts.
+
+Full checkpoint `work/ATLAS_TRUNK_REASONING_2026-09-11.md`. Same-PC recovery and Sites saving do not confirm GitHub delivery, chat/private-review DB backup or complete off-device restoration. Continue substantive wider-body work; routine oral work and completed introductory practice/content passes remain deferred.
+
+## 11 September 2026 — bone/cartilage teaching
 
 Source `50af727465b924f4de36034032fdb2e3cf7ec14b`, tree `00f27b1a45e4f952f81197ccaec32db67f449196`, parent `7aa5fe9eff40360bd3dae8a144ecc21ec314f748`. Eleven changed paths mirrored into `modules/anatomy-atlas`; main website unchanged. Exact Sites source push succeeded; full HEAD verified and ephemeral credential cleared.
 

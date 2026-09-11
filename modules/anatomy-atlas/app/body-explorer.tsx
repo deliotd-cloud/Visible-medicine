@@ -1749,16 +1749,12 @@ export default function BodyExplorer({
                   </p>
                   {practiceMode === 'reason' && !practiceReady && (
                     <p className="vm-practice-note">
-                      Show a target and at least one same-side alternative.
-                      Try{' '}
-                      <a href="/regions/shoulder-arm">Shoulder &amp; arm</a>,{' '}
-                      <a href="/regions/forearm">Forearm</a>,{' '}
-                      <a href="/regions/hand">Hand</a>,{' '}
-                      <a href="/regions/thigh">Hip &amp; thigh</a>,{' '}
-                      <a href="/regions/leg">Knee &amp; leg</a>,{' '}
-                      <a href="/regions/foot">Foot</a> or{' '}
-                      <a href="/regions/head-neck">Head &amp; neck</a>, or use
-                      an identification mode.
+                      Show a target and at least one eligible alternative
+                      with matching laterality (including grouped selections).
+                      {' '}Widen the visible scope, try{' '}
+                      <a href="/regions/spine">Spine &amp; back</a> or{' '}
+                      <a href="/regions/thorax">Thorax</a>, or use an
+                      identification mode.
                     </p>
                   )}
                   <Button

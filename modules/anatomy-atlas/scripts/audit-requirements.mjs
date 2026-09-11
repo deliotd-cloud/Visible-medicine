@@ -302,6 +302,7 @@ for (const path of [
   'app/um-knee-entry.css',
   'lib/um-knee-study.ts',
   'lib/um-limb-studies.ts',
+  'lib/trunk-reasoning.ts',
   'lib/um-limb-teaching.ts',
   'content/um-limb-teaching.ts',
   'content/um-limb-clinical.ts',
