@@ -24,6 +24,12 @@ export type BodyStructure = {
   sourceTree: string;
   sources: Array<{ file: string; sha256: string }>;
   coverageNote: string | null;
+  representation?: {
+    coverage: 'partial';
+    sourceLaterality: 'unspecified';
+    displayLaterality: 'right';
+    description: string;
+  };
   provenance?: {
     method: 'licensed-source-mesh';
     license: string;

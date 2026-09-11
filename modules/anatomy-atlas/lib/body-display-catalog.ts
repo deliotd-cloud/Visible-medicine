@@ -2,6 +2,7 @@ import correction from '../public/models/bodyparts3d/eye-layers/display-correcti
 import pancreaticCorrection from '../public/models/bodyparts3d/pancreas/display-correction.json' with { type: 'json' };
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
 import { addBrachialVeins } from './brachial-veins.ts';
+import { addTentorium } from './tentorium.ts';
 
 const canonical = (value: unknown): string => {
   if (Array.isArray(value)) return `[${value.map(canonical).join(',')}]`;
@@ -37,10 +38,12 @@ export function isPancreasDisplayRecord(s: BodyStructure) {
  * record is replaced atomically, so rendering, labels, practice, focus, saved
  * views and outgoing reference coordinates all consume the same geometry. */
 export function bodyDisplayCatalog(catalog: BodyCatalog): BodyCatalog {
-  return addBrachialVeins(
-    [pancreasDisplayCorrection, eyeDisplayCorrection].reduce(
-      applyDisplayCorrection,
-      catalog,
+  return addTentorium(
+    addBrachialVeins(
+      [pancreasDisplayCorrection, eyeDisplayCorrection].reduce(
+        applyDisplayCorrection,
+        catalog,
+      ),
     ),
   );
 }

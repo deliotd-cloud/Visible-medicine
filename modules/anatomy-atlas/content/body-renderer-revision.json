@@ -50,7 +50,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "8e951a01f1e0a9be488650d01f6aa6751f3e1b3950648e9923903ed15b33a626"
+      "sha256": "7f94bf0663f9a4ac1f1ecfdf3d8656b07ea5743a5e13bcc32e7100ab7778602a"
     },
     {
       "path": "app/body-explorer.css",
@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-types.ts",
-      "sha256": "ce80bb0d47e6d93e69383beb0bc7e9a168d6e5c8e54f6dd698d1771999f0df6e"
+      "sha256": "84a4b5fa3180d6be2669b3146a862b1c4ba9f6419d103f3b64f9c5bc1b793e9f"
     },
     {
       "path": "app/brand.tsx",
@@ -94,7 +94,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "52fe4bc31eb8a99667e64cc1996c454788b9c0d693f0811cbf26c80799e3364d"
+      "sha256": "d96227d1049a2f3a1a21e05825a2d069f79286bd21069345467b4e9b80a42388"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -413,6 +413,10 @@
       "sha256": "7dba2944dd1b4f37e5103bbc1418dab694024b9df45cfdf17ee7fa4ccc59475e"
     },
     {
+      "path": "content/tentorium-studies.ts",
+      "sha256": "7dc07b8f6ff0b466a9f184923860c80a249dde8f39edd0f1b27b86f01e5494d0"
+    },
+    {
       "path": "content/um-bone-cartilage-clinical.ts",
       "sha256": "a4fe264638d77bf5d2fb5dfeaaca2f69466075b5bbcd3f2f66f978c8204c0a8e"
     },
@@ -586,7 +590,11 @@
     },
     {
       "path": "lib/body-display-catalog.ts",
-      "sha256": "b90f3c99ea372586bd3c8717e92bc92826edbda69a7aff64442188bf836de5b5"
+      "sha256": "4c5d6908bb89e68f30b4ae5db6c1ca5571799b93627f58c175788ca287645453"
+    },
+    {
+      "path": "lib/body-source-additions.ts",
+      "sha256": "4f2fd863be487fa704443c2585b941d8fe8f9a534a8c613ff155334a28084708"
     },
     {
       "path": "lib/body-system-presets.ts",
@@ -1069,6 +1077,10 @@
       "sha256": "ce94c530c51cbb1d753c9bf1578e0129be387b66d698819de432fc5bf9fba31d"
     },
     {
+      "path": "lib/tentorium.ts",
+      "sha256": "974332c66ba542c04d602721c3bfe810723ecfdb0e2f8796d33b7c545f55eeab"
+    },
+    {
       "path": "lib/thigh-clinical-curriculum.ts",
       "sha256": "68570f667509ba89549288c8e8b0ec39c64e1ed964dc7280d1d43ae237542c9a"
     },
@@ -1178,7 +1190,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "934dcf296b3314a11f58a92656c8b9a15e1dde7338eb00c011f4e5a84d7cb8c7"
+      "sha256": "6310113f916c3a3553131d3931da6198a89f70ef61ade797f2797761aa2b10c5"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1245,6 +1257,10 @@
       "sha256": "8549a481da385d6751e049478f156cdcdf014d804a922420f19ef6fe948d5d9d"
     },
     {
+      "path": "public/models/bodyparts3d/tentorium/catalog.json",
+      "sha256": "42f4720ad54a07d7e1f89c5eeb13e68673f4c8242aae353c7f4435bb48a7645e"
+    },
+    {
       "path": "public/models/bodyparts3d/ventricles/catalog.json",
       "sha256": "9a9852fe7e3f245c73525b94cd6fee08bd974f015cab5010d01d56e49ceb0a68"
     },
@@ -1277,5 +1293,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "b9e94d7df4674ffd3f649f92762a3cfdd736a8c88eb7564888bf29ce7922781a"
+  "sha256": "5ff70e2c0273037b7c941f86e5bcc3711378a0acc82bc13fd04c2f81d9304d66"
 }

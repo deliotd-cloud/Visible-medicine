@@ -253,6 +253,11 @@ for (const path of [
   'public/models/bodyparts3d/pancreas/display-correction.json',
   'lib/body-display-catalog.ts',
   'lib/brachial-veins.ts',
+  'lib/tentorium.ts',
+  'lib/body-source-additions.ts',
+  'content/tentorium-studies.ts',
+  'public/models/bodyparts3d/tentorium/catalog.json',
+  'docs/tentorium-source-audit.json',
   'public/models/bodyparts3d/brachial-veins/catalog.json',
   'docs/brachial-vein-source-audit.json',
   'lib/elbow-studies.ts',
@@ -754,7 +759,7 @@ const report = {
     revisionIdentities: Object.keys(revisions.revisions).length,
     hasPrivateReviews: false,
     status:
-      'Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot and 1,024 displayed root-body selections (1,022 archival records plus two source-bound additions). This inventory never reads personal review records; nested/independent scopes and acquired imaging remain outside those approvals.',
+      'Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot and 1,025 displayed root-body selections (1,022 archival records plus three source-bound additions, including the incomplete right-sided tentorium). This inventory never reads personal review records; nested/independent scopes and acquired imaging remain outside those approvals.',
   },
   boundaries: {
     scope: 'Current source implementation, not operations performed by this inventory script',

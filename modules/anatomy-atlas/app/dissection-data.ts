@@ -16,6 +16,7 @@ import { acralBoneStudySets, acralBoneReferences } from '../lib/acral-bone-studi
 import { spinalLevelStudySets, spinalLevelReferences } from '../lib/spinal-level-studies.ts';
 import { kneeStudySets, kneeStudyReferences } from '../lib/knee-studies.ts';
 import { elbowStudySets, elbowStudyReferences } from '../content/elbow-studies.ts';
+import { tentoriumStudySets } from '../content/tentorium-studies.ts';
 import {
   orbitalMotorStudySets,
   orbitalMotorReferences,
@@ -712,7 +713,7 @@ export const dissectionProfiles: Record<string, DissectionProfile> = {
     orientation:
       'The neck sequence removes selected superficial muscles. Separate cranial windows bypass the skull to expose the supplied neural subset.',
     limitations: [
-      'Facial coverage is incomplete; meninges and most cranial nerves are absent. Selected neck and intracranial vessel segments are available.',
+      'Facial coverage is incomplete; only a right-sided tentorial source portion is supplied, not complete meninges. Most cranial nerves remain absent. Selected neck and intracranial vessel segments are available.',
       'Compound eyeballs are included, but no full orbital-layer, cranial-base or neck-fascia dissection is supplied.',
       'Cranial windows hide bone; they do not cut a skull flap.',
     ],
@@ -1198,7 +1199,7 @@ dissectionProfiles.forearm.references.push(...elbowStudyReferences);
 // Focus-only entries keep target-presence gating under laterality filters.
 // They remain searchable and support the same removal, isolation and history
 // controls without suggesting successive surgical layers or an internal cutaway.
-for (const study of renalStudySets) {
+for (const study of [...renalStudySets, ...tentoriumStudySets]) {
   for (const region of study.regions) {
     dissectionProfiles[region].focuses.push({
       id: study.id,

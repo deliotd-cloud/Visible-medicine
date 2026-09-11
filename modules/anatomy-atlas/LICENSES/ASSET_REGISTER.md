@@ -1,5 +1,9 @@
 # Asset register
 
+## Partial tentorial reference
+
+`public/models/bodyparts3d/tentorium/`: one 21,924-triangle BodyParts3D 4.0 source surface FMA83966/FJ1843 under CC BY 4.0. Original in `content/sources/tentorium/`. The geometry is right-only despite its whole-fold source label: visible name and metadata disclose partial extent. No mirrored counterpart, fitted anatomy or patient registration. Existing credit and licence/adaptation obligations remain. [Hashes, evidence and validation limits](../docs/TENTORIUM_SOURCE.md).
+
 ## Medial brachial veins
 
 `public/models/bodyparts3d/brachial-veins/` adds two BodyParts3D 4.0 CC BY 4.0 surfaces (FMA22935/FJ2341 and FMA22936/FJ2313), with unchanged source coordinates and all 5,422 triangles. Originals remain in `content/sources/brachial-veins/`. Required BodyParts3D/Database Center for Life Science attribution and adaptation notices are retained. No font, texture, dependency, paid service or scan. See [hashes, source audit, licence evidence and clinical limits](../docs/BRACHIAL_VEIN_ADDITION.md).

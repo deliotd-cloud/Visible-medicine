@@ -33,10 +33,13 @@ const raw = JSON.parse(rawBytes),
   );
 const catalog = api.bodyDisplayCatalog(raw);
 assert.equal(raw.structures.length, 1022);
-assert.equal(catalog.structures.length, 1024);
+assert.equal(catalog.structures.length, 1025);
 assert.equal(JSON.stringify(raw), before);
 assert.equal(api.bodyDisplayCatalog(catalog), catalog);
-assert.deepEqual(catalog.structures.slice(-2), pins.structures);
+assert.deepEqual(
+  catalog.structures.filter((s) => s.bundle === 'brachial-veins'),
+  pins.structures,
+);
 const detached = api.addBrachialVeins(raw);
 detached.structures.at(-1).anchor[0] = 999;
 assert.deepEqual(
@@ -181,7 +184,7 @@ assert.equal(triangles, 5422);
 console.log(
   JSON.stringify({
     sourceSelections: 2,
-    displaySelections: 1024,
+    displaySelections: 1025,
     triangles,
     links,
     rejections,

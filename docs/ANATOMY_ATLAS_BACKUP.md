@@ -1,6 +1,16 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — medial brachial anatomy (current source)
+## 11 September 2026 — incomplete tentorial anatomy (current source)
+
+Source `7f9a6c40474f0942e189628cf9bae401c67d3c87`, tree `f3093235fe0b037cb14ff77fa265ca4ca304979b`, parent `813d307edd2c8efc1acfc839030a7897942fc68b`. Twenty-nine paths mirrored once; 1,599 matching files / 418,273,633 bytes / 114 retained GLBs. Private Sites source push and independent remote main match exactly. No common credential-signature warnings (not exhaustive). GitHub delivery remains unconfirmed; this is not conversation or private-D1 recovery. Main website outside this module/receipt remains unchanged.
+
+One real BodyParts3D FMA83966/FJ1843 tentorial surface retains all 21,924 triangles. Every supplied vertex is right of midline: the qualified name, partial-coverage metadata, teaching and study explicitly disclose that limitation. No left fold is mirrored/generated and the tentorium is not described as a paired organ. Original source, hashes, audit and CC BY 4.0 notices are retained. Source-bound display now contains 1,025 selections; the raw 1,022-record archive remains unchanged. Head-neck and whole-body Study reuse existing selection, rotation, removal/Undo and labels without a new toolbar. No patient scan, clinical approval, paid service or lecture entitlement is supplied.
+
+Passed exact export/source reproduction, 63 admission rejections, four source-bound links/load-view plans, actual study-card side/disabled gating, brachial/systemic-venous regressions, nested navigation, study links, dissection and private-review tests, TypeScript and production build. All 110 delivered models preserve decoded geometry (1,207 meshes / 3,621 buffer views). Renderer SHA256 `5ff70e2c0273037b7c941f86e5bcc3711378a0acc82bc13fd04c2f81d9304d66` across 320 files. Browser untouched; mobile/GPU and clinical acceptance remain pending.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-tentorium-2026-09-11`: runtime 109,918,257 bytes, SHA256 `a7df1cde14858361d65f97eeee8991e95a3060a0c843918d12159aec7361b97c`; delta 2,744,320 bytes, SHA256 `b42727f7f562457c341ef1621378d924f79177863f876111a4231e3afff0a74f`; incremental 820,736 bytes, SHA256 `b9956ecea2b74b0d9b225839a0a8f8f9e06317d118acfb57dd21a6c56f48967d`. Bundle requires the exact parent above. Retain the release150 full-source bundle and all subsequent increments. No original source/mirror/older backup was moved or deleted. Final restore/publication evidence belongs in `work/ATLAS_TENTORIUM_2026-09-11.md` and its D: companion. Continue broader anatomy/function coverage; oral detail remains deferred.
+
+## 11 September 2026 — medial brachial anatomy (previous source)
 
 Source `813d307edd2c8efc1acfc839030a7897942fc68b`, tree `aa1ef2c08d3ce48040b676bd76761847904d4117`, parent `9b1de740f5091efc4b4a6c6240d516499cd8d4ee`. Thirty paths mirrored once; 1,588 matching files / 416,063,204 bytes / 113 retained GLBs. Private Sites source push and independent remote main match exactly. No common credential-signature warnings (not exhaustive). GitHub delivery remains unconfirmed; this is not conversation or private-D1 recovery. Main website outside this module/receipt remains unchanged.
 
