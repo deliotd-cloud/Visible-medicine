@@ -40,8 +40,8 @@ const {
 const targets = catalog.structures.filter((s) =>
   Object.values(groups).some((g) => g.fmaIds.includes(s.fmaId)),
 );
-assert.equal(targets.length, 38);
-assert.equal(Object.keys(groups).length, 21);
+assert.equal(targets.length, 44);
+assert.equal(Object.keys(groups).length, 24);
 assert.equal(pins.entries.length, 239);
 const extra = JSON.parse(
   await readFile(
@@ -51,11 +51,22 @@ const extra = JSON.parse(
 );
 pins.entries.push(...extra.structures);
 pins.bundles.push(...extra.bundles);
+const deepLeg = JSON.parse(
+  await readFile('public/models/bodyparts3d/deep-leg-veins/catalog.json'),
+);
+pins.entries.push(...deepLeg.structures);
+pins.bundles.push(...deepLeg.bundles);
 const byFma = (fma) => targets.find((s) => s.fmaId === fma);
 const infoFor = (fma) =>
   neighbours(catalog, 'whole-body', 'both', byFma(fma).id);
 // Independent, source-ID edge oracle. The reciprocal check alone would miss a reversed map.
 const pairs = [
+  ['FMA44336', 'FMA44328'],
+  ['FMA44337', 'FMA44329'],
+  ['FMA44338', 'FMA44328'],
+  ['FMA44339', 'FMA44329'],
+  ['FMA51042', 'FMA21188'],
+  ['FMA51043', 'FMA21189'],
   ['FMA4944', 'FMA4838'],
   ['FMA4838', 'FMA4720'],
   ...[
@@ -86,13 +97,13 @@ const pairs = [
   ['FMA14338', 'FMA10951'],
   ['FMA14339', 'FMA10951'],
 ];
-assert.equal(pairs.length, 40);
+assert.equal(pairs.length, 46);
 const sort = (a) =>
   a.map((v) => JSON.stringify(v)).sort((a, b) => a.localeCompare(b));
 const rows = targets.flatMap((s) =>
   infoFor(s.fmaId).rows.map((r) => ({ from: s.fmaId, ...r })),
 );
-assert.equal(rows.length, 80);
+assert.equal(rows.length, 92);
 assert.deepEqual(
   sort(
     rows
@@ -416,14 +427,14 @@ for (const selected of targets)
   }
 console.log(
   JSON.stringify({
-    veins: 38,
-    groups: 21,
-    relationships: 40,
-    reciprocalRows: 80,
+    veins: 44,
+    groups: 24,
+    relationships: 46,
+    reciprocalRows: 92,
     plans,
     links,
     rejections,
-    sourceRows: 38,
+    sourceRows: 44,
     actualComponentRenders: renders,
     actualParentHandlers: handlers,
     clinicalValidation: false,

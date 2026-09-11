@@ -50,7 +50,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "00c5e725029132952c37237f69c047b4304dbc921be6f2c7df4e416c8f67ad65"
+      "sha256": "8ab3813017569d1cb1e8ed81c163c55fe91323bb02ef0d4c3c49bb463acf75cc"
     },
     {
       "path": "app/body-explorer.css",
@@ -410,7 +410,7 @@
     },
     {
       "path": "content/systemic-venous.ts",
-      "sha256": "7dba2944dd1b4f37e5103bbc1418dab694024b9df45cfdf17ee7fa4ccc59475e"
+      "sha256": "410335cd18869f28af23cb6ef6d7479d82aad0e7490804f7c98b466ebe34cdb1"
     },
     {
       "path": "content/tarsal-imaging-concepts.ts",
@@ -598,7 +598,7 @@
     },
     {
       "path": "lib/body-display-catalog.ts",
-      "sha256": "4c5d6908bb89e68f30b4ae5db6c1ca5571799b93627f58c175788ca287645453"
+      "sha256": "8f3d83f1ca5c3b74c6b76af6736aeb26566f0bf505de7f4c44ad9a924ad16497"
     },
     {
       "path": "lib/body-source-additions.ts",
@@ -671,6 +671,10 @@
     {
       "path": "lib/cricothyroid.ts",
       "sha256": "1e7d88df1c8f24a4b33b520637d00bdf64d498a5017c332a6ce4d2a1cc0828b9"
+    },
+    {
+      "path": "lib/deep-leg-veins.ts",
+      "sha256": "2faa7dd187bc9bd00b48b4de00acea4ebdbd12d8f07a827ff3a63f8a214ed2a2"
     },
     {
       "path": "lib/deep-neck-curriculum.ts",
@@ -1082,7 +1086,7 @@
     },
     {
       "path": "lib/systemic-venous.ts",
-      "sha256": "ce94c530c51cbb1d753c9bf1578e0129be387b66d698819de432fc5bf9fba31d"
+      "sha256": "6323aee5d161f5a3cc60bd7cdee41dc692a76774b94d15d84aa5d0e2186eca4a"
     },
     {
       "path": "lib/tarsal-imaging.ts",
@@ -1202,7 +1206,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "a2017b059cbf9d091bee59c5e317a7c50799664bfa6cd2c970b1c184fc763ea3"
+      "sha256": "1acbcaf74469af533d8f2c38135b57ed77a13b0f3c0944ebb3e692e31613cb74"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1231,6 +1235,10 @@
     {
       "path": "public/models/bodyparts3d/cricothyroid/catalog.json",
       "sha256": "bf52f5d63c8d3917179c52fb5d62f0a931d1f57dff4c27de615329d058fa7479"
+    },
+    {
+      "path": "public/models/bodyparts3d/deep-leg-veins/catalog.json",
+      "sha256": "bc3c1c7418d8fe31ef94b6fb8b74d20fe54d8e0f2e67aef4df3c1182b68d137a"
     },
     {
       "path": "public/models/bodyparts3d/eye-layers/catalog.json",
@@ -1305,5 +1313,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "0cc125bf9890b6206cd196e2f080bf973d3cea6923e50aa47ddc8144aa142fe6"
+  "sha256": "ff22301deab6eefe90c372317b35a9b1cece08370153bda19593162539ac0afa"
 }

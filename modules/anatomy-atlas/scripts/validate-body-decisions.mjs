@@ -40,7 +40,7 @@ for (const row of api.bodyReviewSummaries) {
   }
   contexts++;
 }
-assert.equal(contexts, 1025);
+assert.equal(contexts, 1031);
 assert.equal(await api.bodyReviewContext('not-anatomy'), null);
 const id = 'vm:anatomy:upper-limb:shoulder:right:bone:scapula';
 const c = await api.bodyReviewContext(id);

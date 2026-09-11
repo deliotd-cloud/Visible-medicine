@@ -5,6 +5,7 @@ export const systemicVenousReferences = {
   leg: 'https://anatomy.ttuhscep.edu/anatomytables/veins_lowerlimb.html',
   chest: 'https://anatomy.ttuhscep.edu/anatomytables/veins_thorax.html',
   axillary: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8142095/',
+  deepLeg: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC5381851/',
   proximalLeg:
     'https://www.sonographers.org/publicassets/e6c705f1-b557-f011-913e-0050568796d8/Section-C---Venous-anatomy-of-the-lower-limb.pdf',
 };
@@ -93,7 +94,7 @@ export const systemicVenousGroups = {
   femoral: group(
     ['FMA21188', 'FMA21189'],
     'thigh',
-    'Femoral is a deep vein. Common/deep femoral subdivisions are not separate selections; do not interpret this whole source as a labelled superficial vein.',
+    'Femoral is a deep vein. The common femoral segment is not separately labelled; deep femoral return has its own source selection. Do not call the femoral vein superficial.',
   ),
   greatSaphenous: group(
     ['FMA21379', 'FMA21380'],
@@ -103,7 +104,22 @@ export const systemicVenousGroups = {
   popliteal: group(
     ['FMA44328', 'FMA44329'],
     'leg',
-    'Deep calf collecting veins are not supplied here. A displayed gap does not establish an interruption or obstruction.',
+    'Anterior/posterior tibial sources are available, but fibular veins and collecting junctions remain unmodelled. A displayed gap does not establish obstruction.',
+  ),
+  anteriorTibial: group(
+    ['FMA44336', 'FMA44337'],
+    'leg',
+    'Two source parts per side remain one selection, not a complete paired companion-vein plexus.',
+  ),
+  posteriorTibial: group(
+    ['FMA44338', 'FMA44339'],
+    'leg',
+    'One source group per side. Fibular contributions, valves and the exact collecting junction are not reconstructed.',
+  ),
+  deepFemoral: group(
+    ['FMA51042', 'FMA51043'],
+    'thigh',
+    'Deep femoral return is distinct from the femoral vein; the common femoral junction is not separately segmented.',
   ),
   smallSaphenous: group(
     ['FMA44334', 'FMA44335'],
@@ -122,11 +138,7 @@ export const systemicVenousGroups = {
   ),
 };
 export type VenousKind =
-  | 'tributary'
-  | 'continuation'
-  | 'confluence'
-  | 'via-unmodelled'
-  | 'variable';
+  'tributary' | 'continuation' | 'confluence' | 'via-unmodelled' | 'variable';
 type Key = keyof typeof systemicVenousGroups;
 const relationship = (from: Key, to: Key, kind: VenousKind, note: string) => ({
   from,
@@ -135,6 +147,24 @@ const relationship = (from: Key, to: Key, kind: VenousKind, note: string) => ({
   note,
 });
 export const systemicVenousRelationships = [
+  relationship(
+    'anteriorTibial',
+    'popliteal',
+    'via-unmodelled',
+    'Typical deep calf return; intervening collecting junctions are not represented by a continuous source lumen.',
+  ),
+  relationship(
+    'posteriorTibial',
+    'popliteal',
+    'via-unmodelled',
+    'Typical proximal drainage through the calf collecting system; fibular contribution and precise confluence are unmodelled.',
+  ),
+  relationship(
+    'deepFemoral',
+    'femoral',
+    'via-unmodelled',
+    'Joins femoral return at the common femoral region, not a distal femoral segment; the junction is not separately labelled.',
+  ),
   relationship(
     'hemiazygos',
     'azygos',

@@ -87,6 +87,7 @@ import { hipImagingLesson } from '../lib/hip-imaging';
 import { wristImagingLesson } from '../lib/wrist-imaging';
 import { brachialVeinLesson } from '../lib/brachial-veins';
 import { tentoriumLesson } from '../lib/tentorium';
+import { deepLegVeinLesson } from '../lib/deep-leg-veins';
 import { tarsalImagingLesson } from '../lib/tarsal-imaging';
 
 // Original short educational notes, not imported textbook prose. Review pending.
@@ -132,6 +133,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const deepLegVein = deepLegVeinLesson(s, tab);
+  if (deepLegVein) return deepLegVein;
   const tarsalImaging = tarsalImagingLesson(s, tab);
   if (tarsalImaging) return tarsalImaging;
   const tentorium = tentoriumLesson(s, tab);

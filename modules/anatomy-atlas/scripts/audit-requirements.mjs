@@ -254,6 +254,9 @@ for (const path of [
   'lib/body-display-catalog.ts',
   'lib/brachial-veins.ts',
   'lib/tentorium.ts',
+  'lib/deep-leg-veins.ts',
+  'public/models/bodyparts3d/deep-leg-veins/catalog.json',
+  'docs/deep-leg-vein-source-audit.json',
   'lib/body-source-additions.ts',
   'content/tentorium-studies.ts',
   'public/models/bodyparts3d/tentorium/catalog.json',
@@ -483,6 +486,12 @@ const report = {
     'Offline source and displayed-copy inventory; no clinical or browser certification.',
   sourceHashes,
   anatomy: {
+    deepLegVeins: {
+      sourceSelections: catalog.structures.filter(s=>s.bundle==='deep-leg-veins').length,
+      originalTriangles: 71522, sourceFiles: 8, heldFibularGroups: 2,
+      exactSourceFacesRetained: true, completeCompanionVeins: false,
+      sourceAndFrameChecked: true, clinicalApproval: false,
+    },
     venousDrainage: {
       selections: venousEntries.length,
       groups: new Set(venousEntries.map(e=>e.group)).size,
@@ -762,7 +771,7 @@ const report = {
     revisionIdentities: Object.keys(revisions.revisions).length,
     hasPrivateReviews: false,
     status:
-      'Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot and 1,025 displayed root-body selections (1,022 archival records plus three source-bound additions, including the incomplete right-sided tentorium). This inventory never reads personal review records; nested/independent scopes and acquired imaging remain outside those approvals.',
+      'Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot and 1,031 displayed root-body selections (1,022 archival records plus nine source-bound additions, including the incomplete right-sided tentorium and six deep leg vein groups). This inventory never reads personal review records; nested/independent scopes and acquired imaging remain outside those approvals.',
   },
   boundaries: {
     scope: 'Current source implementation, not operations performed by this inventory script',

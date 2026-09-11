@@ -1,5 +1,6 @@
 import originalPins from '../content/systemic-venous-pins.json' with { type: 'json' };
 import brachial from '../public/models/bodyparts3d/brachial-veins/catalog.json' with { type: 'json' };
+import deepLeg from '../public/models/bodyparts3d/deep-leg-veins/catalog.json' with { type: 'json' };
 import {
   systemicVenousGroups as groups,
   systemicVenousRelationships as relationships,
@@ -14,8 +15,12 @@ import {
 // Retain the original admissions unchanged; append separately audited source records.
 const pins = {
   ...originalPins,
-  entries: [...originalPins.entries, ...brachial.structures],
-  bundles: [...originalPins.bundles, ...brachial.bundles],
+  entries: [
+    ...originalPins.entries,
+    ...brachial.structures,
+    ...deepLeg.structures,
+  ],
+  bundles: [...originalPins.bundles, ...brachial.bundles, ...deepLeg.bundles],
 };
 // A separate concept per actual side prevents contralateral tributaries at paired vessels.
 const concepts: ArterialDefinitions = {};

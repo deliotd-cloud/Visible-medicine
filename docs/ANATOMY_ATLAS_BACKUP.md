@@ -1,6 +1,16 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — tarsal imaging teaching (current source)
+## 11 September 2026 — deep leg veins (current source)
+
+Source `fa4959b0c641e77086f2bc0228bb2f4231683bf7`, tree `126202df9efb0eaa63c3c088dbe0ff64509d0d92`, parent `ea5cdbd18ccdcf22fa5708c9b0a00fc28fddcc80`. Thirty-four paths mirrored once; 1,625 matching files / 424,948,391 bytes / 115 retained GLBs. Private Sites source push and independent remote main match exactly. No common credential-signature warnings (not exhaustive). GitHub delivery remains unconfirmed; main website outside this module/receipt remains unchanged.
+
+Six official BodyParts3D tibial/deep femoral source groups retain eight OBJ files and all 71,522 original triangles. Display catalogue 1,031, archival catalogue 1,022. Right fibular aggregate contains contralateral/proximal fragments; both fibular groups stay withheld pending review, with no convenient cropping or invented replacement. Twelve original Anatomy/Function drafts and six typical drainage relationships reuse existing compact controls; systemic map now 44 veins/46 relationships. CT/MRI/US/X-ray registration, complete companion-vein geometry, clinical approval and paid-resource entitlements are not supplied.
+
+Passed exact GLB roundtrip, 32 links, 146 binding-rejection cases, side filters and hide/Undo. Systemic suite: 282 plans, 128 links, 384 rejection cases, 44 real component renders, 88 parent-handler cases. Body review: 1,031 records/9,279 topics; private-decision SQLite tests: 1,031 contexts/3,093 tracks. Historical tentorium, brachial, tarsal, wrist, hip and spine tests, TypeScript, requirement freshness and build passed. All 111 delivered models preserve decoded geometry (1,213 meshes). Renderer SHA256 `ff22301deab6eefe90c372317b35a9b1cece08370153bda19593162539ac0afa`, 325 files. Browser/device and clinical validation not performed.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-deep-leg-veins-2026-09-11`: runtime 110,796,349 bytes, SHA256 `5b21269c31ab9bc5d39bd2e134fde2181921bb8ae2d8dd715bc66673773fcfa4`; delta 7,086,080 bytes, SHA256 `f377c308f01cc307a75869d11fd9b83f708f383d7e7c20d4e8274f1b40a40c87`; incremental 2,507,854 bytes, SHA256 `e8a2dd59d4218b65f3663b26e953f5d4b8f22c4030d9fd126a454a309303f7f7`. Bundle requires the exact parent above; retain release150 full bundle and all later increments. No source/mirror/older recovery moved or deleted. Final publication/restore results belong in `work/ATLAS_DEEP_LEG_VEINS_2026-09-11.md` and its D: companion. Continue broader anatomy/function; retain source holds and compact controls.
+
+## 11 September 2026 — tarsal imaging teaching (previous source)
 
 Source `ea5cdbd18ccdcf22fa5708c9b0a00fc28fddcc80`, tree `5616b6261468bf073f181729343aa6b18efa70ef`, parent `7f9a6c40474f0942e189628cf9bae401c67d3c87`. Twenty-three paths mirrored once; 1,608 matching files / 418,352,347 bytes / 114 retained GLBs. Private Sites source push and independent remote main match exactly. No common credential-signature warnings (not exhaustive). GitHub delivery remains unconfirmed; main website outside this module/receipt remains unchanged.
 
