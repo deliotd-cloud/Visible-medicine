@@ -1,6 +1,14 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — upper-limb arterial connections (current source)
+## 11 September 2026 — SPARC nerve candidate review (current source; live site unchanged)
+
+Source `7238d3e5a85a2c549cd7457aaa3fc0c6540ad88b`, tree `72a31e6509b5f625c80e32edb8627cae145cb9cb`, parent `4972359643323eadd505824217f8d70c60cee2e6`. Six documentation/offline-audit paths mirrored; 1,545 files match / 414,607,142 bytes / 112 retained GLBs, without common credential-signature warnings (not exhaustive). Sites source push and remote main independently match the exact revision. GitHub delivery remains unconfirmed.
+
+Five SPARC dataset-307-v8 originals (14,568,863 bytes) are retained separately on D:, with per-file server hashes checked. They are not in the application or this mirror. The source-specific audit records 964 annotated path groups / 956 ontology IDs, eight repeated IDs and seven zero-length elements, without repairing or admitting geometry. The generated spinal scaffold is separately identified. Next is component provenance and a separate schematic candidate prototype if safe. No clinical approval or body/patient registration.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-sparc-nerve-source-2026-09-11`: delta 143,360 bytes, SHA256 `23837df7b4671c992b30f9064609dff4817c04a38aaa8c63a32e3b35f355b22f`; incremental bundle 10,430 bytes, SHA256 `a8b0b2a8c87e02f013fe8bd1259e1067535a6a4ff092c168fe832a2de7b715a7`. Bundle requires the source parent above, available in the retained full-source backup. Research originals are local D: files, not an off-device backup. Audit reproduction, source hashes, script syntax, requirements freshness and diff checks passed. No runtime/build/database changes, so no new build or deployment. The live site remains version 150 below. No browser navigation or QA.
+
+## 11 September 2026 — upper-limb arterial connections (current live release)
 
 Source `4972359643323eadd505824217f8d70c60cee2e6`, tree `86ae3907cf17336b9f53552450ac716319b7429a`, parent `d723e7051319e17db4992bb941755ebc85a25c1d`. Twenty paths mirrored once; 1,542 matching source files / 414,584,028 bytes / 112 retained GLBs. Main website unchanged. No common credential-signature warnings (not exhaustive). Sites source push and remote branch were independently verified at the full source revision. **Not confirmed GitHub delivery, conversation/private-D1 backup or an independent off-device restore.**
 

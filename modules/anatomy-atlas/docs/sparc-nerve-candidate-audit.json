@@ -1,0 +1,297 @@
+{
+  "dataset": 307,
+  "version": 8,
+  "doi": "10.26275/bbvg-gj86",
+  "admitted": false,
+  "frame": "Independent generic SPARC scaffold; no BodyParts3D or patient registration established",
+  "files": [
+    {
+      "name": "nervesWithVagus_annotations.json",
+      "bytes": 132758,
+      "sha256": "577cde996b4ec050192870340262b441c13b68cd5fed82fc9531c7282783c7b5"
+    },
+    {
+      "name": "spinal_nerves_annotations.json",
+      "bytes": 7807,
+      "sha256": "e9564d1f894c69e774c63883906d2d9ee95ccf734ecc20de4def54adb03ffd73"
+    },
+    {
+      "name": "human_body_provenance.json",
+      "bytes": 18531,
+      "sha256": "1bf1267ac7812a018c5b7bd04cd0de1f0a9a30bd12e54963b30cdc4b6684a2d0"
+    },
+    {
+      "name": "nervesWithVagus.exf",
+      "bytes": 797853,
+      "sha256": "248b2da5638bbd684894d6ba8a175b1ee6454fc3dfc7b921bc5af2721e5b5b19"
+    },
+    {
+      "name": "spinal_nerves.exf",
+      "bytes": 13611914,
+      "sha256": "5bcb4f5a6558e9963137b530a2e54a906e41ec7db4883510873b63bfcbf8730d"
+    }
+  ],
+  "nervePaths": {
+    "representation": "Source linear 1D elements; not nerve surfaces or measured nerve calibres",
+    "coordinateNodes": 1949,
+    "separateMarkerNodes": 1949,
+    "elements": 1917,
+    "coordinateBounds": [
+      [
+        -319.7971801757812,
+        318.3336181640625
+      ],
+      [
+        -233.2544860839844,
+        44.93937301635742
+      ],
+      [
+        -77.78133392333984,
+        1556.39208984375
+      ]
+    ],
+    "annotations": 964,
+    "uniqueOntologyIds": 956,
+    "exfGroups": 965,
+    "annotationsWithoutGroup": [],
+    "groupsWithoutAnnotation": [
+      "marker"
+    ],
+    "emptyPathGroups": [
+      "marker"
+    ],
+    "repeatedOntologyIds": [
+      {
+        "id": "ILX:0796984",
+        "names": [
+          "Anterior cutaneous branch of left iliohypogastric nerve",
+          "Left hypogastric nerve"
+        ]
+      },
+      {
+        "id": "ILX:0796983",
+        "names": [
+          "Anterior cutaneous branch of right iliohypogastric nerve",
+          "Right hypogastric nerve"
+        ]
+      },
+      {
+        "id": "ILX:0784626",
+        "names": [
+          "Left C2 spinal nerve posterior ramus medial branch",
+          "Left greater occipital nerve"
+        ]
+      },
+      {
+        "id": "UBERON:0011766",
+        "names": [
+          "Left inferior laryngeal nerve",
+          "Left recurrent laryngeal nerve"
+        ]
+      },
+      {
+        "id": "ILX:0791998",
+        "names": [
+          "Left superior cervical cardiac nerve",
+          "Superior cervical cardiac branch of left vagus nerve"
+        ]
+      },
+      {
+        "id": "ILX:0790361",
+        "names": [
+          "Right C2 spinal nerve posterior ramus medial branch",
+          "Right greater occipital nerve"
+        ]
+      },
+      {
+        "id": "UBERON:0011767",
+        "names": [
+          "Right inferior laryngeal nerve",
+          "Right recurrent laryngeal nerve"
+        ]
+      },
+      {
+        "id": "ILX:0786396",
+        "names": [
+          "Right superior cervical cardiac nerve",
+          "Superior cervical cardiac branch of right vagus nerve"
+        ]
+      }
+    ],
+    "unassignedElements": [],
+    "multiGroupElements": 0,
+    "zeroLengthElements": [
+      {
+        "id": 213,
+        "nodes": [
+          236,
+          236
+        ],
+        "groups": [
+          "Left C1 spinal nerve"
+        ]
+      },
+      {
+        "id": 216,
+        "nodes": [
+          239,
+          239
+        ],
+        "groups": [
+          "Right C1 spinal nerve"
+        ]
+      },
+      {
+        "id": 727,
+        "nodes": [
+          711,
+          720
+        ],
+        "groups": [
+          "Right sciatic nerve"
+        ]
+      },
+      {
+        "id": 896,
+        "nodes": [
+          952,
+          953
+        ],
+        "groups": [
+          "Left medial plantar nerve"
+        ]
+      },
+      {
+        "id": 1310,
+        "nodes": [
+          1343,
+          1345
+        ],
+        "groups": [
+          "Lateral portion of left median nerve"
+        ]
+      },
+      {
+        "id": 1615,
+        "nodes": [
+          1610,
+          1610
+        ],
+        "groups": [
+          "Right T7 spinal nerve posterior ramus lateral branch"
+        ]
+      },
+      {
+        "id": 1863,
+        "nodes": [
+          1897,
+          1898
+        ],
+        "groups": [
+          "Lateral cutaneous branch of right seventh intercostal nerve"
+        ]
+      }
+    ],
+    "connectedComponents": 80,
+    "connectedComponentSizes": [
+      435,
+      419,
+      214,
+      93,
+      87,
+      73,
+      62,
+      62,
+      35,
+      33,
+      31,
+      31,
+      31,
+      30,
+      29,
+      28,
+      28,
+      28,
+      27,
+      12,
+      7,
+      6,
+      5,
+      5,
+      5,
+      5,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "caveat": "Group counts and ontology IDs are not counts of unique validated human nerves. Graph components use original node identity, not a spatial weld; disconnected graph components alone do not establish missing anatomical continuity. Repeated IDs need individual adjudication."
+  },
+  "spinalScaffold": {
+    "representation": "Generated Hermite scaffold; 3D Spinal Nerve 1 / Human whole spine 1",
+    "annotations": 43,
+    "annotationsWithoutId": [
+      "core",
+      "left",
+      "right",
+      "shell"
+    ],
+    "groups": 45,
+    "annotationsWithoutGroup": [],
+    "groupsWithoutAnnotation": [
+      ".scene_selection",
+      "marker"
+    ],
+    "caveat": "No tessellation, nerve-surface validity, spinal-cord surface or registration inferred from parameter names."
+  }
+}

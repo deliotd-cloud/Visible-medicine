@@ -2,6 +2,10 @@
 
 No candidate below is imported. This bounded search is not proof that no suitable commercial-compatible model exists.
 
+## SPARC whole-body nerve paths: new retained source
+
+[Dataset 307 v8](https://discover.pennsieve.io/datasets/307) provides actual downloadable nerve-path and spinal-scaffold files. Five originals are hash-verified on D:, outside the website. The [detailed audit](SPARC_NERVE_SOURCE_REVIEW.md) distinguishes 964 named path groups from validated anatomy, records eight repeated ontology IDs and seven zero-length elements, and keeps its generic estimated frame separate. No live admission or nerve surfaces inferred. Next assess component provenance and an explicitly separate schematic prototype; do not repeat the completed retrieval or merge it with BodyParts3D. Metadata-only screening of dataset 521 found microscopic excised vagus data, not a gross whole-body route.
+
 ## Scanned brachial plexus: retain as a lead
 
 Cevallos et al., [Cureus 2026, doi:10.7759/cureus.104662](https://pmc.ncbi.nlm.nih.gov/articles/PMC12961632/), report a dissected right plexus with digitally reconstructed missing branches and no axillary artery. Article licence: CC BY 4.0. Its publisher [PDF](https://assets.cureus.com/uploads/technical_report/pdf/464829/20260305-62865-2o7sxz.pdf), pages 2–3, sends both the video and “Interactive Model” links to the same Vimeo video, not an identified downloadable geometry file. A mesh licence, source bytes, branch labels and reconstructed-part boundaries were not established. No video-to-3D reconstruction was attempted. Even with a cleared model, consider a separate specimen first: it was excised/pinned, not registered to the body atlas. Author clarification and actual licensed files are the next gate, not another identical search.
