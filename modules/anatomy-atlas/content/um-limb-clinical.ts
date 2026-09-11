@@ -2,6 +2,7 @@
 // their images/text and licences are not imported into the CC0 mesh asset set.
 import { hipThighClinicalLessons, hipThighClinicalReferences } from './um-hip-thigh-clinical';
 import { calfFootClinicalLessons, calfFootClinicalReferences } from './um-calf-foot-clinical';
+import { hipMuscleClinicalLessons, hipMuscleClinicalReferences } from './um-hip-muscle-clinical';
 export type SpecimenExtendedTopic = 'clinical' | 'pathology' | 'ct' | 'mri' | 'xray' | 'ultrasound';
 export type SpecimenTopicDraft = { readiness: 'draft'; body: string; references: string[] };
 export type SpecimenClinicalLesson = {
@@ -11,6 +12,7 @@ export type SpecimenClinicalLesson = {
 };
 const aaos = (slug: string) => `https://www.orthoinfo.org/diseases--conditions/${slug}/`;
 export const specimenClinicalReferences = {
+  ...hipMuscleClinicalReferences,
   ...calfFootClinicalReferences,
   ...hipThighClinicalReferences,
   acl: { title: 'AAOS · Anterior cruciate ligament injuries', url: aaos('anterior-cruciate-ligament-acl-injuries') },
@@ -29,6 +31,7 @@ const urls = (...keys: Reference[]) => keys.map(k => specimenClinicalReferences[
 const draft = (body: string, ...refs: Reference[]): SpecimenTopicDraft => ({ readiness: 'draft', body, references: urls(...refs) });
 const quiz = (question: string, answer: string, ...refs: Reference[]) => ({ question, answer, references: urls(...refs) });
 export const specimenClinicalLessons: Record<string, SpecimenClinicalLesson> = {
+  ...hipMuscleClinicalLessons,
   ...calfFootClinicalLessons,
   ...hipThighClinicalLessons,
   acl: {

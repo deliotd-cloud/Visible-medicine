@@ -2308,6 +2308,39 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK534775/"
         ],
+        "extended": {
+          "modelLimit": "This is the supplied brevis, not adductor longus or the entire groin. No attachment avulsion, tendon tear or pubic aponeurotic complex is segmented.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Pain with adductor loading is useful context, but does not identify one muscle or exclude other groin conditions.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK493166/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Adductor strains can cause groin or medial-thigh pain after kicking, sprinting or changing direction. Adductor longus is commonly involved.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK493166/"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI can localise an adductor injury and its extent. Identify the actual muscle involved; longus predominance does not establish a brevis tear.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK493166/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does pain on adduction identify brevis rather than longus?",
+            "answer": "No. Adductor-related symptoms do not isolate one muscle or exclude other groin conditions.",
+            "references": [
+              "https://www.ncbi.nlm.nih.gov/books/NBK493166/"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "obturator"
@@ -2510,6 +2543,39 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK534842/"
         ],
+        "extended": {
+          "modelLimit": "One supplied magnus surface does not separately grade its adductor and hamstring portions or map a complete adductor hiatus. No separate minimus identity is inferred.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Distinguish the adductor and hamstring contributions when considering weakness.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK534842/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Strain-related medial-thigh pain can involve adductor magnus, but its large surface does not imply that every portion is injured.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK493166/"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "Localise signal change or disruption within the injured portion on MRI; a large reference surface does not imply whole-muscle damage.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK493166/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Is the whole of adductor magnus an isolated obturator-nerve test?",
+            "answer": "No. Its adductor and hamstring portions have different typical motor contributions; the muscle is supplied by obturator and tibial/sciatic pathways.",
+            "references": [
+              "https://www.ncbi.nlm.nih.gov/books/NBK534842/"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "obturator",
@@ -3712,6 +3778,32 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK538193/"
         ],
+        "extended": {
+          "modelLimit": "This supplied muscle has no denervation pattern, pressure lesion or patient-specific weakness. Its disappearance in dissection mode does not simulate inferior gluteal neuropathy.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Assess extension strength in the context of pain, other hip muscles and the wider neurological examination.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK538193/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Inferior gluteal nerve dysfunction can reduce gluteus-maximus strength and hip extension.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK538193/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Which named gluteal nerve is most directly associated with maximus motor supply?",
+            "answer": "The inferior gluteal nerve. Weak hip extension still requires a broader assessment rather than diagnosis from one muscle selection.",
+            "references": [
+              "https://www.ncbi.nlm.nih.gov/books/NBK538193/"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "inferior-gluteal"
@@ -4018,6 +4110,39 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK534775/"
         ],
+        "extended": {
+          "modelLimit": "The supplied muscle does not separately resolve pes tendon slips or the anserine bursa. Moving it away from the knee cannot demonstrate bursitis or tendon integrity.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Use the level of symptoms to separate proximal adductor-region pain from distal medial-knee pain.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/pes-anserine-knee-tendon-bursitis"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Gracilis can be involved in groin strain; its distal tendon also forms part of the pes anserinus at the medial knee.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK493166/"
+              ]
+            },
+            "ultrasound": {
+              "readiness": "draft",
+              "body": "At the tibial pes insertion, closely apposed tendons can be difficult to separate; trace the complex proximally.",
+              "references": [
+                "https://essr.org/content-essr/uploads/2016/10/knee.pdf"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does pes anserine bursitis prove that gracilis is torn?",
+            "answer": "No. The adjacent bursa can be painful without a demonstrated tear in the gracilis tendon.",
+            "references": [
+              "https://www.orthoinfo.org/diseases--conditions/pes-anserine-knee-tendon-bursitis"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "obturator"
@@ -4205,6 +4330,32 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK557420/"
         ],
+        "extended": {
+          "modelLimit": "The inferior gemellus remains its own source selection, not an extension of the superior gemellus. A displayed gap is not a nerve-compression site or surgical release.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Interpret posterior hip pain alongside lumbar, hip-joint and neurological findings.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/32349600/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "The gemelli–obturator-internus region is one of several anatomical relationships considered in deep gluteal syndromes with buttock or sciatica-like pain.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/32349600/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does inferior gemellus have the same usual named supply as superior gemellus?",
+            "answer": "No. Inferior gemellus conventionally receives the nerve to quadratus femoris; superior gemellus receives the nerve to obturator internus.",
+            "references": [
+              "https://www.ncbi.nlm.nih.gov/books/NBK557420/"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "quadratus-femoris",
@@ -4280,6 +4431,39 @@
         "references": [
           "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
         ],
+        "extended": {
+          "modelLimit": "The reference surface does not show an injury grade, footprint lesion or a return-to-sport prognosis. A three-player report cannot establish general prevalence or recovery time.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Deep location can make the injured tissue difficult to identify from symptoms alone.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/36143822/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Obturator externus tears are uncommon reported causes of hip or groin pain. A small football-player series identified these injuries with MRI.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/36143822/"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "MRI identified externus injuries in the cited small football-player series when symptoms overlapped with other groin injuries. The atlas is not a diagnostic scan or a recovery predictor.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/36143822/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Can a three-player injury series determine every patient's recovery time?",
+            "answer": "No. It demonstrates a reported injury pattern, not a universal prognosis or treatment protocol.",
+            "references": [
+              "https://pubmed.ncbi.nlm.nih.gov/36143822/"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "obturator"
@@ -4355,6 +4539,32 @@
           "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html",
           "https://www.ncbi.nlm.nih.gov/books/NBK557420/"
         ],
+        "extended": {
+          "modelLimit": "One supplied muscle does not separately resolve its reflected tendon, associated bursa or every gemellar connection. No nerve path is added and internus is not externus.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Interpret posterior hip pain alongside lumbar, hip-joint and neurological findings.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/32349600/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "The gemelli–obturator-internus region is one of several anatomical relationships considered in deep gluteal syndromes with buttock or sciatica-like pain.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/32349600/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does the word obturator mean internus and externus share one nerve?",
+            "answer": "No. Internus receives its named nerve; externus receives the obturator nerve. Similar names do not establish identical motor supply.",
+            "references": [
+              "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "obturator-internus"
@@ -4429,6 +4639,32 @@
         "references": [
           "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
         ],
+        "extended": {
+          "modelLimit": "This reference muscle does not map a femoral or obturator nerve branch. Typical teaching is not confirmation of this donor's variable innervation or a pain generator.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Its combined hip-flexion and adduction role provides context for movement-related symptoms.",
+              "references": [
+                "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Pectineus is one possible contributor to adductor-region injury and groin pain.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK493166/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Do all medial-thigh adductors share only obturator supply?",
+            "answer": "No. Pectineus usually receives femoral supply, sometimes with additional obturator contribution; the donor's precise branches are not mapped.",
+            "references": [
+              "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "femoral",
@@ -4617,6 +4853,37 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK519497/"
         ],
+        "extended": {
+          "modelLimit": "The piriformis surface cannot establish a through-muscle sciatic variant, entrapment or the diagnostic performance of a provocative test. No missing sciatic nerve is fabricated.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Use this muscle for regional orientation while considering the wider clinical differential.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/32349600/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Piriformis-related sciatic irritation is a possible explanation for some buttock and radiating leg pain.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/32349600/"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "Pelvic MRI may help investigate deep gluteal causes after considering spinal disease. A piriformis selection does not prove nerve entrapment.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/32349600/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does the atlas demonstrate sciatic entrapment within this piriformis?",
+            "answer": "No. It shows the source muscle, not a mapped sciatic variant, compression site or patient-specific lesion.",
+            "references": []
+          }
+        },
         "motorGroups": [
           {
             "nerve": "piriformis"
@@ -4806,6 +5073,39 @@
         "references": [
           "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
         ],
+        "extended": {
+          "modelLimit": "Neither the ischiofemoral space nor quadratus femoris signal is clinically measured here. Display separation changes spacing without simulating impingement or decompression.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Interpret suspected impingement with symptoms, examination and imaging position rather than a single space measurement.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/25680726/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Ischiofemoral impingement involves the quadratus femoris region between the ischium and lesser trochanter.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/25680726/"
+              ]
+            },
+            "mri": {
+              "readiness": "draft",
+              "body": "Ischiofemoral asymmetry, fatty change and oedema were observed in some asymptomatic volunteers. MRI findings and spacing alone do not establish symptomatic impingement.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/25680726/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does ischiofemoral asymmetry on MRI necessarily explain hip pain?",
+            "answer": "No. Asymmetry and some signal changes occur without symptoms; correlate findings with the clinical assessment and imaging position.",
+            "references": [
+              "https://pubmed.ncbi.nlm.nih.gov/25680726/"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "quadratus-femoris"
@@ -5099,6 +5399,39 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK532889/"
         ],
+        "extended": {
+          "modelLimit": "One source muscle does not separately segment the anserine bursa or individual pes insertion footprints. The model cannot assess passive flexibility or reproduce medial-knee pain.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Localise symptoms relative to the joint line and consider competing knee causes.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/pes-anserine-knee-tendon-bursitis"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "Distal sartorius participates in the pes anserinus, beside a bursa that can become a source of medial-knee pain.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/pes-anserine-knee-tendon-bursitis"
+              ]
+            },
+            "ultrasound": {
+              "readiness": "draft",
+              "body": "Posteromedial knee ultrasound distinguishes sartorius muscle from nearby gracilis and semitendinosus tendons before their closely apposed insertion.",
+              "references": [
+                "https://essr.org/content-essr/uploads/2016/10/knee.pdf"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does sharing the pes insertion make sartorius a hamstring?",
+            "answer": "No. Sartorius is a femoral-supplied anterior-thigh muscle; sharing an insertion does not make these muscles anatomically identical.",
+            "references": [
+              "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "femoral"
@@ -5520,6 +5853,32 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK557420/"
         ],
+        "extended": {
+          "modelLimit": "The supplied superior gemellus is separate from the inferior gemellus. No sciatic entrapment site, nerve variant or muscle-specific provocative test is demonstrated.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Interpret posterior hip pain alongside lumbar, hip-joint and neurological findings.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/32349600/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "The gemelli–obturator-internus region is one of several anatomical relationships considered in deep gluteal syndromes with buttock or sciatica-like pain.",
+              "references": [
+                "https://pubmed.ncbi.nlm.nih.gov/32349600/"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Which named nerve typically supplies superior gemellus?",
+            "answer": "The nerve to obturator internus. This conventional relationship is not a reconstruction of the source donor's nerve branches.",
+            "references": [
+              "https://www.ncbi.nlm.nih.gov/books/NBK557420/"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "obturator-internus",
@@ -5596,6 +5955,39 @@
           "https://www.ncbi.nlm.nih.gov/books/NBK526019/",
           "https://www.ncbi.nlm.nih.gov/books/NBK532889/"
         ],
+        "extended": {
+          "modelLimit": "The source muscle does not include a separately validated iliotibial tract or bursa. It is not connected to the tibia by a newly invented direct tendon; no snapping motion is simulated.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Distinguish external lateral snapping from anterior iliopsoas-related snapping or an intra-articular problem.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/snapping-hip/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "The iliotibial tract can contribute to external snapping over the greater trochanter, sometimes with lateral hip discomfort.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/snapping-hip/"
+              ]
+            },
+            "ultrasound": {
+              "readiness": "draft",
+              "body": "Lateral hip ultrasound places the fascia lata superficial to gluteal tissues and the greater trochanter. This muscle-only selection cannot depict fascial snapping.",
+              "references": [
+                "https://essr.org/content-essr/uploads/2016/10/hip.pdf"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does external hip snapping mean TFL itself has torn?",
+            "answer": "No. Snapping can involve the iliotibial tract and may be painless; a snap alone does not establish a muscle tear.",
+            "references": [
+              "https://www.orthoinfo.org/diseases--conditions/snapping-hip/"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "superior-gluteal"
@@ -6020,6 +6412,39 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
         ],
+        "extended": {
+          "modelLimit": "The deep vastus remains a whole muscle surface without separate intramuscular laminae or tendon-layer injury grades. Rectus femoris is a different selectable muscle above it.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Assess extension through the complete quadriceps apparatus; selecting this deep muscle does not isolate its force contribution.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "A quadriceps-tendon tear disrupts force transmission to the patella. Complete disruption can cause major loss of active knee extension.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/quadriceps-tendon-tear/"
+              ]
+            },
+            "ultrasound": {
+              "readiness": "draft",
+              "body": "The conventional deep quadriceps-tendon layer relates to intermedius; a muscle surface does not resolve tendon-layer tears.",
+              "references": [
+                "https://essr.org/content-essr/uploads/2016/10/knee.pdf"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does vastus intermedius cross the hip like rectus femoris?",
+            "answer": "No. The vasti arise from the femur and act across the knee; rectus femoris also crosses the hip.",
+            "references": [
+              "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
+            ]
+          }
+        },
         "motorGroups": [
           {
             "nerve": "femoral"
@@ -6094,6 +6519,37 @@
         "references": [
           "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
         ],
+        "extended": {
+          "modelLimit": "One lateral vastus surface does not include a separately resolved lateral retinaculum or injury to the shared tendon. Dissection movement is not patellar tracking.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Vastus lateralis contributes to knee extension with the other quadriceps muscles. Weakness alone does not isolate a lateral-vastus lesion.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "A quadriceps-tendon tear disrupts force transmission to the patella. Complete disruption can cause major loss of active knee extension.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/quadriceps-tendon-tear/"
+              ]
+            },
+            "ultrasound": {
+              "readiness": "draft",
+              "body": "Lateralis contributes to the conventional intermediate quadriceps-tendon layer with medialis; ultrasound assessment follows the shared apparatus.",
+              "references": [
+                "https://essr.org/content-essr/uploads/2016/10/knee.pdf"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Can this muscle-only selection establish continuity of the whole quadriceps tendon?",
+            "answer": "No. It is a source muscle surface, not an examination of the separately supplied tendon or all of its layers.",
+            "references": []
+          }
+        },
         "motorGroups": [
           {
             "nerve": "femoral"
@@ -6169,6 +6625,37 @@
           "https://www.ncbi.nlm.nih.gov/books/NBK500008/",
           "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
         ],
+        "extended": {
+          "modelLimit": "No separately validated VMO/VML subdivision, medial retinaculum or maltracking mechanism is supplied. A whole-muscle label must not be promoted to a fibre-specific treatment target.",
+          "topics": {
+            "clinical": {
+              "readiness": "draft",
+              "body": "Assess medialis within the extensor mechanism. This whole-muscle selection cannot quantify isolated fibre recruitment or establish patellar tracking.",
+              "references": [
+                "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
+              ]
+            },
+            "pathology": {
+              "readiness": "draft",
+              "body": "A quadriceps-tendon tear disrupts force transmission to the patella. Complete disruption can cause major loss of active knee extension.",
+              "references": [
+                "https://www.orthoinfo.org/diseases--conditions/quadriceps-tendon-tear/"
+              ]
+            },
+            "ultrasound": {
+              "readiness": "draft",
+              "body": "Medialis joins lateralis in the conventional intermediate tendon layer; this whole muscle does not identify isolated VMO pathology.",
+              "references": [
+                "https://essr.org/content-essr/uploads/2016/10/knee.pdf"
+              ]
+            }
+          },
+          "selfCheck": {
+            "question": "Does the atlas contain a separately validated VMO selection?",
+            "answer": "No. It retains the supplied whole vastus medialis surface, without an inferred fibre-specific compartment.",
+            "references": []
+          }
+        },
         "motorGroups": [
           {
             "nerve": "femoral"

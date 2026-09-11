@@ -14,7 +14,8 @@ const clone = value => JSON.parse(JSON.stringify(value));
 const fromHref = href => Object.fromEntries(new URL(href, 'https://atlas.example').searchParams);
 const expected = ['acl', 'pcl', 'mcl', 'lcl', 'meniscus-group', 'quadriceps-tendon', 'patellar-ligament', 'achilles-tendon', 'talus', 'calcaneus',
   'femur', 'femoral-head-cartilage', 'gluteus-medius', 'gluteus-minimus', 'iliacus', 'psoas-major', 'adductor-longus', 'rectus-femoris', 'semimembranosus', 'semitendinosus', 'biceps-femoris-long-head', 'biceps-femoris-short-head',
-  'extensor-digitorum-longus', 'extensor-hallucis-longus', 'peroneus-longus', 'flexor-digitorum-longus', 'flexor-hallucis-longus', 'popliteus', 'soleus', 'tibialis-anterior', 'tibialis-posterior', 'gastrocnemius-medial', 'gastrocnemius-lateral', 'abductor-hallucis', 'abductor-digiti-minimi', 'flexor-digitorum-brevis', 'quadratus-plantae', 'extensor-digitorum-brevis'];
+  'extensor-digitorum-longus', 'extensor-hallucis-longus', 'peroneus-longus', 'flexor-digitorum-longus', 'flexor-hallucis-longus', 'popliteus', 'soleus', 'tibialis-anterior', 'tibialis-posterior', 'gastrocnemius-medial', 'gastrocnemius-lateral', 'abductor-hallucis', 'abductor-digiti-minimi', 'flexor-digitorum-brevis', 'quadratus-plantae', 'extensor-digitorum-brevis',
+  'adductor-brevis', 'adductor-magnus', 'gracilis', 'pectineus', 'superior-gemellus', 'inferior-gemellus', 'obturator-internus', 'obturator-externus', 'gluteus-maximus', 'piriformis', 'quadratus-femoris', 'sartorius', 'tensor-fasciae-latae', 'vastus-intermedius', 'vastus-lateralis', 'vastus-medialis'];
 same(Object.keys(specimenClinicalLessons).sort(), expected.sort());
 const referenceWords = {}, knownURLs = new Set(Object.values(specimenClinicalReferences).map(r => r.url));
 function references(text, refs) {
@@ -41,7 +42,7 @@ for (const selected of whole.surfaces) {
   lesson.extended.topics.clinical.body = 'mutated';
   same(specimenTeachingFor(whole, selected).extended, extended);
 }
-same(counts, { clinical: 38, pathology: 38, ct: 4, mri: 22, xray: 20, ultrasound: 15 });
+same(counts, { clinical: 54, pathology: 54, ct: 4, mri: 27, xray: 20, ultrasound: 21 });
 const hipTopics = {
   femur: ['clinical', 'pathology', 'xray', 'ct', 'mri'],
   'femoral-head-cartilage': ['clinical', 'pathology', 'xray'],
@@ -80,6 +81,31 @@ same(specimenClinicalLessons['extensor-digitorum-brevis'].modelLimit.includes('s
 same(specimenClinicalLessons['abductor-digiti-minimi'].topics.mri.body.includes('not an established stand-alone diagnosis'), true);
 same(specimenClinicalLessons.soleus.topics.ultrasound.body.includes('does not reliably exclude'), true);
 same(specimenClinicalLessons['gastrocnemius-lateral'].modelLimit.includes('not make a medial-head'), true);
+const remainingHipTopics = {
+  'adductor-brevis': ['mri'], 'adductor-magnus': ['mri'], gracilis: ['ultrasound'], pectineus: [],
+  'superior-gemellus': [], 'inferior-gemellus': [], 'obturator-internus': [], 'obturator-externus': ['mri'],
+  'gluteus-maximus': [], piriformis: ['mri'], 'quadratus-femoris': ['mri'], sartorius: ['ultrasound'],
+  'tensor-fasciae-latae': ['ultrasound'], 'vastus-intermedius': ['ultrasound'], 'vastus-lateralis': ['ultrasound'], 'vastus-medialis': ['ultrasound'],
+};
+for (const [slug, imaging] of Object.entries(remainingHipTopics)) {
+  const lesson = specimenClinicalLessons[slug];
+  same(Object.keys(lesson.topics).sort(), ['clinical', 'pathology', ...imaging].sort(), `Remaining hip muscle topics: ${slug}`);
+  same(limbDefinitions['hip-thigh'].surfaces.some(s => s.slug === slug), true);
+  same(Object.keys(lesson).sort(), ['modelLimit', 'selfCheck', 'topics']);
+  same(/FMA\d|FJ\d|"identities"|"scope"/.test(JSON.stringify(lesson)), false);
+}
+const muscles = whole.surfaces.filter(s => s.tissue === 'muscle');
+same(muscles.length, 42);
+for (const muscle of muscles) {
+  same(specimenTeachingFor(whole, muscle).extended.topics.clinical.readiness, 'draft');
+  same(specimenTeachingFor(whole, muscle).extended.topics.pathology.readiness, 'draft');
+}
+same(whole.surfaces.filter(s => !specimenClinicalLessons[s.slug]).length, 13);
+same(new Set(Object.values(specimenClinicalLessons).map(l => l.selfCheck.question)).size, 54);
+same(specimenClinicalLessons['vastus-medialis'].modelLimit.includes('No separately validated VMO/VML'), true);
+same(specimenClinicalLessons['tensor-fasciae-latae'].modelLimit.includes('iliotibial tract'), true);
+same(specimenClinicalLessons['quadratus-femoris'].topics.mri.body.includes('asymptomatic'), true);
+same(specimenClinicalLessons['obturator-externus'].modelLimit.includes('three-player report'), true);
 // Keep original summaries brief; no reference text/tables/diagrams are imported.
 for (const [url, words] of Object.entries(referenceWords)) same(words <= 200, true, `Excessive reliance on one reference: ${url} (${words})`);
 for (const def of Object.values(limbDefinitions)) for (const selected of def.surfaces) {
