@@ -102,7 +102,7 @@ const raw = JSON.parse(
 const catalog = api.bodyDisplayCatalog(raw),
   before = JSON.stringify(catalog);
 const targets = nestedStudyTargets(catalog);
-same(targets.length, 69);
+same(targets.length, 71);
 same(
   Object.fromEntries(
     [
@@ -122,7 +122,7 @@ same(
   {
     eye: 15,
     ventricles: 4,
-    brainstem: 4,
+    brainstem: 6,
     cerebral: 14,
     cardiac: 4,
     pulmonary: 5,
@@ -133,7 +133,7 @@ same(
     cricothyroid: 4,
   },
 );
-same(new Set(targets.map((t) => t.structureId)).size, 69);
+same(new Set(targets.map((t) => t.structureId)).size, 71);
 const parse = (href) => {
   const url = new URL(href, 'https://atlas.invalid');
   return { url, parsed: parseStudyLink(Object.fromEntries(url.searchParams)) };
@@ -144,7 +144,7 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
   for (const side of ['both', 'left', 'right']) {
     const index = atlasSearchIndex(catalog, region, side);
     const nested = index.filter((e) => e.key.startsWith('nested:'));
-    same(nested.length, 69);
+    same(nested.length, 71);
     for (const target of targets) {
       const entry = nested.find(
         (e) => e.key === `nested:${target.study}:${target.structureId}`,

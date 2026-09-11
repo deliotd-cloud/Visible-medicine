@@ -32,8 +32,9 @@
       }
     ],
     "crossTreeProofSha256": "149aa0c50045717713a17706a8e8bbaa1002cc1dec4427d0425e860bf24946ed",
+    "additionalSourceHoldProofSha256": "376863798d350db47711e802a9f5a0180b9d1c99f0972bbec769e6588e5c5b9a",
     "currentRootSha256": "3f59bfdf91d398d2857ed34e6fb5c51f1f716ca1258075dd3e7d9443144aa76b",
-    "reachableNestedSha256": "c994da6a78dd60be9d8132fa290356deb9bc0287f09200a8b5d5da78ecf278b9",
+    "reachableNestedSha256": "3a105ee0e4963dd1ca46d3af1747b2975de9a8b27db7c198123f69c5e2a13fcb",
     "shoulderManifestSha256": "619e3ab84712487bd032b84a8f8b52f94d10883d8db7798057049bab287de857",
     "sourceIdSetSha256": "8e2057667c31e8fc99b87eb4c020467eadb9698ca09a87fc85cd76350254e655"
   },
@@ -41,22 +42,22 @@
     "referenceSourceFiles": 2234,
     "rootSelections": 1042,
     "rootSourceFileIds": 1702,
-    "reachableNestedSelections": 69,
+    "reachableNestedSelections": 71,
     "rootOnlyDifferences": 532,
     "rootBindingsNeedingEquivalenceReview": 0,
     "allSourceStatuses": {
       "excluded-by-display-correction": 1,
-      "known-source-hold": 43,
-      "needs-source-and-anatomical-review": 465,
-      "nested-source-covered": 22,
+      "known-source-hold": 45,
+      "needs-source-and-anatomical-review": 461,
+      "nested-source-covered": 24,
       "related-cross-tree-hold": 1,
       "root-source-covered": 1702
     },
     "rootDifferenceStatuses": {
       "excluded-by-display-correction": 1,
-      "known-source-hold": 43,
-      "needs-source-and-anatomical-review": 465,
-      "nested-source-covered": 22,
+      "known-source-hold": 45,
+      "needs-source-and-anatomical-review": 461,
+      "nested-source-covered": 24,
       "related-cross-tree-hold": 1
     },
     "rootDifferenceReferenceGroups": {
@@ -80,7 +81,7 @@
       "digestive": 1,
       "integumentary": 5,
       "muscular": 4,
-      "nervous": 19,
+      "nervous": 15,
       "reproductive": 5,
       "sensory": 8,
       "skeletal": 2,
@@ -3536,7 +3537,7 @@
     {
       "file": "FJ1735",
       "referenceDisplaySystem": "nervous",
-      "status": "needs-source-and-anatomical-review",
+      "status": "known-source-hold",
       "admissionApproved": false,
       "definitions": [
         {
@@ -3546,7 +3547,14 @@
         }
       ],
       "owners": [],
-      "holds": [],
+      "holds": [
+        {
+          "tree": "isa",
+          "conceptId": "FMA73462",
+          "reason": "Source says left but all source X coordinates are negative (right); laterality requires adjudication.",
+          "evidence": "docs/collicular-brachia-source-audit.json"
+        }
+      ],
       "displayCorrections": [],
       "source": {
         "bytes": 16422,
@@ -3558,7 +3566,7 @@
     {
       "file": "FJ1736",
       "referenceDisplaySystem": "nervous",
-      "status": "needs-source-and-anatomical-review",
+      "status": "known-source-hold",
       "admissionApproved": false,
       "definitions": [
         {
@@ -3568,7 +3576,14 @@
         }
       ],
       "owners": [],
-      "holds": [],
+      "holds": [
+        {
+          "tree": "isa",
+          "conceptId": "FMA73461",
+          "reason": "Source says right but all source X coordinates are positive (left); laterality requires adjudication.",
+          "evidence": "docs/collicular-brachia-source-audit.json"
+        }
+      ],
       "displayCorrections": [],
       "source": {
         "bytes": 15439,
@@ -3607,7 +3622,7 @@
     {
       "file": "FJ1761",
       "referenceDisplaySystem": "nervous",
-      "status": "needs-source-and-anatomical-review",
+      "status": "nested-source-covered",
       "admissionApproved": false,
       "definitions": [
         {
@@ -3616,7 +3631,20 @@
           "componentCount": 1
         }
       ],
-      "owners": [],
+      "owners": [
+        {
+          "scope": "nested",
+          "id": "vm:anatomy:body:head-neck:left:organ:brachium-of-left-inferior-colliculus",
+          "fmaId": "FMA73464",
+          "tree": "isa",
+          "file": "FJ1761",
+          "sha256": "190f6b408b3967c91cfe4aab21672a5998867b4ea5a145567de66df8111da3aa",
+          "study": "brainstem",
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "sourceHash": "40dd8f7f7b9a6bc79be1fdc6282ed50965c7f07d853a4db981dd7203477185c8",
+          "evidence": "same-tree-source-binding"
+        }
+      ],
       "holds": [],
       "displayCorrections": [],
       "source": {
@@ -3916,7 +3944,7 @@
     {
       "file": "FJ1809",
       "referenceDisplaySystem": "nervous",
-      "status": "needs-source-and-anatomical-review",
+      "status": "nested-source-covered",
       "admissionApproved": false,
       "definitions": [
         {
@@ -3925,7 +3953,20 @@
           "componentCount": 1
         }
       ],
-      "owners": [],
+      "owners": [
+        {
+          "scope": "nested",
+          "id": "vm:anatomy:body:head-neck:right:organ:brachium-of-right-inferior-colliculus",
+          "fmaId": "FMA73463",
+          "tree": "isa",
+          "file": "FJ1809",
+          "sha256": "733feb8590917edc0454661f7027564ae56fe51d4b916f59f82c1e222e0faefc",
+          "study": "brainstem",
+          "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+          "sourceHash": "40dd8f7f7b9a6bc79be1fdc6282ed50965c7f07d853a4db981dd7203477185c8",
+          "evidence": "same-tree-source-binding"
+        }
+      ],
       "holds": [],
       "displayCorrections": [],
       "source": {

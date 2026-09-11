@@ -58,18 +58,18 @@ const catalog = api.bodyDisplayCatalog(
 );
 const targets = api.nestedStudyTargets(catalog);
 const initial = JSON.stringify(catalog);
-same(targets.length, 69);
-same(api.nestedConcepts.length, 41);
-same(new Set(api.nestedConcepts.map((c) => c.id)).size, 41);
-const priorConcepts = api.nestedConcepts.filter((c) => c.study !== 'cricothyroid');
+same(targets.length, 71);
+same(api.nestedConcepts.length, 42);
+same(new Set(api.nestedConcepts.map((c) => c.id)).size, 42);
+const priorConcepts = api.nestedConcepts.filter((c) => c.study !== 'cricothyroid' && c.id !== 'inferior-collicular-brachia');
 same(priorConcepts.length, 40);
 const allPins = JSON.parse(await readFile('content/nested-teaching-bindings.v1.json'));
-same(allPins.bindings.length, 69);
+same(allPins.bindings.length, 71);
 same(allPins.parents.length, 11);
 const legacyPins = {
   ...allPins,
   parents: allPins.parents.filter((p) => p.id !== api.cricothyroid.parent.id),
-  bindings: allPins.bindings.filter((b) => b.study !== 'cricothyroid'),
+  bindings: allPins.bindings.filter((b) => b.study !== 'cricothyroid' && b.conceptId !== 'inferior-collicular-brachia'),
 };
 // Only these four explicitly authored modality fields extend the complete v121 baseline.
 const beforeDuctImaging = priorConcepts.map((c) => {
@@ -148,6 +148,7 @@ same(
   'All v121 teaching, identities, quizzes and limits retained outside four added modality fields',
 );
 const addedDuctReferences = new Set([
+  'auditoryBrachium',
   'pancreaticImagingDiagnosis',
   'pancreaticMRCP',
   'pancreaticUltrasoundWindow',
@@ -571,23 +572,24 @@ for (const target of targets) {
     null,
   );
 }
-same(seen.size, 41);
+same(seen.size, 42);
 same(
   answerKeys.size,
-  69,
+  71,
   'Changing either study or side resets revealed answer',
 );
-same(coverage.pathology, { draft: 69, pending: 0 });
-same(coverage.clinical, { draft: 69, pending: 0 });
+same(coverage.pathology, { draft: 69, pending: 2 });
+same(coverage.clinical, { draft: 69, pending: 2 });
 for (const tab of ['anatomy', 'function', 'quiz'])
-  same(coverage[tab], { draft: 69, pending: 0 });
-same(coverage.ct, { draft: 35, pending: 34 });
-same(coverage.mri, { draft: 35, pending: 34 });
-same(coverage.xray, { draft: 0, pending: 69 });
-same(coverage.ultrasound, { draft: 28, pending: 41 });
+  same(coverage[tab], { draft: 71, pending: 0 });
+same(coverage.ct, { draft: 35, pending: 36 });
+same(coverage.mri, { draft: 35, pending: 36 });
+same(coverage.xray, { draft: 0, pending: 71 });
+same(coverage.ultrasound, { draft: 28, pending: 43 });
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
 const hosts = new Set([
+  'oac22.hsc.uth.tmc.edu',
   'uroweb.org',
   'cdt.amegroups.org',
   'academic.oup.com',
@@ -645,11 +647,11 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 81);
+same(Object.keys(wordsBySource).length, 82);
 same(
   new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
     .size,
-  81,
+  82,
   'Do not split one source into duplicate reference keys',
 );
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {

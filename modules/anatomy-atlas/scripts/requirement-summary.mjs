@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Inferior collicular brachia](COLLICULAR_BRACHIA.md) adds ${anatomy.nestedDissections.collicularBrachiaSelections} original neural surfaces (${anatomy.nestedDissections.collicularBrachiaOriginalTriangles} retained triangles) within brainstem dissection, with pair/midbrain views and source-bound auditory teaching. The ${anatomy.nestedDissections.collicularBrachiaLateralityHolds} superior candidates remain withheld for contradictory source laterality. Existing brainstem meshes are unchanged; no complete auditory pathway, fibre reconstruction, clinical approval or patient scan is supplied.
+
 [Longus colli](LONGUS_COLLI.md) adds ${anatomy.longusColli.sourceSelections} source-preserving left muscle parts (${anatomy.longusColli.originalTriangles} triangles) and a focused study in Head & neck, Spine and Whole body. Use Both or Left; the right side is unavailable. Select parts, remove covering context and Undo without adding a permanent toolbar. Attachment geometry, fascial planes, clinical accuracy and imaging registration remain unvalidated.
 
 [Hepatic veins](HEPATIC_VEINS.md) add ${anatomy.hepaticVeins.sourceSelections} genuine source groups with ${anatomy.hepaticVeins.originalTriangles} retained triangles from ${anatomy.hepaticVeins.sourceFiles} files. The middle hepatic vein and right/left tributary groups reuse selection, labels, dissection and the compact venous panel. All ${anatomy.hepaticVeins.sourceComponents} disconnected components remain in their original positions; no bridging, complete tree, Couinaud territory, flow or patient registration is claimed.

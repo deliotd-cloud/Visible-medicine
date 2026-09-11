@@ -266,7 +266,7 @@
     },
     {
       "path": "app/ventricles.tsx",
-      "sha256": "cd9ea82d9148c44a288f34ac84da151f056c91fdc1addcdd4e48cadbd7043bbf"
+      "sha256": "490b83b4e2084edcf5bff4443c869560f022da9bf7d65f4c28f32cc51f1d6151"
     },
     {
       "path": "app/ventricular-relationships.css",
@@ -333,6 +333,10 @@
       "sha256": "ba741cc7373be4ffad1dd7a04af2605d5a033bbe6d40723196241d89d905b1a0"
     },
     {
+      "path": "content/collicular-brachia-teaching.ts",
+      "sha256": "f805f4ab67d5d0ae82a0e2bd9116d0e2a7b31f837d05d349dd8cfabd1172428d"
+    },
+    {
       "path": "content/cricothyroid-teaching.ts",
       "sha256": "43e6e81da3b782aaefb0f806e57517edee327e1a24b9eaa748896aef93c033db"
     },
@@ -390,11 +394,11 @@
     },
     {
       "path": "content/nested-teaching-bindings.v1.json",
-      "sha256": "d8225296b269fa93cfbde974820ee1dedaf3e9adb836e9e9873416a231376ae6"
+      "sha256": "ed5b3b4968348d14e9feb65ac083b230ea80493360807fc440a0ee984070e315"
     },
     {
       "path": "content/nested-teaching.ts",
-      "sha256": "491730ab4595f541a3e6c12fe9bd9d95df600206d63f7eb2c428d57cd8c022d0"
+      "sha256": "22362c6f6d44a9403ce7488cd11a5dcf323b1bc00bcf667979d04403b50b74bd"
     },
     {
       "path": "content/pancreatic-teaching.ts",
@@ -634,7 +638,7 @@
     },
     {
       "path": "lib/brainstem.ts",
-      "sha256": "d051db5912cd69995969006b5867d81556f274eaa8d0c65c58597b8d367a8166"
+      "sha256": "c1672c0d2e21d0fb3b752b6cb001a970b071fa492b218a9c788a476754fc24a9"
     },
     {
       "path": "lib/camera-orientation.ts",
@@ -1281,6 +1285,10 @@
       "sha256": "8dbcf8e0cbc5aff4c468e2eeda2e57fb048c65515ce35257b56f2247267624de"
     },
     {
+      "path": "public/models/bodyparts3d/collicular-brachia/catalog.json",
+      "sha256": "a607dbbdae16aff65fa35c65e181fe0aa828b3e4d09b10ba2a851d46a0a4e9d0"
+    },
+    {
       "path": "public/models/bodyparts3d/cricothyroid/catalog.json",
       "sha256": "bf52f5d63c8d3917179c52fb5d62f0a931d1f57dff4c27de615329d058fa7479"
     },
@@ -1373,5 +1381,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "d27acf47df5d8a9044937809e77615e0f8a4f554f78640142ed80664309fa4c8"
+  "sha256": "fc097f2670aa7d7fd6d588051ee63f91d5f0145a2f7dcfaaaa5a36703a28815c"
 }

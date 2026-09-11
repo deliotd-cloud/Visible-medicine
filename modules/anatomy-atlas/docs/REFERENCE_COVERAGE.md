@@ -1,6 +1,6 @@
 # Audited-source implementation — 11 September 2026
 
-This release implements the first step of the repository comparison: a reproducible source-coverage ledger, plus a bounded label-computation improvement. It does not bulk-admit the external models or claim anatomical completeness. The user's broader improvement goal remains active.
+This ledger began with the repository comparison and label-computation improvement. The subsequent [inferior-brachia addition](COLLICULAR_BRACHIA.md) adds two source references and withholds two superior candidates for contradictory laterality. It does not bulk-admit external models or claim anatomical completeness. The broader improvement goal remains active.
 
 ## Coverage result
 
@@ -8,13 +8,13 @@ The pinned male reference supplies 2,234 IS-A source file IDs. The current 1,042
 
 | Disposition | Source pieces |
 | --- | ---: |
-| Already represented by reachable nested selections | 22 |
-| Deliberate IS-A source holds | 43 |
+| Already represented by reachable nested selections | 24 |
+| Deliberate IS-A source holds | 45 |
 | Excluded by the existing pancreatic display correction | 1 |
 | Related unresolved PART-OF disc hold | 1 |
-| Need source and anatomical review | 465 |
+| Need source and anatomical review | 461 |
 
-The 465-piece queue contains 279 arterial and 138 venous pieces according to the reference's display groups. These groups are not an authoritative anatomy taxonomy: for example, its cardiac group includes an interventricular-foramen entry. No external grouping changes our learner-facing systems.
+The 461-piece queue contains 279 arterial and 138 venous pieces according to the reference's display groups. These groups are not an authoritative anatomy taxonomy: for example, its cardiac group includes an interventricular-foramen entry. No external grouping changes our learner-facing systems.
 
 This is source-file coverage, not a count of missing anatomical structures. It cannot establish whether a whole named structure, alternative envelope, branch, side or layer is complete. Independent CC0 limb and older abdominal-wall specimens remain distinct donors/releases; their conceptual equivalents are not counted as identical v4 files.
 

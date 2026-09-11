@@ -85,6 +85,10 @@
     "app/eye-layers.tsx": "de0928192cd5b8cd20c19a7372471fdb3e39d60f5fa2ab777469a8f83ac47879",
     "public/models/bodyparts3d/ventricles/catalog.json": "9a9852fe7e3f245c73525b94cd6fee08bd974f015cab5010d01d56e49ceb0a68",
     "public/models/bodyparts3d/brainstem/catalog.json": "1f405d0df3656da30f34c063bd81c3442cb33e8d2566b17447126460c95c3a38",
+    "public/models/bodyparts3d/collicular-brachia/catalog.json": "a607dbbdae16aff65fa35c65e181fe0aa828b3e4d09b10ba2a851d46a0a4e9d0",
+    "docs/collicular-brachia-source-audit.json": "376863798d350db47711e802a9f5a0180b9d1c99f0972bbec769e6588e5c5b9a",
+    "lib/brainstem.ts": "c1672c0d2e21d0fb3b752b6cb001a970b071fa492b218a9c788a476754fc24a9",
+    "content/collicular-brachia-teaching.ts": "f805f4ab67d5d0ae82a0e2bd9116d0e2a7b31f837d05d349dd8cfabd1172428d",
     "public/models/bodyparts3d/cerebral/catalog.json": "8dbcf8e0cbc5aff4c468e2eeda2e57fb048c65515ce35257b56f2247267624de",
     "public/models/bodyparts3d/cardiac/catalog.json": "59cebff69d885e243a9b5b8048d9735eb7f4e7848b7f21a40fa6c12873c5b0a3",
     "lib/cardiac.ts": "482facae9feb332a9899d008cca33aa6bb950046ae7ea96ea2ee67a89001c6ea",
@@ -116,12 +120,12 @@
     "public/models/bodyparts3d/pulmonary/catalog.json": "b62ccd78dfc2ced8674b94eba67596add4de482f54c3f242814982b4e3dab9ea",
     "docs/pulmonary-source-audit.json": "734fc23b6d4812b81ffb007214c271096562bcb8376766fc9d609bfddabc95db",
     "content/cerebral-supplement-audit.json": "a186519bbf31065f5c4e58472c542a9cbd2a6b64d35423a4f6c92d7bae1d69d7",
-    "content/nested-teaching.ts": "491730ab4595f541a3e6c12fe9bd9d95df600206d63f7eb2c428d57cd8c022d0",
+    "content/nested-teaching.ts": "22362c6f6d44a9403ce7488cd11a5dcf323b1bc00bcf667979d04403b50b74bd",
     "content/cardiac-teaching.ts": "0848e6de5820400a84fee5cfdff88ad406de07774aedafc10ec7ffdedbf0a72c",
     "content/hepatic-teaching.ts": "793d49e8e33bc4daed5889b9bc58403a11280d39dd1d6894d0f5ff7c8fc0372d",
     "content/pulmonary-teaching.ts": "dec60fd4009651ed0e0f11e67763db54c367aa22968c7653dadaf128918b77b0",
     "content/cerebral-teaching.ts": "ba741cc7373be4ffad1dd7a04af2605d5a033bbe6d40723196241d89d905b1a0",
-    "content/nested-teaching-bindings.v1.json": "d8225296b269fa93cfbde974820ee1dedaf3e9adb836e9e9873416a231376ae6",
+    "content/nested-teaching-bindings.v1.json": "ed5b3b4968348d14e9feb65ac083b230ea80493360807fc440a0ee984070e315",
     "lib/nested-anatomy.ts": "05fc8a7f73d950bb320879b7786a65c1659c0b902bc681baff8b145f81e39de7",
     "lib/nested-teaching.ts": "cc75404d279a6a00cd9c5ad88c694b0d696661469eada3a018be5ead29568271",
     "app/nested-teaching.tsx": "9f6b6053e56393b3c065d7c6f083fe2992771715c8a0173cdb11e3f1ee0ab50b",
@@ -137,7 +141,7 @@
     "lib/ventricular-relationships.ts": "b9d2bd5ea079a600c2593ca522f325ceb03c2f2704a26747b4262ef6838c84df",
     "lib/cardiac-context.ts": "428c871b7a942e34c87833ff97441e59e7757c4ae0f5610713e779396df432ef",
     "public/models/bodyparts3d/cardiac/great-vessel-context.json": "fac546e54237db4bed783d583b01c583f423a35a74bd759727d519074de0af85",
-    "app/ventricles.tsx": "cd9ea82d9148c44a288f34ac84da151f056c91fdc1addcdd4e48cadbd7043bbf",
+    "app/ventricles.tsx": "490b83b4e2084edcf5bff4443c869560f022da9bf7d65f4c28f32cc51f1d6151",
     "app/ventricular-relationships.css": "7dfa2927b9f203aa13dbd1f2205c9429e7b79ffbaa86108b57fb3c69b1b71400",
     "app/body-scene.tsx": "8eacd496574edee25596bd91e69f621704a024080c3a9885cb0f80f324d69879",
     "scripts/glb-lossless-codec.mjs": "053f0a2a7a397600b8c70814fa07f0013928d60702b163a8c8514d1eaafba224",
@@ -188,7 +192,7 @@
     "resolvedContentAndRecipeData": "5aab590195266980a8f0e8fa25f55ae795c72a784b0331e9df9a8a958ff819d3",
     "explicitTopicReadiness": "bb886082064dfbe5392aefa5392d407c3760f6540e21686822e9a146c343aa03",
     "reasoningQuestionData": "caafb323ca7d5a04971f91ad369d68c3a8da5e43839b39d8cd76192d1497bad2",
-    "nestedTeachingData": "b74ddd2f8575fe1bef1d07424db49de126bc94700166eec88f5dc0c2e79e1770"
+    "nestedTeachingData": "8e14e4e7b62141619825ebe604bc8cfddba30a80629162aa70818b7dc7c09350"
   },
   "anatomy": {
     "longusColli": {
@@ -669,6 +673,9 @@
       "ventricularSpaces": 4,
       "ventricularContext": 5,
       "brainstemCompounds": 4,
+      "collicularBrachiaSelections": 2,
+      "collicularBrachiaOriginalTriangles": 568,
+      "collicularBrachiaLateralityHolds": 2,
       "brainstemContext": 1,
       "cerebralSelections": 14,
       "cerebralParentSubdivisions": 10,
@@ -748,8 +755,8 @@
       1,
       2
     ],
-    "availableRepresentations": 1120,
-    "nestedRepresentations": 69,
+    "availableRepresentations": 1122,
+    "nestedRepresentations": 71,
     "supportedKinds": [
       "ct",
       "mri",
@@ -828,18 +835,18 @@
       }
     },
     "nested": {
-      "representations": 69,
-      "concepts": 41,
-      "references": 81,
+      "representations": 71,
+      "concepts": 42,
+      "references": 82,
       "topics": {
         "anatomy": {
-          "specificDraft": 69,
+          "specificDraft": 71,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 69,
+          "specificDraft": 71,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
@@ -847,41 +854,41 @@
         "ct": {
           "specificDraft": 35,
           "identityOnly": 0,
-          "pending": 34,
+          "pending": 36,
           "generatedIdentification": 0
         },
         "mri": {
           "specificDraft": 35,
           "identityOnly": 0,
-          "pending": 34,
+          "pending": 36,
           "generatedIdentification": 0
         },
         "xray": {
           "specificDraft": 0,
           "identityOnly": 0,
-          "pending": 69,
+          "pending": 71,
           "generatedIdentification": 0
         },
         "ultrasound": {
           "specificDraft": 28,
           "identityOnly": 0,
-          "pending": 41,
+          "pending": 43,
           "generatedIdentification": 0
         },
         "pathology": {
           "specificDraft": 69,
           "identityOnly": 0,
-          "pending": 0,
+          "pending": 2,
           "generatedIdentification": 0
         },
         "clinical": {
           "specificDraft": 69,
           "identityOnly": 0,
-          "pending": 0,
+          "pending": 2,
           "generatedIdentification": 0
         },
         "quiz": {
-          "specificDraft": 69,
+          "specificDraft": 71,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
@@ -1570,8 +1577,8 @@
       "png": 4,
       "svg": 2,
       "md": 2,
-      "glb": 114,
-      "json": 28,
+      "glb": 115,
+      "json": 29,
       "zip": 1,
       "html": 1,
       "tsv": 1

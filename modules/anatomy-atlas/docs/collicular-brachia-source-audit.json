@@ -1,0 +1,5096 @@
+{
+  "schemaVersion": 1,
+  "scope": "Four source-labelled collicular brachia: laterality, topology and existing neural-surface relationships. No repair, clinical approval or tractography.",
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "brainstemCatalogSha256": "1f405d0df3656da30f34c063bd81c3442cb33e8d2566b17447126460c95c3a38",
+  "groups": [
+    {
+      "id": "FMA73462",
+      "name": "brachium of left superior colliculus",
+      "side": "left",
+      "file": "FJ1735",
+      "sha256": "9a480c1559b0089b614b5f86d1e4719ff80d9ae3cc9ea2e0a76e98c37f14bdf3",
+      "status": "held",
+      "reason": "Source says left but all source X coordinates are negative (right); laterality requires adjudication.",
+      "definition": {
+        "id": "FMA73462",
+        "name": "brachium of left superior colliculus",
+        "representation": "BP6569",
+        "files": [
+          "FJ1735"
+        ],
+        "tree": "isa"
+      },
+      "bytes": 16422,
+      "geometrySha256": "0592064c06eef972fb0d527bdbe14dc915c00e1e14480de86cadc662c887cfbb",
+      "coordinateSide": "right",
+      "sourceBounds": {
+        "min": [
+          -18.3783,
+          -74.4345,
+          1537.05
+        ],
+        "max": [
+          -3.32827,
+          -67.7735,
+          1543.63
+        ]
+      },
+      "topology": {
+        "sourceVertices": 144,
+        "exactUniqueVertices": 143,
+        "unusedUniqueVertices": 0,
+        "triangles": 282,
+        "edges": 423,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 282,
+            "vertices": 143,
+            "bounds": {
+              "min": [
+                -18.3783,
+                -74.4345,
+                1537.05
+              ],
+              "max": [
+                -3.32827,
+                -67.7735,
+                1543.63
+              ]
+            },
+            "areaMm2": 212.44733761876847,
+            "algebraicVolumeMm3": 206.80316946029208
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "directOwners": [],
+      "exactOwners": [],
+      "clinicalApproval": false
+    },
+    {
+      "id": "FMA73461",
+      "name": "brachium of right superior colliculus",
+      "side": "right",
+      "file": "FJ1736",
+      "sha256": "77d77692b0ff86d405d8b1336474f1a2e5b43bd5303956737ce65dfafbd99fa4",
+      "status": "held",
+      "reason": "Source says right but all source X coordinates are positive (left); laterality requires adjudication.",
+      "definition": {
+        "id": "FMA73461",
+        "name": "brachium of right superior colliculus",
+        "representation": "BP6570",
+        "files": [
+          "FJ1736"
+        ],
+        "tree": "isa"
+      },
+      "bytes": 15439,
+      "geometrySha256": "1f751b36e62de97af86cdd0ac69f5b8159b84c0f33766d3bca2bbbf2954aa826",
+      "coordinateSide": "left",
+      "sourceBounds": {
+        "min": [
+          2.00987,
+          -74.4876,
+          1537.05
+        ],
+        "max": [
+          17.0168,
+          -67.8478,
+          1543.8
+        ]
+      },
+      "topology": {
+        "sourceVertices": 138,
+        "exactUniqueVertices": 135,
+        "unusedUniqueVertices": 0,
+        "triangles": 266,
+        "edges": 399,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 266,
+            "vertices": 135,
+            "bounds": {
+              "min": [
+                2.00987,
+                -74.4876,
+                1537.05
+              ],
+              "max": [
+                17.0168,
+                -67.8478,
+                1543.8
+              ]
+            },
+            "areaMm2": 211.85818071579803,
+            "algebraicVolumeMm3": 205.9284412562731
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "directOwners": [],
+      "exactOwners": [],
+      "clinicalApproval": false
+    },
+    {
+      "id": "FMA73464",
+      "name": "brachium of left inferior colliculus",
+      "side": "left",
+      "file": "FJ1761",
+      "sha256": "190f6b408b3967c91cfe4aab21672a5998867b4ea5a145567de66df8111da3aa",
+      "status": "candidate",
+      "definition": {
+        "id": "FMA73464",
+        "name": "brachium of left inferior colliculus",
+        "representation": "BP10441",
+        "files": [
+          "FJ1761"
+        ],
+        "tree": "isa"
+      },
+      "bytes": 17740,
+      "geometrySha256": "fca755dedf245830986094a66477179ed878252ce527a2adfafe53505965cf3f",
+      "coordinateSide": "left",
+      "sourceBounds": {
+        "min": [
+          2.38239,
+          -75.7301,
+          1532.14
+        ],
+        "max": [
+          14.1352,
+          -68.2684,
+          1543.23
+        ]
+      },
+      "topology": {
+        "sourceVertices": 156,
+        "exactUniqueVertices": 156,
+        "unusedUniqueVertices": 0,
+        "triangles": 308,
+        "edges": 462,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 308,
+            "vertices": 156,
+            "bounds": {
+              "min": [
+                2.38239,
+                -75.7301,
+                1532.14
+              ],
+              "max": [
+                14.1352,
+                -68.2684,
+                1543.23
+              ]
+            },
+            "areaMm2": 191.5195881466123,
+            "algebraicVolumeMm3": 173.72415458921304
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "directOwners": [],
+      "exactOwners": [],
+      "clinicalApproval": false
+    },
+    {
+      "id": "FMA73463",
+      "name": "brachium of right inferior colliculus",
+      "side": "right",
+      "file": "FJ1809",
+      "sha256": "733feb8590917edc0454661f7027564ae56fe51d4b916f59f82c1e222e0faefc",
+      "status": "candidate",
+      "definition": {
+        "id": "FMA73463",
+        "name": "brachium of right inferior colliculus",
+        "representation": "BP10454",
+        "files": [
+          "FJ1809"
+        ],
+        "tree": "isa"
+      },
+      "bytes": 15073,
+      "geometrySha256": "1917c324214539117a672d81406a7af427457cffa139687ef2b9932093607c92",
+      "coordinateSide": "right",
+      "sourceBounds": {
+        "min": [
+          -15.4428,
+          -75.7981,
+          1532.16
+        ],
+        "max": [
+          -3.66284,
+          -68.2535,
+          1543.23
+        ]
+      },
+      "topology": {
+        "sourceVertices": 133,
+        "exactUniqueVertices": 132,
+        "unusedUniqueVertices": 0,
+        "triangles": 260,
+        "edges": 390,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 260,
+            "vertices": 132,
+            "bounds": {
+              "min": [
+                -15.4428,
+                -75.7981,
+                1532.16
+              ],
+              "max": [
+                -3.66284,
+                -68.2535,
+                1543.23
+              ]
+            },
+            "areaMm2": 191.88204401640573,
+            "algebraicVolumeMm3": 175.21460952710467
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "directOwners": [],
+      "exactOwners": [],
+      "clinicalApproval": false
+    }
+  ],
+  "screened": [
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-anterior-ethmoidal-nerve",
+      "recordSha256": "34f3b8e7960af8337fd57f250a896b6895cf45e61beda490b03d414ffe9f161b",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-frontal-nerve",
+      "recordSha256": "6c8c4006b351d2311a7db5bee69b683d3f894b103eca7a2fd9af90f8a9f800b1",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:inferior-branch-of-left-oculomotor-nerve",
+      "recordSha256": "55ce94870915236e109172f5eff72f3fb848089fa516cbebdae9a091f252277c",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-infratrochlear-nerve",
+      "recordSha256": "b611ab2ce13853741ec61a8653295e06bafa5bc5e76827267fa3853a62bca7ee",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-lacrimal-nerve",
+      "recordSha256": "d41a1671ff6ffa33e7991a06120e1fcf57c6bbde238d2bb33fdb646950a5b19d",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-nasociliary-nerve",
+      "recordSha256": "96dcf62ca21673029470faff7fd0b4d1294e2c9c5ef684747cc7f3798e632af4",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:communicating-branch-of-left-nasociliary-nerve-with-left-ciliary-ganglion",
+      "recordSha256": "081dc4daf310bf4b2177d55f761e471724d15430f4a9bfe639dd2e8486a7a5a4",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-ophthalmic-nerve",
+      "recordSha256": "bb3ee51095503bba2b296421fe54a134f55e9933b87c2407a28f8b2b182244c3",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-posterior-ethmoidal-nerve",
+      "recordSha256": "1c957959416dd3deaf55a84d2856b77a1ea60f143f5c200436f8fc6fc07f747e",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-long-ciliary-nerve",
+      "recordSha256": "cea405f8634790f412cf0dd10e6b7dd79a8bc81c2ce2a693e7f49316f133aa6a",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:superior-branch-of-left-oculomotor-nerve",
+      "recordSha256": "f8600054bd039de32e55bc3f997f6f289a62dea7e73e9c6aa83f616cc8268622",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-supra-orbital-nerve",
+      "recordSha256": "347e54a42188f66bb0a042ba276c5bd9e2a9c7a1a122b242fc2a9eb93ea96bd3",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-supratrochlear-nerve",
+      "recordSha256": "54f7b64d31bd9ca91d59bd1a46906f723fa93313bf86fe1846a845f50be99310",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-anterior-ethmoidal-nerve",
+      "recordSha256": "9f0ad66833a7a95ae304c17a93c0764dac6415d2a4120bc7ddc92891582b3de5",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-frontal-nerve",
+      "recordSha256": "7366db9a6d63830a3a0df9ecf80ddd4e04c61d45cb93e45f7970fc81a940992f",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:inferior-branch-of-right-oculomotor-nerve",
+      "recordSha256": "ed9c9bdc5e39d92d47d944f3796281674502dfeef5d5ca673351b8f0b8cc0475",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-infratrochlear-nerve",
+      "recordSha256": "022e809d39335638462f5c7eeb94bbbb90bf79752ff1f4f39101207010a1debb",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-lacrimal-nerve",
+      "recordSha256": "7e88707941f42e5b446805ae668a6175f6f8553be7d96db63ea83d54e803a003",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-nasociliary-nerve",
+      "recordSha256": "596fe4229a21601d124eb061f7ee3d4f570433f934bd9a4badc5540561fe25f3",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:communicating-branch-of-right-nasociliary-nerve-with-right-ciliary-ganglion",
+      "recordSha256": "8e0fb6c24d0e8174822a50b8a1ff18bc81560b5dd5615fcd54b0a01191de011b",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-ophthalmic-nerve",
+      "recordSha256": "2cb3692fd013e9eedc247deb90b9ec6847762d355ce610b2e7aaca98fe99cd90",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-posterior-ethmoidal-nerve",
+      "recordSha256": "85abe0487dc7f3543bac7fec06f59dd9f4e1186d6c3394c36e2bbcabea9af6f5",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-long-ciliary-nerve",
+      "recordSha256": "acb0eab1d70b09cf061a245cfb94fac97968222f295d6e723357454c93c378e3",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:superior-branch-of-right-oculomotor-nerve",
+      "recordSha256": "db8a25dc6ce64eac2c94fdc333284b00499b3c9a881b9f0f90755a6f1f522fdd",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-supra-orbital-nerve",
+      "recordSha256": "c94d1a713b40506a2f07874d491dfe3cbdd4c585ca296efaa50c58fe6b785466",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-supratrochlear-nerve",
+      "recordSha256": "aea18a354ffdbe10c5f91e8a4cd91c1651178c43e715dab328f84c65171ba5aa",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "recordSha256": "d9408696dd9879c48f2ab3071903592c11d27c1fb40bc543fada27ff1522fdea",
+      "nearby": [
+        "FMA73462",
+        "FMA73461",
+        "FMA73464",
+        "FMA73463"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:space:central-canal-of-spinal-cord",
+      "recordSha256": "427738ad6449980eb3f8cd5ea96582542fc8d0ac8fddad5d0a30cc94bf46743a",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
+      "recordSha256": "a542d068c59b0e27166aedd3f873fc07e196709b05c710ff610fba5de2485a16",
+      "nearby": [
+        "FMA73463"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve",
+      "recordSha256": "97002613b26fc5c592345c90c073915921907465bc2c48d516f095eae5715de4",
+      "nearby": [
+        "FMA73464"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+      "recordSha256": "e10436a1c04d87ea6738a7494baa34cc63c406ad8e9b7be0dae0f62303281808",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+      "recordSha256": "89fb388622b6c4483fbc35e38adfe80855234f1f785a5170734177ef41338367",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+      "recordSha256": "7c1c97e2fc341b2409946f12e1af999e1945265fd6901510082b991f6689e6ea",
+      "nearby": [
+        "FMA73462",
+        "FMA73463"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+      "recordSha256": "98570b71bc7cfb582e22e74ccfb5cb49c6c03c15bcd4a16742dfa8cc60a3525e",
+      "nearby": [
+        "FMA73461",
+        "FMA73464"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-putamen",
+      "recordSha256": "b78dcb068e45bce9dad638da902663f79bb161a1352e5bd7ee07dcba6ca42415",
+      "nearby": [
+        "FMA73462"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-putamen",
+      "recordSha256": "24f7fd53d4758190ddcd1f48244b945e62d4f152d5e604da39a2f36f20e958b0",
+      "nearby": [
+        "FMA73461"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+      "recordSha256": "1a0a1d962868ee1b4713f003a6551e473ce888ae795aae67013e441825c32270",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+      "recordSha256": "cb7263e98b60e16e9919c80a811301a80a754e2e11146fbe210e9596787feef4",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+      "recordSha256": "b37dcf6b4973922dde03b57344c8ada7bad2b47ea291613c0a4ff02deb705644",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+      "recordSha256": "d4c9778d95e2ff9c7b5cdd1a41bdb5811331285db5295a350e31444f605d196d",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+      "recordSha256": "49c0a379ca1c65d03c7da458b88ecf5ac241deafd06aa7ca5d6af13dd860bfc7",
+      "nearby": [
+        "FMA73462",
+        "FMA73463"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+      "recordSha256": "1a3dca36fc86205db01855cb4df16841f2711f91b8e2f45e88bb8e40b4cf4803",
+      "nearby": [
+        "FMA73461",
+        "FMA73464"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+      "recordSha256": "6fcbe15aaae805c79d1c175e53a15770c253dc75de6f6a73ad996cecd1aa9533",
+      "nearby": [
+        "FMA73462",
+        "FMA73463"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+      "recordSha256": "727b9042bf75a7a3a738c20813490b137b81a70146e5b9bd7475efe15e0ba525",
+      "nearby": [
+        "FMA73461"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+      "recordSha256": "d6e844331c98c669ac4e9a4fe592e4ccbd752184d79d0719b10a3c1048e79204",
+      "nearby": [
+        "FMA73462",
+        "FMA73463"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+      "recordSha256": "c32305557bb31d49038b5a21862816ee55f5e67f3d8befd961366ab045871b38",
+      "nearby": [
+        "FMA73461",
+        "FMA73464"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+      "recordSha256": "c72f5d226bccaaa65fc08729a98ce486086775b0bfc6e31495188c22f60882e9",
+      "nearby": [
+        "FMA73462",
+        "FMA73463"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+      "recordSha256": "60ecc7bb41bc9b73263314fbbac30ab4049e71f074a8b8e92363f3edb9616897",
+      "nearby": [
+        "FMA73461",
+        "FMA73464"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+      "recordSha256": "12fedc991faed638defbbda8443f22ffc1135da4cd8c717e89ba32a2688102ff",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+      "recordSha256": "67acfe13916afbcc7b660abbeaa4273147e3f0debd3e5ac1da755e24c0ddb1ed",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+      "recordSha256": "6cab1c4ffaa9582c0819b3cc5983f0dc6be5bf280524b4f9646b0b40edf17c9c",
+      "nearby": [
+        "FMA73462",
+        "FMA73461",
+        "FMA73464",
+        "FMA73463"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+      "recordSha256": "14a57d94bdc10a7cf1b0eb73db11ac484167b81b653ff1a62dd03b61b35321c8",
+      "nearby": [
+        "FMA73462",
+        "FMA73461",
+        "FMA73464",
+        "FMA73463"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+      "recordSha256": "a0ed0b0fcef295e8437010b497931efbc251b4419fb60c5ad9622f2010754202",
+      "nearby": [
+        "FMA73462",
+        "FMA73461",
+        "FMA73464",
+        "FMA73463"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:mammillary-body",
+      "recordSha256": "1d636288be1de51498e340d4f3b4e7becf88f6fbcd71aae47a0a0d3c3aeadca3",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:midbrain",
+      "recordSha256": "6fc4c0ca3f4378e9e74a96ca8d0cf7fc11c42c392a621a9348ff83673c5815a2",
+      "nearby": [
+        "FMA73462",
+        "FMA73461",
+        "FMA73464",
+        "FMA73463"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:pons",
+      "recordSha256": "9436a6bc98db757d781928b63af045fa4d085867a2477487857ee5b8bf3621bf",
+      "nearby": [
+        "FMA73464",
+        "FMA73463"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:medulla-oblongata",
+      "recordSha256": "cc8a4d42c32c84b630f7df502bad63c5c734a81b3f06ad5c13dcf7ddd88d8945",
+      "nearby": []
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:cerebellum",
+      "recordSha256": "51819836e6dec226864b8fcb82323def794a7f62181b5da8540004736e3f5131",
+      "nearby": [
+        "FMA73462",
+        "FMA73461",
+        "FMA73464",
+        "FMA73463"
+      ]
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:space:fourth-ventricle",
+      "recordSha256": "0624c81068f66e2e403495bd0baa270b9443f79b9e3834b0171e35e86b8d67a1",
+      "nearby": []
+    }
+  ],
+  "comparisons": [
+    {
+      "candidate": "FMA73462",
+      "reference": "FMA50801",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "referenceSources": [
+        {
+          "file": "FJ1730",
+          "sha256": "7acd4a30d13b409221aea7267ae302ef7c100162a6185d891c91843ec876dd79"
+        },
+        {
+          "file": "FJ1731",
+          "sha256": "b56e1cd574977821f5331174a31a830ec6a477e2c6c3f32667f7e46a6716eae8"
+        },
+        {
+          "file": "FJ1732",
+          "sha256": "661e99ae245f0392bd7bfd63aa65074f61fb47e9c35641310f1804c9973acb9a"
+        },
+        {
+          "file": "FJ1733",
+          "sha256": "4f154c33e0c43d68d75aaec659b9a6f65ca42ef4b8ea6462a4482e2178b92a0f"
+        },
+        {
+          "file": "FJ1738",
+          "sha256": "089159be9815563e0645e5a28e7302fbc0bc842af760ac886bf3d0542f34a8f3"
+        },
+        {
+          "file": "FJ1739",
+          "sha256": "26feea54a830b6cf523926e9a50f64935591d30206511f2804cfe79bed423d11"
+        },
+        {
+          "file": "FJ1740",
+          "sha256": "deb04b668a1aa817aa01472ab0191add32393a1bdba518b19d5c8f29431d136f"
+        },
+        {
+          "file": "FJ1743",
+          "sha256": "e2c529932bb78ebae41cbc82496dcfe512f15455b6d806783e019444d10b2eae"
+        },
+        {
+          "file": "FJ1744",
+          "sha256": "055774da0ba432560fb8e65b2b474ddaf5ac1a683f5b4fbcc1e8cac6e9536c25"
+        },
+        {
+          "file": "FJ1745",
+          "sha256": "6210acb1780932a25c00b2f4cbdf5ab28cd9ed95eef46ef792ab3647a42c1b47"
+        },
+        {
+          "file": "FJ1746",
+          "sha256": "4be36eec071bfe6d1878acfa535e74dbf91c773c351dea9bc9a4704e3db3fe2e"
+        },
+        {
+          "file": "FJ1747",
+          "sha256": "0e04dea5d156768ae580670b771197c882d9b652132358ef6197ae3f823640f6"
+        },
+        {
+          "file": "FJ1748",
+          "sha256": "deca1e77a904006224aa6cc34e3710c8d963d1fc89e474ac42258e1f2f3315fd"
+        },
+        {
+          "file": "FJ1749",
+          "sha256": "564190a0427db7acf0b27dc124673d028ff99c3dbd0aaa54ec0c236ee3baf754"
+        },
+        {
+          "file": "FJ1750",
+          "sha256": "ac3d98925d313c0db553ec22a26c20520657f3d9f78c07b0b3cc6d72c5837e93"
+        },
+        {
+          "file": "FJ1751",
+          "sha256": "8f66e76ffc8bccc07a7fb14e49441bc061e23ba1251571439b8197f82acd50df"
+        },
+        {
+          "file": "FJ1758",
+          "sha256": "017e0c54769998fa71f65b60918a6f721bbc723e441bc22ea580284567e708a2"
+        },
+        {
+          "file": "FJ1759",
+          "sha256": "f64b3cea9f760a352cb8981f6cb577700a66392d8a8395ffb45dfebdccee7344"
+        },
+        {
+          "file": "FJ1760",
+          "sha256": "cc6db16b990c3fa607ef64f6c0482fd05cb986213d011da9641ccf50182af897"
+        },
+        {
+          "file": "FJ1762",
+          "sha256": "64a455fe3ae2f5adc06be7b407e50116f56102f9036a4eea3b6f6b7dae4b3b84"
+        },
+        {
+          "file": "FJ1767",
+          "sha256": "17b278c20399a85a9d373ba6a934f9fe61901dd9c9480107baaef2b513f22ee3"
+        },
+        {
+          "file": "FJ1769",
+          "sha256": "ab318e2ca0b27656d06edb4a3d3315669c70d7625989a3573fa66a0e586c6afc"
+        },
+        {
+          "file": "FJ1770",
+          "sha256": "727a267ac80375fd0769bf92067d88adac02aa80220a3099cd530b32ddd88a5b"
+        },
+        {
+          "file": "FJ1775",
+          "sha256": "caecdd922b67fa47e0219e2e7ae05e3efd986a2c869cf57b77ded1c615d1bfc9"
+        },
+        {
+          "file": "FJ1779",
+          "sha256": "0fa8374655959d8e815c2d95105b3471d91a86fb9aa959d37522cab85c46c528"
+        },
+        {
+          "file": "FJ1780",
+          "sha256": "dc2212c4c0c7c9e00375a7bcb24014938f45e15b068df36f6247df0cdb301881"
+        },
+        {
+          "file": "FJ1781",
+          "sha256": "6f66f4912c7519ea6a018324ef4f6d46eb266350574d05a905afeb2c88c575ed"
+        },
+        {
+          "file": "FJ1783",
+          "sha256": "2ea98ec904ba5de8229ed9aeff99c1b34f4030a080e758bdd063f8cc7e92d5f3"
+        },
+        {
+          "file": "FJ1784",
+          "sha256": "b6e11d4565f77ca8c0b815540a6a7cc77f48616f81263cb6352c183cdbd0f1da"
+        },
+        {
+          "file": "FJ1785",
+          "sha256": "87db9ae2691ad71d47210ad27a8d56353fb3e9400f68f1b1350f59cfdf4880b4"
+        },
+        {
+          "file": "FJ1786",
+          "sha256": "9f4a8e120131ee6041a48635c3b6dc74cac8d6dcd50e80ef38b2aec56a66ce38"
+        },
+        {
+          "file": "FJ1787",
+          "sha256": "9bc4568f6633e999f98ba932ac18608251aa36d689433fbbb536f72d6c4d3d6d"
+        },
+        {
+          "file": "FJ1788",
+          "sha256": "e72da8ed193cd1b514207a4056bfb41fef1fabd548090dcc4cd5108ded280fa8"
+        },
+        {
+          "file": "FJ1789",
+          "sha256": "4985721171ebf94eb7607822073dba045e42bec2428982a7befa96204b4b4c1a"
+        },
+        {
+          "file": "FJ1790",
+          "sha256": "47b2ce1a7536c8dccaeba6e14139475ce65805b2d0af6036cda4db18aabe4559"
+        },
+        {
+          "file": "FJ1791",
+          "sha256": "b8f2b6ac30aaf72f9ef0e7c00892edd7d4b27b1a6589971d25c973a8894e09f2"
+        },
+        {
+          "file": "FJ1792",
+          "sha256": "860b8fd92e2fae9dd28f782c88170fb591d00b3154da78b57098ff5119692d96"
+        },
+        {
+          "file": "FJ1795",
+          "sha256": "e3f5a0e1d1ebdf8a97329d1e71904f18d70e40038f89eb1990eb8a1f086dfc36"
+        },
+        {
+          "file": "FJ1797",
+          "sha256": "030dbec5dbfc8f29059727f18f867e962fc5debfeea4cab45883edc2c996ec6b"
+        },
+        {
+          "file": "FJ1798",
+          "sha256": "a7c633819d776ef3610be33e0c2ddf47e7da39b6da476b7876418f8245f27c25"
+        },
+        {
+          "file": "FJ1800",
+          "sha256": "34c447cb8bf5e98493cfe52911af1fa9ebd0eaf32c7c5578457666575f5d8cc0"
+        },
+        {
+          "file": "FJ1801",
+          "sha256": "f8ddd0851486a930ef02ff586badabd34cbcf31b034dd7b5ad1b6466f12d28c3"
+        },
+        {
+          "file": "FJ1806",
+          "sha256": "1581396feaf5a2afee55eac865273c126dd0862ef64e756b189b97f85bc898b5"
+        },
+        {
+          "file": "FJ1807",
+          "sha256": "6ae0c7024c63059599eedabc36fe4650e5979d99ca7d8f9b8bd2389c89d6c5a4"
+        },
+        {
+          "file": "FJ1808",
+          "sha256": "9e6fe3664aa909ce2d26683de807b627b076a1e68906f4bf4ffc59cf984e4bc4"
+        },
+        {
+          "file": "FJ1810",
+          "sha256": "3102a4f96ff71fc9c1e9686ca5e7aefe2e48bb15b3df9c731bde44f9a3dc553c"
+        },
+        {
+          "file": "FJ1814",
+          "sha256": "38ca1d48bc0518256be6ee7a947169f24a402e91a49dde23bced70fc59a6a5d3"
+        },
+        {
+          "file": "FJ1817",
+          "sha256": "b05b314182e27a015072a39847bd750a7c0899962d7d6357541cedf1358f05db"
+        },
+        {
+          "file": "FJ1822",
+          "sha256": "bbe90f2e0a971bdbde65b9da78b3dff921ed92d2de4bfb81b9629b920d41d7de"
+        },
+        {
+          "file": "FJ1826",
+          "sha256": "c468ce1835bf10dbc68f7351a99a788731418bc29b83a3ec2af6135766a69d69"
+        },
+        {
+          "file": "FJ1828",
+          "sha256": "14f9e2dbd68f455314424315b049df5a1a84c248d4c56895b8f8ab426cc40a66"
+        },
+        {
+          "file": "FJ1830",
+          "sha256": "d35574d86994e5e49e0e1ee41174a927c666735d7eb7b9cbdae2a709ae4a0bb9"
+        },
+        {
+          "file": "FJ1831",
+          "sha256": "dccbbe50f38efa0e95660b6b99ffe1e16a2baf37a29e0200d697446f5299c476"
+        },
+        {
+          "file": "FJ1833",
+          "sha256": "8f4548f67acff09574bc46bfc9c78c31ad8d4f16a34cfe28b95e19b640d2208c"
+        },
+        {
+          "file": "FJ1834",
+          "sha256": "9a52d502e5af633cb6d1cae76e5e9230e60f78ee987982c23b02776fd3adc9ea"
+        },
+        {
+          "file": "FJ1835",
+          "sha256": "d8c6c241f6e98a6b8bfa9cd97943173d18a91251a66029d9a5681fc09f691be4"
+        },
+        {
+          "file": "FJ1836",
+          "sha256": "367b62ae6f27730d3587f4776ad948ad114f9182be35e776faf7aa576d97ae41"
+        },
+        {
+          "file": "FJ1841",
+          "sha256": "473636ae8d030582d4d7a76d6fa93d2fc785a415060411fe9b93ce63738ee2bf"
+        },
+        {
+          "file": "FJ1842",
+          "sha256": "dd46c1ccde03f979fb0e23071ab5816d7a4bda05776b66604e784f735127c0c2"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 72,
+        "minMm": 0.013368574684631759,
+        "medianMm": 3.1326599306391327,
+        "maxMm": 6.695403958686883,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 6,
+            "weightedFraction": 0.08333333333333333
+          },
+          {
+            "mm": 0.25,
+            "count": 10,
+            "weightedFraction": 0.1388888888888889
+          },
+          {
+            "mm": 1,
+            "count": 29,
+            "weightedFraction": 0.4027777777777778
+          },
+          {
+            "mm": 2,
+            "count": 32,
+            "weightedFraction": 0.4444444444444444
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 128,
+        "minMm": 3.656213723966367,
+        "medianMm": 47.42973794313438,
+        "maxMm": 96.77301590562112,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73461",
+      "reference": "FMA50801",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "referenceSources": [
+        {
+          "file": "FJ1730",
+          "sha256": "7acd4a30d13b409221aea7267ae302ef7c100162a6185d891c91843ec876dd79"
+        },
+        {
+          "file": "FJ1731",
+          "sha256": "b56e1cd574977821f5331174a31a830ec6a477e2c6c3f32667f7e46a6716eae8"
+        },
+        {
+          "file": "FJ1732",
+          "sha256": "661e99ae245f0392bd7bfd63aa65074f61fb47e9c35641310f1804c9973acb9a"
+        },
+        {
+          "file": "FJ1733",
+          "sha256": "4f154c33e0c43d68d75aaec659b9a6f65ca42ef4b8ea6462a4482e2178b92a0f"
+        },
+        {
+          "file": "FJ1738",
+          "sha256": "089159be9815563e0645e5a28e7302fbc0bc842af760ac886bf3d0542f34a8f3"
+        },
+        {
+          "file": "FJ1739",
+          "sha256": "26feea54a830b6cf523926e9a50f64935591d30206511f2804cfe79bed423d11"
+        },
+        {
+          "file": "FJ1740",
+          "sha256": "deb04b668a1aa817aa01472ab0191add32393a1bdba518b19d5c8f29431d136f"
+        },
+        {
+          "file": "FJ1743",
+          "sha256": "e2c529932bb78ebae41cbc82496dcfe512f15455b6d806783e019444d10b2eae"
+        },
+        {
+          "file": "FJ1744",
+          "sha256": "055774da0ba432560fb8e65b2b474ddaf5ac1a683f5b4fbcc1e8cac6e9536c25"
+        },
+        {
+          "file": "FJ1745",
+          "sha256": "6210acb1780932a25c00b2f4cbdf5ab28cd9ed95eef46ef792ab3647a42c1b47"
+        },
+        {
+          "file": "FJ1746",
+          "sha256": "4be36eec071bfe6d1878acfa535e74dbf91c773c351dea9bc9a4704e3db3fe2e"
+        },
+        {
+          "file": "FJ1747",
+          "sha256": "0e04dea5d156768ae580670b771197c882d9b652132358ef6197ae3f823640f6"
+        },
+        {
+          "file": "FJ1748",
+          "sha256": "deca1e77a904006224aa6cc34e3710c8d963d1fc89e474ac42258e1f2f3315fd"
+        },
+        {
+          "file": "FJ1749",
+          "sha256": "564190a0427db7acf0b27dc124673d028ff99c3dbd0aaa54ec0c236ee3baf754"
+        },
+        {
+          "file": "FJ1750",
+          "sha256": "ac3d98925d313c0db553ec22a26c20520657f3d9f78c07b0b3cc6d72c5837e93"
+        },
+        {
+          "file": "FJ1751",
+          "sha256": "8f66e76ffc8bccc07a7fb14e49441bc061e23ba1251571439b8197f82acd50df"
+        },
+        {
+          "file": "FJ1758",
+          "sha256": "017e0c54769998fa71f65b60918a6f721bbc723e441bc22ea580284567e708a2"
+        },
+        {
+          "file": "FJ1759",
+          "sha256": "f64b3cea9f760a352cb8981f6cb577700a66392d8a8395ffb45dfebdccee7344"
+        },
+        {
+          "file": "FJ1760",
+          "sha256": "cc6db16b990c3fa607ef64f6c0482fd05cb986213d011da9641ccf50182af897"
+        },
+        {
+          "file": "FJ1762",
+          "sha256": "64a455fe3ae2f5adc06be7b407e50116f56102f9036a4eea3b6f6b7dae4b3b84"
+        },
+        {
+          "file": "FJ1767",
+          "sha256": "17b278c20399a85a9d373ba6a934f9fe61901dd9c9480107baaef2b513f22ee3"
+        },
+        {
+          "file": "FJ1769",
+          "sha256": "ab318e2ca0b27656d06edb4a3d3315669c70d7625989a3573fa66a0e586c6afc"
+        },
+        {
+          "file": "FJ1770",
+          "sha256": "727a267ac80375fd0769bf92067d88adac02aa80220a3099cd530b32ddd88a5b"
+        },
+        {
+          "file": "FJ1775",
+          "sha256": "caecdd922b67fa47e0219e2e7ae05e3efd986a2c869cf57b77ded1c615d1bfc9"
+        },
+        {
+          "file": "FJ1779",
+          "sha256": "0fa8374655959d8e815c2d95105b3471d91a86fb9aa959d37522cab85c46c528"
+        },
+        {
+          "file": "FJ1780",
+          "sha256": "dc2212c4c0c7c9e00375a7bcb24014938f45e15b068df36f6247df0cdb301881"
+        },
+        {
+          "file": "FJ1781",
+          "sha256": "6f66f4912c7519ea6a018324ef4f6d46eb266350574d05a905afeb2c88c575ed"
+        },
+        {
+          "file": "FJ1783",
+          "sha256": "2ea98ec904ba5de8229ed9aeff99c1b34f4030a080e758bdd063f8cc7e92d5f3"
+        },
+        {
+          "file": "FJ1784",
+          "sha256": "b6e11d4565f77ca8c0b815540a6a7cc77f48616f81263cb6352c183cdbd0f1da"
+        },
+        {
+          "file": "FJ1785",
+          "sha256": "87db9ae2691ad71d47210ad27a8d56353fb3e9400f68f1b1350f59cfdf4880b4"
+        },
+        {
+          "file": "FJ1786",
+          "sha256": "9f4a8e120131ee6041a48635c3b6dc74cac8d6dcd50e80ef38b2aec56a66ce38"
+        },
+        {
+          "file": "FJ1787",
+          "sha256": "9bc4568f6633e999f98ba932ac18608251aa36d689433fbbb536f72d6c4d3d6d"
+        },
+        {
+          "file": "FJ1788",
+          "sha256": "e72da8ed193cd1b514207a4056bfb41fef1fabd548090dcc4cd5108ded280fa8"
+        },
+        {
+          "file": "FJ1789",
+          "sha256": "4985721171ebf94eb7607822073dba045e42bec2428982a7befa96204b4b4c1a"
+        },
+        {
+          "file": "FJ1790",
+          "sha256": "47b2ce1a7536c8dccaeba6e14139475ce65805b2d0af6036cda4db18aabe4559"
+        },
+        {
+          "file": "FJ1791",
+          "sha256": "b8f2b6ac30aaf72f9ef0e7c00892edd7d4b27b1a6589971d25c973a8894e09f2"
+        },
+        {
+          "file": "FJ1792",
+          "sha256": "860b8fd92e2fae9dd28f782c88170fb591d00b3154da78b57098ff5119692d96"
+        },
+        {
+          "file": "FJ1795",
+          "sha256": "e3f5a0e1d1ebdf8a97329d1e71904f18d70e40038f89eb1990eb8a1f086dfc36"
+        },
+        {
+          "file": "FJ1797",
+          "sha256": "030dbec5dbfc8f29059727f18f867e962fc5debfeea4cab45883edc2c996ec6b"
+        },
+        {
+          "file": "FJ1798",
+          "sha256": "a7c633819d776ef3610be33e0c2ddf47e7da39b6da476b7876418f8245f27c25"
+        },
+        {
+          "file": "FJ1800",
+          "sha256": "34c447cb8bf5e98493cfe52911af1fa9ebd0eaf32c7c5578457666575f5d8cc0"
+        },
+        {
+          "file": "FJ1801",
+          "sha256": "f8ddd0851486a930ef02ff586badabd34cbcf31b034dd7b5ad1b6466f12d28c3"
+        },
+        {
+          "file": "FJ1806",
+          "sha256": "1581396feaf5a2afee55eac865273c126dd0862ef64e756b189b97f85bc898b5"
+        },
+        {
+          "file": "FJ1807",
+          "sha256": "6ae0c7024c63059599eedabc36fe4650e5979d99ca7d8f9b8bd2389c89d6c5a4"
+        },
+        {
+          "file": "FJ1808",
+          "sha256": "9e6fe3664aa909ce2d26683de807b627b076a1e68906f4bf4ffc59cf984e4bc4"
+        },
+        {
+          "file": "FJ1810",
+          "sha256": "3102a4f96ff71fc9c1e9686ca5e7aefe2e48bb15b3df9c731bde44f9a3dc553c"
+        },
+        {
+          "file": "FJ1814",
+          "sha256": "38ca1d48bc0518256be6ee7a947169f24a402e91a49dde23bced70fc59a6a5d3"
+        },
+        {
+          "file": "FJ1817",
+          "sha256": "b05b314182e27a015072a39847bd750a7c0899962d7d6357541cedf1358f05db"
+        },
+        {
+          "file": "FJ1822",
+          "sha256": "bbe90f2e0a971bdbde65b9da78b3dff921ed92d2de4bfb81b9629b920d41d7de"
+        },
+        {
+          "file": "FJ1826",
+          "sha256": "c468ce1835bf10dbc68f7351a99a788731418bc29b83a3ec2af6135766a69d69"
+        },
+        {
+          "file": "FJ1828",
+          "sha256": "14f9e2dbd68f455314424315b049df5a1a84c248d4c56895b8f8ab426cc40a66"
+        },
+        {
+          "file": "FJ1830",
+          "sha256": "d35574d86994e5e49e0e1ee41174a927c666735d7eb7b9cbdae2a709ae4a0bb9"
+        },
+        {
+          "file": "FJ1831",
+          "sha256": "dccbbe50f38efa0e95660b6b99ffe1e16a2baf37a29e0200d697446f5299c476"
+        },
+        {
+          "file": "FJ1833",
+          "sha256": "8f4548f67acff09574bc46bfc9c78c31ad8d4f16a34cfe28b95e19b640d2208c"
+        },
+        {
+          "file": "FJ1834",
+          "sha256": "9a52d502e5af633cb6d1cae76e5e9230e60f78ee987982c23b02776fd3adc9ea"
+        },
+        {
+          "file": "FJ1835",
+          "sha256": "d8c6c241f6e98a6b8bfa9cd97943173d18a91251a66029d9a5681fc09f691be4"
+        },
+        {
+          "file": "FJ1836",
+          "sha256": "367b62ae6f27730d3587f4776ad948ad114f9182be35e776faf7aa576d97ae41"
+        },
+        {
+          "file": "FJ1841",
+          "sha256": "473636ae8d030582d4d7a76d6fa93d2fc785a415060411fe9b93ce63738ee2bf"
+        },
+        {
+          "file": "FJ1842",
+          "sha256": "dd46c1ccde03f979fb0e23071ab5816d7a4bda05776b66604e784f735127c0c2"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 68,
+        "minMm": 0.019406015557264556,
+        "medianMm": 0.8095961927254632,
+        "maxMm": 6.698566272839266,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 5,
+            "weightedFraction": 0.07352941176470588
+          },
+          {
+            "mm": 0.25,
+            "count": 16,
+            "weightedFraction": 0.23529411764705882
+          },
+          {
+            "mm": 1,
+            "count": 37,
+            "weightedFraction": 0.5441176470588235
+          },
+          {
+            "mm": 2,
+            "count": 41,
+            "weightedFraction": 0.6029411764705882
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 128,
+        "minMm": 3.583497728827447,
+        "medianMm": 49.46909289188955,
+        "maxMm": 97.28128455639396,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73464",
+      "reference": "FMA50801",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "referenceSources": [
+        {
+          "file": "FJ1730",
+          "sha256": "7acd4a30d13b409221aea7267ae302ef7c100162a6185d891c91843ec876dd79"
+        },
+        {
+          "file": "FJ1731",
+          "sha256": "b56e1cd574977821f5331174a31a830ec6a477e2c6c3f32667f7e46a6716eae8"
+        },
+        {
+          "file": "FJ1732",
+          "sha256": "661e99ae245f0392bd7bfd63aa65074f61fb47e9c35641310f1804c9973acb9a"
+        },
+        {
+          "file": "FJ1733",
+          "sha256": "4f154c33e0c43d68d75aaec659b9a6f65ca42ef4b8ea6462a4482e2178b92a0f"
+        },
+        {
+          "file": "FJ1738",
+          "sha256": "089159be9815563e0645e5a28e7302fbc0bc842af760ac886bf3d0542f34a8f3"
+        },
+        {
+          "file": "FJ1739",
+          "sha256": "26feea54a830b6cf523926e9a50f64935591d30206511f2804cfe79bed423d11"
+        },
+        {
+          "file": "FJ1740",
+          "sha256": "deb04b668a1aa817aa01472ab0191add32393a1bdba518b19d5c8f29431d136f"
+        },
+        {
+          "file": "FJ1743",
+          "sha256": "e2c529932bb78ebae41cbc82496dcfe512f15455b6d806783e019444d10b2eae"
+        },
+        {
+          "file": "FJ1744",
+          "sha256": "055774da0ba432560fb8e65b2b474ddaf5ac1a683f5b4fbcc1e8cac6e9536c25"
+        },
+        {
+          "file": "FJ1745",
+          "sha256": "6210acb1780932a25c00b2f4cbdf5ab28cd9ed95eef46ef792ab3647a42c1b47"
+        },
+        {
+          "file": "FJ1746",
+          "sha256": "4be36eec071bfe6d1878acfa535e74dbf91c773c351dea9bc9a4704e3db3fe2e"
+        },
+        {
+          "file": "FJ1747",
+          "sha256": "0e04dea5d156768ae580670b771197c882d9b652132358ef6197ae3f823640f6"
+        },
+        {
+          "file": "FJ1748",
+          "sha256": "deca1e77a904006224aa6cc34e3710c8d963d1fc89e474ac42258e1f2f3315fd"
+        },
+        {
+          "file": "FJ1749",
+          "sha256": "564190a0427db7acf0b27dc124673d028ff99c3dbd0aaa54ec0c236ee3baf754"
+        },
+        {
+          "file": "FJ1750",
+          "sha256": "ac3d98925d313c0db553ec22a26c20520657f3d9f78c07b0b3cc6d72c5837e93"
+        },
+        {
+          "file": "FJ1751",
+          "sha256": "8f66e76ffc8bccc07a7fb14e49441bc061e23ba1251571439b8197f82acd50df"
+        },
+        {
+          "file": "FJ1758",
+          "sha256": "017e0c54769998fa71f65b60918a6f721bbc723e441bc22ea580284567e708a2"
+        },
+        {
+          "file": "FJ1759",
+          "sha256": "f64b3cea9f760a352cb8981f6cb577700a66392d8a8395ffb45dfebdccee7344"
+        },
+        {
+          "file": "FJ1760",
+          "sha256": "cc6db16b990c3fa607ef64f6c0482fd05cb986213d011da9641ccf50182af897"
+        },
+        {
+          "file": "FJ1762",
+          "sha256": "64a455fe3ae2f5adc06be7b407e50116f56102f9036a4eea3b6f6b7dae4b3b84"
+        },
+        {
+          "file": "FJ1767",
+          "sha256": "17b278c20399a85a9d373ba6a934f9fe61901dd9c9480107baaef2b513f22ee3"
+        },
+        {
+          "file": "FJ1769",
+          "sha256": "ab318e2ca0b27656d06edb4a3d3315669c70d7625989a3573fa66a0e586c6afc"
+        },
+        {
+          "file": "FJ1770",
+          "sha256": "727a267ac80375fd0769bf92067d88adac02aa80220a3099cd530b32ddd88a5b"
+        },
+        {
+          "file": "FJ1775",
+          "sha256": "caecdd922b67fa47e0219e2e7ae05e3efd986a2c869cf57b77ded1c615d1bfc9"
+        },
+        {
+          "file": "FJ1779",
+          "sha256": "0fa8374655959d8e815c2d95105b3471d91a86fb9aa959d37522cab85c46c528"
+        },
+        {
+          "file": "FJ1780",
+          "sha256": "dc2212c4c0c7c9e00375a7bcb24014938f45e15b068df36f6247df0cdb301881"
+        },
+        {
+          "file": "FJ1781",
+          "sha256": "6f66f4912c7519ea6a018324ef4f6d46eb266350574d05a905afeb2c88c575ed"
+        },
+        {
+          "file": "FJ1783",
+          "sha256": "2ea98ec904ba5de8229ed9aeff99c1b34f4030a080e758bdd063f8cc7e92d5f3"
+        },
+        {
+          "file": "FJ1784",
+          "sha256": "b6e11d4565f77ca8c0b815540a6a7cc77f48616f81263cb6352c183cdbd0f1da"
+        },
+        {
+          "file": "FJ1785",
+          "sha256": "87db9ae2691ad71d47210ad27a8d56353fb3e9400f68f1b1350f59cfdf4880b4"
+        },
+        {
+          "file": "FJ1786",
+          "sha256": "9f4a8e120131ee6041a48635c3b6dc74cac8d6dcd50e80ef38b2aec56a66ce38"
+        },
+        {
+          "file": "FJ1787",
+          "sha256": "9bc4568f6633e999f98ba932ac18608251aa36d689433fbbb536f72d6c4d3d6d"
+        },
+        {
+          "file": "FJ1788",
+          "sha256": "e72da8ed193cd1b514207a4056bfb41fef1fabd548090dcc4cd5108ded280fa8"
+        },
+        {
+          "file": "FJ1789",
+          "sha256": "4985721171ebf94eb7607822073dba045e42bec2428982a7befa96204b4b4c1a"
+        },
+        {
+          "file": "FJ1790",
+          "sha256": "47b2ce1a7536c8dccaeba6e14139475ce65805b2d0af6036cda4db18aabe4559"
+        },
+        {
+          "file": "FJ1791",
+          "sha256": "b8f2b6ac30aaf72f9ef0e7c00892edd7d4b27b1a6589971d25c973a8894e09f2"
+        },
+        {
+          "file": "FJ1792",
+          "sha256": "860b8fd92e2fae9dd28f782c88170fb591d00b3154da78b57098ff5119692d96"
+        },
+        {
+          "file": "FJ1795",
+          "sha256": "e3f5a0e1d1ebdf8a97329d1e71904f18d70e40038f89eb1990eb8a1f086dfc36"
+        },
+        {
+          "file": "FJ1797",
+          "sha256": "030dbec5dbfc8f29059727f18f867e962fc5debfeea4cab45883edc2c996ec6b"
+        },
+        {
+          "file": "FJ1798",
+          "sha256": "a7c633819d776ef3610be33e0c2ddf47e7da39b6da476b7876418f8245f27c25"
+        },
+        {
+          "file": "FJ1800",
+          "sha256": "34c447cb8bf5e98493cfe52911af1fa9ebd0eaf32c7c5578457666575f5d8cc0"
+        },
+        {
+          "file": "FJ1801",
+          "sha256": "f8ddd0851486a930ef02ff586badabd34cbcf31b034dd7b5ad1b6466f12d28c3"
+        },
+        {
+          "file": "FJ1806",
+          "sha256": "1581396feaf5a2afee55eac865273c126dd0862ef64e756b189b97f85bc898b5"
+        },
+        {
+          "file": "FJ1807",
+          "sha256": "6ae0c7024c63059599eedabc36fe4650e5979d99ca7d8f9b8bd2389c89d6c5a4"
+        },
+        {
+          "file": "FJ1808",
+          "sha256": "9e6fe3664aa909ce2d26683de807b627b076a1e68906f4bf4ffc59cf984e4bc4"
+        },
+        {
+          "file": "FJ1810",
+          "sha256": "3102a4f96ff71fc9c1e9686ca5e7aefe2e48bb15b3df9c731bde44f9a3dc553c"
+        },
+        {
+          "file": "FJ1814",
+          "sha256": "38ca1d48bc0518256be6ee7a947169f24a402e91a49dde23bced70fc59a6a5d3"
+        },
+        {
+          "file": "FJ1817",
+          "sha256": "b05b314182e27a015072a39847bd750a7c0899962d7d6357541cedf1358f05db"
+        },
+        {
+          "file": "FJ1822",
+          "sha256": "bbe90f2e0a971bdbde65b9da78b3dff921ed92d2de4bfb81b9629b920d41d7de"
+        },
+        {
+          "file": "FJ1826",
+          "sha256": "c468ce1835bf10dbc68f7351a99a788731418bc29b83a3ec2af6135766a69d69"
+        },
+        {
+          "file": "FJ1828",
+          "sha256": "14f9e2dbd68f455314424315b049df5a1a84c248d4c56895b8f8ab426cc40a66"
+        },
+        {
+          "file": "FJ1830",
+          "sha256": "d35574d86994e5e49e0e1ee41174a927c666735d7eb7b9cbdae2a709ae4a0bb9"
+        },
+        {
+          "file": "FJ1831",
+          "sha256": "dccbbe50f38efa0e95660b6b99ffe1e16a2baf37a29e0200d697446f5299c476"
+        },
+        {
+          "file": "FJ1833",
+          "sha256": "8f4548f67acff09574bc46bfc9c78c31ad8d4f16a34cfe28b95e19b640d2208c"
+        },
+        {
+          "file": "FJ1834",
+          "sha256": "9a52d502e5af633cb6d1cae76e5e9230e60f78ee987982c23b02776fd3adc9ea"
+        },
+        {
+          "file": "FJ1835",
+          "sha256": "d8c6c241f6e98a6b8bfa9cd97943173d18a91251a66029d9a5681fc09f691be4"
+        },
+        {
+          "file": "FJ1836",
+          "sha256": "367b62ae6f27730d3587f4776ad948ad114f9182be35e776faf7aa576d97ae41"
+        },
+        {
+          "file": "FJ1841",
+          "sha256": "473636ae8d030582d4d7a76d6fa93d2fc785a415060411fe9b93ce63738ee2bf"
+        },
+        {
+          "file": "FJ1842",
+          "sha256": "dd46c1ccde03f979fb0e23071ab5816d7a4bda05776b66604e784f735127c0c2"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 78,
+        "minMm": 0.007917478845307366,
+        "medianMm": 1.2774925998793545,
+        "maxMm": 3.5842252600641746,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 6,
+            "weightedFraction": 0.07692307692307693
+          },
+          {
+            "mm": 0.25,
+            "count": 12,
+            "weightedFraction": 0.15384615384615385
+          },
+          {
+            "mm": 1,
+            "count": 33,
+            "weightedFraction": 0.4230769230769231
+          },
+          {
+            "mm": 2,
+            "count": 54,
+            "weightedFraction": 0.6923076923076923
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 128,
+        "minMm": 2.2131607632539407,
+        "medianMm": 48.89606809020943,
+        "maxMm": 96.84313735522463,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73463",
+      "reference": "FMA50801",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "referenceSources": [
+        {
+          "file": "FJ1730",
+          "sha256": "7acd4a30d13b409221aea7267ae302ef7c100162a6185d891c91843ec876dd79"
+        },
+        {
+          "file": "FJ1731",
+          "sha256": "b56e1cd574977821f5331174a31a830ec6a477e2c6c3f32667f7e46a6716eae8"
+        },
+        {
+          "file": "FJ1732",
+          "sha256": "661e99ae245f0392bd7bfd63aa65074f61fb47e9c35641310f1804c9973acb9a"
+        },
+        {
+          "file": "FJ1733",
+          "sha256": "4f154c33e0c43d68d75aaec659b9a6f65ca42ef4b8ea6462a4482e2178b92a0f"
+        },
+        {
+          "file": "FJ1738",
+          "sha256": "089159be9815563e0645e5a28e7302fbc0bc842af760ac886bf3d0542f34a8f3"
+        },
+        {
+          "file": "FJ1739",
+          "sha256": "26feea54a830b6cf523926e9a50f64935591d30206511f2804cfe79bed423d11"
+        },
+        {
+          "file": "FJ1740",
+          "sha256": "deb04b668a1aa817aa01472ab0191add32393a1bdba518b19d5c8f29431d136f"
+        },
+        {
+          "file": "FJ1743",
+          "sha256": "e2c529932bb78ebae41cbc82496dcfe512f15455b6d806783e019444d10b2eae"
+        },
+        {
+          "file": "FJ1744",
+          "sha256": "055774da0ba432560fb8e65b2b474ddaf5ac1a683f5b4fbcc1e8cac6e9536c25"
+        },
+        {
+          "file": "FJ1745",
+          "sha256": "6210acb1780932a25c00b2f4cbdf5ab28cd9ed95eef46ef792ab3647a42c1b47"
+        },
+        {
+          "file": "FJ1746",
+          "sha256": "4be36eec071bfe6d1878acfa535e74dbf91c773c351dea9bc9a4704e3db3fe2e"
+        },
+        {
+          "file": "FJ1747",
+          "sha256": "0e04dea5d156768ae580670b771197c882d9b652132358ef6197ae3f823640f6"
+        },
+        {
+          "file": "FJ1748",
+          "sha256": "deca1e77a904006224aa6cc34e3710c8d963d1fc89e474ac42258e1f2f3315fd"
+        },
+        {
+          "file": "FJ1749",
+          "sha256": "564190a0427db7acf0b27dc124673d028ff99c3dbd0aaa54ec0c236ee3baf754"
+        },
+        {
+          "file": "FJ1750",
+          "sha256": "ac3d98925d313c0db553ec22a26c20520657f3d9f78c07b0b3cc6d72c5837e93"
+        },
+        {
+          "file": "FJ1751",
+          "sha256": "8f66e76ffc8bccc07a7fb14e49441bc061e23ba1251571439b8197f82acd50df"
+        },
+        {
+          "file": "FJ1758",
+          "sha256": "017e0c54769998fa71f65b60918a6f721bbc723e441bc22ea580284567e708a2"
+        },
+        {
+          "file": "FJ1759",
+          "sha256": "f64b3cea9f760a352cb8981f6cb577700a66392d8a8395ffb45dfebdccee7344"
+        },
+        {
+          "file": "FJ1760",
+          "sha256": "cc6db16b990c3fa607ef64f6c0482fd05cb986213d011da9641ccf50182af897"
+        },
+        {
+          "file": "FJ1762",
+          "sha256": "64a455fe3ae2f5adc06be7b407e50116f56102f9036a4eea3b6f6b7dae4b3b84"
+        },
+        {
+          "file": "FJ1767",
+          "sha256": "17b278c20399a85a9d373ba6a934f9fe61901dd9c9480107baaef2b513f22ee3"
+        },
+        {
+          "file": "FJ1769",
+          "sha256": "ab318e2ca0b27656d06edb4a3d3315669c70d7625989a3573fa66a0e586c6afc"
+        },
+        {
+          "file": "FJ1770",
+          "sha256": "727a267ac80375fd0769bf92067d88adac02aa80220a3099cd530b32ddd88a5b"
+        },
+        {
+          "file": "FJ1775",
+          "sha256": "caecdd922b67fa47e0219e2e7ae05e3efd986a2c869cf57b77ded1c615d1bfc9"
+        },
+        {
+          "file": "FJ1779",
+          "sha256": "0fa8374655959d8e815c2d95105b3471d91a86fb9aa959d37522cab85c46c528"
+        },
+        {
+          "file": "FJ1780",
+          "sha256": "dc2212c4c0c7c9e00375a7bcb24014938f45e15b068df36f6247df0cdb301881"
+        },
+        {
+          "file": "FJ1781",
+          "sha256": "6f66f4912c7519ea6a018324ef4f6d46eb266350574d05a905afeb2c88c575ed"
+        },
+        {
+          "file": "FJ1783",
+          "sha256": "2ea98ec904ba5de8229ed9aeff99c1b34f4030a080e758bdd063f8cc7e92d5f3"
+        },
+        {
+          "file": "FJ1784",
+          "sha256": "b6e11d4565f77ca8c0b815540a6a7cc77f48616f81263cb6352c183cdbd0f1da"
+        },
+        {
+          "file": "FJ1785",
+          "sha256": "87db9ae2691ad71d47210ad27a8d56353fb3e9400f68f1b1350f59cfdf4880b4"
+        },
+        {
+          "file": "FJ1786",
+          "sha256": "9f4a8e120131ee6041a48635c3b6dc74cac8d6dcd50e80ef38b2aec56a66ce38"
+        },
+        {
+          "file": "FJ1787",
+          "sha256": "9bc4568f6633e999f98ba932ac18608251aa36d689433fbbb536f72d6c4d3d6d"
+        },
+        {
+          "file": "FJ1788",
+          "sha256": "e72da8ed193cd1b514207a4056bfb41fef1fabd548090dcc4cd5108ded280fa8"
+        },
+        {
+          "file": "FJ1789",
+          "sha256": "4985721171ebf94eb7607822073dba045e42bec2428982a7befa96204b4b4c1a"
+        },
+        {
+          "file": "FJ1790",
+          "sha256": "47b2ce1a7536c8dccaeba6e14139475ce65805b2d0af6036cda4db18aabe4559"
+        },
+        {
+          "file": "FJ1791",
+          "sha256": "b8f2b6ac30aaf72f9ef0e7c00892edd7d4b27b1a6589971d25c973a8894e09f2"
+        },
+        {
+          "file": "FJ1792",
+          "sha256": "860b8fd92e2fae9dd28f782c88170fb591d00b3154da78b57098ff5119692d96"
+        },
+        {
+          "file": "FJ1795",
+          "sha256": "e3f5a0e1d1ebdf8a97329d1e71904f18d70e40038f89eb1990eb8a1f086dfc36"
+        },
+        {
+          "file": "FJ1797",
+          "sha256": "030dbec5dbfc8f29059727f18f867e962fc5debfeea4cab45883edc2c996ec6b"
+        },
+        {
+          "file": "FJ1798",
+          "sha256": "a7c633819d776ef3610be33e0c2ddf47e7da39b6da476b7876418f8245f27c25"
+        },
+        {
+          "file": "FJ1800",
+          "sha256": "34c447cb8bf5e98493cfe52911af1fa9ebd0eaf32c7c5578457666575f5d8cc0"
+        },
+        {
+          "file": "FJ1801",
+          "sha256": "f8ddd0851486a930ef02ff586badabd34cbcf31b034dd7b5ad1b6466f12d28c3"
+        },
+        {
+          "file": "FJ1806",
+          "sha256": "1581396feaf5a2afee55eac865273c126dd0862ef64e756b189b97f85bc898b5"
+        },
+        {
+          "file": "FJ1807",
+          "sha256": "6ae0c7024c63059599eedabc36fe4650e5979d99ca7d8f9b8bd2389c89d6c5a4"
+        },
+        {
+          "file": "FJ1808",
+          "sha256": "9e6fe3664aa909ce2d26683de807b627b076a1e68906f4bf4ffc59cf984e4bc4"
+        },
+        {
+          "file": "FJ1810",
+          "sha256": "3102a4f96ff71fc9c1e9686ca5e7aefe2e48bb15b3df9c731bde44f9a3dc553c"
+        },
+        {
+          "file": "FJ1814",
+          "sha256": "38ca1d48bc0518256be6ee7a947169f24a402e91a49dde23bced70fc59a6a5d3"
+        },
+        {
+          "file": "FJ1817",
+          "sha256": "b05b314182e27a015072a39847bd750a7c0899962d7d6357541cedf1358f05db"
+        },
+        {
+          "file": "FJ1822",
+          "sha256": "bbe90f2e0a971bdbde65b9da78b3dff921ed92d2de4bfb81b9629b920d41d7de"
+        },
+        {
+          "file": "FJ1826",
+          "sha256": "c468ce1835bf10dbc68f7351a99a788731418bc29b83a3ec2af6135766a69d69"
+        },
+        {
+          "file": "FJ1828",
+          "sha256": "14f9e2dbd68f455314424315b049df5a1a84c248d4c56895b8f8ab426cc40a66"
+        },
+        {
+          "file": "FJ1830",
+          "sha256": "d35574d86994e5e49e0e1ee41174a927c666735d7eb7b9cbdae2a709ae4a0bb9"
+        },
+        {
+          "file": "FJ1831",
+          "sha256": "dccbbe50f38efa0e95660b6b99ffe1e16a2baf37a29e0200d697446f5299c476"
+        },
+        {
+          "file": "FJ1833",
+          "sha256": "8f4548f67acff09574bc46bfc9c78c31ad8d4f16a34cfe28b95e19b640d2208c"
+        },
+        {
+          "file": "FJ1834",
+          "sha256": "9a52d502e5af633cb6d1cae76e5e9230e60f78ee987982c23b02776fd3adc9ea"
+        },
+        {
+          "file": "FJ1835",
+          "sha256": "d8c6c241f6e98a6b8bfa9cd97943173d18a91251a66029d9a5681fc09f691be4"
+        },
+        {
+          "file": "FJ1836",
+          "sha256": "367b62ae6f27730d3587f4776ad948ad114f9182be35e776faf7aa576d97ae41"
+        },
+        {
+          "file": "FJ1841",
+          "sha256": "473636ae8d030582d4d7a76d6fa93d2fc785a415060411fe9b93ce63738ee2bf"
+        },
+        {
+          "file": "FJ1842",
+          "sha256": "dd46c1ccde03f979fb0e23071ab5816d7a4bda05776b66604e784f735127c0c2"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 66,
+        "minMm": 0.0064557259870396426,
+        "medianMm": 1.3614987357849284,
+        "maxMm": 3.5024332109618044,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 5,
+            "weightedFraction": 0.07575757575757576
+          },
+          {
+            "mm": 0.25,
+            "count": 11,
+            "weightedFraction": 0.16666666666666666
+          },
+          {
+            "mm": 1,
+            "count": 28,
+            "weightedFraction": 0.42424242424242425
+          },
+          {
+            "mm": 2,
+            "count": 46,
+            "weightedFraction": 0.696969696969697
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 128,
+        "minMm": 4.115516284742863,
+        "medianMm": 48.20941332010354,
+        "maxMm": 95.85839024353625,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73463",
+      "reference": "FMA50881",
+      "referenceId": "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
+      "referenceSources": [
+        {
+          "file": "FJ1381",
+          "sha256": "6c1ec7f14af8bc9883e9f37363e299cbab82f4ecdeb68b1898670004ddf36632"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 66,
+        "minMm": 10.544083330949272,
+        "medianMm": 15.366251568148675,
+        "maxMm": 19.898725055597488,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 126,
+        "minMm": 10.377944942155063,
+        "medianMm": 60.868865017020916,
+        "maxMm": 75.46618522921378,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73464",
+      "reference": "FMA50882",
+      "referenceId": "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve",
+      "referenceSources": [
+        {
+          "file": "FJ1330",
+          "sha256": "0a849c085582d60aa2baf8a980498617ceb1c8f3c2ae9c8913cc1ee36b8a1d2c"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 78,
+        "minMm": 10.450844224540045,
+        "medianMm": 14.989581777558104,
+        "maxMm": 19.87535301364195,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 124,
+        "minMm": 10.418229874067018,
+        "medianMm": 62.083020525905496,
+        "maxMm": 75.44049238340111,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73462",
+      "reference": "FMA72826",
+      "referenceId": "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+      "referenceSources": [
+        {
+          "file": "FJ1802",
+          "sha256": "1139f3e7002704a0efcc1c9161ef2b84e60f28c18728e24664454451ae30bb17"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 72,
+        "minMm": 9.116860847874268,
+        "medianMm": 15.648797207013398,
+        "maxMm": 24.204471327598196,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 117,
+        "minMm": 9.495575087902772,
+        "medianMm": 33.28059834873767,
+        "maxMm": 54.72526161096079,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73463",
+      "reference": "FMA72826",
+      "referenceId": "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+      "referenceSources": [
+        {
+          "file": "FJ1802",
+          "sha256": "1139f3e7002704a0efcc1c9161ef2b84e60f28c18728e24664454451ae30bb17"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 66,
+        "minMm": 12.30607109531194,
+        "medianMm": 19.265989731286414,
+        "maxMm": 25.55607769591244,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 117,
+        "minMm": 12.702893861242783,
+        "medianMm": 31.95029654350019,
+        "maxMm": 52.24696648208387,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73461",
+      "reference": "FMA72827",
+      "referenceId": "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+      "referenceSources": [
+        {
+          "file": "FJ1754",
+          "sha256": "c94a8fe0da8cd1ddb916a4f871b017a82bf1dbe5a60307cbc36baa9bf23324ec"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 68,
+        "minMm": 9.302393958790306,
+        "medianMm": 21.4403547355191,
+        "maxMm": 24.234463427744174,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 128,
+        "minMm": 9.697270003975301,
+        "medianMm": 33.09337816941778,
+        "maxMm": 54.45955032154049,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73464",
+      "reference": "FMA72827",
+      "referenceId": "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+      "referenceSources": [
+        {
+          "file": "FJ1754",
+          "sha256": "c94a8fe0da8cd1ddb916a4f871b017a82bf1dbe5a60307cbc36baa9bf23324ec"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 78,
+        "minMm": 12.290047657038528,
+        "medianMm": 21.65538689805866,
+        "maxMm": 25.490951134511675,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 128,
+        "minMm": 12.669689348993511,
+        "medianMm": 31.88985257554509,
+        "maxMm": 52.250787393971414,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73462",
+      "reference": "FMA72828",
+      "referenceId": "vm:anatomy:body:head-neck:right:organ:right-putamen",
+      "referenceSources": [
+        {
+          "file": "FJ1823",
+          "sha256": "6461f70dee31e6f17d87e1f9d79bc92b1cdccd41b7d90bb89b6f25589d27cfc8"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 72,
+        "minMm": 15.218198431516232,
+        "medianMm": 21.10838675025348,
+        "maxMm": 29.42638517365162,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 127,
+        "minMm": 15.408153387365155,
+        "medianMm": 32.76739822887705,
+        "maxMm": 49.71227133012532,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73461",
+      "reference": "FMA72829",
+      "referenceId": "vm:anatomy:body:head-neck:left:organ:left-putamen",
+      "referenceSources": [
+        {
+          "file": "FJ1776",
+          "sha256": "20838a2fc79afe34dfd532151c174b9bb6afec6e5eda961e6dff6cd505b36a51"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 68,
+        "minMm": 15.367517962990824,
+        "medianMm": 25.657683680340252,
+        "maxMm": 29.50256986516426,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 127,
+        "minMm": 15.488278488564925,
+        "medianMm": 34.70666598407284,
+        "maxMm": 49.50072918028581,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73462",
+      "reference": "FMA258714",
+      "referenceId": "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+      "referenceSources": [
+        {
+          "file": "FJ1827",
+          "sha256": "a4b5be59d7cf6dc3ca1b2ae97a83ffd947e39493cc663c2cb7d65a064af91b1d"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 72,
+        "minMm": 0.0005855254355916998,
+        "medianMm": 1.6486568417407597,
+        "maxMm": 8.425501201095694,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 8,
+            "weightedFraction": 0.1111111111111111
+          },
+          {
+            "mm": 0.25,
+            "count": 9,
+            "weightedFraction": 0.125
+          },
+          {
+            "mm": 1,
+            "count": 28,
+            "weightedFraction": 0.3888888888888889
+          },
+          {
+            "mm": 2,
+            "count": 40,
+            "weightedFraction": 0.5555555555555556
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 127,
+        "minMm": 0.5576489095275393,
+        "medianMm": 16.604124110762353,
+        "maxMm": 28.909763100452047,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 1,
+            "weightedFraction": 0.007874015748031496
+          },
+          {
+            "mm": 2,
+            "count": 1,
+            "weightedFraction": 0.007874015748031496
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73463",
+      "reference": "FMA258714",
+      "referenceId": "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+      "referenceSources": [
+        {
+          "file": "FJ1827",
+          "sha256": "a4b5be59d7cf6dc3ca1b2ae97a83ffd947e39493cc663c2cb7d65a064af91b1d"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 66,
+        "minMm": 0.006922722912502985,
+        "medianMm": 6.025176962767238,
+        "maxMm": 12.061903138704798,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 4,
+            "weightedFraction": 0.06060606060606061
+          },
+          {
+            "mm": 0.25,
+            "count": 5,
+            "weightedFraction": 0.07575757575757576
+          },
+          {
+            "mm": 1,
+            "count": 9,
+            "weightedFraction": 0.13636363636363635
+          },
+          {
+            "mm": 2,
+            "count": 14,
+            "weightedFraction": 0.21212121212121213
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 127,
+        "minMm": 1.409368656343466,
+        "medianMm": 17.192964035325545,
+        "maxMm": 27.089483167400953,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 1,
+            "weightedFraction": 0.007874015748031496
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73461",
+      "reference": "FMA258716",
+      "referenceId": "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+      "referenceSources": [
+        {
+          "file": "FJ1782",
+          "sha256": "6e6e87e4feda05756e8748a61febdb2fe61d4ba834fd5a57d805512d9fcd82cc"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 68,
+        "minMm": 0.07491667367300812,
+        "medianMm": 4.291704250431439,
+        "maxMm": 8.377595242605965,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 1,
+            "weightedFraction": 0.014705882352941176
+          },
+          {
+            "mm": 0.25,
+            "count": 4,
+            "weightedFraction": 0.058823529411764705
+          },
+          {
+            "mm": 1,
+            "count": 21,
+            "weightedFraction": 0.3088235294117647
+          },
+          {
+            "mm": 2,
+            "count": 26,
+            "weightedFraction": 0.38235294117647056
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 122,
+        "minMm": 2.0296038507531633,
+        "medianMm": 15.585211449961122,
+        "maxMm": 28.694835144551703,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73464",
+      "reference": "FMA258716",
+      "referenceId": "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+      "referenceSources": [
+        {
+          "file": "FJ1782",
+          "sha256": "6e6e87e4feda05756e8748a61febdb2fe61d4ba834fd5a57d805512d9fcd82cc"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 78,
+        "minMm": 0.02425960541821938,
+        "medianMm": 7.58845091579262,
+        "maxMm": 12.255680121420408,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 3,
+            "weightedFraction": 0.038461538461538464
+          },
+          {
+            "mm": 0.25,
+            "count": 6,
+            "weightedFraction": 0.07692307692307693
+          },
+          {
+            "mm": 1,
+            "count": 9,
+            "weightedFraction": 0.11538461538461539
+          },
+          {
+            "mm": 2,
+            "count": 17,
+            "weightedFraction": 0.21794871794871795
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 122,
+        "minMm": 4.879756105491879,
+        "medianMm": 16.66073428664024,
+        "maxMm": 27.100319953543035,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73462",
+      "reference": "FMA73303",
+      "referenceId": "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+      "referenceSources": [
+        {
+          "file": "FJ1813",
+          "sha256": "6e8ba825eda0abc96cc435380772b3734b9b0432124d78f3c41f01185f3a7614"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 72,
+        "minMm": 0.036385906481706615,
+        "medianMm": 4.79708853576835,
+        "maxMm": 12.894570679615523,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 1,
+            "weightedFraction": 0.013888888888888888
+          },
+          {
+            "mm": 0.25,
+            "count": 6,
+            "weightedFraction": 0.08333333333333333
+          },
+          {
+            "mm": 1,
+            "count": 21,
+            "weightedFraction": 0.2916666666666667
+          },
+          {
+            "mm": 2,
+            "count": 30,
+            "weightedFraction": 0.4166666666666667
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 102,
+        "minMm": 0.1492763775887999,
+        "medianMm": 4.519733414819973,
+        "maxMm": 10.75831633227907,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 1,
+            "weightedFraction": 0.00980392156862745
+          },
+          {
+            "mm": 1,
+            "count": 13,
+            "weightedFraction": 0.12745098039215685
+          },
+          {
+            "mm": 2,
+            "count": 24,
+            "weightedFraction": 0.23529411764705882
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73463",
+      "reference": "FMA73303",
+      "referenceId": "vm:anatomy:body:head-neck:right:organ:right-lateral-geniculate-body",
+      "referenceSources": [
+        {
+          "file": "FJ1813",
+          "sha256": "6e8ba825eda0abc96cc435380772b3734b9b0432124d78f3c41f01185f3a7614"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 66,
+        "minMm": 1.3152643539775009,
+        "medianMm": 7.710654531853917,
+        "maxMm": 14.08163002432832,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 6,
+            "weightedFraction": 0.09090909090909091
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 102,
+        "minMm": 1.5359314311882348,
+        "medianMm": 6.241518186873056,
+        "maxMm": 10.59009000850195,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 5,
+            "weightedFraction": 0.049019607843137254
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73461",
+      "reference": "FMA73304",
+      "referenceId": "vm:anatomy:body:head-neck:left:organ:left-lateral-geniculate-body",
+      "referenceSources": [
+        {
+          "file": "FJ1766",
+          "sha256": "06bfe642952f6fbc090e4dfd7de69090ad443e0f38bfc1a5f87d5accb6e1ccfc"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 68,
+        "minMm": 0.3543611304516212,
+        "medianMm": 11.859097674629377,
+        "maxMm": 15.145947503900157,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 4,
+            "weightedFraction": 0.058823529411764705
+          },
+          {
+            "mm": 2,
+            "count": 10,
+            "weightedFraction": 0.14705882352941177
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 100,
+        "minMm": 0.3916260699544432,
+        "medianMm": 5.067252246247408,
+        "maxMm": 13.159740212313665,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 3,
+            "weightedFraction": 0.03
+          },
+          {
+            "mm": 2,
+            "count": 12,
+            "weightedFraction": 0.12
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73462",
+      "reference": "FMA73309",
+      "referenceId": "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+      "referenceSources": [
+        {
+          "file": "FJ1816",
+          "sha256": "d851d4d2363d6469fbff4c1f7009e743425bce74ec6e8ff599ee3aef4289bf42"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 72,
+        "minMm": 0.10769784413596951,
+        "medianMm": 2.8911433729064506,
+        "maxMm": 9.370573852682284,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 1,
+            "weightedFraction": 0.013888888888888888
+          },
+          {
+            "mm": 1,
+            "count": 6,
+            "weightedFraction": 0.08333333333333333
+          },
+          {
+            "mm": 2,
+            "count": 14,
+            "weightedFraction": 0.19444444444444445
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 101,
+        "minMm": 0.011484357367258714,
+        "medianMm": 2.7996564164197038,
+        "maxMm": 7.847947444063183,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 2,
+            "weightedFraction": 0.019801980198019802
+          },
+          {
+            "mm": 0.25,
+            "count": 5,
+            "weightedFraction": 0.04950495049504951
+          },
+          {
+            "mm": 1,
+            "count": 24,
+            "weightedFraction": 0.2376237623762376
+          },
+          {
+            "mm": 2,
+            "count": 43,
+            "weightedFraction": 0.42574257425742573
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73463",
+      "reference": "FMA73309",
+      "referenceId": "vm:anatomy:body:head-neck:right:organ:right-medial-geniculate-body",
+      "referenceSources": [
+        {
+          "file": "FJ1816",
+          "sha256": "d851d4d2363d6469fbff4c1f7009e743425bce74ec6e8ff599ee3aef4289bf42"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 66,
+        "minMm": 0.0855686878281603,
+        "medianMm": 3.867764164523426,
+        "maxMm": 10.929995668747504,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 1,
+            "weightedFraction": 0.015151515151515152
+          },
+          {
+            "mm": 0.25,
+            "count": 7,
+            "weightedFraction": 0.10606060606060606
+          },
+          {
+            "mm": 1,
+            "count": 20,
+            "weightedFraction": 0.30303030303030304
+          },
+          {
+            "mm": 2,
+            "count": 28,
+            "weightedFraction": 0.42424242424242425
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 101,
+        "minMm": 0.025633772446528022,
+        "medianMm": 1.558171261669294,
+        "maxMm": 4.8481213936764505,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 4,
+            "weightedFraction": 0.039603960396039604
+          },
+          {
+            "mm": 0.25,
+            "count": 7,
+            "weightedFraction": 0.06930693069306931
+          },
+          {
+            "mm": 1,
+            "count": 36,
+            "weightedFraction": 0.3564356435643564
+          },
+          {
+            "mm": 2,
+            "count": 61,
+            "weightedFraction": 0.6039603960396039
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73461",
+      "reference": "FMA73310",
+      "referenceId": "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+      "referenceSources": [
+        {
+          "file": "FJ1816M",
+          "sha256": "4db95663f23f9196403d7227d8844b82a8faaaf4ff5146f8c27ec2120d97f117"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 68,
+        "minMm": 0.03824659283128935,
+        "medianMm": 7.117977503785707,
+        "maxMm": 10.632099806665657,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 1,
+            "weightedFraction": 0.014705882352941176
+          },
+          {
+            "mm": 0.25,
+            "count": 3,
+            "weightedFraction": 0.04411764705882353
+          },
+          {
+            "mm": 1,
+            "count": 7,
+            "weightedFraction": 0.10294117647058823
+          },
+          {
+            "mm": 2,
+            "count": 18,
+            "weightedFraction": 0.2647058823529412
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 101,
+        "minMm": 0.08039422285496427,
+        "medianMm": 2.8840857355494567,
+        "maxMm": 7.805244247940043,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 1,
+            "weightedFraction": 0.009900990099009901
+          },
+          {
+            "mm": 0.25,
+            "count": 3,
+            "weightedFraction": 0.0297029702970297
+          },
+          {
+            "mm": 1,
+            "count": 20,
+            "weightedFraction": 0.19801980198019803
+          },
+          {
+            "mm": 2,
+            "count": 38,
+            "weightedFraction": 0.37623762376237624
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73464",
+      "reference": "FMA73310",
+      "referenceId": "vm:anatomy:body:head-neck:left:organ:left-medial-geniculate-body",
+      "referenceSources": [
+        {
+          "file": "FJ1816M",
+          "sha256": "4db95663f23f9196403d7227d8844b82a8faaaf4ff5146f8c27ec2120d97f117"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 78,
+        "minMm": 0.004330051825064125,
+        "medianMm": 7.463347847876371,
+        "maxMm": 12.015410662000985,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 3,
+            "weightedFraction": 0.038461538461538464
+          },
+          {
+            "mm": 0.25,
+            "count": 4,
+            "weightedFraction": 0.05128205128205128
+          },
+          {
+            "mm": 1,
+            "count": 20,
+            "weightedFraction": 0.2564102564102564
+          },
+          {
+            "mm": 2,
+            "count": 29,
+            "weightedFraction": 0.3717948717948718
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 101,
+        "minMm": 0.01613937066682537,
+        "medianMm": 2.4945511990112084,
+        "maxMm": 5.600294903842231,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 1,
+            "weightedFraction": 0.009900990099009901
+          },
+          {
+            "mm": 0.25,
+            "count": 6,
+            "weightedFraction": 0.0594059405940594
+          },
+          {
+            "mm": 1,
+            "count": 21,
+            "weightedFraction": 0.2079207920792079
+          },
+          {
+            "mm": 2,
+            "count": 39,
+            "weightedFraction": 0.38613861386138615
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73462",
+      "reference": "FMA72924",
+      "referenceId": "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+      "referenceSources": [
+        {
+          "file": "FJ1804",
+          "sha256": "d18c04db4ad5e495310fc7f0fde79c9e2bfbcccb78e4169f7bdbe74b193b77a6"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 72,
+        "minMm": 8.24791459113845,
+        "medianMm": 13.526684848194305,
+        "maxMm": 20.41330002731483,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 126,
+        "minMm": 8.700796732483742,
+        "medianMm": 21.66646847225722,
+        "maxMm": 34.238108682075264,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73463",
+      "reference": "FMA72924",
+      "referenceId": "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+      "referenceSources": [
+        {
+          "file": "FJ1804",
+          "sha256": "d18c04db4ad5e495310fc7f0fde79c9e2bfbcccb78e4169f7bdbe74b193b77a6"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 66,
+        "minMm": 11.707421115698446,
+        "medianMm": 18.14771486496451,
+        "maxMm": 23.372311210680472,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 126,
+        "minMm": 11.80709512096049,
+        "medianMm": 21.987526964461903,
+        "maxMm": 34.108767579203125,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73461",
+      "reference": "FMA72925",
+      "referenceId": "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+      "referenceSources": [
+        {
+          "file": "FJ1756",
+          "sha256": "ecfe3a87d95ee1a7ad39bd742935dd3eeb4ab94ecdc7895d55e8b308b37e6fa4"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 68,
+        "minMm": 8.401940255412706,
+        "medianMm": 16.16779425346499,
+        "maxMm": 20.417577286383708,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 126,
+        "minMm": 8.282514406869437,
+        "medianMm": 20.8762864845494,
+        "maxMm": 34.274509837452236,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73464",
+      "reference": "FMA72925",
+      "referenceId": "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+      "referenceSources": [
+        {
+          "file": "FJ1756",
+          "sha256": "ecfe3a87d95ee1a7ad39bd742935dd3eeb4ab94ecdc7895d55e8b308b37e6fa4"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 78,
+        "minMm": 11.643039497427063,
+        "medianMm": 19.912546543993976,
+        "maxMm": 23.683070174562285,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 126,
+        "minMm": 12.115744099724138,
+        "medianMm": 21.41166627528311,
+        "maxMm": 34.29004856805562,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73462",
+      "reference": "FMA62072",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+      "referenceSources": [
+        {
+          "file": "FJ1799",
+          "sha256": "1b8e46294f95f1b68d03a2ca1ce73447b210a7c2b0c3cbb8bde1e836268bfddc"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 72,
+        "minMm": 1.3284616417494113,
+        "medianMm": 6.743504028292786,
+        "maxMm": 10.589453623771117,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 5,
+            "weightedFraction": 0.06944444444444445
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 105,
+        "minMm": 1.40631585366262,
+        "medianMm": 4.643996338637971,
+        "maxMm": 11.412805852874364,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 11,
+            "weightedFraction": 0.10476190476190476
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73461",
+      "reference": "FMA62072",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+      "referenceSources": [
+        {
+          "file": "FJ1799",
+          "sha256": "1b8e46294f95f1b68d03a2ca1ce73447b210a7c2b0c3cbb8bde1e836268bfddc"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 68,
+        "minMm": 1.6368165707947473,
+        "medianMm": 6.284039228720666,
+        "maxMm": 10.83650100246388,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 3,
+            "weightedFraction": 0.04411764705882353
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 105,
+        "minMm": 1.5157841034099662,
+        "medianMm": 4.707019199394439,
+        "maxMm": 11.489717015592683,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 6,
+            "weightedFraction": 0.05714285714285714
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73464",
+      "reference": "FMA62072",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+      "referenceSources": [
+        {
+          "file": "FJ1799",
+          "sha256": "1b8e46294f95f1b68d03a2ca1ce73447b210a7c2b0c3cbb8bde1e836268bfddc"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 78,
+        "minMm": 4.557002397410018,
+        "medianMm": 8.382908874897382,
+        "maxMm": 12.171108899386455,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 105,
+        "minMm": 4.587526695426469,
+        "medianMm": 9.215387440873357,
+        "maxMm": 14.84577300532171,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73463",
+      "reference": "FMA62072",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+      "referenceSources": [
+        {
+          "file": "FJ1799",
+          "sha256": "1b8e46294f95f1b68d03a2ca1ce73447b210a7c2b0c3cbb8bde1e836268bfddc"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 66,
+        "minMm": 4.435426189488447,
+        "medianMm": 8.117270658072199,
+        "maxMm": 12.02378197716501,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 105,
+        "minMm": 4.423314235755555,
+        "medianMm": 9.204172948360304,
+        "maxMm": 14.794556415103214,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73462",
+      "reference": "FMA86464",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+      "referenceSources": [
+        {
+          "file": "FJ1742",
+          "sha256": "3f46359c2a23499ac130bd27646309f7974d216f9d55320b503e3b0844da9a70"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 72,
+        "minMm": 14.26820627598643,
+        "medianMm": 18.334376333949837,
+        "maxMm": 20.75968190709094,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 128,
+        "minMm": 20.07618919055758,
+        "medianMm": 39.55967603067039,
+        "maxMm": 65.55491291229745,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73461",
+      "reference": "FMA86464",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+      "referenceSources": [
+        {
+          "file": "FJ1742",
+          "sha256": "3f46359c2a23499ac130bd27646309f7974d216f9d55320b503e3b0844da9a70"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 68,
+        "minMm": 14.47204083887077,
+        "medianMm": 18.6584624411959,
+        "maxMm": 21.194688703538574,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 128,
+        "minMm": 19.203356173133788,
+        "medianMm": 40.16248922505508,
+        "maxMm": 65.33307812973541,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73464",
+      "reference": "FMA86464",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+      "referenceSources": [
+        {
+          "file": "FJ1742",
+          "sha256": "3f46359c2a23499ac130bd27646309f7974d216f9d55320b503e3b0844da9a70"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 78,
+        "minMm": 17.6166477496927,
+        "medianMm": 20.82522357548867,
+        "maxMm": 23.101298780272668,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 128,
+        "minMm": 21.918038369291125,
+        "medianMm": 42.06422635527247,
+        "maxMm": 66.77279316023865,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73463",
+      "reference": "FMA86464",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+      "referenceSources": [
+        {
+          "file": "FJ1742",
+          "sha256": "3f46359c2a23499ac130bd27646309f7974d216f9d55320b503e3b0844da9a70"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 66,
+        "minMm": 17.82120469885243,
+        "medianMm": 20.892702516543658,
+        "maxMm": 23.164701102558386,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 128,
+        "minMm": 23.177975012714068,
+        "medianMm": 42.44512242154095,
+        "maxMm": 66.90261329499774,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73462",
+      "reference": "FMA61934",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+      "referenceSources": [
+        {
+          "file": "FJ1755",
+          "sha256": "221d1889dbb2d850c6da56c0cdd1b1d4581ac845dd55c96e68a594c33a1742dc"
+        },
+        {
+          "file": "FJ1803",
+          "sha256": "a950a761098cf6d80c09c7133ce0c0044598c64682c0a0825f6bbd4b23892dc3"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 72,
+        "minMm": 7.388528128865712,
+        "medianMm": 11.97050779863563,
+        "maxMm": 14.855596357121168,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 127,
+        "minMm": 9.243834861527656,
+        "medianMm": 24.786964325907103,
+        "maxMm": 40.00174505702094,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73461",
+      "reference": "FMA61934",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+      "referenceSources": [
+        {
+          "file": "FJ1755",
+          "sha256": "221d1889dbb2d850c6da56c0cdd1b1d4581ac845dd55c96e68a594c33a1742dc"
+        },
+        {
+          "file": "FJ1803",
+          "sha256": "a950a761098cf6d80c09c7133ce0c0044598c64682c0a0825f6bbd4b23892dc3"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 68,
+        "minMm": 7.641084783303154,
+        "medianMm": 11.910395830533878,
+        "maxMm": 14.57808515169263,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 127,
+        "minMm": 9.946275815097486,
+        "medianMm": 25.520257840432635,
+        "maxMm": 40.75955397196588,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73464",
+      "reference": "FMA61934",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+      "referenceSources": [
+        {
+          "file": "FJ1755",
+          "sha256": "221d1889dbb2d850c6da56c0cdd1b1d4581ac845dd55c96e68a594c33a1742dc"
+        },
+        {
+          "file": "FJ1803",
+          "sha256": "a950a761098cf6d80c09c7133ce0c0044598c64682c0a0825f6bbd4b23892dc3"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 78,
+        "minMm": 12.901059463006344,
+        "medianMm": 15.709508891437066,
+        "maxMm": 17.675818291259553,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 127,
+        "minMm": 15.060464054603298,
+        "medianMm": 26.870766733402025,
+        "maxMm": 41.57251971572206,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73463",
+      "reference": "FMA61934",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+      "referenceSources": [
+        {
+          "file": "FJ1755",
+          "sha256": "221d1889dbb2d850c6da56c0cdd1b1d4581ac845dd55c96e68a594c33a1742dc"
+        },
+        {
+          "file": "FJ1803",
+          "sha256": "a950a761098cf6d80c09c7133ce0c0044598c64682c0a0825f6bbd4b23892dc3"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 66,
+        "minMm": 12.73171266426327,
+        "medianMm": 15.647822219082087,
+        "maxMm": 17.72571699960215,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 127,
+        "minMm": 14.91340358145857,
+        "medianMm": 26.612105917159244,
+        "maxMm": 40.886652061052885,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73462",
+      "reference": "FMA61993",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:midbrain",
+      "referenceSources": [
+        {
+          "file": "FJ1738",
+          "sha256": "089159be9815563e0645e5a28e7302fbc0bc842af760ac886bf3d0542f34a8f3"
+        },
+        {
+          "file": "FJ1762",
+          "sha256": "64a455fe3ae2f5adc06be7b407e50116f56102f9036a4eea3b6f6b7dae4b3b84"
+        },
+        {
+          "file": "FJ1770",
+          "sha256": "727a267ac80375fd0769bf92067d88adac02aa80220a3099cd530b32ddd88a5b"
+        },
+        {
+          "file": "FJ1779",
+          "sha256": "0fa8374655959d8e815c2d95105b3471d91a86fb9aa959d37522cab85c46c528"
+        },
+        {
+          "file": "FJ1810",
+          "sha256": "3102a4f96ff71fc9c1e9686ca5e7aefe2e48bb15b3df9c731bde44f9a3dc553c"
+        },
+        {
+          "file": "FJ1817",
+          "sha256": "b05b314182e27a015072a39847bd750a7c0899962d7d6357541cedf1358f05db"
+        },
+        {
+          "file": "FJ1826",
+          "sha256": "c468ce1835bf10dbc68f7351a99a788731418bc29b83a3ec2af6135766a69d69"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 72,
+        "minMm": 0.013368574684631759,
+        "medianMm": 3.1326599306391327,
+        "maxMm": 7.532882252798116,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 6,
+            "weightedFraction": 0.08333333333333333
+          },
+          {
+            "mm": 0.25,
+            "count": 10,
+            "weightedFraction": 0.1388888888888889
+          },
+          {
+            "mm": 1,
+            "count": 29,
+            "weightedFraction": 0.4027777777777778
+          },
+          {
+            "mm": 2,
+            "count": 32,
+            "weightedFraction": 0.4444444444444444
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 127,
+        "minMm": 0.22181487835390581,
+        "medianMm": 8.245114534722507,
+        "maxMm": 23.708305217212363,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 2,
+            "weightedFraction": 0.015748031496062992
+          },
+          {
+            "mm": 1,
+            "count": 4,
+            "weightedFraction": 0.031496062992125984
+          },
+          {
+            "mm": 2,
+            "count": 9,
+            "weightedFraction": 0.07086614173228346
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73461",
+      "reference": "FMA61993",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:midbrain",
+      "referenceSources": [
+        {
+          "file": "FJ1738",
+          "sha256": "089159be9815563e0645e5a28e7302fbc0bc842af760ac886bf3d0542f34a8f3"
+        },
+        {
+          "file": "FJ1762",
+          "sha256": "64a455fe3ae2f5adc06be7b407e50116f56102f9036a4eea3b6f6b7dae4b3b84"
+        },
+        {
+          "file": "FJ1770",
+          "sha256": "727a267ac80375fd0769bf92067d88adac02aa80220a3099cd530b32ddd88a5b"
+        },
+        {
+          "file": "FJ1779",
+          "sha256": "0fa8374655959d8e815c2d95105b3471d91a86fb9aa959d37522cab85c46c528"
+        },
+        {
+          "file": "FJ1810",
+          "sha256": "3102a4f96ff71fc9c1e9686ca5e7aefe2e48bb15b3df9c731bde44f9a3dc553c"
+        },
+        {
+          "file": "FJ1817",
+          "sha256": "b05b314182e27a015072a39847bd750a7c0899962d7d6357541cedf1358f05db"
+        },
+        {
+          "file": "FJ1826",
+          "sha256": "c468ce1835bf10dbc68f7351a99a788731418bc29b83a3ec2af6135766a69d69"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 68,
+        "minMm": 0.019406015557264556,
+        "medianMm": 0.8095961927254632,
+        "maxMm": 7.380153585228257,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 5,
+            "weightedFraction": 0.07352941176470588
+          },
+          {
+            "mm": 0.25,
+            "count": 16,
+            "weightedFraction": 0.23529411764705882
+          },
+          {
+            "mm": 1,
+            "count": 37,
+            "weightedFraction": 0.5441176470588235
+          },
+          {
+            "mm": 2,
+            "count": 41,
+            "weightedFraction": 0.6029411764705882
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 127,
+        "minMm": 0.08794565951360056,
+        "medianMm": 9.063875612874584,
+        "maxMm": 24.042919784171406,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 1,
+            "weightedFraction": 0.007874015748031496
+          },
+          {
+            "mm": 0.25,
+            "count": 2,
+            "weightedFraction": 0.015748031496062992
+          },
+          {
+            "mm": 1,
+            "count": 7,
+            "weightedFraction": 0.05511811023622047
+          },
+          {
+            "mm": 2,
+            "count": 10,
+            "weightedFraction": 0.07874015748031496
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73464",
+      "reference": "FMA61993",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:midbrain",
+      "referenceSources": [
+        {
+          "file": "FJ1738",
+          "sha256": "089159be9815563e0645e5a28e7302fbc0bc842af760ac886bf3d0542f34a8f3"
+        },
+        {
+          "file": "FJ1762",
+          "sha256": "64a455fe3ae2f5adc06be7b407e50116f56102f9036a4eea3b6f6b7dae4b3b84"
+        },
+        {
+          "file": "FJ1770",
+          "sha256": "727a267ac80375fd0769bf92067d88adac02aa80220a3099cd530b32ddd88a5b"
+        },
+        {
+          "file": "FJ1779",
+          "sha256": "0fa8374655959d8e815c2d95105b3471d91a86fb9aa959d37522cab85c46c528"
+        },
+        {
+          "file": "FJ1810",
+          "sha256": "3102a4f96ff71fc9c1e9686ca5e7aefe2e48bb15b3df9c731bde44f9a3dc553c"
+        },
+        {
+          "file": "FJ1817",
+          "sha256": "b05b314182e27a015072a39847bd750a7c0899962d7d6357541cedf1358f05db"
+        },
+        {
+          "file": "FJ1826",
+          "sha256": "c468ce1835bf10dbc68f7351a99a788731418bc29b83a3ec2af6135766a69d69"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 78,
+        "minMm": 0.007917478845307366,
+        "medianMm": 1.2774925998793545,
+        "maxMm": 3.5842252600641746,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 6,
+            "weightedFraction": 0.07692307692307693
+          },
+          {
+            "mm": 0.25,
+            "count": 12,
+            "weightedFraction": 0.15384615384615385
+          },
+          {
+            "mm": 1,
+            "count": 33,
+            "weightedFraction": 0.4230769230769231
+          },
+          {
+            "mm": 2,
+            "count": 54,
+            "weightedFraction": 0.6923076923076923
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 127,
+        "minMm": 0.27375769944662653,
+        "medianMm": 8.376075397374397,
+        "maxMm": 26.736849591962137,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 2,
+            "weightedFraction": 0.015748031496062992
+          },
+          {
+            "mm": 2,
+            "count": 9,
+            "weightedFraction": 0.07086614173228346
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73463",
+      "reference": "FMA61993",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:midbrain",
+      "referenceSources": [
+        {
+          "file": "FJ1738",
+          "sha256": "089159be9815563e0645e5a28e7302fbc0bc842af760ac886bf3d0542f34a8f3"
+        },
+        {
+          "file": "FJ1762",
+          "sha256": "64a455fe3ae2f5adc06be7b407e50116f56102f9036a4eea3b6f6b7dae4b3b84"
+        },
+        {
+          "file": "FJ1770",
+          "sha256": "727a267ac80375fd0769bf92067d88adac02aa80220a3099cd530b32ddd88a5b"
+        },
+        {
+          "file": "FJ1779",
+          "sha256": "0fa8374655959d8e815c2d95105b3471d91a86fb9aa959d37522cab85c46c528"
+        },
+        {
+          "file": "FJ1810",
+          "sha256": "3102a4f96ff71fc9c1e9686ca5e7aefe2e48bb15b3df9c731bde44f9a3dc553c"
+        },
+        {
+          "file": "FJ1817",
+          "sha256": "b05b314182e27a015072a39847bd750a7c0899962d7d6357541cedf1358f05db"
+        },
+        {
+          "file": "FJ1826",
+          "sha256": "c468ce1835bf10dbc68f7351a99a788731418bc29b83a3ec2af6135766a69d69"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 66,
+        "minMm": 0.0064557259870396426,
+        "medianMm": 1.3614987357849284,
+        "maxMm": 3.5024332109618044,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 5,
+            "weightedFraction": 0.07575757575757576
+          },
+          {
+            "mm": 0.25,
+            "count": 11,
+            "weightedFraction": 0.16666666666666666
+          },
+          {
+            "mm": 1,
+            "count": 28,
+            "weightedFraction": 0.42424242424242425
+          },
+          {
+            "mm": 2,
+            "count": 46,
+            "weightedFraction": 0.696969696969697
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 127,
+        "minMm": 0.14113350431037502,
+        "medianMm": 8.566646831263707,
+        "maxMm": 25.86459965159413,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 1,
+            "weightedFraction": 0.007874015748031496
+          },
+          {
+            "mm": 1,
+            "count": 5,
+            "weightedFraction": 0.03937007874015748
+          },
+          {
+            "mm": 2,
+            "count": 15,
+            "weightedFraction": 0.11811023622047244
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73464",
+      "reference": "FMA67943",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:pons",
+      "referenceSources": [
+        {
+          "file": "FJ1775",
+          "sha256": "caecdd922b67fa47e0219e2e7ae05e3efd986a2c869cf57b77ded1c615d1bfc9"
+        },
+        {
+          "file": "FJ1822",
+          "sha256": "bbe90f2e0a971bdbde65b9da78b3dff921ed92d2de4bfb81b9629b920d41d7de"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 78,
+        "minMm": 3.5472077438075127,
+        "medianMm": 8.073587492512948,
+        "maxMm": 14.713592687715703,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 128,
+        "minMm": 7.608056627680933,
+        "medianMm": 27.508908689420934,
+        "maxMm": 36.59997958448834,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73463",
+      "reference": "FMA67943",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:pons",
+      "referenceSources": [
+        {
+          "file": "FJ1775",
+          "sha256": "caecdd922b67fa47e0219e2e7ae05e3efd986a2c869cf57b77ded1c615d1bfc9"
+        },
+        {
+          "file": "FJ1822",
+          "sha256": "bbe90f2e0a971bdbde65b9da78b3dff921ed92d2de4bfb81b9629b920d41d7de"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 66,
+        "minMm": 3.550595349137384,
+        "medianMm": 9.041238376257576,
+        "maxMm": 14.731596140608808,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 128,
+        "minMm": 4.047326537568702,
+        "medianMm": 27.336394497986205,
+        "maxMm": 34.243940774209925,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73462",
+      "reference": "FMA67944",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:cerebellum",
+      "referenceSources": [
+        {
+          "file": "FJ1781",
+          "sha256": "6f66f4912c7519ea6a018324ef4f6d46eb266350574d05a905afeb2c88c575ed"
+        },
+        {
+          "file": "FJ1830",
+          "sha256": "d35574d86994e5e49e0e1ee41174a927c666735d7eb7b9cbdae2a709ae4a0bb9"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 72,
+        "minMm": 11.353582078467614,
+        "medianMm": 15.485003961673268,
+        "maxMm": 17.446582503745482,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 128,
+        "minMm": 12.28028744395247,
+        "medianMm": 45.12996454869977,
+        "maxMm": 69.56502172243536,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73461",
+      "reference": "FMA67944",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:cerebellum",
+      "referenceSources": [
+        {
+          "file": "FJ1781",
+          "sha256": "6f66f4912c7519ea6a018324ef4f6d46eb266350574d05a905afeb2c88c575ed"
+        },
+        {
+          "file": "FJ1830",
+          "sha256": "d35574d86994e5e49e0e1ee41174a927c666735d7eb7b9cbdae2a709ae4a0bb9"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 68,
+        "minMm": 11.37216958665307,
+        "medianMm": 15.260626649108577,
+        "maxMm": 17.477782137637355,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 128,
+        "minMm": 11.424788657165502,
+        "medianMm": 45.090086832779654,
+        "maxMm": 69.36600402016546,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73464",
+      "reference": "FMA67944",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:cerebellum",
+      "referenceSources": [
+        {
+          "file": "FJ1781",
+          "sha256": "6f66f4912c7519ea6a018324ef4f6d46eb266350574d05a905afeb2c88c575ed"
+        },
+        {
+          "file": "FJ1830",
+          "sha256": "d35574d86994e5e49e0e1ee41174a927c666735d7eb7b9cbdae2a709ae4a0bb9"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 78,
+        "minMm": 8.909691736850318,
+        "medianMm": 12.926069419640905,
+        "maxMm": 18.96805574986536,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 128,
+        "minMm": 9.072839295082826,
+        "medianMm": 42.6113170337413,
+        "maxMm": 68.02621893823665,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "FMA73463",
+      "reference": "FMA67944",
+      "referenceId": "vm:anatomy:body:head-neck:midline:organ:cerebellum",
+      "referenceSources": [
+        {
+          "file": "FJ1781",
+          "sha256": "6f66f4912c7519ea6a018324ef4f6d46eb266350574d05a905afeb2c88c575ed"
+        },
+        {
+          "file": "FJ1830",
+          "sha256": "d35574d86994e5e49e0e1ee41174a927c666735d7eb7b9cbdae2a709ae4a0bb9"
+        }
+      ],
+      "exactSharedTriangles": 0,
+      "toReference": {
+        "samples": 66,
+        "minMm": 8.96716663611447,
+        "medianMm": 14.306519374397102,
+        "maxMm": 19.1010762641795,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      },
+      "fromReference": {
+        "samples": 128,
+        "minMm": 9.457947585496566,
+        "medianMm": 42.3701945758761,
+        "maxMm": 68.18199533165334,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 0.25,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 1,
+            "count": 0,
+            "weightedFraction": 0
+          },
+          {
+            "mm": 2,
+            "count": 0,
+            "weightedFraction": 0
+          }
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "Small source surfaces are coarse anatomical envelopes, not fibres or validated terminal connections.",
+    "Bounds/distance and combinatorial topology are diagnostics, not clinical shape/attachment validation or proof against self-intersections.",
+    "Superior pair is held for contradictory labels versus original source X coordinates; no automatic label swap, reflection or admission.",
+    "Brain and midbrain are whole context compounds; surface distances do not establish patient registration or physiological continuity."
+  ]
+}

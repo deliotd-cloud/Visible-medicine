@@ -405,6 +405,8 @@ export function VentricularView({
                         all: 'Brainstem and cerebellum',
                         brainstem: 'Brainstem only',
                         cerebellum: 'Cerebellum only',
+                        brachia: 'Inferior collicular brachia',
+                        'midbrain-brachia': 'Inferior brachia with midbrain',
                       }
                     : {
                         all: 'All four spaces',
@@ -1491,13 +1493,16 @@ export function VentricularView({
           ) : isBrainstem ? (
             <>
               <p>
-                Four complete source-table compounds, not proof of complete
-                anatomy. Both source halves are retained. Colours distinguish
+                Four source-table compounds and two supplied inferior collicular
+                brachia, not proof of complete anatomy. Original source surfaces
+                are retained. Colours distinguish
                 structures, not MRI signal or functional territories.
               </p>
               <p>
-                Internal nuclei, tracts and cerebellar lobules are not
-                independently segmented. The pons source retains tiny
+                Individual fibres, internal nuclei and cerebellar lobules are not
+                independently segmented. Superior brachia are withheld because
+                their source side labels conflict with their coordinates.
+                The pons source retains tiny
                 disconnected remnants and duplicate faces; it has not been
                 repaired or clinically validated.
               </p>

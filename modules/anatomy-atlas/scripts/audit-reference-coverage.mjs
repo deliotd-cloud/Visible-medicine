@@ -5,6 +5,7 @@ import { execFileSync } from 'node:child_process';
 import { build } from 'esbuild';
 import { loadSourceHolds } from './load-source-holds.mjs';
 import { geometryFingerprint } from './anatomy-inventory.mjs';
+import { collicularBrachiaSources } from './collicular-brachia-sources.mjs';
 import {
   sourceBindingEvidence,
   sourceCoverageStatus,
@@ -13,6 +14,25 @@ import {
 
 const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const textHash = (value) => hash(JSON.stringify(value));
+const brachiaAuditBytes = await readFile(
+  'docs/collicular-brachia-source-audit.json',
+);
+const brachiaAudit = JSON.parse(brachiaAuditBytes);
+const additionalHolds = collicularBrachiaSources.filter(
+  (s) => s.status === 'held',
+);
+for (const hold of additionalHolds) {
+  const record = brachiaAudit.groups.find((g) => g.id === hold.id);
+  assert.equal(record.status, 'held');
+  assert.equal(record.file, hold.file);
+  assert.equal(record.sha256, hold.sha256);
+  assert.equal(record.reason, hold.reason);
+  assert.notEqual(record.coordinateSide, hold.side);
+  assert.equal(
+    hash(await readFile(`content/sources/collicular-brachia/${hold.file}.obj`)),
+    hold.sha256,
+  );
+}
 const referenceBytes = await readFile('content/reference-male-inventory.json');
 const reference = JSON.parse(referenceBytes);
 assert.equal(reference.repository, 'ashemag/human-atlas');
@@ -178,6 +198,13 @@ for (const [file, referenceDisplaySystem] of reference.parts) {
   assert(definitions.length, 'Missing official source definition: ' + file);
   const minimum = Math.min(...definitions.map((d) => d.files.length));
   const holds = [];
+  for (const held of additionalHolds.filter((h) => h.file === file))
+    holds.push({
+      tree: 'isa',
+      conceptId: held.id,
+      reason: held.reason,
+      evidence: 'docs/collicular-brachia-source-audit.json',
+    });
   for (const tree of ['isa', 'partof']) {
     const reasons = new Map();
     for (const r of h.records.filter(
@@ -237,6 +264,7 @@ const report = {
   evidence: {
     ...h.evidence,
     crossTreeProofSha256: hash(crossBytes),
+    additionalSourceHoldProofSha256: hash(brachiaAuditBytes),
     currentRootSha256: textHash(root),
     reachableNestedSha256: textHash(nested),
     shoulderManifestSha256: hash(shoulderBytes),

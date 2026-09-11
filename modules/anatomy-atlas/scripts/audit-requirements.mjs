@@ -112,6 +112,8 @@ const ventricular = await json(
 const brainstem = await json(
   'public/models/bodyparts3d/brainstem/catalog.json',
 );
+const collicularBrachia = await json('public/models/bodyparts3d/collicular-brachia/catalog.json');
+const collicularBrachiaAudit = await json('docs/collicular-brachia-source-audit.json');
 const cerebral = await json('public/models/bodyparts3d/cerebral/catalog.json');
 const cardiac = await json('public/models/bodyparts3d/cardiac/catalog.json');
 const hepatic = await json('public/models/bodyparts3d/hepatic/catalog.json');
@@ -332,6 +334,10 @@ for (const path of [
   'app/eye-layers.tsx',
   'public/models/bodyparts3d/ventricles/catalog.json',
   'public/models/bodyparts3d/brainstem/catalog.json',
+  'public/models/bodyparts3d/collicular-brachia/catalog.json',
+  'docs/collicular-brachia-source-audit.json',
+  'lib/brainstem.ts',
+  'content/collicular-brachia-teaching.ts',
   'public/models/bodyparts3d/cerebral/catalog.json',
   'public/models/bodyparts3d/cardiac/catalog.json',
   'lib/cardiac.ts',
@@ -647,6 +653,9 @@ const report = {
       ventricularSpaces: ventricular.ventricularIds.length,
       ventricularContext: ventricular.contextIds.length,
       brainstemCompounds: brainstem.selectableIds.length,
+      collicularBrachiaSelections: collicularBrachia.selectableIds.length,
+      collicularBrachiaOriginalTriangles: collicularBrachiaAudit.groups.filter(g => g.status === 'candidate').reduce((sum, g) => sum + g.topology.triangles, 0),
+      collicularBrachiaLateralityHolds: collicularBrachiaAudit.groups.filter(g => g.status === 'held').length,
       brainstemContext: brainstem.contextIds.length,
       cerebralSelections: cerebral.selectableIds.length,
       cerebralParentSubdivisions:

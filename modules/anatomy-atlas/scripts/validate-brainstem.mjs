@@ -60,8 +60,12 @@ same(manifest.evidence, evidence);
 same(manifest.coordinateSystem, catalog.coordinateSystem);
 same(manifest.license, 'CC-BY-4.0');
 same(manifest.credit, catalog.credit);
-same(manifest.structures.length, 5);
-const layers = brainstemFor(parent);
+same(manifest.structures.length, 7);
+const allLayers = brainstemFor(parent);
+same(allLayers.length, 6);
+// Preserve the original four-compound geometry regression unchanged. The
+// separate addition has its own exact-face and six-layer interaction checks.
+const layers = allLayers.filter(s => s.bundle !== 'collicular-brachia');
 same(layers.length, 4);
 const definitions = [
   [
@@ -193,7 +197,7 @@ same(new Set(layers.flatMap((s) => s.sources.map((f) => f.file))).size, 13);
 same(
   new Set(manifest.structures.flatMap((s) => s.sources.map((f) => f.file)))
     .size,
-  14,
+  16,
 );
 same(
   layers
@@ -377,7 +381,7 @@ for (const study of ['brainstem', 'ventricles']) {
   );
   const switches = html.match(/<[^>]*role="switch"[^>]*>/g) || [];
   same(switches.filter((tag) => tag.includes('aria-label="Show original position"')).length, 1);
-  same(switches.filter((tag) => !tag.includes('aria-label="Show original position"')).length, 4);
+  same(switches.filter((tag) => !tag.includes('aria-label="Show original position"')).length, study === 'brainstem' ? 6 : 4);
   for (const text of study === 'brainstem'
     ? [
         'Brainstem and cerebellum',
@@ -386,6 +390,8 @@ for (const study of ['brainstem', 'ventricles']) {
         'Medulla oblongata',
         'Cerebellum',
         'Show fourth ventricle',
+        'Brachium of left inferior colliculus',
+        'Brachium of right inferior colliculus',
         'Source compound',
         'duplicate faces',
       ]
@@ -394,8 +400,8 @@ for (const study of ['brainstem', 'ventricles']) {
   for (const text of ['Undo layers', 'Reassemble', 'CC BY 4.0 licence'])
     check(html.includes(text));
   const scene = uiEnv.__scene;
-  same(scene.structures.length, study === 'brainstem' ? 5 : 9);
-  same(scene.landmarks.length, 4);
+  same(scene.structures.length, study === 'brainstem' ? 7 : 9);
+  same(scene.landmarks.length, study === 'brainstem' ? 6 : 4);
   check(!scene.structures.some((s) => s.id === parent.id));
   for (const id of study === 'brainstem'
     ? manifest.contextIds
@@ -410,6 +416,8 @@ const report = {
   passed: true,
   checks,
   selectableCompounds: 4,
+  additionalSelectableBrachia: 2,
+  originalGeometryRegressionScope: 'Four original compounds; the two new brachia have a separate exact-face regression.',
   sourceFiles: 13,
   existingContextSpaces: 1,
   triangles,

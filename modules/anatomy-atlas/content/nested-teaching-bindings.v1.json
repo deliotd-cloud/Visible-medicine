@@ -5912,6 +5912,134 @@
       }
     },
     {
+      "conceptId": "inferior-collicular-brachia",
+      "study": "brainstem",
+      "sourceHash": "40dd8f7f7b9a6bc79be1fdc6282ed50965c7f07d853a4db981dd7203477185c8",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:left:organ:brachium-of-left-inferior-colliculus",
+        "fmaId": "FMA73464",
+        "name": "Brachium of left inferior colliculus",
+        "sourceName": "brachium of left inferior colliculus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "collicular-brachia",
+        "nodeName": "FMA73464",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1761",
+            "sha256": "190f6b408b3967c91cfe4aab21672a5998867b4ea5a145567de66df8111da3aa"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.023823900148272514,
+            7.321400165557861,
+            0.1826840043067932
+          ],
+          "max": [
+            0.14135199785232544,
+            7.432300090789795,
+            0.25730100274086
+          ]
+        },
+        "center": [
+          0.08258794900029898,
+          7.376850128173828,
+          0.2199925035238266
+        ],
+        "anchor": [
+          0.07357370108366013,
+          7.386199951171875,
+          0.22892999649047852
+        ],
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "additional-source-part",
+        "coverageNote": "Coarse whole source-labelled inferior collicular brachium. Original coordinates and every source face retained. This is not a fibre bundle reconstruction, validated attachment, tractography or complete auditory pathway. Superior brachia remain withheld for source laterality conflict.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "conceptId": "inferior-collicular-brachia",
+      "study": "brainstem",
+      "sourceHash": "40dd8f7f7b9a6bc79be1fdc6282ed50965c7f07d853a4db981dd7203477185c8",
+      "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+      "parentHash": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:organ:brachium-of-right-inferior-colliculus",
+        "fmaId": "FMA73463",
+        "name": "Brachium of right inferior colliculus",
+        "sourceName": "brachium of right inferior colliculus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "collicular-brachia",
+        "nodeName": "FMA73463",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1809",
+            "sha256": "733feb8590917edc0454661f7027564ae56fe51d4b916f59f82c1e222e0faefc"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.15442800521850586,
+            7.321599960327148,
+            0.18253499269485474
+          ],
+          "max": [
+            -0.036628399044275284,
+            7.432300090789795,
+            0.25798100233078003
+          ]
+        },
+        "center": [
+          -0.09552820213139057,
+          7.376950025558472,
+          0.22025799751281738
+        ],
+        "anchor": [
+          -0.0881303995847702,
+          7.389200210571289,
+          0.22406400740146637
+        ],
+        "studyParentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+        "sourceRelationship": "additional-source-part",
+        "coverageNote": "Coarse whole source-labelled inferior collicular brachium. Original coordinates and every source face retained. This is not a fibre bundle reconstruction, validated attachment, tractography or complete auditory pathway. Superior brachia remain withheld for source laterality conflict.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
       "conceptId": "cerebral-frontal",
       "study": "cerebral",
       "sourceHash": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
