@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Ankle & foot → select a tarsal bone → Imaging** now provides [42 X-ray/CT/MRI draft sections](docs/TARSAL_IMAGING_TEACHING.md) for the fourteen supplied tarsal selections. Existing compact controls and geometry are unchanged. These are orientation notes, not acquired scans, clinical approval or a complete ankle-imaging curriculum.
+
 **Head & neck / Whole body → Study → Tentorium: supplied right portion** adds an [incomplete, source-audited dural-fold surface](docs/TENTORIUM_SOURCE.md) with 21,924 original triangles. Set the brain aside, inspect against skull context, and use existing selection/dissection/Undo. Its right-only extent is explicit; no mirrored left fold, complete notch, patient scan or clinical approval is claimed. Display count is now 1,025; the raw ingestion catalogue remains 1,022.
 
 **Whole body / Shoulder & arm / Forearm → medial brachial vein** now adds [two source-audited 3D vein surfaces](docs/BRACHIAL_VEIN_ADDITION.md), with existing selection, labels, dissection, study links and drainage controls. All 5,422 source triangles are retained. The displayed body now has 1,024 selections; the immutable ingestion catalogue remains 1,022. These CC BY 4.0 additions require attribution and clinical review, not a fee.

@@ -2,12 +2,14 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { preElbowRecipeProfiles } from './elbow-study-history.mjs';
+import { authoringBeforeTarsalImaging } from './tarsal-imaging-history.mjs';
 import before from "../content/wrist-imaging.before.json" with { type: "json" };
 import after from "../content/wrist-imaging.transition.json" with { type: "json" };
 import pins from "../content/wrist-imaging-pins.json" with { type: "json" };
 const hash = (v) =>
   createHash("sha256").update(JSON.stringify(v)).digest("hex");
 export function authoringBeforeWristImaging({ api, catalog }) {
+  api = authoringBeforeTarsalImaging({ api, catalog });
   assert.equal(
     hash(before),
     "6503f2a45ef89001cf485ad5a0397606f2bcd2616593c958e347da69ed606c3c",

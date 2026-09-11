@@ -1,6 +1,16 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — incomplete tentorial anatomy (current source)
+## 11 September 2026 — tarsal imaging teaching (current source)
+
+Source `ea5cdbd18ccdcf22fa5708c9b0a00fc28fddcc80`, tree `5616b6261468bf073f181729343aa6b18efa70ef`, parent `7f9a6c40474f0942e189628cf9bae401c67d3c87`. Twenty-three paths mirrored once; 1,608 matching files / 418,352,347 bytes / 114 retained GLBs. Private Sites source push and independent remote main match exactly. No common credential-signature warnings (not exhaustive). GitHub delivery remains unconfirmed; main website outside this module/receipt remains unchanged.
+
+Fourteen existing tarsal bone selections receive 42 introductory X-ray/CT/MRI drafts, with five shared concepts and seven bone-specific notes. Full source-record admission excludes similarly named laryngeal cartilage. Existing collapsed learning UI, source geometry, study recipes, other teaching and paid-resource entitlements remain unchanged. No new model, scan, dependency, paid service or clinical approval. Factual reading links only; original notes do not redistribute publisher assets/prose.
+
+Passed 42 resolved/exported/actual-note-rendered topics, 420 altered-binding rejections, 14 official source rows and preservation of 9,156 other raw-body topics plus shoulder/recipes. Wrist/hip/spinal imaging, body-review/decisions and tentorium regressions passed; TypeScript and build passed. A missing historical tentorium recipe transition was reconstructed from the two retained source commits, preserving strict earlier recipe guards without runtime changes. All 110 delivered models retain exact decoded geometry. Renderer SHA256 `0cc125bf9890b6206cd196e2f080bf973d3cea6923e50aa47ddc8144aa142fe6` across 323 files. Browser untouched; real device/GPU and clinical acceptance remain pending.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-tarsal-imaging-2026-09-11`: runtime 109,940,930 bytes, SHA256 `6192327cc19cbc3a379b14ccba3e0d5b193d41485b0e887dd9619340a9345965`; delta 542,720 bytes, SHA256 `48c40c5b5fd37d6cd5a23f3f0b1da498fd82fb1003ccd9fcff80838e27d267b3`; incremental 22,711 bytes, SHA256 `b45f5699fd95b986d317fffbc22f0c3992056d9c3dcbf8939d9cbee90df72d45`. Bundle requires exact parent above; retain the release150 full bundle and every later increment. No source/mirror/older recovery was moved/deleted. Final publication/restore results belong in `work/ATLAS_TARSAL_IMAGING_2026-09-11.md` and its D: companion. Continue broader anatomy/function, not another copy of this introductory pass or routine oral detail.
+
+## 11 September 2026 — incomplete tentorial anatomy (previous source)
 
 Source `7f9a6c40474f0942e189628cf9bae401c67d3c87`, tree `f3093235fe0b037cb14ff77fa265ca4ca304979b`, parent `813d307edd2c8efc1acfc839030a7897942fc68b`. Twenty-nine paths mirrored once; 1,599 matching files / 418,273,633 bytes / 114 retained GLBs. Private Sites source push and independent remote main match exactly. No common credential-signature warnings (not exhaustive). GitHub delivery remains unconfirmed; this is not conversation or private-D1 recovery. Main website outside this module/receipt remains unchanged.
 

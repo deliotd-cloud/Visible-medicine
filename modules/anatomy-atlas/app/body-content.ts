@@ -87,6 +87,7 @@ import { hipImagingLesson } from '../lib/hip-imaging';
 import { wristImagingLesson } from '../lib/wrist-imaging';
 import { brachialVeinLesson } from '../lib/brachial-veins';
 import { tentoriumLesson } from '../lib/tentorium';
+import { tarsalImagingLesson } from '../lib/tarsal-imaging';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -131,6 +132,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const tarsalImaging = tarsalImagingLesson(s, tab);
+  if (tarsalImaging) return tarsalImaging;
   const tentorium = tentoriumLesson(s, tab);
   if (tentorium) return tentorium;
   const brachialVein = brachialVeinLesson(s, tab);

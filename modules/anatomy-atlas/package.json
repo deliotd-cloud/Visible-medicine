@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "tarsal-imaging:test": "node scripts/validate-tarsal-imaging.mjs",
     "tentorium:test": "node scripts/export-tentorium.mjs --check && node scripts/validate-tentorium.mjs",
     "brachial-veins:test": "node scripts/export-brachial-veins.mjs --check && node scripts/validate-brachial-veins.mjs",
     "systemic-venous:test": "node scripts/pin-systemic-venous.mjs --check && node scripts/validate-systemic-venous.mjs",

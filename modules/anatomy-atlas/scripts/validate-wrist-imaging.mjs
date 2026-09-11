@@ -10,11 +10,13 @@ import {
   readContentJson,
 } from "./content-contract-tools.mjs";
 import { authoringBeforeWristImaging } from "./wrist-imaging-history.mjs";
+import { authoringBeforeTarsalImaging } from './tarsal-imaging-history.mjs';
 const context = await contentContext(),
   { api, catalog, body, registry } = context;
 const previous = authoringBeforeWristImaging(context),
   pins = await readContentJson("content/wrist-imaging-pins.json"),
   before = await readContentJson("content/wrist-imaging.before.json");
+const afterWrist = authoringBeforeTarsalImaging(context);
 const hash = (v) =>
   createHash("sha256").update(JSON.stringify(v)).digest("hex");
 assert.equal(
@@ -60,7 +62,7 @@ for (const s of catalog.structures) {
     const lesson = api.wristImagingLesson(s, tab);
     if (!admitted.has(s.id) || !before.tabs.includes(tab)) {
       assert.equal(lesson, undefined);
-      assert.deepEqual(api.bodyLesson(s, tab), previous.bodyLesson(s, tab));
+      assert.deepEqual(afterWrist.bodyLesson(s, tab), previous.bodyLesson(s, tab));
       unchangedSections++;
       continue;
     }
@@ -99,7 +101,7 @@ assert.deepEqual(
   Object.fromEntries(
     ["ct", "mri", "xray", "ultrasound"].map((t) => [
       t,
-      body.filter((r) => r.content[t].readiness === "draft").length,
+      catalog.structures.filter((s) => afterWrist.bodyLesson(s, t).readiness === 'draft').length,
     ]),
   ),
   { ct: 106, mri: 108, xray: 69, ultrasound: 41 },

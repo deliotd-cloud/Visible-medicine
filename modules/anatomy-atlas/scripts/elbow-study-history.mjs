@@ -2,10 +2,12 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import record from "../content/elbow-study-transition.json" with { type: "json" };
+import { preTentoriumRecipeProfiles } from './tentorium-recipe-history.mjs';
 const hash = (v) =>
   createHash("sha256").update(JSON.stringify(v)).digest("hex");
 export const elbowStudyProfilesHash = record.after;
 export function preElbowRecipeProfiles(profiles) {
+  profiles = preTentoriumRecipeProfiles(profiles);
   assert.equal(
     hash(record),
     "b9b9250551e394cc4a54bf13215cb9c989dd6ef4a6d60aba7e9d1ca01323f856",

@@ -44,7 +44,7 @@ Generated from the actual catalogue, teaching resolver, dissection profiles and 
 
 ## Delivered source scope
 
-[X-ray orientation](XRAY_TEACHING.md) is available in the existing Imaging group: 69 source-pinned body drafts now include six shoulder-bone sources plus 47 spinal sources. The 3 overlapping dedicated-shoulder drafts cover three shoulder-bone concepts separately. Other entries remain pending, including all 69 nested selections. No radiographs, calibrated projections or paid-lecture access are supplied. Old display/teaching approvals require re-review; earlier topics are preserved through exact authoring transitions.
+[X-ray orientation](XRAY_TEACHING.md) is available in the existing Imaging group: 83 source-pinned body drafts now include six shoulder-bone sources plus 47 spinal sources. The 3 overlapping dedicated-shoulder drafts cover three shoulder-bone concepts separately. Other entries remain pending, including all 69 nested selections. No radiographs, calibrated projections or paid-lecture access are supplied. Old display/teaching approvals require re-review; earlier topics are preserved through exact authoring transitions.
 
 The [cricothyroid dissection](CRICOTHYROID_DISSECTION.md) adds 4 source-defined muscle parts with 2 optional, nonselectable cartilage landmarks. It reuses the compact selection, cutaway, separation, labels and Undo/Redo controls. The source-preserving derivative explicitly omits 12 audited artifact faces; this is disclosed, not clinical approval. Introductory teaching is draft and CT/MRI/US remain pending for these parts. Cartilage is a navigation landmark, not the muscle's tissue parent.
 
@@ -73,9 +73,9 @@ Counts are representations with displayed copy, not unique lessons, complete top
 | --- | ---: | ---: | ---: | ---: |
 | Anatomy | 1023 | 2 | 0 | 0 |
 | Function | 1021 | 0 | 4 | 0 |
-| CT | 106 | 0 | 919 | 0 |
-| MRI | 108 | 0 | 917 | 0 |
-| X-ray | 69 | 0 | 956 | 0 |
+| CT | 120 | 0 | 905 | 0 |
+| MRI | 122 | 0 | 903 | 0 |
+| X-ray | 83 | 0 | 942 | 0 |
 | Ultrasound | 41 | 0 | 984 | 0 |
 | Pathology | 1018 | 0 | 7 | 0 |
 | Clinical | 1018 | 0 | 7 | 0 |

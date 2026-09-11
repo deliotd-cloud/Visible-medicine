@@ -1,5 +1,7 @@
 # Asset register
 
+11 September 2026 — [Tarsal imaging teaching](../docs/TARSAL_IMAGING_TEACHING.md): original notes and factual reading links only, no newly imported asset or dependency. Existing model licences/attribution and project MIT code/teaching terms remain unchanged. No source diagram, patient image or fee-bearing API is bundled.
+
 ## Partial tentorial reference
 
 `public/models/bodyparts3d/tentorium/`: one 21,924-triangle BodyParts3D 4.0 source surface FMA83966/FJ1843 under CC BY 4.0. Original in `content/sources/tentorium/`. The geometry is right-only despite its whole-fold source label: visible name and metadata disclose partial extent. No mirrored counterpart, fitted anatomy or patient registration. Existing credit and licence/adaptation obligations remain. [Hashes, evidence and validation limits](../docs/TENTORIUM_SOURCE.md).

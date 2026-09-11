@@ -1,0 +1,92 @@
+{
+  "beforeCommit": "813d307edd2c8efc1acfc839030a7897942fc68b",
+  "afterCommit": "7f9a6c40474f0942e189628cf9bae401c67d3c87",
+  "before": "e7879c595a5b18221023ef038de836e75087580a18bdda9b9fa50220d35a822c",
+  "after": "81415083e7c3c46814191e79137160b90892a33f91191ca732dd7dff397c1dcc",
+  "patches": [
+    {
+      "region": "whole-body",
+      "field": "focuses",
+      "added": [
+        {
+          "id": "tentorium-source",
+          "title": "Tentorium: supplied right portion",
+          "rule": {
+            "fmaIds": [
+              "FMA83966"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA52735",
+                "FMA52738",
+                "FMA52736"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "superior",
+          "description": "Set the brain and overlying skull aside; keep the incomplete right-sided dural fold with occipital, right temporal and sphenoid context. Choose Both or Right.",
+          "inspect": "Rotate to inspect the sloping fold. Only a right-sided source surface is present: no left counterpart or complete notch has been generated. Bones are orientation, not validated attachment footprints; remove them individually to isolate the fold. Undo restores visibility. Separation is not tissue movement or a surgical approach.",
+          "landmarks": [
+            "tentorium",
+            "occipital bone",
+            "right temporal bone",
+            "sphenoid bone"
+          ]
+        }
+      ]
+    },
+    {
+      "region": "head-neck",
+      "field": "limitations",
+      "before": [
+        "Facial coverage is incomplete; meninges and most cranial nerves are absent. Selected neck and intracranial vessel segments are available.",
+        "Compound eyeballs are included, but no full orbital-layer, cranial-base or neck-fascia dissection is supplied.",
+        "Cranial windows hide bone; they do not cut a skull flap.",
+        "Deep-brain entries are unvalidated source surfaces. Colours identify study groups, not histology or MRI signal. The two-component choroid-plexus and mammillary records remain grouped across sides."
+      ],
+      "after": [
+        "Facial coverage is incomplete; only a right-sided tentorial source portion is supplied, not complete meninges. Most cranial nerves remain absent. Selected neck and intracranial vessel segments are available.",
+        "Compound eyeballs are included, but no full orbital-layer, cranial-base or neck-fascia dissection is supplied.",
+        "Cranial windows hide bone; they do not cut a skull flap.",
+        "Deep-brain entries are unvalidated source surfaces. Colours identify study groups, not histology or MRI signal. The two-component choroid-plexus and mammillary records remain grouped across sides."
+      ]
+    },
+    {
+      "region": "head-neck",
+      "field": "focuses",
+      "added": [
+        {
+          "id": "tentorium-source",
+          "title": "Tentorium: supplied right portion",
+          "rule": {
+            "fmaIds": [
+              "FMA83966"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA52735",
+                "FMA52738",
+                "FMA52736"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "superior",
+          "description": "Set the brain and overlying skull aside; keep the incomplete right-sided dural fold with occipital, right temporal and sphenoid context. Choose Both or Right.",
+          "inspect": "Rotate to inspect the sloping fold. Only a right-sided source surface is present: no left counterpart or complete notch has been generated. Bones are orientation, not validated attachment footprints; remove them individually to isolate the fold. Undo restores visibility. Separation is not tissue movement or a surgical approach.",
+          "landmarks": [
+            "tentorium",
+            "occipital bone",
+            "right temporal bone",
+            "sphenoid bone"
+          ]
+        }
+      ]
+    }
+  ]
+}
