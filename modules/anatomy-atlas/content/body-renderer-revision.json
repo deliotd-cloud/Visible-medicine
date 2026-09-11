@@ -37,6 +37,10 @@
       "sha256": "97c18c510bc8b4b5dd0daae4270717d2ac02e099a8a1bfd04d5710482b2141b7"
     },
     {
+      "path": "app/arterial-connections.tsx",
+      "sha256": "684bf032444e0b157f1c40240a6a02e5632680414d871a601264404638c9e546"
+    },
+    {
       "path": "app/atlas-workspace.css",
       "sha256": "938edb0aeff51e660829bbde701b198c6f82f1c47089ab07e91d24ea3da0584b"
     },
@@ -54,7 +58,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "39c90985333f1bd2fdb9421c988cf63b36390b1caaf96c31aa773bdfb5ec9d6a"
+      "sha256": "a04dc03df828cd02a703ec69637ed12ffbbf4a5c638ab9d5598fbc24b0f025ac"
     },
     {
       "path": "app/body-scene.tsx",
@@ -327,6 +331,14 @@
     {
       "path": "content/hip-imaging-pins.json",
       "sha256": "aa6a306d480e42c8af77a628537fcb7fd694217e97a93e60bbd824c5fa8103c5"
+    },
+    {
+      "path": "content/lower-limb-arterial-pins.json",
+      "sha256": "274b0d2880de0b3f536f05858893c150cedb1230e0c14e2de84ecb1b4d9aba1b"
+    },
+    {
+      "path": "content/lower-limb-arterial.ts",
+      "sha256": "9eb963fcbec4187a03b4a8aa861456483824ad056d3aaf1712aacd273a6715ca"
     },
     {
       "path": "content/lower-limb-motor-pins.json",
@@ -769,6 +781,10 @@
       "sha256": "853ccb6495673a5e33b1bac74bffc28ee5285f06903dd60f53d74fc507880426"
     },
     {
+      "path": "lib/lower-limb-arterial.ts",
+      "sha256": "18377554b51ca27a2766dfd907f3a51c8bb83eb40d77ad6e3afb9ae431036a5a"
+    },
+    {
       "path": "lib/lower-limb-motor.ts",
       "sha256": "e769da189fa98ef8997b2fd275638f9996517a7ed2dd5a1818a5283bb5653c56"
     },
@@ -1082,7 +1098,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "4795a10ddd05a3ee4886efdf060a2755fb33a36626c284b40b2c33e59b8404b3"
+      "sha256": "3d4e6474c39d920032c3a0d3c144e69ba69ede830f436e795d21d5de505298b2"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1177,5 +1193,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "e561f0a0d5c4916f8311fcbb29b524c8e8e45ad4d914594d3752069a223a576b"
+  "sha256": "91268a80930bb1d2589e26fe59382c9292f5c2738c06f05e5d8fcdb53f8c608e"
 }

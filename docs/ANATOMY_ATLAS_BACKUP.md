@@ -1,6 +1,18 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — hip/thigh imaging orientation (current source)
+## 11 September 2026 — lower-limb arterial connections (current source)
+
+Source `d723e7051319e17db4992bb941755ebc85a25c1d`, tree `e7ae2c57bf01ab42ab0705dad7adcf8b473210c9`, parent `d0b61f72358a8e0718c09b26e9efa69916cd1012`. Seventeen paths mirrored once; 1,536 matching source files / 414,378,664 bytes / 112 retained GLBs. No main-website edits; no common credential-signature warnings (not exhaustive). Sites source push succeeded, full HEAD verified afterward and temporary credential cleared. **Not confirmed GitHub delivery, conversation/private-D1 backup or an off-device restore.**
+
+The new collapsed selected-artery panel exposes 30 typical relationships across 29 existing selections (15 concepts), with local neighbour selection, atomic reversible isolation with bone context and source-bound whole-body links for outside-region selections. Branches, continuations, communications and the unmodelled tibioperoneal route are distinct. No nerve/vessel geometry, lumen, flow, diagnostic threshold, scan resource or paid lecture is introduced. Complete 29 arterial / 65 bone context records are pinned; deep femoral pairs retain their two-file official partof memberships.
+
+Passed all bilateral/inverse relations, 176 region/side plans with actual dissection history, 40 cross-region link cases, 110 catalogue rejections, 58 actual component renders and eight real parent-handler cases. Every existing 9,198 body topic, original shoulder teaching and study recipe unchanged. Whole-body worksheet/private-decision checks, 235 shoulder-review checks, 48,082 imaging-link assertions, TypeScript, requirements freshness, diff checks and production build passed. All 108 delivered models retain decoded source geometry. No clinical or browser/device certification.
+
+Recovery stem `work/atlas-arterial-connections-2026-09-11`: runtime archive 109,346,998 bytes, SHA256 `384ff1d6d7a25dc78926a8877bdce01b3e225ecf9d42beb5be9c1d60658c16ae`; delta 665,600 bytes, SHA256 `ba81e139e6f630a38c2a4670955fc3c7c25db5f826fafc7bfa7f1debd5943958`; incremental bundle 41,496 bytes, SHA256 `5f5385c03eec052e417dad6c14c48274d779ab27e86d65334e2bcc1f8ace27a5`. Bundle requires source parent `d0b61f72358a8e0718c09b26e9efa69916cd1012`, not standalone.
+
+Native version **149**, exact ID `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_0e3a83b9eab881918d5731e501cc6519`. Terminal deployment outcome is recorded in `work/ATLAS_ARTERIAL_CONNECTIONS_2026-09-11.md`; do not repeat saving or publishing. Production D1 records/migrations unchanged. Routine oral work remains deferred; continue wider anatomy/function or genuinely cleared missing tissues.
+
+## 11 September 2026 — hip/thigh imaging orientation (previous source)
 
 Source `d0b61f72358a8e0718c09b26e9efa69916cd1012`, tree `1c739536a52d0929f77fa7fd4f88c8e708f2f727`, parent `fa1ce62ee804e439ca55e987b79a16ce64a41cac`. Twenty-three paths mirrored once; 1,529 matching source files / 414,192,918 bytes / 112 retained GLBs. Main website unchanged. No common credential-signature warnings (not exhaustive). Sites source push succeeded; complete HEAD verified afterward; temporary credential cleared. **Not confirmed GitHub delivery, conversation backup, private D1 backup or independently restored off-device.**
 

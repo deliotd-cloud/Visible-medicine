@@ -115,6 +115,8 @@ import { StudyViews } from './study-views';
 import { StructureNavigator } from './structure-navigator';
 import { RelatedStudy } from './related-study';
 import { UpperLimbMotorExplorer } from './upper-limb-motor';
+import { ArterialConnections } from './arterial-connections';
+import { lowerLimbArterialPlan } from '../lib/lower-limb-arterial';
 import { limbMotorPlan } from '@/lib/limb-motor';
 import { StudyLinks } from './study-links';
 import {
@@ -697,6 +699,25 @@ export default function BodyExplorer({
     if (!action) return;
     if (action.kind === 'focus') changeFocus(action.id);
     else changeStage(action.id);
+  }
+  function showArterialConnections() {
+    if (!catalog || !selectedId) return;
+    const plan = lowerLimbArterialPlan(catalog, initialRegion, side, selectedId, exam);
+    if (!plan) return;
+    dispatch(plan.action);
+    setSystems(prev => ({ ...prev, skeleton: true, vessels: true }));
+    setInspection(initialInspection);
+    setExplode(0);
+    setLayout('spatial');
+    setPlate(false);
+    setGhostRemoved(false);
+    setFocus(false);
+    setIsolated(false);
+    setZoom(1);
+    cameraRestore.current = null;
+    setSelectionNotice({ id: plan.selectedId, message: `${plan.label}: available arterial relationships shown. Missing segments remain unmodelled.` });
+    setReset(n => n + 1);
+    // The existing selection is retained; this visibility action emits no imaging event.
   }
   function reorientDissection() {
     if (exam) return;
@@ -2119,6 +2140,8 @@ export default function BodyExplorer({
                       side={side as StudySide}
                       focusId={dissection.focusId}
                     />
+                    <ArterialConnections catalog={catalog} region={initialRegion} side={side} selectedId={selected.id}
+                      disabled={exam} onSelect={select} onShow={showArterialConnections} />
                     <dl className="body-facts">
                       <div>
                         <dt>Region</dt>

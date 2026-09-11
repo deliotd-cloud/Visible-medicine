@@ -13,6 +13,10 @@
     "lib/regional-motor.ts": "82fa38c847c564ce12f6de1de718167408fa4757ca750e3a8221ec630fc25d0e",
     "lib/limb-motor.ts": "853ccb6495673a5e33b1bac74bffc28ee5285f06903dd60f53d74fc507880426",
     "lib/lower-limb-motor.ts": "e769da189fa98ef8997b2fd275638f9996517a7ed2dd5a1818a5283bb5653c56",
+    "lib/lower-limb-arterial.ts": "18377554b51ca27a2766dfd907f3a51c8bb83eb40d77ad6e3afb9ae431036a5a",
+    "content/lower-limb-arterial.ts": "9eb963fcbec4187a03b4a8aa861456483824ad056d3aaf1712aacd273a6715ca",
+    "content/lower-limb-arterial-pins.json": "274b0d2880de0b3f536f05858893c150cedb1230e0c14e2de84ecb1b4d9aba1b",
+    "app/arterial-connections.tsx": "684bf032444e0b157f1c40240a6a02e5632680414d871a601264404638c9e546",
     "content/lower-limb-motor.ts": "b94da1bcd39a91f513565135cb8a4e70c64998fff05aaba8df8a83d7f156f36b",
     "content/lower-limb-motor-pins.json": "d397cac59e5a0428e803278a16f9acafa0836f9e1aaa1d2fe7f6e14cbf289928",
     "content/upper-limb-motor.ts": "05b57ea3be22d5a02db6e89b3db90625377b2bfb125bd70bb19058ccb8c551d7",
@@ -138,6 +142,15 @@
     "nestedTeachingData": "b74ddd2f8575fe1bef1d07424db49de126bc94700166eec88f5dc0c2e79e1770"
   },
   "anatomy": {
+    "arterialConnections": {
+      "selections": 29,
+      "concepts": 15,
+      "relationships": 30,
+      "sourceAndFrameChecked": true,
+      "geometryAdded": false,
+      "flowSimulated": false,
+      "clinicalApproval": false
+    },
     "lowerLimbMotor": {
       "regions": [
         "pelvis",

@@ -20,6 +20,7 @@ export { upperLimbMotorGroups } from './lib/upper-limb-motor.ts';
 export { upperLimbMotorRegions } from './content/upper-limb-motor.ts';
 export { lowerLimbMotorGroups } from './lib/lower-limb-motor.ts';
 export { lowerLimbMotorRegions } from './content/lower-limb-motor.ts';
+export { lowerLimbArterialNeighbours } from './lib/lower-limb-arterial.ts';
 export { makeSpecimenLink, resolveSpecimenLink } from './lib/um-limb-navigation.ts';
 export { parseSpecimenLink, specimenTopics } from './lib/specimen-links.ts';
 export { bodyContent, bodyLesson } from './app/body-content.ts';
@@ -60,6 +61,7 @@ const {
   upperLimbMotorRegions,
   lowerLimbMotorGroups,
   lowerLimbMotorRegions,
+  lowerLimbArterialNeighbours,
   makeSpecimenLink,
   resolveSpecimenLink,
   parseSpecimenLink,
@@ -252,6 +254,10 @@ for (const path of [
   'lib/regional-motor.ts',
   'lib/limb-motor.ts',
   'lib/lower-limb-motor.ts',
+  'lib/lower-limb-arterial.ts',
+  'content/lower-limb-arterial.ts',
+  'content/lower-limb-arterial-pins.json',
+  'app/arterial-connections.tsx',
   'content/lower-limb-motor.ts',
   'content/lower-limb-motor-pins.json',
   'content/upper-limb-motor.ts',
@@ -436,12 +442,19 @@ const independentNavigation = Object.values(limbDefinitions).map(definition => {
     studyMemberLinks: definition.studies.reduce((n, s) => n + s.ids.reduce((m, id) => m + roundTrip(id, s.id), 0), 0),
   };
 });
+const arterialEntries = catalog.structures.filter(s=>s.system==='vessels').map(s=>lowerLimbArterialNeighbours(catalog,'whole-body','both',s.id)).filter(Boolean);
 const report = {
   schemaVersion: 1,
   method:
     'Offline source and displayed-copy inventory; no clinical or browser certification.',
   sourceHashes,
   anatomy: {
+    arterialConnections: {
+      selections: arterialEntries.length,
+      concepts: new Set(arterialEntries.map(e=>e.concept)).size,
+      relationships: new Set(arterialEntries.flatMap(e=>e.rows.map(r=>[e.selected.id,r.structure.id].sort().join('|')))).size,
+      sourceAndFrameChecked: true, geometryAdded: false, flowSimulated: false, clinicalApproval: false,
+    },
     lowerLimbMotor: {
       regions: lowerLimbMotorRegions,
       groups: new Set(lowerLimbMotorRegions.flatMap(r => lowerLimbMotorGroups(catalog, r).map(g => g.key))).size,

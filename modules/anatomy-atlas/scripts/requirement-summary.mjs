@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Arterial connections](ARTERIAL_CONNECTIONS.md) offers upstream/downstream and communicating-neighbour exploration for ${anatomy.arterialConnections.selections} existing source selections through ${anatomy.arterialConnections.relationships} typical relationships (${anatomy.arterialConnections.concepts} concepts). A selected-artery panel stays collapsed; regional isolation is reversible and outside neighbours use source-bound whole-body links. Missing segments remain explicit; no vessel lumen, flow or patient registration is invented.
+
 [Lower-limb muscles by nerve](LOWER_LIMB_MOTOR.md) links ${anatomy.lowerLimbMotor.muscleSelections} existing root-body selections through ${anatomy.lowerLimbMotor.relationships} typical relationships in ${anatomy.lowerLimbMotor.groups} groups. Pelvis/hip, thigh, leg and foot reuse the same collapsed control as the upper limb. Source/frame checks and dissection history are retained; no nerve path or patient correspondence is invented. The independent lower-limb specimen remains separate.
 
 [Private body reviews](BODY_REVIEW_DECISIONS.md) now record scoped decisions for root-body selections in a separate append-only store from the shoulder pilot. These records are not inspected by this inventory or propagated as clinical approval. Imaging approval remains unavailable without validated acquired resources.

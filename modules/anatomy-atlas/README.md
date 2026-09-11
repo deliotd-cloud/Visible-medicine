@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Select a lower-limb artery → Arterial connections** now offers [upstream/downstream exploration](docs/ARTERIAL_CONNECTIONS.md) across 29 existing selections. Show available neighbours with bones, follow source-bound links between regions and Undo the dissection change. The panel stays collapsed; missing segments and typical-versus-donor anatomy remain explicit. No flow or scan simulation.
+
 **Select a hip/thigh muscle → Imaging → CT / MRI / Ultrasound** now opens [source-bound orientation teaching](docs/HIP_IMAGING_TEACHING.md) for 26 existing selections: iliopsoas, abductors, rectus femoris, adductors, proximal hamstrings and quadratus femoris. Six groups supply 18 distinct modality topics with selection-specific cautions. The same compact notes panel is reused; these are drafts, not patient scans or clinical approval.
 
 **Pelvis & hip / Hip & thigh / Knee & leg / Ankle & foot → Dissect → Muscles by nerve** now connects [118 existing muscle selections to 15 nerve/branch groups](docs/LOWER_LIMB_MOTOR.md). Show a group with bones, switch sides and select muscles for their notes. The same collapsed control serves both limbs; mixed/variable supply is qualified. These are draft motor relationships, not modelled nerve paths, complete territories or patient findings.
