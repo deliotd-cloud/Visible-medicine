@@ -3,22 +3,28 @@ import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { KneeSpecimenView, type SpecimenSupplement } from './um-knee-study';
-import { abdominalWallDefinition, abdominalWallSource, abdominalWallColors, abdominalWallNote, abdominalWallReading } from '@/lib/abdominal-wall';
-import type { SpecimenSurface } from '@/lib/independent-specimen';
+import { abdominalWallDefinition, abdominalWallSource, abdominalWallColors } from '@/lib/abdominal-wall';
+import type { SpecimenDefinition, SpecimenSurface } from '@/lib/independent-specimen';
 import { abdominalWallPractice } from '@/lib/abdominal-wall-practice';
+import { abdominalTeachingFor } from '@/lib/abdominal-wall-teaching';
+import { abdominalSurfaceMatches } from '@/lib/abdominal-wall-binding';
+import { abdominalReferenceTitles } from '@/content/abdominal-wall-teaching';
+import { SpecimenLearning } from './um-limb-learning';
+import type { SpecimenTopic } from '@/lib/specimen-links';
 
-export function AbdominalWallTeaching({ surface }: { surface: SpecimenSurface }) {
-  const note = abdominalWallNote(surface);
-  return <details className="um-knee-details"><summary>Anatomy & function · draft</summary>
-    <p>{note ?? 'This named bone is context from the same source release. Muscle attachment footprints are not separately mapped.'}</p>
-    {note && <a href={abdominalWallReading} target="_blank" rel="noreferrer">Further anatomy reading</a>}
-    <p>Clinical review pending. Identification practice tests these source labels only. CT/MRI/X-ray/US images, pathology examples and clinical examination questions are not yet supplied for this specimen.</p>
+export function AbdominalWallTeaching({ surface, definition = abdominalWallDefinition, initialTopic }: {
+  surface: SpecimenSurface; definition?: SpecimenDefinition; initialTopic?: SpecimenTopic;
+}) {
+  if (surface.tissue === 'skeleton' && abdominalSurfaceMatches(definition, surface)) return <details className="um-knee-details"><summary>Learn · skeletal context</summary>
+    <p>This named bone is context from the same source release. Muscle attachment footprints are not separately mapped; detailed bone teaching for this specimen is pending.</p>
   </details>;
+  return <SpecimenLearning definition={definition} selected={surface} initialTopic={initialTopic}
+    resolveLesson={abdominalTeachingFor} attachmentLabels={{ proximal: 'Origin', distal: 'Insertion' }} referenceTitles={abdominalReferenceTitles} />;
 }
 export const abdominalWallSupplement: SpecimenSupplement = {
   colors: abdominalWallColors,
   identification: abdominalWallPractice,
-  learning: surface => <AbdominalWallTeaching surface={surface} />,
+  learning: (surface, definition) => <AbdominalWallTeaching surface={surface} definition={definition} />,
   sourceDetails: <>
     <p>{abdominalWallSource.credit}</p>
     <p><a href={abdominalWallSource.url} target="_blank" rel="noreferrer">Official version-3 source</a> · <a href={abdominalWallSource.licenseUrl} target="_blank" rel="noreferrer">CC BY-SA 2.1 Japan</a></p>

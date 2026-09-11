@@ -1,6 +1,20 @@
 # Anatomy atlas backup — 11 September 2026
 
-## 11 September 2026 — abdominal identification practice (current; publication pending)
+## 11 September 2026 — abdominal-wall teaching (current)
+
+Source `59a567c7fb76c954cf3d91eeec62124e207bbbf9`, tree `03b65703a4944a2a9cb1d442747f84ab9850d9fc`, parent `df79d3e873a4ba92073dedb65e90ff65131aea31`. Seventeen changed source paths mirrored into `modules/anatomy-atlas`; main website unchanged. Sites source push succeeded and full HEAD was independently verified; ephemeral credential cleared. This is NOT confirmed GitHub delivery.
+
+Eight exact abdominal muscles now have Anatomy/Function, origin/insertion, typical motor supply, 48 introductory Clinical/Pathology/CT/MRI/X-ray/US topics and eight clinical self-checks (four paired concepts, not 48 unique diseases). Three compact groups reuse the collapsed Learn panel. Side-specific rotation, missing fascia/nerve/vascular limitations and imaging-vs-model distinctions are explicit. The complete source/frame guard now serves teaching and existing identification; actual view definitions are forwarded, mismatches fail closed, no UM fallback is permitted. Skeletal context remains detailed-teaching pending. Geometry, UM lesson pins, shoulder review fingerprints and original identification feedback are unchanged. No patient scan, registration, asset/dependency/fee or lecture entitlement changes.
+
+Passed 751 teaching checks including 64 real React topic renders; 697 specimen checks including all original face corners; 661 practice checks; 1,310 UM learning checks; 235 review checks; TypeScript; requirement freshness; authored diff checks; production build and all 108 lossless model checks. No browser/GPU/mobile/accessibility/educator or clinical approval. Original teaching references link to publishers; no article, figure, table, protocol, image or question bank is imported. Existing mesh licences stay separate.
+
+Recovery stem `work/atlas-abdominal-teaching-2026-09-11`: runtime 108,542,223 bytes SHA256 `64507fdc91d41dc594e51ed8970ef361602566c9a0d256d85e7a36a4cbf0a082`; delta 409,600 bytes SHA256 `ed99a87685937b48c5cb9254b4dd089c63b3524367f08b1ed39ea6e33eb424f0`; incremental bundle 15,416 bytes SHA256 `6446848a73ebbb0adc825b67ff0e0f6f258051c22b4118f0388689bfae1c9888`. Bundle requires source parent. Archive353 entries; mirror1,470 files /412,893,874 bytes /112 retained GLBs; no common credential signatures (not exhaustive). Preparation JSON predates final results; never rerun helper/overwrite artifacts.
+
+Native save **142** succeeded: `appgprj_6a9c77c9b73c8191b9495cf60007ef4b~appgver_388bee2182508191a26d2f2715b76f94`. Private deployment `appgdep_6aa36cef26e48191b83aac9ed594a18c` **SUCCEEDED**, terminal 2026-09-11T02:52:54.268634+00:00, https://visible-medicine-shoulder-atlas.deliotd.chatgpt.site . No pending operation or audience change; background browser preserved. This release includes the two previously unpublished abdominal milestones; do not separately retry their obsolete archives.
+
+Final checkpoint `work/ATLAS_ABDOMINAL_TEACHING_2026-09-11.md`. Same-PC recovery and Sites source/publication are not confirmation of GitHub delivery, chat/private D1 backup or full off-device restoration. Continue substantive wider-body work; introductory abdominal teaching and routine oral detail do not need repetition.
+
+## 11 September 2026 — abdominal identification practice (historical pending publication)
 
 Source `df79d3e873a4ba92073dedb65e90ff65131aea31`, tree `11c1dd5c344621865f84be8b2ef69b73f28a421d`, parent `300f6577c1c291b2c3c75694361c1b7bedd5cf7b`. Nineteen changed paths mirrored into `modules/anatomy-atlas`; main website unchanged. Exact Sites source push succeeded and full HEAD was verified. Ephemeral credential cleared. This is NOT confirmed GitHub delivery.
 

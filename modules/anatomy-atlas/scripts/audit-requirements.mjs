@@ -34,7 +34,8 @@ export { renalRelationshipsFor } from './lib/renal-relationships.ts';
 export { hepaticBiliaryRelationshipsFor, hepaticBiliarySource } from './lib/hepatic-biliary-context.ts';
 export { cardiacRelationshipsFor, cardiacVesselSource } from './lib/cardiac-context.ts';
 export { abdominalWallDefinition } from './lib/abdominal-wall.ts';
-export { abdominalWallPractice } from './lib/abdominal-wall-practice.ts';`,
+export { abdominalWallPractice } from './lib/abdominal-wall-practice.ts';
+export { abdominalTeachingFor } from './lib/abdominal-wall-teaching.ts';`,
     resolveDir: fileURLToPath(root),
     sourcefile: 'requirements-audit-entry.ts',
     loader: 'ts',
@@ -47,6 +48,7 @@ export { abdominalWallPractice } from './lib/abdominal-wall-practice.ts';`,
 const {
   abdominalWallDefinition,
   abdominalWallPractice,
+  abdominalTeachingFor,
   limbDefinitions,
   specimenTeachingFor,
   specimenMotorGroups,
@@ -329,6 +331,9 @@ for (const path of [
   'lib/independent-specimen.ts',
   'lib/abdominal-wall.ts',
   'lib/abdominal-wall-practice.ts',
+  'lib/abdominal-wall-binding.ts',
+  'lib/abdominal-wall-teaching.ts',
+  'content/abdominal-wall-teaching.ts',
   'lib/specimen-identification.ts',
   'scripts/exclude-source-recovery.mjs',
   'app/abdominal-wall-study.tsx',
@@ -421,6 +426,13 @@ const report = {
       triangles: abdominalWall.structures.reduce((n,s) => n + s.triangles,0),
       license: abdominalWall.source.license, source: abdominalWall.source.archive,
       registeredToCurrentBody: false, clinicalApproval: false, countedAsRootTeaching: false,
+      detailedTeaching: {
+        anatomyFunctionDrafts: abdominalWallDefinition.surfaces.filter(s => abdominalTeachingFor(abdominalWallDefinition, s)).length,
+        attachmentDrafts: abdominalWallDefinition.surfaces.filter(s => abdominalTeachingFor(abdominalWallDefinition, s)?.attachments).length,
+        extendedTopicDrafts: abdominalWallDefinition.surfaces.reduce((n,s) => n + Object.keys(abdominalTeachingFor(abdominalWallDefinition, s)?.extended?.topics ?? {}).length, 0),
+        clinicalSelfChecks: abdominalWallDefinition.surfaces.filter(s => abdominalTeachingFor(abdominalWallDefinition, s)?.extended?.selfCheck).length,
+        sourceAndFrameChecked: true, clinicalApproval: false, realImaging: false,
+      },
       identificationPractice: {
         muscleTargets: abdominalWallPractice.eligibleIds(abdominalWallDefinition, abdominalWall.structures.map(s => s.id)).length,
         studies: abdominalWallDefinition.studies.map(s => ({ id: s.id, questions: abdominalWallPractice.createRound(abdominalWallDefinition, s.ids, () => .5)?.questions.length ?? 0 })),

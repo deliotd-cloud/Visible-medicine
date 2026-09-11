@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Abdominal-wall teaching](ABDOMINAL_WALL_SPECIMEN.md#detailed-teaching) supplies 8 exact-source Anatomy/Function lessons, 8 attachment/motor records, 48 introductory clinical/pathology/imaging topics and 8 self-checks. Three groups in the existing collapsed Learn panel keep the model prominent. Imaging notes explain recognition and limitations, not real scans or registration; source changes fail closed. Specialist validation remains pending.
+
 [Abdominal identification practice](ABDOMINAL_WALL_SPECIMEN.md#identification-practice) covers 8 source muscles across 7 studies. Visible muscles alone enter rounds; bones stay contextual, labels/guides are hidden, and first-try/reveal/retry-missed scoring preserves the dissection history. Exact source/frame checks reject mismatches. This is source-label practice, not a clinical examination or approval.
 
 [Separate abdominal-wall specimen](ABDOMINAL_WALL_SPECIMEN.md): 8 version-3 muscle surfaces and 21 partial skeletal context selections. Seven reversible studies expose the internal obliques, transversus and rectus pairs missing from the current body geometry. This is a separate source frame under CC BY-SA 2.1 JP, with downloadable assets and reuse notices; not a registration into version 4 or a complete surgical wall. No source face is removed. Clinical, device and source-interface review remain pending.

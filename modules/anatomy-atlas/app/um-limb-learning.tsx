@@ -14,15 +14,21 @@ import type { SpecimenPracticeAdapter } from '@/lib/specimen-identification';
 import type { SpecimenTopic } from '@/lib/specimen-links';
 import { specimenTopicLabels } from '@/lib/specimen-links';
 import { specimenClinicalReferences } from '@/content/um-limb-clinical';
+import type { SpecimenLesson } from '@/content/um-limb-teaching';
 
 const clinicalTopics = ['clinical', 'pathology'] as const;
 const imagingTopics = ['ct', 'mri', 'xray', 'ultrasound'] as const;
-function ClinicalReferences({ urls }: { urls: readonly string[] }) {
-  return urls.length ? <ul aria-label="Topic references">{urls.map(url => <li key={url}><a href={url} target="_blank" rel="noreferrer">{Object.values(specimenClinicalReferences).find(r => r.url === url)?.title ?? new URL(url).hostname}</a></li>)}</ul> : null;
+function ClinicalReferences({ urls, titles }: { urls: readonly string[]; titles?: Readonly<Record<string, string>> }) {
+  return urls.length ? <ul aria-label="Topic references">{urls.map(url => <li key={url}><a href={url} target="_blank" rel="noreferrer">{titles?.[url] ?? Object.values(specimenClinicalReferences).find(r => r.url === url)?.title ?? new URL(url).hostname}</a></li>)}</ul> : null;
 }
 
-export function SpecimenLearning({ definition, selected, initialTopic }: { definition: SpecimenDefinition; selected: SpecimenSurface; initialTopic?: SpecimenTopic | null }) {
-  const lesson = specimenTeachingFor(definition, selected);
+export function SpecimenLearning({ definition, selected, initialTopic, resolveLesson = specimenTeachingFor, attachmentLabels, referenceTitles }: {
+  definition: SpecimenDefinition; selected: SpecimenSurface; initialTopic?: SpecimenTopic | null;
+  resolveLesson?: (definition: SpecimenDefinition, selected: SpecimenSurface) => SpecimenLesson | null;
+  attachmentLabels?: { proximal: string; distal: string }; referenceTitles?: Readonly<Record<string, string>>;
+}) {
+  // An adapter's null result must remain unavailable, never fall back to UM.
+  const lesson = resolveLesson(definition, selected);
   const group = initialTopic && clinicalTopics.includes(initialTopic as typeof clinicalTopics[number]) ? 'clinical' : initialTopic && imagingTopics.includes(initialTopic as typeof imagingTopics[number]) ? 'imaging' : 'anatomy';
   return <details className="um-knee-details um-limb-learning" key={`${selected.id}:${initialTopic ?? 'closed'}`} open={!!initialTopic}>
     <summary>Learn · anatomy, clinical & imaging</summary>
@@ -33,7 +39,7 @@ export function SpecimenLearning({ definition, selected, initialTopic }: { defin
         <TabsContent value="anatomy"><Tabs defaultValue={initialTopic === 'function' ? 'function' : 'anatomy'}>
         <TabsList aria-label="Specimen teaching topics" variant="line"><TabsTrigger value="anatomy">Anatomy</TabsTrigger><TabsTrigger value="function">Function</TabsTrigger></TabsList>
         <TabsContent value="anatomy"><p>{lesson.anatomy}</p>{lesson.attachments && <dl>
-          <dt>Proximal attachment</dt><dd>{lesson.attachments.proximal}</dd><dt>Distal attachment</dt><dd>{lesson.attachments.distal}</dd>
+          <dt>{attachmentLabels?.proximal ?? 'Proximal attachment'}</dt><dd>{lesson.attachments.proximal}</dd><dt>{attachmentLabels?.distal ?? 'Distal attachment'}</dt><dd>{lesson.attachments.distal}</dd>
         </dl>}</TabsContent>
         <TabsContent value="function"><p>{lesson.function}</p>{lesson.attachments && <dl><dt>Motor supply</dt><dd>{lesson.attachments.motor}</dd></dl>}
           <p>Typical function, not simulated motion. Nerve routes and attachment footprints are not reconstructed.</p>
@@ -46,7 +52,7 @@ export function SpecimenLearning({ definition, selected, initialTopic }: { defin
             </TabsList>
             {(g === 'clinical' ? clinicalTopics : imagingTopics).map(t => {
               const draft = lesson.extended?.topics[t];
-              return <TabsContent key={t} value={t}>{draft ? <><p>{draft.body}</p><ClinicalReferences urls={draft.references} /></> : <p>{specimenTopicLabels[t]} teaching is pending for this source selection. No generic lesson or different structure has been substituted.</p>}
+              return <TabsContent key={t} value={t}>{draft ? <><p>{draft.body}</p><ClinicalReferences urls={draft.references} titles={referenceTitles} /></> : <p>{specimenTopicLabels[t]} teaching is pending for this source selection. No generic lesson or different structure has been substituted.</p>}
                 {g === 'imaging' && <p className="um-knee-scene-caption">Modality teaching only · No patient images, scan alignment or measured pathology.</p>}
               </TabsContent>;
             })}
@@ -55,8 +61,8 @@ export function SpecimenLearning({ definition, selected, initialTopic }: { defin
         </TabsContent>)}
       </Tabs>
       <details><summary>Self-check</summary><p>Recall this structure’s functional role before revealing the answer.</p><details><summary>Reveal answer</summary><p>{lesson.function}</p></details></details>
-      {lesson.extended && <details><summary>Clinical self-check</summary><p>{lesson.extended.selfCheck.question}</p><details><summary>Reveal explanation</summary><p>{lesson.extended.selfCheck.answer}</p><ClinicalReferences urls={lesson.extended.selfCheck.references} /></details></details>}
-      <details><summary>References & next content</summary><ul>{lesson.references.map((url, i) => <li key={url}><a href={url} target="_blank" rel="noreferrer">Reference {i + 1} · {new URL(url).hostname}</a></li>)}</ul>
+      {lesson.extended && <details><summary>Clinical self-check</summary><p>{lesson.extended.selfCheck.question}</p><details><summary>Reveal explanation</summary><p>{lesson.extended.selfCheck.answer}</p><ClinicalReferences urls={lesson.extended.selfCheck.references} titles={referenceTitles} /></details></details>}
+      <details><summary>References & next content</summary><ul>{lesson.references.map((url, i) => <li key={url}><a href={url} target="_blank" rel="noreferrer">{referenceTitles?.[url] ?? `Reference ${i + 1} · ${new URL(url).hostname}`}</a></li>)}</ul>
         <p>Clinical/pathology and imaging coverage is incomplete; each topic shows its own draft or pending state. No scan correspondence or separately paid lecture access is implied.</p>
       </details>
     </>}

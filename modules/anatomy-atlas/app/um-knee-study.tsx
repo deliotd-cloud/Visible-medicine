@@ -38,7 +38,7 @@ const tissueGroups = [
 // Non-limb specimens reuse the dissection controls, never UM identity/teaching bindings.
 export type SpecimenSupplement = {
   colors: Record<string, string>;
-  learning: (surface: SpecimenSurface) => ReactNode;
+  learning: (surface: SpecimenSurface, definition: SpecimenDefinition) => ReactNode;
   sourceDetails: ReactNode;
   identification?: SpecimenPracticeAdapter;
 };
@@ -149,7 +149,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
             <Button size="sm" variant="outline" disabled={!ready} onClick={() => { setFocus(true); setReset((n) => n + 1); }}><Focus />Frame</Button>
             <Button size="sm" variant="outline" onClick={() => { dispatch({ type: 'visibility', id: selected.id, visible: false }); setFocus(false); }}>Set aside</Button>
           </div>
-          {supplement ? supplement.learning(selected) : <>
+          {supplement ? supplement.learning(selected, specimen) : <>
             <SpecimenLearning definition={specimen} selected={selected} initialTopic={selected.id === initialNavigation?.selectedId ? initialNavigation.topic : null} />
             <SpecimenStudyLink key={`${selected.id}:${active?.id ?? 'custom'}:${view}`} definition={specimen} selectedId={selected.id} studyId={active?.id ?? null} view={view} />
           </>}
