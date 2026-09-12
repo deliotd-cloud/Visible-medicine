@@ -92,8 +92,27 @@ same(
       '8c46bc0dafa78adb611e6377e9e1615b11f03d526a1037c254f1738a808598f0',
     startExam:
       '3b084e597bd7ae9535fb16419967177bf35d651d4f85c0d474d3cb37746f532e',
+    // 12bf83e also pauses Next when required geometry is unavailable;
+    // renderer:test executes both ready and paused cases.
     nextQuestion:
-      '42d469196801b688c7c7ad3582a9f1dda9224b07c7a3c4cebea791b4110a2229',
+      '5191a6319312a6f35511bc198ca3a8562e47356c01cc407a46f702dbe769e6e6',
+    // Source-bound study transitions clear pending camera restoration and reject
+    // invalid/source-changed recipes. limb-vascular-studies:test executes all
+    // three handlers; limbic-landmarks:test covers the current source guard.
+    changeStage:
+      'fb9a7f674da920c75b726868d4fe994cb7bc77fdff0c4891f94f9ec4bc138cdd',
+    changeFocus:
+      'b39d4aac46b371a7092cd176d85be01ad20151eb56f2dfc4fa5d8e0dce73b8ff',
+    openRelatedStudy:
+      'bbefb9f74080439dc8d039d7a5c7f93e955b2918dc1c17f1747c149ddb929c57',
+    // Separate source-bound relationship actions, not replacement anatomy or
+    // imaging events. Their motor/arterial/venous suites execute actual handlers.
+    exploreMotorGroup:
+      '324e2f60c0f0b05577b2816d667ac3c87fbe4d37fa8253e65cddf109e9e68090',
+    showArterialConnections:
+      '39da3ffefc1ee1224d6ae555293d61ac5e08c36907634de0574338723d1ab336',
+    showVenousDrainage:
+      '8137daefccbe17cb9e054def68be59c6cc5ec5e35a1002d30dbf22605de47cd2',
     // Bounded dissection history: actual Undo/Redo handlers are exercised by
     // dissection-history:test, including empty-stack and practice guards.
     undoDissection:
@@ -101,7 +120,7 @@ same(
     redoDissection:
       'ad3ec5d87baeb4b2b0ecb7bb62575cdae423454acb62c2bb3a2f8e51ae0b913f',
   },
-  'Named handlers preserved except explicit explosion, selection-recovery, reasoning and dissection-history migrations',
+  'Named handlers preserved except explicit documented functional migrations',
 );
 // Explicit navigation migration: remove the redundant Quiz-start button,
 // region-only combobox and six-direction button callback. Their replacements
@@ -118,6 +137,8 @@ for (const retired of [
   'onClick/152e04a7bcd7e6a5521a9d1296b5caeae71d73e8ec97233701f2801d3647053f',
   // Reasoning adds one recognized value to the existing practice-mode selector.
   'onValueChange/e02d02d2ec0fa4547a6be5be6d341521a86b814c81738e73e25cd995da13f2ba',
+  // Slider primitive now accepts either a number or array; test both below.
+  'onValueChange/5c7fe06f7313ada67c21df2ed3c759b1c6e98d94f6951f412b4b2f27d07a3ccb',
 ]) {
   const index = migratedCallbacks.indexOf(retired);
   check(index >= 0);
@@ -145,12 +166,61 @@ migratedCallbacks.push(
   'onSelect/610c7aa707c1e7792cda3854a7ec79d0a63ef3319881a1625f5f6eae7a2cf70d',
   'onWindow/5ebc5e51cd113d7d309d4f55e844e0c769431ad7b05ed51a6496b64fc3e157c6',
   'onRedo/8676ea82820286a822f522e5b4085358175c84ed30c8a0e96be77ae3e45036c2',
+  // Four independent specimen viewers: no coordinate-frame merging.
+  'onClick/0cb7961dc2204188428ad45fd7e7aed09b66c8c55e775b3799ec6cad793a65a4',
+  'onClick/1feeb949b3ec5cc16ea341f35cbf19bcbf4df7abade7e832efee2d3abf5bb359',
+  'onClick/432739e4dd819ff700ef87c977cb5bec767312519f872117c90934c48b22c9d8',
+  'onClick/63020d7f4710b1ad9249d46dfd02afe329bd3d2063fce023c26111bdb767866c',
+  'onClose/3baf6677f0e63d874012c20a0d06aa4b03478412a8fd57f5219a4c0a9efd5034',
+  'onClose/48e967aa6633e392b02598e5a9c32b16624e7f1afb33fb5effa8e6256a133bc6',
+  'onClose/68bd6e3b4cbf85dbdd0992f9434a1a1a851352a678fedc16f0a92e9bd02d4b77',
+  'onClose/a1d51e93091f2f72be4b109b2bf978e79cae392d27234a97e1108816a46c3428',
+  'onExplore/c465a55708205fb80644de860c9943288f899e3ceed23a442744172a0fdb838f',
+  'onOpen/4b3e76ba12a91c7a45ae6b7e2e9dfb7ab63f951831d4d099633f0bad2245a109',
+  'onShow/66f71e9d14b988b74272c012ac3850a7e4ae6d08570863ec15a9f8a60f354aa8',
+  'onShow/83affed5814e29a1b3d1a2efa2b55e9c9b4115d298a85ba5f938ce5441c5504b',
+  // Motor, arterial and venous panels retain the existing guarded selection.
+  ...Array(3).fill(
+    'onSelect/610c7aa707c1e7792cda3854a7ec79d0a63ef3319881a1625f5f6eae7a2cf70d',
+  ),
+  'onValueChange/47c85b1c47a0ca99aa3cbfb9b61caa74d53dcf5c945ab3c7a766cac596813974',
 );
 same(
   bindings(source).callbacks,
   migratedCallbacks.sort(compare),
   'Retained callbacks and explicit navigation/explosion bindings',
 );
+// Execute the actual migrated slider callback, rather than only approving its
+// hash. Both primitive value forms must yield a finite scalar separation.
+const explorerAst = ts.createSourceFile(
+  'body.tsx',
+  source,
+  ts.ScriptTarget.Latest,
+  true,
+  ts.ScriptKind.TSX,
+);
+const explodeCallbacks = [];
+function findExplodeCallback(node) {
+  if (
+    ts.isJsxAttribute(node) &&
+    node.name.text === 'onValueChange' &&
+    ts.isJsxExpression(node.initializer) &&
+    node.initializer.expression &&
+    node.initializer.expression.getText(explorerAst).includes('setExplode')
+  )
+    explodeCallbacks.push(node.initializer.expression.getText(explorerAst));
+  ts.forEachChild(node, findExplodeCallback);
+}
+findExplodeCallback(explorerAst);
+same(explodeCallbacks.length, 1);
+for (const value of [0, 50, 100, [0], [50], [100]]) {
+  const emitted = [];
+  runInNewContext(`(${explodeCallbacks[0]})(value)`, {
+    value,
+    setExplode: (next) => emitted.push(next),
+  });
+  same(emitted, [Array.isArray(value) ? value[0] : value]);
+}
 const raw = await fs.readFile(
     'public/models/bodyparts3d/full-body/catalog.json',
   ),
@@ -197,7 +267,9 @@ const compiled = await build({
       name: 'loaded-explorer-fixture',
       setup(b) {
         b.onLoad({ filter: /body-explorer\.tsx$/ }, () => ({
-          contents: source
+          contents: (
+            source + '\nexport { bodyDisplayCatalog as __testDisplayCatalog };'
+          )
             .replace(
               'useState<BodyCatalog | null>(null)',
               'useState<BodyCatalog | null>(globalThis.__atlasCatalog)',
@@ -252,15 +324,27 @@ const context = {
           : require(id),
 };
 runInNewContext(compiled.outputFiles[0].text, context);
+// Use the same admitted source catalogue as the running app. The archival root
+// catalogue and its geometry hashes remain pinned separately above.
+const displayCatalog = vmModule.exports.__testDisplayCatalog(catalog);
+context.__atlasCatalog = displayCatalog;
+const originalIds = new Set(catalog.structures.map((s) => s.id));
+let supplementalSelectionCases = 0;
 let markupCases = 0;
 for (const mode of ['explore', 'dissect', 'practice'])
   for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
     context.__atlasMode = mode;
-    const items = catalog.structures.filter(
+    const items = displayCatalog.structures.filter(
       (s) => region === 'whole-body' || s.regions.includes(region),
     );
-    for (const selected of [null, items[0].id]) {
+    const supplement = items.find((s) => !originalIds.has(s.id));
+    for (const selected of [
+      null,
+      items[0].id,
+      ...(supplement ? [supplement.id] : []),
+    ]) {
       context.__atlasSelected = selected;
+      if (selected === supplement?.id) supplementalSelectionCases++;
       const html = renderToStaticMarkup(
         React.createElement(vmModule.exports.default, {
           initialRegion: region,
@@ -322,7 +406,9 @@ for (const mode of ['explore', 'dissect', 'practice'])
       check(!info.includes('body-summary-grid'));
       if (selected) {
         check(
-          info.includes(renderToStaticMarkup(items[0].name)),
+          info.includes(
+            renderToStaticMarkup(items.find((s) => s.id === selected).name),
+          ),
           region + ' selection rendered',
         );
         check(
@@ -610,6 +696,9 @@ const result = {
   passed: true,
   checks,
   markupCases,
+  supplementalSelectionCases,
+  displayStructures: displayCatalog.structures.length,
+  archivalStructures: catalog.structures.length,
   nestedLauncherMarkupCases,
   panelCases,
   stylesheetViewportCases: dimensions.length,
@@ -622,7 +711,15 @@ const result = {
   explicitReasoningHandlerMigrations: 3,
   explicitReasoningSelectorMigration: 1,
   explicitExplosionHandlerMigration: 1,
-  preservedControlCallbacks: baseline.callbacks.length - 7,
+  explicitSourceStudyHandlerMigrations: 3,
+  addedRelationshipHandlers: 3,
+  explicitQuizLoadingGuardMigration: 1,
+  addedIndependentSpecimenCallbacks: 8,
+  addedRelationshipCallbacks: 6,
+  addedComponentImagingCallback: 1,
+  explicitSliderValueMigration: 1,
+  actualSliderValueCases: 6,
+  preservedControlCallbacks: baseline.callbacks.length - 8,
   addedEyeLayerCallbacks: 2,
   addedVentricularCallbacks: 2,
   addedNestedSearchCallback: 1,

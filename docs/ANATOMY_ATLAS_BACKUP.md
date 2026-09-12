@@ -1,5 +1,17 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 12 September 2026 — model-first navigation regression repaired (current source)
+
+Source `1a663550ca914a1951cbcb4373a9c1f35d0e47ec`, tree `d0c94cde82dcda0d5c614d033c39e47c7bab5e88`, parent `b35a407bf7614738c41161f8f25bb4249ea10d59`. Three exact source paths mirrored; earlier anatomy and content remain. This is a regression-test repair, not a new anatomy release or clinical sign-off. No application code, model, dependency, access policy, hosting manifest or migration changed.
+
+The old model-first failure was stale explicit-handler expectations. Original baseline and raw geometry hashes remain pinned. Documented migrations now account for source-ready Study/Stage/Related actions, muscle/arterial/venous relationships, quiz loading protection, four independent specimen viewer pairs, component-imaging launch and scalar/array slider values. Loaded explorer fixtures now execute the actual display-catalogue admission pipeline (1,078 current selections versus 1,022 archival records), with representative supplemental selections.
+
+Passed: model-first 3,656 checks, 105 actual explorer server renders (33 supplemental selection cases), 12 nested-launcher renders, four responsive panel cases, seven bounded CSS viewport cases and six actual slider callbacks. Independent study-transition, lower-limb motor/arterial, systemic venous and renderer-recovery suites execute the migrated parent handlers. TypeScript and production build passed. All 124 GLBs / 1,351 meshes / 4,053 buffer views decode unchanged; renderer fingerprint remains `b56120ff34a1d4caa954f433f4b8d0c35029f5f2840fe26f4e89cd885b7d9970`. No browser/GPU/touch/focus/pixel or clinical acceptance is claimed.
+
+D: stem `atlas-navigation-audit-2026-09-12`: runtime 120,333,061 bytes / SHA256 `08b4a76c4355a70af152291150c4f27807aa7793faf396109a0e7c55fd428750`; delta 40,960 bytes / `194289c90a5938b8a7d7dad38bb4a8212ebb67782328e8a746675b6ab41ab113`; incremental bundle 5,069 bytes / `e166ff1a8875e4c5fd5aad15db36970e33099b4dd6f4c31dae32822effc3e79a`. Independent restore/full fsck confirms exact source/tree under `refs/verification/navigation-audit-20260912`, preserving verifier main. Runtime archive has 434 safe entries, exact manifest and two unchanged migrations. All earlier backups retained.
+
+Sites source push succeeded. Archive upload failed after 60,004 ms; request `6105bb53-377b-45e1-90ac-68d202541ddf`. No publication success is claimed. Owner-only access was verified unchanged. GitHub backup is separate from the website main branch, which remains unchanged. Source/runtime backups exclude conversation history, production database/review decisions/accounts, patient scans and separate lectures. Goal remains active; next substantive regional anatomy/teaching work can proceed independently of the upload issue.
+
 ## 12 September 2026 — deep-brain septal landmarks (current source)
 
 Source `b35a407bf7614738c41161f8f25bb4249ea10d59`, tree `1874696e0a5f8b897573c527f323e0433205123b`, parent `59341397183a650f45ae9c4557ab9814aa3dd399`. Forty-six exact source paths mirrored; all prior work remains. Raw catalogue, earlier recipe history, lockfile, hosting config and SQL migrations unchanged.
