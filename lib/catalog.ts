@@ -27,6 +27,13 @@ export type Course = {
 
 export const atlasModules: AtlasModule[] = [
   {
+    slug:'female-pelvis-3d', title:'Female pelvis 3D anatomy', region:'Pelvis',
+    modality:'3D', orientation:'Rotatable',
+    description:'Explore 41 source surfaces in eight pelvic study views, with dissection and draft teaching. Separate reference; clinical review pending.',
+    structures:41, images:0, status:'available',
+    systems:['Organs','Support surfaces','Vessels','Bone context'], reviewed:'Private integration pilot · Review pending',
+  },
+  {
     slug: 'shoulder-3d', title: 'Shoulder 3D anatomy', region: 'Upper limb',
     modality: '3D', orientation: 'Rotatable',
     description: 'Explore, dissect and practise with the source-based right shoulder. Private pilot; clinical review pending.',

@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "76dec1969b4952a7009e232599172f3145dc3096",
+  "region": "independent-female-pelvis",
+  "structures": 41,
+  "studies": 8,
+  "draftTeachingSelections": 31,
+  "patientDataIncluded": false,
+  "clinicalApproved": false,
+  "standaloneReviewConnection": false,
+  "imagingConnection": false,
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 486,
+      "sha256": "a627a9c0e66884649680b1818b345b6bae0e5a105a89533465096071c38cacbc"
+    },
+    {
+      "path": "BUNDLED_NOTICES.txt",
+      "bytes": 35742,
+      "sha256": "260b66752938347bbc129af4e6ffc4e42fdcd55315327bbca4cdce5e94687db8"
+    },
+    {
+      "path": "bundled-dependencies.json",
+      "bytes": 1778,
+      "sha256": "029de5bbef94680bda7d80568b6948065b3946c17cbd6ce0b3b16fc4627a777d"
+    },
+    {
+      "path": "source-inputs.json",
+      "bytes": 11323,
+      "sha256": "5a96cf3b82beb46e9ea65476e6db893284b22154194483849046b0df05298af0"
+    },
+    {
+      "path": "assets/index-Cp1_YWrR.js",
+      "bytes": 2091672,
+      "sha256": "3454552d8fc7c5cbcc66972df56f7a4a1afd703d0e512b9f340d68e3fd58e208"
+    },
+    {
+      "path": "assets/index-Cp3GMBhB.css",
+      "bytes": 231756,
+      "sha256": "e66b80ad59a1506baf8180df6d8980fa310a14ec3ba8a1c75a740a427396ff67"
+    },
+    {
+      "path": "models/hra-pelvis/pelvis.glb",
+      "bytes": 3796080,
+      "sha256": "f18f1f0e3c6e8c0562b6b66864a8d786ffdb9e6a688da9288550fad6e491b866"
+    },
+    {
+      "path": "models/hra-pelvis/catalog.json",
+      "bytes": 65210,
+      "sha256": "a0e997a2eb4af64d25bf5f6f9901ea70616fb59443696f7630e0aea6bd53c619"
+    },
+    {
+      "path": "models/hra-pelvis/NOTICE.md",
+      "bytes": 3098,
+      "sha256": "898505e9c8837bd74e9f2535726676e13e9020e593ef15943b61a7845ff1c927"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1467,
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+    },
+    {
+      "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 129074,
+      "sha256": "e46f461ee36c557ee799dde952f0af8761fbe0f10581c9c0e9009b4eb6466b76"
+    },
+    {
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    }
+  ]
+}

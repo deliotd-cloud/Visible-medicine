@@ -27,7 +27,7 @@ export default async function AtlasCatalogue({ searchParams }: { searchParams: P
               <span>{module.modality} · {module.orientation}</span><h2>{module.title}</h2><p>{module.description}</p>
               <div>{module.systems.map((system) => <small key={system}>{system}</small>)}</div>
             </div>
-              <div className="catalogue-meta"><span className={`module-status ${module.status}`}>{module.slug === 'shoulder-3d' ? 'Private 3D pilot' : module.status === "available" ? "Available preview" : "Planned"}</span><span>{module.structures} structures</span><span>{module.modality === '3D' ? 'Interactive dissection' : `${module.images} images`}</span><b>{module.status === "available" ? "Open module ↗" : "View roadmap ↗"}</b></div>
+              <div className="catalogue-meta"><span className={`module-status ${module.status}`}>{module.modality === '3D' && module.status === 'available' ? 'Private 3D pilot' : module.status === "available" ? "Available preview" : "Planned"}</span><span>{module.structures} structures</span><span>{module.modality === '3D' ? 'Interactive dissection' : `${module.images} images`}</span><b>{module.status === "available" ? "Open module ↗" : "View roadmap ↗"}</b></div>
           </a>
         ))}
       </section>

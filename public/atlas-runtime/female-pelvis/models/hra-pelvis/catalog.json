@@ -1,0 +1,2068 @@
+{
+  "version": 1,
+  "specimenId": "hra-united-female-v1.10-pelvis",
+  "source": {
+    "version": "v1.10",
+    "key": "hra-united-female-v1.10-pelvis",
+    "url": "https://cdn.humanatlas.io/digital-objects/ref-organ/united-female/v1.10/assets/3d-vh-f-united.glb",
+    "metadataUrl": "https://cdn.humanatlas.io/digital-objects/ref-organ/united-female/v1.10/metadata.json",
+    "crosswalkUrl": "https://cdn.humanatlas.io/digital-objects/ref-organ/united-female/v1.10/assets/crosswalk.csv",
+    "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422",
+    "bytes": 374505632,
+    "metadataSha256": "b9f137b1176c31419c68b78ac87f0926f874dad22f56d4dde7df3e2f15bab501",
+    "crosswalkSha256": "2a367d3ad8c1cf1b083c884aed7d99fb3b504d482e1e49570ecdb4f03c84d55f",
+    "credit": "Kristen Browne and Heidi Schlehlein. 3D Reference Organ Set for Female, v1.10. HuBMAP, 2026. Based on the NLM Visible Human Dataset.",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "sourceSubsetSha256": "2cb1eefede00b05a1ee593fb098082c30b034d0a43c2afd64b637f9ee26673aa",
+  "displayTransformColumnMajor": [
+    0.01,
+    0,
+    0,
+    0,
+    0,
+    0,
+    -0.01,
+    0,
+    0,
+    0.01,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+  ],
+  "sourceFrame": "hra-united-female-v1.10:lps-mm",
+  "coordinateNote": "Original GLB metres: x left, y superior, z anterior, established from concordant paired structures and bladder/rectum/sacrum. LPS mm = (1000*x,-1000*z,1000*y). Display=(10*x,10*y,10*z). Separate reference, no registration.",
+  "structures": [
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:vagina",
+      "slug": "vagina",
+      "name": "Vagina",
+      "sourceName": "VH_F_vagina",
+      "sourceOntologyId": "UBERON:0000996",
+      "fmaId": null,
+      "tissue": "organ",
+      "laterality": "midline",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_vagina",
+      "bounds": {
+        "min": [
+          -0.3450908660888672,
+          -0.520870566368103,
+          -0.8285281658172607
+        ],
+        "max": [
+          0.10017967224121094,
+          0.06452032923698425,
+          -0.5912922024726868
+        ]
+      },
+      "center": [
+        -0.12245559692382812,
+        -0.2281751185655594,
+        -0.7099101841449738
+      ],
+      "anchor": [
+        -0.11790259182453156,
+        -0.23005561530590057,
+        -0.6877139806747437
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_vagina",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 8780,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#b77980"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:cervicovaginal-junction",
+      "slug": "cervicovaginal-junction",
+      "name": "Cervicovaginal junction (source surface)",
+      "sourceName": "VH_F_cervicovaginal_junction",
+      "sourceOntologyId": "-",
+      "fmaId": null,
+      "tissue": "organ",
+      "laterality": "midline",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_cervicovaginal_junction",
+      "bounds": {
+        "min": [
+          -0.31439855694770813,
+          0.024023674428462982,
+          -0.9038802981376648
+        ],
+        "max": [
+          0.06820926070213318,
+          0.25683078169822693,
+          -0.6505817174911499
+        ]
+      },
+      "center": [
+        -0.12309464812278748,
+        0.14042722806334496,
+        -0.7772310078144073
+      ],
+      "anchor": [
+        -0.12954120337963104,
+        0.11193728446960449,
+        -0.8110183477401733
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_cervicovaginal_junction",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 3766,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#b77980"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:ampulla-of-uterine-tube-r",
+      "slug": "ampulla-of-uterine-tube-r",
+      "name": "Ampulla of right uterine tube",
+      "sourceName": "VH_F_ampulla_of_uterine_tube_R",
+      "sourceOntologyId": "FMA:18491",
+      "fmaId": "FMA18491",
+      "tissue": "organ",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_ampulla_of_uterine_tube_R",
+      "bounds": {
+        "min": [
+          -0.7373371124267578,
+          0.4275056719779968,
+          -0.5196964144706726
+        ],
+        "max": [
+          -0.47226542234420776,
+          0.8449626564979553,
+          -0.3710786700248718
+        ]
+      },
+      "center": [
+        -0.6048012673854828,
+        0.6362341642379761,
+        -0.4453875422477722
+      ],
+      "anchor": [
+        -0.6822040677070618,
+        0.6158488988876343,
+        -0.3872857987880707
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_ampulla_of_uterine_tube_R",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 10440,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#b77980"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:isthmus-of-fallopian-tube-r",
+      "slug": "isthmus-of-fallopian-tube-r",
+      "name": "Isthmus of right uterine tube",
+      "sourceName": "VH_F_isthmus_of_fallopian_tube_R",
+      "sourceOntologyId": "FMA:18493",
+      "fmaId": "FMA18493",
+      "tissue": "organ",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_isthmus_of_fallopian_tube_R",
+      "bounds": {
+        "min": [
+          -0.478468120098114,
+          0.39892786741256714,
+          -0.42316895723342896
+        ],
+        "max": [
+          -0.3932168781757355,
+          0.4442785382270813,
+          -0.3857158422470093
+        ]
+      },
+      "center": [
+        -0.43584249913692474,
+        0.4216032028198242,
+        -0.4044423997402191
+      ],
+      "anchor": [
+        -0.43714237213134766,
+        0.4204791784286499,
+        -0.406411737203598
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_isthmus_of_fallopian_tube_R",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1600,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#b77980"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:fibria-of-uterine-tube-r",
+      "slug": "fibria-of-uterine-tube-r",
+      "name": "Fimbria of right uterine tube",
+      "sourceName": "VH_F_fibria_of_uterine_tube_R",
+      "sourceOntologyId": "FMA:18497",
+      "fmaId": "FMA18497",
+      "tissue": "organ",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_fibria_of_uterine_tube_R",
+      "bounds": {
+        "min": [
+          -0.7175300121307373,
+          0.7094886898994446,
+          -0.57501220703125
+        ],
+        "max": [
+          -0.6473498940467834,
+          0.753421425819397,
+          -0.5171554684638977
+        ]
+      },
+      "center": [
+        -0.6824399530887604,
+        0.7314550578594208,
+        -0.5460838377475739
+      ],
+      "anchor": [
+        -0.6876068115234375,
+        0.7238841652870178,
+        -0.5642802715301514
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_fibria_of_uterine_tube_R",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 3530,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#b77980"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:uterine-tube-infundibulum-r",
+      "slug": "uterine-tube-infundibulum-r",
+      "name": "Infundibulum of right uterine tube",
+      "sourceName": "VH_F_uterine_tube_infundibulum_R",
+      "sourceOntologyId": "FMA:18489",
+      "fmaId": "FMA18489",
+      "tissue": "organ",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_uterine_tube_infundibulum_R",
+      "bounds": {
+        "min": [
+          -0.7247859835624695,
+          0.7342655062675476,
+          -0.5797961950302124
+        ],
+        "max": [
+          -0.6489914059638977,
+          0.8441268801689148,
+          -0.5086631774902344
+        ]
+      },
+      "center": [
+        -0.6868886947631836,
+        0.7891961932182312,
+        -0.5442296862602234
+      ],
+      "anchor": [
+        -0.684196412563324,
+        0.7900367975234985,
+        -0.5342167019844055
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_uterine_tube_infundibulum_R",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 2200,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#b77980"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:uterine-tube-infundibulum-l",
+      "slug": "uterine-tube-infundibulum-l",
+      "name": "Infundibulum of left uterine tube",
+      "sourceName": "VH_F_uterine_tube_infundibulum_L",
+      "sourceOntologyId": "FMA:18490",
+      "fmaId": "FMA18490",
+      "tissue": "organ",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_uterine_tube_infundibulum_L",
+      "bounds": {
+        "min": [
+          0.3647768199443817,
+          0.7414260506629944,
+          -0.5167331695556641
+        ],
+        "max": [
+          0.44939690828323364,
+          0.8518481850624084,
+          -0.44074171781539917
+        ]
+      },
+      "center": [
+        0.4070868641138077,
+        0.7966371178627014,
+        -0.4787374436855316
+      ],
+      "anchor": [
+        0.41177138686180115,
+        0.7943446636199951,
+        -0.4758792817592621
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_uterine_tube_infundibulum_L",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 2116,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#b77980"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:fibria-of-uterine-tube-l",
+      "slug": "fibria-of-uterine-tube-l",
+      "name": "Fimbria of left uterine tube",
+      "sourceName": "VH_F_fibria_of_uterine_tube_L",
+      "sourceOntologyId": "FMA:18498",
+      "fmaId": "FMA18498",
+      "tissue": "organ",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_fibria_of_uterine_tube_L",
+      "bounds": {
+        "min": [
+          0.3546544909477234,
+          0.7100818157196045,
+          -0.5203391909599304
+        ],
+        "max": [
+          0.4285121560096741,
+          0.762086033821106,
+          -0.4378688633441925
+        ]
+      },
+      "center": [
+        0.39158332347869873,
+        0.7360839247703552,
+        -0.47910402715206146
+      ],
+      "anchor": [
+        0.374259352684021,
+        0.7370689511299133,
+        -0.4930049777030945
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_fibria_of_uterine_tube_L",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 2871,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#b77980"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:isthmus-of-fallopian-tube-l",
+      "slug": "isthmus-of-fallopian-tube-l",
+      "name": "Isthmus of left uterine tube",
+      "sourceName": "VH_F_isthmus_of_fallopian_tube_L",
+      "sourceOntologyId": "FMA:18494",
+      "fmaId": "FMA18494",
+      "tissue": "organ",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_isthmus_of_fallopian_tube_L",
+      "bounds": {
+        "min": [
+          0.12065276503562927,
+          0.4088735580444336,
+          -0.41781461238861084
+        ],
+        "max": [
+          0.22179105877876282,
+          0.4516258239746094,
+          -0.3785453736782074
+        ]
+      },
+      "center": [
+        0.17122191190719604,
+        0.4302496910095215,
+        -0.3981799930334091
+      ],
+      "anchor": [
+        0.1726953536272049,
+        0.42833462357521057,
+        -0.399990439414978
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_isthmus_of_fallopian_tube_L",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1870,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#b77980"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:ampulla-of-uterine-tube-l",
+      "slug": "ampulla-of-uterine-tube-l",
+      "name": "Ampulla of left uterine tube",
+      "sourceName": "VH_F_ampulla_of_uterine_tube_L",
+      "sourceOntologyId": "FMA:18492",
+      "fmaId": "FMA18492",
+      "tissue": "organ",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_ampulla_of_uterine_tube_L",
+      "bounds": {
+        "min": [
+          0.2176433503627777,
+          0.42843055725097656,
+          -0.48626405000686646
+        ],
+        "max": [
+          0.5068828463554382,
+          0.8535903692245483,
+          -0.33484190702438354
+        ]
+      },
+      "center": [
+        0.36226309835910797,
+        0.6410104632377625,
+        -0.410552978515625
+      ],
+      "anchor": [
+        0.45470887422561646,
+        0.6056315898895264,
+        -0.35801124572753906
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_ampulla_of_uterine_tube_L",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 11424,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#b77980"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:uterovesical-pouch",
+      "slug": "uterovesical-pouch",
+      "name": "Uterovesical pouch",
+      "sourceName": "VH_F_uterovesical_pouch",
+      "sourceOntologyId": "FMA:14729",
+      "fmaId": "FMA14729",
+      "tissue": "ligament",
+      "laterality": "midline",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_uterovesical_pouch",
+      "bounds": {
+        "min": [
+          -0.39972054958343506,
+          0.1317131072282791,
+          -0.6207088232040405
+        ],
+        "max": [
+          0.11801938712596893,
+          0.4084102511405945,
+          0.019966887310147285
+        ]
+      },
+      "center": [
+        -0.14085058122873306,
+        0.2700616791844368,
+        -0.3003709679469466
+      ],
+      "anchor": [
+        -0.14325113594532013,
+        0.24488238990306854,
+        -0.29421213269233704
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_uterovesical_pouch",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 25352,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#c5b68f"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:right-uterosacral-ligament",
+      "slug": "right-uterosacral-ligament",
+      "name": "Right uterosacral ligament",
+      "sourceName": "VH_F_right_uterosacral_ligament",
+      "sourceOntologyId": "FMA:19119",
+      "fmaId": "FMA19119",
+      "tissue": "ligament",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_right_uterosacral_ligament",
+      "bounds": {
+        "min": [
+          -0.3552013337612152,
+          0.20480376482009888,
+          -1.5976135730743408
+        ],
+        "max": [
+          -0.2166406661272049,
+          0.7569011449813843,
+          -0.8014183044433594
+        ]
+      },
+      "center": [
+        -0.28592099994421005,
+        0.4808524549007416,
+        -1.19951593875885
+      ],
+      "anchor": [
+        -0.2987787127494812,
+        0.47180309891700745,
+        -1.215327501296997
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_right_uterosacral_ligament",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1990,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#c5b68f"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:left-uterosacral-ligament",
+      "slug": "left-uterosacral-ligament",
+      "name": "Left uterosacral ligament",
+      "sourceName": "VH_F_left_uterosacral_ligament",
+      "sourceOntologyId": "FMA:19120",
+      "fmaId": "FMA19120",
+      "tissue": "ligament",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_left_uterosacral_ligament",
+      "bounds": {
+        "min": [
+          0.004869365599006414,
+          0.21851053833961487,
+          -1.6064680814743042
+        ],
+        "max": [
+          0.06852531433105469,
+          0.7376773357391357,
+          -0.7845687866210938
+        ]
+      },
+      "center": [
+        0.03669733996503055,
+        0.4780939370393753,
+        -1.195518434047699
+      ],
+      "anchor": [
+        0.06165914237499237,
+        0.47285306453704834,
+        -1.2042999267578125
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_left_uterosacral_ligament",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1948,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#c5b68f"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:right-cardinal-ligament-of-uterus",
+      "slug": "right-cardinal-ligament-of-uterus",
+      "name": "Right cardinal ligament (source region)",
+      "sourceName": "VH_F_right_cardinal_ligament_of_uterus",
+      "sourceOntologyId": "FMA:77064",
+      "fmaId": "FMA77064",
+      "tissue": "ligament",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_right_cardinal_ligament_of_uterus",
+      "bounds": {
+        "min": [
+          -0.8383976221084595,
+          0.18223389983177185,
+          -1.1542129516601562
+        ],
+        "max": [
+          -0.17134009301662445,
+          0.43601128458976746,
+          -0.6206660866737366
+        ]
+      },
+      "center": [
+        -0.504868857562542,
+        0.30912259221076965,
+        -0.8874395191669464
+      ],
+      "anchor": [
+        -0.5139995217323303,
+        0.2177823930978775,
+        -0.8634567260742188
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_right_cardinal_ligament_of_uterus",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 4056,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#c5b68f"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:left-cardinal-ligament-of-uterus",
+      "slug": "left-cardinal-ligament-of-uterus",
+      "name": "Left cardinal ligament (source region)",
+      "sourceName": "VH_F_left_cardinal_ligament_of_uterus",
+      "sourceOntologyId": "FMA:77064",
+      "fmaId": "FMA77064",
+      "tissue": "ligament",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_left_cardinal_ligament_of_uterus",
+      "bounds": {
+        "min": [
+          -0.07059134542942047,
+          0.2012903243303299,
+          -1.1005042791366577
+        ],
+        "max": [
+          0.5543590188026428,
+          0.3888399004936218,
+          -0.5942813754081726
+        ]
+      },
+      "center": [
+        0.24188383668661118,
+        0.29506511241197586,
+        -0.8473928272724152
+      ],
+      "anchor": [
+        0.24495849013328552,
+        0.2175297737121582,
+        -0.8630302548408508
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_left_cardinal_ligament_of_uterus",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 4056,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#c5b68f"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:suspensory-ligament-of-ovary-r",
+      "slug": "suspensory-ligament-of-ovary-r",
+      "name": "Suspensory ligament of right ovary",
+      "sourceName": "VH_F_suspensory_ligament_of_ovary_R",
+      "sourceOntologyId": "FMA:19823",
+      "fmaId": "FMA19823",
+      "tissue": "ligament",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_suspensory_ligament_of_ovary_R",
+      "bounds": {
+        "min": [
+          -0.7911372780799866,
+          0.7114498615264893,
+          -0.609061062335968
+        ],
+        "max": [
+          -0.7118732333183289,
+          1.0195633172988892,
+          -0.47366446256637573
+        ]
+      },
+      "center": [
+        -0.7515052556991577,
+        0.8655065894126892,
+        -0.5413627624511719
+      ],
+      "anchor": [
+        -0.7447128295898438,
+        0.8710055947303772,
+        -0.5452659130096436
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_suspensory_ligament_of_ovary_R",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 880,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#c5b68f"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:suspensory-ligament-of-ovary-l",
+      "slug": "suspensory-ligament-of-ovary-l",
+      "name": "Suspensory ligament of left ovary",
+      "sourceName": "VH_F_suspensory_ligament_of_ovary_L",
+      "sourceOntologyId": "FMA:19824",
+      "fmaId": "FMA19824",
+      "tissue": "ligament",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_suspensory_ligament_of_ovary_L",
+      "bounds": {
+        "min": [
+          0.3715612292289734,
+          0.7105449438095093,
+          -0.6895274519920349
+        ],
+        "max": [
+          0.4798019230365753,
+          1.0695114135742188,
+          -0.4798087775707245
+        ]
+      },
+      "center": [
+        0.42568157613277435,
+        0.890028178691864,
+        -0.5846681147813797
+      ],
+      "anchor": [
+        0.427481085062027,
+        0.8851429224014282,
+        -0.5953941345214844
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_suspensory_ligament_of_ovary_L",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1270,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#c5b68f"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:ovarian-ligament-l",
+      "slug": "ovarian-ligament-l",
+      "name": "Left ovarian ligament",
+      "sourceName": "VH_F_ovarian_ligament_L",
+      "sourceOntologyId": "FMA:55424",
+      "fmaId": "FMA55424",
+      "tissue": "ligament",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_ovarian_ligament_L",
+      "bounds": {
+        "min": [
+          0.07376641780138016,
+          0.38403359055519104,
+          -0.44658926129341125
+        ],
+        "max": [
+          0.39880600571632385,
+          0.49869728088378906,
+          -0.4112869203090668
+        ]
+      },
+      "center": [
+        0.236286211758852,
+        0.44136543571949005,
+        -0.428938090801239
+      ],
+      "anchor": [
+        0.2331506609916687,
+        0.40593183040618896,
+        -0.4361385107040405
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_ovarian_ligament_L",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 208,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#c5b68f"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:ovarian-ligament-r",
+      "slug": "ovarian-ligament-r",
+      "name": "Right ovarian ligament",
+      "sourceName": "VH_F_ovarian_ligament_R",
+      "sourceOntologyId": "FMA:55423",
+      "fmaId": "FMA55423",
+      "tissue": "ligament",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_ovarian_ligament_R",
+      "bounds": {
+        "min": [
+          -0.6607211828231812,
+          0.37668418884277344,
+          -0.4657043516635895
+        ],
+        "max": [
+          -0.32768458127975464,
+          0.5103855133056641,
+          -0.42424315214157104
+        ]
+      },
+      "center": [
+        -0.4942028820514679,
+        0.44353485107421875,
+        -0.44497375190258026
+      ],
+      "anchor": [
+        -0.4985944628715515,
+        0.41131532192230225,
+        -0.4380817413330078
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_ovarian_ligament_R",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 198,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#c5b68f"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:broad-ligament",
+      "slug": "broad-ligament",
+      "name": "Broad ligament of uterus",
+      "sourceName": "VH_F_broad_ligament",
+      "sourceOntologyId": "UBERON:0012332",
+      "fmaId": null,
+      "tissue": "ligament",
+      "laterality": "midline",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_broad_ligament",
+      "bounds": {
+        "min": [
+          -0.839242696762085,
+          0.17328329384326935,
+          -1.346714735031128
+        ],
+        "max": [
+          0.5566489100456238,
+          0.7993016242980957,
+          -0.08539517223834991
+        ]
+      },
+      "center": [
+        -0.1412968933582306,
+        0.4862924590706825,
+        -0.7160549536347389
+      ],
+      "anchor": [
+        -0.13625949621200562,
+        0.3902552127838135,
+        -0.6678459048271179
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_broad_ligament",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 29442,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#c5b68f"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:mesosalpinx-l",
+      "slug": "mesosalpinx-l",
+      "name": "Left mesosalpinx",
+      "sourceName": "VH_F_mesosalpinx_L",
+      "sourceOntologyId": "FMA:19810",
+      "fmaId": "FMA19810",
+      "tissue": "ligament",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_mesosalpinx_L",
+      "bounds": {
+        "min": [
+          0.09669360518455505,
+          0.3384265601634979,
+          -0.48081472516059875
+        ],
+        "max": [
+          0.5431647896766663,
+          0.8475642800331116,
+          -0.315800279378891
+        ]
+      },
+      "center": [
+        0.31992919743061066,
+        0.5929954200983047,
+        -0.3983075022697449
+      ],
+      "anchor": [
+        0.3660968542098999,
+        0.5308032631874084,
+        -0.36408329010009766
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_mesosalpinx_L",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1914,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#c5b68f"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:mesosalpinx-r",
+      "slug": "mesosalpinx-r",
+      "name": "Right mesosalpinx",
+      "sourceName": "VH_F_mesosalpinx_R",
+      "sourceOntologyId": "FMA:19809",
+      "fmaId": "FMA19809",
+      "tissue": "ligament",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_mesosalpinx_R",
+      "bounds": {
+        "min": [
+          -0.7894015908241272,
+          0.3604028820991516,
+          -0.5221744179725647
+        ],
+        "max": [
+          -0.3250095248222351,
+          0.8461860418319702,
+          -0.33698347210884094
+        ]
+      },
+      "center": [
+        -0.5572055578231812,
+        0.6032944619655609,
+        -0.4295789450407028
+      ],
+      "anchor": [
+        -0.6087791323661804,
+        0.5282821655273438,
+        -0.38798120617866516
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_mesosalpinx_R",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1755,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#c5b68f"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:mesovarium-r",
+      "slug": "mesovarium-r",
+      "name": "Right mesovarium",
+      "sourceName": "VH_F_mesovarium_R",
+      "sourceOntologyId": "FMA:19817",
+      "fmaId": "FMA19817",
+      "tissue": "ligament",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_mesovarium_R",
+      "bounds": {
+        "min": [
+          -0.7879699468612671,
+          0.48612403869628906,
+          -0.4549907445907593
+        ],
+        "max": [
+          -0.6649070382118225,
+          0.6972339749336243,
+          -0.40101736783981323
+        ]
+      },
+      "center": [
+        -0.7264384925365448,
+        0.5916790068149567,
+        -0.42800405621528625
+      ],
+      "anchor": [
+        -0.7416805028915405,
+        0.5872360467910767,
+        -0.4202502965927124
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_mesovarium_R",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 183,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#c5b68f"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:mesovarium-l",
+      "slug": "mesovarium-l",
+      "name": "Left mesovarium",
+      "sourceName": "VH_F_mesovarium_L",
+      "sourceOntologyId": "FMA:19818",
+      "fmaId": "FMA19818",
+      "tissue": "ligament",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_mesovarium_L",
+      "bounds": {
+        "min": [
+          0.36023616790771484,
+          0.47847479581832886,
+          -0.488338828086853
+        ],
+        "max": [
+          0.5356364846229553,
+          0.7330405712127686,
+          -0.3895549774169922
+        ]
+      },
+      "center": [
+        0.4479363262653351,
+        0.6057576835155487,
+        -0.4389469027519226
+      ],
+      "anchor": [
+        0.4928050935268402,
+        0.5928932428359985,
+        -0.4319431185722351
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_mesovarium_L",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 644,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#c5b68f"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:left-ovary",
+      "slug": "left-ovary",
+      "name": "Left ovary",
+      "sourceName": "VH_F_left_ovary",
+      "sourceOntologyId": "FMA:7214",
+      "fmaId": "FMA7214",
+      "tissue": "organ",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_left_ovary",
+      "bounds": {
+        "min": [
+          0.38216304779052734,
+          0.48976781964302063,
+          -0.5073692202568054
+        ],
+        "max": [
+          0.5049369931221008,
+          0.7292377352714539,
+          -0.40202751755714417
+        ]
+      },
+      "center": [
+        0.4435500204563141,
+        0.6095027774572372,
+        -0.4546983689069748
+      ],
+      "anchor": [
+        0.42503583431243896,
+        0.6301352977752686,
+        -0.4420875310897827
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_left_ovary",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 424,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#c597a9"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:right-ovary",
+      "slug": "right-ovary",
+      "name": "Right ovary",
+      "sourceName": "VH_F_right_ovary",
+      "sourceOntologyId": "FMA:7213",
+      "fmaId": "FMA7213",
+      "tissue": "organ",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_right_ovary",
+      "bounds": {
+        "min": [
+          -0.7671707272529602,
+          0.4890891909599304,
+          -0.508165717124939
+        ],
+        "max": [
+          -0.6440738439559937,
+          0.7289581298828125,
+          -0.4018905460834503
+        ]
+      },
+      "center": [
+        -0.7056222856044769,
+        0.6090236604213715,
+        -0.45502813160419464
+      ],
+      "anchor": [
+        -0.6848373413085938,
+        0.6292953491210938,
+        -0.445260226726532
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_right_ovary",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 410,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#c597a9"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:body-of-uterus",
+      "slug": "body-of-uterus",
+      "name": "Body of uterus",
+      "sourceName": "VH_F_body_of_uterus",
+      "sourceOntologyId": "UBERON:0009853",
+      "fmaId": null,
+      "tissue": "organ",
+      "laterality": "midline",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_body_of_uterus",
+      "bounds": {
+        "min": [
+          -0.3418308198451996,
+          0.2146206796169281,
+          -0.6569686532020569
+        ],
+        "max": [
+          0.08935680985450745,
+          0.5152751803398132,
+          -0.3804643452167511
+        ]
+      },
+      "center": [
+        -0.12623700499534607,
+        0.36494792997837067,
+        -0.518716499209404
+      ],
+      "anchor": [
+        -0.12287287414073944,
+        0.36003437638282776,
+        -0.5114024877548218
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_body_of_uterus",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 5344,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#b77980"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:fundus-of-uterus",
+      "slug": "fundus-of-uterus",
+      "name": "Fundus of uterus",
+      "sourceName": "VH_F_fundus_of_uterus",
+      "sourceOntologyId": "FMA:17561",
+      "fmaId": "FMA17561",
+      "tissue": "organ",
+      "laterality": "midline",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_fundus_of_uterus",
+      "bounds": {
+        "min": [
+          -0.3337022662162781,
+          0.3209867477416992,
+          -0.49555206298828125
+        ],
+        "max": [
+          0.08037347346544266,
+          0.5321197509765625,
+          -0.2749662399291992
+        ]
+      },
+      "center": [
+        -0.1266643963754177,
+        0.42655324935913086,
+        -0.38525915145874023
+      ],
+      "anchor": [
+        -0.12399773299694061,
+        0.4103139638900757,
+        -0.4022350311279297
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_fundus_of_uterus",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 3062,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#b77980"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:lower-uterine-segment",
+      "slug": "lower-uterine-segment",
+      "name": "Lower uterine segment",
+      "sourceName": "VH_F_lower_uterine_segment",
+      "sourceOntologyId": "FMA:17752",
+      "fmaId": "FMA17752",
+      "tissue": "organ",
+      "laterality": "midline",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_lower_uterine_segment",
+      "bounds": {
+        "min": [
+          -0.20889349281787872,
+          0.17684918642044067,
+          -0.714337170124054
+        ],
+        "max": [
+          -0.02857823297381401,
+          0.38033902645111084,
+          -0.5686081051826477
+        ]
+      },
+      "center": [
+        -0.11873586289584637,
+        0.27859410643577576,
+        -0.6414726376533508
+      ],
+      "anchor": [
+        -0.12000226229429245,
+        0.27948683500289917,
+        -0.6412155032157898
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_lower_uterine_segment",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1408,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#b77980"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:cervix",
+      "slug": "cervix",
+      "name": "Uterine cervix",
+      "sourceName": "VH_F_cervix",
+      "sourceOntologyId": "UBERON:0000002",
+      "fmaId": null,
+      "tissue": "organ",
+      "laterality": "midline",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_cervix",
+      "bounds": {
+        "min": [
+          -0.2460305243730545,
+          0.06218845397233963,
+          -0.8619216680526733
+        ],
+        "max": [
+          0.026926230639219284,
+          0.3515302836894989,
+          -0.6190929412841797
+        ]
+      },
+      "center": [
+        -0.10955214686691761,
+        0.20685936883091927,
+        -0.7405073046684265
+      ],
+      "anchor": [
+        -0.11079442501068115,
+        0.2069474160671234,
+        -0.7376208901405334
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_cervix",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 3508,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#b77980"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:internal-cervical-os",
+      "slug": "internal-cervical-os",
+      "name": "Internal cervical os",
+      "sourceName": "VH_F_internal_cervical_os",
+      "sourceOntologyId": "UBERON:0013759",
+      "fmaId": null,
+      "tissue": "organ",
+      "laterality": "midline",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_internal_cervical_os",
+      "bounds": {
+        "min": [
+          -0.12525038421154022,
+          0.2315264642238617,
+          -0.6961787939071655
+        ],
+        "max": [
+          -0.09072573482990265,
+          0.269314169883728,
+          -0.6537212133407593
+        ]
+      },
+      "center": [
+        -0.10798805952072144,
+        0.25042031705379486,
+        -0.6749500036239624
+      ],
+      "anchor": [
+        -0.1096271425485611,
+        0.26130104064941406,
+        -0.6808966994285583
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_internal_cervical_os",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 216,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#b77980"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:external-cervical-os",
+      "slug": "external-cervical-os",
+      "name": "External cervical os",
+      "sourceName": "VH_F_external_cervical_os",
+      "sourceOntologyId": "UBERON:0013760",
+      "fmaId": null,
+      "tissue": "organ",
+      "laterality": "midline",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_external_cervical_os",
+      "bounds": {
+        "min": [
+          -0.14222288131713867,
+          0.13049067556858063,
+          -0.8413428664207458
+        ],
+        "max": [
+          -0.06857067346572876,
+          0.20107373595237732,
+          -0.7832885384559631
+        ]
+      },
+      "center": [
+        -0.10539677739143372,
+        0.16578220576047897,
+        -0.8123157024383545
+      ],
+      "anchor": [
+        -0.11487400531768799,
+        0.15618380904197693,
+        -0.8043903112411499
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_external_cervical_os",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 270,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#b77980"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:rectum",
+      "slug": "rectum",
+      "name": "Rectum",
+      "sourceName": "VH_F_rectum",
+      "sourceOntologyId": "UBERON:0001052",
+      "fmaId": null,
+      "tissue": "organ",
+      "laterality": "midline",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_rectum",
+      "bounds": {
+        "min": [
+          -0.238558828830719,
+          -0.13281551003456116,
+          -1.4650558233261108
+        ],
+        "max": [
+          0.29071611166000366,
+          0.9255766868591309,
+          -0.8313643932342529
+        ]
+      },
+      "center": [
+        0.026078641414642334,
+        0.39638058841228485,
+        -1.1482101082801819
+      ],
+      "anchor": [
+        -0.0007508814451284707,
+        0.3872910439968109,
+        -1.1508694887161255
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_rectum",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1880,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#b77980"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:fundus-of-urinary-bladder-dome",
+      "slug": "fundus-of-urinary-bladder-dome",
+      "name": "Bladder dome (source surface)",
+      "sourceName": "VH_F_fundus_of_urinary_bladder_dome",
+      "sourceOntologyId": "UBERON:0006082",
+      "fmaId": null,
+      "tissue": "organ",
+      "laterality": "midline",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_fundus_of_urinary_bladder_dome",
+      "bounds": {
+        "min": [
+          -0.4054020047187805,
+          0.07800909131765366,
+          -0.5876102447509766
+        ],
+        "max": [
+          0.11436306685209274,
+          0.2622721195220947,
+          0.02415091171860695
+        ]
+      },
+      "center": [
+        -0.1455194689333439,
+        0.1701406054198742,
+        -0.2817296665161848
+      ],
+      "anchor": [
+        -0.1396525502204895,
+        0.2359393835067749,
+        -0.2937691807746887
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_fundus_of_urinary_bladder_dome",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 11916,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#c9a77c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:urinary-bladder-neck-smooth-muscle",
+      "slug": "urinary-bladder-neck-smooth-muscle",
+      "name": "Urinary bladder neck smooth muscle",
+      "sourceName": "VH_F_urinary_bladder_neck_smooth_muscle",
+      "sourceOntologyId": "UBERON:0004230",
+      "fmaId": null,
+      "tissue": "organ",
+      "laterality": "midline",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_urinary_bladder_neck_smooth_muscle",
+      "bounds": {
+        "min": [
+          -0.1607695072889328,
+          -0.1799396425485611,
+          -0.5493762493133545
+        ],
+        "max": [
+          -0.0919598937034607,
+          -0.13756227493286133,
+          -0.49243009090423584
+        ]
+      },
+      "center": [
+        -0.12636470049619675,
+        -0.1587509587407112,
+        -0.5209031701087952
+      ],
+      "anchor": [
+        -0.12517039477825165,
+        -0.15835493803024292,
+        -0.5295211672782898
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_urinary_bladder_neck_smooth_muscle",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1790,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#c9a77c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:fundus-of-urinary-bladder-base",
+      "slug": "fundus-of-urinary-bladder-base",
+      "name": "Bladder base (source surface)",
+      "sourceName": "VH_F_fundus_of_urinary_bladder_base",
+      "sourceOntologyId": "UBERON:0006082",
+      "fmaId": null,
+      "tissue": "organ",
+      "laterality": "midline",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_fundus_of_urinary_bladder_base",
+      "bounds": {
+        "min": [
+          -0.4054020047187805,
+          -0.15222308039665222,
+          -0.592840313911438
+        ],
+        "max": [
+          0.11436306685209274,
+          0.20149855315685272,
+          0.02415091171860695
+        ]
+      },
+      "center": [
+        -0.1455194689333439,
+        0.02463773638010025,
+        -0.2843447010964155
+      ],
+      "anchor": [
+        -0.14365483820438385,
+        0.02385895512998104,
+        -0.2815595865249634
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_fundus_of_urinary_bladder_base",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 25526,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#c9a77c"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:left-uterine-artery",
+      "slug": "left-uterine-artery",
+      "name": "Left uterine artery",
+      "sourceName": "VH_F_left_uterine_artery",
+      "sourceOntologyId": "FMA:18831",
+      "fmaId": "FMA18831",
+      "tissue": "artery",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_left_uterine_artery",
+      "bounds": {
+        "min": [
+          -0.008386326022446156,
+          0.2217555046081543,
+          -0.8498939275741577
+        ],
+        "max": [
+          0.47684821486473083,
+          0.375156044960022,
+          -0.48879051208496094
+        ]
+      },
+      "center": [
+        0.23423094442114234,
+        0.29845577478408813,
+        -0.6693422198295593
+      ],
+      "anchor": [
+        0.26051977276802063,
+        0.24390944838523865,
+        -0.6219661831855774
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_left_uterine_artery",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1382,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#bf514d"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:right-uterine-artery",
+      "slug": "right-uterine-artery",
+      "name": "Right uterine artery",
+      "sourceName": "VH_F_right_uterine_artery",
+      "sourceOntologyId": "FMA:18830",
+      "fmaId": "FMA18830",
+      "tissue": "artery",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_right_uterine_artery",
+      "bounds": {
+        "min": [
+          -0.7133849859237671,
+          0.20060759782791138,
+          -0.8061664700508118
+        ],
+        "max": [
+          -0.2588036358356476,
+          0.36654624342918396,
+          -0.4678317904472351
+        ]
+      },
+      "center": [
+        -0.48609431087970734,
+        0.28357692062854767,
+        -0.6369991302490234
+      ],
+      "anchor": [
+        -0.5302802920341492,
+        0.22226199507713318,
+        -0.5869266390800476
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_right_uterine_artery",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 1392,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#bf514d"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:left-uterine-vein",
+      "slug": "left-uterine-vein",
+      "name": "Left uterine vein",
+      "sourceName": "VH_F_left_uterine_vein",
+      "sourceOntologyId": "FMA:18898",
+      "fmaId": "FMA18898",
+      "tissue": "vein",
+      "laterality": "left",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_left_uterine_vein",
+      "bounds": {
+        "min": [
+          -0.00204715714789927,
+          0.24240341782569885,
+          -1.0476341247558594
+        ],
+        "max": [
+          0.4583873748779297,
+          0.5534465312957764,
+          -0.47384873032569885
+        ]
+      },
+      "center": [
+        0.2281701088650152,
+        0.3979249745607376,
+        -0.7607414275407791
+      ],
+      "anchor": [
+        0.38276636600494385,
+        0.2959173321723938,
+        -0.6895885467529297
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_left_uterine_vein",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 2474,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#597dba"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:right-uterine-vein",
+      "slug": "right-uterine-vein",
+      "name": "Right uterine vein",
+      "sourceName": "VH_F_right_uterine_vein",
+      "sourceOntologyId": "FMA:18897",
+      "fmaId": "FMA18897",
+      "tissue": "vein",
+      "laterality": "right",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_right_uterine_vein",
+      "bounds": {
+        "min": [
+          -0.7449512481689453,
+          0.22658376395702362,
+          -0.90185546875
+        ],
+        "max": [
+          -0.27304208278656006,
+          0.5080932378768921,
+          -0.4604751467704773
+        ]
+      },
+      "center": [
+        -0.5089966654777527,
+        0.36733850091695786,
+        -0.6811653077602386
+      ],
+      "anchor": [
+        -0.6098704934120178,
+        0.25687482953071594,
+        -0.6288833022117615
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_right_uterine_vein",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 2332,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#597dba"
+    },
+    {
+      "id": "vm:reference:hra-united-female-v1-10:pelvis:sacrum",
+      "slug": "sacrum",
+      "name": "Fused sacrum",
+      "sourceName": "VH_F_sacrum",
+      "sourceOntologyId": "UBERON:0003690",
+      "fmaId": null,
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "hra-united-female-v1.10-pelvis",
+      "nodeName": "VH_F_sacrum",
+      "bounds": {
+        "min": [
+          -0.7182217240333557,
+          0.43841227889060974,
+          -1.8245456218719482
+        ],
+        "max": [
+          0.5559625625610352,
+          1.4288177490234375,
+          -0.7756024599075317
+        ]
+      },
+      "center": [
+        -0.08112958073616028,
+        0.9336150139570236,
+        -1.30007404088974
+      ],
+      "anchor": [
+        -0.07517218589782715,
+        0.9195753931999207,
+        -1.3050776720046997
+      ],
+      "sources": [
+        {
+          "file": "3d-vh-f-united.glb#VH_F_sacrum",
+          "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422"
+        }
+      ],
+      "triangles": 19636,
+      "omittedSourceFaces": [],
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Partial HRA reference surface; open cut boundaries and paired inner/outer source shells may remain. Not a complete organ, operative plane or registered scan.",
+      "color": "#ddcfad"
+    }
+  ],
+  "bundles": [
+    {
+      "id": "hra-united-female-v1.10-pelvis",
+      "url": "/models/hra-pelvis/pelvis.glb?v=f18f1f0e3c6e",
+      "sha256": "f18f1f0e3c6e8c0562b6b66864a8d786ffdb9e6a688da9288550fad6e491b866",
+      "bytes": 3796080,
+      "structures": 41
+    }
+  ],
+  "heldNodes": {
+    "VH_F_right_round_ligament_of_uterus": "Source-labelled right structure lies on the left side relative to the concordant ovary/tube/vessel pairs. No relabelling or mirroring.",
+    "VH_F_left_round_ligament_of_uterus": "Source-labelled left structure lies on the right side relative to the concordant ovary/tube/vessel pairs. No relabelling or mirroring.",
+    "VH_F_abdominal_ostium_of_uterine_tube": "Two source pieces near the uterine end need identity/extent review; do not reinterpret as abdominal fimbrial openings.",
+    "VH_F_cornua": "Compound uterine-end source regions need extent review alongside the disputed ostium group; no ontology identity invented.",
+    "VH_F_posterior_wall_of_uterus": "Alternative wall representation overlaps the regional uterine surfaces and shares 234 exact triangles with the other wall; not an additional tissue layer.",
+    "VH_F_anterior_wall_of_uterus": "Alternative wall representation overlaps regional uterine surfaces, shares 234 exact triangles with the other wall and contains one duplicate face. No automatic repair."
+  },
+  "clinicalApproval": false
+}
