@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type {
   PointerEvent as ReactPointerEvent,
   WheelEvent as ReactWheelEvent,
@@ -40,6 +40,7 @@ import type { LearnerReviewBundle } from "@/lib/learner-review-repository";
 import type { LtiIntegrationView } from "@/lib/education-integrations";
 import { remainingAttemptSeconds } from "@/lib/attempt-policy";
 import { liveRefreshDelay } from "@/lib/live-refresh-policy";
+import { createLatestViewRequest } from "@/lib/latest-view-request";
 import { BrandLockup as VisibleMedicineBrandLockup } from "@/components/BrandLockup";
 
 const LiveTeachingRoom = dynamic(
@@ -502,6 +503,10 @@ export function EducationRuntime({
   );
   const [bookmarks, setBookmarks] = useState<LearnerBookmark[]>([]);
   const [savedViewBusy, setSavedViewBusy] = useState(false);
+  const [localizerBusy, setLocalizerBusy] = useState(false);
+  const [localizerRequests] = useState(createLatestViewRequest);
+  const [savedViewReads] = useState(createLatestViewRequest);
+  const [savedViewWrites] = useState(createLatestViewRequest);
   const [pollBundle, setPollBundle] = useState<TeachingPollBundle>({
     polls: [],
     permissions: { manage: false, answer: false },
@@ -921,6 +926,34 @@ export function EducationRuntime({
     activeCase?.classification === "mixed"
       ? mixedAsset
       : activeCase?.classification;
+  // Bind responses to committed identity, permission context and manifest revision.
+  // No patient geometry is inferred from this key; server APIs still authorize access.
+  const savedViewContext = activeCase && (view === "teaching" || view === "exam")
+    ? JSON.stringify([activeCase.id, activeCase.viewerManifest, view, mixedAsset,
+        data?.course.workbookId, data?.course.workbookVersion, data?.attempt.state,
+        data?.currentUser.id, data?.currentUser.roles, previewRole])
+    : null;
+  const localizerContext = savedViewContext === null ? null
+    : JSON.stringify([savedViewContext, activeSeries, frameIndex, activePlane,
+        viewerLayout, activeTool, cine, zoom, panOffset.x, panOffset.y]);
+
+  useLayoutEffect(() => {
+    localizerRequests.setContext(localizerContext);
+    setLocalizerBusy(false);
+    return () => localizerRequests.setContext(null);
+  }, [localizerContext, localizerRequests]);
+
+  useLayoutEffect(() => {
+    savedViewReads.setContext(savedViewContext);
+    savedViewWrites.setContext(savedViewContext);
+    setPresentations([]);
+    setBookmarks([]);
+    setSavedViewBusy(false);
+    return () => {
+      savedViewReads.setContext(null);
+      savedViewWrites.setContext(null);
+    };
+  }, [savedViewContext, savedViewReads, savedViewWrites]);
   const visibleTools =
     activeCase?.tools.filter(
       (tool) =>
@@ -1049,19 +1082,24 @@ export function EducationRuntime({
   }
 
   async function loadSavedViews(caseId: string, context: "teaching" | "exam") {
+    const request = savedViewReads.begin(savedViewContext);
+    if (!request) return;
     const mayUseBookmarks = Boolean(
       data?.currentUser.roles.includes("learner"),
     );
     const [presentationResult, bookmarkResult] = await Promise.allSettled([
       educationRequest<PresentationBundle>(
         `/api/education/cases/${encodeURIComponent(caseId)}/presentations?context=${context}&workbookId=${encodeURIComponent(data?.course.workbookId ?? "")}`,
+        { signal: request.signal },
       ),
       mayUseBookmarks
         ? educationRequest<{ bookmarks: LearnerBookmark[] }>(
             `/api/education/learner/bookmarks?caseId=${encodeURIComponent(caseId)}`,
+            { signal: request.signal },
           )
         : Promise.resolve({ bookmarks: [] }),
     ]);
+    if (!request.finish()) return;
     if (presentationResult.status === "fulfilled")
       setPresentations(presentationResult.value.presentations);
     else setPresentations([]);
@@ -1085,7 +1123,7 @@ export function EducationRuntime({
     void loadSavedViews(activeCase.id, view);
     // The scoped APIs are the authoritative synchronization source for saved scenes.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeCase?.id, view]);
+  }, [savedViewContext]);
 
   useEffect(() => {
     if (view !== "teaching" || !teachingWorkbook || !activeCase) return;
@@ -1350,8 +1388,8 @@ export function EducationRuntime({
     data?.course.workbookId,
   ]);
 
-  useEffect(() => {
-    // Case changes intentionally reset the coupled viewer controls to modality-safe defaults.
+  useLayoutEffect(() => {
+    // Clear the old case/context before paint, including teaching-to-exam changes.
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setActiveSeries(availableSeries[0]?.id || "");
     setRevealNote(false);
@@ -1377,7 +1415,9 @@ export function EducationRuntime({
     setLocalizerPoint(null);
     setLocalizerProjections([]);
     setRestoredScene(null);
-  }, [activeCaseId, mixedAsset]); // eslint-disable-line react-hooks/exhaustive-deps
+    setNotice("");
+    setError("");
+  }, [savedViewContext]); // eslint-disable-line react-hooks/exhaustive-deps
 
   async function postAction(payload: ActionPayload, successMessage: string) {
     const requestWorkbookId = data?.course.workbookId ?? "";
@@ -1609,11 +1649,15 @@ export function EducationRuntime({
   }, [online]);
 
   function chooseCase(caseId: string) {
+    localizerRequests.cancel();
+    setLocalizerBusy(false);
     setActiveCaseId(caseId);
     setMixedAsset("radiology");
   }
 
   function setViewerLayout(layout: ViewerLayout) {
+    localizerRequests.cancel();
+    setLocalizerBusy(false);
     setTriPlanar(layout === "mpr");
     setFourUp(layout === "2x2");
     if (layout === "mpr") {
@@ -1640,6 +1684,8 @@ export function EducationRuntime({
   }
 
   function activateViewerTool(tool: string) {
+    localizerRequests.cancel();
+    setLocalizerBusy(false);
     setError("");
     if (tool === "cine") {
       setActiveTool("cine");
@@ -1676,6 +1722,8 @@ export function EducationRuntime({
   }
 
   function resetViewer() {
+    localizerRequests.cancel();
+    setLocalizerBusy(false);
     const pathology = effectiveKind === "pathology";
     setFrameIndex(pathology ? 0 : 42);
     setZoom(pathology ? 20 : 112);
@@ -1933,21 +1981,27 @@ export function EducationRuntime({
 
   async function placeLocalizer(plane: ImagePlane, x: number, y: number) {
     if (!activeCase || activeCase.viewerManifest.kind === "wsi") return;
+    const request = localizerRequests.begin(localizerContext);
+    if (!request) return;
+    const sourceSliceIndex = projectionFor(plane)?.sliceIndex ??
+      (plane === "axial" ? frameIndex : 48);
+    setLocalizerPoint(null);
+    setLocalizerProjections([]);
+    setNotice("");
     const source = activeCase.viewerManifest.series.find(
       (series) => series.plane === plane,
     );
     if (!source) {
+      request.finish();
+      setLocalizerBusy(false);
       setError(
         "Series cannot be spatially linked: the requested teaching plane is unavailable.",
       );
       return;
     }
-    setSavedViewBusy(true);
+    setLocalizerBusy(true);
     setError("");
     try {
-      const sourceSliceIndex =
-        projectionFor(plane)?.sliceIndex ??
-        (plane === "axial" ? frameIndex : 48);
       const result = await educationRequest<{
         patientPoint: PatientPoint;
         mapped: LocalizerProjection[];
@@ -1955,6 +2009,7 @@ export function EducationRuntime({
         `/api/education/cases/${encodeURIComponent(activeCase.id)}/localizer`,
         {
           method: "POST",
+          signal: request.signal,
           body: JSON.stringify({
             sourceSeriesInstanceUid: source.seriesInstanceUid,
             sourceSopInstanceUid:
@@ -1973,6 +2028,7 @@ export function EducationRuntime({
           }),
         },
       );
+      if (!request.isCurrent()) return;
       setLocalizerPoint(result.patientPoint);
       setLocalizerProjections(result.mapped);
       setTriPlanar(true);
@@ -1986,13 +2042,14 @@ export function EducationRuntime({
         "Patient-space localizer synchronized across compatible teaching planes",
       );
     } catch (localizerError) {
+      if (!request.isCurrent()) return;
       setError(
         localizerError instanceof Error
           ? localizerError.message
           : "Series cannot be spatially linked.",
       );
     } finally {
-      setSavedViewBusy(false);
+      if (request.finish()) setLocalizerBusy(false);
     }
   }
 
@@ -2101,6 +2158,8 @@ export function EducationRuntime({
       );
       return;
     }
+    const request = savedViewWrites.begin(savedViewContext);
+    if (!request) return;
     setSavedViewBusy(true);
     setError("");
     try {
@@ -2126,20 +2185,23 @@ export function EducationRuntime({
         `/api/education/cases/${encodeURIComponent(activeCase.id)}/presentations${existing ? `/${existing.id}` : ""}`,
         { method: existing ? "PUT" : "POST", body: JSON.stringify(body) },
       );
+      if (!request.isCurrent()) return;
       await loadSavedViews(activeCase.id, view);
+      if (!request.isCurrent()) return;
       setNotice(
         existing
           ? "Instructor scene appended with immutable history"
           : "Instructor presentation created",
       );
     } catch (savedViewError) {
+      if (!request.isCurrent()) return;
       setError(
         savedViewError instanceof Error
           ? savedViewError.message
           : "Instructor scene could not be saved.",
       );
     } finally {
-      setSavedViewBusy(false);
+      if (request.finish()) setSavedViewBusy(false);
     }
   }
 
@@ -2147,6 +2209,8 @@ export function EducationRuntime({
     if (!activeCase || (view !== "teaching" && view !== "exam")) return;
     const scene = currentViewerScene(false);
     if (!scene) return;
+    const request = savedViewWrites.begin(savedViewContext);
+    if (!request) return;
     setSavedViewBusy(true);
     setError("");
     try {
@@ -2161,16 +2225,19 @@ export function EducationRuntime({
           scene,
         }),
       });
+      if (!request.isCurrent()) return;
       await loadSavedViews(activeCase.id, view);
+      if (!request.isCurrent()) return;
       setNotice("Private learner bookmark saved");
     } catch (savedViewError) {
+      if (!request.isCurrent()) return;
       setError(
         savedViewError instanceof Error
           ? savedViewError.message
           : "Learner bookmark could not be saved.",
       );
     } finally {
-      setSavedViewBusy(false);
+      if (request.finish()) setSavedViewBusy(false);
     }
   }
 
@@ -2178,6 +2245,44 @@ export function EducationRuntime({
     if (!activeCase) return;
     const first = [...scene.viewports].sort((a, b) => a.order - b.order)[0];
     if (!first) return;
+    const request = localizerRequests.begin(localizerContext);
+    if (!request) return;
+    setLocalizerPoint(null);
+    setLocalizerProjections([]);
+    setNotice("");
+    setError("");
+    setLocalizerBusy(true);
+    let mapped: LocalizerProjection[] = [];
+    try {
+      if (scene.crosshairPatient && activeCase.viewerManifest.kind !== "wsi") {
+        const result = await educationRequest<{ mapped: LocalizerProjection[] }>(
+          `/api/education/cases/${encodeURIComponent(activeCase.id)}/localizer`,
+          {
+            method: "POST",
+            signal: request.signal,
+            body: JSON.stringify({
+              sourceFrameOfReferenceUid: activeCase.viewerManifest.series.find(
+                (series) => series.seriesInstanceUid === first.seriesInstanceUid,
+              )?.frameOfReferenceUid ?? "",
+              patientPoint: scene.crosshairPatient,
+              targetSeriesInstanceUids: activeCase.viewerManifest.series
+                .filter((series) => series.plane !== "slide")
+                .map((series) => series.seriesInstanceUid),
+            }),
+          },
+        );
+        mapped = result.mapped;
+      }
+    } catch (restoreError) {
+      if (request.isCurrent()) setError(
+        restoreError instanceof Error ? restoreError.message : "Series cannot be spatially linked.",
+      );
+      if (request.finish()) setLocalizerBusy(false);
+      return;
+    }
+    // Commit the scene together only after mapping succeeds for the current view.
+    if (!request.finish()) return;
+    setLocalizerBusy(false);
     setRestoredScene(scene);
     setActivePlane(first.plane === "slide" ? "axial" : first.plane);
     setFrameIndex(first.sliceIndex);
@@ -2186,6 +2291,7 @@ export function EducationRuntime({
     );
     setTriPlanar(scene.layout.rows === 1 && scene.layout.columns === 3 && first.plane !== "slide");
     setFourUp(scene.layout.rows === 2 && scene.layout.columns === 2);
+    setCine(false);
     if (first.windowCenter !== null) setWindowCenter(first.windowCenter);
     if (first.windowWidth !== null) setWindowWidth(first.windowWidth);
     setWindowPreset(
@@ -2195,7 +2301,7 @@ export function EducationRuntime({
     setInverted(false);
     setManualMarkups(
       scene.annotations
-        .filter((annotation) => annotation.visible)
+        .filter((annotation) => scene.annotationVisibility === "visible" && annotation.visible)
         .map((annotation) => ({
           id: annotation.id,
           kind:
@@ -2213,39 +2319,8 @@ export function EducationRuntime({
         })),
     );
     setSelectedMarkupId("");
-    setLocalizerPoint(scene.crosshairPatient);
-    if (scene.crosshairPatient && activeCase.viewerManifest.kind !== "wsi") {
-      try {
-        const result = await educationRequest<{
-          mapped: LocalizerProjection[];
-        }>(
-          `/api/education/cases/${encodeURIComponent(activeCase.id)}/localizer`,
-          {
-            method: "POST",
-            body: JSON.stringify({
-              sourceFrameOfReferenceUid: first.seriesInstanceUid
-                ? activeCase.viewerManifest.series.find(
-                    (series) =>
-                      series.seriesInstanceUid === first.seriesInstanceUid,
-                  )?.frameOfReferenceUid
-                : "",
-              patientPoint: scene.crosshairPatient,
-              targetSeriesInstanceUids: activeCase.viewerManifest.series
-                .filter((series) => series.plane !== "slide")
-                .map((series) => series.seriesInstanceUid),
-            }),
-          },
-        );
-        setLocalizerProjections(result.mapped);
-      } catch (restoreError) {
-        setError(
-          restoreError instanceof Error
-            ? restoreError.message
-            : "Series cannot be spatially linked.",
-        );
-        return;
-      }
-    } else setLocalizerProjections([]);
+    setLocalizerPoint(mapped.length ? scene.crosshairPatient : null);
+    setLocalizerProjections(mapped);
     setNotice(
       scene.instructorNotes
         ? "Instructor scene restored with its permitted teaching note"
@@ -3389,7 +3464,7 @@ export function EducationRuntime({
                 mode={view}
                 presentations={presentations}
                 bookmarks={bookmarks}
-                busy={savedViewBusy}
+                busy={savedViewBusy || localizerBusy}
                 canManage={
                   view === "teaching" &&
                   uiRoles.some((role) =>
