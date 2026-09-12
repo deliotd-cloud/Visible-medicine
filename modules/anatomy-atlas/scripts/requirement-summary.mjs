@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Abdominal-organ imaging](ABDOMINAL_ORGAN_IMAGING.md) adds CT/MRI/Ultrasound/X-ray orientation to eight existing liver/pancreas/gallbladder/spleen/kidney/adrenal selections: 32 draft placements with 20 distinct modality texts and six landmark/scope groups. Phase, sequence and ultrasound-coverage limitations are explicit. The corrected pancreatic parent, independent kidney specimen, internal dissections and patient scans retain separate identities; no new geometry or clinical approval is inferred.
+
 [Thoracic-bone imaging](THORACIC_BONE_IMAGING.md) fills CT, MRI, X-ray and Ultrasound notes for 24 existing sided ribs and three sternal parts: 108 draft placements, using eight shared modality texts and eight landmark groups. No new anatomy, controls, scan data or clinical approval is implied. Earlier teaching and geometry are preserved; the owner radiologist must review the content and variants.
 
 [Limb-bone imaging](LIMB_BONE_IMAGING.md) fills 24 pending sections across 12 exact radius/ulna/fibula/femur/tibia/patella selections: 12 X-ray, 6 CT and 6 MRI placements, using 12 distinct topic texts and six landmark notes. Existing knee CT/MRI/US lessons, geometry and controls remain unchanged. The existing Imaging tabs distinguish the whole source bone from the imaged joint; these are original referenced drafts, not scans, validated landmark segmentations or clinical approval.

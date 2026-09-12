@@ -1,0 +1,51 @@
+{
+  "selections": 8,
+  "landmarkGroups": 6,
+  "distinctTopicTexts": 20,
+  "placements": 32,
+  "modalities": {
+    "xray": 8,
+    "ct": 8,
+    "mri": 8,
+    "ultrasound": 8
+  },
+  "unchangedSections": 9670,
+  "rejectedBindings": 384,
+  "sourceRows": 8,
+  "modelHashes": 3,
+  "actualNoteRenders": 32,
+  "sourceWordCounts": {
+    "landmarks": 121,
+    "liver": 94,
+    "ultrasound": 148,
+    "xray": 54,
+    "ct": 52,
+    "mrcp": 102,
+    "gallstones": 91,
+    "spleen": 134,
+    "renal": 95,
+    "urography": 50,
+    "adrenal": 98,
+    "adrenalUltrasound": 50
+  },
+  "preservedPaths": [
+    "app/body-explorer.tsx",
+    "app/body-scene.tsx",
+    "app/dissection-data.ts",
+    "app/anatomy-data.ts",
+    "lib/knee-imaging.ts",
+    "lib/um-limb-teaching.ts",
+    "lib/body-display-catalog.ts",
+    "public/models/bodyparts3d/pancreas/display-correction.json",
+    "content/pancreatic-teaching.ts",
+    "content/renal-teaching.ts",
+    "content/hra-renal-teaching.ts",
+    "content/hra-renal-clinical.ts",
+    "package-lock.json",
+    "public/models/bodyparts3d/full-body/catalog.json",
+    "drizzle/0002_specimen_review_events.sql"
+  ],
+  "clinicalApproval": false,
+  "browserTesting": false,
+  "realImaging": false
+}

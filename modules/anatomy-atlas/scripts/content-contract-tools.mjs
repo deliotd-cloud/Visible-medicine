@@ -22,6 +22,7 @@ export * from './lib/upper-vessel-imaging.ts';
 export * from './lib/lower-arterial-imaging.ts';
 export * from './lib/limb-bone-imaging.ts';
 export * from './lib/thoracic-bone-imaging.ts';
+export * from './lib/abdominal-organ-imaging.ts';
 export * from './lib/shoulder-arm-curriculum.ts';
 export * from './lib/forearm-curriculum.ts';
 export * from './lib/hand-curriculum.ts';

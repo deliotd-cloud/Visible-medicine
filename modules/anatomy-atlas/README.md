@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Abdominal organs → Imaging** now includes [organ-specific CT, MRI, Ultrasound and X-ray orientation](docs/ABDOMINAL_ORGAN_IMAGING.md) for liver, pancreas, gallbladder, spleen, both kidneys and adrenals. Phase/sequence context and visibility limits reuse existing tabs. The corrected pancreatic parent and separate kidney specimen retain their distinct source identities. Thirty-two draft placements, no new meshes or controls; radiologist review and runtime publication remain pending.
+
 **Ribs / sternum → Imaging** now includes [CT, MRI, X-ray and Ultrasound orientation](docs/THORACIC_BONE_IMAGING.md) for all 24 existing ribs and three sternal parts. Compact, source-bound drafts distinguish rib levels, sternal variants and each modality's limitations. Eight shared modality texts and eight landmark groups fill 108 previously pending sections; no new meshes, scans or controls are added. Radiologist review and runtime publication remain pending.
 
 **Selected bone → Wrist & hand joint partners** extends the [compact partner navigator](docs/HAND_JOINT_PARTNERS.md) to 58 existing bones, alongside the ankle/foot map. It supports same-side navigation, reversible partner isolation and whole-body links for out-of-region bones. TFCC separation and variable carpal facets are explicit. No new meshes or permanent toolbar; runtime publication and clinical/device acceptance remain pending.

@@ -103,6 +103,7 @@ import { upperVesselImagingLesson } from '../lib/upper-vessel-imaging';
 import { lowerArterialImagingLesson } from '../lib/lower-arterial-imaging';
 import { limbBoneImagingLesson } from '../lib/limb-bone-imaging';
 import { thoracicBoneImagingLesson } from '../lib/thoracic-bone-imaging';
+import { abdominalOrganImagingLesson } from '../lib/abdominal-organ-imaging';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -179,6 +180,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (limbBoneImaging) return limbBoneImaging;
   const thoracicBoneImaging = thoracicBoneImagingLesson(s, tab);
   if (thoracicBoneImaging) return thoracicBoneImaging;
+  const abdominalOrganImaging = abdominalOrganImagingLesson(s, tab);
+  if (abdominalOrganImaging) return abdominalOrganImaging;
   const tentorium = tentoriumLesson(s, tab);
   if (tentorium) return tentorium;
   const brachialVein = brachialVeinLesson(s, tab);

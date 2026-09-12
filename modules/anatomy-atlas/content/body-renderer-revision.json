@@ -58,7 +58,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "e14e553b4e3b202601e6054f0d2c7f2b17faab197a2ddc700e99f43c0a75097f"
+      "sha256": "03825508788dbfa1cbc18d67c774ce45c3b6152ba7b4431df40dd692fe54d073"
     },
     {
       "path": "app/body-explorer.css",
@@ -343,6 +343,14 @@
     {
       "path": "content/abdominal-arterial.ts",
       "sha256": "8d3adf0135a17a01281b5cbdf3d9cbd62167849043c6bf4948382f8cb8956ec1"
+    },
+    {
+      "path": "content/abdominal-organ-imaging-pins.json",
+      "sha256": "d5ac67a1dabadd7e1968d97cd0509e180ea07435a7355ac72c5905257827664b"
+    },
+    {
+      "path": "content/abdominal-organ-imaging.ts",
+      "sha256": "a0a0f57b5061048a8765cd9899c5467a98b66c81184b784ce0a93e710417a5ef"
     },
     {
       "path": "content/abdominal-wall-teaching.ts",
@@ -655,6 +663,10 @@
     {
       "path": "lib/abdominal-organ-clinical-curriculum.ts",
       "sha256": "2945f5c4cb8c7ff6656130ca73f03f4cecafd9cadcf342de606a97612d8e8d6a"
+    },
+    {
+      "path": "lib/abdominal-organ-imaging.ts",
+      "sha256": "8449bb428287cfd19b1d5976bd575a4f4d82d4d98d7b68db3628879adc228737"
     },
     {
       "path": "lib/abdominal-vessel-clinical-curriculum.ts",
@@ -1502,7 +1514,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "76b31c2e8c7f0bc4d6c21b9869bd70b75c6fee0fd75c0dbbbc44948a69042acf"
+      "sha256": "b9e190e76ca65935b5876e8926d19793d115c2107ca9b4bd66020fde3550487b"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1669,5 +1681,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "b272268bbbdc75d2363c393c6018a2cdcab18efe2ec4d3efcb6d4c1c2999cda2"
+  "sha256": "22703171ecf308bdfe0c20c2bb90aecace80ef798091f3801556439979207d9e"
 }

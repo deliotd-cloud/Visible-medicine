@@ -8,8 +8,10 @@ import ts from 'typescript';
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {authoringBeforeThoracicBoneImaging,thoracicBoneContentHash as hash} from './thoracic-bone-imaging-history.mjs';
 import {thoracicBoneImagingTopics,thoracicBoneImagingReferences,thoracicBoneImagingLandmarks} from '../content/thoracic-bone-imaging.ts';
+import {authoringBeforeAbdominalOrganImaging} from './abdominal-organ-imaging-history.mjs';
 const context=await contentContext(),{api}=context,catalog=api.bodyDisplayCatalog(context.catalog);
 const originalCatalog=JSON.stringify(catalog),before=authoringBeforeThoracicBoneImaging({api,catalog});
+const afterThoracic=authoringBeforeAbdominalOrganImaging({api,catalog});
 const pins=JSON.parse(await readFile('content/thoracic-bone-imaging-pins.json'));
 assert.equal(hash({body:catalog.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(t=>[t,before.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles}),pins.previousAllLessonsAndRecipesHash,'All preceding teaching and recipes preserved');
 const rows=(await readFile('../work/bodyparts3d/isa_element_parts.txt','utf8')).trim().split(/\r?\n/).map(r=>r.split('\t'));
@@ -30,7 +32,7 @@ for(const s of catalog.structures) {
   const e=pins.entries.find(e=>e.identity.id===s.id),record=records.find(r=>r.id===s.id);assert(validate(record));
   for(const t of api.contentTabs) {
     const lesson=api.thoracicBoneImagingLesson(s,t);
-    if(!e?.topics.includes(t)) {assert.equal(lesson,undefined);assert.deepEqual(api.bodyLesson(s,t),before.bodyLesson(s,t));unchanged++;continue;}
+    if(!e?.topics.includes(t)) {assert.equal(lesson,undefined);assert.deepEqual(afterThoracic.bodyLesson(s,t),before.bodyLesson(s,t));unchanged++;continue;}
     placements++;assert.equal(before.bodyLesson(s,t).readiness,'pending');assert.equal(lesson.readiness,'draft');
     assert.deepEqual(api.bodyLesson(s,t),lesson);assert.deepEqual(record.content[t],lesson);
     assert.match(lesson.note,/review pending/);assert.match(lesson.note,/No patient images/);assert.match(lesson.note,/paid-lecture access/);

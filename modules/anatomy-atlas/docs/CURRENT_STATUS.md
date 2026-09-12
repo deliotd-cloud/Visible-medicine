@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Abdominal-organ imaging](ABDOMINAL_ORGAN_IMAGING.md) adds CT/MRI/Ultrasound/X-ray orientation to eight existing liver/pancreas/gallbladder/spleen/kidney/adrenal selections: 32 draft placements with 20 distinct modality texts and six landmark/scope groups. Phase, sequence and ultrasound-coverage limitations are explicit. The corrected pancreatic parent, independent kidney specimen, internal dissections and patient scans retain separate identities; no new geometry or clinical approval is inferred.
+
 [Thoracic-bone imaging](THORACIC_BONE_IMAGING.md) fills CT, MRI, X-ray and Ultrasound notes for 24 existing sided ribs and three sternal parts: 108 draft placements, using eight shared modality texts and eight landmark groups. No new anatomy, controls, scan data or clinical approval is implied. Earlier teaching and geometry are preserved; the owner radiologist must review the content and variants.
 
 [Limb-bone imaging](LIMB_BONE_IMAGING.md) fills 24 pending sections across 12 exact radius/ulna/fibula/femur/tibia/patella selections: 12 X-ray, 6 CT and 6 MRI placements, using 12 distinct topic texts and six landmark notes. Existing knee CT/MRI/US lessons, geometry and controls remain unchanged. The existing Imaging tabs distinguish the whole source bone from the imaged joint; these are original referenced drafts, not scans, validated landmark segmentations or clinical approval.
@@ -88,7 +90,7 @@ Generated from the actual catalogue, teaching resolver, dissection profiles and 
 
 ## Delivered source scope
 
-[X-ray orientation](XRAY_TEACHING.md) is available in the existing Imaging group: 122 source-pinned body drafts now include six shoulder-bone sources plus 47 spinal sources. The 3 overlapping dedicated-shoulder drafts cover three shoulder-bone concepts separately. Other entries remain pending, including all 71 nested selections. No radiographs, calibrated projections or paid-lecture access are supplied. Old display/teaching approvals require re-review; earlier topics are preserved through exact authoring transitions.
+[X-ray orientation](XRAY_TEACHING.md) is available in the existing Imaging group: 130 source-pinned body drafts now include six shoulder-bone sources plus 47 spinal sources. The 3 overlapping dedicated-shoulder drafts cover three shoulder-bone concepts separately. Other entries remain pending, including all 71 nested selections. No radiographs, calibrated projections or paid-lecture access are supplied. Old display/teaching approvals require re-review; earlier topics are preserved through exact authoring transitions.
 
 The [cricothyroid dissection](CRICOTHYROID_DISSECTION.md) adds 4 source-defined muscle parts with 2 optional, nonselectable cartilage landmarks. It reuses the compact selection, cutaway, separation, labels and Undo/Redo controls. The source-preserving derivative explicitly omits 12 audited artifact faces; this is disclosed, not clinical approval. Introductory teaching is draft and CT/MRI/US remain pending for these parts. Cartilage is a navigation landmark, not the muscle's tissue parent.
 
@@ -117,10 +119,10 @@ Counts are representations with displayed copy, not unique lessons, complete top
 | --- | ---: | ---: | ---: | ---: |
 | Anatomy | 1076 | 2 | 0 | 0 |
 | Function | 1066 | 0 | 12 | 0 |
-| CT | 175 | 0 | 903 | 0 |
-| MRI | 177 | 0 | 901 | 0 |
-| X-ray | 122 | 0 | 956 | 0 |
-| Ultrasound | 94 | 0 | 984 | 0 |
+| CT | 183 | 0 | 895 | 0 |
+| MRI | 185 | 0 | 893 | 0 |
+| X-ray | 130 | 0 | 948 | 0 |
+| Ultrasound | 102 | 0 | 976 | 0 |
 | Pathology | 1018 | 0 | 60 | 0 |
 | Clinical | 1022 | 0 | 56 | 0 |
 | Quiz notes | 47 | 0 | 0 | 1031 |
