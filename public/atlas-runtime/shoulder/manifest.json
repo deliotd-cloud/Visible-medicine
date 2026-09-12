@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceCommit": "720e44a10b96b10aaa600451dd5a491a79c26c31",
+  "sourceCommit": "e2b3ff0e5c9d310455c7caf7ba5726a5af5b2f3f",
   "region": "shoulder-right",
   "structures": 9,
   "patientDataIncluded": false,
@@ -10,7 +10,7 @@
     {
       "path": "index.html",
       "bytes": 504,
-      "sha256": "1ec24e9e1e48e4e5c471dfe9c708f50559096db2c608809d106b7c157088d267"
+      "sha256": "f5297de0e87d33563e3d2706ec460f878d6f1a92596cd94c6bb042a8d6b03e5f"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -24,8 +24,8 @@
     },
     {
       "path": "source-inputs.json",
-      "bytes": 37338,
-      "sha256": "c0b2551e83069187a33f5be06696926dc3ba6034f742c3c4ea6c91b57c97804d"
+      "bytes": 37475,
+      "sha256": "c205e916d7ff783bf2edae950c79d18f90944b07c985bb507ef635d5861ceae8"
     },
     {
       "path": "assets/anatomy-scene-B5vBwAGD.css",
@@ -33,19 +33,19 @@
       "sha256": "1cf5ea93e7e61ab957de6c3513be4c23214cbdcc680e54780fece40747b9b3ba"
     },
     {
-      "path": "assets/anatomy-scene-D-89PEY3.js",
-      "bytes": 1016228,
-      "sha256": "2faca1322d1452f45692818263b8fed903f928e428728764cb009a365664e3e9"
+      "path": "assets/anatomy-scene-Bd1Ighwx.js",
+      "bytes": 1016329,
+      "sha256": "3ae2f887138cd8cf8338165ee6dfa786d2e7c772d84fe83cea010ef4a47cf698"
+    },
+    {
+      "path": "assets/index-C3sxTXsl.js",
+      "bytes": 1810289,
+      "sha256": "365be59acb441bc390a112d23e8a7af9675d2764d7e945ae36a54fc366850bfa"
     },
     {
       "path": "assets/index-PZ30KGND.css",
       "bytes": 284577,
       "sha256": "32fcd07eae8096cade41710be2a8a8d74abd7ad6227cf8880cd91039b11d7515"
-    },
-    {
-      "path": "assets/index-qjCw1Ij4.js",
-      "bytes": 1810289,
-      "sha256": "36bfc1fbfbb6a15a16cc849be77fb4c5c77480d8f140c0597d0531ca5bae6b38"
     },
     {
       "path": "models/bodyparts3d/shoulder-right.glb",
@@ -69,8 +69,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "bytes": 129677,
-      "sha256": "99f89b1c13b16a6ccfd340d3cbddf7c291172f3f857541c3c7047718f4e151d1"
+      "bytes": 130225,
+      "sha256": "61b634258869b109984a8f2be5d36a9357d259e9a2d3e63e678f07b202fa7686"
     },
     {
       "path": "LICENSES/dependency-license-audit.json",

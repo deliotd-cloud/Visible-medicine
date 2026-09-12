@@ -1,5 +1,9 @@
 # Third-party notices
 
+## Pelvic-vein teaching — 12 September 2026
+
+Original concise factual notes and reading links extend ten existing root-body pelvic-vein selections. No source article, image, table, classification score, question bank or new anatomical asset is redistributed. References retain their own rights; free access is not a commercial image licence. Authored content remains MIT; existing BodyParts3D CC BY 4.0 attribution/change notices remain. No dependency, font, texture, paid API or mandatory service was added. See `docs/PELVIC_VEIN_TEACHING.md`.
+
 ## Female pelvic context teaching — 12 September 2026
 
 Original short factual teaching and source links cover the ten remaining retained pelvic selections. No reference prose, tables, figures, scans or diagrams are redistributed. Linked AVLS CC BY-NC, ISUOG permission-controlled, VI-RADS copyrighted and third-party SEER media are not imported or treated as commercial assets. No dependency, font, texture, model or paid service is added. Original text/code retain MIT terms; HRA source rights remain CC BY 4.0 with existing credits and change notices. See `docs/FEMALE_PELVIC_CONTEXT_TEACHING.md`.

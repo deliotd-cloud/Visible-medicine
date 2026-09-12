@@ -1,7 +1,7 @@
 # Consistent anatomy zoom — 12 September 2026
 
 The shoulder, female-pelvis and lower-limb runtime exports now share Atlas
-source `720e44a10b96b10aaa600451dd5a491a79c26c31`. Every export includes its
+source `e2b3ff0e5c9d310455c7caf7ba5726a5af5b2f3f`. Every export includes its
 source/asset hashes and retained commercial-compatible notices. No dependency,
 model, texture, font, teaching content or private imaging data was added.
 
@@ -24,7 +24,7 @@ control, not every regional default framing choice or missing anatomical detail.
 
 ## Evidence and remaining gates
 
-- Atlas camera regression: 72 checks executing the real camera effect with
+- Atlas camera regression: 96 checks executing the real camera effect with
   Three.js cameras and simulated React/OrbitControls lifecycle. Covers both
   projections, gesture-scale composition, pan, resize, batched presses, bounds,
   rerender, reset/frame, explicit restoration and legacy saved-camera meaning.
@@ -47,3 +47,22 @@ connection and no clinical approval. Radiologist sign-off stays revision-bound.
 The main task's `work/CAMERA-ZOOM-CHECKPOINT-20260912.md` records exact website,
 GitHub, D-drive and private-publication state. Source backup does not imply that
 the older standalone Atlas deployment has been updated.
+
+## Subsequent free-orbit correction
+
+Asymmetric anatomy exposed a missed case: changing the orbit left the old fit
+distance cached, so an inward press could move away instead. The shared camera
+now recomputes the preceding bounds/viewport in the live direction, preserving
+actual zoom and pan through rotation while still adapting to genuine dissection
+bounds and viewport changes. Orthographic distance is stable as well. The
+expanded tests exercise both cameras, free orbit, in-place bounds changes and
+mobile-sized resize. Head/neck browser sampling confirmed oblique +/- changes,
+390×844 resize, 35% separation and reset. Repeated regional coverage URLs also
+now appear once, without dropping any distinct reference.
+
+All three module exports were rebuilt and their source-input hashes verified;
+prior compiled modules are preserved outside the public site. This changes no
+source anatomy, clinical text, scan/lecture access or saved-camera format.
+Use the newer `work/ORBIT-CONTINUITY-CHECKPOINT-20260912.md` in the main task for
+exact verification, backup and publication state. Older browser observations
+above retain their original scope and do not prove universal device acceptance.
