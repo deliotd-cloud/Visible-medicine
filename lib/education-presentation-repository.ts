@@ -289,20 +289,22 @@ export async function mapEducationLocalizer(auth: AuthContext, caseId: string, p
   const roles = await requireAnyEducationRole(auth);
   await ensureScope("case", caseId);
   await ensureScopeAccess(auth, roles, "case", caseId);
-  exactKeys(payload, ["sourceSeriesInstanceUid", "sourceSopInstanceUid", "sourceSliceIndex", "sourceFrameOfReferenceUid", "patientPoint", "x", "y", "targetSeriesInstanceUids"]);
+  exactKeys(payload, ["sourceSeriesInstanceUid", "sourceSopInstanceUid", "sourceFrame", "sourceSliceIndex", "sourceFrameOfReferenceUid", "patientPoint", "x", "y", "targetSeriesInstanceUids"]);
   const teachingCase = await env.DB.prepare(`SELECT classification, status FROM cases WHERE id = ?`).bind(caseId).first<{ classification: string; status: string }>();
   if (!teachingCase || teachingCase.status !== "published") throw new EducationApiError("Published education case not found.", 404);
   if (teachingCase.classification === "pathology") throw new EducationApiError("Tri-planar localizer is unavailable for whole-slide pathology; use the WSI overview.", 422);
   const geometry = educationGeometryForCase(caseId);
   const requestedTargets = Array.isArray(payload.targetSeriesInstanceUids) ? payload.targetSeriesInstanceUids.filter((item): item is string => typeof item === "string").slice(0, 6) : geometry.map((series) => series.seriesInstanceUid);
   if (requestedTargets.some((uid) => !geometry.some((series) => series.seriesInstanceUid === uid))) throw new EducationApiError("A localizer target series is not part of this education case.", 422);
-  const storedPoint = Array.isArray(payload.patientPoint) && payload.patientPoint.length === 3 ? payload.patientPoint.map(Number) as [number, number, number] : null;
+  const hasStoredPoint = Object.hasOwn(payload, "patientPoint");
+  if (hasStoredPoint && (!Array.isArray(payload.patientPoint) || payload.patientPoint.length !== 3 || [...payload.patientPoint].some(value => typeof value !== "number" || !Number.isFinite(value)))) throw new EducationApiError("The stored patient coordinate is invalid.", 422);
+  const storedPoint = hasStoredPoint ? payload.patientPoint as [number, number, number] : null;
   const sourceUid = safeText(payload.sourceSeriesInstanceUid, 64); const source = geometry.find((series) => series.seriesInstanceUid === sourceUid);
   const result = storedPoint
     ? resolveStoredPatientSpaceLocalizer({ sourceFrameOfReferenceUid: safeText(payload.sourceFrameOfReferenceUid, 64), patientPoint: storedPoint as PatientPoint, targetSeries: geometry.filter((series) => requestedTargets.includes(series.seriesInstanceUid)) })
     : (() => {
       if (!source) throw new EducationApiError("The localizer source series is not part of this education case.", 422);
-      return resolvePatientSpaceLocalizer({ sourceSeries: source, sourceSopInstanceUid: safeText(payload.sourceSopInstanceUid, 64) || undefined, sourceSliceIndex: Number(payload.sourceSliceIndex ?? 0), x: Number(payload.x), y: Number(payload.y), targetSeries: geometry.filter((series) => requestedTargets.includes(series.seriesInstanceUid)) });
+      return resolvePatientSpaceLocalizer({ sourceSeries: source, sourceSopInstanceUid: payload.sourceSopInstanceUid as string | undefined, sourceFrame: payload.sourceFrame as number | undefined, sourceSliceIndex: payload.sourceSliceIndex as number | undefined, x: payload.x as number, y: payload.y as number, targetSeries: geometry.filter((series) => requestedTargets.includes(series.seriesInstanceUid)) });
     })();
   await appendAudit(auth.userId, "education.localizer.propagated", "case", caseId, "success", `frame-of-reference=${source?.frameOfReferenceUid ?? safeText(payload.sourceFrameOfReferenceUid, 64)};point=${result.patientPoint.map((item) => item.toFixed(2)).join(",")}`);
   return result;
