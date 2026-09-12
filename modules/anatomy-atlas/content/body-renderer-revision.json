@@ -38,7 +38,7 @@
     },
     {
       "path": "app/arterial-connections.tsx",
-      "sha256": "55be8b17f90245bbca2bb5adfb522a16f5cf6f41f029131b5817c0f26230f2a3"
+      "sha256": "53af4510da63ae3aab470801191ff552ca6e202c8433432f3e0ee7fb9bae289b"
     },
     {
       "path": "app/atlas-workspace.css",
@@ -399,6 +399,14 @@
     {
       "path": "content/cardiac-teaching.ts",
       "sha256": "0848e6de5820400a84fee5cfdff88ad406de07774aedafc10ec7ffdedbf0a72c"
+    },
+    {
+      "path": "content/cerebral-arterial-pins.json",
+      "sha256": "8b6185b71ca1684f15480f224f3e9f4d873bdc109b72f27ef6bfb378a5225e64"
+    },
+    {
+      "path": "content/cerebral-arterial.ts",
+      "sha256": "efcd7abd4d2403db876b7bd98d4814014f84c8b124cdf7af2259e2725b64e49e"
     },
     {
       "path": "content/cerebral-teaching.ts",
@@ -770,7 +778,7 @@
     },
     {
       "path": "lib/arterial.ts",
-      "sha256": "4b477e3bf1f88eb6befd80dbf5456546ef0798422430dd4d04dec650472eec56"
+      "sha256": "682959cf70658e7ddc037a5d613cd4f49fcb4b9415dc233db9c90a4da89e6138"
     },
     {
       "path": "lib/atlas-navigation.ts",
@@ -855,6 +863,10 @@
     {
       "path": "lib/central-neuro-curriculum.ts",
       "sha256": "e5247f94660df1d974ee98cba7b705b02e3f5da316f9215cb86237e838d94b76"
+    },
+    {
+      "path": "lib/cerebral-arterial.ts",
+      "sha256": "ead6c65e1cb3b7953ee0870ef35aff389b415b36a9ca7a2e86ebd8c1299d4978"
     },
     {
       "path": "lib/cerebral.ts",
@@ -1298,7 +1310,7 @@
     },
     {
       "path": "lib/regional-arterial.ts",
-      "sha256": "955b828dbfe67997e0cc550d529d7256ae4e37d95ba4114152c731ffdddeed73"
+      "sha256": "d509e4570872359b57df99a01646c15236cb861c07d5d9ede0c61497a47c0ee3"
     },
     {
       "path": "lib/regional-bone-joints.ts",
@@ -1554,7 +1566,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "d057955f762f93fcada4a7a380f13912112aec3964a5dfed095e9dd32d31cb6a"
+      "sha256": "8176ea83b705611c08653463435979ac75f54b46ff1ea32e708e70aba2b58c37"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1733,5 +1745,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "bb20d0d274943927bcc3657f31aea35c4fe2b51bdcbe36a730076d8bbaa360bd"
+  "sha256": "1f6ffec77579e3e3aa55c45f04ebde8db775ee6a827812afb1b5f5fd21568ab5"
 }

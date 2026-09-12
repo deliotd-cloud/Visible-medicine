@@ -37,6 +37,7 @@ export function ArterialConnections({
   const kinds = {
     branch: 'Branch',
     continuation: 'Continuation',
+    confluence: 'Confluence · paired inflows unite',
     'via-unmodelled': 'Via unmodelled segment',
     'via-grouped': 'Via grouped parent',
     anastomosis: 'Anastomosis · no flow direction assigned',

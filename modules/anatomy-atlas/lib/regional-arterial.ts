@@ -16,6 +16,7 @@ const canonical = (v: unknown): string =>
 export type ArterialRelationKind =
   | 'branch'
   | 'continuation'
+  | 'confluence'
   | 'via-unmodelled'
   | 'via-grouped'
   | 'anastomosis'

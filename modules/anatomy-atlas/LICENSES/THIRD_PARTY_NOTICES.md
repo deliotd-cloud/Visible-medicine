@@ -1,5 +1,9 @@
 # Third-party notices
 
+## Cervical/cerebral arterial connections — 12 September 2026
+
+This extension adds original MIT code and brief original factual notes with links to TTUHSC El Paso and a primary MRA morphologic study. No source table dataset, figure, article prose, angiogram, medical scan or external media is redistributed. The fourteen existing BodyParts3D v4 vessel selections and eleven context bones remain under their existing DBCLS/CC BY 4.0 notices, unchanged. No model, font, texture, dependency, paid API or mandatory service is introduced. Reference access is not a licence to reuse its media. See [scope and review requirements](../docs/CEREBRAL_ARTERIAL_CONNECTIONS.md).
+
 ## Local CT study pilot — 12 September 2026
 
 The follow-on draft-review support and source-verified Slicer markup converter are also original MIT application code, using the same installed NumPy/NiBabel tools. The converter writes the documented Slicer Markups JSON interchange format and references its schema URL; it does not redistribute Slicer, its source, a schema copy, a new model, or any private patient file. No paid dependency or service is added.

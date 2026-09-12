@@ -11,7 +11,7 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const bundled = await build({
   stdin: {
     contents:
-      "export * from './lib/body-review-decisions'; export * from './lib/body-review-context'; export * from './lib/body-review-material'; export * from './lib/body-review-client'; export * from './lib/body-review-api'; export * from './lib/body-review-store';",
+      "export * from './lib/body-review-decisions'; export * from './lib/body-review-context'; export * from './lib/body-review-material'; export * from './lib/body-review-client'; export * from './lib/body-review-api'; export * from './lib/body-review-store'; export {bodyDisplayCatalog} from './lib/body-display-catalog';",
     resolveDir: root,
     loader: 'ts',
   },
@@ -40,7 +40,13 @@ for (const row of api.bodyReviewSummaries) {
   }
   contexts++;
 }
-assert.equal(contexts, 1060);
+// Review every current display selection, not an obsolete pre-extension total.
+const displayIds = api.bodyDisplayCatalog(JSON.parse(await readFile(
+  new URL('../public/models/bodyparts3d/full-body/catalog.json', import.meta.url), 'utf8',
+))).structures.map(s => s.id);
+assert.equal(new Set(displayIds).size, displayIds.length);
+assert.deepEqual(api.bodyReviewSummaries.map(s => s.id).sort(), [...displayIds].sort());
+assert.equal(contexts, displayIds.length);
 assert.equal(await api.bodyReviewContext('not-anatomy'), null);
 const id = 'vm:anatomy:upper-limb:shoulder:right:bone:scapula';
 const c = await api.bodyReviewContext(id);

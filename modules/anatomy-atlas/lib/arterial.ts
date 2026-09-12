@@ -1,5 +1,10 @@
 import { limbArterialNeighbours, limbArterialPlan } from './limb-arterial';
 import {
+  cerebralArterialNeighbours,
+  cerebralArterialPlan,
+  isCerebralArterialId,
+} from './cerebral-arterial';
+import {
   lowerLimbArterialNeighbours,
   lowerLimbArterialPlan,
 } from './lower-limb-arterial';
@@ -13,6 +18,7 @@ type Args = Parameters<typeof limbArterialNeighbours>;
 // The aorta is one existing source, shared by two maps. Both bindings must pass;
 // never silently fall back to a partial graph if either map has stale source data.
 export function arterialNeighbours(...args: Args) {
+  if (isCerebralArterialId(args[3])) return cerebralArterialNeighbours(...args);
   if (args[3] !== sharedAbdominalAortaId)
     return (
       abdominalArterialNeighbours(...args) ?? limbArterialNeighbours(...args)
@@ -28,6 +34,7 @@ export function arterialNeighbours(...args: Args) {
   };
 }
 export function arterialPlan(...args: Args) {
+  if (isCerebralArterialId(args[3])) return cerebralArterialPlan(...args);
   if (args[3] !== sharedAbdominalAortaId)
     return abdominalArterialPlan(...args) ?? limbArterialPlan(...args);
   const abdominal = abdominalArterialPlan(...args),
