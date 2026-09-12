@@ -45,9 +45,12 @@ import { SceneRecovery, RendererMonitor } from './scene-recovery';
 import type { RendererHealth } from '@/lib/renderer-health';
 import { selectedOriginGuide, type OriginGuide } from '@/lib/origin-guides';
 import { SceneOrientation } from './scene-orientation';
+import { modelDeliveryUrl } from '@/lib/model-delivery';
 import './scene-orientation.css';
 
 type Props = {
+  /** Optional same-origin website delivery prefix; canonical anatomy remains unchanged. */
+  assetBase?: string;
   catalog: BodyCatalog;
   structures: BodyStructure[];
   selectedId: string | null;
@@ -132,7 +135,7 @@ function Bundle({
   originGuide: OriginGuide | null;
 }) {
   // Production transport is byte-exact meshopt; the decoder is bundled locally.
-  const { scene } = useGLTF(bundle.url, false, true);
+  const { scene } = useGLTF(modelDeliveryUrl(bundle.url, props.assetBase), false, true);
   const onLoaded = props.onLoaded;
   useEffect(() => onLoaded(bundle.id), [bundle.id, onLoaded]);
   const geometries = useMemo(() => {
@@ -563,6 +566,6 @@ export function BodyScene(props: Props) {
   );
 }
 
-export function retryBodyAssets(urls: string[]) {
-  for (const url of urls) useGLTF.clear(url);
+export function retryBodyAssets(urls: string[], assetBase?: string) {
+  for (const url of urls) useGLTF.clear(modelDeliveryUrl(url, assetBase));
 }

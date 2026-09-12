@@ -78,7 +78,7 @@
     },
     {
       "path": "app/body-scene.tsx",
-      "sha256": "c0ac40edbdb03d3f379063d5f0f4dd45cdc4ceab15fb91fb66cbd98712707628"
+      "sha256": "2a2da50273cacf8d270d856cade130db3b359e45eebcf4323540762185e5cea4"
     },
     {
       "path": "app/body-types.ts",
@@ -150,7 +150,11 @@
     },
     {
       "path": "app/hra-pelvis-study.tsx",
-      "sha256": "b798408d5561f48cbc9fd86f242320704b58b53799cad84a075bbe06080787f4"
+      "sha256": "1409567b303b914f98a5a5afb6ed7e0594ac2e2f31b3918c6e8951fe44527e52"
+    },
+    {
+      "path": "app/hra-pelvis-supplement.tsx",
+      "sha256": "d4b417b49f2df4cb58bb8110c5bac6e053ab3375f442798a8d1e3addf811f685"
     },
     {
       "path": "app/hra-renal-study.tsx",
@@ -278,11 +282,11 @@
     },
     {
       "path": "app/um-knee-study.tsx",
-      "sha256": "811a1bd1e69adc588d90aacca74cde8e1296a8857bbdeb52b65dfe408969c9ab"
+      "sha256": "a8fe0459b0413ba698d5440acf7d5468fcea5633e10f4ee1d0038426e2863c63"
     },
     {
       "path": "app/um-limb-learning.tsx",
-      "sha256": "6026628ef9f29b54463bc0b39b1fd6b037af74831ffca0278879489f7e6d5ecd"
+      "sha256": "5e2966930eaa58b39e498d05523ccd13347c16ee533d09100b3aed6c239bb81c"
     },
     {
       "path": "app/um-limb-motor.tsx",
@@ -1249,6 +1253,10 @@
       "sha256": "922f748bf87850c9e344943ae9980bfc65701a7d8cf3f97c80ec8ab01d28a6a1"
     },
     {
+      "path": "lib/model-delivery.ts",
+      "sha256": "3391faedcb19f636b973db2d898fb1052c87b42ab0950881219f5842e0831ee0"
+    },
+    {
       "path": "lib/neck-clinical-curriculum.ts",
       "sha256": "446017a9ff682d35f28a0c75e68c0bccd38d4aaf6799fab7af01516dbd5e8772"
     },
@@ -1809,5 +1817,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "31a0066c6cc38bb907045b036ff5c42f659c4e730fc5f303765ce40cd56ed8cf"
+  "sha256": "285ec04731117754420f6bcccc2b9d7d03cc4a569c8840ba8b6259d770e3aa2d"
 }

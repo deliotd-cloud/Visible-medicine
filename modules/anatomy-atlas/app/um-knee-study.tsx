@@ -44,7 +44,7 @@ export type SpecimenSupplement = {
   identification?: SpecimenPracticeAdapter;
   studyLink?: (definition: SpecimenDefinition, selectedId: string, studyId: string | null, view: DissectionView) => ReactNode;
 };
-export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation, supplement }: { specimen?: SpecimenDefinition; initialNavigation?: Pick<ResolvedSpecimenNavigation, 'selectedId' | 'state' | 'structureOnly' | 'view' | 'topic'> & { focusSelection?: boolean }; supplement?: SpecimenSupplement } = {}) {
+export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation, supplement, assetBase }: { specimen?: SpecimenDefinition; initialNavigation?: Pick<ResolvedSpecimenNavigation, 'selectedId' | 'state' | 'structureOnly' | 'view' | 'topic'> & { focusSelection?: boolean }; supplement?: SpecimenSupplement; assetBase?: string } = {}) {
   const kneeSpecimen = { structures: specimen.surfaces, source: specimen.source };
   const kneeCatalog = specimen.catalog, kneeStructures = kneeCatalog.structures, kneeSpecimenStudies = specimen.studies;
   const [state, dispatch] = useReducer((state: VentricularState, action: SpecimenAction) => reduceSpecimen(specimen, state, action), specimen, value => initialNavigation?.state ?? initialSpecimen(value));
@@ -88,7 +88,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
     preset('all'); setQuery(''); setLayout('extract'); setJointCloseUp(!!specimen.closeUp);
     setLabels(true); setShowOrigins(false); setIllustrated(true);
   }
-  if (practice) return <SpecimenIdentification definition={specimen} initial={practice} visibleIds={visible.map(s => s.id)} initialView={view} adapter={practiceAdapter}
+  if (practice) return <SpecimenIdentification assetBase={assetBase} definition={specimen} initial={practice} visibleIds={visible.map(s => s.id)} initialView={view} adapter={practiceAdapter}
     onClose={() => { restorePracticeFocus.current = true; setHealth('starting'); setPractice(null); }} />;
   return <div className="eye-layer-workbench um-knee-workbench">
     <section className="um-knee-image" aria-label={`Independent ${specimen.label.toLowerCase()} 3D specimen`}>
@@ -104,7 +104,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
         {(!supplement || practiceAdapter) && <Button ref={practiceLauncher} variant="outline" size="sm" disabled={!ready || practiceCount < 2} onClick={() => setPractice((practiceAdapter?.createRound ?? createIdentification)(specimen, visible.map(s => s.id)))}>Practise identification</Button>}
       </div>
       <div className="eye-layer-viewport">
-        <BodyScene catalog={kneeCatalog} structures={kneeStructures} selectedId={selectedId}
+        <BodyScene assetBase={assetBase} catalog={kneeCatalog} structures={kneeStructures} selectedId={selectedId}
           systems={allBodySystems} isolated={isolated && !!selected} hiddenIds={hidden} ghostRemoved={false}
           illustrated={illustrated} landmarks={visible.filter((s) => s.system !== 'skeleton').map((s) => s.id)}
           explode={explode} layout={layout} anchorSkeleton={false} showOrigins={showOrigins} originStyle="selected-guide"
@@ -114,7 +114,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
           onSelect={select} onLoaded={onLoaded} onFailure={onFailure} onRendererHealth={setHealth} />
         {!!pending.length && !errors.length && <output className="eye-layer-status">Loading {specimen.label.toLowerCase()} specimen… ({required.length - pending.length}/{required.length} groups)</output>}
         {!!errors.length && <div className="eye-layer-status" role="alert">Some specimen tissues could not load. <Button size="sm" onClick={() => {
-          retryBodyAssets(kneeCatalog.bundles.map((b) => b.url)); setLoaded([]); setFailed([]); setRetry((n) => n + 1);
+          retryBodyAssets(kneeCatalog.bundles.map((b) => b.url), assetBase); setLoaded([]); setFailed([]); setRetry((n) => n + 1);
         }}>Retry</Button></div>}
         {!visible.length && <div className="eye-layer-status">All tissues are hidden. <Button size="sm" onClick={() => preset('all')}>Show all</Button></div>}
       </div>

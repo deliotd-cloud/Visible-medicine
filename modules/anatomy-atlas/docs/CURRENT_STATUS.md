@@ -186,3 +186,7 @@ The [cardiac chamber study](CARDIAC_CHAMBERS.md) exposes 4 existing cavity shape
 - Saving/publishing and remote GitHub/D-drive recovery are evidenced by dated, verified release checkpoints, not these source counts or a same-PC module snapshot. Conversation history and private review data have separate recovery requirements.
 
 Use [the requirement/acceptance audit](REQUIREMENT_AUDIT.md), [content contract](CONTENT_CONTRACT.md), and [ordered improvement plan](CONTINUOUS_IMPROVEMENT.md) for scope. This summary is not clinical, visual, deployment or legal certification.
+
+### Female-pelvis website delivery — 12 September 2026
+
+The source-derived [female-pelvis module](FEMALE_PELVIS_WEBSITE_PILOT.md) reuses the existing workbench, eight studies and 31 draft teaching selections. All 41 meshes and source identities remain unchanged. An optional validated same-origin delivery prefix now applies to initial loading, retry and practice; standalone URLs are unchanged. Actual dependency notices and source/file hashes accompany the generated export. No private review connection, scan, registration or paid-lecture grant is added. Build, source/SSR/teaching/review and TypeScript checks pass; browser/GPU, mobile and clinical acceptance remain open. Publication and GitHub/D recovery are recorded separately in the coordinating task checkpoint.

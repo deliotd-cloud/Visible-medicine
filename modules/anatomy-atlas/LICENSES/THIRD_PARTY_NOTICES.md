@@ -495,3 +495,5 @@ npm run licenses:audit
 ```
 
 The command reads every package entry in `package-lock.json` and regenerates `dependency-license-audit.json`. The report fails to classify any newly introduced licence that is not on the reviewed commercial-compatible allowlist. Manual review remains required because package metadata can be incomplete or incorrect.
+
+The female-pelvis website export (12 September 2026) redistributes the unchanged HRA display model/catalogue with their CC BY 4.0 credit, changes and legal text, plus actual bundled dependency notices. No new model, texture, font, package or paid service is introduced. Original application/teaching terms do not replace the separate model rights. See `docs/FEMALE_PELVIS_WEBSITE_PILOT.md`.

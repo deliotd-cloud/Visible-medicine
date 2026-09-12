@@ -269,7 +269,7 @@ assert.equal(JSON.stringify(def), before);
 const component = await componentBuild({
   stdin: {
     contents:
-      "export { KneeSpecimenView } from './app/um-knee-study.tsx'; export { SpecimenIdentification } from './app/um-limb-learning.tsx'; export { hraPelvisSupplement } from './app/hra-pelvis-study.tsx';",
+      "export { KneeSpecimenView } from './app/um-knee-study.tsx'; export { SpecimenIdentification } from './app/um-limb-learning.tsx'; export { hraPelvisSupplement } from './app/hra-pelvis-study.tsx'; export { createHraPelvisSupplement } from './app/hra-pelvis-supplement.tsx'; export { modelDeliveryUrl } from './lib/model-delivery.ts';",
     resolveDir: process.cwd(),
     loader: 'tsx',
   },
@@ -323,7 +323,28 @@ for (const text of [
 ])
   assert(html.includes(text), text);
 assert.equal(context.sceneProps.catalog.sourceVersion, def.key);
+assert.equal(context.sceneProps.assetBase, undefined);
+const assetBase = '/atlas-runtime/female-pelvis';
+const websiteSupplement = mod.exports.createHraPelvisSupplement({ assetBase });
+assert.equal(websiteSupplement.studyLink, undefined);
+assert.equal(typeof mod.exports.hraPelvisSupplement.studyLink, 'function');
+const websiteHtml = render('KneeSpecimenView', { specimen:def, supplement:websiteSupplement, assetBase });
+assert(websiteHtml.includes(assetBase + '/models/hra-pelvis/pelvis.glb'));
+assert(websiteHtml.includes(assetBase + '/models/hra-pelvis/NOTICE.md'));
+assert.equal(context.sceneProps.assetBase, assetBase);
+assert.equal(context.sceneProps.catalog, def.catalog);
+assert.equal(JSON.stringify(def), before);
+const deliveryUrl = mod.exports.modelDeliveryUrl;
+assert.equal(deliveryUrl('/models/hra-pelvis/pelvis.glb'), '/models/hra-pelvis/pelvis.glb');
+assert.equal(deliveryUrl('/models/hra-pelvis/pelvis.glb', assetBase), assetBase + '/models/hra-pelvis/pelvis.glb');
+for (const badBase of ['https://example.com','//example.com','/atlas-runtime/../private','/atlas-runtime/female-pelvis/','/atlas-runtime/%66emale-pelvis']) {
+  assert.throws(() => deliveryUrl('/models/hra-pelvis/pelvis.glb',badBase));
+}
+for (const badUrl of ['https://example.com/a.glb','//example.com/a.glb','/models/../secret.glb','/models/%2e%2e/a.glb','/models/a.glb?token=x','/models/a.glb#fragment','/models/\\a.glb']) {
+  assert.throws(() => deliveryUrl(badUrl,assetBase));
+}
 const practice = render('SpecimenIdentification', {
+  assetBase,
   definition: def,
   initial: adapter.createRound(def, all, () => 0.5),
   visibleIds: all,
@@ -336,6 +357,10 @@ assert.equal(context.sceneProps.labels, false);
 assert.equal(context.sceneProps.showOrigins, false);
 assert.equal(context.sceneProps.explode, 0);
 assert.equal(context.sceneProps.catalog.sourceVersion, def.key);
+assert.equal(context.sceneProps.assetBase, assetBase);
+const bodySceneSource = await readFile('app/body-scene.tsx','utf8');
+assert(bodySceneSource.includes('useGLTF(modelDeliveryUrl(bundle.url, props.assetBase), false, true)'));
+assert(bodySceneSource.includes('useGLTF.clear(modelDeliveryUrl(url, assetBase))'));
 console.log(
   JSON.stringify({
     sourceSurfaces: 47,

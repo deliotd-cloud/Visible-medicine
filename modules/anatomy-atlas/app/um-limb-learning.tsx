@@ -69,9 +69,10 @@ export function SpecimenLearning({ definition, selected, initialTopic, resolveLe
   </details>;
 }
 
-export function SpecimenIdentification({ definition, initial, visibleIds, initialView, onClose, adapter }: {
+export function SpecimenIdentification({ definition, initial, visibleIds, initialView, onClose, adapter, assetBase }: {
   definition: SpecimenDefinition; initial: IdentificationState; visibleIds: string[]; initialView: DissectionView; onClose: () => void;
   adapter?: SpecimenPracticeAdapter;
+  assetBase?: string;
 }) {
   const [state, setState] = useState(initial), [view, setView] = useState(initialView), [zoom, setZoom] = useState(1), [reset, setReset] = useState(0);
   const [health, setHealth] = useState<RendererHealth>('starting'), [loaded, setLoaded] = useState<string[]>([]), [failed, setFailed] = useState<string[]>([]);
@@ -96,7 +97,7 @@ export function SpecimenIdentification({ definition, initial, visibleIds, initia
         <Button size="sm" variant="outline" aria-label="Zoom out" onClick={() => setZoom(z => Math.max(.6, z - .2))}>−</Button>
         <Button size="sm" variant="outline" aria-label="Zoom in" onClick={() => setZoom(z => Math.min(3, z + .2))}>+</Button>
       </div>
-      <div className="eye-layer-viewport">{target && <BodyScene catalog={definition.catalog} structures={definition.catalog.structures}
+      <div className="eye-layer-viewport">{target && <BodyScene assetBase={assetBase} catalog={definition.catalog} structures={definition.catalog.structures}
         selectedId={target.id} hiddenIds={hidden} systems={allBodySystems} isolated ghostRemoved={false} illustrated
         landmarks={[]} explode={0} layout="spatial" anchorSkeleton={false} showOrigins={false} labels={false} view={view} zoom={zoom}
         reset={reset + state.index} focus exam={false} inspection={initialInspection} cameraBounds={null} plate={false}

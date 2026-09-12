@@ -4,6 +4,8 @@
 
 The atlas retains its independently hosted application and source. A contained, same-origin shoulder module is now also integrated into the main Visible Medicine website at `/atlas/shoulder-3d`; see `SHOULDER_WEBSITE_PILOT.md`. Both are owner-review deliveries, not public/paid launch clearance. Do not change the audience or bypass login merely to make embedding work.
 
+The same delivery pattern now supports the female-pelvic workbench at `/atlas/female-pelvis-3d`; see `FEMALE_PELVIS_WEBSITE_PILOT.md` for its source-derived build/export, strict asset prefix and absent imaging/review connections. Consult the dated deployment checkpoint for what is actually hosted; source availability alone is not deployment evidence.
+
 The owner designated **Visible Medicine — Website & Atlas** as the main coordination chat on 12 September 2026. The website's `docs/master-plan.md` is the canonical shared roadmap/decision log; the parent workspace's `WORKSPACE_MAP.md` locates both repositories. Keep the original website and specialist chats intact. The repositories remain separate and recoverable; grouping work in a chat does not merge source histories or grant clinical/public-release approval.
 
 The new review workspace requires trusted authenticated-user headers and D1 storage. Keep it private even if a future anatomy viewer becomes public. Review records are per signed-in user on this Site, not shared across tasks, Sites or team accounts. A self-hosted/main-website port must replace the identity adapter and storage binding safely; never trust incoming client-supplied `oai-authenticated-user-*` headers. See `REVIEW_WORKSPACE.md`.
