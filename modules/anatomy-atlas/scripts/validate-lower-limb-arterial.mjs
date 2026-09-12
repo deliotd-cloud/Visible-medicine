@@ -50,16 +50,20 @@ const neighbours = upper
   plan = upper ? api.upperLimbArterialPlan : api.lowerLimbArterialPlan,
   concepts = upper ? api.upperArterialConcepts : api.arterialConcepts,
   relations = upper ? api.upperArterialRelations : api.arterialRelations;
-assert.equal(Object.keys(concepts).length, upper ? 28 : 20);
-assert.equal(relations.length, upper ? 30 : 20);
+assert.equal(Object.keys(concepts).length, upper ? 28 : 21);
+assert.equal(relations.length, upper ? 30 : 21);
 const targets = catalog.structures.filter((s) =>
   Object.values(concepts).some((c) => c.fmaIds.includes(s.fmaId)),
 );
-assert.equal(targets.length, upper ? 56 : 39);
+assert.equal(targets.length, upper ? 56 : 41);
 assert.equal(pins.entries.length, upper ? 116 : 94);
 {
   const extra=JSON.parse(await readFile(upper ? 'public/models/bodyparts3d/inferior-thyroid-arteries/catalog.json' : 'public/models/bodyparts3d/genicular-arteries/catalog.json'));
   pins.entries.push(...extra.structures);pins.bundles.push(...extra.bundles);
+  if (!upper) {
+    const circumflex = JSON.parse(await readFile('public/models/bodyparts3d/circumflex-femoral/catalog.json'));
+    pins.entries.push(...circumflex.structures); pins.bundles.push(...circumflex.bundles);
+  }
   if (upper) {
     const subscapular = JSON.parse(await readFile('public/models/bodyparts3d/subscapular-arteries/catalog.json'));
     pins.entries.push(...subscapular.structures); pins.bundles.push(...subscapular.bundles);
@@ -76,11 +80,11 @@ const allRows = targets.flatMap((s) =>
     direction: r.direction,
   })),
 );
-assert.equal(allRows.length, upper ? 120 : 80);
+assert.equal(allRows.length, upper ? 120 : 84);
 const uniqueEdges = new Set(
   allRows.map((r) => [r.from.id, r.to.id].sort().join('|')),
 );
-assert.equal(uniqueEdges.size, upper ? 60 : 40);
+assert.equal(uniqueEdges.size, upper ? 60 : 42);
 assert(
   allRows.every(
     (r) =>
@@ -107,6 +111,13 @@ for (const r of allRows) {
 const byFma = (f) => catalog.structures.find((s) => s.fmaId === f),
   leg = byFma(upper ? 'FMA22733' : 'FMA77380');
 if (!upper) {
+  for (const [parent, branch] of [['FMA20796','FMA21422'], ['FMA20797','FMA21423']]) {
+    const info = neighbours(catalog, 'whole-body', 'both', byFma(branch).id);
+    assert.equal(info.rows.length, 1);
+    assert.equal(info.rows[0].structure.fmaId, parent);
+    assert.equal(info.rows[0].kind, 'via-grouped');
+    assert.match(info.rows[0].note, /not a direct deep-femoral branch/);
+  }
   assert.equal(
     neighbours(catalog, testRegion, 'right', leg.id).rows.find(
       (r) => r.structure.fmaId === 'FMA43898',
@@ -444,6 +455,10 @@ for (const s of targets)
       assert(html.includes('not simultaneous connections'));
     }
     assert(html.includes(s.name));
+    if (!upper && ['FMA20796','FMA20797','FMA21422','FMA21423'].includes(s.fmaId)) {
+      assert(html.includes('Via grouped parent'));
+      assert(html.includes('not a direct deep-femoral branch'));
+    }
     assert(html.includes('Specialist review pending'));
     assert(html.includes('Show available connections &amp; bones'));
     assert(!/<details[^>]*\bopen=/.test(html));

@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**12 September — descending lateral circumflex branches:** Two distinct original branch meshes now join thigh/leg/whole-body dissection. Source overlap checks prevent duplicate parent meshes; arterial links explicitly say **Via grouped parent**. See [scope, source evidence and review requirements](docs/CIRCUMFLEX_FEMORAL.md).
+
 **Shoulder & arm → Subscapular artery** now supplies [both original source surfaces](docs/SUBSCAPULAR_ARTERIES.md). The existing Arterial connections panel links parent and branches on the same side and provides reversible isolation with bones. All 1,576 original triangles are retained; no bridging or smoothing. Clinical/device sign-off and runtime publication remain pending.
 
 **Vessels → Arteries / Veins** adds [compact visibility controls](docs/VESSEL_VISIBILITY.md) behind the existing system label. Show/hide acts on the current region and side, with mixed-state counts and shared Undo/Redo. Other tissues and camera settings stay unchanged; exams lock the controls. No new anatomy or permanently open panel. Device acceptance and runtime publication remain pending.

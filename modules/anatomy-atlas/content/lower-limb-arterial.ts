@@ -1,5 +1,6 @@
 // Original relationship metadata; no source table, artery centreline or flow simulation.
 export const arterialReferences = {
+  lateralCircumflex: 'https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/artery-tables/arteries-of-the-lower-limb/',
   university:
     'https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html',
   branching: 'https://www.ncbi.nlm.nih.gov/books/NBK536981/',
@@ -59,7 +60,12 @@ export const arterialConcepts = {
   deepFemoral: {
     fmaIds: ['FMA20796', 'FMA20797'],
     context: 'thigh',
-    note: 'Circumflex and perforating branches are not individually added by this map. It does not define a complete supply territory.',
+    note: 'This grouped source already contains the lateral circumflex femoral parent, which is not independently selectable. Its descending branch is separate and reached via that grouped parent, not treated as a direct deep-femoral branch. Medial circumflex/perforating coverage is incomplete.',
+  },
+  descendingLateralCircumflex: {
+    fmaIds: ['FMA21422', 'FMA21423'],
+    context: 'thigh',
+    note: 'The lateral circumflex parent is present within the deep-femoral aggregate, not separately selectable. This branch is not shown as a direct deep-femoral branch; no joined lumen or complete collateral network is established.',
   },
   popliteal: {
     fmaIds: ['FMA77380', 'FMA77381'],
@@ -112,6 +118,7 @@ export type ArterialRelation =
   | 'branch'
   | 'continuation'
   | 'via-unmodelled'
+  | 'via-grouped'
   | 'anastomosis';
 export const arterialRelations: readonly {
   from: ArterialConcept;
@@ -178,6 +185,12 @@ export const arterialRelations: readonly {
     to: 'deepFemoral',
     kind: 'branch',
     note: 'Deep femoral (profunda) branch.',
+  },
+  {
+    from: 'deepFemoral',
+    to: 'descendingLateralCircumflex',
+    kind: 'via-grouped',
+    note: 'Via the lateral circumflex parent contained within this source aggregate, not a direct deep-femoral branch or verified donor junction. Parent origins vary.',
   },
   {
     from: 'femoral',

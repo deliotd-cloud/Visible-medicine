@@ -8,7 +8,7 @@ import { build } from './workspace-test-build.mjs';
 const compiled = await build({
   stdin: {
     contents:
-      "export * from './lib/subscapular-arteries'; export * from './lib/arterial'; export * from './lib/body-display-catalog'; export * from './lib/anatomy-link-registry'; export * from './lib/anatomy-coordinates'; export * from './lib/study-links'; export * from './app/dissection-data'; export {bodyLesson} from './app/body-content';",
+      "export * from './lib/circumflex-femoral'; export * from './lib/arterial'; export * from './lib/body-display-catalog'; export * from './lib/anatomy-link-registry'; export * from './lib/anatomy-coordinates'; export * from './lib/study-links'; export * from './app/dissection-data'; export {bodyLesson} from './app/body-content';",
     resolveDir: process.cwd(),
     loader: 'ts',
   },
@@ -31,36 +31,43 @@ assert.equal(
 const raw = JSON.parse(rawBytes),
   before = JSON.stringify(raw),
   pins = JSON.parse(
-    await readFile('public/models/bodyparts3d/subscapular-arteries/catalog.json'),
+    await readFile('public/models/bodyparts3d/circumflex-femoral/catalog.json'),
   );
 const catalog = api.bodyDisplayCatalog(raw);
 assert(
   !catalog.structures.some((s) => ['FMA44885', 'FMA44886'].includes(s.fmaId)),
 );
+const audit = JSON.parse(await readFile('docs/circumflex-femoral-source-audit.json'));
+assert.equal(audit.screened.length, 1080);
+for (const old of audit.screened) {
+  const actual = catalog.structures.find(s => s.id === old.id);
+  assert.equal(createHash('sha256').update(JSON.stringify(actual)).digest('hex'), old.recordSha256, 'Existing source record unchanged');
+}
+assert(!catalog.structures.some(s => ['FMA20801','FMA20802'].includes(s.fmaId)), 'Do not duplicate an existing grouped surface');
 assert.equal(raw.structures.length, 1022);
 assert.equal(catalog.structures.length, 1082);
 assert.equal(JSON.stringify(raw), before);
 assert.equal(api.bodyDisplayCatalog(catalog), catalog);
 assert.deepEqual(
-  catalog.structures.filter((s) => s.bundle === 'subscapular-arteries'),
+  catalog.structures.filter((s) => s.bundle === 'circumflex-femoral'),
   pins.structures,
 );
-for (const s of catalog.structures.filter(s => s.bundle !== 'subscapular-arteries'))
+for (const s of catalog.structures.filter(s => s.bundle !== 'circumflex-femoral'))
   for (const tab of ['anatomy', 'function', 'quiz', 'ct', 'mri', 'xray', 'ultrasound', 'clinical', 'pathology'])
-    assert.equal(api.subscapularArteryLesson(s, tab), undefined, `Preserve existing topic ${s.id}/${tab}`);
-const detached = api.addSubscapularArteries(raw);
+    assert.equal(api.circumflexFemoralLesson(s, tab), undefined, `Preserve existing topic ${s.id}/${tab}`);
+const detached = api.addCircumflexFemoralBranches(raw);
 detached.structures.at(-1).anchor[0] = 999;
 assert.deepEqual(
-  api.addSubscapularArteries(raw).structures.slice(-2),
+  api.addCircumflexFemoralBranches(raw).structures.slice(-2),
   pins.structures,
 );
 const unrelated = { ...raw, structures: [], bundles: [] };
-assert.equal(api.addSubscapularArteries(unrelated), unrelated);
+assert.equal(api.addCircumflexFemoralBranches(unrelated), unrelated);
 let rejections = 0;
 const reject = (mutate) => {
   const bad = structuredClone(catalog);
   mutate(bad);
-  assert.throws(() => api.addSubscapularArteries(bad));
+  assert.throws(() => api.addCircumflexFemoralBranches(bad));
   rejections++;
 };
 for (const p of [...pins.contextRecords, ...pins.structures]) {
@@ -96,7 +103,7 @@ for (const field of ['sourceVersion', 'license', 'coordinateSystem'])
     c[field] = 'changed';
   });
 const bytes = await readFile(
-  'public/models/bodyparts3d/subscapular-arteries/subscapular-arteries.glb',
+  'public/models/bodyparts3d/circumflex-femoral/circumflex-femoral.glb',
 );
 assert.equal(
   createHash('sha256').update(bytes).digest('hex'),
@@ -132,17 +139,18 @@ for (const s of pins.structures) {
   assert.equal(upstream.length, 1);
   assert.equal(
     upstream[0].structure.fmaId,
-    s.laterality === 'right' ? 'FMA22655' : 'FMA22656',
+    s.laterality === 'right' ? 'FMA20796' : 'FMA20797',
   );
-  assert.equal(upstream[0].kind, 'branch');
+  assert.equal(upstream[0].kind, 'via-grouped');
+  assert.match(upstream[0].note, /not a direct deep-femoral branch/);
   const branches = info.rows.filter(r => r.direction === 'downstream');
-  assert.deepEqual(branches.map(r => r.structure.fmaId).sort(), (s.laterality === 'right' ? ['FMA23180','FMA66321'] : ['FMA23181','FMA66322']).sort());
+  assert.deepEqual(branches, []);
   assert(info.rows.every((r) => r.structure.laterality === s.laterality));
-  assert.match(api.bodyLesson(s, 'anatomy').body, /axillary/);
+  assert.match(api.bodyLesson(s, 'anatomy').body, /lateral circumflex/);
 
   const positions = mesh.geometry.attributes.position.array;
   const original = await readFile(
-    'content/sources/subscapular-arteries/' + s.sources[0].file + '.obj',
+    'content/sources/circumflex-femoral/' + s.sources[0].file + '.obj',
   );
   assert.equal(
     createHash('sha256').update(original).digest('hex'),
@@ -232,11 +240,11 @@ for (const s of pins.structures) {
   ])
     assert.equal(api.bodyLesson(s, tab).readiness, 'pending');
   assert.equal(
-    api.subscapularArteryLesson({ ...s, anchor: [0, 0, 0] }, 'anatomy'),
+    api.circumflexFemoralLesson({ ...s, anchor: [0, 0, 0] }, 'anatomy'),
     undefined,
   );
 }
-assert.equal(triangles, 1576);
+assert.equal(triangles, 10464);
 for (let i = 0; i < sourceShapes.length; i++)
   for (let j = i + 1; j < sourceShapes.length; j++) {
     const a = sourceTriangleSet(sourceShapes[i]),

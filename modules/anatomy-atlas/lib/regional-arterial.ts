@@ -17,6 +17,7 @@ export type ArterialRelationKind =
   | 'branch'
   | 'continuation'
   | 'via-unmodelled'
+  | 'via-grouped'
   | 'anastomosis'
   | 'variant';
 export type ArterialDefinitions = Record<

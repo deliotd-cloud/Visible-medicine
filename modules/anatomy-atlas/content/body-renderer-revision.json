@@ -38,7 +38,7 @@
     },
     {
       "path": "app/arterial-connections.tsx",
-      "sha256": "b1afc45839a634a7329b7e09c92e57fb2673adf70d757714437a681d83a79695"
+      "sha256": "55be8b17f90245bbca2bb5adfb522a16f5cf6f41f029131b5817c0f26230f2a3"
     },
     {
       "path": "app/atlas-workspace.css",
@@ -58,7 +58,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "6e04963c0ab7c90e041d9d4b0b9c79d5f4d6fd3d61c9462f498ada8c29c7fd1b"
+      "sha256": "b1585dc3d40d93e543e8bd2d462107cade09f34cb2fd70e1edc98a238ab992b1"
     },
     {
       "path": "app/body-explorer.css",
@@ -518,7 +518,7 @@
     },
     {
       "path": "content/lower-limb-arterial.ts",
-      "sha256": "e8d37a6721002d91b8f546b59af40da3acaff1968aeb44936c44e1a95da83887"
+      "sha256": "f5458ec67d394e37d50a578ec71291f16582a3645a097ff8a503eee6692b68dc"
     },
     {
       "path": "content/lower-limb-motor-pins.json",
@@ -798,7 +798,7 @@
     },
     {
       "path": "lib/body-display-catalog.ts",
-      "sha256": "5a9cfae09944cf90f087e75fada13d35b9c5876895347bd05e1aa45fa263b44d"
+      "sha256": "5faad874e43e90a33a57434983319cbf17caa1123feb604bd7cb99b5cb240e3d"
     },
     {
       "path": "lib/body-source-additions.ts",
@@ -847,6 +847,10 @@
     {
       "path": "lib/cerebral.ts",
       "sha256": "10138a8bad86e98cc03dc458c3d9b7245dace9369ded56c980623b15c6d6fdff"
+    },
+    {
+      "path": "lib/circumflex-femoral.ts",
+      "sha256": "71313635f2ae5a4fa5f7726adf6f6e92fb48a4ae2e43fd7a721860c062a7ccf4"
     },
     {
       "path": "lib/close-up-labels.ts",
@@ -1154,7 +1158,7 @@
     },
     {
       "path": "lib/lower-limb-arterial.ts",
-      "sha256": "d332b1cced3f2b6dcea987b0d1f3861e0d5350d029927e4d71697bbeef7766d5"
+      "sha256": "3d4dba4d517088183dd5a21957c3d0a35862f8c0ad4d69be1395dc2ea6a2d338"
     },
     {
       "path": "lib/lower-limb-motor.ts",
@@ -1278,7 +1282,7 @@
     },
     {
       "path": "lib/regional-arterial.ts",
-      "sha256": "304c2141126aab659f8c6852a004ec004a2017dcb2cb266124cb82a9733edb8f"
+      "sha256": "955b828dbfe67997e0cc550d529d7256ae4e37d95ba4114152c731ffdddeed73"
     },
     {
       "path": "lib/regional-bone-joints.ts",
@@ -1534,7 +1538,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "5e6a822e2ca5844aadc51513156fe39207a76a8c6f7d4fa89cddf414b5dea102"
+      "sha256": "a49f9266f4f670c9401d9f13088e8b3293f0b1fffd7586f9a746af9ef90637e8"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1563,6 +1567,10 @@
     {
       "path": "public/models/bodyparts3d/cerebral/catalog.json",
       "sha256": "8dbcf8e0cbc5aff4c468e2eeda2e57fb048c65515ce35257b56f2247267624de"
+    },
+    {
+      "path": "public/models/bodyparts3d/circumflex-femoral/catalog.json",
+      "sha256": "6d74b75f7ace9cf7b6cb86a52c6f4285ef213876b71cb91c28a67e69ad8acf93"
     },
     {
       "path": "public/models/bodyparts3d/collicular-brachia/catalog.json",
@@ -1705,5 +1713,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "923ace69f2dbf7bcad47ef77f6aacdffe36c3e88e5fd6e3a8ea1384d4eec9481"
+  "sha256": "69e34f24391c312ab2e6d04f86764f555520ab3e52378a8b6fe23da4ce7442cc"
 }

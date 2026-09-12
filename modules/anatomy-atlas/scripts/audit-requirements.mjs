@@ -159,6 +159,8 @@ const genicularAudit = await json('docs/genicular-artery-source-audit.json');
 const inferiorThyroid = await json('public/models/bodyparts3d/inferior-thyroid-arteries/catalog.json');
 const subscapular = await json('public/models/bodyparts3d/subscapular-arteries/catalog.json');
 const subscapularAudit = await json('docs/subscapular-artery-source-audit.json');
+const circumflexFemoral = await json('public/models/bodyparts3d/circumflex-femoral/catalog.json');
+const circumflexFemoralAudit = await json('docs/circumflex-femoral-source-audit.json');
 const deferentDucts = await json('public/models/bodyparts3d/deferent-ducts/catalog.json');
 const deferentDuctAudit = await json('docs/deferent-duct-source-audit.json');
 const inferiorEpigastric = await json('public/models/bodyparts3d/inferior-epigastric-vessels/catalog.json');
@@ -421,6 +423,9 @@ for (const path of [
   'public/models/bodyparts3d/subscapular-arteries/catalog.json',
   'docs/subscapular-artery-source-audit.json',
   'lib/subscapular-arteries.ts',
+  'public/models/bodyparts3d/circumflex-femoral/catalog.json',
+  'docs/circumflex-femoral-source-audit.json',
+  'lib/circumflex-femoral.ts',
   'docs/inferior-thyroid-source-audit.json',
   'docs/muscle-part-condition-audit.json',
   'content/inferior-thyroid-context-pins.json',
@@ -664,6 +669,14 @@ const report = {
   sourceHashes,
   rendering: { bodyBatching: await json('docs/body-batching-baseline.json'), gpuAcceptance: false },
   anatomy: {
+    circumflexFemoralBranches: {
+      selections: circumflexFemoral.structures.length,
+      originalTriangles: circumflexFemoralAudit.groups.filter(g => g.status === 'candidate').reduce((n,g) => n + g.topology.triangles, 0),
+      alreadyGroupedParents: circumflexFemoralAudit.groups.filter(g => g.status === 'already-in-deep-femoral-aggregate').length,
+      preservedRootRecords: circumflexFemoralAudit.screened.length,
+      clinicalApproval: false,
+      continuousLumenClaimed: false,
+    },
     subscapularArteries: {
       selections: subscapular.structures.length,
       originalTriangles: subscapularAudit.groups.reduce((n,g) => n + g.topology.triangles, 0),

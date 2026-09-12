@@ -20,7 +20,7 @@ import {
   shapeCandidate,
   compareTranslatedShape,
 } from './vessel-shape-math.mjs';
-import { subscapularArterySources } from './subscapular-artery-sources.mjs';
+import { circumflexFemoralSources } from './circumflex-femoral-sources.mjs';
 const hash = (b) => createHash('sha256').update(b).digest('hex');
 import { build } from 'esbuild';
 const {
@@ -47,14 +47,13 @@ const { bodyDisplayCatalog } = await import(
     Buffer.from(built.outputFiles[0].text).toString('base64')
 );
 const display = bodyDisplayCatalog(raw);
-// Retain this milestone's source scope. The later circumflex audit independently
-// screens its addition against all 1,080 prior records, including these arteries.
+// Audit is replayable after admission; exclude only this separately pinned addition.
 const catalog = {
   ...display,
   structures: display.structures.filter(
-    (s) => !['subscapular-arteries', 'circumflex-femoral'].includes(s.bundle),
+    (s) => !['circumflex-femoral'].includes(s.bundle),
   ),
-  bundles: display.bundles.filter((b) => !['subscapular-arteries', 'circumflex-femoral'].includes(b.id)),
+  bundles: display.bundles.filter((b) => !['circumflex-femoral'].includes(b.id)),
 };
 async function shape(tree, file, sha) {
   const bytes = await readFile(`../work/bodyparts3d/${tree}/${file}.obj`);
@@ -63,7 +62,7 @@ async function shape(tree, file, sha) {
 }
 const shapes = new Map(),
   groups = [];
-for (const candidate of subscapularArterySources) {
+for (const candidate of circumflexFemoralSources) {
   const definition = records.find(
     (r) => r.tree === 'isa' && r.id === candidate.id,
   );
@@ -164,19 +163,27 @@ for (const owner of catalog.structures) {
     });
   }
 }
-assert(
-  groups.every(
-    (g) => !g.directOwners.length && !g.exactInventoryMatches.length,
-  ),
-);
-assert(
-  comparisons.every(
-    (c) => !c.exactSharedTriangles && !c.translatedDiagnostic?.similar,
-  ),
-);
+// Distinguish source presence inside an existing aggregate from a new selection.
+for (const g of groups) {
+  const shared = comparisons.filter(c => c.candidate === g.id && c.exactSharedTriangles);
+  g.admissionApproved = false;
+  if (['FMA20801', 'FMA20802'].includes(g.id)) {
+    assert.equal(shared.length, 1);
+    assert.equal(shared[0].referenceFma, g.side === 'right' ? 'FMA20796' : 'FMA20797');
+    assert.equal(shared[0].exactSharedTriangles, g.topology.triangles);
+    g.status = 'already-in-deep-femoral-aggregate';
+    g.reason = 'Every source triangle is already owned by the same-side deep-femoral aggregate. Separate admission requires a source-preserving partition, not overlapping root meshes.';
+  } else {
+    assert(!g.directOwners.length && !g.exactInventoryMatches.length);
+    assert(!shared.length);
+    assert(comparisons.filter(c => c.candidate === g.id).every(c => !c.translatedDiagnostic?.similar));
+    g.status = 'candidate';
+    g.reason = 'No duplicate root surface found in bounded screening; source and clinical review remain separate.';
+  }
+}
 const result = {
   schemaVersion: 1,
-  sourceCommit: 'f271f3f1eab729a62766fc61a23bb91ad3fdc1d0',
+  sourceCommit: '489c25f1c1be352334acf5617f8166a8b58f1243',
   evidence,
   supplementalEvidence,
   license: catalog.license,
@@ -191,16 +198,16 @@ const result = {
   geometryModified: false,
   clinicalApproval: false,
   limitations: [
-    'Two complete IS-A subscapular artery definitions; broader PART-OF aggregates include existing circumflex scapular/thoracodorsal branches and must not be imported as duplicate tissue. Finite surfaces do not establish complete shoulder supply or continuous lumens.',
+    'Four IS-A definitions screened against existing deep-femoral aggregates and all other root envelopes. Existing component ownership and near-duplicate source geometry require separate review; this audit grants no admission and does not establish a continuous lumen.',
     'Topology and bounded distances do not prove absence of self-intersection or clinical correctness. No donor junction or vessel centreline inferred.',
     'No fitting, mirroring, smoothing, bridge or face removal. Archive CRC and size checked on retrieval; exact source hashes retained.',
   ],
 };
 const output = JSON.stringify(result, null, 2) + '\n',
-  path = 'docs/subscapular-artery-source-audit.json';
+  path = 'docs/circumflex-femoral-source-audit.json';
 if (process.argv.includes('--check'))
   assert.equal((await readFile(path, 'utf8')).replace(/\r\n/g, '\n'), output);
-else await writeFile(path, output, { flag: 'wx' });
+else await writeFile(path, output);
 console.log(
   JSON.stringify({
     groups: groups.length,
@@ -208,7 +215,7 @@ console.log(
     comparisons: comparisons.length,
     triangles: groups.reduce((n, g) => n + g.topology.triangles, 0),
     closest: comparisons
-      .filter((c) => /FMA2265[56]|FMA2318[01]|FMA6632[12]/.test(c.referenceFma))
+      .filter((c) => /FMA2079[67]|FMA702[45][09]/.test(c.referenceFma))
       .map((c) => ({
         candidate: c.candidate,
         to: c.referenceFma,

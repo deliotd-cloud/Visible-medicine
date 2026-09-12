@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Descending lateral circumflex femoral branches](CIRCUMFLEX_FEMORAL.md) add ${anatomy.circumflexFemoralBranches.selections} original source selections and ${anatomy.circumflexFemoralBranches.originalTriangles} retained triangles. Both lateral circumflex parents already exist inside deep-femoral aggregates and are not duplicated. Existing arterial navigation distinguishes routes through grouped parents from direct branches or absent segments; all ${anatomy.circumflexFemoralBranches.preservedRootRecords} prior source records remain unchanged. Draft teaching is not clinical approval, continuous-lumen proof or patient registration.
+
 [Subscapular arteries](SUBSCAPULAR_ARTERIES.md) add ${anatomy.subscapularArteries.selections} original source selections and ${anatomy.subscapularArteries.originalTriangles} retained triangles. Existing arterial navigation now links each to its same-side axillary parent and circumflex scapular/thoracodorsal branches, with reversible context isolation. No guessed connecting geometry, complete collateral circuit, patient registration or clinical approval.
 
 [Compact vessel controls](VESSEL_VISIBILITY.md) separate the existing ${study.vesselVisibilityGroups.map(g=>`${g.total} ${g.kind} selections`).join(' and ')} behind the Vessels label. Region/side-scoped show/hide, mixed visibility and shared Undo/Redo reuse the current dissection; other tissues, camera, classification and geometry stay unchanged. No new default panel or patient-imaging event. Browser/device and clinical acceptance remain separate.

@@ -38,6 +38,7 @@ export function ArterialConnections({
     branch: 'Branch',
     continuation: 'Continuation',
     'via-unmodelled': 'Via unmodelled segment',
+    'via-grouped': 'Via grouped parent',
     anastomosis: 'Anastomosis · no flow direction assigned',
     variant: 'Alternative route · not simultaneous connections',
   };

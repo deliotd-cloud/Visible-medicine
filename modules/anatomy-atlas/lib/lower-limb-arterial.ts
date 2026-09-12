@@ -1,5 +1,6 @@
 import originalPins from '../content/lower-limb-arterial-pins.json' with { type: 'json' };
 import genicular from '../public/models/bodyparts3d/genicular-arteries/catalog.json' with { type: 'json' };
+import circumflex from '../public/models/bodyparts3d/circumflex-femoral/catalog.json' with { type: 'json' };
 import {
   arterialConcepts,
   arterialRelations,
@@ -11,8 +12,8 @@ export type { ArterialNeighbour } from './regional-arterial';
 const explorer = createArterialExplorer(
   {
     ...originalPins,
-    entries: [...originalPins.entries, ...genicular.structures],
-    bundles: [...originalPins.bundles, ...genicular.bundles],
+    entries: [...originalPins.entries, ...genicular.structures, ...circumflex.structures],
+    bundles: [...originalPins.bundles, ...genicular.bundles, ...circumflex.bundles],
   },
   arterialConcepts,
   arterialRelations,
