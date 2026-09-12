@@ -93,6 +93,8 @@ milestone; retain the full goal and the specialist imaging boundaries.
 
 ## Decision log
 
+- **2026-09-12 — consistent camera controls:** [Zoom evidence](anatomy-zoom.md) documents the corrected regional +/- direction and live-camera step composition shared by shoulder, whole-body, regional dissection and identification practice. The three website modules are regenerated from Atlas `720e44a10b96b10aaa600451dd5a491a79c26c31`. Source geometry, teaching, default fit bounds and saved-view formats are unchanged; no new UI clutter, dependency, private imaging or clinical approval is introduced. Synthetic camera/restore tests and sampled actual-browser checks have distinct scopes. The main task's `work/CAMERA-ZOOM-CHECKPOINT-20260912.md` records exact recovery and private-publication evidence. Continue regional framing, anatomy/teaching and real Education acceptance under the existing roadmap.
+
 - **2026-09-12 — owner:** This task becomes the main Visible Medicine website/Atlas chat; preserve the other histories and specialist work.
 - **2026-09-12 — carried forward owner decisions:** Didanix light/education for imaging; independent paid-lecture entitlement; user is the radiologist sign-off owner; local datasets remain private pending release evidence; detailed atlas with compact navigation; lower priority for oral cavity.
 - **2026-09-12 — implementation:** Optional same-origin two-way selection port saved, backed up and included in website private version 38; no real study attached. Standalone deployment remains older after upload timeout.

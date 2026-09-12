@@ -13,7 +13,7 @@
   },
   {
     "path": "app/anatomy-scene.tsx",
-    "sha256": "1031581d79af8c43423489292c1932014e06e8c3738e85e65ae753e1a3a7eece"
+    "sha256": "04382a609082f18bc305939ec1c00af70f5bcb37cc53c6a98c3fbc74246caf9e"
   },
   {
     "path": "app/atlas-panel.css",
@@ -53,7 +53,7 @@
   },
   {
     "path": "app/fitted-camera.tsx",
-    "sha256": "b72479d7c919ee7a17c995e420cfd212aa857d57d6671988bbf6f14b591594bf"
+    "sha256": "1600c8677ec86b3236cf33a6ef88d19b6f5bb2c754542affe8a982684c5360c8"
   },
   {
     "path": "app/globals.css",
@@ -105,7 +105,7 @@
   },
   {
     "path": "app/shoulder-explorer.tsx",
-    "sha256": "171894afb63fa1f7fcd8ec87b4595145af77cac92685ce767f1521ba7a6172ba"
+    "sha256": "f3407fcd49efd2d9f5a47b215fa249b1940c0844e8288bd3468f424a28dbc58b"
   },
   {
     "path": "app/shoulder-workspace.css",
@@ -261,7 +261,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "6e808a366e22f745c9f4cd218f2e5015fbd53cfcda5ed30a420212d89992527d"
+    "sha256": "41642fde73119475f87a1291b5118df1afcaeb7d9dc4931cdfb17b307c62ebed"
   },
   {
     "path": "content/shoulder-xray-bindings.json",
@@ -430,6 +430,10 @@
   {
     "path": "lib/brainstem.ts",
     "sha256": "c1672c0d2e21d0fb3b752b6cb001a970b071fa492b218a9c788a476754fc24a9"
+  },
+  {
+    "path": "lib/camera-zoom.ts",
+    "sha256": "06263f767e08d8b374005f198c72227c3550767628d6096c24fd698331ea432d"
   },
   {
     "path": "lib/cardiac.ts",

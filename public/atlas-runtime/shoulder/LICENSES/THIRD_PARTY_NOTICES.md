@@ -1,5 +1,9 @@
 # Third-party notices
 
+## Female pelvic context teaching — 12 September 2026
+
+Original short factual teaching and source links cover the ten remaining retained pelvic selections. No reference prose, tables, figures, scans or diagrams are redistributed. Linked AVLS CC BY-NC, ISUOG permission-controlled, VI-RADS copyrighted and third-party SEER media are not imported or treated as commercial assets. No dependency, font, texture, model or paid service is added. Original text/code retain MIT terms; HRA source rights remain CC BY 4.0 with existing credits and change notices. See `docs/FEMALE_PELVIC_CONTEXT_TEACHING.md`.
+
 ## Didanix Education selection adapter — 12 September 2026
 
 Original MIT integration code and synthetic test fixtures extend the existing selection bridge and source-bound learning registry. No package, font, mesh, texture, patient study, external diagram, paid service or clinical PACS component is added. Existing source and dependency notices are unchanged. See [adapter scope and release boundaries](../docs/DIDANIX_SELECTION_ADAPTER.md).
