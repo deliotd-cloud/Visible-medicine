@@ -1,5 +1,7 @@
 # Cardiac chamber–vessel comparisons
 
+The later [circulation walkthrough](CARDIAC_CIRCULATION.md) links these four guides with the two existing right/left chamber-pair views. The original source evidence and four guide definitions below are preserved; the walkthrough adds no vessel, valve or flow geometry.
+
 Open **Heart → Explore heart chambers → Study view**. Four additional choices expose relevant great-vessel landmarks beside one chamber cavity, using the existing panel and camera controls. No new toolbar, route or whole-heart overlay is added.
 
 | Study view | Selected cavity | Orientation context | Initial camera |

@@ -1,7 +1,11 @@
 {
   "passed": true,
-  "checks": 403,
+  "checks": 534,
   "guidedPresets": 4,
+  "circulationSteps": 6,
+  "atrioventricularComparisons": 2,
+  "circulationExitPaths": 6,
+  "layerRedoDoesNotRestartWalkthrough": true,
   "contextStructures": 8,
   "sourceFiles": 11,
   "sourceTriangles": 9720,

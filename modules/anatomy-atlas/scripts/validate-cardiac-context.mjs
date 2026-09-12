@@ -28,6 +28,7 @@ const compiled = await build({
   stdin: {
     contents: `export {VentricularView} from './app/ventricles';
   export * from './lib/cardiac'; export * from './lib/cardiac-context';
+  export * from './lib/cardiac-circulation';
   export * from './lib/nested-anatomy'; export * from './app/cutaway-controls';`,
     resolveDir: process.cwd(),
     loader: 'tsx',
@@ -264,8 +265,8 @@ const nodes = (n) =>
       ? n.flatMap(nodes)
       : [n, ...nodes(n.props?.children)];
 const text = (n) =>
-  typeof n === 'string'
-    ? n
+  typeof n === 'string' || typeof n === 'number'
+    ? String(n)
     : !n
       ? ''
       : Array.isArray(n)
@@ -414,10 +415,149 @@ for (const action of ['select', 'undo', 'visibility']) {
   );
   same(scene().catalog.bundles.length, 1);
 }
+// The guided sequence reuses exact source views; no timed flow or extra meshes.
+const steps = api.cardiacCirculationFor(parent);
+same(
+  steps.map((s) => s.preset),
+  [
+    'right-atrial-inflow',
+    'right',
+    'pulmonary-outflow',
+    'left-atrial-inflow',
+    'left',
+    'aortic-outflow',
+  ],
+);
+same(
+  steps.map((s) => s.selectedIds.length),
+  [1, 2, 1, 1, 2, 1],
+);
+same(api.cardiacCirculationFor(null), []);
+for (const mutate of [
+  (p) => {
+    p.sources[0].sha256 = '0'.repeat(64);
+  },
+  (p) => {
+    p.bounds.min[0] += 1;
+  },
+  (p) => {
+    p.laterality = 'right';
+  },
+]) {
+  const stale = clone(parent);
+  mutate(stale);
+  same(api.cardiacCirculationFor(stale), []);
+}
+slots.length = 0;
+render();
+check(!text(tree).includes('Step 1 of 6'));
+same(scene().catalog.bundles.length, 1);
+button('Follow circulation').onClick();
+render();
+for (let index = 0; index < steps.length; index++) {
+  const step = steps[index];
+  same(selector('ventricular-preset').value, step.preset);
+  same(scene().selectedId, step.selectedIds[0]);
+  same(scene().view, step.view);
+  same(scene().explode, 0);
+  same(scene().inspection.plane, 'off');
+  same(scene().isolated, false);
+  same(scene().catalog.bundles.length, step.context ? 2 : 1);
+  same(
+    visible()
+      .filter((s) => api.cardiacCatalog.selectableIds.includes(s.id))
+      .map((s) => s.id)
+      .sort(),
+    [...step.selectedIds].sort(),
+  );
+  check(text(tree).includes(`Step ${index + 1} of 6`));
+  check(text(tree).includes(step.body));
+  same(button('Previous step').disabled, index === 0);
+  const html = require('react-dom/server').renderToStaticMarkup(tree);
+  check(html.includes('not beat timing or a flow simulation'));
+  check(html.includes(step.reference));
+  same((html.match(/aria-label="Circulation walkthrough"/g) ?? []).length, 1);
+  // The two chambers stay independently selectable inside an AV comparison.
+  if (step.selectedIds.length === 2) {
+    scene().onSelect(step.selectedIds[1]);
+    render();
+    check(text(tree).includes(step.title));
+    same(scene().selectedId, step.selectedIds[1]);
+  }
+  if (index > 0) {
+    button('Previous step').onClick();
+    render();
+    same(selector('ventricular-preset').value, steps[index - 1].preset);
+    button('Next step').onClick();
+    render();
+    same(scene().selectedId, step.selectedIds[0]);
+  }
+  button('Fade others').onClick();
+  selector('Cardiac separation mechanism').onValueChange('spatial');
+  render();
+  nodes(tree)
+    .find((n) => n.props?.['aria-label'] === 'Cardiac separation')
+    .props.onValueChange([50]);
+  const cut = nodes(tree).find((n) => n.type === api.CutawayControls).props;
+  cut.onChange({ ...cut.value, plane: 'axial', position: 30 });
+  render();
+  check(text(tree).includes('Separated teaching layout'));
+  same(scene().catalog.bundles.length, 1);
+  button(
+    index === steps.length - 1 ? 'Finish walkthrough' : 'Next step',
+  ).onClick();
+  render();
+}
+check(
+  !nodes(tree).some(
+    (n) => n.props?.['aria-label'] === 'Circulation walkthrough',
+  ),
+);
+same(selector('ventricular-preset').value, 'all');
+same(scene().inspection.plane, 'off');
+same(scene().explode, 0);
+for (const action of [
+  'exit',
+  'preset',
+  'select',
+  'visibility',
+  'undo',
+  'reassemble',
+]) {
+  button('Follow circulation').onClick();
+  render();
+  if (action === 'exit') button('Exit walkthrough').onClick();
+  else if (action === 'preset')
+    selector('ventricular-preset').onValueChange('atria');
+  else if (action === 'select') scene().onSelect(steps[3].selectedIds[0]);
+  else if (action === 'visibility')
+    nodes(tree)
+      .find((n) => n.props?.onCheckedChange)
+      .props.onCheckedChange(false);
+  else
+    button(action === 'undo' ? 'Undo layers' : 'Reassemble').onClick();
+  render();
+  check(
+    !nodes(tree).some(
+      (n) => n.props?.['aria-label'] === 'Circulation walkthrough',
+    ),
+  );
+}
+button('Follow circulation').onClick(); render();
+button('Next step').onClick(); render();
+button('Undo layers').onClick(); render();
+same(button('Redo layers').disabled, false);
+button('Redo layers').onClick(); render();
+check(!nodes(tree).some(n => n.props?.['aria-label'] === 'Circulation walkthrough'));
+same(selector('ventricular-preset').value, 'right');
 const report = {
   passed: true,
   checks,
   guidedPresets: 4,
+  circulationSteps: steps.length,
+  atrioventricularComparisons: 2,
+  circulationExitPaths: 6,
+  layerRedoDoesNotRestartWalkthrough: true,
   contextStructures: 8,
   sourceFiles: 11,
   sourceTriangles: triangles,

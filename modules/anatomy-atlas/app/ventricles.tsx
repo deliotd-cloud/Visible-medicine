@@ -1,5 +1,6 @@
 'use client';
 import { useCallback, useMemo, useReducer, useState } from 'react';
+import { cardiacCirculationFor } from '@/lib/cardiac-circulation';
 import { NestedTeaching } from './nested-teaching';
 import type { NestedImagingTopic } from '@/content/nested-teaching';
 import {
@@ -156,7 +157,10 @@ const relationshipSelectionIds = (r: {
 }) => r.visibleIds ?? [r.spaceId];
 
 export type BrainStudy =
-  'ventricles' | 'brainstem' | 'cerebral' | 'visual-pathway';
+  | 'ventricles'
+  | 'brainstem'
+  | 'cerebral'
+  | 'visual-pathway';
 export type ComponentStudy =
   | BrainStudy
   | 'cardiac'
@@ -357,9 +361,7 @@ export function VentricularView({
               arteries: 'Arterial branches',
               veins: 'Venous groups',
               adrenal: 'Adrenal vessels',
-              ...Object.fromEntries(
-                relationships.map((r) => [r.id, r.title]),
-              ),
+              ...Object.fromEntries(relationships.map((r) => [r.id, r.title])),
             }
           : isHepatic
             ? {
@@ -481,6 +483,13 @@ export function VentricularView({
     [retry, setRetry] = useState(0);
   const [health, setHealth] = useState<RendererHealth>('starting');
   const [relationshipId, setRelationshipId] = useState<string | null>(null);
+  const [circulationIndex, setCirculationIndex] = useState<number | null>(null);
+  const circulationSteps = useMemo(
+    () => (isCardiac ? cardiacCirculationFor(parent) : []),
+    [isCardiac, parent],
+  );
+  const circulation =
+    circulationIndex === null ? null : circulationSteps[circulationIndex];
   const airwayContext = useMemo(
     () => (isPulmonary ? pulmonaryAirwayFor(parent) : []),
     [isPulmonary, parent],
@@ -603,8 +612,7 @@ export function VentricularView({
                                 : '#9ba7a5'
                           : isCerebral
                             ? (cerebralGroups.find(
-                                (g) =>
-                                  g.id === (s as CerebralStructure).group,
+                                (g) => g.id === (s as CerebralStructure).group,
                               )?.colour ?? '#9ba7a5')
                             : colours[index],
               opacity:
@@ -647,18 +655,23 @@ export function VentricularView({
   );
   function select(id: string) {
     if (!selectableIds.includes(id)) return;
+    if (circulation && !circulation.selectedIds.includes(id))
+      setCirculationIndex(null);
     dispatch({ type: 'select', id });
     if (relationship && !relationshipSelectionIds(relationship).includes(id))
       setRelationshipId(null);
     setFocus(false);
   }
-  function preset(value: string) {
+  function preset(value: string, selection?: string) {
     if (!Object.hasOwn(presets, value)) return;
+    setCirculationIndex(null);
     const nextRelationship = relationships.find((r) => r.id === value);
     dispatch({
       type: 'preset',
       value,
-      ...(nextRelationship ? { selectedId: nextRelationship.spaceId } : {}),
+      ...(selection || nextRelationship
+        ? { selectedId: selection ?? nextRelationship!.spaceId }
+        : {}),
     });
     setRelationshipId(nextRelationship?.id ?? null);
     if (nextRelationship) {
@@ -670,6 +683,15 @@ export function VentricularView({
     setFocus(false);
     setIsolated(false);
     setInspection(initialInspection);
+  }
+  function circulationStep(index: number) {
+    const step = circulationSteps[index];
+    if (!step) return;
+    preset(step.preset, step.selectedIds[0]);
+    setContext(step.context);
+    setView(step.view);
+    setReset((v) => v + 1);
+    setCirculationIndex(index);
   }
   const presetValue =
     relationship?.id ??
@@ -837,8 +859,8 @@ export function VentricularView({
       >
         {isPulmonary && (
           <p className="muted">
-            Airway and vessel groups only. Lobe tissue and fissure surfaces
-            are not supplied.
+            Airway and vessel groups only. Lobe tissue and fissure surfaces are
+            not supplied.
           </p>
         )}
         <div className="eye-layer-presets">
@@ -866,6 +888,65 @@ export function VentricularView({
             </SelectContent>
           </Select>
         </div>
+        {circulationSteps.length > 0 &&
+          (circulation ? (
+            <section
+              className="ventricular-relationship cardiac-circulation"
+              aria-label="Circulation walkthrough"
+            >
+              <p role="status">
+                Step {circulationIndex! + 1} of {circulationSteps.length} ·{' '}
+                {circulation.title}
+              </p>
+              <p>{circulation.body}</p>
+              <p className="muted">
+                Draft teaching sequence, not beat timing or a flow simulation.
+                Both sides of the heart work together.
+              </p>
+              <div className="cardiac-circulation-actions">
+                <Button
+                  size="sm"
+                  variant="outline"
+                  disabled={circulationIndex === 0}
+                  onClick={() => circulationStep(circulationIndex! - 1)}
+                >
+                  Previous step
+                </Button>
+                <Button
+                  size="sm"
+                  onClick={() =>
+                    circulationIndex === circulationSteps.length - 1
+                      ? preset('all')
+                      : circulationStep(circulationIndex! + 1)
+                  }
+                >
+                  {circulationIndex === circulationSteps.length - 1
+                    ? 'Finish walkthrough'
+                    : 'Next step'}
+                </Button>
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  onClick={() => setCirculationIndex(null)}
+                >
+                  Exit walkthrough
+                </Button>
+              </div>
+              <a href={circulation.reference} target="_blank" rel="noreferrer">
+                Teaching reference ·{' '}
+                {circulation.context ? 'NHLBI' : 'NCI SEER'}
+              </a>
+            </section>
+          ) : (
+            <Button
+              className="cardiac-circulation-start"
+              size="sm"
+              variant="outline"
+              onClick={() => circulationStep(0)}
+            >
+              Follow circulation
+            </Button>
+          ))}
         {isCerebral ? (
           <CerebralLayers
             layers={layers as CerebralStructure[]}
@@ -873,6 +954,7 @@ export function VentricularView({
             hidden={hidden}
             onSelect={select}
             onVisibility={(id, visible) => {
+              setCirculationIndex(null);
               setRelationshipId(null);
               dispatch({ type: 'visibility', id, visible });
               setFocus(false);
@@ -899,6 +981,7 @@ export function VentricularView({
                   checked={!hidden.includes(s.id)}
                   aria-label={`Show ${s.name.toLowerCase()}`}
                   onCheckedChange={(visible) => {
+                    setCirculationIndex(null);
                     setRelationshipId(null);
                     dispatch({ type: 'visibility', id: s.id, visible });
                     setFocus(false);
@@ -916,6 +999,7 @@ export function VentricularView({
             disabled={!history.length}
             onClick={() => {
               dispatch({ type: 'undo' });
+              setCirculationIndex(null);
               setRelationshipId(null);
               setFocus(false);
               setIsolated(false);
@@ -930,6 +1014,7 @@ export function VentricularView({
             title="Reapply the last undone layer or selection change"
             onClick={() => {
               dispatch({ type: 'redo' });
+              setCirculationIndex(null);
               setRelationshipId(null);
               setFocus(false);
               setIsolated(false);
@@ -1064,8 +1149,8 @@ export function VentricularView({
             </p>
             {parent.laterality === 'left' && (
               <p>
-                The left inferior adrenal artery is withheld because of a
-                source defect.
+                The left inferior adrenal artery is withheld because of a source
+                defect.
               </p>
             )}
           </section>
@@ -1082,10 +1167,7 @@ export function VentricularView({
                 ['Venous tributary', '#a181be'],
               ].map(([name, color]) => (
                 <li key={name}>
-                  <span
-                    aria-hidden="true"
-                    style={{ backgroundColor: color }}
-                  />
+                  <span aria-hidden="true" style={{ backgroundColor: color }} />
                   {name}
                 </li>
               ))}
@@ -1125,17 +1207,11 @@ export function VentricularView({
               ))}
             </ul>
             <p>
-              Orientation surfaces only; continuous airway connections and
-              lobar boundaries are not validated.
+              Orientation surfaces only; continuous airway connections and lobar
+              boundaries are not validated.
             </p>
-            {isolated && (
-              <p>Turn off Fade others to compare the landmarks.</p>
-            )}
-            <a
-              href={pulmonaryAirwayReference}
-              target="_blank"
-              rel="noreferrer"
-            >
+            {isolated && <p>Turn off Fade others to compare the landmarks.</p>}
+            <a href={pulmonaryAirwayReference} target="_blank" rel="noreferrer">
               Anatomy reference · NCI SEER
             </a>
           </section>
@@ -1154,7 +1230,7 @@ export function VentricularView({
                       : 'Ventricular relationship guide'
             }
           >
-            <p>{relationship.guide}</p>
+            {!circulation && <p>{relationship.guide}</p>}
             <ul aria-label="Context colour key">
               {relationship.context.map((s) => (
                 <li key={s.id}>
@@ -1190,18 +1266,20 @@ export function VentricularView({
             {isolated && (
               <p>Turn off Fade others to compare the nearby structures.</p>
             )}
-            <a href={relationship.reference} target="_blank" rel="noreferrer">
-              Anatomy reference ·{' '}
-              {isVisual
-                ? 'MRI anatomical study'
-                : isRenal
-                  ? 'Venous anatomy study'
-                  : isHepatic
-                    ? 'NIDDK'
-                    : isCardiac
-                      ? 'University of Minnesota'
-                      : 'UTHealth'}
-            </a>
+            {!circulation && (
+              <a href={relationship.reference} target="_blank" rel="noreferrer">
+                Anatomy reference ·{' '}
+                {isVisual
+                  ? 'MRI anatomical study'
+                  : isRenal
+                    ? 'Venous anatomy study'
+                    : isHepatic
+                      ? 'NIDDK'
+                      : isCardiac
+                        ? 'University of Minnesota'
+                        : 'UTHealth'}
+              </a>
+            )}
           </section>
         ) : (
           context &&
@@ -1265,10 +1343,7 @@ export function VentricularView({
             Separate for shape comparison; return to 0% to study anatomical
             relationships. This is not a surgical or fluid-flow simulation.
           </p>
-          <label
-            className="origin-guide-toggle"
-            htmlFor="nested-origin-guide"
-          >
+          <label className="origin-guide-toggle" htmlFor="nested-origin-guide">
             Show original position
             <Switch
               id="nested-origin-guide"
@@ -1298,9 +1373,7 @@ export function VentricularView({
                     : isRenal
                       ? 'Partial vascular group'
                       : isCerebral
-                        ? cerebralCatalog.supplementalIds.includes(
-                            selected.id,
-                          )
+                        ? cerebralCatalog.supplementalIds.includes(selected.id)
                           ? 'Additional source part'
                           : 'Partial source coverage'
                         : isPulmonary || isHepatic
@@ -1355,14 +1428,14 @@ export function VentricularView({
               <p>
                 Straight and oblique source parts are shown on each side. This
                 is not complete cricothyroid anatomy: a horizontal belly
-                described in human research and intramuscular nerve branches
-                are not separately supplied.
+                described in human research and intramuscular nerve branches are
+                not separately supplied.
               </p>
               <p>
-                Cartilage is a navigation landmark, not a muscle tissue
-                parent. Attachments, tissue intersections and functional
-                movement need specialist review. No phonation, airway, thyroid
-                gland or operative plane is simulated.
+                Cartilage is a navigation landmark, not a muscle tissue parent.
+                Attachments, tissue intersections and functional movement need
+                specialist review. No phonation, airway, thyroid gland or
+                operative plane is simulated.
               </p>
             </>
           ) : isPancreatic ? (
@@ -1379,9 +1452,9 @@ export function VentricularView({
                 presented as a separable tissue layer.
               </p>
               <p>
-                Colour and separation distinguish source surfaces, not flow,
-                an open lumen, an established junction or a papillary opening.
-                CT, MRI and ultrasound matching remain unvalidated.
+                Colour and separation distinguish source surfaces, not flow, an
+                open lumen, an established junction or a papillary opening. CT,
+                MRI and ultrasound matching remain unvalidated.
               </p>
             </>
           ) : isVisual ? (
@@ -1393,45 +1466,43 @@ export function VentricularView({
               </p>
               <p>
                 Optic nerves, optic radiations, fibre pathways and functional
-                visual-field maps are not supplied by this study. Source
-                tracts sit close to both lateral and medial geniculate
-                surfaces; no termination or connection is validated.
+                visual-field maps are not supplied by this study. Source tracts
+                sit close to both lateral and medial geniculate surfaces; no
+                termination or connection is validated.
               </p>
               <p>
                 Optional landmarks are orientation only and disappear during
-                separation. Colours identify surfaces, not visual fields or
-                MRI signal.
+                separation. Colours identify surfaces, not visual fields or MRI
+                signal.
               </p>
             </>
           ) : isRenal ? (
             <>
               <p>
-                Four right-sided or three left-sided vessel groups preserve
-                the supplied source geometry. Arterial red and venous blue
-                distinguish vessel types, not flow, oxygenation or scan
-                signal.
+                Four right-sided or three left-sided vessel groups preserve the
+                supplied source geometry. Arterial red and venous blue
+                distinguish vessel types, not flow, oxygenation or scan signal.
               </p>
               <p>
-                Kidney cortex, medulla, calyces and pelvis are not
-                individually represented. The left inferior suprarenal artery
-                and overlapping alternative renal trunks are excluded. Source
-                group components are not certified connected lumens or
-                surgical planes.
+                Kidney cortex, medulla, calyces and pelvis are not individually
+                represented. The left inferior suprarenal artery and overlapping
+                alternative renal trunks are excluded. Source group components
+                are not certified connected lumens or surgical planes.
               </p>
             </>
           ) : isHepatic ? (
             <>
               <p>
-                Seven branch groups reuse 48 existing source files. The
-                optional tissue context retains the other nine liver files
-                unchanged, including source defects and internal remnants.
+                Seven branch groups reuse 48 existing source files. The optional
+                tissue context retains the other nine liver files unchanged,
+                including source defects and internal remnants.
               </p>
               <p>
-                Source segment VI and VII surfaces have nearly identical
-                extents with substantial sampled near-contact; segment VIII
-                contains two region surfaces. Individual segment labels are
-                withheld. No segment has been relabelled, reconstructed or
-                merged into a clinical territory.
+                Source segment VI and VII surfaces have nearly identical extents
+                with substantial sampled near-contact; segment VIII contains two
+                region surfaces. Individual segment labels are withheld. No
+                segment has been relabelled, reconstructed or merged into a
+                clinical territory.
               </p>
               <p>
                 Arterial red, portal blue, biliary green and tributary purple
@@ -1454,24 +1525,24 @@ export function VentricularView({
               </p>
               <p>
                 Optional airway landmarks reuse the trachea and the main
-                bronchus on this side. Original bronchial remnants and
-                duplicate faces remain; these are not measured lumen
-                boundaries or proof of uninterrupted airway continuity.
+                bronchus on this side. Original bronchial remnants and duplicate
+                faces remain; these are not measured lumen boundaries or proof
+                of uninterrupted airway continuity.
               </p>
             </>
           ) : isCardiac ? (
             <>
               <p>
                 Four source cavity shapes, not solid heart chambers, measured
-                blood volumes or a registered cardiac scan. Colours
-                distinguish spaces, not oxygenation or scan signal.
+                blood volumes or a registered cardiac scan. Colours distinguish
+                spaces, not oxygenation or scan signal.
               </p>
               <p>
-                Only the two atrial walls are available as faint context.
-                Source mappings for ventricular walls, papillary muscles and
-                the mitral valve contain overlapping identities and are
-                excluded from this study pending adjudication. Valves, chordae
-                and conduction pathways are not demonstrated.
+                Only the two atrial walls are available as faint context. Source
+                mappings for ventricular walls, papillary muscles and the mitral
+                valve contain overlapping identities and are excluded from this
+                study pending adjudication. Valves, chordae and conduction
+                pathways are not demonstrated.
               </p>
             </>
           ) : isCerebral ? (
@@ -1495,16 +1566,16 @@ export function VentricularView({
               <p>
                 Four source-table compounds and two supplied inferior collicular
                 brachia, not proof of complete anatomy. Original source surfaces
-                are retained. Colours distinguish
-                structures, not MRI signal or functional territories.
+                are retained. Colours distinguish structures, not MRI signal or
+                functional territories.
               </p>
               <p>
-                Individual fibres, internal nuclei and cerebellar lobules are not
-                independently segmented. Superior brachia are withheld because
-                their source side labels conflict with their coordinates.
-                The pons source retains tiny
-                disconnected remnants and duplicate faces; it has not been
-                repaired or clinically validated.
+                Individual fibres, internal nuclei and cerebellar lobules are
+                not independently segmented. Superior brachia are withheld
+                because their source side labels conflict with their
+                coordinates. The pons source retains tiny disconnected remnants
+                and duplicate faces; it has not been repaired or clinically
+                validated.
               </p>
             </>
           ) : (
@@ -1689,9 +1760,7 @@ export default function Ventricles({
                   <SelectItem value="brainstem">
                     Brainstem and cerebellum
                   </SelectItem>
-                  <SelectItem value="ventricles">
-                    Ventricular spaces
-                  </SelectItem>
+                  <SelectItem value="ventricles">Ventricular spaces</SelectItem>
                   <SelectItem value="cerebral">Cerebral regions</SelectItem>
                   <SelectItem value="visual-pathway">
                     Optic chiasm and tracts

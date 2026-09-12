@@ -36,3 +36,22 @@
   outline: 2px solid var(--ring);
   outline-offset: 3px;
 }
+.cardiac-circulation-start,
+.cardiac-circulation {
+  margin-top: 0.6rem;
+}
+.cardiac-circulation [role='status'] {
+  font-weight: 600;
+}
+.cardiac-circulation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0;
+}
+.cardiac-circulation-actions button,
+.cardiac-circulation-start {
+  height: auto;
+  min-height: 2.25rem;
+  white-space: normal;
+}
