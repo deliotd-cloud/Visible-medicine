@@ -46,8 +46,9 @@ export function FittedCamera({
   const controls = useRef<Controls>(null);
   const previous = useRef<{
     key: string;
-    distance: number;
-    halfHeight: number;
+    bounds: Box3;
+    aspect: number;
+    fov: number;
     recenterKey: string;
     zoom: number;
     zoomStep: number;
@@ -60,6 +61,8 @@ export function FittedCamera({
   const ux = up[0],
     uy = up[1],
     uz = up[2];
+  const aspect = size.width / Math.max(1, size.height);
+  const fov = camera instanceof PerspectiveCamera ? camera.fov : 39;
   const capture = useCallback(() => {
     if (
       cameraCapture &&
@@ -93,8 +96,9 @@ export function FittedCamera({
       controls.current?.update();
       previous.current = {
         key,
-        distance: restored.fitDistance,
-        halfHeight: restored.fitHalfHeight,
+        bounds: bounds.clone(),
+        aspect,
+        fov,
         recenterKey,
         zoom,
         zoomStep,
@@ -115,8 +119,8 @@ export function FittedCamera({
       bounds,
       orbit,
       camera.up,
-      size.width / Math.max(1, size.height),
-      camera instanceof PerspectiveCamera ? camera.fov : 39,
+      aspect,
+      fov,
     );
     const retainZoom =
       !isPreset &&
@@ -126,13 +130,20 @@ export function FittedCamera({
       zoom === previous.current.zoom
         ? previous.current
         : null;
+    // Wheel/orbit gestures change the live camera between React effects.
+    // Re-evaluate the PREVIOUS geometry/viewport in the CURRENT orbit so an
+    // orientation change is not mistaken for zoom. Only genuine bounds or
+    // viewport changes should adapt the framing on the next effect.
+    const priorFit = retainZoom
+      ? fitBounds(retainZoom.bounds, orbit, camera.up, retainZoom.aspect, retainZoom.fov)
+      : null;
     const retainedScale =
-      retainZoom && controls.current
+      priorFit && controls.current
         ? relativeStudyScale(
             camera as PerspectiveCamera | OrthographicCamera,
             controls.current.target,
-            retainZoom.distance,
-            retainZoom.halfHeight,
+            priorFit.distance,
+            priorFit.halfHeight,
           )
         : zoom;
     const stepDelta = !isPreset && !isRecenter && previous.current
@@ -140,7 +151,9 @@ export function FittedCamera({
     const userZoom = steppedCameraScale(retainedScale, stepDelta);
     const distance =
       camera instanceof OrthographicCamera
-        ? fit.distance
+        ? priorFit && controls.current
+          ? camera.position.distanceTo(controls.current.target) * fit.distance / priorFit.distance
+          : fit.distance
         : fit.distance * userZoom;
     const target = fit.center.clone();
     if (!isPreset && !isRecenter && previous.current && controls.current)
@@ -171,8 +184,9 @@ export function FittedCamera({
     controls.current?.update();
     previous.current = {
       key,
-      distance: fit.distance,
-      halfHeight: fit.halfHeight,
+      bounds: bounds.clone(),
+      aspect,
+      fov,
       recenterKey,
       zoom,
       zoomStep,
@@ -199,6 +213,8 @@ export function FittedCamera({
     capture,
     planar,
     recenterKey,
+    aspect,
+    fov,
   ]);
   return (
     <OrbitControls

@@ -495,7 +495,7 @@ export function DissectionGuide({
           Educational visibility stages · Not tissue cutting or an operative
           sequence. Independent anatomical review is pending.
         </p>
-        {profile.references.map((url) => (
+        {[...new Set(profile.references)].map((url) => (
           <a key={url} href={url} target="_blank" rel="noreferrer">
             Anatomical reference ↗
           </a>

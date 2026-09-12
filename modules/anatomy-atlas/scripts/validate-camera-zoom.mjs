@@ -33,7 +33,12 @@ function harness(orthographic=false) {
     else camera.position.sub(controls.target).multiplyScalar(factor).add(controls.target);
     camera.updateProjectionMatrix();camera.updateMatrixWorld();
   }
-  return {api:mod.exports,camera,size,controls,props,render,gesture,capture,restore};
+  function orbit(direction) {
+    const distance=camera.position.distanceTo(controls.target);
+    camera.position.copy(controls.target).addScaledVector(new three.Vector3(...direction).normalize(),distance);
+    camera.lookAt(controls.target);camera.updateMatrixWorld();
+  }
+  return {api:mod.exports,camera,size,controls,props,render,gesture,orbit,capture,restore};
 }
 for(const orthographic of [false,true]) {
   const h=harness(orthographic),kind=orthographic?'orthographic':'perspective';
@@ -66,6 +71,42 @@ for(const orthographic of [false,true]) {
   // Legacy saved camera format remains round-trip compatible.
   const restored=h.api.restoreStudyCamera(h.camera,h.props.bounds,1.5,pose);
   close(h.api.captureStudyCamera(h.camera,restored.target,h.props.bounds,1.5).scale,.6,kind+' saved-view compatibility');
+}
+// Orbit changes the fit reference of asymmetric anatomy, not the user's live
+// zoom. A later React render or button must not silently refit a new direction.
+for(const orthographic of [false,true]) {
+  const h=harness(orthographic),kind=orthographic?'orthographic':'perspective';
+  h.render({bounds:new three.Box3(new three.Vector3(-5,-.5,-.2),new three.Vector3(5,.5,.2)),direction:[1,0,0]});
+  h.orbit([0,0,1]);h.gesture(.7);
+  const extent=()=>orthographic?(h.camera.top-h.camera.bottom)/(2*h.camera.zoom):h.camera.position.distanceTo(h.controls.target);
+  const before=extent();
+  h.render({zoomStep:1});
+  close(extent(),before*.85,kind+' plus after free orbit keeps live magnification');
+  h.orbit([.6,.4,.7]);
+  const position=h.camera.position.clone(),target=h.controls.target.clone(),current=extent();
+  h.render();
+  close(h.camera.position.distanceTo(position),0,kind+' unrelated render preserves orbit position');
+  close(h.controls.target.distanceTo(target),0,kind+' unrelated render preserves target');
+  close(extent(),current,kind+' unrelated render preserves magnification');
+  h.render({zoomStep:0});
+  close(extent(),current/.85,kind+' minus after free orbit preserves direction');
+  h.controls.target.add(new three.Vector3(.2,-.3,.1));
+  h.camera.position.add(new three.Vector3(.2,-.3,.1));
+  const pose=h.api.captureStudyCamera(h.camera,h.controls.target,h.props.bounds,h.size.width/h.size.height);
+  // Dissection/explode can grow and translate bounds after a free orbit. The
+  // old box must be a snapshot, not a mutable reference to this next frame.
+  h.props.bounds.expandByVector(new three.Vector3(1,.3,.2)).translate(new three.Vector3(.4,-.2,.3));
+  const separated=h.render();
+  close(separated.scale,pose.scale,kind+' changed dissection bounds retain current relative scale');
+  separated.pan.forEach((v,i)=>close(v,pose.pan[i],kind+' changed bounds retain pan'));
+  h.orbit([-.7,.5,.2]);h.gesture(.8);
+  const beforeResize=h.api.captureStudyCamera(h.camera,h.controls.target,h.props.bounds,h.size.width/h.size.height);
+  h.size.width=390;h.size.height=844;
+  if(!orthographic)h.camera.aspect=h.size.width/h.size.height;
+  close(h.render().scale,beforeResize.scale,kind+' resize after orbit retains current relative scale');
+  close(h.render({reset:1,zoomStep:3}).scale,1,kind+' reset after orbit consumes queued steps');
+  const resetPosition=h.camera.position.clone();h.render();
+  close(h.camera.position.distanceTo(resetPosition),0,kind+' reset remains stable');
 }
 const {steppedCameraScale:step}=harness().api;
 for(const scale of [.001,.02,.05,.2,1,20,50,999]) {

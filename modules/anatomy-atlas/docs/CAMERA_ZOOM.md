@@ -28,3 +28,38 @@ batched presses, pan, resize, reset/frame and saved-view restoration. It is not
 WebGL, physical-device, anatomy or clinical acceptance. Existing study-view and
 renderer-recovery checks must also pass. Actual browser evidence and release
 hashes belong in the coordinating checkpoint.
+
+## Free-orbit continuity correction
+
+A subsequent asymmetric-bounds regression reproduced an uncovered defect:
+rotating from a narrow projection to a broad one left the previous fit distance
+cached in the old direction. The next inward step produced distance 8.4666
+instead of 4.3283, moving away instead of closer. An unrelated fit effect could
+also change magnification after free orbit. The earlier fixed-direction tests
+did not cover this sequence.
+
+The camera now snapshots the preceding bounds, aspect and field of view and
+recomputes that previous framing in the live orbit direction. A rotation alone
+therefore does not become a zoom command. A changed viewport or genuine
+dissection/explode bounds still adapts the relative fit, retaining pan. Stored
+bounds are cloned so in-place updates cannot corrupt the previous reference.
+Orthographic camera distance also stays stable when only the orbit changes;
+its visible extent still handles zoom independently.
+
+The expanded 96-check camera regression runs the actual effect against real
+perspective/orthographic cameras, including asymmetric free orbit, +/- direction,
+unchanged re-render, in-place growing/translated bounds, phone-sized resize,
+pan, reset and existing saved-view precedence. The 18,990 study-view checks and
+704 scene-recovery checks also pass. Current material fingerprints are rebuilt
+without creating approvals. No source mesh, teaching note, saved format,
+entitlement, dependency or new interface control changes.
+
+Browser sampling on the head/neck route exercised oblique rotation, two inward
+and inverse outward steps, resize to 390×844 and 35% separation with the view
+direction preserved. These observations do not certify all anatomy, physical
+touch devices, every GPU, enlarged text or assistive technology.
+
+The same browser check exposed repeated reference links in composed regional
+dissection profiles, producing duplicate React keys. Coverage links now display
+each distinct URL once, preserving order and every unique source; source
+profiles and teaching data remain unchanged.
