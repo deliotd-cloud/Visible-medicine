@@ -74,11 +74,11 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "c8aa6f3bd154e2914c0cb87abf37cedc373403946aac79e4a6bf6c10b7dad3ed"
+      "sha256": "f6f9b06425107096ec1a4fcf4b763a70e0c4fe0942c8b319c91d08a069324dbd"
     },
     {
       "path": "app/body-scene.tsx",
-      "sha256": "2a2da50273cacf8d270d856cade130db3b359e45eebcf4323540762185e5cea4"
+      "sha256": "0d224fd83b65dc02aaf823f86159c852fa32e43d780bcbd9a7399047e9609120"
     },
     {
       "path": "app/body-types.ts",
@@ -142,7 +142,7 @@
     },
     {
       "path": "app/fitted-camera.tsx",
-      "sha256": "b72479d7c919ee7a17c995e420cfd212aa857d57d6671988bbf6f14b591594bf"
+      "sha256": "1600c8677ec86b3236cf33a6ef88d19b6f5bb2c754542affe8a982684c5360c8"
     },
     {
       "path": "app/globals.css",
@@ -282,11 +282,11 @@
     },
     {
       "path": "app/um-knee-study.tsx",
-      "sha256": "2cbf0518c38cd58adccc4d0cd9ecd3e8fe2f05468b13d672e1fad95f0f1f6d8f"
+      "sha256": "fcac09aa31f973aa28920fa908841da34db76c130f660d91cd64f8d25bc9022b"
     },
     {
       "path": "app/um-limb-learning.tsx",
-      "sha256": "e4ef691786f14df4f16e46f6bcef576fa8fac4843d5590d1d18458e12d6cd4fc"
+      "sha256": "68032fe4e72628eb0af7c9b841aa4022512f39d2457779a069dee46fa841d6d0"
     },
     {
       "path": "app/um-limb-motor.tsx",
@@ -602,7 +602,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "6e808a366e22f745c9f4cd218f2e5015fbd53cfcda5ed30a420212d89992527d"
+      "sha256": "41642fde73119475f87a1291b5118df1afcaeb7d9dc4931cdfb17b307c62ebed"
     },
     {
       "path": "content/shoulder-xray-bindings.json",
@@ -887,6 +887,10 @@
     {
       "path": "lib/camera-orientation.ts",
       "sha256": "d64615d0a45a2331a964c9f3d1f9ddbb78534e7243940c414275a5bc67e9fa00"
+    },
+    {
+      "path": "lib/camera-zoom.ts",
+      "sha256": "06263f767e08d8b374005f198c72227c3550767628d6096c24fd698331ea432d"
     },
     {
       "path": "lib/cardiac-circulation.ts",
@@ -1817,5 +1821,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "251e800ec6b8c36851cad31b3809a8ef49c97fcf5afc33bd14bf314f564d0332"
+  "sha256": "28e6c91e79bd97d01cfdc3feeacde81793ef4e26d3acefde8b30d5941919bbbf"
 }

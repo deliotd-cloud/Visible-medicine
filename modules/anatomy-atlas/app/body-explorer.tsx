@@ -323,6 +323,7 @@ export default function BodyExplorer({
   }, []);
   const [view, setView] = useState<DissectionView>(profile.stages[0].view),
     [zoom, setZoom] = useState(1),
+    [zoomStep, setZoomStep] = useState(0),
     [reset, setReset] = useState(0);
   const [{ loaded, failed }, loadDispatch] = useReducer(
     anatomyLoadReducer,
@@ -1652,6 +1653,7 @@ export default function BodyExplorer({
                   labels={labels && !exam}
                   view={view}
                   zoom={zoom}
+                  zoomStep={zoomStep}
                   reset={reset}
                   focus={focus}
                   exam={exam}
@@ -1719,7 +1721,7 @@ export default function BodyExplorer({
                   size="icon"
                   variant="outline"
                   aria-label="Zoom in"
-                  onClick={() => setZoom((z) => Math.max(0.25, z - 0.15))}
+                  onClick={() => setZoomStep(s => s + 1)}
                 >
                   <Plus />
                 </Button>
@@ -1727,7 +1729,7 @@ export default function BodyExplorer({
                   size="icon"
                   variant="outline"
                   aria-label="Zoom out"
-                  onClick={() => setZoom((z) => Math.min(2, z + 0.15))}
+                  onClick={() => setZoomStep(s => s - 1)}
                 >
                   <Minus />
                 </Button>

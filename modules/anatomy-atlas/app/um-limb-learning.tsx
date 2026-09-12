@@ -75,6 +75,7 @@ export function SpecimenIdentification({ definition, initial, visibleIds, initia
   assetBase?: string;
 }) {
   const [state, setState] = useState(initial), [view, setView] = useState(initialView), [zoom, setZoom] = useState(1), [reset, setReset] = useState(0);
+  const [zoomStep, setZoomStep] = useState(0);
   const [health, setHealth] = useState<RendererHealth>('starting'), [loaded, setLoaded] = useState<string[]>([]), [failed, setFailed] = useState<string[]>([]);
   const questionHeading = useRef<HTMLHeadingElement | null>(null);
   useEffect(() => { questionHeading.current?.focus(); }, [state.index, state.questions]);
@@ -94,12 +95,12 @@ export function SpecimenIdentification({ definition, initial, visibleIds, initia
         <Select value={view} items={['anterior','posterior','left','right','superior','inferior'].map(v=>({value:v,label:v[0].toUpperCase()+v.slice(1)}))} onValueChange={v => { if (['anterior', 'posterior', 'left', 'right', 'superior', 'inferior'].includes(v ?? '')) setView(v as DissectionView); }}>
           <SelectTrigger aria-label="Practice camera direction"><SelectValue /></SelectTrigger><SelectContent>{['anterior', 'posterior', 'left', 'right', 'superior', 'inferior'].map(v => <SelectItem key={v} value={v}>{v}</SelectItem>)}</SelectContent>
         </Select>
-        <Button size="sm" variant="outline" aria-label="Zoom out" onClick={() => setZoom(z => Math.max(.6, z - .2))}>−</Button>
-        <Button size="sm" variant="outline" aria-label="Zoom in" onClick={() => setZoom(z => Math.min(3, z + .2))}>+</Button>
+        <Button size="sm" variant="outline" aria-label="Zoom out" onClick={() => setZoomStep(s => s - 1)}>−</Button>
+        <Button size="sm" variant="outline" aria-label="Zoom in" onClick={() => setZoomStep(s => s + 1)}>+</Button>
       </div>
       <div className="eye-layer-viewport">{target && <BodyScene assetBase={assetBase} catalog={definition.catalog} structures={definition.catalog.structures}
         selectedId={target.id} hiddenIds={hidden} systems={allBodySystems} isolated ghostRemoved={false} illustrated
-        landmarks={[]} explode={0} layout="spatial" anchorSkeleton={false} showOrigins={false} labels={false} view={view} zoom={zoom}
+        landmarks={[]} explode={0} layout="spatial" anchorSkeleton={false} showOrigins={false} labels={false} view={view} zoom={zoom} zoomStep={zoomStep}
         reset={reset + state.index} focus exam={false} inspection={initialInspection} cameraBounds={null} plate={false}
         onSelect={() => {}} onLoaded={id => setLoaded(p => p.includes(id) ? p : [...p, id])}
         onFailure={id => setFailed(p => p.includes(id) ? p : [...p, id])} onRendererHealth={setHealth} />}

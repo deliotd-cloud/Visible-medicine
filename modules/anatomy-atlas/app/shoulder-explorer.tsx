@@ -154,6 +154,7 @@ export default function ShoulderExplorer({
   const [view, setView] = useState<CameraView>('posterior');
   const [layer, setLayer] = useState<AnatomyLayer>('cuff');
   const [zoom, setZoom] = useState(1);
+  const [zoomStep, setZoomStep] = useState(0);
   const [visibleSystems, setVisibleSystems] = useState<
     Record<SystemKey, boolean>
   >({ skeleton: true, muscles: true, 'soft-tissue': true });
@@ -918,6 +919,7 @@ export default function ShoulderExplorer({
                 view={view}
                 layer={layer}
                 zoom={zoom}
+                zoomStep={zoomStep}
                 exam={mode === 'exam'}
                 anchorSkeleton={anchorSkeleton}
                 showOrigins={showOrigins && mode === 'study'}
@@ -933,7 +935,7 @@ export default function ShoulderExplorer({
                   size="icon"
                   variant="outline"
                   aria-label="Zoom in"
-                  onClick={() => setZoom((z) => Math.max(0.6, z - 0.12))}
+                  onClick={() => setZoomStep(s => s + 1)}
                 >
                   <Plus />
                 </Button>
@@ -941,7 +943,7 @@ export default function ShoulderExplorer({
                   size="icon"
                   variant="outline"
                   aria-label="Zoom out"
-                  onClick={() => setZoom((z) => Math.min(1.6, z + 0.12))}
+                  onClick={() => setZoomStep(s => s - 1)}
                 >
                   <Minus />
                 </Button>

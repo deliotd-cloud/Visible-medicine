@@ -13,6 +13,7 @@ import {
   relativeStudyScale,
 } from '@/lib/study-camera';
 import type { StudyCamera } from '@/lib/study-views';
+import { steppedCameraScale } from '@/lib/camera-zoom';
 
 export function FittedCamera({
   bounds,
@@ -20,6 +21,7 @@ export function FittedCamera({
   up = [0, 1, 0],
   viewKey,
   zoom,
+  zoomStep = 0,
   reset,
   locked = false,
   planar = false,
@@ -32,6 +34,7 @@ export function FittedCamera({
   up?: number[];
   viewKey: string;
   zoom: number;
+  zoomStep?: number;
   reset: number;
   locked?: boolean;
   planar?: boolean;
@@ -47,6 +50,7 @@ export function FittedCamera({
     halfHeight: number;
     recenterKey: string;
     zoom: number;
+    zoomStep: number;
     center: Vector3;
   } | null>(null);
   const key = `${viewKey}/${reset}/${locked}/${planar}`;
@@ -93,6 +97,7 @@ export function FittedCamera({
         halfHeight: restored.fitHalfHeight,
         recenterKey,
         zoom,
+        zoomStep,
         center: bounds.getCenter(new Vector3()),
       };
       capture();
@@ -121,7 +126,7 @@ export function FittedCamera({
       zoom === previous.current.zoom
         ? previous.current
         : null;
-    const userZoom =
+    const retainedScale =
       retainZoom && controls.current
         ? relativeStudyScale(
             camera as PerspectiveCamera | OrthographicCamera,
@@ -130,6 +135,9 @@ export function FittedCamera({
             retainZoom.halfHeight,
           )
         : zoom;
+    const stepDelta = !isPreset && !isRecenter && previous.current
+      ? zoomStep - previous.current.zoomStep : 0;
+    const userZoom = steppedCameraScale(retainedScale, stepDelta);
     const distance =
       camera instanceof OrthographicCamera
         ? fit.distance
@@ -167,6 +175,7 @@ export function FittedCamera({
       halfHeight: fit.halfHeight,
       recenterKey,
       zoom,
+      zoomStep,
       center: fit.center,
     };
     capture();
@@ -178,6 +187,7 @@ export function FittedCamera({
     size.height,
     key,
     zoom,
+    zoomStep,
     dx,
     dy,
     dz,

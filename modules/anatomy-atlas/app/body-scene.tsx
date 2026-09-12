@@ -69,6 +69,7 @@ type Props = {
   labels: boolean;
   view: DissectionView;
   zoom: number;
+  zoomStep?: number;
   reset: number;
   focus: boolean;
   exam: boolean;
@@ -479,6 +480,7 @@ export function BodyScene(props: Props) {
       cameraKey={[
         props.view,
         props.zoom,
+        props.zoomStep,
         props.reset,
         focusId,
         orthographic,
@@ -552,6 +554,7 @@ export function BodyScene(props: Props) {
             }
             viewKey={props.view}
             zoom={props.zoom}
+            zoomStep={props.zoomStep}
             reset={props.reset}
             locked={props.plate && layout !== 'tray'}
             planar={layout === 'tray'}

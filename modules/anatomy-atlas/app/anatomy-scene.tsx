@@ -61,6 +61,7 @@ type SceneProps = {
   view: CameraView;
   layer: AnatomyLayer;
   zoom: number;
+  zoomStep?: number;
   exam: boolean;
   anchorSkeleton: boolean;
   showOrigins: boolean;
@@ -465,6 +466,7 @@ export function AnatomyScene(props: SceneProps) {
       cameraKey={[
         props.view,
         props.zoom,
+        props.zoomStep,
         props.resetNonce,
         orthographic,
         layout,
@@ -565,6 +567,7 @@ export function AnatomyScene(props: SceneProps) {
             }
             viewKey={props.view}
             zoom={props.zoom}
+            zoomStep={props.zoomStep}
             reset={props.resetNonce}
             locked={props.plate && layout !== 'tray'}
             planar={layout === 'tray'}

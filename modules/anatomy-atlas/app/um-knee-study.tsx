@@ -55,6 +55,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
   const [focus, setFocus] = useState(!!initialNavigation?.focusSelection || !!initialNavigation?.structureOnly), [jointCloseUp, setJointCloseUp] = useState(!!specimen.closeUp && !initialNavigation?.focusSelection);
   const [showOrigins, setShowOrigins] = useState(false), [illustrated, setIllustrated] = useState(true);
   const [reset, setReset] = useState(0), [zoom, setZoom] = useState(1);
+  const [zoomStep, setZoomStep] = useState(0);
   const [health, setHealth] = useState<RendererHealth>('starting');
   const [practice, setPractice] = useState<IdentificationState | null>(null);
   const practiceLauncher = useRef<HTMLButtonElement | null>(null);
@@ -97,8 +98,8 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
           <SelectTrigger aria-label={`${specimen.label} camera direction`}><SelectValue /></SelectTrigger>
           <SelectContent>{cameraViews.map((v) => <SelectItem key={v} value={v}>{v[0].toUpperCase() + v.slice(1)}</SelectItem>)}</SelectContent>
         </Select>
-        <Button variant="outline" size="sm" onClick={() => setZoom((z) => Math.max(0.6, z - 0.2))} aria-label="Zoom out">−</Button>
-        <Button variant="outline" size="sm" onClick={() => setZoom((z) => Math.min(3, z + 0.2))} aria-label="Zoom in">+</Button>
+        <Button variant="outline" size="sm" onClick={() => setZoomStep(s => s - 1)} aria-label="Zoom out">−</Button>
+        <Button variant="outline" size="sm" onClick={() => setZoomStep(s => s + 1)} aria-label="Zoom in">+</Button>
         <Button variant="outline" size="sm" aria-pressed={labels} onClick={() => setLabels((v) => !v)}><Tags />Labels</Button>
         <Button variant="outline" size="sm" onClick={resetAll}><RotateCcw />Reset</Button>
         {(!supplement || practiceAdapter) && <Button ref={practiceLauncher} variant="outline" size="sm" disabled={!ready || practiceCount < 2} onClick={() => setPractice((practiceAdapter?.createRound ?? createIdentification)(specimen, visible.map(s => s.id)))}>Practise identification</Button>}
@@ -108,7 +109,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
           systems={allBodySystems} isolated={isolated && !!selected} hiddenIds={hidden} ghostRemoved={false}
           illustrated={illustrated} landmarks={visible.filter((s) => s.system !== 'skeleton').map((s) => s.id)}
           explode={explode} layout={layout} anchorSkeleton={false} showOrigins={showOrigins} originStyle="selected-guide"
-          labels={labels} view={view} zoom={zoom} reset={reset} focus={focus} exam={false}
+          labels={labels} view={view} zoom={zoom} zoomStep={zoomStep} reset={reset} focus={focus} exam={false}
           inspection={initialInspection} cameraBounds={jointCloseUp && explode === 0 && !isolated ? specimen.closeUp : null}
           plate={false} appearance={appearance} retries={Object.fromEntries(kneeCatalog.bundles.map((b) => [b.id, retry]))}
           onSelect={select} onLoaded={onLoaded} onFailure={onFailure} onRendererHealth={setHealth} />
