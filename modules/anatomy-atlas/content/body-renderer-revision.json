@@ -58,7 +58,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "a5ad84de5d13587d503d15e30c8c4c9f7f44def6b55d72bb4b7de9c4db9b09bd"
+      "sha256": "acfc5a6f56a586a7bde34a530e94dee60ab419813cde7c29c71f350231095e5f"
     },
     {
       "path": "app/body-explorer.css",
@@ -102,7 +102,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "799598d339f3f8f61bb4e4bf9bbd62ac6c04a6528edf37326bcc5a34cdbe86d2"
+      "sha256": "41b7df846d5c8fdbbb69ce5e170c970f5015f6ffe6a83f26c2fab06b6bfce100"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -409,6 +409,10 @@
       "sha256": "ab61fa71c04a678144a040a77d04036e8f8f87bbaed288814fac8ea5496d7940"
     },
     {
+      "path": "content/inferior-epigastric-study.ts",
+      "sha256": "6dcae13f43d2ec4279f89f17bc277e1ca0a45c0f7949fb4cf88bb4415eeaed47"
+    },
+    {
       "path": "content/inferior-thyroid-context-pins.json",
       "sha256": "1928f2ecce49146511325abe3fe6331291dcbbbb0ca6308f99e95be2353f07f8"
     },
@@ -694,7 +698,7 @@
     },
     {
       "path": "lib/body-display-catalog.ts",
-      "sha256": "cd78422a329502375d39a8b979c9421f65be141f09c1ded85498de8c295c7e01"
+      "sha256": "a8ce7f010aa61d085841050565841645f8d01110dd4de359cd9d489a2743e625"
     },
     {
       "path": "lib/body-source-additions.ts",
@@ -937,6 +941,10 @@
       "sha256": "425f7976850e01ff7f38c05f3894c2f3f3215bf093e44615e477e7992ca806ef"
     },
     {
+      "path": "lib/inferior-epigastric-vessels.ts",
+      "sha256": "cde444a140807cc788cfbed570907316c52e32d00bb2c6295b2c5817c17df997"
+    },
+    {
       "path": "lib/inferior-thyroid-arteries.ts",
       "sha256": "cd1a636fef9058321d3256fc6d2e444d3de6d79ab34069bda8706076df0349a0"
     },
@@ -998,7 +1006,7 @@
     },
     {
       "path": "lib/limb-vascular-studies.ts",
-      "sha256": "470fb495c83453b4e889dee3be379a9ec494f1e439cd81ae1701415c1a7ba27e"
+      "sha256": "ed22da8257131cfb5836aec9e3d7c37040d98dabde09384754453f540f439132"
     },
     {
       "path": "lib/longus-colli.ts",
@@ -1437,6 +1445,10 @@
       "sha256": "53962f7814854e576efde820bed1ccd2f7393b1296798898dee25f773e24d6c8"
     },
     {
+      "path": "public/models/bodyparts3d/inferior-epigastric-vessels/catalog.json",
+      "sha256": "8dd5cb1106d10b06bd731b637183dbaa353d466e45bb65157db4209463009b60"
+    },
+    {
       "path": "public/models/bodyparts3d/inferior-thyroid-arteries/catalog.json",
       "sha256": "c1887d76f71de08c25fb9277b00d5edc678affd43995faab4121bd347fc8a6b4"
     },
@@ -1509,5 +1521,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "c248715823e4814daccd9c7d01fe3a47ab5d01cb8d963dbdfbc58eff8f3f4cfe"
+  "sha256": "b0d0c1a4e8ca1c5fb593a59d312a359f3849e9b8b22e59dc76c1b3c80e84556e"
 }

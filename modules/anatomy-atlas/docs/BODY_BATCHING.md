@@ -20,7 +20,7 @@ The [baseline report](body-batching-baseline.json) inspects the current source g
 
 | Scope | Original surface submissions | Planned surface/batch submissions | Batched surfaces |
 | --- | ---: | ---: | ---: |
-| Whole body | 1060 | 539 | 550 in 29 batches |
+| Whole body | 1064 | 543 | 550 in 29 batches |
 | Head & neck | 281 | 125 | 167 in 11 batches |
 | Thorax | 155 | 39 | 125 in 9 batches |
 

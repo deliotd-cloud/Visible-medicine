@@ -1,6 +1,18 @@
 # Anatomy atlas backup — 12 September 2026
 
-## 12 September 2026 — source-scoped specimen search (current source)
+## 12 September 2026 — inferior epigastric vessels (current source)
+
+Source `08025b3ee6b1314b7851a8006fa7facd4d823c18`, tree `509cd5737db93cbe81861f33c4039e4040c7e8dd`, parent `28c9486ed698848aa0d7b32e97dcd214413aa359`. Thirty-eight exact source paths mirrored. Four original v4 inferior epigastric artery/vein selections retain all 28,968 triangles, with a ten-vessel abdominal/whole-body Study and 16 introductory Anatomy/Function/Clinical/Quiz draft placements. The existing compact controls are reused; no new permanent toolbar. Display scope is 1,064 selections; unrelated teaching, prior study recipes, raw catalogue, dependencies, auth, databases and entitlements remain unchanged.
+
+Passed: source audit (1,060 prior bounds, 192 spatial/shape and six pair comparisons); deterministic export; all 86,904 original face corners; 64 links, 82 rejected source/frame mutations, six actual parent-handler cases and four Study-menu renders; deferent/arm-study regressions; reference/requirement freshness; batching geometry retention; TypeScript and production build. All 122 delivered GLBs / 1,337 meshes / 4,011 buffer views decode unchanged. Renderer fingerprint `b0d0c1a4e8ca1c5fb593a59d312a359f3849e9b8b22e59dc76c1b3c80e84556e` covers 377 inputs. Authored whitespace passes; upstream OBJ whitespace and historic licence headers are preserved verbatim. No browser/GPU/mobile or clinical acceptance. The existing model-first snapshot failure is not addressed or claimed passing.
+
+The current official v4 database CC BY 4.0 grant is documented alongside older embedded CC BY-SA 2.1 Japan headers, without rewriting originals. Separate v3 specimen terms remain distinct. University resources informed original factual drafts; no diagrams or question-bank wording were copied. Fascia, inguinal rings, complete perforators, joined lumens, real scans and patient registration remain absent; radiologist review is required.
+
+D: recovery stem `atlas-inferior-epigastric-2026-09-12`: runtime archive 119,402,722 bytes / SHA256 `4af7750c6e8fcad6a40d43780b11dbed237ecf509ed2fa2e184b4be2cec09fa2`; delta 4,116,480 bytes / `afc3a4790dc120e7e64e012921f71f20ca12ffc9f8db2680edfb99e4d5ffe2fe`; incremental bundle 1,048,326 bytes / `a77b27fc5c06721a316630c0e83e6ff9063204ba8a321c8de95372edc72b5f06`. Independent bundle restore/fsck verifies the source/tree; runtime archive contains 426 safe entries, exact manifest and two unchanged migrations. Prior backups remain intact.
+
+Source push to Sites succeeded; private publication upload timed out after 60 seconds. Reconciliation still shows latest saved/live version 171, so this milestone and preceding back-layer/search additions are not claimed live. Source backups do not include conversation history, production databases/reviews, accounts, patient scans or separate lectures. Improvement goal remains active; prioritize meaningful regional anatomy and source-bound teaching while preserving clinical/device/imaging/entitlement gates.
+
+## 12 September 2026 — source-scoped specimen search (previous source)
 
 Source `28c9486ed698848aa0d7b32e97dcd214413aa359`, tree `ed77f5c2c468fb3a91b3f0e08d288f68eab4e568`, parent `852d5aa38c3d39f7e5d331ba8b163f46860ab821`. Nine exact changed paths mirrored; no geometry, teaching, source-admission, licence, dependency, auth, database or entitlement change. All earlier back-layer and regional work is included.
 

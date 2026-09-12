@@ -9,6 +9,7 @@ import { armVascularStudies, armVascularSourceIds } from '../content/arm-vascula
 import { upperVesselImagingGroups, upperVesselImagingTopics } from '../content/upper-vessel-imaging.ts';
 import { genicularStudy, genicularStudySourceIds } from '../content/genicular-study.ts';
 import { deferentDuctStudy } from '../content/deferent-duct-study.ts';
+import { inferiorEpigastricStudy } from '../content/inferior-epigastric-study.ts';
 
 // This inventory executes the real content resolver. It measures displayed copy,
 // not medical correctness, complete lessons, browser acceptance or approval.
@@ -135,6 +136,8 @@ const genicularAudit = await json('docs/genicular-artery-source-audit.json');
 const inferiorThyroid = await json('public/models/bodyparts3d/inferior-thyroid-arteries/catalog.json');
 const deferentDucts = await json('public/models/bodyparts3d/deferent-ducts/catalog.json');
 const deferentDuctAudit = await json('docs/deferent-duct-source-audit.json');
+const inferiorEpigastric = await json('public/models/bodyparts3d/inferior-epigastric-vessels/catalog.json');
+const inferiorEpigastricAudit = await json('docs/inferior-epigastric-source-audit.json');
 const musclePartCondition = await json('docs/muscle-part-condition-audit.json');
 const cubitalVeinAudit = await json('docs/cubital-vein-source-audit.json');
 const collicularBrachiaAudit = await json('docs/collicular-brachia-source-audit.json');
@@ -379,6 +382,11 @@ for (const path of [
   'lib/deferent-ducts.ts',
   'content/deferent-duct-study.ts',
   'content/deferent-duct-study-transition.json',
+  'public/models/bodyparts3d/inferior-epigastric-vessels/catalog.json',
+  'docs/inferior-epigastric-source-audit.json',
+  'lib/inferior-epigastric-vessels.ts',
+  'content/inferior-epigastric-study.ts',
+  'content/inferior-epigastric-study-transition.json',
   'content/genicular-study.ts',
   'content/genicular-study-pins.json',
   'lib/genicular-study.ts',
@@ -582,6 +590,16 @@ const report = {
   sourceHashes,
   rendering: { bodyBatching: await json('docs/body-batching-baseline.json'), gpuAcceptance: false },
   anatomy: {
+    inferiorEpigastricVessels: {
+      sourceSelections: inferiorEpigastric.structures.length,
+      originalTriangles: inferiorEpigastricAudit.groups.reduce((sum, g) => sum + g.topology.triangles, 0),
+      contextSelections: inferiorEpigastric.contextRecords.length,
+      focusRecipe: inferiorEpigastricStudy.id,
+      focusRegions: inferiorEpigastricStudy.regions,
+      exactSourceFacesRetained: true,
+      continuousLumenClaimed: false,
+      clinicalApproval: false,
+    },
     deferentDucts: {
       sourceSelections: deferentDucts.structures.length,
       originalTriangles: deferentDuctAudit.groups.reduce((sum, g) => sum + g.topology.triangles, 0),

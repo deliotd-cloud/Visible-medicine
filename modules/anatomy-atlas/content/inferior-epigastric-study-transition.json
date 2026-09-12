@@ -1,0 +1,125 @@
+{
+  "sourceCommit": "28c9486ed698848aa0d7b32e97dcd214413aa359",
+  "before": "6718d55292f24620477c701a8bc93ef39cf786f6a56f605b292abec294291644",
+  "after": "a9b9652032f8636ada904ca40e32dea1f3186f908c3dc859fb6705851e95dead",
+  "patches": [
+    {
+      "region": "abdomen",
+      "added": [
+        {
+          "id": "abdominal-wall-epigastric-vessels",
+          "title": "Abdominal wall: epigastric vessels",
+          "rule": {
+            "fmaIds": [
+              "FMA20689",
+              "FMA21164",
+              "FMA20688",
+              "FMA21163"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA18806",
+                "FMA18807",
+                "FMA18885",
+                "FMA18886",
+                "FMA3988",
+                "FMA4083"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the inferior epigastric arteries and veins with the external iliac vessels and superior epigastric arteries. Choose a side for a simpler view.",
+          "inspect": "Select an artery or vein, set it aside, and use Undo to restore it. Return separation to 0% before comparing original source positions. This vessels-only reference does not supply rectus sheath, inguinal rings, fascia, nerves or a complete perforator network. Proximity is not proof of a joined lumen or anastomosis. The separate abdominal-wall specimen belongs to a different source version and is not overlaid here. Clinical review is pending.",
+          "landmarks": [
+            "inferior epigastric artery$",
+            "inferior epigastric vein$",
+            "external iliac artery$",
+            "superior epigastric artery$"
+          ]
+        }
+      ],
+      "referencesBefore": [
+        "https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html",
+        "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+      ],
+      "referencesAfter": [
+        "https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html",
+        "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/schemes/inguinal_tables.html",
+        "https://anatomy.ttuhscep.edu/schemes/abdo_wall_ing_questions/abdo_wall_12_feedback.html"
+      ]
+    },
+    {
+      "region": "whole-body",
+      "added": [
+        {
+          "id": "abdominal-wall-epigastric-vessels",
+          "title": "Abdominal wall: epigastric vessels",
+          "rule": {
+            "fmaIds": [
+              "FMA20689",
+              "FMA21164",
+              "FMA20688",
+              "FMA21163"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA18806",
+                "FMA18807",
+                "FMA18885",
+                "FMA18886",
+                "FMA3988",
+                "FMA4083"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the inferior epigastric arteries and veins with the external iliac vessels and superior epigastric arteries. Choose a side for a simpler view.",
+          "inspect": "Select an artery or vein, set it aside, and use Undo to restore it. Return separation to 0% before comparing original source positions. This vessels-only reference does not supply rectus sheath, inguinal rings, fascia, nerves or a complete perforator network. Proximity is not proof of a joined lumen or anastomosis. The separate abdominal-wall specimen belongs to a different source version and is not overlaid here. Clinical review is pending.",
+          "landmarks": [
+            "inferior epigastric artery$",
+            "inferior epigastric vein$",
+            "external iliac artery$",
+            "superior epigastric artery$"
+          ]
+        }
+      ],
+      "referencesBefore": [
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/thigh_tables.html",
+        "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html"
+      ],
+      "referencesAfter": [
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/thigh_tables.html",
+        "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/schemes/inguinal_tables.html",
+        "https://anatomy.ttuhscep.edu/schemes/abdo_wall_ing_questions/abdo_wall_12_feedback.html"
+      ]
+    }
+  ]
+}

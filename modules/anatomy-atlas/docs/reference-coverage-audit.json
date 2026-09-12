@@ -42,35 +42,35 @@
         "sha256": "2ed4267b0ceae5448673eaf0743ed79a995fc7f879dac26c81e24109c7b201ec"
       }
     ],
-    "currentRootSha256": "e8c3cd0235bd5fca121cb8db58fba2b025839d8c99bb8a7776073016b61c10a0",
+    "currentRootSha256": "4e8c5bfc19bc73d759faa79edd8b98d546a52eb282d15dfdfaad56a9a963eb60",
     "reachableNestedSha256": "3a105ee0e4963dd1ca46d3af1747b2975de9a8b27db7c198123f69c5e2a13fcb",
     "shoulderManifestSha256": "619e3ab84712487bd032b84a8f8b52f94d10883d8db7798057049bab287de857",
     "sourceIdSetSha256": "8e2057667c31e8fc99b87eb4c020467eadb9698ca09a87fc85cd76350254e655"
   },
   "summary": {
     "referenceSourceFiles": 2234,
-    "rootSelections": 1060,
-    "rootSourceFileIds": 1720,
+    "rootSelections": 1064,
+    "rootSourceFileIds": 1724,
     "reachableNestedSelections": 71,
-    "rootOnlyDifferences": 514,
+    "rootOnlyDifferences": 510,
     "rootBindingsNeedingEquivalenceReview": 0,
     "allSourceStatuses": {
       "excluded-by-display-correction": 1,
       "known-source-hold": 50,
-      "needs-source-and-anatomical-review": 438,
+      "needs-source-and-anatomical-review": 434,
       "nested-source-covered": 24,
       "related-cross-tree-hold": 1,
-      "root-source-covered": 1720
+      "root-source-covered": 1724
     },
     "rootDifferenceStatuses": {
       "excluded-by-display-correction": 1,
       "known-source-hold": 50,
-      "needs-source-and-anatomical-review": 438,
+      "needs-source-and-anatomical-review": 434,
       "nested-source-covered": 24,
       "related-cross-tree-hold": 1
     },
     "rootDifferenceReferenceGroups": {
-      "arterial": 274,
+      "arterial": 272,
       "cardiac": 2,
       "connective": 11,
       "digestive": 2,
@@ -81,10 +81,10 @@
       "respiratory": 2,
       "sensory": 8,
       "skeletal": 3,
-      "venous": 150
+      "venous": 148
     },
     "reviewQueueReferenceGroups": {
-      "arterial": 267,
+      "arterial": 265,
       "cardiac": 2,
       "connective": 2,
       "digestive": 1,
@@ -94,7 +94,7 @@
       "reproductive": 3,
       "sensory": 8,
       "skeletal": 2,
-      "venous": 129
+      "venous": 127
     }
   },
   "limitations": [
@@ -10452,50 +10452,6 @@
       }
     },
     {
-      "file": "FJ3511",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA20689",
-          "name": "left inferior epigastric artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 431585,
-        "crc32": 2150628575,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ3512",
-      "referenceDisplaySystem": "venous",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA21164",
-          "name": "left inferior epigastric vein",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 473740,
-        "crc32": 2932523627,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
       "file": "FJ3513",
       "referenceDisplaySystem": "venous",
       "status": "needs-source-and-anatomical-review",
@@ -11499,50 +11455,6 @@
       "source": {
         "bytes": 690094,
         "crc32": 749104272,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ3604",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA20688",
-          "name": "right inferior epigastric artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 439165,
-        "crc32": 2212152098,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ3605",
-      "referenceDisplaySystem": "venous",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA21163",
-          "name": "right inferior epigastric vein",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 498823,
-        "crc32": 4184023627,
         "sha256": null,
         "geometrySha256": null
       }

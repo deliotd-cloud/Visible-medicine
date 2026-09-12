@@ -2,9 +2,11 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import record from '../content/arm-vascular-study-transition.json' with { type: 'json' };
+import { preInferiorEpigastricProfiles } from './inferior-epigastric-study-history.mjs';
 const hash = (v) =>
   createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function preArmVascularProfiles(profiles) {
+  profiles = preInferiorEpigastricProfiles(profiles);
   assert.equal(
     hash(record),
     '776fe8893c6c1edbb81934e5be0c5557c30ff8a13b63d36113e379c5d1c84661',

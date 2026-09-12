@@ -12,7 +12,7 @@ The [inferior thyroid addition](INFERIOR_THYROID_ARTERIES.md) adds two further s
 
 The [deferent-duct addition](DEFERENT_DUCTS.md) adds two original files and a source-bound male-pelvis study without generated connections.
 
-The pinned male reference supplies 2,234 IS-A source file IDs. The current 1,060 root selections represent 1,720 of those IDs. The other **514 source pieces** resolve as follows:
+The [inferior epigastric addition](INFERIOR_EPIGASTRIC_VESSELS.md) supplies four original vessel definitions and one focused abdominal-wall study. The pinned male reference supplies 2,234 IS-A source file IDs. The current 1,064 root selections represent 1,724 of those IDs. The other **510 source pieces** resolve as follows:
 
 | Disposition | Source pieces |
 | --- | ---: |
@@ -20,9 +20,9 @@ The pinned male reference supplies 2,234 IS-A source file IDs. The current 1,060
 | Deliberate IS-A source holds | 50 |
 | Excluded by the existing pancreatic display correction | 1 |
 | Related unresolved PART-OF disc hold | 1 |
-| Need source and anatomical review | 438 |
+| Need source and anatomical review | 434 |
 
-The 438-piece queue contains 267 arterial and 129 venous pieces according to the reference's display groups. These groups are not an authoritative anatomy taxonomy: for example, its cardiac group includes an interventricular-foramen entry. No external grouping changes our learner-facing systems.
+The 434-piece queue contains 265 arterial and 127 venous pieces according to the reference's display groups. These groups are not an authoritative anatomy taxonomy: for example, its cardiac group includes an interventricular-foramen entry. No external grouping changes our learner-facing systems.
 
 This is source-file coverage, not a count of missing anatomical structures. It cannot establish whether a whole named structure, alternative envelope, branch, side or layer is complete. Independent CC0 limb and older abdominal-wall specimens remain distinct donors/releases; their conceptual equivalents are not counted as identical v4 files.
 

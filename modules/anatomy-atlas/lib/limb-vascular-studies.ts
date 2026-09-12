@@ -5,6 +5,7 @@ import type { BodyCatalog } from '../app/body-types';
 import { genicularStudyReady } from './genicular-study.ts';
 import { deferentDuctStudyReady } from './deferent-ducts.ts';
 import { armVascularStudyReady } from './arm-vascular-studies.ts';
+import { inferiorEpigastricStudyReady } from './inferior-epigastric-vessels.ts';
 
 /** Guard only this family; existing study families retain their own admissions. */
 export function limbVascularStudyReady(
@@ -12,6 +13,7 @@ export function limbVascularStudyReady(
   region: string,
   recipeId: string | null,
 ) {
+  if (!inferiorEpigastricStudyReady(catalog, region, recipeId)) return false;
   if (!armVascularStudyReady(catalog, region, recipeId)) return false;
   if (!genicularStudyReady(catalog, region, recipeId)) return false;
   if (!deferentDuctStudyReady(catalog, region, recipeId)) return false;
