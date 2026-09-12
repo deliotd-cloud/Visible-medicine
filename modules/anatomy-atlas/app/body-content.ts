@@ -101,6 +101,7 @@ import { limbicLandmarkLesson } from '../lib/limbic-landmarks';
 import { tarsalImagingLesson } from '../lib/tarsal-imaging';
 import { upperVesselImagingLesson } from '../lib/upper-vessel-imaging';
 import { lowerArterialImagingLesson } from '../lib/lower-arterial-imaging';
+import { limbBoneImagingLesson } from '../lib/limb-bone-imaging';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -173,6 +174,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (portalVein) return portalVein;
   const tarsalImaging = tarsalImagingLesson(s, tab);
   if (tarsalImaging) return tarsalImaging;
+  const limbBoneImaging = limbBoneImagingLesson(s, tab);
+  if (limbBoneImaging) return limbBoneImaging;
   const tentorium = tentoriumLesson(s, tab);
   if (tentorium) return tentorium;
   const brachialVein = brachialVeinLesson(s, tab);

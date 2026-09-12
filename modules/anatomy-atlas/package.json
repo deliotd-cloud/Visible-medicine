@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "limb-bone-imaging:test": "node scripts/pin-limb-bone-imaging.mjs --check && node scripts/record-limb-bone-imaging.mjs --check && node scripts/validate-limb-bone-imaging.mjs",
     "independent-navigation:test": "node scripts/validate-independent-navigation.mjs",
     "specimen-review:test": "node scripts/validate-specimen-review.mjs",
     "hra-renal:export": "node scripts/export-hra-renal.mjs",

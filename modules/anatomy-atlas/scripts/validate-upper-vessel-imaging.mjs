@@ -5,7 +5,7 @@ import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import ts from 'typescript';
 import { contentContext, contentValidator } from './content-contract-tools.mjs';
-import { bodyDisplayCatalog } from '../lib/body-display-catalog.ts';
+import { authoringBeforeLowerArterialImaging } from './lower-arterial-imaging-history.mjs';
 import {
   authoringBeforeUpperVesselImaging,
   upperVesselContentHash as hash,
@@ -16,9 +16,10 @@ import {
 } from '../content/upper-vessel-imaging.ts';
 const context = await contentContext(),
   { api } = context;
-const catalog = bodyDisplayCatalog(context.catalog),
+const catalog = api.bodyDisplayCatalog(context.catalog),
   initial = JSON.stringify(catalog);
 const before = authoringBeforeUpperVesselImaging({ api, catalog });
+const preArterial = authoringBeforeLowerArterialImaging({ api, catalog });
 const pins = JSON.parse(
   await readFile('content/upper-vessel-imaging-pins.json'),
 );
@@ -87,7 +88,7 @@ for (const s of catalog.structures)
       lesson = api.upperVesselImagingLesson(s, tab);
     if (!entry?.topics.includes(tab)) {
       assert.equal(lesson, undefined);
-      assert.deepEqual(api.bodyLesson(s, tab), before.bodyLesson(s, tab));
+      assert.deepEqual(preArterial.bodyLesson(s, tab), before.bodyLesson(s, tab));
       unchanged++;
       continue;
     }

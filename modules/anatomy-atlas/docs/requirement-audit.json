@@ -75,6 +75,9 @@
     "lib/tarsal-imaging.ts": "25d1061071ff016a0b61342ae79b6af6268a486c3cb39d9333cc6c7cfe35640d",
     "lib/upper-vessel-imaging.ts": "909442b69744592d9593863a250ba90d962c9b684e60585eba91475d26d7fef6",
     "lib/lower-arterial-imaging.ts": "021f2b528102027b1a34736bc5693872e7644f2f09dcd18106b206d50675857b",
+    "lib/limb-bone-imaging.ts": "3980e1c6439c6cd9372fdc66ea8ffecaee57274e40a0a79a13a4759568742d99",
+    "content/limb-bone-imaging.ts": "df56c5dc9d3b9a8737867df6742dfe899b52972582880ad844b3b63d94f1a8a0",
+    "content/limb-bone-imaging-pins.json": "02689b9c5b4005a168ec25eccc3519d23bfe8c04bdeeb4bb9c3e4d879c6061b7",
     "content/lower-arterial-imaging.ts": "c7de12b3f630344c3ba9feb273032a44d8b72fc599be2e1eee3e32b3123516f2",
     "content/lower-arterial-imaging-pins.json": "367400e457a0cd5076b223312fb63686fd48f412ddf23116425ad1338b50e2c0",
     "content/upper-vessel-imaging.ts": "71976d885d8d43fe70c5a03177175f6338d3c88b22053a5d0af5449c39e3411b",
@@ -266,8 +269,8 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "ee7d9a33fb40359c1658d0283bd105cca56b4b70c3577dced42dd01084340a51",
-    "explicitTopicReadiness": "bd5477f20d752e5b47dfdd0c6ceb438cc4f0a9fc338041e424eb54cc93cfab4c",
+    "resolvedContentAndRecipeData": "3c61d9b93419a2526d1a909d30f9db75ef00e8b6a6bf508eb5945cdce9b69a6f",
+    "explicitTopicReadiness": "b3a4165a131d5278578780a3e81c55a9bfab63a888a5bd75d878dd2518111b3c",
     "reasoningQuestionData": "caafb323ca7d5a04971f91ad369d68c3a8da5e43839b39d8cd76192d1497bad2",
     "nestedTeachingData": "8e14e4e7b62141619825ebe604bc8cfddba30a80629162aa70818b7dc7c09350"
   },
@@ -535,6 +538,18 @@
         "ct": 12,
         "mri": 12,
         "ultrasound": 12
+      },
+      "geometryChanged": false,
+      "clinicalApproval": false
+    },
+    "limbBoneImaging": {
+      "selections": 12,
+      "groups": 6,
+      "distinctTopicTexts": 12,
+      "modalities": {
+        "xray": 12,
+        "ct": 6,
+        "mri": 6
       },
       "geometryChanged": false,
       "clinicalApproval": false
@@ -1389,21 +1404,21 @@
         "generatedIdentification": 0
       },
       "ct": {
-        "specificDraft": 142,
+        "specificDraft": 148,
         "identityOnly": 0,
-        "pending": 936,
+        "pending": 930,
         "generatedIdentification": 0
       },
       "mri": {
-        "specificDraft": 144,
+        "specificDraft": 150,
         "identityOnly": 0,
-        "pending": 934,
+        "pending": 928,
         "generatedIdentification": 0
       },
       "xray": {
-        "specificDraft": 83,
+        "specificDraft": 95,
         "identityOnly": 0,
-        "pending": 995,
+        "pending": 983,
         "generatedIdentification": 0
       },
       "ultrasound": {
@@ -1744,9 +1759,9 @@
           "generatedIdentification": 0
         },
         "xray": {
-          "specificDraft": 1,
+          "specificDraft": 3,
           "identityOnly": 0,
-          "pending": 80,
+          "pending": 78,
           "generatedIdentification": 0
         },
         "ultrasound": {
@@ -1844,21 +1859,21 @@
           "generatedIdentification": 0
         },
         "ct": {
-          "specificDraft": 3,
+          "specificDraft": 7,
           "identityOnly": 0,
-          "pending": 69,
+          "pending": 65,
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 3,
+          "specificDraft": 7,
           "identityOnly": 0,
-          "pending": 69,
+          "pending": 65,
           "generatedIdentification": 0
         },
         "xray": {
-          "specificDraft": 2,
+          "specificDraft": 6,
           "identityOnly": 0,
-          "pending": 70,
+          "pending": 66,
           "generatedIdentification": 0
         },
         "ultrasound": {
@@ -1968,9 +1983,9 @@
           "generatedIdentification": 0
         },
         "xray": {
-          "specificDraft": 1,
+          "specificDraft": 3,
           "identityOnly": 0,
-          "pending": 92,
+          "pending": 90,
           "generatedIdentification": 0
         },
         "ultrasound": {
@@ -2012,21 +2027,21 @@
           "generatedIdentification": 0
         },
         "ct": {
-          "specificDraft": 16,
-          "identityOnly": 0,
-          "pending": 58,
-          "generatedIdentification": 0
-        },
-        "mri": {
           "specificDraft": 18,
           "identityOnly": 0,
           "pending": 56,
           "generatedIdentification": 0
         },
-        "xray": {
-          "specificDraft": 0,
+        "mri": {
+          "specificDraft": 20,
           "identityOnly": 0,
-          "pending": 74,
+          "pending": 54,
+          "generatedIdentification": 0
+        },
+        "xray": {
+          "specificDraft": 8,
+          "identityOnly": 0,
+          "pending": 66,
           "generatedIdentification": 0
         },
         "ultrasound": {

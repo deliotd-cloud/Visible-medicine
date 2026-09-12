@@ -1,5 +1,21 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 12 September 2026 — limb-bone imaging teaching (runtime publication pending)
+
+Source `1ddc0732fd882bf3380310ad6b3f673bf014fb5f`, tree `579599d1b7bb906882b78cd560670bb6e5376070`, parent `f82bfdf411a10667a1c3aa5f3efdc05e55051ee8`. Twenty-six exact source paths mirrored. Twelve existing sided radius/ulna/fibula/femur/tibia/patella records gain 24 introductory placements (12 X-ray, six CT, six MRI) from 12 topic texts and six landmark notes. Existing knee CT/MRI/US, all other prior teaching/recipes and geometry remain intact. Reading references are linked primary medical sources; no images, external prose, new dataset or dependency imported. Current body teaching counts: CT148, MRI150, X-ray95 draft representations, not clinical approvals.
+
+Passed: TypeScript, production build, source pin/transition checks, 24 actual notes renders, 288 altered-record rejections, 12 original source-tree rows, three model hashes, all 9,678 unaffected displayed topic values and nine explicit preserved files. Lower-arterial and tarsal regressions pass. Renderer399 inputs SHA256 `d106b507d553ee16647a9702f8f707f0685d2886d4088f837619ccf41a2fc697`. Build preserves125 GLBs/1433 meshes/4299 buffer views losslessly. No clinical/device/real-image or private-record acceptance claimed. Source-bound review fingerprints require re-review.
+
+Known legacy test issue: `validate-upper-vessel-imaging.mjs` can now load through the existing bundled API, but its old global baseline still fails. Replaying its exact parent history code against the preceding saved teaching proves this mismatch predates the new limb-bone material (parent actual `1a1f36136deb1911e78e0f6a42ac66ef4f9dc4c839485e679a68eb86a664fb4f`, expected `ff12af39a1a8fbed6716321fba0549d93bec2be438dfd475be60bad5bd36a0be`). The historical expected hash was not changed. Offline reconstruction now unwinds limb-bone then lower-arterial then upper-vessel changes, restoring the older tarsal regression. This is not an all-tests-pass claim.
+
+D-drive stem `atlas-limb-bone-imaging-2026-09-12` in `D:/VisibleMedicine-Atlas-Recovery/`:
+
+- Runtime `.site.tar.gz`:122619234 bytes, SHA256 `de3de236d1af178f3890be387bf0746efb6a525685fd673b73da8459417846ab`;456 safe entries, three byte-exact migrations.
+- Source `.delta.tar`:686080 bytes, SHA256 `7e0c95d67cd9fdca73a34c735df517189792eac80c06b5b5fda93aecd897e593`.
+- Source `.incremental.bundle`:24163 bytes, SHA256 `4ffa09537c993e40ba31e48436a8cf9c57e1756b213b3ddc637518970b10001d`.
+
+Independent fetch/full-fsck restore verified source/tree at `refs/verification/limb-bone-imaging-20260912`, preserving verifier main and earlier recovery artifacts. Exact source pushed to Sites main. Native Windows build/package wrappers failed at their local paths; established build/package fallbacks passed. Current owner-only access rechecked; stored/live version still171. No identical large upload retried under unchanged native timeout. Source/runtime backup only, not conversation/private database backup. Website main unchanged.
+
 ## 12 September 2026 — exact independent study links and expanded regional reviews (runtime publication pending)
 
 Source `f82bfdf411a10667a1c3aa5f3efdc05e55051ee8`, tree `d3ea14036faee79a097c94538ae98c1fd073a0b2`, parent `3d3909597ce063f3b928c0fff47a1398c6cb5294`. Thirty exact source paths mirrored. Kidneys, female pelvis, back layers and abdominal wall now have source/frame/revision-bound selection and study URLs; all nine independent specimen/region review scopes link to the exact selected structure and back. Selection framing is requested for linked UM studies too. Share/review controls stay collapsed. Review worksheets expose existing attachments and source motor-supply text without adding medical claims.

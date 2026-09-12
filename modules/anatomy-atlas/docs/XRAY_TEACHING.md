@@ -2,6 +2,8 @@
 
 ## Use and scope
 
+Current coverage is reported in [the generated inventory](CURRENT_STATUS.md#body-teaching-readiness). The original shoulder/spine implementation totals below describe their historical milestones. Subsequent wrist, tarsal and [limb-bone teaching](LIMB_BONE_IMAGING.md) extend those notes; historical counts must not be used as current totals.
+
 Select a structure, then **Imaging → X-ray**. The three top-level information groups remain unchanged; imaging choices can wrap on narrow panels. The collapsed internal-study panel also offers X-ray, explicitly pending for every current part.
 
 Three original drafts concern scapula, proximal humerus and clavicle. Six exact right/left body records and the three overlapping dedicated-shoulder bones share these concepts; they are not nine independent lessons. The body retains the whole humerus, while the shoulder model is cropped. The subsequent [spinal imaging pass](SPINE_IMAGING_TEACHING.md) adds nine concept groups across 47 exact body records, giving 53 current root-body X-ray drafts and 969 pending entries. Six shoulder muscle/tendon entries and 69 nested selections stay pending for X-ray.

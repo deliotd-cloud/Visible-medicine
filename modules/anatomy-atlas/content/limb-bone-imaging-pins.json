@@ -1,0 +1,974 @@
+{
+  "sourceCommit": "f82bfdf411a10667a1c3aa5f3efdc05e55051ee8",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "thigh-skeleton",
+      "url": "/models/bodyparts3d/full-body/thigh-skeleton.glb",
+      "bytes": 115852,
+      "sha256": "27bd799bd85387beea9fab40cbe2f83a5e780983170db4dfd1d2e0eda8fd2b59",
+      "structures": 2
+    },
+    {
+      "id": "leg-skeleton",
+      "url": "/models/bodyparts3d/full-body/leg-skeleton.glb",
+      "bytes": 118776,
+      "sha256": "8885078bc114d8cf5c2ebd12f393761965b2016bf6f5fc196c83549527e2c0af",
+      "structures": 6
+    },
+    {
+      "id": "forearm-skeleton",
+      "url": "/models/bodyparts3d/full-body/forearm-skeleton.glb",
+      "bytes": 57728,
+      "sha256": "7af54bdb11a8ae93d9236c6ed35b9a471543bc2a8a32867992a8917d22b1e0d5",
+      "structures": 4
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:left:bone:left-femur",
+        "fmaId": "FMA24475",
+        "name": "Left femur",
+        "sourceName": "left femur",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis",
+          "leg"
+        ],
+        "bundle": "thigh-skeleton",
+        "nodeName": "FMA24475",
+        "bounds": {
+          "min": [
+            0.3196620047092438,
+            -4.319439888000488,
+            -0.005177993793040514
+          ],
+          "max": [
+            1.502369999885559,
+            0.34239014983177185,
+            0.622759997844696
+          ]
+        },
+        "center": [
+          0.9110160022974014,
+          -1.9885248690843582,
+          0.30879100202582777
+        ],
+        "anchor": [
+          0.9478089809417725,
+          -2.004189968109131,
+          0.308991014957428
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3259",
+            "sha256": "d291cc3619c32c68edb9d29e0b755634c2cb85e3db89f0d0b63a316f879ef86d"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "femur",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:left:bone:left-fibula",
+        "fmaId": "FMA24481",
+        "name": "Left fibula",
+        "sourceName": "left fibula",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "bundle": "leg-skeleton",
+        "nodeName": "FMA24481",
+        "bounds": {
+          "min": [
+            0.8452900052070618,
+            -8.251906394958496,
+            -0.014659996144473553
+          ],
+          "max": [
+            1.2010799646377563,
+            -4.408689975738525,
+            0.28119003772735596
+          ]
+        },
+        "center": [
+          1.023184984922409,
+          -6.330298185348511,
+          0.1332650207914412
+        ],
+        "anchor": [
+          1.0649499893188477,
+          -6.316400051116943,
+          0.12487499415874481
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3260",
+            "sha256": "b5fbb694e1d881033ec8318b97c41e9d9bedc89a8df9845573b1aac528829331"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "fibula",
+      "topics": [
+        "xray",
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        },
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:left:bone:left-patella",
+        "fmaId": "FMA24487",
+        "name": "Left patella",
+        "sourceName": "left patella",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "bundle": "leg-skeleton",
+        "nodeName": "FMA24487",
+        "bounds": {
+          "min": [
+            0.6059249639511108,
+            -4.3850297927856445,
+            0.5090100169181824
+          ],
+          "max": [
+            1.0222400426864624,
+            -3.9923698902130127,
+            0.7275099754333496
+          ]
+        },
+        "center": [
+          0.8140825033187866,
+          -4.188699841499329,
+          0.618259996175766
+        ],
+        "anchor": [
+          0.8300420641899109,
+          -4.148429870605469,
+          0.5871900320053101
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3275",
+            "sha256": "768362d04f0f91cea9a28f4aeae9d9f63f3c82450b68d185fa4afefe75d75cc1"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "patella",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:bone:left-radius",
+        "fmaId": "FMA23465",
+        "name": "Left radius",
+        "sourceName": "left radius",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-skeleton",
+        "nodeName": "FMA23465",
+        "bounds": {
+          "min": [
+            2.198359966278076,
+            0.0616302490234375,
+            0.11469299346208572
+          ],
+          "max": [
+            2.7914299964904785,
+            2.350100040435791,
+            0.7725200057029724
+          ]
+        },
+        "center": [
+          2.4948949813842773,
+          1.2058651447296143,
+          0.44360649958252907
+        ],
+        "anchor": [
+          2.561270236968994,
+          1.1699999570846558,
+          0.4131059944629669
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3277",
+            "sha256": "c41a7de7eddf5b91543fb22cf34c7dcad50241ffe1faae6ae22e1be30ca9390a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "radius",
+      "topics": [
+        "xray",
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        },
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:left:bone:left-tibia",
+        "fmaId": "FMA24478",
+        "name": "Left tibia",
+        "sourceName": "left tibia",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "bundle": "leg-skeleton",
+        "nodeName": "FMA24478",
+        "bounds": {
+          "min": [
+            0.3503419756889343,
+            -8.060953140258789,
+            0.019821014255285263
+          ],
+          "max": [
+            1.0945500135421753,
+            -4.261380195617676,
+            0.6451500058174133
+          ]
+        },
+        "center": [
+          0.7224459946155548,
+          -6.161166667938232,
+          0.3324855100363493
+        ],
+        "anchor": [
+          0.7442640066146851,
+          -6.160630226135254,
+          0.2990489900112152
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3282",
+            "sha256": "40e55d7d28f060be61815603ee5eb1c0ba4c2e93af6fed6b5db7ca88d4ed82ef"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "tibia",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:bone:left-ulna",
+        "fmaId": "FMA23468",
+        "name": "Left ulna",
+        "sourceName": "left ulna",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-skeleton",
+        "nodeName": "FMA23468",
+        "bounds": {
+          "min": [
+            1.9689199924468994,
+            0.050159912556409836,
+            -0.05447700619697571
+          ],
+          "max": [
+            2.4711999893188477,
+            2.5246996879577637,
+            0.7327899932861328
+          ]
+        },
+        "center": [
+          2.2200599908828735,
+          1.2874298002570868,
+          0.33915649354457855
+        ],
+        "anchor": [
+          2.191890001296997,
+          1.2612799406051636,
+          0.3485729992389679
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3286",
+            "sha256": "0e3c48a4b664ffc37ef11eb4754c6c7f4adc8fd1d3e54d1286307432c7d04bfc"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ulna",
+      "topics": [
+        "xray",
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        },
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:bone:right-radius",
+        "fmaId": "FMA23464",
+        "name": "Right radius",
+        "sourceName": "right radius",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-skeleton",
+        "nodeName": "FMA23464",
+        "bounds": {
+          "min": [
+            -2.7953500747680664,
+            0.05835022032260895,
+            0.11102600395679474
+          ],
+          "max": [
+            -2.1983299255371094,
+            2.3505005836486816,
+            0.7690799832344055
+          ]
+        },
+        "center": [
+          -2.496840000152588,
+          1.2044254019856453,
+          0.44005299359560013
+        ],
+        "anchor": [
+          -2.5462300777435303,
+          1.1810302734375,
+          0.42398497462272644
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3349",
+            "sha256": "0f824e639b13ea02959734a0d9bd8d7ca67d0b51f531a138d769e1d3b22e0c98"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "radius",
+      "topics": [
+        "xray",
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        },
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:right:bone:right-femur",
+        "fmaId": "FMA24474",
+        "name": "Right femur",
+        "sourceName": "right femur",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis",
+          "leg"
+        ],
+        "bundle": "thigh-skeleton",
+        "nodeName": "FMA24474",
+        "bounds": {
+          "min": [
+            -1.5013400316238403,
+            -4.31850004196167,
+            -0.004697990603744984
+          ],
+          "max": [
+            -0.31894299387931824,
+            0.342520147562027,
+            0.6219199895858765
+          ]
+        },
+        "center": [
+          -0.9101415127515793,
+          -1.9879899471998215,
+          0.30861099949106574
+        ],
+        "anchor": [
+          -0.9391549825668335,
+          -2.0242297649383545,
+          0.31437796354293823
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3365",
+            "sha256": "5eff0f92905dd45bd0e79b1de0144dc15988c73c683468163255ba1452d58037"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "femur",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:right:bone:right-fibula",
+        "fmaId": "FMA24480",
+        "name": "Right fibula",
+        "sourceName": "right fibula",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "bundle": "leg-skeleton",
+        "nodeName": "FMA24480",
+        "bounds": {
+          "min": [
+            -1.2016500234603882,
+            -8.252799034118652,
+            -0.015125999227166176
+          ],
+          "max": [
+            -0.8434450030326843,
+            -4.4085001945495605,
+            0.28168800473213196
+          ]
+        },
+        "center": [
+          -1.0225475132465363,
+          -6.3306496143341064,
+          0.1332810027524829
+        ],
+        "anchor": [
+          -1.0324500799179077,
+          -6.344590187072754,
+          0.16410896182060242
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3366",
+            "sha256": "d03fee02cf8eefad1ecfcb9246e3f43ad3c4615c21ce08dc5e2b6901c6395a86"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "fibula",
+      "topics": [
+        "xray",
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        },
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:right:bone:right-patella",
+        "fmaId": "FMA24486",
+        "name": "Right patella",
+        "sourceName": "right patella",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "bundle": "leg-skeleton",
+        "nodeName": "FMA24486",
+        "bounds": {
+          "min": [
+            -1.0228800773620605,
+            -4.3851399421691895,
+            0.5099199414253235
+          ],
+          "max": [
+            -0.6062080264091492,
+            -3.9920401573181152,
+            0.7272699475288391
+          ]
+        },
+        "center": [
+          -0.8145440518856049,
+          -4.188590049743652,
+          0.6185949444770813
+        ],
+        "anchor": [
+          -0.8611350059509277,
+          -4.189239978790283,
+          0.5913699865341187
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3381",
+            "sha256": "b513b8cb6b37e3eb4211fd35a4469efdf79de37887a0af8c582efc836a6f6307"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "patella",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+        "fmaId": "FMA24477",
+        "name": "Right tibia",
+        "sourceName": "right tibia",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "bundle": "leg-skeleton",
+        "nodeName": "FMA24477",
+        "bounds": {
+          "min": [
+            -1.0935299396514893,
+            -8.060371398925781,
+            0.02072898857295513
+          ],
+          "max": [
+            -0.3521600067615509,
+            -4.260799884796143,
+            0.6483500003814697
+          ]
+        },
+        "center": [
+          -0.7228449732065201,
+          -6.160585641860962,
+          0.33453949447721243
+        ],
+        "anchor": [
+          -0.6983820199966431,
+          -6.1077399253845215,
+          0.3267289698123932
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3387",
+            "sha256": "01879d7310938e82eecc02e1115332497e94085ff5cc1fa8eeee47ad1f5d3578"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "tibia",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:bone:right-ulna",
+        "fmaId": "FMA23467",
+        "name": "Right ulna",
+        "sourceName": "right ulna",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-skeleton",
+        "nodeName": "FMA23467",
+        "bounds": {
+          "min": [
+            -2.471790075302124,
+            0.05172973498702049,
+            -0.052008017897605896
+          ],
+          "max": [
+            -1.968809962272644,
+            2.5244994163513184,
+            0.7349400520324707
+          ]
+        },
+        "center": [
+          -2.220300018787384,
+          1.2881145756691694,
+          0.3414660170674324
+        ],
+        "anchor": [
+          -2.2308499813079834,
+          1.2578003406524658,
+          0.39101600646972656
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3391",
+            "sha256": "0aad73148e036c980ab24dfa675fcc1f109e5c60d82c12f3696420cf93cb4a98"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ulna",
+      "topics": [
+        "xray",
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        },
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "b18c39a76242a2ff7bc85cd650c6a20e6dbd29c6aa76d3a605cacedbe7816cde"
+}

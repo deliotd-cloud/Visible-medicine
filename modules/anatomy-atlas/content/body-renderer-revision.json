@@ -58,7 +58,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "3bdb186bb930308f600cbdc2180d1150b190b7f6863b53177c93767445e3d341"
+      "sha256": "b43b26064f12de3ec5d7c639db6576efcde41aa2290640641406a0dc672f0324"
     },
     {
       "path": "app/body-explorer.css",
@@ -439,6 +439,14 @@
     {
       "path": "content/inferior-thyroid-context-pins.json",
       "sha256": "1928f2ecce49146511325abe3fe6331291dcbbbb0ca6308f99e95be2353f07f8"
+    },
+    {
+      "path": "content/limb-bone-imaging-pins.json",
+      "sha256": "02689b9c5b4005a168ec25eccc3519d23bfe8c04bdeeb4bb9c3e4d879c6061b7"
+    },
+    {
+      "path": "content/limb-bone-imaging.ts",
+      "sha256": "df56c5dc9d3b9a8737867df6742dfe899b52972582880ad844b3b63d94f1a8a0"
     },
     {
       "path": "content/limb-vascular-studies.ts",
@@ -1049,6 +1057,10 @@
       "sha256": "cc7cdc7c343872f60f36b9337008069c88294b6b56e713159e6b0055327e2ae8"
     },
     {
+      "path": "lib/limb-bone-imaging.ts",
+      "sha256": "3980e1c6439c6cd9372fdc66ea8ffecaee57274e40a0a79a13a4759568742d99"
+    },
+    {
       "path": "lib/limb-connective-clinical-curriculum.ts",
       "sha256": "22d62232cf0c95dfcf5835d39d79c1c81275876f9f3dba605c65335d00c3220a"
     },
@@ -1434,7 +1446,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "19b5f002dd73b053f7bf09c3c1f7f49744c38a2aa254b4b2d642a3eebae1ee8f"
+      "sha256": "d3efd64364d7a91b930c2931e40e18e55f4411082a487bdfe0555bbcafdbd561"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1597,5 +1609,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "51efebe5f1f1fe52c7a93997e31ec86244ef23a2d07675b4924f7c8262e8e6f8"
+  "sha256": "d106b507d553ee16647a9702f8f707f0685d2886d4088f837619ccf41a2fc697"
 }

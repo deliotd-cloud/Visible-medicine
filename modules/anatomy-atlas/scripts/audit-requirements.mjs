@@ -8,6 +8,7 @@ import { limbVascularStudySets, limbVascularSourceIds } from '../content/limb-va
 import { armVascularStudies, armVascularSourceIds } from '../content/arm-vascular-studies.ts';
 import { upperVesselImagingGroups, upperVesselImagingTopics } from '../content/upper-vessel-imaging.ts';
 import { lowerArterialImagingGroups, lowerArterialImagingTopics } from '../content/lower-arterial-imaging.ts';
+import { limbBoneImagingGroups, limbBoneImagingTopics } from '../content/limb-bone-imaging.ts';
 import { genicularStudy, genicularStudySourceIds } from '../content/genicular-study.ts';
 import { deferentDuctStudy } from '../content/deferent-duct-study.ts';
 import { inferiorEpigastricStudy } from '../content/inferior-epigastric-study.ts';
@@ -41,6 +42,7 @@ export { parseSpecimenLink, specimenTopics } from './lib/specimen-links.ts';
 export { bodyContent, bodyLesson } from './app/body-content.ts';
 export { upperVesselImagingLesson } from './lib/upper-vessel-imaging.ts';
 export { lowerArterialImagingLesson } from './lib/lower-arterial-imaging.ts';
+export { limbBoneImagingLesson } from './lib/limb-bone-imaging.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';
 export { reasoningConcepts, reasoningConceptFor } from './lib/reasoning-questions.ts';
@@ -100,6 +102,7 @@ const {
   bodyLesson,
   upperVesselImagingLesson,
   lowerArterialImagingLesson,
+  limbBoneImagingLesson,
   structures: shoulder,
   dissectionProfiles,
   reasoningConcepts,
@@ -365,6 +368,9 @@ for (const path of [
   'lib/tarsal-imaging.ts',
   'lib/upper-vessel-imaging.ts',
   'lib/lower-arterial-imaging.ts',
+  'lib/limb-bone-imaging.ts',
+  'content/limb-bone-imaging.ts',
+  'content/limb-bone-imaging-pins.json',
   'content/lower-arterial-imaging.ts',
   'content/lower-arterial-imaging-pins.json',
   'content/upper-vessel-imaging.ts',
@@ -740,6 +746,13 @@ const report = {
       groups: Object.keys(lowerArterialImagingGroups).length,
       distinctTopicTexts: Object.values(lowerArterialImagingTopics).reduce((n,g)=>n+Object.keys(g).length,0),
       modalities: Object.fromEntries(['ct','mri','ultrasound'].map(tab=>[tab,catalog.structures.filter(s=>lowerArterialImagingLesson(s,tab)?.readiness==='draft').length])),
+      geometryChanged: false, clinicalApproval: false,
+    },
+    limbBoneImaging: {
+      selections: catalog.structures.filter(s=>Object.values(limbBoneImagingGroups).flat().includes(s.fmaId)).length,
+      groups: Object.keys(limbBoneImagingGroups).length,
+      distinctTopicTexts: Object.values(limbBoneImagingTopics).reduce((n,g)=>n+Object.keys(g).length,0),
+      modalities: Object.fromEntries(['xray','ct','mri'].map(tab=>[tab,catalog.structures.filter(s=>limbBoneImagingLesson(s,tab)?.readiness==='draft').length])),
       geometryChanged: false, clinicalApproval: false,
     },
     deepLegVeins: {

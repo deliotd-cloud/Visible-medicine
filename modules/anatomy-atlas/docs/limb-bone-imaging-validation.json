@@ -1,0 +1,43 @@
+{
+  "selections": 12,
+  "distinctConcepts": 6,
+  "distinctTopicTexts": 12,
+  "placements": 24,
+  "modalities": {
+    "xray": 12,
+    "ct": 6,
+    "mri": 6
+  },
+  "unchangedSections": 9678,
+  "rejectedBindings": 288,
+  "sourceRows": 12,
+  "modelHashes": 3,
+  "actualNoteRenders": 24,
+  "sourceWordCounts": {
+    "upper": 55,
+    "lower": 103,
+    "forearm": 70,
+    "radius": 56,
+    "mri": 121,
+    "olecranon": 64,
+    "ct": 59,
+    "ankle": 159,
+    "femur": 59,
+    "tibia": 58,
+    "patella": 60
+  },
+  "preservedPaths": [
+    "app/body-explorer.tsx",
+    "app/body-scene.tsx",
+    "app/dissection-data.ts",
+    "app/anatomy-data.ts",
+    "lib/knee-imaging.ts",
+    "lib/um-limb-teaching.ts",
+    "package-lock.json",
+    "public/models/bodyparts3d/full-body/catalog.json",
+    "drizzle/0002_specimen_review_events.sql"
+  ],
+  "clinicalApproval": false,
+  "browserTesting": false,
+  "realImaging": false
+}

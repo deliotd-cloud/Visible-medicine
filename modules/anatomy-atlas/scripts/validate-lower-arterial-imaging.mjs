@@ -5,6 +5,7 @@ import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import ts from 'typescript';
 import { contentContext, contentValidator } from './content-contract-tools.mjs';
+import { authoringBeforeLimbBoneImaging } from './limb-bone-imaging-history.mjs';
 import {
   authoringBeforeLowerArterialImaging,
   lowerArterialContentHash as hash,
@@ -19,6 +20,7 @@ const context = await contentContext(),
 const catalog = api.bodyDisplayCatalog(context.catalog),
   initial = JSON.stringify(catalog);
 const before = authoringBeforeLowerArterialImaging({ api, catalog });
+const preBone = authoringBeforeLimbBoneImaging({ api, catalog });
 const pins = JSON.parse(
   await readFile('content/lower-arterial-imaging-pins.json'),
 );
@@ -88,7 +90,7 @@ for (const s of catalog.structures)
       lesson = api.lowerArterialImagingLesson(s, tab);
     if (!entry?.topics.includes(tab)) {
       assert.equal(lesson, undefined);
-      assert.deepEqual(api.bodyLesson(s, tab), before.bodyLesson(s, tab));
+      assert.deepEqual(preBone.bodyLesson(s, tab), before.bodyLesson(s, tab));
       unchanged++;
       continue;
     }

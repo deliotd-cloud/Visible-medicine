@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Limb-bone imaging](LIMB_BONE_IMAGING.md) fills 24 pending sections across 12 exact radius/ulna/fibula/femur/tibia/patella selections: 12 X-ray, 6 CT and 6 MRI placements, using 12 distinct topic texts and six landmark notes. Existing knee CT/MRI/US lessons, geometry and controls remain unchanged. The existing Imaging tabs distinguish the whole source bone from the imaged joint; these are original referenced drafts, not scans, validated landmark segmentations or clinical approval.
+
 [Independent specimen reviews](SPECIMEN_REVIEWS.md) cover nine source/region scopes (354 scoped records / 267 distinct source IDs): HRA kidneys/female pelvis, version-3 abdominal wall/back layers and five overlapping UM lower-limb regions. [Exact study links](INDEPENDENT_STUDY_LINKS.md) open the selected structure and study, and return to its review worksheet. Source/frame/geometry/teaching/checklist revisions are bound to private append-only records; no approval transfers between scopes. Anatomy and teaching are separate, acquired-imaging approval remains unavailable, and nested-organ review adapters are pending. This inventory reads no personal review records and asserts no clinical/device sign-off or hosted rollout.
 
 [Lower-limb arterial imaging](LOWER_ARTERIAL_IMAGING.md) supplies ${anatomy.lowerArterialImaging.selections} existing artery selections with CT/MRI/US drafts (${Object.values(anatomy.lowerArterialImaging.modalities).reduce((a,b)=>a+b,0)} placements / ${anatomy.lowerArterialImaging.distinctTopicTexts} regional-modality texts). Six concept-specific cautions and the existing inspector keep navigation compact. Missing fibular/trunk selections, complete runoff, scans, registration and radiologist/device approval remain outstanding.
@@ -140,7 +142,7 @@ Counts are representations with displayed copy, not unique lessons, complete top
 | --- | ---: | ---: | ---: | ---: |
 ${rows}
 
-Quiz-tab notes are separate from interactive practice. [X-ray orientation](XRAY_TEACHING.md) retains three shoulder-bone concepts across six exact body sources and the three overlapping dedicated-shoulder bones; [spinal orientation](SPINE_IMAGING_TEACHING.md) adds 47 exact body sources. Other X-ray topics remain pending. Imaging text is not an acquired-image viewer, segmentation or validated spatial correspondence.
+Quiz-tab notes are separate from interactive practice. [X-ray orientation](XRAY_TEACHING.md) includes the shoulder and spine plus wrist, tarsal and [limb-bone notes](LIMB_BONE_IMAGING.md). The table above is the current count; historical milestone totals elsewhere are not cumulative current coverage. Remaining entries stay pending. Imaging text is not an acquired-image viewer, segmentation or validated spatial correspondence.
 
 The opt-in [nested learning registry](NESTED_LEARNING_LINKS.md) exposes ${learningIntegration.nestedRepresentations} exact child destinations within ${learningIntegration.availableRepresentations} scope-specific representations. It supports document versions ${learningIntegration.supportedDocumentVersions.join(' and ')}, while the configured production document stays version ${learningIntegration.contractVersion} with no resources. Nested parent/child source and bundle bindings can resolve into the existing dissection routes; this is not a live viewer connection or entitlement.
 

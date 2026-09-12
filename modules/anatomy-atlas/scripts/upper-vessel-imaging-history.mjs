@@ -3,9 +3,11 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import pins from '../content/upper-vessel-imaging-pins.json' with { type: 'json' };
 import after from '../content/upper-vessel-imaging.transition.json' with { type: 'json' };
+import { authoringBeforeLowerArterialImaging } from './lower-arterial-imaging-history.mjs';
 export const upperVesselContentHash = (v) =>
   createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function authoringBeforeUpperVesselImaging({ api, catalog }) {
+  api = authoringBeforeLowerArterialImaging({ api, catalog });
   assert.equal(
     upperVesselContentHash(pins),
     '1d51d77f54a2272fecda2ff32e107dfa0b48d324219d85c99ba383f87c33a003',
