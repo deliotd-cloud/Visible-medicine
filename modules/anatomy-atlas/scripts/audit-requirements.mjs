@@ -15,6 +15,7 @@ import { genicularStudy, genicularStudySourceIds } from '../content/genicular-st
 import { deferentDuctStudy } from '../content/deferent-duct-study.ts';
 import { inferiorEpigastricStudy } from '../content/inferior-epigastric-study.ts';
 import { pelvicVeinStudy } from '../content/pelvic-vein-study.ts';
+import { pelvicVeinTeaching } from '../content/pelvic-vein-teaching.ts';
 import { limbicLandmarkStudy } from '../content/limbic-landmark-study.ts';
 import { footBoneFmas, footJoints } from '../content/foot-joints.ts';
 import { handBoneFmas, handJoints } from '../content/hand-joints.ts';
@@ -281,11 +282,21 @@ function summarize(rows) {
   );
 }
 const displayCatalog = bodyDisplayCatalog(catalog);
+const nestedGeometryOnly = [];
 const nestedRows = nestedStudyTargets(displayCatalog).map((target) => {
   const parent = displayCatalog.structures.find(
     (s) => s.id === target.parentId,
   );
   const concept = nestedTeachingFor(parent, target.study, target.structure);
+  // The existing cranial partition study deliberately exposes unnamed source
+  // pieces, not independent anatomical segments with inherited parent lessons.
+  // Count that gap explicitly; retain the failure for any other missing binding.
+  if (target.study === 'cranial-artery-components') {
+    assert.equal(concept, null, 'Unnamed cranial pieces must not inherit teaching');
+    nestedGeometryOnly.push({id:target.structureId,parentId:target.parentId,study:target.study});
+    const sections = Object.fromEntries(tabs.map(tab=>[tab,{readiness:'pending',title:'Unnamed source piece',body:'No independently authored anatomical teaching or clinical identity is assigned to this source partition.'}]));
+    return {sections,readiness:Object.fromEntries(tabs.map(tab=>[tab,'pending']))};
+  }
   assert(
     concept,
     'Missing source-bound nested teaching: ' + target.structureId,
@@ -446,6 +457,7 @@ for (const path of [
   'docs/pelvic-vein-source-audit.json',
   'lib/pelvic-veins.ts',
   'content/pelvic-vein-study.ts',
+  'content/pelvic-vein-teaching.ts',
   'content/pelvic-vein-study-transition.json',
   'docs/inferior-epigastric-source-audit.json',
   'lib/inferior-epigastric-vessels.ts',
@@ -709,6 +721,8 @@ const report = {
       contextSelections: pelvicVeins.contextRecords.length,
       focusRecipe: pelvicVeinStudy.id,
       focusRegions: pelvicVeinStudy.regions,
+      extendedDraftPlacements: Object.fromEntries(['function','clinical','pathology','ct','mri','ultrasound'].map(tab=>[tab,pelvicVeins.structures.filter(s=>bodyLesson(s,tab).readiness==='draft').length])),
+      distinctExtendedTexts: new Set(Object.values(pelvicVeinTeaching).flatMap(group=>Object.values(group).map(topic=>topic.body))).size,
       clinicalApproval: false,
       continuousLumenClaimed: false,
     },
@@ -1137,6 +1151,7 @@ const report = {
     body: summarize(contentRows),
     nested: {
       representations: nestedRows.length,
+      geometryOnlyRepresentations: nestedGeometryOnly,
       concepts: nestedConcepts.length,
       references: Object.keys(nestedTeachingReferences).length,
       topics: summarize(nestedRows),

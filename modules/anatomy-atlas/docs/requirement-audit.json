@@ -10,7 +10,7 @@
     "public/models/bodyparts3d/eye-layers/catalog.json": "3ae1d1b11eced1383b6de87df09fc8cbe9d24291b2144ae82b0a057d4e96daea",
     "public/models/bodyparts3d/eye-layers/display-correction.json": "61e09e972a1d301e56ebae9f1af90ffe9136309eda0242df1a03f84c6ad85dd2",
     "public/models/bodyparts3d/pancreas/display-correction.json": "a7add6d985798dedd1dd78c3879b2fc91f8a6cacc126d2a526f7ba8c4b03fc1a",
-    "lib/body-display-catalog.ts": "5faad874e43e90a33a57434983319cbf17caa1123feb604bd7cb99b5cb240e3d",
+    "lib/body-display-catalog.ts": "fab4f7610c55c898c4fab8af84f7f2db62d8bd5c13eec239de1536114f713481",
     "lib/brachial-veins.ts": "d675f79d288ce1eb799e4c58a7d14fe5894257274ef302ce96e3a2990bda5b2c",
     "lib/tentorium.ts": "974332c66ba542c04d602721c3bfe810723ecfdb0e2f8796d33b7c545f55eeab",
     "lib/deep-leg-veins.ts": "2faa7dd187bc9bd00b48b4de00acea4ebdbd12d8f07a827ff3a63f8a214ed2a2",
@@ -51,9 +51,9 @@
     "lib/lower-limb-motor.ts": "e769da189fa98ef8997b2fd275638f9996517a7ed2dd5a1818a5283bb5653c56",
     "lib/lower-limb-arterial.ts": "3d4dba4d517088183dd5a21957c3d0a35862f8c0ad4d69be1395dc2ea6a2d338",
     "lib/upper-limb-arterial.ts": "7e121024385fe858b5dd65753fa0df89fb22ff62b60e279cce21a56169273783",
-    "lib/regional-arterial.ts": "955b828dbfe67997e0cc550d529d7256ae4e37d95ba4114152c731ffdddeed73",
+    "lib/regional-arterial.ts": "d509e4570872359b57df99a01646c15236cb861c07d5d9ede0c61497a47c0ee3",
     "lib/limb-arterial.ts": "42608e39680c2188aff69a6c017556dd848900f8f7c26c89a87cd6269128b59a",
-    "lib/arterial.ts": "4b477e3bf1f88eb6befd80dbf5456546ef0798422430dd4d04dec650472eec56",
+    "lib/arterial.ts": "682959cf70658e7ddc037a5d613cd4f49fcb4b9415dc233db9c90a4da89e6138",
     "lib/abdominal-arterial.ts": "29a81d40909eff2d828e72bda5e2cc8660e51371e602c99cdf05fc1c5e32aa51",
     "content/abdominal-arterial.ts": "8d3adf0135a17a01281b5cbdf3d9cbd62167849043c6bf4948382f8cb8956ec1",
     "content/abdominal-arterial-pins.json": "173b19ad9e1ee70e9af87eea6dc4f9c026d5adbdce3d10975e27b35daa8c1573",
@@ -61,7 +61,7 @@
     "content/upper-limb-arterial-pins.json": "92a761df3eefcf1770a446de6a106f4144119a442847a7909839660ce6d6e352",
     "content/lower-limb-arterial.ts": "f5458ec67d394e37d50a578ec71291f16582a3645a097ff8a503eee6692b68dc",
     "content/lower-limb-arterial-pins.json": "274b0d2880de0b3f536f05858893c150cedb1230e0c14e2de84ecb1b4d9aba1b",
-    "app/arterial-connections.tsx": "55be8b17f90245bbca2bb5adfb522a16f5cf6f41f029131b5817c0f26230f2a3",
+    "app/arterial-connections.tsx": "53af4510da63ae3aab470801191ff552ca6e202c8433432f3e0ee7fb9bae289b",
     "lib/systemic-venous.ts": "3d7ea90f180f90efefd8e6a922f30add3d88c010147a9ed1ff197fbd2995a644",
     "content/systemic-venous.ts": "b209da089da96d8585e069c2fa04764ce04d2ffd68d61ba236175e2a8b6a5bf2",
     "content/systemic-venous-pins.json": "675c7fe7bfd3e3a24eb02377f3522c59fa949b9ac9ff6a5499ad49f0e42e6ff0",
@@ -135,8 +135,9 @@
     "content/limbic-landmark-study.ts": "61af256e33919e18b87b456e57fff9f8020832fbf7e36a3c3154f42375e5c948",
     "content/limbic-landmark-study-transition.json": "8523e1c721060eb0abe670b290c8ddb4b9dcadb7b8d3cb7b54a626cec68c2531",
     "docs/pelvic-vein-source-audit.json": "ffb300bcd1f2cd8c2a9684c133ed5d82a1043d7bda99a78f377854c9168ebf26",
-    "lib/pelvic-veins.ts": "8ad3004dbb32200c4bc5cee2afd3783286582f1d152b8f4ef056ff0020b72508",
+    "lib/pelvic-veins.ts": "c7bfabbe5d9f05f61c1dd729c3378bdf32b3055452342da33b2a54d9b480fa33",
     "content/pelvic-vein-study.ts": "3a998bf0de20529cfef1026a728316ac8a686d903645c8e16f82355645e242fd",
+    "content/pelvic-vein-teaching.ts": "d5233edff610e402a54b02313d9e1011dec9f9a38f220250a7dc543a2dc4756c",
     "content/pelvic-vein-study-transition.json": "3ca682d258847af37c078efac968309f807c19da98fb4fd65e2d9c62a1079a5b",
     "docs/inferior-epigastric-source-audit.json": "58fab593957c3469125e84258c78c176425235b40838e369bff0d38191930698",
     "lib/inferior-epigastric-vessels.ts": "cde444a140807cc788cfbed570907316c52e32d00bb2c6295b2c5817c17df997",
@@ -159,7 +160,7 @@
     "lib/pancreatic.ts": "ad475405272bc11360d3d9242e2a85d92c58997d8489f3f4fb54119e741cb8f9",
     "lib/cricothyroid.ts": "1e7d88df1c8f24a4b33b520637d00bdf64d498a5017c332a6ce4d2a1cc0828b9",
     "lib/femoral-components.ts": "11ceea18314fafee0872c1cdf383f6d132d27b4c9f0c17ba3a5093170c5a8cf5",
-    "app/femoral-components.tsx": "52091361ad62034595f6ad1475734aa97efc50203b1767bf1d57594d005cd604",
+    "app/femoral-components.tsx": "48d786a7d938ee0b23ec7d8e9a0a2d177a9bd4a845db903372a0afa5fbc4e804",
     "content/femoral-component-teaching.ts": "987385471320cecedfc6732bb063de4627b8fc8dcfef0dbf297465d970a0507e",
     "content/femoral-component-teaching-bindings.v1.json": "258bef0d9526cf5e2a471d49b397c8582fe4016945c9e6cd9f52e79c6a37a43f",
     "public/models/bodyparts3d/femoral-components/catalog.json": "594f8071b63861fcb1f4a0b821a26fd5c54b609444b8321474802b16ec13a799",
@@ -197,31 +198,31 @@
     "content/pulmonary-teaching.ts": "dec60fd4009651ed0e0f11e67763db54c367aa22968c7653dadaf128918b77b0",
     "content/cerebral-teaching.ts": "ba741cc7373be4ffad1dd7a04af2605d5a033bbe6d40723196241d89d905b1a0",
     "content/nested-teaching-bindings.v1.json": "ed5b3b4968348d14e9feb65ac083b230ea80493360807fc440a0ee984070e315",
-    "lib/nested-anatomy.ts": "f12ee701477ce4de3f6964011160d8c2d0ff085f10fbfaecb8971202755b5373",
+    "lib/nested-anatomy.ts": "3eeb1bdf3c0e1f4485360945be8ee7046a465b3837a24f29c46e4ee2a4c55687",
     "lib/nested-teaching.ts": "aa2423a1cc53f70f992c19b601160000d44937eda47faae422d6898902edd23d",
     "app/nested-teaching.tsx": "9f6b6053e56393b3c065d7c6f083fe2992771715c8a0173cdb11e3f1ee0ab50b",
     "app/nested-teaching.css": "d912bfc774cc744511a4c0e87a0a35f6b693def9f4bddc25b6f010f07dfa83bc",
     "package-lock.json": "e55a3718d0786a13a27301297f39bf8f54ae0de2cb4bf5f6e7c65ff399ec5f22",
     "content/schema/anatomy-structure.schema.json": "a3fbecdb471cbed32b1f82dea579ae9c15e2a66b3a3edde61f1c452dfeb0e7c5",
-    "content/review-revisions.json": "5365d114752b157338dc9ebcf9e58dabe56be2d4d35296e717845bce939dfd05",
+    "content/review-revisions.json": "41642fde73119475f87a1291b5118df1afcaeb7d9dc4931cdfb17b307c62ebed",
     "content/learning-resources.v1.json": "799fec602114a944b4f675d341b445982dac56786cca9b5800d52db7d95899e5",
-    "lib/learning-resource-types.ts": "d8310ce5a313d2be2b323b5f27792e1ab48497521962aa475ff83517f6771052",
-    "lib/learning-resources.ts": "9b23c89948f2bcd82e2c2956293b2c1ac2f2ed82d49c8113d0495eccb8468ab4",
+    "lib/learning-resource-types.ts": "f1140958921da01500d519ad3249aa5114f9c31ab19709b29bbf51675ccab161",
+    "lib/learning-resources.ts": "c7f645c22edf98045e0bc4e559bf18d8eb83871db6848efa94a1c2de0961c1c1",
     "lib/learning-anatomy.ts": "ee24e46059a1ebbab82a7d2aaf78e9893eea4638ea00136989d2d098789077b3",
     "lib/nested-learning-anatomy.ts": "0a635f713f9bc99d00c62c14cc4c5d05a4eb639f9633afc9f2ae2b440bb4dcc7",
     "lib/ventricular-relationships.ts": "b9d2bd5ea079a600c2593ca522f325ceb03c2f2704a26747b4262ef6838c84df",
     "lib/cardiac-context.ts": "428c871b7a942e34c87833ff97441e59e7757c4ae0f5610713e779396df432ef",
     "public/models/bodyparts3d/cardiac/great-vessel-context.json": "fac546e54237db4bed783d583b01c583f423a35a74bd759727d519074de0af85",
-    "app/ventricles.tsx": "67cff21006405dfab68ea812996ae0f7a8d15fc58d17a382233304b5e4d2f5cc",
+    "app/ventricles.tsx": "0119ebba667a96b203927d4f4119699d14ed5cd10330eae925e5b1a15e9d5634",
     "app/ventricular-relationships.css": "a0aa30cb8500f11382ddd18120660c8e4df68b60369e3b6c487f98b12f0fe743",
-    "app/body-scene.tsx": "c0ac40edbdb03d3f379063d5f0f4dd45cdc4ceab15fb91fb66cbd98712707628",
+    "app/body-scene.tsx": "0d224fd83b65dc02aaf823f86159c852fa32e43d780bcbd9a7399047e9609120",
     "app/body-batch.tsx": "05b63136f4d8af290da9d4c190256bd1e17b6339842070b04c26b63238e0ae72",
     "lib/body-batching.ts": "ed560af2055a9c77535f40145c7788267f1558af0209e98a11cfbb37b923165a",
     "docs/body-batching-baseline.json": "4cebcd07c28d91aa748afb1385f51ef9d33803feb84e98df64681582ce8177fd",
     "scripts/glb-lossless-codec.mjs": "053f0a2a7a397600b8c70814fa07f0013928d60702b163a8c8514d1eaafba224",
     "scripts/compress-model-delivery.mjs": "b18e1c9b00891f31190f8f3ccc02287500673fab48d9e74f0490cc68e9fbddf4",
-    "app/um-knee-study.tsx": "811a1bd1e69adc588d90aacca74cde8e1296a8857bbdeb52b65dfe408969c9ab",
-    "app/um-knee-study.css": "f7ba742e1abc7a51af63cb2f537e08796ae5874ea22a8e14470bf79317ae8b59",
+    "app/um-knee-study.tsx": "fcac09aa31f973aa28920fa908841da34db76c130f660d91cd64f8d25bc9022b",
+    "app/um-knee-study.css": "6a231afb04d42c5524506b2d4bee6e1e6e8fd7f7e4d46d6f1be7ce94eccecd36",
     "app/um-knee-entry.css": "b68e0232a417ca07cc3ae07ed3e756c93833623981a5cf5323b7a71db7017339",
     "lib/um-knee-study.ts": "80908fce33eb88fe5d217d8ed70c948559c19981c48a7daf034353224ee25b55",
     "lib/um-limb-studies.ts": "a544d566b88d1a55c23f85e743d5cbabcc2518c54458c18eff6faa429a9ce810",
@@ -240,10 +241,10 @@
     "lib/specimen-links.ts": "a185fc2f0c8f439c423660acfe1ada45605245e1131b6e317d130a7339944d76",
     "lib/um-limb-navigation.ts": "4697de9da3dc98ae0888681e9c799301a54eab2a8919c0f4b004664606bdd83f",
     "content/um-limb-navigation.v1.json": "34833f71e385972efb27f5798a094cb23f4df608c8baa4ca8256bb725332174c",
-    "app/specimen-study-link.tsx": "be110e11eb483723dcfc440dd43e08db6642b04631e5acdc6af7a3b42218829f",
+    "app/specimen-study-link.tsx": "cfdf5c519d24137651ee2ce4e962fc0358d27812d904291956ea55d9b219052e",
     "app/specimens/lower-limb/page.tsx": "328f61a5443e7d5cb4f1ea06d96d1c100fc4eaa705e4ddd3576912f532cb745f",
     "app/specimens/lower-limb/specimen-linked-page.tsx": "307aa24d529359cc1ed537b285ceda1dc3088d88ff981bc42e747f0f8425942a",
-    "app/um-limb-learning.tsx": "6026628ef9f29b54463bc0b39b1fd6b037af74831ffca0278879489f7e6d5ecd",
+    "app/um-limb-learning.tsx": "68032fe4e72628eb0af7c9b841aa4022512f39d2457779a069dee46fa841d6d0",
     "lib/independent-specimen.ts": "3127e41d9c16d47f5ebe0c0e312e8d0bf3dded9cc00b6ab6548256e939f269b0",
     "lib/abdominal-wall.ts": "06795f84c4440639f4b24ea31e10b5e0a37f0e8f494a261f512d12c8ea1687b7",
     "lib/back-layers.ts": "f11998c77ff5823e257f9c81b625532d952ded36fd9729e65fbace6d0090f62c",
@@ -262,7 +263,7 @@
     "lib/specimen-identification.ts": "6f82c800c9c3572913f02db1cec19102a6fceb2604981d37ea98b716edb7b12a",
     "scripts/exclude-source-recovery.mjs": "b4d1eb161942dea1b8561fe3dcba41bcd77cc703aa5a6c206f47338c6816c20a",
     "app/abdominal-wall-study.tsx": "f06b1b622f711c78f0b7e43b193dd3aa16826f3ddc660a7cc29b4df31ea9072d",
-    "app/hra-pelvis-study.tsx": "b798408d5561f48cbc9fd86f242320704b58b53799cad84a075bbe06080787f4",
+    "app/hra-pelvis-study.tsx": "1409567b303b914f98a5a5afb6ed7e0594ac2e2f31b3918c6e8951fe44527e52",
     "app/hra-renal-study.tsx": "5012bb2a4c12349482b219e5a8b24f275e53275393ce4326a8f77e0682989315",
     "app/specimens/kidneys/page.tsx": "89aa167f20a3974368510df18d4863c416121432b479ee0eabd14ffa466b23e4",
     "lib/hra-renal.ts": "83c90dd94edad6ae87c34ac31ee25af0f2896d27ce47fd41e2465b4fe7ef408f",
@@ -276,8 +277,8 @@
     "docs/hra-renal-source-audit.json": "afff6ce5b6e0d6ee428d9b181b1ce5bedfc785497816cb46f253c98093ad09bc",
     "app/specimens/female-pelvis/page.tsx": "7ba748df96faceeb181bd2c58a4913b4d2bde605fe5d01b939f7e3be7a39424c",
     "lib/hra-pelvis.ts": "644feba6223ab73165d2e093671b1b76216a1ef866f35fd02d080c22e85537cd",
-    "lib/hra-pelvis-teaching.ts": "f65f1dfbe3bc99789962a7666fdddf9e127dc968102c067ae985d20f1c927f5c",
-    "content/hra-pelvic-teaching.ts": "ab61fa71c04a678144a040a77d04036e8f8f87bbaed288814fac8ea5496d7940",
+    "lib/hra-pelvis-teaching.ts": "0af354860220247a4f964cecf2e5c97be4658795dafcc50417f4c9182b242380",
+    "content/hra-pelvic-teaching.ts": "37d738d68742247e45d59b00a040626694e4b21bf547ec938686c62f8d61c492",
     "public/models/hra-pelvis/catalog.json": "a0e997a2eb4af64d25bf5f6f9901ea70616fb59443696f7630e0aea6bd53c619",
     "public/models/hra-pelvis/NOTICE.md": "898505e9c8837bd74e9f2535726676e13e9020e593ef15943b61a7845ff1c927",
     "content/sources/hra-pelvis/metadata.json": "b9f137b1176c31419c68b78ac87f0926f874dad22f56d4dde7df3e2f15bab501",
@@ -293,8 +294,8 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "372f7867f83985765713011790ba980b33f9cd8ba092d1e447e949fff9984c0f",
-    "explicitTopicReadiness": "e66a039c5a41bbb4c4de1afbaf907c33c9491a24434d3c800d9051ac937ad9d3",
+    "resolvedContentAndRecipeData": "6fcf0bbbd813f214053d2b4c8120ce3b729e0c5b06d82c661b0a6d2794e7ec27",
+    "explicitTopicReadiness": "8d04f1406e7f77373283320c9c19fe746bb038b8c3afd45a6ee63c36d2795e37",
     "reasoningQuestionData": "caafb323ca7d5a04971f91ad369d68c3a8da5e43839b39d8cd76192d1497bad2",
     "nestedTeachingData": "dcfeb9cfbc28ffdfb88f45335c00948d9b6d8aa47c310aee84a99e2d505cfe96"
   },
@@ -443,6 +444,15 @@
         "pelvis",
         "whole-body"
       ],
+      "extendedDraftPlacements": {
+        "function": 10,
+        "clinical": 10,
+        "pathology": 10,
+        "ct": 9,
+        "mri": 5,
+        "ultrasound": 5
+      },
+      "distinctExtendedTexts": 18,
       "clinicalApproval": false,
       "continuousLumenClaimed": false
     },
@@ -641,8 +651,8 @@
       "clinicalApproval": false
     },
     "arterialConnections": {
-      "selections": 124,
-      "concepts": 75,
+      "selections": 143,
+      "concepts": 86,
       "territories": {
         "lower-limb": 40,
         "upper-limb": 0,
@@ -650,7 +660,7 @@
         "abdominal and lower-limb": 1
       },
       "alternativeRelationships": 5,
-      "relationships": 134,
+      "relationships": 153,
       "sourceAndFrameChecked": true,
       "geometryAdded": false,
       "flowSimulated": false,
@@ -730,20 +740,20 @@
       "representations": 41,
       "triangles": 205463,
       "studies": 8,
-      "anatomyFunctionDrafts": 17,
-      "pendingTeaching": 24,
-      "practiceTargets": 17,
-      "distinctAnatomyConcepts": 12,
-      "extendedTopicDrafts": 69,
+      "anatomyFunctionDrafts": 41,
+      "pendingTeaching": 0,
+      "practiceTargets": 41,
+      "distinctAnatomyConcepts": 28,
+      "extendedTopicDrafts": 178,
       "extendedByTopic": {
-        "clinical": 17,
-        "pathology": 17,
-        "ct": 2,
-        "mri": 17,
-        "xray": 0,
-        "ultrasound": 16
+        "clinical": 41,
+        "pathology": 41,
+        "ct": 12,
+        "mri": 41,
+        "xray": 4,
+        "ultrasound": 39
       },
-      "clinicalSelfChecks": 17,
+      "clinicalSelfChecks": 41,
       "source": {
         "version": "v1.10",
         "key": "hra-united-female-v1.10-pelvis",
@@ -1294,24 +1304,49 @@
         "fmaId": "FMA21423",
         "bundle": "circumflex-femoral",
         "clinicalApproval": false
+      },
+      {
+        "fmaId": "FMA50519",
+        "bundle": "cranial-arteries",
+        "clinicalApproval": false
+      },
+      {
+        "fmaId": "FMA50520",
+        "bundle": "cranial-arteries",
+        "clinicalApproval": false
+      },
+      {
+        "fmaId": "FMA50574",
+        "bundle": "cranial-arteries",
+        "clinicalApproval": false
+      },
+      {
+        "fmaId": "FMA50575",
+        "bundle": "cranial-arteries",
+        "clinicalApproval": false
+      },
+      {
+        "fmaId": "FMA50082",
+        "bundle": "cranial-arteries",
+        "clinicalApproval": false
       }
     ],
-    "bodyRepresentations": 1082,
-    "bodyBundles": 103,
-    "bodyBundleBytes": 103724232,
+    "bodyRepresentations": 1087,
+    "bodyBundles": 104,
+    "bodyBundleBytes": 103937028,
     "systems": {
       "skeleton": 203,
       "muscles": 372,
       "nerves": 58,
       "organs": 82,
-      "vessels": 277,
+      "vessels": 282,
       "connective": 90
     },
     "regions": [
       {
         "id": "head-neck",
         "name": "Head & neck",
-        "entries": 285
+        "entries": 290
       },
       {
         "id": "thorax",
@@ -1417,7 +1452,7 @@
     "vesselVisibilityGroups": [
       {
         "kind": "artery",
-        "total": 179
+        "total": 184
       },
       {
         "kind": "vein",
@@ -1475,8 +1510,8 @@
       1,
       2
     ],
-    "availableRepresentations": 1166,
-    "nestedRepresentations": 75,
+    "availableRepresentations": 1200,
+    "nestedRepresentations": 104,
     "supportedKinds": [
       "ct",
       "mri",
@@ -1500,117 +1535,264 @@
     "classificationLimit": "Explicit readiness from authoring branches; not inferred from titles and not clinical approval. Legacy shoulder topics are draft; new X-ray authoring explicitly distinguishes draft and pending.",
     "body": {
       "anatomy": {
-        "specificDraft": 1080,
+        "specificDraft": 1085,
         "identityOnly": 2,
         "pending": 0,
         "generatedIdentification": 0
       },
       "function": {
-        "specificDraft": 1070,
+        "specificDraft": 1082,
         "identityOnly": 0,
-        "pending": 12,
+        "pending": 5,
         "generatedIdentification": 0
       },
       "ct": {
-        "specificDraft": 183,
+        "specificDraft": 203,
         "identityOnly": 0,
-        "pending": 899,
+        "pending": 884,
         "generatedIdentification": 0
       },
       "mri": {
-        "specificDraft": 185,
+        "specificDraft": 201,
         "identityOnly": 0,
-        "pending": 897,
+        "pending": 886,
         "generatedIdentification": 0
       },
       "xray": {
-        "specificDraft": 130,
+        "specificDraft": 141,
         "identityOnly": 0,
-        "pending": 952,
+        "pending": 946,
         "generatedIdentification": 0
       },
       "ultrasound": {
-        "specificDraft": 102,
+        "specificDraft": 118,
         "identityOnly": 0,
-        "pending": 980,
+        "pending": 969,
         "generatedIdentification": 0
       },
       "pathology": {
-        "specificDraft": 1018,
+        "specificDraft": 1028,
         "identityOnly": 0,
-        "pending": 64,
+        "pending": 59,
         "generatedIdentification": 0
       },
       "clinical": {
-        "specificDraft": 1022,
+        "specificDraft": 1032,
         "identityOnly": 0,
-        "pending": 60,
+        "pending": 55,
         "generatedIdentification": 0
       },
       "quiz": {
-        "specificDraft": 51,
+        "specificDraft": 56,
         "identityOnly": 0,
         "pending": 0,
         "generatedIdentification": 1031
       }
     },
     "nested": {
-      "representations": 75,
+      "representations": 104,
+      "geometryOnlyRepresentations": [
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1700",
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1701",
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1702",
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1703",
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1704",
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1705",
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1706",
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1707",
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1708",
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1709",
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1710",
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1711",
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1715",
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1700m",
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1701m",
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1702m",
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1703m",
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1704m",
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1705m",
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1706m",
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1707m",
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1708m",
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1709m",
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1710m",
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1711m",
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1715m",
+          "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1662",
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1663",
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+          "study": "cranial-artery-components"
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1692",
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+          "study": "cranial-artery-components"
+        }
+      ],
       "concepts": 44,
       "references": 83,
       "topics": {
         "anatomy": {
           "specificDraft": 75,
           "identityOnly": 0,
-          "pending": 0,
+          "pending": 29,
           "generatedIdentification": 0
         },
         "function": {
           "specificDraft": 73,
           "identityOnly": 0,
-          "pending": 2,
+          "pending": 31,
           "generatedIdentification": 0
         },
         "ct": {
           "specificDraft": 35,
           "identityOnly": 0,
-          "pending": 40,
+          "pending": 69,
           "generatedIdentification": 0
         },
         "mri": {
           "specificDraft": 35,
           "identityOnly": 0,
-          "pending": 40,
+          "pending": 69,
           "generatedIdentification": 0
         },
         "xray": {
           "specificDraft": 0,
           "identityOnly": 0,
-          "pending": 75,
+          "pending": 104,
           "generatedIdentification": 0
         },
         "ultrasound": {
           "specificDraft": 28,
           "identityOnly": 0,
-          "pending": 47,
+          "pending": 76,
           "generatedIdentification": 0
         },
         "pathology": {
           "specificDraft": 69,
           "identityOnly": 0,
-          "pending": 6,
+          "pending": 35,
           "generatedIdentification": 0
         },
         "clinical": {
           "specificDraft": 69,
           "identityOnly": 0,
-          "pending": 6,
+          "pending": 35,
           "generatedIdentification": 0
         },
         "quiz": {
           "specificDraft": 75,
           "identityOnly": 0,
-          "pending": 0,
+          "pending": 29,
           "generatedIdentification": 0
         }
       },
@@ -1675,13 +1857,13 @@
     "byRegion": {
       "head-neck": {
         "anatomy": {
-          "specificDraft": 285,
+          "specificDraft": 290,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 283,
+          "specificDraft": 288,
           "identityOnly": 0,
           "pending": 2,
           "generatedIdentification": 0
@@ -1689,41 +1871,41 @@
         "ct": {
           "specificDraft": 13,
           "identityOnly": 0,
-          "pending": 272,
+          "pending": 277,
           "generatedIdentification": 0
         },
         "mri": {
           "specificDraft": 13,
           "identityOnly": 0,
-          "pending": 272,
+          "pending": 277,
           "generatedIdentification": 0
         },
         "xray": {
           "specificDraft": 13,
           "identityOnly": 0,
-          "pending": 272,
+          "pending": 277,
           "generatedIdentification": 0
         },
         "ultrasound": {
           "specificDraft": 0,
           "identityOnly": 0,
-          "pending": 285,
+          "pending": 290,
           "generatedIdentification": 0
         },
         "pathology": {
           "specificDraft": 274,
           "identityOnly": 0,
-          "pending": 11,
+          "pending": 16,
           "generatedIdentification": 0
         },
         "clinical": {
           "specificDraft": 274,
           "identityOnly": 0,
-          "pending": 11,
+          "pending": 16,
           "generatedIdentification": 0
         },
         "quiz": {
-          "specificDraft": 6,
+          "specificDraft": 11,
           "identityOnly": 0,
           "pending": 0,
           "generatedIdentification": 279
@@ -1799,27 +1981,27 @@
           "generatedIdentification": 0
         },
         "ct": {
-          "specificDraft": 18,
+          "specificDraft": 20,
           "identityOnly": 0,
-          "pending": 88,
+          "pending": 86,
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 18,
+          "specificDraft": 20,
           "identityOnly": 0,
-          "pending": 88,
+          "pending": 86,
           "generatedIdentification": 0
         },
         "xray": {
-          "specificDraft": 18,
+          "specificDraft": 20,
           "identityOnly": 0,
-          "pending": 88,
+          "pending": 86,
           "generatedIdentification": 0
         },
         "ultrasound": {
-          "specificDraft": 8,
+          "specificDraft": 10,
           "identityOnly": 0,
-          "pending": 98,
+          "pending": 96,
           "generatedIdentification": 0
         },
         "pathology": {
@@ -1849,45 +2031,45 @@
           "generatedIdentification": 0
         },
         "function": {
-          "specificDraft": 73,
+          "specificDraft": 80,
           "identityOnly": 0,
-          "pending": 8,
+          "pending": 1,
           "generatedIdentification": 0
         },
         "ct": {
-          "specificDraft": 15,
+          "specificDraft": 35,
           "identityOnly": 0,
-          "pending": 66,
+          "pending": 46,
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 15,
+          "specificDraft": 31,
           "identityOnly": 0,
-          "pending": 66,
+          "pending": 50,
           "generatedIdentification": 0
         },
         "xray": {
-          "specificDraft": 3,
+          "specificDraft": 14,
           "identityOnly": 0,
-          "pending": 78,
+          "pending": 67,
           "generatedIdentification": 0
         },
         "ultrasound": {
-          "specificDraft": 12,
+          "specificDraft": 28,
           "identityOnly": 0,
-          "pending": 69,
+          "pending": 53,
           "generatedIdentification": 0
         },
         "pathology": {
-          "specificDraft": 64,
+          "specificDraft": 74,
           "identityOnly": 0,
-          "pending": 17,
+          "pending": 7,
           "generatedIdentification": 0
         },
         "clinical": {
-          "specificDraft": 68,
+          "specificDraft": 78,
           "identityOnly": 0,
-          "pending": 13,
+          "pending": 3,
           "generatedIdentification": 0
         },
         "quiz": {
@@ -2297,8 +2479,8 @@
       "png": 4,
       "svg": 2,
       "md": 8,
-      "glb": 130,
-      "json": 43,
+      "glb": 132,
+      "json": 45,
       "zip": 1,
       "html": 1,
       "tsv": 1
@@ -2312,7 +2494,7 @@
   "review": {
     "revisionIdentities": 9,
     "hasPrivateReviews": false,
-    "status": "Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot, 1082 displayed root-body selections, and nine independent specimen/region scopes (354 scoped records / 267 distinct source IDs) with exact source/frame identity and two-way selection/study navigation. Independent scopes include HRA kidneys/female pelvis, version-3 back/abdominal wall and five overlapping UM limb regions. The 1,022-record archival catalogue is retained. This inventory never reads personal review records; nested organ scopes and acquired imaging remain outside those approvals."
+    "status": "Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot, 1087 displayed root-body selections, and nine independent specimen/region scopes (354 scoped records / 267 distinct source IDs) with exact source/frame identity and two-way selection/study navigation. Independent scopes include HRA kidneys/female pelvis, version-3 back/abdominal wall and five overlapping UM limb regions. The 1,022-record archival catalogue is retained. This inventory never reads personal review records; nested organ scopes and acquired imaging remain outside those approvals."
   },
   "boundaries": {
     "scope": "Current source implementation, not operations performed by this inventory script",

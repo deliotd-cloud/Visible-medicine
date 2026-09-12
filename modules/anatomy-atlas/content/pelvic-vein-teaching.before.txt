@@ -4,7 +4,6 @@ import { pelvicVeinStudy, pelvicVeinReferences } from '../content/pelvic-vein-st
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
 import type { ContentTab } from '../app/anatomy-data';
 import type { ContentLesson } from './content-types';
-import { pelvicVeinTeaching, pelvicVeinTeachingGroups, pelvicVeinTeachingReferences, pelvicVeinSelectionNotes, type PelvicVeinTeachingGroup, type PelvicVeinTeachingTopic } from '../content/pelvic-vein-teaching';
 const source=data as unknown as BodySourceAddition;
 export function addPelvicVeins(catalog:BodyCatalog) { return applyBodySourceAddition(catalog,source); }
 export function pelvicVeinStudyReady(catalog:BodyCatalog|null, region:string, recipeId:string|null) {
@@ -29,15 +28,6 @@ export function pelvicVeinLesson(s:BodyStructure, tab:ContentTab):ContentLesson|
   const gluteal=s.sourceName.includes('gluteal');
   const note='Source-bound teaching draft for radiologist review. This reference surface is not a patient image, connected lumen or procedural plan.';
   const citations=[...pelvicVeinReferences];
-  const group = (Object.keys(pelvicVeinTeachingGroups) as PelvicVeinTeachingGroup[]).find(key => (pelvicVeinTeachingGroups[key] as readonly string[]).includes(s.fmaId));
-  const extended = group && Object.hasOwn(pelvicVeinTeaching[group], tab) ? pelvicVeinTeaching[group][tab as PelvicVeinTeachingTopic] : undefined;
-  if (extended && group) return {
-    readiness:'draft', title:`${s.name} · ${tab === 'ct' || tab === 'mri' ? tab.toUpperCase() : tab[0].toUpperCase()+tab.slice(1)} · draft`,
-    body:extended.body,
-    bullets:[pelvicVeinSelectionNotes[group], 'Return separation to zero before comparing source relationships. Source proximity, colour and calibre do not establish connected lumens, reflux or patency.'],
-    note:'Source-bound teaching draft for radiologist review. No patient images, scan alignment, diagnostic threshold, procedural clearance or paid-lecture access is supplied. Modality evidence does not validate every small tributary; absent topics remain pending.',
-    citations:[...new Set(extended.references.map(key=>pelvicVeinTeachingReferences[key]))],
-  };
   if(tab==='anatomy')return {readiness:'draft',title:`${s.name} · Anatomy · draft`,
     body:iliolumbar?'The iliolumbar venous system links the lower lumbar and iliac regions. Its tributaries and receiving iliac vein vary; do not infer a universal branching pattern from one specimen.'
       :pudendal?'The internal pudendal vein is a perineal drainage route towards the internal iliac vein. Its course includes the pudendal canal, which is not reconstructed in this study.'

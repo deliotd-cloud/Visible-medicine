@@ -18,7 +18,7 @@ assert.equal(hash(rawBytes),'109ad372060f36fba1658a9968415884f279531eb5a3ecf0479
 const raw=JSON.parse(rawBytes),rawBefore=JSON.stringify(raw),catalog=api.bodyDisplayCatalog(raw),before=JSON.stringify(catalog);
 const pins=JSON.parse(await readFile('public/models/bodyparts3d/pelvic-veins/catalog.json'));
 const studyId='pelvic-venous-tributaries',bundle=pins.bundles[0];
-assert.equal(catalog.structures.length,1078);assert.equal(JSON.stringify(raw),rawBefore);
+assert.equal(catalog.structures.length,1087);assert.equal(JSON.stringify(raw),rawBefore);
 for(const held of ['FMA18919','FMA18907'])assert(!catalog.structures.some(s=>s.fmaId===held),'Held source must remain absent from display');
 assert.equal(api.bodyDisplayCatalog(catalog),catalog);
 assert.deepEqual(catalog.structures.filter(s=>s.bundle===bundle.id),pins.structures);
@@ -62,7 +62,7 @@ for(const surface of pins.structures) {
   assert(Array.from({length:positions.length/3},(_,i)=>Array.from(positions.slice(i*3,i*3+3))).some(p=>JSON.stringify(p)===JSON.stringify(surface.anchor)));
   const entry=entries.find(e=>e.id===surface.id);assert(entry&&!('frameOfReferenceUid' in entry.reference));
   transform.toScene(entry.reference.point).forEach((n,i)=>assert(Math.abs(n-surface.center[i])<1e-8));
-  for(const tab of tabs)assert.equal(api.bodyLesson(surface,tab).readiness,(['anatomy','quiz'].includes(tab)||(tab==='function'&&/iliolumbar|internal pudendal/.test(surface.sourceName)))?'draft':'pending');
+  for(const tab of tabs)assert.equal(api.bodyLesson(surface,tab).readiness,(['anatomy','function','clinical','pathology','quiz'].includes(tab)||(tab==='ct'&&surface.fmaId!=='FMA18906')||(['mri','ultrasound'].includes(tab)&&/gluteal|internal pudendal/.test(surface.sourceName)))?'draft':'pending');
   assert.equal(api.pelvicVeinLesson({...surface,anchor:[0,0,0]},'anatomy'),undefined);
   const lesson=api.pelvicVeinLesson(surface,'anatomy');lesson.citations.push('changed');assert(!api.pelvicVeinLesson(surface,'anatomy').citations.includes('changed'));
   for(const region of ['whole-body',...surface.regions])for(const side of ['both','left','right']) {
@@ -99,4 +99,4 @@ for(const region of ['pelvis','whole-body'])for(const disabled of [false,true]) 
   assert(html.includes(disabled?'End practice':'Pelvic venous tributaries'));renders++;
 }
 assert.equal(JSON.stringify(catalog),before);assert.equal(faceCorners,195078);
-console.log(JSON.stringify({sourceSelections:10,displaySelections:1078,triangles:faceCorners/3,sourceFaceCorners:faceCorners,scopes,links,rejections,actualParentHandlers:handlers,actualMenus:renders,previousRecipesUnchanged:true,clinicalOrDeviceAcceptance:false}));
+console.log(JSON.stringify({sourceSelections:10,displaySelections:catalog.structures.length,triangles:faceCorners/3,sourceFaceCorners:faceCorners,scopes,links,rejections,actualParentHandlers:handlers,actualMenus:renders,previousRecipesUnchanged:true,clinicalOrDeviceAcceptance:false}));

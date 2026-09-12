@@ -16,6 +16,12 @@ The source audit includes 12 complete source definitions, 1,064 pre-addition roo
 
 ## Teaching and imaging boundary
 
+The [new clinical/imaging teaching](PELVIC_VEIN_TEACHING.md) fills 46 previously
+pending topic slots using 18 original texts. All ten gain Clinical/Pathology,
+seven gain Function, nine CT and five each MRI/Ultrasound. Remaining topics stay
+pending. Geometry, holds and original authored core notes are unchanged. The
+following paragraph records the original admission-time coverage.
+
 Original brief Anatomy/orientation and self-check drafts cover all ten selections. Two iliolumbar and one internal pudendal Function/drainage notes are drafts; seven other Function sections remain pending. That is 23 draft placements, not 23 distinct comprehensive lessons. All new CT, MRI, X-ray, ultrasound, Pathology and Clinical sections remain pending. No paid API, new dependency, font, texture, patient scan or competitor mesh is included.
 
 Factual reading references, not copied illustrations/tables/question-bank wording:
