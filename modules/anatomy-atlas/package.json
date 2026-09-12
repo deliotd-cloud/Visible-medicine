@@ -8,6 +8,7 @@
   "scripts": {
     "hand-joints:test": "node scripts/pin-hand-joints.mjs --check && node scripts/validate-foot-joints.mjs --hand",
     "foot-joints:test": "node scripts/pin-foot-joints.mjs --check && node scripts/validate-foot-joints.mjs",
+    "thoracic-bone-imaging:test": "node scripts/pin-thoracic-bone-imaging.mjs --check && node scripts/record-thoracic-bone-imaging.mjs --check && node scripts/validate-thoracic-bone-imaging.mjs",
     "limb-bone-imaging:test": "node scripts/pin-limb-bone-imaging.mjs --check && node scripts/record-limb-bone-imaging.mjs --check && node scripts/validate-limb-bone-imaging.mjs",
     "independent-navigation:test": "node scripts/validate-independent-navigation.mjs",
     "specimen-review:test": "node scripts/validate-specimen-review.mjs",

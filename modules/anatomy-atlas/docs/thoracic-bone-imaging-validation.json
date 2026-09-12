@@ -1,0 +1,39 @@
+{
+  "selections": 27,
+  "landmarkGroups": 8,
+  "distinctTopicTexts": 8,
+  "placements": 108,
+  "modalities": {
+    "xray": 27,
+    "ct": 27,
+    "mri": 27,
+    "ultrasound": 27
+  },
+  "unchangedSections": 9594,
+  "rejectedBindings": 1296,
+  "sourceRows": 27,
+  "modelHashes": 2,
+  "actualNoteRenders": 108,
+  "sourceWordCounts": {
+    "landmarks": 171,
+    "wall": 106,
+    "ct": 59,
+    "ultrasound": 114,
+    "sternum": 102,
+    "mri": 48
+  },
+  "preservedPaths": [
+    "app/body-explorer.tsx",
+    "app/body-scene.tsx",
+    "app/dissection-data.ts",
+    "app/anatomy-data.ts",
+    "lib/knee-imaging.ts",
+    "lib/um-limb-teaching.ts",
+    "package-lock.json",
+    "public/models/bodyparts3d/full-body/catalog.json",
+    "drizzle/0002_specimen_review_events.sql"
+  ],
+  "clinicalApproval": false,
+  "browserTesting": false,
+  "realImaging": false
+}

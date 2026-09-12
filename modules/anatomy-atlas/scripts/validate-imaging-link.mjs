@@ -48,10 +48,16 @@ const near = (left, right, message, tolerance = 1e-5) =>
     ),
   );
 same(
-  body.length,
-  1060,
-  'Every admitted body representation has a reference entry',
+  [...bodyIds].sort(),
+  catalog.structures.map(s=>s.id).sort(),
+  'Every currently admitted body identity has exactly its reference entry',
 );
+same(new Set(bodyIds).size, bodyIds.length, 'No duplicate reference identities');
+for(const entry of body) {
+  const source=catalog.structures.find(s=>s.id===entry.id);
+  same(entry.name,source.name,'Reference name matches its exact source identity');
+  same(entry.sources,source.sources,'Reference provenance matches its exact source identity');
+}
 same(shoulder.length, 9, 'Every shoulder representation has a reference entry');
 for (const [data, entries] of [
   [catalog, body],

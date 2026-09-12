@@ -37,6 +37,9 @@
     "public/models/bodyparts3d/full-body/catalog.json",
     "drizzle/0002_specimen_review_events.sql"
   ],
+  "laterPreservedRevisions": {
+    "app/body-explorer.tsx": "a62e32a48df22b34810fb36bd80ce51467551e16"
+  },
   "clinicalApproval": false,
   "browserTesting": false,
   "realImaging": false

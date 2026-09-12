@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Thoracic-bone imaging](THORACIC_BONE_IMAGING.md) fills CT, MRI, X-ray and Ultrasound notes for 24 existing sided ribs and three sternal parts: 108 draft placements, using eight shared modality texts and eight landmark groups. No new anatomy, controls, scan data or clinical approval is implied. Earlier teaching and geometry are preserved; the owner radiologist must review the content and variants.
+
 [Limb-bone imaging](LIMB_BONE_IMAGING.md) fills 24 pending sections across 12 exact radius/ulna/fibula/femur/tibia/patella selections: 12 X-ray, 6 CT and 6 MRI placements, using 12 distinct topic texts and six landmark notes. Existing knee CT/MRI/US lessons, geometry and controls remain unchanged. The existing Imaging tabs distinguish the whole source bone from the imaged joint; these are original referenced drafts, not scans, validated landmark segmentations or clinical approval.
 
 [Independent specimen reviews](SPECIMEN_REVIEWS.md) cover nine source/region scopes (354 scoped records / 267 distinct source IDs): HRA kidneys/female pelvis, version-3 abdominal wall/back layers and five overlapping UM lower-limb regions. [Exact study links](INDEPENDENT_STUDY_LINKS.md) open the selected structure and study, and return to its review worksheet. Source/frame/geometry/teaching/checklist revisions are bound to private append-only records; no approval transfers between scopes. Anatomy and teaching are separate, acquired-imaging approval remains unavailable, and nested-organ review adapters are pending. This inventory reads no personal review records and asserts no clinical/device sign-off or hosted rollout.

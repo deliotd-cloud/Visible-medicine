@@ -3,8 +3,10 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import pins from '../content/limb-bone-imaging-pins.json' with {type:'json'};
 import after from '../content/limb-bone-imaging.transition.json' with {type:'json'};
+import {authoringBeforeThoracicBoneImaging} from './thoracic-bone-imaging-history.mjs';
 export const limbBoneContentHash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function authoringBeforeLimbBoneImaging({api,catalog}) {
+  api=authoringBeforeThoracicBoneImaging({api,catalog});
   assert.equal(limbBoneContentHash(pins),'68b406b6bf9611e56266ea9914a0c134fe81444ee361bfbe678659d8d2b62c10');
   assert.equal(limbBoneContentHash(after),'4b4a2b60f303c9a16d95027af4657e189328c572d1065f9dc3d9ba8bbbada51d');
   const prior=new Map();
