@@ -9,6 +9,10 @@ import {
 } from '../content/back-layers-teaching';
 import { backLayersClinical } from '../content/back-layers-clinical';
 import {
+  authoredBackBoneLesson,
+  backBoneBindings,
+} from '../content/back-bone-teaching';
+import {
   identificationFromPool,
   type SpecimenPracticeAdapter,
 } from './specimen-identification';
@@ -22,11 +26,12 @@ export function backLayersTeachingFor(
   definition: SpecimenDefinition,
   surface: SpecimenSurface,
 ): SpecimenLesson | null {
-  if (
-    !backLayersSurfaceMatches(definition, surface) ||
-    surface.tissue !== 'muscle'
-  )
-    return null;
+  if (!backLayersSurfaceMatches(definition, surface)) return null;
+  if (surface.tissue === 'skeleton') {
+    const bone = surface.fmaId && backBoneBindings[surface.fmaId];
+    return bone ? authoredBackBoneLesson(bone) : null;
+  }
+  if (surface.tissue !== 'muscle') return null;
   const key = surface.fmaId && backLayersLessonIds[surface.fmaId];
   const lesson = key && backLayersLessons[key];
   if (!lesson) return null;

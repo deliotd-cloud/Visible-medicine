@@ -1,5 +1,6 @@
 import type { SpecimenLesson } from './um-limb-teaching';
 import { backLayersClinicalReferences } from './back-layers-clinical';
+import { backBoneReferences } from './back-bone-teaching';
 const upper =
   'https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html';
 const back = 'https://anatomy.ttuhscep.edu/anatomytables/muscles_back.html';
@@ -10,6 +11,9 @@ const minor =
 const lat =
   'https://www.meddean.luc.edu/lumen/meded/grossanatomy/dissector/muscles/lat.htm';
 export const backLayersReferences = {
+  ...Object.fromEntries(
+    Object.values(backBoneReferences).map((r) => [r.url, r.title]),
+  ),
   ...Object.fromEntries(
     Object.values(backLayersClinicalReferences).map((r) => [r.url, r.title]),
   ),

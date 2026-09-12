@@ -502,6 +502,7 @@ for (const path of [
   'lib/back-layers-teaching.ts',
   'content/back-layers-teaching.ts',
   'content/back-layers-clinical.ts',
+  'content/back-bone-teaching.ts',
   'app/back-layers-study.tsx',
   'app/specimens/back-layers/page.tsx',
   'public/models/bodyparts3d-v3/back-layers/catalog.json',

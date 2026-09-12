@@ -15,7 +15,9 @@ All fourteen supplied muscles now have explicit attachment and motor-supply note
 | Ultrasound | 4 |
 | X-ray | 0 |
 
-The 46 extended placements reuse **17 topic texts across five muscle concepts**, with five original clinical self-checks displayed on the fourteen eligible selections. They are not 46 independent lessons. Minor-specific pathology, all X-ray topics, CT outside multifidus and ultrasound outside latissimus/multifidus remain pending. All 34 skeletal-context selections retain their pending teaching state. Baseline Anatomy/Function and identification practice remain available.
+The 46 muscle extended placements reuse **17 topic texts across five muscle concepts**, with five original clinical self-checks displayed on the fourteen eligible selections. They are not 46 independent lessons. Minor-specific pathology, muscle X-ray topics, muscle CT outside multifidus and muscle ultrasound outside latissimus/multifidus remain pending. Baseline Anatomy/Function and identification practice remain available.
+
+The subsequent [skeletal-context teaching pass](BACK_BONE_TEACHING.md) adds Anatomy/Function and source-aware self-checks to all 34 supplied bones, plus 145 extended topic placements. Bone notes use the same collapsed Learn panel. The existing muscle-only identification quiz is unchanged.
 
 Clinical distinctions include an omitted posterior-axillary MRI field versus a negative examination, rhomboid major versus minor identity, muscle outline versus composition, and trapezius imaging observations versus an independently established neuropathy. The CT text explicitly distinguishes a whole-paraspinal region from isolated multifidus; it does not recommend a new CT examination for muscle assessment.
 

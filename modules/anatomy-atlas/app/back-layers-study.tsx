@@ -12,7 +12,6 @@ import {
   backLayersDefinition,
   backLayersSource,
   backLayersColors,
-  backLayersSurfaceMatches,
 } from '@/lib/back-layers';
 import {
   backLayersPractice,
@@ -35,20 +34,6 @@ export function BackLayersTeaching({
   definition?: SpecimenDefinition;
   initialTopic?: SpecimenTopic;
 }) {
-  if (
-    surface.tissue === 'skeleton' &&
-    backLayersSurfaceMatches(definition, surface)
-  )
-    return (
-      <details className="um-knee-details">
-        <summary>Learn · skeletal context</summary>
-        <p>
-          This named bone belongs to the same version-3 source. No attachment
-          footprint, disc, spinal ligament or complete joint is segmented here.
-          Detailed teaching for this specimen bone is pending.
-        </p>
-      </details>
-    );
   return (
     <SpecimenLearning
       definition={definition}

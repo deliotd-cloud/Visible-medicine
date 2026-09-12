@@ -333,7 +333,7 @@ same(
   def.surfaces.filter(
     (s) => s.tissue === 'skeleton' && backLayersTeachingFor(def, s),
   ).length,
-  0,
+  34, // Explicit bone-teaching addition; muscle-only practice pools stay pinned below.
 );
 const expectedPools = [14, 8, 2, 4, 2, 7, 7, 14];
 for (const [i, study] of def.studies.entries()) {

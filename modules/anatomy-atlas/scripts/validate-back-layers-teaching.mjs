@@ -6,7 +6,7 @@ import { build as componentBuild } from './workspace-component-test-build.mjs';
 const compiled = await build({
   stdin: {
     contents:
-      "export * from './lib/back-layers.ts'; export * from './lib/back-layers-teaching.ts'; export * from './content/back-layers-clinical.ts'; export * from './content/back-layers-teaching.ts'; export { kneeDefinition } from './lib/um-limb-studies.ts'; export { specimenTeachingFor } from './lib/um-limb-teaching.ts';",
+      "export * from './lib/back-layers.ts'; export * from './lib/back-layers-teaching.ts'; export * from './content/back-layers-clinical.ts'; export * from './content/back-layers-teaching.ts'; export * from './content/back-bone-teaching.ts'; export { kneeDefinition } from './lib/um-limb-studies.ts'; export { specimenTeachingFor } from './lib/um-limb-teaching.ts';",
     resolveDir: process.cwd(),
     loader: 'ts',
   },
@@ -85,7 +85,7 @@ same(
 for (const s of def.surfaces) {
   const lesson = lessonFor(def, s);
   if (s.tissue !== 'muscle') {
-    same(lesson, null);
+    ok(lesson?.anatomy);
     continue;
   }
   ok(lesson);
@@ -270,13 +270,123 @@ same(
   ),
   false,
 );
-for (const bone of def.surfaces.filter((s) => s.tissue === 'skeleton')) {
-  const html = render('BackLayersTeaching', { surface: bone, definition: def });
-  ok(html.includes('Learn · skeletal context'));
-  same(html.includes('Clinical self-check'), false);
+const bones = def.surfaces.filter((s) => s.tissue === 'skeleton');
+same(bones.length, 34);
+same(
+  Object.keys(api.backBoneBindings).sort(),
+  bones.map((s) => s.fmaId).sort(),
+);
+same(Object.keys(api.backBoneConcepts).length, 12);
+const boneCounts = {
+  clinical: 0,
+  pathology: 0,
+  ct: 0,
+  mri: 0,
+  xray: 0,
+  ultrasound: 0,
+};
+let boneTopicRenders = 0,
+  bonePendingRenders = 0,
+  boneRejections = 0;
+for (const bone of bones) {
+  const lesson = lessonFor(def, bone),
+    saved = copy(lesson);
+  same(
+    lesson.attachments,
+    undefined,
+    'No fictitious bone motor supply/attachment fields',
+  );
+  same(lesson, api.authoredBackBoneLesson(api.backBoneBindings[bone.fmaId]));
+  for (const url of [
+    ...lesson.references,
+    ...lesson.extended.selfCheck.references,
+  ])
+    ok(urls.has(url));
+  for (const [topic, draft] of Object.entries(lesson.extended.topics)) {
+    boneCounts[topic]++;
+    same(draft.readiness, 'draft');
+    ok(draft.body.length > 100);
+    ok(
+      draft.references.length > 0 && draft.references.every((u) => urls.has(u)),
+    );
+    draft.body = 'changed';
+    draft.references.push('changed');
+  }
+  lesson.references.push('changed');
+  lesson.extended.selfCheck.answer = 'changed';
+  lesson.extended.selfCheck.references.push('changed');
+  same(
+    lessonFor(def, bone),
+    saved,
+    'Bone records detach nested arrays and topic data',
+  );
+  for (const field of [
+    'id',
+    'fmaId',
+    'sourceName',
+    'name',
+    'laterality',
+    'tissue',
+    'bundle',
+    'nodeName',
+  ]) {
+    same(lessonFor(def, { ...bone, [field]: 'foreign' }), null);
+    boneRejections++;
+  }
+  const changed = copy(bone);
+  changed.sources[0].sha256 = '0'.repeat(64);
+  same(lessonFor(def, changed), null);
+  boneRejections++;
+  same(lessonFor(knee, bone), null);
+  boneRejections++;
+  same(
+    /<details[^>]* open/.test(
+      render('BackLayersTeaching', { surface: bone, definition: def }),
+    ),
+    false,
+  );
+  for (const topic of topics) {
+    const html = render('BackLayersTeaching', {
+      surface: bone,
+      definition: def,
+      initialTopic: topic,
+    });
+    boneTopicRenders++;
+    const body = ['anatomy', 'function'].includes(topic)
+      ? saved[topic]
+      : saved.extended.topics[topic]?.body;
+    if (body) ok(html.includes(escape(body)));
+    else {
+      ok(html.includes(labels[topic] + ' teaching is pending'));
+      bonePendingRenders++;
+    }
+    ok(html.includes('specialist review pending'));
+    ok(html.includes(escape(saved.extended.selfCheck.question)));
+    same(html.includes('Teaching unavailable'), false);
+    same(html.includes('<dt>Origin</dt>'), false);
+    same(html.includes('<dt>Motor supply</dt>'), false);
+    if (['ct', 'mri', 'xray', 'ultrasound'].includes(topic))
+      ok(
+        html.includes(
+          'No patient images, scan alignment or measured pathology',
+        ),
+      );
+  }
 }
+same(boneCounts, {
+  clinical: 33,
+  pathology: 26,
+  ct: 33,
+  mri: 27,
+  xray: 26,
+  ultrasound: 0,
+});
+same(boneTopicRenders, 272);
+same(bonePendingRenders, 59);
+same(JSON.stringify(def), before);
 const bad = copy(def);
 bad.catalog.coordinateSystem.sourceToSceneColumnMajor[12] += 0.5;
+for (const bone of bones) same(lessonFor(bad, bone), null);
 ok(
   render('BackLayersTeaching', {
     surface: muscles[0],
@@ -297,6 +407,12 @@ console.log(
     distinctTopicTexts: 17,
     topicRenders,
     pendingRenders,
+    bones: bones.length,
+    boneConcepts: Object.keys(api.backBoneConcepts).length,
+    boneExtendedTopics: boneCounts,
+    boneTopicRenders,
+    bonePendingRenders,
+    boneRejections,
     sourceFrameMutationsRejected: mutations.length,
     browserOrClinicalAcceptance: false,
   }),
