@@ -1,5 +1,15 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 12 September 2026 — local CT and same-study 3D pilot
+
+Source `c52eb3c005cdee6d4842755baa404ad4eccdc477`, tree `94c3b6da06d53a925180846c482ab3d81b8594a4`, parent `fd65061e96c41c45e5cc2e0b475b45e611e12db9`. Eleven source paths implement the local-only `.vmatlas` review workbench at `/imaging/local`, a read-only checkpoint exporter, source-bound correction-mark export, tests, documentation and privacy ignore rules. Search, same-study selection, LPS crosshairs, orthogonal CT, unsmoothed surfaces, isolation/fading, hierarchy deduplication and compact controls share one source grid. The main anatomy viewer is not falsely registered to the patient.
+
+Passed: TypeScript, focused lint, 69 synthetic/SSR checks, existing volume-viewer 200 checks, and 1,544,517 combined private/synthetic checks against a 24-mask export with 514,840 triangles, without pixel logging. Original source hashes and exact HU/mask encodings verified. Production build passes and all existing 130 model files retain decoded geometry. Body renderer fingerprint unchanged: 430 inputs, `bb20d0d274943927bcc3657f31aea35c4fe2b51bdcbe36a730076d8bbaa360bd`. Browser/device and radiological sign-off remain outstanding. No patient material, private export, DICOM identifier or raw case is in this commit; local file integrity does not certify privacy or clinical approval.
+
+D recovery prefix `D:/VisibleMedicine-Atlas-Recovery/atlas-local-imaging-2026-09-12`: runtime `.site.tar.gz` 124,607,427 bytes SHA256 `da882dc8d4bc41494914746eb9fe72d203145439b652bb67c808e146788effc8`; `.delta.tar` 358,400 bytes SHA256 `3e8e7576d018b8edd48d227dc8c3219af78c678275f372b96edf418e8663f5c5`; `.incremental.bundle` 28,255 bytes SHA256 `f29411b8ddeedc5e7792d2a982b21637327934c1473650ae069a991d3a6c3b45`. Runtime archive has 483 safe unique entries and three exact migrations. An independent Git restore/full fsck verifies source and tree at `refs/verification/local-imaging-20260912`, preserving verifier main. This is source/runtime recovery, not a backup of conversation history or review databases.
+
+Target is the existing backup branch only; website main is unchanged. Sites remains a separate publication step; latest observed live version is 171, not this milestone. Next: consultant review of accepted-mask laterality/CT-surface agreement, then source-bound draft review/import and midbrain correction in the existing CT project. Existing accepted masks and NOT_FOR_PUBLICATION status stay intact.
+
 ## 12 September 2026 — deep-femoral component dissection
 
 Source `fd65061e96c41c45e5cc2e0b475b45e611e12db9`, tree `e6122bca9cbf7322fbef0fe4d4df8100aabab763`, parent `82ffc964f8830b375e089f154ae7ca0599c5fe44`. Forty-two paths changed. Four original source components exactly partition the two existing deep-femoral aggregates (15,278 triangles), without replacing or duplicating root anatomy. Same-side component selection, isolation/fading, separation layouts, cutaway, history, camera presets and source-bound teaching/navigation are available in the compact workbench. Root count remains 1,082; nested targets are 75. No new dependency or image dataset.

@@ -300,6 +300,7 @@ export function ReviewDashboard({ initialId }: { initialId: string }) {
         <span>Review workspace</span>
         <Link href="/review/body">Whole-body reviews</Link>
         <Link href="/review/specimens">Specimen reviews</Link>
+        <Link href="/imaging/local">Local CT study</Link>
         <Link href="/shoulder">
           Anatomy explorer <ArrowUpRight size={16} />
         </Link>

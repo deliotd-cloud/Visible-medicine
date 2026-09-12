@@ -37,3 +37,12 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# Private imaging belongs outside this source repository.
+*.vmatlas
+*.nii
+*.nii.gz
+*.dcm
+*.nrrd
+*.mrb
+*.export.json

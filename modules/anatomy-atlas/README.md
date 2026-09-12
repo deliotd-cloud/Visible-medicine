@@ -1,6 +1,8 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
-**Deep femoral artery → Explore artery components:** [Dissect the two supplied components on either side](docs/FEMORAL_COMPONENT_DISSECTION.md), with reversible visibility, three separation mechanisms and explicit partial-source labelling. Existing root geometry and teaching pins are preserved. The owner's approved scan-data pilot is the next priority once folder paths are available; runtime publication and clinical/device acceptance remain separate.
+**Local CT + 3D pilot:** [Open the same-study review workflow](docs/LOCAL_IMAGING_STUDY.md) at `/imaging/local` (also linked from Review). Reuses accepted CT-head masks without editing them, with linked orthogonal CT, 3D surfaces, selection, crosshairs and local correction-mark export. No scan data is included in this repository or uploaded by this viewer. Dataset privacy, viewer validation and publication remain separate gates.
+
+**Deep femoral artery → Explore artery components:** [Dissect the two supplied components on either side](docs/FEMORAL_COMPONENT_DISSECTION.md), with reversible visibility, three separation mechanisms and explicit partial-source labelling. Existing root geometry and teaching pins are preserved.
 
 **12 September — descending lateral circumflex branches:** Two distinct original branch meshes now join thigh/leg/whole-body dissection. Source overlap checks prevent duplicate parent meshes; arterial links explicitly say **Via grouped parent**. See [scope, source evidence and review requirements](docs/CIRCUMFLEX_FEMORAL.md).
 
