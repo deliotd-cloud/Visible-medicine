@@ -24,6 +24,7 @@ export * from './lib/limb-bone-imaging.ts';
 export * from './lib/thoracic-bone-imaging.ts';
 export * from './lib/abdominal-organ-imaging.ts';
 export * from './lib/pelvic-organ-imaging.ts';
+export * from './lib/thigh-muscle-imaging.ts';
 export * from './lib/shoulder-arm-curriculum.ts';
 export * from './lib/forearm-curriculum.ts';
 export * from './lib/hand-curriculum.ts';

@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "d971200b5d16278a313f8a72f66ee01dd2d55267e6dcc002b04da85caabbeba1"
+      "sha256": "a57c5fd8b5859bb0e8cb716ef22e203303f0fb35014c1fa882c9485cd248d0f8"
     },
     {
       "path": "app/body-explorer.css",
@@ -651,6 +651,14 @@
     {
       "path": "content/thigh-attachments.ts",
       "sha256": "006046193ee41279ceb1be406b3cc182ed05aabef5bb49db101b25dc053ad202"
+    },
+    {
+      "path": "content/thigh-muscle-imaging-pins.json",
+      "sha256": "b062dc8f8d42992617d43dabe2dbaaa48c3bcf3bfc59410729e5cd5e66f5dc61"
+    },
+    {
+      "path": "content/thigh-muscle-imaging.ts",
+      "sha256": "d571c8a4f0f76358983b4b15257219ef15c8c609577fc2e7ebb8ea2ada788e61"
     },
     {
       "path": "content/thoracic-bone-imaging-pins.json",
@@ -1529,6 +1537,10 @@
       "sha256": "f01c5971d13fa780e453e8d66b3a07c111dddd808e3a8cc2a0fdb8b8d1919ddd"
     },
     {
+      "path": "lib/thigh-muscle-imaging.ts",
+      "sha256": "76400dbd2175a46882c9e856e4c8ce98a76fbee2bf3141aa03e0b3f416f46c70"
+    },
+    {
       "path": "lib/thigh-reasoning.ts",
       "sha256": "8a26447a642d1b2b069eea66840d6004a8d74739778336d91653f83bad7527ef"
     },
@@ -1837,5 +1849,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "40bb1e8933a484ef09280804305abf96cb462796331f183686af6d7aa4528e03"
+  "sha256": "b0e3b5a54aa18e8fc7fd9fe227ba7799ccf38f2f5087404c3c432cc6d9529f05"
 }

@@ -489,6 +489,14 @@ These licences permit commercial use; they are not non-commercial licences and d
 
 ## Reproducible full audit
 
+Hip/thigh muscle imaging teaching (13 September 2026) adds brief original factual
+drafts and ten external reading links, not articles, chapters, tables, images,
+scans or question banks. ESSR, TTUHSC, RSNA/ACR and the cited research publishers
+retain their rights; NC/ND reference material is not admitted as a commercial
+asset. No model, font, texture, dependency or paid service is added. Existing
+BodyParts3D attribution and authored-content terms are unchanged. See
+`docs/THIGH_MUSCLE_IMAGING.md` for source bindings and review limitations.
+
 The abdominal-organ imaging extension supplies brief original teaching and twelve external reading links, not imported article text, figures, scans, tables or datasets. TTUHSC El Paso, ACR/RSNA, NIDDK, Springer/NCBI, Singapore Medical Journal and Journal of Ultrasonography retain their respective rights. No new asset, dependency, font, texture or paid service is introduced. BodyParts3D attribution is unchanged; the independent HRA kidney specimen remains separate. See `docs/ABDOMINAL_ORGAN_IMAGING.md` for source scope and clinical limitations.
 
 The thoracic-bone imaging extension adds original concise teaching and external reading links only. TTUHSC El Paso, RSNA/ACR, Journal of Thoracic Disease and the cited Springer/NCBI chapter retain their respective rights. No source images, diagrams, tables, patient scans, figures or article text are redistributed. Existing BodyParts3D CC BY 4.0 attribution remains unchanged. No dependency, font, texture or paid service is added. See `docs/THORACIC_BONE_IMAGING.md`; access to a reference is not permission to reuse its media.

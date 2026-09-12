@@ -1,0 +1,35 @@
+{
+  "baselineSource": "388eb301a3c5f65c670cfb711f025a0716f98aea",
+  "groups": 14,
+  "sourceSelections": 28,
+  "addedDraftPlacements": 112,
+  "modalities": {
+    "ct": 28,
+    "mri": 28,
+    "ultrasound": 28,
+    "xray": 28
+  },
+  "unchangedTopics": 9797,
+  "bodySchemaRecords": 1101,
+  "actualNoteRenders": 112,
+  "rejectedSourceTopicCombinations": 1680,
+  "uniqueReferenceFacts": 33,
+  "sourceWordCounts": {
+    "mri": 48,
+    "ultrasound": 45,
+    "xray": 26,
+    "adductor": 37,
+    "gemelli": 32,
+    "obturator": 55,
+    "anatomy": 64,
+    "hipUS": 115,
+    "kneeUS": 62,
+    "hamstring": 62
+  },
+  "sourceGeometryChanged": false,
+  "currentApprovalRecordsChanged": false,
+  "clinicalApproval": false,
+  "imagesImported": false,
+  "imagingConnected": false,
+  "browserOrDeviceAcceptance": false
+}

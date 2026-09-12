@@ -6,8 +6,10 @@ import pins from '../content/abdominal-organ-imaging-pins.json' with {type:'json
 import after from '../content/abdominal-organ-imaging.transition.json' with {type:'json'};
 import correction from '../public/models/bodyparts3d/pancreas/display-correction.json' with {type:'json'};
 import {authoringBeforePelvicOrganImaging} from './pelvic-organ-imaging-history.mjs';
+import {authoringBeforeThighMuscleImaging} from './thigh-muscle-imaging-history.mjs';
 export const abdominalOrganContentHash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function authoringBeforeAbdominalOrganImaging({api,catalog}) {
+  api=authoringBeforeThighMuscleImaging({api,catalog});
   api=authoringBeforePelvicOrganImaging({api,catalog});
   assert.equal(abdominalOrganContentHash(pins),'4eaecd43646f4f7f2df08ee3dfb0846e3f372341009b4034b26695b38a5bfc69');
   assert.equal(abdominalOrganContentHash(after),'5c36a2d12cdd8c7db209be1e1cf78cdd0cadf01cdd3f856870818f238d7f30d8');
