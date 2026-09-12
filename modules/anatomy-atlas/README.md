@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Designated imaging viewer:** [Elivion Didanix light/education integration](docs/DIDANIX_EDUCATION_INTEGRATION.md) will supply the learner DICOM/PACS experience. Keep its education deployment, identity and content access separate from clinical PACS and from independently paid lectures. The existing local CT workbench and [MRI import checker](docs/NATIVE_MRI_VIEWER.md) are private engineering/reviewer utilities, not a second learner viewer.
+
 **Candidate correction feedback:** [Review and export baseline/candidate marks separately](docs/LOCAL_CANDIDATE_REVIEW.md), then return source-checked candidate points to Slicer without editing or approving segmentation masks. The existing correction panel identifies which version is active; removing a marked candidate requires confirmation.
 
 **Private CT correction review:** [Compare a candidate mask against its saved baseline](docs/LOCAL_MASK_COMPARISON.md), then open a separate `.vmcompare` attachment in the local CT/3D workbench. Switch between baseline, candidate, additions/removals and protected-region warnings. Original masks and approval states stay unchanged; no scan is uploaded. Hosted availability depends on publication of this revision; consult the external checkpoint for deployment status.

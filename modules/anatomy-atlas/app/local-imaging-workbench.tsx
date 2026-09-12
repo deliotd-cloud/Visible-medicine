@@ -1076,6 +1076,13 @@ export default function LocalImagingWorkbench() {
       {!study ? (
         <main className="local-study-open">
           <h2>Open a prepared CT study</h2>
+          <details>
+            <summary>Private import checks</summary>
+            <p>
+              <Link href="/review/mri-import">MRI import checker</Link> · The
+              learner DICOM/PACS viewer will use Didanix Education.
+            </p>
+          </details>
           <p>
             View source segmentation surfaces beside their original CT.
             Explicitly included drafts remain labelled as unapproved. Your

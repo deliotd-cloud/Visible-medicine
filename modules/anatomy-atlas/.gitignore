@@ -41,6 +41,8 @@ next-env.d.ts
 # Private imaging belongs outside this source repository.
 *.vmatlas
 *.vmcompare
+*.vmmr
+MRI_STACK_MANIFEST.json
 *.nii
 *.nii.gz
 *.dcm

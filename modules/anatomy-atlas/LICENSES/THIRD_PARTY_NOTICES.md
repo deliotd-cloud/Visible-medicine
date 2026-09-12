@@ -1,5 +1,9 @@
 # Third-party notices
 
+## Private native MRI viewer — 12 September 2026
+
+Original MIT viewer, parser, tests and local export code. No new dependency, font, model, texture, scan, external illustration or paid service is included. The browser uses the existing React/UI stack and native canvas; preprocessing reuses the owner's existing NiBabel/NumPy environment, whose binaries are not redistributed. [DICOM](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.6.2.html) is a geometry reference, not a source-image licence. [Scope and safety](../docs/NATIVE_MRI_VIEWER.md): private scan packets remain outside GitHub/Sites, and computational validation does not establish privacy clearance or clinical approval.
+
 ## Thigh-to-knee attachment relationships — 12 September 2026
 
 Original MIT interaction code and concise factual labels connect 20 existing muscles/heads with ten existing bones. [UAMS](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-lower-limb/) is a factual reference, not an imported illustration or redistributed table. No dependency, font, texture, model, diagnostic image, private scan or paid service is added. Existing BodyParts3D CC BY 4.0 notices remain intact. [Scope and validation](../docs/THIGH_ATTACHMENT_RELATIONSHIPS.md) distinguish whole-bone relationships from verified donor footprints and indirect extensor-chain transmission from direct muscle insertion.
