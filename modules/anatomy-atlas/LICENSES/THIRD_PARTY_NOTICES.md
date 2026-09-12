@@ -1,5 +1,9 @@
 # Third-party notices
 
+## Private mask comparison helper — 12 September 2026
+
+The candidate-versus-baseline comparison and synthetic tests are original MIT code. They reuse the same locally installed NumPy/NiBabel distributions recorded under the local CT pilot below; no new package, model weights, image dataset, Slicer binary, third-party figure or paid service is redistributed. The helper creates only private owner-data derivatives and does not relicense or grant publication rights to those data. Links to the official NiBabel affine/header documentation are factual implementation references, not copied source assets. See [scope and validation limits](../docs/LOCAL_MASK_COMPARISON.md).
+
 ## Cranial artery source-part dissection — 12 September 2026
 
 The nested PICA/right-MCA workbench reuses 29 already retained BodyParts3D v4 source files; it adds no external anatomy dataset, dependency, font, texture or paid service. The derivative GLB partitions existing root triangles exactly, with original rendered normals and recolouring for selection. Preserve: **BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International**. Original source files and parent assets are unchanged. The parent FMA identifier does not independently name each child part. See [partition evidence and limitations](../docs/CRANIAL_ARTERY_COMPONENTS.md).

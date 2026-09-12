@@ -55,6 +55,10 @@ Native anatomical IDs remain the source `cth.*` IDs. This is same-study spatial 
 
 ## Acceleration policy
 
+### Candidate correction comparison
+
+[The private mask-comparison tool](LOCAL_MASK_COMPARISON.md) now checks an explicitly supplied candidate against its source-bound baseline, reporting exact added/removed voxels, physical extents, native-slice counts and overlaps with every other accepted binary mask. Optional reviewer-defined protected ROI masks test whether previously accepted boundary voxels retained their baseline state. It writes review-only difference maps to a new private directory, or nothing in check-only mode. No mask correction, source edit, automatic approval or upload is performed. Verbal midbrain feedback is already recorded in the CT task; precise boundary limits still need localisation, not invention.
+
 ### Draft export and Slicer return
 
 Append `--review-draft cth.bst.midbrain` to the CT export command for an explicitly requested unfinished target; repeat the flag for other targets. Only source entries with `approved: false`, `status: IN_PROGRESS_PARTIAL`, binary masks and matching source hashes/geometry are eligible. The default remains accepted-only. A missing, duplicate, accepted or invalid draft request fails rather than silently changing scope.

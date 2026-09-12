@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "syntheticTests": 16,
+  "existingReviewImportRegressionTests": 9,
+  "readOnlyPrivateIdentityProbe": {
+    "structureId": "cth.bst.midbrain",
+    "acceptedBinaryMasksChecked": 24,
+    "differenceVoxels": 0,
+    "privateFilesWritten": 0,
+    "clinicalFeedbackGenerated": false
+  },
+  "tools": {
+    "numpy": "2.5.2",
+    "nibabel": "5.4.2",
+    "newDependencies": 0
+  },
+  "comparisonScriptSha256": "95535c4e3fda7e5972e9b87ccea162dae9df203679b75c8abf4676b794c93884",
+  "validationScriptSha256": "7e260faa58d68b6dc75b7f71f6ac79f3030ba88b65f732cc72181061fcf70aba",
+  "webRuntimeChanged": false,
+  "sourceMasksChanged": false,
+  "realCandidateCorrectionProduced": false,
+  "clinicalApproval": false,
+  "slicerRuntimeValidated": false,
+  "patientDataUploaded": false,
+  "limitations": [
+    "Synthetic differences and a real-source identity probe validate implementation paths, not anatomical accuracy.",
+    "No candidate correction or explicit reviewer-protected boundary ROI has been supplied to this workflow.",
+    "Saved verbal midbrain feedback exists, but its exact overcoverage/superior-extension limits are not marked.",
+    "Slicer overlay loading, original-DICOM agreement and radiologist acceptance remain unverified."
+  ]
+}

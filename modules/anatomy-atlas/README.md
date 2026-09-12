@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Private CT correction review:** [Compare a candidate mask against its saved baseline](docs/LOCAL_MASK_COMPARISON.md), including exact added/removed voxels, native-slice counts and checks against accepted structures or explicit protected boundary ROIs. This is an offline helper, not a new live-site control. It preserves original masks and approval states and uploads no data.
+
 **PICA / Right MCA → Explore artery components:** [Separate 29 original source-file parts](docs/CRANIAL_ARTERY_COMPONENTS.md) with selection, hide/show, three separation mechanisms, cutaway, Undo/Redo and side-aware study links. Every parent triangle and rendered normal is preserved; these are unnamed source partitions, not newly claimed branches. Advanced controls remain collapsed and the source list scrolls beside the model.
 
 **Head & neck / Whole body:** [Five additional cranial artery selections](docs/CRANIAL_ARTERIES.md) add bilateral PICA, bilateral superior cerebellar arteries and the supplied right MCA group, with source-preserved geometry, parent links and reversible dissection. AICA's bilateral group remains offline; no left MCA is invented. Draft teaching, specialist/device review and runtime publication are distinct from source admission.
