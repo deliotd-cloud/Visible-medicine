@@ -34,7 +34,7 @@ for (const [from,name] of copies) {
 }
 await writeFile(join(target,'manifest.json'),JSON.stringify({
   schemaVersion:1,sourceCommit,region:'independent-female-pelvis',structures:41,
-  studies:8,draftTeachingSelections:31,patientDataIncluded:false,clinicalApproved:false,
+  studies:8,draftTeachingSelections:41,patientDataIncluded:false,clinicalApproved:false,
   standaloneReviewConnection:false,imagingConnection:false,files:records,
 },null,2)+'\n');
 console.log(JSON.stringify({sourceCommit,files:records.length,bytes:records.reduce((n,f)=>n+f.bytes,0),patientDataIncluded:false}));

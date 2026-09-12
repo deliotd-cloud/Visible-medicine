@@ -1,6 +1,6 @@
 # Female pelvis — contained website pilot
 
-The main Visible Medicine website can deliver the existing HRA female-pelvic workbench at `/atlas/female-pelvis-3d`. This is a separate source reference: 41 surfaces, eight studies, 31 selections with draft teaching and ten without. All source holds, coverage warnings, the radiologist review requirement and commercial-reuse notices remain. No nerve network, pelvic floor, complete female body or scan registration is claimed.
+The main Visible Medicine website can deliver the existing HRA female-pelvic workbench at `/atlas/female-pelvis-3d`. This is a separate source reference: 41 surfaces, eight studies and introductory draft teaching for every retained selection. Modality coverage remains partial; see `FEMALE_PELVIC_CONTEXT_TEACHING.md`. All source holds, coverage warnings, the radiologist review requirement and commercial-reuse notices remain. No nerve network, pelvic floor, complete female body or scan registration is claimed.
 
 ## Build and update
 

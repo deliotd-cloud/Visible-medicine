@@ -7,6 +7,46 @@ import type {
 } from './um-limb-clinical';
 
 export const hraPelvicReferences = {
+  urinary: {
+    title: 'NIDDK · Urinary tract function',
+    url: 'https://www.niddk.nih.gov/health-information/urologic-diseases/urinary-tract-how-it-works',
+  },
+  urinaryImaging: {
+    title: 'NIDDK · Urinary tract imaging',
+    url: 'https://www.niddk.nih.gov/health-information/diagnostic-tests/urinary-tract-imaging',
+  },
+  bladder: {
+    title: 'NCI SEER · Bladder anatomy',
+    url: 'https://www.training.seer.cancer.gov/bladder/anatomy/',
+  },
+  bladderMri: {
+    title: 'VI-RADS development consensus · Bladder MRI (2018)',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/29755006/',
+  },
+  colorectal: {
+    title: 'NCI SEER · Colorectal anatomy',
+    url: 'https://training.seer.cancer.gov/colorectal/anatomy/',
+  },
+  rectalMri: {
+    title: 'ESGAR · Rectal MRI primary staging (2026)',
+    url: 'https://link.springer.com/article/10.1007/s00330-025-12274-w',
+  },
+  pelvicVessels: {
+    title: 'Texas Tech · Female reproductive vascular anatomy',
+    url: 'https://anatomy.ttuhscep.edu/schemes/femalerepro_tables.html',
+  },
+  pelvicVeins: {
+    title: 'AVLS international working group · Pelvic venous disorders (2021)',
+    url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8371031/',
+  },
+  uterineDoppler: {
+    title: 'ISUOG · Uterine artery Doppler in pre-eclampsia screening (2018)',
+    url: 'https://www.isuog.org/static/79953875-e790-4e4d-aaea8d59e1d018e9/ISUOG-Practice-Guidelines-ultrasound-in-screening-for-Pre-eclampisa.pdf',
+  },
+  sacralImaging: {
+    title: 'RadioGraphics · CT of sacral fractures (2022)',
+    url: 'https://pubs.rsna.org/radiographics/doi/full/10.1148/rg.220075',
+  },
   dissection: {
     title: 'Texas Tech · Female pelvic relationships and support',
     url: 'https://anatomy.ttuhscep.edu/reproductive_system/pelvicvisc_ans.html',
@@ -78,9 +118,76 @@ const topics: Record<
   | 'cardinal'
   | 'peritoneal'
   | 'adnexalSupport'
-  | 'pouch',
+  | 'pouch'
+  | 'junction'
+  | 'rectum'
+  | 'bladderDome'
+  | 'bladderBase'
+  | 'bladderNeck'
+  | 'uterineArtery'
+  | 'uterineVein'
+  | 'sacrum',
   TopicSet
 > = {
+  junction: {
+    clinical: draft('Use the cervical projection and surrounding vaginal fornices to orient the upper vagina. The source junction is a gross regional boundary, not the microscopic squamocolumnar junction.', 'cervix'),
+    pathology: draft('Epithelial cervical disease cannot be inferred from this junction mesh. Distinguish a gross cervix–vagina relationship from the transformation zone examined during cervical assessment.', 'cervix'),
+    ct: draft('For CT correlation, identify the cervix and upper vagina in the acquired study before assigning a source-region label. This surface supplies neither a tissue attenuation nor a tumour boundary.', 'cervix'),
+    mri: draft('Follow the cervical canal towards the upper vagina in orthogonal planes. A rendered seam is not evidence of a septum, abnormal canal or interrupted vaginal continuity.', 'anomalies'),
+    ultrasound: draft('When correlating pelvic ultrasound, establish the cervix and adjacent vaginal region first. This source has no probe plane or validated epithelial landmark; do not overlay its outline automatically.', 'cervix'),
+  },
+  rectum: {
+    clinical: draft('Compare the rectum with the vagina anteriorly and sacrum posteriorly. Its displayed shell is not a mesorectal fascia segmentation, resection margin or complete anal-sphincter model.', 'anatomy'),
+    pathology: draft('Adenocarcinoma is the predominant colorectal malignancy. For a real rectal lesion, organ origin, depth and surrounding involvement require acquired imaging and tissue diagnosis, not this reference contour.', 'colorectal'),
+    ct: draft('Use CT to relate a labelled rectum to the rest of the imaged pelvis. Do not transfer an MRI local-staging category or a measured mesorectal margin from this unregistered surface.', 'rectalMri'),
+    mri: draft('High-resolution T2-weighted images establish local anatomy; interpret diffusion-weighted images with T2 and ADC maps. Assess the mesorectal fascia, vessels and nodes separately. A numerical ADC threshold alone is not a staging rule.', 'rectalMri'),
+    ultrasound: draft('Endorectal ultrasound has a role in selected early-tumour assessment. It is a different examination from routine transabdominal pelvic ultrasound; this model supplies neither wall-layer echoes nor a tumour-depth measurement.', 'rectalMri'),
+  },
+  bladderDome: {
+    clinical: draft('The superior bladder relates to the anterior peritoneal reflection. Bladder filling changes its configuration; this fixed donor surface cannot establish capacity or a patient-specific contact plane.', 'dissection', 'bladder'),
+    pathology: draft('Bladder lesions require assessment of the wall and surrounding tissues. A separation between this dome and the source base is a modelling boundary, not rupture or a diverticulum.', 'urinaryImaging'),
+    ct: draft('CT can assess urinary stones, masses and traumatic injury when appropriately acquired. This unopacified reference has no contrast phase, extravasation or measurable lesion.', 'urinaryImaging'),
+    mri: draft('Bladder MRI assessment combines T2-weighted, diffusion and dynamic contrast information when using VI-RADS. A smooth dome mesh cannot exclude muscle invasion or be assigned a VI-RADS score.', 'bladderMri'),
+    xray: draft('Contrast cystography depicts a filled bladder lumen; it is not equivalent to an unenhanced pelvic radiograph. The atlas does not simulate filling, contrast leakage or a cystogram.', 'urinaryImaging'),
+    ultrasound: draft('Ultrasound can assess bladder wall abnormalities, stones and diverticula. The dome label is a surface identifier, not an echogenic interface, measured volume or guarantee that a lesion is absent.', 'urinaryImaging'),
+  },
+  bladderBase: {
+    clinical: draft('The posterior bladder base is related to the upper vagina and cervix. The trigone is an internal landmark bounded by the ureteric openings and urethral outlet, not the entire external base.', 'anatomy'),
+    pathology: draft('Urothelial carcinoma can arise in the bladder lining. This base selection does not separate urothelium, lamina propria and muscle, so it cannot establish histological depth.', 'bladder', 'bladderMri'),
+    ct: draft('Correlate the bladder base with the ureteric entry region on suitable acquired images. This source does not contain a contrast-filled lumen or validate the patency of either ureter.', 'anatomy', 'urinaryImaging'),
+    mri: draft('On T2-weighted bladder MRI, the muscular layer has low signal. The base mesh is not that layer and cannot supply an invasion boundary; combine the actual sequences with clinical and pathological evidence.', 'bladderMri'),
+    xray: draft('A voiding cystourethrogram follows the contrast-filled bladder and urethra. A source base outline cannot show reflux or replace the dynamic examination.', 'urinaryImaging'),
+    ultrasound: draft('Examine the acquired bladder base rather than treating this external surface as a mucosal map. No ureteric jets, stones or dynamic emptying are simulated here.', 'urinaryImaging'),
+  },
+  bladderNeck: {
+    clinical: draft('Urine leaves through the urethra at the bladder outlet. Storage and voiding require coordinated bladder, outlet, nerve and pelvic-floor activity; this isolated source-labelled smooth muscle is not the complete continence apparatus.', 'urinary'),
+    pathology: draft('Retention and incontinence describe different functional problems. Neither can be diagnosed from the shape or size of this static bladder-neck selection.', 'urinary', 'urinaryImaging'),
+    ct: draft('CT can show structural urinary-tract disease, but this source neck has no functional emptying record. Its apparent opening is not proof of outlet obstruction or a patent urethra.', 'urinaryImaging'),
+    mri: draft('MRI can depict pelvic soft-tissue relationships. Do not read source-labelled smooth muscle as a resolved histological sphincter or infer normal continence from its contour.', 'urinaryImaging', 'urinary'),
+    xray: draft('A voiding cystourethrogram acquires the outlet during emptying. This static neck surface cannot reproduce its timing or demonstrate a voiding abnormality.', 'urinaryImaging'),
+    ultrasound: draft('Bladder ultrasound and a functional emptying assessment answer different questions. This source carries no pre-void or post-void measurement and no bladder-neck motion.', 'urinary', 'urinaryImaging'),
+  },
+  uterineArtery: {
+    clinical: draft('The uterine artery crosses superior to the ureter near the cervix. This is an important operative relationship, but the current specimen does not supply a complete ureter or a safe procedural route.', 'dissection'),
+    pathology: draft('In pregnancy, uterine artery Doppler contributes to pre-eclampsia risk assessment alongside other factors. A vessel outline or isolated waveform feature is not a diagnosis; this source is not a pregnancy simulation.', 'uterineDoppler'),
+    ct: draft('For future CT correlation, the mapped artery must be identified in that study and side. Source colour and a nearby enhancing vessel are not sufficient to establish the same branch or a spatial registration.', 'pelvicVessels'),
+    mri: draft('Keep an arterial source selection separate from adjacent veins and uterine tissue when planning MRI teaching anchors. This mesh contains no angiographic sequence, perfusion measurement or validated patient vascular tree.', 'pelvicVessels'),
+    ultrasound: draft('Colour Doppler helps locate the vessel; spectral Doppler provides a waveform. Uterine artery indices depend on the acquisition method and pregnancy context. No Doppler signal or gestational reference range is generated by this model.', 'uterineDoppler'),
+  },
+  uterineVein: {
+    clinical: draft('Uterine veins drain the uterine plexus towards the internal iliac veins. Connections with ovarian and vaginal venous networks mean a single displayed branch is not the complete pelvic drainage system.', 'pelvicVessels'),
+    pathology: draft('Pelvic venous disorders require symptoms and venous pathophysiology to be considered together. A prominent reference vein alone does not diagnose a symptomatic pelvic venous disorder.', 'pelvicVeins'),
+    ct: draft('Use the acquired venous anatomy and study protocol when assigning a CT anchor. This donor branch is not evidence of reflux, obstruction or a contrast-filling defect in a patient.', 'pelvicVeins'),
+    mri: draft('A venous anatomical map and a haemodynamic assessment are distinct. This reference has no measured flow direction, venographic acquisition or validated link to an MRI case.', 'pelvicVeins'),
+    ultrasound: draft('A venous assessment needs acquired flow information and clinical context. The blue source surface supplies neither a Doppler trace nor evidence of reflux; do not infer haemodynamics from colour or calibre.', 'pelvicVeins'),
+  },
+  sacrum: {
+    clinical: draft('The sacrum transmits spinal load into the pelvic ring. A clinically useful injury assessment also considers stability and neurological findings; the present isolated bone cannot supply either.', 'sacralImaging'),
+    pathology: draft('Fractures may involve the alae, neural foramina or central canal. Distinguish traumatic injury from insufficiency injury; an opening or surface irregularity in this reference is not a fracture.', 'sacralImaging'),
+    ct: draft('Review sacral injuries in axial images and multiplanar reconstructions, checking displacement and foraminal or canal involvement. No fracture line, displacement measurement or neural compression is encoded in this normal-reference mesh.', 'sacralImaging'),
+    mri: draft('MRI can reveal marrow oedema in an occult insufficiency fracture, including after unrevealing CT. The rendered bone has no marrow signal, and its appearance cannot exclude an injury.', 'sacralImaging'),
+    xray: draft('Sacral fractures can be obscured on pelvic radiographs. A reassuring projection alone does not exclude injury; this isolated 3D bone is not a simulated diagnostic radiograph.', 'sacralImaging'),
+  },
   uterosacral: {
     clinical: draft(
       'Compare each ligament with the posterior cervix, vaginal fornix and neighbouring rectum. A source-labelled band is not a complete pelvic-support apparatus or an operative dissection plane.',
@@ -295,6 +402,62 @@ type Concept = {
   answer: string;
 };
 export const hraPelvicConcepts = {
+  junction: {
+    anatomy: 'The source-labelled meeting region of upper vagina and cervix. The cervix projects into the vaginal canal, with fornices around its vaginal portion; these are gross relationships rather than epithelial zones.',
+    function: 'Marks the cervix–vagina relationship for orientation. It is not a separate organ, valve or additional opening of the cervical canal.',
+    refs: ['cervix'], family: 'junction',
+    question: 'Is the cervicovaginal source junction the cervical squamocolumnar junction?',
+    answer: 'No. The source label describes gross regional geometry; the squamocolumnar junction is an epithelial transition that is not modelled.',
+  },
+  rectum: {
+    anatomy: 'The bowel segment between sigmoid colon and anal canal, posterior to the vagina and anterior to the sacrum. Its source surface does not separately identify the bowel-wall layers or mesorectal fascia.',
+    function: 'Temporarily stores stool before defaecation. Continence and evacuation also involve structures and dynamic activity that this specimen does not reproduce.',
+    refs: ['anatomy', 'colorectal'], family: 'rectum',
+    question: 'Can the rectal surface be used as the mesorectal fascia for a tumour-margin measurement?',
+    answer: 'No. Rectal wall and mesorectal fascia are different boundaries; neither tumour staging nor a margin distance can be derived from this source selection.',
+  },
+  bladderDome: {
+    anatomy: 'The superior urinary-bladder source surface. Its delivery label distinguishes it from the separately retained base, despite shared or ambiguous upstream fundus terminology.',
+    function: 'Part of the expandable urinary reservoir. It does not act independently from the remainder of the bladder wall, and its static source dimensions are not bladder capacity.',
+    refs: ['bladder', 'dissection'], family: 'bladderDome',
+    question: 'Does the source dome–base seam demonstrate a bladder rupture?',
+    answer: 'No. It is a boundary between source pieces; rupture requires evidence from the actual patient investigation.',
+  },
+  bladderBase: {
+    anatomy: 'The posterior bladder-base source surface, distinct from the superior dome and inferior neck. Its external contour is not a separate mesh of the internal trigone.',
+    function: 'Part of the urinary reservoir near the ureteric entry region. The base label alone establishes neither a patent connection nor a complete anti-reflux mechanism.',
+    refs: ['anatomy', 'bladder'], family: 'bladderBase',
+    question: 'Are the external bladder base and internal vesical trigone identical selections?',
+    answer: 'No. The trigone is an internal landmark between the two ureteric openings and urethral outlet; this source labels an external region.',
+  },
+  bladderNeck: {
+    anatomy: 'Source-labelled smooth muscle at the inferior bladder outlet towards the urethra. It is distinct from the skeletal external urethral sphincter and does not represent all female outlet tissues.',
+    function: 'Participates in the outlet region of the coordinated storage–voiding system. Muscle activity, innervation and pressure relationships are not simulated.',
+    refs: ['urinary', 'anatomy'], family: 'bladderNeck',
+    question: 'Does selecting bladder-neck smooth muscle isolate the external urethral sphincter?',
+    answer: 'No. The source is labelled smooth muscle; the external urethral sphincter is a distinct skeletal-muscle structure not supplied by this selection.',
+  },
+  uterineArtery: {
+    anatomy: 'Paired arterial supply to the uterus, usually arising from the internal iliac anterior division and ascending beside the uterus. The uterine and ovarian arterial systems communicate; the source is not a complete branching map.',
+    function: 'Supplies oxygenated blood to uterine tissues. A selected arterial mesh is a spatial reference, not a measured perfusion territory or flow simulation.',
+    refs: ['pelvicVessels'], family: 'uterineArtery',
+    question: 'At the paracervical crossing, which passes above the ureter?',
+    answer: 'The uterine artery. The relationship should be confirmed on the actual case; this specimen lacks a complete ureter and cannot guide an intervention.',
+  },
+  uterineVein: {
+    anatomy: 'A source branch of the uterine venous drainage, related to the uterine plexus and internal iliac system. Left and right selections remain separate; neither is the entire ovarian vein.',
+    function: 'Returns blood from the uterine venous network. Collateral connections and changing flow directions cannot be inferred from the two retained branch surfaces.',
+    refs: ['pelvicVessels'], family: 'uterineVein',
+    question: 'Does a large-looking uterine vein in this atlas prove symptomatic venous reflux?',
+    answer: 'No. A reference calibre is not a patient measurement, and anatomy alone does not establish symptoms or reflux.',
+  },
+  sacrum: {
+    anatomy: 'The fused sacral bone at the posterior pelvis, with a central canal and foramina for sacral neural passage. The retained surface is not a separately labelled nerve-root or sacroiliac-joint model.',
+    function: 'Transfers axial load between the spine and pelvic ring. Removing adjacent organs in the viewer does not test bony stability or expose a validated sacral plexus.',
+    refs: ['sacralImaging'], family: 'sacrum',
+    question: 'Does a normal-appearing sacral radiograph rule out an insufficiency fracture?',
+    answer: 'No. Some injuries are radiographically occult; MRI can reveal marrow abnormality when a clinically suspected injury remains unresolved.',
+  },
   uterosacral: {
     anatomy:
       'Paired posterior cervical support extending towards the sacral region beside the rectum. Compare its cervical and posterior ends without inferring uninterrupted fascia from an open source shell.',
@@ -530,6 +693,16 @@ const prefix = 'vm:reference:hra-united-female-v1-10:pelvis:';
 export const hraPelvicLessonBindings: Readonly<
   Record<string, HraPelvicConcept>
 > = {
+  [prefix + 'cervicovaginal-junction']: 'junction',
+  [prefix + 'rectum']: 'rectum',
+  [prefix + 'fundus-of-urinary-bladder-dome']: 'bladderDome',
+  [prefix + 'fundus-of-urinary-bladder-base']: 'bladderBase',
+  [prefix + 'urinary-bladder-neck-smooth-muscle']: 'bladderNeck',
+  [prefix + 'left-uterine-artery']: 'uterineArtery',
+  [prefix + 'right-uterine-artery']: 'uterineArtery',
+  [prefix + 'left-uterine-vein']: 'uterineVein',
+  [prefix + 'right-uterine-vein']: 'uterineVein',
+  [prefix + 'sacrum']: 'sacrum',
   [prefix + 'right-uterosacral-ligament']: 'uterosacral',
   [prefix + 'left-uterosacral-ligament']: 'uterosacral',
   [prefix + 'right-cardinal-ligament-of-uterus']: 'cardinal',

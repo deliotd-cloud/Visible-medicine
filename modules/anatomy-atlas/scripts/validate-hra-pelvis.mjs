@@ -191,8 +191,8 @@ const {
 const all = def.surfaces.map((s) => s.id),
   before = JSON.stringify(def);
 assert.equal(def.studies.length, 8);
-assert.equal(adapter.eligibleIds(def, all).length, 31);
-assert.equal(def.surfaces.filter((s) => !hraPelvicTeaching(def, s)).length, 10);
+assert.equal(adapter.eligibleIds(def, all).length, 41);
+assert.equal(def.surfaces.filter((s) => !hraPelvicTeaching(def, s)).length, 0);
 for (const study of def.studies) {
   const state = reduceSpecimen(
       def,
@@ -379,8 +379,8 @@ console.log(
     withheld: 6,
     triangles,
     studies: 8,
-    draftTeaching: 31,
-    pendingTeaching: 10,
+    draftTeaching: 41,
+    pendingTeaching: 0,
     originalVerified: !!originalPath,
     decodedMeshes: proof.meshes,
     clinicalOrDeviceApproval: false,

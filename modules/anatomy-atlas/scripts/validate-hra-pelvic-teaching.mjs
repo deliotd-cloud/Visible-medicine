@@ -33,13 +33,13 @@ const {
 const source = JSON.stringify(def),
   rows = def.surfaces.filter((s) => bindings[s.id]),
   urls = new Set(Object.values(references).map((r) => r.url));
-assert.equal(rows.length, 31);
-assert.equal(Object.keys(bindings).length, 31);
-assert.equal(Object.keys(concepts).length, 20);
-assert.equal(new Set(rows.map((s) => lessonFor(def, s).anatomy)).size, 20);
+assert.equal(rows.length, 41);
+assert.equal(Object.keys(bindings).length, 41);
+assert.equal(Object.keys(concepts).length, 28);
+assert.equal(new Set(rows.map((s) => lessonFor(def, s).anatomy)).size, 28);
 assert.equal(
   new Set(rows.map((s) => lessonFor(def, s).extended.selfCheck.question)).size,
-  20,
+  28,
 );
 const counts = {
   clinical: 0,
@@ -85,19 +85,19 @@ for (const s of def.surfaces) {
     assert.equal(lessonFor(def, { ...s, [field]: 'foreign' }), null);
 }
 assert.deepEqual(counts, {
-  clinical: 31,
-  pathology: 31,
-  ct: 2,
-  mri: 31,
-  xray: 0,
-  ultrasound: 30,
+  clinical: 41,
+  pathology: 41,
+  ct: 12,
+  mri: 41,
+  xray: 4,
+  ultrasound: 39,
 });
-// Explicit extension contract: all 17 earlier source lessons remain identical.
+// Explicit extension contract: all 31 earlier source lessons remain identical.
 const oldSource = execFileSync(
   'git',
   [
     'show',
-    '776df013c1553e1d42a0e9ea8db0cd835f1ce89e:content/hra-pelvic-teaching.ts',
+    '3e1c297abae999015f18c286847dd070d2fe86f6:content/hra-pelvic-teaching.ts',
   ],
   { encoding: 'utf8' },
 );
@@ -122,24 +122,15 @@ for (const [id, concept] of Object.entries(oldApi.hraPelvicLessonBindings)) {
     oldApi.authoredHraPelvicLesson(concept),
   );
 }
+assert.equal(Object.keys(oldApi.hraPelvicLessonBindings).length, 31);
 const additions = rows.filter((s) => !oldApi.hraPelvicLessonBindings[s.id]);
 assert.deepEqual(
   additions.map((s) => s.slug).sort(),
   [
-    'right-uterosacral-ligament',
-    'left-uterosacral-ligament',
-    'right-cardinal-ligament-of-uterus',
-    'left-cardinal-ligament-of-uterus',
-    'suspensory-ligament-of-ovary-r',
-    'suspensory-ligament-of-ovary-l',
-    'ovarian-ligament-r',
-    'ovarian-ligament-l',
-    'broad-ligament',
-    'mesosalpinx-r',
-    'mesosalpinx-l',
-    'mesovarium-r',
-    'mesovarium-l',
-    'uterovesical-pouch',
+    'cervicovaginal-junction', 'rectum', 'fundus-of-urinary-bladder-dome',
+    'fundus-of-urinary-bladder-base', 'urinary-bladder-neck-smooth-muscle',
+    'left-uterine-artery', 'right-uterine-artery',
+    'left-uterine-vein', 'right-uterine-vein', 'sacrum',
   ].sort(),
 );
 assert(concepts.vesicouterine.anatomy.includes('peritoneal recess'));
@@ -148,6 +139,13 @@ assert(concepts.suspensory.anatomy.includes('pelvic brim'));
 assert(concepts.ovarianLigament.function.includes('not a duct'));
 assert(concepts.mesosalpinx.anatomy.includes('uterine tube'));
 assert(concepts.mesovarium.anatomy.includes('ovary'));
+assert(concepts.junction.answer.includes('epithelial transition'));
+assert(concepts.bladderBase.anatomy.includes('not a separate mesh of the internal trigone'));
+assert(concepts.bladderNeck.anatomy.includes('skeletal external urethral sphincter'));
+assert(concepts.rectum.answer.includes('different boundaries'));
+assert(concepts.uterineArtery.answer.includes('uterine artery'));
+assert(concepts.uterineVein.answer.includes('symptoms or reflux'));
+assert(concepts.sacrum.answer.includes('radiographically occult'));
 for (const change of [
   (d) => (d.source.version = 'other'),
   (d) => (d.catalog.bundles[0].sha256 = '0'.repeat(64)),
@@ -232,7 +230,8 @@ for (const s of rows) {
     renderedTopics++;
   }
 }
-const missing = def.surfaces.find((s) => !bindings[s.id]);
+// All current surfaces have a lesson; an unknown source must still fail closed.
+const missing = { ...def.surfaces[0], id: 'foreign-source-selection' };
 assert(
   render(
     React.createElement(mod.exports.SpecimenLearning, {
@@ -245,12 +244,13 @@ assert(
 );
 console.log(
   JSON.stringify({
-    sourceBoundSelections: 31,
-    distinctConcepts: 20,
+    sourceBoundSelections: rows.length,
+    distinctConcepts: Object.keys(concepts).length,
     topicDrafts: counts,
     totalExtendedDrafts: Object.values(counts).reduce((a, b) => a + b, 0),
-    pendingSelections: 10,
-    selfChecks: 31,
+    pendingSelections: def.surfaces.length - rows.length,
+    selfChecks: rows.length,
+    preservedEarlierLessons: Object.keys(oldApi.hraPelvicLessonBindings).length,
     renderedTopics,
     geometryUnchanged: true,
     clinicalOrImagingApproval: false,
