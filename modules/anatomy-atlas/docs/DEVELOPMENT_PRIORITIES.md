@@ -1,5 +1,7 @@
 # Development priorities
 
+Latest completed source slice (12 September): [pelvic venous tributaries](PELVIC_VEINS.md), ten admitted definitions plus two explicit offline holds, one compact sided study and 23 introductory draft placements. Prioritise substantive remaining non-oral regional anatomy or teaching next; source-file coverage is not anatomical completeness. The owner's clinical adjudication is still required.
+
 Updated 11 September 2026 following the owner's instruction to give oral anatomy a quick pass and prioritise the rest of the atlas/body regions.
 
 ## Oral anatomy: brief pass completed, lower priority

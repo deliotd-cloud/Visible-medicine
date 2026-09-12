@@ -10,10 +10,10 @@ import {
 const archive = await loadSourceHolds(),
   h = await loadCurrentSourceHolds();
 assert.deepEqual(h.evidence, archive.evidence);
-assert.equal(h.supplemental.length, 4);
+assert.equal(h.supplemental.length, 6);
 assert.equal(
   h.supplemental.reduce((n, s) => n + s.files.length, 0),
-  7,
+  9,
 );
 let aliases = 0,
   subsets = 0;
@@ -85,6 +85,7 @@ for (const bundle of [
   'deep-leg-veins',
   'brachial-veins',
   'deferent-ducts',
+  'pelvic-veins',
 ]) {
   const catalog = JSON.parse(
     await readFile(`public/models/bodyparts3d/${bundle}/catalog.json`),
@@ -109,8 +110,8 @@ await assert.rejects(
 );
 console.log(
   JSON.stringify({
-    supplementalConcepts: 4,
-    heldSourceFiles: 7,
+    supplementalConcepts: 6,
+    heldSourceFiles: 9,
     subsets,
     aliases,
     archiveUnchanged: true,

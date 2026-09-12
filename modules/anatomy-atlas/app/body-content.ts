@@ -96,6 +96,7 @@ import { genicularArteryLesson } from '../lib/genicular-arteries';
 import { inferiorThyroidLesson } from '../lib/inferior-thyroid-arteries';
 import { deferentDuctLesson } from '../lib/deferent-ducts';
 import { inferiorEpigastricLesson } from '../lib/inferior-epigastric-vessels';
+import { pelvicVeinLesson } from '../lib/pelvic-veins';
 import { tarsalImagingLesson } from '../lib/tarsal-imaging';
 import { upperVesselImagingLesson } from '../lib/upper-vessel-imaging';
 
@@ -142,6 +143,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const pelvicVein = pelvicVeinLesson(s, tab);
+  if (pelvicVein) return pelvicVein;
   const epigastric = inferiorEpigastricLesson(s, tab);
   if (epigastric) return epigastric;
   const upperVesselImaging = upperVesselImagingLesson(s, tab);

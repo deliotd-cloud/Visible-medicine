@@ -25,6 +25,7 @@ import { limbVascularStudySets, limbVascularReferences } from '../content/limb-v
 import { genicularStudy, genicularStudyReferences } from '../content/genicular-study.ts';
 import { deferentDuctStudy, deferentDuctReferences } from '../content/deferent-duct-study.ts';
 import { inferiorEpigastricStudy, inferiorEpigastricReferences } from '../content/inferior-epigastric-study.ts';
+import { pelvicVeinStudy, pelvicVeinReferences } from '../content/pelvic-vein-study.ts';
 import { armVascularStudies, armVascularReferences } from '../content/arm-vascular-studies.ts';
 import {
   orbitalMotorStudySets,
@@ -1274,6 +1275,16 @@ for (const region of inferiorEpigastricStudy.regions) {
     inspect: study.inspect, landmarks: study.landmarks,
   });
   dissectionProfiles[region].references.push(...inferiorEpigastricReferences);
+}
+
+for (const region of pelvicVeinStudy.regions) {
+  const study = pelvicVeinStudy;
+  dissectionProfiles[region].focuses.push({
+    id: study.id, title: study.title, rule: { fmaIds: study.targetFmaIds }, context: study.context,
+    includeSkeleton: false, view: study.view, description: study.description,
+    inspect: study.inspect, landmarks: study.landmarks,
+  });
+  dissectionProfiles[region].references.push(...pelvicVeinReferences);
 }
 
 export function matchesRule(s: BodyStructure, rule: TissueRule): boolean {

@@ -10,6 +10,7 @@ import { upperVesselImagingGroups, upperVesselImagingTopics } from '../content/u
 import { genicularStudy, genicularStudySourceIds } from '../content/genicular-study.ts';
 import { deferentDuctStudy } from '../content/deferent-duct-study.ts';
 import { inferiorEpigastricStudy } from '../content/inferior-epigastric-study.ts';
+import { pelvicVeinStudy } from '../content/pelvic-vein-study.ts';
 
 // This inventory executes the real content resolver. It measures displayed copy,
 // not medical correctness, complete lessons, browser acceptance or approval.
@@ -137,6 +138,8 @@ const inferiorThyroid = await json('public/models/bodyparts3d/inferior-thyroid-a
 const deferentDucts = await json('public/models/bodyparts3d/deferent-ducts/catalog.json');
 const deferentDuctAudit = await json('docs/deferent-duct-source-audit.json');
 const inferiorEpigastric = await json('public/models/bodyparts3d/inferior-epigastric-vessels/catalog.json');
+const pelvicVeins = await json('public/models/bodyparts3d/pelvic-veins/catalog.json');
+const pelvicVeinAudit = await json('docs/pelvic-vein-source-audit.json');
 const inferiorEpigastricAudit = await json('docs/inferior-epigastric-source-audit.json');
 const musclePartCondition = await json('docs/muscle-part-condition-audit.json');
 const cubitalVeinAudit = await json('docs/cubital-vein-source-audit.json');
@@ -383,6 +386,11 @@ for (const path of [
   'content/deferent-duct-study.ts',
   'content/deferent-duct-study-transition.json',
   'public/models/bodyparts3d/inferior-epigastric-vessels/catalog.json',
+  'public/models/bodyparts3d/pelvic-veins/catalog.json',
+  'docs/pelvic-vein-source-audit.json',
+  'lib/pelvic-veins.ts',
+  'content/pelvic-vein-study.ts',
+  'content/pelvic-vein-study-transition.json',
   'docs/inferior-epigastric-source-audit.json',
   'lib/inferior-epigastric-vessels.ts',
   'content/inferior-epigastric-study.ts',
@@ -591,6 +599,16 @@ const report = {
   sourceHashes,
   rendering: { bodyBatching: await json('docs/body-batching-baseline.json'), gpuAcceptance: false },
   anatomy: {
+    pelvicVeins: {
+      sourceSelections: pelvicVeins.structures.length,
+      originalTriangles: pelvicVeinAudit.groups.filter(g=>g.status!=='held').reduce((sum,g)=>sum+g.topology.triangles,0),
+      heldSources: pelvicVeinAudit.groups.filter(g=>g.status==='held').map(g=>g.id),
+      contextSelections: pelvicVeins.contextRecords.length,
+      focusRecipe: pelvicVeinStudy.id,
+      focusRegions: pelvicVeinStudy.regions,
+      clinicalApproval: false,
+      continuousLumenClaimed: false,
+    },
     inferiorEpigastricVessels: {
       sourceSelections: inferiorEpigastric.structures.length,
       originalTriangles: inferiorEpigastricAudit.groups.reduce((sum, g) => sum + g.topology.triangles, 0),

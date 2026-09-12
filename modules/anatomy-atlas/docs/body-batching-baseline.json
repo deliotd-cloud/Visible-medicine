@@ -1,19 +1,19 @@
 {
   "passed": true,
-  "geometries": 550,
-  "vertices": 992437,
-  "indices": 5941338,
-  "retainedTriangles": 1980446,
-  "batches": 29,
-  "batchedSurfaces": 550,
-  "geometryCopyBytes": 47583840,
+  "geometries": 560,
+  "vertices": 1024970,
+  "indices": 6136416,
+  "retainedTriangles": 2045472,
+  "batches": 30,
+  "batchedSurfaces": 560,
+  "geometryCopyBytes": 49144944,
   "baseline": {
     "whole-body": {
-      "surfaces": 1064,
-      "batches": 29,
-      "batchedSurfaces": 550,
-      "geometryCopyBytes": 47583840,
-      "submissions": 543
+      "surfaces": 1074,
+      "batches": 30,
+      "batchedSurfaces": 560,
+      "geometryCopyBytes": 49144944,
+      "submissions": 544
     },
     "head-neck": {
       "surfaces": 281,
@@ -58,11 +58,11 @@
       "submissions": 106
     },
     "pelvis": {
-      "surfaces": 71,
+      "surfaces": 81,
       "batches": 0,
       "batchedSurfaces": 0,
       "geometryCopyBytes": 0,
-      "submissions": 71
+      "submissions": 81
     },
     "thigh": {
       "surfaces": 93,

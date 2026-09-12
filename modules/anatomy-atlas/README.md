@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Pelvis / Whole body → Study → Pelvic venous tributaries** adds [ten source-preserved veins with seven existing references](docs/PELVIC_VEINS.md). Side filtering, selection, labels and hide/Undo stay in the existing compact interface. Two left-labelled sources remain offline for coordinate/laterality review; this is not complete bilateral coverage or clinical approval.
+
 **Abdomen / Whole body → Study → Abdominal wall: epigastric vessels** opens [four newly supplied original artery/vein surfaces with six existing vascular references](docs/INFERIOR_EPIGASTRIC_VESSELS.md). Existing side selection, dissection/Undo, labels and separation are reused; introductory Anatomy/Function/Clinical/self-check drafts remain subject to review. No complete fascial, inguinal-ring, perforator or patient-imaging anatomy is inferred.
 
 **Spine / Whole body → Back layers · separate specimen** opens [eight back-dissection studies](docs/BACK_LAYERS_SPECIMEN.md). Inspect 14 source muscle surfaces, including latissimus and multifidus missing from the main body, with 34 same-source bones. Existing separation, hide/Undo, search, labels and identification practice are reused. [Attachment, functional and radiology drafts](docs/BACK_LAYERS_TEACHING.md) stay inside the collapsed Learn panel; unsupported topics remain pending. This is an independent version-3 reference under CC BY-SA 2.1 Japan, not registered anatomy or clinical approval. Direct route: `/specimens/back-layers`.
