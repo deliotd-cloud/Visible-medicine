@@ -62,7 +62,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "98f7b5dacf048b6fce71efa22c961d345e40010fee145e91208663079a515fd4"
+      "sha256": "353cfb8a84152b3167f5228c0e6c5294bd6304de93bba0880f7977657e60643c"
     },
     {
       "path": "app/body-explorer.css",
@@ -571,6 +571,14 @@
     {
       "path": "content/pancreatic-teaching.ts",
       "sha256": "9e8a890f18d9dc9fb5105e854340db4623e762a0785dd4c08b8e5f4d80773817"
+    },
+    {
+      "path": "content/pelvic-organ-imaging-pins.json",
+      "sha256": "244a6414a66c44ddbda0b923475a8b64e278557b4894d8ef13252a952bdb9e97"
+    },
+    {
+      "path": "content/pelvic-organ-imaging.ts",
+      "sha256": "e8b093d71390263f89f4e2d326951f3b12813cda00d1b0ba6bd9f93bfaf7f4a4"
     },
     {
       "path": "content/pelvic-vein-study.ts",
@@ -1297,6 +1305,10 @@
       "sha256": "4145a39a7dc07a1494c2f837919bf41173a07e3a9a1dcc174a50040b17bf50ed"
     },
     {
+      "path": "lib/pelvic-organ-imaging.ts",
+      "sha256": "d70a6468d006ee5c0efae859ccf2cf609149cf038ba0469a0a0d2ac0dc58b127"
+    },
+    {
       "path": "lib/pelvic-veins.ts",
       "sha256": "8ad3004dbb32200c4bc5cee2afd3783286582f1d152b8f4ef056ff0020b72508"
     },
@@ -1777,5 +1789,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "c321b40bb99a24f0fe4073bf986f0553f12ea7eea48870297edd66bc747d70b6"
+  "sha256": "93284299bf2d4512c15e24e525e0010e4b643908db26160385bcda07991605d6"
 }

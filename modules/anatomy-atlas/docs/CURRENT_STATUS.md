@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Pelvic-organ imaging](PELVIC_ORGAN_IMAGING.md) adds 44 introductory draft placements across CT/MRI/X-ray/Ultrasound for 11 existing urinary/male reproductive selections, using the existing tabs. No patient images, segmentation, registration, extra panel or clinical approval is added. Source continuity and model/sex/side limits are explicit. Check the dated external checkpoint for actual publication status; source completion is not live-deployment evidence.
+
 [Muscle attachment relationships](ARM_ATTACHMENT_RELATIONSHIPS.md): 24 existing shoulder/arm muscle selections, eight existing bones, compact proximal/distal teaching, reversible source-bound isolation and explicit whole-body continuation for distal bones outside the region. No geometry, acquired images, model registrations or clinical approvals added. See the latest external checkpoint for backup and publication confirmation; source completion is not evidence of live deployment.
 
 [Descending lateral circumflex femoral branches](CIRCUMFLEX_FEMORAL.md) add 2 original source selections and 10464 retained triangles. Both lateral circumflex parents already exist inside deep-femoral aggregates and are not duplicated. Existing arterial navigation distinguishes routes through grouped parents from direct branches or absent segments; all 1080 prior source records remain unchanged. Draft teaching is not clinical approval, continuous-lumen proof or patient registration.

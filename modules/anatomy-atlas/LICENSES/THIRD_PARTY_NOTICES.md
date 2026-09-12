@@ -1,5 +1,9 @@
 # Third-party notices
 
+## Pelvic-organ imaging orientation — 12 September 2026
+
+Original MIT resolver code and concise factual teaching add no external image, diagram, model, font, texture, package, scan or paid service. NIDDK/NCI, ACR/RSNA and EAU pages are factual references, not imported publisher content or permission to redistribute their illustrations. Existing BodyParts3D CC-BY-4.0 attribution remains unchanged. The discussed ultrasound candidates have not been admitted or redistributed. See [scope and references](../docs/PELVIC_ORGAN_IMAGING.md).
+
 ## Arm attachment relationships — 12 September 2026
 
 Original MIT navigation code and concise factual teaching labels link 24 existing muscle selections to eight existing bones. [UAMS](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-upper-limb/) is a factual reference, not an imported diagram or redistributed table. No new dependency, font, texture, anatomy mesh, patient data, model weights or paid service is introduced. Existing BodyParts3D CC-BY-4.0 source credit and notices remain unchanged; selecting bones does not establish donor attachment footprints. See [scope and validation](../docs/ARM_ATTACHMENT_RELATIONSHIPS.md).

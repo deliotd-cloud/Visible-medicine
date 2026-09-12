@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "b1e371033ce1ad851d57badea5d7a72ced78d23d",
+  "selections": 11,
+  "groups": 7,
+  "distinctTopicTexts": 24,
+  "placements": 44,
+  "modalities": {
+    "ct": 11,
+    "mri": 11,
+    "ultrasound": 11,
+    "xray": 11
+  },
+  "unchangedSections": 9739,
+  "rejectedBindings": 616,
+  "sourceRows": 11,
+  "modelHashes": 4,
+  "actualNoteRenders": 44,
+  "sourceWordCounts": {
+    "urinary": 131,
+    "prostateMr": 134,
+    "glands": 135,
+    "scrotalUs": 141,
+    "urography": 154,
+    "pelvicUs": 127,
+    "xray": 122,
+    "ct": 157,
+    "prostateUs": 37,
+    "urethra": 146,
+    "scrotalMr": 81
+  },
+  "preservedPaths": [
+    "app/body-explorer.tsx",
+    "app/body-scene.tsx",
+    "app/dissection-data.ts",
+    "app/anatomy-data.ts",
+    "app/local-imaging-workbench.tsx",
+    "lib/body-display-catalog.ts",
+    "lib/abdominal-organ-imaging.ts",
+    "lib/pelvic-organ-clinical-curriculum.ts",
+    "lib/organ-curriculum.ts",
+    "lib/arm-attachments.ts",
+    "package.json",
+    "package-lock.json",
+    "public/models/bodyparts3d/full-body/catalog.json",
+    "drizzle/0002_specimen_review_events.sql"
+  ],
+  "clinicalApproval": false,
+  "browserTesting": false,
+  "realImaging": false
+}

@@ -1,5 +1,15 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 12 September 2026 — Pelvic-organ imaging orientation
+
+Source `acf8acb3a2fc6e4fc698583865cb506b3f7b55c9`, parent `b1e371033ce1ad851d57badea5d7a72ced78d23d`, tree `9284b3dac944aa6a39b7be27915b4be776aff8d8`. Thirteen source paths add 44 introductory draft CT/MRI/X-ray/US placements for 11 current urinary/male reproductive organ selections. Seven landmark/limit groups and 24 distinct modality topics use existing tabs; no extra UI panel, geometry, scans, dependency, image licence admission, entitlement or clinical decision changes. Sex/side/source boundaries are explicit. The ultrasound image candidates remain unimported.
+
+Passed: exact11 source ontology rows/four model hashes,44 pending-to-draft placements,9739 unchanged root-topic sections with preceding whole-content/recipe hash,616 altered-record rejections,content-schema/export checks,defensive-copy checks,44 actual notes-callback SSR renders,TypeScript and production build. Original anatomy/function/pathology/clinical/quiz content,dissection,private CT workflow and preceding attachment navigator preserved. All132 GLBs/1490 meshes/4470 buffer views unchanged. Renderer444 inputs SHA `93284299bf2d4512c15e24e525e0010e4b643908db26160385bcda07991605d6`. No browser/device/clinical/registered-imaging acceptance claimed.
+
+D prefix `atlas-pelvic-organ-imaging-2026-09-12`: `.site.tar.gz`124988349 bytes/SHA256 `fa53b319dc8152dd17e58a71c2a6848b1886d224e3abdda2da5c62c6d8bce356`; `.delta.tar`389120 bytes/`4828498ba2e78683abf8205e805d626257aeece07703675cf31ea2fd4d7bce03`; `.incremental.bundle`20786 bytes/`3a299f129769826610a21eb7394b03283cde6d7603ff5a52c8dd73f82f1eb713`. Independent restore/full fsck verified exact source/tree at `refs/verification/pelvic-organ-imaging-20260912`, preserving verifier main and all prior artifacts. Runtime489 entries/three exact migrations passed archive checks.
+
+Sites source push was independently verified at this exact source. A source push is not proof of live publication; see external `work/PELVIC-IMAGING-CHECKPOINT-20260912.md` for the final native result. Website main remains untouched; only the anatomy backup branch is updated. Backups exclude chat history,patient imaging and private review databases.
+
 ## 12 September 2026 — Shoulder/arm attachment relationships
 
 Source `b1e371033ce1ad851d57badea5d7a72ced78d23d`, tree `489f68459b2217c7885cedeaaa173c59addc20ab`, parent `8b68cf700afcd78a343ca124151f45185bc2d3b1`. Twelve source paths add a collapsed attachment navigator for 24 existing muscle selections and eight existing bones, exact sided/regional visibility plans, whole-body continuation for distal bones outside the region and shared dissection Undo. Source geometry, IDs, patient data and independent imaging/lecture entitlements are unchanged. There are no new dependencies or meshes. Bony teaching relationships are not donor footprints or clinical approvals.
