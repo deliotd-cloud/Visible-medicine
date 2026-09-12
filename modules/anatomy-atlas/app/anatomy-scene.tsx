@@ -48,6 +48,7 @@ for (const part of manifest.parts) {
 export type CameraView = 'posterior' | 'anterior' | 'lateral';
 export type AnatomyLayer = 'cuff' | 'surface' | 'bones';
 type SceneProps = {
+  modelUrl?: string;
   structures: AnatomyStructure[];
   selectedId: string;
   visibleSystems: Record<SystemKey, boolean>;
@@ -248,7 +249,7 @@ function Tissue({
 }
 
 function Model(props: SceneProps & { offsets: Map<string, THREE.Vector3> }) {
-  const { scene } = useGLTF('/models/bodyparts3d/shoulder-right.glb', false, true);
+  const { scene } = useGLTF(props.modelUrl ?? '/models/bodyparts3d/shoulder-right.glb', false, true);
   const onModelReady = props.onModelReady;
   useEffect(() => {
     onModelReady(true);
@@ -384,7 +385,7 @@ function Model(props: SceneProps & { offsets: Map<string, THREE.Vector3> }) {
 }
 
 class ModelBoundary extends Component<
-  { children: ReactNode; onModelReady: (ready: boolean) => void },
+  { children: ReactNode; onModelReady: (ready: boolean) => void; modelUrl?: string },
   { failed: boolean }
 > {
   state = { failed: false };
@@ -405,7 +406,7 @@ class ModelBoundary extends Component<
             size="sm"
             variant="outline"
             onClick={() => {
-              useGLTF.clear('/models/bodyparts3d/shoulder-right.glb');
+              useGLTF.clear(this.props.modelUrl ?? '/models/bodyparts3d/shoulder-right.glb');
               this.setState({ failed: false });
             }}
           >
@@ -515,7 +516,7 @@ export function AnatomyScene(props: SceneProps) {
             color="#eef5ff"
           />
           <SceneLabelLayer>
-            <ModelBoundary onModelReady={props.onModelReady}>
+            <ModelBoundary onModelReady={props.onModelReady} modelUrl={props.modelUrl}>
               <Suspense
                 fallback={
                   <Html center>

@@ -29,7 +29,13 @@ function AnatomySidePanel({
   const workspace = useAtlasWorkspace();
   const { setPanelOpen } = workspace;
   const open = workspace.panels[info ? 'info' : 'tools'];
+  const panelCompact = workspace.panelLayout?.[info ? 'info' : 'tools'];
   useEffect(() => {
+    if (panelCompact !== undefined) {
+      setCompact(panelCompact);
+      setPanelOpen(info, false);
+      return;
+    }
     const media = window.matchMedia(
       info ? '(max-width: 700px)' : COMPACT_ANATOMY_QUERY,
     );
@@ -40,13 +46,13 @@ function AnatomySidePanel({
     update();
     media.addEventListener('change', update);
     return () => media.removeEventListener('change', update);
-  }, [info, setPanelOpen]);
+  }, [info, setPanelOpen, panelCompact]);
   const label = info
     ? practice || workspace.mode === 'practice'
       ? 'Practice'
       : 'Structure info'
     : 'Systems & tools';
-  if (!compact && !workspace.focusView)
+  if (!(panelCompact ?? compact) && !workspace.focusView)
     return (
       <aside
         className={info ? 'body-info' : 'body-rail anatomy-control-rail'}

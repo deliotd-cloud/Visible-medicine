@@ -7,9 +7,11 @@ import { decisionLabel, type SavedReview } from '@/lib/review-workspace';
 export function ReviewStatus({
   structureId,
   teachingDraft = false,
+  connected = true,
 }: {
   structureId: string;
   teachingDraft?: boolean;
+  connected?: boolean;
 }) {
   const review = getReviewStatus(structureId, teachingDraft);
   const [saved, setSaved] = useState<SavedReview[]>([]);
@@ -17,7 +19,7 @@ export function ReviewStatus({
     'loading',
   );
   useEffect(() => {
-    if (!teachingDraft) return;
+    if (!teachingDraft || !connected) return;
     let active = true;
     fetch('/api/reviews', { cache: 'no-store' })
       .then(async (response) => {
@@ -34,9 +36,10 @@ export function ReviewStatus({
     return () => {
       active = false;
     };
-  }, [teachingDraft]);
+  }, [teachingDraft, connected]);
   const status = (track: 'geometry' | 'teaching' | 'imaging') => {
     if (!teachingDraft) return review[track].status;
+    if (!connected) return 'Review records are held in the separate atlas workspace';
     if (state === 'loading') return 'Loading saved status';
     if (state === 'unavailable') return 'Saved status unavailable';
     const record = saved.find(

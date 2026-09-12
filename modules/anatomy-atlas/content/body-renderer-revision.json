@@ -26,7 +26,7 @@
     },
     {
       "path": "app/anatomy-control-rail.tsx",
-      "sha256": "2284ccec919a1f65714613dea7230f8fa1c450474dcd142ff1d8237f77978085"
+      "sha256": "96d369bb985f63234368d8e7909aa8998abc3eaefde37eb173b19fd84ed9b30b"
     },
     {
       "path": "app/anatomy-data.ts",
@@ -45,12 +45,16 @@
       "sha256": "53af4510da63ae3aab470801191ff552ca6e202c8433432f3e0ee7fb9bae289b"
     },
     {
+      "path": "app/atlas-panel.css",
+      "sha256": "fc9777e837304b3bb4bebde350b56b6c7fb2461eea4da07cc23f7032f71a1c8c"
+    },
+    {
       "path": "app/atlas-workspace.css",
       "sha256": "938edb0aeff51e660829bbde701b198c6f82f1c47089ab07e91d24ea3da0584b"
     },
     {
       "path": "app/atlas-workspace.tsx",
-      "sha256": "b9100dc0294f3adfa38ddd90468fdcc84b834e74475459c41ba7367822a71a2c"
+      "sha256": "6d58aa6add31bb481855e2d7ef24bf1faf42147271037c522c08a9b57d1e3f77"
     },
     {
       "path": "app/back-layers-study.tsx",
@@ -202,7 +206,7 @@
     },
     {
       "path": "app/review-status.tsx",
-      "sha256": "faf6172a7a304bd5fa85ebe298d9fb2920e6c393c7da426178babd1550181e95"
+      "sha256": "ba77751cc3d238a7126522eb957c2eeb196aeda998658ab8db45005a7caa263b"
     },
     {
       "path": "app/scene-label-layer.css",
@@ -594,7 +598,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "5365d114752b157338dc9ebcf9e58dabe56be2d4d35296e717845bce939dfd05"
+      "sha256": "a04672d9e67319f8932498ad5955e2dbeed7cdf30b353e664fec2e6d362b44e9"
     },
     {
       "path": "content/shoulder-xray-bindings.json",
@@ -815,6 +819,10 @@
     {
       "path": "lib/atlas-navigation.ts",
       "sha256": "57d816744ec19ea2e2656f4cf307a653cedd49239a05e3afc4f33e67b125d7e6"
+    },
+    {
+      "path": "lib/atlas-panel-layout.ts",
+      "sha256": "8285d84094cc4d3aaab02dbf89360f4e60ad23856cff2bb69faf3a6240c3c23f"
     },
     {
       "path": "lib/atlas-practice.ts",
@@ -1801,5 +1809,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "9de7ef77a55a22e5849f14a988e695424f9417b6442bb1d48296495f6834d32c"
+  "sha256": "18031dc0ab442afed2847ad2a6027b61f00e76c8c33c41b9f60f61be1076cb1c"
 }

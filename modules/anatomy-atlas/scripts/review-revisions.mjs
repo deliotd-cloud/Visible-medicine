@@ -35,6 +35,8 @@ const displayPaths = [
   'app/shoulder-workspace.css',
   'app/atlas-workspace.tsx',
   'app/atlas-workspace.css',
+  'app/atlas-panel.css',
+  'lib/atlas-panel-layout.ts',
   'app/anatomy-control-rail.tsx',
   'app/body-explorer.css',
   'lib/atlas-navigation.ts',

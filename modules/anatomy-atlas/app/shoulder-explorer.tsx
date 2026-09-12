@@ -136,9 +136,16 @@ const AnatomyScene = dynamic(
 
 export default function ShoulderExplorer({
   initialSelectedId = structures[0].id,
+  presentation = 'standalone',
+  assetBase = '',
+  connectedReviews = true,
 }: {
   initialSelectedId?: string;
+  presentation?: 'standalone' | 'panel';
+  assetBase?: string;
+  connectedReviews?: boolean;
 }) {
+  const Title = presentation === 'panel' ? 'h2' : 'h1';
   const [selectedId, setSelectedId] = useState(initialSelectedId);
   const [rendererHealth, setRendererHealth] =
     useState<RendererHealth>('starting');
@@ -504,18 +511,19 @@ export default function ShoulderExplorer({
 
   return (
     <TooltipProvider>
-      <AtlasWorkspace exam={mode === 'exam'} className="shoulder-workspace">
+      <AtlasWorkspace exam={mode === 'exam'} className="shoulder-workspace" presentation={presentation}>
         <PracticeAttention
           exam={mode === 'exam'}
           answered={Boolean(answerId)}
         />
         <header className="body-topbar">
-          <Brand />
+          {presentation === 'standalone' && <Brand />}
           <WorkspaceModes />
           <div className="top-actions">
-            <Link href="/" className="body-return-link">
+            {presentation === 'standalone' && <Link href="/" className="body-return-link">
               Whole body & regions
-            </Link>
+            </Link>}
+            {presentation === 'panel' && <span className="atlas-panel-status">Educational · Review pending</span>}
             <WorkspaceFocus />
             {mode === 'exam' && (
               <Button
@@ -789,7 +797,7 @@ export default function ShoulderExplorer({
 
           <div className="shoulder-model-workspace body-workspace">
             <div className="shoulder-model-heading">
-              <h1>Right shoulder</h1>
+              <Title>Right shoulder</Title>
               {mode === 'study' && <StructureDetailsButton />}
             </div>
             <div className="shoulder-view-controls">
@@ -896,6 +904,7 @@ export default function ShoulderExplorer({
                 </span>
               </div>
               <AnatomyScene
+                modelUrl={`${assetBase}/models/bodyparts3d/shoulder-right.glb`}
                 structures={structures}
                 selectedId={selectedId}
                 visibleSystems={visibleSystems}
@@ -1064,7 +1073,7 @@ export default function ShoulderExplorer({
               </div>
               <a
                 className="model-credit"
-                href="/models/bodyparts3d/credits.html"
+                href={`${assetBase}/models/bodyparts3d/credits.html`}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -1078,7 +1087,7 @@ export default function ShoulderExplorer({
               {mode === 'exam' ? (
                 <div className="exam-panel">
                   <div className="info-kicker">STRUCTURE IDENTIFICATION</div>
-                  <h1>Question {questionIndex + 1}</h1>
+                  <Title>Question {questionIndex + 1}</Title>
                   <p className="exam-question">{currentQuestion.prompt}</p>
                   {!displayReady && (
                     <output className="vm-practice-note" aria-live="polite">
@@ -1142,7 +1151,7 @@ export default function ShoulderExplorer({
                         <div className="info-kicker">
                           {selected.category} · {selected.shortId}
                         </div>
-                        <h1>{selected.name}</h1>
+                        <Title>{selected.name}</Title>
                         <p className="latin-name">{selected.latinName}</p>
                       </div>
                       <button
@@ -1154,7 +1163,7 @@ export default function ShoulderExplorer({
                         {isolated ? 'Isolated' : 'Isolate'}
                       </button>
                     </div>
-                    <ReviewStatus structureId={selected.id} teachingDraft />
+                    <ReviewStatus structureId={selected.id} teachingDraft connected={connectedReviews} />
                     <Button
                       size="sm"
                       variant="outline"

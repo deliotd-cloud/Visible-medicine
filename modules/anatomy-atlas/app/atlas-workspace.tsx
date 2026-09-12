@@ -43,12 +43,15 @@ import type { BodyCatalog, BodyStructure } from './body-types';
 import { bodyContent } from './body-content';
 import type { StudySide } from '@/lib/study-links';
 import type { ContentTab } from './anatomy-data';
+import { atlasPanelLayout } from '@/lib/atlas-panel-layout';
+import './atlas-panel.css';
 
 const emptyWorkspace = {
   mode: 'explore' as WorkspaceMode,
   exam: false,
   focusView: false,
   panels: { tools: false, info: false },
+  panelLayout: null as ReturnType<typeof atlasPanelLayout> | null,
   setPanelOpen: (_info: boolean, _open: boolean) => {},
   chooseMode: (_mode: WorkspaceMode) => {},
   toggleFocus: () => {},
@@ -60,11 +63,31 @@ export function AtlasWorkspace({
   children,
   exam,
   className = '',
+  presentation = 'standalone',
 }: {
   children: ReactNode;
   exam: boolean;
   className?: string;
+  presentation?: 'standalone' | 'panel';
 }) {
+  const boundary = useRef<HTMLElement | null>(null);
+  const [measured, setMeasured] = useState(() => atlasPanelLayout(0, 0));
+  const panelLayout = presentation === 'panel' ? measured : null;
+  const Root = presentation === 'panel' ? 'section' : 'main';
+  useEffect(() => {
+    if (presentation !== 'panel' || !boundary.current) return;
+    const element = boundary.current;
+    const measure = () => {
+      const { width, height } = element.getBoundingClientRect();
+      const next = atlasPanelLayout(width, height);
+      setMeasured(old => old.tools === next.tools && old.info === next.info && old.short === next.short ? old : next);
+    };
+    measure();
+    const observer = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(measure);
+    observer?.observe(element);
+    globalThis.addEventListener('resize', measure);
+    return () => { observer?.disconnect(); globalThis.removeEventListener('resize', measure); };
+  }, [presentation]);
   const [chosen, setChosen] = useState<WorkspaceMode>('explore'),
     [focusView, setFocusView] = useState(false);
   const [panels, setPanels] = useState({ tools: false, info: false });
@@ -97,19 +120,26 @@ export function AtlasWorkspace({
         exam,
         focusView,
         panels,
+        panelLayout,
         setPanelOpen,
         chooseMode,
         toggleFocus,
         showInfo,
       }}
     >
-      <main
+      <Root
+        ref={boundary}
+        aria-label={presentation === 'panel' ? '3D anatomy module' : undefined}
         className={className ? `body-app ${className}` : 'body-app'}
+        data-presentation={presentation}
+        data-panel-tools={panelLayout?.tools}
+        data-panel-info={panelLayout?.info}
+        data-panel-short={panelLayout?.short}
         data-workspace-mode={mode}
         data-focus-view={focusView}
       >
         {children}
-      </main>
+      </Root>
     </WorkspaceContext.Provider>
   );
 }

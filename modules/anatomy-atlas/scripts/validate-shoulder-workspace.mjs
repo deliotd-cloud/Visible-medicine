@@ -6,6 +6,7 @@ import { runInNewContext } from 'node:vm';
 import ts from 'typescript';
 import { build } from './workspace-component-test-build.mjs';
 import { structures } from '../app/anatomy-data.ts';
+import { atlasPanelLayout } from '../lib/atlas-panel-layout.ts';
 
 let checks = 0,
   markupCases = 0,
@@ -114,11 +115,12 @@ const context = {
           : require(id),
 };
 runInNewContext(output.outputFiles[0].text, context);
-const render = (selected = structures[0]) => {
+const render = (selected = structures[0], props = {}) => {
   markupCases++;
   return renderToStaticMarkup(
     React.createElement(vmModule.exports.default, {
       initialSelectedId: selected.id,
+      ...props,
     }),
   );
 };
@@ -368,6 +370,47 @@ same(
     .digest('hex'),
   manifest.sha256,
 );
+for (const [w,h,expected] of [
+  [1400,900,{tools:false,info:false,short:false}],
+  [1100,700,{tools:true,info:false,short:false}],
+  [700,699,{tools:true,info:true,short:true}],
+  [0,800,{tools:true,info:true,short:true}],
+  [NaN,800,{tools:true,info:true,short:true}],
+]) same(atlasPanelLayout(w,h),expected);
+context.__mode = 'explore'; context.__exam = false; context.__focus = false;
+const panel = render(structures[0], {presentation:'panel', connectedReviews:false, assetBase:'/atlas-runtime/shoulder'});
+check(panel.includes('<section aria-label="3D anatomy module"'));
+check(!panel.includes('<main') && !panel.includes('<h1'));
+check(!panel.includes('Whole body &amp; regions'));
+check(panel.includes('CC BY 4.0') && panel.includes('/atlas-runtime/shoulder/models/bodyparts3d/credits.html'));
+check(panel.includes('data-panel-tools="true"') && panel.includes('data-panel-info="true"'));
+same(context.scene.modelUrl,'/atlas-runtime/shoulder/models/bodyparts3d/shoulder-right.glb');
+context.__exam = true;
+check(render(structures[0], {presentation:'panel'}).includes('Exit exam'));
+const workspaceSource = await fs.readFile('app/atlas-workspace.tsx','utf8');
+const workspaceAst = ts.createSourceFile('workspace.tsx',workspaceSource,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);
+let measurement;
+function findMeasurement(node) {
+  if (ts.isCallExpression(node) && node.expression.getText(workspaceAst)==='useEffect' && node.arguments[0].getText(workspaceAst).includes('getBoundingClientRect')) measurement = node.arguments[0];
+  ts.forEachChild(node,findMeasurement);
+}
+findMeasurement(workspaceAst);
+check(measurement);
+let size={width:1200,height:800}, current=atlasPanelLayout(0,0), observed=null, disconnected=false, resize=null;
+const element={getBoundingClientRect:()=>size};
+const effectScope={presentation:'panel', boundary:{current:element}, atlasPanelLayout,
+  setMeasured:fn=>{current=fn(current);},
+  ResizeObserver:class {constructor(callback){this.callback=callback;} observe(target){observed=target; resize=this.callback;} disconnect(){disconnected=true;}},
+  addEventListener:(name,fn)=>{check(name==='resize');effectScope.listener=fn;},
+  removeEventListener:(name,fn)=>{check(name==='resize' && effectScope.listener===fn);},
+};
+runInNewContext(ts.transpileModule('var measureEffect='+printer.printNode(ts.EmitHint.Unspecified,measurement,workspaceAst),{compilerOptions:{target:ts.ScriptTarget.ES2022}}).outputText,effectScope);
+const cleanup=effectScope.measureEffect();
+same(observed,element); same(current,atlasPanelLayout(1200,800));
+size={width:600,height:650}; resize(); same(current,atlasPanelLayout(600,650));
+const unchanged=current; resize(); same(current,unchanged);
+cleanup(); check(disconnected);
+effectScope.presentation='standalone'; observed=null; same(effectScope.measureEffect(),undefined); same(observed,null);
 const result = {
   passed: true,
   checks,
