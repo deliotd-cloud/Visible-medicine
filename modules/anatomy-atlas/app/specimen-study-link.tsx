@@ -9,18 +9,19 @@ import { specimenTopicLabels, type SpecimenTopic } from '@/lib/specimen-links';
 import { availableSpecimenTopics } from '@/lib/um-limb-teaching';
 import type { DissectionView } from './dissection-data';
 
-export function SpecimenStudyLink({ definition, selectedId, studyId, view }: { definition: SpecimenDefinition; selectedId: string; studyId: string | null; view: DissectionView }) {
+export function SpecimenStudyLink({ definition, selectedId, studyId, view, basePath, reviewAvailable = true }: { definition: SpecimenDefinition; selectedId: string; studyId: string | null; view: DissectionView; basePath?: '/atlas-runtime/lower-limb/index.html'; reviewAvailable?: boolean }) {
   const [topic, setTopic] = useState<SpecimenTopic | null>(null);
   const topics = availableSpecimenTopics(definition, selectedId);
-  const href = makeSpecimenLink(definition, { selectedId, studyId, view, topic });
+  const canonical = makeSpecimenLink(definition, { selectedId, studyId, view, topic });
+  const href = canonical && basePath ? basePath + canonical.slice(canonical.indexOf('?')) : canonical;
   return <details className="um-knee-details"><summary>Link to this study</summary>
-    <Select value={topic ?? 'model'} onValueChange={v => setTopic(topics.includes(v as SpecimenTopic) ? v as SpecimenTopic : null)}>
+    <Select value={topic ?? 'model'} items={[{value:'model',label:'3D model'},...topics.map(t=>({value:t,label:specimenTopicLabels[t]+' notes'}))]} onValueChange={v => setTopic(topics.includes(v as SpecimenTopic) ? v as SpecimenTopic : null)}>
       <SelectTrigger aria-label="Study link opens"><SelectValue /></SelectTrigger>
       <SelectContent><SelectItem value="model">3D model</SelectItem>{topics.map(t => <SelectItem key={t} value={t}>{specimenTopicLabels[t]} notes</SelectItem>)}</SelectContent>
     </Select>
     {!studyId && <p>Custom dissection: the link opens this structure with the region’s source context. Hidden tissues and separation are not saved.</p>}
     {href ? <CopySpecimenLink key={href} href={href} /> : <p>A link cannot be made for this source binding.</p>}
-    {href && <p><a href={`/review/specimens?specimen=${encodeURIComponent(definition.key)}&structure=${encodeURIComponent(selectedId)}`} target="_blank" rel="noreferrer">Review this structure</a></p>}
+    {href && reviewAvailable && <p><a href={`/review/specimens?specimen=${encodeURIComponent(definition.key)}&structure=${encodeURIComponent(selectedId)}`} target="_blank" rel="noreferrer">Review this structure</a></p>}
     <p>Opens the selected source, study and camera direction at the model’s original positions. No access permissions, scan alignment or quiz answers are included.</p>
   </details>;
 }

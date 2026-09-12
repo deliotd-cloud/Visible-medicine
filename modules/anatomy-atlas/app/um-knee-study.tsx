@@ -44,7 +44,7 @@ export type SpecimenSupplement = {
   identification?: SpecimenPracticeAdapter;
   studyLink?: (definition: SpecimenDefinition, selectedId: string, studyId: string | null, view: DissectionView) => ReactNode;
 };
-export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation, supplement, assetBase }: { specimen?: SpecimenDefinition; initialNavigation?: Pick<ResolvedSpecimenNavigation, 'selectedId' | 'state' | 'structureOnly' | 'view' | 'topic'> & { focusSelection?: boolean }; supplement?: SpecimenSupplement; assetBase?: string } = {}) {
+export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation, supplement, assetBase, studyLink }: { specimen?: SpecimenDefinition; initialNavigation?: Pick<ResolvedSpecimenNavigation, 'selectedId' | 'state' | 'structureOnly' | 'view' | 'topic'> & { focusSelection?: boolean }; supplement?: SpecimenSupplement; assetBase?: string; studyLink?: SpecimenSupplement['studyLink'] } = {}) {
   const kneeSpecimen = { structures: specimen.surfaces, source: specimen.source };
   const kneeCatalog = specimen.catalog, kneeStructures = kneeCatalog.structures, kneeSpecimenStudies = specimen.studies;
   const [state, dispatch] = useReducer((state: VentricularState, action: SpecimenAction) => reduceSpecimen(specimen, state, action), specimen, value => initialNavigation?.state ?? initialSpecimen(value));
@@ -152,7 +152,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
           </div>
           {supplement ? <>{supplement.learning(selected, specimen)}{supplement.studyLink?.(specimen,selected.id,active?.id ?? null,view)}</> : <>
             <SpecimenLearning definition={specimen} selected={selected} initialTopic={selected.id === initialNavigation?.selectedId ? initialNavigation.topic : null} />
-            <SpecimenStudyLink key={`${selected.id}:${active?.id ?? 'custom'}:${view}`} definition={specimen} selectedId={selected.id} studyId={active?.id ?? null} view={view} />
+            {studyLink ? studyLink(specimen, selected.id, active?.id ?? null, view) : <SpecimenStudyLink key={`${selected.id}:${active?.id ?? 'custom'}:${view}`} definition={specimen} selectedId={selected.id} studyId={active?.id ?? null} view={view} />}
           </>}
         </>}
       </section>
@@ -191,7 +191,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
         <p>Different subject from the body atlas; no registration, mirrored opposite limb, scan synchronisation or clinical approval. {specimen.limitations}</p>
         <p>{specimen.omittedFaces} exactly zero-area source triangles are omitted from this view’s surfaces. Original files and the omission record are retained. Shapes are not sculpted or fitted to the other body model.</p>
         {selected && <p className="um-knee-source-id">{selected.id}<br />Ontology mapping: pending.</p>}
-        <p>Source-bound anatomy and function drafts are available under Learn. Clinical, pathology and imaging lessons still require authoring and review. No CT/MRI/X-ray/US or paid lecture is unlocked by this view.</p>
+        <p>Source-bound anatomy and function drafts are available under Learn, with clinical, pathology and partial imaging-topic teaching. All remain subject to clinical review; grouped entries and missing topics are identified. No scan or paid lecture is unlocked by this view.</p>
         </>}
       </details>
     </aside>

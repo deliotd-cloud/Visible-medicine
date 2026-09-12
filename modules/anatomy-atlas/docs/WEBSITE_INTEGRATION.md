@@ -12,6 +12,12 @@ The new review workspace requires trusted authenticated-user headers and D1 stor
 
 ## Integration choices
 
+The independent right lower-limb workbench also has a contained module build and
+export at `/atlas/lower-limb-3d`; see `LOWER_LIMB_WEBSITE_PILOT.md`. Five region
+scopes retain their source-bound navigation; study links stay in the module and
+do not invoke the standalone review database. Refer to the publication checkpoint
+for hosted state.
+
 1. **Separate route/origin:** deploy this application through the website's chosen hosting workflow and link to its whole-body, regional or shoulder route. Keep source credits and clinical-status disclosures visible.
 2. **Embedded module:** use an iframe with an accessible title and a responsive, sufficiently tall working area after the owner approves the production origin and audience. Test the actual website's frame/CSP policy, login and mobile scrolling; current private Sites authentication must not be assumed to work anonymously in an iframe.
 3. **Same application:** port the explorer components and existing permissive dependencies into the website's React build. Namespace the module's CSS before merging; its current root/global styles are not a drop-in stylesheet for the main site. Preserve asset paths, anatomical IDs and the event contract.

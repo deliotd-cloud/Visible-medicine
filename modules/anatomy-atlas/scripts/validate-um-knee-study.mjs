@@ -83,6 +83,6 @@ same(context.sceneProps.catalog.sourceVersion, kneeCatalog.sourceVersion);
 same(JSON.stringify(context.sceneProps.cameraBounds), JSON.stringify(kneeJointBounds));
 same(context.sceneProps.originStyle, 'selected-guide');
 const launcher = await readFile('app/body-explorer.tsx', 'utf8');
-same(launcher.includes("kneeSpecimenOpen && ['leg', 'foot', 'thigh', 'pelvis'].includes(initialRegion) && !exam"), true);
+same(launcher.replace(/\s+/g, ' ').includes("kneeSpecimenOpen && ['leg', 'foot', 'thigh', 'pelvis'].includes(initialRegion) && !exam"), true);
 same(launcher.includes('kneeSpecimenLauncher.current?.focus()'), true);
 console.log(JSON.stringify({ checks, publicMeshes: nodes.size, studies: kneeSpecimenStudies.length, originalGeometryUnchanged: true, componentMarkup: 'passed', browserOrClinicalAcceptance: false }));
