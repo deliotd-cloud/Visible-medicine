@@ -1,0 +1,70 @@
+{
+  "schema": "vm-ultrasound-candidate/1",
+  "id": "vm:media:us:hansen-2015:renal-figure-1",
+  "auditDate": "2026-09-12",
+  "status": "prepared-for-owner-review",
+  "publicationEligible": false,
+  "userDirection": "Proceed with the recommended ultrasound plan when ready; this does not constitute clinical sign-off.",
+  "title": "Renal ultrasound landmarks — published adult example",
+  "modality": "US",
+  "imageType": "acquired-ultrasound-publication-figure",
+  "source": {
+    "articleTitle": "Ultrasonography of the Kidney: A Pictorial Review",
+    "authors": ["Kristoffer Lindskov Hansen", "Michael Bachmann Nielsen", "Caroline Ewertsen"],
+    "citation": "Diagnostics 2016;6(1):2. Published 23 December 2015.",
+    "doi": "10.3390/diagnostics6010002",
+    "articleUrl": "https://www.mdpi.com/2075-4418/6/1/2",
+    "articleXmlUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4808817/fullTextXML",
+    "figureId": "diagnostics-06-00002-f001",
+    "commonsPage": "https://commons.wikimedia.org/w/index.php?title=File:Normal_adult_kidney.jpg&oldid=1131274618",
+    "commonsImageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Normal_adult_kidney.jpg",
+    "articleImageUrl": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6dd0/4808817/371a48305b8e/diagnostics-06-00002-g001.jpg"
+  },
+  "rights": {
+    "license": "CC-BY-4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "copyright": "© 2015 by the authors; licensee MDPI, Basel, Switzerland.",
+    "commercialReuse": "permitted-subject-to-license-and-other-rights",
+    "evidence": "Individual Commons file licence agrees with the original article permissions in archived Europe PMC XML. Figure 1 has no separate credit or licence exception in its caption/figure node; no contrary figure credit was found in the article.",
+    "attribution": "Hansen KL, Nielsen MB, Ewertsen C. Ultrasonography of the Kidney: A Pictorial Review. Diagnostics 2016;6(1):2, Figure 1. © 2015 the authors. CC BY 4.0. Image via Wikimedia Commons.",
+    "changesByVisibleMedicine": "None. Original retrieved bytes retained; do not imply the Commons rendition is byte-identical to the publisher rendition.",
+    "paywallRule": "Atlas or lecture access may be separately controlled, but the image retains its CC BY reuse rights. Do not claim exclusive rights or apply additional restrictions to this image. Preserve attribution, source and licence links."
+  },
+  "files": [
+    {"name":"Normal_adult_kidney.jpg","role":"candidate","bytes":108796,"width":1007,"height":681,"sha1":"bc664318ef7bf1b344e7f98dde7535dbe8d18749","sha256":"1b6ee37e2f79a5242336b4f59009bf48db84c38723947a524c4abba7a09c608b"},
+    {"name":"diagnostics-06-00002-g001.jpg","role":"article-comparison","bytes":59905,"width":694,"height":477,"sha256":"476bd03c3ba0998d64385639f675be25c850441d7b0a9fc2bcc4ba9b6302ad59"},
+    {"name":"article-source.xml","role":"rights-evidence","bytes":95860,"sha256":"2ea763149ace2f9c941e32c38ab349f15bce16131bf5136c6d65da22e129792b"}
+  ],
+  "teaching": {
+    "draftCaption": "Published adult renal ultrasound example. The source marks a column of Bertin (*), a medullary pyramid (**), cortex (***) and renal sinus (****). Calipers illustrate a length measurement; the displayed 13.36 cm is not a universal normal-size standard.",
+    "clinicalStatus": "pending-radiologist-review",
+    "laterality": "unknown",
+    "lateralityNote": "No explicit side in the source caption. Do not interpret the measurement-box L as left or infer a side from the selected atlas kidney.",
+    "plane": "longitudinal-appearing-unconfirmed",
+    "orientation": "not-validated",
+    "registration": "none",
+    "patientToAtlasTransform": null,
+    "pixelSpacingMm": null,
+    "imagingSyncEventsAllowed": false,
+    "conceptLinks": [
+      {"id":"vm:anatomy:body:abdomen:right:organ:right-kidney","fmaId":"FMA7204","relationship":"organ-level-teaching-only"},
+      {"id":"vm:anatomy:body:abdomen:left:organ:left-kidney","fmaId":"FMA7205","relationship":"organ-level-teaching-only"}
+    ],
+    "atlasSourceAtAudit": "acf8acb3a2fc6e4fc698583865cb506b3f7b55c9",
+    "sourceRelation": "Independent published subject; neither atlas donor nor user CT/MRI subject. Links are not same-side, same-patient or spatial correspondence."
+  },
+  "privacy": {
+    "status": "preliminary-inspection-only",
+    "visualInspection": "Both retrieved renditions inspected. No legible patient name, date of birth or patient identifier observed. Small clipped marks at the top edge and scanner measurement/depth overlays remain; originals are unedited.",
+    "metadataInspection": "Candidate inspected with System.Drawing: date-time 2016:03:28 11:28:30, chromaticity/gamma and JPEG properties. No patient fields observed in that inspection. This is not a guarantee of anonymity or consent.",
+    "consentEvidence": "No explicit patient-specific consent or ethics statement found in the retrieved review article. Do not invent one; owner must consider whether publication evidence and de-identification are sufficient for reuse."
+  },
+  "ownerReviewRequired": [
+    "Confirm teaching suitability, source landmark labels and acceptable image quality.",
+    "Confirm orientation/plane wording; leave laterality unknown unless independently established.",
+    "Review the 13.36 cm measurement caveat and avoid normative size claims from this single figure.",
+    "Inspect full-resolution pixels, clipped edge marks and metadata; decide privacy/consent sufficiency for publication.",
+    "Record explicit per-asset approval or requested changes. No approval is inferred from the instruction to proceed."
+  ],
+  "integrationPlan": "After the required owner decisions, expose a collapsed teaching-image card in existing kidney Ultrasound tabs, with preserved aspect ratio, enlargement, source/credit/licence and an independent-example label. No new persistent sidebar, invented registration, automatic lecture access or diagnostic pixel editing."
+}

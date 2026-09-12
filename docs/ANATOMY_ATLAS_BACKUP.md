@@ -1,5 +1,11 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 12 September 2026 — Standalone ultrasound review packet
+
+`research/ultrasound/renal-figure1` contains a candidate manifest, review instructions and a dependency-free read-only verifier. The owner authorised the ultrasound plan when ready, not clinical sign-off. The original article XML and individual Commons image both state CC BY 4.0; exact image hashes, laterality/measurement limits, attribution and independent-subject boundaries are recorded. Publication remains disabled pending owner clinical/privacy decisions.
+
+Only these three metadata/tool files and this index were added to this backup. No ultrasound pixels or article XML were uploaded. Complete six-file packets are stored locally at `work/ultrasound-review/renal-figure1` and `D:/VisibleMedicine-Atlas-Recovery/source-candidates/ultrasound-kidney-figure1-20260912`; both passed exact-byte/JPEG-dimension/article-figure/licence checks. This is actual source-asset preparation, not a deployed image or a new anatomical selection. Source remains `acf8acb3a2fc6e4fc698583865cb506b3f7b55c9`, module tree `9284b3dac944aa6a39b7be27915b4be776aff8d8`. No Site source, private scan, model, entitlement, accepted mask, runtime or publication state changed.
+
 ## 12 September 2026 — Pelvic-organ imaging orientation
 
 Source `acf8acb3a2fc6e4fc698583865cb506b3f7b55c9`, parent `b1e371033ce1ad851d57badea5d7a72ced78d23d`, tree `9284b3dac944aa6a39b7be27915b4be776aff8d8`. Thirteen source paths add 44 introductory draft CT/MRI/X-ray/US placements for 11 current urinary/male reproductive organ selections. Seven landmark/limit groups and 24 distinct modality topics use existing tabs; no extra UI panel, geometry, scans, dependency, image licence admission, entitlement or clinical decision changes. Sex/side/source boundaries are explicit. The ultrasound image candidates remain unimported.
