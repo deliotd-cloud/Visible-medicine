@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceCommit": "8c3a7e47b89152523189d75502bfa44445230522",
+  "sourceCommit": "4585339be44aa819bc407090c109183255861653",
   "region": "shoulder-right",
   "structures": 9,
   "patientDataIncluded": false,
@@ -10,7 +10,7 @@
     {
       "path": "index.html",
       "bytes": 504,
-      "sha256": "2bc444b914f3811d3e494e33ee5e6beb022ed2b2e6c9f8b0407b1a033b798f8d"
+      "sha256": "f9b3a69ae794377d850d97eb2946c86018520954df530d677a432b2038831ab8"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -24,13 +24,8 @@
     },
     {
       "path": "source-inputs.json",
-      "bytes": 36670,
-      "sha256": "c3b22d3ad26ccb8a442a8e9f2fee89c9f24d5efbe9c4bb58495464381499b0bc"
-    },
-    {
-      "path": "assets/anatomy-scene-6-zx5zBI.js",
-      "bytes": 1015662,
-      "sha256": "af0223f23ed0f2966421c9e2733bdb787850da3f8b00897f177d5747bfa79604"
+      "bytes": 37214,
+      "sha256": "a4b685cac076f39852bcd4b2a77c744b19fc138452ad65b2dab3b40f897a2fa6"
     },
     {
       "path": "assets/anatomy-scene-B5vBwAGD.css",
@@ -38,9 +33,14 @@
       "sha256": "1cf5ea93e7e61ab957de6c3513be4c23214cbdcc680e54780fece40747b9b3ba"
     },
     {
-      "path": "assets/index-C03qPu4z.js",
-      "bytes": 1799215,
-      "sha256": "d569318fcf22d355cbe576334968be7869eaf40a750cfb5e07052374161d10cf"
+      "path": "assets/anatomy-scene-Cni7X2cb.js",
+      "bytes": 1015662,
+      "sha256": "72a48578287130c1e81460953bc1340ce9994118bc221b11e5653e7bdbeb2f1a"
+    },
+    {
+      "path": "assets/index-DSec1EH0.js",
+      "bytes": 1810275,
+      "sha256": "d0de14e5a504e39a81d39fb127c5831cba2132854954ce6720cb337d3e488e68"
     },
     {
       "path": "assets/index-PZ30KGND.css",
@@ -69,8 +69,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "bytes": 127740,
-      "sha256": "35f743f72f81eb5f87d113a883cb7d3c38eba993154286417530dbc8e1fa4cc4"
+      "bytes": 128186,
+      "sha256": "7efa2bc1fe9d1dc554c6ac91eebe85610be64188e5583560518720c93322aec2"
     },
     {
       "path": "LICENSES/dependency-license-audit.json",

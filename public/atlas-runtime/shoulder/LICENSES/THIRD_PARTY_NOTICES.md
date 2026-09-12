@@ -1,5 +1,9 @@
 # Third-party notices
 
+## Didanix Education selection adapter — 12 September 2026
+
+Original MIT integration code and synthetic test fixtures extend the existing selection bridge and source-bound learning registry. No package, font, mesh, texture, patient study, external diagram, paid service or clinical PACS component is added. Existing source and dependency notices are unchanged. See [adapter scope and release boundaries](../docs/DIDANIX_SELECTION_ADAPTER.md).
+
 ## Private shoulder website module — 12 September 2026
 
 The original MIT integration code reuses the existing shoulder components and BodyParts3D v4 CC BY 4.0 GLB, unchanged. No new dependency, font binary, texture, anatomy dataset, patient image or paid service is added. The standalone module also ships build-derived `BUNDLED_NOTICES.txt` containing the copyright and licence text of packages actually bundled. React Three Fiber 9.7.0's MIT text is retained from its [exact upstream tag](https://raw.githubusercontent.com/pmndrs/react-three-fiber/v9.7.0/LICENSE). See [pilot scope](../docs/SHOULDER_WEBSITE_PILOT.md). The main website's existing licensing obligations remain independent.

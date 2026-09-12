@@ -65,7 +65,7 @@
   },
   {
     "path": "app/imaging-link.tsx",
-    "sha256": "49b0c8e7e485b6d49fe89412b62a84bc2df4b942c28145f629779978d4fc9cf6"
+    "sha256": "7119b61ed1d58aa31c828152e698d4bdcdcecece7fb7b66cda275d21e2ec59a3"
   },
   {
     "path": "app/inspection-controls.tsx",
@@ -261,7 +261,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "a04672d9e67319f8932498ad5955e2dbeed7cdf30b353e664fec2e6d362b44e9"
+    "sha256": "73804db63df25192d0341a1d49a511be24d5a790b532d9f521b236d02f7d3903"
   },
   {
     "path": "content/shoulder-xray-bindings.json",
@@ -312,6 +312,10 @@
     "sha256": "3f187b82214165b932599c9df5a47a2f65d9416747e2d651231acb99db4fbf33"
   },
   {
+    "path": "integration/shoulder/education-api.ts",
+    "sha256": "393205f2e29830ca91b79ad02863d5226d138539ae714f00a75f3adc8d20e45a"
+  },
+  {
     "path": "integration/shoulder/framework.tsx",
     "sha256": "6eb0b7679a2db2edc74e67d18d9845eda5cd6a8e7c134ce4f5bb05b16f9f6250"
   },
@@ -321,7 +325,7 @@
   },
   {
     "path": "integration/shoulder/main.tsx",
-    "sha256": "ff8f9248c919f2bbc2748095db2e594ef1364b388b091531579ab7b7235bc0ec"
+    "sha256": "14b3fc317c6b18e4dde4029350fe06e700caade3e91bb203125bd8d0bf6969af"
   },
   {
     "path": "integration/shoulder/panel-host.css",
@@ -500,6 +504,10 @@
     "sha256": "a0ebba94b72fbff9bc081ec4889f69cd8bcd829bd294d8b8c6c8b91348a868c2"
   },
   {
+    "path": "lib/didanix-atlas-adapter.ts",
+    "sha256": "0c2f8cd70e64e1c0f88f09f2fb4a5665db99fa7c6c889537d9c9d44b5b1b939d"
+  },
+  {
     "path": "lib/dissection-workbench.ts",
     "sha256": "7b12978528d0c08743aa4d4fbe8e08df7f787596576978c39ffdc003227215be"
   },
@@ -597,7 +605,7 @@
   },
   {
     "path": "lib/imaging-sync.ts",
-    "sha256": "2f3e6743dedbaa39154ced298badfd113bf5ce57e1c5989ff103589dab42daf9"
+    "sha256": "57f729f2e1fd09f53164e1aa20fd8518dd9a0e3360e6b67d008274b29522daeb"
   },
   {
     "path": "lib/inferior-epigastric-vessels.ts",
@@ -630,6 +638,14 @@
   {
     "path": "lib/laryngeal-anatomy.ts",
     "sha256": "adb043e56456f63e8f8f5f110c984f3706c8904a6267c6415260c7d0c8973fb3"
+  },
+  {
+    "path": "lib/learning-resource-types.ts",
+    "sha256": "f1140958921da01500d519ad3249aa5114f9c31ab19709b29bbf51675ccab161"
+  },
+  {
+    "path": "lib/learning-resources.ts",
+    "sha256": "c7f645c22edf98045e0bc4e559bf18d8eb83871db6848efa94a1c2de0961c1c1"
   },
   {
     "path": "lib/leg-clinical-curriculum.ts",

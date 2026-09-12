@@ -1,5 +1,7 @@
 # Private shoulder atlas integration
 
+The September 12 Didanix adapter update installs an optional same-origin `visibleMedicineShoulderEducation` API inside the shoulder frame. It remains disconnected by default. It supports current annotation/structure links for CT, MRI, X-ray and ultrasound, source/revision matching, explicit choice for non-exact matches, abort/revocation guards and cleanup. It does not load media, serve lectures, authorize resources or create patient-space registration. Bind it to the real Education learner viewer only after its readiness and case-clearance gates. The exact interface and synthetic checks are maintained in the atlas source's `docs/DIDANIX_SELECTION_ADAPTER.md`. Do not add viewer/choice controls to the website until a real viewer is available.
+
 The Atlas menu and catalogue now open `/atlas/shoulder-3d`. A same-origin self-contained shoulder module sits inside the existing website header. It is generated from the anatomy atlas source; its exact source commit, files and SHA-256 hashes are in `public/atlas-runtime/shoulder/manifest.json`. It adds no npm dependency to this website.
 
 The module preserves rotation, dissection, explode styles, selection, isolation, labels, anatomy notes and identification practice. The host supplies navigation; the module supplies contained controls. Tools become drawers in narrow panels. A full-screen link is available; no unrelated site layout is changed. Catalogue modality filters include 3D and are functional server-rendered links.
