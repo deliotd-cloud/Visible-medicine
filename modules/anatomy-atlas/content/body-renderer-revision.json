@@ -290,7 +290,7 @@
     },
     {
       "path": "app/ventricles.tsx",
-      "sha256": "7e7a484c726ee94ea46362ff808b657159b01be1a59da5845498dab79f5f48f4"
+      "sha256": "bb0708632a07e1df51dd133c8f6b4d75c38fcdc2dadc5328236f58bc0c7b7944"
     },
     {
       "path": "app/ventricular-relationships.css",
@@ -1198,7 +1198,11 @@
     },
     {
       "path": "lib/pulmonary-context.ts",
-      "sha256": "cce895c7a6dff6b9ce34c49539491e8b87cf4a2738e72c583436f7ae0cdde620"
+      "sha256": "3b6a9d180dd304d3f578385bc60dfe681bee07eeec3166124179c3d5131d103c"
+    },
+    {
+      "path": "lib/pulmonary-roles.ts",
+      "sha256": "487419f2eb6b63635e93ad39b9cbf5ca06df694f502f7d3c96f6b3ced4b1813c"
     },
     {
       "path": "lib/pulmonary.ts",
@@ -1561,6 +1565,10 @@
       "sha256": "294ba340df060770edf390bc08f4260f8ed3cbd08250d39ef9b40c611a7ca5d4"
     },
     {
+      "path": "public/models/bodyparts3d/pulmonary/branch-types.json",
+      "sha256": "466c03022265e31a0fd0e3c3bfa9f76062c1d53ee4cd369d9e1945f0d03e0be4"
+    },
+    {
       "path": "public/models/bodyparts3d/pulmonary/catalog.json",
       "sha256": "b62ccd78dfc2ced8674b94eba67596add4de482f54c3f242814982b4e3dab9ea"
     },
@@ -1613,5 +1621,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "c0bc8281b285017cdd7aed152c0912596f41615a64fe6a4fdbc9a7417d7e420c"
+  "sha256": "69bbfa768a661753954eb08ba77319a4264b9a9335c245ca73e1e4a57a5597d9"
 }

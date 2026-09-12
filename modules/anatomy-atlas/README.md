@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Lung → Explore lung branches → Branch type** now separates [airways, pulmonary arteries and pulmonary veins](docs/PULMONARY_BRANCH_TYPES.md). Each can be studied across the lung or within one existing lobe group, using the same labels, selection, cutaway and separation controls. Original source surfaces are retained; no lobe tissue, capillary network or new anatomy identity is invented. Publication and radiologist/device acceptance remain pending.
+
 **Heart → Explore heart chambers → Follow circulation** opens a [six-step manual walkthrough](docs/CARDIAC_CIRCULATION.md). It connects the four existing chamber–vessel guides with the two existing right/left chamber-pair views, using automatic selection/framing and Previous/Next. No new geometry, animation, control bar or anatomy-count increase. Teaching is draft; runtime publication and radiologist/device acceptance remain pending.
 
 **Imaging → X-ray / CT / MRI** now includes [limb-bone orientation](docs/LIMB_BONE_IMAGING.md): 24 source-bound drafts across 12 existing sided bone selections. Radius, ulna and fibula gain all three topics; femur, tibia and patella gain knee X-ray notes alongside their unchanged CT/MRI/US teaching. Original referenced summaries reuse the current notes panel; there are no new controls, images or model changes. Radiologist review and runtime publication remain pending.

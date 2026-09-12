@@ -1,10 +1,10 @@
 import raw from '../public/models/bodyparts3d/pulmonary/airway-context.json' with { type: 'json' };
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
 import {
-  pulmonaryFor,
-  pulmonaryViewCatalog,
-  pulmonaryReferences,
-} from './pulmonary';
+  pulmonaryRoleViewCatalog,
+  type PulmonaryRole,
+} from './pulmonary-roles';
+import { pulmonaryFor, pulmonaryReferences } from './pulmonary';
 
 export const pulmonaryAirwaySource = raw as unknown as {
   parents: BodyStructure[];
@@ -59,9 +59,10 @@ export function pulmonaryAirwayFor(parent: BodyStructure | null) {
 export function pulmonaryContextViewCatalog(
   parent: BodyStructure | null,
   show = false,
+  role: PulmonaryRole = 'all',
 ) {
-  const base = pulmonaryViewCatalog(parent),
-    context = show ? pulmonaryAirwayFor(parent) : [];
+  const base = pulmonaryRoleViewCatalog(parent, role),
+    context = show && base.structures.length ? pulmonaryAirwayFor(parent) : [];
   return {
     ...base,
     structures: [...base.structures, ...context],

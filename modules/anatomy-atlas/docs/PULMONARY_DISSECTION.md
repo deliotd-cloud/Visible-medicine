@@ -1,5 +1,7 @@
 # Lung branch dissection
 
+The later [Branch type selector](PULMONARY_BRANCH_TYPES.md) separates the existing airway, arterial and venous source surfaces within each group. It retains the five original selectable identities and default bundles, adds two optional display bundles, and does not claim new lobe tissue. Historical implementation/source evidence below remains unchanged.
+
 Select either lung in Thorax or Whole body, then **Explore lung branches**. The same compact workbench supports rotation, six camera presets, labels, selection, hide/Undo, fade others, framing, reassembly and extraction/spatial/tray separation. Search a branch-group name or FMA ID to open the correct lung with that group selected. Teaching remains collapsed until requested. There is no additional permanent toolbar.
 
 ## What is actually represented

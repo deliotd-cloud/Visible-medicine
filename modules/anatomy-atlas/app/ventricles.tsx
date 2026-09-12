@@ -1,6 +1,13 @@
 'use client';
 import { useCallback, useMemo, useReducer, useState } from 'react';
 import { cardiacCirculationFor } from '@/lib/cardiac-circulation';
+import {
+  pulmonaryRolesAvailable,
+  pulmonaryRoleNames,
+  pulmonaryRoleNotes,
+  pulmonaryRoleColour,
+  type PulmonaryRole,
+} from '@/lib/pulmonary-roles';
 import { NestedTeaching } from './nested-teaching';
 import type { NestedImagingTopic } from '@/content/nested-teaching';
 import {
@@ -185,6 +192,13 @@ export function VentricularView({
   const isCerebral = study === 'cerebral';
   const isCardiac = study === 'cardiac';
   const isPulmonary = study === 'pulmonary';
+  const [requestedPulmonaryRole, setPulmonaryRole] =
+    useState<PulmonaryRole>('all');
+  const canFilterPulmonary = useMemo(
+    () => isPulmonary && pulmonaryRolesAvailable(parent),
+    [isPulmonary, parent],
+  );
+  const pulmonaryRole = canFilterPulmonary ? requestedPulmonaryRole : 'all';
   const isHepatic = study === 'hepatic';
   const isRenal = study === 'renal';
   const isPancreatic = study === 'pancreatic';
@@ -527,6 +541,7 @@ export function VentricularView({
                     ? pulmonaryContextViewCatalog(
                         parent,
                         context && explode === 0,
+                        pulmonaryRole,
                       )
                     : baseCatalog,
     [
@@ -542,6 +557,7 @@ export function VentricularView({
       explode,
       baseCatalog,
       relationshipId,
+      pulmonaryRole,
     ],
   );
   const relationship = relationships.find((r) => r.id === relationshipId);
@@ -555,11 +571,14 @@ export function VentricularView({
     [],
   );
   const selected = layers.find((s) => s.id === selectedId);
-  const cutSelection = selected
+  const displayedSelection = isPulmonary
+    ? ventricleCatalog.structures.find((s) => s.id === selectedId)
+    : selected;
+  const cutSelection = displayedSelection
     ? selectionVisibility({
-        system: selected.system,
+        system: displayedSelection.system,
         enabled: true,
-        bounds: selected.bounds,
+        bounds: displayedSelection.bounds,
         frame: inspectionBounds,
         inspection,
       })
@@ -610,11 +629,14 @@ export function VentricularView({
                               : guidedAppearance
                                 ? (neuroGroupFor(s.fmaId)?.color ?? '#9ba7a5')
                                 : '#9ba7a5'
-                          : isCerebral
-                            ? (cerebralGroups.find(
-                                (g) => g.id === (s as CerebralStructure).group,
-                              )?.colour ?? '#9ba7a5')
-                            : colours[index],
+                          : isPulmonary && pulmonaryRole !== 'all'
+                            ? pulmonaryRoleColour(pulmonaryRole)
+                            : isCerebral
+                              ? (cerebralGroups.find(
+                                  (g) =>
+                                    g.id === (s as CerebralStructure).group,
+                                )?.colour ?? '#9ba7a5')
+                              : colours[index],
               opacity:
                 index < 0
                   ? isCricothyroid
@@ -651,6 +673,7 @@ export function VentricularView({
       guidedAppearance,
       isRenal,
       isVisual,
+      pulmonaryRole,
     ],
   );
   function select(id: string) {
@@ -888,6 +911,41 @@ export function VentricularView({
             </SelectContent>
           </Select>
         </div>
+        {isPulmonary && canFilterPulmonary && (
+          <div className="eye-layer-presets">
+            <label htmlFor="pulmonary-branch-type">Branch type</label>
+            <Select
+              value={pulmonaryRole}
+              onValueChange={(value) => {
+                if (!value || !Object.hasOwn(pulmonaryRoleNames, value)) return;
+                setPulmonaryRole(value as PulmonaryRole);
+                setExplode(0);
+                setFocus(false);
+                setIsolated(false);
+                setInspection(initialInspection);
+                setReset((v) => v + 1);
+              }}
+            >
+              <SelectTrigger id="pulmonary-branch-type">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                {Object.entries(pulmonaryRoleNames).map(([value, label]) => (
+                  <SelectItem key={value} value={value}>
+                    {label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            {pulmonaryRole !== 'all' && (
+              <p role="status">
+                {pulmonaryRoleNotes[pulmonaryRole]} Colours identify the branch
+                type, not oxygenation or scan signal. Learn more covers the
+                whole lobe branch group.
+              </p>
+            )}
+          </div>
+        )}
         {circulationSteps.length > 0 &&
           (circulation ? (
             <section

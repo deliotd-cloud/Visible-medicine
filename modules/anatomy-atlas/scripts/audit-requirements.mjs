@@ -176,6 +176,7 @@ const pulmonary = await json(
 const pulmonaryContext = await json(
   'public/models/bodyparts3d/pulmonary/airway-context.json',
 );
+const pulmonaryRoles = await json('public/models/bodyparts3d/pulmonary/branch-types.json');
 const learning = parseLearningDocument(
   await json('content/learning-resources.v1.json'),
 );
@@ -456,6 +457,9 @@ for (const path of [
   'docs/hepatic-source-audit.json',
   'lib/pulmonary.ts',
   'lib/pulmonary-context.ts',
+  'lib/pulmonary-roles.ts',
+  'public/models/bodyparts3d/pulmonary/branch-types.json',
+  'scripts/export-pulmonary-roles.mjs',
   'public/models/bodyparts3d/pulmonary/airway-context.json',
   'public/models/bodyparts3d/pulmonary/catalog.json',
   'docs/pulmonary-source-audit.json',
@@ -996,6 +1000,8 @@ const report = {
     cardiacRelationshipPresets: cardiacRelationshipsFor(cardiac.parent).length,
     pulmonaryAirwayLandmarks: pulmonaryContext.structures.length,
     pulmonaryAirwayContexts: pulmonaryContext.bindings.length,
+    pulmonaryBranchTypeDisplaySubsets: pulmonaryRoles.subsets.length,
+    pulmonaryBranchTypeOptionalBundles: pulmonaryRoles.bundles.length,
     ventricularRelationshipPresets: ventricularRelationshipsFor(
       ventricular.parent,
     ).length,
