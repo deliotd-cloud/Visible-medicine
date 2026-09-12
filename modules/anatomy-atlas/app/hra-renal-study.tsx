@@ -27,7 +27,7 @@ export const hraRenalSupplement: SpecimenSupplement = {
     <p>82 source selections, not 82 distinct anatomical concepts. Original triangles retained, with positive uniform display scaling only. Colours are diagrammatic teaching styles, not histology.</p>
     <p>Three defective surfaces remain held: left outer cortex, right renal columns and left renal vein. Their absence is not normal anatomy. No mirroring, filling, welding, fragment deletion or invented replacement.</p>
     <p>Open cut boundaries and separate inner/outer shells remain. The left source has 11 papillary parts but 10 minor-calyx parts: letters and nearby positions do not prove drainage connections. No complete lumen, urine flow, nephron microanatomy or operative plane is demonstrated.</p>
-    <p>This separate female reference is not registered to the main body or patient CT/MRI. No source imagery or separately paid lectures are unlocked. Anatomy/function notes are drafts; clinical/imaging topics and your radiologist sign-off remain pending.</p>
+    <p>This separate female reference is not registered to the main body or patient CT/MRI. No source imagery or separately paid lectures are unlocked. Anatomy, clinical and imaging notes are drafts; unsupported topics show pending, and your radiologist sign-off remains required.</p>
     <p>Identification practice excludes arbitrary source-letter questions; choose Hila, Pelves &amp; ureters or All supplied surfaces to enable it.</p>
     <p><a href="/models/hra-renal/kidneys.glb" download>Display model</a> · <a href="/models/hra-renal/NOTICE.md">Asset reuse notice</a></p>
   </>,

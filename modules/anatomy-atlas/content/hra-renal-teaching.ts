@@ -1,8 +1,9 @@
 import type { SpecimenLesson } from './um-limb-teaching';
+import { authoredHraRenalClinical, hraRenalClinicalReferences } from './hra-renal-clinical';
 
 const kidney = 'https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html';
 const ureter = 'https://training.seer.cancer.gov/anatomy/urinary/components/ureters.html';
-export const hraRenalReferenceTitles = { [kidney]: 'NCI SEER · Kidneys', [ureter]: 'NCI SEER · Ureters' };
+export const hraRenalReferenceTitles = { [kidney]: 'NCI SEER · Kidneys', [ureter]: 'NCI SEER · Ureters', ...Object.fromEntries(Object.values(hraRenalClinicalReferences).map(r => [r.url, r.title])) };
 // Original concise summaries; source reviewed 2026-09-12. No images or tables imported.
 // Source-part letters do not alter the concept lesson or imply a drainage match.
 const lessons: Record<string, readonly [string, string]> = {
@@ -20,6 +21,8 @@ const lessons: Record<string, readonly [string, string]> = {
   ureter: ['Retroperitoneal tube connecting the renal pelvis with the urinary bladder.', 'Smooth-muscle peristalsis propels urine towards the bladder.'],
 };
 export function authoredHraRenalLesson(concept: string): SpecimenLesson | null {
+  if (!Object.hasOwn(lessons, concept)) return null;
   const value = lessons[concept];
-  return value ? { anatomy: value[0], function: value[1], references: [concept === 'ureter' ? ureter : kidney] } : null;
+  const extended = authoredHraRenalClinical(concept);
+  return value ? { anatomy: value[0], function: value[1], references: [concept === 'ureter' ? ureter : kidney], ...(extended ? { extended } : {}) } : null;
 }

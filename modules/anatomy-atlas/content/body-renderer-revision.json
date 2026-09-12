@@ -138,7 +138,7 @@
     },
     {
       "path": "app/hra-renal-study.tsx",
-      "sha256": "74e3ea2fa8707d8595073daa1f1b529761b582d99b4e22c83915c181f209a043"
+      "sha256": "fe84eb929379b6fff1742b618be7282e18ed8233566922dbeacec52106a921fa"
     },
     {
       "path": "app/imaging-comparison.css",
@@ -421,8 +421,12 @@
       "sha256": "ab61fa71c04a678144a040a77d04036e8f8f87bbaed288814fac8ea5496d7940"
     },
     {
+      "path": "content/hra-renal-clinical.ts",
+      "sha256": "5b60eca8e237bb04bade39b0d9adb3c98d590666124fa03176e09a3588ae413b"
+    },
+    {
       "path": "content/hra-renal-teaching.ts",
-      "sha256": "288b07e092a56d77b9af404e9b8e45bee3cc3fb779d1ddaa6cffdb5705e64e28"
+      "sha256": "71062f6e1be8255d660575d45ec19099b644d9383a8d0318a3e013ce5f952ac6"
     },
     {
       "path": "content/inferior-epigastric-study.ts",
@@ -1422,7 +1426,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "bff9f5138f5628bdff5df54e08428ca0411ab53b63b8babb8de71d967dffa91b"
+      "sha256": "75abf48dcf7ebe101be0afd9c40202c3a7feb76b948ec4484cc4be7dd4054156"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1585,5 +1589,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "9f3ad466f84036a3d510775f409894be21b88a7272dedbc6333c8c62ee797523"
+  "sha256": "7221e37cb3ad4ff130f067fc92fdaad9af3fbb9e16fc9065ad24e6953d45204c"
 }

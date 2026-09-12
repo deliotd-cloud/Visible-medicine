@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+The kidney specimen’s collapsed **Learn** panel now includes [source-bound clinical and CT/MRI/X-ray/US teaching](docs/HRA_RENAL_TEACHING.md): 44 topic texts and 12 self-checks, with explicit modality gaps and source-quality cautions. These are radiologist-review drafts, not patient images, registered anatomy or separately entitled lectures.
+
 **Abdomen / Whole body → Kidney layers · separate reference** opens [nine guided kidney studies](docs/HRA_KIDNEY_SPECIMEN.md), also at `/specimens/kidneys`. Rotate, select, remove/restore, isolate or separate 82 original HRA surfaces. Compact controls and source-bound teaching are reused; arbitrary source-letter parts are excluded from identification questions. Three defective surfaces remain held. This CC BY 4.0 reference is not complete or registered patient anatomy; radiologist and device review remain pending.
 
 **Head & neck / Whole body → Study → Deep brain: septal landmarks** opens [four new source-preserved selections with seven existing references](docs/LIMBIC_LANDMARKS.md), using the compact Study menu and hide/Undo. Source fragments and laterality limits are explicit; the defective stria-terminalis compound remains offline. Introductory notes are drafts, not clinical sign-off.

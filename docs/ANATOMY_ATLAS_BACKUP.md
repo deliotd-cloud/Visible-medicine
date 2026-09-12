@@ -1,5 +1,23 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 12 September 2026 — renal clinical/imaging teaching (current source; runtime publication pending)
+
+Source `bc36e110fda43e394f3811676626f42fc0ec6b2f`, tree `7a868955d6c3b8a431e4cf821ee6ad2598b8e8b3`, parent `bd0ec72c46247676c02e9375ba9038823c6e75df`. Fifteen exact source paths mirrored. Adds44 original topic texts across398 renal source placements and12 source-aware self-checks across82 selections. Coverage: Clinical82, Pathology82, CT82, MRI61, US58, X-ray33. The94 unsupported source/modality states remain explicitly pending. Eleven linked references are factual reading sources, not imported scans, figures, protocols or staging tables.
+
+Existing Anatomy/Function material, all renal geometry/catalogue/holds, dissection definitions, practice eligibility, shared Learn UI, atlas launcher and dependency lockfile remain unchanged. No new panel, font, texture, paid service, patient registration, clinical approval or externally paid lecture entitlement. Source artefacts remain CC BY4.0, with existing attribution. Original brief teaching is not source-article republication.
+
+Passed: teaching suite656 actual server-rendered topic states,94 pending states,984 source-mutation rejections, defensive-copy checks and exact prior-core preservation; kidney dissection/geometry suite; TypeScript; requirement audit. Production build passes and verifies all125 GLBs/1433 meshes/4299 buffer views losslessly. Renderer394 inputs SHA256 `7221e37cb3ad4ff130f067fc92fdaad9af3fbb9e16fc9065ad24e6953d45204c`. Existing large-chunk warnings remain; browser/GPU/device and radiologist acceptance are not claimed.
+
+D-drive stem `atlas-hra-renal-teaching-2026-09-12` in `D:/VisibleMedicine-Atlas-Recovery/`:
+
+- Runtime `.site.tar.gz`:122386390 bytes, SHA256 `29cda75ac6b497e320544420724d5d1d4ac94ff98923ebc47240807a9b73cf77`;443 safe entries/two exact SQL migrations.
+- Source `.delta.tar`:552960 bytes, SHA256 `947f2290d7cb52ff5b3d4d9de1207b90865a4a20373b758b3e48bcacb2a4e7a4`.
+- Source `.incremental.bundle`:15247 bytes, SHA256 `126671b830257975e7e645032b575d146c118aa390e870f04b8c6f90519fe126`.
+
+Independent fetch/full fsck verifies exact source/tree at `refs/verification/hra-renal-teaching-20260912`, preserving verifier main. Sites source push succeeded. Latest live/saved version remains171 with owner-only access verified; no repeat122MB upload under the unchanged60-second timeout condition. Existing delivery diagnosis remains applicable. Website main `c4ff08f8afc90bd94d04162625f97af9d94401cf` is unchanged. Local packaged runtime and backups are not a live-publication claim.
+
+The goal remains active. Next inspect the existing reviewer workflow and extend independent-specimen review readiness so radiologist decisions can be tied to exact source/content, without importing an approval from the main-body donor. No conversations, production review records, patient scans, accounts or separate lectures are included in these source backups; older recovery artefacts remain untouched.
+
 ## 12 September 2026 — HRA kidney dissection (current source; runtime publication pending)
 
 Source `bd0ec72c46247676c02e9375ba9038823c6e75df`, tree `904bb358f244351d1859c389cd09066624484f60`, parent `30cdc846e6bcfefd191e844a3982ed444ab98a66`. Twenty-three exact source paths mirrored. The independent kidney viewer now serves 82 original source selections / 189794 triangles, with nine guided studies, compact source controls, 12 Anatomy/Function concepts across 82 selections and 13 non-lettered identification targets. The left outer cortex, right renal-column group and left renal vein remain excluded. No repairs, drainage matches, microanatomy, clinical approval or patient registration are invented. The earlier audit-only checkpoint below remains historical evidence.
