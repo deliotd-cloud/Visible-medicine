@@ -3,10 +3,10 @@
   "regions": 11,
   "wholeBody": true,
   "stages": 159,
-  "focusedViews": 157,
-  "checks": 4764,
+  "focusedViews": 165,
+  "checks": 4788,
   "cameraChecks": 11448,
-  "structures": 1042,
+  "structures": 1060,
   "clinicalValidation": false,
   "browserInteractionTesting": false,
   "rows": [
@@ -14,7 +14,7 @@
       "region": "whole-body",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 1042,
+      "visible": 1060,
       "removed": 0
     },
     {
@@ -22,62 +22,62 @@
       "stage": "musculoskeletal",
       "kind": "window",
       "visible": 575,
-      "removed": 467
+      "removed": 485
     },
     {
       "region": "whole-body",
       "stage": "viscera",
       "kind": "window",
-      "visible": 80,
-      "removed": 962
+      "visible": 82,
+      "removed": 978
     },
     {
       "region": "whole-body",
       "stage": "neural",
       "kind": "window",
       "visible": 54,
-      "removed": 988
+      "removed": 1006
     },
     {
       "region": "whole-body",
       "stage": "bones",
       "kind": "skeleton",
       "visible": 203,
-      "removed": 839
+      "removed": 857
     },
     {
       "region": "whole-body",
       "stage": "vascular",
       "kind": "window",
-      "visible": 446,
-      "removed": 596
+      "visible": 462,
+      "removed": 598
     },
     {
       "region": "whole-body",
       "stage": "connective",
       "kind": "window",
       "visible": 293,
-      "removed": 749
+      "removed": 767
     },
     {
       "region": "shoulder-arm",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 93,
+      "visible": 99,
       "removed": 0
     },
     {
       "region": "shoulder-arm",
       "stage": "deltoid-off",
       "kind": "peel",
-      "visible": 87,
+      "visible": 93,
       "removed": 6
     },
     {
       "region": "shoulder-arm",
       "stage": "arm-deep",
       "kind": "peel",
-      "visible": 79,
+      "visible": 85,
       "removed": 14
     },
     {
@@ -85,20 +85,20 @@
       "stage": "cuff",
       "kind": "window",
       "visible": 14,
-      "removed": 79
+      "removed": 85
     },
     {
       "region": "shoulder-arm",
       "stage": "bones",
       "kind": "skeleton",
       "visible": 6,
-      "removed": 87
+      "removed": 93
     },
     {
       "region": "shoulder-arm",
       "stage": "vascular",
       "kind": "window",
-      "visible": 53,
+      "visible": 59,
       "removed": 40
     },
     {
@@ -106,34 +106,34 @@
       "stage": "scapular-vascular-detail",
       "kind": "window",
       "visible": 30,
-      "removed": 63
+      "removed": 69
     },
     {
       "region": "forearm",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 68,
+      "visible": 72,
       "removed": 0
     },
     {
       "region": "forearm",
       "stage": "outer-flexors",
       "kind": "peel",
-      "visible": 56,
+      "visible": 60,
       "removed": 12
     },
     {
       "region": "forearm",
       "stage": "deep-flexors",
       "kind": "peel",
-      "visible": 54,
+      "visible": 58,
       "removed": 14
     },
     {
       "region": "forearm",
       "stage": "deep-extensors",
       "kind": "peel",
-      "visible": 42,
+      "visible": 46,
       "removed": 26
     },
     {
@@ -141,13 +141,13 @@
       "stage": "bones",
       "kind": "skeleton",
       "visible": 6,
-      "removed": 62
+      "removed": 66
     },
     {
       "region": "forearm",
       "stage": "vascular",
       "kind": "window",
-      "visible": 22,
+      "visible": 26,
       "removed": 46
     },
     {
@@ -155,63 +155,63 @@
       "stage": "connective",
       "kind": "window",
       "visible": 10,
-      "removed": 58
+      "removed": 62
     },
     {
       "region": "forearm",
       "stage": "common-interosseous-window",
       "kind": "window",
       "visible": 12,
-      "removed": 56
+      "removed": 60
     },
     {
       "region": "forearm",
       "stage": "recurrent-interosseous-window",
       "kind": "window",
       "visible": 12,
-      "removed": 56
+      "removed": 60
     },
     {
       "region": "forearm",
       "stage": "forearm-arterial-comparison",
       "kind": "window",
       "visible": 16,
-      "removed": 52
+      "removed": 56
     },
     {
       "region": "forearm",
       "stage": "elbow-bones",
       "kind": "window",
       "visible": 6,
-      "removed": 62
+      "removed": 66
     },
     {
       "region": "forearm",
       "stage": "elbow-humeroulnar",
       "kind": "window",
       "visible": 4,
-      "removed": 64
+      "removed": 68
     },
     {
       "region": "forearm",
       "stage": "elbow-radiocapitellar",
       "kind": "window",
       "visible": 4,
-      "removed": 64
+      "removed": 68
     },
     {
       "region": "forearm",
       "stage": "elbow-proximal-radioulnar",
       "kind": "window",
       "visible": 4,
-      "removed": 64
+      "removed": 68
     },
     {
       "region": "forearm",
       "stage": "elbow-supinator",
       "kind": "window",
       "visible": 8,
-      "removed": 60
+      "removed": 64
     },
     {
       "region": "hand",
@@ -336,35 +336,35 @@
       "region": "thigh",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 83,
+      "visible": 93,
       "removed": 0
     },
     {
       "region": "thigh",
       "stage": "surface-off",
       "kind": "peel",
-      "visible": 77,
+      "visible": 87,
       "removed": 6
     },
     {
       "region": "thigh",
       "stage": "quadriceps-deep",
       "kind": "peel",
-      "visible": 75,
+      "visible": 85,
       "removed": 8
     },
     {
       "region": "thigh",
       "stage": "medial-deep",
       "kind": "peel",
-      "visible": 69,
+      "visible": 79,
       "removed": 14
     },
     {
       "region": "thigh",
       "stage": "hip-deep",
       "kind": "peel",
-      "visible": 67,
+      "visible": 77,
       "removed": 16
     },
     {
@@ -372,13 +372,13 @@
       "stage": "bones",
       "kind": "skeleton",
       "visible": 5,
-      "removed": 78
+      "removed": 88
     },
     {
       "region": "thigh",
       "stage": "vascular",
       "kind": "window",
-      "visible": 27,
+      "visible": 37,
       "removed": 56
     },
     {
@@ -386,27 +386,27 @@
       "stage": "iliotibial-context",
       "kind": "window",
       "visible": 10,
-      "removed": 73
+      "removed": 83
     },
     {
       "region": "leg",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 64,
+      "visible": 74,
       "removed": 0
     },
     {
       "region": "leg",
       "stage": "gastrocnemius-off",
       "kind": "peel",
-      "visible": 60,
+      "visible": 70,
       "removed": 4
     },
     {
       "region": "leg",
       "stage": "soleus-off",
       "kind": "peel",
-      "visible": 56,
+      "visible": 66,
       "removed": 8
     },
     {
@@ -414,20 +414,20 @@
       "stage": "deep-posterior",
       "kind": "window",
       "visible": 16,
-      "removed": 48
+      "removed": 58
     },
     {
       "region": "leg",
       "stage": "bones",
       "kind": "skeleton",
       "visible": 8,
-      "removed": 56
+      "removed": 66
     },
     {
       "region": "leg",
       "stage": "vascular",
       "kind": "window",
-      "visible": 30,
+      "visible": 40,
       "removed": 34
     },
     {
@@ -435,28 +435,28 @@
       "stage": "connective",
       "kind": "window",
       "visible": 14,
-      "removed": 50
+      "removed": 60
     },
     {
       "region": "leg",
       "stage": "knee-bones",
       "kind": "window",
       "visible": 8,
-      "removed": 56
+      "removed": 66
     },
     {
       "region": "leg",
       "stage": "knee-patella-off",
       "kind": "window",
       "visible": 6,
-      "removed": 58
+      "removed": 68
     },
     {
       "region": "leg",
       "stage": "knee-popliteus",
       "kind": "window",
       "visible": 8,
-      "removed": 56
+      "removed": 66
     },
     {
       "region": "foot",
@@ -553,21 +553,21 @@
       "region": "thorax",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 153,
+      "visible": 155,
       "removed": 0
     },
     {
       "region": "thorax",
       "stage": "pectoral",
       "kind": "peel",
-      "visible": 151,
+      "visible": 153,
       "removed": 2
     },
     {
       "region": "thorax",
       "stage": "intercostal",
       "kind": "peel",
-      "visible": 148,
+      "visible": 150,
       "removed": 5
     },
     {
@@ -575,27 +575,27 @@
       "stage": "organs",
       "kind": "window",
       "visible": 9,
-      "removed": 144
+      "removed": 146
     },
     {
       "region": "thorax",
       "stage": "central",
       "kind": "window",
       "visible": 4,
-      "removed": 149
+      "removed": 151
     },
     {
       "region": "thorax",
       "stage": "bones",
       "kind": "skeleton",
       "visible": 39,
-      "removed": 114
+      "removed": 116
     },
     {
       "region": "thorax",
       "stage": "vascular",
       "kind": "window",
-      "visible": 107,
+      "visible": 109,
       "removed": 46
     },
     {
@@ -603,42 +603,42 @@
       "stage": "connective",
       "kind": "window",
       "visible": 64,
-      "removed": 89
+      "removed": 91
     },
     {
       "region": "thorax",
       "stage": "central-airway-window",
       "kind": "window",
       "visible": 42,
-      "removed": 111
+      "removed": 113
     },
     {
       "region": "thorax",
       "stage": "rib-elevator-sets",
       "kind": "window",
       "visible": 38,
-      "removed": 115
+      "removed": 117
     },
     {
       "region": "thorax",
       "stage": "bronchial-arterial-window",
       "kind": "window",
       "visible": 7,
-      "removed": 146
+      "removed": 148
     },
     {
       "region": "thorax",
       "stage": "oesophageal-arterial-window",
       "kind": "window",
       "visible": 4,
-      "removed": 149
+      "removed": 151
     },
     {
       "region": "thorax",
       "stage": "thoracic-small-arteries-exposed",
       "kind": "window",
       "visible": 6,
-      "removed": 147
+      "removed": 149
     },
     {
       "region": "abdomen",
@@ -770,21 +770,21 @@
       "region": "pelvis",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 65,
+      "visible": 67,
       "removed": 0
     },
     {
       "region": "pelvis",
       "stage": "gluteal-surface",
       "kind": "peel",
-      "visible": 63,
+      "visible": 65,
       "removed": 2
     },
     {
       "region": "pelvis",
       "stage": "gluteal-deep",
       "kind": "peel",
-      "visible": 61,
+      "visible": 63,
       "removed": 4
     },
     {
@@ -792,48 +792,48 @@
       "stage": "pelvic-window",
       "kind": "window",
       "visible": 4,
-      "removed": 61
+      "removed": 63
     },
     {
       "region": "pelvis",
       "stage": "bones",
       "kind": "skeleton",
       "visible": 5,
-      "removed": 60
+      "removed": 62
     },
     {
       "region": "pelvis",
       "stage": "vascular",
       "kind": "window",
       "visible": 27,
-      "removed": 38
+      "removed": 40
     },
     {
       "region": "pelvis",
       "stage": "pelvic-organs",
       "kind": "window",
-      "visible": 18,
+      "visible": 20,
       "removed": 47
     },
     {
       "region": "head-neck",
       "stage": "assembled",
       "kind": "assembled",
-      "visible": 279,
+      "visible": 281,
       "removed": 0
     },
     {
       "region": "head-neck",
       "stage": "platysma",
       "kind": "peel",
-      "visible": 277,
+      "visible": 279,
       "removed": 2
     },
     {
       "region": "head-neck",
       "stage": "neck-deep",
       "kind": "peel",
-      "visible": 275,
+      "visible": 277,
       "removed": 4
     },
     {
@@ -841,27 +841,27 @@
       "stage": "cranial",
       "kind": "window",
       "visible": 53,
-      "removed": 226
+      "removed": 228
     },
     {
       "region": "head-neck",
       "stage": "orbital",
       "kind": "window",
       "visible": 44,
-      "removed": 235
+      "removed": 237
     },
     {
       "region": "head-neck",
       "stage": "bones",
       "kind": "skeleton",
       "visible": 30,
-      "removed": 249
+      "removed": 251
     },
     {
       "region": "head-neck",
       "stage": "vascular",
       "kind": "window",
-      "visible": 57,
+      "visible": 59,
       "removed": 222
     },
     {
@@ -869,147 +869,147 @@
       "stage": "connective",
       "kind": "window",
       "visible": 74,
-      "removed": 205
+      "removed": 207
     },
     {
       "region": "head-neck",
       "stage": "gland-window",
       "kind": "window",
       "visible": 36,
-      "removed": 243
+      "removed": 245
     },
     {
       "region": "head-neck",
       "stage": "deep-brain",
       "kind": "window",
       "visible": 22,
-      "removed": 257
+      "removed": 259
     },
     {
       "region": "head-neck",
       "stage": "basal-nuclei",
       "kind": "window",
       "visible": 8,
-      "removed": 271
+      "removed": 273
     },
     {
       "region": "head-neck",
       "stage": "limbic-detail",
       "kind": "window",
       "visible": 9,
-      "removed": 270
+      "removed": 272
     },
     {
       "region": "head-neck",
       "stage": "dental-arches",
       "kind": "window",
       "visible": 31,
-      "removed": 248
+      "removed": 250
     },
     {
       "region": "head-neck",
       "stage": "upper-dental-arch",
       "kind": "window",
       "visible": 14,
-      "removed": 265
+      "removed": 267
     },
     {
       "region": "head-neck",
       "stage": "lower-dental-arch",
       "kind": "window",
       "visible": 14,
-      "removed": 265
+      "removed": 267
     },
     {
       "region": "head-neck",
       "stage": "orbital-tendinous-rings",
       "kind": "window",
       "visible": 12,
-      "removed": 267
+      "removed": 269
     },
     {
       "region": "head-neck",
       "stage": "superior-oblique-pulleys",
       "kind": "window",
       "visible": 6,
-      "removed": 273
+      "removed": 275
     },
     {
       "region": "head-neck",
       "stage": "epiglottis-laryngeal-window",
       "kind": "window",
       "visible": 6,
-      "removed": 273
+      "removed": 275
     },
     {
       "region": "head-neck",
       "stage": "eyelid-tarsal-window",
       "kind": "window",
       "visible": 8,
-      "removed": 271
+      "removed": 273
     },
     {
       "region": "head-neck",
       "stage": "lacrimal-drainage-window",
       "kind": "window",
       "visible": 10,
-      "removed": 269
+      "removed": 271
     },
     {
       "region": "head-neck",
       "stage": "nasolacrimal-bone-window",
       "kind": "window",
       "visible": 8,
-      "removed": 271
+      "removed": 273
     },
     {
       "region": "head-neck",
       "stage": "thyrohyoid-membrane-window",
       "kind": "window",
       "visible": 7,
-      "removed": 272
+      "removed": 274
     },
     {
       "region": "head-neck",
       "stage": "vocal-ligament-muscle-window",
       "kind": "window",
       "visible": 8,
-      "removed": 271
+      "removed": 273
     },
     {
       "region": "head-neck",
       "stage": "posterior-laryngeal-muscle-window",
       "kind": "window",
       "visible": 10,
-      "removed": 269
+      "removed": 271
     },
     {
       "region": "head-neck",
       "stage": "pharyngeal-muscle-window",
       "kind": "window",
       "visible": 12,
-      "removed": 267
+      "removed": 269
     },
     {
       "region": "head-neck",
       "stage": "orbital-motor-iii-superior",
       "kind": "window",
       "visible": 8,
-      "removed": 271
+      "removed": 273
     },
     {
       "region": "head-neck",
       "stage": "orbital-motor-iii-inferior",
       "kind": "window",
       "visible": 10,
-      "removed": 269
+      "removed": 271
     },
     {
       "region": "head-neck",
       "stage": "orbital-motor-iv",
       "kind": "window",
       "visible": 6,
-      "removed": 273
+      "removed": 275
     },
     {
       "region": "spine",

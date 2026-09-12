@@ -24,7 +24,10 @@
     "lib/venous-drainage.ts": "461295771de1b34288fb3db0b87833d1398b60f81eb88b4a410b18bed608524c",
     "public/models/bodyparts3d/portal-veins/catalog.json": "2ce331f3cecbd67a2fe75f873c79d0c187b67fc4131b34cab8a44833c4a37ae8",
     "docs/portal-vein-source-audit.json": "506b3aca1b61897dcb4f625c189e243a423957c0438f08baa42ae53a742ef5aa",
-    "lib/limb-vascular-studies.ts": "3881a406812f89ac6d933f036b3c3ef5d6f0daa6e057bcb1c0cea4b2a4c3114a",
+    "lib/limb-vascular-studies.ts": "470fb495c83453b4e889dee3be379a9ec494f1e439cd81ae1701415c1a7ba27e",
+    "lib/arm-vascular-studies.ts": "24996e2997a84263322436050fc7765ae97ca178595b09f34a21b23736ec6c51",
+    "content/arm-vascular-studies.ts": "4def11852e5843a9ee57a298d4f69758f0b7bd2451f627a951985ca90bb15d0d",
+    "content/arm-vascular-study-pins.json": "534d166d46212fedb3316c8113162f7e18ab70fe0adea43501af475796b92374",
     "content/limb-vascular-studies.ts": "825f08810f16ae4d409e89a6579f78f739843d192cdb2f9946314c1c30227908",
     "content/limb-vascular-study-pins.json": "2d0508aa622e396af8aa7412403c0ccf58bccc06ea4d5d1f9c6c9310d96c4876",
     "public/models/bodyparts3d/deep-leg-veins/catalog.json": "bc3c1c7418d8fe31ef94b6fb8b74d20fe54d8e0f2e67aef4df3c1182b68d137a",
@@ -222,7 +225,7 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "ea6c12ff6ef6e09927a0704305eb3a59d390b451d3400e66c746ab6d3ea69665",
+    "resolvedContentAndRecipeData": "6868816dd47f7702c118d385957fa4b59be7be015823b316f372753e50da95a6",
     "explicitTopicReadiness": "e9c07a7b96e39d5363f292de777cf2fe610400a174c98ac3acbe8eb4559ab60a",
     "reasoningQuestionData": "caafb323ca7d5a04971f91ad369d68c3a8da5e43839b39d8cd76192d1497bad2",
     "nestedTeachingData": "8e14e4e7b62141619825ebe604bc8cfddba30a80629162aa70818b7dc7c09350"
@@ -411,6 +414,17 @@
       "regions": [
         "leg",
         "thigh"
+      ],
+      "sourceAndFrameChecked": true,
+      "geometryChanged": false,
+      "clinicalApproval": false
+    },
+    "armVascularStudies": {
+      "studies": 2,
+      "sourceSelections": 22,
+      "regions": [
+        "shoulder-arm",
+        "whole-body"
       ],
       "sourceAndFrameChecked": true,
       "geometryChanged": false,
@@ -1029,7 +1043,7 @@
     "pulmonaryAirwayContexts": 2,
     "ventricularRelationshipPresets": 3,
     "stages": 159,
-    "focuses": 161
+    "focuses": 165
   },
   "practice": {
     "identificationModes": [

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "reviewStatus": "draft-unvalidated",
-  "displayCatalogSha256": "3f59bfdf91d398d2857ed34e6fb5c51f1f716ca1258075dd3e7d9443144aa76b",
+  "displayCatalogSha256": "e8c3cd0235bd5fca121cb8db58fba2b025839d8c99bb8a7776073016b61c10a0",
   "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
   "profiles": [
     {
@@ -19,7 +19,11 @@
         "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
         "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
         "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
-        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf"
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html"
       ],
       "stages": [
         {
@@ -1072,7 +1076,25 @@
             "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein",
             "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
             "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
-            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli"
+            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli",
+            "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+            "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
+            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct"
           ]
         },
         {
@@ -1771,7 +1793,9 @@
             "vm:anatomy:body:head-neck:right:organ:right-nasolacrimal-duct",
             "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
             "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
-            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac"
+            "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac",
+            "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
+            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct"
           ]
         },
         {
@@ -2532,7 +2556,23 @@
             "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:middle-hepatic-vein",
             "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
-            "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein"
+            "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
           ]
         },
         {
@@ -3215,7 +3255,19 @@
             "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
             "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
             "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
-            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery"
+            "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
+            "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
           ]
         },
         {
@@ -3505,7 +3557,11 @@
             "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
             "vm:anatomy:body:abdomen:unspecified:vessel:middle-hepatic-vein",
             "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
-            "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein"
+            "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein"
           ]
         },
         {
@@ -3741,6 +3797,226 @@
             "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
             "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli"
           ]
+        },
+        {
+          "id": "knee-genicular-arteries",
+          "title": "Knee: genicular arteries",
+          "rule": {
+            "fmaIds": [
+              "FMA22562",
+              "FMA22563",
+              "FMA22586",
+              "FMA22587",
+              "FMA22588",
+              "FMA22589",
+              "FMA43890",
+              "FMA43891",
+              "FMA43892",
+              "FMA43893",
+              "FMA77380",
+              "FMA77381"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA24474",
+                "FMA24475",
+                "FMA24477",
+                "FMA24478",
+                "FMA24480",
+                "FMA24481",
+                "FMA24486",
+                "FMA24487",
+                "FMA22591",
+                "FMA22592"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Inspect five source-labelled genicular branches per side with the popliteal artery, popliteus and knee bones. Choose Left or Right for one knee; other muscles are set aside.",
+          "inspect": "Select a branch, then use Arterial connections to find its typical popliteal parent. Hide popliteus or a bone to inspect covered surfaces; Undo restores it. Extract selected sets one structure aside. Return separation to 0% for the original source positions. The close-up is camera framing, not a new segmentation: whole bones remain selectable. Each middle genicular group contains two disconnected pieces. This is not a complete anastomotic network, continuous lumen, popliteal-fossa dissection or registered scan; nerves, veins, capsule and ligaments are not included in this view. Clinical review is pending.",
+          "landmarks": [
+            "genicular artery$",
+            "popliteal artery$",
+            "popliteus$",
+            "patella$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:thigh:left:bone:left-femur",
+            "vm:anatomy:body:leg:left:bone:left-fibula",
+            "vm:anatomy:body:leg:left:bone:left-patella",
+            "vm:anatomy:body:leg:left:bone:left-tibia",
+            "vm:anatomy:body:thigh:right:bone:right-femur",
+            "vm:anatomy:body:leg:right:bone:right-fibula",
+            "vm:anatomy:body:leg:right:bone:right-patella",
+            "vm:anatomy:body:leg:right:bone:right-tibia",
+            "vm:anatomy:body:leg:right:muscle:right-popliteus",
+            "vm:anatomy:body:leg:left:muscle:left-popliteus",
+            "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+            "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+            "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
+          ]
+        },
+        {
+          "id": "pelvis-deferent-ducts",
+          "title": "Male pelvis: deferent ducts",
+          "rule": {
+            "fmaIds": [
+              "FMA19236",
+              "FMA19235"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA15900",
+                "FMA9600",
+                "FMA19387",
+                "FMA19388",
+                "FMA7211",
+                "FMA7212",
+                "FMA15571",
+                "FMA15572"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Follow the two source-labelled deferent ducts with the testes, seminal vesicles, prostate, bladder and ureters. Choose a side to reduce the context.",
+          "inspect": "Select a duct or remove a covering structure; Undo restores it. Extract selected sets one structure aside. Return separation to 0% to compare original source positions. The source surfaces are retained whole: proximity does not prove a joined lumen or exact duct junction. Epididymides, ejaculatory ducts, spermatic-cord coverings and nerves are not included. This is an anatomical reference view, not an operative approach or registered scan. Clinical review is pending.",
+          "landmarks": [
+            "deferent duct$",
+            "seminal vesicle$",
+            "prostate$",
+            "urinary bladder$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:pelvis:unpaired:organ:urinary-bladder",
+            "vm:anatomy:body:pelvis:unpaired:organ:prostate",
+            "vm:anatomy:body:pelvis:right:organ:right-testis",
+            "vm:anatomy:body:pelvis:left:organ:left-testis",
+            "vm:anatomy:body:pelvis:right:organ:right-seminal-vesicle",
+            "vm:anatomy:body:pelvis:left:organ:left-seminal-vesicle",
+            "vm:anatomy:body:abdomen:right:organ:right-ureter",
+            "vm:anatomy:body:abdomen:left:organ:left-ureter",
+            "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
+            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct"
+          ]
+        },
+        {
+          "id": "arm-anterior-vessels",
+          "title": "Arm: brachial vessels & flexors",
+          "rule": {
+            "fmaIds": [
+              "FMA22691",
+              "FMA22692",
+              "FMA22935",
+              "FMA22936"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA23130",
+                "FMA23131",
+                "FMA37665",
+                "FMA37666",
+                "FMA37668",
+                "FMA37669",
+                "FMA37684",
+                "FMA37685",
+                "FMA37686",
+                "FMA37687"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the brachial artery and supplied medial brachial vein with the biceps heads, brachialis, coracobrachialis and humerus. Choose Left or Right for one arm.",
+          "inspect": "Select and hide either biceps head to inspect deeper structures; Undo restores it. The medial brachial vein is one source-labelled selection, not the complete paired venous system. Use Arterial connections or Venous drainage on a selected vessel to explore its separately documented relationships. Extract selected sets one surface aside. Whole source surfaces remain intact. Nerves, fascial planes, complete companion veins and a validated lumen are absent. Separation changes the display, not anatomy; return to 0% to restore source positions. This is not a surgical approach or a patient scan.",
+          "landmarks": [
+            "brachial artery$",
+            "medial brachial vein$",
+            "brachialis$",
+            "coracobrachialis$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+            "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+            "vm:anatomy:body:shoulder-arm:right:muscle:right-brachialis",
+            "vm:anatomy:body:shoulder-arm:left:muscle:left-brachialis",
+            "vm:anatomy:body:shoulder-arm:right:muscle:right-coracobrachialis",
+            "vm:anatomy:body:shoulder-arm:left:muscle:left-coracobrachialis",
+            "vm:anatomy:body:shoulder-arm:right:muscle:short-head-of-right-biceps-brachii",
+            "vm:anatomy:body:shoulder-arm:left:muscle:short-head-of-left-biceps-brachii",
+            "vm:anatomy:body:shoulder-arm:right:muscle:long-head-of-right-biceps-brachii",
+            "vm:anatomy:body:shoulder-arm:left:muscle:long-head-of-left-biceps-brachii",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
+          ]
+        },
+        {
+          "id": "arm-posterior-vessels",
+          "title": "Arm: deep brachial artery & triceps",
+          "rule": {
+            "fmaIds": [
+              "FMA22696",
+              "FMA22697"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA23130",
+                "FMA23131",
+                "FMA22691",
+                "FMA22692",
+                "FMA37695",
+                "FMA37696",
+                "FMA37697",
+                "FMA37698",
+                "FMA37699",
+                "FMA37700"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Inspect the deep brachial (profunda brachii) artery with the three source-labelled triceps heads, humerus and brachial artery. The anterior arm muscles are set aside.",
+          "inspect": "Hide the lateral or long triceps head to compare the deeper source surfaces, then Undo. The deep brachial artery normally relates to the posterior humeral shaft and radial nerve; the nerve itself is not modelled here. The visible artery surfaces do not prove a joined origin, complete collateral network or radial-groove contact. Extract selected separates one target without moving the other structures. Whole source surfaces remain intact. Nerves, fascial planes, complete companion veins and a validated lumen are absent. Separation changes the display, not anatomy; return to 0% to restore source positions. This is not a surgical approach or a patient scan.",
+          "landmarks": [
+            "deep brachial artery$",
+            "medial head of .*triceps",
+            "lateral head of .*triceps",
+            "humerus$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+            "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+            "vm:anatomy:body:shoulder-arm:right:muscle:medial-head-of-right-triceps-brachii",
+            "vm:anatomy:body:shoulder-arm:left:muscle:medial-head-of-left-triceps-brachii",
+            "vm:anatomy:body:shoulder-arm:right:muscle:lateral-head-of-right-triceps-brachii",
+            "vm:anatomy:body:shoulder-arm:left:muscle:lateral-head-of-left-triceps-brachii",
+            "vm:anatomy:body:shoulder-arm:right:muscle:long-head-of-right-triceps-brachii",
+            "vm:anatomy:body:shoulder-arm:left:muscle:long-head-of-left-triceps-brachii",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-deep-brachial-artery"
+          ]
         }
       ]
     },
@@ -3754,7 +4030,9 @@
       ],
       "references": [
         "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
-        "https://anatomy.elpaso.ttuhsc.edu/schemes/forearm_tables.html"
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/forearm_tables.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html"
       ],
       "stages": [
         {
@@ -3858,7 +4136,13 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein",
+            "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
           ]
         },
         {
@@ -3968,7 +4252,13 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein",
+            "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
           ]
         },
         {
@@ -4070,7 +4360,13 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein",
+            "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
           ]
         },
         {
@@ -4209,7 +4505,13 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein",
+            "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
           ]
         },
         {
@@ -4403,7 +4705,9 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
-            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
+            "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+            "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
           ]
         },
         {
@@ -4436,7 +4740,11 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
             "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein"
           ]
         },
         {
@@ -4476,6 +4784,110 @@
             "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
             "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery"
+          ]
+        },
+        {
+          "id": "arm-anterior-vessels",
+          "title": "Arm: brachial vessels & flexors",
+          "rule": {
+            "fmaIds": [
+              "FMA22691",
+              "FMA22692",
+              "FMA22935",
+              "FMA22936"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA23130",
+                "FMA23131",
+                "FMA37665",
+                "FMA37666",
+                "FMA37668",
+                "FMA37669",
+                "FMA37684",
+                "FMA37685",
+                "FMA37686",
+                "FMA37687"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the brachial artery and supplied medial brachial vein with the biceps heads, brachialis, coracobrachialis and humerus. Choose Left or Right for one arm.",
+          "inspect": "Select and hide either biceps head to inspect deeper structures; Undo restores it. The medial brachial vein is one source-labelled selection, not the complete paired venous system. Use Arterial connections or Venous drainage on a selected vessel to explore its separately documented relationships. Extract selected sets one surface aside. Whole source surfaces remain intact. Nerves, fascial planes, complete companion veins and a validated lumen are absent. Separation changes the display, not anatomy; return to 0% to restore source positions. This is not a surgical approach or a patient scan.",
+          "landmarks": [
+            "brachial artery$",
+            "medial brachial vein$",
+            "brachialis$",
+            "coracobrachialis$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+            "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+            "vm:anatomy:body:shoulder-arm:right:muscle:right-brachialis",
+            "vm:anatomy:body:shoulder-arm:left:muscle:left-brachialis",
+            "vm:anatomy:body:shoulder-arm:right:muscle:right-coracobrachialis",
+            "vm:anatomy:body:shoulder-arm:left:muscle:left-coracobrachialis",
+            "vm:anatomy:body:shoulder-arm:right:muscle:short-head-of-right-biceps-brachii",
+            "vm:anatomy:body:shoulder-arm:left:muscle:short-head-of-left-biceps-brachii",
+            "vm:anatomy:body:shoulder-arm:right:muscle:long-head-of-right-biceps-brachii",
+            "vm:anatomy:body:shoulder-arm:left:muscle:long-head-of-left-biceps-brachii",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
+          ]
+        },
+        {
+          "id": "arm-posterior-vessels",
+          "title": "Arm: deep brachial artery & triceps",
+          "rule": {
+            "fmaIds": [
+              "FMA22696",
+              "FMA22697"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA23130",
+                "FMA23131",
+                "FMA22691",
+                "FMA22692",
+                "FMA37695",
+                "FMA37696",
+                "FMA37697",
+                "FMA37698",
+                "FMA37699",
+                "FMA37700"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Inspect the deep brachial (profunda brachii) artery with the three source-labelled triceps heads, humerus and brachial artery. The anterior arm muscles are set aside.",
+          "inspect": "Hide the lateral or long triceps head to compare the deeper source surfaces, then Undo. The deep brachial artery normally relates to the posterior humeral shaft and radial nerve; the nerve itself is not modelled here. The visible artery surfaces do not prove a joined origin, complete collateral network or radial-groove contact. Extract selected separates one target without moving the other structures. Whole source surfaces remain intact. Nerves, fascial planes, complete companion veins and a validated lumen are absent. Separation changes the display, not anatomy; return to 0% to restore source positions. This is not a surgical approach or a patient scan.",
+          "landmarks": [
+            "deep brachial artery$",
+            "medial head of .*triceps",
+            "lateral head of .*triceps",
+            "humerus$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+            "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+            "vm:anatomy:body:shoulder-arm:right:muscle:medial-head-of-right-triceps-brachii",
+            "vm:anatomy:body:shoulder-arm:left:muscle:medial-head-of-left-triceps-brachii",
+            "vm:anatomy:body:shoulder-arm:right:muscle:lateral-head-of-right-triceps-brachii",
+            "vm:anatomy:body:shoulder-arm:left:muscle:lateral-head-of-left-triceps-brachii",
+            "vm:anatomy:body:shoulder-arm:right:muscle:long-head-of-right-triceps-brachii",
+            "vm:anatomy:body:shoulder-arm:left:muscle:long-head-of-left-triceps-brachii",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:right:vessel:right-deep-brachial-artery",
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-deep-brachial-artery"
           ]
         }
       ]
@@ -4570,7 +4982,11 @@
             "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
             "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein"
           ]
         },
         {
@@ -4647,7 +5063,11 @@
             "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
             "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein"
           ]
         },
         {
@@ -4724,7 +5144,11 @@
             "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
             "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein"
           ]
         },
         {
@@ -4789,7 +5213,11 @@
             "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
             "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein"
           ]
         },
         {
@@ -4854,7 +5282,11 @@
             "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
             "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein"
           ]
         },
         {
@@ -5366,7 +5798,11 @@
             "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
             "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
+            "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
+            "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein"
           ]
         },
         {
@@ -8172,7 +8608,17 @@
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
             "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
             "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
-            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein"
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein",
+            "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
           ]
         },
         {
@@ -8271,7 +8717,17 @@
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
             "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
             "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
-            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein"
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein",
+            "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
           ]
         },
         {
@@ -8369,7 +8825,17 @@
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
             "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
             "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
-            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein"
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein",
+            "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
           ]
         },
         {
@@ -8460,7 +8926,17 @@
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
             "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
             "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
-            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein"
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein",
+            "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
           ]
         },
         {
@@ -8550,7 +9026,17 @@
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
             "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
             "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
-            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein"
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein",
+            "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
           ]
         },
         {
@@ -8619,7 +9105,17 @@
             "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
             "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
             "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
-            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein"
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein",
+            "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
           ]
         },
         {
@@ -8818,7 +9314,17 @@
             "vm:anatomy:body:thigh:right:vessel:right-femoral-artery",
             "vm:anatomy:body:thigh:left:vessel:left-femoral-artery",
             "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
-            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery"
+            "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery",
+            "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
           ]
         },
         {
@@ -8969,7 +9475,8 @@
         "https://anatomy.ttuhscep.edu/anatomytables/joints_lowerlimb.html",
         "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html",
         "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
-        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5381851/"
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5381851/",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html"
       ],
       "stages": [
         {
@@ -9044,7 +9551,17 @@
             "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
             "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
             "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
-            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein"
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
           ]
         },
         {
@@ -9126,7 +9643,17 @@
             "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
             "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
             "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
-            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein"
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
           ]
         },
         {
@@ -9205,7 +9732,17 @@
             "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
             "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
             "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
-            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein"
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
           ]
         },
         {
@@ -9323,7 +9860,17 @@
             "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
             "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
             "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
-            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein"
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein",
+            "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
           ]
         },
         {
@@ -9583,7 +10130,17 @@
             "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-artery",
             "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-artery",
             "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-artery",
-            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-artery"
+            "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-artery",
+            "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
           ]
         },
         {
@@ -9884,6 +10441,76 @@
             "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-artery",
             "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
             "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein"
+          ]
+        },
+        {
+          "id": "knee-genicular-arteries",
+          "title": "Knee: genicular arteries",
+          "rule": {
+            "fmaIds": [
+              "FMA22562",
+              "FMA22563",
+              "FMA22586",
+              "FMA22587",
+              "FMA22588",
+              "FMA22589",
+              "FMA43890",
+              "FMA43891",
+              "FMA43892",
+              "FMA43893",
+              "FMA77380",
+              "FMA77381"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA24474",
+                "FMA24475",
+                "FMA24477",
+                "FMA24478",
+                "FMA24480",
+                "FMA24481",
+                "FMA24486",
+                "FMA24487",
+                "FMA22591",
+                "FMA22592"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Inspect five source-labelled genicular branches per side with the popliteal artery, popliteus and knee bones. Choose Left or Right for one knee; other muscles are set aside.",
+          "inspect": "Select a branch, then use Arterial connections to find its typical popliteal parent. Hide popliteus or a bone to inspect covered surfaces; Undo restores it. Extract selected sets one structure aside. Return separation to 0% for the original source positions. The close-up is camera framing, not a new segmentation: whole bones remain selectable. Each middle genicular group contains two disconnected pieces. This is not a complete anastomotic network, continuous lumen, popliteal-fossa dissection or registered scan; nerves, veins, capsule and ligaments are not included in this view. Clinical review is pending.",
+          "landmarks": [
+            "genicular artery$",
+            "popliteal artery$",
+            "popliteus$",
+            "patella$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:thigh:left:bone:left-femur",
+            "vm:anatomy:body:leg:left:bone:left-fibula",
+            "vm:anatomy:body:leg:left:bone:left-patella",
+            "vm:anatomy:body:leg:left:bone:left-tibia",
+            "vm:anatomy:body:thigh:right:bone:right-femur",
+            "vm:anatomy:body:leg:right:bone:right-fibula",
+            "vm:anatomy:body:leg:right:bone:right-patella",
+            "vm:anatomy:body:leg:right:bone:right-tibia",
+            "vm:anatomy:body:leg:right:muscle:right-popliteus",
+            "vm:anatomy:body:leg:left:muscle:left-popliteus",
+            "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+            "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+            "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+            "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+            "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery"
           ]
         }
       ]
@@ -11851,7 +12478,9 @@
             "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
             "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
             "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
-            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
+            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
+            "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
           ]
         },
         {
@@ -12024,7 +12653,9 @@
             "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
             "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
             "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
-            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
+            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
+            "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
           ]
         },
         {
@@ -12194,7 +12825,9 @@
             "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
             "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
             "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
-            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
+            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
+            "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
           ]
         },
         {
@@ -12444,7 +13077,9 @@
             "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
             "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
             "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
-            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
+            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
+            "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
           ]
         },
         {
@@ -12990,7 +13625,9 @@
             "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
             "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
             "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
-            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta"
+            "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
+            "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
           ]
         },
         {
@@ -15037,7 +15674,8 @@
         "Coccygeus and the source-labelled superficial perineal muscle do not constitute a complete pelvic floor."
       ],
       "references": [
-        "https://anatomy.ttuhscep.edu/reproductive_system/pelvicvisc_tables.html"
+        "https://anatomy.ttuhscep.edu/reproductive_system/pelvicvisc_tables.html",
+        "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html"
       ],
       "stages": [
         {
@@ -15113,7 +15751,9 @@
             "vm:anatomy:body:pelvis:unpaired:organ:urethra",
             "vm:anatomy:body:abdomen:unpaired:organ:appendix",
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
-            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+            "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
+            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct"
           ]
         },
         {
@@ -15198,7 +15838,9 @@
             "vm:anatomy:body:pelvis:unpaired:organ:urethra",
             "vm:anatomy:body:abdomen:unpaired:organ:appendix",
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
-            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+            "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
+            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct"
           ]
         },
         {
@@ -15282,7 +15924,9 @@
             "vm:anatomy:body:pelvis:unpaired:organ:urethra",
             "vm:anatomy:body:abdomen:unpaired:organ:appendix",
             "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
-            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract"
+            "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+            "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
+            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct"
           ]
         },
         {
@@ -15414,7 +16058,9 @@
             "vm:anatomy:body:pelvis:right:organ:right-epididymis",
             "vm:anatomy:body:pelvis:left:organ:left-epididymis",
             "vm:anatomy:body:pelvis:unpaired:organ:urethra",
-            "vm:anatomy:body:abdomen:unpaired:organ:appendix"
+            "vm:anatomy:body:abdomen:unpaired:organ:appendix",
+            "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
+            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct"
           ]
         }
       ],
@@ -15521,6 +16167,52 @@
             "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
             "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
             "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein"
+          ]
+        },
+        {
+          "id": "pelvis-deferent-ducts",
+          "title": "Male pelvis: deferent ducts",
+          "rule": {
+            "fmaIds": [
+              "FMA19236",
+              "FMA19235"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA15900",
+                "FMA9600",
+                "FMA19387",
+                "FMA19388",
+                "FMA7211",
+                "FMA7212",
+                "FMA15571",
+                "FMA15572"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Follow the two source-labelled deferent ducts with the testes, seminal vesicles, prostate, bladder and ureters. Choose a side to reduce the context.",
+          "inspect": "Select a duct or remove a covering structure; Undo restores it. Extract selected sets one structure aside. Return separation to 0% to compare original source positions. The source surfaces are retained whole: proximity does not prove a joined lumen or exact duct junction. Epididymides, ejaculatory ducts, spermatic-cord coverings and nerves are not included. This is an anatomical reference view, not an operative approach or registered scan. Clinical review is pending.",
+          "landmarks": [
+            "deferent duct$",
+            "seminal vesicle$",
+            "prostate$",
+            "urinary bladder$"
+          ],
+          "visibleStructureIds": [
+            "vm:anatomy:body:pelvis:unpaired:organ:urinary-bladder",
+            "vm:anatomy:body:pelvis:unpaired:organ:prostate",
+            "vm:anatomy:body:pelvis:right:organ:right-testis",
+            "vm:anatomy:body:pelvis:left:organ:left-testis",
+            "vm:anatomy:body:pelvis:right:organ:right-seminal-vesicle",
+            "vm:anatomy:body:pelvis:left:organ:left-seminal-vesicle",
+            "vm:anatomy:body:abdomen:right:organ:right-ureter",
+            "vm:anatomy:body:abdomen:left:organ:left-ureter",
+            "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
+            "vm:anatomy:body:pelvis:right:organ:right-deferent-duct"
           ]
         }
       ]
@@ -15831,7 +16523,9 @@
             "vm:anatomy:body:head-neck:right:connective:tentorium-source-portion",
             "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
             "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
-            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli"
+            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
           ]
         },
         {
@@ -16130,7 +16824,9 @@
             "vm:anatomy:body:head-neck:right:connective:tentorium-source-portion",
             "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
             "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
-            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli"
+            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
           ]
         },
         {
@@ -16428,7 +17124,9 @@
             "vm:anatomy:body:head-neck:right:connective:tentorium-source-portion",
             "vm:anatomy:body:head-neck:left:muscle:superior-oblique-part-of-left-longus-colli",
             "vm:anatomy:body:head-neck:left:muscle:vertical-intermediate-part-of-left-longus-colli",
-            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli"
+            "vm:anatomy:body:head-neck:left:muscle:inferior-oblique-part-of-left-longus-colli",
+            "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
           ]
         },
         {
@@ -16695,7 +17393,9 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
             "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+            "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
           ]
         },
         {
@@ -17962,7 +18662,9 @@
             "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
             "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
             "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
-            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk"
+            "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+            "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+            "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery"
           ]
         },
         {

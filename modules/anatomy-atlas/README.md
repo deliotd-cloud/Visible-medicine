@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Shoulder & arm / Whole body → Study → search “brachial”** opens two [arm vascular dissection views](docs/ARM_VASCULAR_STUDIES.md): anterior brachial vessels with flexors, or the deep brachial artery with triceps. Choose a side, hide a muscle, extract a selected surface and Undo using the existing controls. Twenty-two original source selections are reused; nerves and complete companion veins remain absent, and clinical/device review is pending.
+
 The [female pelvic Learn panel](docs/HRA_FEMALE_PELVIS.md#structure-specific-teaching) now distinguishes 12 anatomical concepts across 17 source selections, with MRI, ultrasound and introductory clinical/pathology notes, two ovarian CT drafts and source-specific self-checks. Existing compact tabs are reused. All material is draft; this does not supply scans, diagnosis or registration.
 
 **Pelvis / Whole body → Female pelvis** opens a [separate HRA study](docs/HRA_FEMALE_PELVIS.md): 41 original source surfaces, eight compact dissection views and source-identification practice. Seventeen Anatomy/Function entries are draft; 24 remain unavailable. Six disputed/overlapping source groups are withheld. This is a separate CC BY 4.0 reference, not a complete female body, patient registration or clinical approval.

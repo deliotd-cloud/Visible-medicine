@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { build } from './workspace-test-build.mjs';
 import { renderRequirementSummary } from './requirement-summary.mjs';
 import { limbVascularStudySets, limbVascularSourceIds } from '../content/limb-vascular-studies.ts';
+import { armVascularStudies, armVascularSourceIds } from '../content/arm-vascular-studies.ts';
 import { genicularStudy, genicularStudySourceIds } from '../content/genicular-study.ts';
 import { deferentDuctStudy } from '../content/deferent-duct-study.ts';
 
@@ -289,6 +290,9 @@ for (const path of [
   'public/models/bodyparts3d/portal-veins/catalog.json',
   'docs/portal-vein-source-audit.json',
   'lib/limb-vascular-studies.ts',
+  'lib/arm-vascular-studies.ts',
+  'content/arm-vascular-studies.ts',
+  'content/arm-vascular-study-pins.json',
   'content/limb-vascular-studies.ts',
   'content/limb-vascular-study-pins.json',
   'public/models/bodyparts3d/deep-leg-veins/catalog.json',
@@ -620,6 +624,12 @@ const report = {
       studies: limbVascularStudySets.length,
       sourceSelections: catalog.structures.filter(s=>limbVascularSourceIds.includes(s.fmaId)).length,
       regions: [...new Set(limbVascularStudySets.flatMap(s=>s.regions))],
+      sourceAndFrameChecked: true, geometryChanged: false, clinicalApproval: false,
+    },
+    armVascularStudies: {
+      studies: armVascularStudies.length,
+      sourceSelections: catalog.structures.filter(s=>armVascularSourceIds.includes(s.fmaId)).length,
+      regions: [...new Set(armVascularStudies.flatMap(s=>s.regions))],
       sourceAndFrameChecked: true, geometryChanged: false, clinicalApproval: false,
     },
     deepLegVeins: {

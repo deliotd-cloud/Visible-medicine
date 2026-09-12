@@ -1,21 +1,15 @@
-import pins from '../content/limb-vascular-study-pins.json' with { type: 'json' };
-import { limbVascularStudySets } from '../content/limb-vascular-studies.ts';
+import pins from '../content/arm-vascular-study-pins.json' with { type: 'json' };
+import { armVascularStudies } from '../content/arm-vascular-studies.ts';
 import { sourceCanonical } from './body-source-additions.ts';
 import type { BodyCatalog } from '../app/body-types';
-import { genicularStudyReady } from './genicular-study.ts';
-import { deferentDuctStudyReady } from './deferent-ducts.ts';
-import { armVascularStudyReady } from './arm-vascular-studies.ts';
 
-/** Guard only this family; existing study families retain their own admissions. */
-export function limbVascularStudyReady(
+/** Source admission only. Never reuses a clinical approval or joins vessel ends. */
+export function armVascularStudyReady(
   catalog: BodyCatalog | null,
   region: string,
   recipeId: string | null,
 ) {
-  if (!armVascularStudyReady(catalog, region, recipeId)) return false;
-  if (!genicularStudyReady(catalog, region, recipeId)) return false;
-  if (!deferentDuctStudyReady(catalog, region, recipeId)) return false;
-  const study = limbVascularStudySets.find((s) => s.id === recipeId);
+  const study = armVascularStudies.find((s) => s.id === recipeId);
   if (!study) return true;
   if (
     !catalog ||
@@ -42,9 +36,10 @@ export function limbVascularStudyReady(
     )
       return false;
   }
-  for (const pin of pins.bundles.filter((b) =>
-    records.some((s) => s.bundle === b.id),
-  )) {
+  const bundles = new Set(records.map((s) => s.bundle));
+  const expected = pins.bundles.filter((b) => bundles.has(b.id));
+  if (expected.length !== bundles.size) return false;
+  for (const pin of expected) {
     const matches = catalog.bundles.filter(
       (b) => b.id === pin.id || b.url.split('?')[0] === pin.url.split('?')[0],
     );

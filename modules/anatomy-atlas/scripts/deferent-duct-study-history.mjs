@@ -2,8 +2,10 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import record from '../content/deferent-duct-study-transition.json' with { type: 'json' };
+import { preArmVascularProfiles } from './arm-vascular-study-history.mjs';
 const hash = (v) => createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function preDeferentDuctProfiles(profiles) {
+  profiles = preArmVascularProfiles(profiles);
   assert.equal(hash(record), '14d5396f9f5912ee19187a8cf7fc9b25f3fb39a75c3fe0a749361b16b76746e0');
   if (hash(profiles) !== record.after) return profiles;
   const previous = structuredClone(profiles);

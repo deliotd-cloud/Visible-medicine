@@ -98,7 +98,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "8a1fed57ddc2ef676ede958ecba768eff5c1731eb03f826b5c82cef8bdb3ae33"
+      "sha256": "799598d339f3f8f61bb4e4bf9bbd62ac6c04a6528edf37326bcc5a34cdbe86d2"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -327,6 +327,14 @@
     {
       "path": "content/abdominal-wall-teaching.ts",
       "sha256": "b0da512ba08095bb8516538b11f6f052f5e1bd052f2a418fc1015602fe8f5896"
+    },
+    {
+      "path": "content/arm-vascular-studies.ts",
+      "sha256": "4def11852e5843a9ee57a298d4f69758f0b7bd2451f627a951985ca90bb15d0d"
+    },
+    {
+      "path": "content/arm-vascular-study-pins.json",
+      "sha256": "534d166d46212fedb3316c8113162f7e18ab70fe0adea43501af475796b92374"
     },
     {
       "path": "content/brain-imaging-teaching.ts",
@@ -619,6 +627,10 @@
     {
       "path": "lib/anatomy-vessels.ts",
       "sha256": "3f1e5ef5ebb26101f4aa5cfeccf39a95915732047f1c84c80b14eba9c6469586"
+    },
+    {
+      "path": "lib/arm-vascular-studies.ts",
+      "sha256": "24996e2997a84263322436050fc7765ae97ca178595b09f34a21b23736ec6c51"
     },
     {
       "path": "lib/arterial.ts",
@@ -958,7 +970,7 @@
     },
     {
       "path": "lib/limb-vascular-studies.ts",
-      "sha256": "3881a406812f89ac6d933f036b3c3ef5d6f0daa6e057bcb1c0cea4b2a4c3114a"
+      "sha256": "470fb495c83453b4e889dee3be379a9ec494f1e439cd81ae1701415c1a7ba27e"
     },
     {
       "path": "lib/longus-colli.ts",
@@ -1461,5 +1473,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "1cdc64a6d3f4e5473e91ee8cb4a7bc5936a1df0cee842f13e7a2133063e5c789"
+  "sha256": "601e30509a8513597d99d84e8895e08944c46c3443d93e8f17c486484417149b"
 }

@@ -1,0 +1,197 @@
+{
+  "sourceCommit": "73ca79cea92f435fe40212c602dad407b4b3acd6",
+  "before": "e6cf75cd2ec70caffe461344b7d401c930102b77bcf0021e67a1dd28aadf6b7e",
+  "after": "6718d55292f24620477c701a8bc93ef39cf786f6a56f605b292abec294291644",
+  "patches": [
+    {
+      "region": "shoulder-arm",
+      "added": [
+        {
+          "id": "arm-anterior-vessels",
+          "title": "Arm: brachial vessels & flexors",
+          "rule": {
+            "fmaIds": [
+              "FMA22691",
+              "FMA22692",
+              "FMA22935",
+              "FMA22936"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA23130",
+                "FMA23131",
+                "FMA37665",
+                "FMA37666",
+                "FMA37668",
+                "FMA37669",
+                "FMA37684",
+                "FMA37685",
+                "FMA37686",
+                "FMA37687"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the brachial artery and supplied medial brachial vein with the biceps heads, brachialis, coracobrachialis and humerus. Choose Left or Right for one arm.",
+          "inspect": "Select and hide either biceps head to inspect deeper structures; Undo restores it. The medial brachial vein is one source-labelled selection, not the complete paired venous system. Use Arterial connections or Venous drainage on a selected vessel to explore its separately documented relationships. Extract selected sets one surface aside. Whole source surfaces remain intact. Nerves, fascial planes, complete companion veins and a validated lumen are absent. Separation changes the display, not anatomy; return to 0% to restore source positions. This is not a surgical approach or a patient scan.",
+          "landmarks": [
+            "brachial artery$",
+            "medial brachial vein$",
+            "brachialis$",
+            "coracobrachialis$"
+          ]
+        },
+        {
+          "id": "arm-posterior-vessels",
+          "title": "Arm: deep brachial artery & triceps",
+          "rule": {
+            "fmaIds": [
+              "FMA22696",
+              "FMA22697"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA23130",
+                "FMA23131",
+                "FMA22691",
+                "FMA22692",
+                "FMA37695",
+                "FMA37696",
+                "FMA37697",
+                "FMA37698",
+                "FMA37699",
+                "FMA37700"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Inspect the deep brachial (profunda brachii) artery with the three source-labelled triceps heads, humerus and brachial artery. The anterior arm muscles are set aside.",
+          "inspect": "Hide the lateral or long triceps head to compare the deeper source surfaces, then Undo. The deep brachial artery normally relates to the posterior humeral shaft and radial nerve; the nerve itself is not modelled here. The visible artery surfaces do not prove a joined origin, complete collateral network or radial-groove contact. Extract selected separates one target without moving the other structures. Whole source surfaces remain intact. Nerves, fascial planes, complete companion veins and a validated lumen are absent. Separation changes the display, not anatomy; return to 0% to restore source positions. This is not a surgical approach or a patient scan.",
+          "landmarks": [
+            "deep brachial artery$",
+            "medial head of .*triceps",
+            "lateral head of .*triceps",
+            "humerus$"
+          ]
+        }
+      ],
+      "referencesBefore": [
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/forearm_tables.html"
+      ],
+      "referencesAfter": [
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/forearm_tables.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html"
+      ]
+    },
+    {
+      "region": "whole-body",
+      "added": [
+        {
+          "id": "arm-anterior-vessels",
+          "title": "Arm: brachial vessels & flexors",
+          "rule": {
+            "fmaIds": [
+              "FMA22691",
+              "FMA22692",
+              "FMA22935",
+              "FMA22936"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA23130",
+                "FMA23131",
+                "FMA37665",
+                "FMA37666",
+                "FMA37668",
+                "FMA37669",
+                "FMA37684",
+                "FMA37685",
+                "FMA37686",
+                "FMA37687"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the brachial artery and supplied medial brachial vein with the biceps heads, brachialis, coracobrachialis and humerus. Choose Left or Right for one arm.",
+          "inspect": "Select and hide either biceps head to inspect deeper structures; Undo restores it. The medial brachial vein is one source-labelled selection, not the complete paired venous system. Use Arterial connections or Venous drainage on a selected vessel to explore its separately documented relationships. Extract selected sets one surface aside. Whole source surfaces remain intact. Nerves, fascial planes, complete companion veins and a validated lumen are absent. Separation changes the display, not anatomy; return to 0% to restore source positions. This is not a surgical approach or a patient scan.",
+          "landmarks": [
+            "brachial artery$",
+            "medial brachial vein$",
+            "brachialis$",
+            "coracobrachialis$"
+          ]
+        },
+        {
+          "id": "arm-posterior-vessels",
+          "title": "Arm: deep brachial artery & triceps",
+          "rule": {
+            "fmaIds": [
+              "FMA22696",
+              "FMA22697"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA23130",
+                "FMA23131",
+                "FMA22691",
+                "FMA22692",
+                "FMA37695",
+                "FMA37696",
+                "FMA37697",
+                "FMA37698",
+                "FMA37699",
+                "FMA37700"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "posterior",
+          "description": "Inspect the deep brachial (profunda brachii) artery with the three source-labelled triceps heads, humerus and brachial artery. The anterior arm muscles are set aside.",
+          "inspect": "Hide the lateral or long triceps head to compare the deeper source surfaces, then Undo. The deep brachial artery normally relates to the posterior humeral shaft and radial nerve; the nerve itself is not modelled here. The visible artery surfaces do not prove a joined origin, complete collateral network or radial-groove contact. Extract selected separates one target without moving the other structures. Whole source surfaces remain intact. Nerves, fascial planes, complete companion veins and a validated lumen are absent. Separation changes the display, not anatomy; return to 0% to restore source positions. This is not a surgical approach or a patient scan.",
+          "landmarks": [
+            "deep brachial artery$",
+            "medial head of .*triceps",
+            "lateral head of .*triceps",
+            "humerus$"
+          ]
+        }
+      ],
+      "referencesBefore": [
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/thigh_tables.html",
+        "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html"
+      ],
+      "referencesAfter": [
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/thigh_tables.html",
+        "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html"
+      ]
+    }
+  ]
+}
