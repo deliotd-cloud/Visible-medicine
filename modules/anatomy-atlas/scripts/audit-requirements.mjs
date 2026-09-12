@@ -24,6 +24,8 @@ const bundled = await build({
   stdin: {
     contents: `export { hraPelvisDefinition } from './lib/hra-pelvis.ts';
 export { hraPelvicTeaching, hraPelvicPractice } from './lib/hra-pelvis-teaching.ts';
+export { hraRenalDefinition } from './lib/hra-renal.ts';
+export { hraRenalTeaching, hraRenalPractice } from './lib/hra-renal-teaching.ts';
 export { limbDefinitions } from './lib/um-limb-studies.ts';
 export { specimenTeachingFor } from './lib/um-limb-teaching.ts';
 export { specimenMotorGroups } from './lib/um-limb-motor.ts';
@@ -71,6 +73,9 @@ const {
   hraPelvisDefinition,
   hraPelvicTeaching,
   hraPelvicPractice,
+  hraRenalDefinition,
+  hraRenalTeaching,
+  hraRenalPractice,
   abdominalWallDefinition,
   backLayersDefinition,
   backLayersTeachingFor,
@@ -521,6 +526,16 @@ for (const path of [
   'scripts/exclude-source-recovery.mjs',
   'app/abdominal-wall-study.tsx',
   'app/hra-pelvis-study.tsx',
+  'app/hra-renal-study.tsx',
+  'app/specimens/kidneys/page.tsx',
+  'lib/hra-renal.ts',
+  'lib/hra-renal-teaching.ts',
+  'content/hra-renal-teaching.ts',
+  'public/models/hra-renal/catalog.json',
+  'public/models/hra-renal/NOTICE.md',
+  'content/sources/hra-renal/metadata.json',
+  'content/sources/hra-renal/crosswalk.csv',
+  'docs/hra-renal-source-audit.json',
   'app/specimens/female-pelvis/page.tsx',
   'lib/hra-pelvis.ts',
   'lib/hra-pelvis-teaching.ts',
@@ -760,6 +775,17 @@ const report = {
       muscleSelections: new Set(upperLimbMotorRegions.flatMap(r => upperLimbMotorGroups(catalog, r).flatMap(g => g.targets.map(t => t.structure.id)))).size,
       relationships: upperLimbMotorRegions.reduce((n,r) => n + upperLimbMotorGroups(catalog,r).reduce((m,g) => m + g.targets.length,0),0),
       sourceAndFrameChecked: true, nerveGeometryAdded: false, clinicalApproval: false,
+    },
+    renalSpecimen: {
+      id: hraRenalDefinition.key, route: '/specimens/kidneys',
+      representations: hraRenalDefinition.surfaces.length,
+      triangles: hraRenalDefinition.surfaces.reduce((n,s)=>n+s.triangles,0),
+      studies: hraRenalDefinition.studies.length,
+      anatomyFunctionDrafts: hraRenalDefinition.surfaces.filter(s=>hraRenalTeaching(hraRenalDefinition,s)).length,
+      distinctAnatomyConcepts: new Set(hraRenalDefinition.surfaces.map(s=>hraRenalTeaching(hraRenalDefinition,s)?.anatomy).filter(Boolean)).size,
+      practiceTargets: hraRenalPractice.eligibleIds(hraRenalDefinition,hraRenalDefinition.surfaces.map(s=>s.id)).length,
+      heldGroups: 3, clinicalImagingDrafts: 0, source: hraRenalDefinition.source,
+      registeredToCurrentBody: false, realImaging: false, clinicalApproval: false, countedAsRootTeaching: false,
     },
     femalePelvicSpecimen: {
       id: hraPelvisDefinition.key, route: '/specimens/female-pelvis',

@@ -6,6 +6,8 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "hra-renal:export": "node scripts/export-hra-renal.mjs",
+    "hra-renal:test": "node scripts/retain-hra-renal-source.mjs --check && node scripts/export-hra-renal.mjs --check && node scripts/validate-hra-renal.mjs",
     "limbic-landmarks:test": "node scripts/export-limbic-landmarks.mjs --check && node scripts/record-limbic-landmark-study.mjs --check && node scripts/validate-limbic-landmarks.mjs",
     "pelvic-veins:test": "node scripts/export-pelvic-veins.mjs --check && node scripts/record-pelvic-vein-study.mjs --check && node scripts/validate-pelvic-veins.mjs",
     "longus-colli:test": "node scripts/export-longus-colli.mjs --check && node scripts/record-longus-colli-recipes.mjs --check && node scripts/validate-longus-colli.mjs",

@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Abdomen / Whole body → Kidney layers · separate reference** opens [nine guided kidney studies](docs/HRA_KIDNEY_SPECIMEN.md), also at `/specimens/kidneys`. Rotate, select, remove/restore, isolate or separate 82 original HRA surfaces. Compact controls and source-bound teaching are reused; arbitrary source-letter parts are excluded from identification questions. Three defective surfaces remain held. This CC BY 4.0 reference is not complete or registered patient anatomy; radiologist and device review remain pending.
+
 **Head & neck / Whole body → Study → Deep brain: septal landmarks** opens [four new source-preserved selections with seven existing references](docs/LIMBIC_LANDMARKS.md), using the compact Study menu and hide/Undo. Source fragments and laterality limits are explicit; the defective stria-terminalis compound remains offline. Introductory notes are drafts, not clinical sign-off.
 
 **Pelvis / Whole body → Study → Pelvic venous tributaries** adds [ten source-preserved veins with seven existing references](docs/PELVIC_VEINS.md). Side filtering, selection, labels and hide/Undo stay in the existing compact interface. Two left-labelled sources remain offline for coordinate/laterality review; this is not complete bilateral coverage or clinical approval.

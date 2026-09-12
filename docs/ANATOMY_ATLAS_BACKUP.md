@@ -1,5 +1,21 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 12 September 2026 — HRA kidney dissection (current source; runtime publication pending)
+
+Source `bd0ec72c46247676c02e9375ba9038823c6e75df`, tree `904bb358f244351d1859c389cd09066624484f60`, parent `30cdc846e6bcfefd191e844a3982ed444ab98a66`. Twenty-three exact source paths mirrored. The independent kidney viewer now serves 82 original source selections / 189794 triangles, with nine guided studies, compact source controls, 12 Anatomy/Function concepts across 82 selections and 13 non-lettered identification targets. The left outer cortex, right renal-column group and left renal vein remain excluded. No repairs, drainage matches, microanatomy, clinical approval or patient registration are invented. The earlier audit-only checkpoint below remains historical evidence.
+
+Validation passed: original retention; deterministic export; 1151136 admitted attribute/index values preserved except positive uniform position scaling; all82 delivered meshes decoded exactly; nine dissection studies, source-mutation rejection, quiz restrictions and ten component renders; existing specimen search1375 checks; existing pelvic suite; TypeScript; requirement inventory; model-first3656 checks/105 markup cases; production build. All125 GLBs/1433 meshes/4299 buffer views have exact decoded preservation. Existing large-chunk warnings remain. Browser/GPU/mobile and radiologist sign-off are not claimed. Main-body selections1078 and archived1022 remain unchanged; no new dependency/font/texture/paid service.
+
+D-drive stem `atlas-hra-kidney-specimen-2026-09-12` in `D:/VisibleMedicine-Atlas-Recovery/`:
+
+- Runtime `.site.tar.gz`:122390249 bytes, SHA256 `e6fce77c06e73e4862974d8a1e4d9fcb1e32bd6e726e2683efa8bea9c6c288d7`;443 safe entries and two exact SQL migrations.
+- Source `.delta.tar`:4382720 bytes, SHA256 `237b117e3c5b9f6af6f355e0ce6012ca9664233825790e587c9d8ec4ff350b28`.
+- Source `.incremental.bundle`:2883328 bytes, SHA256 `9303e34a6ce544573f51a9b450a3a38e3a8219e03a21a788612c1dd60bed0c0c`.
+
+Independent bundle fetch and full fsck verify exact source/tree under `refs/verification/hra-kidney-specimen-20260912`, preserving verifier main. Sites source push succeeded. Native status still reports live/saved version171 with verified owner-only access. No repeated122MB upload was attempted: the unchanged native60-second upload limit and prior reconciled failures remain documented in `ATLAS_DELIVERY_DIAGNOSIS_2026-09-12.md`. The new local archive is ready; saved source/backups are not a live-runtime claim. Website main remains `c4ff08f8afc90bd94d04162625f97af9d94401cf`.
+
+No conversations, production review records, patient scans, external lecture content or account data are contained in these source backups. Earlier recovery files remain untouched. The next bounded work is source-bound renal clinical/imaging teaching and reviewer checks, preserving the remaining geometry holds and independent frame.
+
 ## 12 September 2026 — original HRA kidney sources (current source; audit only)
 
 Source `30cdc846e6bcfefd191e844a3982ed444ab98a66`, tree `84be80a38c082a86981841b6bb31d8c507ddc0dd`, parent `b3b64a7dac28b781a73f8d13569eed655b30c3c9`. Twelve exact source paths mirrored. This preserves 85 original renal surface representations / 230104 triangles and their official HRA metadata/crosswalk. Three defective sources are held: left outer cortex, right renal columns and left renal vein. The other 82 surfaces / 189794 triangles are candidates, not clinically approved or admitted geometry.

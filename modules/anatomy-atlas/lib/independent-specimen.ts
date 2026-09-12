@@ -67,6 +67,9 @@ export function activeSpecimenStudy(specimen: SpecimenDefinition, hidden: string
 }
 /** Search only the current specimen's declared metadata, never another donor's aliases. */
 export function filterSpecimen(specimen: SpecimenDefinition, query: string) {
+  // Structured source-local IDs are exact identities, not bags of words.
+  const exactId = query.trim().toLowerCase();
+  if (exactId.startsWith('vm:')) return specimen.surfaces.filter(s => s.id.toLowerCase() === exactId);
   const words = normalizeAnatomySearch(query).split(' ').filter(Boolean);
   if (!words.length) return query.trim() ? [] : [...specimen.surfaces];
   return specimen.surfaces.filter((surface) => {

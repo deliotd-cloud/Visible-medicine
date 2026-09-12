@@ -178,6 +178,7 @@ const AbdominalWallSpecimen = dynamic(() => import('./abdominal-wall-study'), {
   ssr: false,
 });
 const HraPelvisSpecimen = dynamic(() => import('./hra-pelvis-study'), { ssr: false });
+const HraRenalSpecimen = dynamic(() => import('./hra-renal-study'), { ssr: false });
 const BackLayersSpecimen = dynamic(() => import('./back-layers-study'), { ssr: false });
 const systemKeys = Object.keys(bodySystems) as BodySystem[];
 const icons = {
@@ -261,6 +262,12 @@ export default function BodyExplorer({
     requestAnimationFrame(() => backLayersLauncher.current?.focus());
   }, []);
   const [hraPelvisOpen, setHraPelvisOpen] = useState(false);
+  const [hraRenalOpen, setHraRenalOpen] = useState(false);
+  const hraRenalLauncher = useRef<HTMLButtonElement | null>(null);
+  const closeHraRenal = useCallback(() => {
+    setHraRenalOpen(false);
+    requestAnimationFrame(() => hraRenalLauncher.current?.focus());
+  }, []);
   const hraPelvisLauncher = useRef<HTMLButtonElement | null>(null);
   const closeHraPelvis = useCallback(() => {
     setHraPelvisOpen(false);
@@ -1222,6 +1229,11 @@ export default function BodyExplorer({
         {['pelvis', 'whole-body'].includes(initialRegion) && (
           <Button ref={hraPelvisLauncher} variant="outline" size="sm" className="um-knee-launch" disabled={exam} onClick={() => { if (!exam) setHraPelvisOpen(true); }}>
             Female pelvis · separate reference
+          </Button>
+        )}
+        {['abdomen', 'whole-body'].includes(initialRegion) && (
+          <Button ref={hraRenalLauncher} variant="outline" size="sm" className="um-knee-launch" disabled={exam} onClick={() => { if (!exam) setHraRenalOpen(true); }}>
+            Kidney layers · separate reference
           </Button>
         )}
         {['leg', 'foot', 'thigh', 'pelvis'].includes(initialRegion) && (
@@ -2352,6 +2364,9 @@ export default function BodyExplorer({
       )}
       {hraPelvisOpen && ['pelvis','whole-body'].includes(initialRegion) && !exam && (
         <HraPelvisSpecimen onClose={closeHraPelvis} />
+      )}
+      {hraRenalOpen && ['abdomen','whole-body'].includes(initialRegion) && !exam && (
+        <HraRenalSpecimen onClose={closeHraRenal} />
       )}
       {ventricleParent && !exam && ventricleParent.id === selectedId && (
         <Ventricles

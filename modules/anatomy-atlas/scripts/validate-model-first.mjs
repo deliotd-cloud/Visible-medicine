@@ -145,6 +145,10 @@ for (const retired of [
   migratedCallbacks.splice(index, 1);
 }
 migratedCallbacks.push(
+  // The kidney reference adds only its guarded launcher and close binding.
+  // hra-renal:test executes both callbacks, exam rejection and focus restoration.
+  'onClick/48aabf4b223b1259418d5aa371a737011f2fe0da3993fe0b87e9c60d2e3f72cd',
+  'onClose/5380572838098e48b319041df3d7a8df475a01498783e7069ceeabc1027a6ebb',
   // Source-bound child search is executed by nested-navigation:test. All original
   // launcher bindings and the portable baseline remain unchanged.
   'onDissect/4b3e76ba12a91c7a45ae6b7e2e9dfb7ab63f951831d4d099633f0bad2245a109',
@@ -715,6 +719,7 @@ const result = {
   addedRelationshipHandlers: 3,
   explicitQuizLoadingGuardMigration: 1,
   addedIndependentSpecimenCallbacks: 8,
+  addedRenalSpecimenCallbacks: 2,
   addedRelationshipCallbacks: 6,
   addedComponentImagingCallback: 1,
   explicitSliderValueMigration: 1,
