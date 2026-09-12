@@ -100,6 +100,7 @@ import { pelvicVeinLesson } from '../lib/pelvic-veins';
 import { limbicLandmarkLesson } from '../lib/limbic-landmarks';
 import { tarsalImagingLesson } from '../lib/tarsal-imaging';
 import { upperVesselImagingLesson } from '../lib/upper-vessel-imaging';
+import { lowerArterialImagingLesson } from '../lib/lower-arterial-imaging';
 
 // Original short educational notes, not imported textbook prose. Review pending.
 const functions: Record<string, string> = {
@@ -144,6 +145,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const lowerArterialImaging = lowerArterialImagingLesson(s, tab);
+  if (lowerArterialImaging) return lowerArterialImaging;
   const limbic = limbicLandmarkLesson(s, tab);
   if (limbic) return limbic;
   const pelvicVein = pelvicVeinLesson(s, tab);

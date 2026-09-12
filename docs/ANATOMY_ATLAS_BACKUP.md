@@ -1,5 +1,21 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 12 September 2026 — lower-limb arterial imaging teaching (current source)
+
+Source `b3b64a7dac28b781a73f8d13569eed655b30c3c9`, tree `6808f9c0faf28a518743c2506002b3d7338fc81b`, parent `b5725a6b8cf2fa9028b93a9e3853d864bc874bc3`. Eighteen exact source paths mirrored. Twelve existing sided arteries receive 36 CT/MRI/US draft placements using nine regional/modality texts and six concept-specific cautions. Existing inspector/navigation, all geometry and previous teaching/recipes remain intact. No scan, complete runoff, fibular root mesh, procedural clearance, paid resource access or clinical approval is added.
+
+Verified: 36 actual notes callback renders, 288 changed-source rejections, 9,666 unchanged body-topic entries, exact source/frame/bundle pins, detached returned lessons, TypeScript, production build and current requirement inventory. All 124 GLBs / 1,351 meshes / 4,053 buffer views retain decoded geometry. New renderer fingerprint: `9511fbab92c172072dce7c76e3ef3b5011142d6f1d5c7f1632bb58b830e8def9` (388 inputs). Browser/device and owner/radiologist acceptance remain outstanding.
+
+Source pushed successfully to Sites main. Latest saved/live version remains v171; owner-only access unchanged. No new upload was attempted for this checkpoint because the unchanged one-minute failure remains unresolved. The bounded synthetic check measured 15.18 Mbps at a different destination, implying roughly 63.4 seconds for the prior gzip runtime before overhead: plausible uplink contribution, not confirmed diagnosis. See the separate delivery diagnosis. Never mistake source push or GitHub recovery for a live deployment.
+
+D recovery stem: `D:/VisibleMedicine-Atlas-Recovery/atlas-lower-arterial-imaging-2026-09-12`.
+
+- Runtime `.site.tar.gz`: 120360308 bytes, SHA-256 `97099701a7c8ce2556b7e0cc754cf1026f41c1a5153fe8dfb835b3ec81a2f969`; 434 safe entries and two exact unchanged migrations.
+- Delta `.delta.tar`: 532480 bytes, SHA-256 `4aa6530cfa0abb2d79f13eb6fd047b8be49470e6cf04c5926855f08073c5026c`.
+- Incremental `.incremental.bundle`: 20948 bytes, SHA-256 `bd5da4d3bc80ac1ee738bf1cfb847fbd49f2fbd3fd7b59ebe0f5f8a4faf0bd42`.
+
+Independent bundle fetch/full fsck verified the exact source and tree at `refs/verification/lower-arterial-imaging-20260912`, preserving verifier main. These backups cover application source/runtime, not conversations, production private reviews/accounts, patient scans or separate lectures. Prior artifacts remain retained.
+
 ## 12 September 2026 — back-dissection skeletal teaching (current source)
 
 Source `b5725a6b8cf2fa9028b93a9e3853d864bc874bc3`, tree `2ae02dd14596349541376045e29225c7767c750f`, parent `1a663550ca914a1951cbcb4373a9c1f35d0e47ec`. Thirteen exact source paths mirrored. All 34 source bones in the independent v3 back dissection now have Anatomy/Function notes and source-aware self-checks in the existing collapsed Learn panel. Twelve concepts cover skull base, vertebral regions, sacrum, shoulder girdle, hip bones and humeri. No new controls or source meshes; the 14-muscle identification quiz is unchanged.

@@ -58,7 +58,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "4c4d68cc152266d2bfe53eb1cea8b20233f1ed15f52bd92df3847fbf03720734"
+      "sha256": "3bdb186bb930308f600cbdc2180d1150b190b7f6863b53177c93767445e3d341"
     },
     {
       "path": "app/body-explorer.css",
@@ -439,6 +439,14 @@
     {
       "path": "content/longus-colli-studies.ts",
       "sha256": "586cde809529f252ff037874a5b756228ccc463128616b0c160a82a1f4797216"
+    },
+    {
+      "path": "content/lower-arterial-imaging-pins.json",
+      "sha256": "367400e457a0cd5076b223312fb63686fd48f412ddf23116425ad1338b50e2c0"
+    },
+    {
+      "path": "content/lower-arterial-imaging.ts",
+      "sha256": "c7de12b3f630344c3ba9feb273032a44d8b72fc599be2e1eee3e32b3123516f2"
     },
     {
       "path": "content/lower-limb-arterial-pins.json",
@@ -1033,6 +1041,10 @@
       "sha256": "2835bfa751ca5dd37ba8b895839f48c1a4e019b6c8bd8d6120cecf04912fdf99"
     },
     {
+      "path": "lib/lower-arterial-imaging.ts",
+      "sha256": "021f2b528102027b1a34736bc5693872e7644f2f09dcd18106b206d50675857b"
+    },
+    {
       "path": "lib/lower-limb-arterial.ts",
       "sha256": "d332b1cced3f2b6dcea987b0d1f3861e0d5350d029927e4d71697bbeef7766d5"
     },
@@ -1553,5 +1565,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "0bb00c9f852c2bd8dcbde2fc73529f4b154d1ac493b0bf044ce3f4080a31a5f6"
+  "sha256": "9511fbab92c172072dce7c76e3ef3b5011142d6f1d5c7f1632bb58b830e8def9"
 }

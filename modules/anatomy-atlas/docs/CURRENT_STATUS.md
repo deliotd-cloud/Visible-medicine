@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Lower-limb arterial imaging](LOWER_ARTERIAL_IMAGING.md) supplies 12 existing artery selections with CT/MRI/US drafts (36 placements / 9 regional-modality texts). Six concept-specific cautions and the existing inspector keep navigation compact. Missing fibular/trunk selections, complete runoff, scans, registration and radiologist/device approval remain outstanding.
+
 [Deep-brain septal landmarks](LIMBIC_LANDMARKS.md) adds 4 complete source selections / 8042 retained triangles and one compact study with 7 context records. Lamina point-contact, septal compound and stria laterality limits are explicit; the defective stria-terminalis source remains offline. Eleven introductory draft placements do not constitute comprehensive teaching, complete circuits, clinical/device acceptance or patient registration.
 
 [Separate back layers](BACK_LAYERS_SPECIMEN.md) adds 14 source muscle surfaces with 34 same-source bones and 8 reversible studies. All 333182 original triangles remain in a separate version-3 frame; source fragments are disclosed. [Detailed teaching](BACK_LAYERS_TEACHING.md) supplies attachments/motor notes for 14 selections and 191 extended draft placements using 34 topic texts and 17 clinical self-checks. Existing collapsed controls are reused; unsupported topics remain pending. No complete back stack, fascia, discs, nerve path, scan registration or clinical approval is supplied. Separate CC BY-SA 2.1 Japan asset terms remain; main-body counts are unchanged.
@@ -107,10 +109,10 @@ Counts are representations with displayed copy, not unique lessons, complete top
 | --- | ---: | ---: | ---: | ---: |
 | Anatomy | 1076 | 2 | 0 | 0 |
 | Function | 1066 | 0 | 12 | 0 |
-| CT | 130 | 0 | 948 | 0 |
-| MRI | 132 | 0 | 946 | 0 |
+| CT | 142 | 0 | 936 | 0 |
+| MRI | 144 | 0 | 934 | 0 |
 | X-ray | 83 | 0 | 995 | 0 |
-| Ultrasound | 55 | 0 | 1023 | 0 |
+| Ultrasound | 67 | 0 | 1011 | 0 |
 | Pathology | 1018 | 0 | 60 | 0 |
 | Clinical | 1022 | 0 | 56 | 0 |
 | Quiz notes | 47 | 0 | 0 | 1031 |
