@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Independent specimen reviews](SPECIMEN_REVIEWS.md) now cover 82 HRA kidney and 41 female-pelvis selections in a separate append-only private store. Exact specimen, source frame, geometry, teaching and checklist revisions are bound to each record; no shoulder/body approval transfers. Anatomy and teaching are reviewed separately, acquired-imaging approval remains unavailable, and other specimen adapters are still pending. This inventory reads no personal review records and asserts no clinical sign-off or hosted rollout.
+
 [Lower-limb arterial imaging](LOWER_ARTERIAL_IMAGING.md) supplies ${anatomy.lowerArterialImaging.selections} existing artery selections with CT/MRI/US drafts (${Object.values(anatomy.lowerArterialImaging.modalities).reduce((a,b)=>a+b,0)} placements / ${anatomy.lowerArterialImaging.distinctTopicTexts} regional-modality texts). Six concept-specific cautions and the existing inspector keep navigation compact. Missing fibular/trunk selections, complete runoff, scans, registration and radiologist/device approval remain outstanding.
 
 [Deep-brain septal landmarks](LIMBIC_LANDMARKS.md) adds ${anatomy.limbicLandmarks.sourceSelections} complete source selections / ${anatomy.limbicLandmarks.originalTriangles} retained triangles and one compact study with ${anatomy.limbicLandmarks.contextSelections} context records. Lamina point-contact, septal compound and stria laterality limits are explicit; the defective stria-terminalis source remains offline. Eleven introductory draft placements do not constitute comprehensive teaching, complete circuits, clinical/device acceptance or patient registration.

@@ -156,6 +156,7 @@ export function BodyReviewDashboard({
         <Brand />
         <span>Body review workspace</span>
         <Link href="/review">Shoulder review records</Link>
+        <Link href="/review/specimens">Specimen reviews</Link>
         <Link href="/">Back to atlas</Link>
       </header>
       <main className="body-review-shell">

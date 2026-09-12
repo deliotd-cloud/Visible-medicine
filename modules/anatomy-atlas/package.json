@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "specimen-review:test": "node scripts/validate-specimen-review.mjs",
     "hra-renal:export": "node scripts/export-hra-renal.mjs",
     "hra-renal-teaching:test": "node scripts/validate-hra-renal-teaching.mjs",
     "hra-renal:test": "node scripts/retain-hra-renal-source.mjs --check && node scripts/export-hra-renal.mjs --check && node scripts/validate-hra-renal.mjs",

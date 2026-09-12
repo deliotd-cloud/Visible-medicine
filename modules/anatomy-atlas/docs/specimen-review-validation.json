@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "scope": "independent-specimen-review-software-only",
+  "specimens": [
+    {
+      "key": "hra-united-female-v1.10-kidneys",
+      "selections": 82
+    },
+    {
+      "key": "hra-united-female-v1.10-pelvis",
+      "selections": 41
+    }
+  ],
+  "contexts": 123,
+  "teachingApprovalPrerequisitesPresent": 99,
+  "pendingTopicStates": 319,
+  "checks": [
+    "exact source/frame separation",
+    "123 unique material identities",
+    "original GLB hashes",
+    "immutable prior migrations",
+    "account isolation",
+    "origin and body-size guards",
+    "revision/checklist conflicts",
+    "server-side approval gates",
+    "imaging approval prohibited",
+    "append-only issue/history retention",
+    "optimistic concurrency",
+    "paged indexed SQLite queries",
+    "stale checks reset",
+    "strict response parsing",
+    "actual server-rendered workspace states"
+  ],
+  "clinicalApproval": false,
+  "productionRecordsRead": false,
+  "browserOrGpuTesting": false
+}

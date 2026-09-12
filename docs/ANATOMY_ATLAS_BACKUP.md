@@ -1,5 +1,21 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 12 September 2026 — independent HRA specimen review records (runtime publication pending)
+
+Source `3d3909597ce063f3b928c0fff47a1398c6cb5294`, tree `c5ba9ecd67766a517ce3c2d768a5420ec8329a07`, parent `bc36e110fda43e394f3811676626f42fc0ec6b2f`. Twenty-five exact source paths mirrored. `/review/specimens` covers82 kidney and41 female-pelvis selections with separate, account-private append-only geometry/teaching/imaging tracks. Review identity includes specimen/frame, full source catalogue, study context, renderer, teaching and checklist revisions. Unsupported teaching topics remain pending; acquired-imaging approval is rejected. No personal approvals or production records were created/read. Source geometry, source teaching, licences, dependencies and website main remain unchanged.
+
+Validation: all123 contexts/unique material identities,99 editorial teaching prerequisites (not approvals),319 pending topic states; exact original model hashes; old migrations preserved; account isolation; same-origin/body limits; server-side approval gates; conflicting saves; append-only issues/history;20-record pagination and indexed SQLite query; stale check/attestation resets; strict response validation; actual server-rendered workspace states. TypeScript, renal teaching regression and requirement audit pass. Production build passes, preserving all125 GLBs/1433 meshes/4299 buffer views losslessly. Renderer394 inputs SHA256 `859dcedfec5aac8331eaf67a8b5f2448e8520d411e72df7f1dfb640947cdced8`. No browser/GPU/mobile or clinical acceptance claimed. New migration `0002_specimen_review_events.sql` is additive and not asserted applied in production.
+
+D-drive stem `atlas-specimen-reviews-2026-09-12` in `D:/VisibleMedicine-Atlas-Recovery/`:
+
+- Runtime `.site.tar.gz`:122446121 bytes, SHA256 `65083675093aeec59f6d06cf87125dca08529e46b10e7b541ae2f15256ab32c3`;458 safe entries/three exact SQL migrations.
+- Source `.delta.tar`:552960 bytes, SHA256 `1ddfb526328d7b27ae2b0d45b12a63967cc43ca889ff91efa77145d040242f62`.
+- Source `.incremental.bundle`:37477 bytes, SHA256 `bf15fbaa13feada7a91217f9f52d4e26554a2ffe82515793ddba817a8d8ae8c2`.
+
+Independent fetch/full fsck verifies exact source/tree at `refs/verification/specimen-reviews-20260912`, preserving verifier main. Sites source push succeeded. Current saved/live version remains171, owner-only access verified (one account/no external visitors/groups). No identical122MB upload retry under the unchanged60-second timeout condition; prior delivery diagnosis remains applicable. Website main `c4ff08f8afc90bd94d04162625f97af9d94401cf` is unchanged. Source/runtime backups are not conversation archives, production review/account backups, patient scans or paid lecture data.
+
+Goal remains active. Next: add source-specific review adapters to the other independent specimens, and simplify exact-selection navigation into the review/viewer workflow. Actual radiologist/device sign-off and future imaging registration remain distinct requirements. No earlier recovery artefacts removed.
+
 ## 12 September 2026 — renal clinical/imaging teaching (current source; runtime publication pending)
 
 Source `bc36e110fda43e394f3811676626f42fc0ec6b2f`, tree `7a868955d6c3b8a431e4cf821ee6ad2598b8e8b3`, parent `bd0ec72c46247676c02e9375ba9038823c6e75df`. Fifteen exact source paths mirrored. Adds44 original topic texts across398 renal source placements and12 source-aware self-checks across82 selections. Coverage: Clinical82, Pathology82, CT82, MRI61, US58, X-ray33. The94 unsupported source/modality states remain explicitly pending. Eleven linked references are factual reading sources, not imported scans, figures, protocols or staging tables.

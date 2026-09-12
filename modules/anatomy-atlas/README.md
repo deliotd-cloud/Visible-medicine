@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Review → Specimen reviews** now provides [revision-bound private review records](docs/SPECIMEN_REVIEWS.md) for 82 HRA kidney and 41 female-pelvis selections. Anatomy, teaching/self-check and acquired-imaging tracks are separate; source changes require re-review, history is retained, and imaging sign-off remains blocked without registered scans. No actual clinical approvals have been created. Other independent specimens still require their own adapters. Hosted availability depends on publishing the new runtime and additive database migration.
+
 The kidney specimen’s collapsed **Learn** panel now includes [source-bound clinical and CT/MRI/X-ray/US teaching](docs/HRA_RENAL_TEACHING.md): 44 topic texts and 12 self-checks, with explicit modality gaps and source-quality cautions. These are radiologist-review drafts, not patient images, registered anatomy or separately entitled lectures.
 
 **Abdomen / Whole body → Kidney layers · separate reference** opens [nine guided kidney studies](docs/HRA_KIDNEY_SPECIMEN.md), also at `/specimens/kidneys`. Rotate, select, remove/restore, isolate or separate 82 original HRA surfaces. Compact controls and source-bound teaching are reused; arbitrary source-letter parts are excluded from identification questions. Three defective surfaces remain held. This CC BY 4.0 reference is not complete or registered patient anatomy; radiologist and device review remain pending.
