@@ -47,13 +47,28 @@ export function projectLabelAnchor(
 
 export const labelGutter = 10;
 export function screenLabelMaxWidth(width: number) {
-  return Math.max(0, Math.min(216, width / 2 - labelGutter * 2));
+  if (!Number.isFinite(width) || width <= 0) return 0;
+  // Keep the central model area open on narrow canvases. This is based on the
+  // actual canvas (including an embedded panel), not the browser's width.
+  const column = width < 560 ? Math.min(160, width * 0.3) : 216;
+  // offsetWidth is integral. Avoid rejecting a valid browser-measured box whose
+  // fractional CSS max-width rounded up by a pixel.
+  return Math.max(0, Math.floor(Math.min(column, width / 2 - labelGutter * 2)));
+}
+
+export function screenLabelLimitPerSide(width: number, height: number) {
+  if (![width, height].every(Number.isFinite) || width <= 40 || height <= 20)
+    return 0;
+  if (width < 560) return height < 320 ? 1 : 2;
+  return height < 240 ? 2 : 8;
 }
 
 /** Two independent screen-side columns. Never rebalance to the opposite side.
  * Measured box sizes accommodate wrapping, text enlargement and touch targets.
- * Crowded columns keep the selected label, then the existing landmark priority;
- * only labels which cannot fit are omitted. No extra scrolling is introduced.
+ * Compact canvases show fewer landmarks to leave the anatomy visible. Crowded
+ * columns keep the selected label, then the existing landmark priority. Omitted
+ * labels remain selectable through their tissue or the structure list; no
+ * anatomical item is hidden and no extra scrolling/control is introduced.
  */
 export function layoutScreenLabels(
   labels: readonly ScreenLabel[],
@@ -80,7 +95,8 @@ export function layoutScreenLabels(
   );
   const result: PlacedLabel[] = [];
   const gap = 6,
-    available = height - labelGutter * 2;
+    available = height - labelGutter * 2,
+    limit = screenLabelLimitPerSide(width, height);
   for (const side of ['left', 'right'] as const) {
     const candidates = valid.filter(
       (label) => (label.x < width / 2 ? 'left' : 'right') === side,
@@ -94,6 +110,7 @@ export function layoutScreenLabels(
     let used = 0;
     const accepted: ScreenLabel[] = [];
     for (const label of candidates) {
+      if (accepted.length >= limit) break;
       const space = label.height + (accepted.length ? gap : 0);
       if (used + space <= available) {
         accepted.push(label);

@@ -6,6 +6,7 @@ import {
   layoutScreenLabels,
   projectLabelAnchor,
   screenLabelMaxWidth,
+  screenLabelLimitPerSide,
 } from '../lib/screen-label-layout.ts';
 import { sceneLabelIds } from '../lib/scene-labels.ts';
 import * as labelLayout from '../lib/screen-label-layout.ts';
@@ -68,6 +69,7 @@ function validate(labels, width, height) {
   }
   for (const side of ['left', 'right']) {
     const column = result.filter((label) => label.side === side);
+    check(column.length <= screenLabelLimitPerSide(width, height), 'Canvas density budget is respected');
     for (let i = 1; i < column.length; i++) {
       check(
         column[i].top >= column[i - 1].top + column[i - 1].height + 6 - 1e-8,
@@ -117,6 +119,27 @@ for (const width of [240, 320, 360, 736, 1024, 1600])
             'Selected survives a crowded column',
           );
       }
+
+const compactLabels = Array.from({length:8},(_,i)=>({
+  id:`compact-${i}`, priority:i, selected:i===7,
+  x:i%2 ? 260 : 110, y:96+i, width:100, height:64,
+}));
+const shortCanvas=validate(compactLabels,376,192);
+same(shortCanvas.length,2,'Phone-height canvas shows one label per occupied side');
+same(shortCanvas.map(l=>l.id),['compact-0','compact-7'],'Selected name replaces a lower-priority landmark on its own side');
+check(shortCanvas.every(l=>l.side==='left' ? l.left+l.width<=376*.35 : l.left>=376*.65),'Phone labels leave a central anatomy corridor');
+same(validate(compactLabels,376,480).length,4,'A taller narrow canvas permits two labels on each side');
+const wideLabels=compactLabels.map(l=>({...l,x:l.x<188?200:700}));
+same(validate(wideLabels,932,424).length,8,'Desktop retains the established eight landmarks');
+same(validate(wideLabels.map(l=>({...l,x:200,height:28})),932,424).length,8,'Desktop never imposes a four-label cap on one occupied side');
+same(validate(compactLabels.map(l=>({...l,x:100})),376,192).map(l=>l.id),['compact-7'],'A full column never spills to the wrong side');
+same(validate([...compactLabels].reverse(),376,192),shortCanvas,'Compact choice is independent of source arrival order');
+same(validate(compactLabels.map(l=>({...l,height:150})),376,192).length,2,'Measured enlarged labels still fit without shrinking their text');
+same(screenLabelLimitPerSide(559,319),1);same(screenLabelLimitPerSide(559,320),2);
+same(screenLabelLimitPerSide(560,239),2);same(screenLabelLimitPerSide(560,240),8);
+for(const width of [319,359,373,375,376,399,559])check(Number.isInteger(screenLabelMaxWidth(width)),'CSS and integral DOM measurements share the same width cap');
+for(const width of [NaN,Infinity,-1,0])same(screenLabelMaxWidth(width),0,'Invalid canvas widths never reach CSS');
+for(const dimensions of [[NaN,400],[360,Infinity],[0,400],[360,0]])same(screenLabelLimitPerSide(...dimensions),0);
 
 const directions = [
   [0, 0.04, 1],
@@ -362,6 +385,7 @@ same(
   'Right structure',
   'Anatomical text is not relabelled to screen laterality',
 );
+same(buttonElement.props['aria-pressed'],true,'Selected anatomy is exposed as a pressed label button');
 const nodes = {};
 // Effects before late Html refs mirror the separate DOM root mounting later.
 const cleanups = effects.map((effect) => effect());
@@ -370,7 +394,7 @@ for (const type of ['button', 'path', 'circle']) {
   const node = {
     style: {},
     dataset: {},
-    offsetWidth: 130,
+    offsetWidth: screenLabelMaxWidth(size.width),
     offsetHeight: 44,
     attributes: {},
     setAttribute(key, value) {

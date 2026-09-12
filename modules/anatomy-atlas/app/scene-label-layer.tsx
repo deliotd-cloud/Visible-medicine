@@ -153,6 +153,7 @@ export function SceneLabelLayer({ children }: { children: ReactNode }) {
       >
         <div
           className="scene-label-overlay"
+          role="group"
           aria-label="Anatomical structure labels"
         >
           <svg
@@ -190,6 +191,7 @@ export function SceneLabelLayer({ children }: { children: ReactNode }) {
             <button
               key={entry.id}
               type="button"
+              aria-pressed={entry.selected}
               ref={(node) => {
                 const previous = buttons.current.get(entry.id);
                 if (previous) resizeObserver.current?.unobserve(previous);
