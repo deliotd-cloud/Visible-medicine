@@ -27,6 +27,8 @@ export function renderRequirementSummary(report) {
     .join('\n');
   return `# Current atlas status
 
+[Compact vessel controls](VESSEL_VISIBILITY.md) separate the existing ${study.vesselVisibilityGroups.map(g=>`${g.total} ${g.kind} selections`).join(' and ')} behind the Vessels label. Region/side-scoped show/hide, mixed visibility and shared Undo/Redo reuse the current dissection; other tissues, camera, classification and geometry stay unchanged. No new default panel or patient-imaging event. Browser/device and clinical acceptance remain separate.
+
 [Abdominal-organ imaging](ABDOMINAL_ORGAN_IMAGING.md) adds CT/MRI/Ultrasound/X-ray orientation to eight existing liver/pancreas/gallbladder/spleen/kidney/adrenal selections: 32 draft placements with 20 distinct modality texts and six landmark/scope groups. Phase, sequence and ultrasound-coverage limitations are explicit. The corrected pancreatic parent, independent kidney specimen, internal dissections and patient scans retain separate identities; no new geometry or clinical approval is inferred.
 
 [Thoracic-bone imaging](THORACIC_BONE_IMAGING.md) fills CT, MRI, X-ray and Ultrasound notes for 24 existing sided ribs and three sternal parts: 108 draft placements, using eight shared modality texts and eight landmark groups. No new anatomy, controls, scan data or clinical approval is implied. Earlier teaching and geometry are preserved; the owner radiologist must review the content and variants.

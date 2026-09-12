@@ -87,6 +87,10 @@ import {
 } from '@/lib/dissection-guidance';
 import './body-explorer.css';
 import './atlas-workspace.css';
+import './vessel-system-control.css';
+import { VesselSystemControl } from './vessel-system-control';
+import { vesselVisibilityAction } from '@/lib/vessel-visibility';
+import type { VesselKind } from '@/lib/anatomy-vessels';
 import { AnatomyControlRail, AnatomyInfoPanel } from './anatomy-control-rail';
 import { Brand } from './brand';
 import { ReviewStatus } from './review-status';
@@ -872,6 +876,15 @@ export default function BodyExplorer({
       return next;
     });
   }
+  function changeVesselVisibility(kind: VesselKind, show: boolean) {
+    const action = vesselVisibilityAction(
+      regionStructures, resolved.visible.map(s => s.id), kind, show, exam || !systems.vessels,
+    );
+    if (!action) return;
+    dispatch(action);
+    // Retain camera, selection, source identity and other tissue visibility.
+    // A local visibility change emits no imaging or entitlement event.
+  }
   function onSceneSelect(id: string) {
     if (!displayReady) return;
     if (exam) {
@@ -1169,6 +1182,14 @@ export default function BodyExplorer({
       <div className="body-rail-title">Anatomical systems</div>
       <div className="body-system-bar" aria-label="Anatomical systems">
         {systemKeys.map((system) => {
+          if (system === 'vessels') return <VesselSystemControl
+            key={system} structures={regionStructures} visibleIds={resolved.visible.map(s => s.id)}
+            enabled={systems.vessels} disabled={exam}
+            onEnabled={checked => setSystems(prev => ({ ...prev, vessels: checked }))}
+            onVisibility={changeVesselVisibility}
+            canUndo={dissection.history.length > 0} canRedo={dissection.future.length > 0}
+            onUndo={undoDissection} onRedo={redoDissection}
+          />;
           const Icon = icons[system],
             count = regionStructures.filter((s) => s.system === system).length;
           return (

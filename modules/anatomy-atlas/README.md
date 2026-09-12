@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Vessels → Arteries / Veins** adds [compact visibility controls](docs/VESSEL_VISIBILITY.md) behind the existing system label. Show/hide acts on the current region and side, with mixed-state counts and shared Undo/Redo. Other tissues and camera settings stay unchanged; exams lock the controls. No new anatomy or permanently open panel. Device acceptance and runtime publication remain pending.
+
 **Abdominal organs → Imaging** now includes [organ-specific CT, MRI, Ultrasound and X-ray orientation](docs/ABDOMINAL_ORGAN_IMAGING.md) for liver, pancreas, gallbladder, spleen, both kidneys and adrenals. Phase/sequence context and visibility limits reuse existing tabs. The corrected pancreatic parent and separate kidney specimen retain their distinct source identities. Thirty-two draft placements, no new meshes or controls; radiologist review and runtime publication remain pending.
 
 **Ribs / sternum → Imaging** now includes [CT, MRI, X-ray and Ultrasound orientation](docs/THORACIC_BONE_IMAGING.md) for all 24 existing ribs and three sternal parts. Compact, source-bound drafts distinguish rib levels, sternal variants and each modality's limitations. Eight shared modality texts and eight landmark groups fill 108 previously pending sections; no new meshes, scans or controls are added. Radiologist review and runtime publication remain pending.

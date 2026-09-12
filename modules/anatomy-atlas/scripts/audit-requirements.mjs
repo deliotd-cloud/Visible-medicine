@@ -44,6 +44,7 @@ export { portalVenousNeighbours } from './lib/portal-drainage.ts';
 export { makeSpecimenLink, resolveSpecimenLink } from './lib/um-limb-navigation.ts';
 export { parseSpecimenLink, specimenTopics } from './lib/specimen-links.ts';
 export { bodyContent, bodyLesson } from './app/body-content.ts';
+export { vesselVisibilityGroups } from './lib/vessel-visibility.ts';
 export { upperVesselImagingLesson } from './lib/upper-vessel-imaging.ts';
 export { lowerArterialImagingLesson } from './lib/lower-arterial-imaging.ts';
 export { limbBoneImagingLesson } from './lib/limb-bone-imaging.ts';
@@ -105,6 +106,7 @@ const {
   parseSpecimenLink,
   specimenTopics,
   bodyContent,
+  vesselVisibilityGroups,
   bodyLesson,
   upperVesselImagingLesson,
   lowerArterialImagingLesson,
@@ -304,6 +306,9 @@ const countsBySystem = Object.fromEntries(
 const profiles = Object.values(dissectionProfiles);
 const sourceHashes = {};
 for (const path of [
+  'lib/vessel-visibility.ts',
+  'app/vessel-system-control.tsx',
+  'app/vessel-system-control.css',
   catalogPath,
   'public/models/bodyparts3d/manifest.json',
   'public/models/bodyparts3d/eye-layers/catalog.json',
@@ -1015,6 +1020,7 @@ const report = {
     anatomicalCompletenessMeasured: false,
   },
   study: {
+    vesselVisibilityGroups: vesselVisibilityGroups(catalog.structures, []).map(({kind,total}) => ({kind,total})),
     wristHandPartnerBones: Object.values(handBoneFmas).flat().length,
     wristHandOrdinaryPairsPerSide: handJoints.filter(j => j.kind !== 'variable').length,
     wristHandVariablePairsPerSide: handJoints.filter(j => j.kind === 'variable').length,

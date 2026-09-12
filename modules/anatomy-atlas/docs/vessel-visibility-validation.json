@@ -1,0 +1,24 @@
+{
+  "scopes": 36,
+  "plans": 2109,
+  "groups": [
+    {
+      "kind": "artery",
+      "label": "Arteries",
+      "total": 175,
+      "shown": 175
+    },
+    {
+      "kind": "vein",
+      "label": "Veins",
+      "total": 98,
+      "shown": 98
+    }
+  ],
+  "componentCallbacks": 16,
+  "parentCallbacks": 4,
+  "defaultCollapsed": true,
+  "sourcePreserved": true,
+  "clinicalApproval": false,
+  "browserTesting": false
+}

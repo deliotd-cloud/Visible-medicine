@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "6dde83e6547250a4794ce45628ab580cf65e582968ddc3fd035786813bd4e335"
+      "sha256": "ed08da15e73fdbdd8d0069ad534f84a8bbc1d088539f6e76cb62ba075bea8801"
     },
     {
       "path": "app/body-scene.tsx",
@@ -106,7 +106,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "833a9227d1b8886c6e76088e0f540b34d9211147a9bcfd23e3b8dd9a2bcc67bd"
+      "sha256": "935b2f8160f348332e1d78822c384b988af02c8dd681c607e4309e3608e44bb5"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -301,8 +301,20 @@
       "sha256": "a0aa30cb8500f11382ddd18120660c8e4df68b60369e3b6c487f98b12f0fe743"
     },
     {
+      "path": "app/vessel-system-control.css",
+      "sha256": "0d243cb0d5bc45c30581450639de643c18bf16ec8a3d5012c312395284142de3"
+    },
+    {
+      "path": "app/vessel-system-control.tsx",
+      "sha256": "35d7b68b657424def8b923d7c18f6ba69cf39fcf020d04ec4ab6e5a3b6279819"
+    },
+    {
       "path": "components/ui/button.tsx",
       "sha256": "081d2a1cb4f3aec636a6894d9eff4e90d476d5db85b82d0399c1f4d18517112e"
+    },
+    {
+      "path": "components/ui/checkbox.tsx",
+      "sha256": "56b2869e5478f38238e6a3d8aefabfbe8af565b38b2ffad06466487b3eacf154"
     },
     {
       "path": "components/ui/dialog.tsx",
@@ -1493,6 +1505,10 @@
       "sha256": "b9d2bd5ea079a600c2593ca522f325ceb03c2f2704a26747b4262ef6838c84df"
     },
     {
+      "path": "lib/vessel-visibility.ts",
+      "sha256": "672b08f4d060497d4c83341d8ecdf03b4e7f3a997ee61cc2c4dfff82c20d3f70"
+    },
+    {
       "path": "lib/visual-pathway-context.ts",
       "sha256": "829236c6c200805decaa212289779c36c0f4ec47cf056ba01274efd70065cfbd"
     },
@@ -1514,7 +1530,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "b9e190e76ca65935b5876e8926d19793d115c2107ca9b4bd66020fde3550487b"
+      "sha256": "071482b0bcea4ac8ca3f351cf96c09a8b8e7741c2a5c798f54cc83ea980a6dbd"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1681,5 +1697,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "22703171ecf308bdfe0c20c2bb90aecace80ef798091f3801556439979207d9e"
+  "sha256": "7ed9d241361d1dd54db42c0f9af83548edeee745dc55281e22bf49fcb08c822b"
 }

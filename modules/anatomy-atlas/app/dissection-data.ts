@@ -1359,7 +1359,7 @@ export type DissectionAction =
   | { type: 'stage'; id: string }
   | { type: 'focus'; id: string }
   | { type: 'remove' | 'restore'; id: string }
-  | { type: 'restore-many'; ids: string[] }
+  | { type: 'restore-many' | 'remove-many'; ids: string[] }
   | { type: 'undo' | 'redo' | 'reset' | 'free' };
 const dissectionHistoryLimit = 40;
 function dissectionSnapshot(state: DissectionSnapshot): DissectionSnapshot {
@@ -1440,6 +1440,15 @@ export function dissectionReducer(
       ...snapshot,
       removed: state.removed.filter((id) => !ids.has(id)),
       restored: [...new Set([...state.restored, ...ids])],
+    };
+  }
+  if (action.type === 'remove-many') {
+    const ids = new Set(action.ids);
+    if (!ids.size) return state;
+    next = {
+      ...snapshot,
+      removed: [...new Set([...state.removed, ...ids])],
+      restored: state.restored.filter((id) => !ids.has(id)),
     };
   }
   // Repeated clicks must not consume Undo or erase a possible Redo.

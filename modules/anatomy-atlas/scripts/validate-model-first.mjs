@@ -113,6 +113,12 @@ same(
       '39da3ffefc1ee1224d6ae555293d61ac5e08c36907634de0574338723d1ab336',
     showVenousDrainage:
       '8137daefccbe17cb9e054def68be59c6cc5ec5e35a1002d30dbf22605de47cd2',
+    // Existing hand/foot partner action is executed by hand-joints:test and
+    // foot-joints:test; vessel-visibility:test executes the new scoped action.
+    showJointPartners:
+      '7bb95249076a04558f7ee3aa5aa223179979c194676f8a57efea3ced6ef88edf',
+    changeVesselVisibility:
+      '16ce4f95980e95dc04eac8f2d4875681a15079085a7b9eb0474cae8820702166',
     // Bounded dissection history: actual Undo/Redo handlers are exercised by
     // dissection-history:test, including empty-stack and practice guards.
     undoDissection:
@@ -145,6 +151,14 @@ for (const retired of [
   migratedCallbacks.splice(index, 1);
 }
 migratedCallbacks.push(
+  // Explicit compact vessel control and existing joint navigator additions.
+  // These suites execute the actual components/handlers, not only these hashes.
+  'onEnabled/61561ba3764844c4042219fbae20e9358d4bf57b393d21f3c0176f148a061cec',
+  'onVisibility/f687fb19d10639c286081bba6d1f8ee7fece58acdba09643f1943230e5ffb8c8',
+  'onUndo/264f0af4a85c26e0e12899dc9c9ff0ee9198afb82192533289be2e3329a9c468',
+  'onRedo/8676ea82820286a822f522e5b4085358175c84ed30c8a0e96be77ae3e45036c2',
+  'onSelect/610c7aa707c1e7792cda3854a7ec79d0a63ef3319881a1625f5f6eae7a2cf70d',
+  'onShow/99d3249e3d27ba107c43425a6194dc58fa387f7c786aac6f6f90c0c4544b377c',
   // The kidney reference adds only its guarded launcher and close binding.
   // hra-renal:test executes both callbacks, exam rejection and focus restoration.
   'onClick/48aabf4b223b1259418d5aa371a737011f2fe0da3993fe0b87e9c60d2e3f72cd',
@@ -717,6 +731,10 @@ const result = {
   explicitExplosionHandlerMigration: 1,
   explicitSourceStudyHandlerMigrations: 3,
   addedRelationshipHandlers: 3,
+  addedJointPartnerHandler: 1,
+  addedVesselVisibilityHandler: 1,
+  addedVesselVisibilityCallbacks: 4,
+  addedJointPartnerCallbacks: 2,
   explicitQuizLoadingGuardMigration: 1,
   addedIndependentSpecimenCallbacks: 8,
   addedRenalSpecimenCallbacks: 2,

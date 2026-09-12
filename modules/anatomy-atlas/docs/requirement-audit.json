@@ -2,6 +2,9 @@
   "schemaVersion": 1,
   "method": "Offline source and displayed-copy inventory; no clinical or browser certification.",
   "sourceHashes": {
+    "lib/vessel-visibility.ts": "672b08f4d060497d4c83341d8ecdf03b4e7f3a997ee61cc2c4dfff82c20d3f70",
+    "app/vessel-system-control.tsx": "35d7b68b657424def8b923d7c18f6ba69cf39fcf020d04ec4ab6e5a3b6279819",
+    "app/vessel-system-control.css": "0d243cb0d5bc45c30581450639de643c18bf16ec8a3d5012c312395284142de3",
     "public/models/bodyparts3d/full-body/catalog.json": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
     "public/models/bodyparts3d/manifest.json": "619e3ab84712487bd032b84a8f8b52f94d10883d8db7798057049bab287de857",
     "public/models/bodyparts3d/eye-layers/catalog.json": "3ae1d1b11eced1383b6de87df09fc8cbe9d24291b2144ae82b0a057d4e96daea",
@@ -1359,6 +1362,16 @@
     "anatomicalCompletenessMeasured": false
   },
   "study": {
+    "vesselVisibilityGroups": [
+      {
+        "kind": "artery",
+        "total": 175
+      },
+      {
+        "kind": "vein",
+        "total": 98
+      }
+    ],
     "wristHandPartnerBones": 58,
     "wristHandOrdinaryPairsPerSide": 38,
     "wristHandVariablePairsPerSide": 2,

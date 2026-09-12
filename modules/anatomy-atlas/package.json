@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "vessel-visibility:test": "node scripts/validate-vessel-visibility.mjs",
     "hand-joints:test": "node scripts/pin-hand-joints.mjs --check && node scripts/validate-foot-joints.mjs --hand",
     "foot-joints:test": "node scripts/pin-foot-joints.mjs --check && node scripts/validate-foot-joints.mjs",
     "abdominal-organ-imaging:test": "node scripts/pin-abdominal-organ-imaging.mjs --check && node scripts/record-abdominal-organ-imaging.mjs --check && node scripts/validate-abdominal-organ-imaging.mjs",
