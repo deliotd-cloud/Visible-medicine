@@ -1,0 +1,399 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "82ffc964f8830b375e089f154ae7ca0599c5fe44",
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "supplementalEvidence": [
+    {
+      "path": "docs/limbic-landmark-source-audit.json",
+      "sha256": "2b29686d350ca29d88c67c7a44c3e143033deea35f15df0a66b90c758a82f69c"
+    },
+    {
+      "path": "docs/pelvic-vein-source-audit.json",
+      "sha256": "ffb300bcd1f2cd8c2a9684c133ed5d82a1043d7bda99a78f377854c9168ebf26"
+    },
+    {
+      "path": "docs/collicular-brachia-source-audit.json",
+      "sha256": "376863798d350db47711e802a9f5a0180b9d1c99f0972bbec769e6588e5c5b9a"
+    },
+    {
+      "path": "docs/deep-leg-vein-source-audit.json",
+      "sha256": "2ed4267b0ceae5448673eaf0743ed79a995fc7f879dac26c81e24109c7b201ec"
+    }
+  ],
+  "proofs": [
+    {
+      "parent": {
+        "id": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
+        "fmaId": "FMA20796",
+        "name": "Right deep femoral artery",
+        "sourceName": "right deep femoral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis",
+          "leg"
+        ],
+        "bundle": "thigh-vessels-recovery",
+        "nodeName": "FMA20796",
+        "bounds": {
+          "min": [
+            -1.205430030822754,
+            -4.397520065307617,
+            0.11512500792741776
+          ],
+          "max": [
+            -0.3285030126571655,
+            -0.051859740167856216,
+            0.7462400197982788
+          ]
+        },
+        "center": [
+          -0.7669665217399597,
+          -2.2246899027377367,
+          0.4306825138628483
+        ],
+        "anchor": [
+          -0.6024489998817444,
+          -3.174220085144043,
+          0.4228479862213135
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2137",
+            "sha256": "46872b103c95147c1d9d33cb2b2ad6bd1be001e32e9f646c0dd61cabea8b4a96"
+          },
+          {
+            "file": "FJ2158",
+            "sha256": "604beb2d77d9c6ec24e0f8c82e806f57a7cbb6fe9a4553d7f5fc999a9aae33f6"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "parentBundle": {
+        "id": "thigh-vessels-recovery",
+        "url": "/models/bodyparts3d/full-body/thigh-vessels-recovery.glb",
+        "bytes": 1415760,
+        "sha256": "5037db3cd7d8d0bf2ac6ae2c4656b50e73c71f5f530595b80cd68153afb6c9f7",
+        "structures": 8
+      },
+      "triangles": 7646,
+      "partitionSha256": "4c63f7fa9196564c7518247b194a076362846b49628acaced7b3f430a6efbaf2",
+      "parts": [
+        {
+          "id": "vm:anatomy:body:thigh:right:source-component:fj2137",
+          "source": {
+            "file": "FJ2137",
+            "sha256": "46872b103c95147c1d9d33cb2b2ad6bd1be001e32e9f646c0dd61cabea8b4a96"
+          },
+          "role": "remainder",
+          "triangles": 6536,
+          "topology": {
+            "sourceVertices": 3338,
+            "exactUniqueVertices": 3270,
+            "unusedUniqueVertices": 0,
+            "triangles": 6536,
+            "edges": 9804,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 6536,
+                "vertices": 3270,
+                "bounds": {
+                  "min": [
+                    -63.3138,
+                    -112.127,
+                    360.248
+                  ],
+                  "max": [
+                    -32.8503,
+                    -88.8841,
+                    482.6
+                  ]
+                },
+                "areaMm2": 2171.215595090543,
+                "algebraicVolumeMm3": 2362.6299838722393
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          },
+          "sourceFaceKeySha256": "ca9515e779f421abba64ce37f7c3656dc813e6fb9c5302e30be560dcb4e75d70"
+        },
+        {
+          "id": "vm:anatomy:body:thigh:right:source-component:fj2158",
+          "source": {
+            "file": "FJ2158",
+            "sha256": "604beb2d77d9c6ec24e0f8c82e806f57a7cbb6fe9a4553d7f5fc999a9aae33f6"
+          },
+          "role": "lateral-circumflex",
+          "triangles": 1110,
+          "topology": {
+            "sourceVertices": 579,
+            "exactUniqueVertices": 557,
+            "unusedUniqueVertices": 0,
+            "triangles": 1110,
+            "edges": 1665,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 1110,
+                "vertices": 557,
+                "bounds": {
+                  "min": [
+                    -120.543,
+                    -124.624,
+                    769.032
+                  ],
+                  "max": [
+                    -76.0099,
+                    -61.5125,
+                    794.814
+                  ]
+                },
+                "areaMm2": 364.27000415258846,
+                "algebraicVolumeMm3": 110.59799138914816
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          },
+          "sourceFaceKeySha256": "368db4be34f6c635f10bbf7567ebb69559f6f7e49aec29c85b196b88caf18db1"
+        }
+      ],
+      "exactRenderedFacePartition": true
+    },
+    {
+      "parent": {
+        "id": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery",
+        "fmaId": "FMA20797",
+        "name": "Left deep femoral artery",
+        "sourceName": "left deep femoral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis",
+          "leg"
+        ],
+        "bundle": "thigh-vessels-recovery",
+        "nodeName": "FMA20797",
+        "bounds": {
+          "min": [
+            0.32847899198532104,
+            -4.397439956665039,
+            0.11526001244783401
+          ],
+          "max": [
+            1.2052100896835327,
+            -0.05195983871817589,
+            0.7461499571800232
+          ]
+        },
+        "center": [
+          0.7668445408344269,
+          -2.2246998976916075,
+          0.4307049848139286
+        ],
+        "anchor": [
+          0.6055749654769897,
+          -3.174769878387451,
+          0.42494696378707886
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2069",
+            "sha256": "055eaa7fd2a8683f4d81d824437925f2c1019c2081558fe4ee2d4ab161085b76"
+          },
+          {
+            "file": "FJ2078",
+            "sha256": "fc1867693af0aa210a96a79c3f53c80fedacd4f136b21c6d4f839ce06575b8ac"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "parentBundle": {
+        "id": "thigh-vessels-recovery",
+        "url": "/models/bodyparts3d/full-body/thigh-vessels-recovery.glb",
+        "bytes": 1415760,
+        "sha256": "5037db3cd7d8d0bf2ac6ae2c4656b50e73c71f5f530595b80cd68153afb6c9f7",
+        "structures": 8
+      },
+      "triangles": 7632,
+      "partitionSha256": "a039102c5817b14887ee1dba89b38e00c53b98465191722e5cfdae4a2498f5e1",
+      "parts": [
+        {
+          "id": "vm:anatomy:body:thigh:left:source-component:fj2069",
+          "source": {
+            "file": "FJ2069",
+            "sha256": "055eaa7fd2a8683f4d81d824437925f2c1019c2081558fe4ee2d4ab161085b76"
+          },
+          "role": "remainder",
+          "triangles": 6530,
+          "topology": {
+            "sourceVertices": 3293,
+            "exactUniqueVertices": 3267,
+            "unusedUniqueVertices": 0,
+            "triangles": 6530,
+            "edges": 9795,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 6530,
+                "vertices": 3267,
+                "bounds": {
+                  "min": [
+                    32.8479,
+                    -112.134,
+                    360.256
+                  ],
+                  "max": [
+                    63.3074,
+                    -88.8881,
+                    482.598
+                  ]
+                },
+                "areaMm2": 2170.291305623904,
+                "algebraicVolumeMm3": 2361.325875429774
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          },
+          "sourceFaceKeySha256": "1e81ed85fa15df06ad5519c3364a2fc6d45331911e0b5ef374d2d7f18fe5979c"
+        },
+        {
+          "id": "vm:anatomy:body:thigh:left:source-component:fj2078",
+          "source": {
+            "file": "FJ2078",
+            "sha256": "fc1867693af0aa210a96a79c3f53c80fedacd4f136b21c6d4f839ce06575b8ac"
+          },
+          "role": "lateral-circumflex",
+          "triangles": 1102,
+          "topology": {
+            "sourceVertices": 577,
+            "exactUniqueVertices": 553,
+            "unusedUniqueVertices": 0,
+            "triangles": 1102,
+            "edges": 1653,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 1102,
+                "vertices": 553,
+                "bounds": {
+                  "min": [
+                    75.9873,
+                    -124.615,
+                    769.026
+                  ],
+                  "max": [
+                    120.521,
+                    -61.526,
+                    794.804
+                  ]
+                },
+                "areaMm2": 362.71889830815405,
+                "algebraicVolumeMm3": 109.61522171912948
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          },
+          "sourceFaceKeySha256": "beb52d92b1ff7c9ecbe51809f8b8e195c6cade221e980bd01bfa1728fe3cd957"
+        }
+      ],
+      "exactRenderedFacePartition": true
+    }
+  ],
+  "artifact": {
+    "id": "femoral-components",
+    "url": "/models/bodyparts3d/femoral-components/femoral-components.glb?v=a35dfffc15ed011570781c6c194ecbfeda08bc70926a39b8cbf0cffa8b88dca0",
+    "bytes": 283964,
+    "sha256": "a35dfffc15ed011570781c6c194ecbfeda08bc70926a39b8cbf0cffa8b88dca0",
+    "structures": 4
+  },
+  "modification": "Re-export of an exact triangle partition from existing root surfaces. Original source coordinates, faces and winding retained with established transform/Float32; normals recomputed. No new anatomy, fitting, mirroring, bridging or face deletion.",
+  "clinicalApproval": false
+}

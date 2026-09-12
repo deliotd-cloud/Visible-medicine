@@ -58,14 +58,14 @@ const reject = (fn, message) => {
   checks++;
   assert.throws(fn, message);
 };
-same(legacy.length, 1065);
-same(anatomy.length, 1136);
+same(legacy.length, 1091); // Current 1,082 root selections plus nine shoulder entries.
+same(anatomy.length, 1166);
 same(
   anatomy.filter((t) => t.scope !== 'nested'),
   legacy,
   'Current body and shoulder bindings unchanged by the nested extension',
 );
-same(nested.length, 71);
+same(nested.length, 75);
 same(
   nested.map((t) => t.structureId).sort(),
   targets.map((t) => t.structureId).sort(),

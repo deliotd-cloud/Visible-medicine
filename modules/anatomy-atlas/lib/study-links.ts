@@ -77,7 +77,8 @@ export function parseStudyLink(params: StudySearchParams): ParsedStudyLink {
           detail !== 'renal' &&
           detail !== 'pancreatic' &&
           detail !== 'visual-pathway' &&
-          detail !== 'cricothyroid') ||
+          detail !== 'cricothyroid' &&
+          detail !== 'femoral-components') ||
         typeof part !== 'string' ||
         !identity.test(part) ||
         typeof partSource !== 'string' ||

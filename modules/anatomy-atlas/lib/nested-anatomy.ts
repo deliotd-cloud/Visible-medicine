@@ -8,8 +8,16 @@ import { pulmonaryCatalog, pulmonaryFor } from './pulmonary.ts';
 import { hepaticCatalog, hepaticFor } from './hepatic.ts';
 import { renalCatalog, renalFor } from './renal.ts';
 import { pancreaticCatalog, pancreaticFor } from './pancreatic.ts';
-import { visualPathwayCatalog, visualPathwayFor } from './visual-pathway.ts';
+import {
+  visualPathwayCatalog,
+  visualPathwayFor,
+} from './visual-pathway.ts';
 import { cricothyroidCatalog, cricothyroidFor } from './cricothyroid.ts';
+import {
+  femoralComponentCatalog,
+  femoralComponentsFor,
+  femoralParentBundleMatches,
+} from './femoral-components.ts';
 
 export type NestedStudy =
   | 'eye'
@@ -22,7 +30,8 @@ export type NestedStudy =
   | 'renal'
   | 'pancreatic'
   | 'visual-pathway'
-  | 'cricothyroid';
+  | 'cricothyroid'
+  | 'femoral-components';
 export type NestedSelection = {
   study: NestedStudy;
   structureId: string;
@@ -39,6 +48,12 @@ export type NestedRequest = NestedSelection & {
   parentHash: string;
 };
 const studies = [
+  {
+    study: 'femoral-components',
+    title: 'Deep-femoral source components',
+    catalog: femoralComponentCatalog,
+    layers: femoralComponentsFor,
+  },
   {
     study: 'cricothyroid',
     title: 'Cricothyroid muscle parts',
@@ -108,7 +123,9 @@ const studies = [
 ] as const;
 
 export function nestedPartsFor(parent: BodyStructure, study: NestedStudy) {
-  return studies.find((entry) => entry.study === study)?.layers(parent) ?? [];
+  return (
+    studies.find((entry) => entry.study === study)?.layers(parent) ?? []
+  );
 }
 export function nestedBundleHash(study: NestedStudy, bundle: string) {
   return (
@@ -122,10 +139,17 @@ export function nestedBundleHash(study: NestedStudy, bundle: string) {
  * never become selectable children or imaging/lecture entitlements. */
 export function nestedStudyTargets(catalog: BodyCatalog): NestedTarget[] {
   return catalog.structures.flatMap((parent) => {
-    const parentBundle = catalog.bundles.find((b) => b.id === parent.bundle);
+    const parentBundle = catalog.bundles.find(
+      (b) => b.id === parent.bundle,
+    );
     if (!parentBundle) return [];
     return studies.flatMap((entry) =>
       entry.layers(parent).flatMap((structure) => {
+        if (
+          entry.study === 'femoral-components' &&
+          !femoralParentBundleMatches(parentBundle)
+        )
+          return [];
         const bundle = entry.catalog.bundles.find(
           (b) => b.id === structure.bundle,
         );

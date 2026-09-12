@@ -1,4 +1,5 @@
 import pins from '../content/nested-teaching-bindings.v1.json' with { type: 'json' };
+import femoralPins from '../content/femoral-component-teaching-bindings.v1.json' with { type: 'json' };
 import {
   nestedConcepts,
   nestedTeachingReferences,
@@ -30,13 +31,14 @@ export function nestedTeachingFor(
   study: NestedStudy,
   selected: BodyStructure,
 ): NestedConcept | null {
-  const pinnedParent = pins.parents.find((p) => p.id === parent.id);
+  const activePins = study === 'femoral-components' ? femoralPins : pins;
+  const pinnedParent = activePins.parents.find((p) => p.id === parent.id);
   if (!pinnedParent || canonical(pinnedParent) !== canonical(parent))
     return null;
   const current = nestedPartsFor(parent, study).find(
     (s) => s.id === selected.id,
   );
-  const binding = pins.bindings.find(
+  const binding = activePins.bindings.find(
     (p) =>
       p.study === study &&
       p.parentId === parent.id &&
@@ -69,7 +71,12 @@ export function nestedTopicLesson(
   concept: NestedConcept,
   tab: ContentTab,
 ): ContentLesson {
-  if (tab === 'ct' || tab === 'mri' || tab === 'xray' || tab === 'ultrasound') {
+  if (
+    tab === 'ct' ||
+    tab === 'mri' ||
+    tab === 'xray' ||
+    tab === 'ultrasound'
+  ) {
     const imaging = concept.imaging?.[tab];
     if (imaging)
       return {

@@ -1,4 +1,5 @@
 'use client';
+import { femoralComponentsFor } from '@/lib/femoral-components';
 import './um-knee-entry.css';
 import './upper-limb-motor.css';
 import {
@@ -2115,7 +2116,8 @@ export default function BodyExplorer({
                         hepaticFor(selected).length > 0 ||
                         renalFor(selected).length > 0 ||
                         pancreaticFor(selected).length > 0 ||
-                        cricothyroidFor(selected).length > 0) && (
+                        cricothyroidFor(selected).length > 0 ||
+                        femoralComponentsFor(selected).length > 0) && (
                         <div className="body-selection-actions">
                           <Button
                             ref={ventricleLauncher}
@@ -2129,7 +2131,9 @@ export default function BodyExplorer({
                             }}
                           >
                             <Layers3 />{' '}
-                            {cricothyroidFor(selected).length
+                            {femoralComponentsFor(selected).length
+                              ? 'Explore artery components'
+                              : cricothyroidFor(selected).length
                               ? 'Explore cricothyroid muscles'
                               : pancreaticFor(selected).length
                                 ? 'Explore pancreatic ducts'

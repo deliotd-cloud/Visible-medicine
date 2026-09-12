@@ -1,5 +1,7 @@
 # Descending lateral circumflex femoral branches
 
+Subsequent implementation: the [deep-femoral component workbench](FEMORAL_COMPONENT_DISSECTION.md) now makes the previously grouped parent source surfaces individually selectable. The historical source audit and root geometry described below are unchanged.
+
 In **Thigh**, **Leg** or **Whole body**, search **descending branch** and select a side. The two original source surfaces use the existing labels, selection, fade/isolation, removal, Undo/Redo, separation, clipping, study links and vessel controls. No new toolbar or permanent panel.
 
 ## Grouped parent, separate branch

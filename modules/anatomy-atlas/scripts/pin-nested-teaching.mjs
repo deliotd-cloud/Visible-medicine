@@ -28,7 +28,8 @@ const catalog = scope.exports.bodyDisplayCatalog(
     await readFile('public/models/bodyparts3d/full-body/catalog.json'),
   ),
 );
-const targets = scope.exports.nestedStudyTargets(catalog);
+// Femoral source partitions have a separate immutable supplemental pin file.
+const targets = scope.exports.nestedStudyTargets(catalog).filter(t => t.study !== 'femoral-components');
 const bindings = targets.map((target) => {
   const matches = nestedConcepts.filter(
     (c) =>

@@ -5,20 +5,6 @@ import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import ts from 'typescript';
 import { build } from './workspace-component-test-build.mjs';
-import {
-  nestedStudyTargets,
-  resolveNestedTarget,
-} from '../lib/nested-anatomy.ts';
-import {
-  atlasSearchIndex,
-  filterAtlasSearch,
-} from '../lib/atlas-navigation.ts';
-import {
-  bodyStudyScope,
-  makeStudyLink,
-  parseStudyLink,
-  resolveStudyLink,
-} from '../lib/study-links.ts';
 let checks = 0;
 const same = (a, b, message) => {
   checks++;
@@ -33,8 +19,12 @@ const require = createRequire(import.meta.url),
 const compiled = await build({
   stdin: {
     contents: `export { bodyDisplayCatalog } from './lib/body-display-catalog';
+    export { nestedStudyTargets, resolveNestedTarget } from './lib/nested-anatomy';
+    export { atlasSearchIndex, filterAtlasSearch } from './lib/atlas-navigation';
+    export { bodyStudyScope, makeStudyLink, parseStudyLink, resolveStudyLink } from './lib/study-links';
     export { EyeLayerView } from './app/eye-layers';
     export { VentricularView } from './app/ventricles';
+    export { FemoralComponentView } from './app/femoral-components';
     export { AtlasSearch } from './app/atlas-workspace';`,
     resolveDir: process.cwd(),
     loader: 'tsx',
@@ -96,13 +86,14 @@ const uiModule = { exports: {} },
   };
 runInNewContext(compiled.outputFiles[0].text, uiEnv);
 const api = uiModule.exports;
+const { nestedStudyTargets, resolveNestedTarget, atlasSearchIndex, filterAtlasSearch, bodyStudyScope, makeStudyLink, parseStudyLink, resolveStudyLink } = api;
 const raw = JSON.parse(
   await readFile('public/models/bodyparts3d/full-body/catalog.json'),
 );
 const catalog = api.bodyDisplayCatalog(raw),
   before = JSON.stringify(catalog);
 const targets = nestedStudyTargets(catalog);
-same(targets.length, 71);
+same(targets.length, 75);
 same(
   Object.fromEntries(
     [
@@ -117,6 +108,7 @@ same(
       'pancreatic',
       'visual-pathway',
       'cricothyroid',
+      'femoral-components',
     ].map((study) => [study, targets.filter((t) => t.study === study).length]),
   ),
   {
@@ -131,9 +123,10 @@ same(
     pancreatic: 2,
     'visual-pathway': 3,
     cricothyroid: 4,
+    'femoral-components': 4,
   },
 );
-same(new Set(targets.map((t) => t.structureId)).size, 71);
+same(new Set(targets.map((t) => t.structureId)).size, 75);
 const parse = (href) => {
   const url = new URL(href, 'https://atlas.invalid');
   return { url, parsed: parseStudyLink(Object.fromEntries(url.searchParams)) };
@@ -144,7 +137,7 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
   for (const side of ['both', 'left', 'right']) {
     const index = atlasSearchIndex(catalog, region, side);
     const nested = index.filter((e) => e.key.startsWith('nested:'));
-    same(nested.length, 71);
+    same(nested.length, 75);
     for (const target of targets) {
       const entry = nested.find(
         (e) => e.key === `nested:${target.study}:${target.structureId}`,
@@ -258,6 +251,7 @@ for (const target of targets) {
     'pancreatic',
     'visual-pathway',
     'cricothyroid',
+    'femoral-components',
   ].filter((s) => s !== target.study))
     same(
       makeStudyLink(catalog, targetRegion, target.parentId, 'both', null, {
@@ -292,7 +286,7 @@ for (const target of targets) {
   };
   require('react-dom/server').renderToStaticMarkup(
     React.createElement(
-      target.study === 'eye' ? api.EyeLayerView : api.VentricularView,
+      target.study === 'femoral-components' ? api.FemoralComponentView : target.study === 'eye' ? api.EyeLayerView : api.VentricularView,
       props,
     ),
   );
@@ -306,6 +300,13 @@ for (const target of targets) {
   check(!uiEnv.__scene.hiddenIds.includes(target.structureId));
   check(uiEnv.__scene.landmarks.includes(target.structureId));
   for (const invalid of ['missing', target.parentId]) {
+    if (target.study === 'femoral-components') {
+      uiEnv.__scene = null;
+      const html = require('react-dom/server').renderToStaticMarkup(React.createElement(api.FemoralComponentView, { ...props, initialSelectedId: invalid }));
+      check(html.includes('source binding is unavailable'));
+      same(uiEnv.__scene, null);
+      continue;
+    }
     require('react-dom/server').renderToStaticMarkup(
       React.createElement(
         target.study === 'eye' ? api.EyeLayerView : api.VentricularView,

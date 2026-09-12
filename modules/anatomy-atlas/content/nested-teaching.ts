@@ -1,4 +1,5 @@
 import type { NestedStudy } from '../lib/nested-anatomy';
+import { femoralComponentConcepts, femoralComponentReferences } from './femoral-component-teaching.ts';
 import { collicularBrachiaConcepts, collicularBrachiaReferences } from './collicular-brachia-teaching.ts';
 import {
   eyeImagingTeaching,
@@ -57,6 +58,7 @@ export const nestedTeachingReferences: Record<
   string,
   { title: string; url: string }
 > = {
+  ...femoralComponentReferences,
   ...eyeImagingReferences,
   ...visualPathwayImagingReferences,
   ...brainImagingReferences,
@@ -212,6 +214,7 @@ const quiz = (
 // Original, concise teaching drafts. These are conceptual lessons shared by
 // explicitly pinned source representations, not patient-specific findings.
 export const nestedConcepts: NestedConcept[] = [
+  ...femoralComponentConcepts,
   ...collicularBrachiaConcepts,
   ...cricothyroidConcepts,
   ...pancreaticConcepts,

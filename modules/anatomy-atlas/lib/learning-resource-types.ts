@@ -20,7 +20,8 @@ export type NestedLearningStudy =
   | 'renal'
   | 'pancreatic'
   | 'visual-pathway'
-  | 'cricothyroid';
+  | 'cricothyroid'
+  | 'femoral-components';
 export type LearningAge = 'adult' | 'paediatric' | 'mixed' | 'unspecified';
 export type LearningSide =
   'left' | 'right' | 'bilateral' | 'midline' | 'unspecified';

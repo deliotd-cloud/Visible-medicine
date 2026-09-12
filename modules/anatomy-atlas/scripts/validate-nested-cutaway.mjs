@@ -89,7 +89,8 @@ const catalog = api.bodyDisplayCatalog(
 );
 const targets = api
   .nestedStudyTargets(catalog)
-  .filter((t) => t.study !== 'eye');
+  // Dedicated femoral workbench coverage: validate-femoral-components.mjs.
+  .filter((t) => t.study !== 'eye' && t.study !== 'femoral-components');
 const cases = [
   ...new Map(targets.map((t) => [`${t.study}/${t.parentId}`, t])).values(),
 ];

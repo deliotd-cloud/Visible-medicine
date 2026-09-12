@@ -1,4 +1,6 @@
 'use client';
+import FemoralComponents from './femoral-components';
+import { femoralComponentsFor } from '@/lib/femoral-components';
 import { useCallback, useMemo, useReducer, useState } from 'react';
 import { cardiacCirculationFor } from '@/lib/cardiac-circulation';
 import {
@@ -1724,7 +1726,7 @@ export function VentricularView({
   );
 }
 
-export default function Ventricles({
+function LegacyVentricles({
   parent,
   onClose,
   initialStudy,
@@ -1844,4 +1846,17 @@ export default function Ventricles({
       </DialogContent>
     </Dialog>
   );
+}
+
+export default function Ventricles(props: {
+  parent: BodyStructure;
+  onClose: () => void;
+  initialStudy?: ComponentStudy | 'femoral-components';
+  initialSelectedId?: string;
+  initialTeachingTopic?: NestedImagingTopic;
+}) {
+  const { initialStudy, ...rest } = props;
+  if (initialStudy === 'femoral-components' || (!initialStudy && femoralComponentsFor(props.parent).length))
+    return <FemoralComponents {...rest} />;
+  return <LegacyVentricles {...rest} initialStudy={initialStudy} />;
 }

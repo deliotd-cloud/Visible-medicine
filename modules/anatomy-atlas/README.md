@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Deep femoral artery → Explore artery components:** [Dissect the two supplied components on either side](docs/FEMORAL_COMPONENT_DISSECTION.md), with reversible visibility, three separation mechanisms and explicit partial-source labelling. Existing root geometry and teaching pins are preserved. The owner's approved scan-data pilot is the next priority once folder paths are available; runtime publication and clinical/device acceptance remain separate.
+
 **12 September — descending lateral circumflex branches:** Two distinct original branch meshes now join thigh/leg/whole-body dissection. Source overlap checks prevent duplicate parent meshes; arterial links explicitly say **Via grouped parent**. See [scope, source evidence and review requirements](docs/CIRCUMFLEX_FEMORAL.md).
 
 **Shoulder & arm → Subscapular artery** now supplies [both original source surfaces](docs/SUBSCAPULAR_ARTERIES.md). The existing Arterial connections panel links parent and branches on the same side and provides reversible isolation with bones. All 1,576 original triangles are retained; no bridging or smoothing. Clinical/device sign-off and runtime publication remain pending.

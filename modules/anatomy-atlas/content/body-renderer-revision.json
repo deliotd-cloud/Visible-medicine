@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "ed08da15e73fdbdd8d0069ad534f84a8bbc1d088539f6e76cb62ba075bea8801"
+      "sha256": "5875e405b95fdc372ea470599c93e126a5b7fd6f44e8f8d1ef8131f0badcfd25"
     },
     {
       "path": "app/body-scene.tsx",
@@ -127,6 +127,10 @@
     {
       "path": "app/eye-layers.tsx",
       "sha256": "de0928192cd5b8cd20c19a7372471fdb3e39d60f5fa2ab777469a8f83ac47879"
+    },
+    {
+      "path": "app/femoral-components.tsx",
+      "sha256": "52091361ad62034595f6ad1475734aa97efc50203b1767bf1d57594d005cd604"
     },
     {
       "path": "app/fitted-camera.tsx",
@@ -294,7 +298,7 @@
     },
     {
       "path": "app/ventricles.tsx",
-      "sha256": "bb0708632a07e1df51dd133c8f6b4d75c38fcdc2dadc5328236f58bc0c7b7944"
+      "sha256": "67cff21006405dfab68ea812996ae0f7a8d15fc58d17a382233304b5e4d2f5cc"
     },
     {
       "path": "app/ventricular-relationships.css",
@@ -425,6 +429,14 @@
       "sha256": "f9a837eb80e98b6a922144c8354dd9c949638f39113450350c06db762d04b20f"
     },
     {
+      "path": "content/femoral-component-teaching-bindings.v1.json",
+      "sha256": "258bef0d9526cf5e2a471d49b397c8582fe4016945c9e6cd9f52e79c6a37a43f"
+    },
+    {
+      "path": "content/femoral-component-teaching.ts",
+      "sha256": "987385471320cecedfc6732bb063de4627b8fc8dcfef0dbf297465d970a0507e"
+    },
+    {
       "path": "content/foot-joint-pins.json",
       "sha256": "0cfede2414cd17126803a4cb294aaa744b5516323f802ecb9bc8234f5ee3b3d5"
     },
@@ -534,7 +546,7 @@
     },
     {
       "path": "content/nested-teaching.ts",
-      "sha256": "22362c6f6d44a9403ce7488cd11a5dcf323b1bc00bcf667979d04403b50b74bd"
+      "sha256": "7fd9bcf969c9fbd7aa8407c70ba01f0e716301048bb9dd048e99e036e25e3e19"
     },
     {
       "path": "content/pancreatic-teaching.ts",
@@ -929,6 +941,10 @@
       "sha256": "34f668314fa95d7fd1a8bf8c2e8e26d2cfb5d8db7fe16bcc4a06f3e33dc6c0fe"
     },
     {
+      "path": "lib/femoral-components.ts",
+      "sha256": "11ceea18314fafee0872c1cdf383f6d132d27b4c9f0c17ba3a5093170c5a8cf5"
+    },
+    {
       "path": "lib/foot-clinical-curriculum.ts",
       "sha256": "237f7ee1c684a403f04e87b9e9a798ffabf9b5e9dfbccb22a3e099ed28cc0317"
     },
@@ -1182,11 +1198,11 @@
     },
     {
       "path": "lib/nested-anatomy.ts",
-      "sha256": "05fc8a7f73d950bb320879b7786a65c1659c0b902bc681baff8b145f81e39de7"
+      "sha256": "f12ee701477ce4de3f6964011160d8c2d0ff085f10fbfaecb8971202755b5373"
     },
     {
       "path": "lib/nested-teaching.ts",
-      "sha256": "cc75404d279a6a00cd9c5ad88c694b0d696661469eada3a018be5ead29568271"
+      "sha256": "aa2423a1cc53f70f992c19b601160000d44937eda47faae422d6898902edd23d"
     },
     {
       "path": "lib/neural-anatomy-curriculum.ts",
@@ -1382,7 +1398,7 @@
     },
     {
       "path": "lib/study-links.ts",
-      "sha256": "055a478a8bd1e4ab6dbeccfaf071e8f7d042f8bd84908225410c45bc2c35f813"
+      "sha256": "3a72ba2eebed65f6f999f8fed44c4293ce8ef4fa35473672a28ee5a5620f828b"
     },
     {
       "path": "lib/study-navigation.ts",
@@ -1538,7 +1554,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "a49f9266f4f670c9401d9f13088e8b3293f0b1fffd7586f9a746af9ef90637e8"
+      "sha256": "d057955f762f93fcada4a7a380f13912112aec3964a5dfed095e9dd32d31cb6a"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1599,6 +1615,10 @@
     {
       "path": "public/models/bodyparts3d/eye-layers/display-correction.json",
       "sha256": "61e09e972a1d301e56ebae9f1af90ffe9136309eda0242df1a03f84c6ad85dd2"
+    },
+    {
+      "path": "public/models/bodyparts3d/femoral-components/catalog.json",
+      "sha256": "594f8071b63861fcb1f4a0b821a26fd5c54b609444b8321474802b16ec13a799"
     },
     {
       "path": "public/models/bodyparts3d/genicular-arteries/catalog.json",
@@ -1713,5 +1733,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "69e34f24391c312ab2e6d04f86764f555520ab3e52378a8b6fe23da4ce7442cc"
+  "sha256": "bb20d0d274943927bcc3657f31aea35c4fe2b51bdcbe36a730076d8bbaa360bd"
 }

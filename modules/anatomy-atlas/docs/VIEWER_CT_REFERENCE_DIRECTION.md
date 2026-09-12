@@ -4,6 +4,8 @@ Status: design input for the active atlas goal, not a delivered CT viewer or cli
 
 ## References actually inspected
 
+Additional 12 September reference: [hinumpy CT explorer: observed features, 30-minute claim and implementation notes](CT_EXPLORER_REEL_2026-09-12.md). This supplements the two demonstrations below and records separate evidence limits and a TotalSegmentator dataset lead; no third-party assets were admitted.
+
 Both public Instagram pages and multiple playback frames were inspected in the browser. These observations concern the visible demonstrations, not independent verification of their code, anatomical accuracy, data licences, claimed AI workflow or registration quality.
 
 - [Organ-focused viewer, posted by techinsixty](https://www.instagram.com/reel/DblSFPWtjLb/): a large central shaded organ, narrow organ-navigation rail, compact vertical tools and a right-hand information panel. Playback showed switching from the heart to the pancreas; contextual cards appear below the model. The caption credits thebuggeddev and describes on-demand model loading. We did not inspect that project's repository or verify its licence.

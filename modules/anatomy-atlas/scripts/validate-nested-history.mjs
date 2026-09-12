@@ -87,7 +87,8 @@ const catalog = api.bodyDisplayCatalog(
     await readFile('public/models/bodyparts3d/full-body/catalog.json'),
   ),
 );
-const targets = api.nestedStudyTargets(catalog);
+// The separate component workbench is exercised by validate-femoral-components.
+const targets = api.nestedStudyTargets(catalog).filter(t => t.study !== 'femoral-components');
 const cases = [
   ...new Map(targets.map((t) => [`${t.study}/${t.parentId}`, t])).values(),
 ];

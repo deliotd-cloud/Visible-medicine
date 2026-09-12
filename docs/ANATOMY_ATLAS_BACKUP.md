@@ -1,5 +1,15 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 12 September 2026 — deep-femoral component dissection
+
+Source `fd65061e96c41c45e5cc2e0b475b45e611e12db9`, tree `e6122bca9cbf7322fbef0fe4d4df8100aabab763`, parent `82ffc964f8830b375e089f154ae7ca0599c5fe44`. Forty-two paths changed. Four original source components exactly partition the two existing deep-femoral aggregates (15,278 triangles), without replacing or duplicating root anatomy. Same-side component selection, isolation/fading, separation layouts, cutaway, history, camera presets and source-bound teaching/navigation are available in the compact workbench. Root count remains 1,082; nested targets are 75. No new dependency or image dataset.
+
+Passed: exact exporter/pins and 682 component checks; nested navigation 31,165 checks; existing nested-learning, teaching, history and cutaway regressions; volume viewer 200 synthetic checks; TypeScript; production build and renderer freshness. Renderer: 430 inputs, SHA256 `bb20d0d274943927bcc3657f31aea35c4fe2b51bdcbe36a730076d8bbaa360bd`. Build preserves decoded source geometry across 130 GLBs / 1,456 meshes / 4,368 buffer views. No browser/GPU, clinical acceptance, continuous lumen or patient registration claim.
+
+D prefix `D:/VisibleMedicine-Atlas-Recovery/atlas-femoral-components-2026-09-12`: runtime `.site.tar.gz` 124,583,979 bytes SHA256 `2fdd7a3081c0d5e276995ed8ec80caf64136db3245a1e039b0ed92a7d4606f7f`; `.delta.tar` 2,252,800 bytes SHA256 `f28a21c70f5e6f67aedca11f5f6a263df15be67368c1ff798a34af23cf3e45ae`; `.incremental.bundle` 564,534 bytes SHA256 `9e6fd13501fd4673a4ccdc66a30c95d34424d3573aed5b9bcdb391ad570faf01`. Runtime archive contains 470 safe unique entries and three exact migrations. Independent restore/fetch/full fsck verifies exact source and tree at `refs/verification/femoral-components-20260912`, preserving verifier main. Source/runtime recovery does not back up conversation history or private review databases.
+
+Source is committed; Sites publication remains separately pending (last observed live version 171). GitHub backup targets only `backup/anatomy-atlas-2026-09-06`; website main remains unchanged. No raw cases, patient metadata, private imaging intake manifests or CT-head masks are included. The separate CT-head task's accepted segmentation is the next integration source; its NOT_FOR_PUBLICATION status and scoped approvals are preserved.
+
 ## 12 September 2026 — descending circumflex femoral branches
 
 Source `82ffc964f8830b375e089f154ae7ca0599c5fe44`, tree `2ffe72809ead82b3b2bf0c4ebdb146ce2d90c3b5`, parent `489c25f1c1be352334acf5617f8166a8b58f1243`. Thirty-six source paths changed. Original IS-A FMA21422/FMA21423 (FJ2057/FJ2063) add two descending branch selections and 10,464 retained triangles. The four-definition audit screens 1,080 prior root envelopes / 104 bounded comparisons and proves both lateral circumflex parent surfaces already exist inside deep-femoral aggregates; they are not duplicated. All prior records and models stay unchanged. Root display: 1,082; reference source IDs: 1,743; source-review queue: 411. These are not anatomical completion percentages.

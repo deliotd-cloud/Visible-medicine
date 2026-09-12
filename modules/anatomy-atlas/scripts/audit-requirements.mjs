@@ -178,6 +178,7 @@ const hepatic = await json('public/models/bodyparts3d/hepatic/catalog.json');
 const renal = await json('public/models/bodyparts3d/renal/catalog.json');
 const pancreatic = await json('public/models/bodyparts3d/pancreatic/catalog.json');
 const cricothyroid = await json('public/models/bodyparts3d/cricothyroid/catalog.json');
+const femoralComponents = await json('public/models/bodyparts3d/femoral-components/catalog.json');
 const independentKnee = await json('public/models/um-knee/catalog.json');
 const independentLimb = await json('public/models/um-limb/catalog.json');
 const abdominalWall = await json('public/models/bodyparts3d-v3/abdominal-wall/catalog.json');
@@ -466,6 +467,12 @@ for (const path of [
   'lib/renal.ts',
   'lib/pancreatic.ts',
   'lib/cricothyroid.ts',
+  'lib/femoral-components.ts',
+  'app/femoral-components.tsx',
+  'content/femoral-component-teaching.ts',
+  'content/femoral-component-teaching-bindings.v1.json',
+  'public/models/bodyparts3d/femoral-components/catalog.json',
+  'docs/femoral-component-source-audit.json',
   'content/cricothyroid-teaching.ts',
   'public/models/bodyparts3d/cricothyroid/catalog.json',
   'content/pancreatic-teaching.ts',
@@ -1023,6 +1030,10 @@ const report = {
       cricothyroidCartilageLandmarks: cricothyroid.contextRecords.length,
       cricothyroidRemovedArtifactFaces: cricothyroid.structures.reduce((n, s) => n + s.derivative.removedSourceFaces.length, 0),
       cricothyroidClinicalApproval: false,
+      femoralSourceComponents: femoralComponents.structures.length,
+      femoralSourceParentViews: femoralComponents.parents.length,
+      femoralSourceNewWholeArteries: 0,
+      femoralSourceClinicalApproval: false,
       visualPathwayGroups: visualPathway.selectableIds.length,
       visualPathwaySourceFiles: visualPathway.structures.reduce(
         (n, s) => n + s.sources.length,

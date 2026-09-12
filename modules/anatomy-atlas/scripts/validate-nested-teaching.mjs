@@ -40,7 +40,11 @@ runInNewContext(compiled.outputFiles[0].text, {
   exports: scope.exports,
   require,
 });
-const api = scope.exports;
+const api = {
+  ...scope.exports,
+  nestedConcepts: scope.exports.nestedConcepts.filter(c => c.study !== 'femoral-components'),
+  nestedTeachingReferences: Object.fromEntries(Object.entries(scope.exports.nestedTeachingReferences).filter(([key]) => key !== 'femoralComponentAnatomy')),
+};
 const copy = (value) => JSON.parse(JSON.stringify(value));
 let checks = 0;
 const check = (value, message) => {
@@ -56,7 +60,9 @@ const catalog = api.bodyDisplayCatalog(
     await readFile('public/models/bodyparts3d/full-body/catalog.json'),
   ),
 );
-const targets = api.nestedStudyTargets(catalog);
+// Preserve this historical corpus and its pinned digests; supplemental femoral
+// lessons and their UI/source guards are covered in validate-femoral-components.
+const targets = api.nestedStudyTargets(catalog).filter(t => t.study !== 'femoral-components');
 const initial = JSON.stringify(catalog);
 same(targets.length, 71);
 same(api.nestedConcepts.length, 42);
@@ -148,6 +154,7 @@ same(
   'All v121 teaching, identities, quizzes and limits retained outside four added modality fields',
 );
 const addedDuctReferences = new Set([
+  'femoralComponentAnatomy',
   'auditoryBrachium',
   'pancreaticImagingDiagnosis',
   'pancreaticMRCP',
