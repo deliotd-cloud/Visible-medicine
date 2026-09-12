@@ -2,6 +2,8 @@
 
 ## Local CT study pilot — 12 September 2026
 
+The follow-on draft-review support and source-verified Slicer markup converter are also original MIT application code, using the same installed NumPy/NiBabel tools. The converter writes the documented Slicer Markups JSON interchange format and references its schema URL; it does not redistribute Slicer, its source, a schema copy, a new model, or any private patient file. No paid dependency or service is added.
+
 The new browser viewer, binary interchange format, review-mark export and Python conversion script are original application code under the repository's MIT licence. They add no JavaScript dependency, font, texture, external anatomical dataset, inference model, paid API or mandatory service. Existing React, Three.js and R3F notices remain applicable.
 
 The optional offline exporter uses the owner's already installed NumPy 2.5.2 (BSD-3-Clause core and bundled notices), NiBabel 5.4.2 (MIT), and scikit-image 0.26.0 (BSD-3-Clause core plus the per-file BSD/MIT notices in its distribution); SciPy 1.18.1 is an existing transitive scientific runtime, not shipped in the website. The installed distributions retain their original licence texts. This repository does not redistribute their wheels or an inference checkpoint. A future packaged Python installer must separately retain/audit the exact wheel and bundled-library notices; a package's headline licence alone is insufficient.

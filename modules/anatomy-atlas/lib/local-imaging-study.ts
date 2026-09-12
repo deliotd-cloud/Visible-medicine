@@ -12,6 +12,7 @@ import type { ImagePlane } from './imaging-comparison';
 
 export const LOCAL_STUDY_MAX_BYTES = 256 * 1024 * 1024;
 export type LocalStructure = {
+  reviewStatus: 'source-mask-accepted' | 'draft-unapproved';
   id: string;
   label: string;
   colour: string;
@@ -26,6 +27,7 @@ export type LocalStructure = {
   indices: Uint32Array;
 };
 export type LocalStudy = {
+  reviewTargetIds: readonly string[];
   sourceAnnotationSha256: string;
   sourceCtSha256: string;
   volume: PreparedVolume;
@@ -36,7 +38,7 @@ export type LocalStudy = {
 type BinaryBlock = { offset: number; bytes: number };
 type StructureManifest = Omit<
   LocalStructure,
-  'mask' | 'positions' | 'indices'
+  'mask' | 'positions' | 'indices' | 'reviewStatus'
 > & {
   mask: BinaryBlock;
   positions: BinaryBlock;
@@ -84,7 +86,7 @@ export async function readLocalStudy(buffer: ArrayBuffer): Promise<LocalStudy> {
   );
   if (
     !h ||
-    h.schema !== 'vm-local-study/1' ||
+    !['vm-local-study/1', 'vm-local-study/2'].includes(h.schema) ||
     h.release !== 'NOT_FOR_PUBLICATION' ||
     h.modality !== 'CT' ||
     h.viewerValidated !== false ||
@@ -93,6 +95,20 @@ export async function readLocalStudy(buffer: ArrayBuffer): Promise<LocalStudy> {
     h.spatialRelationship !== 'same-source-grid' ||
     !sha(h.sourceAnnotationSha256) ||
     !sha(h.bodySha256)
+  )
+    fail();
+  const mixed = h.schema === 'vm-local-study/2';
+  const draftTargets: string[] = mixed ? h.reviewTargetIds : [];
+  if (
+    mixed &&
+    (h.reviewMode !== 'mixed-draft-review' ||
+      !Array.isArray(draftTargets) ||
+      draftTargets.length < 1 ||
+      draftTargets.length > 16 ||
+      new Set(draftTargets).size !== draftTargets.length ||
+      draftTargets.some(
+        (id) => typeof id !== 'string' || !/^cth\.[a-z0-9_.]{1,120}$/.test(id),
+      ))
   )
     fail();
   const digest = [
@@ -155,7 +171,12 @@ export async function readLocalStudy(buffer: ArrayBuffer): Promise<LocalStudy> {
         !/^[A-Za-z0-9 (),./–—-]{1,120}$/.test(s.label) ||
         !/^#[a-fA-F0-9]{6}$/.test(s.colour) ||
         !sha(s.sourceSha256) ||
-        s.approval !== 'source-mask-accepted' ||
+        !(
+          s.approval === 'source-mask-accepted' ||
+          (mixed &&
+            s.approval === 'draft-unapproved' &&
+            draftTargets.includes(s.id))
+        ) ||
         s.surfaceMethod !== 'binary-0.5-isosurface-no-smoothing'
       )
         fail();
@@ -224,6 +245,7 @@ export async function readLocalStudy(buffer: ArrayBuffer): Promise<LocalStudy> {
       if (foreground !== s.voxelCount || s.voxelCount > product(s.cropSize))
         fail();
       const structure: LocalStructure = Object.freeze({
+        reviewStatus: s.approval as LocalStructure['reviewStatus'],
         id: s.id,
         label: s.label,
         colour: s.colour,
@@ -242,6 +264,15 @@ export async function readLocalStudy(buffer: ArrayBuffer): Promise<LocalStudy> {
       return structure;
     },
   );
+  if (
+    draftTargets.some(
+      (id) =>
+        !structures.some(
+          (s) => s.id === id && s.reviewStatus === 'draft-unapproved',
+        ),
+    )
+  )
+    fail();
   ranges.sort((a, b) => a[0] - b[0]);
   if (ranges.some((r, i) => i > 0 && ranges[i - 1][1] > r[0])) fail();
   for (const structure of structures) {
@@ -254,6 +285,7 @@ export async function readLocalStudy(buffer: ArrayBuffer): Promise<LocalStudy> {
     }
   }
   return Object.freeze({
+    reviewTargetIds: Object.freeze([...draftTargets]),
     sourceAnnotationSha256: h.sourceAnnotationSha256,
     sourceCtSha256: v.sourceSha256,
     volume,

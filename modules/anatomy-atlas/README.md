@@ -1,6 +1,6 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
-**Local CT + 3D pilot:** [Open the same-study review workflow](docs/LOCAL_IMAGING_STUDY.md) at `/imaging/local` (also linked from Review). Reuses accepted CT-head masks without editing them, with linked orthogonal CT, 3D surfaces, selection, crosshairs and local correction-mark export. No scan data is included in this repository or uploaded by this viewer. Dataset privacy, viewer validation and publication remain separate gates.
+**Local CT + 3D pilot:** [Open the same-study review workflow](docs/LOCAL_IMAGING_STUDY.md) at `/imaging/local` (also linked from Review). Reuses accepted CT-head masks and explicitly included, clearly labelled drafts without editing them. Linked CT/3D review marks can now be checked against the original source and converted into locked Slicer point lists. No scan data is included in this repository or uploaded by this viewer. Dataset privacy, viewer validation and publication remain separate gates.
 
 **Deep femoral artery → Explore artery components:** [Dissect the two supplied components on either side](docs/FEMORAL_COMPONENT_DISSECTION.md), with reversible visibility, three separation mechanisms and explicit partial-source labelling. Existing root geometry and teaching pins are preserved.
 

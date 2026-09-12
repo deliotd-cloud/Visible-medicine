@@ -407,8 +407,11 @@ function LoadedStudy({
   study: LocalStudy;
   close: () => void;
 }) {
-  const [id, setId] = useState(study.structures[0].id),
-    [focus, setFocus] = useState<Vec3>(study.structures[0].focusLps);
+  const initial =
+    study.structures.find((s) => s.id === study.reviewTargetIds[0]) ??
+    study.structures[0];
+  const [id, setId] = useState(initial.id),
+    [focus, setFocus] = useState<Vec3>(initial.focusLps);
   const [query, setQuery] = useState(''),
     [window, setWindow] = useState(study.window),
     [opacity, setOpacity] = useState(0.3);
@@ -490,7 +493,7 @@ function LoadedStudy({
         </label>
         <div
           className="local-structure-list"
-          aria-label="Accepted source masks"
+          aria-label="Source masks and explicitly included drafts"
         >
           {study.structures
             .filter((s) =>
@@ -504,6 +507,9 @@ function LoadedStudy({
               >
                 <i style={{ background: s.colour }} />
                 {s.label}
+                {s.reviewStatus === 'draft-unapproved' && (
+                  <small className="local-draft-badge">Draft</small>
+                )}
               </button>
             ))}
         </div>
@@ -661,7 +667,17 @@ function LoadedStudy({
       <main className="local-study-main">
         <div className="local-study-selection">
           <strong>{selected.label}</strong>
-          <span>Source mask accepted · viewer awaiting validation</span>
+          <span>
+            {selected.reviewStatus === 'draft-unapproved'
+              ? 'Unapproved draft · boundary review required'
+              : 'Source mask accepted · viewer awaiting validation'}
+          </span>
+          {study.reviewTargetIds.length > 0 && (
+            <small className="local-draft-badge">
+              Draft review study · {study.reviewTargetIds.length} unapproved
+              targets
+            </small>
+          )}
         </div>
         <div className="local-mobile-tabs" aria-label="Choose view">
           {['3d', ...planes].map((t) => (
@@ -789,7 +805,8 @@ export default function LocalImagingWorkbench() {
         <main className="local-study-open">
           <h2>Open a prepared CT study</h2>
           <p>
-            View accepted segmentation surfaces beside their original CT. Your
+            View source segmentation surfaces beside their original CT.
+            Explicitly included drafts remain labelled as unapproved. Your
             selected file is read in this browser; this page does not upload or
             save its contents.
           </p>

@@ -134,6 +134,29 @@ try {
     return buffer;
   };
   const s = await a.readLocalStudy(pack(fixture()));
+  same(s.reviewTargetIds, []);
+  same(s.structures[0].reviewStatus, 'source-mask-accepted');
+  const draftFixture = fixture();
+  Object.assign(draftFixture.h, {
+    schema: 'vm-local-study/2',
+    reviewMode: 'mixed-draft-review',
+    reviewTargetIds: ['cth.child'],
+  });
+  draftFixture.h.structures[1].approval = 'draft-unapproved';
+  const draft = await a.readLocalStudy(pack(draftFixture));
+  same(draft.reviewTargetIds, ['cth.child']);
+  same(draft.structures[1].reviewStatus, 'draft-unapproved');
+  for (const mutate of [
+    (h) => (h.schema = 'vm-local-study/1'),
+    (h) => (h.reviewTargetIds = []),
+    (h) => (h.reviewTargetIds = ['cth.parent']),
+    (h) => (h.reviewTargetIds = ['cth.child', 'cth.child']),
+    (h) => (h.reviewMode = 'accepted-only'),
+  ]) {
+    await fails(() =>
+      a.readLocalStudy(pack(structuredClone(draftFixture), mutate)),
+    );
+  }
   same(a.fitLocalSlice(100, 100, { width: 80, height: 40 }), {
     width: 100,
     height: 50,
@@ -261,6 +284,31 @@ try {
     const actual = await a.readLocalStudy(
       file.buffer.slice(file.byteOffset, file.byteOffset + file.byteLength),
     );
+    const compareIndex = process.argv.indexOf('--compare');
+    if (compareIndex >= 0) {
+      const priorFile = await readFile(process.argv[compareIndex + 1]);
+      const prior = await a.readLocalStudy(
+        priorFile.buffer.slice(
+          priorFile.byteOffset,
+          priorFile.byteOffset + priorFile.byteLength,
+        ),
+      );
+      const bytes = (v) => Buffer.from(v.buffer, v.byteOffset, v.byteLength);
+      truth(bytes(actual.volume.values).equals(bytes(prior.volume.values)));
+      same(actual.volume.dimensions, prior.volume.dimensions);
+      same(actual.volume.originLps, prior.volume.originLps);
+      same(actual.volume.stepsLps, prior.volume.stepsLps);
+      for (const original of prior.structures) {
+        const current = actual.structures.find((s) => s.id === original.id);
+        truth(!!current);
+        same(current.reviewStatus, original.reviewStatus);
+        same(current.sourceSha256, original.sourceSha256);
+        same(current.cropStart, original.cropStart);
+        same(current.cropSize, original.cropSize);
+        for (const field of ['mask', 'positions', 'indices'])
+          truth(bytes(current[field]).equals(bytes(original[field])));
+      }
+    }
     for (const structure of actual.structures) {
       truth(
         a.maskAtIndex(structure, actual.volume.lpsToIndex(structure.focusLps)),

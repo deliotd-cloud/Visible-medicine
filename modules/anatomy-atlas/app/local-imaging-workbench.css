@@ -180,6 +180,18 @@
   color: #adbdc0;
   font-size: 0.875rem;
 }
+.local-draft-badge {
+  border: 1px solid #e8ad5b;
+  border-radius: 0.3rem;
+  padding: 0.15rem 0.3rem;
+  color: #ffe1b0;
+  background: #4a2c0c;
+  font-size: 0.875rem;
+  line-height: 1.25;
+}
+.local-structure-list .local-draft-badge {
+  margin-left: auto;
+}
 .local-study-panes {
   display: grid;
   grid-template-columns: 1fr 1fr;
