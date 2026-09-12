@@ -87,8 +87,9 @@ const catalog = api.bodyDisplayCatalog(
     await readFile('public/models/bodyparts3d/full-body/catalog.json'),
   ),
 );
-// The separate component workbench is exercised by validate-femoral-components.
-const targets = api.nestedStudyTargets(catalog).filter(t => t.study !== 'femoral-components');
+// Separate artery workbench callbacks are covered by validate-femoral-components
+// and validate-cranial-artery-components; preserve this original 14-case corpus.
+const targets = api.nestedStudyTargets(catalog).filter(t => !['femoral-components', 'cranial-artery-components'].includes(t.study));
 const cases = [
   ...new Map(targets.map((t) => [`${t.study}/${t.parentId}`, t])).values(),
 ];

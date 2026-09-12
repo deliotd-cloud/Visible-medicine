@@ -1,5 +1,9 @@
 # Third-party notices
 
+## Cranial artery source-part dissection — 12 September 2026
+
+The nested PICA/right-MCA workbench reuses 29 already retained BodyParts3D v4 source files; it adds no external anatomy dataset, dependency, font, texture or paid service. The derivative GLB partitions existing root triangles exactly, with original rendered normals and recolouring for selection. Preserve: **BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International**. Original source files and parent assets are unchanged. The parent FMA identifier does not independently name each child part. See [partition evidence and limitations](../docs/CRANIAL_ARTERY_COMPONENTS.md).
+
 ## Additional cranial artery surfaces — 12 September 2026
 
 The five cranial artery selections use 31 original BodyParts3D v4 ISA/PART-OF OBJ files under CC BY 4.0. Preserve: **BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International**. Original coordinates, winding and all faces are retained; derivatives use exact-coordinate indexing/normals and Float32 scene encoding only. Original files remain separately licensed in `content/sources/cranial-arteries`; the code's MIT licence does not relicense them. No new package, texture, font, paid API or mandatory service is added. Brief original teaching cites TTUHSC El Paso for facts only, without copying its table dataset, prose, figures or scans. AICA was audited offline but is not redistributed in this addition. See [the source scope, licence and validation requirements](../docs/CRANIAL_ARTERIES.md).

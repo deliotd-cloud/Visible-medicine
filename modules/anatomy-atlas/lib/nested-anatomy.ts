@@ -1,4 +1,9 @@
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
+import {
+  cranialArteryComponentCatalog,
+  cranialArteryComponentsFor,
+  cranialArteryParentBundleMatches,
+} from './cranial-artery-components.ts';
 import { eyeCatalog, eyeLayersFor } from './eye-layers.ts';
 import { ventricleCatalog, ventriclesFor } from './ventricles.ts';
 import { brainstemCatalog, brainstemFor } from './brainstem.ts';
@@ -8,10 +13,7 @@ import { pulmonaryCatalog, pulmonaryFor } from './pulmonary.ts';
 import { hepaticCatalog, hepaticFor } from './hepatic.ts';
 import { renalCatalog, renalFor } from './renal.ts';
 import { pancreaticCatalog, pancreaticFor } from './pancreatic.ts';
-import {
-  visualPathwayCatalog,
-  visualPathwayFor,
-} from './visual-pathway.ts';
+import { visualPathwayCatalog, visualPathwayFor } from './visual-pathway.ts';
 import { cricothyroidCatalog, cricothyroidFor } from './cricothyroid.ts';
 import {
   femoralComponentCatalog,
@@ -31,7 +33,8 @@ export type NestedStudy =
   | 'pancreatic'
   | 'visual-pathway'
   | 'cricothyroid'
-  | 'femoral-components';
+  | 'femoral-components'
+  | 'cranial-artery-components';
 export type NestedSelection = {
   study: NestedStudy;
   structureId: string;
@@ -48,6 +51,12 @@ export type NestedRequest = NestedSelection & {
   parentHash: string;
 };
 const studies = [
+  {
+    study: 'cranial-artery-components',
+    title: 'Cranial artery source parts',
+    catalog: cranialArteryComponentCatalog,
+    layers: cranialArteryComponentsFor,
+  },
   {
     study: 'femoral-components',
     title: 'Deep-femoral source components',
@@ -123,9 +132,7 @@ const studies = [
 ] as const;
 
 export function nestedPartsFor(parent: BodyStructure, study: NestedStudy) {
-  return (
-    studies.find((entry) => entry.study === study)?.layers(parent) ?? []
-  );
+  return studies.find((entry) => entry.study === study)?.layers(parent) ?? [];
 }
 export function nestedBundleHash(study: NestedStudy, bundle: string) {
   return (
@@ -139,12 +146,15 @@ export function nestedBundleHash(study: NestedStudy, bundle: string) {
  * never become selectable children or imaging/lecture entitlements. */
 export function nestedStudyTargets(catalog: BodyCatalog): NestedTarget[] {
   return catalog.structures.flatMap((parent) => {
-    const parentBundle = catalog.bundles.find(
-      (b) => b.id === parent.bundle,
-    );
+    const parentBundle = catalog.bundles.find((b) => b.id === parent.bundle);
     if (!parentBundle) return [];
     return studies.flatMap((entry) =>
       entry.layers(parent).flatMap((structure) => {
+        if (
+          entry.study === 'cranial-artery-components' &&
+          !cranialArteryParentBundleMatches(parentBundle)
+        )
+          return [];
         if (
           entry.study === 'femoral-components' &&
           !femoralParentBundleMatches(parentBundle)

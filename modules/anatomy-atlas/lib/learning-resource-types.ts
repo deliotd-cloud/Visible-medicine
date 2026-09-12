@@ -21,10 +21,15 @@ export type NestedLearningStudy =
   | 'pancreatic'
   | 'visual-pathway'
   | 'cricothyroid'
-  | 'femoral-components';
+  | 'femoral-components'
+  | 'cranial-artery-components';
 export type LearningAge = 'adult' | 'paediatric' | 'mixed' | 'unspecified';
 export type LearningSide =
-  'left' | 'right' | 'bilateral' | 'midline' | 'unspecified';
+  | 'left'
+  | 'right'
+  | 'bilateral'
+  | 'midline'
+  | 'unspecified';
 export type RootAnatomyRepresentation = {
   scope: 'body' | 'shoulder-pilot';
   structureId: string;
@@ -43,7 +48,8 @@ export type NestedAnatomyRepresentation = {
   };
 };
 export type AnatomyRepresentation =
-  RootAnatomyRepresentation | NestedAnatomyRepresentation;
+  | RootAnatomyRepresentation
+  | NestedAnatomyRepresentation;
 export type LearningAnchor =
   | {
       type: 'volume';

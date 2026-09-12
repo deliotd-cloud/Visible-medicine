@@ -1,0 +1,1507 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "8385c1642baee2a3a363ba6e248a1c3f85335d9b",
+  "parentBundle": {
+    "id": "cranial-arteries",
+    "url": "/models/bodyparts3d/cranial-arteries/cranial-arteries.glb?v=3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+    "bytes": 212796,
+    "sha256": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+    "structures": 5
+  },
+  "proofs": [
+    {
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50519",
+      "parts": [
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1700",
+          "source": {
+            "file": "FJ1700",
+            "sha256": "5987856de318a38d3b9507914b325ed2b8ee703ef2ea26e11b6e69637e472ae6"
+          },
+          "sourceOrder": 1,
+          "triangles": 326,
+          "topology": {
+            "sourceVertices": 272,
+            "exactUniqueVertices": 165,
+            "unusedUniqueVertices": 0,
+            "triangles": 326,
+            "edges": 489,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 326,
+                "vertices": 165,
+                "bounds": {
+                  "min": [
+                    -22.6126,
+                    -53.3411,
+                    1487.77
+                  ],
+                  "max": [
+                    -11.1962,
+                    -36.4314,
+                    1491.37
+                  ]
+                },
+                "areaMm2": 47.800986895301776,
+                "algebraicVolumeMm3": 7.840668516649453
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1701",
+          "source": {
+            "file": "FJ1701",
+            "sha256": "5a7c90c4da21a6ba5277c5af6aad8c9215e9de1efacd4c0d57bba27f51c59a7f"
+          },
+          "sourceOrder": 2,
+          "triangles": 306,
+          "topology": {
+            "sourceVertices": 427,
+            "exactUniqueVertices": 157,
+            "unusedUniqueVertices": 0,
+            "triangles": 306,
+            "edges": 459,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 4,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 298,
+                "vertices": 151,
+                "bounds": {
+                  "min": [
+                    -29.898,
+                    -32.3172,
+                    1494.08
+                  ],
+                  "max": [
+                    -10.1734,
+                    -17.82,
+                    1505.4
+                  ]
+                },
+                "areaMm2": 36.140673240912946,
+                "algebraicVolumeMm3": 2.8340189074167474
+              },
+              {
+                "firstFace": 29,
+                "triangles": 8,
+                "vertices": 6,
+                "bounds": {
+                  "min": [
+                    -29.8359,
+                    -17.8614,
+                    1505.42
+                  ],
+                  "max": [
+                    -29.6,
+                    -17.7125,
+                    1505.8
+                  ]
+                },
+                "areaMm2": 0.1983351664651326,
+                "algebraicVolumeMm3": 0.005163294999999426
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1702",
+          "source": {
+            "file": "FJ1702",
+            "sha256": "f136197e1358777d4f7f09919beeee17d2b1d9f74a883fef3376de39dec01219"
+          },
+          "sourceOrder": 3,
+          "triangles": 240,
+          "topology": {
+            "sourceVertices": 356,
+            "exactUniqueVertices": 122,
+            "unusedUniqueVertices": 0,
+            "triangles": 240,
+            "edges": 360,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 240,
+                "vertices": 122,
+                "bounds": {
+                  "min": [
+                    -24.8758,
+                    -37.479,
+                    1497.43
+                  ],
+                  "max": [
+                    -6.38594,
+                    -12.4766,
+                    1510.62
+                  ]
+                },
+                "areaMm2": 45.64873543479989,
+                "algebraicVolumeMm3": 3.492209262921808
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1703",
+          "source": {
+            "file": "FJ1703",
+            "sha256": "fc554f9c62a3f7cd91a390c920eec88716c368f59197c6556ad2d8a1788a40c8"
+          },
+          "sourceOrder": 4,
+          "triangles": 224,
+          "topology": {
+            "sourceVertices": 348,
+            "exactUniqueVertices": 114,
+            "unusedUniqueVertices": 0,
+            "triangles": 224,
+            "edges": 336,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 224,
+                "vertices": 114,
+                "bounds": {
+                  "min": [
+                    -13.7974,
+                    -24.2234,
+                    1497.45
+                  ],
+                  "max": [
+                    -7.5717,
+                    -11.8997,
+                    1517.3
+                  ]
+                },
+                "areaMm2": 33.86258396331201,
+                "algebraicVolumeMm3": 2.612033916289844
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1704",
+          "source": {
+            "file": "FJ1704",
+            "sha256": "1f20e9f325743ddd9734d462ea2aea36906ac724d158068291336dbf26577a2f"
+          },
+          "sourceOrder": 5,
+          "triangles": 286,
+          "topology": {
+            "sourceVertices": 261,
+            "exactUniqueVertices": 145,
+            "unusedUniqueVertices": 0,
+            "triangles": 286,
+            "edges": 429,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 286,
+                "vertices": 145,
+                "bounds": {
+                  "min": [
+                    -35.5539,
+                    -58.0783,
+                    1490.78
+                  ],
+                  "max": [
+                    -22.041,
+                    -49.9605,
+                    1498.5
+                  ]
+                },
+                "areaMm2": 38.58017678681018,
+                "algebraicVolumeMm3": 6.292901343566721
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1705",
+          "source": {
+            "file": "FJ1705",
+            "sha256": "bb98b100b15268a2ecdc42c4dcc78b9382a960d31fd50085608cb0e46eee4881"
+          },
+          "sourceOrder": 6,
+          "triangles": 322,
+          "topology": {
+            "sourceVertices": 277,
+            "exactUniqueVertices": 163,
+            "unusedUniqueVertices": 0,
+            "triangles": 322,
+            "edges": 483,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 322,
+                "vertices": 163,
+                "bounds": {
+                  "min": [
+                    -37.1356,
+                    -44.1083,
+                    1492.38
+                  ],
+                  "max": [
+                    -23.1147,
+                    -22.922,
+                    1505.8
+                  ]
+                },
+                "areaMm2": 68.08344409520197,
+                "algebraicVolumeMm3": 11.00277525438324
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1706",
+          "source": {
+            "file": "FJ1706",
+            "sha256": "badb36a94cc4465eed8baa283affe9b8c004ec2c7acfd265ed6804509a548005"
+          },
+          "sourceOrder": 7,
+          "triangles": 292,
+          "topology": {
+            "sourceVertices": 290,
+            "exactUniqueVertices": 148,
+            "unusedUniqueVertices": 0,
+            "triangles": 292,
+            "edges": 438,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 292,
+                "vertices": 148,
+                "bounds": {
+                  "min": [
+                    -53.5794,
+                    -51.1677,
+                    1492.59
+                  ],
+                  "max": [
+                    -34.3304,
+                    -39.0729,
+                    1512.86
+                  ]
+                },
+                "areaMm2": 67.37235051987145,
+                "algebraicVolumeMm3": 10.794124395900072
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1707",
+          "source": {
+            "file": "FJ1707",
+            "sha256": "db35aca6b5d0270c7161f7ad530f907bb7eaac3dd757d928e7c70114b496a3f9"
+          },
+          "sourceOrder": 8,
+          "triangles": 84,
+          "topology": {
+            "sourceVertices": 122,
+            "exactUniqueVertices": 44,
+            "unusedUniqueVertices": 0,
+            "triangles": 84,
+            "edges": 126,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 84,
+                "vertices": 44,
+                "bounds": {
+                  "min": [
+                    -16.3101,
+                    -38.3689,
+                    1490.66
+                  ],
+                  "max": [
+                    -9.84028,
+                    -35.1583,
+                    1496.25
+                  ]
+                },
+                "areaMm2": 12.671011757739914,
+                "algebraicVolumeMm3": 1.262893569368451
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1708",
+          "source": {
+            "file": "FJ1708",
+            "sha256": "a80d4d0fe245d8cc6480d8ab7629a3c7d8a6369b0e405d13e884fd7ac4e60363"
+          },
+          "sourceOrder": 9,
+          "triangles": 86,
+          "topology": {
+            "sourceVertices": 136,
+            "exactUniqueVertices": 45,
+            "unusedUniqueVertices": 0,
+            "triangles": 86,
+            "edges": 129,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 86,
+                "vertices": 45,
+                "bounds": {
+                  "min": [
+                    -30.5929,
+                    -61.847,
+                    1495.95
+                  ],
+                  "max": [
+                    -27.5351,
+                    -56.5564,
+                    1498.92
+                  ]
+                },
+                "areaMm2": 7.84257098430923,
+                "algebraicVolumeMm3": 0.5352626091166474
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1709",
+          "source": {
+            "file": "FJ1709",
+            "sha256": "523b687e09bf19e12a2424864aad6baf3d39b9d2c3f7746efb9160f61022dc4f"
+          },
+          "sourceOrder": 10,
+          "triangles": 176,
+          "topology": {
+            "sourceVertices": 238,
+            "exactUniqueVertices": 90,
+            "unusedUniqueVertices": 0,
+            "triangles": 176,
+            "edges": 264,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 176,
+                "vertices": 90,
+                "bounds": {
+                  "min": [
+                    -51.3726,
+                    -56.847,
+                    1502.11
+                  ],
+                  "max": [
+                    -46.9413,
+                    -50.4858,
+                    1511.5
+                  ]
+                },
+                "areaMm2": 21.276569794832085,
+                "algebraicVolumeMm3": 2.225339284633328
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1710",
+          "source": {
+            "file": "FJ1710",
+            "sha256": "b04a1ceb715c72caaa141dba9dc792d9ed4718ec4a2100b5fbf7f2fe1d163af7"
+          },
+          "sourceOrder": 11,
+          "triangles": 166,
+          "topology": {
+            "sourceVertices": 212,
+            "exactUniqueVertices": 85,
+            "unusedUniqueVertices": 0,
+            "triangles": 166,
+            "edges": 249,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 166,
+                "vertices": 85,
+                "bounds": {
+                  "min": [
+                    -51.782,
+                    -36.1525,
+                    1504.15
+                  ],
+                  "max": [
+                    -46.8291,
+                    -32.772,
+                    1515.19
+                  ]
+                },
+                "areaMm2": 17.21645135565775,
+                "algebraicVolumeMm3": 1.5416942805999594
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1711",
+          "source": {
+            "file": "FJ1711",
+            "sha256": "7d066e0e4f2974c543d43b7735c9679c67a359d98cd267b635d8dc247c28b881"
+          },
+          "sourceOrder": 12,
+          "triangles": 736,
+          "topology": {
+            "sourceVertices": 821,
+            "exactUniqueVertices": 370,
+            "unusedUniqueVertices": 0,
+            "triangles": 736,
+            "edges": 1104,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 736,
+                "vertices": 370,
+                "bounds": {
+                  "min": [
+                    -33.0922,
+                    -63.2527,
+                    1488.94
+                  ],
+                  "max": [
+                    -5.45508,
+                    -30.0879,
+                    1499.67
+                  ]
+                },
+                "areaMm2": 149.01110268620474,
+                "algebraicVolumeMm3": 22.396519757998334
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1715",
+          "source": {
+            "file": "FJ1715",
+            "sha256": "8ad649224545e4356d6f6d42d7ef466b1c90ca9228bf819e06042823253a033a"
+          },
+          "sourceOrder": 13,
+          "triangles": 796,
+          "topology": {
+            "sourceVertices": 668,
+            "exactUniqueVertices": 400,
+            "unusedUniqueVertices": 0,
+            "triangles": 796,
+            "edges": 1194,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 796,
+                "vertices": 400,
+                "bounds": {
+                  "min": [
+                    -53.3801,
+                    -72.9001,
+                    1490.25
+                  ],
+                  "max": [
+                    -12.8382,
+                    -35.1823,
+                    1515.11
+                  ]
+                },
+                "areaMm2": 234.61219578674684,
+                "algebraicVolumeMm3": 55.62353787033257
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        }
+      ],
+      "triangles": 4040,
+      "partitionSha256": "e2402120826a5617d9566e0c17ab9c010bd14473ea14f4a4c169165dfa72a437",
+      "exactRenderedFaceAndNormalPartition": true
+    },
+    {
+      "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50520",
+      "parts": [
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1700m",
+          "source": {
+            "file": "FJ1700M",
+            "sha256": "c7ad4faac2f804bec9abcb30f1437d63fada79d98e0424b788364a34f210b97c"
+          },
+          "sourceOrder": 1,
+          "triangles": 326,
+          "topology": {
+            "sourceVertices": 274,
+            "exactUniqueVertices": 165,
+            "unusedUniqueVertices": 0,
+            "triangles": 326,
+            "edges": 489,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 326,
+                "vertices": 165,
+                "bounds": {
+                  "min": [
+                    11.1962,
+                    -53.3411,
+                    1487.77
+                  ],
+                  "max": [
+                    22.6125,
+                    -36.4314,
+                    1491.37
+                  ]
+                },
+                "areaMm2": 47.81344075680732,
+                "algebraicVolumeMm3": 7.8467660283327065
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1701m",
+          "source": {
+            "file": "FJ1701M",
+            "sha256": "dc6b96d39073c2900440a62f4597757cba04261c800b6e30678ec8c0868cd58f"
+          },
+          "sourceOrder": 2,
+          "triangles": 306,
+          "topology": {
+            "sourceVertices": 428,
+            "exactUniqueVertices": 157,
+            "unusedUniqueVertices": 0,
+            "triangles": 306,
+            "edges": 459,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 4,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 298,
+                "vertices": 151,
+                "bounds": {
+                  "min": [
+                    10.1734,
+                    -32.3172,
+                    1494.08
+                  ],
+                  "max": [
+                    29.898,
+                    -17.82,
+                    1505.4
+                  ]
+                },
+                "areaMm2": 36.164132010321666,
+                "algebraicVolumeMm3": 2.840264271583399
+              },
+              {
+                "firstFace": 29,
+                "triangles": 8,
+                "vertices": 6,
+                "bounds": {
+                  "min": [
+                    29.6,
+                    -17.8614,
+                    1505.42
+                  ],
+                  "max": [
+                    29.8359,
+                    -17.7125,
+                    1505.8
+                  ]
+                },
+                "areaMm2": 0.1983351664651326,
+                "algebraicVolumeMm3": 0.005163294999999426
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1702m",
+          "source": {
+            "file": "FJ1702M",
+            "sha256": "001db67be7c0dd4543b1990e162da85d28161fd337801d7deae0dc79a221ad45"
+          },
+          "sourceOrder": 3,
+          "triangles": 240,
+          "topology": {
+            "sourceVertices": 356,
+            "exactUniqueVertices": 122,
+            "unusedUniqueVertices": 0,
+            "triangles": 240,
+            "edges": 360,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 240,
+                "vertices": 122,
+                "bounds": {
+                  "min": [
+                    6.38594,
+                    -37.479,
+                    1497.4
+                  ],
+                  "max": [
+                    24.8758,
+                    -12.4766,
+                    1510.62
+                  ]
+                },
+                "areaMm2": 45.72212705142814,
+                "algebraicVolumeMm3": 3.5023120530000336
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1703m",
+          "source": {
+            "file": "FJ1703M",
+            "sha256": "129937b884dfdac2aad686af0d4a60636ee1f51743a58378ed8d9a6b9221405c"
+          },
+          "sourceOrder": 4,
+          "triangles": 224,
+          "topology": {
+            "sourceVertices": 344,
+            "exactUniqueVertices": 114,
+            "unusedUniqueVertices": 0,
+            "triangles": 224,
+            "edges": 336,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 224,
+                "vertices": 114,
+                "bounds": {
+                  "min": [
+                    7.5717,
+                    -24.2234,
+                    1497.45
+                  ],
+                  "max": [
+                    13.7974,
+                    -11.8997,
+                    1517.3
+                  ]
+                },
+                "areaMm2": 33.86239014519707,
+                "algebraicVolumeMm3": 2.611992623389843
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1704m",
+          "source": {
+            "file": "FJ1704M",
+            "sha256": "c0ee60d6f6133e3eabc5269c5570b059723c0936b62942bbb52be4d77fc56340"
+          },
+          "sourceOrder": 5,
+          "triangles": 286,
+          "topology": {
+            "sourceVertices": 258,
+            "exactUniqueVertices": 145,
+            "unusedUniqueVertices": 0,
+            "triangles": 286,
+            "edges": 429,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 286,
+                "vertices": 145,
+                "bounds": {
+                  "min": [
+                    22.041,
+                    -58.0783,
+                    1490.78
+                  ],
+                  "max": [
+                    35.5539,
+                    -49.9605,
+                    1498.5
+                  ]
+                },
+                "areaMm2": 38.56492909327258,
+                "algebraicVolumeMm3": 6.290688380916534
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1705m",
+          "source": {
+            "file": "FJ1705M",
+            "sha256": "9b540a65bbe225b8913789ab242568f09f0db81c77b585add270f4e2d1376d6d"
+          },
+          "sourceOrder": 6,
+          "triangles": 322,
+          "topology": {
+            "sourceVertices": 280,
+            "exactUniqueVertices": 163,
+            "unusedUniqueVertices": 0,
+            "triangles": 322,
+            "edges": 483,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 322,
+                "vertices": 163,
+                "bounds": {
+                  "min": [
+                    23.1147,
+                    -44.1083,
+                    1492.38
+                  ],
+                  "max": [
+                    37.1356,
+                    -22.922,
+                    1505.8
+                  ]
+                },
+                "areaMm2": 68.04484327771934,
+                "algebraicVolumeMm3": 10.993422183033253
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1706m",
+          "source": {
+            "file": "FJ1706M",
+            "sha256": "1908978ece7bc3bd21bf022d3082d6740c3b037b213f7a2ab8d9f9c7551e8d04"
+          },
+          "sourceOrder": 7,
+          "triangles": 292,
+          "topology": {
+            "sourceVertices": 284,
+            "exactUniqueVertices": 148,
+            "unusedUniqueVertices": 0,
+            "triangles": 292,
+            "edges": 438,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 292,
+                "vertices": 148,
+                "bounds": {
+                  "min": [
+                    34.3304,
+                    -51.1678,
+                    1492.59
+                  ],
+                  "max": [
+                    53.5794,
+                    -39.0729,
+                    1512.86
+                  ]
+                },
+                "areaMm2": 67.29173335037127,
+                "algebraicVolumeMm3": 10.782423222666631
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1707m",
+          "source": {
+            "file": "FJ1707M",
+            "sha256": "f484c75fbbf1a318fea953ffbf8afac5a256bb417fcbb9866c72c1fadcd21899"
+          },
+          "sourceOrder": 8,
+          "triangles": 84,
+          "topology": {
+            "sourceVertices": 122,
+            "exactUniqueVertices": 44,
+            "unusedUniqueVertices": 0,
+            "triangles": 84,
+            "edges": 126,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 84,
+                "vertices": 44,
+                "bounds": {
+                  "min": [
+                    9.84028,
+                    -38.3689,
+                    1490.66
+                  ],
+                  "max": [
+                    16.3101,
+                    -35.1583,
+                    1496.25
+                  ]
+                },
+                "areaMm2": 12.651842166250749,
+                "algebraicVolumeMm3": 1.2592644314184551
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1708m",
+          "source": {
+            "file": "FJ1708M",
+            "sha256": "11ed732710d8153392d57dc16410bd33f30d6ff68920990748830e75765a7afd"
+          },
+          "sourceOrder": 9,
+          "triangles": 86,
+          "topology": {
+            "sourceVertices": 136,
+            "exactUniqueVertices": 45,
+            "unusedUniqueVertices": 0,
+            "triangles": 86,
+            "edges": 129,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 86,
+                "vertices": 45,
+                "bounds": {
+                  "min": [
+                    27.5351,
+                    -61.847,
+                    1495.95
+                  ],
+                  "max": [
+                    30.5929,
+                    -56.5564,
+                    1498.92
+                  ]
+                },
+                "areaMm2": 7.862015834105899,
+                "algebraicVolumeMm3": 0.5383607302666447
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1709m",
+          "source": {
+            "file": "FJ1709M",
+            "sha256": "77b2596d1400994b21c8b1c1ddc7562234aabaf0e0dc8ea02a050991e95bc248"
+          },
+          "sourceOrder": 10,
+          "triangles": 176,
+          "topology": {
+            "sourceVertices": 238,
+            "exactUniqueVertices": 90,
+            "unusedUniqueVertices": 0,
+            "triangles": 176,
+            "edges": 264,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 176,
+                "vertices": 90,
+                "bounds": {
+                  "min": [
+                    46.9413,
+                    -56.847,
+                    1502.11
+                  ],
+                  "max": [
+                    51.3726,
+                    -50.4858,
+                    1511.5
+                  ]
+                },
+                "areaMm2": 21.274926132619868,
+                "algebraicVolumeMm3": 2.225282062933331
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1710m",
+          "source": {
+            "file": "FJ1710M",
+            "sha256": "8ef3f3a359bff05efc0763815eb620cf83d6abf2142749fd884b87fef4770289"
+          },
+          "sourceOrder": 11,
+          "triangles": 166,
+          "topology": {
+            "sourceVertices": 210,
+            "exactUniqueVertices": 85,
+            "unusedUniqueVertices": 0,
+            "triangles": 166,
+            "edges": 249,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 166,
+                "vertices": 85,
+                "bounds": {
+                  "min": [
+                    46.8291,
+                    -36.1525,
+                    1504.15
+                  ],
+                  "max": [
+                    51.782,
+                    -32.772,
+                    1515.19
+                  ]
+                },
+                "areaMm2": 17.218774576500394,
+                "algebraicVolumeMm3": 1.5424326949832954
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1711m",
+          "source": {
+            "file": "FJ1711M",
+            "sha256": "aa90b423934e58dd85d5ccb77c18d348d5dfb27a07c9262c92fcb74a26d4f4b0"
+          },
+          "sourceOrder": 12,
+          "triangles": 736,
+          "topology": {
+            "sourceVertices": 817,
+            "exactUniqueVertices": 370,
+            "unusedUniqueVertices": 0,
+            "triangles": 736,
+            "edges": 1104,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 736,
+                "vertices": 370,
+                "bounds": {
+                  "min": [
+                    5.45508,
+                    -63.2527,
+                    1488.94
+                  ],
+                  "max": [
+                    33.0922,
+                    -30.0879,
+                    1499.67
+                  ]
+                },
+                "areaMm2": 148.9358979465779,
+                "algebraicVolumeMm3": 22.383511548719984
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1715m",
+          "source": {
+            "file": "FJ1715M",
+            "sha256": "f1b242ae353829ed3f886c4b5f0e8b1874b948cfa86f42165b09534c83f1ffc9"
+          },
+          "sourceOrder": 13,
+          "triangles": 796,
+          "topology": {
+            "sourceVertices": 673,
+            "exactUniqueVertices": 400,
+            "unusedUniqueVertices": 0,
+            "triangles": 796,
+            "edges": 1194,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 796,
+                "vertices": 400,
+                "bounds": {
+                  "min": [
+                    12.8382,
+                    -72.9001,
+                    1490.25
+                  ],
+                  "max": [
+                    53.3801,
+                    -35.1823,
+                    1515.11
+                  ]
+                },
+                "areaMm2": 235.2702020655019,
+                "algebraicVolumeMm3": 55.975124896466156
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        }
+      ],
+      "triangles": 4040,
+      "partitionSha256": "3d587e387c066e35857ab0885902a55b57db04ea3bd26c54447df10329a6cc0b",
+      "exactRenderedFaceAndNormalPartition": true
+    },
+    {
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+      "parentFmaId": "FMA50082",
+      "parts": [
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1662",
+          "source": {
+            "file": "FJ1662",
+            "sha256": "afdefea26af3c469cd5cedf56b327c252faeef55466af4e4b83a4f31af4c382b"
+          },
+          "sourceOrder": 1,
+          "triangles": 1226,
+          "topology": {
+            "sourceVertices": 1431,
+            "exactUniqueVertices": 619,
+            "unusedUniqueVertices": 0,
+            "triangles": 1226,
+            "edges": 1839,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 6,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 7,
+                "triangles": 742,
+                "vertices": 373,
+                "bounds": {
+                  "min": [
+                    -29.6988,
+                    -118.436,
+                    1536.09
+                  ],
+                  "max": [
+                    -12.3859,
+                    -91.6703,
+                    1570.21
+                  ]
+                },
+                "areaMm2": 207.81352248588837,
+                "algebraicVolumeMm3": 37.05258451268302
+              },
+              {
+                "firstFace": 0,
+                "triangles": 462,
+                "vertices": 233,
+                "bounds": {
+                  "min": [
+                    -29.9024,
+                    -109.535,
+                    1536.45
+                  ],
+                  "max": [
+                    -12.6638,
+                    -76.6,
+                    1566.28
+                  ]
+                },
+                "areaMm2": 116.35559481325146,
+                "algebraicVolumeMm3": 16.631994120033305
+              },
+              {
+                "firstFace": 1070,
+                "triangles": 22,
+                "vertices": 13,
+                "bounds": {
+                  "min": [
+                    -14.5167,
+                    -92.5391,
+                    1570.21
+                  ],
+                  "max": [
+                    -12.6564,
+                    -91.8,
+                    1571.96
+                  ]
+                },
+                "areaMm2": 1.7252756912647564,
+                "algebraicVolumeMm3": 0.06773031998331931
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1663",
+          "source": {
+            "file": "FJ1663",
+            "sha256": "876f965a5a0e01b73c27571f53778282b8248b2966f79aa7a8e431a07004c6c0"
+          },
+          "sourceOrder": 2,
+          "triangles": 316,
+          "topology": {
+            "sourceVertices": 368,
+            "exactUniqueVertices": 162,
+            "unusedUniqueVertices": 0,
+            "triangles": 316,
+            "edges": 474,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 4,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 306,
+                "vertices": 155,
+                "bounds": {
+                  "min": [
+                    -26,
+                    -108.826,
+                    1536.02
+                  ],
+                  "max": [
+                    -8.28644,
+                    -84.6864,
+                    1553.93
+                  ]
+                },
+                "areaMm2": 99.17561684407893,
+                "algebraicVolumeMm3": 16.812868685366862
+              },
+              {
+                "firstFace": 8,
+                "triangles": 10,
+                "vertices": 7,
+                "bounds": {
+                  "min": [
+                    -26.2,
+                    -84.7,
+                    1550.84
+                  ],
+                  "max": [
+                    -25.8,
+                    -83.9471,
+                    1551.61
+                  ]
+                },
+                "areaMm2": 0.67152508906827,
+                "algebraicVolumeMm3": 0.023914666666660252
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        },
+        {
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1692",
+          "source": {
+            "file": "FJ1692",
+            "sha256": "5c8d20a994fc1ae2e04e833899757d24cb4eae1d51130e60baae5bd7d50ceee8"
+          },
+          "sourceOrder": 3,
+          "triangles": 800,
+          "topology": {
+            "sourceVertices": 402,
+            "exactUniqueVertices": 402,
+            "unusedUniqueVertices": 0,
+            "triangles": 800,
+            "edges": 1200,
+            "duplicateFaces": 0,
+            "collapsedFaces": 0,
+            "degenerateFaces": 0,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "nonManifoldVertices": 0,
+            "inconsistentWindingEdges": 0,
+            "eulerCharacteristic": 2,
+            "closedOrientedManifold": true,
+            "components": [
+              {
+                "firstFace": 0,
+                "triangles": 800,
+                "vertices": 402,
+                "bounds": {
+                  "min": [
+                    -44.307,
+                    -115.268,
+                    1534.51
+                  ],
+                  "max": [
+                    -13.1427,
+                    -102.973,
+                    1549.64
+                  ]
+                },
+                "areaMm2": 329.9698617224514,
+                "algebraicVolumeMm3": 224.17749551466662
+              }
+            ],
+            "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+          }
+        }
+      ],
+      "triangles": 2342,
+      "partitionSha256": "929c777f7ea68334670b5ac69167d5b41a7ffd4c5531a570e2e9c9c622c6197a",
+      "exactRenderedFaceAndNormalPartition": true
+    }
+  ],
+  "artifact": {
+    "id": "cranial-artery-components",
+    "url": "/models/bodyparts3d/cranial-artery-components/cranial-artery-components.glb?v=8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086",
+    "bytes": 227840,
+    "sha256": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086",
+    "structures": 29
+  },
+  "modification": "Exact partition of existing root triangles including winding, multiplicity and vertex normals. Original source files reused unchanged. No added anatomy, interpolation, smoothing, bridging, mirroring or source-coordinate movement.",
+  "clinicalApproval": false
+}

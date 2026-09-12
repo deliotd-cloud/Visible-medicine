@@ -1,5 +1,9 @@
 'use client';
 import { useCallback, useMemo, useReducer, useState } from 'react';
+import {
+  cranialArteryComponentsFor,
+  cranialArteryComponentViewCatalog,
+} from '@/lib/cranial-artery-components';
 import { ArrowLeft, Focus, RotateCcw, Tags } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
@@ -47,6 +51,7 @@ import './eye-layers.css';
 
 type Props = {
   parent: BodyStructure;
+  study?: 'femoral-components' | 'cranial-artery-components';
   initialSelectedId?: string;
   initialTeachingTopic?: NestedImagingTopic;
 };
@@ -63,7 +68,7 @@ const layouts = {
   spatial: 'Spread in 3D',
   tray: 'Flat teaching plate',
 };
-const presetNames = {
+const femoralPresetNames = {
   all: 'Both source components',
   lateral: 'Lateral circumflex',
   remainder: 'Source remainder',
@@ -71,20 +76,38 @@ const presetNames = {
 
 export function FemoralComponentView({
   parent,
+  study = 'femoral-components',
   initialSelectedId,
   initialTeachingTopic,
 }: Props) {
   const catalog = useMemo(
-    () => femoralComponentViewCatalog(parent),
-    [parent],
+    () =>
+      study === 'cranial-artery-components'
+        ? cranialArteryComponentViewCatalog(parent)
+        : femoralComponentViewCatalog(parent),
+    [parent, study],
   );
-  const parts = useMemo(() => femoralComponentsFor(parent), [parent]);
-  const presets = useMemo(() => femoralComponentPresets(parts), [parts]);
+  const parts = useMemo(
+    () =>
+      study === 'cranial-artery-components'
+        ? cranialArteryComponentsFor(parent)
+        : femoralComponentsFor(parent),
+    [parent, study],
+  );
+  const presets: Record<string, string[]> = useMemo(
+    () =>
+      study === 'cranial-artery-components'
+        ? { all: parts.map((s) => s.id) }
+        : femoralComponentPresets(femoralComponentsFor(parent)),
+    [parts, parent, study],
+  );
+  const presetNames: Record<string, string> =
+    study === 'cranial-artery-components'
+      ? { all: `All ${parts.length} source parts` }
+      : femoralPresetNames;
   // All supplied components set the clipping frame, even after hiding a part.
   const frame = useMemo(() => selectionBounds(parts), [parts]);
-  const initialSelection = parts.find(
-    (s) => s.id === initialSelectedId,
-  )?.id;
+  const initialSelection = parts.find((s) => s.id === initialSelectedId)?.id;
   const [{ selectedId, hidden, history, future }, dispatch] = useReducer(
     (s: VentricularState, a: VentricularAction) =>
       reduceVentricles(parts, s, a, presets),
@@ -94,6 +117,7 @@ export function FemoralComponentView({
       selectedId:
         initialSelection ??
         items.find((s) => s.role === 'lateral-circumflex')?.id ??
+        (study === 'cranial-artery-components' ? items[0]?.id : null) ??
         null,
     }),
   );
@@ -124,7 +148,15 @@ export function FemoralComponentView({
       Object.fromEntries(
         parts.map((s) => [
           s.id,
-          { color: femoralComponentColour(s), opacity: 1 },
+          {
+            color:
+              s.role === 'source-part'
+                ? s.sourceOrder % 2
+                  ? '#be6157'
+                  : '#975349'
+                : femoralComponentColour(s),
+            opacity: 1,
+          },
         ]),
       ),
     [parts],
@@ -153,14 +185,11 @@ export function FemoralComponentView({
     setExplode(0);
     setInspection(initialInspection);
   }
-  if (
-    !parts.length ||
-    (initialSelectedId !== undefined && !initialSelection)
-  )
+  if (!parts.length || (initialSelectedId !== undefined && !initialSelection))
     return (
       <p role="alert">
-        This source binding is unavailable. Return to the atlas and select
-        the current deep-femoral source.
+        This source binding is unavailable. Return to the atlas and select the
+        current artery source.
       </p>
     );
   return (
@@ -191,7 +220,7 @@ export function FemoralComponentView({
           inspectionBounds={frame}
           plate={false}
           appearance={appearance}
-          retries={{ 'femoral-components': retry }}
+          retries={{ [study]: retry }}
           onSelect={(id) => change({ type: 'select', id })}
           onLoaded={onLoaded}
           onFailure={onFailure}
@@ -221,7 +250,9 @@ export function FemoralComponentView({
         )}
         {hidden.length === parts.length && (
           <p className="eye-layer-status">
-            Both components are hidden.{' '}
+            {study === 'cranial-artery-components'
+              ? 'All source parts are hidden.'
+              : 'Both components are hidden.'}{' '}
             <Button size="sm" onClick={() => showPreset('all')}>
               Show all
             </Button>
@@ -291,30 +322,36 @@ export function FemoralComponentView({
         className="eye-layer-controls"
         aria-label="Artery component controls"
       >
-        <div className="eye-layer-presets">
-          <label htmlFor="femoral-component-preset">Study view</label>
-          <Select
-            value={preset}
-            onValueChange={(v) => {
-              if (v) showPreset(v);
-            }}
-          >
-            <SelectTrigger id="femoral-component-preset">
-              <SelectValue>
-                {presetNames[preset as keyof typeof presetNames] ??
-                  'Custom selection'}
-              </SelectValue>
-            </SelectTrigger>
-            <SelectContent>
-              {Object.entries(presetNames).map(([value, label]) => (
-                <SelectItem key={value} value={value}>
-                  {label}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-        <ul className="eye-layer-list">
+        {study === 'femoral-components' && (
+          <div className="eye-layer-presets">
+            <label htmlFor="femoral-component-preset">Study view</label>
+            <Select
+              value={preset}
+              onValueChange={(v) => {
+                if (v) showPreset(v);
+              }}
+            >
+              <SelectTrigger id="femoral-component-preset">
+                <SelectValue>
+                  {presetNames[preset as keyof typeof presetNames] ??
+                    'Custom selection'}
+                </SelectValue>
+              </SelectTrigger>
+              <SelectContent>
+                {Object.entries(presetNames).map(([value, label]) => (
+                  <SelectItem key={value} value={value}>
+                    {label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+        )}
+        <ul
+          className={`eye-layer-list${study === 'cranial-artery-components' ? ' artery-source-part-list' : ''}`}
+          aria-label="Artery source parts"
+          tabIndex={study === 'cranial-artery-components' ? 0 : undefined}
+        >
           {parts.map((s) => (
             <li key={s.id}>
               <Button
@@ -323,7 +360,7 @@ export function FemoralComponentView({
                 aria-pressed={s.id === selectedId}
                 onClick={() => change({ type: 'select', id: s.id })}
               >
-                {femoralComponentLabel(s)}
+                {s.role === 'source-part' ? s.name : femoralComponentLabel(s)}
               </Button>
               <Switch
                 checked={!hidden.includes(s.id)}
@@ -439,8 +476,8 @@ export function FemoralComponentView({
             <p>{selected.coverageNote}</p>
             {visibility?.clipped && (
               <output className="eye-layer-cut-warning">
-                The cutaway hides some or all of this component. Restore
-                source position to remove the cut.
+                The cutaway hides some or all of this component. Restore source
+                position to remove the cut.
               </output>
             )}
             <div className="eye-layer-actions">
@@ -461,31 +498,53 @@ export function FemoralComponentView({
                 <Focus /> Frame selected
               </Button>
             </div>
-            <NestedTeaching
-              parent={parent}
-              study="femoral-components"
-              selected={selected}
-              initialTopic={
-                selected.id === initialSelection
-                  ? initialTeachingTopic
-                  : undefined
-              }
-            />
+            {study === 'femoral-components' ? (
+              <NestedTeaching
+                parent={parent}
+                study="femoral-components"
+                selected={selected}
+                initialTopic={
+                  selected.id === initialSelection
+                    ? initialTeachingTopic
+                    : undefined
+                }
+              />
+            ) : (
+              <p className="eye-layer-source-id">
+                Parent concept: {parent.fmaId}. Unnamed source part; no
+                independent clinical lesson, imaging registration or
+                branch-order claim.
+              </p>
+            )}
           </section>
         )}
         <details className="eye-layer-limits">
           <summary>Source and limitations</summary>
-          <p>
-            These two components partition the existing aggregate without
-            adding tissue. The remainder is not a complete artery or a
-            separately named perforator. Vessel junctions and anatomical
-            extent need review.
-          </p>
+          {study === 'femoral-components' ? (
+            <p>
+              These two components partition the existing aggregate without
+              adding tissue. The remainder is not a complete artery or a
+              separately named perforator. Vessel junctions and anatomical
+              extent need review.
+            </p>
+          ) : (
+            <p>
+              These {parts.length} source-file parts partition the existing
+              artery selection exactly. All original triangle corners and vertex
+              normals are retained. A source file can contain several
+              disconnected pieces. Numbering identifies archive parts, not named
+              branches or clinical segments. No additional root anatomy is
+              created.
+            </p>
+          )}
           <p>{catalog.credit}</p>
           <p>
             Source surfaces separated and recoloured; established coordinate
-            transform retained and normals recomputed. No fitting, mirroring
-            or invented connections.
+            transform retained
+            {study === 'femoral-components'
+              ? ' and normals recomputed'
+              : ' with original rendered normals'}
+            . No fitting, mirroring or invented connections.
           </p>
           <a
             href="https://creativecommons.org/licenses/by/4.0/"
@@ -514,18 +573,22 @@ export default function FemoralComponents({
       <DialogContent className="eye-layers-dialog" showCloseButton={false}>
         <header className="eye-layer-heading">
           <div>
-            <DialogTitle>
-              {props.parent.name} · source dissection
-            </DialogTitle>
+            <DialogTitle>{props.parent.name} · source dissection</DialogTitle>
             <DialogDescription>
-              Two supplied components. Anatomical validation pending.
+              {props.study === 'cranial-artery-components'
+                ? `${cranialArteryComponentsFor(props.parent).length} original source parts.`
+                : 'Two supplied components.'}{' '}
+              Anatomical validation pending.
             </DialogDescription>
           </div>
           <Button variant="outline" onClick={onClose}>
             <ArrowLeft /> Back to atlas
           </Button>
         </header>
-        <FemoralComponentView key={props.parent.id} {...props} />
+        <FemoralComponentView
+          key={`${props.parent.id}:${props.study ?? 'femoral-components'}`}
+          {...props}
+        />
       </DialogContent>
     </Dialog>
   );

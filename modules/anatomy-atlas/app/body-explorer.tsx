@@ -1,5 +1,6 @@
 'use client';
 import { femoralComponentsFor } from '@/lib/femoral-components';
+import { cranialArteryComponentsFor } from '@/lib/cranial-artery-components';
 import './um-knee-entry.css';
 import './upper-limb-motor.css';
 import {
@@ -184,9 +185,15 @@ const KneeSpecimen = dynamic(() => import('./um-limb-study'), { ssr: false });
 const AbdominalWallSpecimen = dynamic(() => import('./abdominal-wall-study'), {
   ssr: false,
 });
-const HraPelvisSpecimen = dynamic(() => import('./hra-pelvis-study'), { ssr: false });
-const HraRenalSpecimen = dynamic(() => import('./hra-renal-study'), { ssr: false });
-const BackLayersSpecimen = dynamic(() => import('./back-layers-study'), { ssr: false });
+const HraPelvisSpecimen = dynamic(() => import('./hra-pelvis-study'), {
+  ssr: false,
+});
+const HraRenalSpecimen = dynamic(() => import('./hra-renal-study'), {
+  ssr: false,
+});
+const BackLayersSpecimen = dynamic(() => import('./back-layers-study'), {
+  ssr: false,
+});
 const systemKeys = Object.keys(bodySystems) as BodySystem[];
 const icons = {
   skeleton: Bone,
@@ -496,7 +503,11 @@ export default function BodyExplorer({
         layout === 'spatial' &&
         inspection.plane === 'off',
     };
-    return kneeStudyBounds(input) ?? elbowStudyBounds({ ...input, catalog }) ?? genicularStudyBounds({ ...input, catalog });
+    return (
+      kneeStudyBounds(input) ??
+      elbowStudyBounds({ ...input, catalog }) ??
+      genicularStudyBounds({ ...input, catalog })
+    );
   }, [
     catalog,
     initialRegion,
@@ -879,7 +890,11 @@ export default function BodyExplorer({
   }
   function changeVesselVisibility(kind: VesselKind, show: boolean) {
     const action = vesselVisibilityAction(
-      regionStructures, resolved.visible.map(s => s.id), kind, show, exam || !systems.vessels,
+      regionStructures,
+      resolved.visible.map((s) => s.id),
+      kind,
+      show,
+      exam || !systems.vessels,
     );
     if (!action) return;
     dispatch(action);
@@ -1183,14 +1198,24 @@ export default function BodyExplorer({
       <div className="body-rail-title">Anatomical systems</div>
       <div className="body-system-bar" aria-label="Anatomical systems">
         {systemKeys.map((system) => {
-          if (system === 'vessels') return <VesselSystemControl
-            key={system} structures={regionStructures} visibleIds={resolved.visible.map(s => s.id)}
-            enabled={systems.vessels} disabled={exam}
-            onEnabled={checked => setSystems(prev => ({ ...prev, vessels: checked }))}
-            onVisibility={changeVesselVisibility}
-            canUndo={dissection.history.length > 0} canRedo={dissection.future.length > 0}
-            onUndo={undoDissection} onRedo={redoDissection}
-          />;
+          if (system === 'vessels')
+            return (
+              <VesselSystemControl
+                key={system}
+                structures={regionStructures}
+                visibleIds={resolved.visible.map((s) => s.id)}
+                enabled={systems.vessels}
+                disabled={exam}
+                onEnabled={(checked) =>
+                  setSystems((prev) => ({ ...prev, vessels: checked }))
+                }
+                onVisibility={changeVesselVisibility}
+                canUndo={dissection.history.length > 0}
+                canRedo={dissection.future.length > 0}
+                onUndo={undoDissection}
+                onRedo={redoDissection}
+              />
+            );
           const Icon = icons[system],
             count = regionStructures.filter((s) => s.system === system).length;
           return (
@@ -1256,7 +1281,16 @@ export default function BodyExplorer({
       </WorkspaceOnly>
       <WorkspaceOnly modes={['explore', 'dissect']}>
         {['spine', 'whole-body'].includes(initialRegion) && (
-          <Button ref={backLayersLauncher} variant="outline" size="sm" className="um-knee-launch" disabled={exam} onClick={() => { if (!exam) setBackLayersOpen(true); }}>
+          <Button
+            ref={backLayersLauncher}
+            variant="outline"
+            size="sm"
+            className="um-knee-launch"
+            disabled={exam}
+            onClick={() => {
+              if (!exam) setBackLayersOpen(true);
+            }}
+          >
             Back layers · separate specimen
           </Button>
         )}
@@ -1273,12 +1307,30 @@ export default function BodyExplorer({
           </Button>
         )}
         {['pelvis', 'whole-body'].includes(initialRegion) && (
-          <Button ref={hraPelvisLauncher} variant="outline" size="sm" className="um-knee-launch" disabled={exam} onClick={() => { if (!exam) setHraPelvisOpen(true); }}>
+          <Button
+            ref={hraPelvisLauncher}
+            variant="outline"
+            size="sm"
+            className="um-knee-launch"
+            disabled={exam}
+            onClick={() => {
+              if (!exam) setHraPelvisOpen(true);
+            }}
+          >
             Female pelvis · separate reference
           </Button>
         )}
         {['abdomen', 'whole-body'].includes(initialRegion) && (
-          <Button ref={hraRenalLauncher} variant="outline" size="sm" className="um-knee-launch" disabled={exam} onClick={() => { if (!exam) setHraRenalOpen(true); }}>
+          <Button
+            ref={hraRenalLauncher}
+            variant="outline"
+            size="sm"
+            className="um-knee-launch"
+            disabled={exam}
+            onClick={() => {
+              if (!exam) setHraRenalOpen(true);
+            }}
+          >
             Kidney layers · separate reference
           </Button>
         )}
@@ -2117,7 +2169,8 @@ export default function BodyExplorer({
                         renalFor(selected).length > 0 ||
                         pancreaticFor(selected).length > 0 ||
                         cricothyroidFor(selected).length > 0 ||
-                        femoralComponentsFor(selected).length > 0) && (
+                        femoralComponentsFor(selected).length > 0 ||
+                        cranialArteryComponentsFor(selected).length > 0) && (
                         <div className="body-selection-actions">
                           <Button
                             ref={ventricleLauncher}
@@ -2131,21 +2184,22 @@ export default function BodyExplorer({
                             }}
                           >
                             <Layers3 />{' '}
-                            {femoralComponentsFor(selected).length
+                            {femoralComponentsFor(selected).length ||
+                            cranialArteryComponentsFor(selected).length
                               ? 'Explore artery components'
                               : cricothyroidFor(selected).length
-                              ? 'Explore cricothyroid muscles'
-                              : pancreaticFor(selected).length
-                                ? 'Explore pancreatic ducts'
-                                : renalFor(selected).length
-                                  ? 'Explore renal vessels'
-                                  : hepaticFor(selected).length
-                                    ? 'Explore liver branches'
-                                    : pulmonaryFor(selected).length
-                                      ? 'Explore lung branches'
-                                      : cardiacFor(selected).length
-                                        ? 'Explore heart chambers'
-                                        : 'Dissect brain'}
+                                ? 'Explore cricothyroid muscles'
+                                : pancreaticFor(selected).length
+                                  ? 'Explore pancreatic ducts'
+                                  : renalFor(selected).length
+                                    ? 'Explore renal vessels'
+                                    : hepaticFor(selected).length
+                                      ? 'Explore liver branches'
+                                      : pulmonaryFor(selected).length
+                                        ? 'Explore lung branches'
+                                        : cardiacFor(selected).length
+                                          ? 'Explore heart chambers'
+                                          : 'Dissect brain'}
                           </Button>
                         </div>
                       )}
@@ -2417,15 +2471,15 @@ export default function BodyExplorer({
       {abdominalWallOpen && initialRegion === 'abdomen' && !exam && (
         <AbdominalWallSpecimen onClose={closeAbdominalWall} />
       )}
-      {backLayersOpen && ['spine', 'whole-body'].includes(initialRegion) && !exam && (
-        <BackLayersSpecimen onClose={closeBackLayers} />
-      )}
-      {hraPelvisOpen && ['pelvis','whole-body'].includes(initialRegion) && !exam && (
-        <HraPelvisSpecimen onClose={closeHraPelvis} />
-      )}
-      {hraRenalOpen && ['abdomen','whole-body'].includes(initialRegion) && !exam && (
-        <HraRenalSpecimen onClose={closeHraRenal} />
-      )}
+      {backLayersOpen &&
+        ['spine', 'whole-body'].includes(initialRegion) &&
+        !exam && <BackLayersSpecimen onClose={closeBackLayers} />}
+      {hraPelvisOpen &&
+        ['pelvis', 'whole-body'].includes(initialRegion) &&
+        !exam && <HraPelvisSpecimen onClose={closeHraPelvis} />}
+      {hraRenalOpen &&
+        ['abdomen', 'whole-body'].includes(initialRegion) &&
+        !exam && <HraRenalSpecimen onClose={closeHraRenal} />}
       {ventricleParent && !exam && ventricleParent.id === selectedId && (
         <Ventricles
           parent={ventricleParent}

@@ -91,6 +91,13 @@
 .eye-layer-list [data-slot='switch'] {
   flex: none;
 }
+.artery-source-part-list {
+  max-height: min(35dvh, 19rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  padding-right: 0.25rem;
+}
 .cerebral-pairs {
   margin: 0.65rem 0;
 }

@@ -93,7 +93,7 @@ const raw = JSON.parse(
 const catalog = api.bodyDisplayCatalog(raw),
   before = JSON.stringify(catalog);
 const targets = nestedStudyTargets(catalog);
-same(targets.length, 75);
+same(targets.length, 104);
 same(
   Object.fromEntries(
     [
@@ -109,6 +109,7 @@ same(
       'visual-pathway',
       'cricothyroid',
       'femoral-components',
+      'cranial-artery-components',
     ].map((study) => [study, targets.filter((t) => t.study === study).length]),
   ),
   {
@@ -124,9 +125,10 @@ same(
     'visual-pathway': 3,
     cricothyroid: 4,
     'femoral-components': 4,
+    'cranial-artery-components': 29,
   },
 );
-same(new Set(targets.map((t) => t.structureId)).size, 75);
+same(new Set(targets.map((t) => t.structureId)).size, 104);
 const parse = (href) => {
   const url = new URL(href, 'https://atlas.invalid');
   return { url, parsed: parseStudyLink(Object.fromEntries(url.searchParams)) };
@@ -137,7 +139,7 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
   for (const side of ['both', 'left', 'right']) {
     const index = atlasSearchIndex(catalog, region, side);
     const nested = index.filter((e) => e.key.startsWith('nested:'));
-    same(nested.length, 75);
+    same(nested.length, 104);
     for (const target of targets) {
       const entry = nested.find(
         (e) => e.key === `nested:${target.study}:${target.structureId}`,
@@ -252,6 +254,7 @@ for (const target of targets) {
     'visual-pathway',
     'cricothyroid',
     'femoral-components',
+    'cranial-artery-components',
   ].filter((s) => s !== target.study))
     same(
       makeStudyLink(catalog, targetRegion, target.parentId, 'both', null, {
@@ -286,7 +289,7 @@ for (const target of targets) {
   };
   require('react-dom/server').renderToStaticMarkup(
     React.createElement(
-      target.study === 'femoral-components' ? api.FemoralComponentView : target.study === 'eye' ? api.EyeLayerView : api.VentricularView,
+      ['femoral-components', 'cranial-artery-components'].includes(target.study) ? api.FemoralComponentView : target.study === 'eye' ? api.EyeLayerView : api.VentricularView,
       props,
     ),
   );
@@ -300,7 +303,7 @@ for (const target of targets) {
   check(!uiEnv.__scene.hiddenIds.includes(target.structureId));
   check(uiEnv.__scene.landmarks.includes(target.structureId));
   for (const invalid of ['missing', target.parentId]) {
-    if (target.study === 'femoral-components') {
+    if (['femoral-components', 'cranial-artery-components'].includes(target.study)) {
       uiEnv.__scene = null;
       const html = require('react-dom/server').renderToStaticMarkup(React.createElement(api.FemoralComponentView, { ...props, initialSelectedId: invalid }));
       check(html.includes('source binding is unavailable'));

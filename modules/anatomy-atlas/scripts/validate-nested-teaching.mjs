@@ -62,7 +62,9 @@ const catalog = api.bodyDisplayCatalog(
 );
 // Preserve this historical corpus and its pinned digests; supplemental femoral
 // lessons and their UI/source guards are covered in validate-femoral-components.
-const targets = api.nestedStudyTargets(catalog).filter(t => t.study !== 'femoral-components');
+// Unnamed cranial source partitions have no independent teaching concepts;
+// their absence of inherited lessons is tested in validate-cranial-artery-components.
+const targets = api.nestedStudyTargets(catalog).filter(t => !['femoral-components', 'cranial-artery-components'].includes(t.study));
 const initial = JSON.stringify(catalog);
 same(targets.length, 71);
 same(api.nestedConcepts.length, 42);

@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "5875e405b95fdc372ea470599c93e126a5b7fd6f44e8f8d1ef8131f0badcfd25"
+      "sha256": "eb6b9a282ab61e3eceed0be5e43ae25488f259576ce2c50a1ee7d2abb81c4e94"
     },
     {
       "path": "app/body-scene.tsx",
@@ -122,7 +122,7 @@
     },
     {
       "path": "app/eye-layers.css",
-      "sha256": "ea651f04910a70b60132e3faee78805ed5bba71e0b24644de5840f7950640d7e"
+      "sha256": "fb9cc181afd0ca968c6e837f6d8d8bcdf6ca40a578ad8748da7f6992c794bbc3"
     },
     {
       "path": "app/eye-layers.tsx",
@@ -130,7 +130,7 @@
     },
     {
       "path": "app/femoral-components.tsx",
-      "sha256": "52091361ad62034595f6ad1475734aa97efc50203b1767bf1d57594d005cd604"
+      "sha256": "48d786a7d938ee0b23ec7d8e9a0a2d177a9bd4a845db903372a0afa5fbc4e804"
     },
     {
       "path": "app/fitted-camera.tsx",
@@ -298,7 +298,7 @@
     },
     {
       "path": "app/ventricles.tsx",
-      "sha256": "67cff21006405dfab68ea812996ae0f7a8d15fc58d17a382233304b5e4d2f5cc"
+      "sha256": "0119ebba667a96b203927d4f4119699d14ed5cd10330eae925e5b1a15e9d5634"
     },
     {
       "path": "app/ventricular-relationships.css",
@@ -901,6 +901,10 @@
       "sha256": "503181d76e2a323134da111234bd3842c85026ecf8cae460138271b7279f3804"
     },
     {
+      "path": "lib/cranial-artery-components.ts",
+      "sha256": "7e42b848ec0e18377a4b3f9b87de6c81157ef399f3a8195f311dce1b4b292eef"
+    },
+    {
       "path": "lib/cranial-bone-clinical-curriculum.ts",
       "sha256": "c0472a3892dd8bbb7ffb0fe71429814cb07a9c24217fe2ab27f792181a867410"
     },
@@ -1214,7 +1218,7 @@
     },
     {
       "path": "lib/nested-anatomy.ts",
-      "sha256": "f12ee701477ce4de3f6964011160d8c2d0ff085f10fbfaecb8971202755b5373"
+      "sha256": "3eeb1bdf3c0e1f4485360945be8ee7046a465b3837a24f29c46e4ee2a4c55687"
     },
     {
       "path": "lib/nested-teaching.ts",
@@ -1414,7 +1418,7 @@
     },
     {
       "path": "lib/study-links.ts",
-      "sha256": "3a72ba2eebed65f6f999f8fed44c4293ce8ef4fa35473672a28ee5a5620f828b"
+      "sha256": "99c428f199b6f27dd0598bb2ac4cfa0ed2cedc29766f1f563a642aaeaee6f2c3"
     },
     {
       "path": "lib/study-navigation.ts",
@@ -1570,7 +1574,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "442d4b5c52d4c66c5c5c9712df5fca66e994feb4b82d3991cc61dfdbc7d0d241"
+      "sha256": "01da0d9e9a9b8e18a8dea7fef65220e91f37336a27ae3ce285cb92eae10b1f9d"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1611,6 +1615,10 @@
     {
       "path": "public/models/bodyparts3d/cranial-arteries/catalog.json",
       "sha256": "b9505be9ffd9e7a46348e76e65a4d421a77f57fd5bd2e7252ed685282a0b5ee7"
+    },
+    {
+      "path": "public/models/bodyparts3d/cranial-artery-components/catalog.json",
+      "sha256": "ed9fec0ecffa3912a89b4f7ba587bee067d9f3073c334fcae2973087c19d67f6"
     },
     {
       "path": "public/models/bodyparts3d/cricothyroid/catalog.json",
@@ -1753,5 +1761,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "dbc56c27b724699d4e2a4ab0abc23d2b8b3edef6e32813ec176d020766684555"
+  "sha256": "55abe5942aaacdaca65d32cbaf8b1a34218edcad8d78ef8245fa127c30d38ab3"
 }

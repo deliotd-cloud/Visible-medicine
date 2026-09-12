@@ -94,12 +94,12 @@ same(
 );
 const root = api.bodyDisplayCatalog(JSON.parse(rootBytes)),
   before = JSON.stringify(root);
-same(root.structures.length, 1082);
+same(root.structures.length, 1087);
 const targets = api
   .nestedStudyTargets(root)
   .filter((t) => t.study === 'femoral-components');
 same(targets.length, 4);
-same(api.nestedStudyTargets(root).length, 75);
+same(api.nestedStudyTargets(root).length, 104);
 const catalog = api.femoralComponentCatalog;
 for (const b of catalog.bundles) {
   const bytes = await readFile(
@@ -391,8 +391,8 @@ console.log(
     checks,
     parents: 2,
     components: 4,
-    rootStructures: 1082,
-    nestedTargets: 75,
+    rootStructures: 1087,
+    nestedTargets: 104,
     clinicalApproval: false,
     browserOrGPUAcceptance: false,
     imagingResourcesAdded: 0,

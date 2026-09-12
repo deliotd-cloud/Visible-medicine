@@ -118,6 +118,7 @@ function anatomy(value: unknown): value is AnatomyRepresentation {
       'visual-pathway',
       'cricothyroid',
       'femoral-components',
+      'cranial-artery-components',
     ]) &&
     namespaced(value.nested.parentId, 'vm:anatomy:') &&
     value.nested.parentId !== value.structureId &&
