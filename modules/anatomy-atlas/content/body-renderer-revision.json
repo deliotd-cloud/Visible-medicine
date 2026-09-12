@@ -49,6 +49,10 @@
       "sha256": "b9100dc0294f3adfa38ddd90468fdcc84b834e74475459c41ba7367822a71a2c"
     },
     {
+      "path": "app/back-layers-study.tsx",
+      "sha256": "702c323bc0dfdca1e139971cfed92817b824ca9eac98f2e7bf641af633bd7d80"
+    },
+    {
       "path": "app/body-batch.tsx",
       "sha256": "05b63136f4d8af290da9d4c190256bd1e17b6339842070b04c26b63238e0ae72"
     },
@@ -62,7 +66,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "965a4afd585c2d5be4f48a47f37849513c05638bad4aa7699a25a1eb7165376a"
+      "sha256": "e2cde15a79315648aafbe4506b263c466228fc54af548719157e2adb9d95d501"
     },
     {
       "path": "app/body-scene.tsx",
@@ -335,6 +339,10 @@
     {
       "path": "content/arm-vascular-study-pins.json",
       "sha256": "534d166d46212fedb3316c8113162f7e18ab70fe0adea43501af475796b92374"
+    },
+    {
+      "path": "content/back-layers-teaching.ts",
+      "sha256": "a5823a15efa2b5729a83f25428352fbdc3b18296e46625df0cea0cf985f40ef6"
     },
     {
       "path": "content/brain-imaging-teaching.ts",
@@ -663,6 +671,14 @@
     {
       "path": "lib/axial-connective-clinical-curriculum.ts",
       "sha256": "a5b83ef274fbdf6c6828b9e2871148b92d17b78c74064ddb0f205bccd694139e"
+    },
+    {
+      "path": "lib/back-layers-teaching.ts",
+      "sha256": "ebddc04a533caf36f3f606a55ef135eb488b0c83bc7f2f9a75a287b434cac0c0"
+    },
+    {
+      "path": "lib/back-layers.ts",
+      "sha256": "f11998c77ff5823e257f9c81b625532d952ded36fd9729e65fbace6d0090f62c"
     },
     {
       "path": "lib/body-arrangement.ts",
@@ -1349,6 +1365,10 @@
       "sha256": "a2fa96e5203e8a2c0ce5898a0d190834523a34f0b61c4ebfbce502a933f6d03e"
     },
     {
+      "path": "public/models/bodyparts3d-v3/back-layers/catalog.json",
+      "sha256": "23ba69e7268a03c8ab722313326bb7ffc3ac13aa49c0036c043993b38e0e9242"
+    },
+    {
       "path": "public/models/bodyparts3d/brachial-veins/catalog.json",
       "sha256": "d0fc1d879d8f7158d84fc70f1e6e1fc1b8ef71ba761bf22abe4407d4b6c73aa3"
     },
@@ -1485,5 +1505,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "fae939d5393163ebf528294daa66db86e0c38ea19ce714d77d9938713bfc6d18"
+  "sha256": "591c8fcc135c914184f52ce4c49dc3f772eed0e6130e36c9be6c30e9eda55cc4"
 }

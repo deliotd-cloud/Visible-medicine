@@ -1,0 +1,2346 @@
+{
+  "version": 1,
+  "specimenId": "bp3d3-back-layers",
+  "source": {
+    "version": "3.0, OBJ 99% reduction",
+    "license": "CC BY-SA 2.1 JP",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.1/jp/",
+    "credit": "BodyParts3D, Copyright© The Database Center for Life Science licensed by CC Attribution-Share Alike 2.1 Japan",
+    "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/README_e.html",
+    "archive": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/BodyParts3D_3.0_obj_99.zip",
+    "registration": "none"
+  },
+  "displayTransformColumnMajor": [
+    0.01,
+    0,
+    0,
+    0,
+    0,
+    0,
+    -0.01,
+    0,
+    0,
+    0.01,
+    0,
+    0,
+    0,
+    -10.5,
+    -1,
+    1
+  ],
+  "structures": [
+    {
+      "id": "bp3d3-back-layers-FMA13358",
+      "fmaId": "FMA13358",
+      "name": "Right latissimus dorsi",
+      "sourceName": "right latissimus dorsi",
+      "slug": "right-latissimus-dorsi",
+      "tissue": "muscle",
+      "laterality": "right",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA13358",
+      "bounds": {
+        "min": [
+          -1.7936500310897827,
+          -1.6115399599075317,
+          -1.182852029800415
+        ],
+        "max": [
+          0.015492199920117855,
+          2.3619000911712646,
+          -0.18908600509166718
+        ]
+      },
+      "center": [
+        -0.8890789155848324,
+        0.37518006563186646,
+        -0.6859690174460411
+      ],
+      "anchor": [
+        -0.931833028793335,
+        0.3449999988079071,
+        -0.6460000276565552
+      ],
+      "sources": [
+        {
+          "file": "FMA13358",
+          "sha256": "07082eb26856a47e408aa7915012140fc03ac8620baadec13fcde760ad369f9f"
+        }
+      ],
+      "triangles": 45594,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 9,
+        "nonManifoldEdges": 2,
+        "zeroNormalVertices": 0
+      },
+      "color": "#b35c50"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA13359",
+      "fmaId": "FMA13359",
+      "name": "Left latissimus dorsi",
+      "sourceName": "left latissimus dorsi",
+      "slug": "left-latissimus-dorsi",
+      "tissue": "muscle",
+      "laterality": "left",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA13359",
+      "bounds": {
+        "min": [
+          -0.009229609742760658,
+          -1.6115399599075317,
+          -1.1827579736709595
+        ],
+        "max": [
+          1.7874599695205688,
+          2.361599922180176,
+          -0.18689799308776855
+        ]
+      },
+      "center": [
+        0.8891151798889041,
+        0.375029981136322,
+        -0.684827983379364
+      ],
+      "anchor": [
+        0.9330000281333923,
+        0.3569999933242798,
+        -0.6544610261917114
+      ],
+      "sources": [
+        {
+          "file": "FMA13359",
+          "sha256": "fad8dab60f63bceaed0dbee8b1bd6f11162176c4bc8ebd63844904b05bcbb671"
+        }
+      ],
+      "triangles": 45572,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 11,
+        "nonManifoldEdges": 3,
+        "zeroNormalVertices": 0
+      },
+      "color": "#b35c50"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA13381",
+      "fmaId": "FMA13381",
+      "name": "Right rhomboid major",
+      "sourceName": "right rhomboid major",
+      "slug": "right-rhomboid-major",
+      "tissue": "muscle",
+      "laterality": "right",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA13381",
+      "bounds": {
+        "min": [
+          -0.854108989238739,
+          1.5628999471664429,
+          -1.1189219951629639
+        ],
+        "max": [
+          0.0036406400613486767,
+          3.305999994277954,
+          -0.8199999928474426
+        ]
+      },
+      "center": [
+        -0.42523417458869517,
+        2.4344499707221985,
+        -0.9694609940052032
+      ],
+      "anchor": [
+        -0.4320000112056732,
+        2.450200080871582,
+        -0.9739999771118164
+      ],
+      "sources": [
+        {
+          "file": "FMA13381",
+          "sha256": "ce51af829acb045c7de7b7b06511362f3f4ca916a2bda040995e8e68d59f2550"
+        }
+      ],
+      "triangles": 9650,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#bf7965"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA13382",
+      "fmaId": "FMA13382",
+      "name": "Left rhomboid major",
+      "sourceName": "left rhomboid major",
+      "slug": "left-rhomboid-major",
+      "tissue": "muscle",
+      "laterality": "left",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA13382",
+      "bounds": {
+        "min": [
+          -0.006753109861165285,
+          1.5628999471664429,
+          -1.1191409826278687
+        ],
+        "max": [
+          0.8474500179290771,
+          3.303800106048584,
+          -0.7909219861030579
+        ]
+      },
+      "center": [
+        0.42034845403395593,
+        2.4333500266075134,
+        -0.9550314843654633
+      ],
+      "anchor": [
+        0.4274500012397766,
+        2.450000047683716,
+        -0.9741405844688416
+      ],
+      "sources": [
+        {
+          "file": "FMA13382",
+          "sha256": "21a4c8f9421241ff06bb62b11da98dedc2d65a3f83b480c19c336e5d44d91f06"
+        }
+      ],
+      "triangles": 9700,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#bf7965"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA13383",
+      "fmaId": "FMA13383",
+      "name": "Right rhomboid minor",
+      "sourceName": "right rhomboid minor",
+      "slug": "right-rhomboid-minor",
+      "tissue": "muscle",
+      "laterality": "right",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA13383",
+      "bounds": {
+        "min": [
+          -0.628000020980835,
+          2.5339999198913574,
+          -1.0125468969345093
+        ],
+        "max": [
+          0.005015640053898096,
+          3.511899948120117,
+          -0.677515983581543
+        ]
+      },
+      "center": [
+        -0.31149219046346843,
+        3.0229499340057373,
+        -0.8450314402580261
+      ],
+      "anchor": [
+        -0.3160000145435333,
+        3.0239999294281006,
+        -0.8616089820861816
+      ],
+      "sources": [
+        {
+          "file": "FMA13383",
+          "sha256": "5c87463d9a5a451162ac9cf8503e7402afbba9cda5986afd5781074640898b4e"
+        }
+      ],
+      "triangles": 3018,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 7,
+        "nonManifoldEdges": 4,
+        "zeroNormalVertices": 0
+      },
+      "color": "#bf7965"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA13384",
+      "fmaId": "FMA13384",
+      "name": "Left rhomboid minor",
+      "sourceName": "left rhomboid minor",
+      "slug": "left-rhomboid-minor",
+      "tissue": "muscle",
+      "laterality": "left",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA13384",
+      "bounds": {
+        "min": [
+          -0.0018468600464984775,
+          2.5339999198913574,
+          -1.0125468969345093
+        ],
+        "max": [
+          0.6215609908103943,
+          3.5090999603271484,
+          -0.6499999761581421
+        ]
+      },
+      "center": [
+        0.3098570653819479,
+        3.021549940109253,
+        -0.8312734365463257
+      ],
+      "anchor": [
+        0.31744998693466187,
+        3.0220000743865967,
+        -0.8623909950256348
+      ],
+      "sources": [
+        {
+          "file": "FMA13384",
+          "sha256": "ddca9ace8e1935c1b0826c83a4ea4d2db0ec98401c05a19c95efa7d84ee19000"
+        }
+      ],
+      "triangles": 3018,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#bf7965"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA22878",
+      "fmaId": "FMA22878",
+      "name": "Right multifidus",
+      "sourceName": "right multifidus",
+      "slug": "right-multifidus",
+      "tissue": "muscle",
+      "laterality": "right",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA22878",
+      "bounds": {
+        "min": [
+          -0.3799999952316284,
+          -2.0604500770568848,
+          -0.9474999904632568
+        ],
+        "max": [
+          -0.009856569580733776,
+          4.091000080108643,
+          -0.30250000953674316
+        ]
+      },
+      "center": [
+        -0.1949282824061811,
+        1.015275001525879,
+        -0.625
+      ],
+      "anchor": [
+        -0.20999999344348907,
+        1.0364999771118164,
+        -0.7250000238418579
+      ],
+      "sources": [
+        {
+          "file": "FMA22878",
+          "sha256": "14d65493605121b7dd3fcc1c9a7a1398019f59ae91b472626e85ec9e96840e43"
+        }
+      ],
+      "triangles": 14796,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 64,
+        "nonManifoldEdges": 34,
+        "zeroNormalVertices": 0
+      },
+      "color": "#98594e"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA22879",
+      "fmaId": "FMA22879",
+      "name": "Left multifidus",
+      "sourceName": "left multifidus",
+      "slug": "left-multifidus",
+      "tissue": "muscle",
+      "laterality": "left",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA22879",
+      "bounds": {
+        "min": [
+          -0.0024999999441206455,
+          -2.0399999618530273,
+          -0.9474999904632568
+        ],
+        "max": [
+          0.368257999420166,
+          4.070000171661377,
+          -0.2987299859523773
+        ]
+      },
+      "center": [
+        0.18287899973802269,
+        1.0150001049041748,
+        -0.6231149882078171
+      ],
+      "anchor": [
+        0.21250000596046448,
+        1.0622999668121338,
+        -0.7124999761581421
+      ],
+      "sources": [
+        {
+          "file": "FMA22879",
+          "sha256": "5f7e95eaa7172407ef3b7fcb2fcd0630d3ccae3fbb4797365b47fb514fcf15e1"
+        }
+      ],
+      "triangles": 14224,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 38,
+        "nonManifoldEdges": 11,
+        "zeroNormalVertices": 0
+      },
+      "color": "#98594e"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA33581",
+      "fmaId": "FMA33581",
+      "name": "Ascending part of right trapezius",
+      "sourceName": "ascending part of right trapezius",
+      "slug": "ascending-part-of-right-trapezius",
+      "tissue": "muscle",
+      "laterality": "right",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA33581",
+      "bounds": {
+        "min": [
+          -1.3381600379943848,
+          0.21529999375343323,
+          -1.281662940979004
+        ],
+        "max": [
+          0.008197749964892864,
+          3.062999963760376,
+          -0.6883000135421753
+        ]
+      },
+      "center": [
+        -0.664981144014746,
+        1.6391499787569046,
+        -0.9849814772605896
+      ],
+      "anchor": [
+        -0.660942018032074,
+        1.6174999475479126,
+        -1.1791609525680542
+      ],
+      "sources": [
+        {
+          "file": "FMA33581",
+          "sha256": "1634da1307df6ce0e698b322aae4ac6c04bed1a794e5f2b3b5a21ac46725bfae"
+        }
+      ],
+      "triangles": 13926,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 44,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#a95651"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA33583",
+      "fmaId": "FMA33583",
+      "name": "Ascending part of left trapezius",
+      "sourceName": "ascending part of left trapezius",
+      "slug": "ascending-part-of-left-trapezius",
+      "tissue": "muscle",
+      "laterality": "left",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA33583",
+      "bounds": {
+        "min": [
+          -0.004934989847242832,
+          0.21529999375343323,
+          -1.2815760374069214
+        ],
+        "max": [
+          1.3382600545883179,
+          3.062999963760376,
+          -0.689732015132904
+        ]
+      },
+      "center": [
+        0.6666625323705375,
+        1.6391499787569046,
+        -0.9856540262699127
+      ],
+      "anchor": [
+        0.6537590026855469,
+        1.63919997215271,
+        -1.1815099716186523
+      ],
+      "sources": [
+        {
+          "file": "FMA33583",
+          "sha256": "ec7bef56bee6a0bca42a84b160956ebe9e19d8a80423167ace39282df2d9ed67"
+        }
+      ],
+      "triangles": 13638,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 3,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#a95651"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA33584",
+      "fmaId": "FMA33584",
+      "name": "Transverse part of right trapezius",
+      "sourceName": "transverse part of right trapezius",
+      "slug": "transverse-part-of-right-trapezius",
+      "tissue": "muscle",
+      "laterality": "right",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA33584",
+      "bounds": {
+        "min": [
+          -1.6294100284576416,
+          2.6305999755859375,
+          -1.1084450483322144
+        ],
+        "max": [
+          0.039492201060056686,
+          3.416599988937378,
+          -0.33294498920440674
+        ]
+      },
+      "center": [
+        -0.7949589136987925,
+        3.0235999822616577,
+        -0.7206950187683105
+      ],
+      "anchor": [
+        -0.824999988079071,
+        3.1089999675750732,
+        -0.777999997138977
+      ],
+      "sources": [
+        {
+          "file": "FMA33584",
+          "sha256": "2d02c891eba80f3e193e03f757540ea674ada7829b76ecfbcbe7040b4aafa96e"
+        }
+      ],
+      "triangles": 6116,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 25,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c97970"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA33585",
+      "fmaId": "FMA33585",
+      "name": "Transverse part of left trapezius",
+      "sourceName": "transverse part of left trapezius",
+      "slug": "transverse-part-of-left-trapezius",
+      "tissue": "muscle",
+      "laterality": "left",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA33585",
+      "bounds": {
+        "min": [
+          -0.01114679966121912,
+          2.6285998821258545,
+          -1.107977032661438
+        ],
+        "max": [
+          1.6254500150680542,
+          3.4170000553131104,
+          -0.3331330120563507
+        ]
+      },
+      "center": [
+        0.8071516077034175,
+        3.0227999687194824,
+        -0.7205550223588943
+      ],
+      "anchor": [
+        0.8304499983787537,
+        3.0929999351501465,
+        -0.7910079956054688
+      ],
+      "sources": [
+        {
+          "file": "FMA33585",
+          "sha256": "a20de975072b7e2057d021865a3a001221261cd6adaeb31975fafd6a66ee33de"
+        }
+      ],
+      "triangles": 6070,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c97970"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA33586",
+      "fmaId": "FMA33586",
+      "name": "Descending part of right trapezius",
+      "sourceName": "descending part of right trapezius",
+      "slug": "descending-part-of-right-trapezius",
+      "tissue": "muscle",
+      "laterality": "right",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA33586",
+      "bounds": {
+        "min": [
+          -1.2807600498199463,
+          3.0766000747680664,
+          -0.9093202948570251
+        ],
+        "max": [
+          0.031710900366306305,
+          4.617800235748291,
+          -0.017430000007152557
+        ]
+      },
+      "center": [
+        -0.62452457472682,
+        3.8472001552581787,
+        -0.46337514743208885
+      ],
+      "anchor": [
+        -0.39644500613212585,
+        3.815999984741211,
+        -0.39100000262260437
+      ],
+      "sources": [
+        {
+          "file": "FMA33586",
+          "sha256": "a013040a38a21b5f89ab722e40ebf8c4f10b2165ce3e9084914083a66ce43419"
+        }
+      ],
+      "triangles": 9290,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#cf9285"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA33587",
+      "fmaId": "FMA33587",
+      "name": "Descending part of left trapezius",
+      "sourceName": "descending part of left trapezius",
+      "slug": "descending-part-of-left-trapezius",
+      "tissue": "muscle",
+      "laterality": "left",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA33587",
+      "bounds": {
+        "min": [
+          -0.00988593976944685,
+          3.076900005340576,
+          -0.9100000262260437
+        ],
+        "max": [
+          1.2724499702453613,
+          4.6184000968933105,
+          -0.01817999966442585
+        ]
+      },
+      "center": [
+        0.6312820152379572,
+        3.8476500511169434,
+        -0.4640900129452348
+      ],
+      "anchor": [
+        0.39464500546455383,
+        3.7920000553131104,
+        -0.4180000126361847
+      ],
+      "sources": [
+        {
+          "file": "FMA33587",
+          "sha256": "3ba15425918163ea1e4a2aac025ac61dbd18f1609ed8dd9140d8a646ddbc08f5"
+        }
+      ],
+      "triangles": 8998,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#cf9285"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA52735",
+      "fmaId": "FMA52735",
+      "name": "Occipital bone",
+      "sourceName": "occipital bone",
+      "slug": "occipital-bone",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA52735",
+      "bounds": {
+        "min": [
+          -0.5864319801330566,
+          4.384900093078613,
+          -1.0222501754760742
+        ],
+        "max": [
+          0.5722020268440247,
+          5.396100044250488,
+          0.10006999969482422
+        ]
+      },
+      "center": [
+        -0.007114976644515991,
+        4.890500068664551,
+        -0.461090087890625
+      ],
+      "anchor": [
+        -0.0029862800147384405,
+        4.6859002113342285,
+        -0.7571359872817993
+      ],
+      "sources": [
+        {
+          "file": "FMA52735",
+          "sha256": "5d83793483f514f6954ba27ed120984d7d25437d8e8fad2c9c1f164f8cf62f44"
+        }
+      ],
+      "triangles": 6760,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA12519",
+      "fmaId": "FMA12519",
+      "name": "Atlas",
+      "sourceName": "atlas",
+      "slug": "atlas",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA12519",
+      "bounds": {
+        "min": [
+          -0.42267099022865295,
+          4.2118000984191895,
+          -0.46762600541114807
+        ],
+        "max": [
+          0.41976699233055115,
+          4.404799938201904,
+          0.008799999952316284
+        ]
+      },
+      "center": [
+        -0.0014519989490509033,
+        4.308300018310547,
+        -0.2294130027294159
+      ],
+      "anchor": [
+        0.09354259818792343,
+        4.294099807739258,
+        -0.1594969928264618
+      ],
+      "sources": [
+        {
+          "file": "FMA12519",
+          "sha256": "9622a949531bdb81b4f7745b273cdceda43501b757ca342eedf797690393c71d"
+        }
+      ],
+      "triangles": 2158,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA12520",
+      "fmaId": "FMA12520",
+      "name": "Axis",
+      "sourceName": "axis",
+      "slug": "axis",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA12520",
+      "bounds": {
+        "min": [
+          -0.26553499698638916,
+          3.9765000343322754,
+          -0.5284450054168701
+        ],
+        "max": [
+          0.25436899065971375,
+          4.3927998542785645,
+          -0.01702200062572956
+        ]
+      },
+      "center": [
+        -0.0055830031633377075,
+        4.18464994430542,
+        -0.27273350302129984
+      ],
+      "anchor": [
+        -0.06251479685306549,
+        4.154900074005127,
+        -0.34891098737716675
+      ],
+      "sources": [
+        {
+          "file": "FMA12520",
+          "sha256": "1b7b876e2b0a3b936a18f9d7c9edba72727bc91d28d7263534da3fd4362f422c"
+        }
+      ],
+      "triangles": 2370,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA12525",
+      "fmaId": "FMA12525",
+      "name": "Seventh cervical vertebra",
+      "sourceName": "seventh cervical vertebra",
+      "slug": "seventh-cervical-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA12525",
+      "bounds": {
+        "min": [
+          -0.35083600878715515,
+          3.297100067138672,
+          -0.771124005317688
+        ],
+        "max": [
+          0.3125680088996887,
+          3.5669000148773193,
+          -0.08835499733686447
+        ]
+      },
+      "center": [
+        -0.019133999943733215,
+        3.4320000410079956,
+        -0.42973950132727623
+      ],
+      "anchor": [
+        -0.003522359998896718,
+        3.4182000160217285,
+        -0.4297940135002136
+      ],
+      "sources": [
+        {
+          "file": "FMA12525",
+          "sha256": "fa3e0d7058012f3038b55e9f8a8f9fe77f9b776de268e490b88366cf6b037b19"
+        }
+      ],
+      "triangles": 1914,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA16202",
+      "fmaId": "FMA16202",
+      "name": "Sacrum",
+      "sourceName": "sacrum",
+      "slug": "sacrum",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA16202",
+      "bounds": {
+        "min": [
+          -0.6005409955978394,
+          -2.5919599533081055,
+          -0.9437364935874939
+        ],
+        "max": [
+          0.6209989786148071,
+          -1.1412299871444702,
+          -0.05431799963116646
+        ]
+      },
+      "center": [
+        0.010228991508483887,
+        -1.8665949702262878,
+        -0.4990272466093302
+      ],
+      "anchor": [
+        0.05954739823937416,
+        -1.7643100023269653,
+        -0.5834959745407104
+      ],
+      "sources": [
+        {
+          "file": "FMA16202",
+          "sha256": "0a715850623c9f7d17cafd004a4e84ac402e2aadb5f1605931e5932f6df1013a"
+        }
+      ],
+      "triangles": 8882,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA10014",
+      "fmaId": "FMA10014",
+      "name": "Ninth thoracic vertebra",
+      "sourceName": "ninth thoracic vertebra",
+      "slug": "ninth-thoracic-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA10014",
+      "bounds": {
+        "min": [
+          -0.3559649884700775,
+          0.9901000261306763,
+          -0.9559838175773621
+        ],
+        "max": [
+          0.33079200983047485,
+          1.5384000539779663,
+          -0.22249199450016022
+        ]
+      },
+      "center": [
+        -0.01258648931980133,
+        1.2642500400543213,
+        -0.5892379060387611
+      ],
+      "anchor": [
+        0.0056572300381958485,
+        1.2969000339508057,
+        -0.5593029856681824
+      ],
+      "sources": [
+        {
+          "file": "FMA10014",
+          "sha256": "cd58bd1512f110719b18a44caae57d888c667d3f95104c0aedea759700150e6f"
+        }
+      ],
+      "triangles": 2444,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA10037",
+      "fmaId": "FMA10037",
+      "name": "Tenth thoracic vertebra",
+      "sourceName": "tenth thoracic vertebra",
+      "slug": "tenth-thoracic-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA10037",
+      "bounds": {
+        "min": [
+          -0.37018299102783203,
+          0.6773999929428101,
+          -0.9123988151550293
+        ],
+        "max": [
+          0.3326829969882965,
+          1.2517000436782837,
+          -0.16014200448989868
+        ]
+      },
+      "center": [
+        -0.01874999701976776,
+        0.9645500183105469,
+        -0.536270409822464
+      ],
+      "anchor": [
+        -0.04021510109305382,
+        0.942799985408783,
+        -0.49032700061798096
+      ],
+      "sources": [
+        {
+          "file": "FMA10037",
+          "sha256": "b3785b9d790b22b338b6934fcf5cda8457bc1500a3957bfd95e1a45dcc653e0c"
+        }
+      ],
+      "triangles": 2584,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA10059",
+      "fmaId": "FMA10059",
+      "name": "Eleventh thoracic vertebra",
+      "sourceName": "eleventh thoracic vertebra",
+      "slug": "eleventh-thoracic-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA10059",
+      "bounds": {
+        "min": [
+          -0.2871690094470978,
+          0.4242999851703644,
+          -0.8393840193748474
+        ],
+        "max": [
+          0.2593989968299866,
+          0.9574999809265137,
+          -0.07719200104475021
+        ]
+      },
+      "center": [
+        -0.013885006308555603,
+        0.690899983048439,
+        -0.4582880102097988
+      ],
+      "anchor": [
+        0.021629199385643005,
+        0.6549000144004822,
+        -0.4115929901599884
+      ],
+      "sources": [
+        {
+          "file": "FMA10059",
+          "sha256": "f54ee60923bbdabd0c8ebc81d7a8faf5c442bf971c5f77174aa7829f7f0d5f00"
+        }
+      ],
+      "triangles": 1658,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA10081",
+      "fmaId": "FMA10081",
+      "name": "Twelfth thoracic vertebra",
+      "sourceName": "twelfth thoracic vertebra",
+      "slug": "twelfth-thoracic-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA10081",
+      "bounds": {
+        "min": [
+          -0.23205900192260742,
+          0.13349999487400055,
+          -0.7686769962310791
+        ],
+        "max": [
+          0.2198300063610077,
+          0.6600000262260437,
+          0.013609999790787697
+        ]
+      },
+      "center": [
+        -0.006114497780799866,
+        0.3967500105500221,
+        -0.3775334982201457
+      ],
+      "anchor": [
+        -0.010006199590861797,
+        0.3555999994277954,
+        -0.3139890134334564
+      ],
+      "sources": [
+        {
+          "file": "FMA10081",
+          "sha256": "ed45622a2bda6dea623dfcb263878c903992b0b87afdbdc8e9e554f41655b914"
+        }
+      ],
+      "triangles": 2300,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA12521",
+      "fmaId": "FMA12521",
+      "name": "Third cervical vertebra",
+      "sourceName": "third cervical vertebra",
+      "slug": "third-cervical-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA12521",
+      "bounds": {
+        "min": [
+          -0.27968600392341614,
+          3.8252999782562256,
+          -0.5438650250434875
+        ],
+        "max": [
+          0.27021700143814087,
+          4.0833001136779785,
+          -0.019367000088095665
+        ]
+      },
+      "center": [
+        -0.004734501242637634,
+        3.954300045967102,
+        -0.2816160125657916
+      ],
+      "anchor": [
+        0.04353880137205124,
+        3.9611001014709473,
+        -0.3159869909286499
+      ],
+      "sources": [
+        {
+          "file": "FMA12521",
+          "sha256": "45555b9cb958808a9cbbd5463ad903757c979cdacfe740dd22115cd6ae670dc3"
+        }
+      ],
+      "triangles": 1978,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA12522",
+      "fmaId": "FMA12522",
+      "name": "Fourth cervical vertebra",
+      "sourceName": "fourth cervical vertebra",
+      "slug": "fourth-cervical-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA12522",
+      "bounds": {
+        "min": [
+          -0.2866379916667938,
+          3.7051000595092773,
+          -0.5345609784126282
+        ],
+        "max": [
+          0.2705320119857788,
+          3.947499990463257,
+          -0.024202000349760056
+        ]
+      },
+      "center": [
+        -0.008052989840507507,
+        3.826300024986267,
+        -0.2793814893811941
+      ],
+      "anchor": [
+        -0.059195999056100845,
+        3.8696000576019287,
+        -0.3078790009021759
+      ],
+      "sources": [
+        {
+          "file": "FMA12522",
+          "sha256": "991e1172f99b33b522ae24326e602c86d69a0a56471037557b4258a9d22f5fab"
+        }
+      ],
+      "triangles": 1740,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA12523",
+      "fmaId": "FMA12523",
+      "name": "Fifth cervical vertebra",
+      "sourceName": "fifth cervical vertebra",
+      "slug": "fifth-cervical-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA12523",
+      "bounds": {
+        "min": [
+          -0.30344900488853455,
+          3.5920000076293945,
+          -0.5827829837799072
+        ],
+        "max": [
+          0.28198501467704773,
+          3.811500072479248,
+          -0.036281999200582504
+        ]
+      },
+      "center": [
+        -0.010731995105743408,
+        3.7017500400543213,
+        -0.30953249149024487
+      ],
+      "anchor": [
+        -0.005638769827783108,
+        3.7014999389648438,
+        -0.32308700680732727
+      ],
+      "sources": [
+        {
+          "file": "FMA12523",
+          "sha256": "dc5081f377f2012a44e61d9c96377cff99ac2f5654e663f5953e1ae9769fab2a"
+        }
+      ],
+      "triangles": 2102,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA12524",
+      "fmaId": "FMA12524",
+      "name": "Sixth cervical vertebra",
+      "sourceName": "sixth cervical vertebra",
+      "slug": "sixth-cervical-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA12524",
+      "bounds": {
+        "min": [
+          -0.30262601375579834,
+          3.4446001052856445,
+          -0.671226978302002
+        ],
+        "max": [
+          0.2857230007648468,
+          3.682800054550171,
+          -0.05177599936723709
+        ]
+      },
+      "center": [
+        -0.008451506495475769,
+        3.5637000799179077,
+        -0.3615014888346195
+      ],
+      "anchor": [
+        -0.018267599865794182,
+        3.56030011177063,
+        -0.35054799914360046
+      ],
+      "sources": [
+        {
+          "file": "FMA12524",
+          "sha256": "2af2e7f2fb9d70e01adbf96e453b73aa4fe8af219c4fa991717dec817ec4bca6"
+        }
+      ],
+      "triangles": 2210,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA13072",
+      "fmaId": "FMA13072",
+      "name": "First lumbar vertebra",
+      "sourceName": "first lumbar vertebra",
+      "slug": "first-lumbar-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA13072",
+      "bounds": {
+        "min": [
+          -0.3662770092487335,
+          -0.2304999977350235,
+          -0.7065250277519226
+        ],
+        "max": [
+          0.3267289996147156,
+          0.34470000863075256,
+          0.09765999764204025
+        ]
+      },
+      "center": [
+        -0.019774004817008972,
+        0.05710000544786453,
+        -0.3044325150549412
+      ],
+      "anchor": [
+        -0.02527100034058094,
+        0.03229999914765358,
+        -0.22410400211811066
+      ],
+      "sources": [
+        {
+          "file": "FMA13072",
+          "sha256": "3fd3f1f1374d50a77440755ab47d6e6423de4109b02b857f1066f10e0cf208e2"
+        }
+      ],
+      "triangles": 2866,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA13073",
+      "fmaId": "FMA13073",
+      "name": "Second lumbar vertebra",
+      "sourceName": "second lumbar vertebra",
+      "slug": "second-lumbar-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA13073",
+      "bounds": {
+        "min": [
+          -0.41181299090385437,
+          -0.4661000072956085,
+          -0.6591830253601074
+        ],
+        "max": [
+          0.3747999966144562,
+          0.01720000058412552,
+          0.14800000190734863
+        ]
+      },
+      "center": [
+        -0.018506497144699097,
+        -0.2244500033557415,
+        -0.2555915117263794
+      ],
+      "anchor": [
+        -0.05103759840130806,
+        -0.2596000134944916,
+        -0.20498999953269958
+      ],
+      "sources": [
+        {
+          "file": "FMA13073",
+          "sha256": "23457a53d74d8202447551e145b63dd0624b3fa85a4bdca40ba14d2e1d85d5cf"
+        }
+      ],
+      "triangles": 2388,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA13074",
+      "fmaId": "FMA13074",
+      "name": "Third lumbar vertebra",
+      "sourceName": "third lumbar vertebra",
+      "slug": "third-lumbar-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA13074",
+      "bounds": {
+        "min": [
+          -0.4100230038166046,
+          -0.7465199828147888,
+          -0.6605939865112305
+        ],
+        "max": [
+          0.3873080015182495,
+          -0.2919999957084656,
+          0.1654299944639206
+        ]
+      },
+      "center": [
+        -0.011357501149177551,
+        -0.5192599892616272,
+        -0.24758199602365494
+      ],
+      "anchor": [
+        -0.013012000359594822,
+        -0.5654699802398682,
+        -0.1878959983587265
+      ],
+      "sources": [
+        {
+          "file": "FMA13074",
+          "sha256": "cf879fd25baf516f621ae1da1413fa73dd682d26e6f7fd106a806307fdcac2b1"
+        }
+      ],
+      "triangles": 3304,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA13075",
+      "fmaId": "FMA13075",
+      "name": "Fourth lumbar vertebra",
+      "sourceName": "fourth lumbar vertebra",
+      "slug": "fourth-lumbar-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA13075",
+      "bounds": {
+        "min": [
+          -0.4356299936771393,
+          -1.0100899934768677,
+          -0.6629570126533508
+        ],
+        "max": [
+          0.4211620092391968,
+          -0.5791900157928467,
+          0.15408000349998474
+        ]
+      },
+      "center": [
+        -0.0072339922189712524,
+        -0.7946400046348572,
+        -0.25443850457668304
+      ],
+      "anchor": [
+        -0.012415600009262562,
+        -0.7950000166893005,
+        -0.21319499611854553
+      ],
+      "sources": [
+        {
+          "file": "FMA13075",
+          "sha256": "596b9d5d3fb1676e086f4262809f69c48230e94b4c40396e8441fe0e0e5d196e"
+        }
+      ],
+      "triangles": 3456,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA13076",
+      "fmaId": "FMA13076",
+      "name": "Fifth lumbar vertebra",
+      "sourceName": "fifth lumbar vertebra",
+      "slug": "fifth-lumbar-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA13076",
+      "bounds": {
+        "min": [
+          -0.5184190273284912,
+          -1.3593599796295166,
+          -0.7056000232696533
+        ],
+        "max": [
+          0.4890669882297516,
+          -0.868399977684021,
+          0.0973299965262413
+        ]
+      },
+      "center": [
+        -0.014676019549369812,
+        -1.1138799786567688,
+        -0.304135013371706
+      ],
+      "anchor": [
+        -0.043664101511240005,
+        -1.095479965209961,
+        -0.29624900221824646
+      ],
+      "sources": [
+        {
+          "file": "FMA13076",
+          "sha256": "347de6db15415924f7534ea48881474ad0b9d73e57060bb9859cce64c8679cad"
+        }
+      ],
+      "triangles": 3872,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA13322",
+      "fmaId": "FMA13322",
+      "name": "Right clavicle",
+      "sourceName": "right clavicle",
+      "slug": "right-clavicle",
+      "tissue": "skeleton",
+      "laterality": "right",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA13322",
+      "bounds": {
+        "min": [
+          -1.5003299713134766,
+          2.8190999031066895,
+          -0.5272259712219238
+        ],
+        "max": [
+          -0.11488799750804901,
+          3.168600082397461,
+          0.46766000986099243
+        ]
+      },
+      "center": [
+        -0.8076089844107628,
+        2.993849992752075,
+        -0.029782980680465698
+      ],
+      "anchor": [
+        -0.8214849829673767,
+        3.0153000354766846,
+        -0.009738000109791756
+      ],
+      "sources": [
+        {
+          "file": "FMA13322",
+          "sha256": "b15f5a20ae9ec041307964f1ef07c3c084333933dea5165f8b07a559b56b584b"
+        }
+      ],
+      "triangles": 1144,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA13323",
+      "fmaId": "FMA13323",
+      "name": "Left clavicle",
+      "sourceName": "left clavicle",
+      "slug": "left-clavicle",
+      "tissue": "skeleton",
+      "laterality": "left",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA13323",
+      "bounds": {
+        "min": [
+          0.1022220030426979,
+          2.818000078201294,
+          -0.5266799926757812
+        ],
+        "max": [
+          1.4867000579833984,
+          3.1684000492095947,
+          0.4674299955368042
+        ]
+      },
+      "center": [
+        0.7944610305130482,
+        2.9932000637054443,
+        -0.029624998569488525
+      ],
+      "anchor": [
+        0.7879940271377563,
+        3.013200044631958,
+        0.01590000092983246
+      ],
+      "sources": [
+        {
+          "file": "FMA13323",
+          "sha256": "65466089c029cfe951946b962440c84fc8629dbafaff5b6dc4298920861a796f"
+        }
+      ],
+      "triangles": 1150,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA13395",
+      "fmaId": "FMA13395",
+      "name": "Right scapula",
+      "sourceName": "right scapula",
+      "slug": "right-scapula",
+      "tissue": "skeleton",
+      "laterality": "right",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA13395",
+      "bounds": {
+        "min": [
+          -1.6867899894714355,
+          1.5149999856948853,
+          -1.1135170459747314
+        ],
+        "max": [
+          -0.5932350158691406,
+          3.098400115966797,
+          -0.009236999787390232
+        ]
+      },
+      "center": [
+        -1.140012502670288,
+        2.306700050830841,
+        -0.5613770228810608
+      ],
+      "anchor": [
+        -1.19228994846344,
+        2.322999954223633,
+        -0.5920119881629944
+      ],
+      "sources": [
+        {
+          "file": "FMA13395",
+          "sha256": "2ea52baa1986330fcffc03dc0ec1f91f66b678395e6141f92caafeb180755afd"
+        }
+      ],
+      "triangles": 22650,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA13396",
+      "fmaId": "FMA13396",
+      "name": "Left scapula",
+      "sourceName": "left scapula",
+      "slug": "left-scapula",
+      "tissue": "skeleton",
+      "laterality": "left",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA13396",
+      "bounds": {
+        "min": [
+          0.5800849795341492,
+          1.5152000188827515,
+          -1.1133949756622314
+        ],
+        "max": [
+          1.6736400127410889,
+          3.0985000133514404,
+          -0.009282000362873077
+        ]
+      },
+      "center": [
+        1.126862496137619,
+        2.306850016117096,
+        -0.5613384880125523
+      ],
+      "anchor": [
+        1.177649974822998,
+        2.3183999061584473,
+        -0.5953419804573059
+      ],
+      "sources": [
+        {
+          "file": "FMA13396",
+          "sha256": "d3bd763763054122da5aedafb09a4357258aaf2ffa4d9633547865bd1ba443f6"
+        }
+      ],
+      "triangles": 24362,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA16586",
+      "fmaId": "FMA16586",
+      "name": "Right hip bone",
+      "sourceName": "right hip bone",
+      "slug": "right-hip-bone",
+      "tissue": "skeleton",
+      "laterality": "right",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA16586",
+      "bounds": {
+        "min": [
+          -1.3121700286865234,
+          -2.910830020904541,
+          -0.8614879846572876
+        ],
+        "max": [
+          -0.03475220128893852,
+          -0.8333799839019775,
+          0.521399974822998
+        ]
+      },
+      "center": [
+        -0.673461114987731,
+        -1.8721050024032593,
+        -0.17004400491714478
+      ],
+      "anchor": [
+        -0.5839530229568481,
+        -1.8881200551986694,
+        -0.217398002743721
+      ],
+      "sources": [
+        {
+          "file": "FMA16586",
+          "sha256": "2fc0f001ad13acfb2e77979a3e7d02f2476fe54b64a4ea1c4caafd2632969a14"
+        }
+      ],
+      "triangles": 1942,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA16587",
+      "fmaId": "FMA16587",
+      "name": "Left hip bone",
+      "sourceName": "left hip bone",
+      "slug": "left-hip-bone",
+      "tissue": "skeleton",
+      "laterality": "left",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA16587",
+      "bounds": {
+        "min": [
+          0.0427887998521328,
+          -2.904400110244751,
+          -0.8600130081176758
+        ],
+        "max": [
+          1.3188199996948242,
+          -0.82778000831604,
+          0.5209000110626221
+        ]
+      },
+      "center": [
+        0.6808043997734785,
+        -1.8660900592803955,
+        -0.16955649852752686
+      ],
+      "anchor": [
+        0.5916159749031067,
+        -1.8970500230789185,
+        -0.2012529969215393
+      ],
+      "sources": [
+        {
+          "file": "FMA16587",
+          "sha256": "959df200626165d47c38d3135c17c0b22267c3b708d1c0600619d1b251c1f958"
+        }
+      ],
+      "triangles": 1892,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA23130",
+      "fmaId": "FMA23130",
+      "name": "Right humerus",
+      "sourceName": "right humerus",
+      "slug": "right-humerus",
+      "tissue": "skeleton",
+      "laterality": "right",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA23130",
+      "bounds": {
+        "min": [
+          -2.41579008102417,
+          -0.1054999977350235,
+          -0.527472972869873
+        ],
+        "max": [
+          -1.4066799879074097,
+          2.969099998474121,
+          -0.03311900049448013
+        ]
+      },
+      "center": [
+        -1.9112350344657898,
+        1.4318000003695488,
+        -0.2802959866821766
+      ],
+      "anchor": [
+        -1.9020700454711914,
+        1.4636000394821167,
+        -0.2802790105342865
+      ],
+      "sources": [
+        {
+          "file": "FMA23130",
+          "sha256": "8a26bcc5ae63c94a525172bb5ee5514d6badd39aa56f951861fb0c606f14d374"
+        }
+      ],
+      "triangles": 3252,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA23131",
+      "fmaId": "FMA23131",
+      "name": "Left humerus",
+      "sourceName": "left humerus",
+      "slug": "left-humerus",
+      "tissue": "skeleton",
+      "laterality": "left",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA23131",
+      "bounds": {
+        "min": [
+          1.3935500383377075,
+          -0.10540000349283218,
+          -0.5282279849052429
+        ],
+        "max": [
+          2.401930093765259,
+          2.9691998958587646,
+          -0.03350299969315529
+        ]
+      },
+      "center": [
+        1.8977400660514832,
+        1.4318999461829662,
+        -0.2808654922991991
+      ],
+      "anchor": [
+        1.8856300115585327,
+        1.4602999687194824,
+        -0.28285500407218933
+      ],
+      "sources": [
+        {
+          "file": "FMA23131",
+          "sha256": "4af277604e09c6837f22f6064f604398d65316e32816cb4079eeb2badbf2ad1f"
+        }
+      ],
+      "triangles": 3384,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA9165",
+      "fmaId": "FMA9165",
+      "name": "First thoracic vertebra",
+      "sourceName": "first thoracic vertebra",
+      "slug": "first-thoracic-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA9165",
+      "bounds": {
+        "min": [
+          -0.3821429908275604,
+          3.143199920654297,
+          -0.8291730284690857
+        ],
+        "max": [
+          0.3330659866333008,
+          3.4410998821258545,
+          -0.13020600378513336
+        ]
+      },
+      "center": [
+        -0.024538502097129822,
+        3.2921499013900757,
+        -0.4796895161271095
+      ],
+      "anchor": [
+        -0.013705000281333923,
+        3.312700033187866,
+        -0.4619629979133606
+      ],
+      "sources": [
+        {
+          "file": "FMA9165",
+          "sha256": "f11188e2e557fea57d4b15e0c68f993efc4037c8cbbd09cec62f0834982c3a0e"
+        }
+      ],
+      "triangles": 1706,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA9187",
+      "fmaId": "FMA9187",
+      "name": "Second thoracic vertebra",
+      "sourceName": "second thoracic vertebra",
+      "slug": "second-thoracic-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA9187",
+      "bounds": {
+        "min": [
+          -0.3696120083332062,
+          2.950200080871582,
+          -0.8854069709777832
+        ],
+        "max": [
+          0.3303839862346649,
+          3.293800115585327,
+          -0.17906899750232697
+        ]
+      },
+      "center": [
+        -0.01961401104927063,
+        3.1220000982284546,
+        -0.5322379842400551
+      ],
+      "anchor": [
+        -0.010564900003373623,
+        3.132200002670288,
+        -0.5322819948196411
+      ],
+      "sources": [
+        {
+          "file": "FMA9187",
+          "sha256": "1a57b3371a8b1125f5610589980c631c6df1836e5080b932395d6b79f8c81939"
+        }
+      ],
+      "triangles": 1790,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA9209",
+      "fmaId": "FMA9209",
+      "name": "Third thoracic vertebra",
+      "sourceName": "third thoracic vertebra",
+      "slug": "third-thoracic-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA9209",
+      "bounds": {
+        "min": [
+          -0.339370995759964,
+          2.713599920272827,
+          -0.9934234023094177
+        ],
+        "max": [
+          0.2989270091056824,
+          3.113100051879883,
+          -0.2398580014705658
+        ]
+      },
+      "center": [
+        -0.020221993327140808,
+        2.913349986076355,
+        -0.6166407018899918
+      ],
+      "anchor": [
+        -0.0014911500038579106,
+        2.91729998588562,
+        -0.6275119781494141
+      ],
+      "sources": [
+        {
+          "file": "FMA9209",
+          "sha256": "a13c7200b0e502cfa6cfc85827744bbbb5405cac9b531c3a56f4ecf8228e317b"
+        }
+      ],
+      "triangles": 2030,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA9248",
+      "fmaId": "FMA9248",
+      "name": "Fourth thoracic vertebra",
+      "sourceName": "fourth thoracic vertebra",
+      "slug": "fourth-thoracic-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA9248",
+      "bounds": {
+        "min": [
+          -0.3491419851779938,
+          2.4769999980926514,
+          -0.9984974265098572
+        ],
+        "max": [
+          0.33601999282836914,
+          2.914599895477295,
+          -0.30797600746154785
+        ]
+      },
+      "center": [
+        -0.006560996174812317,
+        2.695799946784973,
+        -0.6532367169857025
+      ],
+      "anchor": [
+        0.016175899654626846,
+        2.717099905014038,
+        -0.6955749988555908
+      ],
+      "sources": [
+        {
+          "file": "FMA9248",
+          "sha256": "ea8275509484a6afb39d64351d0fe3c3ac6c39a6c7765667c29fd00b022aa2db"
+        }
+      ],
+      "triangles": 1892,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA9922",
+      "fmaId": "FMA9922",
+      "name": "Fifth thoracic vertebra",
+      "sourceName": "fifth thoracic vertebra",
+      "slug": "fifth-thoracic-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA9922",
+      "bounds": {
+        "min": [
+          -0.37113699316978455,
+          2.153599977493286,
+          -0.988444983959198
+        ],
+        "max": [
+          0.3223240077495575,
+          2.6774001121520996,
+          -0.3389720022678375
+        ]
+      },
+      "center": [
+        -0.024406492710113525,
+        2.415500044822693,
+        -0.6637084931135178
+      ],
+      "anchor": [
+        -0.08183640241622925,
+        2.438199996948242,
+        -0.6306629776954651
+      ],
+      "sources": [
+        {
+          "file": "FMA9922",
+          "sha256": "f99342cc5f6b8a0d978fa8c45e7f1eab1e0a574b86fe1a95d7a3aeebc1cd20a6"
+        }
+      ],
+      "triangles": 2082,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA9945",
+      "fmaId": "FMA9945",
+      "name": "Sixth thoracic vertebra",
+      "sourceName": "sixth thoracic vertebra",
+      "slug": "sixth-thoracic-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA9945",
+      "bounds": {
+        "min": [
+          -0.3736949861049652,
+          1.7934000492095947,
+          -0.9908975958824158
+        ],
+        "max": [
+          0.32289600372314453,
+          2.406399965286255,
+          -0.3446120023727417
+        ]
+      },
+      "center": [
+        -0.02539949119091034,
+        2.099900007247925,
+        -0.6677547991275787
+      ],
+      "anchor": [
+        -0.029717199504375458,
+        2.0924999713897705,
+        -0.6298310160636902
+      ],
+      "sources": [
+        {
+          "file": "FMA9945",
+          "sha256": "18d47e05c29954fd25e421ab6a8e0b4254e7d0d90eba13d04801628a3ce5d4c2"
+        }
+      ],
+      "triangles": 1588,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA9968",
+      "fmaId": "FMA9968",
+      "name": "Seventh thoracic vertebra",
+      "sourceName": "seventh thoracic vertebra",
+      "slug": "seventh-thoracic-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA9968",
+      "bounds": {
+        "min": [
+          -0.3768410086631775,
+          1.5223000049591064,
+          -0.9726728200912476
+        ],
+        "max": [
+          0.34017398953437805,
+          2.1273000240325928,
+          -0.32793599367141724
+        ]
+      },
+      "center": [
+        -0.01833350956439972,
+        1.8248000144958496,
+        -0.6503044068813324
+      ],
+      "anchor": [
+        0.010794299654662609,
+        1.8331999778747559,
+        -0.6326029896736145
+      ],
+      "sources": [
+        {
+          "file": "FMA9968",
+          "sha256": "d8ebe7b9bf2ce43d450f01a85c22b9c7269f5b1023b39f4f046b0a74c0513435"
+        }
+      ],
+      "triangles": 2300,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-back-layers-FMA9991",
+      "fmaId": "FMA9991",
+      "name": "Eighth thoracic vertebra",
+      "sourceName": "eighth thoracic vertebra",
+      "slug": "eighth-thoracic-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-back-layers",
+      "nodeName": "FMA9991",
+      "bounds": {
+        "min": [
+          -0.3462809920310974,
+          1.2369999885559082,
+          -0.9921892285346985
+        ],
+        "max": [
+          0.3261129856109619,
+          1.8321000337600708,
+          -0.27855199575424194
+        ]
+      },
+      "center": [
+        -0.010084003210067749,
+        1.5345500111579895,
+        -0.6353706121444702
+      ],
+      "anchor": [
+        -0.007830680347979069,
+        1.513100028038025,
+        -0.5861899852752686
+      ],
+      "sources": [
+        {
+          "file": "FMA9991",
+          "sha256": "ba693479c99aa60826d15c518fa79c66484b5298630ade6aae5290b065d6bb0e"
+        }
+      ],
+      "triangles": 1422,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    }
+  ],
+  "bundles": [
+    {
+      "id": "bp3d3-back-layers",
+      "url": "/models/bodyparts3d-v3/back-layers/back-layers.glb",
+      "bytes": 7625848,
+      "sha256": "f8fa3e2a955ae43d74b359dfc9ad14487381ed496fecfeca9d47aa6a0024a7c4",
+      "structures": 48
+    }
+  ]
+}

@@ -201,6 +201,13 @@
     "app/um-limb-learning.tsx": "6026628ef9f29b54463bc0b39b1fd6b037af74831ffca0278879489f7e6d5ecd",
     "lib/independent-specimen.ts": "158dddac1440445b0280414812496f8c673b7a6f05f45faa1551f8a4b5b026ed",
     "lib/abdominal-wall.ts": "06795f84c4440639f4b24ea31e10b5e0a37f0e8f494a261f512d12c8ea1687b7",
+    "lib/back-layers.ts": "f11998c77ff5823e257f9c81b625532d952ded36fd9729e65fbace6d0090f62c",
+    "lib/back-layers-teaching.ts": "ebddc04a533caf36f3f606a55ef135eb488b0c83bc7f2f9a75a287b434cac0c0",
+    "content/back-layers-teaching.ts": "a5823a15efa2b5729a83f25428352fbdc3b18296e46625df0cea0cf985f40ef6",
+    "app/back-layers-study.tsx": "702c323bc0dfdca1e139971cfed92817b824ca9eac98f2e7bf641af633bd7d80",
+    "app/specimens/back-layers/page.tsx": "ed595932d3af1dee6c5bb121fcfbfa46c00af260eb2318e78653256398fafc1b",
+    "public/models/bodyparts3d-v3/back-layers/catalog.json": "23ba69e7268a03c8ab722313326bb7ffc3ac13aa49c0036c043993b38e0e9242",
+    "public/models/bodyparts3d-v3/back-layers/NOTICE.md": "41cdebcbf14c33d84bb3338db05015b9cf1c4a815b6909cb2db698fd2c6e884f",
     "lib/abdominal-wall-practice.ts": "aaf400ffdef117f6cafca1def51d1caae4e2e450f2c8e62bcb17b7b36efe4ad7",
     "lib/abdominal-wall-binding.ts": "29a30e954bd654f7c5984b91d966139633b94eaff1940321e911d2b63409d67e",
     "lib/abdominal-wall-teaching.ts": "30f1fbd0b64e9cd73566372eed356e71c40a0b0a20fe87e1c8e4ddf6b8068b16",
@@ -606,6 +613,30 @@
         "sourceLabelsOnly": true
       },
       "note": "Separate v3 source specimen with layer studies; six muscle identities absent from v4 become inspectable without merging source frames. No complete sheath or neurovascular plane."
+    },
+    "backLayersSpecimen": {
+      "id": "bp3d3-back-layers",
+      "route": "/specimens/back-layers",
+      "representations": 48,
+      "muscleSurfaces": 14,
+      "skeletalContext": 34,
+      "triangles": 333182,
+      "studies": 8,
+      "anatomyFunctionDrafts": 14,
+      "practiceTargets": 14,
+      "source": {
+        "version": "3.0, OBJ 99% reduction",
+        "license": "CC BY-SA 2.1 JP",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.1/jp/",
+        "credit": "BodyParts3D, Copyright© The Database Center for Life Science licensed by CC Attribution-Share Alike 2.1 Japan",
+        "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/README_e.html",
+        "archive": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/BodyParts3D_3.0_obj_99.zip",
+        "registration": "none"
+      },
+      "registeredToCurrentBody": false,
+      "countedAsRootTeaching": false,
+      "realImaging": false,
+      "clinicalApproval": false
     },
     "independentSpecimens": [
       {
@@ -1912,9 +1943,9 @@
     "publicFileExtensions": {
       "png": 4,
       "svg": 2,
-      "md": 3,
-      "glb": 120,
-      "json": 34,
+      "md": 4,
+      "glb": 121,
+      "json": 35,
       "zip": 1,
       "html": 1,
       "tsv": 1

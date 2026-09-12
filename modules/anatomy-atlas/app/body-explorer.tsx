@@ -178,6 +178,7 @@ const AbdominalWallSpecimen = dynamic(() => import('./abdominal-wall-study'), {
   ssr: false,
 });
 const HraPelvisSpecimen = dynamic(() => import('./hra-pelvis-study'), { ssr: false });
+const BackLayersSpecimen = dynamic(() => import('./back-layers-study'), { ssr: false });
 const systemKeys = Object.keys(bodySystems) as BodySystem[];
 const icons = {
   skeleton: Bone,
@@ -253,6 +254,12 @@ export default function BodyExplorer({
   const [eyeParent, setEyeParent] = useState<BodyStructure | null>(null);
   const [kneeSpecimenOpen, setKneeSpecimenOpen] = useState(false);
   const [abdominalWallOpen, setAbdominalWallOpen] = useState(false);
+  const [backLayersOpen, setBackLayersOpen] = useState(false);
+  const backLayersLauncher = useRef<HTMLButtonElement | null>(null);
+  const closeBackLayers = useCallback(() => {
+    setBackLayersOpen(false);
+    requestAnimationFrame(() => backLayersLauncher.current?.focus());
+  }, []);
   const [hraPelvisOpen, setHraPelvisOpen] = useState(false);
   const hraPelvisLauncher = useRef<HTMLButtonElement | null>(null);
   const closeHraPelvis = useCallback(() => {
@@ -1195,6 +1202,11 @@ export default function BodyExplorer({
         />
       </WorkspaceOnly>
       <WorkspaceOnly modes={['explore', 'dissect']}>
+        {['spine', 'whole-body'].includes(initialRegion) && (
+          <Button ref={backLayersLauncher} variant="outline" size="sm" className="um-knee-launch" disabled={exam} onClick={() => { if (!exam) setBackLayersOpen(true); }}>
+            Back layers · separate specimen
+          </Button>
+        )}
         {initialRegion === 'abdomen' && (
           <Button
             ref={abdominalWallLauncher}
@@ -2334,6 +2346,9 @@ export default function BodyExplorer({
         )}
       {abdominalWallOpen && initialRegion === 'abdomen' && !exam && (
         <AbdominalWallSpecimen onClose={closeAbdominalWall} />
+      )}
+      {backLayersOpen && ['spine', 'whole-body'].includes(initialRegion) && !exam && (
+        <BackLayersSpecimen onClose={closeBackLayers} />
       )}
       {hraPelvisOpen && ['pelvis','whole-body'].includes(initialRegion) && !exam && (
         <HraPelvisSpecimen onClose={closeHraPelvis} />

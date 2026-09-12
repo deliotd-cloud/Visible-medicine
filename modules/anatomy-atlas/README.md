@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Spine / Whole body → Back layers · separate specimen** opens [eight back-dissection studies](docs/BACK_LAYERS_SPECIMEN.md). Inspect 14 source muscle surfaces, including latissimus and multifidus missing from the main body, with 34 same-source bones. Existing separation, hide/Undo, search, labels and identification practice are reused; Anatomy/Function drafts stay collapsed. This is an independent version-3 reference under CC BY-SA 2.1 Japan, not registered anatomy or clinical approval. Direct route: `/specimens/back-layers`.
+
 [Upper-limb vessel imaging](docs/UPPER_VESSEL_IMAGING.md) adds 34 source-bound draft sections across 14 selected arteries/veins, within the existing Imaging tabs. CT/MRI cover arterial trunks, deep brachial branches and selected deep veins; ultrasound also covers cephalic/basilic veins. These are ten distinct introductory topic texts with seven structure-specific cautions, not acquired scans, flow measurements or clinical approval.
 
 **Shoulder & arm / Whole body → Study → search “brachial”** opens two [arm vascular dissection views](docs/ARM_VASCULAR_STUDIES.md): anterior brachial vessels with flexors, or the deep brachial artery with triceps. Choose a side, hide a muscle, extract a selected surface and Undo using the existing controls. Twenty-two original source selections are reused; nerves and complete companion veins remain absent, and clinical/device review is pending.

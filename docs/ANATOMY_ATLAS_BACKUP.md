@@ -1,6 +1,24 @@
 # Anatomy atlas backup — 12 September 2026
 
-## 12 September 2026 — upper-limb vascular imaging teaching (current source)
+## 12 September 2026 — independent back-layer dissection (current source)
+
+Source `852d5aa38c3d39f7e5d331ba8b163f46860ab821`, tree `bd8e6ba9d4dcb2079b6b6dcf313d7463140c630d`, parent `b4d84f2a6e533bbd058478812e9683e309a05bbf`. Seventy-six exact source paths mirrored. Full module audit: 1,914 matching files / 478,817,926 bytes / 126 retained GLBs; zero common credential-signature warnings (not exhaustive). Existing source models, root catalogue, root teaching/recipes, database, auth and entitlements are unchanged.
+
+Spine / Whole body → Back layers · separate specimen, or `/specimens/back-layers`, exposes 14 muscles and 34 same-source bones across eight reversible studies. Paired latissimus and multifidus become inspectable without fitting version-3 coordinates to v4. Trapezius parts and rhomboids supply additional context. All 333,182 triangles remain; canonical display GLB is 7,625,848 bytes. Source fragments/edge contacts remain disclosed, especially multifidus. No complete back stack, fascia, disc, cord, nerve path, surgical plane, scan registration or clinical approval is supplied.
+
+Existing specimen controls handle rotation, labels, selection/fade, search, hide/Undo/Redo, illustration, framing, separation and identification. Five original Anatomy/Function concepts serve 14 exact muscle selections; Clinical/Pathology/imaging remain pending. Visible eligible pools are 14 / 8 / 2 / 4 / 2 / 7 / 7 / 14; rounds sample at most ten. Notes and practice require complete source/frame/definition equality. No new permanent dissection toolbar or patient-data integration.
+
+Source assets, selected originals/licence evidence and specimen data adaptations retain BodyParts3D / DBCLS **CC BY-SA 2.1 Japan**, not the v4 grant. The viewer includes credit, licence/change notice, source archive and display downloads. Recipient reuse/ShareAlike rights must not be restricted by later subscriptions or DRM. Original shared code and independently written teaching remain MIT; university pages are factual references only. No images, source-table prose or clinical procedures copied into teaching, no new dependency/font/texture/paid API. Future combinations still need their own rights review.
+
+Passed: 1,424 targeted checks, all 999,546 source face corners/face order/normals/anchors (maximum coordinate round-trip error 0.00002381 source mm), all 48 source names/licences/hashes, 12 mutated definitions, eight study/history and practice pools, 42 actual React teaching renders, abdominal geometry/control regression (697 checks / 2,058,978 face corners), independent-limb learning/practice regression (1,310), TypeScript, production build and requirement freshness. Authored whitespace passes; four original upstream README trailing spaces are retained byte-for-byte as source evidence, not normalized. No browser/GPU/mobile/clinical acceptance. Preexisting model-first snapshot failure remains unmodified and is not claimed passing.
+
+Body renderer `591c8fcc135c914184f52ce4c49dc3f772eed0e6130e36c9be6c30e9eda55cc4`, 373 inputs; shoulder fingerprints unchanged. Lossless delivery verifies 121 GLBs / 1,333 meshes / 3,999 buffer views: canonical 192,174,820 bytes / transport 130,240,088 / gzip canonical 151,089,116 / gzip transport 113,507,576. Main-body scope remains 1,060 selections / 159 stages / 165 focuses; separate-source coverage is not added to those counts.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-back-layers-2026-09-12`: `.site.tar.gz` 119,074,219 bytes / SHA256 `7eed6ff2eb49719954d633943b70c770e90a1325820bdedce1ac196786acb0b7`; `.delta.tar` 33,331,200 bytes / `4c689814d3b47d10566ed65837464b33142788c6001cd5ca20a80914e22c065b`; `.incremental.bundle` 13,128,877 bytes / `ee16ed76407c31e69c37bcccec769c86495177682fd7b1f84337ff2b99ff3afe`. Archive has 422 safe unique entries, exact manifest and both original migrations. Independent restore `refs/verification/back-layers-20260912` matches source SHA/tree and passes full fsck; verifier main unchanged. Preserve previous increments.
+
+Sites source main independently matches; owner-private publishing is underway at this receipt. Final deployment and GitHub remote verification are recorded in the work/D-drive checkpoint. Source/runtime backups exclude conversation history, production databases, personal reviews, accounts, patient images and separate lectures. Continue substantive other regional anatomy/function; source/clinical/device and approved imaging gates remain. The broad goal is active.
+
+## 12 September 2026 — upper-limb vascular imaging teaching (previous source)
 
 Source `b4d84f2a6e533bbd058478812e9683e309a05bbf`, tree `ea09891aac0ff604e4e326bed9987c070a391ba3`, parent `50ac6f326f14e292c6382e518adaeea20169163c`. Twenty-four exact source paths mirrored. Full module audit: 1,849 matching files / 446,187,840 bytes / 125 retained GLBs; zero common credential-signature warnings (not exhaustive). No geometry, dependency, font, texture, database, auth, entitlement or patient-image change.
 

@@ -49,6 +49,8 @@ export { renalRelationshipsFor } from './lib/renal-relationships.ts';
 export { hepaticBiliaryRelationshipsFor, hepaticBiliarySource } from './lib/hepatic-biliary-context.ts';
 export { cardiacRelationshipsFor, cardiacVesselSource } from './lib/cardiac-context.ts';
 export { abdominalWallDefinition } from './lib/abdominal-wall.ts';
+export { backLayersDefinition } from './lib/back-layers.ts';
+export { backLayersTeachingFor, backLayersPractice } from './lib/back-layers-teaching.ts';
 export { abdominalWallPractice } from './lib/abdominal-wall-practice.ts';
 export { abdominalTeachingFor } from './lib/abdominal-wall-teaching.ts';`,
     resolveDir: fileURLToPath(root),
@@ -65,6 +67,9 @@ const {
   hraPelvicTeaching,
   hraPelvicPractice,
   abdominalWallDefinition,
+  backLayersDefinition,
+  backLayersTeachingFor,
+  backLayersPractice,
   abdominalWallPractice,
   abdominalTeachingFor,
   limbDefinitions,
@@ -469,6 +474,13 @@ for (const path of [
   'app/um-limb-learning.tsx',
   'lib/independent-specimen.ts',
   'lib/abdominal-wall.ts',
+  'lib/back-layers.ts',
+  'lib/back-layers-teaching.ts',
+  'content/back-layers-teaching.ts',
+  'app/back-layers-study.tsx',
+  'app/specimens/back-layers/page.tsx',
+  'public/models/bodyparts3d-v3/back-layers/catalog.json',
+  'public/models/bodyparts3d-v3/back-layers/NOTICE.md',
   'lib/abdominal-wall-practice.ts',
   'lib/abdominal-wall-binding.ts',
   'lib/abdominal-wall-teaching.ts',
@@ -716,6 +728,18 @@ const report = {
         clinicalCertification: false, sourceAndFrameChecked: true, sourceLabelsOnly: true,
       },
       note: 'Separate v3 source specimen with layer studies; six muscle identities absent from v4 become inspectable without merging source frames. No complete sheath or neurovascular plane.',
+    },
+    backLayersSpecimen: {
+      id: backLayersDefinition.key, route: '/specimens/back-layers',
+      representations: backLayersDefinition.surfaces.length,
+      muscleSurfaces: backLayersDefinition.surfaces.filter(s=>s.tissue==='muscle').length,
+      skeletalContext: backLayersDefinition.surfaces.filter(s=>s.tissue==='skeleton').length,
+      triangles: backLayersDefinition.surfaces.reduce((n,s)=>n+s.triangles,0),
+      studies: backLayersDefinition.studies.length,
+      anatomyFunctionDrafts: backLayersDefinition.surfaces.filter(s=>backLayersTeachingFor(backLayersDefinition,s)).length,
+      practiceTargets: backLayersPractice.eligibleIds(backLayersDefinition,backLayersDefinition.surfaces.map(s=>s.id)).length,
+      source: backLayersDefinition.source, registeredToCurrentBody: false, countedAsRootTeaching: false,
+      realImaging: false, clinicalApproval: false,
     },
     independentSpecimens: [{
       id: independentLimb.specimenId,
