@@ -117,6 +117,8 @@ import { StructureNavigator } from './structure-navigator';
 import { RelatedStudy } from './related-study';
 import { UpperLimbMotorExplorer } from './upper-limb-motor';
 import { ArterialConnections } from './arterial-connections';
+import { BoneJoints } from './bone-joints';
+import { footJointPlan } from '@/lib/foot-joints';
 import { arterialPlan } from '../lib/arterial';
 import { VenousDrainage } from './venous-drainage';
 import { venousDrainagePlan } from '../lib/venous-drainage';
@@ -755,6 +757,28 @@ export default function BodyExplorer({
     if (!action) return;
     if (action.kind === 'focus') changeFocus(action.id);
     else changeStage(action.id);
+  }
+  function showJointPartners() {
+    if (!catalog || !selectedId) return;
+    const plan = footJointPlan(catalog, initialRegion, side, selectedId, exam);
+    if (!plan) return;
+    dispatch(plan.action);
+    setSystems((prev) => ({ ...prev, skeleton: true }));
+    setInspection(initialInspection);
+    setExplode(0);
+    setLayout('spatial');
+    setPlate(false);
+    setGhostRemoved(false);
+    setFocus(false);
+    setIsolated(false);
+    setZoom(1);
+    cameraRestore.current = null;
+    setSelectionNotice({
+      id: plan.selectedId,
+      message: `${plan.label}: available ankle/foot joint partners shown; variable facets excluded. No donor contact or joint space is verified.`,
+    });
+    setReset((n) => n + 1);
+    // Visibility only; existing selection and imaging identity are retained.
   }
   function showArterialConnections() {
     if (!catalog || !selectedId) return;
@@ -2243,6 +2267,15 @@ export default function BodyExplorer({
                       region={initialRegion}
                       side={side as StudySide}
                       focusId={dissection.focusId}
+                    />
+                    <BoneJoints
+                      catalog={catalog}
+                      region={initialRegion}
+                      side={side}
+                      selectedId={selected.id}
+                      disabled={exam}
+                      onSelect={select}
+                      onShow={showJointPartners}
                     />
                     <ArterialConnections
                       catalog={catalog}

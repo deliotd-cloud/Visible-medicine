@@ -1,5 +1,7 @@
 # Third-party notices
 
+[Ankle/foot joint partners](../docs/FOOT_JOINT_PARTNERS.md) adds original factual relationships and reading links to TTUHSC El Paso, Samojla/Kent State, OpenStax and a primary navicular morphology paper. No source prose, table, diagram, PDF or image is imported or redistributed. OpenStax's current non-commercial terms do not admit any asset to this product. Source identity pins repeat existing BodyParts3D CC BY 4.0 metadata; DBCLS attribution remains. No new dependency, font, texture, mesh, acquired image or mandatory service.
+
 [Pulmonary branch-type filtering](../docs/PULMONARY_BRANCH_TYPES.md) derives two optional GLBs from the already licensed BodyParts3D CC BY 4.0 lung surfaces. The adaptation separates existing source-labelled airways, arteries and veins into display subsets while retaining exact original triangles/normals. Required DBCLS credit and licence link remain. The NCI SEER page is a factual reading reference; its figures/text are not imported. No new dataset, font, texture, dependency, scan or paid service is included.
 
 [Cardiac circulation walkthrough](../docs/CARDIAC_CIRCULATION.md) adds original brief teaching and navigation over the existing BodyParts3D CC BY 4.0 surfaces. NHLBI and NCI SEER are factual reading references, not imported assets. No illustrations, animations (including the separately copyrighted Nucleus videos), scans or source prose are redistributed. Existing model credit is retained. No new dependency, font, texture, paid API or mandatory service is introduced.

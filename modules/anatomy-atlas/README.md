@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Selected bone → Ankle & foot joint partners** adds a [compact, source-bound partner navigator](docs/FOOT_JOINT_PARTNERS.md) across 56 existing bones. Show partners is one reversible visibility step; neighbours are selectable or linked to the whole body. Variable facets are explicit and excluded from automatic isolation. No geometry or anatomy-count increase; radiologist/device review and runtime publication remain pending.
+
 **Lung → Explore lung branches → Branch type** now separates [airways, pulmonary arteries and pulmonary veins](docs/PULMONARY_BRANCH_TYPES.md). Each can be studied across the lung or within one existing lobe group, using the same labels, selection, cutaway and separation controls. Original source surfaces are retained; no lobe tissue, capillary network or new anatomy identity is invented. Publication and radiologist/device acceptance remain pending.
 
 **Heart → Explore heart chambers → Follow circulation** opens a [six-step manual walkthrough](docs/CARDIAC_CIRCULATION.md). It connects the four existing chamber–vessel guides with the two existing right/left chamber-pair views, using automatic selection/framing and Previous/Next. No new geometry, animation, control bar or anatomy-count increase. Teaching is draft; runtime publication and radiologist/device acceptance remain pending.

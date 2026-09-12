@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "3d10add93a0aa0edc7a94f871531f9c664ba879eff779d68c078191ba986fabc"
+      "sha256": "db814d64bd75bcf6f2c702480b2d91f62945a28502794806d22ab7f87f77a97f"
     },
     {
       "path": "app/body-scene.tsx",
@@ -75,6 +75,10 @@
     {
       "path": "app/body-types.ts",
       "sha256": "84a4b5fa3180d6be2669b3146a862b1c4ba9f6419d103f3b64f9c5bc1b793e9f"
+    },
+    {
+      "path": "app/bone-joints.tsx",
+      "sha256": "5dd49ab2c4fe39a55f41b8a8d005d2e3ff473b9a3eb3e63cbf2d0ce0c3469138"
     },
     {
       "path": "app/brand.tsx",
@@ -399,6 +403,14 @@
     {
       "path": "content/eye-imaging-teaching.ts",
       "sha256": "f9a837eb80e98b6a922144c8354dd9c949638f39113450350c06db762d04b20f"
+    },
+    {
+      "path": "content/foot-joint-pins.json",
+      "sha256": "0cfede2414cd17126803a4cb294aaa744b5516323f802ecb9bc8234f5ee3b3d5"
+    },
+    {
+      "path": "content/foot-joints.ts",
+      "sha256": "abd13350b6efa6b79c19ec1669a646ba794d411de09a414a21b68bf407993f1f"
     },
     {
       "path": "content/genicular-study-pins.json",
@@ -875,6 +887,10 @@
     {
       "path": "lib/foot-curriculum.ts",
       "sha256": "d3148c29229c46e10dfd7a75dd9e7327e0b4545f581070162b11ceeb749a4579"
+    },
+    {
+      "path": "lib/foot-joints.ts",
+      "sha256": "0c3bd55687da1c5b87014ac93c166f646f1c208f3db1b04c443651a8de34f09b"
     },
     {
       "path": "lib/foot-reasoning.ts",
@@ -1454,7 +1470,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "d3efd64364d7a91b930c2931e40e18e55f4411082a487bdfe0555bbcafdbd561"
+      "sha256": "25dccdd3890ff4900c50d47a9460d5ef4291a92ca890dc5616a32624c4cb24a4"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1621,5 +1637,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "69bbfa768a661753954eb08ba77319a4264b9a9335c245ca73e1e4a57a5597d9"
+  "sha256": "fc607128bd184b2382ba117e2dce2be67fea5f10ac9bc47be1f801df975b8c75"
 }

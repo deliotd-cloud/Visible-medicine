@@ -14,6 +14,7 @@ import { deferentDuctStudy } from '../content/deferent-duct-study.ts';
 import { inferiorEpigastricStudy } from '../content/inferior-epigastric-study.ts';
 import { pelvicVeinStudy } from '../content/pelvic-vein-study.ts';
 import { limbicLandmarkStudy } from '../content/limbic-landmark-study.ts';
+import { footBoneFmas, footJoints } from '../content/foot-joints.ts';
 
 // This inventory executes the real content resolver. It measures displayed copy,
 // not medical correctness, complete lessons, browser acceptance or approval.
@@ -987,6 +988,9 @@ const report = {
     anatomicalCompletenessMeasured: false,
   },
   study: {
+    ankleFootPartnerBones: Object.values(footBoneFmas).flat().length,
+    ankleFootOrdinaryPairsPerSide: footJoints.filter(j => j.kind !== 'variable').length,
+    ankleFootVariablePairsPerSide: footJoints.filter(j => j.kind === 'variable').length,
     hepaticBiliaryLandmarks: hepaticBiliarySource.structures.length,
     hepaticBiliaryRelationshipPresets: hepaticBiliaryRelationshipsFor(hepaticBiliarySource.parent).length,
     renalRelationshipPresets: renal.parents.reduce(
