@@ -27,6 +27,13 @@ export type Course = {
 
 export const atlasModules: AtlasModule[] = [
   {
+    slug:'lower-limb-3d', title:'Lower limb 3D anatomy', region:'Lower limb',
+    modality:'3D', orientation:'Rotatable',
+    description:'Dissect the hip, thigh, knee, calf and foot in 26 source-based study views, with draft teaching and identification practice.',
+    structures:67, images:0, status:'available',
+    systems:['Bones','Muscles','Cartilage','Ligaments','Tendons'], reviewed:'Private integration pilot · Review pending',
+  },
+  {
     slug:'female-pelvis-3d', title:'Female pelvis 3D anatomy', region:'Pelvis',
     modality:'3D', orientation:'Rotatable',
     description:'Explore 41 source surfaces in eight pelvic study views, with dissection and draft teaching. Separate reference; clinical review pending.',

@@ -80,6 +80,17 @@ Latest specialist-chat review reports both anterior cerebellar edges accepted an
 
 Steps 4–5 can continue while external gates in 2–3 wait. Ask the radiologist for bounded reviews throughout, not one huge final sign-off. Keep technical readiness, clinical acceptance, media-release clearance and commercial activation separate. The full atlas goal remains active; these milestones do not redefine completion as a software demo.
 
+The next regional website delivery is the [lower-limb dissection pilot](lower-limb-atlas-pilot.md):
+five scopes, 26 original recipes and 67 unique existing source selections. It
+uses one compact selector rather than duplicating regional navigation cards.
+Existing anatomy/motor/clinical drafts remain source-bound and unapproved;
+no nerve mesh, scan, paid lecture or private review database is connected.
+Source `19e9d9b3e207ef0ee02b313c4e7d8dd42a2e9d1f` preserves all meshes.
+Actual browser and mobile-sized checks and remaining gates are documented in
+the pilot note. The main task's dated lower-limb checkpoint records verified
+backup and deployment state. Continue other regions/teaching after this
+milestone; retain the full goal and the specialist imaging boundaries.
+
 ## Decision log
 
 - **2026-09-12 — owner:** This task becomes the main Visible Medicine website/Atlas chat; preserve the other histories and specialist work.
