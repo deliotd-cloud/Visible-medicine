@@ -60,13 +60,61 @@ Replay with `node scripts/audit-reference-cross-tree.mjs --check`,
 `node scripts/audit-reference-coverage.mjs --check` and
 `node scripts/validate-reference-coverage.mjs`.
 
-## Remaining verification work
+## Pelvic imaging history and current export repair — 13 September 2026
 
-The full `validate-content-contract.mjs` suite is **not passing**. After the
-display-history repair it reaches the separate `authoringBeforeXray` assertion:
-expected `a97bf058...`, actual `e84b5b9a...`. No X-ray teaching or authoring-history
-resolver was edited in this pass. Reconstruct and compare that authoring history
-against exact source evidence; do not replace a golden digest just to pass.
+The subsequent X-ray assertion (`a97bf058...` expected, `e84b5b9a...` actual)
+was traced by compiling original source commit
+`7b16d16a9c5c0d9449b0fdb0980a065623b7f188`. Its original X-ray lesson digest
+matches the unchanged expected value. Only 11 pelvic-organ lessons differed:
+the later pelvic imaging addition was absent from the offline undo chain.
+
+`pelvic-organ-imaging-history.mjs` now reconstructs the 44 CT/MRI/US/X-ray
+placements for those 11 selections before the abdominal/spinal history steps.
+It checks the immutable original pins, source metadata, bundle identities,
+each full structure identity and each exact post-addition lesson digest before
+returning cloned previous lessons. All current runtime lessons are unchanged.
+The post-addition digest snapshot comes from original source
+`acf8acb3a2fc6e4fc698583865cb506b3f7b55c9`, not a new golden derived from the
+current test result. The original arterial milestone digest `7e5592d2...` is
+restored too: the prior `13d43601...` adjustment had captured this same missing
+historical step, even though it was reproducible before elbow admission.
+
+Independent Git replay compiles every application import from the exact
+pre-/post-addition commits and reproduces the original full teaching/recipe
+hash. The focused test restores exactly 44 old placements, preserves all other
+9,865 current displayed teaching placements, rejects 70 changed-lesson/source/
+metadata cases and tests caller-mutation isolation. It neither edits current
+teaching nor reads, writes, upgrades or migrates approvals.
+
+The broad suite then identified a stale draft shoulder export fixture. The
+existing exporter refreshed **only nine geometry/display revision fields** in
+`content/exports/shoulder.v2.json` to match the already-current verified review
+document. All geometry assets, source bindings, teaching, draft status and null
+imaging revisions are unchanged; this fixture contains no clinical approval.
+The actual `content/review-revisions.json` remains byte-identical.
+
+`node scripts/validate-content-contract.mjs` now passes **33,444 checks** over
+the original 1,022 body and nine shoulder records, including 87 GLB assets and
+36 rejection cases. `npm run reviews:test` retains its 235 workflow checks and
+16 history mutations. The focused current-display history test covers all 1,101
+root selections, rather than implying the older contract catalogue is complete.
+
+Replay the focused checks with:
+
+```sh
+node scripts/validate-pelvic-organ-history.mjs
+node scripts/validate-pelvic-organ-history.mjs --verify-source
+node scripts/validate-content-contract.mjs
+npm run reviews:test
+node scripts/validate-lower-limb-arterial.mjs --upper
+node scripts/validate-lower-limb-arterial.mjs
+```
+
+The optional `--verify-source` requires the original Atlas Git history. These
+are offline source/content checks, not new clinical, browser, imaging or release
+acceptance. No runtime viewer source, dependency, model or patient data changes.
+
+## Remaining work
 
 Continue substantive regional anatomy/teaching, revision-bound radiologist
 review and the real Didanix Education integration under the shared master plan.

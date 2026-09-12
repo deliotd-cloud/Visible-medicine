@@ -393,8 +393,8 @@ for (const s of targets) {
   );
 }
 // No content topic or recipe was replaced by the new relationship browser.
-// validate-elbow-arteries --baseline reproduces this digest at e2b3ff0e,
-// before elbow admission; the previous golden was already stale.
+// Restore the original milestone digest after reconstructing the later pelvic
+// imaging addition. Do not redefine a golden around an incomplete history chain.
 const ctx = await contentContext();
 const arterialMilestone = authoringBeforeWristImaging(ctx);
 assert.equal(
@@ -412,7 +412,7 @@ assert.equal(
       }),
     )
     .digest('hex'),
-  '13d436013f1d4747b64472ed3a9a52a2c25b52d4fc911b6f9d0c7ece7ae65d4f',
+  '7e5592d21db98475fb72da072a073eaa1f00b0edafdc844fe38320f4f86cffe9',
 );
 // Actual component and installed controls; use the real framework Link shim.
 const require = createRequire(import.meta.url),

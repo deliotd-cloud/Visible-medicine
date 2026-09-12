@@ -53,9 +53,10 @@ ordered GLB face corner with the original OBJ, verifies source-vertex anchors,
 suppression and changed-source rejection. A pinned pre-admission comparison
 preserves all 1,087 existing display records and 9,783 teaching slots exactly.
 The broader arterial suite covers the expanded graph and actual panel callbacks.
-Its historical teaching checksum was already stale before this change; the
-`--baseline` check reproduces the same current digest with the prior source
-branches before accepting the corrected expectation.
+The initial `--baseline` check reproduced the same historical teaching mismatch
+before elbow admission. The later [history repair](REVIEW_EVIDENCE_HISTORY.md)
+traced this to a missing pelvic-imaging undo step and restored the original
+milestone digest; it was not an intended change to the earlier teaching.
 
 All 1,101 current body exports separately pass the content schema and identity
 registry checks; current source-hold regressions also pass. The broad legacy
@@ -64,10 +65,12 @@ review-document checksum. The same failure was reproduced against source
 `e2b3ff0e5c9d310455c7caf7ba5726a5af5b2f3f`, with all six review/history inputs
 unchanged. That historical reconstruction needs a separate evidence-preserving
 repair; this change does not refresh its expected checksum or migrate approvals.
-The full legacy suite is **not** reported as passing. A subsequent
-[evidence-history repair](REVIEW_EVIDENCE_HISTORY.md) resolves this display
-transition without changing runtime revisions; a separate X-ray authoring
-history assertion is now the first remaining failure.
+The full legacy suite was not passing at the elbow milestone. Subsequent
+[evidence-history repairs](REVIEW_EVIDENCE_HISTORY.md) resolved the display and
+X-ray authoring history without changing runtime revisions or current teaching.
+After refreshing only nine stale revision fields in the draft shoulder export,
+the broad suite passes 33,444 checks. This later verification does not extend
+the clinical or browser scope of the original elbow milestone.
 
 Actual browser sampling on `/regions/forearm`: selected radial recurrent and
 radial collateral sources; followed their communication; checked the parent
