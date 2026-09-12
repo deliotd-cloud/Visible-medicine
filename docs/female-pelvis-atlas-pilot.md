@@ -1,6 +1,6 @@
 # Female pelvis Atlas pilot
 
-The catalogue now includes `/atlas/female-pelvis-3d`, beside the shoulder pilot. It is a same-origin, first-party browser module compiled from Atlas commit `101dc73234f7a8a503e95f53053cc43c66264d69`; `public/atlas-runtime/female-pelvis/manifest.json` binds its exact files to that source.
+The catalogue now includes `/atlas/female-pelvis-3d`, beside the shoulder pilot. It is a same-origin, first-party browser module compiled from Atlas commit `3e1c297abae999015f18c286847dd070d2fe86f6`; `public/atlas-runtime/female-pelvis/manifest.json` binds its exact files to that source. The newer [responsive-label update](responsive-atlas-labels.md) reduces mobile clutter and documents actual browser checks.
 
 41 source surfaces, eight studies, tissue toggles/search, selection, fade/frame/set-aside, undo/redo/reset, selectable separation mechanisms, labels and identification practice reuse the actual HRA pelvic workbench. Draft teaching covers 31 selections; ten remain pending. All six withheld source groups stay withheld. No pelvic floor, nerve network, complete female anatomy, patient scan, registered image or clinical acceptance is claimed.
 
