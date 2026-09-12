@@ -74,6 +74,11 @@ framed the right-sided source with faded context. At 390×844 the model, project
 label, camera/separation controls and compact drawers remained visible. This
 is not physical-touch, all-device, all-structure or clinical acceptance.
 
+The final browser log exposed a duplicate UAMS reference shared by the old and
+new relation maps. The relationship resolver now preserves the first occurrence
+of each URL; all new selections have a regression check for unique references.
+This removes the duplicate React key without changing anatomy or teaching text.
+
 The regenerated reference ledger records **1,101 root selections**, 104 nested
 selections and 366 source pieces needing source/anatomical review. Three older
 right-MCA PART-OF files (FJ1662, FJ1663, FJ1692) still lack IS-A equivalence proof

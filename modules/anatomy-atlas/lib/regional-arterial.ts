@@ -156,7 +156,7 @@ export function createArterialExplorer(
       territory,
       note: arterialConcepts[concept].note,
       rows,
-      references: Object.values(arterialReferences),
+      references: [...new Set(Object.values(arterialReferences))],
     };
   }
 

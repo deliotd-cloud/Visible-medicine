@@ -231,6 +231,7 @@ for (const s of pins.structures) {
     api.arterialNeighbours(catalog, 'whole-body', s.laterality, s.id, true),
     null,
   );
+  assert.equal(info.references.length, new Set(info.references).size);
   for (const r of info.rows) {
     const back = api.arterialNeighbours(
       catalog,
