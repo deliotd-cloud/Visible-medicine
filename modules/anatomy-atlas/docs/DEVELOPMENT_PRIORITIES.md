@@ -12,6 +12,8 @@ The two gingiva candidates and original bytes remain preserved in the [source re
 
 ## Main workstream
 
+The [upper-limb vessel imaging pass](UPPER_VESSEL_IMAGING.md) supplies 34 introductory sections across 14 existing source selections, using ten shared topic texts and seven vessel-specific notes. This completes the bounded orientation pass, not arterial/venous imaging completeness. Continue other substantive anatomy/function and safely sourced detail; do not add generic superficial-vein CT/MRI merely to fill tabs. Clinical/device review and approved acquired imaging remain separate; routine oral detail stays deferred.
+
 The [arm vascular dissection pass](ARM_VASCULAR_STUDIES.md) adds two compact views in Shoulder & arm and Whole body using 22 existing source selections. This completes the supplied anterior/posterior arm context pass, not upper-limb neurovascular completeness. Continue other substantial regional anatomy/function and safely sourced missing tissues. Do not repeat these views, invent a radial/median nerve or paired veins, or return to routine oral expansion. Clinical/device acceptance and actual scan/lecture integration remain separate.
 
 The [tarsal imaging pass](TARSAL_IMAGING_TEACHING.md) adds 42 introductory X-ray/CT/MRI sections for fourteen existing bones, using five concepts/seven bone-specific notes within the existing collapsed panel. Geometry and study recipes are unchanged. This pass is complete as draft authoring, not clinically approved imaging or comprehensive ankle/foot coverage. Continue substantial wider-body anatomy/function, not another copy of this pass or routine oral detail. Real scans, independent lecture access and specialist/device acceptance remain separate gates.

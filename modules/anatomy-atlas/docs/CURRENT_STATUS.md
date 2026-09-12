@@ -20,6 +20,8 @@
 
 [Arm vascular dissection](ARM_VASCULAR_STUDIES.md) adds 2 compact Study choices across Shoulder & arm and Whole body, using 22 existing source selections. Compare brachial vessels with anterior flexors, or the deep brachial artery with triceps. Side filtering, muscle removal, extraction and Undo reuse existing controls. No new mesh, nerve path, fascial plane, complete paired veins, patient registration or clinical approval is supplied.
 
+[Upper-limb vessel imaging](UPPER_VESSEL_IMAGING.md) adds source-bound introductory drafts for 14 existing selections: CT 10, MRI 10, US 14. These reuse 10 topic texts across 4 groups with seven selection-specific cautions. Existing Imaging tabs are reused; superficial-vein CT/MRI and X-ray remain pending. No scan, flow, procedural clearance or clinical approval is supplied.
+
 [Systemic venous drainage](SYSTEMIC_VENOUS_DRAINAGE.md) connects 51 existing source selections through 57 typical relationships (28 groups). One collapsed selected-vein panel offers tributary/outlet navigation, cross-region links and reversible isolation with bones. Missing routes, variable small-saphenous outlets and unsegmented common-femoral regions remain explicit. Intracranial sinuses, portal/pulmonary/cardiac drainage and measured flow are not provided by this map.
 
 [Focused elbow dissection](ELBOW_STUDIES.md) adds five Forearm studies using eight existing bone/muscle selections. Stable source-derived close-ups, real-surface labels and reversible windows reuse the existing Study controls. Whole structures remain intact; no new nerve, ligament, cartilage, simulated motion or scan correspondence is supplied.
@@ -97,10 +99,10 @@ Counts are representations with displayed copy, not unique lessons, complete top
 | --- | ---: | ---: | ---: | ---: |
 | Anatomy | 1058 | 2 | 0 | 0 |
 | Function | 1056 | 0 | 4 | 0 |
-| CT | 120 | 0 | 940 | 0 |
-| MRI | 122 | 0 | 938 | 0 |
+| CT | 130 | 0 | 930 | 0 |
+| MRI | 132 | 0 | 928 | 0 |
 | X-ray | 83 | 0 | 977 | 0 |
-| Ultrasound | 41 | 0 | 1019 | 0 |
+| Ultrasound | 55 | 0 | 1005 | 0 |
 | Pathology | 1018 | 0 | 42 | 0 |
 | Clinical | 1018 | 0 | 42 | 0 |
 | Quiz notes | 29 | 0 | 0 | 1031 |

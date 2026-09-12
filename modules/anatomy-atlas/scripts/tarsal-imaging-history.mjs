@@ -4,9 +4,11 @@ import { createHash } from "node:crypto";
 import pins from "../content/tarsal-imaging-pins.json" with { type: "json" };
 import after from "../content/tarsal-imaging.transition.json" with { type: "json" };
 import { preLimbVascularRecipeProfiles } from './limb-vascular-recipe-history.mjs';
+import { authoringBeforeUpperVesselImaging } from './upper-vessel-imaging-history.mjs';
 export const tarsalContentHash = (v) =>
   createHash("sha256").update(JSON.stringify(v)).digest("hex");
 export function authoringBeforeTarsalImaging({ api, catalog }) {
+  api = authoringBeforeUpperVesselImaging({ api, catalog });
   assert.equal(
     tarsalContentHash(pins),
     "861029223e9591204f22099de2513f68d5e30984e9d45851465fd27fac3a6f61",

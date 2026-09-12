@@ -1,6 +1,22 @@
 # Anatomy atlas backup — 12 September 2026
 
-## 12 September 2026 — anterior/posterior arm vascular studies (current source)
+## 12 September 2026 — upper-limb vascular imaging teaching (current source)
+
+Source `b4d84f2a6e533bbd058478812e9683e309a05bbf`, tree `ea09891aac0ff604e4e326bed9987c070a391ba3`, parent `50ac6f326f14e292c6382e518adaeea20169163c`. Twenty-four exact source paths mirrored. Full module audit: 1,849 matching files / 446,187,840 bytes / 125 retained GLBs; zero common credential-signature warnings (not exhaustive). No geometry, dependency, font, texture, database, auth, entitlement or patient-image change.
+
+Fourteen existing bilateral vessel selections receive 34 introductory draft placements (CT 10 / MRI 10 / US 14), reusing ten distinct topic texts across four groups and seven source-specific cautions. Existing Imaging tabs and arm Study menus are reused; no permanent control added. Superficial-vein CT/MRI and all X-ray slots remain pending. The notes distinguish acquired imaging from an anatomical surface; no flow, patency, clot, operative route, scan or registration is supplied. All other teaching, shoulder content and dissection recipes remain unchanged.
+
+The export shape schema now accepts the already-admitted medial brachial vein's safe versioned local GLB path. Independently trusted source-registry equality remains mandatory; this does not admit arbitrary assets or migrate stored reviews. Full-record source bindings fail closed. Exact offline history verifies before/after hashes instead of blindly replacing old test baselines.
+
+Passed: four unchanged bundle hashes, all 34 draft placements, 9,506 unaffected body topic slots, 336 rejected source/topic combinations, six invalid asset paths, 42 actual React notes renders including eight pending slots, independent returned-copy mutation, source-word budgets, pin/transition freshness, tarsal regression, 33,444 content-contract checks, TypeScript, production build, requirement freshness and staged whitespace. Preexisting model-first named-handler snapshot failure is not repaired or claimed passing. No browser/GPU/device/clinical acceptance performed during this background continuation.
+
+Body renderer `fae939d5393163ebf528294daa66db86e0c38ea19ce714d77d9938713bfc6d18`, 368 inputs; shoulder fingerprints unchanged. Main-body scope remains 1,060 selections / 159 stages / 165 focus placements; CT 130 / MRI 132 / US 55 topic drafts. Original code/notes use MIT; BodyParts3D DBCLS/CC BY 4.0 obligations are retained. ACR/RSNA reading references support original synthesis only: no prose, diagrams, scans, tables or patient data imported. The 2022 upper-extremity DVT synopsis supports introductory roles, not a comprehensive current management algorithm. Lossless delivery remains 120 GLBs / 1,285 meshes / 3,855 buffer views / 108,334,195 gzip transport bytes.
+
+Recovery stem `D:/VisibleMedicine-Atlas-Recovery/atlas-upper-vessel-imaging-2026-09-12`: `.site.tar.gz` 113,833,135 bytes / SHA256 `c7954f8b076c9ba73b576abb1ae3f7ac46a410a85c72f27c6607daf9fb294c0d`; `.delta.tar` 696,320 bytes / `030ab682e5bd330ce9ee3fbf415b551ee15c9af5a145bf6dfa0a33d7013be6e5`; `.incremental.bundle` 24,598 bytes / `8960058a5d88689afd2232a978d455ab3b702934916562a5ef8fcaf7b10d6705`. Archive has 413 safe unique entries, the exact manifest and both original migrations. Independent restore `refs/verification/upper-vessel-imaging-20260912` matches source SHA/tree and passes full fsck; verifier main unchanged. Preserve previous increments.
+
+Sites source main independently matches; owner-only publication is in progress at this receipt. Terminal publication and GitHub remote verification belong in the work/D-drive checkpoint. Source/runtime backups exclude conversation history, production database data, personal reviews, accounts, scans and separate lectures. The broad goal remains active; clinical and device sign-off, independently authorized imaging/lecture links and substantive regional anatomical gaps remain outstanding.
+
+## 12 September 2026 — anterior/posterior arm vascular studies (previous source)
 
 Source `50ac6f326f14e292c6382e518adaeea20169163c`, tree `e19814086b1b09f81250c0284e14e30649416ab5`, parent `73ca79cea92f435fe40212c602dad407b4b3acd6`. Twenty-six exact source paths mirrored. Full module audit: 1,840 matching files / 446,103,848 bytes / 125 retained GLBs; zero common credential-signature warnings (not exhaustive). No geometry, source catalogue membership, dependency, font, texture, database schema, auth, entitlement or patient-image change.
 

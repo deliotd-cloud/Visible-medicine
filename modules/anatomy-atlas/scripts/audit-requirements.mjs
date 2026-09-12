@@ -6,6 +6,7 @@ import { build } from './workspace-test-build.mjs';
 import { renderRequirementSummary } from './requirement-summary.mjs';
 import { limbVascularStudySets, limbVascularSourceIds } from '../content/limb-vascular-studies.ts';
 import { armVascularStudies, armVascularSourceIds } from '../content/arm-vascular-studies.ts';
+import { upperVesselImagingGroups, upperVesselImagingTopics } from '../content/upper-vessel-imaging.ts';
 import { genicularStudy, genicularStudySourceIds } from '../content/genicular-study.ts';
 import { deferentDuctStudy } from '../content/deferent-duct-study.ts';
 
@@ -32,6 +33,7 @@ export { portalVenousNeighbours } from './lib/portal-drainage.ts';
 export { makeSpecimenLink, resolveSpecimenLink } from './lib/um-limb-navigation.ts';
 export { parseSpecimenLink, specimenTopics } from './lib/specimen-links.ts';
 export { bodyContent, bodyLesson } from './app/body-content.ts';
+export { upperVesselImagingLesson } from './lib/upper-vessel-imaging.ts';
 export { structures } from './app/anatomy-data.ts';
 export { dissectionProfiles } from './app/dissection-data.ts';
 export { reasoningConcepts, reasoningConceptFor } from './lib/reasoning-questions.ts';
@@ -81,6 +83,7 @@ const {
   specimenTopics,
   bodyContent,
   bodyLesson,
+  upperVesselImagingLesson,
   structures: shoulder,
   dissectionProfiles,
   reasoningConcepts,
@@ -338,6 +341,9 @@ for (const path of [
   'lib/hip-imaging.ts',
   'lib/wrist-imaging.ts',
   'lib/tarsal-imaging.ts',
+  'lib/upper-vessel-imaging.ts',
+  'content/upper-vessel-imaging.ts',
+  'content/upper-vessel-imaging-pins.json',
   'content/tarsal-imaging-concepts.ts',
   'content/tarsal-imaging-pins.json',
   'content/wrist-imaging-concepts.ts',
@@ -631,6 +637,13 @@ const report = {
       sourceSelections: catalog.structures.filter(s=>armVascularSourceIds.includes(s.fmaId)).length,
       regions: [...new Set(armVascularStudies.flatMap(s=>s.regions))],
       sourceAndFrameChecked: true, geometryChanged: false, clinicalApproval: false,
+    },
+    upperVesselImaging: {
+      selections: catalog.structures.filter(s=>Object.values(upperVesselImagingGroups).flat().includes(s.fmaId)).length,
+      groups: Object.keys(upperVesselImagingGroups).length,
+      distinctTopicTexts: Object.values(upperVesselImagingTopics).reduce((n,g)=>n+Object.keys(g).length,0),
+      modalities: Object.fromEntries(['ct','mri','ultrasound'].map(tab=>[tab,catalog.structures.filter(s=>upperVesselImagingLesson(s,tab)?.readiness==='draft').length])),
+      geometryChanged: false, clinicalApproval: false,
     },
     deepLegVeins: {
       sourceSelections: catalog.structures.filter(s=>s.bundle==='deep-leg-veins').length,

@@ -3,6 +3,7 @@ import { readFile } from "node:fs/promises";
 import { createRequire } from "node:module";
 import { runInNewContext } from "node:vm";
 import ts from "typescript";
+import { authoringBeforeUpperVesselImaging } from './upper-vessel-imaging-history.mjs';
 import {
   contentContext,
   readContentJson,
@@ -22,6 +23,7 @@ const context = await contentContext(),
   { api, catalog, body, registry } = context;
 const before = authoringBeforeTarsalImaging(context),
   pins = await readContentJson("content/tarsal-imaging-pins.json");
+const preVascular = authoringBeforeUpperVesselImaging(context);
 assert.equal(
   hash({
     body: catalog.structures.map((s) => ({
@@ -63,7 +65,7 @@ for (const s of catalog.structures) {
     const lesson = api.tarsalImagingLesson(s, t);
     if (!selectedIds.has(s.id) || !pins.tabs.includes(t)) {
       assert.equal(lesson, undefined);
-      assert.deepEqual(api.bodyLesson(s, t), before.bodyLesson(s, t));
+      assert.deepEqual(preVascular.bodyLesson(s, t), before.bodyLesson(s, t));
       unchanged++;
       continue;
     }

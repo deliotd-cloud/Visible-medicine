@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+[Upper-limb vessel imaging](docs/UPPER_VESSEL_IMAGING.md) adds 34 source-bound draft sections across 14 selected arteries/veins, within the existing Imaging tabs. CT/MRI cover arterial trunks, deep brachial branches and selected deep veins; ultrasound also covers cephalic/basilic veins. These are ten distinct introductory topic texts with seven structure-specific cautions, not acquired scans, flow measurements or clinical approval.
+
 **Shoulder & arm / Whole body → Study → search “brachial”** opens two [arm vascular dissection views](docs/ARM_VASCULAR_STUDIES.md): anterior brachial vessels with flexors, or the deep brachial artery with triceps. Choose a side, hide a muscle, extract a selected surface and Undo using the existing controls. Twenty-two original source selections are reused; nerves and complete companion veins remain absent, and clinical/device review is pending.
 
 The [female pelvic Learn panel](docs/HRA_FEMALE_PELVIS.md#structure-specific-teaching) now distinguishes 12 anatomical concepts across 17 source selections, with MRI, ultrasound and introductory clinical/pathology notes, two ovarian CT drafts and source-specific self-checks. Existing compact tabs are reused. All material is draft; this does not supply scans, diagnosis or registration.

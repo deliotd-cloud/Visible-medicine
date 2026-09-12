@@ -17,6 +17,7 @@ export * from './lib/spine-imaging.ts';
 export * from './lib/hip-imaging.ts';
 export * from './lib/wrist-imaging.ts';
 export * from './lib/tarsal-imaging.ts';
+export * from './lib/upper-vessel-imaging.ts';
 export * from './lib/shoulder-arm-curriculum.ts';
 export * from './lib/forearm-curriculum.ts';
 export * from './lib/hand-curriculum.ts';

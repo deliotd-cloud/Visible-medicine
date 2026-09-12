@@ -337,7 +337,7 @@
         },
         "assetPath": {
           "type": "string",
-          "pattern": "^/models/bodyparts3d/(full-body/)?[a-z0-9-]+\\.glb$"
+          "pattern": "^/models/bodyparts3d/([a-z0-9-]+/)?[a-z0-9-]+\\.glb(\\?v=[a-f0-9]{64})?$"
         },
         "assetSha256": {
           "type": "string",

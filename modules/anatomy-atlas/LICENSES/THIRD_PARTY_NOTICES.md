@@ -1,5 +1,7 @@
 # Third-party notices
 
+The [upper-limb vascular imaging notes](../docs/UPPER_VESSEL_IMAGING.md) are original short factual synthesis linking to ACR/RSNA RadiologyInfo. No article prose, table, illustration, protocol, score or scan is redistributed. Original code/teaching use MIT; existing BodyParts3D DBCLS/CC BY 4.0 attribution and modification notices remain. Cited websites retain their own rights and are reading references, not licensed product assets. No dependency, font, texture, mesh, paid API or mandatory service is added.
+
 The [arm vascular studies](../docs/ARM_VASCULAR_STUDIES.md) reuse 22 attributed BodyParts3D selections without changing geometry. Original code and brief prompts use MIT; DBCLS / CC BY 4.0 model notices remain unchanged. Texas Tech upper-limb tables are factual reading references only, not copied text, diagrams or datasets. No new mesh, font, texture, dependency, paid API or mandatory service is added. No endorsement or clinical approval is implied.
 
 The HRA pelvic teaching extension is original short factual synthesis with linked Texas Tech, NCI/SEER, IDKD and ESUR references. No publisher prose, figures, tables, scans or diagrams are redistributed. Original code/teaching use the project MIT licence; HRA mesh and metadata retain their separate CC BY 4.0 notices. No dependency, font, texture, paid API or compulsory service is added. The reference list is not an endorsement or clinical sign-off.
