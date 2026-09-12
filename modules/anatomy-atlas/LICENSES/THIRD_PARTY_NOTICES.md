@@ -1,5 +1,9 @@
 # Third-party notices
 
+## Thigh-to-knee attachment relationships — 12 September 2026
+
+Original MIT interaction code and concise factual labels connect 20 existing muscles/heads with ten existing bones. [UAMS](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-lower-limb/) is a factual reference, not an imported illustration or redistributed table. No dependency, font, texture, model, diagnostic image, private scan or paid service is added. Existing BodyParts3D CC BY 4.0 notices remain intact. [Scope and validation](../docs/THIGH_ATTACHMENT_RELATIONSHIPS.md) distinguish whole-bone relationships from verified donor footprints and indirect extensor-chain transmission from direct muscle insertion.
+
 ## Pelvic-organ imaging orientation — 12 September 2026
 
 Original MIT resolver code and concise factual teaching add no external image, diagram, model, font, texture, package, scan or paid service. NIDDK/NCI, ACR/RSNA and EAU pages are factual references, not imported publisher content or permission to redistribute their illustrations. Existing BodyParts3D CC-BY-4.0 attribution remains unchanged. The discussed ultrasound candidates have not been admitted or redistributed. See [scope and references](../docs/PELVIC_ORGAN_IMAGING.md).

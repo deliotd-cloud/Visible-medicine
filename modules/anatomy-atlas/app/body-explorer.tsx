@@ -127,6 +127,7 @@ import { BoneJoints } from './bone-joints';
 import { boneJointPlan } from '@/lib/bone-joints';
 import { ArmAttachments } from './arm-attachments';
 import { armAttachmentPlan } from '@/lib/arm-attachments';
+import { thighAttachmentPlan } from '@/lib/thigh-attachments';
 import { arterialPlan } from '../lib/arterial';
 import { VenousDrainage } from './venous-drainage';
 import { venousDrainagePlan } from '../lib/venous-drainage';
@@ -777,8 +778,10 @@ export default function BodyExplorer({
     else changeStage(action.id);
   }
   function showMuscleAttachments() {
-    if (!catalog || !selectedId) return;
-    const plan = armAttachmentPlan(catalog, initialRegion, side, selectedId, exam);
+    if (!catalog || !selectedId || exam) return;
+    const plan =
+      armAttachmentPlan(catalog, initialRegion, side, selectedId, exam) ??
+      thighAttachmentPlan(catalog, initialRegion, side, selectedId, exam);
     if (!plan) return;
     dispatch(plan.action);
     setSystems((prev) => ({ ...prev, skeleton: true, muscles: true }));
@@ -795,7 +798,7 @@ export default function BodyExplorer({
       id: plan.selectedId,
       message: plan.completeHere
         ? 'Muscle and attachment bones shown. Whole-bone relationships only; donor footprints are not verified.'
-        : 'Muscle and available attachment bones shown. A distal bone is outside this region; open whole body for both relationships.',
+        : 'Muscle and available attachment bones shown. Some bones are outside this region; open whole body for the complete bony relationship set.',
     });
     setReset((n) => n + 1);
     // Visibility only; retain the existing selected-muscle and imaging identity.

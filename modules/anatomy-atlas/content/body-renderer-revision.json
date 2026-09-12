@@ -38,7 +38,7 @@
     },
     {
       "path": "app/arm-attachments.tsx",
-      "sha256": "105c6e4a360ae3efb74373f1d05089c410d7ab01430514c3ee8f56a6a0151a3e"
+      "sha256": "e3e37076689f31831dcbfaf707466945c41c576d7b55c5fcf755d5f041e2577c"
     },
     {
       "path": "app/arterial-connections.tsx",
@@ -70,7 +70,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "943dfe661c98b8e0f24a70b42767efe6f7f361d8790c95f84b65f9650451284f"
+      "sha256": "c8aa6f3bd154e2914c0cb87abf37cedc373403946aac79e4a6bf6c10b7dad3ed"
     },
     {
       "path": "app/body-scene.tsx",
@@ -627,6 +627,14 @@
     {
       "path": "content/tentorium-studies.ts",
       "sha256": "7dc07b8f6ff0b466a9f184923860c80a249dde8f39edd0f1b27b86f01e5494d0"
+    },
+    {
+      "path": "content/thigh-attachment-pins.json",
+      "sha256": "db88abba781f39124b5b7fd63a641d6e60e4e5c349e8e14527dd74f6b0155d77"
+    },
+    {
+      "path": "content/thigh-attachments.ts",
+      "sha256": "006046193ee41279ceb1be406b3cc182ed05aabef5bb49db101b25dc053ad202"
     },
     {
       "path": "content/thoracic-bone-imaging-pins.json",
@@ -1477,6 +1485,10 @@
       "sha256": "974332c66ba542c04d602721c3bfe810723ecfdb0e2f8796d33b7c545f55eeab"
     },
     {
+      "path": "lib/thigh-attachments.ts",
+      "sha256": "98068ce90901c4d5496f15c6449836d47a7689660bdd3097e2833036fb3ffee7"
+    },
+    {
       "path": "lib/thigh-clinical-curriculum.ts",
       "sha256": "68570f667509ba89549288c8e8b0ec39c64e1ed964dc7280d1d43ae237542c9a"
     },
@@ -1789,5 +1801,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "93284299bf2d4512c15e24e525e0010e4b643908db26160385bcda07991605d6"
+  "sha256": "9de7ef77a55a22e5849f14a988e695424f9417b6442bb1d48296495f6834d32c"
 }

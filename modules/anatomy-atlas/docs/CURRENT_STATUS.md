@@ -1,5 +1,7 @@
 # Current atlas status
 
+[Thigh-to-knee attachment relationships](THIGH_ATTACHMENT_RELATIONSHIPS.md) adds 20 existing muscle/head selections and ten existing attachment bones to the same collapsed control as the shoulder. Quadriceps tibial continuation is explicitly indirect; regional limits, source-bound whole-body links, Left/Right and reversible dissection are preserved. No new meshes, image admission or clinical approval. Actual deployment and backups are recorded separately in the dated checkpoint.
+
 [Pelvic-organ imaging](PELVIC_ORGAN_IMAGING.md) adds 44 introductory draft placements across CT/MRI/X-ray/Ultrasound for 11 existing urinary/male reproductive selections, using the existing tabs. No patient images, segmentation, registration, extra panel or clinical approval is added. Source continuity and model/sex/side limits are explicit. Check the dated external checkpoint for actual publication status; source completion is not live-deployment evidence.
 
 [Muscle attachment relationships](ARM_ATTACHMENT_RELATIONSHIPS.md): 24 existing shoulder/arm muscle selections, eight existing bones, compact proximal/distal teaching, reversible source-bound isolation and explicit whole-body continuation for distal bones outside the region. No geometry, acquired images, model registrations or clinical approvals added. See the latest external checkpoint for backup and publication confirmation; source completion is not evidence of live deployment.

@@ -1,5 +1,13 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 12 September 2026 — Thigh-to-knee attachment exploration
+
+Source `90b117d210e59ecc12d05bb0f9831fa5b04640cc`, parent `acf8acb3a2fc6e4fc698583865cb506b3f7b55c9`, tree `5507343cf44fd4fa4a5c46448f875c35d3fd5f67`. Thirteen source paths extend the shoulder's collapsed attachment control to 20 existing thigh muscle/head selections and ten existing bones. Quadriceps tibial continuation is explicitly indirect; the source-bound plans respect region/side, preserve selected-muscle identity and support shared Undo/Redo. No new geometry, scans, dependencies, image admission, entitlements or clinical approvals.
+
+Passed:30 exact source records/five model hashes,80 region/side plans,40 source-bound whole-body links,156 corrupt-source rejections,40 actual component SSR renders,40 actual parent callbacks including exam denial; unchanged shoulder attachment regression,1087-context body-decision tests,TypeScript and production build. Renderer447 inputs SHA `9de7ef77a55a22e5849f14a988e695424f9417b6442bb1d48296495f6834d32c`. All132 GLBs/1490 meshes/4470 buffer views remain unchanged; no browser/device/clinical acceptance claimed.
+
+D prefix `atlas-thigh-attachments-2026-09-12`: runtime124995192 bytes/SHA256 `eaed93f6beea770fcdbff8c7624134b72637958e865c0d833eef123aa6eed245`,delta440320 bytes/`943800a368029f3ae27e133a936ff55db84afd26c6ca225a62096015a7c2197d`,incremental bundle19395 bytes/`ab2fbbd7a2dd855b362a2657cd77a25ec4724a641015bc957a615e5e0176b777`. Independent restore/full fsck verified source/tree while preserving earlier refs; runtime489 safe entries/three exact migrations. Native source push verified, but archive upload timed out; reconciliation still showed runtime171. The update is not confirmed live. Website main and the separate ultrasound research packet are unchanged.
+
 ## 12 September 2026 — Standalone ultrasound review packet
 
 `research/ultrasound/renal-figure1` contains a candidate manifest, review instructions and a dependency-free read-only verifier. The owner authorised the ultrasound plan when ready, not clinical sign-off. The original article XML and individual Commons image both state CC BY 4.0; exact image hashes, laterality/measurement limits, attribution and independent-subject boundaries are recorded. Publication remains disabled pending owner clinical/privacy decisions.

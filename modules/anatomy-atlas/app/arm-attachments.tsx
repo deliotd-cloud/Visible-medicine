@@ -3,6 +3,7 @@ import { useMemo } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { armAttachmentInfo } from '@/lib/arm-attachments';
+import { thighAttachmentInfo } from '@/lib/thigh-attachments';
 import { armAttachmentReference } from '@/content/arm-attachments';
 import { makeStudyLink, type StudySide } from '@/lib/study-links';
 import type { BodyCatalog } from './body-types';
@@ -25,10 +26,14 @@ export function ArmAttachments({
   onShow: () => void;
 }) {
   const info = useMemo(
-    () => armAttachmentInfo(catalog, region, side, selectedId, disabled),
+    () =>
+      armAttachmentInfo(catalog, region, side, selectedId, disabled) ??
+      thighAttachmentInfo(catalog, region, side, selectedId, disabled),
     [catalog, region, side, selectedId, disabled],
   );
   if (!info) return null;
+  const reference =
+    'reference' in info ? info.reference : armAttachmentReference;
   const fullHref = !info.completeHere
     ? makeStudyLink(catalog, 'whole-body', selectedId, side as StudySide)
     : null;
@@ -46,22 +51,24 @@ export function ArmAttachments({
       </Button>
       {!info.completeHere && (
         <p>
-          One attachment bone is outside this region.{' '}
+          Some attachment bones are outside this region.{' '}
           {fullHref && (
             <Link href={fullHref} prefetch={false}>
               Open this muscle in whole body
             </Link>
           )}{' '}
-          to show both relationships.
+          then choose Show to see the complete bony relationship set.
         </p>
       )}
       <ul className="body-motor-targets">
         {info.rows.map((row) => (
           <li key={row.role}>
             <strong>
-              {row.role === 'proximal'
-                ? 'Proximal / origin'
-                : 'Distal / insertion'}
+              {'label' in row
+                ? row.label
+                : row.role === 'proximal'
+                  ? 'Proximal / origin'
+                  : 'Distal / insertion'}
             </strong>
             <p>{row.site}</p>
             {row.availableHere ? (
@@ -78,6 +85,7 @@ export function ArmAttachments({
           </li>
         ))}
       </ul>
+      {'note' in info && info.note && <p>{info.note}</p>}
       <details>
         <summary>Scope, limits & reference</summary>
         <p>
@@ -91,8 +99,8 @@ export function ArmAttachments({
           layers/removals, not camera or system switches. Selecting a bone
           restores it if hidden. Left/Right remains available.
         </p>
-        <a href={armAttachmentReference.url} target="_blank" rel="noreferrer">
-          {armAttachmentReference.title} ↗
+        <a href={reference.url} target="_blank" rel="noreferrer">
+          {reference.title} ↗
         </a>
       </details>
     </details>
