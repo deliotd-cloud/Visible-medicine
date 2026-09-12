@@ -125,6 +125,8 @@ import { UpperLimbMotorExplorer } from './upper-limb-motor';
 import { ArterialConnections } from './arterial-connections';
 import { BoneJoints } from './bone-joints';
 import { boneJointPlan } from '@/lib/bone-joints';
+import { ArmAttachments } from './arm-attachments';
+import { armAttachmentPlan } from '@/lib/arm-attachments';
 import { arterialPlan } from '../lib/arterial';
 import { VenousDrainage } from './venous-drainage';
 import { venousDrainagePlan } from '../lib/venous-drainage';
@@ -773,6 +775,30 @@ export default function BodyExplorer({
     if (!action) return;
     if (action.kind === 'focus') changeFocus(action.id);
     else changeStage(action.id);
+  }
+  function showMuscleAttachments() {
+    if (!catalog || !selectedId) return;
+    const plan = armAttachmentPlan(catalog, initialRegion, side, selectedId, exam);
+    if (!plan) return;
+    dispatch(plan.action);
+    setSystems((prev) => ({ ...prev, skeleton: true, muscles: true }));
+    setInspection(initialInspection);
+    setExplode(0);
+    setLayout('spatial');
+    setPlate(false);
+    setGhostRemoved(false);
+    setFocus(false);
+    setIsolated(false);
+    setZoom(1);
+    cameraRestore.current = null;
+    setSelectionNotice({
+      id: plan.selectedId,
+      message: plan.completeHere
+        ? 'Muscle and attachment bones shown. Whole-bone relationships only; donor footprints are not verified.'
+        : 'Muscle and available attachment bones shown. A distal bone is outside this region; open whole body for both relationships.',
+    });
+    setReset((n) => n + 1);
+    // Visibility only; retain the existing selected-muscle and imaging identity.
   }
   function showJointPartners() {
     if (!catalog || !selectedId) return;
@@ -2346,6 +2372,15 @@ export default function BodyExplorer({
                       region={initialRegion}
                       side={side as StudySide}
                       focusId={dissection.focusId}
+                    />
+                    <ArmAttachments
+                      catalog={catalog}
+                      region={initialRegion}
+                      side={side}
+                      selectedId={selected.id}
+                      disabled={exam}
+                      onSelect={select}
+                      onShow={showMuscleAttachments}
                     />
                     <BoneJoints
                       catalog={catalog}

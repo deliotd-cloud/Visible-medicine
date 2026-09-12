@@ -1,5 +1,9 @@
 # Third-party notices
 
+## Arm attachment relationships — 12 September 2026
+
+Original MIT navigation code and concise factual teaching labels link 24 existing muscle selections to eight existing bones. [UAMS](https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-upper-limb/) is a factual reference, not an imported diagram or redistributed table. No new dependency, font, texture, anatomy mesh, patient data, model weights or paid service is introduced. Existing BodyParts3D CC-BY-4.0 source credit and notices remain unchanged; selecting bones does not establish donor attachment footprints. See [scope and validation](../docs/ARM_ATTACHMENT_RELATIONSHIPS.md).
+
 ## Private candidate feedback — 12 September 2026
 
 Candidate review/export/import code and synthetic tests are original MIT code, reusing the existing audited React, Three.js, NumPy, NiBabel and scikit-image environment plus the prior Slicer Markups JSON contract. No Slicer binary, new dependency, model, font, diagram, dataset or paid service is redistributed. User-owned feedback and candidate anatomy remain private and are not relicensed for publication by these tools. Existing licence obligations remain unchanged.

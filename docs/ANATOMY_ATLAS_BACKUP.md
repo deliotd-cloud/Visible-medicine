@@ -1,5 +1,15 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 12 September 2026 — Shoulder/arm attachment relationships
+
+Source `b1e371033ce1ad851d57badea5d7a72ced78d23d`, tree `489f68459b2217c7885cedeaaa173c59addc20ab`, parent `8b68cf700afcd78a343ca124151f45185bc2d3b1`. Twelve source paths add a collapsed attachment navigator for 24 existing muscle selections and eight existing bones, exact sided/regional visibility plans, whole-body continuation for distal bones outside the region and shared dissection Undo. Source geometry, IDs, patient data and independent imaging/lecture entitlements are unchanged. There are no new dependencies or meshes. Bony teaching relationships are not donor footprints or clinical approvals.
+
+Passed: 96 relationship plans, 24 continuation links, 41 corrupted-source rejections, 48 SSR panels and 48 actual parent-handler cases including exam denial; existing wrist/hand and ankle/foot navigation regressions; 1,087-context body-decision tests; TypeScript; production build. Browser/device and clinical acceptance are not claimed. All 132 GLBs / 1,490 meshes / 4,470 buffer views remain unchanged. The 441-input renderer fingerprint is `c321b40bb99a24f0fe4073bf986f0553f12ea7eea48870297edd66bc747d70b6`.
+
+D prefix `atlas-arm-attachments-2026-09-12`: `.site.tar.gz` 124969215 bytes / SHA256 `b4ec68871fd6c5cc2d8179c17efd358b6e76503466234079dc2943b96ac47c7a`; `.delta.tar` 440320 bytes / `520bcac904b7bb32316a2d827fbe1cb83feea58f67030685c7c6b87fbabfbc0f`; `.incremental.bundle` 20212 bytes / `e2a84dbfa6e162e7d2ad93ea91d63251327b87195e749dfbbd52116420ceafed`. Independent restore/full fsck verified exact source/tree at `refs/verification/arm-attachments-20260912`, preserving verifier main. Runtime archive has 489 safe entries and three exact migrations. No patient files or private review databases are included; source backups are not conversation-history backups.
+
+Sites source push was independently verified at the exact source HEAD; live publication is not confirmed by a source push. See the external `work/ARM-ATTACHMENTS-CHECKPOINT-20260912.md` for the final native publication result. Website main remains out of scope; only this anatomy backup branch is updated.
+
 ## 12 September 2026 — Separate candidate correction feedback
 
 Source `8b68cf700afcd78a343ca124151f45185bc2d3b1`, tree `31ee7cceca282cc891789f980725f24c76518b0a`, parent `b672a0d85a1af5a9cb24890eb656cb5af30a68c0`. Seventeen source paths add candidate-specific review marks and local return to Slicer. The existing correction panel identifies Baseline/Candidate; marks, glyphs, Undo/Clear and downloads stay version-specific. Replacement/removal protects candidate feedback, and close/unload guards cover both streams. Baseline `vm-local-review/1` remains compatible; new `vm-local-candidate-review/1` pins annotation, CT, baseline, candidate, request and comparison manifest. Shared verification recomputes/checks source comparison before writing locked, explicitly candidate-labelled Slicer fiducials to a new private directory. The completion manifest is written last.

@@ -37,6 +37,10 @@
       "sha256": "97c18c510bc8b4b5dd0daae4270717d2ac02e099a8a1bfd04d5710482b2141b7"
     },
     {
+      "path": "app/arm-attachments.tsx",
+      "sha256": "105c6e4a360ae3efb74373f1d05089c410d7ab01430514c3ee8f56a6a0151a3e"
+    },
+    {
       "path": "app/arterial-connections.tsx",
       "sha256": "53af4510da63ae3aab470801191ff552ca6e202c8433432f3e0ee7fb9bae289b"
     },
@@ -66,7 +70,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "eb6b9a282ab61e3eceed0be5e43ae25488f259576ce2c50a1ee7d2abb81c4e94"
+      "sha256": "943dfe661c98b8e0f24a70b42767efe6f7f361d8790c95f84b65f9650451284f"
     },
     {
       "path": "app/body-scene.tsx",
@@ -371,6 +375,14 @@
     {
       "path": "content/abdominal-wall-teaching.ts",
       "sha256": "b0da512ba08095bb8516538b11f6f052f5e1bd052f2a418fc1015602fe8f5896"
+    },
+    {
+      "path": "content/arm-attachment-pins.json",
+      "sha256": "8b46b8ac7ab575aa6164350eb8e56f37dcf602c98ce2ed14cc840ab3e3a57714"
+    },
+    {
+      "path": "content/arm-attachments.ts",
+      "sha256": "cd8db74242ef42407a711740c7aec787571714732d491f14356c30acf1315245"
     },
     {
       "path": "content/arm-vascular-studies.ts",
@@ -771,6 +783,10 @@
     {
       "path": "lib/anatomy-vessels.ts",
       "sha256": "3f1e5ef5ebb26101f4aa5cfeccf39a95915732047f1c84c80b14eba9c6469586"
+    },
+    {
+      "path": "lib/arm-attachments.ts",
+      "sha256": "f70787aa889aca46e4735fd9b90638fdd29a65b829b6c8b273753c85b610257c"
     },
     {
       "path": "lib/arm-vascular-studies.ts",
@@ -1761,5 +1777,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "55abe5942aaacdaca65d32cbaf8b1a34218edcad8d78ef8245fa127c30d38ab3"
+  "sha256": "c321b40bb99a24f0fe4073bf986f0553f12ea7eea48870297edd66bc747d70b6"
 }
