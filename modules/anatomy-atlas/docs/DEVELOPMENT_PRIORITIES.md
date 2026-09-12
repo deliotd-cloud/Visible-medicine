@@ -1,5 +1,7 @@
 # Development priorities
 
+Latest completed source slice: [deep-brain septal landmarks](LIMBIC_LANDMARKS.md), four source selections, seven context records and eleven introductory draft placements. The defective stria-terminalis compound remains held, and lamina/septal/side limits are explicit. Next prioritise substantive wider-body anatomy or teaching; avoid repeating this source audit or increasing controls. Clinical/device and approved imaging/lecture gates remain.
+
 Latest completed source slice (12 September): [pelvic venous tributaries](PELVIC_VEINS.md), ten admitted definitions plus two explicit offline holds, one compact sided study and 23 introductory draft placements. Prioritise substantive remaining non-oral regional anatomy or teaching next; source-file coverage is not anatomical completeness. The owner's clinical adjudication is still required.
 
 Updated 11 September 2026 following the owner's instruction to give oral anatomy a quick pass and prioritise the rest of the atlas/body regions.

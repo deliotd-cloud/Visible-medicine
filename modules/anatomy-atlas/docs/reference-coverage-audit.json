@@ -34,6 +34,10 @@
     "crossTreeProofSha256": "149aa0c50045717713a17706a8e8bbaa1002cc1dec4427d0425e860bf24946ed",
     "supplementalSourceHoldEvidence": [
       {
+        "path": "docs/limbic-landmark-source-audit.json",
+        "sha256": "2b29686d350ca29d88c67c7a44c3e143033deea35f15df0a66b90c758a82f69c"
+      },
+      {
         "path": "docs/pelvic-vein-source-audit.json",
         "sha256": "ffb300bcd1f2cd8c2a9684c133ed5d82a1043d7bda99a78f377854c9168ebf26"
       },
@@ -46,30 +50,30 @@
         "sha256": "2ed4267b0ceae5448673eaf0743ed79a995fc7f879dac26c81e24109c7b201ec"
       }
     ],
-    "currentRootSha256": "0f75d079af00fee836e1029bf708bfd2875d008faf0ced93e163492ecb31df1e",
+    "currentRootSha256": "302ea8b417e67354c10b07d9e448f92f7d50e638300de677aa3661dc43f9408d",
     "reachableNestedSha256": "3a105ee0e4963dd1ca46d3af1747b2975de9a8b27db7c198123f69c5e2a13fcb",
     "shoulderManifestSha256": "619e3ab84712487bd032b84a8f8b52f94d10883d8db7798057049bab287de857",
     "sourceIdSetSha256": "8e2057667c31e8fc99b87eb4c020467eadb9698ca09a87fc85cd76350254e655"
   },
   "summary": {
     "referenceSourceFiles": 2234,
-    "rootSelections": 1074,
-    "rootSourceFileIds": 1734,
+    "rootSelections": 1078,
+    "rootSourceFileIds": 1739,
     "reachableNestedSelections": 71,
-    "rootOnlyDifferences": 500,
+    "rootOnlyDifferences": 495,
     "rootBindingsNeedingEquivalenceReview": 0,
     "allSourceStatuses": {
       "excluded-by-display-correction": 1,
-      "known-source-hold": 52,
-      "needs-source-and-anatomical-review": 422,
+      "known-source-hold": 54,
+      "needs-source-and-anatomical-review": 415,
       "nested-source-covered": 24,
       "related-cross-tree-hold": 1,
-      "root-source-covered": 1734
+      "root-source-covered": 1739
     },
     "rootDifferenceStatuses": {
       "excluded-by-display-correction": 1,
-      "known-source-hold": 52,
-      "needs-source-and-anatomical-review": 422,
+      "known-source-hold": 54,
+      "needs-source-and-anatomical-review": 415,
       "nested-source-covered": 24,
       "related-cross-tree-hold": 1
     },
@@ -80,7 +84,7 @@
       "digestive": 2,
       "integumentary": 5,
       "muscular": 23,
-      "nervous": 31,
+      "nervous": 26,
       "reproductive": 3,
       "respiratory": 2,
       "sensory": 8,
@@ -94,7 +98,7 @@
       "digestive": 1,
       "integumentary": 5,
       "muscular": 4,
-      "nervous": 15,
+      "nervous": 8,
       "reproductive": 3,
       "sensory": 8,
       "skeletal": 2,
@@ -3712,38 +3716,6 @@
       }
     },
     {
-      "file": "FJ1764",
-      "referenceDisplaySystem": "nervous",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA61975",
-          "name": "lamina terminalis",
-          "componentCount": 2
-        },
-        {
-          "id": "FMA67951",
-          "name": "lamina of cerebral hemisphere",
-          "componentCount": 2
-        },
-        {
-          "id": "FMA83856",
-          "name": "lamina of neuraxis",
-          "componentCount": 2
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 23020,
-        "crc32": 971712315,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
       "file": "FJ1771",
       "referenceDisplaySystem": "nervous",
       "status": "nested-source-covered",
@@ -3869,31 +3841,9 @@
       }
     },
     {
-      "file": "FJ1777",
-      "referenceDisplaySystem": "nervous",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA73414",
-          "name": "left stria medullaris of thalamus",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 62077,
-        "crc32": 462252999,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
       "file": "FJ1778",
       "referenceDisplaySystem": "nervous",
-      "status": "needs-source-and-anatomical-review",
+      "status": "known-source-hold",
       "admissionApproved": false,
       "definitions": [
         {
@@ -3903,7 +3853,15 @@
         }
       ],
       "owners": [],
-      "holds": [],
+      "holds": [
+        {
+          "tree": "isa",
+          "conceptId": "FMA61974",
+          "reason": "Complete stria terminalis definition contains FJ1825 with six components, duplicate faces and non-manifold topology. Extent/fragment identity and laterality require adjudication; no subset admission, face removal, relabelling or mirroring.",
+          "evidence": "docs/limbic-landmark-source-audit.json",
+          "evidenceSha256": "2b29686d350ca29d88c67c7a44c3e143033deea35f15df0a66b90c758a82f69c"
+        }
+      ],
       "displayCorrections": [],
       "source": {
         "bytes": 52250,
@@ -4034,38 +3992,6 @@
       }
     },
     {
-      "file": "FJ1812",
-      "referenceDisplaySystem": "nervous",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA61975",
-          "name": "lamina terminalis",
-          "componentCount": 2
-        },
-        {
-          "id": "FMA67951",
-          "name": "lamina of cerebral hemisphere",
-          "componentCount": 2
-        },
-        {
-          "id": "FMA83856",
-          "name": "lamina of neuraxis",
-          "componentCount": 2
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 22387,
-        "crc32": 2205284939,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
       "file": "FJ1818",
       "referenceDisplaySystem": "nervous",
       "status": "nested-source-covered",
@@ -4191,31 +4117,9 @@
       }
     },
     {
-      "file": "FJ1824",
-      "referenceDisplaySystem": "nervous",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA73413",
-          "name": "right stria medullaris of thalamus",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 57068,
-        "crc32": 2763579367,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
       "file": "FJ1825",
       "referenceDisplaySystem": "nervous",
-      "status": "needs-source-and-anatomical-review",
+      "status": "known-source-hold",
       "admissionApproved": false,
       "definitions": [
         {
@@ -4230,38 +4134,19 @@
         }
       ],
       "owners": [],
-      "holds": [],
+      "holds": [
+        {
+          "tree": "isa",
+          "conceptId": "FMA61974",
+          "reason": "Complete stria terminalis definition contains FJ1825 with six components, duplicate faces and non-manifold topology. Extent/fragment identity and laterality require adjudication; no subset admission, face removal, relabelling or mirroring.",
+          "evidence": "docs/limbic-landmark-source-audit.json",
+          "evidenceSha256": "2b29686d350ca29d88c67c7a44c3e143033deea35f15df0a66b90c758a82f69c"
+        }
+      ],
       "displayCorrections": [],
       "source": {
         "bytes": 61009,
         "crc32": 1227759169,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1832",
-      "referenceDisplaySystem": "nervous",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA61842",
-          "name": "septum of telencephalon",
-          "componentCount": 1
-        },
-        {
-          "id": "FMA83904",
-          "name": "septum of neuraxis",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 508236,
-        "crc32": 2109379633,
         "sha256": null,
         "geometrySha256": null
       }

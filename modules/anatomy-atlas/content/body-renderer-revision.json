@@ -58,7 +58,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "7b32913095133037525b3e5a785b58609f51f921d10a595d372f9149976b6b8b"
+      "sha256": "4c4d68cc152266d2bfe53eb1cea8b20233f1ed15f52bd92df3847fbf03720734"
     },
     {
       "path": "app/body-explorer.css",
@@ -102,7 +102,7 @@
     },
     {
       "path": "app/dissection-data.ts",
-      "sha256": "bed95349f80fb130d54276ba2497cd02fc720e7291227d967565fa67494526bc"
+      "sha256": "833a9227d1b8886c6e76088e0f540b34d9211147a9bcfd23e3b8dd9a2bcc67bd"
     },
     {
       "path": "app/dissection-orientation.tsx",
@@ -429,6 +429,10 @@
       "sha256": "2d0508aa622e396af8aa7412403c0ccf58bccc06ea4d5d1f9c6c9310d96c4876"
     },
     {
+      "path": "content/limbic-landmark-study.ts",
+      "sha256": "61af256e33919e18b87b456e57fff9f8020832fbf7e36a3c3154f42375e5c948"
+    },
+    {
       "path": "content/longus-colli-studies.ts",
       "sha256": "586cde809529f252ff037874a5b756228ccc463128616b0c160a82a1f4797216"
     },
@@ -706,7 +710,7 @@
     },
     {
       "path": "lib/body-display-catalog.ts",
-      "sha256": "435c716478545caf08d1a1010f53b5b0474d35312e0e71bae5907d12415df966"
+      "sha256": "88823b29c10b57e94173a4af66fa9ece368072f973c65996fa121afaa15f5d5f"
     },
     {
       "path": "lib/body-source-additions.ts",
@@ -1014,7 +1018,11 @@
     },
     {
       "path": "lib/limb-vascular-studies.ts",
-      "sha256": "f044d57bc93508f104258a94d999738f7e04de21f47d6d5f40bee73fb158b690"
+      "sha256": "2c05685f1bf069244fe8c02d04c91a25424de136e554425e421cda82e8630770"
+    },
+    {
+      "path": "lib/limbic-landmarks.ts",
+      "sha256": "d31ea68bd362db13907de78743f138c8f7cae518895303cefc03370a821c650f"
     },
     {
       "path": "lib/longus-colli.ts",
@@ -1382,7 +1390,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "f118a2a3b45bfc9acf5da01895ae5888aebcdbae8b5f747b1cb41005d8d5a95a"
+      "sha256": "5e50920313bfe19c2a4b5fd10d3b26ffa1753eb15ad328444540074f5d4e6eba"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1465,6 +1473,10 @@
       "sha256": "c1887d76f71de08c25fb9277b00d5edc678affd43995faab4121bd347fc8a6b4"
     },
     {
+      "path": "public/models/bodyparts3d/limbic-landmarks/catalog.json",
+      "sha256": "785cbeba0b441d16bc3941fb406d27c49253eb2055f03d81aad47ad686a72f42"
+    },
+    {
       "path": "public/models/bodyparts3d/longus-colli/catalog.json",
       "sha256": "4dbf0fd67b985d5aa9ca910ab2757bc8fecf26c4b1315c98acab86d07fed5b38"
     },
@@ -1537,5 +1549,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "58676b48afaeac9577e3045f3f4c180f21333e6891cf808b84b696030dab93c5"
+  "sha256": "b56120ff34a1d4caa954f433f4b8d0c35029f5f2840fe26f4e89cd885b7d9970"
 }

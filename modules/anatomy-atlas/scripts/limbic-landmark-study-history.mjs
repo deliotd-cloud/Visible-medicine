@@ -1,12 +1,10 @@
 // Exact offline reconstruction for historical tests, never an approval migration.
 import assert from 'node:assert/strict';
-import { preLimbicLandmarkProfiles } from './limbic-landmark-study-history.mjs';
 import { createHash } from 'node:crypto';
-import record from '../content/pelvic-vein-study-transition.json' with {type:'json'};
+import record from '../content/limbic-landmark-study-transition.json' with {type:'json'};
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
-export function prePelvicVeinProfiles(profiles) {
-  profiles=preLimbicLandmarkProfiles(profiles);
-  assert.equal(hash(record),'213d4e58b5cd4293025a7757dbed4336276bcb9b750b4d8955f6679fce231f8f');
+export function preLimbicLandmarkProfiles(profiles) {
+  assert.equal(hash(record),'b36ee849770442483805604f05766d647b9d152860895d9cced1826f36c8da95');
   if(hash(profiles)!==record.after)return profiles;
   const previous=structuredClone(profiles);
   for(const patch of record.patches){

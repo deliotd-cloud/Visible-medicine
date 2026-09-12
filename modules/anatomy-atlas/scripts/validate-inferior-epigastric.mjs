@@ -18,7 +18,7 @@ assert.equal(hash(rawBytes),'109ad372060f36fba1658a9968415884f279531eb5a3ecf0479
 const raw=JSON.parse(rawBytes),rawBefore=JSON.stringify(raw),catalog=api.bodyDisplayCatalog(raw),before=JSON.stringify(catalog);
 const pins=JSON.parse(await readFile('public/models/bodyparts3d/inferior-epigastric-vessels/catalog.json'));
 const studyId='abdominal-wall-epigastric-vessels',bundle=pins.bundles[0];
-assert.equal(catalog.structures.length,1074);assert.equal(JSON.stringify(raw),rawBefore);
+assert.equal(catalog.structures.length,1078);assert.equal(JSON.stringify(raw),rawBefore);
 assert.equal(api.bodyDisplayCatalog(catalog),catalog);
 assert.deepEqual(catalog.structures.filter(s=>s.bundle===bundle.id),pins.structures);
 assert.equal(hash(JSON.stringify(preInferiorEpigastricProfiles(api.dissectionProfiles))),'6718d55292f24620477c701a8bc93ef39cf786f6a56f605b292abec294291644');
@@ -98,4 +98,4 @@ for(const region of ['abdomen','whole-body'])for(const disabled of [false,true])
   assert(html.includes(disabled?'End practice':'Abdominal wall: epigastric vessels'));renders++;
 }
 assert.equal(JSON.stringify(catalog),before);assert.equal(faceCorners,86904);
-console.log(JSON.stringify({sourceSelections:4,displaySelections:1074,triangles:faceCorners/3,sourceFaceCorners:faceCorners,scopes,links,rejections,actualParentHandlers:handlers,actualMenus:renders,previousRecipesUnchanged:true,clinicalOrDeviceAcceptance:false}));
+console.log(JSON.stringify({sourceSelections:4,displaySelections:1078,triangles:faceCorners/3,sourceFaceCorners:faceCorners,scopes,links,rejections,actualParentHandlers:handlers,actualMenus:renders,previousRecipesUnchanged:true,clinicalOrDeviceAcceptance:false}));

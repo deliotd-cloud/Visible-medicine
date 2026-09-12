@@ -1,0 +1,147 @@
+{
+  "sourceCommit": "59341397183a650f45ae9c4557ab9814aa3dd399",
+  "before": "149c45795d93395fca32fe668ca3f91fc58993b1280bf0da5f6cdda98e663474",
+  "after": "dd8a2f264c93de2e79256b26fd38f52aeefb7ebae96ca47e88010a3c4b9f901d",
+  "patches": [
+    {
+      "region": "head-neck",
+      "added": [
+        {
+          "id": "deep-brain-septal-landmarks",
+          "title": "Deep brain: septal landmarks",
+          "rule": {
+            "fmaIds": [
+              "FMA73414",
+              "FMA73413",
+              "FMA61975",
+              "FMA61842"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA258714",
+                "FMA258716",
+                "FMA72924",
+                "FMA72925",
+                "FMA86464",
+                "FMA61961",
+                "FMA61970"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the striae medullares, lamina terminalis and source septal group with the thalami, fornices and commissural landmarks.",
+          "inspect": "Set aside the corpus callosum or a fornix to uncover deeper selections, then Undo to restore it. Use 0% separation when comparing original spatial relationships. The lamina comprises two source pieces touching at one point, not a reconstructed sheet. The septal group does not isolate septal nuclei or establish complete septum-pellucidum anatomy. Stria terminalis is withheld for source defects. These coarse reference surfaces are not tractography, a complete limbic circuit or clinically validated anatomy.",
+          "landmarks": [
+            "stria medullaris of thalamus$",
+            "lamina terminalis$",
+            "septum of telencephalon$",
+            "fornix of forebrain$",
+            "anterior commissure$"
+          ]
+        }
+      ],
+      "referencesBefore": [
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://nba.uth.tmc.edu/neuroanatomy/L10/Lab10p18_index.html",
+        "https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/nerve-tables/nerves-of-the-head-and-neck/",
+        "https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/so.htm",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf"
+      ],
+      "referencesAfter": [
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://nba.uth.tmc.edu/neuroanatomy/L10/Lab10p18_index.html",
+        "https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/nerve-tables/nerves-of-the-head-and-neck/",
+        "https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/so.htm",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf",
+        "https://nba.uth.tmc.edu/neuroanatomy/L11/Lab11p09_index.html",
+        "https://publish.uwo.ca/~jkiernan/brndiss.htm",
+        "https://link.springer.com/article/10.1007/s00701-026-06791-w"
+      ]
+    },
+    {
+      "region": "whole-body",
+      "added": [
+        {
+          "id": "deep-brain-septal-landmarks",
+          "title": "Deep brain: septal landmarks",
+          "rule": {
+            "fmaIds": [
+              "FMA73414",
+              "FMA73413",
+              "FMA61975",
+              "FMA61842"
+            ]
+          },
+          "context": [
+            {
+              "fmaIds": [
+                "FMA258714",
+                "FMA258716",
+                "FMA72924",
+                "FMA72925",
+                "FMA86464",
+                "FMA61961",
+                "FMA61970"
+              ]
+            }
+          ],
+          "includeSkeleton": false,
+          "view": "anterior",
+          "description": "Compare the striae medullares, lamina terminalis and source septal group with the thalami, fornices and commissural landmarks.",
+          "inspect": "Set aside the corpus callosum or a fornix to uncover deeper selections, then Undo to restore it. Use 0% separation when comparing original spatial relationships. The lamina comprises two source pieces touching at one point, not a reconstructed sheet. The septal group does not isolate septal nuclei or establish complete septum-pellucidum anatomy. Stria terminalis is withheld for source defects. These coarse reference surfaces are not tractography, a complete limbic circuit or clinically validated anatomy.",
+          "landmarks": [
+            "stria medullaris of thalamus$",
+            "lamina terminalis$",
+            "septum of telencephalon$",
+            "fornix of forebrain$",
+            "anterior commissure$"
+          ]
+        }
+      ],
+      "referencesBefore": [
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/thigh_tables.html",
+        "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/schemes/inguinal_tables.html",
+        "https://anatomy.ttuhscep.edu/schemes/abdo_wall_ing_questions/abdo_wall_12_feedback.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/veins_pelvis_perineum.html",
+        "https://anatomy.ttuhscep.edu/reproductive_system/pelvicwall_tables.html",
+        "https://pubmed.ncbi.nlm.nih.gov/17373712/"
+      ],
+      "referencesAfter": [
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/back_tables.html",
+        "https://anatomy.elpaso.ttuhsc.edu/schemes/thigh_tables.html",
+        "https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_head_neck.html",
+        "https://www.stritch.luc.edu/lumen/meded/grossanatomy/homepage/muscletables/head-neckmuscletable.pdf",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html",
+        "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html",
+        "https://anatomy.ttuhscep.edu/schemes/inguinal_tables.html",
+        "https://anatomy.ttuhscep.edu/schemes/abdo_wall_ing_questions/abdo_wall_12_feedback.html",
+        "https://anatomy.ttuhscep.edu/anatomytables/veins_pelvis_perineum.html",
+        "https://anatomy.ttuhscep.edu/reproductive_system/pelvicwall_tables.html",
+        "https://pubmed.ncbi.nlm.nih.gov/17373712/",
+        "https://nba.uth.tmc.edu/neuroanatomy/L11/Lab11p09_index.html",
+        "https://publish.uwo.ca/~jkiernan/brndiss.htm",
+        "https://link.springer.com/article/10.1007/s00701-026-06791-w"
+      ]
+    }
+  ]
+}

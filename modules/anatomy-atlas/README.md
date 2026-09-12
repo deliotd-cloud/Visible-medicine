@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Head & neck / Whole body → Study → Deep brain: septal landmarks** opens [four new source-preserved selections with seven existing references](docs/LIMBIC_LANDMARKS.md), using the compact Study menu and hide/Undo. Source fragments and laterality limits are explicit; the defective stria-terminalis compound remains offline. Introductory notes are drafts, not clinical sign-off.
+
 **Pelvis / Whole body → Study → Pelvic venous tributaries** adds [ten source-preserved veins with seven existing references](docs/PELVIC_VEINS.md). Side filtering, selection, labels and hide/Undo stay in the existing compact interface. Two left-labelled sources remain offline for coordinate/laterality review; this is not complete bilateral coverage or clinical approval.
 
 **Abdomen / Whole body → Study → Abdominal wall: epigastric vessels** opens [four newly supplied original artery/vein surfaces with six existing vascular references](docs/INFERIOR_EPIGASTRIC_VESSELS.md). Existing side selection, dissection/Undo, labels and separation are reused; introductory Anatomy/Function/Clinical/self-check drafts remain subject to review. No complete fascial, inguinal-ring, perforator or patient-imaging anatomy is inferred.

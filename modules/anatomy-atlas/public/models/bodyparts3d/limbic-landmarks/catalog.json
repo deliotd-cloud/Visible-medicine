@@ -1,0 +1,692 @@
+{
+  "version": 1,
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "auditSha256": "2b29686d350ca29d88c67c7a44c3e143033deea35f15df0a66b90c758a82f69c",
+  "structures": [
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-stria-medullaris-of-thalamus",
+      "fmaId": "FMA73414",
+      "name": "Left stria medullaris of thalamus",
+      "sourceName": "left stria medullaris of thalamus",
+      "system": "nerves",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "limbic-landmarks",
+      "nodeName": "FMA73414",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1777",
+          "sha256": "c3fb623bd7dd4e6f99ea6b71f7ab59b211f5bd86eba1a9451a2f4b6838f07ef7"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.006647559814155102,
+          7.452300071716309,
+          0.16842100024223328
+        ],
+        "max": [
+          0.03178279846906662,
+          7.609000205993652,
+          0.5359399914741516
+        ]
+      },
+      "center": [
+        0.012567619327455759,
+        7.5306501388549805,
+        0.35218049585819244
+      ],
+      "anchor": [
+        0.0025474000722169876,
+        7.59119987487793,
+        0.36391401290893555
+      ],
+      "coverageNote": "Coarse source-labelled stria medullaris envelope, not individual fibres or tractography. The source origin is not a validated midsagittal plane; slight zero-X crossing of the left source is retained, not repaired. Every ordered source triangle and position is retained. Stria terminalis is withheld for source defects. Anatomical relationships, laterality and clinical accuracy require review; no patient registration or complete limbic circuit is supplied.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-stria-medullaris-of-thalamus",
+      "fmaId": "FMA73413",
+      "name": "Right stria medullaris of thalamus",
+      "sourceName": "right stria medullaris of thalamus",
+      "system": "nerves",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "limbic-landmarks",
+      "nodeName": "FMA73413",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1824",
+          "sha256": "252737907ed1ef0c3317fff6cce455ebe56975e1ab9d87e66cb19549239000d2"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.04467859864234924,
+          7.452600002288818,
+          0.16792699694633484
+        ],
+        "max": [
+          -0.006693330127745867,
+          7.608500003814697,
+          0.535830020904541
+        ]
+      },
+      "center": [
+        -0.025685964385047555,
+        7.530550003051758,
+        0.3518785089254379
+      ],
+      "anchor": [
+        -0.016119299456477165,
+        7.59060001373291,
+        0.36721599102020264
+      ],
+      "coverageNote": "Coarse source-labelled stria medullaris envelope, not individual fibres or tractography. The source origin is not a validated midsagittal plane; slight zero-X crossing of the left source is retained, not repaired. Every ordered source triangle and position is retained. Stria terminalis is withheld for source defects. Anatomical relationships, laterality and clinical accuracy require review; no patient registration or complete limbic circuit is supplied.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:lamina-terminalis",
+      "fmaId": "FMA61975",
+      "name": "Lamina terminalis",
+      "sourceName": "lamina terminalis",
+      "system": "nerves",
+      "category": "organ",
+      "laterality": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "limbic-landmarks",
+      "nodeName": "FMA61975",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1764",
+          "sha256": "8935c1c22609f2e8078ec33ac867e2633c645e98b80d1bdca789de8e3a8f010e"
+        },
+        {
+          "file": "FJ1812",
+          "sha256": "91812f9540a4f96cff9ccfcfa478ac885d7f59c0fd08ab0f05fd865e6b670713"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.020590899512171745,
+          7.395299911499023,
+          0.5233100056648254
+        ],
+        "max": [
+          0.007492519915103912,
+          7.514200210571289,
+          0.5964400172233582
+        ]
+      },
+      "center": [
+        -0.0065491897985339165,
+        7.454750061035156,
+        0.5598750114440918
+      ],
+      "anchor": [
+        -0.0054879398085176945,
+        7.460400104522705,
+        0.5632399916648865
+      ],
+      "coverageNote": "Two original lamina files touch at one source-coordinate vertex; their individual normals remain separate. This is not a reconstructed continuous sheet. Every ordered source triangle and position is retained. Stria terminalis is withheld for source defects. Anatomical relationships, laterality and clinical accuracy require review; no patient registration or complete limbic circuit is supplied.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon",
+      "fmaId": "FMA61842",
+      "name": "Septum of telencephalon",
+      "sourceName": "septum of telencephalon",
+      "system": "nerves",
+      "category": "organ",
+      "laterality": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "limbic-landmarks",
+      "nodeName": "FMA61842",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1832",
+          "sha256": "38cc30c1c449b1e171ba945320a087c95473da3ffe2a9c0965f4c4d1d28b2d25"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.11118800193071365,
+          7.518499851226807,
+          0.0930040031671524
+        ],
+        "max": [
+          0.09908740222454071,
+          7.748199939727783,
+          0.7187399864196777
+        ]
+      },
+      "center": [
+        -0.0060502998530864716,
+        7.633349895477295,
+        0.40587199479341507
+      ],
+      "anchor": [
+        -0.004321000073105097,
+        7.673699855804443,
+        0.40213799476623535
+      ],
+      "coverageNote": "The original septum-of-telencephalon definition has two components. It does not independently identify septal nuclei, septum verum or a validated septum-pellucidum subdivision. Every ordered source triangle and position is retained. Stria terminalis is withheld for source defects. Anatomical relationships, laterality and clinical accuracy require review; no patient registration or complete limbic circuit is supplied.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextRecords": [
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+      "fmaId": "FMA258714",
+      "name": "Right thalamus",
+      "sourceName": "right thalamus",
+      "system": "nerves",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves-deep-brain",
+      "nodeName": "FMA258714",
+      "bounds": {
+        "min": [
+          -0.24605399370193481,
+          7.421299934387207,
+          0.11870498955249786
+        ],
+        "max": [
+          -0.01247750036418438,
+          7.657199859619141,
+          0.4836689829826355
+        ]
+      },
+      "center": [
+        -0.1292657470330596,
+        7.539249897003174,
+        0.3011869862675667
+      ],
+      "anchor": [
+        -0.20139099657535553,
+        7.527600288391113,
+        0.3386560082435608
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1827",
+          "sha256": "a4b5be59d7cf6dc3ca1b2ae97a83ffd947e39493cc663c2cb7d65a064af91b1d"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+      "fmaId": "FMA258716",
+      "name": "Left thalamus",
+      "sourceName": "left thalamus",
+      "system": "nerves",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves-deep-brain",
+      "nodeName": "FMA258716",
+      "bounds": {
+        "min": [
+          -0.0009246880072169006,
+          7.420699596405029,
+          0.11806800961494446
+        ],
+        "max": [
+          0.23373599350452423,
+          7.65749979019165,
+          0.4839569926261902
+        ]
+      },
+      "center": [
+        0.11640565274865367,
+        7.53909969329834,
+        0.3010125011205673
+      ],
+      "anchor": [
+        0.19691500067710876,
+        7.52079963684082,
+        0.30950796604156494
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1782",
+          "sha256": "6e6e87e4feda05756e8748a61febdb2fe61d4ba834fd5a57d805512d9fcd82cc"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+      "fmaId": "FMA72924",
+      "name": "Right fornix of forebrain",
+      "sourceName": "right fornix of forebrain",
+      "system": "nerves",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves-deep-brain",
+      "nodeName": "FMA72924",
+      "bounds": {
+        "min": [
+          -0.3212239742279053,
+          7.352900505065918,
+          0.08262798190116882
+        ],
+        "max": [
+          -0.006592429708689451,
+          7.674000263214111,
+          0.5274800062179565
+        ]
+      },
+      "center": [
+        -0.16390820196829736,
+        7.513450384140015,
+        0.3050539940595627
+      ],
+      "anchor": [
+        -0.27547499537467957,
+        7.425699234008789,
+        0.26569801568984985
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1804",
+          "sha256": "d18c04db4ad5e495310fc7f0fde79c9e2bfbcccb78e4169f7bdbe74b193b77a6"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+      "fmaId": "FMA72925",
+      "name": "Left fornix of forebrain",
+      "sourceName": "left fornix of forebrain",
+      "system": "nerves",
+      "category": "organ",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves-deep-brain",
+      "nodeName": "FMA72925",
+      "bounds": {
+        "min": [
+          -0.006572210229933262,
+          7.353000640869141,
+          0.08259700983762741
+        ],
+        "max": [
+          0.30813100934028625,
+          7.674000263214111,
+          0.5274999737739563
+        ]
+      },
+      "center": [
+        0.1507793995551765,
+        7.513500452041626,
+        0.30504849180579185
+      ],
+      "anchor": [
+        0.26246899366378784,
+        7.425999641418457,
+        0.26817595958709717
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1756",
+          "sha256": "ecfe3a87d95ee1a7ad39bd742935dd3eeb4ab94ecdc7895d55e8b308b37e6fa4"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+      "fmaId": "FMA61961",
+      "name": "Anterior commissure",
+      "sourceName": "anterior commissure",
+      "system": "nerves",
+      "category": "organ",
+      "laterality": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves-deep-brain",
+      "nodeName": "FMA61961",
+      "bounds": {
+        "min": [
+          -0.1291770040988922,
+          7.516300201416016,
+          0.5095800161361694
+        ],
+        "max": [
+          0.11619799584150314,
+          7.542099475860596,
+          0.5561699867248535
+        ]
+      },
+      "center": [
+        -0.006489504128694534,
+        7.529199838638306,
+        0.5328750014305115
+      ],
+      "anchor": [
+        -0.0013009299291297793,
+        7.53000020980835,
+        0.5336099863052368
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1734",
+          "sha256": "a0fc9182e8598fe9640223af8f323aa95c607bedc4f5d085f03df821d8792832"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+      "fmaId": "FMA61970",
+      "name": "Commissure of fornix of forebrain",
+      "sourceName": "commissure of fornix of forebrain",
+      "system": "nerves",
+      "category": "organ",
+      "laterality": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves-deep-brain",
+      "nodeName": "FMA61970",
+      "bounds": {
+        "min": [
+          -0.25186100602149963,
+          7.465699672698975,
+          0.07049598544836044
+        ],
+        "max": [
+          0.2386689931154251,
+          7.668799877166748,
+          0.3799839913845062
+        ]
+      },
+      "center": [
+        -0.006596006453037262,
+        7.567249774932861,
+        0.22523998841643333
+      ],
+      "anchor": [
+        -0.007657529786229134,
+        7.6080002784729,
+        0.2032710313796997
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1741",
+          "sha256": "ad64cdc4effe097467b438b820a50ce2eb76440ac89112705e326d45386625bc"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+      "fmaId": "FMA86464",
+      "name": "Corpus callosum",
+      "sourceName": "corpus callosum",
+      "system": "nerves",
+      "category": "organ",
+      "laterality": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves-deep-brain",
+      "nodeName": "FMA86464",
+      "bounds": {
+        "min": [
+          -0.2656150162220001,
+          7.444100379943848,
+          -0.10566601157188416
+        ],
+        "max": [
+          0.2524470090866089,
+          7.832600116729736,
+          0.8105599880218506
+        ]
+      },
+      "center": [
+        -0.006584003567695618,
+        7.638350248336792,
+        0.3524469882249832
+      ],
+      "anchor": [
+        -0.016084300354123116,
+        7.723800182342529,
+        0.32573097944259644
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1742",
+          "sha256": "3f46359c2a23499ac130bd27646309f7974d216f9d55320b503e3b0844da9a70"
+        }
+      ],
+      "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextBundles": [
+    {
+      "id": "head-neck-nerves-deep-brain",
+      "url": "/models/bodyparts3d/full-body/head-neck-nerves-deep-brain.glb",
+      "bytes": 1866940,
+      "sha256": "6046dacb923f5103acb3b86dadf2817b5f0c133af88e0d225170cf331fbd0e3c",
+      "structures": 22
+    }
+  ],
+  "bundles": [
+    {
+      "id": "limbic-landmarks",
+      "url": "/models/bodyparts3d/limbic-landmarks/limbic-landmarks.glb?v=9b17997e1211d794777fb1b6fbb6e84252445ae15f1b2cc811c80efad8a8e514",
+      "bytes": 150304,
+      "sha256": "9b17997e1211d794777fb1b6fbb6e84252445ae15f1b2cc811c80efad8a8e514",
+      "structures": 4
+    }
+  ],
+  "modification": "Exact-coordinate indexing and normals within each original file; no cross-file welding. Established display transform and Float32 storage. Every triangle retained in source file/face order; no fitting, reflection, smoothing, bridging or face deletion.",
+  "clinicalApproval": false
+}
