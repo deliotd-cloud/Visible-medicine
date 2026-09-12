@@ -93,7 +93,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
   return <div className="eye-layer-workbench um-knee-workbench">
     <section className="um-knee-image" aria-label={`Independent ${specimen.label.toLowerCase()} 3D specimen`}>
       <div className="um-knee-camera-tools">
-        <Select value={view} onValueChange={(v) => { if (cameraViews.includes(v as DissectionView)) setView(v as DissectionView); }}>
+        <Select value={view} items={cameraViews.map(v => ({ value:v, label:v[0].toUpperCase()+v.slice(1) }))} onValueChange={(v) => { if (cameraViews.includes(v as DissectionView)) setView(v as DissectionView); }}>
           <SelectTrigger aria-label={`${specimen.label} camera direction`}><SelectValue /></SelectTrigger>
           <SelectContent>{cameraViews.map((v) => <SelectItem key={v} value={v}>{v[0].toUpperCase() + v.slice(1)}</SelectItem>)}</SelectContent>
         </Select>
@@ -122,7 +122,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
     </section>
     <aside className="eye-layer-controls um-knee-controls" aria-label={`${specimen.label} specimen controls`}>
       <label className="um-knee-label" htmlFor="um-knee-study">Study</label>
-      <Select value={active?.id ?? 'custom'} onValueChange={(v) => { if (v) preset(v); }}>
+      <Select value={active?.id ?? 'custom'} items={[{value:'custom',label:'Custom dissection'},...kneeSpecimenStudies.map(s=>({value:s.id,label:s.title}))]} onValueChange={(v) => { if (v) preset(v); }}>
         <SelectTrigger id="um-knee-study" aria-label={`${specimen.label} dissection study`}><SelectValue /></SelectTrigger>
         <SelectContent>
           {!active && <SelectItem value="custom" disabled>Custom dissection</SelectItem>}

@@ -91,7 +91,7 @@ export function SpecimenIdentification({ definition, initial, visibleIds, initia
   return <div className="eye-layer-workbench um-knee-workbench">
     <section className="um-knee-image" aria-label="Structure identification model">
       <div className="um-knee-camera-tools"><Button size="sm" variant="outline" onClick={onClose}>Back to dissection</Button>
-        <Select value={view} onValueChange={v => { if (['anterior', 'posterior', 'left', 'right', 'superior', 'inferior'].includes(v ?? '')) setView(v as DissectionView); }}>
+        <Select value={view} items={['anterior','posterior','left','right','superior','inferior'].map(v=>({value:v,label:v[0].toUpperCase()+v.slice(1)}))} onValueChange={v => { if (['anterior', 'posterior', 'left', 'right', 'superior', 'inferior'].includes(v ?? '')) setView(v as DissectionView); }}>
           <SelectTrigger aria-label="Practice camera direction"><SelectValue /></SelectTrigger><SelectContent>{['anterior', 'posterior', 'left', 'right', 'superior', 'inferior'].map(v => <SelectItem key={v} value={v}>{v}</SelectItem>)}</SelectContent>
         </Select>
         <Button size="sm" variant="outline" aria-label="Zoom out" onClick={() => setZoom(z => Math.max(.6, z - .2))}>−</Button>

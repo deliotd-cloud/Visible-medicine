@@ -2,7 +2,7 @@
 export function modelDeliveryUrl(url: string, assetBase = ''): string {
   if (!assetBase) return url;
   if (!/^\/atlas-runtime\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(assetBase) ||
-      !/^\/models\/[a-zA-Z0-9/_-]+\.[a-zA-Z0-9]+$/.test(url)) {
+      !/^\/models\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.[a-zA-Z0-9]+(?:\?v=[a-f0-9]{12}(?:[a-f0-9]{52})?)?$/.test(url)) {
     throw new Error('Invalid same-origin model delivery path');
   }
   return assetBase + url;

@@ -324,6 +324,8 @@ for (const text of [
   assert(html.includes(text), text);
 assert.equal(context.sceneProps.catalog.sourceVersion, def.key);
 assert.equal(context.sceneProps.assetBase, undefined);
+assert.match(html,/data-slot="select-value"[^>]*>Anterior</);
+assert.match(html,/data-slot="select-value"[^>]*>Uterus, tubes &amp; ovaries</);
 const assetBase = '/atlas-runtime/female-pelvis';
 const websiteSupplement = mod.exports.createHraPelvisSupplement({ assetBase });
 assert.equal(websiteSupplement.studyLink, undefined);
@@ -337,10 +339,19 @@ assert.equal(JSON.stringify(def), before);
 const deliveryUrl = mod.exports.modelDeliveryUrl;
 assert.equal(deliveryUrl('/models/hra-pelvis/pelvis.glb'), '/models/hra-pelvis/pelvis.glb');
 assert.equal(deliveryUrl('/models/hra-pelvis/pelvis.glb', assetBase), assetBase + '/models/hra-pelvis/pelvis.glb');
+// The real catalogue uses a hash-versioned URL. SSR's WebGL stub must not hide
+// delivery-path failures: exercise the exact URLs that the browser loader sees.
+for (const bundle of def.catalog.bundles) {
+  assert.equal(deliveryUrl(bundle.url,assetBase),assetBase+bundle.url);
+  assert.equal(deliveryUrl(bundle.url),bundle.url);
+  assert.equal(new URL(deliveryUrl(bundle.url,assetBase),'https://example.test').pathname,assetBase+'/models/hra-pelvis/pelvis.glb');
+  assert.equal(new URL(bundle.url,'https://example.test').searchParams.get('v'),bundle.sha256.slice(0,12));
+}
+assert.equal(deliveryUrl('/models/hra-pelvis/pelvis.glb?v='+raw.bundles[0].sha256,assetBase),assetBase+'/models/hra-pelvis/pelvis.glb?v='+raw.bundles[0].sha256);
 for (const badBase of ['https://example.com','//example.com','/atlas-runtime/../private','/atlas-runtime/female-pelvis/','/atlas-runtime/%66emale-pelvis']) {
   assert.throws(() => deliveryUrl('/models/hra-pelvis/pelvis.glb',badBase));
 }
-for (const badUrl of ['https://example.com/a.glb','//example.com/a.glb','/models/../secret.glb','/models/%2e%2e/a.glb','/models/a.glb?token=x','/models/a.glb#fragment','/models/\\a.glb']) {
+for (const badUrl of ['https://example.com/a.glb','//example.com/a.glb','/models/../secret.glb','/models/%2e%2e/a.glb','/models/a.glb?token=x','/models/a.glb#fragment','/models/\\a.glb','/models/a.glb?v=abc','/models/a.glb?v=f18f1f0e3c6e&token=x','/models/a.glb?v=f18f1f0e3c6e#fragment','/models//a.glb','/models/a.glb?v=%66%31%38%66%31%66%30%65%33%63%36%65']) {
   assert.throws(() => deliveryUrl(badUrl,assetBase));
 }
 const practice = render('SpecimenIdentification', {

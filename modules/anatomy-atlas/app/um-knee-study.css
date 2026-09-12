@@ -1,10 +1,11 @@
 .um-knee-image { min-width: 0; min-height: 0; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: .45rem; }
 .um-knee-camera-tools { display: flex; flex-wrap: wrap; gap: .35rem; align-items: center; }
 .um-knee-camera-tools [data-slot='select-trigger'] { width: 140px; }
-.um-knee-controls { font-size: .875rem; }
+.um-knee-controls { font-size: .875rem; overflow-x: hidden; padding-inline: .25rem; }
 .um-knee-controls p { font-size: .875rem; line-height: 1.5; margin: .5rem 0; }
 .um-knee-label { display: flex; justify-content: space-between; margin: .35rem 0; font-weight: 600; }
-.um-knee-controls [data-slot='select-trigger'] { width: 100%; }
+.um-knee-controls [data-slot='select-trigger'] { width: 100%; height: auto; min-height: 36px; white-space: normal; }
+.um-knee-controls [data-slot='select-value'] { min-width: 0; white-space: normal; text-align: left; }
 .um-knee-controls .eye-layer-actions { align-items: center; }
 .um-knee-selection { border: 1px solid var(--border); border-radius: .5rem; padding: .65rem; margin: .6rem 0; }
 .um-knee-selection h3 { font-size: 1rem; font-weight: 600; }

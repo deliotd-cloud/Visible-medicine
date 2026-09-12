@@ -11,6 +11,7 @@ The build emits actual browser dependency licences, complete notice text and has
 ## Boundaries
 
 - `modelDeliveryUrl` adds an optional strict same-origin delivery prefix. Catalogue identity, coordinates, source SHA and clinical-teaching bindings stay unchanged. Default standalone calls still use `/models`; main scene, cache retry and identification all use the same prefixed URL in the module.
+- Browser QA found the initial prefix validation rejected the real catalogue's `?v=<12-digit SHA prefix>` model address. The resolver now preserves only this bounded hex version parameter (12 or 64 digits), with a regression that exercises the actual catalogue URLs. Other query parameters, fragments, traversal and external addresses remain rejected. Do not claim real loading from a test that replaces the WebGL/loader boundary.
 - `createHraPelvisSupplement` reuses actual teaching and practice; the standalone wrapper retains study links. The website export omits these standalone navigation controls and any review API connection. No fake website review endpoint is created.
 - The iframe contains trusted first-party code. CSS isolation is not a security sandbox or paywall. Preserve owner-private audience; independent server-side Atlas/case/lecture rights remain mandatory before commercial launch.
 - This is not a Didanix viewer or a patient model. The shoulder's selection adapter has not been falsely attached to pelvic source IDs. Add a source-validated Education adapter only with approved mappings and readiness evidence.
