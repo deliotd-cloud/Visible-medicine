@@ -27,6 +27,13 @@ export type Course = {
 
 export const atlasModules: AtlasModule[] = [
   {
+    slug: 'shoulder-3d', title: 'Shoulder 3D anatomy', region: 'Upper limb',
+    modality: '3D', orientation: 'Rotatable',
+    description: 'Explore, dissect and practise with the source-based right shoulder. Private pilot; clinical review pending.',
+    structures: 9, images: 0, status: 'available',
+    systems: ['Bones', 'Rotator cuff', 'Muscles'], reviewed: 'Private integration pilot · Review pending',
+  },
+  {
     slug: "ct-head",
     title: "CT head",
     region: "Neuroanatomy",

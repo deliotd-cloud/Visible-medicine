@@ -74,19 +74,20 @@ function WorkspaceContextBar({ pathname }: { pathname: string }) {
 
 export function SiteFrame({ children }: { children: ReactNode }) {
   const pathname = usePathname();
+  const anatomyPanel = pathname === '/atlas/shoulder-3d';
   const immersive = isImmersiveRoute(pathname);
   const workspace = !immersive && isWorkspaceRoute(pathname);
   const publicSite = !immersive && !workspace;
   const standardSite = !immersive;
 
   return (
-    <div id="visible-medicine-site-content" className={immersive ? "immersive-site-frame" : workspace ? "workspace-site-frame" : "public-site-frame"}>
+    <div id="visible-medicine-site-content" className={anatomyPanel ? 'anatomy-site-frame' : immersive ? "immersive-site-frame" : workspace ? "workspace-site-frame" : "public-site-frame"}>
       <a className="skip-link" href="#main-content">Skip to content</a>
       {standardSite && <><SiteHeader workspace={workspace} /><div className="intended-use-strip"><span>Education &amp; research only</span><p>No diagnosis, reporting, patient care or clinical decision-making.</p><a href="/intended-use">Read intended use →</a></div></>}
       {workspace && <WorkspaceContextBar pathname={pathname} />}
       {workspace && pathname.startsWith("/workspace") && <nav className="institution-app-nav" aria-label="Institution workspace navigation">{institutionLinks.map(([label, href]) => { const active = href === "/workspace" ? pathname === href : pathname === href || pathname.startsWith(`${href}/`); return <Link aria-current={active ? "page" : undefined} href={href} key={href}>{label}</Link>; })}</nav>}
       <div id="main-content" tabIndex={-1}>{children}</div>
-      {publicSite && <SiteFooter />}
+      {publicSite && !anatomyPanel && <SiteFooter />}
     </div>
   );
 }

@@ -34,6 +34,7 @@ const navigationSections: NavigationSection[] = [
         label: "Explore anatomy",
         links: [
           { label: "Atlas overview", href: "/atlas", description: "Browse every available and planned anatomy module." },
+          { label: "Shoulder 3D pilot", href: "/atlas/shoulder-3d", description: "Explore and dissect the right shoulder. Review pending." },
           { label: "CT head demonstration", href: "/atlas/ct-head", description: "Explore labelled cross-sectional head anatomy." },
           { label: "Research use", href: "/research", description: "Review provenance, citations and non-clinical workflows." },
         ],

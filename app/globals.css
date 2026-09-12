@@ -251,8 +251,8 @@ body.splash-open { overflow: hidden; }
 .page-hero > .primary-button { align-self: flex-start; margin-top: 34px; }
 .catalogue-controls { margin: 0 42px; padding: 18px 0; display: flex; justify-content: space-between; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .catalogue-controls > span { color: #71807d; font: 600 10px/2.6 var(--font-geist-mono), monospace; text-transform: uppercase; }
-.catalogue-controls button { padding: 8px 14px; border: 0; background: transparent; color: #65716e; font-size: 11px; cursor: pointer; }
-.catalogue-controls button.active { border-radius: 999px; background: var(--green); color: white; }
+.catalogue-controls :is(button,a) { display:inline-block; padding: 8px 14px; border: 0; background: transparent; color: #65716e; font-size: 11px; cursor: pointer; }
+.catalogue-controls :is(button,a).active { border-radius: 999px; background: var(--green); color: white; }
 .catalogue-list { padding: 20px 42px 100px; }
 .catalogue-item { min-height: 230px; display: grid; grid-template-columns: 190px 52px 1fr 170px; gap: 26px; align-items: center; border-bottom: 1px solid var(--line); }
 .catalogue-scan { width: 154px; aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; background: #18211f; box-shadow: inset 0 0 0 18px #303a37; position: relative; }
