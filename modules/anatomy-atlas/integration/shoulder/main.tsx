@@ -4,6 +4,7 @@ import '../../app/globals.css';
 import ShoulderExplorer from '../../app/shoulder-explorer';
 import { structures } from '../../app/anatomy-data';
 import './panel-host.css';
+import { installShoulderEducationApi } from './education-api';
 
 class ModuleBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
   state = { failed: false };
@@ -14,6 +15,9 @@ class ModuleBoundary extends Component<{ children: ReactNode }, { failed: boolea
 }
 const requested = new URLSearchParams(window.location.search).get('structure');
 const selected = structures.find(s => s.id === requested)?.id ?? structures[0].id;
+let disconnectEducation: (()=>void)|null = installShoulderEducationApi(window);
+window.addEventListener('pagehide',()=>{disconnectEducation?.();disconnectEducation=null;});
+window.addEventListener('pageshow',()=>{if(!disconnectEducation)disconnectEducation=installShoulderEducationApi(window);});
 createRoot(document.getElementById('root')!).render(
   <ModuleBoundary><ShoulderExplorer initialSelectedId={selected} presentation="panel" assetBase="/atlas-runtime/shoulder" connectedReviews={false} /></ModuleBoundary>,
 );

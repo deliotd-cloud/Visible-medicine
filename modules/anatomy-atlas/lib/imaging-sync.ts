@@ -31,7 +31,7 @@ export type SelectionResult = {
 export type AdapterInfo = {
   id: string;
   label: string;
-  modality: 'CT' | 'MRI' | 'US' | 'multimodal';
+  modality: 'CT' | 'MRI' | 'X-ray' | 'US' | 'multimodal';
 };
 type Adapter = AdapterInfo & {
   onAtlasSelection: (selection: AtlasSelection) => void | Promise<void>;
@@ -131,7 +131,7 @@ export function createImagingBridge() {
         typeof next.label !== 'string' ||
         next.label.trim().length < 1 ||
         next.label.length > 80 ||
-        !['CT', 'MRI', 'US', 'multimodal'].includes(next.modality) ||
+        !['CT', 'MRI', 'X-ray', 'US', 'multimodal'].includes(next.modality) ||
         typeof next.onAtlasSelection !== 'function'
       )
         throw new Error('Invalid imaging adapter');
@@ -140,6 +140,9 @@ export function createImagingBridge() {
       seen.clear();
       changed();
       return {
+        pause() {
+          if (adapter === owned) { seen.clear(); changed(); }
+        },
         selectStructure(value: unknown): SelectionResult {
           let request: LinkedSelection | null;
           try {

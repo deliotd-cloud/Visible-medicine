@@ -140,8 +140,8 @@ export function ImagingLink({
       </summary>
       <div className="vm-imaging-content">
         <p>
-          Connect a future CT, MRI or ultrasound viewer to select corresponding
-          anatomy in either direction.
+          Link Didanix Education to select corresponding CT, MRI, X-ray or
+          ultrasound anatomy in either direction.
         </p>
         {link.adapter ? (
           <p>

@@ -101,6 +101,7 @@
     "inspection:test": "node scripts/validate-inspection.mjs",
     "study:test": "node scripts/validate-study-views.mjs",
     "imaging:test": "node scripts/validate-imaging-link.mjs",
+    "didanix-adapter:test": "node scripts/validate-didanix-adapter.mjs",
     "imaging-comparison:test": "node scripts/validate-imaging-comparison.mjs",
     "volume-viewer:test": "node scripts/validate-volume-viewer.mjs",
     "inventory:audit": "node scripts/audit-anatomy-inventory.mjs",
