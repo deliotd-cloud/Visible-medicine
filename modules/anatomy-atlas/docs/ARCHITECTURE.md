@@ -1,5 +1,7 @@
 # Spatial anatomy architecture
 
+Private comparison uses `export-local-mask-comparison.py` → bounded `.vmcompare` attachment → `lib/local-mask-comparison.ts` and the existing local CT/3D workbench. Source hashes and native patient coordinates bind it to the baseline `.vmatlas`; verified voxel differences and surfaces remain transient local data. Four overlay modes share CT/3D focus without generic-atlas transforms or source edits. Baseline marking is disabled during comparison. See [contract and limits](LOCAL_MASK_COMPARISON.md#ct3d-comparison-attachment).
+
 [HRA female pelvis](HRA_FEMALE_PELVIS.md) is an independent source/version/frame, with 41 source-local selections and eight recipes. Its lessons/practice reject mismatched bundles, coordinates, surfaces and recipes. The generic specimen workbench accepts optional tissue groups without changing existing limb/abdominal defaults. No main-body source, imaging crosswalk, entitlement or approval is merged.
 
 [Deferent ducts](DEFERENT_DUCTS.md) use the existing atomic source-addition contract, binding two new records and eight exact context records to their source bundles/frame. One focus-only study in pelvis/whole-body uses the shared source gate for both actual parent transitions and incoming links. Whole-record aliases preserve canonical labels. A hash-pinned offline recipe inverse preserves historical comparisons without migrating runtime review approvals. No source meshes are cropped or connected.

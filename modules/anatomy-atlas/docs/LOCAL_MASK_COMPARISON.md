@@ -78,6 +78,36 @@ After inspecting changes and accepted boundaries, save any revised candidate as 
 
 ## Validation
 
+### CT/3D comparison attachment
+
+After a successful comparison, package it using the existing CT Python environment:
+
+```powershell
+& '<CT-project>\work\segmentation\.venv\Scripts\python.exe' scripts/export-local-mask-comparison.py --state '<CT-project>\work\segmentation\LATEST_ATLAS_STATE.json' --request '<private-candidate-directory>\candidate.json' --comparison-dir '<private-review-directory>' --output '<new-private-export-directory>\midbrain.vmcompare' --allow-draft cth.bst.midbrain
+```
+
+The output must be new and outside the repository, original data, state and comparison-report directories. The exporter recomputes differences and verifies the completed report and both label maps. It emits cropped lossless bit masks and unsmoothed 0.5 isosurfaces on the original LPS-mm grid. **No CT scalar/pixel block is included**, but anatomical masks/surfaces remain sensitive owner data. No publication licence or clinical approval is conferred. Use an output only after successful exporter exit; failed exports are not validated artifacts.
+
+In **Local CT + 3D**, open the matching baseline `.vmatlas` first, expand **Compare candidate**, and choose the `.vmcompare` file. The reader requires matching annotation, CT and target-mask hashes, grid and hashes for every other accepted mask. It verifies binary integrity, counts, bounds, foreground focus points, exact additions/removals against the baseline and accepted-mask warning consistency. Explicit ROI flags rely on the source-verified offline exporter; ROI volumes are not included for independent browser recomputation. These checks establish consistency, not signed authorship or clinical accuracy.
+
+Choose **Baseline**, **Additions and removals**, **Candidate mask**, or **Protected-region warnings**. Colours have text labels: added green, removed rose, candidate blue and warnings gold. CT opacity remains under Image controls. Baseline 3D context fades while comparison layers are active. Selecting another source structure returns to baseline. Comparison-surface clicks move the CT crosshair without changing the target or patient frame. Previous/next visits actual changed native K slices, which can be oblique to displayed patient-plane reformats. Empty candidates and unchanged comparisons are explicit, not scored as success.
+
+Correction marks remain bound to **baseline mask hashes**. Adding marks and their glyphs are disabled/hidden during comparison; switch to Baseline to mark the original. Existing baseline marks remain locally exportable. Candidate-specific feedback export is not implemented in this version. Removing the attachment, cancelling its load, loading another study or closing the workbench clears transient comparison state; late file reads cannot replace a newer selection. No browser persistence or server upload is used.
+
+Limits: 64 MiB attachment, 1 MiB header, four layer roles, 16 million summed baseline/candidate/change/warning foreground voxels, two million total surface vertices and 24 MB per surface attribute/index block. File limits are not total RAM/GPU guarantees. Fragmented targets may require a smaller review scope, not silent smoothing of a diagnostic boundary. Full-resolution source masks remain intact; displayed CT reformats retain the existing resolution cap.
+
+Binary contract: ASCII `VMCMP001`; little-endian uint32 header/body byte lengths at offsets 8/12; UTF-8 `vm-local-comparison/1` header at 16; eight-byte padding; nonoverlapping eight-byte-aligned body blocks. Masks use i-fastest/little-bit packing; warning flags use cropped i-fastest uint8. Mesh positions are float32 LPS mm, triangle indices uint32. Reflections adjust winding. Generated headers omit patient free text; header fields are not signed. No arbitrary transform or executable content is used.
+
+```powershell
+& '<CT-project>\work\segmentation\.venv\Scripts\python.exe' scripts/validate-local-comparison-export.py --fixture-dir '<new-synthetic-test-directory-outside-repository>'
+node scripts/validate-local-comparison-viewer.mjs '<same-synthetic-test-directory>'
+node scripts/validate-local-imaging.mjs
+```
+
+Tests exercise oblique/sheared Python-to-TypeScript packing, tamper/mismatch rejection, exact voxel relations, CT colours, real CT/3D callbacks, baseline marking guards, collapsed SSR controls, cancellation, stale loads and unmount cleanup. They do not validate browser/GPU performance, original-DICOM agreement, Slicer display or clinical anatomy. No real corrected candidate or protected-boundary ROI was fabricated.
+
+### Offline comparison checks
+
 `scripts/validate-local-mask-comparison.py` tests synthetic oblique geometry, exact voxel counts and map round trips, deterministic gzip encoding, preservation of sources, new/existing overlaps, ROI additions/removals, units and transform conflicts, bad binary values, stale/duplicate inputs, forbidden paths, overwrite/partial-output guards, empty masks and offline operation.
 
 Optional `--state <saved-state>` runs an additional **read-only identity probe**, using the original midbrain as its own candidate and checking all accepted binary masks. It writes no private output and generates no real clinical feedback. Zero differences in that probe verify compatibility, not the correctness of the midbrain anatomy.

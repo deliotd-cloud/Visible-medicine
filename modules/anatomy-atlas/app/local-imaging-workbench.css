@@ -168,6 +168,33 @@
   min-width: 0;
   min-height: 0;
 }
+.local-comparison-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.85rem;
+  font-size: 0.8rem;
+  border-left: 3px solid #f5ca60;
+  padding-left: 0.6rem;
+}
+.local-comparison-legend span {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+.local-comparison-legend i {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+.local-comparison-tools small {
+  display: block;
+  color: #bed0d3;
+  line-height: 1.5;
+}
+.local-comparison-steps {
+  display: grid;
+}
 .local-study-selection {
   display: flex;
   gap: 0.7rem;

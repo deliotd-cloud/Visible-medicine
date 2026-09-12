@@ -300,7 +300,10 @@ export async function readLocalStudy(buffer: ArrayBuffer): Promise<LocalStudy> {
 }
 
 /** Nearest-neighbour labels; interpolation must never invent a partial label. */
-export function maskAtIndex(s: LocalStructure, point: Vec3) {
+export function maskAtIndex(
+  s: Pick<LocalStructure, 'mask' | 'cropStart' | 'cropSize'>,
+  point: Vec3,
+) {
   if (!vec(point)) return false;
   const i = Math.floor(point[0] + 0.5) - s.cropStart[0];
   const j = Math.floor(point[1] + 0.5) - s.cropStart[1];

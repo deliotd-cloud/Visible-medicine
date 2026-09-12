@@ -25,6 +25,16 @@ import {
   type Vec3,
 } from '@/lib/volume-reslice';
 import type { ImagePlane } from '@/lib/imaging-comparison';
+import {
+  readLocalComparison,
+  comparisonLayers,
+  comparisonFocus,
+  renderComparisonSlice,
+  LOCAL_COMPARISON_MAX_BYTES,
+  type LocalComparison,
+  type ComparisonMode,
+  type ComparisonLayer,
+} from '@/lib/local-mask-comparison';
 import './local-imaging-workbench.css';
 
 const planes: ImagePlane[] = ['axial', 'coronal', 'sagittal'];
@@ -39,10 +49,14 @@ function Surface({
   structure,
   selected,
   choose,
+  targetId,
 }: {
-  structure: LocalStructure;
+  structure: Pick<LocalStructure, 'positions' | 'indices' | 'colour'> & {
+    id?: string;
+  };
   selected: boolean;
   choose: (id: string, point: Vec3) => void;
+  targetId?: string;
 }) {
   const geometry = useMemo(() => {
     const g = new THREE.BufferGeometry();
@@ -61,7 +75,10 @@ function Surface({
       renderOrder={selected ? 2 : 0}
       onClick={(e) => {
         e.stopPropagation();
-        choose(structure.id, e.point.toArray() as [number, number, number]);
+        choose(
+          targetId ?? structure.id!,
+          e.point.toArray() as [number, number, number],
+        );
       }}
     >
       <meshStandardMaterial
@@ -107,6 +124,7 @@ function StudyScene({
   guides,
   choose,
   onFailure,
+  comparison,
 }: {
   study: LocalStudy;
   selected: LocalStructure;
@@ -116,6 +134,7 @@ function StudyScene({
   guides: boolean;
   choose: (id: string, point: Vec3) => void;
   onFailure: () => void;
+  comparison: readonly ComparisonLayer[] | null;
 }) {
   const onHealth = useCallback(
     (h: string) => {
@@ -169,7 +188,16 @@ function StudyScene({
         <Surface
           key={s.id}
           structure={s}
-          selected={s.id === selected.id}
+          selected={!comparison && s.id === selected.id}
+          choose={choose}
+        />
+      ))}
+      {comparison?.map((layer) => (
+        <Surface
+          key={layer.role}
+          structure={layer}
+          targetId={selected.id}
+          selected
           choose={choose}
         />
       ))}
@@ -224,6 +252,7 @@ function SlicePane({
   marks,
   pick,
   move,
+  comparison,
 }: {
   study: LocalStudy;
   plane: ImagePlane;
@@ -234,6 +263,7 @@ function SlicePane({
   marks: LocalReviewMark[];
   pick: (point: Vec3, mark?: boolean) => void;
   move: (point: Vec3) => void;
+  comparison: readonly ComparisonLayer[] | null;
 }) {
   const ref = useRef<HTMLCanvasElement>(null),
     frame = useRef<HTMLDivElement>(null),
@@ -264,7 +294,16 @@ function SlicePane({
         if (!ctx) throw Error();
         const pixels = ctx.createImageData(g.width, g.height);
         pixels.data.set(
-          renderLocalSlice(study, plane, focus, window, selected, opacity),
+          comparison
+            ? renderComparisonSlice(
+                study,
+                plane,
+                focus,
+                window,
+                comparison,
+                opacity,
+              )
+            : renderLocalSlice(study, plane, focus, window, selected, opacity),
         );
         ctx.putImageData(pixels, 0, 0);
         setError(false);
@@ -286,6 +325,7 @@ function SlicePane({
     window,
     selected,
     opacity,
+    comparison,
     g,
     display.width,
     display.height,
@@ -360,7 +400,7 @@ function SlicePane({
                   {label}
                 </span>
               ))}
-              {marks
+              {(comparison ? [] : marks)
                 .filter((m) => m.structureId === selected.id)
                 .map((m, i) => {
                   const p = localCrosshair(g, m.lps);
@@ -400,7 +440,7 @@ function SlicePane({
   );
 }
 
-function LoadedStudy({
+export function LoadedStudy({
   study,
   close,
 }: {
@@ -423,6 +463,66 @@ function LoadedStudy({
     [mode, setMode] = useState<Mode>('navigate'),
     [marks, setMarks] = useState<LocalReviewMark[]>([]),
     [message, setMessage] = useState('');
+  const [comparison, setComparison] = useState<LocalComparison | null>(null),
+    [comparisonMode, setComparisonMode] = useState<ComparisonMode>('baseline'),
+    [comparisonBusy, setComparisonBusy] = useState(false),
+    [comparisonError, setComparisonError] = useState('');
+  const comparisonGeneration = useRef(0);
+  useEffect(
+    () => () => {
+      comparisonGeneration.current++;
+    },
+    [],
+  );
+  const activeComparison =
+    comparison &&
+    comparison.structureId === id &&
+    comparisonMode !== 'baseline';
+  const visibleComparison = useMemo(
+    () =>
+      activeComparison ? comparisonLayers(comparison, comparisonMode) : null,
+    [activeComparison, comparison, comparisonMode],
+  );
+  const clearComparison = () => {
+    comparisonGeneration.current++;
+    setComparison(null);
+    setComparisonMode('baseline');
+    setComparisonBusy(false);
+    setComparisonError('');
+    setMessage('');
+  };
+  const loadComparison = async (file?: File) => {
+    clearComparison();
+    setMode('navigate');
+    if (!file) return;
+    const generation = comparisonGeneration.current;
+    if (file.size > LOCAL_COMPARISON_MAX_BYTES) {
+      setComparisonError('Comparison exceeds the 64 MiB local-file limit.');
+      return;
+    }
+    setComparisonBusy(true);
+    try {
+      const result = await readLocalComparison(await file.arrayBuffer(), study);
+      if (generation !== comparisonGeneration.current) return;
+      setComparison(result);
+      setComparisonMode('changes');
+      setId(result.structureId);
+      setFocus(
+        comparisonFocus(result, -1, 1) ??
+          study.structures.find((s) => s.id === result.structureId)!.focusLps,
+      );
+      setMessage(
+        'Unapproved comparison loaded locally. Original masks are unchanged.',
+      );
+    } catch {
+      if (generation === comparisonGeneration.current)
+        setComparisonError(
+          'Cannot verify this comparison against the loaded study. Use a matching .vmcompare export.',
+        );
+    } finally {
+      if (generation === comparisonGeneration.current) setComparisonBusy(false);
+    }
+  };
   const onSceneFailure = useCallback(() => setSceneFailed(true), []);
   useEffect(() => {
     if (!marks.length) return;
@@ -436,6 +536,8 @@ function LoadedStudy({
   const choose = (newId: string, point?: Vec3) => {
     const s = study.structures.find((v) => v.id === newId);
     if (!s) return;
+    if (comparison && newId !== comparison.structureId)
+      setComparisonMode('baseline');
     setId(s.id);
     setFocus(point ?? s.focusLps);
   };
@@ -444,6 +546,7 @@ function LoadedStudy({
     if (index.some((n, i) => n < -0.5 || n >= study.volume.dimensions[i] - 0.5))
       return;
     setFocus(point);
+    if (activeComparison) return; // Candidate feedback must not be attributed to a baseline mask.
     if (mark && mode !== 'navigate') {
       if (marks.length >= 500) {
         setMessage(
@@ -588,6 +691,114 @@ function LoadedStudy({
             Reset image
           </Button>
         </details>
+        <details className="local-comparison-tools">
+          <summary>Compare candidate{comparison ? ' · loaded' : ''}</summary>
+          <p>
+            Private review only. No CT pixels are included in this attachment;
+            the loaded study remains the baseline.
+          </p>
+          <label>
+            Open comparison
+            <input
+              type="file"
+              accept=".vmcompare"
+              disabled={comparisonBusy}
+              onChange={(e) => {
+                const file = e.target.files?.[0];
+                e.target.value = '';
+                void loadComparison(file);
+              }}
+            />
+          </label>
+          {comparisonBusy && (
+            <>
+              <output>Checking source hashes and voxel changes…</output>
+              <Button variant="outline" onClick={clearComparison}>
+                Cancel comparison load
+              </Button>
+            </>
+          )}
+          {comparisonError && <p role="alert">{comparisonError}</p>}
+          {comparison && (
+            <>
+              <p>
+                <strong>Unapproved candidate</strong> ·{' '}
+                {
+                  study.structures.find((s) => s.id === comparison.structureId)!
+                    .label
+                }
+              </p>
+              <label>
+                Comparison overlay
+                <select
+                  value={comparisonMode}
+                  onChange={(e) => {
+                    setMode('navigate');
+                    setComparisonMode(e.target.value as ComparisonMode);
+                    if (e.target.value !== 'baseline')
+                      choose(comparison.structureId);
+                  }}
+                >
+                  <option value="baseline">Baseline (comparison off)</option>
+                  <option value="changes">Additions and removals</option>
+                  <option value="candidate">Candidate mask</option>
+                  <option value="warnings">Protected-region warnings</option>
+                </select>
+              </label>
+              <p>
+                {comparison.counts.added.toLocaleString()} added ·{' '}
+                {comparison.counts.removed.toLocaleString()} removed ·{' '}
+                {comparison.counts.warnings.toLocaleString()} warning voxels
+              </p>
+              {!comparison.counts.candidate && (
+                <output>
+                  Candidate is empty. This is not a successful segmentation.
+                </output>
+              )}
+              {!comparison.counts.added && !comparison.counts.removed && (
+                <p>No voxel changes from baseline.</p>
+              )}
+              <p>
+                {comparison.protectedRegionCount
+                  ? `${comparison.protectedRegionCount} explicit protected ROIs checked offline.`
+                  : 'No explicit protected ROIs: verbally accepted boundaries have not been verified.'}{' '}
+                Warnings are review prompts, not diagnoses.
+              </p>
+              <div className="local-comparison-steps">
+                {([-1, 1] as const).map((direction) => {
+                  const point = comparisonFocus(
+                    comparison,
+                    study.volume.lpsToIndex(focus)[2],
+                    direction,
+                  );
+                  return (
+                    <Button
+                      key={direction}
+                      variant="outline"
+                      disabled={!point}
+                      onClick={() => {
+                        if (!point) return;
+                        setId(comparison.structureId);
+                        setComparisonMode('changes');
+                        setMode('navigate');
+                        setFocus(point);
+                      }}
+                    >
+                      {direction < 0 ? 'Previous' : 'Next'} changed slice
+                    </Button>
+                  );
+                })}
+              </div>
+              <small>
+                Steps through native K slices, which may be oblique to the
+                displayed CT planes.
+              </small>
+              <Button variant="outline" onClick={clearComparison}>
+                Remove comparison
+              </Button>
+            </>
+          )}
+        </details>
         <details
           onToggle={(e) => {
             if (!e.currentTarget.open) setMode('navigate');
@@ -598,9 +809,16 @@ function LoadedStudy({
             Mark tissue to include or exclude for later review. This does not
             edit or approve masks.
           </p>
+          {activeComparison && (
+            <p>
+              Switch to Baseline to add correction marks. Existing marks refer
+              only to the original mask.
+            </p>
+          )}
           <label>
             Click action
             <select
+              disabled={Boolean(activeComparison)}
               value={mode}
               onChange={(e) => setMode(e.target.value as Mode)}
             >
@@ -672,6 +890,29 @@ function LoadedStudy({
               ? 'Unapproved draft · boundary review required'
               : 'Source mask accepted · viewer awaiting validation'}
           </span>
+          {activeComparison && (
+            <div
+              className="local-comparison-legend"
+              aria-label="Active comparison legend"
+            >
+              <strong>Unapproved comparison</strong>
+              {visibleComparison!.map((layer) => (
+                <span key={layer.role}>
+                  <i style={{ background: layer.colour }} />
+                  {layer.role === 'warnings'
+                    ? 'Protected warnings'
+                    : layer.role === 'added'
+                      ? 'Added'
+                      : layer.role === 'removed'
+                        ? 'Removed'
+                        : 'Candidate'}
+                </span>
+              ))}
+              {!visibleComparison!.length && (
+                <span>No labelled voxels in this overlay</span>
+              )}
+            </div>
+          )}
           {study.reviewTargetIds.length > 0 && (
             <small className="local-draft-badge">
               Draft review study · {study.reviewTargetIds.length} unapproved
@@ -716,6 +957,7 @@ function LoadedStudy({
                   guides={guides}
                   choose={choose}
                   onFailure={onSceneFailure}
+                  comparison={visibleComparison}
                 />
               )}
             </div>
@@ -732,6 +974,7 @@ function LoadedStudy({
                 marks={marks}
                 pick={pick}
                 move={setFocus}
+                comparison={visibleComparison}
               />
             </div>
           ))}

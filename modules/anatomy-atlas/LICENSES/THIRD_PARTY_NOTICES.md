@@ -1,5 +1,9 @@
 # Third-party notices
 
+## Private CT/3D comparison attachment — 12 September 2026
+
+The exporter, reader, controls and synthetic tests are original MIT code. They reuse the already audited local NumPy, NiBabel and scikit-image distributions and existing React/Three.js runtime; no new package, font, dataset, model weights, texture or paid API is introduced. Generated owner-data masks/surfaces stay private and retain their data-use restrictions. This code does not grant publication rights over patient-derived anatomy. Existing notices remain applicable.
+
 ## Private mask comparison helper — 12 September 2026
 
 The candidate-versus-baseline comparison and synthetic tests are original MIT code. They reuse the same locally installed NumPy/NiBabel distributions recorded under the local CT pilot below; no new package, model weights, image dataset, Slicer binary, third-party figure or paid service is redistributed. The helper creates only private owner-data derivatives and does not relicense or grant publication rights to those data. Links to the official NiBabel affine/header documentation are factual implementation references, not copied source assets. See [scope and validation limits](../docs/LOCAL_MASK_COMPARISON.md).
