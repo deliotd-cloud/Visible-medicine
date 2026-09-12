@@ -11,7 +11,7 @@ test('pelvic export inventory binds the single original model and excludes priva
   const manifest = JSON.parse(await readFile(new URL('manifest.json',runtime),'utf8'));
   assert.match(manifest.sourceCommit,/^[a-f0-9]{40}$/);
   assert.equal(manifest.region,'independent-female-pelvis');
-  assert.equal(manifest.structures,41); assert.equal(manifest.studies,8); assert.equal(manifest.draftTeachingSelections,31);
+  assert.equal(manifest.structures,41); assert.equal(manifest.studies,8); assert.equal(manifest.draftTeachingSelections,41);
   for (const key of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection']) assert.equal(manifest[key],false);
   const found:string[] = [];
   async function walk(base:URL,prefix='') {
@@ -58,7 +58,8 @@ test('catalogue has one pelvic module with clear coverage and no claimed scan co
   assert.equal((page.match(/<iframe\b/g)||[]).length,1);
   assert(page.includes('src="/atlas-runtime/female-pelvis/index.html"'));
   assert(page.includes('No scan or spatial registration is connected'));
-  assert(page.includes('Ten selections still need teaching'));
+  assert(page.includes('introductory draft teaching for all 41 selections'));
+  assert(page.includes('Imaging-topic coverage remains partial and clinical review is pending'));
   assert(page.includes('lecture access remains separate'));
   assert(!page.includes('postMessage') && !page.includes('iframe src={'));
   const frame = await readFile(new URL('../components/SiteFrame.tsx',import.meta.url),'utf8');
