@@ -32,6 +32,10 @@ export type ComparisonLayer = Pick<
 };
 export type LocalComparison = {
   structureId: string;
+  sourceAnnotationSha256: string;
+  sourceCtSha256: string;
+  baselineMaskSha256: string;
+  requestSha256: string;
   candidateMaskSha256: string;
   comparisonManifestSha256: string;
   counts: Readonly<Record<'baseline' | ComparisonRole, number>>;
@@ -393,6 +397,10 @@ export async function readLocalComparison(
     });
   return Object.freeze({
     structureId: baseline.id,
+    sourceAnnotationSha256: h.sourceAnnotationSha256,
+    sourceCtSha256: h.sourceCtSha256,
+    baselineMaskSha256: h.baselineMaskSha256,
+    requestSha256: h.requestSha256,
     candidateMaskSha256: h.candidateMaskSha256,
     comparisonManifestSha256: h.comparisonManifestSha256,
     counts: Object.freeze({ ...h.counts }),

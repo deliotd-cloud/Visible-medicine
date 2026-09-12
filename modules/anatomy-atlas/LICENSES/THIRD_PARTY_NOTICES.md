@@ -1,5 +1,9 @@
 # Third-party notices
 
+## Private candidate feedback — 12 September 2026
+
+Candidate review/export/import code and synthetic tests are original MIT code, reusing the existing audited React, Three.js, NumPy, NiBabel and scikit-image environment plus the prior Slicer Markups JSON contract. No Slicer binary, new dependency, model, font, diagram, dataset or paid service is redistributed. User-owned feedback and candidate anatomy remain private and are not relicensed for publication by these tools. Existing licence obligations remain unchanged.
+
 ## Private CT/3D comparison attachment — 12 September 2026
 
 The exporter, reader, controls and synthetic tests are original MIT code. They reuse the already audited local NumPy, NiBabel and scikit-image distributions and existing React/Three.js runtime; no new package, font, dataset, model weights, texture or paid API is introduced. Generated owner-data masks/surfaces stay private and retain their data-use restrictions. This code does not grant publication rights over patient-derived anatomy. Existing notices remain applicable.

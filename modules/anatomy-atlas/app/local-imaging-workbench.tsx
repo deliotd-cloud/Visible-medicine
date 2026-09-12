@@ -25,6 +25,7 @@ import {
   type Vec3,
 } from '@/lib/volume-reslice';
 import type { ImagePlane } from '@/lib/imaging-comparison';
+import { localCandidateReviewExport } from '@/lib/local-candidate-review';
 import {
   readLocalComparison,
   comparisonLayers,
@@ -400,7 +401,7 @@ function SlicePane({
                   {label}
                 </span>
               ))}
-              {(comparison ? [] : marks)
+              {marks
                 .filter((m) => m.structureId === selected.id)
                 .map((m, i) => {
                   const p = localCrosshair(g, m.lps);
@@ -462,6 +463,7 @@ export function LoadedStudy({
   const [tab, setTab] = useState('3d'),
     [mode, setMode] = useState<Mode>('navigate'),
     [marks, setMarks] = useState<LocalReviewMark[]>([]),
+    [candidateMarks, setCandidateMarks] = useState<LocalReviewMark[]>([]),
     [message, setMessage] = useState('');
   const [comparison, setComparison] = useState<LocalComparison | null>(null),
     [comparisonMode, setComparisonMode] = useState<ComparisonMode>('baseline'),
@@ -483,18 +485,30 @@ export function LoadedStudy({
       activeComparison ? comparisonLayers(comparison, comparisonMode) : null,
     [activeComparison, comparison, comparisonMode],
   );
+  const reviewMarks = activeComparison ? candidateMarks : marks;
+  const setReviewMarks = activeComparison ? setCandidateMarks : setMarks;
+  const reviewScope = activeComparison ? 'Candidate' : 'Baseline';
   const clearComparison = () => {
+    if (
+      candidateMarks.length &&
+      !globalThis.confirm(
+        'Remove this candidate and discard its review marks? Export candidate marks first if you want to keep them.',
+      )
+    )
+      return false;
     comparisonGeneration.current++;
     setComparison(null);
     setComparisonMode('baseline');
     setComparisonBusy(false);
     setComparisonError('');
     setMessage('');
+    setCandidateMarks([]);
+    setMode('navigate');
+    return true;
   };
   const loadComparison = async (file?: File) => {
-    clearComparison();
-    setMode('navigate');
     if (!file) return;
+    if (!clearComparison()) return;
     const generation = comparisonGeneration.current;
     if (file.size > LOCAL_COMPARISON_MAX_BYTES) {
       setComparisonError('Comparison exceeds the 64 MiB local-file limit.');
@@ -525,17 +539,18 @@ export function LoadedStudy({
   };
   const onSceneFailure = useCallback(() => setSceneFailed(true), []);
   useEffect(() => {
-    if (!marks.length) return;
+    if (!marks.length && !candidateMarks.length) return;
     const warn = (event: BeforeUnloadEvent) => {
       event.preventDefault();
     };
     globalThis.addEventListener('beforeunload', warn);
     return () => globalThis.removeEventListener('beforeunload', warn);
-  }, [marks.length]);
+  }, [marks.length, candidateMarks.length]);
   const selected = study.structures.find((s) => s.id === id)!;
   const choose = (newId: string, point?: Vec3) => {
     const s = study.structures.find((v) => v.id === newId);
     if (!s) return;
+    if (newId !== id) setMode('navigate');
     if (comparison && newId !== comparison.structureId)
       setComparisonMode('baseline');
     setId(s.id);
@@ -546,41 +561,51 @@ export function LoadedStudy({
     if (index.some((n, i) => n < -0.5 || n >= study.volume.dimensions[i] - 0.5))
       return;
     setFocus(point);
-    if (activeComparison) return; // Candidate feedback must not be attributed to a baseline mask.
     if (mark && mode !== 'navigate') {
-      if (marks.length >= 500) {
+      if (reviewMarks.length >= 500) {
         setMessage(
           'Export these review marks, then clear them before adding more.',
         );
         return;
       }
-      setMarks((old) => [
+      setReviewMarks((old) => [
         ...old,
         {
           structureId: selected.id,
-          maskSha256: selected.sourceSha256,
+          maskSha256: activeComparison
+            ? comparison.candidateMaskSha256
+            : selected.sourceSha256,
           action: mode,
           lps: point,
         },
       ]);
-      setMessage('Review mark added. The source mask is unchanged.');
+      setMessage(`${reviewScope} review mark added. No masks changed.`);
       return;
     }
+    if (activeComparison) return;
     const hit = pickLocalStructure(study, point, selected.id);
     if (hit) setId(hit.id);
   };
   const exportMarks = () => {
-    const text = JSON.stringify(localReviewExport(study, marks), null, 2);
+    const text = JSON.stringify(
+      activeComparison
+        ? localCandidateReviewExport(study, comparison, candidateMarks)
+        : localReviewExport(study, marks),
+      null,
+      2,
+    );
     const url = URL.createObjectURL(
       new Blob([text], { type: 'application/json' }),
     );
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'visible-medicine-local-review.json';
+    a.download = activeComparison
+      ? 'visible-medicine-candidate-review.json'
+      : 'visible-medicine-local-review.json';
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
     setMessage(
-      'Review marks exported locally; no mask edits or approvals were made.',
+      `${reviewScope} review marks exported locally; no mask edits or approvals were made.`,
     );
   };
   return (
@@ -804,21 +829,22 @@ export function LoadedStudy({
             if (!e.currentTarget.open) setMode('navigate');
           }}
         >
-          <summary>Mark corrections · {marks.length}</summary>
+          <summary>Mark corrections · {reviewMarks.length}</summary>
           <p>
-            Mark tissue to include or exclude for later review. This does not
-            edit or approve masks.
+            <strong>Reviewing: {reviewScope}</strong> · {selected.label}.
+            Include/exclude points are review hints, not mask edits or
+            approvals.
           </p>
-          {activeComparison && (
+          {comparison && (
             <p>
-              Switch to Baseline to add correction marks. Existing marks refer
-              only to the original mask.
+              Baseline: {marks.length} marks · Candidate:{' '}
+              {candidateMarks.length} marks. Switch the comparison overlay to
+              review the other version; exports stay separate.
             </p>
           )}
           <label>
             Click action
             <select
-              disabled={Boolean(activeComparison)}
               value={mode}
               onChange={(e) => setMode(e.target.value as Mode)}
             >
@@ -829,29 +855,32 @@ export function LoadedStudy({
           </label>
           <Button
             variant="outline"
-            disabled={!marks.length}
-            onClick={() => setMarks((old) => old.slice(0, -1))}
+            disabled={!reviewMarks.length}
+            onClick={() => setReviewMarks((old) => old.slice(0, -1))}
           >
             Undo mark
           </Button>
           <Button
             variant="outline"
-            disabled={!marks.length}
+            disabled={!reviewMarks.length}
             onClick={exportMarks}
           >
             Export review marks
           </Button>
           <Button
             variant="outline"
-            disabled={!marks.length}
+            disabled={!reviewMarks.length}
             onClick={() => {
               if (
                 globalThis.confirm(
-                  'Clear all review marks? Export them first if you want to keep them.',
+                  `Clear ${reviewScope.toLowerCase()} review marks only? Export them first if you want to keep them.`,
                 )
               ) {
-                setMarks([]);
-                setMessage('Review marks cleared. Source masks are unchanged.');
+                setReviewMarks([]);
+                setMode('navigate');
+                setMessage(
+                  `${reviewScope} marks cleared. Source masks are unchanged.`,
+                );
               }
             }}
           >
@@ -871,7 +900,7 @@ export function LoadedStudy({
           variant="outline"
           onClick={() => {
             if (
-              !marks.length ||
+              (!marks.length && !candidateMarks.length) ||
               globalThis.confirm(
                 'Close this study and discard its review marks? Export them first if you want to keep them.',
               )
@@ -971,7 +1000,7 @@ export function LoadedStudy({
                 selected={selected}
                 window={window}
                 opacity={opacity}
-                marks={marks}
+                marks={reviewMarks}
                 pick={pick}
                 move={setFocus}
                 comparison={visibleComparison}

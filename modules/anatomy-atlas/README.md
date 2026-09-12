@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Candidate correction feedback:** [Review and export baseline/candidate marks separately](docs/LOCAL_CANDIDATE_REVIEW.md), then return source-checked candidate points to Slicer without editing or approving segmentation masks. The existing correction panel identifies which version is active; removing a marked candidate requires confirmation.
+
 **Private CT correction review:** [Compare a candidate mask against its saved baseline](docs/LOCAL_MASK_COMPARISON.md), then open a separate `.vmcompare` attachment in the local CT/3D workbench. Switch between baseline, candidate, additions/removals and protected-region warnings. Original masks and approval states stay unchanged; no scan is uploaded. Hosted availability depends on publication of this revision; consult the external checkpoint for deployment status.
 
 **PICA / Right MCA → Explore artery components:** [Separate 29 original source-file parts](docs/CRANIAL_ARTERY_COMPONENTS.md) with selection, hide/show, three separation mechanisms, cutaway, Undo/Redo and side-aware study links. Every parent triangle and rendered normal is preserved; these are unnamed source partitions, not newly claimed branches. Advanced controls remain collapsed and the source list scrolls beside the model.

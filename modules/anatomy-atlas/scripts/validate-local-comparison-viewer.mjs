@@ -1,10 +1,10 @@
 /* oxlint-disable react-hooks/rules-of-hooks, react-hooks/exhaustive-deps -- Controlled real component callbacks; no browser/GPU validation. */
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import { createHash, webcrypto } from 'node:crypto';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
-import { resolve } from 'node:path';
+import { resolve, dirname } from 'node:path';
 import { build } from './workspace-component-test-build.mjs';
 const directory = process.argv[2];
 if (!directory)
@@ -16,7 +16,7 @@ const require = createRequire(import.meta.url),
 const Link = await import('vinext/shims/link');
 const compiled = await build({
   stdin: {
-    contents: `export * from './lib/local-mask-comparison'; export * from './lib/local-imaging-study'; export {LoadedStudy} from './app/local-imaging-workbench';`,
+    contents: `export * from './lib/local-mask-comparison'; export * from './lib/local-imaging-study'; export * from './lib/local-candidate-review'; export {LoadedStudy} from './app/local-imaging-workbench';`,
     resolveDir: process.cwd(),
     loader: 'tsx',
   },
@@ -88,6 +88,7 @@ const env = {
   console,
   URL,
   Blob,
+  confirm: () => false,
   fetch() {
     throw Error('Unexpected network request');
   },
@@ -122,6 +123,70 @@ const hash = (data) => createHash('sha256').update(data).digest('hex');
 const baselineHash = hash(baselineBytes);
 const study = await api.readLocalStudy(ab(baselineBytes));
 const parsed = await api.readLocalComparison(ab(bytes), study);
+const candidatePoint = parsed.layers.find((l) => l.role === 'candidate')
+  .focuses[0].lps;
+const candidateMark = {
+  structureId: parsed.structureId,
+  maskSha256: parsed.candidateMaskSha256,
+  action: 'include',
+  lps: candidatePoint,
+};
+const candidateFeedback = api.localCandidateReviewExport(study, parsed, [
+  candidateMark,
+  { ...candidateMark, action: 'exclude' },
+]);
+same(candidateFeedback.schema, 'vm-local-candidate-review/1');
+same(candidateFeedback.candidateMaskSha256, parsed.candidateMaskSha256);
+same(candidateFeedback.baselineMaskSha256, parsed.baselineMaskSha256);
+same(
+  candidateFeedback.comparisonManifestSha256,
+  parsed.comparisonManifestSha256,
+);
+same(candidateFeedback.marks[0].lps, candidatePoint);
+same(candidateFeedback.approval, false);
+checks++;
+assert.notEqual(candidateFeedback.marks[0].lps, candidatePoint);
+for (const altered of [
+  { ...candidateMark, maskSha256: parsed.baselineMaskSha256 },
+  { ...candidateMark, structureId: 'cth.foreign' },
+  { ...candidateMark, action: 'approve' },
+  { ...candidateMark, lps: [NaN, 0, 0] },
+  { ...candidateMark, lps: [1e6, 0, 0] },
+]) {
+  checks++;
+  assert.throws(() => api.localCandidateReviewExport(study, parsed, [altered]));
+}
+for (const altered of [
+  { ...parsed, baselineMaskSha256: '0'.repeat(64) },
+  { ...parsed, sourceCtSha256: '0'.repeat(64) },
+  { ...parsed, sourceAnnotationSha256: '0'.repeat(64) },
+  { ...parsed, comparisonManifestSha256: 'invalid' },
+  { ...parsed, requestSha256: 'invalid' },
+]) {
+  checks++;
+  assert.throws(() =>
+    api.localCandidateReviewExport(study, altered, [candidateMark]),
+  );
+}
+for (const marks of [[], Array(501).fill(candidateMark)]) {
+  checks++;
+  assert.throws(() => api.localCandidateReviewExport(study, parsed, marks));
+}
+checks++;
+assert.throws(() => api.localReviewExport(study, [candidateMark]));
+if (process.argv[3] === '--write-feedback') {
+  const output = resolve(process.argv[4]);
+  assert.equal(dirname(output), resolve(directory));
+  await writeFile(output, JSON.stringify(candidateFeedback), { flag: 'wx' });
+  console.log(
+    JSON.stringify({
+      syntheticCandidateFeedbackExported: true,
+      checks,
+      clinicalApprovalAdded: false,
+    }),
+  );
+  process.exit(0);
+}
 same(parsed.counts, {
   baseline: 2,
   candidate: 2,
@@ -351,14 +416,76 @@ check(text(tree).includes('Mark corrections · 1'));
 load(file(bytes));
 await settled();
 check(text(tree).includes('Unapproved comparison'));
-check(select('Click action').props.disabled);
+check(!select('Click action').props.disabled);
+check(text(tree).includes('Reviewing: Candidate'));
 same(
   slice().props.comparison.map((l) => l.role),
   ['added', 'removed'],
 );
 slice().props.pick(first, true);
 tree = render();
-check(text(tree).includes('Mark corrections · 1'));
+check(text(tree).includes('Mark corrections · 0')); // Switching version resets marking to navigation.
+select('Click action').props.onChange({ target: { value: 'exclude' } });
+tree = render();
+slice().props.pick(first, true);
+tree = render();
+same(slice().props.marks.length, 1);
+same(slice().props.marks[0].maskSha256, parsed.candidateMaskSha256);
+check(text(tree).includes('Baseline: 1 marks · Candidate: 1 marks'));
+// Actual local download callback: no network or persistence is substituted.
+let downloaded, downloadName;
+env.URL = {
+  createObjectURL(blob) {
+    downloaded = blob;
+    return 'blob:synthetic-review';
+  },
+  revokeObjectURL() {},
+};
+env.document = {
+  createElement() {
+    return {
+      click() {
+        downloadName = this.download;
+      },
+    };
+  },
+};
+button('Export review marks').props.onClick();
+same(downloadName, 'visible-medicine-candidate-review.json');
+same(JSON.parse(await downloaded.text()).schema, 'vm-local-candidate-review/1');
+const candidateSlots = slots;
+slots = [];
+cursor = 0;
+active = true;
+const candidatePane = slice().type(slice().props);
+active = false;
+slots = candidateSlots;
+const glyphs = all(candidatePane).filter(
+  (n) => n.props?.className === 'local-review-point',
+);
+same(glyphs.length, 1);
+same(glyphs[0].props['data-action'], 'exclude');
+select('Click action').props.onChange({ target: { value: 'include' } });
+tree = render();
+slice().props.pick(first, true);
+tree = render();
+same(slice().props.marks.length, 2);
+button('Undo mark').props.onClick();
+tree = render();
+same(slice().props.marks.length, 1);
+button('Clear marks').props.onClick();
+tree = render();
+same(slice().props.marks.length, 1);
+env.confirm = () => true;
+button('Clear marks').props.onClick();
+tree = render();
+same(slice().props.marks.length, 0);
+check(text(tree).includes('Baseline: 1 marks · Candidate: 0 marks'));
+select('Click action').props.onChange({ target: { value: 'exclude' } });
+tree = render();
+slice().props.pick(first, true);
+tree = render();
+env.confirm = () => false;
 const scene = all(tree).find(
   (n) => typeof n.type === 'function' && n.type.name === 'StudyScene',
 );
@@ -396,9 +523,25 @@ select('Comparison overlay').props.onChange({ target: { value: 'baseline' } });
 tree = render();
 same(slice().props.comparison, null);
 check(!select('Click action').props.disabled);
+check(text(tree).includes('Reviewing: Baseline'));
+same(slice().props.marks.length, 1);
+same(slice().props.marks[0].maskSha256, parsed.baselineMaskSha256);
+button('Export review marks').props.onClick();
+same(downloadName, 'visible-medicine-local-review.json');
+same(JSON.parse(await downloaded.text()).schema, 'vm-local-review/1');
 button('Next changed slice').props.onClick();
 tree = render();
 same(select('Comparison overlay').props.value, 'changes');
+button('Remove comparison').props.onClick();
+tree = render();
+check(slice().props.comparison); // Declining discard preserves candidate and marks.
+same(slice().props.marks.length, 1);
+load(file(bytes));
+tree = render();
+same(slice().props.marks.length, 1); // Replacement also requires explicit discard.
+button('Close local study').props.onClick();
+same(closed, 0);
+env.confirm = () => true;
 button('Remove comparison').props.onClick();
 tree = render();
 same(slice().props.comparison, null);
@@ -440,6 +583,9 @@ tree = render();
 same(slice().props.comparison, null);
 load(undefined);
 tree = render();
+check(text(tree).includes('Compare candidate · loaded')); // Cancelling the chooser preserves the attachment.
+button('Remove comparison').props.onClick();
+tree = render();
 check(!text(tree).includes('Unapproved comparison'));
 load({
   size: bytes.length,
@@ -455,6 +601,39 @@ await new Promise((r) => setTimeout(r, 30));
 tree = render();
 check(!text(tree).includes('Unapproved comparison'));
 same(hash(baselineBytes), baselineHash);
+// Candidate-only feedback also guards study closure and page unload.
+slots = [];
+tree = render();
+load(file(bytes));
+await settled();
+select('Click action').props.onChange({ target: { value: 'include' } });
+tree = render();
+slice().props.pick(first, true);
+tree = render();
+check(text(tree).includes('Baseline: 0 marks · Candidate: 1 marks'));
+env.confirm = () => false;
+button('Close local study').props.onClick();
+same(closed, 0);
+let unloadHandler, removedHandler;
+env.addEventListener = (event, fn) => {
+  if (event === 'beforeunload') unloadHandler = fn;
+};
+env.removeEventListener = (event, fn) => {
+  if (event === 'beforeunload') removedHandler = fn;
+};
+const cleanup = effects[1]();
+let prevented = false;
+unloadHandler({
+  preventDefault() {
+    prevented = true;
+  },
+});
+check(prevented);
+cleanup();
+check(removedHandler === unloadHandler);
+env.confirm = () => true;
+button('Close local study').props.onClick();
+same(closed, 1);
 console.log(
   JSON.stringify({
     schema: 'vm-local-comparison-viewer-validation/1',

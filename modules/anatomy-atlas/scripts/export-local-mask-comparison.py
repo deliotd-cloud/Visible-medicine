@@ -21,13 +21,11 @@ MAX_BYTES = 64 * 1024 * 1024
 COLOURS = {'candidate': '#65a9e8', 'added': '#39c992', 'removed': '#ff6d85', 'warnings': '#f5ca60'}
 
 
-def package_comparison(state_path, request_path, comparison_dir, output, allow_drafts=()):
+def verify_comparison(state_path, request_path, comparison_dir, allow_drafts=()):
+    """Shared source verification for attachments and candidate feedback; never writes."""
     checkpoint = load_checkpoint(state_path)
     request, candidate, regions, request_sha = comparison.request_inputs(checkpoint, request_path)
     directory = Path(comparison_dir).resolve(strict=True)
-    output = Path(output).resolve()
-    if output.exists() or output.suffix != '.vmcompare' or inside(output, REPO) or inside(output, checkpoint['base']) or inside(output, Path(state_path).resolve().parent) or inside(output, directory):
-        raise ValueError('Use a new private comparison package outside source/review directories')
     manifest_path = directory / 'COMPARISON_MANIFEST.json'
     manifest_sha = digest(manifest_path)
     saved = read_json(manifest_path)
@@ -51,6 +49,20 @@ def package_comparison(state_path, request_path, comparison_dir, output, allow_d
             if not np.array_equal(np.asanyarray(image.dataobj), expected_labels):
                 raise ValueError('Comparison map differs from its source inputs')
     candidate_mask, _ = comparison.external_mask(candidate['path'], candidate['sha256'], checkpoint['image'], checkpoint['pins'])
+    unchanged(checkpoint)
+    return {'checkpoint': checkpoint, 'request': request, 'report': report, 'candidate': candidate,
+            'candidate_mask': candidate_mask, 'changes': changes, 'warnings': warnings,
+            'request_sha': request_sha, 'manifest_sha': manifest_sha}
+
+
+def package_comparison(state_path, request_path, comparison_dir, output, allow_drafts=()):
+    verified = verify_comparison(state_path, request_path, comparison_dir, allow_drafts)
+    checkpoint, request, report, candidate = [verified[key] for key in ['checkpoint', 'request', 'report', 'candidate']]
+    candidate_mask, changes, warnings = [verified[key] for key in ['candidate_mask', 'changes', 'warnings']]
+    request_sha, manifest_sha = verified['request_sha'], verified['manifest_sha']
+    output = Path(output).resolve()
+    if output.exists() or output.suffix != '.vmcompare' or inside(output, REPO) or inside(output, checkpoint['base']) or inside(output, Path(state_path).resolve().parent) or inside(output, Path(comparison_dir).resolve()):
+        raise ValueError('Use a new private comparison package outside source/review directories')
     if any(n > 4096 for n in checkpoint['image'].shape):
         raise ValueError('Grid exceeds browser study limit')
     summary = {name: report['summaries'][name]['voxels'] for name in ['baseline', 'candidate', 'added', 'removed']}

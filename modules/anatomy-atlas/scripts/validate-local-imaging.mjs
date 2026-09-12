@@ -274,7 +274,7 @@ try {
     ),
   );
   truth(source.includes('beforeunload'));
-  truth(source.includes('source mask is unchanged'));
+  truth(source.includes('No masks changed.'));
   // Optional actual private package: prints only aggregate QA, never pixels or identifiers.
   const pathIndex = process.argv.indexOf('--study');
   let privateStudy = null;
