@@ -17,6 +17,9 @@
 .um-knee-groups small { margin-left: auto; font-size: .8125rem; color: var(--muted-foreground); }
 .um-knee-toggle { display: flex; align-items: center; justify-content: space-between; gap: .5rem; min-height: 36px; }
 .um-knee-list li > button:first-child { height: auto; min-height: 36px; white-space: normal; text-align: left; font-size: .875rem; }
+.um-specimen-search-status { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .25rem .5rem; }
+.um-specimen-search-status p { flex: 1 1 10rem; }
+.um-specimen-search-status button { min-height: 36px; white-space: normal; }
 .um-knee-source-id { overflow-wrap: anywhere; }
 .um-source-caution { border-left: 2px solid var(--primary); padding-left: .5rem; }
 .um-specimen-link-warning { padding: 1rem; max-width: 46rem; line-height: 1.6; }

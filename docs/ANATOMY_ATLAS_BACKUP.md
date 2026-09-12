@@ -1,6 +1,18 @@
 # Anatomy atlas backup — 12 September 2026
 
-## 12 September 2026 — independent back-layer dissection (current source)
+## 12 September 2026 — source-scoped specimen search (current source)
+
+Source `28c9486ed698848aa0d7b32e97dcd214413aa359`, tree `ed77f5c2c468fb3a91b3f0e08d288f68eab4e568`, parent `852d5aa38c3d39f7e5d331ba8b163f46860ab821`. Nine exact changed paths mirrored; no geometry, teaching, source-admission, licence, dependency, auth, database or entitlement change. All earlier back-layer and regional work is included.
+
+Existing Tissues & search now accepts words in any order, sides, original source names/local IDs and exact assigned FMA IDs across eight independent scopes. Match/hidden counts and Clear search appear only while querying. Search itself preserves dissection, camera and visibility; explicit hidden selection retains Undo. No cross-donor alias or ontology mapping is invented. This implements the compact-navigation audit recommendation without another permanent toolbar.
+
+Passed: 1,375 source-search/component checks, 1,424 back-layer checks, 3,668 lower-limb navigation checks, 661 abdominal practice checks, HRA 41-surface/eight-study validation, TypeScript, production build, requirement freshness and authored whitespace. HRA validation used retained local geometry, not a fresh external-original download. Renderer fingerprint `c248715823e4814daccd9c7d01fe3a47ab5d01cb8d963dbdfbc58eff8f3f4cfe` covers 374 inputs. All 121 delivery GLBs decode unchanged. No browser/GPU/mobile/physical-focus or clinical acceptance; the preexisting model-first snapshot failure was not changed or claimed passing.
+
+D: recovery stem `atlas-specimen-search-2026-09-12`: runtime archive 119,072,078 bytes / SHA256 `e3793560cec09dca25c443c454300d79d87cd6f62dfbee32d058a67a8a970786`; delta 215,040 bytes / `faf6cac9ed38474c7005396ef6ff8583703794c81b6043f8942fc8be320d7347`; incremental bundle 7,209 bytes / `b4d400a7ff98c0dd05bf984cab33f48ca0a4926b15fbfdc46dc50b7efd29a69e`. Independent bundle restore/fsck verifies the exact source tree; archive has 422 safe entries, the correct hosting manifest and both unchanged migrations. Prior recovery artifacts remain intact.
+
+Private publishing was attempted after source push, but the archive upload timed out after 60 seconds; no new published version is claimed. Latest previously verified live version is 171 (upper-limb vascular imaging). Back layers and this search improvement remain saved source rather than confirmed live work. Source backups do not include conversation history, live database/review records, accounts, patient scans or separate lectures. The improvement goal remains active; continue substantive regional anatomy/function and cleared source work, preserving clinical/device and authorized-imaging gates.
+
+## 12 September 2026 — independent back-layer dissection (previous source)
 
 Source `852d5aa38c3d39f7e5d331ba8b163f46860ab821`, tree `bd8e6ba9d4dcb2079b6b6dcf313d7463140c630d`, parent `b4d84f2a6e533bbd058478812e9683e309a05bbf`. Seventy-six exact source paths mirrored. Full module audit: 1,914 matching files / 478,817,926 bytes / 126 retained GLBs; zero common credential-signature warnings (not exhaustive). Existing source models, root catalogue, root teaching/recipes, database, auth and entitlements are unchanged.
 

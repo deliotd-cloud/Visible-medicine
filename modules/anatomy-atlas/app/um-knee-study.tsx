@@ -2,7 +2,6 @@
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState, type ReactNode } from 'react';
 import { ArrowLeft, Focus, RotateCcw, Tags, Undo2, Redo2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Switch } from '@/components/ui/switch';
 import { Slider } from '@/components/ui/slider';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -16,7 +15,8 @@ import { initialInspection } from '@/lib/inspection-state';
 import { rendererReady, type RendererHealth } from '@/lib/renderer-health';
 import { kneeTissueColours } from '@/lib/um-knee-study';
 import { kneeDefinition } from '@/lib/um-limb-studies';
-import { initialSpecimen, reduceSpecimen, activeSpecimenStudy, specimenAction, filterSpecimen, type SpecimenDefinition, type SpecimenAction, type SpecimenSurface } from '@/lib/independent-specimen';
+import { initialSpecimen, reduceSpecimen, activeSpecimenStudy, specimenAction, type SpecimenDefinition, type SpecimenAction, type SpecimenSurface } from '@/lib/independent-specimen';
+import { SpecimenStructureSearch } from './specimen-structure-search';
 import type { VentricularState } from '@/lib/ventricles';
 import { createIdentification, type IdentificationState } from '@/lib/um-limb-teaching';
 import { SpecimenLearning, SpecimenIdentification } from './um-limb-learning';
@@ -71,7 +71,6 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
   const practiceAdapter = supplement?.identification;
   const practiceCount = practiceAdapter ? practiceAdapter.eligibleIds(specimen, visible.map(s => s.id)).length : supplement ? 0 : visible.length;
   useEffect(() => { if (ready && !practice && restorePracticeFocus.current) { practiceLauncher.current?.focus(); restorePracticeFocus.current = false; } }, [ready, practice]);
-  const results = filterSpecimen(specimen, query);
   const appearance = useMemo(() => Object.fromEntries(specimen.surfaces.map((s) => [s.id, { color: supplement?.colors[s.id] ?? kneeTissueColours[s.tissue], opacity: 1 }])), [specimen, supplement]);
   function assembledDisplay() {
     setExplode(0); setIsolated(false); setFocus(false); setZoom(1); setReset((n) => n + 1);
@@ -174,12 +173,9 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
               dispatch({ type: 'group', tissue: group.id, visible: checked }); setFocus(false);
             }} /></label>;
         })}</div>
-        <Input aria-label={`Search ${specimen.label.toLowerCase()} specimen structures`} placeholder="Find a tissue…" value={query} onChange={(e) => setQuery(e.target.value)} />
-        <ul className="eye-layer-list um-knee-list">{results.map((s) => <li key={s.id}>
-          <Button size="sm" variant={selectedId === s.id ? 'secondary' : 'ghost'} aria-pressed={selectedId === s.id} onClick={() => select(s.id)}>{s.name}</Button>
-          <Switch checked={!hidden.includes(s.id)} aria-label={`Show ${s.name}`} onCheckedChange={(visible) => { dispatch({ type: 'visibility', id: s.id, visible }); setFocus(false); }} />
-        </li>)}</ul>
-        {!results.length && <p>No matching tissue in this specimen.</p>}
+        <SpecimenStructureSearch specimen={specimen} query={query} onQueryChange={setQuery}
+          selectedId={selectedId} hidden={hidden} onSelect={select}
+          onVisibility={(id, visible) => { dispatch({ type: 'visibility', id, visible }); setFocus(false); }} />
       </details>
       <details className="um-knee-details"><summary>Display options</summary>
         {specimen.closeUp && <><label className="um-knee-toggle">Regional close-up<Switch checked={jointCloseUp} onCheckedChange={(v) => { setJointCloseUp(v); setFocus(false); }} /></label>

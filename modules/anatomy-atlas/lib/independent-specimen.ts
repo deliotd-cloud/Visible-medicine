@@ -1,6 +1,7 @@
 import type { BodyCatalog, BodyStructure, Vec3 } from '../app/body-types';
 import type { DissectionView } from '../app/dissection-data';
 import { initialVentricles, reduceVentricles, type VentricularAction, type VentricularState } from './ventricles';
+import { normalizeAnatomySearch } from './anatomy-search';
 export type SpecimenSurface = {
   id: string; slug: string; name: string; sourceName: string; fmaId: string | null;
   tissue: string; laterality: string; bundle: string; nodeName: string;
@@ -64,4 +65,18 @@ export function initialSpecimen(specimen: SpecimenDefinition) {
 export function activeSpecimenStudy(specimen: SpecimenDefinition, hidden: string[]) {
   return specimen.studies.find((s) => specimen.surfaces.every((item) => hidden.includes(item.id) === !s.ids.includes(item.id)));
 }
-export const filterSpecimen = (specimen: SpecimenDefinition, query: string) => specimen.surfaces.filter((s) => `${s.name} ${s.slug} ${s.tissue}`.toLowerCase().includes(query.trim().toLowerCase()));
+/** Search only the current specimen's declared metadata, never another donor's aliases. */
+export function filterSpecimen(specimen: SpecimenDefinition, query: string) {
+  const words = normalizeAnatomySearch(query).split(' ').filter(Boolean);
+  if (!words.length) return query.trim() ? [] : [...specimen.surfaces];
+  return specimen.surfaces.filter((surface) => {
+    const text = normalizeAnatomySearch([
+      surface.name, surface.sourceName, surface.slug, surface.tissue,
+      surface.laterality, surface.id, surface.fmaId ?? '',
+    ].join(' '));
+    return words.every((word) => /^fma\d+$/.test(word)
+      // FMA1335 must not silently select FMA13358 or an unmapped specimen.
+      ? normalizeAnatomySearch(surface.fmaId ?? '') === word
+      : text.includes(word));
+  });
+}
