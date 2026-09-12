@@ -1,5 +1,7 @@
 # Visible Medicine production plan
 
+Current coordination and owner decisions are consolidated in [the shared master plan](master-plan.md). In particular, use the separate Didanix **Education/light** technology under the Visible Medicine experience, preserve clinical isolation, and do not interpret the provisional subscription examples below as granting access to every separately paid lecture. Atlas, case and lecture entitlements remain independent.
+
 ## 1. Product model
 
 Visible Medicine should be a standalone Elivion platform, not a branch or screen inside the future clinical PACS. It combines a public learning destination with a paid institutional teaching product while maintaining an unmistakable education and research intended use.

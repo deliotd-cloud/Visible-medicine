@@ -1,5 +1,7 @@
 # Visible Medicine integrated platform architecture
 
+For current cross-product ownership, decisions and delivery gates, start with [the shared master plan](master-plan.md). The chosen imaging technology is the separate Didanix Education/light core, presented as part of Visible Medicine; it does not join the clinical PACS environment. Each separately paid lecture remains independently authorized from the Atlas subscription.
+
 ## Product surfaces
 
 | Surface | Route | Purpose |
