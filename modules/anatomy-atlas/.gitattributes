@@ -31,3 +31,7 @@ content/sources/hra-pelvis/*.json -text
 # Official crosswalk retains byte-exact CRLF and source whitespace.
 content/sources/hra-pelvis/*.csv -text -diff
 docs/hra-pelvic-source-audit.json -text
+# Original renal source metadata/crosswalk and byte-exact audit evidence.
+content/sources/hra-renal/*.json -text
+content/sources/hra-renal/*.csv -text -diff
+docs/hra-renal-source-audit.json -text

@@ -1,0 +1,459 @@
+{
+  "source": {
+    "version": "v1.10",
+    "key": "hra-united-female-v1.10-renal-audit",
+    "url": "https://cdn.humanatlas.io/digital-objects/ref-organ/united-female/v1.10/assets/3d-vh-f-united.glb",
+    "metadataUrl": "https://cdn.humanatlas.io/digital-objects/ref-organ/united-female/v1.10/metadata.json",
+    "crosswalkUrl": "https://cdn.humanatlas.io/digital-objects/ref-organ/united-female/v1.10/assets/crosswalk.csv",
+    "sha256": "95f0c3d2f918582608692ca1139e8bdb18c147a16470e9ee9af8b276bd77c422",
+    "bytes": 374505632,
+    "metadataSha256": "b9f137b1176c31419c68b78ac87f0926f874dad22f56d4dde7df3e2f15bab501",
+    "crosswalkSha256": "2a367d3ad8c1cf1b083c884aed7d99fb3b504d482e1e49570ecdb4f03c84d55f",
+    "credit": "Kristen Browne and Heidi Schlehlein. 3D Reference Organ Set for Female, v1.10. HuBMAP, 2026. Based on the NLM Visible Human Dataset.",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "retainedSourceSha256": "cd61f47dabab9af7510b35a8a446e64de7fcccc053986bc838b93f5753c055fa",
+  "retainedSourceBytes": 4286876,
+  "auditSha256": "afff6ce5b6e0d6ee428d9b181b1ce5bedfc785497816cb46f253c98093ad09bc",
+  "originalNodes": [
+    {
+      "index": 607,
+      "name": "VH_F_kidney_capsule_L",
+      "triangles": 10850
+    },
+    {
+      "index": 608,
+      "name": "VH_F_hilum_of_kidney_L",
+      "triangles": 5927
+    },
+    {
+      "index": 611,
+      "name": "VH_F_renal_papilla_L_a",
+      "triangles": 70
+    },
+    {
+      "index": 612,
+      "name": "VH_F_renal_papilla_L_b",
+      "triangles": 50
+    },
+    {
+      "index": 613,
+      "name": "VH_F_renal_papilla_L_c",
+      "triangles": 42
+    },
+    {
+      "index": 614,
+      "name": "VH_F_renal_papilla_L_d",
+      "triangles": 78
+    },
+    {
+      "index": 615,
+      "name": "VH_F_renal_papilla_L_e",
+      "triangles": 66
+    },
+    {
+      "index": 616,
+      "name": "VH_F_renal_papilla_L_f",
+      "triangles": 72
+    },
+    {
+      "index": 617,
+      "name": "VH_F_renal_papilla_L_g",
+      "triangles": 50
+    },
+    {
+      "index": 618,
+      "name": "VH_F_renal_papilla_L_h",
+      "triangles": 60
+    },
+    {
+      "index": 619,
+      "name": "VH_F_renal_papilla_L_i",
+      "triangles": 62
+    },
+    {
+      "index": 620,
+      "name": "VH_F_renal_papilla_L_j",
+      "triangles": 86
+    },
+    {
+      "index": 621,
+      "name": "VH_F_renal_papilla_L_k",
+      "triangles": 102
+    },
+    {
+      "index": 623,
+      "name": "VH_F_renal_pyramid_L_a",
+      "triangles": 2782
+    },
+    {
+      "index": 624,
+      "name": "VH_F_renal_pyramid_L_b",
+      "triangles": 1008
+    },
+    {
+      "index": 625,
+      "name": "VH_F_renal_pyramid_L_c",
+      "triangles": 668
+    },
+    {
+      "index": 626,
+      "name": "VH_F_renal_pyramid_L_d",
+      "triangles": 1462
+    },
+    {
+      "index": 627,
+      "name": "VH_F_renal_pyramid_L_e",
+      "triangles": 1334
+    },
+    {
+      "index": 628,
+      "name": "VH_F_renal_pyramid_L_f",
+      "triangles": 1730
+    },
+    {
+      "index": 629,
+      "name": "VH_F_renal_pyramid_L_g",
+      "triangles": 2724
+    },
+    {
+      "index": 630,
+      "name": "VH_F_renal_pyramid_L_h",
+      "triangles": 718
+    },
+    {
+      "index": 631,
+      "name": "VH_F_renal_pyramid_L_i",
+      "triangles": 1266
+    },
+    {
+      "index": 632,
+      "name": "VH_F_renal_pyramid_L_j",
+      "triangles": 1292
+    },
+    {
+      "index": 633,
+      "name": "VH_F_renal_pyramid_L_k",
+      "triangles": 1128
+    },
+    {
+      "index": 635,
+      "name": "VH_F_renal_column_L",
+      "triangles": 26115
+    },
+    {
+      "index": 636,
+      "name": "VH_F_outer_cortex_of_kidney_L",
+      "triangles": 13784
+    },
+    {
+      "index": 638,
+      "name": "VH_F_kidney_capsule_R",
+      "triangles": 10642
+    },
+    {
+      "index": 639,
+      "name": "VH_F_hilum_of_kidney_R",
+      "triangles": 4216
+    },
+    {
+      "index": 641,
+      "name": "VH_F_outer_cortex_of_kidney_R",
+      "triangles": 13824
+    },
+    {
+      "index": 642,
+      "name": "VH_F_renal_column_R",
+      "triangles": 23628
+    },
+    {
+      "index": 645,
+      "name": "VH_F_renal_papilla_R_a",
+      "triangles": 122
+    },
+    {
+      "index": 646,
+      "name": "VH_F_renal_papilla_R_b",
+      "triangles": 58
+    },
+    {
+      "index": 647,
+      "name": "VH_F_renal_papilla_R_c",
+      "triangles": 80
+    },
+    {
+      "index": 648,
+      "name": "VH_F_renal_papilla_R_d",
+      "triangles": 72
+    },
+    {
+      "index": 649,
+      "name": "VH_F_renal_papilla_R_e",
+      "triangles": 106
+    },
+    {
+      "index": 650,
+      "name": "VH_F_renal_papilla_R_f",
+      "triangles": 83
+    },
+    {
+      "index": 651,
+      "name": "VH_F_renal_papilla_R_g",
+      "triangles": 124
+    },
+    {
+      "index": 652,
+      "name": "VH_F_renal_papilla_R_h",
+      "triangles": 26
+    },
+    {
+      "index": 653,
+      "name": "VH_F_renal_papilla_R_i",
+      "triangles": 106
+    },
+    {
+      "index": 654,
+      "name": "VH_F_renal_papilla_R_j",
+      "triangles": 78
+    },
+    {
+      "index": 656,
+      "name": "VH_F_renal_pyramid_R_a",
+      "triangles": 2696
+    },
+    {
+      "index": 657,
+      "name": "VH_F_renal_pyramid_R_b",
+      "triangles": 956
+    },
+    {
+      "index": 658,
+      "name": "VH_F_renal_pyramid_R_c",
+      "triangles": 2254
+    },
+    {
+      "index": 659,
+      "name": "VH_F_renal_pyramid_R_d",
+      "triangles": 2234
+    },
+    {
+      "index": 660,
+      "name": "VH_F_renal_pyramid_R_e",
+      "triangles": 2328
+    },
+    {
+      "index": 661,
+      "name": "VH_F_renal_pyramid_R_f",
+      "triangles": 2267
+    },
+    {
+      "index": 662,
+      "name": "VH_F_renal_pyramid_R_g",
+      "triangles": 2454
+    },
+    {
+      "index": 663,
+      "name": "VH_F_renal_pyramid_R_h",
+      "triangles": 2262
+    },
+    {
+      "index": 664,
+      "name": "VH_F_renal_pyramid_R_i",
+      "triangles": 1660
+    },
+    {
+      "index": 665,
+      "name": "VH_F_renal_pyramid_R_j",
+      "triangles": 2862
+    },
+    {
+      "index": 670,
+      "name": "VH_F_minor_calyx_R_a",
+      "triangles": 1060
+    },
+    {
+      "index": 671,
+      "name": "VH_F_minor_calyx_R_b",
+      "triangles": 1220
+    },
+    {
+      "index": 672,
+      "name": "VH_F_minor_calyx_R_c",
+      "triangles": 856
+    },
+    {
+      "index": 673,
+      "name": "VH_F_minor_calyx_R_d",
+      "triangles": 1482
+    },
+    {
+      "index": 674,
+      "name": "VH_F_minor_calyx_R_e",
+      "triangles": 1002
+    },
+    {
+      "index": 675,
+      "name": "VH_F_minor_calyx_R_f",
+      "triangles": 1216
+    },
+    {
+      "index": 676,
+      "name": "VH_F_minor_calyx_R_g",
+      "triangles": 1368
+    },
+    {
+      "index": 677,
+      "name": "VH_F_minor_calyx_R_h",
+      "triangles": 736
+    },
+    {
+      "index": 678,
+      "name": "VH_F_minor_calyx_R_i",
+      "triangles": 1302
+    },
+    {
+      "index": 679,
+      "name": "VH_F_minor_calyx_R_j",
+      "triangles": 2166
+    },
+    {
+      "index": 681,
+      "name": "VH_F_major_calyx_R_a",
+      "triangles": 1218
+    },
+    {
+      "index": 682,
+      "name": "VH_F_major_calyx_R_b",
+      "triangles": 636
+    },
+    {
+      "index": 683,
+      "name": "VH_F_major_calyx_R_c",
+      "triangles": 2090
+    },
+    {
+      "index": 684,
+      "name": "VH_F_renal_pelvis_R",
+      "triangles": 3012
+    },
+    {
+      "index": 685,
+      "name": "VH_F_right_ureter",
+      "triangles": 12952
+    },
+    {
+      "index": 689,
+      "name": "VH_F_minor_calyx_L_a",
+      "triangles": 2272
+    },
+    {
+      "index": 690,
+      "name": "VH_F_minor_calyx_L_b",
+      "triangles": 844
+    },
+    {
+      "index": 691,
+      "name": "VH_F_minor_calyx_L_c",
+      "triangles": 1862
+    },
+    {
+      "index": 692,
+      "name": "VH_F_minor_calyx_L_d",
+      "triangles": 732
+    },
+    {
+      "index": 693,
+      "name": "VH_F_minor_calyx_L_e",
+      "triangles": 1756
+    },
+    {
+      "index": 694,
+      "name": "VH_F_minor_calyx_L_f",
+      "triangles": 1598
+    },
+    {
+      "index": 695,
+      "name": "VH_F_minor_calyx_L_g",
+      "triangles": 910
+    },
+    {
+      "index": 696,
+      "name": "VH_F_minor_calyx_L_h",
+      "triangles": 1706
+    },
+    {
+      "index": 697,
+      "name": "VH_F_minor_calyx_L_i",
+      "triangles": 878
+    },
+    {
+      "index": 698,
+      "name": "VH_F_minor_calyx_L_j",
+      "triangles": 966
+    },
+    {
+      "index": 700,
+      "name": "VH_F_major_calyx_L_a",
+      "triangles": 1644
+    },
+    {
+      "index": 701,
+      "name": "VH_F_major_calyx_L_b",
+      "triangles": 878
+    },
+    {
+      "index": 702,
+      "name": "VH_F_major_calyx_L_c",
+      "triangles": 949
+    },
+    {
+      "index": 703,
+      "name": "VH_F_major_calyx_L_d",
+      "triangles": 1081
+    },
+    {
+      "index": 704,
+      "name": "VH_F_renal_pelvis_L",
+      "triangles": 3206
+    },
+    {
+      "index": 705,
+      "name": "VH_F_left_ureter",
+      "triangles": 14944
+    },
+    {
+      "index": 765,
+      "name": "VH_F_right_renal_artery",
+      "triangles": 3198
+    },
+    {
+      "index": 766,
+      "name": "VH_F_left_renal_artery",
+      "triangles": 5730
+    },
+    {
+      "index": 769,
+      "name": "VH_F_left_renal_vein",
+      "triangles": 2898
+    },
+    {
+      "index": 770,
+      "name": "VH_F_right_renal_vein",
+      "triangles": 1072
+    }
+  ],
+  "verifiedAccessorValues": 1394004,
+  "originalTriangles": 230104,
+  "heldNodes": {
+    "VH_F_outer_cortex_of_kidney_L": "Duplicate/collapsed faces, nonmanifold edges/vertices and inconsistent winding; retain both original components, no automatic repair.",
+    "VH_F_renal_column_R": "Duplicate/collapsed faces, nonmanifold edges/vertices, inconsistent winding and four components; no fragment deletion or replacement.",
+    "VH_F_left_renal_vein": "Nonmanifold vertex and four components, including two tiny fragments; no joining, pruning or assumed vessel continuity."
+  },
+  "candidateSurfaces": 82,
+  "published": false,
+  "admissionApproved": false,
+  "clinicalApproval": false,
+  "patientRegistration": false,
+  "limitation": "Source fidelity and metadata verification only; not complete kidney anatomy, continuous walls/lumens, clinical validation or a rendered product module."
+}

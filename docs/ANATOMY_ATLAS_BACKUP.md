@@ -1,5 +1,20 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 12 September 2026 — original HRA kidney sources (current source; audit only)
+
+Source `30cdc846e6bcfefd191e844a3982ed444ab98a66`, tree `84be80a38c082a86981841b6bb31d8c507ddc0dd`, parent `b3b64a7dac28b781a73f8d13569eed655b30c3c9`. Twelve exact source paths mirrored. This preserves 85 original renal surface representations / 230104 triangles and their official HRA metadata/crosswalk. Three defective sources are held: left outer cortex, right renal columns and left renal vein. The other 82 surfaces / 189794 triangles are candidates, not clinically approved or admitted geometry.
+
+Original source hash and current official metadata match the pinned release. Retained 4286876-byte GLB SHA-256 `cd61f47dabab9af7510b35a8a446e64de7fcccc053986bc838b93f5753c055fa`. All 1394004 index/attribute values match the original audit; 85 embedded ontology IDs match unique source crosswalk rows; identity ancestry verified. The full-source audit and retained-subset checks pass. Source line endings and original assets are preserved. CC BY 4.0 credit/reuse notices remain separate from application MIT terms.
+
+No application renderer, production geometry, teaching, runtime dependency, patient image, registration or access setting changes. No new kidney workbench or live anatomy is claimed. No redundant build/runtime archive/upload attempt for this source-audit-only checkpoint. The prior full runtime recovery remains retained; Sites source main was pushed successfully, separately from deployment.
+
+D stem `D:/VisibleMedicine-Atlas-Recovery/atlas-hra-renal-source-review-2026-09-12`:
+
+- `.delta.tar`: 4802560 bytes, SHA-256 `f2452fc833549444e2c2cb76bac538ebcf47547ee42b03a2c22693b9e6d75b8f`.
+- `.incremental.bundle`: 3492095 bytes, SHA-256 `d83b1ed8a35a2360fdad8a3b10014cc1b9fad5146c949c472eae3213eaef02fd`.
+
+Independent bundle fetch/full fsck verified exact source/tree at `refs/verification/hra-renal-source-review-20260912`, preserving verifier main. Backups cover source/runtime artifacts, not conversations or production private data. Next integrate the source-reviewed renal subset through the compact independent specimen workbench; keep held geometry, donor frames and clinical/imaging/device gates distinct.
+
 ## 12 September 2026 — lower-limb arterial imaging teaching (current source)
 
 Source `b3b64a7dac28b781a73f8d13569eed655b30c3c9`, tree `6808f9c0faf28a518743c2506002b3d7338fc81b`, parent `b5725a6b8cf2fa9028b93a9e3853d864bc874bc3`. Eighteen exact source paths mirrored. Twelve existing sided arteries receive 36 CT/MRI/US draft placements using nine regional/modality texts and six concept-specific cautions. Existing inspector/navigation, all geometry and previous teaching/recipes remain intact. No scan, complete runoff, fibular root mesh, procedural clearance, paid resource access or clinical approval is added.
