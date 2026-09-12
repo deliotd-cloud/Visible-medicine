@@ -7,7 +7,9 @@ import {
   DialogTitle,
   DialogDescription,
 } from '@/components/ui/dialog';
-import { KneeSpecimenView, type SpecimenSupplement } from './um-knee-study';
+import type { SpecimenSupplement } from './um-knee-study';
+import { IndependentStudyView, IndependentStudyLinkControl } from './independent-study-navigation';
+import type { IndependentStudyLink } from '@/lib/independent-study-links';
 import {
   backLayersDefinition,
   backLayersSource,
@@ -46,6 +48,7 @@ export function BackLayersTeaching({
   );
 }
 export const backLayersSupplement: SpecimenSupplement = {
+  studyLink: (definition, selectedId, studyId, view) => <IndependentStudyLinkControl definition={definition} selectedId={selectedId} studyId={studyId} view={view} />,
   colors: backLayersColors,
   identification: backLayersPractice,
   learning: (surface, definition) => (
@@ -106,7 +109,7 @@ export const backLayersSupplement: SpecimenSupplement = {
     </>
   ),
 };
-export default function BackLayersDialog({ onClose }: { onClose: () => void }) {
+export default function BackLayersDialog({ onClose, initialLink }: { onClose: () => void; initialLink?: IndependentStudyLink }) {
   return (
     <Dialog
       open
@@ -138,10 +141,7 @@ export default function BackLayersDialog({ onClose }: { onClose: () => void }) {
             Back to atlas
           </Button>
         </div>
-        <KneeSpecimenView
-          specimen={backLayersDefinition}
-          supplement={backLayersSupplement}
-        />
+        <IndependentStudyView definition={backLayersDefinition} supplement={backLayersSupplement} link={initialLink} />
       </DialogContent>
     </Dialog>
   );

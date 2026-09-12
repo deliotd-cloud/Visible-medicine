@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "scope": "independent-reference-navigation-and-review-software-only",
+  "sourceStudies": 32,
+  "studySelectionRoundTrips": 875,
+  "invalidOrChangedSourceRejections": 116,
+  "reviewScopes": [
+    {
+      "key": "hra-united-female-v1.10-kidneys",
+      "selections": 82
+    },
+    {
+      "key": "hra-united-female-v1.10-pelvis",
+      "selections": 41
+    },
+    {
+      "key": "bp3d3-abdominal-wall",
+      "selections": 29
+    },
+    {
+      "key": "bp3d3-back-layers",
+      "selections": 48
+    },
+    {
+      "key": "um-5t6tz7-v1-2:knee",
+      "selections": 15
+    },
+    {
+      "key": "um-5t6tz7-v1-2:lower-limb:hip-thigh",
+      "selections": 34
+    },
+    {
+      "key": "um-5t6tz7-v1-2:lower-limb:calf",
+      "selections": 15
+    },
+    {
+      "key": "um-5t6tz7-v1-2:lower-limb:foot",
+      "selections": 23
+    },
+    {
+      "key": "um-5t6tz7-v1-2:lower-limb:whole",
+      "selections": 67
+    }
+  ],
+  "reviewSelectionLinks": 354,
+  "distinctSourceIds": 267,
+  "distinctReviewFingerprints": 354,
+  "scenePropChecks": 32,
+  "verifiedModelBundles": 9,
+  "preservedFiles": 21,
+  "sourceGeometryChanged": false,
+  "privateRecordsRead": false,
+  "clinicalApproval": false,
+  "browserGpuTesting": false
+}

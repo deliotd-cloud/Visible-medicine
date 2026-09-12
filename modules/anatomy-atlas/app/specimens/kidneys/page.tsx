@@ -1,12 +1,7 @@
-'use client';
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-const Kidneys = dynamic(() => import('../../hra-renal-study'), { ssr: false, loading: () => <p role="status">Loading kidney study…</p> });
-export default function KidneyStudyPage() {
-  const router = useRouter();
-  return <main className="specimen-linked-page"><h1>Kidney reference study</h1>
-    <Link href="/regions/abdomen">Back to the abdomen atlas</Link>
-    <Kidneys onClose={() => router.push('/regions/abdomen')} />
-  </main>;
+import { parseIndependentStudyLink } from '@/lib/independent-study-links';
+import type { StudySearchParams } from '@/lib/study-links';
+import IndependentLinkedPage from '../independent-linked-page';
+export default async function Page({searchParams}:{searchParams?:Promise<StudySearchParams>}) {
+  const link=parseIndependentStudyLink((await searchParams) ?? {});
+  return <IndependentLinkedPage key={JSON.stringify(link)} kind="kidneys" link={link} />;
 }

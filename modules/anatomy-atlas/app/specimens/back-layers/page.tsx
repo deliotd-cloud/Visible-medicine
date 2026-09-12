@@ -1,20 +1,7 @@
-'use client';
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-const Specimen = dynamic(() => import('../../back-layers-study'), {
-  ssr: false,
-  loading: () => (
-    <p role="status">Preparing the separate back-layer specimen…</p>
-  ),
-});
-export default function BackLayersPage() {
-  const router = useRouter();
-  return (
-    <main className="specimen-linked-page">
-      <h1>Visible Medicine · back layers</h1>
-      <Link href="/regions/spine">Back to spine atlas</Link>
-      <Specimen onClose={() => router.push('/regions/spine')} />
-    </main>
-  );
+import { parseIndependentStudyLink } from '@/lib/independent-study-links';
+import type { StudySearchParams } from '@/lib/study-links';
+import IndependentLinkedPage from '../independent-linked-page';
+export default async function Page({searchParams}:{searchParams?:Promise<StudySearchParams>}) {
+  const link=parseIndependentStudyLink((await searchParams) ?? {});
+  return <IndependentLinkedPage key={JSON.stringify(link)} kind="back-layers" link={link} />;
 }

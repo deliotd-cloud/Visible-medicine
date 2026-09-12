@@ -1,5 +1,19 @@
 # Anatomy atlas backup — 12 September 2026
 
+## 12 September 2026 — exact independent study links and expanded regional reviews (runtime publication pending)
+
+Source `f82bfdf411a10667a1c3aa5f3efdc05e55051ee8`, tree `d3ea14036faee79a097c94538ae98c1fd073a0b2`, parent `3d3909597ce063f3b928c0fff47a1398c6cb5294`. Thirty exact source paths mirrored. Kidneys, female pelvis, back layers and abdominal wall now have source/frame/revision-bound selection and study URLs; all nine independent specimen/region review scopes link to the exact selected structure and back. Selection framing is requested for linked UM studies too. Share/review controls stay collapsed. Review worksheets expose existing attachments and source motor-supply text without adding medical claims.
+
+Coverage:354 scoped review records,267 distinct source IDs across nine scopes (overlapping limb selections are not counted as new anatomy).295 core editorial teaching prerequisites are present; these are not approvals. Navigation checks passed:875 structure/study combinations,354 review-link round trips,116 invalid/stale-source rejections,32 real React-to-scene prop checks,9 model hashes,21 preserved source/teaching/migration/lockfile paths. Existing private review/auth/privacy/SQLite/history tests, UM navigation, renal geometry/teaching, pelvis, TypeScript and requirement checks pass. Production build passes; lossless transport preserves125 GLBs/1433 meshes/4299 buffer views. Renderer396 inputs SHA256 `51efebe5f1f1fe52c7a93997e31ec86244ef23a2d07675b4924f7c8262e8e6f8`. No browser/GPU/mobile, clinical approval, acquired-imaging registration or paid-lecture authorization is claimed. No new dependency, source dataset, private record, migration or website-main change.
+
+D-drive stem `atlas-independent-study-links-2026-09-12` in `D:/VisibleMedicine-Atlas-Recovery/`:
+
+- Runtime `.site.tar.gz`:122601843 bytes, SHA256 `5a67d76ddb5055422929d0b0a4782c93538fc98858eadc422994fc908f5e0dbe`;456 safe entries and three exact SQL migrations.
+- Source `.delta.tar`:665600 bytes, SHA256 `ccfe62cafadde8b552f51f41eeed257aae79bcbc1d759ac9643c2f144912943a`.
+- Source `.incremental.bundle`:22026 bytes, SHA256 `494f7aad95adc7b1b6f0deac2c7dda606b4b008bb070d1aac99bd23e2cca9619`.
+
+Incremental restore fetched into independent verifier ref `refs/verification/independent-study-links-20260912`; full Git fsck and exact source/tree checks passed with verifier main preserved. Earlier recovery artifacts remain intact. Exact source also pushed to Sites main. Native Windows packaging failed at its shell path; the established adapter successfully produced and validated the full runtime above. Identical large native upload was not retried under the unchanged60-second timeout; last verified stored/live version remains171. This is a source/runtime backup, not a conversation or private database backup.
+
 ## 12 September 2026 — independent HRA specimen review records (runtime publication pending)
 
 Source `3d3909597ce063f3b928c0fff47a1398c6cb5294`, tree `c5ba9ecd67766a517ce3c2d768a5420ec8329a07`, parent `bc36e110fda43e394f3811676626f42fc0ec6b2f`. Twenty-five exact source paths mirrored. `/review/specimens` covers82 kidney and41 female-pelvis selections with separate, account-private append-only geometry/teaching/imaging tracks. Review identity includes specimen/frame, full source catalogue, study context, renderer, teaching and checklist revisions. Unsupported teaching topics remain pending; acquired-imaging approval is rejected. No personal approvals or production records were created/read. Source geometry, source teaching, licences, dependencies and website main remain unchanged.

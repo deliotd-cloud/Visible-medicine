@@ -9,14 +9,42 @@
     {
       "key": "hra-united-female-v1.10-pelvis",
       "selections": 41
+    },
+    {
+      "key": "bp3d3-abdominal-wall",
+      "selections": 29
+    },
+    {
+      "key": "bp3d3-back-layers",
+      "selections": 48
+    },
+    {
+      "key": "um-5t6tz7-v1-2:knee",
+      "selections": 15
+    },
+    {
+      "key": "um-5t6tz7-v1-2:lower-limb:hip-thigh",
+      "selections": 34
+    },
+    {
+      "key": "um-5t6tz7-v1-2:lower-limb:calf",
+      "selections": 15
+    },
+    {
+      "key": "um-5t6tz7-v1-2:lower-limb:foot",
+      "selections": 23
+    },
+    {
+      "key": "um-5t6tz7-v1-2:lower-limb:whole",
+      "selections": 67
     }
   ],
-  "contexts": 123,
-  "teachingApprovalPrerequisitesPresent": 99,
-  "pendingTopicStates": 319,
+  "contexts": 354,
+  "teachingApprovalPrerequisitesPresent": 295,
+  "pendingTopicStates": 973,
   "checks": [
     "exact source/frame separation",
-    "123 unique material identities",
+    "354 unique regional/specimen material identities",
     "original GLB hashes",
     "immutable prior migrations",
     "account isolation",

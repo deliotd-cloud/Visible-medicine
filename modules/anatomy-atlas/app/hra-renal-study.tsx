@@ -2,13 +2,16 @@
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
-import { KneeSpecimenView, type SpecimenSupplement } from './um-knee-study';
+import type { SpecimenSupplement } from './um-knee-study';
+import { IndependentStudyView, IndependentStudyLinkControl } from './independent-study-navigation';
+import type { IndependentStudyLink } from '@/lib/independent-study-links';
 import { SpecimenLearning } from './um-limb-learning';
 import { hraRenalDefinition, hraRenalSource, hraRenalColors } from '@/lib/hra-renal';
 import { hraRenalTeaching, hraRenalPractice } from '@/lib/hra-renal-teaching';
 import { hraRenalReferenceTitles } from '@/content/hra-renal-teaching';
 
 export const hraRenalSupplement: SpecimenSupplement = {
+  studyLink: (definition, selectedId, studyId, view) => <IndependentStudyLinkControl definition={definition} selectedId={selectedId} studyId={studyId} view={view} />,
   colors: hraRenalColors, identification: hraRenalPractice,
   tissueGroups: [
     { id: 'capsule', name: 'Capsules', color: '#ddcfad' },
@@ -32,14 +35,14 @@ export const hraRenalSupplement: SpecimenSupplement = {
     <p><a href="/models/hra-renal/kidneys.glb" download>Display model</a> · <a href="/models/hra-renal/NOTICE.md">Asset reuse notice</a></p>
   </>,
 };
-export default function HraRenalDialog({ onClose }: { onClose: () => void }) {
+export default function HraRenalDialog({ onClose, initialLink }: { onClose: () => void; initialLink?: IndependentStudyLink }) {
   return <Dialog open onOpenChange={open => { if (!open) onClose(); }}>
     <DialogContent className="eye-layers-dialog um-knee-dialog" showCloseButton={false}>
       <div className="eye-layer-heading"><div>
         <DialogTitle>Kidneys · separate reference</DialogTitle>
         <DialogDescription>82 source surfaces · HRA v1.10 · CC BY 4.0 · Review pending</DialogDescription>
       </div><Button variant="outline" size="sm" onClick={onClose}><ArrowLeft />Back to atlas</Button></div>
-      <KneeSpecimenView specimen={hraRenalDefinition} supplement={hraRenalSupplement} />
+      <IndependentStudyView definition={hraRenalDefinition} supplement={hraRenalSupplement} link={initialLink} />
     </DialogContent>
   </Dialog>;
 }

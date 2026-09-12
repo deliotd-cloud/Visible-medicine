@@ -2,7 +2,9 @@
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
-import { KneeSpecimenView, type SpecimenSupplement } from './um-knee-study';
+import type { SpecimenSupplement } from './um-knee-study';
+import { IndependentStudyView, IndependentStudyLinkControl } from './independent-study-navigation';
+import type { IndependentStudyLink } from '@/lib/independent-study-links';
 import { abdominalWallDefinition, abdominalWallSource, abdominalWallColors } from '@/lib/abdominal-wall';
 import type { SpecimenDefinition, SpecimenSurface } from '@/lib/independent-specimen';
 import { abdominalWallPractice } from '@/lib/abdominal-wall-practice';
@@ -22,6 +24,7 @@ export function AbdominalWallTeaching({ surface, definition = abdominalWallDefin
     resolveLesson={abdominalTeachingFor} attachmentLabels={{ proximal: 'Origin', distal: 'Insertion' }} referenceTitles={abdominalReferenceTitles} />;
 }
 export const abdominalWallSupplement: SpecimenSupplement = {
+  studyLink: (definition, selectedId, studyId, view) => <IndependentStudyLinkControl definition={definition} selectedId={selectedId} studyId={studyId} view={view} />,
   colors: abdominalWallColors,
   identification: abdominalWallPractice,
   learning: (surface, definition) => <AbdominalWallTeaching surface={surface} definition={definition} />,
@@ -36,7 +39,7 @@ export const abdominalWallSupplement: SpecimenSupplement = {
     <p>The anatomy assets and their adaptations remain ShareAlike. No imaging synchronisation, patient registration or paid lecture entitlement is granted.</p>
   </>,
 };
-export default function AbdominalWallDialog({ onClose }: { onClose: () => void }) {
+export default function AbdominalWallDialog({ onClose, initialLink }: { onClose: () => void; initialLink?: IndependentStudyLink }) {
   return <Dialog open onOpenChange={open => { if (!open) onClose(); }}>
     <DialogContent className="eye-layers-dialog um-knee-dialog" showCloseButton={false}>
       <div className="eye-layer-heading">
@@ -44,7 +47,7 @@ export default function AbdominalWallDialog({ onClose }: { onClose: () => void }
           <DialogDescription>8 muscle surfaces · BodyParts3D / DBCLS · <a href={abdominalWallSource.licenseUrl} target="_blank" rel="noreferrer">CC BY-SA 2.1 JP</a> · Review pending</DialogDescription></div>
         <Button variant="outline" size="sm" onClick={onClose}><ArrowLeft />Back to atlas</Button>
       </div>
-      <KneeSpecimenView specimen={abdominalWallDefinition} supplement={abdominalWallSupplement} />
+      <IndependentStudyView definition={abdominalWallDefinition} supplement={abdominalWallSupplement} link={initialLink} />
     </DialogContent>
   </Dialog>;
 }

@@ -20,6 +20,7 @@ export function SpecimenStudyLink({ definition, selectedId, studyId, view }: { d
     </Select>
     {!studyId && <p>Custom dissection: the link opens this structure with the region’s source context. Hidden tissues and separation are not saved.</p>}
     {href ? <CopySpecimenLink key={href} href={href} /> : <p>A link cannot be made for this source binding.</p>}
+    {href && <p><a href={`/review/specimens?specimen=${encodeURIComponent(definition.key)}&structure=${encodeURIComponent(selectedId)}`} target="_blank" rel="noreferrer">Review this structure</a></p>}
     <p>Opens the selected source, study and camera direction at the model’s original positions. No access permissions, scan alignment or quiz answers are included.</p>
   </details>;
 }

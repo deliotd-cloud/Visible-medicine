@@ -18,7 +18,7 @@
     },
     {
       "path": "app/abdominal-wall-study.tsx",
-      "sha256": "2ca780d744faa2734246b6bc571096db0549c17f12ccf1544364ba209f3b96af"
+      "sha256": "f06b1b622f711c78f0b7e43b193dd3aa16826f3ddc660a7cc29b4df31ea9072d"
     },
     {
       "path": "app/anatomy-canvas.tsx",
@@ -50,7 +50,7 @@
     },
     {
       "path": "app/back-layers-study.tsx",
-      "sha256": "551a4adac5a753111f0cdae8ad7a8d042dc244619bb5e6087011a6316c4d7539"
+      "sha256": "3159ece2ddae1b584fc2f838d53ea53b7276f06b11cab7731a519880dcc2a2aa"
     },
     {
       "path": "app/body-batch.tsx",
@@ -134,11 +134,11 @@
     },
     {
       "path": "app/hra-pelvis-study.tsx",
-      "sha256": "3e1d13cb5f21cbb006683b5833b0aad83dfa6478260e0ccc676d0056cd3783d1"
+      "sha256": "b798408d5561f48cbc9fd86f242320704b58b53799cad84a075bbe06080787f4"
     },
     {
       "path": "app/hra-renal-study.tsx",
-      "sha256": "fe84eb929379b6fff1742b618be7282e18ed8233566922dbeacec52106a921fa"
+      "sha256": "5012bb2a4c12349482b219e5a8b24f275e53275393ce4326a8f77e0682989315"
     },
     {
       "path": "app/imaging-comparison.css",
@@ -155,6 +155,10 @@
     {
       "path": "app/imaging-link.tsx",
       "sha256": "49b0c8e7e485b6d49fe89412b62a84bc2df4b942c28145f629779978d4fc9cf6"
+    },
+    {
+      "path": "app/independent-study-navigation.tsx",
+      "sha256": "431d71c8f6b792b8227c13c6d2a7bc6316029c28f148299853b1bc6dd3b23d9d"
     },
     {
       "path": "app/inspection-controls.tsx",
@@ -226,7 +230,7 @@
     },
     {
       "path": "app/specimen-study-link.tsx",
-      "sha256": "be97629c695d6568f07cf8af0b7248076daec9f82be689ccfd79a7d4d9cec918"
+      "sha256": "be110e11eb483723dcfc440dd43e08db6642b04631e5acdc6af7a3b42218829f"
     },
     {
       "path": "app/structure-navigator.tsx",
@@ -258,7 +262,7 @@
     },
     {
       "path": "app/um-knee-study.tsx",
-      "sha256": "6f62f28358fe759108cc5dee34ab652fa5ec3ff0100360d4ac92d78ff732ec50"
+      "sha256": "811a1bd1e69adc588d90aacca74cde8e1296a8857bbdeb52b65dfe408969c9ab"
     },
     {
       "path": "app/um-limb-learning.tsx",
@@ -985,6 +989,10 @@
       "sha256": "3127e41d9c16d47f5ebe0c0e312e8d0bf3dded9cc00b6ab6548256e939f269b0"
     },
     {
+      "path": "lib/independent-study-links.ts",
+      "sha256": "aed8162b038ce931a16333578fba99e7759c645ed6b444b47ca21b7dd3f04823"
+    },
+    {
       "path": "lib/inferior-epigastric-vessels.ts",
       "sha256": "cde444a140807cc788cfbed570907316c52e32d00bb2c6295b2c5817c17df997"
     },
@@ -1362,7 +1370,7 @@
     },
     {
       "path": "lib/um-limb-navigation.ts",
-      "sha256": "75c727d4ee64afe9c385adbac1c11b64cb4831ef2021bad488d2264fa399163b"
+      "sha256": "4697de9da3dc98ae0888681e9c799301a54eab2a8919c0f4b004664606bdd83f"
     },
     {
       "path": "lib/um-limb-studies.ts",
@@ -1426,7 +1434,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "c4df85ef20c3b83aca5344ca76634c026c4680c0706bc3e92ec0346404d677b2"
+      "sha256": "19b5f002dd73b053f7bf09c3c1f7f49744c38a2aa254b4b2d642a3eebae1ee8f"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1589,5 +1597,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "859dcedfec5aac8331eaf67a8b5f2448e8520d411e72df7f1dfb640947cdced8"
+  "sha256": "51efebe5f1f1fe52c7a93997e31ec86244ef23a2d07675b4924f7c8262e8e6f8"
 }

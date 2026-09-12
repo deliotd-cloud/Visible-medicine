@@ -54,9 +54,9 @@ for (const group of api.specimenReviewRows)
     const other = api.specimenReviewRows.find((r) => r.key !== group.key);
     assert.equal(await api.specimenReviewMaterial(other.key, row.id), null);
   }
-assert.equal(contexts, 123);
-assert.equal(hashes.size, 123);
-assert.equal(teachingReady, 99);
+assert.equal(contexts, 354);
+assert.equal(hashes.size, 354);
+assert.equal(teachingReady, 295);
 for (const key of ["", "__proto__", "body-display-catalog", "shoulder-pilot"])
   assert.equal(await api.specimenReviewMaterial(key, "unknown"), null);
 const group = api.specimenReviewRows[0],
@@ -483,7 +483,7 @@ const report = {
   pendingTopicStates: pending,
   checks: [
     "exact source/frame separation",
-    "123 unique material identities",
+    "354 unique regional/specimen material identities",
     "original GLB hashes",
     "immutable prior migrations",
     "account isolation",

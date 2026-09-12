@@ -1079,7 +1079,7 @@ const report = {
     revisionIdentities: Object.keys(revisions.revisions).length,
     hasPrivateReviews: false,
     status:
-      `Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot, ${catalog.structures.length} displayed root-body selections, and 123 independent HRA kidney/female-pelvis selections with explicit specimen/frame identity. The 1,022-record archival catalogue is retained; later source-bound additions include the incomplete right-sided tentorium and limb, portal and hepatic vein groups. This inventory never reads personal review records; other independent/nested scopes and acquired imaging remain outside those approvals.`,
+      `Revision fingerprints are not approvals. Separate private stores support the nine-structure shoulder pilot, ${catalog.structures.length} displayed root-body selections, and nine independent specimen/region scopes (354 scoped records / 267 distinct source IDs) with exact source/frame identity and two-way selection/study navigation. Independent scopes include HRA kidneys/female pelvis, version-3 back/abdominal wall and five overlapping UM limb regions. The 1,022-record archival catalogue is retained. This inventory never reads personal review records; nested organ scopes and acquired imaging remain outside those approvals.`,
   },
   boundaries: {
     scope: 'Current source implementation, not operations performed by this inventory script',

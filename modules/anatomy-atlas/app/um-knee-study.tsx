@@ -42,8 +42,9 @@ export type SpecimenSupplement = {
   learning: (surface: SpecimenSurface, definition: SpecimenDefinition) => ReactNode;
   sourceDetails: ReactNode;
   identification?: SpecimenPracticeAdapter;
+  studyLink?: (definition: SpecimenDefinition, selectedId: string, studyId: string | null, view: DissectionView) => ReactNode;
 };
-export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation, supplement }: { specimen?: SpecimenDefinition; initialNavigation?: ResolvedSpecimenNavigation; supplement?: SpecimenSupplement } = {}) {
+export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation, supplement }: { specimen?: SpecimenDefinition; initialNavigation?: Pick<ResolvedSpecimenNavigation, 'selectedId' | 'state' | 'structureOnly' | 'view' | 'topic'> & { focusSelection?: boolean }; supplement?: SpecimenSupplement } = {}) {
   const kneeSpecimen = { structures: specimen.surfaces, source: specimen.source };
   const kneeCatalog = specimen.catalog, kneeStructures = kneeCatalog.structures, kneeSpecimenStudies = specimen.studies;
   const [state, dispatch] = useReducer((state: VentricularState, action: SpecimenAction) => reduceSpecimen(specimen, state, action), specimen, value => initialNavigation?.state ?? initialSpecimen(value));
@@ -51,7 +52,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
   const [query, setQuery] = useState(''), [isolated, setIsolated] = useState(!!initialNavigation?.structureOnly);
   const [explode, setExplode] = useState(0), [layout, setLayout] = useState<BodyLayout>('extract');
   const [view, setView] = useState<DissectionView>(initialNavigation?.view ?? specimen.studies.find((s) => s.id === specimen.initialStudy)?.view ?? 'anterior'), [labels, setLabels] = useState(true);
-  const [focus, setFocus] = useState(!!initialNavigation?.structureOnly), [jointCloseUp, setJointCloseUp] = useState(!!specimen.closeUp);
+  const [focus, setFocus] = useState(!!initialNavigation?.focusSelection || !!initialNavigation?.structureOnly), [jointCloseUp, setJointCloseUp] = useState(!!specimen.closeUp && !initialNavigation?.focusSelection);
   const [showOrigins, setShowOrigins] = useState(false), [illustrated, setIllustrated] = useState(true);
   const [reset, setReset] = useState(0), [zoom, setZoom] = useState(1);
   const [health, setHealth] = useState<RendererHealth>('starting');
@@ -149,7 +150,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
             <Button size="sm" variant="outline" disabled={!ready} onClick={() => { setFocus(true); setReset((n) => n + 1); }}><Focus />Frame</Button>
             <Button size="sm" variant="outline" onClick={() => { dispatch({ type: 'visibility', id: selected.id, visible: false }); setFocus(false); }}>Set aside</Button>
           </div>
-          {supplement ? supplement.learning(selected, specimen) : <>
+          {supplement ? <>{supplement.learning(selected, specimen)}{supplement.studyLink?.(specimen,selected.id,active?.id ?? null,view)}</> : <>
             <SpecimenLearning definition={specimen} selected={selected} initialTopic={selected.id === initialNavigation?.selectedId ? initialNavigation.topic : null} />
             <SpecimenStudyLink key={`${selected.id}:${active?.id ?? 'custom'}:${view}`} definition={specimen} selectedId={selected.id} studyId={active?.id ?? null} view={view} />
           </>}

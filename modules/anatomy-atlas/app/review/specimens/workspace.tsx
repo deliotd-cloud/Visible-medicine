@@ -140,8 +140,9 @@ export function SpecimenReviewWorkspace({
           ))}
         </ul>
         <small>
-          Currently: HRA kidneys and female pelvis. Other specimens need
-          explicit review adapters; their approvals are not inherited.
+          HRA kidneys and female pelvis, abdominal wall, back layers and five
+          lower-limb study regions. Overlapping source surfaces have separate
+          regional review scopes; approvals are never inherited.
         </small>
       </aside>
       <section className="body-review-paper">
@@ -156,11 +157,8 @@ export function SpecimenReviewWorkspace({
             <h2>{packet.context.structureName}</h2>
             <p>{packet.source.limitations}</p>
             <p>
-              <a href={packet.atlasPath} target="_blank" rel="noreferrer">
-                Open this specimen in 3D
-              </a>{" "}
-              · Search the exact ID below to inspect this structure. Opening the
-              viewer alone does not complete a review.
+              {packet.atlasLink ? <a href={packet.atlasLink} target="_blank" rel="noreferrer">Open this exact structure in 3D</a> : 'The exact source link is unavailable.'}{' '}
+              · Opens the selected source and study. Opening the viewer alone does not complete a review.
             </p>
             <code className="specimen-review-id">
               {packet.context.structureId}
@@ -206,6 +204,9 @@ export function SpecimenReviewWorkspace({
                 <section key={t.tab}>
                   <h3>{specimenTopicLabels[t.tab]}</h3>
                   <p>{t.body ?? "Pending — no authored topic to approve."}</p>
+                  {t.tab === 'anatomy' && packet.teaching.lesson?.attachments && <dl><dt>Proximal attachment / origin</dt><dd>{packet.teaching.lesson.attachments.proximal}</dd><dt>Distal attachment / insertion</dt><dd>{packet.teaching.lesson.attachments.distal}</dd></dl>}
+                  {t.tab === 'function' && packet.teaching.lesson?.attachments && <dl><dt>Motor supply</dt><dd>{packet.teaching.lesson.attachments.motor}</dd></dl>}
+                  {t.tab === 'function' && packet.teaching.motorSupplies?.map((m,i) => <div key={i}><p>{m.label}{m.part ? ` · ${m.part}` : ''}</p><p>{m.caveat} {m.note}</p></div>)}
                   {t.references.map((url) => (
                     <p key={url}>
                       <a href={url} target="_blank" rel="noreferrer">

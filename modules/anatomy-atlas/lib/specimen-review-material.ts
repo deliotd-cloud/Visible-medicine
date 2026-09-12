@@ -9,6 +9,23 @@ import { hraRenalReferenceTitles } from "../content/hra-renal-teaching";
 import { hraPelvicReferenceTitles } from "../content/hra-pelvic-teaching";
 import { specimenTopics } from "./specimen-links";
 import { canonicalSpecimenValue } from "./specimen-links";
+import { makeIndependentStudyLink, independentStudyRoutes } from './independent-study-links';
+import { makeSpecimenLink } from './um-limb-navigation';
+import { limbDefinitions } from './um-limb-studies';
+import { specimenTeachingFor } from './um-limb-teaching';
+import { abdominalWallDefinition } from './abdominal-wall';
+import { abdominalTeachingFor } from './abdominal-wall-teaching';
+import { abdominalReferenceTitles } from '../content/abdominal-wall-teaching';
+import { backLayersDefinition } from './back-layers';
+import { backLayersTeachingFor } from './back-layers-teaching';
+import { backLayersReferences } from '../content/back-layers-teaching';
+import abdominal from '../public/models/bodyparts3d-v3/abdominal-wall/catalog.json';
+import back from '../public/models/bodyparts3d-v3/back-layers/catalog.json';
+import limb from '../public/models/um-limb/catalog.json';
+import knee from '../public/models/um-knee/catalog.json';
+import type { SpecimenDefinition, SpecimenSurface } from './independent-specimen';
+import type { SpecimenLesson } from '../content/um-limb-teaching';
+import { motorNerves } from '../content/um-limb-motor';
 import {
   specimenChecklists,
   specimenChecklistVersion,
@@ -18,7 +35,9 @@ import {
 
 // Explicit source adapters only. More donors require their own admitted source,
 // frame and teaching adapter, not inferred identity matches or migrated approvals.
-const registry = [
+type ReviewCatalogue = { source: { credit: string; license: string }; sourceFrame: string; [key: string]: unknown };
+type Adapter = { definition: SpecimenDefinition; raw: ReviewCatalogue; lesson: (d:SpecimenDefinition,s:SpecimenSurface)=>SpecimenLesson|null; titles: Readonly<Record<string,string>>; path:string; limb?:boolean };
+const registry: Adapter[] = [
   {
     definition: hraRenalDefinition,
     raw: renal,
@@ -33,6 +52,13 @@ const registry = [
     titles: hraPelvicReferenceTitles,
     path: "/specimens/female-pelvis",
   },
+  { definition:abdominalWallDefinition, raw:{...abdominal,sourceFrame:independentStudyRoutes.find(r=>r.key===abdominal.specimenId)!.frame},
+    lesson:abdominalTeachingFor, titles:abdominalReferenceTitles, path:'/specimens/abdominal-wall' },
+  { definition:backLayersDefinition, raw:{...back,sourceFrame:independentStudyRoutes.find(r=>r.key===back.specimenId)!.frame},
+    lesson:backLayersTeachingFor, titles:backLayersReferences, path:'/specimens/back-layers' },
+  ...Object.values(limbDefinitions).map((definition):Adapter=>({ definition,
+    raw:{...limb,companionKnee:knee,reviewRegion:definition.key,sourceFrame:'um-5t6tz7-v1-2:source-lps'},
+    lesson:specimenTeachingFor,titles:{},path:'/specimens/lower-limb',limb:true })),
 ];
 export const specimenReviewRows = registry.map((r) => ({
   key: r.definition.key,
@@ -62,6 +88,10 @@ export async function specimenReviewMaterial(
     s = r?.definition.surfaces.find((s) => s.id === structureId);
   if (!r || !s) return null;
   const lesson = r.lesson(r.definition, s);
+  const defaultStudy = r.definition.studies.find(study => study.id === r.definition.initialStudy && study.ids.includes(s.id))
+    ?? r.definition.studies.find(study => study.ids.includes(s.id));
+  const options = { selectedId:s.id, studyId:defaultStudy?.id ?? null, view:defaultStudy?.view ?? 'anterior' as const };
+  const atlasLink = r.limb ? makeSpecimenLink(r.definition,options) : await makeIndependentStudyLink(r.definition,options);
   const topics = specimenTopics.map((tab) => ({
     tab,
     body:
@@ -85,6 +115,7 @@ export async function specimenReviewMaterial(
     topics,
     lesson,
     referenceTitles: r.titles as Record<string, string>,
+    ...(lesson?.motorGroups?.length ? { motorSupplies: lesson.motorGroups.map(m => ({...m,...motorNerves[m.nerve]})) } : {}),
   };
   const sourceHash = await digest(source),
     teachingHash = await digest(teaching);
@@ -116,7 +147,7 @@ export async function specimenReviewMaterial(
     teachingTabs,
     checklists: structuredClone(specimenChecklists),
     blockers: {
-      geometry: [],
+      geometry: atlasLink ? [] : ['The exact source/study link is unavailable. Resolve this binding before geometry approval.'],
       teaching: ["anatomy", "function", "clinical", "pathology"]
         .filter((t) => !teachingTabs.includes(t))
         .map(
@@ -143,7 +174,7 @@ export async function specimenReviewMaterial(
       imaging: null,
     },
   };
-  return structuredClone({ context, source, teaching, atlasPath: r.path });
+  return structuredClone({ context, source, teaching, atlasPath: r.path, atlasLink });
 }
 export type SpecimenReviewMaterial = NonNullable<
   Awaited<ReturnType<typeof specimenReviewMaterial>>

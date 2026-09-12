@@ -1,11 +1,7 @@
-'use client';
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-const Specimen = dynamic(() => import('../../abdominal-wall-study'), { ssr: false, loading: () => <p role="status">Preparing the separate abdominal-wall specimen…</p> });
-export default function AbdominalWallPage() {
-  const router = useRouter();
-  return <main className="specimen-linked-page"><h1>Visible Medicine · abdominal wall</h1><Link href="/regions/abdomen">Back to abdominal atlas</Link>
-    <Specimen onClose={() => router.push('/regions/abdomen')} />
-  </main>;
+import { parseIndependentStudyLink } from '@/lib/independent-study-links';
+import type { StudySearchParams } from '@/lib/study-links';
+import IndependentLinkedPage from '../independent-linked-page';
+export default async function Page({searchParams}:{searchParams?:Promise<StudySearchParams>}) {
+  const link=parseIndependentStudyLink((await searchParams) ?? {});
+  return <IndependentLinkedPage key={JSON.stringify(link)} kind="abdominal-wall" link={link} />;
 }

@@ -7,7 +7,9 @@ import {
   DialogTitle,
   DialogDescription,
 } from '@/components/ui/dialog';
-import { KneeSpecimenView, type SpecimenSupplement } from './um-knee-study';
+import type { SpecimenSupplement } from './um-knee-study';
+import { IndependentStudyView, IndependentStudyLinkControl } from './independent-study-navigation';
+import type { IndependentStudyLink } from '@/lib/independent-study-links';
 import { SpecimenLearning } from './um-limb-learning';
 import { hraPelvicReferenceTitles } from '@/content/hra-pelvic-teaching';
 import {
@@ -20,6 +22,7 @@ import {
   hraPelvicPractice,
 } from '@/lib/hra-pelvis-teaching';
 export const hraPelvisSupplement: SpecimenSupplement = {
+  studyLink: (definition, selectedId, studyId, view) => <IndependentStudyLinkControl definition={definition} selectedId={selectedId} studyId={studyId} view={view} />,
   colors: hraPelvisColors,
   identification: hraPelvicPractice,
   tissueGroups: [
@@ -79,7 +82,7 @@ export const hraPelvisSupplement: SpecimenSupplement = {
     </>
   ),
 };
-export default function HraPelvisDialog({ onClose }: { onClose: () => void }) {
+export default function HraPelvisDialog({ onClose, initialLink }: { onClose: () => void; initialLink?: IndependentStudyLink }) {
   return (
     <Dialog
       open
@@ -103,10 +106,7 @@ export default function HraPelvisDialog({ onClose }: { onClose: () => void }) {
             Back to atlas
           </Button>
         </div>
-        <KneeSpecimenView
-          specimen={hraPelvisDefinition}
-          supplement={hraPelvisSupplement}
-        />
+        <IndependentStudyView definition={hraPelvisDefinition} supplement={hraPelvisSupplement} link={initialLink} />
       </DialogContent>
     </Dialog>
   );

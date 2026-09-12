@@ -25,7 +25,7 @@ export function resolveSpecimenLink(link: ParsedSpecimenLink, definitions: Recor
   const preset = specimenAction(definition, study.id)!;
   const state = reduceSpecimen(definition, reduceSpecimen(definition, initialSpecimen(definition), preset), { type: 'select', id: selected.id });
   return { status: 'ready' as const, scope: r.scope, selectedId: selected.id, view: r.view, topic: r.topic,
-    state: { ...state, history: [], future: [] }, structureOnly: r.studyId === null };
+    state: { ...state, history: [], future: [] }, structureOnly: r.studyId === null, focusSelection: true };
 }
 export type ResolvedSpecimenNavigation = Extract<ReturnType<typeof resolveSpecimenLink>, { status: 'ready' }>;
 
