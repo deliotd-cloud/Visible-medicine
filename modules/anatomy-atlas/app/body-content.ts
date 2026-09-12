@@ -95,6 +95,7 @@ import { cubitalVeinLesson } from '../lib/cubital-veins';
 import { genicularArteryLesson } from '../lib/genicular-arteries';
 import { inferiorThyroidLesson } from '../lib/inferior-thyroid-arteries';
 import { subscapularArteryLesson } from '../lib/subscapular-arteries';
+import { elbowArteryLesson } from '../lib/elbow-arteries';
 import { circumflexFemoralLesson } from '../lib/circumflex-femoral';
 import { cranialArteryLesson } from '../lib/cranial-arteries';
 import { deferentDuctLesson } from '../lib/deferent-ducts';
@@ -152,6 +153,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const elbow = elbowArteryLesson(s, tab);
+  if (elbow) return elbow;
   const cranial = cranialArteryLesson(s, tab);
   if (cranial) return cranial;
   const circumflex = circumflexFemoralLesson(s, tab);

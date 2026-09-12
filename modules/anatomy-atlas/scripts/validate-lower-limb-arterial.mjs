@@ -8,6 +8,7 @@ import { build } from './workspace-test-build.mjs';
 import { build as componentBuild } from './workspace-component-test-build.mjs';
 import { contentContext } from './content-contract-tools.mjs';
 import { authoringBeforeWristImaging } from './wrist-imaging-history.mjs';
+import { elbowArterialConcepts, elbowArterialRelations } from '../content/elbow-arterial.ts';
 const upper = process.argv.includes('--upper');
 const testRegion = upper ? 'forearm' : 'leg';
 const compiled = await build({
@@ -48,14 +49,14 @@ const neighbours = upper
     ? api.upperLimbArterialNeighbours
     : api.lowerLimbArterialNeighbours,
   plan = upper ? api.upperLimbArterialPlan : api.lowerLimbArterialPlan,
-  concepts = upper ? api.upperArterialConcepts : api.arterialConcepts,
-  relations = upper ? api.upperArterialRelations : api.arterialRelations;
-assert.equal(Object.keys(concepts).length, upper ? 28 : 21);
-assert.equal(relations.length, upper ? 30 : 21);
+  concepts = upper ? {...api.upperArterialConcepts, ...elbowArterialConcepts} : api.arterialConcepts,
+  relations = upper ? [...api.upperArterialRelations, ...elbowArterialRelations] : api.arterialRelations;
+assert.equal(Object.keys(concepts).length, upper ? 35 : 21);
+assert.equal(relations.length, upper ? 41 : 21);
 const targets = catalog.structures.filter((s) =>
   Object.values(concepts).some((c) => c.fmaIds.includes(s.fmaId)),
 );
-assert.equal(targets.length, upper ? 56 : 41);
+assert.equal(targets.length, upper ? 70 : 41);
 assert.equal(pins.entries.length, upper ? 116 : 94);
 {
   const extra=JSON.parse(await readFile(upper ? 'public/models/bodyparts3d/inferior-thyroid-arteries/catalog.json' : 'public/models/bodyparts3d/genicular-arteries/catalog.json'));
@@ -65,6 +66,8 @@ assert.equal(pins.entries.length, upper ? 116 : 94);
     pins.entries.push(...circumflex.structures); pins.bundles.push(...circumflex.bundles);
   }
   if (upper) {
+    const elbow = JSON.parse(await readFile('public/models/bodyparts3d/elbow-arteries/catalog.json'));
+    pins.entries.push(...elbow.structures); pins.bundles.push(...elbow.bundles);
     const subscapular = JSON.parse(await readFile('public/models/bodyparts3d/subscapular-arteries/catalog.json'));
     pins.entries.push(...subscapular.structures); pins.bundles.push(...subscapular.bundles);
     const context = JSON.parse(await readFile('content/inferior-thyroid-context-pins.json'));
@@ -80,11 +83,11 @@ const allRows = targets.flatMap((s) =>
     direction: r.direction,
   })),
 );
-assert.equal(allRows.length, upper ? 120 : 84);
+assert.equal(allRows.length, upper ? 164 : 84);
 const uniqueEdges = new Set(
   allRows.map((r) => [r.from.id, r.to.id].sort().join('|')),
 );
-assert.equal(uniqueEdges.size, upper ? 60 : 42);
+assert.equal(uniqueEdges.size, upper ? 82 : 42);
 assert(
   allRows.every(
     (r) =>
@@ -390,6 +393,8 @@ for (const s of targets) {
   );
 }
 // No content topic or recipe was replaced by the new relationship browser.
+// validate-elbow-arteries --baseline reproduces this digest at e2b3ff0e,
+// before elbow admission; the previous golden was already stale.
 const ctx = await contentContext();
 const arterialMilestone = authoringBeforeWristImaging(ctx);
 assert.equal(
@@ -407,7 +412,7 @@ assert.equal(
       }),
     )
     .digest('hex'),
-  '7e5592d21db98475fb72da072a073eaa1f00b0edafdc844fe38320f4f86cffe9',
+  '13d436013f1d4747b64472ed3a9a52a2c25b52d4fc911b6f9d0c7ece7ae65d4f',
 );
 // Actual component and installed controls; use the real framework Link shim.
 const require = createRequire(import.meta.url),

@@ -89,7 +89,7 @@ const root = api.bodyDisplayCatalog(
     ),
   ),
   before = JSON.stringify(root);
-same(root.structures.length, 1087);
+same(root.structures.length, 1101);
 const targets = api.nestedStudyTargets(root).filter((t) => t.study === study);
 same(targets.length, 29);
 same(new Set(targets.map((t) => t.structureId)).size, 29);
@@ -377,7 +377,7 @@ console.log(
     checks,
     parents: 3,
     parts: 29,
-    rootStructures: 1087,
+    rootStructures: 1101,
     nestedTargets: 104,
     clinicalApproval: false,
     browserOrGPUAcceptance: false,

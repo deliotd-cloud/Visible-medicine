@@ -50,35 +50,36 @@
         "sha256": "2ed4267b0ceae5448673eaf0743ed79a995fc7f879dac26c81e24109c7b201ec"
       }
     ],
-    "currentRootSha256": "3a538d1f04dd33f9097166309e09ff11b68233b0055655b007bab47dd31a5d69",
-    "reachableNestedSha256": "3a105ee0e4963dd1ca46d3af1747b2975de9a8b27db7c198123f69c5e2a13fcb",
+    "currentRootSha256": "daa38c78ebc35b1e20e34228ad4220bc95fe05064dc6221d6f6781f76c4efe22",
+    "reachableNestedSha256": "634260ee4618dbc4b180751fcaf6d12e2d9099543ae240d3bab2410427c8b75e",
     "shoulderManifestSha256": "619e3ab84712487bd032b84a8f8b52f94d10883d8db7798057049bab287de857",
     "sourceIdSetSha256": "8e2057667c31e8fc99b87eb4c020467eadb9698ca09a87fc85cd76350254e655"
   },
   "summary": {
     "referenceSourceFiles": 2234,
-    "rootSelections": 1082,
-    "rootSourceFileIds": 1743,
-    "reachableNestedSelections": 71,
-    "rootOnlyDifferences": 491,
-    "rootBindingsNeedingEquivalenceReview": 0,
+    "rootSelections": 1101,
+    "rootSourceFileIds": 1788,
+    "reachableNestedSelections": 104,
+    "rootOnlyDifferences": 446,
+    "rootBindingsNeedingEquivalenceReview": 3,
     "allSourceStatuses": {
+      "cross-tree-equivalence-unverified": 3,
       "excluded-by-display-correction": 1,
       "known-source-hold": 54,
-      "needs-source-and-anatomical-review": 411,
+      "needs-source-and-anatomical-review": 366,
       "nested-source-covered": 24,
       "related-cross-tree-hold": 1,
-      "root-source-covered": 1743
+      "root-source-covered": 1785
     },
     "rootDifferenceStatuses": {
       "excluded-by-display-correction": 1,
       "known-source-hold": 54,
-      "needs-source-and-anatomical-review": 411,
+      "needs-source-and-anatomical-review": 366,
       "nested-source-covered": 24,
       "related-cross-tree-hold": 1
     },
     "rootDifferenceReferenceGroups": {
-      "arterial": 268,
+      "arterial": 223,
       "cardiac": 2,
       "connective": 11,
       "digestive": 2,
@@ -92,7 +93,7 @@
       "venous": 138
     },
     "reviewQueueReferenceGroups": {
-      "arterial": 261,
+      "arterial": 216,
       "cardiac": 2,
       "connective": 2,
       "digestive": 1,
@@ -113,7 +114,140 @@
     "No competitor geometry or explanatory prose is imported. Only audit ID/group metadata is retained; eight original official OBJ files are retained separately as non-runtime cross-tree evidence, with attribution.",
     "The review queue is not an admission list; source topology, spatial extent, aliases, laterality, complete concept membership, licensing and clinical review remain required."
   ],
-  "rootBindingsNeedingEquivalenceReview": [],
+  "rootBindingsNeedingEquivalenceReview": [
+    {
+      "file": "FJ1662",
+      "referenceDisplaySystem": "arterial",
+      "status": "cross-tree-equivalence-unverified",
+      "admissionApproved": false,
+      "definitions": [
+        {
+          "id": "FMA50377",
+          "name": "anterolateral central branch of right middle cerebral artery",
+          "componentCount": 2
+        }
+      ],
+      "owners": [
+        {
+          "scope": "root",
+          "id": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+          "fmaId": "FMA50082",
+          "tree": "partof",
+          "file": "FJ1662",
+          "sha256": "afdefea26af3c469cd5cedf56b327c252faeef55466af4e4b83a4f31af4c382b",
+          "evidence": "cross-tree-filename-only"
+        },
+        {
+          "scope": "nested",
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1662",
+          "fmaId": "FMA50082",
+          "tree": "partof",
+          "file": "FJ1662",
+          "sha256": "afdefea26af3c469cd5cedf56b327c252faeef55466af4e4b83a4f31af4c382b",
+          "study": "cranial-artery-components",
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086",
+          "evidence": "cross-tree-filename-only"
+        }
+      ],
+      "holds": [],
+      "displayCorrections": [],
+      "source": {
+        "bytes": 119006,
+        "crc32": 1557940643,
+        "sha256": null,
+        "geometrySha256": null
+      }
+    },
+    {
+      "file": "FJ1663",
+      "referenceDisplaySystem": "arterial",
+      "status": "cross-tree-equivalence-unverified",
+      "admissionApproved": false,
+      "definitions": [
+        {
+          "id": "FMA50377",
+          "name": "anterolateral central branch of right middle cerebral artery",
+          "componentCount": 2
+        }
+      ],
+      "owners": [
+        {
+          "scope": "root",
+          "id": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+          "fmaId": "FMA50082",
+          "tree": "partof",
+          "file": "FJ1663",
+          "sha256": "876f965a5a0e01b73c27571f53778282b8248b2966f79aa7a8e431a07004c6c0",
+          "evidence": "cross-tree-filename-only"
+        },
+        {
+          "scope": "nested",
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1663",
+          "fmaId": "FMA50082",
+          "tree": "partof",
+          "file": "FJ1663",
+          "sha256": "876f965a5a0e01b73c27571f53778282b8248b2966f79aa7a8e431a07004c6c0",
+          "study": "cranial-artery-components",
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086",
+          "evidence": "cross-tree-filename-only"
+        }
+      ],
+      "holds": [],
+      "displayCorrections": [],
+      "source": {
+        "bytes": 30086,
+        "crc32": 758028658,
+        "sha256": null,
+        "geometrySha256": null
+      }
+    },
+    {
+      "file": "FJ1692",
+      "referenceDisplaySystem": "arterial",
+      "status": "cross-tree-equivalence-unverified",
+      "admissionApproved": false,
+      "definitions": [
+        {
+          "id": "FMA50366",
+          "name": "sphenoid part of right middle cerebral artery",
+          "componentCount": 1
+        }
+      ],
+      "owners": [
+        {
+          "scope": "root",
+          "id": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+          "fmaId": "FMA50082",
+          "tree": "partof",
+          "file": "FJ1692",
+          "sha256": "5c8d20a994fc1ae2e04e833899757d24cb4eae1d51130e60baae5bd7d50ceee8",
+          "evidence": "cross-tree-filename-only"
+        },
+        {
+          "scope": "nested",
+          "id": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1692",
+          "fmaId": "FMA50082",
+          "tree": "partof",
+          "file": "FJ1692",
+          "sha256": "5c8d20a994fc1ae2e04e833899757d24cb4eae1d51130e60baae5bd7d50ceee8",
+          "study": "cranial-artery-components",
+          "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+          "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086",
+          "evidence": "cross-tree-filename-only"
+        }
+      ],
+      "holds": [],
+      "displayCorrections": [],
+      "source": {
+        "bytes": 47192,
+        "crc32": 3968707266,
+        "sha256": null,
+        "geometrySha256": null
+      }
+    }
+  ],
   "rootDifferences": [
     {
       "file": "FJ1252",
@@ -1088,28 +1222,6 @@
       }
     },
     {
-      "file": "FJ1662",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50377",
-          "name": "anterolateral central branch of right middle cerebral artery",
-          "componentCount": 2
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 119006,
-        "crc32": 1557940643,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
       "file": "FJ1662M",
       "referenceDisplaySystem": "arterial",
       "status": "needs-source-and-anatomical-review",
@@ -1127,28 +1239,6 @@
       "source": {
         "bytes": 117108,
         "crc32": 874746542,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1663",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50377",
-          "name": "anterolateral central branch of right middle cerebral artery",
-          "componentCount": 2
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 30086,
-        "crc32": 758028658,
         "sha256": null,
         "geometrySha256": null
       }
@@ -2056,28 +2146,6 @@
       }
     },
     {
-      "file": "FJ1692",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50366",
-          "name": "sphenoid part of right middle cerebral artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 47192,
-        "crc32": 3968707266,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
       "file": "FJ1692M",
       "referenceDisplaySystem": "arterial",
       "status": "needs-source-and-anatomical-review",
@@ -2408,534 +2476,6 @@
       }
     },
     {
-      "file": "FJ1700",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50519",
-          "name": "right posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 25444,
-        "crc32": 3308165349,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1700M",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50520",
-          "name": "left posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 25286,
-        "crc32": 3516919130,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1701",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50519",
-          "name": "right posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 32952,
-        "crc32": 1352312449,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1701M",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50520",
-          "name": "left posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 32613,
-        "crc32": 1797611415,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1702",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50519",
-          "name": "right posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 27102,
-        "crc32": 978142575,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1702M",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50520",
-          "name": "left posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 26795,
-        "crc32": 2974302031,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1703",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50519",
-          "name": "right posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 25976,
-        "crc32": 921096529,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1703M",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50520",
-          "name": "left posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 25397,
-        "crc32": 173102694,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1704",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50519",
-          "name": "right posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 23919,
-        "crc32": 4269614782,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1704M",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50520",
-          "name": "left posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 23439,
-        "crc32": 2816866396,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1705",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50519",
-          "name": "right posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 25935,
-        "crc32": 118801398,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1705M",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50520",
-          "name": "left posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 25826,
-        "crc32": 1793968167,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1706",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50519",
-          "name": "right posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 25854,
-        "crc32": 3231112682,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1706M",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50520",
-          "name": "left posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 25210,
-        "crc32": 2918626347,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1707",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50519",
-          "name": "right posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 9954,
-        "crc32": 1376136910,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1707M",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50520",
-          "name": "left posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 9854,
-        "crc32": 35482250,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1708",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50519",
-          "name": "right posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 10860,
-        "crc32": 1661056728,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1708M",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50520",
-          "name": "left posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 10738,
-        "crc32": 264006035,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1709",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50519",
-          "name": "right posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 19433,
-        "crc32": 2985267078,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1709M",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50520",
-          "name": "left posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 19242,
-        "crc32": 794798126,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1710",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50519",
-          "name": "right posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 17537,
-        "crc32": 808850313,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1710M",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50520",
-          "name": "left posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 17177,
-        "crc32": 4040863066,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1711",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50519",
-          "name": "right posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 68375,
-        "crc32": 4280548241,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1711M",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50520",
-          "name": "left posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 67330,
-        "crc32": 577575268,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
       "file": "FJ1712",
       "referenceDisplaySystem": "arterial",
       "status": "needs-source-and-anatomical-review",
@@ -3019,50 +2559,6 @@
       "source": {
         "bytes": 32067,
         "crc32": 3159012603,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1715",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50519",
-          "name": "right posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 63478,
-        "crc32": 3934694919,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1715M",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50520",
-          "name": "left posterior inferior cerebellar artery",
-          "componentCount": 13
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 63102,
-        "crc32": 2892615267,
         "sha256": null,
         "geometrySha256": null
       }
@@ -3415,50 +2911,6 @@
       "source": {
         "bytes": 343795,
         "crc32": 1102339509,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1726",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50574",
-          "name": "right superior cerebellar artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 25024,
-        "crc32": 2611675361,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ1726M",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA50575",
-          "name": "left superior cerebellar artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 24832,
-        "crc32": 2440653787,
         "sha256": null,
         "geometrySha256": null
       }
@@ -6529,28 +5981,6 @@
       }
     },
     {
-      "file": "FJ2215",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA22713",
-          "name": "left inferior ulnar collateral artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 69147,
-        "crc32": 1816131530,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
       "file": "FJ2222",
       "referenceDisplaySystem": "venous",
       "status": "needs-source-and-anatomical-review",
@@ -6656,50 +6086,6 @@
       "source": {
         "bytes": 43174,
         "crc32": 1036021919,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ2241",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA22805",
-          "name": "left posterior ulnar recurrent artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 23322,
-        "crc32": 1107276940,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ2243",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA22766",
-          "name": "left radial recurrent artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 157079,
-        "crc32": 35503802,
         "sha256": null,
         "geometrySha256": null
       }
@@ -6815,28 +6201,6 @@
       }
     },
     {
-      "file": "FJ2259",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA22802",
-          "name": "left anterior ulnar recurrent artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 27102,
-        "crc32": 219491069,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
       "file": "FJ2260",
       "referenceDisplaySystem": "venous",
       "status": "needs-source-and-anatomical-review",
@@ -6859,50 +6223,6 @@
       }
     },
     {
-      "file": "FJ2261",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA23127",
-          "name": "radial collateral branch of left deep brachial artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 85301,
-        "crc32": 3275769713,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ2262",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA23126",
-          "name": "radial collateral branch of right deep brachial artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 79255,
-        "crc32": 2589872515,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
       "file": "FJ2265",
       "referenceDisplaySystem": "venous",
       "status": "needs-source-and-anatomical-review",
@@ -6920,28 +6240,6 @@
       "source": {
         "bytes": 189666,
         "crc32": 2879004258,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ2267",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA22712",
-          "name": "right inferior ulnar collateral artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 71606,
-        "crc32": 1668910679,
         "sha256": null,
         "geometrySha256": null
       }
@@ -7057,50 +6355,6 @@
       }
     },
     {
-      "file": "FJ2293",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA22804",
-          "name": "right posterior ulnar recurrent artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 24189,
-        "crc32": 4018534015,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ2295",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA22764",
-          "name": "right radial recurrent artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 158055,
-        "crc32": 874556224,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
       "file": "FJ2296",
       "referenceDisplaySystem": "venous",
       "status": "needs-source-and-anatomical-review",
@@ -7206,28 +6460,6 @@
       "source": {
         "bytes": 22382,
         "crc32": 3317349709,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ2311",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA22801",
-          "name": "right anterior ulnar recurrent artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 27734,
-        "crc32": 2368187374,
         "sha256": null,
         "geometrySha256": null
       }
@@ -7378,28 +6610,6 @@
       "source": {
         "bytes": 33428,
         "crc32": 3329336039,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ2331",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA23125",
-          "name": "middle collateral branch of left deep brachial artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 111625,
-        "crc32": 3965308343,
         "sha256": null,
         "geometrySha256": null
       }
@@ -7572,72 +6782,6 @@
       "source": {
         "bytes": 33726,
         "crc32": 3323820871,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ2362",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA23124",
-          "name": "middle collateral branch of right deep brachial artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 99937,
-        "crc32": 2120429938,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ2373",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA22707",
-          "name": "right superior ulnar collateral artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 87414,
-        "crc32": 2528939718,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ2374",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA22708",
-          "name": "left superior ulnar collateral artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 86720,
-        "crc32": 1604659803,
         "sha256": null,
         "geometrySha256": null
       }

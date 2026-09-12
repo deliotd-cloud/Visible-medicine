@@ -50,8 +50,8 @@ const display = bodyDisplayCatalog(raw);
 // Preserve this admission's pre-extension source scope when replayed later.
 const catalog = {
   ...display,
-  structures: display.structures.filter((s) => s.bundle !== 'cranial-arteries'),
-  bundles: display.bundles.filter((b) => b.id !== 'cranial-arteries'),
+  structures: display.structures.filter((s) => !['cranial-arteries', 'elbow-arteries'].includes(s.bundle)),
+  bundles: display.bundles.filter((b) => !['cranial-arteries', 'elbow-arteries'].includes(b.id)),
 };
 assert.equal(catalog.structures.length, 1082);
 const shapeCache = new Map();

@@ -18,7 +18,7 @@ assert.equal(hash(rawBytes),'109ad372060f36fba1658a9968415884f279531eb5a3ecf0479
 const raw=JSON.parse(rawBytes),rawBefore=JSON.stringify(raw),catalog=api.bodyDisplayCatalog(raw),before=JSON.stringify(catalog);
 const pins=JSON.parse(await readFile('public/models/bodyparts3d/pelvic-veins/catalog.json'));
 const studyId='pelvic-venous-tributaries',bundle=pins.bundles[0];
-assert.equal(catalog.structures.length,1087);assert.equal(JSON.stringify(raw),rawBefore);
+assert.equal(catalog.structures.length,1101);assert.equal(JSON.stringify(raw),rawBefore);
 for(const held of ['FMA18919','FMA18907'])assert(!catalog.structures.some(s=>s.fmaId===held),'Held source must remain absent from display');
 assert.equal(api.bodyDisplayCatalog(catalog),catalog);
 assert.deepEqual(catalog.structures.filter(s=>s.bundle===bundle.id),pins.structures);

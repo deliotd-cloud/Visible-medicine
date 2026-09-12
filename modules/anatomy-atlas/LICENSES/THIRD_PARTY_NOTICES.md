@@ -1,5 +1,18 @@
 # Third-party notices
 
+## Elbow arteries — 12 September 2026
+
+BodyParts3D, © The Database Center for Life Science licensed under CC Attribution
+4.0 International. Fourteen original v4 IS-A OBJ files and their metadata are
+retained, with source hashes in `docs/elbow-artery-source-audit.json` and unchanged
+originals in `content/sources/elbow-arteries`. The GLB uses exact-coordinate
+indexing, the established scene transform and Float32 storage; no source face
+was removed, smoothed, mirrored or connected to another mesh. The existing
+official licence text and credit apply. Short original teaching and relationship
+labels cite UAMS as a factual reference; no diagram, table or source article is
+redistributed. No dependency, font, texture, paid API or mandatory service added.
+See `docs/ELBOW_ARTERIES.md` for scope and pending clinical review.
+
 ## Pelvic-vein teaching — 12 September 2026
 
 Original concise factual notes and reading links extend ten existing root-body pelvic-vein selections. No source article, image, table, classification score, question bank or new anatomical asset is redistributed. References retain their own rights; free access is not a commercial image licence. Authored content remains MIT; existing BodyParts3D CC BY 4.0 attribution/change notices remain. No dependency, font, texture, paid API or mandatory service was added. See `docs/PELVIC_VEIN_TEACHING.md`.

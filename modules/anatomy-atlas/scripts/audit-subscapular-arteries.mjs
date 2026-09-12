@@ -52,9 +52,9 @@ const display = bodyDisplayCatalog(raw);
 const catalog = {
   ...display,
   structures: display.structures.filter(
-    (s) => !['subscapular-arteries', 'circumflex-femoral', 'cranial-arteries'].includes(s.bundle),
+    (s) => !['subscapular-arteries', 'circumflex-femoral', 'cranial-arteries', 'elbow-arteries'].includes(s.bundle),
   ),
-  bundles: display.bundles.filter((b) => !['subscapular-arteries', 'circumflex-femoral', 'cranial-arteries'].includes(b.id)),
+  bundles: display.bundles.filter((b) => !['subscapular-arteries', 'circumflex-femoral', 'cranial-arteries', 'elbow-arteries'].includes(b.id)),
 };
 async function shape(tree, file, sha) {
   const bytes = await readFile(`../work/bodyparts3d/${tree}/${file}.obj`);

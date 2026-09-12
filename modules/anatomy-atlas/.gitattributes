@@ -37,3 +37,5 @@ content/sources/hra-renal/*.csv -text -diff
 docs/hra-renal-source-audit.json -text
 content/sources/cranial-arteries/*/*.obj -text -diff
 docs/cranial-artery-source-audit.json -text
+content/sources/elbow-arteries/*.obj -text -diff
+docs/elbow-artery-source-audit.json -text

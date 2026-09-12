@@ -38,9 +38,9 @@ const data = JSON.parse(
 const audit = JSON.parse(
   await readFile('docs/cranial-artery-source-audit.json'),
 );
-assert.equal(catalog.structures.length, 1087);
-assert.equal(new Set(catalog.structures.map((s) => s.id)).size, 1087);
-assert.equal(new Set(catalog.structures.map((s) => s.fmaId)).size, 1087);
+assert.equal(catalog.structures.length, 1101);
+assert.equal(new Set(catalog.structures.map((s) => s.id)).size, 1101);
+assert.equal(new Set(catalog.structures.map((s) => s.fmaId)).size, 1101);
 assert.equal(JSON.stringify(raw), before);
 assert.equal(api.bodyDisplayCatalog(catalog), catalog);
 assert.deepEqual(
@@ -51,7 +51,7 @@ assert.equal(audit.screened.length, 1082);
 // Every previous display record remains byte-for-byte equivalent, not merely equal in count.
 assert.deepEqual(
   catalog.structures
-    .filter((s) => s.bundle !== 'cranial-arteries')
+    .filter((s) => !['cranial-arteries', 'elbow-arteries'].includes(s.bundle))
     .map((s) => ({ id: s.id, recordSha256: hash(JSON.stringify(s)) })),
   audit.screened.map(({ id, recordSha256 }) => ({ id, recordSha256 })),
 );
@@ -253,7 +253,7 @@ assert.equal(links, 20);
 console.log(
   JSON.stringify({
     selections: 5,
-    displaySelections: 1087,
+    displaySelections: 1101,
     preservedPreviousRecords: 1082,
     sourceFiles,
     triangles,

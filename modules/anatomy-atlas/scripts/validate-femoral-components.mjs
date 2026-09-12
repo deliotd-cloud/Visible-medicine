@@ -94,7 +94,7 @@ same(
 );
 const root = api.bodyDisplayCatalog(JSON.parse(rootBytes)),
   before = JSON.stringify(root);
-same(root.structures.length, 1087);
+same(root.structures.length, 1101);
 const targets = api
   .nestedStudyTargets(root)
   .filter((t) => t.study === 'femoral-components');
@@ -391,7 +391,7 @@ console.log(
     checks,
     parents: 2,
     components: 4,
-    rootStructures: 1087,
+    rootStructures: 1101,
     nestedTargets: 104,
     clinicalApproval: false,
     browserOrGPUAcceptance: false,
