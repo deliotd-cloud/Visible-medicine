@@ -7,9 +7,9 @@ assert.equal(
   createHash('sha256').update(raw).digest('hex'),
   '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7',
 );
-// Retain the original 52-artery admission exactly. The two neck sources use a
-// separate source-bound bundle; their new context must not repin old anatomy.
-const originalConcepts = Object.entries(upperArterialConcepts).filter(([key]) => key !== 'inferiorThyroid').map(([,value]) => value);
+// Retain the original 52-artery admission exactly. Later neck and subscapular
+// sources use separate source-bound bundles; do not repin the original anatomy.
+const originalConcepts = Object.entries(upperArterialConcepts).filter(([key]) => !['inferiorThyroid', 'subscapular'].includes(key)).map(([,value]) => value);
 const catalog = JSON.parse(raw),
   ids = originalConcepts.flatMap((c) => c.fmaIds),
   regions = [

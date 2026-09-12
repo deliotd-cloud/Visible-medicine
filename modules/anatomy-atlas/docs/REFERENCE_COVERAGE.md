@@ -1,5 +1,7 @@
 # Audited-source implementation — 11 September 2026
 
+Current checkpoint, 12 September: [subscapular arteries](SUBSCAPULAR_ARTERIES.md) add original FJ2298/FJ2246. The regenerated ledger now has 1,080 root selections representing 1,741 reference source IDs; 493 root-only differences remain (24 reachable nested, 54 source holds, one display correction, one cross-tree hold and 413 needing review). These are source-file counts, not missing-structure or completion percentages. Earlier milestone counts below are historical; the machine-readable ledger is authoritative.
+
 Update 12 September: [original-source HRA female pelvis](HRA_FEMALE_PELVIS.md) now implements the first independent female regional module (41 selections; six held groups). This does not affect the male source-ID ledger below, nor establish a complete female body. Original official metadata and per-asset notices are retained; no mixed-donor competitor assembly is imported.
 
 This ledger began with the repository comparison and label-computation improvement. The [cubital-vein addition](CUBITAL_VEINS.md) adds four original superficial vessel selections with compact same-side navigation. The preceding [inferior-brachia addition](COLLICULAR_BRACHIA.md) adds two source references and withholds two superior candidates for contradictory laterality. It does not bulk-admit external models or claim anatomical completeness. The broader improvement goal remains active.

@@ -1,5 +1,7 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Shoulder & arm → Subscapular artery** now supplies [both original source surfaces](docs/SUBSCAPULAR_ARTERIES.md). The existing Arterial connections panel links parent and branches on the same side and provides reversible isolation with bones. All 1,576 original triangles are retained; no bridging or smoothing. Clinical/device sign-off and runtime publication remain pending.
+
 **Vessels → Arteries / Veins** adds [compact visibility controls](docs/VESSEL_VISIBILITY.md) behind the existing system label. Show/hide acts on the current region and side, with mixed-state counts and shared Undo/Redo. Other tissues and camera settings stay unchanged; exams lock the controls. No new anatomy or permanently open panel. Device acceptance and runtime publication remain pending.
 
 **Abdominal organs → Imaging** now includes [organ-specific CT, MRI, Ultrasound and X-ray orientation](docs/ABDOMINAL_ORGAN_IMAGING.md) for liver, pancreas, gallbladder, spleen, both kidneys and adrenals. Phase/sequence context and visibility limits reuse existing tabs. The corrected pancreatic parent and separate kidney specimen retain their distinct source identities. Thirty-two draft placements, no new meshes or controls; radiologist review and runtime publication remain pending.

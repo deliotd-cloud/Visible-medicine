@@ -22,7 +22,7 @@ export const upperArterialConcepts = {
   axillary: {
     fmaIds: ['FMA22655', 'FMA22656'],
     context: 'shoulder-arm',
-    note: 'The source is one axillary selection, not independently selectable first, second and third parts. Subscapular is not separately selectable here.',
+    note: 'The source is one axillary selection, not independently selectable first, second and third parts. The separately supplied subscapular source does not establish a measured junction.',
   },
   brachial: {
     fmaIds: ['FMA22691', 'FMA22692'],
@@ -47,12 +47,17 @@ export const upperArterialConcepts = {
   circumflexScapular: {
     fmaIds: ['FMA23180', 'FMA23181'],
     context: 'shoulder-arm',
-    note: 'The usual subscapular parent is missing as an independent selection. Showing the axillary artery does not make this a direct axillary branch.',
+    note: 'The usual subscapular parent is separately selectable. This is not shown as a direct axillary branch, and surface proximity does not prove a joined lumen.',
   },
   thoracodorsal: {
     fmaIds: ['FMA66321', 'FMA66322'],
     context: 'shoulder-arm',
-    note: 'The source-labelled artery is distinct from the thoracodorsal nerve. The intervening subscapular parent is not selectable here.',
+    note: 'The source-labelled artery is distinct from the thoracodorsal nerve. Its separately supplied subscapular parent remains a source reference, not a verified donor junction.',
+  },
+  subscapular: {
+    fmaIds: ['FMA22678', 'FMA22679'],
+    context: 'shoulder-arm',
+    note: 'The finite IS-A source is distinct from the broader branch-containing aggregate. Typical parent and branch relationships are shown; no complete collateral circuit or continuous lumen is inferred.',
   },
   radial: {
     fmaIds: ['FMA22733', 'FMA22734'],
@@ -208,15 +213,21 @@ export const upperArterialRelations: readonly {
   },
   {
     from: 'axillary',
-    to: 'circumflexScapular',
-    kind: 'via-unmodelled',
-    note: 'Via the unmodelled subscapular artery; not a claimed direct branch.',
+    to: 'subscapular',
+    kind: 'branch',
+    note: 'Usual subscapular origin from the third part of the axillary artery; source junction unverified.',
   },
   {
-    from: 'axillary',
+    from: 'subscapular',
+    to: 'circumflexScapular',
+    kind: 'branch',
+    note: 'Usual circumflex scapular branch; no complete scapular anastomosis is modelled.',
+  },
+  {
+    from: 'subscapular',
     to: 'thoracodorsal',
-    kind: 'via-unmodelled',
-    note: 'Via the unmodelled subscapular artery; not a claimed direct branch.',
+    kind: 'branch',
+    note: 'Usual thoracodorsal branch; not the thoracodorsal nerve or a verified source junction.',
   },
   {
     from: 'axillary',

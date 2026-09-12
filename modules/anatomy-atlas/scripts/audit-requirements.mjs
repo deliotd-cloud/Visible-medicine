@@ -157,6 +157,8 @@ const cubitalVeins = await json('public/models/bodyparts3d/cubital-veins/catalog
 const genicularArteries = await json('public/models/bodyparts3d/genicular-arteries/catalog.json');
 const genicularAudit = await json('docs/genicular-artery-source-audit.json');
 const inferiorThyroid = await json('public/models/bodyparts3d/inferior-thyroid-arteries/catalog.json');
+const subscapular = await json('public/models/bodyparts3d/subscapular-arteries/catalog.json');
+const subscapularAudit = await json('docs/subscapular-artery-source-audit.json');
 const deferentDucts = await json('public/models/bodyparts3d/deferent-ducts/catalog.json');
 const deferentDuctAudit = await json('docs/deferent-duct-source-audit.json');
 const inferiorEpigastric = await json('public/models/bodyparts3d/inferior-epigastric-vessels/catalog.json');
@@ -416,6 +418,9 @@ for (const path of [
   'docs/genicular-artery-source-audit.json',
   'lib/genicular-arteries.ts',
   'public/models/bodyparts3d/inferior-thyroid-arteries/catalog.json',
+  'public/models/bodyparts3d/subscapular-arteries/catalog.json',
+  'docs/subscapular-artery-source-audit.json',
+  'lib/subscapular-arteries.ts',
   'docs/inferior-thyroid-source-audit.json',
   'docs/muscle-part-condition-audit.json',
   'content/inferior-thyroid-context-pins.json',
@@ -659,6 +664,14 @@ const report = {
   sourceHashes,
   rendering: { bodyBatching: await json('docs/body-batching-baseline.json'), gpuAcceptance: false },
   anatomy: {
+    subscapularArteries: {
+      selections: subscapular.structures.length,
+      originalTriangles: subscapularAudit.groups.reduce((n,g) => n + g.topology.triangles, 0),
+      contextSelections: subscapular.contextRecords.length,
+      originalSourcePreserved: true,
+      clinicalApproval: false,
+      continuousLumenClaimed: false,
+    },
     limbicLandmarks: {
       sourceSelections: limbicLandmarks.structures.length,
       originalTriangles: limbicAudit.groups.filter(g=>g.status==='candidate').reduce((n,g)=>n+g.topology.triangles,0),

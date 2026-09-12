@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "subscapular-arteries:test": "node scripts/audit-subscapular-arteries.mjs --check && node scripts/export-subscapular-arteries.mjs --check && node scripts/validate-subscapular-arteries.mjs",
     "vessel-visibility:test": "node scripts/validate-vessel-visibility.mjs",
     "hand-joints:test": "node scripts/pin-hand-joints.mjs --check && node scripts/validate-foot-joints.mjs --hand",
     "foot-joints:test": "node scripts/pin-foot-joints.mjs --check && node scripts/validate-foot-joints.mjs",

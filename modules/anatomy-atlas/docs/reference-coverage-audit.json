@@ -50,35 +50,35 @@
         "sha256": "2ed4267b0ceae5448673eaf0743ed79a995fc7f879dac26c81e24109c7b201ec"
       }
     ],
-    "currentRootSha256": "302ea8b417e67354c10b07d9e448f92f7d50e638300de677aa3661dc43f9408d",
+    "currentRootSha256": "4c7b8db37decb32e59dc178a2af9177d7412a8f6f533fbff9808411e9217ba17",
     "reachableNestedSha256": "3a105ee0e4963dd1ca46d3af1747b2975de9a8b27db7c198123f69c5e2a13fcb",
     "shoulderManifestSha256": "619e3ab84712487bd032b84a8f8b52f94d10883d8db7798057049bab287de857",
     "sourceIdSetSha256": "8e2057667c31e8fc99b87eb4c020467eadb9698ca09a87fc85cd76350254e655"
   },
   "summary": {
     "referenceSourceFiles": 2234,
-    "rootSelections": 1078,
-    "rootSourceFileIds": 1739,
+    "rootSelections": 1080,
+    "rootSourceFileIds": 1741,
     "reachableNestedSelections": 71,
-    "rootOnlyDifferences": 495,
+    "rootOnlyDifferences": 493,
     "rootBindingsNeedingEquivalenceReview": 0,
     "allSourceStatuses": {
       "excluded-by-display-correction": 1,
       "known-source-hold": 54,
-      "needs-source-and-anatomical-review": 415,
+      "needs-source-and-anatomical-review": 413,
       "nested-source-covered": 24,
       "related-cross-tree-hold": 1,
-      "root-source-covered": 1739
+      "root-source-covered": 1741
     },
     "rootDifferenceStatuses": {
       "excluded-by-display-correction": 1,
       "known-source-hold": 54,
-      "needs-source-and-anatomical-review": 415,
+      "needs-source-and-anatomical-review": 413,
       "nested-source-covered": 24,
       "related-cross-tree-hold": 1
     },
     "rootDifferenceReferenceGroups": {
-      "arterial": 272,
+      "arterial": 270,
       "cardiac": 2,
       "connective": 11,
       "digestive": 2,
@@ -92,7 +92,7 @@
       "venous": 138
     },
     "reviewQueueReferenceGroups": {
-      "arterial": 265,
+      "arterial": 263,
       "cardiac": 2,
       "connective": 2,
       "digestive": 1,
@@ -6771,28 +6771,6 @@
       }
     },
     {
-      "file": "FJ2246",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA22679",
-          "name": "left subscapular artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 47450,
-        "crc32": 1293273874,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
       "file": "FJ2247",
       "referenceDisplaySystem": "venous",
       "status": "needs-source-and-anatomical-review",
@@ -7184,28 +7162,6 @@
       "source": {
         "bytes": 338667,
         "crc32": 1251480194,
-        "sha256": null,
-        "geometrySha256": null
-      }
-    },
-    {
-      "file": "FJ2298",
-      "referenceDisplaySystem": "arterial",
-      "status": "needs-source-and-anatomical-review",
-      "admissionApproved": false,
-      "definitions": [
-        {
-          "id": "FMA22678",
-          "name": "right subscapular artery",
-          "componentCount": 1
-        }
-      ],
-      "owners": [],
-      "holds": [],
-      "displayCorrections": [],
-      "source": {
-        "bytes": 48481,
-        "crc32": 2313186540,
         "sha256": null,
         "geometrySha256": null
       }

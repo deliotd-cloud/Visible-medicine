@@ -44,7 +44,7 @@ for (const [region, profile] of Object.entries(api.dissectionProfiles)) for (con
 }
 assert.equal(JSON.stringify(catalog),catalogBefore);
 const all=catalog.structures.map(s=>s.id), groups=api.vesselVisibilityGroups(catalog.structures,all);
-assert.equal(groups.reduce((n,g)=>n+g.total,0),273);
+assert.deepEqual(groups.map(g=>[g.kind,g.total]),[['artery',177],['vein',98]]);
 assert(groups.every(g=>g.shown===g.total));
 assert.deepEqual(groups.map(g=>g.kind),['artery','vein']);
 const artery=catalog.structures.find(s=>s.system==='vessels'&&api.vesselKind(s)==='artery');
@@ -100,8 +100,15 @@ for(const exam of [false,true])for(const enabled of [false,true]) {
   assert.equal(actions.length,!exam&&enabled?1:0);parentCallbacks++;
   if(actions.length)assert.deepEqual(actions[0].ids,api.vesselVisibilityAction(catalog.structures,all,'artery',false,false).ids);
 }
-// No source anatomy, teaching or existing classification changes in this UI pass.
-for(const path of ['app/body-scene.tsx','app/body-content.ts','lib/anatomy-vessels.ts','package-lock.json','public/models/bodyparts3d/full-body/catalog.json','content/abdominal-organ-imaging.ts'])
+// Preserve the UI-pass baseline, permitting only the subsequent source-bound lesson extension.
+const normalize=text=>text.replaceAll('\r\n','\n');
+const previousLessons=normalize(execFileSync('git',['show','e5521766d4035044bd2b057818d6153783a4294e:app/body-content.ts'],{maxBuffer:8e6}).toString());
+const expectedLessons=previousLessons
+  .replace("import { inferiorThyroidLesson } from '../lib/inferior-thyroid-arteries';", "import { inferiorThyroidLesson } from '../lib/inferior-thyroid-arteries';\nimport { subscapularArteryLesson } from '../lib/subscapular-arteries';")
+  .replace('export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {', 'export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {\n  const subscapular = subscapularArteryLesson(s, tab);\n  if (subscapular) return subscapular;');
+assert.notEqual(expectedLessons,previousLessons);
+assert.equal(normalize(await readFile('app/body-content.ts','utf8')),expectedLessons);
+for(const path of ['app/body-scene.tsx','lib/anatomy-vessels.ts','package-lock.json','public/models/bodyparts3d/full-body/catalog.json','content/abdominal-organ-imaging.ts'])
   assert.deepEqual(await readFile(path),execFileSync('git',['show','e5521766d4035044bd2b057818d6153783a4294e:'+path],{maxBuffer:8e6}));
 const report={scopes,plans,groups,componentCallbacks,parentCallbacks,defaultCollapsed:true,sourcePreserved:true,clinicalApproval:false,browserTesting:false};
 await writeFile('docs/vessel-visibility-validation.json',JSON.stringify(report,null,2)+'\n');

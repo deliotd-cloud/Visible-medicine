@@ -58,7 +58,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "03825508788dbfa1cbc18d67c774ce45c3b6152ba7b4431df40dd692fe54d073"
+      "sha256": "6e04963c0ab7c90e041d9d4b0b9c79d5f4d6fd3d61c9462f498ada8c29c7fd1b"
     },
     {
       "path": "app/body-explorer.css",
@@ -638,7 +638,7 @@
     },
     {
       "path": "content/upper-limb-arterial.ts",
-      "sha256": "79b812a962e20e80ed5c847f20fc149be142274414591695c2ea36a974ef948f"
+      "sha256": "6192472d02241fd113ee50fe75c7319281ab2516ba47c7b6003dad66d1d9ce69"
     },
     {
       "path": "content/upper-limb-motor-pins.json",
@@ -798,7 +798,7 @@
     },
     {
       "path": "lib/body-display-catalog.ts",
-      "sha256": "88823b29c10b57e94173a4af66fa9ece368072f973c65996fa121afaa15f5d5f"
+      "sha256": "5a9cfae09944cf90f087e75fada13d35b9c5876895347bd05e1aa45fa263b44d"
     },
     {
       "path": "lib/body-source-additions.ts",
@@ -1389,6 +1389,10 @@
       "sha256": "1566f9df18aac9537051e941d7915bfaf1ce60c5a291800bacb353a43f6f7a69"
     },
     {
+      "path": "lib/subscapular-arteries.ts",
+      "sha256": "f2bf9dd0cfb5846221865f83fbb8bf1680ea38533b8aa562dd41f58249bb63db"
+    },
+    {
       "path": "lib/swallowing-curriculum.ts",
       "sha256": "74a5678392927149fbab787300d28347d2f613df6db1e9d753f7d3110dee7102"
     },
@@ -1474,7 +1478,7 @@
     },
     {
       "path": "lib/upper-limb-arterial.ts",
-      "sha256": "93a9ae45a1bc2a1fe8430bc2dd053a0c649fde868e095e809e7c5a904ef56b0c"
+      "sha256": "7e121024385fe858b5dd65753fa0df89fb22ff62b60e279cce21a56169273783"
     },
     {
       "path": "lib/upper-limb-motor.ts",
@@ -1530,7 +1534,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "071482b0bcea4ac8ca3f351cf96c09a8b8e7741c2a5c798f54cc83ea980a6dbd"
+      "sha256": "5e6a822e2ca5844aadc51513156fe39207a76a8c6f7d4fa89cddf414b5dea102"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -1653,6 +1657,10 @@
       "sha256": "8549a481da385d6751e049478f156cdcdf014d804a922420f19ef6fe948d5d9d"
     },
     {
+      "path": "public/models/bodyparts3d/subscapular-arteries/catalog.json",
+      "sha256": "2d8a47fb5a9a1e856a071d404690d862348c405aac81620c320ce088a8d7d89f"
+    },
+    {
       "path": "public/models/bodyparts3d/tentorium/catalog.json",
       "sha256": "42f4720ad54a07d7e1f89c5eeb13e68673f4c8242aae353c7f4435bb48a7645e"
     },
@@ -1697,5 +1705,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "7ed9d241361d1dd54db42c0f9af83548edeee745dc55281e22bf49fcb08c822b"
+  "sha256": "923ace69f2dbf7bcad47ef77f6aacdffe36c3e88e5fd6e3a8ea1384d4eec9481"
 }

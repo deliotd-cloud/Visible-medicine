@@ -94,6 +94,7 @@ import { longusColliLesson } from '../lib/longus-colli';
 import { cubitalVeinLesson } from '../lib/cubital-veins';
 import { genicularArteryLesson } from '../lib/genicular-arteries';
 import { inferiorThyroidLesson } from '../lib/inferior-thyroid-arteries';
+import { subscapularArteryLesson } from '../lib/subscapular-arteries';
 import { deferentDuctLesson } from '../lib/deferent-ducts';
 import { inferiorEpigastricLesson } from '../lib/inferior-epigastric-vessels';
 import { pelvicVeinLesson } from '../lib/pelvic-veins';
@@ -148,6 +149,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const subscapular = subscapularArteryLesson(s, tab);
+  if (subscapular) return subscapular;
   const lowerArterialImaging = lowerArterialImagingLesson(s, tab);
   if (lowerArterialImaging) return lowerArterialImaging;
   const limbic = limbicLandmarkLesson(s, tab);

@@ -14,6 +14,7 @@ import { addDeferentDucts } from './deferent-ducts.ts';
 import { addInferiorEpigastricVessels } from './inferior-epigastric-vessels.ts';
 import { addPelvicVeins } from './pelvic-veins.ts';
 import { addLimbicLandmarks } from './limbic-landmarks.ts';
+import { addSubscapularArteries } from './subscapular-arteries.ts';
 
 const canonical = (value: unknown): string => {
   if (Array.isArray(value)) return `[${value.map(canonical).join(',')}]`;
@@ -69,7 +70,7 @@ export function bodyDisplayCatalog(catalog: BodyCatalog): BodyCatalog {
       ),
     ),
   );
-  return addLimbicLandmarks(addPelvicVeins(addInferiorEpigastricVessels(addDeferentDucts(addInferiorThyroidArteries(display)))));
+  return addSubscapularArteries(addLimbicLandmarks(addPelvicVeins(addInferiorEpigastricVessels(addDeferentDucts(addInferiorThyroidArteries(display))))));
 }
 
 function applyDisplayCorrection(

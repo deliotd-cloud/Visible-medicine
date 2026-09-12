@@ -50,17 +50,19 @@ const neighbours = upper
   plan = upper ? api.upperLimbArterialPlan : api.lowerLimbArterialPlan,
   concepts = upper ? api.upperArterialConcepts : api.arterialConcepts,
   relations = upper ? api.upperArterialRelations : api.arterialRelations;
-assert.equal(Object.keys(concepts).length, upper ? 27 : 20);
-assert.equal(relations.length, upper ? 29 : 20);
+assert.equal(Object.keys(concepts).length, upper ? 28 : 20);
+assert.equal(relations.length, upper ? 30 : 20);
 const targets = catalog.structures.filter((s) =>
   Object.values(concepts).some((c) => c.fmaIds.includes(s.fmaId)),
 );
-assert.equal(targets.length, upper ? 54 : 39);
+assert.equal(targets.length, upper ? 56 : 39);
 assert.equal(pins.entries.length, upper ? 116 : 94);
 {
   const extra=JSON.parse(await readFile(upper ? 'public/models/bodyparts3d/inferior-thyroid-arteries/catalog.json' : 'public/models/bodyparts3d/genicular-arteries/catalog.json'));
   pins.entries.push(...extra.structures);pins.bundles.push(...extra.bundles);
   if (upper) {
+    const subscapular = JSON.parse(await readFile('public/models/bodyparts3d/subscapular-arteries/catalog.json'));
+    pins.entries.push(...subscapular.structures); pins.bundles.push(...subscapular.bundles);
     const context = JSON.parse(await readFile('content/inferior-thyroid-context-pins.json'));
     pins.entries.push(...context.entries);
     pins.bundles.push(...context.bundles.filter(b => !pins.bundles.some(p => p.id === b.id)));
@@ -74,11 +76,11 @@ const allRows = targets.flatMap((s) =>
     direction: r.direction,
   })),
 );
-assert.equal(allRows.length, upper ? 116 : 80);
+assert.equal(allRows.length, upper ? 120 : 80);
 const uniqueEdges = new Set(
   allRows.map((r) => [r.from.id, r.to.id].sort().join('|')),
 );
-assert.equal(uniqueEdges.size, upper ? 58 : 40);
+assert.equal(uniqueEdges.size, upper ? 60 : 40);
 assert(
   allRows.every(
     (r) =>
@@ -136,9 +138,10 @@ if (!upper) {
     /inferior border of teres major/,
   );
   for (const f of ['FMA23180', 'FMA66321']) {
-    assert.equal(row('FMA22655', f).kind, 'via-unmodelled');
-    assert.match(row('FMA22655', f).note, /subscapular/);
+    assert.equal(row('FMA22655', f), undefined, 'No shortcut bypasses the newly supplied parent');
+    assert.equal(row('FMA22678', f).kind, 'branch');
   }
+  assert.equal(row('FMA22655', 'FMA22678').kind, 'branch');
   assert.equal(row('FMA22807', 'FMA268667').kind, 'via-unmodelled');
   assert.match(row('FMA22807', 'FMA268667').note, /posterior interosseous/);
   assert.equal(row('FMA22733', 'FMA22839').kind, 'continuation');
